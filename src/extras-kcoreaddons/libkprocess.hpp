@@ -27,8 +27,8 @@ typedef struct QProcess QProcess;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KProcess* KProcess_new();
-KProcess* KProcess_new2(QObject* parent);
+KProcess* KProcess_New();
+KProcess* KProcess_New2(QObject* parent);
 QMetaObject* KProcess_MetaObject(const KProcess* self);
 void* KProcess_Metacast(KProcess* self, const char* param1);
 int KProcess_Metacall(KProcess* self, int param1, int param2, void** param3);

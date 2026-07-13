@@ -4,11 +4,11 @@
 #include "libqnetworkinterface.h"
 
 QNetworkAddressEntry* q_networkaddressentry_new() {
-    return QNetworkAddressEntry_new();
+    return QNetworkAddressEntry_New();
 }
 
 QNetworkAddressEntry* q_networkaddressentry_new2(void* other) {
-    return QNetworkAddressEntry_new2((QNetworkAddressEntry*)other);
+    return QNetworkAddressEntry_New2((QNetworkAddressEntry*)other);
 }
 
 void q_networkaddressentry_operator_assign(void* self, void* other) {
@@ -100,11 +100,11 @@ void q_networkaddressentry_delete(void* self) {
 }
 
 QNetworkInterface* q_networkinterface_new() {
-    return QNetworkInterface_new();
+    return QNetworkInterface_New();
 }
 
 QNetworkInterface* q_networkinterface_new2(void* other) {
-    return QNetworkInterface_new2((QNetworkInterface*)other);
+    return QNetworkInterface_New2((QNetworkInterface*)other);
 }
 
 void q_networkinterface_operator_assign(void* self, void* other) {

@@ -18,33 +18,33 @@ void KCrash_DefaultCrashHandler(int sig) {
     KCrash::defaultCrashHandler(static_cast<int>(sig));
 }
 
-KAboutPerson* KAboutPerson_new() {
+KAboutPerson* KAboutPerson_New() {
     return new KAboutPerson();
 }
 
-KAboutPerson* KAboutPerson_new2(const KAboutPerson* other) {
+KAboutPerson* KAboutPerson_New2(const KAboutPerson* other) {
     return new KAboutPerson(*other);
 }
 
-KAboutPerson* KAboutPerson_new3(const libqt_string name) {
+KAboutPerson* KAboutPerson_New3(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new KAboutPerson(name_QString);
 }
 
-KAboutPerson* KAboutPerson_new4(const libqt_string name, const libqt_string task) {
+KAboutPerson* KAboutPerson_New4(const libqt_string name, const libqt_string task) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString task_QString = QString::fromUtf8(task.data, task.len);
     return new KAboutPerson(name_QString, task_QString);
 }
 
-KAboutPerson* KAboutPerson_new5(const libqt_string name, const libqt_string task, const libqt_string emailAddress) {
+KAboutPerson* KAboutPerson_New5(const libqt_string name, const libqt_string task, const libqt_string emailAddress) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString task_QString = QString::fromUtf8(task.data, task.len);
     QString emailAddress_QString = QString::fromUtf8(emailAddress.data, emailAddress.len);
     return new KAboutPerson(name_QString, task_QString, emailAddress_QString);
 }
 
-KAboutPerson* KAboutPerson_new6(const libqt_string name, const libqt_string task, const libqt_string emailAddress, const libqt_string webAddress) {
+KAboutPerson* KAboutPerson_New6(const libqt_string name, const libqt_string task, const libqt_string emailAddress, const libqt_string webAddress) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString task_QString = QString::fromUtf8(task.data, task.len);
     QString emailAddress_QString = QString::fromUtf8(emailAddress.data, emailAddress.len);
@@ -52,7 +52,7 @@ KAboutPerson* KAboutPerson_new6(const libqt_string name, const libqt_string task
     return new KAboutPerson(name_QString, task_QString, emailAddress_QString, webAddress_QString);
 }
 
-KAboutPerson* KAboutPerson_new7(const libqt_string name, const libqt_string task, const libqt_string emailAddress, const libqt_string webAddress, const QUrl* avatarUrl) {
+KAboutPerson* KAboutPerson_New7(const libqt_string name, const libqt_string task, const libqt_string emailAddress, const libqt_string webAddress, const QUrl* avatarUrl) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString task_QString = QString::fromUtf8(task.data, task.len);
     QString emailAddress_QString = QString::fromUtf8(emailAddress.data, emailAddress.len);
@@ -124,11 +124,11 @@ void KAboutPerson_Delete(KAboutPerson* self) {
     delete self;
 }
 
-KAboutLicense* KAboutLicense_new() {
+KAboutLicense* KAboutLicense_New() {
     return new KAboutLicense();
 }
 
-KAboutLicense* KAboutLicense_new2(const KAboutLicense* other) {
+KAboutLicense* KAboutLicense_New2(const KAboutLicense* other) {
     return new KAboutLicense(*other);
 }
 
@@ -197,11 +197,11 @@ void KAboutLicense_Delete(KAboutLicense* self) {
     delete self;
 }
 
-KAboutComponent* KAboutComponent_new() {
+KAboutComponent* KAboutComponent_New() {
     return new KAboutComponent();
 }
 
-KAboutComponent* KAboutComponent_new2(const libqt_string name, const libqt_string description, const libqt_string version, const libqt_string webAddress, const libqt_string pathToLicenseFile) {
+KAboutComponent* KAboutComponent_New2(const libqt_string name, const libqt_string description, const libqt_string version, const libqt_string webAddress, const libqt_string pathToLicenseFile) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString description_QString = QString::fromUtf8(description.data, description.len);
     QString version_QString = QString::fromUtf8(version.data, version.len);
@@ -210,29 +210,29 @@ KAboutComponent* KAboutComponent_new2(const libqt_string name, const libqt_strin
     return new KAboutComponent(name_QString, description_QString, version_QString, webAddress_QString, pathToLicenseFile_QString);
 }
 
-KAboutComponent* KAboutComponent_new3(const KAboutComponent* other) {
+KAboutComponent* KAboutComponent_New3(const KAboutComponent* other) {
     return new KAboutComponent(*other);
 }
 
-KAboutComponent* KAboutComponent_new4(const libqt_string name) {
+KAboutComponent* KAboutComponent_New4(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new KAboutComponent(name_QString);
 }
 
-KAboutComponent* KAboutComponent_new5(const libqt_string name, const libqt_string description) {
+KAboutComponent* KAboutComponent_New5(const libqt_string name, const libqt_string description) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString description_QString = QString::fromUtf8(description.data, description.len);
     return new KAboutComponent(name_QString, description_QString);
 }
 
-KAboutComponent* KAboutComponent_new6(const libqt_string name, const libqt_string description, const libqt_string version) {
+KAboutComponent* KAboutComponent_New6(const libqt_string name, const libqt_string description, const libqt_string version) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString description_QString = QString::fromUtf8(description.data, description.len);
     QString version_QString = QString::fromUtf8(version.data, version.len);
     return new KAboutComponent(name_QString, description_QString, version_QString);
 }
 
-KAboutComponent* KAboutComponent_new7(const libqt_string name, const libqt_string description, const libqt_string version, const libqt_string webAddress) {
+KAboutComponent* KAboutComponent_New7(const libqt_string name, const libqt_string description, const libqt_string version, const libqt_string webAddress) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString description_QString = QString::fromUtf8(description.data, description.len);
     QString version_QString = QString::fromUtf8(version.data, version.len);
@@ -240,7 +240,7 @@ KAboutComponent* KAboutComponent_new7(const libqt_string name, const libqt_strin
     return new KAboutComponent(name_QString, description_QString, version_QString, webAddress_QString);
 }
 
-KAboutComponent* KAboutComponent_new8(const libqt_string name, const libqt_string description, const libqt_string version, const libqt_string webAddress, int licenseType) {
+KAboutComponent* KAboutComponent_New8(const libqt_string name, const libqt_string description, const libqt_string version, const libqt_string webAddress, int licenseType) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString description_QString = QString::fromUtf8(description.data, description.len);
     QString version_QString = QString::fromUtf8(version.data, version.len);
@@ -308,7 +308,7 @@ void KAboutComponent_Delete(KAboutComponent* self) {
     delete self;
 }
 
-KAboutData* KAboutData_new(const libqt_string componentName, const libqt_string displayName, const libqt_string version, const libqt_string shortDescription, int licenseType) {
+KAboutData* KAboutData_New(const libqt_string componentName, const libqt_string displayName, const libqt_string version, const libqt_string shortDescription, int licenseType) {
     QString componentName_QString = QString::fromUtf8(componentName.data, componentName.len);
     QString displayName_QString = QString::fromUtf8(displayName.data, displayName.len);
     QString version_QString = QString::fromUtf8(version.data, version.len);
@@ -316,15 +316,15 @@ KAboutData* KAboutData_new(const libqt_string componentName, const libqt_string 
     return new KAboutData(componentName_QString, displayName_QString, version_QString, shortDescription_QString, static_cast<KAboutLicense::LicenseKey>(licenseType));
 }
 
-KAboutData* KAboutData_new2() {
+KAboutData* KAboutData_New2() {
     return new KAboutData();
 }
 
-KAboutData* KAboutData_new3(const KAboutData* other) {
+KAboutData* KAboutData_New3(const KAboutData* other) {
     return new KAboutData(*other);
 }
 
-KAboutData* KAboutData_new4(const libqt_string componentName, const libqt_string displayName, const libqt_string version, const libqt_string shortDescription, int licenseType, const libqt_string copyrightStatement) {
+KAboutData* KAboutData_New4(const libqt_string componentName, const libqt_string displayName, const libqt_string version, const libqt_string shortDescription, int licenseType, const libqt_string copyrightStatement) {
     QString componentName_QString = QString::fromUtf8(componentName.data, componentName.len);
     QString displayName_QString = QString::fromUtf8(displayName.data, displayName.len);
     QString version_QString = QString::fromUtf8(version.data, version.len);
@@ -333,7 +333,7 @@ KAboutData* KAboutData_new4(const libqt_string componentName, const libqt_string
     return new KAboutData(componentName_QString, displayName_QString, version_QString, shortDescription_QString, static_cast<KAboutLicense::LicenseKey>(licenseType), copyrightStatement_QString);
 }
 
-KAboutData* KAboutData_new5(const libqt_string componentName, const libqt_string displayName, const libqt_string version, const libqt_string shortDescription, int licenseType, const libqt_string copyrightStatement, const libqt_string otherText) {
+KAboutData* KAboutData_New5(const libqt_string componentName, const libqt_string displayName, const libqt_string version, const libqt_string shortDescription, int licenseType, const libqt_string copyrightStatement, const libqt_string otherText) {
     QString componentName_QString = QString::fromUtf8(componentName.data, componentName.len);
     QString displayName_QString = QString::fromUtf8(displayName.data, displayName.len);
     QString version_QString = QString::fromUtf8(version.data, version.len);
@@ -343,7 +343,7 @@ KAboutData* KAboutData_new5(const libqt_string componentName, const libqt_string
     return new KAboutData(componentName_QString, displayName_QString, version_QString, shortDescription_QString, static_cast<KAboutLicense::LicenseKey>(licenseType), copyrightStatement_QString, otherText_QString);
 }
 
-KAboutData* KAboutData_new6(const libqt_string componentName, const libqt_string displayName, const libqt_string version, const libqt_string shortDescription, int licenseType, const libqt_string copyrightStatement, const libqt_string otherText, const libqt_string homePageAddress) {
+KAboutData* KAboutData_New6(const libqt_string componentName, const libqt_string displayName, const libqt_string version, const libqt_string shortDescription, int licenseType, const libqt_string copyrightStatement, const libqt_string otherText, const libqt_string homePageAddress) {
     QString componentName_QString = QString::fromUtf8(componentName.data, componentName.len);
     QString displayName_QString = QString::fromUtf8(displayName.data, displayName.len);
     QString version_QString = QString::fromUtf8(version.data, version.len);
@@ -354,7 +354,7 @@ KAboutData* KAboutData_new6(const libqt_string componentName, const libqt_string
     return new KAboutData(componentName_QString, displayName_QString, version_QString, shortDescription_QString, static_cast<KAboutLicense::LicenseKey>(licenseType), copyrightStatement_QString, otherText_QString, homePageAddress_QString);
 }
 
-KAboutData* KAboutData_new7(const libqt_string componentName, const libqt_string displayName, const libqt_string version, const libqt_string shortDescription, int licenseType, const libqt_string copyrightStatement, const libqt_string otherText, const libqt_string homePageAddress, const libqt_string bugAddress) {
+KAboutData* KAboutData_New7(const libqt_string componentName, const libqt_string displayName, const libqt_string version, const libqt_string shortDescription, int licenseType, const libqt_string copyrightStatement, const libqt_string otherText, const libqt_string homePageAddress, const libqt_string bugAddress) {
     QString componentName_QString = QString::fromUtf8(componentName.data, componentName.len);
     QString displayName_QString = QString::fromUtf8(displayName.data, displayName.len);
     QString version_QString = QString::fromUtf8(version.data, version.len);
@@ -366,18 +366,18 @@ KAboutData* KAboutData_new7(const libqt_string componentName, const libqt_string
     return new KAboutData(componentName_QString, displayName_QString, version_QString, shortDescription_QString, static_cast<KAboutLicense::LicenseKey>(licenseType), copyrightStatement_QString, otherText_QString, homePageAddress_QString, bugAddress_QString);
 }
 
-KAboutData* KAboutData_new8(const libqt_string componentName) {
+KAboutData* KAboutData_New8(const libqt_string componentName) {
     QString componentName_QString = QString::fromUtf8(componentName.data, componentName.len);
     return new KAboutData(componentName_QString);
 }
 
-KAboutData* KAboutData_new9(const libqt_string componentName, const libqt_string displayName) {
+KAboutData* KAboutData_New9(const libqt_string componentName, const libqt_string displayName) {
     QString componentName_QString = QString::fromUtf8(componentName.data, componentName.len);
     QString displayName_QString = QString::fromUtf8(displayName.data, displayName.len);
     return new KAboutData(componentName_QString, displayName_QString);
 }
 
-KAboutData* KAboutData_new10(const libqt_string componentName, const libqt_string displayName, const libqt_string version) {
+KAboutData* KAboutData_New10(const libqt_string componentName, const libqt_string displayName, const libqt_string version) {
     QString componentName_QString = QString::fromUtf8(componentName.data, componentName.len);
     QString displayName_QString = QString::fromUtf8(displayName.data, displayName.len);
     QString version_QString = QString::fromUtf8(version.data, version.len);

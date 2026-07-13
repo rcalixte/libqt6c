@@ -32,8 +32,8 @@ void QAccessibleBridge_NotifyAccessibilityUpdate(QAccessibleBridge* self, QAcces
 void QAccessibleBridge_OperatorAssign(QAccessibleBridge* self, const QAccessibleBridge* param1);
 void QAccessibleBridge_Delete(QAccessibleBridge* self);
 
-QAccessibleBridgePlugin* QAccessibleBridgePlugin_new();
-QAccessibleBridgePlugin* QAccessibleBridgePlugin_new2(QObject* parent);
+QAccessibleBridgePlugin* QAccessibleBridgePlugin_New();
+QAccessibleBridgePlugin* QAccessibleBridgePlugin_New2(QObject* parent);
 QMetaObject* QAccessibleBridgePlugin_MetaObject(const QAccessibleBridgePlugin* self);
 void* QAccessibleBridgePlugin_Metacast(QAccessibleBridgePlugin* self, const char* param1);
 int QAccessibleBridgePlugin_Metacall(QAccessibleBridgePlugin* self, int param1, int param2, void** param3);

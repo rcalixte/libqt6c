@@ -11,11 +11,11 @@
 #include "libkdirwatch.hpp"
 #include "libkdirwatch.hxx"
 
-KDirWatch* KDirWatch_new() {
+KDirWatch* KDirWatch_New() {
     return new VirtualKDirWatch();
 }
 
-KDirWatch* KDirWatch_new2(QObject* parent) {
+KDirWatch* KDirWatch_New2(QObject* parent) {
     return new VirtualKDirWatch(parent);
 }
 

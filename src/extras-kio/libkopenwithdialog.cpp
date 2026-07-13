@@ -40,11 +40,11 @@
 #include "libkopenwithdialog.hpp"
 #include "libkopenwithdialog.hxx"
 
-KOpenWithDialog* KOpenWithDialog_new(QWidget* parent) {
+KOpenWithDialog* KOpenWithDialog_New(QWidget* parent) {
     return new VirtualKOpenWithDialog(parent);
 }
 
-KOpenWithDialog* KOpenWithDialog_new2(const libqt_list /* of QUrl* */ urls) {
+KOpenWithDialog* KOpenWithDialog_New2(const libqt_list /* of QUrl* */ urls) {
     QList<QUrl> urls_QList;
     urls_QList.reserve(urls.len);
     QUrl** urls_arr = static_cast<QUrl**>(urls.data.ptr);
@@ -54,7 +54,7 @@ KOpenWithDialog* KOpenWithDialog_new2(const libqt_list /* of QUrl* */ urls) {
     return new VirtualKOpenWithDialog(urls_QList);
 }
 
-KOpenWithDialog* KOpenWithDialog_new3(const libqt_list /* of QUrl* */ urls, const libqt_string text, const libqt_string value) {
+KOpenWithDialog* KOpenWithDialog_New3(const libqt_list /* of QUrl* */ urls, const libqt_string text, const libqt_string value) {
     QList<QUrl> urls_QList;
     urls_QList.reserve(urls.len);
     QUrl** urls_arr = static_cast<QUrl**>(urls.data.ptr);
@@ -66,13 +66,13 @@ KOpenWithDialog* KOpenWithDialog_new3(const libqt_list /* of QUrl* */ urls, cons
     return new VirtualKOpenWithDialog(urls_QList, text_QString, value_QString);
 }
 
-KOpenWithDialog* KOpenWithDialog_new4(const libqt_string mimeType, const libqt_string value) {
+KOpenWithDialog* KOpenWithDialog_New4(const libqt_string mimeType, const libqt_string value) {
     QString mimeType_QString = QString::fromUtf8(mimeType.data, mimeType.len);
     QString value_QString = QString::fromUtf8(value.data, value.len);
     return new VirtualKOpenWithDialog(mimeType_QString, value_QString);
 }
 
-KOpenWithDialog* KOpenWithDialog_new5(const libqt_list /* of QUrl* */ urls, const libqt_string mimeType, const libqt_string text, const libqt_string value) {
+KOpenWithDialog* KOpenWithDialog_New5(const libqt_list /* of QUrl* */ urls, const libqt_string mimeType, const libqt_string text, const libqt_string value) {
     QList<QUrl> urls_QList;
     urls_QList.reserve(urls.len);
     QUrl** urls_arr = static_cast<QUrl**>(urls.data.ptr);
@@ -85,11 +85,11 @@ KOpenWithDialog* KOpenWithDialog_new5(const libqt_list /* of QUrl* */ urls, cons
     return new VirtualKOpenWithDialog(urls_QList, mimeType_QString, text_QString, value_QString);
 }
 
-KOpenWithDialog* KOpenWithDialog_new6() {
+KOpenWithDialog* KOpenWithDialog_New6() {
     return new VirtualKOpenWithDialog();
 }
 
-KOpenWithDialog* KOpenWithDialog_new7(const libqt_list /* of QUrl* */ urls, QWidget* parent) {
+KOpenWithDialog* KOpenWithDialog_New7(const libqt_list /* of QUrl* */ urls, QWidget* parent) {
     QList<QUrl> urls_QList;
     urls_QList.reserve(urls.len);
     QUrl** urls_arr = static_cast<QUrl**>(urls.data.ptr);
@@ -99,7 +99,7 @@ KOpenWithDialog* KOpenWithDialog_new7(const libqt_list /* of QUrl* */ urls, QWid
     return new VirtualKOpenWithDialog(urls_QList, parent);
 }
 
-KOpenWithDialog* KOpenWithDialog_new8(const libqt_list /* of QUrl* */ urls, const libqt_string text, const libqt_string value, QWidget* parent) {
+KOpenWithDialog* KOpenWithDialog_New8(const libqt_list /* of QUrl* */ urls, const libqt_string text, const libqt_string value, QWidget* parent) {
     QList<QUrl> urls_QList;
     urls_QList.reserve(urls.len);
     QUrl** urls_arr = static_cast<QUrl**>(urls.data.ptr);
@@ -111,13 +111,13 @@ KOpenWithDialog* KOpenWithDialog_new8(const libqt_list /* of QUrl* */ urls, cons
     return new VirtualKOpenWithDialog(urls_QList, text_QString, value_QString, parent);
 }
 
-KOpenWithDialog* KOpenWithDialog_new9(const libqt_string mimeType, const libqt_string value, QWidget* parent) {
+KOpenWithDialog* KOpenWithDialog_New9(const libqt_string mimeType, const libqt_string value, QWidget* parent) {
     QString mimeType_QString = QString::fromUtf8(mimeType.data, mimeType.len);
     QString value_QString = QString::fromUtf8(value.data, value.len);
     return new VirtualKOpenWithDialog(mimeType_QString, value_QString, parent);
 }
 
-KOpenWithDialog* KOpenWithDialog_new10(const libqt_list /* of QUrl* */ urls, const libqt_string mimeType, const libqt_string text, const libqt_string value, QWidget* parent) {
+KOpenWithDialog* KOpenWithDialog_New10(const libqt_list /* of QUrl* */ urls, const libqt_string mimeType, const libqt_string text, const libqt_string value, QWidget* parent) {
     QList<QUrl> urls_QList;
     urls_QList.reserve(urls.len);
     QUrl** urls_arr = static_cast<QUrl**>(urls.data.ptr);

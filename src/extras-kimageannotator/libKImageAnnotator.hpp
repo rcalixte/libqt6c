@@ -62,7 +62,7 @@ typedef struct kImageAnnotator__KImageAnnotator kImageAnnotator__KImageAnnotator
 
 void kImageAnnotator_LoadTranslations();
 
-kImageAnnotator__KImageAnnotator* kImageAnnotator__KImageAnnotator_new();
+kImageAnnotator__KImageAnnotator* kImageAnnotator__KImageAnnotator_New();
 QMetaObject* kImageAnnotator__KImageAnnotator_MetaObject(const kImageAnnotator__KImageAnnotator* self);
 void* kImageAnnotator__KImageAnnotator_Metacast(kImageAnnotator__KImageAnnotator* self, const char* param1);
 int kImageAnnotator__KImageAnnotator_Metacall(kImageAnnotator__KImageAnnotator* self, int param1, int param2, void** param3);

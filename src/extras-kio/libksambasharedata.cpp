@@ -4,11 +4,11 @@
 #include "libksambasharedata.hpp"
 #include "libksambasharedata.hxx"
 
-KSambaShareData* KSambaShareData_new() {
+KSambaShareData* KSambaShareData_New() {
     return new KSambaShareData();
 }
 
-KSambaShareData* KSambaShareData_new2(const KSambaShareData* other) {
+KSambaShareData* KSambaShareData_New2(const KSambaShareData* other) {
     return new KSambaShareData(*other);
 }
 

@@ -3,11 +3,11 @@
 #include "libqpropertyprivate.hpp"
 #include "libqpropertyprivate.hxx"
 
-QUntypedPropertyData* QUntypedPropertyData_new(const QUntypedPropertyData* other) {
+QUntypedPropertyData* QUntypedPropertyData_New(const QUntypedPropertyData* other) {
     return new QUntypedPropertyData(*other);
 }
 
-QUntypedPropertyData* QUntypedPropertyData_new2(QUntypedPropertyData* other) {
+QUntypedPropertyData* QUntypedPropertyData_New2(QUntypedPropertyData* other) {
     return new QUntypedPropertyData(std::move(*other));
 }
 

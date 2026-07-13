@@ -52,8 +52,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KPasswordLineEdit* KPasswordLineEdit_new(QWidget* parent);
-KPasswordLineEdit* KPasswordLineEdit_new2();
+KPasswordLineEdit* KPasswordLineEdit_New(QWidget* parent);
+KPasswordLineEdit* KPasswordLineEdit_New2();
 QMetaObject* KPasswordLineEdit_MetaObject(const KPasswordLineEdit* self);
 void* KPasswordLineEdit_Metacast(KPasswordLineEdit* self, const char* param1);
 int KPasswordLineEdit_Metacall(KPasswordLineEdit* self, int param1, int param2, void** param3);

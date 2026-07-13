@@ -38,8 +38,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KFileItemDelegate* KFileItemDelegate_new();
-KFileItemDelegate* KFileItemDelegate_new2(QObject* parent);
+KFileItemDelegate* KFileItemDelegate_New();
+KFileItemDelegate* KFileItemDelegate_New2(QObject* parent);
 QMetaObject* KFileItemDelegate_MetaObject(const KFileItemDelegate* self);
 void* KFileItemDelegate_Metacast(KFileItemDelegate* self, const char* param1);
 int KFileItemDelegate_Metacall(KFileItemDelegate* self, int param1, int param2, void** param3);

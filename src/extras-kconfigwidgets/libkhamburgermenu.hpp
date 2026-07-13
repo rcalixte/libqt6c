@@ -29,7 +29,7 @@ typedef struct QWidget QWidget;
 typedef struct QWidgetAction QWidgetAction;
 #endif
 
-KHamburgerMenu* KHamburgerMenu_new(QObject* parent);
+KHamburgerMenu* KHamburgerMenu_New(QObject* parent);
 QMetaObject* KHamburgerMenu_MetaObject(const KHamburgerMenu* self);
 void* KHamburgerMenu_Metacast(KHamburgerMenu* self, const char* param1);
 int KHamburgerMenu_Metacall(KHamburgerMenu* self, int param1, int param2, void** param3);

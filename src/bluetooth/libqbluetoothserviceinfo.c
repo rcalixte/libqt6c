@@ -6,11 +6,11 @@
 #include "libqbluetoothserviceinfo.h"
 
 QBluetoothServiceInfo* q_bluetoothserviceinfo_new() {
-    return QBluetoothServiceInfo_new();
+    return QBluetoothServiceInfo_New();
 }
 
 QBluetoothServiceInfo* q_bluetoothserviceinfo_new2(void* other) {
-    return QBluetoothServiceInfo_new2((QBluetoothServiceInfo*)other);
+    return QBluetoothServiceInfo_New2((QBluetoothServiceInfo*)other);
 }
 
 bool q_bluetoothserviceinfo_is_valid(void* self) {
@@ -159,15 +159,15 @@ void q_bluetoothserviceinfo_delete(void* self) {
 // Also inherits unprojectable QList<QVariant>
 
 QBluetoothServiceInfo__Sequence* q_bluetoothserviceinfo__sequence_new() {
-    return QBluetoothServiceInfo__Sequence_new();
+    return QBluetoothServiceInfo__Sequence_New();
 }
 
 QBluetoothServiceInfo__Sequence* q_bluetoothserviceinfo__sequence_new2(libqt_list /* of QVariant* */ list) {
-    return QBluetoothServiceInfo__Sequence_new2(list);
+    return QBluetoothServiceInfo__Sequence_New2(list);
 }
 
 QBluetoothServiceInfo__Sequence* q_bluetoothserviceinfo__sequence_new3(void* param1) {
-    return QBluetoothServiceInfo__Sequence_new3((QBluetoothServiceInfo__Sequence*)param1);
+    return QBluetoothServiceInfo__Sequence_New3((QBluetoothServiceInfo__Sequence*)param1);
 }
 
 void q_bluetoothserviceinfo__sequence_delete(void* self) {
@@ -177,15 +177,15 @@ void q_bluetoothserviceinfo__sequence_delete(void* self) {
 // Also inherits unprojectable QList<QVariant>
 
 QBluetoothServiceInfo__Alternative* q_bluetoothserviceinfo__alternative_new() {
-    return QBluetoothServiceInfo__Alternative_new();
+    return QBluetoothServiceInfo__Alternative_New();
 }
 
 QBluetoothServiceInfo__Alternative* q_bluetoothserviceinfo__alternative_new2(libqt_list /* of QVariant* */ list) {
-    return QBluetoothServiceInfo__Alternative_new2(list);
+    return QBluetoothServiceInfo__Alternative_New2(list);
 }
 
 QBluetoothServiceInfo__Alternative* q_bluetoothserviceinfo__alternative_new3(void* param1) {
-    return QBluetoothServiceInfo__Alternative_new3((QBluetoothServiceInfo__Alternative*)param1);
+    return QBluetoothServiceInfo__Alternative_New3((QBluetoothServiceInfo__Alternative*)param1);
 }
 
 void q_bluetoothserviceinfo__alternative_delete(void* self) {

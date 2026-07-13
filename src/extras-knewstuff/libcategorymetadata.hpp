@@ -21,7 +21,7 @@ typedef KNSCore::CategoryMetadata KNSCore__CategoryMetadata;
 typedef struct KNSCore__CategoryMetadata KNSCore__CategoryMetadata;
 #endif
 
-KNSCore__CategoryMetadata* KNSCore__CategoryMetadata_new(const KNSCore__CategoryMetadata* param1);
+KNSCore__CategoryMetadata* KNSCore__CategoryMetadata_New(const KNSCore__CategoryMetadata* param1);
 libqt_string KNSCore__CategoryMetadata_Id(const KNSCore__CategoryMetadata* self);
 libqt_string KNSCore__CategoryMetadata_Name(const KNSCore__CategoryMetadata* self);
 libqt_string KNSCore__CategoryMetadata_DisplayName(const KNSCore__CategoryMetadata* self);

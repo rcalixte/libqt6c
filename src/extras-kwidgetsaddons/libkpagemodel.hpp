@@ -31,8 +31,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-KPageModel* KPageModel_new();
-KPageModel* KPageModel_new2(QObject* parent);
+KPageModel* KPageModel_New();
+KPageModel* KPageModel_New2(QObject* parent);
 QMetaObject* KPageModel_MetaObject(const KPageModel* self);
 void* KPageModel_Metacast(KPageModel* self, const char* param1);
 int KPageModel_Metacall(KPageModel* self, int param1, int param2, void** param3);

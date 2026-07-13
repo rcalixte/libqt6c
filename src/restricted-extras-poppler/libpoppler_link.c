@@ -6,11 +6,11 @@
 #include "libpoppler_link.h"
 
 Poppler__LinkDestination* q_poppler__linkdestination_new(const char* description) {
-    return Poppler__LinkDestination_new(qstring(description));
+    return Poppler__LinkDestination_New(qstring(description));
 }
 
 Poppler__LinkDestination* q_poppler__linkdestination_new2(void* other) {
-    return Poppler__LinkDestination_new2((Poppler__LinkDestination*)other);
+    return Poppler__LinkDestination_New2((Poppler__LinkDestination*)other);
 }
 
 int32_t q_poppler__linkdestination_kind(void* self) {
@@ -76,7 +76,7 @@ void q_poppler__linkdestination_delete(void* self) {
 }
 
 Poppler__Link* q_poppler__link_new(void* linkArea) {
-    return Poppler__Link_new((QRectF*)linkArea);
+    return Poppler__Link_New((QRectF*)linkArea);
 }
 
 int32_t q_poppler__link_link_type(void* self) {
@@ -105,7 +105,7 @@ void q_poppler__link_delete(void* self) {
 }
 
 Poppler__LinkGoto* q_poppler__linkgoto_new(void* linkArea, const char* extFileName, void* destination) {
-    return Poppler__LinkGoto_new((QRectF*)linkArea, qstring(extFileName), (Poppler__LinkDestination*)destination);
+    return Poppler__LinkGoto_New((QRectF*)linkArea, qstring(extFileName), (Poppler__LinkDestination*)destination);
 }
 
 bool q_poppler__linkgoto_is_external(void* self) {
@@ -149,7 +149,7 @@ void q_poppler__linkgoto_delete(void* self) {
 }
 
 Poppler__LinkExecute* q_poppler__linkexecute_new(void* linkArea, const char* file, const char* params) {
-    return Poppler__LinkExecute_new((QRectF*)linkArea, qstring(file), qstring(params));
+    return Poppler__LinkExecute_New((QRectF*)linkArea, qstring(file), qstring(params));
 }
 
 const char* q_poppler__linkexecute_file_name(void* self) {
@@ -192,7 +192,7 @@ void q_poppler__linkexecute_delete(void* self) {
 }
 
 Poppler__LinkBrowse* q_poppler__linkbrowse_new(void* linkArea, const char* url) {
-    return Poppler__LinkBrowse_new((QRectF*)linkArea, qstring(url));
+    return Poppler__LinkBrowse_New((QRectF*)linkArea, qstring(url));
 }
 
 const char* q_poppler__linkbrowse_url(void* self) {
@@ -228,7 +228,7 @@ void q_poppler__linkbrowse_delete(void* self) {
 }
 
 Poppler__LinkAction* q_poppler__linkaction_new(void* linkArea, int32_t actionType) {
-    return Poppler__LinkAction_new((QRectF*)linkArea, actionType);
+    return Poppler__LinkAction_New((QRectF*)linkArea, actionType);
 }
 
 int32_t q_poppler__linkaction_action_type(void* self) {
@@ -261,7 +261,7 @@ void q_poppler__linkaction_delete(void* self) {
 }
 
 Poppler__LinkSound* q_poppler__linksound_new(void* linkArea, double volume, bool sync, bool repeat, bool mix, void* sound) {
-    return Poppler__LinkSound_new((QRectF*)linkArea, volume, sync, repeat, mix, (Poppler__SoundObject*)sound);
+    return Poppler__LinkSound_New((QRectF*)linkArea, volume, sync, repeat, mix, (Poppler__SoundObject*)sound);
 }
 
 int32_t q_poppler__linksound_link_type(void* self) {
@@ -346,7 +346,7 @@ void q_poppler__linkrendition_delete(void* self) {
 }
 
 Poppler__LinkJavaScript* q_poppler__linkjavascript_new(void* linkArea, const char* js) {
-    return Poppler__LinkJavaScript_new((QRectF*)linkArea, qstring(js));
+    return Poppler__LinkJavaScript_New((QRectF*)linkArea, qstring(js));
 }
 
 int32_t q_poppler__linkjavascript_link_type(void* self) {

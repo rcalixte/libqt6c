@@ -7,19 +7,19 @@
 #include "libqaudioinput.h"
 
 QAudioInput* q_audioinput_new() {
-    return QAudioInput_new();
+    return QAudioInput_New();
 }
 
 QAudioInput* q_audioinput_new2(void* deviceInfo) {
-    return QAudioInput_new2((QAudioDevice*)deviceInfo);
+    return QAudioInput_New2((QAudioDevice*)deviceInfo);
 }
 
 QAudioInput* q_audioinput_new3(void* parent) {
-    return QAudioInput_new3((QObject*)parent);
+    return QAudioInput_New3((QObject*)parent);
 }
 
 QAudioInput* q_audioinput_new4(void* deviceInfo, void* parent) {
-    return QAudioInput_new4((QAudioDevice*)deviceInfo, (QObject*)parent);
+    return QAudioInput_New4((QAudioDevice*)deviceInfo, (QObject*)parent);
 }
 
 const QMetaObject* q_audioinput_meta_object(void* self) {

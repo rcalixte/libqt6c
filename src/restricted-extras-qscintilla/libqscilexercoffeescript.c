@@ -11,11 +11,11 @@
 #include "libqscilexercoffeescript.h"
 
 QsciLexerCoffeeScript* q_scilexercoffeescript_new() {
-    return QsciLexerCoffeeScript_new();
+    return QsciLexerCoffeeScript_New();
 }
 
 QsciLexerCoffeeScript* q_scilexercoffeescript_new2(void* parent) {
-    return QsciLexerCoffeeScript_new2((QObject*)parent);
+    return QsciLexerCoffeeScript_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexercoffeescript_meta_object(void* self) {

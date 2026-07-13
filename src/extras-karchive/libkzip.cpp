@@ -8,16 +8,16 @@
 #include "libkzip.hpp"
 #include "libkzip.hxx"
 
-KZip* KZip_new(const libqt_string filename) {
+KZip* KZip_New(const libqt_string filename) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     return new VirtualKZip(filename_QString);
 }
 
-KZip* KZip_new2(QIODevice* dev) {
+KZip* KZip_New2(QIODevice* dev) {
     return new VirtualKZip(dev);
 }
 
-KZip* KZip_new3(const KZip* param1) {
+KZip* KZip_New3(const KZip* param1) {
     return new VirtualKZip(*param1);
 }
 

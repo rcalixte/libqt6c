@@ -2,11 +2,11 @@
 #include "libqhostaddress.h"
 
 QIPv6Address* q_ipv6address_new() {
-    return QIPv6Address_new();
+    return QIPv6Address_New();
 }
 
 QIPv6Address* q_ipv6address_new2(void* param1) {
-    return QIPv6Address_new2((QIPv6Address*)param1);
+    return QIPv6Address_New2((QIPv6Address*)param1);
 }
 
 unsigned char* q_ipv6address_operator_subscript(void* self, int index) {
@@ -22,31 +22,31 @@ void q_ipv6address_delete(void* self) {
 }
 
 QHostAddress* q_hostaddress_new() {
-    return QHostAddress_new();
+    return QHostAddress_New();
 }
 
 QHostAddress* q_hostaddress_new2(uint32_t ip4Addr) {
-    return QHostAddress_new2(ip4Addr);
+    return QHostAddress_New2(ip4Addr);
 }
 
 QHostAddress* q_hostaddress_new3(unsigned char* ip6Addr) {
-    return QHostAddress_new3(ip6Addr);
+    return QHostAddress_New3(ip6Addr);
 }
 
 QHostAddress* q_hostaddress_new4(void* ip6Addr) {
-    return QHostAddress_new4((QIPv6Address*)ip6Addr);
+    return QHostAddress_New4((QIPv6Address*)ip6Addr);
 }
 
 QHostAddress* q_hostaddress_new5(const char* address) {
-    return QHostAddress_new5(qstring(address));
+    return QHostAddress_New5(qstring(address));
 }
 
 QHostAddress* q_hostaddress_new6(void* copyVal) {
-    return QHostAddress_new6((QHostAddress*)copyVal);
+    return QHostAddress_New6((QHostAddress*)copyVal);
 }
 
 QHostAddress* q_hostaddress_new7(int32_t address) {
-    return QHostAddress_new7(address);
+    return QHostAddress_New7(address);
 }
 
 void q_hostaddress_operator_assign(void* self, void* other) {

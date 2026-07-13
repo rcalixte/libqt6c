@@ -13,15 +13,15 @@
 #include "libqfontmetrics.hpp"
 #include "libqfontmetrics.hxx"
 
-QFontMetrics* QFontMetrics_new(const QFont* param1) {
+QFontMetrics* QFontMetrics_New(const QFont* param1) {
     return new QFontMetrics(*param1);
 }
 
-QFontMetrics* QFontMetrics_new2(const QFont* font, const QPaintDevice* pd) {
+QFontMetrics* QFontMetrics_New2(const QFont* font, const QPaintDevice* pd) {
     return new QFontMetrics(*font, pd);
 }
 
-QFontMetrics* QFontMetrics_new3(const QFontMetrics* param1) {
+QFontMetrics* QFontMetrics_New3(const QFontMetrics* param1) {
     return new QFontMetrics(*param1);
 }
 
@@ -239,19 +239,19 @@ void QFontMetrics_Delete(QFontMetrics* self) {
     delete self;
 }
 
-QFontMetricsF* QFontMetricsF_new(const QFont* font) {
+QFontMetricsF* QFontMetricsF_New(const QFont* font) {
     return new QFontMetricsF(*font);
 }
 
-QFontMetricsF* QFontMetricsF_new2(const QFont* font, const QPaintDevice* pd) {
+QFontMetricsF* QFontMetricsF_New2(const QFont* font, const QPaintDevice* pd) {
     return new QFontMetricsF(*font, pd);
 }
 
-QFontMetricsF* QFontMetricsF_new3(const QFontMetrics* param1) {
+QFontMetricsF* QFontMetricsF_New3(const QFontMetrics* param1) {
     return new QFontMetricsF(*param1);
 }
 
-QFontMetricsF* QFontMetricsF_new4(const QFontMetricsF* param1) {
+QFontMetricsF* QFontMetricsF_New4(const QFontMetricsF* param1) {
     return new QFontMetricsF(*param1);
 }
 

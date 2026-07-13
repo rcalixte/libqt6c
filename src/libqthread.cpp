@@ -12,11 +12,11 @@
 #include "libqthread.hpp"
 #include "libqthread.hxx"
 
-QThread* QThread_new() {
+QThread* QThread_New() {
     return new VirtualQThread();
 }
 
-QThread* QThread_new2(QObject* parent) {
+QThread* QThread_New2(QObject* parent) {
     return new VirtualQThread(parent);
 }
 

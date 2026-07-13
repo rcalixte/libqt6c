@@ -21,10 +21,10 @@ typedef SignOn::Error SignOn__Error;
 typedef struct SignOn__Error SignOn__Error;
 #endif
 
-SignOn__Error* SignOn__Error_new();
-SignOn__Error* SignOn__Error_new2(const SignOn__Error* src);
-SignOn__Error* SignOn__Error_new3(int type);
-SignOn__Error* SignOn__Error_new4(int type, const libqt_string message);
+SignOn__Error* SignOn__Error_New();
+SignOn__Error* SignOn__Error_New2(const SignOn__Error* src);
+SignOn__Error* SignOn__Error_New3(int type);
+SignOn__Error* SignOn__Error_New4(int type, const libqt_string message);
 void SignOn__Error_OperatorAssign(SignOn__Error* self, const SignOn__Error* src);
 void SignOn__Error_SetType(SignOn__Error* self, int type);
 void SignOn__Error_SetMessage(SignOn__Error* self, const libqt_string message);

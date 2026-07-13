@@ -25,10 +25,10 @@ typedef struct QSocketNotifier QSocketNotifier;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QSocketNotifier* QSocketNotifier_new(int param1);
-QSocketNotifier* QSocketNotifier_new2(intptr_t socket, int param2);
-QSocketNotifier* QSocketNotifier_new3(int param1, QObject* parent);
-QSocketNotifier* QSocketNotifier_new4(intptr_t socket, int param2, QObject* parent);
+QSocketNotifier* QSocketNotifier_New(int param1);
+QSocketNotifier* QSocketNotifier_New2(intptr_t socket, int param2);
+QSocketNotifier* QSocketNotifier_New3(int param1, QObject* parent);
+QSocketNotifier* QSocketNotifier_New4(intptr_t socket, int param2, QObject* parent);
 QMetaObject* QSocketNotifier_MetaObject(const QSocketNotifier* self);
 void* QSocketNotifier_Metacast(QSocketNotifier* self, const char* param1);
 int QSocketNotifier_Metacall(QSocketNotifier* self, int param1, int param2, void** param3);
@@ -80,11 +80,11 @@ bool QSocketNotifier_SuperIsSignalConnected(const QSocketNotifier* self, const Q
 void QSocketNotifier_Connect_Activated(QSocketNotifier* self, intptr_t slot);
 void QSocketNotifier_Delete(QSocketNotifier* self);
 
-QSocketDescriptor* QSocketDescriptor_new(const QSocketDescriptor* other);
-QSocketDescriptor* QSocketDescriptor_new2(QSocketDescriptor* other);
-QSocketDescriptor* QSocketDescriptor_new3();
-QSocketDescriptor* QSocketDescriptor_new4(const QSocketDescriptor* param1);
-QSocketDescriptor* QSocketDescriptor_new5(int descriptor);
+QSocketDescriptor* QSocketDescriptor_New(const QSocketDescriptor* other);
+QSocketDescriptor* QSocketDescriptor_New2(QSocketDescriptor* other);
+QSocketDescriptor* QSocketDescriptor_New3();
+QSocketDescriptor* QSocketDescriptor_New4(const QSocketDescriptor* param1);
+QSocketDescriptor* QSocketDescriptor_New5(int descriptor);
 void QSocketDescriptor_CopyAssign(QSocketDescriptor* self, QSocketDescriptor* other);
 void QSocketDescriptor_MoveAssign(QSocketDescriptor* self, QSocketDescriptor* other);
 int QSocketDescriptor_ToInt(const QSocketDescriptor* self);

@@ -33,7 +33,7 @@ typedef struct QChar QChar;
 typedef struct QModelIndex QModelIndex;
 #endif
 
-KTextEditor__CodeCompletionModelControllerInterface* KTextEditor__CodeCompletionModelControllerInterface_new();
+KTextEditor__CodeCompletionModelControllerInterface* KTextEditor__CodeCompletionModelControllerInterface_New();
 bool KTextEditor__CodeCompletionModelControllerInterface_ShouldStartCompletion(KTextEditor__CodeCompletionModelControllerInterface* self, KTextEditor__View* view, const libqt_string insertedText, bool userInsertion, const KTextEditor__Cursor* position);
 KTextEditor__Range* KTextEditor__CodeCompletionModelControllerInterface_CompletionRange(KTextEditor__CodeCompletionModelControllerInterface* self, KTextEditor__View* view, const KTextEditor__Cursor* position);
 KTextEditor__Range* KTextEditor__CodeCompletionModelControllerInterface_UpdateCompletionRange(KTextEditor__CodeCompletionModelControllerInterface* self, KTextEditor__View* view, const KTextEditor__Range* range);

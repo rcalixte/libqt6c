@@ -8,11 +8,11 @@
 #include "libqgraphicslayout.hpp"
 #include "libqgraphicslayout.hxx"
 
-QGraphicsLayout* QGraphicsLayout_new() {
+QGraphicsLayout* QGraphicsLayout_New() {
     return new VirtualQGraphicsLayout();
 }
 
-QGraphicsLayout* QGraphicsLayout_new2(QGraphicsLayoutItem* parent) {
+QGraphicsLayout* QGraphicsLayout_New2(QGraphicsLayoutItem* parent) {
     return new VirtualQGraphicsLayout(parent);
 }
 

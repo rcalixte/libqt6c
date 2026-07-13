@@ -14,11 +14,11 @@
 #include "libmimetypefinderjob.hpp"
 #include "libmimetypefinderjob.hxx"
 
-KIO__MimeTypeFinderJob* KIO__MimeTypeFinderJob_new(const QUrl* url) {
+KIO__MimeTypeFinderJob* KIO__MimeTypeFinderJob_New(const QUrl* url) {
     return new VirtualKIOMimeTypeFinderJob(*url);
 }
 
-KIO__MimeTypeFinderJob* KIO__MimeTypeFinderJob_new2(const QUrl* url, QObject* parent) {
+KIO__MimeTypeFinderJob* KIO__MimeTypeFinderJob_New2(const QUrl* url, QObject* parent) {
     return new VirtualKIOMimeTypeFinderJob(*url, parent);
 }
 

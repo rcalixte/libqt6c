@@ -8,11 +8,11 @@
 #include "libqstackedbarseries.h"
 
 QStackedBarSeries* q_stackedbarseries_new() {
-    return QStackedBarSeries_new();
+    return QStackedBarSeries_New();
 }
 
 QStackedBarSeries* q_stackedbarseries_new2(void* parent) {
-    return QStackedBarSeries_new2((QObject*)parent);
+    return QStackedBarSeries_New2((QObject*)parent);
 }
 
 const QMetaObject* q_stackedbarseries_meta_object(void* self) {

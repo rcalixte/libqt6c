@@ -47,11 +47,11 @@
 #include "libqcombobox.hpp"
 #include "libqcombobox.hxx"
 
-QComboBox* QComboBox_new(QWidget* parent) {
+QComboBox* QComboBox_New(QWidget* parent) {
     return new VirtualQComboBox(parent);
 }
 
-QComboBox* QComboBox_new2() {
+QComboBox* QComboBox_New2() {
     return new VirtualQComboBox();
 }
 

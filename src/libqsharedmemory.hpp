@@ -25,12 +25,12 @@ typedef struct QSharedMemory QSharedMemory;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QSharedMemory* QSharedMemory_new();
-QSharedMemory* QSharedMemory_new2(const QNativeIpcKey* key);
-QSharedMemory* QSharedMemory_new3(const libqt_string key);
-QSharedMemory* QSharedMemory_new4(QObject* parent);
-QSharedMemory* QSharedMemory_new5(const QNativeIpcKey* key, QObject* parent);
-QSharedMemory* QSharedMemory_new6(const libqt_string key, QObject* parent);
+QSharedMemory* QSharedMemory_New();
+QSharedMemory* QSharedMemory_New2(const QNativeIpcKey* key);
+QSharedMemory* QSharedMemory_New3(const libqt_string key);
+QSharedMemory* QSharedMemory_New4(QObject* parent);
+QSharedMemory* QSharedMemory_New5(const QNativeIpcKey* key, QObject* parent);
+QSharedMemory* QSharedMemory_New6(const libqt_string key, QObject* parent);
 QMetaObject* QSharedMemory_MetaObject(const QSharedMemory* self);
 void* QSharedMemory_Metacast(QSharedMemory* self, const char* param1);
 int QSharedMemory_Metacall(QSharedMemory* self, int param1, int param2, void** param3);

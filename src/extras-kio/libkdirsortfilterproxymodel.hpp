@@ -36,8 +36,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-KDirSortFilterProxyModel* KDirSortFilterProxyModel_new();
-KDirSortFilterProxyModel* KDirSortFilterProxyModel_new2(QObject* parent);
+KDirSortFilterProxyModel* KDirSortFilterProxyModel_New();
+KDirSortFilterProxyModel* KDirSortFilterProxyModel_New2(QObject* parent);
 QMetaObject* KDirSortFilterProxyModel_MetaObject(const KDirSortFilterProxyModel* self);
 void* KDirSortFilterProxyModel_Metacast(KDirSortFilterProxyModel* self, const char* param1);
 int KDirSortFilterProxyModel_Metacall(KDirSortFilterProxyModel* self, int param1, int param2, void** param3);

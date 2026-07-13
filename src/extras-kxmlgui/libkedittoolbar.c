@@ -17,19 +17,19 @@
 #include "libkedittoolbar.h"
 
 KEditToolBar* k_edittoolbar_new(void* collection) {
-    return KEditToolBar_new((KActionCollection*)collection);
+    return KEditToolBar_New((KActionCollection*)collection);
 }
 
 KEditToolBar* k_edittoolbar_new2(void* factory) {
-    return KEditToolBar_new2((KXMLGUIFactory*)factory);
+    return KEditToolBar_New2((KXMLGUIFactory*)factory);
 }
 
 KEditToolBar* k_edittoolbar_new3(void* collection, void* parent) {
-    return KEditToolBar_new3((KActionCollection*)collection, (QWidget*)parent);
+    return KEditToolBar_New3((KActionCollection*)collection, (QWidget*)parent);
 }
 
 KEditToolBar* k_edittoolbar_new4(void* factory, void* parent) {
-    return KEditToolBar_new4((KXMLGUIFactory*)factory, (QWidget*)parent);
+    return KEditToolBar_New4((KXMLGUIFactory*)factory, (QWidget*)parent);
 }
 
 const QMetaObject* k_edittoolbar_meta_object(void* self) {

@@ -21,35 +21,35 @@
 #include "libqdatetimeedit.h"
 
 QDateTimeEdit* q_datetimeedit_new(void* parent) {
-    return QDateTimeEdit_new((QWidget*)parent);
+    return QDateTimeEdit_New((QWidget*)parent);
 }
 
 QDateTimeEdit* q_datetimeedit_new2() {
-    return QDateTimeEdit_new2();
+    return QDateTimeEdit_New2();
 }
 
 QDateTimeEdit* q_datetimeedit_new3(void* dt) {
-    return QDateTimeEdit_new3((QDateTime*)dt);
+    return QDateTimeEdit_New3((QDateTime*)dt);
 }
 
 QDateTimeEdit* q_datetimeedit_new4(void* d) {
-    return QDateTimeEdit_new4((QDate*)d);
+    return QDateTimeEdit_New4((QDate*)d);
 }
 
 QDateTimeEdit* q_datetimeedit_new5(void* t) {
-    return QDateTimeEdit_new5((QTime*)t);
+    return QDateTimeEdit_New5((QTime*)t);
 }
 
 QDateTimeEdit* q_datetimeedit_new6(void* dt, void* parent) {
-    return QDateTimeEdit_new6((QDateTime*)dt, (QWidget*)parent);
+    return QDateTimeEdit_New6((QDateTime*)dt, (QWidget*)parent);
 }
 
 QDateTimeEdit* q_datetimeedit_new7(void* d, void* parent) {
-    return QDateTimeEdit_new7((QDate*)d, (QWidget*)parent);
+    return QDateTimeEdit_New7((QDate*)d, (QWidget*)parent);
 }
 
 QDateTimeEdit* q_datetimeedit_new8(void* t, void* parent) {
-    return QDateTimeEdit_new8((QTime*)t, (QWidget*)parent);
+    return QDateTimeEdit_New8((QTime*)t, (QWidget*)parent);
 }
 
 const QMetaObject* q_datetimeedit_meta_object(void* self) {
@@ -2649,19 +2649,19 @@ void q_datetimeedit_delete(void* self) {
 }
 
 QTimeEdit* q_timeedit_new(void* parent) {
-    return QTimeEdit_new((QWidget*)parent);
+    return QTimeEdit_New((QWidget*)parent);
 }
 
 QTimeEdit* q_timeedit_new2() {
-    return QTimeEdit_new2();
+    return QTimeEdit_New2();
 }
 
 QTimeEdit* q_timeedit_new3(void* time) {
-    return QTimeEdit_new3((QTime*)time);
+    return QTimeEdit_New3((QTime*)time);
 }
 
 QTimeEdit* q_timeedit_new4(void* time, void* parent) {
-    return QTimeEdit_new4((QTime*)time, (QWidget*)parent);
+    return QTimeEdit_New4((QTime*)time, (QWidget*)parent);
 }
 
 const QMetaObject* q_timeedit_meta_object(void* self) {
@@ -5269,19 +5269,19 @@ void q_timeedit_delete(void* self) {
 }
 
 QDateEdit* q_dateedit_new(void* parent) {
-    return QDateEdit_new((QWidget*)parent);
+    return QDateEdit_New((QWidget*)parent);
 }
 
 QDateEdit* q_dateedit_new2() {
-    return QDateEdit_new2();
+    return QDateEdit_New2();
 }
 
 QDateEdit* q_dateedit_new3(void* date) {
-    return QDateEdit_new3((QDate*)date);
+    return QDateEdit_New3((QDate*)date);
 }
 
 QDateEdit* q_dateedit_new4(void* date, void* parent) {
-    return QDateEdit_new4((QDate*)date, (QWidget*)parent);
+    return QDateEdit_New4((QDate*)date, (QWidget*)parent);
 }
 
 const QMetaObject* q_dateedit_meta_object(void* self) {

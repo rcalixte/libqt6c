@@ -15,7 +15,7 @@
 #include "libconfigdialog.h"
 
 Sonnet__ConfigDialog* k_sonnet__configdialog_new(void* parent) {
-    return Sonnet__ConfigDialog_new((QWidget*)parent);
+    return Sonnet__ConfigDialog_New((QWidget*)parent);
 }
 
 const QMetaObject* k_sonnet__configdialog_meta_object(void* self) {

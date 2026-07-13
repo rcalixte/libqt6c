@@ -27,9 +27,9 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KToggleAction* KToggleAction_new(QObject* parent);
-KToggleAction* KToggleAction_new2(const libqt_string text, QObject* parent);
-KToggleAction* KToggleAction_new3(const QIcon* icon, const libqt_string text, QObject* parent);
+KToggleAction* KToggleAction_New(QObject* parent);
+KToggleAction* KToggleAction_New2(const libqt_string text, QObject* parent);
+KToggleAction* KToggleAction_New3(const QIcon* icon, const libqt_string text, QObject* parent);
 QMetaObject* KToggleAction_MetaObject(const KToggleAction* self);
 void* KToggleAction_Metacast(KToggleAction* self, const char* param1);
 int KToggleAction_Metacall(KToggleAction* self, int param1, int param2, void** param3);

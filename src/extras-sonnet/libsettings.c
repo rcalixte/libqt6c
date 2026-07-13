@@ -7,11 +7,11 @@
 #include "libsettings.h"
 
 Sonnet__Settings* k_sonnet__settings_new() {
-    return Sonnet__Settings_new();
+    return Sonnet__Settings_New();
 }
 
 Sonnet__Settings* k_sonnet__settings_new2(void* parent) {
-    return Sonnet__Settings_new2((QObject*)parent);
+    return Sonnet__Settings_New2((QObject*)parent);
 }
 
 const QMetaObject* k_sonnet__settings_meta_object(void* self) {

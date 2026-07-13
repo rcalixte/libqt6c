@@ -162,15 +162,15 @@ void k_protocolinfo_delete(void* self) {
 }
 
 KProtocolInfo__ExtraField* k_protocolinfo__extrafield_new() {
-    return KProtocolInfo__ExtraField_new();
+    return KProtocolInfo__ExtraField_New();
 }
 
 KProtocolInfo__ExtraField* k_protocolinfo__extrafield_new2(const char* _name, int32_t _type) {
-    return KProtocolInfo__ExtraField_new2(qstring(_name), _type);
+    return KProtocolInfo__ExtraField_New2(qstring(_name), _type);
 }
 
 KProtocolInfo__ExtraField* k_protocolinfo__extrafield_new3(void* param1) {
-    return KProtocolInfo__ExtraField_new3((KProtocolInfo__ExtraField*)param1);
+    return KProtocolInfo__ExtraField_New3((KProtocolInfo__ExtraField*)param1);
 }
 
 const char* k_protocolinfo__extrafield_name(void* self) {

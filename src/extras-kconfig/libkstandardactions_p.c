@@ -2,19 +2,19 @@
 #include "libkstandardactions_p.h"
 
 KStandardActions__RawStringData* k_standardactions__rawstringdata_new(void* other) {
-    return KStandardActions__RawStringData_new((KStandardActions__RawStringData*)other);
+    return KStandardActions__RawStringData_New((KStandardActions__RawStringData*)other);
 }
 
 KStandardActions__RawStringData* k_standardactions__rawstringdata_new2(void* other) {
-    return KStandardActions__RawStringData_new2((KStandardActions__RawStringData*)other);
+    return KStandardActions__RawStringData_New2((KStandardActions__RawStringData*)other);
 }
 
 KStandardActions__RawStringData* k_standardactions__rawstringdata_new3() {
-    return KStandardActions__RawStringData_new3();
+    return KStandardActions__RawStringData_New3();
 }
 
 KStandardActions__RawStringData* k_standardactions__rawstringdata_new4(void* param1) {
-    return KStandardActions__RawStringData_new4((KStandardActions__RawStringData*)param1);
+    return KStandardActions__RawStringData_New4((KStandardActions__RawStringData*)param1);
 }
 
 const char* k_standardactions__rawstringdata_to_string(void* self) {
@@ -29,7 +29,7 @@ void k_standardactions__rawstringdata_delete(void* self) {
 }
 
 KStandardActions__KStandardActionsInfo* k_standardactions__kstandardactionsinfo_new(void* param1) {
-    return KStandardActions__KStandardActionsInfo_new((KStandardActions__KStandardActionsInfo*)param1);
+    return KStandardActions__KStandardActionsInfo_New((KStandardActions__KStandardActionsInfo*)param1);
 }
 
 int32_t k_standardactions__kstandardactionsinfo_id(void* self) {

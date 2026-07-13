@@ -14,11 +14,11 @@
 #include "libqscilexersql.hpp"
 #include "libqscilexersql.hxx"
 
-QsciLexerSQL* QsciLexerSQL_new() {
+QsciLexerSQL* QsciLexerSQL_New() {
     return new VirtualQsciLexerSQL();
 }
 
-QsciLexerSQL* QsciLexerSQL_new2(QObject* parent) {
+QsciLexerSQL* QsciLexerSQL_New2(QObject* parent) {
     return new VirtualQsciLexerSQL(parent);
 }
 

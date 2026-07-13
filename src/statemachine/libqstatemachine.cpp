@@ -18,19 +18,19 @@
 #include "libqstatemachine.hpp"
 #include "libqstatemachine.hxx"
 
-QStateMachine* QStateMachine_new() {
+QStateMachine* QStateMachine_New() {
     return new VirtualQStateMachine();
 }
 
-QStateMachine* QStateMachine_new2(int childMode) {
+QStateMachine* QStateMachine_New2(int childMode) {
     return new VirtualQStateMachine(static_cast<QState::ChildMode>(childMode));
 }
 
-QStateMachine* QStateMachine_new3(QObject* parent) {
+QStateMachine* QStateMachine_New3(QObject* parent) {
     return new VirtualQStateMachine(parent);
 }
 
-QStateMachine* QStateMachine_new4(int childMode, QObject* parent) {
+QStateMachine* QStateMachine_New4(int childMode, QObject* parent) {
     return new VirtualQStateMachine(static_cast<QState::ChildMode>(childMode), parent);
 }
 
@@ -716,7 +716,7 @@ void QStateMachine_Delete(QStateMachine* self) {
     delete self;
 }
 
-QStateMachine__SignalEvent* QStateMachine__SignalEvent_new(QObject* sender, int signalIndex, const libqt_list /* of QVariant* */ arguments) {
+QStateMachine__SignalEvent* QStateMachine__SignalEvent_New(QObject* sender, int signalIndex, const libqt_list /* of QVariant* */ arguments) {
     QList<QVariant> arguments_QList;
     arguments_QList.reserve(arguments.len);
     QVariant** arguments_arr = static_cast<QVariant**>(arguments.data.ptr);
@@ -726,7 +726,7 @@ QStateMachine__SignalEvent* QStateMachine__SignalEvent_new(QObject* sender, int 
     return new VirtualQStateMachineSignalEvent(sender, static_cast<int>(signalIndex), arguments_QList);
 }
 
-QStateMachine__SignalEvent* QStateMachine__SignalEvent_new2(const QStateMachine__SignalEvent* param1) {
+QStateMachine__SignalEvent* QStateMachine__SignalEvent_New2(const QStateMachine__SignalEvent* param1) {
     return new VirtualQStateMachineSignalEvent(*param1);
 }
 
@@ -813,11 +813,11 @@ void QStateMachine__SignalEvent_Delete(QStateMachine__SignalEvent* self) {
     delete self;
 }
 
-QStateMachine__WrappedEvent* QStateMachine__WrappedEvent_new(QObject* object, QEvent* event) {
+QStateMachine__WrappedEvent* QStateMachine__WrappedEvent_New(QObject* object, QEvent* event) {
     return new VirtualQStateMachineWrappedEvent(object, event);
 }
 
-QStateMachine__WrappedEvent* QStateMachine__WrappedEvent_new2(const QStateMachine__WrappedEvent* param1) {
+QStateMachine__WrappedEvent* QStateMachine__WrappedEvent_New2(const QStateMachine__WrappedEvent* param1) {
     return new VirtualQStateMachineWrappedEvent(*param1);
 }
 

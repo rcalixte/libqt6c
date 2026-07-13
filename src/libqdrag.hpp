@@ -27,7 +27,7 @@ typedef struct QPoint QPoint;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QDrag* QDrag_new(QObject* dragSource);
+QDrag* QDrag_New(QObject* dragSource);
 QMetaObject* QDrag_MetaObject(const QDrag* self);
 void* QDrag_Metacast(QDrag* self, const char* param1);
 int QDrag_Metacall(QDrag* self, int param1, int param2, void** param3);

@@ -9,11 +9,11 @@
 #include "libkfind.h"
 
 KFind* k_find_new(const char* pattern, long options, void* parent) {
-    return KFind_new(qstring(pattern), options, (QWidget*)parent);
+    return KFind_New(qstring(pattern), options, (QWidget*)parent);
 }
 
 KFind* k_find_new2(const char* pattern, long options, void* parent, void* findDialog) {
-    return KFind_new2(qstring(pattern), options, (QWidget*)parent, (QWidget*)findDialog);
+    return KFind_New2(qstring(pattern), options, (QWidget*)parent, (QWidget*)findDialog);
 }
 
 const QMetaObject* k_find_meta_object(void* self) {

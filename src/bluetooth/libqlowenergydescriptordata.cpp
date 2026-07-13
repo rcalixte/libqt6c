@@ -5,16 +5,16 @@
 #include "libqlowenergydescriptordata.hpp"
 #include "libqlowenergydescriptordata.hxx"
 
-QLowEnergyDescriptorData* QLowEnergyDescriptorData_new() {
+QLowEnergyDescriptorData* QLowEnergyDescriptorData_New() {
     return new QLowEnergyDescriptorData();
 }
 
-QLowEnergyDescriptorData* QLowEnergyDescriptorData_new2(const QBluetoothUuid* uuid, const libqt_string value) {
+QLowEnergyDescriptorData* QLowEnergyDescriptorData_New2(const QBluetoothUuid* uuid, const libqt_string value) {
     QByteArray value_QByteArray(value.data, value.len);
     return new QLowEnergyDescriptorData(*uuid, value_QByteArray);
 }
 
-QLowEnergyDescriptorData* QLowEnergyDescriptorData_new3(const QLowEnergyDescriptorData* other) {
+QLowEnergyDescriptorData* QLowEnergyDescriptorData_New3(const QLowEnergyDescriptorData* other) {
     return new QLowEnergyDescriptorData(*other);
 }
 

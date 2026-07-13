@@ -64,9 +64,9 @@ typedef struct QUrl QUrl;
 typedef struct QWidget QWidget;
 #endif
 
-KParts__ReadOnlyPart* KParts__ReadOnlyPart_new();
-KParts__ReadOnlyPart* KParts__ReadOnlyPart_new2(QObject* parent);
-KParts__ReadOnlyPart* KParts__ReadOnlyPart_new3(QObject* parent, const KPluginMetaData* data);
+KParts__ReadOnlyPart* KParts__ReadOnlyPart_New();
+KParts__ReadOnlyPart* KParts__ReadOnlyPart_New2(QObject* parent);
+KParts__ReadOnlyPart* KParts__ReadOnlyPart_New3(QObject* parent, const KPluginMetaData* data);
 QMetaObject* KParts__ReadOnlyPart_MetaObject(const KParts__ReadOnlyPart* self);
 void* KParts__ReadOnlyPart_Metacast(KParts__ReadOnlyPart* self, const char* param1);
 int KParts__ReadOnlyPart_Metacall(KParts__ReadOnlyPart* self, int param1, int param2, void** param3);

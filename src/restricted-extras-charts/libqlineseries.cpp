@@ -15,11 +15,11 @@
 #include "libqlineseries.hpp"
 #include "libqlineseries.hxx"
 
-QLineSeries* QLineSeries_new() {
+QLineSeries* QLineSeries_New() {
     return new VirtualQLineSeries();
 }
 
-QLineSeries* QLineSeries_new2(QObject* parent) {
+QLineSeries* QLineSeries_New2(QObject* parent) {
     return new VirtualQLineSeries(parent);
 }
 

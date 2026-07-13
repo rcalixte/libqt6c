@@ -12,11 +12,11 @@
 #include "libkcompositejob.hpp"
 #include "libkcompositejob.hxx"
 
-KCompositeJob* KCompositeJob_new() {
+KCompositeJob* KCompositeJob_New() {
     return new VirtualKCompositeJob();
 }
 
-KCompositeJob* KCompositeJob_new2(QObject* parent) {
+KCompositeJob* KCompositeJob_New2(QObject* parent) {
     return new VirtualKCompositeJob(parent);
 }
 

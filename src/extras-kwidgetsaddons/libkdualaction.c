@@ -9,11 +9,11 @@
 #include "libkdualaction.h"
 
 KDualAction* k_dualaction_new(void* parent) {
-    return KDualAction_new((QObject*)parent);
+    return KDualAction_New((QObject*)parent);
 }
 
 KDualAction* k_dualaction_new2(const char* inactiveText, const char* activeText, void* parent) {
-    return KDualAction_new2(qstring(inactiveText), qstring(activeText), (QObject*)parent);
+    return KDualAction_New2(qstring(inactiveText), qstring(activeText), (QObject*)parent);
 }
 
 const QMetaObject* k_dualaction_meta_object(void* self) {

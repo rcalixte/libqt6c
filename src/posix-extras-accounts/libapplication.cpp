@@ -5,11 +5,11 @@
 #include "libapplication.hpp"
 #include "libapplication.hxx"
 
-Accounts__Application* Accounts__Application_new() {
+Accounts__Application* Accounts__Application_New() {
     return new Accounts::Application();
 }
 
-Accounts__Application* Accounts__Application_new2(const Accounts__Application* other) {
+Accounts__Application* Accounts__Application_New2(const Accounts__Application* other) {
     return new Accounts::Application(*other);
 }
 

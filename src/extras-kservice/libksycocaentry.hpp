@@ -19,7 +19,7 @@ typedef struct KSycocaEntry KSycocaEntry;
 typedef struct QSharedData QSharedData;
 #endif
 
-KSycocaEntry* KSycocaEntry_new();
+KSycocaEntry* KSycocaEntry_New();
 bool KSycocaEntry_IsType(const KSycocaEntry* self, int t);
 int KSycocaEntry_SycocaType(const KSycocaEntry* self);
 libqt_string KSycocaEntry_Name(const KSycocaEntry* self);

@@ -14,11 +14,11 @@
 #include "libqscilexercustom.hpp"
 #include "libqscilexercustom.hxx"
 
-QsciLexerCustom* QsciLexerCustom_new() {
+QsciLexerCustom* QsciLexerCustom_New() {
     return new VirtualQsciLexerCustom();
 }
 
-QsciLexerCustom* QsciLexerCustom_new2(QObject* parent) {
+QsciLexerCustom* QsciLexerCustom_New2(QObject* parent) {
     return new VirtualQsciLexerCustom(parent);
 }
 

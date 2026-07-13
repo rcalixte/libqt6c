@@ -40,8 +40,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-Accounts__AccountService* Accounts__AccountService_new(Accounts__Account* account, const Accounts__Service* service);
-Accounts__AccountService* Accounts__AccountService_new2(Accounts__Account* account, const Accounts__Service* service, QObject* parent);
+Accounts__AccountService* Accounts__AccountService_New(Accounts__Account* account, const Accounts__Service* service);
+Accounts__AccountService* Accounts__AccountService_New2(Accounts__Account* account, const Accounts__Service* service, QObject* parent);
 QMetaObject* Accounts__AccountService_MetaObject(const Accounts__AccountService* self);
 void* Accounts__AccountService_Metacast(Accounts__AccountService* self, const char* param1);
 int Accounts__AccountService_Metacall(Accounts__AccountService* self, int param1, int param2, void** param3);

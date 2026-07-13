@@ -11,11 +11,11 @@
 #include "libqwebengineurlschemehandler.hpp"
 #include "libqwebengineurlschemehandler.hxx"
 
-QWebEngineUrlSchemeHandler* QWebEngineUrlSchemeHandler_new() {
+QWebEngineUrlSchemeHandler* QWebEngineUrlSchemeHandler_New() {
     return new VirtualQWebEngineUrlSchemeHandler();
 }
 
-QWebEngineUrlSchemeHandler* QWebEngineUrlSchemeHandler_new2(QObject* parent) {
+QWebEngineUrlSchemeHandler* QWebEngineUrlSchemeHandler_New2(QObject* parent) {
     return new VirtualQWebEngineUrlSchemeHandler(parent);
 }
 

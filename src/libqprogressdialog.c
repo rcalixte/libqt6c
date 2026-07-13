@@ -18,27 +18,27 @@
 #include "libqprogressdialog.h"
 
 QProgressDialog* q_progressdialog_new(void* parent) {
-    return QProgressDialog_new((QWidget*)parent);
+    return QProgressDialog_New((QWidget*)parent);
 }
 
 QProgressDialog* q_progressdialog_new2() {
-    return QProgressDialog_new2();
+    return QProgressDialog_New2();
 }
 
 QProgressDialog* q_progressdialog_new3(const char* labelText, const char* cancelButtonText, int minimum, int maximum) {
-    return QProgressDialog_new3(qstring(labelText), qstring(cancelButtonText), minimum, maximum);
+    return QProgressDialog_New3(qstring(labelText), qstring(cancelButtonText), minimum, maximum);
 }
 
 QProgressDialog* q_progressdialog_new4(void* parent, int32_t flags) {
-    return QProgressDialog_new4((QWidget*)parent, flags);
+    return QProgressDialog_New4((QWidget*)parent, flags);
 }
 
 QProgressDialog* q_progressdialog_new5(const char* labelText, const char* cancelButtonText, int minimum, int maximum, void* parent) {
-    return QProgressDialog_new5(qstring(labelText), qstring(cancelButtonText), minimum, maximum, (QWidget*)parent);
+    return QProgressDialog_New5(qstring(labelText), qstring(cancelButtonText), minimum, maximum, (QWidget*)parent);
 }
 
 QProgressDialog* q_progressdialog_new6(const char* labelText, const char* cancelButtonText, int minimum, int maximum, void* parent, int32_t flags) {
-    return QProgressDialog_new6(qstring(labelText), qstring(cancelButtonText), minimum, maximum, (QWidget*)parent, flags);
+    return QProgressDialog_New6(qstring(labelText), qstring(cancelButtonText), minimum, maximum, (QWidget*)parent, flags);
 }
 
 const QMetaObject* q_progressdialog_meta_object(void* self) {

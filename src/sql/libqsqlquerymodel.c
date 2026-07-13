@@ -15,11 +15,11 @@
 #include "libqsqlquerymodel.h"
 
 QSqlQueryModel* q_sqlquerymodel_new() {
-    return QSqlQueryModel_new();
+    return QSqlQueryModel_New();
 }
 
 QSqlQueryModel* q_sqlquerymodel_new2(void* parent) {
-    return QSqlQueryModel_new2((QObject*)parent);
+    return QSqlQueryModel_New2((QObject*)parent);
 }
 
 const QMetaObject* q_sqlquerymodel_meta_object(void* self) {

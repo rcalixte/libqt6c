@@ -15,11 +15,11 @@
 #include "libqvalidator.hpp"
 #include "libqvalidator.hxx"
 
-QValidator* QValidator_new() {
+QValidator* QValidator_New() {
     return new VirtualQValidator();
 }
 
-QValidator* QValidator_new2(QObject* parent) {
+QValidator* QValidator_New2(QObject* parent) {
     return new VirtualQValidator(parent);
 }
 
@@ -484,19 +484,19 @@ void QValidator_Delete(QValidator* self) {
     delete self;
 }
 
-QIntValidator* QIntValidator_new() {
+QIntValidator* QIntValidator_New() {
     return new VirtualQIntValidator();
 }
 
-QIntValidator* QIntValidator_new2(int bottom, int top) {
+QIntValidator* QIntValidator_New2(int bottom, int top) {
     return new VirtualQIntValidator(static_cast<int>(bottom), static_cast<int>(top));
 }
 
-QIntValidator* QIntValidator_new3(QObject* parent) {
+QIntValidator* QIntValidator_New3(QObject* parent) {
     return new VirtualQIntValidator(parent);
 }
 
-QIntValidator* QIntValidator_new4(int bottom, int top, QObject* parent) {
+QIntValidator* QIntValidator_New4(int bottom, int top, QObject* parent) {
     return new VirtualQIntValidator(static_cast<int>(bottom), static_cast<int>(top), parent);
 }
 
@@ -986,19 +986,19 @@ void QIntValidator_Delete(QIntValidator* self) {
     delete self;
 }
 
-QDoubleValidator* QDoubleValidator_new() {
+QDoubleValidator* QDoubleValidator_New() {
     return new VirtualQDoubleValidator();
 }
 
-QDoubleValidator* QDoubleValidator_new2(double bottom, double top, int decimals) {
+QDoubleValidator* QDoubleValidator_New2(double bottom, double top, int decimals) {
     return new VirtualQDoubleValidator(static_cast<double>(bottom), static_cast<double>(top), static_cast<int>(decimals));
 }
 
-QDoubleValidator* QDoubleValidator_new3(QObject* parent) {
+QDoubleValidator* QDoubleValidator_New3(QObject* parent) {
     return new VirtualQDoubleValidator(parent);
 }
 
-QDoubleValidator* QDoubleValidator_new4(double bottom, double top, int decimals, QObject* parent) {
+QDoubleValidator* QDoubleValidator_New4(double bottom, double top, int decimals, QObject* parent) {
     return new VirtualQDoubleValidator(static_cast<double>(bottom), static_cast<double>(top), static_cast<int>(decimals), parent);
 }
 
@@ -1532,19 +1532,19 @@ void QDoubleValidator_Delete(QDoubleValidator* self) {
     delete self;
 }
 
-QRegularExpressionValidator* QRegularExpressionValidator_new() {
+QRegularExpressionValidator* QRegularExpressionValidator_New() {
     return new VirtualQRegularExpressionValidator();
 }
 
-QRegularExpressionValidator* QRegularExpressionValidator_new2(const QRegularExpression* re) {
+QRegularExpressionValidator* QRegularExpressionValidator_New2(const QRegularExpression* re) {
     return new VirtualQRegularExpressionValidator(*re);
 }
 
-QRegularExpressionValidator* QRegularExpressionValidator_new3(QObject* parent) {
+QRegularExpressionValidator* QRegularExpressionValidator_New3(QObject* parent) {
     return new VirtualQRegularExpressionValidator(parent);
 }
 
-QRegularExpressionValidator* QRegularExpressionValidator_new4(const QRegularExpression* re, QObject* parent) {
+QRegularExpressionValidator* QRegularExpressionValidator_New4(const QRegularExpression* re, QObject* parent) {
     return new VirtualQRegularExpressionValidator(*re, parent);
 }
 

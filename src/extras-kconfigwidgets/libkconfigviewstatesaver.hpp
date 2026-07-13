@@ -28,8 +28,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KConfigViewStateSaver* KConfigViewStateSaver_new();
-KConfigViewStateSaver* KConfigViewStateSaver_new2(QObject* parent);
+KConfigViewStateSaver* KConfigViewStateSaver_New();
+KConfigViewStateSaver* KConfigViewStateSaver_New2(QObject* parent);
 QMetaObject* KConfigViewStateSaver_MetaObject(const KConfigViewStateSaver* self);
 void* KConfigViewStateSaver_Metacast(KConfigViewStateSaver* self, const char* param1);
 int KConfigViewStateSaver_Metacall(KConfigViewStateSaver* self, int param1, int param2, void** param3);

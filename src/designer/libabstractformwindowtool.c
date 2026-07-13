@@ -10,11 +10,11 @@
 #include "libabstractformwindowtool.h"
 
 QDesignerFormWindowToolInterface* q_designerformwindowtoolinterface_new() {
-    return QDesignerFormWindowToolInterface_new();
+    return QDesignerFormWindowToolInterface_New();
 }
 
 QDesignerFormWindowToolInterface* q_designerformwindowtoolinterface_new2(void* parent) {
-    return QDesignerFormWindowToolInterface_new2((QObject*)parent);
+    return QDesignerFormWindowToolInterface_New2((QObject*)parent);
 }
 
 const QMetaObject* q_designerformwindowtoolinterface_meta_object(void* self) {

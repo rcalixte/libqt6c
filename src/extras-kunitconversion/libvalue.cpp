@@ -7,29 +7,29 @@
 #include "libvalue.hpp"
 #include "libvalue.hxx"
 
-KUnitConversion__Value* KUnitConversion__Value_new() {
+KUnitConversion__Value* KUnitConversion__Value_New() {
     return new KUnitConversion::Value();
 }
 
-KUnitConversion__Value* KUnitConversion__Value_new2(double number, const KUnitConversion__Unit* unit) {
+KUnitConversion__Value* KUnitConversion__Value_New2(double number, const KUnitConversion__Unit* unit) {
     return new KUnitConversion::Value(static_cast<qreal>(number), *unit);
 }
 
-KUnitConversion__Value* KUnitConversion__Value_new3(double number, const libqt_string unitString) {
+KUnitConversion__Value* KUnitConversion__Value_New3(double number, const libqt_string unitString) {
     QString unitString_QString = QString::fromUtf8(unitString.data, unitString.len);
     return new KUnitConversion::Value(static_cast<qreal>(number), unitString_QString);
 }
 
-KUnitConversion__Value* KUnitConversion__Value_new4(double number, int unitId) {
+KUnitConversion__Value* KUnitConversion__Value_New4(double number, int unitId) {
     return new KUnitConversion::Value(static_cast<qreal>(number), static_cast<KUnitConversion::UnitId>(unitId));
 }
 
-KUnitConversion__Value* KUnitConversion__Value_new5(const QVariant* number, const libqt_string unitString) {
+KUnitConversion__Value* KUnitConversion__Value_New5(const QVariant* number, const libqt_string unitString) {
     QString unitString_QString = QString::fromUtf8(unitString.data, unitString.len);
     return new KUnitConversion::Value(*number, unitString_QString);
 }
 
-KUnitConversion__Value* KUnitConversion__Value_new6(const KUnitConversion__Value* other) {
+KUnitConversion__Value* KUnitConversion__Value_New6(const KUnitConversion__Value* other) {
     return new KUnitConversion::Value(*other);
 }
 

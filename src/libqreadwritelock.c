@@ -3,11 +3,11 @@
 #include "libqreadwritelock.h"
 
 QReadWriteLock* q_readwritelock_new() {
-    return QReadWriteLock_new();
+    return QReadWriteLock_New();
 }
 
 QReadWriteLock* q_readwritelock_new2(int32_t recursionMode) {
-    return QReadWriteLock_new2(recursionMode);
+    return QReadWriteLock_New2(recursionMode);
 }
 
 void q_readwritelock_lock_for_read(void* self) {
@@ -51,7 +51,7 @@ void q_readwritelock_delete(void* self) {
 }
 
 QReadLocker* q_readlocker_new(void* readWriteLock) {
-    return QReadLocker_new((QReadWriteLock*)readWriteLock);
+    return QReadLocker_New((QReadWriteLock*)readWriteLock);
 }
 
 void q_readlocker_unlock(void* self) {
@@ -71,7 +71,7 @@ void q_readlocker_delete(void* self) {
 }
 
 QWriteLocker* q_writelocker_new(void* readWriteLock) {
-    return QWriteLocker_new((QReadWriteLock*)readWriteLock);
+    return QWriteLocker_New((QReadWriteLock*)readWriteLock);
 }
 
 void q_writelocker_unlock(void* self) {

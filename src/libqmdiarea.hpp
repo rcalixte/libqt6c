@@ -56,8 +56,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QMdiArea* QMdiArea_new(QWidget* parent);
-QMdiArea* QMdiArea_new2();
+QMdiArea* QMdiArea_New(QWidget* parent);
+QMdiArea* QMdiArea_New2();
 QMetaObject* QMdiArea_MetaObject(const QMdiArea* self);
 void* QMdiArea_Metacast(QMdiArea* self, const char* param1);
 int QMdiArea_Metacall(QMdiArea* self, int param1, int param2, void** param3);

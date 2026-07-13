@@ -11,28 +11,28 @@
 #include "libqsharedmemory.hpp"
 #include "libqsharedmemory.hxx"
 
-QSharedMemory* QSharedMemory_new() {
+QSharedMemory* QSharedMemory_New() {
     return new VirtualQSharedMemory();
 }
 
-QSharedMemory* QSharedMemory_new2(const QNativeIpcKey* key) {
+QSharedMemory* QSharedMemory_New2(const QNativeIpcKey* key) {
     return new VirtualQSharedMemory(*key);
 }
 
-QSharedMemory* QSharedMemory_new3(const libqt_string key) {
+QSharedMemory* QSharedMemory_New3(const libqt_string key) {
     QString key_QString = QString::fromUtf8(key.data, key.len);
     return new VirtualQSharedMemory(key_QString);
 }
 
-QSharedMemory* QSharedMemory_new4(QObject* parent) {
+QSharedMemory* QSharedMemory_New4(QObject* parent) {
     return new VirtualQSharedMemory(parent);
 }
 
-QSharedMemory* QSharedMemory_new5(const QNativeIpcKey* key, QObject* parent) {
+QSharedMemory* QSharedMemory_New5(const QNativeIpcKey* key, QObject* parent) {
     return new VirtualQSharedMemory(*key, parent);
 }
 
-QSharedMemory* QSharedMemory_new6(const libqt_string key, QObject* parent) {
+QSharedMemory* QSharedMemory_New6(const libqt_string key, QObject* parent) {
     QString key_QString = QString::fromUtf8(key.data, key.len);
     return new VirtualQSharedMemory(key_QString, parent);
 }

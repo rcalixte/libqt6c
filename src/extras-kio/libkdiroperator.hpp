@@ -68,9 +68,9 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KDirOperator* KDirOperator_new();
-KDirOperator* KDirOperator_new2(const QUrl* urlName);
-KDirOperator* KDirOperator_new3(const QUrl* urlName, QWidget* parent);
+KDirOperator* KDirOperator_New();
+KDirOperator* KDirOperator_New2(const QUrl* urlName);
+KDirOperator* KDirOperator_New3(const QUrl* urlName, QWidget* parent);
 QMetaObject* KDirOperator_MetaObject(const KDirOperator* self);
 void* KDirOperator_Metacast(KDirOperator* self, const char* param1);
 int KDirOperator_Metacall(KDirOperator* self, int param1, int param2, void** param3);

@@ -69,16 +69,16 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QListWidgetItem* QListWidgetItem_new();
-QListWidgetItem* QListWidgetItem_new2(const libqt_string text);
-QListWidgetItem* QListWidgetItem_new3(const QIcon* icon, const libqt_string text);
-QListWidgetItem* QListWidgetItem_new4(const QListWidgetItem* other);
-QListWidgetItem* QListWidgetItem_new5(QListWidget* listview);
-QListWidgetItem* QListWidgetItem_new6(QListWidget* listview, int type);
-QListWidgetItem* QListWidgetItem_new7(const libqt_string text, QListWidget* listview);
-QListWidgetItem* QListWidgetItem_new8(const libqt_string text, QListWidget* listview, int type);
-QListWidgetItem* QListWidgetItem_new9(const QIcon* icon, const libqt_string text, QListWidget* listview);
-QListWidgetItem* QListWidgetItem_new10(const QIcon* icon, const libqt_string text, QListWidget* listview, int type);
+QListWidgetItem* QListWidgetItem_New();
+QListWidgetItem* QListWidgetItem_New2(const libqt_string text);
+QListWidgetItem* QListWidgetItem_New3(const QIcon* icon, const libqt_string text);
+QListWidgetItem* QListWidgetItem_New4(const QListWidgetItem* other);
+QListWidgetItem* QListWidgetItem_New5(QListWidget* listview);
+QListWidgetItem* QListWidgetItem_New6(QListWidget* listview, int type);
+QListWidgetItem* QListWidgetItem_New7(const libqt_string text, QListWidget* listview);
+QListWidgetItem* QListWidgetItem_New8(const libqt_string text, QListWidget* listview, int type);
+QListWidgetItem* QListWidgetItem_New9(const QIcon* icon, const libqt_string text, QListWidget* listview);
+QListWidgetItem* QListWidgetItem_New10(const QIcon* icon, const libqt_string text, QListWidget* listview, int type);
 QListWidgetItem* QListWidgetItem_Clone(const QListWidgetItem* self);
 QListWidget* QListWidgetItem_ListWidget(const QListWidgetItem* self);
 void QListWidgetItem_SetSelected(QListWidgetItem* self, bool selectVal);
@@ -132,8 +132,8 @@ void QListWidgetItem_OnWrite(const QListWidgetItem* self, intptr_t slot);
 void QListWidgetItem_SuperWrite(const QListWidgetItem* self, QDataStream* out);
 void QListWidgetItem_Delete(QListWidgetItem* self);
 
-QListWidget* QListWidget_new(QWidget* parent);
-QListWidget* QListWidget_new2();
+QListWidget* QListWidget_New(QWidget* parent);
+QListWidget* QListWidget_New2();
 QMetaObject* QListWidget_MetaObject(const QListWidget* self);
 void* QListWidget_Metacast(QListWidget* self, const char* param1);
 int QListWidget_Metacall(QListWidget* self, int param1, int param2, void** param3);

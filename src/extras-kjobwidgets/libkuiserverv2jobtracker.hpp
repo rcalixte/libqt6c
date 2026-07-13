@@ -23,8 +23,8 @@ typedef struct QMetaObject QMetaObject;
 typedef struct QObject QObject;
 #endif
 
-KUiServerV2JobTracker* KUiServerV2JobTracker_new();
-KUiServerV2JobTracker* KUiServerV2JobTracker_new2(QObject* parent);
+KUiServerV2JobTracker* KUiServerV2JobTracker_New();
+KUiServerV2JobTracker* KUiServerV2JobTracker_New2(QObject* parent);
 QMetaObject* KUiServerV2JobTracker_MetaObject(const KUiServerV2JobTracker* self);
 void* KUiServerV2JobTracker_Metacast(KUiServerV2JobTracker* self, const char* param1);
 int KUiServerV2JobTracker_Metacall(KUiServerV2JobTracker* self, int param1, int param2, void** param3);

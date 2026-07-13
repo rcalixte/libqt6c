@@ -9,23 +9,23 @@
 #include "libqicon.h"
 
 QIcon* q_icon_new() {
-    return QIcon_new();
+    return QIcon_New();
 }
 
 QIcon* q_icon_new2(void* pixmap) {
-    return QIcon_new2((QPixmap*)pixmap);
+    return QIcon_New2((QPixmap*)pixmap);
 }
 
 QIcon* q_icon_new3(void* other) {
-    return QIcon_new3((QIcon*)other);
+    return QIcon_New3((QIcon*)other);
 }
 
 QIcon* q_icon_new4(const char* fileName) {
-    return QIcon_new4(qstring(fileName));
+    return QIcon_New4(qstring(fileName));
 }
 
 QIcon* q_icon_new5(void* engine) {
-    return QIcon_new5((QIconEngine*)engine);
+    return QIcon_New5((QIconEngine*)engine);
 }
 
 void q_icon_operator_assign(void* self, void* other) {

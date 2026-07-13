@@ -3,11 +3,11 @@
 #include "libqgeomaneuver.h"
 
 QGeoManeuver* q_geomaneuver_new() {
-    return QGeoManeuver_new();
+    return QGeoManeuver_New();
 }
 
 QGeoManeuver* q_geomaneuver_new2(void* other) {
-    return QGeoManeuver_new2((QGeoManeuver*)other);
+    return QGeoManeuver_New2((QGeoManeuver*)other);
 }
 
 void q_geomaneuver_operator_assign(void* self, void* other) {

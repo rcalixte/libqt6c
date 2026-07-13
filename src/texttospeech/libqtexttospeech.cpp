@@ -15,16 +15,16 @@
 #include "libqtexttospeech.hpp"
 #include "libqtexttospeech.hxx"
 
-QTextToSpeech* QTextToSpeech_new() {
+QTextToSpeech* QTextToSpeech_New() {
     return new VirtualQTextToSpeech();
 }
 
-QTextToSpeech* QTextToSpeech_new2(const libqt_string engine) {
+QTextToSpeech* QTextToSpeech_New2(const libqt_string engine) {
     QString engine_QString = QString::fromUtf8(engine.data, engine.len);
     return new VirtualQTextToSpeech(engine_QString);
 }
 
-QTextToSpeech* QTextToSpeech_new3(const libqt_string engine, const libqt_map /* of libqt_string to QVariant* */ params) {
+QTextToSpeech* QTextToSpeech_New3(const libqt_string engine, const libqt_map /* of libqt_string to QVariant* */ params) {
     QString engine_QString = QString::fromUtf8(engine.data, engine.len);
     QMap<QString, QVariant> params_QMap;
     libqt_string* params_karr = static_cast<libqt_string*>(params.keys);
@@ -36,16 +36,16 @@ QTextToSpeech* QTextToSpeech_new3(const libqt_string engine, const libqt_map /* 
     return new VirtualQTextToSpeech(engine_QString, params_QMap);
 }
 
-QTextToSpeech* QTextToSpeech_new4(QObject* parent) {
+QTextToSpeech* QTextToSpeech_New4(QObject* parent) {
     return new VirtualQTextToSpeech(parent);
 }
 
-QTextToSpeech* QTextToSpeech_new5(const libqt_string engine, QObject* parent) {
+QTextToSpeech* QTextToSpeech_New5(const libqt_string engine, QObject* parent) {
     QString engine_QString = QString::fromUtf8(engine.data, engine.len);
     return new VirtualQTextToSpeech(engine_QString, parent);
 }
 
-QTextToSpeech* QTextToSpeech_new6(const libqt_string engine, const libqt_map /* of libqt_string to QVariant* */ params, QObject* parent) {
+QTextToSpeech* QTextToSpeech_New6(const libqt_string engine, const libqt_map /* of libqt_string to QVariant* */ params, QObject* parent) {
     QString engine_QString = QString::fromUtf8(engine.data, engine.len);
     QMap<QString, QVariant> params_QMap;
     libqt_string* params_karr = static_cast<libqt_string*>(params.keys);

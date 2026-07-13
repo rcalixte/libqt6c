@@ -27,7 +27,7 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QDBusPendingCall* QDBusPendingCall_new(const QDBusPendingCall* other);
+QDBusPendingCall* QDBusPendingCall_New(const QDBusPendingCall* other);
 void QDBusPendingCall_OperatorAssign(QDBusPendingCall* self, const QDBusPendingCall* other);
 void QDBusPendingCall_Swap(QDBusPendingCall* self, QDBusPendingCall* other);
 bool QDBusPendingCall_IsFinished(const QDBusPendingCall* self);
@@ -40,8 +40,8 @@ QDBusPendingCall* QDBusPendingCall_FromError(const QDBusError* error);
 QDBusPendingCall* QDBusPendingCall_FromCompletedCall(const QDBusMessage* message);
 void QDBusPendingCall_Delete(QDBusPendingCall* self);
 
-QDBusPendingCallWatcher* QDBusPendingCallWatcher_new(const QDBusPendingCall* call);
-QDBusPendingCallWatcher* QDBusPendingCallWatcher_new2(const QDBusPendingCall* call, QObject* parent);
+QDBusPendingCallWatcher* QDBusPendingCallWatcher_New(const QDBusPendingCall* call);
+QDBusPendingCallWatcher* QDBusPendingCallWatcher_New2(const QDBusPendingCall* call, QObject* parent);
 QMetaObject* QDBusPendingCallWatcher_MetaObject(const QDBusPendingCallWatcher* self);
 void* QDBusPendingCallWatcher_Metacast(QDBusPendingCallWatcher* self, const char* param1);
 int QDBusPendingCallWatcher_Metacall(QDBusPendingCallWatcher* self, int param1, int param2, void** param3);

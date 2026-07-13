@@ -28,12 +28,12 @@ typedef struct QPointF QPointF;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QCamera* QCamera_new();
-QCamera* QCamera_new2(const QCameraDevice* cameraDevice);
-QCamera* QCamera_new3(int position);
-QCamera* QCamera_new4(QObject* parent);
-QCamera* QCamera_new5(const QCameraDevice* cameraDevice, QObject* parent);
-QCamera* QCamera_new6(int position, QObject* parent);
+QCamera* QCamera_New();
+QCamera* QCamera_New2(const QCameraDevice* cameraDevice);
+QCamera* QCamera_New3(int position);
+QCamera* QCamera_New4(QObject* parent);
+QCamera* QCamera_New5(const QCameraDevice* cameraDevice, QObject* parent);
+QCamera* QCamera_New6(int position, QObject* parent);
 QMetaObject* QCamera_MetaObject(const QCamera* self);
 void* QCamera_Metacast(QCamera* self, const char* param1);
 int QCamera_Metacall(QCamera* self, int param1, int param2, void** param3);

@@ -9,11 +9,11 @@
 #include "libqvariantanimation.h"
 
 QVariantAnimation* q_variantanimation_new() {
-    return QVariantAnimation_new();
+    return QVariantAnimation_New();
 }
 
 QVariantAnimation* q_variantanimation_new2(void* parent) {
-    return QVariantAnimation_new2((QObject*)parent);
+    return QVariantAnimation_New2((QObject*)parent);
 }
 
 const QMetaObject* q_variantanimation_meta_object(void* self) {

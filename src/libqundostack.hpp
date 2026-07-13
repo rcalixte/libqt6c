@@ -26,10 +26,10 @@ typedef struct QUndoCommand QUndoCommand;
 typedef struct QUndoStack QUndoStack;
 #endif
 
-QUndoCommand* QUndoCommand_new();
-QUndoCommand* QUndoCommand_new2(const libqt_string text);
-QUndoCommand* QUndoCommand_new3(QUndoCommand* parent);
-QUndoCommand* QUndoCommand_new4(const libqt_string text, QUndoCommand* parent);
+QUndoCommand* QUndoCommand_New();
+QUndoCommand* QUndoCommand_New2(const libqt_string text);
+QUndoCommand* QUndoCommand_New3(QUndoCommand* parent);
+QUndoCommand* QUndoCommand_New4(const libqt_string text, QUndoCommand* parent);
 void QUndoCommand_Undo(QUndoCommand* self);
 void QUndoCommand_Redo(QUndoCommand* self);
 libqt_string QUndoCommand_Text(const QUndoCommand* self);
@@ -51,8 +51,8 @@ void QUndoCommand_OnMergeWith(QUndoCommand* self, intptr_t slot);
 bool QUndoCommand_SuperMergeWith(QUndoCommand* self, const QUndoCommand* other);
 void QUndoCommand_Delete(QUndoCommand* self);
 
-QUndoStack* QUndoStack_new();
-QUndoStack* QUndoStack_new2(QObject* parent);
+QUndoStack* QUndoStack_New();
+QUndoStack* QUndoStack_New2(QObject* parent);
 QMetaObject* QUndoStack_MetaObject(const QUndoStack* self);
 void* QUndoStack_Metacast(QUndoStack* self, const char* param1);
 int QUndoStack_Metacall(QUndoStack* self, int param1, int param2, void** param3);

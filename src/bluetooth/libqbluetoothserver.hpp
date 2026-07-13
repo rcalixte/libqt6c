@@ -28,8 +28,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QBluetoothServer* QBluetoothServer_new(int serverType);
-QBluetoothServer* QBluetoothServer_new2(int serverType, QObject* parent);
+QBluetoothServer* QBluetoothServer_New(int serverType);
+QBluetoothServer* QBluetoothServer_New2(int serverType, QObject* parent);
 QMetaObject* QBluetoothServer_MetaObject(const QBluetoothServer* self);
 void* QBluetoothServer_Metacast(QBluetoothServer* self, const char* param1);
 int QBluetoothServer_Metacall(QBluetoothServer* self, int param1, int param2, void** param3);

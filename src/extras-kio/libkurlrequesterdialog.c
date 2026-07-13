@@ -17,15 +17,15 @@
 #include "libkurlrequesterdialog.h"
 
 KUrlRequesterDialog* k_urlrequesterdialog_new(void* url) {
-    return KUrlRequesterDialog_new((QUrl*)url);
+    return KUrlRequesterDialog_New((QUrl*)url);
 }
 
 KUrlRequesterDialog* k_urlrequesterdialog_new2(void* url, const char* text, void* parent) {
-    return KUrlRequesterDialog_new2((QUrl*)url, qstring(text), (QWidget*)parent);
+    return KUrlRequesterDialog_New2((QUrl*)url, qstring(text), (QWidget*)parent);
 }
 
 KUrlRequesterDialog* k_urlrequesterdialog_new3(void* url, void* parent) {
-    return KUrlRequesterDialog_new3((QUrl*)url, (QWidget*)parent);
+    return KUrlRequesterDialog_New3((QUrl*)url, (QWidget*)parent);
 }
 
 const QMetaObject* k_urlrequesterdialog_meta_object(void* self) {

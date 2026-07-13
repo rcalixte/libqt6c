@@ -16,79 +16,79 @@
 #include "libqimage.h"
 
 QImage* q_image_new() {
-    return QImage_new();
+    return QImage_New();
 }
 
 QImage* q_image_new2(void* size, int32_t format) {
-    return QImage_new2((QSize*)size, format);
+    return QImage_New2((QSize*)size, format);
 }
 
 QImage* q_image_new3(int width, int height, int32_t format) {
-    return QImage_new3(width, height, format);
+    return QImage_New3(width, height, format);
 }
 
 QImage* q_image_new4(unsigned char* data, int width, int height, int32_t format) {
-    return QImage_new4(data, width, height, format);
+    return QImage_New4(data, width, height, format);
 }
 
 QImage* q_image_new5(unsigned char* data, int width, int height, int32_t format) {
-    return QImage_new5(data, width, height, format);
+    return QImage_New5(data, width, height, format);
 }
 
 QImage* q_image_new6(unsigned char* data, int width, int height, intptr_t bytesPerLine, int32_t format) {
-    return QImage_new6(data, width, height, bytesPerLine, format);
+    return QImage_New6(data, width, height, bytesPerLine, format);
 }
 
 QImage* q_image_new7(unsigned char* data, int width, int height, intptr_t bytesPerLine, int32_t format) {
-    return QImage_new7(data, width, height, bytesPerLine, format);
+    return QImage_New7(data, width, height, bytesPerLine, format);
 }
 
 QImage* q_image_new8(const char** xpm) {
-    return QImage_new8(xpm);
+    return QImage_New8(xpm);
 }
 
 QImage* q_image_new9(const char* fileName) {
-    return QImage_new9(qstring(fileName));
+    return QImage_New9(qstring(fileName));
 }
 
 QImage* q_image_new10(void* param1) {
-    return QImage_new10((QImage*)param1);
+    return QImage_New10((QImage*)param1);
 }
 
 QImage* q_image_new11(unsigned char* data, int width, int height, int32_t format, void (*cleanupFunction)(void* funcparam1)) {
-    return QImage_new11(data, width, height, format, (intptr_t)cleanupFunction);
+    return QImage_New11(data, width, height, format, (intptr_t)cleanupFunction);
 }
 
 QImage* q_image_new12(unsigned char* data, int width, int height, int32_t format, void (*cleanupFunction)(void* funcparam1), void* cleanupInfo) {
-    return QImage_new12(data, width, height, format, (intptr_t)cleanupFunction, cleanupInfo);
+    return QImage_New12(data, width, height, format, (intptr_t)cleanupFunction, cleanupInfo);
 }
 
 QImage* q_image_new13(unsigned char* data, int width, int height, int32_t format, void (*cleanupFunction)(void* funcparam1)) {
-    return QImage_new13(data, width, height, format, (intptr_t)cleanupFunction);
+    return QImage_New13(data, width, height, format, (intptr_t)cleanupFunction);
 }
 
 QImage* q_image_new14(unsigned char* data, int width, int height, int32_t format, void (*cleanupFunction)(void* funcparam1), void* cleanupInfo) {
-    return QImage_new14(data, width, height, format, (intptr_t)cleanupFunction, cleanupInfo);
+    return QImage_New14(data, width, height, format, (intptr_t)cleanupFunction, cleanupInfo);
 }
 
 QImage* q_image_new15(unsigned char* data, int width, int height, intptr_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1)) {
-    return QImage_new15(data, width, height, bytesPerLine, format, (intptr_t)cleanupFunction);
+    return QImage_New15(data, width, height, bytesPerLine, format, (intptr_t)cleanupFunction);
 }
 
 QImage* q_image_new16(unsigned char* data, int width, int height, intptr_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1), void* cleanupInfo) {
-    return QImage_new16(data, width, height, bytesPerLine, format, (intptr_t)cleanupFunction, cleanupInfo);
+    return QImage_New16(data, width, height, bytesPerLine, format, (intptr_t)cleanupFunction, cleanupInfo);
 }
 
 QImage* q_image_new17(unsigned char* data, int width, int height, intptr_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1)) {
-    return QImage_new17(data, width, height, bytesPerLine, format, (intptr_t)cleanupFunction);
+    return QImage_New17(data, width, height, bytesPerLine, format, (intptr_t)cleanupFunction);
 }
 
 QImage* q_image_new18(unsigned char* data, int width, int height, intptr_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1), void* cleanupInfo) {
-    return QImage_new18(data, width, height, bytesPerLine, format, (intptr_t)cleanupFunction, cleanupInfo);
+    return QImage_New18(data, width, height, bytesPerLine, format, (intptr_t)cleanupFunction, cleanupInfo);
 }
 
 QImage* q_image_new19(const char* fileName, const char* format) {
-    return QImage_new19(qstring(fileName), format);
+    return QImage_New19(qstring(fileName), format);
 }
 
 void q_image_operator_assign(void* self, void* param1) {

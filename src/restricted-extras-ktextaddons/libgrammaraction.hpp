@@ -21,8 +21,8 @@ typedef TextGrammarCheck::GrammarAction TextGrammarCheck__GrammarAction;
 typedef struct TextGrammarCheck__GrammarAction TextGrammarCheck__GrammarAction;
 #endif
 
-TextGrammarCheck__GrammarAction* TextGrammarCheck__GrammarAction_new();
-TextGrammarCheck__GrammarAction* TextGrammarCheck__GrammarAction_new2(const TextGrammarCheck__GrammarAction* param1);
+TextGrammarCheck__GrammarAction* TextGrammarCheck__GrammarAction_New();
+TextGrammarCheck__GrammarAction* TextGrammarCheck__GrammarAction_New2(const TextGrammarCheck__GrammarAction* param1);
 libqt_string TextGrammarCheck__GrammarAction_Replacement(const TextGrammarCheck__GrammarAction* self);
 void TextGrammarCheck__GrammarAction_SetReplacement(TextGrammarCheck__GrammarAction* self, const libqt_string replacement);
 int TextGrammarCheck__GrammarAction_Start(const TextGrammarCheck__GrammarAction* self);

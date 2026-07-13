@@ -7,15 +7,15 @@
 #include "libk7zip.h"
 
 K7Zip* k_7zip_new(const char* filename) {
-    return K7Zip_new(qstring(filename));
+    return K7Zip_New(qstring(filename));
 }
 
 K7Zip* k_7zip_new2(void* dev) {
-    return K7Zip_new2((QIODevice*)dev);
+    return K7Zip_New2((QIODevice*)dev);
 }
 
 K7Zip* k_7zip_new3(void* param1) {
-    return K7Zip_new3((K7Zip*)param1);
+    return K7Zip_New3((K7Zip*)param1);
 }
 
 const char* k_7zip_tr(const char* sourceText) {

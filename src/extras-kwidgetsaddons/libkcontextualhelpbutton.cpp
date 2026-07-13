@@ -40,16 +40,16 @@
 #include "libkcontextualhelpbutton.hpp"
 #include "libkcontextualhelpbutton.hxx"
 
-KContextualHelpButton* KContextualHelpButton_new(QWidget* parent) {
+KContextualHelpButton* KContextualHelpButton_New(QWidget* parent) {
     return new VirtualKContextualHelpButton(parent);
 }
 
-KContextualHelpButton* KContextualHelpButton_new2(const libqt_string contextualHelpText, const QWidget* heightHintWidget, QWidget* parent) {
+KContextualHelpButton* KContextualHelpButton_New2(const libqt_string contextualHelpText, const QWidget* heightHintWidget, QWidget* parent) {
     QString contextualHelpText_QString = QString::fromUtf8(contextualHelpText.data, contextualHelpText.len);
     return new VirtualKContextualHelpButton(contextualHelpText_QString, heightHintWidget, parent);
 }
 
-KContextualHelpButton* KContextualHelpButton_new3() {
+KContextualHelpButton* KContextualHelpButton_New3() {
     return new VirtualKContextualHelpButton();
 }
 

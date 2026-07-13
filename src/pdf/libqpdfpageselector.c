@@ -15,11 +15,11 @@
 #include "libqpdfpageselector.h"
 
 QPdfPageSelector* q_pdfpageselector_new(void* parent) {
-    return QPdfPageSelector_new((QWidget*)parent);
+    return QPdfPageSelector_New((QWidget*)parent);
 }
 
 QPdfPageSelector* q_pdfpageselector_new2() {
-    return QPdfPageSelector_new2();
+    return QPdfPageSelector_New2();
 }
 
 const QMetaObject* q_pdfpageselector_meta_object(void* self) {

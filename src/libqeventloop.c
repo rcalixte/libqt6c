@@ -8,11 +8,11 @@
 #include "libqeventloop.h"
 
 QEventLoop* q_eventloop_new() {
-    return QEventLoop_new();
+    return QEventLoop_New();
 }
 
 QEventLoop* q_eventloop_new2(void* parent) {
-    return QEventLoop_new2((QObject*)parent);
+    return QEventLoop_New2((QObject*)parent);
 }
 
 const QMetaObject* q_eventloop_meta_object(void* self) {
@@ -468,15 +468,15 @@ void q_eventloop_delete(void* self) {
 }
 
 QEventLoopLocker* q_eventlooplocker_new() {
-    return QEventLoopLocker_new();
+    return QEventLoopLocker_New();
 }
 
 QEventLoopLocker* q_eventlooplocker_new2(void* loop) {
-    return QEventLoopLocker_new2((QEventLoop*)loop);
+    return QEventLoopLocker_New2((QEventLoop*)loop);
 }
 
 QEventLoopLocker* q_eventlooplocker_new3(void* thread) {
-    return QEventLoopLocker_new3((QThread*)thread);
+    return QEventLoopLocker_New3((QThread*)thread);
 }
 
 void q_eventlooplocker_swap(void* self, void* other) {

@@ -179,31 +179,31 @@ int QCP_GetMarginValue(const QMargins* margins, int side) {
     return QCP::getMarginValue(*margins, static_cast<QCP::MarginSide>(side));
 }
 
-QCPVector2D* QCPVector2D_new(const QCPVector2D* other) {
+QCPVector2D* QCPVector2D_New(const QCPVector2D* other) {
     return new QCPVector2D(*other);
 }
 
-QCPVector2D* QCPVector2D_new2(QCPVector2D* other) {
+QCPVector2D* QCPVector2D_New2(QCPVector2D* other) {
     return new QCPVector2D(std::move(*other));
 }
 
-QCPVector2D* QCPVector2D_new3() {
+QCPVector2D* QCPVector2D_New3() {
     return new QCPVector2D();
 }
 
-QCPVector2D* QCPVector2D_new4(double x, double y) {
+QCPVector2D* QCPVector2D_New4(double x, double y) {
     return new QCPVector2D(static_cast<double>(x), static_cast<double>(y));
 }
 
-QCPVector2D* QCPVector2D_new5(const QPoint* point) {
+QCPVector2D* QCPVector2D_New5(const QPoint* point) {
     return new QCPVector2D(*point);
 }
 
-QCPVector2D* QCPVector2D_new6(const QPointF* point) {
+QCPVector2D* QCPVector2D_New6(const QPointF* point) {
     return new QCPVector2D(*point);
 }
 
-QCPVector2D* QCPVector2D_new7(const QCPVector2D* param1) {
+QCPVector2D* QCPVector2D_New7(const QCPVector2D* param1) {
     return new QCPVector2D(*param1);
 }
 
@@ -319,11 +319,11 @@ void QCPVector2D_Delete(QCPVector2D* self) {
     delete self;
 }
 
-QCPPainter* QCPPainter_new() {
+QCPPainter* QCPPainter_New() {
     return new QCPPainter();
 }
 
-QCPPainter* QCPPainter_new2(QPaintDevice* device) {
+QCPPainter* QCPPainter_New2(QPaintDevice* device) {
     return new QCPPainter(device);
 }
 
@@ -391,11 +391,11 @@ void QCPPainter_Delete(QCPPainter* self) {
     delete self;
 }
 
-QCPAbstractPaintBuffer* QCPAbstractPaintBuffer_new(const QSize* size, double devicePixelRatio) {
+QCPAbstractPaintBuffer* QCPAbstractPaintBuffer_New(const QSize* size, double devicePixelRatio) {
     return new VirtualQCPAbstractPaintBuffer(*size, static_cast<double>(devicePixelRatio));
 }
 
-QCPAbstractPaintBuffer* QCPAbstractPaintBuffer_new2(const QCPAbstractPaintBuffer* param1) {
+QCPAbstractPaintBuffer* QCPAbstractPaintBuffer_New2(const QCPAbstractPaintBuffer* param1) {
     return new VirtualQCPAbstractPaintBuffer(*param1);
 }
 
@@ -578,11 +578,11 @@ void QCPAbstractPaintBuffer_Delete(QCPAbstractPaintBuffer* self) {
     delete self;
 }
 
-QCPPaintBufferPixmap* QCPPaintBufferPixmap_new(const QSize* size, double devicePixelRatio) {
+QCPPaintBufferPixmap* QCPPaintBufferPixmap_New(const QSize* size, double devicePixelRatio) {
     return new VirtualQCPPaintBufferPixmap(*size, static_cast<double>(devicePixelRatio));
 }
 
-QCPPaintBufferPixmap* QCPPaintBufferPixmap_new2(const QCPPaintBufferPixmap* param1) {
+QCPPaintBufferPixmap* QCPPaintBufferPixmap_New2(const QCPPaintBufferPixmap* param1) {
     return new VirtualQCPPaintBufferPixmap(*param1);
 }
 
@@ -743,7 +743,7 @@ void QCPPaintBufferPixmap_Delete(QCPPaintBufferPixmap* self) {
     delete self;
 }
 
-QCPLayer* QCPLayer_new(QCustomPlot* parentPlot, const libqt_string layerName) {
+QCPLayer* QCPLayer_New(QCustomPlot* parentPlot, const libqt_string layerName) {
     QString layerName_QString = QString::fromUtf8(layerName.data, layerName.len);
     return new VirtualQCPLayer(parentPlot, layerName_QString);
 }
@@ -1309,16 +1309,16 @@ void QCPLayer_Delete(QCPLayer* self) {
     delete self;
 }
 
-QCPLayerable* QCPLayerable_new(QCustomPlot* plot) {
+QCPLayerable* QCPLayerable_New(QCustomPlot* plot) {
     return new VirtualQCPLayerable(plot);
 }
 
-QCPLayerable* QCPLayerable_new2(QCustomPlot* plot, libqt_string targetLayer) {
+QCPLayerable* QCPLayerable_New2(QCustomPlot* plot, libqt_string targetLayer) {
     QString targetLayer_QString = QString::fromUtf8(targetLayer.data, targetLayer.len);
     return new VirtualQCPLayerable(plot, targetLayer_QString);
 }
 
-QCPLayerable* QCPLayerable_new3(QCustomPlot* plot, libqt_string targetLayer, QCPLayerable* parentLayerable) {
+QCPLayerable* QCPLayerable_New3(QCustomPlot* plot, libqt_string targetLayer, QCPLayerable* parentLayerable) {
     QString targetLayer_QString = QString::fromUtf8(targetLayer.data, targetLayer.len);
     return new VirtualQCPLayerable(plot, targetLayer_QString, parentLayerable);
 }
@@ -2220,23 +2220,23 @@ void QCPLayerable_Delete(QCPLayerable* self) {
     delete self;
 }
 
-QCPRange* QCPRange_new(const QCPRange* other) {
+QCPRange* QCPRange_New(const QCPRange* other) {
     return new QCPRange(*other);
 }
 
-QCPRange* QCPRange_new2(QCPRange* other) {
+QCPRange* QCPRange_New2(QCPRange* other) {
     return new QCPRange(std::move(*other));
 }
 
-QCPRange* QCPRange_new3() {
+QCPRange* QCPRange_New3() {
     return new QCPRange();
 }
 
-QCPRange* QCPRange_new4(double lower, double upper) {
+QCPRange* QCPRange_New4(double lower, double upper) {
     return new QCPRange(static_cast<double>(lower), static_cast<double>(upper));
 }
 
-QCPRange* QCPRange_new5(const QCPRange* param1) {
+QCPRange* QCPRange_New5(const QCPRange* param1) {
     return new QCPRange(*param1);
 }
 
@@ -2352,23 +2352,23 @@ void QCPRange_Delete(QCPRange* self) {
     delete self;
 }
 
-QCPDataRange* QCPDataRange_new(const QCPDataRange* other) {
+QCPDataRange* QCPDataRange_New(const QCPDataRange* other) {
     return new QCPDataRange(*other);
 }
 
-QCPDataRange* QCPDataRange_new2(QCPDataRange* other) {
+QCPDataRange* QCPDataRange_New2(QCPDataRange* other) {
     return new QCPDataRange(std::move(*other));
 }
 
-QCPDataRange* QCPDataRange_new3() {
+QCPDataRange* QCPDataRange_New3() {
     return new QCPDataRange();
 }
 
-QCPDataRange* QCPDataRange_new4(int begin, int end) {
+QCPDataRange* QCPDataRange_New4(int begin, int end) {
     return new QCPDataRange(static_cast<int>(begin), static_cast<int>(end));
 }
 
-QCPDataRange* QCPDataRange_new5(const QCPDataRange* param1) {
+QCPDataRange* QCPDataRange_New5(const QCPDataRange* param1) {
     return new QCPDataRange(*param1);
 }
 
@@ -2448,15 +2448,15 @@ void QCPDataRange_Delete(QCPDataRange* self) {
     delete self;
 }
 
-QCPDataSelection* QCPDataSelection_new() {
+QCPDataSelection* QCPDataSelection_New() {
     return new QCPDataSelection();
 }
 
-QCPDataSelection* QCPDataSelection_new2(const QCPDataRange* range) {
+QCPDataSelection* QCPDataSelection_New2(const QCPDataRange* range) {
     return new QCPDataSelection(*range);
 }
 
-QCPDataSelection* QCPDataSelection_new3(const QCPDataSelection* param1) {
+QCPDataSelection* QCPDataSelection_New3(const QCPDataSelection* param1) {
     return new QCPDataSelection(*param1);
 }
 
@@ -2569,7 +2569,7 @@ void QCPDataSelection_Delete(QCPDataSelection* self) {
     delete self;
 }
 
-QCPSelectionRect* QCPSelectionRect_new(QCustomPlot* parentPlot) {
+QCPSelectionRect* QCPSelectionRect_New(QCustomPlot* parentPlot) {
     return new VirtualQCPSelectionRect(parentPlot);
 }
 
@@ -3643,7 +3643,7 @@ void QCPSelectionRect_Delete(QCPSelectionRect* self) {
     delete self;
 }
 
-QCPMarginGroup* QCPMarginGroup_new(QCustomPlot* parentPlot) {
+QCPMarginGroup* QCPMarginGroup_New(QCustomPlot* parentPlot) {
     return new VirtualQCPMarginGroup(parentPlot);
 }
 
@@ -4145,11 +4145,11 @@ void QCPMarginGroup_Delete(QCPMarginGroup* self) {
     delete self;
 }
 
-QCPLayoutElement* QCPLayoutElement_new() {
+QCPLayoutElement* QCPLayoutElement_New() {
     return new VirtualQCPLayoutElement();
 }
 
-QCPLayoutElement* QCPLayoutElement_new2(QCustomPlot* parentPlot) {
+QCPLayoutElement* QCPLayoutElement_New2(QCustomPlot* parentPlot) {
     return new VirtualQCPLayoutElement(parentPlot);
 }
 
@@ -5291,7 +5291,7 @@ void QCPLayoutElement_Delete(QCPLayoutElement* self) {
     delete self;
 }
 
-QCPLayout* QCPLayout_new() {
+QCPLayout* QCPLayout_New() {
     return new VirtualQCPLayout();
 }
 
@@ -6708,7 +6708,7 @@ void QCPLayout_Delete(QCPLayout* self) {
     delete self;
 }
 
-QCPLayoutGrid* QCPLayoutGrid_new() {
+QCPLayoutGrid* QCPLayoutGrid_New() {
     return new VirtualQCPLayoutGrid();
 }
 
@@ -8344,7 +8344,7 @@ void QCPLayoutGrid_Delete(QCPLayoutGrid* self) {
     delete self;
 }
 
-QCPLayoutInset* QCPLayoutInset_new() {
+QCPLayoutInset* QCPLayoutInset_New() {
     return new VirtualQCPLayoutInset();
 }
 
@@ -9793,35 +9793,35 @@ void QCPLayoutInset_Delete(QCPLayoutInset* self) {
     delete self;
 }
 
-QCPLineEnding* QCPLineEnding_new(const QCPLineEnding* other) {
+QCPLineEnding* QCPLineEnding_New(const QCPLineEnding* other) {
     return new QCPLineEnding(*other);
 }
 
-QCPLineEnding* QCPLineEnding_new2(QCPLineEnding* other) {
+QCPLineEnding* QCPLineEnding_New2(QCPLineEnding* other) {
     return new QCPLineEnding(std::move(*other));
 }
 
-QCPLineEnding* QCPLineEnding_new3() {
+QCPLineEnding* QCPLineEnding_New3() {
     return new QCPLineEnding();
 }
 
-QCPLineEnding* QCPLineEnding_new4(int style) {
+QCPLineEnding* QCPLineEnding_New4(int style) {
     return new QCPLineEnding(static_cast<QCPLineEnding::EndingStyle>(style));
 }
 
-QCPLineEnding* QCPLineEnding_new5(const QCPLineEnding* param1) {
+QCPLineEnding* QCPLineEnding_New5(const QCPLineEnding* param1) {
     return new QCPLineEnding(*param1);
 }
 
-QCPLineEnding* QCPLineEnding_new6(int style, double width) {
+QCPLineEnding* QCPLineEnding_New6(int style, double width) {
     return new QCPLineEnding(static_cast<QCPLineEnding::EndingStyle>(style), static_cast<double>(width));
 }
 
-QCPLineEnding* QCPLineEnding_new7(int style, double width, double length) {
+QCPLineEnding* QCPLineEnding_New7(int style, double width, double length) {
     return new QCPLineEnding(static_cast<QCPLineEnding::EndingStyle>(style), static_cast<double>(width), static_cast<double>(length));
 }
 
-QCPLineEnding* QCPLineEnding_new8(int style, double width, double length, bool inverted) {
+QCPLineEnding* QCPLineEnding_New8(int style, double width, double length, bool inverted) {
     return new QCPLineEnding(static_cast<QCPLineEnding::EndingStyle>(style), static_cast<double>(width), static_cast<double>(length), inverted);
 }
 
@@ -9885,7 +9885,7 @@ void QCPLineEnding_Delete(QCPLineEnding* self) {
     delete self;
 }
 
-QCPAxisTicker* QCPAxisTicker_new() {
+QCPAxisTicker* QCPAxisTicker_New() {
     return new VirtualQCPAxisTicker();
 }
 
@@ -10462,7 +10462,7 @@ void QCPAxisTicker_Delete(QCPAxisTicker* self) {
     delete self;
 }
 
-QCPAxisTickerDateTime* QCPAxisTickerDateTime_new() {
+QCPAxisTickerDateTime* QCPAxisTickerDateTime_New() {
     return new VirtualQCPAxisTickerDateTime();
 }
 
@@ -11079,7 +11079,7 @@ void QCPAxisTickerDateTime_Delete(QCPAxisTickerDateTime* self) {
     delete self;
 }
 
-QCPAxisTickerTime* QCPAxisTickerTime_new() {
+QCPAxisTickerTime* QCPAxisTickerTime_New() {
     return new VirtualQCPAxisTickerTime();
 }
 
@@ -11706,7 +11706,7 @@ void QCPAxisTickerTime_Delete(QCPAxisTickerTime* self) {
     delete self;
 }
 
-QCPAxisTickerFixed* QCPAxisTickerFixed_new() {
+QCPAxisTickerFixed* QCPAxisTickerFixed_New() {
     return new VirtualQCPAxisTickerFixed();
 }
 
@@ -12305,7 +12305,7 @@ void QCPAxisTickerFixed_Delete(QCPAxisTickerFixed* self) {
     delete self;
 }
 
-QCPAxisTickerText* QCPAxisTickerText_new() {
+QCPAxisTickerText* QCPAxisTickerText_New() {
     return new VirtualQCPAxisTickerText();
 }
 
@@ -12964,7 +12964,7 @@ void QCPAxisTickerText_Delete(QCPAxisTickerText* self) {
     delete self;
 }
 
-QCPAxisTickerPi* QCPAxisTickerPi_new() {
+QCPAxisTickerPi* QCPAxisTickerPi_New() {
     return new VirtualQCPAxisTickerPi();
 }
 
@@ -13849,7 +13849,7 @@ void QCPAxisTickerPi_Delete(QCPAxisTickerPi* self) {
     delete self;
 }
 
-QCPAxisTickerLog* QCPAxisTickerLog_new() {
+QCPAxisTickerLog* QCPAxisTickerLog_New() {
     return new VirtualQCPAxisTickerLog();
 }
 
@@ -14437,7 +14437,7 @@ void QCPAxisTickerLog_Delete(QCPAxisTickerLog* self) {
     delete self;
 }
 
-QCPGrid* QCPGrid_new(QCPAxis* parentAxis) {
+QCPGrid* QCPGrid_New(QCPAxis* parentAxis) {
     return new VirtualQCPGrid(parentAxis);
 }
 
@@ -15424,7 +15424,7 @@ void QCPGrid_Delete(QCPGrid* self) {
     delete self;
 }
 
-QCPAxis* QCPAxis_new(QCPAxisRect* parent, int type) {
+QCPAxis* QCPAxis_New(QCPAxisRect* parent, int type) {
     return new VirtualQCPAxis(parent, static_cast<QCPAxis::AxisType>(type));
 }
 
@@ -17035,47 +17035,47 @@ void QCPAxis_Delete(QCPAxis* self) {
     delete self;
 }
 
-QCPScatterStyle* QCPScatterStyle_new() {
+QCPScatterStyle* QCPScatterStyle_New() {
     return new QCPScatterStyle();
 }
 
-QCPScatterStyle* QCPScatterStyle_new2(int shape) {
+QCPScatterStyle* QCPScatterStyle_New2(int shape) {
     return new QCPScatterStyle(static_cast<QCPScatterStyle::ScatterShape>(shape));
 }
 
-QCPScatterStyle* QCPScatterStyle_new3(int shape, const QColor* color, double size) {
+QCPScatterStyle* QCPScatterStyle_New3(int shape, const QColor* color, double size) {
     return new QCPScatterStyle(static_cast<QCPScatterStyle::ScatterShape>(shape), *color, static_cast<double>(size));
 }
 
-QCPScatterStyle* QCPScatterStyle_new4(int shape, const QColor* color, const QColor* fill, double size) {
+QCPScatterStyle* QCPScatterStyle_New4(int shape, const QColor* color, const QColor* fill, double size) {
     return new QCPScatterStyle(static_cast<QCPScatterStyle::ScatterShape>(shape), *color, *fill, static_cast<double>(size));
 }
 
-QCPScatterStyle* QCPScatterStyle_new5(int shape, const QPen* pen, const QBrush* brush, double size) {
+QCPScatterStyle* QCPScatterStyle_New5(int shape, const QPen* pen, const QBrush* brush, double size) {
     return new QCPScatterStyle(static_cast<QCPScatterStyle::ScatterShape>(shape), *pen, *brush, static_cast<double>(size));
 }
 
-QCPScatterStyle* QCPScatterStyle_new6(const QPixmap* pixmap) {
+QCPScatterStyle* QCPScatterStyle_New6(const QPixmap* pixmap) {
     return new QCPScatterStyle(*pixmap);
 }
 
-QCPScatterStyle* QCPScatterStyle_new7(const QPainterPath* customPath, const QPen* pen) {
+QCPScatterStyle* QCPScatterStyle_New7(const QPainterPath* customPath, const QPen* pen) {
     return new QCPScatterStyle(*customPath, *pen);
 }
 
-QCPScatterStyle* QCPScatterStyle_new8(const QCPScatterStyle* param1) {
+QCPScatterStyle* QCPScatterStyle_New8(const QCPScatterStyle* param1) {
     return new QCPScatterStyle(*param1);
 }
 
-QCPScatterStyle* QCPScatterStyle_new9(int shape, double size) {
+QCPScatterStyle* QCPScatterStyle_New9(int shape, double size) {
     return new QCPScatterStyle(static_cast<QCPScatterStyle::ScatterShape>(shape), static_cast<double>(size));
 }
 
-QCPScatterStyle* QCPScatterStyle_new10(const QPainterPath* customPath, const QPen* pen, const QBrush* brush) {
+QCPScatterStyle* QCPScatterStyle_New10(const QPainterPath* customPath, const QPen* pen, const QBrush* brush) {
     return new QCPScatterStyle(*customPath, *pen, *brush);
 }
 
-QCPScatterStyle* QCPScatterStyle_new11(const QPainterPath* customPath, const QPen* pen, const QBrush* brush, double size) {
+QCPScatterStyle* QCPScatterStyle_New11(const QPainterPath* customPath, const QPen* pen, const QBrush* brush, double size) {
     return new QCPScatterStyle(*customPath, *pen, *brush, static_cast<double>(size));
 }
 
@@ -17159,7 +17159,7 @@ void QCPScatterStyle_Delete(QCPScatterStyle* self) {
     delete self;
 }
 
-QCPSelectionDecorator* QCPSelectionDecorator_new() {
+QCPSelectionDecorator* QCPSelectionDecorator_New() {
     return new VirtualQCPSelectionDecorator();
 }
 
@@ -17288,7 +17288,7 @@ void QCPSelectionDecorator_Delete(QCPSelectionDecorator* self) {
     delete self;
 }
 
-QCPAbstractPlottable* QCPAbstractPlottable_new(QCPAxis* keyAxis, QCPAxis* valueAxis) {
+QCPAbstractPlottable* QCPAbstractPlottable_New(QCPAxis* keyAxis, QCPAxis* valueAxis) {
     return new VirtualQCPAbstractPlottable(keyAxis, valueAxis);
 }
 
@@ -18472,12 +18472,12 @@ void QCPAbstractPlottable_Delete(QCPAbstractPlottable* self) {
     delete self;
 }
 
-QCPItemAnchor* QCPItemAnchor_new(QCustomPlot* parentPlot, QCPAbstractItem* parentItem, const libqt_string name) {
+QCPItemAnchor* QCPItemAnchor_New(QCustomPlot* parentPlot, QCPAbstractItem* parentItem, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQCPItemAnchor(parentPlot, parentItem, name_QString);
 }
 
-QCPItemAnchor* QCPItemAnchor_new2(QCustomPlot* parentPlot, QCPAbstractItem* parentItem, const libqt_string name, int anchorId) {
+QCPItemAnchor* QCPItemAnchor_New2(QCustomPlot* parentPlot, QCPAbstractItem* parentItem, const libqt_string name, int anchorId) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQCPItemAnchor(parentPlot, parentItem, name_QString, static_cast<int>(anchorId));
 }
@@ -18664,7 +18664,7 @@ void QCPItemAnchor_Delete(QCPItemAnchor* self) {
     delete self;
 }
 
-QCPItemPosition* QCPItemPosition_new(QCustomPlot* parentPlot, QCPAbstractItem* parentItem, const libqt_string name) {
+QCPItemPosition* QCPItemPosition_New(QCustomPlot* parentPlot, QCPAbstractItem* parentItem, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQCPItemPosition(parentPlot, parentItem, name_QString);
 }
@@ -18943,7 +18943,7 @@ void QCPItemPosition_Delete(QCPItemPosition* self) {
     delete self;
 }
 
-QCPAbstractItem* QCPAbstractItem_new(QCustomPlot* parentPlot) {
+QCPAbstractItem* QCPAbstractItem_New(QCustomPlot* parentPlot) {
     return new VirtualQCPAbstractItem(parentPlot);
 }
 
@@ -20023,11 +20023,11 @@ void QCPAbstractItem_Delete(QCPAbstractItem* self) {
     delete self;
 }
 
-QCustomPlot* QCustomPlot_new(QWidget* parent) {
+QCustomPlot* QCustomPlot_New(QWidget* parent) {
     return new VirtualQCustomPlot(parent);
 }
 
-QCustomPlot* QCustomPlot_new2() {
+QCustomPlot* QCustomPlot_New2() {
     return new VirtualQCustomPlot();
 }
 
@@ -23358,15 +23358,15 @@ void QCPPlottableInterface1D_Delete(QCPPlottableInterface1D* self) {
     delete self;
 }
 
-QCPColorGradient* QCPColorGradient_new() {
+QCPColorGradient* QCPColorGradient_New() {
     return new QCPColorGradient();
 }
 
-QCPColorGradient* QCPColorGradient_new2(int preset) {
+QCPColorGradient* QCPColorGradient_New2(int preset) {
     return new QCPColorGradient(static_cast<QCPColorGradient::GradientPreset>(preset));
 }
 
-QCPColorGradient* QCPColorGradient_new3(const QCPColorGradient* param1) {
+QCPColorGradient* QCPColorGradient_New3(const QCPColorGradient* param1) {
     return new QCPColorGradient(*param1);
 }
 
@@ -23498,7 +23498,7 @@ void QCPColorGradient_Delete(QCPColorGradient* self) {
     delete self;
 }
 
-QCPSelectionDecoratorBracket* QCPSelectionDecoratorBracket_new() {
+QCPSelectionDecoratorBracket* QCPSelectionDecoratorBracket_New() {
     return new VirtualQCPSelectionDecoratorBracket();
 }
 
@@ -23722,11 +23722,11 @@ void QCPSelectionDecoratorBracket_Delete(QCPSelectionDecoratorBracket* self) {
     delete self;
 }
 
-QCPAxisRect* QCPAxisRect_new(QCustomPlot* parentPlot) {
+QCPAxisRect* QCPAxisRect_New(QCustomPlot* parentPlot) {
     return new VirtualQCPAxisRect(parentPlot);
 }
 
-QCPAxisRect* QCPAxisRect_new2(QCustomPlot* parentPlot, bool setupDefaultAxes) {
+QCPAxisRect* QCPAxisRect_New2(QCustomPlot* parentPlot, bool setupDefaultAxes) {
     return new VirtualQCPAxisRect(parentPlot, setupDefaultAxes);
 }
 
@@ -25175,7 +25175,7 @@ void QCPAxisRect_Delete(QCPAxisRect* self) {
     delete self;
 }
 
-QCPAbstractLegendItem* QCPAbstractLegendItem_new(QCPLegend* parent) {
+QCPAbstractLegendItem* QCPAbstractLegendItem_New(QCPLegend* parent) {
     return new VirtualQCPAbstractLegendItem(parent);
 }
 
@@ -26327,7 +26327,7 @@ void QCPAbstractLegendItem_Delete(QCPAbstractLegendItem* self) {
     delete self;
 }
 
-QCPPlottableLegendItem* QCPPlottableLegendItem_new(QCPLegend* parent, QCPAbstractPlottable* plottable) {
+QCPPlottableLegendItem* QCPPlottableLegendItem_New(QCPLegend* parent, QCPAbstractPlottable* plottable) {
     return new VirtualQCPPlottableLegendItem(parent, plottable);
 }
 
@@ -27503,7 +27503,7 @@ void QCPPlottableLegendItem_Delete(QCPPlottableLegendItem* self) {
     delete self;
 }
 
-QCPLegend* QCPLegend_new() {
+QCPLegend* QCPLegend_New() {
     return new VirtualQCPLegend();
 }
 
@@ -29288,27 +29288,27 @@ void QCPLegend_Delete(QCPLegend* self) {
     delete self;
 }
 
-QCPTextElement* QCPTextElement_new(QCustomPlot* parentPlot) {
+QCPTextElement* QCPTextElement_New(QCustomPlot* parentPlot) {
     return new VirtualQCPTextElement(parentPlot);
 }
 
-QCPTextElement* QCPTextElement_new2(QCustomPlot* parentPlot, const libqt_string text) {
+QCPTextElement* QCPTextElement_New2(QCustomPlot* parentPlot, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQCPTextElement(parentPlot, text_QString);
 }
 
-QCPTextElement* QCPTextElement_new3(QCustomPlot* parentPlot, const libqt_string text, double pointSize) {
+QCPTextElement* QCPTextElement_New3(QCustomPlot* parentPlot, const libqt_string text, double pointSize) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQCPTextElement(parentPlot, text_QString, static_cast<double>(pointSize));
 }
 
-QCPTextElement* QCPTextElement_new4(QCustomPlot* parentPlot, const libqt_string text, const libqt_string fontFamily, double pointSize) {
+QCPTextElement* QCPTextElement_New4(QCustomPlot* parentPlot, const libqt_string text, const libqt_string fontFamily, double pointSize) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString fontFamily_QString = QString::fromUtf8(fontFamily.data, fontFamily.len);
     return new VirtualQCPTextElement(parentPlot, text_QString, fontFamily_QString, static_cast<double>(pointSize));
 }
 
-QCPTextElement* QCPTextElement_new5(QCustomPlot* parentPlot, const libqt_string text, const QFont* font) {
+QCPTextElement* QCPTextElement_New5(QCustomPlot* parentPlot, const libqt_string text, const QFont* font) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQCPTextElement(parentPlot, text_QString, *font);
 }
@@ -30539,7 +30539,7 @@ void QCPTextElement_Delete(QCPTextElement* self) {
     delete self;
 }
 
-QCPColorScale* QCPColorScale_new(QCustomPlot* parentPlot) {
+QCPColorScale* QCPColorScale_New(QCustomPlot* parentPlot) {
     return new VirtualQCPColorScale(parentPlot);
 }
 
@@ -31749,23 +31749,23 @@ void QCPColorScale_Delete(QCPColorScale* self) {
     delete self;
 }
 
-QCPGraphData* QCPGraphData_new(const QCPGraphData* other) {
+QCPGraphData* QCPGraphData_New(const QCPGraphData* other) {
     return new QCPGraphData(*other);
 }
 
-QCPGraphData* QCPGraphData_new2(QCPGraphData* other) {
+QCPGraphData* QCPGraphData_New2(QCPGraphData* other) {
     return new QCPGraphData(std::move(*other));
 }
 
-QCPGraphData* QCPGraphData_new3() {
+QCPGraphData* QCPGraphData_New3() {
     return new QCPGraphData();
 }
 
-QCPGraphData* QCPGraphData_new4(double key, double value) {
+QCPGraphData* QCPGraphData_New4(double key, double value) {
     return new QCPGraphData(static_cast<double>(key), static_cast<double>(value));
 }
 
-QCPGraphData* QCPGraphData_new5(const QCPGraphData* param1) {
+QCPGraphData* QCPGraphData_New5(const QCPGraphData* param1) {
     return new QCPGraphData(*param1);
 }
 
@@ -31821,7 +31821,7 @@ void QCPGraphData_Delete(QCPGraphData* self) {
     delete self;
 }
 
-QCPGraph* QCPGraph_new(QCPAxis* keyAxis, QCPAxis* valueAxis) {
+QCPGraph* QCPGraph_New(QCPAxis* keyAxis, QCPAxis* valueAxis) {
     return new VirtualQCPGraph(keyAxis, valueAxis);
 }
 
@@ -34305,23 +34305,23 @@ void QCPGraph_Delete(QCPGraph* self) {
     delete self;
 }
 
-QCPCurveData* QCPCurveData_new(const QCPCurveData* other) {
+QCPCurveData* QCPCurveData_New(const QCPCurveData* other) {
     return new QCPCurveData(*other);
 }
 
-QCPCurveData* QCPCurveData_new2(QCPCurveData* other) {
+QCPCurveData* QCPCurveData_New2(QCPCurveData* other) {
     return new QCPCurveData(std::move(*other));
 }
 
-QCPCurveData* QCPCurveData_new3() {
+QCPCurveData* QCPCurveData_New3() {
     return new QCPCurveData();
 }
 
-QCPCurveData* QCPCurveData_new4(double t, double key, double value) {
+QCPCurveData* QCPCurveData_New4(double t, double key, double value) {
     return new QCPCurveData(static_cast<double>(t), static_cast<double>(key), static_cast<double>(value));
 }
 
-QCPCurveData* QCPCurveData_new5(const QCPCurveData* param1) {
+QCPCurveData* QCPCurveData_New5(const QCPCurveData* param1) {
     return new QCPCurveData(*param1);
 }
 
@@ -34385,7 +34385,7 @@ void QCPCurveData_Delete(QCPCurveData* self) {
     delete self;
 }
 
-QCPCurve* QCPCurve_new(QCPAxis* keyAxis, QCPAxis* valueAxis) {
+QCPCurve* QCPCurve_New(QCPAxis* keyAxis, QCPAxis* valueAxis) {
     return new VirtualQCPCurve(keyAxis, valueAxis);
 }
 
@@ -36254,7 +36254,7 @@ void QCPCurve_Delete(QCPCurve* self) {
     delete self;
 }
 
-QCPBarsGroup* QCPBarsGroup_new(QCustomPlot* parentPlot) {
+QCPBarsGroup* QCPBarsGroup_New(QCustomPlot* parentPlot) {
     return new VirtualQCPBarsGroup(parentPlot);
 }
 
@@ -36827,23 +36827,23 @@ void QCPBarsGroup_Delete(QCPBarsGroup* self) {
     delete self;
 }
 
-QCPBarsData* QCPBarsData_new(const QCPBarsData* other) {
+QCPBarsData* QCPBarsData_New(const QCPBarsData* other) {
     return new QCPBarsData(*other);
 }
 
-QCPBarsData* QCPBarsData_new2(QCPBarsData* other) {
+QCPBarsData* QCPBarsData_New2(QCPBarsData* other) {
     return new QCPBarsData(std::move(*other));
 }
 
-QCPBarsData* QCPBarsData_new3() {
+QCPBarsData* QCPBarsData_New3() {
     return new QCPBarsData();
 }
 
-QCPBarsData* QCPBarsData_new4(double key, double value) {
+QCPBarsData* QCPBarsData_New4(double key, double value) {
     return new QCPBarsData(static_cast<double>(key), static_cast<double>(value));
 }
 
-QCPBarsData* QCPBarsData_new5(const QCPBarsData* param1) {
+QCPBarsData* QCPBarsData_New5(const QCPBarsData* param1) {
     return new QCPBarsData(*param1);
 }
 
@@ -36899,7 +36899,7 @@ void QCPBarsData_Delete(QCPBarsData* self) {
     delete self;
 }
 
-QCPBars* QCPBars_new(QCPAxis* keyAxis, QCPAxis* valueAxis) {
+QCPBars* QCPBars_New(QCPAxis* keyAxis, QCPAxis* valueAxis) {
     return new VirtualQCPBars(keyAxis, valueAxis);
 }
 
@@ -38452,19 +38452,19 @@ void QCPBars_Delete(QCPBars* self) {
     delete self;
 }
 
-QCPStatisticalBoxData* QCPStatisticalBoxData_new() {
+QCPStatisticalBoxData* QCPStatisticalBoxData_New() {
     return new QCPStatisticalBoxData();
 }
 
-QCPStatisticalBoxData* QCPStatisticalBoxData_new2(double key, double minimum, double lowerQuartile, double median, double upperQuartile, double maximum) {
+QCPStatisticalBoxData* QCPStatisticalBoxData_New2(double key, double minimum, double lowerQuartile, double median, double upperQuartile, double maximum) {
     return new QCPStatisticalBoxData(static_cast<double>(key), static_cast<double>(minimum), static_cast<double>(lowerQuartile), static_cast<double>(median), static_cast<double>(upperQuartile), static_cast<double>(maximum));
 }
 
-QCPStatisticalBoxData* QCPStatisticalBoxData_new3(const QCPStatisticalBoxData* param1) {
+QCPStatisticalBoxData* QCPStatisticalBoxData_New3(const QCPStatisticalBoxData* param1) {
     return new QCPStatisticalBoxData(*param1);
 }
 
-QCPStatisticalBoxData* QCPStatisticalBoxData_new4(double key, double minimum, double lowerQuartile, double median, double upperQuartile, double maximum, const libqt_list /* of double */ outliers) {
+QCPStatisticalBoxData* QCPStatisticalBoxData_New4(double key, double minimum, double lowerQuartile, double median, double upperQuartile, double maximum, const libqt_list /* of double */ outliers) {
     QVector<double> outliers_QVector;
     outliers_QVector.reserve(outliers.len);
     double* outliers_arr = static_cast<double*>(outliers.data.doubles);
@@ -38573,7 +38573,7 @@ void QCPStatisticalBoxData_Delete(QCPStatisticalBoxData* self) {
     delete self;
 }
 
-QCPStatisticalBox* QCPStatisticalBox_new(QCPAxis* keyAxis, QCPAxis* valueAxis) {
+QCPStatisticalBox* QCPStatisticalBox_New(QCPAxis* keyAxis, QCPAxis* valueAxis) {
     return new VirtualQCPStatisticalBox(keyAxis, valueAxis);
 }
 
@@ -40124,11 +40124,11 @@ void QCPStatisticalBox_Delete(QCPStatisticalBox* self) {
     delete self;
 }
 
-QCPColorMapData* QCPColorMapData_new(int keySize, int valueSize, const QCPRange* keyRange, const QCPRange* valueRange) {
+QCPColorMapData* QCPColorMapData_New(int keySize, int valueSize, const QCPRange* keyRange, const QCPRange* valueRange) {
     return new QCPColorMapData(static_cast<int>(keySize), static_cast<int>(valueSize), *keyRange, *valueRange);
 }
 
-QCPColorMapData* QCPColorMapData_new2(const QCPColorMapData* other) {
+QCPColorMapData* QCPColorMapData_New2(const QCPColorMapData* other) {
     return new QCPColorMapData(*other);
 }
 
@@ -40240,7 +40240,7 @@ void QCPColorMapData_Delete(QCPColorMapData* self) {
     delete self;
 }
 
-QCPColorMap* QCPColorMap_new(QCPAxis* keyAxis, QCPAxis* valueAxis) {
+QCPColorMap* QCPColorMap_New(QCPAxis* keyAxis, QCPAxis* valueAxis) {
     return new VirtualQCPColorMap(keyAxis, valueAxis);
 }
 
@@ -41423,23 +41423,23 @@ void QCPColorMap_Delete(QCPColorMap* self) {
     delete self;
 }
 
-QCPFinancialData* QCPFinancialData_new(const QCPFinancialData* other) {
+QCPFinancialData* QCPFinancialData_New(const QCPFinancialData* other) {
     return new QCPFinancialData(*other);
 }
 
-QCPFinancialData* QCPFinancialData_new2(QCPFinancialData* other) {
+QCPFinancialData* QCPFinancialData_New2(QCPFinancialData* other) {
     return new QCPFinancialData(std::move(*other));
 }
 
-QCPFinancialData* QCPFinancialData_new3() {
+QCPFinancialData* QCPFinancialData_New3() {
     return new QCPFinancialData();
 }
 
-QCPFinancialData* QCPFinancialData_new4(double key, double open, double high, double low, double close) {
+QCPFinancialData* QCPFinancialData_New4(double key, double open, double high, double low, double close) {
     return new QCPFinancialData(static_cast<double>(key), static_cast<double>(open), static_cast<double>(high), static_cast<double>(low), static_cast<double>(close));
 }
 
-QCPFinancialData* QCPFinancialData_new5(const QCPFinancialData* param1) {
+QCPFinancialData* QCPFinancialData_New5(const QCPFinancialData* param1) {
     return new QCPFinancialData(*param1);
 }
 
@@ -41519,7 +41519,7 @@ void QCPFinancialData_Delete(QCPFinancialData* self) {
     delete self;
 }
 
-QCPFinancial* QCPFinancial_new(QCPAxis* keyAxis, QCPAxis* valueAxis) {
+QCPFinancial* QCPFinancial_New(QCPAxis* keyAxis, QCPAxis* valueAxis) {
     return new VirtualQCPFinancial(keyAxis, valueAxis);
 }
 
@@ -43073,27 +43073,27 @@ void QCPFinancial_Delete(QCPFinancial* self) {
     delete self;
 }
 
-QCPErrorBarsData* QCPErrorBarsData_new(const QCPErrorBarsData* other) {
+QCPErrorBarsData* QCPErrorBarsData_New(const QCPErrorBarsData* other) {
     return new QCPErrorBarsData(*other);
 }
 
-QCPErrorBarsData* QCPErrorBarsData_new2(QCPErrorBarsData* other) {
+QCPErrorBarsData* QCPErrorBarsData_New2(QCPErrorBarsData* other) {
     return new QCPErrorBarsData(std::move(*other));
 }
 
-QCPErrorBarsData* QCPErrorBarsData_new3() {
+QCPErrorBarsData* QCPErrorBarsData_New3() {
     return new QCPErrorBarsData();
 }
 
-QCPErrorBarsData* QCPErrorBarsData_new4(double error) {
+QCPErrorBarsData* QCPErrorBarsData_New4(double error) {
     return new QCPErrorBarsData(static_cast<double>(error));
 }
 
-QCPErrorBarsData* QCPErrorBarsData_new5(double errorMinus, double errorPlus) {
+QCPErrorBarsData* QCPErrorBarsData_New5(double errorMinus, double errorPlus) {
     return new QCPErrorBarsData(static_cast<double>(errorMinus), static_cast<double>(errorPlus));
 }
 
-QCPErrorBarsData* QCPErrorBarsData_new6(const QCPErrorBarsData* param1) {
+QCPErrorBarsData* QCPErrorBarsData_New6(const QCPErrorBarsData* param1) {
     return new QCPErrorBarsData(*param1);
 }
 
@@ -43125,7 +43125,7 @@ void QCPErrorBarsData_Delete(QCPErrorBarsData* self) {
     delete self;
 }
 
-QCPErrorBars* QCPErrorBars_new(QCPAxis* keyAxis, QCPAxis* valueAxis) {
+QCPErrorBars* QCPErrorBars_New(QCPAxis* keyAxis, QCPAxis* valueAxis) {
     return new VirtualQCPErrorBars(keyAxis, valueAxis);
 }
 
@@ -44595,7 +44595,7 @@ void QCPErrorBars_Delete(QCPErrorBars* self) {
     delete self;
 }
 
-QCPItemStraightLine* QCPItemStraightLine_new(QCustomPlot* parentPlot) {
+QCPItemStraightLine* QCPItemStraightLine_New(QCustomPlot* parentPlot) {
     return new VirtualQCPItemStraightLine(parentPlot);
 }
 
@@ -45669,7 +45669,7 @@ void QCPItemStraightLine_Delete(QCPItemStraightLine* self) {
     delete self;
 }
 
-QCPItemLine* QCPItemLine_new(QCustomPlot* parentPlot) {
+QCPItemLine* QCPItemLine_New(QCustomPlot* parentPlot) {
     return new VirtualQCPItemLine(parentPlot);
 }
 
@@ -46759,7 +46759,7 @@ void QCPItemLine_Delete(QCPItemLine* self) {
     delete self;
 }
 
-QCPItemCurve* QCPItemCurve_new(QCustomPlot* parentPlot) {
+QCPItemCurve* QCPItemCurve_New(QCustomPlot* parentPlot) {
     return new VirtualQCPItemCurve(parentPlot);
 }
 
@@ -47830,7 +47830,7 @@ void QCPItemCurve_Delete(QCPItemCurve* self) {
     delete self;
 }
 
-QCPItemRect* QCPItemRect_new(QCustomPlot* parentPlot) {
+QCPItemRect* QCPItemRect_New(QCustomPlot* parentPlot) {
     return new VirtualQCPItemRect(parentPlot);
 }
 
@@ -48943,7 +48943,7 @@ void QCPItemRect_Delete(QCPItemRect* self) {
     delete self;
 }
 
-QCPItemText* QCPItemText_new(QCustomPlot* parentPlot) {
+QCPItemText* QCPItemText_New(QCustomPlot* parentPlot) {
     return new VirtualQCPItemText(parentPlot);
 }
 
@@ -50222,7 +50222,7 @@ void QCPItemText_Delete(QCPItemText* self) {
     delete self;
 }
 
-QCPItemEllipse* QCPItemEllipse_new(QCustomPlot* parentPlot) {
+QCPItemEllipse* QCPItemEllipse_New(QCustomPlot* parentPlot) {
     return new VirtualQCPItemEllipse(parentPlot);
 }
 
@@ -51347,7 +51347,7 @@ void QCPItemEllipse_Delete(QCPItemEllipse* self) {
     delete self;
 }
 
-QCPItemPixmap* QCPItemPixmap_new(QCustomPlot* parentPlot) {
+QCPItemPixmap* QCPItemPixmap_New(QCustomPlot* parentPlot) {
     return new VirtualQCPItemPixmap(parentPlot);
 }
 
@@ -52646,7 +52646,7 @@ void QCPItemPixmap_Delete(QCPItemPixmap* self) {
     delete self;
 }
 
-QCPItemTracer* QCPItemTracer_new(QCustomPlot* parentPlot) {
+QCPItemTracer* QCPItemTracer_New(QCustomPlot* parentPlot) {
     return new VirtualQCPItemTracer(parentPlot);
 }
 
@@ -53776,7 +53776,7 @@ void QCPItemTracer_Delete(QCPItemTracer* self) {
     delete self;
 }
 
-QCPItemBracket* QCPItemBracket_new(QCustomPlot* parentPlot) {
+QCPItemBracket* QCPItemBracket_New(QCustomPlot* parentPlot) {
     return new VirtualQCPItemBracket(parentPlot);
 }
 
@@ -54842,7 +54842,7 @@ void QCPItemBracket_Delete(QCPItemBracket* self) {
     delete self;
 }
 
-QCPPolarAxisRadial* QCPPolarAxisRadial_new(QCPPolarAxisAngular* parent) {
+QCPPolarAxisRadial* QCPPolarAxisRadial_New(QCPPolarAxisAngular* parent) {
     return new VirtualQCPPolarAxisRadial(parent);
 }
 
@@ -56409,7 +56409,7 @@ void QCPPolarAxisRadial_Delete(QCPPolarAxisRadial* self) {
     delete self;
 }
 
-QCPPolarAxisAngular* QCPPolarAxisAngular_new(QCustomPlot* parentPlot) {
+QCPPolarAxisAngular* QCPPolarAxisAngular_New(QCustomPlot* parentPlot) {
     return new VirtualQCPPolarAxisAngular(parentPlot);
 }
 
@@ -58308,7 +58308,7 @@ void QCPPolarAxisAngular_Delete(QCPPolarAxisAngular* self) {
     delete self;
 }
 
-QCPPolarGrid* QCPPolarGrid_new(QCPPolarAxisAngular* parentAxis) {
+QCPPolarGrid* QCPPolarGrid_New(QCPPolarAxisAngular* parentAxis) {
     return new VirtualQCPPolarGrid(parentAxis);
 }
 
@@ -59392,7 +59392,7 @@ void QCPPolarGrid_Delete(QCPPolarGrid* self) {
     delete self;
 }
 
-QCPPolarLegendItem* QCPPolarLegendItem_new(QCPLegend* parent, QCPPolarGraph* graph) {
+QCPPolarLegendItem* QCPPolarLegendItem_New(QCPLegend* parent, QCPPolarGraph* graph) {
     return new VirtualQCPPolarLegendItem(parent, graph);
 }
 
@@ -60568,7 +60568,7 @@ void QCPPolarLegendItem_Delete(QCPPolarLegendItem* self) {
     delete self;
 }
 
-QCPPolarGraph* QCPPolarGraph_new(QCPPolarAxisAngular* keyAxis, QCPPolarAxisRadial* valueAxis) {
+QCPPolarGraph* QCPPolarGraph_New(QCPPolarAxisAngular* keyAxis, QCPPolarAxisRadial* valueAxis) {
     return new VirtualQCPPolarGraph(keyAxis, valueAxis);
 }
 

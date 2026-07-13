@@ -55,9 +55,9 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KMainWindow* KMainWindow_new(QWidget* parent);
-KMainWindow* KMainWindow_new2();
-KMainWindow* KMainWindow_new3(QWidget* parent, int flags);
+KMainWindow* KMainWindow_New(QWidget* parent);
+KMainWindow* KMainWindow_New2();
+KMainWindow* KMainWindow_New3(QWidget* parent, int flags);
 QMetaObject* KMainWindow_MetaObject(const KMainWindow* self);
 void* KMainWindow_Metacast(KMainWindow* self, const char* param1);
 int KMainWindow_Metacall(KMainWindow* self, int param1, int param2, void** param3);

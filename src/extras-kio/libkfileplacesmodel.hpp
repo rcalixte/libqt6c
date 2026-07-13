@@ -39,8 +39,8 @@ typedef struct QVariant QVariant;
 typedef struct Solid__Device Solid__Device;
 #endif
 
-KFilePlacesModel* KFilePlacesModel_new();
-KFilePlacesModel* KFilePlacesModel_new2(QObject* parent);
+KFilePlacesModel* KFilePlacesModel_New();
+KFilePlacesModel* KFilePlacesModel_New2(QObject* parent);
 QMetaObject* KFilePlacesModel_MetaObject(const KFilePlacesModel* self);
 void* KFilePlacesModel_Metacast(KFilePlacesModel* self, const char* param1);
 int KFilePlacesModel_Metacall(KFilePlacesModel* self, int param1, int param2, void** param3);

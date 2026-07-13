@@ -11,11 +11,11 @@
 #include "libqbluetoothserviceinfo.hpp"
 #include "libqbluetoothserviceinfo.hxx"
 
-QBluetoothServiceInfo* QBluetoothServiceInfo_new() {
+QBluetoothServiceInfo* QBluetoothServiceInfo_New() {
     return new QBluetoothServiceInfo();
 }
 
-QBluetoothServiceInfo* QBluetoothServiceInfo_new2(const QBluetoothServiceInfo* other) {
+QBluetoothServiceInfo* QBluetoothServiceInfo_New2(const QBluetoothServiceInfo* other) {
     return new QBluetoothServiceInfo(*other);
 }
 
@@ -196,11 +196,11 @@ void QBluetoothServiceInfo_Delete(QBluetoothServiceInfo* self) {
     delete self;
 }
 
-QBluetoothServiceInfo__Sequence* QBluetoothServiceInfo__Sequence_new() {
+QBluetoothServiceInfo__Sequence* QBluetoothServiceInfo__Sequence_New() {
     return new QBluetoothServiceInfo::Sequence();
 }
 
-QBluetoothServiceInfo__Sequence* QBluetoothServiceInfo__Sequence_new2(const libqt_list /* of QVariant* */ list) {
+QBluetoothServiceInfo__Sequence* QBluetoothServiceInfo__Sequence_New2(const libqt_list /* of QVariant* */ list) {
     QList<QVariant> list_QList;
     list_QList.reserve(list.len);
     QVariant** list_arr = static_cast<QVariant**>(list.data.ptr);
@@ -210,7 +210,7 @@ QBluetoothServiceInfo__Sequence* QBluetoothServiceInfo__Sequence_new2(const libq
     return new QBluetoothServiceInfo::Sequence(list_QList);
 }
 
-QBluetoothServiceInfo__Sequence* QBluetoothServiceInfo__Sequence_new3(const QBluetoothServiceInfo__Sequence* param1) {
+QBluetoothServiceInfo__Sequence* QBluetoothServiceInfo__Sequence_New3(const QBluetoothServiceInfo__Sequence* param1) {
     return new QBluetoothServiceInfo::Sequence(*param1);
 }
 
@@ -218,11 +218,11 @@ void QBluetoothServiceInfo__Sequence_Delete(QBluetoothServiceInfo__Sequence* sel
     delete self;
 }
 
-QBluetoothServiceInfo__Alternative* QBluetoothServiceInfo__Alternative_new() {
+QBluetoothServiceInfo__Alternative* QBluetoothServiceInfo__Alternative_New() {
     return new QBluetoothServiceInfo::Alternative();
 }
 
-QBluetoothServiceInfo__Alternative* QBluetoothServiceInfo__Alternative_new2(const libqt_list /* of QVariant* */ list) {
+QBluetoothServiceInfo__Alternative* QBluetoothServiceInfo__Alternative_New2(const libqt_list /* of QVariant* */ list) {
     QList<QVariant> list_QList;
     list_QList.reserve(list.len);
     QVariant** list_arr = static_cast<QVariant**>(list.data.ptr);
@@ -232,7 +232,7 @@ QBluetoothServiceInfo__Alternative* QBluetoothServiceInfo__Alternative_new2(cons
     return new QBluetoothServiceInfo::Alternative(list_QList);
 }
 
-QBluetoothServiceInfo__Alternative* QBluetoothServiceInfo__Alternative_new3(const QBluetoothServiceInfo__Alternative* param1) {
+QBluetoothServiceInfo__Alternative* QBluetoothServiceInfo__Alternative_New3(const QBluetoothServiceInfo__Alternative* param1) {
     return new QBluetoothServiceInfo::Alternative(*param1);
 }
 

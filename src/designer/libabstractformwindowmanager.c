@@ -13,11 +13,11 @@
 #include "libabstractformwindowmanager.h"
 
 QDesignerFormWindowManagerInterface* q_designerformwindowmanagerinterface_new() {
-    return QDesignerFormWindowManagerInterface_new();
+    return QDesignerFormWindowManagerInterface_New();
 }
 
 QDesignerFormWindowManagerInterface* q_designerformwindowmanagerinterface_new2(void* parent) {
-    return QDesignerFormWindowManagerInterface_new2((QObject*)parent);
+    return QDesignerFormWindowManagerInterface_New2((QObject*)parent);
 }
 
 const QMetaObject* q_designerformwindowmanagerinterface_meta_object(void* self) {

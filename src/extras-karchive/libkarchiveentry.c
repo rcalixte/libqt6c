@@ -4,7 +4,7 @@
 #include "libkarchiveentry.h"
 
 KArchiveEntry* k_archiveentry_new(void* archive, const char* name, int access, void* date, const char* user, const char* group, const char* symlink) {
-    return KArchiveEntry_new((KArchive*)archive, qstring(name), access, (QDateTime*)date, qstring(user), qstring(group), qstring(symlink));
+    return KArchiveEntry_New((KArchive*)archive, qstring(name), access, (QDateTime*)date, qstring(user), qstring(group), qstring(symlink));
 }
 
 QDateTime* k_archiveentry_date(void* self) {

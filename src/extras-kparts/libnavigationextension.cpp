@@ -20,7 +20,7 @@
 #include "libnavigationextension.hpp"
 #include "libnavigationextension.hxx"
 
-KParts__NavigationExtension* KParts__NavigationExtension_new(KParts__ReadOnlyPart* parent) {
+KParts__NavigationExtension* KParts__NavigationExtension_New(KParts__ReadOnlyPart* parent) {
     return new VirtualKPartsNavigationExtension(parent);
 }
 

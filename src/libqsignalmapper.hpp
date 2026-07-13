@@ -24,8 +24,8 @@ typedef struct QSignalMapper QSignalMapper;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QSignalMapper* QSignalMapper_new();
-QSignalMapper* QSignalMapper_new2(QObject* parent);
+QSignalMapper* QSignalMapper_New();
+QSignalMapper* QSignalMapper_New2(QObject* parent);
 QMetaObject* QSignalMapper_MetaObject(const QSignalMapper* self);
 void* QSignalMapper_Metacast(QSignalMapper* self, const char* param1);
 int QSignalMapper_Metacall(QSignalMapper* self, int param1, int param2, void** param3);

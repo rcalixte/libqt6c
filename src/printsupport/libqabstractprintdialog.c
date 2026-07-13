@@ -16,11 +16,11 @@
 #include "libqabstractprintdialog.h"
 
 QAbstractPrintDialog* q_abstractprintdialog_new(void* printer) {
-    return QAbstractPrintDialog_new((QPrinter*)printer);
+    return QAbstractPrintDialog_New((QPrinter*)printer);
 }
 
 QAbstractPrintDialog* q_abstractprintdialog_new2(void* printer, void* parent) {
-    return QAbstractPrintDialog_new2((QPrinter*)printer, (QWidget*)parent);
+    return QAbstractPrintDialog_New2((QPrinter*)printer, (QWidget*)parent);
 }
 
 const QMetaObject* q_abstractprintdialog_meta_object(void* self) {

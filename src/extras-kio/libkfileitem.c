@@ -8,39 +8,39 @@
 #include "libkfileitem.h"
 
 KFileItem* k_fileitem_new() {
-    return KFileItem_new();
+    return KFileItem_New();
 }
 
 KFileItem* k_fileitem_new2(void* entry, void* itemOrDirUrl) {
-    return KFileItem_new2((KIO__UDSEntry*)entry, (QUrl*)itemOrDirUrl);
+    return KFileItem_New2((KIO__UDSEntry*)entry, (QUrl*)itemOrDirUrl);
 }
 
 KFileItem* k_fileitem_new3(void* url) {
-    return KFileItem_new3((QUrl*)url);
+    return KFileItem_New3((QUrl*)url);
 }
 
 KFileItem* k_fileitem_new4(void* url, int32_t mimeTypeDetermination) {
-    return KFileItem_new4((QUrl*)url, mimeTypeDetermination);
+    return KFileItem_New4((QUrl*)url, mimeTypeDetermination);
 }
 
 KFileItem* k_fileitem_new5(void* param1) {
-    return KFileItem_new5((KFileItem*)param1);
+    return KFileItem_New5((KFileItem*)param1);
 }
 
 KFileItem* k_fileitem_new6(void* entry, void* itemOrDirUrl, bool delayedMimeTypes) {
-    return KFileItem_new6((KIO__UDSEntry*)entry, (QUrl*)itemOrDirUrl, delayedMimeTypes);
+    return KFileItem_New6((KIO__UDSEntry*)entry, (QUrl*)itemOrDirUrl, delayedMimeTypes);
 }
 
 KFileItem* k_fileitem_new7(void* entry, void* itemOrDirUrl, bool delayedMimeTypes, bool urlIsDirectory) {
-    return KFileItem_new7((KIO__UDSEntry*)entry, (QUrl*)itemOrDirUrl, delayedMimeTypes, urlIsDirectory);
+    return KFileItem_New7((KIO__UDSEntry*)entry, (QUrl*)itemOrDirUrl, delayedMimeTypes, urlIsDirectory);
 }
 
 KFileItem* k_fileitem_new8(void* url, const char* mimeType) {
-    return KFileItem_new8((QUrl*)url, qstring(mimeType));
+    return KFileItem_New8((QUrl*)url, qstring(mimeType));
 }
 
 KFileItem* k_fileitem_new9(void* url, const char* mimeType, mode_t mode) {
-    return KFileItem_new9((QUrl*)url, qstring(mimeType), mode);
+    return KFileItem_New9((QUrl*)url, qstring(mimeType), mode);
 }
 
 void k_fileitem_operator_assign(void* self, void* param1) {
@@ -365,11 +365,11 @@ void k_fileitem_delete(void* self) {
 // Also inherits unprojectable QList<KFileItem>
 
 KFileItemList* k_fileitemlist_new() {
-    return KFileItemList_new();
+    return KFileItemList_New();
 }
 
 KFileItemList* k_fileitemlist_new2(libqt_list /* of KFileItem* */ items) {
-    return KFileItemList_new2(items);
+    return KFileItemList_New2(items);
 }
 
 KFileItem* k_fileitemlist_find_by_name(void* self, const char* fileName) {
@@ -395,7 +395,7 @@ void k_fileitemlist_delete(void* self) {
 }
 
 KFileItem__MostLocalUrlResult* k_fileitem__mostlocalurlresult_new(void* param1) {
-    return KFileItem__MostLocalUrlResult_new((KFileItem__MostLocalUrlResult*)param1);
+    return KFileItem__MostLocalUrlResult_New((KFileItem__MostLocalUrlResult*)param1);
 }
 
 QUrl* k_fileitem__mostlocalurlresult_url(void* self) {

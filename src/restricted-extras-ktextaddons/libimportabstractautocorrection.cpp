@@ -7,11 +7,11 @@
 #include "libimportabstractautocorrection.hpp"
 #include "libimportabstractautocorrection.hxx"
 
-TextAutoCorrectionCore__ImportAbstractAutocorrection* TextAutoCorrectionCore__ImportAbstractAutocorrection_new() {
+TextAutoCorrectionCore__ImportAbstractAutocorrection* TextAutoCorrectionCore__ImportAbstractAutocorrection_New() {
     return new VirtualTextAutoCorrectionCoreImportAbstractAutocorrection();
 }
 
-TextAutoCorrectionCore__ImportAbstractAutocorrection* TextAutoCorrectionCore__ImportAbstractAutocorrection_new2(const TextAutoCorrectionCore__ImportAbstractAutocorrection* param1) {
+TextAutoCorrectionCore__ImportAbstractAutocorrection* TextAutoCorrectionCore__ImportAbstractAutocorrection_New2(const TextAutoCorrectionCore__ImportAbstractAutocorrection* param1) {
     return new VirtualTextAutoCorrectionCoreImportAbstractAutocorrection(*param1);
 }
 

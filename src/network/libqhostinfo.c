@@ -4,15 +4,15 @@
 #include "libqhostinfo.h"
 
 QHostInfo* q_hostinfo_new() {
-    return QHostInfo_new();
+    return QHostInfo_New();
 }
 
 QHostInfo* q_hostinfo_new2(void* d) {
-    return QHostInfo_new2((QHostInfo*)d);
+    return QHostInfo_New2((QHostInfo*)d);
 }
 
 QHostInfo* q_hostinfo_new3(int lookupId) {
-    return QHostInfo_new3(lookupId);
+    return QHostInfo_New3(lookupId);
 }
 
 void q_hostinfo_operator_assign(void* self, void* d) {

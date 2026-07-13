@@ -5,11 +5,11 @@
 #include "libqcolortransform.hpp"
 #include "libqcolortransform.hxx"
 
-QColorTransform* QColorTransform_new() {
+QColorTransform* QColorTransform_New() {
     return new QColorTransform();
 }
 
-QColorTransform* QColorTransform_new2(const QColorTransform* colorTransform) {
+QColorTransform* QColorTransform_New2(const QColorTransform* colorTransform) {
     return new QColorTransform(*colorTransform);
 }
 

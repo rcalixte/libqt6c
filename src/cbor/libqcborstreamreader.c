@@ -4,23 +4,23 @@
 #include "libqcborstreamreader.h"
 
 QCborStreamReader* q_cborstreamreader_new() {
-    return QCborStreamReader_new();
+    return QCborStreamReader_New();
 }
 
 QCborStreamReader* q_cborstreamreader_new2(const char* data, intptr_t lenVal) {
-    return QCborStreamReader_new2(data, lenVal);
+    return QCborStreamReader_New2(data, lenVal);
 }
 
 QCborStreamReader* q_cborstreamreader_new3(unsigned char* data, intptr_t lenVal) {
-    return QCborStreamReader_new3(data, lenVal);
+    return QCborStreamReader_New3(data, lenVal);
 }
 
 QCborStreamReader* q_cborstreamreader_new4(char* data) {
-    return QCborStreamReader_new4(qstring(data));
+    return QCborStreamReader_New4(qstring(data));
 }
 
 QCborStreamReader* q_cborstreamreader_new5(void* device) {
-    return QCborStreamReader_new5((QIODevice*)device);
+    return QCborStreamReader_New5((QIODevice*)device);
 }
 
 void q_cborstreamreader_set_device(void* self, void* device) {

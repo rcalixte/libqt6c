@@ -59,9 +59,9 @@ typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
 
-QChart* QChart_new();
-QChart* QChart_new2(QGraphicsItem* parent);
-QChart* QChart_new3(QGraphicsItem* parent, int wFlags);
+QChart* QChart_New();
+QChart* QChart_New2(QGraphicsItem* parent);
+QChart* QChart_New3(QGraphicsItem* parent, int wFlags);
 QMetaObject* QChart_MetaObject(const QChart* self);
 void* QChart_Metacast(QChart* self, const char* param1);
 int QChart_Metacall(QChart* self, int param1, int param2, void** param3);

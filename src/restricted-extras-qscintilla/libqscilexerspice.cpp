@@ -14,11 +14,11 @@
 #include "libqscilexerspice.hpp"
 #include "libqscilexerspice.hxx"
 
-QsciLexerSpice* QsciLexerSpice_new() {
+QsciLexerSpice* QsciLexerSpice_New() {
     return new VirtualQsciLexerSpice();
 }
 
-QsciLexerSpice* QsciLexerSpice_new2(QObject* parent) {
+QsciLexerSpice* QsciLexerSpice_New2(QObject* parent) {
     return new VirtualQsciLexerSpice(parent);
 }
 

@@ -8,27 +8,27 @@
 #include "libqcandlestickset.h"
 
 QCandlestickSet* q_candlestickset_new() {
-    return QCandlestickSet_new();
+    return QCandlestickSet_New();
 }
 
 QCandlestickSet* q_candlestickset_new2(double open, double high, double low, double close) {
-    return QCandlestickSet_new2(open, high, low, close);
+    return QCandlestickSet_New2(open, high, low, close);
 }
 
 QCandlestickSet* q_candlestickset_new3(double timestamp) {
-    return QCandlestickSet_new3(timestamp);
+    return QCandlestickSet_New3(timestamp);
 }
 
 QCandlestickSet* q_candlestickset_new4(double timestamp, void* parent) {
-    return QCandlestickSet_new4(timestamp, (QObject*)parent);
+    return QCandlestickSet_New4(timestamp, (QObject*)parent);
 }
 
 QCandlestickSet* q_candlestickset_new5(double open, double high, double low, double close, double timestamp) {
-    return QCandlestickSet_new5(open, high, low, close, timestamp);
+    return QCandlestickSet_New5(open, high, low, close, timestamp);
 }
 
 QCandlestickSet* q_candlestickset_new6(double open, double high, double low, double close, double timestamp, void* parent) {
-    return QCandlestickSet_new6(open, high, low, close, timestamp, (QObject*)parent);
+    return QCandlestickSet_New6(open, high, low, close, timestamp, (QObject*)parent);
 }
 
 const QMetaObject* q_candlestickset_meta_object(void* self) {

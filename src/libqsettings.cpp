@@ -12,80 +12,80 @@
 #include "libqsettings.hpp"
 #include "libqsettings.hxx"
 
-QSettings* QSettings_new(const libqt_string organization) {
+QSettings* QSettings_New(const libqt_string organization) {
     QString organization_QString = QString::fromUtf8(organization.data, organization.len);
     return new VirtualQSettings(organization_QString);
 }
 
-QSettings* QSettings_new2(int scope, const libqt_string organization) {
+QSettings* QSettings_New2(int scope, const libqt_string organization) {
     QString organization_QString = QString::fromUtf8(organization.data, organization.len);
     return new VirtualQSettings(static_cast<QSettings::Scope>(scope), organization_QString);
 }
 
-QSettings* QSettings_new3(int format, int scope, const libqt_string organization) {
+QSettings* QSettings_New3(int format, int scope, const libqt_string organization) {
     QString organization_QString = QString::fromUtf8(organization.data, organization.len);
     return new VirtualQSettings(static_cast<QSettings::Format>(format), static_cast<QSettings::Scope>(scope), organization_QString);
 }
 
-QSettings* QSettings_new4(const libqt_string fileName, int format) {
+QSettings* QSettings_New4(const libqt_string fileName, int format) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQSettings(fileName_QString, static_cast<QSettings::Format>(format));
 }
 
-QSettings* QSettings_new5() {
+QSettings* QSettings_New5() {
     return new VirtualQSettings();
 }
 
-QSettings* QSettings_new6(int scope) {
+QSettings* QSettings_New6(int scope) {
     return new VirtualQSettings(static_cast<QSettings::Scope>(scope));
 }
 
-QSettings* QSettings_new7(const libqt_string organization, const libqt_string application) {
+QSettings* QSettings_New7(const libqt_string organization, const libqt_string application) {
     QString organization_QString = QString::fromUtf8(organization.data, organization.len);
     QString application_QString = QString::fromUtf8(application.data, application.len);
     return new VirtualQSettings(organization_QString, application_QString);
 }
 
-QSettings* QSettings_new8(const libqt_string organization, const libqt_string application, QObject* parent) {
+QSettings* QSettings_New8(const libqt_string organization, const libqt_string application, QObject* parent) {
     QString organization_QString = QString::fromUtf8(organization.data, organization.len);
     QString application_QString = QString::fromUtf8(application.data, application.len);
     return new VirtualQSettings(organization_QString, application_QString, parent);
 }
 
-QSettings* QSettings_new9(int scope, const libqt_string organization, const libqt_string application) {
+QSettings* QSettings_New9(int scope, const libqt_string organization, const libqt_string application) {
     QString organization_QString = QString::fromUtf8(organization.data, organization.len);
     QString application_QString = QString::fromUtf8(application.data, application.len);
     return new VirtualQSettings(static_cast<QSettings::Scope>(scope), organization_QString, application_QString);
 }
 
-QSettings* QSettings_new10(int scope, const libqt_string organization, const libqt_string application, QObject* parent) {
+QSettings* QSettings_New10(int scope, const libqt_string organization, const libqt_string application, QObject* parent) {
     QString organization_QString = QString::fromUtf8(organization.data, organization.len);
     QString application_QString = QString::fromUtf8(application.data, application.len);
     return new VirtualQSettings(static_cast<QSettings::Scope>(scope), organization_QString, application_QString, parent);
 }
 
-QSettings* QSettings_new11(int format, int scope, const libqt_string organization, const libqt_string application) {
+QSettings* QSettings_New11(int format, int scope, const libqt_string organization, const libqt_string application) {
     QString organization_QString = QString::fromUtf8(organization.data, organization.len);
     QString application_QString = QString::fromUtf8(application.data, application.len);
     return new VirtualQSettings(static_cast<QSettings::Format>(format), static_cast<QSettings::Scope>(scope), organization_QString, application_QString);
 }
 
-QSettings* QSettings_new12(int format, int scope, const libqt_string organization, const libqt_string application, QObject* parent) {
+QSettings* QSettings_New12(int format, int scope, const libqt_string organization, const libqt_string application, QObject* parent) {
     QString organization_QString = QString::fromUtf8(organization.data, organization.len);
     QString application_QString = QString::fromUtf8(application.data, application.len);
     return new VirtualQSettings(static_cast<QSettings::Format>(format), static_cast<QSettings::Scope>(scope), organization_QString, application_QString, parent);
 }
 
-QSettings* QSettings_new13(const libqt_string fileName, int format, QObject* parent) {
+QSettings* QSettings_New13(const libqt_string fileName, int format, QObject* parent) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQSettings(fileName_QString, static_cast<QSettings::Format>(format), parent);
 }
 
-QSettings* QSettings_new14(QObject* parent) {
+QSettings* QSettings_New14(QObject* parent) {
     return new VirtualQSettings(parent);
 }
 
-QSettings* QSettings_new15(int scope, QObject* parent) {
+QSettings* QSettings_New15(int scope, QObject* parent) {
     return new VirtualQSettings(static_cast<QSettings::Scope>(scope), parent);
 }
 

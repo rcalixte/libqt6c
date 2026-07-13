@@ -50,11 +50,11 @@
 #include "libtranslatorwidget.hpp"
 #include "libtranslatorwidget.hxx"
 
-TextTranslator__TranslatorTextEdit* TextTranslator__TranslatorTextEdit_new(QWidget* parent) {
+TextTranslator__TranslatorTextEdit* TextTranslator__TranslatorTextEdit_New(QWidget* parent) {
     return new VirtualTextTranslatorTranslatorTextEdit(parent);
 }
 
-TextTranslator__TranslatorTextEdit* TextTranslator__TranslatorTextEdit_new2() {
+TextTranslator__TranslatorTextEdit* TextTranslator__TranslatorTextEdit_New2() {
     return new VirtualTextTranslatorTranslatorTextEdit();
 }
 
@@ -2331,20 +2331,20 @@ void TextTranslator__TranslatorTextEdit_Delete(TextTranslator__TranslatorTextEdi
     delete self;
 }
 
-TextTranslator__TranslatorWidget* TextTranslator__TranslatorWidget_new(QWidget* parent) {
+TextTranslator__TranslatorWidget* TextTranslator__TranslatorWidget_New(QWidget* parent) {
     return new VirtualTextTranslatorTranslatorWidget(parent);
 }
 
-TextTranslator__TranslatorWidget* TextTranslator__TranslatorWidget_new2() {
+TextTranslator__TranslatorWidget* TextTranslator__TranslatorWidget_New2() {
     return new VirtualTextTranslatorTranslatorWidget();
 }
 
-TextTranslator__TranslatorWidget* TextTranslator__TranslatorWidget_new3(const libqt_string text) {
+TextTranslator__TranslatorWidget* TextTranslator__TranslatorWidget_New3(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualTextTranslatorTranslatorWidget(text_QString);
 }
 
-TextTranslator__TranslatorWidget* TextTranslator__TranslatorWidget_new4(const libqt_string text, QWidget* parent) {
+TextTranslator__TranslatorWidget* TextTranslator__TranslatorWidget_New4(const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualTextTranslatorTranslatorWidget(text_QString, parent);
 }

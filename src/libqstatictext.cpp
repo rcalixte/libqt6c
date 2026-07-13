@@ -8,16 +8,16 @@
 #include "libqstatictext.hpp"
 #include "libqstatictext.hxx"
 
-QStaticText* QStaticText_new() {
+QStaticText* QStaticText_New() {
     return new QStaticText();
 }
 
-QStaticText* QStaticText_new2(const libqt_string text) {
+QStaticText* QStaticText_New2(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new QStaticText(text_QString);
 }
 
-QStaticText* QStaticText_new3(const QStaticText* other) {
+QStaticText* QStaticText_New3(const QStaticText* other) {
     return new QStaticText(*other);
 }
 

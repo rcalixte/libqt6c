@@ -25,11 +25,11 @@
 #include "libitemsmodel.hpp"
 #include "libitemsmodel.hxx"
 
-KNSCore__ItemsModel* KNSCore__ItemsModel_new(KNSCore__EngineBase* engine) {
+KNSCore__ItemsModel* KNSCore__ItemsModel_New(KNSCore__EngineBase* engine) {
     return new VirtualKNSCoreItemsModel(engine);
 }
 
-KNSCore__ItemsModel* KNSCore__ItemsModel_new2(KNSCore__EngineBase* engine, QObject* parent) {
+KNSCore__ItemsModel* KNSCore__ItemsModel_New2(KNSCore__EngineBase* engine, QObject* parent) {
     return new VirtualKNSCoreItemsModel(engine, parent);
 }
 

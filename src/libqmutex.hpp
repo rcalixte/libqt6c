@@ -21,20 +21,20 @@ typedef struct QMutex QMutex;
 typedef struct QRecursiveMutex QRecursiveMutex;
 #endif
 
-QBasicMutex* QBasicMutex_new();
+QBasicMutex* QBasicMutex_New();
 void QBasicMutex_Lock(QBasicMutex* self);
 void QBasicMutex_Unlock(QBasicMutex* self);
 bool QBasicMutex_TryLock(QBasicMutex* self);
 bool QBasicMutex_TryLock2(QBasicMutex* self);
 void QBasicMutex_Delete(QBasicMutex* self);
 
-QMutex* QMutex_new();
+QMutex* QMutex_New();
 bool QMutex_TryLock(QMutex* self);
 bool QMutex_TryLock2(QMutex* self, int timeout);
 bool QMutex_TryLock3(QMutex* self, QDeadlineTimer* timeout);
 void QMutex_Delete(QMutex* self);
 
-QRecursiveMutex* QRecursiveMutex_new();
+QRecursiveMutex* QRecursiveMutex_New();
 void QRecursiveMutex_Lock(QRecursiveMutex* self);
 bool QRecursiveMutex_TryLock(QRecursiveMutex* self, int timeout);
 bool QRecursiveMutex_TryLock2(QRecursiveMutex* self);

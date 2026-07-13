@@ -5,23 +5,23 @@
 #include "libnetwm_def.h"
 
 NETPoint* k_netpoint_new(void* other) {
-    return NETPoint_new((NETPoint*)other);
+    return NETPoint_New((NETPoint*)other);
 }
 
 NETPoint* k_netpoint_new2(void* other) {
-    return NETPoint_new2((NETPoint*)other);
+    return NETPoint_New2((NETPoint*)other);
 }
 
 NETPoint* k_netpoint_new3() {
-    return NETPoint_new3();
+    return NETPoint_New3();
 }
 
 NETPoint* k_netpoint_new4(void* p) {
-    return NETPoint_new4((QPoint*)p);
+    return NETPoint_New4((QPoint*)p);
 }
 
 NETPoint* k_netpoint_new5(void* param1) {
-    return NETPoint_new5((NETPoint*)param1);
+    return NETPoint_New5((NETPoint*)param1);
 }
 
 void k_netpoint_copy_assign(void* self, void* other) {
@@ -57,23 +57,23 @@ void k_netpoint_delete(void* self) {
 }
 
 NETSize* k_netsize_new(void* other) {
-    return NETSize_new((NETSize*)other);
+    return NETSize_New((NETSize*)other);
 }
 
 NETSize* k_netsize_new2(void* other) {
-    return NETSize_new2((NETSize*)other);
+    return NETSize_New2((NETSize*)other);
 }
 
 NETSize* k_netsize_new3() {
-    return NETSize_new3();
+    return NETSize_New3();
 }
 
 NETSize* k_netsize_new4(void* size) {
-    return NETSize_new4((QSize*)size);
+    return NETSize_New4((QSize*)size);
 }
 
 NETSize* k_netsize_new5(void* param1) {
-    return NETSize_new5((NETSize*)param1);
+    return NETSize_New5((NETSize*)param1);
 }
 
 void k_netsize_copy_assign(void* self, void* other) {
@@ -109,19 +109,19 @@ void k_netsize_delete(void* self) {
 }
 
 NETRect* k_netrect_new(void* other) {
-    return NETRect_new((NETRect*)other);
+    return NETRect_New((NETRect*)other);
 }
 
 NETRect* k_netrect_new2(void* other) {
-    return NETRect_new2((NETRect*)other);
+    return NETRect_New2((NETRect*)other);
 }
 
 NETRect* k_netrect_new3() {
-    return NETRect_new3();
+    return NETRect_New3();
 }
 
 NETRect* k_netrect_new4(void* rect) {
-    return NETRect_new4((QRect*)rect);
+    return NETRect_New4((QRect*)rect);
 }
 
 void k_netrect_copy_assign(void* self, void* other) {
@@ -157,15 +157,15 @@ void k_netrect_delete(void* self) {
 }
 
 NETIcon* k_neticon_new(void* other) {
-    return NETIcon_new((NETIcon*)other);
+    return NETIcon_New((NETIcon*)other);
 }
 
 NETIcon* k_neticon_new2(void* other) {
-    return NETIcon_new2((NETIcon*)other);
+    return NETIcon_New2((NETIcon*)other);
 }
 
 NETIcon* k_neticon_new3() {
-    return NETIcon_new3();
+    return NETIcon_New3();
 }
 
 void k_neticon_copy_assign(void* self, void* other) {
@@ -197,15 +197,15 @@ void k_neticon_delete(void* self) {
 }
 
 NETExtendedStrut* k_netextendedstrut_new(void* other) {
-    return NETExtendedStrut_new((NETExtendedStrut*)other);
+    return NETExtendedStrut_New((NETExtendedStrut*)other);
 }
 
 NETExtendedStrut* k_netextendedstrut_new2(void* other) {
-    return NETExtendedStrut_new2((NETExtendedStrut*)other);
+    return NETExtendedStrut_New2((NETExtendedStrut*)other);
 }
 
 NETExtendedStrut* k_netextendedstrut_new3() {
-    return NETExtendedStrut_new3();
+    return NETExtendedStrut_New3();
 }
 
 void k_netextendedstrut_copy_assign(void* self, void* other) {
@@ -317,15 +317,15 @@ void k_netextendedstrut_delete(void* self) {
 }
 
 NETStrut* k_netstrut_new(void* other) {
-    return NETStrut_new((NETStrut*)other);
+    return NETStrut_New((NETStrut*)other);
 }
 
 NETStrut* k_netstrut_new2(void* other) {
-    return NETStrut_new2((NETStrut*)other);
+    return NETStrut_New2((NETStrut*)other);
 }
 
 NETStrut* k_netstrut_new3() {
-    return NETStrut_new3();
+    return NETStrut_New3();
 }
 
 void k_netstrut_copy_assign(void* self, void* other) {
@@ -373,15 +373,15 @@ void k_netstrut_delete(void* self) {
 }
 
 NETFullscreenMonitors* k_netfullscreenmonitors_new(void* other) {
-    return NETFullscreenMonitors_new((NETFullscreenMonitors*)other);
+    return NETFullscreenMonitors_New((NETFullscreenMonitors*)other);
 }
 
 NETFullscreenMonitors* k_netfullscreenmonitors_new2(void* other) {
-    return NETFullscreenMonitors_new2((NETFullscreenMonitors*)other);
+    return NETFullscreenMonitors_New2((NETFullscreenMonitors*)other);
 }
 
 NETFullscreenMonitors* k_netfullscreenmonitors_new3() {
-    return NETFullscreenMonitors_new3();
+    return NETFullscreenMonitors_New3();
 }
 
 void k_netfullscreenmonitors_copy_assign(void* self, void* other) {
@@ -433,11 +433,11 @@ void k_netfullscreenmonitors_delete(void* self) {
 }
 
 NET* k_net_new(void* other) {
-    return NET_new((NET*)other);
+    return NET_New((NET*)other);
 }
 
 NET* k_net_new2(void* other) {
-    return NET_new2((NET*)other);
+    return NET_New2((NET*)other);
 }
 
 void k_net_copy_assign(void* self, void* other) {

@@ -2,7 +2,7 @@
 #include "libcategorymetadata.h"
 
 KNSCore__CategoryMetadata* k_nscore__categorymetadata_new(void* param1) {
-    return KNSCore__CategoryMetadata_new((KNSCore__CategoryMetadata*)param1);
+    return KNSCore__CategoryMetadata_New((KNSCore__CategoryMetadata*)param1);
 }
 
 const char* k_nscore__categorymetadata_id(void* self) {

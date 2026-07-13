@@ -4,27 +4,27 @@
 #include "libqsystemsemaphore.h"
 
 QSystemSemaphore* q_systemsemaphore_new(void* key) {
-    return QSystemSemaphore_new((QNativeIpcKey*)key);
+    return QSystemSemaphore_New((QNativeIpcKey*)key);
 }
 
 QSystemSemaphore* q_systemsemaphore_new2(const char* key) {
-    return QSystemSemaphore_new2(qstring(key));
+    return QSystemSemaphore_New2(qstring(key));
 }
 
 QSystemSemaphore* q_systemsemaphore_new3(void* key, int initialValue) {
-    return QSystemSemaphore_new3((QNativeIpcKey*)key, initialValue);
+    return QSystemSemaphore_New3((QNativeIpcKey*)key, initialValue);
 }
 
 QSystemSemaphore* q_systemsemaphore_new4(void* key, int initialValue, int32_t param3) {
-    return QSystemSemaphore_new4((QNativeIpcKey*)key, initialValue, param3);
+    return QSystemSemaphore_New4((QNativeIpcKey*)key, initialValue, param3);
 }
 
 QSystemSemaphore* q_systemsemaphore_new5(const char* key, int initialValue) {
-    return QSystemSemaphore_new5(qstring(key), initialValue);
+    return QSystemSemaphore_New5(qstring(key), initialValue);
 }
 
 QSystemSemaphore* q_systemsemaphore_new6(const char* key, int initialValue, int32_t mode) {
-    return QSystemSemaphore_new6(qstring(key), initialValue, mode);
+    return QSystemSemaphore_New6(qstring(key), initialValue, mode);
 }
 
 const char* q_systemsemaphore_tr(const char* sourceText) {

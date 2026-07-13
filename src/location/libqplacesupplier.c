@@ -4,11 +4,11 @@
 #include "libqplacesupplier.h"
 
 QPlaceSupplier* q_placesupplier_new() {
-    return QPlaceSupplier_new();
+    return QPlaceSupplier_New();
 }
 
 QPlaceSupplier* q_placesupplier_new2(void* other) {
-    return QPlaceSupplier_new2((QPlaceSupplier*)other);
+    return QPlaceSupplier_New2((QPlaceSupplier*)other);
 }
 
 void q_placesupplier_operator_assign(void* self, void* other) {

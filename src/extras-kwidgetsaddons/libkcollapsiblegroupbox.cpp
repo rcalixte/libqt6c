@@ -37,11 +37,11 @@
 #include "libkcollapsiblegroupbox.hpp"
 #include "libkcollapsiblegroupbox.hxx"
 
-KCollapsibleGroupBox* KCollapsibleGroupBox_new(QWidget* parent) {
+KCollapsibleGroupBox* KCollapsibleGroupBox_New(QWidget* parent) {
     return new VirtualKCollapsibleGroupBox(parent);
 }
 
-KCollapsibleGroupBox* KCollapsibleGroupBox_new2() {
+KCollapsibleGroupBox* KCollapsibleGroupBox_New2() {
     return new VirtualKCollapsibleGroupBox();
 }
 

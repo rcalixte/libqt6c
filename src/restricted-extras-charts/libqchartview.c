@@ -22,19 +22,19 @@
 #include "libqchartview.h"
 
 QChartView* q_chartview_new(void* parent) {
-    return QChartView_new((QWidget*)parent);
+    return QChartView_New((QWidget*)parent);
 }
 
 QChartView* q_chartview_new2() {
-    return QChartView_new2();
+    return QChartView_New2();
 }
 
 QChartView* q_chartview_new3(void* chart) {
-    return QChartView_new3((QChart*)chart);
+    return QChartView_New3((QChart*)chart);
 }
 
 QChartView* q_chartview_new4(void* chart, void* parent) {
-    return QChartView_new4((QChart*)chart, (QWidget*)parent);
+    return QChartView_New4((QChart*)chart, (QWidget*)parent);
 }
 
 const QMetaObject* q_chartview_meta_object(void* self) {

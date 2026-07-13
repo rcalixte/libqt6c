@@ -9,12 +9,12 @@
 #include "libkdesktopfile.hpp"
 #include "libkdesktopfile.hxx"
 
-KDesktopFile* KDesktopFile_new(int resourceType, const libqt_string fileName) {
+KDesktopFile* KDesktopFile_New(int resourceType, const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualKDesktopFile(static_cast<QStandardPaths::StandardLocation>(resourceType), fileName_QString);
 }
 
-KDesktopFile* KDesktopFile_new2(const libqt_string fileName) {
+KDesktopFile* KDesktopFile_New2(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualKDesktopFile(fileName_QString);
 }

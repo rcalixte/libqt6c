@@ -6,11 +6,11 @@
 #include "libqwhatsthis.h"
 
 QWhatsThis* q_whatsthis_new(void* other) {
-    return QWhatsThis_new((QWhatsThis*)other);
+    return QWhatsThis_New((QWhatsThis*)other);
 }
 
 QWhatsThis* q_whatsthis_new2(void* other) {
-    return QWhatsThis_new2((QWhatsThis*)other);
+    return QWhatsThis_New2((QWhatsThis*)other);
 }
 
 void q_whatsthis_copy_assign(void* self, void* other) {

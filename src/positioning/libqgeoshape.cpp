@@ -6,11 +6,11 @@
 #include "libqgeoshape.hpp"
 #include "libqgeoshape.hxx"
 
-QGeoShape* QGeoShape_new() {
+QGeoShape* QGeoShape_New() {
     return new QGeoShape();
 }
 
-QGeoShape* QGeoShape_new2(const QGeoShape* other) {
+QGeoShape* QGeoShape_New2(const QGeoShape* other) {
     return new QGeoShape(*other);
 }
 

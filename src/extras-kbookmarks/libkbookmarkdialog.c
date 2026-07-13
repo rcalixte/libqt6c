@@ -19,11 +19,11 @@
 #include "libkbookmarkdialog.h"
 
 KBookmarkDialog* k_bookmarkdialog_new(void* manager) {
-    return KBookmarkDialog_new((KBookmarkManager*)manager);
+    return KBookmarkDialog_New((KBookmarkManager*)manager);
 }
 
 KBookmarkDialog* k_bookmarkdialog_new2(void* manager, void* parent) {
-    return KBookmarkDialog_new2((KBookmarkManager*)manager, (QWidget*)parent);
+    return KBookmarkDialog_New2((KBookmarkManager*)manager, (QWidget*)parent);
 }
 
 const QMetaObject* k_bookmarkdialog_meta_object(void* self) {

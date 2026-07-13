@@ -21,10 +21,10 @@ typedef struct QTextDocumentFragment QTextDocumentFragment;
 typedef struct QTextDocumentWriter QTextDocumentWriter;
 #endif
 
-QTextDocumentWriter* QTextDocumentWriter_new();
-QTextDocumentWriter* QTextDocumentWriter_new2(QIODevice* device, const libqt_string format);
-QTextDocumentWriter* QTextDocumentWriter_new3(const libqt_string fileName);
-QTextDocumentWriter* QTextDocumentWriter_new4(const libqt_string fileName, const libqt_string format);
+QTextDocumentWriter* QTextDocumentWriter_New();
+QTextDocumentWriter* QTextDocumentWriter_New2(QIODevice* device, const libqt_string format);
+QTextDocumentWriter* QTextDocumentWriter_New3(const libqt_string fileName);
+QTextDocumentWriter* QTextDocumentWriter_New4(const libqt_string fileName, const libqt_string format);
 void QTextDocumentWriter_SetFormat(QTextDocumentWriter* self, const libqt_string format);
 libqt_string QTextDocumentWriter_Format(const QTextDocumentWriter* self);
 void QTextDocumentWriter_SetDevice(QTextDocumentWriter* self, QIODevice* device);

@@ -25,8 +25,8 @@ typedef struct QWebEngineUrlRequestInfo QWebEngineUrlRequestInfo;
 typedef struct QWebEngineUrlRequestInterceptor QWebEngineUrlRequestInterceptor;
 #endif
 
-QWebEngineUrlRequestInterceptor* QWebEngineUrlRequestInterceptor_new();
-QWebEngineUrlRequestInterceptor* QWebEngineUrlRequestInterceptor_new2(QObject* p);
+QWebEngineUrlRequestInterceptor* QWebEngineUrlRequestInterceptor_New();
+QWebEngineUrlRequestInterceptor* QWebEngineUrlRequestInterceptor_New2(QObject* p);
 QMetaObject* QWebEngineUrlRequestInterceptor_MetaObject(const QWebEngineUrlRequestInterceptor* self);
 void* QWebEngineUrlRequestInterceptor_Metacast(QWebEngineUrlRequestInterceptor* self, const char* param1);
 int QWebEngineUrlRequestInterceptor_Metacall(QWebEngineUrlRequestInterceptor* self, int param1, int param2, void** param3);

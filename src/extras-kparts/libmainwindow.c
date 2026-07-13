@@ -28,15 +28,15 @@
 #include "libmainwindow.h"
 
 KParts__MainWindow* k_parts__mainwindow_new(void* parent) {
-    return KParts__MainWindow_new((QWidget*)parent);
+    return KParts__MainWindow_New((QWidget*)parent);
 }
 
 KParts__MainWindow* k_parts__mainwindow_new2() {
-    return KParts__MainWindow_new2();
+    return KParts__MainWindow_New2();
 }
 
 KParts__MainWindow* k_parts__mainwindow_new3(void* parent, int32_t f) {
-    return KParts__MainWindow_new3((QWidget*)parent, f);
+    return KParts__MainWindow_New3((QWidget*)parent, f);
 }
 
 const QMetaObject* k_parts__mainwindow_meta_object(void* self) {

@@ -3,11 +3,11 @@
 #include "libqgenericpluginfactory.h"
 
 QGenericPluginFactory* q_genericpluginfactory_new(void* other) {
-    return QGenericPluginFactory_new((QGenericPluginFactory*)other);
+    return QGenericPluginFactory_New((QGenericPluginFactory*)other);
 }
 
 QGenericPluginFactory* q_genericpluginfactory_new2(void* other) {
-    return QGenericPluginFactory_new2((QGenericPluginFactory*)other);
+    return QGenericPluginFactory_New2((QGenericPluginFactory*)other);
 }
 
 void q_genericpluginfactory_copy_assign(void* self, void* other) {

@@ -19,8 +19,8 @@ typedef struct QUrl QUrl;
 typedef struct QWebEnginePermission QWebEnginePermission;
 #endif
 
-QWebEnginePermission* QWebEnginePermission_new();
-QWebEnginePermission* QWebEnginePermission_new2(const QWebEnginePermission* other);
+QWebEnginePermission* QWebEnginePermission_New();
+QWebEnginePermission* QWebEnginePermission_New2(const QWebEnginePermission* other);
 void QWebEnginePermission_OperatorAssign(QWebEnginePermission* self, const QWebEnginePermission* other);
 void QWebEnginePermission_Swap(QWebEnginePermission* self, QWebEnginePermission* other);
 QUrl* QWebEnginePermission_Origin(const QWebEnginePermission* self);

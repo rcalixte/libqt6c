@@ -59,10 +59,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QChartView* QChartView_new(QWidget* parent);
-QChartView* QChartView_new2();
-QChartView* QChartView_new3(QChart* chart);
-QChartView* QChartView_new4(QChart* chart, QWidget* parent);
+QChartView* QChartView_New(QWidget* parent);
+QChartView* QChartView_New2();
+QChartView* QChartView_New3(QChart* chart);
+QChartView* QChartView_New4(QChart* chart, QWidget* parent);
 QMetaObject* QChartView_MetaObject(const QChartView* self);
 void* QChartView_Metacast(QChartView* self, const char* param1);
 int QChartView_Metacall(QChartView* self, int param1, int param2, void** param3);

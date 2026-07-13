@@ -14,11 +14,11 @@
 #include "libabstractformwindowtool.hpp"
 #include "libabstractformwindowtool.hxx"
 
-QDesignerFormWindowToolInterface* QDesignerFormWindowToolInterface_new() {
+QDesignerFormWindowToolInterface* QDesignerFormWindowToolInterface_New() {
     return new VirtualQDesignerFormWindowToolInterface();
 }
 
-QDesignerFormWindowToolInterface* QDesignerFormWindowToolInterface_new2(QObject* parent) {
+QDesignerFormWindowToolInterface* QDesignerFormWindowToolInterface_New2(QObject* parent) {
     return new VirtualQDesignerFormWindowToolInterface(parent);
 }
 

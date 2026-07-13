@@ -3,7 +3,7 @@
 #include "libqwebenginefilesystemaccessrequest.h"
 
 QWebEngineFileSystemAccessRequest* q_webenginefilesystemaccessrequest_new(void* other) {
-    return QWebEngineFileSystemAccessRequest_new((QWebEngineFileSystemAccessRequest*)other);
+    return QWebEngineFileSystemAccessRequest_New((QWebEngineFileSystemAccessRequest*)other);
 }
 
 void q_webenginefilesystemaccessrequest_operator_assign(void* self, void* other) {

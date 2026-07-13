@@ -26,8 +26,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KColumnResizer* KColumnResizer_new();
-KColumnResizer* KColumnResizer_new2(QObject* parent);
+KColumnResizer* KColumnResizer_New();
+KColumnResizer* KColumnResizer_New2(QObject* parent);
 QMetaObject* KColumnResizer_MetaObject(const KColumnResizer* self);
 void* KColumnResizer_Metacast(KColumnResizer* self, const char* param1);
 int KColumnResizer_Metacall(KColumnResizer* self, int param1, int param2, void** param3);

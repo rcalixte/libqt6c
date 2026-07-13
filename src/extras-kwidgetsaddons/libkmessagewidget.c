@@ -18,19 +18,19 @@
 #include "libkmessagewidget.h"
 
 KMessageWidget* k_messagewidget_new(void* parent) {
-    return KMessageWidget_new((QWidget*)parent);
+    return KMessageWidget_New((QWidget*)parent);
 }
 
 KMessageWidget* k_messagewidget_new2() {
-    return KMessageWidget_new2();
+    return KMessageWidget_New2();
 }
 
 KMessageWidget* k_messagewidget_new3(const char* text) {
-    return KMessageWidget_new3(qstring(text));
+    return KMessageWidget_New3(qstring(text));
 }
 
 KMessageWidget* k_messagewidget_new4(const char* text, void* parent) {
-    return KMessageWidget_new4(qstring(text), (QWidget*)parent);
+    return KMessageWidget_New4(qstring(text), (QWidget*)parent);
 }
 
 const QMetaObject* k_messagewidget_meta_object(void* self) {

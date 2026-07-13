@@ -2,19 +2,19 @@
 #include "libqregularexpression.h"
 
 QRegularExpression* q_regularexpression_new() {
-    return QRegularExpression_new();
+    return QRegularExpression_New();
 }
 
 QRegularExpression* q_regularexpression_new2(const char* pattern) {
-    return QRegularExpression_new2(qstring(pattern));
+    return QRegularExpression_New2(qstring(pattern));
 }
 
 QRegularExpression* q_regularexpression_new3(void* re) {
-    return QRegularExpression_new3((QRegularExpression*)re);
+    return QRegularExpression_New3((QRegularExpression*)re);
 }
 
 QRegularExpression* q_regularexpression_new4(const char* pattern, int32_t options) {
-    return QRegularExpression_new4(qstring(pattern), options);
+    return QRegularExpression_New4(qstring(pattern), options);
 }
 
 int32_t q_regularexpression_pattern_options(void* self) {
@@ -255,11 +255,11 @@ void q_regularexpression_delete(void* self) {
 }
 
 QRegularExpressionMatch* q_regularexpressionmatch_new() {
-    return QRegularExpressionMatch_new();
+    return QRegularExpressionMatch_New();
 }
 
 QRegularExpressionMatch* q_regularexpressionmatch_new2(void* match) {
-    return QRegularExpressionMatch_new2((QRegularExpressionMatch*)match);
+    return QRegularExpressionMatch_New2((QRegularExpressionMatch*)match);
 }
 
 void q_regularexpressionmatch_operator_assign(void* self, void* match) {
@@ -408,11 +408,11 @@ void q_regularexpressionmatch_delete(void* self) {
 }
 
 QRegularExpressionMatchIterator* q_regularexpressionmatchiterator_new() {
-    return QRegularExpressionMatchIterator_new();
+    return QRegularExpressionMatchIterator_New();
 }
 
 QRegularExpressionMatchIterator* q_regularexpressionmatchiterator_new2(void* iterator) {
-    return QRegularExpressionMatchIterator_new2((QRegularExpressionMatchIterator*)iterator);
+    return QRegularExpressionMatchIterator_New2((QRegularExpressionMatchIterator*)iterator);
 }
 
 void q_regularexpressionmatchiterator_operator_assign(void* self, void* iterator) {

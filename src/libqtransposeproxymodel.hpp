@@ -33,8 +33,8 @@ typedef struct QTransposeProxyModel QTransposeProxyModel;
 typedef struct QVariant QVariant;
 #endif
 
-QTransposeProxyModel* QTransposeProxyModel_new();
-QTransposeProxyModel* QTransposeProxyModel_new2(QObject* parent);
+QTransposeProxyModel* QTransposeProxyModel_New();
+QTransposeProxyModel* QTransposeProxyModel_New2(QObject* parent);
 QMetaObject* QTransposeProxyModel_MetaObject(const QTransposeProxyModel* self);
 void* QTransposeProxyModel_Metacast(QTransposeProxyModel* self, const char* param1);
 int QTransposeProxyModel_Metacall(QTransposeProxyModel* self, int param1, int param2, void** param3);

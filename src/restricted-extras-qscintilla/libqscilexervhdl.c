@@ -11,11 +11,11 @@
 #include "libqscilexervhdl.h"
 
 QsciLexerVHDL* q_scilexervhdl_new() {
-    return QsciLexerVHDL_new();
+    return QsciLexerVHDL_New();
 }
 
 QsciLexerVHDL* q_scilexervhdl_new2(void* parent) {
-    return QsciLexerVHDL_new2((QObject*)parent);
+    return QsciLexerVHDL_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexervhdl_meta_object(void* self) {

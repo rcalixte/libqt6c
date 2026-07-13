@@ -21,11 +21,11 @@
 #include "libkplotwidget.h"
 
 KPlotWidget* k_plotwidget_new(void* parent) {
-    return KPlotWidget_new((QWidget*)parent);
+    return KPlotWidget_New((QWidget*)parent);
 }
 
 KPlotWidget* k_plotwidget_new2() {
-    return KPlotWidget_new2();
+    return KPlotWidget_New2();
 }
 
 const QMetaObject* k_plotwidget_meta_object(void* self) {

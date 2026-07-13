@@ -8,7 +8,7 @@
 #include "libkcompletionbase.hpp"
 #include "libkcompletionbase.hxx"
 
-KCompletionBase* KCompletionBase_new() {
+KCompletionBase* KCompletionBase_New() {
     return new VirtualKCompletionBase();
 }
 

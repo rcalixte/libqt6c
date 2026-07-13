@@ -11,11 +11,11 @@
 #include "libkxmlguifactory.h"
 
 KXMLGUIFactory* k_xmlguifactory_new(void* builder) {
-    return KXMLGUIFactory_new((KXMLGUIBuilder*)builder);
+    return KXMLGUIFactory_New((KXMLGUIBuilder*)builder);
 }
 
 KXMLGUIFactory* k_xmlguifactory_new2(void* builder, void* parent) {
-    return KXMLGUIFactory_new2((KXMLGUIBuilder*)builder, (QObject*)parent);
+    return KXMLGUIFactory_New2((KXMLGUIBuilder*)builder, (QObject*)parent);
 }
 
 const QMetaObject* k_xmlguifactory_meta_object(void* self) {

@@ -3,11 +3,11 @@
 #include "libqplaceratings.hpp"
 #include "libqplaceratings.hxx"
 
-QPlaceRatings* QPlaceRatings_new() {
+QPlaceRatings* QPlaceRatings_New() {
     return new QPlaceRatings();
 }
 
-QPlaceRatings* QPlaceRatings_new2(const QPlaceRatings* other) {
+QPlaceRatings* QPlaceRatings_New2(const QPlaceRatings* other) {
     return new QPlaceRatings(*other);
 }
 

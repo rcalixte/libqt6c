@@ -4,11 +4,11 @@
 #include "libtheme.hpp"
 #include "libtheme.hxx"
 
-KSyntaxHighlighting__Theme* KSyntaxHighlighting__Theme_new() {
+KSyntaxHighlighting__Theme* KSyntaxHighlighting__Theme_New() {
     return new KSyntaxHighlighting::Theme();
 }
 
-KSyntaxHighlighting__Theme* KSyntaxHighlighting__Theme_new2(const KSyntaxHighlighting__Theme* copyVal) {
+KSyntaxHighlighting__Theme* KSyntaxHighlighting__Theme_New2(const KSyntaxHighlighting__Theme* copyVal) {
     return new KSyntaxHighlighting::Theme(*copyVal);
 }
 

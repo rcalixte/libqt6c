@@ -27,8 +27,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QBoxPlotLegendMarker* QBoxPlotLegendMarker_new(QBoxPlotSeries* series, QLegend* legend);
-QBoxPlotLegendMarker* QBoxPlotLegendMarker_new2(QBoxPlotSeries* series, QLegend* legend, QObject* parent);
+QBoxPlotLegendMarker* QBoxPlotLegendMarker_New(QBoxPlotSeries* series, QLegend* legend);
+QBoxPlotLegendMarker* QBoxPlotLegendMarker_New2(QBoxPlotSeries* series, QLegend* legend, QObject* parent);
 QMetaObject* QBoxPlotLegendMarker_MetaObject(const QBoxPlotLegendMarker* self);
 void* QBoxPlotLegendMarker_Metacast(QBoxPlotLegendMarker* self, const char* param1);
 int QBoxPlotLegendMarker_Metacall(QBoxPlotLegendMarker* self, int param1, int param2, void** param3);

@@ -19,11 +19,11 @@
 #include "libqrestaccessmanager.hpp"
 #include "libqrestaccessmanager.hxx"
 
-QRestAccessManager* QRestAccessManager_new(QNetworkAccessManager* manager) {
+QRestAccessManager* QRestAccessManager_New(QNetworkAccessManager* manager) {
     return new VirtualQRestAccessManager(manager);
 }
 
-QRestAccessManager* QRestAccessManager_new2(QNetworkAccessManager* manager, QObject* parent) {
+QRestAccessManager* QRestAccessManager_New2(QNetworkAccessManager* manager, QObject* parent) {
     return new VirtualQRestAccessManager(manager, parent);
 }
 

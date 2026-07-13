@@ -6,7 +6,7 @@
 #include "libqobjectcleanuphandler.h"
 
 QObjectCleanupHandler* q_objectcleanuphandler_new() {
-    return QObjectCleanupHandler_new();
+    return QObjectCleanupHandler_New();
 }
 
 const QMetaObject* q_objectcleanuphandler_meta_object(void* self) {

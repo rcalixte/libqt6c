@@ -15,11 +15,11 @@
 #include "libqtcpsocket.hpp"
 #include "libqtcpsocket.hxx"
 
-QTcpSocket* QTcpSocket_new() {
+QTcpSocket* QTcpSocket_New() {
     return new VirtualQTcpSocket();
 }
 
-QTcpSocket* QTcpSocket_new2(QObject* parent) {
+QTcpSocket* QTcpSocket_New2(QObject* parent) {
     return new VirtualQTcpSocket(parent);
 }
 

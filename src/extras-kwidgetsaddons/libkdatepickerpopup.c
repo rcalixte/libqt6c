@@ -19,19 +19,19 @@
 #include "libkdatepickerpopup.h"
 
 KDatePickerPopup* k_datepickerpopup_new() {
-    return KDatePickerPopup_new();
+    return KDatePickerPopup_New();
 }
 
 KDatePickerPopup* k_datepickerpopup_new2(int32_t modes) {
-    return KDatePickerPopup_new2(modes);
+    return KDatePickerPopup_New2(modes);
 }
 
 KDatePickerPopup* k_datepickerpopup_new3(int32_t modes, void* date) {
-    return KDatePickerPopup_new3(modes, (QDate*)date);
+    return KDatePickerPopup_New3(modes, (QDate*)date);
 }
 
 KDatePickerPopup* k_datepickerpopup_new4(int32_t modes, void* date, void* parent) {
-    return KDatePickerPopup_new4(modes, (QDate*)date, (QWidget*)parent);
+    return KDatePickerPopup_New4(modes, (QDate*)date, (QWidget*)parent);
 }
 
 const QMetaObject* k_datepickerpopup_meta_object(void* self) {

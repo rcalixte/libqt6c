@@ -5,19 +5,19 @@
 #include "libqimagewriter.h"
 
 QImageWriter* q_imagewriter_new() {
-    return QImageWriter_new();
+    return QImageWriter_New();
 }
 
 QImageWriter* q_imagewriter_new2(void* device, char* format) {
-    return QImageWriter_new2((QIODevice*)device, qstring(format));
+    return QImageWriter_New2((QIODevice*)device, qstring(format));
 }
 
 QImageWriter* q_imagewriter_new3(const char* fileName) {
-    return QImageWriter_new3(qstring(fileName));
+    return QImageWriter_New3(qstring(fileName));
 }
 
 QImageWriter* q_imagewriter_new4(const char* fileName, char* format) {
-    return QImageWriter_new4(qstring(fileName), qstring(format));
+    return QImageWriter_New4(qstring(fileName), qstring(format));
 }
 
 const char* q_imagewriter_tr(const char* sourceText) {

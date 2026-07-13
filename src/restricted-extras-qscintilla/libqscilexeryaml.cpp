@@ -14,11 +14,11 @@
 #include "libqscilexeryaml.hpp"
 #include "libqscilexeryaml.hxx"
 
-QsciLexerYAML* QsciLexerYAML_new() {
+QsciLexerYAML* QsciLexerYAML_New() {
     return new VirtualQsciLexerYAML();
 }
 
-QsciLexerYAML* QsciLexerYAML_new2(QObject* parent) {
+QsciLexerYAML* QsciLexerYAML_New2(QObject* parent) {
     return new VirtualQsciLexerYAML(parent);
 }
 

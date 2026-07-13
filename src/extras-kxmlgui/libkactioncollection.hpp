@@ -30,8 +30,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KActionCollection* KActionCollection_new(QObject* parent);
-KActionCollection* KActionCollection_new2(QObject* parent, const libqt_string cName);
+KActionCollection* KActionCollection_New(QObject* parent);
+KActionCollection* KActionCollection_New2(QObject* parent, const libqt_string cName);
 QMetaObject* KActionCollection_MetaObject(const KActionCollection* self);
 void* KActionCollection_Metacast(KActionCollection* self, const char* param1);
 int KActionCollection_Metacall(KActionCollection* self, int param1, int param2, void** param3);

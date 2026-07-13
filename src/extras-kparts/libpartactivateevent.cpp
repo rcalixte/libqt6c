@@ -6,7 +6,7 @@
 #include "libpartactivateevent.hpp"
 #include "libpartactivateevent.hxx"
 
-KParts__PartActivateEvent* KParts__PartActivateEvent_new(bool activated, KParts__Part* part, QWidget* widget) {
+KParts__PartActivateEvent* KParts__PartActivateEvent_New(bool activated, KParts__Part* part, QWidget* widget) {
     return new VirtualKPartsPartActivateEvent(activated, part, widget);
 }
 

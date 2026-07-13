@@ -50,9 +50,9 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QDialog* QDialog_new(QWidget* parent);
-QDialog* QDialog_new2();
-QDialog* QDialog_new3(QWidget* parent, int f);
+QDialog* QDialog_New(QWidget* parent);
+QDialog* QDialog_New2();
+QDialog* QDialog_New3(QWidget* parent, int f);
 QMetaObject* QDialog_MetaObject(const QDialog* self);
 void* QDialog_Metacast(QDialog* self, const char* param1);
 int QDialog_Metacall(QDialog* self, int param1, int param2, void** param3);

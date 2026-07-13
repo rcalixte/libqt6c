@@ -54,8 +54,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QSpinBox* QSpinBox_new(QWidget* parent);
-QSpinBox* QSpinBox_new2();
+QSpinBox* QSpinBox_New(QWidget* parent);
+QSpinBox* QSpinBox_New2();
 QMetaObject* QSpinBox_MetaObject(const QSpinBox* self);
 void* QSpinBox_Metacast(QSpinBox* self, const char* param1);
 int QSpinBox_Metacall(QSpinBox* self, int param1, int param2, void** param3);
@@ -290,8 +290,8 @@ void QSpinBox_OnGetDecodedMetricF(const QSpinBox* self, intptr_t slot);
 double QSpinBox_SuperGetDecodedMetricF(const QSpinBox* self, int metricA, int metricB);
 void QSpinBox_Delete(QSpinBox* self);
 
-QDoubleSpinBox* QDoubleSpinBox_new(QWidget* parent);
-QDoubleSpinBox* QDoubleSpinBox_new2();
+QDoubleSpinBox* QDoubleSpinBox_New(QWidget* parent);
+QDoubleSpinBox* QDoubleSpinBox_New2();
 QMetaObject* QDoubleSpinBox_MetaObject(const QDoubleSpinBox* self);
 void* QDoubleSpinBox_Metacast(QDoubleSpinBox* self, const char* param1);
 int QDoubleSpinBox_Metacall(QDoubleSpinBox* self, int param1, int param2, void** param3);

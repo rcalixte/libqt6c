@@ -26,7 +26,7 @@
 #include "libpoppler_form.hpp"
 #include "libpoppler_form.hxx"
 
-Poppler__FormFieldIcon* Poppler__FormFieldIcon_new(const Poppler__FormFieldIcon* ffIcon) {
+Poppler__FormFieldIcon* Poppler__FormFieldIcon_New(const Poppler__FormFieldIcon* ffIcon) {
     return new Poppler::FormFieldIcon(*ffIcon);
 }
 
@@ -378,11 +378,11 @@ void Poppler__FormFieldChoice_Delete(Poppler__FormFieldChoice* self) {
     delete self;
 }
 
-Poppler__CertificateInfo* Poppler__CertificateInfo_new() {
+Poppler__CertificateInfo* Poppler__CertificateInfo_New() {
     return new Poppler::CertificateInfo();
 }
 
-Poppler__CertificateInfo* Poppler__CertificateInfo_new2(const Poppler__CertificateInfo* other) {
+Poppler__CertificateInfo* Poppler__CertificateInfo_New2(const Poppler__CertificateInfo* other) {
     return new Poppler::CertificateInfo(*other);
 }
 
@@ -506,7 +506,7 @@ void Poppler__CertificateInfo_Delete(Poppler__CertificateInfo* self) {
     delete self;
 }
 
-Poppler__SignatureValidationInfo* Poppler__SignatureValidationInfo_new(const Poppler__SignatureValidationInfo* other) {
+Poppler__SignatureValidationInfo* Poppler__SignatureValidationInfo_New(const Poppler__SignatureValidationInfo* other) {
     return new Poppler::SignatureValidationInfo(*other);
 }
 
@@ -612,7 +612,7 @@ void Poppler__SignatureValidationInfo_Delete(Poppler__SignatureValidationInfo* s
     delete self;
 }
 
-Poppler__AsyncObject* Poppler__AsyncObject_new() {
+Poppler__AsyncObject* Poppler__AsyncObject_New() {
     return new VirtualPopplerAsyncObject();
 }
 

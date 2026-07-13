@@ -47,8 +47,8 @@ typedef struct TextEmoticonsCore__EmojiModel TextEmoticonsCore__EmojiModel;
 typedef struct TextEmoticonsCore__UnicodeEmoticon TextEmoticonsCore__UnicodeEmoticon;
 #endif
 
-TextEmoticonsCore__EmojiModel* TextEmoticonsCore__EmojiModel_new();
-TextEmoticonsCore__EmojiModel* TextEmoticonsCore__EmojiModel_new2(QObject* parent);
+TextEmoticonsCore__EmojiModel* TextEmoticonsCore__EmojiModel_New();
+TextEmoticonsCore__EmojiModel* TextEmoticonsCore__EmojiModel_New2(QObject* parent);
 QMetaObject* TextEmoticonsCore__EmojiModel_MetaObject(const TextEmoticonsCore__EmojiModel* self);
 void* TextEmoticonsCore__EmojiModel_Metacast(TextEmoticonsCore__EmojiModel* self, const char* param1);
 int TextEmoticonsCore__EmojiModel_Metacall(TextEmoticonsCore__EmojiModel* self, int param1, int param2, void** param3);

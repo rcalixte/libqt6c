@@ -7,19 +7,19 @@
 #include "libqpauseanimation.h"
 
 QPauseAnimation* q_pauseanimation_new() {
-    return QPauseAnimation_new();
+    return QPauseAnimation_New();
 }
 
 QPauseAnimation* q_pauseanimation_new2(int msecs) {
-    return QPauseAnimation_new2(msecs);
+    return QPauseAnimation_New2(msecs);
 }
 
 QPauseAnimation* q_pauseanimation_new3(void* parent) {
-    return QPauseAnimation_new3((QObject*)parent);
+    return QPauseAnimation_New3((QObject*)parent);
 }
 
 QPauseAnimation* q_pauseanimation_new4(int msecs, void* parent) {
-    return QPauseAnimation_new4(msecs, (QObject*)parent);
+    return QPauseAnimation_New4(msecs, (QObject*)parent);
 }
 
 const QMetaObject* q_pauseanimation_meta_object(void* self) {

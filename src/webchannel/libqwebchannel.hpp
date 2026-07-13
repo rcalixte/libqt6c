@@ -25,8 +25,8 @@ typedef struct QWebChannel QWebChannel;
 typedef struct QWebChannelAbstractTransport QWebChannelAbstractTransport;
 #endif
 
-QWebChannel* QWebChannel_new();
-QWebChannel* QWebChannel_new2(QObject* parent);
+QWebChannel* QWebChannel_New();
+QWebChannel* QWebChannel_New2(QObject* parent);
 QMetaObject* QWebChannel_MetaObject(const QWebChannel* self);
 void* QWebChannel_Metacast(QWebChannel* self, const char* param1);
 int QWebChannel_Metacall(QWebChannel* self, int param1, int param2, void** param3);

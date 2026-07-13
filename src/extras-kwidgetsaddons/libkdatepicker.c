@@ -17,19 +17,19 @@
 #include "libkdatepicker.h"
 
 KDatePicker* k_datepicker_new(void* parent) {
-    return KDatePicker_new((QWidget*)parent);
+    return KDatePicker_New((QWidget*)parent);
 }
 
 KDatePicker* k_datepicker_new2() {
-    return KDatePicker_new2();
+    return KDatePicker_New2();
 }
 
 KDatePicker* k_datepicker_new3(void* dt) {
-    return KDatePicker_new3((QDate*)dt);
+    return KDatePicker_New3((QDate*)dt);
 }
 
 KDatePicker* k_datepicker_new4(void* dt, void* parent) {
-    return KDatePicker_new4((QDate*)dt, (QWidget*)parent);
+    return KDatePicker_New4((QDate*)dt, (QWidget*)parent);
 }
 
 const QMetaObject* k_datepicker_meta_object(void* self) {

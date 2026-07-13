@@ -8,11 +8,11 @@
 #include "libqgraphicsgridlayout.h"
 
 QGraphicsGridLayout* q_graphicsgridlayout_new() {
-    return QGraphicsGridLayout_new();
+    return QGraphicsGridLayout_New();
 }
 
 QGraphicsGridLayout* q_graphicsgridlayout_new2(void* parent) {
-    return QGraphicsGridLayout_new2((QGraphicsLayoutItem*)parent);
+    return QGraphicsGridLayout_New2((QGraphicsLayoutItem*)parent);
 }
 
 void q_graphicsgridlayout_add_item(void* self, void* item, int row, int column, int rowSpan, int columnSpan) {

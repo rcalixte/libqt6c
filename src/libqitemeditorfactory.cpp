@@ -27,11 +27,11 @@ void QItemEditorCreatorBase_Delete(QItemEditorCreatorBase* self) {
     delete self;
 }
 
-QItemEditorFactory* QItemEditorFactory_new() {
+QItemEditorFactory* QItemEditorFactory_New() {
     return new VirtualQItemEditorFactory();
 }
 
-QItemEditorFactory* QItemEditorFactory_new2(const QItemEditorFactory* param1) {
+QItemEditorFactory* QItemEditorFactory_New2(const QItemEditorFactory* param1) {
     return new VirtualQItemEditorFactory(*param1);
 }
 

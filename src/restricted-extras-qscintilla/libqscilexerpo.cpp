@@ -14,11 +14,11 @@
 #include "libqscilexerpo.hpp"
 #include "libqscilexerpo.hxx"
 
-QsciLexerPO* QsciLexerPO_new() {
+QsciLexerPO* QsciLexerPO_New() {
     return new VirtualQsciLexerPO();
 }
 
-QsciLexerPO* QsciLexerPO_new2(QObject* parent) {
+QsciLexerPO* QsciLexerPO_New2(QObject* parent) {
     return new VirtualQsciLexerPO(parent);
 }
 

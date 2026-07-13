@@ -51,12 +51,12 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KShortcutsEditor* KShortcutsEditor_new(QWidget* parent);
-KShortcutsEditor* KShortcutsEditor_new2(KActionCollection* collection, QWidget* parent);
-KShortcutsEditor* KShortcutsEditor_new3(KActionCollection* collection, QWidget* parent, int actionTypes);
-KShortcutsEditor* KShortcutsEditor_new4(KActionCollection* collection, QWidget* parent, int actionTypes, int allowLetterShortcuts);
-KShortcutsEditor* KShortcutsEditor_new5(QWidget* parent, int actionTypes);
-KShortcutsEditor* KShortcutsEditor_new6(QWidget* parent, int actionTypes, int allowLetterShortcuts);
+KShortcutsEditor* KShortcutsEditor_New(QWidget* parent);
+KShortcutsEditor* KShortcutsEditor_New2(KActionCollection* collection, QWidget* parent);
+KShortcutsEditor* KShortcutsEditor_New3(KActionCollection* collection, QWidget* parent, int actionTypes);
+KShortcutsEditor* KShortcutsEditor_New4(KActionCollection* collection, QWidget* parent, int actionTypes, int allowLetterShortcuts);
+KShortcutsEditor* KShortcutsEditor_New5(QWidget* parent, int actionTypes);
+KShortcutsEditor* KShortcutsEditor_New6(QWidget* parent, int actionTypes, int allowLetterShortcuts);
 QMetaObject* KShortcutsEditor_MetaObject(const KShortcutsEditor* self);
 void* KShortcutsEditor_Metacast(KShortcutsEditor* self, const char* param1);
 int KShortcutsEditor_Metacall(KShortcutsEditor* self, int param1, int param2, void** param3);

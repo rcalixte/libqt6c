@@ -22,14 +22,14 @@ typedef struct QLocale QLocale;
 typedef struct QTime QTime;
 #endif
 
-QLocale* QLocale_new();
-QLocale* QLocale_new2(const libqt_string name);
-QLocale* QLocale_new3(libqt_string name);
-QLocale* QLocale_new4(uint16_t language, uint16_t territory);
-QLocale* QLocale_new5(uint16_t language);
-QLocale* QLocale_new6(const QLocale* other);
-QLocale* QLocale_new7(uint16_t language, uint16_t script);
-QLocale* QLocale_new8(uint16_t language, uint16_t script, uint16_t territory);
+QLocale* QLocale_New();
+QLocale* QLocale_New2(const libqt_string name);
+QLocale* QLocale_New3(libqt_string name);
+QLocale* QLocale_New4(uint16_t language, uint16_t territory);
+QLocale* QLocale_New5(uint16_t language);
+QLocale* QLocale_New6(const QLocale* other);
+QLocale* QLocale_New7(uint16_t language, uint16_t script);
+QLocale* QLocale_New8(uint16_t language, uint16_t script, uint16_t territory);
 void QLocale_OperatorAssign(QLocale* self, const QLocale* other);
 void QLocale_Swap(QLocale* self, QLocale* other);
 uint16_t QLocale_Language(const QLocale* self);

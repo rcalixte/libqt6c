@@ -132,7 +132,7 @@ void Poppler__PDFConverter_Delete(Poppler__PDFConverter* self) {
     delete self;
 }
 
-Poppler__PDFConverter__NewSignatureData* Poppler__PDFConverter__NewSignatureData_new() {
+Poppler__PDFConverter__NewSignatureData* Poppler__PDFConverter__NewSignatureData_New() {
     return new Poppler::PDFConverter::NewSignatureData();
 }
 

@@ -57,15 +57,15 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KToolBar* KToolBar_new(QWidget* parent);
-KToolBar* KToolBar_new2(const libqt_string objectName, QWidget* parent);
-KToolBar* KToolBar_new3(const libqt_string objectName, QMainWindow* parentWindow, int area);
-KToolBar* KToolBar_new4(QWidget* parent, bool isMainToolBar);
-KToolBar* KToolBar_new5(QWidget* parent, bool isMainToolBar, bool readConfig);
-KToolBar* KToolBar_new6(const libqt_string objectName, QWidget* parent, bool readConfig);
-KToolBar* KToolBar_new7(const libqt_string objectName, QMainWindow* parentWindow, int area, bool newLine);
-KToolBar* KToolBar_new8(const libqt_string objectName, QMainWindow* parentWindow, int area, bool newLine, bool isMainToolBar);
-KToolBar* KToolBar_new9(const libqt_string objectName, QMainWindow* parentWindow, int area, bool newLine, bool isMainToolBar, bool readConfig);
+KToolBar* KToolBar_New(QWidget* parent);
+KToolBar* KToolBar_New2(const libqt_string objectName, QWidget* parent);
+KToolBar* KToolBar_New3(const libqt_string objectName, QMainWindow* parentWindow, int area);
+KToolBar* KToolBar_New4(QWidget* parent, bool isMainToolBar);
+KToolBar* KToolBar_New5(QWidget* parent, bool isMainToolBar, bool readConfig);
+KToolBar* KToolBar_New6(const libqt_string objectName, QWidget* parent, bool readConfig);
+KToolBar* KToolBar_New7(const libqt_string objectName, QMainWindow* parentWindow, int area, bool newLine);
+KToolBar* KToolBar_New8(const libqt_string objectName, QMainWindow* parentWindow, int area, bool newLine, bool isMainToolBar);
+KToolBar* KToolBar_New9(const libqt_string objectName, QMainWindow* parentWindow, int area, bool newLine, bool isMainToolBar, bool readConfig);
 QMetaObject* KToolBar_MetaObject(const KToolBar* self);
 void* KToolBar_Metacast(KToolBar* self, const char* param1);
 int KToolBar_Metacall(KToolBar* self, int param1, int param2, void** param3);

@@ -10,15 +10,15 @@
 #include "libqaccessiblewidget.h"
 
 QAccessibleWidget* q_accessiblewidget_new(void* o) {
-    return QAccessibleWidget_new((QWidget*)o);
+    return QAccessibleWidget_New((QWidget*)o);
 }
 
 QAccessibleWidget* q_accessiblewidget_new2(void* o, int32_t r) {
-    return QAccessibleWidget_new2((QWidget*)o, r);
+    return QAccessibleWidget_New2((QWidget*)o, r);
 }
 
 QAccessibleWidget* q_accessiblewidget_new3(void* o, int32_t r, const char* name) {
-    return QAccessibleWidget_new3((QWidget*)o, r, qstring(name));
+    return QAccessibleWidget_New3((QWidget*)o, r, qstring(name));
 }
 
 bool q_accessiblewidget_is_valid(void* self) {

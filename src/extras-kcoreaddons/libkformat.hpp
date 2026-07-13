@@ -21,9 +21,9 @@ typedef struct QDateTime QDateTime;
 typedef struct QLocale QLocale;
 #endif
 
-KFormat* KFormat_new();
-KFormat* KFormat_new2(const KFormat* other);
-KFormat* KFormat_new3(const QLocale* locale);
+KFormat* KFormat_New();
+KFormat* KFormat_New2(const KFormat* other);
+KFormat* KFormat_New3(const QLocale* locale);
 void KFormat_OperatorAssign(KFormat* self, const KFormat* other);
 libqt_string KFormat_FormatByteSize(const KFormat* self, double size);
 libqt_string KFormat_FormatDuration(const KFormat* self, unsigned long long msecs);

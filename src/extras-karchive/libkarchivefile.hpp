@@ -22,8 +22,8 @@ typedef struct QDateTime QDateTime;
 typedef struct QIODevice QIODevice;
 #endif
 
-KArchiveFile* KArchiveFile_new(KArchive* archive, const libqt_string name, int access, const QDateTime* date, const libqt_string user, const libqt_string group, const libqt_string symlink, long long pos, long long size);
-KArchiveFile* KArchiveFile_new2(const KArchiveFile* param1);
+KArchiveFile* KArchiveFile_New(KArchive* archive, const libqt_string name, int access, const QDateTime* date, const libqt_string user, const libqt_string group, const libqt_string symlink, long long pos, long long size);
+KArchiveFile* KArchiveFile_New2(const KArchiveFile* param1);
 long long KArchiveFile_Position(const KArchiveFile* self);
 long long KArchiveFile_Size(const KArchiveFile* self);
 void KArchiveFile_SetSize(KArchiveFile* self, long long s);

@@ -41,8 +41,8 @@ typedef struct QSize QSize;
 typedef struct QStyleOption QStyleOption;
 #endif
 
-KTextEditor__StyleOptionAnnotationItem* KTextEditor__StyleOptionAnnotationItem_new();
-KTextEditor__StyleOptionAnnotationItem* KTextEditor__StyleOptionAnnotationItem_new2(const KTextEditor__StyleOptionAnnotationItem* other);
+KTextEditor__StyleOptionAnnotationItem* KTextEditor__StyleOptionAnnotationItem_New();
+KTextEditor__StyleOptionAnnotationItem* KTextEditor__StyleOptionAnnotationItem_New2(const KTextEditor__StyleOptionAnnotationItem* other);
 int KTextEditor__StyleOptionAnnotationItem_WrappedLine(const KTextEditor__StyleOptionAnnotationItem* self);
 void KTextEditor__StyleOptionAnnotationItem_SetWrappedLine(KTextEditor__StyleOptionAnnotationItem* self, int wrappedLine);
 int KTextEditor__StyleOptionAnnotationItem_WrappedLineCount(const KTextEditor__StyleOptionAnnotationItem* self);

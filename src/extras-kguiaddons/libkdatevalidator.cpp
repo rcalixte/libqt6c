@@ -12,11 +12,11 @@
 #include "libkdatevalidator.hpp"
 #include "libkdatevalidator.hxx"
 
-KDateValidator* KDateValidator_new() {
+KDateValidator* KDateValidator_New() {
     return new VirtualKDateValidator();
 }
 
-KDateValidator* KDateValidator_new2(QObject* parent) {
+KDateValidator* KDateValidator_New2(QObject* parent) {
     return new VirtualKDateValidator(parent);
 }
 

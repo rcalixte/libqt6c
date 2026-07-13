@@ -16,15 +16,15 @@
 #include "libqstackedlayout.hpp"
 #include "libqstackedlayout.hxx"
 
-QStackedLayout* QStackedLayout_new(QWidget* parent) {
+QStackedLayout* QStackedLayout_New(QWidget* parent) {
     return new VirtualQStackedLayout(parent);
 }
 
-QStackedLayout* QStackedLayout_new2() {
+QStackedLayout* QStackedLayout_New2() {
     return new VirtualQStackedLayout();
 }
 
-QStackedLayout* QStackedLayout_new3(QLayout* parentLayout) {
+QStackedLayout* QStackedLayout_New3(QLayout* parentLayout) {
     return new VirtualQStackedLayout(parentLayout);
 }
 

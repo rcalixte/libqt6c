@@ -8,11 +8,11 @@
 #include "libqdbusconnection.h"
 
 QDBusConnection* q_dbusconnection_new(const char* name) {
-    return QDBusConnection_new(qstring(name));
+    return QDBusConnection_New(qstring(name));
 }
 
 QDBusConnection* q_dbusconnection_new2(void* other) {
-    return QDBusConnection_new2((QDBusConnection*)other);
+    return QDBusConnection_New2((QDBusConnection*)other);
 }
 
 void q_dbusconnection_operator_assign(void* self, void* other) {

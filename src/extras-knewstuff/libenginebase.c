@@ -14,11 +14,11 @@
 #include "libenginebase.h"
 
 KNSCore__EngineBase* k_nscore__enginebase_new() {
-    return KNSCore__EngineBase_new();
+    return KNSCore__EngineBase_New();
 }
 
 KNSCore__EngineBase* k_nscore__enginebase_new2(void* parent) {
-    return KNSCore__EngineBase_new2((QObject*)parent);
+    return KNSCore__EngineBase_New2((QObject*)parent);
 }
 
 const QMetaObject* k_nscore__enginebase_meta_object(void* self) {

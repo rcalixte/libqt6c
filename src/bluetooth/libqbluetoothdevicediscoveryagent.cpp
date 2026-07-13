@@ -13,19 +13,19 @@
 #include "libqbluetoothdevicediscoveryagent.hpp"
 #include "libqbluetoothdevicediscoveryagent.hxx"
 
-QBluetoothDeviceDiscoveryAgent* QBluetoothDeviceDiscoveryAgent_new() {
+QBluetoothDeviceDiscoveryAgent* QBluetoothDeviceDiscoveryAgent_New() {
     return new VirtualQBluetoothDeviceDiscoveryAgent();
 }
 
-QBluetoothDeviceDiscoveryAgent* QBluetoothDeviceDiscoveryAgent_new2(const QBluetoothAddress* deviceAdapter) {
+QBluetoothDeviceDiscoveryAgent* QBluetoothDeviceDiscoveryAgent_New2(const QBluetoothAddress* deviceAdapter) {
     return new VirtualQBluetoothDeviceDiscoveryAgent(*deviceAdapter);
 }
 
-QBluetoothDeviceDiscoveryAgent* QBluetoothDeviceDiscoveryAgent_new3(QObject* parent) {
+QBluetoothDeviceDiscoveryAgent* QBluetoothDeviceDiscoveryAgent_New3(QObject* parent) {
     return new VirtualQBluetoothDeviceDiscoveryAgent(parent);
 }
 
-QBluetoothDeviceDiscoveryAgent* QBluetoothDeviceDiscoveryAgent_new4(const QBluetoothAddress* deviceAdapter, QObject* parent) {
+QBluetoothDeviceDiscoveryAgent* QBluetoothDeviceDiscoveryAgent_New4(const QBluetoothAddress* deviceAdapter, QObject* parent) {
     return new VirtualQBluetoothDeviceDiscoveryAgent(*deviceAdapter, parent);
 }
 

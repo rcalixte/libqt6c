@@ -25,7 +25,7 @@ typedef struct QsciAbstractAPIs QsciAbstractAPIs;
 typedef struct QsciLexer QsciLexer;
 #endif
 
-QsciAbstractAPIs* QsciAbstractAPIs_new(QsciLexer* lexer);
+QsciAbstractAPIs* QsciAbstractAPIs_New(QsciLexer* lexer);
 QMetaObject* QsciAbstractAPIs_MetaObject(const QsciAbstractAPIs* self);
 void* QsciAbstractAPIs_Metacast(QsciAbstractAPIs* self, const char* param1);
 int QsciAbstractAPIs_Metacall(QsciAbstractAPIs* self, int param1, int param2, void** param3);

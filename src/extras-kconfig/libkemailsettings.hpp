@@ -18,7 +18,7 @@ extern "C" {
 typedef struct KEMailSettings KEMailSettings;
 #endif
 
-KEMailSettings* KEMailSettings_new();
+KEMailSettings* KEMailSettings_New();
 libqt_list /* of libqt_string */ KEMailSettings_Profiles(const KEMailSettings* self);
 void KEMailSettings_SetProfile(KEMailSettings* self, const libqt_string s);
 libqt_string KEMailSettings_DefaultProfileName(const KEMailSettings* self);

@@ -10,11 +10,11 @@
 #include "libqpdfpagerenderer.h"
 
 QPdfPageRenderer* q_pdfpagerenderer_new() {
-    return QPdfPageRenderer_new();
+    return QPdfPageRenderer_New();
 }
 
 QPdfPageRenderer* q_pdfpagerenderer_new2(void* parent) {
-    return QPdfPageRenderer_new2((QObject*)parent);
+    return QPdfPageRenderer_New2((QObject*)parent);
 }
 
 const QMetaObject* q_pdfpagerenderer_meta_object(void* self) {

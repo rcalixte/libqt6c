@@ -4,11 +4,11 @@
 #include "libqpdfoutputintent.h"
 
 QPdfOutputIntent* q_pdfoutputintent_new() {
-    return QPdfOutputIntent_new();
+    return QPdfOutputIntent_New();
 }
 
 QPdfOutputIntent* q_pdfoutputintent_new2(void* other) {
-    return QPdfOutputIntent_new2((QPdfOutputIntent*)other);
+    return QPdfOutputIntent_New2((QPdfOutputIntent*)other);
 }
 
 void q_pdfoutputintent_operator_assign(void* self, void* other) {

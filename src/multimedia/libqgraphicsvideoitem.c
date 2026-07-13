@@ -18,11 +18,11 @@
 #include "libqgraphicsvideoitem.h"
 
 QGraphicsVideoItem* q_graphicsvideoitem_new() {
-    return QGraphicsVideoItem_new();
+    return QGraphicsVideoItem_New();
 }
 
 QGraphicsVideoItem* q_graphicsvideoitem_new2(void* parent) {
-    return QGraphicsVideoItem_new2((QGraphicsItem*)parent);
+    return QGraphicsVideoItem_New2((QGraphicsItem*)parent);
 }
 
 const QMetaObject* q_graphicsvideoitem_meta_object(void* self) {

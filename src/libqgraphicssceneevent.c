@@ -7,7 +7,7 @@
 #include "libqgraphicssceneevent.h"
 
 QGraphicsSceneEvent* q_graphicssceneevent_new(int32_t type) {
-    return QGraphicsSceneEvent_new(type);
+    return QGraphicsSceneEvent_New(type);
 }
 
 QWidget* q_graphicssceneevent_widget(void* self) {
@@ -95,11 +95,11 @@ void q_graphicssceneevent_delete(void* self) {
 }
 
 QGraphicsSceneMouseEvent* q_graphicsscenemouseevent_new() {
-    return QGraphicsSceneMouseEvent_new();
+    return QGraphicsSceneMouseEvent_New();
 }
 
 QGraphicsSceneMouseEvent* q_graphicsscenemouseevent_new2(int32_t type) {
-    return QGraphicsSceneMouseEvent_new2(type);
+    return QGraphicsSceneMouseEvent_New2(type);
 }
 
 QPointF* q_graphicsscenemouseevent_pos(void* self) {
@@ -299,11 +299,11 @@ void q_graphicsscenemouseevent_delete(void* self) {
 }
 
 QGraphicsSceneWheelEvent* q_graphicsscenewheelevent_new() {
-    return QGraphicsSceneWheelEvent_new();
+    return QGraphicsSceneWheelEvent_New();
 }
 
 QGraphicsSceneWheelEvent* q_graphicsscenewheelevent_new2(int32_t type) {
-    return QGraphicsSceneWheelEvent_new2(type);
+    return QGraphicsSceneWheelEvent_New2(type);
 }
 
 QPointF* q_graphicsscenewheelevent_pos(void* self) {
@@ -471,11 +471,11 @@ void q_graphicsscenewheelevent_delete(void* self) {
 }
 
 QGraphicsSceneContextMenuEvent* q_graphicsscenecontextmenuevent_new() {
-    return QGraphicsSceneContextMenuEvent_new();
+    return QGraphicsSceneContextMenuEvent_New();
 }
 
 QGraphicsSceneContextMenuEvent* q_graphicsscenecontextmenuevent_new2(int32_t type) {
-    return QGraphicsSceneContextMenuEvent_new2(type);
+    return QGraphicsSceneContextMenuEvent_New2(type);
 }
 
 QPointF* q_graphicsscenecontextmenuevent_pos(void* self) {
@@ -603,11 +603,11 @@ void q_graphicsscenecontextmenuevent_delete(void* self) {
 }
 
 QGraphicsSceneHoverEvent* q_graphicsscenehoverevent_new() {
-    return QGraphicsSceneHoverEvent_new();
+    return QGraphicsSceneHoverEvent_New();
 }
 
 QGraphicsSceneHoverEvent* q_graphicsscenehoverevent_new2(int32_t type) {
-    return QGraphicsSceneHoverEvent_new2(type);
+    return QGraphicsSceneHoverEvent_New2(type);
 }
 
 QPointF* q_graphicsscenehoverevent_pos(void* self) {
@@ -751,11 +751,11 @@ void q_graphicsscenehoverevent_delete(void* self) {
 }
 
 QGraphicsSceneHelpEvent* q_graphicsscenehelpevent_new() {
-    return QGraphicsSceneHelpEvent_new();
+    return QGraphicsSceneHelpEvent_New();
 }
 
 QGraphicsSceneHelpEvent* q_graphicsscenehelpevent_new2(int32_t type) {
-    return QGraphicsSceneHelpEvent_new2(type);
+    return QGraphicsSceneHelpEvent_New2(type);
 }
 
 QPointF* q_graphicsscenehelpevent_scene_pos(void* self) {
@@ -859,11 +859,11 @@ void q_graphicsscenehelpevent_delete(void* self) {
 }
 
 QGraphicsSceneDragDropEvent* q_graphicsscenedragdropevent_new() {
-    return QGraphicsSceneDragDropEvent_new();
+    return QGraphicsSceneDragDropEvent_New();
 }
 
 QGraphicsSceneDragDropEvent* q_graphicsscenedragdropevent_new2(int32_t type) {
-    return QGraphicsSceneDragDropEvent_new2(type);
+    return QGraphicsSceneDragDropEvent_New2(type);
 }
 
 QPointF* q_graphicsscenedragdropevent_pos(void* self) {
@@ -1035,7 +1035,7 @@ void q_graphicsscenedragdropevent_delete(void* self) {
 }
 
 QGraphicsSceneResizeEvent* q_graphicssceneresizeevent_new() {
-    return QGraphicsSceneResizeEvent_new();
+    return QGraphicsSceneResizeEvent_New();
 }
 
 QSizeF* q_graphicssceneresizeevent_old_size(void* self) {
@@ -1139,7 +1139,7 @@ void q_graphicssceneresizeevent_delete(void* self) {
 }
 
 QGraphicsSceneMoveEvent* q_graphicsscenemoveevent_new() {
-    return QGraphicsSceneMoveEvent_new();
+    return QGraphicsSceneMoveEvent_New();
 }
 
 QPointF* q_graphicsscenemoveevent_old_pos(void* self) {

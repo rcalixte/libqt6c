@@ -20,13 +20,13 @@ typedef struct QSqlField QSqlField;
 typedef struct QVariant QVariant;
 #endif
 
-QSqlField* QSqlField_new();
-QSqlField* QSqlField_new2(const QSqlField* other);
-QSqlField* QSqlField_new3(const libqt_string fieldName, int type);
-QSqlField* QSqlField_new4(const libqt_string fieldName);
-QSqlField* QSqlField_new5(const libqt_string fieldName, QMetaType* type);
-QSqlField* QSqlField_new6(const libqt_string fieldName, QMetaType* type, const libqt_string tableName);
-QSqlField* QSqlField_new7(const libqt_string fieldName, int type, const libqt_string tableName);
+QSqlField* QSqlField_New();
+QSqlField* QSqlField_New2(const QSqlField* other);
+QSqlField* QSqlField_New3(const libqt_string fieldName, int type);
+QSqlField* QSqlField_New4(const libqt_string fieldName);
+QSqlField* QSqlField_New5(const libqt_string fieldName, QMetaType* type);
+QSqlField* QSqlField_New6(const libqt_string fieldName, QMetaType* type, const libqt_string tableName);
+QSqlField* QSqlField_New7(const libqt_string fieldName, int type, const libqt_string tableName);
 void QSqlField_OperatorAssign(QSqlField* self, const QSqlField* other);
 void QSqlField_Swap(QSqlField* self, QSqlField* other);
 bool QSqlField_OperatorEqual(const QSqlField* self, const QSqlField* other);

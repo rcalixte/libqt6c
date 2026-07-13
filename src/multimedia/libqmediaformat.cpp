@@ -6,15 +6,15 @@
 #include "libqmediaformat.hpp"
 #include "libqmediaformat.hxx"
 
-QMediaFormat* QMediaFormat_new() {
+QMediaFormat* QMediaFormat_New() {
     return new QMediaFormat();
 }
 
-QMediaFormat* QMediaFormat_new2(const QMediaFormat* other) {
+QMediaFormat* QMediaFormat_New2(const QMediaFormat* other) {
     return new QMediaFormat(*other);
 }
 
-QMediaFormat* QMediaFormat_new3(int format) {
+QMediaFormat* QMediaFormat_New3(int format) {
     return new QMediaFormat(static_cast<QMediaFormat::FileFormat>(format));
 }
 

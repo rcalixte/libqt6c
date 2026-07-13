@@ -3,11 +3,11 @@
 #include "libstate.hpp"
 #include "libstate.hxx"
 
-KSyntaxHighlighting__State* KSyntaxHighlighting__State_new() {
+KSyntaxHighlighting__State* KSyntaxHighlighting__State_New() {
     return new KSyntaxHighlighting::State();
 }
 
-KSyntaxHighlighting__State* KSyntaxHighlighting__State_new2(const KSyntaxHighlighting__State* other) {
+KSyntaxHighlighting__State* KSyntaxHighlighting__State_New2(const KSyntaxHighlighting__State* other) {
     return new KSyntaxHighlighting::State(*other);
 }
 

@@ -5,7 +5,7 @@
 #include "libpropertysheet.hpp"
 #include "libpropertysheet.hxx"
 
-QDesignerPropertySheetExtension* QDesignerPropertySheetExtension_new() {
+QDesignerPropertySheetExtension* QDesignerPropertySheetExtension_New() {
     return new VirtualQDesignerPropertySheetExtension();
 }
 

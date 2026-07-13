@@ -44,20 +44,20 @@ void QAbstractUndoItem_Delete(QAbstractUndoItem* self) {
     delete self;
 }
 
-QTextDocument* QTextDocument_new() {
+QTextDocument* QTextDocument_New() {
     return new VirtualQTextDocument();
 }
 
-QTextDocument* QTextDocument_new2(const libqt_string text) {
+QTextDocument* QTextDocument_New2(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQTextDocument(text_QString);
 }
 
-QTextDocument* QTextDocument_new3(QObject* parent) {
+QTextDocument* QTextDocument_New3(QObject* parent) {
     return new VirtualQTextDocument(parent);
 }
 
-QTextDocument* QTextDocument_new4(const libqt_string text, QObject* parent) {
+QTextDocument* QTextDocument_New4(const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQTextDocument(text_QString, parent);
 }

@@ -8,39 +8,39 @@
 #include "libqcursor.hpp"
 #include "libqcursor.hxx"
 
-QCursor* QCursor_new() {
+QCursor* QCursor_New() {
     return new QCursor();
 }
 
-QCursor* QCursor_new2(int shape) {
+QCursor* QCursor_New2(int shape) {
     return new QCursor(static_cast<Qt::CursorShape>(shape));
 }
 
-QCursor* QCursor_new3(const QBitmap* bitmap, const QBitmap* mask) {
+QCursor* QCursor_New3(const QBitmap* bitmap, const QBitmap* mask) {
     return new QCursor(*bitmap, *mask);
 }
 
-QCursor* QCursor_new4(const QPixmap* pixmap) {
+QCursor* QCursor_New4(const QPixmap* pixmap) {
     return new QCursor(*pixmap);
 }
 
-QCursor* QCursor_new5(const QCursor* cursor) {
+QCursor* QCursor_New5(const QCursor* cursor) {
     return new QCursor(*cursor);
 }
 
-QCursor* QCursor_new6(const QBitmap* bitmap, const QBitmap* mask, int hotX) {
+QCursor* QCursor_New6(const QBitmap* bitmap, const QBitmap* mask, int hotX) {
     return new QCursor(*bitmap, *mask, static_cast<int>(hotX));
 }
 
-QCursor* QCursor_new7(const QBitmap* bitmap, const QBitmap* mask, int hotX, int hotY) {
+QCursor* QCursor_New7(const QBitmap* bitmap, const QBitmap* mask, int hotX, int hotY) {
     return new QCursor(*bitmap, *mask, static_cast<int>(hotX), static_cast<int>(hotY));
 }
 
-QCursor* QCursor_new8(const QPixmap* pixmap, int hotX) {
+QCursor* QCursor_New8(const QPixmap* pixmap, int hotX) {
     return new QCursor(*pixmap, static_cast<int>(hotX));
 }
 
-QCursor* QCursor_new9(const QPixmap* pixmap, int hotX, int hotY) {
+QCursor* QCursor_New9(const QPixmap* pixmap, int hotX, int hotY) {
     return new QCursor(*pixmap, static_cast<int>(hotX), static_cast<int>(hotY));
 }
 

@@ -27,8 +27,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QHttpPart* QHttpPart_new();
-QHttpPart* QHttpPart_new2(const QHttpPart* other);
+QHttpPart* QHttpPart_New();
+QHttpPart* QHttpPart_New2(const QHttpPart* other);
 void QHttpPart_OperatorAssign(QHttpPart* self, const QHttpPart* other);
 void QHttpPart_Swap(QHttpPart* self, QHttpPart* other);
 bool QHttpPart_OperatorEqual(const QHttpPart* self, const QHttpPart* other);
@@ -39,10 +39,10 @@ void QHttpPart_SetBody(QHttpPart* self, const libqt_string body);
 void QHttpPart_SetBodyDevice(QHttpPart* self, QIODevice* device);
 void QHttpPart_Delete(QHttpPart* self);
 
-QHttpMultiPart* QHttpMultiPart_new();
-QHttpMultiPart* QHttpMultiPart_new2(int contentType);
-QHttpMultiPart* QHttpMultiPart_new3(QObject* parent);
-QHttpMultiPart* QHttpMultiPart_new4(int contentType, QObject* parent);
+QHttpMultiPart* QHttpMultiPart_New();
+QHttpMultiPart* QHttpMultiPart_New2(int contentType);
+QHttpMultiPart* QHttpMultiPart_New3(QObject* parent);
+QHttpMultiPart* QHttpMultiPart_New4(int contentType, QObject* parent);
 QMetaObject* QHttpMultiPart_MetaObject(const QHttpMultiPart* self);
 void* QHttpMultiPart_Metacast(QHttpMultiPart* self, const char* param1);
 int QHttpMultiPart_Metacall(QHttpMultiPart* self, int param1, int param2, void** param3);

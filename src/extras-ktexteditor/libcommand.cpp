@@ -14,7 +14,7 @@
 #include "libcommand.hpp"
 #include "libcommand.hxx"
 
-KTextEditor__Command* KTextEditor__Command_new(const libqt_list /* of libqt_string */ cmds) {
+KTextEditor__Command* KTextEditor__Command_New(const libqt_list /* of libqt_string */ cmds) {
     QList<QString> cmds_QList;
     cmds_QList.reserve(cmds.len);
     libqt_string* cmds_arr = static_cast<libqt_string*>(cmds.data.ptr);
@@ -25,7 +25,7 @@ KTextEditor__Command* KTextEditor__Command_new(const libqt_list /* of libqt_stri
     return new VirtualKTextEditorCommand(cmds_QList);
 }
 
-KTextEditor__Command* KTextEditor__Command_new2(const libqt_list /* of libqt_string */ cmds, QObject* parent) {
+KTextEditor__Command* KTextEditor__Command_New2(const libqt_list /* of libqt_string */ cmds, QObject* parent) {
     QList<QString> cmds_QList;
     cmds_QList.reserve(cmds.len);
     libqt_string* cmds_arr = static_cast<libqt_string*>(cmds.data.ptr);

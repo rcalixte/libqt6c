@@ -54,11 +54,11 @@
 #include "libkcompletionbox.hpp"
 #include "libkcompletionbox.hxx"
 
-KCompletionBox* KCompletionBox_new(QWidget* parent) {
+KCompletionBox* KCompletionBox_New(QWidget* parent) {
     return new VirtualKCompletionBox(parent);
 }
 
-KCompletionBox* KCompletionBox_new2() {
+KCompletionBox* KCompletionBox_New2() {
     return new VirtualKCompletionBox();
 }
 

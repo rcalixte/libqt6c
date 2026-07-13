@@ -5,23 +5,23 @@
 #include "libqpagelayout.h"
 
 QPageLayout* q_pagelayout_new() {
-    return QPageLayout_new();
+    return QPageLayout_New();
 }
 
 QPageLayout* q_pagelayout_new2(void* pageSize, int32_t orientation, void* margins) {
-    return QPageLayout_new2((QPageSize*)pageSize, orientation, (QMarginsF*)margins);
+    return QPageLayout_New2((QPageSize*)pageSize, orientation, (QMarginsF*)margins);
 }
 
 QPageLayout* q_pagelayout_new3(void* other) {
-    return QPageLayout_new3((QPageLayout*)other);
+    return QPageLayout_New3((QPageLayout*)other);
 }
 
 QPageLayout* q_pagelayout_new4(void* pageSize, int32_t orientation, void* margins, int32_t units) {
-    return QPageLayout_new4((QPageSize*)pageSize, orientation, (QMarginsF*)margins, units);
+    return QPageLayout_New4((QPageSize*)pageSize, orientation, (QMarginsF*)margins, units);
 }
 
 QPageLayout* q_pagelayout_new5(void* pageSize, int32_t orientation, void* margins, int32_t units, void* minMargins) {
-    return QPageLayout_new5((QPageSize*)pageSize, orientation, (QMarginsF*)margins, units, (QMarginsF*)minMargins);
+    return QPageLayout_New5((QPageSize*)pageSize, orientation, (QMarginsF*)margins, units, (QMarginsF*)minMargins);
 }
 
 void q_pagelayout_operator_assign(void* self, void* other) {

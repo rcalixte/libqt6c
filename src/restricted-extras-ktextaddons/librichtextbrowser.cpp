@@ -47,11 +47,11 @@
 #include "librichtextbrowser.hpp"
 #include "librichtextbrowser.hxx"
 
-TextCustomEditor__RichTextBrowser* TextCustomEditor__RichTextBrowser_new(QWidget* parent) {
+TextCustomEditor__RichTextBrowser* TextCustomEditor__RichTextBrowser_New(QWidget* parent) {
     return new VirtualTextCustomEditorRichTextBrowser(parent);
 }
 
-TextCustomEditor__RichTextBrowser* TextCustomEditor__RichTextBrowser_new2() {
+TextCustomEditor__RichTextBrowser* TextCustomEditor__RichTextBrowser_New2() {
     return new VirtualTextCustomEditorRichTextBrowser();
 }
 

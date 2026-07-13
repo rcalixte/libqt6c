@@ -40,8 +40,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-KIO__SpecialJob* KIO__SpecialJob_new(const QUrl* url);
-KIO__SpecialJob* KIO__SpecialJob_new2(const QUrl* url, const libqt_string data);
+KIO__SpecialJob* KIO__SpecialJob_New(const QUrl* url);
+KIO__SpecialJob* KIO__SpecialJob_New2(const QUrl* url, const libqt_string data);
 QMetaObject* KIO__SpecialJob_MetaObject(const KIO__SpecialJob* self);
 void* KIO__SpecialJob_Metacast(KIO__SpecialJob* self, const char* param1);
 int KIO__SpecialJob_Metacall(KIO__SpecialJob* self, int param1, int param2, void** param3);

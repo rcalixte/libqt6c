@@ -17,15 +17,15 @@
 #include "libqopenglwidget.h"
 
 QOpenGLWidget* q_openglwidget_new(void* parent) {
-    return QOpenGLWidget_new((QWidget*)parent);
+    return QOpenGLWidget_New((QWidget*)parent);
 }
 
 QOpenGLWidget* q_openglwidget_new2() {
-    return QOpenGLWidget_new2();
+    return QOpenGLWidget_New2();
 }
 
 QOpenGLWidget* q_openglwidget_new3(void* parent, int32_t f) {
-    return QOpenGLWidget_new3((QWidget*)parent, f);
+    return QOpenGLWidget_New3((QWidget*)parent, f);
 }
 
 const QMetaObject* q_openglwidget_meta_object(void* self) {

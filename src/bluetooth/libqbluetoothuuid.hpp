@@ -20,16 +20,16 @@ typedef struct QUuid QUuid;
 typedef struct quint128 quint128;
 #endif
 
-QBluetoothUuid* QBluetoothUuid_new(const QBluetoothUuid* other);
-QBluetoothUuid* QBluetoothUuid_new2();
-QBluetoothUuid* QBluetoothUuid_new3(int uuid);
-QBluetoothUuid* QBluetoothUuid_new4(int uuid);
-QBluetoothUuid* QBluetoothUuid_new5(int uuid);
-QBluetoothUuid* QBluetoothUuid_new6(int uuid);
-QBluetoothUuid* QBluetoothUuid_new7(uint16_t uuid);
-QBluetoothUuid* QBluetoothUuid_new8(unsigned int uuid);
-QBluetoothUuid* QBluetoothUuid_new9(const QBluetoothUuid* uuid);
-QBluetoothUuid* QBluetoothUuid_new10(const QUuid* uuid);
+QBluetoothUuid* QBluetoothUuid_New(const QBluetoothUuid* other);
+QBluetoothUuid* QBluetoothUuid_New2();
+QBluetoothUuid* QBluetoothUuid_New3(int uuid);
+QBluetoothUuid* QBluetoothUuid_New4(int uuid);
+QBluetoothUuid* QBluetoothUuid_New5(int uuid);
+QBluetoothUuid* QBluetoothUuid_New6(int uuid);
+QBluetoothUuid* QBluetoothUuid_New7(uint16_t uuid);
+QBluetoothUuid* QBluetoothUuid_New8(unsigned int uuid);
+QBluetoothUuid* QBluetoothUuid_New9(const QBluetoothUuid* uuid);
+QBluetoothUuid* QBluetoothUuid_New10(const QUuid* uuid);
 void QBluetoothUuid_CopyAssign(QBluetoothUuid* self, QBluetoothUuid* other);
 void QBluetoothUuid_OperatorAssign(QBluetoothUuid* self, const QBluetoothUuid* other);
 int QBluetoothUuid_MinimumSize(const QBluetoothUuid* self);

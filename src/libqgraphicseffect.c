@@ -12,11 +12,11 @@
 #include "libqgraphicseffect.h"
 
 QGraphicsEffect* q_graphicseffect_new() {
-    return QGraphicsEffect_new();
+    return QGraphicsEffect_New();
 }
 
 QGraphicsEffect* q_graphicseffect_new2(void* parent) {
-    return QGraphicsEffect_new2((QObject*)parent);
+    return QGraphicsEffect_New2((QObject*)parent);
 }
 
 const QMetaObject* q_graphicseffect_meta_object(void* self) {
@@ -596,11 +596,11 @@ void q_graphicseffect_delete(void* self) {
 }
 
 QGraphicsColorizeEffect* q_graphicscolorizeeffect_new() {
-    return QGraphicsColorizeEffect_new();
+    return QGraphicsColorizeEffect_New();
 }
 
 QGraphicsColorizeEffect* q_graphicscolorizeeffect_new2(void* parent) {
-    return QGraphicsColorizeEffect_new2((QObject*)parent);
+    return QGraphicsColorizeEffect_New2((QObject*)parent);
 }
 
 const QMetaObject* q_graphicscolorizeeffect_meta_object(void* self) {
@@ -1164,11 +1164,11 @@ void q_graphicscolorizeeffect_delete(void* self) {
 }
 
 QGraphicsBlurEffect* q_graphicsblureffect_new() {
-    return QGraphicsBlurEffect_new();
+    return QGraphicsBlurEffect_New();
 }
 
 QGraphicsBlurEffect* q_graphicsblureffect_new2(void* parent) {
-    return QGraphicsBlurEffect_new2((QObject*)parent);
+    return QGraphicsBlurEffect_New2((QObject*)parent);
 }
 
 const QMetaObject* q_graphicsblureffect_meta_object(void* self) {
@@ -1732,11 +1732,11 @@ void q_graphicsblureffect_delete(void* self) {
 }
 
 QGraphicsDropShadowEffect* q_graphicsdropshadoweffect_new() {
-    return QGraphicsDropShadowEffect_new();
+    return QGraphicsDropShadowEffect_New();
 }
 
 QGraphicsDropShadowEffect* q_graphicsdropshadoweffect_new2(void* parent) {
-    return QGraphicsDropShadowEffect_new2((QObject*)parent);
+    return QGraphicsDropShadowEffect_New2((QObject*)parent);
 }
 
 const QMetaObject* q_graphicsdropshadoweffect_meta_object(void* self) {
@@ -2340,11 +2340,11 @@ void q_graphicsdropshadoweffect_delete(void* self) {
 }
 
 QGraphicsOpacityEffect* q_graphicsopacityeffect_new() {
-    return QGraphicsOpacityEffect_new();
+    return QGraphicsOpacityEffect_New();
 }
 
 QGraphicsOpacityEffect* q_graphicsopacityeffect_new2(void* parent) {
-    return QGraphicsOpacityEffect_new2((QObject*)parent);
+    return QGraphicsOpacityEffect_New2((QObject*)parent);
 }
 
 const QMetaObject* q_graphicsopacityeffect_meta_object(void* self) {

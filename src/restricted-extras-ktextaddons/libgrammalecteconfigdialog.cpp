@@ -38,15 +38,15 @@
 #include "libgrammalecteconfigdialog.hpp"
 #include "libgrammalecteconfigdialog.hxx"
 
-TextGrammarCheck__GrammalecteConfigDialog* TextGrammarCheck__GrammalecteConfigDialog_new(QWidget* parent) {
+TextGrammarCheck__GrammalecteConfigDialog* TextGrammarCheck__GrammalecteConfigDialog_New(QWidget* parent) {
     return new VirtualTextGrammarCheckGrammalecteConfigDialog(parent);
 }
 
-TextGrammarCheck__GrammalecteConfigDialog* TextGrammarCheck__GrammalecteConfigDialog_new2() {
+TextGrammarCheck__GrammalecteConfigDialog* TextGrammarCheck__GrammalecteConfigDialog_New2() {
     return new VirtualTextGrammarCheckGrammalecteConfigDialog();
 }
 
-TextGrammarCheck__GrammalecteConfigDialog* TextGrammarCheck__GrammalecteConfigDialog_new3(QWidget* parent, bool disableMessageBox) {
+TextGrammarCheck__GrammalecteConfigDialog* TextGrammarCheck__GrammalecteConfigDialog_New3(QWidget* parent, bool disableMessageBox) {
     return new VirtualTextGrammarCheckGrammalecteConfigDialog(parent, disableMessageBox);
 }
 

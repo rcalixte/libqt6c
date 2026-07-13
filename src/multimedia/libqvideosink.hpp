@@ -26,8 +26,8 @@ typedef struct QVideoFrame QVideoFrame;
 typedef struct QVideoSink QVideoSink;
 #endif
 
-QVideoSink* QVideoSink_new();
-QVideoSink* QVideoSink_new2(QObject* parent);
+QVideoSink* QVideoSink_New();
+QVideoSink* QVideoSink_New2(QObject* parent);
 QMetaObject* QVideoSink_MetaObject(const QVideoSink* self);
 void* QVideoSink_Metacast(QVideoSink* self, const char* param1);
 int QVideoSink_Metacall(QVideoSink* self, int param1, int param2, void** param3);

@@ -4,11 +4,11 @@
 #include "libkconfigconversioncheck_p.hpp"
 #include "libkconfigconversioncheck_p.hxx"
 
-KConfigConversionCheck__supported* KConfigConversionCheck__supported_new(const KConfigConversionCheck__supported* other) {
+KConfigConversionCheck__supported* KConfigConversionCheck__supported_New(const KConfigConversionCheck__supported* other) {
     return new KConfigConversionCheck::supported(*other);
 }
 
-KConfigConversionCheck__supported* KConfigConversionCheck__supported_new2(KConfigConversionCheck__supported* other) {
+KConfigConversionCheck__supported* KConfigConversionCheck__supported_New2(KConfigConversionCheck__supported* other) {
     return new KConfigConversionCheck::supported(std::move(*other));
 }
 
@@ -24,11 +24,11 @@ void KConfigConversionCheck__supported_Delete(KConfigConversionCheck__supported*
     delete self;
 }
 
-KConfigConversionCheck__unsupported* KConfigConversionCheck__unsupported_new(const KConfigConversionCheck__unsupported* other) {
+KConfigConversionCheck__unsupported* KConfigConversionCheck__unsupported_New(const KConfigConversionCheck__unsupported* other) {
     return new KConfigConversionCheck::unsupported(*other);
 }
 
-KConfigConversionCheck__unsupported* KConfigConversionCheck__unsupported_new2(KConfigConversionCheck__unsupported* other) {
+KConfigConversionCheck__unsupported* KConfigConversionCheck__unsupported_New2(KConfigConversionCheck__unsupported* other) {
     return new KConfigConversionCheck::unsupported(std::move(*other));
 }
 

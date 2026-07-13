@@ -22,11 +22,11 @@
 #include "libqabstractproxymodel.hpp"
 #include "libqabstractproxymodel.hxx"
 
-QAbstractProxyModel* QAbstractProxyModel_new() {
+QAbstractProxyModel* QAbstractProxyModel_New() {
     return new VirtualQAbstractProxyModel();
 }
 
-QAbstractProxyModel* QAbstractProxyModel_new2(QObject* parent) {
+QAbstractProxyModel* QAbstractProxyModel_New2(QObject* parent) {
     return new VirtualQAbstractProxyModel(parent);
 }
 

@@ -9,11 +9,11 @@
 #include "libqvboxplotmodelmapper.h"
 
 QVBoxPlotModelMapper* q_vboxplotmodelmapper_new() {
-    return QVBoxPlotModelMapper_new();
+    return QVBoxPlotModelMapper_New();
 }
 
 QVBoxPlotModelMapper* q_vboxplotmodelmapper_new2(void* parent) {
-    return QVBoxPlotModelMapper_new2((QObject*)parent);
+    return QVBoxPlotModelMapper_New2((QObject*)parent);
 }
 
 const QMetaObject* q_vboxplotmodelmapper_meta_object(void* self) {

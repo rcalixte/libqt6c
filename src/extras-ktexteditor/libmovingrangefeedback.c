@@ -4,7 +4,7 @@
 #include "libmovingrangefeedback.h"
 
 KTextEditor__MovingRangeFeedback* k_texteditor__movingrangefeedback_new() {
-    return KTextEditor__MovingRangeFeedback_new();
+    return KTextEditor__MovingRangeFeedback_New();
 }
 
 void k_texteditor__movingrangefeedback_range_empty(void* self, void* range) {

@@ -2,11 +2,11 @@
 #include "libkcompletionmatches.h"
 
 KCompletionMatches* k_completionmatches_new(bool sort) {
-    return KCompletionMatches_new(sort);
+    return KCompletionMatches_New(sort);
 }
 
 KCompletionMatches* k_completionmatches_new2(void* param1) {
-    return KCompletionMatches_new2((KCompletionMatches*)param1);
+    return KCompletionMatches_New2((KCompletionMatches*)param1);
 }
 
 void k_completionmatches_operator_assign(void* self, void* param1) {

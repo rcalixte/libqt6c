@@ -14,11 +14,11 @@
 #include "libqscilexercoffeescript.hpp"
 #include "libqscilexercoffeescript.hxx"
 
-QsciLexerCoffeeScript* QsciLexerCoffeeScript_new() {
+QsciLexerCoffeeScript* QsciLexerCoffeeScript_New() {
     return new VirtualQsciLexerCoffeeScript();
 }
 
-QsciLexerCoffeeScript* QsciLexerCoffeeScript_new2(QObject* parent) {
+QsciLexerCoffeeScript* QsciLexerCoffeeScript_New2(QObject* parent) {
     return new VirtualQsciLexerCoffeeScript(parent);
 }
 

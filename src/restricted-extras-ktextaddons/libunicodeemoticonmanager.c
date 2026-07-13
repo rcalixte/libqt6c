@@ -8,11 +8,11 @@
 #include "libunicodeemoticonmanager.h"
 
 TextEmoticonsCore__UnicodeEmoticonManager* k_textemoticonscore__unicodeemoticonmanager_new() {
-    return TextEmoticonsCore__UnicodeEmoticonManager_new();
+    return TextEmoticonsCore__UnicodeEmoticonManager_New();
 }
 
 TextEmoticonsCore__UnicodeEmoticonManager* k_textemoticonscore__unicodeemoticonmanager_new2(void* parent) {
-    return TextEmoticonsCore__UnicodeEmoticonManager_new2((QObject*)parent);
+    return TextEmoticonsCore__UnicodeEmoticonManager_New2((QObject*)parent);
 }
 
 const QMetaObject* k_textemoticonscore__unicodeemoticonmanager_meta_object(void* self) {

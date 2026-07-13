@@ -50,8 +50,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KCollapsibleGroupBox* KCollapsibleGroupBox_new(QWidget* parent);
-KCollapsibleGroupBox* KCollapsibleGroupBox_new2();
+KCollapsibleGroupBox* KCollapsibleGroupBox_New(QWidget* parent);
+KCollapsibleGroupBox* KCollapsibleGroupBox_New2();
 QMetaObject* KCollapsibleGroupBox_MetaObject(const KCollapsibleGroupBox* self);
 void* KCollapsibleGroupBox_Metacast(KCollapsibleGroupBox* self, const char* param1);
 int KCollapsibleGroupBox_Metacall(KCollapsibleGroupBox* self, int param1, int param2, void** param3);

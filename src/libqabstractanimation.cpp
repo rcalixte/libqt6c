@@ -12,11 +12,11 @@
 #include "libqabstractanimation.hpp"
 #include "libqabstractanimation.hxx"
 
-QAbstractAnimation* QAbstractAnimation_new() {
+QAbstractAnimation* QAbstractAnimation_New() {
     return new VirtualQAbstractAnimation();
 }
 
-QAbstractAnimation* QAbstractAnimation_new2(QObject* parent) {
+QAbstractAnimation* QAbstractAnimation_New2(QObject* parent) {
     return new VirtualQAbstractAnimation(parent);
 }
 
@@ -627,11 +627,11 @@ void QAbstractAnimation_Delete(QAbstractAnimation* self) {
     delete self;
 }
 
-QAnimationDriver* QAnimationDriver_new() {
+QAnimationDriver* QAnimationDriver_New() {
     return new VirtualQAnimationDriver();
 }
 
-QAnimationDriver* QAnimationDriver_new2(QObject* parent) {
+QAnimationDriver* QAnimationDriver_New2(QObject* parent) {
     return new VirtualQAnimationDriver(parent);
 }
 

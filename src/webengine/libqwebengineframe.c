@@ -4,7 +4,7 @@
 #include "libqwebengineframe.h"
 
 QWebEngineFrame* q_webengineframe_new(void* param1) {
-    return QWebEngineFrame_new((QWebEngineFrame*)param1);
+    return QWebEngineFrame_New((QWebEngineFrame*)param1);
 }
 
 bool q_webengineframe_is_valid(void* self) {

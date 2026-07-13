@@ -2,11 +2,11 @@
 #include "libqplaceratings.h"
 
 QPlaceRatings* q_placeratings_new() {
-    return QPlaceRatings_new();
+    return QPlaceRatings_New();
 }
 
 QPlaceRatings* q_placeratings_new2(void* other) {
-    return QPlaceRatings_new2((QPlaceRatings*)other);
+    return QPlaceRatings_New2((QPlaceRatings*)other);
 }
 
 void q_placeratings_operator_assign(void* self, void* other) {

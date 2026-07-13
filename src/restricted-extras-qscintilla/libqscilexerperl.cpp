@@ -14,11 +14,11 @@
 #include "libqscilexerperl.hpp"
 #include "libqscilexerperl.hxx"
 
-QsciLexerPerl* QsciLexerPerl_new() {
+QsciLexerPerl* QsciLexerPerl_New() {
     return new VirtualQsciLexerPerl();
 }
 
-QsciLexerPerl* QsciLexerPerl_new2(QObject* parent) {
+QsciLexerPerl* QsciLexerPerl_New2(QObject* parent) {
     return new VirtualQsciLexerPerl(parent);
 }
 

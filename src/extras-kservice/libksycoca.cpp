@@ -12,7 +12,7 @@
 #include "libksycoca.hpp"
 #include "libksycoca.hxx"
 
-KSycoca* KSycoca_new() {
+KSycoca* KSycoca_New() {
     return new VirtualKSycoca();
 }
 

@@ -5,11 +5,11 @@
 #include "libqlowenergyservicedata.h"
 
 QLowEnergyServiceData* q_lowenergyservicedata_new() {
-    return QLowEnergyServiceData_new();
+    return QLowEnergyServiceData_New();
 }
 
 QLowEnergyServiceData* q_lowenergyservicedata_new2(void* other) {
-    return QLowEnergyServiceData_new2((QLowEnergyServiceData*)other);
+    return QLowEnergyServiceData_New2((QLowEnergyServiceData*)other);
 }
 
 void q_lowenergyservicedata_operator_assign(void* self, void* other) {

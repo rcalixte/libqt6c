@@ -56,8 +56,8 @@ typedef struct QWidget QWidget;
 typedef struct TextGrammarCheck__LanguageToolComboBox TextGrammarCheck__LanguageToolComboBox;
 #endif
 
-TextGrammarCheck__LanguageToolComboBox* TextGrammarCheck__LanguageToolComboBox_new(QWidget* parent);
-TextGrammarCheck__LanguageToolComboBox* TextGrammarCheck__LanguageToolComboBox_new2();
+TextGrammarCheck__LanguageToolComboBox* TextGrammarCheck__LanguageToolComboBox_New(QWidget* parent);
+TextGrammarCheck__LanguageToolComboBox* TextGrammarCheck__LanguageToolComboBox_New2();
 QMetaObject* TextGrammarCheck__LanguageToolComboBox_MetaObject(const TextGrammarCheck__LanguageToolComboBox* self);
 void* TextGrammarCheck__LanguageToolComboBox_Metacast(TextGrammarCheck__LanguageToolComboBox* self, const char* param1);
 int TextGrammarCheck__LanguageToolComboBox_Metacall(TextGrammarCheck__LanguageToolComboBox* self, int param1, int param2, void** param3);

@@ -24,11 +24,11 @@
 #include "libqabstractitemmodel.hpp"
 #include "libqabstractitemmodel.hxx"
 
-QModelRoleData* QModelRoleData_new(int role) {
+QModelRoleData* QModelRoleData_New(int role) {
     return new QModelRoleData(static_cast<int>(role));
 }
 
-QModelRoleData* QModelRoleData_new2(const QModelRoleData* param1) {
+QModelRoleData* QModelRoleData_New2(const QModelRoleData* param1) {
     return new QModelRoleData(*param1);
 }
 
@@ -60,27 +60,27 @@ void QModelRoleData_Delete(QModelRoleData* self) {
     delete self;
 }
 
-QModelRoleDataSpan* QModelRoleDataSpan_new(const QModelRoleDataSpan* other) {
+QModelRoleDataSpan* QModelRoleDataSpan_New(const QModelRoleDataSpan* other) {
     return new QModelRoleDataSpan(*other);
 }
 
-QModelRoleDataSpan* QModelRoleDataSpan_new2(QModelRoleDataSpan* other) {
+QModelRoleDataSpan* QModelRoleDataSpan_New2(QModelRoleDataSpan* other) {
     return new QModelRoleDataSpan(std::move(*other));
 }
 
-QModelRoleDataSpan* QModelRoleDataSpan_new3() {
+QModelRoleDataSpan* QModelRoleDataSpan_New3() {
     return new QModelRoleDataSpan();
 }
 
-QModelRoleDataSpan* QModelRoleDataSpan_new4(QModelRoleData* modelRoleData) {
+QModelRoleDataSpan* QModelRoleDataSpan_New4(QModelRoleData* modelRoleData) {
     return new QModelRoleDataSpan(*modelRoleData);
 }
 
-QModelRoleDataSpan* QModelRoleDataSpan_new5(QModelRoleData* modelRoleData, ptrdiff_t lenVal) {
+QModelRoleDataSpan* QModelRoleDataSpan_New5(QModelRoleData* modelRoleData, ptrdiff_t lenVal) {
     return new QModelRoleDataSpan(modelRoleData, (qsizetype)(lenVal));
 }
 
-QModelRoleDataSpan* QModelRoleDataSpan_new6(const QModelRoleDataSpan* param1) {
+QModelRoleDataSpan* QModelRoleDataSpan_New6(const QModelRoleDataSpan* param1) {
     return new QModelRoleDataSpan(*param1);
 }
 
@@ -126,19 +126,19 @@ void QModelRoleDataSpan_Delete(QModelRoleDataSpan* self) {
     delete self;
 }
 
-QModelIndex* QModelIndex_new(const QModelIndex* other) {
+QModelIndex* QModelIndex_New(const QModelIndex* other) {
     return new QModelIndex(*other);
 }
 
-QModelIndex* QModelIndex_new2(QModelIndex* other) {
+QModelIndex* QModelIndex_New2(QModelIndex* other) {
     return new QModelIndex(std::move(*other));
 }
 
-QModelIndex* QModelIndex_new3() {
+QModelIndex* QModelIndex_New3() {
     return new QModelIndex();
 }
 
-QModelIndex* QModelIndex_new4(const QModelIndex* param1) {
+QModelIndex* QModelIndex_New4(const QModelIndex* param1) {
     return new QModelIndex(*param1);
 }
 
@@ -214,15 +214,15 @@ void QModelIndex_Delete(QModelIndex* self) {
     delete self;
 }
 
-QPersistentModelIndex* QPersistentModelIndex_new() {
+QPersistentModelIndex* QPersistentModelIndex_New() {
     return new QPersistentModelIndex();
 }
 
-QPersistentModelIndex* QPersistentModelIndex_new2(const QModelIndex* index) {
+QPersistentModelIndex* QPersistentModelIndex_New2(const QModelIndex* index) {
     return new QPersistentModelIndex(*index);
 }
 
-QPersistentModelIndex* QPersistentModelIndex_new3(const QPersistentModelIndex* other) {
+QPersistentModelIndex* QPersistentModelIndex_New3(const QPersistentModelIndex* other) {
     return new QPersistentModelIndex(*other);
 }
 
@@ -298,11 +298,11 @@ void QPersistentModelIndex_Delete(QPersistentModelIndex* self) {
     delete self;
 }
 
-QAbstractItemModel* QAbstractItemModel_new() {
+QAbstractItemModel* QAbstractItemModel_New() {
     return new VirtualQAbstractItemModel();
 }
 
-QAbstractItemModel* QAbstractItemModel_new2(QObject* parent) {
+QAbstractItemModel* QAbstractItemModel_New2(QObject* parent) {
     return new VirtualQAbstractItemModel(parent);
 }
 
@@ -2888,11 +2888,11 @@ void QAbstractItemModel_Delete(QAbstractItemModel* self) {
     delete self;
 }
 
-QAbstractTableModel* QAbstractTableModel_new() {
+QAbstractTableModel* QAbstractTableModel_New() {
     return new VirtualQAbstractTableModel();
 }
 
-QAbstractTableModel* QAbstractTableModel_new2(QObject* parent) {
+QAbstractTableModel* QAbstractTableModel_New2(QObject* parent) {
     return new VirtualQAbstractTableModel(parent);
 }
 
@@ -5189,11 +5189,11 @@ void QAbstractTableModel_Delete(QAbstractTableModel* self) {
     delete self;
 }
 
-QAbstractListModel* QAbstractListModel_new() {
+QAbstractListModel* QAbstractListModel_New() {
     return new VirtualQAbstractListModel();
 }
 
-QAbstractListModel* QAbstractListModel_new2(QObject* parent) {
+QAbstractListModel* QAbstractListModel_New2(QObject* parent) {
     return new VirtualQAbstractListModel(parent);
 }
 

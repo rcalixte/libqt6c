@@ -23,8 +23,8 @@ typedef struct QGeoRouteSegment QGeoRouteSegment;
 typedef struct QVariant QVariant;
 #endif
 
-QGeoRoute* QGeoRoute_new();
-QGeoRoute* QGeoRoute_new2(const QGeoRoute* other);
+QGeoRoute* QGeoRoute_New();
+QGeoRoute* QGeoRoute_New2(const QGeoRoute* other);
 void QGeoRoute_OperatorAssign(QGeoRoute* self, const QGeoRoute* other);
 void QGeoRoute_Swap(QGeoRoute* self, QGeoRoute* other);
 void QGeoRoute_SetRouteId(QGeoRoute* self, const libqt_string id);

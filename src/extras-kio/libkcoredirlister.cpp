@@ -15,11 +15,11 @@
 #include "libkcoredirlister.hpp"
 #include "libkcoredirlister.hxx"
 
-KCoreDirLister* KCoreDirLister_new() {
+KCoreDirLister* KCoreDirLister_New() {
     return new VirtualKCoreDirLister();
 }
 
-KCoreDirLister* KCoreDirLister_new2(QObject* parent) {
+KCoreDirLister* KCoreDirLister_New2(QObject* parent) {
     return new VirtualKCoreDirLister(parent);
 }
 

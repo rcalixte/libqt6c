@@ -29,8 +29,8 @@ typedef struct QsciLexerSQL QsciLexerSQL;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerSQL* QsciLexerSQL_new();
-QsciLexerSQL* QsciLexerSQL_new2(QObject* parent);
+QsciLexerSQL* QsciLexerSQL_New();
+QsciLexerSQL* QsciLexerSQL_New2(QObject* parent);
 QMetaObject* QsciLexerSQL_MetaObject(const QsciLexerSQL* self);
 void* QsciLexerSQL_Metacast(QsciLexerSQL* self, const char* param1);
 int QsciLexerSQL_Metacall(QsciLexerSQL* self, int param1, int param2, void** param3);

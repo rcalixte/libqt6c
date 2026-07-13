@@ -6,11 +6,11 @@
 #include "libqpageranges.hpp"
 #include "libqpageranges.hxx"
 
-QPageRanges* QPageRanges_new() {
+QPageRanges* QPageRanges_New() {
     return new QPageRanges();
 }
 
-QPageRanges* QPageRanges_new2(const QPageRanges* other) {
+QPageRanges* QPageRanges_New2(const QPageRanges* other) {
     return new QPageRanges(*other);
 }
 
@@ -88,19 +88,19 @@ void QPageRanges_Delete(QPageRanges* self) {
     delete self;
 }
 
-QPageRanges__Range* QPageRanges__Range_new(const QPageRanges__Range* other) {
+QPageRanges__Range* QPageRanges__Range_New(const QPageRanges__Range* other) {
     return new QPageRanges::Range(*other);
 }
 
-QPageRanges__Range* QPageRanges__Range_new2(QPageRanges__Range* other) {
+QPageRanges__Range* QPageRanges__Range_New2(QPageRanges__Range* other) {
     return new QPageRanges::Range(std::move(*other));
 }
 
-QPageRanges__Range* QPageRanges__Range_new3() {
+QPageRanges__Range* QPageRanges__Range_New3() {
     return new QPageRanges::Range();
 }
 
-QPageRanges__Range* QPageRanges__Range_new4(const QPageRanges__Range* param1) {
+QPageRanges__Range* QPageRanges__Range_New4(const QPageRanges__Range* param1) {
     return new QPageRanges::Range(*param1);
 }
 

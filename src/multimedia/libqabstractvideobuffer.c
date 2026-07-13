@@ -23,11 +23,11 @@ void q_abstractvideobuffer_delete(void* self) {
 }
 
 QAbstractVideoBuffer__MapData* q_abstractvideobuffer__mapdata_new(void* other) {
-    return QAbstractVideoBuffer__MapData_new((QAbstractVideoBuffer__MapData*)other);
+    return QAbstractVideoBuffer__MapData_New((QAbstractVideoBuffer__MapData*)other);
 }
 
 QAbstractVideoBuffer__MapData* q_abstractvideobuffer__mapdata_new2(void* other) {
-    return QAbstractVideoBuffer__MapData_new2((QAbstractVideoBuffer__MapData*)other);
+    return QAbstractVideoBuffer__MapData_New2((QAbstractVideoBuffer__MapData*)other);
 }
 
 void q_abstractvideobuffer__mapdata_copy_assign(void* self, void* other) {

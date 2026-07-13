@@ -23,11 +23,11 @@
 #include "libautocorrectiontextedit.h"
 
 TextAutoCorrectionWidgets__AutoCorrectionTextEdit* k_textautocorrectionwidgets__autocorrectiontextedit_new(void* parent) {
-    return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_new((QWidget*)parent);
+    return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_New((QWidget*)parent);
 }
 
 TextAutoCorrectionWidgets__AutoCorrectionTextEdit* k_textautocorrectionwidgets__autocorrectiontextedit_new2() {
-    return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_new2();
+    return TextAutoCorrectionWidgets__AutoCorrectionTextEdit_New2();
 }
 
 const QMetaObject* k_textautocorrectionwidgets__autocorrectiontextedit_meta_object(void* self) {

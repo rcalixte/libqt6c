@@ -13,7 +13,7 @@
 #include "libaction.hpp"
 #include "libaction.hxx"
 
-KNSWidgets__Action* KNSWidgets__Action_new(const libqt_string text, const libqt_string configFile, QObject* parent) {
+KNSWidgets__Action* KNSWidgets__Action_New(const libqt_string text, const libqt_string configFile, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString configFile_QString = QString::fromUtf8(configFile.data, configFile.len);
     return new VirtualKNSWidgetsAction(text_QString, configFile_QString, parent);

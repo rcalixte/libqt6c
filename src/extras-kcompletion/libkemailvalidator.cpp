@@ -11,11 +11,11 @@
 #include "libkemailvalidator.hpp"
 #include "libkemailvalidator.hxx"
 
-KEmailValidator* KEmailValidator_new() {
+KEmailValidator* KEmailValidator_New() {
     return new VirtualKEmailValidator();
 }
 
-KEmailValidator* KEmailValidator_new2(QObject* parent) {
+KEmailValidator* KEmailValidator_New2(QObject* parent) {
     return new VirtualKEmailValidator(parent);
 }
 

@@ -10,11 +10,11 @@
 #include "libqabstractnetworkcache.h"
 
 QNetworkCacheMetaData* q_networkcachemetadata_new() {
-    return QNetworkCacheMetaData_new();
+    return QNetworkCacheMetaData_New();
 }
 
 QNetworkCacheMetaData* q_networkcachemetadata_new2(void* other) {
-    return QNetworkCacheMetaData_new2((QNetworkCacheMetaData*)other);
+    return QNetworkCacheMetaData_New2((QNetworkCacheMetaData*)other);
 }
 
 void q_networkcachemetadata_operator_assign(void* self, void* other) {

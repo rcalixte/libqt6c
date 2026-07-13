@@ -9,11 +9,11 @@
 #include "libmimetypefinderjob.h"
 
 KIO__MimeTypeFinderJob* k_io__mimetypefinderjob_new(void* url) {
-    return KIO__MimeTypeFinderJob_new((QUrl*)url);
+    return KIO__MimeTypeFinderJob_New((QUrl*)url);
 }
 
 KIO__MimeTypeFinderJob* k_io__mimetypefinderjob_new2(void* url, void* parent) {
-    return KIO__MimeTypeFinderJob_new2((QUrl*)url, (QObject*)parent);
+    return KIO__MimeTypeFinderJob_New2((QUrl*)url, (QObject*)parent);
 }
 
 const QMetaObject* k_io__mimetypefinderjob_meta_object(void* self) {

@@ -30,10 +30,10 @@ typedef struct QPrinterInfo QPrinterInfo;
 typedef struct QRectF QRectF;
 #endif
 
-QPrinter* QPrinter_new();
-QPrinter* QPrinter_new2(const QPrinterInfo* printer);
-QPrinter* QPrinter_new3(int mode);
-QPrinter* QPrinter_new4(const QPrinterInfo* printer, int mode);
+QPrinter* QPrinter_New();
+QPrinter* QPrinter_New2(const QPrinterInfo* printer);
+QPrinter* QPrinter_New3(int mode);
+QPrinter* QPrinter_New4(const QPrinterInfo* printer, int mode);
 int QPrinter_DevType(const QPrinter* self);
 void QPrinter_SetOutputFormat(QPrinter* self, int format);
 int QPrinter_OutputFormat(const QPrinter* self);

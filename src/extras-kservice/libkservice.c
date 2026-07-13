@@ -6,23 +6,23 @@
 #include "libkservice.h"
 
 KService* k_service_new(const char* name, const char* exec, const char* icon) {
-    return KService_new(qstring(name), qstring(exec), qstring(icon));
+    return KService_New(qstring(name), qstring(exec), qstring(icon));
 }
 
 KService* k_service_new2(const char* fullpath) {
-    return KService_new2(qstring(fullpath));
+    return KService_New2(qstring(fullpath));
 }
 
 KService* k_service_new3(void* config) {
-    return KService_new3((KDesktopFile*)config);
+    return KService_New3((KDesktopFile*)config);
 }
 
 KService* k_service_new4(void* other) {
-    return KService_new4((KService*)other);
+    return KService_New4((KService*)other);
 }
 
 KService* k_service_new5(void* config, const char* entryPath) {
-    return KService_new5((KDesktopFile*)config, qstring(entryPath));
+    return KService_New5((KDesktopFile*)config, qstring(entryPath));
 }
 
 bool k_service_is_application(void* self) {

@@ -20,8 +20,8 @@ typedef struct QLowEnergyCharacteristicData QLowEnergyCharacteristicData;
 typedef struct QLowEnergyDescriptorData QLowEnergyDescriptorData;
 #endif
 
-QLowEnergyCharacteristicData* QLowEnergyCharacteristicData_new();
-QLowEnergyCharacteristicData* QLowEnergyCharacteristicData_new2(const QLowEnergyCharacteristicData* other);
+QLowEnergyCharacteristicData* QLowEnergyCharacteristicData_New();
+QLowEnergyCharacteristicData* QLowEnergyCharacteristicData_New2(const QLowEnergyCharacteristicData* other);
 void QLowEnergyCharacteristicData_OperatorAssign(QLowEnergyCharacteristicData* self, const QLowEnergyCharacteristicData* other);
 QBluetoothUuid* QLowEnergyCharacteristicData_Uuid(const QLowEnergyCharacteristicData* self);
 void QLowEnergyCharacteristicData_SetUuid(QLowEnergyCharacteristicData* self, const QBluetoothUuid* uuid);

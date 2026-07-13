@@ -8,11 +8,11 @@
 #include "libqparallelanimationgroup.h"
 
 QParallelAnimationGroup* q_parallelanimationgroup_new() {
-    return QParallelAnimationGroup_new();
+    return QParallelAnimationGroup_New();
 }
 
 QParallelAnimationGroup* q_parallelanimationgroup_new2(void* parent) {
-    return QParallelAnimationGroup_new2((QObject*)parent);
+    return QParallelAnimationGroup_New2((QObject*)parent);
 }
 
 const QMetaObject* q_parallelanimationgroup_meta_object(void* self) {

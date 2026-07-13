@@ -22,11 +22,11 @@ void q_itemeditorcreatorbase_delete(void* self) {
 }
 
 QItemEditorFactory* q_itemeditorfactory_new() {
-    return QItemEditorFactory_new();
+    return QItemEditorFactory_New();
 }
 
 QItemEditorFactory* q_itemeditorfactory_new2(void* param1) {
-    return QItemEditorFactory_new2((QItemEditorFactory*)param1);
+    return QItemEditorFactory_New2((QItemEditorFactory*)param1);
 }
 
 QWidget* q_itemeditorfactory_create_editor(void* self, int userType, void* parent) {

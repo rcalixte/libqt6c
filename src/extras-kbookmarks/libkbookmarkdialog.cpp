@@ -43,11 +43,11 @@
 #include "libkbookmarkdialog.hpp"
 #include "libkbookmarkdialog.hxx"
 
-KBookmarkDialog* KBookmarkDialog_new(KBookmarkManager* manager) {
+KBookmarkDialog* KBookmarkDialog_New(KBookmarkManager* manager) {
     return new VirtualKBookmarkDialog(manager);
 }
 
-KBookmarkDialog* KBookmarkDialog_new2(KBookmarkManager* manager, QWidget* parent) {
+KBookmarkDialog* KBookmarkDialog_New2(KBookmarkManager* manager, QWidget* parent) {
     return new VirtualKBookmarkDialog(manager, parent);
 }
 

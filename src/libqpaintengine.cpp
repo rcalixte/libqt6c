@@ -23,19 +23,19 @@
 #include "libqpaintengine.hpp"
 #include "libqpaintengine.hxx"
 
-QTextItem* QTextItem_new(const QTextItem* other) {
+QTextItem* QTextItem_New(const QTextItem* other) {
     return new QTextItem(*other);
 }
 
-QTextItem* QTextItem_new2(QTextItem* other) {
+QTextItem* QTextItem_New2(QTextItem* other) {
     return new QTextItem(std::move(*other));
 }
 
-QTextItem* QTextItem_new3() {
+QTextItem* QTextItem_New3() {
     return new QTextItem();
 }
 
-QTextItem* QTextItem_new4(const QTextItem* param1) {
+QTextItem* QTextItem_New4(const QTextItem* param1) {
     return new QTextItem(*param1);
 }
 
@@ -83,11 +83,11 @@ void QTextItem_Delete(QTextItem* self) {
     delete self;
 }
 
-QPaintEngine* QPaintEngine_new() {
+QPaintEngine* QPaintEngine_New() {
     return new VirtualQPaintEngine();
 }
 
-QPaintEngine* QPaintEngine_new2(int features) {
+QPaintEngine* QPaintEngine_New2(int features) {
     return new VirtualQPaintEngine(static_cast<QPaintEngine::PaintEngineFeatures>(features));
 }
 
@@ -665,11 +665,11 @@ void QPaintEngine_Delete(QPaintEngine* self) {
     delete self;
 }
 
-QPaintEngineState* QPaintEngineState_new(const QPaintEngineState* other) {
+QPaintEngineState* QPaintEngineState_New(const QPaintEngineState* other) {
     return new QPaintEngineState(*other);
 }
 
-QPaintEngineState* QPaintEngineState_new2(QPaintEngineState* other) {
+QPaintEngineState* QPaintEngineState_New2(QPaintEngineState* other) {
     return new QPaintEngineState(std::move(*other));
 }
 

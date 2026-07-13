@@ -9,11 +9,11 @@
 #include "libktogglefullscreenaction.h"
 
 KToggleFullScreenAction* k_togglefullscreenaction_new(void* parent) {
-    return KToggleFullScreenAction_new((QObject*)parent);
+    return KToggleFullScreenAction_New((QObject*)parent);
 }
 
 KToggleFullScreenAction* k_togglefullscreenaction_new2(void* window, void* parent) {
-    return KToggleFullScreenAction_new2((QWidget*)window, (QObject*)parent);
+    return KToggleFullScreenAction_New2((QWidget*)window, (QObject*)parent);
 }
 
 const QMetaObject* k_togglefullscreenaction_meta_object(void* self) {

@@ -7,11 +7,11 @@
 #include "libkuiserverv2jobtracker.h"
 
 KUiServerV2JobTracker* k_uiserverv2jobtracker_new() {
-    return KUiServerV2JobTracker_new();
+    return KUiServerV2JobTracker_New();
 }
 
 KUiServerV2JobTracker* k_uiserverv2jobtracker_new2(void* parent) {
-    return KUiServerV2JobTracker_new2((QObject*)parent);
+    return KUiServerV2JobTracker_New2((QObject*)parent);
 }
 
 const QMetaObject* k_uiserverv2jobtracker_meta_object(void* self) {

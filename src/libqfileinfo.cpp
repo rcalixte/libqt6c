@@ -8,25 +8,25 @@
 #include "libqfileinfo.hpp"
 #include "libqfileinfo.hxx"
 
-QFileInfo* QFileInfo_new() {
+QFileInfo* QFileInfo_New() {
     return new QFileInfo();
 }
 
-QFileInfo* QFileInfo_new2(const libqt_string file) {
+QFileInfo* QFileInfo_New2(const libqt_string file) {
     QString file_QString = QString::fromUtf8(file.data, file.len);
     return new QFileInfo(file_QString);
 }
 
-QFileInfo* QFileInfo_new3(const QFileDevice* file) {
+QFileInfo* QFileInfo_New3(const QFileDevice* file) {
     return new QFileInfo(*file);
 }
 
-QFileInfo* QFileInfo_new4(const QDir* dir, const libqt_string file) {
+QFileInfo* QFileInfo_New4(const QDir* dir, const libqt_string file) {
     QString file_QString = QString::fromUtf8(file.data, file.len);
     return new QFileInfo(*dir, file_QString);
 }
 
-QFileInfo* QFileInfo_new5(const QFileInfo* fileinfo) {
+QFileInfo* QFileInfo_New5(const QFileInfo* fileinfo) {
     return new QFileInfo(*fileinfo);
 }
 

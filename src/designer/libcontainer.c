@@ -3,7 +3,7 @@
 #include "libcontainer.h"
 
 QDesignerContainerExtension* q_designercontainerextension_new() {
-    return QDesignerContainerExtension_new();
+    return QDesignerContainerExtension_New();
 }
 
 int32_t q_designercontainerextension_count(void* self) {

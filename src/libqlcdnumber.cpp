@@ -39,19 +39,19 @@
 #include "libqlcdnumber.hpp"
 #include "libqlcdnumber.hxx"
 
-QLCDNumber* QLCDNumber_new(QWidget* parent) {
+QLCDNumber* QLCDNumber_New(QWidget* parent) {
     return new VirtualQLCDNumber(parent);
 }
 
-QLCDNumber* QLCDNumber_new2() {
+QLCDNumber* QLCDNumber_New2() {
     return new VirtualQLCDNumber();
 }
 
-QLCDNumber* QLCDNumber_new3(unsigned int numDigits) {
+QLCDNumber* QLCDNumber_New3(unsigned int numDigits) {
     return new VirtualQLCDNumber(static_cast<uint>(numDigits));
 }
 
-QLCDNumber* QLCDNumber_new4(unsigned int numDigits, QWidget* parent) {
+QLCDNumber* QLCDNumber_New4(unsigned int numDigits, QWidget* parent) {
     return new VirtualQLCDNumber(static_cast<uint>(numDigits), parent);
 }
 

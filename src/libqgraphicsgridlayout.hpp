@@ -24,8 +24,8 @@ typedef struct QRectF QRectF;
 typedef struct QSizeF QSizeF;
 #endif
 
-QGraphicsGridLayout* QGraphicsGridLayout_new();
-QGraphicsGridLayout* QGraphicsGridLayout_new2(QGraphicsLayoutItem* parent);
+QGraphicsGridLayout* QGraphicsGridLayout_New();
+QGraphicsGridLayout* QGraphicsGridLayout_New2(QGraphicsLayoutItem* parent);
 void QGraphicsGridLayout_AddItem(QGraphicsGridLayout* self, QGraphicsLayoutItem* item, int row, int column, int rowSpan, int columnSpan);
 void QGraphicsGridLayout_AddItem2(QGraphicsGridLayout* self, QGraphicsLayoutItem* item, int row, int column);
 void QGraphicsGridLayout_SetHorizontalSpacing(QGraphicsGridLayout* self, double spacing);

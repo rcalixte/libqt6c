@@ -7,11 +7,11 @@
 #include "libqlowenergycharacteristicdata.hpp"
 #include "libqlowenergycharacteristicdata.hxx"
 
-QLowEnergyCharacteristicData* QLowEnergyCharacteristicData_new() {
+QLowEnergyCharacteristicData* QLowEnergyCharacteristicData_New() {
     return new QLowEnergyCharacteristicData();
 }
 
-QLowEnergyCharacteristicData* QLowEnergyCharacteristicData_new2(const QLowEnergyCharacteristicData* other) {
+QLowEnergyCharacteristicData* QLowEnergyCharacteristicData_New2(const QLowEnergyCharacteristicData* other) {
     return new QLowEnergyCharacteristicData(*other);
 }
 

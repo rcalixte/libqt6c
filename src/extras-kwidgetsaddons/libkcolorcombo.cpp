@@ -42,11 +42,11 @@
 #include "libkcolorcombo.hpp"
 #include "libkcolorcombo.hxx"
 
-KColorCombo* KColorCombo_new(QWidget* parent) {
+KColorCombo* KColorCombo_New(QWidget* parent) {
     return new VirtualKColorCombo(parent);
 }
 
-KColorCombo* KColorCombo_new2() {
+KColorCombo* KColorCombo_New2() {
     return new VirtualKColorCombo();
 }
 

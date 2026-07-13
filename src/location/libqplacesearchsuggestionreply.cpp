@@ -12,11 +12,11 @@
 #include "libqplacesearchsuggestionreply.hpp"
 #include "libqplacesearchsuggestionreply.hxx"
 
-QPlaceSearchSuggestionReply* QPlaceSearchSuggestionReply_new() {
+QPlaceSearchSuggestionReply* QPlaceSearchSuggestionReply_New() {
     return new VirtualQPlaceSearchSuggestionReply();
 }
 
-QPlaceSearchSuggestionReply* QPlaceSearchSuggestionReply_new2(QObject* parent) {
+QPlaceSearchSuggestionReply* QPlaceSearchSuggestionReply_New2(QObject* parent) {
     return new VirtualQPlaceSearchSuggestionReply(parent);
 }
 

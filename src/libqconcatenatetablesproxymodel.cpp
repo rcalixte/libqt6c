@@ -21,11 +21,11 @@
 #include "libqconcatenatetablesproxymodel.hpp"
 #include "libqconcatenatetablesproxymodel.hxx"
 
-QConcatenateTablesProxyModel* QConcatenateTablesProxyModel_new() {
+QConcatenateTablesProxyModel* QConcatenateTablesProxyModel_New() {
     return new VirtualQConcatenateTablesProxyModel();
 }
 
-QConcatenateTablesProxyModel* QConcatenateTablesProxyModel_new2(QObject* parent) {
+QConcatenateTablesProxyModel* QConcatenateTablesProxyModel_New2(QObject* parent) {
     return new VirtualQConcatenateTablesProxyModel(parent);
 }
 

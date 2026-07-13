@@ -2,11 +2,11 @@
 #include "libkconfigconversioncheck_p.h"
 
 KConfigConversionCheck__supported* k_configconversioncheck__supported_new(void* other) {
-    return KConfigConversionCheck__supported_new((KConfigConversionCheck__supported*)other);
+    return KConfigConversionCheck__supported_New((KConfigConversionCheck__supported*)other);
 }
 
 KConfigConversionCheck__supported* k_configconversioncheck__supported_new2(void* other) {
-    return KConfigConversionCheck__supported_new2((KConfigConversionCheck__supported*)other);
+    return KConfigConversionCheck__supported_New2((KConfigConversionCheck__supported*)other);
 }
 
 void k_configconversioncheck__supported_copy_assign(void* self, void* other) {
@@ -22,11 +22,11 @@ void k_configconversioncheck__supported_delete(void* self) {
 }
 
 KConfigConversionCheck__unsupported* k_configconversioncheck__unsupported_new(void* other) {
-    return KConfigConversionCheck__unsupported_new((KConfigConversionCheck__unsupported*)other);
+    return KConfigConversionCheck__unsupported_New((KConfigConversionCheck__unsupported*)other);
 }
 
 KConfigConversionCheck__unsupported* k_configconversioncheck__unsupported_new2(void* other) {
-    return KConfigConversionCheck__unsupported_new2((KConfigConversionCheck__unsupported*)other);
+    return KConfigConversionCheck__unsupported_New2((KConfigConversionCheck__unsupported*)other);
 }
 
 void k_configconversioncheck__unsupported_copy_assign(void* self, void* other) {

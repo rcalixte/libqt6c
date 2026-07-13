@@ -19,11 +19,11 @@
 #include "libkimagefilepreview.h"
 
 KImageFilePreview* k_imagefilepreview_new(void* parent) {
-    return KImageFilePreview_new((QWidget*)parent);
+    return KImageFilePreview_New((QWidget*)parent);
 }
 
 KImageFilePreview* k_imagefilepreview_new2() {
-    return KImageFilePreview_new2();
+    return KImageFilePreview_New2();
 }
 
 const QMetaObject* k_imagefilepreview_meta_object(void* self) {

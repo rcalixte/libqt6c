@@ -18,27 +18,27 @@
 #include "libkeditlistwidget.h"
 
 KEditListWidget* k_editlistwidget_new(void* parent) {
-    return KEditListWidget_new((QWidget*)parent);
+    return KEditListWidget_New((QWidget*)parent);
 }
 
 KEditListWidget* k_editlistwidget_new2() {
-    return KEditListWidget_new2();
+    return KEditListWidget_New2();
 }
 
 KEditListWidget* k_editlistwidget_new3(void* customEditor) {
-    return KEditListWidget_new3((KEditListWidget__CustomEditor*)customEditor);
+    return KEditListWidget_New3((KEditListWidget__CustomEditor*)customEditor);
 }
 
 KEditListWidget* k_editlistwidget_new4(void* customEditor, void* parent) {
-    return KEditListWidget_new4((KEditListWidget__CustomEditor*)customEditor, (QWidget*)parent);
+    return KEditListWidget_New4((KEditListWidget__CustomEditor*)customEditor, (QWidget*)parent);
 }
 
 KEditListWidget* k_editlistwidget_new5(void* customEditor, void* parent, bool checkAtEntering) {
-    return KEditListWidget_new5((KEditListWidget__CustomEditor*)customEditor, (QWidget*)parent, checkAtEntering);
+    return KEditListWidget_New5((KEditListWidget__CustomEditor*)customEditor, (QWidget*)parent, checkAtEntering);
 }
 
 KEditListWidget* k_editlistwidget_new6(void* customEditor, void* parent, bool checkAtEntering, int32_t buttons) {
-    return KEditListWidget_new6((KEditListWidget__CustomEditor*)customEditor, (QWidget*)parent, checkAtEntering, buttons);
+    return KEditListWidget_New6((KEditListWidget__CustomEditor*)customEditor, (QWidget*)parent, checkAtEntering, buttons);
 }
 
 const QMetaObject* k_editlistwidget_meta_object(void* self) {
@@ -2338,15 +2338,15 @@ void k_editlistwidget_delete(void* self) {
 }
 
 KEditListWidget__CustomEditor* k_editlistwidget__customeditor_new() {
-    return KEditListWidget__CustomEditor_new();
+    return KEditListWidget__CustomEditor_New();
 }
 
 KEditListWidget__CustomEditor* k_editlistwidget__customeditor_new2(void* repWidget, void* edit) {
-    return KEditListWidget__CustomEditor_new2((QWidget*)repWidget, (QLineEdit*)edit);
+    return KEditListWidget__CustomEditor_New2((QWidget*)repWidget, (QLineEdit*)edit);
 }
 
 KEditListWidget__CustomEditor* k_editlistwidget__customeditor_new3(void* combo) {
-    return KEditListWidget__CustomEditor_new3((QComboBox*)combo);
+    return KEditListWidget__CustomEditor_New3((QComboBox*)combo);
 }
 
 void k_editlistwidget__customeditor_set_representation_widget(void* self, void* repWidget) {

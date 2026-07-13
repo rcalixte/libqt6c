@@ -9,11 +9,11 @@
 #include "libqdatawidgetmapper.h"
 
 QDataWidgetMapper* q_datawidgetmapper_new() {
-    return QDataWidgetMapper_new();
+    return QDataWidgetMapper_New();
 }
 
 QDataWidgetMapper* q_datawidgetmapper_new2(void* parent) {
-    return QDataWidgetMapper_new2((QObject*)parent);
+    return QDataWidgetMapper_New2((QObject*)parent);
 }
 
 const QMetaObject* q_datawidgetmapper_meta_object(void* self) {

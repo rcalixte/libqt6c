@@ -19,7 +19,7 @@ typedef struct QColor QColor;
 typedef struct QColormap QColormap;
 #endif
 
-QColormap* QColormap_new(const QColormap* colormap);
+QColormap* QColormap_New(const QColormap* colormap);
 void QColormap_Initialize();
 void QColormap_Cleanup();
 QColormap* QColormap_Instance();

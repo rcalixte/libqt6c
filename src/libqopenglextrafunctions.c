@@ -4,15 +4,15 @@
 #include "libqopenglextrafunctions.h"
 
 QOpenGLExtraFunctions* q_openglextrafunctions_new() {
-    return QOpenGLExtraFunctions_new();
+    return QOpenGLExtraFunctions_New();
 }
 
 QOpenGLExtraFunctions* q_openglextrafunctions_new2(void* context) {
-    return QOpenGLExtraFunctions_new2((QOpenGLContext*)context);
+    return QOpenGLExtraFunctions_New2((QOpenGLContext*)context);
 }
 
 QOpenGLExtraFunctions* q_openglextrafunctions_new3(void* param1) {
-    return QOpenGLExtraFunctions_new3((QOpenGLExtraFunctions*)param1);
+    return QOpenGLExtraFunctions_New3((QOpenGLExtraFunctions*)param1);
 }
 
 void q_openglextrafunctions_gl_read_buffer(void* self, uint32_t mode) {

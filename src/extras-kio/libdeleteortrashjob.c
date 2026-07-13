@@ -9,7 +9,7 @@
 #include "libdeleteortrashjob.h"
 
 KIO__DeleteOrTrashJob* k_io__deleteortrashjob_new(libqt_list /* of QUrl* */ urls, int32_t deletionType, int32_t confirm, void* parent) {
-    return KIO__DeleteOrTrashJob_new(urls, deletionType, confirm, (QObject*)parent);
+    return KIO__DeleteOrTrashJob_New(urls, deletionType, confirm, (QObject*)parent);
 }
 
 const QMetaObject* k_io__deleteortrashjob_meta_object(void* self) {

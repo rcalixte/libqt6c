@@ -10,7 +10,7 @@
 #include "libkabstractviewadapter.h"
 
 KAbstractViewAdapter* k_abstractviewadapter_new(void* parent) {
-    return KAbstractViewAdapter_new((QObject*)parent);
+    return KAbstractViewAdapter_New((QObject*)parent);
 }
 
 QAbstractItemModel* k_abstractviewadapter_model(void* self) {

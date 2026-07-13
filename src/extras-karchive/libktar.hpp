@@ -22,10 +22,10 @@ typedef struct QDateTime QDateTime;
 typedef struct QIODevice QIODevice;
 #endif
 
-KTar* KTar_new(const libqt_string filename);
-KTar* KTar_new2(QIODevice* dev);
-KTar* KTar_new3(const KTar* param1);
-KTar* KTar_new4(const libqt_string filename, const libqt_string mimetype);
+KTar* KTar_New(const libqt_string filename);
+KTar* KTar_New2(QIODevice* dev);
+KTar* KTar_New3(const KTar* param1);
+KTar* KTar_New4(const libqt_string filename, const libqt_string mimetype);
 void KTar_SetOrigFileName(KTar* self, const libqt_string fileName);
 bool KTar_DoWriteSymLink(KTar* self, const libqt_string name, const libqt_string target, const libqt_string user, const libqt_string group, mode_t perm, const QDateTime* atime, const QDateTime* mtime, const QDateTime* ctime);
 bool KTar_DoWriteDir(KTar* self, const libqt_string name, const libqt_string user, const libqt_string group, mode_t perm, const QDateTime* atime, const QDateTime* mtime, const QDateTime* ctime);

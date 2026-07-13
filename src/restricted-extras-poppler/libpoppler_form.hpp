@@ -70,7 +70,7 @@ typedef struct QRectF QRectF;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-Poppler__FormFieldIcon* Poppler__FormFieldIcon_new(const Poppler__FormFieldIcon* ffIcon);
+Poppler__FormFieldIcon* Poppler__FormFieldIcon_New(const Poppler__FormFieldIcon* ffIcon);
 void Poppler__FormFieldIcon_OperatorAssign(Poppler__FormFieldIcon* self, const Poppler__FormFieldIcon* ffIcon);
 void Poppler__FormFieldIcon_Delete(Poppler__FormFieldIcon* self);
 
@@ -131,8 +131,8 @@ bool Poppler__FormFieldChoice_CanBeSpellChecked(const Poppler__FormFieldChoice* 
 void Poppler__FormFieldChoice_SetAppearanceChoiceText(Poppler__FormFieldChoice* self, const libqt_string text);
 void Poppler__FormFieldChoice_Delete(Poppler__FormFieldChoice* self);
 
-Poppler__CertificateInfo* Poppler__CertificateInfo_new();
-Poppler__CertificateInfo* Poppler__CertificateInfo_new2(const Poppler__CertificateInfo* other);
+Poppler__CertificateInfo* Poppler__CertificateInfo_New();
+Poppler__CertificateInfo* Poppler__CertificateInfo_New2(const Poppler__CertificateInfo* other);
 bool Poppler__CertificateInfo_IsNull(const Poppler__CertificateInfo* self);
 int Poppler__CertificateInfo_Version(const Poppler__CertificateInfo* self);
 libqt_string Poppler__CertificateInfo_SerialNumber(const Poppler__CertificateInfo* self);
@@ -154,7 +154,7 @@ int Poppler__CertificateInfo_KeyLocation(const Poppler__CertificateInfo* self);
 void Poppler__CertificateInfo_OperatorAssign(Poppler__CertificateInfo* self, const Poppler__CertificateInfo* other);
 void Poppler__CertificateInfo_Delete(Poppler__CertificateInfo* self);
 
-Poppler__SignatureValidationInfo* Poppler__SignatureValidationInfo_new(const Poppler__SignatureValidationInfo* other);
+Poppler__SignatureValidationInfo* Poppler__SignatureValidationInfo_New(const Poppler__SignatureValidationInfo* other);
 int Poppler__SignatureValidationInfo_SignatureStatus(const Poppler__SignatureValidationInfo* self);
 int Poppler__SignatureValidationInfo_CertificateStatus(const Poppler__SignatureValidationInfo* self);
 libqt_string Poppler__SignatureValidationInfo_SignerName(const Poppler__SignatureValidationInfo* self);
@@ -170,7 +170,7 @@ Poppler__CertificateInfo* Poppler__SignatureValidationInfo_CertificateInfo(const
 void Poppler__SignatureValidationInfo_OperatorAssign(Poppler__SignatureValidationInfo* self, const Poppler__SignatureValidationInfo* other);
 void Poppler__SignatureValidationInfo_Delete(Poppler__SignatureValidationInfo* self);
 
-Poppler__AsyncObject* Poppler__AsyncObject_new();
+Poppler__AsyncObject* Poppler__AsyncObject_New();
 QMetaObject* Poppler__AsyncObject_MetaObject(const Poppler__AsyncObject* self);
 void* Poppler__AsyncObject_Metacast(Poppler__AsyncObject* self, const char* param1);
 int Poppler__AsyncObject_Metacall(Poppler__AsyncObject* self, int param1, int param2, void** param3);

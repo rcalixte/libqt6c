@@ -16,11 +16,11 @@
 #include "libkbugreport.h"
 
 KBugReport* k_bugreport_new(void* aboutData) {
-    return KBugReport_new((KAboutData*)aboutData);
+    return KBugReport_New((KAboutData*)aboutData);
 }
 
 KBugReport* k_bugreport_new2(void* aboutData, void* parent) {
-    return KBugReport_new2((KAboutData*)aboutData, (QWidget*)parent);
+    return KBugReport_New2((KAboutData*)aboutData, (QWidget*)parent);
 }
 
 const QMetaObject* k_bugreport_meta_object(void* self) {

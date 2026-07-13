@@ -11,11 +11,11 @@
 #include "libtranslatorengineaccessmanager.hpp"
 #include "libtranslatorengineaccessmanager.hxx"
 
-TextTranslator__TranslatorEngineAccessManager* TextTranslator__TranslatorEngineAccessManager_new() {
+TextTranslator__TranslatorEngineAccessManager* TextTranslator__TranslatorEngineAccessManager_New() {
     return new VirtualTextTranslatorTranslatorEngineAccessManager();
 }
 
-TextTranslator__TranslatorEngineAccessManager* TextTranslator__TranslatorEngineAccessManager_new2(QObject* parent) {
+TextTranslator__TranslatorEngineAccessManager* TextTranslator__TranslatorEngineAccessManager_New2(QObject* parent) {
     return new VirtualTextTranslatorTranslatorEngineAccessManager(parent);
 }
 

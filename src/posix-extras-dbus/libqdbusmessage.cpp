@@ -7,11 +7,11 @@
 #include "libqdbusmessage.hpp"
 #include "libqdbusmessage.hxx"
 
-QDBusMessage* QDBusMessage_new() {
+QDBusMessage* QDBusMessage_New() {
     return new QDBusMessage();
 }
 
-QDBusMessage* QDBusMessage_new2(const QDBusMessage* other) {
+QDBusMessage* QDBusMessage_New2(const QDBusMessage* other) {
     return new QDBusMessage(*other);
 }
 

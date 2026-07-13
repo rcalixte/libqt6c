@@ -20,10 +20,10 @@ typedef struct KIO__MetaData KIO__MetaData;
 typedef struct QVariant QVariant;
 #endif
 
-KIO__MetaData* KIO__MetaData_new();
-KIO__MetaData* KIO__MetaData_new2(const libqt_map /* of libqt_string to libqt_string */ metaData);
-KIO__MetaData* KIO__MetaData_new3(const libqt_map /* of libqt_string to QVariant* */ param1);
-KIO__MetaData* KIO__MetaData_new4(const KIO__MetaData* param1);
+KIO__MetaData* KIO__MetaData_New();
+KIO__MetaData* KIO__MetaData_New2(const libqt_map /* of libqt_string to libqt_string */ metaData);
+KIO__MetaData* KIO__MetaData_New3(const libqt_map /* of libqt_string to QVariant* */ param1);
+KIO__MetaData* KIO__MetaData_New4(const KIO__MetaData* param1);
 KIO__MetaData* KIO__MetaData_OperatorPlusAssign(KIO__MetaData* self, const libqt_map /* of libqt_string to libqt_string */ metaData);
 KIO__MetaData* KIO__MetaData_OperatorPlusAssign2(KIO__MetaData* self, const libqt_map /* of libqt_string to QVariant* */ metaData);
 void KIO__MetaData_OperatorAssign(KIO__MetaData* self, const libqt_map /* of libqt_string to QVariant* */ metaData);

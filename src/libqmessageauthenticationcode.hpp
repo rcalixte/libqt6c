@@ -20,8 +20,8 @@ typedef struct QIODevice QIODevice;
 typedef struct QMessageAuthenticationCode QMessageAuthenticationCode;
 #endif
 
-QMessageAuthenticationCode* QMessageAuthenticationCode_new(int method);
-QMessageAuthenticationCode* QMessageAuthenticationCode_new2(int method, libqt_string key);
+QMessageAuthenticationCode* QMessageAuthenticationCode_New(int method);
+QMessageAuthenticationCode* QMessageAuthenticationCode_New2(int method, libqt_string key);
 void QMessageAuthenticationCode_Swap(QMessageAuthenticationCode* self, QMessageAuthenticationCode* other);
 void QMessageAuthenticationCode_Reset(QMessageAuthenticationCode* self);
 void QMessageAuthenticationCode_SetKey(QMessageAuthenticationCode* self, libqt_string key);

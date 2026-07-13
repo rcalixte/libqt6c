@@ -26,11 +26,11 @@
 #include "libabstractformeditor.hpp"
 #include "libabstractformeditor.hxx"
 
-QDesignerFormEditorInterface* QDesignerFormEditorInterface_new() {
+QDesignerFormEditorInterface* QDesignerFormEditorInterface_New() {
     return new VirtualQDesignerFormEditorInterface();
 }
 
-QDesignerFormEditorInterface* QDesignerFormEditorInterface_new2(QObject* parent) {
+QDesignerFormEditorInterface* QDesignerFormEditorInterface_New2(QObject* parent) {
     return new VirtualQDesignerFormEditorInterface(parent);
 }
 

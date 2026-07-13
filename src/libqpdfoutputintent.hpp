@@ -20,8 +20,8 @@ typedef struct QPdfOutputIntent QPdfOutputIntent;
 typedef struct QUrl QUrl;
 #endif
 
-QPdfOutputIntent* QPdfOutputIntent_new();
-QPdfOutputIntent* QPdfOutputIntent_new2(const QPdfOutputIntent* other);
+QPdfOutputIntent* QPdfOutputIntent_New();
+QPdfOutputIntent* QPdfOutputIntent_New2(const QPdfOutputIntent* other);
 void QPdfOutputIntent_OperatorAssign(QPdfOutputIntent* self, const QPdfOutputIntent* other);
 void QPdfOutputIntent_Swap(QPdfOutputIntent* self, QPdfOutputIntent* other);
 libqt_string QPdfOutputIntent_OutputConditionIdentifier(const QPdfOutputIntent* self);

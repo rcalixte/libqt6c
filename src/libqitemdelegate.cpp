@@ -26,11 +26,11 @@
 #include "libqitemdelegate.hpp"
 #include "libqitemdelegate.hxx"
 
-QItemDelegate* QItemDelegate_new() {
+QItemDelegate* QItemDelegate_New() {
     return new VirtualQItemDelegate();
 }
 
-QItemDelegate* QItemDelegate_new2(QObject* parent) {
+QItemDelegate* QItemDelegate_New2(QObject* parent) {
     return new VirtualQItemDelegate(parent);
 }
 

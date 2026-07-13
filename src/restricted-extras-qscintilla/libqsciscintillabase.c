@@ -25,11 +25,11 @@
 #include "libqsciscintillabase.h"
 
 QsciScintillaBase* q_sciscintillabase_new(void* parent) {
-    return QsciScintillaBase_new((QWidget*)parent);
+    return QsciScintillaBase_New((QWidget*)parent);
 }
 
 QsciScintillaBase* q_sciscintillabase_new2() {
-    return QsciScintillaBase_new2();
+    return QsciScintillaBase_New2();
 }
 
 const QMetaObject* q_sciscintillabase_meta_object(void* self) {

@@ -28,7 +28,7 @@ typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
 
-KConfigDialogManager* KConfigDialogManager_new(QWidget* parent, KCoreConfigSkeleton* conf);
+KConfigDialogManager* KConfigDialogManager_New(QWidget* parent, KCoreConfigSkeleton* conf);
 QMetaObject* KConfigDialogManager_MetaObject(const KConfigDialogManager* self);
 void* KConfigDialogManager_Metacast(KConfigDialogManager* self, const char* param1);
 int KConfigDialogManager_Metacall(KConfigDialogManager* self, int param1, int param2, void** param3);

@@ -5,25 +5,25 @@
 #include "libqnetworkdatagram.hpp"
 #include "libqnetworkdatagram.hxx"
 
-QNetworkDatagram* QNetworkDatagram_new() {
+QNetworkDatagram* QNetworkDatagram_New() {
     return new QNetworkDatagram();
 }
 
-QNetworkDatagram* QNetworkDatagram_new2(const libqt_string data) {
+QNetworkDatagram* QNetworkDatagram_New2(const libqt_string data) {
     QByteArray data_QByteArray(data.data, data.len);
     return new QNetworkDatagram(data_QByteArray);
 }
 
-QNetworkDatagram* QNetworkDatagram_new3(const QNetworkDatagram* other) {
+QNetworkDatagram* QNetworkDatagram_New3(const QNetworkDatagram* other) {
     return new QNetworkDatagram(*other);
 }
 
-QNetworkDatagram* QNetworkDatagram_new4(const libqt_string data, const QHostAddress* destinationAddress) {
+QNetworkDatagram* QNetworkDatagram_New4(const libqt_string data, const QHostAddress* destinationAddress) {
     QByteArray data_QByteArray(data.data, data.len);
     return new QNetworkDatagram(data_QByteArray, *destinationAddress);
 }
 
-QNetworkDatagram* QNetworkDatagram_new5(const libqt_string data, const QHostAddress* destinationAddress, uint16_t port) {
+QNetworkDatagram* QNetworkDatagram_New5(const libqt_string data, const QHostAddress* destinationAddress, uint16_t port) {
     QByteArray data_QByteArray(data.data, data.len);
     return new QNetworkDatagram(data_QByteArray, *destinationAddress, static_cast<quint16>(port));
 }

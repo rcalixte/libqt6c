@@ -18,8 +18,8 @@ extern "C" {
 typedef struct QWebEngineFindTextResult QWebEngineFindTextResult;
 #endif
 
-QWebEngineFindTextResult* QWebEngineFindTextResult_new();
-QWebEngineFindTextResult* QWebEngineFindTextResult_new2(const QWebEngineFindTextResult* other);
+QWebEngineFindTextResult* QWebEngineFindTextResult_New();
+QWebEngineFindTextResult* QWebEngineFindTextResult_New2(const QWebEngineFindTextResult* other);
 int QWebEngineFindTextResult_NumberOfMatches(const QWebEngineFindTextResult* self);
 int QWebEngineFindTextResult_ActiveMatch(const QWebEngineFindTextResult* self);
 void QWebEngineFindTextResult_OperatorAssign(QWebEngineFindTextResult* self, const QWebEngineFindTextResult* other);

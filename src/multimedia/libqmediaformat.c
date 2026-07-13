@@ -3,15 +3,15 @@
 #include "libqmediaformat.h"
 
 QMediaFormat* q_mediaformat_new() {
-    return QMediaFormat_new();
+    return QMediaFormat_New();
 }
 
 QMediaFormat* q_mediaformat_new2(void* other) {
-    return QMediaFormat_new2((QMediaFormat*)other);
+    return QMediaFormat_New2((QMediaFormat*)other);
 }
 
 QMediaFormat* q_mediaformat_new3(int32_t format) {
-    return QMediaFormat_new3(format);
+    return QMediaFormat_New3(format);
 }
 
 void q_mediaformat_operator_assign(void* self, void* other) {

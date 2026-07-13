@@ -18,11 +18,11 @@
 #include "libqscrollarea.h"
 
 QScrollArea* q_scrollarea_new(void* parent) {
-    return QScrollArea_new((QWidget*)parent);
+    return QScrollArea_New((QWidget*)parent);
 }
 
 QScrollArea* q_scrollarea_new2() {
-    return QScrollArea_new2();
+    return QScrollArea_New2();
 }
 
 const QMetaObject* q_scrollarea_meta_object(void* self) {

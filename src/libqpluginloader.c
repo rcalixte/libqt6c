@@ -8,19 +8,19 @@
 #include "libqpluginloader.h"
 
 QPluginLoader* q_pluginloader_new() {
-    return QPluginLoader_new();
+    return QPluginLoader_New();
 }
 
 QPluginLoader* q_pluginloader_new2(const char* fileName) {
-    return QPluginLoader_new2(qstring(fileName));
+    return QPluginLoader_New2(qstring(fileName));
 }
 
 QPluginLoader* q_pluginloader_new3(void* parent) {
-    return QPluginLoader_new3((QObject*)parent);
+    return QPluginLoader_New3((QObject*)parent);
 }
 
 QPluginLoader* q_pluginloader_new4(const char* fileName, void* parent) {
-    return QPluginLoader_new4(qstring(fileName), (QObject*)parent);
+    return QPluginLoader_New4(qstring(fileName), (QObject*)parent);
 }
 
 const QMetaObject* q_pluginloader_meta_object(void* self) {

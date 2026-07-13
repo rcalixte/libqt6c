@@ -18,11 +18,11 @@
 #include "libktimecombobox.h"
 
 KTimeComboBox* k_timecombobox_new(void* parent) {
-    return KTimeComboBox_new((QWidget*)parent);
+    return KTimeComboBox_New((QWidget*)parent);
 }
 
 KTimeComboBox* k_timecombobox_new2() {
-    return KTimeComboBox_new2();
+    return KTimeComboBox_New2();
 }
 
 const QMetaObject* k_timecombobox_meta_object(void* self) {

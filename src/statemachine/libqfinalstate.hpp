@@ -26,8 +26,8 @@ typedef struct QState QState;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QFinalState* QFinalState_new();
-QFinalState* QFinalState_new2(QState* parent);
+QFinalState* QFinalState_New();
+QFinalState* QFinalState_New2(QState* parent);
 QMetaObject* QFinalState_MetaObject(const QFinalState* self);
 void* QFinalState_Metacast(QFinalState* self, const char* param1);
 int QFinalState_Metacall(QFinalState* self, int param1, int param2, void** param3);

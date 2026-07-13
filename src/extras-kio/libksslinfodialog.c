@@ -16,11 +16,11 @@
 #include "libksslinfodialog.h"
 
 KSslInfoDialog* k_sslinfodialog_new(void* parent) {
-    return KSslInfoDialog_new((QWidget*)parent);
+    return KSslInfoDialog_New((QWidget*)parent);
 }
 
 KSslInfoDialog* k_sslinfodialog_new2() {
-    return KSslInfoDialog_new2();
+    return KSslInfoDialog_New2();
 }
 
 const QMetaObject* k_sslinfodialog_meta_object(void* self) {

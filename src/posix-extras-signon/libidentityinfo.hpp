@@ -25,9 +25,9 @@ typedef struct SignOn__IdentityInfo SignOn__IdentityInfo;
 typedef struct SignOn__SecurityContext SignOn__SecurityContext;
 #endif
 
-SignOn__IdentityInfo* SignOn__IdentityInfo_new();
-SignOn__IdentityInfo* SignOn__IdentityInfo_new2(const SignOn__IdentityInfo* other);
-SignOn__IdentityInfo* SignOn__IdentityInfo_new3(const libqt_string caption, const libqt_string userName, const libqt_map /* of libqt_string to SignOn::MechanismsList */ methods);
+SignOn__IdentityInfo* SignOn__IdentityInfo_New();
+SignOn__IdentityInfo* SignOn__IdentityInfo_New2(const SignOn__IdentityInfo* other);
+SignOn__IdentityInfo* SignOn__IdentityInfo_New3(const libqt_string caption, const libqt_string userName, const libqt_map /* of libqt_string to SignOn::MechanismsList */ methods);
 void SignOn__IdentityInfo_OperatorAssign(SignOn__IdentityInfo* self, const SignOn__IdentityInfo* other);
 void SignOn__IdentityInfo_SetId(SignOn__IdentityInfo* self, const unsigned int id);
 unsigned int SignOn__IdentityInfo_Id(const SignOn__IdentityInfo* self);

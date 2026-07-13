@@ -20,8 +20,8 @@ typedef struct QSqlRecord QSqlRecord;
 typedef struct QVariant QVariant;
 #endif
 
-QSqlRecord* QSqlRecord_new();
-QSqlRecord* QSqlRecord_new2(const QSqlRecord* other);
+QSqlRecord* QSqlRecord_New();
+QSqlRecord* QSqlRecord_New2(const QSqlRecord* other);
 void QSqlRecord_OperatorAssign(QSqlRecord* self, const QSqlRecord* other);
 void QSqlRecord_Swap(QSqlRecord* self, QSqlRecord* other);
 bool QSqlRecord_OperatorEqual(const QSqlRecord* self, const QSqlRecord* other);

@@ -4,7 +4,7 @@
 #include "libdesktopexecparser.h"
 
 KIO__DesktopExecParser* k_io__desktopexecparser_new(void* service, libqt_list /* of QUrl* */ urls) {
-    return KIO__DesktopExecParser_new((KService*)service, urls);
+    return KIO__DesktopExecParser_New((KService*)service, urls);
 }
 
 void k_io__desktopexecparser_set_urls_are_temp_files(void* self, bool tempFiles) {

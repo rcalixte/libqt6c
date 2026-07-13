@@ -27,9 +27,9 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KCompressionDevice* KCompressionDevice_new(QIODevice* inputDevice, bool autoDeleteInputDevice, int type);
-KCompressionDevice* KCompressionDevice_new2(const libqt_string fileName, int type);
-KCompressionDevice* KCompressionDevice_new3(const libqt_string fileName);
+KCompressionDevice* KCompressionDevice_New(QIODevice* inputDevice, bool autoDeleteInputDevice, int type);
+KCompressionDevice* KCompressionDevice_New2(const libqt_string fileName, int type);
+KCompressionDevice* KCompressionDevice_New3(const libqt_string fileName);
 QMetaObject* KCompressionDevice_MetaObject(const KCompressionDevice* self);
 void* KCompressionDevice_Metacast(KCompressionDevice* self, const char* param1);
 int KCompressionDevice_Metacall(KCompressionDevice* self, int param1, int param2, void** param3);

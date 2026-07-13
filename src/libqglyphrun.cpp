@@ -8,11 +8,11 @@
 #include "libqglyphrun.hpp"
 #include "libqglyphrun.hxx"
 
-QGlyphRun* QGlyphRun_new() {
+QGlyphRun* QGlyphRun_New() {
     return new QGlyphRun();
 }
 
-QGlyphRun* QGlyphRun_new2(const QGlyphRun* other) {
+QGlyphRun* QGlyphRun_New2(const QGlyphRun* other) {
     return new QGlyphRun(*other);
 }
 

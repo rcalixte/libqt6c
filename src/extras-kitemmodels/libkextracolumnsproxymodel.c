@@ -14,11 +14,11 @@
 #include "libkextracolumnsproxymodel.h"
 
 KExtraColumnsProxyModel* k_extracolumnsproxymodel_new() {
-    return KExtraColumnsProxyModel_new();
+    return KExtraColumnsProxyModel_New();
 }
 
 KExtraColumnsProxyModel* k_extracolumnsproxymodel_new2(void* parent) {
-    return KExtraColumnsProxyModel_new2((QObject*)parent);
+    return KExtraColumnsProxyModel_New2((QObject*)parent);
 }
 
 const QMetaObject* k_extracolumnsproxymodel_meta_object(void* self) {

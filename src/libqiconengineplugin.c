@@ -7,11 +7,11 @@
 #include "libqiconengineplugin.h"
 
 QIconEnginePlugin* q_iconengineplugin_new() {
-    return QIconEnginePlugin_new();
+    return QIconEnginePlugin_New();
 }
 
 QIconEnginePlugin* q_iconengineplugin_new2(void* parent) {
-    return QIconEnginePlugin_new2((QObject*)parent);
+    return QIconEnginePlugin_New2((QObject*)parent);
 }
 
 const QMetaObject* q_iconengineplugin_meta_object(void* self) {

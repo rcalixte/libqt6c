@@ -31,8 +31,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-KCoreDirLister* KCoreDirLister_new();
-KCoreDirLister* KCoreDirLister_new2(QObject* parent);
+KCoreDirLister* KCoreDirLister_New();
+KCoreDirLister* KCoreDirLister_New2(QObject* parent);
 QMetaObject* KCoreDirLister_MetaObject(const KCoreDirLister* self);
 void* KCoreDirLister_Metacast(KCoreDirLister* self, const char* param1);
 int KCoreDirLister_Metacall(KCoreDirLister* self, int param1, int param2, void** param3);

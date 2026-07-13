@@ -52,10 +52,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KAboutPluginDialog* KAboutPluginDialog_new(const KPluginMetaData* pluginMetaData, int options);
-KAboutPluginDialog* KAboutPluginDialog_new2(const KPluginMetaData* pluginMetaData);
-KAboutPluginDialog* KAboutPluginDialog_new3(const KPluginMetaData* pluginMetaData, int options, QWidget* parent);
-KAboutPluginDialog* KAboutPluginDialog_new4(const KPluginMetaData* pluginMetaData, QWidget* parent);
+KAboutPluginDialog* KAboutPluginDialog_New(const KPluginMetaData* pluginMetaData, int options);
+KAboutPluginDialog* KAboutPluginDialog_New2(const KPluginMetaData* pluginMetaData);
+KAboutPluginDialog* KAboutPluginDialog_New3(const KPluginMetaData* pluginMetaData, int options, QWidget* parent);
+KAboutPluginDialog* KAboutPluginDialog_New4(const KPluginMetaData* pluginMetaData, QWidget* parent);
 QMetaObject* KAboutPluginDialog_MetaObject(const KAboutPluginDialog* self);
 void* KAboutPluginDialog_Metacast(KAboutPluginDialog* self, const char* param1);
 int KAboutPluginDialog_Metacall(KAboutPluginDialog* self, int param1, int param2, void** param3);

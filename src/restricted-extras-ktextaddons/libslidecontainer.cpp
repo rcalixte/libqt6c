@@ -39,11 +39,11 @@
 #include "libslidecontainer.hpp"
 #include "libslidecontainer.hxx"
 
-TextAddonsWidgets__SlideContainer* TextAddonsWidgets__SlideContainer_new(QWidget* parent) {
+TextAddonsWidgets__SlideContainer* TextAddonsWidgets__SlideContainer_New(QWidget* parent) {
     return new VirtualTextAddonsWidgetsSlideContainer(parent);
 }
 
-TextAddonsWidgets__SlideContainer* TextAddonsWidgets__SlideContainer_new2() {
+TextAddonsWidgets__SlideContainer* TextAddonsWidgets__SlideContainer_New2() {
     return new VirtualTextAddonsWidgetsSlideContainer();
 }
 

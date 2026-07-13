@@ -26,7 +26,7 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-QAmbientSound* QAmbientSound_new(QAudioEngine* engine);
+QAmbientSound* QAmbientSound_New(QAudioEngine* engine);
 QMetaObject* QAmbientSound_MetaObject(const QAmbientSound* self);
 void* QAmbientSound_Metacast(QAmbientSound* self, const char* param1);
 int QAmbientSound_Metacall(QAmbientSound* self, int param1, int param2, void** param3);

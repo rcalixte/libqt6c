@@ -24,11 +24,11 @@
 #include "libqlistview.h"
 
 QListView* q_listview_new(void* parent) {
-    return QListView_new((QWidget*)parent);
+    return QListView_New((QWidget*)parent);
 }
 
 QListView* q_listview_new2() {
-    return QListView_new2();
+    return QListView_New2();
 }
 
 const QMetaObject* q_listview_meta_object(void* self) {

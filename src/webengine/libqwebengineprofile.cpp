@@ -23,20 +23,20 @@
 #include "libqwebengineprofile.hpp"
 #include "libqwebengineprofile.hxx"
 
-QWebEngineProfile* QWebEngineProfile_new() {
+QWebEngineProfile* QWebEngineProfile_New() {
     return new VirtualQWebEngineProfile();
 }
 
-QWebEngineProfile* QWebEngineProfile_new2(const libqt_string name) {
+QWebEngineProfile* QWebEngineProfile_New2(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQWebEngineProfile(name_QString);
 }
 
-QWebEngineProfile* QWebEngineProfile_new3(QObject* parent) {
+QWebEngineProfile* QWebEngineProfile_New3(QObject* parent) {
     return new VirtualQWebEngineProfile(parent);
 }
 
-QWebEngineProfile* QWebEngineProfile_new4(const libqt_string name, QObject* parent) {
+QWebEngineProfile* QWebEngineProfile_New4(const libqt_string name, QObject* parent) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQWebEngineProfile(name_QString, parent);
 }

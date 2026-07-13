@@ -10,41 +10,41 @@
 #include "libqlibrary.hpp"
 #include "libqlibrary.hxx"
 
-QLibrary* QLibrary_new() {
+QLibrary* QLibrary_New() {
     return new VirtualQLibrary();
 }
 
-QLibrary* QLibrary_new2(const libqt_string fileName) {
+QLibrary* QLibrary_New2(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQLibrary(fileName_QString);
 }
 
-QLibrary* QLibrary_new3(const libqt_string fileName, int verNum) {
+QLibrary* QLibrary_New3(const libqt_string fileName, int verNum) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQLibrary(fileName_QString, static_cast<int>(verNum));
 }
 
-QLibrary* QLibrary_new4(const libqt_string fileName, const libqt_string version) {
+QLibrary* QLibrary_New4(const libqt_string fileName, const libqt_string version) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QString version_QString = QString::fromUtf8(version.data, version.len);
     return new VirtualQLibrary(fileName_QString, version_QString);
 }
 
-QLibrary* QLibrary_new5(QObject* parent) {
+QLibrary* QLibrary_New5(QObject* parent) {
     return new VirtualQLibrary(parent);
 }
 
-QLibrary* QLibrary_new6(const libqt_string fileName, QObject* parent) {
+QLibrary* QLibrary_New6(const libqt_string fileName, QObject* parent) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQLibrary(fileName_QString, parent);
 }
 
-QLibrary* QLibrary_new7(const libqt_string fileName, int verNum, QObject* parent) {
+QLibrary* QLibrary_New7(const libqt_string fileName, int verNum, QObject* parent) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQLibrary(fileName_QString, static_cast<int>(verNum), parent);
 }
 
-QLibrary* QLibrary_new8(const libqt_string fileName, const libqt_string version, QObject* parent) {
+QLibrary* QLibrary_New8(const libqt_string fileName, const libqt_string version, QObject* parent) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QString version_QString = QString::fromUtf8(version.data, version.len);
     return new VirtualQLibrary(fileName_QString, version_QString, parent);

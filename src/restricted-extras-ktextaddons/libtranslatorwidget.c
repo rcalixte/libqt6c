@@ -25,11 +25,11 @@
 #include "libtranslatorwidget.h"
 
 TextTranslator__TranslatorTextEdit* k_texttranslator__translatortextedit_new(void* parent) {
-    return TextTranslator__TranslatorTextEdit_new((QWidget*)parent);
+    return TextTranslator__TranslatorTextEdit_New((QWidget*)parent);
 }
 
 TextTranslator__TranslatorTextEdit* k_texttranslator__translatortextedit_new2() {
-    return TextTranslator__TranslatorTextEdit_new2();
+    return TextTranslator__TranslatorTextEdit_New2();
 }
 
 const QMetaObject* k_texttranslator__translatortextedit_meta_object(void* self) {
@@ -2885,19 +2885,19 @@ void k_texttranslator__translatortextedit_delete(void* self) {
 }
 
 TextTranslator__TranslatorWidget* k_texttranslator__translatorwidget_new(void* parent) {
-    return TextTranslator__TranslatorWidget_new((QWidget*)parent);
+    return TextTranslator__TranslatorWidget_New((QWidget*)parent);
 }
 
 TextTranslator__TranslatorWidget* k_texttranslator__translatorwidget_new2() {
-    return TextTranslator__TranslatorWidget_new2();
+    return TextTranslator__TranslatorWidget_New2();
 }
 
 TextTranslator__TranslatorWidget* k_texttranslator__translatorwidget_new3(const char* text) {
-    return TextTranslator__TranslatorWidget_new3(qstring(text));
+    return TextTranslator__TranslatorWidget_New3(qstring(text));
 }
 
 TextTranslator__TranslatorWidget* k_texttranslator__translatorwidget_new4(const char* text, void* parent) {
-    return TextTranslator__TranslatorWidget_new4(qstring(text), (QWidget*)parent);
+    return TextTranslator__TranslatorWidget_New4(qstring(text), (QWidget*)parent);
 }
 
 const QMetaObject* k_texttranslator__translatorwidget_meta_object(void* self) {

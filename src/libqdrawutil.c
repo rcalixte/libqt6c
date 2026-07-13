@@ -2,27 +2,27 @@
 #include "libqdrawutil.h"
 
 QTileRules* q_tilerules_new(void* other) {
-    return QTileRules_new((QTileRules*)other);
+    return QTileRules_New((QTileRules*)other);
 }
 
 QTileRules* q_tilerules_new2(void* other) {
-    return QTileRules_new2((QTileRules*)other);
+    return QTileRules_New2((QTileRules*)other);
 }
 
 QTileRules* q_tilerules_new3(int32_t horizontalRule, int32_t verticalRule) {
-    return QTileRules_new3(horizontalRule, verticalRule);
+    return QTileRules_New3(horizontalRule, verticalRule);
 }
 
 QTileRules* q_tilerules_new4() {
-    return QTileRules_new4();
+    return QTileRules_New4();
 }
 
 QTileRules* q_tilerules_new5(void* param1) {
-    return QTileRules_new5((QTileRules*)param1);
+    return QTileRules_New5((QTileRules*)param1);
 }
 
 QTileRules* q_tilerules_new6(int32_t rule) {
-    return QTileRules_new6(rule);
+    return QTileRules_New6(rule);
 }
 
 void q_tilerules_copy_assign(void* self, void* other) {

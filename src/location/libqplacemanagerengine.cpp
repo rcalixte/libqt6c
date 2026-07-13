@@ -30,7 +30,7 @@
 #include "libqplacemanagerengine.hpp"
 #include "libqplacemanagerengine.hxx"
 
-QPlaceManagerEngine* QPlaceManagerEngine_new(const libqt_map /* of libqt_string to QVariant* */ parameters) {
+QPlaceManagerEngine* QPlaceManagerEngine_New(const libqt_map /* of libqt_string to QVariant* */ parameters) {
     QMap<QString, QVariant> parameters_QMap;
     libqt_string* parameters_karr = static_cast<libqt_string*>(parameters.keys);
     QVariant** parameters_varr = static_cast<QVariant**>(parameters.values);
@@ -41,7 +41,7 @@ QPlaceManagerEngine* QPlaceManagerEngine_new(const libqt_map /* of libqt_string 
     return new VirtualQPlaceManagerEngine(parameters_QMap);
 }
 
-QPlaceManagerEngine* QPlaceManagerEngine_new2(const libqt_map /* of libqt_string to QVariant* */ parameters, QObject* parent) {
+QPlaceManagerEngine* QPlaceManagerEngine_New2(const libqt_map /* of libqt_string to QVariant* */ parameters, QObject* parent) {
     QMap<QString, QVariant> parameters_QMap;
     libqt_string* parameters_karr = static_cast<libqt_string*>(parameters.keys);
     QVariant** parameters_varr = static_cast<QVariant**>(parameters.values);

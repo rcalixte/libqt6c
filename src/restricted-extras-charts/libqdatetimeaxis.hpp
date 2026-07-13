@@ -26,8 +26,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QDateTimeAxis* QDateTimeAxis_new();
-QDateTimeAxis* QDateTimeAxis_new2(QObject* parent);
+QDateTimeAxis* QDateTimeAxis_New();
+QDateTimeAxis* QDateTimeAxis_New2(QObject* parent);
 QMetaObject* QDateTimeAxis_MetaObject(const QDateTimeAxis* self);
 void* QDateTimeAxis_Metacast(QDateTimeAxis* self, const char* param1);
 int QDateTimeAxis_Metacall(QDateTimeAxis* self, int param1, int param2, void** param3);

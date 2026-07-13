@@ -9,7 +9,7 @@
 #include "libktoolbarspaceraction.h"
 
 KToolBarSpacerAction* k_toolbarspaceraction_new(void* parent) {
-    return KToolBarSpacerAction_new((QObject*)parent);
+    return KToolBarSpacerAction_New((QObject*)parent);
 }
 
 const QMetaObject* k_toolbarspaceraction_meta_object(void* self) {

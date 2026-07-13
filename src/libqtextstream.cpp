@@ -9,20 +9,20 @@
 #include "libqtextstream.hpp"
 #include "libqtextstream.hxx"
 
-QTextStream* QTextStream_new() {
+QTextStream* QTextStream_New() {
     return new QTextStream();
 }
 
-QTextStream* QTextStream_new2(QIODevice* device) {
+QTextStream* QTextStream_New2(QIODevice* device) {
     return new QTextStream(device);
 }
 
-QTextStream* QTextStream_new3(const libqt_string array) {
+QTextStream* QTextStream_New3(const libqt_string array) {
     QByteArray array_QByteArray(array.data, array.len);
     return new QTextStream(array_QByteArray);
 }
 
-QTextStream* QTextStream_new4(const libqt_string array, int openMode) {
+QTextStream* QTextStream_New4(const libqt_string array, int openMode) {
     QByteArray array_QByteArray(array.data, array.len);
     return new QTextStream(array_QByteArray, static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(openMode));
 }

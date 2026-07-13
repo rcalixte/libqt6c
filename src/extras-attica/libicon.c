@@ -3,11 +3,11 @@
 #include "libicon.h"
 
 Attica__Icon* k_attica__icon_new() {
-    return Attica__Icon_new();
+    return Attica__Icon_New();
 }
 
 Attica__Icon* k_attica__icon_new2(void* other) {
-    return Attica__Icon_new2((Attica__Icon*)other);
+    return Attica__Icon_New2((Attica__Icon*)other);
 }
 
 void k_attica__icon_operator_assign(void* self, void* other) {

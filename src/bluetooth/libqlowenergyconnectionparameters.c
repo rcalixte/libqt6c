@@ -2,11 +2,11 @@
 #include "libqlowenergyconnectionparameters.h"
 
 QLowEnergyConnectionParameters* q_lowenergyconnectionparameters_new() {
-    return QLowEnergyConnectionParameters_new();
+    return QLowEnergyConnectionParameters_New();
 }
 
 QLowEnergyConnectionParameters* q_lowenergyconnectionparameters_new2(void* other) {
-    return QLowEnergyConnectionParameters_new2((QLowEnergyConnectionParameters*)other);
+    return QLowEnergyConnectionParameters_New2((QLowEnergyConnectionParameters*)other);
 }
 
 void q_lowenergyconnectionparameters_operator_assign(void* self, void* other) {

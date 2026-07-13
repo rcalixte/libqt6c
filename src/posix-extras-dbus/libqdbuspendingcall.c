@@ -8,7 +8,7 @@
 #include "libqdbuspendingcall.h"
 
 QDBusPendingCall* q_dbuspendingcall_new(void* other) {
-    return QDBusPendingCall_new((QDBusPendingCall*)other);
+    return QDBusPendingCall_New((QDBusPendingCall*)other);
 }
 
 void q_dbuspendingcall_operator_assign(void* self, void* other) {
@@ -56,11 +56,11 @@ void q_dbuspendingcall_delete(void* self) {
 }
 
 QDBusPendingCallWatcher* q_dbuspendingcallwatcher_new(void* call) {
-    return QDBusPendingCallWatcher_new((QDBusPendingCall*)call);
+    return QDBusPendingCallWatcher_New((QDBusPendingCall*)call);
 }
 
 QDBusPendingCallWatcher* q_dbuspendingcallwatcher_new2(void* call, void* parent) {
-    return QDBusPendingCallWatcher_new2((QDBusPendingCall*)call, (QObject*)parent);
+    return QDBusPendingCallWatcher_New2((QDBusPendingCall*)call, (QObject*)parent);
 }
 
 const QMetaObject* q_dbuspendingcallwatcher_meta_object(void* self) {

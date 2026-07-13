@@ -16,11 +16,11 @@
 #include "libqtexttospeechengine.hpp"
 #include "libqtexttospeechengine.hxx"
 
-QTextToSpeechEngine* QTextToSpeechEngine_new() {
+QTextToSpeechEngine* QTextToSpeechEngine_New() {
     return new VirtualQTextToSpeechEngine();
 }
 
-QTextToSpeechEngine* QTextToSpeechEngine_new2(QObject* parent) {
+QTextToSpeechEngine* QTextToSpeechEngine_New2(QObject* parent) {
     return new VirtualQTextToSpeechEngine(parent);
 }
 

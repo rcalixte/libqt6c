@@ -11,7 +11,7 @@
 #include "libqgeoserviceprovider.h"
 
 QGeoServiceProvider* q_geoserviceprovider_new(const char* providerName) {
-    return QGeoServiceProvider_new(qstring(providerName));
+    return QGeoServiceProvider_New(qstring(providerName));
 }
 
 QGeoServiceProvider* q_geoserviceprovider_new2(const char* providerName, libqt_map /* of const char* to QVariant* */ parameters) {
@@ -38,7 +38,7 @@ QGeoServiceProvider* q_geoserviceprovider_new2(const char* providerName, libqt_m
         parameters_vdest[i] = parameters_varr[i];
     }
 
-    QGeoServiceProvider* _out = QGeoServiceProvider_new2(qstring(providerName), parameters_ret);
+    QGeoServiceProvider* _out = QGeoServiceProvider_New2(qstring(providerName), parameters_ret);
     free(parameters_ret.keys);
     free(parameters_ret.values);
     return _out;
@@ -68,7 +68,7 @@ QGeoServiceProvider* q_geoserviceprovider_new3(const char* providerName, libqt_m
         parameters_vdest[i] = parameters_varr[i];
     }
 
-    QGeoServiceProvider* _out = QGeoServiceProvider_new3(qstring(providerName), parameters_ret, allowExperimental);
+    QGeoServiceProvider* _out = QGeoServiceProvider_New3(qstring(providerName), parameters_ret, allowExperimental);
     free(parameters_ret.keys);
     free(parameters_ret.values);
     return _out;

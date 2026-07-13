@@ -21,8 +21,8 @@ typedef Attica::Config Attica__Config;
 typedef struct Attica__Config Attica__Config;
 #endif
 
-Attica__Config* Attica__Config_new();
-Attica__Config* Attica__Config_new2(const Attica__Config* other);
+Attica__Config* Attica__Config_New();
+Attica__Config* Attica__Config_New2(const Attica__Config* other);
 void Attica__Config_OperatorAssign(Attica__Config* self, const Attica__Config* other);
 libqt_string Attica__Config_Contact(const Attica__Config* self);
 libqt_string Attica__Config_Host(const Attica__Config* self);

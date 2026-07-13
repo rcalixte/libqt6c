@@ -15,11 +15,11 @@
 #include "libaccount_service.hpp"
 #include "libaccount_service.hxx"
 
-Accounts__AccountService* Accounts__AccountService_new(Accounts__Account* account, const Accounts__Service* service) {
+Accounts__AccountService* Accounts__AccountService_New(Accounts__Account* account, const Accounts__Service* service) {
     return new VirtualAccountsAccountService(account, *service);
 }
 
-Accounts__AccountService* Accounts__AccountService_new2(Accounts__Account* account, const Accounts__Service* service, QObject* parent) {
+Accounts__AccountService* Accounts__AccountService_New2(Accounts__Account* account, const Accounts__Service* service, QObject* parent) {
     return new VirtualAccountsAccountService(account, *service, parent);
 }
 

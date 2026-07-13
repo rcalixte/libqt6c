@@ -7,39 +7,39 @@
 #include "libqshortcut.h"
 
 QShortcut* q_shortcut_new(void* parent) {
-    return QShortcut_new((QObject*)parent);
+    return QShortcut_New((QObject*)parent);
 }
 
 QShortcut* q_shortcut_new2(void* key, void* parent) {
-    return QShortcut_new2((QKeySequence*)key, (QObject*)parent);
+    return QShortcut_New2((QKeySequence*)key, (QObject*)parent);
 }
 
 QShortcut* q_shortcut_new3(int32_t key, void* parent) {
-    return QShortcut_new3(key, (QObject*)parent);
+    return QShortcut_New3(key, (QObject*)parent);
 }
 
 QShortcut* q_shortcut_new4(void* key, void* parent, const char* member) {
-    return QShortcut_new4((QKeySequence*)key, (QObject*)parent, member);
+    return QShortcut_New4((QKeySequence*)key, (QObject*)parent, member);
 }
 
 QShortcut* q_shortcut_new5(void* key, void* parent, const char* member, const char* ambiguousMember) {
-    return QShortcut_new5((QKeySequence*)key, (QObject*)parent, member, ambiguousMember);
+    return QShortcut_New5((QKeySequence*)key, (QObject*)parent, member, ambiguousMember);
 }
 
 QShortcut* q_shortcut_new6(void* key, void* parent, const char* member, const char* ambiguousMember, int32_t context) {
-    return QShortcut_new6((QKeySequence*)key, (QObject*)parent, member, ambiguousMember, context);
+    return QShortcut_New6((QKeySequence*)key, (QObject*)parent, member, ambiguousMember, context);
 }
 
 QShortcut* q_shortcut_new7(int32_t key, void* parent, const char* member) {
-    return QShortcut_new7(key, (QObject*)parent, member);
+    return QShortcut_New7(key, (QObject*)parent, member);
 }
 
 QShortcut* q_shortcut_new8(int32_t key, void* parent, const char* member, const char* ambiguousMember) {
-    return QShortcut_new8(key, (QObject*)parent, member, ambiguousMember);
+    return QShortcut_New8(key, (QObject*)parent, member, ambiguousMember);
 }
 
 QShortcut* q_shortcut_new9(int32_t key, void* parent, const char* member, const char* ambiguousMember, int32_t context) {
-    return QShortcut_new9(key, (QObject*)parent, member, ambiguousMember, context);
+    return QShortcut_New9(key, (QObject*)parent, member, ambiguousMember, context);
 }
 
 const QMetaObject* q_shortcut_meta_object(void* self) {

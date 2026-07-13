@@ -12,11 +12,11 @@
 #include "libqscilexersrec.h"
 
 QsciLexerSRec* q_scilexersrec_new() {
-    return QsciLexerSRec_new();
+    return QsciLexerSRec_New();
 }
 
 QsciLexerSRec* q_scilexersrec_new2(void* parent) {
-    return QsciLexerSRec_new2((QObject*)parent);
+    return QsciLexerSRec_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexersrec_meta_object(void* self) {

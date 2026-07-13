@@ -14,7 +14,7 @@
 #include "libdndpopupmenuplugin.hpp"
 #include "libdndpopupmenuplugin.hxx"
 
-KIO__DndPopupMenuPlugin* KIO__DndPopupMenuPlugin_new(QObject* parent) {
+KIO__DndPopupMenuPlugin* KIO__DndPopupMenuPlugin_New(QObject* parent) {
     return new VirtualKIODndPopupMenuPlugin(parent);
 }
 

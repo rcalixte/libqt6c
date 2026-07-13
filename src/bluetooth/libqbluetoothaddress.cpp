@@ -4,20 +4,20 @@
 #include "libqbluetoothaddress.hpp"
 #include "libqbluetoothaddress.hxx"
 
-QBluetoothAddress* QBluetoothAddress_new() {
+QBluetoothAddress* QBluetoothAddress_New() {
     return new QBluetoothAddress();
 }
 
-QBluetoothAddress* QBluetoothAddress_new2(unsigned long long address) {
+QBluetoothAddress* QBluetoothAddress_New2(unsigned long long address) {
     return new QBluetoothAddress(static_cast<quint64>(address));
 }
 
-QBluetoothAddress* QBluetoothAddress_new3(const libqt_string address) {
+QBluetoothAddress* QBluetoothAddress_New3(const libqt_string address) {
     QString address_QString = QString::fromUtf8(address.data, address.len);
     return new QBluetoothAddress(address_QString);
 }
 
-QBluetoothAddress* QBluetoothAddress_new4(const QBluetoothAddress* other) {
+QBluetoothAddress* QBluetoothAddress_New4(const QBluetoothAddress* other) {
     return new QBluetoothAddress(*other);
 }
 

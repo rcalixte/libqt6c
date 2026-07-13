@@ -9,7 +9,7 @@
 #include "libkarchivefile.hpp"
 #include "libkarchivefile.hxx"
 
-KArchiveFile* KArchiveFile_new(KArchive* archive, const libqt_string name, int access, const QDateTime* date, const libqt_string user, const libqt_string group, const libqt_string symlink, long long pos, long long size) {
+KArchiveFile* KArchiveFile_New(KArchive* archive, const libqt_string name, int access, const QDateTime* date, const libqt_string user, const libqt_string group, const libqt_string symlink, long long pos, long long size) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString user_QString = QString::fromUtf8(user.data, user.len);
     QString group_QString = QString::fromUtf8(group.data, group.len);
@@ -17,7 +17,7 @@ KArchiveFile* KArchiveFile_new(KArchive* archive, const libqt_string name, int a
     return new VirtualKArchiveFile(archive, name_QString, static_cast<int>(access), *date, user_QString, group_QString, symlink_QString, static_cast<qint64>(pos), static_cast<qint64>(size));
 }
 
-KArchiveFile* KArchiveFile_new2(const KArchiveFile* param1) {
+KArchiveFile* KArchiveFile_New2(const KArchiveFile* param1) {
     return new VirtualKArchiveFile(*param1);
 }
 

@@ -21,11 +21,11 @@
 #include "libabstractformeditor.h"
 
 QDesignerFormEditorInterface* q_designerformeditorinterface_new() {
-    return QDesignerFormEditorInterface_new();
+    return QDesignerFormEditorInterface_New();
 }
 
 QDesignerFormEditorInterface* q_designerformeditorinterface_new2(void* parent) {
-    return QDesignerFormEditorInterface_new2((QObject*)parent);
+    return QDesignerFormEditorInterface_New2((QObject*)parent);
 }
 
 const QMetaObject* q_designerformeditorinterface_meta_object(void* self) {

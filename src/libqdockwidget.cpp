@@ -39,30 +39,30 @@
 #include "libqdockwidget.hpp"
 #include "libqdockwidget.hxx"
 
-QDockWidget* QDockWidget_new(QWidget* parent) {
+QDockWidget* QDockWidget_New(QWidget* parent) {
     return new VirtualQDockWidget(parent);
 }
 
-QDockWidget* QDockWidget_new2(const libqt_string title) {
+QDockWidget* QDockWidget_New2(const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualQDockWidget(title_QString);
 }
 
-QDockWidget* QDockWidget_new3() {
+QDockWidget* QDockWidget_New3() {
     return new VirtualQDockWidget();
 }
 
-QDockWidget* QDockWidget_new4(const libqt_string title, QWidget* parent) {
+QDockWidget* QDockWidget_New4(const libqt_string title, QWidget* parent) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualQDockWidget(title_QString, parent);
 }
 
-QDockWidget* QDockWidget_new5(const libqt_string title, QWidget* parent, int flags) {
+QDockWidget* QDockWidget_New5(const libqt_string title, QWidget* parent, int flags) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualQDockWidget(title_QString, parent, static_cast<Qt::WindowFlags>(flags));
 }
 
-QDockWidget* QDockWidget_new6(QWidget* parent, int flags) {
+QDockWidget* QDockWidget_New6(QWidget* parent, int flags) {
     return new VirtualQDockWidget(parent, static_cast<Qt::WindowFlags>(flags));
 }
 

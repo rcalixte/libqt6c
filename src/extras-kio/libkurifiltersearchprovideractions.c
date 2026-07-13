@@ -7,11 +7,11 @@
 #include "libkurifiltersearchprovideractions.h"
 
 KIO__KUriFilterSearchProviderActions* k_io__kurifiltersearchprovideractions_new() {
-    return KIO__KUriFilterSearchProviderActions_new();
+    return KIO__KUriFilterSearchProviderActions_New();
 }
 
 KIO__KUriFilterSearchProviderActions* k_io__kurifiltersearchprovideractions_new2(void* parent) {
-    return KIO__KUriFilterSearchProviderActions_new2((QObject*)parent);
+    return KIO__KUriFilterSearchProviderActions_New2((QObject*)parent);
 }
 
 const QMetaObject* k_io__kurifiltersearchprovideractions_meta_object(void* self) {

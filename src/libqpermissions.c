@@ -3,11 +3,11 @@
 #include "libqpermissions.h"
 
 QPermission* q_permission_new() {
-    return QPermission_new();
+    return QPermission_New();
 }
 
 QPermission* q_permission_new2(void* param1) {
-    return QPermission_new2((QPermission*)param1);
+    return QPermission_New2((QPermission*)param1);
 }
 
 int32_t q_permission_status(void* self) {
@@ -23,11 +23,11 @@ void q_permission_delete(void* self) {
 }
 
 QLocationPermission* q_locationpermission_new() {
-    return QLocationPermission_new();
+    return QLocationPermission_New();
 }
 
 QLocationPermission* q_locationpermission_new2(void* other) {
-    return QLocationPermission_new2((QLocationPermission*)other);
+    return QLocationPermission_New2((QLocationPermission*)other);
 }
 
 void q_locationpermission_set_accuracy(void* self, uint8_t accuracy) {
@@ -59,11 +59,11 @@ void q_locationpermission_delete(void* self) {
 }
 
 QCalendarPermission* q_calendarpermission_new() {
-    return QCalendarPermission_new();
+    return QCalendarPermission_New();
 }
 
 QCalendarPermission* q_calendarpermission_new2(void* other) {
-    return QCalendarPermission_new2((QCalendarPermission*)other);
+    return QCalendarPermission_New2((QCalendarPermission*)other);
 }
 
 void q_calendarpermission_set_access_mode(void* self, uint8_t mode) {
@@ -87,11 +87,11 @@ void q_calendarpermission_delete(void* self) {
 }
 
 QContactsPermission* q_contactspermission_new() {
-    return QContactsPermission_new();
+    return QContactsPermission_New();
 }
 
 QContactsPermission* q_contactspermission_new2(void* other) {
-    return QContactsPermission_new2((QContactsPermission*)other);
+    return QContactsPermission_New2((QContactsPermission*)other);
 }
 
 void q_contactspermission_set_access_mode(void* self, uint8_t mode) {
@@ -115,11 +115,11 @@ void q_contactspermission_delete(void* self) {
 }
 
 QBluetoothPermission* q_bluetoothpermission_new() {
-    return QBluetoothPermission_new();
+    return QBluetoothPermission_New();
 }
 
 QBluetoothPermission* q_bluetoothpermission_new2(void* other) {
-    return QBluetoothPermission_new2((QBluetoothPermission*)other);
+    return QBluetoothPermission_New2((QBluetoothPermission*)other);
 }
 
 void q_bluetoothpermission_set_communication_modes(void* self, uint8_t modes) {
@@ -143,11 +143,11 @@ void q_bluetoothpermission_delete(void* self) {
 }
 
 QCameraPermission* q_camerapermission_new() {
-    return QCameraPermission_new();
+    return QCameraPermission_New();
 }
 
 QCameraPermission* q_camerapermission_new2(void* other) {
-    return QCameraPermission_new2((QCameraPermission*)other);
+    return QCameraPermission_New2((QCameraPermission*)other);
 }
 
 void q_camerapermission_operator_assign(void* self, void* other) {
@@ -163,11 +163,11 @@ void q_camerapermission_delete(void* self) {
 }
 
 QMicrophonePermission* q_microphonepermission_new() {
-    return QMicrophonePermission_new();
+    return QMicrophonePermission_New();
 }
 
 QMicrophonePermission* q_microphonepermission_new2(void* other) {
-    return QMicrophonePermission_new2((QMicrophonePermission*)other);
+    return QMicrophonePermission_New2((QMicrophonePermission*)other);
 }
 
 void q_microphonepermission_operator_assign(void* self, void* other) {

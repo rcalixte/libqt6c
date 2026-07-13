@@ -6,11 +6,11 @@
 #include "libqssldiffiehellmanparameters.hpp"
 #include "libqssldiffiehellmanparameters.hxx"
 
-QSslDiffieHellmanParameters* QSslDiffieHellmanParameters_new() {
+QSslDiffieHellmanParameters* QSslDiffieHellmanParameters_New() {
     return new QSslDiffieHellmanParameters();
 }
 
-QSslDiffieHellmanParameters* QSslDiffieHellmanParameters_new2(const QSslDiffieHellmanParameters* other) {
+QSslDiffieHellmanParameters* QSslDiffieHellmanParameters_New2(const QSslDiffieHellmanParameters* other) {
     return new QSslDiffieHellmanParameters(*other);
 }
 

@@ -4,35 +4,35 @@
 #include "libpredicate.h"
 
 Solid__Predicate* k_solid__predicate_new() {
-    return Solid__Predicate_new();
+    return Solid__Predicate_New();
 }
 
 Solid__Predicate* k_solid__predicate_new2(void* other) {
-    return Solid__Predicate_new2((Solid__Predicate*)other);
+    return Solid__Predicate_New2((Solid__Predicate*)other);
 }
 
 Solid__Predicate* k_solid__predicate_new3(int32_t* ifaceType, const char* property, void* value) {
-    return Solid__Predicate_new3(ifaceType, qstring(property), (QVariant*)value);
+    return Solid__Predicate_New3(ifaceType, qstring(property), (QVariant*)value);
 }
 
 Solid__Predicate* k_solid__predicate_new4(const char* ifaceName, const char* property, void* value) {
-    return Solid__Predicate_new4(qstring(ifaceName), qstring(property), (QVariant*)value);
+    return Solid__Predicate_New4(qstring(ifaceName), qstring(property), (QVariant*)value);
 }
 
 Solid__Predicate* k_solid__predicate_new5(int32_t* ifaceType) {
-    return Solid__Predicate_new5(ifaceType);
+    return Solid__Predicate_New5(ifaceType);
 }
 
 Solid__Predicate* k_solid__predicate_new6(const char* ifaceName) {
-    return Solid__Predicate_new6(qstring(ifaceName));
+    return Solid__Predicate_New6(qstring(ifaceName));
 }
 
 Solid__Predicate* k_solid__predicate_new7(int32_t* ifaceType, const char* property, void* value, int32_t compOperator) {
-    return Solid__Predicate_new7(ifaceType, qstring(property), (QVariant*)value, compOperator);
+    return Solid__Predicate_New7(ifaceType, qstring(property), (QVariant*)value, compOperator);
 }
 
 Solid__Predicate* k_solid__predicate_new8(const char* ifaceName, const char* property, void* value, int32_t compOperator) {
-    return Solid__Predicate_new8(qstring(ifaceName), qstring(property), (QVariant*)value, compOperator);
+    return Solid__Predicate_New8(qstring(ifaceName), qstring(property), (QVariant*)value, compOperator);
 }
 
 void k_solid__predicate_operator_assign(void* self, void* other) {

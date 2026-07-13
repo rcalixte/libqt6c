@@ -32,8 +32,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QApplication* QApplication_new(int* argc, char** argv);
-QApplication* QApplication_new2(int* argc, char** argv, int param3);
+QApplication* QApplication_New(int* argc, char** argv);
+QApplication* QApplication_New2(int* argc, char** argv, int param3);
 QMetaObject* QApplication_MetaObject(const QApplication* self);
 void* QApplication_Metacast(QApplication* self, const char* param1);
 int QApplication_Metacall(QApplication* self, int param1, int param2, void** param3);

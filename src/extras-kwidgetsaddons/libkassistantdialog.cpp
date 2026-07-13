@@ -43,15 +43,15 @@
 #include "libkassistantdialog.hpp"
 #include "libkassistantdialog.hxx"
 
-KAssistantDialog* KAssistantDialog_new(QWidget* parent) {
+KAssistantDialog* KAssistantDialog_New(QWidget* parent) {
     return new VirtualKAssistantDialog(parent);
 }
 
-KAssistantDialog* KAssistantDialog_new2() {
+KAssistantDialog* KAssistantDialog_New2() {
     return new VirtualKAssistantDialog();
 }
 
-KAssistantDialog* KAssistantDialog_new3(QWidget* parent, int flags) {
+KAssistantDialog* KAssistantDialog_New3(QWidget* parent, int flags) {
     return new VirtualKAssistantDialog(parent, static_cast<Qt::WindowFlags>(flags));
 }
 

@@ -7,11 +7,11 @@
 #include "libqstyleplugin.h"
 
 QStylePlugin* q_styleplugin_new() {
-    return QStylePlugin_new();
+    return QStylePlugin_New();
 }
 
 QStylePlugin* q_styleplugin_new2(void* parent) {
-    return QStylePlugin_new2((QObject*)parent);
+    return QStylePlugin_New2((QObject*)parent);
 }
 
 const QMetaObject* q_styleplugin_meta_object(void* self) {

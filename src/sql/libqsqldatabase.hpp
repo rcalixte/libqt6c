@@ -29,8 +29,8 @@ QSqlDriver* QSqlDriverCreatorBase_CreateObject(const QSqlDriverCreatorBase* self
 void QSqlDriverCreatorBase_OperatorAssign(QSqlDriverCreatorBase* self, const QSqlDriverCreatorBase* param1);
 void QSqlDriverCreatorBase_Delete(QSqlDriverCreatorBase* self);
 
-QSqlDatabase* QSqlDatabase_new();
-QSqlDatabase* QSqlDatabase_new2(const QSqlDatabase* other);
+QSqlDatabase* QSqlDatabase_New();
+QSqlDatabase* QSqlDatabase_New2(const QSqlDatabase* other);
 void QSqlDatabase_OperatorAssign(QSqlDatabase* self, const QSqlDatabase* other);
 bool QSqlDatabase_Open(QSqlDatabase* self);
 bool QSqlDatabase_Open2(QSqlDatabase* self, const libqt_string user, const libqt_string password);

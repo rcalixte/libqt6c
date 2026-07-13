@@ -18,11 +18,11 @@
 #include "libkcolorcombo.h"
 
 KColorCombo* k_colorcombo_new(void* parent) {
-    return KColorCombo_new((QWidget*)parent);
+    return KColorCombo_New((QWidget*)parent);
 }
 
 KColorCombo* k_colorcombo_new2() {
-    return KColorCombo_new2();
+    return KColorCombo_New2();
 }
 
 const QMetaObject* k_colorcombo_meta_object(void* self) {

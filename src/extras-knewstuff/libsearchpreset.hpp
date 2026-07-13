@@ -23,7 +23,7 @@ typedef struct KNSCore__SearchPreset KNSCore__SearchPreset;
 typedef struct KNSCore__SearchRequest KNSCore__SearchRequest;
 #endif
 
-KNSCore__SearchPreset* KNSCore__SearchPreset_new(const KNSCore__SearchPreset* param1);
+KNSCore__SearchPreset* KNSCore__SearchPreset_New(const KNSCore__SearchPreset* param1);
 KNSCore__SearchRequest* KNSCore__SearchPreset_Request(const KNSCore__SearchPreset* self);
 libqt_string KNSCore__SearchPreset_DisplayName(const KNSCore__SearchPreset* self);
 libqt_string KNSCore__SearchPreset_IconName(const KNSCore__SearchPreset* self);

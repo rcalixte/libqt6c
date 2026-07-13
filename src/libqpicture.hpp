@@ -24,9 +24,9 @@ typedef struct QPoint QPoint;
 typedef struct QRect QRect;
 #endif
 
-QPicture* QPicture_new();
-QPicture* QPicture_new2(const QPicture* param1);
-QPicture* QPicture_new3(int formatVersion);
+QPicture* QPicture_New();
+QPicture* QPicture_New2(const QPicture* param1);
+QPicture* QPicture_New3(int formatVersion);
 bool QPicture_IsNull(const QPicture* self);
 int QPicture_DevType(const QPicture* self);
 unsigned int QPicture_Size(const QPicture* self);

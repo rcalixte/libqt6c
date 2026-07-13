@@ -16,7 +16,7 @@
 #include "libselectspecialchardialog.h"
 
 TextAddonsWidgets__SelectSpecialCharDialog* k_textaddonswidgets__selectspecialchardialog_new(void* parent) {
-    return TextAddonsWidgets__SelectSpecialCharDialog_new((QWidget*)parent);
+    return TextAddonsWidgets__SelectSpecialCharDialog_New((QWidget*)parent);
 }
 
 const QMetaObject* k_textaddonswidgets__selectspecialchardialog_meta_object(void* self) {

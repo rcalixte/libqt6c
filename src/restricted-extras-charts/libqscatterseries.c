@@ -11,11 +11,11 @@
 #include "libqscatterseries.h"
 
 QScatterSeries* q_scatterseries_new() {
-    return QScatterSeries_new();
+    return QScatterSeries_New();
 }
 
 QScatterSeries* q_scatterseries_new2(void* parent) {
-    return QScatterSeries_new2((QObject*)parent);
+    return QScatterSeries_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scatterseries_meta_object(void* self) {

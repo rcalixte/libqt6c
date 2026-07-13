@@ -12,12 +12,12 @@
 #include "libqdbusconnection.hpp"
 #include "libqdbusconnection.hxx"
 
-QDBusConnection* QDBusConnection_new(const libqt_string name) {
+QDBusConnection* QDBusConnection_New(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QDBusConnection(name_QString);
 }
 
-QDBusConnection* QDBusConnection_new2(const QDBusConnection* other) {
+QDBusConnection* QDBusConnection_New2(const QDBusConnection* other) {
     return new QDBusConnection(*other);
 }
 

@@ -18,8 +18,8 @@ extern "C" {
 typedef struct KSharedDataCache KSharedDataCache;
 #endif
 
-KSharedDataCache* KSharedDataCache_new(const libqt_string cacheName, unsigned int defaultCacheSize);
-KSharedDataCache* KSharedDataCache_new2(const libqt_string cacheName, unsigned int defaultCacheSize, unsigned int expectedItemSize);
+KSharedDataCache* KSharedDataCache_New(const libqt_string cacheName, unsigned int defaultCacheSize);
+KSharedDataCache* KSharedDataCache_New2(const libqt_string cacheName, unsigned int defaultCacheSize, unsigned int expectedItemSize);
 int KSharedDataCache_EvictionPolicy(const KSharedDataCache* self);
 void KSharedDataCache_SetEvictionPolicy(KSharedDataCache* self, int newPolicy);
 bool KSharedDataCache_Insert(KSharedDataCache* self, const libqt_string key, const libqt_string data);

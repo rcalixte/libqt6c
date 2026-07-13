@@ -13,7 +13,7 @@
 #include "libabstractformbuilder.hpp"
 #include "libabstractformbuilder.hxx"
 
-QAbstractFormBuilder* QAbstractFormBuilder_new() {
+QAbstractFormBuilder* QAbstractFormBuilder_New() {
     return new VirtualQAbstractFormBuilder();
 }
 

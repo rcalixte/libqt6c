@@ -28,8 +28,8 @@ typedef struct QVariant QVariant;
 typedef struct QVoice QVoice;
 #endif
 
-QTextToSpeechEngine* QTextToSpeechEngine_new();
-QTextToSpeechEngine* QTextToSpeechEngine_new2(QObject* parent);
+QTextToSpeechEngine* QTextToSpeechEngine_New();
+QTextToSpeechEngine* QTextToSpeechEngine_New2(QObject* parent);
 QMetaObject* QTextToSpeechEngine_MetaObject(const QTextToSpeechEngine* self);
 void* QTextToSpeechEngine_Metacast(QTextToSpeechEngine* self, const char* param1);
 int QTextToSpeechEngine_Metacall(QTextToSpeechEngine* self, int param1, int param2, void** param3);

@@ -13,12 +13,12 @@
 #include "libkfind.hpp"
 #include "libkfind.hxx"
 
-KFind* KFind_new(const libqt_string pattern, long options, QWidget* parent) {
+KFind* KFind_New(const libqt_string pattern, long options, QWidget* parent) {
     QString pattern_QString = QString::fromUtf8(pattern.data, pattern.len);
     return new VirtualKFind(pattern_QString, static_cast<long>(options), parent);
 }
 
-KFind* KFind_new2(const libqt_string pattern, long options, QWidget* parent, QWidget* findDialog) {
+KFind* KFind_New2(const libqt_string pattern, long options, QWidget* parent, QWidget* findDialog) {
     QString pattern_QString = QString::fromUtf8(pattern.data, pattern.len);
     return new VirtualKFind(pattern_QString, static_cast<long>(options), parent, findDialog);
 }

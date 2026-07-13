@@ -18,11 +18,11 @@
 #include "libbutton.h"
 
 KNSWidgets__Button* k_nswidgets__button_new(void* parent) {
-    return KNSWidgets__Button_new((QWidget*)parent);
+    return KNSWidgets__Button_New((QWidget*)parent);
 }
 
 KNSWidgets__Button* k_nswidgets__button_new2(const char* text, const char* configFile, void* parent) {
-    return KNSWidgets__Button_new2(qstring(text), qstring(configFile), (QWidget*)parent);
+    return KNSWidgets__Button_New2(qstring(text), qstring(configFile), (QWidget*)parent);
 }
 
 const QMetaObject* k_nswidgets__button_meta_object(void* self) {

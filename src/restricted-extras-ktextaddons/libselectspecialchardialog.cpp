@@ -39,7 +39,7 @@
 #include "libselectspecialchardialog.hpp"
 #include "libselectspecialchardialog.hxx"
 
-TextAddonsWidgets__SelectSpecialCharDialog* TextAddonsWidgets__SelectSpecialCharDialog_new(QWidget* parent) {
+TextAddonsWidgets__SelectSpecialCharDialog* TextAddonsWidgets__SelectSpecialCharDialog_New(QWidget* parent) {
     return new VirtualTextAddonsWidgetsSelectSpecialCharDialog(parent);
 }
 

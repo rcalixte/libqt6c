@@ -15,11 +15,11 @@
 #include "libqabstracttransition.hpp"
 #include "libqabstracttransition.hxx"
 
-QAbstractTransition* QAbstractTransition_new() {
+QAbstractTransition* QAbstractTransition_New() {
     return new VirtualQAbstractTransition();
 }
 
-QAbstractTransition* QAbstractTransition_new2(QState* sourceState) {
+QAbstractTransition* QAbstractTransition_New2(QState* sourceState) {
     return new VirtualQAbstractTransition(sourceState);
 }
 

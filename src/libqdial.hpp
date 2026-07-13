@@ -52,8 +52,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QDial* QDial_new(QWidget* parent);
-QDial* QDial_new2();
+QDial* QDial_New(QWidget* parent);
+QDial* QDial_New2();
 QMetaObject* QDial_MetaObject(const QDial* self);
 void* QDial_Metacast(QDial* self, const char* param1);
 int QDial_Metacall(QDial* self, int param1, int param2, void** param3);

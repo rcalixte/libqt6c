@@ -23,11 +23,11 @@
 #include "libkfilefiltercombo.h"
 
 KFileFilterCombo* k_filefiltercombo_new(void* parent) {
-    return KFileFilterCombo_new((QWidget*)parent);
+    return KFileFilterCombo_New((QWidget*)parent);
 }
 
 KFileFilterCombo* k_filefiltercombo_new2() {
-    return KFileFilterCombo_new2();
+    return KFileFilterCombo_New2();
 }
 
 const QMetaObject* k_filefiltercombo_meta_object(void* self) {

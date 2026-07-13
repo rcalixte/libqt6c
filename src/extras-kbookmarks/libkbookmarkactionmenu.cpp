@@ -17,11 +17,11 @@
 #include "libkbookmarkactionmenu.hpp"
 #include "libkbookmarkactionmenu.hxx"
 
-KBookmarkActionMenu* KBookmarkActionMenu_new(const KBookmark* bm, QObject* parent) {
+KBookmarkActionMenu* KBookmarkActionMenu_New(const KBookmark* bm, QObject* parent) {
     return new VirtualKBookmarkActionMenu(*bm, parent);
 }
 
-KBookmarkActionMenu* KBookmarkActionMenu_new2(const KBookmark* bm, const libqt_string text, QObject* parent) {
+KBookmarkActionMenu* KBookmarkActionMenu_New2(const KBookmark* bm, const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKBookmarkActionMenu(*bm, text_QString, parent);
 }

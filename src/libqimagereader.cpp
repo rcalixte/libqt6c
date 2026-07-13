@@ -11,25 +11,25 @@
 #include "libqimagereader.hpp"
 #include "libqimagereader.hxx"
 
-QImageReader* QImageReader_new() {
+QImageReader* QImageReader_New() {
     return new QImageReader();
 }
 
-QImageReader* QImageReader_new2(QIODevice* device) {
+QImageReader* QImageReader_New2(QIODevice* device) {
     return new QImageReader(device);
 }
 
-QImageReader* QImageReader_new3(const libqt_string fileName) {
+QImageReader* QImageReader_New3(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new QImageReader(fileName_QString);
 }
 
-QImageReader* QImageReader_new4(QIODevice* device, const libqt_string format) {
+QImageReader* QImageReader_New4(QIODevice* device, const libqt_string format) {
     QByteArray format_QByteArray(format.data, format.len);
     return new QImageReader(device, format_QByteArray);
 }
 
-QImageReader* QImageReader_new5(const libqt_string fileName, const libqt_string format) {
+QImageReader* QImageReader_New5(const libqt_string fileName, const libqt_string format) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QByteArray format_QByteArray(format.data, format.len);
     return new QImageReader(fileName_QString, format_QByteArray);

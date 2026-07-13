@@ -41,27 +41,27 @@
 #include "libkcolorbutton.hpp"
 #include "libkcolorbutton.hxx"
 
-KColorButton* KColorButton_new(QWidget* parent) {
+KColorButton* KColorButton_New(QWidget* parent) {
     return new VirtualKColorButton(parent);
 }
 
-KColorButton* KColorButton_new2() {
+KColorButton* KColorButton_New2() {
     return new VirtualKColorButton();
 }
 
-KColorButton* KColorButton_new3(const QColor* c) {
+KColorButton* KColorButton_New3(const QColor* c) {
     return new VirtualKColorButton(*c);
 }
 
-KColorButton* KColorButton_new4(const QColor* c, const QColor* defaultColor) {
+KColorButton* KColorButton_New4(const QColor* c, const QColor* defaultColor) {
     return new VirtualKColorButton(*c, *defaultColor);
 }
 
-KColorButton* KColorButton_new5(const QColor* c, QWidget* parent) {
+KColorButton* KColorButton_New5(const QColor* c, QWidget* parent) {
     return new VirtualKColorButton(*c, parent);
 }
 
-KColorButton* KColorButton_new6(const QColor* c, const QColor* defaultColor, QWidget* parent) {
+KColorButton* KColorButton_New6(const QColor* c, const QColor* defaultColor, QWidget* parent) {
     return new VirtualKColorButton(*c, *defaultColor, parent);
 }
 

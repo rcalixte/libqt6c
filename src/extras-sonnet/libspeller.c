@@ -2,15 +2,15 @@
 #include "libspeller.h"
 
 Sonnet__Speller* k_sonnet__speller_new() {
-    return Sonnet__Speller_new();
+    return Sonnet__Speller_New();
 }
 
 Sonnet__Speller* k_sonnet__speller_new2(void* speller) {
-    return Sonnet__Speller_new2((Sonnet__Speller*)speller);
+    return Sonnet__Speller_New2((Sonnet__Speller*)speller);
 }
 
 Sonnet__Speller* k_sonnet__speller_new3(const char* lang) {
-    return Sonnet__Speller_new3(qstring(lang));
+    return Sonnet__Speller_New3(qstring(lang));
 }
 
 void k_sonnet__speller_operator_assign(void* self, void* speller) {

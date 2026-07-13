@@ -34,8 +34,8 @@ typedef struct QVideoSink QVideoSink;
 typedef struct QWindowCapture QWindowCapture;
 #endif
 
-QMediaCaptureSession* QMediaCaptureSession_new();
-QMediaCaptureSession* QMediaCaptureSession_new2(QObject* parent);
+QMediaCaptureSession* QMediaCaptureSession_New();
+QMediaCaptureSession* QMediaCaptureSession_New2(QObject* parent);
 QMetaObject* QMediaCaptureSession_MetaObject(const QMediaCaptureSession* self);
 void* QMediaCaptureSession_Metacast(QMediaCaptureSession* self, const char* param1);
 int QMediaCaptureSession_Metacall(QMediaCaptureSession* self, int param1, int param2, void** param3);

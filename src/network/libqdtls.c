@@ -12,11 +12,11 @@
 #include "libqdtls.h"
 
 QDtlsClientVerifier* q_dtlsclientverifier_new() {
-    return QDtlsClientVerifier_new();
+    return QDtlsClientVerifier_New();
 }
 
 QDtlsClientVerifier* q_dtlsclientverifier_new2(void* parent) {
-    return QDtlsClientVerifier_new2((QObject*)parent);
+    return QDtlsClientVerifier_New2((QObject*)parent);
 }
 
 const QMetaObject* q_dtlsclientverifier_meta_object(void* self) {
@@ -458,11 +458,11 @@ void q_dtlsclientverifier_delete(void* self) {
 }
 
 QDtls* q_dtls_new(int32_t mode) {
-    return QDtls_new(mode);
+    return QDtls_New(mode);
 }
 
 QDtls* q_dtls_new2(int32_t mode, void* parent) {
-    return QDtls_new2(mode, (QObject*)parent);
+    return QDtls_New2(mode, (QObject*)parent);
 }
 
 const QMetaObject* q_dtls_meta_object(void* self) {
@@ -1016,15 +1016,15 @@ void q_dtls_delete(void* self) {
 }
 
 QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparameters_new() {
-    return QDtlsClientVerifier__GeneratorParameters_new();
+    return QDtlsClientVerifier__GeneratorParameters_New();
 }
 
 QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparameters_new2(int32_t a, char* s) {
-    return QDtlsClientVerifier__GeneratorParameters_new2(a, qstring(s));
+    return QDtlsClientVerifier__GeneratorParameters_New2(a, qstring(s));
 }
 
 QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparameters_new3(void* param1) {
-    return QDtlsClientVerifier__GeneratorParameters_new3((QDtlsClientVerifier__GeneratorParameters*)param1);
+    return QDtlsClientVerifier__GeneratorParameters_New3((QDtlsClientVerifier__GeneratorParameters*)param1);
 }
 
 int32_t q_dtlsclientverifier__generatorparameters_hash(void* self) {

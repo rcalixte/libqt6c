@@ -7,7 +7,7 @@
 #include "libqcommandlineparser.hpp"
 #include "libqcommandlineparser.hxx"
 
-QCommandLineParser* QCommandLineParser_new() {
+QCommandLineParser* QCommandLineParser_New() {
     return new QCommandLineParser();
 }
 

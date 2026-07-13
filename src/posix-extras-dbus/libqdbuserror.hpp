@@ -19,10 +19,10 @@ typedef struct QDBusError QDBusError;
 typedef struct QDBusMessage QDBusMessage;
 #endif
 
-QDBusError* QDBusError_new();
-QDBusError* QDBusError_new2(const QDBusMessage* msg);
-QDBusError* QDBusError_new3(int error, const libqt_string message);
-QDBusError* QDBusError_new4(const QDBusError* other);
+QDBusError* QDBusError_New();
+QDBusError* QDBusError_New2(const QDBusMessage* msg);
+QDBusError* QDBusError_New3(int error, const libqt_string message);
+QDBusError* QDBusError_New4(const QDBusError* other);
 void QDBusError_OperatorAssign(QDBusError* self, const QDBusError* other);
 void QDBusError_OperatorAssign2(QDBusError* self, const QDBusMessage* msg);
 void QDBusError_Swap(QDBusError* self, QDBusError* other);

@@ -7,20 +7,20 @@
 #include "libqregularexpression.hpp"
 #include "libqregularexpression.hxx"
 
-QRegularExpression* QRegularExpression_new() {
+QRegularExpression* QRegularExpression_New() {
     return new QRegularExpression();
 }
 
-QRegularExpression* QRegularExpression_new2(const libqt_string pattern) {
+QRegularExpression* QRegularExpression_New2(const libqt_string pattern) {
     QString pattern_QString = QString::fromUtf8(pattern.data, pattern.len);
     return new QRegularExpression(pattern_QString);
 }
 
-QRegularExpression* QRegularExpression_new3(const QRegularExpression* re) {
+QRegularExpression* QRegularExpression_New3(const QRegularExpression* re) {
     return new QRegularExpression(*re);
 }
 
-QRegularExpression* QRegularExpression_new4(const libqt_string pattern, int options) {
+QRegularExpression* QRegularExpression_New4(const libqt_string pattern, int options) {
     QString pattern_QString = QString::fromUtf8(pattern.data, pattern.len);
     return new QRegularExpression(pattern_QString, static_cast<QRegularExpression::PatternOptions>(options));
 }
@@ -350,11 +350,11 @@ void QRegularExpression_Delete(QRegularExpression* self) {
     delete self;
 }
 
-QRegularExpressionMatch* QRegularExpressionMatch_new() {
+QRegularExpressionMatch* QRegularExpressionMatch_New() {
     return new QRegularExpressionMatch();
 }
 
-QRegularExpressionMatch* QRegularExpressionMatch_new2(const QRegularExpressionMatch* match) {
+QRegularExpressionMatch* QRegularExpressionMatch_New2(const QRegularExpressionMatch* match) {
     return new QRegularExpressionMatch(*match);
 }
 
@@ -535,11 +535,11 @@ void QRegularExpressionMatch_Delete(QRegularExpressionMatch* self) {
     delete self;
 }
 
-QRegularExpressionMatchIterator* QRegularExpressionMatchIterator_new() {
+QRegularExpressionMatchIterator* QRegularExpressionMatchIterator_New() {
     return new QRegularExpressionMatchIterator();
 }
 
-QRegularExpressionMatchIterator* QRegularExpressionMatchIterator_new2(const QRegularExpressionMatchIterator* iterator) {
+QRegularExpressionMatchIterator* QRegularExpressionMatchIterator_New2(const QRegularExpressionMatchIterator* iterator) {
     return new QRegularExpressionMatchIterator(*iterator);
 }
 

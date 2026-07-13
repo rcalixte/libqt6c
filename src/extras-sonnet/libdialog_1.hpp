@@ -54,7 +54,7 @@ typedef struct Sonnet__BackgroundChecker Sonnet__BackgroundChecker;
 typedef struct Sonnet__Dialog Sonnet__Dialog;
 #endif
 
-Sonnet__Dialog* Sonnet__Dialog_new(Sonnet__BackgroundChecker* checker, QWidget* parent);
+Sonnet__Dialog* Sonnet__Dialog_New(Sonnet__BackgroundChecker* checker, QWidget* parent);
 QMetaObject* Sonnet__Dialog_MetaObject(const Sonnet__Dialog* self);
 void* Sonnet__Dialog_Metacast(Sonnet__Dialog* self, const char* param1);
 int Sonnet__Dialog_Metacall(Sonnet__Dialog* self, int param1, int param2, void** param3);

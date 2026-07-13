@@ -8,11 +8,11 @@
 #include "libqwhatsthis.hpp"
 #include "libqwhatsthis.hxx"
 
-QWhatsThis* QWhatsThis_new(const QWhatsThis* other) {
+QWhatsThis* QWhatsThis_New(const QWhatsThis* other) {
     return new QWhatsThis(*other);
 }
 
-QWhatsThis* QWhatsThis_new2(QWhatsThis* other) {
+QWhatsThis* QWhatsThis_New2(QWhatsThis* other) {
     return new QWhatsThis(std::move(*other));
 }
 

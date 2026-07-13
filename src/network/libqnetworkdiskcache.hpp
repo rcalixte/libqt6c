@@ -28,8 +28,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-QNetworkDiskCache* QNetworkDiskCache_new();
-QNetworkDiskCache* QNetworkDiskCache_new2(QObject* parent);
+QNetworkDiskCache* QNetworkDiskCache_New();
+QNetworkDiskCache* QNetworkDiskCache_New2(QObject* parent);
 QMetaObject* QNetworkDiskCache_MetaObject(const QNetworkDiskCache* self);
 void* QNetworkDiskCache_Metacast(QNetworkDiskCache* self, const char* param1);
 int QNetworkDiskCache_Metacall(QNetworkDiskCache* self, int param1, int param2, void** param3);

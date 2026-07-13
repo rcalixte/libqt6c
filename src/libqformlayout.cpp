@@ -17,11 +17,11 @@
 #include "libqformlayout.hpp"
 #include "libqformlayout.hxx"
 
-QFormLayout* QFormLayout_new(QWidget* parent) {
+QFormLayout* QFormLayout_New(QWidget* parent) {
     return new VirtualQFormLayout(parent);
 }
 
-QFormLayout* QFormLayout_new2() {
+QFormLayout* QFormLayout_New2() {
     return new VirtualQFormLayout();
 }
 
@@ -1337,11 +1337,11 @@ void QFormLayout_Delete(QFormLayout* self) {
     delete self;
 }
 
-QFormLayout__TakeRowResult* QFormLayout__TakeRowResult_new() {
+QFormLayout__TakeRowResult* QFormLayout__TakeRowResult_New() {
     return new QFormLayout::TakeRowResult();
 }
 
-QFormLayout__TakeRowResult* QFormLayout__TakeRowResult_new2(const QFormLayout__TakeRowResult* param1) {
+QFormLayout__TakeRowResult* QFormLayout__TakeRowResult_New2(const QFormLayout__TakeRowResult* param1) {
     return new QFormLayout::TakeRowResult(*param1);
 }
 

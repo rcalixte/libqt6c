@@ -38,11 +38,11 @@
 #include "libautocorrectionwidget.hpp"
 #include "libautocorrectionwidget.hxx"
 
-TextAutoCorrectionWidgets__AutoCorrectionWidget* TextAutoCorrectionWidgets__AutoCorrectionWidget_new(QWidget* parent) {
+TextAutoCorrectionWidgets__AutoCorrectionWidget* TextAutoCorrectionWidgets__AutoCorrectionWidget_New(QWidget* parent) {
     return new VirtualTextAutoCorrectionWidgetsAutoCorrectionWidget(parent);
 }
 
-TextAutoCorrectionWidgets__AutoCorrectionWidget* TextAutoCorrectionWidgets__AutoCorrectionWidget_new2() {
+TextAutoCorrectionWidgets__AutoCorrectionWidget* TextAutoCorrectionWidgets__AutoCorrectionWidget_New2() {
     return new VirtualTextAutoCorrectionWidgetsAutoCorrectionWidget();
 }
 

@@ -26,13 +26,13 @@ typedef struct QUntypedBindable QUntypedBindable;
 typedef struct QUntypedPropertyBinding QUntypedPropertyBinding;
 #endif
 
-QScopedPropertyUpdateGroup* QScopedPropertyUpdateGroup_new();
+QScopedPropertyUpdateGroup* QScopedPropertyUpdateGroup_New();
 void QScopedPropertyUpdateGroup_Delete(QScopedPropertyUpdateGroup* self);
 
-QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_new(const QPropertyBindingSourceLocation* other);
-QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_new2(QPropertyBindingSourceLocation* other);
-QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_new3();
-QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_new4(const QPropertyBindingSourceLocation* param1);
+QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New(const QPropertyBindingSourceLocation* other);
+QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New2(QPropertyBindingSourceLocation* other);
+QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New3();
+QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New4(const QPropertyBindingSourceLocation* param1);
 void QPropertyBindingSourceLocation_CopyAssign(QPropertyBindingSourceLocation* self, QPropertyBindingSourceLocation* other);
 void QPropertyBindingSourceLocation_MoveAssign(QPropertyBindingSourceLocation* self, QPropertyBindingSourceLocation* other);
 const char* QPropertyBindingSourceLocation_FileName(const QPropertyBindingSourceLocation* self);
@@ -45,38 +45,38 @@ unsigned int QPropertyBindingSourceLocation_Column(const QPropertyBindingSourceL
 void QPropertyBindingSourceLocation_SetColumn(QPropertyBindingSourceLocation* self, unsigned int column);
 void QPropertyBindingSourceLocation_Delete(QPropertyBindingSourceLocation* self);
 
-QPropertyBindingError* QPropertyBindingError_new();
-QPropertyBindingError* QPropertyBindingError_new2(int type);
-QPropertyBindingError* QPropertyBindingError_new3(const QPropertyBindingError* other);
-QPropertyBindingError* QPropertyBindingError_new4(int type, const libqt_string description);
+QPropertyBindingError* QPropertyBindingError_New();
+QPropertyBindingError* QPropertyBindingError_New2(int type);
+QPropertyBindingError* QPropertyBindingError_New3(const QPropertyBindingError* other);
+QPropertyBindingError* QPropertyBindingError_New4(int type, const libqt_string description);
 void QPropertyBindingError_OperatorAssign(QPropertyBindingError* self, const QPropertyBindingError* other);
 bool QPropertyBindingError_HasError(const QPropertyBindingError* self);
 int QPropertyBindingError_Type(const QPropertyBindingError* self);
 libqt_string QPropertyBindingError_Description(const QPropertyBindingError* self);
 void QPropertyBindingError_Delete(QPropertyBindingError* self);
 
-QUntypedPropertyBinding* QUntypedPropertyBinding_new();
-QUntypedPropertyBinding* QUntypedPropertyBinding_new2(const QUntypedPropertyBinding* other);
+QUntypedPropertyBinding* QUntypedPropertyBinding_New();
+QUntypedPropertyBinding* QUntypedPropertyBinding_New2(const QUntypedPropertyBinding* other);
 void QUntypedPropertyBinding_OperatorAssign(QUntypedPropertyBinding* self, const QUntypedPropertyBinding* other);
 bool QUntypedPropertyBinding_IsNull(const QUntypedPropertyBinding* self);
 QPropertyBindingError* QUntypedPropertyBinding_Error(const QUntypedPropertyBinding* self);
 QMetaType* QUntypedPropertyBinding_ValueMetaType(const QUntypedPropertyBinding* self);
 void QUntypedPropertyBinding_Delete(QUntypedPropertyBinding* self);
 
-QPropertyObserverBase* QPropertyObserverBase_new();
-QPropertyObserverBase* QPropertyObserverBase_new2(const QPropertyObserverBase* param1);
+QPropertyObserverBase* QPropertyObserverBase_New();
+QPropertyObserverBase* QPropertyObserverBase_New2(const QPropertyObserverBase* param1);
 void QPropertyObserverBase_Delete(QPropertyObserverBase* self);
 
-QPropertyObserver* QPropertyObserver_new();
+QPropertyObserver* QPropertyObserver_New();
 void QPropertyObserver_Delete(QPropertyObserver* self);
 
-QPropertyNotifier* QPropertyNotifier_new();
+QPropertyNotifier* QPropertyNotifier_New();
 void QPropertyNotifier_Delete(QPropertyNotifier* self);
 
-QUntypedBindable* QUntypedBindable_new(const QUntypedBindable* other);
-QUntypedBindable* QUntypedBindable_new2(QUntypedBindable* other);
-QUntypedBindable* QUntypedBindable_new3();
-QUntypedBindable* QUntypedBindable_new4(const QUntypedBindable* param1);
+QUntypedBindable* QUntypedBindable_New(const QUntypedBindable* other);
+QUntypedBindable* QUntypedBindable_New2(QUntypedBindable* other);
+QUntypedBindable* QUntypedBindable_New3();
+QUntypedBindable* QUntypedBindable_New4(const QUntypedBindable* param1);
 void QUntypedBindable_CopyAssign(QUntypedBindable* self, QUntypedBindable* other);
 void QUntypedBindable_MoveAssign(QUntypedBindable* self, QUntypedBindable* other);
 bool QUntypedBindable_IsValid(const QUntypedBindable* self);

@@ -3,7 +3,7 @@
 #include "libksycocaentry.h"
 
 KSycocaEntry* k_sycocaentry_new() {
-    return KSycocaEntry_new();
+    return KSycocaEntry_New();
 }
 
 bool k_sycocaentry_is_type(void* self, int32_t t) {

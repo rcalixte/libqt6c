@@ -13,11 +13,11 @@
 #include "libqrestaccessmanager.h"
 
 QRestAccessManager* q_restaccessmanager_new(void* manager) {
-    return QRestAccessManager_new((QNetworkAccessManager*)manager);
+    return QRestAccessManager_New((QNetworkAccessManager*)manager);
 }
 
 QRestAccessManager* q_restaccessmanager_new2(void* manager, void* parent) {
-    return QRestAccessManager_new2((QNetworkAccessManager*)manager, (QObject*)parent);
+    return QRestAccessManager_New2((QNetworkAccessManager*)manager, (QObject*)parent);
 }
 
 const QMetaObject* q_restaccessmanager_meta_object(void* self) {

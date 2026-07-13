@@ -7,15 +7,15 @@
 #include "libsessiondata.hpp"
 #include "libsessiondata.hxx"
 
-SignOn__SessionData* SignOn__SessionData_new() {
+SignOn__SessionData* SignOn__SessionData_New() {
     return new SignOn::SessionData();
 }
 
-SignOn__SessionData* SignOn__SessionData_new2(const SignOn__SessionData* other) {
+SignOn__SessionData* SignOn__SessionData_New2(const SignOn__SessionData* other) {
     return new SignOn::SessionData(*other);
 }
 
-SignOn__SessionData* SignOn__SessionData_new3(const libqt_map /* of libqt_string to QVariant* */ data) {
+SignOn__SessionData* SignOn__SessionData_New3(const libqt_map /* of libqt_string to QVariant* */ data) {
     QMap<QString, QVariant> data_QMap;
     libqt_string* data_karr = static_cast<libqt_string*>(data.keys);
     QVariant** data_varr = static_cast<QVariant**>(data.values);

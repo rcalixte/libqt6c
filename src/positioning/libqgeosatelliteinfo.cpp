@@ -3,11 +3,11 @@
 #include "libqgeosatelliteinfo.hpp"
 #include "libqgeosatelliteinfo.hxx"
 
-QGeoSatelliteInfo* QGeoSatelliteInfo_new() {
+QGeoSatelliteInfo* QGeoSatelliteInfo_New() {
     return new QGeoSatelliteInfo();
 }
 
-QGeoSatelliteInfo* QGeoSatelliteInfo_new2(const QGeoSatelliteInfo* other) {
+QGeoSatelliteInfo* QGeoSatelliteInfo_New2(const QGeoSatelliteInfo* other) {
     return new QGeoSatelliteInfo(*other);
 }
 

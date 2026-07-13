@@ -50,16 +50,16 @@
 #include "libkrichtextwidget.hpp"
 #include "libkrichtextwidget.hxx"
 
-KRichTextWidget* KRichTextWidget_new(QWidget* parent) {
+KRichTextWidget* KRichTextWidget_New(QWidget* parent) {
     return new VirtualKRichTextWidget(parent);
 }
 
-KRichTextWidget* KRichTextWidget_new2(const libqt_string text) {
+KRichTextWidget* KRichTextWidget_New2(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKRichTextWidget(text_QString);
 }
 
-KRichTextWidget* KRichTextWidget_new3(const libqt_string text, QWidget* parent) {
+KRichTextWidget* KRichTextWidget_New3(const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKRichTextWidget(text_QString, parent);
 }

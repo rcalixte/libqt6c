@@ -48,20 +48,20 @@
 #include "libklineedit.hpp"
 #include "libklineedit.hxx"
 
-KLineEdit* KLineEdit_new(QWidget* parent) {
+KLineEdit* KLineEdit_New(QWidget* parent) {
     return new VirtualKLineEdit(parent);
 }
 
-KLineEdit* KLineEdit_new2(const libqt_string string) {
+KLineEdit* KLineEdit_New2(const libqt_string string) {
     QString string_QString = QString::fromUtf8(string.data, string.len);
     return new VirtualKLineEdit(string_QString);
 }
 
-KLineEdit* KLineEdit_new3() {
+KLineEdit* KLineEdit_New3() {
     return new VirtualKLineEdit();
 }
 
-KLineEdit* KLineEdit_new4(const libqt_string string, QWidget* parent) {
+KLineEdit* KLineEdit_New4(const libqt_string string, QWidget* parent) {
     QString string_QString = QString::fromUtf8(string.data, string.len);
     return new VirtualKLineEdit(string_QString, parent);
 }

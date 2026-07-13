@@ -16,11 +16,11 @@
 #include "libkviewstateserializer.hpp"
 #include "libkviewstateserializer.hxx"
 
-KViewStateSerializer* KViewStateSerializer_new() {
+KViewStateSerializer* KViewStateSerializer_New() {
     return new VirtualKViewStateSerializer();
 }
 
-KViewStateSerializer* KViewStateSerializer_new2(QObject* parent) {
+KViewStateSerializer* KViewStateSerializer_New2(QObject* parent) {
     return new VirtualKViewStateSerializer(parent);
 }
 

@@ -15,7 +15,7 @@
 #include "libkconfigdialogmanager.hpp"
 #include "libkconfigdialogmanager.hxx"
 
-KConfigDialogManager* KConfigDialogManager_new(QWidget* parent, KCoreConfigSkeleton* conf) {
+KConfigDialogManager* KConfigDialogManager_New(QWidget* parent, KCoreConfigSkeleton* conf) {
     return new VirtualKConfigDialogManager(parent, conf);
 }
 

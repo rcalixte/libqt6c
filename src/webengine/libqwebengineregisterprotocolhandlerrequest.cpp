@@ -5,11 +5,11 @@
 #include "libqwebengineregisterprotocolhandlerrequest.hpp"
 #include "libqwebengineregisterprotocolhandlerrequest.hxx"
 
-QWebEngineRegisterProtocolHandlerRequest* QWebEngineRegisterProtocolHandlerRequest_new() {
+QWebEngineRegisterProtocolHandlerRequest* QWebEngineRegisterProtocolHandlerRequest_New() {
     return new QWebEngineRegisterProtocolHandlerRequest();
 }
 
-QWebEngineRegisterProtocolHandlerRequest* QWebEngineRegisterProtocolHandlerRequest_new2(const QWebEngineRegisterProtocolHandlerRequest* param1) {
+QWebEngineRegisterProtocolHandlerRequest* QWebEngineRegisterProtocolHandlerRequest_New2(const QWebEngineRegisterProtocolHandlerRequest* param1) {
     return new QWebEngineRegisterProtocolHandlerRequest(*param1);
 }
 

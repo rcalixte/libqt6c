@@ -6,15 +6,15 @@
 #include "libkcolorcollection.hpp"
 #include "libkcolorcollection.hxx"
 
-KColorCollection* KColorCollection_new() {
+KColorCollection* KColorCollection_New() {
     return new KColorCollection();
 }
 
-KColorCollection* KColorCollection_new2(const KColorCollection* param1) {
+KColorCollection* KColorCollection_New2(const KColorCollection* param1) {
     return new KColorCollection(*param1);
 }
 
-KColorCollection* KColorCollection_new3(const libqt_string name) {
+KColorCollection* KColorCollection_New3(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new KColorCollection(name_QString);
 }

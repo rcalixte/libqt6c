@@ -26,7 +26,7 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QGeoPositionInfoSource* QGeoPositionInfoSource_new(QObject* parent);
+QGeoPositionInfoSource* QGeoPositionInfoSource_New(QObject* parent);
 QMetaObject* QGeoPositionInfoSource_MetaObject(const QGeoPositionInfoSource* self);
 void* QGeoPositionInfoSource_Metacast(QGeoPositionInfoSource* self, const char* param1);
 int QGeoPositionInfoSource_Metacall(QGeoPositionInfoSource* self, int param1, int param2, void** param3);

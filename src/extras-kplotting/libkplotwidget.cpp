@@ -47,11 +47,11 @@
 #include "libkplotwidget.hpp"
 #include "libkplotwidget.hxx"
 
-KPlotWidget* KPlotWidget_new(QWidget* parent) {
+KPlotWidget* KPlotWidget_New(QWidget* parent) {
     return new VirtualKPlotWidget(parent);
 }
 
-KPlotWidget* KPlotWidget_new2() {
+KPlotWidget* KPlotWidget_New2() {
     return new VirtualKPlotWidget();
 }
 

@@ -19,11 +19,11 @@
 #include "libqabstractitemdelegate.hpp"
 #include "libqabstractitemdelegate.hxx"
 
-QAbstractItemDelegate* QAbstractItemDelegate_new() {
+QAbstractItemDelegate* QAbstractItemDelegate_New() {
     return new VirtualQAbstractItemDelegate();
 }
 
-QAbstractItemDelegate* QAbstractItemDelegate_new2(QObject* parent) {
+QAbstractItemDelegate* QAbstractItemDelegate_New2(QObject* parent) {
     return new VirtualQAbstractItemDelegate(parent);
 }
 

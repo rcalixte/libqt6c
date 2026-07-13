@@ -4,19 +4,19 @@
 #include "libqurlquery.h"
 
 QUrlQuery* q_urlquery_new() {
-    return QUrlQuery_new();
+    return QUrlQuery_New();
 }
 
 QUrlQuery* q_urlquery_new2(void* url) {
-    return QUrlQuery_new2((QUrl*)url);
+    return QUrlQuery_New2((QUrl*)url);
 }
 
 QUrlQuery* q_urlquery_new3(const char* queryString) {
-    return QUrlQuery_new3(qstring(queryString));
+    return QUrlQuery_New3(qstring(queryString));
 }
 
 QUrlQuery* q_urlquery_new4(void* other) {
-    return QUrlQuery_new4((QUrlQuery*)other);
+    return QUrlQuery_New4((QUrlQuery*)other);
 }
 
 void q_urlquery_operator_assign(void* self, void* other) {

@@ -29,8 +29,8 @@ typedef struct QsciLexerPerl QsciLexerPerl;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerPerl* QsciLexerPerl_new();
-QsciLexerPerl* QsciLexerPerl_new2(QObject* parent);
+QsciLexerPerl* QsciLexerPerl_New();
+QsciLexerPerl* QsciLexerPerl_New2(QObject* parent);
 QMetaObject* QsciLexerPerl_MetaObject(const QsciLexerPerl* self);
 void* QsciLexerPerl_Metacast(QsciLexerPerl* self, const char* param1);
 int QsciLexerPerl_Metacall(QsciLexerPerl* self, int param1, int param2, void** param3);

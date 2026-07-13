@@ -52,10 +52,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QFontDialog* QFontDialog_new(QWidget* parent);
-QFontDialog* QFontDialog_new2();
-QFontDialog* QFontDialog_new3(const QFont* initial);
-QFontDialog* QFontDialog_new4(const QFont* initial, QWidget* parent);
+QFontDialog* QFontDialog_New(QWidget* parent);
+QFontDialog* QFontDialog_New2();
+QFontDialog* QFontDialog_New3(const QFont* initial);
+QFontDialog* QFontDialog_New4(const QFont* initial, QWidget* parent);
 QMetaObject* QFontDialog_MetaObject(const QFontDialog* self);
 void* QFontDialog_Metacast(QFontDialog* self, const char* param1);
 int QFontDialog_Metacall(QFontDialog* self, int param1, int param2, void** param3);

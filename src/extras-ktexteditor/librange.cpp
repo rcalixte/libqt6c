@@ -6,35 +6,35 @@
 #include "librange.hpp"
 #include "librange.hxx"
 
-KTextEditor__Range* KTextEditor__Range_new(const KTextEditor__Range* other) {
+KTextEditor__Range* KTextEditor__Range_New(const KTextEditor__Range* other) {
     return new KTextEditor::Range(*other);
 }
 
-KTextEditor__Range* KTextEditor__Range_new2(KTextEditor__Range* other) {
+KTextEditor__Range* KTextEditor__Range_New2(KTextEditor__Range* other) {
     return new KTextEditor::Range(std::move(*other));
 }
 
-KTextEditor__Range* KTextEditor__Range_new3() {
+KTextEditor__Range* KTextEditor__Range_New3() {
     return new KTextEditor::Range();
 }
 
-KTextEditor__Range* KTextEditor__Range_new4(KTextEditor__Cursor* start, KTextEditor__Cursor* end) {
+KTextEditor__Range* KTextEditor__Range_New4(KTextEditor__Cursor* start, KTextEditor__Cursor* end) {
     return new KTextEditor::Range(*start, *end);
 }
 
-KTextEditor__Range* KTextEditor__Range_new5(KTextEditor__Cursor* start, int width) {
+KTextEditor__Range* KTextEditor__Range_New5(KTextEditor__Cursor* start, int width) {
     return new KTextEditor::Range(*start, static_cast<int>(width));
 }
 
-KTextEditor__Range* KTextEditor__Range_new6(KTextEditor__Cursor* start, int endLine, int endColumn) {
+KTextEditor__Range* KTextEditor__Range_New6(KTextEditor__Cursor* start, int endLine, int endColumn) {
     return new KTextEditor::Range(*start, static_cast<int>(endLine), static_cast<int>(endColumn));
 }
 
-KTextEditor__Range* KTextEditor__Range_new7(int startLine, int startColumn, int endLine, int endColumn) {
+KTextEditor__Range* KTextEditor__Range_New7(int startLine, int startColumn, int endLine, int endColumn) {
     return new KTextEditor::Range(static_cast<int>(startLine), static_cast<int>(startColumn), static_cast<int>(endLine), static_cast<int>(endColumn));
 }
 
-KTextEditor__Range* KTextEditor__Range_new8(const KTextEditor__Range* param1) {
+KTextEditor__Range* KTextEditor__Range_New8(const KTextEditor__Range* param1) {
     return new KTextEditor::Range(*param1);
 }
 

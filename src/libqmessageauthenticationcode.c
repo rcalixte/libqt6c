@@ -4,11 +4,11 @@
 #include "libqmessageauthenticationcode.h"
 
 QMessageAuthenticationCode* q_messageauthenticationcode_new(int32_t method) {
-    return QMessageAuthenticationCode_new(method);
+    return QMessageAuthenticationCode_New(method);
 }
 
 QMessageAuthenticationCode* q_messageauthenticationcode_new2(int32_t method, char* key) {
-    return QMessageAuthenticationCode_new2(method, qstring(key));
+    return QMessageAuthenticationCode_New2(method, qstring(key));
 }
 
 void q_messageauthenticationcode_swap(void* self, void* other) {

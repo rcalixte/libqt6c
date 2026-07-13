@@ -14,11 +14,11 @@
 #include "libqscilexerpython.hpp"
 #include "libqscilexerpython.hxx"
 
-QsciLexerPython* QsciLexerPython_new() {
+QsciLexerPython* QsciLexerPython_New() {
     return new VirtualQsciLexerPython();
 }
 
-QsciLexerPython* QsciLexerPython_new2(QObject* parent) {
+QsciLexerPython* QsciLexerPython_New2(QObject* parent) {
     return new VirtualQsciLexerPython(parent);
 }
 

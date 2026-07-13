@@ -13,11 +13,11 @@
 #include "libqsctpsocket.h"
 
 QSctpSocket* q_sctpsocket_new() {
-    return QSctpSocket_new();
+    return QSctpSocket_New();
 }
 
 QSctpSocket* q_sctpsocket_new2(void* parent) {
-    return QSctpSocket_new2((QObject*)parent);
+    return QSctpSocket_New2((QObject*)parent);
 }
 
 const QMetaObject* q_sctpsocket_meta_object(void* self) {

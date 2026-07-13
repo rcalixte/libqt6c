@@ -3,11 +3,11 @@
 #include "libkmacroexpander.h"
 
 KMacroExpanderBase* k_macroexpanderbase_new() {
-    return KMacroExpanderBase_new();
+    return KMacroExpanderBase_New();
 }
 
 KMacroExpanderBase* k_macroexpanderbase_new2(void* c) {
-    return KMacroExpanderBase_new2((QChar*)c);
+    return KMacroExpanderBase_New2((QChar*)c);
 }
 
 void k_macroexpanderbase_expand_macros(void* self, const char* str) {
@@ -103,11 +103,11 @@ void k_macroexpanderbase_delete(void* self) {
 }
 
 KWordMacroExpander* k_wordmacroexpander_new() {
-    return KWordMacroExpander_new();
+    return KWordMacroExpander_New();
 }
 
 KWordMacroExpander* k_wordmacroexpander_new2(void* c) {
-    return KWordMacroExpander_new2((QChar*)c);
+    return KWordMacroExpander_New2((QChar*)c);
 }
 
 int32_t k_wordmacroexpander_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]) {
@@ -237,11 +237,11 @@ void k_wordmacroexpander_delete(void* self) {
 }
 
 KCharMacroExpander* k_charmacroexpander_new() {
-    return KCharMacroExpander_new();
+    return KCharMacroExpander_New();
 }
 
 KCharMacroExpander* k_charmacroexpander_new2(void* c) {
-    return KCharMacroExpander_new2((QChar*)c);
+    return KCharMacroExpander_New2((QChar*)c);
 }
 
 int32_t k_charmacroexpander_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]) {

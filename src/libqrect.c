@@ -5,31 +5,31 @@
 #include "libqrect.h"
 
 QRect* q_rect_new(void* other) {
-    return QRect_new((QRect*)other);
+    return QRect_New((QRect*)other);
 }
 
 QRect* q_rect_new2(void* other) {
-    return QRect_new2((QRect*)other);
+    return QRect_New2((QRect*)other);
 }
 
 QRect* q_rect_new3() {
-    return QRect_new3();
+    return QRect_New3();
 }
 
 QRect* q_rect_new4(void* topleft, void* bottomright) {
-    return QRect_new4((QPoint*)topleft, (QPoint*)bottomright);
+    return QRect_New4((QPoint*)topleft, (QPoint*)bottomright);
 }
 
 QRect* q_rect_new5(void* topleft, void* size) {
-    return QRect_new5((QPoint*)topleft, (QSize*)size);
+    return QRect_New5((QPoint*)topleft, (QSize*)size);
 }
 
 QRect* q_rect_new6(int left, int top, int width, int height) {
-    return QRect_new6(left, top, width, height);
+    return QRect_New6(left, top, width, height);
 }
 
 QRect* q_rect_new7(void* param1) {
-    return QRect_new7((QRect*)param1);
+    return QRect_New7((QRect*)param1);
 }
 
 void q_rect_copy_assign(void* self, void* other) {
@@ -333,35 +333,35 @@ void q_rect_delete(void* self) {
 }
 
 QRectF* q_rectf_new(void* other) {
-    return QRectF_new((QRectF*)other);
+    return QRectF_New((QRectF*)other);
 }
 
 QRectF* q_rectf_new2(void* other) {
-    return QRectF_new2((QRectF*)other);
+    return QRectF_New2((QRectF*)other);
 }
 
 QRectF* q_rectf_new3() {
-    return QRectF_new3();
+    return QRectF_New3();
 }
 
 QRectF* q_rectf_new4(void* topleft, void* size) {
-    return QRectF_new4((QPointF*)topleft, (QSizeF*)size);
+    return QRectF_New4((QPointF*)topleft, (QSizeF*)size);
 }
 
 QRectF* q_rectf_new5(void* topleft, void* bottomRight) {
-    return QRectF_new5((QPointF*)topleft, (QPointF*)bottomRight);
+    return QRectF_New5((QPointF*)topleft, (QPointF*)bottomRight);
 }
 
 QRectF* q_rectf_new6(double left, double top, double width, double height) {
-    return QRectF_new6(left, top, width, height);
+    return QRectF_New6(left, top, width, height);
 }
 
 QRectF* q_rectf_new7(void* rect) {
-    return QRectF_new7((QRect*)rect);
+    return QRectF_New7((QRect*)rect);
 }
 
 QRectF* q_rectf_new8(void* param1) {
-    return QRectF_new8((QRectF*)param1);
+    return QRectF_New8((QRectF*)param1);
 }
 
 void q_rectf_copy_assign(void* self, void* other) {

@@ -17,15 +17,15 @@
 #include "libqtoolbox.h"
 
 QToolBox* q_toolbox_new(void* parent) {
-    return QToolBox_new((QWidget*)parent);
+    return QToolBox_New((QWidget*)parent);
 }
 
 QToolBox* q_toolbox_new2() {
-    return QToolBox_new2();
+    return QToolBox_New2();
 }
 
 QToolBox* q_toolbox_new3(void* parent, int32_t f) {
-    return QToolBox_new3((QWidget*)parent, f);
+    return QToolBox_New3((QWidget*)parent, f);
 }
 
 const QMetaObject* q_toolbox_meta_object(void* self) {

@@ -2,15 +2,15 @@
 #include "libqlatin1stringmatcher.h"
 
 QLatin1StringMatcher* q_latin1stringmatcher_new() {
-    return QLatin1StringMatcher_new();
+    return QLatin1StringMatcher_New();
 }
 
 QLatin1StringMatcher* q_latin1stringmatcher_new2(char* pattern) {
-    return QLatin1StringMatcher_new2(qstring(pattern));
+    return QLatin1StringMatcher_New2(qstring(pattern));
 }
 
 QLatin1StringMatcher* q_latin1stringmatcher_new3(char* pattern, int32_t cs) {
-    return QLatin1StringMatcher_new3(qstring(pattern), cs);
+    return QLatin1StringMatcher_New3(qstring(pattern), cs);
 }
 
 void q_latin1stringmatcher_set_pattern(void* self, char* pattern) {

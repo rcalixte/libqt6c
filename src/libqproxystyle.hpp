@@ -39,9 +39,9 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QProxyStyle* QProxyStyle_new();
-QProxyStyle* QProxyStyle_new2(const libqt_string key);
-QProxyStyle* QProxyStyle_new3(QStyle* style);
+QProxyStyle* QProxyStyle_New();
+QProxyStyle* QProxyStyle_New2(const libqt_string key);
+QProxyStyle* QProxyStyle_New3(QStyle* style);
 QMetaObject* QProxyStyle_MetaObject(const QProxyStyle* self);
 void* QProxyStyle_Metacast(QProxyStyle* self, const char* param1);
 int QProxyStyle_Metacall(QProxyStyle* self, int param1, int param2, void** param3);

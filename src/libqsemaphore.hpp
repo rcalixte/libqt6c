@@ -20,8 +20,8 @@ typedef struct QSemaphore QSemaphore;
 typedef struct QSemaphoreReleaser QSemaphoreReleaser;
 #endif
 
-QSemaphore* QSemaphore_new();
-QSemaphore* QSemaphore_new2(int n);
+QSemaphore* QSemaphore_New();
+QSemaphore* QSemaphore_New2(int n);
 void QSemaphore_Acquire(QSemaphore* self);
 bool QSemaphore_TryAcquire(QSemaphore* self);
 bool QSemaphore_TryAcquire2(QSemaphore* self, int n, int timeout);
@@ -34,11 +34,11 @@ bool QSemaphore_TryAcquire1(QSemaphore* self, int n);
 void QSemaphore_Release1(QSemaphore* self, int n);
 void QSemaphore_Delete(QSemaphore* self);
 
-QSemaphoreReleaser* QSemaphoreReleaser_new();
-QSemaphoreReleaser* QSemaphoreReleaser_new2(QSemaphore* sem);
-QSemaphoreReleaser* QSemaphoreReleaser_new3(QSemaphore* sem);
-QSemaphoreReleaser* QSemaphoreReleaser_new4(QSemaphore* sem, int n);
-QSemaphoreReleaser* QSemaphoreReleaser_new5(QSemaphore* sem, int n);
+QSemaphoreReleaser* QSemaphoreReleaser_New();
+QSemaphoreReleaser* QSemaphoreReleaser_New2(QSemaphore* sem);
+QSemaphoreReleaser* QSemaphoreReleaser_New3(QSemaphore* sem);
+QSemaphoreReleaser* QSemaphoreReleaser_New4(QSemaphore* sem, int n);
+QSemaphoreReleaser* QSemaphoreReleaser_New5(QSemaphore* sem, int n);
 void QSemaphoreReleaser_Swap(QSemaphoreReleaser* self, QSemaphoreReleaser* other);
 QSemaphore* QSemaphoreReleaser_Semaphore(const QSemaphoreReleaser* self);
 QSemaphore* QSemaphoreReleaser_Cancel(QSemaphoreReleaser* self);

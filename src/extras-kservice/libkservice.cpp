@@ -9,27 +9,27 @@
 #include "libkservice.hpp"
 #include "libkservice.hxx"
 
-KService* KService_new(const libqt_string name, const libqt_string exec, const libqt_string icon) {
+KService* KService_New(const libqt_string name, const libqt_string exec, const libqt_string icon) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString exec_QString = QString::fromUtf8(exec.data, exec.len);
     QString icon_QString = QString::fromUtf8(icon.data, icon.len);
     return new KService(name_QString, exec_QString, icon_QString);
 }
 
-KService* KService_new2(const libqt_string fullpath) {
+KService* KService_New2(const libqt_string fullpath) {
     QString fullpath_QString = QString::fromUtf8(fullpath.data, fullpath.len);
     return new KService(fullpath_QString);
 }
 
-KService* KService_new3(const KDesktopFile* config) {
+KService* KService_New3(const KDesktopFile* config) {
     return new KService(config);
 }
 
-KService* KService_new4(const KService* other) {
+KService* KService_New4(const KService* other) {
     return new KService(*other);
 }
 
-KService* KService_new5(const KDesktopFile* config, const libqt_string entryPath) {
+KService* KService_New5(const KDesktopFile* config, const libqt_string entryPath) {
     QString entryPath_QString = QString::fromUtf8(entryPath.data, entryPath.len);
     return new KService(config, entryPath_QString);
 }

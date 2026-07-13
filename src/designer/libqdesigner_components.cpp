@@ -12,11 +12,11 @@
 #include "libqdesigner_components.hpp"
 #include "libqdesigner_components.hxx"
 
-QDesignerComponents* QDesignerComponents_new(const QDesignerComponents* other) {
+QDesignerComponents* QDesignerComponents_New(const QDesignerComponents* other) {
     return new QDesignerComponents(*other);
 }
 
-QDesignerComponents* QDesignerComponents_new2(QDesignerComponents* other) {
+QDesignerComponents* QDesignerComponents_New2(QDesignerComponents* other) {
     return new QDesignerComponents(std::move(*other));
 }
 

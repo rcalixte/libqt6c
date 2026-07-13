@@ -4,11 +4,11 @@
 #include "libkrecentdocument.h"
 
 KRecentDocument* k_recentdocument_new(void* other) {
-    return KRecentDocument_new((KRecentDocument*)other);
+    return KRecentDocument_New((KRecentDocument*)other);
 }
 
 KRecentDocument* k_recentdocument_new2(void* other) {
-    return KRecentDocument_new2((KRecentDocument*)other);
+    return KRecentDocument_New2((KRecentDocument*)other);
 }
 
 void k_recentdocument_copy_assign(void* self, void* other) {

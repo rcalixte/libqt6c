@@ -17,27 +17,27 @@
 #include "libqcommandlinkbutton.h"
 
 QCommandLinkButton* q_commandlinkbutton_new(void* parent) {
-    return QCommandLinkButton_new((QWidget*)parent);
+    return QCommandLinkButton_New((QWidget*)parent);
 }
 
 QCommandLinkButton* q_commandlinkbutton_new2() {
-    return QCommandLinkButton_new2();
+    return QCommandLinkButton_New2();
 }
 
 QCommandLinkButton* q_commandlinkbutton_new3(const char* text) {
-    return QCommandLinkButton_new3(qstring(text));
+    return QCommandLinkButton_New3(qstring(text));
 }
 
 QCommandLinkButton* q_commandlinkbutton_new4(const char* text, const char* description) {
-    return QCommandLinkButton_new4(qstring(text), qstring(description));
+    return QCommandLinkButton_New4(qstring(text), qstring(description));
 }
 
 QCommandLinkButton* q_commandlinkbutton_new5(const char* text, void* parent) {
-    return QCommandLinkButton_new5(qstring(text), (QWidget*)parent);
+    return QCommandLinkButton_New5(qstring(text), (QWidget*)parent);
 }
 
 QCommandLinkButton* q_commandlinkbutton_new6(const char* text, const char* description, void* parent) {
-    return QCommandLinkButton_new6(qstring(text), qstring(description), (QWidget*)parent);
+    return QCommandLinkButton_New6(qstring(text), qstring(description), (QWidget*)parent);
 }
 
 const QMetaObject* q_commandlinkbutton_meta_object(void* self) {

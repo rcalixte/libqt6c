@@ -53,11 +53,11 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KShortcutsDialog* KShortcutsDialog_new(QWidget* parent);
-KShortcutsDialog* KShortcutsDialog_new2();
-KShortcutsDialog* KShortcutsDialog_new3(int actionTypes);
-KShortcutsDialog* KShortcutsDialog_new4(int actionTypes, int allowLetterShortcuts);
-KShortcutsDialog* KShortcutsDialog_new5(int actionTypes, int allowLetterShortcuts, QWidget* parent);
+KShortcutsDialog* KShortcutsDialog_New(QWidget* parent);
+KShortcutsDialog* KShortcutsDialog_New2();
+KShortcutsDialog* KShortcutsDialog_New3(int actionTypes);
+KShortcutsDialog* KShortcutsDialog_New4(int actionTypes, int allowLetterShortcuts);
+KShortcutsDialog* KShortcutsDialog_New5(int actionTypes, int allowLetterShortcuts, QWidget* parent);
 QMetaObject* KShortcutsDialog_MetaObject(const KShortcutsDialog* self);
 void* KShortcutsDialog_Metacast(KShortcutsDialog* self, const char* param1);
 int KShortcutsDialog_Metacall(KShortcutsDialog* self, int param1, int param2, void** param3);

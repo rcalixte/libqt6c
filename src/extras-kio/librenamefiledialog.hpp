@@ -57,7 +57,7 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KIO__RenameFileDialog* KIO__RenameFileDialog_new(const KFileItemList* items, QWidget* parent);
+KIO__RenameFileDialog* KIO__RenameFileDialog_New(const KFileItemList* items, QWidget* parent);
 QMetaObject* KIO__RenameFileDialog_MetaObject(const KIO__RenameFileDialog* self);
 void* KIO__RenameFileDialog_Metacast(KIO__RenameFileDialog* self, const char* param1);
 int KIO__RenameFileDialog_Metacall(KIO__RenameFileDialog* self, int param1, int param2, void** param3);

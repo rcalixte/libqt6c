@@ -6,11 +6,11 @@
 #include "libqformdatabuilder.h"
 
 QFormDataPartBuilder* q_formdatapartbuilder_new() {
-    return QFormDataPartBuilder_new();
+    return QFormDataPartBuilder_New();
 }
 
 QFormDataPartBuilder* q_formdatapartbuilder_new2(void* param1) {
-    return QFormDataPartBuilder_new2((QFormDataPartBuilder*)param1);
+    return QFormDataPartBuilder_New2((QFormDataPartBuilder*)param1);
 }
 
 void q_formdatapartbuilder_swap(void* self, void* other) {
@@ -50,7 +50,7 @@ void q_formdatapartbuilder_delete(void* self) {
 }
 
 QFormDataBuilder* q_formdatabuilder_new() {
-    return QFormDataBuilder_new();
+    return QFormDataBuilder_New();
 }
 
 void q_formdatabuilder_swap(void* self, void* other) {

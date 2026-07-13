@@ -13,11 +13,11 @@
 #include "libkmodelindexproxymapper.hpp"
 #include "libkmodelindexproxymapper.hxx"
 
-KModelIndexProxyMapper* KModelIndexProxyMapper_new(const QAbstractItemModel* leftModel, const QAbstractItemModel* rightModel) {
+KModelIndexProxyMapper* KModelIndexProxyMapper_New(const QAbstractItemModel* leftModel, const QAbstractItemModel* rightModel) {
     return new VirtualKModelIndexProxyMapper(leftModel, rightModel);
 }
 
-KModelIndexProxyMapper* KModelIndexProxyMapper_new2(const QAbstractItemModel* leftModel, const QAbstractItemModel* rightModel, QObject* parent) {
+KModelIndexProxyMapper* KModelIndexProxyMapper_New2(const QAbstractItemModel* leftModel, const QAbstractItemModel* rightModel, QObject* parent) {
     return new VirtualKModelIndexProxyMapper(leftModel, rightModel, parent);
 }
 

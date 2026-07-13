@@ -8,15 +8,15 @@
 #include "libqpicture.h"
 
 QPicture* q_picture_new() {
-    return QPicture_new();
+    return QPicture_New();
 }
 
 QPicture* q_picture_new2(void* param1) {
-    return QPicture_new2((QPicture*)param1);
+    return QPicture_New2((QPicture*)param1);
 }
 
 QPicture* q_picture_new3(int formatVersion) {
-    return QPicture_new3(formatVersion);
+    return QPicture_New3(formatVersion);
 }
 
 bool q_picture_is_null(void* self) {

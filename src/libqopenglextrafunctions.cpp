@@ -5,15 +5,15 @@
 #include "libqopenglextrafunctions.hpp"
 #include "libqopenglextrafunctions.hxx"
 
-QOpenGLExtraFunctions* QOpenGLExtraFunctions_new() {
+QOpenGLExtraFunctions* QOpenGLExtraFunctions_New() {
     return new QOpenGLExtraFunctions();
 }
 
-QOpenGLExtraFunctions* QOpenGLExtraFunctions_new2(QOpenGLContext* context) {
+QOpenGLExtraFunctions* QOpenGLExtraFunctions_New2(QOpenGLContext* context) {
     return new QOpenGLExtraFunctions(context);
 }
 
-QOpenGLExtraFunctions* QOpenGLExtraFunctions_new3(const QOpenGLExtraFunctions* param1) {
+QOpenGLExtraFunctions* QOpenGLExtraFunctions_New3(const QOpenGLExtraFunctions* param1) {
     return new QOpenGLExtraFunctions(*param1);
 }
 

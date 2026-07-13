@@ -26,11 +26,11 @@
 #include "libkfileplacesmodel.hpp"
 #include "libkfileplacesmodel.hxx"
 
-KFilePlacesModel* KFilePlacesModel_new() {
+KFilePlacesModel* KFilePlacesModel_New() {
     return new VirtualKFilePlacesModel();
 }
 
-KFilePlacesModel* KFilePlacesModel_new2(QObject* parent) {
+KFilePlacesModel* KFilePlacesModel_New2(QObject* parent) {
     return new VirtualKFilePlacesModel(parent);
 }
 

@@ -43,15 +43,15 @@
 #include "libktreewidgetsearchline.hpp"
 #include "libktreewidgetsearchline.hxx"
 
-KTreeWidgetSearchLine* KTreeWidgetSearchLine_new(QWidget* parent) {
+KTreeWidgetSearchLine* KTreeWidgetSearchLine_New(QWidget* parent) {
     return new VirtualKTreeWidgetSearchLine(parent);
 }
 
-KTreeWidgetSearchLine* KTreeWidgetSearchLine_new2() {
+KTreeWidgetSearchLine* KTreeWidgetSearchLine_New2() {
     return new VirtualKTreeWidgetSearchLine();
 }
 
-KTreeWidgetSearchLine* KTreeWidgetSearchLine_new3(QWidget* parent, const libqt_list /* of QTreeWidget* */ treeWidgets) {
+KTreeWidgetSearchLine* KTreeWidgetSearchLine_New3(QWidget* parent, const libqt_list /* of QTreeWidget* */ treeWidgets) {
     QList<QTreeWidget*> treeWidgets_QList;
     treeWidgets_QList.reserve(treeWidgets.len);
     QTreeWidget** treeWidgets_arr = static_cast<QTreeWidget**>(treeWidgets.data.ptr);
@@ -61,7 +61,7 @@ KTreeWidgetSearchLine* KTreeWidgetSearchLine_new3(QWidget* parent, const libqt_l
     return new VirtualKTreeWidgetSearchLine(parent, treeWidgets_QList);
 }
 
-KTreeWidgetSearchLine* KTreeWidgetSearchLine_new4(QWidget* parent, QTreeWidget* treeWidget) {
+KTreeWidgetSearchLine* KTreeWidgetSearchLine_New4(QWidget* parent, QTreeWidget* treeWidget) {
     return new VirtualKTreeWidgetSearchLine(parent, treeWidget);
 }
 

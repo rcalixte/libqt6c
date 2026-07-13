@@ -8,11 +8,11 @@
 #include "libemojimodelmanager.h"
 
 TextEmoticonsCore__EmojiModelManager* k_textemoticonscore__emojimodelmanager_new() {
-    return TextEmoticonsCore__EmojiModelManager_new();
+    return TextEmoticonsCore__EmojiModelManager_New();
 }
 
 TextEmoticonsCore__EmojiModelManager* k_textemoticonscore__emojimodelmanager_new2(void* parent) {
-    return TextEmoticonsCore__EmojiModelManager_new2((QObject*)parent);
+    return TextEmoticonsCore__EmojiModelManager_New2((QObject*)parent);
 }
 
 const QMetaObject* k_textemoticonscore__emojimodelmanager_meta_object(void* self) {

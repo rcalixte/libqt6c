@@ -11,11 +11,11 @@
 #include "libqformlayout.h"
 
 QFormLayout* q_formlayout_new(void* parent) {
-    return QFormLayout_new((QWidget*)parent);
+    return QFormLayout_New((QWidget*)parent);
 }
 
 QFormLayout* q_formlayout_new2() {
-    return QFormLayout_new2();
+    return QFormLayout_New2();
 }
 
 const QMetaObject* q_formlayout_meta_object(void* self) {
@@ -1067,11 +1067,11 @@ void q_formlayout_delete(void* self) {
 }
 
 QFormLayout__TakeRowResult* q_formlayout__takerowresult_new() {
-    return QFormLayout__TakeRowResult_new();
+    return QFormLayout__TakeRowResult_New();
 }
 
 QFormLayout__TakeRowResult* q_formlayout__takerowresult_new2(void* param1) {
-    return QFormLayout__TakeRowResult_new2((QFormLayout__TakeRowResult*)param1);
+    return QFormLayout__TakeRowResult_New2((QFormLayout__TakeRowResult*)param1);
 }
 
 QLayoutItem* q_formlayout__takerowresult_label_item(void* self) {

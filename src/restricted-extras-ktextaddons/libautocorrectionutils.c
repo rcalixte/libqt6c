@@ -3,11 +3,11 @@
 #include "libautocorrectionutils.h"
 
 TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__autocorrectionutils__typographicquotes_new(void* other) {
-    return TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes_new((TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*)other);
+    return TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes_New((TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*)other);
 }
 
 TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__autocorrectionutils__typographicquotes_new2(void* other) {
-    return TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes_new2((TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*)other);
+    return TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes_New2((TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*)other);
 }
 
 void k_textautocorrectioncore__autocorrectionutils__typographicquotes_copy_assign(void* self, void* other) {

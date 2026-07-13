@@ -30,8 +30,8 @@ typedef struct QWidget QWidget;
 typedef struct QWidgetAction QWidgetAction;
 #endif
 
-KBookmarkActionMenu* KBookmarkActionMenu_new(const KBookmark* bm, QObject* parent);
-KBookmarkActionMenu* KBookmarkActionMenu_new2(const KBookmark* bm, const libqt_string text, QObject* parent);
+KBookmarkActionMenu* KBookmarkActionMenu_New(const KBookmark* bm, QObject* parent);
+KBookmarkActionMenu* KBookmarkActionMenu_New2(const KBookmark* bm, const libqt_string text, QObject* parent);
 QMetaObject* KBookmarkActionMenu_MetaObject(const KBookmarkActionMenu* self);
 void* KBookmarkActionMenu_Metacast(KBookmarkActionMenu* self, const char* param1);
 int KBookmarkActionMenu_Metacall(KBookmarkActionMenu* self, int param1, int param2, void** param3);

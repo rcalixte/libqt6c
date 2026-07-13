@@ -51,8 +51,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QProgressBar* QProgressBar_new(QWidget* parent);
-QProgressBar* QProgressBar_new2();
+QProgressBar* QProgressBar_New(QWidget* parent);
+QProgressBar* QProgressBar_New2();
 QMetaObject* QProgressBar_MetaObject(const QProgressBar* self);
 void* QProgressBar_Metacast(QProgressBar* self, const char* param1);
 int QProgressBar_Metacall(QProgressBar* self, int param1, int param2, void** param3);

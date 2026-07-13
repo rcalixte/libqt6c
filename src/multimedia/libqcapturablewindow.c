@@ -2,11 +2,11 @@
 #include "libqcapturablewindow.h"
 
 QCapturableWindow* q_capturablewindow_new() {
-    return QCapturableWindow_new();
+    return QCapturableWindow_New();
 }
 
 QCapturableWindow* q_capturablewindow_new2(void* other) {
-    return QCapturableWindow_new2((QCapturableWindow*)other);
+    return QCapturableWindow_New2((QCapturableWindow*)other);
 }
 
 void q_capturablewindow_operator_assign(void* self, void* other) {

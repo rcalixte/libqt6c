@@ -181,13 +181,13 @@ bool QCP_IsInvalidData2(double value1, double value2);
 void QCP_SetMarginValue(QMargins* margins, int side, int value);
 int QCP_GetMarginValue(const QMargins* margins, int side);
 
-QCPVector2D* QCPVector2D_new(const QCPVector2D* other);
-QCPVector2D* QCPVector2D_new2(QCPVector2D* other);
-QCPVector2D* QCPVector2D_new3();
-QCPVector2D* QCPVector2D_new4(double x, double y);
-QCPVector2D* QCPVector2D_new5(const QPoint* point);
-QCPVector2D* QCPVector2D_new6(const QPointF* point);
-QCPVector2D* QCPVector2D_new7(const QCPVector2D* param1);
+QCPVector2D* QCPVector2D_New(const QCPVector2D* other);
+QCPVector2D* QCPVector2D_New2(QCPVector2D* other);
+QCPVector2D* QCPVector2D_New3();
+QCPVector2D* QCPVector2D_New4(double x, double y);
+QCPVector2D* QCPVector2D_New5(const QPoint* point);
+QCPVector2D* QCPVector2D_New6(const QPointF* point);
+QCPVector2D* QCPVector2D_New7(const QCPVector2D* param1);
 void QCPVector2D_CopyAssign(QCPVector2D* self, QCPVector2D* other);
 void QCPVector2D_MoveAssign(QCPVector2D* self, QCPVector2D* other);
 double QCPVector2D_X(const QCPVector2D* self);
@@ -215,8 +215,8 @@ QCPVector2D* QCPVector2D_OperatorPlusAssign(QCPVector2D* self, const QCPVector2D
 QCPVector2D* QCPVector2D_OperatorMinusAssign(QCPVector2D* self, const QCPVector2D* vector);
 void QCPVector2D_Delete(QCPVector2D* self);
 
-QCPPainter* QCPPainter_new();
-QCPPainter* QCPPainter_new2(QPaintDevice* device);
+QCPPainter* QCPPainter_New();
+QCPPainter* QCPPainter_New2(QPaintDevice* device);
 bool QCPPainter_Antialiasing(const QCPPainter* self);
 int QCPPainter_Modes(const QCPPainter* self);
 void QCPPainter_SetAntialiasing(QCPPainter* self, bool enabled);
@@ -234,8 +234,8 @@ void QCPPainter_MakeNonCosmetic(QCPPainter* self);
 void QCPPainter_SetMode2(QCPPainter* self, int mode, bool enabled);
 void QCPPainter_Delete(QCPPainter* self);
 
-QCPAbstractPaintBuffer* QCPAbstractPaintBuffer_new(const QSize* size, double devicePixelRatio);
-QCPAbstractPaintBuffer* QCPAbstractPaintBuffer_new2(const QCPAbstractPaintBuffer* param1);
+QCPAbstractPaintBuffer* QCPAbstractPaintBuffer_New(const QSize* size, double devicePixelRatio);
+QCPAbstractPaintBuffer* QCPAbstractPaintBuffer_New2(const QCPAbstractPaintBuffer* param1);
 QSize* QCPAbstractPaintBuffer_Size(const QCPAbstractPaintBuffer* self);
 bool QCPAbstractPaintBuffer_Invalidated(const QCPAbstractPaintBuffer* self);
 double QCPAbstractPaintBuffer_DevicePixelRatio(const QCPAbstractPaintBuffer* self);
@@ -263,8 +263,8 @@ void QCPAbstractPaintBuffer_OnOperatorAssign(QCPAbstractPaintBuffer* self, intpt
 void QCPAbstractPaintBuffer_SuperOperatorAssign(QCPAbstractPaintBuffer* self, const QCPAbstractPaintBuffer* param1);
 void QCPAbstractPaintBuffer_Delete(QCPAbstractPaintBuffer* self);
 
-QCPPaintBufferPixmap* QCPPaintBufferPixmap_new(const QSize* size, double devicePixelRatio);
-QCPPaintBufferPixmap* QCPPaintBufferPixmap_new2(const QCPPaintBufferPixmap* param1);
+QCPPaintBufferPixmap* QCPPaintBufferPixmap_New(const QSize* size, double devicePixelRatio);
+QCPPaintBufferPixmap* QCPPaintBufferPixmap_New2(const QCPPaintBufferPixmap* param1);
 QCPPainter* QCPPaintBufferPixmap_StartPainting(QCPPaintBufferPixmap* self);
 void QCPPaintBufferPixmap_Draw(const QCPPaintBufferPixmap* self, QCPPainter* painter);
 void QCPPaintBufferPixmap_Clear(QCPPaintBufferPixmap* self, const QColor* color);
@@ -285,7 +285,7 @@ void QCPPaintBufferPixmap_OnOperatorAssign(QCPPaintBufferPixmap* self, intptr_t 
 void QCPPaintBufferPixmap_SuperOperatorAssign(QCPPaintBufferPixmap* self, const QCPPaintBufferPixmap* param1);
 void QCPPaintBufferPixmap_Delete(QCPPaintBufferPixmap* self);
 
-QCPLayer* QCPLayer_new(QCustomPlot* parentPlot, const libqt_string layerName);
+QCPLayer* QCPLayer_New(QCustomPlot* parentPlot, const libqt_string layerName);
 QMetaObject* QCPLayer_MetaObject(const QCPLayer* self);
 void* QCPLayer_Metacast(QCPLayer* self, const char* param1);
 int QCPLayer_Metacall(QCPLayer* self, int param1, int param2, void** param3);
@@ -351,9 +351,9 @@ void QCPLayer_OnIsSignalConnected(const QCPLayer* self, intptr_t slot);
 bool QCPLayer_SuperIsSignalConnected(const QCPLayer* self, const QMetaMethod* signal);
 void QCPLayer_Delete(QCPLayer* self);
 
-QCPLayerable* QCPLayerable_new(QCustomPlot* plot);
-QCPLayerable* QCPLayerable_new2(QCustomPlot* plot, libqt_string targetLayer);
-QCPLayerable* QCPLayerable_new3(QCustomPlot* plot, libqt_string targetLayer, QCPLayerable* parentLayerable);
+QCPLayerable* QCPLayerable_New(QCustomPlot* plot);
+QCPLayerable* QCPLayerable_New2(QCustomPlot* plot, libqt_string targetLayer);
+QCPLayerable* QCPLayerable_New3(QCustomPlot* plot, libqt_string targetLayer, QCPLayerable* parentLayerable);
 QMetaObject* QCPLayerable_MetaObject(const QCPLayerable* self);
 void* QCPLayerable_Metacast(QCPLayerable* self, const char* param1);
 int QCPLayerable_Metacall(QCPLayerable* self, int param1, int param2, void** param3);
@@ -461,11 +461,11 @@ void QCPLayerable_OnIsSignalConnected(const QCPLayerable* self, intptr_t slot);
 bool QCPLayerable_SuperIsSignalConnected(const QCPLayerable* self, const QMetaMethod* signal);
 void QCPLayerable_Delete(QCPLayerable* self);
 
-QCPRange* QCPRange_new(const QCPRange* other);
-QCPRange* QCPRange_new2(QCPRange* other);
-QCPRange* QCPRange_new3();
-QCPRange* QCPRange_new4(double lower, double upper);
-QCPRange* QCPRange_new5(const QCPRange* param1);
+QCPRange* QCPRange_New(const QCPRange* other);
+QCPRange* QCPRange_New2(QCPRange* other);
+QCPRange* QCPRange_New3();
+QCPRange* QCPRange_New4(double lower, double upper);
+QCPRange* QCPRange_New5(const QCPRange* param1);
 void QCPRange_CopyAssign(QCPRange* self, QCPRange* other);
 void QCPRange_MoveAssign(QCPRange* self, QCPRange* other);
 double QCPRange_Lower(const QCPRange* self);
@@ -493,11 +493,11 @@ bool QCPRange_ValidRange(double lower, double upper);
 bool QCPRange_ValidRange2(const QCPRange* range);
 void QCPRange_Delete(QCPRange* self);
 
-QCPDataRange* QCPDataRange_new(const QCPDataRange* other);
-QCPDataRange* QCPDataRange_new2(QCPDataRange* other);
-QCPDataRange* QCPDataRange_new3();
-QCPDataRange* QCPDataRange_new4(int begin, int end);
-QCPDataRange* QCPDataRange_new5(const QCPDataRange* param1);
+QCPDataRange* QCPDataRange_New(const QCPDataRange* other);
+QCPDataRange* QCPDataRange_New2(QCPDataRange* other);
+QCPDataRange* QCPDataRange_New3();
+QCPDataRange* QCPDataRange_New4(int begin, int end);
+QCPDataRange* QCPDataRange_New5(const QCPDataRange* param1);
 void QCPDataRange_CopyAssign(QCPDataRange* self, QCPDataRange* other);
 void QCPDataRange_MoveAssign(QCPDataRange* self, QCPDataRange* other);
 bool QCPDataRange_OperatorEqual(const QCPDataRange* self, const QCPDataRange* other);
@@ -518,9 +518,9 @@ bool QCPDataRange_Intersects(const QCPDataRange* self, const QCPDataRange* other
 bool QCPDataRange_Contains(const QCPDataRange* self, const QCPDataRange* other);
 void QCPDataRange_Delete(QCPDataRange* self);
 
-QCPDataSelection* QCPDataSelection_new();
-QCPDataSelection* QCPDataSelection_new2(const QCPDataRange* range);
-QCPDataSelection* QCPDataSelection_new3(const QCPDataSelection* param1);
+QCPDataSelection* QCPDataSelection_New();
+QCPDataSelection* QCPDataSelection_New2(const QCPDataRange* range);
+QCPDataSelection* QCPDataSelection_New3(const QCPDataSelection* param1);
 bool QCPDataSelection_OperatorEqual(const QCPDataSelection* self, const QCPDataSelection* other);
 bool QCPDataSelection_OperatorNotEqual(const QCPDataSelection* self, const QCPDataSelection* other);
 QCPDataSelection* QCPDataSelection_OperatorPlusAssign(QCPDataSelection* self, const QCPDataSelection* other);
@@ -545,7 +545,7 @@ QCPDataRange* QCPDataSelection_DataRange1(const QCPDataSelection* self, int inde
 void QCPDataSelection_AddDataRange2(QCPDataSelection* self, const QCPDataRange* dataRange, bool simplify);
 void QCPDataSelection_Delete(QCPDataSelection* self);
 
-QCPSelectionRect* QCPSelectionRect_new(QCustomPlot* parentPlot);
+QCPSelectionRect* QCPSelectionRect_New(QCustomPlot* parentPlot);
 QMetaObject* QCPSelectionRect_MetaObject(const QCPSelectionRect* self);
 void* QCPSelectionRect_Metacast(QCPSelectionRect* self, const char* param1);
 int QCPSelectionRect_Metacall(QCPSelectionRect* self, int param1, int param2, void** param3);
@@ -669,7 +669,7 @@ void QCPSelectionRect_OnIsSignalConnected(const QCPSelectionRect* self, intptr_t
 bool QCPSelectionRect_SuperIsSignalConnected(const QCPSelectionRect* self, const QMetaMethod* signal);
 void QCPSelectionRect_Delete(QCPSelectionRect* self);
 
-QCPMarginGroup* QCPMarginGroup_new(QCustomPlot* parentPlot);
+QCPMarginGroup* QCPMarginGroup_New(QCustomPlot* parentPlot);
 QMetaObject* QCPMarginGroup_MetaObject(const QCPMarginGroup* self);
 void* QCPMarginGroup_Metacast(QCPMarginGroup* self, const char* param1);
 int QCPMarginGroup_Metacall(QCPMarginGroup* self, int param1, int param2, void** param3);
@@ -726,8 +726,8 @@ void QCPMarginGroup_OnIsSignalConnected(const QCPMarginGroup* self, intptr_t slo
 bool QCPMarginGroup_SuperIsSignalConnected(const QCPMarginGroup* self, const QMetaMethod* signal);
 void QCPMarginGroup_Delete(QCPMarginGroup* self);
 
-QCPLayoutElement* QCPLayoutElement_new();
-QCPLayoutElement* QCPLayoutElement_new2(QCustomPlot* parentPlot);
+QCPLayoutElement* QCPLayoutElement_New();
+QCPLayoutElement* QCPLayoutElement_New2(QCustomPlot* parentPlot);
 QMetaObject* QCPLayoutElement_MetaObject(const QCPLayoutElement* self);
 void* QCPLayoutElement_Metacast(QCPLayoutElement* self, const char* param1);
 int QCPLayoutElement_Metacall(QCPLayoutElement* self, int param1, int param2, void** param3);
@@ -862,7 +862,7 @@ void QCPLayoutElement_OnIsSignalConnected(const QCPLayoutElement* self, intptr_t
 bool QCPLayoutElement_SuperIsSignalConnected(const QCPLayoutElement* self, const QMetaMethod* signal);
 void QCPLayoutElement_Delete(QCPLayoutElement* self);
 
-QCPLayout* QCPLayout_new();
+QCPLayout* QCPLayout_New();
 QMetaObject* QCPLayout_MetaObject(const QCPLayout* self);
 void* QCPLayout_Metacast(QCPLayout* self, const char* param1);
 int QCPLayout_Metacall(QCPLayout* self, int param1, int param2, void** param3);
@@ -1009,7 +1009,7 @@ void QCPLayout_OnIsSignalConnected(const QCPLayout* self, intptr_t slot);
 bool QCPLayout_SuperIsSignalConnected(const QCPLayout* self, const QMetaMethod* signal);
 void QCPLayout_Delete(QCPLayout* self);
 
-QCPLayoutGrid* QCPLayoutGrid_new();
+QCPLayoutGrid* QCPLayoutGrid_New();
 QMetaObject* QCPLayoutGrid_MetaObject(const QCPLayoutGrid* self);
 void* QCPLayoutGrid_Metacast(QCPLayoutGrid* self, const char* param1);
 int QCPLayoutGrid_Metacall(QCPLayoutGrid* self, int param1, int param2, void** param3);
@@ -1185,7 +1185,7 @@ void QCPLayoutGrid_OnIsSignalConnected(const QCPLayoutGrid* self, intptr_t slot)
 bool QCPLayoutGrid_SuperIsSignalConnected(const QCPLayoutGrid* self, const QMetaMethod* signal);
 void QCPLayoutGrid_Delete(QCPLayoutGrid* self);
 
-QCPLayoutInset* QCPLayoutInset_new();
+QCPLayoutInset* QCPLayoutInset_New();
 QMetaObject* QCPLayoutInset_MetaObject(const QCPLayoutInset* self);
 void* QCPLayoutInset_Metacast(QCPLayoutInset* self, const char* param1);
 int QCPLayoutInset_Metacall(QCPLayoutInset* self, int param1, int param2, void** param3);
@@ -1337,14 +1337,14 @@ void QCPLayoutInset_OnIsSignalConnected(const QCPLayoutInset* self, intptr_t slo
 bool QCPLayoutInset_SuperIsSignalConnected(const QCPLayoutInset* self, const QMetaMethod* signal);
 void QCPLayoutInset_Delete(QCPLayoutInset* self);
 
-QCPLineEnding* QCPLineEnding_new(const QCPLineEnding* other);
-QCPLineEnding* QCPLineEnding_new2(QCPLineEnding* other);
-QCPLineEnding* QCPLineEnding_new3();
-QCPLineEnding* QCPLineEnding_new4(int style);
-QCPLineEnding* QCPLineEnding_new5(const QCPLineEnding* param1);
-QCPLineEnding* QCPLineEnding_new6(int style, double width);
-QCPLineEnding* QCPLineEnding_new7(int style, double width, double length);
-QCPLineEnding* QCPLineEnding_new8(int style, double width, double length, bool inverted);
+QCPLineEnding* QCPLineEnding_New(const QCPLineEnding* other);
+QCPLineEnding* QCPLineEnding_New2(QCPLineEnding* other);
+QCPLineEnding* QCPLineEnding_New3();
+QCPLineEnding* QCPLineEnding_New4(int style);
+QCPLineEnding* QCPLineEnding_New5(const QCPLineEnding* param1);
+QCPLineEnding* QCPLineEnding_New6(int style, double width);
+QCPLineEnding* QCPLineEnding_New7(int style, double width, double length);
+QCPLineEnding* QCPLineEnding_New8(int style, double width, double length, bool inverted);
 void QCPLineEnding_CopyAssign(QCPLineEnding* self, QCPLineEnding* other);
 void QCPLineEnding_MoveAssign(QCPLineEnding* self, QCPLineEnding* other);
 int QCPLineEnding_Style(const QCPLineEnding* self);
@@ -1361,7 +1361,7 @@ void QCPLineEnding_Draw(const QCPLineEnding* self, QCPPainter* painter, const QC
 void QCPLineEnding_Draw2(const QCPLineEnding* self, QCPPainter* painter, const QCPVector2D* pos, double angle);
 void QCPLineEnding_Delete(QCPLineEnding* self);
 
-QCPAxisTicker* QCPAxisTicker_new();
+QCPAxisTicker* QCPAxisTicker_New();
 int QCPAxisTicker_TickStepStrategy(const QCPAxisTicker* self);
 int QCPAxisTicker_TickCount(const QCPAxisTicker* self);
 double QCPAxisTicker_TickOrigin(const QCPAxisTicker* self);
@@ -1406,7 +1406,7 @@ void QCPAxisTicker_OnGetMantissa2(const QCPAxisTicker* self, intptr_t slot);
 double QCPAxisTicker_SuperGetMantissa2(const QCPAxisTicker* self, double input, double* magnitude);
 void QCPAxisTicker_Delete(QCPAxisTicker* self);
 
-QCPAxisTickerDateTime* QCPAxisTickerDateTime_new();
+QCPAxisTickerDateTime* QCPAxisTickerDateTime_New();
 libqt_string QCPAxisTickerDateTime_DateTimeFormat(const QCPAxisTickerDateTime* self);
 int QCPAxisTickerDateTime_DateTimeSpec(const QCPAxisTickerDateTime* self);
 QTimeZone* QCPAxisTickerDateTime_TimeZone(const QCPAxisTickerDateTime* self);
@@ -1454,7 +1454,7 @@ void QCPAxisTickerDateTime_OnCleanMantissa(const QCPAxisTickerDateTime* self, in
 double QCPAxisTickerDateTime_SuperCleanMantissa(const QCPAxisTickerDateTime* self, double input);
 void QCPAxisTickerDateTime_Delete(QCPAxisTickerDateTime* self);
 
-QCPAxisTickerTime* QCPAxisTickerTime_new();
+QCPAxisTickerTime* QCPAxisTickerTime_New();
 libqt_string QCPAxisTickerTime_TimeFormat(const QCPAxisTickerTime* self);
 int QCPAxisTickerTime_FieldWidth(const QCPAxisTickerTime* self, int unit);
 void QCPAxisTickerTime_SetTimeFormat(QCPAxisTickerTime* self, const libqt_string format);
@@ -1497,7 +1497,7 @@ void QCPAxisTickerTime_OnCleanMantissa(const QCPAxisTickerTime* self, intptr_t s
 double QCPAxisTickerTime_SuperCleanMantissa(const QCPAxisTickerTime* self, double input);
 void QCPAxisTickerTime_Delete(QCPAxisTickerTime* self);
 
-QCPAxisTickerFixed* QCPAxisTickerFixed_new();
+QCPAxisTickerFixed* QCPAxisTickerFixed_New();
 double QCPAxisTickerFixed_TickStep(const QCPAxisTickerFixed* self);
 int QCPAxisTickerFixed_ScaleStrategy(const QCPAxisTickerFixed* self);
 void QCPAxisTickerFixed_SetTickStep(QCPAxisTickerFixed* self, double step);
@@ -1537,7 +1537,7 @@ void QCPAxisTickerFixed_OnCleanMantissa(const QCPAxisTickerFixed* self, intptr_t
 double QCPAxisTickerFixed_SuperCleanMantissa(const QCPAxisTickerFixed* self, double input);
 void QCPAxisTickerFixed_Delete(QCPAxisTickerFixed* self);
 
-QCPAxisTickerText* QCPAxisTickerText_new();
+QCPAxisTickerText* QCPAxisTickerText_New();
 libqt_map /* of double to libqt_string */ QCPAxisTickerText_Ticks(QCPAxisTickerText* self);
 int QCPAxisTickerText_SubTickCount(const QCPAxisTickerText* self);
 void QCPAxisTickerText_SetTicks(QCPAxisTickerText* self, const libqt_map /* of double to libqt_string */ ticks);
@@ -1582,7 +1582,7 @@ void QCPAxisTickerText_OnCleanMantissa(const QCPAxisTickerText* self, intptr_t s
 double QCPAxisTickerText_SuperCleanMantissa(const QCPAxisTickerText* self, double input);
 void QCPAxisTickerText_Delete(QCPAxisTickerText* self);
 
-QCPAxisTickerPi* QCPAxisTickerPi_new();
+QCPAxisTickerPi* QCPAxisTickerPi_New();
 libqt_string QCPAxisTickerPi_PiSymbol(const QCPAxisTickerPi* self);
 double QCPAxisTickerPi_PiValue(const QCPAxisTickerPi* self);
 bool QCPAxisTickerPi_Periodicity(const QCPAxisTickerPi* self);
@@ -1641,7 +1641,7 @@ void QCPAxisTickerPi_OnCleanMantissa(const QCPAxisTickerPi* self, intptr_t slot)
 double QCPAxisTickerPi_SuperCleanMantissa(const QCPAxisTickerPi* self, double input);
 void QCPAxisTickerPi_Delete(QCPAxisTickerPi* self);
 
-QCPAxisTickerLog* QCPAxisTickerLog_new();
+QCPAxisTickerLog* QCPAxisTickerLog_New();
 double QCPAxisTickerLog_LogBase(const QCPAxisTickerLog* self);
 int QCPAxisTickerLog_SubTickCount(const QCPAxisTickerLog* self);
 void QCPAxisTickerLog_SetLogBase(QCPAxisTickerLog* self, double base);
@@ -1681,7 +1681,7 @@ void QCPAxisTickerLog_OnCleanMantissa(const QCPAxisTickerLog* self, intptr_t slo
 double QCPAxisTickerLog_SuperCleanMantissa(const QCPAxisTickerLog* self, double input);
 void QCPAxisTickerLog_Delete(QCPAxisTickerLog* self);
 
-QCPGrid* QCPGrid_new(QCPAxis* parentAxis);
+QCPGrid* QCPGrid_New(QCPAxis* parentAxis);
 QMetaObject* QCPGrid_MetaObject(const QCPGrid* self);
 void* QCPGrid_Metacast(QCPGrid* self, const char* param1);
 int QCPGrid_Metacall(QCPGrid* self, int param1, int param2, void** param3);
@@ -1795,7 +1795,7 @@ void QCPGrid_OnIsSignalConnected(const QCPGrid* self, intptr_t slot);
 bool QCPGrid_SuperIsSignalConnected(const QCPGrid* self, const QMetaMethod* signal);
 void QCPGrid_Delete(QCPGrid* self);
 
-QCPAxis* QCPAxis_new(QCPAxisRect* parent, int type);
+QCPAxis* QCPAxis_New(QCPAxisRect* parent, int type);
 QMetaObject* QCPAxis_MetaObject(const QCPAxis* self);
 void* QCPAxis_Metacast(QCPAxis* self, const char* param1);
 int QCPAxis_Metacall(QCPAxis* self, int param1, int param2, void** param3);
@@ -2028,17 +2028,17 @@ void QCPAxis_OnIsSignalConnected(const QCPAxis* self, intptr_t slot);
 bool QCPAxis_SuperIsSignalConnected(const QCPAxis* self, const QMetaMethod* signal);
 void QCPAxis_Delete(QCPAxis* self);
 
-QCPScatterStyle* QCPScatterStyle_new();
-QCPScatterStyle* QCPScatterStyle_new2(int shape);
-QCPScatterStyle* QCPScatterStyle_new3(int shape, const QColor* color, double size);
-QCPScatterStyle* QCPScatterStyle_new4(int shape, const QColor* color, const QColor* fill, double size);
-QCPScatterStyle* QCPScatterStyle_new5(int shape, const QPen* pen, const QBrush* brush, double size);
-QCPScatterStyle* QCPScatterStyle_new6(const QPixmap* pixmap);
-QCPScatterStyle* QCPScatterStyle_new7(const QPainterPath* customPath, const QPen* pen);
-QCPScatterStyle* QCPScatterStyle_new8(const QCPScatterStyle* param1);
-QCPScatterStyle* QCPScatterStyle_new9(int shape, double size);
-QCPScatterStyle* QCPScatterStyle_new10(const QPainterPath* customPath, const QPen* pen, const QBrush* brush);
-QCPScatterStyle* QCPScatterStyle_new11(const QPainterPath* customPath, const QPen* pen, const QBrush* brush, double size);
+QCPScatterStyle* QCPScatterStyle_New();
+QCPScatterStyle* QCPScatterStyle_New2(int shape);
+QCPScatterStyle* QCPScatterStyle_New3(int shape, const QColor* color, double size);
+QCPScatterStyle* QCPScatterStyle_New4(int shape, const QColor* color, const QColor* fill, double size);
+QCPScatterStyle* QCPScatterStyle_New5(int shape, const QPen* pen, const QBrush* brush, double size);
+QCPScatterStyle* QCPScatterStyle_New6(const QPixmap* pixmap);
+QCPScatterStyle* QCPScatterStyle_New7(const QPainterPath* customPath, const QPen* pen);
+QCPScatterStyle* QCPScatterStyle_New8(const QCPScatterStyle* param1);
+QCPScatterStyle* QCPScatterStyle_New9(int shape, double size);
+QCPScatterStyle* QCPScatterStyle_New10(const QPainterPath* customPath, const QPen* pen, const QBrush* brush);
+QCPScatterStyle* QCPScatterStyle_New11(const QPainterPath* customPath, const QPen* pen, const QBrush* brush, double size);
 double QCPScatterStyle_Size(const QCPScatterStyle* self);
 int QCPScatterStyle_Shape(const QCPScatterStyle* self);
 QPen* QCPScatterStyle_Pen(const QCPScatterStyle* self);
@@ -2060,7 +2060,7 @@ void QCPScatterStyle_DrawShape(const QCPScatterStyle* self, QCPPainter* painter,
 void QCPScatterStyle_DrawShape2(const QCPScatterStyle* self, QCPPainter* painter, double x, double y);
 void QCPScatterStyle_Delete(QCPScatterStyle* self);
 
-QCPSelectionDecorator* QCPSelectionDecorator_new();
+QCPSelectionDecorator* QCPSelectionDecorator_New();
 QPen* QCPSelectionDecorator_Pen(const QCPSelectionDecorator* self);
 QBrush* QCPSelectionDecorator_Brush(const QCPSelectionDecorator* self);
 QCPScatterStyle* QCPSelectionDecorator_ScatterStyle(const QCPSelectionDecorator* self);
@@ -2084,7 +2084,7 @@ void QCPSelectionDecorator_OnRegisterWithPlottable(QCPSelectionDecorator* self, 
 bool QCPSelectionDecorator_SuperRegisterWithPlottable(QCPSelectionDecorator* self, QCPAbstractPlottable* plottable);
 void QCPSelectionDecorator_Delete(QCPSelectionDecorator* self);
 
-QCPAbstractPlottable* QCPAbstractPlottable_new(QCPAxis* keyAxis, QCPAxis* valueAxis);
+QCPAbstractPlottable* QCPAbstractPlottable_New(QCPAxis* keyAxis, QCPAxis* valueAxis);
 QMetaObject* QCPAbstractPlottable_MetaObject(const QCPAbstractPlottable* self);
 void* QCPAbstractPlottable_Metacast(QCPAbstractPlottable* self, const char* param1);
 int QCPAbstractPlottable_Metacall(QCPAbstractPlottable* self, int param1, int param2, void** param3);
@@ -2237,8 +2237,8 @@ void QCPAbstractPlottable_OnIsSignalConnected(const QCPAbstractPlottable* self, 
 bool QCPAbstractPlottable_SuperIsSignalConnected(const QCPAbstractPlottable* self, const QMetaMethod* signal);
 void QCPAbstractPlottable_Delete(QCPAbstractPlottable* self);
 
-QCPItemAnchor* QCPItemAnchor_new(QCustomPlot* parentPlot, QCPAbstractItem* parentItem, const libqt_string name);
-QCPItemAnchor* QCPItemAnchor_new2(QCustomPlot* parentPlot, QCPAbstractItem* parentItem, const libqt_string name, int anchorId);
+QCPItemAnchor* QCPItemAnchor_New(QCustomPlot* parentPlot, QCPAbstractItem* parentItem, const libqt_string name);
+QCPItemAnchor* QCPItemAnchor_New2(QCustomPlot* parentPlot, QCPAbstractItem* parentItem, const libqt_string name, int anchorId);
 libqt_string QCPItemAnchor_Name(const QCPItemAnchor* self);
 QPointF* QCPItemAnchor_PixelPosition(const QCPItemAnchor* self);
 QCPItemPosition* QCPItemAnchor_ToQCPItemPosition(QCPItemAnchor* self);
@@ -2260,7 +2260,7 @@ void QCPItemAnchor_OnRemoveChildY(QCPItemAnchor* self, intptr_t slot);
 void QCPItemAnchor_SuperRemoveChildY(QCPItemAnchor* self, QCPItemPosition* pos);
 void QCPItemAnchor_Delete(QCPItemAnchor* self);
 
-QCPItemPosition* QCPItemPosition_new(QCustomPlot* parentPlot, QCPAbstractItem* parentItem, const libqt_string name);
+QCPItemPosition* QCPItemPosition_New(QCustomPlot* parentPlot, QCPAbstractItem* parentItem, const libqt_string name);
 int QCPItemPosition_Type(const QCPItemPosition* self);
 int QCPItemPosition_TypeX(const QCPItemPosition* self);
 int QCPItemPosition_TypeY(const QCPItemPosition* self);
@@ -2307,7 +2307,7 @@ void QCPItemPosition_OnRemoveChildY(QCPItemPosition* self, intptr_t slot);
 void QCPItemPosition_SuperRemoveChildY(QCPItemPosition* self, QCPItemPosition* pos);
 void QCPItemPosition_Delete(QCPItemPosition* self);
 
-QCPAbstractItem* QCPAbstractItem_new(QCustomPlot* parentPlot);
+QCPAbstractItem* QCPAbstractItem_New(QCustomPlot* parentPlot);
 QMetaObject* QCPAbstractItem_MetaObject(const QCPAbstractItem* self);
 void* QCPAbstractItem_Metacast(QCPAbstractItem* self, const char* param1);
 int QCPAbstractItem_Metacall(QCPAbstractItem* self, int param1, int param2, void** param3);
@@ -2432,8 +2432,8 @@ void QCPAbstractItem_OnIsSignalConnected(const QCPAbstractItem* self, intptr_t s
 bool QCPAbstractItem_SuperIsSignalConnected(const QCPAbstractItem* self, const QMetaMethod* signal);
 void QCPAbstractItem_Delete(QCPAbstractItem* self);
 
-QCustomPlot* QCustomPlot_new(QWidget* parent);
-QCustomPlot* QCustomPlot_new2();
+QCustomPlot* QCustomPlot_New(QWidget* parent);
+QCustomPlot* QCustomPlot_New2();
 QMetaObject* QCustomPlot_MetaObject(const QCustomPlot* self);
 void* QCustomPlot_Metacast(QCustomPlot* self, const char* param1);
 int QCustomPlot_Metacall(QCustomPlot* self, int param1, int param2, void** param3);
@@ -2876,9 +2876,9 @@ int QCPPlottableInterface1D_FindEnd(const QCPPlottableInterface1D* self, double 
 void QCPPlottableInterface1D_OperatorAssign(QCPPlottableInterface1D* self, const QCPPlottableInterface1D* param1);
 void QCPPlottableInterface1D_Delete(QCPPlottableInterface1D* self);
 
-QCPColorGradient* QCPColorGradient_new();
-QCPColorGradient* QCPColorGradient_new2(int preset);
-QCPColorGradient* QCPColorGradient_new3(const QCPColorGradient* param1);
+QCPColorGradient* QCPColorGradient_New();
+QCPColorGradient* QCPColorGradient_New2(int preset);
+QCPColorGradient* QCPColorGradient_New3(const QCPColorGradient* param1);
 bool QCPColorGradient_OperatorEqual(const QCPColorGradient* self, const QCPColorGradient* other);
 bool QCPColorGradient_OperatorNotEqual(const QCPColorGradient* self, const QCPColorGradient* other);
 int QCPColorGradient_LevelCount(const QCPColorGradient* self);
@@ -2907,7 +2907,7 @@ void QCPColorGradient_Colorize7(QCPColorGradient* self, const double* data, cons
 unsigned int QCPColorGradient_Color3(QCPColorGradient* self, double position, const QCPRange* range, bool logarithmic);
 void QCPColorGradient_Delete(QCPColorGradient* self);
 
-QCPSelectionDecoratorBracket* QCPSelectionDecoratorBracket_new();
+QCPSelectionDecoratorBracket* QCPSelectionDecoratorBracket_New();
 QPen* QCPSelectionDecoratorBracket_BracketPen(const QCPSelectionDecoratorBracket* self);
 QBrush* QCPSelectionDecoratorBracket_BracketBrush(const QCPSelectionDecoratorBracket* self);
 int QCPSelectionDecoratorBracket_BracketWidth(const QCPSelectionDecoratorBracket* self);
@@ -2942,8 +2942,8 @@ void QCPSelectionDecoratorBracket_OnGetPixelCoordinates(const QCPSelectionDecora
 QPointF* QCPSelectionDecoratorBracket_SuperGetPixelCoordinates(const QCPSelectionDecoratorBracket* self, const QCPPlottableInterface1D* interface1d, int dataIndex);
 void QCPSelectionDecoratorBracket_Delete(QCPSelectionDecoratorBracket* self);
 
-QCPAxisRect* QCPAxisRect_new(QCustomPlot* parentPlot);
-QCPAxisRect* QCPAxisRect_new2(QCustomPlot* parentPlot, bool setupDefaultAxes);
+QCPAxisRect* QCPAxisRect_New(QCustomPlot* parentPlot);
+QCPAxisRect* QCPAxisRect_New2(QCustomPlot* parentPlot, bool setupDefaultAxes);
 QMetaObject* QCPAxisRect_MetaObject(const QCPAxisRect* self);
 void* QCPAxisRect_Metacast(QCPAxisRect* self, const char* param1);
 int QCPAxisRect_Metacall(QCPAxisRect* self, int param1, int param2, void** param3);
@@ -3119,7 +3119,7 @@ void QCPAxisRect_OnIsSignalConnected(const QCPAxisRect* self, intptr_t slot);
 bool QCPAxisRect_SuperIsSignalConnected(const QCPAxisRect* self, const QMetaMethod* signal);
 void QCPAxisRect_Delete(QCPAxisRect* self);
 
-QCPAbstractLegendItem* QCPAbstractLegendItem_new(QCPLegend* parent);
+QCPAbstractLegendItem* QCPAbstractLegendItem_New(QCPLegend* parent);
 QMetaObject* QCPAbstractLegendItem_MetaObject(const QCPAbstractLegendItem* self);
 void* QCPAbstractLegendItem_Metacast(QCPAbstractLegendItem* self, const char* param1);
 int QCPAbstractLegendItem_Metacall(QCPAbstractLegendItem* self, int param1, int param2, void** param3);
@@ -3250,7 +3250,7 @@ void QCPAbstractLegendItem_OnIsSignalConnected(const QCPAbstractLegendItem* self
 bool QCPAbstractLegendItem_SuperIsSignalConnected(const QCPAbstractLegendItem* self, const QMetaMethod* signal);
 void QCPAbstractLegendItem_Delete(QCPAbstractLegendItem* self);
 
-QCPPlottableLegendItem* QCPPlottableLegendItem_new(QCPLegend* parent, QCPAbstractPlottable* plottable);
+QCPPlottableLegendItem* QCPPlottableLegendItem_New(QCPLegend* parent, QCPAbstractPlottable* plottable);
 QMetaObject* QCPPlottableLegendItem_MetaObject(const QCPPlottableLegendItem* self);
 void* QCPPlottableLegendItem_Metacast(QCPPlottableLegendItem* self, const char* param1);
 int QCPPlottableLegendItem_Metacall(QCPPlottableLegendItem* self, int param1, int param2, void** param3);
@@ -3374,7 +3374,7 @@ void QCPPlottableLegendItem_OnIsSignalConnected(const QCPPlottableLegendItem* se
 bool QCPPlottableLegendItem_SuperIsSignalConnected(const QCPPlottableLegendItem* self, const QMetaMethod* signal);
 void QCPPlottableLegendItem_Delete(QCPPlottableLegendItem* self);
 
-QCPLegend* QCPLegend_new();
+QCPLegend* QCPLegend_New();
 QMetaObject* QCPLegend_MetaObject(const QCPLegend* self);
 void* QCPLegend_Metacast(QCPLegend* self, const char* param1);
 int QCPLegend_Metacall(QCPLegend* self, int param1, int param2, void** param3);
@@ -3573,11 +3573,11 @@ void QCPLegend_OnIsSignalConnected(const QCPLegend* self, intptr_t slot);
 bool QCPLegend_SuperIsSignalConnected(const QCPLegend* self, const QMetaMethod* signal);
 void QCPLegend_Delete(QCPLegend* self);
 
-QCPTextElement* QCPTextElement_new(QCustomPlot* parentPlot);
-QCPTextElement* QCPTextElement_new2(QCustomPlot* parentPlot, const libqt_string text);
-QCPTextElement* QCPTextElement_new3(QCustomPlot* parentPlot, const libqt_string text, double pointSize);
-QCPTextElement* QCPTextElement_new4(QCustomPlot* parentPlot, const libqt_string text, const libqt_string fontFamily, double pointSize);
-QCPTextElement* QCPTextElement_new5(QCustomPlot* parentPlot, const libqt_string text, const QFont* font);
+QCPTextElement* QCPTextElement_New(QCustomPlot* parentPlot);
+QCPTextElement* QCPTextElement_New2(QCustomPlot* parentPlot, const libqt_string text);
+QCPTextElement* QCPTextElement_New3(QCustomPlot* parentPlot, const libqt_string text, double pointSize);
+QCPTextElement* QCPTextElement_New4(QCustomPlot* parentPlot, const libqt_string text, const libqt_string fontFamily, double pointSize);
+QCPTextElement* QCPTextElement_New5(QCustomPlot* parentPlot, const libqt_string text, const QFont* font);
 QMetaObject* QCPTextElement_MetaObject(const QCPTextElement* self);
 void* QCPTextElement_Metacast(QCPTextElement* self, const char* param1);
 int QCPTextElement_Metacall(QCPTextElement* self, int param1, int param2, void** param3);
@@ -3721,7 +3721,7 @@ void QCPTextElement_OnIsSignalConnected(const QCPTextElement* self, intptr_t slo
 bool QCPTextElement_SuperIsSignalConnected(const QCPTextElement* self, const QMetaMethod* signal);
 void QCPTextElement_Delete(QCPTextElement* self);
 
-QCPColorScale* QCPColorScale_new(QCustomPlot* parentPlot);
+QCPColorScale* QCPColorScale_New(QCustomPlot* parentPlot);
 QMetaObject* QCPColorScale_MetaObject(const QCPColorScale* self);
 void* QCPColorScale_Metacast(QCPColorScale* self, const char* param1);
 int QCPColorScale_Metacall(QCPColorScale* self, int param1, int param2, void** param3);
@@ -3860,11 +3860,11 @@ void QCPColorScale_OnIsSignalConnected(const QCPColorScale* self, intptr_t slot)
 bool QCPColorScale_SuperIsSignalConnected(const QCPColorScale* self, const QMetaMethod* signal);
 void QCPColorScale_Delete(QCPColorScale* self);
 
-QCPGraphData* QCPGraphData_new(const QCPGraphData* other);
-QCPGraphData* QCPGraphData_new2(QCPGraphData* other);
-QCPGraphData* QCPGraphData_new3();
-QCPGraphData* QCPGraphData_new4(double key, double value);
-QCPGraphData* QCPGraphData_new5(const QCPGraphData* param1);
+QCPGraphData* QCPGraphData_New(const QCPGraphData* other);
+QCPGraphData* QCPGraphData_New2(QCPGraphData* other);
+QCPGraphData* QCPGraphData_New3();
+QCPGraphData* QCPGraphData_New4(double key, double value);
+QCPGraphData* QCPGraphData_New5(const QCPGraphData* param1);
 void QCPGraphData_CopyAssign(QCPGraphData* self, QCPGraphData* other);
 void QCPGraphData_MoveAssign(QCPGraphData* self, QCPGraphData* other);
 double QCPGraphData_SortKey(const QCPGraphData* self);
@@ -3879,7 +3879,7 @@ double QCPGraphData_Value(const QCPGraphData* self);
 void QCPGraphData_SetValue(QCPGraphData* self, double value);
 void QCPGraphData_Delete(QCPGraphData* self);
 
-QCPGraph* QCPGraph_new(QCPAxis* keyAxis, QCPAxis* valueAxis);
+QCPGraph* QCPGraph_New(QCPAxis* keyAxis, QCPAxis* valueAxis);
 QMetaObject* QCPGraph_MetaObject(const QCPGraph* self);
 void* QCPGraph_Metacast(QCPGraph* self, const char* param1);
 int QCPGraph_Metacall(QCPGraph* self, int param1, int param2, void** param3);
@@ -4095,11 +4095,11 @@ void QCPGraph_OnIsSignalConnected(const QCPGraph* self, intptr_t slot);
 bool QCPGraph_SuperIsSignalConnected(const QCPGraph* self, const QMetaMethod* signal);
 void QCPGraph_Delete(QCPGraph* self);
 
-QCPCurveData* QCPCurveData_new(const QCPCurveData* other);
-QCPCurveData* QCPCurveData_new2(QCPCurveData* other);
-QCPCurveData* QCPCurveData_new3();
-QCPCurveData* QCPCurveData_new4(double t, double key, double value);
-QCPCurveData* QCPCurveData_new5(const QCPCurveData* param1);
+QCPCurveData* QCPCurveData_New(const QCPCurveData* other);
+QCPCurveData* QCPCurveData_New2(QCPCurveData* other);
+QCPCurveData* QCPCurveData_New3();
+QCPCurveData* QCPCurveData_New4(double t, double key, double value);
+QCPCurveData* QCPCurveData_New5(const QCPCurveData* param1);
 void QCPCurveData_CopyAssign(QCPCurveData* self, QCPCurveData* other);
 void QCPCurveData_MoveAssign(QCPCurveData* self, QCPCurveData* other);
 double QCPCurveData_SortKey(const QCPCurveData* self);
@@ -4116,7 +4116,7 @@ double QCPCurveData_Value(const QCPCurveData* self);
 void QCPCurveData_SetValue(QCPCurveData* self, double value);
 void QCPCurveData_Delete(QCPCurveData* self);
 
-QCPCurve* QCPCurve_new(QCPAxis* keyAxis, QCPAxis* valueAxis);
+QCPCurve* QCPCurve_New(QCPAxis* keyAxis, QCPAxis* valueAxis);
 QMetaObject* QCPCurve_MetaObject(const QCPCurve* self);
 void* QCPCurve_Metacast(QCPCurve* self, const char* param1);
 int QCPCurve_Metacall(QCPCurve* self, int param1, int param2, void** param3);
@@ -4304,7 +4304,7 @@ void QCPCurve_OnIsSignalConnected(const QCPCurve* self, intptr_t slot);
 bool QCPCurve_SuperIsSignalConnected(const QCPCurve* self, const QMetaMethod* signal);
 void QCPCurve_Delete(QCPCurve* self);
 
-QCPBarsGroup* QCPBarsGroup_new(QCustomPlot* parentPlot);
+QCPBarsGroup* QCPBarsGroup_New(QCustomPlot* parentPlot);
 QMetaObject* QCPBarsGroup_MetaObject(const QCPBarsGroup* self);
 void* QCPBarsGroup_Metacast(QCPBarsGroup* self, const char* param1);
 int QCPBarsGroup_Metacall(QCPBarsGroup* self, int param1, int param2, void** param3);
@@ -4374,11 +4374,11 @@ void QCPBarsGroup_OnIsSignalConnected(const QCPBarsGroup* self, intptr_t slot);
 bool QCPBarsGroup_SuperIsSignalConnected(const QCPBarsGroup* self, const QMetaMethod* signal);
 void QCPBarsGroup_Delete(QCPBarsGroup* self);
 
-QCPBarsData* QCPBarsData_new(const QCPBarsData* other);
-QCPBarsData* QCPBarsData_new2(QCPBarsData* other);
-QCPBarsData* QCPBarsData_new3();
-QCPBarsData* QCPBarsData_new4(double key, double value);
-QCPBarsData* QCPBarsData_new5(const QCPBarsData* param1);
+QCPBarsData* QCPBarsData_New(const QCPBarsData* other);
+QCPBarsData* QCPBarsData_New2(QCPBarsData* other);
+QCPBarsData* QCPBarsData_New3();
+QCPBarsData* QCPBarsData_New4(double key, double value);
+QCPBarsData* QCPBarsData_New5(const QCPBarsData* param1);
 void QCPBarsData_CopyAssign(QCPBarsData* self, QCPBarsData* other);
 void QCPBarsData_MoveAssign(QCPBarsData* self, QCPBarsData* other);
 double QCPBarsData_SortKey(const QCPBarsData* self);
@@ -4393,7 +4393,7 @@ double QCPBarsData_Value(const QCPBarsData* self);
 void QCPBarsData_SetValue(QCPBarsData* self, double value);
 void QCPBarsData_Delete(QCPBarsData* self);
 
-QCPBars* QCPBars_new(QCPAxis* keyAxis, QCPAxis* valueAxis);
+QCPBars* QCPBars_New(QCPAxis* keyAxis, QCPAxis* valueAxis);
 QMetaObject* QCPBars_MetaObject(const QCPBars* self);
 void* QCPBars_Metacast(QCPBars* self, const char* param1);
 int QCPBars_Metacall(QCPBars* self, int param1, int param2, void** param3);
@@ -4568,10 +4568,10 @@ void QCPBars_OnIsSignalConnected(const QCPBars* self, intptr_t slot);
 bool QCPBars_SuperIsSignalConnected(const QCPBars* self, const QMetaMethod* signal);
 void QCPBars_Delete(QCPBars* self);
 
-QCPStatisticalBoxData* QCPStatisticalBoxData_new();
-QCPStatisticalBoxData* QCPStatisticalBoxData_new2(double key, double minimum, double lowerQuartile, double median, double upperQuartile, double maximum);
-QCPStatisticalBoxData* QCPStatisticalBoxData_new3(const QCPStatisticalBoxData* param1);
-QCPStatisticalBoxData* QCPStatisticalBoxData_new4(double key, double minimum, double lowerQuartile, double median, double upperQuartile, double maximum, const libqt_list /* of double */ outliers);
+QCPStatisticalBoxData* QCPStatisticalBoxData_New();
+QCPStatisticalBoxData* QCPStatisticalBoxData_New2(double key, double minimum, double lowerQuartile, double median, double upperQuartile, double maximum);
+QCPStatisticalBoxData* QCPStatisticalBoxData_New3(const QCPStatisticalBoxData* param1);
+QCPStatisticalBoxData* QCPStatisticalBoxData_New4(double key, double minimum, double lowerQuartile, double median, double upperQuartile, double maximum, const libqt_list /* of double */ outliers);
 double QCPStatisticalBoxData_SortKey(const QCPStatisticalBoxData* self);
 QCPStatisticalBoxData* QCPStatisticalBoxData_FromSortKey(double sortKey);
 bool QCPStatisticalBoxData_SortKeyIsMainKey();
@@ -4594,7 +4594,7 @@ libqt_list /* of double */ QCPStatisticalBoxData_Outliers(const QCPStatisticalBo
 void QCPStatisticalBoxData_SetOutliers(QCPStatisticalBoxData* self, libqt_list /* of double */ outliers);
 void QCPStatisticalBoxData_Delete(QCPStatisticalBoxData* self);
 
-QCPStatisticalBox* QCPStatisticalBox_new(QCPAxis* keyAxis, QCPAxis* valueAxis);
+QCPStatisticalBox* QCPStatisticalBox_New(QCPAxis* keyAxis, QCPAxis* valueAxis);
 QMetaObject* QCPStatisticalBox_MetaObject(const QCPStatisticalBox* self);
 void* QCPStatisticalBox_Metacast(QCPStatisticalBox* self, const char* param1);
 int QCPStatisticalBox_Metacall(QCPStatisticalBox* self, int param1, int param2, void** param3);
@@ -4758,8 +4758,8 @@ void QCPStatisticalBox_OnIsSignalConnected(const QCPStatisticalBox* self, intptr
 bool QCPStatisticalBox_SuperIsSignalConnected(const QCPStatisticalBox* self, const QMetaMethod* signal);
 void QCPStatisticalBox_Delete(QCPStatisticalBox* self);
 
-QCPColorMapData* QCPColorMapData_new(int keySize, int valueSize, const QCPRange* keyRange, const QCPRange* valueRange);
-QCPColorMapData* QCPColorMapData_new2(const QCPColorMapData* other);
+QCPColorMapData* QCPColorMapData_New(int keySize, int valueSize, const QCPRange* keyRange, const QCPRange* valueRange);
+QCPColorMapData* QCPColorMapData_New2(const QCPColorMapData* other);
 void QCPColorMapData_OperatorAssign(QCPColorMapData* self, const QCPColorMapData* other);
 int QCPColorMapData_KeySize(const QCPColorMapData* self);
 int QCPColorMapData_ValueSize(const QCPColorMapData* self);
@@ -4788,7 +4788,7 @@ void QCPColorMapData_CoordToCell(const QCPColorMapData* self, double key, double
 void QCPColorMapData_CellToCoord(const QCPColorMapData* self, int keyIndex, int valueIndex, double* key, double* value);
 void QCPColorMapData_Delete(QCPColorMapData* self);
 
-QCPColorMap* QCPColorMap_new(QCPAxis* keyAxis, QCPAxis* valueAxis);
+QCPColorMap* QCPColorMap_New(QCPAxis* keyAxis, QCPAxis* valueAxis);
 QMetaObject* QCPColorMap_MetaObject(const QCPColorMap* self);
 void* QCPColorMap_Metacast(QCPColorMap* self, const char* param1);
 int QCPColorMap_Metacall(QCPColorMap* self, int param1, int param2, void** param3);
@@ -4931,11 +4931,11 @@ void QCPColorMap_OnIsSignalConnected(const QCPColorMap* self, intptr_t slot);
 bool QCPColorMap_SuperIsSignalConnected(const QCPColorMap* self, const QMetaMethod* signal);
 void QCPColorMap_Delete(QCPColorMap* self);
 
-QCPFinancialData* QCPFinancialData_new(const QCPFinancialData* other);
-QCPFinancialData* QCPFinancialData_new2(QCPFinancialData* other);
-QCPFinancialData* QCPFinancialData_new3();
-QCPFinancialData* QCPFinancialData_new4(double key, double open, double high, double low, double close);
-QCPFinancialData* QCPFinancialData_new5(const QCPFinancialData* param1);
+QCPFinancialData* QCPFinancialData_New(const QCPFinancialData* other);
+QCPFinancialData* QCPFinancialData_New2(QCPFinancialData* other);
+QCPFinancialData* QCPFinancialData_New3();
+QCPFinancialData* QCPFinancialData_New4(double key, double open, double high, double low, double close);
+QCPFinancialData* QCPFinancialData_New5(const QCPFinancialData* param1);
 void QCPFinancialData_CopyAssign(QCPFinancialData* self, QCPFinancialData* other);
 void QCPFinancialData_MoveAssign(QCPFinancialData* self, QCPFinancialData* other);
 double QCPFinancialData_SortKey(const QCPFinancialData* self);
@@ -4956,7 +4956,7 @@ double QCPFinancialData_Close(const QCPFinancialData* self);
 void QCPFinancialData_SetClose(QCPFinancialData* self, double close);
 void QCPFinancialData_Delete(QCPFinancialData* self);
 
-QCPFinancial* QCPFinancial_new(QCPAxis* keyAxis, QCPAxis* valueAxis);
+QCPFinancial* QCPFinancial_New(QCPAxis* keyAxis, QCPAxis* valueAxis);
 QMetaObject* QCPFinancial_MetaObject(const QCPFinancial* self);
 void* QCPFinancial_Metacast(QCPFinancial* self, const char* param1);
 int QCPFinancial_Metacall(QCPFinancial* self, int param1, int param2, void** param3);
@@ -5124,12 +5124,12 @@ void QCPFinancial_OnIsSignalConnected(const QCPFinancial* self, intptr_t slot);
 bool QCPFinancial_SuperIsSignalConnected(const QCPFinancial* self, const QMetaMethod* signal);
 void QCPFinancial_Delete(QCPFinancial* self);
 
-QCPErrorBarsData* QCPErrorBarsData_new(const QCPErrorBarsData* other);
-QCPErrorBarsData* QCPErrorBarsData_new2(QCPErrorBarsData* other);
-QCPErrorBarsData* QCPErrorBarsData_new3();
-QCPErrorBarsData* QCPErrorBarsData_new4(double error);
-QCPErrorBarsData* QCPErrorBarsData_new5(double errorMinus, double errorPlus);
-QCPErrorBarsData* QCPErrorBarsData_new6(const QCPErrorBarsData* param1);
+QCPErrorBarsData* QCPErrorBarsData_New(const QCPErrorBarsData* other);
+QCPErrorBarsData* QCPErrorBarsData_New2(QCPErrorBarsData* other);
+QCPErrorBarsData* QCPErrorBarsData_New3();
+QCPErrorBarsData* QCPErrorBarsData_New4(double error);
+QCPErrorBarsData* QCPErrorBarsData_New5(double errorMinus, double errorPlus);
+QCPErrorBarsData* QCPErrorBarsData_New6(const QCPErrorBarsData* param1);
 void QCPErrorBarsData_CopyAssign(QCPErrorBarsData* self, QCPErrorBarsData* other);
 void QCPErrorBarsData_MoveAssign(QCPErrorBarsData* self, QCPErrorBarsData* other);
 double QCPErrorBarsData_ErrorMinus(const QCPErrorBarsData* self);
@@ -5138,7 +5138,7 @@ double QCPErrorBarsData_ErrorPlus(const QCPErrorBarsData* self);
 void QCPErrorBarsData_SetErrorPlus(QCPErrorBarsData* self, double errorPlus);
 void QCPErrorBarsData_Delete(QCPErrorBarsData* self);
 
-QCPErrorBars* QCPErrorBars_new(QCPAxis* keyAxis, QCPAxis* valueAxis);
+QCPErrorBars* QCPErrorBars_New(QCPAxis* keyAxis, QCPAxis* valueAxis);
 QMetaObject* QCPErrorBars_MetaObject(const QCPErrorBars* self);
 void* QCPErrorBars_Metacast(QCPErrorBars* self, const char* param1);
 int QCPErrorBars_Metacall(QCPErrorBars* self, int param1, int param2, void** param3);
@@ -5305,7 +5305,7 @@ void QCPErrorBars_OnIsSignalConnected(const QCPErrorBars* self, intptr_t slot);
 bool QCPErrorBars_SuperIsSignalConnected(const QCPErrorBars* self, const QMetaMethod* signal);
 void QCPErrorBars_Delete(QCPErrorBars* self);
 
-QCPItemStraightLine* QCPItemStraightLine_new(QCustomPlot* parentPlot);
+QCPItemStraightLine* QCPItemStraightLine_New(QCustomPlot* parentPlot);
 QMetaObject* QCPItemStraightLine_MetaObject(const QCPItemStraightLine* self);
 void* QCPItemStraightLine_Metacast(QCPItemStraightLine* self, const char* param1);
 int QCPItemStraightLine_Metacall(QCPItemStraightLine* self, int param1, int param2, void** param3);
@@ -5425,7 +5425,7 @@ void QCPItemStraightLine_OnIsSignalConnected(const QCPItemStraightLine* self, in
 bool QCPItemStraightLine_SuperIsSignalConnected(const QCPItemStraightLine* self, const QMetaMethod* signal);
 void QCPItemStraightLine_Delete(QCPItemStraightLine* self);
 
-QCPItemLine* QCPItemLine_new(QCustomPlot* parentPlot);
+QCPItemLine* QCPItemLine_New(QCustomPlot* parentPlot);
 QMetaObject* QCPItemLine_MetaObject(const QCPItemLine* self);
 void* QCPItemLine_Metacast(QCPItemLine* self, const char* param1);
 int QCPItemLine_Metacall(QCPItemLine* self, int param1, int param2, void** param3);
@@ -5549,7 +5549,7 @@ void QCPItemLine_OnIsSignalConnected(const QCPItemLine* self, intptr_t slot);
 bool QCPItemLine_SuperIsSignalConnected(const QCPItemLine* self, const QMetaMethod* signal);
 void QCPItemLine_Delete(QCPItemLine* self);
 
-QCPItemCurve* QCPItemCurve_new(QCustomPlot* parentPlot);
+QCPItemCurve* QCPItemCurve_New(QCustomPlot* parentPlot);
 QMetaObject* QCPItemCurve_MetaObject(const QCPItemCurve* self);
 void* QCPItemCurve_Metacast(QCPItemCurve* self, const char* param1);
 int QCPItemCurve_Metacall(QCPItemCurve* self, int param1, int param2, void** param3);
@@ -5672,7 +5672,7 @@ void QCPItemCurve_OnIsSignalConnected(const QCPItemCurve* self, intptr_t slot);
 bool QCPItemCurve_SuperIsSignalConnected(const QCPItemCurve* self, const QMetaMethod* signal);
 void QCPItemCurve_Delete(QCPItemCurve* self);
 
-QCPItemRect* QCPItemRect_new(QCustomPlot* parentPlot);
+QCPItemRect* QCPItemRect_New(QCustomPlot* parentPlot);
 QMetaObject* QCPItemRect_MetaObject(const QCPItemRect* self);
 void* QCPItemRect_Metacast(QCPItemRect* self, const char* param1);
 int QCPItemRect_Metacall(QCPItemRect* self, int param1, int param2, void** param3);
@@ -5802,7 +5802,7 @@ void QCPItemRect_OnIsSignalConnected(const QCPItemRect* self, intptr_t slot);
 bool QCPItemRect_SuperIsSignalConnected(const QCPItemRect* self, const QMetaMethod* signal);
 void QCPItemRect_Delete(QCPItemRect* self);
 
-QCPItemText* QCPItemText_new(QCustomPlot* parentPlot);
+QCPItemText* QCPItemText_New(QCustomPlot* parentPlot);
 QMetaObject* QCPItemText_MetaObject(const QCPItemText* self);
 void* QCPItemText_Metacast(QCPItemText* self, const char* param1);
 int QCPItemText_Metacall(QCPItemText* self, int param1, int param2, void** param3);
@@ -5960,7 +5960,7 @@ void QCPItemText_OnIsSignalConnected(const QCPItemText* self, intptr_t slot);
 bool QCPItemText_SuperIsSignalConnected(const QCPItemText* self, const QMetaMethod* signal);
 void QCPItemText_Delete(QCPItemText* self);
 
-QCPItemEllipse* QCPItemEllipse_new(QCustomPlot* parentPlot);
+QCPItemEllipse* QCPItemEllipse_New(QCustomPlot* parentPlot);
 QMetaObject* QCPItemEllipse_MetaObject(const QCPItemEllipse* self);
 void* QCPItemEllipse_Metacast(QCPItemEllipse* self, const char* param1);
 int QCPItemEllipse_Metacall(QCPItemEllipse* self, int param1, int param2, void** param3);
@@ -6093,7 +6093,7 @@ void QCPItemEllipse_OnIsSignalConnected(const QCPItemEllipse* self, intptr_t slo
 bool QCPItemEllipse_SuperIsSignalConnected(const QCPItemEllipse* self, const QMetaMethod* signal);
 void QCPItemEllipse_Delete(QCPItemEllipse* self);
 
-QCPItemPixmap* QCPItemPixmap_new(QCustomPlot* parentPlot);
+QCPItemPixmap* QCPItemPixmap_New(QCustomPlot* parentPlot);
 QMetaObject* QCPItemPixmap_MetaObject(const QCPItemPixmap* self);
 void* QCPItemPixmap_Metacast(QCPItemPixmap* self, const char* param1);
 int QCPItemPixmap_Metacall(QCPItemPixmap* self, int param1, int param2, void** param3);
@@ -6245,7 +6245,7 @@ void QCPItemPixmap_OnIsSignalConnected(const QCPItemPixmap* self, intptr_t slot)
 bool QCPItemPixmap_SuperIsSignalConnected(const QCPItemPixmap* self, const QMetaMethod* signal);
 void QCPItemPixmap_Delete(QCPItemPixmap* self);
 
-QCPItemTracer* QCPItemTracer_new(QCustomPlot* parentPlot);
+QCPItemTracer* QCPItemTracer_New(QCustomPlot* parentPlot);
 QMetaObject* QCPItemTracer_MetaObject(const QCPItemTracer* self);
 void* QCPItemTracer_Metacast(QCPItemTracer* self, const char* param1);
 int QCPItemTracer_Metacall(QCPItemTracer* self, int param1, int param2, void** param3);
@@ -6379,7 +6379,7 @@ void QCPItemTracer_OnIsSignalConnected(const QCPItemTracer* self, intptr_t slot)
 bool QCPItemTracer_SuperIsSignalConnected(const QCPItemTracer* self, const QMetaMethod* signal);
 void QCPItemTracer_Delete(QCPItemTracer* self);
 
-QCPItemBracket* QCPItemBracket_new(QCustomPlot* parentPlot);
+QCPItemBracket* QCPItemBracket_New(QCustomPlot* parentPlot);
 QMetaObject* QCPItemBracket_MetaObject(const QCPItemBracket* self);
 void* QCPItemBracket_Metacast(QCPItemBracket* self, const char* param1);
 int QCPItemBracket_Metacall(QCPItemBracket* self, int param1, int param2, void** param3);
@@ -6501,7 +6501,7 @@ void QCPItemBracket_OnIsSignalConnected(const QCPItemBracket* self, intptr_t slo
 bool QCPItemBracket_SuperIsSignalConnected(const QCPItemBracket* self, const QMetaMethod* signal);
 void QCPItemBracket_Delete(QCPItemBracket* self);
 
-QCPPolarAxisRadial* QCPPolarAxisRadial_new(QCPPolarAxisAngular* parent);
+QCPPolarAxisRadial* QCPPolarAxisRadial_New(QCPPolarAxisAngular* parent);
 QMetaObject* QCPPolarAxisRadial_MetaObject(const QCPPolarAxisRadial* self);
 void* QCPPolarAxisRadial_Metacast(QCPPolarAxisRadial* self, const char* param1);
 int QCPPolarAxisRadial_Metacall(QCPPolarAxisRadial* self, int param1, int param2, void** param3);
@@ -6727,7 +6727,7 @@ void QCPPolarAxisRadial_OnIsSignalConnected(const QCPPolarAxisRadial* self, intp
 bool QCPPolarAxisRadial_SuperIsSignalConnected(const QCPPolarAxisRadial* self, const QMetaMethod* signal);
 void QCPPolarAxisRadial_Delete(QCPPolarAxisRadial* self);
 
-QCPPolarAxisAngular* QCPPolarAxisAngular_new(QCustomPlot* parentPlot);
+QCPPolarAxisAngular* QCPPolarAxisAngular_New(QCustomPlot* parentPlot);
 QMetaObject* QCPPolarAxisAngular_MetaObject(const QCPPolarAxisAngular* self);
 void* QCPPolarAxisAngular_Metacast(QCPPolarAxisAngular* self, const char* param1);
 int QCPPolarAxisAngular_Metacall(QCPPolarAxisAngular* self, int param1, int param2, void** param3);
@@ -7001,7 +7001,7 @@ void QCPPolarAxisAngular_OnIsSignalConnected(const QCPPolarAxisAngular* self, in
 bool QCPPolarAxisAngular_SuperIsSignalConnected(const QCPPolarAxisAngular* self, const QMetaMethod* signal);
 void QCPPolarAxisAngular_Delete(QCPPolarAxisAngular* self);
 
-QCPPolarGrid* QCPPolarGrid_new(QCPPolarAxisAngular* parentAxis);
+QCPPolarGrid* QCPPolarGrid_New(QCPPolarAxisAngular* parentAxis);
 QMetaObject* QCPPolarGrid_MetaObject(const QCPPolarGrid* self);
 void* QCPPolarGrid_Metacast(QCPPolarGrid* self, const char* param1);
 int QCPPolarGrid_Metacall(QCPPolarGrid* self, int param1, int param2, void** param3);
@@ -7126,7 +7126,7 @@ void QCPPolarGrid_OnIsSignalConnected(const QCPPolarGrid* self, intptr_t slot);
 bool QCPPolarGrid_SuperIsSignalConnected(const QCPPolarGrid* self, const QMetaMethod* signal);
 void QCPPolarGrid_Delete(QCPPolarGrid* self);
 
-QCPPolarLegendItem* QCPPolarLegendItem_new(QCPLegend* parent, QCPPolarGraph* graph);
+QCPPolarLegendItem* QCPPolarLegendItem_New(QCPLegend* parent, QCPPolarGraph* graph);
 QMetaObject* QCPPolarLegendItem_MetaObject(const QCPPolarLegendItem* self);
 void* QCPPolarLegendItem_Metacast(QCPPolarLegendItem* self, const char* param1);
 int QCPPolarLegendItem_Metacall(QCPPolarLegendItem* self, int param1, int param2, void** param3);
@@ -7250,7 +7250,7 @@ void QCPPolarLegendItem_OnIsSignalConnected(const QCPPolarLegendItem* self, intp
 bool QCPPolarLegendItem_SuperIsSignalConnected(const QCPPolarLegendItem* self, const QMetaMethod* signal);
 void QCPPolarLegendItem_Delete(QCPPolarLegendItem* self);
 
-QCPPolarGraph* QCPPolarGraph_new(QCPPolarAxisAngular* keyAxis, QCPPolarAxisRadial* valueAxis);
+QCPPolarGraph* QCPPolarGraph_New(QCPPolarAxisAngular* keyAxis, QCPPolarAxisRadial* valueAxis);
 QMetaObject* QCPPolarGraph_MetaObject(const QCPPolarGraph* self);
 void* QCPPolarGraph_Metacast(QCPPolarGraph* self, const char* param1);
 int QCPPolarGraph_Metacall(QCPPolarGraph* self, int param1, int param2, void** param3);

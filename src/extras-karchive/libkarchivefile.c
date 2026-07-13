@@ -6,11 +6,11 @@
 #include "libkarchivefile.h"
 
 KArchiveFile* k_archivefile_new(void* archive, const char* name, int access, void* date, const char* user, const char* group, const char* symlink, int64_t pos, int64_t size) {
-    return KArchiveFile_new((KArchive*)archive, qstring(name), access, (QDateTime*)date, qstring(user), qstring(group), qstring(symlink), pos, size);
+    return KArchiveFile_New((KArchive*)archive, qstring(name), access, (QDateTime*)date, qstring(user), qstring(group), qstring(symlink), pos, size);
 }
 
 KArchiveFile* k_archivefile_new2(void* param1) {
-    return KArchiveFile_new2((KArchiveFile*)param1);
+    return KArchiveFile_New2((KArchiveFile*)param1);
 }
 
 int64_t k_archivefile_position(void* self) {

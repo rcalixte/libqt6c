@@ -11,11 +11,11 @@
 #include "libcontent.hpp"
 #include "libcontent.hxx"
 
-Attica__Content* Attica__Content_new() {
+Attica__Content* Attica__Content_New() {
     return new Attica::Content();
 }
 
-Attica__Content* Attica__Content_new2(const Attica__Content* other) {
+Attica__Content* Attica__Content_New2(const Attica__Content* other) {
     return new Attica::Content(*other);
 }
 

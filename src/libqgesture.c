@@ -8,11 +8,11 @@
 #include "libqgesture.h"
 
 QGesture* q_gesture_new() {
-    return QGesture_new();
+    return QGesture_New();
 }
 
 QGesture* q_gesture_new2(void* parent) {
-    return QGesture_new2((QObject*)parent);
+    return QGesture_New2((QObject*)parent);
 }
 
 const QMetaObject* q_gesture_meta_object(void* self) {
@@ -456,11 +456,11 @@ void q_gesture_delete(void* self) {
 }
 
 QPanGesture* q_pangesture_new() {
-    return QPanGesture_new();
+    return QPanGesture_New();
 }
 
 QPanGesture* q_pangesture_new2(void* parent) {
-    return QPanGesture_new2((QObject*)parent);
+    return QPanGesture_New2((QObject*)parent);
 }
 
 const QMetaObject* q_pangesture_meta_object(void* self) {
@@ -932,11 +932,11 @@ void q_pangesture_delete(void* self) {
 }
 
 QPinchGesture* q_pinchgesture_new() {
-    return QPinchGesture_new();
+    return QPinchGesture_New();
 }
 
 QPinchGesture* q_pinchgesture_new2(void* parent) {
-    return QPinchGesture_new2((QObject*)parent);
+    return QPinchGesture_New2((QObject*)parent);
 }
 
 const QMetaObject* q_pinchgesture_meta_object(void* self) {
@@ -1468,11 +1468,11 @@ void q_pinchgesture_delete(void* self) {
 }
 
 QSwipeGesture* q_swipegesture_new() {
-    return QSwipeGesture_new();
+    return QSwipeGesture_New();
 }
 
 QSwipeGesture* q_swipegesture_new2(void* parent) {
-    return QSwipeGesture_new2((QObject*)parent);
+    return QSwipeGesture_New2((QObject*)parent);
 }
 
 const QMetaObject* q_swipegesture_meta_object(void* self) {
@@ -1932,11 +1932,11 @@ void q_swipegesture_delete(void* self) {
 }
 
 QTapGesture* q_tapgesture_new() {
-    return QTapGesture_new();
+    return QTapGesture_New();
 }
 
 QTapGesture* q_tapgesture_new2(void* parent) {
-    return QTapGesture_new2((QObject*)parent);
+    return QTapGesture_New2((QObject*)parent);
 }
 
 const QMetaObject* q_tapgesture_meta_object(void* self) {
@@ -2388,11 +2388,11 @@ void q_tapgesture_delete(void* self) {
 }
 
 QTapAndHoldGesture* q_tapandholdgesture_new() {
-    return QTapAndHoldGesture_new();
+    return QTapAndHoldGesture_New();
 }
 
 QTapAndHoldGesture* q_tapandholdgesture_new2(void* parent) {
-    return QTapAndHoldGesture_new2((QObject*)parent);
+    return QTapAndHoldGesture_New2((QObject*)parent);
 }
 
 const QMetaObject* q_tapandholdgesture_meta_object(void* self) {
@@ -2852,11 +2852,11 @@ void q_tapandholdgesture_delete(void* self) {
 }
 
 QGestureEvent* q_gestureevent_new(libqt_list /* of QGesture* */ gestures) {
-    return QGestureEvent_new(gestures);
+    return QGestureEvent_New(gestures);
 }
 
 QGestureEvent* q_gestureevent_new2(void* param1) {
-    return QGestureEvent_new2((QGestureEvent*)param1);
+    return QGestureEvent_New2((QGestureEvent*)param1);
 }
 
 libqt_list /* of QGesture* */ q_gestureevent_gestures(void* self) {

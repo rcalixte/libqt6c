@@ -7,19 +7,19 @@
 #include "libbackgroundchecker.h"
 
 Sonnet__BackgroundChecker* k_sonnet__backgroundchecker_new() {
-    return Sonnet__BackgroundChecker_new();
+    return Sonnet__BackgroundChecker_New();
 }
 
 Sonnet__BackgroundChecker* k_sonnet__backgroundchecker_new2(void* speller) {
-    return Sonnet__BackgroundChecker_new2((Sonnet__Speller*)speller);
+    return Sonnet__BackgroundChecker_New2((Sonnet__Speller*)speller);
 }
 
 Sonnet__BackgroundChecker* k_sonnet__backgroundchecker_new3(void* parent) {
-    return Sonnet__BackgroundChecker_new3((QObject*)parent);
+    return Sonnet__BackgroundChecker_New3((QObject*)parent);
 }
 
 Sonnet__BackgroundChecker* k_sonnet__backgroundchecker_new4(void* speller, void* parent) {
-    return Sonnet__BackgroundChecker_new4((Sonnet__Speller*)speller, (QObject*)parent);
+    return Sonnet__BackgroundChecker_New4((Sonnet__Speller*)speller, (QObject*)parent);
 }
 
 const QMetaObject* k_sonnet__backgroundchecker_meta_object(void* self) {

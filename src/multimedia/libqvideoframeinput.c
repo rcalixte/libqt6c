@@ -9,19 +9,19 @@
 #include "libqvideoframeinput.h"
 
 QVideoFrameInput* q_videoframeinput_new() {
-    return QVideoFrameInput_new();
+    return QVideoFrameInput_New();
 }
 
 QVideoFrameInput* q_videoframeinput_new2(void* format) {
-    return QVideoFrameInput_new2((QVideoFrameFormat*)format);
+    return QVideoFrameInput_New2((QVideoFrameFormat*)format);
 }
 
 QVideoFrameInput* q_videoframeinput_new3(void* parent) {
-    return QVideoFrameInput_new3((QObject*)parent);
+    return QVideoFrameInput_New3((QObject*)parent);
 }
 
 QVideoFrameInput* q_videoframeinput_new4(void* format, void* parent) {
-    return QVideoFrameInput_new4((QVideoFrameFormat*)format, (QObject*)parent);
+    return QVideoFrameInput_New4((QVideoFrameFormat*)format, (QObject*)parent);
 }
 
 const QMetaObject* q_videoframeinput_meta_object(void* self) {

@@ -27,8 +27,8 @@ typedef struct QPlaceSearchResult QPlaceSearchResult;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QPlaceSearchReply* QPlaceSearchReply_new();
-QPlaceSearchReply* QPlaceSearchReply_new2(QObject* parent);
+QPlaceSearchReply* QPlaceSearchReply_New();
+QPlaceSearchReply* QPlaceSearchReply_New2(QObject* parent);
 QMetaObject* QPlaceSearchReply_MetaObject(const QPlaceSearchReply* self);
 void* QPlaceSearchReply_Metacast(QPlaceSearchReply* self, const char* param1);
 int QPlaceSearchReply_Metacall(QPlaceSearchReply* self, int param1, int param2, void** param3);

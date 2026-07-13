@@ -3,15 +3,15 @@
 #include "libbitfield.hpp"
 #include "libbitfield.hxx"
 
-PackageKit__Bitfield* PackageKit__Bitfield_new() {
+PackageKit__Bitfield* PackageKit__Bitfield_New() {
     return new PackageKit::Bitfield();
 }
 
-PackageKit__Bitfield* PackageKit__Bitfield_new2(unsigned long long val) {
+PackageKit__Bitfield* PackageKit__Bitfield_New2(unsigned long long val) {
     return new PackageKit::Bitfield(static_cast<qulonglong>(val));
 }
 
-PackageKit__Bitfield* PackageKit__Bitfield_new3(const PackageKit__Bitfield* param1) {
+PackageKit__Bitfield* PackageKit__Bitfield_New3(const PackageKit__Bitfield* param1) {
     return new PackageKit::Bitfield(*param1);
 }
 

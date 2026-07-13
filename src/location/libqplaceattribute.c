@@ -2,11 +2,11 @@
 #include "libqplaceattribute.h"
 
 QPlaceAttribute* q_placeattribute_new() {
-    return QPlaceAttribute_new();
+    return QPlaceAttribute_New();
 }
 
 QPlaceAttribute* q_placeattribute_new2(void* other) {
-    return QPlaceAttribute_new2((QPlaceAttribute*)other);
+    return QPlaceAttribute_New2((QPlaceAttribute*)other);
 }
 
 void q_placeattribute_operator_assign(void* self, void* other) {

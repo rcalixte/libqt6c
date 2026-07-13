@@ -21,23 +21,23 @@
 #include "libkurlrequester.h"
 
 KUrlRequester* k_urlrequester_new(void* parent) {
-    return KUrlRequester_new((QWidget*)parent);
+    return KUrlRequester_New((QWidget*)parent);
 }
 
 KUrlRequester* k_urlrequester_new2() {
-    return KUrlRequester_new2();
+    return KUrlRequester_New2();
 }
 
 KUrlRequester* k_urlrequester_new3(void* url) {
-    return KUrlRequester_new3((QUrl*)url);
+    return KUrlRequester_New3((QUrl*)url);
 }
 
 KUrlRequester* k_urlrequester_new4(void* editWidget, void* parent) {
-    return KUrlRequester_new4((QWidget*)editWidget, (QWidget*)parent);
+    return KUrlRequester_New4((QWidget*)editWidget, (QWidget*)parent);
 }
 
 KUrlRequester* k_urlrequester_new5(void* url, void* parent) {
-    return KUrlRequester_new5((QUrl*)url, (QWidget*)parent);
+    return KUrlRequester_New5((QUrl*)url, (QWidget*)parent);
 }
 
 const QMetaObject* k_urlrequester_meta_object(void* self) {
@@ -2381,11 +2381,11 @@ void k_urlrequester_delete(void* self) {
 }
 
 KUrlComboRequester* k_urlcomborequester_new(void* parent) {
-    return KUrlComboRequester_new((QWidget*)parent);
+    return KUrlComboRequester_New((QWidget*)parent);
 }
 
 KUrlComboRequester* k_urlcomborequester_new2() {
-    return KUrlComboRequester_new2();
+    return KUrlComboRequester_New2();
 }
 
 const QMetaObject* k_urlcomborequester_meta_object(void* self) {

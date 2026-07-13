@@ -42,11 +42,11 @@
 #include "libkpluralhandlingspinbox.hpp"
 #include "libkpluralhandlingspinbox.hxx"
 
-KPluralHandlingSpinBox* KPluralHandlingSpinBox_new(QWidget* parent) {
+KPluralHandlingSpinBox* KPluralHandlingSpinBox_New(QWidget* parent) {
     return new VirtualKPluralHandlingSpinBox(parent);
 }
 
-KPluralHandlingSpinBox* KPluralHandlingSpinBox_new2() {
+KPluralHandlingSpinBox* KPluralHandlingSpinBox_New2() {
     return new VirtualKPluralHandlingSpinBox();
 }
 

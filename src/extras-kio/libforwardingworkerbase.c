@@ -10,7 +10,7 @@
 #include "libforwardingworkerbase.h"
 
 KIO__ForwardingWorkerBase* k_io__forwardingworkerbase_new(char* protocol, char* poolSocket, char* appSocket) {
-    return KIO__ForwardingWorkerBase_new(qstring(protocol), qstring(poolSocket), qstring(appSocket));
+    return KIO__ForwardingWorkerBase_New(qstring(protocol), qstring(poolSocket), qstring(appSocket));
 }
 
 const QMetaObject* k_io__forwardingworkerbase_meta_object(void* self) {

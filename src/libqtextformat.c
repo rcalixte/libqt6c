@@ -8,23 +8,23 @@
 #include "libqtextformat.h"
 
 QTextLength* q_textlength_new(void* other) {
-    return QTextLength_new((QTextLength*)other);
+    return QTextLength_New((QTextLength*)other);
 }
 
 QTextLength* q_textlength_new2(void* other) {
-    return QTextLength_new2((QTextLength*)other);
+    return QTextLength_New2((QTextLength*)other);
 }
 
 QTextLength* q_textlength_new3() {
-    return QTextLength_new3();
+    return QTextLength_New3();
 }
 
 QTextLength* q_textlength_new4(int32_t type, double value) {
-    return QTextLength_new4(type, value);
+    return QTextLength_New4(type, value);
 }
 
 QTextLength* q_textlength_new5(void* param1) {
-    return QTextLength_new5((QTextLength*)param1);
+    return QTextLength_New5((QTextLength*)param1);
 }
 
 void q_textlength_copy_assign(void* self, void* other) {
@@ -64,15 +64,15 @@ void q_textlength_delete(void* self) {
 }
 
 QTextFormat* q_textformat_new() {
-    return QTextFormat_new();
+    return QTextFormat_New();
 }
 
 QTextFormat* q_textformat_new2(int type) {
-    return QTextFormat_new2(type);
+    return QTextFormat_New2(type);
 }
 
 QTextFormat* q_textformat_new3(void* rhs) {
-    return QTextFormat_new3((QTextFormat*)rhs);
+    return QTextFormat_New3((QTextFormat*)rhs);
 }
 
 void q_textformat_operator_assign(void* self, void* rhs) {
@@ -294,11 +294,11 @@ void q_textformat_delete(void* self) {
 }
 
 QTextCharFormat* q_textcharformat_new() {
-    return QTextCharFormat_new();
+    return QTextCharFormat_New();
 }
 
 QTextCharFormat* q_textcharformat_new2(void* param1) {
-    return QTextCharFormat_new2((QTextCharFormat*)param1);
+    return QTextCharFormat_New2((QTextCharFormat*)param1);
 }
 
 bool q_textcharformat_is_valid(void* self) {
@@ -838,11 +838,11 @@ void q_textcharformat_delete(void* self) {
 }
 
 QTextBlockFormat* q_textblockformat_new() {
-    return QTextBlockFormat_new();
+    return QTextBlockFormat_New();
 }
 
 QTextBlockFormat* q_textblockformat_new2(void* param1) {
-    return QTextBlockFormat_new2((QTextBlockFormat*)param1);
+    return QTextBlockFormat_New2((QTextBlockFormat*)param1);
 }
 
 bool q_textblockformat_is_valid(void* self) {
@@ -1177,11 +1177,11 @@ void q_textblockformat_delete(void* self) {
 }
 
 QTextListFormat* q_textlistformat_new() {
-    return QTextListFormat_new();
+    return QTextListFormat_New();
 }
 
 QTextListFormat* q_textlistformat_new2(void* param1) {
-    return QTextListFormat_new2((QTextListFormat*)param1);
+    return QTextListFormat_New2((QTextListFormat*)param1);
 }
 
 bool q_textlistformat_is_valid(void* self) {
@@ -1449,11 +1449,11 @@ void q_textlistformat_delete(void* self) {
 }
 
 QTextImageFormat* q_textimageformat_new() {
-    return QTextImageFormat_new();
+    return QTextImageFormat_New();
 }
 
 QTextImageFormat* q_textimageformat_new2(void* param1) {
-    return QTextImageFormat_new2((QTextImageFormat*)param1);
+    return QTextImageFormat_New2((QTextImageFormat*)param1);
 }
 
 bool q_textimageformat_is_valid(void* self) {
@@ -2040,11 +2040,11 @@ void q_textimageformat_delete(void* self) {
 }
 
 QTextFrameFormat* q_textframeformat_new() {
-    return QTextFrameFormat_new();
+    return QTextFrameFormat_New();
 }
 
 QTextFrameFormat* q_textframeformat_new2(void* param1) {
-    return QTextFrameFormat_new2((QTextFrameFormat*)param1);
+    return QTextFrameFormat_New2((QTextFrameFormat*)param1);
 }
 
 bool q_textframeformat_is_valid(void* self) {
@@ -2378,11 +2378,11 @@ void q_textframeformat_delete(void* self) {
 }
 
 QTextTableFormat* q_texttableformat_new() {
-    return QTextTableFormat_new();
+    return QTextTableFormat_New();
 }
 
 QTextTableFormat* q_texttableformat_new2(void* param1) {
-    return QTextTableFormat_new2((QTextTableFormat*)param1);
+    return QTextTableFormat_New2((QTextTableFormat*)param1);
 }
 
 bool q_texttableformat_is_valid(void* self) {
@@ -2777,11 +2777,11 @@ void q_texttableformat_delete(void* self) {
 }
 
 QTextTableCellFormat* q_texttablecellformat_new() {
-    return QTextTableCellFormat_new();
+    return QTextTableCellFormat_New();
 }
 
 QTextTableCellFormat* q_texttablecellformat_new2(void* param1) {
-    return QTextTableCellFormat_new2((QTextTableCellFormat*)param1);
+    return QTextTableCellFormat_New2((QTextTableCellFormat*)param1);
 }
 
 bool q_texttablecellformat_is_valid(void* self) {

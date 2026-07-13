@@ -27,8 +27,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-KUrlCompletion* KUrlCompletion_new();
-KUrlCompletion* KUrlCompletion_new2(int param1);
+KUrlCompletion* KUrlCompletion_New();
+KUrlCompletion* KUrlCompletion_New2(int param1);
 QMetaObject* KUrlCompletion_MetaObject(const KUrlCompletion* self);
 void* KUrlCompletion_Metacast(KUrlCompletion* self, const char* param1);
 int KUrlCompletion_Metacall(KUrlCompletion* self, int param1, int param2, void** param3);

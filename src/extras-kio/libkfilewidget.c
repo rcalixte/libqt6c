@@ -22,11 +22,11 @@
 #include "libkfilewidget.h"
 
 KFileWidget* k_filewidget_new(void* startDir) {
-    return KFileWidget_new((QUrl*)startDir);
+    return KFileWidget_New((QUrl*)startDir);
 }
 
 KFileWidget* k_filewidget_new2(void* startDir, void* parent) {
-    return KFileWidget_new2((QUrl*)startDir, (QWidget*)parent);
+    return KFileWidget_New2((QUrl*)startDir, (QWidget*)parent);
 }
 
 const QMetaObject* k_filewidget_meta_object(void* self) {

@@ -19,10 +19,10 @@ typedef struct QUrl QUrl;
 typedef struct QWebEngineHttpRequest QWebEngineHttpRequest;
 #endif
 
-QWebEngineHttpRequest* QWebEngineHttpRequest_new();
-QWebEngineHttpRequest* QWebEngineHttpRequest_new2(const QWebEngineHttpRequest* other);
-QWebEngineHttpRequest* QWebEngineHttpRequest_new3(const QUrl* url);
-QWebEngineHttpRequest* QWebEngineHttpRequest_new4(const QUrl* url, const int* method);
+QWebEngineHttpRequest* QWebEngineHttpRequest_New();
+QWebEngineHttpRequest* QWebEngineHttpRequest_New2(const QWebEngineHttpRequest* other);
+QWebEngineHttpRequest* QWebEngineHttpRequest_New3(const QUrl* url);
+QWebEngineHttpRequest* QWebEngineHttpRequest_New4(const QUrl* url, const int* method);
 void QWebEngineHttpRequest_OperatorAssign(QWebEngineHttpRequest* self, const QWebEngineHttpRequest* other);
 QWebEngineHttpRequest* QWebEngineHttpRequest_PostRequest(const QUrl* url, const libqt_map /* of libqt_string to libqt_string */ postData);
 void QWebEngineHttpRequest_Swap(QWebEngineHttpRequest* self, QWebEngineHttpRequest* other);

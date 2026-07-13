@@ -7,7 +7,7 @@
 #include "libkmodifierkeyinfoprovider_p.h"
 
 KModifierKeyInfoProvider* k_modifierkeyinfoprovider_new() {
-    return KModifierKeyInfoProvider_new();
+    return KModifierKeyInfoProvider_New();
 }
 
 const QMetaObject* k_modifierkeyinfoprovider_meta_object(void* self) {

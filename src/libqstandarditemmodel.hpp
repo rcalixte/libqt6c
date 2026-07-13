@@ -35,11 +35,11 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QStandardItem* QStandardItem_new();
-QStandardItem* QStandardItem_new2(const libqt_string text);
-QStandardItem* QStandardItem_new3(const QIcon* icon, const libqt_string text);
-QStandardItem* QStandardItem_new4(int rows);
-QStandardItem* QStandardItem_new5(int rows, int columns);
+QStandardItem* QStandardItem_New();
+QStandardItem* QStandardItem_New2(const libqt_string text);
+QStandardItem* QStandardItem_New3(const QIcon* icon, const libqt_string text);
+QStandardItem* QStandardItem_New4(int rows);
+QStandardItem* QStandardItem_New5(int rows, int columns);
 QVariant* QStandardItem_Data(const QStandardItem* self, int role);
 void QStandardItem_MultiData(const QStandardItem* self, QModelRoleDataSpan* roleDataSpan);
 void QStandardItem_SetData(QStandardItem* self, const QVariant* value, int role);
@@ -151,10 +151,10 @@ void QStandardItem_OnEmitDataChanged(QStandardItem* self, intptr_t slot);
 void QStandardItem_SuperEmitDataChanged(QStandardItem* self);
 void QStandardItem_Delete(QStandardItem* self);
 
-QStandardItemModel* QStandardItemModel_new();
-QStandardItemModel* QStandardItemModel_new2(int rows, int columns);
-QStandardItemModel* QStandardItemModel_new3(QObject* parent);
-QStandardItemModel* QStandardItemModel_new4(int rows, int columns, QObject* parent);
+QStandardItemModel* QStandardItemModel_New();
+QStandardItemModel* QStandardItemModel_New2(int rows, int columns);
+QStandardItemModel* QStandardItemModel_New3(QObject* parent);
+QStandardItemModel* QStandardItemModel_New4(int rows, int columns, QObject* parent);
 QMetaObject* QStandardItemModel_MetaObject(const QStandardItemModel* self);
 void* QStandardItemModel_Metacast(QStandardItemModel* self, const char* param1);
 int QStandardItemModel_Metacall(QStandardItemModel* self, int param1, int param2, void** param3);

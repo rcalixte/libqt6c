@@ -5,7 +5,7 @@
 #include "libqwebenginedesktopmediarequest.hpp"
 #include "libqwebenginedesktopmediarequest.hxx"
 
-QWebEngineDesktopMediaRequest* QWebEngineDesktopMediaRequest_new(const QWebEngineDesktopMediaRequest* other) {
+QWebEngineDesktopMediaRequest* QWebEngineDesktopMediaRequest_New(const QWebEngineDesktopMediaRequest* other) {
     return new QWebEngineDesktopMediaRequest(*other);
 }
 

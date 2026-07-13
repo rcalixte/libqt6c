@@ -29,8 +29,8 @@ typedef struct QPen QPen;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QCandlestickSeries* QCandlestickSeries_new();
-QCandlestickSeries* QCandlestickSeries_new2(QObject* parent);
+QCandlestickSeries* QCandlestickSeries_New();
+QCandlestickSeries* QCandlestickSeries_New2(QObject* parent);
 QMetaObject* QCandlestickSeries_MetaObject(const QCandlestickSeries* self);
 void* QCandlestickSeries_Metacast(QCandlestickSeries* self, const char* param1);
 int QCandlestickSeries_Metacall(QCandlestickSeries* self, int param1, int param2, void** param3);

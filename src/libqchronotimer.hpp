@@ -24,10 +24,10 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QChronoTimer* QChronoTimer_new(int64_t nsec);
-QChronoTimer* QChronoTimer_new2();
-QChronoTimer* QChronoTimer_new3(int64_t nsec, QObject* parent);
-QChronoTimer* QChronoTimer_new4(QObject* parent);
+QChronoTimer* QChronoTimer_New(int64_t nsec);
+QChronoTimer* QChronoTimer_New2();
+QChronoTimer* QChronoTimer_New3(int64_t nsec, QObject* parent);
+QChronoTimer* QChronoTimer_New4(QObject* parent);
 QMetaObject* QChronoTimer_MetaObject(const QChronoTimer* self);
 void* QChronoTimer_Metacast(QChronoTimer* self, const char* param1);
 int QChronoTimer_Metacall(QChronoTimer* self, int param1, int param2, void** param3);

@@ -54,12 +54,12 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KColorButton* KColorButton_new(QWidget* parent);
-KColorButton* KColorButton_new2();
-KColorButton* KColorButton_new3(const QColor* c);
-KColorButton* KColorButton_new4(const QColor* c, const QColor* defaultColor);
-KColorButton* KColorButton_new5(const QColor* c, QWidget* parent);
-KColorButton* KColorButton_new6(const QColor* c, const QColor* defaultColor, QWidget* parent);
+KColorButton* KColorButton_New(QWidget* parent);
+KColorButton* KColorButton_New2();
+KColorButton* KColorButton_New3(const QColor* c);
+KColorButton* KColorButton_New4(const QColor* c, const QColor* defaultColor);
+KColorButton* KColorButton_New5(const QColor* c, QWidget* parent);
+KColorButton* KColorButton_New6(const QColor* c, const QColor* defaultColor, QWidget* parent);
 QMetaObject* KColorButton_MetaObject(const KColorButton* self);
 void* KColorButton_Metacast(KColorButton* self, const char* param1);
 int KColorButton_Metacall(KColorButton* self, int param1, int param2, void** param3);

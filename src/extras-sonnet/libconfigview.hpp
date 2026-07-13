@@ -53,8 +53,8 @@ typedef struct QWidget QWidget;
 typedef struct Sonnet__ConfigView Sonnet__ConfigView;
 #endif
 
-Sonnet__ConfigView* Sonnet__ConfigView_new(QWidget* parent);
-Sonnet__ConfigView* Sonnet__ConfigView_new2();
+Sonnet__ConfigView* Sonnet__ConfigView_New(QWidget* parent);
+Sonnet__ConfigView* Sonnet__ConfigView_New2();
 QMetaObject* Sonnet__ConfigView_MetaObject(const Sonnet__ConfigView* self);
 void* Sonnet__ConfigView_Metacast(Sonnet__ConfigView* self, const char* param1);
 int Sonnet__ConfigView_Metacall(Sonnet__ConfigView* self, int param1, int param2, void** param3);

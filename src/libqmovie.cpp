@@ -18,40 +18,40 @@
 #include "libqmovie.hpp"
 #include "libqmovie.hxx"
 
-QMovie* QMovie_new() {
+QMovie* QMovie_New() {
     return new VirtualQMovie();
 }
 
-QMovie* QMovie_new2(QIODevice* device) {
+QMovie* QMovie_New2(QIODevice* device) {
     return new VirtualQMovie(device);
 }
 
-QMovie* QMovie_new3(const libqt_string fileName) {
+QMovie* QMovie_New3(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQMovie(fileName_QString);
 }
 
-QMovie* QMovie_new4(QObject* parent) {
+QMovie* QMovie_New4(QObject* parent) {
     return new VirtualQMovie(parent);
 }
 
-QMovie* QMovie_new5(QIODevice* device, const libqt_string format) {
+QMovie* QMovie_New5(QIODevice* device, const libqt_string format) {
     QByteArray format_QByteArray(format.data, format.len);
     return new VirtualQMovie(device, format_QByteArray);
 }
 
-QMovie* QMovie_new6(QIODevice* device, const libqt_string format, QObject* parent) {
+QMovie* QMovie_New6(QIODevice* device, const libqt_string format, QObject* parent) {
     QByteArray format_QByteArray(format.data, format.len);
     return new VirtualQMovie(device, format_QByteArray, parent);
 }
 
-QMovie* QMovie_new7(const libqt_string fileName, const libqt_string format) {
+QMovie* QMovie_New7(const libqt_string fileName, const libqt_string format) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QByteArray format_QByteArray(format.data, format.len);
     return new VirtualQMovie(fileName_QString, format_QByteArray);
 }
 
-QMovie* QMovie_new8(const libqt_string fileName, const libqt_string format, QObject* parent) {
+QMovie* QMovie_New8(const libqt_string fileName, const libqt_string format, QObject* parent) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QByteArray format_QByteArray(format.data, format.len);
     return new VirtualQMovie(fileName_QString, format_QByteArray, parent);

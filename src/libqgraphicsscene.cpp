@@ -46,27 +46,27 @@
 #include "libqgraphicsscene.hpp"
 #include "libqgraphicsscene.hxx"
 
-QGraphicsScene* QGraphicsScene_new() {
+QGraphicsScene* QGraphicsScene_New() {
     return new VirtualQGraphicsScene();
 }
 
-QGraphicsScene* QGraphicsScene_new2(const QRectF* sceneRect) {
+QGraphicsScene* QGraphicsScene_New2(const QRectF* sceneRect) {
     return new VirtualQGraphicsScene(*sceneRect);
 }
 
-QGraphicsScene* QGraphicsScene_new3(double x, double y, double width, double height) {
+QGraphicsScene* QGraphicsScene_New3(double x, double y, double width, double height) {
     return new VirtualQGraphicsScene(static_cast<qreal>(x), static_cast<qreal>(y), static_cast<qreal>(width), static_cast<qreal>(height));
 }
 
-QGraphicsScene* QGraphicsScene_new4(QObject* parent) {
+QGraphicsScene* QGraphicsScene_New4(QObject* parent) {
     return new VirtualQGraphicsScene(parent);
 }
 
-QGraphicsScene* QGraphicsScene_new5(const QRectF* sceneRect, QObject* parent) {
+QGraphicsScene* QGraphicsScene_New5(const QRectF* sceneRect, QObject* parent) {
     return new VirtualQGraphicsScene(*sceneRect, parent);
 }
 
-QGraphicsScene* QGraphicsScene_new6(double x, double y, double width, double height, QObject* parent) {
+QGraphicsScene* QGraphicsScene_New6(double x, double y, double width, double height, QObject* parent) {
     return new VirtualQGraphicsScene(static_cast<qreal>(x), static_cast<qreal>(y), static_cast<qreal>(width), static_cast<qreal>(height), parent);
 }
 

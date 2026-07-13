@@ -8,23 +8,23 @@
 #include "libqpagelayout.hpp"
 #include "libqpagelayout.hxx"
 
-QPageLayout* QPageLayout_new() {
+QPageLayout* QPageLayout_New() {
     return new QPageLayout();
 }
 
-QPageLayout* QPageLayout_new2(const QPageSize* pageSize, int orientation, const QMarginsF* margins) {
+QPageLayout* QPageLayout_New2(const QPageSize* pageSize, int orientation, const QMarginsF* margins) {
     return new QPageLayout(*pageSize, static_cast<QPageLayout::Orientation>(orientation), *margins);
 }
 
-QPageLayout* QPageLayout_new3(const QPageLayout* other) {
+QPageLayout* QPageLayout_New3(const QPageLayout* other) {
     return new QPageLayout(*other);
 }
 
-QPageLayout* QPageLayout_new4(const QPageSize* pageSize, int orientation, const QMarginsF* margins, int units) {
+QPageLayout* QPageLayout_New4(const QPageSize* pageSize, int orientation, const QMarginsF* margins, int units) {
     return new QPageLayout(*pageSize, static_cast<QPageLayout::Orientation>(orientation), *margins, static_cast<QPageLayout::Unit>(units));
 }
 
-QPageLayout* QPageLayout_new5(const QPageSize* pageSize, int orientation, const QMarginsF* margins, int units, const QMarginsF* minMargins) {
+QPageLayout* QPageLayout_New5(const QPageSize* pageSize, int orientation, const QMarginsF* margins, int units, const QMarginsF* minMargins) {
     return new QPageLayout(*pageSize, static_cast<QPageLayout::Orientation>(orientation), *margins, static_cast<QPageLayout::Unit>(units), *minMargins);
 }
 

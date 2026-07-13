@@ -4,11 +4,11 @@
 #include "libqplacecontactdetail.hpp"
 #include "libqplacecontactdetail.hxx"
 
-QPlaceContactDetail* QPlaceContactDetail_new() {
+QPlaceContactDetail* QPlaceContactDetail_New() {
     return new QPlaceContactDetail();
 }
 
-QPlaceContactDetail* QPlaceContactDetail_new2(const QPlaceContactDetail* other) {
+QPlaceContactDetail* QPlaceContactDetail_New2(const QPlaceContactDetail* other) {
     return new QPlaceContactDetail(*other);
 }
 

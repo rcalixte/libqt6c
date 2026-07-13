@@ -7,7 +7,7 @@
 #include "libqsciabstractapis.h"
 
 QsciAbstractAPIs* q_sciabstractapis_new(void* lexer) {
-    return QsciAbstractAPIs_new((QsciLexer*)lexer);
+    return QsciAbstractAPIs_New((QsciLexer*)lexer);
 }
 
 const QMetaObject* q_sciabstractapis_meta_object(void* self) {

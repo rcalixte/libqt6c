@@ -3,7 +3,7 @@
 #include "libkmessageboxnotifyinterface.h"
 
 KMessageBoxNotifyInterface* k_messageboxnotifyinterface_new() {
-    return KMessageBoxNotifyInterface_new();
+    return KMessageBoxNotifyInterface_New();
 }
 
 void k_messageboxnotifyinterface_send_notification(void* self, int32_t notificationType, const char* message, void* parent) {

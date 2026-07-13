@@ -26,8 +26,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QAbstractAnimation* QAbstractAnimation_new();
-QAbstractAnimation* QAbstractAnimation_new2(QObject* parent);
+QAbstractAnimation* QAbstractAnimation_New();
+QAbstractAnimation* QAbstractAnimation_New2(QObject* parent);
 QMetaObject* QAbstractAnimation_MetaObject(const QAbstractAnimation* self);
 void* QAbstractAnimation_Metacast(QAbstractAnimation* self, const char* param1);
 int QAbstractAnimation_Metacall(QAbstractAnimation* self, int param1, int param2, void** param3);
@@ -109,8 +109,8 @@ void QAbstractAnimation_OnIsSignalConnected(const QAbstractAnimation* self, intp
 bool QAbstractAnimation_SuperIsSignalConnected(const QAbstractAnimation* self, const QMetaMethod* signal);
 void QAbstractAnimation_Delete(QAbstractAnimation* self);
 
-QAnimationDriver* QAnimationDriver_new();
-QAnimationDriver* QAnimationDriver_new2(QObject* parent);
+QAnimationDriver* QAnimationDriver_New();
+QAnimationDriver* QAnimationDriver_New2(QObject* parent);
 QMetaObject* QAnimationDriver_MetaObject(const QAnimationDriver* self);
 void* QAnimationDriver_Metacast(QAnimationDriver* self, const char* param1);
 int QAnimationDriver_Metacall(QAnimationDriver* self, int param1, int param2, void** param3);

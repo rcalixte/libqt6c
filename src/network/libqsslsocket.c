@@ -19,11 +19,11 @@
 #include "libqsslsocket.h"
 
 QSslSocket* q_sslsocket_new() {
-    return QSslSocket_new();
+    return QSslSocket_New();
 }
 
 QSslSocket* q_sslsocket_new2(void* parent) {
-    return QSslSocket_new2((QObject*)parent);
+    return QSslSocket_New2((QObject*)parent);
 }
 
 const QMetaObject* q_sslsocket_meta_object(void* self) {

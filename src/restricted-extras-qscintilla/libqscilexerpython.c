@@ -11,11 +11,11 @@
 #include "libqscilexerpython.h"
 
 QsciLexerPython* q_scilexerpython_new() {
-    return QsciLexerPython_new();
+    return QsciLexerPython_New();
 }
 
 QsciLexerPython* q_scilexerpython_new2(void* parent) {
-    return QsciLexerPython_new2((QObject*)parent);
+    return QsciLexerPython_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexerpython_meta_object(void* self) {

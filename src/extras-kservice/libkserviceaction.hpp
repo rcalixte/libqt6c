@@ -19,8 +19,8 @@ typedef struct KServiceAction KServiceAction;
 typedef struct QVariant QVariant;
 #endif
 
-KServiceAction* KServiceAction_new();
-KServiceAction* KServiceAction_new2(const KServiceAction* other);
+KServiceAction* KServiceAction_New();
+KServiceAction* KServiceAction_New2(const KServiceAction* other);
 void KServiceAction_OperatorAssign(KServiceAction* self, const KServiceAction* other);
 void KServiceAction_SetData(KServiceAction* self, const QVariant* userData);
 QVariant* KServiceAction_Data(const KServiceAction* self);

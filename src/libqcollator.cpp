@@ -7,7 +7,7 @@
 #include "libqcollator.hpp"
 #include "libqcollator.hxx"
 
-QCollatorSortKey* QCollatorSortKey_new(const QCollatorSortKey* other) {
+QCollatorSortKey* QCollatorSortKey_New(const QCollatorSortKey* other) {
     return new QCollatorSortKey(*other);
 }
 
@@ -27,15 +27,15 @@ void QCollatorSortKey_Delete(QCollatorSortKey* self) {
     delete self;
 }
 
-QCollator* QCollator_new() {
+QCollator* QCollator_New() {
     return new QCollator();
 }
 
-QCollator* QCollator_new2(const QLocale* locale) {
+QCollator* QCollator_New2(const QLocale* locale) {
     return new QCollator(*locale);
 }
 
-QCollator* QCollator_new3(const QCollator* param1) {
+QCollator* QCollator_New3(const QCollator* param1) {
     return new QCollator(*param1);
 }
 

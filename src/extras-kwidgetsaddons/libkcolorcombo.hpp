@@ -54,8 +54,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KColorCombo* KColorCombo_new(QWidget* parent);
-KColorCombo* KColorCombo_new2();
+KColorCombo* KColorCombo_New(QWidget* parent);
+KColorCombo* KColorCombo_New2();
 QMetaObject* KColorCombo_MetaObject(const KColorCombo* self);
 void* KColorCombo_Metacast(KColorCombo* self, const char* param1);
 int KColorCombo_Metacall(KColorCombo* self, int param1, int param2, void** param3);

@@ -8,15 +8,15 @@
 #include "libqfontdatabase.hpp"
 #include "libqfontdatabase.hxx"
 
-QFontDatabase* QFontDatabase_new(const QFontDatabase* other) {
+QFontDatabase* QFontDatabase_New(const QFontDatabase* other) {
     return new QFontDatabase(*other);
 }
 
-QFontDatabase* QFontDatabase_new2(QFontDatabase* other) {
+QFontDatabase* QFontDatabase_New2(QFontDatabase* other) {
     return new QFontDatabase(std::move(*other));
 }
 
-QFontDatabase* QFontDatabase_new3() {
+QFontDatabase* QFontDatabase_New3() {
     return new QFontDatabase();
 }
 

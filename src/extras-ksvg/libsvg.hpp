@@ -39,8 +39,8 @@ typedef struct QSizeF QSizeF;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KSvg__Svg* KSvg__Svg_new();
-KSvg__Svg* KSvg__Svg_new2(QObject* parent);
+KSvg__Svg* KSvg__Svg_New();
+KSvg__Svg* KSvg__Svg_New2(QObject* parent);
 QMetaObject* KSvg__Svg_MetaObject(const KSvg__Svg* self);
 void* KSvg__Svg_Metacast(KSvg__Svg* self, const char* param1);
 int KSvg__Svg_Metacall(KSvg__Svg* self, int param1, int param2, void** param3);

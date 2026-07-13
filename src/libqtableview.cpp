@@ -52,11 +52,11 @@
 #include "libqtableview.hpp"
 #include "libqtableview.hxx"
 
-QTableView* QTableView_new(QWidget* parent) {
+QTableView* QTableView_New(QWidget* parent) {
     return new VirtualQTableView(parent);
 }
 
-QTableView* QTableView_new2() {
+QTableView* QTableView_New2() {
     return new VirtualQTableView();
 }
 

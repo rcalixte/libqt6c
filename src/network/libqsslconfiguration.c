@@ -8,11 +8,11 @@
 #include "libqsslconfiguration.h"
 
 QSslConfiguration* q_sslconfiguration_new() {
-    return QSslConfiguration_new();
+    return QSslConfiguration_New();
 }
 
 QSslConfiguration* q_sslconfiguration_new2(void* other) {
-    return QSslConfiguration_new2((QSslConfiguration*)other);
+    return QSslConfiguration_New2((QSslConfiguration*)other);
 }
 
 void q_sslconfiguration_operator_assign(void* self, void* other) {

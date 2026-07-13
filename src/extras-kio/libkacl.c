@@ -2,19 +2,19 @@
 #include "libkacl.h"
 
 KACL* k_acl_new(const char* aclString) {
-    return KACL_new(qstring(aclString));
+    return KACL_New(qstring(aclString));
 }
 
 KACL* k_acl_new2(void* rhs) {
-    return KACL_new2((KACL*)rhs);
+    return KACL_New2((KACL*)rhs);
 }
 
 KACL* k_acl_new3(mode_t basicPermissions) {
-    return KACL_new3(basicPermissions);
+    return KACL_New3(basicPermissions);
 }
 
 KACL* k_acl_new4() {
-    return KACL_new4();
+    return KACL_New4();
 }
 
 void k_acl_operator_assign(void* self, void* rhs) {

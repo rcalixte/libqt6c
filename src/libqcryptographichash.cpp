@@ -7,7 +7,7 @@
 #include "libqcryptographichash.hpp"
 #include "libqcryptographichash.hxx"
 
-QCryptographicHash* QCryptographicHash_new(int method) {
+QCryptographicHash* QCryptographicHash_New(int method) {
     return new QCryptographicHash(static_cast<QCryptographicHash::Algorithm>(method));
 }
 

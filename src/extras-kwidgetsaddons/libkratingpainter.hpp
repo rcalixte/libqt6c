@@ -23,7 +23,7 @@ typedef struct QPoint QPoint;
 typedef struct QRect QRect;
 #endif
 
-KRatingPainter* KRatingPainter_new();
+KRatingPainter* KRatingPainter_New();
 int KRatingPainter_MaxRating(const KRatingPainter* self);
 bool KRatingPainter_HalfStepsEnabled(const KRatingPainter* self);
 int KRatingPainter_Alignment(const KRatingPainter* self);

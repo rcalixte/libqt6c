@@ -9,11 +9,11 @@
 #include "libqnetworkdiskcache.h"
 
 QNetworkDiskCache* q_networkdiskcache_new() {
-    return QNetworkDiskCache_new();
+    return QNetworkDiskCache_New();
 }
 
 QNetworkDiskCache* q_networkdiskcache_new2(void* parent) {
-    return QNetworkDiskCache_new2((QObject*)parent);
+    return QNetworkDiskCache_New2((QObject*)parent);
 }
 
 const QMetaObject* q_networkdiskcache_meta_object(void* self) {

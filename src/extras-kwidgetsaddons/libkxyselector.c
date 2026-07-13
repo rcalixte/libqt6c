@@ -16,11 +16,11 @@
 #include "libkxyselector.h"
 
 KXYSelector* k_xyselector_new(void* parent) {
-    return KXYSelector_new((QWidget*)parent);
+    return KXYSelector_New((QWidget*)parent);
 }
 
 KXYSelector* k_xyselector_new2() {
-    return KXYSelector_new2();
+    return KXYSelector_New2();
 }
 
 const QMetaObject* k_xyselector_meta_object(void* self) {

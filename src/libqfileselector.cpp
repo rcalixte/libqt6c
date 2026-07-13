@@ -12,11 +12,11 @@
 #include "libqfileselector.hpp"
 #include "libqfileselector.hxx"
 
-QFileSelector* QFileSelector_new() {
+QFileSelector* QFileSelector_New() {
     return new VirtualQFileSelector();
 }
 
-QFileSelector* QFileSelector_new2(QObject* parent) {
+QFileSelector* QFileSelector_New2(QObject* parent) {
     return new VirtualQFileSelector(parent);
 }
 

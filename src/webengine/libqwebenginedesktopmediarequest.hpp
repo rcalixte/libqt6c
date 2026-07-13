@@ -20,7 +20,7 @@ typedef struct QModelIndex QModelIndex;
 typedef struct QWebEngineDesktopMediaRequest QWebEngineDesktopMediaRequest;
 #endif
 
-QWebEngineDesktopMediaRequest* QWebEngineDesktopMediaRequest_new(const QWebEngineDesktopMediaRequest* other);
+QWebEngineDesktopMediaRequest* QWebEngineDesktopMediaRequest_New(const QWebEngineDesktopMediaRequest* other);
 void QWebEngineDesktopMediaRequest_OperatorAssign(QWebEngineDesktopMediaRequest* self, const QWebEngineDesktopMediaRequest* other);
 void QWebEngineDesktopMediaRequest_Swap(QWebEngineDesktopMediaRequest* self, QWebEngineDesktopMediaRequest* other);
 QAbstractListModel* QWebEngineDesktopMediaRequest_ScreensModel(const QWebEngineDesktopMediaRequest* self);

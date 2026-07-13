@@ -4,7 +4,7 @@
 #include "libguiactivateevent.hpp"
 #include "libguiactivateevent.hxx"
 
-KParts__GUIActivateEvent* KParts__GUIActivateEvent_new(bool activated) {
+KParts__GUIActivateEvent* KParts__GUIActivateEvent_New(bool activated) {
     return new VirtualKPartsGUIActivateEvent(activated);
 }
 

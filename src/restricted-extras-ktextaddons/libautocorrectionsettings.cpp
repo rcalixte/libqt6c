@@ -8,7 +8,7 @@
 #include "libautocorrectionsettings.hpp"
 #include "libautocorrectionsettings.hxx"
 
-TextAutoCorrectionCore__AutoCorrectionSettings* TextAutoCorrectionCore__AutoCorrectionSettings_new() {
+TextAutoCorrectionCore__AutoCorrectionSettings* TextAutoCorrectionCore__AutoCorrectionSettings_New() {
     return new TextAutoCorrectionCore::AutoCorrectionSettings();
 }
 

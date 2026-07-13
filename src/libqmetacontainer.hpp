@@ -21,10 +21,10 @@ typedef struct QMetaSequence QMetaSequence;
 typedef struct QMetaType QMetaType;
 #endif
 
-QMetaContainer* QMetaContainer_new(const QMetaContainer* other);
-QMetaContainer* QMetaContainer_new2(QMetaContainer* other);
-QMetaContainer* QMetaContainer_new3();
-QMetaContainer* QMetaContainer_new4(const QMetaContainer* param1);
+QMetaContainer* QMetaContainer_New(const QMetaContainer* other);
+QMetaContainer* QMetaContainer_New2(QMetaContainer* other);
+QMetaContainer* QMetaContainer_New3();
+QMetaContainer* QMetaContainer_New4(const QMetaContainer* param1);
 void QMetaContainer_CopyAssign(QMetaContainer* self, QMetaContainer* other);
 void QMetaContainer_MoveAssign(QMetaContainer* self, QMetaContainer* other);
 bool QMetaContainer_HasInputIterator(const QMetaContainer* self);
@@ -53,9 +53,9 @@ void QMetaContainer_AdvanceConstIterator(const QMetaContainer* self, void* itera
 ptrdiff_t QMetaContainer_DiffConstIterator(const QMetaContainer* self, const void* i, const void* j);
 void QMetaContainer_Delete(QMetaContainer* self);
 
-QMetaSequence* QMetaSequence_new(const QMetaSequence* other);
-QMetaSequence* QMetaSequence_new2(QMetaSequence* other);
-QMetaSequence* QMetaSequence_new3();
+QMetaSequence* QMetaSequence_New(const QMetaSequence* other);
+QMetaSequence* QMetaSequence_New2(QMetaSequence* other);
+QMetaSequence* QMetaSequence_New3();
 void QMetaSequence_CopyAssign(QMetaSequence* self, QMetaSequence* other);
 void QMetaSequence_MoveAssign(QMetaSequence* self, QMetaSequence* other);
 QMetaType* QMetaSequence_ValueMetaType(const QMetaSequence* self);
@@ -90,9 +90,9 @@ bool QMetaSequence_CanGetValueAtConstIterator(const QMetaSequence* self);
 void QMetaSequence_ValueAtConstIterator(const QMetaSequence* self, const void* iterator, void* result);
 void QMetaSequence_Delete(QMetaSequence* self);
 
-QMetaAssociation* QMetaAssociation_new(const QMetaAssociation* other);
-QMetaAssociation* QMetaAssociation_new2(QMetaAssociation* other);
-QMetaAssociation* QMetaAssociation_new3();
+QMetaAssociation* QMetaAssociation_New(const QMetaAssociation* other);
+QMetaAssociation* QMetaAssociation_New2(QMetaAssociation* other);
+QMetaAssociation* QMetaAssociation_New3();
 void QMetaAssociation_CopyAssign(QMetaAssociation* self, QMetaAssociation* other);
 void QMetaAssociation_MoveAssign(QMetaAssociation* self, QMetaAssociation* other);
 QMetaType* QMetaAssociation_KeyMetaType(const QMetaAssociation* self);

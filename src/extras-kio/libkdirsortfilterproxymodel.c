@@ -16,11 +16,11 @@
 #include "libkdirsortfilterproxymodel.h"
 
 KDirSortFilterProxyModel* k_dirsortfilterproxymodel_new() {
-    return KDirSortFilterProxyModel_new();
+    return KDirSortFilterProxyModel_New();
 }
 
 KDirSortFilterProxyModel* k_dirsortfilterproxymodel_new2(void* parent) {
-    return KDirSortFilterProxyModel_new2((QObject*)parent);
+    return KDirSortFilterProxyModel_New2((QObject*)parent);
 }
 
 const QMetaObject* k_dirsortfilterproxymodel_meta_object(void* self) {

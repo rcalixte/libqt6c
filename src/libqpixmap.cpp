@@ -20,37 +20,37 @@
 #include "libqpixmap.hpp"
 #include "libqpixmap.hxx"
 
-QPixmap* QPixmap_new() {
+QPixmap* QPixmap_New() {
     return new VirtualQPixmap();
 }
 
-QPixmap* QPixmap_new2(int w, int h) {
+QPixmap* QPixmap_New2(int w, int h) {
     return new VirtualQPixmap(static_cast<int>(w), static_cast<int>(h));
 }
 
-QPixmap* QPixmap_new3(const QSize* param1) {
+QPixmap* QPixmap_New3(const QSize* param1) {
     return new VirtualQPixmap(*param1);
 }
 
-QPixmap* QPixmap_new4(const libqt_string fileName) {
+QPixmap* QPixmap_New4(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQPixmap(fileName_QString);
 }
 
-QPixmap* QPixmap_new5(const char** xpm) {
+QPixmap* QPixmap_New5(const char** xpm) {
     return new VirtualQPixmap(xpm);
 }
 
-QPixmap* QPixmap_new6(const QPixmap* param1) {
+QPixmap* QPixmap_New6(const QPixmap* param1) {
     return new VirtualQPixmap(*param1);
 }
 
-QPixmap* QPixmap_new7(const libqt_string fileName, const char* format) {
+QPixmap* QPixmap_New7(const libqt_string fileName, const char* format) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQPixmap(fileName_QString, format);
 }
 
-QPixmap* QPixmap_new8(const libqt_string fileName, const char* format, int flags) {
+QPixmap* QPixmap_New8(const libqt_string fileName, const char* format, int flags) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQPixmap(fileName_QString, format, static_cast<Qt::ImageConversionFlags>(flags));
 }

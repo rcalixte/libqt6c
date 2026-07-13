@@ -14,11 +14,11 @@
 #include "libqpdfpagerenderer.hpp"
 #include "libqpdfpagerenderer.hxx"
 
-QPdfPageRenderer* QPdfPageRenderer_new() {
+QPdfPageRenderer* QPdfPageRenderer_New() {
     return new VirtualQPdfPageRenderer();
 }
 
-QPdfPageRenderer* QPdfPageRenderer_new2(QObject* parent) {
+QPdfPageRenderer* QPdfPageRenderer_New2(QObject* parent) {
     return new VirtualQPdfPageRenderer(parent);
 }
 

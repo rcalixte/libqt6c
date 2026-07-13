@@ -25,28 +25,28 @@ typedef struct QTimerEvent QTimerEvent;
 #endif
 
 #ifdef __linux__
-KSelectionWatcher* KSelectionWatcher_new(xcb_atom_t selection);
+KSelectionWatcher* KSelectionWatcher_New(xcb_atom_t selection);
 #endif
-KSelectionWatcher* KSelectionWatcher_new2(const char* selection);
+KSelectionWatcher* KSelectionWatcher_New2(const char* selection);
 #ifdef __linux__
-KSelectionWatcher* KSelectionWatcher_new3(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root);
-#endif
-#ifdef __linux__
-KSelectionWatcher* KSelectionWatcher_new4(const char* selection, xcb_connection_t* c, xcb_window_t root);
+KSelectionWatcher* KSelectionWatcher_New3(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root);
 #endif
 #ifdef __linux__
-KSelectionWatcher* KSelectionWatcher_new5(xcb_atom_t selection, int screen);
+KSelectionWatcher* KSelectionWatcher_New4(const char* selection, xcb_connection_t* c, xcb_window_t root);
 #endif
 #ifdef __linux__
-KSelectionWatcher* KSelectionWatcher_new6(xcb_atom_t selection, int screen, QObject* parent);
-#endif
-KSelectionWatcher* KSelectionWatcher_new7(const char* selection, int screen);
-KSelectionWatcher* KSelectionWatcher_new8(const char* selection, int screen, QObject* parent);
-#ifdef __linux__
-KSelectionWatcher* KSelectionWatcher_new9(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root, QObject* parent);
+KSelectionWatcher* KSelectionWatcher_New5(xcb_atom_t selection, int screen);
 #endif
 #ifdef __linux__
-KSelectionWatcher* KSelectionWatcher_new10(const char* selection, xcb_connection_t* c, xcb_window_t root, QObject* parent);
+KSelectionWatcher* KSelectionWatcher_New6(xcb_atom_t selection, int screen, QObject* parent);
+#endif
+KSelectionWatcher* KSelectionWatcher_New7(const char* selection, int screen);
+KSelectionWatcher* KSelectionWatcher_New8(const char* selection, int screen, QObject* parent);
+#ifdef __linux__
+KSelectionWatcher* KSelectionWatcher_New9(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root, QObject* parent);
+#endif
+#ifdef __linux__
+KSelectionWatcher* KSelectionWatcher_New10(const char* selection, xcb_connection_t* c, xcb_window_t root, QObject* parent);
 #endif
 QMetaObject* KSelectionWatcher_MetaObject(const KSelectionWatcher* self);
 void* KSelectionWatcher_Metacast(KSelectionWatcher* self, const char* param1);

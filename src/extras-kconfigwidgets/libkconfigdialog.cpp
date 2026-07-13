@@ -43,7 +43,7 @@
 #include "libkconfigdialog.hpp"
 #include "libkconfigdialog.hxx"
 
-KConfigDialog* KConfigDialog_new(QWidget* parent, const libqt_string name, KCoreConfigSkeleton* config) {
+KConfigDialog* KConfigDialog_New(QWidget* parent, const libqt_string name, KCoreConfigSkeleton* config) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualKConfigDialog(parent, name_QString, config);
 }

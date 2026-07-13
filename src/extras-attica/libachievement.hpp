@@ -23,8 +23,8 @@ typedef struct QUrl QUrl;
 typedef struct QVariant QVariant;
 #endif
 
-Attica__Achievement* Attica__Achievement_new();
-Attica__Achievement* Attica__Achievement_new2(const Attica__Achievement* other);
+Attica__Achievement* Attica__Achievement_New();
+Attica__Achievement* Attica__Achievement_New2(const Attica__Achievement* other);
 int Attica__Achievement_StringToAchievementType(const libqt_string achievementTypeString);
 libqt_string Attica__Achievement_AchievementTypeToString(const int type);
 int Attica__Achievement_StringToAchievementVisibility(const libqt_string achievementVisibilityString);

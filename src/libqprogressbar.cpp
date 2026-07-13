@@ -38,11 +38,11 @@
 #include "libqprogressbar.hpp"
 #include "libqprogressbar.hxx"
 
-QProgressBar* QProgressBar_new(QWidget* parent) {
+QProgressBar* QProgressBar_New(QWidget* parent) {
     return new VirtualQProgressBar(parent);
 }
 
-QProgressBar* QProgressBar_new2() {
+QProgressBar* QProgressBar_New2() {
     return new VirtualQProgressBar();
 }
 

@@ -40,11 +40,11 @@
 #include "liblanguagetoolcombobox.hpp"
 #include "liblanguagetoolcombobox.hxx"
 
-TextGrammarCheck__LanguageToolComboBox* TextGrammarCheck__LanguageToolComboBox_new(QWidget* parent) {
+TextGrammarCheck__LanguageToolComboBox* TextGrammarCheck__LanguageToolComboBox_New(QWidget* parent) {
     return new VirtualTextGrammarCheckLanguageToolComboBox(parent);
 }
 
-TextGrammarCheck__LanguageToolComboBox* TextGrammarCheck__LanguageToolComboBox_new2() {
+TextGrammarCheck__LanguageToolComboBox* TextGrammarCheck__LanguageToolComboBox_New2() {
     return new VirtualTextGrammarCheckLanguageToolComboBox();
 }
 

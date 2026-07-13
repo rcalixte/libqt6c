@@ -29,7 +29,7 @@ typedef struct QSize QSize;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-Konsole__Emulation* Konsole__Emulation_new();
+Konsole__Emulation* Konsole__Emulation_New();
 QMetaObject* Konsole__Emulation_MetaObject(const Konsole__Emulation* self);
 void* Konsole__Emulation_Metacast(Konsole__Emulation* self, const char* param1);
 int Konsole__Emulation_Metacall(Konsole__Emulation* self, int param1, int param2, void** param3);

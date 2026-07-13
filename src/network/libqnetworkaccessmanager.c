@@ -18,11 +18,11 @@
 #include "libqnetworkaccessmanager.h"
 
 QNetworkAccessManager* q_networkaccessmanager_new() {
-    return QNetworkAccessManager_new();
+    return QNetworkAccessManager_New();
 }
 
 QNetworkAccessManager* q_networkaccessmanager_new2(void* parent) {
-    return QNetworkAccessManager_new2((QObject*)parent);
+    return QNetworkAccessManager_New2((QObject*)parent);
 }
 
 const QMetaObject* q_networkaccessmanager_meta_object(void* self) {

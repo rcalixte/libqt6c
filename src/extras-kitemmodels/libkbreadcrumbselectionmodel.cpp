@@ -13,19 +13,19 @@
 #include "libkbreadcrumbselectionmodel.hpp"
 #include "libkbreadcrumbselectionmodel.hxx"
 
-KBreadcrumbSelectionModel* KBreadcrumbSelectionModel_new(QItemSelectionModel* selectionModel) {
+KBreadcrumbSelectionModel* KBreadcrumbSelectionModel_New(QItemSelectionModel* selectionModel) {
     return new VirtualKBreadcrumbSelectionModel(selectionModel);
 }
 
-KBreadcrumbSelectionModel* KBreadcrumbSelectionModel_new2(QItemSelectionModel* selectionModel, int target) {
+KBreadcrumbSelectionModel* KBreadcrumbSelectionModel_New2(QItemSelectionModel* selectionModel, int target) {
     return new VirtualKBreadcrumbSelectionModel(selectionModel, static_cast<KBreadcrumbSelectionModel::BreadcrumbTarget>(target));
 }
 
-KBreadcrumbSelectionModel* KBreadcrumbSelectionModel_new3(QItemSelectionModel* selectionModel, QObject* parent) {
+KBreadcrumbSelectionModel* KBreadcrumbSelectionModel_New3(QItemSelectionModel* selectionModel, QObject* parent) {
     return new VirtualKBreadcrumbSelectionModel(selectionModel, parent);
 }
 
-KBreadcrumbSelectionModel* KBreadcrumbSelectionModel_new4(QItemSelectionModel* selectionModel, int target, QObject* parent) {
+KBreadcrumbSelectionModel* KBreadcrumbSelectionModel_New4(QItemSelectionModel* selectionModel, int target, QObject* parent) {
     return new VirtualKBreadcrumbSelectionModel(selectionModel, static_cast<KBreadcrumbSelectionModel::BreadcrumbTarget>(target), parent);
 }
 

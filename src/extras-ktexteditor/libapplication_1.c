@@ -10,7 +10,7 @@
 #include "libapplication_1.h"
 
 KTextEditor__Application* k_texteditor__application_new(void* parent) {
-    return KTextEditor__Application_new((QObject*)parent);
+    return KTextEditor__Application_New((QObject*)parent);
 }
 
 const QMetaObject* k_texteditor__application_meta_object(void* self) {

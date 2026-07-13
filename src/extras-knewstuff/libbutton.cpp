@@ -42,11 +42,11 @@
 #include "libbutton.hpp"
 #include "libbutton.hxx"
 
-KNSWidgets__Button* KNSWidgets__Button_new(QWidget* parent) {
+KNSWidgets__Button* KNSWidgets__Button_New(QWidget* parent) {
     return new VirtualKNSWidgetsButton(parent);
 }
 
-KNSWidgets__Button* KNSWidgets__Button_new2(const libqt_string text, const libqt_string configFile, QWidget* parent) {
+KNSWidgets__Button* KNSWidgets__Button_New2(const libqt_string text, const libqt_string configFile, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString configFile_QString = QString::fromUtf8(configFile.data, configFile.len);
     return new VirtualKNSWidgetsButton(text_QString, configFile_QString, parent);

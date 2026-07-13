@@ -53,10 +53,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KEditToolBar* KEditToolBar_new(KActionCollection* collection);
-KEditToolBar* KEditToolBar_new2(KXMLGUIFactory* factory);
-KEditToolBar* KEditToolBar_new3(KActionCollection* collection, QWidget* parent);
-KEditToolBar* KEditToolBar_new4(KXMLGUIFactory* factory, QWidget* parent);
+KEditToolBar* KEditToolBar_New(KActionCollection* collection);
+KEditToolBar* KEditToolBar_New2(KXMLGUIFactory* factory);
+KEditToolBar* KEditToolBar_New3(KActionCollection* collection, QWidget* parent);
+KEditToolBar* KEditToolBar_New4(KXMLGUIFactory* factory, QWidget* parent);
 QMetaObject* KEditToolBar_MetaObject(const KEditToolBar* self);
 void* KEditToolBar_Metacast(KEditToolBar* self, const char* param1);
 int KEditToolBar_Metacall(KEditToolBar* self, int param1, int param2, void** param3);

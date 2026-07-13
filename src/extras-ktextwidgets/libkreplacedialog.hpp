@@ -52,12 +52,12 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KReplaceDialog* KReplaceDialog_new(QWidget* parent);
-KReplaceDialog* KReplaceDialog_new2();
-KReplaceDialog* KReplaceDialog_new3(QWidget* parent, long options);
-KReplaceDialog* KReplaceDialog_new4(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings);
-KReplaceDialog* KReplaceDialog_new5(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings, const libqt_list /* of libqt_string */ replaceStrings);
-KReplaceDialog* KReplaceDialog_new6(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings, const libqt_list /* of libqt_string */ replaceStrings, bool hasSelection);
+KReplaceDialog* KReplaceDialog_New(QWidget* parent);
+KReplaceDialog* KReplaceDialog_New2();
+KReplaceDialog* KReplaceDialog_New3(QWidget* parent, long options);
+KReplaceDialog* KReplaceDialog_New4(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings);
+KReplaceDialog* KReplaceDialog_New5(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings, const libqt_list /* of libqt_string */ replaceStrings);
+KReplaceDialog* KReplaceDialog_New6(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings, const libqt_list /* of libqt_string */ replaceStrings, bool hasSelection);
 QMetaObject* KReplaceDialog_MetaObject(const KReplaceDialog* self);
 void* KReplaceDialog_Metacast(KReplaceDialog* self, const char* param1);
 int KReplaceDialog_Metacall(KReplaceDialog* self, int param1, int param2, void** param3);

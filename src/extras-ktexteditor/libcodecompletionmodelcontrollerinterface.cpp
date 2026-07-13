@@ -9,7 +9,7 @@
 #include "libcodecompletionmodelcontrollerinterface.hpp"
 #include "libcodecompletionmodelcontrollerinterface.hxx"
 
-KTextEditor__CodeCompletionModelControllerInterface* KTextEditor__CodeCompletionModelControllerInterface_new() {
+KTextEditor__CodeCompletionModelControllerInterface* KTextEditor__CodeCompletionModelControllerInterface_New() {
     return new VirtualKTextEditorCodeCompletionModelControllerInterface();
 }
 

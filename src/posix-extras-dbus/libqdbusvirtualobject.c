@@ -8,11 +8,11 @@
 #include "libqdbusvirtualobject.h"
 
 QDBusVirtualObject* q_dbusvirtualobject_new() {
-    return QDBusVirtualObject_new();
+    return QDBusVirtualObject_New();
 }
 
 QDBusVirtualObject* q_dbusvirtualobject_new2(void* parent) {
-    return QDBusVirtualObject_new2((QObject*)parent);
+    return QDBusVirtualObject_New2((QObject*)parent);
 }
 
 const QMetaObject* q_dbusvirtualobject_meta_object(void* self) {

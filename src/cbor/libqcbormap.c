@@ -5,11 +5,11 @@
 #include "libqcbormap.h"
 
 QCborMap* q_cbormap_new() {
-    return QCborMap_new();
+    return QCborMap_New();
 }
 
 QCborMap* q_cbormap_new2(void* other) {
-    return QCborMap_new2((QCborMap*)other);
+    return QCborMap_New2((QCborMap*)other);
 }
 
 void q_cbormap_operator_assign(void* self, void* other) {
@@ -398,15 +398,15 @@ void q_cbormap_delete(void* self) {
 }
 
 QCborMap__Iterator* q_cbormap__iterator_new(void* other) {
-    return QCborMap__Iterator_new((QCborMap__Iterator*)other);
+    return QCborMap__Iterator_New((QCborMap__Iterator*)other);
 }
 
 QCborMap__Iterator* q_cbormap__iterator_new2() {
-    return QCborMap__Iterator_new2();
+    return QCborMap__Iterator_New2();
 }
 
 QCborMap__Iterator* q_cbormap__iterator_new3(void* param1) {
-    return QCborMap__Iterator_new3((QCborMap__Iterator*)param1);
+    return QCborMap__Iterator_New3((QCborMap__Iterator*)param1);
 }
 
 void q_cbormap__iterator_operator_assign(void* self, void* other) {
@@ -478,15 +478,15 @@ void q_cbormap__iterator_delete(void* self) {
 }
 
 QCborMap__ConstIterator* q_cbormap__constiterator_new(void* other) {
-    return QCborMap__ConstIterator_new((QCborMap__ConstIterator*)other);
+    return QCborMap__ConstIterator_New((QCborMap__ConstIterator*)other);
 }
 
 QCborMap__ConstIterator* q_cbormap__constiterator_new2() {
-    return QCborMap__ConstIterator_new2();
+    return QCborMap__ConstIterator_New2();
 }
 
 QCborMap__ConstIterator* q_cbormap__constiterator_new3(void* param1) {
-    return QCborMap__ConstIterator_new3((QCborMap__ConstIterator*)param1);
+    return QCborMap__ConstIterator_New3((QCborMap__ConstIterator*)param1);
 }
 
 void q_cbormap__constiterator_operator_assign(void* self, void* other) {

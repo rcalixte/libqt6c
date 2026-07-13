@@ -31,8 +31,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KNSCore__QuestionListener* KNSCore__QuestionListener_new();
-KNSCore__QuestionListener* KNSCore__QuestionListener_new2(QObject* parent);
+KNSCore__QuestionListener* KNSCore__QuestionListener_New();
+KNSCore__QuestionListener* KNSCore__QuestionListener_New2(QObject* parent);
 QMetaObject* KNSCore__QuestionListener_MetaObject(const KNSCore__QuestionListener* self);
 void* KNSCore__QuestionListener_Metacast(KNSCore__QuestionListener* self, const char* param1);
 int KNSCore__QuestionListener_Metacall(KNSCore__QuestionListener* self, int param1, int param2, void** param3);

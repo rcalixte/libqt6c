@@ -19,8 +19,8 @@ typedef struct QPlaceCategory QPlaceCategory;
 typedef struct QPlaceIcon QPlaceIcon;
 #endif
 
-QPlaceCategory* QPlaceCategory_new();
-QPlaceCategory* QPlaceCategory_new2(const QPlaceCategory* other);
+QPlaceCategory* QPlaceCategory_New();
+QPlaceCategory* QPlaceCategory_New2(const QPlaceCategory* other);
 void QPlaceCategory_OperatorAssign(QPlaceCategory* self, const QPlaceCategory* other);
 void QPlaceCategory_Swap(QPlaceCategory* self, QPlaceCategory* other);
 libqt_string QPlaceCategory_CategoryId(const QPlaceCategory* self);

@@ -39,11 +39,11 @@
 #include "libqrubberband.hpp"
 #include "libqrubberband.hxx"
 
-QRubberBand* QRubberBand_new(int param1) {
+QRubberBand* QRubberBand_New(int param1) {
     return new VirtualQRubberBand(static_cast<QRubberBand::Shape>(param1));
 }
 
-QRubberBand* QRubberBand_new2(int param1, QWidget* param2) {
+QRubberBand* QRubberBand_New2(int param1, QWidget* param2) {
     return new VirtualQRubberBand(static_cast<QRubberBand::Shape>(param1), param2);
 }
 

@@ -5,23 +5,23 @@
 #include "libqstringconverter.h"
 
 QStringEncoder* q_stringencoder_new() {
-    return QStringEncoder_new();
+    return QStringEncoder_New();
 }
 
 QStringEncoder* q_stringencoder_new2(int32_t encoding) {
-    return QStringEncoder_new2(encoding);
+    return QStringEncoder_New2(encoding);
 }
 
 QStringEncoder* q_stringencoder_new3(const char* name) {
-    return QStringEncoder_new3(name);
+    return QStringEncoder_New3(name);
 }
 
 QStringEncoder* q_stringencoder_new4(int32_t encoding, int32_t flags) {
-    return QStringEncoder_new4(encoding, flags);
+    return QStringEncoder_New4(encoding, flags);
 }
 
 QStringEncoder* q_stringencoder_new5(const char* name, int32_t flags) {
-    return QStringEncoder_new5(name, flags);
+    return QStringEncoder_New5(name, flags);
 }
 
 intptr_t q_stringencoder_required_space(void* self, intptr_t inputLength) {
@@ -88,23 +88,23 @@ void q_stringencoder_delete(void* self) {
 }
 
 QStringDecoder* q_stringdecoder_new(int32_t encoding) {
-    return QStringDecoder_new(encoding);
+    return QStringDecoder_New(encoding);
 }
 
 QStringDecoder* q_stringdecoder_new2() {
-    return QStringDecoder_new2();
+    return QStringDecoder_New2();
 }
 
 QStringDecoder* q_stringdecoder_new3(const char* name) {
-    return QStringDecoder_new3(name);
+    return QStringDecoder_New3(name);
 }
 
 QStringDecoder* q_stringdecoder_new4(int32_t encoding, int32_t flags) {
-    return QStringDecoder_new4(encoding, flags);
+    return QStringDecoder_New4(encoding, flags);
 }
 
 QStringDecoder* q_stringdecoder_new5(const char* name, int32_t f) {
-    return QStringDecoder_new5(name, f);
+    return QStringDecoder_New5(name, f);
 }
 
 intptr_t q_stringdecoder_required_space(void* self, intptr_t inputLength) {

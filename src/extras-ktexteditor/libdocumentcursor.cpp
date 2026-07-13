@@ -5,19 +5,19 @@
 #include "libdocumentcursor.hpp"
 #include "libdocumentcursor.hxx"
 
-KTextEditor__DocumentCursor* KTextEditor__DocumentCursor_new(KTextEditor__Document* document) {
+KTextEditor__DocumentCursor* KTextEditor__DocumentCursor_New(KTextEditor__Document* document) {
     return new KTextEditor::DocumentCursor(document);
 }
 
-KTextEditor__DocumentCursor* KTextEditor__DocumentCursor_new2(KTextEditor__Document* document, KTextEditor__Cursor* position) {
+KTextEditor__DocumentCursor* KTextEditor__DocumentCursor_New2(KTextEditor__Document* document, KTextEditor__Cursor* position) {
     return new KTextEditor::DocumentCursor(document, *position);
 }
 
-KTextEditor__DocumentCursor* KTextEditor__DocumentCursor_new3(KTextEditor__Document* document, int line, int column) {
+KTextEditor__DocumentCursor* KTextEditor__DocumentCursor_New3(KTextEditor__Document* document, int line, int column) {
     return new KTextEditor::DocumentCursor(document, static_cast<int>(line), static_cast<int>(column));
 }
 
-KTextEditor__DocumentCursor* KTextEditor__DocumentCursor_new4(const KTextEditor__DocumentCursor* other) {
+KTextEditor__DocumentCursor* KTextEditor__DocumentCursor_New4(const KTextEditor__DocumentCursor* other) {
     return new KTextEditor::DocumentCursor(*other);
 }
 

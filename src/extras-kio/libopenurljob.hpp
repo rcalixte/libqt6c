@@ -30,10 +30,10 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-KIO__OpenUrlJob* KIO__OpenUrlJob_new(const QUrl* url);
-KIO__OpenUrlJob* KIO__OpenUrlJob_new2(const QUrl* url, const libqt_string mimeType);
-KIO__OpenUrlJob* KIO__OpenUrlJob_new3(const QUrl* url, QObject* parent);
-KIO__OpenUrlJob* KIO__OpenUrlJob_new4(const QUrl* url, const libqt_string mimeType, QObject* parent);
+KIO__OpenUrlJob* KIO__OpenUrlJob_New(const QUrl* url);
+KIO__OpenUrlJob* KIO__OpenUrlJob_New2(const QUrl* url, const libqt_string mimeType);
+KIO__OpenUrlJob* KIO__OpenUrlJob_New3(const QUrl* url, QObject* parent);
+KIO__OpenUrlJob* KIO__OpenUrlJob_New4(const QUrl* url, const libqt_string mimeType, QObject* parent);
 QMetaObject* KIO__OpenUrlJob_MetaObject(const KIO__OpenUrlJob* self);
 void* KIO__OpenUrlJob_Metacast(KIO__OpenUrlJob* self, const char* param1);
 int KIO__OpenUrlJob_Metacall(KIO__OpenUrlJob* self, int param1, int param2, void** param3);

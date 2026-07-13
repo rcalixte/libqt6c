@@ -8,11 +8,11 @@
 #include "libqscreencapture.h"
 
 QScreenCapture* q_screencapture_new() {
-    return QScreenCapture_new();
+    return QScreenCapture_New();
 }
 
 QScreenCapture* q_screencapture_new2(void* parent) {
-    return QScreenCapture_new2((QObject*)parent);
+    return QScreenCapture_New2((QObject*)parent);
 }
 
 const QMetaObject* q_screencapture_meta_object(void* self) {

@@ -18,11 +18,11 @@
 #include "libabstractformwindowmanager.hpp"
 #include "libabstractformwindowmanager.hxx"
 
-QDesignerFormWindowManagerInterface* QDesignerFormWindowManagerInterface_new() {
+QDesignerFormWindowManagerInterface* QDesignerFormWindowManagerInterface_New() {
     return new VirtualQDesignerFormWindowManagerInterface();
 }
 
-QDesignerFormWindowManagerInterface* QDesignerFormWindowManagerInterface_new2(QObject* parent) {
+QDesignerFormWindowManagerInterface* QDesignerFormWindowManagerInterface_New2(QObject* parent) {
     return new VirtualQDesignerFormWindowManagerInterface(parent);
 }
 

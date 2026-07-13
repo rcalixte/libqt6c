@@ -5,15 +5,15 @@
 #include "libattribute.h"
 
 KTextEditor__Attribute* k_texteditor__attribute_new() {
-    return KTextEditor__Attribute_new();
+    return KTextEditor__Attribute_New();
 }
 
 KTextEditor__Attribute* k_texteditor__attribute_new2(const char* name, int32_t style) {
-    return KTextEditor__Attribute_new2(qstring(name), style);
+    return KTextEditor__Attribute_New2(qstring(name), style);
 }
 
 KTextEditor__Attribute* k_texteditor__attribute_new3(void* a) {
-    return KTextEditor__Attribute_new3((KTextEditor__Attribute*)a);
+    return KTextEditor__Attribute_New3((KTextEditor__Attribute*)a);
 }
 
 const char* k_texteditor__attribute_name(void* self) {
@@ -636,7 +636,7 @@ void k_texteditor__attribute_delete(void* self) {
 }
 
 KTextEditor__AttributeBlock* k_texteditor__attributeblock_new(void* param1) {
-    return KTextEditor__AttributeBlock_new((KTextEditor__AttributeBlock*)param1);
+    return KTextEditor__AttributeBlock_New((KTextEditor__AttributeBlock*)param1);
 }
 
 int32_t k_texteditor__attributeblock_start(void* self) {

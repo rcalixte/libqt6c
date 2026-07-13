@@ -7,11 +7,11 @@
 #include "libknowledgebaseentry.hpp"
 #include "libknowledgebaseentry.hxx"
 
-Attica__KnowledgeBaseEntry* Attica__KnowledgeBaseEntry_new() {
+Attica__KnowledgeBaseEntry* Attica__KnowledgeBaseEntry_New() {
     return new Attica::KnowledgeBaseEntry();
 }
 
-Attica__KnowledgeBaseEntry* Attica__KnowledgeBaseEntry_new2(const Attica__KnowledgeBaseEntry* other) {
+Attica__KnowledgeBaseEntry* Attica__KnowledgeBaseEntry_New2(const Attica__KnowledgeBaseEntry* other) {
     return new Attica::KnowledgeBaseEntry(*other);
 }
 

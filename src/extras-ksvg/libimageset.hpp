@@ -28,11 +28,11 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KSvg__ImageSet* KSvg__ImageSet_new();
-KSvg__ImageSet* KSvg__ImageSet_new2(const libqt_string imageSetName);
-KSvg__ImageSet* KSvg__ImageSet_new3(QObject* parent);
-KSvg__ImageSet* KSvg__ImageSet_new4(const libqt_string imageSetName, const libqt_string basePath);
-KSvg__ImageSet* KSvg__ImageSet_new5(const libqt_string imageSetName, const libqt_string basePath, QObject* parent);
+KSvg__ImageSet* KSvg__ImageSet_New();
+KSvg__ImageSet* KSvg__ImageSet_New2(const libqt_string imageSetName);
+KSvg__ImageSet* KSvg__ImageSet_New3(QObject* parent);
+KSvg__ImageSet* KSvg__ImageSet_New4(const libqt_string imageSetName, const libqt_string basePath);
+KSvg__ImageSet* KSvg__ImageSet_New5(const libqt_string imageSetName, const libqt_string basePath, QObject* parent);
 QMetaObject* KSvg__ImageSet_MetaObject(const KSvg__ImageSet* self);
 void* KSvg__ImageSet_Metacast(KSvg__ImageSet* self, const char* param1);
 int KSvg__ImageSet_Metacall(KSvg__ImageSet* self, int param1, int param2, void** param3);

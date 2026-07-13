@@ -20,8 +20,8 @@ typedef struct QObject QObject;
 typedef struct QUrl QUrl;
 #endif
 
-QDesktopServices* QDesktopServices_new(const QDesktopServices* other);
-QDesktopServices* QDesktopServices_new2(QDesktopServices* other);
+QDesktopServices* QDesktopServices_New(const QDesktopServices* other);
+QDesktopServices* QDesktopServices_New2(QDesktopServices* other);
 void QDesktopServices_CopyAssign(QDesktopServices* self, QDesktopServices* other);
 void QDesktopServices_MoveAssign(QDesktopServices* self, QDesktopServices* other);
 bool QDesktopServices_OpenUrl(const QUrl* url);

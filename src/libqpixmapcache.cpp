@@ -6,11 +6,11 @@
 #include "libqpixmapcache.hpp"
 #include "libqpixmapcache.hxx"
 
-QPixmapCache* QPixmapCache_new(const QPixmapCache* other) {
+QPixmapCache* QPixmapCache_New(const QPixmapCache* other) {
     return new QPixmapCache(*other);
 }
 
-QPixmapCache* QPixmapCache_new2(QPixmapCache* other) {
+QPixmapCache* QPixmapCache_New2(QPixmapCache* other) {
     return new QPixmapCache(std::move(*other));
 }
 
@@ -69,11 +69,11 @@ void QPixmapCache_Delete(QPixmapCache* self) {
     delete self;
 }
 
-QPixmapCache__Key* QPixmapCache__Key_new() {
+QPixmapCache__Key* QPixmapCache__Key_New() {
     return new QPixmapCache::Key();
 }
 
-QPixmapCache__Key* QPixmapCache__Key_new2(const QPixmapCache__Key* other) {
+QPixmapCache__Key* QPixmapCache__Key_New2(const QPixmapCache__Key* other) {
     return new QPixmapCache::Key(*other);
 }
 

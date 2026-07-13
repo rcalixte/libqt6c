@@ -29,9 +29,9 @@ typedef struct QWidget QWidget;
 typedef struct QWidgetAction QWidgetAction;
 #endif
 
-KSelectAction* KSelectAction_new(QObject* parent);
-KSelectAction* KSelectAction_new2(const libqt_string text, QObject* parent);
-KSelectAction* KSelectAction_new3(const QIcon* icon, const libqt_string text, QObject* parent);
+KSelectAction* KSelectAction_New(QObject* parent);
+KSelectAction* KSelectAction_New2(const libqt_string text, QObject* parent);
+KSelectAction* KSelectAction_New3(const QIcon* icon, const libqt_string text, QObject* parent);
 QMetaObject* KSelectAction_MetaObject(const KSelectAction* self);
 void* KSelectAction_Metacast(KSelectAction* self, const char* param1);
 int KSelectAction_Metacall(KSelectAction* self, int param1, int param2, void** param3);

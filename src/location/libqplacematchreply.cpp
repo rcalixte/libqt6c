@@ -14,11 +14,11 @@
 #include "libqplacematchreply.hpp"
 #include "libqplacematchreply.hxx"
 
-QPlaceMatchReply* QPlaceMatchReply_new() {
+QPlaceMatchReply* QPlaceMatchReply_New() {
     return new VirtualQPlaceMatchReply();
 }
 
-QPlaceMatchReply* QPlaceMatchReply_new2(QObject* parent) {
+QPlaceMatchReply* QPlaceMatchReply_New2(QObject* parent) {
     return new VirtualQPlaceMatchReply(parent);
 }
 

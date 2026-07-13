@@ -8,11 +8,11 @@
 #include "libqplacesearchrequest.hpp"
 #include "libqplacesearchrequest.hxx"
 
-QPlaceSearchRequest* QPlaceSearchRequest_new() {
+QPlaceSearchRequest* QPlaceSearchRequest_New() {
     return new QPlaceSearchRequest();
 }
 
-QPlaceSearchRequest* QPlaceSearchRequest_new2(const QPlaceSearchRequest* other) {
+QPlaceSearchRequest* QPlaceSearchRequest_New2(const QPlaceSearchRequest* other) {
     return new QPlaceSearchRequest(*other);
 }
 

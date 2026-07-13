@@ -3,11 +3,11 @@
 #include "libkserviceaction.h"
 
 KServiceAction* k_serviceaction_new() {
-    return KServiceAction_new();
+    return KServiceAction_New();
 }
 
 KServiceAction* k_serviceaction_new2(void* other) {
-    return KServiceAction_new2((KServiceAction*)other);
+    return KServiceAction_New2((KServiceAction*)other);
 }
 
 void k_serviceaction_operator_assign(void* self, void* other) {

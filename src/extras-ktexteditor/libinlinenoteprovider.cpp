@@ -15,7 +15,7 @@
 #include "libinlinenoteprovider.hpp"
 #include "libinlinenoteprovider.hxx"
 
-KTextEditor__InlineNoteProvider* KTextEditor__InlineNoteProvider_new() {
+KTextEditor__InlineNoteProvider* KTextEditor__InlineNoteProvider_New() {
     return new VirtualKTextEditorInlineNoteProvider();
 }
 

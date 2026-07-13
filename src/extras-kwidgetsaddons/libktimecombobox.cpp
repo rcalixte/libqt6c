@@ -42,11 +42,11 @@
 #include "libktimecombobox.hpp"
 #include "libktimecombobox.hxx"
 
-KTimeComboBox* KTimeComboBox_new(QWidget* parent) {
+KTimeComboBox* KTimeComboBox_New(QWidget* parent) {
     return new VirtualKTimeComboBox(parent);
 }
 
-KTimeComboBox* KTimeComboBox_new2() {
+KTimeComboBox* KTimeComboBox_New2() {
     return new VirtualKTimeComboBox();
 }
 

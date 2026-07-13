@@ -27,10 +27,10 @@ typedef struct QSaveFile QSaveFile;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QSaveFile* QSaveFile_new(const libqt_string name);
-QSaveFile* QSaveFile_new2();
-QSaveFile* QSaveFile_new3(const libqt_string name, QObject* parent);
-QSaveFile* QSaveFile_new4(QObject* parent);
+QSaveFile* QSaveFile_New(const libqt_string name);
+QSaveFile* QSaveFile_New2();
+QSaveFile* QSaveFile_New3(const libqt_string name, QObject* parent);
+QSaveFile* QSaveFile_New4(QObject* parent);
 QMetaObject* QSaveFile_MetaObject(const QSaveFile* self);
 void* QSaveFile_Metacast(QSaveFile* self, const char* param1);
 int QSaveFile_Metacall(QSaveFile* self, int param1, int param2, void** param3);

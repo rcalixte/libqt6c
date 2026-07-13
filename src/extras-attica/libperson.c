@@ -4,11 +4,11 @@
 #include "libperson.h"
 
 Attica__Person* k_attica__person_new() {
-    return Attica__Person_new();
+    return Attica__Person_New();
 }
 
 Attica__Person* k_attica__person_new2(void* other) {
-    return Attica__Person_new2((Attica__Person*)other);
+    return Attica__Person_New2((Attica__Person*)other);
 }
 
 void k_attica__person_operator_assign(void* self, void* other) {

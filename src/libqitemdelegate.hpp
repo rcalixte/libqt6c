@@ -39,8 +39,8 @@ typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
 
-QItemDelegate* QItemDelegate_new();
-QItemDelegate* QItemDelegate_new2(QObject* parent);
+QItemDelegate* QItemDelegate_New();
+QItemDelegate* QItemDelegate_New2(QObject* parent);
 QMetaObject* QItemDelegate_MetaObject(const QItemDelegate* self);
 void* QItemDelegate_Metacast(QItemDelegate* self, const char* param1);
 int QItemDelegate_Metacall(QItemDelegate* self, int param1, int param2, void** param3);

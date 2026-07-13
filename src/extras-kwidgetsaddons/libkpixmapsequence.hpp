@@ -20,11 +20,11 @@ typedef struct QPixmap QPixmap;
 typedef struct QSize QSize;
 #endif
 
-KPixmapSequence* KPixmapSequence_new();
-KPixmapSequence* KPixmapSequence_new2(const KPixmapSequence* other);
-KPixmapSequence* KPixmapSequence_new3(const QPixmap* pixmap);
-KPixmapSequence* KPixmapSequence_new4(const libqt_string fullPath, int size);
-KPixmapSequence* KPixmapSequence_new5(const QPixmap* pixmap, const QSize* frameSize);
+KPixmapSequence* KPixmapSequence_New();
+KPixmapSequence* KPixmapSequence_New2(const KPixmapSequence* other);
+KPixmapSequence* KPixmapSequence_New3(const QPixmap* pixmap);
+KPixmapSequence* KPixmapSequence_New4(const libqt_string fullPath, int size);
+KPixmapSequence* KPixmapSequence_New5(const QPixmap* pixmap, const QSize* frameSize);
 void KPixmapSequence_OperatorAssign(KPixmapSequence* self, const KPixmapSequence* other);
 bool KPixmapSequence_IsValid(const KPixmapSequence* self);
 bool KPixmapSequence_IsEmpty(const KPixmapSequence* self);

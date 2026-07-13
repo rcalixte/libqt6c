@@ -25,8 +25,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KDirWatch* KDirWatch_new();
-KDirWatch* KDirWatch_new2(QObject* parent);
+KDirWatch* KDirWatch_New();
+KDirWatch* KDirWatch_New2(QObject* parent);
 QMetaObject* KDirWatch_MetaObject(const KDirWatch* self);
 void* KDirWatch_Metacast(KDirWatch* self, const char* param1);
 int KDirWatch_Metacall(KDirWatch* self, int param1, int param2, void** param3);

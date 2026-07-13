@@ -2,11 +2,11 @@
 #include "libunicodeemoticon.h"
 
 TextEmoticonsCore__UnicodeEmoticon* k_textemoticonscore__unicodeemoticon_new() {
-    return TextEmoticonsCore__UnicodeEmoticon_new();
+    return TextEmoticonsCore__UnicodeEmoticon_New();
 }
 
 TextEmoticonsCore__UnicodeEmoticon* k_textemoticonscore__unicodeemoticon_new2(void* param1) {
-    return TextEmoticonsCore__UnicodeEmoticon_new2((TextEmoticonsCore__UnicodeEmoticon*)param1);
+    return TextEmoticonsCore__UnicodeEmoticon_New2((TextEmoticonsCore__UnicodeEmoticon*)param1);
 }
 
 const char* k_textemoticonscore__unicodeemoticon_identifier(void* self) {

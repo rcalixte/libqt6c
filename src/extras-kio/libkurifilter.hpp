@@ -22,8 +22,8 @@ typedef struct QChar QChar;
 typedef struct QUrl QUrl;
 #endif
 
-KUriFilterSearchProvider* KUriFilterSearchProvider_new();
-KUriFilterSearchProvider* KUriFilterSearchProvider_new2(const KUriFilterSearchProvider* param1);
+KUriFilterSearchProvider* KUriFilterSearchProvider_New();
+KUriFilterSearchProvider* KUriFilterSearchProvider_New2(const KUriFilterSearchProvider* param1);
 libqt_string KUriFilterSearchProvider_DesktopEntryName(const KUriFilterSearchProvider* self);
 libqt_string KUriFilterSearchProvider_Name(const KUriFilterSearchProvider* self);
 libqt_string KUriFilterSearchProvider_IconName(const KUriFilterSearchProvider* self);
@@ -46,10 +46,10 @@ void KUriFilterSearchProvider_OnSetName(KUriFilterSearchProvider* self, intptr_t
 void KUriFilterSearchProvider_SuperSetName(KUriFilterSearchProvider* self, const libqt_string name);
 void KUriFilterSearchProvider_Delete(KUriFilterSearchProvider* self);
 
-KUriFilterData* KUriFilterData_new();
-KUriFilterData* KUriFilterData_new2(const QUrl* url);
-KUriFilterData* KUriFilterData_new3(const libqt_string url);
-KUriFilterData* KUriFilterData_new4(const KUriFilterData* other);
+KUriFilterData* KUriFilterData_New();
+KUriFilterData* KUriFilterData_New2(const QUrl* url);
+KUriFilterData* KUriFilterData_New3(const libqt_string url);
+KUriFilterData* KUriFilterData_New4(const KUriFilterData* other);
 QUrl* KUriFilterData_Uri(const KUriFilterData* self);
 libqt_string KUriFilterData_ErrorMsg(const KUriFilterData* self);
 int KUriFilterData_UriType(const KUriFilterData* self);

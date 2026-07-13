@@ -6,11 +6,11 @@
 #include "libkprotocolmanager.hpp"
 #include "libkprotocolmanager.hxx"
 
-KProtocolManager* KProtocolManager_new(const KProtocolManager* other) {
+KProtocolManager* KProtocolManager_New(const KProtocolManager* other) {
     return new KProtocolManager(*other);
 }
 
-KProtocolManager* KProtocolManager_new2(KProtocolManager* other) {
+KProtocolManager* KProtocolManager_New2(KProtocolManager* other) {
     return new KProtocolManager(std::move(*other));
 }
 

@@ -2,11 +2,11 @@
 #include "libqwebsocketcorsauthenticator.h"
 
 QWebSocketCorsAuthenticator* q_websocketcorsauthenticator_new(const char* origin) {
-    return QWebSocketCorsAuthenticator_new(qstring(origin));
+    return QWebSocketCorsAuthenticator_New(qstring(origin));
 }
 
 QWebSocketCorsAuthenticator* q_websocketcorsauthenticator_new2(void* other) {
-    return QWebSocketCorsAuthenticator_new2((QWebSocketCorsAuthenticator*)other);
+    return QWebSocketCorsAuthenticator_New2((QWebSocketCorsAuthenticator*)other);
 }
 
 void q_websocketcorsauthenticator_swap(void* self, void* other) {

@@ -20,15 +20,15 @@
 #include "libkpagedialog.h"
 
 KPageDialog* k_pagedialog_new(void* parent) {
-    return KPageDialog_new((QWidget*)parent);
+    return KPageDialog_New((QWidget*)parent);
 }
 
 KPageDialog* k_pagedialog_new2() {
-    return KPageDialog_new2();
+    return KPageDialog_New2();
 }
 
 KPageDialog* k_pagedialog_new3(void* parent, int32_t flags) {
-    return KPageDialog_new3((QWidget*)parent, flags);
+    return KPageDialog_New3((QWidget*)parent, flags);
 }
 
 const QMetaObject* k_pagedialog_meta_object(void* self) {

@@ -5,19 +5,19 @@
 #include "libkconfiggroup.h"
 
 KConfigGroup* k_configgroup_new() {
-    return KConfigGroup_new();
+    return KConfigGroup_New();
 }
 
 KConfigGroup* k_configgroup_new2(void* master, const char* group) {
-    return KConfigGroup_new2((KConfigBase*)master, qstring(group));
+    return KConfigGroup_New2((KConfigBase*)master, qstring(group));
 }
 
 KConfigGroup* k_configgroup_new3(void* master, const char* group) {
-    return KConfigGroup_new3((KConfigBase*)master, qstring(group));
+    return KConfigGroup_New3((KConfigBase*)master, qstring(group));
 }
 
 KConfigGroup* k_configgroup_new4(void* param1) {
-    return KConfigGroup_new4((KConfigGroup*)param1);
+    return KConfigGroup_New4((KConfigGroup*)param1);
 }
 
 void k_configgroup_operator_assign(void* self, void* param1) {

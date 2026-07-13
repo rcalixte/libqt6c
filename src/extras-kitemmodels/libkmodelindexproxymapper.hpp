@@ -27,8 +27,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KModelIndexProxyMapper* KModelIndexProxyMapper_new(const QAbstractItemModel* leftModel, const QAbstractItemModel* rightModel);
-KModelIndexProxyMapper* KModelIndexProxyMapper_new2(const QAbstractItemModel* leftModel, const QAbstractItemModel* rightModel, QObject* parent);
+KModelIndexProxyMapper* KModelIndexProxyMapper_New(const QAbstractItemModel* leftModel, const QAbstractItemModel* rightModel);
+KModelIndexProxyMapper* KModelIndexProxyMapper_New2(const QAbstractItemModel* leftModel, const QAbstractItemModel* rightModel, QObject* parent);
 QMetaObject* KModelIndexProxyMapper_MetaObject(const KModelIndexProxyMapper* self);
 void* KModelIndexProxyMapper_Metacast(KModelIndexProxyMapper* self, const char* param1);
 int KModelIndexProxyMapper_Metacall(KModelIndexProxyMapper* self, int param1, int param2, void** param3);

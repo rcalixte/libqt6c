@@ -9,11 +9,11 @@
 #include "libqtexttospeech.h"
 
 QTextToSpeech* q_texttospeech_new() {
-    return QTextToSpeech_new();
+    return QTextToSpeech_New();
 }
 
 QTextToSpeech* q_texttospeech_new2(const char* engine) {
-    return QTextToSpeech_new2(qstring(engine));
+    return QTextToSpeech_New2(qstring(engine));
 }
 
 QTextToSpeech* q_texttospeech_new3(const char* engine, libqt_map /* of const char* to QVariant* */ params) {
@@ -40,18 +40,18 @@ QTextToSpeech* q_texttospeech_new3(const char* engine, libqt_map /* of const cha
         params_vdest[i] = params_varr[i];
     }
 
-    QTextToSpeech* _out = QTextToSpeech_new3(qstring(engine), params_ret);
+    QTextToSpeech* _out = QTextToSpeech_New3(qstring(engine), params_ret);
     free(params_ret.keys);
     free(params_ret.values);
     return _out;
 }
 
 QTextToSpeech* q_texttospeech_new4(void* parent) {
-    return QTextToSpeech_new4((QObject*)parent);
+    return QTextToSpeech_New4((QObject*)parent);
 }
 
 QTextToSpeech* q_texttospeech_new5(const char* engine, void* parent) {
-    return QTextToSpeech_new5(qstring(engine), (QObject*)parent);
+    return QTextToSpeech_New5(qstring(engine), (QObject*)parent);
 }
 
 QTextToSpeech* q_texttospeech_new6(const char* engine, libqt_map /* of const char* to QVariant* */ params, void* parent) {
@@ -78,7 +78,7 @@ QTextToSpeech* q_texttospeech_new6(const char* engine, libqt_map /* of const cha
         params_vdest[i] = params_varr[i];
     }
 
-    QTextToSpeech* _out = QTextToSpeech_new6(qstring(engine), params_ret, (QObject*)parent);
+    QTextToSpeech* _out = QTextToSpeech_New6(qstring(engine), params_ret, (QObject*)parent);
     free(params_ret.keys);
     free(params_ret.values);
     return _out;

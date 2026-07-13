@@ -19,11 +19,11 @@
 #include "libprovider.hpp"
 #include "libprovider.hxx"
 
-Attica__Provider* Attica__Provider_new() {
+Attica__Provider* Attica__Provider_New() {
     return new Attica::Provider();
 }
 
-Attica__Provider* Attica__Provider_new2(const Attica__Provider* other) {
+Attica__Provider* Attica__Provider_New2(const Attica__Provider* other) {
     return new Attica::Provider(*other);
 }
 

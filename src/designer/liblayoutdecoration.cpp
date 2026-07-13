@@ -10,7 +10,7 @@
 #include "liblayoutdecoration.hpp"
 #include "liblayoutdecoration.hxx"
 
-QDesignerLayoutDecorationExtension* QDesignerLayoutDecorationExtension_new() {
+QDesignerLayoutDecorationExtension* QDesignerLayoutDecorationExtension_New() {
     return new VirtualQDesignerLayoutDecorationExtension();
 }
 

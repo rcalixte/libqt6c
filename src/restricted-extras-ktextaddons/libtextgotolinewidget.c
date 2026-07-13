@@ -14,11 +14,11 @@
 #include "libtextgotolinewidget.h"
 
 TextCustomEditor__TextGoToLineWidget* k_textcustomeditor__textgotolinewidget_new(void* parent) {
-    return TextCustomEditor__TextGoToLineWidget_new((QWidget*)parent);
+    return TextCustomEditor__TextGoToLineWidget_New((QWidget*)parent);
 }
 
 TextCustomEditor__TextGoToLineWidget* k_textcustomeditor__textgotolinewidget_new2() {
-    return TextCustomEditor__TextGoToLineWidget_new2();
+    return TextCustomEditor__TextGoToLineWidget_New2();
 }
 
 const QMetaObject* k_textcustomeditor__textgotolinewidget_meta_object(void* self) {

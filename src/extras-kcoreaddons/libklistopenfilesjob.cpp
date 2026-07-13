@@ -13,7 +13,7 @@
 #include "libklistopenfilesjob.hpp"
 #include "libklistopenfilesjob.hxx"
 
-KListOpenFilesJob* KListOpenFilesJob_new(const libqt_string path) {
+KListOpenFilesJob* KListOpenFilesJob_New(const libqt_string path) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     return new VirtualKListOpenFilesJob(path_QString);
 }

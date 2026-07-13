@@ -53,9 +53,9 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KFontRequester* KFontRequester_new(QWidget* parent);
-KFontRequester* KFontRequester_new2();
-KFontRequester* KFontRequester_new3(QWidget* parent, bool onlyFixed);
+KFontRequester* KFontRequester_New(QWidget* parent);
+KFontRequester* KFontRequester_New2();
+KFontRequester* KFontRequester_New3(QWidget* parent, bool onlyFixed);
 QMetaObject* KFontRequester_MetaObject(const KFontRequester* self);
 void* KFontRequester_Metacast(KFontRequester* self, const char* param1);
 int KFontRequester_Metacall(KFontRequester* self, int param1, int param2, void** param3);

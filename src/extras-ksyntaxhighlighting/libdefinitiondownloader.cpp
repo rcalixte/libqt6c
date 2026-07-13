@@ -11,11 +11,11 @@
 #include "libdefinitiondownloader.hpp"
 #include "libdefinitiondownloader.hxx"
 
-KSyntaxHighlighting__DefinitionDownloader* KSyntaxHighlighting__DefinitionDownloader_new(KSyntaxHighlighting__Repository* repo) {
+KSyntaxHighlighting__DefinitionDownloader* KSyntaxHighlighting__DefinitionDownloader_New(KSyntaxHighlighting__Repository* repo) {
     return new VirtualKSyntaxHighlightingDefinitionDownloader(repo);
 }
 
-KSyntaxHighlighting__DefinitionDownloader* KSyntaxHighlighting__DefinitionDownloader_new2(KSyntaxHighlighting__Repository* repo, QObject* parent) {
+KSyntaxHighlighting__DefinitionDownloader* KSyntaxHighlighting__DefinitionDownloader_New2(KSyntaxHighlighting__Repository* repo, QObject* parent) {
     return new VirtualKSyntaxHighlightingDefinitionDownloader(repo, parent);
 }
 

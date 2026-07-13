@@ -5,11 +5,11 @@
 #include "libatticautils.hpp"
 #include "libatticautils.hxx"
 
-Attica__Utils* Attica__Utils_new(const Attica__Utils* other) {
+Attica__Utils* Attica__Utils_New(const Attica__Utils* other) {
     return new Attica::Utils(*other);
 }
 
-Attica__Utils* Attica__Utils_new2(Attica__Utils* other) {
+Attica__Utils* Attica__Utils_New2(Attica__Utils* other) {
     return new Attica::Utils(std::move(*other));
 }
 

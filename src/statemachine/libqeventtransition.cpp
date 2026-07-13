@@ -12,19 +12,19 @@
 #include "libqeventtransition.hpp"
 #include "libqeventtransition.hxx"
 
-QEventTransition* QEventTransition_new() {
+QEventTransition* QEventTransition_New() {
     return new VirtualQEventTransition();
 }
 
-QEventTransition* QEventTransition_new2(QObject* object, int type) {
+QEventTransition* QEventTransition_New2(QObject* object, int type) {
     return new VirtualQEventTransition(object, static_cast<QEvent::Type>(type));
 }
 
-QEventTransition* QEventTransition_new3(QState* sourceState) {
+QEventTransition* QEventTransition_New3(QState* sourceState) {
     return new VirtualQEventTransition(sourceState);
 }
 
-QEventTransition* QEventTransition_new4(QObject* object, int type, QState* sourceState) {
+QEventTransition* QEventTransition_New4(QObject* object, int type, QState* sourceState) {
     return new VirtualQEventTransition(object, static_cast<QEvent::Type>(type), sourceState);
 }
 

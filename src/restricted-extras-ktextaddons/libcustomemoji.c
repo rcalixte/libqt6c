@@ -2,11 +2,11 @@
 #include "libcustomemoji.h"
 
 TextEmoticonsCore__CustomEmoji* k_textemoticonscore__customemoji_new() {
-    return TextEmoticonsCore__CustomEmoji_new();
+    return TextEmoticonsCore__CustomEmoji_New();
 }
 
 TextEmoticonsCore__CustomEmoji* k_textemoticonscore__customemoji_new2(void* param1) {
-    return TextEmoticonsCore__CustomEmoji_new2((TextEmoticonsCore__CustomEmoji*)param1);
+    return TextEmoticonsCore__CustomEmoji_New2((TextEmoticonsCore__CustomEmoji*)param1);
 }
 
 const char* k_textemoticonscore__customemoji_identifier(void* self) {

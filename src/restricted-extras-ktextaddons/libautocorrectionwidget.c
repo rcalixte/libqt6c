@@ -15,11 +15,11 @@
 #include "libautocorrectionwidget.h"
 
 TextAutoCorrectionWidgets__AutoCorrectionWidget* k_textautocorrectionwidgets__autocorrectionwidget_new(void* parent) {
-    return TextAutoCorrectionWidgets__AutoCorrectionWidget_new((QWidget*)parent);
+    return TextAutoCorrectionWidgets__AutoCorrectionWidget_New((QWidget*)parent);
 }
 
 TextAutoCorrectionWidgets__AutoCorrectionWidget* k_textautocorrectionwidgets__autocorrectionwidget_new2() {
-    return TextAutoCorrectionWidgets__AutoCorrectionWidget_new2();
+    return TextAutoCorrectionWidgets__AutoCorrectionWidget_New2();
 }
 
 const QMetaObject* k_textautocorrectionwidgets__autocorrectionwidget_meta_object(void* self) {

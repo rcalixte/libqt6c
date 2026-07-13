@@ -18,8 +18,8 @@ extern "C" {
 typedef struct QWebSocketHandshakeOptions QWebSocketHandshakeOptions;
 #endif
 
-QWebSocketHandshakeOptions* QWebSocketHandshakeOptions_new();
-QWebSocketHandshakeOptions* QWebSocketHandshakeOptions_new2(const QWebSocketHandshakeOptions* other);
+QWebSocketHandshakeOptions* QWebSocketHandshakeOptions_New();
+QWebSocketHandshakeOptions* QWebSocketHandshakeOptions_New2(const QWebSocketHandshakeOptions* other);
 void QWebSocketHandshakeOptions_OperatorAssign(QWebSocketHandshakeOptions* self, const QWebSocketHandshakeOptions* other);
 void QWebSocketHandshakeOptions_Swap(QWebSocketHandshakeOptions* self, QWebSocketHandshakeOptions* other);
 libqt_list /* of libqt_string */ QWebSocketHandshakeOptions_Subprotocols(const QWebSocketHandshakeOptions* self);

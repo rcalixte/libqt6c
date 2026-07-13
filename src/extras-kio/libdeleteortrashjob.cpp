@@ -14,7 +14,7 @@
 #include "libdeleteortrashjob.hpp"
 #include "libdeleteortrashjob.hxx"
 
-KIO__DeleteOrTrashJob* KIO__DeleteOrTrashJob_new(const libqt_list /* of QUrl* */ urls, int deletionType, int confirm, QObject* parent) {
+KIO__DeleteOrTrashJob* KIO__DeleteOrTrashJob_New(const libqt_list /* of QUrl* */ urls, int deletionType, int confirm, QObject* parent) {
     QList<QUrl> urls_QList;
     urls_QList.reserve(urls.len);
     QUrl** urls_arr = static_cast<QUrl**>(urls.data.ptr);

@@ -3,7 +3,7 @@
 #include "libkmessageboxdontaskagaininterface.h"
 
 KMessageBoxDontAskAgainInterface* k_messageboxdontaskagaininterface_new() {
-    return KMessageBoxDontAskAgainInterface_new();
+    return KMessageBoxDontAskAgainInterface_New();
 }
 
 bool k_messageboxdontaskagaininterface_should_be_shown_two_actions(void* self, const char* dontShowAgainName, int32_t* result) {

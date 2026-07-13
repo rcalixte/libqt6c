@@ -27,12 +27,12 @@ typedef struct QVariant QVariant;
 typedef struct QVoice QVoice;
 #endif
 
-QTextToSpeech* QTextToSpeech_new();
-QTextToSpeech* QTextToSpeech_new2(const libqt_string engine);
-QTextToSpeech* QTextToSpeech_new3(const libqt_string engine, const libqt_map /* of libqt_string to QVariant* */ params);
-QTextToSpeech* QTextToSpeech_new4(QObject* parent);
-QTextToSpeech* QTextToSpeech_new5(const libqt_string engine, QObject* parent);
-QTextToSpeech* QTextToSpeech_new6(const libqt_string engine, const libqt_map /* of libqt_string to QVariant* */ params, QObject* parent);
+QTextToSpeech* QTextToSpeech_New();
+QTextToSpeech* QTextToSpeech_New2(const libqt_string engine);
+QTextToSpeech* QTextToSpeech_New3(const libqt_string engine, const libqt_map /* of libqt_string to QVariant* */ params);
+QTextToSpeech* QTextToSpeech_New4(QObject* parent);
+QTextToSpeech* QTextToSpeech_New5(const libqt_string engine, QObject* parent);
+QTextToSpeech* QTextToSpeech_New6(const libqt_string engine, const libqt_map /* of libqt_string to QVariant* */ params, QObject* parent);
 QMetaObject* QTextToSpeech_MetaObject(const QTextToSpeech* self);
 void* QTextToSpeech_Metacast(QTextToSpeech* self, const char* param1);
 int QTextToSpeech_Metacall(QTextToSpeech* self, int param1, int param2, void** param3);

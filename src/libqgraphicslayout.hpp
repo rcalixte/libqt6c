@@ -23,8 +23,8 @@ typedef struct QRectF QRectF;
 typedef struct QSizeF QSizeF;
 #endif
 
-QGraphicsLayout* QGraphicsLayout_new();
-QGraphicsLayout* QGraphicsLayout_new2(QGraphicsLayoutItem* parent);
+QGraphicsLayout* QGraphicsLayout_New();
+QGraphicsLayout* QGraphicsLayout_New2(QGraphicsLayoutItem* parent);
 void QGraphicsLayout_SetContentsMargins(QGraphicsLayout* self, double left, double top, double right, double bottom);
 void QGraphicsLayout_GetContentsMargins(const QGraphicsLayout* self, double* left, double* top, double* right, double* bottom);
 void QGraphicsLayout_Activate(QGraphicsLayout* self);

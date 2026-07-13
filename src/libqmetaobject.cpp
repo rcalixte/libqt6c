@@ -15,19 +15,19 @@
 #include "libqmetaobject.hpp"
 #include "libqmetaobject.hxx"
 
-QMetaMethod* QMetaMethod_new(const QMetaMethod* other) {
+QMetaMethod* QMetaMethod_New(const QMetaMethod* other) {
     return new QMetaMethod(*other);
 }
 
-QMetaMethod* QMetaMethod_new2(QMetaMethod* other) {
+QMetaMethod* QMetaMethod_New2(QMetaMethod* other) {
     return new QMetaMethod(std::move(*other));
 }
 
-QMetaMethod* QMetaMethod_new3() {
+QMetaMethod* QMetaMethod_New3() {
     return new QMetaMethod();
 }
 
-QMetaMethod* QMetaMethod_new4(const QMetaMethod* param1) {
+QMetaMethod* QMetaMethod_New4(const QMetaMethod* param1) {
     return new QMetaMethod(*param1);
 }
 
@@ -426,19 +426,19 @@ void QMetaMethod_Delete(QMetaMethod* self) {
     delete self;
 }
 
-QMetaEnum* QMetaEnum_new(const QMetaEnum* other) {
+QMetaEnum* QMetaEnum_New(const QMetaEnum* other) {
     return new QMetaEnum(*other);
 }
 
-QMetaEnum* QMetaEnum_new2(QMetaEnum* other) {
+QMetaEnum* QMetaEnum_New2(QMetaEnum* other) {
     return new QMetaEnum(std::move(*other));
 }
 
-QMetaEnum* QMetaEnum_new3() {
+QMetaEnum* QMetaEnum_New3() {
     return new QMetaEnum();
 }
 
-QMetaEnum* QMetaEnum_new4(const QMetaEnum* param1) {
+QMetaEnum* QMetaEnum_New4(const QMetaEnum* param1) {
     return new QMetaEnum(*param1);
 }
 
@@ -527,15 +527,15 @@ void QMetaEnum_Delete(QMetaEnum* self) {
     delete self;
 }
 
-QMetaProperty* QMetaProperty_new(const QMetaProperty* other) {
+QMetaProperty* QMetaProperty_New(const QMetaProperty* other) {
     return new QMetaProperty(*other);
 }
 
-QMetaProperty* QMetaProperty_new2(QMetaProperty* other) {
+QMetaProperty* QMetaProperty_New2(QMetaProperty* other) {
     return new QMetaProperty(std::move(*other));
 }
 
-QMetaProperty* QMetaProperty_new3() {
+QMetaProperty* QMetaProperty_New3() {
     return new QMetaProperty();
 }
 
@@ -699,19 +699,19 @@ void QMetaProperty_Delete(QMetaProperty* self) {
     delete self;
 }
 
-QMetaClassInfo* QMetaClassInfo_new(const QMetaClassInfo* other) {
+QMetaClassInfo* QMetaClassInfo_New(const QMetaClassInfo* other) {
     return new QMetaClassInfo(*other);
 }
 
-QMetaClassInfo* QMetaClassInfo_new2(QMetaClassInfo* other) {
+QMetaClassInfo* QMetaClassInfo_New2(QMetaClassInfo* other) {
     return new QMetaClassInfo(std::move(*other));
 }
 
-QMetaClassInfo* QMetaClassInfo_new3() {
+QMetaClassInfo* QMetaClassInfo_New3() {
     return new QMetaClassInfo();
 }
 
-QMetaClassInfo* QMetaClassInfo_new4(const QMetaClassInfo* param1) {
+QMetaClassInfo* QMetaClassInfo_New4(const QMetaClassInfo* param1) {
     return new QMetaClassInfo(*param1);
 }
 

@@ -39,15 +39,15 @@
 #include "libqmdisubwindow.hpp"
 #include "libqmdisubwindow.hxx"
 
-QMdiSubWindow* QMdiSubWindow_new(QWidget* parent) {
+QMdiSubWindow* QMdiSubWindow_New(QWidget* parent) {
     return new VirtualQMdiSubWindow(parent);
 }
 
-QMdiSubWindow* QMdiSubWindow_new2() {
+QMdiSubWindow* QMdiSubWindow_New2() {
     return new VirtualQMdiSubWindow();
 }
 
-QMdiSubWindow* QMdiSubWindow_new3(QWidget* parent, int flags) {
+QMdiSubWindow* QMdiSubWindow_New3(QWidget* parent, int flags) {
     return new VirtualQMdiSubWindow(parent, static_cast<Qt::WindowFlags>(flags));
 }
 

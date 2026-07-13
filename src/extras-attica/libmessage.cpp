@@ -5,11 +5,11 @@
 #include "libmessage.hpp"
 #include "libmessage.hxx"
 
-Attica__Message* Attica__Message_new() {
+Attica__Message* Attica__Message_New() {
     return new Attica::Message();
 }
 
-Attica__Message* Attica__Message_new2(const Attica__Message* other) {
+Attica__Message* Attica__Message_New2(const Attica__Message* other) {
     return new Attica::Message(*other);
 }
 

@@ -9,19 +9,19 @@
 #include "libqwavedecoder.h"
 
 QWaveDecoder* q_wavedecoder_new(void* device) {
-    return QWaveDecoder_new((QIODevice*)device);
+    return QWaveDecoder_New((QIODevice*)device);
 }
 
 QWaveDecoder* q_wavedecoder_new2(void* device, void* format) {
-    return QWaveDecoder_new2((QIODevice*)device, (QAudioFormat*)format);
+    return QWaveDecoder_New2((QIODevice*)device, (QAudioFormat*)format);
 }
 
 QWaveDecoder* q_wavedecoder_new3(void* device, void* parent) {
-    return QWaveDecoder_new3((QIODevice*)device, (QObject*)parent);
+    return QWaveDecoder_New3((QIODevice*)device, (QObject*)parent);
 }
 
 QWaveDecoder* q_wavedecoder_new4(void* device, void* format, void* parent) {
-    return QWaveDecoder_new4((QIODevice*)device, (QAudioFormat*)format, (QObject*)parent);
+    return QWaveDecoder_New4((QIODevice*)device, (QAudioFormat*)format, (QObject*)parent);
 }
 
 const QMetaObject* q_wavedecoder_meta_object(void* self) {

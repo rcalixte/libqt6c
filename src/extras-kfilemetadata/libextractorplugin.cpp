@@ -13,7 +13,7 @@
 #include "libextractorplugin.hpp"
 #include "libextractorplugin.hxx"
 
-KFileMetaData__ExtractorPlugin* KFileMetaData__ExtractorPlugin_new(QObject* parent) {
+KFileMetaData__ExtractorPlugin* KFileMetaData__ExtractorPlugin_New(QObject* parent) {
     return new VirtualKFileMetaDataExtractorPlugin(parent);
 }
 

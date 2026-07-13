@@ -38,19 +38,19 @@
 #include "libkpixmapsequencewidget.hpp"
 #include "libkpixmapsequencewidget.hxx"
 
-KPixmapSequenceWidget* KPixmapSequenceWidget_new(QWidget* parent) {
+KPixmapSequenceWidget* KPixmapSequenceWidget_New(QWidget* parent) {
     return new VirtualKPixmapSequenceWidget(parent);
 }
 
-KPixmapSequenceWidget* KPixmapSequenceWidget_new2() {
+KPixmapSequenceWidget* KPixmapSequenceWidget_New2() {
     return new VirtualKPixmapSequenceWidget();
 }
 
-KPixmapSequenceWidget* KPixmapSequenceWidget_new3(const KPixmapSequence* seq) {
+KPixmapSequenceWidget* KPixmapSequenceWidget_New3(const KPixmapSequence* seq) {
     return new VirtualKPixmapSequenceWidget(*seq);
 }
 
-KPixmapSequenceWidget* KPixmapSequenceWidget_new4(const KPixmapSequence* seq, QWidget* parent) {
+KPixmapSequenceWidget* KPixmapSequenceWidget_New4(const KPixmapSequence* seq, QWidget* parent) {
     return new VirtualKPixmapSequenceWidget(*seq, parent);
 }
 

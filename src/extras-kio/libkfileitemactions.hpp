@@ -29,8 +29,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KFileItemActions* KFileItemActions_new();
-KFileItemActions* KFileItemActions_new2(QObject* parent);
+KFileItemActions* KFileItemActions_New();
+KFileItemActions* KFileItemActions_New2(QObject* parent);
 QMetaObject* KFileItemActions_MetaObject(const KFileItemActions* self);
 void* KFileItemActions_Metacast(KFileItemActions* self, const char* param1);
 int KFileItemActions_Metacall(KFileItemActions* self, int param1, int param2, void** param3);

@@ -3,11 +3,11 @@
 #include "libqwebenginescript.h"
 
 QWebEngineScript* q_webenginescript_new() {
-    return QWebEngineScript_new();
+    return QWebEngineScript_New();
 }
 
 QWebEngineScript* q_webenginescript_new2(void* other) {
-    return QWebEngineScript_new2((QWebEngineScript*)other);
+    return QWebEngineScript_New2((QWebEngineScript*)other);
 }
 
 void q_webenginescript_operator_assign(void* self, void* other) {

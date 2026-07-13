@@ -52,9 +52,9 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KFontChooserDialog* KFontChooserDialog_new();
-KFontChooserDialog* KFontChooserDialog_new2(const int* flags);
-KFontChooserDialog* KFontChooserDialog_new3(const int* flags, QWidget* parent);
+KFontChooserDialog* KFontChooserDialog_New();
+KFontChooserDialog* KFontChooserDialog_New2(const int* flags);
+KFontChooserDialog* KFontChooserDialog_New3(const int* flags, QWidget* parent);
 QMetaObject* KFontChooserDialog_MetaObject(const KFontChooserDialog* self);
 void* KFontChooserDialog_Metacast(KFontChooserDialog* self, const char* param1);
 int KFontChooserDialog_Metacall(KFontChooserDialog* self, int param1, int param2, void** param3);

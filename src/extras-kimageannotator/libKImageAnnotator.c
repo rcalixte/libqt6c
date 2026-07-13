@@ -23,7 +23,7 @@ void k_imageannotator_load_translations() {
 }
 
 kImageAnnotator__KImageAnnotator* k_imageannotator__kimageannotator_new() {
-    return kImageAnnotator__KImageAnnotator_new();
+    return kImageAnnotator__KImageAnnotator_New();
 }
 
 const QMetaObject* k_imageannotator__kimageannotator_meta_object(void* self) {

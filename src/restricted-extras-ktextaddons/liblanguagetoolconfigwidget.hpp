@@ -53,8 +53,8 @@ typedef struct QWidget QWidget;
 typedef struct TextGrammarCheck__LanguageToolConfigWidget TextGrammarCheck__LanguageToolConfigWidget;
 #endif
 
-TextGrammarCheck__LanguageToolConfigWidget* TextGrammarCheck__LanguageToolConfigWidget_new(QWidget* parent);
-TextGrammarCheck__LanguageToolConfigWidget* TextGrammarCheck__LanguageToolConfigWidget_new2();
+TextGrammarCheck__LanguageToolConfigWidget* TextGrammarCheck__LanguageToolConfigWidget_New(QWidget* parent);
+TextGrammarCheck__LanguageToolConfigWidget* TextGrammarCheck__LanguageToolConfigWidget_New2();
 QMetaObject* TextGrammarCheck__LanguageToolConfigWidget_MetaObject(const TextGrammarCheck__LanguageToolConfigWidget* self);
 void* TextGrammarCheck__LanguageToolConfigWidget_Metacast(TextGrammarCheck__LanguageToolConfigWidget* self, const char* param1);
 int TextGrammarCheck__LanguageToolConfigWidget_Metacall(TextGrammarCheck__LanguageToolConfigWidget* self, int param1, int param2, void** param3);

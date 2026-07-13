@@ -36,10 +36,10 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QStateMachine* QStateMachine_new();
-QStateMachine* QStateMachine_new2(int childMode);
-QStateMachine* QStateMachine_new3(QObject* parent);
-QStateMachine* QStateMachine_new4(int childMode, QObject* parent);
+QStateMachine* QStateMachine_New();
+QStateMachine* QStateMachine_New2(int childMode);
+QStateMachine* QStateMachine_New3(QObject* parent);
+QStateMachine* QStateMachine_New4(int childMode, QObject* parent);
 QMetaObject* QStateMachine_MetaObject(const QStateMachine* self);
 void* QStateMachine_Metacast(QStateMachine* self, const char* param1);
 int QStateMachine_Metacall(QStateMachine* self, int param1, int param2, void** param3);
@@ -128,8 +128,8 @@ void QStateMachine_Connect_Started(QStateMachine* self, intptr_t slot);
 void QStateMachine_Connect_Stopped(QStateMachine* self, intptr_t slot);
 void QStateMachine_Delete(QStateMachine* self);
 
-QStateMachine__SignalEvent* QStateMachine__SignalEvent_new(QObject* sender, int signalIndex, const libqt_list /* of QVariant* */ arguments);
-QStateMachine__SignalEvent* QStateMachine__SignalEvent_new2(const QStateMachine__SignalEvent* param1);
+QStateMachine__SignalEvent* QStateMachine__SignalEvent_New(QObject* sender, int signalIndex, const libqt_list /* of QVariant* */ arguments);
+QStateMachine__SignalEvent* QStateMachine__SignalEvent_New2(const QStateMachine__SignalEvent* param1);
 QObject* QStateMachine__SignalEvent_Sender(const QStateMachine__SignalEvent* self);
 int QStateMachine__SignalEvent_SignalIndex(const QStateMachine__SignalEvent* self);
 libqt_list /* of QVariant* */ QStateMachine__SignalEvent_Arguments(const QStateMachine__SignalEvent* self);
@@ -141,8 +141,8 @@ void QStateMachine__SignalEvent_OnClone(const QStateMachine__SignalEvent* self, 
 QEvent* QStateMachine__SignalEvent_SuperClone(const QStateMachine__SignalEvent* self);
 void QStateMachine__SignalEvent_Delete(QStateMachine__SignalEvent* self);
 
-QStateMachine__WrappedEvent* QStateMachine__WrappedEvent_new(QObject* object, QEvent* event);
-QStateMachine__WrappedEvent* QStateMachine__WrappedEvent_new2(const QStateMachine__WrappedEvent* param1);
+QStateMachine__WrappedEvent* QStateMachine__WrappedEvent_New(QObject* object, QEvent* event);
+QStateMachine__WrappedEvent* QStateMachine__WrappedEvent_New2(const QStateMachine__WrappedEvent* param1);
 QObject* QStateMachine__WrappedEvent_Object(const QStateMachine__WrappedEvent* self);
 QEvent* QStateMachine__WrappedEvent_Event(const QStateMachine__WrappedEvent* self);
 void QStateMachine__WrappedEvent_SetAccepted(QStateMachine__WrappedEvent* self, bool accepted);

@@ -3,11 +3,11 @@
 #include "libqlibraryinfo.h"
 
 QLibraryInfo* q_libraryinfo_new(void* other) {
-    return QLibraryInfo_new((QLibraryInfo*)other);
+    return QLibraryInfo_New((QLibraryInfo*)other);
 }
 
 QLibraryInfo* q_libraryinfo_new2(void* other) {
-    return QLibraryInfo_new2((QLibraryInfo*)other);
+    return QLibraryInfo_New2((QLibraryInfo*)other);
 }
 
 void q_libraryinfo_copy_assign(void* self, void* other) {

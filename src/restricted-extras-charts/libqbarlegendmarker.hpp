@@ -28,8 +28,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QBarLegendMarker* QBarLegendMarker_new(QAbstractBarSeries* series, QBarSet* barset, QLegend* legend);
-QBarLegendMarker* QBarLegendMarker_new2(QAbstractBarSeries* series, QBarSet* barset, QLegend* legend, QObject* parent);
+QBarLegendMarker* QBarLegendMarker_New(QAbstractBarSeries* series, QBarSet* barset, QLegend* legend);
+QBarLegendMarker* QBarLegendMarker_New2(QAbstractBarSeries* series, QBarSet* barset, QLegend* legend, QObject* parent);
 QMetaObject* QBarLegendMarker_MetaObject(const QBarLegendMarker* self);
 void* QBarLegendMarker_Metacast(QBarLegendMarker* self, const char* param1);
 int QBarLegendMarker_Metacall(QBarLegendMarker* self, int param1, int param2, void** param3);

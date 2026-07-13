@@ -10,7 +10,7 @@
 #include "libkshellcompletion.h"
 
 KShellCompletion* k_shellcompletion_new() {
-    return KShellCompletion_new();
+    return KShellCompletion_New();
 }
 
 const QMetaObject* k_shellcompletion_meta_object(void* self) {

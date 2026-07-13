@@ -4,19 +4,19 @@
 #include "libsignonerror.hpp"
 #include "libsignonerror.hxx"
 
-SignOn__Error* SignOn__Error_new() {
+SignOn__Error* SignOn__Error_New() {
     return new SignOn::Error();
 }
 
-SignOn__Error* SignOn__Error_new2(const SignOn__Error* src) {
+SignOn__Error* SignOn__Error_New2(const SignOn__Error* src) {
     return new SignOn::Error(*src);
 }
 
-SignOn__Error* SignOn__Error_new3(int type) {
+SignOn__Error* SignOn__Error_New3(int type) {
     return new SignOn::Error(static_cast<int>(type));
 }
 
-SignOn__Error* SignOn__Error_new4(int type, const libqt_string message) {
+SignOn__Error* SignOn__Error_New4(int type, const libqt_string message) {
     QString message_QString = QString::fromUtf8(message.data, message.len);
     return new SignOn::Error(static_cast<int>(type), message_QString);
 }

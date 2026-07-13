@@ -17,11 +17,11 @@
 #include "libkpagewidget.h"
 
 KPageWidget* k_pagewidget_new(void* parent) {
-    return KPageWidget_new((QWidget*)parent);
+    return KPageWidget_New((QWidget*)parent);
 }
 
 KPageWidget* k_pagewidget_new2() {
-    return KPageWidget_new2();
+    return KPageWidget_New2();
 }
 
 const QMetaObject* k_pagewidget_meta_object(void* self) {

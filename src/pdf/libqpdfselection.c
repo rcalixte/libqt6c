@@ -3,7 +3,7 @@
 #include "libqpdfselection.h"
 
 QPdfSelection* q_pdfselection_new(void* other) {
-    return QPdfSelection_new((QPdfSelection*)other);
+    return QPdfSelection_New((QPdfSelection*)other);
 }
 
 void q_pdfselection_operator_assign(void* self, void* other) {

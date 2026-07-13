@@ -29,10 +29,10 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-KAutoSaveFile* KAutoSaveFile_new(const QUrl* filename);
-KAutoSaveFile* KAutoSaveFile_new2();
-KAutoSaveFile* KAutoSaveFile_new3(const QUrl* filename, QObject* parent);
-KAutoSaveFile* KAutoSaveFile_new4(QObject* parent);
+KAutoSaveFile* KAutoSaveFile_New(const QUrl* filename);
+KAutoSaveFile* KAutoSaveFile_New2();
+KAutoSaveFile* KAutoSaveFile_New3(const QUrl* filename, QObject* parent);
+KAutoSaveFile* KAutoSaveFile_New4(QObject* parent);
 QMetaObject* KAutoSaveFile_MetaObject(const KAutoSaveFile* self);
 void* KAutoSaveFile_Metacast(KAutoSaveFile* self, const char* param1);
 int KAutoSaveFile_Metacall(KAutoSaveFile* self, int param1, int param2, void** param3);

@@ -13,21 +13,21 @@
 #include "libqsavefile.hpp"
 #include "libqsavefile.hxx"
 
-QSaveFile* QSaveFile_new(const libqt_string name) {
+QSaveFile* QSaveFile_New(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQSaveFile(name_QString);
 }
 
-QSaveFile* QSaveFile_new2() {
+QSaveFile* QSaveFile_New2() {
     return new VirtualQSaveFile();
 }
 
-QSaveFile* QSaveFile_new3(const libqt_string name, QObject* parent) {
+QSaveFile* QSaveFile_New3(const libqt_string name, QObject* parent) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQSaveFile(name_QString, parent);
 }
 
-QSaveFile* QSaveFile_new4(QObject* parent) {
+QSaveFile* QSaveFile_New4(QObject* parent) {
     return new VirtualQSaveFile(parent);
 }
 

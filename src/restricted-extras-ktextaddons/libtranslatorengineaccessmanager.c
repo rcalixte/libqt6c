@@ -7,11 +7,11 @@
 #include "libtranslatorengineaccessmanager.h"
 
 TextTranslator__TranslatorEngineAccessManager* k_texttranslator__translatorengineaccessmanager_new() {
-    return TextTranslator__TranslatorEngineAccessManager_new();
+    return TextTranslator__TranslatorEngineAccessManager_New();
 }
 
 TextTranslator__TranslatorEngineAccessManager* k_texttranslator__translatorengineaccessmanager_new2(void* parent) {
-    return TextTranslator__TranslatorEngineAccessManager_new2((QObject*)parent);
+    return TextTranslator__TranslatorEngineAccessManager_New2((QObject*)parent);
 }
 
 const QMetaObject* k_texttranslator__translatorengineaccessmanager_meta_object(void* self) {

@@ -8,11 +8,11 @@
 #include "libqfinalstate.h"
 
 QFinalState* q_finalstate_new() {
-    return QFinalState_new();
+    return QFinalState_New();
 }
 
 QFinalState* q_finalstate_new2(void* parent) {
-    return QFinalState_new2((QState*)parent);
+    return QFinalState_New2((QState*)parent);
 }
 
 const QMetaObject* q_finalstate_meta_object(void* self) {

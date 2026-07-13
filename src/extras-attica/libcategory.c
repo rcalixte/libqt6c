@@ -2,11 +2,11 @@
 #include "libcategory.h"
 
 Attica__Category* k_attica__category_new() {
-    return Attica__Category_new();
+    return Attica__Category_New();
 }
 
 Attica__Category* k_attica__category_new2(void* other) {
-    return Attica__Category_new2((Attica__Category*)other);
+    return Attica__Category_New2((Attica__Category*)other);
 }
 
 void k_attica__category_operator_assign(void* self, void* other) {

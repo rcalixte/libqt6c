@@ -3,11 +3,11 @@
 #include "libkprotocolmanager.h"
 
 KProtocolManager* k_protocolmanager_new(void* other) {
-    return KProtocolManager_new((KProtocolManager*)other);
+    return KProtocolManager_New((KProtocolManager*)other);
 }
 
 KProtocolManager* k_protocolmanager_new2(void* other) {
-    return KProtocolManager_new2((KProtocolManager*)other);
+    return KProtocolManager_New2((KProtocolManager*)other);
 }
 
 void k_protocolmanager_copy_assign(void* self, void* other) {

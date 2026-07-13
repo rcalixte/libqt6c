@@ -14,11 +14,11 @@
 #include "libqscilexercss.hpp"
 #include "libqscilexercss.hxx"
 
-QsciLexerCSS* QsciLexerCSS_new() {
+QsciLexerCSS* QsciLexerCSS_New() {
     return new VirtualQsciLexerCSS();
 }
 
-QsciLexerCSS* QsciLexerCSS_new2(QObject* parent) {
+QsciLexerCSS* QsciLexerCSS_New2(QObject* parent) {
     return new VirtualQsciLexerCSS(parent);
 }
 

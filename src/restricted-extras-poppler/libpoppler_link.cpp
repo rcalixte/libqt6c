@@ -23,12 +23,12 @@
 #include "libpoppler_link.hpp"
 #include "libpoppler_link.hxx"
 
-Poppler__LinkDestination* Poppler__LinkDestination_new(const libqt_string description) {
+Poppler__LinkDestination* Poppler__LinkDestination_New(const libqt_string description) {
     QString description_QString = QString::fromUtf8(description.data, description.len);
     return new Poppler::LinkDestination(description_QString);
 }
 
-Poppler__LinkDestination* Poppler__LinkDestination_new2(const Poppler__LinkDestination* other) {
+Poppler__LinkDestination* Poppler__LinkDestination_New2(const Poppler__LinkDestination* other) {
     return new Poppler::LinkDestination(*other);
 }
 
@@ -104,7 +104,7 @@ void Poppler__LinkDestination_Delete(Poppler__LinkDestination* self) {
     delete self;
 }
 
-Poppler__Link* Poppler__Link_new(const QRectF* linkArea) {
+Poppler__Link* Poppler__Link_New(const QRectF* linkArea) {
     return new VirtualPopplerLink(*linkArea);
 }
 
@@ -152,7 +152,7 @@ void Poppler__Link_Delete(Poppler__Link* self) {
     delete self;
 }
 
-Poppler__LinkGoto* Poppler__LinkGoto_new(const QRectF* linkArea, const libqt_string extFileName, const Poppler__LinkDestination* destination) {
+Poppler__LinkGoto* Poppler__LinkGoto_New(const QRectF* linkArea, const libqt_string extFileName, const Poppler__LinkDestination* destination) {
     QString extFileName_QString = QString::fromUtf8(extFileName.data, extFileName.len);
     return new VirtualPopplerLinkGoto(*linkArea, extFileName_QString, *destination);
 }
@@ -204,7 +204,7 @@ void Poppler__LinkGoto_Delete(Poppler__LinkGoto* self) {
     delete self;
 }
 
-Poppler__LinkExecute* Poppler__LinkExecute_new(const QRectF* linkArea, const libqt_string file, const libqt_string params) {
+Poppler__LinkExecute* Poppler__LinkExecute_New(const QRectF* linkArea, const libqt_string file, const libqt_string params) {
     QString file_QString = QString::fromUtf8(file.data, file.len);
     QString params_QString = QString::fromUtf8(params.data, params.len);
     return new VirtualPopplerLinkExecute(*linkArea, file_QString, params_QString);
@@ -261,7 +261,7 @@ void Poppler__LinkExecute_Delete(Poppler__LinkExecute* self) {
     delete self;
 }
 
-Poppler__LinkBrowse* Poppler__LinkBrowse_new(const QRectF* linkArea, const libqt_string url) {
+Poppler__LinkBrowse* Poppler__LinkBrowse_New(const QRectF* linkArea, const libqt_string url) {
     QString url_QString = QString::fromUtf8(url.data, url.len);
     return new VirtualPopplerLinkBrowse(*linkArea, url_QString);
 }
@@ -305,7 +305,7 @@ void Poppler__LinkBrowse_Delete(Poppler__LinkBrowse* self) {
     delete self;
 }
 
-Poppler__LinkAction* Poppler__LinkAction_new(const QRectF* linkArea, int actionType) {
+Poppler__LinkAction* Poppler__LinkAction_New(const QRectF* linkArea, int actionType) {
     return new VirtualPopplerLinkAction(*linkArea, static_cast<Poppler::LinkAction::ActionType>(actionType));
 }
 
@@ -340,7 +340,7 @@ void Poppler__LinkAction_Delete(Poppler__LinkAction* self) {
     delete self;
 }
 
-Poppler__LinkSound* Poppler__LinkSound_new(const QRectF* linkArea, double volume, bool sync, bool repeat, bool mix, Poppler__SoundObject* sound) {
+Poppler__LinkSound* Poppler__LinkSound_New(const QRectF* linkArea, double volume, bool sync, bool repeat, bool mix, Poppler__SoundObject* sound) {
     return new VirtualPopplerLinkSound(*linkArea, static_cast<double>(volume), sync, repeat, mix, sound);
 }
 
@@ -423,7 +423,7 @@ void Poppler__LinkRendition_Delete(Poppler__LinkRendition* self) {
     delete self;
 }
 
-Poppler__LinkJavaScript* Poppler__LinkJavaScript_new(const QRectF* linkArea, const libqt_string js) {
+Poppler__LinkJavaScript* Poppler__LinkJavaScript_New(const QRectF* linkArea, const libqt_string js) {
     QString js_QString = QString::fromUtf8(js.data, js.len);
     return new VirtualPopplerLinkJavaScript(*linkArea, js_QString);
 }

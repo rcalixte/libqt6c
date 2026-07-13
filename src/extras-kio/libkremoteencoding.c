@@ -3,11 +3,11 @@
 #include "libkremoteencoding.h"
 
 KRemoteEncoding* k_remoteencoding_new() {
-    return KRemoteEncoding_new();
+    return KRemoteEncoding_New();
 }
 
 KRemoteEncoding* k_remoteencoding_new2(const char* name) {
-    return KRemoteEncoding_new2(name);
+    return KRemoteEncoding_New2(name);
 }
 
 const char* k_remoteencoding_decode(void* self, char* name) {

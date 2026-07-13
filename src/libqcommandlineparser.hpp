@@ -20,7 +20,7 @@ typedef struct QCommandLineParser QCommandLineParser;
 typedef struct QCoreApplication QCoreApplication;
 #endif
 
-QCommandLineParser* QCommandLineParser_new();
+QCommandLineParser* QCommandLineParser_New();
 void QCommandLineParser_SetSingleDashWordOptionMode(QCommandLineParser* self, int parsingMode);
 void QCommandLineParser_SetOptionsAfterPositionalArgumentsMode(QCommandLineParser* self, int mode);
 bool QCommandLineParser_AddOption(QCommandLineParser* self, const QCommandLineOption* commandLineOption);

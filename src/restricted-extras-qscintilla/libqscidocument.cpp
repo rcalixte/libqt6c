@@ -2,11 +2,11 @@
 #include "libqscidocument.hpp"
 #include "libqscidocument.hxx"
 
-QsciDocument* QsciDocument_new() {
+QsciDocument* QsciDocument_New() {
     return new QsciDocument();
 }
 
-QsciDocument* QsciDocument_new2(const QsciDocument* param1) {
+QsciDocument* QsciDocument_New2(const QsciDocument* param1) {
     return new QsciDocument(*param1);
 }
 

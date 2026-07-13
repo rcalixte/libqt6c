@@ -9,11 +9,11 @@
 #include "libktoolbarlabelaction.h"
 
 KToolBarLabelAction* k_toolbarlabelaction_new(const char* text, void* parent) {
-    return KToolBarLabelAction_new(qstring(text), (QObject*)parent);
+    return KToolBarLabelAction_New(qstring(text), (QObject*)parent);
 }
 
 KToolBarLabelAction* k_toolbarlabelaction_new2(void* buddy, const char* text, void* parent) {
-    return KToolBarLabelAction_new2((QAction*)buddy, qstring(text), (QObject*)parent);
+    return KToolBarLabelAction_New2((QAction*)buddy, qstring(text), (QObject*)parent);
 }
 
 const QMetaObject* k_toolbarlabelaction_meta_object(void* self) {

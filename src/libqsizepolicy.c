@@ -3,27 +3,27 @@
 #include "libqsizepolicy.h"
 
 QSizePolicy* q_sizepolicy_new(void* other) {
-    return QSizePolicy_new((QSizePolicy*)other);
+    return QSizePolicy_New((QSizePolicy*)other);
 }
 
 QSizePolicy* q_sizepolicy_new2(void* other) {
-    return QSizePolicy_new2((QSizePolicy*)other);
+    return QSizePolicy_New2((QSizePolicy*)other);
 }
 
 QSizePolicy* q_sizepolicy_new3() {
-    return QSizePolicy_new3();
+    return QSizePolicy_New3();
 }
 
 QSizePolicy* q_sizepolicy_new4(int32_t horizontal, int32_t vertical) {
-    return QSizePolicy_new4(horizontal, vertical);
+    return QSizePolicy_New4(horizontal, vertical);
 }
 
 QSizePolicy* q_sizepolicy_new5(void* param1) {
-    return QSizePolicy_new5((QSizePolicy*)param1);
+    return QSizePolicy_New5((QSizePolicy*)param1);
 }
 
 QSizePolicy* q_sizepolicy_new6(int32_t horizontal, int32_t vertical, int32_t type) {
-    return QSizePolicy_new6(horizontal, vertical, type);
+    return QSizePolicy_New6(horizontal, vertical, type);
 }
 
 void q_sizepolicy_copy_assign(void* self, void* other) {

@@ -42,20 +42,20 @@
 #include "libqmenu.hpp"
 #include "libqmenu.hxx"
 
-QMenu* QMenu_new(QWidget* parent) {
+QMenu* QMenu_New(QWidget* parent) {
     return new VirtualQMenu(parent);
 }
 
-QMenu* QMenu_new2() {
+QMenu* QMenu_New2() {
     return new VirtualQMenu();
 }
 
-QMenu* QMenu_new3(const libqt_string title) {
+QMenu* QMenu_New3(const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualQMenu(title_QString);
 }
 
-QMenu* QMenu_new4(const libqt_string title, QWidget* parent) {
+QMenu* QMenu_New4(const libqt_string title, QWidget* parent) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualQMenu(title_QString, parent);
 }

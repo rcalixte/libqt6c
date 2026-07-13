@@ -27,10 +27,10 @@ typedef struct QVideoFrameFormat QVideoFrameFormat;
 typedef struct QVideoFrameInput QVideoFrameInput;
 #endif
 
-QVideoFrameInput* QVideoFrameInput_new();
-QVideoFrameInput* QVideoFrameInput_new2(const QVideoFrameFormat* format);
-QVideoFrameInput* QVideoFrameInput_new3(QObject* parent);
-QVideoFrameInput* QVideoFrameInput_new4(const QVideoFrameFormat* format, QObject* parent);
+QVideoFrameInput* QVideoFrameInput_New();
+QVideoFrameInput* QVideoFrameInput_New2(const QVideoFrameFormat* format);
+QVideoFrameInput* QVideoFrameInput_New3(QObject* parent);
+QVideoFrameInput* QVideoFrameInput_New4(const QVideoFrameFormat* format, QObject* parent);
 QMetaObject* QVideoFrameInput_MetaObject(const QVideoFrameInput* self);
 void* QVideoFrameInput_Metacast(QVideoFrameInput* self, const char* param1);
 int QVideoFrameInput_Metacall(QVideoFrameInput* self, int param1, int param2, void** param3);

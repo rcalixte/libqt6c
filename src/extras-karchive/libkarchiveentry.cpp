@@ -6,7 +6,7 @@
 #include "libkarchiveentry.hpp"
 #include "libkarchiveentry.hxx"
 
-KArchiveEntry* KArchiveEntry_new(KArchive* archive, const libqt_string name, int access, const QDateTime* date, const libqt_string user, const libqt_string group, const libqt_string symlink) {
+KArchiveEntry* KArchiveEntry_New(KArchive* archive, const libqt_string name, int access, const QDateTime* date, const libqt_string user, const libqt_string group, const libqt_string symlink) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString user_QString = QString::fromUtf8(user.data, user.len);
     QString group_QString = QString::fromUtf8(group.data, group.len);

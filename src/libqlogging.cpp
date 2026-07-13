@@ -7,11 +7,11 @@
 #include "libqlogging.hpp"
 #include "libqlogging.hxx"
 
-QMessageLogContext* QMessageLogContext_new() {
+QMessageLogContext* QMessageLogContext_New() {
     return new QMessageLogContext();
 }
 
-QMessageLogContext* QMessageLogContext_new2(const char* fileName, int lineNumber, const char* functionName, const char* categoryName) {
+QMessageLogContext* QMessageLogContext_New2(const char* fileName, int lineNumber, const char* functionName, const char* categoryName) {
     return new QMessageLogContext(fileName, static_cast<int>(lineNumber), functionName, categoryName);
 }
 
@@ -59,15 +59,15 @@ void QMessageLogContext_Delete(QMessageLogContext* self) {
     delete self;
 }
 
-QMessageLogger* QMessageLogger_new() {
+QMessageLogger* QMessageLogger_New() {
     return new QMessageLogger();
 }
 
-QMessageLogger* QMessageLogger_new2(const char* file, int line, const char* function) {
+QMessageLogger* QMessageLogger_New2(const char* file, int line, const char* function) {
     return new QMessageLogger(file, static_cast<int>(line), function);
 }
 
-QMessageLogger* QMessageLogger_new3(const char* file, int line, const char* function, const char* category) {
+QMessageLogger* QMessageLogger_New3(const char* file, int line, const char* function, const char* category) {
     return new QMessageLogger(file, static_cast<int>(line), function, category);
 }
 

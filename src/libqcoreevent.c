@@ -3,7 +3,7 @@
 #include "libqcoreevent.h"
 
 QEvent* q_event_new(int32_t type) {
-    return QEvent_new(type);
+    return QEvent_New(type);
 }
 
 int32_t q_event_type(void* self) {
@@ -75,11 +75,11 @@ void q_event_delete(void* self) {
 }
 
 QTimerEvent* q_timerevent_new(int timerId) {
-    return QTimerEvent_new(timerId);
+    return QTimerEvent_New(timerId);
 }
 
 QTimerEvent* q_timerevent_new2(int32_t timerId) {
-    return QTimerEvent_new2(timerId);
+    return QTimerEvent_New2(timerId);
 }
 
 QTimerEvent* q_timerevent_clone(void* self) {
@@ -159,7 +159,7 @@ void q_timerevent_delete(void* self) {
 }
 
 QChildEvent* q_childevent_new(int32_t type, void* child) {
-    return QChildEvent_new(type, (QObject*)child);
+    return QChildEvent_New(type, (QObject*)child);
 }
 
 QChildEvent* q_childevent_clone(void* self) {
@@ -247,7 +247,7 @@ void q_childevent_delete(void* self) {
 }
 
 QDynamicPropertyChangeEvent* q_dynamicpropertychangeevent_new(char* name) {
-    return QDynamicPropertyChangeEvent_new(qstring(name));
+    return QDynamicPropertyChangeEvent_New(qstring(name));
 }
 
 QDynamicPropertyChangeEvent* q_dynamicpropertychangeevent_clone(void* self) {

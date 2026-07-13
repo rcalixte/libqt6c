@@ -13,11 +13,11 @@
 #include "libkdualaction.hpp"
 #include "libkdualaction.hxx"
 
-KDualAction* KDualAction_new(QObject* parent) {
+KDualAction* KDualAction_New(QObject* parent) {
     return new VirtualKDualAction(parent);
 }
 
-KDualAction* KDualAction_new2(const libqt_string inactiveText, const libqt_string activeText, QObject* parent) {
+KDualAction* KDualAction_New2(const libqt_string inactiveText, const libqt_string activeText, QObject* parent) {
     QString inactiveText_QString = QString::fromUtf8(inactiveText.data, inactiveText.len);
     QString activeText_QString = QString::fromUtf8(activeText.data, activeText.len);
     return new VirtualKDualAction(inactiveText_QString, activeText_QString, parent);

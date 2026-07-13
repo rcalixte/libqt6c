@@ -17,11 +17,11 @@
 #include "libqsslserver.hpp"
 #include "libqsslserver.hxx"
 
-QSslServer* QSslServer_new() {
+QSslServer* QSslServer_New() {
     return new VirtualQSslServer();
 }
 
-QSslServer* QSslServer_new2(QObject* parent) {
+QSslServer* QSslServer_New2(QObject* parent) {
     return new VirtualQSslServer(parent);
 }
 

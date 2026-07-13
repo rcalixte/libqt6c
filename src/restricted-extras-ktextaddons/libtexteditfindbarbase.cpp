@@ -38,11 +38,11 @@
 #include "libtexteditfindbarbase.hpp"
 #include "libtexteditfindbarbase.hxx"
 
-TextCustomEditor__TextEditFindBarBase* TextCustomEditor__TextEditFindBarBase_new(QWidget* parent) {
+TextCustomEditor__TextEditFindBarBase* TextCustomEditor__TextEditFindBarBase_New(QWidget* parent) {
     return new VirtualTextCustomEditorTextEditFindBarBase(parent);
 }
 
-TextCustomEditor__TextEditFindBarBase* TextCustomEditor__TextEditFindBarBase_new2() {
+TextCustomEditor__TextEditFindBarBase* TextCustomEditor__TextEditFindBarBase_New2() {
     return new VirtualTextCustomEditorTextEditFindBarBase();
 }
 

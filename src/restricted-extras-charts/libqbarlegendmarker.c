@@ -10,11 +10,11 @@
 #include "libqbarlegendmarker.h"
 
 QBarLegendMarker* q_barlegendmarker_new(void* series, void* barset, void* legend) {
-    return QBarLegendMarker_new((QAbstractBarSeries*)series, (QBarSet*)barset, (QLegend*)legend);
+    return QBarLegendMarker_New((QAbstractBarSeries*)series, (QBarSet*)barset, (QLegend*)legend);
 }
 
 QBarLegendMarker* q_barlegendmarker_new2(void* series, void* barset, void* legend, void* parent) {
-    return QBarLegendMarker_new2((QAbstractBarSeries*)series, (QBarSet*)barset, (QLegend*)legend, (QObject*)parent);
+    return QBarLegendMarker_New2((QAbstractBarSeries*)series, (QBarSet*)barset, (QLegend*)legend, (QObject*)parent);
 }
 
 const QMetaObject* q_barlegendmarker_meta_object(void* self) {

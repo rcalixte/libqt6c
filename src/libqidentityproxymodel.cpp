@@ -23,11 +23,11 @@
 #include "libqidentityproxymodel.hpp"
 #include "libqidentityproxymodel.hxx"
 
-QIdentityProxyModel* QIdentityProxyModel_new() {
+QIdentityProxyModel* QIdentityProxyModel_New() {
     return new VirtualQIdentityProxyModel();
 }
 
-QIdentityProxyModel* QIdentityProxyModel_new2(QObject* parent) {
+QIdentityProxyModel* QIdentityProxyModel_New2(QObject* parent) {
     return new VirtualQIdentityProxyModel(parent);
 }
 

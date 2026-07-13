@@ -9,7 +9,7 @@
 #include "libnamefinderjob.h"
 
 KIO__NameFinderJob* k_io__namefinderjob_new(void* baseUrl, const char* name, void* parent) {
-    return KIO__NameFinderJob_new((QUrl*)baseUrl, qstring(name), (QObject*)parent);
+    return KIO__NameFinderJob_New((QUrl*)baseUrl, qstring(name), (QObject*)parent);
 }
 
 const QMetaObject* k_io__namefinderjob_meta_object(void* self) {

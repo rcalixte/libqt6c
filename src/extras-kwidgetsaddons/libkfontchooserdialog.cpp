@@ -39,15 +39,15 @@
 #include "libkfontchooserdialog.hpp"
 #include "libkfontchooserdialog.hxx"
 
-KFontChooserDialog* KFontChooserDialog_new() {
+KFontChooserDialog* KFontChooserDialog_New() {
     return new VirtualKFontChooserDialog();
 }
 
-KFontChooserDialog* KFontChooserDialog_new2(const int* flags) {
+KFontChooserDialog* KFontChooserDialog_New2(const int* flags) {
     return new VirtualKFontChooserDialog((const KFontChooser::DisplayFlags&)(*flags));
 }
 
-KFontChooserDialog* KFontChooserDialog_new3(const int* flags, QWidget* parent) {
+KFontChooserDialog* KFontChooserDialog_New3(const int* flags, QWidget* parent) {
     return new VirtualKFontChooserDialog((const KFontChooser::DisplayFlags&)(*flags), parent);
 }
 

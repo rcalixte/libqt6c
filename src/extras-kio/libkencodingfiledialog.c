@@ -1648,7 +1648,7 @@ void k_encodingfiledialog_on_object_name_changed(void* self, void (*callback)(vo
 }
 
 KEncodingFileDialog__Result* k_encodingfiledialog__result_new(void* param1) {
-    return KEncodingFileDialog__Result_new((KEncodingFileDialog__Result*)param1);
+    return KEncodingFileDialog__Result_New((KEncodingFileDialog__Result*)param1);
 }
 
 const char** k_encodingfiledialog__result_file_names(void* self) {

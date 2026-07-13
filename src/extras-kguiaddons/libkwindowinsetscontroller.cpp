@@ -11,11 +11,11 @@
 #include "libkwindowinsetscontroller.hpp"
 #include "libkwindowinsetscontroller.hxx"
 
-KWindowInsetsController* KWindowInsetsController_new() {
+KWindowInsetsController* KWindowInsetsController_New() {
     return new VirtualKWindowInsetsController();
 }
 
-KWindowInsetsController* KWindowInsetsController_new2(QObject* parent) {
+KWindowInsetsController* KWindowInsetsController_New2(QObject* parent) {
     return new VirtualKWindowInsetsController(parent);
 }
 

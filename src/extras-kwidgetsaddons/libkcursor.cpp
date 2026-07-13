@@ -6,11 +6,11 @@
 #include "libkcursor.hpp"
 #include "libkcursor.hxx"
 
-KCursor* KCursor_new(const KCursor* other) {
+KCursor* KCursor_New(const KCursor* other) {
     return new KCursor(*other);
 }
 
-KCursor* KCursor_new2(KCursor* other) {
+KCursor* KCursor_New2(KCursor* other) {
     return new KCursor(std::move(*other));
 }
 

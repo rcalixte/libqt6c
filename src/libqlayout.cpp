@@ -16,11 +16,11 @@
 #include "libqlayout.hpp"
 #include "libqlayout.hxx"
 
-QLayout* QLayout_new(QWidget* parent) {
+QLayout* QLayout_New(QWidget* parent) {
     return new VirtualQLayout(parent);
 }
 
-QLayout* QLayout_new2() {
+QLayout* QLayout_New2() {
     return new VirtualQLayout();
 }
 

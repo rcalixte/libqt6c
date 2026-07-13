@@ -7,7 +7,7 @@
 #include "libpublisher.hpp"
 #include "libpublisher.hxx"
 
-Attica__Field* Attica__Field_new(const Attica__Field* param1) {
+Attica__Field* Attica__Field_New(const Attica__Field* param1) {
     return new Attica::Field(*param1);
 }
 
@@ -101,11 +101,11 @@ void Attica__Field_Delete(Attica__Field* self) {
     delete self;
 }
 
-Attica__Publisher* Attica__Publisher_new() {
+Attica__Publisher* Attica__Publisher_New() {
     return new Attica::Publisher();
 }
 
-Attica__Publisher* Attica__Publisher_new2(const Attica__Publisher* other) {
+Attica__Publisher* Attica__Publisher_New2(const Attica__Publisher* other) {
     return new Attica::Publisher(*other);
 }
 

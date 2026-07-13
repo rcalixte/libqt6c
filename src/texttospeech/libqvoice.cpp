@@ -5,11 +5,11 @@
 #include "libqvoice.hpp"
 #include "libqvoice.hxx"
 
-QVoice* QVoice_new() {
+QVoice* QVoice_New() {
     return new QVoice();
 }
 
-QVoice* QVoice_new2(const QVoice* other) {
+QVoice* QVoice_New2(const QVoice* other) {
     return new QVoice(*other);
 }
 

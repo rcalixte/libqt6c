@@ -18,7 +18,7 @@
 #include "libqcommonstyle.h"
 
 QCommonStyle* q_commonstyle_new() {
-    return QCommonStyle_new();
+    return QCommonStyle_New();
 }
 
 const QMetaObject* q_commonstyle_meta_object(void* self) {

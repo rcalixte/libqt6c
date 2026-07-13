@@ -11,11 +11,11 @@
 #include "libqscilexerjson.h"
 
 QsciLexerJSON* q_scilexerjson_new() {
-    return QsciLexerJSON_new();
+    return QsciLexerJSON_New();
 }
 
 QsciLexerJSON* q_scilexerjson_new2(void* parent) {
-    return QsciLexerJSON_new2((QObject*)parent);
+    return QsciLexerJSON_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexerjson_meta_object(void* self) {

@@ -3,11 +3,11 @@
 #include "libqlowenergyconnectionparameters.hpp"
 #include "libqlowenergyconnectionparameters.hxx"
 
-QLowEnergyConnectionParameters* QLowEnergyConnectionParameters_new() {
+QLowEnergyConnectionParameters* QLowEnergyConnectionParameters_New() {
     return new QLowEnergyConnectionParameters();
 }
 
-QLowEnergyConnectionParameters* QLowEnergyConnectionParameters_new2(const QLowEnergyConnectionParameters* other) {
+QLowEnergyConnectionParameters* QLowEnergyConnectionParameters_New2(const QLowEnergyConnectionParameters* other) {
     return new QLowEnergyConnectionParameters(*other);
 }
 

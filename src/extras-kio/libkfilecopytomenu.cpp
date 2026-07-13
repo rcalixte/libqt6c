@@ -14,7 +14,7 @@
 #include "libkfilecopytomenu.hpp"
 #include "libkfilecopytomenu.hxx"
 
-KFileCopyToMenu* KFileCopyToMenu_new(QWidget* parentWidget) {
+KFileCopyToMenu* KFileCopyToMenu_New(QWidget* parentWidget) {
     return new VirtualKFileCopyToMenu(parentWidget);
 }
 

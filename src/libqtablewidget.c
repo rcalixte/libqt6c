@@ -30,19 +30,19 @@
 #include "libqtablewidget.h"
 
 QTableWidgetSelectionRange* q_tablewidgetselectionrange_new(void* other) {
-    return QTableWidgetSelectionRange_new((QTableWidgetSelectionRange*)other);
+    return QTableWidgetSelectionRange_New((QTableWidgetSelectionRange*)other);
 }
 
 QTableWidgetSelectionRange* q_tablewidgetselectionrange_new2(void* other) {
-    return QTableWidgetSelectionRange_new2((QTableWidgetSelectionRange*)other);
+    return QTableWidgetSelectionRange_New2((QTableWidgetSelectionRange*)other);
 }
 
 QTableWidgetSelectionRange* q_tablewidgetselectionrange_new3() {
-    return QTableWidgetSelectionRange_new3();
+    return QTableWidgetSelectionRange_New3();
 }
 
 QTableWidgetSelectionRange* q_tablewidgetselectionrange_new4(int top, int left, int bottom, int right) {
-    return QTableWidgetSelectionRange_new4(top, left, bottom, right);
+    return QTableWidgetSelectionRange_New4(top, left, bottom, right);
 }
 
 void q_tablewidgetselectionrange_copy_assign(void* self, void* other) {
@@ -82,31 +82,31 @@ void q_tablewidgetselectionrange_delete(void* self) {
 }
 
 QTableWidgetItem* q_tablewidgetitem_new() {
-    return QTableWidgetItem_new();
+    return QTableWidgetItem_New();
 }
 
 QTableWidgetItem* q_tablewidgetitem_new2(const char* text) {
-    return QTableWidgetItem_new2(qstring(text));
+    return QTableWidgetItem_New2(qstring(text));
 }
 
 QTableWidgetItem* q_tablewidgetitem_new3(void* icon, const char* text) {
-    return QTableWidgetItem_new3((QIcon*)icon, qstring(text));
+    return QTableWidgetItem_New3((QIcon*)icon, qstring(text));
 }
 
 QTableWidgetItem* q_tablewidgetitem_new4(void* other) {
-    return QTableWidgetItem_new4((QTableWidgetItem*)other);
+    return QTableWidgetItem_New4((QTableWidgetItem*)other);
 }
 
 QTableWidgetItem* q_tablewidgetitem_new5(int type) {
-    return QTableWidgetItem_new5(type);
+    return QTableWidgetItem_New5(type);
 }
 
 QTableWidgetItem* q_tablewidgetitem_new6(const char* text, int type) {
-    return QTableWidgetItem_new6(qstring(text), type);
+    return QTableWidgetItem_New6(qstring(text), type);
 }
 
 QTableWidgetItem* q_tablewidgetitem_new7(void* icon, const char* text, int type) {
-    return QTableWidgetItem_new7((QIcon*)icon, qstring(text), type);
+    return QTableWidgetItem_New7((QIcon*)icon, qstring(text), type);
 }
 
 QTableWidgetItem* q_tablewidgetitem_clone(void* self) {
@@ -330,19 +330,19 @@ void q_tablewidgetitem_delete(void* self) {
 }
 
 QTableWidget* q_tablewidget_new(void* parent) {
-    return QTableWidget_new((QWidget*)parent);
+    return QTableWidget_New((QWidget*)parent);
 }
 
 QTableWidget* q_tablewidget_new2() {
-    return QTableWidget_new2();
+    return QTableWidget_New2();
 }
 
 QTableWidget* q_tablewidget_new3(int rows, int columns) {
-    return QTableWidget_new3(rows, columns);
+    return QTableWidget_New3(rows, columns);
 }
 
 QTableWidget* q_tablewidget_new4(int rows, int columns, void* parent) {
-    return QTableWidget_new4(rows, columns, (QWidget*)parent);
+    return QTableWidget_New4(rows, columns, (QWidget*)parent);
 }
 
 const QMetaObject* q_tablewidget_meta_object(void* self) {

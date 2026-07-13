@@ -31,8 +31,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QConcatenateTablesProxyModel* QConcatenateTablesProxyModel_new();
-QConcatenateTablesProxyModel* QConcatenateTablesProxyModel_new2(QObject* parent);
+QConcatenateTablesProxyModel* QConcatenateTablesProxyModel_New();
+QConcatenateTablesProxyModel* QConcatenateTablesProxyModel_New2(QObject* parent);
 QMetaObject* QConcatenateTablesProxyModel_MetaObject(const QConcatenateTablesProxyModel* self);
 void* QConcatenateTablesProxyModel_Metacast(QConcatenateTablesProxyModel* self, const char* param1);
 int QConcatenateTablesProxyModel_Metacall(QConcatenateTablesProxyModel* self, int param1, int param2, void** param3);

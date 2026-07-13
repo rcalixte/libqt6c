@@ -3,7 +3,7 @@
 #include "libqmutex.h"
 
 QBasicMutex* q_basicmutex_new() {
-    return QBasicMutex_new();
+    return QBasicMutex_New();
 }
 
 void q_basicmutex_lock(void* self) {
@@ -27,7 +27,7 @@ void q_basicmutex_delete(void* self) {
 }
 
 QMutex* q_mutex_new() {
-    return QMutex_new();
+    return QMutex_New();
 }
 
 bool q_mutex_try_lock(void* self) {
@@ -55,7 +55,7 @@ void q_mutex_delete(void* self) {
 }
 
 QRecursiveMutex* q_recursivemutex_new() {
-    return QRecursiveMutex_new();
+    return QRecursiveMutex_New();
 }
 
 void q_recursivemutex_lock(void* self) {

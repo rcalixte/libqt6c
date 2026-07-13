@@ -13,12 +13,12 @@
 #include "libkactioncategory.hpp"
 #include "libkactioncategory.hxx"
 
-KActionCategory* KActionCategory_new(const libqt_string text) {
+KActionCategory* KActionCategory_New(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKActionCategory(text_QString);
 }
 
-KActionCategory* KActionCategory_new2(const libqt_string text, KActionCollection* parent) {
+KActionCategory* KActionCategory_New2(const libqt_string text, KActionCollection* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKActionCategory(text_QString, parent);
 }

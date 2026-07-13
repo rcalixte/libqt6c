@@ -2,19 +2,19 @@
 #include "libqbitarray.h"
 
 QBitArray* q_bitarray_new() {
-    return QBitArray_new();
+    return QBitArray_New();
 }
 
 QBitArray* q_bitarray_new2(intptr_t size) {
-    return QBitArray_new2(size);
+    return QBitArray_New2(size);
 }
 
 QBitArray* q_bitarray_new3(void* other) {
-    return QBitArray_new3((QBitArray*)other);
+    return QBitArray_New3((QBitArray*)other);
 }
 
 QBitArray* q_bitarray_new4(intptr_t size, bool val) {
-    return QBitArray_new4(size, val);
+    return QBitArray_New4(size, val);
 }
 
 void q_bitarray_operator_assign(void* self, void* other) {
@@ -142,11 +142,11 @@ void q_bitarray_delete(void* self) {
 }
 
 QBitRef* q_bitref_new(void* other) {
-    return QBitRef_new((QBitRef*)other);
+    return QBitRef_New((QBitRef*)other);
 }
 
 QBitRef* q_bitref_new2(void* param1) {
-    return QBitRef_new2((QBitRef*)param1);
+    return QBitRef_New2((QBitRef*)param1);
 }
 
 bool q_bitref_to_bool(void* self) {

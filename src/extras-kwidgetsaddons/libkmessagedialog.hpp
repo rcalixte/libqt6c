@@ -53,9 +53,9 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KMessageDialog* KMessageDialog_new(int type, const libqt_string text);
-KMessageDialog* KMessageDialog_new2(int type, const libqt_string text, uintptr_t parent_id);
-KMessageDialog* KMessageDialog_new3(int type, const libqt_string text, QWidget* parent);
+KMessageDialog* KMessageDialog_New(int type, const libqt_string text);
+KMessageDialog* KMessageDialog_New2(int type, const libqt_string text, uintptr_t parent_id);
+KMessageDialog* KMessageDialog_New3(int type, const libqt_string text, QWidget* parent);
 QMetaObject* KMessageDialog_MetaObject(const KMessageDialog* self);
 void* KMessageDialog_Metacast(KMessageDialog* self, const char* param1);
 int KMessageDialog_Metacall(KMessageDialog* self, int param1, int param2, void** param3);

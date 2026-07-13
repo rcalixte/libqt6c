@@ -18,7 +18,7 @@ extern "C" {
 typedef struct KCursorSaver KCursorSaver;
 #endif
 
-KCursorSaver* KCursorSaver_new(int shape);
+KCursorSaver* KCursorSaver_New(int shape);
 void KCursorSaver_RestoreCursor(KCursorSaver* self);
 void KCursorSaver_Delete(KCursorSaver* self);
 

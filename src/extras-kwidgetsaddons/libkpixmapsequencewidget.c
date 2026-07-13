@@ -15,19 +15,19 @@
 #include "libkpixmapsequencewidget.h"
 
 KPixmapSequenceWidget* k_pixmapsequencewidget_new(void* parent) {
-    return KPixmapSequenceWidget_new((QWidget*)parent);
+    return KPixmapSequenceWidget_New((QWidget*)parent);
 }
 
 KPixmapSequenceWidget* k_pixmapsequencewidget_new2() {
-    return KPixmapSequenceWidget_new2();
+    return KPixmapSequenceWidget_New2();
 }
 
 KPixmapSequenceWidget* k_pixmapsequencewidget_new3(void* seq) {
-    return KPixmapSequenceWidget_new3((KPixmapSequence*)seq);
+    return KPixmapSequenceWidget_New3((KPixmapSequence*)seq);
 }
 
 KPixmapSequenceWidget* k_pixmapsequencewidget_new4(void* seq, void* parent) {
-    return KPixmapSequenceWidget_new4((KPixmapSequence*)seq, (QWidget*)parent);
+    return KPixmapSequenceWidget_New4((KPixmapSequence*)seq, (QWidget*)parent);
 }
 
 const QMetaObject* k_pixmapsequencewidget_meta_object(void* self) {

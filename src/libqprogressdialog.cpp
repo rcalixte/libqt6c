@@ -41,31 +41,31 @@
 #include "libqprogressdialog.hpp"
 #include "libqprogressdialog.hxx"
 
-QProgressDialog* QProgressDialog_new(QWidget* parent) {
+QProgressDialog* QProgressDialog_New(QWidget* parent) {
     return new VirtualQProgressDialog(parent);
 }
 
-QProgressDialog* QProgressDialog_new2() {
+QProgressDialog* QProgressDialog_New2() {
     return new VirtualQProgressDialog();
 }
 
-QProgressDialog* QProgressDialog_new3(const libqt_string labelText, const libqt_string cancelButtonText, int minimum, int maximum) {
+QProgressDialog* QProgressDialog_New3(const libqt_string labelText, const libqt_string cancelButtonText, int minimum, int maximum) {
     QString labelText_QString = QString::fromUtf8(labelText.data, labelText.len);
     QString cancelButtonText_QString = QString::fromUtf8(cancelButtonText.data, cancelButtonText.len);
     return new VirtualQProgressDialog(labelText_QString, cancelButtonText_QString, static_cast<int>(minimum), static_cast<int>(maximum));
 }
 
-QProgressDialog* QProgressDialog_new4(QWidget* parent, int flags) {
+QProgressDialog* QProgressDialog_New4(QWidget* parent, int flags) {
     return new VirtualQProgressDialog(parent, static_cast<Qt::WindowFlags>(flags));
 }
 
-QProgressDialog* QProgressDialog_new5(const libqt_string labelText, const libqt_string cancelButtonText, int minimum, int maximum, QWidget* parent) {
+QProgressDialog* QProgressDialog_New5(const libqt_string labelText, const libqt_string cancelButtonText, int minimum, int maximum, QWidget* parent) {
     QString labelText_QString = QString::fromUtf8(labelText.data, labelText.len);
     QString cancelButtonText_QString = QString::fromUtf8(cancelButtonText.data, cancelButtonText.len);
     return new VirtualQProgressDialog(labelText_QString, cancelButtonText_QString, static_cast<int>(minimum), static_cast<int>(maximum), parent);
 }
 
-QProgressDialog* QProgressDialog_new6(const libqt_string labelText, const libqt_string cancelButtonText, int minimum, int maximum, QWidget* parent, int flags) {
+QProgressDialog* QProgressDialog_New6(const libqt_string labelText, const libqt_string cancelButtonText, int minimum, int maximum, QWidget* parent, int flags) {
     QString labelText_QString = QString::fromUtf8(labelText.data, labelText.len);
     QString cancelButtonText_QString = QString::fromUtf8(cancelButtonText.data, cancelButtonText.len);
     return new VirtualQProgressDialog(labelText_QString, cancelButtonText_QString, static_cast<int>(minimum), static_cast<int>(maximum), parent, static_cast<Qt::WindowFlags>(flags));

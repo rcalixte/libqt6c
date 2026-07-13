@@ -11,11 +11,11 @@
 #include "libcustomemojiiconmanager.hpp"
 #include "libcustomemojiiconmanager.hxx"
 
-TextEmoticonsCore__CustomEmojiIconManager* TextEmoticonsCore__CustomEmojiIconManager_new() {
+TextEmoticonsCore__CustomEmojiIconManager* TextEmoticonsCore__CustomEmojiIconManager_New() {
     return new VirtualTextEmoticonsCoreCustomEmojiIconManager();
 }
 
-TextEmoticonsCore__CustomEmojiIconManager* TextEmoticonsCore__CustomEmojiIconManager_new2(QObject* parent) {
+TextEmoticonsCore__CustomEmojiIconManager* TextEmoticonsCore__CustomEmojiIconManager_New2(QObject* parent) {
     return new VirtualTextEmoticonsCoreCustomEmojiIconManager(parent);
 }
 

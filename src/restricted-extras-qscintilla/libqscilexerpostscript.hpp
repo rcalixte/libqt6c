@@ -29,8 +29,8 @@ typedef struct QsciLexerPostScript QsciLexerPostScript;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerPostScript* QsciLexerPostScript_new();
-QsciLexerPostScript* QsciLexerPostScript_new2(QObject* parent);
+QsciLexerPostScript* QsciLexerPostScript_New();
+QsciLexerPostScript* QsciLexerPostScript_New2(QObject* parent);
 QMetaObject* QsciLexerPostScript_MetaObject(const QsciLexerPostScript* self);
 void* QsciLexerPostScript_Metacast(QsciLexerPostScript* self, const char* param1);
 int QsciLexerPostScript_Metacall(QsciLexerPostScript* self, int param1, int param2, void** param3);

@@ -25,8 +25,8 @@ libqt_string QItemEditorCreatorBase_ValuePropertyName(const QItemEditorCreatorBa
 void QItemEditorCreatorBase_OperatorAssign(QItemEditorCreatorBase* self, const QItemEditorCreatorBase* param1);
 void QItemEditorCreatorBase_Delete(QItemEditorCreatorBase* self);
 
-QItemEditorFactory* QItemEditorFactory_new();
-QItemEditorFactory* QItemEditorFactory_new2(const QItemEditorFactory* param1);
+QItemEditorFactory* QItemEditorFactory_New();
+QItemEditorFactory* QItemEditorFactory_New2(const QItemEditorFactory* param1);
 QWidget* QItemEditorFactory_CreateEditor(const QItemEditorFactory* self, int userType, QWidget* parent);
 libqt_string QItemEditorFactory_ValuePropertyName(const QItemEditorFactory* self, int userType);
 void QItemEditorFactory_RegisterEditor(QItemEditorFactory* self, int userType, QItemEditorCreatorBase* creator);

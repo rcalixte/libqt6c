@@ -8,27 +8,27 @@
 #include "libqboxset.h"
 
 QBoxSet* q_boxset_new() {
-    return QBoxSet_new();
+    return QBoxSet_New();
 }
 
 QBoxSet* q_boxset_new2(double le, double lq, double m, double uq, double ue) {
-    return QBoxSet_new2(le, lq, m, uq, ue);
+    return QBoxSet_New2(le, lq, m, uq, ue);
 }
 
 QBoxSet* q_boxset_new3(const char* label) {
-    return QBoxSet_new3(qstring(label));
+    return QBoxSet_New3(qstring(label));
 }
 
 QBoxSet* q_boxset_new4(const char* label, void* parent) {
-    return QBoxSet_new4(qstring(label), (QObject*)parent);
+    return QBoxSet_New4(qstring(label), (QObject*)parent);
 }
 
 QBoxSet* q_boxset_new5(double le, double lq, double m, double uq, double ue, const char* label) {
-    return QBoxSet_new5(le, lq, m, uq, ue, qstring(label));
+    return QBoxSet_New5(le, lq, m, uq, ue, qstring(label));
 }
 
 QBoxSet* q_boxset_new6(double le, double lq, double m, double uq, double ue, const char* label, void* parent) {
-    return QBoxSet_new6(le, lq, m, uq, ue, qstring(label), (QObject*)parent);
+    return QBoxSet_New6(le, lq, m, uq, ue, qstring(label), (QObject*)parent);
 }
 
 const QMetaObject* q_boxset_meta_object(void* self) {

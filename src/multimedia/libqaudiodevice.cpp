@@ -7,11 +7,11 @@
 #include "libqaudiodevice.hpp"
 #include "libqaudiodevice.hxx"
 
-QAudioDevice* QAudioDevice_new() {
+QAudioDevice* QAudioDevice_New() {
     return new QAudioDevice();
 }
 
-QAudioDevice* QAudioDevice_new2(const QAudioDevice* other) {
+QAudioDevice* QAudioDevice_New2(const QAudioDevice* other) {
     return new QAudioDevice(*other);
 }
 

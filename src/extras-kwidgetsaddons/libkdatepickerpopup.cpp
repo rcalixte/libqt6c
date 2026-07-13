@@ -43,19 +43,19 @@
 #include "libkdatepickerpopup.hpp"
 #include "libkdatepickerpopup.hxx"
 
-KDatePickerPopup* KDatePickerPopup_new() {
+KDatePickerPopup* KDatePickerPopup_New() {
     return new VirtualKDatePickerPopup();
 }
 
-KDatePickerPopup* KDatePickerPopup_new2(int modes) {
+KDatePickerPopup* KDatePickerPopup_New2(int modes) {
     return new VirtualKDatePickerPopup(static_cast<KDatePickerPopup::Modes>(modes));
 }
 
-KDatePickerPopup* KDatePickerPopup_new3(int modes, QDate* date) {
+KDatePickerPopup* KDatePickerPopup_New3(int modes, QDate* date) {
     return new VirtualKDatePickerPopup(static_cast<KDatePickerPopup::Modes>(modes), *date);
 }
 
-KDatePickerPopup* KDatePickerPopup_new4(int modes, QDate* date, QWidget* parent) {
+KDatePickerPopup* KDatePickerPopup_New4(int modes, QDate* date, QWidget* parent) {
     return new VirtualKDatePickerPopup(static_cast<KDatePickerPopup::Modes>(modes), *date, parent);
 }
 

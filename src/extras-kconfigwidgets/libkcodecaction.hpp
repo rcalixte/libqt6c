@@ -29,12 +29,12 @@ typedef struct QWidget QWidget;
 typedef struct QWidgetAction QWidgetAction;
 #endif
 
-KCodecAction* KCodecAction_new(QObject* parent);
-KCodecAction* KCodecAction_new2(const libqt_string text, QObject* parent);
-KCodecAction* KCodecAction_new3(const QIcon* icon, const libqt_string text, QObject* parent);
-KCodecAction* KCodecAction_new4(QObject* parent, bool showAutoOptions);
-KCodecAction* KCodecAction_new5(const libqt_string text, QObject* parent, bool showAutoOptions);
-KCodecAction* KCodecAction_new6(const QIcon* icon, const libqt_string text, QObject* parent, bool showAutoOptions);
+KCodecAction* KCodecAction_New(QObject* parent);
+KCodecAction* KCodecAction_New2(const libqt_string text, QObject* parent);
+KCodecAction* KCodecAction_New3(const QIcon* icon, const libqt_string text, QObject* parent);
+KCodecAction* KCodecAction_New4(QObject* parent, bool showAutoOptions);
+KCodecAction* KCodecAction_New5(const libqt_string text, QObject* parent, bool showAutoOptions);
+KCodecAction* KCodecAction_New6(const QIcon* icon, const libqt_string text, QObject* parent, bool showAutoOptions);
 QMetaObject* KCodecAction_MetaObject(const KCodecAction* self);
 void* KCodecAction_Metacast(KCodecAction* self, const char* param1);
 int KCodecAction_Metacall(KCodecAction* self, int param1, int param2, void** param3);

@@ -13,11 +13,11 @@
 #include "libqeventloop.hpp"
 #include "libqeventloop.hxx"
 
-QEventLoop* QEventLoop_new() {
+QEventLoop* QEventLoop_New() {
     return new VirtualQEventLoop();
 }
 
-QEventLoop* QEventLoop_new2(QObject* parent) {
+QEventLoop* QEventLoop_New2(QObject* parent) {
     return new VirtualQEventLoop(parent);
 }
 
@@ -451,15 +451,15 @@ void QEventLoop_Delete(QEventLoop* self) {
     delete self;
 }
 
-QEventLoopLocker* QEventLoopLocker_new() {
+QEventLoopLocker* QEventLoopLocker_New() {
     return new QEventLoopLocker();
 }
 
-QEventLoopLocker* QEventLoopLocker_new2(QEventLoop* loop) {
+QEventLoopLocker* QEventLoopLocker_New2(QEventLoop* loop) {
     return new QEventLoopLocker(loop);
 }
 
-QEventLoopLocker* QEventLoopLocker_new3(QThread* thread) {
+QEventLoopLocker* QEventLoopLocker_New3(QThread* thread) {
     return new QEventLoopLocker(thread);
 }
 

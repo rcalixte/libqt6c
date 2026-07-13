@@ -18,8 +18,8 @@ extern "C" {
 typedef struct QPlaceUser QPlaceUser;
 #endif
 
-QPlaceUser* QPlaceUser_new();
-QPlaceUser* QPlaceUser_new2(const QPlaceUser* other);
+QPlaceUser* QPlaceUser_New();
+QPlaceUser* QPlaceUser_New2(const QPlaceUser* other);
 void QPlaceUser_OperatorAssign(QPlaceUser* self, const QPlaceUser* other);
 void QPlaceUser_Swap(QPlaceUser* self, QPlaceUser* other);
 libqt_string QPlaceUser_UserId(const QPlaceUser* self);

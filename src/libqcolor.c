@@ -4,67 +4,67 @@
 #include "libqcolor.h"
 
 QColor* q_color_new(void* other) {
-    return QColor_new((QColor*)other);
+    return QColor_New((QColor*)other);
 }
 
 QColor* q_color_new2(void* other) {
-    return QColor_new2((QColor*)other);
+    return QColor_New2((QColor*)other);
 }
 
 QColor* q_color_new3() {
-    return QColor_new3();
+    return QColor_New3();
 }
 
 QColor* q_color_new4(int32_t color) {
-    return QColor_new4(color);
+    return QColor_New4(color);
 }
 
 QColor* q_color_new5(int r, int g, int b) {
-    return QColor_new5(r, g, b);
+    return QColor_New5(r, g, b);
 }
 
 QColor* q_color_new6(uint32_t rgb) {
-    return QColor_new6(rgb);
+    return QColor_New6(rgb);
 }
 
 QColor* q_color_new7(void* rgba64) {
-    return QColor_new7((QRgba64*)rgba64);
+    return QColor_New7((QRgba64*)rgba64);
 }
 
 QColor* q_color_new8(const char* name) {
-    return QColor_new8(qstring(name));
+    return QColor_New8(qstring(name));
 }
 
 QColor* q_color_new9(const char* name) {
-    return QColor_new9(qstring(name));
+    return QColor_New9(qstring(name));
 }
 
 QColor* q_color_new10(const char* aname) {
-    return QColor_new10(aname);
+    return QColor_New10(aname);
 }
 
 QColor* q_color_new11(char* name) {
-    return QColor_new11(qstring(name));
+    return QColor_New11(qstring(name));
 }
 
 QColor* q_color_new12(int32_t spec) {
-    return QColor_new12(spec);
+    return QColor_New12(spec);
 }
 
 QColor* q_color_new13(int32_t spec, uint16_t a1, uint16_t a2, uint16_t a3, uint16_t a4) {
-    return QColor_new13(spec, a1, a2, a3, a4);
+    return QColor_New13(spec, a1, a2, a3, a4);
 }
 
 QColor* q_color_new14(void* param1) {
-    return QColor_new14((QColor*)param1);
+    return QColor_New14((QColor*)param1);
 }
 
 QColor* q_color_new15(int r, int g, int b, int a) {
-    return QColor_new15(r, g, b, a);
+    return QColor_New15(r, g, b, a);
 }
 
 QColor* q_color_new16(int32_t spec, uint16_t a1, uint16_t a2, uint16_t a3, uint16_t a4, uint16_t a5) {
-    return QColor_new16(spec, a1, a2, a3, a4, a5);
+    return QColor_New16(spec, a1, a2, a3, a4, a5);
 }
 
 void q_color_copy_assign(void* self, void* other) {

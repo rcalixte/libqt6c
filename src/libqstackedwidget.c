@@ -16,11 +16,11 @@
 #include "libqstackedwidget.h"
 
 QStackedWidget* q_stackedwidget_new(void* parent) {
-    return QStackedWidget_new((QWidget*)parent);
+    return QStackedWidget_New((QWidget*)parent);
 }
 
 QStackedWidget* q_stackedwidget_new2() {
-    return QStackedWidget_new2();
+    return QStackedWidget_New2();
 }
 
 const QMetaObject* q_stackedwidget_meta_object(void* self) {

@@ -58,8 +58,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KImageFilePreview* KImageFilePreview_new(QWidget* parent);
-KImageFilePreview* KImageFilePreview_new2();
+KImageFilePreview* KImageFilePreview_New(QWidget* parent);
+KImageFilePreview* KImageFilePreview_New2();
 QMetaObject* KImageFilePreview_MetaObject(const KImageFilePreview* self);
 void* KImageFilePreview_Metacast(KImageFilePreview* self, const char* param1);
 int KImageFilePreview_Metacall(KImageFilePreview* self, int param1, int param2, void** param3);

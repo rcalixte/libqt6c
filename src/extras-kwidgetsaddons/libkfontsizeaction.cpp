@@ -16,16 +16,16 @@
 #include "libkfontsizeaction.hpp"
 #include "libkfontsizeaction.hxx"
 
-KFontSizeAction* KFontSizeAction_new(QObject* parent) {
+KFontSizeAction* KFontSizeAction_New(QObject* parent) {
     return new VirtualKFontSizeAction(parent);
 }
 
-KFontSizeAction* KFontSizeAction_new2(const libqt_string text, QObject* parent) {
+KFontSizeAction* KFontSizeAction_New2(const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKFontSizeAction(text_QString, parent);
 }
 
-KFontSizeAction* KFontSizeAction_new3(const QIcon* icon, const libqt_string text, QObject* parent) {
+KFontSizeAction* KFontSizeAction_New3(const QIcon* icon, const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKFontSizeAction(*icon, text_QString, parent);
 }

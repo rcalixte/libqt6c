@@ -21,8 +21,8 @@ typedef Attica::BuildServiceJobOutput Attica__BuildServiceJobOutput;
 typedef struct Attica__BuildServiceJobOutput Attica__BuildServiceJobOutput;
 #endif
 
-Attica__BuildServiceJobOutput* Attica__BuildServiceJobOutput_new();
-Attica__BuildServiceJobOutput* Attica__BuildServiceJobOutput_new2(const Attica__BuildServiceJobOutput* other);
+Attica__BuildServiceJobOutput* Attica__BuildServiceJobOutput_New();
+Attica__BuildServiceJobOutput* Attica__BuildServiceJobOutput_New2(const Attica__BuildServiceJobOutput* other);
 void Attica__BuildServiceJobOutput_OperatorAssign(Attica__BuildServiceJobOutput* self, const Attica__BuildServiceJobOutput* other);
 void Attica__BuildServiceJobOutput_SetOutput(Attica__BuildServiceJobOutput* self, const libqt_string output);
 libqt_string Attica__BuildServiceJobOutput_Output(const Attica__BuildServiceJobOutput* self);

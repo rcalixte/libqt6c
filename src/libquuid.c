@@ -3,35 +3,35 @@
 #include "libquuid.h"
 
 QUuid* q_uuid_new(void* other) {
-    return QUuid_new((QUuid*)other);
+    return QUuid_New((QUuid*)other);
 }
 
 QUuid* q_uuid_new2(void* other) {
-    return QUuid_new2((QUuid*)other);
+    return QUuid_New2((QUuid*)other);
 }
 
 QUuid* q_uuid_new3() {
-    return QUuid_new3();
+    return QUuid_New3();
 }
 
 QUuid* q_uuid_new4(uint32_t l, uint16_t w1, uint16_t w2, unsigned char b1, unsigned char b2, unsigned char b3, unsigned char b4, unsigned char b5, unsigned char b6, unsigned char b7, unsigned char b8) {
-    return QUuid_new4(l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8);
+    return QUuid_New4(l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8);
 }
 
 QUuid* q_uuid_new5(void* id128) {
-    return QUuid_new5((QUuid__Id128Bytes*)id128);
+    return QUuid_New5((QUuid__Id128Bytes*)id128);
 }
 
 QUuid* q_uuid_new6(const char* string) {
-    return QUuid_new6(string);
+    return QUuid_New6(string);
 }
 
 QUuid* q_uuid_new7(void* param1) {
-    return QUuid_new7((QUuid*)param1);
+    return QUuid_New7((QUuid*)param1);
 }
 
 QUuid* q_uuid_new8(void* id128, int32_t order) {
-    return QUuid_new8((QUuid__Id128Bytes*)id128, order);
+    return QUuid_New8((QUuid__Id128Bytes*)id128, order);
 }
 
 void q_uuid_copy_assign(void* self, void* other) {
@@ -154,11 +154,11 @@ void q_uuid_delete(void* self) {
 }
 
 QUuid__Id128Bytes* q_uuid__id128bytes_new() {
-    return QUuid__Id128Bytes_new();
+    return QUuid__Id128Bytes_New();
 }
 
 QUuid__Id128Bytes* q_uuid__id128bytes_new2(void* param1) {
-    return QUuid__Id128Bytes_new2((QUuid__Id128Bytes*)param1);
+    return QUuid__Id128Bytes_New2((QUuid__Id128Bytes*)param1);
 }
 
 char* q_uuid__id128bytes_to_q_byte_array_view(void* self) {

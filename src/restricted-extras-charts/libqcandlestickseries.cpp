@@ -16,11 +16,11 @@
 #include "libqcandlestickseries.hpp"
 #include "libqcandlestickseries.hxx"
 
-QCandlestickSeries* QCandlestickSeries_new() {
+QCandlestickSeries* QCandlestickSeries_New() {
     return new VirtualQCandlestickSeries();
 }
 
-QCandlestickSeries* QCandlestickSeries_new2(QObject* parent) {
+QCandlestickSeries* QCandlestickSeries_New2(QObject* parent) {
     return new VirtualQCandlestickSeries(parent);
 }
 

@@ -13,11 +13,11 @@
 #include "libpartmanager.hpp"
 #include "libpartmanager.hxx"
 
-KParts__PartManager* KParts__PartManager_new(QWidget* parent) {
+KParts__PartManager* KParts__PartManager_New(QWidget* parent) {
     return new VirtualKPartsPartManager(parent);
 }
 
-KParts__PartManager* KParts__PartManager_new2(QWidget* topLevel, QObject* parent) {
+KParts__PartManager* KParts__PartManager_New2(QWidget* topLevel, QObject* parent) {
     return new VirtualKPartsPartManager(topLevel, parent);
 }
 

@@ -20,7 +20,7 @@ KTextEditor__Command* k_texteditor__command_new(const char* cmds[static 1]) {
     }
     libqt_list cmds_list = qlist(cmds_qstr, cmds_len);
 
-    KTextEditor__Command* _out = KTextEditor__Command_new(cmds_list);
+    KTextEditor__Command* _out = KTextEditor__Command_New(cmds_list);
     free(cmds_qstr);
     return _out;
 }
@@ -37,7 +37,7 @@ KTextEditor__Command* k_texteditor__command_new2(const char* cmds[static 1], voi
     }
     libqt_list cmds_list = qlist(cmds_qstr, cmds_len);
 
-    KTextEditor__Command* _out = KTextEditor__Command_new2(cmds_list, (QObject*)parent);
+    KTextEditor__Command* _out = KTextEditor__Command_New2(cmds_list, (QObject*)parent);
     free(cmds_qstr);
     return _out;
 }

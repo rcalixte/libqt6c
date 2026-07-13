@@ -4,15 +4,15 @@
 #include "libdevice.h"
 
 Solid__Device* k_solid__device_new() {
-    return Solid__Device_new();
+    return Solid__Device_New();
 }
 
 Solid__Device* k_solid__device_new2(void* device) {
-    return Solid__Device_new2((Solid__Device*)device);
+    return Solid__Device_New2((Solid__Device*)device);
 }
 
 Solid__Device* k_solid__device_new3(const char* udi) {
-    return Solid__Device_new3(qstring(udi));
+    return Solid__Device_New3(qstring(udi));
 }
 
 libqt_list /* of Solid__Device* */ k_solid__device_all_devices() {

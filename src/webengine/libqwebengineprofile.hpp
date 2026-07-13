@@ -34,10 +34,10 @@ typedef struct QWebEngineUrlRequestInterceptor QWebEngineUrlRequestInterceptor;
 typedef struct QWebEngineUrlSchemeHandler QWebEngineUrlSchemeHandler;
 #endif
 
-QWebEngineProfile* QWebEngineProfile_new();
-QWebEngineProfile* QWebEngineProfile_new2(const libqt_string name);
-QWebEngineProfile* QWebEngineProfile_new3(QObject* parent);
-QWebEngineProfile* QWebEngineProfile_new4(const libqt_string name, QObject* parent);
+QWebEngineProfile* QWebEngineProfile_New();
+QWebEngineProfile* QWebEngineProfile_New2(const libqt_string name);
+QWebEngineProfile* QWebEngineProfile_New3(QObject* parent);
+QWebEngineProfile* QWebEngineProfile_New4(const libqt_string name, QObject* parent);
 QMetaObject* QWebEngineProfile_MetaObject(const QWebEngineProfile* self);
 void* QWebEngineProfile_Metacast(QWebEngineProfile* self, const char* param1);
 int QWebEngineProfile_Metacall(QWebEngineProfile* self, int param1, int param2, void** param3);

@@ -3,27 +3,27 @@
 #include "libqbytearraymatcher.h"
 
 QByteArrayMatcher* q_bytearraymatcher_new() {
-    return QByteArrayMatcher_new();
+    return QByteArrayMatcher_New();
 }
 
 QByteArrayMatcher* q_bytearraymatcher_new2(char* pattern) {
-    return QByteArrayMatcher_new2(qstring(pattern));
+    return QByteArrayMatcher_New2(qstring(pattern));
 }
 
 QByteArrayMatcher* q_bytearraymatcher_new3(char* pattern) {
-    return QByteArrayMatcher_new3(qstring(pattern));
+    return QByteArrayMatcher_New3(qstring(pattern));
 }
 
 QByteArrayMatcher* q_bytearraymatcher_new4(const char* pattern) {
-    return QByteArrayMatcher_new4(pattern);
+    return QByteArrayMatcher_New4(pattern);
 }
 
 QByteArrayMatcher* q_bytearraymatcher_new5(void* other) {
-    return QByteArrayMatcher_new5((QByteArrayMatcher*)other);
+    return QByteArrayMatcher_New5((QByteArrayMatcher*)other);
 }
 
 QByteArrayMatcher* q_bytearraymatcher_new6(const char* pattern, intptr_t length) {
-    return QByteArrayMatcher_new6(pattern, length);
+    return QByteArrayMatcher_New6(pattern, length);
 }
 
 void q_bytearraymatcher_operator_assign(void* self, void* other) {
@@ -62,7 +62,7 @@ void q_bytearraymatcher_delete(void* self) {
 }
 
 QStaticByteArrayMatcherBase* q_staticbytearraymatcherbase_new(void* other) {
-    return QStaticByteArrayMatcherBase_new((QStaticByteArrayMatcherBase*)other);
+    return QStaticByteArrayMatcherBase_New((QStaticByteArrayMatcherBase*)other);
 }
 
 void q_staticbytearraymatcherbase_copy_assign(void* self, void* other) {

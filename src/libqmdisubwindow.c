@@ -16,15 +16,15 @@
 #include "libqmdisubwindow.h"
 
 QMdiSubWindow* q_mdisubwindow_new(void* parent) {
-    return QMdiSubWindow_new((QWidget*)parent);
+    return QMdiSubWindow_New((QWidget*)parent);
 }
 
 QMdiSubWindow* q_mdisubwindow_new2() {
-    return QMdiSubWindow_new2();
+    return QMdiSubWindow_New2();
 }
 
 QMdiSubWindow* q_mdisubwindow_new3(void* parent, int32_t flags) {
-    return QMdiSubWindow_new3((QWidget*)parent, flags);
+    return QMdiSubWindow_New3((QWidget*)parent, flags);
 }
 
 const QMetaObject* q_mdisubwindow_meta_object(void* self) {

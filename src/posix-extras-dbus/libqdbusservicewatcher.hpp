@@ -25,11 +25,11 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QDBusServiceWatcher* QDBusServiceWatcher_new();
-QDBusServiceWatcher* QDBusServiceWatcher_new2(const libqt_string service, const QDBusConnection* connection);
-QDBusServiceWatcher* QDBusServiceWatcher_new3(QObject* parent);
-QDBusServiceWatcher* QDBusServiceWatcher_new4(const libqt_string service, const QDBusConnection* connection, int watchMode);
-QDBusServiceWatcher* QDBusServiceWatcher_new5(const libqt_string service, const QDBusConnection* connection, int watchMode, QObject* parent);
+QDBusServiceWatcher* QDBusServiceWatcher_New();
+QDBusServiceWatcher* QDBusServiceWatcher_New2(const libqt_string service, const QDBusConnection* connection);
+QDBusServiceWatcher* QDBusServiceWatcher_New3(QObject* parent);
+QDBusServiceWatcher* QDBusServiceWatcher_New4(const libqt_string service, const QDBusConnection* connection, int watchMode);
+QDBusServiceWatcher* QDBusServiceWatcher_New5(const libqt_string service, const QDBusConnection* connection, int watchMode, QObject* parent);
 QMetaObject* QDBusServiceWatcher_MetaObject(const QDBusServiceWatcher* self);
 void* QDBusServiceWatcher_Metacast(QDBusServiceWatcher* self, const char* param1);
 int QDBusServiceWatcher_Metacall(QDBusServiceWatcher* self, int param1, int param2, void** param3);

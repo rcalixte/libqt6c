@@ -12,11 +12,11 @@
 #include "libkoverlayiconplugin.hpp"
 #include "libkoverlayiconplugin.hxx"
 
-KOverlayIconPlugin* KOverlayIconPlugin_new() {
+KOverlayIconPlugin* KOverlayIconPlugin_New() {
     return new VirtualKOverlayIconPlugin();
 }
 
-KOverlayIconPlugin* KOverlayIconPlugin_new2(QObject* parent) {
+KOverlayIconPlugin* KOverlayIconPlugin_New2(QObject* parent) {
     return new VirtualKOverlayIconPlugin(parent);
 }
 

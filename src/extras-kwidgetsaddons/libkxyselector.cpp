@@ -39,11 +39,11 @@
 #include "libkxyselector.hpp"
 #include "libkxyselector.hxx"
 
-KXYSelector* KXYSelector_new(QWidget* parent) {
+KXYSelector* KXYSelector_New(QWidget* parent) {
     return new VirtualKXYSelector(parent);
 }
 
-KXYSelector* KXYSelector_new2() {
+KXYSelector* KXYSelector_New2() {
     return new VirtualKXYSelector();
 }
 

@@ -19,7 +19,7 @@ typedef struct QPdfSelection QPdfSelection;
 typedef struct QRectF QRectF;
 #endif
 
-QPdfSelection* QPdfSelection_new(const QPdfSelection* other);
+QPdfSelection* QPdfSelection_New(const QPdfSelection* other);
 void QPdfSelection_OperatorAssign(QPdfSelection* self, const QPdfSelection* other);
 void QPdfSelection_Swap(QPdfSelection* self, QPdfSelection* other);
 bool QPdfSelection_IsValid(const QPdfSelection* self);

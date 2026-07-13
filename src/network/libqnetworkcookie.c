@@ -5,19 +5,19 @@
 #include "libqnetworkcookie.h"
 
 QNetworkCookie* q_networkcookie_new() {
-    return QNetworkCookie_new();
+    return QNetworkCookie_New();
 }
 
 QNetworkCookie* q_networkcookie_new2(void* other) {
-    return QNetworkCookie_new2((QNetworkCookie*)other);
+    return QNetworkCookie_New2((QNetworkCookie*)other);
 }
 
 QNetworkCookie* q_networkcookie_new3(char* name) {
-    return QNetworkCookie_new3(qstring(name));
+    return QNetworkCookie_New3(qstring(name));
 }
 
 QNetworkCookie* q_networkcookie_new4(char* name, char* value) {
-    return QNetworkCookie_new4(qstring(name), qstring(value));
+    return QNetworkCookie_New4(qstring(name), qstring(value));
 }
 
 void q_networkcookie_operator_assign(void* self, void* other) {

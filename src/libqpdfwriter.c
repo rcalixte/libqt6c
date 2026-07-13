@@ -18,11 +18,11 @@
 #include "libqpdfwriter.h"
 
 QPdfWriter* q_pdfwriter_new(const char* filename) {
-    return QPdfWriter_new(qstring(filename));
+    return QPdfWriter_New(qstring(filename));
 }
 
 QPdfWriter* q_pdfwriter_new2(void* device) {
-    return QPdfWriter_new2((QIODevice*)device);
+    return QPdfWriter_New2((QIODevice*)device);
 }
 
 const QMetaObject* q_pdfwriter_meta_object(void* self) {

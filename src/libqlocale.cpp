@@ -9,37 +9,37 @@
 #include "libqlocale.hpp"
 #include "libqlocale.hxx"
 
-QLocale* QLocale_new() {
+QLocale* QLocale_New() {
     return new QLocale();
 }
 
-QLocale* QLocale_new2(const libqt_string name) {
+QLocale* QLocale_New2(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QLocale(name_QString);
 }
 
-QLocale* QLocale_new3(libqt_string name) {
+QLocale* QLocale_New3(libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QLocale(name_QString);
 }
 
-QLocale* QLocale_new4(uint16_t language, uint16_t territory) {
+QLocale* QLocale_New4(uint16_t language, uint16_t territory) {
     return new QLocale(static_cast<QLocale::Language>(language), static_cast<QLocale::Territory>(territory));
 }
 
-QLocale* QLocale_new5(uint16_t language) {
+QLocale* QLocale_New5(uint16_t language) {
     return new QLocale(static_cast<QLocale::Language>(language));
 }
 
-QLocale* QLocale_new6(const QLocale* other) {
+QLocale* QLocale_New6(const QLocale* other) {
     return new QLocale(*other);
 }
 
-QLocale* QLocale_new7(uint16_t language, uint16_t script) {
+QLocale* QLocale_New7(uint16_t language, uint16_t script) {
     return new QLocale(static_cast<QLocale::Language>(language), static_cast<QLocale::Script>(script));
 }
 
-QLocale* QLocale_new8(uint16_t language, uint16_t script, uint16_t territory) {
+QLocale* QLocale_New8(uint16_t language, uint16_t script, uint16_t territory) {
     return new QLocale(static_cast<QLocale::Language>(language), static_cast<QLocale::Script>(script), static_cast<QLocale::Territory>(territory));
 }
 

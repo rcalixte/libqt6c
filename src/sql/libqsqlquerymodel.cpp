@@ -26,11 +26,11 @@
 #include "libqsqlquerymodel.hpp"
 #include "libqsqlquerymodel.hxx"
 
-QSqlQueryModel* QSqlQueryModel_new() {
+QSqlQueryModel* QSqlQueryModel_New() {
     return new VirtualQSqlQueryModel();
 }
 
-QSqlQueryModel* QSqlQueryModel_new2(QObject* parent) {
+QSqlQueryModel* QSqlQueryModel_New2(QObject* parent) {
     return new VirtualQSqlQueryModel(parent);
 }
 

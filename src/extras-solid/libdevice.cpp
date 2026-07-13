@@ -7,15 +7,15 @@
 #include "libdevice.hpp"
 #include "libdevice.hxx"
 
-Solid__Device* Solid__Device_new() {
+Solid__Device* Solid__Device_New() {
     return new Solid::Device();
 }
 
-Solid__Device* Solid__Device_new2(const Solid__Device* device) {
+Solid__Device* Solid__Device_New2(const Solid__Device* device) {
     return new Solid::Device(*device);
 }
 
-Solid__Device* Solid__Device_new3(const libqt_string udi) {
+Solid__Device* Solid__Device_New3(const libqt_string udi) {
     QString udi_QString = QString::fromUtf8(udi.data, udi.len);
     return new Solid::Device(udi_QString);
 }

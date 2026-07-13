@@ -4,7 +4,7 @@
 #include "libcategorymetadata.hpp"
 #include "libcategorymetadata.hxx"
 
-KNSCore__CategoryMetadata* KNSCore__CategoryMetadata_new(const KNSCore__CategoryMetadata* param1) {
+KNSCore__CategoryMetadata* KNSCore__CategoryMetadata_New(const KNSCore__CategoryMetadata* param1) {
     return new KNSCore::CategoryMetadata(*param1);
 }
 

@@ -39,11 +39,11 @@
 #include "libqstackedwidget.hpp"
 #include "libqstackedwidget.hxx"
 
-QStackedWidget* QStackedWidget_new(QWidget* parent) {
+QStackedWidget* QStackedWidget_New(QWidget* parent) {
     return new VirtualQStackedWidget(parent);
 }
 
-QStackedWidget* QStackedWidget_new2() {
+QStackedWidget* QStackedWidget_New2() {
     return new VirtualQStackedWidget();
 }
 

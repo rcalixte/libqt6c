@@ -4,23 +4,23 @@
 #include "libqgeocircle.h"
 
 QGeoCircle* q_geocircle_new() {
-    return QGeoCircle_new();
+    return QGeoCircle_New();
 }
 
 QGeoCircle* q_geocircle_new2(void* center) {
-    return QGeoCircle_new2((QGeoCoordinate*)center);
+    return QGeoCircle_New2((QGeoCoordinate*)center);
 }
 
 QGeoCircle* q_geocircle_new3(void* other) {
-    return QGeoCircle_new3((QGeoCircle*)other);
+    return QGeoCircle_New3((QGeoCircle*)other);
 }
 
 QGeoCircle* q_geocircle_new4(void* other) {
-    return QGeoCircle_new4((QGeoShape*)other);
+    return QGeoCircle_New4((QGeoShape*)other);
 }
 
 QGeoCircle* q_geocircle_new5(void* center, double radius) {
-    return QGeoCircle_new5((QGeoCoordinate*)center, radius);
+    return QGeoCircle_New5((QGeoCoordinate*)center, radius);
 }
 
 void q_geocircle_operator_assign(void* self, void* other) {

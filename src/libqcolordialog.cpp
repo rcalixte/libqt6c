@@ -39,19 +39,19 @@
 #include "libqcolordialog.hpp"
 #include "libqcolordialog.hxx"
 
-QColorDialog* QColorDialog_new(QWidget* parent) {
+QColorDialog* QColorDialog_New(QWidget* parent) {
     return new VirtualQColorDialog(parent);
 }
 
-QColorDialog* QColorDialog_new2() {
+QColorDialog* QColorDialog_New2() {
     return new VirtualQColorDialog();
 }
 
-QColorDialog* QColorDialog_new3(const QColor* initial) {
+QColorDialog* QColorDialog_New3(const QColor* initial) {
     return new VirtualQColorDialog(*initial);
 }
 
-QColorDialog* QColorDialog_new4(const QColor* initial, QWidget* parent) {
+QColorDialog* QColorDialog_New4(const QColor* initial, QWidget* parent) {
     return new VirtualQColorDialog(*initial, parent);
 }
 

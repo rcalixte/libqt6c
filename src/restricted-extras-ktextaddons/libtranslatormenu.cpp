@@ -12,11 +12,11 @@
 #include "libtranslatormenu.hpp"
 #include "libtranslatormenu.hxx"
 
-TextTranslator__TranslatorMenu* TextTranslator__TranslatorMenu_new() {
+TextTranslator__TranslatorMenu* TextTranslator__TranslatorMenu_New() {
     return new VirtualTextTranslatorTranslatorMenu();
 }
 
-TextTranslator__TranslatorMenu* TextTranslator__TranslatorMenu_new2(QObject* parent) {
+TextTranslator__TranslatorMenu* TextTranslator__TranslatorMenu_New2(QObject* parent) {
     return new VirtualTextTranslatorTranslatorMenu(parent);
 }
 

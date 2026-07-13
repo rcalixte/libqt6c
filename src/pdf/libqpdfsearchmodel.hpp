@@ -34,8 +34,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QPdfSearchModel* QPdfSearchModel_new();
-QPdfSearchModel* QPdfSearchModel_new2(QObject* parent);
+QPdfSearchModel* QPdfSearchModel_New();
+QPdfSearchModel* QPdfSearchModel_New2(QObject* parent);
 QMetaObject* QPdfSearchModel_MetaObject(const QPdfSearchModel* self);
 void* QPdfSearchModel_Metacast(QPdfSearchModel* self, const char* param1);
 int QPdfSearchModel_Metacall(QPdfSearchModel* self, int param1, int param2, void** param3);

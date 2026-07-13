@@ -8,15 +8,15 @@
 #include "libqnetworkrequestfactory.h"
 
 QNetworkRequestFactory* q_networkrequestfactory_new() {
-    return QNetworkRequestFactory_new();
+    return QNetworkRequestFactory_New();
 }
 
 QNetworkRequestFactory* q_networkrequestfactory_new2(void* baseUrl) {
-    return QNetworkRequestFactory_new2((QUrl*)baseUrl);
+    return QNetworkRequestFactory_New2((QUrl*)baseUrl);
 }
 
 QNetworkRequestFactory* q_networkrequestfactory_new3(void* other) {
-    return QNetworkRequestFactory_new3((QNetworkRequestFactory*)other);
+    return QNetworkRequestFactory_New3((QNetworkRequestFactory*)other);
 }
 
 void q_networkrequestfactory_operator_assign(void* self, void* other) {

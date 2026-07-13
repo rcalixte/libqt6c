@@ -11,11 +11,11 @@
 #include "libqnmeasatelliteinfosource.h"
 
 QNmeaSatelliteInfoSource* q_nmeasatelliteinfosource_new(int32_t mode) {
-    return QNmeaSatelliteInfoSource_new(mode);
+    return QNmeaSatelliteInfoSource_New(mode);
 }
 
 QNmeaSatelliteInfoSource* q_nmeasatelliteinfosource_new2(int32_t mode, void* parent) {
-    return QNmeaSatelliteInfoSource_new2(mode, (QObject*)parent);
+    return QNmeaSatelliteInfoSource_New2(mode, (QObject*)parent);
 }
 
 const QMetaObject* q_nmeasatelliteinfosource_meta_object(void* self) {

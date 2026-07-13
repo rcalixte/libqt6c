@@ -7,19 +7,19 @@
 #include "libqitemselectionmodel.h"
 
 QItemSelectionRange* q_itemselectionrange_new() {
-    return QItemSelectionRange_new();
+    return QItemSelectionRange_New();
 }
 
 QItemSelectionRange* q_itemselectionrange_new2(void* topL, void* bottomR) {
-    return QItemSelectionRange_new2((QModelIndex*)topL, (QModelIndex*)bottomR);
+    return QItemSelectionRange_New2((QModelIndex*)topL, (QModelIndex*)bottomR);
 }
 
 QItemSelectionRange* q_itemselectionrange_new3(void* index) {
-    return QItemSelectionRange_new3((QModelIndex*)index);
+    return QItemSelectionRange_New3((QModelIndex*)index);
 }
 
 QItemSelectionRange* q_itemselectionrange_new4(void* param1) {
-    return QItemSelectionRange_new4((QItemSelectionRange*)param1);
+    return QItemSelectionRange_New4((QItemSelectionRange*)param1);
 }
 
 void q_itemselectionrange_swap(void* self, void* other) {
@@ -100,15 +100,15 @@ void q_itemselectionrange_delete(void* self) {
 }
 
 QItemSelectionModel* q_itemselectionmodel_new() {
-    return QItemSelectionModel_new();
+    return QItemSelectionModel_New();
 }
 
 QItemSelectionModel* q_itemselectionmodel_new2(void* model, void* parent) {
-    return QItemSelectionModel_new2((QAbstractItemModel*)model, (QObject*)parent);
+    return QItemSelectionModel_New2((QAbstractItemModel*)model, (QObject*)parent);
 }
 
 QItemSelectionModel* q_itemselectionmodel_new3(void* model) {
-    return QItemSelectionModel_new3((QAbstractItemModel*)model);
+    return QItemSelectionModel_New3((QAbstractItemModel*)model);
 }
 
 const QMetaObject* q_itemselectionmodel_meta_object(void* self) {
@@ -735,15 +735,15 @@ void q_itemselectionmodel_delete(void* self) {
 // Also inherits unprojectable QList<QItemSelectionRange>
 
 QItemSelection* q_itemselection_new(void* topLeft, void* bottomRight) {
-    return QItemSelection_new((QModelIndex*)topLeft, (QModelIndex*)bottomRight);
+    return QItemSelection_New((QModelIndex*)topLeft, (QModelIndex*)bottomRight);
 }
 
 QItemSelection* q_itemselection_new2() {
-    return QItemSelection_new2();
+    return QItemSelection_New2();
 }
 
 QItemSelection* q_itemselection_new3(void* param1) {
-    return QItemSelection_new3((QItemSelection*)param1);
+    return QItemSelection_New3((QItemSelection*)param1);
 }
 
 void q_itemselection_select(void* self, void* topLeft, void* bottomRight) {

@@ -9,23 +9,23 @@
 #include "libqtextcursor.h"
 
 QTextCursor* q_textcursor_new() {
-    return QTextCursor_new();
+    return QTextCursor_New();
 }
 
 QTextCursor* q_textcursor_new2(void* document) {
-    return QTextCursor_new2((QTextDocument*)document);
+    return QTextCursor_New2((QTextDocument*)document);
 }
 
 QTextCursor* q_textcursor_new3(void* frame) {
-    return QTextCursor_new3((QTextFrame*)frame);
+    return QTextCursor_New3((QTextFrame*)frame);
 }
 
 QTextCursor* q_textcursor_new4(void* block) {
-    return QTextCursor_new4((QTextBlock*)block);
+    return QTextCursor_New4((QTextBlock*)block);
 }
 
 QTextCursor* q_textcursor_new5(void* cursor) {
-    return QTextCursor_new5((QTextCursor*)cursor);
+    return QTextCursor_New5((QTextCursor*)cursor);
 }
 
 void q_textcursor_operator_assign(void* self, void* other) {

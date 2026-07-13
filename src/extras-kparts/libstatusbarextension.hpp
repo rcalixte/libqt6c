@@ -37,8 +37,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KParts__StatusBarExtension* KParts__StatusBarExtension_new(KParts__Part* parent);
-KParts__StatusBarExtension* KParts__StatusBarExtension_new2(KParts__ReadOnlyPart* parent);
+KParts__StatusBarExtension* KParts__StatusBarExtension_New(KParts__Part* parent);
+KParts__StatusBarExtension* KParts__StatusBarExtension_New2(KParts__ReadOnlyPart* parent);
 QMetaObject* KParts__StatusBarExtension_MetaObject(const KParts__StatusBarExtension* self);
 void* KParts__StatusBarExtension_Metacast(KParts__StatusBarExtension* self, const char* param1);
 int KParts__StatusBarExtension_Metacall(KParts__StatusBarExtension* self, int param1, int param2, void** param3);

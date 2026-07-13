@@ -29,9 +29,9 @@ typedef struct Solid__DeviceInterface Solid__DeviceInterface;
 typedef struct Solid__Predicate Solid__Predicate;
 #endif
 
-Solid__Device* Solid__Device_new();
-Solid__Device* Solid__Device_new2(const Solid__Device* device);
-Solid__Device* Solid__Device_new3(const libqt_string udi);
+Solid__Device* Solid__Device_New();
+Solid__Device* Solid__Device_New2(const Solid__Device* device);
+Solid__Device* Solid__Device_New3(const libqt_string udi);
 libqt_list /* of Solid__Device* */ Solid__Device_AllDevices();
 libqt_list /* of Solid__Device* */ Solid__Device_ListFromType(const int* type);
 libqt_list /* of Solid__Device* */ Solid__Device_ListFromQuery(const Solid__Predicate* predicate);

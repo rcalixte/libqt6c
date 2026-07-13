@@ -4,11 +4,11 @@
 #include "libqplaceattribute.hpp"
 #include "libqplaceattribute.hxx"
 
-QPlaceAttribute* QPlaceAttribute_new() {
+QPlaceAttribute* QPlaceAttribute_New() {
     return new QPlaceAttribute();
 }
 
-QPlaceAttribute* QPlaceAttribute_new2(const QPlaceAttribute* other) {
+QPlaceAttribute* QPlaceAttribute_New2(const QPlaceAttribute* other) {
     return new QPlaceAttribute(*other);
 }
 

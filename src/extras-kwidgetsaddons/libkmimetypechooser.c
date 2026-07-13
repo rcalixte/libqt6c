@@ -15,11 +15,11 @@
 #include "libkmimetypechooser.h"
 
 KMimeTypeChooser* k_mimetypechooser_new() {
-    return KMimeTypeChooser_new();
+    return KMimeTypeChooser_New();
 }
 
 KMimeTypeChooser* k_mimetypechooser_new2(const char* text) {
-    return KMimeTypeChooser_new2(qstring(text));
+    return KMimeTypeChooser_New2(qstring(text));
 }
 
 KMimeTypeChooser* k_mimetypechooser_new3(const char* text, const char* selectedMimeTypes[static 1]) {
@@ -34,7 +34,7 @@ KMimeTypeChooser* k_mimetypechooser_new3(const char* text, const char* selectedM
     }
     libqt_list selectedMimeTypes_list = qlist(selectedMimeTypes_qstr, selectedMimeTypes_len);
 
-    KMimeTypeChooser* _out = KMimeTypeChooser_new3(qstring(text), selectedMimeTypes_list);
+    KMimeTypeChooser* _out = KMimeTypeChooser_New3(qstring(text), selectedMimeTypes_list);
     free(selectedMimeTypes_qstr);
     return _out;
 }
@@ -51,7 +51,7 @@ KMimeTypeChooser* k_mimetypechooser_new4(const char* text, const char* selectedM
     }
     libqt_list selectedMimeTypes_list = qlist(selectedMimeTypes_qstr, selectedMimeTypes_len);
 
-    KMimeTypeChooser* _out = KMimeTypeChooser_new4(qstring(text), selectedMimeTypes_list, qstring(defaultGroup));
+    KMimeTypeChooser* _out = KMimeTypeChooser_New4(qstring(text), selectedMimeTypes_list, qstring(defaultGroup));
     free(selectedMimeTypes_qstr);
     return _out;
 }
@@ -78,7 +78,7 @@ KMimeTypeChooser* k_mimetypechooser_new5(const char* text, const char* selectedM
     }
     libqt_list groupsToShow_list = qlist(groupsToShow_qstr, groupsToShow_len);
 
-    KMimeTypeChooser* _out = KMimeTypeChooser_new5(qstring(text), selectedMimeTypes_list, qstring(defaultGroup), groupsToShow_list);
+    KMimeTypeChooser* _out = KMimeTypeChooser_New5(qstring(text), selectedMimeTypes_list, qstring(defaultGroup), groupsToShow_list);
     free(selectedMimeTypes_qstr);
     free(groupsToShow_qstr);
     return _out;
@@ -106,7 +106,7 @@ KMimeTypeChooser* k_mimetypechooser_new6(const char* text, const char* selectedM
     }
     libqt_list groupsToShow_list = qlist(groupsToShow_qstr, groupsToShow_len);
 
-    KMimeTypeChooser* _out = KMimeTypeChooser_new6(qstring(text), selectedMimeTypes_list, qstring(defaultGroup), groupsToShow_list, visuals);
+    KMimeTypeChooser* _out = KMimeTypeChooser_New6(qstring(text), selectedMimeTypes_list, qstring(defaultGroup), groupsToShow_list, visuals);
     free(selectedMimeTypes_qstr);
     free(groupsToShow_qstr);
     return _out;
@@ -134,7 +134,7 @@ KMimeTypeChooser* k_mimetypechooser_new7(const char* text, const char* selectedM
     }
     libqt_list groupsToShow_list = qlist(groupsToShow_qstr, groupsToShow_len);
 
-    KMimeTypeChooser* _out = KMimeTypeChooser_new7(qstring(text), selectedMimeTypes_list, qstring(defaultGroup), groupsToShow_list, visuals, (QWidget*)parent);
+    KMimeTypeChooser* _out = KMimeTypeChooser_New7(qstring(text), selectedMimeTypes_list, qstring(defaultGroup), groupsToShow_list, visuals, (QWidget*)parent);
     free(selectedMimeTypes_qstr);
     free(groupsToShow_qstr);
     return _out;
@@ -2309,7 +2309,7 @@ void k_mimetypechooser_delete(void* self) {
 }
 
 KMimeTypeChooserDialog* k_mimetypechooserdialog_new() {
-    return KMimeTypeChooserDialog_new();
+    return KMimeTypeChooserDialog_New();
 }
 
 KMimeTypeChooserDialog* k_mimetypechooserdialog_new2(const char* title, const char* text, const char* selectedMimeTypes[static 1], const char* defaultGroup) {
@@ -2324,17 +2324,17 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new2(const char* title, const ch
     }
     libqt_list selectedMimeTypes_list = qlist(selectedMimeTypes_qstr, selectedMimeTypes_len);
 
-    KMimeTypeChooserDialog* _out = KMimeTypeChooserDialog_new2(qstring(title), qstring(text), selectedMimeTypes_list, qstring(defaultGroup));
+    KMimeTypeChooserDialog* _out = KMimeTypeChooserDialog_New2(qstring(title), qstring(text), selectedMimeTypes_list, qstring(defaultGroup));
     free(selectedMimeTypes_qstr);
     return _out;
 }
 
 KMimeTypeChooserDialog* k_mimetypechooserdialog_new3(const char* title) {
-    return KMimeTypeChooserDialog_new3(qstring(title));
+    return KMimeTypeChooserDialog_New3(qstring(title));
 }
 
 KMimeTypeChooserDialog* k_mimetypechooserdialog_new4(const char* title, const char* text) {
-    return KMimeTypeChooserDialog_new4(qstring(title), qstring(text));
+    return KMimeTypeChooserDialog_New4(qstring(title), qstring(text));
 }
 
 KMimeTypeChooserDialog* k_mimetypechooserdialog_new5(const char* title, const char* text, const char* selectedMimeTypes[static 1]) {
@@ -2349,7 +2349,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new5(const char* title, const ch
     }
     libqt_list selectedMimeTypes_list = qlist(selectedMimeTypes_qstr, selectedMimeTypes_len);
 
-    KMimeTypeChooserDialog* _out = KMimeTypeChooserDialog_new5(qstring(title), qstring(text), selectedMimeTypes_list);
+    KMimeTypeChooserDialog* _out = KMimeTypeChooserDialog_New5(qstring(title), qstring(text), selectedMimeTypes_list);
     free(selectedMimeTypes_qstr);
     return _out;
 }
@@ -2366,7 +2366,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new6(const char* title, const ch
     }
     libqt_list selectedMimeTypes_list = qlist(selectedMimeTypes_qstr, selectedMimeTypes_len);
 
-    KMimeTypeChooserDialog* _out = KMimeTypeChooserDialog_new6(qstring(title), qstring(text), selectedMimeTypes_list, qstring(defaultGroup));
+    KMimeTypeChooserDialog* _out = KMimeTypeChooserDialog_New6(qstring(title), qstring(text), selectedMimeTypes_list, qstring(defaultGroup));
     free(selectedMimeTypes_qstr);
     return _out;
 }
@@ -2393,7 +2393,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new7(const char* title, const ch
     }
     libqt_list groupsToShow_list = qlist(groupsToShow_qstr, groupsToShow_len);
 
-    KMimeTypeChooserDialog* _out = KMimeTypeChooserDialog_new7(qstring(title), qstring(text), selectedMimeTypes_list, qstring(defaultGroup), groupsToShow_list);
+    KMimeTypeChooserDialog* _out = KMimeTypeChooserDialog_New7(qstring(title), qstring(text), selectedMimeTypes_list, qstring(defaultGroup), groupsToShow_list);
     free(selectedMimeTypes_qstr);
     free(groupsToShow_qstr);
     return _out;
@@ -2421,7 +2421,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new8(const char* title, const ch
     }
     libqt_list groupsToShow_list = qlist(groupsToShow_qstr, groupsToShow_len);
 
-    KMimeTypeChooserDialog* _out = KMimeTypeChooserDialog_new8(qstring(title), qstring(text), selectedMimeTypes_list, qstring(defaultGroup), groupsToShow_list, visuals);
+    KMimeTypeChooserDialog* _out = KMimeTypeChooserDialog_New8(qstring(title), qstring(text), selectedMimeTypes_list, qstring(defaultGroup), groupsToShow_list, visuals);
     free(selectedMimeTypes_qstr);
     free(groupsToShow_qstr);
     return _out;
@@ -2449,7 +2449,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new9(const char* title, const ch
     }
     libqt_list groupsToShow_list = qlist(groupsToShow_qstr, groupsToShow_len);
 
-    KMimeTypeChooserDialog* _out = KMimeTypeChooserDialog_new9(qstring(title), qstring(text), selectedMimeTypes_list, qstring(defaultGroup), groupsToShow_list, visuals, (QWidget*)parent);
+    KMimeTypeChooserDialog* _out = KMimeTypeChooserDialog_New9(qstring(title), qstring(text), selectedMimeTypes_list, qstring(defaultGroup), groupsToShow_list, visuals, (QWidget*)parent);
     free(selectedMimeTypes_qstr);
     free(groupsToShow_qstr);
     return _out;
@@ -2467,7 +2467,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new10(const char* title, const c
     }
     libqt_list selectedMimeTypes_list = qlist(selectedMimeTypes_qstr, selectedMimeTypes_len);
 
-    KMimeTypeChooserDialog* _out = KMimeTypeChooserDialog_new10(qstring(title), qstring(text), selectedMimeTypes_list, qstring(defaultGroup), (QWidget*)parent);
+    KMimeTypeChooserDialog* _out = KMimeTypeChooserDialog_New10(qstring(title), qstring(text), selectedMimeTypes_list, qstring(defaultGroup), (QWidget*)parent);
     free(selectedMimeTypes_qstr);
     return _out;
 }

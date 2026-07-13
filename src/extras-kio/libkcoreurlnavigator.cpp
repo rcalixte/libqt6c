@@ -12,15 +12,15 @@
 #include "libkcoreurlnavigator.hpp"
 #include "libkcoreurlnavigator.hxx"
 
-KCoreUrlNavigator* KCoreUrlNavigator_new() {
+KCoreUrlNavigator* KCoreUrlNavigator_New() {
     return new VirtualKCoreUrlNavigator();
 }
 
-KCoreUrlNavigator* KCoreUrlNavigator_new2(const QUrl* url) {
+KCoreUrlNavigator* KCoreUrlNavigator_New2(const QUrl* url) {
     return new VirtualKCoreUrlNavigator(*url);
 }
 
-KCoreUrlNavigator* KCoreUrlNavigator_new3(const QUrl* url, QObject* parent) {
+KCoreUrlNavigator* KCoreUrlNavigator_New3(const QUrl* url, QObject* parent) {
     return new VirtualKCoreUrlNavigator(*url, parent);
 }
 

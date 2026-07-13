@@ -17,7 +17,7 @@
 #include "librenamefiledialog.h"
 
 KIO__RenameFileDialog* k_io__renamefiledialog_new(void* items, void* parent) {
-    return KIO__RenameFileDialog_new((KFileItemList*)items, (QWidget*)parent);
+    return KIO__RenameFileDialog_New((KFileItemList*)items, (QWidget*)parent);
 }
 
 const QMetaObject* k_io__renamefiledialog_meta_object(void* self) {

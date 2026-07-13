@@ -3,7 +3,7 @@
 #include "libpublisher.h"
 
 Attica__Field* k_attica__field_new(void* param1) {
-    return Attica__Field_new((Attica__Field*)param1);
+    return Attica__Field_New((Attica__Field*)param1);
 }
 
 const char* k_attica__field_type(void* self) {
@@ -87,11 +87,11 @@ void k_attica__field_delete(void* self) {
 }
 
 Attica__Publisher* k_attica__publisher_new() {
-    return Attica__Publisher_new();
+    return Attica__Publisher_New();
 }
 
 Attica__Publisher* k_attica__publisher_new2(void* other) {
-    return Attica__Publisher_new2((Attica__Publisher*)other);
+    return Attica__Publisher_New2((Attica__Publisher*)other);
 }
 
 void k_attica__publisher_operator_assign(void* self, void* other) {

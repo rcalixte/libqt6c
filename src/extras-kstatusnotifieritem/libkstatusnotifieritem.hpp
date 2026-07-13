@@ -29,10 +29,10 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWindow QWindow;
 #endif
 
-KStatusNotifierItem* KStatusNotifierItem_new();
-KStatusNotifierItem* KStatusNotifierItem_new2(const libqt_string id);
-KStatusNotifierItem* KStatusNotifierItem_new3(QObject* parent);
-KStatusNotifierItem* KStatusNotifierItem_new4(const libqt_string id, QObject* parent);
+KStatusNotifierItem* KStatusNotifierItem_New();
+KStatusNotifierItem* KStatusNotifierItem_New2(const libqt_string id);
+KStatusNotifierItem* KStatusNotifierItem_New3(QObject* parent);
+KStatusNotifierItem* KStatusNotifierItem_New4(const libqt_string id, QObject* parent);
 QMetaObject* KStatusNotifierItem_MetaObject(const KStatusNotifierItem* self);
 void* KStatusNotifierItem_Metacast(KStatusNotifierItem* self, const char* param1);
 int KStatusNotifierItem_Metacall(KStatusNotifierItem* self, int param1, int param2, void** param3);

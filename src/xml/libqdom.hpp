@@ -41,8 +41,8 @@ typedef struct QTextStream QTextStream;
 typedef struct QXmlStreamReader QXmlStreamReader;
 #endif
 
-QDomImplementation* QDomImplementation_new();
-QDomImplementation* QDomImplementation_new2(const QDomImplementation* implementation);
+QDomImplementation* QDomImplementation_New();
+QDomImplementation* QDomImplementation_New2(const QDomImplementation* implementation);
 void QDomImplementation_OperatorAssign(QDomImplementation* self, const QDomImplementation* other);
 bool QDomImplementation_OperatorEqual(const QDomImplementation* self, const QDomImplementation* other);
 bool QDomImplementation_OperatorNotEqual(const QDomImplementation* self, const QDomImplementation* other);
@@ -54,8 +54,8 @@ void QDomImplementation_SetInvalidDataPolicy(int policy);
 bool QDomImplementation_IsNull(QDomImplementation* self);
 void QDomImplementation_Delete(QDomImplementation* self);
 
-QDomNode* QDomNode_new();
-QDomNode* QDomNode_new2(const QDomNode* node);
+QDomNode* QDomNode_New();
+QDomNode* QDomNode_New2(const QDomNode* node);
 void QDomNode_OperatorAssign(QDomNode* self, const QDomNode* other);
 bool QDomNode_OperatorEqual(const QDomNode* self, const QDomNode* other);
 bool QDomNode_OperatorNotEqual(const QDomNode* self, const QDomNode* other);
@@ -133,8 +133,8 @@ QDomElement* QDomNode_NextSiblingElement1(const QDomNode* self, const libqt_stri
 QDomElement* QDomNode_NextSiblingElement2(const QDomNode* self, const libqt_string taName, const libqt_string namespaceURI);
 void QDomNode_Delete(QDomNode* self);
 
-QDomNodeList* QDomNodeList_new();
-QDomNodeList* QDomNodeList_new2(const QDomNodeList* nodeList);
+QDomNodeList* QDomNodeList_New();
+QDomNodeList* QDomNodeList_New2(const QDomNodeList* nodeList);
 void QDomNodeList_OperatorAssign(QDomNodeList* self, const QDomNodeList* other);
 bool QDomNodeList_OperatorEqual(const QDomNodeList* self, const QDomNodeList* other);
 bool QDomNodeList_OperatorNotEqual(const QDomNodeList* self, const QDomNodeList* other);
@@ -146,8 +146,8 @@ int QDomNodeList_Size(const QDomNodeList* self);
 bool QDomNodeList_IsEmpty(const QDomNodeList* self);
 void QDomNodeList_Delete(QDomNodeList* self);
 
-QDomDocumentType* QDomDocumentType_new();
-QDomDocumentType* QDomDocumentType_new2(const QDomDocumentType* documentType);
+QDomDocumentType* QDomDocumentType_New();
+QDomDocumentType* QDomDocumentType_New2(const QDomDocumentType* documentType);
 void QDomDocumentType_OperatorAssign(QDomDocumentType* self, const QDomDocumentType* other);
 libqt_string QDomDocumentType_Name(const QDomDocumentType* self);
 QDomNamedNodeMap* QDomDocumentType_Entities(const QDomDocumentType* self);
@@ -158,10 +158,10 @@ libqt_string QDomDocumentType_InternalSubset(const QDomDocumentType* self);
 int QDomDocumentType_NodeType(const QDomDocumentType* self);
 void QDomDocumentType_Delete(QDomDocumentType* self);
 
-QDomDocument* QDomDocument_new();
-QDomDocument* QDomDocument_new2(const libqt_string name);
-QDomDocument* QDomDocument_new3(const QDomDocumentType* doctype);
-QDomDocument* QDomDocument_new4(const QDomDocument* document);
+QDomDocument* QDomDocument_New();
+QDomDocument* QDomDocument_New2(const libqt_string name);
+QDomDocument* QDomDocument_New3(const QDomDocumentType* doctype);
+QDomDocument* QDomDocument_New4(const QDomDocument* document);
 void QDomDocument_OperatorAssign(QDomDocument* self, const QDomDocument* other);
 QDomElement* QDomDocument_CreateElement(QDomDocument* self, const libqt_string tagName);
 QDomDocumentFragment* QDomDocument_CreateDocumentFragment(QDomDocument* self);
@@ -197,8 +197,8 @@ libqt_string QDomDocument_ToString1(const QDomDocument* self, int indent);
 libqt_string QDomDocument_ToByteArray1(const QDomDocument* self, int indent);
 void QDomDocument_Delete(QDomDocument* self);
 
-QDomNamedNodeMap* QDomNamedNodeMap_new();
-QDomNamedNodeMap* QDomNamedNodeMap_new2(const QDomNamedNodeMap* namedNodeMap);
+QDomNamedNodeMap* QDomNamedNodeMap_New();
+QDomNamedNodeMap* QDomNamedNodeMap_New2(const QDomNamedNodeMap* namedNodeMap);
 void QDomNamedNodeMap_OperatorAssign(QDomNamedNodeMap* self, const QDomNamedNodeMap* other);
 bool QDomNamedNodeMap_OperatorEqual(const QDomNamedNodeMap* self, const QDomNamedNodeMap* other);
 bool QDomNamedNodeMap_OperatorNotEqual(const QDomNamedNodeMap* self, const QDomNamedNodeMap* other);
@@ -216,14 +216,14 @@ bool QDomNamedNodeMap_IsEmpty(const QDomNamedNodeMap* self);
 bool QDomNamedNodeMap_Contains(const QDomNamedNodeMap* self, const libqt_string name);
 void QDomNamedNodeMap_Delete(QDomNamedNodeMap* self);
 
-QDomDocumentFragment* QDomDocumentFragment_new();
-QDomDocumentFragment* QDomDocumentFragment_new2(const QDomDocumentFragment* documentFragment);
+QDomDocumentFragment* QDomDocumentFragment_New();
+QDomDocumentFragment* QDomDocumentFragment_New2(const QDomDocumentFragment* documentFragment);
 void QDomDocumentFragment_OperatorAssign(QDomDocumentFragment* self, const QDomDocumentFragment* other);
 int QDomDocumentFragment_NodeType(const QDomDocumentFragment* self);
 void QDomDocumentFragment_Delete(QDomDocumentFragment* self);
 
-QDomCharacterData* QDomCharacterData_new();
-QDomCharacterData* QDomCharacterData_new2(const QDomCharacterData* characterData);
+QDomCharacterData* QDomCharacterData_New();
+QDomCharacterData* QDomCharacterData_New2(const QDomCharacterData* characterData);
 void QDomCharacterData_OperatorAssign(QDomCharacterData* self, const QDomCharacterData* other);
 libqt_string QDomCharacterData_SubstringData(QDomCharacterData* self, unsigned long offset, unsigned long count);
 void QDomCharacterData_AppendData(QDomCharacterData* self, const libqt_string arg);
@@ -236,8 +236,8 @@ void QDomCharacterData_SetData(QDomCharacterData* self, const libqt_string data)
 int QDomCharacterData_NodeType(const QDomCharacterData* self);
 void QDomCharacterData_Delete(QDomCharacterData* self);
 
-QDomAttr* QDomAttr_new();
-QDomAttr* QDomAttr_new2(const QDomAttr* attr);
+QDomAttr* QDomAttr_New();
+QDomAttr* QDomAttr_New2(const QDomAttr* attr);
 void QDomAttr_OperatorAssign(QDomAttr* self, const QDomAttr* other);
 libqt_string QDomAttr_Name(const QDomAttr* self);
 bool QDomAttr_Specified(const QDomAttr* self);
@@ -247,8 +247,8 @@ void QDomAttr_SetValue(QDomAttr* self, const libqt_string value);
 int QDomAttr_NodeType(const QDomAttr* self);
 void QDomAttr_Delete(QDomAttr* self);
 
-QDomElement* QDomElement_new();
-QDomElement* QDomElement_new2(const QDomElement* element);
+QDomElement* QDomElement_New();
+QDomElement* QDomElement_New2(const QDomElement* element);
 void QDomElement_OperatorAssign(QDomElement* self, const QDomElement* other);
 libqt_string QDomElement_Attribute(const QDomElement* self, const libqt_string name);
 void QDomElement_SetAttribute(QDomElement* self, const libqt_string name, const libqt_string value);
@@ -285,35 +285,35 @@ libqt_string QDomElement_Attribute2(const QDomElement* self, const libqt_string 
 libqt_string QDomElement_AttributeNS3(const QDomElement* self, const libqt_string nsURI, const libqt_string localName, const libqt_string defValue);
 void QDomElement_Delete(QDomElement* self);
 
-QDomText* QDomText_new();
-QDomText* QDomText_new2(const QDomText* text);
+QDomText* QDomText_New();
+QDomText* QDomText_New2(const QDomText* text);
 void QDomText_OperatorAssign(QDomText* self, const QDomText* other);
 QDomText* QDomText_SplitText(QDomText* self, int offset);
 int QDomText_NodeType(const QDomText* self);
 void QDomText_Delete(QDomText* self);
 
-QDomComment* QDomComment_new();
-QDomComment* QDomComment_new2(const QDomComment* comment);
+QDomComment* QDomComment_New();
+QDomComment* QDomComment_New2(const QDomComment* comment);
 void QDomComment_OperatorAssign(QDomComment* self, const QDomComment* other);
 int QDomComment_NodeType(const QDomComment* self);
 void QDomComment_Delete(QDomComment* self);
 
-QDomCDATASection* QDomCDATASection_new();
-QDomCDATASection* QDomCDATASection_new2(const QDomCDATASection* cdataSection);
+QDomCDATASection* QDomCDATASection_New();
+QDomCDATASection* QDomCDATASection_New2(const QDomCDATASection* cdataSection);
 void QDomCDATASection_OperatorAssign(QDomCDATASection* self, const QDomCDATASection* other);
 int QDomCDATASection_NodeType(const QDomCDATASection* self);
 void QDomCDATASection_Delete(QDomCDATASection* self);
 
-QDomNotation* QDomNotation_new();
-QDomNotation* QDomNotation_new2(const QDomNotation* notation);
+QDomNotation* QDomNotation_New();
+QDomNotation* QDomNotation_New2(const QDomNotation* notation);
 void QDomNotation_OperatorAssign(QDomNotation* self, const QDomNotation* other);
 libqt_string QDomNotation_PublicId(const QDomNotation* self);
 libqt_string QDomNotation_SystemId(const QDomNotation* self);
 int QDomNotation_NodeType(const QDomNotation* self);
 void QDomNotation_Delete(QDomNotation* self);
 
-QDomEntity* QDomEntity_new();
-QDomEntity* QDomEntity_new2(const QDomEntity* entity);
+QDomEntity* QDomEntity_New();
+QDomEntity* QDomEntity_New2(const QDomEntity* entity);
 void QDomEntity_OperatorAssign(QDomEntity* self, const QDomEntity* other);
 libqt_string QDomEntity_PublicId(const QDomEntity* self);
 libqt_string QDomEntity_SystemId(const QDomEntity* self);
@@ -321,14 +321,14 @@ libqt_string QDomEntity_NotationName(const QDomEntity* self);
 int QDomEntity_NodeType(const QDomEntity* self);
 void QDomEntity_Delete(QDomEntity* self);
 
-QDomEntityReference* QDomEntityReference_new();
-QDomEntityReference* QDomEntityReference_new2(const QDomEntityReference* entityReference);
+QDomEntityReference* QDomEntityReference_New();
+QDomEntityReference* QDomEntityReference_New2(const QDomEntityReference* entityReference);
 void QDomEntityReference_OperatorAssign(QDomEntityReference* self, const QDomEntityReference* other);
 int QDomEntityReference_NodeType(const QDomEntityReference* self);
 void QDomEntityReference_Delete(QDomEntityReference* self);
 
-QDomProcessingInstruction* QDomProcessingInstruction_new();
-QDomProcessingInstruction* QDomProcessingInstruction_new2(const QDomProcessingInstruction* processingInstruction);
+QDomProcessingInstruction* QDomProcessingInstruction_New();
+QDomProcessingInstruction* QDomProcessingInstruction_New2(const QDomProcessingInstruction* processingInstruction);
 void QDomProcessingInstruction_OperatorAssign(QDomProcessingInstruction* self, const QDomProcessingInstruction* other);
 libqt_string QDomProcessingInstruction_Target(const QDomProcessingInstruction* self);
 libqt_string QDomProcessingInstruction_Data(const QDomProcessingInstruction* self);
@@ -336,7 +336,7 @@ void QDomProcessingInstruction_SetData(QDomProcessingInstruction* self, const li
 int QDomProcessingInstruction_NodeType(const QDomProcessingInstruction* self);
 void QDomProcessingInstruction_Delete(QDomProcessingInstruction* self);
 
-QDomDocument__ParseResult* QDomDocument__ParseResult_new(const QDomDocument__ParseResult* param1);
+QDomDocument__ParseResult* QDomDocument__ParseResult_New(const QDomDocument__ParseResult* param1);
 libqt_string QDomDocument__ParseResult_ErrorMessage(const QDomDocument__ParseResult* self);
 void QDomDocument__ParseResult_SetErrorMessage(QDomDocument__ParseResult* self, libqt_string errorMessage);
 ptrdiff_t QDomDocument__ParseResult_ErrorLine(const QDomDocument__ParseResult* self);

@@ -29,18 +29,18 @@
 #include "libqsqlrelationaltablemodel.hpp"
 #include "libqsqlrelationaltablemodel.hxx"
 
-QSqlRelation* QSqlRelation_new() {
+QSqlRelation* QSqlRelation_New() {
     return new QSqlRelation();
 }
 
-QSqlRelation* QSqlRelation_new2(const libqt_string aTableName, const libqt_string indexCol, const libqt_string displayCol) {
+QSqlRelation* QSqlRelation_New2(const libqt_string aTableName, const libqt_string indexCol, const libqt_string displayCol) {
     QString aTableName_QString = QString::fromUtf8(aTableName.data, aTableName.len);
     QString indexCol_QString = QString::fromUtf8(indexCol.data, indexCol.len);
     QString displayCol_QString = QString::fromUtf8(displayCol.data, displayCol.len);
     return new QSqlRelation(aTableName_QString, indexCol_QString, displayCol_QString);
 }
 
-QSqlRelation* QSqlRelation_new3(const QSqlRelation* param1) {
+QSqlRelation* QSqlRelation_New3(const QSqlRelation* param1) {
     return new QSqlRelation(*param1);
 }
 
@@ -92,15 +92,15 @@ void QSqlRelation_Delete(QSqlRelation* self) {
     delete self;
 }
 
-QSqlRelationalTableModel* QSqlRelationalTableModel_new() {
+QSqlRelationalTableModel* QSqlRelationalTableModel_New() {
     return new VirtualQSqlRelationalTableModel();
 }
 
-QSqlRelationalTableModel* QSqlRelationalTableModel_new2(QObject* parent) {
+QSqlRelationalTableModel* QSqlRelationalTableModel_New2(QObject* parent) {
     return new VirtualQSqlRelationalTableModel(parent);
 }
 
-QSqlRelationalTableModel* QSqlRelationalTableModel_new3(QObject* parent, const QSqlDatabase* db) {
+QSqlRelationalTableModel* QSqlRelationalTableModel_New3(QObject* parent, const QSqlDatabase* db) {
     return new VirtualQSqlRelationalTableModel(parent, *db);
 }
 

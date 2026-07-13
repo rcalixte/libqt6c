@@ -25,7 +25,7 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KSycoca* KSycoca_new();
+KSycoca* KSycoca_New();
 QMetaObject* KSycoca_MetaObject(const KSycoca* self);
 void* KSycoca_Metacast(KSycoca* self, const char* param1);
 int KSycoca_Metacall(KSycoca* self, int param1, int param2, void** param3);

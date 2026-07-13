@@ -9,7 +9,7 @@
 #include "libdndpopupmenuplugin.h"
 
 KIO__DndPopupMenuPlugin* k_io__dndpopupmenuplugin_new(void* parent) {
-    return KIO__DndPopupMenuPlugin_new((QObject*)parent);
+    return KIO__DndPopupMenuPlugin_New((QObject*)parent);
 }
 
 const QMetaObject* k_io__dndpopupmenuplugin_meta_object(void* self) {

@@ -3,7 +3,7 @@
 #include "libpropertysheet.h"
 
 QDesignerPropertySheetExtension* q_designerpropertysheetextension_new() {
-    return QDesignerPropertySheetExtension_new();
+    return QDesignerPropertySheetExtension_New();
 }
 
 int32_t q_designerpropertysheetextension_count(void* self) {

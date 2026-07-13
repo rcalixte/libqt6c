@@ -11,11 +11,11 @@
 #include "libqgridlayout.h"
 
 QGridLayout* q_gridlayout_new(void* parent) {
-    return QGridLayout_new((QWidget*)parent);
+    return QGridLayout_New((QWidget*)parent);
 }
 
 QGridLayout* q_gridlayout_new2() {
-    return QGridLayout_new2();
+    return QGridLayout_New2();
 }
 
 const QMetaObject* q_gridlayout_meta_object(void* self) {

@@ -5,19 +5,19 @@
 #include "libqtextdocumentwriter.h"
 
 QTextDocumentWriter* q_textdocumentwriter_new() {
-    return QTextDocumentWriter_new();
+    return QTextDocumentWriter_New();
 }
 
 QTextDocumentWriter* q_textdocumentwriter_new2(void* device, char* format) {
-    return QTextDocumentWriter_new2((QIODevice*)device, qstring(format));
+    return QTextDocumentWriter_New2((QIODevice*)device, qstring(format));
 }
 
 QTextDocumentWriter* q_textdocumentwriter_new3(const char* fileName) {
-    return QTextDocumentWriter_new3(qstring(fileName));
+    return QTextDocumentWriter_New3(qstring(fileName));
 }
 
 QTextDocumentWriter* q_textdocumentwriter_new4(const char* fileName, char* format) {
-    return QTextDocumentWriter_new4(qstring(fileName), qstring(format));
+    return QTextDocumentWriter_New4(qstring(fileName), qstring(format));
 }
 
 void q_textdocumentwriter_set_format(void* self, char* format) {

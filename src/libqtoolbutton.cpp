@@ -41,11 +41,11 @@
 #include "libqtoolbutton.hpp"
 #include "libqtoolbutton.hxx"
 
-QToolButton* QToolButton_new(QWidget* parent) {
+QToolButton* QToolButton_New(QWidget* parent) {
     return new VirtualQToolButton(parent);
 }
 
-QToolButton* QToolButton_new2() {
+QToolButton* QToolButton_New2() {
     return new VirtualQToolButton();
 }
 

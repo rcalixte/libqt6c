@@ -4,7 +4,7 @@
 #include "libqopenglfunctions_4_3_core.hpp"
 #include "libqopenglfunctions_4_3_core.hxx"
 
-QOpenGLFunctions_4_3_Core* QOpenGLFunctions_4_3_Core_new() {
+QOpenGLFunctions_4_3_Core* QOpenGLFunctions_4_3_Core_New() {
     return new VirtualQOpenGLFunctions_4_3_Core();
 }
 

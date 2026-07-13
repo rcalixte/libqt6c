@@ -14,11 +14,11 @@
 #include "libqpdflinkmodel.h"
 
 QPdfLinkModel* q_pdflinkmodel_new() {
-    return QPdfLinkModel_new();
+    return QPdfLinkModel_New();
 }
 
 QPdfLinkModel* q_pdflinkmodel_new2(void* parent) {
-    return QPdfLinkModel_new2((QObject*)parent);
+    return QPdfLinkModel_New2((QObject*)parent);
 }
 
 const QMetaObject* q_pdflinkmodel_meta_object(void* self) {

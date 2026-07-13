@@ -53,9 +53,9 @@ typedef struct QWidget QWidget;
 typedef struct TextGrammarCheck__GrammalecteConfigWidget TextGrammarCheck__GrammalecteConfigWidget;
 #endif
 
-TextGrammarCheck__GrammalecteConfigWidget* TextGrammarCheck__GrammalecteConfigWidget_new(QWidget* parent);
-TextGrammarCheck__GrammalecteConfigWidget* TextGrammarCheck__GrammalecteConfigWidget_new2();
-TextGrammarCheck__GrammalecteConfigWidget* TextGrammarCheck__GrammalecteConfigWidget_new3(QWidget* parent, bool disableMessageBox);
+TextGrammarCheck__GrammalecteConfigWidget* TextGrammarCheck__GrammalecteConfigWidget_New(QWidget* parent);
+TextGrammarCheck__GrammalecteConfigWidget* TextGrammarCheck__GrammalecteConfigWidget_New2();
+TextGrammarCheck__GrammalecteConfigWidget* TextGrammarCheck__GrammalecteConfigWidget_New3(QWidget* parent, bool disableMessageBox);
 QMetaObject* TextGrammarCheck__GrammalecteConfigWidget_MetaObject(const TextGrammarCheck__GrammalecteConfigWidget* self);
 void* TextGrammarCheck__GrammalecteConfigWidget_Metacast(TextGrammarCheck__GrammalecteConfigWidget* self, const char* param1);
 int TextGrammarCheck__GrammalecteConfigWidget_Metacall(TextGrammarCheck__GrammalecteConfigWidget* self, int param1, int param2, void** param3);

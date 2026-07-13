@@ -13,11 +13,11 @@
 #include "libunicodeemoticonmanager.hpp"
 #include "libunicodeemoticonmanager.hxx"
 
-TextEmoticonsCore__UnicodeEmoticonManager* TextEmoticonsCore__UnicodeEmoticonManager_new() {
+TextEmoticonsCore__UnicodeEmoticonManager* TextEmoticonsCore__UnicodeEmoticonManager_New() {
     return new VirtualTextEmoticonsCoreUnicodeEmoticonManager();
 }
 
-TextEmoticonsCore__UnicodeEmoticonManager* TextEmoticonsCore__UnicodeEmoticonManager_new2(QObject* parent) {
+TextEmoticonsCore__UnicodeEmoticonManager* TextEmoticonsCore__UnicodeEmoticonManager_New2(QObject* parent) {
     return new VirtualTextEmoticonsCoreUnicodeEmoticonManager(parent);
 }
 

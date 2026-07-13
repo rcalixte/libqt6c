@@ -14,7 +14,7 @@
 #include "libqgeopositioninfosource.hpp"
 #include "libqgeopositioninfosource.hxx"
 
-QGeoPositionInfoSource* QGeoPositionInfoSource_new(QObject* parent) {
+QGeoPositionInfoSource* QGeoPositionInfoSource_New(QObject* parent) {
     return new VirtualQGeoPositionInfoSource(parent);
 }
 

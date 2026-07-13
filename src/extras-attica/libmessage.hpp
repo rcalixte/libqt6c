@@ -22,8 +22,8 @@ typedef struct Attica__Message Attica__Message;
 typedef struct QDateTime QDateTime;
 #endif
 
-Attica__Message* Attica__Message_new();
-Attica__Message* Attica__Message_new2(const Attica__Message* other);
+Attica__Message* Attica__Message_New();
+Attica__Message* Attica__Message_New2(const Attica__Message* other);
 void Attica__Message_OperatorAssign(Attica__Message* self, const Attica__Message* other);
 void Attica__Message_SetId(Attica__Message* self, const libqt_string id);
 libqt_string Attica__Message_Id(const Attica__Message* self);

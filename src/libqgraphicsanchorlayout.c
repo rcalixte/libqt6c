@@ -291,11 +291,11 @@ void q_graphicsanchor_delete(void* self) {
 }
 
 QGraphicsAnchorLayout* q_graphicsanchorlayout_new() {
-    return QGraphicsAnchorLayout_new();
+    return QGraphicsAnchorLayout_New();
 }
 
 QGraphicsAnchorLayout* q_graphicsanchorlayout_new2(void* parent) {
-    return QGraphicsAnchorLayout_new2((QGraphicsLayoutItem*)parent);
+    return QGraphicsAnchorLayout_New2((QGraphicsLayoutItem*)parent);
 }
 
 QGraphicsAnchor* q_graphicsanchorlayout_add_anchor(void* self, void* firstItem, int32_t firstEdge, void* secondItem, int32_t secondEdge) {

@@ -8,7 +8,7 @@
 #include "libtransaction_1.h"
 
 PackageKit__Transaction* q_packagekit__transaction_new(void* tid) {
-    return PackageKit__Transaction_new((QDBusObjectPath*)tid);
+    return PackageKit__Transaction_New((QDBusObjectPath*)tid);
 }
 
 const QMetaObject* q_packagekit__transaction_meta_object(void* self) {

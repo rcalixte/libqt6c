@@ -52,10 +52,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QKeySequenceEdit* QKeySequenceEdit_new(QWidget* parent);
-QKeySequenceEdit* QKeySequenceEdit_new2();
-QKeySequenceEdit* QKeySequenceEdit_new3(const QKeySequence* keySequence);
-QKeySequenceEdit* QKeySequenceEdit_new4(const QKeySequence* keySequence, QWidget* parent);
+QKeySequenceEdit* QKeySequenceEdit_New(QWidget* parent);
+QKeySequenceEdit* QKeySequenceEdit_New2();
+QKeySequenceEdit* QKeySequenceEdit_New3(const QKeySequence* keySequence);
+QKeySequenceEdit* QKeySequenceEdit_New4(const QKeySequence* keySequence, QWidget* parent);
 QMetaObject* QKeySequenceEdit_MetaObject(const QKeySequenceEdit* self);
 void* QKeySequenceEdit_Metacast(QKeySequenceEdit* self, const char* param1);
 int QKeySequenceEdit_Metacall(QKeySequenceEdit* self, int param1, int param2, void** param3);

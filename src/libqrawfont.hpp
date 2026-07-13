@@ -29,12 +29,12 @@ typedef struct QRectF QRectF;
 typedef struct QTransform QTransform;
 #endif
 
-QRawFont* QRawFont_new();
-QRawFont* QRawFont_new2(const libqt_string fileName, double pixelSize);
-QRawFont* QRawFont_new3(const libqt_string fontData, double pixelSize);
-QRawFont* QRawFont_new4(const QRawFont* other);
-QRawFont* QRawFont_new5(const libqt_string fileName, double pixelSize, int hintingPreference);
-QRawFont* QRawFont_new6(const libqt_string fontData, double pixelSize, int hintingPreference);
+QRawFont* QRawFont_New();
+QRawFont* QRawFont_New2(const libqt_string fileName, double pixelSize);
+QRawFont* QRawFont_New3(const libqt_string fontData, double pixelSize);
+QRawFont* QRawFont_New4(const QRawFont* other);
+QRawFont* QRawFont_New5(const libqt_string fileName, double pixelSize, int hintingPreference);
+QRawFont* QRawFont_New6(const libqt_string fontData, double pixelSize, int hintingPreference);
 void QRawFont_OperatorAssign(QRawFont* self, const QRawFont* other);
 void QRawFont_Swap(QRawFont* self, QRawFont* other);
 bool QRawFont_IsValid(const QRawFont* self);

@@ -90,8 +90,8 @@ typedef struct Poppler__SoundObject Poppler__SoundObject;
 typedef struct QRectF QRectF;
 #endif
 
-Poppler__LinkDestination* Poppler__LinkDestination_new(const libqt_string description);
-Poppler__LinkDestination* Poppler__LinkDestination_new2(const Poppler__LinkDestination* other);
+Poppler__LinkDestination* Poppler__LinkDestination_New(const libqt_string description);
+Poppler__LinkDestination* Poppler__LinkDestination_New2(const Poppler__LinkDestination* other);
 int Poppler__LinkDestination_Kind(const Poppler__LinkDestination* self);
 int Poppler__LinkDestination_PageNumber(const Poppler__LinkDestination* self);
 double Poppler__LinkDestination_Left(const Poppler__LinkDestination* self);
@@ -107,7 +107,7 @@ libqt_string Poppler__LinkDestination_DestinationName(const Poppler__LinkDestina
 void Poppler__LinkDestination_OperatorAssign(Poppler__LinkDestination* self, const Poppler__LinkDestination* other);
 void Poppler__LinkDestination_Delete(Poppler__LinkDestination* self);
 
-Poppler__Link* Poppler__Link_new(const QRectF* linkArea);
+Poppler__Link* Poppler__Link_New(const QRectF* linkArea);
 int Poppler__Link_LinkType(const Poppler__Link* self);
 QRectF* Poppler__Link_LinkArea(const Poppler__Link* self);
 libqt_list /* of Poppler__Link* */ Poppler__Link_NextLinks(const Poppler__Link* self);
@@ -115,7 +115,7 @@ void Poppler__Link_OnLinkType(const Poppler__Link* self, intptr_t slot);
 int Poppler__Link_SuperLinkType(const Poppler__Link* self);
 void Poppler__Link_Delete(Poppler__Link* self);
 
-Poppler__LinkGoto* Poppler__LinkGoto_new(const QRectF* linkArea, const libqt_string extFileName, const Poppler__LinkDestination* destination);
+Poppler__LinkGoto* Poppler__LinkGoto_New(const QRectF* linkArea, const libqt_string extFileName, const Poppler__LinkDestination* destination);
 bool Poppler__LinkGoto_IsExternal(const Poppler__LinkGoto* self);
 libqt_string Poppler__LinkGoto_FileName(const Poppler__LinkGoto* self);
 Poppler__LinkDestination* Poppler__LinkGoto_Destination(const Poppler__LinkGoto* self);
@@ -124,7 +124,7 @@ void Poppler__LinkGoto_OnLinkType(const Poppler__LinkGoto* self, intptr_t slot);
 int Poppler__LinkGoto_SuperLinkType(const Poppler__LinkGoto* self);
 void Poppler__LinkGoto_Delete(Poppler__LinkGoto* self);
 
-Poppler__LinkExecute* Poppler__LinkExecute_new(const QRectF* linkArea, const libqt_string file, const libqt_string params);
+Poppler__LinkExecute* Poppler__LinkExecute_New(const QRectF* linkArea, const libqt_string file, const libqt_string params);
 libqt_string Poppler__LinkExecute_FileName(const Poppler__LinkExecute* self);
 libqt_string Poppler__LinkExecute_Parameters(const Poppler__LinkExecute* self);
 int Poppler__LinkExecute_LinkType(const Poppler__LinkExecute* self);
@@ -132,21 +132,21 @@ void Poppler__LinkExecute_OnLinkType(const Poppler__LinkExecute* self, intptr_t 
 int Poppler__LinkExecute_SuperLinkType(const Poppler__LinkExecute* self);
 void Poppler__LinkExecute_Delete(Poppler__LinkExecute* self);
 
-Poppler__LinkBrowse* Poppler__LinkBrowse_new(const QRectF* linkArea, const libqt_string url);
+Poppler__LinkBrowse* Poppler__LinkBrowse_New(const QRectF* linkArea, const libqt_string url);
 libqt_string Poppler__LinkBrowse_Url(const Poppler__LinkBrowse* self);
 int Poppler__LinkBrowse_LinkType(const Poppler__LinkBrowse* self);
 void Poppler__LinkBrowse_OnLinkType(const Poppler__LinkBrowse* self, intptr_t slot);
 int Poppler__LinkBrowse_SuperLinkType(const Poppler__LinkBrowse* self);
 void Poppler__LinkBrowse_Delete(Poppler__LinkBrowse* self);
 
-Poppler__LinkAction* Poppler__LinkAction_new(const QRectF* linkArea, int actionType);
+Poppler__LinkAction* Poppler__LinkAction_New(const QRectF* linkArea, int actionType);
 int Poppler__LinkAction_ActionType(const Poppler__LinkAction* self);
 int Poppler__LinkAction_LinkType(const Poppler__LinkAction* self);
 void Poppler__LinkAction_OnLinkType(const Poppler__LinkAction* self, intptr_t slot);
 int Poppler__LinkAction_SuperLinkType(const Poppler__LinkAction* self);
 void Poppler__LinkAction_Delete(Poppler__LinkAction* self);
 
-Poppler__LinkSound* Poppler__LinkSound_new(const QRectF* linkArea, double volume, bool sync, bool repeat, bool mix, Poppler__SoundObject* sound);
+Poppler__LinkSound* Poppler__LinkSound_New(const QRectF* linkArea, double volume, bool sync, bool repeat, bool mix, Poppler__SoundObject* sound);
 int Poppler__LinkSound_LinkType(const Poppler__LinkSound* self);
 double Poppler__LinkSound_Volume(const Poppler__LinkSound* self);
 bool Poppler__LinkSound_Synchronous(const Poppler__LinkSound* self);
@@ -164,7 +164,7 @@ libqt_string Poppler__LinkRendition_Script(const Poppler__LinkRendition* self);
 bool Poppler__LinkRendition_IsReferencedAnnotation(const Poppler__LinkRendition* self, const Poppler__ScreenAnnotation* annotation);
 void Poppler__LinkRendition_Delete(Poppler__LinkRendition* self);
 
-Poppler__LinkJavaScript* Poppler__LinkJavaScript_new(const QRectF* linkArea, const libqt_string js);
+Poppler__LinkJavaScript* Poppler__LinkJavaScript_New(const QRectF* linkArea, const libqt_string js);
 int Poppler__LinkJavaScript_LinkType(const Poppler__LinkJavaScript* self);
 libqt_string Poppler__LinkJavaScript_Script(const Poppler__LinkJavaScript* self);
 void Poppler__LinkJavaScript_OnLinkType(const Poppler__LinkJavaScript* self, intptr_t slot);

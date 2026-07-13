@@ -12,11 +12,11 @@
 #include "libabstractannotationitemdelegate.h"
 
 KTextEditor__StyleOptionAnnotationItem* k_texteditor__styleoptionannotationitem_new() {
-    return KTextEditor__StyleOptionAnnotationItem_new();
+    return KTextEditor__StyleOptionAnnotationItem_New();
 }
 
 KTextEditor__StyleOptionAnnotationItem* k_texteditor__styleoptionannotationitem_new2(void* other) {
-    return KTextEditor__StyleOptionAnnotationItem_new2((KTextEditor__StyleOptionAnnotationItem*)other);
+    return KTextEditor__StyleOptionAnnotationItem_New2((KTextEditor__StyleOptionAnnotationItem*)other);
 }
 
 int32_t k_texteditor__styleoptionannotationitem_wrapped_line(void* self) {

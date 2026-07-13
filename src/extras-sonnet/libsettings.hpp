@@ -28,8 +28,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct Sonnet__Settings Sonnet__Settings;
 #endif
 
-Sonnet__Settings* Sonnet__Settings_new();
-Sonnet__Settings* Sonnet__Settings_new2(QObject* parent);
+Sonnet__Settings* Sonnet__Settings_New();
+Sonnet__Settings* Sonnet__Settings_New2(QObject* parent);
 QMetaObject* Sonnet__Settings_MetaObject(const Sonnet__Settings* self);
 void* Sonnet__Settings_Metacast(Sonnet__Settings* self, const char* param1);
 int Sonnet__Settings_Metacall(Sonnet__Settings* self, int param1, int param2, void** param3);

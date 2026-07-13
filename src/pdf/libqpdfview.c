@@ -21,11 +21,11 @@
 #include "libqpdfview.h"
 
 QPdfView* q_pdfview_new(void* parent) {
-    return QPdfView_new((QWidget*)parent);
+    return QPdfView_New((QWidget*)parent);
 }
 
 QPdfView* q_pdfview_new2() {
-    return QPdfView_new2();
+    return QPdfView_New2();
 }
 
 const QMetaObject* q_pdfview_meta_object(void* self) {

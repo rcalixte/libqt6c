@@ -7,7 +7,7 @@
 #include "libunicodeemoticonparser.hpp"
 #include "libunicodeemoticonparser.hxx"
 
-TextEmoticonsCore__UnicodeEmoticonParser* TextEmoticonsCore__UnicodeEmoticonParser_new() {
+TextEmoticonsCore__UnicodeEmoticonParser* TextEmoticonsCore__UnicodeEmoticonParser_New() {
     return new TextEmoticonsCore::UnicodeEmoticonParser();
 }
 

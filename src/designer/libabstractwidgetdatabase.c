@@ -9,7 +9,7 @@
 #include "libabstractwidgetdatabase.h"
 
 QDesignerWidgetDataBaseItemInterface* q_designerwidgetdatabaseiteminterface_new() {
-    return QDesignerWidgetDataBaseItemInterface_new();
+    return QDesignerWidgetDataBaseItemInterface_New();
 }
 
 const char* q_designerwidgetdatabaseiteminterface_name(void* self) {
@@ -373,11 +373,11 @@ void q_designerwidgetdatabaseiteminterface_delete(void* self) {
 }
 
 QDesignerWidgetDataBaseInterface* q_designerwidgetdatabaseinterface_new() {
-    return QDesignerWidgetDataBaseInterface_new();
+    return QDesignerWidgetDataBaseInterface_New();
 }
 
 QDesignerWidgetDataBaseInterface* q_designerwidgetdatabaseinterface_new2(void* parent) {
-    return QDesignerWidgetDataBaseInterface_new2((QObject*)parent);
+    return QDesignerWidgetDataBaseInterface_New2((QObject*)parent);
 }
 
 const QMetaObject* q_designerwidgetdatabaseinterface_meta_object(void* self) {

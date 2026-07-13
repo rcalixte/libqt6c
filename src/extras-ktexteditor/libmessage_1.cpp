@@ -15,12 +15,12 @@
 #include "libmessage_1.hpp"
 #include "libmessage_1.hxx"
 
-KTextEditor__Message* KTextEditor__Message_new(const libqt_string richtext) {
+KTextEditor__Message* KTextEditor__Message_New(const libqt_string richtext) {
     QString richtext_QString = QString::fromUtf8(richtext.data, richtext.len);
     return new VirtualKTextEditorMessage(richtext_QString);
 }
 
-KTextEditor__Message* KTextEditor__Message_new2(const libqt_string richtext, int type) {
+KTextEditor__Message* KTextEditor__Message_New2(const libqt_string richtext, int type) {
     QString richtext_QString = QString::fromUtf8(richtext.data, richtext.len);
     return new VirtualKTextEditorMessage(richtext_QString, static_cast<KTextEditor::Message::MessageType>(type));
 }

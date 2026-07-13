@@ -22,11 +22,11 @@ typedef struct QFileInfo QFileInfo;
 typedef struct QTimeZone QTimeZone;
 #endif
 
-QFileInfo* QFileInfo_new();
-QFileInfo* QFileInfo_new2(const libqt_string file);
-QFileInfo* QFileInfo_new3(const QFileDevice* file);
-QFileInfo* QFileInfo_new4(const QDir* dir, const libqt_string file);
-QFileInfo* QFileInfo_new5(const QFileInfo* fileinfo);
+QFileInfo* QFileInfo_New();
+QFileInfo* QFileInfo_New2(const libqt_string file);
+QFileInfo* QFileInfo_New3(const QFileDevice* file);
+QFileInfo* QFileInfo_New4(const QDir* dir, const libqt_string file);
+QFileInfo* QFileInfo_New5(const QFileInfo* fileinfo);
 void QFileInfo_OperatorAssign(QFileInfo* self, const QFileInfo* fileinfo);
 void QFileInfo_Swap(QFileInfo* self, QFileInfo* other);
 void QFileInfo_SetFile(QFileInfo* self, const libqt_string file);

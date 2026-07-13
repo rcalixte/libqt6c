@@ -6,11 +6,11 @@
 #include "libunit.hpp"
 #include "libunit.hxx"
 
-KUnitConversion__Unit* KUnitConversion__Unit_new() {
+KUnitConversion__Unit* KUnitConversion__Unit_New() {
     return new KUnitConversion::Unit();
 }
 
-KUnitConversion__Unit* KUnitConversion__Unit_new2(const KUnitConversion__Unit* other) {
+KUnitConversion__Unit* KUnitConversion__Unit_New2(const KUnitConversion__Unit* other) {
     return new KUnitConversion::Unit(*other);
 }
 

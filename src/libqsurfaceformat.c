@@ -3,15 +3,15 @@
 #include "libqsurfaceformat.h"
 
 QSurfaceFormat* q_surfaceformat_new() {
-    return QSurfaceFormat_new();
+    return QSurfaceFormat_New();
 }
 
 QSurfaceFormat* q_surfaceformat_new2(int32_t options) {
-    return QSurfaceFormat_new2(options);
+    return QSurfaceFormat_New2(options);
 }
 
 QSurfaceFormat* q_surfaceformat_new3(void* other) {
-    return QSurfaceFormat_new3((QSurfaceFormat*)other);
+    return QSurfaceFormat_New3((QSurfaceFormat*)other);
 }
 
 void q_surfaceformat_operator_assign(void* self, void* other) {

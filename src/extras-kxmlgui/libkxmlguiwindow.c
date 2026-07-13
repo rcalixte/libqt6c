@@ -25,15 +25,15 @@
 #include "libkxmlguiwindow.h"
 
 KXmlGuiWindow* k_xmlguiwindow_new(void* parent) {
-    return KXmlGuiWindow_new((QWidget*)parent);
+    return KXmlGuiWindow_New((QWidget*)parent);
 }
 
 KXmlGuiWindow* k_xmlguiwindow_new2() {
-    return KXmlGuiWindow_new2();
+    return KXmlGuiWindow_New2();
 }
 
 KXmlGuiWindow* k_xmlguiwindow_new3(void* parent, int32_t flags) {
-    return KXmlGuiWindow_new3((QWidget*)parent, flags);
+    return KXmlGuiWindow_New3((QWidget*)parent, flags);
 }
 
 const QMetaObject* k_xmlguiwindow_meta_object(void* self) {

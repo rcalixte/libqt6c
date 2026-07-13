@@ -4,11 +4,11 @@
 #include "libformat.h"
 
 KSyntaxHighlighting__Format* k_syntaxhighlighting__format_new() {
-    return KSyntaxHighlighting__Format_new();
+    return KSyntaxHighlighting__Format_New();
 }
 
 KSyntaxHighlighting__Format* k_syntaxhighlighting__format_new2(void* other) {
-    return KSyntaxHighlighting__Format_new2((KSyntaxHighlighting__Format*)other);
+    return KSyntaxHighlighting__Format_New2((KSyntaxHighlighting__Format*)other);
 }
 
 void k_syntaxhighlighting__format_operator_assign(void* self, void* other) {

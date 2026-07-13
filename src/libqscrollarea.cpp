@@ -41,11 +41,11 @@
 #include "libqscrollarea.hpp"
 #include "libqscrollarea.hxx"
 
-QScrollArea* QScrollArea_new(QWidget* parent) {
+QScrollArea* QScrollArea_New(QWidget* parent) {
     return new VirtualQScrollArea(parent);
 }
 
-QScrollArea* QScrollArea_new2() {
+QScrollArea* QScrollArea_New2() {
     return new VirtualQScrollArea();
 }
 

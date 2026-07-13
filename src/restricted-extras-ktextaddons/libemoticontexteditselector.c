@@ -14,11 +14,11 @@
 #include "libemoticontexteditselector.h"
 
 TextEmoticonsWidgets__EmoticonTextEditSelector* k_textemoticonswidgets__emoticontexteditselector_new(void* parent) {
-    return TextEmoticonsWidgets__EmoticonTextEditSelector_new((QWidget*)parent);
+    return TextEmoticonsWidgets__EmoticonTextEditSelector_New((QWidget*)parent);
 }
 
 TextEmoticonsWidgets__EmoticonTextEditSelector* k_textemoticonswidgets__emoticontexteditselector_new2() {
-    return TextEmoticonsWidgets__EmoticonTextEditSelector_new2();
+    return TextEmoticonsWidgets__EmoticonTextEditSelector_New2();
 }
 
 const QMetaObject* k_textemoticonswidgets__emoticontexteditselector_meta_object(void* self) {

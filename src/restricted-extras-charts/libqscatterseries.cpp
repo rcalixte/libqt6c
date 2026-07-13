@@ -15,11 +15,11 @@
 #include "libqscatterseries.hpp"
 #include "libqscatterseries.hxx"
 
-QScatterSeries* QScatterSeries_new() {
+QScatterSeries* QScatterSeries_New() {
     return new VirtualQScatterSeries();
 }
 
-QScatterSeries* QScatterSeries_new2(QObject* parent) {
+QScatterSeries* QScatterSeries_New2(QObject* parent) {
     return new VirtualQScatterSeries(parent);
 }
 

@@ -6,36 +6,36 @@
 #include "libqsqlfield.hpp"
 #include "libqsqlfield.hxx"
 
-QSqlField* QSqlField_new() {
+QSqlField* QSqlField_New() {
     return new QSqlField();
 }
 
-QSqlField* QSqlField_new2(const QSqlField* other) {
+QSqlField* QSqlField_New2(const QSqlField* other) {
     return new QSqlField(*other);
 }
 
-QSqlField* QSqlField_new3(const libqt_string fieldName, int type) {
+QSqlField* QSqlField_New3(const libqt_string fieldName, int type) {
     QString fieldName_QString = QString::fromUtf8(fieldName.data, fieldName.len);
     return new QSqlField(fieldName_QString, static_cast<QVariant::Type>(type));
 }
 
-QSqlField* QSqlField_new4(const libqt_string fieldName) {
+QSqlField* QSqlField_New4(const libqt_string fieldName) {
     QString fieldName_QString = QString::fromUtf8(fieldName.data, fieldName.len);
     return new QSqlField(fieldName_QString);
 }
 
-QSqlField* QSqlField_new5(const libqt_string fieldName, QMetaType* type) {
+QSqlField* QSqlField_New5(const libqt_string fieldName, QMetaType* type) {
     QString fieldName_QString = QString::fromUtf8(fieldName.data, fieldName.len);
     return new QSqlField(fieldName_QString, *type);
 }
 
-QSqlField* QSqlField_new6(const libqt_string fieldName, QMetaType* type, const libqt_string tableName) {
+QSqlField* QSqlField_New6(const libqt_string fieldName, QMetaType* type, const libqt_string tableName) {
     QString fieldName_QString = QString::fromUtf8(fieldName.data, fieldName.len);
     QString tableName_QString = QString::fromUtf8(tableName.data, tableName.len);
     return new QSqlField(fieldName_QString, *type, tableName_QString);
 }
 
-QSqlField* QSqlField_new7(const libqt_string fieldName, int type, const libqt_string tableName) {
+QSqlField* QSqlField_New7(const libqt_string fieldName, int type, const libqt_string tableName) {
     QString fieldName_QString = QString::fromUtf8(fieldName.data, fieldName.len);
     QString tableName_QString = QString::fromUtf8(tableName.data, tableName.len);
     return new QSqlField(fieldName_QString, static_cast<QVariant::Type>(type), tableName_QString);

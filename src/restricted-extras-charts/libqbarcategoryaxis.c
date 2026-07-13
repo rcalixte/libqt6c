@@ -7,11 +7,11 @@
 #include "libqbarcategoryaxis.h"
 
 QBarCategoryAxis* q_barcategoryaxis_new() {
-    return QBarCategoryAxis_new();
+    return QBarCategoryAxis_New();
 }
 
 QBarCategoryAxis* q_barcategoryaxis_new2(void* parent) {
-    return QBarCategoryAxis_new2((QObject*)parent);
+    return QBarCategoryAxis_New2((QObject*)parent);
 }
 
 const QMetaObject* q_barcategoryaxis_meta_object(void* self) {

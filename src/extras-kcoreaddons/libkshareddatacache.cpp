@@ -5,12 +5,12 @@
 #include "libkshareddatacache.hpp"
 #include "libkshareddatacache.hxx"
 
-KSharedDataCache* KSharedDataCache_new(const libqt_string cacheName, unsigned int defaultCacheSize) {
+KSharedDataCache* KSharedDataCache_New(const libqt_string cacheName, unsigned int defaultCacheSize) {
     QString cacheName_QString = QString::fromUtf8(cacheName.data, cacheName.len);
     return new KSharedDataCache(cacheName_QString, static_cast<unsigned int>(defaultCacheSize));
 }
 
-KSharedDataCache* KSharedDataCache_new2(const libqt_string cacheName, unsigned int defaultCacheSize, unsigned int expectedItemSize) {
+KSharedDataCache* KSharedDataCache_New2(const libqt_string cacheName, unsigned int defaultCacheSize, unsigned int expectedItemSize) {
     QString cacheName_QString = QString::fromUtf8(cacheName.data, cacheName.len);
     return new KSharedDataCache(cacheName_QString, static_cast<unsigned int>(defaultCacheSize), static_cast<unsigned int>(expectedItemSize));
 }

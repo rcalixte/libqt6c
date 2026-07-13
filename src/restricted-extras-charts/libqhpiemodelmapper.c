@@ -9,11 +9,11 @@
 #include "libqhpiemodelmapper.h"
 
 QHPieModelMapper* q_hpiemodelmapper_new() {
-    return QHPieModelMapper_new();
+    return QHPieModelMapper_New();
 }
 
 QHPieModelMapper* q_hpiemodelmapper_new2(void* parent) {
-    return QHPieModelMapper_new2((QObject*)parent);
+    return QHPieModelMapper_New2((QObject*)parent);
 }
 
 const QMetaObject* q_hpiemodelmapper_meta_object(void* self) {

@@ -37,11 +37,11 @@
 #include "libtranslatorconfiguredialog.hpp"
 #include "libtranslatorconfiguredialog.hxx"
 
-TextTranslator__TranslatorConfigureDialog* TextTranslator__TranslatorConfigureDialog_new(QWidget* parent) {
+TextTranslator__TranslatorConfigureDialog* TextTranslator__TranslatorConfigureDialog_New(QWidget* parent) {
     return new VirtualTextTranslatorTranslatorConfigureDialog(parent);
 }
 
-TextTranslator__TranslatorConfigureDialog* TextTranslator__TranslatorConfigureDialog_new2() {
+TextTranslator__TranslatorConfigureDialog* TextTranslator__TranslatorConfigureDialog_New2() {
     return new VirtualTextTranslatorTranslatorConfigureDialog();
 }
 

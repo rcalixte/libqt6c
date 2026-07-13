@@ -55,10 +55,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KTreeWidgetSearchLine* KTreeWidgetSearchLine_new(QWidget* parent);
-KTreeWidgetSearchLine* KTreeWidgetSearchLine_new2();
-KTreeWidgetSearchLine* KTreeWidgetSearchLine_new3(QWidget* parent, const libqt_list /* of QTreeWidget* */ treeWidgets);
-KTreeWidgetSearchLine* KTreeWidgetSearchLine_new4(QWidget* parent, QTreeWidget* treeWidget);
+KTreeWidgetSearchLine* KTreeWidgetSearchLine_New(QWidget* parent);
+KTreeWidgetSearchLine* KTreeWidgetSearchLine_New2();
+KTreeWidgetSearchLine* KTreeWidgetSearchLine_New3(QWidget* parent, const libqt_list /* of QTreeWidget* */ treeWidgets);
+KTreeWidgetSearchLine* KTreeWidgetSearchLine_New4(QWidget* parent, QTreeWidget* treeWidget);
 QMetaObject* KTreeWidgetSearchLine_MetaObject(const KTreeWidgetSearchLine* self);
 void* KTreeWidgetSearchLine_Metacast(KTreeWidgetSearchLine* self, const char* param1);
 int KTreeWidgetSearchLine_Metacall(KTreeWidgetSearchLine* self, int param1, int param2, void** param3);

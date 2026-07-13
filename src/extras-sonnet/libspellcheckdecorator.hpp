@@ -33,8 +33,8 @@ typedef struct Sonnet__Highlighter Sonnet__Highlighter;
 typedef struct Sonnet__SpellCheckDecorator Sonnet__SpellCheckDecorator;
 #endif
 
-Sonnet__SpellCheckDecorator* Sonnet__SpellCheckDecorator_new(QTextEdit* textEdit);
-Sonnet__SpellCheckDecorator* Sonnet__SpellCheckDecorator_new2(QPlainTextEdit* textEdit);
+Sonnet__SpellCheckDecorator* Sonnet__SpellCheckDecorator_New(QTextEdit* textEdit);
+Sonnet__SpellCheckDecorator* Sonnet__SpellCheckDecorator_New2(QPlainTextEdit* textEdit);
 QMetaObject* Sonnet__SpellCheckDecorator_MetaObject(const Sonnet__SpellCheckDecorator* self);
 void* Sonnet__SpellCheckDecorator_Metacast(Sonnet__SpellCheckDecorator* self, const char* param1);
 int Sonnet__SpellCheckDecorator_Metacall(Sonnet__SpellCheckDecorator* self, int param1, int param2, void** param3);

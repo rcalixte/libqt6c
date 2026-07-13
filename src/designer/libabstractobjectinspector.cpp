@@ -39,11 +39,11 @@
 #include "libabstractobjectinspector.hpp"
 #include "libabstractobjectinspector.hxx"
 
-QDesignerObjectInspectorInterface* QDesignerObjectInspectorInterface_new(QWidget* parent) {
+QDesignerObjectInspectorInterface* QDesignerObjectInspectorInterface_New(QWidget* parent) {
     return new VirtualQDesignerObjectInspectorInterface(parent);
 }
 
-QDesignerObjectInspectorInterface* QDesignerObjectInspectorInterface_new2(QWidget* parent, int flags) {
+QDesignerObjectInspectorInterface* QDesignerObjectInspectorInterface_New2(QWidget* parent, int flags) {
     return new VirtualQDesignerObjectInspectorInterface(parent, static_cast<Qt::WindowFlags>(flags));
 }
 

@@ -21,8 +21,8 @@ typedef struct QObject QObject;
 typedef struct QWidget QWidget;
 #endif
 
-KCursor* KCursor_new(const KCursor* other);
-KCursor* KCursor_new2(KCursor* other);
+KCursor* KCursor_New(const KCursor* other);
+KCursor* KCursor_New2(KCursor* other);
 void KCursor_CopyAssign(KCursor* self, KCursor* other);
 void KCursor_MoveAssign(KCursor* self, KCursor* other);
 void KCursor_SetAutoHideCursor(QWidget* w, bool enable);

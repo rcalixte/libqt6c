@@ -17,11 +17,11 @@
 #include "libkdatetimeedit.h"
 
 KDateTimeEdit* k_datetimeedit_new(void* parent) {
-    return KDateTimeEdit_new((QWidget*)parent);
+    return KDateTimeEdit_New((QWidget*)parent);
 }
 
 KDateTimeEdit* k_datetimeedit_new2() {
-    return KDateTimeEdit_new2();
+    return KDateTimeEdit_New2();
 }
 
 const QMetaObject* k_datetimeedit_meta_object(void* self) {

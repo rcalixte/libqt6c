@@ -53,8 +53,8 @@ typedef struct QWidget QWidget;
 typedef struct TextCustomEditor__TextGoToLineWidget TextCustomEditor__TextGoToLineWidget;
 #endif
 
-TextCustomEditor__TextGoToLineWidget* TextCustomEditor__TextGoToLineWidget_new(QWidget* parent);
-TextCustomEditor__TextGoToLineWidget* TextCustomEditor__TextGoToLineWidget_new2();
+TextCustomEditor__TextGoToLineWidget* TextCustomEditor__TextGoToLineWidget_New(QWidget* parent);
+TextCustomEditor__TextGoToLineWidget* TextCustomEditor__TextGoToLineWidget_New2();
 QMetaObject* TextCustomEditor__TextGoToLineWidget_MetaObject(const TextCustomEditor__TextGoToLineWidget* self);
 void* TextCustomEditor__TextGoToLineWidget_Metacast(TextCustomEditor__TextGoToLineWidget* self, const char* param1);
 int TextCustomEditor__TextGoToLineWidget_Metacall(TextCustomEditor__TextGoToLineWidget* self, int param1, int param2, void** param3);

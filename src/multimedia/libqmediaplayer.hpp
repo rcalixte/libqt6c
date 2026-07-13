@@ -31,8 +31,8 @@ typedef struct QUrl QUrl;
 typedef struct QVideoSink QVideoSink;
 #endif
 
-QMediaPlayer* QMediaPlayer_new();
-QMediaPlayer* QMediaPlayer_new2(QObject* parent);
+QMediaPlayer* QMediaPlayer_New();
+QMediaPlayer* QMediaPlayer_New2(QObject* parent);
 QMetaObject* QMediaPlayer_MetaObject(const QMediaPlayer* self);
 void* QMediaPlayer_Metacast(QMediaPlayer* self, const char* param1);
 int QMediaPlayer_Metacall(QMediaPlayer* self, int param1, int param2, void** param3);

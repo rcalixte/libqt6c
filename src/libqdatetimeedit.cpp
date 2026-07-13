@@ -48,35 +48,35 @@
 #include "libqdatetimeedit.hpp"
 #include "libqdatetimeedit.hxx"
 
-QDateTimeEdit* QDateTimeEdit_new(QWidget* parent) {
+QDateTimeEdit* QDateTimeEdit_New(QWidget* parent) {
     return new VirtualQDateTimeEdit(parent);
 }
 
-QDateTimeEdit* QDateTimeEdit_new2() {
+QDateTimeEdit* QDateTimeEdit_New2() {
     return new VirtualQDateTimeEdit();
 }
 
-QDateTimeEdit* QDateTimeEdit_new3(const QDateTime* dt) {
+QDateTimeEdit* QDateTimeEdit_New3(const QDateTime* dt) {
     return new VirtualQDateTimeEdit(*dt);
 }
 
-QDateTimeEdit* QDateTimeEdit_new4(QDate* d) {
+QDateTimeEdit* QDateTimeEdit_New4(QDate* d) {
     return new VirtualQDateTimeEdit(*d);
 }
 
-QDateTimeEdit* QDateTimeEdit_new5(QTime* t) {
+QDateTimeEdit* QDateTimeEdit_New5(QTime* t) {
     return new VirtualQDateTimeEdit(*t);
 }
 
-QDateTimeEdit* QDateTimeEdit_new6(const QDateTime* dt, QWidget* parent) {
+QDateTimeEdit* QDateTimeEdit_New6(const QDateTime* dt, QWidget* parent) {
     return new VirtualQDateTimeEdit(*dt, parent);
 }
 
-QDateTimeEdit* QDateTimeEdit_new7(QDate* d, QWidget* parent) {
+QDateTimeEdit* QDateTimeEdit_New7(QDate* d, QWidget* parent) {
     return new VirtualQDateTimeEdit(*d, parent);
 }
 
-QDateTimeEdit* QDateTimeEdit_new8(QTime* t, QWidget* parent) {
+QDateTimeEdit* QDateTimeEdit_New8(QTime* t, QWidget* parent) {
     return new VirtualQDateTimeEdit(*t, parent);
 }
 
@@ -2319,19 +2319,19 @@ void QDateTimeEdit_Delete(QDateTimeEdit* self) {
     delete self;
 }
 
-QTimeEdit* QTimeEdit_new(QWidget* parent) {
+QTimeEdit* QTimeEdit_New(QWidget* parent) {
     return new VirtualQTimeEdit(parent);
 }
 
-QTimeEdit* QTimeEdit_new2() {
+QTimeEdit* QTimeEdit_New2() {
     return new VirtualQTimeEdit();
 }
 
-QTimeEdit* QTimeEdit_new3(QTime* time) {
+QTimeEdit* QTimeEdit_New3(QTime* time) {
     return new VirtualQTimeEdit(*time);
 }
 
-QTimeEdit* QTimeEdit_new4(QTime* time, QWidget* parent) {
+QTimeEdit* QTimeEdit_New4(QTime* time, QWidget* parent) {
     return new VirtualQTimeEdit(*time, parent);
 }
 
@@ -4401,19 +4401,19 @@ void QTimeEdit_Delete(QTimeEdit* self) {
     delete self;
 }
 
-QDateEdit* QDateEdit_new(QWidget* parent) {
+QDateEdit* QDateEdit_New(QWidget* parent) {
     return new VirtualQDateEdit(parent);
 }
 
-QDateEdit* QDateEdit_new2() {
+QDateEdit* QDateEdit_New2() {
     return new VirtualQDateEdit();
 }
 
-QDateEdit* QDateEdit_new3(QDate* date) {
+QDateEdit* QDateEdit_New3(QDate* date) {
     return new VirtualQDateEdit(*date);
 }
 
-QDateEdit* QDateEdit_new4(QDate* date, QWidget* parent) {
+QDateEdit* QDateEdit_New4(QDate* date, QWidget* parent) {
     return new VirtualQDateEdit(*date, parent);
 }
 

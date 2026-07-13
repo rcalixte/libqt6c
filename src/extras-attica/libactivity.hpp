@@ -27,8 +27,8 @@ typedef struct QDateTime QDateTime;
 typedef struct QUrl QUrl;
 #endif
 
-Attica__Activity* Attica__Activity_new();
-Attica__Activity* Attica__Activity_new2(const Attica__Activity* other);
+Attica__Activity* Attica__Activity_New();
+Attica__Activity* Attica__Activity_New2(const Attica__Activity* other);
 void Attica__Activity_OperatorAssign(Attica__Activity* self, const Attica__Activity* other);
 void Attica__Activity_SetId(Attica__Activity* self, const libqt_string id);
 libqt_string Attica__Activity_Id(const Attica__Activity* self);

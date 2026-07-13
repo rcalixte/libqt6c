@@ -50,15 +50,15 @@
 #include "libkxmlguiwindow.hpp"
 #include "libkxmlguiwindow.hxx"
 
-KXmlGuiWindow* KXmlGuiWindow_new(QWidget* parent) {
+KXmlGuiWindow* KXmlGuiWindow_New(QWidget* parent) {
     return new VirtualKXmlGuiWindow(parent);
 }
 
-KXmlGuiWindow* KXmlGuiWindow_new2() {
+KXmlGuiWindow* KXmlGuiWindow_New2() {
     return new VirtualKXmlGuiWindow();
 }
 
-KXmlGuiWindow* KXmlGuiWindow_new3(QWidget* parent, int flags) {
+KXmlGuiWindow* KXmlGuiWindow_New3(QWidget* parent, int flags) {
     return new VirtualKXmlGuiWindow(parent, static_cast<Qt::WindowFlags>(flags));
 }
 

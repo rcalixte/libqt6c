@@ -3,7 +3,7 @@
 #include "libmetadata_1.h"
 
 KIO__MetaData* k_io__metadata_new() {
-    return KIO__MetaData_new();
+    return KIO__MetaData_New();
 }
 
 KIO__MetaData* k_io__metadata_new2(libqt_map /* of const char* to const char* */ metaData) {
@@ -30,7 +30,7 @@ KIO__MetaData* k_io__metadata_new2(libqt_map /* of const char* to const char* */
         metaData_vdest[i] = qstring(metaData_varr[i]);
     }
 
-    KIO__MetaData* _out = KIO__MetaData_new2(metaData_ret);
+    KIO__MetaData* _out = KIO__MetaData_New2(metaData_ret);
     free(metaData_ret.keys);
     free(metaData_ret.values);
     return _out;
@@ -60,14 +60,14 @@ KIO__MetaData* k_io__metadata_new3(libqt_map /* of const char* to QVariant* */ p
         param1_vdest[i] = param1_varr[i];
     }
 
-    KIO__MetaData* _out = KIO__MetaData_new3(param1_ret);
+    KIO__MetaData* _out = KIO__MetaData_New3(param1_ret);
     free(param1_ret.keys);
     free(param1_ret.values);
     return _out;
 }
 
 KIO__MetaData* k_io__metadata_new4(void* param1) {
-    return KIO__MetaData_new4((KIO__MetaData*)param1);
+    return KIO__MetaData_New4((KIO__MetaData*)param1);
 }
 
 KIO__MetaData* k_io__metadata_operator_plus_assign(void* self, libqt_map /* of const char* to const char* */ metaData) {

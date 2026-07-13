@@ -24,11 +24,11 @@
 #include "libqguiapplication.hpp"
 #include "libqguiapplication.hxx"
 
-QGuiApplication* QGuiApplication_new(int* argc, char** argv) {
+QGuiApplication* QGuiApplication_New(int* argc, char** argv) {
     return new VirtualQGuiApplication(static_cast<int&>(*argc), argv);
 }
 
-QGuiApplication* QGuiApplication_new2(int* argc, char** argv, int param3) {
+QGuiApplication* QGuiApplication_New2(int* argc, char** argv, int param3) {
     return new VirtualQGuiApplication(static_cast<int&>(*argc), argv, static_cast<int>(param3));
 }
 

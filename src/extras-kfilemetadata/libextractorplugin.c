@@ -8,7 +8,7 @@
 #include "libextractorplugin.h"
 
 KFileMetaData__ExtractorPlugin* k_filemetadata__extractorplugin_new(void* parent) {
-    return KFileMetaData__ExtractorPlugin_new((QObject*)parent);
+    return KFileMetaData__ExtractorPlugin_New((QObject*)parent);
 }
 
 const QMetaObject* k_filemetadata__extractorplugin_meta_object(void* self) {

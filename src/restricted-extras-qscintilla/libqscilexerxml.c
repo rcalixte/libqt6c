@@ -12,11 +12,11 @@
 #include "libqscilexerxml.h"
 
 QsciLexerXML* q_scilexerxml_new() {
-    return QsciLexerXML_new();
+    return QsciLexerXML_New();
 }
 
 QsciLexerXML* q_scilexerxml_new2(void* parent) {
-    return QsciLexerXML_new2((QObject*)parent);
+    return QsciLexerXML_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexerxml_meta_object(void* self) {

@@ -17,11 +17,11 @@
 #include "libquiloader.hpp"
 #include "libquiloader.hxx"
 
-QUiLoader* QUiLoader_new() {
+QUiLoader* QUiLoader_New() {
     return new VirtualQUiLoader();
 }
 
-QUiLoader* QUiLoader_new2(QObject* parent) {
+QUiLoader* QUiLoader_New2(QObject* parent) {
     return new VirtualQUiLoader(parent);
 }
 

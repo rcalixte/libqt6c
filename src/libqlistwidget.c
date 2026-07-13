@@ -30,43 +30,43 @@
 #include "libqlistwidget.h"
 
 QListWidgetItem* q_listwidgetitem_new() {
-    return QListWidgetItem_new();
+    return QListWidgetItem_New();
 }
 
 QListWidgetItem* q_listwidgetitem_new2(const char* text) {
-    return QListWidgetItem_new2(qstring(text));
+    return QListWidgetItem_New2(qstring(text));
 }
 
 QListWidgetItem* q_listwidgetitem_new3(void* icon, const char* text) {
-    return QListWidgetItem_new3((QIcon*)icon, qstring(text));
+    return QListWidgetItem_New3((QIcon*)icon, qstring(text));
 }
 
 QListWidgetItem* q_listwidgetitem_new4(void* other) {
-    return QListWidgetItem_new4((QListWidgetItem*)other);
+    return QListWidgetItem_New4((QListWidgetItem*)other);
 }
 
 QListWidgetItem* q_listwidgetitem_new5(void* listview) {
-    return QListWidgetItem_new5((QListWidget*)listview);
+    return QListWidgetItem_New5((QListWidget*)listview);
 }
 
 QListWidgetItem* q_listwidgetitem_new6(void* listview, int type) {
-    return QListWidgetItem_new6((QListWidget*)listview, type);
+    return QListWidgetItem_New6((QListWidget*)listview, type);
 }
 
 QListWidgetItem* q_listwidgetitem_new7(const char* text, void* listview) {
-    return QListWidgetItem_new7(qstring(text), (QListWidget*)listview);
+    return QListWidgetItem_New7(qstring(text), (QListWidget*)listview);
 }
 
 QListWidgetItem* q_listwidgetitem_new8(const char* text, void* listview, int type) {
-    return QListWidgetItem_new8(qstring(text), (QListWidget*)listview, type);
+    return QListWidgetItem_New8(qstring(text), (QListWidget*)listview, type);
 }
 
 QListWidgetItem* q_listwidgetitem_new9(void* icon, const char* text, void* listview) {
-    return QListWidgetItem_new9((QIcon*)icon, qstring(text), (QListWidget*)listview);
+    return QListWidgetItem_New9((QIcon*)icon, qstring(text), (QListWidget*)listview);
 }
 
 QListWidgetItem* q_listwidgetitem_new10(void* icon, const char* text, void* listview, int type) {
-    return QListWidgetItem_new10((QIcon*)icon, qstring(text), (QListWidget*)listview, type);
+    return QListWidgetItem_New10((QIcon*)icon, qstring(text), (QListWidget*)listview, type);
 }
 
 QListWidgetItem* q_listwidgetitem_clone(void* self) {
@@ -290,11 +290,11 @@ void q_listwidgetitem_delete(void* self) {
 }
 
 QListWidget* q_listwidget_new(void* parent) {
-    return QListWidget_new((QWidget*)parent);
+    return QListWidget_New((QWidget*)parent);
 }
 
 QListWidget* q_listwidget_new2() {
-    return QListWidget_new2();
+    return QListWidget_New2();
 }
 
 const QMetaObject* q_listwidget_meta_object(void* self) {

@@ -38,11 +38,11 @@
 #include "libktitlewidget.hpp"
 #include "libktitlewidget.hxx"
 
-KTitleWidget* KTitleWidget_new(QWidget* parent) {
+KTitleWidget* KTitleWidget_New(QWidget* parent) {
     return new VirtualKTitleWidget(parent);
 }
 
-KTitleWidget* KTitleWidget_new2() {
+KTitleWidget* KTitleWidget_New2() {
     return new VirtualKTitleWidget();
 }
 

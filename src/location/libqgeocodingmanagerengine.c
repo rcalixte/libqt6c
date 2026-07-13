@@ -32,7 +32,7 @@ QGeoCodingManagerEngine* q_geocodingmanagerengine_new(libqt_map /* of const char
         parameters_vdest[i] = parameters_varr[i];
     }
 
-    QGeoCodingManagerEngine* _out = QGeoCodingManagerEngine_new(parameters_ret);
+    QGeoCodingManagerEngine* _out = QGeoCodingManagerEngine_New(parameters_ret);
     free(parameters_ret.keys);
     free(parameters_ret.values);
     return _out;
@@ -62,7 +62,7 @@ QGeoCodingManagerEngine* q_geocodingmanagerengine_new2(libqt_map /* of const cha
         parameters_vdest[i] = parameters_varr[i];
     }
 
-    QGeoCodingManagerEngine* _out = QGeoCodingManagerEngine_new2(parameters_ret, (QObject*)parent);
+    QGeoCodingManagerEngine* _out = QGeoCodingManagerEngine_New2(parameters_ret, (QObject*)parent);
     free(parameters_ret.keys);
     free(parameters_ret.values);
     return _out;

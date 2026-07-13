@@ -39,11 +39,11 @@
 #include "libktooltipwidget.hpp"
 #include "libktooltipwidget.hxx"
 
-KToolTipWidget* KToolTipWidget_new(QWidget* parent) {
+KToolTipWidget* KToolTipWidget_New(QWidget* parent) {
     return new VirtualKToolTipWidget(parent);
 }
 
-KToolTipWidget* KToolTipWidget_new2() {
+KToolTipWidget* KToolTipWidget_New2() {
     return new VirtualKToolTipWidget();
 }
 

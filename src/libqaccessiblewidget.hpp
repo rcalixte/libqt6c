@@ -42,9 +42,9 @@ struct pair_qaccessibleinterface_int32_t {
 };
 #endif
 
-QAccessibleWidget* QAccessibleWidget_new(QWidget* o);
-QAccessibleWidget* QAccessibleWidget_new2(QWidget* o, int r);
-QAccessibleWidget* QAccessibleWidget_new3(QWidget* o, int r, const libqt_string name);
+QAccessibleWidget* QAccessibleWidget_New(QWidget* o);
+QAccessibleWidget* QAccessibleWidget_New2(QWidget* o, int r);
+QAccessibleWidget* QAccessibleWidget_New3(QWidget* o, int r, const libqt_string name);
 bool QAccessibleWidget_IsValid(const QAccessibleWidget* self);
 QWindow* QAccessibleWidget_Window(const QAccessibleWidget* self);
 int QAccessibleWidget_ChildCount(const QAccessibleWidget* self);

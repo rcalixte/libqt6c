@@ -17,11 +17,11 @@
 #include "libqstyleditemdelegate.h"
 
 QStyledItemDelegate* q_styleditemdelegate_new() {
-    return QStyledItemDelegate_new();
+    return QStyledItemDelegate_New();
 }
 
 QStyledItemDelegate* q_styleditemdelegate_new2(void* parent) {
-    return QStyledItemDelegate_new2((QObject*)parent);
+    return QStyledItemDelegate_New2((QObject*)parent);
 }
 
 const QMetaObject* q_styleditemdelegate_meta_object(void* self) {

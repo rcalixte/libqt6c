@@ -29,8 +29,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVideoFrame QVideoFrame;
 #endif
 
-QImageCapture* QImageCapture_new();
-QImageCapture* QImageCapture_new2(QObject* parent);
+QImageCapture* QImageCapture_New();
+QImageCapture* QImageCapture_New2(QObject* parent);
 QMetaObject* QImageCapture_MetaObject(const QImageCapture* self);
 void* QImageCapture_Metacast(QImageCapture* self, const char* param1);
 int QImageCapture_Metacall(QImageCapture* self, int param1, int param2, void** param3);

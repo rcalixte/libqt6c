@@ -23,7 +23,7 @@
 #include "libcodecompletionmodel.hpp"
 #include "libcodecompletionmodel.hxx"
 
-KTextEditor__CodeCompletionModel* KTextEditor__CodeCompletionModel_new(QObject* parent) {
+KTextEditor__CodeCompletionModel* KTextEditor__CodeCompletionModel_New(QObject* parent) {
     return new VirtualKTextEditorCodeCompletionModel(parent);
 }
 

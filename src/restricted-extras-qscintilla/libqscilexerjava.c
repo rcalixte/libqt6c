@@ -12,11 +12,11 @@
 #include "libqscilexerjava.h"
 
 QsciLexerJava* q_scilexerjava_new() {
-    return QsciLexerJava_new();
+    return QsciLexerJava_New();
 }
 
 QsciLexerJava* q_scilexerjava_new2(void* parent) {
-    return QsciLexerJava_new2((QObject*)parent);
+    return QsciLexerJava_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexerjava_meta_object(void* self) {

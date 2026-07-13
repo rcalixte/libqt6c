@@ -4,19 +4,19 @@
 #include "libqurl.h"
 
 QUrl* q_url_new() {
-    return QUrl_new();
+    return QUrl_New();
 }
 
 QUrl* q_url_new2(void* copyVal) {
-    return QUrl_new2((QUrl*)copyVal);
+    return QUrl_New2((QUrl*)copyVal);
 }
 
 QUrl* q_url_new3(const char* url) {
-    return QUrl_new3(qstring(url));
+    return QUrl_New3(qstring(url));
 }
 
 QUrl* q_url_new4(const char* url, int32_t mode) {
-    return QUrl_new4(qstring(url), mode);
+    return QUrl_New4(qstring(url), mode);
 }
 
 void q_url_operator_assign(void* self, void* copyVal) {

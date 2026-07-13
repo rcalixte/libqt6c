@@ -14,16 +14,16 @@
 #include "libkcompressiondevice.hpp"
 #include "libkcompressiondevice.hxx"
 
-KCompressionDevice* KCompressionDevice_new(QIODevice* inputDevice, bool autoDeleteInputDevice, int type) {
+KCompressionDevice* KCompressionDevice_New(QIODevice* inputDevice, bool autoDeleteInputDevice, int type) {
     return new VirtualKCompressionDevice(inputDevice, autoDeleteInputDevice, static_cast<KCompressionDevice::CompressionType>(type));
 }
 
-KCompressionDevice* KCompressionDevice_new2(const libqt_string fileName, int type) {
+KCompressionDevice* KCompressionDevice_New2(const libqt_string fileName, int type) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualKCompressionDevice(fileName_QString, static_cast<KCompressionDevice::CompressionType>(type));
 }
 
-KCompressionDevice* KCompressionDevice_new3(const libqt_string fileName) {
+KCompressionDevice* KCompressionDevice_New3(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualKCompressionDevice(fileName_QString);
 }

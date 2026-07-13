@@ -58,10 +58,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KHistoryComboBox* KHistoryComboBox_new(QWidget* parent);
-KHistoryComboBox* KHistoryComboBox_new2();
-KHistoryComboBox* KHistoryComboBox_new3(bool useCompletion);
-KHistoryComboBox* KHistoryComboBox_new4(bool useCompletion, QWidget* parent);
+KHistoryComboBox* KHistoryComboBox_New(QWidget* parent);
+KHistoryComboBox* KHistoryComboBox_New2();
+KHistoryComboBox* KHistoryComboBox_New3(bool useCompletion);
+KHistoryComboBox* KHistoryComboBox_New4(bool useCompletion, QWidget* parent);
 QMetaObject* KHistoryComboBox_MetaObject(const KHistoryComboBox* self);
 void* KHistoryComboBox_Metacast(KHistoryComboBox* self, const char* param1);
 int KHistoryComboBox_Metacall(KHistoryComboBox* self, int param1, int param2, void** param3);

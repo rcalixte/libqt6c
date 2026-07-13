@@ -21,10 +21,10 @@ typedef Accounts::Error Accounts__Error;
 typedef struct Accounts__Error Accounts__Error;
 #endif
 
-Accounts__Error* Accounts__Error_new();
-Accounts__Error* Accounts__Error_new2(const Accounts__Error* src);
-Accounts__Error* Accounts__Error_new3(int type);
-Accounts__Error* Accounts__Error_new4(int type, const libqt_string message);
+Accounts__Error* Accounts__Error_New();
+Accounts__Error* Accounts__Error_New2(const Accounts__Error* src);
+Accounts__Error* Accounts__Error_New3(int type);
+Accounts__Error* Accounts__Error_New4(int type, const libqt_string message);
 void Accounts__Error_OperatorAssign(Accounts__Error* self, const Accounts__Error* src);
 int Accounts__Error_Type(const Accounts__Error* self);
 libqt_string Accounts__Error_Message(const Accounts__Error* self);

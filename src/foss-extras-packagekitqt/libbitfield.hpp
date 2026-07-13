@@ -21,9 +21,9 @@ typedef PackageKit::Bitfield PackageKit__Bitfield;
 typedef struct PackageKit__Bitfield PackageKit__Bitfield;
 #endif
 
-PackageKit__Bitfield* PackageKit__Bitfield_new();
-PackageKit__Bitfield* PackageKit__Bitfield_new2(unsigned long long val);
-PackageKit__Bitfield* PackageKit__Bitfield_new3(const PackageKit__Bitfield* param1);
+PackageKit__Bitfield* PackageKit__Bitfield_New();
+PackageKit__Bitfield* PackageKit__Bitfield_New2(unsigned long long val);
+PackageKit__Bitfield* PackageKit__Bitfield_New3(const PackageKit__Bitfield* param1);
 unsigned long long PackageKit__Bitfield_OperatorBitwiseAnd(const PackageKit__Bitfield* self, unsigned long long mask);
 void PackageKit__Bitfield_OperatorBitwiseAndAssign(PackageKit__Bitfield* self, unsigned long long mask);
 unsigned long long PackageKit__Bitfield_OperatorBitwiseOr(const PackageKit__Bitfield* self, unsigned long long mask);

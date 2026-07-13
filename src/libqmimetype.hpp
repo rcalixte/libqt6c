@@ -18,8 +18,8 @@ extern "C" {
 typedef struct QMimeType QMimeType;
 #endif
 
-QMimeType* QMimeType_new();
-QMimeType* QMimeType_new2(const QMimeType* other);
+QMimeType* QMimeType_New();
+QMimeType* QMimeType_New2(const QMimeType* other);
 void QMimeType_OperatorAssign(QMimeType* self, const QMimeType* other);
 void QMimeType_Swap(QMimeType* self, QMimeType* other);
 bool QMimeType_IsValid(const QMimeType* self);

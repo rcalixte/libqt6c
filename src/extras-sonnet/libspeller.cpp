@@ -6,15 +6,15 @@
 #include "libspeller.hpp"
 #include "libspeller.hxx"
 
-Sonnet__Speller* Sonnet__Speller_new() {
+Sonnet__Speller* Sonnet__Speller_New() {
     return new Sonnet::Speller();
 }
 
-Sonnet__Speller* Sonnet__Speller_new2(const Sonnet__Speller* speller) {
+Sonnet__Speller* Sonnet__Speller_New2(const Sonnet__Speller* speller) {
     return new Sonnet::Speller(*speller);
 }
 
-Sonnet__Speller* Sonnet__Speller_new3(const libqt_string lang) {
+Sonnet__Speller* Sonnet__Speller_New3(const libqt_string lang) {
     QString lang_QString = QString::fromUtf8(lang.data, lang.len);
     return new Sonnet::Speller(lang_QString);
 }

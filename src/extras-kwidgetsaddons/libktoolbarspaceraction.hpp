@@ -27,7 +27,7 @@ typedef struct QWidget QWidget;
 typedef struct QWidgetAction QWidgetAction;
 #endif
 
-KToolBarSpacerAction* KToolBarSpacerAction_new(QObject* parent);
+KToolBarSpacerAction* KToolBarSpacerAction_New(QObject* parent);
 QMetaObject* KToolBarSpacerAction_MetaObject(const KToolBarSpacerAction* self);
 void* KToolBarSpacerAction_Metacast(KToolBarSpacerAction* self, const char* param1);
 int KToolBarSpacerAction_Metacall(KToolBarSpacerAction* self, int param1, int param2, void** param3);

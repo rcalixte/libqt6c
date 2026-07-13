@@ -30,8 +30,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-KIO__OpenFileManagerWindowJob* KIO__OpenFileManagerWindowJob_new();
-KIO__OpenFileManagerWindowJob* KIO__OpenFileManagerWindowJob_new2(QObject* parent);
+KIO__OpenFileManagerWindowJob* KIO__OpenFileManagerWindowJob_New();
+KIO__OpenFileManagerWindowJob* KIO__OpenFileManagerWindowJob_New2(QObject* parent);
 QMetaObject* KIO__OpenFileManagerWindowJob_MetaObject(const KIO__OpenFileManagerWindowJob* self);
 void* KIO__OpenFileManagerWindowJob_Metacast(KIO__OpenFileManagerWindowJob* self, const char* param1);
 int KIO__OpenFileManagerWindowJob_Metacall(KIO__OpenFileManagerWindowJob* self, int param1, int param2, void** param3);

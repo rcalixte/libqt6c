@@ -14,11 +14,11 @@
 #include "libkconfigviewstatesaver.hpp"
 #include "libkconfigviewstatesaver.hxx"
 
-KConfigViewStateSaver* KConfigViewStateSaver_new() {
+KConfigViewStateSaver* KConfigViewStateSaver_New() {
     return new VirtualKConfigViewStateSaver();
 }
 
-KConfigViewStateSaver* KConfigViewStateSaver_new2(QObject* parent) {
+KConfigViewStateSaver* KConfigViewStateSaver_New2(QObject* parent) {
     return new VirtualKConfigViewStateSaver(parent);
 }
 

@@ -3,11 +3,11 @@
 #include "libqfontinfo.h"
 
 QFontInfo* q_fontinfo_new(void* param1) {
-    return QFontInfo_new((QFont*)param1);
+    return QFontInfo_New((QFont*)param1);
 }
 
 QFontInfo* q_fontinfo_new2(void* param1) {
-    return QFontInfo_new2((QFontInfo*)param1);
+    return QFontInfo_New2((QFontInfo*)param1);
 }
 
 void q_fontinfo_operator_assign(void* self, void* param1) {

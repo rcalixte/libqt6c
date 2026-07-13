@@ -4,7 +4,7 @@
 #include "libqwebenginecertificateerror.h"
 
 QWebEngineCertificateError* q_webenginecertificateerror_new(void* other) {
-    return QWebEngineCertificateError_new((QWebEngineCertificateError*)other);
+    return QWebEngineCertificateError_New((QWebEngineCertificateError*)other);
 }
 
 void q_webenginecertificateerror_operator_assign(void* self, void* other) {

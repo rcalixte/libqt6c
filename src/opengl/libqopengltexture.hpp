@@ -53,9 +53,9 @@ struct pair_int_int {
 };
 #endif
 
-QOpenGLTexture* QOpenGLTexture_new(int target);
-QOpenGLTexture* QOpenGLTexture_new2(const QImage* image);
-QOpenGLTexture* QOpenGLTexture_new3(const QImage* image, int genMipMaps);
+QOpenGLTexture* QOpenGLTexture_New(int target);
+QOpenGLTexture* QOpenGLTexture_New2(const QImage* image);
+QOpenGLTexture* QOpenGLTexture_New3(const QImage* image, int genMipMaps);
 int QOpenGLTexture_Target(const QOpenGLTexture* self);
 bool QOpenGLTexture_Create(QOpenGLTexture* self);
 void QOpenGLTexture_Destroy(QOpenGLTexture* self);

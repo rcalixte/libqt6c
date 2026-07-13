@@ -7,15 +7,15 @@
 #include "libidentityinfo.hpp"
 #include "libidentityinfo.hxx"
 
-SignOn__IdentityInfo* SignOn__IdentityInfo_new() {
+SignOn__IdentityInfo* SignOn__IdentityInfo_New() {
     return new SignOn::IdentityInfo();
 }
 
-SignOn__IdentityInfo* SignOn__IdentityInfo_new2(const SignOn__IdentityInfo* other) {
+SignOn__IdentityInfo* SignOn__IdentityInfo_New2(const SignOn__IdentityInfo* other) {
     return new SignOn::IdentityInfo(*other);
 }
 
-SignOn__IdentityInfo* SignOn__IdentityInfo_new3(const libqt_string caption, const libqt_string userName, const libqt_map /* of libqt_string to SignOn::MechanismsList */ methods) {
+SignOn__IdentityInfo* SignOn__IdentityInfo_New3(const libqt_string caption, const libqt_string userName, const libqt_map /* of libqt_string to SignOn::MechanismsList */ methods) {
     QString caption_QString = QString::fromUtf8(caption.data, caption.len);
     QString userName_QString = QString::fromUtf8(userName.data, userName.len);
     QMap<SignOn::MethodName, SignOn::MechanismsList> methods_QMap;

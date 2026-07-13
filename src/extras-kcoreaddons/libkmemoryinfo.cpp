@@ -3,11 +3,11 @@
 #include "libkmemoryinfo.hpp"
 #include "libkmemoryinfo.hxx"
 
-KMemoryInfo* KMemoryInfo_new() {
+KMemoryInfo* KMemoryInfo_New() {
     return new KMemoryInfo();
 }
 
-KMemoryInfo* KMemoryInfo_new2(const KMemoryInfo* other) {
+KMemoryInfo* KMemoryInfo_New2(const KMemoryInfo* other) {
     return new KMemoryInfo(*other);
 }
 

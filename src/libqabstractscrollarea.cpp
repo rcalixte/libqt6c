@@ -42,11 +42,11 @@
 #include "libqabstractscrollarea.hpp"
 #include "libqabstractscrollarea.hxx"
 
-QAbstractScrollArea* QAbstractScrollArea_new(QWidget* parent) {
+QAbstractScrollArea* QAbstractScrollArea_New(QWidget* parent) {
     return new VirtualQAbstractScrollArea(parent);
 }
 
-QAbstractScrollArea* QAbstractScrollArea_new2() {
+QAbstractScrollArea* QAbstractScrollArea_New2() {
     return new VirtualQAbstractScrollArea();
 }
 

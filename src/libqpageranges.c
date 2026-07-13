@@ -2,11 +2,11 @@
 #include "libqpageranges.h"
 
 QPageRanges* q_pageranges_new() {
-    return QPageRanges_new();
+    return QPageRanges_New();
 }
 
 QPageRanges* q_pageranges_new2(void* other) {
-    return QPageRanges_new2((QPageRanges*)other);
+    return QPageRanges_New2((QPageRanges*)other);
 }
 
 void q_pageranges_operator_assign(void* self, void* other) {
@@ -70,19 +70,19 @@ void q_pageranges_delete(void* self) {
 }
 
 QPageRanges__Range* q_pageranges__range_new(void* other) {
-    return QPageRanges__Range_new((QPageRanges__Range*)other);
+    return QPageRanges__Range_New((QPageRanges__Range*)other);
 }
 
 QPageRanges__Range* q_pageranges__range_new2(void* other) {
-    return QPageRanges__Range_new2((QPageRanges__Range*)other);
+    return QPageRanges__Range_New2((QPageRanges__Range*)other);
 }
 
 QPageRanges__Range* q_pageranges__range_new3() {
-    return QPageRanges__Range_new3();
+    return QPageRanges__Range_New3();
 }
 
 QPageRanges__Range* q_pageranges__range_new4(void* param1) {
-    return QPageRanges__Range_new4((QPageRanges__Range*)param1);
+    return QPageRanges__Range_New4((QPageRanges__Range*)param1);
 }
 
 void q_pageranges__range_copy_assign(void* self, void* other) {

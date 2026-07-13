@@ -7,7 +7,7 @@
 #include "libdesktopexecparser.hpp"
 #include "libdesktopexecparser.hxx"
 
-KIO__DesktopExecParser* KIO__DesktopExecParser_new(const KService* service, const libqt_list /* of QUrl* */ urls) {
+KIO__DesktopExecParser* KIO__DesktopExecParser_New(const KService* service, const libqt_list /* of QUrl* */ urls) {
     QList<QUrl> urls_QList;
     urls_QList.reserve(urls.len);
     QUrl** urls_arr = static_cast<QUrl**>(urls.data.ptr);

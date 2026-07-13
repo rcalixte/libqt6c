@@ -12,7 +12,7 @@
 #include "libwriterplugin.hpp"
 #include "libwriterplugin.hxx"
 
-KFileMetaData__WriterPlugin* KFileMetaData__WriterPlugin_new(QObject* parent) {
+KFileMetaData__WriterPlugin* KFileMetaData__WriterPlugin_New(QObject* parent) {
     return new VirtualKFileMetaDataWriterPlugin(parent);
 }
 

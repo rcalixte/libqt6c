@@ -8,19 +8,19 @@
 #include "libqwebenginehttprequest.hpp"
 #include "libqwebenginehttprequest.hxx"
 
-QWebEngineHttpRequest* QWebEngineHttpRequest_new() {
+QWebEngineHttpRequest* QWebEngineHttpRequest_New() {
     return new QWebEngineHttpRequest();
 }
 
-QWebEngineHttpRequest* QWebEngineHttpRequest_new2(const QWebEngineHttpRequest* other) {
+QWebEngineHttpRequest* QWebEngineHttpRequest_New2(const QWebEngineHttpRequest* other) {
     return new QWebEngineHttpRequest(*other);
 }
 
-QWebEngineHttpRequest* QWebEngineHttpRequest_new3(const QUrl* url) {
+QWebEngineHttpRequest* QWebEngineHttpRequest_New3(const QUrl* url) {
     return new QWebEngineHttpRequest(*url);
 }
 
-QWebEngineHttpRequest* QWebEngineHttpRequest_new4(const QUrl* url, const int* method) {
+QWebEngineHttpRequest* QWebEngineHttpRequest_New4(const QUrl* url, const int* method) {
     return new QWebEngineHttpRequest(*url, (const QWebEngineHttpRequest::Method&)(*method));
 }
 

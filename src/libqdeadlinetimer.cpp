@@ -3,39 +3,39 @@
 #include "libqdeadlinetimer.hpp"
 #include "libqdeadlinetimer.hxx"
 
-QDeadlineTimer* QDeadlineTimer_new(const QDeadlineTimer* other) {
+QDeadlineTimer* QDeadlineTimer_New(const QDeadlineTimer* other) {
     return new QDeadlineTimer(*other);
 }
 
-QDeadlineTimer* QDeadlineTimer_new2(QDeadlineTimer* other) {
+QDeadlineTimer* QDeadlineTimer_New2(QDeadlineTimer* other) {
     return new QDeadlineTimer(std::move(*other));
 }
 
-QDeadlineTimer* QDeadlineTimer_new3() {
+QDeadlineTimer* QDeadlineTimer_New3() {
     return new QDeadlineTimer();
 }
 
-QDeadlineTimer* QDeadlineTimer_new4(int type_) {
+QDeadlineTimer* QDeadlineTimer_New4(int type_) {
     return new QDeadlineTimer(static_cast<Qt::TimerType>(type_));
 }
 
-QDeadlineTimer* QDeadlineTimer_new5(int param1) {
+QDeadlineTimer* QDeadlineTimer_New5(int param1) {
     return new QDeadlineTimer(static_cast<QDeadlineTimer::ForeverConstant>(param1));
 }
 
-QDeadlineTimer* QDeadlineTimer_new6(long long msecs) {
+QDeadlineTimer* QDeadlineTimer_New6(long long msecs) {
     return new QDeadlineTimer(static_cast<qint64>(msecs));
 }
 
-QDeadlineTimer* QDeadlineTimer_new7(const QDeadlineTimer* param1) {
+QDeadlineTimer* QDeadlineTimer_New7(const QDeadlineTimer* param1) {
     return new QDeadlineTimer(*param1);
 }
 
-QDeadlineTimer* QDeadlineTimer_new8(int param1, int type_) {
+QDeadlineTimer* QDeadlineTimer_New8(int param1, int type_) {
     return new QDeadlineTimer(static_cast<QDeadlineTimer::ForeverConstant>(param1), static_cast<Qt::TimerType>(type_));
 }
 
-QDeadlineTimer* QDeadlineTimer_new9(long long msecs, int type) {
+QDeadlineTimer* QDeadlineTimer_New9(long long msecs, int type) {
     return new QDeadlineTimer(static_cast<qint64>(msecs), static_cast<Qt::TimerType>(type));
 }
 

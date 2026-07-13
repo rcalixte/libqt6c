@@ -60,15 +60,15 @@
 #include "libqwidget.hpp"
 #include "libqwidget.hxx"
 
-QWidget* QWidget_new(QWidget* parent) {
+QWidget* QWidget_New(QWidget* parent) {
     return new VirtualQWidget(parent);
 }
 
-QWidget* QWidget_new2() {
+QWidget* QWidget_New2() {
     return new VirtualQWidget();
 }
 
-QWidget* QWidget_new3(QWidget* parent, int f) {
+QWidget* QWidget_New3(QWidget* parent, int f) {
     return new VirtualQWidget(parent, static_cast<Qt::WindowFlags>(f));
 }
 

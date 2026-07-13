@@ -21,30 +21,30 @@ typedef struct QDBusVariant QDBusVariant;
 typedef struct QVariant QVariant;
 #endif
 
-QDBusObjectPath* QDBusObjectPath_new();
-QDBusObjectPath* QDBusObjectPath_new2(const char* path);
-QDBusObjectPath* QDBusObjectPath_new3(libqt_string path);
-QDBusObjectPath* QDBusObjectPath_new4(const libqt_string path);
-QDBusObjectPath* QDBusObjectPath_new5(const QDBusObjectPath* param1);
+QDBusObjectPath* QDBusObjectPath_New();
+QDBusObjectPath* QDBusObjectPath_New2(const char* path);
+QDBusObjectPath* QDBusObjectPath_New3(libqt_string path);
+QDBusObjectPath* QDBusObjectPath_New4(const libqt_string path);
+QDBusObjectPath* QDBusObjectPath_New5(const QDBusObjectPath* param1);
 void QDBusObjectPath_Swap(QDBusObjectPath* self, QDBusObjectPath* other);
 void QDBusObjectPath_SetPath(QDBusObjectPath* self, const libqt_string path);
 libqt_string QDBusObjectPath_Path(const QDBusObjectPath* self);
 QVariant* QDBusObjectPath_ToQVariant(const QDBusObjectPath* self);
 void QDBusObjectPath_Delete(QDBusObjectPath* self);
 
-QDBusSignature* QDBusSignature_new();
-QDBusSignature* QDBusSignature_new2(const char* signature);
-QDBusSignature* QDBusSignature_new3(libqt_string signature);
-QDBusSignature* QDBusSignature_new4(const libqt_string signature);
-QDBusSignature* QDBusSignature_new5(const QDBusSignature* param1);
+QDBusSignature* QDBusSignature_New();
+QDBusSignature* QDBusSignature_New2(const char* signature);
+QDBusSignature* QDBusSignature_New3(libqt_string signature);
+QDBusSignature* QDBusSignature_New4(const libqt_string signature);
+QDBusSignature* QDBusSignature_New5(const QDBusSignature* param1);
 void QDBusSignature_Swap(QDBusSignature* self, QDBusSignature* other);
 void QDBusSignature_SetSignature(QDBusSignature* self, const libqt_string signature);
 libqt_string QDBusSignature_Signature(const QDBusSignature* self);
 void QDBusSignature_Delete(QDBusSignature* self);
 
-QDBusVariant* QDBusVariant_new();
-QDBusVariant* QDBusVariant_new2(const QVariant* variant);
-QDBusVariant* QDBusVariant_new3(const QDBusVariant* param1);
+QDBusVariant* QDBusVariant_New();
+QDBusVariant* QDBusVariant_New2(const QVariant* variant);
+QDBusVariant* QDBusVariant_New3(const QDBusVariant* param1);
 void QDBusVariant_Swap(QDBusVariant* self, QDBusVariant* other);
 void QDBusVariant_SetVariant(QDBusVariant* self, const QVariant* variant);
 QVariant* QDBusVariant_Variant(const QDBusVariant* self);

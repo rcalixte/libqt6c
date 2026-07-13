@@ -12,11 +12,11 @@
 #include "libqopengldebug.hpp"
 #include "libqopengldebug.hxx"
 
-QOpenGLDebugMessage* QOpenGLDebugMessage_new() {
+QOpenGLDebugMessage* QOpenGLDebugMessage_New() {
     return new QOpenGLDebugMessage();
 }
 
-QOpenGLDebugMessage* QOpenGLDebugMessage_new2(const QOpenGLDebugMessage* debugMessage) {
+QOpenGLDebugMessage* QOpenGLDebugMessage_New2(const QOpenGLDebugMessage* debugMessage) {
     return new QOpenGLDebugMessage(*debugMessage);
 }
 
@@ -108,11 +108,11 @@ void QOpenGLDebugMessage_Delete(QOpenGLDebugMessage* self) {
     delete self;
 }
 
-QOpenGLDebugLogger* QOpenGLDebugLogger_new() {
+QOpenGLDebugLogger* QOpenGLDebugLogger_New() {
     return new VirtualQOpenGLDebugLogger();
 }
 
-QOpenGLDebugLogger* QOpenGLDebugLogger_new2(QObject* parent) {
+QOpenGLDebugLogger* QOpenGLDebugLogger_New2(QObject* parent) {
     return new VirtualQOpenGLDebugLogger(parent);
 }
 

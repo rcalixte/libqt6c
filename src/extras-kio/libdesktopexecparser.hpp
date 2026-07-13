@@ -23,7 +23,7 @@ typedef struct KService KService;
 typedef struct QUrl QUrl;
 #endif
 
-KIO__DesktopExecParser* KIO__DesktopExecParser_new(const KService* service, const libqt_list /* of QUrl* */ urls);
+KIO__DesktopExecParser* KIO__DesktopExecParser_New(const KService* service, const libqt_list /* of QUrl* */ urls);
 void KIO__DesktopExecParser_SetUrlsAreTempFiles(KIO__DesktopExecParser* self, bool tempFiles);
 void KIO__DesktopExecParser_SetSuggestedFileName(KIO__DesktopExecParser* self, const libqt_string suggestedFileName);
 libqt_list /* of libqt_string */ KIO__DesktopExecParser_ResultingArguments(const KIO__DesktopExecParser* self);

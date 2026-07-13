@@ -55,27 +55,27 @@
 #include "libqundoview.hpp"
 #include "libqundoview.hxx"
 
-QUndoView* QUndoView_new(QWidget* parent) {
+QUndoView* QUndoView_New(QWidget* parent) {
     return new VirtualQUndoView(parent);
 }
 
-QUndoView* QUndoView_new2() {
+QUndoView* QUndoView_New2() {
     return new VirtualQUndoView();
 }
 
-QUndoView* QUndoView_new3(QUndoStack* stack) {
+QUndoView* QUndoView_New3(QUndoStack* stack) {
     return new VirtualQUndoView(stack);
 }
 
-QUndoView* QUndoView_new4(QUndoGroup* group) {
+QUndoView* QUndoView_New4(QUndoGroup* group) {
     return new VirtualQUndoView(group);
 }
 
-QUndoView* QUndoView_new5(QUndoStack* stack, QWidget* parent) {
+QUndoView* QUndoView_New5(QUndoStack* stack, QWidget* parent) {
     return new VirtualQUndoView(stack, parent);
 }
 
-QUndoView* QUndoView_new6(QUndoGroup* group, QWidget* parent) {
+QUndoView* QUndoView_New6(QUndoGroup* group, QWidget* parent) {
     return new VirtualQUndoView(group, parent);
 }
 

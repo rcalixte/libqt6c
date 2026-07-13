@@ -27,12 +27,12 @@ typedef struct QChar QChar;
 typedef struct QVariant QVariant;
 #endif
 
-KUnitConversion__Value* KUnitConversion__Value_new();
-KUnitConversion__Value* KUnitConversion__Value_new2(double number, const KUnitConversion__Unit* unit);
-KUnitConversion__Value* KUnitConversion__Value_new3(double number, const libqt_string unitString);
-KUnitConversion__Value* KUnitConversion__Value_new4(double number, int unitId);
-KUnitConversion__Value* KUnitConversion__Value_new5(const QVariant* number, const libqt_string unitString);
-KUnitConversion__Value* KUnitConversion__Value_new6(const KUnitConversion__Value* other);
+KUnitConversion__Value* KUnitConversion__Value_New();
+KUnitConversion__Value* KUnitConversion__Value_New2(double number, const KUnitConversion__Unit* unit);
+KUnitConversion__Value* KUnitConversion__Value_New3(double number, const libqt_string unitString);
+KUnitConversion__Value* KUnitConversion__Value_New4(double number, int unitId);
+KUnitConversion__Value* KUnitConversion__Value_New5(const QVariant* number, const libqt_string unitString);
+KUnitConversion__Value* KUnitConversion__Value_New6(const KUnitConversion__Value* other);
 void KUnitConversion__Value_OperatorAssign(KUnitConversion__Value* self, const KUnitConversion__Value* other);
 void KUnitConversion__Value_Swap(KUnitConversion__Value* self, KUnitConversion__Value* other);
 bool KUnitConversion__Value_OperatorEqual(const KUnitConversion__Value* self, const KUnitConversion__Value* other);

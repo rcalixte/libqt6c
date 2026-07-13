@@ -21,13 +21,13 @@ typedef struct QJsonObject QJsonObject;
 typedef struct QPluginLoader QPluginLoader;
 #endif
 
-KPluginMetaData* KPluginMetaData_new();
-KPluginMetaData* KPluginMetaData_new2(const QPluginLoader* loader);
-KPluginMetaData* KPluginMetaData_new3(const libqt_string pluginFile);
-KPluginMetaData* KPluginMetaData_new4(const QJsonObject* metaData, const libqt_string fileName);
-KPluginMetaData* KPluginMetaData_new5(const KPluginMetaData* param1);
-KPluginMetaData* KPluginMetaData_new6(const QPluginLoader* loader, int options);
-KPluginMetaData* KPluginMetaData_new7(const libqt_string pluginFile, int options);
+KPluginMetaData* KPluginMetaData_New();
+KPluginMetaData* KPluginMetaData_New2(const QPluginLoader* loader);
+KPluginMetaData* KPluginMetaData_New3(const libqt_string pluginFile);
+KPluginMetaData* KPluginMetaData_New4(const QJsonObject* metaData, const libqt_string fileName);
+KPluginMetaData* KPluginMetaData_New5(const KPluginMetaData* param1);
+KPluginMetaData* KPluginMetaData_New6(const QPluginLoader* loader, int options);
+KPluginMetaData* KPluginMetaData_New7(const libqt_string pluginFile, int options);
 void KPluginMetaData_OperatorAssign(KPluginMetaData* self, const KPluginMetaData* param1);
 KPluginMetaData* KPluginMetaData_FromJsonFile(const libqt_string jsonFile);
 KPluginMetaData* KPluginMetaData_FindPluginById(const libqt_string directory, const libqt_string pluginId);

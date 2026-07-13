@@ -5,11 +5,11 @@
 #include "libkplotaxis.hpp"
 #include "libkplotaxis.hxx"
 
-KPlotAxis* KPlotAxis_new() {
+KPlotAxis* KPlotAxis_New() {
     return new KPlotAxis();
 }
 
-KPlotAxis* KPlotAxis_new2(const libqt_string label) {
+KPlotAxis* KPlotAxis_New2(const libqt_string label) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return new KPlotAxis(label_QString);
 }

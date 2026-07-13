@@ -2,23 +2,23 @@
 #include "libqpoint.h"
 
 QPoint* q_point_new(void* other) {
-    return QPoint_new((QPoint*)other);
+    return QPoint_New((QPoint*)other);
 }
 
 QPoint* q_point_new2(void* other) {
-    return QPoint_new2((QPoint*)other);
+    return QPoint_New2((QPoint*)other);
 }
 
 QPoint* q_point_new3() {
-    return QPoint_new3();
+    return QPoint_New3();
 }
 
 QPoint* q_point_new4(int xpos, int ypos) {
-    return QPoint_new4(xpos, ypos);
+    return QPoint_New4(xpos, ypos);
 }
 
 QPoint* q_point_new5(void* param1) {
-    return QPoint_new5((QPoint*)param1);
+    return QPoint_New5((QPoint*)param1);
 }
 
 void q_point_copy_assign(void* self, void* other) {
@@ -102,27 +102,27 @@ void q_point_delete(void* self) {
 }
 
 QPointF* q_pointf_new(void* other) {
-    return QPointF_new((QPointF*)other);
+    return QPointF_New((QPointF*)other);
 }
 
 QPointF* q_pointf_new2(void* other) {
-    return QPointF_new2((QPointF*)other);
+    return QPointF_New2((QPointF*)other);
 }
 
 QPointF* q_pointf_new3() {
-    return QPointF_new3();
+    return QPointF_New3();
 }
 
 QPointF* q_pointf_new4(void* p) {
-    return QPointF_new4((QPoint*)p);
+    return QPointF_New4((QPoint*)p);
 }
 
 QPointF* q_pointf_new5(double xpos, double ypos) {
-    return QPointF_new5(xpos, ypos);
+    return QPointF_New5(xpos, ypos);
 }
 
 QPointF* q_pointf_new6(void* param1) {
-    return QPointF_new6((QPointF*)param1);
+    return QPointF_New6((QPointF*)param1);
 }
 
 void q_pointf_copy_assign(void* self, void* other) {

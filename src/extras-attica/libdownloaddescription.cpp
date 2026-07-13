@@ -5,11 +5,11 @@
 #include "libdownloaddescription.hpp"
 #include "libdownloaddescription.hxx"
 
-Attica__DownloadDescription* Attica__DownloadDescription_new() {
+Attica__DownloadDescription* Attica__DownloadDescription_New() {
     return new Attica::DownloadDescription();
 }
 
-Attica__DownloadDescription* Attica__DownloadDescription_new2(const Attica__DownloadDescription* other) {
+Attica__DownloadDescription* Attica__DownloadDescription_New2(const Attica__DownloadDescription* other) {
     return new Attica::DownloadDescription(*other);
 }
 

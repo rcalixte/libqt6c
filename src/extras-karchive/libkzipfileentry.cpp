@@ -11,7 +11,7 @@
 #include "libkzipfileentry.hpp"
 #include "libkzipfileentry.hxx"
 
-KZipFileEntry* KZipFileEntry_new(KZip* zip, const libqt_string name, int access, const QDateTime* date, const libqt_string user, const libqt_string group, const libqt_string symlink, const libqt_string path, long long start, long long uncompressedSize, int encoding, long long compressedSize) {
+KZipFileEntry* KZipFileEntry_New(KZip* zip, const libqt_string name, int access, const QDateTime* date, const libqt_string user, const libqt_string group, const libqt_string symlink, const libqt_string path, long long start, long long uncompressedSize, int encoding, long long compressedSize) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString user_QString = QString::fromUtf8(user.data, user.len);
     QString group_QString = QString::fromUtf8(group.data, group.len);
@@ -20,7 +20,7 @@ KZipFileEntry* KZipFileEntry_new(KZip* zip, const libqt_string name, int access,
     return new VirtualKZipFileEntry(zip, name_QString, static_cast<int>(access), *date, user_QString, group_QString, symlink_QString, path_QString, static_cast<qint64>(start), static_cast<qint64>(uncompressedSize), static_cast<int>(encoding), static_cast<qint64>(compressedSize));
 }
 
-KZipFileEntry* KZipFileEntry_new2(const KZipFileEntry* param1) {
+KZipFileEntry* KZipFileEntry_New2(const KZipFileEntry* param1) {
     return new VirtualKZipFileEntry(*param1);
 }
 

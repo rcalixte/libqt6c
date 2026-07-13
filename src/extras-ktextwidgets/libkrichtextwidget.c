@@ -26,15 +26,15 @@
 #include "libkrichtextwidget.h"
 
 KRichTextWidget* k_richtextwidget_new(void* parent) {
-    return KRichTextWidget_new((QWidget*)parent);
+    return KRichTextWidget_New((QWidget*)parent);
 }
 
 KRichTextWidget* k_richtextwidget_new2(const char* text) {
-    return KRichTextWidget_new2(qstring(text));
+    return KRichTextWidget_New2(qstring(text));
 }
 
 KRichTextWidget* k_richtextwidget_new3(const char* text, void* parent) {
-    return KRichTextWidget_new3(qstring(text), (QWidget*)parent);
+    return KRichTextWidget_New3(qstring(text), (QWidget*)parent);
 }
 
 const QMetaObject* k_richtextwidget_meta_object(void* self) {

@@ -25,11 +25,11 @@
 #include "libqpdflinkmodel.hpp"
 #include "libqpdflinkmodel.hxx"
 
-QPdfLinkModel* QPdfLinkModel_new() {
+QPdfLinkModel* QPdfLinkModel_New() {
     return new VirtualQPdfLinkModel();
 }
 
-QPdfLinkModel* QPdfLinkModel_new2(QObject* parent) {
+QPdfLinkModel* QPdfLinkModel_New2(QObject* parent) {
     return new VirtualQPdfLinkModel(parent);
 }
 

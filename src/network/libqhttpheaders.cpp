@@ -9,11 +9,11 @@
 #include "libqhttpheaders.hpp"
 #include "libqhttpheaders.hxx"
 
-QHttpHeaders* QHttpHeaders_new() {
+QHttpHeaders* QHttpHeaders_New() {
     return new QHttpHeaders();
 }
 
-QHttpHeaders* QHttpHeaders_new2(const QHttpHeaders* other) {
+QHttpHeaders* QHttpHeaders_New2(const QHttpHeaders* other) {
     return new QHttpHeaders(*other);
 }
 

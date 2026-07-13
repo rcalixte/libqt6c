@@ -57,48 +57,48 @@
 #include "libqlistwidget.hpp"
 #include "libqlistwidget.hxx"
 
-QListWidgetItem* QListWidgetItem_new() {
+QListWidgetItem* QListWidgetItem_New() {
     return new VirtualQListWidgetItem();
 }
 
-QListWidgetItem* QListWidgetItem_new2(const libqt_string text) {
+QListWidgetItem* QListWidgetItem_New2(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQListWidgetItem(text_QString);
 }
 
-QListWidgetItem* QListWidgetItem_new3(const QIcon* icon, const libqt_string text) {
+QListWidgetItem* QListWidgetItem_New3(const QIcon* icon, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQListWidgetItem(*icon, text_QString);
 }
 
-QListWidgetItem* QListWidgetItem_new4(const QListWidgetItem* other) {
+QListWidgetItem* QListWidgetItem_New4(const QListWidgetItem* other) {
     return new VirtualQListWidgetItem(*other);
 }
 
-QListWidgetItem* QListWidgetItem_new5(QListWidget* listview) {
+QListWidgetItem* QListWidgetItem_New5(QListWidget* listview) {
     return new VirtualQListWidgetItem(listview);
 }
 
-QListWidgetItem* QListWidgetItem_new6(QListWidget* listview, int type) {
+QListWidgetItem* QListWidgetItem_New6(QListWidget* listview, int type) {
     return new VirtualQListWidgetItem(listview, static_cast<int>(type));
 }
 
-QListWidgetItem* QListWidgetItem_new7(const libqt_string text, QListWidget* listview) {
+QListWidgetItem* QListWidgetItem_New7(const libqt_string text, QListWidget* listview) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQListWidgetItem(text_QString, listview);
 }
 
-QListWidgetItem* QListWidgetItem_new8(const libqt_string text, QListWidget* listview, int type) {
+QListWidgetItem* QListWidgetItem_New8(const libqt_string text, QListWidget* listview, int type) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQListWidgetItem(text_QString, listview, static_cast<int>(type));
 }
 
-QListWidgetItem* QListWidgetItem_new9(const QIcon* icon, const libqt_string text, QListWidget* listview) {
+QListWidgetItem* QListWidgetItem_New9(const QIcon* icon, const libqt_string text, QListWidget* listview) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQListWidgetItem(*icon, text_QString, listview);
 }
 
-QListWidgetItem* QListWidgetItem_new10(const QIcon* icon, const libqt_string text, QListWidget* listview, int type) {
+QListWidgetItem* QListWidgetItem_New10(const QIcon* icon, const libqt_string text, QListWidget* listview, int type) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQListWidgetItem(*icon, text_QString, listview, static_cast<int>(type));
 }
@@ -413,11 +413,11 @@ void QListWidgetItem_Delete(QListWidgetItem* self) {
     delete self;
 }
 
-QListWidget* QListWidget_new(QWidget* parent) {
+QListWidget* QListWidget_New(QWidget* parent) {
     return new VirtualQListWidget(parent);
 }
 
-QListWidget* QListWidget_new2() {
+QListWidget* QListWidget_New2() {
     return new VirtualQListWidget();
 }
 

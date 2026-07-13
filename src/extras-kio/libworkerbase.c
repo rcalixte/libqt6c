@@ -11,7 +11,7 @@
 #include "libworkerbase.h"
 
 KIO__WorkerResult* k_io__workerresult_new(void* param1) {
-    return KIO__WorkerResult_new((KIO__WorkerResult*)param1);
+    return KIO__WorkerResult_New((KIO__WorkerResult*)param1);
 }
 
 void k_io__workerresult_operator_assign(void* self, void* param1) {
@@ -54,7 +54,7 @@ void k_io__workerresult_delete(void* self) {
 }
 
 KIO__WorkerBase* k_io__workerbase_new(char* protocol, char* poolSocket, char* appSocket) {
-    return KIO__WorkerBase_new(qstring(protocol), qstring(poolSocket), qstring(appSocket));
+    return KIO__WorkerBase_New(qstring(protocol), qstring(poolSocket), qstring(appSocket));
 }
 
 void k_io__workerbase_exit(void* self) {

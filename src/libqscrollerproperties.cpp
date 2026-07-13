@@ -4,11 +4,11 @@
 #include "libqscrollerproperties.hpp"
 #include "libqscrollerproperties.hxx"
 
-QScrollerProperties* QScrollerProperties_new() {
+QScrollerProperties* QScrollerProperties_New() {
     return new QScrollerProperties();
 }
 
-QScrollerProperties* QScrollerProperties_new2(const QScrollerProperties* sp) {
+QScrollerProperties* QScrollerProperties_New2(const QScrollerProperties* sp) {
     return new QScrollerProperties(*sp);
 }
 

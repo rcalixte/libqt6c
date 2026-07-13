@@ -13,11 +13,11 @@
 #include "libkiconloader.h"
 
 KIconLoader* k_iconloader_new() {
-    return KIconLoader_new();
+    return KIconLoader_New();
 }
 
 KIconLoader* k_iconloader_new2(const char* appname) {
-    return KIconLoader_new2(qstring(appname));
+    return KIconLoader_New2(qstring(appname));
 }
 
 KIconLoader* k_iconloader_new3(const char* appname, const char* extraSearchPaths[static 1]) {
@@ -32,7 +32,7 @@ KIconLoader* k_iconloader_new3(const char* appname, const char* extraSearchPaths
     }
     libqt_list extraSearchPaths_list = qlist(extraSearchPaths_qstr, extraSearchPaths_len);
 
-    KIconLoader* _out = KIconLoader_new3(qstring(appname), extraSearchPaths_list);
+    KIconLoader* _out = KIconLoader_New3(qstring(appname), extraSearchPaths_list);
     free(extraSearchPaths_qstr);
     return _out;
 }
@@ -49,7 +49,7 @@ KIconLoader* k_iconloader_new4(const char* appname, const char* extraSearchPaths
     }
     libqt_list extraSearchPaths_list = qlist(extraSearchPaths_qstr, extraSearchPaths_len);
 
-    KIconLoader* _out = KIconLoader_new4(qstring(appname), extraSearchPaths_list, (QObject*)parent);
+    KIconLoader* _out = KIconLoader_New4(qstring(appname), extraSearchPaths_list, (QObject*)parent);
     free(extraSearchPaths_qstr);
     return _out;
 }

@@ -12,11 +12,11 @@
 #include "libqcoloraxis.hpp"
 #include "libqcoloraxis.hxx"
 
-QColorAxis* QColorAxis_new() {
+QColorAxis* QColorAxis_New() {
     return new VirtualQColorAxis();
 }
 
-QColorAxis* QColorAxis_new2(QObject* parent) {
+QColorAxis* QColorAxis_New2(QObject* parent) {
     return new VirtualQColorAxis(parent);
 }
 

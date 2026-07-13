@@ -43,27 +43,27 @@
 #include "libkeditlistwidget.hpp"
 #include "libkeditlistwidget.hxx"
 
-KEditListWidget* KEditListWidget_new(QWidget* parent) {
+KEditListWidget* KEditListWidget_New(QWidget* parent) {
     return new VirtualKEditListWidget(parent);
 }
 
-KEditListWidget* KEditListWidget_new2() {
+KEditListWidget* KEditListWidget_New2() {
     return new VirtualKEditListWidget();
 }
 
-KEditListWidget* KEditListWidget_new3(const KEditListWidget__CustomEditor* customEditor) {
+KEditListWidget* KEditListWidget_New3(const KEditListWidget__CustomEditor* customEditor) {
     return new VirtualKEditListWidget(*customEditor);
 }
 
-KEditListWidget* KEditListWidget_new4(const KEditListWidget__CustomEditor* customEditor, QWidget* parent) {
+KEditListWidget* KEditListWidget_New4(const KEditListWidget__CustomEditor* customEditor, QWidget* parent) {
     return new VirtualKEditListWidget(*customEditor, parent);
 }
 
-KEditListWidget* KEditListWidget_new5(const KEditListWidget__CustomEditor* customEditor, QWidget* parent, bool checkAtEntering) {
+KEditListWidget* KEditListWidget_New5(const KEditListWidget__CustomEditor* customEditor, QWidget* parent, bool checkAtEntering) {
     return new VirtualKEditListWidget(*customEditor, parent, checkAtEntering);
 }
 
-KEditListWidget* KEditListWidget_new6(const KEditListWidget__CustomEditor* customEditor, QWidget* parent, bool checkAtEntering, int buttons) {
+KEditListWidget* KEditListWidget_New6(const KEditListWidget__CustomEditor* customEditor, QWidget* parent, bool checkAtEntering, int buttons) {
     return new VirtualKEditListWidget(*customEditor, parent, checkAtEntering, static_cast<KEditListWidget::Buttons>(buttons));
 }
 
@@ -1986,15 +1986,15 @@ void KEditListWidget_Delete(KEditListWidget* self) {
     delete self;
 }
 
-KEditListWidget__CustomEditor* KEditListWidget__CustomEditor_new() {
+KEditListWidget__CustomEditor* KEditListWidget__CustomEditor_New() {
     return new VirtualKEditListWidgetCustomEditor();
 }
 
-KEditListWidget__CustomEditor* KEditListWidget__CustomEditor_new2(QWidget* repWidget, QLineEdit* edit) {
+KEditListWidget__CustomEditor* KEditListWidget__CustomEditor_New2(QWidget* repWidget, QLineEdit* edit) {
     return new VirtualKEditListWidgetCustomEditor(repWidget, edit);
 }
 
-KEditListWidget__CustomEditor* KEditListWidget__CustomEditor_new3(QComboBox* combo) {
+KEditListWidget__CustomEditor* KEditListWidget__CustomEditor_New3(QComboBox* combo) {
     return new VirtualKEditListWidgetCustomEditor(combo);
 }
 

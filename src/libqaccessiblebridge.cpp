@@ -29,11 +29,11 @@ void QAccessibleBridge_Delete(QAccessibleBridge* self) {
     delete self;
 }
 
-QAccessibleBridgePlugin* QAccessibleBridgePlugin_new() {
+QAccessibleBridgePlugin* QAccessibleBridgePlugin_New() {
     return new VirtualQAccessibleBridgePlugin();
 }
 
-QAccessibleBridgePlugin* QAccessibleBridgePlugin_new2(QObject* parent) {
+QAccessibleBridgePlugin* QAccessibleBridgePlugin_New2(QObject* parent) {
     return new VirtualQAccessibleBridgePlugin(parent);
 }
 

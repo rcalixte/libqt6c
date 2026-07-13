@@ -51,8 +51,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KSslCertificateBox* KSslCertificateBox_new(QWidget* parent);
-KSslCertificateBox* KSslCertificateBox_new2();
+KSslCertificateBox* KSslCertificateBox_New(QWidget* parent);
+KSslCertificateBox* KSslCertificateBox_New2();
 QMetaObject* KSslCertificateBox_MetaObject(const KSslCertificateBox* self);
 void* KSslCertificateBox_Metacast(KSslCertificateBox* self, const char* param1);
 int KSslCertificateBox_Metacall(KSslCertificateBox* self, int param1, int param2, void** param3);

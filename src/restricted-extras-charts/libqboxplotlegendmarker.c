@@ -9,11 +9,11 @@
 #include "libqboxplotlegendmarker.h"
 
 QBoxPlotLegendMarker* q_boxplotlegendmarker_new(void* series, void* legend) {
-    return QBoxPlotLegendMarker_new((QBoxPlotSeries*)series, (QLegend*)legend);
+    return QBoxPlotLegendMarker_New((QBoxPlotSeries*)series, (QLegend*)legend);
 }
 
 QBoxPlotLegendMarker* q_boxplotlegendmarker_new2(void* series, void* legend, void* parent) {
-    return QBoxPlotLegendMarker_new2((QBoxPlotSeries*)series, (QLegend*)legend, (QObject*)parent);
+    return QBoxPlotLegendMarker_New2((QBoxPlotSeries*)series, (QLegend*)legend, (QObject*)parent);
 }
 
 const QMetaObject* q_boxplotlegendmarker_meta_object(void* self) {

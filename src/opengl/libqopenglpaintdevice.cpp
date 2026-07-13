@@ -9,15 +9,15 @@
 #include "libqopenglpaintdevice.hpp"
 #include "libqopenglpaintdevice.hxx"
 
-QOpenGLPaintDevice* QOpenGLPaintDevice_new() {
+QOpenGLPaintDevice* QOpenGLPaintDevice_New() {
     return new VirtualQOpenGLPaintDevice();
 }
 
-QOpenGLPaintDevice* QOpenGLPaintDevice_new2(const QSize* size) {
+QOpenGLPaintDevice* QOpenGLPaintDevice_New2(const QSize* size) {
     return new VirtualQOpenGLPaintDevice(*size);
 }
 
-QOpenGLPaintDevice* QOpenGLPaintDevice_new3(int width, int height) {
+QOpenGLPaintDevice* QOpenGLPaintDevice_New3(int width, int height) {
     return new VirtualQOpenGLPaintDevice(static_cast<int>(width), static_cast<int>(height));
 }
 

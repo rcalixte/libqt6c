@@ -54,8 +54,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KPageView* KPageView_new(QWidget* parent);
-KPageView* KPageView_new2();
+KPageView* KPageView_New(QWidget* parent);
+KPageView* KPageView_New2();
 QMetaObject* KPageView_MetaObject(const KPageView* self);
 void* KPageView_Metacast(KPageView* self, const char* param1);
 int KPageView_Metacall(KPageView* self, int param1, int param2, void** param3);

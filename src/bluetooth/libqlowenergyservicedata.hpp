@@ -21,8 +21,8 @@ typedef struct QLowEnergyService QLowEnergyService;
 typedef struct QLowEnergyServiceData QLowEnergyServiceData;
 #endif
 
-QLowEnergyServiceData* QLowEnergyServiceData_new();
-QLowEnergyServiceData* QLowEnergyServiceData_new2(const QLowEnergyServiceData* other);
+QLowEnergyServiceData* QLowEnergyServiceData_New();
+QLowEnergyServiceData* QLowEnergyServiceData_New2(const QLowEnergyServiceData* other);
 void QLowEnergyServiceData_OperatorAssign(QLowEnergyServiceData* self, const QLowEnergyServiceData* other);
 int QLowEnergyServiceData_Type(const QLowEnergyServiceData* self);
 void QLowEnergyServiceData_SetType(QLowEnergyServiceData* self, int type);

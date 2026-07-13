@@ -27,8 +27,8 @@ typedef struct QWidget QWidget;
 typedef struct QWidgetAction QWidgetAction;
 #endif
 
-KToolBarLabelAction* KToolBarLabelAction_new(const libqt_string text, QObject* parent);
-KToolBarLabelAction* KToolBarLabelAction_new2(QAction* buddy, const libqt_string text, QObject* parent);
+KToolBarLabelAction* KToolBarLabelAction_New(const libqt_string text, QObject* parent);
+KToolBarLabelAction* KToolBarLabelAction_New2(QAction* buddy, const libqt_string text, QObject* parent);
 QMetaObject* KToolBarLabelAction_MetaObject(const KToolBarLabelAction* self);
 void* KToolBarLabelAction_Metacast(KToolBarLabelAction* self, const char* param1);
 int KToolBarLabelAction_Metacall(KToolBarLabelAction* self, int param1, int param2, void** param3);

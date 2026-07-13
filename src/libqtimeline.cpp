@@ -11,15 +11,15 @@
 #include "libqtimeline.hpp"
 #include "libqtimeline.hxx"
 
-QTimeLine* QTimeLine_new() {
+QTimeLine* QTimeLine_New() {
     return new VirtualQTimeLine();
 }
 
-QTimeLine* QTimeLine_new2(int duration) {
+QTimeLine* QTimeLine_New2(int duration) {
     return new VirtualQTimeLine(static_cast<int>(duration));
 }
 
-QTimeLine* QTimeLine_new3(int duration, QObject* parent) {
+QTimeLine* QTimeLine_New3(int duration, QObject* parent) {
     return new VirtualQTimeLine(static_cast<int>(duration), parent);
 }
 

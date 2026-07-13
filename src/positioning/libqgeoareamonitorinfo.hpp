@@ -21,9 +21,9 @@ typedef struct QGeoShape QGeoShape;
 typedef struct QVariant QVariant;
 #endif
 
-QGeoAreaMonitorInfo* QGeoAreaMonitorInfo_new();
-QGeoAreaMonitorInfo* QGeoAreaMonitorInfo_new2(const QGeoAreaMonitorInfo* other);
-QGeoAreaMonitorInfo* QGeoAreaMonitorInfo_new3(const libqt_string name);
+QGeoAreaMonitorInfo* QGeoAreaMonitorInfo_New();
+QGeoAreaMonitorInfo* QGeoAreaMonitorInfo_New2(const QGeoAreaMonitorInfo* other);
+QGeoAreaMonitorInfo* QGeoAreaMonitorInfo_New3(const libqt_string name);
 void QGeoAreaMonitorInfo_OperatorAssign(QGeoAreaMonitorInfo* self, const QGeoAreaMonitorInfo* other);
 void QGeoAreaMonitorInfo_Swap(QGeoAreaMonitorInfo* self, QGeoAreaMonitorInfo* other);
 libqt_string QGeoAreaMonitorInfo_Name(const QGeoAreaMonitorInfo* self);

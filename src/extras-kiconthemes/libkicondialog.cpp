@@ -38,11 +38,11 @@
 #include "libkicondialog.hpp"
 #include "libkicondialog.hxx"
 
-KIconDialog* KIconDialog_new(QWidget* parent) {
+KIconDialog* KIconDialog_New(QWidget* parent) {
     return new VirtualKIconDialog(parent);
 }
 
-KIconDialog* KIconDialog_new2() {
+KIconDialog* KIconDialog_New2() {
     return new VirtualKIconDialog();
 }
 

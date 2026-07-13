@@ -64,8 +64,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QTreeView* QTreeView_new(QWidget* parent);
-QTreeView* QTreeView_new2();
+QTreeView* QTreeView_New(QWidget* parent);
+QTreeView* QTreeView_New2();
 QMetaObject* QTreeView_MetaObject(const QTreeView* self);
 void* QTreeView_Metacast(QTreeView* self, const char* param1);
 int QTreeView_Metacall(QTreeView* self, int param1, int param2, void** param3);

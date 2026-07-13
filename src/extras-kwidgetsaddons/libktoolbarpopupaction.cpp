@@ -16,7 +16,7 @@
 #include "libktoolbarpopupaction.hpp"
 #include "libktoolbarpopupaction.hxx"
 
-KToolBarPopupAction* KToolBarPopupAction_new(const QIcon* icon, const libqt_string text, QObject* parent) {
+KToolBarPopupAction* KToolBarPopupAction_New(const QIcon* icon, const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKToolBarPopupAction(*icon, text_QString, parent);
 }

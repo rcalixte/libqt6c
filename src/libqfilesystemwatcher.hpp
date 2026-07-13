@@ -24,10 +24,10 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QFileSystemWatcher* QFileSystemWatcher_new();
-QFileSystemWatcher* QFileSystemWatcher_new2(const libqt_list /* of libqt_string */ paths);
-QFileSystemWatcher* QFileSystemWatcher_new3(QObject* parent);
-QFileSystemWatcher* QFileSystemWatcher_new4(const libqt_list /* of libqt_string */ paths, QObject* parent);
+QFileSystemWatcher* QFileSystemWatcher_New();
+QFileSystemWatcher* QFileSystemWatcher_New2(const libqt_list /* of libqt_string */ paths);
+QFileSystemWatcher* QFileSystemWatcher_New3(QObject* parent);
+QFileSystemWatcher* QFileSystemWatcher_New4(const libqt_list /* of libqt_string */ paths, QObject* parent);
 QMetaObject* QFileSystemWatcher_MetaObject(const QFileSystemWatcher* self);
 void* QFileSystemWatcher_Metacast(QFileSystemWatcher* self, const char* param1);
 int QFileSystemWatcher_Metacall(QFileSystemWatcher* self, int param1, int param2, void** param3);

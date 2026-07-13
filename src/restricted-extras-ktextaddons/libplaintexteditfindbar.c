@@ -17,11 +17,11 @@
 #include "libplaintexteditfindbar.h"
 
 TextCustomEditor__PlainTextEditFindBar* k_textcustomeditor__plaintexteditfindbar_new(void* view) {
-    return TextCustomEditor__PlainTextEditFindBar_new((QPlainTextEdit*)view);
+    return TextCustomEditor__PlainTextEditFindBar_New((QPlainTextEdit*)view);
 }
 
 TextCustomEditor__PlainTextEditFindBar* k_textcustomeditor__plaintexteditfindbar_new2(void* view, void* parent) {
-    return TextCustomEditor__PlainTextEditFindBar_new2((QPlainTextEdit*)view, (QWidget*)parent);
+    return TextCustomEditor__PlainTextEditFindBar_New2((QPlainTextEdit*)view, (QWidget*)parent);
 }
 
 const QMetaObject* k_textcustomeditor__plaintexteditfindbar_meta_object(void* self) {

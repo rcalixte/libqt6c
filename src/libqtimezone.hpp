@@ -25,14 +25,14 @@ typedef struct QTimeZone QTimeZone;
 typedef struct QTimeZone__OffsetData QTimeZone__OffsetData;
 #endif
 
-QTimeZone* QTimeZone_new();
-QTimeZone* QTimeZone_new2(int spec);
-QTimeZone* QTimeZone_new3(int offsetSeconds);
-QTimeZone* QTimeZone_new4(const libqt_string ianaId);
-QTimeZone* QTimeZone_new5(const libqt_string zoneId, int offsetSeconds, const libqt_string name, const libqt_string abbreviation);
-QTimeZone* QTimeZone_new6(const QTimeZone* other);
-QTimeZone* QTimeZone_new7(const libqt_string zoneId, int offsetSeconds, const libqt_string name, const libqt_string abbreviation, uint16_t territory);
-QTimeZone* QTimeZone_new8(const libqt_string zoneId, int offsetSeconds, const libqt_string name, const libqt_string abbreviation, uint16_t territory, const libqt_string comment);
+QTimeZone* QTimeZone_New();
+QTimeZone* QTimeZone_New2(int spec);
+QTimeZone* QTimeZone_New3(int offsetSeconds);
+QTimeZone* QTimeZone_New4(const libqt_string ianaId);
+QTimeZone* QTimeZone_New5(const libqt_string zoneId, int offsetSeconds, const libqt_string name, const libqt_string abbreviation);
+QTimeZone* QTimeZone_New6(const QTimeZone* other);
+QTimeZone* QTimeZone_New7(const libqt_string zoneId, int offsetSeconds, const libqt_string name, const libqt_string abbreviation, uint16_t territory);
+QTimeZone* QTimeZone_New8(const libqt_string zoneId, int offsetSeconds, const libqt_string name, const libqt_string abbreviation, uint16_t territory, const libqt_string comment);
 void QTimeZone_OperatorAssign(QTimeZone* self, const QTimeZone* other);
 void QTimeZone_Swap(QTimeZone* self, QTimeZone* other);
 bool QTimeZone_IsValid(const QTimeZone* self);
@@ -79,8 +79,8 @@ libqt_string QTimeZone_DisplayName23(const QTimeZone* self, int timeType, int na
 libqt_string QTimeZone_DisplayName32(const QTimeZone* self, int timeType, int nameType, const QLocale* locale);
 void QTimeZone_Delete(QTimeZone* self);
 
-QTimeZone__OffsetData* QTimeZone__OffsetData_new(const QTimeZone__OffsetData* param1);
-QTimeZone__OffsetData* QTimeZone__OffsetData_new2();
+QTimeZone__OffsetData* QTimeZone__OffsetData_New(const QTimeZone__OffsetData* param1);
+QTimeZone__OffsetData* QTimeZone__OffsetData_New2();
 libqt_string QTimeZone__OffsetData_Abbreviation(const QTimeZone__OffsetData* self);
 void QTimeZone__OffsetData_SetAbbreviation(QTimeZone__OffsetData* self, libqt_string abbreviation);
 QDateTime* QTimeZone__OffsetData_AtUtc(const QTimeZone__OffsetData* self);

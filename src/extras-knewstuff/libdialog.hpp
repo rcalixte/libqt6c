@@ -58,8 +58,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KNSWidgets__Dialog* KNSWidgets__Dialog_new(const libqt_string configFile);
-KNSWidgets__Dialog* KNSWidgets__Dialog_new2(const libqt_string configFile, QWidget* parent);
+KNSWidgets__Dialog* KNSWidgets__Dialog_New(const libqt_string configFile);
+KNSWidgets__Dialog* KNSWidgets__Dialog_New2(const libqt_string configFile, QWidget* parent);
 QMetaObject* KNSWidgets__Dialog_MetaObject(const KNSWidgets__Dialog* self);
 void* KNSWidgets__Dialog_Metacast(KNSWidgets__Dialog* self, const char* param1);
 int KNSWidgets__Dialog_Metacall(KNSWidgets__Dialog* self, int param1, int param2, void** param3);

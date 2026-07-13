@@ -2,7 +2,7 @@
 #include "libmembersheet.h"
 
 QDesignerMemberSheetExtension* q_designermembersheetextension_new() {
-    return QDesignerMemberSheetExtension_new();
+    return QDesignerMemberSheetExtension_New();
 }
 
 int32_t q_designermembersheetextension_count(void* self) {

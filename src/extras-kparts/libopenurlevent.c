@@ -6,11 +6,11 @@
 #include "libopenurlevent.h"
 
 KParts__OpenUrlEvent* k_parts__openurlevent_new(void* part, void* url) {
-    return KParts__OpenUrlEvent_new((KParts__ReadOnlyPart*)part, (QUrl*)url);
+    return KParts__OpenUrlEvent_New((KParts__ReadOnlyPart*)part, (QUrl*)url);
 }
 
 KParts__OpenUrlEvent* k_parts__openurlevent_new2(void* part, void* url, void* args) {
-    return KParts__OpenUrlEvent_new2((KParts__ReadOnlyPart*)part, (QUrl*)url, (KParts__OpenUrlArguments*)args);
+    return KParts__OpenUrlEvent_New2((KParts__ReadOnlyPart*)part, (QUrl*)url, (KParts__OpenUrlArguments*)args);
 }
 
 KParts__ReadOnlyPart* k_parts__openurlevent_part(void* self) {

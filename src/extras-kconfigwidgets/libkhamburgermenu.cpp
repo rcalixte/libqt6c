@@ -16,7 +16,7 @@
 #include "libkhamburgermenu.hpp"
 #include "libkhamburgermenu.hxx"
 
-KHamburgerMenu* KHamburgerMenu_new(QObject* parent) {
+KHamburgerMenu* KHamburgerMenu_New(QObject* parent) {
     return new VirtualKHamburgerMenu(parent);
 }
 

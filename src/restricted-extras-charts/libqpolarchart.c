@@ -22,15 +22,15 @@
 #include "libqpolarchart.h"
 
 QPolarChart* q_polarchart_new() {
-    return QPolarChart_new();
+    return QPolarChart_New();
 }
 
 QPolarChart* q_polarchart_new2(void* parent) {
-    return QPolarChart_new2((QGraphicsItem*)parent);
+    return QPolarChart_New2((QGraphicsItem*)parent);
 }
 
 QPolarChart* q_polarchart_new3(void* parent, int32_t wFlags) {
-    return QPolarChart_new3((QGraphicsItem*)parent, wFlags);
+    return QPolarChart_New3((QGraphicsItem*)parent, wFlags);
 }
 
 const QMetaObject* q_polarchart_meta_object(void* self) {

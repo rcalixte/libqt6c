@@ -22,9 +22,9 @@ typedef struct QTextOption QTextOption;
 typedef struct QTransform QTransform;
 #endif
 
-QStaticText* QStaticText_new();
-QStaticText* QStaticText_new2(const libqt_string text);
-QStaticText* QStaticText_new3(const QStaticText* other);
+QStaticText* QStaticText_New();
+QStaticText* QStaticText_New2(const libqt_string text);
+QStaticText* QStaticText_New3(const QStaticText* other);
 void QStaticText_OperatorAssign(QStaticText* self, const QStaticText* param1);
 void QStaticText_Swap(QStaticText* self, QStaticText* other);
 void QStaticText_SetText(QStaticText* self, const libqt_string text);

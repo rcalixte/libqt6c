@@ -28,11 +28,11 @@
 #include "libplaintexteditor.h"
 
 TextCustomEditor__PlainTextEditor* k_textcustomeditor__plaintexteditor_new(void* parent) {
-    return TextCustomEditor__PlainTextEditor_new((QWidget*)parent);
+    return TextCustomEditor__PlainTextEditor_New((QWidget*)parent);
 }
 
 TextCustomEditor__PlainTextEditor* k_textcustomeditor__plaintexteditor_new2() {
-    return TextCustomEditor__PlainTextEditor_new2();
+    return TextCustomEditor__PlainTextEditor_New2();
 }
 
 const QMetaObject* k_textcustomeditor__plaintexteditor_meta_object(void* self) {

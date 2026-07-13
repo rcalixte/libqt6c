@@ -21,7 +21,7 @@ typedef struct QPainter QPainter;
 typedef struct QRect QRect;
 #endif
 
-KWordWrap* KWordWrap_new(const KWordWrap* other);
+KWordWrap* KWordWrap_New(const KWordWrap* other);
 KWordWrap* KWordWrap_FormatText(QFontMetrics* fm, const QRect* r, int flags, const libqt_string str);
 QRect* KWordWrap_BoundingRect(const KWordWrap* self);
 libqt_string KWordWrap_WrappedString(const KWordWrap* self);

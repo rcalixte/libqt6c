@@ -56,8 +56,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KBookmarkContextMenu* KBookmarkContextMenu_new(const KBookmark* bm, KBookmarkManager* manager, KBookmarkOwner* owner);
-KBookmarkContextMenu* KBookmarkContextMenu_new2(const KBookmark* bm, KBookmarkManager* manager, KBookmarkOwner* owner, QWidget* parent);
+KBookmarkContextMenu* KBookmarkContextMenu_New(const KBookmark* bm, KBookmarkManager* manager, KBookmarkOwner* owner);
+KBookmarkContextMenu* KBookmarkContextMenu_New2(const KBookmark* bm, KBookmarkManager* manager, KBookmarkOwner* owner, QWidget* parent);
 QMetaObject* KBookmarkContextMenu_MetaObject(const KBookmarkContextMenu* self);
 void* KBookmarkContextMenu_Metacast(KBookmarkContextMenu* self, const char* param1);
 int KBookmarkContextMenu_Metacall(KBookmarkContextMenu* self, int param1, int param2, void** param3);

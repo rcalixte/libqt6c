@@ -40,19 +40,19 @@
 #include "libkcharselect.hpp"
 #include "libkcharselect.hxx"
 
-KCharSelect* KCharSelect_new(QWidget* parent) {
+KCharSelect* KCharSelect_New(QWidget* parent) {
     return new VirtualKCharSelect(parent);
 }
 
-KCharSelect* KCharSelect_new2(QWidget* parent, QObject* actionParent) {
+KCharSelect* KCharSelect_New2(QWidget* parent, QObject* actionParent) {
     return new VirtualKCharSelect(parent, actionParent);
 }
 
-KCharSelect* KCharSelect_new3(QWidget* parent, const int controls) {
+KCharSelect* KCharSelect_New3(QWidget* parent, const int controls) {
     return new VirtualKCharSelect(parent, static_cast<const KCharSelect::Controls>(controls));
 }
 
-KCharSelect* KCharSelect_new4(QWidget* parent, QObject* actionParent, const int controls) {
+KCharSelect* KCharSelect_New4(QWidget* parent, QObject* actionParent, const int controls) {
     return new VirtualKCharSelect(parent, actionParent, static_cast<const KCharSelect::Controls>(controls));
 }
 

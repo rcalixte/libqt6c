@@ -3,7 +3,7 @@
 #include "libkfilterbase.h"
 
 KFilterBase* k_filterbase_new() {
-    return KFilterBase_new();
+    return KFilterBase_New();
 }
 
 void k_filterbase_set_device(void* self, void* dev) {

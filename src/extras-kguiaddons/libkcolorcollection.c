@@ -3,15 +3,15 @@
 #include "libkcolorcollection.h"
 
 KColorCollection* k_colorcollection_new() {
-    return KColorCollection_new();
+    return KColorCollection_New();
 }
 
 KColorCollection* k_colorcollection_new2(void* param1) {
-    return KColorCollection_new2((KColorCollection*)param1);
+    return KColorCollection_New2((KColorCollection*)param1);
 }
 
 KColorCollection* k_colorcollection_new3(const char* name) {
-    return KColorCollection_new3(qstring(name));
+    return KColorCollection_New3(qstring(name));
 }
 
 const char** k_colorcollection_installed_collections() {

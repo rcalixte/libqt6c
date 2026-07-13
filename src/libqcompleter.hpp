@@ -29,12 +29,12 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QCompleter* QCompleter_new();
-QCompleter* QCompleter_new2(QAbstractItemModel* model);
-QCompleter* QCompleter_new3(const libqt_list /* of libqt_string */ completions);
-QCompleter* QCompleter_new4(QObject* parent);
-QCompleter* QCompleter_new5(QAbstractItemModel* model, QObject* parent);
-QCompleter* QCompleter_new6(const libqt_list /* of libqt_string */ completions, QObject* parent);
+QCompleter* QCompleter_New();
+QCompleter* QCompleter_New2(QAbstractItemModel* model);
+QCompleter* QCompleter_New3(const libqt_list /* of libqt_string */ completions);
+QCompleter* QCompleter_New4(QObject* parent);
+QCompleter* QCompleter_New5(QAbstractItemModel* model, QObject* parent);
+QCompleter* QCompleter_New6(const libqt_list /* of libqt_string */ completions, QObject* parent);
 QMetaObject* QCompleter_MetaObject(const QCompleter* self);
 void* QCompleter_Metacast(QCompleter* self, const char* param1);
 int QCompleter_Metacall(QCompleter* self, int param1, int param2, void** param3);

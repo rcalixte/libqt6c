@@ -5,7 +5,7 @@
 #include "libqfileiconprovider.h"
 
 QFileIconProvider* q_fileiconprovider_new() {
-    return QFileIconProvider_new();
+    return QFileIconProvider_New();
 }
 
 QIcon* q_fileiconprovider_icon(void* self, int32_t type) {

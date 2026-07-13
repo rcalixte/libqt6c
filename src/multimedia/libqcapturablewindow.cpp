@@ -4,11 +4,11 @@
 #include "libqcapturablewindow.hpp"
 #include "libqcapturablewindow.hxx"
 
-QCapturableWindow* QCapturableWindow_new() {
+QCapturableWindow* QCapturableWindow_New() {
     return new QCapturableWindow();
 }
 
-QCapturableWindow* QCapturableWindow_new2(const QCapturableWindow* other) {
+QCapturableWindow* QCapturableWindow_New2(const QCapturableWindow* other) {
     return new QCapturableWindow(*other);
 }
 

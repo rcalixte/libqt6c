@@ -55,8 +55,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KDateTimeEdit* KDateTimeEdit_new(QWidget* parent);
-KDateTimeEdit* KDateTimeEdit_new2();
+KDateTimeEdit* KDateTimeEdit_New(QWidget* parent);
+KDateTimeEdit* KDateTimeEdit_New2();
 QMetaObject* KDateTimeEdit_MetaObject(const KDateTimeEdit* self);
 void* KDateTimeEdit_Metacast(KDateTimeEdit* self, const char* param1);
 int KDateTimeEdit_Metacall(KDateTimeEdit* self, int param1, int param2, void** param3);

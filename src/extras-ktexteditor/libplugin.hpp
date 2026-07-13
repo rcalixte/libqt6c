@@ -32,7 +32,7 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KTextEditor__Plugin* KTextEditor__Plugin_new(QObject* parent);
+KTextEditor__Plugin* KTextEditor__Plugin_New(QObject* parent);
 QMetaObject* KTextEditor__Plugin_MetaObject(const KTextEditor__Plugin* self);
 void* KTextEditor__Plugin_Metacast(KTextEditor__Plugin* self, const char* param1);
 int KTextEditor__Plugin_Metacall(KTextEditor__Plugin* self, int param1, int param2, void** param3);

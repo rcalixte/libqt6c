@@ -40,19 +40,19 @@
 #include "libqprintdialog.hpp"
 #include "libqprintdialog.hxx"
 
-QPrintDialog* QPrintDialog_new(QWidget* parent) {
+QPrintDialog* QPrintDialog_New(QWidget* parent) {
     return new VirtualQPrintDialog(parent);
 }
 
-QPrintDialog* QPrintDialog_new2(QPrinter* printer) {
+QPrintDialog* QPrintDialog_New2(QPrinter* printer) {
     return new VirtualQPrintDialog(printer);
 }
 
-QPrintDialog* QPrintDialog_new3() {
+QPrintDialog* QPrintDialog_New3() {
     return new VirtualQPrintDialog();
 }
 
-QPrintDialog* QPrintDialog_new4(QPrinter* printer, QWidget* parent) {
+QPrintDialog* QPrintDialog_New4(QPrinter* printer, QWidget* parent) {
     return new VirtualQPrintDialog(printer, parent);
 }
 

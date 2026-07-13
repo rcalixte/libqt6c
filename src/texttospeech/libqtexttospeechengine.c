@@ -10,11 +10,11 @@
 #include "libqtexttospeechengine.h"
 
 QTextToSpeechEngine* q_texttospeechengine_new() {
-    return QTextToSpeechEngine_new();
+    return QTextToSpeechEngine_New();
 }
 
 QTextToSpeechEngine* q_texttospeechengine_new2(void* parent) {
-    return QTextToSpeechEngine_new2((QObject*)parent);
+    return QTextToSpeechEngine_New2((QObject*)parent);
 }
 
 const QMetaObject* q_texttospeechengine_meta_object(void* self) {

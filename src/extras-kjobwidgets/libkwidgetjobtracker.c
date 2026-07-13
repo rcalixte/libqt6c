@@ -9,11 +9,11 @@
 #include "libkwidgetjobtracker.h"
 
 KWidgetJobTracker* k_widgetjobtracker_new(void* parent) {
-    return KWidgetJobTracker_new((QWidget*)parent);
+    return KWidgetJobTracker_New((QWidget*)parent);
 }
 
 KWidgetJobTracker* k_widgetjobtracker_new2() {
-    return KWidgetJobTracker_new2();
+    return KWidgetJobTracker_New2();
 }
 
 const QMetaObject* k_widgetjobtracker_meta_object(void* self) {

@@ -3,15 +3,15 @@
 #include "libqdbusunixfiledescriptor.hpp"
 #include "libqdbusunixfiledescriptor.hxx"
 
-QDBusUnixFileDescriptor* QDBusUnixFileDescriptor_new() {
+QDBusUnixFileDescriptor* QDBusUnixFileDescriptor_New() {
     return new QDBusUnixFileDescriptor();
 }
 
-QDBusUnixFileDescriptor* QDBusUnixFileDescriptor_new2(int fileDescriptor) {
+QDBusUnixFileDescriptor* QDBusUnixFileDescriptor_New2(int fileDescriptor) {
     return new QDBusUnixFileDescriptor(static_cast<int>(fileDescriptor));
 }
 
-QDBusUnixFileDescriptor* QDBusUnixFileDescriptor_new3(const QDBusUnixFileDescriptor* other) {
+QDBusUnixFileDescriptor* QDBusUnixFileDescriptor_New3(const QDBusUnixFileDescriptor* other) {
     return new QDBusUnixFileDescriptor(*other);
 }
 

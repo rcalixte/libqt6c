@@ -18,9 +18,9 @@ extern "C" {
 typedef struct KDesktopFileAction KDesktopFileAction;
 #endif
 
-KDesktopFileAction* KDesktopFileAction_new();
-KDesktopFileAction* KDesktopFileAction_new2(const libqt_string name, const libqt_string text, const libqt_string icon, const libqt_string exec, const libqt_string desktopFilePath);
-KDesktopFileAction* KDesktopFileAction_new3(const KDesktopFileAction* other);
+KDesktopFileAction* KDesktopFileAction_New();
+KDesktopFileAction* KDesktopFileAction_New2(const libqt_string name, const libqt_string text, const libqt_string icon, const libqt_string exec, const libqt_string desktopFilePath);
+KDesktopFileAction* KDesktopFileAction_New3(const KDesktopFileAction* other);
 void KDesktopFileAction_OperatorAssign(KDesktopFileAction* self, const KDesktopFileAction* other);
 libqt_string KDesktopFileAction_ActionsKey(const KDesktopFileAction* self);
 libqt_string KDesktopFileAction_DesktopFilePath(const KDesktopFileAction* self);

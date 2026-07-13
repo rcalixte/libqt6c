@@ -22,7 +22,7 @@ typedef struct KConfigGroup KConfigGroup;
 typedef struct KTextEditor__SessionConfigInterface KTextEditor__SessionConfigInterface;
 #endif
 
-KTextEditor__SessionConfigInterface* KTextEditor__SessionConfigInterface_new();
+KTextEditor__SessionConfigInterface* KTextEditor__SessionConfigInterface_New();
 void KTextEditor__SessionConfigInterface_ReadSessionConfig(KTextEditor__SessionConfigInterface* self, const KConfigGroup* config);
 void KTextEditor__SessionConfigInterface_WriteSessionConfig(KTextEditor__SessionConfigInterface* self, KConfigGroup* config);
 void KTextEditor__SessionConfigInterface_OnReadSessionConfig(KTextEditor__SessionConfigInterface* self, intptr_t slot);

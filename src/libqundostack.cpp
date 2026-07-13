@@ -12,20 +12,20 @@
 #include "libqundostack.hpp"
 #include "libqundostack.hxx"
 
-QUndoCommand* QUndoCommand_new() {
+QUndoCommand* QUndoCommand_New() {
     return new VirtualQUndoCommand();
 }
 
-QUndoCommand* QUndoCommand_new2(const libqt_string text) {
+QUndoCommand* QUndoCommand_New2(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQUndoCommand(text_QString);
 }
 
-QUndoCommand* QUndoCommand_new3(QUndoCommand* parent) {
+QUndoCommand* QUndoCommand_New3(QUndoCommand* parent) {
     return new VirtualQUndoCommand(parent);
 }
 
-QUndoCommand* QUndoCommand_new4(const libqt_string text, QUndoCommand* parent) {
+QUndoCommand* QUndoCommand_New4(const libqt_string text, QUndoCommand* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQUndoCommand(text_QString, parent);
 }
@@ -171,11 +171,11 @@ void QUndoCommand_Delete(QUndoCommand* self) {
     delete self;
 }
 
-QUndoStack* QUndoStack_new() {
+QUndoStack* QUndoStack_New() {
     return new VirtualQUndoStack();
 }
 
-QUndoStack* QUndoStack_new2(QObject* parent) {
+QUndoStack* QUndoStack_New2(QObject* parent) {
     return new VirtualQUndoStack(parent);
 }
 

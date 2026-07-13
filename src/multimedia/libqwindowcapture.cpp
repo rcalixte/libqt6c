@@ -13,11 +13,11 @@
 #include "libqwindowcapture.hpp"
 #include "libqwindowcapture.hxx"
 
-QWindowCapture* QWindowCapture_new() {
+QWindowCapture* QWindowCapture_New() {
     return new VirtualQWindowCapture();
 }
 
-QWindowCapture* QWindowCapture_new2(QObject* parent) {
+QWindowCapture* QWindowCapture_New2(QObject* parent) {
     return new VirtualQWindowCapture(parent);
 }
 

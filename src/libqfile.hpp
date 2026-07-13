@@ -27,10 +27,10 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QFile* QFile_new();
-QFile* QFile_new2(const libqt_string name);
-QFile* QFile_new3(QObject* parent);
-QFile* QFile_new4(const libqt_string name, QObject* parent);
+QFile* QFile_New();
+QFile* QFile_New2(const libqt_string name);
+QFile* QFile_New3(QObject* parent);
+QFile* QFile_New4(const libqt_string name, QObject* parent);
 QMetaObject* QFile_MetaObject(const QFile* self);
 void* QFile_Metacast(QFile* self, const char* param1);
 int QFile_Metacall(QFile* self, int param1, int param2, void** param3);

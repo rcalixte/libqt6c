@@ -27,8 +27,8 @@ typedef struct QPlaceSupplier QPlaceSupplier;
 typedef struct QUrl QUrl;
 #endif
 
-QPlace* QPlace_new();
-QPlace* QPlace_new2(const QPlace* other);
+QPlace* QPlace_New();
+QPlace* QPlace_New2(const QPlace* other);
 void QPlace_OperatorAssign(QPlace* self, const QPlace* other);
 void QPlace_Swap(QPlace* self, QPlace* other);
 libqt_list /* of QPlaceCategory* */ QPlace_Categories(const QPlace* self);

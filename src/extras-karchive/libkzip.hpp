@@ -22,9 +22,9 @@ typedef struct QDateTime QDateTime;
 typedef struct QIODevice QIODevice;
 #endif
 
-KZip* KZip_new(const libqt_string filename);
-KZip* KZip_new2(QIODevice* dev);
-KZip* KZip_new3(const KZip* param1);
+KZip* KZip_New(const libqt_string filename);
+KZip* KZip_New2(QIODevice* dev);
+KZip* KZip_New3(const KZip* param1);
 void KZip_SetExtraField(KZip* self, int ef);
 int KZip_ExtraField(const KZip* self);
 void KZip_SetCompression(KZip* self, int c);

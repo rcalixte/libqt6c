@@ -11,7 +11,7 @@
 #include "libfileinfoextension.hpp"
 #include "libfileinfoextension.hxx"
 
-KParts__FileInfoExtension* KParts__FileInfoExtension_new(KParts__ReadOnlyPart* parent) {
+KParts__FileInfoExtension* KParts__FileInfoExtension_New(KParts__ReadOnlyPart* parent) {
     return new VirtualKPartsFileInfoExtension(parent);
 }
 

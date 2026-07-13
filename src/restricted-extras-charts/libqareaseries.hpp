@@ -31,10 +31,10 @@ typedef struct QPointF QPointF;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QAreaSeries* QAreaSeries_new();
-QAreaSeries* QAreaSeries_new2(QLineSeries* upperSeries);
-QAreaSeries* QAreaSeries_new3(QObject* parent);
-QAreaSeries* QAreaSeries_new4(QLineSeries* upperSeries, QLineSeries* lowerSeries);
+QAreaSeries* QAreaSeries_New();
+QAreaSeries* QAreaSeries_New2(QLineSeries* upperSeries);
+QAreaSeries* QAreaSeries_New3(QObject* parent);
+QAreaSeries* QAreaSeries_New4(QLineSeries* upperSeries, QLineSeries* lowerSeries);
 QMetaObject* QAreaSeries_MetaObject(const QAreaSeries* self);
 void* QAreaSeries_Metacast(QAreaSeries* self, const char* param1);
 int QAreaSeries_Metacall(QAreaSeries* self, int param1, int param2, void** param3);

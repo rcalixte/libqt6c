@@ -2,11 +2,11 @@
 #include "libqscopedpointer.h"
 
 QScopedPointerPodDeleter* q_scopedpointerpoddeleter_new(void* other) {
-    return QScopedPointerPodDeleter_new((QScopedPointerPodDeleter*)other);
+    return QScopedPointerPodDeleter_New((QScopedPointerPodDeleter*)other);
 }
 
 QScopedPointerPodDeleter* q_scopedpointerpoddeleter_new2(void* other) {
-    return QScopedPointerPodDeleter_new2((QScopedPointerPodDeleter*)other);
+    return QScopedPointerPodDeleter_New2((QScopedPointerPodDeleter*)other);
 }
 
 void q_scopedpointerpoddeleter_copy_assign(void* self, void* other) {

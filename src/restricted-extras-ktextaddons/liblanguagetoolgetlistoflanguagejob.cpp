@@ -11,11 +11,11 @@
 #include "liblanguagetoolgetlistoflanguagejob.hpp"
 #include "liblanguagetoolgetlistoflanguagejob.hxx"
 
-TextGrammarCheck__LanguageToolGetListOfLanguageJob* TextGrammarCheck__LanguageToolGetListOfLanguageJob_new() {
+TextGrammarCheck__LanguageToolGetListOfLanguageJob* TextGrammarCheck__LanguageToolGetListOfLanguageJob_New() {
     return new VirtualTextGrammarCheckLanguageToolGetListOfLanguageJob();
 }
 
-TextGrammarCheck__LanguageToolGetListOfLanguageJob* TextGrammarCheck__LanguageToolGetListOfLanguageJob_new2(QObject* parent) {
+TextGrammarCheck__LanguageToolGetListOfLanguageJob* TextGrammarCheck__LanguageToolGetListOfLanguageJob_New2(QObject* parent) {
     return new VirtualTextGrammarCheckLanguageToolGetListOfLanguageJob(parent);
 }
 

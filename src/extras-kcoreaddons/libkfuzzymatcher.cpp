@@ -6,11 +6,11 @@
 #include "libkfuzzymatcher.hpp"
 #include "libkfuzzymatcher.hxx"
 
-KFuzzyMatcher__Result* KFuzzyMatcher__Result_new(const KFuzzyMatcher__Result* other) {
+KFuzzyMatcher__Result* KFuzzyMatcher__Result_New(const KFuzzyMatcher__Result* other) {
     return new KFuzzyMatcher::Result(*other);
 }
 
-KFuzzyMatcher__Result* KFuzzyMatcher__Result_new2(KFuzzyMatcher__Result* other) {
+KFuzzyMatcher__Result* KFuzzyMatcher__Result_New2(KFuzzyMatcher__Result* other) {
     return new KFuzzyMatcher::Result(std::move(*other));
 }
 
@@ -42,11 +42,11 @@ void KFuzzyMatcher__Result_Delete(KFuzzyMatcher__Result* self) {
     delete self;
 }
 
-KFuzzyMatcher__Range* KFuzzyMatcher__Range_new() {
+KFuzzyMatcher__Range* KFuzzyMatcher__Range_New() {
     return new KFuzzyMatcher::Range();
 }
 
-KFuzzyMatcher__Range* KFuzzyMatcher__Range_new2(const KFuzzyMatcher__Range* param1) {
+KFuzzyMatcher__Range* KFuzzyMatcher__Range_New2(const KFuzzyMatcher__Range* param1) {
     return new KFuzzyMatcher::Range(*param1);
 }
 

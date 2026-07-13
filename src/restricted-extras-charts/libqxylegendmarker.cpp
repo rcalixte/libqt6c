@@ -13,11 +13,11 @@
 #include "libqxylegendmarker.hpp"
 #include "libqxylegendmarker.hxx"
 
-QXYLegendMarker* QXYLegendMarker_new(QXYSeries* series, QLegend* legend) {
+QXYLegendMarker* QXYLegendMarker_New(QXYSeries* series, QLegend* legend) {
     return new VirtualQXYLegendMarker(series, legend);
 }
 
-QXYLegendMarker* QXYLegendMarker_new2(QXYSeries* series, QLegend* legend, QObject* parent) {
+QXYLegendMarker* QXYLegendMarker_New2(QXYSeries* series, QLegend* legend, QObject* parent) {
     return new VirtualQXYLegendMarker(series, legend, parent);
 }
 

@@ -9,27 +9,27 @@
 #include "libqvideoframe.h"
 
 QVideoFrame* q_videoframe_new() {
-    return QVideoFrame_new();
+    return QVideoFrame_New();
 }
 
 QVideoFrame* q_videoframe_new2(void* format) {
-    return QVideoFrame_new2((QVideoFrameFormat*)format);
+    return QVideoFrame_New2((QVideoFrameFormat*)format);
 }
 
 QVideoFrame* q_videoframe_new3(void* image) {
-    return QVideoFrame_new3((QImage*)image);
+    return QVideoFrame_New3((QImage*)image);
 }
 
 QVideoFrame* q_videoframe_new4(void* videoBuffer) {
-    return QVideoFrame_new4((QAbstractVideoBuffer*)videoBuffer);
+    return QVideoFrame_New4((QAbstractVideoBuffer*)videoBuffer);
 }
 
 QVideoFrame* q_videoframe_new5(void* other) {
-    return QVideoFrame_new5((QVideoFrame*)other);
+    return QVideoFrame_New5((QVideoFrame*)other);
 }
 
 QVideoFrame* q_videoframe_new6(void* buffer, void* format) {
-    return QVideoFrame_new6((QAbstractVideoBuffer*)buffer, (QVideoFrameFormat*)format);
+    return QVideoFrame_New6((QAbstractVideoBuffer*)buffer, (QVideoFrameFormat*)format);
 }
 
 void q_videoframe_swap(void* self, void* other) {
@@ -196,11 +196,11 @@ void q_videoframe_delete(void* self) {
 }
 
 QVideoFrame__PaintOptions* q_videoframe__paintoptions_new(void* other) {
-    return QVideoFrame__PaintOptions_new((QVideoFrame__PaintOptions*)other);
+    return QVideoFrame__PaintOptions_New((QVideoFrame__PaintOptions*)other);
 }
 
 QVideoFrame__PaintOptions* q_videoframe__paintoptions_new2(void* other) {
-    return QVideoFrame__PaintOptions_new2((QVideoFrame__PaintOptions*)other);
+    return QVideoFrame__PaintOptions_New2((QVideoFrame__PaintOptions*)other);
 }
 
 void q_videoframe__paintoptions_copy_assign(void* self, void* other) {

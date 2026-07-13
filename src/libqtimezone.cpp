@@ -10,42 +10,42 @@
 #include "libqtimezone.hpp"
 #include "libqtimezone.hxx"
 
-QTimeZone* QTimeZone_new() {
+QTimeZone* QTimeZone_New() {
     return new QTimeZone();
 }
 
-QTimeZone* QTimeZone_new2(int spec) {
+QTimeZone* QTimeZone_New2(int spec) {
     return new QTimeZone(static_cast<QTimeZone::Initialization>(spec));
 }
 
-QTimeZone* QTimeZone_new3(int offsetSeconds) {
+QTimeZone* QTimeZone_New3(int offsetSeconds) {
     return new QTimeZone(static_cast<int>(offsetSeconds));
 }
 
-QTimeZone* QTimeZone_new4(const libqt_string ianaId) {
+QTimeZone* QTimeZone_New4(const libqt_string ianaId) {
     QByteArray ianaId_QByteArray(ianaId.data, ianaId.len);
     return new QTimeZone(ianaId_QByteArray);
 }
 
-QTimeZone* QTimeZone_new5(const libqt_string zoneId, int offsetSeconds, const libqt_string name, const libqt_string abbreviation) {
+QTimeZone* QTimeZone_New5(const libqt_string zoneId, int offsetSeconds, const libqt_string name, const libqt_string abbreviation) {
     QByteArray zoneId_QByteArray(zoneId.data, zoneId.len);
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString abbreviation_QString = QString::fromUtf8(abbreviation.data, abbreviation.len);
     return new QTimeZone(zoneId_QByteArray, static_cast<int>(offsetSeconds), name_QString, abbreviation_QString);
 }
 
-QTimeZone* QTimeZone_new6(const QTimeZone* other) {
+QTimeZone* QTimeZone_New6(const QTimeZone* other) {
     return new QTimeZone(*other);
 }
 
-QTimeZone* QTimeZone_new7(const libqt_string zoneId, int offsetSeconds, const libqt_string name, const libqt_string abbreviation, uint16_t territory) {
+QTimeZone* QTimeZone_New7(const libqt_string zoneId, int offsetSeconds, const libqt_string name, const libqt_string abbreviation, uint16_t territory) {
     QByteArray zoneId_QByteArray(zoneId.data, zoneId.len);
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString abbreviation_QString = QString::fromUtf8(abbreviation.data, abbreviation.len);
     return new QTimeZone(zoneId_QByteArray, static_cast<int>(offsetSeconds), name_QString, abbreviation_QString, static_cast<QLocale::Territory>(territory));
 }
 
-QTimeZone* QTimeZone_new8(const libqt_string zoneId, int offsetSeconds, const libqt_string name, const libqt_string abbreviation, uint16_t territory, const libqt_string comment) {
+QTimeZone* QTimeZone_New8(const libqt_string zoneId, int offsetSeconds, const libqt_string name, const libqt_string abbreviation, uint16_t territory, const libqt_string comment) {
     QByteArray zoneId_QByteArray(zoneId.data, zoneId.len);
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString abbreviation_QString = QString::fromUtf8(abbreviation.data, abbreviation.len);
@@ -408,11 +408,11 @@ void QTimeZone_Delete(QTimeZone* self) {
     delete self;
 }
 
-QTimeZone__OffsetData* QTimeZone__OffsetData_new(const QTimeZone__OffsetData* param1) {
+QTimeZone__OffsetData* QTimeZone__OffsetData_New(const QTimeZone__OffsetData* param1) {
     return new QTimeZone::OffsetData(*param1);
 }
 
-QTimeZone__OffsetData* QTimeZone__OffsetData_new2() {
+QTimeZone__OffsetData* QTimeZone__OffsetData_New2() {
     return new QTimeZone::OffsetData();
 }
 

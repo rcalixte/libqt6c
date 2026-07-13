@@ -22,9 +22,9 @@ typedef struct QVariant QVariant;
 typedef struct SignOn__SessionData SignOn__SessionData;
 #endif
 
-SignOn__SessionData* SignOn__SessionData_new();
-SignOn__SessionData* SignOn__SessionData_new2(const SignOn__SessionData* other);
-SignOn__SessionData* SignOn__SessionData_new3(const libqt_map /* of libqt_string to QVariant* */ data);
+SignOn__SessionData* SignOn__SessionData_New();
+SignOn__SessionData* SignOn__SessionData_New2(const SignOn__SessionData* other);
+SignOn__SessionData* SignOn__SessionData_New3(const libqt_map /* of libqt_string to QVariant* */ data);
 void SignOn__SessionData_OperatorAssign(SignOn__SessionData* self, const SignOn__SessionData* other);
 SignOn__SessionData* SignOn__SessionData_OperatorPlusAssign(SignOn__SessionData* self, const SignOn__SessionData* other);
 libqt_list /* of libqt_string */ SignOn__SessionData_PropertyNames(const SignOn__SessionData* self);

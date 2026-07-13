@@ -20,8 +20,8 @@ typedef struct Accounts__Provider Accounts__Provider;
 typedef struct QDomDocument QDomDocument;
 #endif
 
-Accounts__Provider* Accounts__Provider_new();
-Accounts__Provider* Accounts__Provider_new2(const Accounts__Provider* other);
+Accounts__Provider* Accounts__Provider_New();
+Accounts__Provider* Accounts__Provider_New2(const Accounts__Provider* other);
 void Accounts__Provider_OperatorAssign(Accounts__Provider* self, const Accounts__Provider* other);
 bool Accounts__Provider_IsValid(const Accounts__Provider* self);
 libqt_string Accounts__Provider_Name(const Accounts__Provider* self);

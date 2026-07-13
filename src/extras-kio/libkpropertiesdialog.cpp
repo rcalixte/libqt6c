@@ -44,19 +44,19 @@
 #include "libkpropertiesdialog.hpp"
 #include "libkpropertiesdialog.hxx"
 
-KPropertiesDialog* KPropertiesDialog_new(const KFileItem* item) {
+KPropertiesDialog* KPropertiesDialog_New(const KFileItem* item) {
     return new VirtualKPropertiesDialog(*item);
 }
 
-KPropertiesDialog* KPropertiesDialog_new2(const KFileItemList* _items) {
+KPropertiesDialog* KPropertiesDialog_New2(const KFileItemList* _items) {
     return new VirtualKPropertiesDialog(*_items);
 }
 
-KPropertiesDialog* KPropertiesDialog_new3(const QUrl* url) {
+KPropertiesDialog* KPropertiesDialog_New3(const QUrl* url) {
     return new VirtualKPropertiesDialog(*url);
 }
 
-KPropertiesDialog* KPropertiesDialog_new4(const libqt_list /* of QUrl* */ urls) {
+KPropertiesDialog* KPropertiesDialog_New4(const libqt_list /* of QUrl* */ urls) {
     QList<QUrl> urls_QList;
     urls_QList.reserve(urls.len);
     QUrl** urls_arr = static_cast<QUrl**>(urls.data.ptr);
@@ -66,29 +66,29 @@ KPropertiesDialog* KPropertiesDialog_new4(const libqt_list /* of QUrl* */ urls) 
     return new VirtualKPropertiesDialog(urls_QList);
 }
 
-KPropertiesDialog* KPropertiesDialog_new5(const QUrl* _tempUrl, const QUrl* _currentDir, const libqt_string _defaultName) {
+KPropertiesDialog* KPropertiesDialog_New5(const QUrl* _tempUrl, const QUrl* _currentDir, const libqt_string _defaultName) {
     QString _defaultName_QString = QString::fromUtf8(_defaultName.data, _defaultName.len);
     return new VirtualKPropertiesDialog(*_tempUrl, *_currentDir, _defaultName_QString);
 }
 
-KPropertiesDialog* KPropertiesDialog_new6(const libqt_string title) {
+KPropertiesDialog* KPropertiesDialog_New6(const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualKPropertiesDialog(title_QString);
 }
 
-KPropertiesDialog* KPropertiesDialog_new7(const KFileItem* item, QWidget* parent) {
+KPropertiesDialog* KPropertiesDialog_New7(const KFileItem* item, QWidget* parent) {
     return new VirtualKPropertiesDialog(*item, parent);
 }
 
-KPropertiesDialog* KPropertiesDialog_new8(const KFileItemList* _items, QWidget* parent) {
+KPropertiesDialog* KPropertiesDialog_New8(const KFileItemList* _items, QWidget* parent) {
     return new VirtualKPropertiesDialog(*_items, parent);
 }
 
-KPropertiesDialog* KPropertiesDialog_new9(const QUrl* url, QWidget* parent) {
+KPropertiesDialog* KPropertiesDialog_New9(const QUrl* url, QWidget* parent) {
     return new VirtualKPropertiesDialog(*url, parent);
 }
 
-KPropertiesDialog* KPropertiesDialog_new10(const libqt_list /* of QUrl* */ urls, QWidget* parent) {
+KPropertiesDialog* KPropertiesDialog_New10(const libqt_list /* of QUrl* */ urls, QWidget* parent) {
     QList<QUrl> urls_QList;
     urls_QList.reserve(urls.len);
     QUrl** urls_arr = static_cast<QUrl**>(urls.data.ptr);
@@ -98,12 +98,12 @@ KPropertiesDialog* KPropertiesDialog_new10(const libqt_list /* of QUrl* */ urls,
     return new VirtualKPropertiesDialog(urls_QList, parent);
 }
 
-KPropertiesDialog* KPropertiesDialog_new11(const QUrl* _tempUrl, const QUrl* _currentDir, const libqt_string _defaultName, QWidget* parent) {
+KPropertiesDialog* KPropertiesDialog_New11(const QUrl* _tempUrl, const QUrl* _currentDir, const libqt_string _defaultName, QWidget* parent) {
     QString _defaultName_QString = QString::fromUtf8(_defaultName.data, _defaultName.len);
     return new VirtualKPropertiesDialog(*_tempUrl, *_currentDir, _defaultName_QString, parent);
 }
 
-KPropertiesDialog* KPropertiesDialog_new12(const libqt_string title, QWidget* parent) {
+KPropertiesDialog* KPropertiesDialog_New12(const libqt_string title, QWidget* parent) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualKPropertiesDialog(title_QString, parent);
 }

@@ -232,16 +232,16 @@ void KProtocolInfo_Delete(KProtocolInfo* self) {
     delete self;
 }
 
-KProtocolInfo__ExtraField* KProtocolInfo__ExtraField_new() {
+KProtocolInfo__ExtraField* KProtocolInfo__ExtraField_New() {
     return new KProtocolInfo::ExtraField();
 }
 
-KProtocolInfo__ExtraField* KProtocolInfo__ExtraField_new2(const libqt_string _name, int _type) {
+KProtocolInfo__ExtraField* KProtocolInfo__ExtraField_New2(const libqt_string _name, int _type) {
     QString _name_QString = QString::fromUtf8(_name.data, _name.len);
     return new KProtocolInfo::ExtraField(_name_QString, static_cast<KProtocolInfo::ExtraField::Type>(_type));
 }
 
-KProtocolInfo__ExtraField* KProtocolInfo__ExtraField_new3(const KProtocolInfo__ExtraField* param1) {
+KProtocolInfo__ExtraField* KProtocolInfo__ExtraField_New3(const KProtocolInfo__ExtraField* param1) {
     return new KProtocolInfo::ExtraField(*param1);
 }
 

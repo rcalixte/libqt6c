@@ -22,8 +22,8 @@ typedef struct QDateTime QDateTime;
 typedef struct QIODevice QIODevice;
 #endif
 
-KRcc* KRcc_new(const libqt_string filename);
-KRcc* KRcc_new2(const KRcc* param1);
+KRcc* KRcc_New(const libqt_string filename);
+KRcc* KRcc_New2(const KRcc* param1);
 bool KRcc_DoPrepareWriting(KRcc* self, const libqt_string name, const libqt_string user, const libqt_string group, long long size, mode_t perm, const QDateTime* atime, const QDateTime* mtime, const QDateTime* ctime);
 bool KRcc_DoFinishWriting(KRcc* self, long long size);
 bool KRcc_DoWriteDir(KRcc* self, const libqt_string name, const libqt_string user, const libqt_string group, mode_t perm, const QDateTime* atime, const QDateTime* mtime, const QDateTime* ctime);

@@ -12,11 +12,11 @@
 #include "libqplacedetailsreply.hpp"
 #include "libqplacedetailsreply.hxx"
 
-QPlaceDetailsReply* QPlaceDetailsReply_new() {
+QPlaceDetailsReply* QPlaceDetailsReply_New() {
     return new VirtualQPlaceDetailsReply();
 }
 
-QPlaceDetailsReply* QPlaceDetailsReply_new2(QObject* parent) {
+QPlaceDetailsReply* QPlaceDetailsReply_New2(QObject* parent) {
     return new VirtualQPlaceDetailsReply(parent);
 }
 

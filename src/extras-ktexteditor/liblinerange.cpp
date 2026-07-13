@@ -4,23 +4,23 @@
 #include "liblinerange.hpp"
 #include "liblinerange.hxx"
 
-KTextEditor__LineRange* KTextEditor__LineRange_new(const KTextEditor__LineRange* other) {
+KTextEditor__LineRange* KTextEditor__LineRange_New(const KTextEditor__LineRange* other) {
     return new KTextEditor::LineRange(*other);
 }
 
-KTextEditor__LineRange* KTextEditor__LineRange_new2(KTextEditor__LineRange* other) {
+KTextEditor__LineRange* KTextEditor__LineRange_New2(KTextEditor__LineRange* other) {
     return new KTextEditor::LineRange(std::move(*other));
 }
 
-KTextEditor__LineRange* KTextEditor__LineRange_new3() {
+KTextEditor__LineRange* KTextEditor__LineRange_New3() {
     return new KTextEditor::LineRange();
 }
 
-KTextEditor__LineRange* KTextEditor__LineRange_new4(int start, int end) {
+KTextEditor__LineRange* KTextEditor__LineRange_New4(int start, int end) {
     return new KTextEditor::LineRange(static_cast<int>(start), static_cast<int>(end));
 }
 
-KTextEditor__LineRange* KTextEditor__LineRange_new5(const KTextEditor__LineRange* param1) {
+KTextEditor__LineRange* KTextEditor__LineRange_New5(const KTextEditor__LineRange* param1) {
     return new KTextEditor::LineRange(*param1);
 }
 

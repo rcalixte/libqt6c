@@ -3,11 +3,11 @@
 #include "libqauthenticator.h"
 
 QAuthenticator* q_authenticator_new() {
-    return QAuthenticator_new();
+    return QAuthenticator_New();
 }
 
 QAuthenticator* q_authenticator_new2(void* other) {
-    return QAuthenticator_new2((QAuthenticator*)other);
+    return QAuthenticator_New2((QAuthenticator*)other);
 }
 
 void q_authenticator_operator_assign(void* self, void* other) {

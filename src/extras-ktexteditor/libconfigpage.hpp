@@ -54,7 +54,7 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KTextEditor__ConfigPage* KTextEditor__ConfigPage_new(QWidget* parent);
+KTextEditor__ConfigPage* KTextEditor__ConfigPage_New(QWidget* parent);
 QMetaObject* KTextEditor__ConfigPage_MetaObject(const KTextEditor__ConfigPage* self);
 void* KTextEditor__ConfigPage_Metacast(KTextEditor__ConfigPage* self, const char* param1);
 int KTextEditor__ConfigPage_Metacall(KTextEditor__ConfigPage* self, int param1, int param2, void** param3);

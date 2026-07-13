@@ -27,7 +27,7 @@ typedef struct QUrl QUrl;
 typedef struct QWidget QWidget;
 #endif
 
-KFileCopyToMenu* KFileCopyToMenu_new(QWidget* parentWidget);
+KFileCopyToMenu* KFileCopyToMenu_New(QWidget* parentWidget);
 QMetaObject* KFileCopyToMenu_MetaObject(const KFileCopyToMenu* self);
 void* KFileCopyToMenu_Metacast(KFileCopyToMenu* self, const char* param1);
 int KFileCopyToMenu_Metacall(KFileCopyToMenu* self, int param1, int param2, void** param3);

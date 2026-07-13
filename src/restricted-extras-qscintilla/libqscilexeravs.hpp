@@ -29,8 +29,8 @@ typedef struct QsciLexerAVS QsciLexerAVS;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerAVS* QsciLexerAVS_new();
-QsciLexerAVS* QsciLexerAVS_new2(QObject* parent);
+QsciLexerAVS* QsciLexerAVS_New();
+QsciLexerAVS* QsciLexerAVS_New2(QObject* parent);
 QMetaObject* QsciLexerAVS_MetaObject(const QsciLexerAVS* self);
 void* QsciLexerAVS_Metacast(QsciLexerAVS* self, const char* param1);
 int QsciLexerAVS_Metacall(QsciLexerAVS* self, int param1, int param2, void** param3);

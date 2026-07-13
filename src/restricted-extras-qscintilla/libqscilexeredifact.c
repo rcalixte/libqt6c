@@ -11,11 +11,11 @@
 #include "libqscilexeredifact.h"
 
 QsciLexerEDIFACT* q_scilexeredifact_new() {
-    return QsciLexerEDIFACT_new();
+    return QsciLexerEDIFACT_New();
 }
 
 QsciLexerEDIFACT* q_scilexeredifact_new2(void* parent) {
-    return QsciLexerEDIFACT_new2((QObject*)parent);
+    return QsciLexerEDIFACT_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexeredifact_meta_object(void* self) {

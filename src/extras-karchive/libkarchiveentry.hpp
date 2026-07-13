@@ -20,7 +20,7 @@ typedef struct KArchiveEntry KArchiveEntry;
 typedef struct QDateTime QDateTime;
 #endif
 
-KArchiveEntry* KArchiveEntry_new(KArchive* archive, const libqt_string name, int access, const QDateTime* date, const libqt_string user, const libqt_string group, const libqt_string symlink);
+KArchiveEntry* KArchiveEntry_New(KArchive* archive, const libqt_string name, int access, const QDateTime* date, const libqt_string user, const libqt_string group, const libqt_string symlink);
 QDateTime* KArchiveEntry_Date(const KArchiveEntry* self);
 libqt_string KArchiveEntry_Name(const KArchiveEntry* self);
 mode_t KArchiveEntry_Permissions(const KArchiveEntry* self);

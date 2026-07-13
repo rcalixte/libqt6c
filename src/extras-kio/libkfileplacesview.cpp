@@ -54,11 +54,11 @@
 #include "libkfileplacesview.hpp"
 #include "libkfileplacesview.hxx"
 
-KFilePlacesView* KFilePlacesView_new(QWidget* parent) {
+KFilePlacesView* KFilePlacesView_New(QWidget* parent) {
     return new VirtualKFilePlacesView(parent);
 }
 
-KFilePlacesView* KFilePlacesView_new2() {
+KFilePlacesView* KFilePlacesView_New2() {
     return new VirtualKFilePlacesView();
 }
 

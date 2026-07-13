@@ -5,7 +5,7 @@
 #include "libksycocaentry.hpp"
 #include "libksycocaentry.hxx"
 
-KSycocaEntry* KSycocaEntry_new() {
+KSycocaEntry* KSycocaEntry_New() {
     return new KSycocaEntry();
 }
 

@@ -38,11 +38,11 @@
 #include "libtexttospeechconfigdialog.hpp"
 #include "libtexttospeechconfigdialog.hxx"
 
-TextEditTextToSpeech__TextToSpeechConfigDialog* TextEditTextToSpeech__TextToSpeechConfigDialog_new(QWidget* parent) {
+TextEditTextToSpeech__TextToSpeechConfigDialog* TextEditTextToSpeech__TextToSpeechConfigDialog_New(QWidget* parent) {
     return new VirtualTextEditTextToSpeechTextToSpeechConfigDialog(parent);
 }
 
-TextEditTextToSpeech__TextToSpeechConfigDialog* TextEditTextToSpeech__TextToSpeechConfigDialog_new2() {
+TextEditTextToSpeech__TextToSpeechConfigDialog* TextEditTextToSpeech__TextToSpeechConfigDialog_New2() {
     return new VirtualTextEditTextToSpeechTextToSpeechConfigDialog();
 }
 

@@ -2,27 +2,27 @@
 #include "libqsqlerror.h"
 
 QSqlError* q_sqlerror_new() {
-    return QSqlError_new();
+    return QSqlError_New();
 }
 
 QSqlError* q_sqlerror_new2(void* other) {
-    return QSqlError_new2((QSqlError*)other);
+    return QSqlError_New2((QSqlError*)other);
 }
 
 QSqlError* q_sqlerror_new3(const char* driverText) {
-    return QSqlError_new3(qstring(driverText));
+    return QSqlError_New3(qstring(driverText));
 }
 
 QSqlError* q_sqlerror_new4(const char* driverText, const char* databaseText) {
-    return QSqlError_new4(qstring(driverText), qstring(databaseText));
+    return QSqlError_New4(qstring(driverText), qstring(databaseText));
 }
 
 QSqlError* q_sqlerror_new5(const char* driverText, const char* databaseText, int32_t type) {
-    return QSqlError_new5(qstring(driverText), qstring(databaseText), type);
+    return QSqlError_New5(qstring(driverText), qstring(databaseText), type);
 }
 
 QSqlError* q_sqlerror_new6(const char* driverText, const char* databaseText, int32_t type, const char* errorCode) {
-    return QSqlError_new6(qstring(driverText), qstring(databaseText), type, qstring(errorCode));
+    return QSqlError_New6(qstring(driverText), qstring(databaseText), type, qstring(errorCode));
 }
 
 void q_sqlerror_operator_assign(void* self, void* other) {

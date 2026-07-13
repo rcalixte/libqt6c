@@ -6,11 +6,11 @@
 #include "libkmodifierkeyinfo.h"
 
 KModifierKeyInfo* k_modifierkeyinfo_new() {
-    return KModifierKeyInfo_new();
+    return KModifierKeyInfo_New();
 }
 
 KModifierKeyInfo* k_modifierkeyinfo_new2(void* parent) {
-    return KModifierKeyInfo_new2((QObject*)parent);
+    return KModifierKeyInfo_New2((QObject*)parent);
 }
 
 const QMetaObject* k_modifierkeyinfo_meta_object(void* self) {

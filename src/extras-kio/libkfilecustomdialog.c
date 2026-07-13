@@ -17,19 +17,19 @@
 #include "libkfilecustomdialog.h"
 
 KFileCustomDialog* k_filecustomdialog_new(void* parent) {
-    return KFileCustomDialog_new((QWidget*)parent);
+    return KFileCustomDialog_New((QWidget*)parent);
 }
 
 KFileCustomDialog* k_filecustomdialog_new2() {
-    return KFileCustomDialog_new2();
+    return KFileCustomDialog_New2();
 }
 
 KFileCustomDialog* k_filecustomdialog_new3(void* startDir) {
-    return KFileCustomDialog_new3((QUrl*)startDir);
+    return KFileCustomDialog_New3((QUrl*)startDir);
 }
 
 KFileCustomDialog* k_filecustomdialog_new4(void* startDir, void* parent) {
-    return KFileCustomDialog_new4((QUrl*)startDir, (QWidget*)parent);
+    return KFileCustomDialog_New4((QUrl*)startDir, (QWidget*)parent);
 }
 
 const QMetaObject* k_filecustomdialog_meta_object(void* self) {

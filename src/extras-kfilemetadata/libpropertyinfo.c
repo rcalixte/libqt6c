@@ -3,15 +3,15 @@
 #include "libpropertyinfo.h"
 
 KFileMetaData__PropertyInfo* k_filemetadata__propertyinfo_new() {
-    return KFileMetaData__PropertyInfo_new();
+    return KFileMetaData__PropertyInfo_New();
 }
 
 KFileMetaData__PropertyInfo* k_filemetadata__propertyinfo_new2(int32_t property) {
-    return KFileMetaData__PropertyInfo_new2(property);
+    return KFileMetaData__PropertyInfo_New2(property);
 }
 
 KFileMetaData__PropertyInfo* k_filemetadata__propertyinfo_new3(void* pi) {
-    return KFileMetaData__PropertyInfo_new3((KFileMetaData__PropertyInfo*)pi);
+    return KFileMetaData__PropertyInfo_New3((KFileMetaData__PropertyInfo*)pi);
 }
 
 void k_filemetadata__propertyinfo_operator_assign(void* self, void* rhs) {

@@ -27,7 +27,7 @@ typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
 
-QAbstractFormBuilder* QAbstractFormBuilder_new();
+QAbstractFormBuilder* QAbstractFormBuilder_New();
 QDir* QAbstractFormBuilder_WorkingDirectory(const QAbstractFormBuilder* self);
 void QAbstractFormBuilder_SetWorkingDirectory(QAbstractFormBuilder* self, const QDir* directory);
 QWidget* QAbstractFormBuilder_Load(QAbstractFormBuilder* self, QIODevice* dev, QWidget* parentWidget);

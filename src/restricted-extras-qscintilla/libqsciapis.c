@@ -8,7 +8,7 @@
 #include "libqsciapis.h"
 
 QsciAPIs* q_sciapis_new(void* lexer) {
-    return QsciAPIs_new((QsciLexer*)lexer);
+    return QsciAPIs_New((QsciLexer*)lexer);
 }
 
 const QMetaObject* q_sciapis_meta_object(void* self) {

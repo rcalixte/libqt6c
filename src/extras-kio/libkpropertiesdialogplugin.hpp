@@ -24,7 +24,7 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KPropertiesDialogPlugin* KPropertiesDialogPlugin_new(QObject* parent);
+KPropertiesDialogPlugin* KPropertiesDialogPlugin_New(QObject* parent);
 QMetaObject* KPropertiesDialogPlugin_MetaObject(const KPropertiesDialogPlugin* self);
 void* KPropertiesDialogPlugin_Metacast(KPropertiesDialogPlugin* self, const char* param1);
 int KPropertiesDialogPlugin_Metacall(KPropertiesDialogPlugin* self, int param1, int param2, void** param3);

@@ -27,8 +27,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KDualAction* KDualAction_new(QObject* parent);
-KDualAction* KDualAction_new2(const libqt_string inactiveText, const libqt_string activeText, QObject* parent);
+KDualAction* KDualAction_New(QObject* parent);
+KDualAction* KDualAction_New2(const libqt_string inactiveText, const libqt_string activeText, QObject* parent);
 QMetaObject* KDualAction_MetaObject(const KDualAction* self);
 void* KDualAction_Metacast(KDualAction* self, const char* param1);
 int KDualAction_Metacall(KDualAction* self, int param1, int param2, void** param3);

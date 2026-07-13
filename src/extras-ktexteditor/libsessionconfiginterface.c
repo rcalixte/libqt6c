@@ -3,7 +3,7 @@
 #include "libsessionconfiginterface.h"
 
 KTextEditor__SessionConfigInterface* k_texteditor__sessionconfiginterface_new() {
-    return KTextEditor__SessionConfigInterface_new();
+    return KTextEditor__SessionConfigInterface_New();
 }
 
 void k_texteditor__sessionconfiginterface_read_session_config(void* self, void* config) {

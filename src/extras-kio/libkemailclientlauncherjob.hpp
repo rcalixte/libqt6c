@@ -26,8 +26,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-KEMailClientLauncherJob* KEMailClientLauncherJob_new();
-KEMailClientLauncherJob* KEMailClientLauncherJob_new2(QObject* parent);
+KEMailClientLauncherJob* KEMailClientLauncherJob_New();
+KEMailClientLauncherJob* KEMailClientLauncherJob_New2(QObject* parent);
 QMetaObject* KEMailClientLauncherJob_MetaObject(const KEMailClientLauncherJob* self);
 void* KEMailClientLauncherJob_Metacast(KEMailClientLauncherJob* self, const char* param1);
 int KEMailClientLauncherJob_Metacall(KEMailClientLauncherJob* self, int param1, int param2, void** param3);

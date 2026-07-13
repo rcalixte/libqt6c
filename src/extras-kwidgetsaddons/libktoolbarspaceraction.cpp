@@ -14,7 +14,7 @@
 #include "libktoolbarspaceraction.hpp"
 #include "libktoolbarspaceraction.hxx"
 
-KToolBarSpacerAction* KToolBarSpacerAction_new(QObject* parent) {
+KToolBarSpacerAction* KToolBarSpacerAction_New(QObject* parent) {
     return new VirtualKToolBarSpacerAction(parent);
 }
 

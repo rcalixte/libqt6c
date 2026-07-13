@@ -11,11 +11,11 @@
 #include "libqtcpsocket.h"
 
 QTcpSocket* q_tcpsocket_new() {
-    return QTcpSocket_new();
+    return QTcpSocket_New();
 }
 
 QTcpSocket* q_tcpsocket_new2(void* parent) {
-    return QTcpSocket_new2((QObject*)parent);
+    return QTcpSocket_New2((QObject*)parent);
 }
 
 const QMetaObject* q_tcpsocket_meta_object(void* self) {

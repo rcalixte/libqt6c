@@ -21,10 +21,10 @@ typedef struct QGeoShape QGeoShape;
 typedef struct QVariant QVariant;
 #endif
 
-QGeoPolygon* QGeoPolygon_new();
-QGeoPolygon* QGeoPolygon_new2(const libqt_list /* of QGeoCoordinate* */ path);
-QGeoPolygon* QGeoPolygon_new3(const QGeoPolygon* other);
-QGeoPolygon* QGeoPolygon_new4(const QGeoShape* other);
+QGeoPolygon* QGeoPolygon_New();
+QGeoPolygon* QGeoPolygon_New2(const libqt_list /* of QGeoCoordinate* */ path);
+QGeoPolygon* QGeoPolygon_New3(const QGeoPolygon* other);
+QGeoPolygon* QGeoPolygon_New4(const QGeoShape* other);
 void QGeoPolygon_OperatorAssign(QGeoPolygon* self, const QGeoPolygon* other);
 void QGeoPolygon_SetPerimeter(QGeoPolygon* self, const libqt_list /* of QGeoCoordinate* */ path);
 libqt_list /* of QGeoCoordinate* */ QGeoPolygon_Perimeter(const QGeoPolygon* self);

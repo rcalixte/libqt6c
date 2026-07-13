@@ -7,11 +7,11 @@
 #include "libqhcandlestickmodelmapper.h"
 
 QHCandlestickModelMapper* q_hcandlestickmodelmapper_new() {
-    return QHCandlestickModelMapper_new();
+    return QHCandlestickModelMapper_New();
 }
 
 QHCandlestickModelMapper* q_hcandlestickmodelmapper_new2(void* parent) {
-    return QHCandlestickModelMapper_new2((QObject*)parent);
+    return QHCandlestickModelMapper_New2((QObject*)parent);
 }
 
 const QMetaObject* q_hcandlestickmodelmapper_meta_object(void* self) {

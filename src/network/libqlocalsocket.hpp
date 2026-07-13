@@ -26,8 +26,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QLocalSocket* QLocalSocket_new();
-QLocalSocket* QLocalSocket_new2(QObject* parent);
+QLocalSocket* QLocalSocket_New();
+QLocalSocket* QLocalSocket_New2(QObject* parent);
 QMetaObject* QLocalSocket_MetaObject(const QLocalSocket* self);
 void* QLocalSocket_Metacast(QLocalSocket* self, const char* param1);
 int QLocalSocket_Metacall(QLocalSocket* self, int param1, int param2, void** param3);

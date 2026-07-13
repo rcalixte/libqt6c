@@ -8,11 +8,11 @@
 #include "libkdragwidgetdecorator.h"
 
 KDragWidgetDecoratorBase* k_dragwidgetdecoratorbase_new(void* parent) {
-    return KDragWidgetDecoratorBase_new((QWidget*)parent);
+    return KDragWidgetDecoratorBase_New((QWidget*)parent);
 }
 
 KDragWidgetDecoratorBase* k_dragwidgetdecoratorbase_new2() {
-    return KDragWidgetDecoratorBase_new2();
+    return KDragWidgetDecoratorBase_New2();
 }
 
 const QMetaObject* k_dragwidgetdecoratorbase_meta_object(void* self) {

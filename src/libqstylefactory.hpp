@@ -19,8 +19,8 @@ typedef struct QStyle QStyle;
 typedef struct QStyleFactory QStyleFactory;
 #endif
 
-QStyleFactory* QStyleFactory_new(const QStyleFactory* other);
-QStyleFactory* QStyleFactory_new2(QStyleFactory* other);
+QStyleFactory* QStyleFactory_New(const QStyleFactory* other);
+QStyleFactory* QStyleFactory_New2(QStyleFactory* other);
 void QStyleFactory_CopyAssign(QStyleFactory* self, QStyleFactory* other);
 void QStyleFactory_MoveAssign(QStyleFactory* self, QStyleFactory* other);
 libqt_list /* of libqt_string */ QStyleFactory_Keys();

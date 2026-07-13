@@ -27,10 +27,10 @@ typedef struct QState QState;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QKeyEventTransition* QKeyEventTransition_new();
-QKeyEventTransition* QKeyEventTransition_new2(QObject* object, int type, int key);
-QKeyEventTransition* QKeyEventTransition_new3(QState* sourceState);
-QKeyEventTransition* QKeyEventTransition_new4(QObject* object, int type, int key, QState* sourceState);
+QKeyEventTransition* QKeyEventTransition_New();
+QKeyEventTransition* QKeyEventTransition_New2(QObject* object, int type, int key);
+QKeyEventTransition* QKeyEventTransition_New3(QState* sourceState);
+QKeyEventTransition* QKeyEventTransition_New4(QObject* object, int type, int key, QState* sourceState);
 QMetaObject* QKeyEventTransition_MetaObject(const QKeyEventTransition* self);
 void* QKeyEventTransition_Metacast(QKeyEventTransition* self, const char* param1);
 int QKeyEventTransition_Metacall(QKeyEventTransition* self, int param1, int param2, void** param3);

@@ -80,10 +80,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QPlainTextEdit* QPlainTextEdit_new(QWidget* parent);
-QPlainTextEdit* QPlainTextEdit_new2();
-QPlainTextEdit* QPlainTextEdit_new3(const libqt_string text);
-QPlainTextEdit* QPlainTextEdit_new4(const libqt_string text, QWidget* parent);
+QPlainTextEdit* QPlainTextEdit_New(QWidget* parent);
+QPlainTextEdit* QPlainTextEdit_New2();
+QPlainTextEdit* QPlainTextEdit_New3(const libqt_string text);
+QPlainTextEdit* QPlainTextEdit_New4(const libqt_string text, QWidget* parent);
 QMetaObject* QPlainTextEdit_MetaObject(const QPlainTextEdit* self);
 void* QPlainTextEdit_Metacast(QPlainTextEdit* self, const char* param1);
 int QPlainTextEdit_Metacall(QPlainTextEdit* self, int param1, int param2, void** param3);
@@ -412,7 +412,7 @@ void QPlainTextEdit_OnGetDecodedMetricF(const QPlainTextEdit* self, intptr_t slo
 double QPlainTextEdit_SuperGetDecodedMetricF(const QPlainTextEdit* self, int metricA, int metricB);
 void QPlainTextEdit_Delete(QPlainTextEdit* self);
 
-QPlainTextDocumentLayout* QPlainTextDocumentLayout_new(QTextDocument* document);
+QPlainTextDocumentLayout* QPlainTextDocumentLayout_New(QTextDocument* document);
 QMetaObject* QPlainTextDocumentLayout_MetaObject(const QPlainTextDocumentLayout* self);
 void* QPlainTextDocumentLayout_Metacast(QPlainTextDocumentLayout* self, const char* param1);
 int QPlainTextDocumentLayout_Metacall(QPlainTextDocumentLayout* self, int param1, int param2, void** param3);

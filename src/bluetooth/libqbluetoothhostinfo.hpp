@@ -19,8 +19,8 @@ typedef struct QBluetoothAddress QBluetoothAddress;
 typedef struct QBluetoothHostInfo QBluetoothHostInfo;
 #endif
 
-QBluetoothHostInfo* QBluetoothHostInfo_new();
-QBluetoothHostInfo* QBluetoothHostInfo_new2(const QBluetoothHostInfo* other);
+QBluetoothHostInfo* QBluetoothHostInfo_New();
+QBluetoothHostInfo* QBluetoothHostInfo_New2(const QBluetoothHostInfo* other);
 void QBluetoothHostInfo_OperatorAssign(QBluetoothHostInfo* self, const QBluetoothHostInfo* other);
 QBluetoothAddress* QBluetoothHostInfo_Address(const QBluetoothHostInfo* self);
 void QBluetoothHostInfo_SetAddress(QBluetoothHostInfo* self, const QBluetoothAddress* address);

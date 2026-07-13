@@ -16,19 +16,19 @@
 #include "libqwebengineprofile.h"
 
 QWebEngineProfile* q_webengineprofile_new() {
-    return QWebEngineProfile_new();
+    return QWebEngineProfile_New();
 }
 
 QWebEngineProfile* q_webengineprofile_new2(const char* name) {
-    return QWebEngineProfile_new2(qstring(name));
+    return QWebEngineProfile_New2(qstring(name));
 }
 
 QWebEngineProfile* q_webengineprofile_new3(void* parent) {
-    return QWebEngineProfile_new3((QObject*)parent);
+    return QWebEngineProfile_New3((QObject*)parent);
 }
 
 QWebEngineProfile* q_webengineprofile_new4(const char* name, void* parent) {
-    return QWebEngineProfile_new4(qstring(name), (QObject*)parent);
+    return QWebEngineProfile_New4(qstring(name), (QObject*)parent);
 }
 
 const QMetaObject* q_webengineprofile_meta_object(void* self) {

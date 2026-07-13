@@ -9,15 +9,15 @@
 #include "libfaviconrequestjob.h"
 
 KIO__FavIconRequestJob* k_io__faviconrequestjob_new(void* hostUrl) {
-    return KIO__FavIconRequestJob_new((QUrl*)hostUrl);
+    return KIO__FavIconRequestJob_New((QUrl*)hostUrl);
 }
 
 KIO__FavIconRequestJob* k_io__faviconrequestjob_new2(void* hostUrl, int32_t reload) {
-    return KIO__FavIconRequestJob_new2((QUrl*)hostUrl, reload);
+    return KIO__FavIconRequestJob_New2((QUrl*)hostUrl, reload);
 }
 
 KIO__FavIconRequestJob* k_io__faviconrequestjob_new3(void* hostUrl, int32_t reload, void* parent) {
-    return KIO__FavIconRequestJob_new3((QUrl*)hostUrl, reload, (QObject*)parent);
+    return KIO__FavIconRequestJob_New3((QUrl*)hostUrl, reload, (QObject*)parent);
 }
 
 const QMetaObject* k_io__faviconrequestjob_meta_object(void* self) {

@@ -6,35 +6,35 @@
 #include "libqlibrary.h"
 
 QLibrary* q_library_new() {
-    return QLibrary_new();
+    return QLibrary_New();
 }
 
 QLibrary* q_library_new2(const char* fileName) {
-    return QLibrary_new2(qstring(fileName));
+    return QLibrary_New2(qstring(fileName));
 }
 
 QLibrary* q_library_new3(const char* fileName, int verNum) {
-    return QLibrary_new3(qstring(fileName), verNum);
+    return QLibrary_New3(qstring(fileName), verNum);
 }
 
 QLibrary* q_library_new4(const char* fileName, const char* version) {
-    return QLibrary_new4(qstring(fileName), qstring(version));
+    return QLibrary_New4(qstring(fileName), qstring(version));
 }
 
 QLibrary* q_library_new5(void* parent) {
-    return QLibrary_new5((QObject*)parent);
+    return QLibrary_New5((QObject*)parent);
 }
 
 QLibrary* q_library_new6(const char* fileName, void* parent) {
-    return QLibrary_new6(qstring(fileName), (QObject*)parent);
+    return QLibrary_New6(qstring(fileName), (QObject*)parent);
 }
 
 QLibrary* q_library_new7(const char* fileName, int verNum, void* parent) {
-    return QLibrary_new7(qstring(fileName), verNum, (QObject*)parent);
+    return QLibrary_New7(qstring(fileName), verNum, (QObject*)parent);
 }
 
 QLibrary* q_library_new8(const char* fileName, const char* version, void* parent) {
-    return QLibrary_new8(qstring(fileName), qstring(version), (QObject*)parent);
+    return QLibrary_New8(qstring(fileName), qstring(version), (QObject*)parent);
 }
 
 const QMetaObject* q_library_meta_object(void* self) {

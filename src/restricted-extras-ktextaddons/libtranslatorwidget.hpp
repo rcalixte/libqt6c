@@ -72,8 +72,8 @@ typedef struct TextTranslator__TranslatorTextEdit TextTranslator__TranslatorText
 typedef struct TextTranslator__TranslatorWidget TextTranslator__TranslatorWidget;
 #endif
 
-TextTranslator__TranslatorTextEdit* TextTranslator__TranslatorTextEdit_new(QWidget* parent);
-TextTranslator__TranslatorTextEdit* TextTranslator__TranslatorTextEdit_new2();
+TextTranslator__TranslatorTextEdit* TextTranslator__TranslatorTextEdit_New(QWidget* parent);
+TextTranslator__TranslatorTextEdit* TextTranslator__TranslatorTextEdit_New2();
 QMetaObject* TextTranslator__TranslatorTextEdit_MetaObject(const TextTranslator__TranslatorTextEdit* self);
 void* TextTranslator__TranslatorTextEdit_Metacast(TextTranslator__TranslatorTextEdit* self, const char* param1);
 int TextTranslator__TranslatorTextEdit_Metacall(TextTranslator__TranslatorTextEdit* self, int param1, int param2, void** param3);
@@ -315,10 +315,10 @@ void TextTranslator__TranslatorTextEdit_OnGetDecodedMetricF(const TextTranslator
 double TextTranslator__TranslatorTextEdit_SuperGetDecodedMetricF(const TextTranslator__TranslatorTextEdit* self, int metricA, int metricB);
 void TextTranslator__TranslatorTextEdit_Delete(TextTranslator__TranslatorTextEdit* self);
 
-TextTranslator__TranslatorWidget* TextTranslator__TranslatorWidget_new(QWidget* parent);
-TextTranslator__TranslatorWidget* TextTranslator__TranslatorWidget_new2();
-TextTranslator__TranslatorWidget* TextTranslator__TranslatorWidget_new3(const libqt_string text);
-TextTranslator__TranslatorWidget* TextTranslator__TranslatorWidget_new4(const libqt_string text, QWidget* parent);
+TextTranslator__TranslatorWidget* TextTranslator__TranslatorWidget_New(QWidget* parent);
+TextTranslator__TranslatorWidget* TextTranslator__TranslatorWidget_New2();
+TextTranslator__TranslatorWidget* TextTranslator__TranslatorWidget_New3(const libqt_string text);
+TextTranslator__TranslatorWidget* TextTranslator__TranslatorWidget_New4(const libqt_string text, QWidget* parent);
 QMetaObject* TextTranslator__TranslatorWidget_MetaObject(const TextTranslator__TranslatorWidget* self);
 void* TextTranslator__TranslatorWidget_Metacast(TextTranslator__TranslatorWidget* self, const char* param1);
 int TextTranslator__TranslatorWidget_Metacall(TextTranslator__TranslatorWidget* self, int param1, int param2, void** param3);

@@ -38,7 +38,7 @@ KMountPoint__List* KMountPoint_PossibleMountPoints1(int infoNeeded);
 KMountPoint__List* KMountPoint_CurrentMountPoints1(int infoNeeded);
 void KMountPoint_Delete(KMountPoint* self);
 
-KMountPoint__List* KMountPoint__List_new();
+KMountPoint__List* KMountPoint__List_New();
 void KMountPoint__List_Delete(KMountPoint__List* self);
 
 #ifdef __cplusplus

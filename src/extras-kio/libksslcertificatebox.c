@@ -15,11 +15,11 @@
 #include "libksslcertificatebox.h"
 
 KSslCertificateBox* k_sslcertificatebox_new(void* parent) {
-    return KSslCertificateBox_new((QWidget*)parent);
+    return KSslCertificateBox_New((QWidget*)parent);
 }
 
 KSslCertificateBox* k_sslcertificatebox_new2() {
-    return KSslCertificateBox_new2();
+    return KSslCertificateBox_New2();
 }
 
 const QMetaObject* k_sslcertificatebox_meta_object(void* self) {

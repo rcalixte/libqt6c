@@ -12,11 +12,11 @@
 #include "libqsplineseries.h"
 
 QSplineSeries* q_splineseries_new() {
-    return QSplineSeries_new();
+    return QSplineSeries_New();
 }
 
 QSplineSeries* q_splineseries_new2(void* parent) {
-    return QSplineSeries_new2((QObject*)parent);
+    return QSplineSeries_New2((QObject*)parent);
 }
 
 const QMetaObject* q_splineseries_meta_object(void* self) {

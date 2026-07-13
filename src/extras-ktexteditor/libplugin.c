@@ -9,7 +9,7 @@
 #include "libplugin.h"
 
 KTextEditor__Plugin* k_texteditor__plugin_new(void* parent) {
-    return KTextEditor__Plugin_new((QObject*)parent);
+    return KTextEditor__Plugin_New((QObject*)parent);
 }
 
 const QMetaObject* k_texteditor__plugin_meta_object(void* self) {

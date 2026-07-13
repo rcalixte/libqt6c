@@ -5,19 +5,19 @@
 #include "libqpdfdocumentrenderoptions.hpp"
 #include "libqpdfdocumentrenderoptions.hxx"
 
-QPdfDocumentRenderOptions* QPdfDocumentRenderOptions_new(const QPdfDocumentRenderOptions* other) {
+QPdfDocumentRenderOptions* QPdfDocumentRenderOptions_New(const QPdfDocumentRenderOptions* other) {
     return new QPdfDocumentRenderOptions(*other);
 }
 
-QPdfDocumentRenderOptions* QPdfDocumentRenderOptions_new2(QPdfDocumentRenderOptions* other) {
+QPdfDocumentRenderOptions* QPdfDocumentRenderOptions_New2(QPdfDocumentRenderOptions* other) {
     return new QPdfDocumentRenderOptions(std::move(*other));
 }
 
-QPdfDocumentRenderOptions* QPdfDocumentRenderOptions_new3() {
+QPdfDocumentRenderOptions* QPdfDocumentRenderOptions_New3() {
     return new QPdfDocumentRenderOptions();
 }
 
-QPdfDocumentRenderOptions* QPdfDocumentRenderOptions_new4(const QPdfDocumentRenderOptions* param1) {
+QPdfDocumentRenderOptions* QPdfDocumentRenderOptions_New4(const QPdfDocumentRenderOptions* param1) {
     return new QPdfDocumentRenderOptions(*param1);
 }
 

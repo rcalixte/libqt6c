@@ -51,8 +51,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KIconDialog* KIconDialog_new(QWidget* parent);
-KIconDialog* KIconDialog_new2();
+KIconDialog* KIconDialog_New(QWidget* parent);
+KIconDialog* KIconDialog_New2();
 QMetaObject* KIconDialog_MetaObject(const KIconDialog* self);
 void* KIconDialog_Metacast(KIconDialog* self, const char* param1);
 int KIconDialog_Metacall(KIconDialog* self, int param1, int param2, void** param3);

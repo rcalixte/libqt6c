@@ -8,7 +8,7 @@
 #include "libqrestreply.hpp"
 #include "libqrestreply.hxx"
 
-QRestReply* QRestReply_new(QNetworkReply* reply) {
+QRestReply* QRestReply_New(QNetworkReply* reply) {
     return new QRestReply(reply);
 }
 

@@ -15,11 +15,11 @@
 #include "libkpagewidgetmodel.h"
 
 KPageWidgetItem* k_pagewidgetitem_new(void* widget) {
-    return KPageWidgetItem_new((QWidget*)widget);
+    return KPageWidgetItem_New((QWidget*)widget);
 }
 
 KPageWidgetItem* k_pagewidgetitem_new2(void* widget, const char* name) {
-    return KPageWidgetItem_new2((QWidget*)widget, qstring(name));
+    return KPageWidgetItem_New2((QWidget*)widget, qstring(name));
 }
 
 const QMetaObject* k_pagewidgetitem_meta_object(void* self) {
@@ -530,11 +530,11 @@ void k_pagewidgetitem_delete(void* self) {
 }
 
 KPageWidgetModel* k_pagewidgetmodel_new() {
-    return KPageWidgetModel_new();
+    return KPageWidgetModel_New();
 }
 
 KPageWidgetModel* k_pagewidgetmodel_new2(void* parent) {
-    return KPageWidgetModel_new2((QObject*)parent);
+    return KPageWidgetModel_New2((QObject*)parent);
 }
 
 const QMetaObject* k_pagewidgetmodel_meta_object(void* self) {

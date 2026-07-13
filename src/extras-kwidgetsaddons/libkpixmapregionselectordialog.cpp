@@ -42,11 +42,11 @@
 #include "libkpixmapregionselectordialog.hpp"
 #include "libkpixmapregionselectordialog.hxx"
 
-KPixmapRegionSelectorDialog* KPixmapRegionSelectorDialog_new(QWidget* parent) {
+KPixmapRegionSelectorDialog* KPixmapRegionSelectorDialog_New(QWidget* parent) {
     return new VirtualKPixmapRegionSelectorDialog(parent);
 }
 
-KPixmapRegionSelectorDialog* KPixmapRegionSelectorDialog_new2() {
+KPixmapRegionSelectorDialog* KPixmapRegionSelectorDialog_New2() {
     return new VirtualKPixmapRegionSelectorDialog();
 }
 

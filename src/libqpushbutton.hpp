@@ -54,12 +54,12 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QPushButton* QPushButton_new(QWidget* parent);
-QPushButton* QPushButton_new2();
-QPushButton* QPushButton_new3(const libqt_string text);
-QPushButton* QPushButton_new4(const QIcon* icon, const libqt_string text);
-QPushButton* QPushButton_new5(const libqt_string text, QWidget* parent);
-QPushButton* QPushButton_new6(const QIcon* icon, const libqt_string text, QWidget* parent);
+QPushButton* QPushButton_New(QWidget* parent);
+QPushButton* QPushButton_New2();
+QPushButton* QPushButton_New3(const libqt_string text);
+QPushButton* QPushButton_New4(const QIcon* icon, const libqt_string text);
+QPushButton* QPushButton_New5(const libqt_string text, QWidget* parent);
+QPushButton* QPushButton_New6(const QIcon* icon, const libqt_string text, QWidget* parent);
 QMetaObject* QPushButton_MetaObject(const QPushButton* self);
 void* QPushButton_Metacast(QPushButton* self, const char* param1);
 int QPushButton_Metacall(QPushButton* self, int param1, int param2, void** param3);

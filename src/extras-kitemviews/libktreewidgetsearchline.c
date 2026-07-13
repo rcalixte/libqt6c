@@ -18,19 +18,19 @@
 #include "libktreewidgetsearchline.h"
 
 KTreeWidgetSearchLine* k_treewidgetsearchline_new(void* parent) {
-    return KTreeWidgetSearchLine_new((QWidget*)parent);
+    return KTreeWidgetSearchLine_New((QWidget*)parent);
 }
 
 KTreeWidgetSearchLine* k_treewidgetsearchline_new2() {
-    return KTreeWidgetSearchLine_new2();
+    return KTreeWidgetSearchLine_New2();
 }
 
 KTreeWidgetSearchLine* k_treewidgetsearchline_new3(void* parent, libqt_list /* of QTreeWidget* */ treeWidgets) {
-    return KTreeWidgetSearchLine_new3((QWidget*)parent, treeWidgets);
+    return KTreeWidgetSearchLine_New3((QWidget*)parent, treeWidgets);
 }
 
 KTreeWidgetSearchLine* k_treewidgetsearchline_new4(void* parent, void* treeWidget) {
-    return KTreeWidgetSearchLine_new4((QWidget*)parent, (QTreeWidget*)treeWidget);
+    return KTreeWidgetSearchLine_New4((QWidget*)parent, (QTreeWidget*)treeWidget);
 }
 
 const QMetaObject* k_treewidgetsearchline_meta_object(void* self) {

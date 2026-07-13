@@ -11,19 +11,19 @@
 #include "libqbluetoothsocket.h"
 
 QBluetoothSocket* q_bluetoothsocket_new(int32_t socketType) {
-    return QBluetoothSocket_new(socketType);
+    return QBluetoothSocket_New(socketType);
 }
 
 QBluetoothSocket* q_bluetoothsocket_new2() {
-    return QBluetoothSocket_new2();
+    return QBluetoothSocket_New2();
 }
 
 QBluetoothSocket* q_bluetoothsocket_new3(int32_t socketType, void* parent) {
-    return QBluetoothSocket_new3(socketType, (QObject*)parent);
+    return QBluetoothSocket_New3(socketType, (QObject*)parent);
 }
 
 QBluetoothSocket* q_bluetoothsocket_new4(void* parent) {
-    return QBluetoothSocket_new4((QObject*)parent);
+    return QBluetoothSocket_New4((QObject*)parent);
 }
 
 const QMetaObject* q_bluetoothsocket_meta_object(void* self) {

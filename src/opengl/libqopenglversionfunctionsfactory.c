@@ -4,11 +4,11 @@
 #include "libqopenglversionfunctionsfactory.h"
 
 QOpenGLVersionFunctionsFactory* q_openglversionfunctionsfactory_new(void* other) {
-    return QOpenGLVersionFunctionsFactory_new((QOpenGLVersionFunctionsFactory*)other);
+    return QOpenGLVersionFunctionsFactory_New((QOpenGLVersionFunctionsFactory*)other);
 }
 
 QOpenGLVersionFunctionsFactory* q_openglversionfunctionsfactory_new2(void* other) {
-    return QOpenGLVersionFunctionsFactory_new2((QOpenGLVersionFunctionsFactory*)other);
+    return QOpenGLVersionFunctionsFactory_New2((QOpenGLVersionFunctionsFactory*)other);
 }
 
 void q_openglversionfunctionsfactory_copy_assign(void* self, void* other) {

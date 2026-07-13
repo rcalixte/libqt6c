@@ -67,10 +67,10 @@ typedef struct Sonnet__Highlighter Sonnet__Highlighter;
 typedef struct Sonnet__SpellCheckDecorator Sonnet__SpellCheckDecorator;
 #endif
 
-KTextEdit* KTextEdit_new(QWidget* parent);
-KTextEdit* KTextEdit_new2(const libqt_string text);
-KTextEdit* KTextEdit_new3();
-KTextEdit* KTextEdit_new4(const libqt_string text, QWidget* parent);
+KTextEdit* KTextEdit_New(QWidget* parent);
+KTextEdit* KTextEdit_New2(const libqt_string text);
+KTextEdit* KTextEdit_New3();
+KTextEdit* KTextEdit_New4(const libqt_string text, QWidget* parent);
 QMetaObject* KTextEdit_MetaObject(const KTextEdit* self);
 void* KTextEdit_Metacast(KTextEdit* self, const char* param1);
 int KTextEdit_Metacall(KTextEdit* self, int param1, int param2, void** param3);

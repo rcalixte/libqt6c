@@ -3,11 +3,11 @@
 #include "libqvoice.h"
 
 QVoice* q_voice_new() {
-    return QVoice_new();
+    return QVoice_New();
 }
 
 QVoice* q_voice_new2(void* other) {
-    return QVoice_new2((QVoice*)other);
+    return QVoice_New2((QVoice*)other);
 }
 
 void q_voice_operator_assign(void* self, void* other) {

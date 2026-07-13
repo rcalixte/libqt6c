@@ -22,11 +22,11 @@
 #include "libqtextbrowser.h"
 
 QTextBrowser* q_textbrowser_new(void* parent) {
-    return QTextBrowser_new((QWidget*)parent);
+    return QTextBrowser_New((QWidget*)parent);
 }
 
 QTextBrowser* q_textbrowser_new2() {
-    return QTextBrowser_new2();
+    return QTextBrowser_New2();
 }
 
 const QMetaObject* q_textbrowser_meta_object(void* self) {

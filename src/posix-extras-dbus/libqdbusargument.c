@@ -6,11 +6,11 @@
 #include "libqdbusargument.h"
 
 QDBusArgument* q_dbusargument_new() {
-    return QDBusArgument_new();
+    return QDBusArgument_New();
 }
 
 QDBusArgument* q_dbusargument_new2(void* other) {
-    return QDBusArgument_new2((QDBusArgument*)other);
+    return QDBusArgument_New2((QDBusArgument*)other);
 }
 
 void q_dbusargument_operator_assign(void* self, void* other) {

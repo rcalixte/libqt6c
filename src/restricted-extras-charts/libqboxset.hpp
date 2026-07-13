@@ -26,12 +26,12 @@ typedef struct QPen QPen;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QBoxSet* QBoxSet_new();
-QBoxSet* QBoxSet_new2(const double le, const double lq, const double m, const double uq, const double ue);
-QBoxSet* QBoxSet_new3(const libqt_string label);
-QBoxSet* QBoxSet_new4(const libqt_string label, QObject* parent);
-QBoxSet* QBoxSet_new5(const double le, const double lq, const double m, const double uq, const double ue, const libqt_string label);
-QBoxSet* QBoxSet_new6(const double le, const double lq, const double m, const double uq, const double ue, const libqt_string label, QObject* parent);
+QBoxSet* QBoxSet_New();
+QBoxSet* QBoxSet_New2(const double le, const double lq, const double m, const double uq, const double ue);
+QBoxSet* QBoxSet_New3(const libqt_string label);
+QBoxSet* QBoxSet_New4(const libqt_string label, QObject* parent);
+QBoxSet* QBoxSet_New5(const double le, const double lq, const double m, const double uq, const double ue, const libqt_string label);
+QBoxSet* QBoxSet_New6(const double le, const double lq, const double m, const double uq, const double ue, const libqt_string label, QObject* parent);
 QMetaObject* QBoxSet_MetaObject(const QBoxSet* self);
 void* QBoxSet_Metacast(QBoxSet* self, const char* param1);
 int QBoxSet_Metacall(QBoxSet* self, int param1, int param2, void** param3);

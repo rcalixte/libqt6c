@@ -39,27 +39,27 @@
 #include "libqprintpreviewdialog.hpp"
 #include "libqprintpreviewdialog.hxx"
 
-QPrintPreviewDialog* QPrintPreviewDialog_new(QWidget* parent) {
+QPrintPreviewDialog* QPrintPreviewDialog_New(QWidget* parent) {
     return new VirtualQPrintPreviewDialog(parent);
 }
 
-QPrintPreviewDialog* QPrintPreviewDialog_new2() {
+QPrintPreviewDialog* QPrintPreviewDialog_New2() {
     return new VirtualQPrintPreviewDialog();
 }
 
-QPrintPreviewDialog* QPrintPreviewDialog_new3(QPrinter* printer) {
+QPrintPreviewDialog* QPrintPreviewDialog_New3(QPrinter* printer) {
     return new VirtualQPrintPreviewDialog(printer);
 }
 
-QPrintPreviewDialog* QPrintPreviewDialog_new4(QWidget* parent, int flags) {
+QPrintPreviewDialog* QPrintPreviewDialog_New4(QWidget* parent, int flags) {
     return new VirtualQPrintPreviewDialog(parent, static_cast<Qt::WindowFlags>(flags));
 }
 
-QPrintPreviewDialog* QPrintPreviewDialog_new5(QPrinter* printer, QWidget* parent) {
+QPrintPreviewDialog* QPrintPreviewDialog_New5(QPrinter* printer, QWidget* parent) {
     return new VirtualQPrintPreviewDialog(printer, parent);
 }
 
-QPrintPreviewDialog* QPrintPreviewDialog_new6(QPrinter* printer, QWidget* parent, int flags) {
+QPrintPreviewDialog* QPrintPreviewDialog_New6(QPrinter* printer, QWidget* parent, int flags) {
     return new VirtualQPrintPreviewDialog(printer, parent, static_cast<Qt::WindowFlags>(flags));
 }
 

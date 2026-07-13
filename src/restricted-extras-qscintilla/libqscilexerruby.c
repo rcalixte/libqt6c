@@ -11,11 +11,11 @@
 #include "libqscilexerruby.h"
 
 QsciLexerRuby* q_scilexerruby_new() {
-    return QsciLexerRuby_new();
+    return QsciLexerRuby_New();
 }
 
 QsciLexerRuby* q_scilexerruby_new2(void* parent) {
-    return QsciLexerRuby_new2((QObject*)parent);
+    return QsciLexerRuby_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexerruby_meta_object(void* self) {

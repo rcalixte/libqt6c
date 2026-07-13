@@ -11,11 +11,11 @@
 #include "libkjob.hpp"
 #include "libkjob.hxx"
 
-KJob* KJob_new() {
+KJob* KJob_New() {
     return new VirtualKJob();
 }
 
-KJob* KJob_new2(QObject* parent) {
+KJob* KJob_New2(QObject* parent) {
     return new VirtualKJob(parent);
 }
 

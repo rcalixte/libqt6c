@@ -7,11 +7,11 @@
 #include "libopenurlevent.hpp"
 #include "libopenurlevent.hxx"
 
-KParts__OpenUrlEvent* KParts__OpenUrlEvent_new(KParts__ReadOnlyPart* part, const QUrl* url) {
+KParts__OpenUrlEvent* KParts__OpenUrlEvent_New(KParts__ReadOnlyPart* part, const QUrl* url) {
     return new VirtualKPartsOpenUrlEvent(part, *url);
 }
 
-KParts__OpenUrlEvent* KParts__OpenUrlEvent_new2(KParts__ReadOnlyPart* part, const QUrl* url, const KParts__OpenUrlArguments* args) {
+KParts__OpenUrlEvent* KParts__OpenUrlEvent_New2(KParts__ReadOnlyPart* part, const QUrl* url, const KParts__OpenUrlArguments* args) {
     return new VirtualKPartsOpenUrlEvent(part, *url, *args);
 }
 

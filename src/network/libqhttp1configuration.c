@@ -2,11 +2,11 @@
 #include "libqhttp1configuration.h"
 
 QHttp1Configuration* q_http1configuration_new() {
-    return QHttp1Configuration_new();
+    return QHttp1Configuration_New();
 }
 
 QHttp1Configuration* q_http1configuration_new2(void* other) {
-    return QHttp1Configuration_new2((QHttp1Configuration*)other);
+    return QHttp1Configuration_New2((QHttp1Configuration*)other);
 }
 
 void q_http1configuration_operator_assign(void* self, void* other) {

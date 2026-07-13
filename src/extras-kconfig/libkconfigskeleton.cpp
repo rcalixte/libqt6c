@@ -17,16 +17,16 @@
 #include "libkconfigskeleton.hpp"
 #include "libkconfigskeleton.hxx"
 
-KConfigSkeleton* KConfigSkeleton_new() {
+KConfigSkeleton* KConfigSkeleton_New() {
     return new VirtualKConfigSkeleton();
 }
 
-KConfigSkeleton* KConfigSkeleton_new2(const libqt_string configname) {
+KConfigSkeleton* KConfigSkeleton_New2(const libqt_string configname) {
     QString configname_QString = QString::fromUtf8(configname.data, configname.len);
     return new VirtualKConfigSkeleton(configname_QString);
 }
 
-KConfigSkeleton* KConfigSkeleton_new3(const libqt_string configname, QObject* parent) {
+KConfigSkeleton* KConfigSkeleton_New3(const libqt_string configname, QObject* parent) {
     QString configname_QString = QString::fromUtf8(configname.data, configname.len);
     return new VirtualKConfigSkeleton(configname_QString, parent);
 }
@@ -629,13 +629,13 @@ void KConfigSkeleton_Delete(KConfigSkeleton* self) {
     delete self;
 }
 
-KConfigSkeleton__ItemColor* KConfigSkeleton__ItemColor_new(const libqt_string _group, const libqt_string _key, QColor* reference) {
+KConfigSkeleton__ItemColor* KConfigSkeleton__ItemColor_New(const libqt_string _group, const libqt_string _key, QColor* reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKConfigSkeletonItemColor(_group_QString, _key_QString, *reference);
 }
 
-KConfigSkeleton__ItemColor* KConfigSkeleton__ItemColor_new2(const libqt_string _group, const libqt_string _key, QColor* reference, const QColor* defaultValue) {
+KConfigSkeleton__ItemColor* KConfigSkeleton__ItemColor_New2(const libqt_string _group, const libqt_string _key, QColor* reference, const QColor* defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKConfigSkeletonItemColor(_group_QString, _key_QString, *reference, *defaultValue);
@@ -737,13 +737,13 @@ void KConfigSkeleton__ItemColor_Delete(KConfigSkeleton__ItemColor* self) {
     delete self;
 }
 
-KConfigSkeleton__ItemFont* KConfigSkeleton__ItemFont_new(const libqt_string _group, const libqt_string _key, QFont* reference) {
+KConfigSkeleton__ItemFont* KConfigSkeleton__ItemFont_New(const libqt_string _group, const libqt_string _key, QFont* reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKConfigSkeletonItemFont(_group_QString, _key_QString, *reference);
 }
 
-KConfigSkeleton__ItemFont* KConfigSkeleton__ItemFont_new2(const libqt_string _group, const libqt_string _key, QFont* reference, const QFont* defaultValue) {
+KConfigSkeleton__ItemFont* KConfigSkeleton__ItemFont_New2(const libqt_string _group, const libqt_string _key, QFont* reference, const QFont* defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKConfigSkeletonItemFont(_group_QString, _key_QString, *reference, *defaultValue);

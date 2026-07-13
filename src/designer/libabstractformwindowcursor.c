@@ -5,7 +5,7 @@
 #include "libabstractformwindowcursor.h"
 
 QDesignerFormWindowCursorInterface* q_designerformwindowcursorinterface_new() {
-    return QDesignerFormWindowCursorInterface_new();
+    return QDesignerFormWindowCursorInterface_New();
 }
 
 QDesignerFormWindowInterface* q_designerformwindowcursorinterface_form_window(void* self) {

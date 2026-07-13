@@ -50,11 +50,11 @@ void QGraphicsAnchor_Delete(QGraphicsAnchor* self) {
     delete self;
 }
 
-QGraphicsAnchorLayout* QGraphicsAnchorLayout_new() {
+QGraphicsAnchorLayout* QGraphicsAnchorLayout_New() {
     return new VirtualQGraphicsAnchorLayout();
 }
 
-QGraphicsAnchorLayout* QGraphicsAnchorLayout_new2(QGraphicsLayoutItem* parent) {
+QGraphicsAnchorLayout* QGraphicsAnchorLayout_New2(QGraphicsLayoutItem* parent) {
     return new VirtualQGraphicsAnchorLayout(parent);
 }
 

@@ -13,27 +13,27 @@
 #include "libqaudiosink.hpp"
 #include "libqaudiosink.hxx"
 
-QAudioSink* QAudioSink_new() {
+QAudioSink* QAudioSink_New() {
     return new VirtualQAudioSink();
 }
 
-QAudioSink* QAudioSink_new2(const QAudioDevice* audioDeviceInfo) {
+QAudioSink* QAudioSink_New2(const QAudioDevice* audioDeviceInfo) {
     return new VirtualQAudioSink(*audioDeviceInfo);
 }
 
-QAudioSink* QAudioSink_new3(const QAudioFormat* format) {
+QAudioSink* QAudioSink_New3(const QAudioFormat* format) {
     return new VirtualQAudioSink(*format);
 }
 
-QAudioSink* QAudioSink_new4(const QAudioFormat* format, QObject* parent) {
+QAudioSink* QAudioSink_New4(const QAudioFormat* format, QObject* parent) {
     return new VirtualQAudioSink(*format, parent);
 }
 
-QAudioSink* QAudioSink_new5(const QAudioDevice* audioDeviceInfo, const QAudioFormat* format) {
+QAudioSink* QAudioSink_New5(const QAudioDevice* audioDeviceInfo, const QAudioFormat* format) {
     return new VirtualQAudioSink(*audioDeviceInfo, *format);
 }
 
-QAudioSink* QAudioSink_new6(const QAudioDevice* audioDeviceInfo, const QAudioFormat* format, QObject* parent) {
+QAudioSink* QAudioSink_New6(const QAudioDevice* audioDeviceInfo, const QAudioFormat* format, QObject* parent) {
     return new VirtualQAudioSink(*audioDeviceInfo, *format, parent);
 }
 

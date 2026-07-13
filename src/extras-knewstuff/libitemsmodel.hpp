@@ -40,8 +40,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-KNSCore__ItemsModel* KNSCore__ItemsModel_new(KNSCore__EngineBase* engine);
-KNSCore__ItemsModel* KNSCore__ItemsModel_new2(KNSCore__EngineBase* engine, QObject* parent);
+KNSCore__ItemsModel* KNSCore__ItemsModel_New(KNSCore__EngineBase* engine);
+KNSCore__ItemsModel* KNSCore__ItemsModel_New2(KNSCore__EngineBase* engine, QObject* parent);
 QMetaObject* KNSCore__ItemsModel_MetaObject(const KNSCore__ItemsModel* self);
 void* KNSCore__ItemsModel_Metacast(KNSCore__ItemsModel* self, const char* param1);
 int KNSCore__ItemsModel_Metacall(KNSCore__ItemsModel* self, int param1, int param2, void** param3);

@@ -37,11 +37,11 @@
 #include "libabstractresourcebrowser.hpp"
 #include "libabstractresourcebrowser.hxx"
 
-QDesignerResourceBrowserInterface* QDesignerResourceBrowserInterface_new(QWidget* parent) {
+QDesignerResourceBrowserInterface* QDesignerResourceBrowserInterface_New(QWidget* parent) {
     return new VirtualQDesignerResourceBrowserInterface(parent);
 }
 
-QDesignerResourceBrowserInterface* QDesignerResourceBrowserInterface_new2() {
+QDesignerResourceBrowserInterface* QDesignerResourceBrowserInterface_New2() {
     return new VirtualQDesignerResourceBrowserInterface();
 }
 

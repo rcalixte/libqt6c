@@ -10,11 +10,11 @@
 #include "libqabstracttransition.h"
 
 QAbstractTransition* q_abstracttransition_new() {
-    return QAbstractTransition_new();
+    return QAbstractTransition_New();
 }
 
 QAbstractTransition* q_abstracttransition_new2(void* sourceState) {
-    return QAbstractTransition_new2((QState*)sourceState);
+    return QAbstractTransition_New2((QState*)sourceState);
 }
 
 const QMetaObject* q_abstracttransition_meta_object(void* self) {

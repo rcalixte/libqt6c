@@ -26,10 +26,10 @@ typedef struct KFileMetaData__SimpleExtractionResult KFileMetaData__SimpleExtrac
 typedef struct QVariant QVariant;
 #endif
 
-KFileMetaData__SimpleExtractionResult* KFileMetaData__SimpleExtractionResult_new(const libqt_string url);
-KFileMetaData__SimpleExtractionResult* KFileMetaData__SimpleExtractionResult_new2(const KFileMetaData__SimpleExtractionResult* rhs);
-KFileMetaData__SimpleExtractionResult* KFileMetaData__SimpleExtractionResult_new3(const libqt_string url, const libqt_string mimetype);
-KFileMetaData__SimpleExtractionResult* KFileMetaData__SimpleExtractionResult_new4(const libqt_string url, const libqt_string mimetype, const int* flags);
+KFileMetaData__SimpleExtractionResult* KFileMetaData__SimpleExtractionResult_New(const libqt_string url);
+KFileMetaData__SimpleExtractionResult* KFileMetaData__SimpleExtractionResult_New2(const KFileMetaData__SimpleExtractionResult* rhs);
+KFileMetaData__SimpleExtractionResult* KFileMetaData__SimpleExtractionResult_New3(const libqt_string url, const libqt_string mimetype);
+KFileMetaData__SimpleExtractionResult* KFileMetaData__SimpleExtractionResult_New4(const libqt_string url, const libqt_string mimetype, const int* flags);
 void KFileMetaData__SimpleExtractionResult_OperatorAssign(KFileMetaData__SimpleExtractionResult* self, const KFileMetaData__SimpleExtractionResult* rhs);
 bool KFileMetaData__SimpleExtractionResult_OperatorEqual(const KFileMetaData__SimpleExtractionResult* self, const KFileMetaData__SimpleExtractionResult* rhs);
 void KFileMetaData__SimpleExtractionResult_Add(KFileMetaData__SimpleExtractionResult* self, int property, const QVariant* value);

@@ -8,11 +8,11 @@
 #include "libtranslatormenu.h"
 
 TextTranslator__TranslatorMenu* k_texttranslator__translatormenu_new() {
-    return TextTranslator__TranslatorMenu_new();
+    return TextTranslator__TranslatorMenu_New();
 }
 
 TextTranslator__TranslatorMenu* k_texttranslator__translatormenu_new2(void* parent) {
-    return TextTranslator__TranslatorMenu_new2((QObject*)parent);
+    return TextTranslator__TranslatorMenu_New2((QObject*)parent);
 }
 
 const QMetaObject* k_texttranslator__translatormenu_meta_object(void* self) {

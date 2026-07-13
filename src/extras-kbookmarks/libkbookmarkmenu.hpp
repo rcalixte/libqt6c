@@ -29,8 +29,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KBookmarkMenu* KBookmarkMenu_new(KBookmarkManager* manager, KBookmarkOwner* owner, QMenu* parentMenu);
-KBookmarkMenu* KBookmarkMenu_new2(KBookmarkManager* mgr, KBookmarkOwner* owner, QMenu* parentMenu, const libqt_string parentAddress);
+KBookmarkMenu* KBookmarkMenu_New(KBookmarkManager* manager, KBookmarkOwner* owner, QMenu* parentMenu);
+KBookmarkMenu* KBookmarkMenu_New2(KBookmarkManager* mgr, KBookmarkOwner* owner, QMenu* parentMenu, const libqt_string parentAddress);
 QMetaObject* KBookmarkMenu_MetaObject(const KBookmarkMenu* self);
 void* KBookmarkMenu_Metacast(KBookmarkMenu* self, const char* param1);
 int KBookmarkMenu_Metacall(KBookmarkMenu* self, int param1, int param2, void** param3);

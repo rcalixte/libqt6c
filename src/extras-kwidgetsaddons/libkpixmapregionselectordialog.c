@@ -19,11 +19,11 @@
 #include "libkpixmapregionselectordialog.h"
 
 KPixmapRegionSelectorDialog* k_pixmapregionselectordialog_new(void* parent) {
-    return KPixmapRegionSelectorDialog_new((QWidget*)parent);
+    return KPixmapRegionSelectorDialog_New((QWidget*)parent);
 }
 
 KPixmapRegionSelectorDialog* k_pixmapregionselectordialog_new2() {
-    return KPixmapRegionSelectorDialog_new2();
+    return KPixmapRegionSelectorDialog_New2();
 }
 
 const QMetaObject* k_pixmapregionselectordialog_meta_object(void* self) {

@@ -18,8 +18,8 @@ extern "C" {
 typedef struct KMemoryInfo KMemoryInfo;
 #endif
 
-KMemoryInfo* KMemoryInfo_new();
-KMemoryInfo* KMemoryInfo_new2(const KMemoryInfo* other);
+KMemoryInfo* KMemoryInfo_New();
+KMemoryInfo* KMemoryInfo_New2(const KMemoryInfo* other);
 void KMemoryInfo_OperatorAssign(KMemoryInfo* self, const KMemoryInfo* other);
 bool KMemoryInfo_OperatorEqual(const KMemoryInfo* self, const KMemoryInfo* other);
 bool KMemoryInfo_OperatorNotEqual(const KMemoryInfo* self, const KMemoryInfo* other);

@@ -46,11 +46,11 @@
 #include "libkfilewidget.hpp"
 #include "libkfilewidget.hxx"
 
-KFileWidget* KFileWidget_new(const QUrl* startDir) {
+KFileWidget* KFileWidget_New(const QUrl* startDir) {
     return new VirtualKFileWidget(*startDir);
 }
 
-KFileWidget* KFileWidget_new2(const QUrl* startDir, QWidget* parent) {
+KFileWidget* KFileWidget_New2(const QUrl* startDir, QWidget* parent) {
     return new VirtualKFileWidget(*startDir, parent);
 }
 

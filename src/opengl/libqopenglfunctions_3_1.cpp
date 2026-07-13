@@ -4,7 +4,7 @@
 #include "libqopenglfunctions_3_1.hpp"
 #include "libqopenglfunctions_3_1.hxx"
 
-QOpenGLFunctions_3_1* QOpenGLFunctions_3_1_new() {
+QOpenGLFunctions_3_1* QOpenGLFunctions_3_1_New() {
     return new VirtualQOpenGLFunctions_3_1();
 }
 

@@ -5,24 +5,24 @@
 #include "libqscistyle.hpp"
 #include "libqscistyle.hxx"
 
-QsciStyle* QsciStyle_new() {
+QsciStyle* QsciStyle_New() {
     return new QsciStyle();
 }
 
-QsciStyle* QsciStyle_new2(int style, const libqt_string description, const QColor* color, const QColor* paper, const QFont* font) {
+QsciStyle* QsciStyle_New2(int style, const libqt_string description, const QColor* color, const QColor* paper, const QFont* font) {
     QString description_QString = QString::fromUtf8(description.data, description.len);
     return new QsciStyle(static_cast<int>(style), description_QString, *color, *paper, *font);
 }
 
-QsciStyle* QsciStyle_new3(const QsciStyle* param1) {
+QsciStyle* QsciStyle_New3(const QsciStyle* param1) {
     return new QsciStyle(*param1);
 }
 
-QsciStyle* QsciStyle_new4(int style) {
+QsciStyle* QsciStyle_New4(int style) {
     return new QsciStyle(static_cast<int>(style));
 }
 
-QsciStyle* QsciStyle_new5(int style, const libqt_string description, const QColor* color, const QColor* paper, const QFont* font, bool eolFill) {
+QsciStyle* QsciStyle_New5(int style, const libqt_string description, const QColor* color, const QColor* paper, const QFont* font, bool eolFill) {
     QString description_QString = QString::fromUtf8(description.data, description.len);
     return new QsciStyle(static_cast<int>(style), description_QString, *color, *paper, *font, eolFill);
 }

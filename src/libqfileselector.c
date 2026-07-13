@@ -7,11 +7,11 @@
 #include "libqfileselector.h"
 
 QFileSelector* q_fileselector_new() {
-    return QFileSelector_new();
+    return QFileSelector_New();
 }
 
 QFileSelector* q_fileselector_new2(void* parent) {
-    return QFileSelector_new2((QObject*)parent);
+    return QFileSelector_New2((QObject*)parent);
 }
 
 const QMetaObject* q_fileselector_meta_object(void* self) {

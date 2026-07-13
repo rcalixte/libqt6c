@@ -9,7 +9,7 @@
 #include "libktoggletoolbaraction.h"
 
 KToggleToolBarAction* k_toggletoolbaraction_new(void* toolBar, const char* text, void* parent) {
-    return KToggleToolBarAction_new((KToolBar*)toolBar, qstring(text), (QObject*)parent);
+    return KToggleToolBarAction_New((KToolBar*)toolBar, qstring(text), (QObject*)parent);
 }
 
 const QMetaObject* k_toggletoolbaraction_meta_object(void* self) {

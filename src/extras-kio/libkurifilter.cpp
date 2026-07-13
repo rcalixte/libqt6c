@@ -7,11 +7,11 @@
 #include "libkurifilter.hpp"
 #include "libkurifilter.hxx"
 
-KUriFilterSearchProvider* KUriFilterSearchProvider_new() {
+KUriFilterSearchProvider* KUriFilterSearchProvider_New() {
     return new VirtualKUriFilterSearchProvider();
 }
 
-KUriFilterSearchProvider* KUriFilterSearchProvider_new2(const KUriFilterSearchProvider* param1) {
+KUriFilterSearchProvider* KUriFilterSearchProvider_New2(const KUriFilterSearchProvider* param1) {
     return new VirtualKUriFilterSearchProvider(*param1);
 }
 
@@ -263,20 +263,20 @@ void KUriFilterSearchProvider_Delete(KUriFilterSearchProvider* self) {
     delete self;
 }
 
-KUriFilterData* KUriFilterData_new() {
+KUriFilterData* KUriFilterData_New() {
     return new KUriFilterData();
 }
 
-KUriFilterData* KUriFilterData_new2(const QUrl* url) {
+KUriFilterData* KUriFilterData_New2(const QUrl* url) {
     return new KUriFilterData(*url);
 }
 
-KUriFilterData* KUriFilterData_new3(const libqt_string url) {
+KUriFilterData* KUriFilterData_New3(const libqt_string url) {
     QString url_QString = QString::fromUtf8(url.data, url.len);
     return new KUriFilterData(url_QString);
 }
 
-KUriFilterData* KUriFilterData_new4(const KUriFilterData* other) {
+KUriFilterData* KUriFilterData_New4(const KUriFilterData* other) {
     return new KUriFilterData(*other);
 }
 

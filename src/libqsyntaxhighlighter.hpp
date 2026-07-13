@@ -30,8 +30,8 @@ typedef struct QTextDocument QTextDocument;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QSyntaxHighlighter* QSyntaxHighlighter_new(QObject* parent);
-QSyntaxHighlighter* QSyntaxHighlighter_new2(QTextDocument* parent);
+QSyntaxHighlighter* QSyntaxHighlighter_New(QObject* parent);
+QSyntaxHighlighter* QSyntaxHighlighter_New2(QTextDocument* parent);
 QMetaObject* QSyntaxHighlighter_MetaObject(const QSyntaxHighlighter* self);
 void* QSyntaxHighlighter_Metacast(QSyntaxHighlighter* self, const char* param1);
 int QSyntaxHighlighter_Metacall(QSyntaxHighlighter* self, int param1, int param2, void** param3);

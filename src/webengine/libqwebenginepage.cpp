@@ -43,19 +43,19 @@
 #include "libqwebenginepage.hpp"
 #include "libqwebenginepage.hxx"
 
-QWebEnginePage* QWebEnginePage_new() {
+QWebEnginePage* QWebEnginePage_New() {
     return new VirtualQWebEnginePage();
 }
 
-QWebEnginePage* QWebEnginePage_new2(QWebEngineProfile* profile) {
+QWebEnginePage* QWebEnginePage_New2(QWebEngineProfile* profile) {
     return new VirtualQWebEnginePage(profile);
 }
 
-QWebEnginePage* QWebEnginePage_new3(QObject* parent) {
+QWebEnginePage* QWebEnginePage_New3(QObject* parent) {
     return new VirtualQWebEnginePage(parent);
 }
 
-QWebEnginePage* QWebEnginePage_new4(QWebEngineProfile* profile, QObject* parent) {
+QWebEnginePage* QWebEnginePage_New4(QWebEngineProfile* profile, QObject* parent) {
     return new VirtualQWebEnginePage(profile, parent);
 }
 

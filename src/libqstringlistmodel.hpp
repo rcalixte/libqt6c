@@ -32,10 +32,10 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QStringListModel* QStringListModel_new();
-QStringListModel* QStringListModel_new2(const libqt_list /* of libqt_string */ strings);
-QStringListModel* QStringListModel_new3(QObject* parent);
-QStringListModel* QStringListModel_new4(const libqt_list /* of libqt_string */ strings, QObject* parent);
+QStringListModel* QStringListModel_New();
+QStringListModel* QStringListModel_New2(const libqt_list /* of libqt_string */ strings);
+QStringListModel* QStringListModel_New3(QObject* parent);
+QStringListModel* QStringListModel_New4(const libqt_list /* of libqt_string */ strings, QObject* parent);
 QMetaObject* QStringListModel_MetaObject(const QStringListModel* self);
 void* QStringListModel_Metacast(QStringListModel* self, const char* param1);
 int QStringListModel_Metacall(QStringListModel* self, int param1, int param2, void** param3);

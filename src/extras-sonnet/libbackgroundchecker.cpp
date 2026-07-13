@@ -12,19 +12,19 @@
 #include "libbackgroundchecker.hpp"
 #include "libbackgroundchecker.hxx"
 
-Sonnet__BackgroundChecker* Sonnet__BackgroundChecker_new() {
+Sonnet__BackgroundChecker* Sonnet__BackgroundChecker_New() {
     return new VirtualSonnetBackgroundChecker();
 }
 
-Sonnet__BackgroundChecker* Sonnet__BackgroundChecker_new2(const Sonnet__Speller* speller) {
+Sonnet__BackgroundChecker* Sonnet__BackgroundChecker_New2(const Sonnet__Speller* speller) {
     return new VirtualSonnetBackgroundChecker(*speller);
 }
 
-Sonnet__BackgroundChecker* Sonnet__BackgroundChecker_new3(QObject* parent) {
+Sonnet__BackgroundChecker* Sonnet__BackgroundChecker_New3(QObject* parent) {
     return new VirtualSonnetBackgroundChecker(parent);
 }
 
-Sonnet__BackgroundChecker* Sonnet__BackgroundChecker_new4(const Sonnet__Speller* speller, QObject* parent) {
+Sonnet__BackgroundChecker* Sonnet__BackgroundChecker_New4(const Sonnet__Speller* speller, QObject* parent) {
     return new VirtualSonnetBackgroundChecker(*speller, parent);
 }
 

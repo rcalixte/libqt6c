@@ -20,15 +20,15 @@
 #include "libkassistantdialog.h"
 
 KAssistantDialog* k_assistantdialog_new(void* parent) {
-    return KAssistantDialog_new((QWidget*)parent);
+    return KAssistantDialog_New((QWidget*)parent);
 }
 
 KAssistantDialog* k_assistantdialog_new2() {
-    return KAssistantDialog_new2();
+    return KAssistantDialog_New2();
 }
 
 KAssistantDialog* k_assistantdialog_new3(void* parent, int32_t flags) {
-    return KAssistantDialog_new3((QWidget*)parent, flags);
+    return KAssistantDialog_New3((QWidget*)parent, flags);
 }
 
 const QMetaObject* k_assistantdialog_meta_object(void* self) {

@@ -9,11 +9,11 @@
 #include "libkjobtrackerinterface.hpp"
 #include "libkjobtrackerinterface.hxx"
 
-KJobTrackerInterface* KJobTrackerInterface_new() {
+KJobTrackerInterface* KJobTrackerInterface_New() {
     return new KJobTrackerInterface();
 }
 
-KJobTrackerInterface* KJobTrackerInterface_new2(QObject* parent) {
+KJobTrackerInterface* KJobTrackerInterface_New2(QObject* parent) {
     return new KJobTrackerInterface(parent);
 }
 

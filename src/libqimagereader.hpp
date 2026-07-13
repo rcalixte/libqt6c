@@ -23,11 +23,11 @@ typedef struct QRect QRect;
 typedef struct QSize QSize;
 #endif
 
-QImageReader* QImageReader_new();
-QImageReader* QImageReader_new2(QIODevice* device);
-QImageReader* QImageReader_new3(const libqt_string fileName);
-QImageReader* QImageReader_new4(QIODevice* device, const libqt_string format);
-QImageReader* QImageReader_new5(const libqt_string fileName, const libqt_string format);
+QImageReader* QImageReader_New();
+QImageReader* QImageReader_New2(QIODevice* device);
+QImageReader* QImageReader_New3(const libqt_string fileName);
+QImageReader* QImageReader_New4(QIODevice* device, const libqt_string format);
+QImageReader* QImageReader_New5(const libqt_string fileName, const libqt_string format);
 void QImageReader_SetFormat(QImageReader* self, const libqt_string format);
 libqt_string QImageReader_Format(const QImageReader* self);
 void QImageReader_SetAutoDetectImageFormat(QImageReader* self, bool enabled);

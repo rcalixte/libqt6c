@@ -4,7 +4,7 @@
 #include "libqrestreply.h"
 
 QRestReply* q_restreply_new(void* reply) {
-    return QRestReply_new((QNetworkReply*)reply);
+    return QRestReply_New((QNetworkReply*)reply);
 }
 
 void q_restreply_swap(void* self, void* other) {

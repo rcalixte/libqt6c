@@ -9,27 +9,27 @@
 #include "libqrawfont.h"
 
 QRawFont* q_rawfont_new() {
-    return QRawFont_new();
+    return QRawFont_New();
 }
 
 QRawFont* q_rawfont_new2(const char* fileName, double pixelSize) {
-    return QRawFont_new2(qstring(fileName), pixelSize);
+    return QRawFont_New2(qstring(fileName), pixelSize);
 }
 
 QRawFont* q_rawfont_new3(char* fontData, double pixelSize) {
-    return QRawFont_new3(qstring(fontData), pixelSize);
+    return QRawFont_New3(qstring(fontData), pixelSize);
 }
 
 QRawFont* q_rawfont_new4(void* other) {
-    return QRawFont_new4((QRawFont*)other);
+    return QRawFont_New4((QRawFont*)other);
 }
 
 QRawFont* q_rawfont_new5(const char* fileName, double pixelSize, int32_t hintingPreference) {
-    return QRawFont_new5(qstring(fileName), pixelSize, hintingPreference);
+    return QRawFont_New5(qstring(fileName), pixelSize, hintingPreference);
 }
 
 QRawFont* q_rawfont_new6(char* fontData, double pixelSize, int32_t hintingPreference) {
-    return QRawFont_new6(qstring(fontData), pixelSize, hintingPreference);
+    return QRawFont_New6(qstring(fontData), pixelSize, hintingPreference);
 }
 
 void q_rawfont_operator_assign(void* self, void* other) {

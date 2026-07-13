@@ -19,27 +19,27 @@
 #include "libqobjectdefs.hpp"
 #include "libqobjectdefs.hxx"
 
-QGenericArgument* QGenericArgument_new(const QGenericArgument* other) {
+QGenericArgument* QGenericArgument_New(const QGenericArgument* other) {
     return new QGenericArgument(*other);
 }
 
-QGenericArgument* QGenericArgument_new2(QGenericArgument* other) {
+QGenericArgument* QGenericArgument_New2(QGenericArgument* other) {
     return new QGenericArgument(std::move(*other));
 }
 
-QGenericArgument* QGenericArgument_new3() {
+QGenericArgument* QGenericArgument_New3() {
     return new QGenericArgument();
 }
 
-QGenericArgument* QGenericArgument_new4(const QGenericArgument* param1) {
+QGenericArgument* QGenericArgument_New4(const QGenericArgument* param1) {
     return new QGenericArgument(*param1);
 }
 
-QGenericArgument* QGenericArgument_new5(const char* aName) {
+QGenericArgument* QGenericArgument_New5(const char* aName) {
     return new QGenericArgument(aName);
 }
 
-QGenericArgument* QGenericArgument_new6(const char* aName, const void* aData) {
+QGenericArgument* QGenericArgument_New6(const char* aName, const void* aData) {
     return new QGenericArgument(aName, aData);
 }
 
@@ -63,27 +63,27 @@ void QGenericArgument_Delete(QGenericArgument* self) {
     delete self;
 }
 
-QGenericReturnArgument* QGenericReturnArgument_new(const QGenericReturnArgument* other) {
+QGenericReturnArgument* QGenericReturnArgument_New(const QGenericReturnArgument* other) {
     return new QGenericReturnArgument(*other);
 }
 
-QGenericReturnArgument* QGenericReturnArgument_new2(QGenericReturnArgument* other) {
+QGenericReturnArgument* QGenericReturnArgument_New2(QGenericReturnArgument* other) {
     return new QGenericReturnArgument(std::move(*other));
 }
 
-QGenericReturnArgument* QGenericReturnArgument_new3() {
+QGenericReturnArgument* QGenericReturnArgument_New3() {
     return new QGenericReturnArgument();
 }
 
-QGenericReturnArgument* QGenericReturnArgument_new4(const QGenericReturnArgument* param1) {
+QGenericReturnArgument* QGenericReturnArgument_New4(const QGenericReturnArgument* param1) {
     return new QGenericReturnArgument(*param1);
 }
 
-QGenericReturnArgument* QGenericReturnArgument_new5(const char* aName) {
+QGenericReturnArgument* QGenericReturnArgument_New5(const char* aName) {
     return new QGenericReturnArgument(aName);
 }
 
-QGenericReturnArgument* QGenericReturnArgument_new6(const char* aName, void* aData) {
+QGenericReturnArgument* QGenericReturnArgument_New6(const char* aName, void* aData) {
     return new QGenericReturnArgument(aName, aData);
 }
 
@@ -123,11 +123,11 @@ void QMetaMethodReturnArgument_Delete(QMetaMethodReturnArgument* self) {
     delete self;
 }
 
-QMetaObject* QMetaObject_new() {
+QMetaObject* QMetaObject_New() {
     return new QMetaObject();
 }
 
-QMetaObject* QMetaObject_new2(const QMetaObject* param1) {
+QMetaObject* QMetaObject_New2(const QMetaObject* param1) {
     return new QMetaObject(*param1);
 }
 
@@ -557,11 +557,11 @@ void QMetaObject_Delete(QMetaObject* self) {
     delete self;
 }
 
-QMetaObject__Connection* QMetaObject__Connection_new() {
+QMetaObject__Connection* QMetaObject__Connection_New() {
     return new QMetaObject::Connection();
 }
 
-QMetaObject__Connection* QMetaObject__Connection_new2(const QMetaObject__Connection* other) {
+QMetaObject__Connection* QMetaObject__Connection_New2(const QMetaObject__Connection* other) {
     return new QMetaObject::Connection(*other);
 }
 
@@ -577,20 +577,20 @@ void QMetaObject__Connection_Delete(QMetaObject__Connection* self) {
     delete self;
 }
 
-QMetaObject__SuperData* QMetaObject__SuperData_new() {
+QMetaObject__SuperData* QMetaObject__SuperData_New() {
     return new QMetaObject::SuperData();
 }
 
-QMetaObject__SuperData* QMetaObject__SuperData_new2(const QMetaObject* mo) {
+QMetaObject__SuperData* QMetaObject__SuperData_New2(const QMetaObject* mo) {
     return new QMetaObject::SuperData(mo);
 }
 
-QMetaObject__SuperData* QMetaObject__SuperData_new3(intptr_t g) {
+QMetaObject__SuperData* QMetaObject__SuperData_New3(intptr_t g) {
     auto g_func = reinterpret_cast<const QMetaObject* (*)()>(g);
     return new QMetaObject::SuperData(g_func);
 }
 
-QMetaObject__SuperData* QMetaObject__SuperData_new4(const QMetaObject__SuperData* param1) {
+QMetaObject__SuperData* QMetaObject__SuperData_New4(const QMetaObject__SuperData* param1) {
     return new QMetaObject::SuperData(*param1);
 }
 
@@ -618,11 +618,11 @@ void QMetaObject__SuperData_Delete(QMetaObject__SuperData* self) {
     delete self;
 }
 
-QMetaObject__Data* QMetaObject__Data_new() {
+QMetaObject__Data* QMetaObject__Data_New() {
     return new QMetaObject::Data();
 }
 
-QMetaObject__Data* QMetaObject__Data_new2(const QMetaObject__Data* param1) {
+QMetaObject__Data* QMetaObject__Data_New2(const QMetaObject__Data* param1) {
     return new QMetaObject::Data(*param1);
 }
 

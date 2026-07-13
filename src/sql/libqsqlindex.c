@@ -4,19 +4,19 @@
 #include "libqsqlindex.h"
 
 QSqlIndex* q_sqlindex_new() {
-    return QSqlIndex_new();
+    return QSqlIndex_New();
 }
 
 QSqlIndex* q_sqlindex_new2(void* other) {
-    return QSqlIndex_new2((QSqlIndex*)other);
+    return QSqlIndex_New2((QSqlIndex*)other);
 }
 
 QSqlIndex* q_sqlindex_new3(const char* cursorName) {
-    return QSqlIndex_new3(qstring(cursorName));
+    return QSqlIndex_New3(qstring(cursorName));
 }
 
 QSqlIndex* q_sqlindex_new4(const char* cursorName, const char* name) {
-    return QSqlIndex_new4(qstring(cursorName), qstring(name));
+    return QSqlIndex_New4(qstring(cursorName), qstring(name));
 }
 
 void q_sqlindex_operator_assign(void* self, void* other) {

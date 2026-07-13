@@ -14,19 +14,19 @@
 #include "libklinkitemselectionmodel.hpp"
 #include "libklinkitemselectionmodel.hxx"
 
-KLinkItemSelectionModel* KLinkItemSelectionModel_new(QAbstractItemModel* targetModel, QItemSelectionModel* linkedItemSelectionModel) {
+KLinkItemSelectionModel* KLinkItemSelectionModel_New(QAbstractItemModel* targetModel, QItemSelectionModel* linkedItemSelectionModel) {
     return new VirtualKLinkItemSelectionModel(targetModel, linkedItemSelectionModel);
 }
 
-KLinkItemSelectionModel* KLinkItemSelectionModel_new2() {
+KLinkItemSelectionModel* KLinkItemSelectionModel_New2() {
     return new VirtualKLinkItemSelectionModel();
 }
 
-KLinkItemSelectionModel* KLinkItemSelectionModel_new3(QAbstractItemModel* targetModel, QItemSelectionModel* linkedItemSelectionModel, QObject* parent) {
+KLinkItemSelectionModel* KLinkItemSelectionModel_New3(QAbstractItemModel* targetModel, QItemSelectionModel* linkedItemSelectionModel, QObject* parent) {
     return new VirtualKLinkItemSelectionModel(targetModel, linkedItemSelectionModel, parent);
 }
 
-KLinkItemSelectionModel* KLinkItemSelectionModel_new4(QObject* parent) {
+KLinkItemSelectionModel* KLinkItemSelectionModel_New4(QObject* parent) {
     return new VirtualKLinkItemSelectionModel(parent);
 }
 

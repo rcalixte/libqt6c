@@ -3,15 +3,15 @@
 #include "libqopenglbuffer.hpp"
 #include "libqopenglbuffer.hxx"
 
-QOpenGLBuffer* QOpenGLBuffer_new() {
+QOpenGLBuffer* QOpenGLBuffer_New() {
     return new QOpenGLBuffer();
 }
 
-QOpenGLBuffer* QOpenGLBuffer_new2(int type) {
+QOpenGLBuffer* QOpenGLBuffer_New2(int type) {
     return new QOpenGLBuffer(static_cast<QOpenGLBuffer::Type>(type));
 }
 
-QOpenGLBuffer* QOpenGLBuffer_new3(const QOpenGLBuffer* other) {
+QOpenGLBuffer* QOpenGLBuffer_New3(const QOpenGLBuffer* other) {
     return new QOpenGLBuffer(*other);
 }
 

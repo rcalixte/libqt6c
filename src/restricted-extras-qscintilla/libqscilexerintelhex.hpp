@@ -30,8 +30,8 @@ typedef struct QsciLexerIntelHex QsciLexerIntelHex;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerIntelHex* QsciLexerIntelHex_new();
-QsciLexerIntelHex* QsciLexerIntelHex_new2(QObject* parent);
+QsciLexerIntelHex* QsciLexerIntelHex_New();
+QsciLexerIntelHex* QsciLexerIntelHex_New2(QObject* parent);
 QMetaObject* QsciLexerIntelHex_MetaObject(const QsciLexerIntelHex* self);
 void* QsciLexerIntelHex_Metacast(QsciLexerIntelHex* self, const char* param1);
 int QsciLexerIntelHex_Metacall(QsciLexerIntelHex* self, int param1, int param2, void** param3);

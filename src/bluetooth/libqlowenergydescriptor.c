@@ -3,11 +3,11 @@
 #include "libqlowenergydescriptor.h"
 
 QLowEnergyDescriptor* q_lowenergydescriptor_new() {
-    return QLowEnergyDescriptor_new();
+    return QLowEnergyDescriptor_New();
 }
 
 QLowEnergyDescriptor* q_lowenergydescriptor_new2(void* other) {
-    return QLowEnergyDescriptor_new2((QLowEnergyDescriptor*)other);
+    return QLowEnergyDescriptor_New2((QLowEnergyDescriptor*)other);
 }
 
 void q_lowenergydescriptor_operator_assign(void* self, void* other) {

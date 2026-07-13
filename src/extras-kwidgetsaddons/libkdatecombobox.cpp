@@ -42,11 +42,11 @@
 #include "libkdatecombobox.hpp"
 #include "libkdatecombobox.hxx"
 
-KDateComboBox* KDateComboBox_new(QWidget* parent) {
+KDateComboBox* KDateComboBox_New(QWidget* parent) {
     return new VirtualKDateComboBox(parent);
 }
 
-KDateComboBox* KDateComboBox_new2() {
+KDateComboBox* KDateComboBox_New2() {
     return new VirtualKDateComboBox();
 }
 

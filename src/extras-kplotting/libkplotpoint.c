@@ -3,31 +3,31 @@
 #include "libkplotpoint.h"
 
 KPlotPoint* k_plotpoint_new() {
-    return KPlotPoint_new();
+    return KPlotPoint_New();
 }
 
 KPlotPoint* k_plotpoint_new2(double x, double y) {
-    return KPlotPoint_new2(x, y);
+    return KPlotPoint_New2(x, y);
 }
 
 KPlotPoint* k_plotpoint_new3(void* p) {
-    return KPlotPoint_new3((QPointF*)p);
+    return KPlotPoint_New3((QPointF*)p);
 }
 
 KPlotPoint* k_plotpoint_new4(double x, double y, const char* label) {
-    return KPlotPoint_new4(x, y, qstring(label));
+    return KPlotPoint_New4(x, y, qstring(label));
 }
 
 KPlotPoint* k_plotpoint_new5(double x, double y, const char* label, double width) {
-    return KPlotPoint_new5(x, y, qstring(label), width);
+    return KPlotPoint_New5(x, y, qstring(label), width);
 }
 
 KPlotPoint* k_plotpoint_new6(void* p, const char* label) {
-    return KPlotPoint_new6((QPointF*)p, qstring(label));
+    return KPlotPoint_New6((QPointF*)p, qstring(label));
 }
 
 KPlotPoint* k_plotpoint_new7(void* p, const char* label, double width) {
-    return KPlotPoint_new7((QPointF*)p, qstring(label), width);
+    return KPlotPoint_New7((QPointF*)p, qstring(label), width);
 }
 
 QPointF* k_plotpoint_position(void* self) {

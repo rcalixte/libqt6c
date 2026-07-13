@@ -15,19 +15,19 @@
 #include "libqstate.hpp"
 #include "libqstate.hxx"
 
-QState* QState_new() {
+QState* QState_New() {
     return new VirtualQState();
 }
 
-QState* QState_new2(int childMode) {
+QState* QState_New2(int childMode) {
     return new VirtualQState(static_cast<QState::ChildMode>(childMode));
 }
 
-QState* QState_new3(QState* parent) {
+QState* QState_New3(QState* parent) {
     return new VirtualQState(parent);
 }
 
-QState* QState_new4(int childMode, QState* parent) {
+QState* QState_New4(int childMode, QState* parent) {
     return new VirtualQState(static_cast<QState::ChildMode>(childMode), parent);
 }
 

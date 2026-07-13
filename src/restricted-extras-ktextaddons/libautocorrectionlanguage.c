@@ -17,7 +17,7 @@
 #include "libautocorrectionlanguage.h"
 
 TextAutoCorrectionWidgets__AutoCorrectionLanguage* k_textautocorrectionwidgets__autocorrectionlanguage_new(void* parent) {
-    return TextAutoCorrectionWidgets__AutoCorrectionLanguage_new((QWidget*)parent);
+    return TextAutoCorrectionWidgets__AutoCorrectionLanguage_New((QWidget*)parent);
 }
 
 const char* k_textautocorrectionwidgets__autocorrectionlanguage_language(void* self, int index) {

@@ -24,8 +24,8 @@ typedef struct QPlaceReply QPlaceReply;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QPlaceReply* QPlaceReply_new();
-QPlaceReply* QPlaceReply_new2(QObject* parent);
+QPlaceReply* QPlaceReply_New();
+QPlaceReply* QPlaceReply_New2(QObject* parent);
 QMetaObject* QPlaceReply_MetaObject(const QPlaceReply* self);
 void* QPlaceReply_Metacast(QPlaceReply* self, const char* param1);
 int QPlaceReply_Metacall(QPlaceReply* self, int param1, int param2, void** param3);

@@ -14,11 +14,11 @@
 #include "libqscilexerbash.hpp"
 #include "libqscilexerbash.hxx"
 
-QsciLexerBash* QsciLexerBash_new() {
+QsciLexerBash* QsciLexerBash_New() {
     return new VirtualQsciLexerBash();
 }
 
-QsciLexerBash* QsciLexerBash_new2(QObject* parent) {
+QsciLexerBash* QsciLexerBash_New2(QObject* parent) {
     return new VirtualQsciLexerBash(parent);
 }
 

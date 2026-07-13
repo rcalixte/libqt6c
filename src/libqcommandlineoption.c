@@ -2,7 +2,7 @@
 #include "libqcommandlineoption.h"
 
 QCommandLineOption* q_commandlineoption_new(const char* name) {
-    return QCommandLineOption_new(qstring(name));
+    return QCommandLineOption_New(qstring(name));
 }
 
 QCommandLineOption* q_commandlineoption_new2(const char* names[static 1]) {
@@ -17,13 +17,13 @@ QCommandLineOption* q_commandlineoption_new2(const char* names[static 1]) {
     }
     libqt_list names_list = qlist(names_qstr, names_len);
 
-    QCommandLineOption* _out = QCommandLineOption_new2(names_list);
+    QCommandLineOption* _out = QCommandLineOption_New2(names_list);
     free(names_qstr);
     return _out;
 }
 
 QCommandLineOption* q_commandlineoption_new3(const char* name, const char* description) {
-    return QCommandLineOption_new3(qstring(name), qstring(description));
+    return QCommandLineOption_New3(qstring(name), qstring(description));
 }
 
 QCommandLineOption* q_commandlineoption_new4(const char* names[static 1], const char* description) {
@@ -38,21 +38,21 @@ QCommandLineOption* q_commandlineoption_new4(const char* names[static 1], const 
     }
     libqt_list names_list = qlist(names_qstr, names_len);
 
-    QCommandLineOption* _out = QCommandLineOption_new4(names_list, qstring(description));
+    QCommandLineOption* _out = QCommandLineOption_New4(names_list, qstring(description));
     free(names_qstr);
     return _out;
 }
 
 QCommandLineOption* q_commandlineoption_new5(void* other) {
-    return QCommandLineOption_new5((QCommandLineOption*)other);
+    return QCommandLineOption_New5((QCommandLineOption*)other);
 }
 
 QCommandLineOption* q_commandlineoption_new6(const char* name, const char* description, const char* valueName) {
-    return QCommandLineOption_new6(qstring(name), qstring(description), qstring(valueName));
+    return QCommandLineOption_New6(qstring(name), qstring(description), qstring(valueName));
 }
 
 QCommandLineOption* q_commandlineoption_new7(const char* name, const char* description, const char* valueName, const char* defaultValue) {
-    return QCommandLineOption_new7(qstring(name), qstring(description), qstring(valueName), qstring(defaultValue));
+    return QCommandLineOption_New7(qstring(name), qstring(description), qstring(valueName), qstring(defaultValue));
 }
 
 QCommandLineOption* q_commandlineoption_new8(const char* names[static 1], const char* description, const char* valueName) {
@@ -67,7 +67,7 @@ QCommandLineOption* q_commandlineoption_new8(const char* names[static 1], const 
     }
     libqt_list names_list = qlist(names_qstr, names_len);
 
-    QCommandLineOption* _out = QCommandLineOption_new8(names_list, qstring(description), qstring(valueName));
+    QCommandLineOption* _out = QCommandLineOption_New8(names_list, qstring(description), qstring(valueName));
     free(names_qstr);
     return _out;
 }
@@ -84,7 +84,7 @@ QCommandLineOption* q_commandlineoption_new9(const char* names[static 1], const 
     }
     libqt_list names_list = qlist(names_qstr, names_len);
 
-    QCommandLineOption* _out = QCommandLineOption_new9(names_list, qstring(description), qstring(valueName), qstring(defaultValue));
+    QCommandLineOption* _out = QCommandLineOption_New9(names_list, qstring(description), qstring(valueName), qstring(defaultValue));
     free(names_qstr);
     return _out;
 }

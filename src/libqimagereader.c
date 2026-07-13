@@ -8,23 +8,23 @@
 #include "libqimagereader.h"
 
 QImageReader* q_imagereader_new() {
-    return QImageReader_new();
+    return QImageReader_New();
 }
 
 QImageReader* q_imagereader_new2(void* device) {
-    return QImageReader_new2((QIODevice*)device);
+    return QImageReader_New2((QIODevice*)device);
 }
 
 QImageReader* q_imagereader_new3(const char* fileName) {
-    return QImageReader_new3(qstring(fileName));
+    return QImageReader_New3(qstring(fileName));
 }
 
 QImageReader* q_imagereader_new4(void* device, char* format) {
-    return QImageReader_new4((QIODevice*)device, qstring(format));
+    return QImageReader_New4((QIODevice*)device, qstring(format));
 }
 
 QImageReader* q_imagereader_new5(const char* fileName, char* format) {
-    return QImageReader_new5(qstring(fileName), qstring(format));
+    return QImageReader_New5(qstring(fileName), qstring(format));
 }
 
 const char* q_imagereader_tr(const char* sourceText) {

@@ -44,11 +44,11 @@
 #include "libqpdfview.hpp"
 #include "libqpdfview.hxx"
 
-QPdfView* QPdfView_new(QWidget* parent) {
+QPdfView* QPdfView_New(QWidget* parent) {
     return new VirtualQPdfView(parent);
 }
 
-QPdfView* QPdfView_new2() {
+QPdfView* QPdfView_New2() {
     return new VirtualQPdfView();
 }
 

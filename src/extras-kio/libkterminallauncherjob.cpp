@@ -13,12 +13,12 @@
 #include "libkterminallauncherjob.hpp"
 #include "libkterminallauncherjob.hxx"
 
-KTerminalLauncherJob* KTerminalLauncherJob_new(const libqt_string command) {
+KTerminalLauncherJob* KTerminalLauncherJob_New(const libqt_string command) {
     QString command_QString = QString::fromUtf8(command.data, command.len);
     return new VirtualKTerminalLauncherJob(command_QString);
 }
 
-KTerminalLauncherJob* KTerminalLauncherJob_new2(const libqt_string command, QObject* parent) {
+KTerminalLauncherJob* KTerminalLauncherJob_New2(const libqt_string command, QObject* parent) {
     QString command_QString = QString::fromUtf8(command.data, command.len);
     return new VirtualKTerminalLauncherJob(command_QString, parent);
 }

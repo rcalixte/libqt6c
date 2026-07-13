@@ -14,11 +14,11 @@
 #include "libqscilexerruby.hpp"
 #include "libqscilexerruby.hxx"
 
-QsciLexerRuby* QsciLexerRuby_new() {
+QsciLexerRuby* QsciLexerRuby_New() {
     return new VirtualQsciLexerRuby();
 }
 
-QsciLexerRuby* QsciLexerRuby_new2(QObject* parent) {
+QsciLexerRuby* QsciLexerRuby_New2(QObject* parent) {
     return new VirtualQsciLexerRuby(parent);
 }
 

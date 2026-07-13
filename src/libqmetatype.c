@@ -7,23 +7,23 @@
 #include "libqmetatype.h"
 
 QMetaType* q_metatype_new(void* other) {
-    return QMetaType_new((QMetaType*)other);
+    return QMetaType_New((QMetaType*)other);
 }
 
 QMetaType* q_metatype_new2(void* other) {
-    return QMetaType_new2((QMetaType*)other);
+    return QMetaType_New2((QMetaType*)other);
 }
 
 QMetaType* q_metatype_new3(int type) {
-    return QMetaType_new3(type);
+    return QMetaType_New3(type);
 }
 
 QMetaType* q_metatype_new4() {
-    return QMetaType_new4();
+    return QMetaType_New4();
 }
 
 QMetaType* q_metatype_new5(void* param1) {
-    return QMetaType_new5((QMetaType*)param1);
+    return QMetaType_New5((QMetaType*)param1);
 }
 
 void q_metatype_copy_assign(void* self, void* other) {

@@ -43,8 +43,8 @@ typedef struct QVideoSink QVideoSink;
 typedef struct QWidget QWidget;
 #endif
 
-QGraphicsVideoItem* QGraphicsVideoItem_new();
-QGraphicsVideoItem* QGraphicsVideoItem_new2(QGraphicsItem* parent);
+QGraphicsVideoItem* QGraphicsVideoItem_New();
+QGraphicsVideoItem* QGraphicsVideoItem_New2(QGraphicsItem* parent);
 QMetaObject* QGraphicsVideoItem_MetaObject(const QGraphicsVideoItem* self);
 void* QGraphicsVideoItem_Metacast(QGraphicsVideoItem* self, const char* param1);
 int QGraphicsVideoItem_Metacall(QGraphicsVideoItem* self, int param1, int param2, void** param3);

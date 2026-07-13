@@ -23,11 +23,11 @@
 #include "libkdescendantsproxymodel.hpp"
 #include "libkdescendantsproxymodel.hxx"
 
-KDescendantsProxyModel* KDescendantsProxyModel_new() {
+KDescendantsProxyModel* KDescendantsProxyModel_New() {
     return new VirtualKDescendantsProxyModel();
 }
 
-KDescendantsProxyModel* KDescendantsProxyModel_new2(QObject* parent) {
+KDescendantsProxyModel* KDescendantsProxyModel_New2(QObject* parent) {
     return new VirtualKDescendantsProxyModel(parent);
 }
 

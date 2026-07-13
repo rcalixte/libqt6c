@@ -10,7 +10,7 @@
 #include "libqobjectcleanuphandler.hpp"
 #include "libqobjectcleanuphandler.hxx"
 
-QObjectCleanupHandler* QObjectCleanupHandler_new() {
+QObjectCleanupHandler* QObjectCleanupHandler_New() {
     return new VirtualQObjectCleanupHandler();
 }
 

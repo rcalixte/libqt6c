@@ -17,19 +17,19 @@
 #include "libqareaseries.hpp"
 #include "libqareaseries.hxx"
 
-QAreaSeries* QAreaSeries_new() {
+QAreaSeries* QAreaSeries_New() {
     return new VirtualQAreaSeries();
 }
 
-QAreaSeries* QAreaSeries_new2(QLineSeries* upperSeries) {
+QAreaSeries* QAreaSeries_New2(QLineSeries* upperSeries) {
     return new VirtualQAreaSeries(upperSeries);
 }
 
-QAreaSeries* QAreaSeries_new3(QObject* parent) {
+QAreaSeries* QAreaSeries_New3(QObject* parent) {
     return new VirtualQAreaSeries(parent);
 }
 
-QAreaSeries* QAreaSeries_new4(QLineSeries* upperSeries, QLineSeries* lowerSeries) {
+QAreaSeries* QAreaSeries_New4(QLineSeries* upperSeries, QLineSeries* lowerSeries) {
     return new VirtualQAreaSeries(upperSeries, lowerSeries);
 }
 

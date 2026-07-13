@@ -7,7 +7,7 @@
 #include "libqwebengineframe.hpp"
 #include "libqwebengineframe.hxx"
 
-QWebEngineFrame* QWebEngineFrame_new(const QWebEngineFrame* param1) {
+QWebEngineFrame* QWebEngineFrame_New(const QWebEngineFrame* param1) {
     return new QWebEngineFrame(*param1);
 }
 

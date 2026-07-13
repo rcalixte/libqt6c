@@ -3,11 +3,11 @@
 #include "libqlowenergyadvertisingdata.h"
 
 QLowEnergyAdvertisingData* q_lowenergyadvertisingdata_new() {
-    return QLowEnergyAdvertisingData_new();
+    return QLowEnergyAdvertisingData_New();
 }
 
 QLowEnergyAdvertisingData* q_lowenergyadvertisingdata_new2(void* other) {
-    return QLowEnergyAdvertisingData_new2((QLowEnergyAdvertisingData*)other);
+    return QLowEnergyAdvertisingData_New2((QLowEnergyAdvertisingData*)other);
 }
 
 void q_lowenergyadvertisingdata_operator_assign(void* self, void* other) {

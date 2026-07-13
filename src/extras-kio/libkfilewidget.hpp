@@ -58,8 +58,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KFileWidget* KFileWidget_new(const QUrl* startDir);
-KFileWidget* KFileWidget_new2(const QUrl* startDir, QWidget* parent);
+KFileWidget* KFileWidget_New(const QUrl* startDir);
+KFileWidget* KFileWidget_New2(const QUrl* startDir, QWidget* parent);
 QMetaObject* KFileWidget_MetaObject(const KFileWidget* self);
 void* KFileWidget_Metacast(KFileWidget* self, const char* param1);
 int KFileWidget_Metacall(KFileWidget* self, int param1, int param2, void** param3);

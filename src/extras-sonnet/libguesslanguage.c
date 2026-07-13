@@ -2,7 +2,7 @@
 #include "libguesslanguage.h"
 
 Sonnet__GuessLanguage* k_sonnet__guesslanguage_new() {
-    return Sonnet__GuessLanguage_new();
+    return Sonnet__GuessLanguage_New();
 }
 
 void k_sonnet__guesslanguage_set_limits(void* self, int maxItems, double minConfidence) {

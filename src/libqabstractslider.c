@@ -14,11 +14,11 @@
 #include "libqabstractslider.h"
 
 QAbstractSlider* q_abstractslider_new(void* parent) {
-    return QAbstractSlider_new((QWidget*)parent);
+    return QAbstractSlider_New((QWidget*)parent);
 }
 
 QAbstractSlider* q_abstractslider_new2() {
-    return QAbstractSlider_new2();
+    return QAbstractSlider_New2();
 }
 
 const QMetaObject* q_abstractslider_meta_object(void* self) {

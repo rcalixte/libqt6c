@@ -6,11 +6,11 @@
 #include "libprivatedata.hpp"
 #include "libprivatedata.hxx"
 
-Attica__PrivateData* Attica__PrivateData_new() {
+Attica__PrivateData* Attica__PrivateData_New() {
     return new Attica::PrivateData();
 }
 
-Attica__PrivateData* Attica__PrivateData_new2(const Attica__PrivateData* other) {
+Attica__PrivateData* Attica__PrivateData_New2(const Attica__PrivateData* other) {
     return new Attica::PrivateData(*other);
 }
 

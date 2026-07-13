@@ -52,10 +52,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QCheckBox* QCheckBox_new(QWidget* parent);
-QCheckBox* QCheckBox_new2();
-QCheckBox* QCheckBox_new3(const libqt_string text);
-QCheckBox* QCheckBox_new4(const libqt_string text, QWidget* parent);
+QCheckBox* QCheckBox_New(QWidget* parent);
+QCheckBox* QCheckBox_New2();
+QCheckBox* QCheckBox_New3(const libqt_string text);
+QCheckBox* QCheckBox_New4(const libqt_string text, QWidget* parent);
 QMetaObject* QCheckBox_MetaObject(const QCheckBox* self);
 void* QCheckBox_Metacast(QCheckBox* self, const char* param1);
 int QCheckBox_Metacall(QCheckBox* self, int param1, int param2, void** param3);

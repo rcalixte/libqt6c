@@ -29,10 +29,10 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QDBusInterface* QDBusInterface_new(const libqt_string service, const libqt_string path);
-QDBusInterface* QDBusInterface_new2(const libqt_string service, const libqt_string path, const libqt_string interface);
-QDBusInterface* QDBusInterface_new3(const libqt_string service, const libqt_string path, const libqt_string interface, const QDBusConnection* connection);
-QDBusInterface* QDBusInterface_new4(const libqt_string service, const libqt_string path, const libqt_string interface, const QDBusConnection* connection, QObject* parent);
+QDBusInterface* QDBusInterface_New(const libqt_string service, const libqt_string path);
+QDBusInterface* QDBusInterface_New2(const libqt_string service, const libqt_string path, const libqt_string interface);
+QDBusInterface* QDBusInterface_New3(const libqt_string service, const libqt_string path, const libqt_string interface, const QDBusConnection* connection);
+QDBusInterface* QDBusInterface_New4(const libqt_string service, const libqt_string path, const libqt_string interface, const QDBusConnection* connection, QObject* parent);
 QMetaObject* QDBusInterface_MetaObject(const QDBusInterface* self);
 void* QDBusInterface_Metacast(QDBusInterface* self, const char* param1);
 int QDBusInterface_Metacall(QDBusInterface* self, int param1, int param2, void** param3);

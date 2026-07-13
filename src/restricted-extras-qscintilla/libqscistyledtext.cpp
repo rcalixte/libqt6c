@@ -3,17 +3,17 @@
 #include "libqscistyledtext.hpp"
 #include "libqscistyledtext.hxx"
 
-QsciStyledText* QsciStyledText_new(const libqt_string text, int style) {
+QsciStyledText* QsciStyledText_New(const libqt_string text, int style) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new QsciStyledText(text_QString, static_cast<int>(style));
 }
 
-QsciStyledText* QsciStyledText_new2(const libqt_string text, const QsciStyle* style) {
+QsciStyledText* QsciStyledText_New2(const libqt_string text, const QsciStyle* style) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new QsciStyledText(text_QString, *style);
 }
 
-QsciStyledText* QsciStyledText_new3(const QsciStyledText* param1) {
+QsciStyledText* QsciStyledText_New3(const QsciStyledText* param1) {
     return new QsciStyledText(*param1);
 }
 

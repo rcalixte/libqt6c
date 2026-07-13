@@ -38,19 +38,19 @@
 #include "librichtexteditorwidget.hpp"
 #include "librichtexteditorwidget.hxx"
 
-TextCustomEditor__RichTextEditorWidget* TextCustomEditor__RichTextEditorWidget_new(QWidget* parent) {
+TextCustomEditor__RichTextEditorWidget* TextCustomEditor__RichTextEditorWidget_New(QWidget* parent) {
     return new VirtualTextCustomEditorRichTextEditorWidget(parent);
 }
 
-TextCustomEditor__RichTextEditorWidget* TextCustomEditor__RichTextEditorWidget_new2() {
+TextCustomEditor__RichTextEditorWidget* TextCustomEditor__RichTextEditorWidget_New2() {
     return new VirtualTextCustomEditorRichTextEditorWidget();
 }
 
-TextCustomEditor__RichTextEditorWidget* TextCustomEditor__RichTextEditorWidget_new3(TextCustomEditor__RichTextEditor* customEditor) {
+TextCustomEditor__RichTextEditorWidget* TextCustomEditor__RichTextEditorWidget_New3(TextCustomEditor__RichTextEditor* customEditor) {
     return new VirtualTextCustomEditorRichTextEditorWidget(customEditor);
 }
 
-TextCustomEditor__RichTextEditorWidget* TextCustomEditor__RichTextEditorWidget_new4(TextCustomEditor__RichTextEditor* customEditor, QWidget* parent) {
+TextCustomEditor__RichTextEditorWidget* TextCustomEditor__RichTextEditorWidget_New4(TextCustomEditor__RichTextEditor* customEditor, QWidget* parent) {
     return new VirtualTextCustomEditorRichTextEditorWidget(customEditor, parent);
 }
 

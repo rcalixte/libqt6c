@@ -11,11 +11,11 @@
 #include "libqscilexerdiff.h"
 
 QsciLexerDiff* q_scilexerdiff_new() {
-    return QsciLexerDiff_new();
+    return QsciLexerDiff_New();
 }
 
 QsciLexerDiff* q_scilexerdiff_new2(void* parent) {
-    return QsciLexerDiff_new2((QObject*)parent);
+    return QsciLexerDiff_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexerdiff_meta_object(void* self) {

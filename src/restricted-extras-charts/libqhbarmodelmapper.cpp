@@ -13,11 +13,11 @@
 #include "libqhbarmodelmapper.hpp"
 #include "libqhbarmodelmapper.hxx"
 
-QHBarModelMapper* QHBarModelMapper_new() {
+QHBarModelMapper* QHBarModelMapper_New() {
     return new VirtualQHBarModelMapper();
 }
 
-QHBarModelMapper* QHBarModelMapper_new2(QObject* parent) {
+QHBarModelMapper* QHBarModelMapper_New2(QObject* parent) {
     return new VirtualQHBarModelMapper(parent);
 }
 

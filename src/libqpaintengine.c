@@ -16,19 +16,19 @@
 #include "libqpaintengine.h"
 
 QTextItem* q_textitem_new(void* other) {
-    return QTextItem_new((QTextItem*)other);
+    return QTextItem_New((QTextItem*)other);
 }
 
 QTextItem* q_textitem_new2(void* other) {
-    return QTextItem_new2((QTextItem*)other);
+    return QTextItem_New2((QTextItem*)other);
 }
 
 QTextItem* q_textitem_new3() {
-    return QTextItem_new3();
+    return QTextItem_New3();
 }
 
 QTextItem* q_textitem_new4(void* param1) {
-    return QTextItem_new4((QTextItem*)param1);
+    return QTextItem_New4((QTextItem*)param1);
 }
 
 void q_textitem_copy_assign(void* self, void* other) {
@@ -71,11 +71,11 @@ void q_textitem_delete(void* self) {
 }
 
 QPaintEngine* q_paintengine_new() {
-    return QPaintEngine_new();
+    return QPaintEngine_New();
 }
 
 QPaintEngine* q_paintengine_new2(int32_t features) {
-    return QPaintEngine_new2(features);
+    return QPaintEngine_New2(features);
 }
 
 bool q_paintengine_is_active(void* self) {
@@ -411,11 +411,11 @@ void q_paintengine_delete(void* self) {
 }
 
 QPaintEngineState* q_paintenginestate_new(void* other) {
-    return QPaintEngineState_new((QPaintEngineState*)other);
+    return QPaintEngineState_New((QPaintEngineState*)other);
 }
 
 QPaintEngineState* q_paintenginestate_new2(void* other) {
-    return QPaintEngineState_new2((QPaintEngineState*)other);
+    return QPaintEngineState_New2((QPaintEngineState*)other);
 }
 
 void q_paintenginestate_copy_assign(void* self, void* other) {

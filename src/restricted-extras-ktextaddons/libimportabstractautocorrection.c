@@ -3,11 +3,11 @@
 #include "libimportabstractautocorrection.h"
 
 TextAutoCorrectionCore__ImportAbstractAutocorrection* k_textautocorrectioncore__importabstractautocorrection_new() {
-    return TextAutoCorrectionCore__ImportAbstractAutocorrection_new();
+    return TextAutoCorrectionCore__ImportAbstractAutocorrection_New();
 }
 
 TextAutoCorrectionCore__ImportAbstractAutocorrection* k_textautocorrectioncore__importabstractautocorrection_new2(void* param1) {
-    return TextAutoCorrectionCore__ImportAbstractAutocorrection_new2((TextAutoCorrectionCore__ImportAbstractAutocorrection*)param1);
+    return TextAutoCorrectionCore__ImportAbstractAutocorrection_New2((TextAutoCorrectionCore__ImportAbstractAutocorrection*)param1);
 }
 
 bool k_textautocorrectioncore__importabstractautocorrection_import(void* self, const char* fileName, const char* errorMessage, int32_t loadAttribute) {

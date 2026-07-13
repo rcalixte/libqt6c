@@ -18,8 +18,8 @@ extern "C" {
 typedef struct QSysInfo QSysInfo;
 #endif
 
-QSysInfo* QSysInfo_new(const QSysInfo* other);
-QSysInfo* QSysInfo_new2(QSysInfo* other);
+QSysInfo* QSysInfo_New(const QSysInfo* other);
+QSysInfo* QSysInfo_New2(QSysInfo* other);
 void QSysInfo_CopyAssign(QSysInfo* self, QSysInfo* other);
 void QSysInfo_MoveAssign(QSysInfo* self, QSysInfo* other);
 libqt_string QSysInfo_BuildCpuArchitecture();

@@ -9,11 +9,11 @@
 #include "libkdirlister.h"
 
 KDirLister* k_dirlister_new() {
-    return KDirLister_new();
+    return KDirLister_New();
 }
 
 KDirLister* k_dirlister_new2(void* parent) {
-    return KDirLister_new2((QObject*)parent);
+    return KDirLister_New2((QObject*)parent);
 }
 
 const QMetaObject* k_dirlister_meta_object(void* self) {

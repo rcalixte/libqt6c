@@ -40,11 +40,11 @@
 #include "librichtexteditfindbar.hpp"
 #include "librichtexteditfindbar.hxx"
 
-TextCustomEditor__RichTextEditFindBar* TextCustomEditor__RichTextEditFindBar_new(QTextEdit* view) {
+TextCustomEditor__RichTextEditFindBar* TextCustomEditor__RichTextEditFindBar_New(QTextEdit* view) {
     return new VirtualTextCustomEditorRichTextEditFindBar(view);
 }
 
-TextCustomEditor__RichTextEditFindBar* TextCustomEditor__RichTextEditFindBar_new2(QTextEdit* view, QWidget* parent) {
+TextCustomEditor__RichTextEditFindBar* TextCustomEditor__RichTextEditFindBar_New2(QTextEdit* view, QWidget* parent) {
     return new VirtualTextCustomEditorRichTextEditFindBar(view, parent);
 }
 

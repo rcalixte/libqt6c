@@ -19,16 +19,16 @@
 #include "libkrecentfilesaction.hpp"
 #include "libkrecentfilesaction.hxx"
 
-KRecentFilesAction* KRecentFilesAction_new(QObject* parent) {
+KRecentFilesAction* KRecentFilesAction_New(QObject* parent) {
     return new VirtualKRecentFilesAction(parent);
 }
 
-KRecentFilesAction* KRecentFilesAction_new2(const libqt_string text, QObject* parent) {
+KRecentFilesAction* KRecentFilesAction_New2(const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKRecentFilesAction(text_QString, parent);
 }
 
-KRecentFilesAction* KRecentFilesAction_new3(const QIcon* icon, const libqt_string text, QObject* parent) {
+KRecentFilesAction* KRecentFilesAction_New3(const QIcon* icon, const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKRecentFilesAction(*icon, text_QString, parent);
 }

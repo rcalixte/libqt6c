@@ -21,8 +21,8 @@ typedef LayerShellQt::Shell LayerShellQt__Shell;
 typedef struct LayerShellQt__Shell LayerShellQt__Shell;
 #endif
 
-LayerShellQt__Shell* LayerShellQt__Shell_new(const LayerShellQt__Shell* other);
-LayerShellQt__Shell* LayerShellQt__Shell_new2(LayerShellQt__Shell* other);
+LayerShellQt__Shell* LayerShellQt__Shell_New(const LayerShellQt__Shell* other);
+LayerShellQt__Shell* LayerShellQt__Shell_New2(LayerShellQt__Shell* other);
 void LayerShellQt__Shell_CopyAssign(LayerShellQt__Shell* self, LayerShellQt__Shell* other);
 void LayerShellQt__Shell_MoveAssign(LayerShellQt__Shell* self, LayerShellQt__Shell* other);
 void LayerShellQt__Shell_UseLayerShell();

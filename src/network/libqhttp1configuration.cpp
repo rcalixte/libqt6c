@@ -3,11 +3,11 @@
 #include "libqhttp1configuration.hpp"
 #include "libqhttp1configuration.hxx"
 
-QHttp1Configuration* QHttp1Configuration_new() {
+QHttp1Configuration* QHttp1Configuration_New() {
     return new QHttp1Configuration();
 }
 
-QHttp1Configuration* QHttp1Configuration_new2(const QHttp1Configuration* other) {
+QHttp1Configuration* QHttp1Configuration_New2(const QHttp1Configuration* other) {
     return new QHttp1Configuration(*other);
 }
 

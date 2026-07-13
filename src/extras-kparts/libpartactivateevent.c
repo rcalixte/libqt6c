@@ -5,7 +5,7 @@
 #include "libpartactivateevent.h"
 
 KParts__PartActivateEvent* k_parts__partactivateevent_new(bool activated, void* part, void* widget) {
-    return KParts__PartActivateEvent_new(activated, (KParts__Part*)part, (QWidget*)widget);
+    return KParts__PartActivateEvent_New(activated, (KParts__Part*)part, (QWidget*)widget);
 }
 
 bool k_parts__partactivateevent_activated(void* self) {

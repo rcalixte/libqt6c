@@ -23,8 +23,8 @@ func cComment(s string) string {
 // not language-reserved words, but binding-reserved words
 func reservedWordC(s string) bool {
 	switch s {
-	case "default", "const", "var", "len", "new", "copy", "import",
-		"int", "select", "ret", "suspend", "null", "self":
+	case "const", "copy", "default", "import", "int", "len", "new",
+		"null", "ret", "select", "self", "suspend", "var":
 		return true
 	default:
 		return false
@@ -2699,9 +2699,9 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 			var ctorRet string
 			if maybeAllocCleanup == "" {
-				ctorRet = "return " + cStructName + "_new" + maybeSuffix(i) + "(" + forwarding + ");"
+				ctorRet = "return " + cStructName + "_New" + maybeSuffix(i) + "(" + forwarding + ");"
 			} else {
-				ctorRet = cStructName + "* _out = " + cStructName + "_new" + maybeSuffix(i) + "(" + forwarding + ");"
+				ctorRet = cStructName + "* _out = " + cStructName + "_New" + maybeSuffix(i) + "(" + forwarding + ");"
 				ctorRet += maybeAllocCleanup
 				ctorRet += "return _out;"
 			}

@@ -20,8 +20,8 @@ typedef struct QColorTransform QColorTransform;
 typedef struct QRgba64 QRgba64;
 #endif
 
-QColorTransform* QColorTransform_new();
-QColorTransform* QColorTransform_new2(const QColorTransform* colorTransform);
+QColorTransform* QColorTransform_New();
+QColorTransform* QColorTransform_New2(const QColorTransform* colorTransform);
 void QColorTransform_OperatorAssign(QColorTransform* self, const QColorTransform* other);
 void QColorTransform_Swap(QColorTransform* self, QColorTransform* other);
 bool QColorTransform_IsIdentity(const QColorTransform* self);

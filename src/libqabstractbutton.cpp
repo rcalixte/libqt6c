@@ -40,11 +40,11 @@
 #include "libqabstractbutton.hpp"
 #include "libqabstractbutton.hxx"
 
-QAbstractButton* QAbstractButton_new(QWidget* parent) {
+QAbstractButton* QAbstractButton_New(QWidget* parent) {
     return new VirtualQAbstractButton(parent);
 }
 
-QAbstractButton* QAbstractButton_new2() {
+QAbstractButton* QAbstractButton_New2() {
     return new VirtualQAbstractButton();
 }
 

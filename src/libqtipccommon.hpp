@@ -18,11 +18,11 @@ extern "C" {
 typedef struct QNativeIpcKey QNativeIpcKey;
 #endif
 
-QNativeIpcKey* QNativeIpcKey_new();
-QNativeIpcKey* QNativeIpcKey_new2(uint16_t type);
-QNativeIpcKey* QNativeIpcKey_new3(const libqt_string k);
-QNativeIpcKey* QNativeIpcKey_new4(const QNativeIpcKey* other);
-QNativeIpcKey* QNativeIpcKey_new5(const libqt_string k, uint16_t type);
+QNativeIpcKey* QNativeIpcKey_New();
+QNativeIpcKey* QNativeIpcKey_New2(uint16_t type);
+QNativeIpcKey* QNativeIpcKey_New3(const libqt_string k);
+QNativeIpcKey* QNativeIpcKey_New4(const QNativeIpcKey* other);
+QNativeIpcKey* QNativeIpcKey_New5(const libqt_string k, uint16_t type);
 uint16_t QNativeIpcKey_LegacyDefaultTypeForOs();
 void QNativeIpcKey_OperatorAssign(QNativeIpcKey* self, const QNativeIpcKey* other);
 void QNativeIpcKey_Swap(QNativeIpcKey* self, QNativeIpcKey* other);

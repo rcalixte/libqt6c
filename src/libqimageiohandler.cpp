@@ -17,7 +17,7 @@
 #include "libqimageiohandler.hpp"
 #include "libqimageiohandler.hxx"
 
-QImageIOHandler* QImageIOHandler_new() {
+QImageIOHandler* QImageIOHandler_New() {
     return new VirtualQImageIOHandler();
 }
 
@@ -355,11 +355,11 @@ void QImageIOHandler_Delete(QImageIOHandler* self) {
     delete self;
 }
 
-QImageIOPlugin* QImageIOPlugin_new() {
+QImageIOPlugin* QImageIOPlugin_New() {
     return new VirtualQImageIOPlugin();
 }
 
-QImageIOPlugin* QImageIOPlugin_new2(QObject* parent) {
+QImageIOPlugin* QImageIOPlugin_New2(QObject* parent) {
     return new VirtualQImageIOPlugin(parent);
 }
 

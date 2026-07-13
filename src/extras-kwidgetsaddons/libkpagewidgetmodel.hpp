@@ -36,8 +36,8 @@ typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
 
-KPageWidgetItem* KPageWidgetItem_new(QWidget* widget);
-KPageWidgetItem* KPageWidgetItem_new2(QWidget* widget, const libqt_string name);
+KPageWidgetItem* KPageWidgetItem_New(QWidget* widget);
+KPageWidgetItem* KPageWidgetItem_New2(QWidget* widget, const libqt_string name);
 QMetaObject* KPageWidgetItem_MetaObject(const KPageWidgetItem* self);
 void* KPageWidgetItem_Metacast(KPageWidgetItem* self, const char* param1);
 int KPageWidgetItem_Metacall(KPageWidgetItem* self, int param1, int param2, void** param3);
@@ -105,8 +105,8 @@ void KPageWidgetItem_OnIsSignalConnected(const KPageWidgetItem* self, intptr_t s
 bool KPageWidgetItem_SuperIsSignalConnected(const KPageWidgetItem* self, const QMetaMethod* signal);
 void KPageWidgetItem_Delete(KPageWidgetItem* self);
 
-KPageWidgetModel* KPageWidgetModel_new();
-KPageWidgetModel* KPageWidgetModel_new2(QObject* parent);
+KPageWidgetModel* KPageWidgetModel_New();
+KPageWidgetModel* KPageWidgetModel_New2(QObject* parent);
 QMetaObject* KPageWidgetModel_MetaObject(const KPageWidgetModel* self);
 void* KPageWidgetModel_Metacast(KPageWidgetModel* self, const char* param1);
 int KPageWidgetModel_Metacall(KPageWidgetModel* self, int param1, int param2, void** param3);

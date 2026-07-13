@@ -7,7 +7,7 @@
 #include "libkratingpainter.h"
 
 KRatingPainter* k_ratingpainter_new() {
-    return KRatingPainter_new();
+    return KRatingPainter_New();
 }
 
 int32_t k_ratingpainter_max_rating(void* self) {

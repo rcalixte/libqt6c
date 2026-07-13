@@ -27,8 +27,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QHBoxPlotModelMapper* QHBoxPlotModelMapper_new();
-QHBoxPlotModelMapper* QHBoxPlotModelMapper_new2(QObject* parent);
+QHBoxPlotModelMapper* QHBoxPlotModelMapper_New();
+QHBoxPlotModelMapper* QHBoxPlotModelMapper_New2(QObject* parent);
 QMetaObject* QHBoxPlotModelMapper_MetaObject(const QHBoxPlotModelMapper* self);
 void* QHBoxPlotModelMapper_Metacast(QHBoxPlotModelMapper* self, const char* param1);
 int QHBoxPlotModelMapper_Metacall(QHBoxPlotModelMapper* self, int param1, int param2, void** param3);

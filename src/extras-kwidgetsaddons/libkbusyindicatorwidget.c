@@ -14,11 +14,11 @@
 #include "libkbusyindicatorwidget.h"
 
 KBusyIndicatorWidget* k_busyindicatorwidget_new(void* parent) {
-    return KBusyIndicatorWidget_new((QWidget*)parent);
+    return KBusyIndicatorWidget_New((QWidget*)parent);
 }
 
 KBusyIndicatorWidget* k_busyindicatorwidget_new2() {
-    return KBusyIndicatorWidget_new2();
+    return KBusyIndicatorWidget_New2();
 }
 
 const QMetaObject* k_busyindicatorwidget_meta_object(void* self) {

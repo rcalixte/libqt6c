@@ -30,9 +30,9 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-KIO__FavIconRequestJob* KIO__FavIconRequestJob_new(const QUrl* hostUrl);
-KIO__FavIconRequestJob* KIO__FavIconRequestJob_new2(const QUrl* hostUrl, int reload);
-KIO__FavIconRequestJob* KIO__FavIconRequestJob_new3(const QUrl* hostUrl, int reload, QObject* parent);
+KIO__FavIconRequestJob* KIO__FavIconRequestJob_New(const QUrl* hostUrl);
+KIO__FavIconRequestJob* KIO__FavIconRequestJob_New2(const QUrl* hostUrl, int reload);
+KIO__FavIconRequestJob* KIO__FavIconRequestJob_New3(const QUrl* hostUrl, int reload, QObject* parent);
 QMetaObject* KIO__FavIconRequestJob_MetaObject(const KIO__FavIconRequestJob* self);
 void* KIO__FavIconRequestJob_Metacast(KIO__FavIconRequestJob* self, const char* param1);
 int KIO__FavIconRequestJob_Metacall(KIO__FavIconRequestJob* self, int param1, int param2, void** param3);

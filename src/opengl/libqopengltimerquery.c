@@ -6,11 +6,11 @@
 #include "libqopengltimerquery.h"
 
 QOpenGLTimerQuery* q_opengltimerquery_new() {
-    return QOpenGLTimerQuery_new();
+    return QOpenGLTimerQuery_New();
 }
 
 QOpenGLTimerQuery* q_opengltimerquery_new2(void* parent) {
-    return QOpenGLTimerQuery_new2((QObject*)parent);
+    return QOpenGLTimerQuery_New2((QObject*)parent);
 }
 
 const QMetaObject* q_opengltimerquery_meta_object(void* self) {
@@ -462,11 +462,11 @@ void q_opengltimerquery_delete(void* self) {
 }
 
 QOpenGLTimeMonitor* q_opengltimemonitor_new() {
-    return QOpenGLTimeMonitor_new();
+    return QOpenGLTimeMonitor_New();
 }
 
 QOpenGLTimeMonitor* q_opengltimemonitor_new2(void* parent) {
-    return QOpenGLTimeMonitor_new2((QObject*)parent);
+    return QOpenGLTimeMonitor_New2((QObject*)parent);
 }
 
 const QMetaObject* q_opengltimemonitor_meta_object(void* self) {

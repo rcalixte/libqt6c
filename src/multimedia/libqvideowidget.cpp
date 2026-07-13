@@ -38,11 +38,11 @@
 #include "libqvideowidget.hpp"
 #include "libqvideowidget.hxx"
 
-QVideoWidget* QVideoWidget_new(QWidget* parent) {
+QVideoWidget* QVideoWidget_New(QWidget* parent) {
     return new VirtualQVideoWidget(parent);
 }
 
-QVideoWidget* QVideoWidget_new2() {
+QVideoWidget* QVideoWidget_New2() {
     return new VirtualQVideoWidget();
 }
 

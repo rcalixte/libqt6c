@@ -22,10 +22,10 @@ typedef struct QLocale QLocale;
 typedef struct QTextStream QTextStream;
 #endif
 
-QTextStream* QTextStream_new();
-QTextStream* QTextStream_new2(QIODevice* device);
-QTextStream* QTextStream_new3(const libqt_string array);
-QTextStream* QTextStream_new4(const libqt_string array, int openMode);
+QTextStream* QTextStream_New();
+QTextStream* QTextStream_New2(QIODevice* device);
+QTextStream* QTextStream_New3(const libqt_string array);
+QTextStream* QTextStream_New4(const libqt_string array, int openMode);
 void QTextStream_SetEncoding(QTextStream* self, int encoding);
 int QTextStream_Encoding(const QTextStream* self);
 void QTextStream_SetAutoDetectUnicode(QTextStream* self, bool enabled);

@@ -38,7 +38,7 @@
 #include "libconfigpage.hpp"
 #include "libconfigpage.hxx"
 
-KTextEditor__ConfigPage* KTextEditor__ConfigPage_new(QWidget* parent) {
+KTextEditor__ConfigPage* KTextEditor__ConfigPage_New(QWidget* parent) {
     return new VirtualKTextEditorConfigPage(parent);
 }
 

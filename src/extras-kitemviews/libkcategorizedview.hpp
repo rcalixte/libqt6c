@@ -65,8 +65,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KCategorizedView* KCategorizedView_new(QWidget* parent);
-KCategorizedView* KCategorizedView_new2();
+KCategorizedView* KCategorizedView_New(QWidget* parent);
+KCategorizedView* KCategorizedView_New2();
 QMetaObject* KCategorizedView_MetaObject(const KCategorizedView* self);
 void* KCategorizedView_Metacast(KCategorizedView* self, const char* param1);
 int KCategorizedView_Metacall(KCategorizedView* self, int param1, int param2, void** param3);

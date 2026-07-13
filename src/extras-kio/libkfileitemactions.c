@@ -10,11 +10,11 @@
 #include "libkfileitemactions.h"
 
 KFileItemActions* k_fileitemactions_new() {
-    return KFileItemActions_new();
+    return KFileItemActions_New();
 }
 
 KFileItemActions* k_fileitemactions_new2(void* parent) {
-    return KFileItemActions_new2((QObject*)parent);
+    return KFileItemActions_New2((QObject*)parent);
 }
 
 const QMetaObject* k_fileitemactions_meta_object(void* self) {

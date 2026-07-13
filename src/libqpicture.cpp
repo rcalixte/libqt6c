@@ -10,15 +10,15 @@
 #include "libqpicture.hpp"
 #include "libqpicture.hxx"
 
-QPicture* QPicture_new() {
+QPicture* QPicture_New() {
     return new VirtualQPicture();
 }
 
-QPicture* QPicture_new2(const QPicture* param1) {
+QPicture* QPicture_New2(const QPicture* param1) {
     return new VirtualQPicture(*param1);
 }
 
-QPicture* QPicture_new3(int formatVersion) {
+QPicture* QPicture_New3(int formatVersion) {
     return new VirtualQPicture(static_cast<int>(formatVersion));
 }
 

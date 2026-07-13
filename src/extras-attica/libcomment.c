@@ -3,11 +3,11 @@
 #include "libcomment.h"
 
 Attica__Comment* k_attica__comment_new() {
-    return Attica__Comment_new();
+    return Attica__Comment_New();
 }
 
 Attica__Comment* k_attica__comment_new2(void* other) {
-    return Attica__Comment_new2((Attica__Comment*)other);
+    return Attica__Comment_New2((Attica__Comment*)other);
 }
 
 const char* k_attica__comment_comment_type_to_string(int32_t type) {

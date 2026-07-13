@@ -7,32 +7,32 @@
 #include "libqdir.hpp"
 #include "libqdir.hxx"
 
-QDir* QDir_new(const QDir* param1) {
+QDir* QDir_New(const QDir* param1) {
     return new QDir(*param1);
 }
 
-QDir* QDir_new2() {
+QDir* QDir_New2() {
     return new QDir();
 }
 
-QDir* QDir_new3(const libqt_string path, const libqt_string nameFilter) {
+QDir* QDir_New3(const libqt_string path, const libqt_string nameFilter) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     QString nameFilter_QString = QString::fromUtf8(nameFilter.data, nameFilter.len);
     return new QDir(path_QString, nameFilter_QString);
 }
 
-QDir* QDir_new4(const libqt_string path) {
+QDir* QDir_New4(const libqt_string path) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     return new QDir(path_QString);
 }
 
-QDir* QDir_new5(const libqt_string path, const libqt_string nameFilter, int sort) {
+QDir* QDir_New5(const libqt_string path, const libqt_string nameFilter, int sort) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     QString nameFilter_QString = QString::fromUtf8(nameFilter.data, nameFilter.len);
     return new QDir(path_QString, nameFilter_QString, static_cast<QDir::SortFlags>(sort));
 }
 
-QDir* QDir_new6(const libqt_string path, const libqt_string nameFilter, int sort, int filter) {
+QDir* QDir_New6(const libqt_string path, const libqt_string nameFilter, int sort, int filter) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     QString nameFilter_QString = QString::fromUtf8(nameFilter.data, nameFilter.len);
     return new QDir(path_QString, nameFilter_QString, static_cast<QDir::SortFlags>(sort), static_cast<QDir::Filters>(filter));

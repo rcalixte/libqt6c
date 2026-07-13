@@ -9,11 +9,11 @@
 #include "libqvbarmodelmapper.h"
 
 QVBarModelMapper* q_vbarmodelmapper_new() {
-    return QVBarModelMapper_new();
+    return QVBarModelMapper_New();
 }
 
 QVBarModelMapper* q_vbarmodelmapper_new2(void* parent) {
-    return QVBarModelMapper_new2((QObject*)parent);
+    return QVBarModelMapper_New2((QObject*)parent);
 }
 
 const QMetaObject* q_vbarmodelmapper_meta_object(void* self) {

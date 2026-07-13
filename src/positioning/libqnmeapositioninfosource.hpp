@@ -29,8 +29,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QNmeaPositionInfoSource* QNmeaPositionInfoSource_new(int updateMode);
-QNmeaPositionInfoSource* QNmeaPositionInfoSource_new2(int updateMode, QObject* parent);
+QNmeaPositionInfoSource* QNmeaPositionInfoSource_New(int updateMode);
+QNmeaPositionInfoSource* QNmeaPositionInfoSource_New2(int updateMode, QObject* parent);
 QMetaObject* QNmeaPositionInfoSource_MetaObject(const QNmeaPositionInfoSource* self);
 void* QNmeaPositionInfoSource_Metacast(QNmeaPositionInfoSource* self, const char* param1);
 int QNmeaPositionInfoSource_Metacall(QNmeaPositionInfoSource* self, int param1, int param2, void** param3);

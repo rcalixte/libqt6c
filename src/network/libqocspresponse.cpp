@@ -4,11 +4,11 @@
 #include "libqocspresponse.hpp"
 #include "libqocspresponse.hxx"
 
-QOcspResponse* QOcspResponse_new() {
+QOcspResponse* QOcspResponse_New() {
     return new QOcspResponse();
 }
 
-QOcspResponse* QOcspResponse_new2(const QOcspResponse* other) {
+QOcspResponse* QOcspResponse_New2(const QOcspResponse* other) {
     return new QOcspResponse(*other);
 }
 

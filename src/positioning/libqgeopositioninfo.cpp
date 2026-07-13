@@ -5,15 +5,15 @@
 #include "libqgeopositioninfo.hpp"
 #include "libqgeopositioninfo.hxx"
 
-QGeoPositionInfo* QGeoPositionInfo_new() {
+QGeoPositionInfo* QGeoPositionInfo_New() {
     return new QGeoPositionInfo();
 }
 
-QGeoPositionInfo* QGeoPositionInfo_new2(const QGeoCoordinate* coordinate, const QDateTime* updateTime) {
+QGeoPositionInfo* QGeoPositionInfo_New2(const QGeoCoordinate* coordinate, const QDateTime* updateTime) {
     return new QGeoPositionInfo(*coordinate, *updateTime);
 }
 
-QGeoPositionInfo* QGeoPositionInfo_new3(const QGeoPositionInfo* other) {
+QGeoPositionInfo* QGeoPositionInfo_New3(const QGeoPositionInfo* other) {
     return new QGeoPositionInfo(*other);
 }
 

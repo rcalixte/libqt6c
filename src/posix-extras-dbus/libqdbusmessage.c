@@ -4,11 +4,11 @@
 #include "libqdbusmessage.h"
 
 QDBusMessage* q_dbusmessage_new() {
-    return QDBusMessage_new();
+    return QDBusMessage_New();
 }
 
 QDBusMessage* q_dbusmessage_new2(void* other) {
-    return QDBusMessage_new2((QDBusMessage*)other);
+    return QDBusMessage_New2((QDBusMessage*)other);
 }
 
 void q_dbusmessage_operator_assign(void* self, void* other) {

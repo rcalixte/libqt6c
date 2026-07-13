@@ -51,10 +51,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QSvgWidget* QSvgWidget_new(QWidget* parent);
-QSvgWidget* QSvgWidget_new2();
-QSvgWidget* QSvgWidget_new3(const libqt_string file);
-QSvgWidget* QSvgWidget_new4(const libqt_string file, QWidget* parent);
+QSvgWidget* QSvgWidget_New(QWidget* parent);
+QSvgWidget* QSvgWidget_New2();
+QSvgWidget* QSvgWidget_New3(const libqt_string file);
+QSvgWidget* QSvgWidget_New4(const libqt_string file, QWidget* parent);
 QMetaObject* QSvgWidget_MetaObject(const QSvgWidget* self);
 void* QSvgWidget_Metacast(QSvgWidget* self, const char* param1);
 int QSvgWidget_Metacall(QSvgWidget* self, int param1, int param2, void** param3);

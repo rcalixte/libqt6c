@@ -64,8 +64,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QTableView* QTableView_new(QWidget* parent);
-QTableView* QTableView_new2();
+QTableView* QTableView_New(QWidget* parent);
+QTableView* QTableView_New2();
 QMetaObject* QTableView_MetaObject(const QTableView* self);
 void* QTableView_Metacast(QTableView* self, const char* param1);
 int QTableView_Metacall(QTableView* self, int param1, int param2, void** param3);

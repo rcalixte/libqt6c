@@ -11,11 +11,11 @@
 #include "libqvcandlestickmodelmapper.hpp"
 #include "libqvcandlestickmodelmapper.hxx"
 
-QVCandlestickModelMapper* QVCandlestickModelMapper_new() {
+QVCandlestickModelMapper* QVCandlestickModelMapper_New() {
     return new VirtualQVCandlestickModelMapper();
 }
 
-QVCandlestickModelMapper* QVCandlestickModelMapper_new2(QObject* parent) {
+QVCandlestickModelMapper* QVCandlestickModelMapper_New2(QObject* parent) {
     return new VirtualQVCandlestickModelMapper(parent);
 }
 

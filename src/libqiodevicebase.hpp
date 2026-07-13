@@ -18,7 +18,7 @@ extern "C" {
 typedef struct QIODeviceBase QIODeviceBase;
 #endif
 
-QIODeviceBase* QIODeviceBase_new(const QIODeviceBase* other);
+QIODeviceBase* QIODeviceBase_New(const QIODeviceBase* other);
 void QIODeviceBase_CopyAssign(QIODeviceBase* self, QIODeviceBase* other);
 
 #ifdef __cplusplus

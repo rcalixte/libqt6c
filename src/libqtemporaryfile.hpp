@@ -28,10 +28,10 @@ typedef struct QTemporaryFile QTemporaryFile;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QTemporaryFile* QTemporaryFile_new();
-QTemporaryFile* QTemporaryFile_new2(const libqt_string templateName);
-QTemporaryFile* QTemporaryFile_new3(QObject* parent);
-QTemporaryFile* QTemporaryFile_new4(const libqt_string templateName, QObject* parent);
+QTemporaryFile* QTemporaryFile_New();
+QTemporaryFile* QTemporaryFile_New2(const libqt_string templateName);
+QTemporaryFile* QTemporaryFile_New3(QObject* parent);
+QTemporaryFile* QTemporaryFile_New4(const libqt_string templateName, QObject* parent);
 QMetaObject* QTemporaryFile_MetaObject(const QTemporaryFile* self);
 void* QTemporaryFile_Metacast(QTemporaryFile* self, const char* param1);
 int QTemporaryFile_Metacall(QTemporaryFile* self, int param1, int param2, void** param3);

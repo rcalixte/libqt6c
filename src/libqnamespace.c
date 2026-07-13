@@ -2,39 +2,39 @@
 #include "libqnamespace.h"
 
 QKeyCombination* q_keycombination_new(void* other) {
-    return QKeyCombination_new((QKeyCombination*)other);
+    return QKeyCombination_New((QKeyCombination*)other);
 }
 
 QKeyCombination* q_keycombination_new2(void* other) {
-    return QKeyCombination_new2((QKeyCombination*)other);
+    return QKeyCombination_New2((QKeyCombination*)other);
 }
 
 QKeyCombination* q_keycombination_new3() {
-    return QKeyCombination_new3();
+    return QKeyCombination_New3();
 }
 
 QKeyCombination* q_keycombination_new4(int32_t modifiers) {
-    return QKeyCombination_new4(modifiers);
+    return QKeyCombination_New4(modifiers);
 }
 
 QKeyCombination* q_keycombination_new5(int32_t modifiers) {
-    return QKeyCombination_new5(modifiers);
+    return QKeyCombination_New5(modifiers);
 }
 
 QKeyCombination* q_keycombination_new6(void* param1) {
-    return QKeyCombination_new6((QKeyCombination*)param1);
+    return QKeyCombination_New6((QKeyCombination*)param1);
 }
 
 QKeyCombination* q_keycombination_new7(int32_t key) {
-    return QKeyCombination_new7(key);
+    return QKeyCombination_New7(key);
 }
 
 QKeyCombination* q_keycombination_new8(int32_t modifiers, int32_t key) {
-    return QKeyCombination_new8(modifiers, key);
+    return QKeyCombination_New8(modifiers, key);
 }
 
 QKeyCombination* q_keycombination_new9(int32_t modifiers, int32_t key) {
-    return QKeyCombination_new9(modifiers, key);
+    return QKeyCombination_New9(modifiers, key);
 }
 
 void q_keycombination_copy_assign(void* self, void* other) {

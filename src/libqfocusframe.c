@@ -15,11 +15,11 @@
 #include "libqfocusframe.h"
 
 QFocusFrame* q_focusframe_new(void* parent) {
-    return QFocusFrame_new((QWidget*)parent);
+    return QFocusFrame_New((QWidget*)parent);
 }
 
 QFocusFrame* q_focusframe_new2() {
-    return QFocusFrame_new2();
+    return QFocusFrame_New2();
 }
 
 const QMetaObject* q_focusframe_meta_object(void* self) {

@@ -5,19 +5,19 @@
 #include "libkcolorscheme.h"
 
 KColorScheme* k_colorscheme_new(void* param1) {
-    return KColorScheme_new((KColorScheme*)param1);
+    return KColorScheme_New((KColorScheme*)param1);
 }
 
 KColorScheme* k_colorscheme_new2() {
-    return KColorScheme_new2();
+    return KColorScheme_New2();
 }
 
 KColorScheme* k_colorscheme_new3(int32_t param1) {
-    return KColorScheme_new3(param1);
+    return KColorScheme_New3(param1);
 }
 
 KColorScheme* k_colorscheme_new4(int32_t param1, int32_t param2) {
-    return KColorScheme_new4(param1, param2);
+    return KColorScheme_New4(param1, param2);
 }
 
 void k_colorscheme_operator_assign(void* self, void* param1) {

@@ -3,11 +3,11 @@
 #include "libprivatedata.h"
 
 Attica__PrivateData* k_attica__privatedata_new() {
-    return Attica__PrivateData_new();
+    return Attica__PrivateData_New();
 }
 
 Attica__PrivateData* k_attica__privatedata_new2(void* other) {
-    return Attica__PrivateData_new2((Attica__PrivateData*)other);
+    return Attica__PrivateData_New2((Attica__PrivateData*)other);
 }
 
 void k_attica__privatedata_operator_assign(void* self, void* other) {

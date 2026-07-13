@@ -52,12 +52,12 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KSeparator* KSeparator_new(QWidget* parent);
-KSeparator* KSeparator_new2();
-KSeparator* KSeparator_new3(int orientation);
-KSeparator* KSeparator_new4(QWidget* parent, int f);
-KSeparator* KSeparator_new5(int orientation, QWidget* parent);
-KSeparator* KSeparator_new6(int orientation, QWidget* parent, int f);
+KSeparator* KSeparator_New(QWidget* parent);
+KSeparator* KSeparator_New2();
+KSeparator* KSeparator_New3(int orientation);
+KSeparator* KSeparator_New4(QWidget* parent, int f);
+KSeparator* KSeparator_New5(int orientation, QWidget* parent);
+KSeparator* KSeparator_New6(int orientation, QWidget* parent, int f);
 QMetaObject* KSeparator_MetaObject(const KSeparator* self);
 void* KSeparator_Metacast(KSeparator* self, const char* param1);
 int KSeparator_Metacall(KSeparator* self, int param1, int param2, void** param3);

@@ -14,11 +14,11 @@
 #include "libkrearrangecolumnsproxymodel.h"
 
 KRearrangeColumnsProxyModel* k_rearrangecolumnsproxymodel_new() {
-    return KRearrangeColumnsProxyModel_new();
+    return KRearrangeColumnsProxyModel_New();
 }
 
 KRearrangeColumnsProxyModel* k_rearrangecolumnsproxymodel_new2(void* parent) {
-    return KRearrangeColumnsProxyModel_new2((QObject*)parent);
+    return KRearrangeColumnsProxyModel_New2((QObject*)parent);
 }
 
 const QMetaObject* k_rearrangecolumnsproxymodel_meta_object(void* self) {

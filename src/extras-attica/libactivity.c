@@ -5,11 +5,11 @@
 #include "libactivity.h"
 
 Attica__Activity* k_attica__activity_new() {
-    return Attica__Activity_new();
+    return Attica__Activity_New();
 }
 
 Attica__Activity* k_attica__activity_new2(void* other) {
-    return Attica__Activity_new2((Attica__Activity*)other);
+    return Attica__Activity_New2((Attica__Activity*)other);
 }
 
 void k_attica__activity_operator_assign(void* self, void* other) {

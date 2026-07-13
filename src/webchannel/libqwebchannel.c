@@ -7,11 +7,11 @@
 #include "libqwebchannel.h"
 
 QWebChannel* q_webchannel_new() {
-    return QWebChannel_new();
+    return QWebChannel_New();
 }
 
 QWebChannel* q_webchannel_new2(void* parent) {
-    return QWebChannel_new2((QObject*)parent);
+    return QWebChannel_New2((QObject*)parent);
 }
 
 const QMetaObject* q_webchannel_meta_object(void* self) {

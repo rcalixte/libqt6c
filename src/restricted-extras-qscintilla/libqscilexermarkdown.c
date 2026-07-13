@@ -11,11 +11,11 @@
 #include "libqscilexermarkdown.h"
 
 QsciLexerMarkdown* q_scilexermarkdown_new() {
-    return QsciLexerMarkdown_new();
+    return QsciLexerMarkdown_New();
 }
 
 QsciLexerMarkdown* q_scilexermarkdown_new2(void* parent) {
-    return QsciLexerMarkdown_new2((QObject*)parent);
+    return QsciLexerMarkdown_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexermarkdown_meta_object(void* self) {

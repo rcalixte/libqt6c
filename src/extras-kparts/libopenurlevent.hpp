@@ -29,8 +29,8 @@ typedef struct QEvent QEvent;
 typedef struct QUrl QUrl;
 #endif
 
-KParts__OpenUrlEvent* KParts__OpenUrlEvent_new(KParts__ReadOnlyPart* part, const QUrl* url);
-KParts__OpenUrlEvent* KParts__OpenUrlEvent_new2(KParts__ReadOnlyPart* part, const QUrl* url, const KParts__OpenUrlArguments* args);
+KParts__OpenUrlEvent* KParts__OpenUrlEvent_New(KParts__ReadOnlyPart* part, const QUrl* url);
+KParts__OpenUrlEvent* KParts__OpenUrlEvent_New2(KParts__ReadOnlyPart* part, const QUrl* url, const KParts__OpenUrlArguments* args);
 KParts__ReadOnlyPart* KParts__OpenUrlEvent_Part(const KParts__OpenUrlEvent* self);
 QUrl* KParts__OpenUrlEvent_Url(const KParts__OpenUrlEvent* self);
 KParts__OpenUrlArguments* KParts__OpenUrlEvent_Arguments(const KParts__OpenUrlEvent* self);

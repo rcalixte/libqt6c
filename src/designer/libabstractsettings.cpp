@@ -5,7 +5,7 @@
 #include "libabstractsettings.hpp"
 #include "libabstractsettings.hxx"
 
-QDesignerSettingsInterface* QDesignerSettingsInterface_new() {
+QDesignerSettingsInterface* QDesignerSettingsInterface_New() {
     return new VirtualQDesignerSettingsInterface();
 }
 

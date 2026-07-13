@@ -7,23 +7,23 @@
 #include "libimageset.h"
 
 KSvg__ImageSet* k_svg__imageset_new() {
-    return KSvg__ImageSet_new();
+    return KSvg__ImageSet_New();
 }
 
 KSvg__ImageSet* k_svg__imageset_new2(const char* imageSetName) {
-    return KSvg__ImageSet_new2(qstring(imageSetName));
+    return KSvg__ImageSet_New2(qstring(imageSetName));
 }
 
 KSvg__ImageSet* k_svg__imageset_new3(void* parent) {
-    return KSvg__ImageSet_new3((QObject*)parent);
+    return KSvg__ImageSet_New3((QObject*)parent);
 }
 
 KSvg__ImageSet* k_svg__imageset_new4(const char* imageSetName, const char* basePath) {
-    return KSvg__ImageSet_new4(qstring(imageSetName), qstring(basePath));
+    return KSvg__ImageSet_New4(qstring(imageSetName), qstring(basePath));
 }
 
 KSvg__ImageSet* k_svg__imageset_new5(const char* imageSetName, const char* basePath, void* parent) {
-    return KSvg__ImageSet_new5(qstring(imageSetName), qstring(basePath), (QObject*)parent);
+    return KSvg__ImageSet_New5(qstring(imageSetName), qstring(basePath), (QObject*)parent);
 }
 
 const QMetaObject* k_svg__imageset_meta_object(void* self) {

@@ -14,11 +14,11 @@
 #include "libqscilexertex.hpp"
 #include "libqscilexertex.hxx"
 
-QsciLexerTeX* QsciLexerTeX_new() {
+QsciLexerTeX* QsciLexerTeX_New() {
     return new VirtualQsciLexerTeX();
 }
 
-QsciLexerTeX* QsciLexerTeX_new2(QObject* parent) {
+QsciLexerTeX* QsciLexerTeX_New2(QObject* parent) {
     return new VirtualQsciLexerTeX(parent);
 }
 

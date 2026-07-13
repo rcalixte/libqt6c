@@ -10,7 +10,7 @@
 #include "libkpropertiesdialogplugin.hpp"
 #include "libkpropertiesdialogplugin.hxx"
 
-KPropertiesDialogPlugin* KPropertiesDialogPlugin_new(QObject* parent) {
+KPropertiesDialogPlugin* KPropertiesDialogPlugin_New(QObject* parent) {
     return new VirtualKPropertiesDialogPlugin(parent);
 }
 

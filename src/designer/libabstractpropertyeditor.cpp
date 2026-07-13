@@ -38,11 +38,11 @@
 #include "libabstractpropertyeditor.hpp"
 #include "libabstractpropertyeditor.hxx"
 
-QDesignerPropertyEditorInterface* QDesignerPropertyEditorInterface_new(QWidget* parent) {
+QDesignerPropertyEditorInterface* QDesignerPropertyEditorInterface_New(QWidget* parent) {
     return new VirtualQDesignerPropertyEditorInterface(parent);
 }
 
-QDesignerPropertyEditorInterface* QDesignerPropertyEditorInterface_new2(QWidget* parent, int flags) {
+QDesignerPropertyEditorInterface* QDesignerPropertyEditorInterface_New2(QWidget* parent, int flags) {
     return new VirtualQDesignerPropertyEditorInterface(parent, static_cast<Qt::WindowFlags>(flags));
 }
 

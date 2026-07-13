@@ -21,10 +21,10 @@ typedef struct QGeoRectangle QGeoRectangle;
 typedef struct QGeoRouteRequest QGeoRouteRequest;
 #endif
 
-QGeoRouteRequest* QGeoRouteRequest_new();
-QGeoRouteRequest* QGeoRouteRequest_new2(const QGeoCoordinate* origin, const QGeoCoordinate* destination);
-QGeoRouteRequest* QGeoRouteRequest_new3(const QGeoRouteRequest* other);
-QGeoRouteRequest* QGeoRouteRequest_new4(const libqt_list /* of QGeoCoordinate* */ waypoints);
+QGeoRouteRequest* QGeoRouteRequest_New();
+QGeoRouteRequest* QGeoRouteRequest_New2(const QGeoCoordinate* origin, const QGeoCoordinate* destination);
+QGeoRouteRequest* QGeoRouteRequest_New3(const QGeoRouteRequest* other);
+QGeoRouteRequest* QGeoRouteRequest_New4(const libqt_list /* of QGeoCoordinate* */ waypoints);
 void QGeoRouteRequest_OperatorAssign(QGeoRouteRequest* self, const QGeoRouteRequest* other);
 void QGeoRouteRequest_Swap(QGeoRouteRequest* self, QGeoRouteRequest* other);
 void QGeoRouteRequest_SetWaypoints(QGeoRouteRequest* self, const libqt_list /* of QGeoCoordinate* */ waypoints);

@@ -12,19 +12,19 @@
 #include "libkconfigloader.h"
 
 KConfigLoader* k_configloader_new(const char* configFile, void* xml) {
-    return KConfigLoader_new(qstring(configFile), (QIODevice*)xml);
+    return KConfigLoader_New(qstring(configFile), (QIODevice*)xml);
 }
 
 KConfigLoader* k_configloader_new2(void* config, void* xml) {
-    return KConfigLoader_new2((KConfigGroup*)config, (QIODevice*)xml);
+    return KConfigLoader_New2((KConfigGroup*)config, (QIODevice*)xml);
 }
 
 KConfigLoader* k_configloader_new3(const char* configFile, void* xml, void* parent) {
-    return KConfigLoader_new3(qstring(configFile), (QIODevice*)xml, (QObject*)parent);
+    return KConfigLoader_New3(qstring(configFile), (QIODevice*)xml, (QObject*)parent);
 }
 
 KConfigLoader* k_configloader_new4(void* config, void* xml, void* parent) {
-    return KConfigLoader_new4((KConfigGroup*)config, (QIODevice*)xml, (QObject*)parent);
+    return KConfigLoader_New4((KConfigGroup*)config, (QIODevice*)xml, (QObject*)parent);
 }
 
 KConfigSkeletonItem* k_configloader_find_item(void* self, const char* group, const char* key) {

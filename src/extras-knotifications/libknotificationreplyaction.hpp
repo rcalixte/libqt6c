@@ -24,7 +24,7 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KNotificationReplyAction* KNotificationReplyAction_new(const libqt_string label);
+KNotificationReplyAction* KNotificationReplyAction_New(const libqt_string label);
 QMetaObject* KNotificationReplyAction_MetaObject(const KNotificationReplyAction* self);
 void* KNotificationReplyAction_Metacast(KNotificationReplyAction* self, const char* param1);
 int KNotificationReplyAction_Metacall(KNotificationReplyAction* self, int param1, int param2, void** param3);

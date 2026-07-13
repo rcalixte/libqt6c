@@ -57,10 +57,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KMultiTabBar* KMultiTabBar_new(QWidget* parent);
-KMultiTabBar* KMultiTabBar_new2();
-KMultiTabBar* KMultiTabBar_new3(int pos);
-KMultiTabBar* KMultiTabBar_new4(int pos, QWidget* parent);
+KMultiTabBar* KMultiTabBar_New(QWidget* parent);
+KMultiTabBar* KMultiTabBar_New2();
+KMultiTabBar* KMultiTabBar_New3(int pos);
+KMultiTabBar* KMultiTabBar_New4(int pos, QWidget* parent);
 QMetaObject* KMultiTabBar_MetaObject(const KMultiTabBar* self);
 void* KMultiTabBar_Metacast(KMultiTabBar* self, const char* param1);
 int KMultiTabBar_Metacall(KMultiTabBar* self, int param1, int param2, void** param3);

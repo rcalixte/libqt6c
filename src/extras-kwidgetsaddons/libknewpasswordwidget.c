@@ -15,11 +15,11 @@
 #include "libknewpasswordwidget.h"
 
 KNewPasswordWidget* k_newpasswordwidget_new(void* parent) {
-    return KNewPasswordWidget_new((QWidget*)parent);
+    return KNewPasswordWidget_New((QWidget*)parent);
 }
 
 KNewPasswordWidget* k_newpasswordwidget_new2() {
-    return KNewPasswordWidget_new2();
+    return KNewPasswordWidget_New2();
 }
 
 const QMetaObject* k_newpasswordwidget_meta_object(void* self) {

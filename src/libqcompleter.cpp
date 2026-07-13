@@ -16,15 +16,15 @@
 #include "libqcompleter.hpp"
 #include "libqcompleter.hxx"
 
-QCompleter* QCompleter_new() {
+QCompleter* QCompleter_New() {
     return new VirtualQCompleter();
 }
 
-QCompleter* QCompleter_new2(QAbstractItemModel* model) {
+QCompleter* QCompleter_New2(QAbstractItemModel* model) {
     return new VirtualQCompleter(model);
 }
 
-QCompleter* QCompleter_new3(const libqt_list /* of libqt_string */ completions) {
+QCompleter* QCompleter_New3(const libqt_list /* of libqt_string */ completions) {
     QList<QString> completions_QList;
     completions_QList.reserve(completions.len);
     libqt_string* completions_arr = static_cast<libqt_string*>(completions.data.ptr);
@@ -35,15 +35,15 @@ QCompleter* QCompleter_new3(const libqt_list /* of libqt_string */ completions) 
     return new VirtualQCompleter(completions_QList);
 }
 
-QCompleter* QCompleter_new4(QObject* parent) {
+QCompleter* QCompleter_New4(QObject* parent) {
     return new VirtualQCompleter(parent);
 }
 
-QCompleter* QCompleter_new5(QAbstractItemModel* model, QObject* parent) {
+QCompleter* QCompleter_New5(QAbstractItemModel* model, QObject* parent) {
     return new VirtualQCompleter(model, parent);
 }
 
-QCompleter* QCompleter_new6(const libqt_list /* of libqt_string */ completions, QObject* parent) {
+QCompleter* QCompleter_New6(const libqt_list /* of libqt_string */ completions, QObject* parent) {
     QList<QString> completions_QList;
     completions_QList.reserve(completions.len);
     libqt_string* completions_arr = static_cast<libqt_string*>(completions.data.ptr);

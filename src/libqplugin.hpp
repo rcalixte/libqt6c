@@ -19,9 +19,9 @@ typedef struct QJsonObject QJsonObject;
 typedef struct QStaticPlugin QStaticPlugin;
 #endif
 
-QStaticPlugin* QStaticPlugin_new(const QStaticPlugin* other);
-QStaticPlugin* QStaticPlugin_new2(QStaticPlugin* other);
-QStaticPlugin* QStaticPlugin_new3(const QStaticPlugin* param1);
+QStaticPlugin* QStaticPlugin_New(const QStaticPlugin* other);
+QStaticPlugin* QStaticPlugin_New2(QStaticPlugin* other);
+QStaticPlugin* QStaticPlugin_New3(const QStaticPlugin* param1);
 void QStaticPlugin_CopyAssign(QStaticPlugin* self, QStaticPlugin* other);
 void QStaticPlugin_MoveAssign(QStaticPlugin* self, QStaticPlugin* other);
 intptr_t QStaticPlugin_Instance(const QStaticPlugin* self);

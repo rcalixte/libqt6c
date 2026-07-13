@@ -39,11 +39,11 @@
 #include "libkpasswordlineedit.hpp"
 #include "libkpasswordlineedit.hxx"
 
-KPasswordLineEdit* KPasswordLineEdit_new(QWidget* parent) {
+KPasswordLineEdit* KPasswordLineEdit_New(QWidget* parent) {
     return new VirtualKPasswordLineEdit(parent);
 }
 
-KPasswordLineEdit* KPasswordLineEdit_new2() {
+KPasswordLineEdit* KPasswordLineEdit_New2() {
     return new VirtualKPasswordLineEdit();
 }
 

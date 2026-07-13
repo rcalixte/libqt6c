@@ -7,19 +7,19 @@
 #include "libktar.h"
 
 KTar* k_tar_new(const char* filename) {
-    return KTar_new(qstring(filename));
+    return KTar_New(qstring(filename));
 }
 
 KTar* k_tar_new2(void* dev) {
-    return KTar_new2((QIODevice*)dev);
+    return KTar_New2((QIODevice*)dev);
 }
 
 KTar* k_tar_new3(void* param1) {
-    return KTar_new3((KTar*)param1);
+    return KTar_New3((KTar*)param1);
 }
 
 KTar* k_tar_new4(const char* filename, const char* mimetype) {
-    return KTar_new4(qstring(filename), qstring(mimetype));
+    return KTar_New4(qstring(filename), qstring(mimetype));
 }
 
 const char* k_tar_tr(const char* sourceText) {

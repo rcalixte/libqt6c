@@ -16,11 +16,11 @@
 #include "libktooltipwidget.h"
 
 KToolTipWidget* k_tooltipwidget_new(void* parent) {
-    return KToolTipWidget_new((QWidget*)parent);
+    return KToolTipWidget_New((QWidget*)parent);
 }
 
 KToolTipWidget* k_tooltipwidget_new2() {
-    return KToolTipWidget_new2();
+    return KToolTipWidget_New2();
 }
 
 const QMetaObject* k_tooltipwidget_meta_object(void* self) {

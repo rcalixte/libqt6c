@@ -27,7 +27,7 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QDesignerMetaDataBaseItemInterface* QDesignerMetaDataBaseItemInterface_new();
+QDesignerMetaDataBaseItemInterface* QDesignerMetaDataBaseItemInterface_New();
 libqt_string QDesignerMetaDataBaseItemInterface_Name(const QDesignerMetaDataBaseItemInterface* self);
 void QDesignerMetaDataBaseItemInterface_SetName(QDesignerMetaDataBaseItemInterface* self, const libqt_string name);
 libqt_list /* of QWidget* */ QDesignerMetaDataBaseItemInterface_TabOrder(const QDesignerMetaDataBaseItemInterface* self);
@@ -48,8 +48,8 @@ void QDesignerMetaDataBaseItemInterface_OnSetEnabled(QDesignerMetaDataBaseItemIn
 void QDesignerMetaDataBaseItemInterface_SuperSetEnabled(QDesignerMetaDataBaseItemInterface* self, bool b);
 void QDesignerMetaDataBaseItemInterface_Delete(QDesignerMetaDataBaseItemInterface* self);
 
-QDesignerMetaDataBaseInterface* QDesignerMetaDataBaseInterface_new();
-QDesignerMetaDataBaseInterface* QDesignerMetaDataBaseInterface_new2(QObject* parent);
+QDesignerMetaDataBaseInterface* QDesignerMetaDataBaseInterface_New();
+QDesignerMetaDataBaseInterface* QDesignerMetaDataBaseInterface_New2(QObject* parent);
 QMetaObject* QDesignerMetaDataBaseInterface_MetaObject(const QDesignerMetaDataBaseInterface* self);
 void* QDesignerMetaDataBaseInterface_Metacast(QDesignerMetaDataBaseInterface* self, const char* param1);
 int QDesignerMetaDataBaseInterface_Metacall(QDesignerMetaDataBaseInterface* self, int param1, int param2, void** param3);

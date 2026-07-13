@@ -20,11 +20,11 @@ typedef struct KTextEditor KTextEditor;
 typedef struct KTextEditor__Cursor KTextEditor__Cursor;
 #endif
 
-KTextEditor__Cursor* KTextEditor__Cursor_new(const KTextEditor__Cursor* other);
-KTextEditor__Cursor* KTextEditor__Cursor_new2(KTextEditor__Cursor* other);
-KTextEditor__Cursor* KTextEditor__Cursor_new3();
-KTextEditor__Cursor* KTextEditor__Cursor_new4(int line, int column);
-KTextEditor__Cursor* KTextEditor__Cursor_new5(const KTextEditor__Cursor* param1);
+KTextEditor__Cursor* KTextEditor__Cursor_New(const KTextEditor__Cursor* other);
+KTextEditor__Cursor* KTextEditor__Cursor_New2(KTextEditor__Cursor* other);
+KTextEditor__Cursor* KTextEditor__Cursor_New3();
+KTextEditor__Cursor* KTextEditor__Cursor_New4(int line, int column);
+KTextEditor__Cursor* KTextEditor__Cursor_New5(const KTextEditor__Cursor* param1);
 void KTextEditor__Cursor_CopyAssign(KTextEditor__Cursor* self, KTextEditor__Cursor* other);
 void KTextEditor__Cursor_MoveAssign(KTextEditor__Cursor* self, KTextEditor__Cursor* other);
 bool KTextEditor__Cursor_IsValid(const KTextEditor__Cursor* self);

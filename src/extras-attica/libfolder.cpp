@@ -4,11 +4,11 @@
 #include "libfolder.hpp"
 #include "libfolder.hxx"
 
-Attica__Folder* Attica__Folder_new() {
+Attica__Folder* Attica__Folder_New() {
     return new Attica::Folder();
 }
 
-Attica__Folder* Attica__Folder_new2(const Attica__Folder* other) {
+Attica__Folder* Attica__Folder_New2(const Attica__Folder* other) {
     return new Attica::Folder(*other);
 }
 

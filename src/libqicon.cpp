@@ -12,24 +12,24 @@
 #include "libqicon.hpp"
 #include "libqicon.hxx"
 
-QIcon* QIcon_new() {
+QIcon* QIcon_New() {
     return new QIcon();
 }
 
-QIcon* QIcon_new2(const QPixmap* pixmap) {
+QIcon* QIcon_New2(const QPixmap* pixmap) {
     return new QIcon(*pixmap);
 }
 
-QIcon* QIcon_new3(const QIcon* other) {
+QIcon* QIcon_New3(const QIcon* other) {
     return new QIcon(*other);
 }
 
-QIcon* QIcon_new4(const libqt_string fileName) {
+QIcon* QIcon_New4(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new QIcon(fileName_QString);
 }
 
-QIcon* QIcon_new5(QIconEngine* engine) {
+QIcon* QIcon_New5(QIconEngine* engine) {
     return new QIcon(engine);
 }
 

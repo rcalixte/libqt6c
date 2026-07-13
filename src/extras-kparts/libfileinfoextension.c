@@ -7,7 +7,7 @@
 #include "libfileinfoextension.h"
 
 KParts__FileInfoExtension* k_parts__fileinfoextension_new(void* parent) {
-    return KParts__FileInfoExtension_new((KParts__ReadOnlyPart*)parent);
+    return KParts__FileInfoExtension_New((KParts__ReadOnlyPart*)parent);
 }
 
 const QMetaObject* k_parts__fileinfoextension_meta_object(void* self) {

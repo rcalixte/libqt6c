@@ -9,7 +9,7 @@
 #include "libkconfigdialogmanager.h"
 
 KConfigDialogManager* k_configdialogmanager_new(void* parent, void* conf) {
-    return KConfigDialogManager_new((QWidget*)parent, (KCoreConfigSkeleton*)conf);
+    return KConfigDialogManager_New((QWidget*)parent, (KCoreConfigSkeleton*)conf);
 }
 
 const QMetaObject* k_configdialogmanager_meta_object(void* self) {

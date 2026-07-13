@@ -15,11 +15,11 @@
 #include "libgrammalecteresultwidget.h"
 
 TextGrammarCheck__GrammalecteResultWidget* k_textgrammarcheck__grammalecteresultwidget_new(void* parent) {
-    return TextGrammarCheck__GrammalecteResultWidget_new((QWidget*)parent);
+    return TextGrammarCheck__GrammalecteResultWidget_New((QWidget*)parent);
 }
 
 TextGrammarCheck__GrammalecteResultWidget* k_textgrammarcheck__grammalecteresultwidget_new2() {
-    return TextGrammarCheck__GrammalecteResultWidget_new2();
+    return TextGrammarCheck__GrammalecteResultWidget_New2();
 }
 
 const QMetaObject* k_textgrammarcheck__grammalecteresultwidget_meta_object(void* self) {

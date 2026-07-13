@@ -19,7 +19,7 @@
 #include "libkextendableitemdelegate.h"
 
 KExtendableItemDelegate* k_extendableitemdelegate_new(void* parent) {
-    return KExtendableItemDelegate_new((QAbstractItemView*)parent);
+    return KExtendableItemDelegate_New((QAbstractItemView*)parent);
 }
 
 const QMetaObject* k_extendableitemdelegate_meta_object(void* self) {

@@ -9,7 +9,7 @@
 #include "libqmimedata.h"
 
 QMimeData* q_mimedata_new() {
-    return QMimeData_new();
+    return QMimeData_New();
 }
 
 const QMetaObject* q_mimedata_meta_object(void* self) {

@@ -24,14 +24,14 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QLibrary* QLibrary_new();
-QLibrary* QLibrary_new2(const libqt_string fileName);
-QLibrary* QLibrary_new3(const libqt_string fileName, int verNum);
-QLibrary* QLibrary_new4(const libqt_string fileName, const libqt_string version);
-QLibrary* QLibrary_new5(QObject* parent);
-QLibrary* QLibrary_new6(const libqt_string fileName, QObject* parent);
-QLibrary* QLibrary_new7(const libqt_string fileName, int verNum, QObject* parent);
-QLibrary* QLibrary_new8(const libqt_string fileName, const libqt_string version, QObject* parent);
+QLibrary* QLibrary_New();
+QLibrary* QLibrary_New2(const libqt_string fileName);
+QLibrary* QLibrary_New3(const libqt_string fileName, int verNum);
+QLibrary* QLibrary_New4(const libqt_string fileName, const libqt_string version);
+QLibrary* QLibrary_New5(QObject* parent);
+QLibrary* QLibrary_New6(const libqt_string fileName, QObject* parent);
+QLibrary* QLibrary_New7(const libqt_string fileName, int verNum, QObject* parent);
+QLibrary* QLibrary_New8(const libqt_string fileName, const libqt_string version, QObject* parent);
 QMetaObject* QLibrary_MetaObject(const QLibrary* self);
 void* QLibrary_Metacast(QLibrary* self, const char* param1);
 int QLibrary_Metacall(QLibrary* self, int param1, int param2, void** param3);

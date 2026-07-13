@@ -9,11 +9,11 @@
 #include "libqtooltip.hpp"
 #include "libqtooltip.hxx"
 
-QToolTip* QToolTip_new(const QToolTip* other) {
+QToolTip* QToolTip_New(const QToolTip* other) {
     return new QToolTip(*other);
 }
 
-QToolTip* QToolTip_new2(QToolTip* other) {
+QToolTip* QToolTip_New2(QToolTip* other) {
     return new QToolTip(std::move(*other));
 }
 

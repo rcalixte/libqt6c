@@ -9,11 +9,11 @@
 #include "libqhbarmodelmapper.h"
 
 QHBarModelMapper* q_hbarmodelmapper_new() {
-    return QHBarModelMapper_new();
+    return QHBarModelMapper_New();
 }
 
 QHBarModelMapper* q_hbarmodelmapper_new2(void* parent) {
-    return QHBarModelMapper_new2((QObject*)parent);
+    return QHBarModelMapper_New2((QObject*)parent);
 }
 
 const QMetaObject* q_hbarmodelmapper_meta_object(void* self) {

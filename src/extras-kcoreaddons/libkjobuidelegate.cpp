@@ -11,11 +11,11 @@
 #include "libkjobuidelegate.hpp"
 #include "libkjobuidelegate.hxx"
 
-KJobUiDelegate* KJobUiDelegate_new() {
+KJobUiDelegate* KJobUiDelegate_New() {
     return new VirtualKJobUiDelegate();
 }
 
-KJobUiDelegate* KJobUiDelegate_new2(int flags) {
+KJobUiDelegate* KJobUiDelegate_New2(int flags) {
     return new VirtualKJobUiDelegate(static_cast<KJobUiDelegate::Flags>(flags));
 }
 

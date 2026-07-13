@@ -7,11 +7,11 @@
 #include "libperson.hpp"
 #include "libperson.hxx"
 
-Attica__Person* Attica__Person_new() {
+Attica__Person* Attica__Person_New() {
     return new Attica::Person();
 }
 
-Attica__Person* Attica__Person_new2(const Attica__Person* other) {
+Attica__Person* Attica__Person_New2(const Attica__Person* other) {
     return new Attica::Person(*other);
 }
 

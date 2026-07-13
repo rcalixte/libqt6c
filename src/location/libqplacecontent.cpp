@@ -8,15 +8,15 @@
 #include "libqplacecontent.hpp"
 #include "libqplacecontent.hxx"
 
-QPlaceContent* QPlaceContent_new() {
+QPlaceContent* QPlaceContent_New() {
     return new QPlaceContent();
 }
 
-QPlaceContent* QPlaceContent_new2(const QPlaceContent* other) {
+QPlaceContent* QPlaceContent_New2(const QPlaceContent* other) {
     return new QPlaceContent(*other);
 }
 
-QPlaceContent* QPlaceContent_new3(int type) {
+QPlaceContent* QPlaceContent_New3(int type) {
     return new QPlaceContent(static_cast<QPlaceContent::Type>(type));
 }
 

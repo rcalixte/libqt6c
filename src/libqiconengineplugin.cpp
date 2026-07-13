@@ -11,11 +11,11 @@
 #include "libqiconengineplugin.hpp"
 #include "libqiconengineplugin.hxx"
 
-QIconEnginePlugin* QIconEnginePlugin_new() {
+QIconEnginePlugin* QIconEnginePlugin_New() {
     return new VirtualQIconEnginePlugin();
 }
 
-QIconEnginePlugin* QIconEnginePlugin_new2(QObject* parent) {
+QIconEnginePlugin* QIconEnginePlugin_New2(QObject* parent) {
     return new VirtualQIconEnginePlugin(parent);
 }
 

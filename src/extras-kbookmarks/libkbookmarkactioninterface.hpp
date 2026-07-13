@@ -19,8 +19,8 @@ typedef struct KBookmark KBookmark;
 typedef struct KBookmarkActionInterface KBookmarkActionInterface;
 #endif
 
-KBookmarkActionInterface* KBookmarkActionInterface_new(const KBookmark* bk);
-KBookmarkActionInterface* KBookmarkActionInterface_new2(const KBookmarkActionInterface* param1);
+KBookmarkActionInterface* KBookmarkActionInterface_New(const KBookmark* bk);
+KBookmarkActionInterface* KBookmarkActionInterface_New2(const KBookmarkActionInterface* param1);
 KBookmark* KBookmarkActionInterface_Bookmark(const KBookmarkActionInterface* self);
 void KBookmarkActionInterface_Delete(KBookmarkActionInterface* self);
 

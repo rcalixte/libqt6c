@@ -4,11 +4,11 @@
 #include "libqgeoaddress.hpp"
 #include "libqgeoaddress.hxx"
 
-QGeoAddress* QGeoAddress_new() {
+QGeoAddress* QGeoAddress_New() {
     return new QGeoAddress();
 }
 
-QGeoAddress* QGeoAddress_new2(const QGeoAddress* other) {
+QGeoAddress* QGeoAddress_New2(const QGeoAddress* other) {
     return new QGeoAddress(*other);
 }
 

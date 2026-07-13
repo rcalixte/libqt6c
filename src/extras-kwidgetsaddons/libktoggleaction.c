@@ -9,15 +9,15 @@
 #include "libktoggleaction.h"
 
 KToggleAction* k_toggleaction_new(void* parent) {
-    return KToggleAction_new((QObject*)parent);
+    return KToggleAction_New((QObject*)parent);
 }
 
 KToggleAction* k_toggleaction_new2(const char* text, void* parent) {
-    return KToggleAction_new2(qstring(text), (QObject*)parent);
+    return KToggleAction_New2(qstring(text), (QObject*)parent);
 }
 
 KToggleAction* k_toggleaction_new3(void* icon, const char* text, void* parent) {
-    return KToggleAction_new3((QIcon*)icon, qstring(text), (QObject*)parent);
+    return KToggleAction_New3((QIcon*)icon, qstring(text), (QObject*)parent);
 }
 
 const QMetaObject* k_toggleaction_meta_object(void* self) {

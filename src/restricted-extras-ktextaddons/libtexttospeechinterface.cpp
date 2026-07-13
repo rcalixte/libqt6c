@@ -11,11 +11,11 @@
 #include "libtexttospeechinterface.hpp"
 #include "libtexttospeechinterface.hxx"
 
-TextEditTextToSpeech__TextToSpeechInterface* TextEditTextToSpeech__TextToSpeechInterface_new(TextEditTextToSpeech__TextToSpeechWidget* textToSpeechWidget) {
+TextEditTextToSpeech__TextToSpeechInterface* TextEditTextToSpeech__TextToSpeechInterface_New(TextEditTextToSpeech__TextToSpeechWidget* textToSpeechWidget) {
     return new VirtualTextEditTextToSpeechTextToSpeechInterface(textToSpeechWidget);
 }
 
-TextEditTextToSpeech__TextToSpeechInterface* TextEditTextToSpeech__TextToSpeechInterface_new2(TextEditTextToSpeech__TextToSpeechWidget* textToSpeechWidget, QObject* parent) {
+TextEditTextToSpeech__TextToSpeechInterface* TextEditTextToSpeech__TextToSpeechInterface_New2(TextEditTextToSpeech__TextToSpeechWidget* textToSpeechWidget, QObject* parent) {
     return new VirtualTextEditTextToSpeechTextToSpeechInterface(textToSpeechWidget, parent);
 }
 

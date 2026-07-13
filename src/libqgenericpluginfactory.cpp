@@ -6,11 +6,11 @@
 #include "libqgenericpluginfactory.hpp"
 #include "libqgenericpluginfactory.hxx"
 
-QGenericPluginFactory* QGenericPluginFactory_new(const QGenericPluginFactory* other) {
+QGenericPluginFactory* QGenericPluginFactory_New(const QGenericPluginFactory* other) {
     return new QGenericPluginFactory(*other);
 }
 
-QGenericPluginFactory* QGenericPluginFactory_new2(QGenericPluginFactory* other) {
+QGenericPluginFactory* QGenericPluginFactory_New2(QGenericPluginFactory* other) {
     return new QGenericPluginFactory(std::move(*other));
 }
 

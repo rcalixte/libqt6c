@@ -2,11 +2,11 @@
 #include "libqtemporarydir.h"
 
 QTemporaryDir* q_temporarydir_new() {
-    return QTemporaryDir_new();
+    return QTemporaryDir_New();
 }
 
 QTemporaryDir* q_temporarydir_new2(const char* templateName) {
-    return QTemporaryDir_new2(qstring(templateName));
+    return QTemporaryDir_New2(qstring(templateName));
 }
 
 void q_temporarydir_swap(void* self, void* other) {

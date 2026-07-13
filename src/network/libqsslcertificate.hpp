@@ -23,12 +23,12 @@ typedef struct QSslError QSslError;
 typedef struct QSslKey QSslKey;
 #endif
 
-QSslCertificate* QSslCertificate_new(QIODevice* device);
-QSslCertificate* QSslCertificate_new2();
-QSslCertificate* QSslCertificate_new3(const QSslCertificate* other);
-QSslCertificate* QSslCertificate_new4(QIODevice* device, int format);
-QSslCertificate* QSslCertificate_new5(const libqt_string data);
-QSslCertificate* QSslCertificate_new6(const libqt_string data, int format);
+QSslCertificate* QSslCertificate_New(QIODevice* device);
+QSslCertificate* QSslCertificate_New2();
+QSslCertificate* QSslCertificate_New3(const QSslCertificate* other);
+QSslCertificate* QSslCertificate_New4(QIODevice* device, int format);
+QSslCertificate* QSslCertificate_New5(const libqt_string data);
+QSslCertificate* QSslCertificate_New6(const libqt_string data, int format);
 void QSslCertificate_OperatorAssign(QSslCertificate* self, const QSslCertificate* other);
 void QSslCertificate_Swap(QSslCertificate* self, QSslCertificate* other);
 bool QSslCertificate_OperatorEqual(const QSslCertificate* self, const QSslCertificate* other);

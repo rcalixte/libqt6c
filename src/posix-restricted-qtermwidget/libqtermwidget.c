@@ -20,19 +20,19 @@
 #include "libqtermwidget.h"
 
 QTermWidget* q_termwidget_new(void* parent) {
-    return QTermWidget_new((QWidget*)parent);
+    return QTermWidget_New((QWidget*)parent);
 }
 
 QTermWidget* q_termwidget_new2(int startnow) {
-    return QTermWidget_new2(startnow);
+    return QTermWidget_New2(startnow);
 }
 
 QTermWidget* q_termwidget_new3() {
-    return QTermWidget_new3();
+    return QTermWidget_New3();
 }
 
 QTermWidget* q_termwidget_new4(int startnow, void* parent) {
-    return QTermWidget_new4(startnow, (QWidget*)parent);
+    return QTermWidget_New4(startnow, (QWidget*)parent);
 }
 
 const QMetaObject* q_termwidget_meta_object(void* self) {

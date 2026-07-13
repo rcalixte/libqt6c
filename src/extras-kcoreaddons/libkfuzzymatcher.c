@@ -2,11 +2,11 @@
 #include "libkfuzzymatcher.h"
 
 KFuzzyMatcher__Result* k_fuzzymatcher__result_new(void* other) {
-    return KFuzzyMatcher__Result_new((KFuzzyMatcher__Result*)other);
+    return KFuzzyMatcher__Result_New((KFuzzyMatcher__Result*)other);
 }
 
 KFuzzyMatcher__Result* k_fuzzymatcher__result_new2(void* other) {
-    return KFuzzyMatcher__Result_new2((KFuzzyMatcher__Result*)other);
+    return KFuzzyMatcher__Result_New2((KFuzzyMatcher__Result*)other);
 }
 
 void k_fuzzymatcher__result_copy_assign(void* self, void* other) {
@@ -38,11 +38,11 @@ void k_fuzzymatcher__result_delete(void* self) {
 }
 
 KFuzzyMatcher__Range* k_fuzzymatcher__range_new() {
-    return KFuzzyMatcher__Range_new();
+    return KFuzzyMatcher__Range_New();
 }
 
 KFuzzyMatcher__Range* k_fuzzymatcher__range_new2(void* param1) {
-    return KFuzzyMatcher__Range_new2((KFuzzyMatcher__Range*)param1);
+    return KFuzzyMatcher__Range_New2((KFuzzyMatcher__Range*)param1);
 }
 
 int32_t k_fuzzymatcher__range_start(void* self) {

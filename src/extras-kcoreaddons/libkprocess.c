@@ -9,11 +9,11 @@
 #include "libkprocess.h"
 
 KProcess* k_process_new() {
-    return KProcess_new();
+    return KProcess_New();
 }
 
 KProcess* k_process_new2(void* parent) {
-    return KProcess_new2((QObject*)parent);
+    return KProcess_New2((QObject*)parent);
 }
 
 const QMetaObject* k_process_meta_object(void* self) {

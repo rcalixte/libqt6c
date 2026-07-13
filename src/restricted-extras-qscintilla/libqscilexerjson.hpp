@@ -29,8 +29,8 @@ typedef struct QsciLexerJSON QsciLexerJSON;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerJSON* QsciLexerJSON_new();
-QsciLexerJSON* QsciLexerJSON_new2(QObject* parent);
+QsciLexerJSON* QsciLexerJSON_New();
+QsciLexerJSON* QsciLexerJSON_New2(QObject* parent);
 QMetaObject* QsciLexerJSON_MetaObject(const QsciLexerJSON* self);
 void* QsciLexerJSON_Metacast(QsciLexerJSON* self, const char* param1);
 int QsciLexerJSON_Metacall(QsciLexerJSON* self, int param1, int param2, void** param3);

@@ -15,35 +15,35 @@
 #include "libkruler.h"
 
 KRuler* k_ruler_new(void* parent) {
-    return KRuler_new((QWidget*)parent);
+    return KRuler_New((QWidget*)parent);
 }
 
 KRuler* k_ruler_new2() {
-    return KRuler_new2();
+    return KRuler_New2();
 }
 
 KRuler* k_ruler_new3(int32_t orient) {
-    return KRuler_new3(orient);
+    return KRuler_New3(orient);
 }
 
 KRuler* k_ruler_new4(int32_t orient, int widgetWidth) {
-    return KRuler_new4(orient, widgetWidth);
+    return KRuler_New4(orient, widgetWidth);
 }
 
 KRuler* k_ruler_new5(int32_t orient, void* parent) {
-    return KRuler_new5(orient, (QWidget*)parent);
+    return KRuler_New5(orient, (QWidget*)parent);
 }
 
 KRuler* k_ruler_new6(int32_t orient, void* parent, int32_t f) {
-    return KRuler_new6(orient, (QWidget*)parent, f);
+    return KRuler_New6(orient, (QWidget*)parent, f);
 }
 
 KRuler* k_ruler_new7(int32_t orient, int widgetWidth, void* parent) {
-    return KRuler_new7(orient, widgetWidth, (QWidget*)parent);
+    return KRuler_New7(orient, widgetWidth, (QWidget*)parent);
 }
 
 KRuler* k_ruler_new8(int32_t orient, int widgetWidth, void* parent, int32_t f) {
-    return KRuler_new8(orient, widgetWidth, (QWidget*)parent, f);
+    return KRuler_New8(orient, widgetWidth, (QWidget*)parent, f);
 }
 
 const QMetaObject* k_ruler_meta_object(void* self) {

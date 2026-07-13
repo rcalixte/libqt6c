@@ -9,11 +9,11 @@
 #include "libqsctpserver.h"
 
 QSctpServer* q_sctpserver_new() {
-    return QSctpServer_new();
+    return QSctpServer_New();
 }
 
 QSctpServer* q_sctpserver_new2(void* parent) {
-    return QSctpServer_new2((QObject*)parent);
+    return QSctpServer_New2((QObject*)parent);
 }
 
 const QMetaObject* q_sctpserver_meta_object(void* self) {

@@ -38,27 +38,27 @@
 #include "libkled.hpp"
 #include "libkled.hxx"
 
-KLed* KLed_new(QWidget* parent) {
+KLed* KLed_New(QWidget* parent) {
     return new VirtualKLed(parent);
 }
 
-KLed* KLed_new2() {
+KLed* KLed_New2() {
     return new VirtualKLed();
 }
 
-KLed* KLed_new3(const QColor* color) {
+KLed* KLed_New3(const QColor* color) {
     return new VirtualKLed(*color);
 }
 
-KLed* KLed_new4(const QColor* color, int state, int look, int shape) {
+KLed* KLed_New4(const QColor* color, int state, int look, int shape) {
     return new VirtualKLed(*color, static_cast<KLed::State>(state), static_cast<KLed::Look>(look), static_cast<KLed::Shape>(shape));
 }
 
-KLed* KLed_new5(const QColor* color, QWidget* parent) {
+KLed* KLed_New5(const QColor* color, QWidget* parent) {
     return new VirtualKLed(*color, parent);
 }
 
-KLed* KLed_new6(const QColor* color, int state, int look, int shape, QWidget* parent) {
+KLed* KLed_New6(const QColor* color, int state, int look, int shape, QWidget* parent) {
     return new VirtualKLed(*color, static_cast<KLed::State>(state), static_cast<KLed::Look>(look), static_cast<KLed::Shape>(shape), parent);
 }
 

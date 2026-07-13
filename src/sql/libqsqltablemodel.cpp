@@ -27,15 +27,15 @@
 #include "libqsqltablemodel.hpp"
 #include "libqsqltablemodel.hxx"
 
-QSqlTableModel* QSqlTableModel_new() {
+QSqlTableModel* QSqlTableModel_New() {
     return new VirtualQSqlTableModel();
 }
 
-QSqlTableModel* QSqlTableModel_new2(QObject* parent) {
+QSqlTableModel* QSqlTableModel_New2(QObject* parent) {
     return new VirtualQSqlTableModel(parent);
 }
 
-QSqlTableModel* QSqlTableModel_new3(QObject* parent, const QSqlDatabase* db) {
+QSqlTableModel* QSqlTableModel_New3(QObject* parent, const QSqlDatabase* db) {
     return new VirtualQSqlTableModel(parent, *db);
 }
 

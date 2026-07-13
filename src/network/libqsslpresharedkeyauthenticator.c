@@ -2,11 +2,11 @@
 #include "libqsslpresharedkeyauthenticator.h"
 
 QSslPreSharedKeyAuthenticator* q_sslpresharedkeyauthenticator_new() {
-    return QSslPreSharedKeyAuthenticator_new();
+    return QSslPreSharedKeyAuthenticator_New();
 }
 
 QSslPreSharedKeyAuthenticator* q_sslpresharedkeyauthenticator_new2(void* authenticator) {
-    return QSslPreSharedKeyAuthenticator_new2((QSslPreSharedKeyAuthenticator*)authenticator);
+    return QSslPreSharedKeyAuthenticator_New2((QSslPreSharedKeyAuthenticator*)authenticator);
 }
 
 void q_sslpresharedkeyauthenticator_operator_assign(void* self, void* authenticator) {

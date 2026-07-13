@@ -2,11 +2,11 @@
 #include "libhomepagetype.h"
 
 Attica__HomePageType* k_attica__homepagetype_new() {
-    return Attica__HomePageType_new();
+    return Attica__HomePageType_New();
 }
 
 Attica__HomePageType* k_attica__homepagetype_new2(void* other) {
-    return Attica__HomePageType_new2((Attica__HomePageType*)other);
+    return Attica__HomePageType_New2((Attica__HomePageType*)other);
 }
 
 void k_attica__homepagetype_operator_assign(void* self, void* other) {

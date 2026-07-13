@@ -9,7 +9,7 @@
 #include "libkarchivedirectory.hpp"
 #include "libkarchivedirectory.hxx"
 
-KArchiveDirectory* KArchiveDirectory_new(KArchive* archive, const libqt_string name, int access, const QDateTime* date, const libqt_string user, const libqt_string group, const libqt_string symlink) {
+KArchiveDirectory* KArchiveDirectory_New(KArchive* archive, const libqt_string name, int access, const QDateTime* date, const libqt_string user, const libqt_string group, const libqt_string symlink) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString user_QString = QString::fromUtf8(user.data, user.len);
     QString group_QString = QString::fromUtf8(group.data, group.len);
@@ -17,7 +17,7 @@ KArchiveDirectory* KArchiveDirectory_new(KArchive* archive, const libqt_string n
     return new VirtualKArchiveDirectory(archive, name_QString, static_cast<int>(access), *date, user_QString, group_QString, symlink_QString);
 }
 
-KArchiveDirectory* KArchiveDirectory_new2(const KArchiveDirectory* param1) {
+KArchiveDirectory* KArchiveDirectory_New2(const KArchiveDirectory* param1) {
     return new VirtualKArchiveDirectory(*param1);
 }
 

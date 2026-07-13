@@ -14,15 +14,15 @@
 #include "libgrammalecteconfigwidget.h"
 
 TextGrammarCheck__GrammalecteConfigWidget* k_textgrammarcheck__grammalecteconfigwidget_new(void* parent) {
-    return TextGrammarCheck__GrammalecteConfigWidget_new((QWidget*)parent);
+    return TextGrammarCheck__GrammalecteConfigWidget_New((QWidget*)parent);
 }
 
 TextGrammarCheck__GrammalecteConfigWidget* k_textgrammarcheck__grammalecteconfigwidget_new2() {
-    return TextGrammarCheck__GrammalecteConfigWidget_new2();
+    return TextGrammarCheck__GrammalecteConfigWidget_New2();
 }
 
 TextGrammarCheck__GrammalecteConfigWidget* k_textgrammarcheck__grammalecteconfigwidget_new3(void* parent, bool disableMessageBox) {
-    return TextGrammarCheck__GrammalecteConfigWidget_new3((QWidget*)parent, disableMessageBox);
+    return TextGrammarCheck__GrammalecteConfigWidget_New3((QWidget*)parent, disableMessageBox);
 }
 
 const QMetaObject* k_textgrammarcheck__grammalecteconfigwidget_meta_object(void* self) {

@@ -7,11 +7,11 @@
 #include "libtexttospeechactions.h"
 
 TextEditTextToSpeech__TextToSpeechActions* k_textedittexttospeech__texttospeechactions_new() {
-    return TextEditTextToSpeech__TextToSpeechActions_new();
+    return TextEditTextToSpeech__TextToSpeechActions_New();
 }
 
 TextEditTextToSpeech__TextToSpeechActions* k_textedittexttospeech__texttospeechactions_new2(void* parent) {
-    return TextEditTextToSpeech__TextToSpeechActions_new2((QObject*)parent);
+    return TextEditTextToSpeech__TextToSpeechActions_New2((QObject*)parent);
 }
 
 const QMetaObject* k_textedittexttospeech__texttospeechactions_meta_object(void* self) {

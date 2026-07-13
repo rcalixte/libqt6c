@@ -14,11 +14,11 @@
 #include "libkcollapsiblegroupbox.h"
 
 KCollapsibleGroupBox* k_collapsiblegroupbox_new(void* parent) {
-    return KCollapsibleGroupBox_new((QWidget*)parent);
+    return KCollapsibleGroupBox_New((QWidget*)parent);
 }
 
 KCollapsibleGroupBox* k_collapsiblegroupbox_new2() {
-    return KCollapsibleGroupBox_new2();
+    return KCollapsibleGroupBox_New2();
 }
 
 const QMetaObject* k_collapsiblegroupbox_meta_object(void* self) {

@@ -7,7 +7,7 @@
 #include "libabstractformwindowcursor.hpp"
 #include "libabstractformwindowcursor.hxx"
 
-QDesignerFormWindowCursorInterface* QDesignerFormWindowCursorInterface_new() {
+QDesignerFormWindowCursorInterface* QDesignerFormWindowCursorInterface_New() {
     return new VirtualQDesignerFormWindowCursorInterface();
 }
 

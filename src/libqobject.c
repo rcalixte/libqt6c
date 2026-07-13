@@ -8,11 +8,11 @@
 #include "libqobject.h"
 
 QObject* q_object_new() {
-    return QObject_new();
+    return QObject_New();
 }
 
 QObject* q_object_new2(void* parent) {
-    return QObject_new2((QObject*)parent);
+    return QObject_New2((QObject*)parent);
 }
 
 const QMetaObject* q_object_meta_object(void* self) {
@@ -424,11 +424,11 @@ void q_object_delete(void* self) {
 }
 
 QSignalBlocker* q_signalblocker_new(void* o) {
-    return QSignalBlocker_new((QObject*)o);
+    return QSignalBlocker_New((QObject*)o);
 }
 
 QSignalBlocker* q_signalblocker_new2(void* o) {
-    return QSignalBlocker_new2((QObject*)o);
+    return QSignalBlocker_New2((QObject*)o);
 }
 
 void q_signalblocker_reblock(void* self) {

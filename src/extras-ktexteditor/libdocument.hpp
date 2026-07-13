@@ -237,7 +237,7 @@ KTextEditor__AnnotationModel* KTextEditor__Document_AnnotationModel(const KTextE
 libqt_list /* of KTextEditor__Range* */ KTextEditor__Document_SearchText3(const KTextEditor__Document* self, KTextEditor__Range* range, const libqt_string pattern, const int options);
 void KTextEditor__Document_Delete(KTextEditor__Document* self);
 
-KTextEditor__Document__EditingTransaction* KTextEditor__Document__EditingTransaction_new(KTextEditor__Document* document);
+KTextEditor__Document__EditingTransaction* KTextEditor__Document__EditingTransaction_New(KTextEditor__Document* document);
 void KTextEditor__Document__EditingTransaction_Start(KTextEditor__Document__EditingTransaction* self);
 void KTextEditor__Document__EditingTransaction_Finish(KTextEditor__Document__EditingTransaction* self);
 void KTextEditor__Document__EditingTransaction_Delete(KTextEditor__Document__EditingTransaction* self);

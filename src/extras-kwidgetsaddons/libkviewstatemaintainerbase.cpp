@@ -12,11 +12,11 @@
 #include "libkviewstatemaintainerbase.hpp"
 #include "libkviewstatemaintainerbase.hxx"
 
-KViewStateMaintainerBase* KViewStateMaintainerBase_new() {
+KViewStateMaintainerBase* KViewStateMaintainerBase_New() {
     return new VirtualKViewStateMaintainerBase();
 }
 
-KViewStateMaintainerBase* KViewStateMaintainerBase_new2(QObject* parent) {
+KViewStateMaintainerBase* KViewStateMaintainerBase_New2(QObject* parent) {
     return new VirtualKViewStateMaintainerBase(parent);
 }
 

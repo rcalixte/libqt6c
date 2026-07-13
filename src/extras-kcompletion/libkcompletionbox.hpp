@@ -66,8 +66,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KCompletionBox* KCompletionBox_new(QWidget* parent);
-KCompletionBox* KCompletionBox_new2();
+KCompletionBox* KCompletionBox_New(QWidget* parent);
+KCompletionBox* KCompletionBox_New2();
 QMetaObject* KCompletionBox_MetaObject(const KCompletionBox* self);
 void* KCompletionBox_Metacast(KCompletionBox* self, const char* param1);
 int KCompletionBox_Metacall(KCompletionBox* self, int param1, int param2, void** param3);

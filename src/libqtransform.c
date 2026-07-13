@@ -8,31 +8,31 @@
 #include "libqtransform.h"
 
 QTransform* q_transform_new(void* other) {
-    return QTransform_new((QTransform*)other);
+    return QTransform_New((QTransform*)other);
 }
 
 QTransform* q_transform_new2(void* other) {
-    return QTransform_new2((QTransform*)other);
+    return QTransform_New2((QTransform*)other);
 }
 
 QTransform* q_transform_new3(int32_t param1) {
-    return QTransform_new3(param1);
+    return QTransform_New3(param1);
 }
 
 QTransform* q_transform_new4() {
-    return QTransform_new4();
+    return QTransform_New4();
 }
 
 QTransform* q_transform_new5(double h11, double h12, double h13, double h21, double h22, double h23, double h31, double h32, double h33) {
-    return QTransform_new5(h11, h12, h13, h21, h22, h23, h31, h32, h33);
+    return QTransform_New5(h11, h12, h13, h21, h22, h23, h31, h32, h33);
 }
 
 QTransform* q_transform_new6(double h11, double h12, double h21, double h22, double dx, double dy) {
-    return QTransform_new6(h11, h12, h21, h22, dx, dy);
+    return QTransform_New6(h11, h12, h21, h22, dx, dy);
 }
 
 QTransform* q_transform_new7(void* other) {
-    return QTransform_new7((QTransform*)other);
+    return QTransform_New7((QTransform*)other);
 }
 
 void q_transform_copy_assign(void* self, void* other) {

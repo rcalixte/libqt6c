@@ -14,11 +14,11 @@
 #include "libqscilexeredifact.hpp"
 #include "libqscilexeredifact.hxx"
 
-QsciLexerEDIFACT* QsciLexerEDIFACT_new() {
+QsciLexerEDIFACT* QsciLexerEDIFACT_New() {
     return new VirtualQsciLexerEDIFACT();
 }
 
-QsciLexerEDIFACT* QsciLexerEDIFACT_new2(QObject* parent) {
+QsciLexerEDIFACT* QsciLexerEDIFACT_New2(QObject* parent) {
     return new VirtualQsciLexerEDIFACT(parent);
 }
 

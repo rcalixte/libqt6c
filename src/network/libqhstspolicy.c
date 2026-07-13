@@ -3,19 +3,19 @@
 #include "libqhstspolicy.h"
 
 QHstsPolicy* q_hstspolicy_new() {
-    return QHstsPolicy_new();
+    return QHstsPolicy_New();
 }
 
 QHstsPolicy* q_hstspolicy_new2(void* expiry, int32_t flags, const char* host) {
-    return QHstsPolicy_new2((QDateTime*)expiry, flags, qstring(host));
+    return QHstsPolicy_New2((QDateTime*)expiry, flags, qstring(host));
 }
 
 QHstsPolicy* q_hstspolicy_new3(void* rhs) {
-    return QHstsPolicy_new3((QHstsPolicy*)rhs);
+    return QHstsPolicy_New3((QHstsPolicy*)rhs);
 }
 
 QHstsPolicy* q_hstspolicy_new4(void* expiry, int32_t flags, const char* host, int32_t mode) {
-    return QHstsPolicy_new4((QDateTime*)expiry, flags, qstring(host), mode);
+    return QHstsPolicy_New4((QDateTime*)expiry, flags, qstring(host), mode);
 }
 
 void q_hstspolicy_operator_assign(void* self, void* rhs) {

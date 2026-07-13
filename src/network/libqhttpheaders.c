@@ -3,11 +3,11 @@
 #include "libqhttpheaders.h"
 
 QHttpHeaders* q_httpheaders_new() {
-    return QHttpHeaders_new();
+    return QHttpHeaders_New();
 }
 
 QHttpHeaders* q_httpheaders_new2(void* other) {
-    return QHttpHeaders_new2((QHttpHeaders*)other);
+    return QHttpHeaders_New2((QHttpHeaders*)other);
 }
 
 void q_httpheaders_operator_assign(void* self, void* other) {

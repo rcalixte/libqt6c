@@ -28,8 +28,8 @@ typedef struct QSize QSize;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QPdfPageRenderer* QPdfPageRenderer_new();
-QPdfPageRenderer* QPdfPageRenderer_new2(QObject* parent);
+QPdfPageRenderer* QPdfPageRenderer_New();
+QPdfPageRenderer* QPdfPageRenderer_New2(QObject* parent);
 QMetaObject* QPdfPageRenderer_MetaObject(const QPdfPageRenderer* self);
 void* QPdfPageRenderer_Metacast(QPdfPageRenderer* self, const char* param1);
 int QPdfPageRenderer_Metacall(QPdfPageRenderer* self, int param1, int param2, void** param3);

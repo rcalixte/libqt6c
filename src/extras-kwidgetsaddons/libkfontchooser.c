@@ -16,19 +16,19 @@
 #include "libkfontchooser.h"
 
 KFontChooser* k_fontchooser_new(void* parent) {
-    return KFontChooser_new((QWidget*)parent);
+    return KFontChooser_New((QWidget*)parent);
 }
 
 KFontChooser* k_fontchooser_new2() {
-    return KFontChooser_new2();
+    return KFontChooser_New2();
 }
 
 KFontChooser* k_fontchooser_new3(int32_t flags) {
-    return KFontChooser_new3(flags);
+    return KFontChooser_New3(flags);
 }
 
 KFontChooser* k_fontchooser_new4(int32_t flags, void* parent) {
-    return KFontChooser_new4(flags, (QWidget*)parent);
+    return KFontChooser_New4(flags, (QWidget*)parent);
 }
 
 const QMetaObject* k_fontchooser_meta_object(void* self) {

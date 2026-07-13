@@ -16,11 +16,11 @@
 #include "libkshortcutwidget.h"
 
 KShortcutWidget* k_shortcutwidget_new(void* parent) {
-    return KShortcutWidget_new((QWidget*)parent);
+    return KShortcutWidget_New((QWidget*)parent);
 }
 
 KShortcutWidget* k_shortcutwidget_new2() {
-    return KShortcutWidget_new2();
+    return KShortcutWidget_New2();
 }
 
 const QMetaObject* k_shortcutwidget_meta_object(void* self) {

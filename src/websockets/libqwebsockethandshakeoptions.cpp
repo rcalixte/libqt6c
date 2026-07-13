@@ -5,11 +5,11 @@
 #include "libqwebsockethandshakeoptions.hpp"
 #include "libqwebsockethandshakeoptions.hxx"
 
-QWebSocketHandshakeOptions* QWebSocketHandshakeOptions_new() {
+QWebSocketHandshakeOptions* QWebSocketHandshakeOptions_New() {
     return new QWebSocketHandshakeOptions();
 }
 
-QWebSocketHandshakeOptions* QWebSocketHandshakeOptions_new2(const QWebSocketHandshakeOptions* other) {
+QWebSocketHandshakeOptions* QWebSocketHandshakeOptions_New2(const QWebSocketHandshakeOptions* other) {
     return new QWebSocketHandshakeOptions(*other);
 }
 

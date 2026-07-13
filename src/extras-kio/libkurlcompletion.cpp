@@ -14,11 +14,11 @@
 #include "libkurlcompletion.hpp"
 #include "libkurlcompletion.hxx"
 
-KUrlCompletion* KUrlCompletion_new() {
+KUrlCompletion* KUrlCompletion_New() {
     return new VirtualKUrlCompletion();
 }
 
-KUrlCompletion* KUrlCompletion_new2(int param1) {
+KUrlCompletion* KUrlCompletion_New2(int param1) {
     return new VirtualKUrlCompletion(static_cast<KUrlCompletion::Mode>(param1));
 }
 

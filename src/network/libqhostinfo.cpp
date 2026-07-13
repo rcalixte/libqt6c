@@ -7,15 +7,15 @@
 #include "libqhostinfo.hpp"
 #include "libqhostinfo.hxx"
 
-QHostInfo* QHostInfo_new() {
+QHostInfo* QHostInfo_New() {
     return new QHostInfo();
 }
 
-QHostInfo* QHostInfo_new2(const QHostInfo* d) {
+QHostInfo* QHostInfo_New2(const QHostInfo* d) {
     return new QHostInfo(*d);
 }
 
-QHostInfo* QHostInfo_new3(int lookupId) {
+QHostInfo* QHostInfo_New3(int lookupId) {
     return new QHostInfo(static_cast<int>(lookupId));
 }
 

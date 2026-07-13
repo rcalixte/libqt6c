@@ -31,11 +31,11 @@ typedef struct QTextTable QTextTable;
 typedef struct QTextTableFormat QTextTableFormat;
 #endif
 
-QTextCursor* QTextCursor_new();
-QTextCursor* QTextCursor_new2(QTextDocument* document);
-QTextCursor* QTextCursor_new3(QTextFrame* frame);
-QTextCursor* QTextCursor_new4(const QTextBlock* block);
-QTextCursor* QTextCursor_new5(const QTextCursor* cursor);
+QTextCursor* QTextCursor_New();
+QTextCursor* QTextCursor_New2(QTextDocument* document);
+QTextCursor* QTextCursor_New3(QTextFrame* frame);
+QTextCursor* QTextCursor_New4(const QTextBlock* block);
+QTextCursor* QTextCursor_New5(const QTextCursor* cursor);
 void QTextCursor_OperatorAssign(QTextCursor* self, const QTextCursor* other);
 void QTextCursor_Swap(QTextCursor* self, QTextCursor* other);
 bool QTextCursor_IsNull(const QTextCursor* self);

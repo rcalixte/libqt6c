@@ -185,7 +185,7 @@ Poppler__AnnotationAppearance* Poppler__Annotation_AnnotationAppearance(const Po
 void Poppler__Annotation_SetAnnotationAppearance(Poppler__Annotation* self, const Poppler__AnnotationAppearance* annotationAppearance);
 void Poppler__Annotation_Delete(Poppler__Annotation* self);
 
-Poppler__TextAnnotation* Poppler__TextAnnotation_new(int type);
+Poppler__TextAnnotation* Poppler__TextAnnotation_New(int type);
 int Poppler__TextAnnotation_SubType(const Poppler__TextAnnotation* self);
 int Poppler__TextAnnotation_TextType(const Poppler__TextAnnotation* self);
 libqt_string Poppler__TextAnnotation_TextIcon(const Poppler__TextAnnotation* self);
@@ -205,7 +205,7 @@ void Poppler__TextAnnotation_OnSubType(const Poppler__TextAnnotation* self, intp
 int Poppler__TextAnnotation_SuperSubType(const Poppler__TextAnnotation* self);
 void Poppler__TextAnnotation_Delete(Poppler__TextAnnotation* self);
 
-Poppler__LineAnnotation* Poppler__LineAnnotation_new(int type);
+Poppler__LineAnnotation* Poppler__LineAnnotation_New(int type);
 int Poppler__LineAnnotation_SubType(const Poppler__LineAnnotation* self);
 int Poppler__LineAnnotation_LineType(const Poppler__LineAnnotation* self);
 libqt_list /* of QPointF* */ Poppler__LineAnnotation_LinePoints(const Poppler__LineAnnotation* self);
@@ -230,7 +230,7 @@ void Poppler__LineAnnotation_OnSubType(const Poppler__LineAnnotation* self, intp
 int Poppler__LineAnnotation_SuperSubType(const Poppler__LineAnnotation* self);
 void Poppler__LineAnnotation_Delete(Poppler__LineAnnotation* self);
 
-Poppler__GeomAnnotation* Poppler__GeomAnnotation_new();
+Poppler__GeomAnnotation* Poppler__GeomAnnotation_New();
 int Poppler__GeomAnnotation_SubType(const Poppler__GeomAnnotation* self);
 int Poppler__GeomAnnotation_GeomType(const Poppler__GeomAnnotation* self);
 void Poppler__GeomAnnotation_SetGeomType(Poppler__GeomAnnotation* self, int type);
@@ -240,7 +240,7 @@ void Poppler__GeomAnnotation_OnSubType(const Poppler__GeomAnnotation* self, intp
 int Poppler__GeomAnnotation_SuperSubType(const Poppler__GeomAnnotation* self);
 void Poppler__GeomAnnotation_Delete(Poppler__GeomAnnotation* self);
 
-Poppler__HighlightAnnotation* Poppler__HighlightAnnotation_new();
+Poppler__HighlightAnnotation* Poppler__HighlightAnnotation_New();
 int Poppler__HighlightAnnotation_SubType(const Poppler__HighlightAnnotation* self);
 int Poppler__HighlightAnnotation_HighlightType(const Poppler__HighlightAnnotation* self);
 void Poppler__HighlightAnnotation_SetHighlightType(Poppler__HighlightAnnotation* self, int type);
@@ -250,7 +250,7 @@ void Poppler__HighlightAnnotation_OnSubType(const Poppler__HighlightAnnotation* 
 int Poppler__HighlightAnnotation_SuperSubType(const Poppler__HighlightAnnotation* self);
 void Poppler__HighlightAnnotation_Delete(Poppler__HighlightAnnotation* self);
 
-Poppler__StampAnnotation* Poppler__StampAnnotation_new();
+Poppler__StampAnnotation* Poppler__StampAnnotation_New();
 int Poppler__StampAnnotation_SubType(const Poppler__StampAnnotation* self);
 libqt_string Poppler__StampAnnotation_StampIconName(const Poppler__StampAnnotation* self);
 void Poppler__StampAnnotation_SetStampIconName(Poppler__StampAnnotation* self, const libqt_string name);
@@ -259,7 +259,7 @@ void Poppler__StampAnnotation_OnSubType(const Poppler__StampAnnotation* self, in
 int Poppler__StampAnnotation_SuperSubType(const Poppler__StampAnnotation* self);
 void Poppler__StampAnnotation_Delete(Poppler__StampAnnotation* self);
 
-Poppler__SignatureAnnotation* Poppler__SignatureAnnotation_new();
+Poppler__SignatureAnnotation* Poppler__SignatureAnnotation_New();
 int Poppler__SignatureAnnotation_SubType(const Poppler__SignatureAnnotation* self);
 void Poppler__SignatureAnnotation_SetText(Poppler__SignatureAnnotation* self, const libqt_string text);
 void Poppler__SignatureAnnotation_SetLeftText(Poppler__SignatureAnnotation* self, const libqt_string text);
@@ -284,7 +284,7 @@ void Poppler__SignatureAnnotation_OnSubType(const Poppler__SignatureAnnotation* 
 int Poppler__SignatureAnnotation_SuperSubType(const Poppler__SignatureAnnotation* self);
 void Poppler__SignatureAnnotation_Delete(Poppler__SignatureAnnotation* self);
 
-Poppler__InkAnnotation* Poppler__InkAnnotation_new();
+Poppler__InkAnnotation* Poppler__InkAnnotation_New();
 int Poppler__InkAnnotation_SubType(const Poppler__InkAnnotation* self);
 libqt_list /* of libqt_list of QPointF* */ Poppler__InkAnnotation_InkPaths(const Poppler__InkAnnotation* self);
 void Poppler__InkAnnotation_SetInkPaths(Poppler__InkAnnotation* self, const libqt_list /* of libqt_list of QPointF* */ paths);
@@ -300,7 +300,7 @@ QPointF* Poppler__LinkAnnotation_LinkRegionPoint(const Poppler__LinkAnnotation* 
 void Poppler__LinkAnnotation_SetLinkRegionPoint(Poppler__LinkAnnotation* self, int id, const QPointF* point);
 void Poppler__LinkAnnotation_Delete(Poppler__LinkAnnotation* self);
 
-Poppler__CaretAnnotation* Poppler__CaretAnnotation_new();
+Poppler__CaretAnnotation* Poppler__CaretAnnotation_New();
 int Poppler__CaretAnnotation_SubType(const Poppler__CaretAnnotation* self);
 int Poppler__CaretAnnotation_CaretSymbol(const Poppler__CaretAnnotation* self);
 void Poppler__CaretAnnotation_SetCaretSymbol(Poppler__CaretAnnotation* self, int symbol);
@@ -346,8 +346,8 @@ Poppler__RichMediaAnnotation__Settings* Poppler__RichMediaAnnotation_Settings(co
 Poppler__RichMediaAnnotation__Content* Poppler__RichMediaAnnotation_Content(const Poppler__RichMediaAnnotation* self);
 void Poppler__RichMediaAnnotation_Delete(Poppler__RichMediaAnnotation* self);
 
-Poppler__Annotation__Style* Poppler__Annotation__Style_new();
-Poppler__Annotation__Style* Poppler__Annotation__Style_new2(const Poppler__Annotation__Style* other);
+Poppler__Annotation__Style* Poppler__Annotation__Style_New();
+Poppler__Annotation__Style* Poppler__Annotation__Style_New2(const Poppler__Annotation__Style* other);
 void Poppler__Annotation__Style_OperatorAssign(Poppler__Annotation__Style* self, const Poppler__Annotation__Style* other);
 QColor* Poppler__Annotation__Style_Color(const Poppler__Annotation__Style* self);
 void Poppler__Annotation__Style_SetColor(Poppler__Annotation__Style* self, const QColor* color);
@@ -369,8 +369,8 @@ double Poppler__Annotation__Style_EffectIntensity(const Poppler__Annotation__Sty
 void Poppler__Annotation__Style_SetEffectIntensity(Poppler__Annotation__Style* self, double intens);
 void Poppler__Annotation__Style_Delete(Poppler__Annotation__Style* self);
 
-Poppler__Annotation__Popup* Poppler__Annotation__Popup_new();
-Poppler__Annotation__Popup* Poppler__Annotation__Popup_new2(const Poppler__Annotation__Popup* other);
+Poppler__Annotation__Popup* Poppler__Annotation__Popup_New();
+Poppler__Annotation__Popup* Poppler__Annotation__Popup_New2(const Poppler__Annotation__Popup* other);
 void Poppler__Annotation__Popup_OperatorAssign(Poppler__Annotation__Popup* self, const Poppler__Annotation__Popup* other);
 int Poppler__Annotation__Popup_Flags(const Poppler__Annotation__Popup* self);
 void Poppler__Annotation__Popup_SetFlags(Poppler__Annotation__Popup* self, int flags);
@@ -392,40 +392,40 @@ double Poppler__HighlightAnnotation__Quad_Feather(const Poppler__HighlightAnnota
 void Poppler__HighlightAnnotation__Quad_SetFeather(Poppler__HighlightAnnotation__Quad* self, double feather);
 void Poppler__HighlightAnnotation__Quad_Delete(Poppler__HighlightAnnotation__Quad* self);
 
-Poppler__RichMediaAnnotation__Params* Poppler__RichMediaAnnotation__Params_new();
+Poppler__RichMediaAnnotation__Params* Poppler__RichMediaAnnotation__Params_New();
 libqt_string Poppler__RichMediaAnnotation__Params_FlashVars(const Poppler__RichMediaAnnotation__Params* self);
 void Poppler__RichMediaAnnotation__Params_Delete(Poppler__RichMediaAnnotation__Params* self);
 
-Poppler__RichMediaAnnotation__Instance* Poppler__RichMediaAnnotation__Instance_new();
+Poppler__RichMediaAnnotation__Instance* Poppler__RichMediaAnnotation__Instance_New();
 int Poppler__RichMediaAnnotation__Instance_Type(const Poppler__RichMediaAnnotation__Instance* self);
 Poppler__RichMediaAnnotation__Params* Poppler__RichMediaAnnotation__Instance_Params(const Poppler__RichMediaAnnotation__Instance* self);
 void Poppler__RichMediaAnnotation__Instance_Delete(Poppler__RichMediaAnnotation__Instance* self);
 
-Poppler__RichMediaAnnotation__Configuration* Poppler__RichMediaAnnotation__Configuration_new();
+Poppler__RichMediaAnnotation__Configuration* Poppler__RichMediaAnnotation__Configuration_New();
 int Poppler__RichMediaAnnotation__Configuration_Type(const Poppler__RichMediaAnnotation__Configuration* self);
 libqt_string Poppler__RichMediaAnnotation__Configuration_Name(const Poppler__RichMediaAnnotation__Configuration* self);
 libqt_list /* of Poppler__RichMediaAnnotation__Instance* */ Poppler__RichMediaAnnotation__Configuration_Instances(const Poppler__RichMediaAnnotation__Configuration* self);
 void Poppler__RichMediaAnnotation__Configuration_Delete(Poppler__RichMediaAnnotation__Configuration* self);
 
-Poppler__RichMediaAnnotation__Asset* Poppler__RichMediaAnnotation__Asset_new();
+Poppler__RichMediaAnnotation__Asset* Poppler__RichMediaAnnotation__Asset_New();
 libqt_string Poppler__RichMediaAnnotation__Asset_Name(const Poppler__RichMediaAnnotation__Asset* self);
 Poppler__EmbeddedFile* Poppler__RichMediaAnnotation__Asset_EmbeddedFile(const Poppler__RichMediaAnnotation__Asset* self);
 void Poppler__RichMediaAnnotation__Asset_Delete(Poppler__RichMediaAnnotation__Asset* self);
 
-Poppler__RichMediaAnnotation__Content* Poppler__RichMediaAnnotation__Content_new();
+Poppler__RichMediaAnnotation__Content* Poppler__RichMediaAnnotation__Content_New();
 libqt_list /* of Poppler__RichMediaAnnotation__Configuration* */ Poppler__RichMediaAnnotation__Content_Configurations(const Poppler__RichMediaAnnotation__Content* self);
 libqt_list /* of Poppler__RichMediaAnnotation__Asset* */ Poppler__RichMediaAnnotation__Content_Assets(const Poppler__RichMediaAnnotation__Content* self);
 void Poppler__RichMediaAnnotation__Content_Delete(Poppler__RichMediaAnnotation__Content* self);
 
-Poppler__RichMediaAnnotation__Activation* Poppler__RichMediaAnnotation__Activation_new();
+Poppler__RichMediaAnnotation__Activation* Poppler__RichMediaAnnotation__Activation_New();
 int Poppler__RichMediaAnnotation__Activation_Condition(const Poppler__RichMediaAnnotation__Activation* self);
 void Poppler__RichMediaAnnotation__Activation_Delete(Poppler__RichMediaAnnotation__Activation* self);
 
-Poppler__RichMediaAnnotation__Deactivation* Poppler__RichMediaAnnotation__Deactivation_new();
+Poppler__RichMediaAnnotation__Deactivation* Poppler__RichMediaAnnotation__Deactivation_New();
 int Poppler__RichMediaAnnotation__Deactivation_Condition(const Poppler__RichMediaAnnotation__Deactivation* self);
 void Poppler__RichMediaAnnotation__Deactivation_Delete(Poppler__RichMediaAnnotation__Deactivation* self);
 
-Poppler__RichMediaAnnotation__Settings* Poppler__RichMediaAnnotation__Settings_new();
+Poppler__RichMediaAnnotation__Settings* Poppler__RichMediaAnnotation__Settings_New();
 Poppler__RichMediaAnnotation__Activation* Poppler__RichMediaAnnotation__Settings_Activation(const Poppler__RichMediaAnnotation__Settings* self);
 Poppler__RichMediaAnnotation__Deactivation* Poppler__RichMediaAnnotation__Settings_Deactivation(const Poppler__RichMediaAnnotation__Settings* self);
 void Poppler__RichMediaAnnotation__Settings_Delete(Poppler__RichMediaAnnotation__Settings* self);

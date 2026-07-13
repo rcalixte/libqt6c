@@ -6,11 +6,11 @@
 #include "libqtimer.h"
 
 QTimer* q_timer_new() {
-    return QTimer_new();
+    return QTimer_New();
 }
 
 QTimer* q_timer_new2(void* parent) {
-    return QTimer_new2((QObject*)parent);
+    return QTimer_New2((QObject*)parent);
 }
 
 const QMetaObject* q_timer_meta_object(void* self) {

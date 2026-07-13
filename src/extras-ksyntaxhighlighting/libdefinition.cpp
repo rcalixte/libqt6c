@@ -8,11 +8,11 @@
 #include "libdefinition.hpp"
 #include "libdefinition.hxx"
 
-KSyntaxHighlighting__Definition* KSyntaxHighlighting__Definition_new() {
+KSyntaxHighlighting__Definition* KSyntaxHighlighting__Definition_New() {
     return new KSyntaxHighlighting::Definition();
 }
 
-KSyntaxHighlighting__Definition* KSyntaxHighlighting__Definition_new2(const KSyntaxHighlighting__Definition* other) {
+KSyntaxHighlighting__Definition* KSyntaxHighlighting__Definition_New2(const KSyntaxHighlighting__Definition* other) {
     return new KSyntaxHighlighting::Definition(*other);
 }
 

@@ -22,8 +22,8 @@ typedef struct Attica__HomePageEntry Attica__HomePageEntry;
 typedef struct QUrl QUrl;
 #endif
 
-Attica__HomePageEntry* Attica__HomePageEntry_new();
-Attica__HomePageEntry* Attica__HomePageEntry_new2(const Attica__HomePageEntry* other);
+Attica__HomePageEntry* Attica__HomePageEntry_New();
+Attica__HomePageEntry* Attica__HomePageEntry_New2(const Attica__HomePageEntry* other);
 void Attica__HomePageEntry_OperatorAssign(Attica__HomePageEntry* self, const Attica__HomePageEntry* other);
 libqt_string Attica__HomePageEntry_Type(const Attica__HomePageEntry* self);
 void Attica__HomePageEntry_SetType(Attica__HomePageEntry* self, const libqt_string type);

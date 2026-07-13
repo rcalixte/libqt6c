@@ -29,10 +29,10 @@ typedef struct QPieSlice QPieSlice;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QPieSlice* QPieSlice_new();
-QPieSlice* QPieSlice_new2(libqt_string label, double value);
-QPieSlice* QPieSlice_new3(QObject* parent);
-QPieSlice* QPieSlice_new4(libqt_string label, double value, QObject* parent);
+QPieSlice* QPieSlice_New();
+QPieSlice* QPieSlice_New2(libqt_string label, double value);
+QPieSlice* QPieSlice_New3(QObject* parent);
+QPieSlice* QPieSlice_New4(libqt_string label, double value, QObject* parent);
 QMetaObject* QPieSlice_MetaObject(const QPieSlice* self);
 void* QPieSlice_Metacast(QPieSlice* self, const char* param1);
 int QPieSlice_Metacall(QPieSlice* self, int param1, int param2, void** param3);

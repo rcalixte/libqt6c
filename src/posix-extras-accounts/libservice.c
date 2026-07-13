@@ -3,11 +3,11 @@
 #include "libservice.h"
 
 Accounts__Service* q_accounts__service_new() {
-    return Accounts__Service_new();
+    return Accounts__Service_New();
 }
 
 Accounts__Service* q_accounts__service_new2(void* other) {
-    return Accounts__Service_new2((Accounts__Service*)other);
+    return Accounts__Service_New2((Accounts__Service*)other);
 }
 
 void q_accounts__service_operator_assign(void* self, void* other) {

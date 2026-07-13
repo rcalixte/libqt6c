@@ -7,11 +7,11 @@
 #include "libqsqldriverplugin.h"
 
 QSqlDriverPlugin* q_sqldriverplugin_new() {
-    return QSqlDriverPlugin_new();
+    return QSqlDriverPlugin_New();
 }
 
 QSqlDriverPlugin* q_sqldriverplugin_new2(void* parent) {
-    return QSqlDriverPlugin_new2((QObject*)parent);
+    return QSqlDriverPlugin_New2((QObject*)parent);
 }
 
 const QMetaObject* q_sqldriverplugin_meta_object(void* self) {

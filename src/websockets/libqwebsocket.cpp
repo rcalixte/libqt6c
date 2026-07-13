@@ -22,21 +22,21 @@
 #include "libqwebsocket.hpp"
 #include "libqwebsocket.hxx"
 
-QWebSocket* QWebSocket_new() {
+QWebSocket* QWebSocket_New() {
     return new VirtualQWebSocket();
 }
 
-QWebSocket* QWebSocket_new2(const libqt_string origin) {
+QWebSocket* QWebSocket_New2(const libqt_string origin) {
     QString origin_QString = QString::fromUtf8(origin.data, origin.len);
     return new VirtualQWebSocket(origin_QString);
 }
 
-QWebSocket* QWebSocket_new3(const libqt_string origin, int version) {
+QWebSocket* QWebSocket_New3(const libqt_string origin, int version) {
     QString origin_QString = QString::fromUtf8(origin.data, origin.len);
     return new VirtualQWebSocket(origin_QString, static_cast<QWebSocketProtocol::Version>(version));
 }
 
-QWebSocket* QWebSocket_new4(const libqt_string origin, int version, QObject* parent) {
+QWebSocket* QWebSocket_New4(const libqt_string origin, int version, QObject* parent) {
     QString origin_QString = QString::fromUtf8(origin.data, origin.len);
     return new VirtualQWebSocket(origin_QString, static_cast<QWebSocketProtocol::Version>(version), parent);
 }

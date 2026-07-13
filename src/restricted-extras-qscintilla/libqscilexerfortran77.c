@@ -11,11 +11,11 @@
 #include "libqscilexerfortran77.h"
 
 QsciLexerFortran77* q_scilexerfortran77_new() {
-    return QsciLexerFortran77_new();
+    return QsciLexerFortran77_New();
 }
 
 QsciLexerFortran77* q_scilexerfortran77_new2(void* parent) {
-    return QsciLexerFortran77_new2((QObject*)parent);
+    return QsciLexerFortran77_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexerfortran77_meta_object(void* self) {

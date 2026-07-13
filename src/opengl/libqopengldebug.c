@@ -6,11 +6,11 @@
 #include "libqopengldebug.h"
 
 QOpenGLDebugMessage* q_opengldebugmessage_new() {
-    return QOpenGLDebugMessage_new();
+    return QOpenGLDebugMessage_New();
 }
 
 QOpenGLDebugMessage* q_opengldebugmessage_new2(void* debugMessage) {
-    return QOpenGLDebugMessage_new2((QOpenGLDebugMessage*)debugMessage);
+    return QOpenGLDebugMessage_New2((QOpenGLDebugMessage*)debugMessage);
 }
 
 void q_opengldebugmessage_operator_assign(void* self, void* debugMessage) {
@@ -89,11 +89,11 @@ void q_opengldebugmessage_delete(void* self) {
 }
 
 QOpenGLDebugLogger* q_opengldebuglogger_new() {
-    return QOpenGLDebugLogger_new();
+    return QOpenGLDebugLogger_New();
 }
 
 QOpenGLDebugLogger* q_opengldebuglogger_new2(void* parent) {
-    return QOpenGLDebugLogger_new2((QObject*)parent);
+    return QOpenGLDebugLogger_New2((QObject*)parent);
 }
 
 const QMetaObject* q_opengldebuglogger_meta_object(void* self) {

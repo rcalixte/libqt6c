@@ -22,8 +22,8 @@ typedef struct Attica__Utils Attica__Utils;
 typedef struct QDateTime QDateTime;
 #endif
 
-Attica__Utils* Attica__Utils_new(const Attica__Utils* other);
-Attica__Utils* Attica__Utils_new2(Attica__Utils* other);
+Attica__Utils* Attica__Utils_New(const Attica__Utils* other);
+Attica__Utils* Attica__Utils_New2(Attica__Utils* other);
 void Attica__Utils_CopyAssign(Attica__Utils* self, Attica__Utils* other);
 void Attica__Utils_MoveAssign(Attica__Utils* self, Attica__Utils* other);
 QDateTime* Attica__Utils_ParseQtDateTimeIso8601(const libqt_string str);

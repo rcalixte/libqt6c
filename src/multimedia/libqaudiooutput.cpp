@@ -11,19 +11,19 @@
 #include "libqaudiooutput.hpp"
 #include "libqaudiooutput.hxx"
 
-QAudioOutput* QAudioOutput_new() {
+QAudioOutput* QAudioOutput_New() {
     return new VirtualQAudioOutput();
 }
 
-QAudioOutput* QAudioOutput_new2(const QAudioDevice* device) {
+QAudioOutput* QAudioOutput_New2(const QAudioDevice* device) {
     return new VirtualQAudioOutput(*device);
 }
 
-QAudioOutput* QAudioOutput_new3(QObject* parent) {
+QAudioOutput* QAudioOutput_New3(QObject* parent) {
     return new VirtualQAudioOutput(parent);
 }
 
-QAudioOutput* QAudioOutput_new4(const QAudioDevice* device, QObject* parent) {
+QAudioOutput* QAudioOutput_New4(const QAudioDevice* device, QObject* parent) {
     return new VirtualQAudioOutput(*device, parent);
 }
 

@@ -3,43 +3,43 @@
 #include "libqbluetoothuuid.h"
 
 QBluetoothUuid* q_bluetoothuuid_new(void* other) {
-    return QBluetoothUuid_new((QBluetoothUuid*)other);
+    return QBluetoothUuid_New((QBluetoothUuid*)other);
 }
 
 QBluetoothUuid* q_bluetoothuuid_new2() {
-    return QBluetoothUuid_new2();
+    return QBluetoothUuid_New2();
 }
 
 QBluetoothUuid* q_bluetoothuuid_new3(int32_t uuid) {
-    return QBluetoothUuid_new3(uuid);
+    return QBluetoothUuid_New3(uuid);
 }
 
 QBluetoothUuid* q_bluetoothuuid_new4(int32_t uuid) {
-    return QBluetoothUuid_new4(uuid);
+    return QBluetoothUuid_New4(uuid);
 }
 
 QBluetoothUuid* q_bluetoothuuid_new5(int32_t uuid) {
-    return QBluetoothUuid_new5(uuid);
+    return QBluetoothUuid_New5(uuid);
 }
 
 QBluetoothUuid* q_bluetoothuuid_new6(int32_t uuid) {
-    return QBluetoothUuid_new6(uuid);
+    return QBluetoothUuid_New6(uuid);
 }
 
 QBluetoothUuid* q_bluetoothuuid_new7(uint16_t uuid) {
-    return QBluetoothUuid_new7(uuid);
+    return QBluetoothUuid_New7(uuid);
 }
 
 QBluetoothUuid* q_bluetoothuuid_new8(uint32_t uuid) {
-    return QBluetoothUuid_new8(uuid);
+    return QBluetoothUuid_New8(uuid);
 }
 
 QBluetoothUuid* q_bluetoothuuid_new9(void* uuid) {
-    return QBluetoothUuid_new9((QBluetoothUuid*)uuid);
+    return QBluetoothUuid_New9((QBluetoothUuid*)uuid);
 }
 
 QBluetoothUuid* q_bluetoothuuid_new10(void* uuid) {
-    return QBluetoothUuid_new10((QUuid*)uuid);
+    return QBluetoothUuid_New10((QUuid*)uuid);
 }
 
 void q_bluetoothuuid_copy_assign(void* self, void* other) {

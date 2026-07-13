@@ -14,19 +14,19 @@
 #include "libqprinter.h"
 
 QPrinter* q_printer_new() {
-    return QPrinter_new();
+    return QPrinter_New();
 }
 
 QPrinter* q_printer_new2(void* printer) {
-    return QPrinter_new2((QPrinterInfo*)printer);
+    return QPrinter_New2((QPrinterInfo*)printer);
 }
 
 QPrinter* q_printer_new3(int32_t mode) {
-    return QPrinter_new3(mode);
+    return QPrinter_New3(mode);
 }
 
 QPrinter* q_printer_new4(void* printer, int32_t mode) {
-    return QPrinter_new4((QPrinterInfo*)printer, mode);
+    return QPrinter_New4((QPrinterInfo*)printer, mode);
 }
 
 int32_t q_printer_dev_type(void* self) {

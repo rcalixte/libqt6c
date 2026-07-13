@@ -38,20 +38,20 @@
 #include "libqgroupbox.hpp"
 #include "libqgroupbox.hxx"
 
-QGroupBox* QGroupBox_new(QWidget* parent) {
+QGroupBox* QGroupBox_New(QWidget* parent) {
     return new VirtualQGroupBox(parent);
 }
 
-QGroupBox* QGroupBox_new2() {
+QGroupBox* QGroupBox_New2() {
     return new VirtualQGroupBox();
 }
 
-QGroupBox* QGroupBox_new3(const libqt_string title) {
+QGroupBox* QGroupBox_New3(const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualQGroupBox(title_QString);
 }
 
-QGroupBox* QGroupBox_new4(const libqt_string title, QWidget* parent) {
+QGroupBox* QGroupBox_New4(const libqt_string title, QWidget* parent) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualQGroupBox(title_QString, parent);
 }

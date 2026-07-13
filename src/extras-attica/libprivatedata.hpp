@@ -22,8 +22,8 @@ typedef struct Attica__PrivateData Attica__PrivateData;
 typedef struct QDateTime QDateTime;
 #endif
 
-Attica__PrivateData* Attica__PrivateData_new();
-Attica__PrivateData* Attica__PrivateData_new2(const Attica__PrivateData* other);
+Attica__PrivateData* Attica__PrivateData_New();
+Attica__PrivateData* Attica__PrivateData_New2(const Attica__PrivateData* other);
 void Attica__PrivateData_OperatorAssign(Attica__PrivateData* self, const Attica__PrivateData* other);
 void Attica__PrivateData_SetAttribute(Attica__PrivateData* self, const libqt_string key, const libqt_string value);
 libqt_string Attica__PrivateData_Attribute(const Attica__PrivateData* self, const libqt_string key);

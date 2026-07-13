@@ -14,11 +14,11 @@
 #include "libqbarlegendmarker.hpp"
 #include "libqbarlegendmarker.hxx"
 
-QBarLegendMarker* QBarLegendMarker_new(QAbstractBarSeries* series, QBarSet* barset, QLegend* legend) {
+QBarLegendMarker* QBarLegendMarker_New(QAbstractBarSeries* series, QBarSet* barset, QLegend* legend) {
     return new VirtualQBarLegendMarker(series, barset, legend);
 }
 
-QBarLegendMarker* QBarLegendMarker_new2(QAbstractBarSeries* series, QBarSet* barset, QLegend* legend, QObject* parent) {
+QBarLegendMarker* QBarLegendMarker_New2(QAbstractBarSeries* series, QBarSet* barset, QLegend* legend, QObject* parent) {
     return new VirtualQBarLegendMarker(series, barset, legend, parent);
 }
 

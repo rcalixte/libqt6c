@@ -22,7 +22,7 @@ typedef struct QDomElement QDomElement;
 typedef struct QWidget QWidget;
 #endif
 
-KXMLGUIBuilder* KXMLGUIBuilder_new(QWidget* widget);
+KXMLGUIBuilder* KXMLGUIBuilder_New(QWidget* widget);
 KXMLGUIClient* KXMLGUIBuilder_BuilderClient(const KXMLGUIBuilder* self);
 void KXMLGUIBuilder_SetBuilderClient(KXMLGUIBuilder* self, KXMLGUIClient* client);
 QWidget* KXMLGUIBuilder_Widget(KXMLGUIBuilder* self);

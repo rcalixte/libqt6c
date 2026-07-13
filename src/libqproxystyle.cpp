@@ -25,16 +25,16 @@
 #include "libqproxystyle.hpp"
 #include "libqproxystyle.hxx"
 
-QProxyStyle* QProxyStyle_new() {
+QProxyStyle* QProxyStyle_New() {
     return new VirtualQProxyStyle();
 }
 
-QProxyStyle* QProxyStyle_new2(const libqt_string key) {
+QProxyStyle* QProxyStyle_New2(const libqt_string key) {
     QString key_QString = QString::fromUtf8(key.data, key.len);
     return new VirtualQProxyStyle(key_QString);
 }
 
-QProxyStyle* QProxyStyle_new3(QStyle* style) {
+QProxyStyle* QProxyStyle_New3(QStyle* style) {
     return new VirtualQProxyStyle(style);
 }
 

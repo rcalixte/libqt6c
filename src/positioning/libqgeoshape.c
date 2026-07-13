@@ -4,11 +4,11 @@
 #include "libqgeoshape.h"
 
 QGeoShape* q_geoshape_new() {
-    return QGeoShape_new();
+    return QGeoShape_New();
 }
 
 QGeoShape* q_geoshape_new2(void* other) {
-    return QGeoShape_new2((QGeoShape*)other);
+    return QGeoShape_New2((QGeoShape*)other);
 }
 
 int32_t q_geoshape_type(void* self) {

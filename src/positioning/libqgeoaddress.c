@@ -2,11 +2,11 @@
 #include "libqgeoaddress.h"
 
 QGeoAddress* q_geoaddress_new() {
-    return QGeoAddress_new();
+    return QGeoAddress_New();
 }
 
 QGeoAddress* q_geoaddress_new2(void* other) {
-    return QGeoAddress_new2((QGeoAddress*)other);
+    return QGeoAddress_New2((QGeoAddress*)other);
 }
 
 void q_geoaddress_operator_assign(void* self, void* other) {

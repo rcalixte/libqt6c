@@ -32,8 +32,8 @@ typedef struct QVBoxLayout QVBoxLayout;
 typedef struct QWidget QWidget;
 #endif
 
-QBoxLayout* QBoxLayout_new(int param1);
-QBoxLayout* QBoxLayout_new2(int param1, QWidget* parent);
+QBoxLayout* QBoxLayout_New(int param1);
+QBoxLayout* QBoxLayout_New2(int param1, QWidget* parent);
 QMetaObject* QBoxLayout_MetaObject(const QBoxLayout* self);
 void* QBoxLayout_Metacast(QBoxLayout* self, const char* param1);
 int QBoxLayout_Metacall(QBoxLayout* self, int param1, int param2, void** param3);
@@ -188,8 +188,8 @@ void QBoxLayout_OnIsSignalConnected(const QBoxLayout* self, intptr_t slot);
 bool QBoxLayout_SuperIsSignalConnected(const QBoxLayout* self, const QMetaMethod* signal);
 void QBoxLayout_Delete(QBoxLayout* self);
 
-QHBoxLayout* QHBoxLayout_new(QWidget* parent);
-QHBoxLayout* QHBoxLayout_new2();
+QHBoxLayout* QHBoxLayout_New(QWidget* parent);
+QHBoxLayout* QHBoxLayout_New2();
 QMetaObject* QHBoxLayout_MetaObject(const QHBoxLayout* self);
 void* QHBoxLayout_Metacast(QHBoxLayout* self, const char* param1);
 int QHBoxLayout_Metacall(QHBoxLayout* self, int param1, int param2, void** param3);
@@ -318,8 +318,8 @@ void QHBoxLayout_OnIsSignalConnected(const QHBoxLayout* self, intptr_t slot);
 bool QHBoxLayout_SuperIsSignalConnected(const QHBoxLayout* self, const QMetaMethod* signal);
 void QHBoxLayout_Delete(QHBoxLayout* self);
 
-QVBoxLayout* QVBoxLayout_new(QWidget* parent);
-QVBoxLayout* QVBoxLayout_new2();
+QVBoxLayout* QVBoxLayout_New(QWidget* parent);
+QVBoxLayout* QVBoxLayout_New2();
 QMetaObject* QVBoxLayout_MetaObject(const QVBoxLayout* self);
 void* QVBoxLayout_Metacast(QVBoxLayout* self, const char* param1);
 int QVBoxLayout_Metacall(QVBoxLayout* self, int param1, int param2, void** param3);

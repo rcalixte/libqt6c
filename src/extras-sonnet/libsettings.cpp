@@ -12,11 +12,11 @@
 #include "libsettings.hpp"
 #include "libsettings.hxx"
 
-Sonnet__Settings* Sonnet__Settings_new() {
+Sonnet__Settings* Sonnet__Settings_New() {
     return new VirtualSonnetSettings();
 }
 
-Sonnet__Settings* Sonnet__Settings_new2(QObject* parent) {
+Sonnet__Settings* Sonnet__Settings_New2(QObject* parent) {
     return new VirtualSonnetSettings(parent);
 }
 

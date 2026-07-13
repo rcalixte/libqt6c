@@ -3,11 +3,11 @@
 #include "libatticautils.h"
 
 Attica__Utils* k_attica__utils_new(void* other) {
-    return Attica__Utils_new((Attica__Utils*)other);
+    return Attica__Utils_New((Attica__Utils*)other);
 }
 
 Attica__Utils* k_attica__utils_new2(void* other) {
-    return Attica__Utils_new2((Attica__Utils*)other);
+    return Attica__Utils_New2((Attica__Utils*)other);
 }
 
 void k_attica__utils_copy_assign(void* self, void* other) {

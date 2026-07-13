@@ -41,11 +41,11 @@
 #include "libkiconbutton.hpp"
 #include "libkiconbutton.hxx"
 
-KIconButton* KIconButton_new(QWidget* parent) {
+KIconButton* KIconButton_New(QWidget* parent) {
     return new VirtualKIconButton(parent);
 }
 
-KIconButton* KIconButton_new2() {
+KIconButton* KIconButton_New2() {
     return new VirtualKIconButton();
 }
 

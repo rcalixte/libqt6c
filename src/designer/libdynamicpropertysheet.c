@@ -3,7 +3,7 @@
 #include "libdynamicpropertysheet.h"
 
 QDesignerDynamicPropertySheetExtension* q_designerdynamicpropertysheetextension_new() {
-    return QDesignerDynamicPropertySheetExtension_new();
+    return QDesignerDynamicPropertySheetExtension_New();
 }
 
 bool q_designerdynamicpropertysheetextension_dynamic_properties_allowed(void* self) {

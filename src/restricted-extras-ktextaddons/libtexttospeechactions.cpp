@@ -11,11 +11,11 @@
 #include "libtexttospeechactions.hpp"
 #include "libtexttospeechactions.hxx"
 
-TextEditTextToSpeech__TextToSpeechActions* TextEditTextToSpeech__TextToSpeechActions_new() {
+TextEditTextToSpeech__TextToSpeechActions* TextEditTextToSpeech__TextToSpeechActions_New() {
     return new VirtualTextEditTextToSpeechTextToSpeechActions();
 }
 
-TextEditTextToSpeech__TextToSpeechActions* TextEditTextToSpeech__TextToSpeechActions_new2(QObject* parent) {
+TextEditTextToSpeech__TextToSpeechActions* TextEditTextToSpeech__TextToSpeechActions_New2(QObject* parent) {
     return new VirtualTextEditTextToSpeechTextToSpeechActions(parent);
 }
 

@@ -62,7 +62,7 @@ QMetaObject* QTextBlockGroup_MetaObject(const QTextBlockGroup* self);
 void* QTextBlockGroup_Metacast(QTextBlockGroup* self, const char* param1);
 int QTextBlockGroup_Metacall(QTextBlockGroup* self, int param1, int param2, void** param3);
 
-QTextFrame* QTextFrame_new(QTextDocument* doc);
+QTextFrame* QTextFrame_New(QTextDocument* doc);
 QMetaObject* QTextFrame_MetaObject(const QTextFrame* self);
 void* QTextFrame_Metacast(QTextFrame* self, const char* param1);
 int QTextFrame_Metacall(QTextFrame* self, int param1, int param2, void** param3);
@@ -123,8 +123,8 @@ void QTextFrame_Delete(QTextFrame* self);
 void QTextBlockUserData_OperatorAssign(QTextBlockUserData* self, const QTextBlockUserData* param1);
 void QTextBlockUserData_Delete(QTextBlockUserData* self);
 
-QTextBlock* QTextBlock_new();
-QTextBlock* QTextBlock_new2(const QTextBlock* o);
+QTextBlock* QTextBlock_New();
+QTextBlock* QTextBlock_New2(const QTextBlock* o);
 void QTextBlock_OperatorAssign(QTextBlock* self, const QTextBlock* o);
 bool QTextBlock_IsValid(const QTextBlock* self);
 bool QTextBlock_OperatorEqual(const QTextBlock* self, const QTextBlock* o);
@@ -163,8 +163,8 @@ QTextBlock* QTextBlock_Previous(const QTextBlock* self);
 int QTextBlock_FragmentIndex(const QTextBlock* self);
 void QTextBlock_Delete(QTextBlock* self);
 
-QTextFragment* QTextFragment_new();
-QTextFragment* QTextFragment_new2(const QTextFragment* o);
+QTextFragment* QTextFragment_New();
+QTextFragment* QTextFragment_New2(const QTextFragment* o);
 void QTextFragment_OperatorAssign(QTextFragment* self, const QTextFragment* o);
 bool QTextFragment_IsValid(const QTextFragment* self);
 bool QTextFragment_OperatorEqual(const QTextFragment* self, const QTextFragment* o);
@@ -181,10 +181,10 @@ libqt_list /* of QGlyphRun* */ QTextFragment_GlyphRuns1(const QTextFragment* sel
 libqt_list /* of QGlyphRun* */ QTextFragment_GlyphRuns2(const QTextFragment* self, int from, int length);
 void QTextFragment_Delete(QTextFragment* self);
 
-QTextFrame__iterator* QTextFrame__iterator_new(const QTextFrame__iterator* other);
-QTextFrame__iterator* QTextFrame__iterator_new2(QTextFrame__iterator* other);
-QTextFrame__iterator* QTextFrame__iterator_new3();
-QTextFrame__iterator* QTextFrame__iterator_new4(const QTextFrame__iterator* param1);
+QTextFrame__iterator* QTextFrame__iterator_New(const QTextFrame__iterator* other);
+QTextFrame__iterator* QTextFrame__iterator_New2(QTextFrame__iterator* other);
+QTextFrame__iterator* QTextFrame__iterator_New3();
+QTextFrame__iterator* QTextFrame__iterator_New4(const QTextFrame__iterator* param1);
 void QTextFrame__iterator_CopyAssign(QTextFrame__iterator* self, QTextFrame__iterator* other);
 void QTextFrame__iterator_MoveAssign(QTextFrame__iterator* self, QTextFrame__iterator* other);
 QTextFrame* QTextFrame__iterator_ParentFrame(const QTextFrame__iterator* self);
@@ -199,10 +199,10 @@ QTextFrame__iterator* QTextFrame__iterator_OperatorMinusMinus(QTextFrame__iterat
 QTextFrame__iterator* QTextFrame__iterator_OperatorMinusMinus2(QTextFrame__iterator* self, int param1);
 void QTextFrame__iterator_Delete(QTextFrame__iterator* self);
 
-QTextBlock__iterator* QTextBlock__iterator_new(const QTextBlock__iterator* other);
-QTextBlock__iterator* QTextBlock__iterator_new2(QTextBlock__iterator* other);
-QTextBlock__iterator* QTextBlock__iterator_new3();
-QTextBlock__iterator* QTextBlock__iterator_new4(const QTextBlock__iterator* param1);
+QTextBlock__iterator* QTextBlock__iterator_New(const QTextBlock__iterator* other);
+QTextBlock__iterator* QTextBlock__iterator_New2(QTextBlock__iterator* other);
+QTextBlock__iterator* QTextBlock__iterator_New3();
+QTextBlock__iterator* QTextBlock__iterator_New4(const QTextBlock__iterator* param1);
 void QTextBlock__iterator_CopyAssign(QTextBlock__iterator* self, QTextBlock__iterator* other);
 void QTextBlock__iterator_MoveAssign(QTextBlock__iterator* self, QTextBlock__iterator* other);
 QTextFragment* QTextBlock__iterator_Fragment(const QTextBlock__iterator* self);

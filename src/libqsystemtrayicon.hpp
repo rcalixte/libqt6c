@@ -27,10 +27,10 @@ typedef struct QSystemTrayIcon QSystemTrayIcon;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QSystemTrayIcon* QSystemTrayIcon_new();
-QSystemTrayIcon* QSystemTrayIcon_new2(const QIcon* icon);
-QSystemTrayIcon* QSystemTrayIcon_new3(QObject* parent);
-QSystemTrayIcon* QSystemTrayIcon_new4(const QIcon* icon, QObject* parent);
+QSystemTrayIcon* QSystemTrayIcon_New();
+QSystemTrayIcon* QSystemTrayIcon_New2(const QIcon* icon);
+QSystemTrayIcon* QSystemTrayIcon_New3(QObject* parent);
+QSystemTrayIcon* QSystemTrayIcon_New4(const QIcon* icon, QObject* parent);
 QMetaObject* QSystemTrayIcon_MetaObject(const QSystemTrayIcon* self);
 void* QSystemTrayIcon_Metacast(QSystemTrayIcon* self, const char* param1);
 int QSystemTrayIcon_Metacall(QSystemTrayIcon* self, int param1, int param2, void** param3);

@@ -9,7 +9,7 @@
 #include "librepository.h"
 
 KSyntaxHighlighting__Repository* k_syntaxhighlighting__repository_new() {
-    return KSyntaxHighlighting__Repository_new();
+    return KSyntaxHighlighting__Repository_New();
 }
 
 const QMetaObject* k_syntaxhighlighting__repository_meta_object(void* self) {

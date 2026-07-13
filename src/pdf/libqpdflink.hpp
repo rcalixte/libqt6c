@@ -21,8 +21,8 @@ typedef struct QRectF QRectF;
 typedef struct QUrl QUrl;
 #endif
 
-QPdfLink* QPdfLink_new();
-QPdfLink* QPdfLink_new2(const QPdfLink* other);
+QPdfLink* QPdfLink_New();
+QPdfLink* QPdfLink_New2(const QPdfLink* other);
 void QPdfLink_OperatorAssign(QPdfLink* self, const QPdfLink* other);
 void QPdfLink_Swap(QPdfLink* self, QPdfLink* other);
 bool QPdfLink_IsValid(const QPdfLink* self);

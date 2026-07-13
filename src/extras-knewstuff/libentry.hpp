@@ -35,8 +35,8 @@ typedef struct QXmlStreamReader QXmlStreamReader;
 libqt_string KNSCore_ReplaceBBCode(const libqt_string unformattedText);
 size_t KNSCore_QHash(const KNSCore__Entry* entry, size_t seed);
 
-KNSCore__Entry* KNSCore__Entry_new();
-KNSCore__Entry* KNSCore__Entry_new2(const KNSCore__Entry* other);
+KNSCore__Entry* KNSCore__Entry_New();
+KNSCore__Entry* KNSCore__Entry_New2(const KNSCore__Entry* other);
 void KNSCore__Entry_OperatorAssign(KNSCore__Entry* self, const KNSCore__Entry* other);
 bool KNSCore__Entry_OperatorEqual(const KNSCore__Entry* self, const KNSCore__Entry* other);
 bool KNSCore__Entry_OperatorLesser(const KNSCore__Entry* self, const KNSCore__Entry* other);
@@ -112,7 +112,7 @@ QImage* KNSCore__Entry_PreviewImage1(const KNSCore__Entry* self, int type);
 void KNSCore__Entry_SetPreviewImage2(KNSCore__Entry* self, const QImage* image, int type);
 void KNSCore__Entry_Delete(KNSCore__Entry* self);
 
-KNSCore__Entry__DownloadLinkInformation* KNSCore__Entry__DownloadLinkInformation_new(const KNSCore__Entry__DownloadLinkInformation* param1);
+KNSCore__Entry__DownloadLinkInformation* KNSCore__Entry__DownloadLinkInformation_New(const KNSCore__Entry__DownloadLinkInformation* param1);
 libqt_string KNSCore__Entry__DownloadLinkInformation_Name(const KNSCore__Entry__DownloadLinkInformation* self);
 void KNSCore__Entry__DownloadLinkInformation_SetName(KNSCore__Entry__DownloadLinkInformation* self, libqt_string name);
 libqt_string KNSCore__Entry__DownloadLinkInformation_PriceAmount(const KNSCore__Entry__DownloadLinkInformation* self);

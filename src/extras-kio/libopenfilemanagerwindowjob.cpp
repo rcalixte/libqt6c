@@ -14,11 +14,11 @@
 #include "libopenfilemanagerwindowjob.hpp"
 #include "libopenfilemanagerwindowjob.hxx"
 
-KIO__OpenFileManagerWindowJob* KIO__OpenFileManagerWindowJob_new() {
+KIO__OpenFileManagerWindowJob* KIO__OpenFileManagerWindowJob_New() {
     return new VirtualKIOOpenFileManagerWindowJob();
 }
 
-KIO__OpenFileManagerWindowJob* KIO__OpenFileManagerWindowJob_new2(QObject* parent) {
+KIO__OpenFileManagerWindowJob* KIO__OpenFileManagerWindowJob_New2(QObject* parent) {
     return new VirtualKIOOpenFileManagerWindowJob(parent);
 }
 

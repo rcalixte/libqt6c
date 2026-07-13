@@ -30,8 +30,8 @@ typedef struct QsciLexerJavaScript QsciLexerJavaScript;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerJavaScript* QsciLexerJavaScript_new();
-QsciLexerJavaScript* QsciLexerJavaScript_new2(QObject* parent);
+QsciLexerJavaScript* QsciLexerJavaScript_New();
+QsciLexerJavaScript* QsciLexerJavaScript_New2(QObject* parent);
 QMetaObject* QsciLexerJavaScript_MetaObject(const QsciLexerJavaScript* self);
 void* QsciLexerJavaScript_Metacast(QsciLexerJavaScript* self, const char* param1);
 int QsciLexerJavaScript_Metacall(QsciLexerJavaScript* self, int param1, int param2, void** param3);

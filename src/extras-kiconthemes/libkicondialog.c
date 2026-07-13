@@ -15,11 +15,11 @@
 #include "libkicondialog.h"
 
 KIconDialog* k_icondialog_new(void* parent) {
-    return KIconDialog_new((QWidget*)parent);
+    return KIconDialog_New((QWidget*)parent);
 }
 
 KIconDialog* k_icondialog_new2() {
-    return KIconDialog_new2();
+    return KIconDialog_New2();
 }
 
 const QMetaObject* k_icondialog_meta_object(void* self) {

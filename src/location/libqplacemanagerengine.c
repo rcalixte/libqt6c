@@ -47,7 +47,7 @@ QPlaceManagerEngine* q_placemanagerengine_new(libqt_map /* of const char* to QVa
         parameters_vdest[i] = parameters_varr[i];
     }
 
-    QPlaceManagerEngine* _out = QPlaceManagerEngine_new(parameters_ret);
+    QPlaceManagerEngine* _out = QPlaceManagerEngine_New(parameters_ret);
     free(parameters_ret.keys);
     free(parameters_ret.values);
     return _out;
@@ -77,7 +77,7 @@ QPlaceManagerEngine* q_placemanagerengine_new2(libqt_map /* of const char* to QV
         parameters_vdest[i] = parameters_varr[i];
     }
 
-    QPlaceManagerEngine* _out = QPlaceManagerEngine_new2(parameters_ret, (QObject*)parent);
+    QPlaceManagerEngine* _out = QPlaceManagerEngine_New2(parameters_ret, (QObject*)parent);
     free(parameters_ret.keys);
     free(parameters_ret.values);
     return _out;

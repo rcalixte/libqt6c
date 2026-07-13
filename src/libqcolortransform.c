@@ -4,11 +4,11 @@
 #include "libqcolortransform.h"
 
 QColorTransform* q_colortransform_new() {
-    return QColorTransform_new();
+    return QColorTransform_New();
 }
 
 QColorTransform* q_colortransform_new2(void* colorTransform) {
-    return QColorTransform_new2((QColorTransform*)colorTransform);
+    return QColorTransform_New2((QColorTransform*)colorTransform);
 }
 
 void q_colortransform_operator_assign(void* self, void* other) {

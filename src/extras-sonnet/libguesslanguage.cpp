@@ -5,7 +5,7 @@
 #include "libguesslanguage.hpp"
 #include "libguesslanguage.hxx"
 
-Sonnet__GuessLanguage* Sonnet__GuessLanguage_new() {
+Sonnet__GuessLanguage* Sonnet__GuessLanguage_New() {
     return new Sonnet::GuessLanguage();
 }
 

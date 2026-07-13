@@ -17,15 +17,15 @@
 #include "libqsqlrelationaltablemodel.h"
 
 QSqlRelation* q_sqlrelation_new() {
-    return QSqlRelation_new();
+    return QSqlRelation_New();
 }
 
 QSqlRelation* q_sqlrelation_new2(const char* aTableName, const char* indexCol, const char* displayCol) {
-    return QSqlRelation_new2(qstring(aTableName), qstring(indexCol), qstring(displayCol));
+    return QSqlRelation_New2(qstring(aTableName), qstring(indexCol), qstring(displayCol));
 }
 
 QSqlRelation* q_sqlrelation_new3(void* param1) {
-    return QSqlRelation_new3((QSqlRelation*)param1);
+    return QSqlRelation_New3((QSqlRelation*)param1);
 }
 
 void q_sqlrelation_swap(void* self, void* other) {
@@ -62,15 +62,15 @@ void q_sqlrelation_delete(void* self) {
 }
 
 QSqlRelationalTableModel* q_sqlrelationaltablemodel_new() {
-    return QSqlRelationalTableModel_new();
+    return QSqlRelationalTableModel_New();
 }
 
 QSqlRelationalTableModel* q_sqlrelationaltablemodel_new2(void* parent) {
-    return QSqlRelationalTableModel_new2((QObject*)parent);
+    return QSqlRelationalTableModel_New2((QObject*)parent);
 }
 
 QSqlRelationalTableModel* q_sqlrelationaltablemodel_new3(void* parent, void* db) {
-    return QSqlRelationalTableModel_new3((QObject*)parent, (QSqlDatabase*)db);
+    return QSqlRelationalTableModel_New3((QObject*)parent, (QSqlDatabase*)db);
 }
 
 const QMetaObject* q_sqlrelationaltablemodel_meta_object(void* self) {

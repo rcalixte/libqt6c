@@ -20,11 +20,11 @@
 #include "libkbookmarkcontextmenu.h"
 
 KBookmarkContextMenu* k_bookmarkcontextmenu_new(void* bm, void* manager, void* owner) {
-    return KBookmarkContextMenu_new((KBookmark*)bm, (KBookmarkManager*)manager, (KBookmarkOwner*)owner);
+    return KBookmarkContextMenu_New((KBookmark*)bm, (KBookmarkManager*)manager, (KBookmarkOwner*)owner);
 }
 
 KBookmarkContextMenu* k_bookmarkcontextmenu_new2(void* bm, void* manager, void* owner, void* parent) {
-    return KBookmarkContextMenu_new2((KBookmark*)bm, (KBookmarkManager*)manager, (KBookmarkOwner*)owner, (QWidget*)parent);
+    return KBookmarkContextMenu_New2((KBookmark*)bm, (KBookmarkManager*)manager, (KBookmarkOwner*)owner, (QWidget*)parent);
 }
 
 const QMetaObject* k_bookmarkcontextmenu_meta_object(void* self) {

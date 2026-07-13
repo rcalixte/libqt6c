@@ -14,11 +14,11 @@
 #include "libtranslatorconfigurelistswidget.h"
 
 TextTranslator__TranslatorConfigureListsWidget* k_texttranslator__translatorconfigurelistswidget_new(void* parent) {
-    return TextTranslator__TranslatorConfigureListsWidget_new((QWidget*)parent);
+    return TextTranslator__TranslatorConfigureListsWidget_New((QWidget*)parent);
 }
 
 TextTranslator__TranslatorConfigureListsWidget* k_texttranslator__translatorconfigurelistswidget_new2() {
-    return TextTranslator__TranslatorConfigureListsWidget_new2();
+    return TextTranslator__TranslatorConfigureListsWidget_New2();
 }
 
 const QMetaObject* k_texttranslator__translatorconfigurelistswidget_meta_object(void* self) {

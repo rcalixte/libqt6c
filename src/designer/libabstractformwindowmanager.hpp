@@ -31,8 +31,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QDesignerFormWindowManagerInterface* QDesignerFormWindowManagerInterface_new();
-QDesignerFormWindowManagerInterface* QDesignerFormWindowManagerInterface_new2(QObject* parent);
+QDesignerFormWindowManagerInterface* QDesignerFormWindowManagerInterface_New();
+QDesignerFormWindowManagerInterface* QDesignerFormWindowManagerInterface_New2(QObject* parent);
 QMetaObject* QDesignerFormWindowManagerInterface_MetaObject(const QDesignerFormWindowManagerInterface* self);
 void* QDesignerFormWindowManagerInterface_Metacast(QDesignerFormWindowManagerInterface* self, const char* param1);
 int QDesignerFormWindowManagerInterface_Metacall(QDesignerFormWindowManagerInterface* self, int param1, int param2, void** param3);

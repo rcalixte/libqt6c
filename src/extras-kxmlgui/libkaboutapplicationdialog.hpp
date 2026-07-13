@@ -52,10 +52,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KAboutApplicationDialog* KAboutApplicationDialog_new(const KAboutData* aboutData, int opts);
-KAboutApplicationDialog* KAboutApplicationDialog_new2(const KAboutData* aboutData);
-KAboutApplicationDialog* KAboutApplicationDialog_new3(const KAboutData* aboutData, int opts, QWidget* parent);
-KAboutApplicationDialog* KAboutApplicationDialog_new4(const KAboutData* aboutData, QWidget* parent);
+KAboutApplicationDialog* KAboutApplicationDialog_New(const KAboutData* aboutData, int opts);
+KAboutApplicationDialog* KAboutApplicationDialog_New2(const KAboutData* aboutData);
+KAboutApplicationDialog* KAboutApplicationDialog_New3(const KAboutData* aboutData, int opts, QWidget* parent);
+KAboutApplicationDialog* KAboutApplicationDialog_New4(const KAboutData* aboutData, QWidget* parent);
 QMetaObject* KAboutApplicationDialog_MetaObject(const KAboutApplicationDialog* self);
 void* KAboutApplicationDialog_Metacast(KAboutApplicationDialog* self, const char* param1);
 int KAboutApplicationDialog_Metacall(KAboutApplicationDialog* self, int param1, int param2, void** param3);

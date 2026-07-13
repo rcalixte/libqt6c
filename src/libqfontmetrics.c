@@ -8,15 +8,15 @@
 #include "libqfontmetrics.h"
 
 QFontMetrics* q_fontmetrics_new(void* param1) {
-    return QFontMetrics_new((QFont*)param1);
+    return QFontMetrics_New((QFont*)param1);
 }
 
 QFontMetrics* q_fontmetrics_new2(void* font, void* pd) {
-    return QFontMetrics_new2((QFont*)font, (QPaintDevice*)pd);
+    return QFontMetrics_New2((QFont*)font, (QPaintDevice*)pd);
 }
 
 QFontMetrics* q_fontmetrics_new3(void* param1) {
-    return QFontMetrics_new3((QFontMetrics*)param1);
+    return QFontMetrics_New3((QFontMetrics*)param1);
 }
 
 void q_fontmetrics_operator_assign(void* self, void* param1) {
@@ -206,19 +206,19 @@ void q_fontmetrics_delete(void* self) {
 }
 
 QFontMetricsF* q_fontmetricsf_new(void* font) {
-    return QFontMetricsF_new((QFont*)font);
+    return QFontMetricsF_New((QFont*)font);
 }
 
 QFontMetricsF* q_fontmetricsf_new2(void* font, void* pd) {
-    return QFontMetricsF_new2((QFont*)font, (QPaintDevice*)pd);
+    return QFontMetricsF_New2((QFont*)font, (QPaintDevice*)pd);
 }
 
 QFontMetricsF* q_fontmetricsf_new3(void* param1) {
-    return QFontMetricsF_new3((QFontMetrics*)param1);
+    return QFontMetricsF_New3((QFontMetrics*)param1);
 }
 
 QFontMetricsF* q_fontmetricsf_new4(void* param1) {
-    return QFontMetricsF_new4((QFontMetricsF*)param1);
+    return QFontMetricsF_New4((QFontMetricsF*)param1);
 }
 
 void q_fontmetricsf_operator_assign(void* self, void* param1) {

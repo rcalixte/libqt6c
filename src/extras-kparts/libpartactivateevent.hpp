@@ -27,7 +27,7 @@ typedef struct QEvent QEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KParts__PartActivateEvent* KParts__PartActivateEvent_new(bool activated, KParts__Part* part, QWidget* widget);
+KParts__PartActivateEvent* KParts__PartActivateEvent_New(bool activated, KParts__Part* part, QWidget* widget);
 bool KParts__PartActivateEvent_Activated(const KParts__PartActivateEvent* self);
 KParts__Part* KParts__PartActivateEvent_Part(const KParts__PartActivateEvent* self);
 QWidget* KParts__PartActivateEvent_Widget(const KParts__PartActivateEvent* self);

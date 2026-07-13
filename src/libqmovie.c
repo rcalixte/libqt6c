@@ -12,35 +12,35 @@
 #include "libqmovie.h"
 
 QMovie* q_movie_new() {
-    return QMovie_new();
+    return QMovie_New();
 }
 
 QMovie* q_movie_new2(void* device) {
-    return QMovie_new2((QIODevice*)device);
+    return QMovie_New2((QIODevice*)device);
 }
 
 QMovie* q_movie_new3(const char* fileName) {
-    return QMovie_new3(qstring(fileName));
+    return QMovie_New3(qstring(fileName));
 }
 
 QMovie* q_movie_new4(void* parent) {
-    return QMovie_new4((QObject*)parent);
+    return QMovie_New4((QObject*)parent);
 }
 
 QMovie* q_movie_new5(void* device, char* format) {
-    return QMovie_new5((QIODevice*)device, qstring(format));
+    return QMovie_New5((QIODevice*)device, qstring(format));
 }
 
 QMovie* q_movie_new6(void* device, char* format, void* parent) {
-    return QMovie_new6((QIODevice*)device, qstring(format), (QObject*)parent);
+    return QMovie_New6((QIODevice*)device, qstring(format), (QObject*)parent);
 }
 
 QMovie* q_movie_new7(const char* fileName, char* format) {
-    return QMovie_new7(qstring(fileName), qstring(format));
+    return QMovie_New7(qstring(fileName), qstring(format));
 }
 
 QMovie* q_movie_new8(const char* fileName, char* format, void* parent) {
-    return QMovie_new8(qstring(fileName), qstring(format), (QObject*)parent);
+    return QMovie_New8(qstring(fileName), qstring(format), (QObject*)parent);
 }
 
 const QMetaObject* q_movie_meta_object(void* self) {

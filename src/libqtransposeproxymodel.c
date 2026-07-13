@@ -13,11 +13,11 @@
 #include "libqtransposeproxymodel.h"
 
 QTransposeProxyModel* q_transposeproxymodel_new() {
-    return QTransposeProxyModel_new();
+    return QTransposeProxyModel_New();
 }
 
 QTransposeProxyModel* q_transposeproxymodel_new2(void* parent) {
-    return QTransposeProxyModel_new2((QObject*)parent);
+    return QTransposeProxyModel_New2((QObject*)parent);
 }
 
 const QMetaObject* q_transposeproxymodel_meta_object(void* self) {

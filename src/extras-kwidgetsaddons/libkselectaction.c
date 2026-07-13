@@ -11,15 +11,15 @@
 #include "libkselectaction.h"
 
 KSelectAction* k_selectaction_new(void* parent) {
-    return KSelectAction_new((QObject*)parent);
+    return KSelectAction_New((QObject*)parent);
 }
 
 KSelectAction* k_selectaction_new2(const char* text, void* parent) {
-    return KSelectAction_new2(qstring(text), (QObject*)parent);
+    return KSelectAction_New2(qstring(text), (QObject*)parent);
 }
 
 KSelectAction* k_selectaction_new3(void* icon, const char* text, void* parent) {
-    return KSelectAction_new3((QIcon*)icon, qstring(text), (QObject*)parent);
+    return KSelectAction_New3((QIcon*)icon, qstring(text), (QObject*)parent);
 }
 
 const QMetaObject* k_selectaction_meta_object(void* self) {

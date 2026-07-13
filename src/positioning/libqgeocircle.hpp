@@ -20,11 +20,11 @@ typedef struct QGeoCoordinate QGeoCoordinate;
 typedef struct QGeoShape QGeoShape;
 #endif
 
-QGeoCircle* QGeoCircle_new();
-QGeoCircle* QGeoCircle_new2(const QGeoCoordinate* center);
-QGeoCircle* QGeoCircle_new3(const QGeoCircle* other);
-QGeoCircle* QGeoCircle_new4(const QGeoShape* other);
-QGeoCircle* QGeoCircle_new5(const QGeoCoordinate* center, double radius);
+QGeoCircle* QGeoCircle_New();
+QGeoCircle* QGeoCircle_New2(const QGeoCoordinate* center);
+QGeoCircle* QGeoCircle_New3(const QGeoCircle* other);
+QGeoCircle* QGeoCircle_New4(const QGeoShape* other);
+QGeoCircle* QGeoCircle_New5(const QGeoCoordinate* center, double radius);
 void QGeoCircle_OperatorAssign(QGeoCircle* self, const QGeoCircle* other);
 void QGeoCircle_SetCenter(QGeoCircle* self, const QGeoCoordinate* center);
 QGeoCoordinate* QGeoCircle_Center(const QGeoCircle* self);

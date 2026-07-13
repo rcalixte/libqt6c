@@ -15,15 +15,15 @@
 #include "libqinputdialog.h"
 
 QInputDialog* q_inputdialog_new(void* parent) {
-    return QInputDialog_new((QWidget*)parent);
+    return QInputDialog_New((QWidget*)parent);
 }
 
 QInputDialog* q_inputdialog_new2() {
-    return QInputDialog_new2();
+    return QInputDialog_New2();
 }
 
 QInputDialog* q_inputdialog_new3(void* parent, int32_t flags) {
-    return QInputDialog_new3((QWidget*)parent, flags);
+    return QInputDialog_New3((QWidget*)parent, flags);
 }
 
 const QMetaObject* q_inputdialog_meta_object(void* self) {

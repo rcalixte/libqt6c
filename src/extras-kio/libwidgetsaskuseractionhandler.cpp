@@ -18,11 +18,11 @@
 #include "libwidgetsaskuseractionhandler.hpp"
 #include "libwidgetsaskuseractionhandler.hxx"
 
-KIO__WidgetsAskUserActionHandler* KIO__WidgetsAskUserActionHandler_new() {
+KIO__WidgetsAskUserActionHandler* KIO__WidgetsAskUserActionHandler_New() {
     return new VirtualKIOWidgetsAskUserActionHandler();
 }
 
-KIO__WidgetsAskUserActionHandler* KIO__WidgetsAskUserActionHandler_new2(QObject* parent) {
+KIO__WidgetsAskUserActionHandler* KIO__WidgetsAskUserActionHandler_New2(QObject* parent) {
     return new VirtualKIOWidgetsAskUserActionHandler(parent);
 }
 

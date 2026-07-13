@@ -5,11 +5,11 @@
 #include "libkosrelease.hpp"
 #include "libkosrelease.hxx"
 
-KOSRelease* KOSRelease_new() {
+KOSRelease* KOSRelease_New() {
     return new KOSRelease();
 }
 
-KOSRelease* KOSRelease_new2(const libqt_string filePath) {
+KOSRelease* KOSRelease_New2(const libqt_string filePath) {
     QString filePath_QString = QString::fromUtf8(filePath.data, filePath.len);
     return new KOSRelease(filePath_QString);
 }

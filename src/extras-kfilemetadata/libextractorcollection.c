@@ -3,7 +3,7 @@
 #include "libextractorcollection.h"
 
 KFileMetaData__ExtractorCollection* k_filemetadata__extractorcollection_new() {
-    return KFileMetaData__ExtractorCollection_new();
+    return KFileMetaData__ExtractorCollection_New();
 }
 
 libqt_list /* of KFileMetaData__Extractor* */ k_filemetadata__extractorcollection_fetch_extractors(void* self, const char* mimetype) {

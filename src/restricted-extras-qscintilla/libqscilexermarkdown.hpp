@@ -29,8 +29,8 @@ typedef struct QsciLexerMarkdown QsciLexerMarkdown;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerMarkdown* QsciLexerMarkdown_new();
-QsciLexerMarkdown* QsciLexerMarkdown_new2(QObject* parent);
+QsciLexerMarkdown* QsciLexerMarkdown_New();
+QsciLexerMarkdown* QsciLexerMarkdown_New2(QObject* parent);
 QMetaObject* QsciLexerMarkdown_MetaObject(const QsciLexerMarkdown* self);
 void* QsciLexerMarkdown_Metacast(QsciLexerMarkdown* self, const char* param1);
 int QsciLexerMarkdown_Metacall(QsciLexerMarkdown* self, int param1, int param2, void** param3);

@@ -13,7 +13,7 @@
 #include "libqactiongroup.hpp"
 #include "libqactiongroup.hxx"
 
-QActionGroup* QActionGroup_new(QObject* parent) {
+QActionGroup* QActionGroup_New(QObject* parent) {
     return new VirtualQActionGroup(parent);
 }
 

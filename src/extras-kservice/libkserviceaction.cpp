@@ -5,11 +5,11 @@
 #include "libkserviceaction.hpp"
 #include "libkserviceaction.hxx"
 
-KServiceAction* KServiceAction_new() {
+KServiceAction* KServiceAction_New() {
     return new KServiceAction();
 }
 
-KServiceAction* KServiceAction_new2(const KServiceAction* other) {
+KServiceAction* KServiceAction_New2(const KServiceAction* other) {
     return new KServiceAction(*other);
 }
 

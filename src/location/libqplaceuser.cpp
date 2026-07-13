@@ -4,11 +4,11 @@
 #include "libqplaceuser.hpp"
 #include "libqplaceuser.hxx"
 
-QPlaceUser* QPlaceUser_new() {
+QPlaceUser* QPlaceUser_New() {
     return new QPlaceUser();
 }
 
-QPlaceUser* QPlaceUser_new2(const QPlaceUser* other) {
+QPlaceUser* QPlaceUser_New2(const QPlaceUser* other) {
     return new QPlaceUser(*other);
 }
 

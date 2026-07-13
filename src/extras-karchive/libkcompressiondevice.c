@@ -9,15 +9,15 @@
 #include "libkcompressiondevice.h"
 
 KCompressionDevice* k_compressiondevice_new(void* inputDevice, bool autoDeleteInputDevice, int32_t type) {
-    return KCompressionDevice_new((QIODevice*)inputDevice, autoDeleteInputDevice, type);
+    return KCompressionDevice_New((QIODevice*)inputDevice, autoDeleteInputDevice, type);
 }
 
 KCompressionDevice* k_compressiondevice_new2(const char* fileName, int32_t type) {
-    return KCompressionDevice_new2(qstring(fileName), type);
+    return KCompressionDevice_New2(qstring(fileName), type);
 }
 
 KCompressionDevice* k_compressiondevice_new3(const char* fileName) {
-    return KCompressionDevice_new3(qstring(fileName));
+    return KCompressionDevice_New3(qstring(fileName));
 }
 
 const QMetaObject* k_compressiondevice_meta_object(void* self) {

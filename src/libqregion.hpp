@@ -22,13 +22,13 @@ typedef struct QRegion QRegion;
 typedef struct QVariant QVariant;
 #endif
 
-QRegion* QRegion_new();
-QRegion* QRegion_new2(int x, int y, int w, int h);
-QRegion* QRegion_new3(const QRect* r);
-QRegion* QRegion_new4(const QRegion* region);
-QRegion* QRegion_new5(const QBitmap* bitmap);
-QRegion* QRegion_new6(int x, int y, int w, int h, int t);
-QRegion* QRegion_new7(const QRect* r, int t);
+QRegion* QRegion_New();
+QRegion* QRegion_New2(int x, int y, int w, int h);
+QRegion* QRegion_New3(const QRect* r);
+QRegion* QRegion_New4(const QRegion* region);
+QRegion* QRegion_New5(const QBitmap* bitmap);
+QRegion* QRegion_New6(int x, int y, int w, int h, int t);
+QRegion* QRegion_New7(const QRect* r, int t);
 void QRegion_OperatorAssign(QRegion* self, const QRegion* param1);
 void QRegion_Swap(QRegion* self, QRegion* other);
 bool QRegion_IsEmpty(const QRegion* self);

@@ -12,7 +12,7 @@
 #include "libEmulation.hpp"
 #include "libEmulation.hxx"
 
-Konsole__Emulation* Konsole__Emulation_new() {
+Konsole__Emulation* Konsole__Emulation_New() {
     return new VirtualKonsoleEmulation();
 }
 

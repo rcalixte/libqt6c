@@ -11,11 +11,11 @@
 #include "libknumbermodel.h"
 
 KNumberModel* k_numbermodel_new() {
-    return KNumberModel_new();
+    return KNumberModel_New();
 }
 
 KNumberModel* k_numbermodel_new2(void* parent) {
-    return KNumberModel_new2((QObject*)parent);
+    return KNumberModel_New2((QObject*)parent);
 }
 
 const QMetaObject* k_numbermodel_meta_object(void* self) {

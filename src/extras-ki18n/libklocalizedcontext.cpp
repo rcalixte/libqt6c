@@ -11,11 +11,11 @@
 #include "libklocalizedcontext.hpp"
 #include "libklocalizedcontext.hxx"
 
-KLocalizedContext* KLocalizedContext_new() {
+KLocalizedContext* KLocalizedContext_New() {
     return new VirtualKLocalizedContext();
 }
 
-KLocalizedContext* KLocalizedContext_new2(QObject* parent) {
+KLocalizedContext* KLocalizedContext_New2(QObject* parent) {
     return new VirtualKLocalizedContext(parent);
 }
 

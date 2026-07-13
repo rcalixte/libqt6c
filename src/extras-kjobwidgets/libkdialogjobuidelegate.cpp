@@ -10,11 +10,11 @@
 #include "libkdialogjobuidelegate.hpp"
 #include "libkdialogjobuidelegate.hxx"
 
-KDialogJobUiDelegate* KDialogJobUiDelegate_new() {
+KDialogJobUiDelegate* KDialogJobUiDelegate_New() {
     return new KDialogJobUiDelegate();
 }
 
-KDialogJobUiDelegate* KDialogJobUiDelegate_new2(int flags, QWidget* window) {
+KDialogJobUiDelegate* KDialogJobUiDelegate_New2(int flags, QWidget* window) {
     return new KDialogJobUiDelegate(static_cast<KJobUiDelegate::Flags>(flags), window);
 }
 

@@ -148,7 +148,7 @@ void KIO__FileUndoManager_Connect_JobRecordingFinished(KIO__FileUndoManager* sel
     });
 }
 
-KIO__FileUndoManager__UiInterface* KIO__FileUndoManager__UiInterface_new() {
+KIO__FileUndoManager__UiInterface* KIO__FileUndoManager__UiInterface_New() {
     return new VirtualKIOFileUndoManagerUiInterface();
 }
 

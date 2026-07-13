@@ -25,8 +25,8 @@ typedef struct QObject QObject;
 typedef struct QWindow QWindow;
 #endif
 
-KWindowStateSaver* KWindowStateSaver_new(QWindow* window, const KConfigGroup* configGroup);
-KWindowStateSaver* KWindowStateSaver_new2(QWindow* window, const libqt_string configGroupName);
+KWindowStateSaver* KWindowStateSaver_New(QWindow* window, const KConfigGroup* configGroup);
+KWindowStateSaver* KWindowStateSaver_New2(QWindow* window, const libqt_string configGroupName);
 QMetaObject* KWindowStateSaver_MetaObject(const KWindowStateSaver* self);
 void* KWindowStateSaver_Metacast(KWindowStateSaver* self, const char* param1);
 int KWindowStateSaver_Metacall(KWindowStateSaver* self, int param1, int param2, void** param3);

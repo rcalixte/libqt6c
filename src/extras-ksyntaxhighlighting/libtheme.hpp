@@ -19,8 +19,8 @@ typedef KSyntaxHighlighting::Theme KSyntaxHighlighting__Theme;
 typedef struct KSyntaxHighlighting__Theme KSyntaxHighlighting__Theme;
 #endif
 
-KSyntaxHighlighting__Theme* KSyntaxHighlighting__Theme_new();
-KSyntaxHighlighting__Theme* KSyntaxHighlighting__Theme_new2(const KSyntaxHighlighting__Theme* copyVal);
+KSyntaxHighlighting__Theme* KSyntaxHighlighting__Theme_New();
+KSyntaxHighlighting__Theme* KSyntaxHighlighting__Theme_New2(const KSyntaxHighlighting__Theme* copyVal);
 void KSyntaxHighlighting__Theme_OperatorAssign(KSyntaxHighlighting__Theme* self, const KSyntaxHighlighting__Theme* other);
 bool KSyntaxHighlighting__Theme_IsValid(const KSyntaxHighlighting__Theme* self);
 libqt_string KSyntaxHighlighting__Theme_Name(const KSyntaxHighlighting__Theme* self);

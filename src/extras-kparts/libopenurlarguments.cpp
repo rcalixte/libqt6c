@@ -5,11 +5,11 @@
 #include "libopenurlarguments.hpp"
 #include "libopenurlarguments.hxx"
 
-KParts__OpenUrlArguments* KParts__OpenUrlArguments_new() {
+KParts__OpenUrlArguments* KParts__OpenUrlArguments_New() {
     return new KParts::OpenUrlArguments();
 }
 
-KParts__OpenUrlArguments* KParts__OpenUrlArguments_new2(const KParts__OpenUrlArguments* other) {
+KParts__OpenUrlArguments* KParts__OpenUrlArguments_New2(const KParts__OpenUrlArguments* other) {
     return new KParts::OpenUrlArguments(*other);
 }
 

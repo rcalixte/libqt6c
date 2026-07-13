@@ -3,11 +3,11 @@
 #include "libauthor.h"
 
 KNSCore__Author* k_nscore__author_new() {
-    return KNSCore__Author_new();
+    return KNSCore__Author_New();
 }
 
 KNSCore__Author* k_nscore__author_new2(void* other) {
-    return KNSCore__Author_new2((KNSCore__Author*)other);
+    return KNSCore__Author_New2((KNSCore__Author*)other);
 }
 
 void k_nscore__author_operator_assign(void* self, void* other) {

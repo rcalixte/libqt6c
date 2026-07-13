@@ -14,28 +14,28 @@
 #include "libkhelpmenu.hpp"
 #include "libkhelpmenu.hxx"
 
-KHelpMenu* KHelpMenu_new(QWidget* parent) {
+KHelpMenu* KHelpMenu_New(QWidget* parent) {
     return new VirtualKHelpMenu(parent);
 }
 
-KHelpMenu* KHelpMenu_new2(QWidget* parent, const libqt_string unused) {
+KHelpMenu* KHelpMenu_New2(QWidget* parent, const libqt_string unused) {
     QString unused_QString = QString::fromUtf8(unused.data, unused.len);
     return new VirtualKHelpMenu(parent, unused_QString);
 }
 
-KHelpMenu* KHelpMenu_new3() {
+KHelpMenu* KHelpMenu_New3() {
     return new VirtualKHelpMenu();
 }
 
-KHelpMenu* KHelpMenu_new4(QWidget* parent, const KAboutData* aboutData, bool showWhatsThis) {
+KHelpMenu* KHelpMenu_New4(QWidget* parent, const KAboutData* aboutData, bool showWhatsThis) {
     return new VirtualKHelpMenu(parent, *aboutData, showWhatsThis);
 }
 
-KHelpMenu* KHelpMenu_new5(QWidget* parent, const KAboutData* aboutData) {
+KHelpMenu* KHelpMenu_New5(QWidget* parent, const KAboutData* aboutData) {
     return new VirtualKHelpMenu(parent, *aboutData);
 }
 
-KHelpMenu* KHelpMenu_new6(QWidget* parent, const libqt_string unused, bool showWhatsThis) {
+KHelpMenu* KHelpMenu_New6(QWidget* parent, const libqt_string unused, bool showWhatsThis) {
     QString unused_QString = QString::fromUtf8(unused.data, unused.len);
     return new VirtualKHelpMenu(parent, unused_QString, showWhatsThis);
 }

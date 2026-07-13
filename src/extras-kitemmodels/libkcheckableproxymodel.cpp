@@ -25,11 +25,11 @@
 #include "libkcheckableproxymodel.hpp"
 #include "libkcheckableproxymodel.hxx"
 
-KCheckableProxyModel* KCheckableProxyModel_new() {
+KCheckableProxyModel* KCheckableProxyModel_New() {
     return new VirtualKCheckableProxyModel();
 }
 
-KCheckableProxyModel* KCheckableProxyModel_new2(QObject* parent) {
+KCheckableProxyModel* KCheckableProxyModel_New2(QObject* parent) {
     return new VirtualKCheckableProxyModel(parent);
 }
 

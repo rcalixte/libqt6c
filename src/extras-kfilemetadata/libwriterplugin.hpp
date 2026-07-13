@@ -31,7 +31,7 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KFileMetaData__WriterPlugin* KFileMetaData__WriterPlugin_new(QObject* parent);
+KFileMetaData__WriterPlugin* KFileMetaData__WriterPlugin_New(QObject* parent);
 QMetaObject* KFileMetaData__WriterPlugin_MetaObject(const KFileMetaData__WriterPlugin* self);
 void* KFileMetaData__WriterPlugin_Metacast(KFileMetaData__WriterPlugin* self, const char* param1);
 int KFileMetaData__WriterPlugin_Metacall(KFileMetaData__WriterPlugin* self, int param1, int param2, void** param3);

@@ -17,11 +17,11 @@
 #include "liblanguagetoolcombobox.h"
 
 TextGrammarCheck__LanguageToolComboBox* k_textgrammarcheck__languagetoolcombobox_new(void* parent) {
-    return TextGrammarCheck__LanguageToolComboBox_new((QWidget*)parent);
+    return TextGrammarCheck__LanguageToolComboBox_New((QWidget*)parent);
 }
 
 TextGrammarCheck__LanguageToolComboBox* k_textgrammarcheck__languagetoolcombobox_new2() {
-    return TextGrammarCheck__LanguageToolComboBox_new2();
+    return TextGrammarCheck__LanguageToolComboBox_New2();
 }
 
 const QMetaObject* k_textgrammarcheck__languagetoolcombobox_meta_object(void* self) {

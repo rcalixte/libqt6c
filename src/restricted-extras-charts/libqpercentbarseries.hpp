@@ -26,8 +26,8 @@ typedef struct QPercentBarSeries QPercentBarSeries;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QPercentBarSeries* QPercentBarSeries_new();
-QPercentBarSeries* QPercentBarSeries_new2(QObject* parent);
+QPercentBarSeries* QPercentBarSeries_New();
+QPercentBarSeries* QPercentBarSeries_New2(QObject* parent);
 QMetaObject* QPercentBarSeries_MetaObject(const QPercentBarSeries* self);
 void* QPercentBarSeries_Metacast(QPercentBarSeries* self, const char* param1);
 int QPercentBarSeries_Metacall(QPercentBarSeries* self, int param1, int param2, void** param3);

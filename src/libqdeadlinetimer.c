@@ -2,39 +2,39 @@
 #include "libqdeadlinetimer.h"
 
 QDeadlineTimer* q_deadlinetimer_new(void* other) {
-    return QDeadlineTimer_new((QDeadlineTimer*)other);
+    return QDeadlineTimer_New((QDeadlineTimer*)other);
 }
 
 QDeadlineTimer* q_deadlinetimer_new2(void* other) {
-    return QDeadlineTimer_new2((QDeadlineTimer*)other);
+    return QDeadlineTimer_New2((QDeadlineTimer*)other);
 }
 
 QDeadlineTimer* q_deadlinetimer_new3() {
-    return QDeadlineTimer_new3();
+    return QDeadlineTimer_New3();
 }
 
 QDeadlineTimer* q_deadlinetimer_new4(int32_t type_) {
-    return QDeadlineTimer_new4(type_);
+    return QDeadlineTimer_New4(type_);
 }
 
 QDeadlineTimer* q_deadlinetimer_new5(int32_t param1) {
-    return QDeadlineTimer_new5(param1);
+    return QDeadlineTimer_New5(param1);
 }
 
 QDeadlineTimer* q_deadlinetimer_new6(int64_t msecs) {
-    return QDeadlineTimer_new6(msecs);
+    return QDeadlineTimer_New6(msecs);
 }
 
 QDeadlineTimer* q_deadlinetimer_new7(void* param1) {
-    return QDeadlineTimer_new7((QDeadlineTimer*)param1);
+    return QDeadlineTimer_New7((QDeadlineTimer*)param1);
 }
 
 QDeadlineTimer* q_deadlinetimer_new8(int32_t param1, int32_t type_) {
-    return QDeadlineTimer_new8(param1, type_);
+    return QDeadlineTimer_New8(param1, type_);
 }
 
 QDeadlineTimer* q_deadlinetimer_new9(int64_t msecs, int32_t type) {
-    return QDeadlineTimer_new9(msecs, type);
+    return QDeadlineTimer_New9(msecs, type);
 }
 
 void q_deadlinetimer_copy_assign(void* self, void* other) {

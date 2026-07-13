@@ -19,23 +19,23 @@ const char* k_nscore_get_enum_name2(int32_t param1) {
 }
 
 KNSCore__SearchRequest* k_nscore__searchrequest_new() {
-    return KNSCore__SearchRequest_new();
+    return KNSCore__SearchRequest_New();
 }
 
 KNSCore__SearchRequest* k_nscore__searchrequest_new2(void* param1) {
-    return KNSCore__SearchRequest_new2((KNSCore__SearchRequest*)param1);
+    return KNSCore__SearchRequest_New2((KNSCore__SearchRequest*)param1);
 }
 
 KNSCore__SearchRequest* k_nscore__searchrequest_new3(int32_t sortMode_) {
-    return KNSCore__SearchRequest_new3(sortMode_);
+    return KNSCore__SearchRequest_New3(sortMode_);
 }
 
 KNSCore__SearchRequest* k_nscore__searchrequest_new4(int32_t sortMode_, int32_t filter_) {
-    return KNSCore__SearchRequest_new4(sortMode_, filter_);
+    return KNSCore__SearchRequest_New4(sortMode_, filter_);
 }
 
 KNSCore__SearchRequest* k_nscore__searchrequest_new5(int32_t sortMode_, int32_t filter_, const char* searchTerm_) {
-    return KNSCore__SearchRequest_new5(sortMode_, filter_, qstring(searchTerm_));
+    return KNSCore__SearchRequest_New5(sortMode_, filter_, qstring(searchTerm_));
 }
 
 KNSCore__SearchRequest* k_nscore__searchrequest_new6(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[static 1]) {
@@ -50,7 +50,7 @@ KNSCore__SearchRequest* k_nscore__searchrequest_new6(int32_t sortMode_, int32_t 
     }
     libqt_list categories__list = qlist(categories__qstr, categories__len);
 
-    KNSCore__SearchRequest* _out = KNSCore__SearchRequest_new6(sortMode_, filter_, qstring(searchTerm_), categories__list);
+    KNSCore__SearchRequest* _out = KNSCore__SearchRequest_New6(sortMode_, filter_, qstring(searchTerm_), categories__list);
     free(categories__qstr);
     return _out;
 }
@@ -67,7 +67,7 @@ KNSCore__SearchRequest* k_nscore__searchrequest_new7(int32_t sortMode_, int32_t 
     }
     libqt_list categories__list = qlist(categories__qstr, categories__len);
 
-    KNSCore__SearchRequest* _out = KNSCore__SearchRequest_new7(sortMode_, filter_, qstring(searchTerm_), categories__list, page_);
+    KNSCore__SearchRequest* _out = KNSCore__SearchRequest_New7(sortMode_, filter_, qstring(searchTerm_), categories__list, page_);
     free(categories__qstr);
     return _out;
 }
@@ -84,7 +84,7 @@ KNSCore__SearchRequest* k_nscore__searchrequest_new8(int32_t sortMode_, int32_t 
     }
     libqt_list categories__list = qlist(categories__qstr, categories__len);
 
-    KNSCore__SearchRequest* _out = KNSCore__SearchRequest_new8(sortMode_, filter_, qstring(searchTerm_), categories__list, page_, pageSize_);
+    KNSCore__SearchRequest* _out = KNSCore__SearchRequest_New8(sortMode_, filter_, qstring(searchTerm_), categories__list, page_, pageSize_);
     free(categories__qstr);
     return _out;
 }

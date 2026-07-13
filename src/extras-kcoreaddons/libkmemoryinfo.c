@@ -2,11 +2,11 @@
 #include "libkmemoryinfo.h"
 
 KMemoryInfo* k_memoryinfo_new() {
-    return KMemoryInfo_new();
+    return KMemoryInfo_New();
 }
 
 KMemoryInfo* k_memoryinfo_new2(void* other) {
-    return KMemoryInfo_new2((KMemoryInfo*)other);
+    return KMemoryInfo_New2((KMemoryInfo*)other);
 }
 
 void k_memoryinfo_operator_assign(void* self, void* other) {

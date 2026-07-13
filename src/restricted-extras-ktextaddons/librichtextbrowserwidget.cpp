@@ -38,19 +38,19 @@
 #include "librichtextbrowserwidget.hpp"
 #include "librichtextbrowserwidget.hxx"
 
-TextCustomEditor__RichTextBrowserWidget* TextCustomEditor__RichTextBrowserWidget_new(QWidget* parent) {
+TextCustomEditor__RichTextBrowserWidget* TextCustomEditor__RichTextBrowserWidget_New(QWidget* parent) {
     return new VirtualTextCustomEditorRichTextBrowserWidget(parent);
 }
 
-TextCustomEditor__RichTextBrowserWidget* TextCustomEditor__RichTextBrowserWidget_new2() {
+TextCustomEditor__RichTextBrowserWidget* TextCustomEditor__RichTextBrowserWidget_New2() {
     return new VirtualTextCustomEditorRichTextBrowserWidget();
 }
 
-TextCustomEditor__RichTextBrowserWidget* TextCustomEditor__RichTextBrowserWidget_new3(TextCustomEditor__RichTextBrowser* customEditor) {
+TextCustomEditor__RichTextBrowserWidget* TextCustomEditor__RichTextBrowserWidget_New3(TextCustomEditor__RichTextBrowser* customEditor) {
     return new VirtualTextCustomEditorRichTextBrowserWidget(customEditor);
 }
 
-TextCustomEditor__RichTextBrowserWidget* TextCustomEditor__RichTextBrowserWidget_new4(TextCustomEditor__RichTextBrowser* customEditor, QWidget* parent) {
+TextCustomEditor__RichTextBrowserWidget* TextCustomEditor__RichTextBrowserWidget_New4(TextCustomEditor__RichTextBrowser* customEditor, QWidget* parent) {
     return new VirtualTextCustomEditorRichTextBrowserWidget(customEditor, parent);
 }
 

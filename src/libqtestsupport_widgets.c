@@ -6,7 +6,7 @@
 #include "libqtestsupport_widgets.h"
 
 QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_new(void* param1) {
-    return QTest__QTouchEventWidgetSequence_new((QTest__QTouchEventWidgetSequence*)param1);
+    return QTest__QTouchEventWidgetSequence_New((QTest__QTouchEventWidgetSequence*)param1);
 }
 
 QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_press(void* self, int touchId, void* pt) {

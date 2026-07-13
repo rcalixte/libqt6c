@@ -13,11 +13,11 @@
 #include "libqnetworkcookiejar.hpp"
 #include "libqnetworkcookiejar.hxx"
 
-QNetworkCookieJar* QNetworkCookieJar_new() {
+QNetworkCookieJar* QNetworkCookieJar_New() {
     return new VirtualQNetworkCookieJar();
 }
 
-QNetworkCookieJar* QNetworkCookieJar_new2(QObject* parent) {
+QNetworkCookieJar* QNetworkCookieJar_New2(QObject* parent) {
     return new VirtualQNetworkCookieJar(parent);
 }
 

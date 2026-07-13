@@ -11,11 +11,11 @@
 #include "libkcolorschememodel.h"
 
 KColorSchemeModel* k_colorschememodel_new() {
-    return KColorSchemeModel_new();
+    return KColorSchemeModel_New();
 }
 
 KColorSchemeModel* k_colorschememodel_new2(void* parent) {
-    return KColorSchemeModel_new2((QObject*)parent);
+    return KColorSchemeModel_New2((QObject*)parent);
 }
 
 const QMetaObject* k_colorschememodel_meta_object(void* self) {

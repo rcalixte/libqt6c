@@ -9,19 +9,19 @@
 #include "libqpropertyanimation.h"
 
 QPropertyAnimation* q_propertyanimation_new() {
-    return QPropertyAnimation_new();
+    return QPropertyAnimation_New();
 }
 
 QPropertyAnimation* q_propertyanimation_new2(void* target, char* propertyName) {
-    return QPropertyAnimation_new2((QObject*)target, qstring(propertyName));
+    return QPropertyAnimation_New2((QObject*)target, qstring(propertyName));
 }
 
 QPropertyAnimation* q_propertyanimation_new3(void* parent) {
-    return QPropertyAnimation_new3((QObject*)parent);
+    return QPropertyAnimation_New3((QObject*)parent);
 }
 
 QPropertyAnimation* q_propertyanimation_new4(void* target, char* propertyName, void* parent) {
-    return QPropertyAnimation_new4((QObject*)target, qstring(propertyName), (QObject*)parent);
+    return QPropertyAnimation_New4((QObject*)target, qstring(propertyName), (QObject*)parent);
 }
 
 const QMetaObject* q_propertyanimation_meta_object(void* self) {

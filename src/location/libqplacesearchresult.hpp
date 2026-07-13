@@ -19,8 +19,8 @@ typedef struct QPlaceIcon QPlaceIcon;
 typedef struct QPlaceSearchResult QPlaceSearchResult;
 #endif
 
-QPlaceSearchResult* QPlaceSearchResult_new();
-QPlaceSearchResult* QPlaceSearchResult_new2(const QPlaceSearchResult* other);
+QPlaceSearchResult* QPlaceSearchResult_New();
+QPlaceSearchResult* QPlaceSearchResult_New2(const QPlaceSearchResult* other);
 void QPlaceSearchResult_OperatorAssign(QPlaceSearchResult* self, const QPlaceSearchResult* other);
 bool QPlaceSearchResult_OperatorEqual(const QPlaceSearchResult* self, const QPlaceSearchResult* other);
 bool QPlaceSearchResult_OperatorNotEqual(const QPlaceSearchResult* self, const QPlaceSearchResult* other);

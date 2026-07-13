@@ -6,11 +6,11 @@
 #include "libkencodingprober.hpp"
 #include "libkencodingprober.hxx"
 
-KEncodingProber* KEncodingProber_new() {
+KEncodingProber* KEncodingProber_New() {
     return new KEncodingProber();
 }
 
-KEncodingProber* KEncodingProber_new2(int proberType) {
+KEncodingProber* KEncodingProber_New2(int proberType) {
     return new KEncodingProber(static_cast<KEncodingProber::ProberType>(proberType));
 }
 

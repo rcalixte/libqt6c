@@ -40,31 +40,31 @@
 #include "libqcommandlinkbutton.hpp"
 #include "libqcommandlinkbutton.hxx"
 
-QCommandLinkButton* QCommandLinkButton_new(QWidget* parent) {
+QCommandLinkButton* QCommandLinkButton_New(QWidget* parent) {
     return new VirtualQCommandLinkButton(parent);
 }
 
-QCommandLinkButton* QCommandLinkButton_new2() {
+QCommandLinkButton* QCommandLinkButton_New2() {
     return new VirtualQCommandLinkButton();
 }
 
-QCommandLinkButton* QCommandLinkButton_new3(const libqt_string text) {
+QCommandLinkButton* QCommandLinkButton_New3(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQCommandLinkButton(text_QString);
 }
 
-QCommandLinkButton* QCommandLinkButton_new4(const libqt_string text, const libqt_string description) {
+QCommandLinkButton* QCommandLinkButton_New4(const libqt_string text, const libqt_string description) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString description_QString = QString::fromUtf8(description.data, description.len);
     return new VirtualQCommandLinkButton(text_QString, description_QString);
 }
 
-QCommandLinkButton* QCommandLinkButton_new5(const libqt_string text, QWidget* parent) {
+QCommandLinkButton* QCommandLinkButton_New5(const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQCommandLinkButton(text_QString, parent);
 }
 
-QCommandLinkButton* QCommandLinkButton_new6(const libqt_string text, const libqt_string description, QWidget* parent) {
+QCommandLinkButton* QCommandLinkButton_New6(const libqt_string text, const libqt_string description, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString description_QString = QString::fromUtf8(description.data, description.len);
     return new VirtualQCommandLinkButton(text_QString, description_QString, parent);

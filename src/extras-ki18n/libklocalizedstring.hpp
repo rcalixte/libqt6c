@@ -19,8 +19,8 @@ typedef struct KLocalizedString KLocalizedString;
 typedef struct QChar QChar;
 #endif
 
-KLocalizedString* KLocalizedString_new();
-KLocalizedString* KLocalizedString_new2(const KLocalizedString* rhs);
+KLocalizedString* KLocalizedString_New();
+KLocalizedString* KLocalizedString_New2(const KLocalizedString* rhs);
 void KLocalizedString_OperatorAssign(KLocalizedString* self, const KLocalizedString* rhs);
 bool KLocalizedString_IsEmpty(const KLocalizedString* self);
 libqt_string KLocalizedString_ToString(const KLocalizedString* self);

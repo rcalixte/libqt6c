@@ -9,7 +9,7 @@
 #include "libFilter.h"
 
 Konsole__Filter* k_onsole__filter_new() {
-    return Konsole__Filter_new();
+    return Konsole__Filter_New();
 }
 
 void k_onsole__filter_process(void* self) {
@@ -483,7 +483,7 @@ void k_onsole__filter_delete(void* self) {
 }
 
 Konsole__RegExpFilter* k_onsole__regexpfilter_new() {
-    return Konsole__RegExpFilter_new();
+    return Konsole__RegExpFilter_New();
 }
 
 void k_onsole__regexpfilter_set_reg_exp(void* self, void* text) {
@@ -977,7 +977,7 @@ void k_onsole__regexpfilter_delete(void* self) {
 }
 
 Konsole__UrlFilter* k_onsole__urlfilter_new() {
-    return Konsole__UrlFilter_new();
+    return Konsole__UrlFilter_New();
 }
 
 const QMetaObject* k_onsole__urlfilter_meta_object(void* self) {
@@ -1479,7 +1479,7 @@ void k_onsole__urlfilter_delete(void* self) {
 }
 
 Konsole__FilterObject* k_onsole__filterobject_new(void* filter) {
-    return Konsole__FilterObject_new((Konsole__Filter__HotSpot*)filter);
+    return Konsole__FilterObject_New((Konsole__Filter__HotSpot*)filter);
 }
 
 const QMetaObject* k_onsole__filterobject_meta_object(void* self) {
@@ -1907,7 +1907,7 @@ void k_onsole__filterobject_delete(void* self) {
 }
 
 Konsole__FilterChain* k_onsole__filterchain_new(void* param1) {
-    return Konsole__FilterChain_new((Konsole__FilterChain*)param1);
+    return Konsole__FilterChain_New((Konsole__FilterChain*)param1);
 }
 
 void k_onsole__filterchain_add_filter(void* self, void* filter) {
@@ -1952,11 +1952,11 @@ void k_onsole__filterchain_delete(void* self) {
 }
 
 Konsole__TerminalImageFilterChain* k_onsole__terminalimagefilterchain_new() {
-    return Konsole__TerminalImageFilterChain_new();
+    return Konsole__TerminalImageFilterChain_New();
 }
 
 Konsole__TerminalImageFilterChain* k_onsole__terminalimagefilterchain_new2(void* param1) {
-    return Konsole__TerminalImageFilterChain_new2((Konsole__TerminalImageFilterChain*)param1);
+    return Konsole__TerminalImageFilterChain_New2((Konsole__TerminalImageFilterChain*)param1);
 }
 
 void k_onsole__terminalimagefilterchain_add_filter(void* self, void* filter) {
@@ -2001,11 +2001,11 @@ void k_onsole__terminalimagefilterchain_delete(void* self) {
 }
 
 Konsole__Filter__HotSpot* k_onsole__filter__hotspot_new(int startLine, int startColumn, int endLine, int endColumn) {
-    return Konsole__Filter__HotSpot_new(startLine, startColumn, endLine, endColumn);
+    return Konsole__Filter__HotSpot_New(startLine, startColumn, endLine, endColumn);
 }
 
 Konsole__Filter__HotSpot* k_onsole__filter__hotspot_new2(void* param1) {
-    return Konsole__Filter__HotSpot_new2((Konsole__Filter__HotSpot*)param1);
+    return Konsole__Filter__HotSpot_New2((Konsole__Filter__HotSpot*)param1);
 }
 
 int32_t k_onsole__filter__hotspot_start_line(void* self) {
@@ -2071,11 +2071,11 @@ void k_onsole__filter__hotspot_delete(void* self) {
 }
 
 Konsole__RegExpFilter__HotSpot* k_onsole__regexpfilter__hotspot_new(int startLine, int startColumn, int endLine, int endColumn) {
-    return Konsole__RegExpFilter__HotSpot_new(startLine, startColumn, endLine, endColumn);
+    return Konsole__RegExpFilter__HotSpot_New(startLine, startColumn, endLine, endColumn);
 }
 
 Konsole__RegExpFilter__HotSpot* k_onsole__regexpfilter__hotspot_new2(void* param1) {
-    return Konsole__RegExpFilter__HotSpot_new2((Konsole__RegExpFilter__HotSpot*)param1);
+    return Konsole__RegExpFilter__HotSpot_New2((Konsole__RegExpFilter__HotSpot*)param1);
 }
 
 void k_onsole__regexpfilter__hotspot_activate(void* self, const char* action) {
@@ -2175,7 +2175,7 @@ void k_onsole__regexpfilter__hotspot_delete(void* self) {
 }
 
 Konsole__UrlFilter__HotSpot* k_onsole__urlfilter__hotspot_new(int startLine, int startColumn, int endLine, int endColumn) {
-    return Konsole__UrlFilter__HotSpot_new(startLine, startColumn, endLine, endColumn);
+    return Konsole__UrlFilter__HotSpot_New(startLine, startColumn, endLine, endColumn);
 }
 
 Konsole__FilterObject* k_onsole__urlfilter__hotspot_get_url_object(void* self) {

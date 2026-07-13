@@ -9,11 +9,11 @@
 #include "libqplaceicon.hpp"
 #include "libqplaceicon.hxx"
 
-QPlaceIcon* QPlaceIcon_new() {
+QPlaceIcon* QPlaceIcon_New() {
     return new QPlaceIcon();
 }
 
-QPlaceIcon* QPlaceIcon_new2(const QPlaceIcon* other) {
+QPlaceIcon* QPlaceIcon_New2(const QPlaceIcon* other) {
     return new QPlaceIcon(*other);
 }
 

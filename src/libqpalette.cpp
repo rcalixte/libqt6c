@@ -6,31 +6,31 @@
 #include "libqpalette.hpp"
 #include "libqpalette.hxx"
 
-QPalette* QPalette_new() {
+QPalette* QPalette_New() {
     return new QPalette();
 }
 
-QPalette* QPalette_new2(const QColor* button) {
+QPalette* QPalette_New2(const QColor* button) {
     return new QPalette(*button);
 }
 
-QPalette* QPalette_new3(int button) {
+QPalette* QPalette_New3(int button) {
     return new QPalette(static_cast<Qt::GlobalColor>(button));
 }
 
-QPalette* QPalette_new4(const QColor* button, const QColor* window) {
+QPalette* QPalette_New4(const QColor* button, const QColor* window) {
     return new QPalette(*button, *window);
 }
 
-QPalette* QPalette_new5(const QBrush* windowText, const QBrush* button, const QBrush* light, const QBrush* dark, const QBrush* mid, const QBrush* text, const QBrush* bright_text, const QBrush* base, const QBrush* window) {
+QPalette* QPalette_New5(const QBrush* windowText, const QBrush* button, const QBrush* light, const QBrush* dark, const QBrush* mid, const QBrush* text, const QBrush* bright_text, const QBrush* base, const QBrush* window) {
     return new QPalette(*windowText, *button, *light, *dark, *mid, *text, *bright_text, *base, *window);
 }
 
-QPalette* QPalette_new6(const QColor* windowText, const QColor* window, const QColor* light, const QColor* dark, const QColor* mid, const QColor* text, const QColor* base) {
+QPalette* QPalette_New6(const QColor* windowText, const QColor* window, const QColor* light, const QColor* dark, const QColor* mid, const QColor* text, const QColor* base) {
     return new QPalette(*windowText, *window, *light, *dark, *mid, *text, *base);
 }
 
-QPalette* QPalette_new7(const QPalette* palette) {
+QPalette* QPalette_New7(const QPalette* palette) {
     return new QPalette(*palette);
 }
 

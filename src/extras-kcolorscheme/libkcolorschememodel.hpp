@@ -32,8 +32,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-KColorSchemeModel* KColorSchemeModel_new();
-KColorSchemeModel* KColorSchemeModel_new2(QObject* parent);
+KColorSchemeModel* KColorSchemeModel_New();
+KColorSchemeModel* KColorSchemeModel_New2(QObject* parent);
 QMetaObject* KColorSchemeModel_MetaObject(const KColorSchemeModel* self);
 void* KColorSchemeModel_Metacast(KColorSchemeModel* self, const char* param1);
 int KColorSchemeModel_Metacall(KColorSchemeModel* self, int param1, int param2, void** param3);

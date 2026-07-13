@@ -35,8 +35,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-KNSCore__ProvidersModel* KNSCore__ProvidersModel_new();
-KNSCore__ProvidersModel* KNSCore__ProvidersModel_new2(QObject* parent);
+KNSCore__ProvidersModel* KNSCore__ProvidersModel_New();
+KNSCore__ProvidersModel* KNSCore__ProvidersModel_New2(QObject* parent);
 QMetaObject* KNSCore__ProvidersModel_MetaObject(const KNSCore__ProvidersModel* self);
 void* KNSCore__ProvidersModel_Metacast(KNSCore__ProvidersModel* self, const char* param1);
 int KNSCore__ProvidersModel_Metacall(KNSCore__ProvidersModel* self, int param1, int param2, void** param3);

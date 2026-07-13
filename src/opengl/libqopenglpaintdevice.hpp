@@ -24,9 +24,9 @@ typedef struct QPoint QPoint;
 typedef struct QSize QSize;
 #endif
 
-QOpenGLPaintDevice* QOpenGLPaintDevice_new();
-QOpenGLPaintDevice* QOpenGLPaintDevice_new2(const QSize* size);
-QOpenGLPaintDevice* QOpenGLPaintDevice_new3(int width, int height);
+QOpenGLPaintDevice* QOpenGLPaintDevice_New();
+QOpenGLPaintDevice* QOpenGLPaintDevice_New2(const QSize* size);
+QOpenGLPaintDevice* QOpenGLPaintDevice_New3(int width, int height);
 int QOpenGLPaintDevice_DevType(const QOpenGLPaintDevice* self);
 QPaintEngine* QOpenGLPaintDevice_PaintEngine(const QOpenGLPaintDevice* self);
 QOpenGLContext* QOpenGLPaintDevice_Context(const QOpenGLPaintDevice* self);

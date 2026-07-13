@@ -28,9 +28,9 @@ typedef struct QMimeData QMimeData;
 typedef struct QUrl QUrl;
 #endif
 
-KBookmark* KBookmark_new();
-KBookmark* KBookmark_new2(const QDomElement* elem);
-KBookmark* KBookmark_new3(const KBookmark* param1);
+KBookmark* KBookmark_New();
+KBookmark* KBookmark_New2(const QDomElement* elem);
+KBookmark* KBookmark_New3(const KBookmark* param1);
 KBookmark* KBookmark_StandaloneBookmark(const libqt_string text, const QUrl* url, const libqt_string icon);
 bool KBookmark_IsGroup(const KBookmark* self);
 bool KBookmark_IsSeparator(const KBookmark* self);
@@ -68,8 +68,8 @@ bool KBookmark_OperatorEqual(const KBookmark* self, const KBookmark* rhs);
 void KBookmark_SetMetaDataItem3(KBookmark* self, const libqt_string key, const libqt_string value, int mode);
 void KBookmark_Delete(KBookmark* self);
 
-KBookmarkGroup* KBookmarkGroup_new();
-KBookmarkGroup* KBookmarkGroup_new2(const QDomElement* elem);
+KBookmarkGroup* KBookmarkGroup_New();
+KBookmarkGroup* KBookmarkGroup_New2(const QDomElement* elem);
 bool KBookmarkGroup_IsOpen(const KBookmarkGroup* self);
 KBookmark* KBookmarkGroup_First(const KBookmarkGroup* self);
 KBookmark* KBookmarkGroup_Previous(const KBookmarkGroup* self, const KBookmark* current);
@@ -86,7 +86,7 @@ QDomElement* KBookmarkGroup_FindToolbar(const KBookmarkGroup* self);
 libqt_list /* of QUrl* */ KBookmarkGroup_GroupUrlList(const KBookmarkGroup* self);
 void KBookmarkGroup_Delete(KBookmarkGroup* self);
 
-KBookmark__List* KBookmark__List_new();
+KBookmark__List* KBookmark__List_New();
 void KBookmark__List_PopulateMimeData(const KBookmark__List* self, QMimeData* mimeData);
 bool KBookmark__List_CanDecode(const QMimeData* mimeData);
 libqt_list /* of libqt_string */ KBookmark__List_MimeDataTypes();

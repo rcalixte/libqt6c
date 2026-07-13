@@ -24,11 +24,11 @@ void QSqlDriverCreatorBase_Delete(QSqlDriverCreatorBase* self) {
     delete self;
 }
 
-QSqlDatabase* QSqlDatabase_new() {
+QSqlDatabase* QSqlDatabase_New() {
     return new QSqlDatabase();
 }
 
-QSqlDatabase* QSqlDatabase_new2(const QSqlDatabase* other) {
+QSqlDatabase* QSqlDatabase_New2(const QSqlDatabase* other) {
     return new QSqlDatabase(*other);
 }
 

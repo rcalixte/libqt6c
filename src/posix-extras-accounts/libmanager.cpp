@@ -17,29 +17,29 @@
 #include "libmanager.hpp"
 #include "libmanager.hxx"
 
-Accounts__Manager* Accounts__Manager_new() {
+Accounts__Manager* Accounts__Manager_New() {
     return new VirtualAccountsManager();
 }
 
-Accounts__Manager* Accounts__Manager_new2(const libqt_string serviceType) {
+Accounts__Manager* Accounts__Manager_New2(const libqt_string serviceType) {
     QString serviceType_QString = QString::fromUtf8(serviceType.data, serviceType.len);
     return new VirtualAccountsManager(serviceType_QString);
 }
 
-Accounts__Manager* Accounts__Manager_new3(int options) {
+Accounts__Manager* Accounts__Manager_New3(int options) {
     return new VirtualAccountsManager(static_cast<Accounts::Manager::Options>(options));
 }
 
-Accounts__Manager* Accounts__Manager_new4(QObject* parent) {
+Accounts__Manager* Accounts__Manager_New4(QObject* parent) {
     return new VirtualAccountsManager(parent);
 }
 
-Accounts__Manager* Accounts__Manager_new5(const libqt_string serviceType, QObject* parent) {
+Accounts__Manager* Accounts__Manager_New5(const libqt_string serviceType, QObject* parent) {
     QString serviceType_QString = QString::fromUtf8(serviceType.data, serviceType.len);
     return new VirtualAccountsManager(serviceType_QString, parent);
 }
 
-Accounts__Manager* Accounts__Manager_new6(int options, QObject* parent) {
+Accounts__Manager* Accounts__Manager_New6(int options, QObject* parent) {
     return new VirtualAccountsManager(static_cast<Accounts::Manager::Options>(options), parent);
 }
 

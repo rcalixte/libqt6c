@@ -3,11 +3,11 @@
 #include "libqmediametadata.h"
 
 QMediaMetaData* q_mediametadata_new(void* param1) {
-    return QMediaMetaData_new((QMediaMetaData*)param1);
+    return QMediaMetaData_New((QMediaMetaData*)param1);
 }
 
 QMediaMetaData* q_mediametadata_new2() {
-    return QMediaMetaData_new2();
+    return QMediaMetaData_New2();
 }
 
 QVariant* q_mediametadata_value(void* self, int32_t k) {

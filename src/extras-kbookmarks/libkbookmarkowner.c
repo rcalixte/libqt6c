@@ -4,7 +4,7 @@
 #include "libkbookmarkowner.h"
 
 KBookmarkOwner* k_bookmarkowner_new() {
-    return KBookmarkOwner_new();
+    return KBookmarkOwner_New();
 }
 
 const char* k_bookmarkowner_current_title(void* self) {
@@ -146,11 +146,11 @@ void k_bookmarkowner_delete(void* self) {
 }
 
 KBookmarkOwner__FutureBookmark* k_bookmarkowner__futurebookmark_new(const char* title, void* url, const char* icon) {
-    return KBookmarkOwner__FutureBookmark_new(qstring(title), (QUrl*)url, qstring(icon));
+    return KBookmarkOwner__FutureBookmark_New(qstring(title), (QUrl*)url, qstring(icon));
 }
 
 KBookmarkOwner__FutureBookmark* k_bookmarkowner__futurebookmark_new2(void* other) {
-    return KBookmarkOwner__FutureBookmark_new2((KBookmarkOwner__FutureBookmark*)other);
+    return KBookmarkOwner__FutureBookmark_New2((KBookmarkOwner__FutureBookmark*)other);
 }
 
 void k_bookmarkowner__futurebookmark_operator_assign(void* self, void* other) {

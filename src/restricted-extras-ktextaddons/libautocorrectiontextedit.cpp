@@ -46,11 +46,11 @@
 #include "libautocorrectiontextedit.hpp"
 #include "libautocorrectiontextedit.hxx"
 
-TextAutoCorrectionWidgets__AutoCorrectionTextEdit* TextAutoCorrectionWidgets__AutoCorrectionTextEdit_new(QWidget* parent) {
+TextAutoCorrectionWidgets__AutoCorrectionTextEdit* TextAutoCorrectionWidgets__AutoCorrectionTextEdit_New(QWidget* parent) {
     return new VirtualTextAutoCorrectionWidgetsAutoCorrectionTextEdit(parent);
 }
 
-TextAutoCorrectionWidgets__AutoCorrectionTextEdit* TextAutoCorrectionWidgets__AutoCorrectionTextEdit_new2() {
+TextAutoCorrectionWidgets__AutoCorrectionTextEdit* TextAutoCorrectionWidgets__AutoCorrectionTextEdit_New2() {
     return new VirtualTextAutoCorrectionWidgetsAutoCorrectionTextEdit();
 }
 

@@ -8,15 +8,15 @@
 #include "libqgeoareamonitorinfo.hpp"
 #include "libqgeoareamonitorinfo.hxx"
 
-QGeoAreaMonitorInfo* QGeoAreaMonitorInfo_new() {
+QGeoAreaMonitorInfo* QGeoAreaMonitorInfo_New() {
     return new QGeoAreaMonitorInfo();
 }
 
-QGeoAreaMonitorInfo* QGeoAreaMonitorInfo_new2(const QGeoAreaMonitorInfo* other) {
+QGeoAreaMonitorInfo* QGeoAreaMonitorInfo_New2(const QGeoAreaMonitorInfo* other) {
     return new QGeoAreaMonitorInfo(*other);
 }
 
-QGeoAreaMonitorInfo* QGeoAreaMonitorInfo_new3(const libqt_string name) {
+QGeoAreaMonitorInfo* QGeoAreaMonitorInfo_New3(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QGeoAreaMonitorInfo(name_QString);
 }

@@ -4,15 +4,15 @@
 #include "libqvideoframeformat.h"
 
 QVideoFrameFormat* q_videoframeformat_new() {
-    return QVideoFrameFormat_new();
+    return QVideoFrameFormat_New();
 }
 
 QVideoFrameFormat* q_videoframeformat_new2(void* size, int32_t pixelFormat) {
-    return QVideoFrameFormat_new2((QSize*)size, pixelFormat);
+    return QVideoFrameFormat_New2((QSize*)size, pixelFormat);
 }
 
 QVideoFrameFormat* q_videoframeformat_new3(void* format) {
-    return QVideoFrameFormat_new3((QVideoFrameFormat*)format);
+    return QVideoFrameFormat_New3((QVideoFrameFormat*)format);
 }
 
 void q_videoframeformat_swap(void* self, void* other) {

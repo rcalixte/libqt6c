@@ -41,11 +41,11 @@
 #include "libkpixmapregionselectorwidget.hpp"
 #include "libkpixmapregionselectorwidget.hxx"
 
-KPixmapRegionSelectorWidget* KPixmapRegionSelectorWidget_new(QWidget* parent) {
+KPixmapRegionSelectorWidget* KPixmapRegionSelectorWidget_New(QWidget* parent) {
     return new VirtualKPixmapRegionSelectorWidget(parent);
 }
 
-KPixmapRegionSelectorWidget* KPixmapRegionSelectorWidget_new2() {
+KPixmapRegionSelectorWidget* KPixmapRegionSelectorWidget_New2() {
     return new VirtualKPixmapRegionSelectorWidget();
 }
 

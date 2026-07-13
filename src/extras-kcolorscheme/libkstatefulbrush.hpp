@@ -20,13 +20,13 @@ typedef struct QBrush QBrush;
 typedef struct QPalette QPalette;
 #endif
 
-KStatefulBrush* KStatefulBrush_new();
-KStatefulBrush* KStatefulBrush_new2(int param1, int param2);
-KStatefulBrush* KStatefulBrush_new3(int param1, int param2);
-KStatefulBrush* KStatefulBrush_new4(int param1, int param2);
-KStatefulBrush* KStatefulBrush_new5(const QBrush* param1);
-KStatefulBrush* KStatefulBrush_new6(const QBrush* param1, const QBrush* background);
-KStatefulBrush* KStatefulBrush_new7(const KStatefulBrush* param1);
+KStatefulBrush* KStatefulBrush_New();
+KStatefulBrush* KStatefulBrush_New2(int param1, int param2);
+KStatefulBrush* KStatefulBrush_New3(int param1, int param2);
+KStatefulBrush* KStatefulBrush_New4(int param1, int param2);
+KStatefulBrush* KStatefulBrush_New5(const QBrush* param1);
+KStatefulBrush* KStatefulBrush_New6(const QBrush* param1, const QBrush* background);
+KStatefulBrush* KStatefulBrush_New7(const KStatefulBrush* param1);
 void KStatefulBrush_OperatorAssign(KStatefulBrush* self, const KStatefulBrush* param1);
 QBrush* KStatefulBrush_Brush(const KStatefulBrush* self, int param1);
 QBrush* KStatefulBrush_Brush2(const KStatefulBrush* self, const QPalette* param1);

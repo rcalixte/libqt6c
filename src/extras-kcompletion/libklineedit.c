@@ -23,19 +23,19 @@
 #include "libklineedit.h"
 
 KLineEdit* k_lineedit_new(void* parent) {
-    return KLineEdit_new((QWidget*)parent);
+    return KLineEdit_New((QWidget*)parent);
 }
 
 KLineEdit* k_lineedit_new2(const char* string) {
-    return KLineEdit_new2(qstring(string));
+    return KLineEdit_New2(qstring(string));
 }
 
 KLineEdit* k_lineedit_new3() {
-    return KLineEdit_new3();
+    return KLineEdit_New3();
 }
 
 KLineEdit* k_lineedit_new4(const char* string, void* parent) {
-    return KLineEdit_new4(qstring(string), (QWidget*)parent);
+    return KLineEdit_New4(qstring(string), (QWidget*)parent);
 }
 
 const QMetaObject* k_lineedit_meta_object(void* self) {

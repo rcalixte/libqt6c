@@ -56,9 +56,9 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KAssistantDialog* KAssistantDialog_new(QWidget* parent);
-KAssistantDialog* KAssistantDialog_new2();
-KAssistantDialog* KAssistantDialog_new3(QWidget* parent, int flags);
+KAssistantDialog* KAssistantDialog_New(QWidget* parent);
+KAssistantDialog* KAssistantDialog_New2();
+KAssistantDialog* KAssistantDialog_New3(QWidget* parent, int flags);
 QMetaObject* KAssistantDialog_MetaObject(const KAssistantDialog* self);
 void* KAssistantDialog_Metacast(KAssistantDialog* self, const char* param1);
 int KAssistantDialog_Metacall(KAssistantDialog* self, int param1, int param2, void** param3);

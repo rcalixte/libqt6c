@@ -13,7 +13,7 @@
 #include "libqdrag.hpp"
 #include "libqdrag.hxx"
 
-QDrag* QDrag_new(QObject* dragSource) {
+QDrag* QDrag_New(QObject* dragSource) {
     return new VirtualQDrag(dragSource);
 }
 

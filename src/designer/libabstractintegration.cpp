@@ -17,11 +17,11 @@
 #include "libabstractintegration.hpp"
 #include "libabstractintegration.hxx"
 
-QDesignerIntegrationInterface* QDesignerIntegrationInterface_new(QDesignerFormEditorInterface* core) {
+QDesignerIntegrationInterface* QDesignerIntegrationInterface_New(QDesignerFormEditorInterface* core) {
     return new VirtualQDesignerIntegrationInterface(core);
 }
 
-QDesignerIntegrationInterface* QDesignerIntegrationInterface_new2(QDesignerFormEditorInterface* core, QObject* parent) {
+QDesignerIntegrationInterface* QDesignerIntegrationInterface_New2(QDesignerFormEditorInterface* core, QObject* parent) {
     return new VirtualQDesignerIntegrationInterface(core, parent);
 }
 
@@ -1010,11 +1010,11 @@ void QDesignerIntegrationInterface_Delete(QDesignerIntegrationInterface* self) {
     delete self;
 }
 
-QDesignerIntegration* QDesignerIntegration_new(QDesignerFormEditorInterface* core) {
+QDesignerIntegration* QDesignerIntegration_New(QDesignerFormEditorInterface* core) {
     return new VirtualQDesignerIntegration(core);
 }
 
-QDesignerIntegration* QDesignerIntegration_new2(QDesignerFormEditorInterface* core, QObject* parent) {
+QDesignerIntegration* QDesignerIntegration_New2(QDesignerFormEditorInterface* core, QObject* parent) {
     return new VirtualQDesignerIntegration(core, parent);
 }
 

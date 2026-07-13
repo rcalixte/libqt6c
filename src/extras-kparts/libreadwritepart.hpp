@@ -60,9 +60,9 @@ typedef struct QUrl QUrl;
 typedef struct QWidget QWidget;
 #endif
 
-KParts__ReadWritePart* KParts__ReadWritePart_new();
-KParts__ReadWritePart* KParts__ReadWritePart_new2(QObject* parent);
-KParts__ReadWritePart* KParts__ReadWritePart_new3(QObject* parent, const KPluginMetaData* data);
+KParts__ReadWritePart* KParts__ReadWritePart_New();
+KParts__ReadWritePart* KParts__ReadWritePart_New2(QObject* parent);
+KParts__ReadWritePart* KParts__ReadWritePart_New3(QObject* parent, const KPluginMetaData* data);
 QMetaObject* KParts__ReadWritePart_MetaObject(const KParts__ReadWritePart* self);
 void* KParts__ReadWritePart_Metacast(KParts__ReadWritePart* self, const char* param1);
 int KParts__ReadWritePart_Metacall(KParts__ReadWritePart* self, int param1, int param2, void** param3);

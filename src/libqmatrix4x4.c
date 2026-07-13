@@ -8,39 +8,39 @@
 #include "libqmatrix4x4.h"
 
 QMatrix4x4* q_matrix4x4_new(void* other) {
-    return QMatrix4x4_new((QMatrix4x4*)other);
+    return QMatrix4x4_New((QMatrix4x4*)other);
 }
 
 QMatrix4x4* q_matrix4x4_new2(void* other) {
-    return QMatrix4x4_new2((QMatrix4x4*)other);
+    return QMatrix4x4_New2((QMatrix4x4*)other);
 }
 
 QMatrix4x4* q_matrix4x4_new3() {
-    return QMatrix4x4_new3();
+    return QMatrix4x4_New3();
 }
 
 QMatrix4x4* q_matrix4x4_new4(int32_t param1) {
-    return QMatrix4x4_new4(param1);
+    return QMatrix4x4_New4(param1);
 }
 
 QMatrix4x4* q_matrix4x4_new5(float* values) {
-    return QMatrix4x4_new5(values);
+    return QMatrix4x4_New5(values);
 }
 
 QMatrix4x4* q_matrix4x4_new6(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44) {
-    return QMatrix4x4_new6(m11, m12, m13, m14, m21, m22, m23, m24, m31, m32, m33, m34, m41, m42, m43, m44);
+    return QMatrix4x4_New6(m11, m12, m13, m14, m21, m22, m23, m24, m31, m32, m33, m34, m41, m42, m43, m44);
 }
 
 QMatrix4x4* q_matrix4x4_new7(float* values, int cols, int rows) {
-    return QMatrix4x4_new7(values, cols, rows);
+    return QMatrix4x4_New7(values, cols, rows);
 }
 
 QMatrix4x4* q_matrix4x4_new8(void* transform) {
-    return QMatrix4x4_new8((QTransform*)transform);
+    return QMatrix4x4_New8((QTransform*)transform);
 }
 
 QMatrix4x4* q_matrix4x4_new9(void* param1) {
-    return QMatrix4x4_new9((QMatrix4x4*)param1);
+    return QMatrix4x4_New9((QMatrix4x4*)param1);
 }
 
 void q_matrix4x4_copy_assign(void* self, void* other) {

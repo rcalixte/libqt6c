@@ -40,7 +40,7 @@
 #include "libautocorrectionlanguage.hpp"
 #include "libautocorrectionlanguage.hxx"
 
-TextAutoCorrectionWidgets__AutoCorrectionLanguage* TextAutoCorrectionWidgets__AutoCorrectionLanguage_new(QWidget* parent) {
+TextAutoCorrectionWidgets__AutoCorrectionLanguage* TextAutoCorrectionWidgets__AutoCorrectionLanguage_New(QWidget* parent) {
     return new VirtualTextAutoCorrectionWidgetsAutoCorrectionLanguage(parent);
 }
 

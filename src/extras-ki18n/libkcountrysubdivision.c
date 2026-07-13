@@ -3,11 +3,11 @@
 #include "libkcountrysubdivision.h"
 
 KCountrySubdivision* k_countrysubdivision_new() {
-    return KCountrySubdivision_new();
+    return KCountrySubdivision_New();
 }
 
 KCountrySubdivision* k_countrysubdivision_new2(void* param1) {
-    return KCountrySubdivision_new2((KCountrySubdivision*)param1);
+    return KCountrySubdivision_New2((KCountrySubdivision*)param1);
 }
 
 void k_countrysubdivision_operator_assign(void* self, void* param1) {

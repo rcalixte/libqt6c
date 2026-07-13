@@ -8,11 +8,11 @@
 #include "libklocalizedstring.hpp"
 #include "libklocalizedstring.hxx"
 
-KLocalizedString* KLocalizedString_new() {
+KLocalizedString* KLocalizedString_New() {
     return new KLocalizedString();
 }
 
-KLocalizedString* KLocalizedString_new2(const KLocalizedString* rhs) {
+KLocalizedString* KLocalizedString_New2(const KLocalizedString* rhs) {
     return new KLocalizedString(*rhs);
 }
 

@@ -38,11 +38,11 @@
 #include "libtexttospeechwidget.hpp"
 #include "libtexttospeechwidget.hxx"
 
-TextEditTextToSpeech__TextToSpeechWidget* TextEditTextToSpeech__TextToSpeechWidget_new(QWidget* parent) {
+TextEditTextToSpeech__TextToSpeechWidget* TextEditTextToSpeech__TextToSpeechWidget_New(QWidget* parent) {
     return new VirtualTextEditTextToSpeechTextToSpeechWidget(parent);
 }
 
-TextEditTextToSpeech__TextToSpeechWidget* TextEditTextToSpeech__TextToSpeechWidget_new2() {
+TextEditTextToSpeech__TextToSpeechWidget* TextEditTextToSpeech__TextToSpeechWidget_New2() {
     return new VirtualTextEditTextToSpeechTextToSpeechWidget();
 }
 

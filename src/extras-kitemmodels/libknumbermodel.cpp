@@ -22,11 +22,11 @@
 #include "libknumbermodel.hpp"
 #include "libknumbermodel.hxx"
 
-KNumberModel* KNumberModel_new() {
+KNumberModel* KNumberModel_New() {
     return new VirtualKNumberModel();
 }
 
-KNumberModel* KNumberModel_new2(QObject* parent) {
+KNumberModel* KNumberModel_New2(QObject* parent) {
     return new VirtualKNumberModel(parent);
 }
 

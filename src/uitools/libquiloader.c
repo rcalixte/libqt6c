@@ -12,11 +12,11 @@
 #include "libquiloader.h"
 
 QUiLoader* q_uiloader_new() {
-    return QUiLoader_new();
+    return QUiLoader_New();
 }
 
 QUiLoader* q_uiloader_new2(void* parent) {
-    return QUiLoader_new2((QObject*)parent);
+    return QUiLoader_New2((QObject*)parent);
 }
 
 const QMetaObject* q_uiloader_meta_object(void* self) {

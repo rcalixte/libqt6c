@@ -14,11 +14,11 @@
 #include "libqpielegendmarker.hpp"
 #include "libqpielegendmarker.hxx"
 
-QPieLegendMarker* QPieLegendMarker_new(QPieSeries* series, QPieSlice* slice, QLegend* legend) {
+QPieLegendMarker* QPieLegendMarker_New(QPieSeries* series, QPieSlice* slice, QLegend* legend) {
     return new VirtualQPieLegendMarker(series, slice, legend);
 }
 
-QPieLegendMarker* QPieLegendMarker_new2(QPieSeries* series, QPieSlice* slice, QLegend* legend, QObject* parent) {
+QPieLegendMarker* QPieLegendMarker_New2(QPieSeries* series, QPieSlice* slice, QLegend* legend, QObject* parent) {
     return new VirtualQPieLegendMarker(series, slice, legend, parent);
 }
 

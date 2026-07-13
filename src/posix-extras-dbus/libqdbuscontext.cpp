@@ -6,7 +6,7 @@
 #include "libqdbuscontext.hpp"
 #include "libqdbuscontext.hxx"
 
-QDBusContext* QDBusContext_new() {
+QDBusContext* QDBusContext_New() {
     return new QDBusContext();
 }
 

@@ -37,9 +37,9 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-KConfigSkeleton* KConfigSkeleton_new();
-KConfigSkeleton* KConfigSkeleton_new2(const libqt_string configname);
-KConfigSkeleton* KConfigSkeleton_new3(const libqt_string configname, QObject* parent);
+KConfigSkeleton* KConfigSkeleton_New();
+KConfigSkeleton* KConfigSkeleton_New2(const libqt_string configname);
+KConfigSkeleton* KConfigSkeleton_New3(const libqt_string configname, QObject* parent);
 QMetaObject* KConfigSkeleton_MetaObject(const KConfigSkeleton* self);
 void* KConfigSkeleton_Metacast(KConfigSkeleton* self, const char* param1);
 int KConfigSkeleton_Metacall(KConfigSkeleton* self, int param1, int param2, void** param3);
@@ -108,8 +108,8 @@ void KConfigSkeleton_OnIsSignalConnected(const KConfigSkeleton* self, intptr_t s
 bool KConfigSkeleton_SuperIsSignalConnected(const KConfigSkeleton* self, const QMetaMethod* signal);
 void KConfigSkeleton_Delete(KConfigSkeleton* self);
 
-KConfigSkeleton__ItemColor* KConfigSkeleton__ItemColor_new(const libqt_string _group, const libqt_string _key, QColor* reference);
-KConfigSkeleton__ItemColor* KConfigSkeleton__ItemColor_new2(const libqt_string _group, const libqt_string _key, QColor* reference, const QColor* defaultValue);
+KConfigSkeleton__ItemColor* KConfigSkeleton__ItemColor_New(const libqt_string _group, const libqt_string _key, QColor* reference);
+KConfigSkeleton__ItemColor* KConfigSkeleton__ItemColor_New2(const libqt_string _group, const libqt_string _key, QColor* reference, const QColor* defaultValue);
 void KConfigSkeleton__ItemColor_ReadConfig(KConfigSkeleton__ItemColor* self, KConfig* config);
 void KConfigSkeleton__ItemColor_SetProperty(KConfigSkeleton__ItemColor* self, const QVariant* p);
 bool KConfigSkeleton__ItemColor_IsEqual(const KConfigSkeleton__ItemColor* self, const QVariant* p);
@@ -124,8 +124,8 @@ void KConfigSkeleton__ItemColor_OnProperty(const KConfigSkeleton__ItemColor* sel
 QVariant* KConfigSkeleton__ItemColor_SuperProperty(const KConfigSkeleton__ItemColor* self);
 void KConfigSkeleton__ItemColor_Delete(KConfigSkeleton__ItemColor* self);
 
-KConfigSkeleton__ItemFont* KConfigSkeleton__ItemFont_new(const libqt_string _group, const libqt_string _key, QFont* reference);
-KConfigSkeleton__ItemFont* KConfigSkeleton__ItemFont_new2(const libqt_string _group, const libqt_string _key, QFont* reference, const QFont* defaultValue);
+KConfigSkeleton__ItemFont* KConfigSkeleton__ItemFont_New(const libqt_string _group, const libqt_string _key, QFont* reference);
+KConfigSkeleton__ItemFont* KConfigSkeleton__ItemFont_New2(const libqt_string _group, const libqt_string _key, QFont* reference, const QFont* defaultValue);
 void KConfigSkeleton__ItemFont_ReadConfig(KConfigSkeleton__ItemFont* self, KConfig* config);
 void KConfigSkeleton__ItemFont_SetProperty(KConfigSkeleton__ItemFont* self, const QVariant* p);
 bool KConfigSkeleton__ItemFont_IsEqual(const KConfigSkeleton__ItemFont* self, const QVariant* p);

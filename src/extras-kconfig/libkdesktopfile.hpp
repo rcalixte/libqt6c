@@ -22,8 +22,8 @@ typedef struct KDesktopFile KDesktopFile;
 typedef struct KDesktopFileAction KDesktopFileAction;
 #endif
 
-KDesktopFile* KDesktopFile_new(int resourceType, const libqt_string fileName);
-KDesktopFile* KDesktopFile_new2(const libqt_string fileName);
+KDesktopFile* KDesktopFile_New(int resourceType, const libqt_string fileName);
+KDesktopFile* KDesktopFile_New2(const libqt_string fileName);
 bool KDesktopFile_IsDesktopFile(const libqt_string path);
 bool KDesktopFile_IsAuthorizedDesktopFile(const libqt_string path);
 libqt_string KDesktopFile_LocateLocal(const libqt_string path);

@@ -57,7 +57,7 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KCommandBar* KCommandBar_new(QWidget* parent);
+KCommandBar* KCommandBar_New(QWidget* parent);
 QMetaObject* KCommandBar_MetaObject(const KCommandBar* self);
 void* KCommandBar_Metacast(KCommandBar* self, const char* param1);
 int KCommandBar_Metacall(KCommandBar* self, int param1, int param2, void** param3);
@@ -248,8 +248,8 @@ void KCommandBar_OnGetDecodedMetricF(const KCommandBar* self, intptr_t slot);
 double KCommandBar_SuperGetDecodedMetricF(const KCommandBar* self, int metricA, int metricB);
 void KCommandBar_Delete(KCommandBar* self);
 
-KCommandBar__ActionGroup* KCommandBar__ActionGroup_new(const KCommandBar__ActionGroup* param1);
-KCommandBar__ActionGroup* KCommandBar__ActionGroup_new2();
+KCommandBar__ActionGroup* KCommandBar__ActionGroup_New(const KCommandBar__ActionGroup* param1);
+KCommandBar__ActionGroup* KCommandBar__ActionGroup_New2();
 libqt_string KCommandBar__ActionGroup_Name(const KCommandBar__ActionGroup* self);
 void KCommandBar__ActionGroup_SetName(KCommandBar__ActionGroup* self, libqt_string name);
 libqt_list /* of QAction* */ KCommandBar__ActionGroup_Actions(const KCommandBar__ActionGroup* self);

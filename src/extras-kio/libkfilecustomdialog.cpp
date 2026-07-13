@@ -40,19 +40,19 @@
 #include "libkfilecustomdialog.hpp"
 #include "libkfilecustomdialog.hxx"
 
-KFileCustomDialog* KFileCustomDialog_new(QWidget* parent) {
+KFileCustomDialog* KFileCustomDialog_New(QWidget* parent) {
     return new VirtualKFileCustomDialog(parent);
 }
 
-KFileCustomDialog* KFileCustomDialog_new2() {
+KFileCustomDialog* KFileCustomDialog_New2() {
     return new VirtualKFileCustomDialog();
 }
 
-KFileCustomDialog* KFileCustomDialog_new3(const QUrl* startDir) {
+KFileCustomDialog* KFileCustomDialog_New3(const QUrl* startDir) {
     return new VirtualKFileCustomDialog(*startDir);
 }
 
-KFileCustomDialog* KFileCustomDialog_new4(const QUrl* startDir, QWidget* parent) {
+KFileCustomDialog* KFileCustomDialog_New4(const QUrl* startDir, QWidget* parent) {
     return new VirtualKFileCustomDialog(*startDir, parent);
 }
 

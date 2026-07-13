@@ -3,11 +3,11 @@
 #include "libqbindingstorage.h"
 
 QBindingStatus* q_bindingstatus_new(void* other) {
-    return QBindingStatus_new((QBindingStatus*)other);
+    return QBindingStatus_New((QBindingStatus*)other);
 }
 
 QBindingStatus* q_bindingstatus_new2(void* other) {
-    return QBindingStatus_new2((QBindingStatus*)other);
+    return QBindingStatus_New2((QBindingStatus*)other);
 }
 
 void q_bindingstatus_copy_assign(void* self, void* other) {
@@ -23,7 +23,7 @@ void q_bindingstatus_delete(void* self) {
 }
 
 QBindingStorage* q_bindingstorage_new() {
-    return QBindingStorage_new();
+    return QBindingStorage_New();
 }
 
 bool q_bindingstorage_is_empty(void* self) {

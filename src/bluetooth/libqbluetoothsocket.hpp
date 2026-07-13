@@ -29,10 +29,10 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QBluetoothSocket* QBluetoothSocket_new(int socketType);
-QBluetoothSocket* QBluetoothSocket_new2();
-QBluetoothSocket* QBluetoothSocket_new3(int socketType, QObject* parent);
-QBluetoothSocket* QBluetoothSocket_new4(QObject* parent);
+QBluetoothSocket* QBluetoothSocket_New(int socketType);
+QBluetoothSocket* QBluetoothSocket_New2();
+QBluetoothSocket* QBluetoothSocket_New3(int socketType, QObject* parent);
+QBluetoothSocket* QBluetoothSocket_New4(QObject* parent);
 QMetaObject* QBluetoothSocket_MetaObject(const QBluetoothSocket* self);
 void* QBluetoothSocket_Metacast(QBluetoothSocket* self, const char* param1);
 int QBluetoothSocket_Metacall(QBluetoothSocket* self, int param1, int param2, void** param3);

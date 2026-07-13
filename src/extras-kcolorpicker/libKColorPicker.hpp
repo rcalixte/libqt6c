@@ -57,9 +57,9 @@ typedef struct QWidget QWidget;
 typedef struct kColorPicker__KColorPicker kColorPicker__KColorPicker;
 #endif
 
-kColorPicker__KColorPicker* kColorPicker__KColorPicker_new();
-kColorPicker__KColorPicker* kColorPicker__KColorPicker_new2(bool showAlphaChannel);
-kColorPicker__KColorPicker* kColorPicker__KColorPicker_new3(bool showAlphaChannel, QWidget* parent);
+kColorPicker__KColorPicker* kColorPicker__KColorPicker_New();
+kColorPicker__KColorPicker* kColorPicker__KColorPicker_New2(bool showAlphaChannel);
+kColorPicker__KColorPicker* kColorPicker__KColorPicker_New3(bool showAlphaChannel, QWidget* parent);
 QMetaObject* kColorPicker__KColorPicker_MetaObject(const kColorPicker__KColorPicker* self);
 void* kColorPicker__KColorPicker_Metacast(kColorPicker__KColorPicker* self, const char* param1);
 int kColorPicker__KColorPicker_Metacall(kColorPicker__KColorPicker* self, int param1, int param2, void** param3);

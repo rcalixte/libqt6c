@@ -12,19 +12,19 @@
 #include "libqaudiobufferoutput.hpp"
 #include "libqaudiobufferoutput.hxx"
 
-QAudioBufferOutput* QAudioBufferOutput_new() {
+QAudioBufferOutput* QAudioBufferOutput_New() {
     return new VirtualQAudioBufferOutput();
 }
 
-QAudioBufferOutput* QAudioBufferOutput_new2(const QAudioFormat* format) {
+QAudioBufferOutput* QAudioBufferOutput_New2(const QAudioFormat* format) {
     return new VirtualQAudioBufferOutput(*format);
 }
 
-QAudioBufferOutput* QAudioBufferOutput_new3(QObject* parent) {
+QAudioBufferOutput* QAudioBufferOutput_New3(QObject* parent) {
     return new VirtualQAudioBufferOutput(parent);
 }
 
-QAudioBufferOutput* QAudioBufferOutput_new4(const QAudioFormat* format, QObject* parent) {
+QAudioBufferOutput* QAudioBufferOutput_New4(const QAudioFormat* format, QObject* parent) {
     return new VirtualQAudioBufferOutput(*format, parent);
 }
 

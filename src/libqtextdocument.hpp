@@ -46,10 +46,10 @@ void QAbstractUndoItem_Redo(QAbstractUndoItem* self);
 void QAbstractUndoItem_OperatorAssign(QAbstractUndoItem* self, const QAbstractUndoItem* param1);
 void QAbstractUndoItem_Delete(QAbstractUndoItem* self);
 
-QTextDocument* QTextDocument_new();
-QTextDocument* QTextDocument_new2(const libqt_string text);
-QTextDocument* QTextDocument_new3(QObject* parent);
-QTextDocument* QTextDocument_new4(const libqt_string text, QObject* parent);
+QTextDocument* QTextDocument_New();
+QTextDocument* QTextDocument_New2(const libqt_string text);
+QTextDocument* QTextDocument_New3(QObject* parent);
+QTextDocument* QTextDocument_New4(const libqt_string text, QObject* parent);
 QMetaObject* QTextDocument_MetaObject(const QTextDocument* self);
 void* QTextDocument_Metacast(QTextDocument* self, const char* param1);
 int QTextDocument_Metacall(QTextDocument* self, int param1, int param2, void** param3);

@@ -2,11 +2,11 @@
 #include "libqmimetype.h"
 
 QMimeType* q_mimetype_new() {
-    return QMimeType_new();
+    return QMimeType_New();
 }
 
 QMimeType* q_mimetype_new2(void* other) {
-    return QMimeType_new2((QMimeType*)other);
+    return QMimeType_New2((QMimeType*)other);
 }
 
 void q_mimetype_operator_assign(void* self, void* other) {

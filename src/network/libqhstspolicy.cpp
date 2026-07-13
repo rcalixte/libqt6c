@@ -5,20 +5,20 @@
 #include "libqhstspolicy.hpp"
 #include "libqhstspolicy.hxx"
 
-QHstsPolicy* QHstsPolicy_new() {
+QHstsPolicy* QHstsPolicy_New() {
     return new QHstsPolicy();
 }
 
-QHstsPolicy* QHstsPolicy_new2(const QDateTime* expiry, int flags, const libqt_string host) {
+QHstsPolicy* QHstsPolicy_New2(const QDateTime* expiry, int flags, const libqt_string host) {
     QString host_QString = QString::fromUtf8(host.data, host.len);
     return new QHstsPolicy(*expiry, static_cast<QHstsPolicy::PolicyFlags>(flags), host_QString);
 }
 
-QHstsPolicy* QHstsPolicy_new3(const QHstsPolicy* rhs) {
+QHstsPolicy* QHstsPolicy_New3(const QHstsPolicy* rhs) {
     return new QHstsPolicy(*rhs);
 }
 
-QHstsPolicy* QHstsPolicy_new4(const QDateTime* expiry, int flags, const libqt_string host, int mode) {
+QHstsPolicy* QHstsPolicy_New4(const QDateTime* expiry, int flags, const libqt_string host, int mode) {
     QString host_QString = QString::fromUtf8(host.data, host.len);
     return new QHstsPolicy(*expiry, static_cast<QHstsPolicy::PolicyFlags>(flags), host_QString, static_cast<QUrl::ParsingMode>(mode));
 }

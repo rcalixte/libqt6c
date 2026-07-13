@@ -6,19 +6,19 @@
 #include "libqmetacontainer.hpp"
 #include "libqmetacontainer.hxx"
 
-QMetaContainer* QMetaContainer_new(const QMetaContainer* other) {
+QMetaContainer* QMetaContainer_New(const QMetaContainer* other) {
     return new QMetaContainer(*other);
 }
 
-QMetaContainer* QMetaContainer_new2(QMetaContainer* other) {
+QMetaContainer* QMetaContainer_New2(QMetaContainer* other) {
     return new QMetaContainer(std::move(*other));
 }
 
-QMetaContainer* QMetaContainer_new3() {
+QMetaContainer* QMetaContainer_New3() {
     return new QMetaContainer();
 }
 
-QMetaContainer* QMetaContainer_new4(const QMetaContainer* param1) {
+QMetaContainer* QMetaContainer_New4(const QMetaContainer* param1) {
     return new QMetaContainer(*param1);
 }
 
@@ -130,15 +130,15 @@ void QMetaContainer_Delete(QMetaContainer* self) {
     delete self;
 }
 
-QMetaSequence* QMetaSequence_new(const QMetaSequence* other) {
+QMetaSequence* QMetaSequence_New(const QMetaSequence* other) {
     return new QMetaSequence(*other);
 }
 
-QMetaSequence* QMetaSequence_new2(QMetaSequence* other) {
+QMetaSequence* QMetaSequence_New2(QMetaSequence* other) {
     return new QMetaSequence(std::move(*other));
 }
 
-QMetaSequence* QMetaSequence_new3() {
+QMetaSequence* QMetaSequence_New3() {
     return new QMetaSequence();
 }
 
@@ -274,15 +274,15 @@ void QMetaSequence_Delete(QMetaSequence* self) {
     delete self;
 }
 
-QMetaAssociation* QMetaAssociation_new(const QMetaAssociation* other) {
+QMetaAssociation* QMetaAssociation_New(const QMetaAssociation* other) {
     return new QMetaAssociation(*other);
 }
 
-QMetaAssociation* QMetaAssociation_new2(QMetaAssociation* other) {
+QMetaAssociation* QMetaAssociation_New2(QMetaAssociation* other) {
     return new QMetaAssociation(std::move(*other));
 }
 
-QMetaAssociation* QMetaAssociation_new3() {
+QMetaAssociation* QMetaAssociation_New3() {
     return new QMetaAssociation();
 }
 

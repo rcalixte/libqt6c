@@ -25,8 +25,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QButtonGroup* QButtonGroup_new();
-QButtonGroup* QButtonGroup_new2(QObject* parent);
+QButtonGroup* QButtonGroup_New();
+QButtonGroup* QButtonGroup_New2(QObject* parent);
 QMetaObject* QButtonGroup_MetaObject(const QButtonGroup* self);
 void* QButtonGroup_Metacast(QButtonGroup* self, const char* param1);
 int QButtonGroup_Metacall(QButtonGroup* self, int param1, int param2, void** param3);

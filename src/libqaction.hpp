@@ -29,12 +29,12 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QAction* QAction_new();
-QAction* QAction_new2(const libqt_string text);
-QAction* QAction_new3(const QIcon* icon, const libqt_string text);
-QAction* QAction_new4(QObject* parent);
-QAction* QAction_new5(const libqt_string text, QObject* parent);
-QAction* QAction_new6(const QIcon* icon, const libqt_string text, QObject* parent);
+QAction* QAction_New();
+QAction* QAction_New2(const libqt_string text);
+QAction* QAction_New3(const QIcon* icon, const libqt_string text);
+QAction* QAction_New4(QObject* parent);
+QAction* QAction_New5(const libqt_string text, QObject* parent);
+QAction* QAction_New6(const QIcon* icon, const libqt_string text, QObject* parent);
 QMetaObject* QAction_MetaObject(const QAction* self);
 void* QAction_Metacast(QAction* self, const char* param1);
 int QAction_Metacall(QAction* self, int param1, int param2, void** param3);

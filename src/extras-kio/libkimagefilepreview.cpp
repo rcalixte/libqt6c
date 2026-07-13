@@ -43,11 +43,11 @@
 #include "libkimagefilepreview.hpp"
 #include "libkimagefilepreview.hxx"
 
-KImageFilePreview* KImageFilePreview_new(QWidget* parent) {
+KImageFilePreview* KImageFilePreview_New(QWidget* parent) {
     return new VirtualKImageFilePreview(parent);
 }
 
-KImageFilePreview* KImageFilePreview_new2() {
+KImageFilePreview* KImageFilePreview_New2() {
     return new VirtualKImageFilePreview();
 }
 

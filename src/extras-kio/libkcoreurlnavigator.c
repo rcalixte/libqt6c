@@ -8,15 +8,15 @@
 #include "libkcoreurlnavigator.h"
 
 KCoreUrlNavigator* k_coreurlnavigator_new() {
-    return KCoreUrlNavigator_new();
+    return KCoreUrlNavigator_New();
 }
 
 KCoreUrlNavigator* k_coreurlnavigator_new2(void* url) {
-    return KCoreUrlNavigator_new2((QUrl*)url);
+    return KCoreUrlNavigator_New2((QUrl*)url);
 }
 
 KCoreUrlNavigator* k_coreurlnavigator_new3(void* url, void* parent) {
-    return KCoreUrlNavigator_new3((QUrl*)url, (QObject*)parent);
+    return KCoreUrlNavigator_New3((QUrl*)url, (QObject*)parent);
 }
 
 const QMetaObject* k_coreurlnavigator_meta_object(void* self) {

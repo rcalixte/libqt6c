@@ -11,15 +11,15 @@
 #include "libkbookmark.hpp"
 #include "libkbookmark.hxx"
 
-KBookmark* KBookmark_new() {
+KBookmark* KBookmark_New() {
     return new KBookmark();
 }
 
-KBookmark* KBookmark_new2(const QDomElement* elem) {
+KBookmark* KBookmark_New2(const QDomElement* elem) {
     return new KBookmark(*elem);
 }
 
-KBookmark* KBookmark_new3(const KBookmark* param1) {
+KBookmark* KBookmark_New3(const KBookmark* param1) {
     return new KBookmark(*param1);
 }
 
@@ -273,11 +273,11 @@ void KBookmark_Delete(KBookmark* self) {
     delete self;
 }
 
-KBookmarkGroup* KBookmarkGroup_new() {
+KBookmarkGroup* KBookmarkGroup_New() {
     return new KBookmarkGroup();
 }
 
-KBookmarkGroup* KBookmarkGroup_new2(const QDomElement* elem) {
+KBookmarkGroup* KBookmarkGroup_New2(const QDomElement* elem) {
     return new KBookmarkGroup(*elem);
 }
 
@@ -353,7 +353,7 @@ void KBookmarkGroup_Delete(KBookmarkGroup* self) {
     delete self;
 }
 
-KBookmark__List* KBookmark__List_new() {
+KBookmark__List* KBookmark__List_New() {
     return new KBookmark::List();
 }
 

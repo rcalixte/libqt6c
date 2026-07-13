@@ -2,7 +2,7 @@
 #include "libkcursorsaver.h"
 
 KCursorSaver* k_cursorsaver_new(int32_t shape) {
-    return KCursorSaver_new(shape);
+    return KCursorSaver_New(shape);
 }
 
 void k_cursorsaver_restore_cursor(void* self) {

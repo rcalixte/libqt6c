@@ -35,8 +35,8 @@ typedef struct QTextTableFormat QTextTableFormat;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QTextTableCell* QTextTableCell_new();
-QTextTableCell* QTextTableCell_new2(const QTextTableCell* o);
+QTextTableCell* QTextTableCell_New();
+QTextTableCell* QTextTableCell_New2(const QTextTableCell* o);
 void QTextTableCell_OperatorAssign(QTextTableCell* self, const QTextTableCell* o);
 void QTextTableCell_SetFormat(QTextTableCell* self, const QTextCharFormat* format);
 QTextCharFormat* QTextTableCell_Format(const QTextTableCell* self);
@@ -56,7 +56,7 @@ QTextFrame__iterator* QTextTableCell_End(const QTextTableCell* self);
 int QTextTableCell_TableCellFormatIndex(const QTextTableCell* self);
 void QTextTableCell_Delete(QTextTableCell* self);
 
-QTextTable* QTextTable_new(QTextDocument* doc);
+QTextTable* QTextTable_New(QTextDocument* doc);
 QMetaObject* QTextTable_MetaObject(const QTextTable* self);
 void* QTextTable_Metacast(QTextTable* self, const char* param1);
 int QTextTable_Metacall(QTextTable* self, int param1, int param2, void** param3);

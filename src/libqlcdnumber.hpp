@@ -52,10 +52,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QLCDNumber* QLCDNumber_new(QWidget* parent);
-QLCDNumber* QLCDNumber_new2();
-QLCDNumber* QLCDNumber_new3(unsigned int numDigits);
-QLCDNumber* QLCDNumber_new4(unsigned int numDigits, QWidget* parent);
+QLCDNumber* QLCDNumber_New(QWidget* parent);
+QLCDNumber* QLCDNumber_New2();
+QLCDNumber* QLCDNumber_New3(unsigned int numDigits);
+QLCDNumber* QLCDNumber_New4(unsigned int numDigits, QWidget* parent);
 QMetaObject* QLCDNumber_MetaObject(const QLCDNumber* self);
 void* QLCDNumber_Metacast(QLCDNumber* self, const char* param1);
 int QLCDNumber_Metacall(QLCDNumber* self, int param1, int param2, void** param3);

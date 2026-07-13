@@ -16,11 +16,11 @@
 #include "libqobject.hpp"
 #include "libqobject.hxx"
 
-QObject* QObject_new() {
+QObject* QObject_New() {
     return new VirtualQObject();
 }
 
-QObject* QObject_new2(QObject* parent) {
+QObject* QObject_New2(QObject* parent) {
     return new VirtualQObject(parent);
 }
 
@@ -671,11 +671,11 @@ void QObject_Delete(QObject* self) {
     delete self;
 }
 
-QSignalBlocker* QSignalBlocker_new(QObject* o) {
+QSignalBlocker* QSignalBlocker_New(QObject* o) {
     return new QSignalBlocker(o);
 }
 
-QSignalBlocker* QSignalBlocker_new2(QObject* o) {
+QSignalBlocker* QSignalBlocker_New2(QObject* o) {
     return new QSignalBlocker(*o);
 }
 

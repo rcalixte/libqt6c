@@ -2,11 +2,11 @@
 #include "libemoticoncategory.h"
 
 TextEmoticonsCore__EmoticonCategory* k_textemoticonscore__emoticoncategory_new() {
-    return TextEmoticonsCore__EmoticonCategory_new();
+    return TextEmoticonsCore__EmoticonCategory_New();
 }
 
 TextEmoticonsCore__EmoticonCategory* k_textemoticonscore__emoticoncategory_new2(void* param1) {
-    return TextEmoticonsCore__EmoticonCategory_new2((TextEmoticonsCore__EmoticonCategory*)param1);
+    return TextEmoticonsCore__EmoticonCategory_New2((TextEmoticonsCore__EmoticonCategory*)param1);
 }
 
 const char* k_textemoticonscore__emoticoncategory_name(void* self) {

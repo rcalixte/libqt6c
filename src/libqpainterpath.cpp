@@ -12,15 +12,15 @@
 #include "libqpainterpath.hpp"
 #include "libqpainterpath.hxx"
 
-QPainterPath* QPainterPath_new() {
+QPainterPath* QPainterPath_New() {
     return new QPainterPath();
 }
 
-QPainterPath* QPainterPath_new2(const QPointF* startPoint) {
+QPainterPath* QPainterPath_New2(const QPointF* startPoint) {
     return new QPainterPath(*startPoint);
 }
 
-QPainterPath* QPainterPath_new3(const QPainterPath* other) {
+QPainterPath* QPainterPath_New3(const QPainterPath* other) {
     return new QPainterPath(*other);
 }
 
@@ -314,11 +314,11 @@ void QPainterPath_Delete(QPainterPath* self) {
     delete self;
 }
 
-QPainterPathStroker* QPainterPathStroker_new() {
+QPainterPathStroker* QPainterPathStroker_New() {
     return new QPainterPathStroker();
 }
 
-QPainterPathStroker* QPainterPathStroker_new2(const QPen* pen) {
+QPainterPathStroker* QPainterPathStroker_New2(const QPen* pen) {
     return new QPainterPathStroker(*pen);
 }
 
@@ -405,11 +405,11 @@ void QPainterPathStroker_Delete(QPainterPathStroker* self) {
     delete self;
 }
 
-QPainterPath__Element* QPainterPath__Element_new() {
+QPainterPath__Element* QPainterPath__Element_New() {
     return new QPainterPath::Element();
 }
 
-QPainterPath__Element* QPainterPath__Element_new2(const QPainterPath__Element* param1) {
+QPainterPath__Element* QPainterPath__Element_New2(const QPainterPath__Element* param1) {
     return new QPainterPath::Element(*param1);
 }
 

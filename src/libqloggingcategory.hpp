@@ -18,7 +18,7 @@ extern "C" {
 typedef struct QLoggingCategory QLoggingCategory;
 #endif
 
-QLoggingCategory* QLoggingCategory_new(const char* category);
+QLoggingCategory* QLoggingCategory_New(const char* category);
 bool QLoggingCategory_IsDebugEnabled(const QLoggingCategory* self);
 bool QLoggingCategory_IsInfoEnabled(const QLoggingCategory* self);
 bool QLoggingCategory_IsWarningEnabled(const QLoggingCategory* self);

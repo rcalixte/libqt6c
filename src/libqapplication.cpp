@@ -19,11 +19,11 @@
 #include "libqapplication.hpp"
 #include "libqapplication.hxx"
 
-QApplication* QApplication_new(int* argc, char** argv) {
+QApplication* QApplication_New(int* argc, char** argv) {
     return new VirtualQApplication(static_cast<int&>(*argc), argv);
 }
 
-QApplication* QApplication_new2(int* argc, char** argv, int param3) {
+QApplication* QApplication_New2(int* argc, char** argv, int param3) {
     return new VirtualQApplication(static_cast<int&>(*argc), argv, static_cast<int>(param3));
 }
 

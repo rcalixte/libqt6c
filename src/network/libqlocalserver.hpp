@@ -25,8 +25,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QLocalServer* QLocalServer_new();
-QLocalServer* QLocalServer_new2(QObject* parent);
+QLocalServer* QLocalServer_New();
+QLocalServer* QLocalServer_New2(QObject* parent);
 QMetaObject* QLocalServer_MetaObject(const QLocalServer* self);
 void* QLocalServer_Metacast(QLocalServer* self, const char* param1);
 int QLocalServer_Metacall(QLocalServer* self, int param1, int param2, void** param3);

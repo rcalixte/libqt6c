@@ -3,7 +3,7 @@
 #include "libqopenglfunctions_4_2_compatibility.h"
 
 QOpenGLFunctions_4_2_Compatibility* q_openglfunctions_4_2_compatibility_new() {
-    return QOpenGLFunctions_4_2_Compatibility_new();
+    return QOpenGLFunctions_4_2_Compatibility_New();
 }
 
 bool q_openglfunctions_4_2_compatibility_initialize_open_g_l_functions(void* self) {

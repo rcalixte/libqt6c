@@ -25,9 +25,9 @@ typedef struct QTimeLine QTimeLine;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QTimeLine* QTimeLine_new();
-QTimeLine* QTimeLine_new2(int duration);
-QTimeLine* QTimeLine_new3(int duration, QObject* parent);
+QTimeLine* QTimeLine_New();
+QTimeLine* QTimeLine_New2(int duration);
+QTimeLine* QTimeLine_New3(int duration, QObject* parent);
 QMetaObject* QTimeLine_MetaObject(const QTimeLine* self);
 void* QTimeLine_Metacast(QTimeLine* self, const char* param1);
 int QTimeLine_Metacall(QTimeLine* self, int param1, int param2, void** param3);

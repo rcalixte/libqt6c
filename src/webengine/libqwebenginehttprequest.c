@@ -3,19 +3,19 @@
 #include "libqwebenginehttprequest.h"
 
 QWebEngineHttpRequest* q_webenginehttprequest_new() {
-    return QWebEngineHttpRequest_new();
+    return QWebEngineHttpRequest_New();
 }
 
 QWebEngineHttpRequest* q_webenginehttprequest_new2(void* other) {
-    return QWebEngineHttpRequest_new2((QWebEngineHttpRequest*)other);
+    return QWebEngineHttpRequest_New2((QWebEngineHttpRequest*)other);
 }
 
 QWebEngineHttpRequest* q_webenginehttprequest_new3(void* url) {
-    return QWebEngineHttpRequest_new3((QUrl*)url);
+    return QWebEngineHttpRequest_New3((QUrl*)url);
 }
 
 QWebEngineHttpRequest* q_webenginehttprequest_new4(void* url, int32_t* method) {
-    return QWebEngineHttpRequest_new4((QUrl*)url, method);
+    return QWebEngineHttpRequest_New4((QUrl*)url, method);
 }
 
 void q_webenginehttprequest_operator_assign(void* self, void* other) {

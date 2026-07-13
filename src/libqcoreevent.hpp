@@ -22,7 +22,7 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QEvent* QEvent_new(int type);
+QEvent* QEvent_New(int type);
 int QEvent_Type(const QEvent* self);
 bool QEvent_Spontaneous(const QEvent* self);
 void QEvent_SetAccepted(QEvent* self, bool accepted);
@@ -41,8 +41,8 @@ void QEvent_OnClone(const QEvent* self, intptr_t slot);
 QEvent* QEvent_SuperClone(const QEvent* self);
 void QEvent_Delete(QEvent* self);
 
-QTimerEvent* QTimerEvent_new(int timerId);
-QTimerEvent* QTimerEvent_new2(int timerId);
+QTimerEvent* QTimerEvent_New(int timerId);
+QTimerEvent* QTimerEvent_New2(int timerId);
 QTimerEvent* QTimerEvent_Clone(const QTimerEvent* self);
 int QTimerEvent_TimerId(const QTimerEvent* self);
 int QTimerEvent_Id(const QTimerEvent* self);
@@ -53,7 +53,7 @@ void QTimerEvent_OnSetAccepted(QTimerEvent* self, intptr_t slot);
 void QTimerEvent_SuperSetAccepted(QTimerEvent* self, bool accepted);
 void QTimerEvent_Delete(QTimerEvent* self);
 
-QChildEvent* QChildEvent_new(int type, QObject* child);
+QChildEvent* QChildEvent_New(int type, QObject* child);
 QChildEvent* QChildEvent_Clone(const QChildEvent* self);
 QObject* QChildEvent_Child(const QChildEvent* self);
 bool QChildEvent_Added(const QChildEvent* self);
@@ -66,7 +66,7 @@ void QChildEvent_OnSetAccepted(QChildEvent* self, intptr_t slot);
 void QChildEvent_SuperSetAccepted(QChildEvent* self, bool accepted);
 void QChildEvent_Delete(QChildEvent* self);
 
-QDynamicPropertyChangeEvent* QDynamicPropertyChangeEvent_new(const libqt_string name);
+QDynamicPropertyChangeEvent* QDynamicPropertyChangeEvent_New(const libqt_string name);
 QDynamicPropertyChangeEvent* QDynamicPropertyChangeEvent_Clone(const QDynamicPropertyChangeEvent* self);
 libqt_string QDynamicPropertyChangeEvent_PropertyName(const QDynamicPropertyChangeEvent* self);
 void QDynamicPropertyChangeEvent_OnClone(const QDynamicPropertyChangeEvent* self, intptr_t slot);

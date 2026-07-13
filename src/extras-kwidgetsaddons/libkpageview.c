@@ -17,11 +17,11 @@
 #include "libkpageview.h"
 
 KPageView* k_pageview_new(void* parent) {
-    return KPageView_new((QWidget*)parent);
+    return KPageView_New((QWidget*)parent);
 }
 
 KPageView* k_pageview_new2() {
-    return KPageView_new2();
+    return KPageView_New2();
 }
 
 const QMetaObject* k_pageview_meta_object(void* self) {

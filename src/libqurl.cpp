@@ -8,20 +8,20 @@
 #include "libqurl.hpp"
 #include "libqurl.hxx"
 
-QUrl* QUrl_new() {
+QUrl* QUrl_New() {
     return new QUrl();
 }
 
-QUrl* QUrl_new2(const QUrl* copyVal) {
+QUrl* QUrl_New2(const QUrl* copyVal) {
     return new QUrl(*copyVal);
 }
 
-QUrl* QUrl_new3(const libqt_string url) {
+QUrl* QUrl_New3(const libqt_string url) {
     QString url_QString = QString::fromUtf8(url.data, url.len);
     return new QUrl(url_QString);
 }
 
-QUrl* QUrl_new4(const libqt_string url, int mode) {
+QUrl* QUrl_New4(const libqt_string url, int mode) {
     QString url_QString = QString::fromUtf8(url.data, url.len);
     return new QUrl(url_QString, static_cast<QUrl::ParsingMode>(mode));
 }

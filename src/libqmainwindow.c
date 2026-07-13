@@ -19,15 +19,15 @@
 #include "libqmainwindow.h"
 
 QMainWindow* q_mainwindow_new(void* parent) {
-    return QMainWindow_new((QWidget*)parent);
+    return QMainWindow_New((QWidget*)parent);
 }
 
 QMainWindow* q_mainwindow_new2() {
-    return QMainWindow_new2();
+    return QMainWindow_New2();
 }
 
 QMainWindow* q_mainwindow_new3(void* parent, int32_t flags) {
-    return QMainWindow_new3((QWidget*)parent, flags);
+    return QMainWindow_New3((QWidget*)parent, flags);
 }
 
 const QMetaObject* q_mainwindow_meta_object(void* self) {

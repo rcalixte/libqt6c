@@ -6,11 +6,11 @@
 #include "libqplacesupplier.hpp"
 #include "libqplacesupplier.hxx"
 
-QPlaceSupplier* QPlaceSupplier_new() {
+QPlaceSupplier* QPlaceSupplier_New() {
     return new QPlaceSupplier();
 }
 
-QPlaceSupplier* QPlaceSupplier_new2(const QPlaceSupplier* other) {
+QPlaceSupplier* QPlaceSupplier_New2(const QPlaceSupplier* other) {
     return new QPlaceSupplier(*other);
 }
 

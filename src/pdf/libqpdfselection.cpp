@@ -5,7 +5,7 @@
 #include "libqpdfselection.hpp"
 #include "libqpdfselection.hxx"
 
-QPdfSelection* QPdfSelection_new(const QPdfSelection* other) {
+QPdfSelection* QPdfSelection_New(const QPdfSelection* other) {
     return new QPdfSelection(*other);
 }
 

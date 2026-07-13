@@ -28,11 +28,11 @@ size_t KNSCore_QHash(const KNSCore__Entry* entry, size_t seed) {
     return KNSCore::qHash(*entry, static_cast<size_t>(seed));
 }
 
-KNSCore__Entry* KNSCore__Entry_new() {
+KNSCore__Entry* KNSCore__Entry_New() {
     return new KNSCore::Entry();
 }
 
-KNSCore__Entry* KNSCore__Entry_new2(const KNSCore__Entry* other) {
+KNSCore__Entry* KNSCore__Entry_New2(const KNSCore__Entry* other) {
     return new KNSCore::Entry(*other);
 }
 
@@ -541,7 +541,7 @@ void KNSCore__Entry_Delete(KNSCore__Entry* self) {
     delete self;
 }
 
-KNSCore__Entry__DownloadLinkInformation* KNSCore__Entry__DownloadLinkInformation_new(const KNSCore__Entry__DownloadLinkInformation* param1) {
+KNSCore__Entry__DownloadLinkInformation* KNSCore__Entry__DownloadLinkInformation_New(const KNSCore__Entry__DownloadLinkInformation* param1) {
     return new KNSCore::Entry::DownloadLinkInformation(*param1);
 }
 

@@ -62,8 +62,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QAbstractItemView* QAbstractItemView_new(QWidget* parent);
-QAbstractItemView* QAbstractItemView_new2();
+QAbstractItemView* QAbstractItemView_New(QWidget* parent);
+QAbstractItemView* QAbstractItemView_New2();
 QMetaObject* QAbstractItemView_MetaObject(const QAbstractItemView* self);
 void* QAbstractItemView_Metacast(QAbstractItemView* self, const char* param1);
 int QAbstractItemView_Metacall(QAbstractItemView* self, int param1, int param2, void** param3);

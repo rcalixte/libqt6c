@@ -32,8 +32,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-Attica__ProviderManager* Attica__ProviderManager_new();
-Attica__ProviderManager* Attica__ProviderManager_new2(const int* flags);
+Attica__ProviderManager* Attica__ProviderManager_New();
+Attica__ProviderManager* Attica__ProviderManager_New2(const int* flags);
 QMetaObject* Attica__ProviderManager_MetaObject(const Attica__ProviderManager* self);
 void* Attica__ProviderManager_Metacast(Attica__ProviderManager* self, const char* param1);
 int Attica__ProviderManager_Metacall(Attica__ProviderManager* self, int param1, int param2, void** param3);

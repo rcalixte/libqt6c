@@ -8,11 +8,11 @@
 #include "libqhttpmultipart.h"
 
 QHttpPart* q_httppart_new() {
-    return QHttpPart_new();
+    return QHttpPart_New();
 }
 
 QHttpPart* q_httppart_new2(void* other) {
-    return QHttpPart_new2((QHttpPart*)other);
+    return QHttpPart_New2((QHttpPart*)other);
 }
 
 void q_httppart_operator_assign(void* self, void* other) {
@@ -52,19 +52,19 @@ void q_httppart_delete(void* self) {
 }
 
 QHttpMultiPart* q_httpmultipart_new() {
-    return QHttpMultiPart_new();
+    return QHttpMultiPart_New();
 }
 
 QHttpMultiPart* q_httpmultipart_new2(int32_t contentType) {
-    return QHttpMultiPart_new2(contentType);
+    return QHttpMultiPart_New2(contentType);
 }
 
 QHttpMultiPart* q_httpmultipart_new3(void* parent) {
-    return QHttpMultiPart_new3((QObject*)parent);
+    return QHttpMultiPart_New3((QObject*)parent);
 }
 
 QHttpMultiPart* q_httpmultipart_new4(int32_t contentType, void* parent) {
-    return QHttpMultiPart_new4(contentType, (QObject*)parent);
+    return QHttpMultiPart_New4(contentType, (QObject*)parent);
 }
 
 const QMetaObject* q_httpmultipart_meta_object(void* self) {

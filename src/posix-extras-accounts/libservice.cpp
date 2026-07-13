@@ -6,11 +6,11 @@
 #include "libservice.hpp"
 #include "libservice.hxx"
 
-Accounts__Service* Accounts__Service_new() {
+Accounts__Service* Accounts__Service_New() {
     return new Accounts::Service();
 }
 
-Accounts__Service* Accounts__Service_new2(const Accounts__Service* other) {
+Accounts__Service* Accounts__Service_New2(const Accounts__Service* other) {
     return new Accounts::Service(*other);
 }
 

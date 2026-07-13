@@ -18,19 +18,19 @@
 #include "libqmenu.h"
 
 QMenu* q_menu_new(void* parent) {
-    return QMenu_new((QWidget*)parent);
+    return QMenu_New((QWidget*)parent);
 }
 
 QMenu* q_menu_new2() {
-    return QMenu_new2();
+    return QMenu_New2();
 }
 
 QMenu* q_menu_new3(const char* title) {
-    return QMenu_new3(qstring(title));
+    return QMenu_New3(qstring(title));
 }
 
 QMenu* q_menu_new4(const char* title, void* parent) {
-    return QMenu_new4(qstring(title), (QWidget*)parent);
+    return QMenu_New4(qstring(title), (QWidget*)parent);
 }
 
 const QMetaObject* q_menu_meta_object(void* self) {

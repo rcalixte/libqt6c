@@ -11,11 +11,11 @@
 #include "libqscilexertex.h"
 
 QsciLexerTeX* q_scilexertex_new() {
-    return QsciLexerTeX_new();
+    return QsciLexerTeX_New();
 }
 
 QsciLexerTeX* q_scilexertex_new2(void* parent) {
-    return QsciLexerTeX_new2((QObject*)parent);
+    return QsciLexerTeX_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexertex_meta_object(void* self) {

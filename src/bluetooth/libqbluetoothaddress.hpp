@@ -18,10 +18,10 @@ extern "C" {
 typedef struct QBluetoothAddress QBluetoothAddress;
 #endif
 
-QBluetoothAddress* QBluetoothAddress_new();
-QBluetoothAddress* QBluetoothAddress_new2(unsigned long long address);
-QBluetoothAddress* QBluetoothAddress_new3(const libqt_string address);
-QBluetoothAddress* QBluetoothAddress_new4(const QBluetoothAddress* other);
+QBluetoothAddress* QBluetoothAddress_New();
+QBluetoothAddress* QBluetoothAddress_New2(unsigned long long address);
+QBluetoothAddress* QBluetoothAddress_New3(const libqt_string address);
+QBluetoothAddress* QBluetoothAddress_New4(const QBluetoothAddress* other);
 void QBluetoothAddress_OperatorAssign(QBluetoothAddress* self, const QBluetoothAddress* other);
 bool QBluetoothAddress_IsNull(const QBluetoothAddress* self);
 void QBluetoothAddress_Clear(QBluetoothAddress* self);

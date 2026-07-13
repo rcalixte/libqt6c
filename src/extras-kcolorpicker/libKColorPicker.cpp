@@ -41,15 +41,15 @@
 #include "libKColorPicker.hpp"
 #include "libKColorPicker.hxx"
 
-kColorPicker__KColorPicker* kColorPicker__KColorPicker_new() {
+kColorPicker__KColorPicker* kColorPicker__KColorPicker_New() {
     return new VirtualkColorPickerKColorPicker();
 }
 
-kColorPicker__KColorPicker* kColorPicker__KColorPicker_new2(bool showAlphaChannel) {
+kColorPicker__KColorPicker* kColorPicker__KColorPicker_New2(bool showAlphaChannel) {
     return new VirtualkColorPickerKColorPicker(showAlphaChannel);
 }
 
-kColorPicker__KColorPicker* kColorPicker__KColorPicker_new3(bool showAlphaChannel, QWidget* parent) {
+kColorPicker__KColorPicker* kColorPicker__KColorPicker_New3(bool showAlphaChannel, QWidget* parent) {
     return new VirtualkColorPickerKColorPicker(showAlphaChannel, parent);
 }
 

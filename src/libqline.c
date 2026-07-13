@@ -3,27 +3,27 @@
 #include "libqline.h"
 
 QLine* q_line_new(void* other) {
-    return QLine_new((QLine*)other);
+    return QLine_New((QLine*)other);
 }
 
 QLine* q_line_new2(void* other) {
-    return QLine_new2((QLine*)other);
+    return QLine_New2((QLine*)other);
 }
 
 QLine* q_line_new3() {
-    return QLine_new3();
+    return QLine_New3();
 }
 
 QLine* q_line_new4(void* pt1, void* pt2) {
-    return QLine_new4((QPoint*)pt1, (QPoint*)pt2);
+    return QLine_New4((QPoint*)pt1, (QPoint*)pt2);
 }
 
 QLine* q_line_new5(int x1, int y1, int x2, int y2) {
-    return QLine_new5(x1, y1, x2, y2);
+    return QLine_New5(x1, y1, x2, y2);
 }
 
 QLine* q_line_new6(void* param1) {
-    return QLine_new6((QLine*)param1);
+    return QLine_New6((QLine*)param1);
 }
 
 void q_line_copy_assign(void* self, void* other) {
@@ -115,31 +115,31 @@ void q_line_delete(void* self) {
 }
 
 QLineF* q_linef_new(void* other) {
-    return QLineF_new((QLineF*)other);
+    return QLineF_New((QLineF*)other);
 }
 
 QLineF* q_linef_new2(void* other) {
-    return QLineF_new2((QLineF*)other);
+    return QLineF_New2((QLineF*)other);
 }
 
 QLineF* q_linef_new3() {
-    return QLineF_new3();
+    return QLineF_New3();
 }
 
 QLineF* q_linef_new4(void* pt1, void* pt2) {
-    return QLineF_new4((QPointF*)pt1, (QPointF*)pt2);
+    return QLineF_New4((QPointF*)pt1, (QPointF*)pt2);
 }
 
 QLineF* q_linef_new5(double x1, double y1, double x2, double y2) {
-    return QLineF_new5(x1, y1, x2, y2);
+    return QLineF_New5(x1, y1, x2, y2);
 }
 
 QLineF* q_linef_new6(void* line) {
-    return QLineF_new6((QLine*)line);
+    return QLineF_New6((QLine*)line);
 }
 
 QLineF* q_linef_new7(void* param1) {
-    return QLineF_new7((QLineF*)param1);
+    return QLineF_New7((QLineF*)param1);
 }
 
 void q_linef_copy_assign(void* self, void* other) {

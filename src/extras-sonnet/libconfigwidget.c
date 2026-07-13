@@ -14,7 +14,7 @@
 #include "libconfigwidget.h"
 
 Sonnet__ConfigWidget* k_sonnet__configwidget_new(void* parent) {
-    return Sonnet__ConfigWidget_new((QWidget*)parent);
+    return Sonnet__ConfigWidget_New((QWidget*)parent);
 }
 
 const QMetaObject* k_sonnet__configwidget_meta_object(void* self) {

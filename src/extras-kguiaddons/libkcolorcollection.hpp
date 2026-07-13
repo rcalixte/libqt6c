@@ -19,9 +19,9 @@ typedef struct KColorCollection KColorCollection;
 typedef struct QColor QColor;
 #endif
 
-KColorCollection* KColorCollection_new();
-KColorCollection* KColorCollection_new2(const KColorCollection* param1);
-KColorCollection* KColorCollection_new3(const libqt_string name);
+KColorCollection* KColorCollection_New();
+KColorCollection* KColorCollection_New2(const KColorCollection* param1);
+KColorCollection* KColorCollection_New3(const libqt_string name);
 libqt_list /* of libqt_string */ KColorCollection_InstalledCollections();
 void KColorCollection_OperatorAssign(KColorCollection* self, const KColorCollection* param1);
 bool KColorCollection_Save(KColorCollection* self);

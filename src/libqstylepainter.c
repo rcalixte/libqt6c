@@ -10,15 +10,15 @@
 #include "libqstylepainter.h"
 
 QStylePainter* q_stylepainter_new(void* w) {
-    return QStylePainter_new((QWidget*)w);
+    return QStylePainter_New((QWidget*)w);
 }
 
 QStylePainter* q_stylepainter_new2() {
-    return QStylePainter_new2();
+    return QStylePainter_New2();
 }
 
 QStylePainter* q_stylepainter_new3(void* pd, void* w) {
-    return QStylePainter_new3((QPaintDevice*)pd, (QWidget*)w);
+    return QStylePainter_New3((QPaintDevice*)pd, (QWidget*)w);
 }
 
 bool q_stylepainter_begin(void* self, void* w) {

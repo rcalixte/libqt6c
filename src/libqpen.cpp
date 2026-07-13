@@ -7,35 +7,35 @@
 #include "libqpen.hpp"
 #include "libqpen.hxx"
 
-QPen* QPen_new() {
+QPen* QPen_New() {
     return new QPen();
 }
 
-QPen* QPen_new2(int param1) {
+QPen* QPen_New2(int param1) {
     return new QPen(static_cast<Qt::PenStyle>(param1));
 }
 
-QPen* QPen_new3(const QColor* color) {
+QPen* QPen_New3(const QColor* color) {
     return new QPen(*color);
 }
 
-QPen* QPen_new4(const QBrush* brush, double width) {
+QPen* QPen_New4(const QBrush* brush, double width) {
     return new QPen(*brush, static_cast<qreal>(width));
 }
 
-QPen* QPen_new5(const QPen* pen) {
+QPen* QPen_New5(const QPen* pen) {
     return new QPen(*pen);
 }
 
-QPen* QPen_new6(const QBrush* brush, double width, int s) {
+QPen* QPen_New6(const QBrush* brush, double width, int s) {
     return new QPen(*brush, static_cast<qreal>(width), static_cast<Qt::PenStyle>(s));
 }
 
-QPen* QPen_new7(const QBrush* brush, double width, int s, int c) {
+QPen* QPen_New7(const QBrush* brush, double width, int s, int c) {
     return new QPen(*brush, static_cast<qreal>(width), static_cast<Qt::PenStyle>(s), static_cast<Qt::PenCapStyle>(c));
 }
 
-QPen* QPen_new8(const QBrush* brush, double width, int s, int c, int j) {
+QPen* QPen_New8(const QBrush* brush, double width, int s, int c, int j) {
     return new QPen(*brush, static_cast<qreal>(width), static_cast<Qt::PenStyle>(s), static_cast<Qt::PenCapStyle>(c), static_cast<Qt::PenJoinStyle>(j));
 }
 

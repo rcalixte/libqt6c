@@ -44,26 +44,26 @@
 #include "libkurllabel.hpp"
 #include "libkurllabel.hxx"
 
-KUrlLabel* KUrlLabel_new(QWidget* parent) {
+KUrlLabel* KUrlLabel_New(QWidget* parent) {
     return new VirtualKUrlLabel(parent);
 }
 
-KUrlLabel* KUrlLabel_new2() {
+KUrlLabel* KUrlLabel_New2() {
     return new VirtualKUrlLabel();
 }
 
-KUrlLabel* KUrlLabel_new3(const libqt_string url) {
+KUrlLabel* KUrlLabel_New3(const libqt_string url) {
     QString url_QString = QString::fromUtf8(url.data, url.len);
     return new VirtualKUrlLabel(url_QString);
 }
 
-KUrlLabel* KUrlLabel_new4(const libqt_string url, const libqt_string text) {
+KUrlLabel* KUrlLabel_New4(const libqt_string url, const libqt_string text) {
     QString url_QString = QString::fromUtf8(url.data, url.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKUrlLabel(url_QString, text_QString);
 }
 
-KUrlLabel* KUrlLabel_new5(const libqt_string url, const libqt_string text, QWidget* parent) {
+KUrlLabel* KUrlLabel_New5(const libqt_string url, const libqt_string text, QWidget* parent) {
     QString url_QString = QString::fromUtf8(url.data, url.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKUrlLabel(url_QString, text_QString, parent);

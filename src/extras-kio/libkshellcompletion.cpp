@@ -15,7 +15,7 @@
 #include "libkshellcompletion.hpp"
 #include "libkshellcompletion.hxx"
 
-KShellCompletion* KShellCompletion_new() {
+KShellCompletion* KShellCompletion_New() {
     return new VirtualKShellCompletion();
 }
 

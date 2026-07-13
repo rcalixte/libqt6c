@@ -37,8 +37,8 @@ typedef struct QVariant QVariant;
 typedef struct TextEmoticonsCore__EmojiProxyModel TextEmoticonsCore__EmojiProxyModel;
 #endif
 
-TextEmoticonsCore__EmojiProxyModel* TextEmoticonsCore__EmojiProxyModel_new();
-TextEmoticonsCore__EmojiProxyModel* TextEmoticonsCore__EmojiProxyModel_new2(QObject* parent);
+TextEmoticonsCore__EmojiProxyModel* TextEmoticonsCore__EmojiProxyModel_New();
+TextEmoticonsCore__EmojiProxyModel* TextEmoticonsCore__EmojiProxyModel_New2(QObject* parent);
 QMetaObject* TextEmoticonsCore__EmojiProxyModel_MetaObject(const TextEmoticonsCore__EmojiProxyModel* self);
 void* TextEmoticonsCore__EmojiProxyModel_Metacast(TextEmoticonsCore__EmojiProxyModel* self, const char* param1);
 int TextEmoticonsCore__EmojiProxyModel_Metacall(TextEmoticonsCore__EmojiProxyModel* self, int param1, int param2, void** param3);

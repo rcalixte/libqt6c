@@ -54,8 +54,8 @@ typedef struct QWidget QWidget;
 typedef struct TextCustomEditor__TextEditFindBarBase TextCustomEditor__TextEditFindBarBase;
 #endif
 
-TextCustomEditor__TextEditFindBarBase* TextCustomEditor__TextEditFindBarBase_new(QWidget* parent);
-TextCustomEditor__TextEditFindBarBase* TextCustomEditor__TextEditFindBarBase_new2();
+TextCustomEditor__TextEditFindBarBase* TextCustomEditor__TextEditFindBarBase_New(QWidget* parent);
+TextCustomEditor__TextEditFindBarBase* TextCustomEditor__TextEditFindBarBase_New2();
 QMetaObject* TextCustomEditor__TextEditFindBarBase_MetaObject(const TextCustomEditor__TextEditFindBarBase* self);
 void* TextCustomEditor__TextEditFindBarBase_Metacast(TextCustomEditor__TextEditFindBarBase* self, const char* param1);
 int TextCustomEditor__TextEditFindBarBase_Metacall(TextCustomEditor__TextEditFindBarBase* self, int param1, int param2, void** param3);

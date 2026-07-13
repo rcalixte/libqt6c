@@ -49,19 +49,19 @@
 #include "libkurlcombobox.hpp"
 #include "libkurlcombobox.hxx"
 
-KUrlComboBox* KUrlComboBox_new(int mode) {
+KUrlComboBox* KUrlComboBox_New(int mode) {
     return new VirtualKUrlComboBox(static_cast<KUrlComboBox::Mode>(mode));
 }
 
-KUrlComboBox* KUrlComboBox_new2(int mode, bool rw) {
+KUrlComboBox* KUrlComboBox_New2(int mode, bool rw) {
     return new VirtualKUrlComboBox(static_cast<KUrlComboBox::Mode>(mode), rw);
 }
 
-KUrlComboBox* KUrlComboBox_new3(int mode, QWidget* parent) {
+KUrlComboBox* KUrlComboBox_New3(int mode, QWidget* parent) {
     return new VirtualKUrlComboBox(static_cast<KUrlComboBox::Mode>(mode), parent);
 }
 
-KUrlComboBox* KUrlComboBox_new4(int mode, bool rw, QWidget* parent) {
+KUrlComboBox* KUrlComboBox_New4(int mode, bool rw, QWidget* parent) {
     return new VirtualKUrlComboBox(static_cast<KUrlComboBox::Mode>(mode), rw, parent);
 }
 

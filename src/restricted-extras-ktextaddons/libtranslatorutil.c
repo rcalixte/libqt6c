@@ -3,15 +3,15 @@
 #include "libtranslatorutil.h"
 
 TextTranslator__TranslatorUtil* k_texttranslator__translatorutil_new(void* other) {
-    return TextTranslator__TranslatorUtil_new((TextTranslator__TranslatorUtil*)other);
+    return TextTranslator__TranslatorUtil_New((TextTranslator__TranslatorUtil*)other);
 }
 
 TextTranslator__TranslatorUtil* k_texttranslator__translatorutil_new2(void* other) {
-    return TextTranslator__TranslatorUtil_new2((TextTranslator__TranslatorUtil*)other);
+    return TextTranslator__TranslatorUtil_New2((TextTranslator__TranslatorUtil*)other);
 }
 
 TextTranslator__TranslatorUtil* k_texttranslator__translatorutil_new3() {
-    return TextTranslator__TranslatorUtil_new3();
+    return TextTranslator__TranslatorUtil_New3();
 }
 
 void k_texttranslator__translatorutil_copy_assign(void* self, void* other) {
@@ -121,7 +121,7 @@ void k_texttranslator__translatorutil_delete(void* self) {
 }
 
 TextTranslator__TranslatorUtil__TranslatorSettings* k_texttranslator__translatorutil__translatorsettings_new(void* param1) {
-    return TextTranslator__TranslatorUtil__TranslatorSettings_new((TextTranslator__TranslatorUtil__TranslatorSettings*)param1);
+    return TextTranslator__TranslatorUtil__TranslatorSettings_New((TextTranslator__TranslatorUtil__TranslatorSettings*)param1);
 }
 
 const char* k_texttranslator__translatorutil__translatorsettings_engine(void* self) {

@@ -52,9 +52,9 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QFrame* QFrame_new(QWidget* parent);
-QFrame* QFrame_new2();
-QFrame* QFrame_new3(QWidget* parent, int f);
+QFrame* QFrame_New(QWidget* parent);
+QFrame* QFrame_New2();
+QFrame* QFrame_New3(QWidget* parent, int f);
 QMetaObject* QFrame_MetaObject(const QFrame* self);
 void* QFrame_Metacast(QFrame* self, const char* param1);
 int QFrame_Metacall(QFrame* self, int param1, int param2, void** param3);

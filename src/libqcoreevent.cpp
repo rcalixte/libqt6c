@@ -8,7 +8,7 @@
 #include "libqcoreevent.hpp"
 #include "libqcoreevent.hxx"
 
-QEvent* QEvent_new(int type) {
+QEvent* QEvent_New(int type) {
     return new VirtualQEvent(static_cast<QEvent::Type>(type));
 }
 
@@ -102,11 +102,11 @@ void QEvent_Delete(QEvent* self) {
     delete self;
 }
 
-QTimerEvent* QTimerEvent_new(int timerId) {
+QTimerEvent* QTimerEvent_New(int timerId) {
     return new VirtualQTimerEvent(static_cast<int>(timerId));
 }
 
-QTimerEvent* QTimerEvent_new2(int timerId) {
+QTimerEvent* QTimerEvent_New2(int timerId) {
     return new VirtualQTimerEvent(static_cast<Qt::TimerId>(timerId));
 }
 
@@ -174,7 +174,7 @@ void QTimerEvent_Delete(QTimerEvent* self) {
     delete self;
 }
 
-QChildEvent* QChildEvent_new(int type, QObject* child) {
+QChildEvent* QChildEvent_New(int type, QObject* child) {
     return new VirtualQChildEvent(static_cast<QEvent::Type>(type), child);
 }
 
@@ -250,7 +250,7 @@ void QChildEvent_Delete(QChildEvent* self) {
     delete self;
 }
 
-QDynamicPropertyChangeEvent* QDynamicPropertyChangeEvent_new(const libqt_string name) {
+QDynamicPropertyChangeEvent* QDynamicPropertyChangeEvent_New(const libqt_string name) {
     QByteArray name_QByteArray(name.data, name.len);
     return new VirtualQDynamicPropertyChangeEvent(name_QByteArray);
 }

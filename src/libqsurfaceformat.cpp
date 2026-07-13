@@ -5,15 +5,15 @@
 #include "libqsurfaceformat.hpp"
 #include "libqsurfaceformat.hxx"
 
-QSurfaceFormat* QSurfaceFormat_new() {
+QSurfaceFormat* QSurfaceFormat_New() {
     return new QSurfaceFormat();
 }
 
-QSurfaceFormat* QSurfaceFormat_new2(int options) {
+QSurfaceFormat* QSurfaceFormat_New2(int options) {
     return new QSurfaceFormat(static_cast<QSurfaceFormat::FormatOptions>(options));
 }
 
-QSurfaceFormat* QSurfaceFormat_new3(const QSurfaceFormat* other) {
+QSurfaceFormat* QSurfaceFormat_New3(const QSurfaceFormat* other) {
     return new QSurfaceFormat(*other);
 }
 

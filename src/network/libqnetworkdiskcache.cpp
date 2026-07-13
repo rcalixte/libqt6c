@@ -14,11 +14,11 @@
 #include "libqnetworkdiskcache.hpp"
 #include "libqnetworkdiskcache.hxx"
 
-QNetworkDiskCache* QNetworkDiskCache_new() {
+QNetworkDiskCache* QNetworkDiskCache_New() {
     return new VirtualQNetworkDiskCache();
 }
 
-QNetworkDiskCache* QNetworkDiskCache_new2(QObject* parent) {
+QNetworkDiskCache* QNetworkDiskCache_New2(QObject* parent) {
     return new VirtualQNetworkDiskCache(parent);
 }
 

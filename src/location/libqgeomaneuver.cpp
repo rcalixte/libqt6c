@@ -7,11 +7,11 @@
 #include "libqgeomaneuver.hpp"
 #include "libqgeomaneuver.hxx"
 
-QGeoManeuver* QGeoManeuver_new() {
+QGeoManeuver* QGeoManeuver_New() {
     return new QGeoManeuver();
 }
 
-QGeoManeuver* QGeoManeuver_new2(const QGeoManeuver* other) {
+QGeoManeuver* QGeoManeuver_New2(const QGeoManeuver* other) {
     return new QGeoManeuver(*other);
 }
 

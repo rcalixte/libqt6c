@@ -18,11 +18,11 @@ uintptr_t k_nscore_q_hash(void* entry, uintptr_t seed) {
 }
 
 KNSCore__Entry* k_nscore__entry_new() {
-    return KNSCore__Entry_new();
+    return KNSCore__Entry_New();
 }
 
 KNSCore__Entry* k_nscore__entry_new2(void* other) {
-    return KNSCore__Entry_new2((KNSCore__Entry*)other);
+    return KNSCore__Entry_New2((KNSCore__Entry*)other);
 }
 
 void k_nscore__entry_operator_assign(void* self, void* other) {
@@ -435,7 +435,7 @@ void k_nscore__entry_delete(void* self) {
 }
 
 KNSCore__Entry__DownloadLinkInformation* k_nscore__entry__downloadlinkinformation_new(void* param1) {
-    return KNSCore__Entry__DownloadLinkInformation_new((KNSCore__Entry__DownloadLinkInformation*)param1);
+    return KNSCore__Entry__DownloadLinkInformation_New((KNSCore__Entry__DownloadLinkInformation*)param1);
 }
 
 const char* k_nscore__entry__downloadlinkinformation_name(void* self) {

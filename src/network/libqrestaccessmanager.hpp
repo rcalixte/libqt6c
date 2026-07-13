@@ -31,8 +31,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QRestAccessManager* QRestAccessManager_new(QNetworkAccessManager* manager);
-QRestAccessManager* QRestAccessManager_new2(QNetworkAccessManager* manager, QObject* parent);
+QRestAccessManager* QRestAccessManager_New(QNetworkAccessManager* manager);
+QRestAccessManager* QRestAccessManager_New2(QNetworkAccessManager* manager, QObject* parent);
 QMetaObject* QRestAccessManager_MetaObject(const QRestAccessManager* self);
 void* QRestAccessManager_Metacast(QRestAccessManager* self, const char* param1);
 int QRestAccessManager_Metacall(QRestAccessManager* self, int param1, int param2, void** param3);

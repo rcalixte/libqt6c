@@ -13,16 +13,16 @@
 #include "libktoggleaction.hpp"
 #include "libktoggleaction.hxx"
 
-KToggleAction* KToggleAction_new(QObject* parent) {
+KToggleAction* KToggleAction_New(QObject* parent) {
     return new VirtualKToggleAction(parent);
 }
 
-KToggleAction* KToggleAction_new2(const libqt_string text, QObject* parent) {
+KToggleAction* KToggleAction_New2(const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKToggleAction(text_QString, parent);
 }
 
-KToggleAction* KToggleAction_new3(const QIcon* icon, const libqt_string text, QObject* parent) {
+KToggleAction* KToggleAction_New3(const QIcon* icon, const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKToggleAction(*icon, text_QString, parent);
 }

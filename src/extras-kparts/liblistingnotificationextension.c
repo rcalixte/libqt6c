@@ -7,7 +7,7 @@
 #include "liblistingnotificationextension.h"
 
 KParts__ListingNotificationExtension* k_parts__listingnotificationextension_new(void* parent) {
-    return KParts__ListingNotificationExtension_new((KParts__ReadOnlyPart*)parent);
+    return KParts__ListingNotificationExtension_New((KParts__ReadOnlyPart*)parent);
 }
 
 const QMetaObject* k_parts__listingnotificationextension_meta_object(void* self) {

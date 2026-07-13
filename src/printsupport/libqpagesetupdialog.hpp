@@ -52,10 +52,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QPageSetupDialog* QPageSetupDialog_new(QWidget* parent);
-QPageSetupDialog* QPageSetupDialog_new2(QPrinter* printer);
-QPageSetupDialog* QPageSetupDialog_new3();
-QPageSetupDialog* QPageSetupDialog_new4(QPrinter* printer, QWidget* parent);
+QPageSetupDialog* QPageSetupDialog_New(QWidget* parent);
+QPageSetupDialog* QPageSetupDialog_New2(QPrinter* printer);
+QPageSetupDialog* QPageSetupDialog_New3();
+QPageSetupDialog* QPageSetupDialog_New4(QPrinter* printer, QWidget* parent);
 QMetaObject* QPageSetupDialog_MetaObject(const QPageSetupDialog* self);
 void* QPageSetupDialog_Metacast(QPageSetupDialog* self, const char* param1);
 int QPageSetupDialog_Metacall(QPageSetupDialog* self, int param1, int param2, void** param3);

@@ -8,11 +8,11 @@ KCountry* k_timezone_country(const char* param1) {
 }
 
 KCountry* k_country_new() {
-    return KCountry_new();
+    return KCountry_New();
 }
 
 KCountry* k_country_new2(void* param1) {
-    return KCountry_new2((KCountry*)param1);
+    return KCountry_New2((KCountry*)param1);
 }
 
 void k_country_operator_assign(void* self, void* param1) {

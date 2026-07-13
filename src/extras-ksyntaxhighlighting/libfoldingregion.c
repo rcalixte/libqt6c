@@ -2,19 +2,19 @@
 #include "libfoldingregion.h"
 
 KSyntaxHighlighting__FoldingRegion* k_syntaxhighlighting__foldingregion_new(void* other) {
-    return KSyntaxHighlighting__FoldingRegion_new((KSyntaxHighlighting__FoldingRegion*)other);
+    return KSyntaxHighlighting__FoldingRegion_New((KSyntaxHighlighting__FoldingRegion*)other);
 }
 
 KSyntaxHighlighting__FoldingRegion* k_syntaxhighlighting__foldingregion_new2(void* other) {
-    return KSyntaxHighlighting__FoldingRegion_new2((KSyntaxHighlighting__FoldingRegion*)other);
+    return KSyntaxHighlighting__FoldingRegion_New2((KSyntaxHighlighting__FoldingRegion*)other);
 }
 
 KSyntaxHighlighting__FoldingRegion* k_syntaxhighlighting__foldingregion_new3() {
-    return KSyntaxHighlighting__FoldingRegion_new3();
+    return KSyntaxHighlighting__FoldingRegion_New3();
 }
 
 KSyntaxHighlighting__FoldingRegion* k_syntaxhighlighting__foldingregion_new4(void* param1) {
-    return KSyntaxHighlighting__FoldingRegion_new4((KSyntaxHighlighting__FoldingRegion*)param1);
+    return KSyntaxHighlighting__FoldingRegion_New4((KSyntaxHighlighting__FoldingRegion*)param1);
 }
 
 void k_syntaxhighlighting__foldingregion_copy_assign(void* self, void* other) {

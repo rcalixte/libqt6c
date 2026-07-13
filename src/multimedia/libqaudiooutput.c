@@ -7,19 +7,19 @@
 #include "libqaudiooutput.h"
 
 QAudioOutput* q_audiooutput_new() {
-    return QAudioOutput_new();
+    return QAudioOutput_New();
 }
 
 QAudioOutput* q_audiooutput_new2(void* device) {
-    return QAudioOutput_new2((QAudioDevice*)device);
+    return QAudioOutput_New2((QAudioDevice*)device);
 }
 
 QAudioOutput* q_audiooutput_new3(void* parent) {
-    return QAudioOutput_new3((QObject*)parent);
+    return QAudioOutput_New3((QObject*)parent);
 }
 
 QAudioOutput* q_audiooutput_new4(void* device, void* parent) {
-    return QAudioOutput_new4((QAudioDevice*)device, (QObject*)parent);
+    return QAudioOutput_New4((QAudioDevice*)device, (QObject*)parent);
 }
 
 const QMetaObject* q_audiooutput_meta_object(void* self) {

@@ -4,11 +4,11 @@
 #include "libkencodingprober.h"
 
 KEncodingProber* k_encodingprober_new() {
-    return KEncodingProber_new();
+    return KEncodingProber_New();
 }
 
 KEncodingProber* k_encodingprober_new2(int32_t proberType) {
-    return KEncodingProber_new2(proberType);
+    return KEncodingProber_New2(proberType);
 }
 
 const char* k_encodingprober_tr(const char* sourceText) {

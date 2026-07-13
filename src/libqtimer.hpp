@@ -24,8 +24,8 @@ typedef struct QTimer QTimer;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QTimer* QTimer_new();
-QTimer* QTimer_new2(QObject* parent);
+QTimer* QTimer_New();
+QTimer* QTimer_New2(QObject* parent);
 QMetaObject* QTimer_MetaObject(const QTimer* self);
 void* QTimer_Metacast(QTimer* self, const char* param1);
 int QTimer_Metacall(QTimer* self, int param1, int param2, void** param3);

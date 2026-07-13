@@ -27,8 +27,8 @@ typedef struct QXYLegendMarker QXYLegendMarker;
 typedef struct QXYSeries QXYSeries;
 #endif
 
-QXYLegendMarker* QXYLegendMarker_new(QXYSeries* series, QLegend* legend);
-QXYLegendMarker* QXYLegendMarker_new2(QXYSeries* series, QLegend* legend, QObject* parent);
+QXYLegendMarker* QXYLegendMarker_New(QXYSeries* series, QLegend* legend);
+QXYLegendMarker* QXYLegendMarker_New2(QXYSeries* series, QLegend* legend, QObject* parent);
 QMetaObject* QXYLegendMarker_MetaObject(const QXYLegendMarker* self);
 void* QXYLegendMarker_Metacast(QXYLegendMarker* self, const char* param1);
 int QXYLegendMarker_Metacall(QXYLegendMarker* self, int param1, int param2, void** param3);

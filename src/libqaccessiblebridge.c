@@ -23,11 +23,11 @@ void q_accessiblebridge_delete(void* self) {
 }
 
 QAccessibleBridgePlugin* q_accessiblebridgeplugin_new() {
-    return QAccessibleBridgePlugin_new();
+    return QAccessibleBridgePlugin_New();
 }
 
 QAccessibleBridgePlugin* q_accessiblebridgeplugin_new2(void* parent) {
-    return QAccessibleBridgePlugin_new2((QObject*)parent);
+    return QAccessibleBridgePlugin_New2((QObject*)parent);
 }
 
 const QMetaObject* q_accessiblebridgeplugin_meta_object(void* self) {

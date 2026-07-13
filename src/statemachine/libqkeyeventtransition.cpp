@@ -13,19 +13,19 @@
 #include "libqkeyeventtransition.hpp"
 #include "libqkeyeventtransition.hxx"
 
-QKeyEventTransition* QKeyEventTransition_new() {
+QKeyEventTransition* QKeyEventTransition_New() {
     return new VirtualQKeyEventTransition();
 }
 
-QKeyEventTransition* QKeyEventTransition_new2(QObject* object, int type, int key) {
+QKeyEventTransition* QKeyEventTransition_New2(QObject* object, int type, int key) {
     return new VirtualQKeyEventTransition(object, static_cast<QEvent::Type>(type), static_cast<int>(key));
 }
 
-QKeyEventTransition* QKeyEventTransition_new3(QState* sourceState) {
+QKeyEventTransition* QKeyEventTransition_New3(QState* sourceState) {
     return new VirtualQKeyEventTransition(sourceState);
 }
 
-QKeyEventTransition* QKeyEventTransition_new4(QObject* object, int type, int key, QState* sourceState) {
+QKeyEventTransition* QKeyEventTransition_New4(QObject* object, int type, int key, QState* sourceState) {
     return new VirtualQKeyEventTransition(object, static_cast<QEvent::Type>(type), static_cast<int>(key), sourceState);
 }
 

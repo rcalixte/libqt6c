@@ -6,11 +6,11 @@
 #include "libinlinenote.h"
 
 KTextEditor__InlineNote* k_texteditor__inlinenote_new(void* other) {
-    return KTextEditor__InlineNote_new((KTextEditor__InlineNote*)other);
+    return KTextEditor__InlineNote_New((KTextEditor__InlineNote*)other);
 }
 
 KTextEditor__InlineNote* k_texteditor__inlinenote_new2(void* other) {
-    return KTextEditor__InlineNote_new2((KTextEditor__InlineNote*)other);
+    return KTextEditor__InlineNote_New2((KTextEditor__InlineNote*)other);
 }
 
 double k_texteditor__inlinenote_width(void* self) {

@@ -8,15 +8,15 @@
 #include "libqopenglpaintdevice.h"
 
 QOpenGLPaintDevice* q_openglpaintdevice_new() {
-    return QOpenGLPaintDevice_new();
+    return QOpenGLPaintDevice_New();
 }
 
 QOpenGLPaintDevice* q_openglpaintdevice_new2(void* size) {
-    return QOpenGLPaintDevice_new2((QSize*)size);
+    return QOpenGLPaintDevice_New2((QSize*)size);
 }
 
 QOpenGLPaintDevice* q_openglpaintdevice_new3(int width, int height) {
-    return QOpenGLPaintDevice_new3(width, height);
+    return QOpenGLPaintDevice_New3(width, height);
 }
 
 int32_t q_openglpaintdevice_dev_type(void* self) {

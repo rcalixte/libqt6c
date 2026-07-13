@@ -50,8 +50,8 @@ struct pair_double_double {
 };
 #endif
 
-QGraphicsItemAnimation* QGraphicsItemAnimation_new();
-QGraphicsItemAnimation* QGraphicsItemAnimation_new2(QObject* parent);
+QGraphicsItemAnimation* QGraphicsItemAnimation_New();
+QGraphicsItemAnimation* QGraphicsItemAnimation_New2(QObject* parent);
 QMetaObject* QGraphicsItemAnimation_MetaObject(const QGraphicsItemAnimation* self);
 void* QGraphicsItemAnimation_Metacast(QGraphicsItemAnimation* self, const char* param1);
 int QGraphicsItemAnimation_Metacall(QGraphicsItemAnimation* self, int param1, int param2, void** param3);

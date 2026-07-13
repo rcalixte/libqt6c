@@ -7,19 +7,19 @@
 #include "libqaudioengine.h"
 
 QAudioEngine* q_audioengine_new() {
-    return QAudioEngine_new();
+    return QAudioEngine_New();
 }
 
 QAudioEngine* q_audioengine_new2(void* parent) {
-    return QAudioEngine_new2((QObject*)parent);
+    return QAudioEngine_New2((QObject*)parent);
 }
 
 QAudioEngine* q_audioengine_new3(int sampleRate) {
-    return QAudioEngine_new3(sampleRate);
+    return QAudioEngine_New3(sampleRate);
 }
 
 QAudioEngine* q_audioengine_new4(int sampleRate, void* parent) {
-    return QAudioEngine_new4(sampleRate, (QObject*)parent);
+    return QAudioEngine_New4(sampleRate, (QObject*)parent);
 }
 
 const QMetaObject* q_audioengine_meta_object(void* self) {

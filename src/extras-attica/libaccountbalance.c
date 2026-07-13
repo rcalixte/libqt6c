@@ -2,11 +2,11 @@
 #include "libaccountbalance.h"
 
 Attica__AccountBalance* k_attica__accountbalance_new() {
-    return Attica__AccountBalance_new();
+    return Attica__AccountBalance_New();
 }
 
 Attica__AccountBalance* k_attica__accountbalance_new2(void* other) {
-    return Attica__AccountBalance_new2((Attica__AccountBalance*)other);
+    return Attica__AccountBalance_New2((Attica__AccountBalance*)other);
 }
 
 void k_attica__accountbalance_operator_assign(void* self, void* other) {

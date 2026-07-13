@@ -6,11 +6,11 @@
 #include "libkcountrysubdivision.hpp"
 #include "libkcountrysubdivision.hxx"
 
-KCountrySubdivision* KCountrySubdivision_new() {
+KCountrySubdivision* KCountrySubdivision_New() {
     return new KCountrySubdivision();
 }
 
-KCountrySubdivision* KCountrySubdivision_new2(const KCountrySubdivision* param1) {
+KCountrySubdivision* KCountrySubdivision_New2(const KCountrySubdivision* param1) {
     return new KCountrySubdivision(*param1);
 }
 

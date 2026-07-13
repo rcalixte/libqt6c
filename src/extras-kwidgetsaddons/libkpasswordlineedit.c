@@ -16,11 +16,11 @@
 #include "libkpasswordlineedit.h"
 
 KPasswordLineEdit* k_passwordlineedit_new(void* parent) {
-    return KPasswordLineEdit_new((QWidget*)parent);
+    return KPasswordLineEdit_New((QWidget*)parent);
 }
 
 KPasswordLineEdit* k_passwordlineedit_new2() {
-    return KPasswordLineEdit_new2();
+    return KPasswordLineEdit_New2();
 }
 
 const QMetaObject* k_passwordlineedit_meta_object(void* self) {

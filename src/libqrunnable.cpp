@@ -3,7 +3,7 @@
 #include "libqrunnable.hpp"
 #include "libqrunnable.hxx"
 
-QRunnable* QRunnable_new() {
+QRunnable* QRunnable_New() {
     return new VirtualQRunnable();
 }
 

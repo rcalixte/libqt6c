@@ -3,11 +3,11 @@
 #include "libqopenglpixeltransferoptions.hpp"
 #include "libqopenglpixeltransferoptions.hxx"
 
-QOpenGLPixelTransferOptions* QOpenGLPixelTransferOptions_new() {
+QOpenGLPixelTransferOptions* QOpenGLPixelTransferOptions_New() {
     return new QOpenGLPixelTransferOptions();
 }
 
-QOpenGLPixelTransferOptions* QOpenGLPixelTransferOptions_new2(const QOpenGLPixelTransferOptions* param1) {
+QOpenGLPixelTransferOptions* QOpenGLPixelTransferOptions_New2(const QOpenGLPixelTransferOptions* param1) {
     return new QOpenGLPixelTransferOptions(*param1);
 }
 

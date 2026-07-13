@@ -12,11 +12,11 @@
 #include "libqlocalsocket.hpp"
 #include "libqlocalsocket.hxx"
 
-QLocalSocket* QLocalSocket_new() {
+QLocalSocket* QLocalSocket_New() {
     return new VirtualQLocalSocket();
 }
 
-QLocalSocket* QLocalSocket_new2(QObject* parent) {
+QLocalSocket* QLocalSocket_New2(QObject* parent) {
     return new VirtualQLocalSocket(parent);
 }
 

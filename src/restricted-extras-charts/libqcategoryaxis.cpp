@@ -13,11 +13,11 @@
 #include "libqcategoryaxis.hpp"
 #include "libqcategoryaxis.hxx"
 
-QCategoryAxis* QCategoryAxis_new() {
+QCategoryAxis* QCategoryAxis_New() {
     return new VirtualQCategoryAxis();
 }
 
-QCategoryAxis* QCategoryAxis_new2(QObject* parent) {
+QCategoryAxis* QCategoryAxis_New2(QObject* parent) {
     return new VirtualQCategoryAxis(parent);
 }
 

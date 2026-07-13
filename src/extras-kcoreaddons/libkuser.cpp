@@ -6,28 +6,28 @@
 #include "libkuser.hpp"
 #include "libkuser.hxx"
 
-KUser* KUser_new() {
+KUser* KUser_New() {
     return new KUser();
 }
 
-KUser* KUser_new2(uid_t uid) {
+KUser* KUser_New2(uid_t uid) {
     return new KUser(uid);
 }
 
-KUser* KUser_new3(const libqt_string name) {
+KUser* KUser_New3(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new KUser(name_QString);
 }
 
-KUser* KUser_new4(const char* name) {
+KUser* KUser_New4(const char* name) {
     return new KUser(name);
 }
 
-KUser* KUser_new5(const KUser* user) {
+KUser* KUser_New5(const KUser* user) {
     return new KUser(*user);
 }
 
-KUser* KUser_new6(int mode) {
+KUser* KUser_New6(int mode) {
     return new KUser(static_cast<KUser::UIDMode>(mode));
 }
 
@@ -243,28 +243,28 @@ void KUser_Delete(KUser* self) {
     delete self;
 }
 
-KUserGroup* KUserGroup_new(const libqt_string name) {
+KUserGroup* KUserGroup_New(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new KUserGroup(name_QString);
 }
 
-KUserGroup* KUserGroup_new2(const char* name) {
+KUserGroup* KUserGroup_New2(const char* name) {
     return new KUserGroup(name);
 }
 
-KUserGroup* KUserGroup_new3() {
+KUserGroup* KUserGroup_New3() {
     return new KUserGroup();
 }
 
-KUserGroup* KUserGroup_new4(gid_t gid) {
+KUserGroup* KUserGroup_New4(gid_t gid) {
     return new KUserGroup(gid);
 }
 
-KUserGroup* KUserGroup_new5(const KUserGroup* group) {
+KUserGroup* KUserGroup_New5(const KUserGroup* group) {
     return new KUserGroup(*group);
 }
 
-KUserGroup* KUserGroup_new6(int mode) {
+KUserGroup* KUserGroup_New6(int mode) {
     return new KUserGroup(static_cast<KUser::UIDMode>(mode));
 }
 

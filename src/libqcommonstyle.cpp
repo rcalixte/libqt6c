@@ -24,7 +24,7 @@
 #include "libqcommonstyle.hpp"
 #include "libqcommonstyle.hxx"
 
-QCommonStyle* QCommonStyle_new() {
+QCommonStyle* QCommonStyle_New() {
     return new VirtualQCommonStyle();
 }
 

@@ -14,11 +14,11 @@
 #include "libqscilexerjson.hpp"
 #include "libqscilexerjson.hxx"
 
-QsciLexerJSON* QsciLexerJSON_new() {
+QsciLexerJSON* QsciLexerJSON_New() {
     return new VirtualQsciLexerJSON();
 }
 
-QsciLexerJSON* QsciLexerJSON_new2(QObject* parent) {
+QsciLexerJSON* QsciLexerJSON_New2(QObject* parent) {
     return new VirtualQsciLexerJSON(parent);
 }
 

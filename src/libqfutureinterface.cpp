@@ -7,15 +7,15 @@
 #include "libqfutureinterface.hpp"
 #include "libqfutureinterface.hxx"
 
-QFutureInterfaceBase* QFutureInterfaceBase_new() {
+QFutureInterfaceBase* QFutureInterfaceBase_New() {
     return new QFutureInterfaceBase();
 }
 
-QFutureInterfaceBase* QFutureInterfaceBase_new2(const QFutureInterfaceBase* other) {
+QFutureInterfaceBase* QFutureInterfaceBase_New2(const QFutureInterfaceBase* other) {
     return new QFutureInterfaceBase(*other);
 }
 
-QFutureInterfaceBase* QFutureInterfaceBase_new3(int initialState) {
+QFutureInterfaceBase* QFutureInterfaceBase_New3(int initialState) {
     return new QFutureInterfaceBase(static_cast<QFutureInterfaceBase::State>(initialState));
 }
 

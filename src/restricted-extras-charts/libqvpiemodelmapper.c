@@ -9,11 +9,11 @@
 #include "libqvpiemodelmapper.h"
 
 QVPieModelMapper* q_vpiemodelmapper_new() {
-    return QVPieModelMapper_new();
+    return QVPieModelMapper_New();
 }
 
 QVPieModelMapper* q_vpiemodelmapper_new2(void* parent) {
-    return QVPieModelMapper_new2((QObject*)parent);
+    return QVPieModelMapper_New2((QObject*)parent);
 }
 
 const QMetaObject* q_vpiemodelmapper_meta_object(void* self) {

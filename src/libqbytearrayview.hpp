@@ -18,10 +18,10 @@ extern "C" {
 typedef struct QByteArrayView QByteArrayView;
 #endif
 
-QByteArrayView* QByteArrayView_new(const libqt_string other);
-QByteArrayView* QByteArrayView_new2(libqt_string other);
-QByteArrayView* QByteArrayView_new3();
-QByteArrayView* QByteArrayView_new4(const libqt_string param1);
+QByteArrayView* QByteArrayView_New(const libqt_string other);
+QByteArrayView* QByteArrayView_New2(libqt_string other);
+QByteArrayView* QByteArrayView_New3();
+QByteArrayView* QByteArrayView_New4(const libqt_string param1);
 void QByteArrayView_CopyAssign(QByteArrayView* self, QByteArrayView* other);
 void QByteArrayView_MoveAssign(QByteArrayView* self, QByteArrayView* other);
 libqt_string QByteArrayView_ToByteArray(const QByteArrayView* self);

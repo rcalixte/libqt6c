@@ -6,23 +6,23 @@
 #include "libqeventpoint.h"
 
 QEventPoint* q_eventpoint_new() {
-    return QEventPoint_new();
+    return QEventPoint_New();
 }
 
 QEventPoint* q_eventpoint_new2(int pointId, uint8_t state, void* scenePosition, void* globalPosition) {
-    return QEventPoint_new2(pointId, state, (QPointF*)scenePosition, (QPointF*)globalPosition);
+    return QEventPoint_New2(pointId, state, (QPointF*)scenePosition, (QPointF*)globalPosition);
 }
 
 QEventPoint* q_eventpoint_new3(void* other) {
-    return QEventPoint_new3((QEventPoint*)other);
+    return QEventPoint_New3((QEventPoint*)other);
 }
 
 QEventPoint* q_eventpoint_new4(int id) {
-    return QEventPoint_new4(id);
+    return QEventPoint_New4(id);
 }
 
 QEventPoint* q_eventpoint_new5(int id, void* device) {
-    return QEventPoint_new5(id, (QPointingDevice*)device);
+    return QEventPoint_New5(id, (QPointingDevice*)device);
 }
 
 void q_eventpoint_operator_assign(void* self, void* other) {

@@ -35,8 +35,8 @@ typedef struct QRectF QRectF;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QGraphicsEffect* QGraphicsEffect_new();
-QGraphicsEffect* QGraphicsEffect_new2(QObject* parent);
+QGraphicsEffect* QGraphicsEffect_New();
+QGraphicsEffect* QGraphicsEffect_New2(QObject* parent);
 QMetaObject* QGraphicsEffect_MetaObject(const QGraphicsEffect* self);
 void* QGraphicsEffect_Metacast(QGraphicsEffect* self, const char* param1);
 int QGraphicsEffect_Metacall(QGraphicsEffect* self, int param1, int param2, void** param3);
@@ -123,8 +123,8 @@ void QGraphicsEffect_OnIsSignalConnected(const QGraphicsEffect* self, intptr_t s
 bool QGraphicsEffect_SuperIsSignalConnected(const QGraphicsEffect* self, const QMetaMethod* signal);
 void QGraphicsEffect_Delete(QGraphicsEffect* self);
 
-QGraphicsColorizeEffect* QGraphicsColorizeEffect_new();
-QGraphicsColorizeEffect* QGraphicsColorizeEffect_new2(QObject* parent);
+QGraphicsColorizeEffect* QGraphicsColorizeEffect_New();
+QGraphicsColorizeEffect* QGraphicsColorizeEffect_New2(QObject* parent);
 QMetaObject* QGraphicsColorizeEffect_MetaObject(const QGraphicsColorizeEffect* self);
 void* QGraphicsColorizeEffect_Metacast(QGraphicsColorizeEffect* self, const char* param1);
 int QGraphicsColorizeEffect_Metacall(QGraphicsColorizeEffect* self, int param1, int param2, void** param3);
@@ -201,8 +201,8 @@ void QGraphicsColorizeEffect_OnIsSignalConnected(const QGraphicsColorizeEffect* 
 bool QGraphicsColorizeEffect_SuperIsSignalConnected(const QGraphicsColorizeEffect* self, const QMetaMethod* signal);
 void QGraphicsColorizeEffect_Delete(QGraphicsColorizeEffect* self);
 
-QGraphicsBlurEffect* QGraphicsBlurEffect_new();
-QGraphicsBlurEffect* QGraphicsBlurEffect_new2(QObject* parent);
+QGraphicsBlurEffect* QGraphicsBlurEffect_New();
+QGraphicsBlurEffect* QGraphicsBlurEffect_New2(QObject* parent);
 QMetaObject* QGraphicsBlurEffect_MetaObject(const QGraphicsBlurEffect* self);
 void* QGraphicsBlurEffect_Metacast(QGraphicsBlurEffect* self, const char* param1);
 int QGraphicsBlurEffect_Metacall(QGraphicsBlurEffect* self, int param1, int param2, void** param3);
@@ -279,8 +279,8 @@ void QGraphicsBlurEffect_OnIsSignalConnected(const QGraphicsBlurEffect* self, in
 bool QGraphicsBlurEffect_SuperIsSignalConnected(const QGraphicsBlurEffect* self, const QMetaMethod* signal);
 void QGraphicsBlurEffect_Delete(QGraphicsBlurEffect* self);
 
-QGraphicsDropShadowEffect* QGraphicsDropShadowEffect_new();
-QGraphicsDropShadowEffect* QGraphicsDropShadowEffect_new2(QObject* parent);
+QGraphicsDropShadowEffect* QGraphicsDropShadowEffect_New();
+QGraphicsDropShadowEffect* QGraphicsDropShadowEffect_New2(QObject* parent);
 QMetaObject* QGraphicsDropShadowEffect_MetaObject(const QGraphicsDropShadowEffect* self);
 void* QGraphicsDropShadowEffect_Metacast(QGraphicsDropShadowEffect* self, const char* param1);
 int QGraphicsDropShadowEffect_Metacall(QGraphicsDropShadowEffect* self, int param1, int param2, void** param3);
@@ -367,8 +367,8 @@ void QGraphicsDropShadowEffect_OnIsSignalConnected(const QGraphicsDropShadowEffe
 bool QGraphicsDropShadowEffect_SuperIsSignalConnected(const QGraphicsDropShadowEffect* self, const QMetaMethod* signal);
 void QGraphicsDropShadowEffect_Delete(QGraphicsDropShadowEffect* self);
 
-QGraphicsOpacityEffect* QGraphicsOpacityEffect_new();
-QGraphicsOpacityEffect* QGraphicsOpacityEffect_new2(QObject* parent);
+QGraphicsOpacityEffect* QGraphicsOpacityEffect_New();
+QGraphicsOpacityEffect* QGraphicsOpacityEffect_New2(QObject* parent);
 QMetaObject* QGraphicsOpacityEffect_MetaObject(const QGraphicsOpacityEffect* self);
 void* QGraphicsOpacityEffect_Metacast(QGraphicsOpacityEffect* self, const char* param1);
 int QGraphicsOpacityEffect_Metacall(QGraphicsOpacityEffect* self, int param1, int param2, void** param3);

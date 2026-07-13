@@ -11,11 +11,11 @@
 #include "libqscilexeryaml.h"
 
 QsciLexerYAML* q_scilexeryaml_new() {
-    return QsciLexerYAML_new();
+    return QsciLexerYAML_New();
 }
 
 QsciLexerYAML* q_scilexeryaml_new2(void* parent) {
-    return QsciLexerYAML_new2((QObject*)parent);
+    return QsciLexerYAML_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexeryaml_meta_object(void* self) {

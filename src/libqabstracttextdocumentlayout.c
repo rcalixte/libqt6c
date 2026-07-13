@@ -17,7 +17,7 @@
 #include "libqabstracttextdocumentlayout.h"
 
 QAbstractTextDocumentLayout* q_abstracttextdocumentlayout_new(void* doc) {
-    return QAbstractTextDocumentLayout_new((QTextDocument*)doc);
+    return QAbstractTextDocumentLayout_New((QTextDocument*)doc);
 }
 
 const QMetaObject* q_abstracttextdocumentlayout_meta_object(void* self) {
@@ -679,11 +679,11 @@ void q_textobjectinterface_delete(void* self) {
 }
 
 QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new(void* param1) {
-    return QAbstractTextDocumentLayout__Selection_new((QAbstractTextDocumentLayout__Selection*)param1);
+    return QAbstractTextDocumentLayout__Selection_New((QAbstractTextDocumentLayout__Selection*)param1);
 }
 
 QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new2() {
-    return QAbstractTextDocumentLayout__Selection_new2();
+    return QAbstractTextDocumentLayout__Selection_New2();
 }
 
 QTextCursor* q_abstracttextdocumentlayout__selection_cursor(void* self) {
@@ -711,11 +711,11 @@ void q_abstracttextdocumentlayout__selection_delete(void* self) {
 }
 
 QAbstractTextDocumentLayout__PaintContext* q_abstracttextdocumentlayout__paintcontext_new() {
-    return QAbstractTextDocumentLayout__PaintContext_new();
+    return QAbstractTextDocumentLayout__PaintContext_New();
 }
 
 QAbstractTextDocumentLayout__PaintContext* q_abstracttextdocumentlayout__paintcontext_new2(void* param1) {
-    return QAbstractTextDocumentLayout__PaintContext_new2((QAbstractTextDocumentLayout__PaintContext*)param1);
+    return QAbstractTextDocumentLayout__PaintContext_New2((QAbstractTextDocumentLayout__PaintContext*)param1);
 }
 
 int32_t q_abstracttextdocumentlayout__paintcontext_cursor_position(void* self) {

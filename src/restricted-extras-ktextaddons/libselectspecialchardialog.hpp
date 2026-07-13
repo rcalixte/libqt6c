@@ -55,7 +55,7 @@ typedef struct QWidget QWidget;
 typedef struct TextAddonsWidgets__SelectSpecialCharDialog TextAddonsWidgets__SelectSpecialCharDialog;
 #endif
 
-TextAddonsWidgets__SelectSpecialCharDialog* TextAddonsWidgets__SelectSpecialCharDialog_new(QWidget* parent);
+TextAddonsWidgets__SelectSpecialCharDialog* TextAddonsWidgets__SelectSpecialCharDialog_New(QWidget* parent);
 QMetaObject* TextAddonsWidgets__SelectSpecialCharDialog_MetaObject(const TextAddonsWidgets__SelectSpecialCharDialog* self);
 void* TextAddonsWidgets__SelectSpecialCharDialog_Metacast(TextAddonsWidgets__SelectSpecialCharDialog* self, const char* param1);
 int TextAddonsWidgets__SelectSpecialCharDialog_Metacall(TextAddonsWidgets__SelectSpecialCharDialog* self, int param1, int param2, void** param3);

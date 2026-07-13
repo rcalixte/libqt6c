@@ -41,11 +41,11 @@
 #include "libqspinbox.hpp"
 #include "libqspinbox.hxx"
 
-QSpinBox* QSpinBox_new(QWidget* parent) {
+QSpinBox* QSpinBox_New(QWidget* parent) {
     return new VirtualQSpinBox(parent);
 }
 
-QSpinBox* QSpinBox_new2() {
+QSpinBox* QSpinBox_New2() {
     return new VirtualQSpinBox();
 }
 
@@ -2217,11 +2217,11 @@ void QSpinBox_Delete(QSpinBox* self) {
     delete self;
 }
 
-QDoubleSpinBox* QDoubleSpinBox_new(QWidget* parent) {
+QDoubleSpinBox* QDoubleSpinBox_New(QWidget* parent) {
     return new VirtualQDoubleSpinBox(parent);
 }
 
-QDoubleSpinBox* QDoubleSpinBox_new2() {
+QDoubleSpinBox* QDoubleSpinBox_New2() {
     return new VirtualQDoubleSpinBox();
 }
 

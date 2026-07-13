@@ -54,12 +54,12 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QProgressDialog* QProgressDialog_new(QWidget* parent);
-QProgressDialog* QProgressDialog_new2();
-QProgressDialog* QProgressDialog_new3(const libqt_string labelText, const libqt_string cancelButtonText, int minimum, int maximum);
-QProgressDialog* QProgressDialog_new4(QWidget* parent, int flags);
-QProgressDialog* QProgressDialog_new5(const libqt_string labelText, const libqt_string cancelButtonText, int minimum, int maximum, QWidget* parent);
-QProgressDialog* QProgressDialog_new6(const libqt_string labelText, const libqt_string cancelButtonText, int minimum, int maximum, QWidget* parent, int flags);
+QProgressDialog* QProgressDialog_New(QWidget* parent);
+QProgressDialog* QProgressDialog_New2();
+QProgressDialog* QProgressDialog_New3(const libqt_string labelText, const libqt_string cancelButtonText, int minimum, int maximum);
+QProgressDialog* QProgressDialog_New4(QWidget* parent, int flags);
+QProgressDialog* QProgressDialog_New5(const libqt_string labelText, const libqt_string cancelButtonText, int minimum, int maximum, QWidget* parent);
+QProgressDialog* QProgressDialog_New6(const libqt_string labelText, const libqt_string cancelButtonText, int minimum, int maximum, QWidget* parent, int flags);
 QMetaObject* QProgressDialog_MetaObject(const QProgressDialog* self);
 void* QProgressDialog_Metacast(QProgressDialog* self, const char* param1);
 int QProgressDialog_Metacall(QProgressDialog* self, int param1, int param2, void** param3);

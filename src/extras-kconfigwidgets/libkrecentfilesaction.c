@@ -14,15 +14,15 @@
 #include "libkrecentfilesaction.h"
 
 KRecentFilesAction* k_recentfilesaction_new(void* parent) {
-    return KRecentFilesAction_new((QObject*)parent);
+    return KRecentFilesAction_New((QObject*)parent);
 }
 
 KRecentFilesAction* k_recentfilesaction_new2(const char* text, void* parent) {
-    return KRecentFilesAction_new2(qstring(text), (QObject*)parent);
+    return KRecentFilesAction_New2(qstring(text), (QObject*)parent);
 }
 
 KRecentFilesAction* k_recentfilesaction_new3(void* icon, const char* text, void* parent) {
-    return KRecentFilesAction_new3((QIcon*)icon, qstring(text), (QObject*)parent);
+    return KRecentFilesAction_New3((QIcon*)icon, qstring(text), (QObject*)parent);
 }
 
 const QMetaObject* k_recentfilesaction_meta_object(void* self) {

@@ -8,7 +8,7 @@
 #include "libklistopenfilesjob.h"
 
 KListOpenFilesJob* k_listopenfilesjob_new(const char* path) {
-    return KListOpenFilesJob_new(qstring(path));
+    return KListOpenFilesJob_New(qstring(path));
 }
 
 const QMetaObject* k_listopenfilesjob_meta_object(void* self) {

@@ -9,11 +9,11 @@
 #include "libtexteditorcompleter.h"
 
 TextCustomEditor__TextEditorCompleter* k_textcustomeditor__texteditorcompleter_new(void* editor, void* parent) {
-    return TextCustomEditor__TextEditorCompleter_new((QTextEdit*)editor, (QObject*)parent);
+    return TextCustomEditor__TextEditorCompleter_New((QTextEdit*)editor, (QObject*)parent);
 }
 
 TextCustomEditor__TextEditorCompleter* k_textcustomeditor__texteditorcompleter_new2(void* editor, void* parent) {
-    return TextCustomEditor__TextEditorCompleter_new2((QPlainTextEdit*)editor, (QObject*)parent);
+    return TextCustomEditor__TextEditorCompleter_New2((QPlainTextEdit*)editor, (QObject*)parent);
 }
 
 const QMetaObject* k_textcustomeditor__texteditorcompleter_meta_object(void* self) {

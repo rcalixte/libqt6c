@@ -9,15 +9,15 @@
 #include "libkstatusbarjobtracker.h"
 
 KStatusBarJobTracker* k_statusbarjobtracker_new(void* parent) {
-    return KStatusBarJobTracker_new((QWidget*)parent);
+    return KStatusBarJobTracker_New((QWidget*)parent);
 }
 
 KStatusBarJobTracker* k_statusbarjobtracker_new2() {
-    return KStatusBarJobTracker_new2();
+    return KStatusBarJobTracker_New2();
 }
 
 KStatusBarJobTracker* k_statusbarjobtracker_new3(void* parent, bool button) {
-    return KStatusBarJobTracker_new3((QWidget*)parent, button);
+    return KStatusBarJobTracker_New3((QWidget*)parent, button);
 }
 
 const QMetaObject* k_statusbarjobtracker_meta_object(void* self) {

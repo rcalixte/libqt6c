@@ -13,11 +13,11 @@
 #include "libabstractwidgetfactory.hpp"
 #include "libabstractwidgetfactory.hxx"
 
-QDesignerWidgetFactoryInterface* QDesignerWidgetFactoryInterface_new() {
+QDesignerWidgetFactoryInterface* QDesignerWidgetFactoryInterface_New() {
     return new VirtualQDesignerWidgetFactoryInterface();
 }
 
-QDesignerWidgetFactoryInterface* QDesignerWidgetFactoryInterface_new2(QObject* parent) {
+QDesignerWidgetFactoryInterface* QDesignerWidgetFactoryInterface_New2(QObject* parent) {
     return new VirtualQDesignerWidgetFactoryInterface(parent);
 }
 

@@ -25,10 +25,10 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QAudioEngine* QAudioEngine_new();
-QAudioEngine* QAudioEngine_new2(QObject* parent);
-QAudioEngine* QAudioEngine_new3(int sampleRate);
-QAudioEngine* QAudioEngine_new4(int sampleRate, QObject* parent);
+QAudioEngine* QAudioEngine_New();
+QAudioEngine* QAudioEngine_New2(QObject* parent);
+QAudioEngine* QAudioEngine_New3(int sampleRate);
+QAudioEngine* QAudioEngine_New4(int sampleRate, QObject* parent);
 QMetaObject* QAudioEngine_MetaObject(const QAudioEngine* self);
 void* QAudioEngine_Metacast(QAudioEngine* self, const char* param1);
 int QAudioEngine_Metacall(QAudioEngine* self, int param1, int param2, void** param3);

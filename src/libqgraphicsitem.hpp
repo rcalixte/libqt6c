@@ -66,8 +66,8 @@ typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
 
-QGraphicsItem* QGraphicsItem_new();
-QGraphicsItem* QGraphicsItem_new2(QGraphicsItem* parent);
+QGraphicsItem* QGraphicsItem_New();
+QGraphicsItem* QGraphicsItem_New2(QGraphicsItem* parent);
 QGraphicsScene* QGraphicsItem_Scene(const QGraphicsItem* self);
 QGraphicsItem* QGraphicsItem_ParentItem(const QGraphicsItem* self);
 QGraphicsItem* QGraphicsItem_TopLevelItem(const QGraphicsItem* self);
@@ -353,8 +353,8 @@ void QGraphicsItem_OnPrepareGeometryChange(QGraphicsItem* self, intptr_t slot);
 void QGraphicsItem_SuperPrepareGeometryChange(QGraphicsItem* self);
 void QGraphicsItem_Delete(QGraphicsItem* self);
 
-QGraphicsObject* QGraphicsObject_new();
-QGraphicsObject* QGraphicsObject_new2(QGraphicsItem* parent);
+QGraphicsObject* QGraphicsObject_New();
+QGraphicsObject* QGraphicsObject_New2(QGraphicsItem* parent);
 QMetaObject* QGraphicsObject_MetaObject(const QGraphicsObject* self);
 void* QGraphicsObject_Metacast(QGraphicsObject* self, const char* param1);
 int QGraphicsObject_Metacall(QGraphicsObject* self, int param1, int param2, void** param3);
@@ -543,8 +543,8 @@ void QGraphicsObject_OnPrepareGeometryChange(QGraphicsObject* self, intptr_t slo
 void QGraphicsObject_SuperPrepareGeometryChange(QGraphicsObject* self);
 void QGraphicsObject_Delete(QGraphicsObject* self);
 
-QAbstractGraphicsShapeItem* QAbstractGraphicsShapeItem_new();
-QAbstractGraphicsShapeItem* QAbstractGraphicsShapeItem_new2(QGraphicsItem* parent);
+QAbstractGraphicsShapeItem* QAbstractGraphicsShapeItem_New();
+QAbstractGraphicsShapeItem* QAbstractGraphicsShapeItem_New2(QGraphicsItem* parent);
 QPen* QAbstractGraphicsShapeItem_Pen(const QAbstractGraphicsShapeItem* self);
 void QAbstractGraphicsShapeItem_SetPen(QAbstractGraphicsShapeItem* self, const QPen* pen);
 QBrush* QAbstractGraphicsShapeItem_Brush(const QAbstractGraphicsShapeItem* self);
@@ -668,10 +668,10 @@ void QAbstractGraphicsShapeItem_OnPrepareGeometryChange(QAbstractGraphicsShapeIt
 void QAbstractGraphicsShapeItem_SuperPrepareGeometryChange(QAbstractGraphicsShapeItem* self);
 void QAbstractGraphicsShapeItem_Delete(QAbstractGraphicsShapeItem* self);
 
-QGraphicsPathItem* QGraphicsPathItem_new();
-QGraphicsPathItem* QGraphicsPathItem_new2(const QPainterPath* path);
-QGraphicsPathItem* QGraphicsPathItem_new3(QGraphicsItem* parent);
-QGraphicsPathItem* QGraphicsPathItem_new4(const QPainterPath* path, QGraphicsItem* parent);
+QGraphicsPathItem* QGraphicsPathItem_New();
+QGraphicsPathItem* QGraphicsPathItem_New2(const QPainterPath* path);
+QGraphicsPathItem* QGraphicsPathItem_New3(QGraphicsItem* parent);
+QGraphicsPathItem* QGraphicsPathItem_New4(const QPainterPath* path, QGraphicsItem* parent);
 QPainterPath* QGraphicsPathItem_Path(const QGraphicsPathItem* self);
 void QGraphicsPathItem_SetPath(QGraphicsPathItem* self, const QPainterPath* path);
 QRectF* QGraphicsPathItem_BoundingRect(const QGraphicsPathItem* self);
@@ -793,12 +793,12 @@ void QGraphicsPathItem_OnPrepareGeometryChange(QGraphicsPathItem* self, intptr_t
 void QGraphicsPathItem_SuperPrepareGeometryChange(QGraphicsPathItem* self);
 void QGraphicsPathItem_Delete(QGraphicsPathItem* self);
 
-QGraphicsRectItem* QGraphicsRectItem_new();
-QGraphicsRectItem* QGraphicsRectItem_new2(const QRectF* rect);
-QGraphicsRectItem* QGraphicsRectItem_new3(double x, double y, double w, double h);
-QGraphicsRectItem* QGraphicsRectItem_new4(QGraphicsItem* parent);
-QGraphicsRectItem* QGraphicsRectItem_new5(const QRectF* rect, QGraphicsItem* parent);
-QGraphicsRectItem* QGraphicsRectItem_new6(double x, double y, double w, double h, QGraphicsItem* parent);
+QGraphicsRectItem* QGraphicsRectItem_New();
+QGraphicsRectItem* QGraphicsRectItem_New2(const QRectF* rect);
+QGraphicsRectItem* QGraphicsRectItem_New3(double x, double y, double w, double h);
+QGraphicsRectItem* QGraphicsRectItem_New4(QGraphicsItem* parent);
+QGraphicsRectItem* QGraphicsRectItem_New5(const QRectF* rect, QGraphicsItem* parent);
+QGraphicsRectItem* QGraphicsRectItem_New6(double x, double y, double w, double h, QGraphicsItem* parent);
 QRectF* QGraphicsRectItem_Rect(const QGraphicsRectItem* self);
 void QGraphicsRectItem_SetRect(QGraphicsRectItem* self, const QRectF* rect);
 void QGraphicsRectItem_SetRect2(QGraphicsRectItem* self, double x, double y, double w, double h);
@@ -921,12 +921,12 @@ void QGraphicsRectItem_OnPrepareGeometryChange(QGraphicsRectItem* self, intptr_t
 void QGraphicsRectItem_SuperPrepareGeometryChange(QGraphicsRectItem* self);
 void QGraphicsRectItem_Delete(QGraphicsRectItem* self);
 
-QGraphicsEllipseItem* QGraphicsEllipseItem_new();
-QGraphicsEllipseItem* QGraphicsEllipseItem_new2(const QRectF* rect);
-QGraphicsEllipseItem* QGraphicsEllipseItem_new3(double x, double y, double w, double h);
-QGraphicsEllipseItem* QGraphicsEllipseItem_new4(QGraphicsItem* parent);
-QGraphicsEllipseItem* QGraphicsEllipseItem_new5(const QRectF* rect, QGraphicsItem* parent);
-QGraphicsEllipseItem* QGraphicsEllipseItem_new6(double x, double y, double w, double h, QGraphicsItem* parent);
+QGraphicsEllipseItem* QGraphicsEllipseItem_New();
+QGraphicsEllipseItem* QGraphicsEllipseItem_New2(const QRectF* rect);
+QGraphicsEllipseItem* QGraphicsEllipseItem_New3(double x, double y, double w, double h);
+QGraphicsEllipseItem* QGraphicsEllipseItem_New4(QGraphicsItem* parent);
+QGraphicsEllipseItem* QGraphicsEllipseItem_New5(const QRectF* rect, QGraphicsItem* parent);
+QGraphicsEllipseItem* QGraphicsEllipseItem_New6(double x, double y, double w, double h, QGraphicsItem* parent);
 QRectF* QGraphicsEllipseItem_Rect(const QGraphicsEllipseItem* self);
 void QGraphicsEllipseItem_SetRect(QGraphicsEllipseItem* self, const QRectF* rect);
 void QGraphicsEllipseItem_SetRect2(QGraphicsEllipseItem* self, double x, double y, double w, double h);
@@ -1053,8 +1053,8 @@ void QGraphicsEllipseItem_OnPrepareGeometryChange(QGraphicsEllipseItem* self, in
 void QGraphicsEllipseItem_SuperPrepareGeometryChange(QGraphicsEllipseItem* self);
 void QGraphicsEllipseItem_Delete(QGraphicsEllipseItem* self);
 
-QGraphicsPolygonItem* QGraphicsPolygonItem_new();
-QGraphicsPolygonItem* QGraphicsPolygonItem_new2(QGraphicsItem* parent);
+QGraphicsPolygonItem* QGraphicsPolygonItem_New();
+QGraphicsPolygonItem* QGraphicsPolygonItem_New2(QGraphicsItem* parent);
 int QGraphicsPolygonItem_FillRule(const QGraphicsPolygonItem* self);
 void QGraphicsPolygonItem_SetFillRule(QGraphicsPolygonItem* self, int rule);
 QRectF* QGraphicsPolygonItem_BoundingRect(const QGraphicsPolygonItem* self);
@@ -1176,12 +1176,12 @@ void QGraphicsPolygonItem_OnPrepareGeometryChange(QGraphicsPolygonItem* self, in
 void QGraphicsPolygonItem_SuperPrepareGeometryChange(QGraphicsPolygonItem* self);
 void QGraphicsPolygonItem_Delete(QGraphicsPolygonItem* self);
 
-QGraphicsLineItem* QGraphicsLineItem_new();
-QGraphicsLineItem* QGraphicsLineItem_new2(const QLineF* line);
-QGraphicsLineItem* QGraphicsLineItem_new3(double x1, double y1, double x2, double y2);
-QGraphicsLineItem* QGraphicsLineItem_new4(QGraphicsItem* parent);
-QGraphicsLineItem* QGraphicsLineItem_new5(const QLineF* line, QGraphicsItem* parent);
-QGraphicsLineItem* QGraphicsLineItem_new6(double x1, double y1, double x2, double y2, QGraphicsItem* parent);
+QGraphicsLineItem* QGraphicsLineItem_New();
+QGraphicsLineItem* QGraphicsLineItem_New2(const QLineF* line);
+QGraphicsLineItem* QGraphicsLineItem_New3(double x1, double y1, double x2, double y2);
+QGraphicsLineItem* QGraphicsLineItem_New4(QGraphicsItem* parent);
+QGraphicsLineItem* QGraphicsLineItem_New5(const QLineF* line, QGraphicsItem* parent);
+QGraphicsLineItem* QGraphicsLineItem_New6(double x1, double y1, double x2, double y2, QGraphicsItem* parent);
 QPen* QGraphicsLineItem_Pen(const QGraphicsLineItem* self);
 void QGraphicsLineItem_SetPen(QGraphicsLineItem* self, const QPen* pen);
 QLineF* QGraphicsLineItem_Line(const QGraphicsLineItem* self);
@@ -1306,10 +1306,10 @@ void QGraphicsLineItem_OnPrepareGeometryChange(QGraphicsLineItem* self, intptr_t
 void QGraphicsLineItem_SuperPrepareGeometryChange(QGraphicsLineItem* self);
 void QGraphicsLineItem_Delete(QGraphicsLineItem* self);
 
-QGraphicsPixmapItem* QGraphicsPixmapItem_new();
-QGraphicsPixmapItem* QGraphicsPixmapItem_new2(const QPixmap* pixmap);
-QGraphicsPixmapItem* QGraphicsPixmapItem_new3(QGraphicsItem* parent);
-QGraphicsPixmapItem* QGraphicsPixmapItem_new4(const QPixmap* pixmap, QGraphicsItem* parent);
+QGraphicsPixmapItem* QGraphicsPixmapItem_New();
+QGraphicsPixmapItem* QGraphicsPixmapItem_New2(const QPixmap* pixmap);
+QGraphicsPixmapItem* QGraphicsPixmapItem_New3(QGraphicsItem* parent);
+QGraphicsPixmapItem* QGraphicsPixmapItem_New4(const QPixmap* pixmap, QGraphicsItem* parent);
 QPixmap* QGraphicsPixmapItem_Pixmap(const QGraphicsPixmapItem* self);
 void QGraphicsPixmapItem_SetPixmap(QGraphicsPixmapItem* self, const QPixmap* pixmap);
 int QGraphicsPixmapItem_TransformationMode(const QGraphicsPixmapItem* self);
@@ -1438,10 +1438,10 @@ void QGraphicsPixmapItem_OnPrepareGeometryChange(QGraphicsPixmapItem* self, intp
 void QGraphicsPixmapItem_SuperPrepareGeometryChange(QGraphicsPixmapItem* self);
 void QGraphicsPixmapItem_Delete(QGraphicsPixmapItem* self);
 
-QGraphicsTextItem* QGraphicsTextItem_new();
-QGraphicsTextItem* QGraphicsTextItem_new2(const libqt_string text);
-QGraphicsTextItem* QGraphicsTextItem_new3(QGraphicsItem* parent);
-QGraphicsTextItem* QGraphicsTextItem_new4(const libqt_string text, QGraphicsItem* parent);
+QGraphicsTextItem* QGraphicsTextItem_New();
+QGraphicsTextItem* QGraphicsTextItem_New2(const libqt_string text);
+QGraphicsTextItem* QGraphicsTextItem_New3(QGraphicsItem* parent);
+QGraphicsTextItem* QGraphicsTextItem_New4(const libqt_string text, QGraphicsItem* parent);
 QMetaObject* QGraphicsTextItem_MetaObject(const QGraphicsTextItem* self);
 void* QGraphicsTextItem_Metacast(QGraphicsTextItem* self, const char* param1);
 int QGraphicsTextItem_Metacall(QGraphicsTextItem* self, int param1, int param2, void** param3);
@@ -1628,10 +1628,10 @@ void QGraphicsTextItem_OnPrepareGeometryChange(QGraphicsTextItem* self, intptr_t
 void QGraphicsTextItem_SuperPrepareGeometryChange(QGraphicsTextItem* self);
 void QGraphicsTextItem_Delete(QGraphicsTextItem* self);
 
-QGraphicsSimpleTextItem* QGraphicsSimpleTextItem_new();
-QGraphicsSimpleTextItem* QGraphicsSimpleTextItem_new2(const libqt_string text);
-QGraphicsSimpleTextItem* QGraphicsSimpleTextItem_new3(QGraphicsItem* parent);
-QGraphicsSimpleTextItem* QGraphicsSimpleTextItem_new4(const libqt_string text, QGraphicsItem* parent);
+QGraphicsSimpleTextItem* QGraphicsSimpleTextItem_New();
+QGraphicsSimpleTextItem* QGraphicsSimpleTextItem_New2(const libqt_string text);
+QGraphicsSimpleTextItem* QGraphicsSimpleTextItem_New3(QGraphicsItem* parent);
+QGraphicsSimpleTextItem* QGraphicsSimpleTextItem_New4(const libqt_string text, QGraphicsItem* parent);
 void QGraphicsSimpleTextItem_SetText(QGraphicsSimpleTextItem* self, const libqt_string text);
 libqt_string QGraphicsSimpleTextItem_Text(const QGraphicsSimpleTextItem* self);
 void QGraphicsSimpleTextItem_SetFont(QGraphicsSimpleTextItem* self, const QFont* font);
@@ -1755,8 +1755,8 @@ void QGraphicsSimpleTextItem_OnPrepareGeometryChange(QGraphicsSimpleTextItem* se
 void QGraphicsSimpleTextItem_SuperPrepareGeometryChange(QGraphicsSimpleTextItem* self);
 void QGraphicsSimpleTextItem_Delete(QGraphicsSimpleTextItem* self);
 
-QGraphicsItemGroup* QGraphicsItemGroup_new();
-QGraphicsItemGroup* QGraphicsItemGroup_new2(QGraphicsItem* parent);
+QGraphicsItemGroup* QGraphicsItemGroup_New();
+QGraphicsItemGroup* QGraphicsItemGroup_New2(QGraphicsItem* parent);
 void QGraphicsItemGroup_AddToGroup(QGraphicsItemGroup* self, QGraphicsItem* item);
 void QGraphicsItemGroup_RemoveFromGroup(QGraphicsItemGroup* self, QGraphicsItem* item);
 QRectF* QGraphicsItemGroup_BoundingRect(const QGraphicsItemGroup* self);

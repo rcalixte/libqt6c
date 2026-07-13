@@ -18,9 +18,9 @@ extern "C" {
 typedef struct KFileFilter KFileFilter;
 #endif
 
-KFileFilter* KFileFilter_new();
-KFileFilter* KFileFilter_new2(const libqt_string label, const libqt_list /* of libqt_string */ filePatterns, const libqt_list /* of libqt_string */ mimePatterns);
-KFileFilter* KFileFilter_new3(const KFileFilter* other);
+KFileFilter* KFileFilter_New();
+KFileFilter* KFileFilter_New2(const libqt_string label, const libqt_list /* of libqt_string */ filePatterns, const libqt_list /* of libqt_string */ mimePatterns);
+KFileFilter* KFileFilter_New3(const KFileFilter* other);
 void KFileFilter_OperatorAssign(KFileFilter* self, const KFileFilter* other);
 bool KFileFilter_OperatorEqual(const KFileFilter* self, const KFileFilter* other);
 libqt_string KFileFilter_Label(const KFileFilter* self);

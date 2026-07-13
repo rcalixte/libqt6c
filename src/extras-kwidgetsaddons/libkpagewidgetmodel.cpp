@@ -26,11 +26,11 @@
 #include "libkpagewidgetmodel.hpp"
 #include "libkpagewidgetmodel.hxx"
 
-KPageWidgetItem* KPageWidgetItem_new(QWidget* widget) {
+KPageWidgetItem* KPageWidgetItem_New(QWidget* widget) {
     return new VirtualKPageWidgetItem(widget);
 }
 
-KPageWidgetItem* KPageWidgetItem_new2(QWidget* widget, const libqt_string name) {
+KPageWidgetItem* KPageWidgetItem_New2(QWidget* widget, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualKPageWidgetItem(widget, name_QString);
 }
@@ -562,11 +562,11 @@ void KPageWidgetItem_Delete(KPageWidgetItem* self) {
     delete self;
 }
 
-KPageWidgetModel* KPageWidgetModel_new() {
+KPageWidgetModel* KPageWidgetModel_New() {
     return new VirtualKPageWidgetModel();
 }
 
-KPageWidgetModel* KPageWidgetModel_new2(QObject* parent) {
+KPageWidgetModel* KPageWidgetModel_New2(QObject* parent) {
     return new VirtualKPageWidgetModel(parent);
 }
 

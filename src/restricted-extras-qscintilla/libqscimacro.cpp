@@ -9,11 +9,11 @@
 #include "libqscimacro.hpp"
 #include "libqscimacro.hxx"
 
-QsciMacro* QsciMacro_new(QsciScintilla* parent) {
+QsciMacro* QsciMacro_New(QsciScintilla* parent) {
     return new VirtualQsciMacro(parent);
 }
 
-QsciMacro* QsciMacro_new2(const libqt_string asc, QsciScintilla* parent) {
+QsciMacro* QsciMacro_New2(const libqt_string asc, QsciScintilla* parent) {
     QString asc_QString = QString::fromUtf8(asc.data, asc.len);
     return new VirtualQsciMacro(asc_QString, parent);
 }

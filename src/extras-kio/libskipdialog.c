@@ -15,7 +15,7 @@
 #include "libskipdialog.h"
 
 KIO__SkipDialog* k_io__skipdialog_new(void* parent, int32_t options, const char* _error_text) {
-    return KIO__SkipDialog_new((QWidget*)parent, options, qstring(_error_text));
+    return KIO__SkipDialog_New((QWidget*)parent, options, qstring(_error_text));
 }
 
 const QMetaObject* k_io__skipdialog_meta_object(void* self) {

@@ -18,27 +18,27 @@
 #include "libqpushbutton.h"
 
 QPushButton* q_pushbutton_new(void* parent) {
-    return QPushButton_new((QWidget*)parent);
+    return QPushButton_New((QWidget*)parent);
 }
 
 QPushButton* q_pushbutton_new2() {
-    return QPushButton_new2();
+    return QPushButton_New2();
 }
 
 QPushButton* q_pushbutton_new3(const char* text) {
-    return QPushButton_new3(qstring(text));
+    return QPushButton_New3(qstring(text));
 }
 
 QPushButton* q_pushbutton_new4(void* icon, const char* text) {
-    return QPushButton_new4((QIcon*)icon, qstring(text));
+    return QPushButton_New4((QIcon*)icon, qstring(text));
 }
 
 QPushButton* q_pushbutton_new5(const char* text, void* parent) {
-    return QPushButton_new5(qstring(text), (QWidget*)parent);
+    return QPushButton_New5(qstring(text), (QWidget*)parent);
 }
 
 QPushButton* q_pushbutton_new6(void* icon, const char* text, void* parent) {
-    return QPushButton_new6((QIcon*)icon, qstring(text), (QWidget*)parent);
+    return QPushButton_New6((QIcon*)icon, qstring(text), (QWidget*)parent);
 }
 
 const QMetaObject* q_pushbutton_meta_object(void* self) {

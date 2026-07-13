@@ -39,15 +39,15 @@
 #include "libqframe.hpp"
 #include "libqframe.hxx"
 
-QFrame* QFrame_new(QWidget* parent) {
+QFrame* QFrame_New(QWidget* parent) {
     return new VirtualQFrame(parent);
 }
 
-QFrame* QFrame_new2() {
+QFrame* QFrame_New2() {
     return new VirtualQFrame();
 }
 
-QFrame* QFrame_new3(QWidget* parent, int f) {
+QFrame* QFrame_New3(QWidget* parent, int f) {
     return new VirtualQFrame(parent, static_cast<Qt::WindowFlags>(f));
 }
 

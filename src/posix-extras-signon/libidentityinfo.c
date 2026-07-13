@@ -3,11 +3,11 @@
 #include "libidentityinfo.h"
 
 SignOn__IdentityInfo* q_signon__identityinfo_new() {
-    return SignOn__IdentityInfo_new();
+    return SignOn__IdentityInfo_New();
 }
 
 SignOn__IdentityInfo* q_signon__identityinfo_new2(void* other) {
-    return SignOn__IdentityInfo_new2((SignOn__IdentityInfo*)other);
+    return SignOn__IdentityInfo_New2((SignOn__IdentityInfo*)other);
 }
 
 SignOn__IdentityInfo* q_signon__identityinfo_new3(const char* caption, const char* userName, libqt_map /* of const char* to SignOn__MechanismsList */ methods) {
@@ -34,7 +34,7 @@ SignOn__IdentityInfo* q_signon__identityinfo_new3(const char* caption, const cha
         methods_vdest[i] = methods_varr[i];
     }
 
-    SignOn__IdentityInfo* _out = SignOn__IdentityInfo_new3(qstring(caption), qstring(userName), methods_ret);
+    SignOn__IdentityInfo* _out = SignOn__IdentityInfo_New3(qstring(caption), qstring(userName), methods_ret);
     free(methods_ret.keys);
     free(methods_ret.values);
     return _out;

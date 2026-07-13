@@ -5,11 +5,11 @@
 #include "libtopic.hpp"
 #include "libtopic.hxx"
 
-Attica__Topic* Attica__Topic_new() {
+Attica__Topic* Attica__Topic_New() {
     return new Attica::Topic();
 }
 
-Attica__Topic* Attica__Topic_new2(const Attica__Topic* other) {
+Attica__Topic* Attica__Topic_New2(const Attica__Topic* other) {
     return new Attica::Topic(*other);
 }
 

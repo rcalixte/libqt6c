@@ -24,8 +24,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QMaskGenerator* QMaskGenerator_new();
-QMaskGenerator* QMaskGenerator_new2(QObject* parent);
+QMaskGenerator* QMaskGenerator_New();
+QMaskGenerator* QMaskGenerator_New2(QObject* parent);
 bool QMaskGenerator_Seed(QMaskGenerator* self);
 unsigned int QMaskGenerator_NextMask(QMaskGenerator* self);
 void QMaskGenerator_OnSeed(QMaskGenerator* self, intptr_t slot);

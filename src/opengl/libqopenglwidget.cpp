@@ -40,15 +40,15 @@
 #include "libqopenglwidget.hpp"
 #include "libqopenglwidget.hxx"
 
-QOpenGLWidget* QOpenGLWidget_new(QWidget* parent) {
+QOpenGLWidget* QOpenGLWidget_New(QWidget* parent) {
     return new VirtualQOpenGLWidget(parent);
 }
 
-QOpenGLWidget* QOpenGLWidget_new2() {
+QOpenGLWidget* QOpenGLWidget_New2() {
     return new VirtualQOpenGLWidget();
 }
 
-QOpenGLWidget* QOpenGLWidget_new3(QWidget* parent, int f) {
+QOpenGLWidget* QOpenGLWidget_New3(QWidget* parent, int f) {
     return new VirtualQOpenGLWidget(parent, static_cast<Qt::WindowFlags>(f));
 }
 

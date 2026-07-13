@@ -3,11 +3,11 @@
 #include "libqocspresponse.h"
 
 QOcspResponse* q_ocspresponse_new() {
-    return QOcspResponse_new();
+    return QOcspResponse_New();
 }
 
 QOcspResponse* q_ocspresponse_new2(void* other) {
-    return QOcspResponse_new2((QOcspResponse*)other);
+    return QOcspResponse_New2((QOcspResponse*)other);
 }
 
 void q_ocspresponse_operator_assign(void* self, void* other) {

@@ -15,11 +15,11 @@
 #include "libqplace.hpp"
 #include "libqplace.hxx"
 
-QPlace* QPlace_new() {
+QPlace* QPlace_New() {
     return new QPlace();
 }
 
-QPlace* QPlace_new2(const QPlace* other) {
+QPlace* QPlace_New2(const QPlace* other) {
     return new QPlace(*other);
 }
 

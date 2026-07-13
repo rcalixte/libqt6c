@@ -27,8 +27,8 @@ typedef struct QTcpSocket QTcpSocket;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QSctpServer* QSctpServer_new();
-QSctpServer* QSctpServer_new2(QObject* parent);
+QSctpServer* QSctpServer_New();
+QSctpServer* QSctpServer_New2(QObject* parent);
 QMetaObject* QSctpServer_MetaObject(const QSctpServer* self);
 void* QSctpServer_Metacast(QSctpServer* self, const char* param1);
 int QSctpServer_Metacall(QSctpServer* self, int param1, int param2, void** param3);

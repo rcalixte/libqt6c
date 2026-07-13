@@ -11,11 +11,11 @@
 #include "libqplaceidreply.hpp"
 #include "libqplaceidreply.hxx"
 
-QPlaceIdReply* QPlaceIdReply_new(int operationType) {
+QPlaceIdReply* QPlaceIdReply_New(int operationType) {
     return new VirtualQPlaceIdReply(static_cast<QPlaceIdReply::OperationType>(operationType));
 }
 
-QPlaceIdReply* QPlaceIdReply_new2(int operationType, QObject* parent) {
+QPlaceIdReply* QPlaceIdReply_New2(int operationType, QObject* parent) {
     return new VirtualQPlaceIdReply(static_cast<QPlaceIdReply::OperationType>(operationType), parent);
 }
 

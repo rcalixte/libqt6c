@@ -5,11 +5,11 @@
 #include "libimportkmailautocorrection.hpp"
 #include "libimportkmailautocorrection.hxx"
 
-TextAutoCorrectionCore__ImportKMailAutocorrection* TextAutoCorrectionCore__ImportKMailAutocorrection_new() {
+TextAutoCorrectionCore__ImportKMailAutocorrection* TextAutoCorrectionCore__ImportKMailAutocorrection_New() {
     return new VirtualTextAutoCorrectionCoreImportKMailAutocorrection();
 }
 
-TextAutoCorrectionCore__ImportKMailAutocorrection* TextAutoCorrectionCore__ImportKMailAutocorrection_new2(const TextAutoCorrectionCore__ImportKMailAutocorrection* param1) {
+TextAutoCorrectionCore__ImportKMailAutocorrection* TextAutoCorrectionCore__ImportKMailAutocorrection_New2(const TextAutoCorrectionCore__ImportKMailAutocorrection* param1) {
     return new VirtualTextAutoCorrectionCoreImportKMailAutocorrection(*param1);
 }
 

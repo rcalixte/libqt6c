@@ -9,11 +9,11 @@
 #include "libqsvggenerator.h"
 
 QSvgGenerator* q_svggenerator_new() {
-    return QSvgGenerator_new();
+    return QSvgGenerator_New();
 }
 
 QSvgGenerator* q_svggenerator_new2(int32_t version) {
-    return QSvgGenerator_new2(version);
+    return QSvgGenerator_New2(version);
 }
 
 const char* q_svggenerator_title(void* self) {

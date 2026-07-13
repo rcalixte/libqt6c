@@ -6,11 +6,11 @@
 #include "libkarchivedirectory.h"
 
 KArchiveDirectory* k_archivedirectory_new(void* archive, const char* name, int access, void* date, const char* user, const char* group, const char* symlink) {
-    return KArchiveDirectory_new((KArchive*)archive, qstring(name), access, (QDateTime*)date, qstring(user), qstring(group), qstring(symlink));
+    return KArchiveDirectory_New((KArchive*)archive, qstring(name), access, (QDateTime*)date, qstring(user), qstring(group), qstring(symlink));
 }
 
 KArchiveDirectory* k_archivedirectory_new2(void* param1) {
-    return KArchiveDirectory_new2((KArchiveDirectory*)param1);
+    return KArchiveDirectory_New2((KArchiveDirectory*)param1);
 }
 
 const char** k_archivedirectory_entries(void* self) {

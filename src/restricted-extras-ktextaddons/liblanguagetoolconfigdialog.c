@@ -15,11 +15,11 @@
 #include "liblanguagetoolconfigdialog.h"
 
 TextGrammarCheck__LanguageToolConfigDialog* k_textgrammarcheck__languagetoolconfigdialog_new(void* parent) {
-    return TextGrammarCheck__LanguageToolConfigDialog_new((QWidget*)parent);
+    return TextGrammarCheck__LanguageToolConfigDialog_New((QWidget*)parent);
 }
 
 TextGrammarCheck__LanguageToolConfigDialog* k_textgrammarcheck__languagetoolconfigdialog_new2() {
-    return TextGrammarCheck__LanguageToolConfigDialog_new2();
+    return TextGrammarCheck__LanguageToolConfigDialog_New2();
 }
 
 const QMetaObject* k_textgrammarcheck__languagetoolconfigdialog_meta_object(void* self) {

@@ -5,7 +5,7 @@
 #include "libkiconeffect.h"
 
 KIconEffect* k_iconeffect_new() {
-    return KIconEffect_new();
+    return KIconEffect_New();
 }
 
 void k_iconeffect_init(void* self) {

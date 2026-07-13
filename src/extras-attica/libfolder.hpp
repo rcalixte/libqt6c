@@ -21,8 +21,8 @@ typedef Attica::Folder Attica__Folder;
 typedef struct Attica__Folder Attica__Folder;
 #endif
 
-Attica__Folder* Attica__Folder_new();
-Attica__Folder* Attica__Folder_new2(const Attica__Folder* other);
+Attica__Folder* Attica__Folder_New();
+Attica__Folder* Attica__Folder_New2(const Attica__Folder* other);
 void Attica__Folder_OperatorAssign(Attica__Folder* self, const Attica__Folder* other);
 void Attica__Folder_SetId(Attica__Folder* self, const libqt_string id);
 libqt_string Attica__Folder_Id(const Attica__Folder* self);

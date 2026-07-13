@@ -8,42 +8,42 @@
 #include "libqpagesize.hpp"
 #include "libqpagesize.hxx"
 
-QPageSize* QPageSize_new() {
+QPageSize* QPageSize_New() {
     return new QPageSize();
 }
 
-QPageSize* QPageSize_new2(int pageSizeId) {
+QPageSize* QPageSize_New2(int pageSizeId) {
     return new QPageSize(static_cast<QPageSize::PageSizeId>(pageSizeId));
 }
 
-QPageSize* QPageSize_new3(const QSize* pointSize) {
+QPageSize* QPageSize_New3(const QSize* pointSize) {
     return new QPageSize(*pointSize);
 }
 
-QPageSize* QPageSize_new4(const QSizeF* size, int units) {
+QPageSize* QPageSize_New4(const QSizeF* size, int units) {
     return new QPageSize(*size, static_cast<QPageSize::Unit>(units));
 }
 
-QPageSize* QPageSize_new5(const QPageSize* other) {
+QPageSize* QPageSize_New5(const QPageSize* other) {
     return new QPageSize(*other);
 }
 
-QPageSize* QPageSize_new6(const QSize* pointSize, const libqt_string name) {
+QPageSize* QPageSize_New6(const QSize* pointSize, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QPageSize(*pointSize, name_QString);
 }
 
-QPageSize* QPageSize_new7(const QSize* pointSize, const libqt_string name, int matchPolicy) {
+QPageSize* QPageSize_New7(const QSize* pointSize, const libqt_string name, int matchPolicy) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QPageSize(*pointSize, name_QString, static_cast<QPageSize::SizeMatchPolicy>(matchPolicy));
 }
 
-QPageSize* QPageSize_new8(const QSizeF* size, int units, const libqt_string name) {
+QPageSize* QPageSize_New8(const QSizeF* size, int units, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QPageSize(*size, static_cast<QPageSize::Unit>(units), name_QString);
 }
 
-QPageSize* QPageSize_new9(const QSizeF* size, int units, const libqt_string name, int matchPolicy) {
+QPageSize* QPageSize_New9(const QSizeF* size, int units, const libqt_string name, int matchPolicy) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QPageSize(*size, static_cast<QPageSize::Unit>(units), name_QString, static_cast<QPageSize::SizeMatchPolicy>(matchPolicy));
 }

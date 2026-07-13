@@ -25,8 +25,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KWindowInsetsController* KWindowInsetsController_new();
-KWindowInsetsController* KWindowInsetsController_new2(QObject* parent);
+KWindowInsetsController* KWindowInsetsController_New();
+KWindowInsetsController* KWindowInsetsController_New2(QObject* parent);
 QMetaObject* KWindowInsetsController_MetaObject(const KWindowInsetsController* self);
 void* KWindowInsetsController_Metacast(KWindowInsetsController* self, const char* param1);
 int KWindowInsetsController_Metacall(KWindowInsetsController* self, int param1, int param2, void** param3);

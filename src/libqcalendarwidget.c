@@ -18,11 +18,11 @@
 #include "libqcalendarwidget.h"
 
 QCalendarWidget* q_calendarwidget_new(void* parent) {
-    return QCalendarWidget_new((QWidget*)parent);
+    return QCalendarWidget_New((QWidget*)parent);
 }
 
 QCalendarWidget* q_calendarwidget_new2() {
-    return QCalendarWidget_new2();
+    return QCalendarWidget_New2();
 }
 
 const QMetaObject* q_calendarwidget_meta_object(void* self) {

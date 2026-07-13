@@ -4,27 +4,27 @@
 #include "libqsizepolicy.hpp"
 #include "libqsizepolicy.hxx"
 
-QSizePolicy* QSizePolicy_new(const QSizePolicy* other) {
+QSizePolicy* QSizePolicy_New(const QSizePolicy* other) {
     return new QSizePolicy(*other);
 }
 
-QSizePolicy* QSizePolicy_new2(QSizePolicy* other) {
+QSizePolicy* QSizePolicy_New2(QSizePolicy* other) {
     return new QSizePolicy(std::move(*other));
 }
 
-QSizePolicy* QSizePolicy_new3() {
+QSizePolicy* QSizePolicy_New3() {
     return new QSizePolicy();
 }
 
-QSizePolicy* QSizePolicy_new4(int horizontal, int vertical) {
+QSizePolicy* QSizePolicy_New4(int horizontal, int vertical) {
     return new QSizePolicy(static_cast<QSizePolicy::Policy>(horizontal), static_cast<QSizePolicy::Policy>(vertical));
 }
 
-QSizePolicy* QSizePolicy_new5(const QSizePolicy* param1) {
+QSizePolicy* QSizePolicy_New5(const QSizePolicy* param1) {
     return new QSizePolicy(*param1);
 }
 
-QSizePolicy* QSizePolicy_new6(int horizontal, int vertical, int type) {
+QSizePolicy* QSizePolicy_New6(int horizontal, int vertical, int type) {
     return new QSizePolicy(static_cast<QSizePolicy::Policy>(horizontal), static_cast<QSizePolicy::Policy>(vertical), static_cast<QSizePolicy::ControlType>(type));
 }
 

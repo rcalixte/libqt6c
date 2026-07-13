@@ -24,11 +24,11 @@
 #include "libkrearrangecolumnsproxymodel.hpp"
 #include "libkrearrangecolumnsproxymodel.hxx"
 
-KRearrangeColumnsProxyModel* KRearrangeColumnsProxyModel_new() {
+KRearrangeColumnsProxyModel* KRearrangeColumnsProxyModel_New() {
     return new VirtualKRearrangeColumnsProxyModel();
 }
 
-KRearrangeColumnsProxyModel* KRearrangeColumnsProxyModel_new2(QObject* parent) {
+KRearrangeColumnsProxyModel* KRearrangeColumnsProxyModel_New2(QObject* parent) {
     return new VirtualKRearrangeColumnsProxyModel(parent);
 }
 

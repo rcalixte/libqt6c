@@ -11,7 +11,7 @@
 #include "libqimageiohandler.h"
 
 QImageIOHandler* q_imageiohandler_new() {
-    return QImageIOHandler_new();
+    return QImageIOHandler_New();
 }
 
 void q_imageiohandler_set_device(void* self, void* device) {
@@ -202,11 +202,11 @@ void q_imageiohandler_delete(void* self) {
 }
 
 QImageIOPlugin* q_imageioplugin_new() {
-    return QImageIOPlugin_new();
+    return QImageIOPlugin_New();
 }
 
 QImageIOPlugin* q_imageioplugin_new2(void* parent) {
-    return QImageIOPlugin_new2((QObject*)parent);
+    return QImageIOPlugin_New2((QObject*)parent);
 }
 
 const QMetaObject* q_imageioplugin_meta_object(void* self) {

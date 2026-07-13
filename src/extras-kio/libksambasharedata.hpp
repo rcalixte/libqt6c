@@ -18,8 +18,8 @@ extern "C" {
 typedef struct KSambaShareData KSambaShareData;
 #endif
 
-KSambaShareData* KSambaShareData_new();
-KSambaShareData* KSambaShareData_new2(const KSambaShareData* other);
+KSambaShareData* KSambaShareData_New();
+KSambaShareData* KSambaShareData_New2(const KSambaShareData* other);
 libqt_string KSambaShareData_Name(const KSambaShareData* self);
 libqt_string KSambaShareData_Path(const KSambaShareData* self);
 libqt_string KSambaShareData_Comment(const KSambaShareData* self);

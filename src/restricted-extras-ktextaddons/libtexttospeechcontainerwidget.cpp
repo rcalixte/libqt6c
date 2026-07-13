@@ -37,11 +37,11 @@
 #include "libtexttospeechcontainerwidget.hpp"
 #include "libtexttospeechcontainerwidget.hxx"
 
-TextEditTextToSpeech__TextToSpeechContainerWidget* TextEditTextToSpeech__TextToSpeechContainerWidget_new(QWidget* parent) {
+TextEditTextToSpeech__TextToSpeechContainerWidget* TextEditTextToSpeech__TextToSpeechContainerWidget_New(QWidget* parent) {
     return new VirtualTextEditTextToSpeechTextToSpeechContainerWidget(parent);
 }
 
-TextEditTextToSpeech__TextToSpeechContainerWidget* TextEditTextToSpeech__TextToSpeechContainerWidget_new2() {
+TextEditTextToSpeech__TextToSpeechContainerWidget* TextEditTextToSpeech__TextToSpeechContainerWidget_New2() {
     return new VirtualTextEditTextToSpeechTextToSpeechContainerWidget();
 }
 

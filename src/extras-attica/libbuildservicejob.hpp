@@ -21,8 +21,8 @@ typedef Attica::BuildServiceJob Attica__BuildServiceJob;
 typedef struct Attica__BuildServiceJob Attica__BuildServiceJob;
 #endif
 
-Attica__BuildServiceJob* Attica__BuildServiceJob_new();
-Attica__BuildServiceJob* Attica__BuildServiceJob_new2(const Attica__BuildServiceJob* other);
+Attica__BuildServiceJob* Attica__BuildServiceJob_New();
+Attica__BuildServiceJob* Attica__BuildServiceJob_New2(const Attica__BuildServiceJob* other);
 void Attica__BuildServiceJob_OperatorAssign(Attica__BuildServiceJob* self, const Attica__BuildServiceJob* other);
 void Attica__BuildServiceJob_SetId(Attica__BuildServiceJob* self, const libqt_string id);
 libqt_string Attica__BuildServiceJob_Id(const Attica__BuildServiceJob* self);

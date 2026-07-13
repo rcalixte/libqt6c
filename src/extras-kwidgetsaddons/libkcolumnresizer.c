@@ -8,11 +8,11 @@
 #include "libkcolumnresizer.h"
 
 KColumnResizer* k_columnresizer_new() {
-    return KColumnResizer_new();
+    return KColumnResizer_New();
 }
 
 KColumnResizer* k_columnresizer_new2(void* parent) {
-    return KColumnResizer_new2((QObject*)parent);
+    return KColumnResizer_New2((QObject*)parent);
 }
 
 const QMetaObject* k_columnresizer_meta_object(void* self) {

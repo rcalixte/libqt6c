@@ -16,19 +16,19 @@
 #include "libkaboutplugindialog.h"
 
 KAboutPluginDialog* k_aboutplugindialog_new(void* pluginMetaData, int32_t options) {
-    return KAboutPluginDialog_new((KPluginMetaData*)pluginMetaData, options);
+    return KAboutPluginDialog_New((KPluginMetaData*)pluginMetaData, options);
 }
 
 KAboutPluginDialog* k_aboutplugindialog_new2(void* pluginMetaData) {
-    return KAboutPluginDialog_new2((KPluginMetaData*)pluginMetaData);
+    return KAboutPluginDialog_New2((KPluginMetaData*)pluginMetaData);
 }
 
 KAboutPluginDialog* k_aboutplugindialog_new3(void* pluginMetaData, int32_t options, void* parent) {
-    return KAboutPluginDialog_new3((KPluginMetaData*)pluginMetaData, options, (QWidget*)parent);
+    return KAboutPluginDialog_New3((KPluginMetaData*)pluginMetaData, options, (QWidget*)parent);
 }
 
 KAboutPluginDialog* k_aboutplugindialog_new4(void* pluginMetaData, void* parent) {
-    return KAboutPluginDialog_new4((KPluginMetaData*)pluginMetaData, (QWidget*)parent);
+    return KAboutPluginDialog_New4((KPluginMetaData*)pluginMetaData, (QWidget*)parent);
 }
 
 const QMetaObject* k_aboutplugindialog_meta_object(void* self) {

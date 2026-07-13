@@ -21,7 +21,7 @@ typedef struct QGestureRecognizer QGestureRecognizer;
 typedef struct QObject QObject;
 #endif
 
-QGestureRecognizer* QGestureRecognizer_new();
+QGestureRecognizer* QGestureRecognizer_New();
 QGesture* QGestureRecognizer_Create(QGestureRecognizer* self, QObject* target);
 int QGestureRecognizer_Recognize(QGestureRecognizer* self, QGesture* state, QObject* watched, QEvent* event);
 void QGestureRecognizer_Reset(QGestureRecognizer* self, QGesture* state);

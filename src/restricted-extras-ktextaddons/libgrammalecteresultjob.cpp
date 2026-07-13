@@ -11,11 +11,11 @@
 #include "libgrammalecteresultjob.hpp"
 #include "libgrammalecteresultjob.hxx"
 
-TextGrammarCheck__GrammalecteResultJob* TextGrammarCheck__GrammalecteResultJob_new() {
+TextGrammarCheck__GrammalecteResultJob* TextGrammarCheck__GrammalecteResultJob_New() {
     return new VirtualTextGrammarCheckGrammalecteResultJob();
 }
 
-TextGrammarCheck__GrammalecteResultJob* TextGrammarCheck__GrammalecteResultJob_new2(QObject* parent) {
+TextGrammarCheck__GrammalecteResultJob* TextGrammarCheck__GrammalecteResultJob_New2(QObject* parent) {
     return new VirtualTextGrammarCheckGrammalecteResultJob(parent);
 }
 

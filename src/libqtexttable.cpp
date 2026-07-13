@@ -18,11 +18,11 @@
 #include "libqtexttable.hpp"
 #include "libqtexttable.hxx"
 
-QTextTableCell* QTextTableCell_new() {
+QTextTableCell* QTextTableCell_New() {
     return new QTextTableCell();
 }
 
-QTextTableCell* QTextTableCell_new2(const QTextTableCell* o) {
+QTextTableCell* QTextTableCell_New2(const QTextTableCell* o) {
     return new QTextTableCell(*o);
 }
 
@@ -98,7 +98,7 @@ void QTextTableCell_Delete(QTextTableCell* self) {
     delete self;
 }
 
-QTextTable* QTextTable_new(QTextDocument* doc) {
+QTextTable* QTextTable_New(QTextDocument* doc) {
     return new VirtualQTextTable(doc);
 }
 

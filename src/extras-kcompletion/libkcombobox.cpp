@@ -50,19 +50,19 @@
 #include "libkcombobox.hpp"
 #include "libkcombobox.hxx"
 
-KComboBox* KComboBox_new(QWidget* parent) {
+KComboBox* KComboBox_New(QWidget* parent) {
     return new VirtualKComboBox(parent);
 }
 
-KComboBox* KComboBox_new2() {
+KComboBox* KComboBox_New2() {
     return new VirtualKComboBox();
 }
 
-KComboBox* KComboBox_new3(bool rw) {
+KComboBox* KComboBox_New3(bool rw) {
     return new VirtualKComboBox(rw);
 }
 
-KComboBox* KComboBox_new4(bool rw, QWidget* parent) {
+KComboBox* KComboBox_New4(bool rw, QWidget* parent) {
     return new VirtualKComboBox(rw, parent);
 }
 

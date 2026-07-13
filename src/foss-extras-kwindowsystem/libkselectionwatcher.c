@@ -7,55 +7,55 @@
 
 #ifdef __linux__
 KSelectionWatcher* k_selectionwatcher_new(xcb_atom_t selection) {
-    return KSelectionWatcher_new(selection);
+    return KSelectionWatcher_New(selection);
 }
 #endif
 
 KSelectionWatcher* k_selectionwatcher_new2(const char* selection) {
-    return KSelectionWatcher_new2(selection);
+    return KSelectionWatcher_New2(selection);
 }
 
 #ifdef __linux__
 KSelectionWatcher* k_selectionwatcher_new3(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root) {
-    return KSelectionWatcher_new3(selection, c, root);
+    return KSelectionWatcher_New3(selection, c, root);
 }
 #endif
 
 #ifdef __linux__
 KSelectionWatcher* k_selectionwatcher_new4(const char* selection, xcb_connection_t* c, xcb_window_t root) {
-    return KSelectionWatcher_new4(selection, c, root);
+    return KSelectionWatcher_New4(selection, c, root);
 }
 #endif
 
 #ifdef __linux__
 KSelectionWatcher* k_selectionwatcher_new5(xcb_atom_t selection, int screen) {
-    return KSelectionWatcher_new5(selection, screen);
+    return KSelectionWatcher_New5(selection, screen);
 }
 #endif
 
 #ifdef __linux__
 KSelectionWatcher* k_selectionwatcher_new6(xcb_atom_t selection, int screen, void* parent) {
-    return KSelectionWatcher_new6(selection, screen, (QObject*)parent);
+    return KSelectionWatcher_New6(selection, screen, (QObject*)parent);
 }
 #endif
 
 KSelectionWatcher* k_selectionwatcher_new7(const char* selection, int screen) {
-    return KSelectionWatcher_new7(selection, screen);
+    return KSelectionWatcher_New7(selection, screen);
 }
 
 KSelectionWatcher* k_selectionwatcher_new8(const char* selection, int screen, void* parent) {
-    return KSelectionWatcher_new8(selection, screen, (QObject*)parent);
+    return KSelectionWatcher_New8(selection, screen, (QObject*)parent);
 }
 
 #ifdef __linux__
 KSelectionWatcher* k_selectionwatcher_new9(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root, void* parent) {
-    return KSelectionWatcher_new9(selection, c, root, (QObject*)parent);
+    return KSelectionWatcher_New9(selection, c, root, (QObject*)parent);
 }
 #endif
 
 #ifdef __linux__
 KSelectionWatcher* k_selectionwatcher_new10(const char* selection, xcb_connection_t* c, xcb_window_t root, void* parent) {
-    return KSelectionWatcher_new10(selection, c, root, (QObject*)parent);
+    return KSelectionWatcher_New10(selection, c, root, (QObject*)parent);
 }
 #endif
 

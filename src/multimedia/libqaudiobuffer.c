@@ -3,27 +3,27 @@
 #include "libqaudiobuffer.h"
 
 QAudioBuffer* q_audiobuffer_new() {
-    return QAudioBuffer_new();
+    return QAudioBuffer_New();
 }
 
 QAudioBuffer* q_audiobuffer_new2(void* other) {
-    return QAudioBuffer_new2((QAudioBuffer*)other);
+    return QAudioBuffer_New2((QAudioBuffer*)other);
 }
 
 QAudioBuffer* q_audiobuffer_new3(char* data, void* format) {
-    return QAudioBuffer_new3(qstring(data), (QAudioFormat*)format);
+    return QAudioBuffer_New3(qstring(data), (QAudioFormat*)format);
 }
 
 QAudioBuffer* q_audiobuffer_new4(int numFrames, void* format) {
-    return QAudioBuffer_new4(numFrames, (QAudioFormat*)format);
+    return QAudioBuffer_New4(numFrames, (QAudioFormat*)format);
 }
 
 QAudioBuffer* q_audiobuffer_new5(char* data, void* format, int64_t startTime) {
-    return QAudioBuffer_new5(qstring(data), (QAudioFormat*)format, startTime);
+    return QAudioBuffer_New5(qstring(data), (QAudioFormat*)format, startTime);
 }
 
 QAudioBuffer* q_audiobuffer_new6(int numFrames, void* format, int64_t startTime) {
-    return QAudioBuffer_new6(numFrames, (QAudioFormat*)format, startTime);
+    return QAudioBuffer_New6(numFrames, (QAudioFormat*)format, startTime);
 }
 
 void q_audiobuffer_operator_assign(void* self, void* other) {

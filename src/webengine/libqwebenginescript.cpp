@@ -5,11 +5,11 @@
 #include "libqwebenginescript.hpp"
 #include "libqwebenginescript.hxx"
 
-QWebEngineScript* QWebEngineScript_new() {
+QWebEngineScript* QWebEngineScript_New() {
     return new QWebEngineScript();
 }
 
-QWebEngineScript* QWebEngineScript_new2(const QWebEngineScript* other) {
+QWebEngineScript* QWebEngineScript_New2(const QWebEngineScript* other) {
     return new QWebEngineScript(*other);
 }
 

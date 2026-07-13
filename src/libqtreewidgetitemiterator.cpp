@@ -5,23 +5,23 @@
 #include "libqtreewidgetitemiterator.hpp"
 #include "libqtreewidgetitemiterator.hxx"
 
-QTreeWidgetItemIterator* QTreeWidgetItemIterator_new(const QTreeWidgetItemIterator* it) {
+QTreeWidgetItemIterator* QTreeWidgetItemIterator_New(const QTreeWidgetItemIterator* it) {
     return new QTreeWidgetItemIterator(*it);
 }
 
-QTreeWidgetItemIterator* QTreeWidgetItemIterator_new2(QTreeWidget* widget) {
+QTreeWidgetItemIterator* QTreeWidgetItemIterator_New2(QTreeWidget* widget) {
     return new QTreeWidgetItemIterator(widget);
 }
 
-QTreeWidgetItemIterator* QTreeWidgetItemIterator_new3(QTreeWidgetItem* item) {
+QTreeWidgetItemIterator* QTreeWidgetItemIterator_New3(QTreeWidgetItem* item) {
     return new QTreeWidgetItemIterator(item);
 }
 
-QTreeWidgetItemIterator* QTreeWidgetItemIterator_new4(QTreeWidget* widget, int flags) {
+QTreeWidgetItemIterator* QTreeWidgetItemIterator_New4(QTreeWidget* widget, int flags) {
     return new QTreeWidgetItemIterator(widget, static_cast<QTreeWidgetItemIterator::IteratorFlags>(flags));
 }
 
-QTreeWidgetItemIterator* QTreeWidgetItemIterator_new5(QTreeWidgetItem* item, int flags) {
+QTreeWidgetItemIterator* QTreeWidgetItemIterator_New5(QTreeWidgetItem* item, int flags) {
     return new QTreeWidgetItemIterator(item, static_cast<QTreeWidgetItemIterator::IteratorFlags>(flags));
 }
 

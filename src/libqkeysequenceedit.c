@@ -16,19 +16,19 @@
 #include "libqkeysequenceedit.h"
 
 QKeySequenceEdit* q_keysequenceedit_new(void* parent) {
-    return QKeySequenceEdit_new((QWidget*)parent);
+    return QKeySequenceEdit_New((QWidget*)parent);
 }
 
 QKeySequenceEdit* q_keysequenceedit_new2() {
-    return QKeySequenceEdit_new2();
+    return QKeySequenceEdit_New2();
 }
 
 QKeySequenceEdit* q_keysequenceedit_new3(void* keySequence) {
-    return QKeySequenceEdit_new3((QKeySequence*)keySequence);
+    return QKeySequenceEdit_New3((QKeySequence*)keySequence);
 }
 
 QKeySequenceEdit* q_keysequenceedit_new4(void* keySequence, void* parent) {
-    return QKeySequenceEdit_new4((QKeySequence*)keySequence, (QWidget*)parent);
+    return QKeySequenceEdit_New4((QKeySequence*)keySequence, (QWidget*)parent);
 }
 
 const QMetaObject* q_keysequenceedit_meta_object(void* self) {

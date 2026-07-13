@@ -31,11 +31,11 @@
 #include "libqgraphicsitem.h"
 
 QGraphicsItem* q_graphicsitem_new() {
-    return QGraphicsItem_new();
+    return QGraphicsItem_New();
 }
 
 QGraphicsItem* q_graphicsitem_new2(void* parent) {
-    return QGraphicsItem_new2((QGraphicsItem*)parent);
+    return QGraphicsItem_New2((QGraphicsItem*)parent);
 }
 
 QGraphicsScene* q_graphicsitem_scene(void* self) {
@@ -1182,11 +1182,11 @@ void q_graphicsitem_delete(void* self) {
 }
 
 QGraphicsObject* q_graphicsobject_new() {
-    return QGraphicsObject_new();
+    return QGraphicsObject_New();
 }
 
 QGraphicsObject* q_graphicsobject_new2(void* parent) {
-    return QGraphicsObject_new2((QGraphicsItem*)parent);
+    return QGraphicsObject_New2((QGraphicsItem*)parent);
 }
 
 const QMetaObject* q_graphicsobject_meta_object(void* self) {
@@ -2845,11 +2845,11 @@ void q_graphicsobject_delete(void* self) {
 }
 
 QAbstractGraphicsShapeItem* q_abstractgraphicsshapeitem_new() {
-    return QAbstractGraphicsShapeItem_new();
+    return QAbstractGraphicsShapeItem_New();
 }
 
 QAbstractGraphicsShapeItem* q_abstractgraphicsshapeitem_new2(void* parent) {
-    return QAbstractGraphicsShapeItem_new2((QGraphicsItem*)parent);
+    return QAbstractGraphicsShapeItem_New2((QGraphicsItem*)parent);
 }
 
 QPen* q_abstractgraphicsshapeitem_pen(void* self) {
@@ -4012,19 +4012,19 @@ void q_abstractgraphicsshapeitem_delete(void* self) {
 }
 
 QGraphicsPathItem* q_graphicspathitem_new() {
-    return QGraphicsPathItem_new();
+    return QGraphicsPathItem_New();
 }
 
 QGraphicsPathItem* q_graphicspathitem_new2(void* path) {
-    return QGraphicsPathItem_new2((QPainterPath*)path);
+    return QGraphicsPathItem_New2((QPainterPath*)path);
 }
 
 QGraphicsPathItem* q_graphicspathitem_new3(void* parent) {
-    return QGraphicsPathItem_new3((QGraphicsItem*)parent);
+    return QGraphicsPathItem_New3((QGraphicsItem*)parent);
 }
 
 QGraphicsPathItem* q_graphicspathitem_new4(void* path, void* parent) {
-    return QGraphicsPathItem_new4((QPainterPath*)path, (QGraphicsItem*)parent);
+    return QGraphicsPathItem_New4((QPainterPath*)path, (QGraphicsItem*)parent);
 }
 
 QPainterPath* q_graphicspathitem_path(void* self) {
@@ -5195,27 +5195,27 @@ void q_graphicspathitem_delete(void* self) {
 }
 
 QGraphicsRectItem* q_graphicsrectitem_new() {
-    return QGraphicsRectItem_new();
+    return QGraphicsRectItem_New();
 }
 
 QGraphicsRectItem* q_graphicsrectitem_new2(void* rect) {
-    return QGraphicsRectItem_new2((QRectF*)rect);
+    return QGraphicsRectItem_New2((QRectF*)rect);
 }
 
 QGraphicsRectItem* q_graphicsrectitem_new3(double x, double y, double w, double h) {
-    return QGraphicsRectItem_new3(x, y, w, h);
+    return QGraphicsRectItem_New3(x, y, w, h);
 }
 
 QGraphicsRectItem* q_graphicsrectitem_new4(void* parent) {
-    return QGraphicsRectItem_new4((QGraphicsItem*)parent);
+    return QGraphicsRectItem_New4((QGraphicsItem*)parent);
 }
 
 QGraphicsRectItem* q_graphicsrectitem_new5(void* rect, void* parent) {
-    return QGraphicsRectItem_new5((QRectF*)rect, (QGraphicsItem*)parent);
+    return QGraphicsRectItem_New5((QRectF*)rect, (QGraphicsItem*)parent);
 }
 
 QGraphicsRectItem* q_graphicsrectitem_new6(double x, double y, double w, double h, void* parent) {
-    return QGraphicsRectItem_new6(x, y, w, h, (QGraphicsItem*)parent);
+    return QGraphicsRectItem_New6(x, y, w, h, (QGraphicsItem*)parent);
 }
 
 QRectF* q_graphicsrectitem_rect(void* self) {
@@ -6390,27 +6390,27 @@ void q_graphicsrectitem_delete(void* self) {
 }
 
 QGraphicsEllipseItem* q_graphicsellipseitem_new() {
-    return QGraphicsEllipseItem_new();
+    return QGraphicsEllipseItem_New();
 }
 
 QGraphicsEllipseItem* q_graphicsellipseitem_new2(void* rect) {
-    return QGraphicsEllipseItem_new2((QRectF*)rect);
+    return QGraphicsEllipseItem_New2((QRectF*)rect);
 }
 
 QGraphicsEllipseItem* q_graphicsellipseitem_new3(double x, double y, double w, double h) {
-    return QGraphicsEllipseItem_new3(x, y, w, h);
+    return QGraphicsEllipseItem_New3(x, y, w, h);
 }
 
 QGraphicsEllipseItem* q_graphicsellipseitem_new4(void* parent) {
-    return QGraphicsEllipseItem_new4((QGraphicsItem*)parent);
+    return QGraphicsEllipseItem_New4((QGraphicsItem*)parent);
 }
 
 QGraphicsEllipseItem* q_graphicsellipseitem_new5(void* rect, void* parent) {
-    return QGraphicsEllipseItem_new5((QRectF*)rect, (QGraphicsItem*)parent);
+    return QGraphicsEllipseItem_New5((QRectF*)rect, (QGraphicsItem*)parent);
 }
 
 QGraphicsEllipseItem* q_graphicsellipseitem_new6(double x, double y, double w, double h, void* parent) {
-    return QGraphicsEllipseItem_new6(x, y, w, h, (QGraphicsItem*)parent);
+    return QGraphicsEllipseItem_New6(x, y, w, h, (QGraphicsItem*)parent);
 }
 
 QRectF* q_graphicsellipseitem_rect(void* self) {
@@ -7601,11 +7601,11 @@ void q_graphicsellipseitem_delete(void* self) {
 }
 
 QGraphicsPolygonItem* q_graphicspolygonitem_new() {
-    return QGraphicsPolygonItem_new();
+    return QGraphicsPolygonItem_New();
 }
 
 QGraphicsPolygonItem* q_graphicspolygonitem_new2(void* parent) {
-    return QGraphicsPolygonItem_new2((QGraphicsItem*)parent);
+    return QGraphicsPolygonItem_New2((QGraphicsItem*)parent);
 }
 
 int32_t q_graphicspolygonitem_fill_rule(void* self) {
@@ -8776,27 +8776,27 @@ void q_graphicspolygonitem_delete(void* self) {
 }
 
 QGraphicsLineItem* q_graphicslineitem_new() {
-    return QGraphicsLineItem_new();
+    return QGraphicsLineItem_New();
 }
 
 QGraphicsLineItem* q_graphicslineitem_new2(void* line) {
-    return QGraphicsLineItem_new2((QLineF*)line);
+    return QGraphicsLineItem_New2((QLineF*)line);
 }
 
 QGraphicsLineItem* q_graphicslineitem_new3(double x1, double y1, double x2, double y2) {
-    return QGraphicsLineItem_new3(x1, y1, x2, y2);
+    return QGraphicsLineItem_New3(x1, y1, x2, y2);
 }
 
 QGraphicsLineItem* q_graphicslineitem_new4(void* parent) {
-    return QGraphicsLineItem_new4((QGraphicsItem*)parent);
+    return QGraphicsLineItem_New4((QGraphicsItem*)parent);
 }
 
 QGraphicsLineItem* q_graphicslineitem_new5(void* line, void* parent) {
-    return QGraphicsLineItem_new5((QLineF*)line, (QGraphicsItem*)parent);
+    return QGraphicsLineItem_New5((QLineF*)line, (QGraphicsItem*)parent);
 }
 
 QGraphicsLineItem* q_graphicslineitem_new6(double x1, double y1, double x2, double y2, void* parent) {
-    return QGraphicsLineItem_new6(x1, y1, x2, y2, (QGraphicsItem*)parent);
+    return QGraphicsLineItem_New6(x1, y1, x2, y2, (QGraphicsItem*)parent);
 }
 
 QPen* q_graphicslineitem_pen(void* self) {
@@ -9963,19 +9963,19 @@ void q_graphicslineitem_delete(void* self) {
 }
 
 QGraphicsPixmapItem* q_graphicspixmapitem_new() {
-    return QGraphicsPixmapItem_new();
+    return QGraphicsPixmapItem_New();
 }
 
 QGraphicsPixmapItem* q_graphicspixmapitem_new2(void* pixmap) {
-    return QGraphicsPixmapItem_new2((QPixmap*)pixmap);
+    return QGraphicsPixmapItem_New2((QPixmap*)pixmap);
 }
 
 QGraphicsPixmapItem* q_graphicspixmapitem_new3(void* parent) {
-    return QGraphicsPixmapItem_new3((QGraphicsItem*)parent);
+    return QGraphicsPixmapItem_New3((QGraphicsItem*)parent);
 }
 
 QGraphicsPixmapItem* q_graphicspixmapitem_new4(void* pixmap, void* parent) {
-    return QGraphicsPixmapItem_new4((QPixmap*)pixmap, (QGraphicsItem*)parent);
+    return QGraphicsPixmapItem_New4((QPixmap*)pixmap, (QGraphicsItem*)parent);
 }
 
 QPixmap* q_graphicspixmapitem_pixmap(void* self) {
@@ -11158,19 +11158,19 @@ void q_graphicspixmapitem_delete(void* self) {
 }
 
 QGraphicsTextItem* q_graphicstextitem_new() {
-    return QGraphicsTextItem_new();
+    return QGraphicsTextItem_New();
 }
 
 QGraphicsTextItem* q_graphicstextitem_new2(const char* text) {
-    return QGraphicsTextItem_new2(qstring(text));
+    return QGraphicsTextItem_New2(qstring(text));
 }
 
 QGraphicsTextItem* q_graphicstextitem_new3(void* parent) {
-    return QGraphicsTextItem_new3((QGraphicsItem*)parent);
+    return QGraphicsTextItem_New3((QGraphicsItem*)parent);
 }
 
 QGraphicsTextItem* q_graphicstextitem_new4(const char* text, void* parent) {
-    return QGraphicsTextItem_new4(qstring(text), (QGraphicsItem*)parent);
+    return QGraphicsTextItem_New4(qstring(text), (QGraphicsItem*)parent);
 }
 
 const QMetaObject* q_graphicstextitem_meta_object(void* self) {
@@ -12935,19 +12935,19 @@ void q_graphicstextitem_delete(void* self) {
 }
 
 QGraphicsSimpleTextItem* q_graphicssimpletextitem_new() {
-    return QGraphicsSimpleTextItem_new();
+    return QGraphicsSimpleTextItem_New();
 }
 
 QGraphicsSimpleTextItem* q_graphicssimpletextitem_new2(const char* text) {
-    return QGraphicsSimpleTextItem_new2(qstring(text));
+    return QGraphicsSimpleTextItem_New2(qstring(text));
 }
 
 QGraphicsSimpleTextItem* q_graphicssimpletextitem_new3(void* parent) {
-    return QGraphicsSimpleTextItem_new3((QGraphicsItem*)parent);
+    return QGraphicsSimpleTextItem_New3((QGraphicsItem*)parent);
 }
 
 QGraphicsSimpleTextItem* q_graphicssimpletextitem_new4(const char* text, void* parent) {
-    return QGraphicsSimpleTextItem_new4(qstring(text), (QGraphicsItem*)parent);
+    return QGraphicsSimpleTextItem_New4(qstring(text), (QGraphicsItem*)parent);
 }
 
 void q_graphicssimpletextitem_set_text(void* self, const char* text) {
@@ -14129,11 +14129,11 @@ void q_graphicssimpletextitem_delete(void* self) {
 }
 
 QGraphicsItemGroup* q_graphicsitemgroup_new() {
-    return QGraphicsItemGroup_new();
+    return QGraphicsItemGroup_New();
 }
 
 QGraphicsItemGroup* q_graphicsitemgroup_new2(void* parent) {
-    return QGraphicsItemGroup_new2((QGraphicsItem*)parent);
+    return QGraphicsItemGroup_New2((QGraphicsItem*)parent);
 }
 
 void q_graphicsitemgroup_add_to_group(void* self, void* item) {

@@ -10,21 +10,21 @@
 #include "libkconfiggroup.hpp"
 #include "libkconfiggroup.hxx"
 
-KConfigGroup* KConfigGroup_new() {
+KConfigGroup* KConfigGroup_New() {
     return new VirtualKConfigGroup();
 }
 
-KConfigGroup* KConfigGroup_new2(KConfigBase* master, const libqt_string group) {
+KConfigGroup* KConfigGroup_New2(KConfigBase* master, const libqt_string group) {
     QString group_QString = QString::fromUtf8(group.data, group.len);
     return new VirtualKConfigGroup(master, group_QString);
 }
 
-KConfigGroup* KConfigGroup_new3(const KConfigBase* master, const libqt_string group) {
+KConfigGroup* KConfigGroup_New3(const KConfigBase* master, const libqt_string group) {
     QString group_QString = QString::fromUtf8(group.data, group.len);
     return new VirtualKConfigGroup(master, group_QString);
 }
 
-KConfigGroup* KConfigGroup_new4(const KConfigGroup* param1) {
+KConfigGroup* KConfigGroup_New4(const KConfigGroup* param1) {
     return new VirtualKConfigGroup(*param1);
 }
 

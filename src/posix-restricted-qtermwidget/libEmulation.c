@@ -8,7 +8,7 @@
 #include "libEmulation.h"
 
 Konsole__Emulation* k_onsole__emulation_new() {
-    return Konsole__Emulation_new();
+    return Konsole__Emulation_New();
 }
 
 const QMetaObject* k_onsole__emulation_meta_object(void* self) {

@@ -21,7 +21,7 @@ typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
 
-QDesignerFormWindowCursorInterface* QDesignerFormWindowCursorInterface_new();
+QDesignerFormWindowCursorInterface* QDesignerFormWindowCursorInterface_New();
 QDesignerFormWindowInterface* QDesignerFormWindowCursorInterface_FormWindow(const QDesignerFormWindowCursorInterface* self);
 bool QDesignerFormWindowCursorInterface_MovePosition(QDesignerFormWindowCursorInterface* self, int op, int mode);
 int QDesignerFormWindowCursorInterface_Position(const QDesignerFormWindowCursorInterface* self);

@@ -11,11 +11,11 @@ KCountry* KTimeZone_Country(const char* param1) {
     return new KCountry(KTimeZone::country(param1));
 }
 
-KCountry* KCountry_new() {
+KCountry* KCountry_New() {
     return new KCountry();
 }
 
-KCountry* KCountry_new2(const KCountry* param1) {
+KCountry* KCountry_New2(const KCountry* param1) {
     return new KCountry(*param1);
 }
 

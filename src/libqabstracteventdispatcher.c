@@ -729,19 +729,19 @@ void q_abstracteventdispatcherv2_delete(void* self) {
 }
 
 QAbstractEventDispatcher__TimerInfo* q_abstracteventdispatcher__timerinfo_new(void* other) {
-    return QAbstractEventDispatcher__TimerInfo_new((QAbstractEventDispatcher__TimerInfo*)other);
+    return QAbstractEventDispatcher__TimerInfo_New((QAbstractEventDispatcher__TimerInfo*)other);
 }
 
 QAbstractEventDispatcher__TimerInfo* q_abstracteventdispatcher__timerinfo_new2(void* other) {
-    return QAbstractEventDispatcher__TimerInfo_new2((QAbstractEventDispatcher__TimerInfo*)other);
+    return QAbstractEventDispatcher__TimerInfo_New2((QAbstractEventDispatcher__TimerInfo*)other);
 }
 
 QAbstractEventDispatcher__TimerInfo* q_abstracteventdispatcher__timerinfo_new3(int id, int i, int32_t t) {
-    return QAbstractEventDispatcher__TimerInfo_new3(id, i, t);
+    return QAbstractEventDispatcher__TimerInfo_New3(id, i, t);
 }
 
 QAbstractEventDispatcher__TimerInfo* q_abstracteventdispatcher__timerinfo_new4(void* param1) {
-    return QAbstractEventDispatcher__TimerInfo_new4((QAbstractEventDispatcher__TimerInfo*)param1);
+    return QAbstractEventDispatcher__TimerInfo_New4((QAbstractEventDispatcher__TimerInfo*)param1);
 }
 
 void q_abstracteventdispatcher__timerinfo_copy_assign(void* self, void* other) {
@@ -781,11 +781,11 @@ void q_abstracteventdispatcher__timerinfo_delete(void* self) {
 }
 
 QAbstractEventDispatcher__TimerInfoV2* q_abstracteventdispatcher__timerinfov2_new(void* param1) {
-    return QAbstractEventDispatcher__TimerInfoV2_new((QAbstractEventDispatcher__TimerInfoV2*)param1);
+    return QAbstractEventDispatcher__TimerInfoV2_New((QAbstractEventDispatcher__TimerInfoV2*)param1);
 }
 
 QAbstractEventDispatcher__TimerInfoV2* q_abstracteventdispatcher__timerinfov2_new2() {
-    return QAbstractEventDispatcher__TimerInfoV2_new2();
+    return QAbstractEventDispatcher__TimerInfoV2_New2();
 }
 
 int32_t q_abstracteventdispatcher__timerinfov2_timer_id(void* self) {

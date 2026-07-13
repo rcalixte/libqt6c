@@ -3,15 +3,15 @@
 #include "libqtextoption.h"
 
 QTextOption* q_textoption_new() {
-    return QTextOption_new();
+    return QTextOption_New();
 }
 
 QTextOption* q_textoption_new2(int32_t alignment) {
-    return QTextOption_new2(alignment);
+    return QTextOption_New2(alignment);
 }
 
 QTextOption* q_textoption_new3(void* o) {
-    return QTextOption_new3((QTextOption*)o);
+    return QTextOption_New3((QTextOption*)o);
 }
 
 void q_textoption_operator_assign(void* self, void* o) {
@@ -89,23 +89,23 @@ void q_textoption_delete(void* self) {
 }
 
 QTextOption__Tab* q_textoption__tab_new(void* other) {
-    return QTextOption__Tab_new((QTextOption__Tab*)other);
+    return QTextOption__Tab_New((QTextOption__Tab*)other);
 }
 
 QTextOption__Tab* q_textoption__tab_new2(void* other) {
-    return QTextOption__Tab_new2((QTextOption__Tab*)other);
+    return QTextOption__Tab_New2((QTextOption__Tab*)other);
 }
 
 QTextOption__Tab* q_textoption__tab_new3() {
-    return QTextOption__Tab_new3();
+    return QTextOption__Tab_New3();
 }
 
 QTextOption__Tab* q_textoption__tab_new4(double pos, int32_t tabType) {
-    return QTextOption__Tab_new4(pos, tabType);
+    return QTextOption__Tab_New4(pos, tabType);
 }
 
 QTextOption__Tab* q_textoption__tab_new5(double pos, int32_t tabType, void* delim) {
-    return QTextOption__Tab_new5(pos, tabType, (QChar*)delim);
+    return QTextOption__Tab_New5(pos, tabType, (QChar*)delim);
 }
 
 void q_textoption__tab_copy_assign(void* self, void* other) {

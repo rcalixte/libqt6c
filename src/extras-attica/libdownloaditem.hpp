@@ -22,8 +22,8 @@ typedef struct Attica__DownloadItem Attica__DownloadItem;
 typedef struct QUrl QUrl;
 #endif
 
-Attica__DownloadItem* Attica__DownloadItem_new();
-Attica__DownloadItem* Attica__DownloadItem_new2(const Attica__DownloadItem* other);
+Attica__DownloadItem* Attica__DownloadItem_New();
+Attica__DownloadItem* Attica__DownloadItem_New2(const Attica__DownloadItem* other);
 void Attica__DownloadItem_OperatorAssign(Attica__DownloadItem* self, const Attica__DownloadItem* other);
 void Attica__DownloadItem_SetUrl(Attica__DownloadItem* self, const QUrl* url);
 QUrl* Attica__DownloadItem_Url(const Attica__DownloadItem* self);

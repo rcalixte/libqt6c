@@ -5,43 +5,43 @@
 #include "libqbluetoothuuid.hpp"
 #include "libqbluetoothuuid.hxx"
 
-QBluetoothUuid* QBluetoothUuid_new(const QBluetoothUuid* other) {
+QBluetoothUuid* QBluetoothUuid_New(const QBluetoothUuid* other) {
     return new QBluetoothUuid(*other);
 }
 
-QBluetoothUuid* QBluetoothUuid_new2() {
+QBluetoothUuid* QBluetoothUuid_New2() {
     return new QBluetoothUuid();
 }
 
-QBluetoothUuid* QBluetoothUuid_new3(int uuid) {
+QBluetoothUuid* QBluetoothUuid_New3(int uuid) {
     return new QBluetoothUuid(static_cast<QBluetoothUuid::ProtocolUuid>(uuid));
 }
 
-QBluetoothUuid* QBluetoothUuid_new4(int uuid) {
+QBluetoothUuid* QBluetoothUuid_New4(int uuid) {
     return new QBluetoothUuid(static_cast<QBluetoothUuid::ServiceClassUuid>(uuid));
 }
 
-QBluetoothUuid* QBluetoothUuid_new5(int uuid) {
+QBluetoothUuid* QBluetoothUuid_New5(int uuid) {
     return new QBluetoothUuid(static_cast<QBluetoothUuid::CharacteristicType>(uuid));
 }
 
-QBluetoothUuid* QBluetoothUuid_new6(int uuid) {
+QBluetoothUuid* QBluetoothUuid_New6(int uuid) {
     return new QBluetoothUuid(static_cast<QBluetoothUuid::DescriptorType>(uuid));
 }
 
-QBluetoothUuid* QBluetoothUuid_new7(uint16_t uuid) {
+QBluetoothUuid* QBluetoothUuid_New7(uint16_t uuid) {
     return new QBluetoothUuid(static_cast<quint16>(uuid));
 }
 
-QBluetoothUuid* QBluetoothUuid_new8(unsigned int uuid) {
+QBluetoothUuid* QBluetoothUuid_New8(unsigned int uuid) {
     return new QBluetoothUuid(static_cast<quint32>(uuid));
 }
 
-QBluetoothUuid* QBluetoothUuid_new9(const QBluetoothUuid* uuid) {
+QBluetoothUuid* QBluetoothUuid_New9(const QBluetoothUuid* uuid) {
     return new QBluetoothUuid(*uuid);
 }
 
-QBluetoothUuid* QBluetoothUuid_new10(const QUuid* uuid) {
+QBluetoothUuid* QBluetoothUuid_New10(const QUuid* uuid) {
     return new QBluetoothUuid(*uuid);
 }
 

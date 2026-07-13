@@ -31,19 +31,19 @@ struct pair_qhostaddress_int {
 };
 #endif
 
-QIPv6Address* QIPv6Address_new();
-QIPv6Address* QIPv6Address_new2(const QIPv6Address* param1);
+QIPv6Address* QIPv6Address_New();
+QIPv6Address* QIPv6Address_New2(const QIPv6Address* param1);
 unsigned char* QIPv6Address_OperatorSubscript(QIPv6Address* self, int index);
 unsigned char QIPv6Address_OperatorSubscript2(const QIPv6Address* self, int index);
 void QIPv6Address_Delete(QIPv6Address* self);
 
-QHostAddress* QHostAddress_new();
-QHostAddress* QHostAddress_new2(unsigned int ip4Addr);
-QHostAddress* QHostAddress_new3(const unsigned char* ip6Addr);
-QHostAddress* QHostAddress_new4(const QIPv6Address* ip6Addr);
-QHostAddress* QHostAddress_new5(const libqt_string address);
-QHostAddress* QHostAddress_new6(const QHostAddress* copyVal);
-QHostAddress* QHostAddress_new7(int address);
+QHostAddress* QHostAddress_New();
+QHostAddress* QHostAddress_New2(unsigned int ip4Addr);
+QHostAddress* QHostAddress_New3(const unsigned char* ip6Addr);
+QHostAddress* QHostAddress_New4(const QIPv6Address* ip6Addr);
+QHostAddress* QHostAddress_New5(const libqt_string address);
+QHostAddress* QHostAddress_New6(const QHostAddress* copyVal);
+QHostAddress* QHostAddress_New7(int address);
 void QHostAddress_OperatorAssign(QHostAddress* self, const QHostAddress* other);
 void QHostAddress_OperatorAssign2(QHostAddress* self, int address);
 void QHostAddress_Swap(QHostAddress* self, QHostAddress* other);

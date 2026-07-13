@@ -14,11 +14,11 @@
 #include "libqscilexertcl.hpp"
 #include "libqscilexertcl.hxx"
 
-QsciLexerTCL* QsciLexerTCL_new() {
+QsciLexerTCL* QsciLexerTCL_New() {
     return new VirtualQsciLexerTCL();
 }
 
-QsciLexerTCL* QsciLexerTCL_new2(QObject* parent) {
+QsciLexerTCL* QsciLexerTCL_New2(QObject* parent) {
     return new VirtualQsciLexerTCL(parent);
 }
 

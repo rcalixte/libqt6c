@@ -4,7 +4,7 @@
 #include "libqabstractfileiconprovider.h"
 
 QAbstractFileIconProvider* q_abstractfileiconprovider_new() {
-    return QAbstractFileIconProvider_new();
+    return QAbstractFileIconProvider_New();
 }
 
 QIcon* q_abstractfileiconprovider_icon(void* self, int32_t param1) {

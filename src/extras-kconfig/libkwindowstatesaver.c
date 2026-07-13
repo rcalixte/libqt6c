@@ -8,11 +8,11 @@
 #include "libkwindowstatesaver.h"
 
 KWindowStateSaver* k_windowstatesaver_new(void* window, void* configGroup) {
-    return KWindowStateSaver_new((QWindow*)window, (KConfigGroup*)configGroup);
+    return KWindowStateSaver_New((QWindow*)window, (KConfigGroup*)configGroup);
 }
 
 KWindowStateSaver* k_windowstatesaver_new2(void* window, const char* configGroupName) {
-    return KWindowStateSaver_new2((QWindow*)window, qstring(configGroupName));
+    return KWindowStateSaver_New2((QWindow*)window, qstring(configGroupName));
 }
 
 const QMetaObject* k_windowstatesaver_meta_object(void* self) {

@@ -2,11 +2,11 @@
 #include "libproject.h"
 
 Attica__Project* k_attica__project_new() {
-    return Attica__Project_new();
+    return Attica__Project_New();
 }
 
 Attica__Project* k_attica__project_new2(void* other) {
-    return Attica__Project_new2((Attica__Project*)other);
+    return Attica__Project_New2((Attica__Project*)other);
 }
 
 void k_attica__project_operator_assign(void* self, void* other) {

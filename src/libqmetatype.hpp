@@ -23,11 +23,11 @@ typedef struct QMetaType QMetaType;
 typedef struct QPartialOrdering QPartialOrdering;
 #endif
 
-QMetaType* QMetaType_new(const QMetaType* other);
-QMetaType* QMetaType_new2(QMetaType* other);
-QMetaType* QMetaType_new3(int type);
-QMetaType* QMetaType_new4();
-QMetaType* QMetaType_new5(const QMetaType* param1);
+QMetaType* QMetaType_New(const QMetaType* other);
+QMetaType* QMetaType_New2(QMetaType* other);
+QMetaType* QMetaType_New3(int type);
+QMetaType* QMetaType_New4();
+QMetaType* QMetaType_New5(const QMetaType* param1);
 void QMetaType_CopyAssign(QMetaType* self, QMetaType* other);
 void QMetaType_MoveAssign(QMetaType* self, QMetaType* other);
 void QMetaType_RegisterNormalizedTypedef(const libqt_string normalizedTypeName, QMetaType* type);

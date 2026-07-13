@@ -51,12 +51,12 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KFindDialog* KFindDialog_new(QWidget* parent);
-KFindDialog* KFindDialog_new2();
-KFindDialog* KFindDialog_new3(QWidget* parent, long options);
-KFindDialog* KFindDialog_new4(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings);
-KFindDialog* KFindDialog_new5(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings, bool hasSelection);
-KFindDialog* KFindDialog_new6(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings, bool hasSelection, bool replaceDialog);
+KFindDialog* KFindDialog_New(QWidget* parent);
+KFindDialog* KFindDialog_New2();
+KFindDialog* KFindDialog_New3(QWidget* parent, long options);
+KFindDialog* KFindDialog_New4(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings);
+KFindDialog* KFindDialog_New5(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings, bool hasSelection);
+KFindDialog* KFindDialog_New6(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings, bool hasSelection, bool replaceDialog);
 QMetaObject* KFindDialog_MetaObject(const KFindDialog* self);
 void* KFindDialog_Metacast(KFindDialog* self, const char* param1);
 int KFindDialog_Metacall(KFindDialog* self, int param1, int param2, void** param3);

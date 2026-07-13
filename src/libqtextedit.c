@@ -29,19 +29,19 @@
 #include "libqtextedit.h"
 
 QTextEdit* q_textedit_new(void* parent) {
-    return QTextEdit_new((QWidget*)parent);
+    return QTextEdit_New((QWidget*)parent);
 }
 
 QTextEdit* q_textedit_new2() {
-    return QTextEdit_new2();
+    return QTextEdit_New2();
 }
 
 QTextEdit* q_textedit_new3(const char* text) {
-    return QTextEdit_new3(qstring(text));
+    return QTextEdit_New3(qstring(text));
 }
 
 QTextEdit* q_textedit_new4(const char* text, void* parent) {
-    return QTextEdit_new4(qstring(text), (QWidget*)parent);
+    return QTextEdit_New4(qstring(text), (QWidget*)parent);
 }
 
 const QMetaObject* q_textedit_meta_object(void* self) {
@@ -2917,7 +2917,7 @@ void q_textedit_delete(void* self) {
 }
 
 QTextEdit__ExtraSelection* q_textedit__extraselection_new(void* param1) {
-    return QTextEdit__ExtraSelection_new((QTextEdit__ExtraSelection*)param1);
+    return QTextEdit__ExtraSelection_New((QTextEdit__ExtraSelection*)param1);
 }
 
 QTextCursor* q_textedit__extraselection_cursor(void* self) {

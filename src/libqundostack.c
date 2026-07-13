@@ -7,19 +7,19 @@
 #include "libqundostack.h"
 
 QUndoCommand* q_undocommand_new() {
-    return QUndoCommand_new();
+    return QUndoCommand_New();
 }
 
 QUndoCommand* q_undocommand_new2(const char* text) {
-    return QUndoCommand_new2(qstring(text));
+    return QUndoCommand_New2(qstring(text));
 }
 
 QUndoCommand* q_undocommand_new3(void* parent) {
-    return QUndoCommand_new3((QUndoCommand*)parent);
+    return QUndoCommand_New3((QUndoCommand*)parent);
 }
 
 QUndoCommand* q_undocommand_new4(const char* text, void* parent) {
-    return QUndoCommand_new4(qstring(text), (QUndoCommand*)parent);
+    return QUndoCommand_New4(qstring(text), (QUndoCommand*)parent);
 }
 
 void q_undocommand_undo(void* self) {
@@ -109,11 +109,11 @@ void q_undocommand_delete(void* self) {
 }
 
 QUndoStack* q_undostack_new() {
-    return QUndoStack_new();
+    return QUndoStack_New();
 }
 
 QUndoStack* q_undostack_new2(void* parent) {
-    return QUndoStack_new2((QObject*)parent);
+    return QUndoStack_New2((QObject*)parent);
 }
 
 const QMetaObject* q_undostack_meta_object(void* self) {

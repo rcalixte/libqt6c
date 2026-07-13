@@ -8,11 +8,11 @@
 #include "libopenfilemanagerwindowjob.h"
 
 KIO__OpenFileManagerWindowJob* k_io__openfilemanagerwindowjob_new() {
-    return KIO__OpenFileManagerWindowJob_new();
+    return KIO__OpenFileManagerWindowJob_New();
 }
 
 KIO__OpenFileManagerWindowJob* k_io__openfilemanagerwindowjob_new2(void* parent) {
-    return KIO__OpenFileManagerWindowJob_new2((QObject*)parent);
+    return KIO__OpenFileManagerWindowJob_New2((QObject*)parent);
 }
 
 const QMetaObject* k_io__openfilemanagerwindowjob_meta_object(void* self) {

@@ -10,15 +10,15 @@
 #include "libqoffscreensurface.h"
 
 QOffscreenSurface* q_offscreensurface_new() {
-    return QOffscreenSurface_new();
+    return QOffscreenSurface_New();
 }
 
 QOffscreenSurface* q_offscreensurface_new2(void* screen) {
-    return QOffscreenSurface_new2((QScreen*)screen);
+    return QOffscreenSurface_New2((QScreen*)screen);
 }
 
 QOffscreenSurface* q_offscreensurface_new3(void* screen, void* parent) {
-    return QOffscreenSurface_new3((QScreen*)screen, (QObject*)parent);
+    return QOffscreenSurface_New3((QScreen*)screen, (QObject*)parent);
 }
 
 const QMetaObject* q_offscreensurface_meta_object(void* self) {

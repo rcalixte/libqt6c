@@ -4,15 +4,15 @@
 #include "libqscistyledtext.h"
 
 QsciStyledText* q_scistyledtext_new(const char* text, int style) {
-    return QsciStyledText_new(qstring(text), style);
+    return QsciStyledText_New(qstring(text), style);
 }
 
 QsciStyledText* q_scistyledtext_new2(const char* text, void* style) {
-    return QsciStyledText_new2(qstring(text), (QsciStyle*)style);
+    return QsciStyledText_New2(qstring(text), (QsciStyle*)style);
 }
 
 QsciStyledText* q_scistyledtext_new3(void* param1) {
-    return QsciStyledText_new3((QsciStyledText*)param1);
+    return QsciStyledText_New3((QsciStyledText*)param1);
 }
 
 void q_scistyledtext_apply(void* self, void* sci) {

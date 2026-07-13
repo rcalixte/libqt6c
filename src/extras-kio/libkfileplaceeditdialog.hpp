@@ -52,10 +52,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KFilePlaceEditDialog* KFilePlaceEditDialog_new(bool allowGlobal, const QUrl* url, const libqt_string label, const libqt_string icon, bool isAddingNewPlace);
-KFilePlaceEditDialog* KFilePlaceEditDialog_new2(bool allowGlobal, const QUrl* url, const libqt_string label, const libqt_string icon, bool isAddingNewPlace, bool appLocal);
-KFilePlaceEditDialog* KFilePlaceEditDialog_new3(bool allowGlobal, const QUrl* url, const libqt_string label, const libqt_string icon, bool isAddingNewPlace, bool appLocal, int iconSize);
-KFilePlaceEditDialog* KFilePlaceEditDialog_new4(bool allowGlobal, const QUrl* url, const libqt_string label, const libqt_string icon, bool isAddingNewPlace, bool appLocal, int iconSize, QWidget* parent);
+KFilePlaceEditDialog* KFilePlaceEditDialog_New(bool allowGlobal, const QUrl* url, const libqt_string label, const libqt_string icon, bool isAddingNewPlace);
+KFilePlaceEditDialog* KFilePlaceEditDialog_New2(bool allowGlobal, const QUrl* url, const libqt_string label, const libqt_string icon, bool isAddingNewPlace, bool appLocal);
+KFilePlaceEditDialog* KFilePlaceEditDialog_New3(bool allowGlobal, const QUrl* url, const libqt_string label, const libqt_string icon, bool isAddingNewPlace, bool appLocal, int iconSize);
+KFilePlaceEditDialog* KFilePlaceEditDialog_New4(bool allowGlobal, const QUrl* url, const libqt_string label, const libqt_string icon, bool isAddingNewPlace, bool appLocal, int iconSize, QWidget* parent);
 QMetaObject* KFilePlaceEditDialog_MetaObject(const KFilePlaceEditDialog* self);
 void* KFilePlaceEditDialog_Metacast(KFilePlaceEditDialog* self, const char* param1);
 int KFilePlaceEditDialog_Metacall(KFilePlaceEditDialog* self, int param1, int param2, void** param3);

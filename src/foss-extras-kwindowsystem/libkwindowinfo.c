@@ -3,7 +3,7 @@
 #include "libkwindowinfo.h"
 
 KWindowInfo* k_windowinfo_new(void* param1) {
-    return KWindowInfo_new((KWindowInfo*)param1);
+    return KWindowInfo_New((KWindowInfo*)param1);
 }
 
 bool k_windowinfo_valid(void* self) {

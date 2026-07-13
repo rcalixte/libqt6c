@@ -16,35 +16,35 @@
 #include "libqdialogbuttonbox.h"
 
 QDialogButtonBox* q_dialogbuttonbox_new(void* parent) {
-    return QDialogButtonBox_new((QWidget*)parent);
+    return QDialogButtonBox_New((QWidget*)parent);
 }
 
 QDialogButtonBox* q_dialogbuttonbox_new2() {
-    return QDialogButtonBox_new2();
+    return QDialogButtonBox_New2();
 }
 
 QDialogButtonBox* q_dialogbuttonbox_new3(int32_t orientation) {
-    return QDialogButtonBox_new3(orientation);
+    return QDialogButtonBox_New3(orientation);
 }
 
 QDialogButtonBox* q_dialogbuttonbox_new4(int32_t buttons) {
-    return QDialogButtonBox_new4(buttons);
+    return QDialogButtonBox_New4(buttons);
 }
 
 QDialogButtonBox* q_dialogbuttonbox_new5(int32_t buttons, int32_t orientation) {
-    return QDialogButtonBox_new5(buttons, orientation);
+    return QDialogButtonBox_New5(buttons, orientation);
 }
 
 QDialogButtonBox* q_dialogbuttonbox_new6(int32_t orientation, void* parent) {
-    return QDialogButtonBox_new6(orientation, (QWidget*)parent);
+    return QDialogButtonBox_New6(orientation, (QWidget*)parent);
 }
 
 QDialogButtonBox* q_dialogbuttonbox_new7(int32_t buttons, void* parent) {
-    return QDialogButtonBox_new7(buttons, (QWidget*)parent);
+    return QDialogButtonBox_New7(buttons, (QWidget*)parent);
 }
 
 QDialogButtonBox* q_dialogbuttonbox_new8(int32_t buttons, int32_t orientation, void* parent) {
-    return QDialogButtonBox_new8(buttons, orientation, (QWidget*)parent);
+    return QDialogButtonBox_New8(buttons, orientation, (QWidget*)parent);
 }
 
 const QMetaObject* q_dialogbuttonbox_meta_object(void* self) {

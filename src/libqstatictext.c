@@ -6,15 +6,15 @@
 #include "libqstatictext.h"
 
 QStaticText* q_statictext_new() {
-    return QStaticText_new();
+    return QStaticText_New();
 }
 
 QStaticText* q_statictext_new2(const char* text) {
-    return QStaticText_new2(qstring(text));
+    return QStaticText_New2(qstring(text));
 }
 
 QStaticText* q_statictext_new3(void* other) {
-    return QStaticText_new3((QStaticText*)other);
+    return QStaticText_New3((QStaticText*)other);
 }
 
 void q_statictext_operator_assign(void* self, void* param1) {

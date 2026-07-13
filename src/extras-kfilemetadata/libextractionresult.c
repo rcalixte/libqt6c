@@ -3,19 +3,19 @@
 #include "libextractionresult.h"
 
 KFileMetaData__ExtractionResult* k_filemetadata__extractionresult_new(const char* url) {
-    return KFileMetaData__ExtractionResult_new(qstring(url));
+    return KFileMetaData__ExtractionResult_New(qstring(url));
 }
 
 KFileMetaData__ExtractionResult* k_filemetadata__extractionresult_new2(void* rhs) {
-    return KFileMetaData__ExtractionResult_new2((KFileMetaData__ExtractionResult*)rhs);
+    return KFileMetaData__ExtractionResult_New2((KFileMetaData__ExtractionResult*)rhs);
 }
 
 KFileMetaData__ExtractionResult* k_filemetadata__extractionresult_new3(const char* url, const char* mimetype) {
-    return KFileMetaData__ExtractionResult_new3(qstring(url), qstring(mimetype));
+    return KFileMetaData__ExtractionResult_New3(qstring(url), qstring(mimetype));
 }
 
 KFileMetaData__ExtractionResult* k_filemetadata__extractionresult_new4(const char* url, const char* mimetype, const int32_t* flags) {
-    return KFileMetaData__ExtractionResult_new4(qstring(url), qstring(mimetype), flags);
+    return KFileMetaData__ExtractionResult_New4(qstring(url), qstring(mimetype), flags);
 }
 
 const char* k_filemetadata__extractionresult_input_url(void* self) {

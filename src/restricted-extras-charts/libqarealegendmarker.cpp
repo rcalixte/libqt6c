@@ -13,11 +13,11 @@
 #include "libqarealegendmarker.hpp"
 #include "libqarealegendmarker.hxx"
 
-QAreaLegendMarker* QAreaLegendMarker_new(QAreaSeries* series, QLegend* legend) {
+QAreaLegendMarker* QAreaLegendMarker_New(QAreaSeries* series, QLegend* legend) {
     return new VirtualQAreaLegendMarker(series, legend);
 }
 
-QAreaLegendMarker* QAreaLegendMarker_new2(QAreaSeries* series, QLegend* legend, QObject* parent) {
+QAreaLegendMarker* QAreaLegendMarker_New2(QAreaSeries* series, QLegend* legend, QObject* parent) {
     return new VirtualQAreaLegendMarker(series, legend, parent);
 }
 

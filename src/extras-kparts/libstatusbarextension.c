@@ -10,11 +10,11 @@
 #include "libstatusbarextension.h"
 
 KParts__StatusBarExtension* k_parts__statusbarextension_new(void* parent) {
-    return KParts__StatusBarExtension_new((KParts__Part*)parent);
+    return KParts__StatusBarExtension_New((KParts__Part*)parent);
 }
 
 KParts__StatusBarExtension* k_parts__statusbarextension_new2(void* parent) {
-    return KParts__StatusBarExtension_new2((KParts__ReadOnlyPart*)parent);
+    return KParts__StatusBarExtension_New2((KParts__ReadOnlyPart*)parent);
 }
 
 const QMetaObject* k_parts__statusbarextension_meta_object(void* self) {

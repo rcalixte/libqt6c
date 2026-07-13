@@ -14,11 +14,11 @@
 #include "libqscilexercmake.hpp"
 #include "libqscilexercmake.hxx"
 
-QsciLexerCMake* QsciLexerCMake_new() {
+QsciLexerCMake* QsciLexerCMake_New() {
     return new VirtualQsciLexerCMake();
 }
 
-QsciLexerCMake* QsciLexerCMake_new2(QObject* parent) {
+QsciLexerCMake* QsciLexerCMake_New2(QObject* parent) {
     return new VirtualQsciLexerCMake(parent);
 }
 

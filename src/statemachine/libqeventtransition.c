@@ -8,19 +8,19 @@
 #include "libqeventtransition.h"
 
 QEventTransition* q_eventtransition_new() {
-    return QEventTransition_new();
+    return QEventTransition_New();
 }
 
 QEventTransition* q_eventtransition_new2(void* object, int32_t type) {
-    return QEventTransition_new2((QObject*)object, type);
+    return QEventTransition_New2((QObject*)object, type);
 }
 
 QEventTransition* q_eventtransition_new3(void* sourceState) {
-    return QEventTransition_new3((QState*)sourceState);
+    return QEventTransition_New3((QState*)sourceState);
 }
 
 QEventTransition* q_eventtransition_new4(void* object, int32_t type, void* sourceState) {
-    return QEventTransition_new4((QObject*)object, type, (QState*)sourceState);
+    return QEventTransition_New4((QObject*)object, type, (QState*)sourceState);
 }
 
 const QMetaObject* q_eventtransition_meta_object(void* self) {

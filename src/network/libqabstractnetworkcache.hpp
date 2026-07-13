@@ -27,8 +27,8 @@ typedef struct QUrl QUrl;
 typedef struct QVariant QVariant;
 #endif
 
-QNetworkCacheMetaData* QNetworkCacheMetaData_new();
-QNetworkCacheMetaData* QNetworkCacheMetaData_new2(const QNetworkCacheMetaData* other);
+QNetworkCacheMetaData* QNetworkCacheMetaData_New();
+QNetworkCacheMetaData* QNetworkCacheMetaData_New2(const QNetworkCacheMetaData* other);
 void QNetworkCacheMetaData_OperatorAssign(QNetworkCacheMetaData* self, const QNetworkCacheMetaData* other);
 void QNetworkCacheMetaData_Swap(QNetworkCacheMetaData* self, QNetworkCacheMetaData* other);
 bool QNetworkCacheMetaData_OperatorEqual(const QNetworkCacheMetaData* self, const QNetworkCacheMetaData* other);

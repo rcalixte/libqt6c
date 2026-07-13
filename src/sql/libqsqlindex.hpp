@@ -20,10 +20,10 @@ typedef struct QSqlIndex QSqlIndex;
 typedef struct QSqlRecord QSqlRecord;
 #endif
 
-QSqlIndex* QSqlIndex_new();
-QSqlIndex* QSqlIndex_new2(const QSqlIndex* other);
-QSqlIndex* QSqlIndex_new3(const libqt_string cursorName);
-QSqlIndex* QSqlIndex_new4(const libqt_string cursorName, const libqt_string name);
+QSqlIndex* QSqlIndex_New();
+QSqlIndex* QSqlIndex_New2(const QSqlIndex* other);
+QSqlIndex* QSqlIndex_New3(const libqt_string cursorName);
+QSqlIndex* QSqlIndex_New4(const libqt_string cursorName, const libqt_string name);
 void QSqlIndex_OperatorAssign(QSqlIndex* self, const QSqlIndex* other);
 void QSqlIndex_Swap(QSqlIndex* self, QSqlIndex* other);
 void QSqlIndex_SetCursorName(QSqlIndex* self, const libqt_string cursorName);

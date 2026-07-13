@@ -19,8 +19,8 @@ typedef struct KCountry KCountry;
 typedef struct KCountrySubdivision KCountrySubdivision;
 #endif
 
-KCountrySubdivision* KCountrySubdivision_new();
-KCountrySubdivision* KCountrySubdivision_new2(const KCountrySubdivision* param1);
+KCountrySubdivision* KCountrySubdivision_New();
+KCountrySubdivision* KCountrySubdivision_New2(const KCountrySubdivision* param1);
 void KCountrySubdivision_OperatorAssign(KCountrySubdivision* self, const KCountrySubdivision* param1);
 bool KCountrySubdivision_OperatorEqual(const KCountrySubdivision* self, const KCountrySubdivision* other);
 bool KCountrySubdivision_OperatorNotEqual(const KCountrySubdivision* self, const KCountrySubdivision* other);

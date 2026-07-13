@@ -29,7 +29,7 @@ typedef struct QSize QSize;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KAbstractViewAdapter* KAbstractViewAdapter_new(QObject* parent);
+KAbstractViewAdapter* KAbstractViewAdapter_New(QObject* parent);
 QAbstractItemModel* KAbstractViewAdapter_Model(const KAbstractViewAdapter* self);
 QSize* KAbstractViewAdapter_IconSize(const KAbstractViewAdapter* self);
 QPalette* KAbstractViewAdapter_Palette(const KAbstractViewAdapter* self);

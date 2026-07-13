@@ -2,15 +2,15 @@
 #include "libqcompare.h"
 
 partial_ordering* q_partial_ordering_new(void* other) {
-    return partial_ordering_new((partial_ordering*)other);
+    return partial_ordering_New((partial_ordering*)other);
 }
 
 partial_ordering* q_partial_ordering_new2(void* other) {
-    return partial_ordering_new2((partial_ordering*)other);
+    return partial_ordering_New2((partial_ordering*)other);
 }
 
 partial_ordering* q_partial_ordering_new3(void* param1) {
-    return partial_ordering_new3((partial_ordering*)param1);
+    return partial_ordering_New3((partial_ordering*)param1);
 }
 
 void q_partial_ordering_copy_assign(void* self, void* other) {
@@ -26,15 +26,15 @@ void q_partial_ordering_delete(void* self) {
 }
 
 weak_ordering* q_weak_ordering_new(void* other) {
-    return weak_ordering_new((weak_ordering*)other);
+    return weak_ordering_New((weak_ordering*)other);
 }
 
 weak_ordering* q_weak_ordering_new2(void* other) {
-    return weak_ordering_new2((weak_ordering*)other);
+    return weak_ordering_New2((weak_ordering*)other);
 }
 
 weak_ordering* q_weak_ordering_new3(void* param1) {
-    return weak_ordering_new3((weak_ordering*)param1);
+    return weak_ordering_New3((weak_ordering*)param1);
 }
 
 void q_weak_ordering_copy_assign(void* self, void* other) {
@@ -54,15 +54,15 @@ void q_weak_ordering_delete(void* self) {
 }
 
 strong_ordering* q_strong_ordering_new(void* other) {
-    return strong_ordering_new((strong_ordering*)other);
+    return strong_ordering_New((strong_ordering*)other);
 }
 
 strong_ordering* q_strong_ordering_new2(void* other) {
-    return strong_ordering_new2((strong_ordering*)other);
+    return strong_ordering_New2((strong_ordering*)other);
 }
 
 strong_ordering* q_strong_ordering_new3(void* param1) {
-    return strong_ordering_new3((strong_ordering*)param1);
+    return strong_ordering_New3((strong_ordering*)param1);
 }
 
 void q_strong_ordering_copy_assign(void* self, void* other) {
@@ -86,27 +86,27 @@ void q_strong_ordering_delete(void* self) {
 }
 
 QPartialOrdering* q_partialordering_new(void* other) {
-    return QPartialOrdering_new((QPartialOrdering*)other);
+    return QPartialOrdering_New((QPartialOrdering*)other);
 }
 
 QPartialOrdering* q_partialordering_new2(void* other) {
-    return QPartialOrdering_new2((QPartialOrdering*)other);
+    return QPartialOrdering_New2((QPartialOrdering*)other);
 }
 
 QPartialOrdering* q_partialordering_new3(void* order) {
-    return QPartialOrdering_new3((partial_ordering*)order);
+    return QPartialOrdering_New3((partial_ordering*)order);
 }
 
 QPartialOrdering* q_partialordering_new4(void* stdorder) {
-    return QPartialOrdering_new4((weak_ordering*)stdorder);
+    return QPartialOrdering_New4((weak_ordering*)stdorder);
 }
 
 QPartialOrdering* q_partialordering_new5(void* stdorder) {
-    return QPartialOrdering_new5((strong_ordering*)stdorder);
+    return QPartialOrdering_New5((strong_ordering*)stdorder);
 }
 
 QPartialOrdering* q_partialordering_new6(void* param1) {
-    return QPartialOrdering_new6((QPartialOrdering*)param1);
+    return QPartialOrdering_New6((QPartialOrdering*)param1);
 }
 
 void q_partialordering_copy_assign(void* self, void* other) {

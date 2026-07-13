@@ -12,15 +12,15 @@
 #include "libkstatusbarjobtracker.hpp"
 #include "libkstatusbarjobtracker.hxx"
 
-KStatusBarJobTracker* KStatusBarJobTracker_new(QWidget* parent) {
+KStatusBarJobTracker* KStatusBarJobTracker_New(QWidget* parent) {
     return new KStatusBarJobTracker(parent);
 }
 
-KStatusBarJobTracker* KStatusBarJobTracker_new2() {
+KStatusBarJobTracker* KStatusBarJobTracker_New2() {
     return new KStatusBarJobTracker();
 }
 
-KStatusBarJobTracker* KStatusBarJobTracker_new3(QWidget* parent, bool button) {
+KStatusBarJobTracker* KStatusBarJobTracker_New3(QWidget* parent, bool button) {
     return new KStatusBarJobTracker(parent, button);
 }
 

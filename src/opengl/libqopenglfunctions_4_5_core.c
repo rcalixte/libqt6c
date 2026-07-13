@@ -3,7 +3,7 @@
 #include "libqopenglfunctions_4_5_core.h"
 
 QOpenGLFunctions_4_5_Core* q_openglfunctions_4_5_core_new() {
-    return QOpenGLFunctions_4_5_Core_new();
+    return QOpenGLFunctions_4_5_Core_New();
 }
 
 bool q_openglfunctions_4_5_core_initialize_open_g_l_functions(void* self) {

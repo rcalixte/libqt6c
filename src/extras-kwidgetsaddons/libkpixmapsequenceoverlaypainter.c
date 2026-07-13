@@ -10,19 +10,19 @@
 #include "libkpixmapsequenceoverlaypainter.h"
 
 KPixmapSequenceOverlayPainter* k_pixmapsequenceoverlaypainter_new() {
-    return KPixmapSequenceOverlayPainter_new();
+    return KPixmapSequenceOverlayPainter_New();
 }
 
 KPixmapSequenceOverlayPainter* k_pixmapsequenceoverlaypainter_new2(void* seq) {
-    return KPixmapSequenceOverlayPainter_new2((KPixmapSequence*)seq);
+    return KPixmapSequenceOverlayPainter_New2((KPixmapSequence*)seq);
 }
 
 KPixmapSequenceOverlayPainter* k_pixmapsequenceoverlaypainter_new3(void* parent) {
-    return KPixmapSequenceOverlayPainter_new3((QObject*)parent);
+    return KPixmapSequenceOverlayPainter_New3((QObject*)parent);
 }
 
 KPixmapSequenceOverlayPainter* k_pixmapsequenceoverlaypainter_new4(void* seq, void* parent) {
-    return KPixmapSequenceOverlayPainter_new4((KPixmapSequence*)seq, (QObject*)parent);
+    return KPixmapSequenceOverlayPainter_New4((KPixmapSequence*)seq, (QObject*)parent);
 }
 
 const QMetaObject* k_pixmapsequenceoverlaypainter_meta_object(void* self) {

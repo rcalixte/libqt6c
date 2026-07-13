@@ -13,11 +13,11 @@
 #include "libktwofingerswipe.hpp"
 #include "libktwofingerswipe.hxx"
 
-KTwoFingerSwipe* KTwoFingerSwipe_new() {
+KTwoFingerSwipe* KTwoFingerSwipe_New() {
     return new VirtualKTwoFingerSwipe();
 }
 
-KTwoFingerSwipe* KTwoFingerSwipe_new2(QObject* parent) {
+KTwoFingerSwipe* KTwoFingerSwipe_New2(QObject* parent) {
     return new VirtualKTwoFingerSwipe(parent);
 }
 
@@ -445,7 +445,7 @@ void KTwoFingerSwipe_Delete(KTwoFingerSwipe* self) {
     delete self;
 }
 
-KTwoFingerSwipeRecognizer* KTwoFingerSwipeRecognizer_new() {
+KTwoFingerSwipeRecognizer* KTwoFingerSwipeRecognizer_New() {
     return new VirtualKTwoFingerSwipeRecognizer();
 }
 

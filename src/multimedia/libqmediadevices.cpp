@@ -13,11 +13,11 @@
 #include "libqmediadevices.hpp"
 #include "libqmediadevices.hxx"
 
-QMediaDevices* QMediaDevices_new() {
+QMediaDevices* QMediaDevices_New() {
     return new VirtualQMediaDevices();
 }
 
-QMediaDevices* QMediaDevices_new2(QObject* parent) {
+QMediaDevices* QMediaDevices_New2(QObject* parent) {
     return new VirtualQMediaDevices(parent);
 }
 

@@ -8,11 +8,11 @@
 #include "libkviewstatemaintainerbase.h"
 
 KViewStateMaintainerBase* k_viewstatemaintainerbase_new() {
-    return KViewStateMaintainerBase_new();
+    return KViewStateMaintainerBase_New();
 }
 
 KViewStateMaintainerBase* k_viewstatemaintainerbase_new2(void* parent) {
-    return KViewStateMaintainerBase_new2((QObject*)parent);
+    return KViewStateMaintainerBase_New2((QObject*)parent);
 }
 
 const QMetaObject* k_viewstatemaintainerbase_meta_object(void* self) {

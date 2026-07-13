@@ -29,7 +29,7 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-PackageKit__Transaction* PackageKit__Transaction_new(const QDBusObjectPath* tid);
+PackageKit__Transaction* PackageKit__Transaction_New(const QDBusObjectPath* tid);
 QMetaObject* PackageKit__Transaction_MetaObject(const PackageKit__Transaction* self);
 void* PackageKit__Transaction_Metacast(PackageKit__Transaction* self, const char* param1);
 int PackageKit__Transaction_Metacall(PackageKit__Transaction* self, int param1, int param2, void** param3);

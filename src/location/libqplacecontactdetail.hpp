@@ -18,8 +18,8 @@ extern "C" {
 typedef struct QPlaceContactDetail QPlaceContactDetail;
 #endif
 
-QPlaceContactDetail* QPlaceContactDetail_new();
-QPlaceContactDetail* QPlaceContactDetail_new2(const QPlaceContactDetail* other);
+QPlaceContactDetail* QPlaceContactDetail_New();
+QPlaceContactDetail* QPlaceContactDetail_New2(const QPlaceContactDetail* other);
 void QPlaceContactDetail_OperatorAssign(QPlaceContactDetail* self, const QPlaceContactDetail* other);
 void QPlaceContactDetail_Swap(QPlaceContactDetail* self, QPlaceContactDetail* other);
 libqt_string QPlaceContactDetail_Label(const QPlaceContactDetail* self);

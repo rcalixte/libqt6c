@@ -7,11 +7,11 @@
 #include "libkjob.h"
 
 KJob* k_job_new() {
-    return KJob_new();
+    return KJob_New();
 }
 
 KJob* k_job_new2(void* parent) {
-    return KJob_new2((QObject*)parent);
+    return KJob_New2((QObject*)parent);
 }
 
 const QMetaObject* k_job_meta_object(void* self) {

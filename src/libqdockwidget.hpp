@@ -52,12 +52,12 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QDockWidget* QDockWidget_new(QWidget* parent);
-QDockWidget* QDockWidget_new2(const libqt_string title);
-QDockWidget* QDockWidget_new3();
-QDockWidget* QDockWidget_new4(const libqt_string title, QWidget* parent);
-QDockWidget* QDockWidget_new5(const libqt_string title, QWidget* parent, int flags);
-QDockWidget* QDockWidget_new6(QWidget* parent, int flags);
+QDockWidget* QDockWidget_New(QWidget* parent);
+QDockWidget* QDockWidget_New2(const libqt_string title);
+QDockWidget* QDockWidget_New3();
+QDockWidget* QDockWidget_New4(const libqt_string title, QWidget* parent);
+QDockWidget* QDockWidget_New5(const libqt_string title, QWidget* parent, int flags);
+QDockWidget* QDockWidget_New6(QWidget* parent, int flags);
 QMetaObject* QDockWidget_MetaObject(const QDockWidget* self);
 void* QDockWidget_Metacast(QDockWidget* self, const char* param1);
 int QDockWidget_Metacall(QDockWidget* self, int param1, int param2, void** param3);

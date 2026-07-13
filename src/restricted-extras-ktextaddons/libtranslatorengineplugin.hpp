@@ -27,8 +27,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct TextTranslator__TranslatorEnginePlugin TextTranslator__TranslatorEnginePlugin;
 #endif
 
-TextTranslator__TranslatorEnginePlugin* TextTranslator__TranslatorEnginePlugin_new();
-TextTranslator__TranslatorEnginePlugin* TextTranslator__TranslatorEnginePlugin_new2(QObject* parent);
+TextTranslator__TranslatorEnginePlugin* TextTranslator__TranslatorEnginePlugin_New();
+TextTranslator__TranslatorEnginePlugin* TextTranslator__TranslatorEnginePlugin_New2(QObject* parent);
 QMetaObject* TextTranslator__TranslatorEnginePlugin_MetaObject(const TextTranslator__TranslatorEnginePlugin* self);
 void* TextTranslator__TranslatorEnginePlugin_Metacast(TextTranslator__TranslatorEnginePlugin* self, const char* param1);
 int TextTranslator__TranslatorEnginePlugin_Metacall(TextTranslator__TranslatorEnginePlugin* self, int param1, int param2, void** param3);

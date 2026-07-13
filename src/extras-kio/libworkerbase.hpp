@@ -38,7 +38,7 @@ typedef struct QUrl QUrl;
 typedef struct QVariant QVariant;
 #endif
 
-KIO__WorkerResult* KIO__WorkerResult_new(const KIO__WorkerResult* param1);
+KIO__WorkerResult* KIO__WorkerResult_New(const KIO__WorkerResult* param1);
 void KIO__WorkerResult_OperatorAssign(KIO__WorkerResult* self, const KIO__WorkerResult* param1);
 bool KIO__WorkerResult_Success(const KIO__WorkerResult* self);
 int KIO__WorkerResult_Error(const KIO__WorkerResult* self);
@@ -49,7 +49,7 @@ KIO__WorkerResult* KIO__WorkerResult_Fail1(int _error);
 KIO__WorkerResult* KIO__WorkerResult_Fail2(int _error, const libqt_string _errorString);
 void KIO__WorkerResult_Delete(KIO__WorkerResult* self);
 
-KIO__WorkerBase* KIO__WorkerBase_new(const libqt_string protocol, const libqt_string poolSocket, const libqt_string appSocket);
+KIO__WorkerBase* KIO__WorkerBase_New(const libqt_string protocol, const libqt_string poolSocket, const libqt_string appSocket);
 void KIO__WorkerBase_Exit(KIO__WorkerBase* self);
 void KIO__WorkerBase_DispatchLoop(KIO__WorkerBase* self);
 void KIO__WorkerBase_Data(KIO__WorkerBase* self, const libqt_string data);

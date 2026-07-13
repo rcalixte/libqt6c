@@ -4,11 +4,11 @@
 #include "libqtemporarydir.hpp"
 #include "libqtemporarydir.hxx"
 
-QTemporaryDir* QTemporaryDir_new() {
+QTemporaryDir* QTemporaryDir_New() {
     return new QTemporaryDir();
 }
 
-QTemporaryDir* QTemporaryDir_new2(const libqt_string templateName) {
+QTemporaryDir* QTemporaryDir_New2(const libqt_string templateName) {
     QString templateName_QString = QString::fromUtf8(templateName.data, templateName.len);
     return new QTemporaryDir(templateName_QString);
 }

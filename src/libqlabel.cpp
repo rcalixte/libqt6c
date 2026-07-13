@@ -42,29 +42,29 @@
 #include "libqlabel.hpp"
 #include "libqlabel.hxx"
 
-QLabel* QLabel_new(QWidget* parent) {
+QLabel* QLabel_New(QWidget* parent) {
     return new VirtualQLabel(parent);
 }
 
-QLabel* QLabel_new2() {
+QLabel* QLabel_New2() {
     return new VirtualQLabel();
 }
 
-QLabel* QLabel_new3(const libqt_string text) {
+QLabel* QLabel_New3(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQLabel(text_QString);
 }
 
-QLabel* QLabel_new4(QWidget* parent, int f) {
+QLabel* QLabel_New4(QWidget* parent, int f) {
     return new VirtualQLabel(parent, static_cast<Qt::WindowFlags>(f));
 }
 
-QLabel* QLabel_new5(const libqt_string text, QWidget* parent) {
+QLabel* QLabel_New5(const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQLabel(text_QString, parent);
 }
 
-QLabel* QLabel_new6(const libqt_string text, QWidget* parent, int f) {
+QLabel* QLabel_New6(const libqt_string text, QWidget* parent, int f) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQLabel(text_QString, parent, static_cast<Qt::WindowFlags>(f));
 }

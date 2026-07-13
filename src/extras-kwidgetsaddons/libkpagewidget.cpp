@@ -40,11 +40,11 @@
 #include "libkpagewidget.hpp"
 #include "libkpagewidget.hxx"
 
-KPageWidget* KPageWidget_new(QWidget* parent) {
+KPageWidget* KPageWidget_New(QWidget* parent) {
     return new VirtualKPageWidget(parent);
 }
 
-KPageWidget* KPageWidget_new2() {
+KPageWidget* KPageWidget_New2() {
     return new VirtualKPageWidget();
 }
 

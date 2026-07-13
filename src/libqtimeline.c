@@ -7,15 +7,15 @@
 #include "libqtimeline.h"
 
 QTimeLine* q_timeline_new() {
-    return QTimeLine_new();
+    return QTimeLine_New();
 }
 
 QTimeLine* q_timeline_new2(int duration) {
-    return QTimeLine_new2(duration);
+    return QTimeLine_New2(duration);
 }
 
 QTimeLine* q_timeline_new3(int duration, void* parent) {
-    return QTimeLine_new3(duration, (QObject*)parent);
+    return QTimeLine_New3(duration, (QObject*)parent);
 }
 
 const QMetaObject* q_timeline_meta_object(void* self) {

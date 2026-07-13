@@ -50,10 +50,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KLanguageButton* KLanguageButton_new(QWidget* parent);
-KLanguageButton* KLanguageButton_new2();
-KLanguageButton* KLanguageButton_new3(const libqt_string text);
-KLanguageButton* KLanguageButton_new4(const libqt_string text, QWidget* parent);
+KLanguageButton* KLanguageButton_New(QWidget* parent);
+KLanguageButton* KLanguageButton_New2();
+KLanguageButton* KLanguageButton_New3(const libqt_string text);
+KLanguageButton* KLanguageButton_New4(const libqt_string text, QWidget* parent);
 QMetaObject* KLanguageButton_MetaObject(const KLanguageButton* self);
 void* KLanguageButton_Metacast(KLanguageButton* self, const char* param1);
 int KLanguageButton_Metacall(KLanguageButton* self, int param1, int param2, void** param3);

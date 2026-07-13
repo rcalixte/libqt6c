@@ -19,11 +19,11 @@
 #include "libkpluralhandlingspinbox.h"
 
 KPluralHandlingSpinBox* k_pluralhandlingspinbox_new(void* parent) {
-    return KPluralHandlingSpinBox_new((QWidget*)parent);
+    return KPluralHandlingSpinBox_New((QWidget*)parent);
 }
 
 KPluralHandlingSpinBox* k_pluralhandlingspinbox_new2() {
-    return KPluralHandlingSpinBox_new2();
+    return KPluralHandlingSpinBox_New2();
 }
 
 const QMetaObject* k_pluralhandlingspinbox_meta_object(void* self) {

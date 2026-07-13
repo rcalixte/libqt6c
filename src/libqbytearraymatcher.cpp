@@ -6,29 +6,29 @@
 #include "libqbytearraymatcher.hpp"
 #include "libqbytearraymatcher.hxx"
 
-QByteArrayMatcher* QByteArrayMatcher_new() {
+QByteArrayMatcher* QByteArrayMatcher_New() {
     return new QByteArrayMatcher();
 }
 
-QByteArrayMatcher* QByteArrayMatcher_new2(const libqt_string pattern) {
+QByteArrayMatcher* QByteArrayMatcher_New2(const libqt_string pattern) {
     QByteArray pattern_QByteArray(pattern.data, pattern.len);
     return new QByteArrayMatcher(pattern_QByteArray);
 }
 
-QByteArrayMatcher* QByteArrayMatcher_new3(libqt_string pattern) {
+QByteArrayMatcher* QByteArrayMatcher_New3(libqt_string pattern) {
     QByteArrayView pattern_QByteArrayView(pattern.data, pattern.len);
     return new QByteArrayMatcher(pattern_QByteArrayView);
 }
 
-QByteArrayMatcher* QByteArrayMatcher_new4(const char* pattern) {
+QByteArrayMatcher* QByteArrayMatcher_New4(const char* pattern) {
     return new QByteArrayMatcher(pattern);
 }
 
-QByteArrayMatcher* QByteArrayMatcher_new5(const QByteArrayMatcher* other) {
+QByteArrayMatcher* QByteArrayMatcher_New5(const QByteArrayMatcher* other) {
     return new QByteArrayMatcher(*other);
 }
 
-QByteArrayMatcher* QByteArrayMatcher_new6(const char* pattern, ptrdiff_t length) {
+QByteArrayMatcher* QByteArrayMatcher_New6(const char* pattern, ptrdiff_t length) {
     return new QByteArrayMatcher(pattern, (qsizetype)(length));
 }
 
@@ -72,7 +72,7 @@ void QByteArrayMatcher_Delete(QByteArrayMatcher* self) {
     delete self;
 }
 
-QStaticByteArrayMatcherBase* QStaticByteArrayMatcherBase_new(const QStaticByteArrayMatcherBase* other) {
+QStaticByteArrayMatcherBase* QStaticByteArrayMatcherBase_New(const QStaticByteArrayMatcherBase* other) {
     return new QStaticByteArrayMatcherBase(*other);
 }
 

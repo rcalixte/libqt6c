@@ -14,15 +14,15 @@
 #include "libqscilexercpp.hpp"
 #include "libqscilexercpp.hxx"
 
-QsciLexerCPP* QsciLexerCPP_new() {
+QsciLexerCPP* QsciLexerCPP_New() {
     return new VirtualQsciLexerCPP();
 }
 
-QsciLexerCPP* QsciLexerCPP_new2(QObject* parent) {
+QsciLexerCPP* QsciLexerCPP_New2(QObject* parent) {
     return new VirtualQsciLexerCPP(parent);
 }
 
-QsciLexerCPP* QsciLexerCPP_new3(QObject* parent, bool caseInsensitiveKeywords) {
+QsciLexerCPP* QsciLexerCPP_New3(QObject* parent, bool caseInsensitiveKeywords) {
     return new VirtualQsciLexerCPP(parent, caseInsensitiveKeywords);
 }
 

@@ -4,15 +4,15 @@
 #include "libqgeopositioninfo.h"
 
 QGeoPositionInfo* q_geopositioninfo_new() {
-    return QGeoPositionInfo_new();
+    return QGeoPositionInfo_New();
 }
 
 QGeoPositionInfo* q_geopositioninfo_new2(void* coordinate, void* updateTime) {
-    return QGeoPositionInfo_new2((QGeoCoordinate*)coordinate, (QDateTime*)updateTime);
+    return QGeoPositionInfo_New2((QGeoCoordinate*)coordinate, (QDateTime*)updateTime);
 }
 
 QGeoPositionInfo* q_geopositioninfo_new3(void* other) {
-    return QGeoPositionInfo_new3((QGeoPositionInfo*)other);
+    return QGeoPositionInfo_New3((QGeoPositionInfo*)other);
 }
 
 void q_geopositioninfo_operator_assign(void* self, void* other) {

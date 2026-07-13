@@ -121,7 +121,7 @@ void q_poppler__annotation_delete(void* self) {
 }
 
 Poppler__TextAnnotation* q_poppler__textannotation_new(int32_t type) {
-    return Poppler__TextAnnotation_new(type);
+    return Poppler__TextAnnotation_New(type);
 }
 
 int32_t q_poppler__textannotation_sub_type(void* self) {
@@ -303,7 +303,7 @@ void q_poppler__textannotation_delete(void* self) {
 }
 
 Poppler__LineAnnotation* q_poppler__lineannotation_new(int32_t type) {
-    return Poppler__LineAnnotation_new(type);
+    return Poppler__LineAnnotation_New(type);
 }
 
 int32_t q_poppler__lineannotation_sub_type(void* self) {
@@ -502,7 +502,7 @@ void q_poppler__lineannotation_delete(void* self) {
 }
 
 Poppler__GeomAnnotation* q_poppler__geomannotation_new() {
-    return Poppler__GeomAnnotation_new();
+    return Poppler__GeomAnnotation_New();
 }
 
 int32_t q_poppler__geomannotation_sub_type(void* self) {
@@ -640,7 +640,7 @@ void q_poppler__geomannotation_delete(void* self) {
 }
 
 Poppler__HighlightAnnotation* q_poppler__highlightannotation_new() {
-    return Poppler__HighlightAnnotation_new();
+    return Poppler__HighlightAnnotation_New();
 }
 
 int32_t q_poppler__highlightannotation_sub_type(void* self) {
@@ -779,7 +779,7 @@ void q_poppler__highlightannotation_delete(void* self) {
 }
 
 Poppler__StampAnnotation* q_poppler__stampannotation_new() {
-    return Poppler__StampAnnotation_new();
+    return Poppler__StampAnnotation_New();
 }
 
 int32_t q_poppler__stampannotation_sub_type(void* self) {
@@ -916,7 +916,7 @@ void q_poppler__stampannotation_delete(void* self) {
 }
 
 Poppler__SignatureAnnotation* q_poppler__signatureannotation_new() {
-    return Poppler__SignatureAnnotation_new();
+    return Poppler__SignatureAnnotation_New();
 }
 
 int32_t q_poppler__signatureannotation_sub_type(void* self) {
@@ -1120,7 +1120,7 @@ void q_poppler__signatureannotation_delete(void* self) {
 }
 
 Poppler__InkAnnotation* q_poppler__inkannotation_new() {
-    return Poppler__InkAnnotation_new();
+    return Poppler__InkAnnotation_New();
 }
 
 int32_t q_poppler__inkannotation_sub_type(void* self) {
@@ -1380,7 +1380,7 @@ void q_poppler__linkannotation_delete(void* self) {
 }
 
 Poppler__CaretAnnotation* q_poppler__caretannotation_new() {
-    return Poppler__CaretAnnotation_new();
+    return Poppler__CaretAnnotation_New();
 }
 
 int32_t q_poppler__caretannotation_sub_type(void* self) {
@@ -2262,11 +2262,11 @@ void q_poppler__richmediaannotation_delete(void* self) {
 }
 
 Poppler__Annotation__Style* q_poppler__annotation__style_new() {
-    return Poppler__Annotation__Style_new();
+    return Poppler__Annotation__Style_New();
 }
 
 Poppler__Annotation__Style* q_poppler__annotation__style_new2(void* other) {
-    return Poppler__Annotation__Style_new2((Poppler__Annotation__Style*)other);
+    return Poppler__Annotation__Style_New2((Poppler__Annotation__Style*)other);
 }
 
 void q_poppler__annotation__style_operator_assign(void* self, void* other) {
@@ -2351,11 +2351,11 @@ void q_poppler__annotation__style_delete(void* self) {
 }
 
 Poppler__Annotation__Popup* q_poppler__annotation__popup_new() {
-    return Poppler__Annotation__Popup_new();
+    return Poppler__Annotation__Popup_New();
 }
 
 Poppler__Annotation__Popup* q_poppler__annotation__popup_new2(void* other) {
-    return Poppler__Annotation__Popup_new2((Poppler__Annotation__Popup*)other);
+    return Poppler__Annotation__Popup_New2((Poppler__Annotation__Popup*)other);
 }
 
 void q_poppler__annotation__popup_operator_assign(void* self, void* other) {
@@ -2444,7 +2444,7 @@ void q_poppler__highlightannotation__quad_delete(void* self) {
 }
 
 Poppler__RichMediaAnnotation__Params* q_poppler__richmediaannotation__params_new() {
-    return Poppler__RichMediaAnnotation__Params_new();
+    return Poppler__RichMediaAnnotation__Params_New();
 }
 
 const char* q_poppler__richmediaannotation__params_flash_vars(void* self) {
@@ -2459,7 +2459,7 @@ void q_poppler__richmediaannotation__params_delete(void* self) {
 }
 
 Poppler__RichMediaAnnotation__Instance* q_poppler__richmediaannotation__instance_new() {
-    return Poppler__RichMediaAnnotation__Instance_new();
+    return Poppler__RichMediaAnnotation__Instance_New();
 }
 
 int32_t q_poppler__richmediaannotation__instance_type(void* self) {
@@ -2475,7 +2475,7 @@ void q_poppler__richmediaannotation__instance_delete(void* self) {
 }
 
 Poppler__RichMediaAnnotation__Configuration* q_poppler__richmediaannotation__configuration_new() {
-    return Poppler__RichMediaAnnotation__Configuration_new();
+    return Poppler__RichMediaAnnotation__Configuration_New();
 }
 
 int32_t q_poppler__richmediaannotation__configuration_type(void* self) {
@@ -2499,7 +2499,7 @@ void q_poppler__richmediaannotation__configuration_delete(void* self) {
 }
 
 Poppler__RichMediaAnnotation__Asset* q_poppler__richmediaannotation__asset_new() {
-    return Poppler__RichMediaAnnotation__Asset_new();
+    return Poppler__RichMediaAnnotation__Asset_New();
 }
 
 const char* q_poppler__richmediaannotation__asset_name(void* self) {
@@ -2518,7 +2518,7 @@ void q_poppler__richmediaannotation__asset_delete(void* self) {
 }
 
 Poppler__RichMediaAnnotation__Content* q_poppler__richmediaannotation__content_new() {
-    return Poppler__RichMediaAnnotation__Content_new();
+    return Poppler__RichMediaAnnotation__Content_New();
 }
 
 libqt_list /* of Poppler__RichMediaAnnotation__Configuration* */ q_poppler__richmediaannotation__content_configurations(void* self) {
@@ -2536,7 +2536,7 @@ void q_poppler__richmediaannotation__content_delete(void* self) {
 }
 
 Poppler__RichMediaAnnotation__Activation* q_poppler__richmediaannotation__activation_new() {
-    return Poppler__RichMediaAnnotation__Activation_new();
+    return Poppler__RichMediaAnnotation__Activation_New();
 }
 
 int32_t q_poppler__richmediaannotation__activation_condition(void* self) {
@@ -2548,7 +2548,7 @@ void q_poppler__richmediaannotation__activation_delete(void* self) {
 }
 
 Poppler__RichMediaAnnotation__Deactivation* q_poppler__richmediaannotation__deactivation_new() {
-    return Poppler__RichMediaAnnotation__Deactivation_new();
+    return Poppler__RichMediaAnnotation__Deactivation_New();
 }
 
 int32_t q_poppler__richmediaannotation__deactivation_condition(void* self) {
@@ -2560,7 +2560,7 @@ void q_poppler__richmediaannotation__deactivation_delete(void* self) {
 }
 
 Poppler__RichMediaAnnotation__Settings* q_poppler__richmediaannotation__settings_new() {
-    return Poppler__RichMediaAnnotation__Settings_new();
+    return Poppler__RichMediaAnnotation__Settings_New();
 }
 
 Poppler__RichMediaAnnotation__Activation* q_poppler__richmediaannotation__settings_activation(void* self) {

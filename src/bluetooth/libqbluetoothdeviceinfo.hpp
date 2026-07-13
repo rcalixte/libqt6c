@@ -20,10 +20,10 @@ typedef struct QBluetoothDeviceInfo QBluetoothDeviceInfo;
 typedef struct QBluetoothUuid QBluetoothUuid;
 #endif
 
-QBluetoothDeviceInfo* QBluetoothDeviceInfo_new();
-QBluetoothDeviceInfo* QBluetoothDeviceInfo_new2(const QBluetoothAddress* address, const libqt_string name, unsigned int classOfDevice);
-QBluetoothDeviceInfo* QBluetoothDeviceInfo_new3(const QBluetoothUuid* uuid, const libqt_string name, unsigned int classOfDevice);
-QBluetoothDeviceInfo* QBluetoothDeviceInfo_new4(const QBluetoothDeviceInfo* other);
+QBluetoothDeviceInfo* QBluetoothDeviceInfo_New();
+QBluetoothDeviceInfo* QBluetoothDeviceInfo_New2(const QBluetoothAddress* address, const libqt_string name, unsigned int classOfDevice);
+QBluetoothDeviceInfo* QBluetoothDeviceInfo_New3(const QBluetoothUuid* uuid, const libqt_string name, unsigned int classOfDevice);
+QBluetoothDeviceInfo* QBluetoothDeviceInfo_New4(const QBluetoothDeviceInfo* other);
 bool QBluetoothDeviceInfo_IsValid(const QBluetoothDeviceInfo* self);
 bool QBluetoothDeviceInfo_IsCached(const QBluetoothDeviceInfo* self);
 void QBluetoothDeviceInfo_SetCached(QBluetoothDeviceInfo* self, bool cached);

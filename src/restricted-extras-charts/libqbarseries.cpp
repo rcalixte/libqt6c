@@ -12,11 +12,11 @@
 #include "libqbarseries.hpp"
 #include "libqbarseries.hxx"
 
-QBarSeries* QBarSeries_new() {
+QBarSeries* QBarSeries_New() {
     return new VirtualQBarSeries();
 }
 
-QBarSeries* QBarSeries_new2(QObject* parent) {
+QBarSeries* QBarSeries_New2(QObject* parent) {
     return new VirtualQBarSeries(parent);
 }
 

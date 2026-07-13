@@ -6,7 +6,7 @@
 #include "libqgesturerecognizer.hpp"
 #include "libqgesturerecognizer.hxx"
 
-QGestureRecognizer* QGestureRecognizer_new() {
+QGestureRecognizer* QGestureRecognizer_New() {
     return new VirtualQGestureRecognizer();
 }
 

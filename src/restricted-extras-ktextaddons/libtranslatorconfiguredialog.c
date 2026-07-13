@@ -15,11 +15,11 @@
 #include "libtranslatorconfiguredialog.h"
 
 TextTranslator__TranslatorConfigureDialog* k_texttranslator__translatorconfiguredialog_new(void* parent) {
-    return TextTranslator__TranslatorConfigureDialog_new((QWidget*)parent);
+    return TextTranslator__TranslatorConfigureDialog_New((QWidget*)parent);
 }
 
 TextTranslator__TranslatorConfigureDialog* k_texttranslator__translatorconfiguredialog_new2() {
-    return TextTranslator__TranslatorConfigureDialog_new2();
+    return TextTranslator__TranslatorConfigureDialog_New2();
 }
 
 const char* k_texttranslator__translatorconfiguredialog_tr(const char* s) {

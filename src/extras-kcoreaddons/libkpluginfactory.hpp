@@ -27,7 +27,7 @@ typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
 
-KPluginFactory* KPluginFactory_new();
+KPluginFactory* KPluginFactory_New();
 QMetaObject* KPluginFactory_MetaObject(const KPluginFactory* self);
 void* KPluginFactory_Metacast(KPluginFactory* self, const char* param1);
 int KPluginFactory_Metacall(KPluginFactory* self, int param1, int param2, void** param3);

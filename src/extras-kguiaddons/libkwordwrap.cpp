@@ -7,7 +7,7 @@
 #include "libkwordwrap.hpp"
 #include "libkwordwrap.hxx"
 
-KWordWrap* KWordWrap_new(const KWordWrap* other) {
+KWordWrap* KWordWrap_New(const KWordWrap* other) {
     return new KWordWrap(*other);
 }
 

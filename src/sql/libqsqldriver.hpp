@@ -30,8 +30,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QSqlDriver* QSqlDriver_new();
-QSqlDriver* QSqlDriver_new2(QObject* parent);
+QSqlDriver* QSqlDriver_New();
+QSqlDriver* QSqlDriver_New2(QObject* parent);
 QMetaObject* QSqlDriver_MetaObject(const QSqlDriver* self);
 void* QSqlDriver_Metacast(QSqlDriver* self, const char* param1);
 int QSqlDriver_Metacall(QSqlDriver* self, int param1, int param2, void** param3);

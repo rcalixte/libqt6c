@@ -9,7 +9,7 @@
 #include "libqaudiolistener.h"
 
 QAudioListener* q_audiolistener_new(void* engine) {
-    return QAudioListener_new((QAudioEngine*)engine);
+    return QAudioListener_New((QAudioEngine*)engine);
 }
 
 void q_audiolistener_set_position(void* self, void* pos) {

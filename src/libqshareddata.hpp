@@ -19,13 +19,13 @@ typedef struct QAdoptSharedDataTag QAdoptSharedDataTag;
 typedef struct QSharedData QSharedData;
 #endif
 
-QSharedData* QSharedData_new();
-QSharedData* QSharedData_new2(const QSharedData* param1);
+QSharedData* QSharedData_New();
+QSharedData* QSharedData_New2(const QSharedData* param1);
 void QSharedData_Delete(QSharedData* self);
 
-QAdoptSharedDataTag* QAdoptSharedDataTag_new(const QAdoptSharedDataTag* other);
-QAdoptSharedDataTag* QAdoptSharedDataTag_new2(QAdoptSharedDataTag* other);
-QAdoptSharedDataTag* QAdoptSharedDataTag_new3();
+QAdoptSharedDataTag* QAdoptSharedDataTag_New(const QAdoptSharedDataTag* other);
+QAdoptSharedDataTag* QAdoptSharedDataTag_New2(QAdoptSharedDataTag* other);
+QAdoptSharedDataTag* QAdoptSharedDataTag_New3();
 void QAdoptSharedDataTag_CopyAssign(QAdoptSharedDataTag* self, QAdoptSharedDataTag* other);
 void QAdoptSharedDataTag_MoveAssign(QAdoptSharedDataTag* self, QAdoptSharedDataTag* other);
 void QAdoptSharedDataTag_Delete(QAdoptSharedDataTag* self);

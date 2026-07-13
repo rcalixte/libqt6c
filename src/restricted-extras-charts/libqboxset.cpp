@@ -13,30 +13,30 @@
 #include "libqboxset.hpp"
 #include "libqboxset.hxx"
 
-QBoxSet* QBoxSet_new() {
+QBoxSet* QBoxSet_New() {
     return new VirtualQBoxSet();
 }
 
-QBoxSet* QBoxSet_new2(const double le, const double lq, const double m, const double uq, const double ue) {
+QBoxSet* QBoxSet_New2(const double le, const double lq, const double m, const double uq, const double ue) {
     return new VirtualQBoxSet(static_cast<const qreal>(le), static_cast<const qreal>(lq), static_cast<const qreal>(m), static_cast<const qreal>(uq), static_cast<const qreal>(ue));
 }
 
-QBoxSet* QBoxSet_new3(const libqt_string label) {
+QBoxSet* QBoxSet_New3(const libqt_string label) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return new VirtualQBoxSet(label_QString);
 }
 
-QBoxSet* QBoxSet_new4(const libqt_string label, QObject* parent) {
+QBoxSet* QBoxSet_New4(const libqt_string label, QObject* parent) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return new VirtualQBoxSet(label_QString, parent);
 }
 
-QBoxSet* QBoxSet_new5(const double le, const double lq, const double m, const double uq, const double ue, const libqt_string label) {
+QBoxSet* QBoxSet_New5(const double le, const double lq, const double m, const double uq, const double ue, const libqt_string label) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return new VirtualQBoxSet(static_cast<const qreal>(le), static_cast<const qreal>(lq), static_cast<const qreal>(m), static_cast<const qreal>(uq), static_cast<const qreal>(ue), label_QString);
 }
 
-QBoxSet* QBoxSet_new6(const double le, const double lq, const double m, const double uq, const double ue, const libqt_string label, QObject* parent) {
+QBoxSet* QBoxSet_New6(const double le, const double lq, const double m, const double uq, const double ue, const libqt_string label, QObject* parent) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return new VirtualQBoxSet(static_cast<const qreal>(le), static_cast<const qreal>(lq), static_cast<const qreal>(m), static_cast<const qreal>(uq), static_cast<const qreal>(ue), label_QString, parent);
 }

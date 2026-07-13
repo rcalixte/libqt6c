@@ -27,7 +27,7 @@ typedef struct QDomElement QDomElement;
 typedef struct QObject QObject;
 #endif
 
-KParts__PartBase* KParts__PartBase_new();
+KParts__PartBase* KParts__PartBase_New();
 void KParts__PartBase_SetPartObject(KParts__PartBase* self, QObject* object);
 QObject* KParts__PartBase_PartObject(const KParts__PartBase* self);
 QAction* KParts__PartBase_Action2(const KParts__PartBase* self, const QDomElement* element);

@@ -2,15 +2,15 @@
 #include "libkdesktopfileaction.h"
 
 KDesktopFileAction* k_desktopfileaction_new() {
-    return KDesktopFileAction_new();
+    return KDesktopFileAction_New();
 }
 
 KDesktopFileAction* k_desktopfileaction_new2(const char* name, const char* text, const char* icon, const char* exec, const char* desktopFilePath) {
-    return KDesktopFileAction_new2(qstring(name), qstring(text), qstring(icon), qstring(exec), qstring(desktopFilePath));
+    return KDesktopFileAction_New2(qstring(name), qstring(text), qstring(icon), qstring(exec), qstring(desktopFilePath));
 }
 
 KDesktopFileAction* k_desktopfileaction_new3(void* other) {
-    return KDesktopFileAction_new3((KDesktopFileAction*)other);
+    return KDesktopFileAction_New3((KDesktopFileAction*)other);
 }
 
 void k_desktopfileaction_operator_assign(void* self, void* other) {

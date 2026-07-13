@@ -4,11 +4,11 @@
 #include "libgrammarerror.h"
 
 TextGrammarCheck__GrammarError* k_textgrammarcheck__grammarerror_new() {
-    return TextGrammarCheck__GrammarError_new();
+    return TextGrammarCheck__GrammarError_New();
 }
 
 TextGrammarCheck__GrammarError* k_textgrammarcheck__grammarerror_new2(void* param1) {
-    return TextGrammarCheck__GrammarError_new2((TextGrammarCheck__GrammarError*)param1);
+    return TextGrammarCheck__GrammarError_New2((TextGrammarCheck__GrammarError*)param1);
 }
 
 QColor* k_textgrammarcheck__grammarerror_color(void* self) {

@@ -14,11 +14,11 @@
 #include "libkcheckableproxymodel.h"
 
 KCheckableProxyModel* k_checkableproxymodel_new() {
-    return KCheckableProxyModel_new();
+    return KCheckableProxyModel_New();
 }
 
 KCheckableProxyModel* k_checkableproxymodel_new2(void* parent) {
-    return KCheckableProxyModel_new2((QObject*)parent);
+    return KCheckableProxyModel_New2((QObject*)parent);
 }
 
 const QMetaObject* k_checkableproxymodel_meta_object(void* self) {

@@ -13,12 +13,12 @@
 #include "libqgeocodereply.hpp"
 #include "libqgeocodereply.hxx"
 
-QGeoCodeReply* QGeoCodeReply_new(int error, const libqt_string errorString) {
+QGeoCodeReply* QGeoCodeReply_New(int error, const libqt_string errorString) {
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     return new VirtualQGeoCodeReply(static_cast<QGeoCodeReply::Error>(error), errorString_QString);
 }
 
-QGeoCodeReply* QGeoCodeReply_new2(int error, const libqt_string errorString, QObject* parent) {
+QGeoCodeReply* QGeoCodeReply_New2(int error, const libqt_string errorString, QObject* parent) {
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     return new VirtualQGeoCodeReply(static_cast<QGeoCodeReply::Error>(error), errorString_QString, parent);
 }

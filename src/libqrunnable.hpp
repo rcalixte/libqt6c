@@ -18,7 +18,7 @@ extern "C" {
 typedef struct QRunnable QRunnable;
 #endif
 
-QRunnable* QRunnable_new();
+QRunnable* QRunnable_New();
 void QRunnable_Run(QRunnable* self);
 bool QRunnable_AutoDelete(const QRunnable* self);
 void QRunnable_SetAutoDelete(QRunnable* self, bool autoDelete);

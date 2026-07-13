@@ -4,19 +4,19 @@
 #include "libdocumentcursor.h"
 
 KTextEditor__DocumentCursor* k_texteditor__documentcursor_new(void* document) {
-    return KTextEditor__DocumentCursor_new((KTextEditor__Document*)document);
+    return KTextEditor__DocumentCursor_New((KTextEditor__Document*)document);
 }
 
 KTextEditor__DocumentCursor* k_texteditor__documentcursor_new2(void* document, void* position) {
-    return KTextEditor__DocumentCursor_new2((KTextEditor__Document*)document, (KTextEditor__Cursor*)position);
+    return KTextEditor__DocumentCursor_New2((KTextEditor__Document*)document, (KTextEditor__Cursor*)position);
 }
 
 KTextEditor__DocumentCursor* k_texteditor__documentcursor_new3(void* document, int line, int column) {
-    return KTextEditor__DocumentCursor_new3((KTextEditor__Document*)document, line, column);
+    return KTextEditor__DocumentCursor_New3((KTextEditor__Document*)document, line, column);
 }
 
 KTextEditor__DocumentCursor* k_texteditor__documentcursor_new4(void* other) {
-    return KTextEditor__DocumentCursor_new4((KTextEditor__DocumentCursor*)other);
+    return KTextEditor__DocumentCursor_New4((KTextEditor__DocumentCursor*)other);
 }
 
 KTextEditor__Document* k_texteditor__documentcursor_document(void* self) {

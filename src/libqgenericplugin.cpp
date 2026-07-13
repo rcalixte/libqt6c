@@ -10,11 +10,11 @@
 #include "libqgenericplugin.hpp"
 #include "libqgenericplugin.hxx"
 
-QGenericPlugin* QGenericPlugin_new() {
+QGenericPlugin* QGenericPlugin_New() {
     return new VirtualQGenericPlugin();
 }
 
-QGenericPlugin* QGenericPlugin_new2(QObject* parent) {
+QGenericPlugin* QGenericPlugin_New2(QObject* parent) {
     return new VirtualQGenericPlugin(parent);
 }
 

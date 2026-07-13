@@ -11,15 +11,15 @@
 #include "libqnetworkrequestfactory.hpp"
 #include "libqnetworkrequestfactory.hxx"
 
-QNetworkRequestFactory* QNetworkRequestFactory_new() {
+QNetworkRequestFactory* QNetworkRequestFactory_New() {
     return new QNetworkRequestFactory();
 }
 
-QNetworkRequestFactory* QNetworkRequestFactory_new2(const QUrl* baseUrl) {
+QNetworkRequestFactory* QNetworkRequestFactory_New2(const QUrl* baseUrl) {
     return new QNetworkRequestFactory(*baseUrl);
 }
 
-QNetworkRequestFactory* QNetworkRequestFactory_new3(const QNetworkRequestFactory* other) {
+QNetworkRequestFactory* QNetworkRequestFactory_New3(const QNetworkRequestFactory* other) {
     return new QNetworkRequestFactory(*other);
 }
 

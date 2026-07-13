@@ -39,7 +39,7 @@
 #include "libknameandurlinputdialog.hpp"
 #include "libknameandurlinputdialog.hxx"
 
-KNameAndUrlInputDialog* KNameAndUrlInputDialog_new(const libqt_string nameLabel, const libqt_string urlLabel, const QUrl* startDir, QWidget* parent) {
+KNameAndUrlInputDialog* KNameAndUrlInputDialog_New(const libqt_string nameLabel, const libqt_string urlLabel, const QUrl* startDir, QWidget* parent) {
     QString nameLabel_QString = QString::fromUtf8(nameLabel.data, nameLabel.len);
     QString urlLabel_QString = QString::fromUtf8(urlLabel.data, urlLabel.len);
     return new VirtualKNameAndUrlInputDialog(nameLabel_QString, urlLabel_QString, *startDir, parent);

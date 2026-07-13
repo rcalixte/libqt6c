@@ -51,12 +51,12 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KLed* KLed_new(QWidget* parent);
-KLed* KLed_new2();
-KLed* KLed_new3(const QColor* color);
-KLed* KLed_new4(const QColor* color, int state, int look, int shape);
-KLed* KLed_new5(const QColor* color, QWidget* parent);
-KLed* KLed_new6(const QColor* color, int state, int look, int shape, QWidget* parent);
+KLed* KLed_New(QWidget* parent);
+KLed* KLed_New2();
+KLed* KLed_New3(const QColor* color);
+KLed* KLed_New4(const QColor* color, int state, int look, int shape);
+KLed* KLed_New5(const QColor* color, QWidget* parent);
+KLed* KLed_New6(const QColor* color, int state, int look, int shape, QWidget* parent);
 QMetaObject* KLed_MetaObject(const KLed* self);
 void* KLed_Metacast(KLed* self, const char* param1);
 int KLed_Metacall(KLed* self, int param1, int param2, void** param3);

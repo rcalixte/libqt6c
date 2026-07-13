@@ -14,11 +14,11 @@
 #include "liblanguagetoolconfigwidget.h"
 
 TextGrammarCheck__LanguageToolConfigWidget* k_textgrammarcheck__languagetoolconfigwidget_new(void* parent) {
-    return TextGrammarCheck__LanguageToolConfigWidget_new((QWidget*)parent);
+    return TextGrammarCheck__LanguageToolConfigWidget_New((QWidget*)parent);
 }
 
 TextGrammarCheck__LanguageToolConfigWidget* k_textgrammarcheck__languagetoolconfigwidget_new2() {
-    return TextGrammarCheck__LanguageToolConfigWidget_new2();
+    return TextGrammarCheck__LanguageToolConfigWidget_New2();
 }
 
 const QMetaObject* k_textgrammarcheck__languagetoolconfigwidget_meta_object(void* self) {

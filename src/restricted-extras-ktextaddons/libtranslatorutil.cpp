@@ -7,15 +7,15 @@
 #include "libtranslatorutil.hpp"
 #include "libtranslatorutil.hxx"
 
-TextTranslator__TranslatorUtil* TextTranslator__TranslatorUtil_new(const TextTranslator__TranslatorUtil* other) {
+TextTranslator__TranslatorUtil* TextTranslator__TranslatorUtil_New(const TextTranslator__TranslatorUtil* other) {
     return new TextTranslator::TranslatorUtil(*other);
 }
 
-TextTranslator__TranslatorUtil* TextTranslator__TranslatorUtil_new2(TextTranslator__TranslatorUtil* other) {
+TextTranslator__TranslatorUtil* TextTranslator__TranslatorUtil_New2(TextTranslator__TranslatorUtil* other) {
     return new TextTranslator::TranslatorUtil(std::move(*other));
 }
 
-TextTranslator__TranslatorUtil* TextTranslator__TranslatorUtil_new3() {
+TextTranslator__TranslatorUtil* TextTranslator__TranslatorUtil_New3() {
     return new TextTranslator::TranslatorUtil();
 }
 
@@ -158,7 +158,7 @@ void TextTranslator__TranslatorUtil_Delete(TextTranslator__TranslatorUtil* self)
     delete self;
 }
 
-TextTranslator__TranslatorUtil__TranslatorSettings* TextTranslator__TranslatorUtil__TranslatorSettings_new(const TextTranslator__TranslatorUtil__TranslatorSettings* param1) {
+TextTranslator__TranslatorUtil__TranslatorSettings* TextTranslator__TranslatorUtil__TranslatorSettings_New(const TextTranslator__TranslatorUtil__TranslatorSettings* param1) {
     return new TextTranslator::TranslatorUtil::TranslatorSettings(*param1);
 }
 

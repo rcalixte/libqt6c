@@ -9,11 +9,11 @@
 #include "libqtcpserver.h"
 
 QTcpServer* q_tcpserver_new() {
-    return QTcpServer_new();
+    return QTcpServer_New();
 }
 
 QTcpServer* q_tcpserver_new2(void* parent) {
-    return QTcpServer_new2((QObject*)parent);
+    return QTcpServer_New2((QObject*)parent);
 }
 
 const QMetaObject* q_tcpserver_meta_object(void* self) {

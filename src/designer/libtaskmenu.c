@@ -3,7 +3,7 @@
 #include "libtaskmenu.h"
 
 QDesignerTaskMenuExtension* q_designertaskmenuextension_new() {
-    return QDesignerTaskMenuExtension_new();
+    return QDesignerTaskMenuExtension_New();
 }
 
 QAction* q_designertaskmenuextension_preferred_edit_action(void* self) {

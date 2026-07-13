@@ -11,28 +11,28 @@
 #include "libqsqlquery.hpp"
 #include "libqsqlquery.hxx"
 
-QSqlQuery* QSqlQuery_new(QSqlResult* r) {
+QSqlQuery* QSqlQuery_New(QSqlResult* r) {
     return new QSqlQuery(r);
 }
 
-QSqlQuery* QSqlQuery_new2() {
+QSqlQuery* QSqlQuery_New2() {
     return new QSqlQuery();
 }
 
-QSqlQuery* QSqlQuery_new3(const QSqlDatabase* db) {
+QSqlQuery* QSqlQuery_New3(const QSqlDatabase* db) {
     return new QSqlQuery(*db);
 }
 
-QSqlQuery* QSqlQuery_new4(const QSqlQuery* other) {
+QSqlQuery* QSqlQuery_New4(const QSqlQuery* other) {
     return new QSqlQuery(*other);
 }
 
-QSqlQuery* QSqlQuery_new5(const libqt_string query) {
+QSqlQuery* QSqlQuery_New5(const libqt_string query) {
     QString query_QString = QString::fromUtf8(query.data, query.len);
     return new QSqlQuery(query_QString);
 }
 
-QSqlQuery* QSqlQuery_new6(const libqt_string query, const QSqlDatabase* db) {
+QSqlQuery* QSqlQuery_New6(const libqt_string query, const QSqlDatabase* db) {
     QString query_QString = QString::fromUtf8(query.data, query.len);
     return new QSqlQuery(query_QString, *db);
 }

@@ -21,15 +21,15 @@ typedef struct QCollatorSortKey QCollatorSortKey;
 typedef struct QLocale QLocale;
 #endif
 
-QCollatorSortKey* QCollatorSortKey_new(const QCollatorSortKey* other);
+QCollatorSortKey* QCollatorSortKey_New(const QCollatorSortKey* other);
 void QCollatorSortKey_OperatorAssign(QCollatorSortKey* self, const QCollatorSortKey* other);
 void QCollatorSortKey_Swap(QCollatorSortKey* self, QCollatorSortKey* other);
 int QCollatorSortKey_Compare(const QCollatorSortKey* self, const QCollatorSortKey* key);
 void QCollatorSortKey_Delete(QCollatorSortKey* self);
 
-QCollator* QCollator_new();
-QCollator* QCollator_new2(const QLocale* locale);
-QCollator* QCollator_new3(const QCollator* param1);
+QCollator* QCollator_New();
+QCollator* QCollator_New2(const QLocale* locale);
+QCollator* QCollator_New3(const QCollator* param1);
 void QCollator_OperatorAssign(QCollator* self, const QCollator* param1);
 void QCollator_Swap(QCollator* self, QCollator* other);
 void QCollator_SetLocale(QCollator* self, const QLocale* locale);

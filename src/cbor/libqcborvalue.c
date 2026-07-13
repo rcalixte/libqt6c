@@ -13,11 +13,11 @@
 #include "libqcborvalue.h"
 
 QCborParserError* q_cborparsererror_new(void* other) {
-    return QCborParserError_new((QCborParserError*)other);
+    return QCborParserError_New((QCborParserError*)other);
 }
 
 QCborParserError* q_cborparsererror_new2(void* other) {
-    return QCborParserError_new2((QCborParserError*)other);
+    return QCborParserError_New2((QCborParserError*)other);
 }
 
 void q_cborparsererror_copy_assign(void* self, void* other) {
@@ -56,99 +56,99 @@ void q_cborparsererror_delete(void* self) {
 }
 
 QCborValue* q_cborvalue_new() {
-    return QCborValue_new();
+    return QCborValue_New();
 }
 
 QCborValue* q_cborvalue_new2(int32_t t_) {
-    return QCborValue_new2(t_);
+    return QCborValue_New2(t_);
 }
 
 QCborValue* q_cborvalue_new3(bool b_) {
-    return QCborValue_new3(b_);
+    return QCborValue_New3(b_);
 }
 
 QCborValue* q_cborvalue_new4(int i) {
-    return QCborValue_new4(i);
+    return QCborValue_New4(i);
 }
 
 QCborValue* q_cborvalue_new5(uint32_t u) {
-    return QCborValue_new5(u);
+    return QCborValue_New5(u);
 }
 
 QCborValue* q_cborvalue_new6(int64_t i) {
-    return QCborValue_new6(i);
+    return QCborValue_New6(i);
 }
 
 QCborValue* q_cborvalue_new7(double v) {
-    return QCborValue_new7(v);
+    return QCborValue_New7(v);
 }
 
 QCborValue* q_cborvalue_new8(uint8_t st) {
-    return QCborValue_new8(st);
+    return QCborValue_New8(st);
 }
 
 QCborValue* q_cborvalue_new9(char* ba) {
-    return QCborValue_new9(qstring(ba));
+    return QCborValue_New9(qstring(ba));
 }
 
 QCborValue* q_cborvalue_new10(const char* s) {
-    return QCborValue_new10(qstring(s));
+    return QCborValue_New10(qstring(s));
 }
 
 QCborValue* q_cborvalue_new11(const char* s) {
-    return QCborValue_new11(qstring(s));
+    return QCborValue_New11(qstring(s));
 }
 
 QCborValue* q_cborvalue_new12(char* s) {
-    return QCborValue_new12(qstring(s));
+    return QCborValue_New12(qstring(s));
 }
 
 QCborValue* q_cborvalue_new13(const char* s) {
-    return QCborValue_new13(s);
+    return QCborValue_New13(s);
 }
 
 QCborValue* q_cborvalue_new14(void* a) {
-    return QCborValue_new14((QCborArray*)a);
+    return QCborValue_New14((QCborArray*)a);
 }
 
 QCborValue* q_cborvalue_new15(void* m) {
-    return QCborValue_new15((QCborMap*)m);
+    return QCborValue_New15((QCborMap*)m);
 }
 
 QCborValue* q_cborvalue_new16(uint64_t tag) {
-    return QCborValue_new16(tag);
+    return QCborValue_New16(tag);
 }
 
 QCborValue* q_cborvalue_new17(int32_t t_) {
-    return QCborValue_new17(t_);
+    return QCborValue_New17(t_);
 }
 
 QCborValue* q_cborvalue_new18(void* dt) {
-    return QCborValue_new18((QDateTime*)dt);
+    return QCborValue_New18((QDateTime*)dt);
 }
 
 QCborValue* q_cborvalue_new19(void* url) {
-    return QCborValue_new19((QUrl*)url);
+    return QCborValue_New19((QUrl*)url);
 }
 
 QCborValue* q_cborvalue_new20(void* rx) {
-    return QCborValue_new20((QRegularExpression*)rx);
+    return QCborValue_New20((QRegularExpression*)rx);
 }
 
 QCborValue* q_cborvalue_new21(void* uuid) {
-    return QCborValue_new21((QUuid*)uuid);
+    return QCborValue_New21((QUuid*)uuid);
 }
 
 QCborValue* q_cborvalue_new22(void* other) {
-    return QCborValue_new22((QCborValue*)other);
+    return QCborValue_New22((QCborValue*)other);
 }
 
 QCborValue* q_cborvalue_new23(uint64_t tag, void* taggedValue) {
-    return QCborValue_new23(tag, (QCborValue*)taggedValue);
+    return QCborValue_New23(tag, (QCborValue*)taggedValue);
 }
 
 QCborValue* q_cborvalue_new24(int32_t t_, void* tv) {
-    return QCborValue_new24(t_, (QCborValue*)tv);
+    return QCborValue_New24(t_, (QCborValue*)tv);
 }
 
 void q_cborvalue_operator_assign(void* self, void* other) {
@@ -480,11 +480,11 @@ void q_cborvalue_delete(void* self) {
 }
 
 QCborValueConstRef* q_cborvalueconstref_new(void* other) {
-    return QCborValueConstRef_new((QCborValueConstRef*)other);
+    return QCborValueConstRef_New((QCborValueConstRef*)other);
 }
 
 QCborValueConstRef* q_cborvalueconstref_new2(void* param1) {
-    return QCborValueConstRef_new2((QCborValueConstRef*)param1);
+    return QCborValueConstRef_New2((QCborValueConstRef*)param1);
 }
 
 QCborValue* q_cborvalueconstref_to_q_cbor_value(void* self) {
@@ -764,15 +764,15 @@ void q_cborvalueconstref_delete(void* self) {
 }
 
 QCborValueRef* q_cborvalueref_new(void* other) {
-    return QCborValueRef_new((QCborValueRef*)other);
+    return QCborValueRef_New((QCborValueRef*)other);
 }
 
 QCborValueRef* q_cborvalueref_new2(void* other) {
-    return QCborValueRef_new2((QCborValueRef*)other);
+    return QCborValueRef_New2((QCborValueRef*)other);
 }
 
 QCborValueRef* q_cborvalueref_new3(void* param1) {
-    return QCborValueRef_new3((QCborValueRef*)param1);
+    return QCborValueRef_New3((QCborValueRef*)param1);
 }
 
 void q_cborvalueref_operator_assign(void* self, void* other) {

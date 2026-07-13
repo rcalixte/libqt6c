@@ -2,7 +2,7 @@
 #include "libqabstractnativeeventfilter.h"
 
 QAbstractNativeEventFilter* q_abstractnativeeventfilter_new() {
-    return QAbstractNativeEventFilter_new();
+    return QAbstractNativeEventFilter_New();
 }
 
 bool q_abstractnativeeventfilter_native_event_filter(void* self, char* eventType, void* message, intptr_t* result) {

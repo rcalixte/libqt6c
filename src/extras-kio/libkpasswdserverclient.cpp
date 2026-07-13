@@ -5,7 +5,7 @@
 #include "libkpasswdserverclient.hpp"
 #include "libkpasswdserverclient.hxx"
 
-KPasswdServerClient* KPasswdServerClient_new() {
+KPasswdServerClient* KPasswdServerClient_New() {
     return new KPasswdServerClient();
 }
 

@@ -2,19 +2,19 @@
 #include "libqgeocoordinate.h"
 
 QGeoCoordinate* q_geocoordinate_new() {
-    return QGeoCoordinate_new();
+    return QGeoCoordinate_New();
 }
 
 QGeoCoordinate* q_geocoordinate_new2(double latitude, double longitude) {
-    return QGeoCoordinate_new2(latitude, longitude);
+    return QGeoCoordinate_New2(latitude, longitude);
 }
 
 QGeoCoordinate* q_geocoordinate_new3(double latitude, double longitude, double altitude) {
-    return QGeoCoordinate_new3(latitude, longitude, altitude);
+    return QGeoCoordinate_New3(latitude, longitude, altitude);
 }
 
 QGeoCoordinate* q_geocoordinate_new4(void* other) {
-    return QGeoCoordinate_new4((QGeoCoordinate*)other);
+    return QGeoCoordinate_New4((QGeoCoordinate*)other);
 }
 
 void q_geocoordinate_operator_assign(void* self, void* other) {

@@ -22,19 +22,19 @@
 #include "libqlineedit.h"
 
 QLineEdit* q_lineedit_new(void* parent) {
-    return QLineEdit_new((QWidget*)parent);
+    return QLineEdit_New((QWidget*)parent);
 }
 
 QLineEdit* q_lineedit_new2() {
-    return QLineEdit_new2();
+    return QLineEdit_New2();
 }
 
 QLineEdit* q_lineedit_new3(const char* param1) {
-    return QLineEdit_new3(qstring(param1));
+    return QLineEdit_New3(qstring(param1));
 }
 
 QLineEdit* q_lineedit_new4(const char* param1, void* parent) {
-    return QLineEdit_new4(qstring(param1), (QWidget*)parent);
+    return QLineEdit_New4(qstring(param1), (QWidget*)parent);
 }
 
 const QMetaObject* q_lineedit_meta_object(void* self) {

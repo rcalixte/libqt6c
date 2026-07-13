@@ -18,11 +18,11 @@
 #include "libqboxlayout.hpp"
 #include "libqboxlayout.hxx"
 
-QBoxLayout* QBoxLayout_new(int param1) {
+QBoxLayout* QBoxLayout_New(int param1) {
     return new VirtualQBoxLayout(static_cast<QBoxLayout::Direction>(param1));
 }
 
-QBoxLayout* QBoxLayout_new2(int param1, QWidget* parent) {
+QBoxLayout* QBoxLayout_New2(int param1, QWidget* parent) {
     return new VirtualQBoxLayout(static_cast<QBoxLayout::Direction>(param1), parent);
 }
 
@@ -1242,11 +1242,11 @@ void QBoxLayout_Delete(QBoxLayout* self) {
     delete self;
 }
 
-QHBoxLayout* QHBoxLayout_new(QWidget* parent) {
+QHBoxLayout* QHBoxLayout_New(QWidget* parent) {
     return new VirtualQHBoxLayout(parent);
 }
 
-QHBoxLayout* QHBoxLayout_new2() {
+QHBoxLayout* QHBoxLayout_New2() {
     return new VirtualQHBoxLayout();
 }
 
@@ -2452,11 +2452,11 @@ void QHBoxLayout_Delete(QHBoxLayout* self) {
     delete self;
 }
 
-QVBoxLayout* QVBoxLayout_new(QWidget* parent) {
+QVBoxLayout* QVBoxLayout_New(QWidget* parent) {
     return new VirtualQVBoxLayout(parent);
 }
 
-QVBoxLayout* QVBoxLayout_new2() {
+QVBoxLayout* QVBoxLayout_New2() {
     return new VirtualQVBoxLayout();
 }
 

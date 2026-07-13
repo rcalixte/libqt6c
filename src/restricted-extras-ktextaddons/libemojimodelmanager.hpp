@@ -35,8 +35,8 @@ typedef struct TextEmoticonsCore__EmojiModel TextEmoticonsCore__EmojiModel;
 typedef struct TextEmoticonsCore__EmojiModelManager TextEmoticonsCore__EmojiModelManager;
 #endif
 
-TextEmoticonsCore__EmojiModelManager* TextEmoticonsCore__EmojiModelManager_new();
-TextEmoticonsCore__EmojiModelManager* TextEmoticonsCore__EmojiModelManager_new2(QObject* parent);
+TextEmoticonsCore__EmojiModelManager* TextEmoticonsCore__EmojiModelManager_New();
+TextEmoticonsCore__EmojiModelManager* TextEmoticonsCore__EmojiModelManager_New2(QObject* parent);
 QMetaObject* TextEmoticonsCore__EmojiModelManager_MetaObject(const TextEmoticonsCore__EmojiModelManager* self);
 void* TextEmoticonsCore__EmojiModelManager_Metacast(TextEmoticonsCore__EmojiModelManager* self, const char* param1);
 int TextEmoticonsCore__EmojiModelManager_Metacall(TextEmoticonsCore__EmojiModelManager* self, int param1, int param2, void** param3);

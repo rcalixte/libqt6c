@@ -3,7 +3,7 @@
 #include "libabstractsettings.h"
 
 QDesignerSettingsInterface* q_designersettingsinterface_new() {
-    return QDesignerSettingsInterface_new();
+    return QDesignerSettingsInterface_New();
 }
 
 void q_designersettingsinterface_begin_group(void* self, const char* prefix) {

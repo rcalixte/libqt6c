@@ -7,11 +7,11 @@
 #include "libkglobalshortcutinfo.h"
 
 KGlobalShortcutInfo* k_globalshortcutinfo_new() {
-    return KGlobalShortcutInfo_new();
+    return KGlobalShortcutInfo_New();
 }
 
 KGlobalShortcutInfo* k_globalshortcutinfo_new2(void* rhs) {
-    return KGlobalShortcutInfo_new2((KGlobalShortcutInfo*)rhs);
+    return KGlobalShortcutInfo_New2((KGlobalShortcutInfo*)rhs);
 }
 
 const QMetaObject* k_globalshortcutinfo_meta_object(void* self) {

@@ -26,12 +26,12 @@ typedef struct QPen QPen;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QCandlestickSet* QCandlestickSet_new();
-QCandlestickSet* QCandlestickSet_new2(double open, double high, double low, double close);
-QCandlestickSet* QCandlestickSet_new3(double timestamp);
-QCandlestickSet* QCandlestickSet_new4(double timestamp, QObject* parent);
-QCandlestickSet* QCandlestickSet_new5(double open, double high, double low, double close, double timestamp);
-QCandlestickSet* QCandlestickSet_new6(double open, double high, double low, double close, double timestamp, QObject* parent);
+QCandlestickSet* QCandlestickSet_New();
+QCandlestickSet* QCandlestickSet_New2(double open, double high, double low, double close);
+QCandlestickSet* QCandlestickSet_New3(double timestamp);
+QCandlestickSet* QCandlestickSet_New4(double timestamp, QObject* parent);
+QCandlestickSet* QCandlestickSet_New5(double open, double high, double low, double close, double timestamp);
+QCandlestickSet* QCandlestickSet_New6(double open, double high, double low, double close, double timestamp, QObject* parent);
 QMetaObject* QCandlestickSet_MetaObject(const QCandlestickSet* self);
 void* QCandlestickSet_Metacast(QCandlestickSet* self, const char* param1);
 int QCandlestickSet_Metacall(QCandlestickSet* self, int param1, int param2, void** param3);

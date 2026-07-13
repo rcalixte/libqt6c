@@ -16,11 +16,11 @@
 #include "libqsplineseries.hpp"
 #include "libqsplineseries.hxx"
 
-QSplineSeries* QSplineSeries_new() {
+QSplineSeries* QSplineSeries_New() {
     return new VirtualQSplineSeries();
 }
 
-QSplineSeries* QSplineSeries_new2(QObject* parent) {
+QSplineSeries* QSplineSeries_New2(QObject* parent) {
     return new VirtualQSplineSeries(parent);
 }
 

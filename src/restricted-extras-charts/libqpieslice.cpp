@@ -15,20 +15,20 @@
 #include "libqpieslice.hpp"
 #include "libqpieslice.hxx"
 
-QPieSlice* QPieSlice_new() {
+QPieSlice* QPieSlice_New() {
     return new VirtualQPieSlice();
 }
 
-QPieSlice* QPieSlice_new2(libqt_string label, double value) {
+QPieSlice* QPieSlice_New2(libqt_string label, double value) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return new VirtualQPieSlice(label_QString, static_cast<qreal>(value));
 }
 
-QPieSlice* QPieSlice_new3(QObject* parent) {
+QPieSlice* QPieSlice_New3(QObject* parent) {
     return new VirtualQPieSlice(parent);
 }
 
-QPieSlice* QPieSlice_new4(libqt_string label, double value, QObject* parent) {
+QPieSlice* QPieSlice_New4(libqt_string label, double value, QObject* parent) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return new VirtualQPieSlice(label_QString, static_cast<qreal>(value), parent);
 }

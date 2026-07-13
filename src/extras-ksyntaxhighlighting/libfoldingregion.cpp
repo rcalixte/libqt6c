@@ -3,19 +3,19 @@
 #include "libfoldingregion.hpp"
 #include "libfoldingregion.hxx"
 
-KSyntaxHighlighting__FoldingRegion* KSyntaxHighlighting__FoldingRegion_new(const KSyntaxHighlighting__FoldingRegion* other) {
+KSyntaxHighlighting__FoldingRegion* KSyntaxHighlighting__FoldingRegion_New(const KSyntaxHighlighting__FoldingRegion* other) {
     return new KSyntaxHighlighting::FoldingRegion(*other);
 }
 
-KSyntaxHighlighting__FoldingRegion* KSyntaxHighlighting__FoldingRegion_new2(KSyntaxHighlighting__FoldingRegion* other) {
+KSyntaxHighlighting__FoldingRegion* KSyntaxHighlighting__FoldingRegion_New2(KSyntaxHighlighting__FoldingRegion* other) {
     return new KSyntaxHighlighting::FoldingRegion(std::move(*other));
 }
 
-KSyntaxHighlighting__FoldingRegion* KSyntaxHighlighting__FoldingRegion_new3() {
+KSyntaxHighlighting__FoldingRegion* KSyntaxHighlighting__FoldingRegion_New3() {
     return new KSyntaxHighlighting::FoldingRegion();
 }
 
-KSyntaxHighlighting__FoldingRegion* KSyntaxHighlighting__FoldingRegion_new4(const KSyntaxHighlighting__FoldingRegion* param1) {
+KSyntaxHighlighting__FoldingRegion* KSyntaxHighlighting__FoldingRegion_New4(const KSyntaxHighlighting__FoldingRegion* param1) {
     return new KSyntaxHighlighting::FoldingRegion(*param1);
 }
 

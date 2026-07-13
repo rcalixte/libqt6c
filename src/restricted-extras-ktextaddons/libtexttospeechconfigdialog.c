@@ -15,11 +15,11 @@
 #include "libtexttospeechconfigdialog.h"
 
 TextEditTextToSpeech__TextToSpeechConfigDialog* k_textedittexttospeech__texttospeechconfigdialog_new(void* parent) {
-    return TextEditTextToSpeech__TextToSpeechConfigDialog_new((QWidget*)parent);
+    return TextEditTextToSpeech__TextToSpeechConfigDialog_New((QWidget*)parent);
 }
 
 TextEditTextToSpeech__TextToSpeechConfigDialog* k_textedittexttospeech__texttospeechconfigdialog_new2() {
-    return TextEditTextToSpeech__TextToSpeechConfigDialog_new2();
+    return TextEditTextToSpeech__TextToSpeechConfigDialog_New2();
 }
 
 const QMetaObject* k_textedittexttospeech__texttospeechconfigdialog_meta_object(void* self) {

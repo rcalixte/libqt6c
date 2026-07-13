@@ -22,8 +22,8 @@ typedef struct Attica__Topic Attica__Topic;
 typedef struct QDateTime QDateTime;
 #endif
 
-Attica__Topic* Attica__Topic_new();
-Attica__Topic* Attica__Topic_new2(const Attica__Topic* other);
+Attica__Topic* Attica__Topic_New();
+Attica__Topic* Attica__Topic_New2(const Attica__Topic* other);
 void Attica__Topic_OperatorAssign(Attica__Topic* self, const Attica__Topic* other);
 void Attica__Topic_SetId(Attica__Topic* self, const libqt_string id);
 libqt_string Attica__Topic_Id(const Attica__Topic* self);

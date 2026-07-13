@@ -27,13 +27,13 @@ typedef struct QTransform QTransform;
 typedef struct QVariant QVariant;
 #endif
 
-QTransform* QTransform_new(const QTransform* other);
-QTransform* QTransform_new2(QTransform* other);
-QTransform* QTransform_new3(int param1);
-QTransform* QTransform_new4();
-QTransform* QTransform_new5(double h11, double h12, double h13, double h21, double h22, double h23, double h31, double h32, double h33);
-QTransform* QTransform_new6(double h11, double h12, double h21, double h22, double dx, double dy);
-QTransform* QTransform_new7(const QTransform* other);
+QTransform* QTransform_New(const QTransform* other);
+QTransform* QTransform_New2(QTransform* other);
+QTransform* QTransform_New3(int param1);
+QTransform* QTransform_New4();
+QTransform* QTransform_New5(double h11, double h12, double h13, double h21, double h22, double h23, double h31, double h32, double h33);
+QTransform* QTransform_New6(double h11, double h12, double h21, double h22, double dx, double dy);
+QTransform* QTransform_New7(const QTransform* other);
 void QTransform_CopyAssign(QTransform* self, QTransform* other);
 void QTransform_MoveAssign(QTransform* self, QTransform* other);
 void QTransform_OperatorAssign(QTransform* self, const QTransform* param1);

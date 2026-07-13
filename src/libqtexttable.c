@@ -10,11 +10,11 @@
 #include "libqtexttable.h"
 
 QTextTableCell* q_texttablecell_new() {
-    return QTextTableCell_new();
+    return QTextTableCell_New();
 }
 
 QTextTableCell* q_texttablecell_new2(void* o) {
-    return QTextTableCell_new2((QTextTableCell*)o);
+    return QTextTableCell_New2((QTextTableCell*)o);
 }
 
 void q_texttablecell_operator_assign(void* self, void* o) {
@@ -90,7 +90,7 @@ void q_texttablecell_delete(void* self) {
 }
 
 QTextTable* q_texttable_new(void* doc) {
-    return QTextTable_new((QTextDocument*)doc);
+    return QTextTable_New((QTextDocument*)doc);
 }
 
 const QMetaObject* q_texttable_meta_object(void* self) {

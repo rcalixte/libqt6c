@@ -17,12 +17,12 @@
 #include "libqgeoserviceprovider.hpp"
 #include "libqgeoserviceprovider.hxx"
 
-QGeoServiceProvider* QGeoServiceProvider_new(const libqt_string providerName) {
+QGeoServiceProvider* QGeoServiceProvider_New(const libqt_string providerName) {
     QString providerName_QString = QString::fromUtf8(providerName.data, providerName.len);
     return new VirtualQGeoServiceProvider(providerName_QString);
 }
 
-QGeoServiceProvider* QGeoServiceProvider_new2(const libqt_string providerName, const libqt_map /* of libqt_string to QVariant* */ parameters) {
+QGeoServiceProvider* QGeoServiceProvider_New2(const libqt_string providerName, const libqt_map /* of libqt_string to QVariant* */ parameters) {
     QString providerName_QString = QString::fromUtf8(providerName.data, providerName.len);
     QMap<QString, QVariant> parameters_QMap;
     libqt_string* parameters_karr = static_cast<libqt_string*>(parameters.keys);
@@ -34,7 +34,7 @@ QGeoServiceProvider* QGeoServiceProvider_new2(const libqt_string providerName, c
     return new VirtualQGeoServiceProvider(providerName_QString, parameters_QMap);
 }
 
-QGeoServiceProvider* QGeoServiceProvider_new3(const libqt_string providerName, const libqt_map /* of libqt_string to QVariant* */ parameters, bool allowExperimental) {
+QGeoServiceProvider* QGeoServiceProvider_New3(const libqt_string providerName, const libqt_map /* of libqt_string to QVariant* */ parameters, bool allowExperimental) {
     QString providerName_QString = QString::fromUtf8(providerName.data, providerName.len);
     QMap<QString, QVariant> parameters_QMap;
     libqt_string* parameters_karr = static_cast<libqt_string*>(parameters.keys);

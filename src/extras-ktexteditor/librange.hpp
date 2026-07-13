@@ -28,14 +28,14 @@ typedef struct KTextEditor__LineRange KTextEditor__LineRange;
 typedef struct KTextEditor__Range KTextEditor__Range;
 #endif
 
-KTextEditor__Range* KTextEditor__Range_new(const KTextEditor__Range* other);
-KTextEditor__Range* KTextEditor__Range_new2(KTextEditor__Range* other);
-KTextEditor__Range* KTextEditor__Range_new3();
-KTextEditor__Range* KTextEditor__Range_new4(KTextEditor__Cursor* start, KTextEditor__Cursor* end);
-KTextEditor__Range* KTextEditor__Range_new5(KTextEditor__Cursor* start, int width);
-KTextEditor__Range* KTextEditor__Range_new6(KTextEditor__Cursor* start, int endLine, int endColumn);
-KTextEditor__Range* KTextEditor__Range_new7(int startLine, int startColumn, int endLine, int endColumn);
-KTextEditor__Range* KTextEditor__Range_new8(const KTextEditor__Range* param1);
+KTextEditor__Range* KTextEditor__Range_New(const KTextEditor__Range* other);
+KTextEditor__Range* KTextEditor__Range_New2(KTextEditor__Range* other);
+KTextEditor__Range* KTextEditor__Range_New3();
+KTextEditor__Range* KTextEditor__Range_New4(KTextEditor__Cursor* start, KTextEditor__Cursor* end);
+KTextEditor__Range* KTextEditor__Range_New5(KTextEditor__Cursor* start, int width);
+KTextEditor__Range* KTextEditor__Range_New6(KTextEditor__Cursor* start, int endLine, int endColumn);
+KTextEditor__Range* KTextEditor__Range_New7(int startLine, int startColumn, int endLine, int endColumn);
+KTextEditor__Range* KTextEditor__Range_New8(const KTextEditor__Range* param1);
 void KTextEditor__Range_CopyAssign(KTextEditor__Range* self, KTextEditor__Range* other);
 void KTextEditor__Range_MoveAssign(KTextEditor__Range* self, KTextEditor__Range* other);
 bool KTextEditor__Range_IsValid(const KTextEditor__Range* self);

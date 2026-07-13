@@ -6,11 +6,11 @@
 #include "libklineediturldropeventfilter.h"
 
 KLineEditUrlDropEventFilter* k_lineediturldropeventfilter_new() {
-    return KLineEditUrlDropEventFilter_new();
+    return KLineEditUrlDropEventFilter_New();
 }
 
 KLineEditUrlDropEventFilter* k_lineediturldropeventfilter_new2(void* parent) {
-    return KLineEditUrlDropEventFilter_new2((QObject*)parent);
+    return KLineEditUrlDropEventFilter_New2((QObject*)parent);
 }
 
 const QMetaObject* k_lineediturldropeventfilter_meta_object(void* self) {

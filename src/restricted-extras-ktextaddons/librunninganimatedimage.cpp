@@ -6,7 +6,7 @@
 #include "librunninganimatedimage.hpp"
 #include "librunninganimatedimage.hxx"
 
-TextEmoticonsCore__RunningAnimatedImage* TextEmoticonsCore__RunningAnimatedImage_new(const QModelIndex* idx) {
+TextEmoticonsCore__RunningAnimatedImage* TextEmoticonsCore__RunningAnimatedImage_New(const QModelIndex* idx) {
     return new TextEmoticonsCore::RunningAnimatedImage(*idx);
 }
 

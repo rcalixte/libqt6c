@@ -18,11 +18,11 @@
 #include "libqtoolbutton.h"
 
 QToolButton* q_toolbutton_new(void* parent) {
-    return QToolButton_new((QWidget*)parent);
+    return QToolButton_New((QWidget*)parent);
 }
 
 QToolButton* q_toolbutton_new2() {
-    return QToolButton_new2();
+    return QToolButton_New2();
 }
 
 const QMetaObject* q_toolbutton_meta_object(void* self) {

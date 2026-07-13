@@ -4,11 +4,11 @@
 #include "libqwebenginepermission.hpp"
 #include "libqwebenginepermission.hxx"
 
-QWebEnginePermission* QWebEnginePermission_new() {
+QWebEnginePermission* QWebEnginePermission_New() {
     return new QWebEnginePermission();
 }
 
-QWebEnginePermission* QWebEnginePermission_new2(const QWebEnginePermission* other) {
+QWebEnginePermission* QWebEnginePermission_New2(const QWebEnginePermission* other) {
     return new QWebEnginePermission(*other);
 }
 

@@ -18,15 +18,15 @@
 #include "libklistwidgetsearchline.h"
 
 KListWidgetSearchLine* k_listwidgetsearchline_new(void* parent) {
-    return KListWidgetSearchLine_new((QWidget*)parent);
+    return KListWidgetSearchLine_New((QWidget*)parent);
 }
 
 KListWidgetSearchLine* k_listwidgetsearchline_new2() {
-    return KListWidgetSearchLine_new2();
+    return KListWidgetSearchLine_New2();
 }
 
 KListWidgetSearchLine* k_listwidgetsearchline_new3(void* parent, void* listWidget) {
-    return KListWidgetSearchLine_new3((QWidget*)parent, (QListWidget*)listWidget);
+    return KListWidgetSearchLine_New3((QWidget*)parent, (QListWidget*)listWidget);
 }
 
 const QMetaObject* k_listwidgetsearchline_meta_object(void* self) {

@@ -21,11 +21,11 @@
 #include "libkpagemodel.hpp"
 #include "libkpagemodel.hxx"
 
-KPageModel* KPageModel_new() {
+KPageModel* KPageModel_New() {
     return new VirtualKPageModel();
 }
 
-KPageModel* KPageModel_new2(QObject* parent) {
+KPageModel* KPageModel_New2(QObject* parent) {
     return new VirtualKPageModel(parent);
 }
 

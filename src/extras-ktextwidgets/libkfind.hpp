@@ -27,8 +27,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KFind* KFind_new(const libqt_string pattern, long options, QWidget* parent);
-KFind* KFind_new2(const libqt_string pattern, long options, QWidget* parent, QWidget* findDialog);
+KFind* KFind_New(const libqt_string pattern, long options, QWidget* parent);
+KFind* KFind_New2(const libqt_string pattern, long options, QWidget* parent, QWidget* findDialog);
 QMetaObject* KFind_MetaObject(const KFind* self);
 void* KFind_Metacast(KFind* self, const char* param1);
 int KFind_Metacall(KFind* self, int param1, int param2, void** param3);

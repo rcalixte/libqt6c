@@ -30,7 +30,7 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-KIO__NameFinderJob* KIO__NameFinderJob_new(const QUrl* baseUrl, const libqt_string name, QObject* parent);
+KIO__NameFinderJob* KIO__NameFinderJob_New(const QUrl* baseUrl, const libqt_string name, QObject* parent);
 QMetaObject* KIO__NameFinderJob_MetaObject(const KIO__NameFinderJob* self);
 void* KIO__NameFinderJob_Metacast(KIO__NameFinderJob* self, const char* param1);
 int KIO__NameFinderJob_Metacall(KIO__NameFinderJob* self, int param1, int param2, void** param3);

@@ -3,11 +3,11 @@
 #include "libqcameradevice.h"
 
 QCameraFormat* q_cameraformat_new() {
-    return QCameraFormat_new();
+    return QCameraFormat_New();
 }
 
 QCameraFormat* q_cameraformat_new2(void* other) {
-    return QCameraFormat_new2((QCameraFormat*)other);
+    return QCameraFormat_New2((QCameraFormat*)other);
 }
 
 void q_cameraformat_operator_assign(void* self, void* other) {
@@ -47,11 +47,11 @@ void q_cameraformat_delete(void* self) {
 }
 
 QCameraDevice* q_cameradevice_new() {
-    return QCameraDevice_new();
+    return QCameraDevice_New();
 }
 
 QCameraDevice* q_cameradevice_new2(void* other) {
-    return QCameraDevice_new2((QCameraDevice*)other);
+    return QCameraDevice_New2((QCameraDevice*)other);
 }
 
 void q_cameradevice_operator_assign(void* self, void* other) {

@@ -27,15 +27,15 @@ typedef struct QVector3D QVector3D;
 typedef struct QVector4D QVector4D;
 #endif
 
-QMatrix4x4* QMatrix4x4_new(const QMatrix4x4* other);
-QMatrix4x4* QMatrix4x4_new2(QMatrix4x4* other);
-QMatrix4x4* QMatrix4x4_new3();
-QMatrix4x4* QMatrix4x4_new4(int param1);
-QMatrix4x4* QMatrix4x4_new5(const float* values);
-QMatrix4x4* QMatrix4x4_new6(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44);
-QMatrix4x4* QMatrix4x4_new7(const float* values, int cols, int rows);
-QMatrix4x4* QMatrix4x4_new8(const QTransform* transform);
-QMatrix4x4* QMatrix4x4_new9(const QMatrix4x4* param1);
+QMatrix4x4* QMatrix4x4_New(const QMatrix4x4* other);
+QMatrix4x4* QMatrix4x4_New2(QMatrix4x4* other);
+QMatrix4x4* QMatrix4x4_New3();
+QMatrix4x4* QMatrix4x4_New4(int param1);
+QMatrix4x4* QMatrix4x4_New5(const float* values);
+QMatrix4x4* QMatrix4x4_New6(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44);
+QMatrix4x4* QMatrix4x4_New7(const float* values, int cols, int rows);
+QMatrix4x4* QMatrix4x4_New8(const QTransform* transform);
+QMatrix4x4* QMatrix4x4_New9(const QMatrix4x4* param1);
 void QMatrix4x4_CopyAssign(QMatrix4x4* self, QMatrix4x4* other);
 void QMatrix4x4_MoveAssign(QMatrix4x4* self, QMatrix4x4* other);
 const float* QMatrix4x4_OperatorCall(const QMatrix4x4* self, int row, int column);

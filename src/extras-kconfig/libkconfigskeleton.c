@@ -11,15 +11,15 @@
 #include "libkconfigskeleton.h"
 
 KConfigSkeleton* k_configskeleton_new() {
-    return KConfigSkeleton_new();
+    return KConfigSkeleton_New();
 }
 
 KConfigSkeleton* k_configskeleton_new2(const char* configname) {
-    return KConfigSkeleton_new2(qstring(configname));
+    return KConfigSkeleton_New2(qstring(configname));
 }
 
 KConfigSkeleton* k_configskeleton_new3(const char* configname, void* parent) {
-    return KConfigSkeleton_new3(qstring(configname), (QObject*)parent);
+    return KConfigSkeleton_New3(qstring(configname), (QObject*)parent);
 }
 
 const QMetaObject* k_configskeleton_meta_object(void* self) {
@@ -889,11 +889,11 @@ void k_configskeleton_delete(void* self) {
 }
 
 KConfigSkeleton__ItemColor* k_configskeleton__itemcolor_new(const char* _group, const char* _key, void* reference) {
-    return KConfigSkeleton__ItemColor_new(qstring(_group), qstring(_key), (QColor*)reference);
+    return KConfigSkeleton__ItemColor_New(qstring(_group), qstring(_key), (QColor*)reference);
 }
 
 KConfigSkeleton__ItemColor* k_configskeleton__itemcolor_new2(const char* _group, const char* _key, void* reference, void* defaultValue) {
-    return KConfigSkeleton__ItemColor_new2(qstring(_group), qstring(_key), (QColor*)reference, (QColor*)defaultValue);
+    return KConfigSkeleton__ItemColor_New2(qstring(_group), qstring(_key), (QColor*)reference, (QColor*)defaultValue);
 }
 
 void k_configskeleton__itemcolor_read_config(void* self, void* config) {
@@ -949,11 +949,11 @@ void k_configskeleton__itemcolor_delete(void* self) {
 }
 
 KConfigSkeleton__ItemFont* k_configskeleton__itemfont_new(const char* _group, const char* _key, void* reference) {
-    return KConfigSkeleton__ItemFont_new(qstring(_group), qstring(_key), (QFont*)reference);
+    return KConfigSkeleton__ItemFont_New(qstring(_group), qstring(_key), (QFont*)reference);
 }
 
 KConfigSkeleton__ItemFont* k_configskeleton__itemfont_new2(const char* _group, const char* _key, void* reference, void* defaultValue) {
-    return KConfigSkeleton__ItemFont_new2(qstring(_group), qstring(_key), (QFont*)reference, (QFont*)defaultValue);
+    return KConfigSkeleton__ItemFont_New2(qstring(_group), qstring(_key), (QFont*)reference, (QFont*)defaultValue);
 }
 
 void k_configskeleton__itemfont_read_config(void* self, void* config) {

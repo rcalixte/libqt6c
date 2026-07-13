@@ -37,11 +37,11 @@
 #include "libqstatusbar.hpp"
 #include "libqstatusbar.hxx"
 
-QStatusBar* QStatusBar_new(QWidget* parent) {
+QStatusBar* QStatusBar_New(QWidget* parent) {
     return new VirtualQStatusBar(parent);
 }
 
-QStatusBar* QStatusBar_new2() {
+QStatusBar* QStatusBar_New2() {
     return new VirtualQStatusBar();
 }
 

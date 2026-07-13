@@ -11,15 +11,15 @@
 #include "libkfontsizeaction.h"
 
 KFontSizeAction* k_fontsizeaction_new(void* parent) {
-    return KFontSizeAction_new((QObject*)parent);
+    return KFontSizeAction_New((QObject*)parent);
 }
 
 KFontSizeAction* k_fontsizeaction_new2(const char* text, void* parent) {
-    return KFontSizeAction_new2(qstring(text), (QObject*)parent);
+    return KFontSizeAction_New2(qstring(text), (QObject*)parent);
 }
 
 KFontSizeAction* k_fontsizeaction_new3(void* icon, const char* text, void* parent) {
-    return KFontSizeAction_new3((QIcon*)icon, qstring(text), (QObject*)parent);
+    return KFontSizeAction_New3((QIcon*)icon, qstring(text), (QObject*)parent);
 }
 
 const QMetaObject* k_fontsizeaction_meta_object(void* self) {

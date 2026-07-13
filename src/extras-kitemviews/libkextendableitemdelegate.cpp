@@ -25,7 +25,7 @@
 #include "libkextendableitemdelegate.hpp"
 #include "libkextendableitemdelegate.hxx"
 
-KExtendableItemDelegate* KExtendableItemDelegate_new(QAbstractItemView* parent) {
+KExtendableItemDelegate* KExtendableItemDelegate_New(QAbstractItemView* parent) {
     return new VirtualKExtendableItemDelegate(parent);
 }
 

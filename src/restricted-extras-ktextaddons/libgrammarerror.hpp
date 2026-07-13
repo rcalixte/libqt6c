@@ -23,8 +23,8 @@ typedef struct QJsonObject QJsonObject;
 typedef struct TextGrammarCheck__GrammarError TextGrammarCheck__GrammarError;
 #endif
 
-TextGrammarCheck__GrammarError* TextGrammarCheck__GrammarError_new();
-TextGrammarCheck__GrammarError* TextGrammarCheck__GrammarError_new2(const TextGrammarCheck__GrammarError* param1);
+TextGrammarCheck__GrammarError* TextGrammarCheck__GrammarError_New();
+TextGrammarCheck__GrammarError* TextGrammarCheck__GrammarError_New2(const TextGrammarCheck__GrammarError* param1);
 QColor* TextGrammarCheck__GrammarError_Color(const TextGrammarCheck__GrammarError* self);
 void TextGrammarCheck__GrammarError_SetColor(TextGrammarCheck__GrammarError* self, const QColor* color);
 libqt_string TextGrammarCheck__GrammarError_Error(const TextGrammarCheck__GrammarError* self);

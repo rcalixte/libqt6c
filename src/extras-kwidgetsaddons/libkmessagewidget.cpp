@@ -41,20 +41,20 @@
 #include "libkmessagewidget.hpp"
 #include "libkmessagewidget.hxx"
 
-KMessageWidget* KMessageWidget_new(QWidget* parent) {
+KMessageWidget* KMessageWidget_New(QWidget* parent) {
     return new VirtualKMessageWidget(parent);
 }
 
-KMessageWidget* KMessageWidget_new2() {
+KMessageWidget* KMessageWidget_New2() {
     return new VirtualKMessageWidget();
 }
 
-KMessageWidget* KMessageWidget_new3(const libqt_string text) {
+KMessageWidget* KMessageWidget_New3(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKMessageWidget(text_QString);
 }
 
-KMessageWidget* KMessageWidget_new4(const libqt_string text, QWidget* parent) {
+KMessageWidget* KMessageWidget_New4(const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKMessageWidget(text_QString, parent);
 }

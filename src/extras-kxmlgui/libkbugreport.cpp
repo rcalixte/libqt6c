@@ -39,11 +39,11 @@
 #include "libkbugreport.hpp"
 #include "libkbugreport.hxx"
 
-KBugReport* KBugReport_new(const KAboutData* aboutData) {
+KBugReport* KBugReport_New(const KAboutData* aboutData) {
     return new VirtualKBugReport(*aboutData);
 }
 
-KBugReport* KBugReport_new2(const KAboutData* aboutData, QWidget* parent) {
+KBugReport* KBugReport_New2(const KAboutData* aboutData, QWidget* parent) {
     return new VirtualKBugReport(*aboutData, parent);
 }
 

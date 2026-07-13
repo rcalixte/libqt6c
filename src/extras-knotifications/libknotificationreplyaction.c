@@ -6,7 +6,7 @@
 #include "libknotificationreplyaction.h"
 
 KNotificationReplyAction* k_notificationreplyaction_new(const char* label) {
-    return KNotificationReplyAction_new(qstring(label));
+    return KNotificationReplyAction_New(qstring(label));
 }
 
 const QMetaObject* k_notificationreplyaction_meta_object(void* self) {

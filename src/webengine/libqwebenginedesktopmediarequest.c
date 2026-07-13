@@ -3,7 +3,7 @@
 #include "libqwebenginedesktopmediarequest.h"
 
 QWebEngineDesktopMediaRequest* q_webenginedesktopmediarequest_new(void* other) {
-    return QWebEngineDesktopMediaRequest_new((QWebEngineDesktopMediaRequest*)other);
+    return QWebEngineDesktopMediaRequest_New((QWebEngineDesktopMediaRequest*)other);
 }
 
 void q_webenginedesktopmediarequest_operator_assign(void* self, void* other) {

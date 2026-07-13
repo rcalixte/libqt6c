@@ -25,8 +25,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-KLocalizedContext* KLocalizedContext_new();
-KLocalizedContext* KLocalizedContext_new2(QObject* parent);
+KLocalizedContext* KLocalizedContext_New();
+KLocalizedContext* KLocalizedContext_New2(QObject* parent);
 QMetaObject* KLocalizedContext_MetaObject(const KLocalizedContext* self);
 void* KLocalizedContext_Metacast(KLocalizedContext* self, const char* param1);
 int KLocalizedContext_Metacall(KLocalizedContext* self, int param1, int param2, void** param3);

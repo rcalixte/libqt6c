@@ -88,7 +88,7 @@ void k_mountpoint_delete(void* self) {
 // Also inherits unprojectable QList<Ptr>
 
 KMountPoint__List* k_mountpoint__list_new() {
-    return KMountPoint__List_new();
+    return KMountPoint__List_New();
 }
 
 void k_mountpoint__list_delete(void* self) {

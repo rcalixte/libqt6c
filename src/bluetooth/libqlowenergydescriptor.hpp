@@ -19,8 +19,8 @@ typedef struct QBluetoothUuid QBluetoothUuid;
 typedef struct QLowEnergyDescriptor QLowEnergyDescriptor;
 #endif
 
-QLowEnergyDescriptor* QLowEnergyDescriptor_new();
-QLowEnergyDescriptor* QLowEnergyDescriptor_new2(const QLowEnergyDescriptor* other);
+QLowEnergyDescriptor* QLowEnergyDescriptor_New();
+QLowEnergyDescriptor* QLowEnergyDescriptor_New2(const QLowEnergyDescriptor* other);
 void QLowEnergyDescriptor_OperatorAssign(QLowEnergyDescriptor* self, const QLowEnergyDescriptor* other);
 bool QLowEnergyDescriptor_IsValid(const QLowEnergyDescriptor* self);
 libqt_string QLowEnergyDescriptor_Value(const QLowEnergyDescriptor* self);

@@ -6,19 +6,19 @@
 #include "libqtextstream.h"
 
 QTextStream* q_textstream_new() {
-    return QTextStream_new();
+    return QTextStream_New();
 }
 
 QTextStream* q_textstream_new2(void* device) {
-    return QTextStream_new2((QIODevice*)device);
+    return QTextStream_New2((QIODevice*)device);
 }
 
 QTextStream* q_textstream_new3(char* array) {
-    return QTextStream_new3(qstring(array));
+    return QTextStream_New3(qstring(array));
 }
 
 QTextStream* q_textstream_new4(char* array, int32_t openMode) {
-    return QTextStream_new4(qstring(array), openMode);
+    return QTextStream_New4(qstring(array), openMode);
 }
 
 void q_textstream_set_encoding(void* self, int32_t encoding) {

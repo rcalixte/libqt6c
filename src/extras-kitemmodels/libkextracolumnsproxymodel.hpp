@@ -34,8 +34,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-KExtraColumnsProxyModel* KExtraColumnsProxyModel_new();
-KExtraColumnsProxyModel* KExtraColumnsProxyModel_new2(QObject* parent);
+KExtraColumnsProxyModel* KExtraColumnsProxyModel_New();
+KExtraColumnsProxyModel* KExtraColumnsProxyModel_New2(QObject* parent);
 QMetaObject* KExtraColumnsProxyModel_MetaObject(const KExtraColumnsProxyModel* self);
 void* KExtraColumnsProxyModel_Metacast(KExtraColumnsProxyModel* self, const char* param1);
 int KExtraColumnsProxyModel_Metacall(KExtraColumnsProxyModel* self, int param1, int param2, void** param3);

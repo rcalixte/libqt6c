@@ -6,15 +6,15 @@
 #include "libqtextoption.hpp"
 #include "libqtextoption.hxx"
 
-QTextOption* QTextOption_new() {
+QTextOption* QTextOption_New() {
     return new QTextOption();
 }
 
-QTextOption* QTextOption_new2(int alignment) {
+QTextOption* QTextOption_New2(int alignment) {
     return new QTextOption(static_cast<Qt::Alignment>(alignment));
 }
 
-QTextOption* QTextOption_new3(const QTextOption* o) {
+QTextOption* QTextOption_New3(const QTextOption* o) {
     return new QTextOption(*o);
 }
 
@@ -120,23 +120,23 @@ void QTextOption_Delete(QTextOption* self) {
     delete self;
 }
 
-QTextOption__Tab* QTextOption__Tab_new(const QTextOption__Tab* other) {
+QTextOption__Tab* QTextOption__Tab_New(const QTextOption__Tab* other) {
     return new QTextOption::Tab(*other);
 }
 
-QTextOption__Tab* QTextOption__Tab_new2(QTextOption__Tab* other) {
+QTextOption__Tab* QTextOption__Tab_New2(QTextOption__Tab* other) {
     return new QTextOption::Tab(std::move(*other));
 }
 
-QTextOption__Tab* QTextOption__Tab_new3() {
+QTextOption__Tab* QTextOption__Tab_New3() {
     return new QTextOption::Tab();
 }
 
-QTextOption__Tab* QTextOption__Tab_new4(double pos, int tabType) {
+QTextOption__Tab* QTextOption__Tab_New4(double pos, int tabType) {
     return new QTextOption::Tab(static_cast<qreal>(pos), static_cast<QTextOption::TabType>(tabType));
 }
 
-QTextOption__Tab* QTextOption__Tab_new5(double pos, int tabType, QChar* delim) {
+QTextOption__Tab* QTextOption__Tab_New5(double pos, int tabType, QChar* delim) {
     return new QTextOption::Tab(static_cast<qreal>(pos), static_cast<QTextOption::TabType>(tabType), *delim);
 }
 

@@ -6,11 +6,11 @@
 #include "libauthinfo.hpp"
 #include "libauthinfo.hxx"
 
-KIO__AuthInfo* KIO__AuthInfo_new() {
+KIO__AuthInfo* KIO__AuthInfo_New() {
     return new KIO::AuthInfo();
 }
 
-KIO__AuthInfo* KIO__AuthInfo_new2(const KIO__AuthInfo* info) {
+KIO__AuthInfo* KIO__AuthInfo_New2(const KIO__AuthInfo* info) {
     return new KIO::AuthInfo(*info);
 }
 

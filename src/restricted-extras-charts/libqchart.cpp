@@ -46,15 +46,15 @@
 #include "libqchart.hpp"
 #include "libqchart.hxx"
 
-QChart* QChart_new() {
+QChart* QChart_New() {
     return new VirtualQChart();
 }
 
-QChart* QChart_new2(QGraphicsItem* parent) {
+QChart* QChart_New2(QGraphicsItem* parent) {
     return new VirtualQChart(parent);
 }
 
-QChart* QChart_new3(QGraphicsItem* parent, int wFlags) {
+QChart* QChart_New3(QGraphicsItem* parent, int wFlags) {
     return new VirtualQChart(parent, static_cast<Qt::WindowFlags>(wFlags));
 }
 

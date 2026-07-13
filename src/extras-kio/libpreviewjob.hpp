@@ -38,8 +38,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-KIO__PreviewJob* KIO__PreviewJob_new(const KFileItemList* items, const QSize* size);
-KIO__PreviewJob* KIO__PreviewJob_new2(const KFileItemList* items, const QSize* size, const libqt_list /* of libqt_string */ enabledPlugins);
+KIO__PreviewJob* KIO__PreviewJob_New(const KFileItemList* items, const QSize* size);
+KIO__PreviewJob* KIO__PreviewJob_New2(const KFileItemList* items, const QSize* size, const libqt_list /* of libqt_string */ enabledPlugins);
 QMetaObject* KIO__PreviewJob_MetaObject(const KIO__PreviewJob* self);
 void* KIO__PreviewJob_Metacast(KIO__PreviewJob* self, const char* param1);
 int KIO__PreviewJob_Metacall(KIO__PreviewJob* self, int param1, int param2, void** param3);

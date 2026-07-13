@@ -4,19 +4,19 @@
 #include "libqgeocoordinate.hpp"
 #include "libqgeocoordinate.hxx"
 
-QGeoCoordinate* QGeoCoordinate_new() {
+QGeoCoordinate* QGeoCoordinate_New() {
     return new QGeoCoordinate();
 }
 
-QGeoCoordinate* QGeoCoordinate_new2(double latitude, double longitude) {
+QGeoCoordinate* QGeoCoordinate_New2(double latitude, double longitude) {
     return new QGeoCoordinate(static_cast<double>(latitude), static_cast<double>(longitude));
 }
 
-QGeoCoordinate* QGeoCoordinate_new3(double latitude, double longitude, double altitude) {
+QGeoCoordinate* QGeoCoordinate_New3(double latitude, double longitude, double altitude) {
     return new QGeoCoordinate(static_cast<double>(latitude), static_cast<double>(longitude), static_cast<double>(altitude));
 }
 
-QGeoCoordinate* QGeoCoordinate_new4(const QGeoCoordinate* other) {
+QGeoCoordinate* QGeoCoordinate_New4(const QGeoCoordinate* other) {
     return new QGeoCoordinate(*other);
 }
 

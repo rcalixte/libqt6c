@@ -40,19 +40,19 @@
 #include "libkfontchooser.hpp"
 #include "libkfontchooser.hxx"
 
-KFontChooser* KFontChooser_new(QWidget* parent) {
+KFontChooser* KFontChooser_New(QWidget* parent) {
     return new VirtualKFontChooser(parent);
 }
 
-KFontChooser* KFontChooser_new2() {
+KFontChooser* KFontChooser_New2() {
     return new VirtualKFontChooser();
 }
 
-KFontChooser* KFontChooser_new3(int flags) {
+KFontChooser* KFontChooser_New3(int flags) {
     return new VirtualKFontChooser(static_cast<KFontChooser::DisplayFlags>(flags));
 }
 
-KFontChooser* KFontChooser_new4(int flags, QWidget* parent) {
+KFontChooser* KFontChooser_New4(int flags, QWidget* parent) {
     return new VirtualKFontChooser(static_cast<KFontChooser::DisplayFlags>(flags), parent);
 }
 

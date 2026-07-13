@@ -7,11 +7,11 @@
 #include "libtexttospeechinterface.h"
 
 TextEditTextToSpeech__TextToSpeechInterface* k_textedittexttospeech__texttospeechinterface_new(void* textToSpeechWidget) {
-    return TextEditTextToSpeech__TextToSpeechInterface_new((TextEditTextToSpeech__TextToSpeechWidget*)textToSpeechWidget);
+    return TextEditTextToSpeech__TextToSpeechInterface_New((TextEditTextToSpeech__TextToSpeechWidget*)textToSpeechWidget);
 }
 
 TextEditTextToSpeech__TextToSpeechInterface* k_textedittexttospeech__texttospeechinterface_new2(void* textToSpeechWidget, void* parent) {
-    return TextEditTextToSpeech__TextToSpeechInterface_new2((TextEditTextToSpeech__TextToSpeechWidget*)textToSpeechWidget, (QObject*)parent);
+    return TextEditTextToSpeech__TextToSpeechInterface_New2((TextEditTextToSpeech__TextToSpeechWidget*)textToSpeechWidget, (QObject*)parent);
 }
 
 const QMetaObject* k_textedittexttospeech__texttospeechinterface_meta_object(void* self) {

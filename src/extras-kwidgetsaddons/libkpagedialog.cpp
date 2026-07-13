@@ -43,15 +43,15 @@
 #include "libkpagedialog.hpp"
 #include "libkpagedialog.hxx"
 
-KPageDialog* KPageDialog_new(QWidget* parent) {
+KPageDialog* KPageDialog_New(QWidget* parent) {
     return new VirtualKPageDialog(parent);
 }
 
-KPageDialog* KPageDialog_new2() {
+KPageDialog* KPageDialog_New2() {
     return new VirtualKPageDialog();
 }
 
-KPageDialog* KPageDialog_new3(QWidget* parent, int flags) {
+KPageDialog* KPageDialog_New3(QWidget* parent, int flags) {
     return new VirtualKPageDialog(parent, static_cast<Qt::WindowFlags>(flags));
 }
 

@@ -4,11 +4,11 @@
 #include "libdefinition.h"
 
 KSyntaxHighlighting__Definition* k_syntaxhighlighting__definition_new() {
-    return KSyntaxHighlighting__Definition_new();
+    return KSyntaxHighlighting__Definition_New();
 }
 
 KSyntaxHighlighting__Definition* k_syntaxhighlighting__definition_new2(void* other) {
-    return KSyntaxHighlighting__Definition_new2((KSyntaxHighlighting__Definition*)other);
+    return KSyntaxHighlighting__Definition_New2((KSyntaxHighlighting__Definition*)other);
 }
 
 void k_syntaxhighlighting__definition_operator_assign(void* self, void* rhs) {

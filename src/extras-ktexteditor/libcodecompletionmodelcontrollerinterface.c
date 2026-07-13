@@ -7,7 +7,7 @@
 #include "libcodecompletionmodelcontrollerinterface.h"
 
 KTextEditor__CodeCompletionModelControllerInterface* k_texteditor__codecompletionmodelcontrollerinterface_new() {
-    return KTextEditor__CodeCompletionModelControllerInterface_new();
+    return KTextEditor__CodeCompletionModelControllerInterface_New();
 }
 
 bool k_texteditor__codecompletionmodelcontrollerinterface_should_start_completion(void* self, void* view, const char* insertedText, bool userInsertion, void* position) {

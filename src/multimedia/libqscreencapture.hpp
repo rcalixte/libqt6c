@@ -26,8 +26,8 @@ typedef struct QScreenCapture QScreenCapture;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QScreenCapture* QScreenCapture_new();
-QScreenCapture* QScreenCapture_new2(QObject* parent);
+QScreenCapture* QScreenCapture_New();
+QScreenCapture* QScreenCapture_New2(QObject* parent);
 QMetaObject* QScreenCapture_MetaObject(const QScreenCapture* self);
 void* QScreenCapture_Metacast(QScreenCapture* self, const char* param1);
 int QScreenCapture_Metacall(QScreenCapture* self, int param1, int param2, void** param3);

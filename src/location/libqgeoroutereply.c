@@ -8,11 +8,11 @@
 #include "libqgeoroutereply.h"
 
 QGeoRouteReply* q_georoutereply_new(int32_t error, const char* errorString) {
-    return QGeoRouteReply_new(error, qstring(errorString));
+    return QGeoRouteReply_New(error, qstring(errorString));
 }
 
 QGeoRouteReply* q_georoutereply_new2(int32_t error, const char* errorString, void* parent) {
-    return QGeoRouteReply_new2(error, qstring(errorString), (QObject*)parent);
+    return QGeoRouteReply_New2(error, qstring(errorString), (QObject*)parent);
 }
 
 const QMetaObject* q_georoutereply_meta_object(void* self) {

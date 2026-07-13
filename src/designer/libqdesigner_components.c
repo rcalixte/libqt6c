@@ -9,11 +9,11 @@
 #include "libqdesigner_components.h"
 
 QDesignerComponents* q_designercomponents_new(void* other) {
-    return QDesignerComponents_new((QDesignerComponents*)other);
+    return QDesignerComponents_New((QDesignerComponents*)other);
 }
 
 QDesignerComponents* q_designercomponents_new2(void* other) {
-    return QDesignerComponents_new2((QDesignerComponents*)other);
+    return QDesignerComponents_New2((QDesignerComponents*)other);
 }
 
 void q_designercomponents_copy_assign(void* self, void* other) {

@@ -12,7 +12,7 @@
 #include "libqabstractsocket.h"
 
 QAbstractSocket* q_abstractsocket_new(int32_t socketType, void* parent) {
-    return QAbstractSocket_new(socketType, (QObject*)parent);
+    return QAbstractSocket_New(socketType, (QObject*)parent);
 }
 
 const QMetaObject* q_abstractsocket_meta_object(void* self) {

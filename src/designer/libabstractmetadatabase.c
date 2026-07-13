@@ -8,7 +8,7 @@
 #include "libabstractmetadatabase.h"
 
 QDesignerMetaDataBaseItemInterface* q_designermetadatabaseiteminterface_new() {
-    return QDesignerMetaDataBaseItemInterface_new();
+    return QDesignerMetaDataBaseItemInterface_New();
 }
 
 const char* q_designermetadatabaseiteminterface_name(void* self) {
@@ -96,11 +96,11 @@ void q_designermetadatabaseiteminterface_delete(void* self) {
 }
 
 QDesignerMetaDataBaseInterface* q_designermetadatabaseinterface_new() {
-    return QDesignerMetaDataBaseInterface_new();
+    return QDesignerMetaDataBaseInterface_New();
 }
 
 QDesignerMetaDataBaseInterface* q_designermetadatabaseinterface_new2(void* parent) {
-    return QDesignerMetaDataBaseInterface_new2((QObject*)parent);
+    return QDesignerMetaDataBaseInterface_New2((QObject*)parent);
 }
 
 const QMetaObject* q_designermetadatabaseinterface_meta_object(void* self) {

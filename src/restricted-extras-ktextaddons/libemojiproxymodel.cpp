@@ -24,11 +24,11 @@
 #include "libemojiproxymodel.hpp"
 #include "libemojiproxymodel.hxx"
 
-TextEmoticonsCore__EmojiProxyModel* TextEmoticonsCore__EmojiProxyModel_new() {
+TextEmoticonsCore__EmojiProxyModel* TextEmoticonsCore__EmojiProxyModel_New() {
     return new VirtualTextEmoticonsCoreEmojiProxyModel();
 }
 
-TextEmoticonsCore__EmojiProxyModel* TextEmoticonsCore__EmojiProxyModel_new2(QObject* parent) {
+TextEmoticonsCore__EmojiProxyModel* TextEmoticonsCore__EmojiProxyModel_New2(QObject* parent) {
     return new VirtualTextEmoticonsCoreEmojiProxyModel(parent);
 }
 

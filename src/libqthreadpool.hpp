@@ -27,8 +27,8 @@ typedef struct QThreadPool QThreadPool;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QThreadPool* QThreadPool_new();
-QThreadPool* QThreadPool_new2(QObject* parent);
+QThreadPool* QThreadPool_New();
+QThreadPool* QThreadPool_New2(QObject* parent);
 QMetaObject* QThreadPool_MetaObject(const QThreadPool* self);
 void* QThreadPool_Metacast(QThreadPool* self, const char* param1);
 int QThreadPool_Metacall(QThreadPool* self, int param1, int param2, void** param3);

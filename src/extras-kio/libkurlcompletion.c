@@ -9,11 +9,11 @@
 #include "libkurlcompletion.h"
 
 KUrlCompletion* k_urlcompletion_new() {
-    return KUrlCompletion_new();
+    return KUrlCompletion_New();
 }
 
 KUrlCompletion* k_urlcompletion_new2(int32_t param1) {
-    return KUrlCompletion_new2(param1);
+    return KUrlCompletion_New2(param1);
 }
 
 const QMetaObject* k_urlcompletion_meta_object(void* self) {

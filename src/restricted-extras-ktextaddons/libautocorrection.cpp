@@ -6,7 +6,7 @@
 #include "libautocorrection.hpp"
 #include "libautocorrection.hxx"
 
-TextAutoCorrectionCore__AutoCorrection* TextAutoCorrectionCore__AutoCorrection_new() {
+TextAutoCorrectionCore__AutoCorrection* TextAutoCorrectionCore__AutoCorrection_New() {
     return new TextAutoCorrectionCore::AutoCorrection();
 }
 

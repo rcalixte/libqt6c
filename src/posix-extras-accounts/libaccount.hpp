@@ -46,8 +46,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-Accounts__Watch* Accounts__Watch_new();
-Accounts__Watch* Accounts__Watch_new2(QObject* parent);
+Accounts__Watch* Accounts__Watch_New();
+Accounts__Watch* Accounts__Watch_New2(QObject* parent);
 QMetaObject* Accounts__Watch_MetaObject(const Accounts__Watch* self);
 void* Accounts__Watch_Metacast(Accounts__Watch* self, const char* param1);
 int Accounts__Watch_Metacall(Accounts__Watch* self, int param1, int param2, void** param3);
@@ -94,8 +94,8 @@ void Accounts__Watch_OnIsSignalConnected(const Accounts__Watch* self, intptr_t s
 bool Accounts__Watch_SuperIsSignalConnected(const Accounts__Watch* self, const QMetaMethod* signal);
 void Accounts__Watch_Delete(Accounts__Watch* self);
 
-Accounts__Account* Accounts__Account_new(Accounts__Manager* manager, const libqt_string provider);
-Accounts__Account* Accounts__Account_new2(Accounts__Manager* manager, const libqt_string provider, QObject* parent);
+Accounts__Account* Accounts__Account_New(Accounts__Manager* manager, const libqt_string provider);
+Accounts__Account* Accounts__Account_New2(Accounts__Manager* manager, const libqt_string provider, QObject* parent);
 QMetaObject* Accounts__Account_MetaObject(const Accounts__Account* self);
 void* Accounts__Account_Metacast(Accounts__Account* self, const char* param1);
 int Accounts__Account_Metacall(Accounts__Account* self, int param1, int param2, void** param3);

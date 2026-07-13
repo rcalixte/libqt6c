@@ -53,10 +53,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QToolBar* QToolBar_new(QWidget* parent);
-QToolBar* QToolBar_new2(const libqt_string title);
-QToolBar* QToolBar_new3();
-QToolBar* QToolBar_new4(const libqt_string title, QWidget* parent);
+QToolBar* QToolBar_New(QWidget* parent);
+QToolBar* QToolBar_New2(const libqt_string title);
+QToolBar* QToolBar_New3();
+QToolBar* QToolBar_New4(const libqt_string title, QWidget* parent);
 QMetaObject* QToolBar_MetaObject(const QToolBar* self);
 void* QToolBar_Metacast(QToolBar* self, const char* param1);
 int QToolBar_Metacall(QToolBar* self, int param1, int param2, void** param3);

@@ -28,8 +28,8 @@ typedef struct QPen QPen;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QBarSet* QBarSet_new(const libqt_string label);
-QBarSet* QBarSet_new2(const libqt_string label, QObject* parent);
+QBarSet* QBarSet_New(const libqt_string label);
+QBarSet* QBarSet_New2(const libqt_string label, QObject* parent);
 QMetaObject* QBarSet_MetaObject(const QBarSet* self);
 void* QBarSet_Metacast(QBarSet* self, const char* param1);
 int QBarSet_Metacall(QBarSet* self, int param1, int param2, void** param3);

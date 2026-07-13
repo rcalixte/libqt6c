@@ -15,11 +15,11 @@
 #include "libqscilexermasm.hpp"
 #include "libqscilexermasm.hxx"
 
-QsciLexerMASM* QsciLexerMASM_new() {
+QsciLexerMASM* QsciLexerMASM_New() {
     return new VirtualQsciLexerMASM();
 }
 
-QsciLexerMASM* QsciLexerMASM_new2(QObject* parent) {
+QsciLexerMASM* QsciLexerMASM_New2(QObject* parent) {
     return new VirtualQsciLexerMASM(parent);
 }
 

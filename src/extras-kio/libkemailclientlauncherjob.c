@@ -8,11 +8,11 @@
 #include "libkemailclientlauncherjob.h"
 
 KEMailClientLauncherJob* k_emailclientlauncherjob_new() {
-    return KEMailClientLauncherJob_new();
+    return KEMailClientLauncherJob_New();
 }
 
 KEMailClientLauncherJob* k_emailclientlauncherjob_new2(void* parent) {
-    return KEMailClientLauncherJob_new2((QObject*)parent);
+    return KEMailClientLauncherJob_New2((QObject*)parent);
 }
 
 const QMetaObject* k_emailclientlauncherjob_meta_object(void* self) {

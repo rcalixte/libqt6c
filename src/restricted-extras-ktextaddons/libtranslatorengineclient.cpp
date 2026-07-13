@@ -13,11 +13,11 @@
 #include "libtranslatorengineclient.hpp"
 #include "libtranslatorengineclient.hxx"
 
-TextTranslator__TranslatorEngineClient* TextTranslator__TranslatorEngineClient_new() {
+TextTranslator__TranslatorEngineClient* TextTranslator__TranslatorEngineClient_New() {
     return new VirtualTextTranslatorTranslatorEngineClient();
 }
 
-TextTranslator__TranslatorEngineClient* TextTranslator__TranslatorEngineClient_new2(QObject* parent) {
+TextTranslator__TranslatorEngineClient* TextTranslator__TranslatorEngineClient_New2(QObject* parent) {
     return new VirtualTextTranslatorTranslatorEngineClient(parent);
 }
 

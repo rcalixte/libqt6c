@@ -40,35 +40,35 @@
 #include "libqdialogbuttonbox.hpp"
 #include "libqdialogbuttonbox.hxx"
 
-QDialogButtonBox* QDialogButtonBox_new(QWidget* parent) {
+QDialogButtonBox* QDialogButtonBox_New(QWidget* parent) {
     return new VirtualQDialogButtonBox(parent);
 }
 
-QDialogButtonBox* QDialogButtonBox_new2() {
+QDialogButtonBox* QDialogButtonBox_New2() {
     return new VirtualQDialogButtonBox();
 }
 
-QDialogButtonBox* QDialogButtonBox_new3(int orientation) {
+QDialogButtonBox* QDialogButtonBox_New3(int orientation) {
     return new VirtualQDialogButtonBox(static_cast<Qt::Orientation>(orientation));
 }
 
-QDialogButtonBox* QDialogButtonBox_new4(int buttons) {
+QDialogButtonBox* QDialogButtonBox_New4(int buttons) {
     return new VirtualQDialogButtonBox(static_cast<QDialogButtonBox::StandardButtons>(buttons));
 }
 
-QDialogButtonBox* QDialogButtonBox_new5(int buttons, int orientation) {
+QDialogButtonBox* QDialogButtonBox_New5(int buttons, int orientation) {
     return new VirtualQDialogButtonBox(static_cast<QDialogButtonBox::StandardButtons>(buttons), static_cast<Qt::Orientation>(orientation));
 }
 
-QDialogButtonBox* QDialogButtonBox_new6(int orientation, QWidget* parent) {
+QDialogButtonBox* QDialogButtonBox_New6(int orientation, QWidget* parent) {
     return new VirtualQDialogButtonBox(static_cast<Qt::Orientation>(orientation), parent);
 }
 
-QDialogButtonBox* QDialogButtonBox_new7(int buttons, QWidget* parent) {
+QDialogButtonBox* QDialogButtonBox_New7(int buttons, QWidget* parent) {
     return new VirtualQDialogButtonBox(static_cast<QDialogButtonBox::StandardButtons>(buttons), parent);
 }
 
-QDialogButtonBox* QDialogButtonBox_new8(int buttons, int orientation, QWidget* parent) {
+QDialogButtonBox* QDialogButtonBox_New8(int buttons, int orientation, QWidget* parent) {
     return new VirtualQDialogButtonBox(static_cast<QDialogButtonBox::StandardButtons>(buttons), static_cast<Qt::Orientation>(orientation), parent);
 }
 

@@ -3,11 +3,11 @@
 #include "libusermetadata.h"
 
 KFileMetaData__UserMetaData* k_filemetadata__usermetadata_new(const char* filePath) {
-    return KFileMetaData__UserMetaData_new(qstring(filePath));
+    return KFileMetaData__UserMetaData_New(qstring(filePath));
 }
 
 KFileMetaData__UserMetaData* k_filemetadata__usermetadata_new2(void* rhs) {
-    return KFileMetaData__UserMetaData_new2((KFileMetaData__UserMetaData*)rhs);
+    return KFileMetaData__UserMetaData_New2((KFileMetaData__UserMetaData*)rhs);
 }
 
 void k_filemetadata__usermetadata_operator_assign(void* self, void* rhs) {

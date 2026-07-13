@@ -28,10 +28,10 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KLinkItemSelectionModel* KLinkItemSelectionModel_new(QAbstractItemModel* targetModel, QItemSelectionModel* linkedItemSelectionModel);
-KLinkItemSelectionModel* KLinkItemSelectionModel_new2();
-KLinkItemSelectionModel* KLinkItemSelectionModel_new3(QAbstractItemModel* targetModel, QItemSelectionModel* linkedItemSelectionModel, QObject* parent);
-KLinkItemSelectionModel* KLinkItemSelectionModel_new4(QObject* parent);
+KLinkItemSelectionModel* KLinkItemSelectionModel_New(QAbstractItemModel* targetModel, QItemSelectionModel* linkedItemSelectionModel);
+KLinkItemSelectionModel* KLinkItemSelectionModel_New2();
+KLinkItemSelectionModel* KLinkItemSelectionModel_New3(QAbstractItemModel* targetModel, QItemSelectionModel* linkedItemSelectionModel, QObject* parent);
+KLinkItemSelectionModel* KLinkItemSelectionModel_New4(QObject* parent);
 QMetaObject* KLinkItemSelectionModel_MetaObject(const KLinkItemSelectionModel* self);
 void* KLinkItemSelectionModel_Metacast(KLinkItemSelectionModel* self, const char* param1);
 int KLinkItemSelectionModel_Metacall(KLinkItemSelectionModel* self, int param1, int param2, void** param3);

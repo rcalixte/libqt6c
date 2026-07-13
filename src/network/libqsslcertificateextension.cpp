@@ -5,11 +5,11 @@
 #include "libqsslcertificateextension.hpp"
 #include "libqsslcertificateextension.hxx"
 
-QSslCertificateExtension* QSslCertificateExtension_new() {
+QSslCertificateExtension* QSslCertificateExtension_New() {
     return new QSslCertificateExtension();
 }
 
-QSslCertificateExtension* QSslCertificateExtension_new2(const QSslCertificateExtension* other) {
+QSslCertificateExtension* QSslCertificateExtension_New2(const QSslCertificateExtension* other) {
     return new QSslCertificateExtension(*other);
 }
 

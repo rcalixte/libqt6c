@@ -34,10 +34,10 @@ typedef struct QWebSocket QWebSocket;
 typedef struct QWebSocketHandshakeOptions QWebSocketHandshakeOptions;
 #endif
 
-QWebSocket* QWebSocket_new();
-QWebSocket* QWebSocket_new2(const libqt_string origin);
-QWebSocket* QWebSocket_new3(const libqt_string origin, int version);
-QWebSocket* QWebSocket_new4(const libqt_string origin, int version, QObject* parent);
+QWebSocket* QWebSocket_New();
+QWebSocket* QWebSocket_New2(const libqt_string origin);
+QWebSocket* QWebSocket_New3(const libqt_string origin, int version);
+QWebSocket* QWebSocket_New4(const libqt_string origin, int version, QObject* parent);
 QMetaObject* QWebSocket_MetaObject(const QWebSocket* self);
 void* QWebSocket_Metacast(QWebSocket* self, const char* param1);
 int QWebSocket_Metacall(QWebSocket* self, int param1, int param2, void** param3);

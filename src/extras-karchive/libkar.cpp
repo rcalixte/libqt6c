@@ -8,16 +8,16 @@
 #include "libkar.hpp"
 #include "libkar.hxx"
 
-KAr* KAr_new(const libqt_string filename) {
+KAr* KAr_New(const libqt_string filename) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     return new VirtualKAr(filename_QString);
 }
 
-KAr* KAr_new2(QIODevice* dev) {
+KAr* KAr_New2(QIODevice* dev) {
     return new VirtualKAr(dev);
 }
 
-KAr* KAr_new3(const KAr* param1) {
+KAr* KAr_New3(const KAr* param1) {
     return new VirtualKAr(*param1);
 }
 

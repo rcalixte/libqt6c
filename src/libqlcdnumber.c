@@ -16,19 +16,19 @@
 #include "libqlcdnumber.h"
 
 QLCDNumber* q_lcdnumber_new(void* parent) {
-    return QLCDNumber_new((QWidget*)parent);
+    return QLCDNumber_New((QWidget*)parent);
 }
 
 QLCDNumber* q_lcdnumber_new2() {
-    return QLCDNumber_new2();
+    return QLCDNumber_New2();
 }
 
 QLCDNumber* q_lcdnumber_new3(uint32_t numDigits) {
-    return QLCDNumber_new3(numDigits);
+    return QLCDNumber_New3(numDigits);
 }
 
 QLCDNumber* q_lcdnumber_new4(uint32_t numDigits, void* parent) {
-    return QLCDNumber_new4(numDigits, (QWidget*)parent);
+    return QLCDNumber_New4(numDigits, (QWidget*)parent);
 }
 
 const QMetaObject* q_lcdnumber_meta_object(void* self) {

@@ -23,8 +23,8 @@ typedef struct QDate QDate;
 typedef struct QUrl QUrl;
 #endif
 
-Attica__Person* Attica__Person_new();
-Attica__Person* Attica__Person_new2(const Attica__Person* other);
+Attica__Person* Attica__Person_New();
+Attica__Person* Attica__Person_New2(const Attica__Person* other);
 void Attica__Person_OperatorAssign(Attica__Person* self, const Attica__Person* other);
 void Attica__Person_SetId(Attica__Person* self, const libqt_string id);
 libqt_string Attica__Person_Id(const Attica__Person* self);

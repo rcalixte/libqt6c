@@ -5,11 +5,11 @@
 #include "libkcursor.h"
 
 KCursor* k_cursor_new(void* other) {
-    return KCursor_new((KCursor*)other);
+    return KCursor_New((KCursor*)other);
 }
 
 KCursor* k_cursor_new2(void* other) {
-    return KCursor_new2((KCursor*)other);
+    return KCursor_New2((KCursor*)other);
 }
 
 void k_cursor_copy_assign(void* self, void* other) {

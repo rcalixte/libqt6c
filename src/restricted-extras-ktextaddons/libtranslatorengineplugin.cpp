@@ -10,11 +10,11 @@
 #include "libtranslatorengineplugin.hpp"
 #include "libtranslatorengineplugin.hxx"
 
-TextTranslator__TranslatorEnginePlugin* TextTranslator__TranslatorEnginePlugin_new() {
+TextTranslator__TranslatorEnginePlugin* TextTranslator__TranslatorEnginePlugin_New() {
     return new VirtualTextTranslatorTranslatorEnginePlugin();
 }
 
-TextTranslator__TranslatorEnginePlugin* TextTranslator__TranslatorEnginePlugin_new2(QObject* parent) {
+TextTranslator__TranslatorEnginePlugin* TextTranslator__TranslatorEnginePlugin_New2(QObject* parent) {
     return new VirtualTextTranslatorTranslatorEnginePlugin(parent);
 }
 

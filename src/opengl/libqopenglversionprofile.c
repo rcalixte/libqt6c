@@ -3,15 +3,15 @@
 #include "libqopenglversionprofile.h"
 
 QOpenGLVersionProfile* q_openglversionprofile_new() {
-    return QOpenGLVersionProfile_new();
+    return QOpenGLVersionProfile_New();
 }
 
 QOpenGLVersionProfile* q_openglversionprofile_new2(void* format) {
-    return QOpenGLVersionProfile_new2((QSurfaceFormat*)format);
+    return QOpenGLVersionProfile_New2((QSurfaceFormat*)format);
 }
 
 QOpenGLVersionProfile* q_openglversionprofile_new3(void* other) {
-    return QOpenGLVersionProfile_new3((QOpenGLVersionProfile*)other);
+    return QOpenGLVersionProfile_New3((QOpenGLVersionProfile*)other);
 }
 
 void q_openglversionprofile_operator_assign(void* self, void* rhs) {

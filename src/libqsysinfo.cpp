@@ -5,11 +5,11 @@
 #include "libqsysinfo.hpp"
 #include "libqsysinfo.hxx"
 
-QSysInfo* QSysInfo_new(const QSysInfo* other) {
+QSysInfo* QSysInfo_New(const QSysInfo* other) {
     return new QSysInfo(*other);
 }
 
-QSysInfo* QSysInfo_new2(QSysInfo* other) {
+QSysInfo* QSysInfo_New2(QSysInfo* other) {
     return new QSysInfo(std::move(*other));
 }
 

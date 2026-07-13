@@ -37,11 +37,11 @@
 #include "libkbusyindicatorwidget.hpp"
 #include "libkbusyindicatorwidget.hxx"
 
-KBusyIndicatorWidget* KBusyIndicatorWidget_new(QWidget* parent) {
+KBusyIndicatorWidget* KBusyIndicatorWidget_New(QWidget* parent) {
     return new VirtualKBusyIndicatorWidget(parent);
 }
 
-KBusyIndicatorWidget* KBusyIndicatorWidget_new2() {
+KBusyIndicatorWidget* KBusyIndicatorWidget_New2() {
     return new VirtualKBusyIndicatorWidget();
 }
 

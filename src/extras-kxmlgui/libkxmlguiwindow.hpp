@@ -62,9 +62,9 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KXmlGuiWindow* KXmlGuiWindow_new(QWidget* parent);
-KXmlGuiWindow* KXmlGuiWindow_new2();
-KXmlGuiWindow* KXmlGuiWindow_new3(QWidget* parent, int flags);
+KXmlGuiWindow* KXmlGuiWindow_New(QWidget* parent);
+KXmlGuiWindow* KXmlGuiWindow_New2();
+KXmlGuiWindow* KXmlGuiWindow_New3(QWidget* parent, int flags);
 QMetaObject* KXmlGuiWindow_MetaObject(const KXmlGuiWindow* self);
 void* KXmlGuiWindow_Metacast(KXmlGuiWindow* self, const char* param1);
 int KXmlGuiWindow_Metacall(KXmlGuiWindow* self, int param1, int param2, void** param3);

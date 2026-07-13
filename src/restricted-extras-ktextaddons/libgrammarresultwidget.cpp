@@ -40,11 +40,11 @@
 #include "libgrammarresultwidget.hpp"
 #include "libgrammarresultwidget.hxx"
 
-TextGrammarCheck__GrammarResultWidget* TextGrammarCheck__GrammarResultWidget_new(QWidget* parent) {
+TextGrammarCheck__GrammarResultWidget* TextGrammarCheck__GrammarResultWidget_New(QWidget* parent) {
     return new VirtualTextGrammarCheckGrammarResultWidget(parent);
 }
 
-TextGrammarCheck__GrammarResultWidget* TextGrammarCheck__GrammarResultWidget_new2() {
+TextGrammarCheck__GrammarResultWidget* TextGrammarCheck__GrammarResultWidget_New2() {
     return new VirtualTextGrammarCheckGrammarResultWidget();
 }
 

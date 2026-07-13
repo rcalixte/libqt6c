@@ -4,15 +4,15 @@
 #include "libqresource.h"
 
 QResource* q_resource_new() {
-    return QResource_new();
+    return QResource_New();
 }
 
 QResource* q_resource_new2(const char* file) {
-    return QResource_new2(qstring(file));
+    return QResource_New2(qstring(file));
 }
 
 QResource* q_resource_new3(const char* file, void* locale) {
-    return QResource_new3(qstring(file), (QLocale*)locale);
+    return QResource_New3(qstring(file), (QLocale*)locale);
 }
 
 void q_resource_set_file_name(void* self, const char* file) {

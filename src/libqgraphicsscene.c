@@ -27,27 +27,27 @@
 #include "libqgraphicsscene.h"
 
 QGraphicsScene* q_graphicsscene_new() {
-    return QGraphicsScene_new();
+    return QGraphicsScene_New();
 }
 
 QGraphicsScene* q_graphicsscene_new2(void* sceneRect) {
-    return QGraphicsScene_new2((QRectF*)sceneRect);
+    return QGraphicsScene_New2((QRectF*)sceneRect);
 }
 
 QGraphicsScene* q_graphicsscene_new3(double x, double y, double width, double height) {
-    return QGraphicsScene_new3(x, y, width, height);
+    return QGraphicsScene_New3(x, y, width, height);
 }
 
 QGraphicsScene* q_graphicsscene_new4(void* parent) {
-    return QGraphicsScene_new4((QObject*)parent);
+    return QGraphicsScene_New4((QObject*)parent);
 }
 
 QGraphicsScene* q_graphicsscene_new5(void* sceneRect, void* parent) {
-    return QGraphicsScene_new5((QRectF*)sceneRect, (QObject*)parent);
+    return QGraphicsScene_New5((QRectF*)sceneRect, (QObject*)parent);
 }
 
 QGraphicsScene* q_graphicsscene_new6(double x, double y, double width, double height, void* parent) {
-    return QGraphicsScene_new6(x, y, width, height, (QObject*)parent);
+    return QGraphicsScene_New6(x, y, width, height, (QObject*)parent);
 }
 
 const QMetaObject* q_graphicsscene_meta_object(void* self) {

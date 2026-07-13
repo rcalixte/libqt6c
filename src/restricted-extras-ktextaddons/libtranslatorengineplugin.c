@@ -6,11 +6,11 @@
 #include "libtranslatorengineplugin.h"
 
 TextTranslator__TranslatorEnginePlugin* k_texttranslator__translatorengineplugin_new() {
-    return TextTranslator__TranslatorEnginePlugin_new();
+    return TextTranslator__TranslatorEnginePlugin_New();
 }
 
 TextTranslator__TranslatorEnginePlugin* k_texttranslator__translatorengineplugin_new2(void* parent) {
-    return TextTranslator__TranslatorEnginePlugin_new2((QObject*)parent);
+    return TextTranslator__TranslatorEnginePlugin_New2((QObject*)parent);
 }
 
 const QMetaObject* k_texttranslator__translatorengineplugin_meta_object(void* self) {

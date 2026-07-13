@@ -7,15 +7,15 @@
 #include "libquestion.h"
 
 KNSCore__Question* k_nscore__question_new() {
-    return KNSCore__Question_new();
+    return KNSCore__Question_New();
 }
 
 KNSCore__Question* k_nscore__question_new2(int32_t param1) {
-    return KNSCore__Question_new2(param1);
+    return KNSCore__Question_New2(param1);
 }
 
 KNSCore__Question* k_nscore__question_new3(int32_t param1, void* parent) {
-    return KNSCore__Question_new3(param1, (QObject*)parent);
+    return KNSCore__Question_New3(param1, (QObject*)parent);
 }
 
 const QMetaObject* k_nscore__question_meta_object(void* self) {

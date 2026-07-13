@@ -7,11 +7,11 @@
 #include "libklocalizedcontext.h"
 
 KLocalizedContext* k_localizedcontext_new() {
-    return KLocalizedContext_new();
+    return KLocalizedContext_New();
 }
 
 KLocalizedContext* k_localizedcontext_new2(void* parent) {
-    return KLocalizedContext_new2((QObject*)parent);
+    return KLocalizedContext_New2((QObject*)parent);
 }
 
 const QMetaObject* k_localizedcontext_meta_object(void* self) {

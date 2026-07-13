@@ -14,11 +14,11 @@
 #include "libemojimodel.h"
 
 TextEmoticonsCore__EmojiModel* k_textemoticonscore__emojimodel_new() {
-    return TextEmoticonsCore__EmojiModel_new();
+    return TextEmoticonsCore__EmojiModel_New();
 }
 
 TextEmoticonsCore__EmojiModel* k_textemoticonscore__emojimodel_new2(void* parent) {
-    return TextEmoticonsCore__EmojiModel_new2((QObject*)parent);
+    return TextEmoticonsCore__EmojiModel_New2((QObject*)parent);
 }
 
 const QMetaObject* k_textemoticonscore__emojimodel_meta_object(void* self) {

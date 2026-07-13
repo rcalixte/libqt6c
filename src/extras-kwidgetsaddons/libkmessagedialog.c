@@ -17,15 +17,15 @@
 #include "libkmessagedialog.h"
 
 KMessageDialog* k_messagedialog_new(int32_t type, const char* text) {
-    return KMessageDialog_new(type, qstring(text));
+    return KMessageDialog_New(type, qstring(text));
 }
 
 KMessageDialog* k_messagedialog_new2(int32_t type, const char* text, uintptr_t parent_id) {
-    return KMessageDialog_new2(type, qstring(text), parent_id);
+    return KMessageDialog_New2(type, qstring(text), parent_id);
 }
 
 KMessageDialog* k_messagedialog_new3(int32_t type, const char* text, void* parent) {
-    return KMessageDialog_new3(type, qstring(text), (QWidget*)parent);
+    return KMessageDialog_New3(type, qstring(text), (QWidget*)parent);
 }
 
 const QMetaObject* k_messagedialog_meta_object(void* self) {

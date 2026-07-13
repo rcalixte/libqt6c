@@ -7,7 +7,7 @@
 #include "libkwindowinfo.hpp"
 #include "libkwindowinfo.hxx"
 
-KWindowInfo* KWindowInfo_new(const KWindowInfo* param1) {
+KWindowInfo* KWindowInfo_New(const KWindowInfo* param1) {
     return new KWindowInfo(*param1);
 }
 

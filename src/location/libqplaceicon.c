@@ -6,11 +6,11 @@
 #include "libqplaceicon.h"
 
 QPlaceIcon* q_placeicon_new() {
-    return QPlaceIcon_new();
+    return QPlaceIcon_New();
 }
 
 QPlaceIcon* q_placeicon_new2(void* other) {
-    return QPlaceIcon_new2((QPlaceIcon*)other);
+    return QPlaceIcon_New2((QPlaceIcon*)other);
 }
 
 void q_placeicon_operator_assign(void* self, void* other) {

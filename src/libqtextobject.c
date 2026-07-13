@@ -556,7 +556,7 @@ void q_textblockgroup_on_object_name_changed(void* self, void (*callback)(void*,
 }
 
 QTextFrame* q_textframe_new(void* doc) {
-    return QTextFrame_new((QTextDocument*)doc);
+    return QTextFrame_New((QTextDocument*)doc);
 }
 
 const QMetaObject* q_textframe_meta_object(void* self) {
@@ -1045,11 +1045,11 @@ void q_textblockuserdata_delete(void* self) {
 }
 
 QTextBlock* q_textblock_new() {
-    return QTextBlock_new();
+    return QTextBlock_New();
 }
 
 QTextBlock* q_textblock_new2(void* o) {
-    return QTextBlock_new2((QTextBlock*)o);
+    return QTextBlock_New2((QTextBlock*)o);
 }
 
 void q_textblock_operator_assign(void* self, void* o) {
@@ -1205,11 +1205,11 @@ void q_textblock_delete(void* self) {
 }
 
 QTextFragment* q_textfragment_new() {
-    return QTextFragment_new();
+    return QTextFragment_New();
 }
 
 QTextFragment* q_textfragment_new2(void* o) {
-    return QTextFragment_new2((QTextFragment*)o);
+    return QTextFragment_New2((QTextFragment*)o);
 }
 
 void q_textfragment_operator_assign(void* self, void* o) {
@@ -1279,19 +1279,19 @@ void q_textfragment_delete(void* self) {
 }
 
 QTextFrame__iterator* q_textframe__iterator_new(void* other) {
-    return QTextFrame__iterator_new((QTextFrame__iterator*)other);
+    return QTextFrame__iterator_New((QTextFrame__iterator*)other);
 }
 
 QTextFrame__iterator* q_textframe__iterator_new2(void* other) {
-    return QTextFrame__iterator_new2((QTextFrame__iterator*)other);
+    return QTextFrame__iterator_New2((QTextFrame__iterator*)other);
 }
 
 QTextFrame__iterator* q_textframe__iterator_new3() {
-    return QTextFrame__iterator_new3();
+    return QTextFrame__iterator_New3();
 }
 
 QTextFrame__iterator* q_textframe__iterator_new4(void* param1) {
-    return QTextFrame__iterator_new4((QTextFrame__iterator*)param1);
+    return QTextFrame__iterator_New4((QTextFrame__iterator*)param1);
 }
 
 void q_textframe__iterator_copy_assign(void* self, void* other) {
@@ -1347,19 +1347,19 @@ void q_textframe__iterator_delete(void* self) {
 }
 
 QTextBlock__iterator* q_textblock__iterator_new(void* other) {
-    return QTextBlock__iterator_new((QTextBlock__iterator*)other);
+    return QTextBlock__iterator_New((QTextBlock__iterator*)other);
 }
 
 QTextBlock__iterator* q_textblock__iterator_new2(void* other) {
-    return QTextBlock__iterator_new2((QTextBlock__iterator*)other);
+    return QTextBlock__iterator_New2((QTextBlock__iterator*)other);
 }
 
 QTextBlock__iterator* q_textblock__iterator_new3() {
-    return QTextBlock__iterator_new3();
+    return QTextBlock__iterator_New3();
 }
 
 QTextBlock__iterator* q_textblock__iterator_new4(void* param1) {
-    return QTextBlock__iterator_new4((QTextBlock__iterator*)param1);
+    return QTextBlock__iterator_New4((QTextBlock__iterator*)param1);
 }
 
 void q_textblock__iterator_copy_assign(void* self, void* other) {

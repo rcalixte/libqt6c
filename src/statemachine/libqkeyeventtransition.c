@@ -9,19 +9,19 @@
 #include "libqkeyeventtransition.h"
 
 QKeyEventTransition* q_keyeventtransition_new() {
-    return QKeyEventTransition_new();
+    return QKeyEventTransition_New();
 }
 
 QKeyEventTransition* q_keyeventtransition_new2(void* object, int32_t type, int key) {
-    return QKeyEventTransition_new2((QObject*)object, type, key);
+    return QKeyEventTransition_New2((QObject*)object, type, key);
 }
 
 QKeyEventTransition* q_keyeventtransition_new3(void* sourceState) {
-    return QKeyEventTransition_new3((QState*)sourceState);
+    return QKeyEventTransition_New3((QState*)sourceState);
 }
 
 QKeyEventTransition* q_keyeventtransition_new4(void* object, int32_t type, int key, void* sourceState) {
-    return QKeyEventTransition_new4((QObject*)object, type, key, (QState*)sourceState);
+    return QKeyEventTransition_New4((QObject*)object, type, key, (QState*)sourceState);
 }
 
 const QMetaObject* q_keyeventtransition_meta_object(void* self) {

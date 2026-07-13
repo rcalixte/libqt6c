@@ -7,7 +7,7 @@
 #include "libqtestsupport_widgets.hpp"
 #include "libqtestsupport_widgets.hxx"
 
-QTest__QTouchEventWidgetSequence* QTest__QTouchEventWidgetSequence_new(const QTest__QTouchEventWidgetSequence* param1) {
+QTest__QTouchEventWidgetSequence* QTest__QTouchEventWidgetSequence_New(const QTest__QTouchEventWidgetSequence* param1) {
     return new VirtualQTestQTouchEventWidgetSequence(*param1);
 }
 

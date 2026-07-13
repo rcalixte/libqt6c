@@ -5,7 +5,7 @@
 #include "libkmessageboxnotifyinterface.hpp"
 #include "libkmessageboxnotifyinterface.hxx"
 
-KMessageBoxNotifyInterface* KMessageBoxNotifyInterface_new() {
+KMessageBoxNotifyInterface* KMessageBoxNotifyInterface_New() {
     return new VirtualKMessageBoxNotifyInterface();
 }
 

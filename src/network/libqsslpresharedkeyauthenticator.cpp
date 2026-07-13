@@ -4,11 +4,11 @@
 #include "libqsslpresharedkeyauthenticator.hpp"
 #include "libqsslpresharedkeyauthenticator.hxx"
 
-QSslPreSharedKeyAuthenticator* QSslPreSharedKeyAuthenticator_new() {
+QSslPreSharedKeyAuthenticator* QSslPreSharedKeyAuthenticator_New() {
     return new QSslPreSharedKeyAuthenticator();
 }
 
-QSslPreSharedKeyAuthenticator* QSslPreSharedKeyAuthenticator_new2(const QSslPreSharedKeyAuthenticator* authenticator) {
+QSslPreSharedKeyAuthenticator* QSslPreSharedKeyAuthenticator_New2(const QSslPreSharedKeyAuthenticator* authenticator) {
     return new QSslPreSharedKeyAuthenticator(*authenticator);
 }
 

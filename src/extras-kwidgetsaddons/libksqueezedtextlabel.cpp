@@ -41,20 +41,20 @@
 #include "libksqueezedtextlabel.hpp"
 #include "libksqueezedtextlabel.hxx"
 
-KSqueezedTextLabel* KSqueezedTextLabel_new(QWidget* parent) {
+KSqueezedTextLabel* KSqueezedTextLabel_New(QWidget* parent) {
     return new VirtualKSqueezedTextLabel(parent);
 }
 
-KSqueezedTextLabel* KSqueezedTextLabel_new2() {
+KSqueezedTextLabel* KSqueezedTextLabel_New2() {
     return new VirtualKSqueezedTextLabel();
 }
 
-KSqueezedTextLabel* KSqueezedTextLabel_new3(const libqt_string text) {
+KSqueezedTextLabel* KSqueezedTextLabel_New3(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKSqueezedTextLabel(text_QString);
 }
 
-KSqueezedTextLabel* KSqueezedTextLabel_new4(const libqt_string text, QWidget* parent) {
+KSqueezedTextLabel* KSqueezedTextLabel_New4(const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKSqueezedTextLabel(text_QString, parent);
 }

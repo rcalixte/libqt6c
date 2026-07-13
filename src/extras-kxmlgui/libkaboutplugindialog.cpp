@@ -39,19 +39,19 @@
 #include "libkaboutplugindialog.hpp"
 #include "libkaboutplugindialog.hxx"
 
-KAboutPluginDialog* KAboutPluginDialog_new(const KPluginMetaData* pluginMetaData, int options) {
+KAboutPluginDialog* KAboutPluginDialog_New(const KPluginMetaData* pluginMetaData, int options) {
     return new VirtualKAboutPluginDialog(*pluginMetaData, static_cast<KAboutPluginDialog::Options>(options));
 }
 
-KAboutPluginDialog* KAboutPluginDialog_new2(const KPluginMetaData* pluginMetaData) {
+KAboutPluginDialog* KAboutPluginDialog_New2(const KPluginMetaData* pluginMetaData) {
     return new VirtualKAboutPluginDialog(*pluginMetaData);
 }
 
-KAboutPluginDialog* KAboutPluginDialog_new3(const KPluginMetaData* pluginMetaData, int options, QWidget* parent) {
+KAboutPluginDialog* KAboutPluginDialog_New3(const KPluginMetaData* pluginMetaData, int options, QWidget* parent) {
     return new VirtualKAboutPluginDialog(*pluginMetaData, static_cast<KAboutPluginDialog::Options>(options), parent);
 }
 
-KAboutPluginDialog* KAboutPluginDialog_new4(const KPluginMetaData* pluginMetaData, QWidget* parent) {
+KAboutPluginDialog* KAboutPluginDialog_New4(const KPluginMetaData* pluginMetaData, QWidget* parent) {
     return new VirtualKAboutPluginDialog(*pluginMetaData, parent);
 }
 

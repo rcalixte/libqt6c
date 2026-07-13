@@ -5,15 +5,15 @@
 #include "libqgeoareamonitorinfo.h"
 
 QGeoAreaMonitorInfo* q_geoareamonitorinfo_new() {
-    return QGeoAreaMonitorInfo_new();
+    return QGeoAreaMonitorInfo_New();
 }
 
 QGeoAreaMonitorInfo* q_geoareamonitorinfo_new2(void* other) {
-    return QGeoAreaMonitorInfo_new2((QGeoAreaMonitorInfo*)other);
+    return QGeoAreaMonitorInfo_New2((QGeoAreaMonitorInfo*)other);
 }
 
 QGeoAreaMonitorInfo* q_geoareamonitorinfo_new3(const char* name) {
-    return QGeoAreaMonitorInfo_new3(qstring(name));
+    return QGeoAreaMonitorInfo_New3(qstring(name));
 }
 
 void q_geoareamonitorinfo_operator_assign(void* self, void* other) {

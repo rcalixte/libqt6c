@@ -9,19 +9,19 @@
 #include "libqsystemtrayicon.h"
 
 QSystemTrayIcon* q_systemtrayicon_new() {
-    return QSystemTrayIcon_new();
+    return QSystemTrayIcon_New();
 }
 
 QSystemTrayIcon* q_systemtrayicon_new2(void* icon) {
-    return QSystemTrayIcon_new2((QIcon*)icon);
+    return QSystemTrayIcon_New2((QIcon*)icon);
 }
 
 QSystemTrayIcon* q_systemtrayicon_new3(void* parent) {
-    return QSystemTrayIcon_new3((QObject*)parent);
+    return QSystemTrayIcon_New3((QObject*)parent);
 }
 
 QSystemTrayIcon* q_systemtrayicon_new4(void* icon, void* parent) {
-    return QSystemTrayIcon_new4((QIcon*)icon, (QObject*)parent);
+    return QSystemTrayIcon_New4((QIcon*)icon, (QObject*)parent);
 }
 
 const QMetaObject* q_systemtrayicon_meta_object(void* self) {

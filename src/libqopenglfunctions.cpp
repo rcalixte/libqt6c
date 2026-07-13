@@ -4,11 +4,11 @@
 #include "libqopenglfunctions.hpp"
 #include "libqopenglfunctions.hxx"
 
-QOpenGLFunctions* QOpenGLFunctions_new() {
+QOpenGLFunctions* QOpenGLFunctions_New() {
     return new QOpenGLFunctions();
 }
 
-QOpenGLFunctions* QOpenGLFunctions_new2(QOpenGLContext* context) {
+QOpenGLFunctions* QOpenGLFunctions_New2(QOpenGLContext* context) {
     return new QOpenGLFunctions(context);
 }
 

@@ -15,11 +15,11 @@
 #include "libtexteditfindbarbase.h"
 
 TextCustomEditor__TextEditFindBarBase* k_textcustomeditor__texteditfindbarbase_new(void* parent) {
-    return TextCustomEditor__TextEditFindBarBase_new((QWidget*)parent);
+    return TextCustomEditor__TextEditFindBarBase_New((QWidget*)parent);
 }
 
 TextCustomEditor__TextEditFindBarBase* k_textcustomeditor__texteditfindbarbase_new2() {
-    return TextCustomEditor__TextEditFindBarBase_new2();
+    return TextCustomEditor__TextEditFindBarBase_New2();
 }
 
 const QMetaObject* k_textcustomeditor__texteditfindbarbase_meta_object(void* self) {

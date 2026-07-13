@@ -58,8 +58,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KNSWidgets__Button* KNSWidgets__Button_new(QWidget* parent);
-KNSWidgets__Button* KNSWidgets__Button_new2(const libqt_string text, const libqt_string configFile, QWidget* parent);
+KNSWidgets__Button* KNSWidgets__Button_New(QWidget* parent);
+KNSWidgets__Button* KNSWidgets__Button_New2(const libqt_string text, const libqt_string configFile, QWidget* parent);
 QMetaObject* KNSWidgets__Button_MetaObject(const KNSWidgets__Button* self);
 void* KNSWidgets__Button_Metacast(KNSWidgets__Button* self, const char* param1);
 int KNSWidgets__Button_Metacall(KNSWidgets__Button* self, int param1, int param2, void** param3);

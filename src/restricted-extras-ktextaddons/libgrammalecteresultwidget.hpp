@@ -57,8 +57,8 @@ typedef struct TextGrammarCheck__GrammalecteResultWidget TextGrammarCheck__Gramm
 typedef struct TextGrammarCheck__GrammarResultWidget TextGrammarCheck__GrammarResultWidget;
 #endif
 
-TextGrammarCheck__GrammalecteResultWidget* TextGrammarCheck__GrammalecteResultWidget_new(QWidget* parent);
-TextGrammarCheck__GrammalecteResultWidget* TextGrammarCheck__GrammalecteResultWidget_new2();
+TextGrammarCheck__GrammalecteResultWidget* TextGrammarCheck__GrammalecteResultWidget_New(QWidget* parent);
+TextGrammarCheck__GrammalecteResultWidget* TextGrammarCheck__GrammalecteResultWidget_New2();
 QMetaObject* TextGrammarCheck__GrammalecteResultWidget_MetaObject(const TextGrammarCheck__GrammalecteResultWidget* self);
 void* TextGrammarCheck__GrammalecteResultWidget_Metacast(TextGrammarCheck__GrammalecteResultWidget* self, const char* param1);
 int TextGrammarCheck__GrammalecteResultWidget_Metacall(TextGrammarCheck__GrammalecteResultWidget* self, int param1, int param2, void** param3);

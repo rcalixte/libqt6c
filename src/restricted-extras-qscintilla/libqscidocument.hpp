@@ -18,8 +18,8 @@ extern "C" {
 typedef struct QsciDocument QsciDocument;
 #endif
 
-QsciDocument* QsciDocument_new();
-QsciDocument* QsciDocument_new2(const QsciDocument* param1);
+QsciDocument* QsciDocument_New();
+QsciDocument* QsciDocument_New2(const QsciDocument* param1);
 void QsciDocument_OperatorAssign(QsciDocument* self, const QsciDocument* param1);
 void QsciDocument_Delete(QsciDocument* self);
 

@@ -11,7 +11,7 @@
 #include "libkmodifierkeyinfoprovider_p.hpp"
 #include "libkmodifierkeyinfoprovider_p.hxx"
 
-KModifierKeyInfoProvider* KModifierKeyInfoProvider_new() {
+KModifierKeyInfoProvider* KModifierKeyInfoProvider_New() {
     return new VirtualKModifierKeyInfoProvider();
 }
 

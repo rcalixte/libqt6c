@@ -12,11 +12,11 @@
 #include "libqdatetimeaxis.hpp"
 #include "libqdatetimeaxis.hxx"
 
-QDateTimeAxis* QDateTimeAxis_new() {
+QDateTimeAxis* QDateTimeAxis_New() {
     return new VirtualQDateTimeAxis();
 }
 
-QDateTimeAxis* QDateTimeAxis_new2(QObject* parent) {
+QDateTimeAxis* QDateTimeAxis_New2(QObject* parent) {
     return new VirtualQDateTimeAxis(parent);
 }
 

@@ -30,8 +30,8 @@ typedef struct QsciLexerJava QsciLexerJava;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerJava* QsciLexerJava_new();
-QsciLexerJava* QsciLexerJava_new2(QObject* parent);
+QsciLexerJava* QsciLexerJava_New();
+QsciLexerJava* QsciLexerJava_New2(QObject* parent);
 QMetaObject* QsciLexerJava_MetaObject(const QsciLexerJava* self);
 void* QsciLexerJava_Metacast(QsciLexerJava* self, const char* param1);
 int QsciLexerJava_Metacall(QsciLexerJava* self, int param1, int param2, void** param3);

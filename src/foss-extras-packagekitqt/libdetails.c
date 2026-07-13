@@ -3,7 +3,7 @@
 #include "libdetails.h"
 
 PackageKit__Details* q_packagekit__details_new() {
-    return PackageKit__Details_new();
+    return PackageKit__Details_New();
 }
 
 PackageKit__Details* q_packagekit__details_new2(libqt_map /* of const char* to QVariant* */ other) {
@@ -30,7 +30,7 @@ PackageKit__Details* q_packagekit__details_new2(libqt_map /* of const char* to Q
         other_vdest[i] = other_varr[i];
     }
 
-    PackageKit__Details* _out = PackageKit__Details_new2(other_ret);
+    PackageKit__Details* _out = PackageKit__Details_New2(other_ret);
     free(other_ret.keys);
     free(other_ret.values);
     return _out;

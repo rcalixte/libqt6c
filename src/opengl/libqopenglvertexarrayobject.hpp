@@ -28,8 +28,8 @@ typedef struct QOpenGLVertexArrayObject__Binder QOpenGLVertexArrayObject__Binder
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QOpenGLVertexArrayObject* QOpenGLVertexArrayObject_new();
-QOpenGLVertexArrayObject* QOpenGLVertexArrayObject_new2(QObject* parent);
+QOpenGLVertexArrayObject* QOpenGLVertexArrayObject_New();
+QOpenGLVertexArrayObject* QOpenGLVertexArrayObject_New2(QObject* parent);
 QMetaObject* QOpenGLVertexArrayObject_MetaObject(const QOpenGLVertexArrayObject* self);
 void* QOpenGLVertexArrayObject_Metacast(QOpenGLVertexArrayObject* self, const char* param1);
 int QOpenGLVertexArrayObject_Metacall(QOpenGLVertexArrayObject* self, int param1, int param2, void** param3);
@@ -80,7 +80,7 @@ void QOpenGLVertexArrayObject_OnIsSignalConnected(const QOpenGLVertexArrayObject
 bool QOpenGLVertexArrayObject_SuperIsSignalConnected(const QOpenGLVertexArrayObject* self, const QMetaMethod* signal);
 void QOpenGLVertexArrayObject_Delete(QOpenGLVertexArrayObject* self);
 
-QOpenGLVertexArrayObject__Binder* QOpenGLVertexArrayObject__Binder_new(QOpenGLVertexArrayObject* v);
+QOpenGLVertexArrayObject__Binder* QOpenGLVertexArrayObject__Binder_New(QOpenGLVertexArrayObject* v);
 void QOpenGLVertexArrayObject__Binder_Release(QOpenGLVertexArrayObject__Binder* self);
 void QOpenGLVertexArrayObject__Binder_Rebind(QOpenGLVertexArrayObject__Binder* self);
 void QOpenGLVertexArrayObject__Binder_Delete(QOpenGLVertexArrayObject__Binder* self);

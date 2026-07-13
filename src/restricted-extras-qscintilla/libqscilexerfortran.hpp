@@ -30,8 +30,8 @@ typedef struct QsciLexerFortran77 QsciLexerFortran77;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerFortran* QsciLexerFortran_new();
-QsciLexerFortran* QsciLexerFortran_new2(QObject* parent);
+QsciLexerFortran* QsciLexerFortran_New();
+QsciLexerFortran* QsciLexerFortran_New2(QObject* parent);
 QMetaObject* QsciLexerFortran_MetaObject(const QsciLexerFortran* self);
 void* QsciLexerFortran_Metacast(QsciLexerFortran* self, const char* param1);
 int QsciLexerFortran_Metacall(QsciLexerFortran* self, int param1, int param2, void** param3);

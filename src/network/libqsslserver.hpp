@@ -30,8 +30,8 @@ typedef struct QTcpSocket QTcpSocket;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QSslServer* QSslServer_new();
-QSslServer* QSslServer_new2(QObject* parent);
+QSslServer* QSslServer_New();
+QSslServer* QSslServer_New2(QObject* parent);
 QMetaObject* QSslServer_MetaObject(const QSslServer* self);
 void* QSslServer_Metacast(QSslServer* self, const char* param1);
 int QSslServer_Metacall(QSslServer* self, int param1, int param2, void** param3);

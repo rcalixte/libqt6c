@@ -39,9 +39,9 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QSqlRelation* QSqlRelation_new();
-QSqlRelation* QSqlRelation_new2(const libqt_string aTableName, const libqt_string indexCol, const libqt_string displayCol);
-QSqlRelation* QSqlRelation_new3(const QSqlRelation* param1);
+QSqlRelation* QSqlRelation_New();
+QSqlRelation* QSqlRelation_New2(const libqt_string aTableName, const libqt_string indexCol, const libqt_string displayCol);
+QSqlRelation* QSqlRelation_New3(const QSqlRelation* param1);
 void QSqlRelation_Swap(QSqlRelation* self, QSqlRelation* other);
 libqt_string QSqlRelation_TableName(const QSqlRelation* self);
 libqt_string QSqlRelation_IndexColumn(const QSqlRelation* self);
@@ -49,9 +49,9 @@ libqt_string QSqlRelation_DisplayColumn(const QSqlRelation* self);
 bool QSqlRelation_IsValid(const QSqlRelation* self);
 void QSqlRelation_Delete(QSqlRelation* self);
 
-QSqlRelationalTableModel* QSqlRelationalTableModel_new();
-QSqlRelationalTableModel* QSqlRelationalTableModel_new2(QObject* parent);
-QSqlRelationalTableModel* QSqlRelationalTableModel_new3(QObject* parent, const QSqlDatabase* db);
+QSqlRelationalTableModel* QSqlRelationalTableModel_New();
+QSqlRelationalTableModel* QSqlRelationalTableModel_New2(QObject* parent);
+QSqlRelationalTableModel* QSqlRelationalTableModel_New3(QObject* parent, const QSqlDatabase* db);
 QMetaObject* QSqlRelationalTableModel_MetaObject(const QSqlRelationalTableModel* self);
 void* QSqlRelationalTableModel_Metacast(QSqlRelationalTableModel* self, const char* param1);
 int QSqlRelationalTableModel_Metacall(QSqlRelationalTableModel* self, int param1, int param2, void** param3);

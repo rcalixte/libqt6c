@@ -16,7 +16,7 @@
 #include "libqgeoareamonitorsource.hpp"
 #include "libqgeoareamonitorsource.hxx"
 
-QGeoAreaMonitorSource* QGeoAreaMonitorSource_new(QObject* parent) {
+QGeoAreaMonitorSource* QGeoAreaMonitorSource_New(QObject* parent) {
     return new VirtualQGeoAreaMonitorSource(parent);
 }
 

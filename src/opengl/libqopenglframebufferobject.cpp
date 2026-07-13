@@ -8,51 +8,51 @@
 #include "libqopenglframebufferobject.hpp"
 #include "libqopenglframebufferobject.hxx"
 
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new(const QSize* size) {
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New(const QSize* size) {
     return new QOpenGLFramebufferObject(*size);
 }
 
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new2(int width, int height) {
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New2(int width, int height) {
     return new QOpenGLFramebufferObject(static_cast<int>(width), static_cast<int>(height));
 }
 
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new3(const QSize* size, int attachment) {
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New3(const QSize* size, int attachment) {
     return new QOpenGLFramebufferObject(*size, static_cast<QOpenGLFramebufferObject::Attachment>(attachment));
 }
 
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new4(int width, int height, int attachment) {
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New4(int width, int height, int attachment) {
     return new QOpenGLFramebufferObject(static_cast<int>(width), static_cast<int>(height), static_cast<QOpenGLFramebufferObject::Attachment>(attachment));
 }
 
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new5(const QSize* size, const QOpenGLFramebufferObjectFormat* format) {
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New5(const QSize* size, const QOpenGLFramebufferObjectFormat* format) {
     return new QOpenGLFramebufferObject(*size, *format);
 }
 
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new6(int width, int height, const QOpenGLFramebufferObjectFormat* format) {
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New6(int width, int height, const QOpenGLFramebufferObjectFormat* format) {
     return new QOpenGLFramebufferObject(static_cast<int>(width), static_cast<int>(height), *format);
 }
 
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new7(const QSize* size, uint32_t target) {
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New7(const QSize* size, uint32_t target) {
     return new QOpenGLFramebufferObject(*size, static_cast<GLenum>(target));
 }
 
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new8(int width, int height, uint32_t target) {
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New8(int width, int height, uint32_t target) {
     return new QOpenGLFramebufferObject(static_cast<int>(width), static_cast<int>(height), static_cast<GLenum>(target));
 }
 
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new9(const QSize* size, int attachment, uint32_t target) {
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New9(const QSize* size, int attachment, uint32_t target) {
     return new QOpenGLFramebufferObject(*size, static_cast<QOpenGLFramebufferObject::Attachment>(attachment), static_cast<GLenum>(target));
 }
 
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new10(const QSize* size, int attachment, uint32_t target, uint32_t internalFormat) {
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New10(const QSize* size, int attachment, uint32_t target, uint32_t internalFormat) {
     return new QOpenGLFramebufferObject(*size, static_cast<QOpenGLFramebufferObject::Attachment>(attachment), static_cast<GLenum>(target), static_cast<GLenum>(internalFormat));
 }
 
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new11(int width, int height, int attachment, uint32_t target) {
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New11(int width, int height, int attachment, uint32_t target) {
     return new QOpenGLFramebufferObject(static_cast<int>(width), static_cast<int>(height), static_cast<QOpenGLFramebufferObject::Attachment>(attachment), static_cast<GLenum>(target));
 }
 
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new12(int width, int height, int attachment, uint32_t target, uint32_t internalFormat) {
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New12(int width, int height, int attachment, uint32_t target, uint32_t internalFormat) {
     return new QOpenGLFramebufferObject(static_cast<int>(width), static_cast<int>(height), static_cast<QOpenGLFramebufferObject::Attachment>(attachment), static_cast<GLenum>(target), static_cast<GLenum>(internalFormat));
 }
 
@@ -214,11 +214,11 @@ void QOpenGLFramebufferObject_Delete(QOpenGLFramebufferObject* self) {
     delete self;
 }
 
-QOpenGLFramebufferObjectFormat* QOpenGLFramebufferObjectFormat_new() {
+QOpenGLFramebufferObjectFormat* QOpenGLFramebufferObjectFormat_New() {
     return new QOpenGLFramebufferObjectFormat();
 }
 
-QOpenGLFramebufferObjectFormat* QOpenGLFramebufferObjectFormat_new2(const QOpenGLFramebufferObjectFormat* other) {
+QOpenGLFramebufferObjectFormat* QOpenGLFramebufferObjectFormat_New2(const QOpenGLFramebufferObjectFormat* other) {
     return new QOpenGLFramebufferObjectFormat(*other);
 }
 

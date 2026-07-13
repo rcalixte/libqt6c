@@ -47,12 +47,12 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-Accounts__Manager* Accounts__Manager_new();
-Accounts__Manager* Accounts__Manager_new2(const libqt_string serviceType);
-Accounts__Manager* Accounts__Manager_new3(int options);
-Accounts__Manager* Accounts__Manager_new4(QObject* parent);
-Accounts__Manager* Accounts__Manager_new5(const libqt_string serviceType, QObject* parent);
-Accounts__Manager* Accounts__Manager_new6(int options, QObject* parent);
+Accounts__Manager* Accounts__Manager_New();
+Accounts__Manager* Accounts__Manager_New2(const libqt_string serviceType);
+Accounts__Manager* Accounts__Manager_New3(int options);
+Accounts__Manager* Accounts__Manager_New4(QObject* parent);
+Accounts__Manager* Accounts__Manager_New5(const libqt_string serviceType, QObject* parent);
+Accounts__Manager* Accounts__Manager_New6(int options, QObject* parent);
 QMetaObject* Accounts__Manager_MetaObject(const Accounts__Manager* self);
 void* Accounts__Manager_Metacast(Accounts__Manager* self, const char* param1);
 int Accounts__Manager_Metacall(Accounts__Manager* self, int param1, int param2, void** param3);

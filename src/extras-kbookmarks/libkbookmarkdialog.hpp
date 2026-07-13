@@ -59,8 +59,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KBookmarkDialog* KBookmarkDialog_new(KBookmarkManager* manager);
-KBookmarkDialog* KBookmarkDialog_new2(KBookmarkManager* manager, QWidget* parent);
+KBookmarkDialog* KBookmarkDialog_New(KBookmarkManager* manager);
+KBookmarkDialog* KBookmarkDialog_New2(KBookmarkManager* manager, QWidget* parent);
 QMetaObject* KBookmarkDialog_MetaObject(const KBookmarkDialog* self);
 void* KBookmarkDialog_Metacast(KBookmarkDialog* self, const char* param1);
 int KBookmarkDialog_Metacall(KBookmarkDialog* self, int param1, int param2, void** param3);

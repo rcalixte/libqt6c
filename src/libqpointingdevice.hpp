@@ -28,10 +28,10 @@ typedef struct QPointingDeviceUniqueId QPointingDeviceUniqueId;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QPointingDeviceUniqueId* QPointingDeviceUniqueId_new(const QPointingDeviceUniqueId* other);
-QPointingDeviceUniqueId* QPointingDeviceUniqueId_new2(QPointingDeviceUniqueId* other);
-QPointingDeviceUniqueId* QPointingDeviceUniqueId_new3();
-QPointingDeviceUniqueId* QPointingDeviceUniqueId_new4(const QPointingDeviceUniqueId* param1);
+QPointingDeviceUniqueId* QPointingDeviceUniqueId_New(const QPointingDeviceUniqueId* other);
+QPointingDeviceUniqueId* QPointingDeviceUniqueId_New2(QPointingDeviceUniqueId* other);
+QPointingDeviceUniqueId* QPointingDeviceUniqueId_New3();
+QPointingDeviceUniqueId* QPointingDeviceUniqueId_New4(const QPointingDeviceUniqueId* param1);
 void QPointingDeviceUniqueId_CopyAssign(QPointingDeviceUniqueId* self, QPointingDeviceUniqueId* other);
 void QPointingDeviceUniqueId_MoveAssign(QPointingDeviceUniqueId* self, QPointingDeviceUniqueId* other);
 QPointingDeviceUniqueId* QPointingDeviceUniqueId_FromNumericId(long long id);
@@ -39,12 +39,12 @@ bool QPointingDeviceUniqueId_IsValid(const QPointingDeviceUniqueId* self);
 long long QPointingDeviceUniqueId_NumericId(const QPointingDeviceUniqueId* self);
 void QPointingDeviceUniqueId_Delete(QPointingDeviceUniqueId* self);
 
-QPointingDevice* QPointingDevice_new();
-QPointingDevice* QPointingDevice_new2(const libqt_string name, long long systemId, int devType, int pType, int caps, int maxPoints, int buttonCount);
-QPointingDevice* QPointingDevice_new3(QObject* parent);
-QPointingDevice* QPointingDevice_new4(const libqt_string name, long long systemId, int devType, int pType, int caps, int maxPoints, int buttonCount, const libqt_string seatName);
-QPointingDevice* QPointingDevice_new5(const libqt_string name, long long systemId, int devType, int pType, int caps, int maxPoints, int buttonCount, const libqt_string seatName, QPointingDeviceUniqueId* uniqueId);
-QPointingDevice* QPointingDevice_new6(const libqt_string name, long long systemId, int devType, int pType, int caps, int maxPoints, int buttonCount, const libqt_string seatName, QPointingDeviceUniqueId* uniqueId, QObject* parent);
+QPointingDevice* QPointingDevice_New();
+QPointingDevice* QPointingDevice_New2(const libqt_string name, long long systemId, int devType, int pType, int caps, int maxPoints, int buttonCount);
+QPointingDevice* QPointingDevice_New3(QObject* parent);
+QPointingDevice* QPointingDevice_New4(const libqt_string name, long long systemId, int devType, int pType, int caps, int maxPoints, int buttonCount, const libqt_string seatName);
+QPointingDevice* QPointingDevice_New5(const libqt_string name, long long systemId, int devType, int pType, int caps, int maxPoints, int buttonCount, const libqt_string seatName, QPointingDeviceUniqueId* uniqueId);
+QPointingDevice* QPointingDevice_New6(const libqt_string name, long long systemId, int devType, int pType, int caps, int maxPoints, int buttonCount, const libqt_string seatName, QPointingDeviceUniqueId* uniqueId, QObject* parent);
 QMetaObject* QPointingDevice_MetaObject(const QPointingDevice* self);
 void* QPointingDevice_Metacast(QPointingDevice* self, const char* param1);
 int QPointingDevice_Metacall(QPointingDevice* self, int param1, int param2, void** param3);

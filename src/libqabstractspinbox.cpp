@@ -39,11 +39,11 @@
 #include "libqabstractspinbox.hpp"
 #include "libqabstractspinbox.hxx"
 
-QAbstractSpinBox* QAbstractSpinBox_new(QWidget* parent) {
+QAbstractSpinBox* QAbstractSpinBox_New(QWidget* parent) {
     return new VirtualQAbstractSpinBox(parent);
 }
 
-QAbstractSpinBox* QAbstractSpinBox_new2() {
+QAbstractSpinBox* QAbstractSpinBox_New2() {
     return new VirtualQAbstractSpinBox();
 }
 

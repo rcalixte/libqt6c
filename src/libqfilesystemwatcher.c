@@ -6,7 +6,7 @@
 #include "libqfilesystemwatcher.h"
 
 QFileSystemWatcher* q_filesystemwatcher_new() {
-    return QFileSystemWatcher_new();
+    return QFileSystemWatcher_New();
 }
 
 QFileSystemWatcher* q_filesystemwatcher_new2(const char* paths[static 1]) {
@@ -21,13 +21,13 @@ QFileSystemWatcher* q_filesystemwatcher_new2(const char* paths[static 1]) {
     }
     libqt_list paths_list = qlist(paths_qstr, paths_len);
 
-    QFileSystemWatcher* _out = QFileSystemWatcher_new2(paths_list);
+    QFileSystemWatcher* _out = QFileSystemWatcher_New2(paths_list);
     free(paths_qstr);
     return _out;
 }
 
 QFileSystemWatcher* q_filesystemwatcher_new3(void* parent) {
-    return QFileSystemWatcher_new3((QObject*)parent);
+    return QFileSystemWatcher_New3((QObject*)parent);
 }
 
 QFileSystemWatcher* q_filesystemwatcher_new4(const char* paths[static 1], void* parent) {
@@ -42,7 +42,7 @@ QFileSystemWatcher* q_filesystemwatcher_new4(const char* paths[static 1], void* 
     }
     libqt_list paths_list = qlist(paths_qstr, paths_len);
 
-    QFileSystemWatcher* _out = QFileSystemWatcher_new4(paths_list, (QObject*)parent);
+    QFileSystemWatcher* _out = QFileSystemWatcher_New4(paths_list, (QObject*)parent);
     free(paths_qstr);
     return _out;
 }

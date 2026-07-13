@@ -4,11 +4,11 @@
 #include "libachievement.h"
 
 Attica__Achievement* k_attica__achievement_new() {
-    return Attica__Achievement_new();
+    return Attica__Achievement_New();
 }
 
 Attica__Achievement* k_attica__achievement_new2(void* other) {
-    return Attica__Achievement_new2((Attica__Achievement*)other);
+    return Attica__Achievement_New2((Attica__Achievement*)other);
 }
 
 int32_t k_attica__achievement_string_to_achievement_type(const char* achievementTypeString) {

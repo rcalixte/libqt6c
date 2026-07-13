@@ -15,7 +15,7 @@
 #include "libkpreviewwidgetbase.h"
 
 KPreviewWidgetBase* k_previewwidgetbase_new(void* parent) {
-    return KPreviewWidgetBase_new((QWidget*)parent);
+    return KPreviewWidgetBase_New((QWidget*)parent);
 }
 
 const QMetaObject* k_previewwidgetbase_meta_object(void* self) {

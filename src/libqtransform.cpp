@@ -12,31 +12,31 @@
 #include "libqtransform.hpp"
 #include "libqtransform.hxx"
 
-QTransform* QTransform_new(const QTransform* other) {
+QTransform* QTransform_New(const QTransform* other) {
     return new QTransform(*other);
 }
 
-QTransform* QTransform_new2(QTransform* other) {
+QTransform* QTransform_New2(QTransform* other) {
     return new QTransform(std::move(*other));
 }
 
-QTransform* QTransform_new3(int param1) {
+QTransform* QTransform_New3(int param1) {
     return new QTransform(static_cast<Qt::Initialization>(param1));
 }
 
-QTransform* QTransform_new4() {
+QTransform* QTransform_New4() {
     return new QTransform();
 }
 
-QTransform* QTransform_new5(double h11, double h12, double h13, double h21, double h22, double h23, double h31, double h32, double h33) {
+QTransform* QTransform_New5(double h11, double h12, double h13, double h21, double h22, double h23, double h31, double h32, double h33) {
     return new QTransform(static_cast<qreal>(h11), static_cast<qreal>(h12), static_cast<qreal>(h13), static_cast<qreal>(h21), static_cast<qreal>(h22), static_cast<qreal>(h23), static_cast<qreal>(h31), static_cast<qreal>(h32), static_cast<qreal>(h33));
 }
 
-QTransform* QTransform_new6(double h11, double h12, double h21, double h22, double dx, double dy) {
+QTransform* QTransform_New6(double h11, double h12, double h21, double h22, double dx, double dy) {
     return new QTransform(static_cast<qreal>(h11), static_cast<qreal>(h12), static_cast<qreal>(h21), static_cast<qreal>(h22), static_cast<qreal>(dx), static_cast<qreal>(dy));
 }
 
-QTransform* QTransform_new7(const QTransform* other) {
+QTransform* QTransform_New7(const QTransform* other) {
     return new QTransform(*other);
 }
 

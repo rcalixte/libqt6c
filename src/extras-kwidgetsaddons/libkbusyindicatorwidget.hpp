@@ -50,8 +50,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KBusyIndicatorWidget* KBusyIndicatorWidget_new(QWidget* parent);
-KBusyIndicatorWidget* KBusyIndicatorWidget_new2();
+KBusyIndicatorWidget* KBusyIndicatorWidget_New(QWidget* parent);
+KBusyIndicatorWidget* KBusyIndicatorWidget_New2();
 QMetaObject* KBusyIndicatorWidget_MetaObject(const KBusyIndicatorWidget* self);
 void* KBusyIndicatorWidget_Metacast(KBusyIndicatorWidget* self, const char* param1);
 int KBusyIndicatorWidget_Metacall(KBusyIndicatorWidget* self, int param1, int param2, void** param3);

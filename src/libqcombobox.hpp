@@ -59,8 +59,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QComboBox* QComboBox_new(QWidget* parent);
-QComboBox* QComboBox_new2();
+QComboBox* QComboBox_New(QWidget* parent);
+QComboBox* QComboBox_New2();
 QMetaObject* QComboBox_MetaObject(const QComboBox* self);
 void* QComboBox_Metacast(QComboBox* self, const char* param1);
 int QComboBox_Metacall(QComboBox* self, int param1, int param2, void** param3);

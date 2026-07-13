@@ -2,19 +2,19 @@
 #include "libqtyperevision.h"
 
 QTypeRevision* q_typerevision_new(void* other) {
-    return QTypeRevision_new((QTypeRevision*)other);
+    return QTypeRevision_New((QTypeRevision*)other);
 }
 
 QTypeRevision* q_typerevision_new2(void* other) {
-    return QTypeRevision_new2((QTypeRevision*)other);
+    return QTypeRevision_New2((QTypeRevision*)other);
 }
 
 QTypeRevision* q_typerevision_new3() {
-    return QTypeRevision_new3();
+    return QTypeRevision_New3();
 }
 
 QTypeRevision* q_typerevision_new4(void* param1) {
-    return QTypeRevision_new4((QTypeRevision*)param1);
+    return QTypeRevision_New4((QTypeRevision*)param1);
 }
 
 void q_typerevision_copy_assign(void* self, void* other) {

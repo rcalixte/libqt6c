@@ -24,11 +24,11 @@
 #include "libkextracolumnsproxymodel.hpp"
 #include "libkextracolumnsproxymodel.hxx"
 
-KExtraColumnsProxyModel* KExtraColumnsProxyModel_new() {
+KExtraColumnsProxyModel* KExtraColumnsProxyModel_New() {
     return new VirtualKExtraColumnsProxyModel();
 }
 
-KExtraColumnsProxyModel* KExtraColumnsProxyModel_new2(QObject* parent) {
+KExtraColumnsProxyModel* KExtraColumnsProxyModel_New2(QObject* parent) {
     return new VirtualKExtraColumnsProxyModel(parent);
 }
 

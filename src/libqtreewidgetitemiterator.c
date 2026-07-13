@@ -3,23 +3,23 @@
 #include "libqtreewidgetitemiterator.h"
 
 QTreeWidgetItemIterator* q_treewidgetitemiterator_new(void* it) {
-    return QTreeWidgetItemIterator_new((QTreeWidgetItemIterator*)it);
+    return QTreeWidgetItemIterator_New((QTreeWidgetItemIterator*)it);
 }
 
 QTreeWidgetItemIterator* q_treewidgetitemiterator_new2(void* widget) {
-    return QTreeWidgetItemIterator_new2((QTreeWidget*)widget);
+    return QTreeWidgetItemIterator_New2((QTreeWidget*)widget);
 }
 
 QTreeWidgetItemIterator* q_treewidgetitemiterator_new3(void* item) {
-    return QTreeWidgetItemIterator_new3((QTreeWidgetItem*)item);
+    return QTreeWidgetItemIterator_New3((QTreeWidgetItem*)item);
 }
 
 QTreeWidgetItemIterator* q_treewidgetitemiterator_new4(void* widget, int32_t flags) {
-    return QTreeWidgetItemIterator_new4((QTreeWidget*)widget, flags);
+    return QTreeWidgetItemIterator_New4((QTreeWidget*)widget, flags);
 }
 
 QTreeWidgetItemIterator* q_treewidgetitemiterator_new5(void* item, int32_t flags) {
-    return QTreeWidgetItemIterator_new5((QTreeWidgetItem*)item, flags);
+    return QTreeWidgetItemIterator_New5((QTreeWidgetItem*)item, flags);
 }
 
 void q_treewidgetitemiterator_operator_assign(void* self, void* it) {

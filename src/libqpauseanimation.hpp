@@ -25,10 +25,10 @@ typedef struct QPauseAnimation QPauseAnimation;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QPauseAnimation* QPauseAnimation_new();
-QPauseAnimation* QPauseAnimation_new2(int msecs);
-QPauseAnimation* QPauseAnimation_new3(QObject* parent);
-QPauseAnimation* QPauseAnimation_new4(int msecs, QObject* parent);
+QPauseAnimation* QPauseAnimation_New();
+QPauseAnimation* QPauseAnimation_New2(int msecs);
+QPauseAnimation* QPauseAnimation_New3(QObject* parent);
+QPauseAnimation* QPauseAnimation_New4(int msecs, QObject* parent);
 QMetaObject* QPauseAnimation_MetaObject(const QPauseAnimation* self);
 void* QPauseAnimation_Metacast(QPauseAnimation* self, const char* param1);
 int QPauseAnimation_Metacall(QPauseAnimation* self, int param1, int param2, void** param3);

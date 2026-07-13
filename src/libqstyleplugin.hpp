@@ -25,8 +25,8 @@ typedef struct QStylePlugin QStylePlugin;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QStylePlugin* QStylePlugin_new();
-QStylePlugin* QStylePlugin_new2(QObject* parent);
+QStylePlugin* QStylePlugin_New();
+QStylePlugin* QStylePlugin_New2(QObject* parent);
 QMetaObject* QStylePlugin_MetaObject(const QStylePlugin* self);
 void* QStylePlugin_Metacast(QStylePlugin* self, const char* param1);
 int QStylePlugin_Metacall(QStylePlugin* self, int param1, int param2, void** param3);

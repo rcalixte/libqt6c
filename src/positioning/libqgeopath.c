@@ -5,23 +5,23 @@
 #include "libqgeopath.h"
 
 QGeoPath* q_geopath_new() {
-    return QGeoPath_new();
+    return QGeoPath_New();
 }
 
 QGeoPath* q_geopath_new2(libqt_list /* of QGeoCoordinate* */ path) {
-    return QGeoPath_new2(path);
+    return QGeoPath_New2(path);
 }
 
 QGeoPath* q_geopath_new3(void* other) {
-    return QGeoPath_new3((QGeoPath*)other);
+    return QGeoPath_New3((QGeoPath*)other);
 }
 
 QGeoPath* q_geopath_new4(void* other) {
-    return QGeoPath_new4((QGeoShape*)other);
+    return QGeoPath_New4((QGeoShape*)other);
 }
 
 QGeoPath* q_geopath_new5(libqt_list /* of QGeoCoordinate* */ path, double* width) {
-    return QGeoPath_new5(path, width);
+    return QGeoPath_New5(path, width);
 }
 
 void q_geopath_operator_assign(void* self, void* other) {

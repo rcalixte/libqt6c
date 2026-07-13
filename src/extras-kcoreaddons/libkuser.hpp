@@ -20,12 +20,12 @@ typedef struct KUserGroup KUserGroup;
 typedef struct QVariant QVariant;
 #endif
 
-KUser* KUser_new();
-KUser* KUser_new2(uid_t uid);
-KUser* KUser_new3(const libqt_string name);
-KUser* KUser_new4(const char* name);
-KUser* KUser_new5(const KUser* user);
-KUser* KUser_new6(int mode);
+KUser* KUser_New();
+KUser* KUser_New2(uid_t uid);
+KUser* KUser_New3(const libqt_string name);
+KUser* KUser_New4(const char* name);
+KUser* KUser_New5(const KUser* user);
+KUser* KUser_New6(int mode);
 void KUser_OperatorAssign(KUser* self, const KUser* user);
 bool KUser_OperatorEqual(const KUser* self, const KUser* user);
 bool KUser_OperatorNotEqual(const KUser* self, const KUser* user);
@@ -46,12 +46,12 @@ libqt_list /* of KUser* */ KUser_AllUsers1(unsigned int maxCount);
 libqt_list /* of libqt_string */ KUser_AllUserNames1(unsigned int maxCount);
 void KUser_Delete(KUser* self);
 
-KUserGroup* KUserGroup_new(const libqt_string name);
-KUserGroup* KUserGroup_new2(const char* name);
-KUserGroup* KUserGroup_new3();
-KUserGroup* KUserGroup_new4(gid_t gid);
-KUserGroup* KUserGroup_new5(const KUserGroup* group);
-KUserGroup* KUserGroup_new6(int mode);
+KUserGroup* KUserGroup_New(const libqt_string name);
+KUserGroup* KUserGroup_New2(const char* name);
+KUserGroup* KUserGroup_New3();
+KUserGroup* KUserGroup_New4(gid_t gid);
+KUserGroup* KUserGroup_New5(const KUserGroup* group);
+KUserGroup* KUserGroup_New6(int mode);
 void KUserGroup_OperatorAssign(KUserGroup* self, const KUserGroup* group);
 bool KUserGroup_OperatorEqual(const KUserGroup* self, const KUserGroup* group);
 bool KUserGroup_OperatorNotEqual(const KUserGroup* self, const KUserGroup* group);

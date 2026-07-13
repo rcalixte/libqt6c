@@ -24,11 +24,11 @@
 #include "libqheaderview.h"
 
 QHeaderView* q_headerview_new(int32_t orientation) {
-    return QHeaderView_new(orientation);
+    return QHeaderView_New(orientation);
 }
 
 QHeaderView* q_headerview_new2(int32_t orientation, void* parent) {
-    return QHeaderView_new2(orientation, (QWidget*)parent);
+    return QHeaderView_New2(orientation, (QWidget*)parent);
 }
 
 const QMetaObject* q_headerview_meta_object(void* self) {

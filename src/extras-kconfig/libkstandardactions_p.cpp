@@ -7,19 +7,19 @@
 #include "libkstandardactions_p.hpp"
 #include "libkstandardactions_p.hxx"
 
-KStandardActions__RawStringData* KStandardActions__RawStringData_new(const KStandardActions__RawStringData* other) {
+KStandardActions__RawStringData* KStandardActions__RawStringData_New(const KStandardActions__RawStringData* other) {
     return new KStandardActions::RawStringData(*other);
 }
 
-KStandardActions__RawStringData* KStandardActions__RawStringData_new2(KStandardActions__RawStringData* other) {
+KStandardActions__RawStringData* KStandardActions__RawStringData_New2(KStandardActions__RawStringData* other) {
     return new KStandardActions::RawStringData(std::move(*other));
 }
 
-KStandardActions__RawStringData* KStandardActions__RawStringData_new3() {
+KStandardActions__RawStringData* KStandardActions__RawStringData_New3() {
     return new KStandardActions::RawStringData();
 }
 
-KStandardActions__RawStringData* KStandardActions__RawStringData_new4(const KStandardActions__RawStringData* param1) {
+KStandardActions__RawStringData* KStandardActions__RawStringData_New4(const KStandardActions__RawStringData* param1) {
     return new KStandardActions::RawStringData(*param1);
 }
 
@@ -39,7 +39,7 @@ void KStandardActions__RawStringData_Delete(KStandardActions__RawStringData* sel
     delete self;
 }
 
-KStandardActions__KStandardActionsInfo* KStandardActions__KStandardActionsInfo_new(const KStandardActions__KStandardActionsInfo* param1) {
+KStandardActions__KStandardActionsInfo* KStandardActions__KStandardActionsInfo_New(const KStandardActions__KStandardActionsInfo* param1) {
     return new KStandardActions::KStandardActionsInfo(*param1);
 }
 

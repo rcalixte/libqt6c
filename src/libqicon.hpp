@@ -25,11 +25,11 @@ typedef struct QVariant QVariant;
 typedef struct QWindow QWindow;
 #endif
 
-QIcon* QIcon_new();
-QIcon* QIcon_new2(const QPixmap* pixmap);
-QIcon* QIcon_new3(const QIcon* other);
-QIcon* QIcon_new4(const libqt_string fileName);
-QIcon* QIcon_new5(QIconEngine* engine);
+QIcon* QIcon_New();
+QIcon* QIcon_New2(const QPixmap* pixmap);
+QIcon* QIcon_New3(const QIcon* other);
+QIcon* QIcon_New4(const libqt_string fileName);
+QIcon* QIcon_New5(QIconEngine* engine);
 void QIcon_OperatorAssign(QIcon* self, const QIcon* other);
 void QIcon_Swap(QIcon* self, QIcon* other);
 QVariant* QIcon_ToQVariant(const QIcon* self);

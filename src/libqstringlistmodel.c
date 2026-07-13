@@ -11,7 +11,7 @@
 #include "libqstringlistmodel.h"
 
 QStringListModel* q_stringlistmodel_new() {
-    return QStringListModel_new();
+    return QStringListModel_New();
 }
 
 QStringListModel* q_stringlistmodel_new2(const char* strings[static 1]) {
@@ -26,13 +26,13 @@ QStringListModel* q_stringlistmodel_new2(const char* strings[static 1]) {
     }
     libqt_list strings_list = qlist(strings_qstr, strings_len);
 
-    QStringListModel* _out = QStringListModel_new2(strings_list);
+    QStringListModel* _out = QStringListModel_New2(strings_list);
     free(strings_qstr);
     return _out;
 }
 
 QStringListModel* q_stringlistmodel_new3(void* parent) {
-    return QStringListModel_new3((QObject*)parent);
+    return QStringListModel_New3((QObject*)parent);
 }
 
 QStringListModel* q_stringlistmodel_new4(const char* strings[static 1], void* parent) {
@@ -47,7 +47,7 @@ QStringListModel* q_stringlistmodel_new4(const char* strings[static 1], void* pa
     }
     libqt_list strings_list = qlist(strings_qstr, strings_len);
 
-    QStringListModel* _out = QStringListModel_new4(strings_list, (QObject*)parent);
+    QStringListModel* _out = QStringListModel_New4(strings_list, (QObject*)parent);
     free(strings_qstr);
     return _out;
 }

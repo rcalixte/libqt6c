@@ -4,7 +4,7 @@
 #include "libautocorrection.h"
 
 TextAutoCorrectionCore__AutoCorrection* k_textautocorrectioncore__autocorrection_new() {
-    return TextAutoCorrectionCore__AutoCorrection_new();
+    return TextAutoCorrectionCore__AutoCorrection_New();
 }
 
 void k_textautocorrectioncore__autocorrection_write_config(void* self) {

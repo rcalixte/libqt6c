@@ -10,7 +10,7 @@
 #include "libinlinenoteprovider.h"
 
 KTextEditor__InlineNoteProvider* k_texteditor__inlinenoteprovider_new() {
-    return KTextEditor__InlineNoteProvider_new();
+    return KTextEditor__InlineNoteProvider_New();
 }
 
 const QMetaObject* k_texteditor__inlinenoteprovider_meta_object(void* self) {

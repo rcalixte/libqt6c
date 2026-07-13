@@ -2,23 +2,23 @@
 #include "libqmargins.h"
 
 QMargins* q_margins_new(void* other) {
-    return QMargins_new((QMargins*)other);
+    return QMargins_New((QMargins*)other);
 }
 
 QMargins* q_margins_new2(void* other) {
-    return QMargins_new2((QMargins*)other);
+    return QMargins_New2((QMargins*)other);
 }
 
 QMargins* q_margins_new3() {
-    return QMargins_new3();
+    return QMargins_New3();
 }
 
 QMargins* q_margins_new4(int left, int top, int right, int bottom) {
-    return QMargins_new4(left, top, right, bottom);
+    return QMargins_New4(left, top, right, bottom);
 }
 
 QMargins* q_margins_new5(void* param1) {
-    return QMargins_new5((QMargins*)param1);
+    return QMargins_New5((QMargins*)param1);
 }
 
 void q_margins_copy_assign(void* self, void* other) {
@@ -106,27 +106,27 @@ void q_margins_delete(void* self) {
 }
 
 QMarginsF* q_marginsf_new(void* other) {
-    return QMarginsF_new((QMarginsF*)other);
+    return QMarginsF_New((QMarginsF*)other);
 }
 
 QMarginsF* q_marginsf_new2(void* other) {
-    return QMarginsF_new2((QMarginsF*)other);
+    return QMarginsF_New2((QMarginsF*)other);
 }
 
 QMarginsF* q_marginsf_new3() {
-    return QMarginsF_new3();
+    return QMarginsF_New3();
 }
 
 QMarginsF* q_marginsf_new4(double left, double top, double right, double bottom) {
-    return QMarginsF_new4(left, top, right, bottom);
+    return QMarginsF_New4(left, top, right, bottom);
 }
 
 QMarginsF* q_marginsf_new5(void* margins) {
-    return QMarginsF_new5((QMargins*)margins);
+    return QMarginsF_New5((QMargins*)margins);
 }
 
 QMarginsF* q_marginsf_new6(void* param1) {
-    return QMarginsF_new6((QMarginsF*)param1);
+    return QMarginsF_New6((QMarginsF*)param1);
 }
 
 void q_marginsf_copy_assign(void* self, void* other) {

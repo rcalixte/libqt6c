@@ -19,7 +19,7 @@ typedef struct QUrl QUrl;
 typedef struct QWebEngineFileSystemAccessRequest QWebEngineFileSystemAccessRequest;
 #endif
 
-QWebEngineFileSystemAccessRequest* QWebEngineFileSystemAccessRequest_new(const QWebEngineFileSystemAccessRequest* other);
+QWebEngineFileSystemAccessRequest* QWebEngineFileSystemAccessRequest_New(const QWebEngineFileSystemAccessRequest* other);
 void QWebEngineFileSystemAccessRequest_OperatorAssign(QWebEngineFileSystemAccessRequest* self, const QWebEngineFileSystemAccessRequest* other);
 void QWebEngineFileSystemAccessRequest_Swap(QWebEngineFileSystemAccessRequest* self, QWebEngineFileSystemAccessRequest* other);
 void QWebEngineFileSystemAccessRequest_Accept(QWebEngineFileSystemAccessRequest* self);

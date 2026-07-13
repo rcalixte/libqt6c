@@ -9,11 +9,11 @@
 #include "libqarealegendmarker.h"
 
 QAreaLegendMarker* q_arealegendmarker_new(void* series, void* legend) {
-    return QAreaLegendMarker_new((QAreaSeries*)series, (QLegend*)legend);
+    return QAreaLegendMarker_New((QAreaSeries*)series, (QLegend*)legend);
 }
 
 QAreaLegendMarker* q_arealegendmarker_new2(void* series, void* legend, void* parent) {
-    return QAreaLegendMarker_new2((QAreaSeries*)series, (QLegend*)legend, (QObject*)parent);
+    return QAreaLegendMarker_New2((QAreaSeries*)series, (QLegend*)legend, (QObject*)parent);
 }
 
 const QMetaObject* q_arealegendmarker_meta_object(void* self) {

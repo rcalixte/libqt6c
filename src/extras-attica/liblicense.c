@@ -3,11 +3,11 @@
 #include "liblicense.h"
 
 Attica__License* k_attica__license_new() {
-    return Attica__License_new();
+    return Attica__License_New();
 }
 
 Attica__License* k_attica__license_new2(void* other) {
-    return Attica__License_new2((Attica__License*)other);
+    return Attica__License_New2((Attica__License*)other);
 }
 
 void k_attica__license_operator_assign(void* self, void* other) {

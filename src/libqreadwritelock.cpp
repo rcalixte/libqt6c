@@ -6,11 +6,11 @@
 #include "libqreadwritelock.hpp"
 #include "libqreadwritelock.hxx"
 
-QReadWriteLock* QReadWriteLock_new() {
+QReadWriteLock* QReadWriteLock_New() {
     return new QReadWriteLock();
 }
 
-QReadWriteLock* QReadWriteLock_new2(int recursionMode) {
+QReadWriteLock* QReadWriteLock_New2(int recursionMode) {
     return new QReadWriteLock(static_cast<QReadWriteLock::RecursionMode>(recursionMode));
 }
 
@@ -54,7 +54,7 @@ void QReadWriteLock_Delete(QReadWriteLock* self) {
     delete self;
 }
 
-QReadLocker* QReadLocker_new(QReadWriteLock* readWriteLock) {
+QReadLocker* QReadLocker_New(QReadWriteLock* readWriteLock) {
     return new QReadLocker(readWriteLock);
 }
 
@@ -74,7 +74,7 @@ void QReadLocker_Delete(QReadLocker* self) {
     delete self;
 }
 
-QWriteLocker* QWriteLocker_new(QReadWriteLock* readWriteLock) {
+QWriteLocker* QWriteLocker_New(QReadWriteLock* readWriteLock) {
     return new QWriteLocker(readWriteLock);
 }
 

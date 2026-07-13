@@ -8,7 +8,7 @@
 #include "libcommandlauncherjob.h"
 
 KIO__CommandLauncherJob* k_io__commandlauncherjob_new(const char* command) {
-    return KIO__CommandLauncherJob_new(qstring(command));
+    return KIO__CommandLauncherJob_New(qstring(command));
 }
 
 KIO__CommandLauncherJob* k_io__commandlauncherjob_new2(const char* executable, const char* args[static 1]) {
@@ -23,13 +23,13 @@ KIO__CommandLauncherJob* k_io__commandlauncherjob_new2(const char* executable, c
     }
     libqt_list args_list = qlist(args_qstr, args_len);
 
-    KIO__CommandLauncherJob* _out = KIO__CommandLauncherJob_new2(qstring(executable), args_list);
+    KIO__CommandLauncherJob* _out = KIO__CommandLauncherJob_New2(qstring(executable), args_list);
     free(args_qstr);
     return _out;
 }
 
 KIO__CommandLauncherJob* k_io__commandlauncherjob_new3(const char* command, void* parent) {
-    return KIO__CommandLauncherJob_new3(qstring(command), (QObject*)parent);
+    return KIO__CommandLauncherJob_New3(qstring(command), (QObject*)parent);
 }
 
 KIO__CommandLauncherJob* k_io__commandlauncherjob_new4(const char* executable, const char* args[static 1], void* parent) {
@@ -44,7 +44,7 @@ KIO__CommandLauncherJob* k_io__commandlauncherjob_new4(const char* executable, c
     }
     libqt_list args_list = qlist(args_qstr, args_len);
 
-    KIO__CommandLauncherJob* _out = KIO__CommandLauncherJob_new4(qstring(executable), args_list, (QObject*)parent);
+    KIO__CommandLauncherJob* _out = KIO__CommandLauncherJob_New4(qstring(executable), args_list, (QObject*)parent);
     free(args_qstr);
     return _out;
 }

@@ -6,11 +6,11 @@
 #include "libqgeocodereply.h"
 
 QGeoCodeReply* q_geocodereply_new(int32_t error, const char* errorString) {
-    return QGeoCodeReply_new(error, qstring(errorString));
+    return QGeoCodeReply_New(error, qstring(errorString));
 }
 
 QGeoCodeReply* q_geocodereply_new2(int32_t error, const char* errorString, void* parent) {
-    return QGeoCodeReply_new2(error, qstring(errorString), (QObject*)parent);
+    return QGeoCodeReply_New2(error, qstring(errorString), (QObject*)parent);
 }
 
 const QMetaObject* q_geocodereply_meta_object(void* self) {

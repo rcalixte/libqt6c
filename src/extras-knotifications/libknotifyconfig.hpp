@@ -18,8 +18,8 @@ extern "C" {
 typedef struct KNotifyConfig KNotifyConfig;
 #endif
 
-KNotifyConfig* KNotifyConfig_new(const libqt_string applicationName, const libqt_string eventId);
-KNotifyConfig* KNotifyConfig_new2(const KNotifyConfig* other);
+KNotifyConfig* KNotifyConfig_New(const libqt_string applicationName, const libqt_string eventId);
+KNotifyConfig* KNotifyConfig_New2(const KNotifyConfig* other);
 void KNotifyConfig_OperatorAssign(KNotifyConfig* self, const KNotifyConfig* other);
 libqt_string KNotifyConfig_ApplicationName(const KNotifyConfig* self);
 libqt_string KNotifyConfig_EventId(const KNotifyConfig* self);

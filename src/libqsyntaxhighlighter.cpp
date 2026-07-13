@@ -16,11 +16,11 @@
 #include "libqsyntaxhighlighter.hpp"
 #include "libqsyntaxhighlighter.hxx"
 
-QSyntaxHighlighter* QSyntaxHighlighter_new(QObject* parent) {
+QSyntaxHighlighter* QSyntaxHighlighter_New(QObject* parent) {
     return new VirtualQSyntaxHighlighter(parent);
 }
 
-QSyntaxHighlighter* QSyntaxHighlighter_new2(QTextDocument* parent) {
+QSyntaxHighlighter* QSyntaxHighlighter_New2(QTextDocument* parent) {
     return new VirtualQSyntaxHighlighter(parent);
 }
 

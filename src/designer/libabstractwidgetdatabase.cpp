@@ -15,7 +15,7 @@
 #include "libabstractwidgetdatabase.hpp"
 #include "libabstractwidgetdatabase.hxx"
 
-QDesignerWidgetDataBaseItemInterface* QDesignerWidgetDataBaseItemInterface_new() {
+QDesignerWidgetDataBaseItemInterface* QDesignerWidgetDataBaseItemInterface_New() {
     return new VirtualQDesignerWidgetDataBaseItemInterface();
 }
 
@@ -842,11 +842,11 @@ void QDesignerWidgetDataBaseItemInterface_Delete(QDesignerWidgetDataBaseItemInte
     delete self;
 }
 
-QDesignerWidgetDataBaseInterface* QDesignerWidgetDataBaseInterface_new() {
+QDesignerWidgetDataBaseInterface* QDesignerWidgetDataBaseInterface_New() {
     return new VirtualQDesignerWidgetDataBaseInterface();
 }
 
-QDesignerWidgetDataBaseInterface* QDesignerWidgetDataBaseInterface_new2(QObject* parent) {
+QDesignerWidgetDataBaseInterface* QDesignerWidgetDataBaseInterface_New2(QObject* parent) {
     return new VirtualQDesignerWidgetDataBaseInterface(parent);
 }
 

@@ -3,11 +3,11 @@
 #include "libservice_type.h"
 
 Accounts__ServiceType* q_accounts__servicetype_new() {
-    return Accounts__ServiceType_new();
+    return Accounts__ServiceType_New();
 }
 
 Accounts__ServiceType* q_accounts__servicetype_new2(void* other) {
-    return Accounts__ServiceType_new2((Accounts__ServiceType*)other);
+    return Accounts__ServiceType_New2((Accounts__ServiceType*)other);
 }
 
 void q_accounts__servicetype_operator_assign(void* self, void* other) {

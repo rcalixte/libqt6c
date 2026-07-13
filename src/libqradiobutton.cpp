@@ -39,20 +39,20 @@
 #include "libqradiobutton.hpp"
 #include "libqradiobutton.hxx"
 
-QRadioButton* QRadioButton_new(QWidget* parent) {
+QRadioButton* QRadioButton_New(QWidget* parent) {
     return new VirtualQRadioButton(parent);
 }
 
-QRadioButton* QRadioButton_new2() {
+QRadioButton* QRadioButton_New2() {
     return new VirtualQRadioButton();
 }
 
-QRadioButton* QRadioButton_new3(const libqt_string text) {
+QRadioButton* QRadioButton_New3(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQRadioButton(text_QString);
 }
 
-QRadioButton* QRadioButton_new4(const libqt_string text, QWidget* parent) {
+QRadioButton* QRadioButton_New4(const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQRadioButton(text_QString, parent);
 }

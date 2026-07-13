@@ -53,10 +53,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QSplitter* QSplitter_new(QWidget* parent);
-QSplitter* QSplitter_new2();
-QSplitter* QSplitter_new3(int param1);
-QSplitter* QSplitter_new4(int param1, QWidget* parent);
+QSplitter* QSplitter_New(QWidget* parent);
+QSplitter* QSplitter_New2();
+QSplitter* QSplitter_New3(int param1);
+QSplitter* QSplitter_New4(int param1, QWidget* parent);
 QMetaObject* QSplitter_MetaObject(const QSplitter* self);
 void* QSplitter_Metacast(QSplitter* self, const char* param1);
 int QSplitter_Metacall(QSplitter* self, int param1, int param2, void** param3);
@@ -284,7 +284,7 @@ void QSplitter_OnGetDecodedMetricF(const QSplitter* self, intptr_t slot);
 double QSplitter_SuperGetDecodedMetricF(const QSplitter* self, int metricA, int metricB);
 void QSplitter_Delete(QSplitter* self);
 
-QSplitterHandle* QSplitterHandle_new(int o, QSplitter* parent);
+QSplitterHandle* QSplitterHandle_New(int o, QSplitter* parent);
 QMetaObject* QSplitterHandle_MetaObject(const QSplitterHandle* self);
 void* QSplitterHandle_Metacast(QSplitterHandle* self, const char* param1);
 int QSplitterHandle_Metacall(QSplitterHandle* self, int param1, int param2, void** param3);

@@ -54,8 +54,8 @@ typedef struct QWidget QWidget;
 typedef struct TextGrammarCheck__LanguageToolConfigDialog TextGrammarCheck__LanguageToolConfigDialog;
 #endif
 
-TextGrammarCheck__LanguageToolConfigDialog* TextGrammarCheck__LanguageToolConfigDialog_new(QWidget* parent);
-TextGrammarCheck__LanguageToolConfigDialog* TextGrammarCheck__LanguageToolConfigDialog_new2();
+TextGrammarCheck__LanguageToolConfigDialog* TextGrammarCheck__LanguageToolConfigDialog_New(QWidget* parent);
+TextGrammarCheck__LanguageToolConfigDialog* TextGrammarCheck__LanguageToolConfigDialog_New2();
 QMetaObject* TextGrammarCheck__LanguageToolConfigDialog_MetaObject(const TextGrammarCheck__LanguageToolConfigDialog* self);
 void* TextGrammarCheck__LanguageToolConfigDialog_Metacast(TextGrammarCheck__LanguageToolConfigDialog* self, const char* param1);
 int TextGrammarCheck__LanguageToolConfigDialog_Metacall(TextGrammarCheck__LanguageToolConfigDialog* self, int param1, int param2, void** param3);

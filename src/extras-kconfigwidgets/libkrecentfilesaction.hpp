@@ -32,9 +32,9 @@ typedef struct QWidget QWidget;
 typedef struct QWidgetAction QWidgetAction;
 #endif
 
-KRecentFilesAction* KRecentFilesAction_new(QObject* parent);
-KRecentFilesAction* KRecentFilesAction_new2(const libqt_string text, QObject* parent);
-KRecentFilesAction* KRecentFilesAction_new3(const QIcon* icon, const libqt_string text, QObject* parent);
+KRecentFilesAction* KRecentFilesAction_New(QObject* parent);
+KRecentFilesAction* KRecentFilesAction_New2(const libqt_string text, QObject* parent);
+KRecentFilesAction* KRecentFilesAction_New3(const QIcon* icon, const libqt_string text, QObject* parent);
 QMetaObject* KRecentFilesAction_MetaObject(const KRecentFilesAction* self);
 void* KRecentFilesAction_Metacast(KRecentFilesAction* self, const char* param1);
 int KRecentFilesAction_Metacall(KRecentFilesAction* self, int param1, int param2, void** param3);

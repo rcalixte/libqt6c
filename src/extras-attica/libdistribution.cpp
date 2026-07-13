@@ -4,11 +4,11 @@
 #include "libdistribution.hpp"
 #include "libdistribution.hxx"
 
-Attica__Distribution* Attica__Distribution_new() {
+Attica__Distribution* Attica__Distribution_New() {
     return new Attica::Distribution();
 }
 
-Attica__Distribution* Attica__Distribution_new2(const Attica__Distribution* other) {
+Attica__Distribution* Attica__Distribution_New2(const Attica__Distribution* other) {
     return new Attica::Distribution(*other);
 }
 

@@ -280,11 +280,11 @@ void q_openglcontextgroup_delete(void* self) {
 }
 
 QOpenGLContext* q_openglcontext_new() {
-    return QOpenGLContext_new();
+    return QOpenGLContext_New();
 }
 
 QOpenGLContext* q_openglcontext_new2(void* parent) {
-    return QOpenGLContext_new2((QObject*)parent);
+    return QOpenGLContext_New2((QObject*)parent);
 }
 
 const QMetaObject* q_openglcontext_meta_object(void* self) {

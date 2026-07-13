@@ -12,11 +12,11 @@
 #include "libqscilexercsharp.h"
 
 QsciLexerCSharp* q_scilexercsharp_new() {
-    return QsciLexerCSharp_new();
+    return QsciLexerCSharp_New();
 }
 
 QsciLexerCSharp* q_scilexercsharp_new2(void* parent) {
-    return QsciLexerCSharp_new2((QObject*)parent);
+    return QsciLexerCSharp_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexercsharp_meta_object(void* self) {

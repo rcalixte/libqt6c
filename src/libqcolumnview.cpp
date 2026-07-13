@@ -51,11 +51,11 @@
 #include "libqcolumnview.hpp"
 #include "libqcolumnview.hxx"
 
-QColumnView* QColumnView_new(QWidget* parent) {
+QColumnView* QColumnView_New(QWidget* parent) {
     return new VirtualQColumnView(parent);
 }
 
-QColumnView* QColumnView_new2() {
+QColumnView* QColumnView_New2() {
     return new VirtualQColumnView();
 }
 

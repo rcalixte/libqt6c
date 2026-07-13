@@ -27,11 +27,11 @@
 #include "libkcompletionbox.h"
 
 KCompletionBox* k_completionbox_new(void* parent) {
-    return KCompletionBox_new((QWidget*)parent);
+    return KCompletionBox_New((QWidget*)parent);
 }
 
 KCompletionBox* k_completionbox_new2() {
-    return KCompletionBox_new2();
+    return KCompletionBox_New2();
 }
 
 const QMetaObject* k_completionbox_meta_object(void* self) {

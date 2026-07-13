@@ -7,55 +7,55 @@
 
 #ifdef __linux__
 KSelectionOwner* k_selectionowner_new(xcb_atom_t selection) {
-    return KSelectionOwner_new(selection);
+    return KSelectionOwner_New(selection);
 }
 #endif
 
 KSelectionOwner* k_selectionowner_new2(const char* selection) {
-    return KSelectionOwner_new2(selection);
+    return KSelectionOwner_New2(selection);
 }
 
 #ifdef __linux__
 KSelectionOwner* k_selectionowner_new3(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root) {
-    return KSelectionOwner_new3(selection, c, root);
+    return KSelectionOwner_New3(selection, c, root);
 }
 #endif
 
 #ifdef __linux__
 KSelectionOwner* k_selectionowner_new4(const char* selection, xcb_connection_t* c, xcb_window_t root) {
-    return KSelectionOwner_new4(selection, c, root);
+    return KSelectionOwner_New4(selection, c, root);
 }
 #endif
 
 #ifdef __linux__
 KSelectionOwner* k_selectionowner_new5(xcb_atom_t selection, int screen) {
-    return KSelectionOwner_new5(selection, screen);
+    return KSelectionOwner_New5(selection, screen);
 }
 #endif
 
 #ifdef __linux__
 KSelectionOwner* k_selectionowner_new6(xcb_atom_t selection, int screen, void* parent) {
-    return KSelectionOwner_new6(selection, screen, (QObject*)parent);
+    return KSelectionOwner_New6(selection, screen, (QObject*)parent);
 }
 #endif
 
 KSelectionOwner* k_selectionowner_new7(const char* selection, int screen) {
-    return KSelectionOwner_new7(selection, screen);
+    return KSelectionOwner_New7(selection, screen);
 }
 
 KSelectionOwner* k_selectionowner_new8(const char* selection, int screen, void* parent) {
-    return KSelectionOwner_new8(selection, screen, (QObject*)parent);
+    return KSelectionOwner_New8(selection, screen, (QObject*)parent);
 }
 
 #ifdef __linux__
 KSelectionOwner* k_selectionowner_new9(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root, void* parent) {
-    return KSelectionOwner_new9(selection, c, root, (QObject*)parent);
+    return KSelectionOwner_New9(selection, c, root, (QObject*)parent);
 }
 #endif
 
 #ifdef __linux__
 KSelectionOwner* k_selectionowner_new10(const char* selection, xcb_connection_t* c, xcb_window_t root, void* parent) {
-    return KSelectionOwner_new10(selection, c, root, (QObject*)parent);
+    return KSelectionOwner_New10(selection, c, root, (QObject*)parent);
 }
 #endif
 

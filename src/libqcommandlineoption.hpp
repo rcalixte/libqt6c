@@ -18,15 +18,15 @@ extern "C" {
 typedef struct QCommandLineOption QCommandLineOption;
 #endif
 
-QCommandLineOption* QCommandLineOption_new(const libqt_string name);
-QCommandLineOption* QCommandLineOption_new2(const libqt_list /* of libqt_string */ names);
-QCommandLineOption* QCommandLineOption_new3(const libqt_string name, const libqt_string description);
-QCommandLineOption* QCommandLineOption_new4(const libqt_list /* of libqt_string */ names, const libqt_string description);
-QCommandLineOption* QCommandLineOption_new5(const QCommandLineOption* other);
-QCommandLineOption* QCommandLineOption_new6(const libqt_string name, const libqt_string description, const libqt_string valueName);
-QCommandLineOption* QCommandLineOption_new7(const libqt_string name, const libqt_string description, const libqt_string valueName, const libqt_string defaultValue);
-QCommandLineOption* QCommandLineOption_new8(const libqt_list /* of libqt_string */ names, const libqt_string description, const libqt_string valueName);
-QCommandLineOption* QCommandLineOption_new9(const libqt_list /* of libqt_string */ names, const libqt_string description, const libqt_string valueName, const libqt_string defaultValue);
+QCommandLineOption* QCommandLineOption_New(const libqt_string name);
+QCommandLineOption* QCommandLineOption_New2(const libqt_list /* of libqt_string */ names);
+QCommandLineOption* QCommandLineOption_New3(const libqt_string name, const libqt_string description);
+QCommandLineOption* QCommandLineOption_New4(const libqt_list /* of libqt_string */ names, const libqt_string description);
+QCommandLineOption* QCommandLineOption_New5(const QCommandLineOption* other);
+QCommandLineOption* QCommandLineOption_New6(const libqt_string name, const libqt_string description, const libqt_string valueName);
+QCommandLineOption* QCommandLineOption_New7(const libqt_string name, const libqt_string description, const libqt_string valueName, const libqt_string defaultValue);
+QCommandLineOption* QCommandLineOption_New8(const libqt_list /* of libqt_string */ names, const libqt_string description, const libqt_string valueName);
+QCommandLineOption* QCommandLineOption_New9(const libqt_list /* of libqt_string */ names, const libqt_string description, const libqt_string valueName, const libqt_string defaultValue);
 void QCommandLineOption_OperatorAssign(QCommandLineOption* self, const QCommandLineOption* other);
 void QCommandLineOption_Swap(QCommandLineOption* self, QCommandLineOption* other);
 libqt_list /* of libqt_string */ QCommandLineOption_Names(const QCommandLineOption* self);

@@ -3,11 +3,11 @@
 #include "libdownloaditem.h"
 
 Attica__DownloadItem* k_attica__downloaditem_new() {
-    return Attica__DownloadItem_new();
+    return Attica__DownloadItem_New();
 }
 
 Attica__DownloadItem* k_attica__downloaditem_new2(void* other) {
-    return Attica__DownloadItem_new2((Attica__DownloadItem*)other);
+    return Attica__DownloadItem_New2((Attica__DownloadItem*)other);
 }
 
 void k_attica__downloaditem_operator_assign(void* self, void* other) {

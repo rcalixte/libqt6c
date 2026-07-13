@@ -20,7 +20,7 @@ typedef struct NETExtendedStrut NETExtendedStrut;
 typedef struct QRect QRect;
 #endif
 
-KWindowInfo* KWindowInfo_new(const KWindowInfo* param1);
+KWindowInfo* KWindowInfo_New(const KWindowInfo* param1);
 bool KWindowInfo_Valid(const KWindowInfo* self);
 uintptr_t KWindowInfo_Win(const KWindowInfo* self);
 bool KWindowInfo_IsMinimized(const KWindowInfo* self);

@@ -9,19 +9,19 @@
 #include "libqgraphicslinearlayout.hpp"
 #include "libqgraphicslinearlayout.hxx"
 
-QGraphicsLinearLayout* QGraphicsLinearLayout_new() {
+QGraphicsLinearLayout* QGraphicsLinearLayout_New() {
     return new VirtualQGraphicsLinearLayout();
 }
 
-QGraphicsLinearLayout* QGraphicsLinearLayout_new2(int orientation) {
+QGraphicsLinearLayout* QGraphicsLinearLayout_New2(int orientation) {
     return new VirtualQGraphicsLinearLayout(static_cast<Qt::Orientation>(orientation));
 }
 
-QGraphicsLinearLayout* QGraphicsLinearLayout_new3(QGraphicsLayoutItem* parent) {
+QGraphicsLinearLayout* QGraphicsLinearLayout_New3(QGraphicsLayoutItem* parent) {
     return new VirtualQGraphicsLinearLayout(parent);
 }
 
-QGraphicsLinearLayout* QGraphicsLinearLayout_new4(int orientation, QGraphicsLayoutItem* parent) {
+QGraphicsLinearLayout* QGraphicsLinearLayout_New4(int orientation, QGraphicsLayoutItem* parent) {
     return new VirtualQGraphicsLinearLayout(static_cast<Qt::Orientation>(orientation), parent);
 }
 

@@ -21,7 +21,7 @@ typedef Sonnet::GuessLanguage Sonnet__GuessLanguage;
 typedef struct Sonnet__GuessLanguage Sonnet__GuessLanguage;
 #endif
 
-Sonnet__GuessLanguage* Sonnet__GuessLanguage_new();
+Sonnet__GuessLanguage* Sonnet__GuessLanguage_New();
 void Sonnet__GuessLanguage_SetLimits(Sonnet__GuessLanguage* self, int maxItems, double minConfidence);
 libqt_string Sonnet__GuessLanguage_Identify(const Sonnet__GuessLanguage* self, const libqt_string text);
 libqt_string Sonnet__GuessLanguage_Identify2(const Sonnet__GuessLanguage* self, const libqt_string text, const libqt_list /* of libqt_string */ suggestions);

@@ -5,7 +5,7 @@
 #include "libdynamicpropertysheet.hpp"
 #include "libdynamicpropertysheet.hxx"
 
-QDesignerDynamicPropertySheetExtension* QDesignerDynamicPropertySheetExtension_new() {
+QDesignerDynamicPropertySheetExtension* QDesignerDynamicPropertySheetExtension_New() {
     return new VirtualQDesignerDynamicPropertySheetExtension();
 }
 

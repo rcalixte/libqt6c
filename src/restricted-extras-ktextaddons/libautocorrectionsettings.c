@@ -4,7 +4,7 @@
 #include "libautocorrectionsettings.h"
 
 TextAutoCorrectionCore__AutoCorrectionSettings* k_textautocorrectioncore__autocorrectionsettings_new() {
-    return TextAutoCorrectionCore__AutoCorrectionSettings_new();
+    return TextAutoCorrectionCore__AutoCorrectionSettings_New();
 }
 
 bool k_textautocorrectioncore__autocorrectionsettings_is_enabled_auto_correction(void* self) {

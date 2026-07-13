@@ -5,15 +5,15 @@
 #include "libqeasingcurve.hpp"
 #include "libqeasingcurve.hxx"
 
-QEasingCurve* QEasingCurve_new() {
+QEasingCurve* QEasingCurve_New() {
     return new QEasingCurve();
 }
 
-QEasingCurve* QEasingCurve_new2(const QEasingCurve* other) {
+QEasingCurve* QEasingCurve_New2(const QEasingCurve* other) {
     return new QEasingCurve(*other);
 }
 
-QEasingCurve* QEasingCurve_new3(int type) {
+QEasingCurve* QEasingCurve_New3(int type) {
     return new QEasingCurve(static_cast<QEasingCurve::Type>(type));
 }
 

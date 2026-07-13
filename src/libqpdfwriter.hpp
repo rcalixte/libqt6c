@@ -36,8 +36,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUuid QUuid;
 #endif
 
-QPdfWriter* QPdfWriter_new(const libqt_string filename);
-QPdfWriter* QPdfWriter_new2(QIODevice* device);
+QPdfWriter* QPdfWriter_New(const libqt_string filename);
+QPdfWriter* QPdfWriter_New2(QIODevice* device);
 QMetaObject* QPdfWriter_MetaObject(const QPdfWriter* self);
 void* QPdfWriter_Metacast(QPdfWriter* self, const char* param1);
 int QPdfWriter_Metacall(QPdfWriter* self, int param1, int param2, void** param3);

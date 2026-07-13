@@ -14,11 +14,11 @@
 #include "libqapplication.h"
 
 QApplication* q_application_new(int* argc, char** argv) {
-    return QApplication_new(argc, argv);
+    return QApplication_New(argc, argv);
 }
 
 QApplication* q_application_new2(int* argc, char** argv, int param3) {
-    return QApplication_new2(argc, argv, param3);
+    return QApplication_New2(argc, argv, param3);
 }
 
 const QMetaObject* q_application_meta_object(void* self) {

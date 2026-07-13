@@ -13,11 +13,11 @@
 #include "libqhxymodelmapper.hpp"
 #include "libqhxymodelmapper.hxx"
 
-QHXYModelMapper* QHXYModelMapper_new() {
+QHXYModelMapper* QHXYModelMapper_New() {
     return new VirtualQHXYModelMapper();
 }
 
-QHXYModelMapper* QHXYModelMapper_new2(QObject* parent) {
+QHXYModelMapper* QHXYModelMapper_New2(QObject* parent) {
     return new VirtualQHXYModelMapper(parent);
 }
 

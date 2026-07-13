@@ -8,11 +8,11 @@
 #include "libqpdfpagenavigator.h"
 
 QPdfPageNavigator* q_pdfpagenavigator_new() {
-    return QPdfPageNavigator_new();
+    return QPdfPageNavigator_New();
 }
 
 QPdfPageNavigator* q_pdfpagenavigator_new2(void* parent) {
-    return QPdfPageNavigator_new2((QObject*)parent);
+    return QPdfPageNavigator_New2((QObject*)parent);
 }
 
 const QMetaObject* q_pdfpagenavigator_meta_object(void* self) {

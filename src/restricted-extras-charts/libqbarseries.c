@@ -8,11 +8,11 @@
 #include "libqbarseries.h"
 
 QBarSeries* q_barseries_new() {
-    return QBarSeries_new();
+    return QBarSeries_New();
 }
 
 QBarSeries* q_barseries_new2(void* parent) {
-    return QBarSeries_new2((QObject*)parent);
+    return QBarSeries_New2((QObject*)parent);
 }
 
 const QMetaObject* q_barseries_meta_object(void* self) {

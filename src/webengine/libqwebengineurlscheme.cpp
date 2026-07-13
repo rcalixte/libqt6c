@@ -4,16 +4,16 @@
 #include "libqwebengineurlscheme.hpp"
 #include "libqwebengineurlscheme.hxx"
 
-QWebEngineUrlScheme* QWebEngineUrlScheme_new() {
+QWebEngineUrlScheme* QWebEngineUrlScheme_New() {
     return new QWebEngineUrlScheme();
 }
 
-QWebEngineUrlScheme* QWebEngineUrlScheme_new2(const libqt_string name) {
+QWebEngineUrlScheme* QWebEngineUrlScheme_New2(const libqt_string name) {
     QByteArray name_QByteArray(name.data, name.len);
     return new QWebEngineUrlScheme(name_QByteArray);
 }
 
-QWebEngineUrlScheme* QWebEngineUrlScheme_new3(const QWebEngineUrlScheme* that) {
+QWebEngineUrlScheme* QWebEngineUrlScheme_New3(const QWebEngineUrlScheme* that) {
     return new QWebEngineUrlScheme(*that);
 }
 

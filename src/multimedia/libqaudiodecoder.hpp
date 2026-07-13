@@ -28,8 +28,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-QAudioDecoder* QAudioDecoder_new();
-QAudioDecoder* QAudioDecoder_new2(QObject* parent);
+QAudioDecoder* QAudioDecoder_New();
+QAudioDecoder* QAudioDecoder_New2(QObject* parent);
 QMetaObject* QAudioDecoder_MetaObject(const QAudioDecoder* self);
 void* QAudioDecoder_Metacast(QAudioDecoder* self, const char* param1);
 int QAudioDecoder_Metacall(QAudioDecoder* self, int param1, int param2, void** param3);

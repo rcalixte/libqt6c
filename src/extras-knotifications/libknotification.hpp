@@ -30,9 +30,9 @@ typedef struct QVariant QVariant;
 typedef struct QWindow QWindow;
 #endif
 
-KNotificationAction* KNotificationAction_new();
-KNotificationAction* KNotificationAction_new2(const libqt_string label);
-KNotificationAction* KNotificationAction_new3(QObject* parent);
+KNotificationAction* KNotificationAction_New();
+KNotificationAction* KNotificationAction_New2(const libqt_string label);
+KNotificationAction* KNotificationAction_New3(QObject* parent);
 QMetaObject* KNotificationAction_MetaObject(const KNotificationAction* self);
 void* KNotificationAction_Metacast(KNotificationAction* self, const char* param1);
 int KNotificationAction_Metacall(KNotificationAction* self, int param1, int param2, void** param3);
@@ -83,9 +83,9 @@ void KNotificationAction_OnIsSignalConnected(const KNotificationAction* self, in
 bool KNotificationAction_SuperIsSignalConnected(const KNotificationAction* self, const QMetaMethod* signal);
 void KNotificationAction_Delete(KNotificationAction* self);
 
-KNotification* KNotification_new(const libqt_string eventId);
-KNotification* KNotification_new2(const libqt_string eventId, int flags);
-KNotification* KNotification_new3(const libqt_string eventId, int flags, QObject* parent);
+KNotification* KNotification_New(const libqt_string eventId);
+KNotification* KNotification_New2(const libqt_string eventId, int flags);
+KNotification* KNotification_New3(const libqt_string eventId, int flags, QObject* parent);
 QMetaObject* KNotification_MetaObject(const KNotification* self);
 void* KNotification_Metacast(KNotification* self, const char* param1);
 int KNotification_Metacall(KNotification* self, int param1, int param2, void** param3);

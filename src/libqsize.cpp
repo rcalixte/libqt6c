@@ -6,23 +6,23 @@
 #include "libqsize.hpp"
 #include "libqsize.hxx"
 
-QSize* QSize_new(const QSize* other) {
+QSize* QSize_New(const QSize* other) {
     return new QSize(*other);
 }
 
-QSize* QSize_new2(QSize* other) {
+QSize* QSize_New2(QSize* other) {
     return new QSize(std::move(*other));
 }
 
-QSize* QSize_new3() {
+QSize* QSize_New3() {
     return new QSize();
 }
 
-QSize* QSize_new4(int w, int h) {
+QSize* QSize_New4(int w, int h) {
     return new QSize(static_cast<int>(w), static_cast<int>(h));
 }
 
-QSize* QSize_new5(const QSize* param1) {
+QSize* QSize_New5(const QSize* param1) {
     return new QSize(*param1);
 }
 
@@ -142,27 +142,27 @@ void QSize_Delete(QSize* self) {
     delete self;
 }
 
-QSizeF* QSizeF_new(const QSizeF* other) {
+QSizeF* QSizeF_New(const QSizeF* other) {
     return new QSizeF(*other);
 }
 
-QSizeF* QSizeF_new2(QSizeF* other) {
+QSizeF* QSizeF_New2(QSizeF* other) {
     return new QSizeF(std::move(*other));
 }
 
-QSizeF* QSizeF_new3() {
+QSizeF* QSizeF_New3() {
     return new QSizeF();
 }
 
-QSizeF* QSizeF_new4(const QSize* sz) {
+QSizeF* QSizeF_New4(const QSize* sz) {
     return new QSizeF(*sz);
 }
 
-QSizeF* QSizeF_new5(double w, double h) {
+QSizeF* QSizeF_New5(double w, double h) {
     return new QSizeF(static_cast<qreal>(w), static_cast<qreal>(h));
 }
 
-QSizeF* QSizeF_new6(const QSizeF* param1) {
+QSizeF* QSizeF_New6(const QSizeF* param1) {
     return new QSizeF(*param1);
 }
 

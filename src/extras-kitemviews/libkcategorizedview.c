@@ -26,11 +26,11 @@
 #include "libkcategorizedview.h"
 
 KCategorizedView* k_categorizedview_new(void* parent) {
-    return KCategorizedView_new((QWidget*)parent);
+    return KCategorizedView_New((QWidget*)parent);
 }
 
 KCategorizedView* k_categorizedview_new2() {
-    return KCategorizedView_new2();
+    return KCategorizedView_New2();
 }
 
 const QMetaObject* k_categorizedview_meta_object(void* self) {

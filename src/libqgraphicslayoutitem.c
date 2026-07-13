@@ -6,15 +6,15 @@
 #include "libqgraphicslayoutitem.h"
 
 QGraphicsLayoutItem* q_graphicslayoutitem_new() {
-    return QGraphicsLayoutItem_new();
+    return QGraphicsLayoutItem_New();
 }
 
 QGraphicsLayoutItem* q_graphicslayoutitem_new2(void* parent) {
-    return QGraphicsLayoutItem_new2((QGraphicsLayoutItem*)parent);
+    return QGraphicsLayoutItem_New2((QGraphicsLayoutItem*)parent);
 }
 
 QGraphicsLayoutItem* q_graphicslayoutitem_new3(void* parent, bool isLayout) {
-    return QGraphicsLayoutItem_new3((QGraphicsLayoutItem*)parent, isLayout);
+    return QGraphicsLayoutItem_New3((QGraphicsLayoutItem*)parent, isLayout);
 }
 
 void q_graphicslayoutitem_set_size_policy(void* self, void* policy) {

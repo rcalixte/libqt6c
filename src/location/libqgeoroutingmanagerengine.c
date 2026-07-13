@@ -34,7 +34,7 @@ QGeoRoutingManagerEngine* q_georoutingmanagerengine_new(libqt_map /* of const ch
         parameters_vdest[i] = parameters_varr[i];
     }
 
-    QGeoRoutingManagerEngine* _out = QGeoRoutingManagerEngine_new(parameters_ret);
+    QGeoRoutingManagerEngine* _out = QGeoRoutingManagerEngine_New(parameters_ret);
     free(parameters_ret.keys);
     free(parameters_ret.values);
     return _out;
@@ -64,7 +64,7 @@ QGeoRoutingManagerEngine* q_georoutingmanagerengine_new2(libqt_map /* of const c
         parameters_vdest[i] = parameters_varr[i];
     }
 
-    QGeoRoutingManagerEngine* _out = QGeoRoutingManagerEngine_new2(parameters_ret, (QObject*)parent);
+    QGeoRoutingManagerEngine* _out = QGeoRoutingManagerEngine_New2(parameters_ret, (QObject*)parent);
     free(parameters_ret.keys);
     free(parameters_ret.values);
     return _out;

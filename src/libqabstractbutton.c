@@ -17,11 +17,11 @@
 #include "libqabstractbutton.h"
 
 QAbstractButton* q_abstractbutton_new(void* parent) {
-    return QAbstractButton_new((QWidget*)parent);
+    return QAbstractButton_New((QWidget*)parent);
 }
 
 QAbstractButton* q_abstractbutton_new2() {
-    return QAbstractButton_new2();
+    return QAbstractButton_New2();
 }
 
 const QMetaObject* q_abstractbutton_meta_object(void* self) {

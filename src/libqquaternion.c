@@ -4,35 +4,35 @@
 #include "libqquaternion.h"
 
 QQuaternion* q_quaternion_new(void* other) {
-    return QQuaternion_new((QQuaternion*)other);
+    return QQuaternion_New((QQuaternion*)other);
 }
 
 QQuaternion* q_quaternion_new2(void* other) {
-    return QQuaternion_new2((QQuaternion*)other);
+    return QQuaternion_New2((QQuaternion*)other);
 }
 
 QQuaternion* q_quaternion_new3() {
-    return QQuaternion_new3();
+    return QQuaternion_New3();
 }
 
 QQuaternion* q_quaternion_new4(int32_t param1) {
-    return QQuaternion_new4(param1);
+    return QQuaternion_New4(param1);
 }
 
 QQuaternion* q_quaternion_new5(float scalar, float xpos, float ypos, float zpos) {
-    return QQuaternion_new5(scalar, xpos, ypos, zpos);
+    return QQuaternion_New5(scalar, xpos, ypos, zpos);
 }
 
 QQuaternion* q_quaternion_new6(float scalar, void* vector) {
-    return QQuaternion_new6(scalar, (QVector3D*)vector);
+    return QQuaternion_New6(scalar, (QVector3D*)vector);
 }
 
 QQuaternion* q_quaternion_new7(void* vector) {
-    return QQuaternion_new7((QVector4D*)vector);
+    return QQuaternion_New7((QVector4D*)vector);
 }
 
 QQuaternion* q_quaternion_new8(void* param1) {
-    return QQuaternion_new8((QQuaternion*)param1);
+    return QQuaternion_New8((QQuaternion*)param1);
 }
 
 void q_quaternion_copy_assign(void* self, void* other) {

@@ -11,11 +11,11 @@
 #include "libqcoreapplication.h"
 
 QCoreApplication* q_coreapplication_new(int* argc, char** argv) {
-    return QCoreApplication_new(argc, argv);
+    return QCoreApplication_New(argc, argv);
 }
 
 QCoreApplication* q_coreapplication_new2(int* argc, char** argv, int param3) {
-    return QCoreApplication_new2(argc, argv, param3);
+    return QCoreApplication_New2(argc, argv, param3);
 }
 
 const QMetaObject* q_coreapplication_meta_object(void* self) {

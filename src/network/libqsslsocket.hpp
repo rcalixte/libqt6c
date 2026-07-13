@@ -37,8 +37,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QSslSocket* QSslSocket_new();
-QSslSocket* QSslSocket_new2(QObject* parent);
+QSslSocket* QSslSocket_New();
+QSslSocket* QSslSocket_New2(QObject* parent);
 QMetaObject* QSslSocket_MetaObject(const QSslSocket* self);
 void* QSslSocket_Metacast(QSslSocket* self, const char* param1);
 int QSslSocket_Metacall(QSslSocket* self, int param1, int param2, void** param3);

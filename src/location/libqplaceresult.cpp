@@ -5,15 +5,15 @@
 #include "libqplaceresult.hpp"
 #include "libqplaceresult.hxx"
 
-QPlaceResult* QPlaceResult_new() {
+QPlaceResult* QPlaceResult_New() {
     return new QPlaceResult();
 }
 
-QPlaceResult* QPlaceResult_new2(const QPlaceSearchResult* other) {
+QPlaceResult* QPlaceResult_New2(const QPlaceSearchResult* other) {
     return new QPlaceResult(*other);
 }
 
-QPlaceResult* QPlaceResult_new3(const QPlaceResult* param1) {
+QPlaceResult* QPlaceResult_New3(const QPlaceResult* param1) {
     return new QPlaceResult(*param1);
 }
 

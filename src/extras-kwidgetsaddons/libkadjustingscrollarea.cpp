@@ -42,11 +42,11 @@
 #include "libkadjustingscrollarea.hpp"
 #include "libkadjustingscrollarea.hxx"
 
-KAdjustingScrollArea* KAdjustingScrollArea_new(QWidget* parent) {
+KAdjustingScrollArea* KAdjustingScrollArea_New(QWidget* parent) {
     return new VirtualKAdjustingScrollArea(parent);
 }
 
-KAdjustingScrollArea* KAdjustingScrollArea_new2() {
+KAdjustingScrollArea* KAdjustingScrollArea_New2() {
     return new VirtualKAdjustingScrollArea();
 }
 

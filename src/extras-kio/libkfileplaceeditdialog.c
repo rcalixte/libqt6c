@@ -16,19 +16,19 @@
 #include "libkfileplaceeditdialog.h"
 
 KFilePlaceEditDialog* k_fileplaceeditdialog_new(bool allowGlobal, void* url, const char* label, const char* icon, bool isAddingNewPlace) {
-    return KFilePlaceEditDialog_new(allowGlobal, (QUrl*)url, qstring(label), qstring(icon), isAddingNewPlace);
+    return KFilePlaceEditDialog_New(allowGlobal, (QUrl*)url, qstring(label), qstring(icon), isAddingNewPlace);
 }
 
 KFilePlaceEditDialog* k_fileplaceeditdialog_new2(bool allowGlobal, void* url, const char* label, const char* icon, bool isAddingNewPlace, bool appLocal) {
-    return KFilePlaceEditDialog_new2(allowGlobal, (QUrl*)url, qstring(label), qstring(icon), isAddingNewPlace, appLocal);
+    return KFilePlaceEditDialog_New2(allowGlobal, (QUrl*)url, qstring(label), qstring(icon), isAddingNewPlace, appLocal);
 }
 
 KFilePlaceEditDialog* k_fileplaceeditdialog_new3(bool allowGlobal, void* url, const char* label, const char* icon, bool isAddingNewPlace, bool appLocal, int iconSize) {
-    return KFilePlaceEditDialog_new3(allowGlobal, (QUrl*)url, qstring(label), qstring(icon), isAddingNewPlace, appLocal, iconSize);
+    return KFilePlaceEditDialog_New3(allowGlobal, (QUrl*)url, qstring(label), qstring(icon), isAddingNewPlace, appLocal, iconSize);
 }
 
 KFilePlaceEditDialog* k_fileplaceeditdialog_new4(bool allowGlobal, void* url, const char* label, const char* icon, bool isAddingNewPlace, bool appLocal, int iconSize, void* parent) {
-    return KFilePlaceEditDialog_new4(allowGlobal, (QUrl*)url, qstring(label), qstring(icon), isAddingNewPlace, appLocal, iconSize, (QWidget*)parent);
+    return KFilePlaceEditDialog_New4(allowGlobal, (QUrl*)url, qstring(label), qstring(icon), isAddingNewPlace, appLocal, iconSize, (QWidget*)parent);
 }
 
 const QMetaObject* k_fileplaceeditdialog_meta_object(void* self) {

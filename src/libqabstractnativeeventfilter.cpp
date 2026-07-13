@@ -4,7 +4,7 @@
 #include "libqabstractnativeeventfilter.hpp"
 #include "libqabstractnativeeventfilter.hxx"
 
-QAbstractNativeEventFilter* QAbstractNativeEventFilter_new() {
+QAbstractNativeEventFilter* QAbstractNativeEventFilter_New() {
     return new VirtualQAbstractNativeEventFilter();
 }
 

@@ -2,15 +2,15 @@
 #include "libbitfield.h"
 
 PackageKit__Bitfield* q_packagekit__bitfield_new() {
-    return PackageKit__Bitfield_new();
+    return PackageKit__Bitfield_New();
 }
 
 PackageKit__Bitfield* q_packagekit__bitfield_new2(uintptr_t val) {
-    return PackageKit__Bitfield_new2(val);
+    return PackageKit__Bitfield_New2(val);
 }
 
 PackageKit__Bitfield* q_packagekit__bitfield_new3(void* param1) {
-    return PackageKit__Bitfield_new3((PackageKit__Bitfield*)param1);
+    return PackageKit__Bitfield_New3((PackageKit__Bitfield*)param1);
 }
 
 uintptr_t q_packagekit__bitfield_operator_bitwise_and(void* self, uintptr_t mask) {

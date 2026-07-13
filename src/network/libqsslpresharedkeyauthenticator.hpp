@@ -18,8 +18,8 @@ extern "C" {
 typedef struct QSslPreSharedKeyAuthenticator QSslPreSharedKeyAuthenticator;
 #endif
 
-QSslPreSharedKeyAuthenticator* QSslPreSharedKeyAuthenticator_new();
-QSslPreSharedKeyAuthenticator* QSslPreSharedKeyAuthenticator_new2(const QSslPreSharedKeyAuthenticator* authenticator);
+QSslPreSharedKeyAuthenticator* QSslPreSharedKeyAuthenticator_New();
+QSslPreSharedKeyAuthenticator* QSslPreSharedKeyAuthenticator_New2(const QSslPreSharedKeyAuthenticator* authenticator);
 void QSslPreSharedKeyAuthenticator_OperatorAssign(QSslPreSharedKeyAuthenticator* self, const QSslPreSharedKeyAuthenticator* authenticator);
 void QSslPreSharedKeyAuthenticator_Swap(QSslPreSharedKeyAuthenticator* self, QSslPreSharedKeyAuthenticator* other);
 libqt_string QSslPreSharedKeyAuthenticator_IdentityHint(const QSslPreSharedKeyAuthenticator* self);

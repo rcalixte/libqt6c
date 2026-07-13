@@ -44,30 +44,30 @@
 #include "libqfiledialog.hpp"
 #include "libqfiledialog.hxx"
 
-QFileDialog* QFileDialog_new(QWidget* parent) {
+QFileDialog* QFileDialog_New(QWidget* parent) {
     return new VirtualQFileDialog(parent);
 }
 
-QFileDialog* QFileDialog_new2(QWidget* parent, int f) {
+QFileDialog* QFileDialog_New2(QWidget* parent, int f) {
     return new VirtualQFileDialog(parent, static_cast<Qt::WindowFlags>(f));
 }
 
-QFileDialog* QFileDialog_new3() {
+QFileDialog* QFileDialog_New3() {
     return new VirtualQFileDialog();
 }
 
-QFileDialog* QFileDialog_new4(QWidget* parent, const libqt_string caption) {
+QFileDialog* QFileDialog_New4(QWidget* parent, const libqt_string caption) {
     QString caption_QString = QString::fromUtf8(caption.data, caption.len);
     return new VirtualQFileDialog(parent, caption_QString);
 }
 
-QFileDialog* QFileDialog_new5(QWidget* parent, const libqt_string caption, const libqt_string directory) {
+QFileDialog* QFileDialog_New5(QWidget* parent, const libqt_string caption, const libqt_string directory) {
     QString caption_QString = QString::fromUtf8(caption.data, caption.len);
     QString directory_QString = QString::fromUtf8(directory.data, directory.len);
     return new VirtualQFileDialog(parent, caption_QString, directory_QString);
 }
 
-QFileDialog* QFileDialog_new6(QWidget* parent, const libqt_string caption, const libqt_string directory, const libqt_string filter) {
+QFileDialog* QFileDialog_New6(QWidget* parent, const libqt_string caption, const libqt_string directory, const libqt_string filter) {
     QString caption_QString = QString::fromUtf8(caption.data, caption.len);
     QString directory_QString = QString::fromUtf8(directory.data, directory.len);
     QString filter_QString = QString::fromUtf8(filter.data, filter.len);

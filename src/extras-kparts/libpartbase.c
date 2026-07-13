@@ -7,7 +7,7 @@
 #include "libpartbase.h"
 
 KParts__PartBase* k_parts__partbase_new() {
-    return KParts__PartBase_new();
+    return KParts__PartBase_New();
 }
 
 void k_parts__partbase_set_part_object(void* self, void* object) {

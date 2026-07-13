@@ -25,10 +25,10 @@ typedef struct KTextEditor__Document KTextEditor__Document;
 typedef struct KTextEditor__DocumentCursor KTextEditor__DocumentCursor;
 #endif
 
-KTextEditor__DocumentCursor* KTextEditor__DocumentCursor_new(KTextEditor__Document* document);
-KTextEditor__DocumentCursor* KTextEditor__DocumentCursor_new2(KTextEditor__Document* document, KTextEditor__Cursor* position);
-KTextEditor__DocumentCursor* KTextEditor__DocumentCursor_new3(KTextEditor__Document* document, int line, int column);
-KTextEditor__DocumentCursor* KTextEditor__DocumentCursor_new4(const KTextEditor__DocumentCursor* other);
+KTextEditor__DocumentCursor* KTextEditor__DocumentCursor_New(KTextEditor__Document* document);
+KTextEditor__DocumentCursor* KTextEditor__DocumentCursor_New2(KTextEditor__Document* document, KTextEditor__Cursor* position);
+KTextEditor__DocumentCursor* KTextEditor__DocumentCursor_New3(KTextEditor__Document* document, int line, int column);
+KTextEditor__DocumentCursor* KTextEditor__DocumentCursor_New4(const KTextEditor__DocumentCursor* other);
 KTextEditor__Document* KTextEditor__DocumentCursor_Document(const KTextEditor__DocumentCursor* self);
 void KTextEditor__DocumentCursor_SetPosition(KTextEditor__DocumentCursor* self, KTextEditor__Cursor* position);
 int KTextEditor__DocumentCursor_Line(const KTextEditor__DocumentCursor* self);

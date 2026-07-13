@@ -46,8 +46,8 @@ typedef struct QTextOption QTextOption;
 typedef struct QTransform QTransform;
 #endif
 
-QPainter* QPainter_new();
-QPainter* QPainter_new2(QPaintDevice* param1);
+QPainter* QPainter_New();
+QPainter* QPainter_New2(QPaintDevice* param1);
 QPaintDevice* QPainter_Device(const QPainter* self);
 bool QPainter_Begin(QPainter* self, QPaintDevice* param1);
 bool QPainter_End(QPainter* self);
@@ -269,8 +269,8 @@ void QPainter_SetRenderHint2(QPainter* self, int hint, bool on);
 void QPainter_SetRenderHints2(QPainter* self, int hints, bool on);
 void QPainter_Delete(QPainter* self);
 
-QPainter__PixmapFragment* QPainter__PixmapFragment_new();
-QPainter__PixmapFragment* QPainter__PixmapFragment_new2(const QPainter__PixmapFragment* param1);
+QPainter__PixmapFragment* QPainter__PixmapFragment_New();
+QPainter__PixmapFragment* QPainter__PixmapFragment_New2(const QPainter__PixmapFragment* param1);
 double QPainter__PixmapFragment_X(const QPainter__PixmapFragment* self);
 void QPainter__PixmapFragment_SetX(QPainter__PixmapFragment* self, double x);
 double QPainter__PixmapFragment_Y(const QPainter__PixmapFragment* self);

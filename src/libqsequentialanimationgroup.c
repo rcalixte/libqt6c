@@ -9,11 +9,11 @@
 #include "libqsequentialanimationgroup.h"
 
 QSequentialAnimationGroup* q_sequentialanimationgroup_new() {
-    return QSequentialAnimationGroup_new();
+    return QSequentialAnimationGroup_New();
 }
 
 QSequentialAnimationGroup* q_sequentialanimationgroup_new2(void* parent) {
-    return QSequentialAnimationGroup_new2((QObject*)parent);
+    return QSequentialAnimationGroup_New2((QObject*)parent);
 }
 
 const QMetaObject* q_sequentialanimationgroup_meta_object(void* self) {

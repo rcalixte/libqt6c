@@ -40,16 +40,16 @@
 #include "libkurlrequesterdialog.hpp"
 #include "libkurlrequesterdialog.hxx"
 
-KUrlRequesterDialog* KUrlRequesterDialog_new(const QUrl* url) {
+KUrlRequesterDialog* KUrlRequesterDialog_New(const QUrl* url) {
     return new VirtualKUrlRequesterDialog(*url);
 }
 
-KUrlRequesterDialog* KUrlRequesterDialog_new2(const QUrl* url, const libqt_string text, QWidget* parent) {
+KUrlRequesterDialog* KUrlRequesterDialog_New2(const QUrl* url, const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKUrlRequesterDialog(*url, text_QString, parent);
 }
 
-KUrlRequesterDialog* KUrlRequesterDialog_new3(const QUrl* url, QWidget* parent) {
+KUrlRequesterDialog* KUrlRequesterDialog_New3(const QUrl* url, QWidget* parent) {
     return new VirtualKUrlRequesterDialog(*url, parent);
 }
 

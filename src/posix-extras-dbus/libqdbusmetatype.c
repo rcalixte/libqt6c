@@ -4,11 +4,11 @@
 #include "libqdbusmetatype.h"
 
 QDBusMetaType* q_dbusmetatype_new(void* other) {
-    return QDBusMetaType_new((QDBusMetaType*)other);
+    return QDBusMetaType_New((QDBusMetaType*)other);
 }
 
 QDBusMetaType* q_dbusmetatype_new2(void* other) {
-    return QDBusMetaType_new2((QDBusMetaType*)other);
+    return QDBusMetaType_New2((QDBusMetaType*)other);
 }
 
 void q_dbusmetatype_copy_assign(void* self, void* other) {

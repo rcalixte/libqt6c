@@ -18,8 +18,8 @@ extern "C" {
 typedef struct KPlotAxis KPlotAxis;
 #endif
 
-KPlotAxis* KPlotAxis_new();
-KPlotAxis* KPlotAxis_new2(const libqt_string label);
+KPlotAxis* KPlotAxis_New();
+KPlotAxis* KPlotAxis_New2(const libqt_string label);
 bool KPlotAxis_IsVisible(const KPlotAxis* self);
 void KPlotAxis_SetVisible(KPlotAxis* self, bool visible);
 bool KPlotAxis_AreTickLabelsShown(const KPlotAxis* self);

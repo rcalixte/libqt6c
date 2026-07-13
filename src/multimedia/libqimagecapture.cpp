@@ -16,11 +16,11 @@
 #include "libqimagecapture.hpp"
 #include "libqimagecapture.hxx"
 
-QImageCapture* QImageCapture_new() {
+QImageCapture* QImageCapture_New() {
     return new VirtualQImageCapture();
 }
 
-QImageCapture* QImageCapture_new2(QObject* parent) {
+QImageCapture* QImageCapture_New2(QObject* parent) {
     return new VirtualQImageCapture(parent);
 }
 

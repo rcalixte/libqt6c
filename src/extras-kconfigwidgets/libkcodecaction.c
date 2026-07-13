@@ -11,27 +11,27 @@
 #include "libkcodecaction.h"
 
 KCodecAction* k_codecaction_new(void* parent) {
-    return KCodecAction_new((QObject*)parent);
+    return KCodecAction_New((QObject*)parent);
 }
 
 KCodecAction* k_codecaction_new2(const char* text, void* parent) {
-    return KCodecAction_new2(qstring(text), (QObject*)parent);
+    return KCodecAction_New2(qstring(text), (QObject*)parent);
 }
 
 KCodecAction* k_codecaction_new3(void* icon, const char* text, void* parent) {
-    return KCodecAction_new3((QIcon*)icon, qstring(text), (QObject*)parent);
+    return KCodecAction_New3((QIcon*)icon, qstring(text), (QObject*)parent);
 }
 
 KCodecAction* k_codecaction_new4(void* parent, bool showAutoOptions) {
-    return KCodecAction_new4((QObject*)parent, showAutoOptions);
+    return KCodecAction_New4((QObject*)parent, showAutoOptions);
 }
 
 KCodecAction* k_codecaction_new5(const char* text, void* parent, bool showAutoOptions) {
-    return KCodecAction_new5(qstring(text), (QObject*)parent, showAutoOptions);
+    return KCodecAction_New5(qstring(text), (QObject*)parent, showAutoOptions);
 }
 
 KCodecAction* k_codecaction_new6(void* icon, const char* text, void* parent, bool showAutoOptions) {
-    return KCodecAction_new6((QIcon*)icon, qstring(text), (QObject*)parent, showAutoOptions);
+    return KCodecAction_New6((QIcon*)icon, qstring(text), (QObject*)parent, showAutoOptions);
 }
 
 const QMetaObject* k_codecaction_meta_object(void* self) {

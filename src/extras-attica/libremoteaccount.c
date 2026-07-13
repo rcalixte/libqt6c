@@ -2,11 +2,11 @@
 #include "libremoteaccount.h"
 
 Attica__RemoteAccount* k_attica__remoteaccount_new() {
-    return Attica__RemoteAccount_new();
+    return Attica__RemoteAccount_New();
 }
 
 Attica__RemoteAccount* k_attica__remoteaccount_new2(void* other) {
-    return Attica__RemoteAccount_new2((Attica__RemoteAccount*)other);
+    return Attica__RemoteAccount_New2((Attica__RemoteAccount*)other);
 }
 
 void k_attica__remoteaccount_operator_assign(void* self, void* other) {

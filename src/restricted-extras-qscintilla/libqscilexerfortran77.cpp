@@ -14,11 +14,11 @@
 #include "libqscilexerfortran77.hpp"
 #include "libqscilexerfortran77.hxx"
 
-QsciLexerFortran77* QsciLexerFortran77_new() {
+QsciLexerFortran77* QsciLexerFortran77_New() {
     return new VirtualQsciLexerFortran77();
 }
 
-QsciLexerFortran77* QsciLexerFortran77_new2(QObject* parent) {
+QsciLexerFortran77* QsciLexerFortran77_New2(QObject* parent) {
     return new VirtualQsciLexerFortran77(parent);
 }
 

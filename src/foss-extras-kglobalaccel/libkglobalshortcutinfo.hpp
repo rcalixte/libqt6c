@@ -25,8 +25,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KGlobalShortcutInfo* KGlobalShortcutInfo_new();
-KGlobalShortcutInfo* KGlobalShortcutInfo_new2(const KGlobalShortcutInfo* rhs);
+KGlobalShortcutInfo* KGlobalShortcutInfo_New();
+KGlobalShortcutInfo* KGlobalShortcutInfo_New2(const KGlobalShortcutInfo* rhs);
 QMetaObject* KGlobalShortcutInfo_MetaObject(const KGlobalShortcutInfo* self);
 void* KGlobalShortcutInfo_Metacast(KGlobalShortcutInfo* self, const char* param1);
 int KGlobalShortcutInfo_Metacall(KGlobalShortcutInfo* self, int param1, int param2, void** param3);

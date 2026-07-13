@@ -25,8 +25,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-KOverlayIconPlugin* KOverlayIconPlugin_new();
-KOverlayIconPlugin* KOverlayIconPlugin_new2(QObject* parent);
+KOverlayIconPlugin* KOverlayIconPlugin_New();
+KOverlayIconPlugin* KOverlayIconPlugin_New2(QObject* parent);
 QMetaObject* KOverlayIconPlugin_MetaObject(const KOverlayIconPlugin* self);
 void* KOverlayIconPlugin_Metacast(KOverlayIconPlugin* self, const char* param1);
 int KOverlayIconPlugin_Metacall(KOverlayIconPlugin* self, int param1, int param2, void** param3);

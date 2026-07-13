@@ -27,8 +27,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KFilePreviewGenerator* KFilePreviewGenerator_new(QAbstractItemView* parent);
-KFilePreviewGenerator* KFilePreviewGenerator_new2(KAbstractViewAdapter* parent, QAbstractProxyModel* model);
+KFilePreviewGenerator* KFilePreviewGenerator_New(QAbstractItemView* parent);
+KFilePreviewGenerator* KFilePreviewGenerator_New2(KAbstractViewAdapter* parent, QAbstractProxyModel* model);
 QMetaObject* KFilePreviewGenerator_MetaObject(const KFilePreviewGenerator* self);
 void* KFilePreviewGenerator_Metacast(KFilePreviewGenerator* self, const char* param1);
 int KFilePreviewGenerator_Metacall(KFilePreviewGenerator* self, int param1, int param2, void** param3);

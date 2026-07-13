@@ -11,11 +11,11 @@
 #include "libquestionlistener.hpp"
 #include "libquestionlistener.hxx"
 
-KNSCore__QuestionListener* KNSCore__QuestionListener_new() {
+KNSCore__QuestionListener* KNSCore__QuestionListener_New() {
     return new VirtualKNSCoreQuestionListener();
 }
 
-KNSCore__QuestionListener* KNSCore__QuestionListener_new2(QObject* parent) {
+KNSCore__QuestionListener* KNSCore__QuestionListener_New2(QObject* parent) {
     return new VirtualKNSCoreQuestionListener(parent);
 }
 

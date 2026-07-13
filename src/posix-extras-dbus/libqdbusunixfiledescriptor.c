@@ -2,15 +2,15 @@
 #include "libqdbusunixfiledescriptor.h"
 
 QDBusUnixFileDescriptor* q_dbusunixfiledescriptor_new() {
-    return QDBusUnixFileDescriptor_new();
+    return QDBusUnixFileDescriptor_New();
 }
 
 QDBusUnixFileDescriptor* q_dbusunixfiledescriptor_new2(int fileDescriptor) {
-    return QDBusUnixFileDescriptor_new2(fileDescriptor);
+    return QDBusUnixFileDescriptor_New2(fileDescriptor);
 }
 
 QDBusUnixFileDescriptor* q_dbusunixfiledescriptor_new3(void* other) {
-    return QDBusUnixFileDescriptor_new3((QDBusUnixFileDescriptor*)other);
+    return QDBusUnixFileDescriptor_New3((QDBusUnixFileDescriptor*)other);
 }
 
 void q_dbusunixfiledescriptor_operator_assign(void* self, void* other) {

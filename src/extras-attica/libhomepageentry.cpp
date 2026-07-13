@@ -5,11 +5,11 @@
 #include "libhomepageentry.hpp"
 #include "libhomepageentry.hxx"
 
-Attica__HomePageEntry* Attica__HomePageEntry_new() {
+Attica__HomePageEntry* Attica__HomePageEntry_New() {
     return new Attica::HomePageEntry();
 }
 
-Attica__HomePageEntry* Attica__HomePageEntry_new2(const Attica__HomePageEntry* other) {
+Attica__HomePageEntry* Attica__HomePageEntry_New2(const Attica__HomePageEntry* other) {
     return new Attica::HomePageEntry(*other);
 }
 

@@ -9,16 +9,16 @@
 #include "libqfont.hpp"
 #include "libqfont.hxx"
 
-QFont* QFont_new() {
+QFont* QFont_New() {
     return new QFont();
 }
 
-QFont* QFont_new2(const libqt_string family) {
+QFont* QFont_New2(const libqt_string family) {
     QString family_QString = QString::fromUtf8(family.data, family.len);
     return new QFont(family_QString);
 }
 
-QFont* QFont_new3(const libqt_list /* of libqt_string */ families) {
+QFont* QFont_New3(const libqt_list /* of libqt_string */ families) {
     QList<QString> families_QList;
     families_QList.reserve(families.len);
     libqt_string* families_arr = static_cast<libqt_string*>(families.data.ptr);
@@ -29,30 +29,30 @@ QFont* QFont_new3(const libqt_list /* of libqt_string */ families) {
     return new QFont(families_QList);
 }
 
-QFont* QFont_new4(const QFont* font, const QPaintDevice* pd) {
+QFont* QFont_New4(const QFont* font, const QPaintDevice* pd) {
     return new QFont(*font, pd);
 }
 
-QFont* QFont_new5(const QFont* font) {
+QFont* QFont_New5(const QFont* font) {
     return new QFont(*font);
 }
 
-QFont* QFont_new6(const libqt_string family, int pointSize) {
+QFont* QFont_New6(const libqt_string family, int pointSize) {
     QString family_QString = QString::fromUtf8(family.data, family.len);
     return new QFont(family_QString, static_cast<int>(pointSize));
 }
 
-QFont* QFont_new7(const libqt_string family, int pointSize, int weight) {
+QFont* QFont_New7(const libqt_string family, int pointSize, int weight) {
     QString family_QString = QString::fromUtf8(family.data, family.len);
     return new QFont(family_QString, static_cast<int>(pointSize), static_cast<int>(weight));
 }
 
-QFont* QFont_new8(const libqt_string family, int pointSize, int weight, bool italic) {
+QFont* QFont_New8(const libqt_string family, int pointSize, int weight, bool italic) {
     QString family_QString = QString::fromUtf8(family.data, family.len);
     return new QFont(family_QString, static_cast<int>(pointSize), static_cast<int>(weight), italic);
 }
 
-QFont* QFont_new9(const libqt_list /* of libqt_string */ families, int pointSize) {
+QFont* QFont_New9(const libqt_list /* of libqt_string */ families, int pointSize) {
     QList<QString> families_QList;
     families_QList.reserve(families.len);
     libqt_string* families_arr = static_cast<libqt_string*>(families.data.ptr);
@@ -63,7 +63,7 @@ QFont* QFont_new9(const libqt_list /* of libqt_string */ families, int pointSize
     return new QFont(families_QList, static_cast<int>(pointSize));
 }
 
-QFont* QFont_new10(const libqt_list /* of libqt_string */ families, int pointSize, int weight) {
+QFont* QFont_New10(const libqt_list /* of libqt_string */ families, int pointSize, int weight) {
     QList<QString> families_QList;
     families_QList.reserve(families.len);
     libqt_string* families_arr = static_cast<libqt_string*>(families.data.ptr);
@@ -74,7 +74,7 @@ QFont* QFont_new10(const libqt_list /* of libqt_string */ families, int pointSiz
     return new QFont(families_QList, static_cast<int>(pointSize), static_cast<int>(weight));
 }
 
-QFont* QFont_new11(const libqt_list /* of libqt_string */ families, int pointSize, int weight, bool italic) {
+QFont* QFont_New11(const libqt_list /* of libqt_string */ families, int pointSize, int weight, bool italic) {
     QList<QString> families_QList;
     families_QList.reserve(families.len);
     libqt_string* families_arr = static_cast<libqt_string*>(families.data.ptr);
@@ -565,19 +565,19 @@ void QFont_Delete(QFont* self) {
     delete self;
 }
 
-QFont__Tag* QFont__Tag_new(const QFont__Tag* other) {
+QFont__Tag* QFont__Tag_New(const QFont__Tag* other) {
     return new QFont::Tag(*other);
 }
 
-QFont__Tag* QFont__Tag_new2(QFont__Tag* other) {
+QFont__Tag* QFont__Tag_New2(QFont__Tag* other) {
     return new QFont::Tag(std::move(*other));
 }
 
-QFont__Tag* QFont__Tag_new3() {
+QFont__Tag* QFont__Tag_New3() {
     return new QFont::Tag();
 }
 
-QFont__Tag* QFont__Tag_new4(const QFont__Tag* param1) {
+QFont__Tag* QFont__Tag_New4(const QFont__Tag* param1) {
     return new QFont::Tag(*param1);
 }
 

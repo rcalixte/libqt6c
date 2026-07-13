@@ -13,27 +13,27 @@
 #include "libqaudiosource.hpp"
 #include "libqaudiosource.hxx"
 
-QAudioSource* QAudioSource_new() {
+QAudioSource* QAudioSource_New() {
     return new VirtualQAudioSource();
 }
 
-QAudioSource* QAudioSource_new2(const QAudioDevice* audioDeviceInfo) {
+QAudioSource* QAudioSource_New2(const QAudioDevice* audioDeviceInfo) {
     return new VirtualQAudioSource(*audioDeviceInfo);
 }
 
-QAudioSource* QAudioSource_new3(const QAudioFormat* format) {
+QAudioSource* QAudioSource_New3(const QAudioFormat* format) {
     return new VirtualQAudioSource(*format);
 }
 
-QAudioSource* QAudioSource_new4(const QAudioFormat* format, QObject* parent) {
+QAudioSource* QAudioSource_New4(const QAudioFormat* format, QObject* parent) {
     return new VirtualQAudioSource(*format, parent);
 }
 
-QAudioSource* QAudioSource_new5(const QAudioDevice* audioDeviceInfo, const QAudioFormat* format) {
+QAudioSource* QAudioSource_New5(const QAudioDevice* audioDeviceInfo, const QAudioFormat* format) {
     return new VirtualQAudioSource(*audioDeviceInfo, *format);
 }
 
-QAudioSource* QAudioSource_new6(const QAudioDevice* audioDeviceInfo, const QAudioFormat* format, QObject* parent) {
+QAudioSource* QAudioSource_New6(const QAudioDevice* audioDeviceInfo, const QAudioFormat* format, QObject* parent) {
     return new VirtualQAudioSource(*audioDeviceInfo, *format, parent);
 }
 

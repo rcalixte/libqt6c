@@ -12,11 +12,11 @@
 #include "libqpdfbookmarkmodel.h"
 
 QPdfBookmarkModel* q_pdfbookmarkmodel_new() {
-    return QPdfBookmarkModel_new();
+    return QPdfBookmarkModel_New();
 }
 
 QPdfBookmarkModel* q_pdfbookmarkmodel_new2(void* parent) {
-    return QPdfBookmarkModel_new2((QObject*)parent);
+    return QPdfBookmarkModel_New2((QObject*)parent);
 }
 
 const QMetaObject* q_pdfbookmarkmodel_meta_object(void* self) {

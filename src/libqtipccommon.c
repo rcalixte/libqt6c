@@ -2,23 +2,23 @@
 #include "libqtipccommon.h"
 
 QNativeIpcKey* q_nativeipckey_new() {
-    return QNativeIpcKey_new();
+    return QNativeIpcKey_New();
 }
 
 QNativeIpcKey* q_nativeipckey_new2(uint16_t type) {
-    return QNativeIpcKey_new2(type);
+    return QNativeIpcKey_New2(type);
 }
 
 QNativeIpcKey* q_nativeipckey_new3(const char* k) {
-    return QNativeIpcKey_new3(qstring(k));
+    return QNativeIpcKey_New3(qstring(k));
 }
 
 QNativeIpcKey* q_nativeipckey_new4(void* other) {
-    return QNativeIpcKey_new4((QNativeIpcKey*)other);
+    return QNativeIpcKey_New4((QNativeIpcKey*)other);
 }
 
 QNativeIpcKey* q_nativeipckey_new5(const char* k, uint16_t type) {
-    return QNativeIpcKey_new5(qstring(k), type);
+    return QNativeIpcKey_New5(qstring(k), type);
 }
 
 uint16_t q_nativeipckey_legacy_default_type_for_os() {

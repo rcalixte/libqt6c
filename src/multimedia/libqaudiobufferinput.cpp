@@ -13,19 +13,19 @@
 #include "libqaudiobufferinput.hpp"
 #include "libqaudiobufferinput.hxx"
 
-QAudioBufferInput* QAudioBufferInput_new() {
+QAudioBufferInput* QAudioBufferInput_New() {
     return new VirtualQAudioBufferInput();
 }
 
-QAudioBufferInput* QAudioBufferInput_new2(const QAudioFormat* format) {
+QAudioBufferInput* QAudioBufferInput_New2(const QAudioFormat* format) {
     return new VirtualQAudioBufferInput(*format);
 }
 
-QAudioBufferInput* QAudioBufferInput_new3(QObject* parent) {
+QAudioBufferInput* QAudioBufferInput_New3(QObject* parent) {
     return new VirtualQAudioBufferInput(parent);
 }
 
-QAudioBufferInput* QAudioBufferInput_new4(const QAudioFormat* format, QObject* parent) {
+QAudioBufferInput* QAudioBufferInput_New4(const QAudioFormat* format, QObject* parent) {
     return new VirtualQAudioBufferInput(*format, parent);
 }
 

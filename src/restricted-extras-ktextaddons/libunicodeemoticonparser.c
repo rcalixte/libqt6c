@@ -4,7 +4,7 @@
 #include "libunicodeemoticonparser.h"
 
 TextEmoticonsCore__UnicodeEmoticonParser* k_textemoticonscore__unicodeemoticonparser_new() {
-    return TextEmoticonsCore__UnicodeEmoticonParser_new();
+    return TextEmoticonsCore__UnicodeEmoticonParser_New();
 }
 
 libqt_list /* of TextEmoticonsCore__UnicodeEmoticon* */ k_textemoticonscore__unicodeemoticonparser_parse(void* self, void* o) {

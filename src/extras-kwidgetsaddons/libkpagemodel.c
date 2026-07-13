@@ -11,11 +11,11 @@
 #include "libkpagemodel.h"
 
 KPageModel* k_pagemodel_new() {
-    return KPageModel_new();
+    return KPageModel_New();
 }
 
 KPageModel* k_pagemodel_new2(void* parent) {
-    return KPageModel_new2((QObject*)parent);
+    return KPageModel_New2((QObject*)parent);
 }
 
 const QMetaObject* k_pagemodel_meta_object(void* self) {

@@ -349,7 +349,7 @@ void k_io__fileundomanager_on_object_name_changed(void* self, void (*callback)(v
 }
 
 KIO__FileUndoManager__UiInterface* k_io__fileundomanager__uiinterface_new() {
-    return KIO__FileUndoManager__UiInterface_new();
+    return KIO__FileUndoManager__UiInterface_New();
 }
 
 void k_io__fileundomanager__uiinterface_set_show_progress_info(void* self, bool b) {

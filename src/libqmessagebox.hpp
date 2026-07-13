@@ -55,15 +55,15 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QMessageBox* QMessageBox_new(QWidget* parent);
-QMessageBox* QMessageBox_new2();
-QMessageBox* QMessageBox_new3(int icon, const libqt_string title, const libqt_string text);
-QMessageBox* QMessageBox_new4(const libqt_string title, const libqt_string text, int icon, int button0, int button1, int button2);
-QMessageBox* QMessageBox_new5(int icon, const libqt_string title, const libqt_string text, int buttons);
-QMessageBox* QMessageBox_new6(int icon, const libqt_string title, const libqt_string text, int buttons, QWidget* parent);
-QMessageBox* QMessageBox_new7(int icon, const libqt_string title, const libqt_string text, int buttons, QWidget* parent, int flags);
-QMessageBox* QMessageBox_new8(const libqt_string title, const libqt_string text, int icon, int button0, int button1, int button2, QWidget* parent);
-QMessageBox* QMessageBox_new9(const libqt_string title, const libqt_string text, int icon, int button0, int button1, int button2, QWidget* parent, int f);
+QMessageBox* QMessageBox_New(QWidget* parent);
+QMessageBox* QMessageBox_New2();
+QMessageBox* QMessageBox_New3(int icon, const libqt_string title, const libqt_string text);
+QMessageBox* QMessageBox_New4(const libqt_string title, const libqt_string text, int icon, int button0, int button1, int button2);
+QMessageBox* QMessageBox_New5(int icon, const libqt_string title, const libqt_string text, int buttons);
+QMessageBox* QMessageBox_New6(int icon, const libqt_string title, const libqt_string text, int buttons, QWidget* parent);
+QMessageBox* QMessageBox_New7(int icon, const libqt_string title, const libqt_string text, int buttons, QWidget* parent, int flags);
+QMessageBox* QMessageBox_New8(const libqt_string title, const libqt_string text, int icon, int button0, int button1, int button2, QWidget* parent);
+QMessageBox* QMessageBox_New9(const libqt_string title, const libqt_string text, int icon, int button0, int button1, int button2, QWidget* parent, int f);
 QMetaObject* QMessageBox_MetaObject(const QMessageBox* self);
 void* QMessageBox_Metacast(QMessageBox* self, const char* param1);
 int QMessageBox_Metacall(QMessageBox* self, int param1, int param2, void** param3);

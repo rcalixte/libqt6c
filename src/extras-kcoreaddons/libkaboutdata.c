@@ -10,31 +10,31 @@ void k_crash_default_crash_handler(int sig) {
 }
 
 KAboutPerson* k_aboutperson_new() {
-    return KAboutPerson_new();
+    return KAboutPerson_New();
 }
 
 KAboutPerson* k_aboutperson_new2(void* other) {
-    return KAboutPerson_new2((KAboutPerson*)other);
+    return KAboutPerson_New2((KAboutPerson*)other);
 }
 
 KAboutPerson* k_aboutperson_new3(const char* name) {
-    return KAboutPerson_new3(qstring(name));
+    return KAboutPerson_New3(qstring(name));
 }
 
 KAboutPerson* k_aboutperson_new4(const char* name, const char* task) {
-    return KAboutPerson_new4(qstring(name), qstring(task));
+    return KAboutPerson_New4(qstring(name), qstring(task));
 }
 
 KAboutPerson* k_aboutperson_new5(const char* name, const char* task, const char* emailAddress) {
-    return KAboutPerson_new5(qstring(name), qstring(task), qstring(emailAddress));
+    return KAboutPerson_New5(qstring(name), qstring(task), qstring(emailAddress));
 }
 
 KAboutPerson* k_aboutperson_new6(const char* name, const char* task, const char* emailAddress, const char* webAddress) {
-    return KAboutPerson_new6(qstring(name), qstring(task), qstring(emailAddress), qstring(webAddress));
+    return KAboutPerson_New6(qstring(name), qstring(task), qstring(emailAddress), qstring(webAddress));
 }
 
 KAboutPerson* k_aboutperson_new7(const char* name, const char* task, const char* emailAddress, const char* webAddress, void* avatarUrl) {
-    return KAboutPerson_new7(qstring(name), qstring(task), qstring(emailAddress), qstring(webAddress), (QUrl*)avatarUrl);
+    return KAboutPerson_New7(qstring(name), qstring(task), qstring(emailAddress), qstring(webAddress), (QUrl*)avatarUrl);
 }
 
 void k_aboutperson_operator_assign(void* self, void* other) {
@@ -82,11 +82,11 @@ void k_aboutperson_delete(void* self) {
 }
 
 KAboutLicense* k_aboutlicense_new() {
-    return KAboutLicense_new();
+    return KAboutLicense_New();
 }
 
 KAboutLicense* k_aboutlicense_new2(void* other) {
-    return KAboutLicense_new2((KAboutLicense*)other);
+    return KAboutLicense_New2((KAboutLicense*)other);
 }
 
 void k_aboutlicense_operator_assign(void* self, void* other) {
@@ -134,35 +134,35 @@ void k_aboutlicense_delete(void* self) {
 }
 
 KAboutComponent* k_aboutcomponent_new() {
-    return KAboutComponent_new();
+    return KAboutComponent_New();
 }
 
 KAboutComponent* k_aboutcomponent_new2(const char* name, const char* description, const char* version, const char* webAddress, const char* pathToLicenseFile) {
-    return KAboutComponent_new2(qstring(name), qstring(description), qstring(version), qstring(webAddress), qstring(pathToLicenseFile));
+    return KAboutComponent_New2(qstring(name), qstring(description), qstring(version), qstring(webAddress), qstring(pathToLicenseFile));
 }
 
 KAboutComponent* k_aboutcomponent_new3(void* other) {
-    return KAboutComponent_new3((KAboutComponent*)other);
+    return KAboutComponent_New3((KAboutComponent*)other);
 }
 
 KAboutComponent* k_aboutcomponent_new4(const char* name) {
-    return KAboutComponent_new4(qstring(name));
+    return KAboutComponent_New4(qstring(name));
 }
 
 KAboutComponent* k_aboutcomponent_new5(const char* name, const char* description) {
-    return KAboutComponent_new5(qstring(name), qstring(description));
+    return KAboutComponent_New5(qstring(name), qstring(description));
 }
 
 KAboutComponent* k_aboutcomponent_new6(const char* name, const char* description, const char* version) {
-    return KAboutComponent_new6(qstring(name), qstring(description), qstring(version));
+    return KAboutComponent_New6(qstring(name), qstring(description), qstring(version));
 }
 
 KAboutComponent* k_aboutcomponent_new7(const char* name, const char* description, const char* version, const char* webAddress) {
-    return KAboutComponent_new7(qstring(name), qstring(description), qstring(version), qstring(webAddress));
+    return KAboutComponent_New7(qstring(name), qstring(description), qstring(version), qstring(webAddress));
 }
 
 KAboutComponent* k_aboutcomponent_new8(const char* name, const char* description, const char* version, const char* webAddress, int32_t licenseType) {
-    return KAboutComponent_new8(qstring(name), qstring(description), qstring(version), qstring(webAddress), licenseType);
+    return KAboutComponent_New8(qstring(name), qstring(description), qstring(version), qstring(webAddress), licenseType);
 }
 
 void k_aboutcomponent_operator_assign(void* self, void* other) {
@@ -206,43 +206,43 @@ void k_aboutcomponent_delete(void* self) {
 }
 
 KAboutData* k_aboutdata_new(const char* componentName, const char* displayName, const char* version, const char* shortDescription, int32_t licenseType) {
-    return KAboutData_new(qstring(componentName), qstring(displayName), qstring(version), qstring(shortDescription), licenseType);
+    return KAboutData_New(qstring(componentName), qstring(displayName), qstring(version), qstring(shortDescription), licenseType);
 }
 
 KAboutData* k_aboutdata_new2() {
-    return KAboutData_new2();
+    return KAboutData_New2();
 }
 
 KAboutData* k_aboutdata_new3(void* other) {
-    return KAboutData_new3((KAboutData*)other);
+    return KAboutData_New3((KAboutData*)other);
 }
 
 KAboutData* k_aboutdata_new4(const char* componentName, const char* displayName, const char* version, const char* shortDescription, int32_t licenseType, const char* copyrightStatement) {
-    return KAboutData_new4(qstring(componentName), qstring(displayName), qstring(version), qstring(shortDescription), licenseType, qstring(copyrightStatement));
+    return KAboutData_New4(qstring(componentName), qstring(displayName), qstring(version), qstring(shortDescription), licenseType, qstring(copyrightStatement));
 }
 
 KAboutData* k_aboutdata_new5(const char* componentName, const char* displayName, const char* version, const char* shortDescription, int32_t licenseType, const char* copyrightStatement, const char* otherText) {
-    return KAboutData_new5(qstring(componentName), qstring(displayName), qstring(version), qstring(shortDescription), licenseType, qstring(copyrightStatement), qstring(otherText));
+    return KAboutData_New5(qstring(componentName), qstring(displayName), qstring(version), qstring(shortDescription), licenseType, qstring(copyrightStatement), qstring(otherText));
 }
 
 KAboutData* k_aboutdata_new6(const char* componentName, const char* displayName, const char* version, const char* shortDescription, int32_t licenseType, const char* copyrightStatement, const char* otherText, const char* homePageAddress) {
-    return KAboutData_new6(qstring(componentName), qstring(displayName), qstring(version), qstring(shortDescription), licenseType, qstring(copyrightStatement), qstring(otherText), qstring(homePageAddress));
+    return KAboutData_New6(qstring(componentName), qstring(displayName), qstring(version), qstring(shortDescription), licenseType, qstring(copyrightStatement), qstring(otherText), qstring(homePageAddress));
 }
 
 KAboutData* k_aboutdata_new7(const char* componentName, const char* displayName, const char* version, const char* shortDescription, int32_t licenseType, const char* copyrightStatement, const char* otherText, const char* homePageAddress, const char* bugAddress) {
-    return KAboutData_new7(qstring(componentName), qstring(displayName), qstring(version), qstring(shortDescription), licenseType, qstring(copyrightStatement), qstring(otherText), qstring(homePageAddress), qstring(bugAddress));
+    return KAboutData_New7(qstring(componentName), qstring(displayName), qstring(version), qstring(shortDescription), licenseType, qstring(copyrightStatement), qstring(otherText), qstring(homePageAddress), qstring(bugAddress));
 }
 
 KAboutData* k_aboutdata_new8(const char* componentName) {
-    return KAboutData_new8(qstring(componentName));
+    return KAboutData_New8(qstring(componentName));
 }
 
 KAboutData* k_aboutdata_new9(const char* componentName, const char* displayName) {
-    return KAboutData_new9(qstring(componentName), qstring(displayName));
+    return KAboutData_New9(qstring(componentName), qstring(displayName));
 }
 
 KAboutData* k_aboutdata_new10(const char* componentName, const char* displayName, const char* version) {
-    return KAboutData_new10(qstring(componentName), qstring(displayName), qstring(version));
+    return KAboutData_New10(qstring(componentName), qstring(displayName), qstring(version));
 }
 
 KAboutData* k_aboutdata_application_data() {

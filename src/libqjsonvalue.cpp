@@ -9,53 +9,53 @@
 #include "libqjsonvalue.hpp"
 #include "libqjsonvalue.hxx"
 
-QJsonValue* QJsonValue_new() {
+QJsonValue* QJsonValue_New() {
     return new QJsonValue();
 }
 
-QJsonValue* QJsonValue_new2(bool b) {
+QJsonValue* QJsonValue_New2(bool b) {
     return new QJsonValue(b);
 }
 
-QJsonValue* QJsonValue_new3(double n) {
+QJsonValue* QJsonValue_New3(double n) {
     return new QJsonValue(static_cast<double>(n));
 }
 
-QJsonValue* QJsonValue_new4(int n) {
+QJsonValue* QJsonValue_New4(int n) {
     return new QJsonValue(static_cast<int>(n));
 }
 
-QJsonValue* QJsonValue_new5(long long v) {
+QJsonValue* QJsonValue_New5(long long v) {
     return new QJsonValue(static_cast<qint64>(v));
 }
 
-QJsonValue* QJsonValue_new6(const libqt_string s) {
+QJsonValue* QJsonValue_New6(const libqt_string s) {
     QString s_QString = QString::fromUtf8(s.data, s.len);
     return new QJsonValue(s_QString);
 }
 
-QJsonValue* QJsonValue_new7(libqt_string s) {
+QJsonValue* QJsonValue_New7(libqt_string s) {
     QLatin1StringView s_QLatin1StringView(s.data, s.len);
     return new QJsonValue(s_QLatin1StringView);
 }
 
-QJsonValue* QJsonValue_new8(const char* s) {
+QJsonValue* QJsonValue_New8(const char* s) {
     return new QJsonValue(s);
 }
 
-QJsonValue* QJsonValue_new9(const QJsonArray* a) {
+QJsonValue* QJsonValue_New9(const QJsonArray* a) {
     return new QJsonValue(*a);
 }
 
-QJsonValue* QJsonValue_new10(const QJsonObject* o) {
+QJsonValue* QJsonValue_New10(const QJsonObject* o) {
     return new QJsonValue(*o);
 }
 
-QJsonValue* QJsonValue_new11(const QJsonValue* other) {
+QJsonValue* QJsonValue_New11(const QJsonValue* other) {
     return new QJsonValue(*other);
 }
 
-QJsonValue* QJsonValue_new12(int param1) {
+QJsonValue* QJsonValue_New12(int param1) {
     return new QJsonValue(static_cast<QJsonValue::Type>(param1));
 }
 
@@ -203,11 +203,11 @@ void QJsonValue_Delete(QJsonValue* self) {
     delete self;
 }
 
-QJsonValueConstRef* QJsonValueConstRef_new(const QJsonValueConstRef* other) {
+QJsonValueConstRef* QJsonValueConstRef_New(const QJsonValueConstRef* other) {
     return new QJsonValueConstRef(*other);
 }
 
-QJsonValueConstRef* QJsonValueConstRef_new2(const QJsonValueConstRef* param1) {
+QJsonValueConstRef* QJsonValueConstRef_New2(const QJsonValueConstRef* param1) {
     return new QJsonValueConstRef(*param1);
 }
 
@@ -334,19 +334,19 @@ void QJsonValueConstRef_Delete(QJsonValueConstRef* self) {
     delete self;
 }
 
-QJsonValueRef* QJsonValueRef_new(const QJsonValueRef* other) {
+QJsonValueRef* QJsonValueRef_New(const QJsonValueRef* other) {
     return new QJsonValueRef(*other);
 }
 
-QJsonValueRef* QJsonValueRef_new2(const QJsonValueRef* param1) {
+QJsonValueRef* QJsonValueRef_New2(const QJsonValueRef* param1) {
     return new QJsonValueRef(*param1);
 }
 
-QJsonValueRef* QJsonValueRef_new3(QJsonArray* array, ptrdiff_t idx) {
+QJsonValueRef* QJsonValueRef_New3(QJsonArray* array, ptrdiff_t idx) {
     return new QJsonValueRef(array, (qsizetype)(idx));
 }
 
-QJsonValueRef* QJsonValueRef_new4(QJsonObject* object, ptrdiff_t idx) {
+QJsonValueRef* QJsonValueRef_New4(QJsonObject* object, ptrdiff_t idx) {
     return new QJsonValueRef(object, (qsizetype)(idx));
 }
 

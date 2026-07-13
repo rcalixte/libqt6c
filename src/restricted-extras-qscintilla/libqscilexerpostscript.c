@@ -11,11 +11,11 @@
 #include "libqscilexerpostscript.h"
 
 QsciLexerPostScript* q_scilexerpostscript_new() {
-    return QsciLexerPostScript_new();
+    return QsciLexerPostScript_New();
 }
 
 QsciLexerPostScript* q_scilexerpostscript_new2(void* parent) {
-    return QsciLexerPostScript_new2((QObject*)parent);
+    return QsciLexerPostScript_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexerpostscript_meta_object(void* self) {

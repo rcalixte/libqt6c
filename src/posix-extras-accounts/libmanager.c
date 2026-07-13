@@ -12,27 +12,27 @@
 #include "libmanager.h"
 
 Accounts__Manager* q_accounts__manager_new() {
-    return Accounts__Manager_new();
+    return Accounts__Manager_New();
 }
 
 Accounts__Manager* q_accounts__manager_new2(const char* serviceType) {
-    return Accounts__Manager_new2(qstring(serviceType));
+    return Accounts__Manager_New2(qstring(serviceType));
 }
 
 Accounts__Manager* q_accounts__manager_new3(int32_t options) {
-    return Accounts__Manager_new3(options);
+    return Accounts__Manager_New3(options);
 }
 
 Accounts__Manager* q_accounts__manager_new4(void* parent) {
-    return Accounts__Manager_new4((QObject*)parent);
+    return Accounts__Manager_New4((QObject*)parent);
 }
 
 Accounts__Manager* q_accounts__manager_new5(const char* serviceType, void* parent) {
-    return Accounts__Manager_new5(qstring(serviceType), (QObject*)parent);
+    return Accounts__Manager_New5(qstring(serviceType), (QObject*)parent);
 }
 
 Accounts__Manager* q_accounts__manager_new6(int32_t options, void* parent) {
-    return Accounts__Manager_new6(options, (QObject*)parent);
+    return Accounts__Manager_New6(options, (QObject*)parent);
 }
 
 const QMetaObject* q_accounts__manager_meta_object(void* self) {

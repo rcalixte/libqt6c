@@ -10,11 +10,11 @@
 #include "libqaccessible_base.hpp"
 #include "libqaccessible_base.hxx"
 
-QAccessible* QAccessible_new(const QAccessible* other) {
+QAccessible* QAccessible_New(const QAccessible* other) {
     return new QAccessible(*other);
 }
 
-QAccessible* QAccessible_new2(QAccessible* other) {
+QAccessible* QAccessible_New2(QAccessible* other) {
     return new QAccessible(std::move(*other));
 }
 
@@ -97,15 +97,15 @@ void QAccessible_Delete(QAccessible* self) {
     delete self;
 }
 
-QAccessible__State* QAccessible__State_new(const QAccessible__State* other) {
+QAccessible__State* QAccessible__State_New(const QAccessible__State* other) {
     return new QAccessible::State(*other);
 }
 
-QAccessible__State* QAccessible__State_new2(QAccessible__State* other) {
+QAccessible__State* QAccessible__State_New2(QAccessible__State* other) {
     return new QAccessible::State(std::move(*other));
 }
 
-QAccessible__State* QAccessible__State_new3() {
+QAccessible__State* QAccessible__State_New3() {
     return new QAccessible::State();
 }
 

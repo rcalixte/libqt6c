@@ -12,11 +12,11 @@
 #include "libqscilexerjavascript.h"
 
 QsciLexerJavaScript* q_scilexerjavascript_new() {
-    return QsciLexerJavaScript_new();
+    return QsciLexerJavaScript_New();
 }
 
 QsciLexerJavaScript* q_scilexerjavascript_new2(void* parent) {
-    return QsciLexerJavaScript_new2((QObject*)parent);
+    return QsciLexerJavaScript_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexerjavascript_meta_object(void* self) {

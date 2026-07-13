@@ -17,11 +17,11 @@
 #include "libqsctpsocket.hpp"
 #include "libqsctpsocket.hxx"
 
-QSctpSocket* QSctpSocket_new() {
+QSctpSocket* QSctpSocket_New() {
     return new VirtualQSctpSocket();
 }
 
-QSctpSocket* QSctpSocket_new2(QObject* parent) {
+QSctpSocket* QSctpSocket_New2(QObject* parent) {
     return new VirtualQSctpSocket(parent);
 }
 

@@ -21,23 +21,23 @@
 #include "libkurllabel.h"
 
 KUrlLabel* k_urllabel_new(void* parent) {
-    return KUrlLabel_new((QWidget*)parent);
+    return KUrlLabel_New((QWidget*)parent);
 }
 
 KUrlLabel* k_urllabel_new2() {
-    return KUrlLabel_new2();
+    return KUrlLabel_New2();
 }
 
 KUrlLabel* k_urllabel_new3(const char* url) {
-    return KUrlLabel_new3(qstring(url));
+    return KUrlLabel_New3(qstring(url));
 }
 
 KUrlLabel* k_urllabel_new4(const char* url, const char* text) {
-    return KUrlLabel_new4(qstring(url), qstring(text));
+    return KUrlLabel_New4(qstring(url), qstring(text));
 }
 
 KUrlLabel* k_urllabel_new5(const char* url, const char* text, void* parent) {
-    return KUrlLabel_new5(qstring(url), qstring(text), (QWidget*)parent);
+    return KUrlLabel_New5(qstring(url), qstring(text), (QWidget*)parent);
 }
 
 const QMetaObject* k_urllabel_meta_object(void* self) {

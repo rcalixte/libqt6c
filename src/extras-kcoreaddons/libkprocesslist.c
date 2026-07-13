@@ -2,19 +2,19 @@
 #include "libkprocesslist.h"
 
 KProcessList__KProcessInfo* k_processlist__kprocessinfo_new() {
-    return KProcessList__KProcessInfo_new();
+    return KProcessList__KProcessInfo_New();
 }
 
 KProcessList__KProcessInfo* k_processlist__kprocessinfo_new2(int64_t pid, const char* command, const char* user) {
-    return KProcessList__KProcessInfo_new2(pid, qstring(command), qstring(user));
+    return KProcessList__KProcessInfo_New2(pid, qstring(command), qstring(user));
 }
 
 KProcessList__KProcessInfo* k_processlist__kprocessinfo_new3(int64_t pid, const char* command, const char* name, const char* user) {
-    return KProcessList__KProcessInfo_new3(pid, qstring(command), qstring(name), qstring(user));
+    return KProcessList__KProcessInfo_New3(pid, qstring(command), qstring(name), qstring(user));
 }
 
 KProcessList__KProcessInfo* k_processlist__kprocessinfo_new4(void* other) {
-    return KProcessList__KProcessInfo_new4((KProcessList__KProcessInfo*)other);
+    return KProcessList__KProcessInfo_New4((KProcessList__KProcessInfo*)other);
 }
 
 void k_processlist__kprocessinfo_operator_assign(void* self, void* other) {

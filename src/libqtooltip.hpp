@@ -23,8 +23,8 @@ typedef struct QToolTip QToolTip;
 typedef struct QWidget QWidget;
 #endif
 
-QToolTip* QToolTip_new(const QToolTip* other);
-QToolTip* QToolTip_new2(QToolTip* other);
+QToolTip* QToolTip_New(const QToolTip* other);
+QToolTip* QToolTip_New2(QToolTip* other);
 void QToolTip_CopyAssign(QToolTip* self, QToolTip* other);
 void QToolTip_MoveAssign(QToolTip* self, QToolTip* other);
 void QToolTip_ShowText(const QPoint* pos, const libqt_string text);

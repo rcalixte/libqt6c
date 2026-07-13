@@ -2,19 +2,19 @@
 #include "libqbluetoothaddress.h"
 
 QBluetoothAddress* q_bluetoothaddress_new() {
-    return QBluetoothAddress_new();
+    return QBluetoothAddress_New();
 }
 
 QBluetoothAddress* q_bluetoothaddress_new2(uint64_t address) {
-    return QBluetoothAddress_new2(address);
+    return QBluetoothAddress_New2(address);
 }
 
 QBluetoothAddress* q_bluetoothaddress_new3(const char* address) {
-    return QBluetoothAddress_new3(qstring(address));
+    return QBluetoothAddress_New3(qstring(address));
 }
 
 QBluetoothAddress* q_bluetoothaddress_new4(void* other) {
-    return QBluetoothAddress_new4((QBluetoothAddress*)other);
+    return QBluetoothAddress_New4((QBluetoothAddress*)other);
 }
 
 void q_bluetoothaddress_operator_assign(void* self, void* other) {

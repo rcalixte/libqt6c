@@ -21,11 +21,11 @@
 #include "libqgraphicseffect.hpp"
 #include "libqgraphicseffect.hxx"
 
-QGraphicsEffect* QGraphicsEffect_new() {
+QGraphicsEffect* QGraphicsEffect_New() {
     return new VirtualQGraphicsEffect();
 }
 
-QGraphicsEffect* QGraphicsEffect_new2(QObject* parent) {
+QGraphicsEffect* QGraphicsEffect_New2(QObject* parent) {
     return new VirtualQGraphicsEffect(parent);
 }
 
@@ -773,11 +773,11 @@ void QGraphicsEffect_Delete(QGraphicsEffect* self) {
     delete self;
 }
 
-QGraphicsColorizeEffect* QGraphicsColorizeEffect_new() {
+QGraphicsColorizeEffect* QGraphicsColorizeEffect_New() {
     return new VirtualQGraphicsColorizeEffect();
 }
 
-QGraphicsColorizeEffect* QGraphicsColorizeEffect_new2(QObject* parent) {
+QGraphicsColorizeEffect* QGraphicsColorizeEffect_New2(QObject* parent) {
     return new VirtualQGraphicsColorizeEffect(parent);
 }
 
@@ -1440,11 +1440,11 @@ void QGraphicsColorizeEffect_Delete(QGraphicsColorizeEffect* self) {
     delete self;
 }
 
-QGraphicsBlurEffect* QGraphicsBlurEffect_new() {
+QGraphicsBlurEffect* QGraphicsBlurEffect_New() {
     return new VirtualQGraphicsBlurEffect();
 }
 
-QGraphicsBlurEffect* QGraphicsBlurEffect_new2(QObject* parent) {
+QGraphicsBlurEffect* QGraphicsBlurEffect_New2(QObject* parent) {
     return new VirtualQGraphicsBlurEffect(parent);
 }
 
@@ -2099,11 +2099,11 @@ void QGraphicsBlurEffect_Delete(QGraphicsBlurEffect* self) {
     delete self;
 }
 
-QGraphicsDropShadowEffect* QGraphicsDropShadowEffect_new() {
+QGraphicsDropShadowEffect* QGraphicsDropShadowEffect_New() {
     return new VirtualQGraphicsDropShadowEffect();
 }
 
-QGraphicsDropShadowEffect* QGraphicsDropShadowEffect_new2(QObject* parent) {
+QGraphicsDropShadowEffect* QGraphicsDropShadowEffect_New2(QObject* parent) {
     return new VirtualQGraphicsDropShadowEffect(parent);
 }
 
@@ -2806,11 +2806,11 @@ void QGraphicsDropShadowEffect_Delete(QGraphicsDropShadowEffect* self) {
     delete self;
 }
 
-QGraphicsOpacityEffect* QGraphicsOpacityEffect_new() {
+QGraphicsOpacityEffect* QGraphicsOpacityEffect_New() {
     return new VirtualQGraphicsOpacityEffect();
 }
 
-QGraphicsOpacityEffect* QGraphicsOpacityEffect_new2(QObject* parent) {
+QGraphicsOpacityEffect* QGraphicsOpacityEffect_New2(QObject* parent) {
     return new VirtualQGraphicsOpacityEffect(parent);
 }
 

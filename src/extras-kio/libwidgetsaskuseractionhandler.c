@@ -12,11 +12,11 @@
 #include "libwidgetsaskuseractionhandler.h"
 
 KIO__WidgetsAskUserActionHandler* k_io__widgetsaskuseractionhandler_new() {
-    return KIO__WidgetsAskUserActionHandler_new();
+    return KIO__WidgetsAskUserActionHandler_New();
 }
 
 KIO__WidgetsAskUserActionHandler* k_io__widgetsaskuseractionhandler_new2(void* parent) {
-    return KIO__WidgetsAskUserActionHandler_new2((QObject*)parent);
+    return KIO__WidgetsAskUserActionHandler_New2((QObject*)parent);
 }
 
 const QMetaObject* k_io__widgetsaskuseractionhandler_meta_object(void* self) {

@@ -53,15 +53,15 @@
 #include "libmainwindow.hpp"
 #include "libmainwindow.hxx"
 
-KParts__MainWindow* KParts__MainWindow_new(QWidget* parent) {
+KParts__MainWindow* KParts__MainWindow_New(QWidget* parent) {
     return new VirtualKPartsMainWindow(parent);
 }
 
-KParts__MainWindow* KParts__MainWindow_new2() {
+KParts__MainWindow* KParts__MainWindow_New2() {
     return new VirtualKPartsMainWindow();
 }
 
-KParts__MainWindow* KParts__MainWindow_new3(QWidget* parent, int f) {
+KParts__MainWindow* KParts__MainWindow_New3(QWidget* parent, int f) {
     return new VirtualKPartsMainWindow(parent, static_cast<Qt::WindowFlags>(f));
 }
 

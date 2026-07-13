@@ -16,7 +16,7 @@
 #include "libkcategorydrawer.hpp"
 #include "libkcategorydrawer.hxx"
 
-KCategoryDrawer* KCategoryDrawer_new(KCategorizedView* view) {
+KCategoryDrawer* KCategoryDrawer_New(KCategorizedView* view) {
     return new VirtualKCategoryDrawer(view);
 }
 

@@ -8,7 +8,7 @@
 #include "libqbackingstore.hpp"
 #include "libqbackingstore.hxx"
 
-QBackingStore* QBackingStore_new(QWindow* window) {
+QBackingStore* QBackingStore_New(QWindow* window) {
     return new QBackingStore(window);
 }
 

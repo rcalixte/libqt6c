@@ -8,11 +8,11 @@
 #include "libkzipfileentry.h"
 
 KZipFileEntry* k_zipfileentry_new(void* zip, const char* name, int access, void* date, const char* user, const char* group, const char* symlink, const char* path, int64_t start, int64_t uncompressedSize, int encoding, int64_t compressedSize) {
-    return KZipFileEntry_new((KZip*)zip, qstring(name), access, (QDateTime*)date, qstring(user), qstring(group), qstring(symlink), qstring(path), start, uncompressedSize, encoding, compressedSize);
+    return KZipFileEntry_New((KZip*)zip, qstring(name), access, (QDateTime*)date, qstring(user), qstring(group), qstring(symlink), qstring(path), start, uncompressedSize, encoding, compressedSize);
 }
 
 KZipFileEntry* k_zipfileentry_new2(void* param1) {
-    return KZipFileEntry_new2((KZipFileEntry*)param1);
+    return KZipFileEntry_New2((KZipFileEntry*)param1);
 }
 
 int32_t k_zipfileentry_encoding(void* self) {

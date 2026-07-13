@@ -5,11 +5,11 @@
 #include "libqsemaphore.hpp"
 #include "libqsemaphore.hxx"
 
-QSemaphore* QSemaphore_new() {
+QSemaphore* QSemaphore_New() {
     return new QSemaphore();
 }
 
-QSemaphore* QSemaphore_new2(int n) {
+QSemaphore* QSemaphore_New2(int n) {
     return new QSemaphore(static_cast<int>(n));
 }
 
@@ -57,23 +57,23 @@ void QSemaphore_Delete(QSemaphore* self) {
     delete self;
 }
 
-QSemaphoreReleaser* QSemaphoreReleaser_new() {
+QSemaphoreReleaser* QSemaphoreReleaser_New() {
     return new QSemaphoreReleaser();
 }
 
-QSemaphoreReleaser* QSemaphoreReleaser_new2(QSemaphore* sem) {
+QSemaphoreReleaser* QSemaphoreReleaser_New2(QSemaphore* sem) {
     return new QSemaphoreReleaser(*sem);
 }
 
-QSemaphoreReleaser* QSemaphoreReleaser_new3(QSemaphore* sem) {
+QSemaphoreReleaser* QSemaphoreReleaser_New3(QSemaphore* sem) {
     return new QSemaphoreReleaser(sem);
 }
 
-QSemaphoreReleaser* QSemaphoreReleaser_new4(QSemaphore* sem, int n) {
+QSemaphoreReleaser* QSemaphoreReleaser_New4(QSemaphore* sem, int n) {
     return new QSemaphoreReleaser(*sem, static_cast<int>(n));
 }
 
-QSemaphoreReleaser* QSemaphoreReleaser_new5(QSemaphore* sem, int n) {
+QSemaphoreReleaser* QSemaphoreReleaser_New5(QSemaphore* sem, int n) {
     return new QSemaphoreReleaser(sem, static_cast<int>(n));
 }
 

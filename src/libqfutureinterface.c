@@ -5,15 +5,15 @@
 #include "libqfutureinterface.h"
 
 QFutureInterfaceBase* q_futureinterfacebase_new() {
-    return QFutureInterfaceBase_new();
+    return QFutureInterfaceBase_New();
 }
 
 QFutureInterfaceBase* q_futureinterfacebase_new2(void* other) {
-    return QFutureInterfaceBase_new2((QFutureInterfaceBase*)other);
+    return QFutureInterfaceBase_New2((QFutureInterfaceBase*)other);
 }
 
 QFutureInterfaceBase* q_futureinterfacebase_new3(int32_t initialState) {
-    return QFutureInterfaceBase_new3(initialState);
+    return QFutureInterfaceBase_New3(initialState);
 }
 
 void q_futureinterfacebase_operator_assign(void* self, void* other) {

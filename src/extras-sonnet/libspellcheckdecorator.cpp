@@ -13,11 +13,11 @@
 #include "libspellcheckdecorator.hpp"
 #include "libspellcheckdecorator.hxx"
 
-Sonnet__SpellCheckDecorator* Sonnet__SpellCheckDecorator_new(QTextEdit* textEdit) {
+Sonnet__SpellCheckDecorator* Sonnet__SpellCheckDecorator_New(QTextEdit* textEdit) {
     return new VirtualSonnetSpellCheckDecorator(textEdit);
 }
 
-Sonnet__SpellCheckDecorator* Sonnet__SpellCheckDecorator_new2(QPlainTextEdit* textEdit) {
+Sonnet__SpellCheckDecorator* Sonnet__SpellCheckDecorator_New2(QPlainTextEdit* textEdit) {
     return new VirtualSonnetSpellCheckDecorator(textEdit);
 }
 

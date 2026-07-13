@@ -24,8 +24,8 @@ typedef struct QMetaType QMetaType;
 typedef struct QVariant QVariant;
 #endif
 
-QDBusArgument* QDBusArgument_new();
-QDBusArgument* QDBusArgument_new2(const QDBusArgument* other);
+QDBusArgument* QDBusArgument_New();
+QDBusArgument* QDBusArgument_New2(const QDBusArgument* other);
 void QDBusArgument_OperatorAssign(QDBusArgument* self, const QDBusArgument* other);
 void QDBusArgument_Swap(QDBusArgument* self, QDBusArgument* other);
 QDBusArgument* QDBusArgument_OperatorShiftLeft(QDBusArgument* self, unsigned char arg);

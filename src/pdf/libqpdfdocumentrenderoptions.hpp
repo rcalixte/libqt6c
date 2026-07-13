@@ -20,10 +20,10 @@ typedef struct QRect QRect;
 typedef struct QSize QSize;
 #endif
 
-QPdfDocumentRenderOptions* QPdfDocumentRenderOptions_new(const QPdfDocumentRenderOptions* other);
-QPdfDocumentRenderOptions* QPdfDocumentRenderOptions_new2(QPdfDocumentRenderOptions* other);
-QPdfDocumentRenderOptions* QPdfDocumentRenderOptions_new3();
-QPdfDocumentRenderOptions* QPdfDocumentRenderOptions_new4(const QPdfDocumentRenderOptions* param1);
+QPdfDocumentRenderOptions* QPdfDocumentRenderOptions_New(const QPdfDocumentRenderOptions* other);
+QPdfDocumentRenderOptions* QPdfDocumentRenderOptions_New2(QPdfDocumentRenderOptions* other);
+QPdfDocumentRenderOptions* QPdfDocumentRenderOptions_New3();
+QPdfDocumentRenderOptions* QPdfDocumentRenderOptions_New4(const QPdfDocumentRenderOptions* param1);
 void QPdfDocumentRenderOptions_CopyAssign(QPdfDocumentRenderOptions* self, QPdfDocumentRenderOptions* other);
 void QPdfDocumentRenderOptions_MoveAssign(QPdfDocumentRenderOptions* self, QPdfDocumentRenderOptions* other);
 int QPdfDocumentRenderOptions_Rotation(const QPdfDocumentRenderOptions* self);

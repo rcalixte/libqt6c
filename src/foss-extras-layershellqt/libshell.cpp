@@ -3,11 +3,11 @@
 #include "libshell.hpp"
 #include "libshell.hxx"
 
-LayerShellQt__Shell* LayerShellQt__Shell_new(const LayerShellQt__Shell* other) {
+LayerShellQt__Shell* LayerShellQt__Shell_New(const LayerShellQt__Shell* other) {
     return new LayerShellQt::Shell(*other);
 }
 
-LayerShellQt__Shell* LayerShellQt__Shell_new2(LayerShellQt__Shell* other) {
+LayerShellQt__Shell* LayerShellQt__Shell_New2(LayerShellQt__Shell* other) {
     return new LayerShellQt::Shell(std::move(*other));
 }
 

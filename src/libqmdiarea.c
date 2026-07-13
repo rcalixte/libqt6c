@@ -20,11 +20,11 @@
 #include "libqmdiarea.h"
 
 QMdiArea* q_mdiarea_new(void* parent) {
-    return QMdiArea_new((QWidget*)parent);
+    return QMdiArea_New((QWidget*)parent);
 }
 
 QMdiArea* q_mdiarea_new2() {
-    return QMdiArea_new2();
+    return QMdiArea_New2();
 }
 
 const QMetaObject* q_mdiarea_meta_object(void* self) {

@@ -18,7 +18,7 @@
 #include "libksplittercollapserbutton.h"
 
 KSplitterCollapserButton* k_splittercollapserbutton_new(void* childWidget, void* splitter) {
-    return KSplitterCollapserButton_new((QWidget*)childWidget, (QSplitter*)splitter);
+    return KSplitterCollapserButton_New((QWidget*)childWidget, (QSplitter*)splitter);
 }
 
 const QMetaObject* k_splittercollapserbutton_meta_object(void* self) {

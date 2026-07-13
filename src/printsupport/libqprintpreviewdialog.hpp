@@ -52,12 +52,12 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QPrintPreviewDialog* QPrintPreviewDialog_new(QWidget* parent);
-QPrintPreviewDialog* QPrintPreviewDialog_new2();
-QPrintPreviewDialog* QPrintPreviewDialog_new3(QPrinter* printer);
-QPrintPreviewDialog* QPrintPreviewDialog_new4(QWidget* parent, int flags);
-QPrintPreviewDialog* QPrintPreviewDialog_new5(QPrinter* printer, QWidget* parent);
-QPrintPreviewDialog* QPrintPreviewDialog_new6(QPrinter* printer, QWidget* parent, int flags);
+QPrintPreviewDialog* QPrintPreviewDialog_New(QWidget* parent);
+QPrintPreviewDialog* QPrintPreviewDialog_New2();
+QPrintPreviewDialog* QPrintPreviewDialog_New3(QPrinter* printer);
+QPrintPreviewDialog* QPrintPreviewDialog_New4(QWidget* parent, int flags);
+QPrintPreviewDialog* QPrintPreviewDialog_New5(QPrinter* printer, QWidget* parent);
+QPrintPreviewDialog* QPrintPreviewDialog_New6(QPrinter* printer, QWidget* parent, int flags);
 QMetaObject* QPrintPreviewDialog_MetaObject(const QPrintPreviewDialog* self);
 void* QPrintPreviewDialog_Metacast(QPrintPreviewDialog* self, const char* param1);
 int QPrintPreviewDialog_Metacall(QPrintPreviewDialog* self, int param1, int param2, void** param3);

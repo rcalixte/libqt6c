@@ -24,11 +24,11 @@
 #include "libqsortfilterproxymodel.hpp"
 #include "libqsortfilterproxymodel.hxx"
 
-QSortFilterProxyModel* QSortFilterProxyModel_new() {
+QSortFilterProxyModel* QSortFilterProxyModel_New() {
     return new VirtualQSortFilterProxyModel();
 }
 
-QSortFilterProxyModel* QSortFilterProxyModel_new2(QObject* parent) {
+QSortFilterProxyModel* QSortFilterProxyModel_New2(QObject* parent) {
     return new VirtualQSortFilterProxyModel(parent);
 }
 

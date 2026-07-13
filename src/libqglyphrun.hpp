@@ -21,8 +21,8 @@ typedef struct QRawFont QRawFont;
 typedef struct QRectF QRectF;
 #endif
 
-QGlyphRun* QGlyphRun_new();
-QGlyphRun* QGlyphRun_new2(const QGlyphRun* other);
+QGlyphRun* QGlyphRun_New();
+QGlyphRun* QGlyphRun_New2(const QGlyphRun* other);
 void QGlyphRun_OperatorAssign(QGlyphRun* self, const QGlyphRun* other);
 void QGlyphRun_Swap(QGlyphRun* self, QGlyphRun* other);
 QRawFont* QGlyphRun_RawFont(const QGlyphRun* self);

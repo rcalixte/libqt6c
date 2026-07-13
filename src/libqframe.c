@@ -16,15 +16,15 @@
 #include "libqframe.h"
 
 QFrame* q_frame_new(void* parent) {
-    return QFrame_new((QWidget*)parent);
+    return QFrame_New((QWidget*)parent);
 }
 
 QFrame* q_frame_new2() {
-    return QFrame_new2();
+    return QFrame_New2();
 }
 
 QFrame* q_frame_new3(void* parent, int32_t f) {
-    return QFrame_new3((QWidget*)parent, f);
+    return QFrame_New3((QWidget*)parent, f);
 }
 
 const QMetaObject* q_frame_meta_object(void* self) {

@@ -4,15 +4,15 @@
 #include "libkformat.h"
 
 KFormat* k_format_new() {
-    return KFormat_new();
+    return KFormat_New();
 }
 
 KFormat* k_format_new2(void* other) {
-    return KFormat_new2((KFormat*)other);
+    return KFormat_New2((KFormat*)other);
 }
 
 KFormat* k_format_new3(void* locale) {
-    return KFormat_new3((QLocale*)locale);
+    return KFormat_New3((QLocale*)locale);
 }
 
 void k_format_operator_assign(void* self, void* other) {

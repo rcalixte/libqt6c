@@ -8,11 +8,11 @@
 #include "libdefault_extensionfactory.h"
 
 QExtensionFactory* q_extensionfactory_new() {
-    return QExtensionFactory_new();
+    return QExtensionFactory_New();
 }
 
 QExtensionFactory* q_extensionfactory_new2(void* parent) {
-    return QExtensionFactory_new2((QExtensionManager*)parent);
+    return QExtensionFactory_New2((QExtensionManager*)parent);
 }
 
 const QMetaObject* q_extensionfactory_meta_object(void* self) {

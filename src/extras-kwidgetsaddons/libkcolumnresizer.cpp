@@ -12,11 +12,11 @@
 #include "libkcolumnresizer.hpp"
 #include "libkcolumnresizer.hxx"
 
-KColumnResizer* KColumnResizer_new() {
+KColumnResizer* KColumnResizer_New() {
     return new VirtualKColumnResizer();
 }
 
-KColumnResizer* KColumnResizer_new2(QObject* parent) {
+KColumnResizer* KColumnResizer_New2(QObject* parent) {
     return new VirtualKColumnResizer(parent);
 }
 

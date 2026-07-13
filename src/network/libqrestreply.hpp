@@ -21,7 +21,7 @@ typedef struct QNetworkReply QNetworkReply;
 typedef struct QRestReply QRestReply;
 #endif
 
-QRestReply* QRestReply_new(QNetworkReply* reply);
+QRestReply* QRestReply_New(QNetworkReply* reply);
 void QRestReply_Swap(QRestReply* self, QRestReply* other);
 QNetworkReply* QRestReply_NetworkReply(const QRestReply* self);
 QJsonDocument* QRestReply_ReadJson(QRestReply* self);

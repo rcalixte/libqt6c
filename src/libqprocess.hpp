@@ -33,9 +33,9 @@ typedef struct QProcess__UnixProcessParameters QProcess__UnixProcessParameters;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QProcessEnvironment* QProcessEnvironment_new();
-QProcessEnvironment* QProcessEnvironment_new2(int param1);
-QProcessEnvironment* QProcessEnvironment_new3(const QProcessEnvironment* other);
+QProcessEnvironment* QProcessEnvironment_New();
+QProcessEnvironment* QProcessEnvironment_New2(int param1);
+QProcessEnvironment* QProcessEnvironment_New3(const QProcessEnvironment* other);
 void QProcessEnvironment_OperatorAssign(QProcessEnvironment* self, const QProcessEnvironment* other);
 void QProcessEnvironment_Swap(QProcessEnvironment* self, QProcessEnvironment* other);
 bool QProcessEnvironment_IsEmpty(const QProcessEnvironment* self);
@@ -52,8 +52,8 @@ QProcessEnvironment* QProcessEnvironment_SystemEnvironment();
 libqt_string QProcessEnvironment_Value2(const QProcessEnvironment* self, const libqt_string name, const libqt_string defaultValue);
 void QProcessEnvironment_Delete(QProcessEnvironment* self);
 
-QProcess* QProcess_new();
-QProcess* QProcess_new2(QObject* parent);
+QProcess* QProcess_New();
+QProcess* QProcess_New2(QObject* parent);
 QMetaObject* QProcess_MetaObject(const QProcess* self);
 void* QProcess_Metacast(QProcess* self, const char* param1);
 int QProcess_Metacall(QProcess* self, int param1, int param2, void** param3);
@@ -242,10 +242,10 @@ void QProcess_Connect_ReadyReadStandardError(QProcess* self, intptr_t slot);
 void QProcess_Delete(QProcess* self);
 
 #ifndef _WIN32
-QProcess__UnixProcessParameters* QProcess__UnixProcessParameters_new(const QProcess__UnixProcessParameters* other);
+QProcess__UnixProcessParameters* QProcess__UnixProcessParameters_New(const QProcess__UnixProcessParameters* other);
 #endif
 #ifndef _WIN32
-QProcess__UnixProcessParameters* QProcess__UnixProcessParameters_new2(QProcess__UnixProcessParameters* other);
+QProcess__UnixProcessParameters* QProcess__UnixProcessParameters_New2(QProcess__UnixProcessParameters* other);
 #endif
 #ifndef _WIN32
 void QProcess__UnixProcessParameters_CopyAssign(QProcess__UnixProcessParameters* self, QProcess__UnixProcessParameters* other);

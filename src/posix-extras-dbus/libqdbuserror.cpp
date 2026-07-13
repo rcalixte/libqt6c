@@ -5,20 +5,20 @@
 #include "libqdbuserror.hpp"
 #include "libqdbuserror.hxx"
 
-QDBusError* QDBusError_new() {
+QDBusError* QDBusError_New() {
     return new QDBusError();
 }
 
-QDBusError* QDBusError_new2(const QDBusMessage* msg) {
+QDBusError* QDBusError_New2(const QDBusMessage* msg) {
     return new QDBusError(*msg);
 }
 
-QDBusError* QDBusError_new3(int error, const libqt_string message) {
+QDBusError* QDBusError_New3(int error, const libqt_string message) {
     QString message_QString = QString::fromUtf8(message.data, message.len);
     return new QDBusError(static_cast<QDBusError::ErrorType>(error), message_QString);
 }
 
-QDBusError* QDBusError_new4(const QDBusError* other) {
+QDBusError* QDBusError_New4(const QDBusError* other) {
     return new QDBusError(*other);
 }
 

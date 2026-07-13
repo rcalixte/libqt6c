@@ -51,11 +51,11 @@
 #include "libqlistview.hpp"
 #include "libqlistview.hxx"
 
-QListView* QListView_new(QWidget* parent) {
+QListView* QListView_New(QWidget* parent) {
     return new VirtualQListView(parent);
 }
 
-QListView* QListView_new2() {
+QListView* QListView_New2() {
     return new VirtualQListView();
 }
 

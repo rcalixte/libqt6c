@@ -7,11 +7,11 @@
 #include "libinlinenote.hpp"
 #include "libinlinenote.hxx"
 
-KTextEditor__InlineNote* KTextEditor__InlineNote_new(const KTextEditor__InlineNote* other) {
+KTextEditor__InlineNote* KTextEditor__InlineNote_New(const KTextEditor__InlineNote* other) {
     return new KTextEditor::InlineNote(*other);
 }
 
-KTextEditor__InlineNote* KTextEditor__InlineNote_new2(KTextEditor__InlineNote* other) {
+KTextEditor__InlineNote* KTextEditor__InlineNote_New2(KTextEditor__InlineNote* other) {
     return new KTextEditor::InlineNote(std::move(*other));
 }
 

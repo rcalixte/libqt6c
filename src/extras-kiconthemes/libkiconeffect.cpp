@@ -7,7 +7,7 @@
 #include "libkiconeffect.hpp"
 #include "libkiconeffect.hxx"
 
-KIconEffect* KIconEffect_new() {
+KIconEffect* KIconEffect_New() {
     return new KIconEffect();
 }
 

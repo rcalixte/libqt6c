@@ -19,11 +19,11 @@
 #include "libqmenubar.h"
 
 QMenuBar* q_menubar_new(void* parent) {
-    return QMenuBar_new((QWidget*)parent);
+    return QMenuBar_New((QWidget*)parent);
 }
 
 QMenuBar* q_menubar_new2() {
-    return QMenuBar_new2();
+    return QMenuBar_New2();
 }
 
 const QMetaObject* q_menubar_meta_object(void* self) {

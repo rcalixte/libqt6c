@@ -10,11 +10,11 @@
 #include "libqtimer.hpp"
 #include "libqtimer.hxx"
 
-QTimer* QTimer_new() {
+QTimer* QTimer_New() {
     return new VirtualQTimer();
 }
 
-QTimer* QTimer_new2(QObject* parent) {
+QTimer* QTimer_New2(QObject* parent) {
     return new VirtualQTimer(parent);
 }
 

@@ -37,19 +37,19 @@
 #include "libqwebenginepage.h"
 
 QWebEnginePage* q_webenginepage_new() {
-    return QWebEnginePage_new();
+    return QWebEnginePage_New();
 }
 
 QWebEnginePage* q_webenginepage_new2(void* profile) {
-    return QWebEnginePage_new2((QWebEngineProfile*)profile);
+    return QWebEnginePage_New2((QWebEngineProfile*)profile);
 }
 
 QWebEnginePage* q_webenginepage_new3(void* parent) {
-    return QWebEnginePage_new3((QObject*)parent);
+    return QWebEnginePage_New3((QObject*)parent);
 }
 
 QWebEnginePage* q_webenginepage_new4(void* profile, void* parent) {
-    return QWebEnginePage_new4((QWebEngineProfile*)profile, (QObject*)parent);
+    return QWebEnginePage_New4((QWebEngineProfile*)profile, (QObject*)parent);
 }
 
 const QMetaObject* q_webenginepage_meta_object(void* self) {

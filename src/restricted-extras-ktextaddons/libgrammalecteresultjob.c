@@ -6,11 +6,11 @@
 #include "libgrammalecteresultjob.h"
 
 TextGrammarCheck__GrammalecteResultJob* k_textgrammarcheck__grammalecteresultjob_new() {
-    return TextGrammarCheck__GrammalecteResultJob_new();
+    return TextGrammarCheck__GrammalecteResultJob_New();
 }
 
 TextGrammarCheck__GrammalecteResultJob* k_textgrammarcheck__grammalecteresultjob_new2(void* parent) {
-    return TextGrammarCheck__GrammalecteResultJob_new2((QObject*)parent);
+    return TextGrammarCheck__GrammalecteResultJob_New2((QObject*)parent);
 }
 
 const QMetaObject* k_textgrammarcheck__grammalecteresultjob_meta_object(void* self) {

@@ -8,33 +8,33 @@
 #include "libkpluginmetadata.hpp"
 #include "libkpluginmetadata.hxx"
 
-KPluginMetaData* KPluginMetaData_new() {
+KPluginMetaData* KPluginMetaData_New() {
     return new KPluginMetaData();
 }
 
-KPluginMetaData* KPluginMetaData_new2(const QPluginLoader* loader) {
+KPluginMetaData* KPluginMetaData_New2(const QPluginLoader* loader) {
     return new KPluginMetaData(*loader);
 }
 
-KPluginMetaData* KPluginMetaData_new3(const libqt_string pluginFile) {
+KPluginMetaData* KPluginMetaData_New3(const libqt_string pluginFile) {
     QString pluginFile_QString = QString::fromUtf8(pluginFile.data, pluginFile.len);
     return new KPluginMetaData(pluginFile_QString);
 }
 
-KPluginMetaData* KPluginMetaData_new4(const QJsonObject* metaData, const libqt_string fileName) {
+KPluginMetaData* KPluginMetaData_New4(const QJsonObject* metaData, const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new KPluginMetaData(*metaData, fileName_QString);
 }
 
-KPluginMetaData* KPluginMetaData_new5(const KPluginMetaData* param1) {
+KPluginMetaData* KPluginMetaData_New5(const KPluginMetaData* param1) {
     return new KPluginMetaData(*param1);
 }
 
-KPluginMetaData* KPluginMetaData_new6(const QPluginLoader* loader, int options) {
+KPluginMetaData* KPluginMetaData_New6(const QPluginLoader* loader, int options) {
     return new KPluginMetaData(*loader, static_cast<KPluginMetaData::KPluginMetaDataOptions>(options));
 }
 
-KPluginMetaData* KPluginMetaData_new7(const libqt_string pluginFile, int options) {
+KPluginMetaData* KPluginMetaData_New7(const libqt_string pluginFile, int options) {
     QString pluginFile_QString = QString::fromUtf8(pluginFile.data, pluginFile.len);
     return new KPluginMetaData(pluginFile_QString, static_cast<KPluginMetaData::KPluginMetaDataOptions>(options));
 }

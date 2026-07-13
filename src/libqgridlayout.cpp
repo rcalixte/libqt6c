@@ -16,11 +16,11 @@
 #include "libqgridlayout.hpp"
 #include "libqgridlayout.hxx"
 
-QGridLayout* QGridLayout_new(QWidget* parent) {
+QGridLayout* QGridLayout_New(QWidget* parent) {
     return new VirtualQGridLayout(parent);
 }
 
-QGridLayout* QGridLayout_new2() {
+QGridLayout* QGridLayout_New2() {
     return new VirtualQGridLayout();
 }
 

@@ -25,28 +25,28 @@ typedef struct QTimerEvent QTimerEvent;
 #endif
 
 #ifdef __linux__
-KSelectionOwner* KSelectionOwner_new(xcb_atom_t selection);
+KSelectionOwner* KSelectionOwner_New(xcb_atom_t selection);
 #endif
-KSelectionOwner* KSelectionOwner_new2(const char* selection);
+KSelectionOwner* KSelectionOwner_New2(const char* selection);
 #ifdef __linux__
-KSelectionOwner* KSelectionOwner_new3(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root);
-#endif
-#ifdef __linux__
-KSelectionOwner* KSelectionOwner_new4(const char* selection, xcb_connection_t* c, xcb_window_t root);
+KSelectionOwner* KSelectionOwner_New3(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root);
 #endif
 #ifdef __linux__
-KSelectionOwner* KSelectionOwner_new5(xcb_atom_t selection, int screen);
+KSelectionOwner* KSelectionOwner_New4(const char* selection, xcb_connection_t* c, xcb_window_t root);
 #endif
 #ifdef __linux__
-KSelectionOwner* KSelectionOwner_new6(xcb_atom_t selection, int screen, QObject* parent);
-#endif
-KSelectionOwner* KSelectionOwner_new7(const char* selection, int screen);
-KSelectionOwner* KSelectionOwner_new8(const char* selection, int screen, QObject* parent);
-#ifdef __linux__
-KSelectionOwner* KSelectionOwner_new9(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root, QObject* parent);
+KSelectionOwner* KSelectionOwner_New5(xcb_atom_t selection, int screen);
 #endif
 #ifdef __linux__
-KSelectionOwner* KSelectionOwner_new10(const char* selection, xcb_connection_t* c, xcb_window_t root, QObject* parent);
+KSelectionOwner* KSelectionOwner_New6(xcb_atom_t selection, int screen, QObject* parent);
+#endif
+KSelectionOwner* KSelectionOwner_New7(const char* selection, int screen);
+KSelectionOwner* KSelectionOwner_New8(const char* selection, int screen, QObject* parent);
+#ifdef __linux__
+KSelectionOwner* KSelectionOwner_New9(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root, QObject* parent);
+#endif
+#ifdef __linux__
+KSelectionOwner* KSelectionOwner_New10(const char* selection, xcb_connection_t* c, xcb_window_t root, QObject* parent);
 #endif
 QMetaObject* KSelectionOwner_MetaObject(const KSelectionOwner* self);
 void* KSelectionOwner_Metacast(KSelectionOwner* self, const char* param1);

@@ -10,27 +10,27 @@
 #include "libapplicationlauncherjob.h"
 
 KIO__ApplicationLauncherJob* k_io__applicationlauncherjob_new(void* serviceAction) {
-    return KIO__ApplicationLauncherJob_new((KServiceAction*)serviceAction);
+    return KIO__ApplicationLauncherJob_New((KServiceAction*)serviceAction);
 }
 
 KIO__ApplicationLauncherJob* k_io__applicationlauncherjob_new2(void* desktopFileAction) {
-    return KIO__ApplicationLauncherJob_new2((KDesktopFileAction*)desktopFileAction);
+    return KIO__ApplicationLauncherJob_New2((KDesktopFileAction*)desktopFileAction);
 }
 
 KIO__ApplicationLauncherJob* k_io__applicationlauncherjob_new3() {
-    return KIO__ApplicationLauncherJob_new3();
+    return KIO__ApplicationLauncherJob_New3();
 }
 
 KIO__ApplicationLauncherJob* k_io__applicationlauncherjob_new4(void* serviceAction, void* parent) {
-    return KIO__ApplicationLauncherJob_new4((KServiceAction*)serviceAction, (QObject*)parent);
+    return KIO__ApplicationLauncherJob_New4((KServiceAction*)serviceAction, (QObject*)parent);
 }
 
 KIO__ApplicationLauncherJob* k_io__applicationlauncherjob_new5(void* desktopFileAction, void* parent) {
-    return KIO__ApplicationLauncherJob_new5((KDesktopFileAction*)desktopFileAction, (QObject*)parent);
+    return KIO__ApplicationLauncherJob_New5((KDesktopFileAction*)desktopFileAction, (QObject*)parent);
 }
 
 KIO__ApplicationLauncherJob* k_io__applicationlauncherjob_new6(void* parent) {
-    return KIO__ApplicationLauncherJob_new6((QObject*)parent);
+    return KIO__ApplicationLauncherJob_New6((QObject*)parent);
 }
 
 void k_io__applicationlauncherjob_set_urls(void* self, libqt_list /* of QUrl* */ urls) {

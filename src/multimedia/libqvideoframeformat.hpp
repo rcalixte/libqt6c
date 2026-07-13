@@ -20,9 +20,9 @@ typedef struct QSize QSize;
 typedef struct QVideoFrameFormat QVideoFrameFormat;
 #endif
 
-QVideoFrameFormat* QVideoFrameFormat_new();
-QVideoFrameFormat* QVideoFrameFormat_new2(const QSize* size, int pixelFormat);
-QVideoFrameFormat* QVideoFrameFormat_new3(const QVideoFrameFormat* format);
+QVideoFrameFormat* QVideoFrameFormat_New();
+QVideoFrameFormat* QVideoFrameFormat_New2(const QSize* size, int pixelFormat);
+QVideoFrameFormat* QVideoFrameFormat_New3(const QVideoFrameFormat* format);
 void QVideoFrameFormat_Swap(QVideoFrameFormat* self, QVideoFrameFormat* other);
 void QVideoFrameFormat_Detach(QVideoFrameFormat* self);
 void QVideoFrameFormat_OperatorAssign(QVideoFrameFormat* self, const QVideoFrameFormat* format);

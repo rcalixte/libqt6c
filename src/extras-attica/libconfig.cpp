@@ -4,11 +4,11 @@
 #include "libconfig.hpp"
 #include "libconfig.hxx"
 
-Attica__Config* Attica__Config_new() {
+Attica__Config* Attica__Config_New() {
     return new Attica::Config();
 }
 
-Attica__Config* Attica__Config_new2(const Attica__Config* other) {
+Attica__Config* Attica__Config_New2(const Attica__Config* other) {
     return new Attica::Config(*other);
 }
 

@@ -67,12 +67,12 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QUndoView* QUndoView_new(QWidget* parent);
-QUndoView* QUndoView_new2();
-QUndoView* QUndoView_new3(QUndoStack* stack);
-QUndoView* QUndoView_new4(QUndoGroup* group);
-QUndoView* QUndoView_new5(QUndoStack* stack, QWidget* parent);
-QUndoView* QUndoView_new6(QUndoGroup* group, QWidget* parent);
+QUndoView* QUndoView_New(QWidget* parent);
+QUndoView* QUndoView_New2();
+QUndoView* QUndoView_New3(QUndoStack* stack);
+QUndoView* QUndoView_New4(QUndoGroup* group);
+QUndoView* QUndoView_New5(QUndoStack* stack, QWidget* parent);
+QUndoView* QUndoView_New6(QUndoGroup* group, QWidget* parent);
 QMetaObject* QUndoView_MetaObject(const QUndoView* self);
 void* QUndoView_Metacast(QUndoView* self, const char* param1);
 int QUndoView_Metacall(QUndoView* self, int param1, int param2, void** param3);

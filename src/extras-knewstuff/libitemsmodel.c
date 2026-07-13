@@ -14,11 +14,11 @@
 #include "libitemsmodel.h"
 
 KNSCore__ItemsModel* k_nscore__itemsmodel_new(void* engine) {
-    return KNSCore__ItemsModel_new((KNSCore__EngineBase*)engine);
+    return KNSCore__ItemsModel_New((KNSCore__EngineBase*)engine);
 }
 
 KNSCore__ItemsModel* k_nscore__itemsmodel_new2(void* engine, void* parent) {
-    return KNSCore__ItemsModel_new2((KNSCore__EngineBase*)engine, (QObject*)parent);
+    return KNSCore__ItemsModel_New2((KNSCore__EngineBase*)engine, (QObject*)parent);
 }
 
 const QMetaObject* k_nscore__itemsmodel_meta_object(void* self) {

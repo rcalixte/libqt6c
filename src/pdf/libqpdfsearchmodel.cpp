@@ -24,11 +24,11 @@
 #include "libqpdfsearchmodel.hpp"
 #include "libqpdfsearchmodel.hxx"
 
-QPdfSearchModel* QPdfSearchModel_new() {
+QPdfSearchModel* QPdfSearchModel_New() {
     return new VirtualQPdfSearchModel();
 }
 
-QPdfSearchModel* QPdfSearchModel_new2(QObject* parent) {
+QPdfSearchModel* QPdfSearchModel_New2(QObject* parent) {
     return new VirtualQPdfSearchModel(parent);
 }
 

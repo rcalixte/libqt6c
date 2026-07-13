@@ -59,10 +59,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QTermWidget* QTermWidget_new(QWidget* parent);
-QTermWidget* QTermWidget_new2(int startnow);
-QTermWidget* QTermWidget_new3();
-QTermWidget* QTermWidget_new4(int startnow, QWidget* parent);
+QTermWidget* QTermWidget_New(QWidget* parent);
+QTermWidget* QTermWidget_New2(int startnow);
+QTermWidget* QTermWidget_New3();
+QTermWidget* QTermWidget_New4(int startnow, QWidget* parent);
 QMetaObject* QTermWidget_MetaObject(const QTermWidget* self);
 void* QTermWidget_Metacast(QTermWidget* self, const char* param1);
 int QTermWidget_Metacall(QTermWidget* self, int param1, int param2, void** param3);

@@ -39,8 +39,8 @@ struct pair_double_qvariant {
 };
 #endif
 
-QVariantAnimation* QVariantAnimation_new();
-QVariantAnimation* QVariantAnimation_new2(QObject* parent);
+QVariantAnimation* QVariantAnimation_New();
+QVariantAnimation* QVariantAnimation_New2(QObject* parent);
 QMetaObject* QVariantAnimation_MetaObject(const QVariantAnimation* self);
 void* QVariantAnimation_Metacast(QVariantAnimation* self, const char* param1);
 int QVariantAnimation_Metacall(QVariantAnimation* self, int param1, int param2, void** param3);

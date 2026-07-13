@@ -7,7 +7,7 @@
 #include "libwriterplugin.h"
 
 KFileMetaData__WriterPlugin* k_filemetadata__writerplugin_new(void* parent) {
-    return KFileMetaData__WriterPlugin_new((QObject*)parent);
+    return KFileMetaData__WriterPlugin_New((QObject*)parent);
 }
 
 const QMetaObject* k_filemetadata__writerplugin_meta_object(void* self) {

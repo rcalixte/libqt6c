@@ -20,8 +20,8 @@ typedef struct QDBusMetaType QDBusMetaType;
 typedef struct QMetaType QMetaType;
 #endif
 
-QDBusMetaType* QDBusMetaType_new(const QDBusMetaType* other);
-QDBusMetaType* QDBusMetaType_new2(QDBusMetaType* other);
+QDBusMetaType* QDBusMetaType_New(const QDBusMetaType* other);
+QDBusMetaType* QDBusMetaType_New2(QDBusMetaType* other);
 void QDBusMetaType_CopyAssign(QDBusMetaType* self, QDBusMetaType* other);
 void QDBusMetaType_MoveAssign(QDBusMetaType* self, QDBusMetaType* other);
 void QDBusMetaType_RegisterMarshallOperators(QMetaType* typeId, intptr_t param2, intptr_t param3);

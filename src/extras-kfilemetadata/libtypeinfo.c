@@ -2,15 +2,15 @@
 #include "libtypeinfo.h"
 
 KFileMetaData__TypeInfo* k_filemetadata__typeinfo_new() {
-    return KFileMetaData__TypeInfo_new();
+    return KFileMetaData__TypeInfo_New();
 }
 
 KFileMetaData__TypeInfo* k_filemetadata__typeinfo_new2(int32_t type) {
-    return KFileMetaData__TypeInfo_new2(type);
+    return KFileMetaData__TypeInfo_New2(type);
 }
 
 KFileMetaData__TypeInfo* k_filemetadata__typeinfo_new3(void* ti) {
-    return KFileMetaData__TypeInfo_new3((KFileMetaData__TypeInfo*)ti);
+    return KFileMetaData__TypeInfo_New3((KFileMetaData__TypeInfo*)ti);
 }
 
 void k_filemetadata__typeinfo_operator_assign(void* self, void* rhs) {

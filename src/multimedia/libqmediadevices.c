@@ -8,11 +8,11 @@
 #include "libqmediadevices.h"
 
 QMediaDevices* q_mediadevices_new() {
-    return QMediaDevices_new();
+    return QMediaDevices_New();
 }
 
 QMediaDevices* q_mediadevices_new2(void* parent) {
-    return QMediaDevices_new2((QObject*)parent);
+    return QMediaDevices_New2((QObject*)parent);
 }
 
 const QMetaObject* q_mediadevices_meta_object(void* self) {

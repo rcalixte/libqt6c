@@ -4,19 +4,19 @@
 #include "libqsslellipticcurve.hpp"
 #include "libqsslellipticcurve.hxx"
 
-QSslEllipticCurve* QSslEllipticCurve_new(const QSslEllipticCurve* other) {
+QSslEllipticCurve* QSslEllipticCurve_New(const QSslEllipticCurve* other) {
     return new QSslEllipticCurve(*other);
 }
 
-QSslEllipticCurve* QSslEllipticCurve_new2(QSslEllipticCurve* other) {
+QSslEllipticCurve* QSslEllipticCurve_New2(QSslEllipticCurve* other) {
     return new QSslEllipticCurve(std::move(*other));
 }
 
-QSslEllipticCurve* QSslEllipticCurve_new3() {
+QSslEllipticCurve* QSslEllipticCurve_New3() {
     return new QSslEllipticCurve();
 }
 
-QSslEllipticCurve* QSslEllipticCurve_new4(const QSslEllipticCurve* param1) {
+QSslEllipticCurve* QSslEllipticCurve_New4(const QSslEllipticCurve* param1) {
     return new QSslEllipticCurve(*param1);
 }
 

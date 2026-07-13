@@ -2,19 +2,19 @@
 #include "libqchar.h"
 
 QLatin1Char* q_latin1char_new(void* other) {
-    return QLatin1Char_new((QLatin1Char*)other);
+    return QLatin1Char_New((QLatin1Char*)other);
 }
 
 QLatin1Char* q_latin1char_new2(void* other) {
-    return QLatin1Char_new2((QLatin1Char*)other);
+    return QLatin1Char_New2((QLatin1Char*)other);
 }
 
 QLatin1Char* q_latin1char_new3(char c) {
-    return QLatin1Char_new3(c);
+    return QLatin1Char_New3(c);
 }
 
 QLatin1Char* q_latin1char_new4(void* param1) {
-    return QLatin1Char_new4((QLatin1Char*)param1);
+    return QLatin1Char_New4((QLatin1Char*)param1);
 }
 
 void q_latin1char_copy_assign(void* self, void* other) {
@@ -34,55 +34,55 @@ void q_latin1char_delete(void* self) {
 }
 
 QChar* q_char_new(void* other) {
-    return QChar_new((QChar*)other);
+    return QChar_New((QChar*)other);
 }
 
 QChar* q_char_new2(void* other) {
-    return QChar_new2((QChar*)other);
+    return QChar_New2((QChar*)other);
 }
 
 QChar* q_char_new3() {
-    return QChar_new3();
+    return QChar_New3();
 }
 
 QChar* q_char_new4(uint16_t rc) {
-    return QChar_new4(rc);
+    return QChar_New4(rc);
 }
 
 QChar* q_char_new5(unsigned char c, unsigned char r) {
-    return QChar_new5(c, r);
+    return QChar_New5(c, r);
 }
 
 QChar* q_char_new6(short rc) {
-    return QChar_new6(rc);
+    return QChar_New6(rc);
 }
 
 QChar* q_char_new7(uint32_t rc) {
-    return QChar_new7(rc);
+    return QChar_New7(rc);
 }
 
 QChar* q_char_new8(int rc) {
-    return QChar_new8(rc);
+    return QChar_New8(rc);
 }
 
 QChar* q_char_new9(int32_t s) {
-    return QChar_new9(s);
+    return QChar_New9(s);
 }
 
 QChar* q_char_new10(void* ch) {
-    return QChar_new10((QLatin1Char*)ch);
+    return QChar_New10((QLatin1Char*)ch);
 }
 
 QChar* q_char_new11(char c) {
-    return QChar_new11(c);
+    return QChar_New11(c);
 }
 
 QChar* q_char_new12(unsigned char c) {
-    return QChar_new12(c);
+    return QChar_New12(c);
 }
 
 QChar* q_char_new13(void* param1) {
-    return QChar_new13((QChar*)param1);
+    return QChar_New13((QChar*)param1);
 }
 
 void q_char_copy_assign(void* self, void* other) {

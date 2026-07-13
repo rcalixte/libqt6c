@@ -46,19 +46,19 @@
 #include "libqchartview.hpp"
 #include "libqchartview.hxx"
 
-QChartView* QChartView_new(QWidget* parent) {
+QChartView* QChartView_New(QWidget* parent) {
     return new VirtualQChartView(parent);
 }
 
-QChartView* QChartView_new2() {
+QChartView* QChartView_New2() {
     return new VirtualQChartView();
 }
 
-QChartView* QChartView_new3(QChart* chart) {
+QChartView* QChartView_New3(QChart* chart) {
     return new VirtualQChartView(chart);
 }
 
-QChartView* QChartView_new4(QChart* chart, QWidget* parent) {
+QChartView* QChartView_New4(QChart* chart, QWidget* parent) {
     return new VirtualQChartView(chart, parent);
 }
 

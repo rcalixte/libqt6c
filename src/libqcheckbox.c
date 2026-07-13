@@ -16,19 +16,19 @@
 #include "libqcheckbox.h"
 
 QCheckBox* q_checkbox_new(void* parent) {
-    return QCheckBox_new((QWidget*)parent);
+    return QCheckBox_New((QWidget*)parent);
 }
 
 QCheckBox* q_checkbox_new2() {
-    return QCheckBox_new2();
+    return QCheckBox_New2();
 }
 
 QCheckBox* q_checkbox_new3(const char* text) {
-    return QCheckBox_new3(qstring(text));
+    return QCheckBox_New3(qstring(text));
 }
 
 QCheckBox* q_checkbox_new4(const char* text, void* parent) {
-    return QCheckBox_new4(qstring(text), (QWidget*)parent);
+    return QCheckBox_New4(qstring(text), (QWidget*)parent);
 }
 
 const QMetaObject* q_checkbox_meta_object(void* self) {

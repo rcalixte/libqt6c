@@ -12,7 +12,7 @@
 #include "libkcountryflagemojiiconengine.hpp"
 #include "libkcountryflagemojiiconengine.hxx"
 
-KCountryFlagEmojiIconEngine* KCountryFlagEmojiIconEngine_new(const libqt_string regionOrCountry) {
+KCountryFlagEmojiIconEngine* KCountryFlagEmojiIconEngine_New(const libqt_string regionOrCountry) {
     QString regionOrCountry_QString = QString::fromUtf8(regionOrCountry.data, regionOrCountry.len);
     return new VirtualKCountryFlagEmojiIconEngine(regionOrCountry_QString);
 }

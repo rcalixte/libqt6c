@@ -20,7 +20,7 @@ typedef struct QDesignerFormEditorInterface QDesignerFormEditorInterface;
 typedef struct QDesignerFormEditorPluginInterface QDesignerFormEditorPluginInterface;
 #endif
 
-QDesignerFormEditorPluginInterface* QDesignerFormEditorPluginInterface_new();
+QDesignerFormEditorPluginInterface* QDesignerFormEditorPluginInterface_New();
 bool QDesignerFormEditorPluginInterface_IsInitialized(const QDesignerFormEditorPluginInterface* self);
 void QDesignerFormEditorPluginInterface_Initialize(QDesignerFormEditorPluginInterface* self, QDesignerFormEditorInterface* core);
 QAction* QDesignerFormEditorPluginInterface_Action(const QDesignerFormEditorPluginInterface* self);

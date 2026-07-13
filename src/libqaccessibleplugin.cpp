@@ -11,11 +11,11 @@
 #include "libqaccessibleplugin.hpp"
 #include "libqaccessibleplugin.hxx"
 
-QAccessiblePlugin* QAccessiblePlugin_new() {
+QAccessiblePlugin* QAccessiblePlugin_New() {
     return new VirtualQAccessiblePlugin();
 }
 
-QAccessiblePlugin* QAccessiblePlugin_new2(QObject* parent) {
+QAccessiblePlugin* QAccessiblePlugin_New2(QObject* parent) {
     return new VirtualQAccessiblePlugin(parent);
 }
 

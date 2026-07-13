@@ -27,11 +27,11 @@
 #include "libqfilesystemmodel.hpp"
 #include "libqfilesystemmodel.hxx"
 
-QFileSystemModel* QFileSystemModel_new() {
+QFileSystemModel* QFileSystemModel_New() {
     return new VirtualQFileSystemModel();
 }
 
-QFileSystemModel* QFileSystemModel_new2(QObject* parent) {
+QFileSystemModel* QFileSystemModel_New2(QObject* parent) {
     return new VirtualQFileSystemModel(parent);
 }
 

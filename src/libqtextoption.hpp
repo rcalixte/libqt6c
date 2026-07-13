@@ -23,9 +23,9 @@ typedef struct QTextOption QTextOption;
 typedef struct QTextOption__Tab QTextOption__Tab;
 #endif
 
-QTextOption* QTextOption_new();
-QTextOption* QTextOption_new2(int alignment);
-QTextOption* QTextOption_new3(const QTextOption* o);
+QTextOption* QTextOption_New();
+QTextOption* QTextOption_New2(int alignment);
+QTextOption* QTextOption_New3(const QTextOption* o);
 void QTextOption_OperatorAssign(QTextOption* self, const QTextOption* o);
 void QTextOption_SetAlignment(QTextOption* self, int alignment);
 int QTextOption_Alignment(const QTextOption* self);
@@ -45,11 +45,11 @@ void QTextOption_SetUseDesignMetrics(QTextOption* self, bool b);
 bool QTextOption_UseDesignMetrics(const QTextOption* self);
 void QTextOption_Delete(QTextOption* self);
 
-QTextOption__Tab* QTextOption__Tab_new(const QTextOption__Tab* other);
-QTextOption__Tab* QTextOption__Tab_new2(QTextOption__Tab* other);
-QTextOption__Tab* QTextOption__Tab_new3();
-QTextOption__Tab* QTextOption__Tab_new4(double pos, int tabType);
-QTextOption__Tab* QTextOption__Tab_new5(double pos, int tabType, QChar* delim);
+QTextOption__Tab* QTextOption__Tab_New(const QTextOption__Tab* other);
+QTextOption__Tab* QTextOption__Tab_New2(QTextOption__Tab* other);
+QTextOption__Tab* QTextOption__Tab_New3();
+QTextOption__Tab* QTextOption__Tab_New4(double pos, int tabType);
+QTextOption__Tab* QTextOption__Tab_New5(double pos, int tabType, QChar* delim);
 void QTextOption__Tab_CopyAssign(QTextOption__Tab* self, QTextOption__Tab* other);
 void QTextOption__Tab_MoveAssign(QTextOption__Tab* self, QTextOption__Tab* other);
 bool QTextOption__Tab_OperatorEqual(const QTextOption__Tab* self, const QTextOption__Tab* other);

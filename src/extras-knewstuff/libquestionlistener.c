@@ -7,11 +7,11 @@
 #include "libquestionlistener.h"
 
 KNSCore__QuestionListener* k_nscore__questionlistener_new() {
-    return KNSCore__QuestionListener_new();
+    return KNSCore__QuestionListener_New();
 }
 
 KNSCore__QuestionListener* k_nscore__questionlistener_new2(void* parent) {
-    return KNSCore__QuestionListener_new2((QObject*)parent);
+    return KNSCore__QuestionListener_New2((QObject*)parent);
 }
 
 const QMetaObject* k_nscore__questionlistener_meta_object(void* self) {

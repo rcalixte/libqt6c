@@ -41,30 +41,30 @@
 #include "libqpushbutton.hpp"
 #include "libqpushbutton.hxx"
 
-QPushButton* QPushButton_new(QWidget* parent) {
+QPushButton* QPushButton_New(QWidget* parent) {
     return new VirtualQPushButton(parent);
 }
 
-QPushButton* QPushButton_new2() {
+QPushButton* QPushButton_New2() {
     return new VirtualQPushButton();
 }
 
-QPushButton* QPushButton_new3(const libqt_string text) {
+QPushButton* QPushButton_New3(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQPushButton(text_QString);
 }
 
-QPushButton* QPushButton_new4(const QIcon* icon, const libqt_string text) {
+QPushButton* QPushButton_New4(const QIcon* icon, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQPushButton(*icon, text_QString);
 }
 
-QPushButton* QPushButton_new5(const libqt_string text, QWidget* parent) {
+QPushButton* QPushButton_New5(const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQPushButton(text_QString, parent);
 }
 
-QPushButton* QPushButton_new6(const QIcon* icon, const libqt_string text, QWidget* parent) {
+QPushButton* QPushButton_New6(const QIcon* icon, const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQPushButton(*icon, text_QString, parent);
 }
