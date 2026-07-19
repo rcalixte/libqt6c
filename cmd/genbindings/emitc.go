@@ -210,8 +210,8 @@ func (cfs *cFileState) getPageUrl(pageType PageType, pageName, cmdURL, className
 		}
 	}
 
-	pageName = strings.ReplaceAll(pageName, "__", "-")
-	pageName = strings.ReplaceAll(pageName, "_", "-")
+	replacer := strings.NewReplacer("__", "-", "_", "-")
+	pageName = replacer.Replace(pageName)
 
 	switch pageType {
 	case QtPage:
@@ -504,8 +504,8 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 	}
 
 	if strings.Contains(ret, "::") && !fullEnumName {
-		ret = strings.ReplaceAll(ret, "::", "__")
-		ret = strings.ReplaceAll(ret, "Qt__", "")
+		replacer := strings.NewReplacer("::", "__", "Qt::", "")
+		ret = replacer.Replace(ret)
 	}
 
 	if ret == "" {
@@ -585,11 +585,11 @@ func (p CppParameter) returnAllocComment(cfs *cFileState, returnType string) str
 			freeLoop += "\n/// }"
 		}
 
-		uncomment := strings.NewReplacer("/*", "", "*/", "")
+		replacer := strings.NewReplacer("/*", "", "*/", "", "  ", " ")
 
 		return "\n/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:" +
 			"\n/// ```c\n/// // Example for freeing the returned map of type:" +
-			"\n/// // " + strings.TrimSpace(strings.ReplaceAll(uncomment.Replace(p.RenderTypeC(cfs, true, true, true)), "  ", " ")) +
+			"\n/// // " + replacer.Replace(strings.TrimSpace(replacer.Replace(p.RenderTypeC(cfs, true, true, true)))) +
 			freeLoop +
 			"\n/// free(map" + deRef + "keys);" +
 			"\n/// free(map" + deRef + "values);" +
@@ -622,7 +622,10 @@ func (p CppParameter) renderReturnTypeC(cfs *cFileState, isSlot, includeContaine
 		ret = strings.ReplaceAll(ret, "::", "__")
 	}
 
-	maybeConst := ifv(p.Const && !p.IsFunctionPointer && !strings.HasPrefix(ret, "const ") && !strings.HasPrefix(ret, "libqt"), "const ", "")
+	maybeConst := ifv(p.Const && !p.IsFunctionPointer && !strings.HasPrefix(ret, "const ") &&
+		!strings.HasPrefix(ret, "libqt") && !strings.HasPrefix(ret, "pair"),
+		"const ",
+		"")
 
 	if strings.HasPrefix(ret, "const int") {
 		ret = strings.TrimPrefix(ret, "const ")
@@ -640,8 +643,8 @@ func (p CppParameter) renderReturnTypeC(cfs *cFileState, isSlot, includeContaine
 		} else if p.ParameterType == "QByteArray" {
 			ret = "libqt_string"
 		} else if !cfs.isC {
-			uncomment := strings.NewReplacer("/*", "", "*/", "")
-			ret = strings.TrimSpace(strings.ReplaceAll(uncomment.Replace(ret), "  ", " "))
+			replacer := strings.NewReplacer("/*", "", "*/", "", "  ", " ")
+			ret = replacer.Replace(strings.TrimSpace(replacer.Replace(ret)))
 		}
 	}
 	return maybeConst + ret
@@ -737,10 +740,10 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 
 		if p.IsFunctionPointer {
 			fParams := make([]string, 0, len(p.FunctionPointer.Parameters))
-			uncomment := strings.NewReplacer("/*", "", "*/", "")
+			replacer := strings.NewReplacer("/*", "", "*/", "", "  ", " ")
 
 			for i, p := range p.FunctionPointer.Parameters {
-				fParam := strings.TrimSpace(strings.ReplaceAll(uncomment.Replace(p.RenderTypeC(cfs, false, true, true)), "  ", " "))
+				fParam := replacer.Replace(strings.TrimSpace(replacer.Replace(p.RenderTypeC(cfs, false, true, true))))
 				fParams = append(fParams, fParam+" param"+strconv.Itoa(i+1))
 			}
 			pType = p.FunctionPointer.ReturnType.renderReturnTypeC(cfs, isSlot, false) + " func(" + strings.Join(fParams, ", ") + ")"
@@ -848,7 +851,7 @@ type cFileState struct {
 
 func (cfs *cFileState) emitReturnComment(rt CppParameter) string {
 	var returnComment string
-	uncomment := strings.NewReplacer("/*", "", "*/", "")
+	replacer := strings.NewReplacer("/*", "", "*/", "", "  ", " ")
 
 	if rt.IsKnownEnum() {
 		maybeDetail := ifv(rt.IsStdOptional, " (Returns -1 for an invalid value)", "")
@@ -866,14 +869,14 @@ func (cfs *cFileState) emitReturnComment(rt CppParameter) string {
 			returnComment = "/// @return libqt_list of enum " + cabiEnumClassName(t.ParameterType)
 		} else {
 			ret := rt.RenderTypeC(cfs, true, true, true)
-			returnComment = ifv(ret == "const char**", "", "/// @return "+strings.TrimSpace(strings.ReplaceAll(uncomment.Replace(ret), "  ", " ")))
+			returnComment = ifv(ret == "const char**", "", "/// @return "+replacer.Replace(replacer.Replace(strings.TrimSpace(replacer.Replace(ret)))))
 		}
 	} else if _, _, _, ok := rt.QMapOf(); ok {
-		returnComment = "/// @return " + strings.TrimSpace(strings.ReplaceAll(uncomment.Replace(rt.RenderTypeC(cfs, true, true, true)), "  ", " "))
+		returnComment = "/// @return " + replacer.Replace(strings.TrimSpace(replacer.Replace((rt.RenderTypeC(cfs, true, true, true)))))
 	} else if _, _, ok := rt.QPairOf(); ok {
-		returnComment = "/// @return " + strings.TrimSpace(strings.ReplaceAll(uncomment.Replace(rt.RenderTypeC(cfs, true, true, true)), "  ", " "))
+		returnComment = "/// @return " + replacer.Replace(strings.TrimSpace(replacer.Replace(rt.RenderTypeC(cfs, true, true, true))))
 	} else if _, ok := rt.QSetOf(); ok {
-		returnComment = "/// @return " + strings.TrimSpace(strings.ReplaceAll(uncomment.Replace(rt.RenderTypeC(cfs, true, true, true)), "  ", " "))
+		returnComment = "/// @return " + replacer.Replace(strings.TrimSpace(replacer.Replace(rt.RenderTypeC(cfs, true, true, true))))
 	} else if rt.IsFunctionPointer {
 		returnComment = "/// @return " + rt.FunctionPointer.ReturnType.renderReturnTypeC(cfs, false, false) + " (*" + rt.renderFunctionType() + ")(" + strings.TrimSpace(cfs.emitParametersC(rt.FunctionPointer.Parameters, false)) + ")"
 	} else if rt.IsStdOptional && IsKnownClass(rt.ParameterType) {
@@ -1844,7 +1847,8 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 	sort.Strings(sortedFunctions)
 	for _, k := range sortedFunctions {
 		fTypedef := qtfuncdefs[k]
-		retqtfuncdefs[k] = fTypedef.ReturnType.renderReturnTypeC(&cfs, false, false) + " (*" + fTypedef.FunctionName + ")(" + cfs.emitParametersC(fTypedef.Parameters, false) + ");\n"
+		retType := ifv(IsKnownClass(fTypedef.ReturnType.ParameterType), "void*", fTypedef.ReturnType.renderReturnTypeC(&cfs, false, false))
+		retqtfuncdefs[k] = retType + " (*" + fTypedef.FunctionName + ")(" + cfs.emitParametersC(fTypedef.Parameters, false) + ");\n"
 	}
 
 	sortedExtras := make([]string, 0, len(qtextradefs))
@@ -1852,24 +1856,25 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 		sortedExtras = append(sortedExtras, k)
 	}
 	sort.Strings(sortedExtras)
+	replacer := strings.NewReplacer(" ", "_")
 	for _, k := range sortedExtras {
 		pairs := strings.Split(k, ":")
-		f := strings.ReplaceAll(strings.ToLower(pairs[0]), " ", "_")
-		s := strings.ReplaceAll(strings.ToLower(pairs[1]), " ", "_")
+		f := replacer.Replace(strings.ToLower(pairs[0]))
+		s := replacer.Replace(strings.ToLower(pairs[1]))
 		ret.WriteString("struct pair_" + f + "_" + s + ";\n")
 	}
 	ret.WriteString("\n")
 	for _, k := range sortedExtras {
 		pairs := strings.Split(k, ":")
-		f := strings.ReplaceAll(strings.ToLower(pairs[0]), " ", "_")
-		s := strings.ReplaceAll(strings.ToLower(pairs[1]), " ", "_")
+		f := replacer.Replace(strings.ToLower(pairs[0]))
+		s := replacer.Replace(strings.ToLower(pairs[1]))
 		ret.WriteString("typedef struct pair_" + f + "_" + s + " pair_" + f + "_" + s + ";\n")
 	}
 	ret.WriteString("\n")
 	for _, k := range sortedExtras {
 		pairs := strings.Split(k, ":")
-		f := strings.ReplaceAll(strings.ToLower(pairs[0]), " ", "_")
-		s := strings.ReplaceAll(strings.ToLower(pairs[1]), " ", "_")
+		f := replacer.Replace(strings.ToLower(pairs[0]))
+		s := replacer.Replace(strings.ToLower(pairs[1]))
 		ret.WriteString("#ifndef PAIR_" + strings.ToUpper(f+"_"+s) + "\n" +
 			"#define PAIR_" + strings.ToUpper(f+"_"+s) + "\n" +
 			"struct pair_" + f + "_" + s + " {\n" +
@@ -2173,7 +2178,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 			}
 
 			// Add Connect() wrappers for signal functions
-			if m.IsSignal {
+			if m.IsSignal && !m.IsProtected {
 				addConnect := true
 				if _, ok := noQtConnect[cmdStructName]; ok {
 					addConnect = false
@@ -2234,6 +2239,56 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 				onDocComment := "\n/// Allows for overriding the related default method\n///"
 				if !m.ReturnType.Pointer && IsKnownClass(m.ReturnType.ParameterType) {
 					maybeReturnString = "/// @warning Memory for the returned type of the callback is freed by the library.\n///\n"
+				} else if t, _, ok := m.ReturnType.QListOf(); ok {
+					if kType, vType, ok := t.QPairOf(); ok {
+						var fields []string
+						if IsKnownClass(kType.ParameterType) && kType.PointerCount == 0 {
+							fields = append(fields, ".first")
+						}
+						if IsKnownClass(vType.ParameterType) && vType.PointerCount == 0 {
+							fields = append(fields, ".second")
+						}
+						if len(fields) > 0 {
+							maybeReturnString = "/// @warning Memory for the " + strings.Join(fields, " and ") +
+								" field(s) of the inner type of the returned type of the callback will be freed by the library.\n///\n"
+						}
+					}
+				} else if kType, vType, ok := m.ReturnType.QPairOf(); ok {
+					var fields []string
+					if IsKnownClass(kType.ParameterType) && kType.PointerCount == 0 {
+						fields = append(fields, ".first")
+					}
+					if IsKnownClass(vType.ParameterType) && vType.PointerCount == 0 {
+						fields = append(fields, ".second")
+					}
+					if len(fields) > 0 {
+						maybeReturnString = "/// @warning Memory for the " + strings.Join(fields, " and ") + " field(s) of the returned type of the callback will be freed by the library.\n///\n"
+					}
+				} else if t, _, ok := m.ReturnType.QListOf(); ok {
+					if kType, vType, ok := t.QPairOf(); ok {
+						var fields []string
+						if IsKnownClass(kType.ParameterType) && kType.PointerCount == 0 {
+							fields = append(fields, ".first")
+						}
+						if IsKnownClass(vType.ParameterType) && vType.PointerCount == 0 {
+							fields = append(fields, ".second")
+						}
+						if len(fields) > 0 {
+							maybeReturnString = "/// @warning Memory for the " + strings.Join(fields, " and ") +
+								" field(s) of the inner type of the returned type of the callback will be freed by the library.\n///\n"
+						}
+					}
+				} else if kType, vType, ok := m.ReturnType.QPairOf(); ok {
+					var fields []string
+					if IsKnownClass(kType.ParameterType) && kType.PointerCount == 0 {
+						fields = append(fields, ".first")
+					}
+					if IsKnownClass(vType.ParameterType) && vType.PointerCount == 0 {
+						fields = append(fields, ".second")
+					}
+					if len(fields) > 0 {
+						maybeReturnString = "/// @warning Memory for the " + strings.Join(fields, " and ") + " field(s) of the returned type of the callback will be freed by the library.\n///\n"
+					}
 				}
 
 				ret.WriteString(maybeMacro + inheritedFrom + docCommentUrl + onDocComment + "\n/// @param self " + cStructName +
@@ -2586,29 +2641,32 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		ret.WriteString(`#include "` + parentInclude + "lib" + refInc + maybeFileSuffix + `.hpp"` + "\n")
 	}
 
+	switch srcFilename {
 	// workaround for qtermwidget.h
-	if srcFilename == "qtermwidget.h" {
+	case "qtermwidget.h":
 		ret.WriteString(`#include "libqtermwidget_interface.hpp"` + "\n")
-	}
 
 	// workaround for tr
-	switch headerName {
-	case "libk7zip.h",
-		"libkar.h",
-		"libkarchive.h",
-		"libkcharsets.h",
-		"libkconfigloader.h",
-		"libkencodingprober.h",
-		"libkrcc.h",
-		"libktar.h",
-		"libkzip.h",
-		"libqcommandlineparser.h",
-		"libqimagereader.h",
-		"libqimagewriter.h",
-		"libqsystemsemaphore.h":
+	case
+		"k7zip.h",
+		"kar.h",
+		"karchive.h",
+		"kcharsets.h",
+		"kconfigloader.h",
+		"krcc.h",
+		"ktar.h",
+		"kzip.h",
+		"qcommandlineparser.h",
+		"qimagereader.h",
+		"qimagewriter.h",
+		"qsystemsemaphore.h":
 		ret.WriteString(`#include "` + parentInclude + `libqobject.hpp"` + "\n")
 
-	case "libkemailsettings.h":
+	// workaround for tr
+	case
+		"KChartPosition.h",
+		"kemailsettings.h",
+		"kencodingprober.h":
 		ret.WriteString(`#include "../libqobject.hpp"` + "\n")
 	}
 
@@ -2916,7 +2974,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			ret.WriteString("\n")
 
 			// Add Connect() wrappers for signal functions
-			if m.IsSignal {
+			if m.IsSignal && !m.IsProtected {
 				var slotComma, maybeMacro, maybeEndMacro string
 				if len(m.Parameters) != 0 {
 					slotComma = ", "
