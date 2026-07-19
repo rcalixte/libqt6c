@@ -56918,6 +56918,8 @@ libqt_list q_cpgraph_get_overlapping_segments(void* self, libqt_list thisSegment
 /// @param self QCPGraph*
 /// @param callback libqt_list of pair_qcpdatarange_qcpdatarange tuple of QCPDataRange* and QCPDataRange* func(QCPGraph* self, libqt_list of QCPDataRange* thisSegments, libqt_list of QPointF* thisData, libqt_list of QCPDataRange* otherSegments, libqt_list of QPointF* otherData)
 ///
+/// @warning Memory for the .first and .second field(s) of the inner type of the returned type of the callback will be freed by the library.
+///
 void q_cpgraph_on_get_overlapping_segments(void* self, libqt_list (*callback)(void*, libqt_list, libqt_list, libqt_list, libqt_list));
 
 /// @warning DEPRECATED: Use `q_cpgraph_super_get_overlapping_segments` instead

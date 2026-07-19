@@ -2179,7 +2179,7 @@ typedef int32_t (*GLint__GLenum__Function)(uint32_t funcparam1);
 typedef uint32_t (*GLuint__void__Function)();
 typedef uint32_t (*GLuint__GLenum__Function)(uint32_t funcparam1);
 typedef uint32_t (*GLuint__GLsizei__Function)(int32_t funcparam1);
-typedef QObject* (*QObject__void__Function)();
+typedef void* (*QObject__void__Function)();
 typedef double (*QEasingCurve__EasingFunction)(double funcparam1);
 typedef void (*QFunctionPointer)();
 typedef void (*QAccessible__UpdateHandler)(void* funcparam1);
