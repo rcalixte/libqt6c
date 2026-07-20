@@ -31,9 +31,7 @@ pub fn build(b: *std.Build) !void {
         while (lines.next()) |line|
             if (std.mem.startsWith(u8, line, " /")) {
                 const isystem_path = std.mem.trim(u8, line, &std.ascii.whitespace);
-                std.Io.Dir.cwd().access(b.graph.io, isystem_path, .{}) catch {
-                    continue;
-                };
+                std.Io.Dir.cwd().access(b.graph.io, isystem_path, .{}) catch continue;
                 try linux_isystem.append(b.allocator, isystem_path);
             };
 
@@ -41,24 +39,15 @@ pub fn build(b: *std.Build) !void {
             if (distro == .none)
                 if (std.mem.containsAtLeast(u8, isystem_path, 1, "suse-linux")) {
                     distro = .suse;
-                } else if (std.mem.containsAtLeastScalar2(u8, isystem_path, '.', 2) and !std.mem.containsAtLeast(u8, isystem_path, 1, "..")) {
+                } else if (std.mem.containsAtLeast(u8, isystem_path, 1, "unknown-linux")) {
+                    distro = .unknown;
+                } else if (std.mem.containsAtLeast(u8, isystem_path, 1, "pc-linux-gnu")) {
                     distro = .arch;
                 } else if (std.mem.containsAtLeast(u8, isystem_path, 1, "redhat-linux")) {
                     distro = .fedora;
                 };
 
             try cpp_flags.append(b.allocator, b.fmt("-isystem{s}", .{isystem_path}));
-        }
-
-        if (distro == .fedora) {
-            const version = try std.process.run(b.allocator, b.graph.io, .{
-                .argv = &.{ "lsb_release", "-rs" },
-            });
-            const version_str = std.mem.trim(u8, version.stdout, &std.ascii.whitespace);
-            try cpp_flags.append(b.allocator, b.fmt(
-                "-isystem/usr/" ++ @tagName(host_arch) ++ "-redhat-linux/sys-root/fc{s}/usr/include",
-                .{version_str},
-            ));
         }
     }
 
@@ -76,7 +65,7 @@ pub fn build(b: *std.Build) !void {
             if (is_windows and std.mem.startsWith(u8, entry.path, "webengine")) continue;
             var basename = std.Io.Dir.path.basename(entry.path);
             basename = basename[3 .. basename.len - 4];
-            if ((!is_linux or distro == .arch or distro == .suse) and
+            if ((!is_linux or distro == .arch or distro == .suse or distro == .unknown) and
                 (std.mem.eql(u8, basename, "qsctpsocket") or std.mem.eql(u8, basename, "qsctpserver")))
                 continue;
             if (distro == .suse and std.mem.eql(u8, @tagName(host_arch), "aarch64") and
@@ -147,9 +136,7 @@ pub fn build(b: *std.Build) !void {
             std.log.warn("extra path {s} does not exist\n", .{inc_path});
     }
     for (os_include_path) |os_path| {
-        std.Io.Dir.cwd().access(b.graph.io, os_path, .{}) catch {
-            continue;
-        };
+        std.Io.Dir.cwd().access(b.graph.io, os_path, .{}) catch continue;
         try qt_include_path.append(b.allocator, b.dupe(os_path));
     }
 
@@ -157,13 +144,9 @@ pub fn build(b: *std.Build) !void {
     inline for (base_cpp_flags) |flag|
         try cpp_flags.append(b.allocator, b.dupe(flag));
 
-    const libc_override = distro == .arch or distro == .suse;
-    if (is_linux) {
-        inline for (linux_cpp_flags) |flag|
+    if (is_linux)
+        inline for (linux_flags) |flag|
             try cpp_flags.append(b.allocator, b.dupe(flag));
-        if (libc_override) inline for (linux_c_flags) |flag|
-            try cpp_flags.append(b.allocator, b.dupe(flag));
-    }
 
     // Add include paths
     for (qt_include_path.items) |qt_path|
@@ -173,9 +156,7 @@ pub fn build(b: *std.Build) !void {
     inline for (qt_modules) |module|
         for (qt_include_path.items) |qt_path| {
             const includePath = b.fmt("{s}/{s}", .{ qt_path, module });
-            std.Io.Dir.cwd().access(b.graph.io, includePath, .{}) catch {
-                continue;
-            };
+            std.Io.Dir.cwd().access(b.graph.io, includePath, .{}) catch continue;
             try cpp_flags.append(b.allocator, b.fmt("-I{s}", .{includePath}));
         };
 
@@ -183,7 +164,7 @@ pub fn build(b: *std.Build) !void {
     var aw = std.Io.Writer.Allocating.init(b.allocator);
     defer aw.deinit();
 
-    if (libc_override) {
+    if (is_linux) {
         const result = try std.process.run(b.allocator, b.graph.io, .{
             .argv = &.{ "gcc", "-xc", "-E", "-Wp,-v", "/dev/null" },
         });
@@ -193,9 +174,7 @@ pub fn build(b: *std.Build) !void {
         while (lines.next()) |line|
             if (std.mem.startsWith(u8, line, " /")) {
                 const gcc_path = std.mem.trim(u8, line, &std.ascii.whitespace);
-                std.Io.Dir.cwd().access(b.graph.io, gcc_path, .{}) catch {
-                    continue;
-                };
+                std.Io.Dir.cwd().access(b.graph.io, gcc_path, .{}) catch continue;
                 if (gcc_dir == null) gcc_dir = gcc_path;
                 override_dir = gcc_path;
             };
@@ -227,17 +206,23 @@ pub fn build(b: *std.Build) !void {
                 .sanitize_c = .off,
                 .strip = strip,
                 .pic = true,
-                .link_libc = !libc_override,
                 .link_libcpp = !is_linux,
             }),
             .linkage = linkage,
         });
 
-        if (libc_override) {
+        if (is_linux) {
             lib.setLibCFile(libc_path);
             lib.root_module.addIncludePath(.{ .cwd_relative = override_dir });
+            if (distro == .none) {
+                lib.root_module.link_libc = true;
+                const lib_path = "/usr/include/" ++ @tagName(host_arch) ++ "-linux-gnu";
+                if (std.Io.Dir.cwd().access(b.graph.io, lib_path, .{}))
+                    lib.root_module.addIncludePath(.{ .cwd_relative = lib_path })
+                else |_| {}
+            } else if (distro == .unknown)
+                lib.root_module.addIncludePath(.{ .cwd_relative = "/usr/lib/" ++ @tagName(host_arch) ++ "-linux-gnu/include" });
         }
-
         lib.root_module.addIncludePath(b.path("include"));
         lib.root_module.addCSourceFiles(.{ .files = &.{source}, .flags = cpp_flags.items });
 
@@ -283,6 +268,7 @@ const os_include_path: []const []const u8 = switch (host_os) {
     },
     .macos => &.{
         "/usr/local/opt/qt6/include",
+        "/opt/homebrew/include/KF6",
         "/opt/homebrew/include",
         "/opt/local/libexec/qt6/mkspecs/common/posix",
     },
@@ -296,12 +282,9 @@ const base_cpp_flags = &.{
     "-O2",
 };
 
-const linux_cpp_flags = &.{
+const linux_flags = &.{
     "-nostdinc++",
     "-nostdlib++",
-};
-
-const linux_c_flags = &.{
     "-nostdinc",
     "-nostdlib",
 };
@@ -315,6 +298,7 @@ const Distro = enum {
     fedora,
     suse,
     none,
+    unknown,
 };
 
 const qt_modules = @import("modules.zig").modules;
