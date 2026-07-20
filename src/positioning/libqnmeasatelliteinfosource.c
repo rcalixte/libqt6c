@@ -1,4 +1,3 @@
-#include "../libqbytearrayview.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqgeosatelliteinfo.hpp"
 #include "libqgeosatelliteinfosource.hpp"

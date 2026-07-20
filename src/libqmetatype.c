@@ -1,4 +1,3 @@
-#include "libqbytearrayview.hpp"
 #include "libqdatastream.hpp"
 #include "libqdebug.hpp"
 #include "libqobjectdefs.hpp"

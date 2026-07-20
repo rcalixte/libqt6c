@@ -879,7 +879,6 @@ typedef struct QBrush QBrush;
 typedef struct QBuffer QBuffer;
 typedef struct QButtonGroup QButtonGroup;
 typedef struct QByteArrayMatcher QByteArrayMatcher;
-typedef struct QByteArrayView QByteArrayView;
 typedef struct QByteArray__FromBase64Result QByteArray__FromBase64Result;
 typedef struct QCP QCP;
 typedef struct QCPAbstractItem QCPAbstractItem;

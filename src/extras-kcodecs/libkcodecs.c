@@ -1,4 +1,3 @@
-#include "../libqbytearrayview.hpp"
 #include "libkcodecs.hpp"
 #include "libkcodecs.h"
 

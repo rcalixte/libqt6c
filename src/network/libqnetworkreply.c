@@ -1,4 +1,3 @@
-#include "../libqbytearrayview.hpp"
 #include "libqhttpheaders.hpp"
 #include "../libqiodevice.hpp"
 #include "../libqiodevicebase.hpp"

@@ -1,4 +1,3 @@
-#include "../libqbytearrayview.hpp"
 #include "../libqobject.hpp"
 #include "libkencodingprober.hpp"
 #include "libkencodingprober.h"

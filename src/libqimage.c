@@ -1,4 +1,3 @@
-#include "libqbytearrayview.hpp"
 #include "libqcolor.hpp"
 #include "libqcolorspace.hpp"
 #include "libqcolortransform.hpp"
