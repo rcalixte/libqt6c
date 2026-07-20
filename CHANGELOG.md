@@ -1,4 +1,12 @@
 
+### 6.8.2 rev79 (20 July 2026)
+
+* **BREAKING CHANGE:** Restrict QByteArrayView to native types (#147)
+* Fix QPair-related memory leaks in callbacks (#146)
+* Expand coverage for QSettings enum (#145)
+* Update reserved words and binding constructor case (#144)
+* Remove brute force blocks (#143)
+
 ### 6.8.2 rev78 (16 June 2026)
 
 * Add build system export and use upstream parameter names when possible (#142)
