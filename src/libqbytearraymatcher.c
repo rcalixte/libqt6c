@@ -1,4 +1,3 @@
-#include "libqbytearrayview.hpp"
 #include "libqbytearraymatcher.hpp"
 #include "libqbytearraymatcher.h"
 

@@ -1,4 +1,3 @@
-#include "libqbytearrayview.hpp"
 #include "libqiodevice.hpp"
 #include "libqmessageauthenticationcode.hpp"
 #include "libqmessageauthenticationcode.h"

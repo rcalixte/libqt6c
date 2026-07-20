@@ -1,4 +1,3 @@
-#include "libqbytearrayview.hpp"
 #include "libqstringconverter_base.hpp"
 #include "libqstringconverter_base.h"
 

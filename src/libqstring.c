@@ -1,4 +1,3 @@
-#include "libqbytearrayview.hpp"
 #include "libqchar.hpp"
 #include "libqregularexpression.hpp"
 #include "libqstring.hpp"

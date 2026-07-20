@@ -1,5 +1,4 @@
 #include "libkarchivedirectory.hpp"
-#include "../libqbytearrayview.hpp"
 #include "../libqdatetime.hpp"
 #include "../libqiodevice.hpp"
 #include "../libqobject.hpp"

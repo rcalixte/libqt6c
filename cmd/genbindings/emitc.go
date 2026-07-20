@@ -2264,31 +2264,6 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 					if len(fields) > 0 {
 						maybeReturnString = "/// @warning Memory for the " + strings.Join(fields, " and ") + " field(s) of the returned type of the callback will be freed by the library.\n///\n"
 					}
-				} else if t, _, ok := m.ReturnType.QListOf(); ok {
-					if kType, vType, ok := t.QPairOf(); ok {
-						var fields []string
-						if IsKnownClass(kType.ParameterType) && kType.PointerCount == 0 {
-							fields = append(fields, ".first")
-						}
-						if IsKnownClass(vType.ParameterType) && vType.PointerCount == 0 {
-							fields = append(fields, ".second")
-						}
-						if len(fields) > 0 {
-							maybeReturnString = "/// @warning Memory for the " + strings.Join(fields, " and ") +
-								" field(s) of the inner type of the returned type of the callback will be freed by the library.\n///\n"
-						}
-					}
-				} else if kType, vType, ok := m.ReturnType.QPairOf(); ok {
-					var fields []string
-					if IsKnownClass(kType.ParameterType) && kType.PointerCount == 0 {
-						fields = append(fields, ".first")
-					}
-					if IsKnownClass(vType.ParameterType) && vType.PointerCount == 0 {
-						fields = append(fields, ".second")
-					}
-					if len(fields) > 0 {
-						maybeReturnString = "/// @warning Memory for the " + strings.Join(fields, " and ") + " field(s) of the returned type of the callback will be freed by the library.\n///\n"
-					}
 				}
 
 				ret.WriteString(maybeMacro + inheritedFrom + docCommentUrl + onDocComment + "\n/// @param self " + cStructName +
