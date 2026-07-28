@@ -1808,7 +1808,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 	ret.Reset()
 
 	srcFilename := filepath.Base(src.Filename)
-	includeGuard := strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(packageName, "/", "_"), "-", "_")) + "_QT6C_LIB" + strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(srcFilename, ".", "_"), "-", "_"))
+	baseDir := filepath.Base(packageName)
+	guardPrefix := ifv(baseDir == "src", "", strings.ToUpper(sanitizeName(baseDir+"_")))
+	includeGuard := guardPrefix + "LIB" + strings.ToUpper(sanitizeName(srcFilename))
 	bindingInclude := "qtlibc.h"
 	var maybeDots string
 	qtextradefs := make(map[string]struct{})
