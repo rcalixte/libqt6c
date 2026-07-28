@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_PDFC_LIBQPDFPAGESELECTOR_HPP
-#define SRC_PDFC_LIBQPDFPAGESELECTOR_HPP
+#ifndef PDF_LIBQPDFPAGESELECTOR_HPP
+#define PDF_LIBQPDFPAGESELECTOR_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

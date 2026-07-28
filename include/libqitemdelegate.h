@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQITEMDELEGATE_H
-#define SRC_QT6C_LIBQITEMDELEGATE_H
+#ifndef LIBQITEMDELEGATE_H
+#define LIBQITEMDELEGATE_H
 
 #include <stdbool.h>
 #include <stddef.h>

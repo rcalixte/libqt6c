@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_NETWORKC_LIBQAUTHENTICATOR_HPP
-#define SRC_NETWORKC_LIBQAUTHENTICATOR_HPP
+#ifndef NETWORK_LIBQAUTHENTICATOR_HPP
+#define NETWORK_LIBQAUTHENTICATOR_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

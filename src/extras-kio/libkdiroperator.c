@@ -3,7 +3,7 @@
 #include "libkdirlister.hpp"
 #include "libkfileitem.hpp"
 #include "libkfilepreviewgenerator.hpp"
-#include "libdropjob.hpp"
+#include "libcopyjob.hpp"
 #include "libdeletejob_1.hpp"
 #include "libkpreviewwidgetbase.hpp"
 #include "../libqabstractitemview.hpp"

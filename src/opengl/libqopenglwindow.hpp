@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_OPENGLC_LIBQOPENGLWINDOW_HPP
-#define SRC_OPENGLC_LIBQOPENGLWINDOW_HPP
+#ifndef OPENGL_LIBQOPENGLWINDOW_HPP
+#define OPENGL_LIBQOPENGLWINDOW_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

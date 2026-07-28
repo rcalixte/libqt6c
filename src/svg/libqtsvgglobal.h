@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_SVG_QT6C_LIBQTSVGGLOBAL_H
-#define SRC_SVG_QT6C_LIBQTSVGGLOBAL_H
+#ifndef SVG_LIBQTSVGGLOBAL_H
+#define SVG_LIBQTSVGGLOBAL_H
 
 #include <stdbool.h>
 #include <stddef.h>

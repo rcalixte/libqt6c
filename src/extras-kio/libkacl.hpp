@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_KIOC_LIBKACL_HPP
-#define SRC_EXTRAS_KIOC_LIBKACL_HPP
+#ifndef EXTRAS_KIO_LIBKACL_HPP
+#define EXTRAS_KIO_LIBKACL_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

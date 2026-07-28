@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQDOCKWIDGET_HPP
-#define SRCC_LIBQDOCKWIDGET_HPP
+#ifndef LIBQDOCKWIDGET_HPP
+#define LIBQDOCKWIDGET_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

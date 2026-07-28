@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQTRANSPOSEPROXYMODEL_HPP
-#define SRCC_LIBQTRANSPOSEPROXYMODEL_HPP
+#ifndef LIBQTRANSPOSEPROXYMODEL_HPP
+#define LIBQTRANSPOSEPROXYMODEL_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

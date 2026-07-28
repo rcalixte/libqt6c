@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQRASTERWINDOW_HPP
-#define SRCC_LIBQRASTERWINDOW_HPP
+#ifndef LIBQRASTERWINDOW_HPP
+#define LIBQRASTERWINDOW_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

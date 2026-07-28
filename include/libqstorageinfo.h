@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQSTORAGEINFO_H
-#define SRC_QT6C_LIBQSTORAGEINFO_H
+#ifndef LIBQSTORAGEINFO_H
+#define LIBQSTORAGEINFO_H
 
 #include <stdbool.h>
 #include <stddef.h>

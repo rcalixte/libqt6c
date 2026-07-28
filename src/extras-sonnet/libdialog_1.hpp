@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_SONNETC_LIBDIALOG_HPP
-#define SRC_EXTRAS_SONNETC_LIBDIALOG_HPP
+#ifndef EXTRAS_SONNET_LIBDIALOG_HPP
+#define EXTRAS_SONNET_LIBDIALOG_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQBITARRAY_H
-#define SRC_QT6C_LIBQBITARRAY_H
+#ifndef LIBQBITARRAY_H
+#define LIBQBITARRAY_H
 
 #include <stdbool.h>
 #include <stddef.h>

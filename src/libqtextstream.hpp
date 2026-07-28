@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQTEXTSTREAM_HPP
-#define SRCC_LIBQTEXTSTREAM_HPP
+#ifndef LIBQTEXTSTREAM_HPP
+#define LIBQTEXTSTREAM_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

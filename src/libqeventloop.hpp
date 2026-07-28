@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQEVENTLOOP_HPP
-#define SRCC_LIBQEVENTLOOP_HPP
+#ifndef LIBQEVENTLOOP_HPP
+#define LIBQEVENTLOOP_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

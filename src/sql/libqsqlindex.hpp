@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_SQLC_LIBQSQLINDEX_HPP
-#define SRC_SQLC_LIBQSQLINDEX_HPP
+#ifndef SQL_LIBQSQLINDEX_HPP
+#define SQL_LIBQSQLINDEX_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

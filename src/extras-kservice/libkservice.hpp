@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_KSERVICEC_LIBKSERVICE_HPP
-#define SRC_EXTRAS_KSERVICEC_LIBKSERVICE_HPP
+#ifndef EXTRAS_KSERVICE_LIBKSERVICE_HPP
+#define EXTRAS_KSERVICE_LIBKSERVICE_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

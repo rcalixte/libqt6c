@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQGRAPHICSSCENE_H
-#define SRC_QT6C_LIBQGRAPHICSSCENE_H
+#ifndef LIBQGRAPHICSSCENE_H
+#define LIBQGRAPHICSSCENE_H
 
 #include <stdbool.h>
 #include <stddef.h>

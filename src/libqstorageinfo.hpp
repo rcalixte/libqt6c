@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQSTORAGEINFO_HPP
-#define SRCC_LIBQSTORAGEINFO_HPP
+#ifndef LIBQSTORAGEINFO_HPP
+#define LIBQSTORAGEINFO_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

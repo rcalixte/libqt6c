@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQPLAINTEXTEDIT_HPP
-#define SRCC_LIBQPLAINTEXTEDIT_HPP
+#ifndef LIBQPLAINTEXTEDIT_HPP
+#define LIBQPLAINTEXTEDIT_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

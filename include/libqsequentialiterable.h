@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQSEQUENTIALITERABLE_H
-#define SRC_QT6C_LIBQSEQUENTIALITERABLE_H
+#ifndef LIBQSEQUENTIALITERABLE_H
+#define LIBQSEQUENTIALITERABLE_H
 
 #include <stdbool.h>
 #include <stddef.h>

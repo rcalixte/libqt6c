@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQMETACONTAINER_H
-#define SRC_QT6C_LIBQMETACONTAINER_H
+#ifndef LIBQMETACONTAINER_H
+#define LIBQMETACONTAINER_H
 
 #include <stdbool.h>
 #include <stddef.h>

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_DESIGNERC_LIBEXTENSION_HPP
-#define SRC_DESIGNERC_LIBEXTENSION_HPP
+#ifndef DESIGNER_LIBEXTENSION_HPP
+#define DESIGNER_LIBEXTENSION_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

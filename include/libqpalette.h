@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQPALETTE_H
-#define SRC_QT6C_LIBQPALETTE_H
+#ifndef LIBQPALETTE_H
+#define LIBQPALETTE_H
 
 #include <stdbool.h>
 #include <stddef.h>

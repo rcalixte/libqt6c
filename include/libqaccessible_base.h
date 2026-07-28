@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQACCESSIBLE_BASE_H
-#define SRC_QT6C_LIBQACCESSIBLE_BASE_H
+#ifndef LIBQACCESSIBLE_BASE_H
+#define LIBQACCESSIBLE_BASE_H
 
 #include <stdbool.h>
 #include <stddef.h>

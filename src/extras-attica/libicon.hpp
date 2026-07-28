@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_ATTICAC_LIBICON_HPP
-#define SRC_EXTRAS_ATTICAC_LIBICON_HPP
+#ifndef EXTRAS_ATTICA_LIBICON_HPP
+#define EXTRAS_ATTICA_LIBICON_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

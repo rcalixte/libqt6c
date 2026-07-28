@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQGRIDLAYOUT_H
-#define SRC_QT6C_LIBQGRIDLAYOUT_H
+#ifndef LIBQGRIDLAYOUT_H
+#define LIBQGRIDLAYOUT_H
 
 #include <stdbool.h>
 #include <stddef.h>

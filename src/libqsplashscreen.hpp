@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQSPLASHSCREEN_HPP
-#define SRCC_LIBQSPLASHSCREEN_HPP
+#ifndef LIBQSPLASHSCREEN_HPP
+#define LIBQSPLASHSCREEN_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

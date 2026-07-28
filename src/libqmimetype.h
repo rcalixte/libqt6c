@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQMIMETYPE_H
-#define SRC_QT6C_LIBQMIMETYPE_H
+#ifndef LIBQMIMETYPE_H
+#define LIBQMIMETYPE_H
 
 #include <stdbool.h>
 #include <stddef.h>

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQIMAGE_HPP
-#define SRCC_LIBQIMAGE_HPP
+#ifndef LIBQIMAGE_HPP
+#define LIBQIMAGE_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

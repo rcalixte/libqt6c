@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQCOMMANDLINKBUTTON_H
-#define SRC_QT6C_LIBQCOMMANDLINKBUTTON_H
+#ifndef LIBQCOMMANDLINKBUTTON_H
+#define LIBQCOMMANDLINKBUTTON_H
 
 #include <stdbool.h>
 #include <stddef.h>

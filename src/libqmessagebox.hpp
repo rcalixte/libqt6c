@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQMESSAGEBOX_HPP
-#define SRCC_LIBQMESSAGEBOX_HPP
+#ifndef LIBQMESSAGEBOX_HPP
+#define LIBQMESSAGEBOX_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

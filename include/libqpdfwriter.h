@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQPDFWRITER_H
-#define SRC_QT6C_LIBQPDFWRITER_H
+#ifndef LIBQPDFWRITER_H
+#define LIBQPDFWRITER_H
 
 #include <stdbool.h>
 #include <stddef.h>

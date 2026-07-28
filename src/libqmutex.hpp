@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQMUTEX_HPP
-#define SRCC_LIBQMUTEX_HPP
+#ifndef LIBQMUTEX_HPP
+#define LIBQMUTEX_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

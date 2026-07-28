@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQTEXTBOUNDARYFINDER_HPP
-#define SRCC_LIBQTEXTBOUNDARYFINDER_HPP
+#ifndef LIBQTEXTBOUNDARYFINDER_HPP
+#define LIBQTEXTBOUNDARYFINDER_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

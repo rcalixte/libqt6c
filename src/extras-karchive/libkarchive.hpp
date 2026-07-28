@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_KARCHIVEC_LIBKARCHIVE_HPP
-#define SRC_EXTRAS_KARCHIVEC_LIBKARCHIVE_HPP
+#ifndef EXTRAS_KARCHIVE_LIBKARCHIVE_HPP
+#define EXTRAS_KARCHIVE_LIBKARCHIVE_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

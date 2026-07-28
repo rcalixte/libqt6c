@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQCOREAPPLICATION_H
-#define SRC_QT6C_LIBQCOREAPPLICATION_H
+#ifndef LIBQCOREAPPLICATION_H
+#define LIBQCOREAPPLICATION_H
 
 #include <stdbool.h>
 #include <stddef.h>

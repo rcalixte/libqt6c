@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQLOCALE_HPP
-#define SRCC_LIBQLOCALE_HPP
+#ifndef LIBQLOCALE_HPP
+#define LIBQLOCALE_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

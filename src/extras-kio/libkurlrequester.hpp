@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_KIOC_LIBKURLREQUESTER_HPP
-#define SRC_EXTRAS_KIOC_LIBKURLREQUESTER_HPP
+#ifndef EXTRAS_KIO_LIBKURLREQUESTER_HPP
+#define EXTRAS_KIO_LIBKURLREQUESTER_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

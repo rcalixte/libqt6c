@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQTRANSLATOR_H
-#define SRC_QT6C_LIBQTRANSLATOR_H
+#ifndef LIBQTRANSLATOR_H
+#define LIBQTRANSLATOR_H
 
 #include <stdbool.h>
 #include <stddef.h>

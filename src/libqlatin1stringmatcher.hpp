@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQLATIN1STRINGMATCHER_HPP
-#define SRCC_LIBQLATIN1STRINGMATCHER_HPP
+#ifndef LIBQLATIN1STRINGMATCHER_HPP
+#define LIBQLATIN1STRINGMATCHER_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

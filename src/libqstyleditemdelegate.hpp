@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQSTYLEDITEMDELEGATE_HPP
-#define SRCC_LIBQSTYLEDITEMDELEGATE_HPP
+#ifndef LIBQSTYLEDITEMDELEGATE_HPP
+#define LIBQSTYLEDITEMDELEGATE_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

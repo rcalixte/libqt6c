@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQBINDINGSTORAGE_HPP
-#define SRCC_LIBQBINDINGSTORAGE_HPP
+#ifndef LIBQBINDINGSTORAGE_HPP
+#define LIBQBINDINGSTORAGE_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

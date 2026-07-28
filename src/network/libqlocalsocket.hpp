@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_NETWORKC_LIBQLOCALSOCKET_HPP
-#define SRC_NETWORKC_LIBQLOCALSOCKET_HPP
+#ifndef NETWORK_LIBQLOCALSOCKET_HPP
+#define NETWORK_LIBQLOCALSOCKET_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

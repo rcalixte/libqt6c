@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_SQLC_LIBQSQLDRIVERPLUGIN_HPP
-#define SRC_SQLC_LIBQSQLDRIVERPLUGIN_HPP
+#ifndef SQL_LIBQSQLDRIVERPLUGIN_HPP
+#define SQL_LIBQSQLDRIVERPLUGIN_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

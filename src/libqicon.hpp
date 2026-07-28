@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQICON_HPP
-#define SRCC_LIBQICON_HPP
+#ifndef LIBQICON_HPP
+#define LIBQICON_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

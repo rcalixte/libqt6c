@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_KPARTSC_LIBMAINWINDOW_HPP
-#define SRC_EXTRAS_KPARTSC_LIBMAINWINDOW_HPP
+#ifndef EXTRAS_KPARTS_LIBMAINWINDOW_HPP
+#define EXTRAS_KPARTS_LIBMAINWINDOW_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

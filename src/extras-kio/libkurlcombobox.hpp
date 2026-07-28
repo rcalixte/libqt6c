@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_KIOC_LIBKURLCOMBOBOX_HPP
-#define SRC_EXTRAS_KIOC_LIBKURLCOMBOBOX_HPP
+#ifndef EXTRAS_KIO_LIBKURLCOMBOBOX_HPP
+#define EXTRAS_KIO_LIBKURLCOMBOBOX_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

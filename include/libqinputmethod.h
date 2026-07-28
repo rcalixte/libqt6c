@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQINPUTMETHOD_H
-#define SRC_QT6C_LIBQINPUTMETHOD_H
+#ifndef LIBQINPUTMETHOD_H
+#define LIBQINPUTMETHOD_H
 
 #include <stdbool.h>
 #include <stddef.h>

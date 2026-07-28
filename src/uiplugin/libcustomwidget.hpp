@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_UIPLUGINC_LIBCUSTOMWIDGET_HPP
-#define SRC_UIPLUGINC_LIBCUSTOMWIDGET_HPP
+#ifndef UIPLUGIN_LIBCUSTOMWIDGET_HPP
+#define UIPLUGIN_LIBCUSTOMWIDGET_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_SPATIALAUDIO_QT6C_LIBQAUDIOROOM_H
-#define SRC_SPATIALAUDIO_QT6C_LIBQAUDIOROOM_H
+#ifndef SPATIALAUDIO_LIBQAUDIOROOM_H
+#define SPATIALAUDIO_LIBQAUDIOROOM_H
 
 #include <stdbool.h>
 #include <stddef.h>

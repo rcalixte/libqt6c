@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_ATTICAC_LIBDELETEJOB_HPP
-#define SRC_EXTRAS_ATTICAC_LIBDELETEJOB_HPP
+#ifndef EXTRAS_ATTICA_LIBDELETEJOB_HPP
+#define EXTRAS_ATTICA_LIBDELETEJOB_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

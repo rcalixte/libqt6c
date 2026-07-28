@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQVERSIONNUMBER_HPP
-#define SRCC_LIBQVERSIONNUMBER_HPP
+#ifndef LIBQVERSIONNUMBER_HPP
+#define LIBQVERSIONNUMBER_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

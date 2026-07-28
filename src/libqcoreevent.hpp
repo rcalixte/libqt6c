@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQCOREEVENT_HPP
-#define SRCC_LIBQCOREEVENT_HPP
+#ifndef LIBQCOREEVENT_HPP
+#define LIBQCOREEVENT_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

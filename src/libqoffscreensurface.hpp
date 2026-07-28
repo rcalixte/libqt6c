@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQOFFSCREENSURFACE_HPP
-#define SRCC_LIBQOFFSCREENSURFACE_HPP
+#ifndef LIBQOFFSCREENSURFACE_HPP
+#define LIBQOFFSCREENSURFACE_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

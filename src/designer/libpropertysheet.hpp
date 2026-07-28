@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_DESIGNERC_LIBPROPERTYSHEET_HPP
-#define SRC_DESIGNERC_LIBPROPERTYSHEET_HPP
+#ifndef DESIGNER_LIBPROPERTYSHEET_HPP
+#define DESIGNER_LIBPROPERTYSHEET_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

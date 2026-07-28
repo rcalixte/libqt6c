@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQQUATERNION_HPP
-#define SRCC_LIBQQUATERNION_HPP
+#ifndef LIBQQUATERNION_HPP
+#define LIBQQUATERNION_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

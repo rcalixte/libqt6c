@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQFILESELECTOR_HPP
-#define SRCC_LIBQFILESELECTOR_HPP
+#ifndef LIBQFILESELECTOR_HPP
+#define LIBQFILESELECTOR_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

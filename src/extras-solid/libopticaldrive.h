@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_SOLID_QT6C_LIBOPTICALDRIVE_H
-#define SRC_EXTRAS_SOLID_QT6C_LIBOPTICALDRIVE_H
+#ifndef EXTRAS_SOLID_LIBOPTICALDRIVE_H
+#define EXTRAS_SOLID_LIBOPTICALDRIVE_H
 
 #include <stdbool.h>
 #include <stddef.h>

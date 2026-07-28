@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_UITOOLS_QT6C_LIBQUILOADER_H
-#define SRC_UITOOLS_QT6C_LIBQUILOADER_H
+#ifndef UITOOLS_LIBQUILOADER_H
+#define UITOOLS_LIBQUILOADER_H
 
 #include <stdbool.h>
 #include <stddef.h>

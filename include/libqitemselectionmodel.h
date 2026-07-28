@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQITEMSELECTIONMODEL_H
-#define SRC_QT6C_LIBQITEMSELECTIONMODEL_H
+#ifndef LIBQITEMSELECTIONMODEL_H
+#define LIBQITEMSELECTIONMODEL_H
 
 #include <stdbool.h>
 #include <stddef.h>

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQKEYSEQUENCE_H
-#define SRC_QT6C_LIBQKEYSEQUENCE_H
+#ifndef LIBQKEYSEQUENCE_H
+#define LIBQKEYSEQUENCE_H
 
 #include <stdbool.h>
 #include <stddef.h>

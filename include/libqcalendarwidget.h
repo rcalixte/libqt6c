@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQCALENDARWIDGET_H
-#define SRC_QT6C_LIBQCALENDARWIDGET_H
+#ifndef LIBQCALENDARWIDGET_H
+#define LIBQCALENDARWIDGET_H
 
 #include <stdbool.h>
 #include <stddef.h>

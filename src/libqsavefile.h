@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQSAVEFILE_H
-#define SRC_QT6C_LIBQSAVEFILE_H
+#ifndef LIBQSAVEFILE_H
+#define LIBQSAVEFILE_H
 
 #include <stdbool.h>
 #include <stddef.h>

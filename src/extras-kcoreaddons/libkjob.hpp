@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_KCOREADDONSC_LIBKJOB_HPP
-#define SRC_EXTRAS_KCOREADDONSC_LIBKJOB_HPP
+#ifndef EXTRAS_KCOREADDONS_LIBKJOB_HPP
+#define EXTRAS_KCOREADDONS_LIBKJOB_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

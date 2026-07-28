@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_NETWORK_QT6C_LIBQLOCALSERVER_H
-#define SRC_NETWORK_QT6C_LIBQLOCALSERVER_H
+#ifndef NETWORK_LIBQLOCALSERVER_H
+#define NETWORK_LIBQLOCALSERVER_H
 
 #include <stdbool.h>
 #include <stddef.h>

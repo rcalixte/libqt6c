@@ -47,6 +47,9 @@ func registerChildClasses(class CppClass, packageName string) {
 
 func (e CppEnum) getEnumTypeC() string {
 	switch e.UnderlyingType.ParameterType {
+	case "bool":
+		return "bool"
+
 	// signed types
 	case "char", "qint8", "signed char":
 		return "int8_t"
@@ -71,8 +74,12 @@ func (e CppEnum) getEnumTypeC() string {
 func addKnownTypes(packageName string, parsed *CppParsedHeader) {
 	for _, c := range parsed.Classes {
 		if !isBindingRemoved(c.ClassName) {
+			if IsKnownClass(c.ClassName) && len(c.Methods) == 0 && len(c.Ctors) == 0 {
+				continue
+			}
+
 			if parsed.Filename != "" {
-				KnownIncludes[c.ClassName] = lookupResultInclude{packageName, strings.ReplaceAll(filepath.Base(parsed.Filename), "-", "_")}
+				KnownIncludes[c.ClassName] = lookupResultInclude{packageName, sanitizeName(filepath.Base(parsed.Filename[:len(parsed.Filename)-2])) + ".h"}
 			}
 
 			KnownClassnames[c.ClassName] = lookupResultClass{packageName, c /* copy */}
@@ -129,7 +136,7 @@ func addKnownTypes(packageName string, parsed *CppParsedHeader) {
 	for _, en := range parsed.Enums {
 		if parsed.Filename != "" && en.EnumName != "" {
 			// enum classes... in Qt 6, these are found in qcborcommon.h, qdtls.h, qlogging.h, qmetatype.h, qocspresponse.h
-			KnownIncludes[en.EnumName] = lookupResultInclude{packageName, strings.ReplaceAll(filepath.Base(parsed.Filename), "-", "_")}
+			KnownIncludes[en.EnumName] = lookupResultInclude{packageName, sanitizeName(filepath.Base(parsed.Filename[:len(parsed.Filename)-2])) + ".h"}
 		}
 
 		enumCABI := en.UnderlyingType.RenderTypeCabi(false)
@@ -157,7 +164,7 @@ func addKnownTypes(packageName string, parsed *CppParsedHeader) {
 			// Some headers only have enums we can process, e.g. QSsl, QtVideo
 			// We also need to check for enums in scoped classes
 			includeName := en.EnumValueName()
-			KnownIncludes[includeName] = lookupResultInclude{packageName, strings.ReplaceAll(filepath.Base(parsed.Filename), "-", "_")}
+			KnownIncludes[includeName] = lookupResultInclude{packageName, sanitizeName(filepath.Base(parsed.Filename[:len(parsed.Filename)-2])) + ".h"}
 		}
 	}
 }

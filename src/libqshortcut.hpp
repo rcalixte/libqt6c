@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQSHORTCUT_HPP
-#define SRCC_LIBQSHORTCUT_HPP
+#ifndef LIBQSHORTCUT_HPP
+#define LIBQSHORTCUT_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

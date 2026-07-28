@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_KIOC_LIBKRECENTDIRS_HPP
-#define SRC_EXTRAS_KIOC_LIBKRECENTDIRS_HPP
+#ifndef EXTRAS_KIO_LIBKRECENTDIRS_HPP
+#define EXTRAS_KIO_LIBKRECENTDIRS_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

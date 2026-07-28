@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQBYTEARRAYMATCHER_H
-#define SRC_QT6C_LIBQBYTEARRAYMATCHER_H
+#ifndef LIBQBYTEARRAYMATCHER_H
+#define LIBQBYTEARRAYMATCHER_H
 
 #include <stdbool.h>
 #include <stddef.h>

@@ -342,6 +342,11 @@ func makeNamePrefix(in string) string {
 	return replacer.Replace(in)
 }
 
+func sanitizeName(in string) string {
+	replacer := strings.NewReplacer("-", "_", ".", "_")
+	return replacer.Replace(in)
+}
+
 func emitCABI2CppForwarding(p CppParameter, indent, currentClass string, isSlot, needsCleanup bool) (preamble, forwarding string) {
 	nameprefix := makeNamePrefix(p.ParameterName)
 
@@ -1450,7 +1455,9 @@ func emitVirtualBindingHeader(src *CppParsedHeader, packageName string) (string,
 	ret.Reset()
 
 	srcFilename := filepath.Base(src.Filename)
-	includeGuard := strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(packageName, "/", "_"), "-", "_")) + "C_LIBVIRTUAL" + strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(srcFilename, ".", "_"), "-", "_"))
+	baseDir := filepath.Base(packageName)
+	guardPrefix := ifv(baseDir == "src", "", strings.ToUpper(sanitizeName(baseDir+"_")))
+	includeGuard := guardPrefix + "LIB" + strings.ToUpper(sanitizeName(srcFilename)) + "XX"
 	maybeDots := ""
 
 	if strings.Contains(packageName, "/") {
@@ -1727,7 +1734,9 @@ func emitBindingHeader(src *CppParsedHeader, packageName string) (string, map[st
 	qtextradefs := make(map[string]struct{})
 
 	srcFilename := filepath.Base(src.Filename)
-	includeGuard := strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(packageName, "/", "_"), "-", "_")) + "C_LIB" + strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(srcFilename, ".", "_"), "-", "_")+"pp")
+	baseDir := filepath.Base(packageName)
+	guardPrefix := ifv(baseDir == "src", "", strings.ToUpper(sanitizeName(baseDir+"_")))
+	includeGuard := guardPrefix + "LIB" + strings.ToUpper(sanitizeName(srcFilename)+"pp")
 	maybeDots := ""
 
 	if strings.Contains(packageName, "/") {

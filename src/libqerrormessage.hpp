@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQERRORMESSAGE_HPP
-#define SRCC_LIBQERRORMESSAGE_HPP
+#ifndef LIBQERRORMESSAGE_HPP
+#define LIBQERRORMESSAGE_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

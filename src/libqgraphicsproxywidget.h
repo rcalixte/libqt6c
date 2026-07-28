@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQGRAPHICSPROXYWIDGET_H
-#define SRC_QT6C_LIBQGRAPHICSPROXYWIDGET_H
+#ifndef LIBQGRAPHICSPROXYWIDGET_H
+#define LIBQGRAPHICSPROXYWIDGET_H
 
 #include <stdbool.h>
 #include <stddef.h>

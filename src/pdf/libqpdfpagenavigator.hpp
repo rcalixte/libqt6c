@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_PDFC_LIBQPDFPAGENAVIGATOR_HPP
-#define SRC_PDFC_LIBQPDFPAGENAVIGATOR_HPP
+#ifndef PDF_LIBQPDFPAGENAVIGATOR_HPP
+#define PDF_LIBQPDFPAGENAVIGATOR_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

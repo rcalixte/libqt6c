@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQERRORMESSAGE_H
-#define SRC_QT6C_LIBQERRORMESSAGE_H
+#ifndef LIBQERRORMESSAGE_H
+#define LIBQERRORMESSAGE_H
 
 #include <stdbool.h>
 #include <stddef.h>

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_SOLIDC_LIBCAMERA_HPP
-#define SRC_EXTRAS_SOLIDC_LIBCAMERA_HPP
+#ifndef EXTRAS_SOLID_LIBCAMERA_HPP
+#define EXTRAS_SOLID_LIBCAMERA_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

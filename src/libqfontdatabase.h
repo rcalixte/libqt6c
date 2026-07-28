@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQFONTDATABASE_H
-#define SRC_QT6C_LIBQFONTDATABASE_H
+#ifndef LIBQFONTDATABASE_H
+#define LIBQFONTDATABASE_H
 
 #include <stdbool.h>
 #include <stddef.h>

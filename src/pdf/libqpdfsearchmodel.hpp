@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_PDFC_LIBQPDFSEARCHMODEL_HPP
-#define SRC_PDFC_LIBQPDFSEARCHMODEL_HPP
+#ifndef PDF_LIBQPDFSEARCHMODEL_HPP
+#define PDF_LIBQPDFSEARCHMODEL_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

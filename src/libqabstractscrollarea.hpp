@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQABSTRACTSCROLLAREA_HPP
-#define SRCC_LIBQABSTRACTSCROLLAREA_HPP
+#ifndef LIBQABSTRACTSCROLLAREA_HPP
+#define LIBQABSTRACTSCROLLAREA_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

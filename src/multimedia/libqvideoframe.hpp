@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_MULTIMEDIAC_LIBQVIDEOFRAME_HPP
-#define SRC_MULTIMEDIAC_LIBQVIDEOFRAME_HPP
+#ifndef MULTIMEDIA_LIBQVIDEOFRAME_HPP
+#define MULTIMEDIA_LIBQVIDEOFRAME_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

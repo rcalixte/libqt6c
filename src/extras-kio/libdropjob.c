@@ -1,5 +1,6 @@
 #include "../extras-kcoreaddons/libkcompositejob.hpp"
 #include "libkfileitemlistproperties.hpp"
+#include "libcopyjob.hpp"
 #include "libjob_base.hpp"
 #include "../extras-kcoreaddons/libkjob.hpp"
 #include "../libqaction.hpp"

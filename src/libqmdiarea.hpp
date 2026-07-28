@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQMDIAREA_HPP
-#define SRCC_LIBQMDIAREA_HPP
+#ifndef LIBQMDIAREA_HPP
+#define LIBQMDIAREA_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

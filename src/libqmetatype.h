@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQMETATYPE_H
-#define SRC_QT6C_LIBQMETATYPE_H
+#ifndef LIBQMETATYPE_H
+#define LIBQMETATYPE_H
 
 #include <stdbool.h>
 #include <stddef.h>

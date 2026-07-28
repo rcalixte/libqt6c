@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQSYNTAXHIGHLIGHTER_HPP
-#define SRCC_LIBQSYNTAXHIGHLIGHTER_HPP
+#ifndef LIBQSYNTAXHIGHLIGHTER_HPP
+#define LIBQSYNTAXHIGHLIGHTER_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

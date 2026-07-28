@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_KIOC_LIBRENAMEDIALOG_HPP
-#define SRC_EXTRAS_KIOC_LIBRENAMEDIALOG_HPP
+#ifndef EXTRAS_KIO_LIBRENAMEDIALOG_HPP
+#define EXTRAS_KIO_LIBRENAMEDIALOG_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

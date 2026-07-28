@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQPROPERTYANIMATION_H
-#define SRC_QT6C_LIBQPROPERTYANIMATION_H
+#ifndef LIBQPROPERTYANIMATION_H
+#define LIBQPROPERTYANIMATION_H
 
 #include <stdbool.h>
 #include <stddef.h>

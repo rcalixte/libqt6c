@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_LOCATION_QT6C_LIBQPLACERATINGS_H
-#define SRC_LOCATION_QT6C_LIBQPLACERATINGS_H
+#ifndef LOCATION_LIBQPLACERATINGS_H
+#define LOCATION_LIBQPLACERATINGS_H
 
 #include <stdbool.h>
 #include <stddef.h>

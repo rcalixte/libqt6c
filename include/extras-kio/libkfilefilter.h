@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_KIO_QT6C_LIBKFILEFILTER_H
-#define SRC_EXTRAS_KIO_QT6C_LIBKFILEFILTER_H
+#ifndef EXTRAS_KIO_LIBKFILEFILTER_H
+#define EXTRAS_KIO_LIBKFILEFILTER_H
 
 #include <stdbool.h>
 #include <stddef.h>

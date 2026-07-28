@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQJSONVALUE_HPP
-#define SRCC_LIBQJSONVALUE_HPP
+#ifndef LIBQJSONVALUE_HPP
+#define LIBQJSONVALUE_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

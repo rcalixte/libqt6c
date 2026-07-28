@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_KIOC_LIBMIMETYPEJOB_HPP
-#define SRC_EXTRAS_KIOC_LIBMIMETYPEJOB_HPP
+#ifndef EXTRAS_KIO_LIBMIMETYPEJOB_HPP
+#define EXTRAS_KIO_LIBMIMETYPEJOB_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

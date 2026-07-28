@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQBINDINGSTORAGE_H
-#define SRC_QT6C_LIBQBINDINGSTORAGE_H
+#ifndef LIBQBINDINGSTORAGE_H
+#define LIBQBINDINGSTORAGE_H
 
 #include <stdbool.h>
 #include <stddef.h>

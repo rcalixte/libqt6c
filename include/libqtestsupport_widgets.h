@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQTESTSUPPORT_WIDGETS_H
-#define SRC_QT6C_LIBQTESTSUPPORT_WIDGETS_H
+#ifndef LIBQTESTSUPPORT_WIDGETS_H
+#define LIBQTESTSUPPORT_WIDGETS_H
 
 #include <stdbool.h>
 #include <stddef.h>

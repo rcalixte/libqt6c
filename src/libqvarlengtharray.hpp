@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQVARLENGTHARRAY_HPP
-#define SRCC_LIBQVARLENGTHARRAY_HPP
+#ifndef LIBQVARLENGTHARRAY_HPP
+#define LIBQVARLENGTHARRAY_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

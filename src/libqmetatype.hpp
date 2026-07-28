@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQMETATYPE_HPP
-#define SRCC_LIBQMETATYPE_HPP
+#ifndef LIBQMETATYPE_HPP
+#define LIBQMETATYPE_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

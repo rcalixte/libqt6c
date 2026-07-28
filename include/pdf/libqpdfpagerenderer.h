@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_PDF_QT6C_LIBQPDFPAGERENDERER_H
-#define SRC_PDF_QT6C_LIBQPDFPAGERENDERER_H
+#ifndef PDF_LIBQPDFPAGERENDERER_H
+#define PDF_LIBQPDFPAGERENDERER_H
 
 #include <stdbool.h>
 #include <stddef.h>

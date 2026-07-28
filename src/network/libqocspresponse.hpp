@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_NETWORKC_LIBQOCSPRESPONSE_HPP
-#define SRC_NETWORKC_LIBQOCSPRESPONSE_HPP
+#ifndef NETWORK_LIBQOCSPRESPONSE_HPP
+#define NETWORK_LIBQOCSPRESPONSE_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

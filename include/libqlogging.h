@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQLOGGING_H
-#define SRC_QT6C_LIBQLOGGING_H
+#ifndef LIBQLOGGING_H
+#define LIBQLOGGING_H
 
 #include <stdbool.h>
 #include <stddef.h>

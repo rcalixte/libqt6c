@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQTESTSUPPORT_WIDGETS_HPP
-#define SRCC_LIBQTESTSUPPORT_WIDGETS_HPP
+#ifndef LIBQTESTSUPPORT_WIDGETS_HPP
+#define LIBQTESTSUPPORT_WIDGETS_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

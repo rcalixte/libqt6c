@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQNAMESPACE_HPP
-#define SRCC_LIBQNAMESPACE_HPP
+#ifndef LIBQNAMESPACE_HPP
+#define LIBQNAMESPACE_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQSTRINGLISTMODEL_H
-#define SRC_QT6C_LIBQSTRINGLISTMODEL_H
+#ifndef LIBQSTRINGLISTMODEL_H
+#define LIBQSTRINGLISTMODEL_H
 
 #include <stdbool.h>
 #include <stddef.h>

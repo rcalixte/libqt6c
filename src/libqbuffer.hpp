@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQBUFFER_HPP
-#define SRCC_LIBQBUFFER_HPP
+#ifndef LIBQBUFFER_HPP
+#define LIBQBUFFER_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

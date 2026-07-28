@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQSHAREDMEMORY_HPP
-#define SRCC_LIBQSHAREDMEMORY_HPP
+#ifndef LIBQSHAREDMEMORY_HPP
+#define LIBQSHAREDMEMORY_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

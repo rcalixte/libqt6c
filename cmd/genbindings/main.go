@@ -403,7 +403,7 @@ func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool,
 		}
 
 		// Emit code files from the intermediate format
-		libName := "lib" + strings.ReplaceAll(strings.TrimSuffix(filepath.Base(parsed.Filename), ".h"), "-", "_")
+		libName := "lib" + sanitizeName(strings.TrimSuffix(filepath.Base(parsed.Filename), ".h"))
 		outputName := filepath.Join(outDir, libName)
 		dirName := ifv(packageName == "src", "", strings.TrimPrefix(packageName, "src/"))
 

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQSTANDARDPATHS_H
-#define SRC_QT6C_LIBQSTANDARDPATHS_H
+#ifndef LIBQSTANDARDPATHS_H
+#define LIBQSTANDARDPATHS_H
 
 #include <stdbool.h>
 #include <stddef.h>
