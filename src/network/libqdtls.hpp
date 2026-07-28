@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_NETWORKC_LIBQDTLS_HPP
-#define SRC_NETWORKC_LIBQDTLS_HPP
+#ifndef NETWORK_LIBQDTLS_HPP
+#define NETWORK_LIBQDTLS_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_SVGC_LIBQGRAPHICSSVGITEM_HPP
-#define SRC_SVGC_LIBQGRAPHICSSVGITEM_HPP
+#ifndef SVG_LIBQGRAPHICSSVGITEM_HPP
+#define SVG_LIBQGRAPHICSSVGITEM_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

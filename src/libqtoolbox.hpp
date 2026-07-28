@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQTOOLBOX_HPP
-#define SRCC_LIBQTOOLBOX_HPP
+#ifndef LIBQTOOLBOX_HPP
+#define LIBQTOOLBOX_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

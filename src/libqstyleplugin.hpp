@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQSTYLEPLUGIN_HPP
-#define SRCC_LIBQSTYLEPLUGIN_HPP
+#ifndef LIBQSTYLEPLUGIN_HPP
+#define LIBQSTYLEPLUGIN_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

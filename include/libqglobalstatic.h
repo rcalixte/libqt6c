@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQGLOBALSTATIC_H
-#define SRC_QT6C_LIBQGLOBALSTATIC_H
+#ifndef LIBQGLOBALSTATIC_H
+#define LIBQGLOBALSTATIC_H
 
 #include <stdbool.h>
 #include <stddef.h>

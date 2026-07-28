@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_NETWORK_QT6C_LIBQHTTPMULTIPART_H
-#define SRC_NETWORK_QT6C_LIBQHTTPMULTIPART_H
+#ifndef NETWORK_LIBQHTTPMULTIPART_H
+#define NETWORK_LIBQHTTPMULTIPART_H
 
 #include <stdbool.h>
 #include <stddef.h>

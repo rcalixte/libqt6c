@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQICONENGINEPLUGIN_H
-#define SRC_QT6C_LIBQICONENGINEPLUGIN_H
+#ifndef LIBQICONENGINEPLUGIN_H
+#define LIBQICONENGINEPLUGIN_H
 
 #include <stdbool.h>
 #include <stddef.h>

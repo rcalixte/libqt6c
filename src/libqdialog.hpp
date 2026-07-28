@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQDIALOG_HPP
-#define SRCC_LIBQDIALOG_HPP
+#ifndef LIBQDIALOG_HPP
+#define LIBQDIALOG_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

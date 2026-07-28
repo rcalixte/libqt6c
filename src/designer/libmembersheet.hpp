@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_DESIGNERC_LIBMEMBERSHEET_HPP
-#define SRC_DESIGNERC_LIBMEMBERSHEET_HPP
+#ifndef DESIGNER_LIBMEMBERSHEET_HPP
+#define DESIGNER_LIBMEMBERSHEET_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

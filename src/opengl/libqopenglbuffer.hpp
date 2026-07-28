@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_OPENGLC_LIBQOPENGLBUFFER_HPP
-#define SRC_OPENGLC_LIBQOPENGLBUFFER_HPP
+#ifndef OPENGL_LIBQOPENGLBUFFER_HPP
+#define OPENGL_LIBQOPENGLBUFFER_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

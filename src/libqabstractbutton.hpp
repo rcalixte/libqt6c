@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQABSTRACTBUTTON_HPP
-#define SRCC_LIBQABSTRACTBUTTON_HPP
+#ifndef LIBQABSTRACTBUTTON_HPP
+#define LIBQABSTRACTBUTTON_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

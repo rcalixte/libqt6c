@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQITEMEDITORFACTORY_H
-#define SRC_QT6C_LIBQITEMEDITORFACTORY_H
+#ifndef LIBQITEMEDITORFACTORY_H
+#define LIBQITEMEDITORFACTORY_H
 
 #include <stdbool.h>
 #include <stddef.h>

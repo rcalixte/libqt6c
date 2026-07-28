@@ -1,5 +1,5 @@
 #include "../extras-kcoreaddons/libkcompositejob.hpp"
-#include "libdropjob.hpp"
+#include "libcopyjob.hpp"
 #include "libjob_base.hpp"
 #include "../extras-kcoreaddons/libkjob.hpp"
 #include "../libqmetaobject.hpp"

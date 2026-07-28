@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQUNDOGROUP_H
-#define SRC_QT6C_LIBQUNDOGROUP_H
+#ifndef LIBQUNDOGROUP_H
+#define LIBQUNDOGROUP_H
 
 #include <stdbool.h>
 #include <stddef.h>

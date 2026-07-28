@@ -1,5 +1,4 @@
 #include "../extras-kcoreaddons/libkcompositejob.hpp"
-#include "libdropjob.hpp"
 #include "libjob_base.hpp"
 #include "../extras-kcoreaddons/libkjob.hpp"
 #include "../libqdatetime.hpp"

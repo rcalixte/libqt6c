@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQPUSHBUTTON_H
-#define SRC_QT6C_LIBQPUSHBUTTON_H
+#ifndef LIBQPUSHBUTTON_H
+#define LIBQPUSHBUTTON_H
 
 #include <stdbool.h>
 #include <stddef.h>

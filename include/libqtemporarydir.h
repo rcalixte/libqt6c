@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQTEMPORARYDIR_H
-#define SRC_QT6C_LIBQTEMPORARYDIR_H
+#ifndef LIBQTEMPORARYDIR_H
+#define LIBQTEMPORARYDIR_H
 
 #include <stdbool.h>
 #include <stddef.h>

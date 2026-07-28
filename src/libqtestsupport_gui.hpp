@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQTESTSUPPORT_GUI_HPP
-#define SRCC_LIBQTESTSUPPORT_GUI_HPP
+#ifndef LIBQTESTSUPPORT_GUI_HPP
+#define LIBQTESTSUPPORT_GUI_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

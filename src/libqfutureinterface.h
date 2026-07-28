@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQFUTUREINTERFACE_H
-#define SRC_QT6C_LIBQFUTUREINTERFACE_H
+#ifndef LIBQFUTUREINTERFACE_H
+#define LIBQFUTUREINTERFACE_H
 
 #include <stdbool.h>
 #include <stddef.h>

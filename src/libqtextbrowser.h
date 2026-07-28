@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQTEXTBROWSER_H
-#define SRC_QT6C_LIBQTEXTBROWSER_H
+#ifndef LIBQTEXTBROWSER_H
+#define LIBQTEXTBROWSER_H
 
 #include <stdbool.h>
 #include <stddef.h>

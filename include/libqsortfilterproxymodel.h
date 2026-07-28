@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQSORTFILTERPROXYMODEL_H
-#define SRC_QT6C_LIBQSORTFILTERPROXYMODEL_H
+#ifndef LIBQSORTFILTERPROXYMODEL_H
+#define LIBQSORTFILTERPROXYMODEL_H
 
 #include <stdbool.h>
 #include <stddef.h>

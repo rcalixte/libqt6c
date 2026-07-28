@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQDIALOGBUTTONBOX_HPP
-#define SRCC_LIBQDIALOGBUTTONBOX_HPP
+#ifndef LIBQDIALOGBUTTONBOX_HPP
+#define LIBQDIALOGBUTTONBOX_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

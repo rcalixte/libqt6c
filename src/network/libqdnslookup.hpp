@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_NETWORKC_LIBQDNSLOOKUP_HPP
-#define SRC_NETWORKC_LIBQDNSLOOKUP_HPP
+#ifndef NETWORK_LIBQDNSLOOKUP_HPP
+#define NETWORK_LIBQDNSLOOKUP_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

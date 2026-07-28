@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_CBORC_LIBQCBORSTREAMWRITER_HPP
-#define SRC_CBORC_LIBQCBORSTREAMWRITER_HPP
+#ifndef CBOR_LIBQCBORSTREAMWRITER_HPP
+#define CBOR_LIBQCBORSTREAMWRITER_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQMOVIE_HPP
-#define SRCC_LIBQMOVIE_HPP
+#ifndef LIBQMOVIE_HPP
+#define LIBQMOVIE_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

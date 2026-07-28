@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_KIO_QT6C_LIBKSSLINFODIALOG_H
-#define SRC_EXTRAS_KIO_QT6C_LIBKSSLINFODIALOG_H
+#ifndef EXTRAS_KIO_LIBKSSLINFODIALOG_H
+#define EXTRAS_KIO_LIBKSSLINFODIALOG_H
 
 #include <stdbool.h>
 #include <stddef.h>

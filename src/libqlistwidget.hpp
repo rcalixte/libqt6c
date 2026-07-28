@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQLISTWIDGET_HPP
-#define SRCC_LIBQLISTWIDGET_HPP
+#ifndef LIBQLISTWIDGET_HPP
+#define LIBQLISTWIDGET_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

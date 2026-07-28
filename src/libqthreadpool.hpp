@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQTHREADPOOL_HPP
-#define SRCC_LIBQTHREADPOOL_HPP
+#ifndef LIBQTHREADPOOL_HPP
+#define LIBQTHREADPOOL_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQSTANDARDITEMMODEL_HPP
-#define SRCC_LIBQSTANDARDITEMMODEL_HPP
+#ifndef LIBQSTANDARDITEMMODEL_HPP
+#define LIBQSTANDARDITEMMODEL_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

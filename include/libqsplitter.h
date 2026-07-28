@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQSPLITTER_H
-#define SRC_QT6C_LIBQSPLITTER_H
+#ifndef LIBQSPLITTER_H
+#define LIBQSPLITTER_H
 
 #include <stdbool.h>
 #include <stddef.h>

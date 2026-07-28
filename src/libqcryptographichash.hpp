@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQCRYPTOGRAPHICHASH_HPP
-#define SRCC_LIBQCRYPTOGRAPHICHASH_HPP
+#ifndef LIBQCRYPTOGRAPHICHASH_HPP
+#define LIBQCRYPTOGRAPHICHASH_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

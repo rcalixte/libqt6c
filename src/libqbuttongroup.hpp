@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQBUTTONGROUP_HPP
-#define SRCC_LIBQBUTTONGROUP_HPP
+#ifndef LIBQBUTTONGROUP_HPP
+#define LIBQBUTTONGROUP_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

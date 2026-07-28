@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_KIOC_LIBGLOBAL_HPP
-#define SRC_EXTRAS_KIOC_LIBGLOBAL_HPP
+#ifndef EXTRAS_KIO_LIBGLOBAL_HPP
+#define EXTRAS_KIO_LIBGLOBAL_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQICONENGINE_HPP
-#define SRCC_LIBQICONENGINE_HPP
+#ifndef LIBQICONENGINE_HPP
+#define LIBQICONENGINE_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

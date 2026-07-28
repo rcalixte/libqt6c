@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQHEADERVIEW_H
-#define SRC_QT6C_LIBQHEADERVIEW_H
+#ifndef LIBQHEADERVIEW_H
+#define LIBQHEADERVIEW_H
 
 #include <stdbool.h>
 #include <stddef.h>

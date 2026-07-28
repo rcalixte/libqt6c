@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQJSONDOCUMENT_H
-#define SRC_QT6C_LIBQJSONDOCUMENT_H
+#ifndef LIBQJSONDOCUMENT_H
+#define LIBQJSONDOCUMENT_H
 
 #include <stdbool.h>
 #include <stddef.h>

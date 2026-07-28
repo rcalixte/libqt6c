@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_KPARTSC_LIBPARTBASE_HPP
-#define SRC_EXTRAS_KPARTSC_LIBPARTBASE_HPP
+#ifndef EXTRAS_KPARTS_LIBPARTBASE_HPP
+#define EXTRAS_KPARTS_LIBPARTBASE_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

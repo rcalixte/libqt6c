@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_KCODECSC_LIBKCHARSETS_HPP
-#define SRC_EXTRAS_KCODECSC_LIBKCHARSETS_HPP
+#ifndef EXTRAS_KCODECS_LIBKCHARSETS_HPP
+#define EXTRAS_KCODECS_LIBKCHARSETS_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQCOMBOBOX_H
-#define SRC_QT6C_LIBQCOMBOBOX_H
+#ifndef LIBQCOMBOBOX_H
+#define LIBQCOMBOBOX_H
 
 #include <stdbool.h>
 #include <stddef.h>

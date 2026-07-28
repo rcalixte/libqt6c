@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_CBORC_LIBQCBORSTREAMREADER_HPP
-#define SRC_CBORC_LIBQCBORSTREAMREADER_HPP
+#ifndef CBOR_LIBQCBORSTREAMREADER_HPP
+#define CBOR_LIBQCBORSTREAMREADER_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

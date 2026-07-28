@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQJSONVALUE_H
-#define SRC_QT6C_LIBQJSONVALUE_H
+#ifndef LIBQJSONVALUE_H
+#define LIBQJSONVALUE_H
 
 #include <stdbool.h>
 #include <stddef.h>

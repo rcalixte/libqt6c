@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQTREEVIEW_H
-#define SRC_QT6C_LIBQTREEVIEW_H
+#ifndef LIBQTREEVIEW_H
+#define LIBQTREEVIEW_H
 
 #include <stdbool.h>
 #include <stddef.h>

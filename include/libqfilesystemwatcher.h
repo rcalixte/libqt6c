@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQFILESYSTEMWATCHER_H
-#define SRC_QT6C_LIBQFILESYSTEMWATCHER_H
+#ifndef LIBQFILESYSTEMWATCHER_H
+#define LIBQFILESYSTEMWATCHER_H
 
 #include <stdbool.h>
 #include <stddef.h>

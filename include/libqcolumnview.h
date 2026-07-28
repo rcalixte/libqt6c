@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQCOLUMNVIEW_H
-#define SRC_QT6C_LIBQCOLUMNVIEW_H
+#ifndef LIBQCOLUMNVIEW_H
+#define LIBQCOLUMNVIEW_H
 
 #include <stdbool.h>
 #include <stddef.h>

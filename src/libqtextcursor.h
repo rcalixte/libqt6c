@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQTEXTCURSOR_H
-#define SRC_QT6C_LIBQTEXTCURSOR_H
+#ifndef LIBQTEXTCURSOR_H
+#define LIBQTEXTCURSOR_H
 
 #include <stdbool.h>
 #include <stddef.h>

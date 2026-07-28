@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_MULTIMEDIA_QT6C_LIBQAUDIOFORMAT_H
-#define SRC_MULTIMEDIA_QT6C_LIBQAUDIOFORMAT_H
+#ifndef MULTIMEDIA_LIBQAUDIOFORMAT_H
+#define MULTIMEDIA_LIBQAUDIOFORMAT_H
 
 #include <stdbool.h>
 #include <stddef.h>

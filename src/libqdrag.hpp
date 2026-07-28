@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQDRAG_HPP
-#define SRCC_LIBQDRAG_HPP
+#ifndef LIBQDRAG_HPP
+#define LIBQDRAG_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

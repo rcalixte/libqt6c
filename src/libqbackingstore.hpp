@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQBACKINGSTORE_HPP
-#define SRCC_LIBQBACKINGSTORE_HPP
+#ifndef LIBQBACKINGSTORE_HPP
+#define LIBQBACKINGSTORE_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

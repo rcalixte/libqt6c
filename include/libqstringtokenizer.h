@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQSTRINGTOKENIZER_H
-#define SRC_QT6C_LIBQSTRINGTOKENIZER_H
+#ifndef LIBQSTRINGTOKENIZER_H
+#define LIBQSTRINGTOKENIZER_H
 
 #include <stdbool.h>
 #include <stddef.h>

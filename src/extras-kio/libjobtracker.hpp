@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_KIOC_LIBJOBTRACKER_HPP
-#define SRC_EXTRAS_KIOC_LIBJOBTRACKER_HPP
+#ifndef EXTRAS_KIO_LIBJOBTRACKER_HPP
+#define EXTRAS_KIO_LIBJOBTRACKER_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

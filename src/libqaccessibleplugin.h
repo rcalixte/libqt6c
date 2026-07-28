@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQACCESSIBLEPLUGIN_H
-#define SRC_QT6C_LIBQACCESSIBLEPLUGIN_H
+#ifndef LIBQACCESSIBLEPLUGIN_H
+#define LIBQACCESSIBLEPLUGIN_H
 
 #include <stdbool.h>
 #include <stddef.h>

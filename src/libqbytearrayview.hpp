@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQBYTEARRAYVIEW_HPP
-#define SRCC_LIBQBYTEARRAYVIEW_HPP
+#ifndef LIBQBYTEARRAYVIEW_HPP
+#define LIBQBYTEARRAYVIEW_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQSPINBOX_H
-#define SRC_QT6C_LIBQSPINBOX_H
+#ifndef LIBQSPINBOX_H
+#define LIBQSPINBOX_H
 
 #include <stdbool.h>
 #include <stddef.h>

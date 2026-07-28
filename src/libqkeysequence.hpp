@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQKEYSEQUENCE_HPP
-#define SRCC_LIBQKEYSEQUENCE_HPP
+#ifndef LIBQKEYSEQUENCE_HPP
+#define LIBQKEYSEQUENCE_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQVECTORND_HPP
-#define SRCC_LIBQVECTORND_HPP
+#ifndef LIBQVECTORND_HPP
+#define LIBQVECTORND_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

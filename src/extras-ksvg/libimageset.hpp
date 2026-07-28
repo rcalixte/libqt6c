@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_KSVGC_LIBIMAGESET_HPP
-#define SRC_EXTRAS_KSVGC_LIBIMAGESET_HPP
+#ifndef EXTRAS_KSVG_LIBIMAGESET_HPP
+#define EXTRAS_KSVG_LIBIMAGESET_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

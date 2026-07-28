@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_MULTIMEDIAC_LIBQCAMERA_HPP
-#define SRC_MULTIMEDIAC_LIBQCAMERA_HPP
+#ifndef MULTIMEDIA_LIBQCAMERA_HPP
+#define MULTIMEDIA_LIBQCAMERA_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_SOLIDC_LIBBLOCK_HPP
-#define SRC_EXTRAS_SOLIDC_LIBBLOCK_HPP
+#ifndef EXTRAS_SOLID_LIBBLOCK_HPP
+#define EXTRAS_SOLID_LIBBLOCK_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

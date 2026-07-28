@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_ATTICA_QT6C_LIBACHIEVEMENT_H
-#define SRC_EXTRAS_ATTICA_QT6C_LIBACHIEVEMENT_H
+#ifndef EXTRAS_ATTICA_LIBACHIEVEMENT_H
+#define EXTRAS_ATTICA_LIBACHIEVEMENT_H
 
 #include <stdbool.h>
 #include <stddef.h>

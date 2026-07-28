@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQABSTRACTSPINBOX_HPP
-#define SRCC_LIBQABSTRACTSPINBOX_HPP
+#ifndef LIBQABSTRACTSPINBOX_HPP
+#define LIBQABSTRACTSPINBOX_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

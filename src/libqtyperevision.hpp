@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQTYPEREVISION_HPP
-#define SRCC_LIBQTYPEREVISION_HPP
+#ifndef LIBQTYPEREVISION_HPP
+#define LIBQTYPEREVISION_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

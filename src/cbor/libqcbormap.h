@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_CBOR_QT6C_LIBQCBORMAP_H
-#define SRC_CBOR_QT6C_LIBQCBORMAP_H
+#ifndef CBOR_LIBQCBORMAP_H
+#define CBOR_LIBQCBORMAP_H
 
 #include <stdbool.h>
 #include <stddef.h>

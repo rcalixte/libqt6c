@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQREGULAREXPRESSION_HPP
-#define SRCC_LIBQREGULAREXPRESSION_HPP
+#ifndef LIBQREGULAREXPRESSION_HPP
+#define LIBQREGULAREXPRESSION_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

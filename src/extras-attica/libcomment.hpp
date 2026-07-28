@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_ATTICAC_LIBCOMMENT_HPP
-#define SRC_EXTRAS_ATTICAC_LIBCOMMENT_HPP
+#ifndef EXTRAS_ATTICA_LIBCOMMENT_HPP
+#define EXTRAS_ATTICA_LIBCOMMENT_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

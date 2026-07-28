@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_DESIGNERC_LIBFORMBUILDER_HPP
-#define SRC_DESIGNERC_LIBFORMBUILDER_HPP
+#ifndef DESIGNER_LIBFORMBUILDER_HPP
+#define DESIGNER_LIBFORMBUILDER_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

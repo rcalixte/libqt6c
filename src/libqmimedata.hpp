@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQMIMEDATA_HPP
-#define SRCC_LIBQMIMEDATA_HPP
+#ifndef LIBQMIMEDATA_HPP
+#define LIBQMIMEDATA_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

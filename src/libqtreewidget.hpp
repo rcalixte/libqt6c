@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQTREEWIDGET_HPP
-#define SRCC_LIBQTREEWIDGET_HPP
+#ifndef LIBQTREEWIDGET_HPP
+#define LIBQTREEWIDGET_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

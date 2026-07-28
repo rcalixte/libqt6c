@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQSTACKEDWIDGET_H
-#define SRC_QT6C_LIBQSTACKEDWIDGET_H
+#ifndef LIBQSTACKEDWIDGET_H
+#define LIBQSTACKEDWIDGET_H
 
 #include <stdbool.h>
 #include <stddef.h>

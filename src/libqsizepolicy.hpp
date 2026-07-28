@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQSIZEPOLICY_HPP
-#define SRCC_LIBQSIZEPOLICY_HPP
+#ifndef LIBQSIZEPOLICY_HPP
+#define LIBQSIZEPOLICY_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQGRAPHICSVIEW_HPP
-#define SRCC_LIBQGRAPHICSVIEW_HPP
+#ifndef LIBQGRAPHICSVIEW_HPP
+#define LIBQGRAPHICSVIEW_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

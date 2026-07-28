@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQACCESSIBLEPLUGIN_HPP
-#define SRCC_LIBQACCESSIBLEPLUGIN_HPP
+#ifndef LIBQACCESSIBLEPLUGIN_HPP
+#define LIBQACCESSIBLEPLUGIN_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

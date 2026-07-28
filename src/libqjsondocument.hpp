@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQJSONDOCUMENT_HPP
-#define SRCC_LIBQJSONDOCUMENT_HPP
+#ifndef LIBQJSONDOCUMENT_HPP
+#define LIBQJSONDOCUMENT_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

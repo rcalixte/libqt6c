@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_WEBCHANNELC_LIBQWEBCHANNEL_HPP
-#define SRC_WEBCHANNELC_LIBQWEBCHANNEL_HPP
+#ifndef WEBCHANNEL_LIBQWEBCHANNEL_HPP
+#define WEBCHANNEL_LIBQWEBCHANNEL_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQACCESSIBLEBRIDGE_H
-#define SRC_QT6C_LIBQACCESSIBLEBRIDGE_H
+#ifndef LIBQACCESSIBLEBRIDGE_H
+#define LIBQACCESSIBLEBRIDGE_H
 
 #include <stdbool.h>
 #include <stddef.h>

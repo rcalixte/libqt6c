@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQPAINTDEVICEWINDOW_H
-#define SRC_QT6C_LIBQPAINTDEVICEWINDOW_H
+#ifndef LIBQPAINTDEVICEWINDOW_H
+#define LIBQPAINTDEVICEWINDOW_H
 
 #include <stdbool.h>
 #include <stddef.h>

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQSTATUSBAR_HPP
-#define SRCC_LIBQSTATUSBAR_HPP
+#ifndef LIBQSTATUSBAR_HPP
+#define LIBQSTATUSBAR_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

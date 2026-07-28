@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQPAUSEANIMATION_H
-#define SRC_QT6C_LIBQPAUSEANIMATION_H
+#ifndef LIBQPAUSEANIMATION_H
+#define LIBQPAUSEANIMATION_H
 
 #include <stdbool.h>
 #include <stddef.h>

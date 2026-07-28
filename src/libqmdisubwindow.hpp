@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQMDISUBWINDOW_HPP
-#define SRCC_LIBQMDISUBWINDOW_HPP
+#ifndef LIBQMDISUBWINDOW_HPP
+#define LIBQMDISUBWINDOW_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

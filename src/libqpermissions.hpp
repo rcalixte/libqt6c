@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQPERMISSIONS_HPP
-#define SRCC_LIBQPERMISSIONS_HPP
+#ifndef LIBQPERMISSIONS_HPP
+#define LIBQPERMISSIONS_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

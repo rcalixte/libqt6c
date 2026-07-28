@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQSAVEFILE_HPP
-#define SRCC_LIBQSAVEFILE_HPP
+#ifndef LIBQSAVEFILE_HPP
+#define LIBQSAVEFILE_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

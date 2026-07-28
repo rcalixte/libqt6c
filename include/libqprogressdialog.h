@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQPROGRESSDIALOG_H
-#define SRC_QT6C_LIBQPROGRESSDIALOG_H
+#ifndef LIBQPROGRESSDIALOG_H
+#define LIBQPROGRESSDIALOG_H
 
 #include <stdbool.h>
 #include <stddef.h>

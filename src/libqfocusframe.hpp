@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQFOCUSFRAME_HPP
-#define SRCC_LIBQFOCUSFRAME_HPP
+#ifndef LIBQFOCUSFRAME_HPP
+#define LIBQFOCUSFRAME_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

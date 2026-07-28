@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQMIMETYPE_HPP
-#define SRCC_LIBQMIMETYPE_HPP
+#ifndef LIBQMIMETYPE_HPP
+#define LIBQMIMETYPE_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

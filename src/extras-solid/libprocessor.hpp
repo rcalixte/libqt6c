@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_EXTRAS_SOLIDC_LIBPROCESSOR_HPP
-#define SRC_EXTRAS_SOLIDC_LIBPROCESSOR_HPP
+#ifndef EXTRAS_SOLID_LIBPROCESSOR_HPP
+#define EXTRAS_SOLID_LIBPROCESSOR_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

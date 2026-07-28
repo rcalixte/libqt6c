@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_DESIGNER_QT6C_LIBEXTRAINFO_H
-#define SRC_DESIGNER_QT6C_LIBEXTRAINFO_H
+#ifndef DESIGNER_LIBEXTRAINFO_H
+#define DESIGNER_LIBEXTRAINFO_H
 
 #include <stdbool.h>
 #include <stddef.h>

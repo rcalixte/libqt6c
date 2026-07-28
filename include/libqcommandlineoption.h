@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQCOMMANDLINEOPTION_H
-#define SRC_QT6C_LIBQCOMMANDLINEOPTION_H
+#ifndef LIBQCOMMANDLINEOPTION_H
+#define LIBQCOMMANDLINEOPTION_H
 
 #include <stdbool.h>
 #include <stddef.h>

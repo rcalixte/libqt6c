@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQTEMPORARYFILE_HPP
-#define SRCC_LIBQTEMPORARYFILE_HPP
+#ifndef LIBQTEMPORARYFILE_HPP
+#define LIBQTEMPORARYFILE_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

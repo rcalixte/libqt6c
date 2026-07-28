@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_WEBSOCKETSC_LIBQWEBSOCKET_HPP
-#define SRC_WEBSOCKETSC_LIBQWEBSOCKET_HPP
+#ifndef WEBSOCKETS_LIBQWEBSOCKET_HPP
+#define WEBSOCKETS_LIBQWEBSOCKET_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

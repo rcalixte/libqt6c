@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_NETWORK_QT6C_LIBQHOSTADDRESS_H
-#define SRC_NETWORK_QT6C_LIBQHOSTADDRESS_H
+#ifndef NETWORK_LIBQHOSTADDRESS_H
+#define NETWORK_LIBQHOSTADDRESS_H
 
 #include <stdbool.h>
 #include <stddef.h>

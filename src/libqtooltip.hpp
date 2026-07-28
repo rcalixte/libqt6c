@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQTOOLTIP_HPP
-#define SRCC_LIBQTOOLTIP_HPP
+#ifndef LIBQTOOLTIP_HPP
+#define LIBQTOOLTIP_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

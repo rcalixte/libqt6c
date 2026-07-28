@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQCHECKBOX_HPP
-#define SRCC_LIBQCHECKBOX_HPP
+#ifndef LIBQCHECKBOX_HPP
+#define LIBQCHECKBOX_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

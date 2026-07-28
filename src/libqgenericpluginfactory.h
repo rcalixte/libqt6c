@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQGENERICPLUGINFACTORY_H
-#define SRC_QT6C_LIBQGENERICPLUGINFACTORY_H
+#ifndef LIBQGENERICPLUGINFACTORY_H
+#define LIBQGENERICPLUGINFACTORY_H
 
 #include <stdbool.h>
 #include <stddef.h>

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQCOMMANDLINEPARSER_HPP
-#define SRCC_LIBQCOMMANDLINEPARSER_HPP
+#ifndef LIBQCOMMANDLINEPARSER_HPP
+#define LIBQCOMMANDLINEPARSER_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_POSITIONINGC_LIBQGEOPATH_HPP
-#define SRC_POSITIONINGC_LIBQGEOPATH_HPP
+#ifndef POSITIONING_LIBQGEOPATH_HPP
+#define POSITIONING_LIBQGEOPATH_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

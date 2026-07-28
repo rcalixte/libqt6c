@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQLINEEDIT_HPP
-#define SRCC_LIBQLINEEDIT_HPP
+#ifndef LIBQLINEEDIT_HPP
+#define LIBQLINEEDIT_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

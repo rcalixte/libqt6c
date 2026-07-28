@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRCC_LIBQGESTURE_HPP
-#define SRCC_LIBQGESTURE_HPP
+#ifndef LIBQGESTURE_HPP
+#define LIBQGESTURE_HPP
 
 #include <stdbool.h>
 #include <stddef.h>

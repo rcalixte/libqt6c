@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_MULTIMEDIA_QT6C_LIBQMEDIAPLAYER_H
-#define SRC_MULTIMEDIA_QT6C_LIBQMEDIAPLAYER_H
+#ifndef MULTIMEDIA_LIBQMEDIAPLAYER_H
+#define MULTIMEDIA_LIBQMEDIAPLAYER_H
 
 #include <stdbool.h>
 #include <stddef.h>

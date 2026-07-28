@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SRC_QT6C_LIBQFUTUREWATCHER_H
-#define SRC_QT6C_LIBQFUTUREWATCHER_H
+#ifndef LIBQFUTUREWATCHER_H
+#define LIBQFUTUREWATCHER_H
 
 #include <stdbool.h>
 #include <stddef.h>
