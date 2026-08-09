@@ -20,7 +20,7 @@ pub fn build(b: *std.Build) !void {
     const is_macos = target.result.os.tag == .macos or host_os == .macos;
     const is_windows = target.result.os.tag == .windows or host_os == .windows;
 
-    const macos_libraries = b.option([]const []const u8, "macos-libraries", "Extra libraries or frameworks to link via pkg-config") orelse &.{};
+    const macos_libraries = b.option([]const []const u8, "macos-libraries", "Extra libraries or frameworks to link via pkgconf") orelse &.{};
 
     // Add isystem paths for Linux
     var distro: Distro = .none;
@@ -70,7 +70,7 @@ pub fn build(b: *std.Build) !void {
             } else try b.graph.environ_map.put(pkg_env, b.fmt("{s}{s}{s}", .{ extra_env.items, qt_path, pkg_dir }));
 
             const argv = try std.mem.concat(b.allocator, []const u8, &.{
-                &.{ "pkg-config", "--cflags", "--libs", "Qt6Widgets" },
+                &.{ "pkgconf", "--cflags", "--libs", "Qt6Widgets" },
                 macos_libraries,
             });
             result = try std.process.run(b.allocator, b.graph.io, .{
@@ -161,19 +161,19 @@ pub fn build(b: *std.Build) !void {
         if (std.Io.Dir.cwd().access(b.graph.io, extra_path, .{}))
             try qt_include_path.append(b.allocator, b.dupe(extra_path))
         else |_|
-            std.log.warn("extra path {s} does not exist\n", .{extra_path});
+            std.log.warn("extra path {s} does not exist", .{extra_path});
 
         var inc_path = b.fmt("{s}/include/KF6", .{extra_path});
         if (std.Io.Dir.cwd().access(b.graph.io, inc_path, .{}))
             try qt_include_path.append(b.allocator, b.dupe(inc_path))
         else |_|
-            std.log.warn("extra path {s} does not exist\n", .{inc_path});
+            std.log.warn("extra path {s} does not exist", .{inc_path});
 
         inc_path = b.fmt("{s}/include", .{extra_path});
         if (std.Io.Dir.cwd().access(b.graph.io, inc_path, .{}))
             try qt_include_path.append(b.allocator, b.dupe(inc_path))
         else |_|
-            std.log.warn("extra path {s} does not exist\n", .{inc_path});
+            std.log.warn("extra path {s} does not exist", .{inc_path});
     }
     for (os_include_path) |os_path| {
         std.Io.Dir.cwd().access(b.graph.io, os_path, .{}) catch continue;
@@ -254,7 +254,6 @@ pub fn build(b: *std.Build) !void {
             lib.setLibCFile(libc_path);
             lib.root_module.addIncludePath(.{ .cwd_relative = override_dir });
             if (distro == .none) {
-                lib.root_module.link_libc = true;
                 const lib_path = "/usr/include/" ++ @tagName(host_arch) ++ "-linux-gnu";
                 if (std.Io.Dir.cwd().access(b.graph.io, lib_path, .{}))
                     lib.root_module.addIncludePath(.{ .cwd_relative = lib_path })
@@ -262,11 +261,17 @@ pub fn build(b: *std.Build) !void {
             } else if (distro == .unknown)
                 lib.root_module.addIncludePath(.{ .cwd_relative = "/usr/lib/" ++ @tagName(host_arch) ++ "-linux-gnu/include" });
         }
+
         lib.root_module.addIncludePath(b.path("include"));
-        lib.root_module.addCSourceFiles(.{ .files = &.{source}, .flags = cpp_flags.items });
+
+        const cpp_flags_len = cpp_flags.items.len;
+        defer cpp_flags.shrinkRetainingCapacity(cpp_flags_len);
+        const dirname = std.Io.Dir.path.dirname(source) orelse "";
+        if (std.mem.endsWith(u8, dirname, "kcodecs")) try cpp_flags.append(b.allocator, "-std=c++20");
+        lib.root_module.addCSourceFile(.{ .file = b.path(source), .flags = cpp_flags.items });
 
         // Add corresponding C wrapper
-        lib.root_module.addCSourceFiles(.{ .files = &.{source[0 .. source.len - 2]}, .flags = c_flags });
+        lib.root_module.addCSourceFile(.{ .file = b.path(source[0 .. source.len - 2]), .flags = c_flags });
 
         b.installArtifact(lib);
     }
