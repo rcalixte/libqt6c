@@ -538,6 +538,7 @@ type CppClass struct {
 	CanDelete            bool
 	HasTrivialCopyAssign bool
 	HasTrivialMoveAssign bool
+	HasEmptyCtor         bool
 
 	ChildTypedefs  []CppTypedef
 	ChildClassdefs []CppClass
