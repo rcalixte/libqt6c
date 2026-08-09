@@ -2977,12 +2977,12 @@ void KCoreConfigSkeleton__ItemLongLong_Delete(KCoreConfigSkeleton__ItemLongLong*
     delete self;
 }
 
-KCoreConfigSkeleton__ItemEnum__Choice* KCoreConfigSkeleton__ItemEnum__Choice_New(const KCoreConfigSkeleton__ItemEnum__Choice* param1) {
-    return new KCoreConfigSkeleton::ItemEnum::Choice(*param1);
+KCoreConfigSkeleton__ItemEnum__Choice* KCoreConfigSkeleton__ItemEnum__Choice_New() {
+    return new KCoreConfigSkeleton::ItemEnum::Choice();
 }
 
-KCoreConfigSkeleton__ItemEnum__Choice* KCoreConfigSkeleton__ItemEnum__Choice_New2() {
-    return new KCoreConfigSkeleton::ItemEnum::Choice();
+KCoreConfigSkeleton__ItemEnum__Choice* KCoreConfigSkeleton__ItemEnum__Choice_New2(const KCoreConfigSkeleton__ItemEnum__Choice* param1) {
+    return new KCoreConfigSkeleton::ItemEnum::Choice(*param1);
 }
 
 libqt_string KCoreConfigSkeleton__ItemEnum__Choice_Name(const KCoreConfigSkeleton__ItemEnum__Choice* self) {

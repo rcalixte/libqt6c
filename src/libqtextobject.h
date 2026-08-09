@@ -2229,6 +2229,10 @@ void q_textframe_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockuserdata.html)
 
+/// q_textblockuserdata_new constructs a new QTextBlockUserData object.
+///
+QTextBlockUserData* q_textblockuserdata_new();
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockuserdata.html#operator-eq)
 ///
 /// @param self QTextBlockUserData*
@@ -2624,13 +2628,11 @@ void q_textfragment_delete(void* self);
 
 /// q_textframe__iterator_new constructs a new QTextFrame::iterator object.
 ///
-/// @param other QTextFrame__iterator*
-///
-QTextFrame__iterator* q_textframe__iterator_new(void* other);
+QTextFrame__iterator* q_textframe__iterator_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframe-iterator.html)
 
-/// q_textframe__iterator_new2 constructs a new QTextFrame::iterator object and invalidates the source QTextFrame::iterator object.
+/// q_textframe__iterator_new2 constructs a new QTextFrame::iterator object.
 ///
 /// @param other QTextFrame__iterator*
 ///
@@ -2638,9 +2640,11 @@ QTextFrame__iterator* q_textframe__iterator_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframe-iterator.html)
 
-/// q_textframe__iterator_new3 constructs a new QTextFrame::iterator object.
+/// q_textframe__iterator_new3 constructs a new QTextFrame::iterator object and invalidates the source QTextFrame::iterator object.
 ///
-QTextFrame__iterator* q_textframe__iterator_new3();
+/// @param other QTextFrame__iterator*
+///
+QTextFrame__iterator* q_textframe__iterator_new3(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframe-iterator.html)
 
@@ -2738,13 +2742,11 @@ void q_textframe__iterator_delete(void* self);
 
 /// q_textblock__iterator_new constructs a new QTextBlock::iterator object.
 ///
-/// @param other QTextBlock__iterator*
-///
-QTextBlock__iterator* q_textblock__iterator_new(void* other);
+QTextBlock__iterator* q_textblock__iterator_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblock-iterator.html)
 
-/// q_textblock__iterator_new2 constructs a new QTextBlock::iterator object and invalidates the source QTextBlock::iterator object.
+/// q_textblock__iterator_new2 constructs a new QTextBlock::iterator object.
 ///
 /// @param other QTextBlock__iterator*
 ///
@@ -2752,9 +2754,11 @@ QTextBlock__iterator* q_textblock__iterator_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblock-iterator.html)
 
-/// q_textblock__iterator_new3 constructs a new QTextBlock::iterator object.
+/// q_textblock__iterator_new3 constructs a new QTextBlock::iterator object and invalidates the source QTextBlock::iterator object.
 ///
-QTextBlock__iterator* q_textblock__iterator_new3();
+/// @param other QTextBlock__iterator*
+///
+QTextBlock__iterator* q_textblock__iterator_new3(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblock-iterator.html)
 

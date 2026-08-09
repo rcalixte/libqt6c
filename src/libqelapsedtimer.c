@@ -1,16 +1,16 @@
 #include "libqelapsedtimer.hpp"
 #include "libqelapsedtimer.h"
 
-QElapsedTimer* q_elapsedtimer_new(void* other) {
-    return QElapsedTimer_New((QElapsedTimer*)other);
+QElapsedTimer* q_elapsedtimer_new() {
+    return QElapsedTimer_New();
 }
 
 QElapsedTimer* q_elapsedtimer_new2(void* other) {
     return QElapsedTimer_New2((QElapsedTimer*)other);
 }
 
-QElapsedTimer* q_elapsedtimer_new3() {
-    return QElapsedTimer_New3();
+QElapsedTimer* q_elapsedtimer_new3(void* other) {
+    return QElapsedTimer_New3((QElapsedTimer*)other);
 }
 
 void q_elapsedtimer_copy_assign(void* self, void* other) {

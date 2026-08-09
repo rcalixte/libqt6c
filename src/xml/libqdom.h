@@ -10412,9 +10412,15 @@ void q_domprocessinginstruction_delete(void* self);
 
 /// q_domdocument__parseresult_new constructs a new QDomDocument::ParseResult object.
 ///
+QDomDocument__ParseResult* q_domdocument__parseresult_new();
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument-parseresult.html)
+
+/// q_domdocument__parseresult_new2 constructs a new QDomDocument::ParseResult object.
+///
 /// @param param1 QDomDocument__ParseResult*
 ///
-QDomDocument__ParseResult* q_domdocument__parseresult_new(void* param1);
+QDomDocument__ParseResult* q_domdocument__parseresult_new2(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument-parseresult.html#errorMessage-var)
 ///

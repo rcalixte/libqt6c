@@ -106,16 +106,16 @@ void q_mediatimerange_delete(void* self) {
     QMediaTimeRange_Delete((QMediaTimeRange*)(self));
 }
 
-QMediaTimeRange__Interval* q_mediatimerange__interval_new(void* other) {
-    return QMediaTimeRange__Interval_New((QMediaTimeRange__Interval*)other);
+QMediaTimeRange__Interval* q_mediatimerange__interval_new() {
+    return QMediaTimeRange__Interval_New();
 }
 
 QMediaTimeRange__Interval* q_mediatimerange__interval_new2(void* other) {
     return QMediaTimeRange__Interval_New2((QMediaTimeRange__Interval*)other);
 }
 
-QMediaTimeRange__Interval* q_mediatimerange__interval_new3() {
-    return QMediaTimeRange__Interval_New3();
+QMediaTimeRange__Interval* q_mediatimerange__interval_new3(void* other) {
+    return QMediaTimeRange__Interval_New3((QMediaTimeRange__Interval*)other);
 }
 
 QMediaTimeRange__Interval* q_mediatimerange__interval_new4(int64_t start, int64_t end) {

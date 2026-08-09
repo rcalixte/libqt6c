@@ -2916,8 +2916,12 @@ void q_textedit_delete(void* self) {
     QTextEdit_Delete((QTextEdit*)(self));
 }
 
-QTextEdit__ExtraSelection* q_textedit__extraselection_new(void* param1) {
-    return QTextEdit__ExtraSelection_New((QTextEdit__ExtraSelection*)param1);
+QTextEdit__ExtraSelection* q_textedit__extraselection_new() {
+    return QTextEdit__ExtraSelection_New();
+}
+
+QTextEdit__ExtraSelection* q_textedit__extraselection_new2(void* param1) {
+    return QTextEdit__ExtraSelection_New2((QTextEdit__ExtraSelection*)param1);
 }
 
 QTextCursor* q_textedit__extraselection_cursor(void* self) {

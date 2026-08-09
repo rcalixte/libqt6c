@@ -12,9 +12,15 @@
 
 /// k_attica__field_new constructs a new Attica::Field object.
 ///
+Attica__Field* k_attica__field_new();
+
+/// [Upstream resources](https://api.kde.org/attica-field.html)
+
+/// k_attica__field_new2 constructs a new Attica::Field object.
+///
 /// @param param1 Attica__Field*
 ///
-Attica__Field* k_attica__field_new(void* param1);
+Attica__Field* k_attica__field_new2(void* param1);
 
 /// [Upstream resources](https://api.kde.org/attica-field.html#type-var)
 ///

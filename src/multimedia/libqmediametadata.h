@@ -12,15 +12,15 @@
 
 /// q_mediametadata_new constructs a new QMediaMetaData object.
 ///
-/// @param param1 QMediaMetaData*
-///
-QMediaMetaData* q_mediametadata_new(void* param1);
+QMediaMetaData* q_mediametadata_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html)
 
 /// q_mediametadata_new2 constructs a new QMediaMetaData object.
 ///
-QMediaMetaData* q_mediametadata_new2();
+/// @param param1 QMediaMetaData*
+///
+QMediaMetaData* q_mediametadata_new2(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#value)
 ///

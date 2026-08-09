@@ -2,8 +2,12 @@
 #include "libpublisher.hpp"
 #include "libpublisher.h"
 
-Attica__Field* k_attica__field_new(void* param1) {
-    return Attica__Field_New((Attica__Field*)param1);
+Attica__Field* k_attica__field_new() {
+    return Attica__Field_New();
+}
+
+Attica__Field* k_attica__field_new2(void* param1) {
+    return Attica__Field_New2((Attica__Field*)param1);
 }
 
 const char* k_attica__field_type(void* self) {

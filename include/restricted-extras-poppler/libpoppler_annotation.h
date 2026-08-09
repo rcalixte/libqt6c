@@ -4702,6 +4702,10 @@ void q_poppler__annotation__popup_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/structPoppler_1_1HighlightAnnotation_1_1Quad.html)
 
+/// q_poppler__highlightannotation__quad_new constructs a new Poppler::HighlightAnnotation::Quad object.
+///
+Poppler__HighlightAnnotation__Quad* q_poppler__highlightannotation__quad_new();
+
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/structPoppler_1_1HighlightAnnotation_1_1Quad.html)
 ///
 /// @param self Poppler__HighlightAnnotation__Quad*

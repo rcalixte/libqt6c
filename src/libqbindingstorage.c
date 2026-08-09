@@ -2,12 +2,16 @@
 #include "libqbindingstorage.hpp"
 #include "libqbindingstorage.h"
 
-QBindingStatus* q_bindingstatus_new(void* other) {
-    return QBindingStatus_New((QBindingStatus*)other);
+QBindingStatus* q_bindingstatus_new() {
+    return QBindingStatus_New();
 }
 
 QBindingStatus* q_bindingstatus_new2(void* other) {
     return QBindingStatus_New2((QBindingStatus*)other);
+}
+
+QBindingStatus* q_bindingstatus_new3(void* other) {
+    return QBindingStatus_New3((QBindingStatus*)other);
 }
 
 void q_bindingstatus_copy_assign(void* self, void* other) {

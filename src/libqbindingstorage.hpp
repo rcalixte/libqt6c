@@ -20,8 +20,9 @@ typedef struct QBindingStorage QBindingStorage;
 typedef struct QUntypedPropertyData QUntypedPropertyData;
 #endif
 
-QBindingStatus* QBindingStatus_New(const QBindingStatus* other);
-QBindingStatus* QBindingStatus_New2(QBindingStatus* other);
+QBindingStatus* QBindingStatus_New();
+QBindingStatus* QBindingStatus_New2(const QBindingStatus* other);
+QBindingStatus* QBindingStatus_New3(QBindingStatus* other);
 void QBindingStatus_CopyAssign(QBindingStatus* self, QBindingStatus* other);
 void QBindingStatus_MoveAssign(QBindingStatus* self, QBindingStatus* other);
 void QBindingStatus_Delete(QBindingStatus* self);

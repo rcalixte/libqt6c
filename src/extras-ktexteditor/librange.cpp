@@ -6,16 +6,16 @@
 #include "librange.hpp"
 #include "librange.hxx"
 
-KTextEditor__Range* KTextEditor__Range_New(const KTextEditor__Range* other) {
+KTextEditor__Range* KTextEditor__Range_New() {
+    return new KTextEditor::Range();
+}
+
+KTextEditor__Range* KTextEditor__Range_New2(const KTextEditor__Range* other) {
     return new KTextEditor::Range(*other);
 }
 
-KTextEditor__Range* KTextEditor__Range_New2(KTextEditor__Range* other) {
+KTextEditor__Range* KTextEditor__Range_New3(KTextEditor__Range* other) {
     return new KTextEditor::Range(std::move(*other));
-}
-
-KTextEditor__Range* KTextEditor__Range_New3() {
-    return new KTextEditor::Range();
 }
 
 KTextEditor__Range* KTextEditor__Range_New4(KTextEditor__Cursor* start, KTextEditor__Cursor* end) {

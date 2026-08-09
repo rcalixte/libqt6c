@@ -12,13 +12,11 @@
 
 /// q_elapsedtimer_new constructs a new QElapsedTimer object.
 ///
-/// @param other QElapsedTimer*
-///
-QElapsedTimer* q_elapsedtimer_new(void* other);
+QElapsedTimer* q_elapsedtimer_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html)
 
-/// q_elapsedtimer_new2 constructs a new QElapsedTimer object and invalidates the source QElapsedTimer object.
+/// q_elapsedtimer_new2 constructs a new QElapsedTimer object.
 ///
 /// @param other QElapsedTimer*
 ///
@@ -26,9 +24,11 @@ QElapsedTimer* q_elapsedtimer_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qelapsedtimer.html)
 
-/// q_elapsedtimer_new3 constructs a new QElapsedTimer object.
+/// q_elapsedtimer_new3 constructs a new QElapsedTimer object and invalidates the source QElapsedTimer object.
 ///
-QElapsedTimer* q_elapsedtimer_new3();
+/// @param other QElapsedTimer*
+///
+QElapsedTimer* q_elapsedtimer_new3(void* other);
 
 /// q_elapsedtimer_copy_assign shallow copies `other` into `self`.
 ///

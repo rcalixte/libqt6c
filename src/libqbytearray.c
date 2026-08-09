@@ -160,12 +160,12 @@ char* q_bytearray_from_percent_encoding2(char* pctEncoded, char percent) {
     return _ret;
 }
 
-QByteArray__FromBase64Result* q_bytearray__frombase64result_new(void* param1) {
-    return QByteArray__FromBase64Result_New((QByteArray__FromBase64Result*)param1);
+QByteArray__FromBase64Result* q_bytearray__frombase64result_new() {
+    return QByteArray__FromBase64Result_New();
 }
 
-QByteArray__FromBase64Result* q_bytearray__frombase64result_new2() {
-    return QByteArray__FromBase64Result_New2();
+QByteArray__FromBase64Result* q_bytearray__frombase64result_new2(void* param1) {
+    return QByteArray__FromBase64Result_New2((QByteArray__FromBase64Result*)param1);
 }
 
 char* q_bytearray__frombase64result_decoded(void* self) {

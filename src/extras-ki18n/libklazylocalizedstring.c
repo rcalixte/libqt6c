@@ -3,16 +3,16 @@
 #include "libklazylocalizedstring.hpp"
 #include "libklazylocalizedstring.h"
 
-KLazyLocalizedString* k_lazylocalizedstring_new(void* other) {
-    return KLazyLocalizedString_New((KLazyLocalizedString*)other);
+KLazyLocalizedString* k_lazylocalizedstring_new() {
+    return KLazyLocalizedString_New();
 }
 
 KLazyLocalizedString* k_lazylocalizedstring_new2(void* other) {
     return KLazyLocalizedString_New2((KLazyLocalizedString*)other);
 }
 
-KLazyLocalizedString* k_lazylocalizedstring_new3() {
-    return KLazyLocalizedString_New3();
+KLazyLocalizedString* k_lazylocalizedstring_new3(void* other) {
+    return KLazyLocalizedString_New3((KLazyLocalizedString*)other);
 }
 
 void k_lazylocalizedstring_copy_assign(void* self, void* other) {

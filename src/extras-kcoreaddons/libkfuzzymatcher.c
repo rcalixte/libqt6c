@@ -1,12 +1,16 @@
 #include "libkfuzzymatcher.hpp"
 #include "libkfuzzymatcher.h"
 
-KFuzzyMatcher__Result* k_fuzzymatcher__result_new(void* other) {
-    return KFuzzyMatcher__Result_New((KFuzzyMatcher__Result*)other);
+KFuzzyMatcher__Result* k_fuzzymatcher__result_new() {
+    return KFuzzyMatcher__Result_New();
 }
 
 KFuzzyMatcher__Result* k_fuzzymatcher__result_new2(void* other) {
     return KFuzzyMatcher__Result_New2((KFuzzyMatcher__Result*)other);
+}
+
+KFuzzyMatcher__Result* k_fuzzymatcher__result_new3(void* other) {
+    return KFuzzyMatcher__Result_New3((KFuzzyMatcher__Result*)other);
 }
 
 void k_fuzzymatcher__result_copy_assign(void* self, void* other) {

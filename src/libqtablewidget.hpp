@@ -70,9 +70,9 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QTableWidgetSelectionRange* QTableWidgetSelectionRange_New(const QTableWidgetSelectionRange* other);
-QTableWidgetSelectionRange* QTableWidgetSelectionRange_New2(QTableWidgetSelectionRange* other);
-QTableWidgetSelectionRange* QTableWidgetSelectionRange_New3();
+QTableWidgetSelectionRange* QTableWidgetSelectionRange_New();
+QTableWidgetSelectionRange* QTableWidgetSelectionRange_New2(const QTableWidgetSelectionRange* other);
+QTableWidgetSelectionRange* QTableWidgetSelectionRange_New3(QTableWidgetSelectionRange* other);
 QTableWidgetSelectionRange* QTableWidgetSelectionRange_New4(int top, int left, int bottom, int right);
 void QTableWidgetSelectionRange_CopyAssign(QTableWidgetSelectionRange* self, QTableWidgetSelectionRange* other);
 void QTableWidgetSelectionRange_MoveAssign(QTableWidgetSelectionRange* self, QTableWidgetSelectionRange* other);

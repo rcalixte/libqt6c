@@ -10,16 +10,59 @@
 
 /// [Upstream resources](https://api.kde.org/solid-devicenotifier.html)
 
+/// k_solid__devicenotifier_new constructs a new Solid::DeviceNotifier object.
+///
+Solid__DeviceNotifier* k_solid__devicenotifier_new();
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self Solid__DeviceNotifier*
 ///
 const QMetaObject* k_solid__devicenotifier_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param callback const QMetaObject* func()
+///
+void k_solid__devicenotifier_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// @warning DEPRECATED: Use `k_solid__devicenotifier_super_meta_object` instead
+///
+#define k_solid__devicenotifier_qbase_meta_object k_solid__devicenotifier_super_meta_object
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self Solid__DeviceNotifier*
+///
+const QMetaObject* k_solid__devicenotifier_super_meta_object(void* self);
+
 /// @param self Solid__DeviceNotifier*
 /// @param param1 const char*
 ///
 void* k_solid__devicenotifier_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param callback void* func(Solid__DeviceNotifier* self, const char* param1)
+///
+void k_solid__devicenotifier_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// @warning DEPRECATED: Use `k_solid__devicenotifier_super_metacast` instead
+///
+#define k_solid__devicenotifier_qbase_metacast k_solid__devicenotifier_super_metacast
+
+/// Base class method implementation
+///
+/// @param self Solid__DeviceNotifier*
+/// @param param1 const char*
+///
+void* k_solid__devicenotifier_super_metacast(void* self, const char* param1);
 
 /// @param self Solid__DeviceNotifier*
 /// @param param1 enum QMetaObject__Call
@@ -27,6 +70,26 @@ void* k_solid__devicenotifier_metacast(void* self, const char* param1);
 /// @param param3 void*
 ///
 int32_t k_solid__devicenotifier_metacall(void* self, int32_t param1, int param2, void* param3);
+
+/// Allows for overriding the related default method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param callback int32_t func(Solid__DeviceNotifier* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
+void k_solid__devicenotifier_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
+
+/// @warning DEPRECATED: Use `k_solid__devicenotifier_super_metacall` instead
+///
+#define k_solid__devicenotifier_qbase_metacall k_solid__devicenotifier_super_metacall
+
+/// Base class method implementation
+///
+/// @param self Solid__DeviceNotifier*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
+///
+int32_t k_solid__devicenotifier_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -86,25 +149,6 @@ const char* k_solid__devicenotifier_tr2(const char* s, const char* c);
 /// @param n int
 ///
 const char* k_solid__devicenotifier_tr3(const char* s, const char* c, int n);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
-///
-/// @param self Solid__DeviceNotifier*
-/// @param event QEvent*
-///
-bool k_solid__devicenotifier_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
-///
-/// @param self Solid__DeviceNotifier*
-/// @param watched QObject*
-/// @param event QEvent*
-///
-bool k_solid__devicenotifier_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -552,6 +596,411 @@ void k_solid__devicenotifier_destroyed1(void* self, void* param1);
 /// @param callback void func(Solid__DeviceNotifier* self, QObject* param1)
 ///
 void k_solid__devicenotifier_on_destroyed1(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param event QEvent*
+///
+bool k_solid__devicenotifier_event(void* self, void* event);
+
+/// @warning DEPRECATED: Use `k_solid__devicenotifier_super_event` instead
+///
+#define k_solid__devicenotifier_qbase_event k_solid__devicenotifier_super_event
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param event QEvent*
+///
+bool k_solid__devicenotifier_super_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param callback bool func(Solid__DeviceNotifier* self, QEvent* event)
+///
+void k_solid__devicenotifier_on_event(void* self, bool (*callback)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param watched QObject*
+/// @param event QEvent*
+///
+bool k_solid__devicenotifier_event_filter(void* self, void* watched, void* event);
+
+/// @warning DEPRECATED: Use `k_solid__devicenotifier_super_event_filter` instead
+///
+#define k_solid__devicenotifier_qbase_event_filter k_solid__devicenotifier_super_event_filter
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param watched QObject*
+/// @param event QEvent*
+///
+bool k_solid__devicenotifier_super_event_filter(void* self, void* watched, void* event);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param callback bool func(Solid__DeviceNotifier* self, QObject* watched, QEvent* event)
+///
+void k_solid__devicenotifier_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param event QTimerEvent*
+///
+void k_solid__devicenotifier_timer_event(void* self, void* event);
+
+/// @warning DEPRECATED: Use `k_solid__devicenotifier_super_timer_event` instead
+///
+#define k_solid__devicenotifier_qbase_timer_event k_solid__devicenotifier_super_timer_event
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param event QTimerEvent*
+///
+void k_solid__devicenotifier_super_timer_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param callback void func(Solid__DeviceNotifier* self, QTimerEvent* event)
+///
+void k_solid__devicenotifier_on_timer_event(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param event QChildEvent*
+///
+void k_solid__devicenotifier_child_event(void* self, void* event);
+
+/// @warning DEPRECATED: Use `k_solid__devicenotifier_super_child_event` instead
+///
+#define k_solid__devicenotifier_qbase_child_event k_solid__devicenotifier_super_child_event
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param event QChildEvent*
+///
+void k_solid__devicenotifier_super_child_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param callback void func(Solid__DeviceNotifier* self, QChildEvent* event)
+///
+void k_solid__devicenotifier_on_child_event(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param event QEvent*
+///
+void k_solid__devicenotifier_custom_event(void* self, void* event);
+
+/// @warning DEPRECATED: Use `k_solid__devicenotifier_super_custom_event` instead
+///
+#define k_solid__devicenotifier_qbase_custom_event k_solid__devicenotifier_super_custom_event
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param event QEvent*
+///
+void k_solid__devicenotifier_super_custom_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param callback void func(Solid__DeviceNotifier* self, QEvent* event)
+///
+void k_solid__devicenotifier_on_custom_event(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param signal QMetaMethod*
+///
+void k_solid__devicenotifier_connect_notify(void* self, void* signal);
+
+/// @warning DEPRECATED: Use `k_solid__devicenotifier_super_connect_notify` instead
+///
+#define k_solid__devicenotifier_qbase_connect_notify k_solid__devicenotifier_super_connect_notify
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param signal QMetaMethod*
+///
+void k_solid__devicenotifier_super_connect_notify(void* self, void* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param callback void func(Solid__DeviceNotifier* self, QMetaMethod* signal)
+///
+void k_solid__devicenotifier_on_connect_notify(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param signal QMetaMethod*
+///
+void k_solid__devicenotifier_disconnect_notify(void* self, void* signal);
+
+/// @warning DEPRECATED: Use `k_solid__devicenotifier_super_disconnect_notify` instead
+///
+#define k_solid__devicenotifier_qbase_disconnect_notify k_solid__devicenotifier_super_disconnect_notify
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param signal QMetaMethod*
+///
+void k_solid__devicenotifier_super_disconnect_notify(void* self, void* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param callback void func(Solid__DeviceNotifier* self, QMetaMethod* signal)
+///
+void k_solid__devicenotifier_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+///
+QObject* k_solid__devicenotifier_sender(void* self);
+
+/// @warning DEPRECATED: Use `k_solid__devicenotifier_super_sender` instead
+///
+#define k_solid__devicenotifier_qbase_sender k_solid__devicenotifier_super_sender
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+///
+QObject* k_solid__devicenotifier_super_sender(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param callback QObject* func()
+///
+void k_solid__devicenotifier_on_sender(void* self, QObject* (*callback)());
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+///
+int32_t k_solid__devicenotifier_sender_signal_index(void* self);
+
+/// @warning DEPRECATED: Use `k_solid__devicenotifier_super_sender_signal_index` instead
+///
+#define k_solid__devicenotifier_qbase_sender_signal_index k_solid__devicenotifier_super_sender_signal_index
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+///
+int32_t k_solid__devicenotifier_super_sender_signal_index(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param callback int32_t func()
+///
+void k_solid__devicenotifier_on_sender_signal_index(void* self, int32_t (*callback)());
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param signal const char*
+///
+int32_t k_solid__devicenotifier_receivers(void* self, const char* signal);
+
+/// @warning DEPRECATED: Use `k_solid__devicenotifier_super_receivers` instead
+///
+#define k_solid__devicenotifier_qbase_receivers k_solid__devicenotifier_super_receivers
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param signal const char*
+///
+int32_t k_solid__devicenotifier_super_receivers(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param callback int32_t func(Solid__DeviceNotifier* self, const char* signal)
+///
+void k_solid__devicenotifier_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param signal QMetaMethod*
+///
+bool k_solid__devicenotifier_is_signal_connected(void* self, void* signal);
+
+/// @warning DEPRECATED: Use `k_solid__devicenotifier_super_is_signal_connected` instead
+///
+#define k_solid__devicenotifier_qbase_is_signal_connected k_solid__devicenotifier_super_is_signal_connected
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param signal QMetaMethod*
+///
+bool k_solid__devicenotifier_super_is_signal_connected(void* self, void* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self Solid__DeviceNotifier*
+/// @param callback bool func(Solid__DeviceNotifier* self, QMetaMethod* signal)
+///
+void k_solid__devicenotifier_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///

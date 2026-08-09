@@ -2,16 +2,16 @@
 #include "libqmetacontainer.hpp"
 #include "libqmetacontainer.h"
 
-QMetaContainer* q_metacontainer_new(void* other) {
-    return QMetaContainer_New((QMetaContainer*)other);
+QMetaContainer* q_metacontainer_new() {
+    return QMetaContainer_New();
 }
 
 QMetaContainer* q_metacontainer_new2(void* other) {
     return QMetaContainer_New2((QMetaContainer*)other);
 }
 
-QMetaContainer* q_metacontainer_new3() {
-    return QMetaContainer_New3();
+QMetaContainer* q_metacontainer_new3(void* other) {
+    return QMetaContainer_New3((QMetaContainer*)other);
 }
 
 QMetaContainer* q_metacontainer_new4(void* param1) {
@@ -126,16 +126,16 @@ void q_metacontainer_delete(void* self) {
     QMetaContainer_Delete((QMetaContainer*)(self));
 }
 
-QMetaSequence* q_metasequence_new(void* other) {
-    return QMetaSequence_New((QMetaSequence*)other);
+QMetaSequence* q_metasequence_new() {
+    return QMetaSequence_New();
 }
 
 QMetaSequence* q_metasequence_new2(void* other) {
     return QMetaSequence_New2((QMetaSequence*)other);
 }
 
-QMetaSequence* q_metasequence_new3() {
-    return QMetaSequence_New3();
+QMetaSequence* q_metasequence_new3(void* other) {
+    return QMetaSequence_New3((QMetaSequence*)other);
 }
 
 void q_metasequence_copy_assign(void* self, void* other) {
@@ -366,16 +366,16 @@ void q_metasequence_delete(void* self) {
     QMetaSequence_Delete((QMetaSequence*)(self));
 }
 
-QMetaAssociation* q_metaassociation_new(void* other) {
-    return QMetaAssociation_New((QMetaAssociation*)other);
+QMetaAssociation* q_metaassociation_new() {
+    return QMetaAssociation_New();
 }
 
 QMetaAssociation* q_metaassociation_new2(void* other) {
     return QMetaAssociation_New2((QMetaAssociation*)other);
 }
 
-QMetaAssociation* q_metaassociation_new3() {
-    return QMetaAssociation_New3();
+QMetaAssociation* q_metaassociation_new3(void* other) {
+    return QMetaAssociation_New3((QMetaAssociation*)other);
 }
 
 void q_metaassociation_copy_assign(void* self, void* other) {

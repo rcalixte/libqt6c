@@ -4,16 +4,16 @@
 #include "libcursor.hpp"
 #include "libcursor.hxx"
 
-KTextEditor__Cursor* KTextEditor__Cursor_New(const KTextEditor__Cursor* other) {
+KTextEditor__Cursor* KTextEditor__Cursor_New() {
+    return new KTextEditor::Cursor();
+}
+
+KTextEditor__Cursor* KTextEditor__Cursor_New2(const KTextEditor__Cursor* other) {
     return new KTextEditor::Cursor(*other);
 }
 
-KTextEditor__Cursor* KTextEditor__Cursor_New2(KTextEditor__Cursor* other) {
+KTextEditor__Cursor* KTextEditor__Cursor_New3(KTextEditor__Cursor* other) {
     return new KTextEditor::Cursor(std::move(*other));
-}
-
-KTextEditor__Cursor* KTextEditor__Cursor_New3() {
-    return new KTextEditor::Cursor();
 }
 
 KTextEditor__Cursor* KTextEditor__Cursor_New4(int line, int column) {

@@ -1,16 +1,16 @@
 #include "libcursor.hpp"
 #include "libcursor.h"
 
-KTextEditor__Cursor* k_texteditor__cursor_new(void* other) {
-    return KTextEditor__Cursor_New((KTextEditor__Cursor*)other);
+KTextEditor__Cursor* k_texteditor__cursor_new() {
+    return KTextEditor__Cursor_New();
 }
 
 KTextEditor__Cursor* k_texteditor__cursor_new2(void* other) {
     return KTextEditor__Cursor_New2((KTextEditor__Cursor*)other);
 }
 
-KTextEditor__Cursor* k_texteditor__cursor_new3() {
-    return KTextEditor__Cursor_New3();
+KTextEditor__Cursor* k_texteditor__cursor_new3(void* other) {
+    return KTextEditor__Cursor_New3((KTextEditor__Cursor*)other);
 }
 
 KTextEditor__Cursor* k_texteditor__cursor_new4(int line, int column) {

@@ -4622,9 +4622,15 @@ void k_onsole__filterobject_delete(void* self);
 
 /// k_onsole__filterchain_new constructs a new Konsole::FilterChain object.
 ///
+Konsole__FilterChain* k_onsole__filterchain_new();
+
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+
+/// k_onsole__filterchain_new2 constructs a new Konsole::FilterChain object.
+///
 /// @param param1 Konsole__FilterChain*
 ///
-Konsole__FilterChain* k_onsole__filterchain_new(void* param1);
+Konsole__FilterChain* k_onsole__filterchain_new2(void* param1);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///

@@ -1429,14 +1429,20 @@ void q_process_delete(void* self) {
 }
 
 #ifndef _WIN32
-QProcess__UnixProcessParameters* q_process__unixprocessparameters_new(void* other) {
-    return QProcess__UnixProcessParameters_New((QProcess__UnixProcessParameters*)other);
+QProcess__UnixProcessParameters* q_process__unixprocessparameters_new() {
+    return QProcess__UnixProcessParameters_New();
 }
 #endif
 
 #ifndef _WIN32
 QProcess__UnixProcessParameters* q_process__unixprocessparameters_new2(void* other) {
     return QProcess__UnixProcessParameters_New2((QProcess__UnixProcessParameters*)other);
+}
+#endif
+
+#ifndef _WIN32
+QProcess__UnixProcessParameters* q_process__unixprocessparameters_new3(void* other) {
+    return QProcess__UnixProcessParameters_New3((QProcess__UnixProcessParameters*)other);
 }
 #endif
 

@@ -407,12 +407,12 @@ void QTimeZone_Delete(QTimeZone* self) {
     delete self;
 }
 
-QTimeZone__OffsetData* QTimeZone__OffsetData_New(const QTimeZone__OffsetData* param1) {
-    return new QTimeZone::OffsetData(*param1);
+QTimeZone__OffsetData* QTimeZone__OffsetData_New() {
+    return new QTimeZone::OffsetData();
 }
 
-QTimeZone__OffsetData* QTimeZone__OffsetData_New2() {
-    return new QTimeZone::OffsetData();
+QTimeZone__OffsetData* QTimeZone__OffsetData_New2(const QTimeZone__OffsetData* param1) {
+    return new QTimeZone::OffsetData(*param1);
 }
 
 libqt_string QTimeZone__OffsetData_Abbreviation(const QTimeZone__OffsetData* self) {

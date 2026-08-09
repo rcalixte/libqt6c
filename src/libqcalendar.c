@@ -226,16 +226,16 @@ void q_calendar_delete(void* self) {
     QCalendar_Delete((QCalendar*)(self));
 }
 
-QCalendar__YearMonthDay* q_calendar__yearmonthday_new(void* other) {
-    return QCalendar__YearMonthDay_New((QCalendar__YearMonthDay*)other);
+QCalendar__YearMonthDay* q_calendar__yearmonthday_new() {
+    return QCalendar__YearMonthDay_New();
 }
 
 QCalendar__YearMonthDay* q_calendar__yearmonthday_new2(void* other) {
     return QCalendar__YearMonthDay_New2((QCalendar__YearMonthDay*)other);
 }
 
-QCalendar__YearMonthDay* q_calendar__yearmonthday_new3() {
-    return QCalendar__YearMonthDay_New3();
+QCalendar__YearMonthDay* q_calendar__yearmonthday_new3(void* other) {
+    return QCalendar__YearMonthDay_New3((QCalendar__YearMonthDay*)other);
 }
 
 QCalendar__YearMonthDay* q_calendar__yearmonthday_new4(int y) {

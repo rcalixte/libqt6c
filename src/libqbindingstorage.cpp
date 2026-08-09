@@ -5,11 +5,15 @@
 #include "libqbindingstorage.hpp"
 #include "libqbindingstorage.hxx"
 
-QBindingStatus* QBindingStatus_New(const QBindingStatus* other) {
+QBindingStatus* QBindingStatus_New() {
+    return new QBindingStatus();
+}
+
+QBindingStatus* QBindingStatus_New2(const QBindingStatus* other) {
     return new QBindingStatus(*other);
 }
 
-QBindingStatus* QBindingStatus_New2(QBindingStatus* other) {
+QBindingStatus* QBindingStatus_New3(QBindingStatus* other) {
     return new QBindingStatus(std::move(*other));
 }
 

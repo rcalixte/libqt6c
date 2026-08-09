@@ -526,16 +526,16 @@ void q_font_delete(void* self) {
     QFont_Delete((QFont*)(self));
 }
 
-QFont__Tag* q_font__tag_new(void* other) {
-    return QFont__Tag_New((QFont__Tag*)other);
+QFont__Tag* q_font__tag_new() {
+    return QFont__Tag_New();
 }
 
 QFont__Tag* q_font__tag_new2(void* other) {
     return QFont__Tag_New2((QFont__Tag*)other);
 }
 
-QFont__Tag* q_font__tag_new3() {
-    return QFont__Tag_New3();
+QFont__Tag* q_font__tag_new3(void* other) {
+    return QFont__Tag_New3((QFont__Tag*)other);
 }
 
 QFont__Tag* q_font__tag_new4(void* param1) {

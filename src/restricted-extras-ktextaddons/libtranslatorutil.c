@@ -120,8 +120,12 @@ void k_texttranslator__translatorutil_delete(void* self) {
     TextTranslator__TranslatorUtil_Delete((TextTranslator__TranslatorUtil*)(self));
 }
 
-TextTranslator__TranslatorUtil__TranslatorSettings* k_texttranslator__translatorutil__translatorsettings_new(void* param1) {
-    return TextTranslator__TranslatorUtil__TranslatorSettings_New((TextTranslator__TranslatorUtil__TranslatorSettings*)param1);
+TextTranslator__TranslatorUtil__TranslatorSettings* k_texttranslator__translatorutil__translatorsettings_new() {
+    return TextTranslator__TranslatorUtil__TranslatorSettings_New();
+}
+
+TextTranslator__TranslatorUtil__TranslatorSettings* k_texttranslator__translatorutil__translatorsettings_new2(void* param1) {
+    return TextTranslator__TranslatorUtil__TranslatorSettings_New2((TextTranslator__TranslatorUtil__TranslatorSettings*)param1);
 }
 
 const char* k_texttranslator__translatorutil__translatorsettings_engine(void* self) {

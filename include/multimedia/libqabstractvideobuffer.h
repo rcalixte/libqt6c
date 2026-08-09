@@ -48,17 +48,23 @@ void q_abstractvideobuffer_delete(void* self);
 
 /// q_abstractvideobuffer__mapdata_new constructs a new QAbstractVideoBuffer::MapData object.
 ///
-/// @param other QAbstractVideoBuffer__MapData*
-///
-QAbstractVideoBuffer__MapData* q_abstractvideobuffer__mapdata_new(void* other);
+QAbstractVideoBuffer__MapData* q_abstractvideobuffer__mapdata_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer-mapdata.html)
 
-/// q_abstractvideobuffer__mapdata_new2 constructs a new QAbstractVideoBuffer::MapData object and invalidates the source QAbstractVideoBuffer::MapData object.
+/// q_abstractvideobuffer__mapdata_new2 constructs a new QAbstractVideoBuffer::MapData object.
 ///
 /// @param other QAbstractVideoBuffer__MapData*
 ///
 QAbstractVideoBuffer__MapData* q_abstractvideobuffer__mapdata_new2(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer-mapdata.html)
+
+/// q_abstractvideobuffer__mapdata_new3 constructs a new QAbstractVideoBuffer::MapData object and invalidates the source QAbstractVideoBuffer::MapData object.
+///
+/// @param other QAbstractVideoBuffer__MapData*
+///
+QAbstractVideoBuffer__MapData* q_abstractvideobuffer__mapdata_new3(void* other);
 
 /// q_abstractvideobuffer__mapdata_copy_assign shallow copies `other` into `self`.
 ///

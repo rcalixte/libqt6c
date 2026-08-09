@@ -12,13 +12,11 @@
 
 /// q_deadlinetimer_new constructs a new QDeadlineTimer object.
 ///
-/// @param other QDeadlineTimer*
-///
-QDeadlineTimer* q_deadlinetimer_new(void* other);
+QDeadlineTimer* q_deadlinetimer_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdeadlinetimer.html)
 
-/// q_deadlinetimer_new2 constructs a new QDeadlineTimer object and invalidates the source QDeadlineTimer object.
+/// q_deadlinetimer_new2 constructs a new QDeadlineTimer object.
 ///
 /// @param other QDeadlineTimer*
 ///
@@ -26,9 +24,11 @@ QDeadlineTimer* q_deadlinetimer_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdeadlinetimer.html)
 
-/// q_deadlinetimer_new3 constructs a new QDeadlineTimer object.
+/// q_deadlinetimer_new3 constructs a new QDeadlineTimer object and invalidates the source QDeadlineTimer object.
 ///
-QDeadlineTimer* q_deadlinetimer_new3();
+/// @param other QDeadlineTimer*
+///
+QDeadlineTimer* q_deadlinetimer_new3(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdeadlinetimer.html)
 

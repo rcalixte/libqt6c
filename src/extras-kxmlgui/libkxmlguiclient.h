@@ -618,6 +618,10 @@ void k_xmlguiclient_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient-statechange.html)
 
+/// k_xmlguiclient__statechange_new constructs a new KXMLGUIClient::StateChange object.
+///
+KXMLGUIClient__StateChange* k_xmlguiclient__statechange_new();
+
 /// [Upstream resources](https://api.kde.org/kxmlguiclient-statechange.html#actionsToEnable-var)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`

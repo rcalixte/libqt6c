@@ -3,16 +3,16 @@
 #include "libqaudioformat.hpp"
 #include "libqaudioformat.hxx"
 
-QAudioFormat* QAudioFormat_New(const QAudioFormat* other) {
+QAudioFormat* QAudioFormat_New() {
+    return new QAudioFormat();
+}
+
+QAudioFormat* QAudioFormat_New2(const QAudioFormat* other) {
     return new QAudioFormat(*other);
 }
 
-QAudioFormat* QAudioFormat_New2(QAudioFormat* other) {
+QAudioFormat* QAudioFormat_New3(QAudioFormat* other) {
     return new QAudioFormat(std::move(*other));
-}
-
-QAudioFormat* QAudioFormat_New3() {
-    return new QAudioFormat();
 }
 
 QAudioFormat* QAudioFormat_New4(const QAudioFormat* param1) {

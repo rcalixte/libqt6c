@@ -1,8 +1,12 @@
 #include "libbuildservice.hpp"
 #include "libbuildservice.h"
 
-Attica__Target* k_attica__target_new(void* param1) {
-    return Attica__Target_New((Attica__Target*)param1);
+Attica__Target* k_attica__target_new() {
+    return Attica__Target_New();
+}
+
+Attica__Target* k_attica__target_new2(void* param1) {
+    return Attica__Target_New2((Attica__Target*)param1);
 }
 
 const char* k_attica__target_id(void* self) {

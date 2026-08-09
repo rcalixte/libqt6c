@@ -571,9 +571,15 @@ void k_nscore__entry_delete(void* self);
 
 /// k_nscore__entry__downloadlinkinformation_new constructs a new KNSCore::Entry::DownloadLinkInformation object.
 ///
+KNSCore__Entry__DownloadLinkInformation* k_nscore__entry__downloadlinkinformation_new();
+
+/// [Upstream resources](https://api.kde.org/knscore-entry-downloadlinkinformation.html)
+
+/// k_nscore__entry__downloadlinkinformation_new2 constructs a new KNSCore::Entry::DownloadLinkInformation object.
+///
 /// @param param1 KNSCore__Entry__DownloadLinkInformation*
 ///
-KNSCore__Entry__DownloadLinkInformation* k_nscore__entry__downloadlinkinformation_new(void* param1);
+KNSCore__Entry__DownloadLinkInformation* k_nscore__entry__downloadlinkinformation_new2(void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry-downloadlinkinformation.html#name-var)
 ///

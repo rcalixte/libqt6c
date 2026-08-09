@@ -2182,7 +2182,11 @@ void Konsole__FilterObject_Delete(Konsole__FilterObject* self) {
     delete self;
 }
 
-Konsole__FilterChain* Konsole__FilterChain_New(const Konsole__FilterChain* param1) {
+Konsole__FilterChain* Konsole__FilterChain_New() {
+    return new Konsole::FilterChain();
+}
+
+Konsole__FilterChain* Konsole__FilterChain_New2(const Konsole__FilterChain* param1) {
     return new Konsole::FilterChain(*param1);
 }
 

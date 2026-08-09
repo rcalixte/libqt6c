@@ -242,10 +242,13 @@ void QProcess_Connect_ReadyReadStandardError(QProcess* self, intptr_t slot);
 void QProcess_Delete(QProcess* self);
 
 #ifndef _WIN32
-QProcess__UnixProcessParameters* QProcess__UnixProcessParameters_New(const QProcess__UnixProcessParameters* other);
+QProcess__UnixProcessParameters* QProcess__UnixProcessParameters_New();
 #endif
 #ifndef _WIN32
-QProcess__UnixProcessParameters* QProcess__UnixProcessParameters_New2(QProcess__UnixProcessParameters* other);
+QProcess__UnixProcessParameters* QProcess__UnixProcessParameters_New2(const QProcess__UnixProcessParameters* other);
+#endif
+#ifndef _WIN32
+QProcess__UnixProcessParameters* QProcess__UnixProcessParameters_New3(QProcess__UnixProcessParameters* other);
 #endif
 #ifndef _WIN32
 void QProcess__UnixProcessParameters_CopyAssign(QProcess__UnixProcessParameters* self, QProcess__UnixProcessParameters* other);

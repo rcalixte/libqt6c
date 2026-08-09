@@ -1068,13 +1068,13 @@ void k_textgrammarcheck__grammalectegenerateconfigoptionjob_delete(void* self);
 
 /// k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_new constructs a new TextGrammarCheck::GrammalecteGenerateConfigOptionJob::Option object.
 ///
-/// @param param1 TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option*
-///
-TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option* k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_new(void* param1);
+TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option* k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_new();
 
 /// k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_new2 constructs a new TextGrammarCheck::GrammalecteGenerateConfigOptionJob::Option object.
 ///
-TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option* k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_new2();
+/// @param param1 TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option*
+///
+TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option* k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_new2(void* param1);
 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`

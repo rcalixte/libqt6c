@@ -314,8 +314,12 @@ void q_webenginecookiestore_delete(void* self) {
     QWebEngineCookieStore_Delete((QWebEngineCookieStore*)(self));
 }
 
-QWebEngineCookieStore__FilterRequest* q_webenginecookiestore__filterrequest_new(void* param1) {
-    return QWebEngineCookieStore__FilterRequest_New((QWebEngineCookieStore__FilterRequest*)param1);
+QWebEngineCookieStore__FilterRequest* q_webenginecookiestore__filterrequest_new() {
+    return QWebEngineCookieStore__FilterRequest_New();
+}
+
+QWebEngineCookieStore__FilterRequest* q_webenginecookiestore__filterrequest_new2(void* param1) {
+    return QWebEngineCookieStore__FilterRequest_New2((QWebEngineCookieStore__FilterRequest*)param1);
 }
 
 QUrl* q_webenginecookiestore__filterrequest_first_party_url(void* self) {

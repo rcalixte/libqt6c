@@ -1844,12 +1844,12 @@ void KCommandBar_Delete(KCommandBar* self) {
     delete self;
 }
 
-KCommandBar__ActionGroup* KCommandBar__ActionGroup_New(const KCommandBar__ActionGroup* param1) {
-    return new KCommandBar::ActionGroup(*param1);
+KCommandBar__ActionGroup* KCommandBar__ActionGroup_New() {
+    return new KCommandBar::ActionGroup();
 }
 
-KCommandBar__ActionGroup* KCommandBar__ActionGroup_New2() {
-    return new KCommandBar::ActionGroup();
+KCommandBar__ActionGroup* KCommandBar__ActionGroup_New2(const KCommandBar__ActionGroup* param1) {
+    return new KCommandBar::ActionGroup(*param1);
 }
 
 libqt_string KCommandBar__ActionGroup_Name(const KCommandBar__ActionGroup* self) {

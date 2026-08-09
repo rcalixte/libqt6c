@@ -86,8 +86,8 @@ libqt_list /* of QVariant* */ QCborArray_ToVariantList(const QCborArray* self);
 QJsonArray* QCborArray_ToJsonArray(const QCborArray* self);
 void QCborArray_Delete(QCborArray* self);
 
-QCborArray__Iterator* QCborArray__Iterator_New(const QCborArray__Iterator* other);
-QCborArray__Iterator* QCborArray__Iterator_New2();
+QCborArray__Iterator* QCborArray__Iterator_New();
+QCborArray__Iterator* QCborArray__Iterator_New2(const QCborArray__Iterator* other);
 QCborArray__Iterator* QCborArray__Iterator_New3(const QCborArray__Iterator* param1);
 void QCborArray__Iterator_OperatorAssign(QCborArray__Iterator* self, const QCborArray__Iterator* other);
 QCborValueRef* QCborArray__Iterator_OperatorMultiply(const QCborArray__Iterator* self);
@@ -105,8 +105,8 @@ QCborArray__Iterator* QCborArray__Iterator_OperatorMinus(const QCborArray__Itera
 ptrdiff_t QCborArray__Iterator_OperatorMinus2(const QCborArray__Iterator* self, QCborArray__Iterator* j);
 void QCborArray__Iterator_Delete(QCborArray__Iterator* self);
 
-QCborArray__ConstIterator* QCborArray__ConstIterator_New(const QCborArray__ConstIterator* other);
-QCborArray__ConstIterator* QCborArray__ConstIterator_New2();
+QCborArray__ConstIterator* QCborArray__ConstIterator_New();
+QCborArray__ConstIterator* QCborArray__ConstIterator_New2(const QCborArray__ConstIterator* other);
 QCborArray__ConstIterator* QCborArray__ConstIterator_New3(const QCborArray__ConstIterator* param1);
 void QCborArray__ConstIterator_OperatorAssign(QCborArray__ConstIterator* self, const QCborArray__ConstIterator* other);
 QCborValueConstRef* QCborArray__ConstIterator_OperatorMultiply(const QCborArray__ConstIterator* self);

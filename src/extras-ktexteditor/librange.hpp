@@ -28,9 +28,9 @@ typedef struct KTextEditor__LineRange KTextEditor__LineRange;
 typedef struct KTextEditor__Range KTextEditor__Range;
 #endif
 
-KTextEditor__Range* KTextEditor__Range_New(const KTextEditor__Range* other);
-KTextEditor__Range* KTextEditor__Range_New2(KTextEditor__Range* other);
-KTextEditor__Range* KTextEditor__Range_New3();
+KTextEditor__Range* KTextEditor__Range_New();
+KTextEditor__Range* KTextEditor__Range_New2(const KTextEditor__Range* other);
+KTextEditor__Range* KTextEditor__Range_New3(KTextEditor__Range* other);
 KTextEditor__Range* KTextEditor__Range_New4(KTextEditor__Cursor* start, KTextEditor__Cursor* end);
 KTextEditor__Range* KTextEditor__Range_New5(KTextEditor__Cursor* start, int width);
 KTextEditor__Range* KTextEditor__Range_New6(KTextEditor__Cursor* start, int endLine, int endColumn);

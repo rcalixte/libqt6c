@@ -12,13 +12,11 @@
 
 /// q_tablewidgetselectionrange_new constructs a new QTableWidgetSelectionRange object.
 ///
-/// @param other QTableWidgetSelectionRange*
-///
-QTableWidgetSelectionRange* q_tablewidgetselectionrange_new(void* other);
+QTableWidgetSelectionRange* q_tablewidgetselectionrange_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtablewidgetselectionrange.html)
 
-/// q_tablewidgetselectionrange_new2 constructs a new QTableWidgetSelectionRange object and invalidates the source QTableWidgetSelectionRange object.
+/// q_tablewidgetselectionrange_new2 constructs a new QTableWidgetSelectionRange object.
 ///
 /// @param other QTableWidgetSelectionRange*
 ///
@@ -26,9 +24,11 @@ QTableWidgetSelectionRange* q_tablewidgetselectionrange_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtablewidgetselectionrange.html)
 
-/// q_tablewidgetselectionrange_new3 constructs a new QTableWidgetSelectionRange object.
+/// q_tablewidgetselectionrange_new3 constructs a new QTableWidgetSelectionRange object and invalidates the source QTableWidgetSelectionRange object.
 ///
-QTableWidgetSelectionRange* q_tablewidgetselectionrange_new3();
+/// @param other QTableWidgetSelectionRange*
+///
+QTableWidgetSelectionRange* q_tablewidgetselectionrange_new3(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtablewidgetselectionrange.html)
 

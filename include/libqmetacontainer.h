@@ -12,13 +12,11 @@
 
 /// q_metacontainer_new constructs a new QMetaContainer object.
 ///
-/// @param other QMetaContainer*
-///
-QMetaContainer* q_metacontainer_new(void* other);
+QMetaContainer* q_metacontainer_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html)
 
-/// q_metacontainer_new2 constructs a new QMetaContainer object and invalidates the source QMetaContainer object.
+/// q_metacontainer_new2 constructs a new QMetaContainer object.
 ///
 /// @param other QMetaContainer*
 ///
@@ -26,9 +24,11 @@ QMetaContainer* q_metacontainer_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html)
 
-/// q_metacontainer_new3 constructs a new QMetaContainer object.
+/// q_metacontainer_new3 constructs a new QMetaContainer object and invalidates the source QMetaContainer object.
 ///
-QMetaContainer* q_metacontainer_new3();
+/// @param other QMetaContainer*
+///
+QMetaContainer* q_metacontainer_new3(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html)
 
@@ -232,13 +232,11 @@ void q_metacontainer_delete(void* self);
 
 /// q_metasequence_new constructs a new QMetaSequence object.
 ///
-/// @param other QMetaSequence*
-///
-QMetaSequence* q_metasequence_new(void* other);
+QMetaSequence* q_metasequence_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html)
 
-/// q_metasequence_new2 constructs a new QMetaSequence object and invalidates the source QMetaSequence object.
+/// q_metasequence_new2 constructs a new QMetaSequence object.
 ///
 /// @param other QMetaSequence*
 ///
@@ -246,9 +244,11 @@ QMetaSequence* q_metasequence_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html)
 
-/// q_metasequence_new3 constructs a new QMetaSequence object.
+/// q_metasequence_new3 constructs a new QMetaSequence object and invalidates the source QMetaSequence object.
 ///
-QMetaSequence* q_metasequence_new3();
+/// @param other QMetaSequence*
+///
+QMetaSequence* q_metasequence_new3(void* other);
 
 /// q_metasequence_copy_assign shallow copies `other` into `self`.
 ///
@@ -701,13 +701,11 @@ void q_metasequence_delete(void* self);
 
 /// q_metaassociation_new constructs a new QMetaAssociation object.
 ///
-/// @param other QMetaAssociation*
-///
-QMetaAssociation* q_metaassociation_new(void* other);
+QMetaAssociation* q_metaassociation_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html)
 
-/// q_metaassociation_new2 constructs a new QMetaAssociation object and invalidates the source QMetaAssociation object.
+/// q_metaassociation_new2 constructs a new QMetaAssociation object.
 ///
 /// @param other QMetaAssociation*
 ///
@@ -715,9 +713,11 @@ QMetaAssociation* q_metaassociation_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html)
 
-/// q_metaassociation_new3 constructs a new QMetaAssociation object.
+/// q_metaassociation_new3 constructs a new QMetaAssociation object and invalidates the source QMetaAssociation object.
 ///
-QMetaAssociation* q_metaassociation_new3();
+/// @param other QMetaAssociation*
+///
+QMetaAssociation* q_metaassociation_new3(void* other);
 
 /// q_metaassociation_copy_assign shallow copies `other` into `self`.
 ///

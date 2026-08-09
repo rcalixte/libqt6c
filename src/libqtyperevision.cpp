@@ -3,16 +3,16 @@
 #include "libqtyperevision.hpp"
 #include "libqtyperevision.hxx"
 
-QTypeRevision* QTypeRevision_New(const QTypeRevision* other) {
+QTypeRevision* QTypeRevision_New() {
+    return new QTypeRevision();
+}
+
+QTypeRevision* QTypeRevision_New2(const QTypeRevision* other) {
     return new QTypeRevision(*other);
 }
 
-QTypeRevision* QTypeRevision_New2(QTypeRevision* other) {
+QTypeRevision* QTypeRevision_New3(QTypeRevision* other) {
     return new QTypeRevision(std::move(*other));
-}
-
-QTypeRevision* QTypeRevision_New3() {
-    return new QTypeRevision();
 }
 
 QTypeRevision* QTypeRevision_New4(const QTypeRevision* param1) {

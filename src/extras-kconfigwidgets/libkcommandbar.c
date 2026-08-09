@@ -2230,12 +2230,12 @@ void k_commandbar_delete(void* self) {
     KCommandBar_Delete((KCommandBar*)(self));
 }
 
-KCommandBar__ActionGroup* k_commandbar__actiongroup_new(void* param1) {
-    return KCommandBar__ActionGroup_New((KCommandBar__ActionGroup*)param1);
+KCommandBar__ActionGroup* k_commandbar__actiongroup_new() {
+    return KCommandBar__ActionGroup_New();
 }
 
-KCommandBar__ActionGroup* k_commandbar__actiongroup_new2() {
-    return KCommandBar__ActionGroup_New2();
+KCommandBar__ActionGroup* k_commandbar__actiongroup_new2(void* param1) {
+    return KCommandBar__ActionGroup_New2((KCommandBar__ActionGroup*)param1);
 }
 
 const char* k_commandbar__actiongroup_name(void* self) {

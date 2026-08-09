@@ -10,15 +10,19 @@
 
 /// k_textautocorrectioncore__autocorrectionutils__typographicquotes_new constructs a new TextAutoCorrectionCore::AutoCorrectionUtils::TypographicQuotes object.
 ///
-/// @param other TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*
-///
-TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__autocorrectionutils__typographicquotes_new(void* other);
+TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__autocorrectionutils__typographicquotes_new();
 
-/// k_textautocorrectioncore__autocorrectionutils__typographicquotes_new2 constructs a new TextAutoCorrectionCore::AutoCorrectionUtils::TypographicQuotes object and invalidates the source TextAutoCorrectionCore::AutoCorrectionUtils::TypographicQuotes object.
+/// k_textautocorrectioncore__autocorrectionutils__typographicquotes_new2 constructs a new TextAutoCorrectionCore::AutoCorrectionUtils::TypographicQuotes object.
 ///
 /// @param other TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*
 ///
 TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__autocorrectionutils__typographicquotes_new2(void* other);
+
+/// k_textautocorrectioncore__autocorrectionutils__typographicquotes_new3 constructs a new TextAutoCorrectionCore::AutoCorrectionUtils::TypographicQuotes object and invalidates the source TextAutoCorrectionCore::AutoCorrectionUtils::TypographicQuotes object.
+///
+/// @param other TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*
+///
+TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__autocorrectionutils__typographicquotes_new3(void* other);
 
 /// k_textautocorrectioncore__autocorrectionutils__typographicquotes_copy_assign shallow copies `other` into `self`.
 ///

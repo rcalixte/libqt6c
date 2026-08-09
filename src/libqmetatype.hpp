@@ -22,10 +22,10 @@ typedef struct QMetaType QMetaType;
 typedef struct QPartialOrdering QPartialOrdering;
 #endif
 
-QMetaType* QMetaType_New(const QMetaType* other);
-QMetaType* QMetaType_New2(QMetaType* other);
-QMetaType* QMetaType_New3(int type);
-QMetaType* QMetaType_New4();
+QMetaType* QMetaType_New();
+QMetaType* QMetaType_New2(const QMetaType* other);
+QMetaType* QMetaType_New3(QMetaType* other);
+QMetaType* QMetaType_New4(int type);
 QMetaType* QMetaType_New5(const QMetaType* param1);
 void QMetaType_CopyAssign(QMetaType* self, QMetaType* other);
 void QMetaType_MoveAssign(QMetaType* self, QMetaType* other);

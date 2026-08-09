@@ -12,13 +12,11 @@
 
 /// q_audioformat_new constructs a new QAudioFormat object.
 ///
-/// @param other QAudioFormat*
-///
-QAudioFormat* q_audioformat_new(void* other);
+QAudioFormat* q_audioformat_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html)
 
-/// q_audioformat_new2 constructs a new QAudioFormat object and invalidates the source QAudioFormat object.
+/// q_audioformat_new2 constructs a new QAudioFormat object.
 ///
 /// @param other QAudioFormat*
 ///
@@ -26,9 +24,11 @@ QAudioFormat* q_audioformat_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html)
 
-/// q_audioformat_new3 constructs a new QAudioFormat object.
+/// q_audioformat_new3 constructs a new QAudioFormat object and invalidates the source QAudioFormat object.
 ///
-QAudioFormat* q_audioformat_new3();
+/// @param other QAudioFormat*
+///
+QAudioFormat* q_audioformat_new3(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html)
 

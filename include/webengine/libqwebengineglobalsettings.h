@@ -10,6 +10,10 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineglobalsettings-dnsmode.html)
 
+/// q_webengineglobalsettings__dnsmode_new constructs a new QWebEngineGlobalSettings::DnsMode object.
+///
+QWebEngineGlobalSettings__DnsMode* q_webengineglobalsettings__dnsmode_new();
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineglobalsettings-dnsmode.html#secureMode-var)
 ///
 /// @param self QWebEngineGlobalSettings__DnsMode*

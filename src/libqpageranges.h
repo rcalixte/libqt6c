@@ -122,13 +122,11 @@ void q_pageranges_delete(void* self);
 
 /// q_pageranges__range_new constructs a new QPageRanges::Range object.
 ///
-/// @param other QPageRanges__Range*
-///
-QPageRanges__Range* q_pageranges__range_new(void* other);
+QPageRanges__Range* q_pageranges__range_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpageranges-range.html)
 
-/// q_pageranges__range_new2 constructs a new QPageRanges::Range object and invalidates the source QPageRanges::Range object.
+/// q_pageranges__range_new2 constructs a new QPageRanges::Range object.
 ///
 /// @param other QPageRanges__Range*
 ///
@@ -136,9 +134,11 @@ QPageRanges__Range* q_pageranges__range_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpageranges-range.html)
 
-/// q_pageranges__range_new3 constructs a new QPageRanges::Range object.
+/// q_pageranges__range_new3 constructs a new QPageRanges::Range object and invalidates the source QPageRanges::Range object.
 ///
-QPageRanges__Range* q_pageranges__range_new3();
+/// @param other QPageRanges__Range*
+///
+QPageRanges__Range* q_pageranges__range_new3(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpageranges-range.html)
 

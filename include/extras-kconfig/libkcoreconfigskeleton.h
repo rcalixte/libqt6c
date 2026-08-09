@@ -4579,15 +4579,15 @@ void k_coreconfigskeleton__itemlonglong_delete(void* self);
 
 /// k_coreconfigskeleton__itemenum__choice_new constructs a new KCoreConfigSkeleton::ItemEnum::Choice object.
 ///
-/// @param param1 KCoreConfigSkeleton__ItemEnum__Choice*
-///
-KCoreConfigSkeleton__ItemEnum__Choice* k_coreconfigskeleton__itemenum__choice_new(void* param1);
+KCoreConfigSkeleton__ItemEnum__Choice* k_coreconfigskeleton__itemenum__choice_new();
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum-choice.html)
 
 /// k_coreconfigskeleton__itemenum__choice_new2 constructs a new KCoreConfigSkeleton::ItemEnum::Choice object.
 ///
-KCoreConfigSkeleton__ItemEnum__Choice* k_coreconfigskeleton__itemenum__choice_new2();
+/// @param param1 KCoreConfigSkeleton__ItemEnum__Choice*
+///
+KCoreConfigSkeleton__ItemEnum__Choice* k_coreconfigskeleton__itemenum__choice_new2(void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum-choice.html#name-var)
 ///

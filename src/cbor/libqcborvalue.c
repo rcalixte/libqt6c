@@ -12,12 +12,16 @@
 #include "libqcborvalue.hpp"
 #include "libqcborvalue.h"
 
-QCborParserError* q_cborparsererror_new(void* other) {
-    return QCborParserError_New((QCborParserError*)other);
+QCborParserError* q_cborparsererror_new() {
+    return QCborParserError_New();
 }
 
 QCborParserError* q_cborparsererror_new2(void* other) {
     return QCborParserError_New2((QCborParserError*)other);
+}
+
+QCborParserError* q_cborparsererror_new3(void* other) {
+    return QCborParserError_New3((QCborParserError*)other);
 }
 
 void q_cborparsererror_copy_assign(void* self, void* other) {

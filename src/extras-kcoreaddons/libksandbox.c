@@ -22,8 +22,12 @@ void k_sandbox_start_host_process(void* process, int32_t mode) {
     KSandbox_StartHostProcess((QProcess*)process, mode);
 }
 
-KSandbox__ProcessContext* k_sandbox__processcontext_new(void* param1) {
-    return KSandbox__ProcessContext_New((KSandbox__ProcessContext*)param1);
+KSandbox__ProcessContext* k_sandbox__processcontext_new() {
+    return KSandbox__ProcessContext_New();
+}
+
+KSandbox__ProcessContext* k_sandbox__processcontext_new2(void* param1) {
+    return KSandbox__ProcessContext_New2((KSandbox__ProcessContext*)param1);
 }
 
 void k_sandbox__processcontext_delete(void* self) {

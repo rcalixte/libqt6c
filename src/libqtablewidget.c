@@ -29,16 +29,16 @@
 #include "libqtablewidget.hpp"
 #include "libqtablewidget.h"
 
-QTableWidgetSelectionRange* q_tablewidgetselectionrange_new(void* other) {
-    return QTableWidgetSelectionRange_New((QTableWidgetSelectionRange*)other);
+QTableWidgetSelectionRange* q_tablewidgetselectionrange_new() {
+    return QTableWidgetSelectionRange_New();
 }
 
 QTableWidgetSelectionRange* q_tablewidgetselectionrange_new2(void* other) {
     return QTableWidgetSelectionRange_New2((QTableWidgetSelectionRange*)other);
 }
 
-QTableWidgetSelectionRange* q_tablewidgetselectionrange_new3() {
-    return QTableWidgetSelectionRange_New3();
+QTableWidgetSelectionRange* q_tablewidgetselectionrange_new3(void* other) {
+    return QTableWidgetSelectionRange_New3((QTableWidgetSelectionRange*)other);
 }
 
 QTableWidgetSelectionRange* q_tablewidgetselectionrange_new4(int top, int left, int bottom, int right) {

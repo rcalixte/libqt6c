@@ -330,12 +330,12 @@ void q_timezone_delete(void* self) {
     QTimeZone_Delete((QTimeZone*)(self));
 }
 
-QTimeZone__OffsetData* q_timezone__offsetdata_new(void* param1) {
-    return QTimeZone__OffsetData_New((QTimeZone__OffsetData*)param1);
+QTimeZone__OffsetData* q_timezone__offsetdata_new() {
+    return QTimeZone__OffsetData_New();
 }
 
-QTimeZone__OffsetData* q_timezone__offsetdata_new2() {
-    return QTimeZone__OffsetData_New2();
+QTimeZone__OffsetData* q_timezone__offsetdata_new2(void* param1) {
+    return QTimeZone__OffsetData_New2((QTimeZone__OffsetData*)param1);
 }
 
 const char* q_timezone__offsetdata_abbreviation(void* self) {

@@ -358,13 +358,11 @@ void q_calendar_delete(void* self);
 
 /// q_calendar__yearmonthday_new constructs a new QCalendar::YearMonthDay object.
 ///
-/// @param other QCalendar__YearMonthDay*
-///
-QCalendar__YearMonthDay* q_calendar__yearmonthday_new(void* other);
+QCalendar__YearMonthDay* q_calendar__yearmonthday_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html)
 
-/// q_calendar__yearmonthday_new2 constructs a new QCalendar::YearMonthDay object and invalidates the source QCalendar::YearMonthDay object.
+/// q_calendar__yearmonthday_new2 constructs a new QCalendar::YearMonthDay object.
 ///
 /// @param other QCalendar__YearMonthDay*
 ///
@@ -372,9 +370,11 @@ QCalendar__YearMonthDay* q_calendar__yearmonthday_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html)
 
-/// q_calendar__yearmonthday_new3 constructs a new QCalendar::YearMonthDay object.
+/// q_calendar__yearmonthday_new3 constructs a new QCalendar::YearMonthDay object and invalidates the source QCalendar::YearMonthDay object.
 ///
-QCalendar__YearMonthDay* q_calendar__yearmonthday_new3();
+/// @param other QCalendar__YearMonthDay*
+///
+QCalendar__YearMonthDay* q_calendar__yearmonthday_new3(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html)
 

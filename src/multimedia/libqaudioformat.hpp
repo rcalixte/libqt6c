@@ -18,9 +18,9 @@ extern "C" {
 typedef struct QAudioFormat QAudioFormat;
 #endif
 
-QAudioFormat* QAudioFormat_New(const QAudioFormat* other);
-QAudioFormat* QAudioFormat_New2(QAudioFormat* other);
-QAudioFormat* QAudioFormat_New3();
+QAudioFormat* QAudioFormat_New();
+QAudioFormat* QAudioFormat_New2(const QAudioFormat* other);
+QAudioFormat* QAudioFormat_New3(QAudioFormat* other);
 QAudioFormat* QAudioFormat_New4(const QAudioFormat* param1);
 void QAudioFormat_CopyAssign(QAudioFormat* self, QAudioFormat* other);
 void QAudioFormat_MoveAssign(QAudioFormat* self, QAudioFormat* other);

@@ -434,8 +434,12 @@ void k_nscore__entry_delete(void* self) {
     KNSCore__Entry_Delete((KNSCore__Entry*)(self));
 }
 
-KNSCore__Entry__DownloadLinkInformation* k_nscore__entry__downloadlinkinformation_new(void* param1) {
-    return KNSCore__Entry__DownloadLinkInformation_New((KNSCore__Entry__DownloadLinkInformation*)param1);
+KNSCore__Entry__DownloadLinkInformation* k_nscore__entry__downloadlinkinformation_new() {
+    return KNSCore__Entry__DownloadLinkInformation_New();
+}
+
+KNSCore__Entry__DownloadLinkInformation* k_nscore__entry__downloadlinkinformation_new2(void* param1) {
+    return KNSCore__Entry__DownloadLinkInformation_New2((KNSCore__Entry__DownloadLinkInformation*)param1);
 }
 
 const char* k_nscore__entry__downloadlinkinformation_name(void* self) {

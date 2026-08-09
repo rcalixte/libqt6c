@@ -195,12 +195,16 @@ void q_videoframe_delete(void* self) {
     QVideoFrame_Delete((QVideoFrame*)(self));
 }
 
-QVideoFrame__PaintOptions* q_videoframe__paintoptions_new(void* other) {
-    return QVideoFrame__PaintOptions_New((QVideoFrame__PaintOptions*)other);
+QVideoFrame__PaintOptions* q_videoframe__paintoptions_new() {
+    return QVideoFrame__PaintOptions_New();
 }
 
 QVideoFrame__PaintOptions* q_videoframe__paintoptions_new2(void* other) {
     return QVideoFrame__PaintOptions_New2((QVideoFrame__PaintOptions*)other);
+}
+
+QVideoFrame__PaintOptions* q_videoframe__paintoptions_new3(void* other) {
+    return QVideoFrame__PaintOptions_New3((QVideoFrame__PaintOptions*)other);
 }
 
 void q_videoframe__paintoptions_copy_assign(void* self, void* other) {

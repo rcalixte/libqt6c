@@ -5311,8 +5311,12 @@ void q_domprocessinginstruction_delete(void* self) {
     QDomProcessingInstruction_Delete((QDomProcessingInstruction*)(self));
 }
 
-QDomDocument__ParseResult* q_domdocument__parseresult_new(void* param1) {
-    return QDomDocument__ParseResult_New((QDomDocument__ParseResult*)param1);
+QDomDocument__ParseResult* q_domdocument__parseresult_new() {
+    return QDomDocument__ParseResult_New();
+}
+
+QDomDocument__ParseResult* q_domdocument__parseresult_new2(void* param1) {
+    return QDomDocument__ParseResult_New2((QDomDocument__ParseResult*)param1);
 }
 
 const char* q_domdocument__parseresult_error_message(void* self) {

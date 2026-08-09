@@ -6510,9 +6510,15 @@ void q_textedit_delete(void* self);
 
 /// q_textedit__extraselection_new constructs a new QTextEdit::ExtraSelection object.
 ///
+QTextEdit__ExtraSelection* q_textedit__extraselection_new();
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextedit-extraselection.html)
+
+/// q_textedit__extraselection_new2 constructs a new QTextEdit::ExtraSelection object.
+///
 /// @param param1 QTextEdit__ExtraSelection*
 ///
-QTextEdit__ExtraSelection* q_textedit__extraselection_new(void* param1);
+QTextEdit__ExtraSelection* q_textedit__extraselection_new2(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit-extraselection.html#cursor-var)
 ///

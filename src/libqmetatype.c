@@ -5,20 +5,20 @@
 #include "libqmetatype.hpp"
 #include "libqmetatype.h"
 
-QMetaType* q_metatype_new(void* other) {
-    return QMetaType_New((QMetaType*)other);
+QMetaType* q_metatype_new() {
+    return QMetaType_New();
 }
 
 QMetaType* q_metatype_new2(void* other) {
     return QMetaType_New2((QMetaType*)other);
 }
 
-QMetaType* q_metatype_new3(int type) {
-    return QMetaType_New3(type);
+QMetaType* q_metatype_new3(void* other) {
+    return QMetaType_New3((QMetaType*)other);
 }
 
-QMetaType* q_metatype_new4() {
-    return QMetaType_New4();
+QMetaType* q_metatype_new4(int type) {
+    return QMetaType_New4(type);
 }
 
 QMetaType* q_metatype_new5(void* param1) {

@@ -294,7 +294,8 @@ void Konsole__FilterObject_OnIsSignalConnected(const Konsole__FilterObject* self
 bool Konsole__FilterObject_SuperIsSignalConnected(const Konsole__FilterObject* self, const QMetaMethod* signal);
 void Konsole__FilterObject_Delete(Konsole__FilterObject* self);
 
-Konsole__FilterChain* Konsole__FilterChain_New(const Konsole__FilterChain* param1);
+Konsole__FilterChain* Konsole__FilterChain_New();
+Konsole__FilterChain* Konsole__FilterChain_New2(const Konsole__FilterChain* param1);
 void Konsole__FilterChain_AddFilter(Konsole__FilterChain* self, Konsole__Filter* filter);
 void Konsole__FilterChain_RemoveFilter(Konsole__FilterChain* self, Konsole__Filter* filter);
 bool Konsole__FilterChain_ContainsFilter(Konsole__FilterChain* self, Konsole__Filter* filter);

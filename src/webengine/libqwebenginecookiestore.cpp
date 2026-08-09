@@ -93,7 +93,11 @@ void QWebEngineCookieStore_Delete(QWebEngineCookieStore* self) {
     delete self;
 }
 
-QWebEngineCookieStore__FilterRequest* QWebEngineCookieStore__FilterRequest_New(const QWebEngineCookieStore__FilterRequest* param1) {
+QWebEngineCookieStore__FilterRequest* QWebEngineCookieStore__FilterRequest_New() {
+    return new QWebEngineCookieStore::FilterRequest();
+}
+
+QWebEngineCookieStore__FilterRequest* QWebEngineCookieStore__FilterRequest_New2(const QWebEngineCookieStore__FilterRequest* param1) {
     return new QWebEngineCookieStore::FilterRequest(*param1);
 }
 
