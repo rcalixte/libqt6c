@@ -2415,6 +2415,10 @@ void q_poppler__annotation__popup_delete(void* self) {
     Poppler__Annotation__Popup_Delete((Poppler__Annotation__Popup*)(self));
 }
 
+Poppler__HighlightAnnotation__Quad* q_poppler__highlightannotation__quad_new() {
+    return Poppler__HighlightAnnotation__Quad_New();
+}
+
 bool q_poppler__highlightannotation__quad_cap_start(void* self) {
     return Poppler__HighlightAnnotation__Quad_CapStart((Poppler__HighlightAnnotation__Quad*)self);
 }

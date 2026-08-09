@@ -205,11 +205,15 @@ void QVideoFrame_Delete(QVideoFrame* self) {
     delete self;
 }
 
-QVideoFrame__PaintOptions* QVideoFrame__PaintOptions_New(const QVideoFrame__PaintOptions* other) {
+QVideoFrame__PaintOptions* QVideoFrame__PaintOptions_New() {
+    return new QVideoFrame::PaintOptions();
+}
+
+QVideoFrame__PaintOptions* QVideoFrame__PaintOptions_New2(const QVideoFrame__PaintOptions* other) {
     return new QVideoFrame::PaintOptions(*other);
 }
 
-QVideoFrame__PaintOptions* QVideoFrame__PaintOptions_New2(QVideoFrame__PaintOptions* other) {
+QVideoFrame__PaintOptions* QVideoFrame__PaintOptions_New3(QVideoFrame__PaintOptions* other) {
     return new QVideoFrame::PaintOptions(std::move(*other));
 }
 

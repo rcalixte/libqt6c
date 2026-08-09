@@ -734,12 +734,12 @@ void q_itemselectionmodel_delete(void* self) {
 
 // Also inherits unprojectable QList<QItemSelectionRange>
 
-QItemSelection* q_itemselection_new(void* topLeft, void* bottomRight) {
-    return QItemSelection_New((QModelIndex*)topLeft, (QModelIndex*)bottomRight);
+QItemSelection* q_itemselection_new() {
+    return QItemSelection_New();
 }
 
-QItemSelection* q_itemselection_new2() {
-    return QItemSelection_New2();
+QItemSelection* q_itemselection_new2(void* topLeft, void* bottomRight) {
+    return QItemSelection_New2((QModelIndex*)topLeft, (QModelIndex*)bottomRight);
 }
 
 QItemSelection* q_itemselection_new3(void* param1) {

@@ -1558,15 +1558,15 @@ void q_textobjectinterface_delete(void* self);
 
 /// q_abstracttextdocumentlayout__selection_new constructs a new QAbstractTextDocumentLayout::Selection object.
 ///
-/// @param param1 QAbstractTextDocumentLayout__Selection*
-///
-QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new(void* param1);
+QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-selection.html)
 
 /// q_abstracttextdocumentlayout__selection_new2 constructs a new QAbstractTextDocumentLayout::Selection object.
 ///
-QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new2();
+/// @param param1 QAbstractTextDocumentLayout__Selection*
+///
+QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new2(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-selection.html#cursor-var)
 ///

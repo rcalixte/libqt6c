@@ -12,13 +12,11 @@
 
 /// k_texteditor__range_new constructs a new KTextEditor::Range object.
 ///
-/// @param other KTextEditor__Range*
-///
-KTextEditor__Range* k_texteditor__range_new(void* other);
+KTextEditor__Range* k_texteditor__range_new();
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-range.html)
 
-/// k_texteditor__range_new2 constructs a new KTextEditor::Range object and invalidates the source KTextEditor::Range object.
+/// k_texteditor__range_new2 constructs a new KTextEditor::Range object.
 ///
 /// @param other KTextEditor__Range*
 ///
@@ -26,9 +24,11 @@ KTextEditor__Range* k_texteditor__range_new2(void* other);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-range.html)
 
-/// k_texteditor__range_new3 constructs a new KTextEditor::Range object.
+/// k_texteditor__range_new3 constructs a new KTextEditor::Range object and invalidates the source KTextEditor::Range object.
 ///
-KTextEditor__Range* k_texteditor__range_new3();
+/// @param other KTextEditor__Range*
+///
+KTextEditor__Range* k_texteditor__range_new3(void* other);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-range.html)
 

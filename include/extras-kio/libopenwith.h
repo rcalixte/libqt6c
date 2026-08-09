@@ -48,9 +48,15 @@ void k_io__openwith_delete(void* self);
 
 /// k_io__openwith__acceptresult_new constructs a new KIO::OpenWith::AcceptResult object.
 ///
+KIO__OpenWith__AcceptResult* k_io__openwith__acceptresult_new();
+
+/// [Upstream resources](https://api.kde.org/kio-openwith-acceptresult.html)
+
+/// k_io__openwith__acceptresult_new2 constructs a new KIO::OpenWith::AcceptResult object.
+///
 /// @param param1 KIO__OpenWith__AcceptResult*
 ///
-KIO__OpenWith__AcceptResult* k_io__openwith__acceptresult_new(void* param1);
+KIO__OpenWith__AcceptResult* k_io__openwith__acceptresult_new2(void* param1);
 
 /// [Upstream resources](https://api.kde.org/kio-openwith-acceptresult.html#accept-var)
 ///

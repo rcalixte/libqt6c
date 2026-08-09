@@ -3465,9 +3465,15 @@ void k_encodingfiledialog_on_object_name_changed(void* self, void (*callback)(vo
 
 /// k_encodingfiledialog__result_new constructs a new KEncodingFileDialog::Result object.
 ///
+KEncodingFileDialog__Result* k_encodingfiledialog__result_new();
+
+/// [Upstream resources](https://api.kde.org/kencodingfiledialog-result.html)
+
+/// k_encodingfiledialog__result_new2 constructs a new KEncodingFileDialog::Result object.
+///
 /// @param param1 KEncodingFileDialog__Result*
 ///
-KEncodingFileDialog__Result* k_encodingfiledialog__result_new(void* param1);
+KEncodingFileDialog__Result* k_encodingfiledialog__result_new2(void* param1);
 
 /// [Upstream resources](https://api.kde.org/kencodingfiledialog-result.html#fileNames-var)
 ///

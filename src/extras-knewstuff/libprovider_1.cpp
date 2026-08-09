@@ -1429,7 +1429,11 @@ void KNSCore__Provider__SearchRequest_Delete(KNSCore__Provider__SearchRequest* s
     delete self;
 }
 
-KNSCore__Provider__CategoryMetadata* KNSCore__Provider__CategoryMetadata_New(const KNSCore__Provider__CategoryMetadata* param1) {
+KNSCore__Provider__CategoryMetadata* KNSCore__Provider__CategoryMetadata_New() {
+    return new KNSCore::Provider::CategoryMetadata();
+}
+
+KNSCore__Provider__CategoryMetadata* KNSCore__Provider__CategoryMetadata_New2(const KNSCore__Provider__CategoryMetadata* param1) {
     return new KNSCore::Provider::CategoryMetadata(*param1);
 }
 
@@ -1492,7 +1496,11 @@ void KNSCore__Provider__CategoryMetadata_Delete(KNSCore__Provider__CategoryMetad
     delete self;
 }
 
-KNSCore__Provider__SearchPreset* KNSCore__Provider__SearchPreset_New(const KNSCore__Provider__SearchPreset* param1) {
+KNSCore__Provider__SearchPreset* KNSCore__Provider__SearchPreset_New() {
+    return new KNSCore::Provider::SearchPreset();
+}
+
+KNSCore__Provider__SearchPreset* KNSCore__Provider__SearchPreset_New2(const KNSCore__Provider__SearchPreset* param1) {
     return new KNSCore::Provider::SearchPreset(*param1);
 }
 

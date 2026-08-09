@@ -12,13 +12,11 @@
 
 /// k_texteditor__linerange_new constructs a new KTextEditor::LineRange object.
 ///
-/// @param other KTextEditor__LineRange*
-///
-KTextEditor__LineRange* k_texteditor__linerange_new(void* other);
+KTextEditor__LineRange* k_texteditor__linerange_new();
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html)
 
-/// k_texteditor__linerange_new2 constructs a new KTextEditor::LineRange object and invalidates the source KTextEditor::LineRange object.
+/// k_texteditor__linerange_new2 constructs a new KTextEditor::LineRange object.
 ///
 /// @param other KTextEditor__LineRange*
 ///
@@ -26,9 +24,11 @@ KTextEditor__LineRange* k_texteditor__linerange_new2(void* other);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html)
 
-/// k_texteditor__linerange_new3 constructs a new KTextEditor::LineRange object.
+/// k_texteditor__linerange_new3 constructs a new KTextEditor::LineRange object and invalidates the source KTextEditor::LineRange object.
 ///
-KTextEditor__LineRange* k_texteditor__linerange_new3();
+/// @param other KTextEditor__LineRange*
+///
+KTextEditor__LineRange* k_texteditor__linerange_new3(void* other);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html)
 

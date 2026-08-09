@@ -1985,9 +1985,15 @@ void k_nscore__provider__searchrequest_delete(void* self);
 
 /// k_nscore__provider__categorymetadata_new constructs a new KNSCore::Provider::CategoryMetadata object.
 ///
+KNSCore__Provider__CategoryMetadata* k_nscore__provider__categorymetadata_new();
+
+/// [Upstream resources](https://api.kde.org/knscore-provider-categorymetadata.html)
+
+/// k_nscore__provider__categorymetadata_new2 constructs a new KNSCore::Provider::CategoryMetadata object.
+///
 /// @param param1 KNSCore__Provider__CategoryMetadata*
 ///
-KNSCore__Provider__CategoryMetadata* k_nscore__provider__categorymetadata_new(void* param1);
+KNSCore__Provider__CategoryMetadata* k_nscore__provider__categorymetadata_new2(void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-categorymetadata.html#id-var)
 ///
@@ -2051,9 +2057,15 @@ void k_nscore__provider__categorymetadata_delete(void* self);
 
 /// k_nscore__provider__searchpreset_new constructs a new KNSCore::Provider::SearchPreset object.
 ///
+KNSCore__Provider__SearchPreset* k_nscore__provider__searchpreset_new();
+
+/// [Upstream resources](https://api.kde.org/knscore-provider-searchpreset.html)
+
+/// k_nscore__provider__searchpreset_new2 constructs a new KNSCore::Provider::SearchPreset object.
+///
 /// @param param1 KNSCore__Provider__SearchPreset*
 ///
-KNSCore__Provider__SearchPreset* k_nscore__provider__searchpreset_new(void* param1);
+KNSCore__Provider__SearchPreset* k_nscore__provider__searchpreset_new2(void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchpreset.html#request-var)
 ///

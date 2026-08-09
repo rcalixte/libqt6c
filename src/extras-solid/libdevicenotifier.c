@@ -1,19 +1,48 @@
+#include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "libdevicenotifier.hpp"
 #include "libdevicenotifier.h"
 
+Solid__DeviceNotifier* k_solid__devicenotifier_new() {
+    return Solid__DeviceNotifier_New();
+}
+
 const QMetaObject* k_solid__devicenotifier_meta_object(void* self) {
     return Solid__DeviceNotifier_MetaObject((Solid__DeviceNotifier*)self);
+}
+
+void k_solid__devicenotifier_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    Solid__DeviceNotifier_OnMetaObject((Solid__DeviceNotifier*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_solid__devicenotifier_super_meta_object(void* self) {
+    return Solid__DeviceNotifier_SuperMetaObject((Solid__DeviceNotifier*)self);
 }
 
 void* k_solid__devicenotifier_metacast(void* self, const char* param1) {
     return Solid__DeviceNotifier_Metacast((Solid__DeviceNotifier*)self, param1);
 }
 
+void k_solid__devicenotifier_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    Solid__DeviceNotifier_OnMetacast((Solid__DeviceNotifier*)self, (intptr_t)callback);
+}
+
+void* k_solid__devicenotifier_super_metacast(void* self, const char* param1) {
+    return Solid__DeviceNotifier_SuperMetacast((Solid__DeviceNotifier*)self, param1);
+}
+
 int32_t k_solid__devicenotifier_metacall(void* self, int32_t param1, int param2, void* param3) {
     return Solid__DeviceNotifier_Metacall((Solid__DeviceNotifier*)self, param1, param2, param3);
+}
+
+void k_solid__devicenotifier_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
+    Solid__DeviceNotifier_OnMetacall((Solid__DeviceNotifier*)self, (intptr_t)callback);
+}
+
+int32_t k_solid__devicenotifier_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return Solid__DeviceNotifier_SuperMetacall((Solid__DeviceNotifier*)self, param1, param2, param3);
 }
 
 const char* k_solid__devicenotifier_tr(const char* s) {
@@ -55,14 +84,6 @@ const char* k_solid__devicenotifier_tr3(const char* s, const char* c, int n) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
-}
-
-bool k_solid__devicenotifier_event(void* self, void* event) {
-    return QObject_Event((QObject*)self, (QEvent*)event);
-}
-
-bool k_solid__devicenotifier_event_filter(void* self, void* watched, void* event) {
-    return QObject_EventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
 const char* k_solid__devicenotifier_object_name(void* self) {
@@ -274,6 +295,138 @@ void k_solid__devicenotifier_destroyed1(void* self, void* param1) {
 
 void k_solid__devicenotifier_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
+}
+
+bool k_solid__devicenotifier_event(void* self, void* event) {
+    return Solid__DeviceNotifier_Event((Solid__DeviceNotifier*)self, (QEvent*)event);
+}
+
+bool k_solid__devicenotifier_super_event(void* self, void* event) {
+    return Solid__DeviceNotifier_SuperEvent((Solid__DeviceNotifier*)self, (QEvent*)event);
+}
+
+void k_solid__devicenotifier_on_event(void* self, bool (*callback)(void*, void*)) {
+    Solid__DeviceNotifier_OnEvent((Solid__DeviceNotifier*)self, (intptr_t)callback);
+}
+
+bool k_solid__devicenotifier_event_filter(void* self, void* watched, void* event) {
+    return Solid__DeviceNotifier_EventFilter((Solid__DeviceNotifier*)self, (QObject*)watched, (QEvent*)event);
+}
+
+bool k_solid__devicenotifier_super_event_filter(void* self, void* watched, void* event) {
+    return Solid__DeviceNotifier_SuperEventFilter((Solid__DeviceNotifier*)self, (QObject*)watched, (QEvent*)event);
+}
+
+void k_solid__devicenotifier_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    Solid__DeviceNotifier_OnEventFilter((Solid__DeviceNotifier*)self, (intptr_t)callback);
+}
+
+void k_solid__devicenotifier_timer_event(void* self, void* event) {
+    Solid__DeviceNotifier_TimerEvent((Solid__DeviceNotifier*)self, (QTimerEvent*)event);
+}
+
+void k_solid__devicenotifier_super_timer_event(void* self, void* event) {
+    Solid__DeviceNotifier_SuperTimerEvent((Solid__DeviceNotifier*)self, (QTimerEvent*)event);
+}
+
+void k_solid__devicenotifier_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    Solid__DeviceNotifier_OnTimerEvent((Solid__DeviceNotifier*)self, (intptr_t)callback);
+}
+
+void k_solid__devicenotifier_child_event(void* self, void* event) {
+    Solid__DeviceNotifier_ChildEvent((Solid__DeviceNotifier*)self, (QChildEvent*)event);
+}
+
+void k_solid__devicenotifier_super_child_event(void* self, void* event) {
+    Solid__DeviceNotifier_SuperChildEvent((Solid__DeviceNotifier*)self, (QChildEvent*)event);
+}
+
+void k_solid__devicenotifier_on_child_event(void* self, void (*callback)(void*, void*)) {
+    Solid__DeviceNotifier_OnChildEvent((Solid__DeviceNotifier*)self, (intptr_t)callback);
+}
+
+void k_solid__devicenotifier_custom_event(void* self, void* event) {
+    Solid__DeviceNotifier_CustomEvent((Solid__DeviceNotifier*)self, (QEvent*)event);
+}
+
+void k_solid__devicenotifier_super_custom_event(void* self, void* event) {
+    Solid__DeviceNotifier_SuperCustomEvent((Solid__DeviceNotifier*)self, (QEvent*)event);
+}
+
+void k_solid__devicenotifier_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    Solid__DeviceNotifier_OnCustomEvent((Solid__DeviceNotifier*)self, (intptr_t)callback);
+}
+
+void k_solid__devicenotifier_connect_notify(void* self, void* signal) {
+    Solid__DeviceNotifier_ConnectNotify((Solid__DeviceNotifier*)self, (QMetaMethod*)signal);
+}
+
+void k_solid__devicenotifier_super_connect_notify(void* self, void* signal) {
+    Solid__DeviceNotifier_SuperConnectNotify((Solid__DeviceNotifier*)self, (QMetaMethod*)signal);
+}
+
+void k_solid__devicenotifier_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    Solid__DeviceNotifier_OnConnectNotify((Solid__DeviceNotifier*)self, (intptr_t)callback);
+}
+
+void k_solid__devicenotifier_disconnect_notify(void* self, void* signal) {
+    Solid__DeviceNotifier_DisconnectNotify((Solid__DeviceNotifier*)self, (QMetaMethod*)signal);
+}
+
+void k_solid__devicenotifier_super_disconnect_notify(void* self, void* signal) {
+    Solid__DeviceNotifier_SuperDisconnectNotify((Solid__DeviceNotifier*)self, (QMetaMethod*)signal);
+}
+
+void k_solid__devicenotifier_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    Solid__DeviceNotifier_OnDisconnectNotify((Solid__DeviceNotifier*)self, (intptr_t)callback);
+}
+
+QObject* k_solid__devicenotifier_sender(void* self) {
+    return Solid__DeviceNotifier_Sender((Solid__DeviceNotifier*)self);
+}
+
+QObject* k_solid__devicenotifier_super_sender(void* self) {
+    return Solid__DeviceNotifier_SuperSender((Solid__DeviceNotifier*)self);
+}
+
+void k_solid__devicenotifier_on_sender(void* self, QObject* (*callback)()) {
+    Solid__DeviceNotifier_OnSender((Solid__DeviceNotifier*)self, (intptr_t)callback);
+}
+
+int32_t k_solid__devicenotifier_sender_signal_index(void* self) {
+    return Solid__DeviceNotifier_SenderSignalIndex((Solid__DeviceNotifier*)self);
+}
+
+int32_t k_solid__devicenotifier_super_sender_signal_index(void* self) {
+    return Solid__DeviceNotifier_SuperSenderSignalIndex((Solid__DeviceNotifier*)self);
+}
+
+void k_solid__devicenotifier_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    Solid__DeviceNotifier_OnSenderSignalIndex((Solid__DeviceNotifier*)self, (intptr_t)callback);
+}
+
+int32_t k_solid__devicenotifier_receivers(void* self, const char* signal) {
+    return Solid__DeviceNotifier_Receivers((Solid__DeviceNotifier*)self, signal);
+}
+
+int32_t k_solid__devicenotifier_super_receivers(void* self, const char* signal) {
+    return Solid__DeviceNotifier_SuperReceivers((Solid__DeviceNotifier*)self, signal);
+}
+
+void k_solid__devicenotifier_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    Solid__DeviceNotifier_OnReceivers((Solid__DeviceNotifier*)self, (intptr_t)callback);
+}
+
+bool k_solid__devicenotifier_is_signal_connected(void* self, void* signal) {
+    return Solid__DeviceNotifier_IsSignalConnected((Solid__DeviceNotifier*)self, (QMetaMethod*)signal);
+}
+
+bool k_solid__devicenotifier_super_is_signal_connected(void* self, void* signal) {
+    return Solid__DeviceNotifier_SuperIsSignalConnected((Solid__DeviceNotifier*)self, (QMetaMethod*)signal);
+}
+
+void k_solid__devicenotifier_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    Solid__DeviceNotifier_OnIsSignalConnected((Solid__DeviceNotifier*)self, (intptr_t)callback);
 }
 
 void k_solid__devicenotifier_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

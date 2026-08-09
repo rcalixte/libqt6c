@@ -467,12 +467,12 @@ void k_textgrammarcheck__grammalectegenerateconfigoptionjob_delete(void* self) {
     TextGrammarCheck__GrammalecteGenerateConfigOptionJob_Delete((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)(self));
 }
 
-TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option* k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_new(void* param1) {
-    return TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option_New((TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option*)param1);
+TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option* k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_new() {
+    return TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option_New();
 }
 
-TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option* k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_new2() {
-    return TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option_New2();
+TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option* k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_new2(void* param1) {
+    return TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option_New2((TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option*)param1);
 }
 
 const char* k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_option_name(void* self) {

@@ -69,16 +69,16 @@ void q_pageranges_delete(void* self) {
     QPageRanges_Delete((QPageRanges*)(self));
 }
 
-QPageRanges__Range* q_pageranges__range_new(void* other) {
-    return QPageRanges__Range_New((QPageRanges__Range*)other);
+QPageRanges__Range* q_pageranges__range_new() {
+    return QPageRanges__Range_New();
 }
 
 QPageRanges__Range* q_pageranges__range_new2(void* other) {
     return QPageRanges__Range_New2((QPageRanges__Range*)other);
 }
 
-QPageRanges__Range* q_pageranges__range_new3() {
-    return QPageRanges__Range_New3();
+QPageRanges__Range* q_pageranges__range_new3(void* other) {
+    return QPageRanges__Range_New3((QPageRanges__Range*)other);
 }
 
 QPageRanges__Range* q_pageranges__range_new4(void* param1) {

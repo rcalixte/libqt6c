@@ -21,8 +21,12 @@ void k_io__openwith_delete(void* self) {
     KIO__OpenWith_Delete((KIO__OpenWith*)(self));
 }
 
-KIO__OpenWith__AcceptResult* k_io__openwith__acceptresult_new(void* param1) {
-    return KIO__OpenWith__AcceptResult_New((KIO__OpenWith__AcceptResult*)param1);
+KIO__OpenWith__AcceptResult* k_io__openwith__acceptresult_new() {
+    return KIO__OpenWith__AcceptResult_New();
+}
+
+KIO__OpenWith__AcceptResult* k_io__openwith__acceptresult_new2(void* param1) {
+    return KIO__OpenWith__AcceptResult_New2((KIO__OpenWith__AcceptResult*)param1);
 }
 
 bool k_io__openwith__acceptresult_accept(void* self) {

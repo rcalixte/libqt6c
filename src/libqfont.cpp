@@ -565,16 +565,16 @@ void QFont_Delete(QFont* self) {
     delete self;
 }
 
-QFont__Tag* QFont__Tag_New(const QFont__Tag* other) {
+QFont__Tag* QFont__Tag_New() {
+    return new QFont::Tag();
+}
+
+QFont__Tag* QFont__Tag_New2(const QFont__Tag* other) {
     return new QFont::Tag(*other);
 }
 
-QFont__Tag* QFont__Tag_New2(QFont__Tag* other) {
+QFont__Tag* QFont__Tag_New3(QFont__Tag* other) {
     return new QFont::Tag(std::move(*other));
-}
-
-QFont__Tag* QFont__Tag_New3() {
-    return new QFont::Tag();
 }
 
 QFont__Tag* QFont__Tag_New4(const QFont__Tag* param1) {

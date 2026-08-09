@@ -12,17 +12,23 @@
 
 /// k_fuzzymatcher__result_new constructs a new KFuzzyMatcher::Result object.
 ///
-/// @param other KFuzzyMatcher__Result*
-///
-KFuzzyMatcher__Result* k_fuzzymatcher__result_new(void* other);
+KFuzzyMatcher__Result* k_fuzzymatcher__result_new();
 
 /// [Upstream resources](https://api.kde.org/kfuzzymatcher-result.html)
 
-/// k_fuzzymatcher__result_new2 constructs a new KFuzzyMatcher::Result object and invalidates the source KFuzzyMatcher::Result object.
+/// k_fuzzymatcher__result_new2 constructs a new KFuzzyMatcher::Result object.
 ///
 /// @param other KFuzzyMatcher__Result*
 ///
 KFuzzyMatcher__Result* k_fuzzymatcher__result_new2(void* other);
+
+/// [Upstream resources](https://api.kde.org/kfuzzymatcher-result.html)
+
+/// k_fuzzymatcher__result_new3 constructs a new KFuzzyMatcher::Result object and invalidates the source KFuzzyMatcher::Result object.
+///
+/// @param other KFuzzyMatcher__Result*
+///
+KFuzzyMatcher__Result* k_fuzzymatcher__result_new3(void* other);
 
 /// k_fuzzymatcher__result_copy_assign shallow copies `other` into `self`.
 ///

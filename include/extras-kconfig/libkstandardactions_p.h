@@ -12,13 +12,11 @@
 
 /// k_standardactions__rawstringdata_new constructs a new KStandardActions::RawStringData object.
 ///
-/// @param other KStandardActions__RawStringData*
-///
-KStandardActions__RawStringData* k_standardactions__rawstringdata_new(void* other);
+KStandardActions__RawStringData* k_standardactions__rawstringdata_new();
 
 /// [Upstream resources](https://api.kde.org/kstandardactions-rawstringdata.html)
 
-/// k_standardactions__rawstringdata_new2 constructs a new KStandardActions::RawStringData object and invalidates the source KStandardActions::RawStringData object.
+/// k_standardactions__rawstringdata_new2 constructs a new KStandardActions::RawStringData object.
 ///
 /// @param other KStandardActions__RawStringData*
 ///
@@ -26,9 +24,11 @@ KStandardActions__RawStringData* k_standardactions__rawstringdata_new2(void* oth
 
 /// [Upstream resources](https://api.kde.org/kstandardactions-rawstringdata.html)
 
-/// k_standardactions__rawstringdata_new3 constructs a new KStandardActions::RawStringData object.
+/// k_standardactions__rawstringdata_new3 constructs a new KStandardActions::RawStringData object and invalidates the source KStandardActions::RawStringData object.
 ///
-KStandardActions__RawStringData* k_standardactions__rawstringdata_new3();
+/// @param other KStandardActions__RawStringData*
+///
+KStandardActions__RawStringData* k_standardactions__rawstringdata_new3(void* other);
 
 /// [Upstream resources](https://api.kde.org/kstandardactions-rawstringdata.html)
 
@@ -56,9 +56,15 @@ void k_standardactions__rawstringdata_delete(void* self);
 
 /// k_standardactions__kstandardactionsinfo_new constructs a new KStandardActions::KStandardActionsInfo object.
 ///
+KStandardActions__KStandardActionsInfo* k_standardactions__kstandardactionsinfo_new();
+
+/// [Upstream resources](https://api.kde.org/kstandardactions-kstandardactionsinfo.html)
+
+/// k_standardactions__kstandardactionsinfo_new2 constructs a new KStandardActions::KStandardActionsInfo object.
+///
 /// @param param1 KStandardActions__KStandardActionsInfo*
 ///
-KStandardActions__KStandardActionsInfo* k_standardactions__kstandardactionsinfo_new(void* param1);
+KStandardActions__KStandardActionsInfo* k_standardactions__kstandardactionsinfo_new2(void* param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardactions-kstandardactionsinfo.html#id-var)
 ///

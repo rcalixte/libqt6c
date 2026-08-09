@@ -196,8 +196,12 @@ void q_iconengine_delete(void* self) {
     QIconEngine_Delete((QIconEngine*)(self));
 }
 
-QIconEngine__ScaledPixmapArgument* q_iconengine__scaledpixmapargument_new(void* param1) {
-    return QIconEngine__ScaledPixmapArgument_New((QIconEngine__ScaledPixmapArgument*)param1);
+QIconEngine__ScaledPixmapArgument* q_iconengine__scaledpixmapargument_new() {
+    return QIconEngine__ScaledPixmapArgument_New();
+}
+
+QIconEngine__ScaledPixmapArgument* q_iconengine__scaledpixmapargument_new2(void* param1) {
+    return QIconEngine__ScaledPixmapArgument_New2((QIconEngine__ScaledPixmapArgument*)param1);
 }
 
 QSize* q_iconengine__scaledpixmapargument_size(void* self) {

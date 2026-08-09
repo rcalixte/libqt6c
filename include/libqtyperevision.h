@@ -12,13 +12,11 @@
 
 /// q_typerevision_new constructs a new QTypeRevision object.
 ///
-/// @param other QTypeRevision*
-///
-QTypeRevision* q_typerevision_new(void* other);
+QTypeRevision* q_typerevision_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html)
 
-/// q_typerevision_new2 constructs a new QTypeRevision object and invalidates the source QTypeRevision object.
+/// q_typerevision_new2 constructs a new QTypeRevision object.
 ///
 /// @param other QTypeRevision*
 ///
@@ -26,9 +24,11 @@ QTypeRevision* q_typerevision_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html)
 
-/// q_typerevision_new3 constructs a new QTypeRevision object.
+/// q_typerevision_new3 constructs a new QTypeRevision object and invalidates the source QTypeRevision object.
 ///
-QTypeRevision* q_typerevision_new3();
+/// @param other QTypeRevision*
+///
+QTypeRevision* q_typerevision_new3(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html)
 

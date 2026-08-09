@@ -410,12 +410,16 @@ void q_paintengine_delete(void* self) {
     QPaintEngine_Delete((QPaintEngine*)(self));
 }
 
-QPaintEngineState* q_paintenginestate_new(void* other) {
-    return QPaintEngineState_New((QPaintEngineState*)other);
+QPaintEngineState* q_paintenginestate_new() {
+    return QPaintEngineState_New();
 }
 
 QPaintEngineState* q_paintenginestate_new2(void* other) {
     return QPaintEngineState_New2((QPaintEngineState*)other);
+}
+
+QPaintEngineState* q_paintenginestate_new3(void* other) {
+    return QPaintEngineState_New3((QPaintEngineState*)other);
 }
 
 void q_paintenginestate_copy_assign(void* self, void* other) {

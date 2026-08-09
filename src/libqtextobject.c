@@ -1036,6 +1036,10 @@ void q_textframe_delete(void* self) {
     QTextFrame_Delete((QTextFrame*)(self));
 }
 
+QTextBlockUserData* q_textblockuserdata_new() {
+    return QTextBlockUserData_New();
+}
+
 void q_textblockuserdata_operator_assign(void* self, void* param1) {
     QTextBlockUserData_OperatorAssign((QTextBlockUserData*)self, (QTextBlockUserData*)param1);
 }
@@ -1278,16 +1282,16 @@ void q_textfragment_delete(void* self) {
     QTextFragment_Delete((QTextFragment*)(self));
 }
 
-QTextFrame__iterator* q_textframe__iterator_new(void* other) {
-    return QTextFrame__iterator_New((QTextFrame__iterator*)other);
+QTextFrame__iterator* q_textframe__iterator_new() {
+    return QTextFrame__iterator_New();
 }
 
 QTextFrame__iterator* q_textframe__iterator_new2(void* other) {
     return QTextFrame__iterator_New2((QTextFrame__iterator*)other);
 }
 
-QTextFrame__iterator* q_textframe__iterator_new3() {
-    return QTextFrame__iterator_New3();
+QTextFrame__iterator* q_textframe__iterator_new3(void* other) {
+    return QTextFrame__iterator_New3((QTextFrame__iterator*)other);
 }
 
 QTextFrame__iterator* q_textframe__iterator_new4(void* param1) {
@@ -1346,16 +1350,16 @@ void q_textframe__iterator_delete(void* self) {
     QTextFrame__iterator_Delete((QTextFrame__iterator*)(self));
 }
 
-QTextBlock__iterator* q_textblock__iterator_new(void* other) {
-    return QTextBlock__iterator_New((QTextBlock__iterator*)other);
+QTextBlock__iterator* q_textblock__iterator_new() {
+    return QTextBlock__iterator_New();
 }
 
 QTextBlock__iterator* q_textblock__iterator_new2(void* other) {
     return QTextBlock__iterator_New2((QTextBlock__iterator*)other);
 }
 
-QTextBlock__iterator* q_textblock__iterator_new3() {
-    return QTextBlock__iterator_New3();
+QTextBlock__iterator* q_textblock__iterator_new3(void* other) {
+    return QTextBlock__iterator_New3((QTextBlock__iterator*)other);
 }
 
 QTextBlock__iterator* q_textblock__iterator_new4(void* param1) {

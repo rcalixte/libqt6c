@@ -12,17 +12,23 @@
 
 /// q_bindingstatus_new constructs a new QBindingStatus object.
 ///
-/// @param other QBindingStatus*
-///
-QBindingStatus* q_bindingstatus_new(void* other);
+QBindingStatus* q_bindingstatus_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbindingstatus.html)
 
-/// q_bindingstatus_new2 constructs a new QBindingStatus object and invalidates the source QBindingStatus object.
+/// q_bindingstatus_new2 constructs a new QBindingStatus object.
 ///
 /// @param other QBindingStatus*
 ///
 QBindingStatus* q_bindingstatus_new2(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbindingstatus.html)
+
+/// q_bindingstatus_new3 constructs a new QBindingStatus object and invalidates the source QBindingStatus object.
+///
+/// @param other QBindingStatus*
+///
+QBindingStatus* q_bindingstatus_new3(void* other);
 
 /// q_bindingstatus_copy_assign shallow copies `other` into `self`.
 ///

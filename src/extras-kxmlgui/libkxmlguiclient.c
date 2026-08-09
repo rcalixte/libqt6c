@@ -325,6 +325,10 @@ void k_xmlguiclient_delete(void* self) {
     KXMLGUIClient_Delete((KXMLGUIClient*)(self));
 }
 
+KXMLGUIClient__StateChange* k_xmlguiclient__statechange_new() {
+    return KXMLGUIClient__StateChange_New();
+}
+
 const char** k_xmlguiclient__statechange_actions_to_enable(void* self) {
     libqt_list actionsToEnable_arr = KXMLGUIClient__StateChange_ActionsToEnable((KXMLGUIClient__StateChange*)self);
     const libqt_string* actionsToEnable_qstr = (libqt_string*)actionsToEnable_arr.data.ptr;

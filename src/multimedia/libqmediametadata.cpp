@@ -6,12 +6,12 @@
 #include "libqmediametadata.hpp"
 #include "libqmediametadata.hxx"
 
-QMediaMetaData* QMediaMetaData_New(const QMediaMetaData* param1) {
-    return new QMediaMetaData(*param1);
+QMediaMetaData* QMediaMetaData_New() {
+    return new QMediaMetaData();
 }
 
-QMediaMetaData* QMediaMetaData_New2() {
-    return new QMediaMetaData();
+QMediaMetaData* QMediaMetaData_New2(const QMediaMetaData* param1) {
+    return new QMediaMetaData(*param1);
 }
 
 QVariant* QMediaMetaData_Value(const QMediaMetaData* self, int k) {

@@ -472,9 +472,15 @@ void q_iconengine_delete(void* self);
 
 /// q_iconengine__scaledpixmapargument_new constructs a new QIconEngine::ScaledPixmapArgument object.
 ///
+QIconEngine__ScaledPixmapArgument* q_iconengine__scaledpixmapargument_new();
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html)
+
+/// q_iconengine__scaledpixmapargument_new2 constructs a new QIconEngine::ScaledPixmapArgument object.
+///
 /// @param param1 QIconEngine__ScaledPixmapArgument*
 ///
-QIconEngine__ScaledPixmapArgument* q_iconengine__scaledpixmapargument_new(void* param1);
+QIconEngine__ScaledPixmapArgument* q_iconengine__scaledpixmapargument_new2(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#size-var)
 ///

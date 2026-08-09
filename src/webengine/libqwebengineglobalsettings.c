@@ -1,6 +1,10 @@
 #include "libqwebengineglobalsettings.hpp"
 #include "libqwebengineglobalsettings.h"
 
+QWebEngineGlobalSettings__DnsMode* q_webengineglobalsettings__dnsmode_new() {
+    return QWebEngineGlobalSettings__DnsMode_New();
+}
+
 uint8_t q_webengineglobalsettings__dnsmode_secure_mode(void* self) {
     return QWebEngineGlobalSettings__DnsMode_SecureMode((QWebEngineGlobalSettings__DnsMode*)self);
 }

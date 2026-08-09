@@ -49,9 +49,9 @@ QMediaTimeRange* QMediaTimeRange_OperatorMinusAssign2(QMediaTimeRange* self, con
 void QMediaTimeRange_Clear(QMediaTimeRange* self);
 void QMediaTimeRange_Delete(QMediaTimeRange* self);
 
-QMediaTimeRange__Interval* QMediaTimeRange__Interval_New(const QMediaTimeRange__Interval* other);
-QMediaTimeRange__Interval* QMediaTimeRange__Interval_New2(QMediaTimeRange__Interval* other);
-QMediaTimeRange__Interval* QMediaTimeRange__Interval_New3();
+QMediaTimeRange__Interval* QMediaTimeRange__Interval_New();
+QMediaTimeRange__Interval* QMediaTimeRange__Interval_New2(const QMediaTimeRange__Interval* other);
+QMediaTimeRange__Interval* QMediaTimeRange__Interval_New3(QMediaTimeRange__Interval* other);
 QMediaTimeRange__Interval* QMediaTimeRange__Interval_New4(long long start, long long end);
 QMediaTimeRange__Interval* QMediaTimeRange__Interval_New5(const QMediaTimeRange__Interval* param1);
 void QMediaTimeRange__Interval_CopyAssign(QMediaTimeRange__Interval* self, QMediaTimeRange__Interval* other);

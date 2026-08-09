@@ -1647,8 +1647,12 @@ void k_encodingfiledialog_on_object_name_changed(void* self, void (*callback)(vo
     QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
-KEncodingFileDialog__Result* k_encodingfiledialog__result_new(void* param1) {
-    return KEncodingFileDialog__Result_New((KEncodingFileDialog__Result*)param1);
+KEncodingFileDialog__Result* k_encodingfiledialog__result_new() {
+    return KEncodingFileDialog__Result_New();
+}
+
+KEncodingFileDialog__Result* k_encodingfiledialog__result_new2(void* param1) {
+    return KEncodingFileDialog__Result_New2((KEncodingFileDialog__Result*)param1);
 }
 
 const char** k_encodingfiledialog__result_file_names(void* self) {

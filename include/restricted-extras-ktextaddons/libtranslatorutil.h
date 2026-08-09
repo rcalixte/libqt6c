@@ -142,9 +142,13 @@ void k_texttranslator__translatorutil_delete(void* self);
 
 /// k_texttranslator__translatorutil__translatorsettings_new constructs a new TextTranslator::TranslatorUtil::TranslatorSettings object.
 ///
+TextTranslator__TranslatorUtil__TranslatorSettings* k_texttranslator__translatorutil__translatorsettings_new();
+
+/// k_texttranslator__translatorutil__translatorsettings_new2 constructs a new TextTranslator::TranslatorUtil::TranslatorSettings object.
+///
 /// @param param1 TextTranslator__TranslatorUtil__TranslatorSettings*
 ///
-TextTranslator__TranslatorUtil__TranslatorSettings* k_texttranslator__translatorutil__translatorsettings_new(void* param1);
+TextTranslator__TranslatorUtil__TranslatorSettings* k_texttranslator__translatorutil__translatorsettings_new2(void* param1);
 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`

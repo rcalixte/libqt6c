@@ -12,17 +12,23 @@
 
 /// q_cborparsererror_new constructs a new QCborParserError object.
 ///
-/// @param other QCborParserError*
-///
-QCborParserError* q_cborparsererror_new(void* other);
+QCborParserError* q_cborparsererror_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborparsererror.html)
 
-/// q_cborparsererror_new2 constructs a new QCborParserError object and invalidates the source QCborParserError object.
+/// q_cborparsererror_new2 constructs a new QCborParserError object.
 ///
 /// @param other QCborParserError*
 ///
 QCborParserError* q_cborparsererror_new2(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborparsererror.html)
+
+/// q_cborparsererror_new3 constructs a new QCborParserError object and invalidates the source QCborParserError object.
+///
+/// @param other QCborParserError*
+///
+QCborParserError* q_cborparsererror_new3(void* other);
 
 /// q_cborparsererror_copy_assign shallow copies `other` into `self`.
 ///

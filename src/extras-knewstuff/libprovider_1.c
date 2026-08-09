@@ -1034,8 +1034,12 @@ void k_nscore__provider__searchrequest_delete(void* self) {
     KNSCore__Provider__SearchRequest_Delete((KNSCore__Provider__SearchRequest*)(self));
 }
 
-KNSCore__Provider__CategoryMetadata* k_nscore__provider__categorymetadata_new(void* param1) {
-    return KNSCore__Provider__CategoryMetadata_New((KNSCore__Provider__CategoryMetadata*)param1);
+KNSCore__Provider__CategoryMetadata* k_nscore__provider__categorymetadata_new() {
+    return KNSCore__Provider__CategoryMetadata_New();
+}
+
+KNSCore__Provider__CategoryMetadata* k_nscore__provider__categorymetadata_new2(void* param1) {
+    return KNSCore__Provider__CategoryMetadata_New2((KNSCore__Provider__CategoryMetadata*)param1);
 }
 
 const char* k_nscore__provider__categorymetadata_id(void* self) {
@@ -1079,8 +1083,12 @@ void k_nscore__provider__categorymetadata_delete(void* self) {
     KNSCore__Provider__CategoryMetadata_Delete((KNSCore__Provider__CategoryMetadata*)(self));
 }
 
-KNSCore__Provider__SearchPreset* k_nscore__provider__searchpreset_new(void* param1) {
-    return KNSCore__Provider__SearchPreset_New((KNSCore__Provider__SearchPreset*)param1);
+KNSCore__Provider__SearchPreset* k_nscore__provider__searchpreset_new() {
+    return KNSCore__Provider__SearchPreset_New();
+}
+
+KNSCore__Provider__SearchPreset* k_nscore__provider__searchpreset_new2(void* param1) {
+    return KNSCore__Provider__SearchPreset_New2((KNSCore__Provider__SearchPreset*)param1);
 }
 
 KNSCore__Provider__SearchRequest* k_nscore__provider__searchpreset_request(void* self) {

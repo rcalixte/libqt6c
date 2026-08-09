@@ -12,13 +12,11 @@
 
 /// k_lazylocalizedstring_new constructs a new KLazyLocalizedString object.
 ///
-/// @param other KLazyLocalizedString*
-///
-KLazyLocalizedString* k_lazylocalizedstring_new(void* other);
+KLazyLocalizedString* k_lazylocalizedstring_new();
 
 /// [Upstream resources](https://api.kde.org/klazylocalizedstring.html)
 
-/// k_lazylocalizedstring_new2 constructs a new KLazyLocalizedString object and invalidates the source KLazyLocalizedString object.
+/// k_lazylocalizedstring_new2 constructs a new KLazyLocalizedString object.
 ///
 /// @param other KLazyLocalizedString*
 ///
@@ -26,9 +24,11 @@ KLazyLocalizedString* k_lazylocalizedstring_new2(void* other);
 
 /// [Upstream resources](https://api.kde.org/klazylocalizedstring.html)
 
-/// k_lazylocalizedstring_new3 constructs a new KLazyLocalizedString object.
+/// k_lazylocalizedstring_new3 constructs a new KLazyLocalizedString object and invalidates the source KLazyLocalizedString object.
 ///
-KLazyLocalizedString* k_lazylocalizedstring_new3();
+/// @param other KLazyLocalizedString*
+///
+KLazyLocalizedString* k_lazylocalizedstring_new3(void* other);
 
 /// k_lazylocalizedstring_copy_assign shallow copies `other` into `self`.
 ///

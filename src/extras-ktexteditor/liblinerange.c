@@ -1,16 +1,16 @@
 #include "liblinerange.hpp"
 #include "liblinerange.h"
 
-KTextEditor__LineRange* k_texteditor__linerange_new(void* other) {
-    return KTextEditor__LineRange_New((KTextEditor__LineRange*)other);
+KTextEditor__LineRange* k_texteditor__linerange_new() {
+    return KTextEditor__LineRange_New();
 }
 
 KTextEditor__LineRange* k_texteditor__linerange_new2(void* other) {
     return KTextEditor__LineRange_New2((KTextEditor__LineRange*)other);
 }
 
-KTextEditor__LineRange* k_texteditor__linerange_new3() {
-    return KTextEditor__LineRange_New3();
+KTextEditor__LineRange* k_texteditor__linerange_new3(void* other) {
+    return KTextEditor__LineRange_New3((KTextEditor__LineRange*)other);
 }
 
 KTextEditor__LineRange* k_texteditor__linerange_new4(int start, int end) {

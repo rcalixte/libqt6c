@@ -195,13 +195,11 @@ void q_mediatimerange_delete(void* self);
 
 /// q_mediatimerange__interval_new constructs a new QMediaTimeRange::Interval object.
 ///
-/// @param other QMediaTimeRange__Interval*
-///
-QMediaTimeRange__Interval* q_mediatimerange__interval_new(void* other);
+QMediaTimeRange__Interval* q_mediatimerange__interval_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange-interval.html)
 
-/// q_mediatimerange__interval_new2 constructs a new QMediaTimeRange::Interval object and invalidates the source QMediaTimeRange::Interval object.
+/// q_mediatimerange__interval_new2 constructs a new QMediaTimeRange::Interval object.
 ///
 /// @param other QMediaTimeRange__Interval*
 ///
@@ -209,9 +207,11 @@ QMediaTimeRange__Interval* q_mediatimerange__interval_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange-interval.html)
 
-/// q_mediatimerange__interval_new3 constructs a new QMediaTimeRange::Interval object.
+/// q_mediatimerange__interval_new3 constructs a new QMediaTimeRange::Interval object and invalidates the source QMediaTimeRange::Interval object.
 ///
-QMediaTimeRange__Interval* q_mediatimerange__interval_new3();
+/// @param other QMediaTimeRange__Interval*
+///
+QMediaTimeRange__Interval* q_mediatimerange__interval_new3(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange-interval.html)
 

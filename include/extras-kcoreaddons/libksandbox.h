@@ -39,9 +39,15 @@ void k_sandbox_start_host_process(void* process, int32_t mode);
 
 /// k_sandbox__processcontext_new constructs a new KSandbox::ProcessContext object.
 ///
+KSandbox__ProcessContext* k_sandbox__processcontext_new();
+
+/// [Upstream resources](https://api.kde.org/ksandbox-processcontext.html)
+
+/// k_sandbox__processcontext_new2 constructs a new KSandbox::ProcessContext object.
+///
 /// @param param1 KSandbox__ProcessContext*
 ///
-KSandbox__ProcessContext* k_sandbox__processcontext_new(void* param1);
+KSandbox__ProcessContext* k_sandbox__processcontext_new2(void* param1);
 
 /// Delete this object from C++ memory.
 ///

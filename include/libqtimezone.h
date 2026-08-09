@@ -421,15 +421,15 @@ void q_timezone_delete(void* self);
 
 /// q_timezone__offsetdata_new constructs a new QTimeZone::OffsetData object.
 ///
-/// @param param1 QTimeZone__OffsetData*
-///
-QTimeZone__OffsetData* q_timezone__offsetdata_new(void* param1);
+QTimeZone__OffsetData* q_timezone__offsetdata_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone-offsetdata.html)
 
 /// q_timezone__offsetdata_new2 constructs a new QTimeZone::OffsetData object.
 ///
-QTimeZone__OffsetData* q_timezone__offsetdata_new2();
+/// @param param1 QTimeZone__OffsetData*
+///
+QTimeZone__OffsetData* q_timezone__offsetdata_new2(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#abbreviation-var)
 ///

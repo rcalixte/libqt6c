@@ -678,12 +678,12 @@ void q_textobjectinterface_delete(void* self) {
     QTextObjectInterface_Delete((QTextObjectInterface*)(self));
 }
 
-QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new(void* param1) {
-    return QAbstractTextDocumentLayout__Selection_New((QAbstractTextDocumentLayout__Selection*)param1);
+QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new() {
+    return QAbstractTextDocumentLayout__Selection_New();
 }
 
-QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new2() {
-    return QAbstractTextDocumentLayout__Selection_New2();
+QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new2(void* param1) {
+    return QAbstractTextDocumentLayout__Selection_New2((QAbstractTextDocumentLayout__Selection*)param1);
 }
 
 QTextCursor* q_abstracttextdocumentlayout__selection_cursor(void* self) {

@@ -368,15 +368,15 @@ void q_cborarray_delete(void* self);
 
 /// q_cborarray__iterator_new constructs a new QCborArray::Iterator object.
 ///
-/// @param other QCborArray__Iterator*
-///
-QCborArray__Iterator* q_cborarray__iterator_new(void* other);
+QCborArray__Iterator* q_cborarray__iterator_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray-iterator.html)
 
 /// q_cborarray__iterator_new2 constructs a new QCborArray::Iterator object.
 ///
-QCborArray__Iterator* q_cborarray__iterator_new2();
+/// @param other QCborArray__Iterator*
+///
+QCborArray__Iterator* q_cborarray__iterator_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray-iterator.html)
 
@@ -489,15 +489,15 @@ void q_cborarray__iterator_delete(void* self);
 
 /// q_cborarray__constiterator_new constructs a new QCborArray::ConstIterator object.
 ///
-/// @param other QCborArray__ConstIterator*
-///
-QCborArray__ConstIterator* q_cborarray__constiterator_new(void* other);
+QCborArray__ConstIterator* q_cborarray__constiterator_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray-constiterator.html)
 
 /// q_cborarray__constiterator_new2 constructs a new QCborArray::ConstIterator object.
 ///
-QCborArray__ConstIterator* q_cborarray__constiterator_new2();
+/// @param other QCborArray__ConstIterator*
+///
+QCborArray__ConstIterator* q_cborarray__constiterator_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray-constiterator.html)
 

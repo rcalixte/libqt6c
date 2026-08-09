@@ -2710,19 +2710,27 @@ void q_process_delete(void* self);
 #ifndef _WIN32
 /// q_process__unixprocessparameters_new constructs a new QProcess::UnixProcessParameters object.
 ///
-/// @param other QProcess__UnixProcessParameters*
-///
-QProcess__UnixProcessParameters* q_process__unixprocessparameters_new(void* other);
+QProcess__UnixProcessParameters* q_process__unixprocessparameters_new();
 #endif
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess-unixprocessparameters.html)
 
 #ifndef _WIN32
-/// q_process__unixprocessparameters_new2 constructs a new QProcess::UnixProcessParameters object and invalidates the source QProcess::UnixProcessParameters object.
+/// q_process__unixprocessparameters_new2 constructs a new QProcess::UnixProcessParameters object.
 ///
 /// @param other QProcess__UnixProcessParameters*
 ///
 QProcess__UnixProcessParameters* q_process__unixprocessparameters_new2(void* other);
+#endif
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qprocess-unixprocessparameters.html)
+
+#ifndef _WIN32
+/// q_process__unixprocessparameters_new3 constructs a new QProcess::UnixProcessParameters object and invalidates the source QProcess::UnixProcessParameters object.
+///
+/// @param other QProcess__UnixProcessParameters*
+///
+QProcess__UnixProcessParameters* q_process__unixprocessparameters_new3(void* other);
 #endif
 
 #ifndef _WIN32

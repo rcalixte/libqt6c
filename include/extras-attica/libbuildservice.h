@@ -12,9 +12,15 @@
 
 /// k_attica__target_new constructs a new Attica::Target object.
 ///
+Attica__Target* k_attica__target_new();
+
+/// [Upstream resources](https://api.kde.org/attica-target.html)
+
+/// k_attica__target_new2 constructs a new Attica::Target object.
+///
 /// @param param1 Attica__Target*
 ///
-Attica__Target* k_attica__target_new(void* param1);
+Attica__Target* k_attica__target_new2(void* param1);
 
 /// [Upstream resources](https://api.kde.org/attica-target.html#id-var)
 ///

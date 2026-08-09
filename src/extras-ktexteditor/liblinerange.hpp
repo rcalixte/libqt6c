@@ -22,9 +22,9 @@ typedef struct KTextEditor KTextEditor;
 typedef struct KTextEditor__LineRange KTextEditor__LineRange;
 #endif
 
-KTextEditor__LineRange* KTextEditor__LineRange_New(const KTextEditor__LineRange* other);
-KTextEditor__LineRange* KTextEditor__LineRange_New2(KTextEditor__LineRange* other);
-KTextEditor__LineRange* KTextEditor__LineRange_New3();
+KTextEditor__LineRange* KTextEditor__LineRange_New();
+KTextEditor__LineRange* KTextEditor__LineRange_New2(const KTextEditor__LineRange* other);
+KTextEditor__LineRange* KTextEditor__LineRange_New3(KTextEditor__LineRange* other);
 KTextEditor__LineRange* KTextEditor__LineRange_New4(int start, int end);
 KTextEditor__LineRange* KTextEditor__LineRange_New5(const KTextEditor__LineRange* param1);
 void KTextEditor__LineRange_CopyAssign(KTextEditor__LineRange* self, KTextEditor__LineRange* other);

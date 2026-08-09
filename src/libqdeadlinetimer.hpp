@@ -18,9 +18,9 @@ extern "C" {
 typedef struct QDeadlineTimer QDeadlineTimer;
 #endif
 
-QDeadlineTimer* QDeadlineTimer_New(const QDeadlineTimer* other);
-QDeadlineTimer* QDeadlineTimer_New2(QDeadlineTimer* other);
-QDeadlineTimer* QDeadlineTimer_New3();
+QDeadlineTimer* QDeadlineTimer_New();
+QDeadlineTimer* QDeadlineTimer_New2(const QDeadlineTimer* other);
+QDeadlineTimer* QDeadlineTimer_New3(QDeadlineTimer* other);
 QDeadlineTimer* QDeadlineTimer_New4(int type_);
 QDeadlineTimer* QDeadlineTimer_New5(int param1);
 QDeadlineTimer* QDeadlineTimer_New6(long long msecs);

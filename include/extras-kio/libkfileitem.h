@@ -578,9 +578,15 @@ void k_fileitemlist_delete(void* self);
 
 /// k_fileitem__mostlocalurlresult_new constructs a new KFileItem::MostLocalUrlResult object.
 ///
+KFileItem__MostLocalUrlResult* k_fileitem__mostlocalurlresult_new();
+
+/// [Upstream resources](https://api.kde.org/kfileitem-mostlocalurlresult.html)
+
+/// k_fileitem__mostlocalurlresult_new2 constructs a new KFileItem::MostLocalUrlResult object.
+///
 /// @param param1 KFileItem__MostLocalUrlResult*
 ///
-KFileItem__MostLocalUrlResult* k_fileitem__mostlocalurlresult_new(void* param1);
+KFileItem__MostLocalUrlResult* k_fileitem__mostlocalurlresult_new2(void* param1);
 
 /// [Upstream resources](https://api.kde.org/kfileitem-mostlocalurlresult.html#url-var)
 ///

@@ -20,16 +20,16 @@ void QScopedPropertyUpdateGroup_Delete(QScopedPropertyUpdateGroup* self) {
     delete self;
 }
 
-QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New(const QPropertyBindingSourceLocation* other) {
+QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New() {
+    return new QPropertyBindingSourceLocation();
+}
+
+QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New2(const QPropertyBindingSourceLocation* other) {
     return new QPropertyBindingSourceLocation(*other);
 }
 
-QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New2(QPropertyBindingSourceLocation* other) {
+QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New3(QPropertyBindingSourceLocation* other) {
     return new QPropertyBindingSourceLocation(std::move(*other));
-}
-
-QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New3() {
-    return new QPropertyBindingSourceLocation();
 }
 
 QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New4(const QPropertyBindingSourceLocation* param1) {
@@ -181,16 +181,16 @@ void QPropertyNotifier_Delete(QPropertyNotifier* self) {
     delete self;
 }
 
-QUntypedBindable* QUntypedBindable_New(const QUntypedBindable* other) {
+QUntypedBindable* QUntypedBindable_New() {
+    return new QUntypedBindable();
+}
+
+QUntypedBindable* QUntypedBindable_New2(const QUntypedBindable* other) {
     return new QUntypedBindable(*other);
 }
 
-QUntypedBindable* QUntypedBindable_New2(QUntypedBindable* other) {
+QUntypedBindable* QUntypedBindable_New3(QUntypedBindable* other) {
     return new QUntypedBindable(std::move(*other));
-}
-
-QUntypedBindable* QUntypedBindable_New3() {
-    return new QUntypedBindable();
 }
 
 QUntypedBindable* QUntypedBindable_New4(const QUntypedBindable* param1) {

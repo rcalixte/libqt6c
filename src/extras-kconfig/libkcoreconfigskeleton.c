@@ -2085,12 +2085,12 @@ void k_coreconfigskeleton__itemlonglong_delete(void* self) {
     KCoreConfigSkeleton__ItemLongLong_Delete((KCoreConfigSkeleton__ItemLongLong*)(self));
 }
 
-KCoreConfigSkeleton__ItemEnum__Choice* k_coreconfigskeleton__itemenum__choice_new(void* param1) {
-    return KCoreConfigSkeleton__ItemEnum__Choice_New((KCoreConfigSkeleton__ItemEnum__Choice*)param1);
+KCoreConfigSkeleton__ItemEnum__Choice* k_coreconfigskeleton__itemenum__choice_new() {
+    return KCoreConfigSkeleton__ItemEnum__Choice_New();
 }
 
-KCoreConfigSkeleton__ItemEnum__Choice* k_coreconfigskeleton__itemenum__choice_new2() {
-    return KCoreConfigSkeleton__ItemEnum__Choice_New2();
+KCoreConfigSkeleton__ItemEnum__Choice* k_coreconfigskeleton__itemenum__choice_new2(void* param1) {
+    return KCoreConfigSkeleton__ItemEnum__Choice_New2((KCoreConfigSkeleton__ItemEnum__Choice*)param1);
 }
 
 const char* k_coreconfigskeleton__itemenum__choice_name(void* self) {

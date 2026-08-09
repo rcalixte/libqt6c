@@ -1906,8 +1906,12 @@ void k_onsole__filterobject_delete(void* self) {
     Konsole__FilterObject_Delete((Konsole__FilterObject*)(self));
 }
 
-Konsole__FilterChain* k_onsole__filterchain_new(void* param1) {
-    return Konsole__FilterChain_New((Konsole__FilterChain*)param1);
+Konsole__FilterChain* k_onsole__filterchain_new() {
+    return Konsole__FilterChain_New();
+}
+
+Konsole__FilterChain* k_onsole__filterchain_new2(void* param1) {
+    return Konsole__FilterChain_New2((Konsole__FilterChain*)param1);
 }
 
 void k_onsole__filterchain_add_filter(void* self, void* filter) {

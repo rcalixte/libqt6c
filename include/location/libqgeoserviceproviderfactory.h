@@ -10,6 +10,10 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoserviceproviderfactory.html)
 
+/// q_geoserviceproviderfactory_new constructs a new QGeoServiceProviderFactory object.
+///
+QGeoServiceProviderFactory* q_geoserviceproviderfactory_new();
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoserviceproviderfactory.html#operator-eq)
 ///
 /// @param self QGeoServiceProviderFactory*

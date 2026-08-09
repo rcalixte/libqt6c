@@ -29,9 +29,9 @@ typedef struct QUntypedPropertyBinding QUntypedPropertyBinding;
 QScopedPropertyUpdateGroup* QScopedPropertyUpdateGroup_New();
 void QScopedPropertyUpdateGroup_Delete(QScopedPropertyUpdateGroup* self);
 
-QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New(const QPropertyBindingSourceLocation* other);
-QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New2(QPropertyBindingSourceLocation* other);
-QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New3();
+QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New();
+QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New2(const QPropertyBindingSourceLocation* other);
+QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New3(QPropertyBindingSourceLocation* other);
 QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New4(const QPropertyBindingSourceLocation* param1);
 void QPropertyBindingSourceLocation_CopyAssign(QPropertyBindingSourceLocation* self, QPropertyBindingSourceLocation* other);
 void QPropertyBindingSourceLocation_MoveAssign(QPropertyBindingSourceLocation* self, QPropertyBindingSourceLocation* other);
@@ -73,9 +73,9 @@ void QPropertyObserver_Delete(QPropertyObserver* self);
 QPropertyNotifier* QPropertyNotifier_New();
 void QPropertyNotifier_Delete(QPropertyNotifier* self);
 
-QUntypedBindable* QUntypedBindable_New(const QUntypedBindable* other);
-QUntypedBindable* QUntypedBindable_New2(QUntypedBindable* other);
-QUntypedBindable* QUntypedBindable_New3();
+QUntypedBindable* QUntypedBindable_New();
+QUntypedBindable* QUntypedBindable_New2(const QUntypedBindable* other);
+QUntypedBindable* QUntypedBindable_New3(QUntypedBindable* other);
 QUntypedBindable* QUntypedBindable_New4(const QUntypedBindable* param1);
 void QUntypedBindable_CopyAssign(QUntypedBindable* self, QUntypedBindable* other);
 void QUntypedBindable_MoveAssign(QUntypedBindable* self, QUntypedBindable* other);

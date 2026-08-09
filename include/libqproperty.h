@@ -26,13 +26,11 @@ void q_scopedpropertyupdategroup_delete(void* self);
 
 /// q_propertybindingsourcelocation_new constructs a new QPropertyBindingSourceLocation object.
 ///
-/// @param other QPropertyBindingSourceLocation*
-///
-QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new(void* other);
+QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html)
 
-/// q_propertybindingsourcelocation_new2 constructs a new QPropertyBindingSourceLocation object and invalidates the source QPropertyBindingSourceLocation object.
+/// q_propertybindingsourcelocation_new2 constructs a new QPropertyBindingSourceLocation object.
 ///
 /// @param other QPropertyBindingSourceLocation*
 ///
@@ -40,9 +38,11 @@ QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new2(void* other
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html)
 
-/// q_propertybindingsourcelocation_new3 constructs a new QPropertyBindingSourceLocation object.
+/// q_propertybindingsourcelocation_new3 constructs a new QPropertyBindingSourceLocation object and invalidates the source QPropertyBindingSourceLocation object.
 ///
-QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new3();
+/// @param other QPropertyBindingSourceLocation*
+///
+QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new3(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html)
 
@@ -299,13 +299,11 @@ void q_propertynotifier_delete(void* self);
 
 /// q_untypedbindable_new constructs a new QUntypedBindable object.
 ///
-/// @param other QUntypedBindable*
-///
-QUntypedBindable* q_untypedbindable_new(void* other);
+QUntypedBindable* q_untypedbindable_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html)
 
-/// q_untypedbindable_new2 constructs a new QUntypedBindable object and invalidates the source QUntypedBindable object.
+/// q_untypedbindable_new2 constructs a new QUntypedBindable object.
 ///
 /// @param other QUntypedBindable*
 ///
@@ -313,9 +311,11 @@ QUntypedBindable* q_untypedbindable_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html)
 
-/// q_untypedbindable_new3 constructs a new QUntypedBindable object.
+/// q_untypedbindable_new3 constructs a new QUntypedBindable object and invalidates the source QUntypedBindable object.
 ///
-QUntypedBindable* q_untypedbindable_new3();
+/// @param other QUntypedBindable*
+///
+QUntypedBindable* q_untypedbindable_new3(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html)
 

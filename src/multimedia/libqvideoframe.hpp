@@ -76,8 +76,9 @@ void QVideoFrame_Paint(QVideoFrame* self, QPainter* painter, const QRectF* rect,
 QAbstractVideoBuffer* QVideoFrame_VideoBuffer(const QVideoFrame* self);
 void QVideoFrame_Delete(QVideoFrame* self);
 
-QVideoFrame__PaintOptions* QVideoFrame__PaintOptions_New(const QVideoFrame__PaintOptions* other);
-QVideoFrame__PaintOptions* QVideoFrame__PaintOptions_New2(QVideoFrame__PaintOptions* other);
+QVideoFrame__PaintOptions* QVideoFrame__PaintOptions_New();
+QVideoFrame__PaintOptions* QVideoFrame__PaintOptions_New2(const QVideoFrame__PaintOptions* other);
+QVideoFrame__PaintOptions* QVideoFrame__PaintOptions_New3(QVideoFrame__PaintOptions* other);
 void QVideoFrame__PaintOptions_CopyAssign(QVideoFrame__PaintOptions* self, QVideoFrame__PaintOptions* other);
 void QVideoFrame__PaintOptions_MoveAssign(QVideoFrame__PaintOptions* self, QVideoFrame__PaintOptions* other);
 QColor* QVideoFrame__PaintOptions_BackgroundColor(const QVideoFrame__PaintOptions* self);

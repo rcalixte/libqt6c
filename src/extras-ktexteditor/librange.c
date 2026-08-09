@@ -3,16 +3,16 @@
 #include "librange.hpp"
 #include "librange.h"
 
-KTextEditor__Range* k_texteditor__range_new(void* other) {
-    return KTextEditor__Range_New((KTextEditor__Range*)other);
+KTextEditor__Range* k_texteditor__range_new() {
+    return KTextEditor__Range_New();
 }
 
 KTextEditor__Range* k_texteditor__range_new2(void* other) {
     return KTextEditor__Range_New2((KTextEditor__Range*)other);
 }
 
-KTextEditor__Range* k_texteditor__range_new3() {
-    return KTextEditor__Range_New3();
+KTextEditor__Range* k_texteditor__range_new3(void* other) {
+    return KTextEditor__Range_New3((KTextEditor__Range*)other);
 }
 
 KTextEditor__Range* k_texteditor__range_new4(void* start, void* end) {

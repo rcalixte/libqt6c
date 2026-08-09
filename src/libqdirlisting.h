@@ -123,13 +123,11 @@ void q_dirlisting_delete(void* self);
 
 /// q_dirlisting__direntry_new constructs a new QDirListing::DirEntry object.
 ///
-/// @param other QDirListing__DirEntry*
-///
-QDirListing__DirEntry* q_dirlisting__direntry_new(void* other);
+QDirListing__DirEntry* q_dirlisting__direntry_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html)
 
-/// q_dirlisting__direntry_new2 constructs a new QDirListing::DirEntry object and invalidates the source QDirListing::DirEntry object.
+/// q_dirlisting__direntry_new2 constructs a new QDirListing::DirEntry object.
 ///
 /// @param other QDirListing__DirEntry*
 ///
@@ -137,17 +135,19 @@ QDirListing__DirEntry* q_dirlisting__direntry_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html)
 
-/// q_dirlisting__direntry_new3 constructs a new QDirListing::DirEntry object.
+/// q_dirlisting__direntry_new3 constructs a new QDirListing::DirEntry object and invalidates the source QDirListing::DirEntry object.
 ///
-/// @param param1 QDirListing__DirEntry*
+/// @param other QDirListing__DirEntry*
 ///
-QDirListing__DirEntry* q_dirlisting__direntry_new3(void* param1);
+QDirListing__DirEntry* q_dirlisting__direntry_new3(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html)
 
 /// q_dirlisting__direntry_new4 constructs a new QDirListing::DirEntry object.
 ///
-QDirListing__DirEntry* q_dirlisting__direntry_new4();
+/// @param param1 QDirListing__DirEntry*
+///
+QDirListing__DirEntry* q_dirlisting__direntry_new4(void* param1);
 
 /// q_dirlisting__direntry_copy_assign shallow copies `other` into `self`.
 ///
@@ -406,11 +406,11 @@ void q_dirlisting__sentinel_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-const-iterator.html)
 
-/// q_dirlisting__const_iterator_new2 constructs a new QDirListing::const_iterator object and invalidates the source QDirListing::const_iterator object.
+/// q_dirlisting__const_iterator_new3 constructs a new QDirListing::const_iterator object and invalidates the source QDirListing::const_iterator object.
 ///
 /// @param other QDirListing__const_iterator*
 ///
-QDirListing__const_iterator* q_dirlisting__const_iterator_new2(void* other);
+QDirListing__const_iterator* q_dirlisting__const_iterator_new3(void* other);
 
 /// q_dirlisting__const_iterator_move_assign moves `other` into `self` and invalidates `other`.
 ///

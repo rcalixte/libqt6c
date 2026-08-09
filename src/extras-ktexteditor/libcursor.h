@@ -12,13 +12,11 @@
 
 /// k_texteditor__cursor_new constructs a new KTextEditor::Cursor object.
 ///
-/// @param other KTextEditor__Cursor*
-///
-KTextEditor__Cursor* k_texteditor__cursor_new(void* other);
+KTextEditor__Cursor* k_texteditor__cursor_new();
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html)
 
-/// k_texteditor__cursor_new2 constructs a new KTextEditor::Cursor object and invalidates the source KTextEditor::Cursor object.
+/// k_texteditor__cursor_new2 constructs a new KTextEditor::Cursor object.
 ///
 /// @param other KTextEditor__Cursor*
 ///
@@ -26,9 +24,11 @@ KTextEditor__Cursor* k_texteditor__cursor_new2(void* other);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html)
 
-/// k_texteditor__cursor_new3 constructs a new KTextEditor::Cursor object.
+/// k_texteditor__cursor_new3 constructs a new KTextEditor::Cursor object and invalidates the source KTextEditor::Cursor object.
 ///
-KTextEditor__Cursor* k_texteditor__cursor_new3();
+/// @param other KTextEditor__Cursor*
+///
+KTextEditor__Cursor* k_texteditor__cursor_new3(void* other);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html)
 

@@ -394,8 +394,12 @@ void k_fileitemlist_delete(void* self) {
     KFileItemList_Delete((KFileItemList*)(self));
 }
 
-KFileItem__MostLocalUrlResult* k_fileitem__mostlocalurlresult_new(void* param1) {
-    return KFileItem__MostLocalUrlResult_New((KFileItem__MostLocalUrlResult*)param1);
+KFileItem__MostLocalUrlResult* k_fileitem__mostlocalurlresult_new() {
+    return KFileItem__MostLocalUrlResult_New();
+}
+
+KFileItem__MostLocalUrlResult* k_fileitem__mostlocalurlresult_new2(void* param1) {
+    return KFileItem__MostLocalUrlResult_New2((KFileItem__MostLocalUrlResult*)param1);
 }
 
 QUrl* k_fileitem__mostlocalurlresult_url(void* self) {

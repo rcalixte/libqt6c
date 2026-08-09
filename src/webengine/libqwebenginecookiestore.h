@@ -627,9 +627,15 @@ void q_webenginecookiestore_delete(void* self);
 
 /// q_webenginecookiestore__filterrequest_new constructs a new QWebEngineCookieStore::FilterRequest object.
 ///
+QWebEngineCookieStore__FilterRequest* q_webenginecookiestore__filterrequest_new();
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html)
+
+/// q_webenginecookiestore__filterrequest_new2 constructs a new QWebEngineCookieStore::FilterRequest object.
+///
 /// @param param1 QWebEngineCookieStore__FilterRequest*
 ///
-QWebEngineCookieStore__FilterRequest* q_webenginecookiestore__filterrequest_new(void* param1);
+QWebEngineCookieStore__FilterRequest* q_webenginecookiestore__filterrequest_new2(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#firstPartyUrl-var)
 ///

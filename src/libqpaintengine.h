@@ -914,17 +914,23 @@ void q_paintengine_delete(void* self);
 
 /// q_paintenginestate_new constructs a new QPaintEngineState object.
 ///
-/// @param other QPaintEngineState*
-///
-QPaintEngineState* q_paintenginestate_new(void* other);
+QPaintEngineState* q_paintenginestate_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintenginestate.html)
 
-/// q_paintenginestate_new2 constructs a new QPaintEngineState object and invalidates the source QPaintEngineState object.
+/// q_paintenginestate_new2 constructs a new QPaintEngineState object.
 ///
 /// @param other QPaintEngineState*
 ///
 QPaintEngineState* q_paintenginestate_new2(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpaintenginestate.html)
+
+/// q_paintenginestate_new3 constructs a new QPaintEngineState object and invalidates the source QPaintEngineState object.
+///
+/// @param other QPaintEngineState*
+///
+QPaintEngineState* q_paintenginestate_new3(void* other);
 
 /// q_paintenginestate_copy_assign shallow copies `other` into `self`.
 ///

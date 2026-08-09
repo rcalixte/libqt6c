@@ -698,13 +698,11 @@ void q_font_delete(void* self);
 
 /// q_font__tag_new constructs a new QFont::Tag object.
 ///
-/// @param other QFont__Tag*
-///
-QFont__Tag* q_font__tag_new(void* other);
+QFont__Tag* q_font__tag_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfont-tag.html)
 
-/// q_font__tag_new2 constructs a new QFont::Tag object and invalidates the source QFont::Tag object.
+/// q_font__tag_new2 constructs a new QFont::Tag object.
 ///
 /// @param other QFont__Tag*
 ///
@@ -712,9 +710,11 @@ QFont__Tag* q_font__tag_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfont-tag.html)
 
-/// q_font__tag_new3 constructs a new QFont::Tag object.
+/// q_font__tag_new3 constructs a new QFont::Tag object and invalidates the source QFont::Tag object.
 ///
-QFont__Tag* q_font__tag_new3();
+/// @param other QFont__Tag*
+///
+QFont__Tag* q_font__tag_new3(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfont-tag.html)
 

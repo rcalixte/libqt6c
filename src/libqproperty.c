@@ -10,16 +10,16 @@ void q_scopedpropertyupdategroup_delete(void* self) {
     QScopedPropertyUpdateGroup_Delete((QScopedPropertyUpdateGroup*)(self));
 }
 
-QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new(void* other) {
-    return QPropertyBindingSourceLocation_New((QPropertyBindingSourceLocation*)other);
+QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new() {
+    return QPropertyBindingSourceLocation_New();
 }
 
 QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new2(void* other) {
     return QPropertyBindingSourceLocation_New2((QPropertyBindingSourceLocation*)other);
 }
 
-QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new3() {
-    return QPropertyBindingSourceLocation_New3();
+QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new3(void* other) {
+    return QPropertyBindingSourceLocation_New3((QPropertyBindingSourceLocation*)other);
 }
 
 QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new4(void* param1) {
@@ -165,16 +165,16 @@ void q_propertynotifier_delete(void* self) {
     QPropertyNotifier_Delete((QPropertyNotifier*)(self));
 }
 
-QUntypedBindable* q_untypedbindable_new(void* other) {
-    return QUntypedBindable_New((QUntypedBindable*)other);
+QUntypedBindable* q_untypedbindable_new() {
+    return QUntypedBindable_New();
 }
 
 QUntypedBindable* q_untypedbindable_new2(void* other) {
     return QUntypedBindable_New2((QUntypedBindable*)other);
 }
 
-QUntypedBindable* q_untypedbindable_new3() {
-    return QUntypedBindable_New3();
+QUntypedBindable* q_untypedbindable_new3(void* other) {
+    return QUntypedBindable_New3((QUntypedBindable*)other);
 }
 
 QUntypedBindable* q_untypedbindable_new4(void* param1) {

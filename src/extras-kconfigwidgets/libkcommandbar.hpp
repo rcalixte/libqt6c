@@ -248,8 +248,8 @@ void KCommandBar_OnGetDecodedMetricF(const KCommandBar* self, intptr_t slot);
 double KCommandBar_SuperGetDecodedMetricF(const KCommandBar* self, int metricA, int metricB);
 void KCommandBar_Delete(KCommandBar* self);
 
-KCommandBar__ActionGroup* KCommandBar__ActionGroup_New(const KCommandBar__ActionGroup* param1);
-KCommandBar__ActionGroup* KCommandBar__ActionGroup_New2();
+KCommandBar__ActionGroup* KCommandBar__ActionGroup_New();
+KCommandBar__ActionGroup* KCommandBar__ActionGroup_New2(const KCommandBar__ActionGroup* param1);
 libqt_string KCommandBar__ActionGroup_Name(const KCommandBar__ActionGroup* self);
 void KCommandBar__ActionGroup_SetName(KCommandBar__ActionGroup* self, libqt_string name);
 libqt_list /* of QAction* */ KCommandBar__ActionGroup_Actions(const KCommandBar__ActionGroup* self);

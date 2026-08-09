@@ -1597,16 +1597,16 @@ void q_itemselectionmodel_delete(void* self);
 
 /// q_itemselection_new constructs a new QItemSelection object.
 ///
-/// @param topLeft QModelIndex*
-/// @param bottomRight QModelIndex*
-///
-QItemSelection* q_itemselection_new(void* topLeft, void* bottomRight);
+QItemSelection* q_itemselection_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselection.html)
 
 /// q_itemselection_new2 constructs a new QItemSelection object.
 ///
-QItemSelection* q_itemselection_new2();
+/// @param topLeft QModelIndex*
+/// @param bottomRight QModelIndex*
+///
+QItemSelection* q_itemselection_new2(void* topLeft, void* bottomRight);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselection.html)
 

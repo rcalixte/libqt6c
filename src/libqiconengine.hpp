@@ -72,7 +72,8 @@ void QIconEngine_OnVirtualHook(QIconEngine* self, intptr_t slot);
 void QIconEngine_SuperVirtualHook(QIconEngine* self, int id, void* data);
 void QIconEngine_Delete(QIconEngine* self);
 
-QIconEngine__ScaledPixmapArgument* QIconEngine__ScaledPixmapArgument_New(const QIconEngine__ScaledPixmapArgument* param1);
+QIconEngine__ScaledPixmapArgument* QIconEngine__ScaledPixmapArgument_New();
+QIconEngine__ScaledPixmapArgument* QIconEngine__ScaledPixmapArgument_New2(const QIconEngine__ScaledPixmapArgument* param1);
 QSize* QIconEngine__ScaledPixmapArgument_Size(const QIconEngine__ScaledPixmapArgument* self);
 void QIconEngine__ScaledPixmapArgument_SetSize(QIconEngine__ScaledPixmapArgument* self, QSize* size);
 int QIconEngine__ScaledPixmapArgument_Mode(const QIconEngine__ScaledPixmapArgument* self);

@@ -12,13 +12,11 @@
 
 /// q_metatype_new constructs a new QMetaType object.
 ///
-/// @param other QMetaType*
-///
-QMetaType* q_metatype_new(void* other);
+QMetaType* q_metatype_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html)
 
-/// q_metatype_new2 constructs a new QMetaType object and invalidates the source QMetaType object.
+/// q_metatype_new2 constructs a new QMetaType object.
 ///
 /// @param other QMetaType*
 ///
@@ -26,17 +24,19 @@ QMetaType* q_metatype_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html)
 
-/// q_metatype_new3 constructs a new QMetaType object.
+/// q_metatype_new3 constructs a new QMetaType object and invalidates the source QMetaType object.
 ///
-/// @param type int
+/// @param other QMetaType*
 ///
-QMetaType* q_metatype_new3(int type);
+QMetaType* q_metatype_new3(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html)
 
 /// q_metatype_new4 constructs a new QMetaType object.
 ///
-QMetaType* q_metatype_new4();
+/// @param type int
+///
+QMetaType* q_metatype_new4(int type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html)
 

@@ -233,12 +233,12 @@ void q_cborarray_delete(void* self) {
     QCborArray_Delete((QCborArray*)(self));
 }
 
-QCborArray__Iterator* q_cborarray__iterator_new(void* other) {
-    return QCborArray__Iterator_New((QCborArray__Iterator*)other);
+QCborArray__Iterator* q_cborarray__iterator_new() {
+    return QCborArray__Iterator_New();
 }
 
-QCborArray__Iterator* q_cborarray__iterator_new2() {
-    return QCborArray__Iterator_New2();
+QCborArray__Iterator* q_cborarray__iterator_new2(void* other) {
+    return QCborArray__Iterator_New2((QCborArray__Iterator*)other);
 }
 
 QCborArray__Iterator* q_cborarray__iterator_new3(void* param1) {
@@ -305,12 +305,12 @@ void q_cborarray__iterator_delete(void* self) {
     QCborArray__Iterator_Delete((QCborArray__Iterator*)(self));
 }
 
-QCborArray__ConstIterator* q_cborarray__constiterator_new(void* other) {
-    return QCborArray__ConstIterator_New((QCborArray__ConstIterator*)other);
+QCborArray__ConstIterator* q_cborarray__constiterator_new() {
+    return QCborArray__ConstIterator_New();
 }
 
-QCborArray__ConstIterator* q_cborarray__constiterator_new2() {
-    return QCborArray__ConstIterator_New2();
+QCborArray__ConstIterator* q_cborarray__constiterator_new2(void* other) {
+    return QCborArray__ConstIterator_New2((QCborArray__ConstIterator*)other);
 }
 
 QCborArray__ConstIterator* q_cborarray__constiterator_new3(void* param1) {

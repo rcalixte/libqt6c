@@ -1,16 +1,16 @@
 #include "libqtyperevision.hpp"
 #include "libqtyperevision.h"
 
-QTypeRevision* q_typerevision_new(void* other) {
-    return QTypeRevision_New((QTypeRevision*)other);
+QTypeRevision* q_typerevision_new() {
+    return QTypeRevision_New();
 }
 
 QTypeRevision* q_typerevision_new2(void* other) {
     return QTypeRevision_New2((QTypeRevision*)other);
 }
 
-QTypeRevision* q_typerevision_new3() {
-    return QTypeRevision_New3();
+QTypeRevision* q_typerevision_new3(void* other) {
+    return QTypeRevision_New3((QTypeRevision*)other);
 }
 
 QTypeRevision* q_typerevision_new4(void* param1) {

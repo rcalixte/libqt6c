@@ -5382,15 +5382,15 @@ void k_commandbar_delete(void* self);
 
 /// k_commandbar__actiongroup_new constructs a new KCommandBar::ActionGroup object.
 ///
-/// @param param1 KCommandBar__ActionGroup*
-///
-KCommandBar__ActionGroup* k_commandbar__actiongroup_new(void* param1);
+KCommandBar__ActionGroup* k_commandbar__actiongroup_new();
 
 /// [Upstream resources](https://api.kde.org/kcommandbar-actiongroup.html)
 
 /// k_commandbar__actiongroup_new2 constructs a new KCommandBar::ActionGroup object.
 ///
-KCommandBar__ActionGroup* k_commandbar__actiongroup_new2();
+/// @param param1 KCommandBar__ActionGroup*
+///
+KCommandBar__ActionGroup* k_commandbar__actiongroup_new2(void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcommandbar-actiongroup.html#name-var)
 ///

@@ -211,15 +211,15 @@ char* q_bytearray_from_percent_encoding2(char* pctEncoded, char percent);
 
 /// q_bytearray__frombase64result_new constructs a new QByteArray::FromBase64Result object.
 ///
-/// @param param1 QByteArray__FromBase64Result*
-///
-QByteArray__FromBase64Result* q_bytearray__frombase64result_new(void* param1);
+QByteArray__FromBase64Result* q_bytearray__frombase64result_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray-frombase64result.html)
 
 /// q_bytearray__frombase64result_new2 constructs a new QByteArray::FromBase64Result object.
 ///
-QByteArray__FromBase64Result* q_bytearray__frombase64result_new2();
+/// @param param1 QByteArray__FromBase64Result*
+///
+QByteArray__FromBase64Result* q_bytearray__frombase64result_new2(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray-frombase64result.html#decoded-var)
 ///

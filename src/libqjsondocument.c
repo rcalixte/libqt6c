@@ -5,12 +5,16 @@
 #include "libqjsondocument.hpp"
 #include "libqjsondocument.h"
 
-QJsonParseError* q_jsonparseerror_new(void* other) {
-    return QJsonParseError_New((QJsonParseError*)other);
+QJsonParseError* q_jsonparseerror_new() {
+    return QJsonParseError_New();
 }
 
 QJsonParseError* q_jsonparseerror_new2(void* other) {
     return QJsonParseError_New2((QJsonParseError*)other);
+}
+
+QJsonParseError* q_jsonparseerror_new3(void* other) {
+    return QJsonParseError_New3((QJsonParseError*)other);
 }
 
 void q_jsonparseerror_copy_assign(void* self, void* other) {

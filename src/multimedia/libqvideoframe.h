@@ -332,17 +332,23 @@ void q_videoframe_delete(void* self);
 
 /// q_videoframe__paintoptions_new constructs a new QVideoFrame::PaintOptions object.
 ///
-/// @param other QVideoFrame__PaintOptions*
-///
-QVideoFrame__PaintOptions* q_videoframe__paintoptions_new(void* other);
+QVideoFrame__PaintOptions* q_videoframe__paintoptions_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe-paintoptions.html)
 
-/// q_videoframe__paintoptions_new2 constructs a new QVideoFrame::PaintOptions object and invalidates the source QVideoFrame::PaintOptions object.
+/// q_videoframe__paintoptions_new2 constructs a new QVideoFrame::PaintOptions object.
 ///
 /// @param other QVideoFrame__PaintOptions*
 ///
 QVideoFrame__PaintOptions* q_videoframe__paintoptions_new2(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe-paintoptions.html)
+
+/// q_videoframe__paintoptions_new3 constructs a new QVideoFrame::PaintOptions object and invalidates the source QVideoFrame::PaintOptions object.
+///
+/// @param other QVideoFrame__PaintOptions*
+///
+QVideoFrame__PaintOptions* q_videoframe__paintoptions_new3(void* other);
 
 /// q_videoframe__paintoptions_copy_assign shallow copies `other` into `self`.
 ///

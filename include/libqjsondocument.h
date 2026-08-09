@@ -12,17 +12,23 @@
 
 /// q_jsonparseerror_new constructs a new QJsonParseError object.
 ///
-/// @param other QJsonParseError*
-///
-QJsonParseError* q_jsonparseerror_new(void* other);
+QJsonParseError* q_jsonparseerror_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonparseerror.html)
 
-/// q_jsonparseerror_new2 constructs a new QJsonParseError object and invalidates the source QJsonParseError object.
+/// q_jsonparseerror_new2 constructs a new QJsonParseError object.
 ///
 /// @param other QJsonParseError*
 ///
 QJsonParseError* q_jsonparseerror_new2(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonparseerror.html)
+
+/// q_jsonparseerror_new3 constructs a new QJsonParseError object and invalidates the source QJsonParseError object.
+///
+/// @param other QJsonParseError*
+///
+QJsonParseError* q_jsonparseerror_new3(void* other);
 
 /// q_jsonparseerror_copy_assign shallow copies `other` into `self`.
 ///
