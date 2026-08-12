@@ -1,5 +1,5 @@
 /*
- * This file incorporates code from the [go-xxd] project (https://github.com/felixge/go-xxd)
+ * This file incorporates code from the [go-xxd](https://github.com/felixge/go-xxd) project
  * Copyright (c) 2016 Felix Geisendörfer (felix@debuggable.com) and contributors
  * Licensed under the MIT License. See original LICENSE for details.
  */
@@ -20,7 +20,6 @@ const (
 
 // variables used in xxd()
 var (
-	space        = []byte(" ")
 	quadSpace    = []byte("    ")
 	newLine      = []byte("\n")
 	unsignedChar = []byte("unsigned char ")
