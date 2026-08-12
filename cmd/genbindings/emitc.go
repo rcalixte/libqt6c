@@ -2276,10 +2276,6 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 
 				superDocComment := "\n/// Base class method implementation\n///"
 				baseMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:]) + "_super"
-				qbasebaseMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:]) + "_qbase"
-
-				ret.WriteString(maybeMacro + "\n/// @warning DEPRECATED: Use `" + baseMethodName + safeMethodName + "` instead\n///\n" +
-					"#define " + qbasebaseMethodName + safeMethodName + " " + baseMethodName + safeMethodName + "\n" + maybeEndMacro + "\n\n")
 
 				ret.WriteString(maybeMacro + inheritedFrom + docCommentUrl + superDocComment +
 					selfParam + cfs.emitCommentParametersC(m.Parameters, false) + maybeNewLine + "\n" + returnComment + maybeFinalNewLine +
@@ -2378,9 +2374,6 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 			}
 
 			headerComment = "\n/// Wrapper to allow calling base class virtual or protected method\n ///\n"
-
-			ret.WriteString("\n/// @warning DEPRECATED: Use `" + cmdMethodName + "_super" + safeMethodName + "` instead\n///\n" +
-				"#define " + cmdMethodName + "_qbase" + safeMethodName + " " + cmdMethodName + "_super" + safeMethodName + "\n")
 
 			ret.WriteString(inheritedFrom + documentationURL + allocComment + headerComment + "/// @param self " + cStructName + "* " + maybeNewLine +
 				cfs.emitCommentParametersC(m.Parameters, false) + "\n" + returnComment + maybeFinalNewLine +
