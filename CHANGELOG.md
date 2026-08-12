@@ -1,4 +1,8 @@
 
+### 6.8.2 rev83 (12 August 2026)
+
+* **BREAKING CHANGE:** Remove deprecated functions (#150)
+
 ### 6.8.2 rev82 (9 August 2026)
 
 * **BREAKING CHANGE:** Detect and project default constructors (#149)
