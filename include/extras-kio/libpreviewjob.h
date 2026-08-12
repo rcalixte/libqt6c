@@ -42,10 +42,6 @@ const QMetaObject* k_io__previewjob_meta_object(void* self);
 ///
 void k_io__previewjob_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_io__previewjob_super_meta_object` instead
-///
-#define k_io__previewjob_qbase_meta_object k_io__previewjob_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -65,10 +61,6 @@ void* k_io__previewjob_metacast(void* self, const char* param1);
 /// @param callback void* func(KIO__PreviewJob* self, const char* param1)
 ///
 void k_io__previewjob_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_io__previewjob_super_metacast` instead
-///
-#define k_io__previewjob_qbase_metacast k_io__previewjob_super_metacast
 
 /// Base class method implementation
 ///
@@ -90,10 +82,6 @@ int32_t k_io__previewjob_metacall(void* self, int32_t param1, int param2, void* 
 /// @param callback int32_t func(KIO__PreviewJob* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_io__previewjob_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_io__previewjob_super_metacall` instead
-///
-#define k_io__previewjob_qbase_metacall k_io__previewjob_super_metacall
 
 /// Base class method implementation
 ///
@@ -240,10 +228,6 @@ void k_io__previewjob_slot_result(void* self, void* job);
 /// @param callback void func(KIO__PreviewJob* self, KJob* job)
 ///
 void k_io__previewjob_on_slot_result(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_io__previewjob_super_slot_result` instead
-///
-#define k_io__previewjob_qbase_slot_result k_io__previewjob_super_slot_result
 
 /// [Upstream resources](https://api.kde.org/kio-previewjob.html#slotResult)
 ///
@@ -1165,10 +1149,6 @@ void k_io__previewjob_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 void k_io__previewjob_start(void* self);
 
-/// @warning DEPRECATED: Use `k_io__previewjob_super_start` instead
-///
-#define k_io__previewjob_qbase_start k_io__previewjob_super_start
-
 /// Inherited from KIO::Job
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#start)
@@ -1199,10 +1179,6 @@ void k_io__previewjob_on_start(void* self, void (*callback)());
 /// @param self KIO__PreviewJob*
 ///
 bool k_io__previewjob_do_kill(void* self);
-
-/// @warning DEPRECATED: Use `k_io__previewjob_super_do_kill` instead
-///
-#define k_io__previewjob_qbase_do_kill k_io__previewjob_super_do_kill
 
 /// Inherited from KIO::Job
 ///
@@ -1235,10 +1211,6 @@ void k_io__previewjob_on_do_kill(void* self, bool (*callback)());
 ///
 bool k_io__previewjob_do_suspend(void* self);
 
-/// @warning DEPRECATED: Use `k_io__previewjob_super_do_suspend` instead
-///
-#define k_io__previewjob_qbase_do_suspend k_io__previewjob_super_do_suspend
-
 /// Inherited from KIO::Job
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#doSuspend)
@@ -1269,10 +1241,6 @@ void k_io__previewjob_on_do_suspend(void* self, bool (*callback)());
 /// @param self KIO__PreviewJob*
 ///
 bool k_io__previewjob_do_resume(void* self);
-
-/// @warning DEPRECATED: Use `k_io__previewjob_super_do_resume` instead
-///
-#define k_io__previewjob_qbase_do_resume k_io__previewjob_super_do_resume
 
 /// Inherited from KIO::Job
 ///
@@ -1306,10 +1274,6 @@ void k_io__previewjob_on_do_resume(void* self, bool (*callback)());
 /// @param self KIO__PreviewJob*
 ///
 const char* k_io__previewjob_error_string(void* self);
-
-/// @warning DEPRECATED: Use `k_io__previewjob_super_error_string` instead
-///
-#define k_io__previewjob_qbase_error_string k_io__previewjob_super_error_string
 
 /// Inherited from KIO::Job
 ///
@@ -1345,10 +1309,6 @@ void k_io__previewjob_on_error_string(void* self, const char* (*callback)());
 ///
 bool k_io__previewjob_add_subjob(void* self, void* job);
 
-/// @warning DEPRECATED: Use `k_io__previewjob_super_add_subjob` instead
-///
-#define k_io__previewjob_qbase_add_subjob k_io__previewjob_super_add_subjob
-
 /// Inherited from KIO::Job
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#addSubjob)
@@ -1381,10 +1341,6 @@ void k_io__previewjob_on_add_subjob(void* self, bool (*callback)(void*, void*));
 /// @param job KJob*
 ///
 bool k_io__previewjob_remove_subjob(void* self, void* job);
-
-/// @warning DEPRECATED: Use `k_io__previewjob_super_remove_subjob` instead
-///
-#define k_io__previewjob_qbase_remove_subjob k_io__previewjob_super_remove_subjob
 
 /// Inherited from KIO::Job
 ///
@@ -1420,10 +1376,6 @@ void k_io__previewjob_on_remove_subjob(void* self, bool (*callback)(void*, void*
 ///
 void k_io__previewjob_slot_info_message(void* self, void* job, const char* message);
 
-/// @warning DEPRECATED: Use `k_io__previewjob_super_slot_info_message` instead
-///
-#define k_io__previewjob_qbase_slot_info_message k_io__previewjob_super_slot_info_message
-
 /// Inherited from KCompositeJob
 ///
 /// [Upstream resources](https://api.kde.org/kcompositejob.html#slotInfoMessage)
@@ -1457,10 +1409,6 @@ void k_io__previewjob_on_slot_info_message(void* self, void (*callback)(void*, v
 /// @param event QEvent*
 ///
 bool k_io__previewjob_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_io__previewjob_super_event` instead
-///
-#define k_io__previewjob_qbase_event k_io__previewjob_super_event
 
 /// Inherited from QObject
 ///
@@ -1496,10 +1444,6 @@ void k_io__previewjob_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_io__previewjob_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `k_io__previewjob_super_event_filter` instead
-///
-#define k_io__previewjob_qbase_event_filter k_io__previewjob_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1534,10 +1478,6 @@ void k_io__previewjob_on_event_filter(void* self, bool (*callback)(void*, void*,
 ///
 void k_io__previewjob_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_io__previewjob_super_timer_event` instead
-///
-#define k_io__previewjob_qbase_timer_event k_io__previewjob_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1570,10 +1510,6 @@ void k_io__previewjob_on_timer_event(void* self, void (*callback)(void*, void*))
 /// @param event QChildEvent*
 ///
 void k_io__previewjob_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_io__previewjob_super_child_event` instead
-///
-#define k_io__previewjob_qbase_child_event k_io__previewjob_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1608,10 +1544,6 @@ void k_io__previewjob_on_child_event(void* self, void (*callback)(void*, void*))
 ///
 void k_io__previewjob_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_io__previewjob_super_custom_event` instead
-///
-#define k_io__previewjob_qbase_custom_event k_io__previewjob_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1644,10 +1576,6 @@ void k_io__previewjob_on_custom_event(void* self, void (*callback)(void*, void*)
 /// @param signal QMetaMethod*
 ///
 void k_io__previewjob_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_io__previewjob_super_connect_notify` instead
-///
-#define k_io__previewjob_qbase_connect_notify k_io__previewjob_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1682,10 +1610,6 @@ void k_io__previewjob_on_connect_notify(void* self, void (*callback)(void*, void
 ///
 void k_io__previewjob_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_io__previewjob_super_disconnect_notify` instead
-///
-#define k_io__previewjob_qbase_disconnect_notify k_io__previewjob_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1717,10 +1641,6 @@ void k_io__previewjob_on_disconnect_notify(void* self, void (*callback)(void*, v
 /// @param self KIO__PreviewJob*
 ///
 bool k_io__previewjob_has_subjobs(void* self);
-
-/// @warning DEPRECATED: Use `k_io__previewjob_super_has_subjobs` instead
-///
-#define k_io__previewjob_qbase_has_subjobs k_io__previewjob_super_has_subjobs
 
 /// Inherited from KCompositeJob
 ///
@@ -1755,10 +1675,6 @@ void k_io__previewjob_on_has_subjobs(void* self, bool (*callback)());
 ///
 libqt_list k_io__previewjob_subjobs(void* self);
 
-/// @warning DEPRECATED: Use `k_io__previewjob_super_subjobs` instead
-///
-#define k_io__previewjob_qbase_subjobs k_io__previewjob_super_subjobs
-
 /// Inherited from KCompositeJob
 ///
 /// [Upstream resources](https://api.kde.org/kcompositejob.html#subjobs)
@@ -1792,10 +1708,6 @@ void k_io__previewjob_on_subjobs(void* self, libqt_list (*callback)());
 ///
 void k_io__previewjob_clear_subjobs(void* self);
 
-/// @warning DEPRECATED: Use `k_io__previewjob_super_clear_subjobs` instead
-///
-#define k_io__previewjob_qbase_clear_subjobs k_io__previewjob_super_clear_subjobs
-
 /// Inherited from KCompositeJob
 ///
 /// [Upstream resources](https://api.kde.org/kcompositejob.html#clearSubjobs)
@@ -1827,10 +1739,6 @@ void k_io__previewjob_on_clear_subjobs(void* self, void (*callback)());
 /// @param capabilities flag of enum KJob__Capability
 ///
 void k_io__previewjob_set_capabilities(void* self, int32_t capabilities);
-
-/// @warning DEPRECATED: Use `k_io__previewjob_super_set_capabilities` instead
-///
-#define k_io__previewjob_qbase_set_capabilities k_io__previewjob_super_set_capabilities
 
 /// Inherited from KJob
 ///
@@ -1864,10 +1772,6 @@ void k_io__previewjob_on_set_capabilities(void* self, void (*callback)(void*, in
 ///
 bool k_io__previewjob_is_finished(void* self);
 
-/// @warning DEPRECATED: Use `k_io__previewjob_super_is_finished` instead
-///
-#define k_io__previewjob_qbase_is_finished k_io__previewjob_super_is_finished
-
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isFinished)
@@ -1899,10 +1803,6 @@ void k_io__previewjob_on_is_finished(void* self, bool (*callback)());
 /// @param errorCode int
 ///
 void k_io__previewjob_set_error(void* self, int errorCode);
-
-/// @warning DEPRECATED: Use `k_io__previewjob_super_set_error` instead
-///
-#define k_io__previewjob_qbase_set_error k_io__previewjob_super_set_error
 
 /// Inherited from KJob
 ///
@@ -1937,10 +1837,6 @@ void k_io__previewjob_on_set_error(void* self, void (*callback)(void*, int));
 ///
 void k_io__previewjob_set_error_text(void* self, const char* errorText);
 
-/// @warning DEPRECATED: Use `k_io__previewjob_super_set_error_text` instead
-///
-#define k_io__previewjob_qbase_set_error_text k_io__previewjob_super_set_error_text
-
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setErrorText)
@@ -1974,10 +1870,6 @@ void k_io__previewjob_on_set_error_text(void* self, void (*callback)(void*, cons
 /// @param amount uintptr_t
 ///
 void k_io__previewjob_set_processed_amount(void* self, int32_t unit, uintptr_t amount);
-
-/// @warning DEPRECATED: Use `k_io__previewjob_super_set_processed_amount` instead
-///
-#define k_io__previewjob_qbase_set_processed_amount k_io__previewjob_super_set_processed_amount
 
 /// Inherited from KJob
 ///
@@ -2014,10 +1906,6 @@ void k_io__previewjob_on_set_processed_amount(void* self, void (*callback)(void*
 ///
 void k_io__previewjob_set_total_amount(void* self, int32_t unit, uintptr_t amount);
 
-/// @warning DEPRECATED: Use `k_io__previewjob_super_set_total_amount` instead
-///
-#define k_io__previewjob_qbase_set_total_amount k_io__previewjob_super_set_total_amount
-
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setTotalAmount)
@@ -2052,10 +1940,6 @@ void k_io__previewjob_on_set_total_amount(void* self, void (*callback)(void*, in
 ///
 void k_io__previewjob_set_progress_unit(void* self, int32_t unit);
 
-/// @warning DEPRECATED: Use `k_io__previewjob_super_set_progress_unit` instead
-///
-#define k_io__previewjob_qbase_set_progress_unit k_io__previewjob_super_set_progress_unit
-
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setProgressUnit)
@@ -2089,10 +1973,6 @@ void k_io__previewjob_on_set_progress_unit(void* self, void (*callback)(void*, i
 ///
 void k_io__previewjob_set_percent(void* self, uintptr_t percentage);
 
-/// @warning DEPRECATED: Use `k_io__previewjob_super_set_percent` instead
-///
-#define k_io__previewjob_qbase_set_percent k_io__previewjob_super_set_percent
-
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setPercent)
@@ -2124,10 +2004,6 @@ void k_io__previewjob_on_set_percent(void* self, void (*callback)(void*, uintptr
 /// @param self KIO__PreviewJob*
 ///
 void k_io__previewjob_emit_result(void* self);
-
-/// @warning DEPRECATED: Use `k_io__previewjob_super_emit_result` instead
-///
-#define k_io__previewjob_qbase_emit_result k_io__previewjob_super_emit_result
 
 /// Inherited from KJob
 ///
@@ -2161,10 +2037,6 @@ void k_io__previewjob_on_emit_result(void* self, void (*callback)());
 /// @param totalAmount uintptr_t
 ///
 void k_io__previewjob_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount);
-
-/// @warning DEPRECATED: Use `k_io__previewjob_super_emit_percent` instead
-///
-#define k_io__previewjob_qbase_emit_percent k_io__previewjob_super_emit_percent
 
 /// Inherited from KJob
 ///
@@ -2200,10 +2072,6 @@ void k_io__previewjob_on_emit_percent(void* self, void (*callback)(void*, uintpt
 ///
 void k_io__previewjob_emit_speed(void* self, uintptr_t speed);
 
-/// @warning DEPRECATED: Use `k_io__previewjob_super_emit_speed` instead
-///
-#define k_io__previewjob_qbase_emit_speed k_io__previewjob_super_emit_speed
-
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#emitSpeed)
@@ -2236,10 +2104,6 @@ void k_io__previewjob_on_emit_speed(void* self, void (*callback)(void*, uintptr_
 ///
 void k_io__previewjob_start_elapsed_timer(void* self);
 
-/// @warning DEPRECATED: Use `k_io__previewjob_super_start_elapsed_timer` instead
-///
-#define k_io__previewjob_qbase_start_elapsed_timer k_io__previewjob_super_start_elapsed_timer
-
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#startElapsedTimer)
@@ -2271,10 +2135,6 @@ void k_io__previewjob_on_start_elapsed_timer(void* self, void (*callback)());
 ///
 QObject* k_io__previewjob_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_io__previewjob_super_sender` instead
-///
-#define k_io__previewjob_qbase_sender k_io__previewjob_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2305,10 +2165,6 @@ void k_io__previewjob_on_sender(void* self, QObject* (*callback)());
 /// @param self KIO__PreviewJob*
 ///
 int32_t k_io__previewjob_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_io__previewjob_super_sender_signal_index` instead
-///
-#define k_io__previewjob_qbase_sender_signal_index k_io__previewjob_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -2342,10 +2198,6 @@ void k_io__previewjob_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_io__previewjob_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_io__previewjob_super_receivers` instead
-///
-#define k_io__previewjob_qbase_receivers k_io__previewjob_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2378,10 +2230,6 @@ void k_io__previewjob_on_receivers(void* self, int32_t (*callback)(void*, const 
 /// @param signal QMetaMethod*
 ///
 bool k_io__previewjob_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_io__previewjob_super_is_signal_connected` instead
-///
-#define k_io__previewjob_qbase_is_signal_connected k_io__previewjob_super_is_signal_connected
 
 /// Inherited from QObject
 ///

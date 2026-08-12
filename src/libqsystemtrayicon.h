@@ -54,10 +54,6 @@ const QMetaObject* q_systemtrayicon_meta_object(void* self);
 ///
 void q_systemtrayicon_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_systemtrayicon_super_meta_object` instead
-///
-#define q_systemtrayicon_qbase_meta_object q_systemtrayicon_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -77,10 +73,6 @@ void* q_systemtrayicon_metacast(void* self, const char* param1);
 /// @param callback void* func(QSystemTrayIcon* self, const char* param1)
 ///
 void q_systemtrayicon_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_systemtrayicon_super_metacast` instead
-///
-#define q_systemtrayicon_qbase_metacast q_systemtrayicon_super_metacast
 
 /// Base class method implementation
 ///
@@ -102,10 +94,6 @@ int32_t q_systemtrayicon_metacall(void* self, int32_t param1, int param2, void* 
 /// @param callback int32_t func(QSystemTrayIcon* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_systemtrayicon_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_systemtrayicon_super_metacall` instead
-///
-#define q_systemtrayicon_qbase_metacall q_systemtrayicon_super_metacall
 
 /// Base class method implementation
 ///
@@ -263,10 +251,6 @@ bool q_systemtrayicon_event(void* self, void* event);
 /// @param callback bool func(QSystemTrayIcon* self, QEvent* event)
 ///
 void q_systemtrayicon_on_event(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_systemtrayicon_super_event` instead
-///
-#define q_systemtrayicon_qbase_event q_systemtrayicon_super_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsystemtrayicon.html#event)
 ///
@@ -784,10 +768,6 @@ void q_systemtrayicon_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_systemtrayicon_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_systemtrayicon_super_event_filter` instead
-///
-#define q_systemtrayicon_qbase_event_filter q_systemtrayicon_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -822,10 +802,6 @@ void q_systemtrayicon_on_event_filter(void* self, bool (*callback)(void*, void*,
 ///
 void q_systemtrayicon_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_systemtrayicon_super_timer_event` instead
-///
-#define q_systemtrayicon_qbase_timer_event q_systemtrayicon_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -858,10 +834,6 @@ void q_systemtrayicon_on_timer_event(void* self, void (*callback)(void*, void*))
 /// @param event QChildEvent*
 ///
 void q_systemtrayicon_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_systemtrayicon_super_child_event` instead
-///
-#define q_systemtrayicon_qbase_child_event q_systemtrayicon_super_child_event
 
 /// Inherited from QObject
 ///
@@ -896,10 +868,6 @@ void q_systemtrayicon_on_child_event(void* self, void (*callback)(void*, void*))
 ///
 void q_systemtrayicon_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_systemtrayicon_super_custom_event` instead
-///
-#define q_systemtrayicon_qbase_custom_event q_systemtrayicon_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -932,10 +900,6 @@ void q_systemtrayicon_on_custom_event(void* self, void (*callback)(void*, void*)
 /// @param signal QMetaMethod*
 ///
 void q_systemtrayicon_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_systemtrayicon_super_connect_notify` instead
-///
-#define q_systemtrayicon_qbase_connect_notify q_systemtrayicon_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -970,10 +934,6 @@ void q_systemtrayicon_on_connect_notify(void* self, void (*callback)(void*, void
 ///
 void q_systemtrayicon_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_systemtrayicon_super_disconnect_notify` instead
-///
-#define q_systemtrayicon_qbase_disconnect_notify q_systemtrayicon_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1006,10 +966,6 @@ void q_systemtrayicon_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 QObject* q_systemtrayicon_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_systemtrayicon_super_sender` instead
-///
-#define q_systemtrayicon_qbase_sender q_systemtrayicon_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1040,10 +996,6 @@ void q_systemtrayicon_on_sender(void* self, QObject* (*callback)());
 /// @param self QSystemTrayIcon*
 ///
 int32_t q_systemtrayicon_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_systemtrayicon_super_sender_signal_index` instead
-///
-#define q_systemtrayicon_qbase_sender_signal_index q_systemtrayicon_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1077,10 +1029,6 @@ void q_systemtrayicon_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_systemtrayicon_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_systemtrayicon_super_receivers` instead
-///
-#define q_systemtrayicon_qbase_receivers q_systemtrayicon_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1113,10 +1061,6 @@ void q_systemtrayicon_on_receivers(void* self, int32_t (*callback)(void*, const 
 /// @param signal QMetaMethod*
 ///
 bool q_systemtrayicon_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_systemtrayicon_super_is_signal_connected` instead
-///
-#define q_systemtrayicon_qbase_is_signal_connected q_systemtrayicon_super_is_signal_connected
 
 /// Inherited from QObject
 ///

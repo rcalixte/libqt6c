@@ -37,10 +37,6 @@ const QMetaObject* q_placecontentreply_meta_object(void* self);
 ///
 void q_placecontentreply_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_placecontentreply_super_meta_object` instead
-///
-#define q_placecontentreply_qbase_meta_object q_placecontentreply_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_placecontentreply_metacast(void* self, const char* param1);
 /// @param callback void* func(QPlaceContentReply* self, const char* param1)
 ///
 void q_placecontentreply_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_placecontentreply_super_metacast` instead
-///
-#define q_placecontentreply_qbase_metacast q_placecontentreply_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_placecontentreply_metacall(void* self, int32_t param1, int param2, voi
 /// @param callback int32_t func(QPlaceContentReply* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_placecontentreply_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_placecontentreply_super_metacall` instead
-///
-#define q_placecontentreply_qbase_metacall q_placecontentreply_super_metacall
 
 /// Base class method implementation
 ///
@@ -123,10 +111,6 @@ int32_t q_placecontentreply_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_placecontentreply_on_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_placecontentreply_super_type` instead
-///
-#define q_placecontentreply_qbase_type q_placecontentreply_super_type
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontentreply.html#type)
 ///
@@ -197,10 +181,6 @@ void q_placecontentreply_set_content(void* self, libqt_map content);
 ///
 void q_placecontentreply_on_set_content(void* self, void (*callback)(void*, libqt_map));
 
-/// @warning DEPRECATED: Use `q_placecontentreply_super_set_content` instead
-///
-#define q_placecontentreply_qbase_set_content q_placecontentreply_super_set_content
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontentreply.html#setContent)
 ///
 /// Base class method implementation
@@ -225,10 +205,6 @@ void q_placecontentreply_set_total_count(void* self, int total);
 /// @param callback void func(QPlaceContentReply* self, int total)
 ///
 void q_placecontentreply_on_set_total_count(void* self, void (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_placecontentreply_super_set_total_count` instead
-///
-#define q_placecontentreply_qbase_set_total_count q_placecontentreply_super_set_total_count
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontentreply.html#setTotalCount)
 ///
@@ -255,10 +231,6 @@ void q_placecontentreply_set_request(void* self, void* request);
 ///
 void q_placecontentreply_on_set_request(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_placecontentreply_super_set_request` instead
-///
-#define q_placecontentreply_qbase_set_request q_placecontentreply_super_set_request
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontentreply.html#setRequest)
 ///
 /// Base class method implementation
@@ -284,10 +256,6 @@ void q_placecontentreply_set_previous_page_request(void* self, void* previous);
 ///
 void q_placecontentreply_on_set_previous_page_request(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_placecontentreply_super_set_previous_page_request` instead
-///
-#define q_placecontentreply_qbase_set_previous_page_request q_placecontentreply_super_set_previous_page_request
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontentreply.html#setPreviousPageRequest)
 ///
 /// Base class method implementation
@@ -312,10 +280,6 @@ void q_placecontentreply_set_next_page_request(void* self, void* next);
 /// @param callback void func(QPlaceContentReply* self, QPlaceContentRequest* next)
 ///
 void q_placecontentreply_on_set_next_page_request(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_placecontentreply_super_set_next_page_request` instead
-///
-#define q_placecontentreply_qbase_set_next_page_request q_placecontentreply_super_set_next_page_request
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontentreply.html#setNextPageRequest)
 ///
@@ -918,10 +882,6 @@ void q_placecontentreply_on_destroyed1(void* self, void (*callback)(void*, void*
 ///
 void q_placecontentreply_abort(void* self);
 
-/// @warning DEPRECATED: Use `q_placecontentreply_super_abort` instead
-///
-#define q_placecontentreply_qbase_abort q_placecontentreply_super_abort
-
 /// Inherited from QPlaceReply
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacereply.html#abort)
@@ -953,10 +913,6 @@ void q_placecontentreply_on_abort(void* self, void (*callback)());
 /// @param event QEvent*
 ///
 bool q_placecontentreply_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_placecontentreply_super_event` instead
-///
-#define q_placecontentreply_qbase_event q_placecontentreply_super_event
 
 /// Inherited from QObject
 ///
@@ -992,10 +948,6 @@ void q_placecontentreply_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_placecontentreply_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_placecontentreply_super_event_filter` instead
-///
-#define q_placecontentreply_qbase_event_filter q_placecontentreply_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1030,10 +982,6 @@ void q_placecontentreply_on_event_filter(void* self, bool (*callback)(void*, voi
 ///
 void q_placecontentreply_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_placecontentreply_super_timer_event` instead
-///
-#define q_placecontentreply_qbase_timer_event q_placecontentreply_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1066,10 +1014,6 @@ void q_placecontentreply_on_timer_event(void* self, void (*callback)(void*, void
 /// @param event QChildEvent*
 ///
 void q_placecontentreply_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_placecontentreply_super_child_event` instead
-///
-#define q_placecontentreply_qbase_child_event q_placecontentreply_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1104,10 +1048,6 @@ void q_placecontentreply_on_child_event(void* self, void (*callback)(void*, void
 ///
 void q_placecontentreply_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_placecontentreply_super_custom_event` instead
-///
-#define q_placecontentreply_qbase_custom_event q_placecontentreply_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1140,10 +1080,6 @@ void q_placecontentreply_on_custom_event(void* self, void (*callback)(void*, voi
 /// @param signal QMetaMethod*
 ///
 void q_placecontentreply_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_placecontentreply_super_connect_notify` instead
-///
-#define q_placecontentreply_qbase_connect_notify q_placecontentreply_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1178,10 +1114,6 @@ void q_placecontentreply_on_connect_notify(void* self, void (*callback)(void*, v
 ///
 void q_placecontentreply_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_placecontentreply_super_disconnect_notify` instead
-///
-#define q_placecontentreply_qbase_disconnect_notify q_placecontentreply_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1214,10 +1146,6 @@ void q_placecontentreply_on_disconnect_notify(void* self, void (*callback)(void*
 /// @param finished bool
 ///
 void q_placecontentreply_set_finished(void* self, bool finished);
-
-/// @warning DEPRECATED: Use `q_placecontentreply_super_set_finished` instead
-///
-#define q_placecontentreply_qbase_set_finished q_placecontentreply_super_set_finished
 
 /// Inherited from QPlaceReply
 ///
@@ -1253,10 +1181,6 @@ void q_placecontentreply_on_set_finished(void* self, void (*callback)(void*, boo
 ///
 void q_placecontentreply_set_error(void* self, int32_t error, const char* errorString);
 
-/// @warning DEPRECATED: Use `q_placecontentreply_super_set_error` instead
-///
-#define q_placecontentreply_qbase_set_error q_placecontentreply_super_set_error
-
 /// Inherited from QPlaceReply
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacereply.html#setError)
@@ -1290,10 +1214,6 @@ void q_placecontentreply_on_set_error(void* self, void (*callback)(void*, int32_
 ///
 QObject* q_placecontentreply_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_placecontentreply_super_sender` instead
-///
-#define q_placecontentreply_qbase_sender q_placecontentreply_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1324,10 +1244,6 @@ void q_placecontentreply_on_sender(void* self, QObject* (*callback)());
 /// @param self QPlaceContentReply*
 ///
 int32_t q_placecontentreply_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_placecontentreply_super_sender_signal_index` instead
-///
-#define q_placecontentreply_qbase_sender_signal_index q_placecontentreply_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1361,10 +1277,6 @@ void q_placecontentreply_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 int32_t q_placecontentreply_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_placecontentreply_super_receivers` instead
-///
-#define q_placecontentreply_qbase_receivers q_placecontentreply_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1397,10 +1309,6 @@ void q_placecontentreply_on_receivers(void* self, int32_t (*callback)(void*, con
 /// @param signal QMetaMethod*
 ///
 bool q_placecontentreply_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_placecontentreply_super_is_signal_connected` instead
-///
-#define q_placecontentreply_qbase_is_signal_connected q_placecontentreply_super_is_signal_connected
 
 /// Inherited from QObject
 ///

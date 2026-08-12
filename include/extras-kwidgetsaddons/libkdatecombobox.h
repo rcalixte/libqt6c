@@ -37,10 +37,6 @@ const QMetaObject* k_datecombobox_meta_object(void* self);
 ///
 void k_datecombobox_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_meta_object` instead
-///
-#define k_datecombobox_qbase_meta_object k_datecombobox_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* k_datecombobox_metacast(void* self, const char* param1);
 /// @param callback void* func(KDateComboBox* self, const char* param1)
 ///
 void k_datecombobox_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_metacast` instead
-///
-#define k_datecombobox_qbase_metacast k_datecombobox_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t k_datecombobox_metacall(void* self, int32_t param1, int param2, void* pa
 /// @param callback int32_t func(KDateComboBox* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_datecombobox_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_metacall` instead
-///
-#define k_datecombobox_qbase_metacall k_datecombobox_super_metacall
 
 /// Base class method implementation
 ///
@@ -300,10 +288,6 @@ bool k_datecombobox_event_filter(void* self, void* object, void* event);
 ///
 void k_datecombobox_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_event_filter` instead
-///
-#define k_datecombobox_qbase_event_filter k_datecombobox_super_event_filter
-
 /// [Upstream resources](https://api.kde.org/kdatecombobox.html#eventFilter)
 ///
 /// Base class method implementation
@@ -329,10 +313,6 @@ void k_datecombobox_show_popup(void* self);
 ///
 void k_datecombobox_on_show_popup(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_show_popup` instead
-///
-#define k_datecombobox_qbase_show_popup k_datecombobox_super_show_popup
-
 /// [Upstream resources](https://api.kde.org/kdatecombobox.html#showPopup)
 ///
 /// Base class method implementation
@@ -355,10 +335,6 @@ void k_datecombobox_hide_popup(void* self);
 /// @param callback void func()
 ///
 void k_datecombobox_on_hide_popup(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_hide_popup` instead
-///
-#define k_datecombobox_qbase_hide_popup k_datecombobox_super_hide_popup
 
 /// [Upstream resources](https://api.kde.org/kdatecombobox.html#hidePopup)
 ///
@@ -383,10 +359,6 @@ void k_datecombobox_mouse_press_event(void* self, void* event);
 /// @param callback void func(KDateComboBox* self, QMouseEvent* event)
 ///
 void k_datecombobox_on_mouse_press_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_mouse_press_event` instead
-///
-#define k_datecombobox_qbase_mouse_press_event k_datecombobox_super_mouse_press_event
 
 /// [Upstream resources](https://api.kde.org/kdatecombobox.html#mousePressEvent)
 ///
@@ -413,10 +385,6 @@ void k_datecombobox_wheel_event(void* self, void* event);
 ///
 void k_datecombobox_on_wheel_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_wheel_event` instead
-///
-#define k_datecombobox_qbase_wheel_event k_datecombobox_super_wheel_event
-
 /// [Upstream resources](https://api.kde.org/kdatecombobox.html#wheelEvent)
 ///
 /// Base class method implementation
@@ -441,10 +409,6 @@ void k_datecombobox_key_press_event(void* self, void* event);
 /// @param callback void func(KDateComboBox* self, QKeyEvent* event)
 ///
 void k_datecombobox_on_key_press_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_key_press_event` instead
-///
-#define k_datecombobox_qbase_key_press_event k_datecombobox_super_key_press_event
 
 /// [Upstream resources](https://api.kde.org/kdatecombobox.html#keyPressEvent)
 ///
@@ -471,10 +435,6 @@ void k_datecombobox_focus_in_event(void* self, void* event);
 ///
 void k_datecombobox_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_focus_in_event` instead
-///
-#define k_datecombobox_qbase_focus_in_event k_datecombobox_super_focus_in_event
-
 /// [Upstream resources](https://api.kde.org/kdatecombobox.html#focusInEvent)
 ///
 /// Base class method implementation
@@ -499,10 +459,6 @@ void k_datecombobox_focus_out_event(void* self, void* event);
 /// @param callback void func(KDateComboBox* self, QFocusEvent* event)
 ///
 void k_datecombobox_on_focus_out_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_focus_out_event` instead
-///
-#define k_datecombobox_qbase_focus_out_event k_datecombobox_super_focus_out_event
 
 /// [Upstream resources](https://api.kde.org/kdatecombobox.html#focusOutEvent)
 ///
@@ -529,10 +485,6 @@ void k_datecombobox_resize_event(void* self, void* event);
 ///
 void k_datecombobox_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_resize_event` instead
-///
-#define k_datecombobox_qbase_resize_event k_datecombobox_super_resize_event
-
 /// [Upstream resources](https://api.kde.org/kdatecombobox.html#resizeEvent)
 ///
 /// Base class method implementation
@@ -557,10 +509,6 @@ void k_datecombobox_assign_date(void* self, void* date);
 /// @param callback void func(KDateComboBox* self, QDate* date)
 ///
 void k_datecombobox_on_assign_date(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_assign_date` instead
-///
-#define k_datecombobox_qbase_assign_date k_datecombobox_super_assign_date
 
 /// [Upstream resources](https://api.kde.org/kdatecombobox.html#assignDate)
 ///
@@ -4368,10 +4316,6 @@ int32_t k_datecombobox_encode_metric_f(int32_t metric, double value);
 ///
 void k_datecombobox_set_model(void* self, void* model);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_set_model` instead
-///
-#define k_datecombobox_qbase_set_model k_datecombobox_super_set_model
-
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setModel)
@@ -4403,10 +4347,6 @@ void k_datecombobox_on_set_model(void* self, void (*callback)(void*, void*));
 /// @param self KDateComboBox*
 ///
 QSize* k_datecombobox_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_size_hint` instead
-///
-#define k_datecombobox_qbase_size_hint k_datecombobox_super_size_hint
 
 /// Inherited from QComboBox
 ///
@@ -4440,10 +4380,6 @@ void k_datecombobox_on_size_hint(void* self, QSize* (*callback)());
 /// @param self KDateComboBox*
 ///
 QSize* k_datecombobox_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_minimum_size_hint` instead
-///
-#define k_datecombobox_qbase_minimum_size_hint k_datecombobox_super_minimum_size_hint
 
 /// Inherited from QComboBox
 ///
@@ -4479,10 +4415,6 @@ void k_datecombobox_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 bool k_datecombobox_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_event` instead
-///
-#define k_datecombobox_qbase_event k_datecombobox_super_event
-
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#event)
@@ -4515,10 +4447,6 @@ void k_datecombobox_on_event(void* self, bool (*callback)(void*, void*));
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* k_datecombobox_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_input_method_query` instead
-///
-#define k_datecombobox_qbase_input_method_query k_datecombobox_super_input_method_query
 
 /// Inherited from QComboBox
 ///
@@ -4555,10 +4483,6 @@ void k_datecombobox_on_input_method_query(void* self, QVariant* (*callback)(void
 ///
 void k_datecombobox_change_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_change_event` instead
-///
-#define k_datecombobox_qbase_change_event k_datecombobox_super_change_event
-
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#changeEvent)
@@ -4591,10 +4515,6 @@ void k_datecombobox_on_change_event(void* self, void (*callback)(void*, void*));
 /// @param e QPaintEvent*
 ///
 void k_datecombobox_paint_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_paint_event` instead
-///
-#define k_datecombobox_qbase_paint_event k_datecombobox_super_paint_event
 
 /// Inherited from QComboBox
 ///
@@ -4629,10 +4549,6 @@ void k_datecombobox_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datecombobox_show_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_show_event` instead
-///
-#define k_datecombobox_qbase_show_event k_datecombobox_super_show_event
-
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#showEvent)
@@ -4665,10 +4581,6 @@ void k_datecombobox_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param e QHideEvent*
 ///
 void k_datecombobox_hide_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_hide_event` instead
-///
-#define k_datecombobox_qbase_hide_event k_datecombobox_super_hide_event
 
 /// Inherited from QComboBox
 ///
@@ -4703,10 +4615,6 @@ void k_datecombobox_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datecombobox_mouse_release_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_mouse_release_event` instead
-///
-#define k_datecombobox_qbase_mouse_release_event k_datecombobox_super_mouse_release_event
-
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#mouseReleaseEvent)
@@ -4739,10 +4647,6 @@ void k_datecombobox_on_mouse_release_event(void* self, void (*callback)(void*, v
 /// @param e QKeyEvent*
 ///
 void k_datecombobox_key_release_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_key_release_event` instead
-///
-#define k_datecombobox_qbase_key_release_event k_datecombobox_super_key_release_event
 
 /// Inherited from QComboBox
 ///
@@ -4777,10 +4681,6 @@ void k_datecombobox_on_key_release_event(void* self, void (*callback)(void*, voi
 ///
 void k_datecombobox_context_menu_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_context_menu_event` instead
-///
-#define k_datecombobox_qbase_context_menu_event k_datecombobox_super_context_menu_event
-
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#contextMenuEvent)
@@ -4813,10 +4713,6 @@ void k_datecombobox_on_context_menu_event(void* self, void (*callback)(void*, vo
 /// @param param1 QInputMethodEvent*
 ///
 void k_datecombobox_input_method_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_input_method_event` instead
-///
-#define k_datecombobox_qbase_input_method_event k_datecombobox_super_input_method_event
 
 /// Inherited from QComboBox
 ///
@@ -4851,10 +4747,6 @@ void k_datecombobox_on_input_method_event(void* self, void (*callback)(void*, vo
 ///
 void k_datecombobox_init_style_option(void* self, void* option);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_init_style_option` instead
-///
-#define k_datecombobox_qbase_init_style_option k_datecombobox_super_init_style_option
-
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#initStyleOption)
@@ -4887,10 +4779,6 @@ void k_datecombobox_on_init_style_option(void* self, void (*callback)(void*, voi
 ///
 int32_t k_datecombobox_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_dev_type` instead
-///
-#define k_datecombobox_qbase_dev_type k_datecombobox_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -4922,10 +4810,6 @@ void k_datecombobox_on_dev_type(void* self, int32_t (*callback)());
 /// @param visible bool
 ///
 void k_datecombobox_set_visible(void* self, bool visible);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_set_visible` instead
-///
-#define k_datecombobox_qbase_set_visible k_datecombobox_super_set_visible
 
 /// Inherited from QWidget
 ///
@@ -4960,10 +4844,6 @@ void k_datecombobox_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 int32_t k_datecombobox_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_height_for_width` instead
-///
-#define k_datecombobox_qbase_height_for_width k_datecombobox_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -4996,10 +4876,6 @@ void k_datecombobox_on_height_for_width(void* self, int32_t (*callback)(void*, i
 ///
 bool k_datecombobox_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_has_height_for_width` instead
-///
-#define k_datecombobox_qbase_has_height_for_width k_datecombobox_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -5030,10 +4906,6 @@ void k_datecombobox_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self KDateComboBox*
 ///
 QPaintEngine* k_datecombobox_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_paint_engine` instead
-///
-#define k_datecombobox_qbase_paint_engine k_datecombobox_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -5066,10 +4938,6 @@ void k_datecombobox_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QMouseEvent*
 ///
 void k_datecombobox_mouse_double_click_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_mouse_double_click_event` instead
-///
-#define k_datecombobox_qbase_mouse_double_click_event k_datecombobox_super_mouse_double_click_event
 
 /// Inherited from QWidget
 ///
@@ -5104,10 +4972,6 @@ void k_datecombobox_on_mouse_double_click_event(void* self, void (*callback)(voi
 ///
 void k_datecombobox_mouse_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_mouse_move_event` instead
-///
-#define k_datecombobox_qbase_mouse_move_event k_datecombobox_super_mouse_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -5140,10 +5004,6 @@ void k_datecombobox_on_mouse_move_event(void* self, void (*callback)(void*, void
 /// @param event QEnterEvent*
 ///
 void k_datecombobox_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_enter_event` instead
-///
-#define k_datecombobox_qbase_enter_event k_datecombobox_super_enter_event
 
 /// Inherited from QWidget
 ///
@@ -5178,10 +5038,6 @@ void k_datecombobox_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datecombobox_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_leave_event` instead
-///
-#define k_datecombobox_qbase_leave_event k_datecombobox_super_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -5214,10 +5070,6 @@ void k_datecombobox_on_leave_event(void* self, void (*callback)(void*, void*));
 /// @param event QMoveEvent*
 ///
 void k_datecombobox_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_move_event` instead
-///
-#define k_datecombobox_qbase_move_event k_datecombobox_super_move_event
 
 /// Inherited from QWidget
 ///
@@ -5252,10 +5104,6 @@ void k_datecombobox_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datecombobox_close_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_close_event` instead
-///
-#define k_datecombobox_qbase_close_event k_datecombobox_super_close_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -5288,10 +5136,6 @@ void k_datecombobox_on_close_event(void* self, void (*callback)(void*, void*));
 /// @param event QTabletEvent*
 ///
 void k_datecombobox_tablet_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_tablet_event` instead
-///
-#define k_datecombobox_qbase_tablet_event k_datecombobox_super_tablet_event
 
 /// Inherited from QWidget
 ///
@@ -5326,10 +5170,6 @@ void k_datecombobox_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datecombobox_action_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_action_event` instead
-///
-#define k_datecombobox_qbase_action_event k_datecombobox_super_action_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -5362,10 +5202,6 @@ void k_datecombobox_on_action_event(void* self, void (*callback)(void*, void*));
 /// @param event QDragEnterEvent*
 ///
 void k_datecombobox_drag_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_drag_enter_event` instead
-///
-#define k_datecombobox_qbase_drag_enter_event k_datecombobox_super_drag_enter_event
 
 /// Inherited from QWidget
 ///
@@ -5400,10 +5236,6 @@ void k_datecombobox_on_drag_enter_event(void* self, void (*callback)(void*, void
 ///
 void k_datecombobox_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_drag_move_event` instead
-///
-#define k_datecombobox_qbase_drag_move_event k_datecombobox_super_drag_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -5437,10 +5269,6 @@ void k_datecombobox_on_drag_move_event(void* self, void (*callback)(void*, void*
 ///
 void k_datecombobox_drag_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_drag_leave_event` instead
-///
-#define k_datecombobox_qbase_drag_leave_event k_datecombobox_super_drag_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -5473,10 +5301,6 @@ void k_datecombobox_on_drag_leave_event(void* self, void (*callback)(void*, void
 /// @param event QDropEvent*
 ///
 void k_datecombobox_drop_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_drop_event` instead
-///
-#define k_datecombobox_qbase_drop_event k_datecombobox_super_drop_event
 
 /// Inherited from QWidget
 ///
@@ -5513,10 +5337,6 @@ void k_datecombobox_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 bool k_datecombobox_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_native_event` instead
-///
-#define k_datecombobox_qbase_native_event k_datecombobox_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -5552,10 +5372,6 @@ void k_datecombobox_on_native_event(void* self, bool (*callback)(void*, libqt_st
 ///
 int32_t k_datecombobox_metric(void* self, int32_t param1);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_metric` instead
-///
-#define k_datecombobox_qbase_metric k_datecombobox_super_metric
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -5588,10 +5404,6 @@ void k_datecombobox_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 /// @param painter QPainter*
 ///
 void k_datecombobox_init_painter(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_init_painter` instead
-///
-#define k_datecombobox_qbase_init_painter k_datecombobox_super_init_painter
 
 /// Inherited from QWidget
 ///
@@ -5626,10 +5438,6 @@ void k_datecombobox_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* k_datecombobox_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_redirected` instead
-///
-#define k_datecombobox_qbase_redirected k_datecombobox_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -5662,10 +5470,6 @@ void k_datecombobox_on_redirected(void* self, QPaintDevice* (*callback)(void*, v
 ///
 QPainter* k_datecombobox_shared_painter(void* self);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_shared_painter` instead
-///
-#define k_datecombobox_qbase_shared_painter k_datecombobox_super_shared_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -5697,10 +5501,6 @@ void k_datecombobox_on_shared_painter(void* self, QPainter* (*callback)());
 /// @param next bool
 ///
 bool k_datecombobox_focus_next_prev_child(void* self, bool next);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_focus_next_prev_child` instead
-///
-#define k_datecombobox_qbase_focus_next_prev_child k_datecombobox_super_focus_next_prev_child
 
 /// Inherited from QWidget
 ///
@@ -5735,10 +5535,6 @@ void k_datecombobox_on_focus_next_prev_child(void* self, bool (*callback)(void*,
 ///
 void k_datecombobox_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_timer_event` instead
-///
-#define k_datecombobox_qbase_timer_event k_datecombobox_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -5771,10 +5567,6 @@ void k_datecombobox_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void k_datecombobox_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_child_event` instead
-///
-#define k_datecombobox_qbase_child_event k_datecombobox_super_child_event
 
 /// Inherited from QObject
 ///
@@ -5809,10 +5601,6 @@ void k_datecombobox_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datecombobox_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_custom_event` instead
-///
-#define k_datecombobox_qbase_custom_event k_datecombobox_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -5845,10 +5633,6 @@ void k_datecombobox_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void k_datecombobox_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_connect_notify` instead
-///
-#define k_datecombobox_qbase_connect_notify k_datecombobox_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -5883,10 +5667,6 @@ void k_datecombobox_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void k_datecombobox_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_disconnect_notify` instead
-///
-#define k_datecombobox_qbase_disconnect_notify k_datecombobox_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5919,10 +5699,6 @@ void k_datecombobox_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 void k_datecombobox_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_update_micro_focus` instead
-///
-#define k_datecombobox_qbase_update_micro_focus k_datecombobox_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5953,10 +5729,6 @@ void k_datecombobox_on_update_micro_focus(void* self, void (*callback)());
 /// @param self KDateComboBox*
 ///
 void k_datecombobox_create(void* self);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_create` instead
-///
-#define k_datecombobox_qbase_create k_datecombobox_super_create
 
 /// Inherited from QWidget
 ///
@@ -5989,10 +5761,6 @@ void k_datecombobox_on_create(void* self, void (*callback)());
 ///
 void k_datecombobox_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_destroy` instead
-///
-#define k_datecombobox_qbase_destroy k_datecombobox_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -6023,10 +5791,6 @@ void k_datecombobox_on_destroy(void* self, void (*callback)());
 /// @param self KDateComboBox*
 ///
 bool k_datecombobox_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_focus_next_child` instead
-///
-#define k_datecombobox_qbase_focus_next_child k_datecombobox_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -6059,10 +5823,6 @@ void k_datecombobox_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_datecombobox_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_focus_previous_child` instead
-///
-#define k_datecombobox_qbase_focus_previous_child k_datecombobox_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -6093,10 +5853,6 @@ void k_datecombobox_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self KDateComboBox*
 ///
 QObject* k_datecombobox_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_sender` instead
-///
-#define k_datecombobox_qbase_sender k_datecombobox_super_sender
 
 /// Inherited from QObject
 ///
@@ -6129,10 +5885,6 @@ void k_datecombobox_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_datecombobox_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_sender_signal_index` instead
-///
-#define k_datecombobox_qbase_sender_signal_index k_datecombobox_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -6164,10 +5916,6 @@ void k_datecombobox_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t k_datecombobox_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_receivers` instead
-///
-#define k_datecombobox_qbase_receivers k_datecombobox_super_receivers
 
 /// Inherited from QObject
 ///
@@ -6202,10 +5950,6 @@ void k_datecombobox_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 bool k_datecombobox_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_datecombobox_super_is_signal_connected` instead
-///
-#define k_datecombobox_qbase_is_signal_connected k_datecombobox_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -6239,10 +5983,6 @@ void k_datecombobox_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_datecombobox_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_datecombobox_super_get_decoded_metric_f` instead
-///
-#define k_datecombobox_qbase_get_decoded_metric_f k_datecombobox_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

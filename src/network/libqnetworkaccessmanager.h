@@ -37,10 +37,6 @@ const QMetaObject* q_networkaccessmanager_meta_object(void* self);
 ///
 void q_networkaccessmanager_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_networkaccessmanager_super_meta_object` instead
-///
-#define q_networkaccessmanager_qbase_meta_object q_networkaccessmanager_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_networkaccessmanager_metacast(void* self, const char* param1);
 /// @param callback void* func(QNetworkAccessManager* self, const char* param1)
 ///
 void q_networkaccessmanager_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_networkaccessmanager_super_metacast` instead
-///
-#define q_networkaccessmanager_qbase_metacast q_networkaccessmanager_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_networkaccessmanager_metacall(void* self, int32_t param1, int param2, 
 /// @param callback int32_t func(QNetworkAccessManager* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_networkaccessmanager_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_networkaccessmanager_super_metacall` instead
-///
-#define q_networkaccessmanager_qbase_metacall q_networkaccessmanager_super_metacall
 
 /// Base class method implementation
 ///
@@ -123,10 +111,6 @@ const char** q_networkaccessmanager_supported_schemes(void* self);
 /// @param callback const char** func()
 ///
 void q_networkaccessmanager_on_supported_schemes(void* self, const char** (*callback)());
-
-/// @warning DEPRECATED: Use `q_networkaccessmanager_super_supported_schemes` instead
-///
-#define q_networkaccessmanager_qbase_supported_schemes q_networkaccessmanager_super_supported_schemes
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#supportedSchemes)
 ///
@@ -537,10 +521,6 @@ QNetworkReply* q_networkaccessmanager_create_request(void* self, int32_t op, voi
 ///
 void q_networkaccessmanager_on_create_request(void* self, QNetworkReply* (*callback)(void*, int32_t, void*, void*));
 
-/// @warning DEPRECATED: Use `q_networkaccessmanager_super_create_request` instead
-///
-#define q_networkaccessmanager_qbase_create_request q_networkaccessmanager_super_create_request
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#createRequest)
 ///
 /// Base class method implementation
@@ -568,10 +548,6 @@ const char** q_networkaccessmanager_supported_schemes_implementation(void* self)
 /// @param callback const char** func()
 ///
 void q_networkaccessmanager_on_supported_schemes_implementation(void* self, const char** (*callback)());
-
-/// @warning DEPRECATED: Use `q_networkaccessmanager_super_supported_schemes_implementation` instead
-///
-#define q_networkaccessmanager_qbase_supported_schemes_implementation q_networkaccessmanager_super_supported_schemes_implementation
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#supportedSchemesImplementation)
 ///
@@ -1107,10 +1083,6 @@ void q_networkaccessmanager_on_destroyed1(void* self, void (*callback)(void*, vo
 ///
 bool q_networkaccessmanager_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_networkaccessmanager_super_event` instead
-///
-#define q_networkaccessmanager_qbase_event q_networkaccessmanager_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1144,10 +1116,6 @@ void q_networkaccessmanager_on_event(void* self, bool (*callback)(void*, void*))
 /// @param event QEvent*
 ///
 bool q_networkaccessmanager_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_networkaccessmanager_super_event_filter` instead
-///
-#define q_networkaccessmanager_qbase_event_filter q_networkaccessmanager_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1183,10 +1151,6 @@ void q_networkaccessmanager_on_event_filter(void* self, bool (*callback)(void*, 
 ///
 void q_networkaccessmanager_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_networkaccessmanager_super_timer_event` instead
-///
-#define q_networkaccessmanager_qbase_timer_event q_networkaccessmanager_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1219,10 +1183,6 @@ void q_networkaccessmanager_on_timer_event(void* self, void (*callback)(void*, v
 /// @param event QChildEvent*
 ///
 void q_networkaccessmanager_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_networkaccessmanager_super_child_event` instead
-///
-#define q_networkaccessmanager_qbase_child_event q_networkaccessmanager_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1257,10 +1217,6 @@ void q_networkaccessmanager_on_child_event(void* self, void (*callback)(void*, v
 ///
 void q_networkaccessmanager_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_networkaccessmanager_super_custom_event` instead
-///
-#define q_networkaccessmanager_qbase_custom_event q_networkaccessmanager_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1293,10 +1249,6 @@ void q_networkaccessmanager_on_custom_event(void* self, void (*callback)(void*, 
 /// @param signal QMetaMethod*
 ///
 void q_networkaccessmanager_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_networkaccessmanager_super_connect_notify` instead
-///
-#define q_networkaccessmanager_qbase_connect_notify q_networkaccessmanager_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1331,10 +1283,6 @@ void q_networkaccessmanager_on_connect_notify(void* self, void (*callback)(void*
 ///
 void q_networkaccessmanager_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_networkaccessmanager_super_disconnect_notify` instead
-///
-#define q_networkaccessmanager_qbase_disconnect_notify q_networkaccessmanager_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1367,10 +1315,6 @@ void q_networkaccessmanager_on_disconnect_notify(void* self, void (*callback)(vo
 ///
 QObject* q_networkaccessmanager_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_networkaccessmanager_super_sender` instead
-///
-#define q_networkaccessmanager_qbase_sender q_networkaccessmanager_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1401,10 +1345,6 @@ void q_networkaccessmanager_on_sender(void* self, QObject* (*callback)());
 /// @param self QNetworkAccessManager*
 ///
 int32_t q_networkaccessmanager_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_networkaccessmanager_super_sender_signal_index` instead
-///
-#define q_networkaccessmanager_qbase_sender_signal_index q_networkaccessmanager_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1438,10 +1378,6 @@ void q_networkaccessmanager_on_sender_signal_index(void* self, int32_t (*callbac
 ///
 int32_t q_networkaccessmanager_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_networkaccessmanager_super_receivers` instead
-///
-#define q_networkaccessmanager_qbase_receivers q_networkaccessmanager_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1474,10 +1410,6 @@ void q_networkaccessmanager_on_receivers(void* self, int32_t (*callback)(void*, 
 /// @param signal QMetaMethod*
 ///
 bool q_networkaccessmanager_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_networkaccessmanager_super_is_signal_connected` instead
-///
-#define q_networkaccessmanager_qbase_is_signal_connected q_networkaccessmanager_super_is_signal_connected
 
 /// Inherited from QObject
 ///

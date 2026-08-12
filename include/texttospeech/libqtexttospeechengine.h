@@ -37,10 +37,6 @@ const QMetaObject* q_texttospeechengine_meta_object(void* self);
 ///
 void q_texttospeechengine_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_meta_object` instead
-///
-#define q_texttospeechengine_qbase_meta_object q_texttospeechengine_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_texttospeechengine_metacast(void* self, const char* param1);
 /// @param callback void* func(QTextToSpeechEngine* self, const char* param1)
 ///
 void q_texttospeechengine_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_metacast` instead
-///
-#define q_texttospeechengine_qbase_metacast q_texttospeechengine_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_texttospeechengine_metacall(void* self, int32_t param1, int param2, vo
 /// @param callback int32_t func(QTextToSpeechEngine* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_texttospeechengine_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_metacall` instead
-///
-#define q_texttospeechengine_qbase_metacall q_texttospeechengine_super_metacall
 
 /// Base class method implementation
 ///
@@ -124,10 +112,6 @@ int32_t q_texttospeechengine_capabilities(void* self);
 ///
 void q_texttospeechengine_on_capabilities(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_capabilities` instead
-///
-#define q_texttospeechengine_qbase_capabilities q_texttospeechengine_super_capabilities
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#capabilities)
 ///
 /// Base class method implementation
@@ -154,10 +138,6 @@ libqt_list q_texttospeechengine_available_locales(void* self);
 /// @param callback libqt_list of QLocale* func()
 ///
 void q_texttospeechengine_on_available_locales(void* self, libqt_list (*callback)());
-
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_available_locales` instead
-///
-#define q_texttospeechengine_qbase_available_locales q_texttospeechengine_super_available_locales
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#availableLocales)
 ///
@@ -186,10 +166,6 @@ libqt_list q_texttospeechengine_available_voices(void* self);
 ///
 void q_texttospeechengine_on_available_voices(void* self, libqt_list (*callback)());
 
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_available_voices` instead
-///
-#define q_texttospeechengine_qbase_available_voices q_texttospeechengine_super_available_voices
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#availableVoices)
 ///
 /// Base class method implementation
@@ -216,10 +192,6 @@ void q_texttospeechengine_say(void* self, const char* text);
 ///
 void q_texttospeechengine_on_say(void* self, void (*callback)(void*, const char*));
 
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_say` instead
-///
-#define q_texttospeechengine_qbase_say q_texttospeechengine_super_say
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#say)
 ///
 /// Base class method implementation
@@ -244,10 +216,6 @@ void q_texttospeechengine_synthesize(void* self, const char* text);
 /// @param callback void func(QTextToSpeechEngine* self, const char* text)
 ///
 void q_texttospeechengine_on_synthesize(void* self, void (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_synthesize` instead
-///
-#define q_texttospeechengine_qbase_synthesize q_texttospeechengine_super_synthesize
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#synthesize)
 ///
@@ -274,10 +242,6 @@ void q_texttospeechengine_stop(void* self, int32_t boundaryHint);
 ///
 void q_texttospeechengine_on_stop(void* self, void (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_stop` instead
-///
-#define q_texttospeechengine_qbase_stop q_texttospeechengine_super_stop
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#stop)
 ///
 /// Base class method implementation
@@ -303,10 +267,6 @@ void q_texttospeechengine_pause(void* self, int32_t boundaryHint);
 ///
 void q_texttospeechengine_on_pause(void* self, void (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_pause` instead
-///
-#define q_texttospeechengine_qbase_pause q_texttospeechengine_super_pause
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#pause)
 ///
 /// Base class method implementation
@@ -331,10 +291,6 @@ void q_texttospeechengine_resume(void* self);
 ///
 void q_texttospeechengine_on_resume(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_resume` instead
-///
-#define q_texttospeechengine_qbase_resume q_texttospeechengine_super_resume
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#resume)
 ///
 /// Base class method implementation
@@ -357,10 +313,6 @@ double q_texttospeechengine_rate(void* self);
 /// @param callback double func()
 ///
 void q_texttospeechengine_on_rate(void* self, double (*callback)());
-
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_rate` instead
-///
-#define q_texttospeechengine_qbase_rate q_texttospeechengine_super_rate
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#rate)
 ///
@@ -386,10 +338,6 @@ bool q_texttospeechengine_set_rate(void* self, double rate);
 ///
 void q_texttospeechengine_on_set_rate(void* self, bool (*callback)(void*, double));
 
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_set_rate` instead
-///
-#define q_texttospeechengine_qbase_set_rate q_texttospeechengine_super_set_rate
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#setRate)
 ///
 /// Base class method implementation
@@ -414,10 +362,6 @@ double q_texttospeechengine_pitch(void* self);
 ///
 void q_texttospeechengine_on_pitch(void* self, double (*callback)());
 
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_pitch` instead
-///
-#define q_texttospeechengine_qbase_pitch q_texttospeechengine_super_pitch
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#pitch)
 ///
 /// Base class method implementation
@@ -441,10 +385,6 @@ bool q_texttospeechengine_set_pitch(void* self, double pitch);
 /// @param callback bool func(QTextToSpeechEngine* self, double pitch)
 ///
 void q_texttospeechengine_on_set_pitch(void* self, bool (*callback)(void*, double));
-
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_set_pitch` instead
-///
-#define q_texttospeechengine_qbase_set_pitch q_texttospeechengine_super_set_pitch
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#setPitch)
 ///
@@ -472,10 +412,6 @@ QLocale* q_texttospeechengine_locale(void* self);
 ///
 void q_texttospeechengine_on_locale(void* self, QLocale* (*callback)());
 
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_locale` instead
-///
-#define q_texttospeechengine_qbase_locale q_texttospeechengine_super_locale
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#locale)
 ///
 /// Base class method implementation
@@ -499,10 +435,6 @@ bool q_texttospeechengine_set_locale(void* self, void* locale);
 /// @param callback bool func(QTextToSpeechEngine* self, QLocale* locale)
 ///
 void q_texttospeechengine_on_set_locale(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_set_locale` instead
-///
-#define q_texttospeechengine_qbase_set_locale q_texttospeechengine_super_set_locale
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#setLocale)
 ///
@@ -528,10 +460,6 @@ double q_texttospeechengine_volume(void* self);
 ///
 void q_texttospeechengine_on_volume(void* self, double (*callback)());
 
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_volume` instead
-///
-#define q_texttospeechengine_qbase_volume q_texttospeechengine_super_volume
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#volume)
 ///
 /// Base class method implementation
@@ -555,10 +483,6 @@ bool q_texttospeechengine_set_volume(void* self, double volume);
 /// @param callback bool func(QTextToSpeechEngine* self, double volume)
 ///
 void q_texttospeechengine_on_set_volume(void* self, bool (*callback)(void*, double));
-
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_set_volume` instead
-///
-#define q_texttospeechengine_qbase_set_volume q_texttospeechengine_super_set_volume
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#setVolume)
 ///
@@ -586,10 +510,6 @@ QVoice* q_texttospeechengine_voice(void* self);
 ///
 void q_texttospeechengine_on_voice(void* self, QVoice* (*callback)());
 
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_voice` instead
-///
-#define q_texttospeechengine_qbase_voice q_texttospeechengine_super_voice
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#voice)
 ///
 /// Base class method implementation
@@ -613,10 +533,6 @@ bool q_texttospeechengine_set_voice(void* self, void* voice);
 /// @param callback bool func(QTextToSpeechEngine* self, QVoice* voice)
 ///
 void q_texttospeechengine_on_set_voice(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_set_voice` instead
-///
-#define q_texttospeechengine_qbase_set_voice q_texttospeechengine_super_set_voice
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#setVoice)
 ///
@@ -643,10 +559,6 @@ int32_t q_texttospeechengine_state(void* self);
 /// @param callback int32_t func()
 ///
 void q_texttospeechengine_on_state(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_state` instead
-///
-#define q_texttospeechengine_qbase_state q_texttospeechengine_super_state
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#state)
 ///
@@ -675,10 +587,6 @@ int32_t q_texttospeechengine_error_reason(void* self);
 ///
 void q_texttospeechengine_on_error_reason(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_error_reason` instead
-///
-#define q_texttospeechengine_qbase_error_reason q_texttospeechengine_super_error_reason
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#errorReason)
 ///
 /// Base class method implementation
@@ -705,10 +613,6 @@ const char* q_texttospeechengine_error_string(void* self);
 /// @param callback const char* func()
 ///
 void q_texttospeechengine_on_error_string(void* self, const char* (*callback)());
-
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_error_string` instead
-///
-#define q_texttospeechengine_qbase_error_string q_texttospeechengine_super_error_string
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#errorString)
 ///
@@ -740,10 +644,6 @@ QVoice* q_texttospeechengine_create_voice(void* self, const char* name, void* lo
 ///
 void q_texttospeechengine_on_create_voice(void* self, QVoice* (*callback)(void*, const char*, void*, int32_t, int32_t, void*));
 
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_create_voice` instead
-///
-#define q_texttospeechengine_qbase_create_voice q_texttospeechengine_super_create_voice
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#createVoice)
 ///
 /// Base class method implementation
@@ -774,10 +674,6 @@ QVariant* q_texttospeechengine_voice_data(void* self, void* voice);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_texttospeechengine_on_voice_data(void* self, QVariant* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_voice_data` instead
-///
-#define q_texttospeechengine_qbase_voice_data q_texttospeechengine_super_voice_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#voiceData)
 ///
@@ -1325,10 +1221,6 @@ void q_texttospeechengine_on_destroyed1(void* self, void (*callback)(void*, void
 ///
 bool q_texttospeechengine_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_event` instead
-///
-#define q_texttospeechengine_qbase_event q_texttospeechengine_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1362,10 +1254,6 @@ void q_texttospeechengine_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_texttospeechengine_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_event_filter` instead
-///
-#define q_texttospeechengine_qbase_event_filter q_texttospeechengine_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1401,10 +1289,6 @@ void q_texttospeechengine_on_event_filter(void* self, bool (*callback)(void*, vo
 ///
 void q_texttospeechengine_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_timer_event` instead
-///
-#define q_texttospeechengine_qbase_timer_event q_texttospeechengine_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1437,10 +1321,6 @@ void q_texttospeechengine_on_timer_event(void* self, void (*callback)(void*, voi
 /// @param event QChildEvent*
 ///
 void q_texttospeechengine_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_child_event` instead
-///
-#define q_texttospeechengine_qbase_child_event q_texttospeechengine_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1475,10 +1355,6 @@ void q_texttospeechengine_on_child_event(void* self, void (*callback)(void*, voi
 ///
 void q_texttospeechengine_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_custom_event` instead
-///
-#define q_texttospeechengine_qbase_custom_event q_texttospeechengine_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1511,10 +1387,6 @@ void q_texttospeechengine_on_custom_event(void* self, void (*callback)(void*, vo
 /// @param signal QMetaMethod*
 ///
 void q_texttospeechengine_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_connect_notify` instead
-///
-#define q_texttospeechengine_qbase_connect_notify q_texttospeechengine_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1549,10 +1421,6 @@ void q_texttospeechengine_on_connect_notify(void* self, void (*callback)(void*, 
 ///
 void q_texttospeechengine_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_disconnect_notify` instead
-///
-#define q_texttospeechengine_qbase_disconnect_notify q_texttospeechengine_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1585,10 +1453,6 @@ void q_texttospeechengine_on_disconnect_notify(void* self, void (*callback)(void
 ///
 QObject* q_texttospeechengine_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_sender` instead
-///
-#define q_texttospeechengine_qbase_sender q_texttospeechengine_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1619,10 +1483,6 @@ void q_texttospeechengine_on_sender(void* self, QObject* (*callback)());
 /// @param self QTextToSpeechEngine*
 ///
 int32_t q_texttospeechengine_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_sender_signal_index` instead
-///
-#define q_texttospeechengine_qbase_sender_signal_index q_texttospeechengine_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1656,10 +1516,6 @@ void q_texttospeechengine_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 int32_t q_texttospeechengine_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_receivers` instead
-///
-#define q_texttospeechengine_qbase_receivers q_texttospeechengine_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1692,10 +1548,6 @@ void q_texttospeechengine_on_receivers(void* self, int32_t (*callback)(void*, co
 /// @param signal QMetaMethod*
 ///
 bool q_texttospeechengine_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_texttospeechengine_super_is_signal_connected` instead
-///
-#define q_texttospeechengine_qbase_is_signal_connected q_texttospeechengine_super_is_signal_connected
 
 /// Inherited from QObject
 ///

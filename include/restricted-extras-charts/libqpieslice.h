@@ -56,10 +56,6 @@ const QMetaObject* q_pieslice_meta_object(void* self);
 ///
 void q_pieslice_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_pieslice_super_meta_object` instead
-///
-#define q_pieslice_qbase_meta_object q_pieslice_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -79,10 +75,6 @@ void* q_pieslice_metacast(void* self, const char* param1);
 /// @param callback void* func(QPieSlice* self, const char* param1)
 ///
 void q_pieslice_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_pieslice_super_metacast` instead
-///
-#define q_pieslice_qbase_metacast q_pieslice_super_metacast
 
 /// Base class method implementation
 ///
@@ -104,10 +96,6 @@ int32_t q_pieslice_metacall(void* self, int32_t param1, int param2, void* param3
 /// @param callback int32_t func(QPieSlice* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_pieslice_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_pieslice_super_metacall` instead
-///
-#define q_pieslice_qbase_metacall q_pieslice_super_metacall
 
 /// Base class method implementation
 ///
@@ -1086,10 +1074,6 @@ void q_pieslice_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_pieslice_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_pieslice_super_event` instead
-///
-#define q_pieslice_qbase_event q_pieslice_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1123,10 +1107,6 @@ void q_pieslice_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_pieslice_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_pieslice_super_event_filter` instead
-///
-#define q_pieslice_qbase_event_filter q_pieslice_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1162,10 +1142,6 @@ void q_pieslice_on_event_filter(void* self, bool (*callback)(void*, void*, void*
 ///
 void q_pieslice_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_pieslice_super_timer_event` instead
-///
-#define q_pieslice_qbase_timer_event q_pieslice_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1198,10 +1174,6 @@ void q_pieslice_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_pieslice_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_pieslice_super_child_event` instead
-///
-#define q_pieslice_qbase_child_event q_pieslice_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1236,10 +1208,6 @@ void q_pieslice_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_pieslice_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_pieslice_super_custom_event` instead
-///
-#define q_pieslice_qbase_custom_event q_pieslice_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1272,10 +1240,6 @@ void q_pieslice_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_pieslice_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_pieslice_super_connect_notify` instead
-///
-#define q_pieslice_qbase_connect_notify q_pieslice_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1310,10 +1274,6 @@ void q_pieslice_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_pieslice_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_pieslice_super_disconnect_notify` instead
-///
-#define q_pieslice_qbase_disconnect_notify q_pieslice_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1346,10 +1306,6 @@ void q_pieslice_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 QObject* q_pieslice_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_pieslice_super_sender` instead
-///
-#define q_pieslice_qbase_sender q_pieslice_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1380,10 +1336,6 @@ void q_pieslice_on_sender(void* self, QObject* (*callback)());
 /// @param self QPieSlice*
 ///
 int32_t q_pieslice_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_pieslice_super_sender_signal_index` instead
-///
-#define q_pieslice_qbase_sender_signal_index q_pieslice_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1417,10 +1369,6 @@ void q_pieslice_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_pieslice_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_pieslice_super_receivers` instead
-///
-#define q_pieslice_qbase_receivers q_pieslice_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1453,10 +1401,6 @@ void q_pieslice_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 /// @param signal QMetaMethod*
 ///
 bool q_pieslice_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_pieslice_super_is_signal_connected` instead
-///
-#define q_pieslice_qbase_is_signal_connected q_pieslice_super_is_signal_connected
 
 /// Inherited from QObject
 ///

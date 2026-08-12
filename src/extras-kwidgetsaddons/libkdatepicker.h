@@ -54,10 +54,6 @@ const QMetaObject* k_datepicker_meta_object(void* self);
 ///
 void k_datepicker_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_datepicker_super_meta_object` instead
-///
-#define k_datepicker_qbase_meta_object k_datepicker_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -77,10 +73,6 @@ void* k_datepicker_metacast(void* self, const char* param1);
 /// @param callback void* func(KDatePicker* self, const char* param1)
 ///
 void k_datepicker_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_datepicker_super_metacast` instead
-///
-#define k_datepicker_qbase_metacast k_datepicker_super_metacast
 
 /// Base class method implementation
 ///
@@ -102,10 +94,6 @@ int32_t k_datepicker_metacall(void* self, int32_t param1, int param2, void* para
 /// @param callback int32_t func(KDatePicker* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_datepicker_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_datepicker_super_metacall` instead
-///
-#define k_datepicker_qbase_metacall k_datepicker_super_metacall
 
 /// Base class method implementation
 ///
@@ -140,10 +128,6 @@ QSize* k_datepicker_size_hint(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_datepicker_on_size_hint(void* self, QSize* (*callback)());
-
-/// @warning DEPRECATED: Use `k_datepicker_super_size_hint` instead
-///
-#define k_datepicker_qbase_size_hint k_datepicker_super_size_hint
 
 /// [Upstream resources](https://api.kde.org/kdatepicker.html#sizeHint)
 ///
@@ -216,10 +200,6 @@ bool k_datepicker_event_filter(void* self, void* o, void* e);
 ///
 void k_datepicker_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_datepicker_super_event_filter` instead
-///
-#define k_datepicker_qbase_event_filter k_datepicker_super_event_filter
-
 /// [Upstream resources](https://api.kde.org/kdatepicker.html#eventFilter)
 ///
 /// Base class method implementation
@@ -246,10 +226,6 @@ void k_datepicker_resize_event(void* self, void* param1);
 ///
 void k_datepicker_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_datepicker_super_resize_event` instead
-///
-#define k_datepicker_qbase_resize_event k_datepicker_super_resize_event
-
 /// [Upstream resources](https://api.kde.org/kdatepicker.html#resizeEvent)
 ///
 /// Base class method implementation
@@ -274,10 +250,6 @@ void k_datepicker_change_event(void* self, void* event);
 /// @param callback void func(KDatePicker* self, QEvent* event)
 ///
 void k_datepicker_on_change_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_datepicker_super_change_event` instead
-///
-#define k_datepicker_qbase_change_event k_datepicker_super_change_event
 
 /// [Upstream resources](https://api.kde.org/kdatepicker.html#changeEvent)
 ///
@@ -304,10 +276,6 @@ void k_datepicker_date_changed_slot(void* self, void* date);
 ///
 void k_datepicker_on_date_changed_slot(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_datepicker_super_date_changed_slot` instead
-///
-#define k_datepicker_qbase_date_changed_slot k_datepicker_super_date_changed_slot
-
 /// [Upstream resources](https://api.kde.org/kdatepicker.html#dateChangedSlot)
 ///
 /// Base class method implementation
@@ -332,10 +300,6 @@ void k_datepicker_table_clicked_slot(void* self);
 ///
 void k_datepicker_on_table_clicked_slot(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_datepicker_super_table_clicked_slot` instead
-///
-#define k_datepicker_qbase_table_clicked_slot k_datepicker_super_table_clicked_slot
-
 /// [Upstream resources](https://api.kde.org/kdatepicker.html#tableClickedSlot)
 ///
 /// Base class method implementation
@@ -358,10 +322,6 @@ void k_datepicker_month_forward_clicked(void* self);
 /// @param callback void func()
 ///
 void k_datepicker_on_month_forward_clicked(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_datepicker_super_month_forward_clicked` instead
-///
-#define k_datepicker_qbase_month_forward_clicked k_datepicker_super_month_forward_clicked
 
 /// [Upstream resources](https://api.kde.org/kdatepicker.html#monthForwardClicked)
 ///
@@ -386,10 +346,6 @@ void k_datepicker_month_backward_clicked(void* self);
 ///
 void k_datepicker_on_month_backward_clicked(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_datepicker_super_month_backward_clicked` instead
-///
-#define k_datepicker_qbase_month_backward_clicked k_datepicker_super_month_backward_clicked
-
 /// [Upstream resources](https://api.kde.org/kdatepicker.html#monthBackwardClicked)
 ///
 /// Base class method implementation
@@ -412,10 +368,6 @@ void k_datepicker_year_forward_clicked(void* self);
 /// @param callback void func()
 ///
 void k_datepicker_on_year_forward_clicked(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_datepicker_super_year_forward_clicked` instead
-///
-#define k_datepicker_qbase_year_forward_clicked k_datepicker_super_year_forward_clicked
 
 /// [Upstream resources](https://api.kde.org/kdatepicker.html#yearForwardClicked)
 ///
@@ -440,10 +392,6 @@ void k_datepicker_year_backward_clicked(void* self);
 ///
 void k_datepicker_on_year_backward_clicked(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_datepicker_super_year_backward_clicked` instead
-///
-#define k_datepicker_qbase_year_backward_clicked k_datepicker_super_year_backward_clicked
-
 /// [Upstream resources](https://api.kde.org/kdatepicker.html#yearBackwardClicked)
 ///
 /// Base class method implementation
@@ -466,10 +414,6 @@ void k_datepicker_select_month_clicked(void* self);
 /// @param callback void func()
 ///
 void k_datepicker_on_select_month_clicked(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_datepicker_super_select_month_clicked` instead
-///
-#define k_datepicker_qbase_select_month_clicked k_datepicker_super_select_month_clicked
 
 /// [Upstream resources](https://api.kde.org/kdatepicker.html#selectMonthClicked)
 ///
@@ -494,10 +438,6 @@ void k_datepicker_select_year_clicked(void* self);
 ///
 void k_datepicker_on_select_year_clicked(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_datepicker_super_select_year_clicked` instead
-///
-#define k_datepicker_qbase_select_year_clicked k_datepicker_super_select_year_clicked
-
 /// [Upstream resources](https://api.kde.org/kdatepicker.html#selectYearClicked)
 ///
 /// Base class method implementation
@@ -520,10 +460,6 @@ void k_datepicker_uncheck_year_selector(void* self);
 /// @param callback void func()
 ///
 void k_datepicker_on_uncheck_year_selector(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_datepicker_super_uncheck_year_selector` instead
-///
-#define k_datepicker_qbase_uncheck_year_selector k_datepicker_super_uncheck_year_selector
 
 /// [Upstream resources](https://api.kde.org/kdatepicker.html#uncheckYearSelector)
 ///
@@ -548,10 +484,6 @@ void k_datepicker_line_enter_pressed(void* self);
 ///
 void k_datepicker_on_line_enter_pressed(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_datepicker_super_line_enter_pressed` instead
-///
-#define k_datepicker_qbase_line_enter_pressed k_datepicker_super_line_enter_pressed
-
 /// [Upstream resources](https://api.kde.org/kdatepicker.html#lineEnterPressed)
 ///
 /// Base class method implementation
@@ -574,10 +506,6 @@ void k_datepicker_today_button_clicked(void* self);
 /// @param callback void func()
 ///
 void k_datepicker_on_today_button_clicked(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_datepicker_super_today_button_clicked` instead
-///
-#define k_datepicker_qbase_today_button_clicked k_datepicker_super_today_button_clicked
 
 /// [Upstream resources](https://api.kde.org/kdatepicker.html#todayButtonClicked)
 ///
@@ -602,10 +530,6 @@ void k_datepicker_week_selected(void* self, int param1);
 /// @param callback void func(KDatePicker* self, int param1)
 ///
 void k_datepicker_on_week_selected(void* self, void (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `k_datepicker_super_week_selected` instead
-///
-#define k_datepicker_qbase_week_selected k_datepicker_super_week_selected
 
 /// [Upstream resources](https://api.kde.org/kdatepicker.html#weekSelected)
 ///
@@ -3780,10 +3704,6 @@ int32_t k_datepicker_encode_metric_f(int32_t metric, double value);
 ///
 bool k_datepicker_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_event` instead
-///
-#define k_datepicker_qbase_event k_datepicker_super_event
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#event)
@@ -3816,10 +3736,6 @@ void k_datepicker_on_event(void* self, bool (*callback)(void*, void*));
 /// @param param1 QPaintEvent*
 ///
 void k_datepicker_paint_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_paint_event` instead
-///
-#define k_datepicker_qbase_paint_event k_datepicker_super_paint_event
 
 /// Inherited from QFrame
 ///
@@ -3854,10 +3770,6 @@ void k_datepicker_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datepicker_init_style_option(void* self, void* option);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_init_style_option` instead
-///
-#define k_datepicker_qbase_init_style_option k_datepicker_super_init_style_option
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
@@ -3889,10 +3801,6 @@ void k_datepicker_on_init_style_option(void* self, void (*callback)(void*, void*
 /// @param self KDatePicker*
 ///
 int32_t k_datepicker_dev_type(void* self);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_dev_type` instead
-///
-#define k_datepicker_qbase_dev_type k_datepicker_super_dev_type
 
 /// Inherited from QWidget
 ///
@@ -3926,10 +3834,6 @@ void k_datepicker_on_dev_type(void* self, int32_t (*callback)());
 ///
 void k_datepicker_set_visible(void* self, bool visible);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_set_visible` instead
-///
-#define k_datepicker_qbase_set_visible k_datepicker_super_set_visible
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -3961,10 +3865,6 @@ void k_datepicker_on_set_visible(void* self, void (*callback)(void*, bool));
 /// @param self KDatePicker*
 ///
 QSize* k_datepicker_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_minimum_size_hint` instead
-///
-#define k_datepicker_qbase_minimum_size_hint k_datepicker_super_minimum_size_hint
 
 /// Inherited from QWidget
 ///
@@ -4000,10 +3900,6 @@ void k_datepicker_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 int32_t k_datepicker_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_height_for_width` instead
-///
-#define k_datepicker_qbase_height_for_width k_datepicker_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -4036,10 +3932,6 @@ void k_datepicker_on_height_for_width(void* self, int32_t (*callback)(void*, int
 ///
 bool k_datepicker_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_has_height_for_width` instead
-///
-#define k_datepicker_qbase_has_height_for_width k_datepicker_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -4070,10 +3962,6 @@ void k_datepicker_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self KDatePicker*
 ///
 QPaintEngine* k_datepicker_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_paint_engine` instead
-///
-#define k_datepicker_qbase_paint_engine k_datepicker_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -4106,10 +3994,6 @@ void k_datepicker_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QMouseEvent*
 ///
 void k_datepicker_mouse_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_mouse_press_event` instead
-///
-#define k_datepicker_qbase_mouse_press_event k_datepicker_super_mouse_press_event
 
 /// Inherited from QWidget
 ///
@@ -4144,10 +4028,6 @@ void k_datepicker_on_mouse_press_event(void* self, void (*callback)(void*, void*
 ///
 void k_datepicker_mouse_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_mouse_release_event` instead
-///
-#define k_datepicker_qbase_mouse_release_event k_datepicker_super_mouse_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
@@ -4180,10 +4060,6 @@ void k_datepicker_on_mouse_release_event(void* self, void (*callback)(void*, voi
 /// @param event QMouseEvent*
 ///
 void k_datepicker_mouse_double_click_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_mouse_double_click_event` instead
-///
-#define k_datepicker_qbase_mouse_double_click_event k_datepicker_super_mouse_double_click_event
 
 /// Inherited from QWidget
 ///
@@ -4218,10 +4094,6 @@ void k_datepicker_on_mouse_double_click_event(void* self, void (*callback)(void*
 ///
 void k_datepicker_mouse_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_mouse_move_event` instead
-///
-#define k_datepicker_qbase_mouse_move_event k_datepicker_super_mouse_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -4254,10 +4126,6 @@ void k_datepicker_on_mouse_move_event(void* self, void (*callback)(void*, void*)
 /// @param event QWheelEvent*
 ///
 void k_datepicker_wheel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_wheel_event` instead
-///
-#define k_datepicker_qbase_wheel_event k_datepicker_super_wheel_event
 
 /// Inherited from QWidget
 ///
@@ -4292,10 +4160,6 @@ void k_datepicker_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datepicker_key_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_key_press_event` instead
-///
-#define k_datepicker_qbase_key_press_event k_datepicker_super_key_press_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
@@ -4328,10 +4192,6 @@ void k_datepicker_on_key_press_event(void* self, void (*callback)(void*, void*))
 /// @param event QKeyEvent*
 ///
 void k_datepicker_key_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_key_release_event` instead
-///
-#define k_datepicker_qbase_key_release_event k_datepicker_super_key_release_event
 
 /// Inherited from QWidget
 ///
@@ -4366,10 +4226,6 @@ void k_datepicker_on_key_release_event(void* self, void (*callback)(void*, void*
 ///
 void k_datepicker_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_focus_in_event` instead
-///
-#define k_datepicker_qbase_focus_in_event k_datepicker_super_focus_in_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -4402,10 +4258,6 @@ void k_datepicker_on_focus_in_event(void* self, void (*callback)(void*, void*));
 /// @param event QFocusEvent*
 ///
 void k_datepicker_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_focus_out_event` instead
-///
-#define k_datepicker_qbase_focus_out_event k_datepicker_super_focus_out_event
 
 /// Inherited from QWidget
 ///
@@ -4440,10 +4292,6 @@ void k_datepicker_on_focus_out_event(void* self, void (*callback)(void*, void*))
 ///
 void k_datepicker_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_enter_event` instead
-///
-#define k_datepicker_qbase_enter_event k_datepicker_super_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -4476,10 +4324,6 @@ void k_datepicker_on_enter_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void k_datepicker_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_leave_event` instead
-///
-#define k_datepicker_qbase_leave_event k_datepicker_super_leave_event
 
 /// Inherited from QWidget
 ///
@@ -4514,10 +4358,6 @@ void k_datepicker_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datepicker_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_move_event` instead
-///
-#define k_datepicker_qbase_move_event k_datepicker_super_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -4550,10 +4390,6 @@ void k_datepicker_on_move_event(void* self, void (*callback)(void*, void*));
 /// @param event QCloseEvent*
 ///
 void k_datepicker_close_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_close_event` instead
-///
-#define k_datepicker_qbase_close_event k_datepicker_super_close_event
 
 /// Inherited from QWidget
 ///
@@ -4588,10 +4424,6 @@ void k_datepicker_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datepicker_context_menu_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_context_menu_event` instead
-///
-#define k_datepicker_qbase_context_menu_event k_datepicker_super_context_menu_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
@@ -4624,10 +4456,6 @@ void k_datepicker_on_context_menu_event(void* self, void (*callback)(void*, void
 /// @param event QTabletEvent*
 ///
 void k_datepicker_tablet_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_tablet_event` instead
-///
-#define k_datepicker_qbase_tablet_event k_datepicker_super_tablet_event
 
 /// Inherited from QWidget
 ///
@@ -4662,10 +4490,6 @@ void k_datepicker_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datepicker_action_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_action_event` instead
-///
-#define k_datepicker_qbase_action_event k_datepicker_super_action_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -4698,10 +4522,6 @@ void k_datepicker_on_action_event(void* self, void (*callback)(void*, void*));
 /// @param event QDragEnterEvent*
 ///
 void k_datepicker_drag_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_drag_enter_event` instead
-///
-#define k_datepicker_qbase_drag_enter_event k_datepicker_super_drag_enter_event
 
 /// Inherited from QWidget
 ///
@@ -4736,10 +4556,6 @@ void k_datepicker_on_drag_enter_event(void* self, void (*callback)(void*, void*)
 ///
 void k_datepicker_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_drag_move_event` instead
-///
-#define k_datepicker_qbase_drag_move_event k_datepicker_super_drag_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -4772,10 +4588,6 @@ void k_datepicker_on_drag_move_event(void* self, void (*callback)(void*, void*))
 /// @param event QDragLeaveEvent*
 ///
 void k_datepicker_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_drag_leave_event` instead
-///
-#define k_datepicker_qbase_drag_leave_event k_datepicker_super_drag_leave_event
 
 /// Inherited from QWidget
 ///
@@ -4810,10 +4622,6 @@ void k_datepicker_on_drag_leave_event(void* self, void (*callback)(void*, void*)
 ///
 void k_datepicker_drop_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_drop_event` instead
-///
-#define k_datepicker_qbase_drop_event k_datepicker_super_drop_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4847,10 +4655,6 @@ void k_datepicker_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datepicker_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_show_event` instead
-///
-#define k_datepicker_qbase_show_event k_datepicker_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -4883,10 +4687,6 @@ void k_datepicker_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param event QHideEvent*
 ///
 void k_datepicker_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_hide_event` instead
-///
-#define k_datepicker_qbase_hide_event k_datepicker_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -4923,10 +4723,6 @@ void k_datepicker_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool k_datepicker_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_native_event` instead
-///
-#define k_datepicker_qbase_native_event k_datepicker_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4962,10 +4758,6 @@ void k_datepicker_on_native_event(void* self, bool (*callback)(void*, libqt_stri
 ///
 int32_t k_datepicker_metric(void* self, int32_t param1);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_metric` instead
-///
-#define k_datepicker_qbase_metric k_datepicker_super_metric
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -4998,10 +4790,6 @@ void k_datepicker_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 /// @param painter QPainter*
 ///
 void k_datepicker_init_painter(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_init_painter` instead
-///
-#define k_datepicker_qbase_init_painter k_datepicker_super_init_painter
 
 /// Inherited from QWidget
 ///
@@ -5036,10 +4824,6 @@ void k_datepicker_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* k_datepicker_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_redirected` instead
-///
-#define k_datepicker_qbase_redirected k_datepicker_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -5071,10 +4855,6 @@ void k_datepicker_on_redirected(void* self, QPaintDevice* (*callback)(void*, voi
 /// @param self KDatePicker*
 ///
 QPainter* k_datepicker_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_shared_painter` instead
-///
-#define k_datepicker_qbase_shared_painter k_datepicker_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -5108,10 +4888,6 @@ void k_datepicker_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void k_datepicker_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_input_method_event` instead
-///
-#define k_datepicker_qbase_input_method_event k_datepicker_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -5144,10 +4920,6 @@ void k_datepicker_on_input_method_event(void* self, void (*callback)(void*, void
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* k_datepicker_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_input_method_query` instead
-///
-#define k_datepicker_qbase_input_method_query k_datepicker_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -5184,10 +4956,6 @@ void k_datepicker_on_input_method_query(void* self, QVariant* (*callback)(void*,
 ///
 bool k_datepicker_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_focus_next_prev_child` instead
-///
-#define k_datepicker_qbase_focus_next_prev_child k_datepicker_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -5220,10 +4988,6 @@ void k_datepicker_on_focus_next_prev_child(void* self, bool (*callback)(void*, b
 /// @param event QTimerEvent*
 ///
 void k_datepicker_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_timer_event` instead
-///
-#define k_datepicker_qbase_timer_event k_datepicker_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -5258,10 +5022,6 @@ void k_datepicker_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datepicker_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_child_event` instead
-///
-#define k_datepicker_qbase_child_event k_datepicker_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -5294,10 +5054,6 @@ void k_datepicker_on_child_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void k_datepicker_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_custom_event` instead
-///
-#define k_datepicker_qbase_custom_event k_datepicker_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -5332,10 +5088,6 @@ void k_datepicker_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void k_datepicker_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_connect_notify` instead
-///
-#define k_datepicker_qbase_connect_notify k_datepicker_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5368,10 +5120,6 @@ void k_datepicker_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void k_datepicker_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_disconnect_notify` instead
-///
-#define k_datepicker_qbase_disconnect_notify k_datepicker_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -5406,10 +5154,6 @@ void k_datepicker_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 void k_datepicker_draw_frame(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_draw_frame` instead
-///
-#define k_datepicker_qbase_draw_frame k_datepicker_super_draw_frame
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#drawFrame)
@@ -5442,10 +5186,6 @@ void k_datepicker_on_draw_frame(void* self, void (*callback)(void*, void*));
 ///
 void k_datepicker_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_update_micro_focus` instead
-///
-#define k_datepicker_qbase_update_micro_focus k_datepicker_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5476,10 +5216,6 @@ void k_datepicker_on_update_micro_focus(void* self, void (*callback)());
 /// @param self KDatePicker*
 ///
 void k_datepicker_create(void* self);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_create` instead
-///
-#define k_datepicker_qbase_create k_datepicker_super_create
 
 /// Inherited from QWidget
 ///
@@ -5512,10 +5248,6 @@ void k_datepicker_on_create(void* self, void (*callback)());
 ///
 void k_datepicker_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_destroy` instead
-///
-#define k_datepicker_qbase_destroy k_datepicker_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5546,10 +5278,6 @@ void k_datepicker_on_destroy(void* self, void (*callback)());
 /// @param self KDatePicker*
 ///
 bool k_datepicker_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_focus_next_child` instead
-///
-#define k_datepicker_qbase_focus_next_child k_datepicker_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -5582,10 +5310,6 @@ void k_datepicker_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_datepicker_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_focus_previous_child` instead
-///
-#define k_datepicker_qbase_focus_previous_child k_datepicker_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5616,10 +5340,6 @@ void k_datepicker_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self KDatePicker*
 ///
 QObject* k_datepicker_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_sender` instead
-///
-#define k_datepicker_qbase_sender k_datepicker_super_sender
 
 /// Inherited from QObject
 ///
@@ -5652,10 +5372,6 @@ void k_datepicker_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_datepicker_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_sender_signal_index` instead
-///
-#define k_datepicker_qbase_sender_signal_index k_datepicker_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5687,10 +5403,6 @@ void k_datepicker_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t k_datepicker_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_receivers` instead
-///
-#define k_datepicker_qbase_receivers k_datepicker_super_receivers
 
 /// Inherited from QObject
 ///
@@ -5725,10 +5437,6 @@ void k_datepicker_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 bool k_datepicker_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_datepicker_super_is_signal_connected` instead
-///
-#define k_datepicker_qbase_is_signal_connected k_datepicker_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5762,10 +5470,6 @@ void k_datepicker_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_datepicker_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_datepicker_super_get_decoded_metric_f` instead
-///
-#define k_datepicker_qbase_get_decoded_metric_f k_datepicker_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

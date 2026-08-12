@@ -56,10 +56,6 @@ const QMetaObject* q_propertyanimation_meta_object(void* self);
 ///
 void q_propertyanimation_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_propertyanimation_super_meta_object` instead
-///
-#define q_propertyanimation_qbase_meta_object q_propertyanimation_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -79,10 +75,6 @@ void* q_propertyanimation_metacast(void* self, const char* param1);
 /// @param callback void* func(QPropertyAnimation* self, const char* param1)
 ///
 void q_propertyanimation_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_propertyanimation_super_metacast` instead
-///
-#define q_propertyanimation_qbase_metacast q_propertyanimation_super_metacast
 
 /// Base class method implementation
 ///
@@ -104,10 +96,6 @@ int32_t q_propertyanimation_metacall(void* self, int32_t param1, int param2, voi
 /// @param callback int32_t func(QPropertyAnimation* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_propertyanimation_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_propertyanimation_super_metacall` instead
-///
-#define q_propertyanimation_qbase_metacall q_propertyanimation_super_metacall
 
 /// Base class method implementation
 ///
@@ -170,10 +158,6 @@ bool q_propertyanimation_event(void* self, void* event);
 ///
 void q_propertyanimation_on_event(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_propertyanimation_super_event` instead
-///
-#define q_propertyanimation_qbase_event q_propertyanimation_super_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertyanimation.html#event)
 ///
 /// Base class method implementation
@@ -198,10 +182,6 @@ void q_propertyanimation_update_current_value(void* self, void* value);
 /// @param callback void func(QPropertyAnimation* self, QVariant* value)
 ///
 void q_propertyanimation_on_update_current_value(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_propertyanimation_super_update_current_value` instead
-///
-#define q_propertyanimation_qbase_update_current_value q_propertyanimation_super_update_current_value
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertyanimation.html#updateCurrentValue)
 ///
@@ -228,10 +208,6 @@ void q_propertyanimation_update_state(void* self, int32_t newState, int32_t oldS
 /// @param callback void func(QPropertyAnimation* self, enum QAbstractAnimation__State newState, enum QAbstractAnimation__State oldState)
 ///
 void q_propertyanimation_on_update_state(void* self, void (*callback)(void*, int32_t, int32_t));
-
-/// @warning DEPRECATED: Use `q_propertyanimation_super_update_state` instead
-///
-#define q_propertyanimation_qbase_update_state q_propertyanimation_super_update_state
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertyanimation.html#updateState)
 ///
@@ -1060,10 +1036,6 @@ void q_propertyanimation_on_destroyed1(void* self, void (*callback)(void*, void*
 ///
 int32_t q_propertyanimation_duration(void* self);
 
-/// @warning DEPRECATED: Use `q_propertyanimation_super_duration` instead
-///
-#define q_propertyanimation_qbase_duration q_propertyanimation_super_duration
-
 /// Inherited from QVariantAnimation
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariantanimation.html#duration)
@@ -1095,10 +1067,6 @@ void q_propertyanimation_on_duration(void* self, int32_t (*callback)());
 /// @param param1 int
 ///
 void q_propertyanimation_update_current_time(void* self, int param1);
-
-/// @warning DEPRECATED: Use `q_propertyanimation_super_update_current_time` instead
-///
-#define q_propertyanimation_qbase_update_current_time q_propertyanimation_super_update_current_time
 
 /// Inherited from QVariantAnimation
 ///
@@ -1134,10 +1102,6 @@ void q_propertyanimation_on_update_current_time(void* self, void (*callback)(voi
 /// @param progress double
 ///
 QVariant* q_propertyanimation_interpolated(void* self, void* from, void* to, double progress);
-
-/// @warning DEPRECATED: Use `q_propertyanimation_super_interpolated` instead
-///
-#define q_propertyanimation_qbase_interpolated q_propertyanimation_super_interpolated
 
 /// Inherited from QVariantAnimation
 ///
@@ -1176,10 +1140,6 @@ void q_propertyanimation_on_interpolated(void* self, QVariant* (*callback)(void*
 ///
 void q_propertyanimation_update_direction(void* self, int32_t direction);
 
-/// @warning DEPRECATED: Use `q_propertyanimation_super_update_direction` instead
-///
-#define q_propertyanimation_qbase_update_direction q_propertyanimation_super_update_direction
-
 /// Inherited from QAbstractAnimation
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractanimation.html#updateDirection)
@@ -1213,10 +1173,6 @@ void q_propertyanimation_on_update_direction(void* self, void (*callback)(void*,
 /// @param event QEvent*
 ///
 bool q_propertyanimation_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_propertyanimation_super_event_filter` instead
-///
-#define q_propertyanimation_qbase_event_filter q_propertyanimation_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1252,10 +1208,6 @@ void q_propertyanimation_on_event_filter(void* self, bool (*callback)(void*, voi
 ///
 void q_propertyanimation_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_propertyanimation_super_timer_event` instead
-///
-#define q_propertyanimation_qbase_timer_event q_propertyanimation_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1288,10 +1240,6 @@ void q_propertyanimation_on_timer_event(void* self, void (*callback)(void*, void
 /// @param event QChildEvent*
 ///
 void q_propertyanimation_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_propertyanimation_super_child_event` instead
-///
-#define q_propertyanimation_qbase_child_event q_propertyanimation_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1326,10 +1274,6 @@ void q_propertyanimation_on_child_event(void* self, void (*callback)(void*, void
 ///
 void q_propertyanimation_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_propertyanimation_super_custom_event` instead
-///
-#define q_propertyanimation_qbase_custom_event q_propertyanimation_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1362,10 +1306,6 @@ void q_propertyanimation_on_custom_event(void* self, void (*callback)(void*, voi
 /// @param signal QMetaMethod*
 ///
 void q_propertyanimation_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_propertyanimation_super_connect_notify` instead
-///
-#define q_propertyanimation_qbase_connect_notify q_propertyanimation_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1400,10 +1340,6 @@ void q_propertyanimation_on_connect_notify(void* self, void (*callback)(void*, v
 ///
 void q_propertyanimation_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_propertyanimation_super_disconnect_notify` instead
-///
-#define q_propertyanimation_qbase_disconnect_notify q_propertyanimation_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1436,10 +1372,6 @@ void q_propertyanimation_on_disconnect_notify(void* self, void (*callback)(void*
 ///
 QObject* q_propertyanimation_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_propertyanimation_super_sender` instead
-///
-#define q_propertyanimation_qbase_sender q_propertyanimation_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1470,10 +1402,6 @@ void q_propertyanimation_on_sender(void* self, QObject* (*callback)());
 /// @param self QPropertyAnimation*
 ///
 int32_t q_propertyanimation_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_propertyanimation_super_sender_signal_index` instead
-///
-#define q_propertyanimation_qbase_sender_signal_index q_propertyanimation_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1507,10 +1435,6 @@ void q_propertyanimation_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 int32_t q_propertyanimation_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_propertyanimation_super_receivers` instead
-///
-#define q_propertyanimation_qbase_receivers q_propertyanimation_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1543,10 +1467,6 @@ void q_propertyanimation_on_receivers(void* self, int32_t (*callback)(void*, con
 /// @param signal QMetaMethod*
 ///
 bool q_propertyanimation_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_propertyanimation_super_is_signal_connected` instead
-///
-#define q_propertyanimation_qbase_is_signal_connected q_propertyanimation_super_is_signal_connected
 
 /// Inherited from QObject
 ///

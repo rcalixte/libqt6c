@@ -37,10 +37,6 @@ const QMetaObject* k_lineediturldropeventfilter_meta_object(void* self);
 ///
 void k_lineediturldropeventfilter_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_lineediturldropeventfilter_super_meta_object` instead
-///
-#define k_lineediturldropeventfilter_qbase_meta_object k_lineediturldropeventfilter_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* k_lineediturldropeventfilter_metacast(void* self, const char* param1);
 /// @param callback void* func(KLineEditUrlDropEventFilter* self, const char* param1)
 ///
 void k_lineediturldropeventfilter_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_lineediturldropeventfilter_super_metacast` instead
-///
-#define k_lineediturldropeventfilter_qbase_metacast k_lineediturldropeventfilter_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t k_lineediturldropeventfilter_metacall(void* self, int32_t param1, int pa
 /// @param callback int32_t func(KLineEditUrlDropEventFilter* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_lineediturldropeventfilter_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_lineediturldropeventfilter_super_metacall` instead
-///
-#define k_lineediturldropeventfilter_qbase_metacall k_lineediturldropeventfilter_super_metacall
 
 /// Base class method implementation
 ///
@@ -123,10 +111,6 @@ bool k_lineediturldropeventfilter_event_filter(void* self, void* object, void* e
 /// @param callback bool func(KLineEditUrlDropEventFilter* self, QObject* object, QEvent* event)
 ///
 void k_lineediturldropeventfilter_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_lineediturldropeventfilter_super_event_filter` instead
-///
-#define k_lineediturldropeventfilter_qbase_event_filter k_lineediturldropeventfilter_super_event_filter
 
 /// [Upstream resources](https://api.kde.org/klineediturldropeventfilter.html#eventFilter)
 ///
@@ -615,10 +599,6 @@ void k_lineediturldropeventfilter_on_destroyed1(void* self, void (*callback)(voi
 ///
 bool k_lineediturldropeventfilter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_lineediturldropeventfilter_super_event` instead
-///
-#define k_lineediturldropeventfilter_qbase_event k_lineediturldropeventfilter_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -651,10 +631,6 @@ void k_lineediturldropeventfilter_on_event(void* self, bool (*callback)(void*, v
 /// @param event QTimerEvent*
 ///
 void k_lineediturldropeventfilter_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_lineediturldropeventfilter_super_timer_event` instead
-///
-#define k_lineediturldropeventfilter_qbase_timer_event k_lineediturldropeventfilter_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -689,10 +665,6 @@ void k_lineediturldropeventfilter_on_timer_event(void* self, void (*callback)(vo
 ///
 void k_lineediturldropeventfilter_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_lineediturldropeventfilter_super_child_event` instead
-///
-#define k_lineediturldropeventfilter_qbase_child_event k_lineediturldropeventfilter_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -725,10 +697,6 @@ void k_lineediturldropeventfilter_on_child_event(void* self, void (*callback)(vo
 /// @param event QEvent*
 ///
 void k_lineediturldropeventfilter_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_lineediturldropeventfilter_super_custom_event` instead
-///
-#define k_lineediturldropeventfilter_qbase_custom_event k_lineediturldropeventfilter_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -763,10 +731,6 @@ void k_lineediturldropeventfilter_on_custom_event(void* self, void (*callback)(v
 ///
 void k_lineediturldropeventfilter_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_lineediturldropeventfilter_super_connect_notify` instead
-///
-#define k_lineediturldropeventfilter_qbase_connect_notify k_lineediturldropeventfilter_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -800,10 +764,6 @@ void k_lineediturldropeventfilter_on_connect_notify(void* self, void (*callback)
 ///
 void k_lineediturldropeventfilter_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_lineediturldropeventfilter_super_disconnect_notify` instead
-///
-#define k_lineediturldropeventfilter_qbase_disconnect_notify k_lineediturldropeventfilter_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -836,10 +796,6 @@ void k_lineediturldropeventfilter_on_disconnect_notify(void* self, void (*callba
 ///
 QObject* k_lineediturldropeventfilter_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_lineediturldropeventfilter_super_sender` instead
-///
-#define k_lineediturldropeventfilter_qbase_sender k_lineediturldropeventfilter_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -870,10 +826,6 @@ void k_lineediturldropeventfilter_on_sender(void* self, QObject* (*callback)());
 /// @param self KLineEditUrlDropEventFilter*
 ///
 int32_t k_lineediturldropeventfilter_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_lineediturldropeventfilter_super_sender_signal_index` instead
-///
-#define k_lineediturldropeventfilter_qbase_sender_signal_index k_lineediturldropeventfilter_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -907,10 +859,6 @@ void k_lineediturldropeventfilter_on_sender_signal_index(void* self, int32_t (*c
 ///
 int32_t k_lineediturldropeventfilter_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_lineediturldropeventfilter_super_receivers` instead
-///
-#define k_lineediturldropeventfilter_qbase_receivers k_lineediturldropeventfilter_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -943,10 +891,6 @@ void k_lineediturldropeventfilter_on_receivers(void* self, int32_t (*callback)(v
 /// @param signal QMetaMethod*
 ///
 bool k_lineediturldropeventfilter_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_lineediturldropeventfilter_super_is_signal_connected` instead
-///
-#define k_lineediturldropeventfilter_qbase_is_signal_connected k_lineediturldropeventfilter_super_is_signal_connected
 
 /// Inherited from QObject
 ///

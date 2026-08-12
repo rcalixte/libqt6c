@@ -66,10 +66,6 @@ const QMetaObject* k_selector_meta_object(void* self);
 ///
 void k_selector_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_selector_super_meta_object` instead
-///
-#define k_selector_qbase_meta_object k_selector_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -89,10 +85,6 @@ void* k_selector_metacast(void* self, const char* param1);
 /// @param callback void* func(KSelector* self, const char* param1)
 ///
 void k_selector_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_selector_super_metacast` instead
-///
-#define k_selector_qbase_metacast k_selector_super_metacast
 
 /// Base class method implementation
 ///
@@ -114,10 +106,6 @@ int32_t k_selector_metacall(void* self, int32_t param1, int param2, void* param3
 /// @param callback int32_t func(KSelector* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_selector_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_selector_super_metacall` instead
-///
-#define k_selector_qbase_metacall k_selector_super_metacall
 
 /// Base class method implementation
 ///
@@ -186,10 +174,6 @@ void k_selector_draw_contents(void* self, void* param1);
 ///
 void k_selector_on_draw_contents(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_selector_super_draw_contents` instead
-///
-#define k_selector_qbase_draw_contents k_selector_super_draw_contents
-
 /// [Upstream resources](https://api.kde.org/kselector.html#drawContents)
 ///
 /// Base class method implementation
@@ -215,10 +199,6 @@ void k_selector_draw_arrow(void* self, void* painter, void* pos);
 /// @param callback void func(KSelector* self, QPainter* painter, QPoint* pos)
 ///
 void k_selector_on_draw_arrow(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_selector_super_draw_arrow` instead
-///
-#define k_selector_qbase_draw_arrow k_selector_super_draw_arrow
 
 /// [Upstream resources](https://api.kde.org/kselector.html#drawArrow)
 ///
@@ -246,10 +226,6 @@ void k_selector_paint_event(void* self, void* param1);
 ///
 void k_selector_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_selector_super_paint_event` instead
-///
-#define k_selector_qbase_paint_event k_selector_super_paint_event
-
 /// [Upstream resources](https://api.kde.org/kselector.html#paintEvent)
 ///
 /// Base class method implementation
@@ -274,10 +250,6 @@ void k_selector_mouse_press_event(void* self, void* e);
 /// @param callback void func(KSelector* self, QMouseEvent* e)
 ///
 void k_selector_on_mouse_press_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_selector_super_mouse_press_event` instead
-///
-#define k_selector_qbase_mouse_press_event k_selector_super_mouse_press_event
 
 /// [Upstream resources](https://api.kde.org/kselector.html#mousePressEvent)
 ///
@@ -304,10 +276,6 @@ void k_selector_mouse_move_event(void* self, void* e);
 ///
 void k_selector_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_selector_super_mouse_move_event` instead
-///
-#define k_selector_qbase_mouse_move_event k_selector_super_mouse_move_event
-
 /// [Upstream resources](https://api.kde.org/kselector.html#mouseMoveEvent)
 ///
 /// Base class method implementation
@@ -333,10 +301,6 @@ void k_selector_mouse_release_event(void* self, void* e);
 ///
 void k_selector_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_selector_super_mouse_release_event` instead
-///
-#define k_selector_qbase_mouse_release_event k_selector_super_mouse_release_event
-
 /// [Upstream resources](https://api.kde.org/kselector.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
@@ -361,10 +325,6 @@ void k_selector_wheel_event(void* self, void* param1);
 /// @param callback void func(KSelector* self, QWheelEvent* param1)
 ///
 void k_selector_on_wheel_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_selector_super_wheel_event` instead
-///
-#define k_selector_qbase_wheel_event k_selector_super_wheel_event
 
 /// [Upstream resources](https://api.kde.org/kselector.html#wheelEvent)
 ///
@@ -3669,10 +3629,6 @@ int32_t k_selector_encode_metric_f(int32_t metric, double value);
 ///
 bool k_selector_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_selector_super_event` instead
-///
-#define k_selector_qbase_event k_selector_super_event
-
 /// Inherited from QAbstractSlider
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractslider.html#event)
@@ -3705,10 +3661,6 @@ void k_selector_on_event(void* self, bool (*callback)(void*, void*));
 /// @param change enum QAbstractSlider__SliderChange
 ///
 void k_selector_slider_change(void* self, int32_t change);
-
-/// @warning DEPRECATED: Use `k_selector_super_slider_change` instead
-///
-#define k_selector_qbase_slider_change k_selector_super_slider_change
 
 /// Inherited from QAbstractSlider
 ///
@@ -3743,10 +3695,6 @@ void k_selector_on_slider_change(void* self, void (*callback)(void*, int32_t));
 ///
 void k_selector_key_press_event(void* self, void* ev);
 
-/// @warning DEPRECATED: Use `k_selector_super_key_press_event` instead
-///
-#define k_selector_qbase_key_press_event k_selector_super_key_press_event
-
 /// Inherited from QAbstractSlider
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractslider.html#keyPressEvent)
@@ -3779,10 +3727,6 @@ void k_selector_on_key_press_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QTimerEvent*
 ///
 void k_selector_timer_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_selector_super_timer_event` instead
-///
-#define k_selector_qbase_timer_event k_selector_super_timer_event
 
 /// Inherited from QAbstractSlider
 ///
@@ -3817,10 +3761,6 @@ void k_selector_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_selector_change_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_selector_super_change_event` instead
-///
-#define k_selector_qbase_change_event k_selector_super_change_event
-
 /// Inherited from QAbstractSlider
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractslider.html#changeEvent)
@@ -3852,10 +3792,6 @@ void k_selector_on_change_event(void* self, void (*callback)(void*, void*));
 /// @param self KSelector*
 ///
 int32_t k_selector_dev_type(void* self);
-
-/// @warning DEPRECATED: Use `k_selector_super_dev_type` instead
-///
-#define k_selector_qbase_dev_type k_selector_super_dev_type
 
 /// Inherited from QWidget
 ///
@@ -3889,10 +3825,6 @@ void k_selector_on_dev_type(void* self, int32_t (*callback)());
 ///
 void k_selector_set_visible(void* self, bool visible);
 
-/// @warning DEPRECATED: Use `k_selector_super_set_visible` instead
-///
-#define k_selector_qbase_set_visible k_selector_super_set_visible
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -3924,10 +3856,6 @@ void k_selector_on_set_visible(void* self, void (*callback)(void*, bool));
 /// @param self KSelector*
 ///
 QSize* k_selector_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_selector_super_size_hint` instead
-///
-#define k_selector_qbase_size_hint k_selector_super_size_hint
 
 /// Inherited from QWidget
 ///
@@ -3961,10 +3889,6 @@ void k_selector_on_size_hint(void* self, QSize* (*callback)());
 /// @param self KSelector*
 ///
 QSize* k_selector_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_selector_super_minimum_size_hint` instead
-///
-#define k_selector_qbase_minimum_size_hint k_selector_super_minimum_size_hint
 
 /// Inherited from QWidget
 ///
@@ -4000,10 +3924,6 @@ void k_selector_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 int32_t k_selector_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_selector_super_height_for_width` instead
-///
-#define k_selector_qbase_height_for_width k_selector_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -4036,10 +3956,6 @@ void k_selector_on_height_for_width(void* self, int32_t (*callback)(void*, int))
 ///
 bool k_selector_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_selector_super_has_height_for_width` instead
-///
-#define k_selector_qbase_has_height_for_width k_selector_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -4070,10 +3986,6 @@ void k_selector_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self KSelector*
 ///
 QPaintEngine* k_selector_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_selector_super_paint_engine` instead
-///
-#define k_selector_qbase_paint_engine k_selector_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -4106,10 +4018,6 @@ void k_selector_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QMouseEvent*
 ///
 void k_selector_mouse_double_click_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_selector_super_mouse_double_click_event` instead
-///
-#define k_selector_qbase_mouse_double_click_event k_selector_super_mouse_double_click_event
 
 /// Inherited from QWidget
 ///
@@ -4144,10 +4052,6 @@ void k_selector_on_mouse_double_click_event(void* self, void (*callback)(void*, 
 ///
 void k_selector_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_selector_super_key_release_event` instead
-///
-#define k_selector_qbase_key_release_event k_selector_super_key_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -4180,10 +4084,6 @@ void k_selector_on_key_release_event(void* self, void (*callback)(void*, void*))
 /// @param event QFocusEvent*
 ///
 void k_selector_focus_in_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_selector_super_focus_in_event` instead
-///
-#define k_selector_qbase_focus_in_event k_selector_super_focus_in_event
 
 /// Inherited from QWidget
 ///
@@ -4218,10 +4118,6 @@ void k_selector_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 void k_selector_focus_out_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_selector_super_focus_out_event` instead
-///
-#define k_selector_qbase_focus_out_event k_selector_super_focus_out_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -4254,10 +4150,6 @@ void k_selector_on_focus_out_event(void* self, void (*callback)(void*, void*));
 /// @param event QEnterEvent*
 ///
 void k_selector_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_selector_super_enter_event` instead
-///
-#define k_selector_qbase_enter_event k_selector_super_enter_event
 
 /// Inherited from QWidget
 ///
@@ -4292,10 +4184,6 @@ void k_selector_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void k_selector_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_selector_super_leave_event` instead
-///
-#define k_selector_qbase_leave_event k_selector_super_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -4328,10 +4216,6 @@ void k_selector_on_leave_event(void* self, void (*callback)(void*, void*));
 /// @param event QMoveEvent*
 ///
 void k_selector_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_selector_super_move_event` instead
-///
-#define k_selector_qbase_move_event k_selector_super_move_event
 
 /// Inherited from QWidget
 ///
@@ -4366,10 +4250,6 @@ void k_selector_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void k_selector_resize_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_selector_super_resize_event` instead
-///
-#define k_selector_qbase_resize_event k_selector_super_resize_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
@@ -4402,10 +4282,6 @@ void k_selector_on_resize_event(void* self, void (*callback)(void*, void*));
 /// @param event QCloseEvent*
 ///
 void k_selector_close_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_selector_super_close_event` instead
-///
-#define k_selector_qbase_close_event k_selector_super_close_event
 
 /// Inherited from QWidget
 ///
@@ -4440,10 +4316,6 @@ void k_selector_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void k_selector_context_menu_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_selector_super_context_menu_event` instead
-///
-#define k_selector_qbase_context_menu_event k_selector_super_context_menu_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
@@ -4476,10 +4348,6 @@ void k_selector_on_context_menu_event(void* self, void (*callback)(void*, void*)
 /// @param event QTabletEvent*
 ///
 void k_selector_tablet_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_selector_super_tablet_event` instead
-///
-#define k_selector_qbase_tablet_event k_selector_super_tablet_event
 
 /// Inherited from QWidget
 ///
@@ -4514,10 +4382,6 @@ void k_selector_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void k_selector_action_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_selector_super_action_event` instead
-///
-#define k_selector_qbase_action_event k_selector_super_action_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -4550,10 +4414,6 @@ void k_selector_on_action_event(void* self, void (*callback)(void*, void*));
 /// @param event QDragEnterEvent*
 ///
 void k_selector_drag_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_selector_super_drag_enter_event` instead
-///
-#define k_selector_qbase_drag_enter_event k_selector_super_drag_enter_event
 
 /// Inherited from QWidget
 ///
@@ -4588,10 +4448,6 @@ void k_selector_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void k_selector_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_selector_super_drag_move_event` instead
-///
-#define k_selector_qbase_drag_move_event k_selector_super_drag_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -4624,10 +4480,6 @@ void k_selector_on_drag_move_event(void* self, void (*callback)(void*, void*));
 /// @param event QDragLeaveEvent*
 ///
 void k_selector_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_selector_super_drag_leave_event` instead
-///
-#define k_selector_qbase_drag_leave_event k_selector_super_drag_leave_event
 
 /// Inherited from QWidget
 ///
@@ -4662,10 +4514,6 @@ void k_selector_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void k_selector_drop_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_selector_super_drop_event` instead
-///
-#define k_selector_qbase_drop_event k_selector_super_drop_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4699,10 +4547,6 @@ void k_selector_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void k_selector_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_selector_super_show_event` instead
-///
-#define k_selector_qbase_show_event k_selector_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -4735,10 +4579,6 @@ void k_selector_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param event QHideEvent*
 ///
 void k_selector_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_selector_super_hide_event` instead
-///
-#define k_selector_qbase_hide_event k_selector_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -4775,10 +4615,6 @@ void k_selector_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool k_selector_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_selector_super_native_event` instead
-///
-#define k_selector_qbase_native_event k_selector_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4814,10 +4650,6 @@ void k_selector_on_native_event(void* self, bool (*callback)(void*, libqt_string
 ///
 int32_t k_selector_metric(void* self, int32_t param1);
 
-/// @warning DEPRECATED: Use `k_selector_super_metric` instead
-///
-#define k_selector_qbase_metric k_selector_super_metric
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -4850,10 +4682,6 @@ void k_selector_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 /// @param painter QPainter*
 ///
 void k_selector_init_painter(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `k_selector_super_init_painter` instead
-///
-#define k_selector_qbase_init_painter k_selector_super_init_painter
 
 /// Inherited from QWidget
 ///
@@ -4888,10 +4716,6 @@ void k_selector_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* k_selector_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_selector_super_redirected` instead
-///
-#define k_selector_qbase_redirected k_selector_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4923,10 +4747,6 @@ void k_selector_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*
 /// @param self KSelector*
 ///
 QPainter* k_selector_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `k_selector_super_shared_painter` instead
-///
-#define k_selector_qbase_shared_painter k_selector_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -4960,10 +4780,6 @@ void k_selector_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void k_selector_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_selector_super_input_method_event` instead
-///
-#define k_selector_qbase_input_method_event k_selector_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4996,10 +4812,6 @@ void k_selector_on_input_method_event(void* self, void (*callback)(void*, void*)
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* k_selector_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_selector_super_input_method_query` instead
-///
-#define k_selector_qbase_input_method_query k_selector_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -5036,10 +4848,6 @@ void k_selector_on_input_method_query(void* self, QVariant* (*callback)(void*, i
 ///
 bool k_selector_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `k_selector_super_focus_next_prev_child` instead
-///
-#define k_selector_qbase_focus_next_prev_child k_selector_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -5073,10 +4881,6 @@ void k_selector_on_focus_next_prev_child(void* self, bool (*callback)(void*, boo
 /// @param event QEvent*
 ///
 bool k_selector_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_selector_super_event_filter` instead
-///
-#define k_selector_qbase_event_filter k_selector_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -5112,10 +4916,6 @@ void k_selector_on_event_filter(void* self, bool (*callback)(void*, void*, void*
 ///
 void k_selector_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_selector_super_child_event` instead
-///
-#define k_selector_qbase_child_event k_selector_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -5148,10 +4948,6 @@ void k_selector_on_child_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void k_selector_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_selector_super_custom_event` instead
-///
-#define k_selector_qbase_custom_event k_selector_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -5186,10 +4982,6 @@ void k_selector_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void k_selector_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_selector_super_connect_notify` instead
-///
-#define k_selector_qbase_connect_notify k_selector_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5223,10 +5015,6 @@ void k_selector_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void k_selector_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_selector_super_disconnect_notify` instead
-///
-#define k_selector_qbase_disconnect_notify k_selector_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5259,10 +5047,6 @@ void k_selector_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 /// @param action enum QAbstractSlider__SliderAction
 ///
 void k_selector_set_repeat_action(void* self, int32_t action);
-
-/// @warning DEPRECATED: Use `k_selector_super_set_repeat_action` instead
-///
-#define k_selector_qbase_set_repeat_action k_selector_super_set_repeat_action
 
 /// Inherited from QAbstractSlider
 ///
@@ -5298,10 +5082,6 @@ void k_selector_on_set_repeat_action(void* self, void (*callback)(void*, int32_t
 ///
 int32_t k_selector_repeat_action(void* self);
 
-/// @warning DEPRECATED: Use `k_selector_super_repeat_action` instead
-///
-#define k_selector_qbase_repeat_action k_selector_super_repeat_action
-
 /// Inherited from QAbstractSlider
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractslider.html#repeatAction)
@@ -5335,10 +5115,6 @@ void k_selector_on_repeat_action(void* self, int32_t (*callback)());
 ///
 void k_selector_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_selector_super_update_micro_focus` instead
-///
-#define k_selector_qbase_update_micro_focus k_selector_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5369,10 +5145,6 @@ void k_selector_on_update_micro_focus(void* self, void (*callback)());
 /// @param self KSelector*
 ///
 void k_selector_create(void* self);
-
-/// @warning DEPRECATED: Use `k_selector_super_create` instead
-///
-#define k_selector_qbase_create k_selector_super_create
 
 /// Inherited from QWidget
 ///
@@ -5405,10 +5177,6 @@ void k_selector_on_create(void* self, void (*callback)());
 ///
 void k_selector_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_selector_super_destroy` instead
-///
-#define k_selector_qbase_destroy k_selector_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5439,10 +5207,6 @@ void k_selector_on_destroy(void* self, void (*callback)());
 /// @param self KSelector*
 ///
 bool k_selector_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_selector_super_focus_next_child` instead
-///
-#define k_selector_qbase_focus_next_child k_selector_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -5475,10 +5239,6 @@ void k_selector_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_selector_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_selector_super_focus_previous_child` instead
-///
-#define k_selector_qbase_focus_previous_child k_selector_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5509,10 +5269,6 @@ void k_selector_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self KSelector*
 ///
 QObject* k_selector_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_selector_super_sender` instead
-///
-#define k_selector_qbase_sender k_selector_super_sender
 
 /// Inherited from QObject
 ///
@@ -5545,10 +5301,6 @@ void k_selector_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_selector_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_selector_super_sender_signal_index` instead
-///
-#define k_selector_qbase_sender_signal_index k_selector_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5580,10 +5332,6 @@ void k_selector_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t k_selector_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_selector_super_receivers` instead
-///
-#define k_selector_qbase_receivers k_selector_super_receivers
 
 /// Inherited from QObject
 ///
@@ -5618,10 +5366,6 @@ void k_selector_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 bool k_selector_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_selector_super_is_signal_connected` instead
-///
-#define k_selector_qbase_is_signal_connected k_selector_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5655,10 +5399,6 @@ void k_selector_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_selector_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_selector_super_get_decoded_metric_f` instead
-///
-#define k_selector_qbase_get_decoded_metric_f k_selector_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///
@@ -5748,10 +5488,6 @@ const QMetaObject* k_gradientselector_meta_object(void* self);
 ///
 void k_gradientselector_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_meta_object` instead
-///
-#define k_gradientselector_qbase_meta_object k_gradientselector_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -5771,10 +5507,6 @@ void* k_gradientselector_metacast(void* self, const char* param1);
 /// @param callback void* func(KGradientSelector* self, const char* param1)
 ///
 void k_gradientselector_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_metacast` instead
-///
-#define k_gradientselector_qbase_metacast k_gradientselector_super_metacast
 
 /// Base class method implementation
 ///
@@ -5796,10 +5528,6 @@ int32_t k_gradientselector_metacall(void* self, int32_t param1, int param2, void
 /// @param callback int32_t func(KGradientSelector* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_gradientselector_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_metacall` instead
-///
-#define k_gradientselector_qbase_metacall k_gradientselector_super_metacall
 
 /// Base class method implementation
 ///
@@ -5921,10 +5649,6 @@ void k_gradientselector_draw_contents(void* self, void* param1);
 ///
 void k_gradientselector_on_draw_contents(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_draw_contents` instead
-///
-#define k_gradientselector_qbase_draw_contents k_gradientselector_super_draw_contents
-
 /// [Upstream resources](https://api.kde.org/kgradientselector.html#drawContents)
 ///
 /// Base class method implementation
@@ -5950,10 +5674,6 @@ QSize* k_gradientselector_minimum_size(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_gradientselector_on_minimum_size(void* self, QSize* (*callback)());
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_minimum_size` instead
-///
-#define k_gradientselector_qbase_minimum_size k_gradientselector_super_minimum_size
 
 /// [Upstream resources](https://api.kde.org/kgradientselector.html#minimumSize)
 ///
@@ -9294,10 +9014,6 @@ int32_t k_gradientselector_encode_metric_f(int32_t metric, double value);
 ///
 void k_gradientselector_draw_arrow(void* self, void* painter, void* pos);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_draw_arrow` instead
-///
-#define k_gradientselector_qbase_draw_arrow k_gradientselector_super_draw_arrow
-
 /// Inherited from KSelector
 ///
 /// [Upstream resources](https://api.kde.org/kselector.html#drawArrow)
@@ -9332,10 +9048,6 @@ void k_gradientselector_on_draw_arrow(void* self, void (*callback)(void*, void*,
 ///
 void k_gradientselector_paint_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_paint_event` instead
-///
-#define k_gradientselector_qbase_paint_event k_gradientselector_super_paint_event
-
 /// Inherited from KSelector
 ///
 /// [Upstream resources](https://api.kde.org/kselector.html#paintEvent)
@@ -9368,10 +9080,6 @@ void k_gradientselector_on_paint_event(void* self, void (*callback)(void*, void*
 /// @param e QMouseEvent*
 ///
 void k_gradientselector_mouse_press_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_mouse_press_event` instead
-///
-#define k_gradientselector_qbase_mouse_press_event k_gradientselector_super_mouse_press_event
 
 /// Inherited from KSelector
 ///
@@ -9406,10 +9114,6 @@ void k_gradientselector_on_mouse_press_event(void* self, void (*callback)(void*,
 ///
 void k_gradientselector_mouse_move_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_mouse_move_event` instead
-///
-#define k_gradientselector_qbase_mouse_move_event k_gradientselector_super_mouse_move_event
-
 /// Inherited from KSelector
 ///
 /// [Upstream resources](https://api.kde.org/kselector.html#mouseMoveEvent)
@@ -9442,10 +9146,6 @@ void k_gradientselector_on_mouse_move_event(void* self, void (*callback)(void*, 
 /// @param e QMouseEvent*
 ///
 void k_gradientselector_mouse_release_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_mouse_release_event` instead
-///
-#define k_gradientselector_qbase_mouse_release_event k_gradientselector_super_mouse_release_event
 
 /// Inherited from KSelector
 ///
@@ -9480,10 +9180,6 @@ void k_gradientselector_on_mouse_release_event(void* self, void (*callback)(void
 ///
 void k_gradientselector_wheel_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_wheel_event` instead
-///
-#define k_gradientselector_qbase_wheel_event k_gradientselector_super_wheel_event
-
 /// Inherited from KSelector
 ///
 /// [Upstream resources](https://api.kde.org/kselector.html#wheelEvent)
@@ -9516,10 +9212,6 @@ void k_gradientselector_on_wheel_event(void* self, void (*callback)(void*, void*
 /// @param e QEvent*
 ///
 bool k_gradientselector_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_event` instead
-///
-#define k_gradientselector_qbase_event k_gradientselector_super_event
 
 /// Inherited from QAbstractSlider
 ///
@@ -9554,10 +9246,6 @@ void k_gradientselector_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void k_gradientselector_slider_change(void* self, int32_t change);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_slider_change` instead
-///
-#define k_gradientselector_qbase_slider_change k_gradientselector_super_slider_change
-
 /// Inherited from QAbstractSlider
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractslider.html#sliderChange)
@@ -9590,10 +9278,6 @@ void k_gradientselector_on_slider_change(void* self, void (*callback)(void*, int
 /// @param ev QKeyEvent*
 ///
 void k_gradientselector_key_press_event(void* self, void* ev);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_key_press_event` instead
-///
-#define k_gradientselector_qbase_key_press_event k_gradientselector_super_key_press_event
 
 /// Inherited from QAbstractSlider
 ///
@@ -9628,10 +9312,6 @@ void k_gradientselector_on_key_press_event(void* self, void (*callback)(void*, v
 ///
 void k_gradientselector_timer_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_timer_event` instead
-///
-#define k_gradientselector_qbase_timer_event k_gradientselector_super_timer_event
-
 /// Inherited from QAbstractSlider
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractslider.html#timerEvent)
@@ -9665,10 +9345,6 @@ void k_gradientselector_on_timer_event(void* self, void (*callback)(void*, void*
 ///
 void k_gradientselector_change_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_change_event` instead
-///
-#define k_gradientselector_qbase_change_event k_gradientselector_super_change_event
-
 /// Inherited from QAbstractSlider
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractslider.html#changeEvent)
@@ -9700,10 +9376,6 @@ void k_gradientselector_on_change_event(void* self, void (*callback)(void*, void
 /// @param self KGradientSelector*
 ///
 int32_t k_gradientselector_dev_type(void* self);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_dev_type` instead
-///
-#define k_gradientselector_qbase_dev_type k_gradientselector_super_dev_type
 
 /// Inherited from QWidget
 ///
@@ -9737,10 +9409,6 @@ void k_gradientselector_on_dev_type(void* self, int32_t (*callback)());
 ///
 void k_gradientselector_set_visible(void* self, bool visible);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_set_visible` instead
-///
-#define k_gradientselector_qbase_set_visible k_gradientselector_super_set_visible
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -9772,10 +9440,6 @@ void k_gradientselector_on_set_visible(void* self, void (*callback)(void*, bool)
 /// @param self KGradientSelector*
 ///
 QSize* k_gradientselector_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_size_hint` instead
-///
-#define k_gradientselector_qbase_size_hint k_gradientselector_super_size_hint
 
 /// Inherited from QWidget
 ///
@@ -9809,10 +9473,6 @@ void k_gradientselector_on_size_hint(void* self, QSize* (*callback)());
 /// @param self KGradientSelector*
 ///
 QSize* k_gradientselector_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_minimum_size_hint` instead
-///
-#define k_gradientselector_qbase_minimum_size_hint k_gradientselector_super_minimum_size_hint
 
 /// Inherited from QWidget
 ///
@@ -9848,10 +9508,6 @@ void k_gradientselector_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 int32_t k_gradientselector_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_height_for_width` instead
-///
-#define k_gradientselector_qbase_height_for_width k_gradientselector_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -9884,10 +9540,6 @@ void k_gradientselector_on_height_for_width(void* self, int32_t (*callback)(void
 ///
 bool k_gradientselector_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_has_height_for_width` instead
-///
-#define k_gradientselector_qbase_has_height_for_width k_gradientselector_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -9918,10 +9570,6 @@ void k_gradientselector_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self KGradientSelector*
 ///
 QPaintEngine* k_gradientselector_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_paint_engine` instead
-///
-#define k_gradientselector_qbase_paint_engine k_gradientselector_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -9954,10 +9602,6 @@ void k_gradientselector_on_paint_engine(void* self, QPaintEngine* (*callback)())
 /// @param event QMouseEvent*
 ///
 void k_gradientselector_mouse_double_click_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_mouse_double_click_event` instead
-///
-#define k_gradientselector_qbase_mouse_double_click_event k_gradientselector_super_mouse_double_click_event
 
 /// Inherited from QWidget
 ///
@@ -9992,10 +9636,6 @@ void k_gradientselector_on_mouse_double_click_event(void* self, void (*callback)
 ///
 void k_gradientselector_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_key_release_event` instead
-///
-#define k_gradientselector_qbase_key_release_event k_gradientselector_super_key_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -10028,10 +9668,6 @@ void k_gradientselector_on_key_release_event(void* self, void (*callback)(void*,
 /// @param event QFocusEvent*
 ///
 void k_gradientselector_focus_in_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_focus_in_event` instead
-///
-#define k_gradientselector_qbase_focus_in_event k_gradientselector_super_focus_in_event
 
 /// Inherited from QWidget
 ///
@@ -10066,10 +9702,6 @@ void k_gradientselector_on_focus_in_event(void* self, void (*callback)(void*, vo
 ///
 void k_gradientselector_focus_out_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_focus_out_event` instead
-///
-#define k_gradientselector_qbase_focus_out_event k_gradientselector_super_focus_out_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -10102,10 +9734,6 @@ void k_gradientselector_on_focus_out_event(void* self, void (*callback)(void*, v
 /// @param event QEnterEvent*
 ///
 void k_gradientselector_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_enter_event` instead
-///
-#define k_gradientselector_qbase_enter_event k_gradientselector_super_enter_event
 
 /// Inherited from QWidget
 ///
@@ -10140,10 +9768,6 @@ void k_gradientselector_on_enter_event(void* self, void (*callback)(void*, void*
 ///
 void k_gradientselector_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_leave_event` instead
-///
-#define k_gradientselector_qbase_leave_event k_gradientselector_super_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -10176,10 +9800,6 @@ void k_gradientselector_on_leave_event(void* self, void (*callback)(void*, void*
 /// @param event QMoveEvent*
 ///
 void k_gradientselector_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_move_event` instead
-///
-#define k_gradientselector_qbase_move_event k_gradientselector_super_move_event
 
 /// Inherited from QWidget
 ///
@@ -10214,10 +9834,6 @@ void k_gradientselector_on_move_event(void* self, void (*callback)(void*, void*)
 ///
 void k_gradientselector_resize_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_resize_event` instead
-///
-#define k_gradientselector_qbase_resize_event k_gradientselector_super_resize_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
@@ -10250,10 +9866,6 @@ void k_gradientselector_on_resize_event(void* self, void (*callback)(void*, void
 /// @param event QCloseEvent*
 ///
 void k_gradientselector_close_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_close_event` instead
-///
-#define k_gradientselector_qbase_close_event k_gradientselector_super_close_event
 
 /// Inherited from QWidget
 ///
@@ -10288,10 +9900,6 @@ void k_gradientselector_on_close_event(void* self, void (*callback)(void*, void*
 ///
 void k_gradientselector_context_menu_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_context_menu_event` instead
-///
-#define k_gradientselector_qbase_context_menu_event k_gradientselector_super_context_menu_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
@@ -10324,10 +9932,6 @@ void k_gradientselector_on_context_menu_event(void* self, void (*callback)(void*
 /// @param event QTabletEvent*
 ///
 void k_gradientselector_tablet_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_tablet_event` instead
-///
-#define k_gradientselector_qbase_tablet_event k_gradientselector_super_tablet_event
 
 /// Inherited from QWidget
 ///
@@ -10362,10 +9966,6 @@ void k_gradientselector_on_tablet_event(void* self, void (*callback)(void*, void
 ///
 void k_gradientselector_action_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_action_event` instead
-///
-#define k_gradientselector_qbase_action_event k_gradientselector_super_action_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -10398,10 +9998,6 @@ void k_gradientselector_on_action_event(void* self, void (*callback)(void*, void
 /// @param event QDragEnterEvent*
 ///
 void k_gradientselector_drag_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_drag_enter_event` instead
-///
-#define k_gradientselector_qbase_drag_enter_event k_gradientselector_super_drag_enter_event
 
 /// Inherited from QWidget
 ///
@@ -10436,10 +10032,6 @@ void k_gradientselector_on_drag_enter_event(void* self, void (*callback)(void*, 
 ///
 void k_gradientselector_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_drag_move_event` instead
-///
-#define k_gradientselector_qbase_drag_move_event k_gradientselector_super_drag_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -10472,10 +10064,6 @@ void k_gradientselector_on_drag_move_event(void* self, void (*callback)(void*, v
 /// @param event QDragLeaveEvent*
 ///
 void k_gradientselector_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_drag_leave_event` instead
-///
-#define k_gradientselector_qbase_drag_leave_event k_gradientselector_super_drag_leave_event
 
 /// Inherited from QWidget
 ///
@@ -10510,10 +10098,6 @@ void k_gradientselector_on_drag_leave_event(void* self, void (*callback)(void*, 
 ///
 void k_gradientselector_drop_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_drop_event` instead
-///
-#define k_gradientselector_qbase_drop_event k_gradientselector_super_drop_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -10547,10 +10131,6 @@ void k_gradientselector_on_drop_event(void* self, void (*callback)(void*, void*)
 ///
 void k_gradientselector_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_show_event` instead
-///
-#define k_gradientselector_qbase_show_event k_gradientselector_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -10583,10 +10163,6 @@ void k_gradientselector_on_show_event(void* self, void (*callback)(void*, void*)
 /// @param event QHideEvent*
 ///
 void k_gradientselector_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_hide_event` instead
-///
-#define k_gradientselector_qbase_hide_event k_gradientselector_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -10623,10 +10199,6 @@ void k_gradientselector_on_hide_event(void* self, void (*callback)(void*, void*)
 ///
 bool k_gradientselector_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_native_event` instead
-///
-#define k_gradientselector_qbase_native_event k_gradientselector_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -10662,10 +10234,6 @@ void k_gradientselector_on_native_event(void* self, bool (*callback)(void*, libq
 ///
 int32_t k_gradientselector_metric(void* self, int32_t param1);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_metric` instead
-///
-#define k_gradientselector_qbase_metric k_gradientselector_super_metric
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -10698,10 +10266,6 @@ void k_gradientselector_on_metric(void* self, int32_t (*callback)(void*, int32_t
 /// @param painter QPainter*
 ///
 void k_gradientselector_init_painter(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_init_painter` instead
-///
-#define k_gradientselector_qbase_init_painter k_gradientselector_super_init_painter
 
 /// Inherited from QWidget
 ///
@@ -10736,10 +10300,6 @@ void k_gradientselector_on_init_painter(void* self, void (*callback)(void*, void
 ///
 QPaintDevice* k_gradientselector_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_redirected` instead
-///
-#define k_gradientselector_qbase_redirected k_gradientselector_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -10771,10 +10331,6 @@ void k_gradientselector_on_redirected(void* self, QPaintDevice* (*callback)(void
 /// @param self KGradientSelector*
 ///
 QPainter* k_gradientselector_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_shared_painter` instead
-///
-#define k_gradientselector_qbase_shared_painter k_gradientselector_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -10808,10 +10364,6 @@ void k_gradientselector_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void k_gradientselector_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_input_method_event` instead
-///
-#define k_gradientselector_qbase_input_method_event k_gradientselector_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -10844,10 +10396,6 @@ void k_gradientselector_on_input_method_event(void* self, void (*callback)(void*
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* k_gradientselector_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_input_method_query` instead
-///
-#define k_gradientselector_qbase_input_method_query k_gradientselector_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -10884,10 +10432,6 @@ void k_gradientselector_on_input_method_query(void* self, QVariant* (*callback)(
 ///
 bool k_gradientselector_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_focus_next_prev_child` instead
-///
-#define k_gradientselector_qbase_focus_next_prev_child k_gradientselector_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -10921,10 +10465,6 @@ void k_gradientselector_on_focus_next_prev_child(void* self, bool (*callback)(vo
 /// @param event QEvent*
 ///
 bool k_gradientselector_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_event_filter` instead
-///
-#define k_gradientselector_qbase_event_filter k_gradientselector_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -10960,10 +10500,6 @@ void k_gradientselector_on_event_filter(void* self, bool (*callback)(void*, void
 ///
 void k_gradientselector_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_child_event` instead
-///
-#define k_gradientselector_qbase_child_event k_gradientselector_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -10996,10 +10532,6 @@ void k_gradientselector_on_child_event(void* self, void (*callback)(void*, void*
 /// @param event QEvent*
 ///
 void k_gradientselector_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_custom_event` instead
-///
-#define k_gradientselector_qbase_custom_event k_gradientselector_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -11034,10 +10566,6 @@ void k_gradientselector_on_custom_event(void* self, void (*callback)(void*, void
 ///
 void k_gradientselector_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_connect_notify` instead
-///
-#define k_gradientselector_qbase_connect_notify k_gradientselector_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -11071,10 +10599,6 @@ void k_gradientselector_on_connect_notify(void* self, void (*callback)(void*, vo
 ///
 void k_gradientselector_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_disconnect_notify` instead
-///
-#define k_gradientselector_qbase_disconnect_notify k_gradientselector_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -11107,10 +10631,6 @@ void k_gradientselector_on_disconnect_notify(void* self, void (*callback)(void*,
 /// @param action enum QAbstractSlider__SliderAction
 ///
 void k_gradientselector_set_repeat_action(void* self, int32_t action);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_set_repeat_action` instead
-///
-#define k_gradientselector_qbase_set_repeat_action k_gradientselector_super_set_repeat_action
 
 /// Inherited from QAbstractSlider
 ///
@@ -11146,10 +10666,6 @@ void k_gradientselector_on_set_repeat_action(void* self, void (*callback)(void*,
 ///
 int32_t k_gradientselector_repeat_action(void* self);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_repeat_action` instead
-///
-#define k_gradientselector_qbase_repeat_action k_gradientselector_super_repeat_action
-
 /// Inherited from QAbstractSlider
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractslider.html#repeatAction)
@@ -11183,10 +10699,6 @@ void k_gradientselector_on_repeat_action(void* self, int32_t (*callback)());
 ///
 void k_gradientselector_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_update_micro_focus` instead
-///
-#define k_gradientselector_qbase_update_micro_focus k_gradientselector_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -11217,10 +10729,6 @@ void k_gradientselector_on_update_micro_focus(void* self, void (*callback)());
 /// @param self KGradientSelector*
 ///
 void k_gradientselector_create(void* self);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_create` instead
-///
-#define k_gradientselector_qbase_create k_gradientselector_super_create
 
 /// Inherited from QWidget
 ///
@@ -11253,10 +10761,6 @@ void k_gradientselector_on_create(void* self, void (*callback)());
 ///
 void k_gradientselector_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_destroy` instead
-///
-#define k_gradientselector_qbase_destroy k_gradientselector_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -11287,10 +10791,6 @@ void k_gradientselector_on_destroy(void* self, void (*callback)());
 /// @param self KGradientSelector*
 ///
 bool k_gradientselector_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_focus_next_child` instead
-///
-#define k_gradientselector_qbase_focus_next_child k_gradientselector_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -11323,10 +10823,6 @@ void k_gradientselector_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_gradientselector_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_focus_previous_child` instead
-///
-#define k_gradientselector_qbase_focus_previous_child k_gradientselector_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -11357,10 +10853,6 @@ void k_gradientselector_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self KGradientSelector*
 ///
 QObject* k_gradientselector_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_sender` instead
-///
-#define k_gradientselector_qbase_sender k_gradientselector_super_sender
 
 /// Inherited from QObject
 ///
@@ -11393,10 +10885,6 @@ void k_gradientselector_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_gradientselector_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_sender_signal_index` instead
-///
-#define k_gradientselector_qbase_sender_signal_index k_gradientselector_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -11428,10 +10916,6 @@ void k_gradientselector_on_sender_signal_index(void* self, int32_t (*callback)()
 /// @param signal const char*
 ///
 int32_t k_gradientselector_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_receivers` instead
-///
-#define k_gradientselector_qbase_receivers k_gradientselector_super_receivers
 
 /// Inherited from QObject
 ///
@@ -11466,10 +10950,6 @@ void k_gradientselector_on_receivers(void* self, int32_t (*callback)(void*, cons
 ///
 bool k_gradientselector_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_gradientselector_super_is_signal_connected` instead
-///
-#define k_gradientselector_qbase_is_signal_connected k_gradientselector_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -11503,10 +10983,6 @@ void k_gradientselector_on_is_signal_connected(void* self, bool (*callback)(void
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_gradientselector_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_gradientselector_super_get_decoded_metric_f` instead
-///
-#define k_gradientselector_qbase_get_decoded_metric_f k_gradientselector_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

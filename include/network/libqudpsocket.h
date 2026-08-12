@@ -37,10 +37,6 @@ const QMetaObject* q_udpsocket_meta_object(void* self);
 ///
 void q_udpsocket_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_meta_object` instead
-///
-#define q_udpsocket_qbase_meta_object q_udpsocket_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_udpsocket_metacast(void* self, const char* param1);
 /// @param callback void* func(QUdpSocket* self, const char* param1)
 ///
 void q_udpsocket_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_metacast` instead
-///
-#define q_udpsocket_qbase_metacast q_udpsocket_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_udpsocket_metacall(void* self, int32_t param1, int param2, void* param
 /// @param callback int32_t func(QUdpSocket* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_udpsocket_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_metacall` instead
-///
-#define q_udpsocket_qbase_metacall q_udpsocket_super_metacall
 
 /// Base class method implementation
 ///
@@ -1429,10 +1417,6 @@ void q_udpsocket_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 void q_udpsocket_resume(void* self);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_resume` instead
-///
-#define q_udpsocket_qbase_resume q_udpsocket_super_resume
-
 /// Inherited from QAbstractSocket
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#resume)
@@ -1467,10 +1451,6 @@ void q_udpsocket_on_resume(void* self, void (*callback)());
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
 ///
 void q_udpsocket_connect_to_host(void* self, const char* hostName, uint16_t port, int32_t mode, int32_t protocol);
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_connect_to_host` instead
-///
-#define q_udpsocket_qbase_connect_to_host q_udpsocket_super_connect_to_host
 
 /// Inherited from QAbstractSocket
 ///
@@ -1507,10 +1487,6 @@ void q_udpsocket_on_connect_to_host(void* self, void (*callback)(void*, const ch
 ///
 void q_udpsocket_disconnect_from_host(void* self);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_disconnect_from_host` instead
-///
-#define q_udpsocket_qbase_disconnect_from_host q_udpsocket_super_disconnect_from_host
-
 /// Inherited from QAbstractSocket
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#disconnectFromHost)
@@ -1542,10 +1518,6 @@ void q_udpsocket_on_disconnect_from_host(void* self, void (*callback)());
 ///
 int64_t q_udpsocket_bytes_available(void* self);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_bytes_available` instead
-///
-#define q_udpsocket_qbase_bytes_available q_udpsocket_super_bytes_available
-
 /// Inherited from QAbstractSocket
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#bytesAvailable)
@@ -1576,10 +1548,6 @@ void q_udpsocket_on_bytes_available(void* self, int64_t (*callback)());
 /// @param self QUdpSocket*
 ///
 int64_t q_udpsocket_bytes_to_write(void* self);
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_bytes_to_write` instead
-///
-#define q_udpsocket_qbase_bytes_to_write q_udpsocket_super_bytes_to_write
 
 /// Inherited from QAbstractSocket
 ///
@@ -1613,10 +1581,6 @@ void q_udpsocket_on_bytes_to_write(void* self, int64_t (*callback)());
 ///
 void q_udpsocket_set_read_buffer_size(void* self, int64_t size);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_set_read_buffer_size` instead
-///
-#define q_udpsocket_qbase_set_read_buffer_size q_udpsocket_super_set_read_buffer_size
-
 /// Inherited from QAbstractSocket
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#setReadBufferSize)
@@ -1648,10 +1612,6 @@ void q_udpsocket_on_set_read_buffer_size(void* self, void (*callback)(void*, int
 /// @param self QUdpSocket*
 ///
 intptr_t q_udpsocket_socket_descriptor(void* self);
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_socket_descriptor` instead
-///
-#define q_udpsocket_qbase_socket_descriptor q_udpsocket_super_socket_descriptor
 
 /// Inherited from QAbstractSocket
 ///
@@ -1686,10 +1646,6 @@ void q_udpsocket_on_socket_descriptor(void* self, intptr_t (*callback)());
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
 ///
 bool q_udpsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int32_t openMode);
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_set_socket_descriptor` instead
-///
-#define q_udpsocket_qbase_set_socket_descriptor q_udpsocket_super_set_socket_descriptor
 
 /// Inherited from QAbstractSocket
 ///
@@ -1727,10 +1683,6 @@ void q_udpsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, in
 ///
 void q_udpsocket_set_socket_option(void* self, int32_t option, void* value);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_set_socket_option` instead
-///
-#define q_udpsocket_qbase_set_socket_option q_udpsocket_super_set_socket_option
-
 /// Inherited from QAbstractSocket
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketOption)
@@ -1764,10 +1716,6 @@ void q_udpsocket_on_set_socket_option(void* self, void (*callback)(void*, int32_
 /// @param option enum QAbstractSocket__SocketOption
 ///
 QVariant* q_udpsocket_socket_option(void* self, int32_t option);
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_socket_option` instead
-///
-#define q_udpsocket_qbase_socket_option q_udpsocket_super_socket_option
 
 /// Inherited from QAbstractSocket
 ///
@@ -1803,10 +1751,6 @@ void q_udpsocket_on_socket_option(void* self, QVariant* (*callback)(void*, int32
 ///
 void q_udpsocket_close(void* self);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_close` instead
-///
-#define q_udpsocket_qbase_close q_udpsocket_super_close
-
 /// Inherited from QAbstractSocket
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#close)
@@ -1837,10 +1781,6 @@ void q_udpsocket_on_close(void* self, void (*callback)());
 /// @param self QUdpSocket*
 ///
 bool q_udpsocket_is_sequential(void* self);
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_is_sequential` instead
-///
-#define q_udpsocket_qbase_is_sequential q_udpsocket_super_is_sequential
 
 /// Inherited from QAbstractSocket
 ///
@@ -1873,10 +1813,6 @@ void q_udpsocket_on_is_sequential(void* self, bool (*callback)());
 /// @param msecs int
 ///
 bool q_udpsocket_wait_for_connected(void* self, int msecs);
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_wait_for_connected` instead
-///
-#define q_udpsocket_qbase_wait_for_connected q_udpsocket_super_wait_for_connected
 
 /// Inherited from QAbstractSocket
 ///
@@ -1911,10 +1847,6 @@ void q_udpsocket_on_wait_for_connected(void* self, bool (*callback)(void*, int))
 ///
 bool q_udpsocket_wait_for_ready_read(void* self, int msecs);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_wait_for_ready_read` instead
-///
-#define q_udpsocket_qbase_wait_for_ready_read q_udpsocket_super_wait_for_ready_read
-
 /// Inherited from QAbstractSocket
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#waitForReadyRead)
@@ -1947,10 +1879,6 @@ void q_udpsocket_on_wait_for_ready_read(void* self, bool (*callback)(void*, int)
 /// @param msecs int
 ///
 bool q_udpsocket_wait_for_bytes_written(void* self, int msecs);
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_wait_for_bytes_written` instead
-///
-#define q_udpsocket_qbase_wait_for_bytes_written q_udpsocket_super_wait_for_bytes_written
 
 /// Inherited from QAbstractSocket
 ///
@@ -1985,10 +1913,6 @@ void q_udpsocket_on_wait_for_bytes_written(void* self, bool (*callback)(void*, i
 ///
 bool q_udpsocket_wait_for_disconnected(void* self, int msecs);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_wait_for_disconnected` instead
-///
-#define q_udpsocket_qbase_wait_for_disconnected q_udpsocket_super_wait_for_disconnected
-
 /// Inherited from QAbstractSocket
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#waitForDisconnected)
@@ -2022,10 +1946,6 @@ void q_udpsocket_on_wait_for_disconnected(void* self, bool (*callback)(void*, in
 /// @param maxlen int64_t
 ///
 int64_t q_udpsocket_read_data(void* self, char* data, int64_t maxlen);
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_read_data` instead
-///
-#define q_udpsocket_qbase_read_data q_udpsocket_super_read_data
 
 /// Inherited from QAbstractSocket
 ///
@@ -2062,10 +1982,6 @@ void q_udpsocket_on_read_data(void* self, int64_t (*callback)(void*, char*, int6
 ///
 int64_t q_udpsocket_read_line_data(void* self, char* data, int64_t maxlen);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_read_line_data` instead
-///
-#define q_udpsocket_qbase_read_line_data q_udpsocket_super_read_line_data
-
 /// Inherited from QAbstractSocket
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#readLineData)
@@ -2099,10 +2015,6 @@ void q_udpsocket_on_read_line_data(void* self, int64_t (*callback)(void*, char*,
 /// @param maxSize int64_t
 ///
 int64_t q_udpsocket_skip_data(void* self, int64_t maxSize);
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_skip_data` instead
-///
-#define q_udpsocket_qbase_skip_data q_udpsocket_super_skip_data
 
 /// Inherited from QAbstractSocket
 ///
@@ -2138,10 +2050,6 @@ void q_udpsocket_on_skip_data(void* self, int64_t (*callback)(void*, int64_t));
 ///
 int64_t q_udpsocket_write_data(void* self, const char* data, int64_t lenVal);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_write_data` instead
-///
-#define q_udpsocket_qbase_write_data q_udpsocket_super_write_data
-
 /// Inherited from QAbstractSocket
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#writeData)
@@ -2176,10 +2084,6 @@ void q_udpsocket_on_write_data(void* self, int64_t (*callback)(void*, const char
 ///
 bool q_udpsocket_open(void* self, int32_t mode);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_open` instead
-///
-#define q_udpsocket_qbase_open q_udpsocket_super_open
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#open)
@@ -2212,10 +2116,6 @@ void q_udpsocket_on_open(void* self, bool (*callback)(void*, int32_t));
 ///
 int64_t q_udpsocket_pos(void* self);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_pos` instead
-///
-#define q_udpsocket_qbase_pos q_udpsocket_super_pos
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#pos)
@@ -2246,10 +2146,6 @@ void q_udpsocket_on_pos(void* self, int64_t (*callback)());
 /// @param self QUdpSocket*
 ///
 int64_t q_udpsocket_size(void* self);
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_size` instead
-///
-#define q_udpsocket_qbase_size q_udpsocket_super_size
 
 /// Inherited from QIODevice
 ///
@@ -2283,10 +2179,6 @@ void q_udpsocket_on_size(void* self, int64_t (*callback)());
 ///
 bool q_udpsocket_seek(void* self, int64_t pos);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_seek` instead
-///
-#define q_udpsocket_qbase_seek q_udpsocket_super_seek
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#seek)
@@ -2319,10 +2211,6 @@ void q_udpsocket_on_seek(void* self, bool (*callback)(void*, int64_t));
 ///
 bool q_udpsocket_at_end(void* self);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_at_end` instead
-///
-#define q_udpsocket_qbase_at_end q_udpsocket_super_at_end
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#atEnd)
@@ -2353,10 +2241,6 @@ void q_udpsocket_on_at_end(void* self, bool (*callback)());
 /// @param self QUdpSocket*
 ///
 bool q_udpsocket_reset(void* self);
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_reset` instead
-///
-#define q_udpsocket_qbase_reset q_udpsocket_super_reset
 
 /// Inherited from QIODevice
 ///
@@ -2389,10 +2273,6 @@ void q_udpsocket_on_reset(void* self, bool (*callback)());
 ///
 bool q_udpsocket_can_read_line(void* self);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_can_read_line` instead
-///
-#define q_udpsocket_qbase_can_read_line q_udpsocket_super_can_read_line
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#canReadLine)
@@ -2424,10 +2304,6 @@ void q_udpsocket_on_can_read_line(void* self, bool (*callback)());
 /// @param event QEvent*
 ///
 bool q_udpsocket_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_event` instead
-///
-#define q_udpsocket_qbase_event q_udpsocket_super_event
 
 /// Inherited from QObject
 ///
@@ -2463,10 +2339,6 @@ void q_udpsocket_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_udpsocket_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_event_filter` instead
-///
-#define q_udpsocket_qbase_event_filter q_udpsocket_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -2501,10 +2373,6 @@ void q_udpsocket_on_event_filter(void* self, bool (*callback)(void*, void*, void
 ///
 void q_udpsocket_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_timer_event` instead
-///
-#define q_udpsocket_qbase_timer_event q_udpsocket_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2537,10 +2405,6 @@ void q_udpsocket_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_udpsocket_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_child_event` instead
-///
-#define q_udpsocket_qbase_child_event q_udpsocket_super_child_event
 
 /// Inherited from QObject
 ///
@@ -2575,10 +2439,6 @@ void q_udpsocket_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_udpsocket_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_custom_event` instead
-///
-#define q_udpsocket_qbase_custom_event q_udpsocket_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2611,10 +2471,6 @@ void q_udpsocket_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_udpsocket_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_connect_notify` instead
-///
-#define q_udpsocket_qbase_connect_notify q_udpsocket_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -2649,10 +2505,6 @@ void q_udpsocket_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_udpsocket_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_disconnect_notify` instead
-///
-#define q_udpsocket_qbase_disconnect_notify q_udpsocket_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -2685,10 +2537,6 @@ void q_udpsocket_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 /// @param state enum QAbstractSocket__SocketState
 ///
 void q_udpsocket_set_socket_state(void* self, int32_t state);
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_set_socket_state` instead
-///
-#define q_udpsocket_qbase_set_socket_state q_udpsocket_super_set_socket_state
 
 /// Inherited from QAbstractSocket
 ///
@@ -2723,10 +2571,6 @@ void q_udpsocket_on_set_socket_state(void* self, void (*callback)(void*, int32_t
 ///
 void q_udpsocket_set_socket_error(void* self, int32_t socketError);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_set_socket_error` instead
-///
-#define q_udpsocket_qbase_set_socket_error q_udpsocket_super_set_socket_error
-
 /// Inherited from QAbstractSocket
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketError)
@@ -2759,10 +2603,6 @@ void q_udpsocket_on_set_socket_error(void* self, void (*callback)(void*, int32_t
 /// @param port uint16_t
 ///
 void q_udpsocket_set_local_port(void* self, uint16_t port);
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_set_local_port` instead
-///
-#define q_udpsocket_qbase_set_local_port q_udpsocket_super_set_local_port
 
 /// Inherited from QAbstractSocket
 ///
@@ -2797,10 +2637,6 @@ void q_udpsocket_on_set_local_port(void* self, void (*callback)(void*, uint16_t)
 ///
 void q_udpsocket_set_local_address(void* self, void* address);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_set_local_address` instead
-///
-#define q_udpsocket_qbase_set_local_address q_udpsocket_super_set_local_address
-
 /// Inherited from QAbstractSocket
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#setLocalAddress)
@@ -2833,10 +2669,6 @@ void q_udpsocket_on_set_local_address(void* self, void (*callback)(void*, void*)
 /// @param port uint16_t
 ///
 void q_udpsocket_set_peer_port(void* self, uint16_t port);
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_set_peer_port` instead
-///
-#define q_udpsocket_qbase_set_peer_port q_udpsocket_super_set_peer_port
 
 /// Inherited from QAbstractSocket
 ///
@@ -2871,10 +2703,6 @@ void q_udpsocket_on_set_peer_port(void* self, void (*callback)(void*, uint16_t))
 ///
 void q_udpsocket_set_peer_address(void* self, void* address);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_set_peer_address` instead
-///
-#define q_udpsocket_qbase_set_peer_address q_udpsocket_super_set_peer_address
-
 /// Inherited from QAbstractSocket
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#setPeerAddress)
@@ -2907,10 +2735,6 @@ void q_udpsocket_on_set_peer_address(void* self, void (*callback)(void*, void*))
 /// @param name const char*
 ///
 void q_udpsocket_set_peer_name(void* self, const char* name);
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_set_peer_name` instead
-///
-#define q_udpsocket_qbase_set_peer_name q_udpsocket_super_set_peer_name
 
 /// Inherited from QAbstractSocket
 ///
@@ -2945,10 +2769,6 @@ void q_udpsocket_on_set_peer_name(void* self, void (*callback)(void*, const char
 ///
 void q_udpsocket_set_open_mode(void* self, int32_t openMode);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_set_open_mode` instead
-///
-#define q_udpsocket_qbase_set_open_mode q_udpsocket_super_set_open_mode
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#setOpenMode)
@@ -2982,10 +2802,6 @@ void q_udpsocket_on_set_open_mode(void* self, void (*callback)(void*, int32_t));
 ///
 void q_udpsocket_set_error_string(void* self, const char* errorString);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_set_error_string` instead
-///
-#define q_udpsocket_qbase_set_error_string q_udpsocket_super_set_error_string
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
@@ -3018,10 +2834,6 @@ void q_udpsocket_on_set_error_string(void* self, void (*callback)(void*, const c
 ///
 QObject* q_udpsocket_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_sender` instead
-///
-#define q_udpsocket_qbase_sender q_udpsocket_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -3052,10 +2864,6 @@ void q_udpsocket_on_sender(void* self, QObject* (*callback)());
 /// @param self QUdpSocket*
 ///
 int32_t q_udpsocket_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_sender_signal_index` instead
-///
-#define q_udpsocket_qbase_sender_signal_index q_udpsocket_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -3089,10 +2897,6 @@ void q_udpsocket_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_udpsocket_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_udpsocket_super_receivers` instead
-///
-#define q_udpsocket_qbase_receivers q_udpsocket_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -3125,10 +2929,6 @@ void q_udpsocket_on_receivers(void* self, int32_t (*callback)(void*, const char*
 /// @param signal QMetaMethod*
 ///
 bool q_udpsocket_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_udpsocket_super_is_signal_connected` instead
-///
-#define q_udpsocket_qbase_is_signal_connected q_udpsocket_super_is_signal_connected
 
 /// Inherited from QObject
 ///

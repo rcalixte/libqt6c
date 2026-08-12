@@ -37,10 +37,6 @@ const QMetaObject* q_transposeproxymodel_meta_object(void* self);
 ///
 void q_transposeproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_meta_object` instead
-///
-#define q_transposeproxymodel_qbase_meta_object q_transposeproxymodel_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_transposeproxymodel_metacast(void* self, const char* param1);
 /// @param callback void* func(QTransposeProxyModel* self, const char* param1)
 ///
 void q_transposeproxymodel_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_metacast` instead
-///
-#define q_transposeproxymodel_qbase_metacast q_transposeproxymodel_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_transposeproxymodel_metacall(void* self, int32_t param1, int param2, v
 /// @param callback int32_t func(QTransposeProxyModel* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_transposeproxymodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_metacall` instead
-///
-#define q_transposeproxymodel_qbase_metacall q_transposeproxymodel_super_metacall
 
 /// Base class method implementation
 ///
@@ -123,10 +111,6 @@ void q_transposeproxymodel_set_source_model(void* self, void* newSourceModel);
 ///
 void q_transposeproxymodel_on_set_source_model(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_set_source_model` instead
-///
-#define q_transposeproxymodel_qbase_set_source_model q_transposeproxymodel_super_set_source_model
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#setSourceModel)
 ///
 /// Base class method implementation
@@ -152,10 +136,6 @@ int32_t q_transposeproxymodel_row_count(void* self, void* parent);
 ///
 void q_transposeproxymodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_row_count` instead
-///
-#define q_transposeproxymodel_qbase_row_count q_transposeproxymodel_super_row_count
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#rowCount)
 ///
 /// Base class method implementation
@@ -180,10 +160,6 @@ int32_t q_transposeproxymodel_column_count(void* self, void* parent);
 /// @param callback int32_t func(QTransposeProxyModel* self, QModelIndex* parent)
 ///
 void q_transposeproxymodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_column_count` instead
-///
-#define q_transposeproxymodel_qbase_column_count q_transposeproxymodel_super_column_count
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#columnCount)
 ///
@@ -213,10 +189,6 @@ QVariant* q_transposeproxymodel_header_data(void* self, int section, int32_t ori
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_transposeproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_header_data` instead
-///
-#define q_transposeproxymodel_qbase_header_data q_transposeproxymodel_super_header_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#headerData)
 ///
@@ -248,10 +220,6 @@ bool q_transposeproxymodel_set_header_data(void* self, int section, int32_t orie
 ///
 void q_transposeproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_set_header_data` instead
-///
-#define q_transposeproxymodel_qbase_set_header_data q_transposeproxymodel_super_set_header_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#setHeaderData)
 ///
 /// Base class method implementation
@@ -281,10 +249,6 @@ bool q_transposeproxymodel_set_item_data(void* self, void* index, libqt_map role
 ///
 void q_transposeproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map));
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_set_item_data` instead
-///
-#define q_transposeproxymodel_qbase_set_item_data q_transposeproxymodel_super_set_item_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#setItemData)
 ///
 /// Base class method implementation
@@ -312,10 +276,6 @@ QSize* q_transposeproxymodel_span(void* self, void* index);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_transposeproxymodel_on_span(void* self, QSize* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_span` instead
-///
-#define q_transposeproxymodel_qbase_span q_transposeproxymodel_super_span
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#span)
 ///
@@ -355,10 +315,6 @@ libqt_map q_transposeproxymodel_item_data(void* self, void* index);
 ///
 void q_transposeproxymodel_on_item_data(void* self, libqt_map (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_item_data` instead
-///
-#define q_transposeproxymodel_qbase_item_data q_transposeproxymodel_super_item_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#itemData)
 ///
 /// Base class method implementation
@@ -388,10 +344,6 @@ QModelIndex* q_transposeproxymodel_map_from_source(void* self, void* sourceIndex
 ///
 void q_transposeproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_map_from_source` instead
-///
-#define q_transposeproxymodel_qbase_map_from_source q_transposeproxymodel_super_map_from_source
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#mapFromSource)
 ///
 /// Base class method implementation
@@ -419,10 +371,6 @@ QModelIndex* q_transposeproxymodel_map_to_source(void* self, void* proxyIndex);
 ///
 void q_transposeproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_map_to_source` instead
-///
-#define q_transposeproxymodel_qbase_map_to_source q_transposeproxymodel_super_map_to_source
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#mapToSource)
 ///
 /// Base class method implementation
@@ -449,10 +397,6 @@ QModelIndex* q_transposeproxymodel_parent(void* self, void* index);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_transposeproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_parent` instead
-///
-#define q_transposeproxymodel_qbase_parent q_transposeproxymodel_super_parent
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#parent)
 ///
@@ -483,10 +427,6 @@ QModelIndex* q_transposeproxymodel_index(void* self, int row, int column, void* 
 ///
 void q_transposeproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_index` instead
-///
-#define q_transposeproxymodel_qbase_index q_transposeproxymodel_super_index
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#index)
 ///
 /// Base class method implementation
@@ -516,10 +456,6 @@ bool q_transposeproxymodel_insert_rows(void* self, int row, int count, void* par
 ///
 void q_transposeproxymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_insert_rows` instead
-///
-#define q_transposeproxymodel_qbase_insert_rows q_transposeproxymodel_super_insert_rows
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#insertRows)
 ///
 /// Base class method implementation
@@ -548,10 +484,6 @@ bool q_transposeproxymodel_remove_rows(void* self, int row, int count, void* par
 /// @param callback bool func(QTransposeProxyModel* self, int row, int count, QModelIndex* parent)
 ///
 void q_transposeproxymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_remove_rows` instead
-///
-#define q_transposeproxymodel_qbase_remove_rows q_transposeproxymodel_super_remove_rows
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#removeRows)
 ///
@@ -584,10 +516,6 @@ bool q_transposeproxymodel_move_rows(void* self, void* sourceParent, int sourceR
 ///
 void q_transposeproxymodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_move_rows` instead
-///
-#define q_transposeproxymodel_qbase_move_rows q_transposeproxymodel_super_move_rows
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#moveRows)
 ///
 /// Base class method implementation
@@ -619,10 +547,6 @@ bool q_transposeproxymodel_insert_columns(void* self, int column, int count, voi
 ///
 void q_transposeproxymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_insert_columns` instead
-///
-#define q_transposeproxymodel_qbase_insert_columns q_transposeproxymodel_super_insert_columns
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#insertColumns)
 ///
 /// Base class method implementation
@@ -651,10 +575,6 @@ bool q_transposeproxymodel_remove_columns(void* self, int column, int count, voi
 /// @param callback bool func(QTransposeProxyModel* self, int column, int count, QModelIndex* parent)
 ///
 void q_transposeproxymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_remove_columns` instead
-///
-#define q_transposeproxymodel_qbase_remove_columns q_transposeproxymodel_super_remove_columns
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#removeColumns)
 ///
@@ -687,10 +607,6 @@ bool q_transposeproxymodel_move_columns(void* self, void* sourceParent, int sour
 ///
 void q_transposeproxymodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_move_columns` instead
-///
-#define q_transposeproxymodel_qbase_move_columns q_transposeproxymodel_super_move_columns
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#moveColumns)
 ///
 /// Base class method implementation
@@ -720,10 +636,6 @@ void q_transposeproxymodel_sort(void* self, int column, int32_t order);
 /// @param callback void func(QTransposeProxyModel* self, int column, enum Qt__SortOrder order)
 ///
 void q_transposeproxymodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_sort` instead
-///
-#define q_transposeproxymodel_qbase_sort q_transposeproxymodel_super_sort
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#sort)
 ///
@@ -1519,10 +1431,6 @@ void q_transposeproxymodel_on_destroyed1(void* self, void (*callback)(void*, voi
 ///
 QItemSelection* q_transposeproxymodel_map_selection_to_source(void* self, void* selection);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_map_selection_to_source` instead
-///
-#define q_transposeproxymodel_qbase_map_selection_to_source q_transposeproxymodel_super_map_selection_to_source
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#mapSelectionToSource)
@@ -1558,10 +1466,6 @@ void q_transposeproxymodel_on_map_selection_to_source(void* self, QItemSelection
 ///
 QItemSelection* q_transposeproxymodel_map_selection_from_source(void* self, void* selection);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_map_selection_from_source` instead
-///
-#define q_transposeproxymodel_qbase_map_selection_from_source q_transposeproxymodel_super_map_selection_from_source
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#mapSelectionFromSource)
@@ -1596,10 +1500,6 @@ void q_transposeproxymodel_on_map_selection_from_source(void* self, QItemSelecti
 ///
 bool q_transposeproxymodel_submit(void* self);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_submit` instead
-///
-#define q_transposeproxymodel_qbase_submit q_transposeproxymodel_super_submit
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
@@ -1630,10 +1530,6 @@ void q_transposeproxymodel_on_submit(void* self, bool (*callback)());
 /// @param self QTransposeProxyModel*
 ///
 void q_transposeproxymodel_revert(void* self);
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_revert` instead
-///
-#define q_transposeproxymodel_qbase_revert q_transposeproxymodel_super_revert
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1667,10 +1563,6 @@ void q_transposeproxymodel_on_revert(void* self, void (*callback)());
 /// @param role int
 ///
 QVariant* q_transposeproxymodel_data(void* self, void* proxyIndex, int role);
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_data` instead
-///
-#define q_transposeproxymodel_qbase_data q_transposeproxymodel_super_data
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1710,10 +1602,6 @@ void q_transposeproxymodel_on_data(void* self, QVariant* (*callback)(void*, void
 ///
 int32_t q_transposeproxymodel_flags(void* self, void* index);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_flags` instead
-///
-#define q_transposeproxymodel_qbase_flags q_transposeproxymodel_super_flags
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#flags)
@@ -1751,10 +1639,6 @@ void q_transposeproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*
 ///
 bool q_transposeproxymodel_set_data(void* self, void* index, void* value, int role);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_set_data` instead
-///
-#define q_transposeproxymodel_qbase_set_data q_transposeproxymodel_super_set_data
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setData)
@@ -1790,10 +1674,6 @@ void q_transposeproxymodel_on_set_data(void* self, bool (*callback)(void*, void*
 ///
 bool q_transposeproxymodel_clear_item_data(void* self, void* index);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_clear_item_data` instead
-///
-#define q_transposeproxymodel_qbase_clear_item_data q_transposeproxymodel_super_clear_item_data
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
@@ -1826,10 +1706,6 @@ void q_transposeproxymodel_on_clear_item_data(void* self, bool (*callback)(void*
 /// @param index QModelIndex*
 ///
 QModelIndex* q_transposeproxymodel_buddy(void* self, void* index);
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_buddy` instead
-///
-#define q_transposeproxymodel_qbase_buddy q_transposeproxymodel_super_buddy
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1866,10 +1742,6 @@ void q_transposeproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, 
 ///
 bool q_transposeproxymodel_can_fetch_more(void* self, void* parent);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_can_fetch_more` instead
-///
-#define q_transposeproxymodel_qbase_can_fetch_more q_transposeproxymodel_super_can_fetch_more
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canFetchMore)
@@ -1903,10 +1775,6 @@ void q_transposeproxymodel_on_can_fetch_more(void* self, bool (*callback)(void*,
 ///
 void q_transposeproxymodel_fetch_more(void* self, void* parent);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_fetch_more` instead
-///
-#define q_transposeproxymodel_qbase_fetch_more q_transposeproxymodel_super_fetch_more
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#fetchMore)
@@ -1939,10 +1807,6 @@ void q_transposeproxymodel_on_fetch_more(void* self, void (*callback)(void*, voi
 /// @param parent QModelIndex*
 ///
 bool q_transposeproxymodel_has_children(void* self, void* parent);
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_has_children` instead
-///
-#define q_transposeproxymodel_qbase_has_children q_transposeproxymodel_super_has_children
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1978,10 +1842,6 @@ void q_transposeproxymodel_on_has_children(void* self, bool (*callback)(void*, v
 /// @param idx QModelIndex*
 ///
 QModelIndex* q_transposeproxymodel_sibling(void* self, int row, int column, void* idx);
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_sibling` instead
-///
-#define q_transposeproxymodel_qbase_sibling q_transposeproxymodel_super_sibling
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2020,10 +1880,6 @@ void q_transposeproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*
 ///
 QMimeData* q_transposeproxymodel_mime_data(void* self, libqt_list indexes);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_mime_data` instead
-///
-#define q_transposeproxymodel_qbase_mime_data q_transposeproxymodel_super_mime_data
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeData)
@@ -2060,10 +1916,6 @@ void q_transposeproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*
 /// @param parent QModelIndex*
 ///
 bool q_transposeproxymodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_can_drop_mime_data` instead
-///
-#define q_transposeproxymodel_qbase_can_drop_mime_data q_transposeproxymodel_super_can_drop_mime_data
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2106,10 +1958,6 @@ void q_transposeproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(vo
 ///
 bool q_transposeproxymodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_drop_mime_data` instead
-///
-#define q_transposeproxymodel_qbase_drop_mime_data q_transposeproxymodel_super_drop_mime_data
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#dropMimeData)
@@ -2148,10 +1996,6 @@ void q_transposeproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*,
 ///
 const char** q_transposeproxymodel_mime_types(void* self);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_mime_types` instead
-///
-#define q_transposeproxymodel_qbase_mime_types q_transposeproxymodel_super_mime_types
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeTypes)
@@ -2187,10 +2031,6 @@ void q_transposeproxymodel_on_mime_types(void* self, const char** (*callback)())
 ///
 int32_t q_transposeproxymodel_supported_drag_actions(void* self);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_supported_drag_actions` instead
-///
-#define q_transposeproxymodel_qbase_supported_drag_actions q_transposeproxymodel_super_supported_drag_actions
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
@@ -2225,10 +2065,6 @@ void q_transposeproxymodel_on_supported_drag_actions(void* self, int32_t (*callb
 /// @return flag of enum Qt__DropAction
 ///
 int32_t q_transposeproxymodel_supported_drop_actions(void* self);
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_supported_drop_actions` instead
-///
-#define q_transposeproxymodel_qbase_supported_drop_actions q_transposeproxymodel_super_supported_drop_actions
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2275,10 +2111,6 @@ void q_transposeproxymodel_on_supported_drop_actions(void* self, int32_t (*callb
 /// @return libqt_map of int to char*
 ///
 libqt_map q_transposeproxymodel_role_names(void* self);
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_role_names` instead
-///
-#define q_transposeproxymodel_qbase_role_names q_transposeproxymodel_super_role_names
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2331,10 +2163,6 @@ void q_transposeproxymodel_on_role_names(void* self, libqt_map (*callback)());
 ///
 libqt_list q_transposeproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_match` instead
-///
-#define q_transposeproxymodel_qbase_match q_transposeproxymodel_super_match
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
@@ -2375,10 +2203,6 @@ void q_transposeproxymodel_on_match(void* self, libqt_list (*callback)(void*, vo
 ///
 void q_transposeproxymodel_multi_data(void* self, void* index, void* roleDataSpan);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_multi_data` instead
-///
-#define q_transposeproxymodel_qbase_multi_data q_transposeproxymodel_super_multi_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
@@ -2412,10 +2236,6 @@ void q_transposeproxymodel_on_multi_data(void* self, void (*callback)(void*, voi
 ///
 void q_transposeproxymodel_reset_internal_data(void* self);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_reset_internal_data` instead
-///
-#define q_transposeproxymodel_qbase_reset_internal_data q_transposeproxymodel_super_reset_internal_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
@@ -2447,10 +2267,6 @@ void q_transposeproxymodel_on_reset_internal_data(void* self, void (*callback)()
 /// @param event QEvent*
 ///
 bool q_transposeproxymodel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_event` instead
-///
-#define q_transposeproxymodel_qbase_event q_transposeproxymodel_super_event
 
 /// Inherited from QObject
 ///
@@ -2486,10 +2302,6 @@ void q_transposeproxymodel_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_transposeproxymodel_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_event_filter` instead
-///
-#define q_transposeproxymodel_qbase_event_filter q_transposeproxymodel_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -2524,10 +2336,6 @@ void q_transposeproxymodel_on_event_filter(void* self, bool (*callback)(void*, v
 ///
 void q_transposeproxymodel_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_timer_event` instead
-///
-#define q_transposeproxymodel_qbase_timer_event q_transposeproxymodel_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2560,10 +2368,6 @@ void q_transposeproxymodel_on_timer_event(void* self, void (*callback)(void*, vo
 /// @param event QChildEvent*
 ///
 void q_transposeproxymodel_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_child_event` instead
-///
-#define q_transposeproxymodel_qbase_child_event q_transposeproxymodel_super_child_event
 
 /// Inherited from QObject
 ///
@@ -2598,10 +2402,6 @@ void q_transposeproxymodel_on_child_event(void* self, void (*callback)(void*, vo
 ///
 void q_transposeproxymodel_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_custom_event` instead
-///
-#define q_transposeproxymodel_qbase_custom_event q_transposeproxymodel_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2635,10 +2435,6 @@ void q_transposeproxymodel_on_custom_event(void* self, void (*callback)(void*, v
 ///
 void q_transposeproxymodel_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_connect_notify` instead
-///
-#define q_transposeproxymodel_qbase_connect_notify q_transposeproxymodel_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -2671,10 +2467,6 @@ void q_transposeproxymodel_on_connect_notify(void* self, void (*callback)(void*,
 /// @param signal QMetaMethod*
 ///
 void q_transposeproxymodel_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_disconnect_notify` instead
-///
-#define q_transposeproxymodel_qbase_disconnect_notify q_transposeproxymodel_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -2710,10 +2502,6 @@ void q_transposeproxymodel_on_disconnect_notify(void* self, void (*callback)(voi
 /// @param internalPtr void*
 ///
 QModelIndex* q_transposeproxymodel_create_source_index(void* self, int row, int col, void* internalPtr);
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_create_source_index` instead
-///
-#define q_transposeproxymodel_qbase_create_source_index q_transposeproxymodel_super_create_source_index
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2753,10 +2541,6 @@ void q_transposeproxymodel_on_create_source_index(void* self, QModelIndex* (*cal
 ///
 QModelIndex* q_transposeproxymodel_create_index(void* self, int row, int column);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_create_index` instead
-///
-#define q_transposeproxymodel_qbase_create_index q_transposeproxymodel_super_create_index
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
@@ -2794,10 +2578,6 @@ void q_transposeproxymodel_on_create_index(void* self, QModelIndex* (*callback)(
 ///
 void q_transposeproxymodel_encode_data(void* self, libqt_list indexes, void* stream);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_encode_data` instead
-///
-#define q_transposeproxymodel_qbase_encode_data q_transposeproxymodel_super_encode_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
@@ -2834,10 +2614,6 @@ void q_transposeproxymodel_on_encode_data(void* self, void (*callback)(void*, li
 /// @param stream QDataStream*
 ///
 bool q_transposeproxymodel_decode_data(void* self, int row, int column, void* parent, void* stream);
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_decode_data` instead
-///
-#define q_transposeproxymodel_qbase_decode_data q_transposeproxymodel_super_decode_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2877,10 +2653,6 @@ void q_transposeproxymodel_on_decode_data(void* self, bool (*callback)(void*, in
 ///
 void q_transposeproxymodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_begin_insert_rows` instead
-///
-#define q_transposeproxymodel_qbase_begin_insert_rows q_transposeproxymodel_super_begin_insert_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
@@ -2914,10 +2686,6 @@ void q_transposeproxymodel_on_begin_insert_rows(void* self, void (*callback)(voi
 /// @param self QTransposeProxyModel*
 ///
 void q_transposeproxymodel_end_insert_rows(void* self);
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_end_insert_rows` instead
-///
-#define q_transposeproxymodel_qbase_end_insert_rows q_transposeproxymodel_super_end_insert_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2953,10 +2721,6 @@ void q_transposeproxymodel_on_end_insert_rows(void* self, void (*callback)());
 ///
 void q_transposeproxymodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_begin_remove_rows` instead
-///
-#define q_transposeproxymodel_qbase_begin_remove_rows q_transposeproxymodel_super_begin_remove_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
@@ -2990,10 +2754,6 @@ void q_transposeproxymodel_on_begin_remove_rows(void* self, void (*callback)(voi
 /// @param self QTransposeProxyModel*
 ///
 void q_transposeproxymodel_end_remove_rows(void* self);
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_end_remove_rows` instead
-///
-#define q_transposeproxymodel_qbase_end_remove_rows q_transposeproxymodel_super_end_remove_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3031,10 +2791,6 @@ void q_transposeproxymodel_on_end_remove_rows(void* self, void (*callback)());
 ///
 bool q_transposeproxymodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_begin_move_rows` instead
-///
-#define q_transposeproxymodel_qbase_begin_move_rows q_transposeproxymodel_super_begin_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
@@ -3071,10 +2827,6 @@ void q_transposeproxymodel_on_begin_move_rows(void* self, bool (*callback)(void*
 ///
 void q_transposeproxymodel_end_move_rows(void* self);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_end_move_rows` instead
-///
-#define q_transposeproxymodel_qbase_end_move_rows q_transposeproxymodel_super_end_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
@@ -3108,10 +2860,6 @@ void q_transposeproxymodel_on_end_move_rows(void* self, void (*callback)());
 /// @param last int
 ///
 void q_transposeproxymodel_begin_insert_columns(void* self, void* parent, int first, int last);
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_begin_insert_columns` instead
-///
-#define q_transposeproxymodel_qbase_begin_insert_columns q_transposeproxymodel_super_begin_insert_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3147,10 +2895,6 @@ void q_transposeproxymodel_on_begin_insert_columns(void* self, void (*callback)(
 ///
 void q_transposeproxymodel_end_insert_columns(void* self);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_end_insert_columns` instead
-///
-#define q_transposeproxymodel_qbase_end_insert_columns q_transposeproxymodel_super_end_insert_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
@@ -3185,10 +2929,6 @@ void q_transposeproxymodel_on_end_insert_columns(void* self, void (*callback)())
 ///
 void q_transposeproxymodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_begin_remove_columns` instead
-///
-#define q_transposeproxymodel_qbase_begin_remove_columns q_transposeproxymodel_super_begin_remove_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
@@ -3222,10 +2962,6 @@ void q_transposeproxymodel_on_begin_remove_columns(void* self, void (*callback)(
 /// @param self QTransposeProxyModel*
 ///
 void q_transposeproxymodel_end_remove_columns(void* self);
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_end_remove_columns` instead
-///
-#define q_transposeproxymodel_qbase_end_remove_columns q_transposeproxymodel_super_end_remove_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3263,10 +2999,6 @@ void q_transposeproxymodel_on_end_remove_columns(void* self, void (*callback)())
 ///
 bool q_transposeproxymodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_begin_move_columns` instead
-///
-#define q_transposeproxymodel_qbase_begin_move_columns q_transposeproxymodel_super_begin_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
@@ -3303,10 +3035,6 @@ void q_transposeproxymodel_on_begin_move_columns(void* self, bool (*callback)(vo
 ///
 void q_transposeproxymodel_end_move_columns(void* self);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_end_move_columns` instead
-///
-#define q_transposeproxymodel_qbase_end_move_columns q_transposeproxymodel_super_end_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
@@ -3338,10 +3066,6 @@ void q_transposeproxymodel_on_end_move_columns(void* self, void (*callback)());
 ///
 void q_transposeproxymodel_begin_reset_model(void* self);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_begin_reset_model` instead
-///
-#define q_transposeproxymodel_qbase_begin_reset_model q_transposeproxymodel_super_begin_reset_model
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
@@ -3372,10 +3096,6 @@ void q_transposeproxymodel_on_begin_reset_model(void* self, void (*callback)());
 /// @param self QTransposeProxyModel*
 ///
 void q_transposeproxymodel_end_reset_model(void* self);
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_end_reset_model` instead
-///
-#define q_transposeproxymodel_qbase_end_reset_model q_transposeproxymodel_super_end_reset_model
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3409,10 +3129,6 @@ void q_transposeproxymodel_on_end_reset_model(void* self, void (*callback)());
 /// @param to QModelIndex*
 ///
 void q_transposeproxymodel_change_persistent_index(void* self, void* from, void* to);
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_change_persistent_index` instead
-///
-#define q_transposeproxymodel_qbase_change_persistent_index q_transposeproxymodel_super_change_persistent_index
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3449,10 +3165,6 @@ void q_transposeproxymodel_on_change_persistent_index(void* self, void (*callbac
 ///
 void q_transposeproxymodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_change_persistent_index_list` instead
-///
-#define q_transposeproxymodel_qbase_change_persistent_index_list q_transposeproxymodel_super_change_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
@@ -3488,10 +3200,6 @@ void q_transposeproxymodel_on_change_persistent_index_list(void* self, void (*ca
 ///
 libqt_list q_transposeproxymodel_persistent_index_list(void* self);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_persistent_index_list` instead
-///
-#define q_transposeproxymodel_qbase_persistent_index_list q_transposeproxymodel_super_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
@@ -3525,10 +3233,6 @@ void q_transposeproxymodel_on_persistent_index_list(void* self, libqt_list (*cal
 ///
 QObject* q_transposeproxymodel_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_sender` instead
-///
-#define q_transposeproxymodel_qbase_sender q_transposeproxymodel_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -3559,10 +3263,6 @@ void q_transposeproxymodel_on_sender(void* self, QObject* (*callback)());
 /// @param self QTransposeProxyModel*
 ///
 int32_t q_transposeproxymodel_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_sender_signal_index` instead
-///
-#define q_transposeproxymodel_qbase_sender_signal_index q_transposeproxymodel_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -3596,10 +3296,6 @@ void q_transposeproxymodel_on_sender_signal_index(void* self, int32_t (*callback
 ///
 int32_t q_transposeproxymodel_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_receivers` instead
-///
-#define q_transposeproxymodel_qbase_receivers q_transposeproxymodel_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -3632,10 +3328,6 @@ void q_transposeproxymodel_on_receivers(void* self, int32_t (*callback)(void*, c
 /// @param signal QMetaMethod*
 ///
 bool q_transposeproxymodel_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_transposeproxymodel_super_is_signal_connected` instead
-///
-#define q_transposeproxymodel_qbase_is_signal_connected q_transposeproxymodel_super_is_signal_connected
 
 /// Inherited from QObject
 ///

@@ -54,10 +54,6 @@ const QMetaObject* q_colordialog_meta_object(void* self);
 ///
 void q_colordialog_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_colordialog_super_meta_object` instead
-///
-#define q_colordialog_qbase_meta_object q_colordialog_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -77,10 +73,6 @@ void* q_colordialog_metacast(void* self, const char* param1);
 /// @param callback void* func(QColorDialog* self, const char* param1)
 ///
 void q_colordialog_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_colordialog_super_metacast` instead
-///
-#define q_colordialog_qbase_metacast q_colordialog_super_metacast
 
 /// Base class method implementation
 ///
@@ -102,10 +94,6 @@ int32_t q_colordialog_metacall(void* self, int32_t param1, int param2, void* par
 /// @param callback int32_t func(QColorDialog* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_colordialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_colordialog_super_metacall` instead
-///
-#define q_colordialog_qbase_metacall q_colordialog_super_metacall
 
 /// Base class method implementation
 ///
@@ -187,10 +175,6 @@ void q_colordialog_set_visible(void* self, bool visible);
 /// @param callback void func(QColorDialog* self, bool visible)
 ///
 void q_colordialog_on_set_visible(void* self, void (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `q_colordialog_super_set_visible` instead
-///
-#define q_colordialog_qbase_set_visible q_colordialog_super_set_visible
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolordialog.html#setVisible)
 ///
@@ -279,10 +263,6 @@ void q_colordialog_change_event(void* self, void* event);
 ///
 void q_colordialog_on_change_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_colordialog_super_change_event` instead
-///
-#define q_colordialog_qbase_change_event q_colordialog_super_change_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolordialog.html#changeEvent)
 ///
 /// Base class method implementation
@@ -307,10 +287,6 @@ void q_colordialog_done(void* self, int result);
 /// @param callback void func(QColorDialog* self, int result)
 ///
 void q_colordialog_on_done(void* self, void (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_colordialog_super_done` instead
-///
-#define q_colordialog_qbase_done q_colordialog_super_done
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolordialog.html#done)
 ///
@@ -3440,10 +3416,6 @@ int32_t q_colordialog_encode_metric_f(int32_t metric, double value);
 ///
 QSize* q_colordialog_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_size_hint` instead
-///
-#define q_colordialog_qbase_size_hint q_colordialog_super_size_hint
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#sizeHint)
@@ -3476,10 +3448,6 @@ void q_colordialog_on_size_hint(void* self, QSize* (*callback)());
 /// @param self QColorDialog*
 ///
 QSize* q_colordialog_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_minimum_size_hint` instead
-///
-#define q_colordialog_qbase_minimum_size_hint q_colordialog_super_minimum_size_hint
 
 /// Inherited from QDialog
 ///
@@ -3514,10 +3482,6 @@ void q_colordialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 void q_colordialog_open(void* self);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_open` instead
-///
-#define q_colordialog_qbase_open q_colordialog_super_open
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#open)
@@ -3548,10 +3512,6 @@ void q_colordialog_on_open(void* self, void (*callback)());
 /// @param self QColorDialog*
 ///
 int32_t q_colordialog_exec(void* self);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_exec` instead
-///
-#define q_colordialog_qbase_exec q_colordialog_super_exec
 
 /// Inherited from QDialog
 ///
@@ -3584,10 +3544,6 @@ void q_colordialog_on_exec(void* self, int32_t (*callback)());
 ///
 void q_colordialog_accept(void* self);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_accept` instead
-///
-#define q_colordialog_qbase_accept q_colordialog_super_accept
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#accept)
@@ -3618,10 +3574,6 @@ void q_colordialog_on_accept(void* self, void (*callback)());
 /// @param self QColorDialog*
 ///
 void q_colordialog_reject(void* self);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_reject` instead
-///
-#define q_colordialog_qbase_reject q_colordialog_super_reject
 
 /// Inherited from QDialog
 ///
@@ -3654,10 +3606,6 @@ void q_colordialog_on_reject(void* self, void (*callback)());
 /// @param param1 QKeyEvent*
 ///
 void q_colordialog_key_press_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_key_press_event` instead
-///
-#define q_colordialog_qbase_key_press_event q_colordialog_super_key_press_event
 
 /// Inherited from QDialog
 ///
@@ -3692,10 +3640,6 @@ void q_colordialog_on_key_press_event(void* self, void (*callback)(void*, void*)
 ///
 void q_colordialog_close_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_close_event` instead
-///
-#define q_colordialog_qbase_close_event q_colordialog_super_close_event
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
@@ -3728,10 +3672,6 @@ void q_colordialog_on_close_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QShowEvent*
 ///
 void q_colordialog_show_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_show_event` instead
-///
-#define q_colordialog_qbase_show_event q_colordialog_super_show_event
 
 /// Inherited from QDialog
 ///
@@ -3766,10 +3706,6 @@ void q_colordialog_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 void q_colordialog_resize_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_resize_event` instead
-///
-#define q_colordialog_qbase_resize_event q_colordialog_super_resize_event
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
@@ -3802,10 +3738,6 @@ void q_colordialog_on_resize_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QContextMenuEvent*
 ///
 void q_colordialog_context_menu_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_context_menu_event` instead
-///
-#define q_colordialog_qbase_context_menu_event q_colordialog_super_context_menu_event
 
 /// Inherited from QDialog
 ///
@@ -3841,10 +3773,6 @@ void q_colordialog_on_context_menu_event(void* self, void (*callback)(void*, voi
 ///
 bool q_colordialog_event_filter(void* self, void* param1, void* param2);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_event_filter` instead
-///
-#define q_colordialog_qbase_event_filter q_colordialog_super_event_filter
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
@@ -3878,10 +3806,6 @@ void q_colordialog_on_event_filter(void* self, bool (*callback)(void*, void*, vo
 ///
 int32_t q_colordialog_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_dev_type` instead
-///
-#define q_colordialog_qbase_dev_type q_colordialog_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -3913,10 +3837,6 @@ void q_colordialog_on_dev_type(void* self, int32_t (*callback)());
 /// @param param1 int
 ///
 int32_t q_colordialog_height_for_width(void* self, int param1);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_height_for_width` instead
-///
-#define q_colordialog_qbase_height_for_width q_colordialog_super_height_for_width
 
 /// Inherited from QWidget
 ///
@@ -3950,10 +3870,6 @@ void q_colordialog_on_height_for_width(void* self, int32_t (*callback)(void*, in
 ///
 bool q_colordialog_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_has_height_for_width` instead
-///
-#define q_colordialog_qbase_has_height_for_width q_colordialog_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -3984,10 +3900,6 @@ void q_colordialog_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self QColorDialog*
 ///
 QPaintEngine* q_colordialog_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_paint_engine` instead
-///
-#define q_colordialog_qbase_paint_engine q_colordialog_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -4020,10 +3932,6 @@ void q_colordialog_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QEvent*
 ///
 bool q_colordialog_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_event` instead
-///
-#define q_colordialog_qbase_event q_colordialog_super_event
 
 /// Inherited from QWidget
 ///
@@ -4058,10 +3966,6 @@ void q_colordialog_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void q_colordialog_mouse_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_mouse_press_event` instead
-///
-#define q_colordialog_qbase_mouse_press_event q_colordialog_super_mouse_press_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -4094,10 +3998,6 @@ void q_colordialog_on_mouse_press_event(void* self, void (*callback)(void*, void
 /// @param event QMouseEvent*
 ///
 void q_colordialog_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_mouse_release_event` instead
-///
-#define q_colordialog_qbase_mouse_release_event q_colordialog_super_mouse_release_event
 
 /// Inherited from QWidget
 ///
@@ -4132,10 +4032,6 @@ void q_colordialog_on_mouse_release_event(void* self, void (*callback)(void*, vo
 ///
 void q_colordialog_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_mouse_double_click_event` instead
-///
-#define q_colordialog_qbase_mouse_double_click_event q_colordialog_super_mouse_double_click_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -4168,10 +4064,6 @@ void q_colordialog_on_mouse_double_click_event(void* self, void (*callback)(void
 /// @param event QMouseEvent*
 ///
 void q_colordialog_mouse_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_mouse_move_event` instead
-///
-#define q_colordialog_qbase_mouse_move_event q_colordialog_super_mouse_move_event
 
 /// Inherited from QWidget
 ///
@@ -4206,10 +4098,6 @@ void q_colordialog_on_mouse_move_event(void* self, void (*callback)(void*, void*
 ///
 void q_colordialog_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_wheel_event` instead
-///
-#define q_colordialog_qbase_wheel_event q_colordialog_super_wheel_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -4242,10 +4130,6 @@ void q_colordialog_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QKeyEvent*
 ///
 void q_colordialog_key_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_key_release_event` instead
-///
-#define q_colordialog_qbase_key_release_event q_colordialog_super_key_release_event
 
 /// Inherited from QWidget
 ///
@@ -4280,10 +4164,6 @@ void q_colordialog_on_key_release_event(void* self, void (*callback)(void*, void
 ///
 void q_colordialog_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_focus_in_event` instead
-///
-#define q_colordialog_qbase_focus_in_event q_colordialog_super_focus_in_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -4316,10 +4196,6 @@ void q_colordialog_on_focus_in_event(void* self, void (*callback)(void*, void*))
 /// @param event QFocusEvent*
 ///
 void q_colordialog_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_focus_out_event` instead
-///
-#define q_colordialog_qbase_focus_out_event q_colordialog_super_focus_out_event
 
 /// Inherited from QWidget
 ///
@@ -4354,10 +4230,6 @@ void q_colordialog_on_focus_out_event(void* self, void (*callback)(void*, void*)
 ///
 void q_colordialog_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_enter_event` instead
-///
-#define q_colordialog_qbase_enter_event q_colordialog_super_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -4390,10 +4262,6 @@ void q_colordialog_on_enter_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void q_colordialog_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_leave_event` instead
-///
-#define q_colordialog_qbase_leave_event q_colordialog_super_leave_event
 
 /// Inherited from QWidget
 ///
@@ -4428,10 +4296,6 @@ void q_colordialog_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_colordialog_paint_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_paint_event` instead
-///
-#define q_colordialog_qbase_paint_event q_colordialog_super_paint_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
@@ -4464,10 +4328,6 @@ void q_colordialog_on_paint_event(void* self, void (*callback)(void*, void*));
 /// @param event QMoveEvent*
 ///
 void q_colordialog_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_move_event` instead
-///
-#define q_colordialog_qbase_move_event q_colordialog_super_move_event
 
 /// Inherited from QWidget
 ///
@@ -4502,10 +4362,6 @@ void q_colordialog_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_colordialog_tablet_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_tablet_event` instead
-///
-#define q_colordialog_qbase_tablet_event q_colordialog_super_tablet_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4538,10 +4394,6 @@ void q_colordialog_on_tablet_event(void* self, void (*callback)(void*, void*));
 /// @param event QActionEvent*
 ///
 void q_colordialog_action_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_action_event` instead
-///
-#define q_colordialog_qbase_action_event q_colordialog_super_action_event
 
 /// Inherited from QWidget
 ///
@@ -4576,10 +4428,6 @@ void q_colordialog_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 void q_colordialog_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_drag_enter_event` instead
-///
-#define q_colordialog_qbase_drag_enter_event q_colordialog_super_drag_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4612,10 +4460,6 @@ void q_colordialog_on_drag_enter_event(void* self, void (*callback)(void*, void*
 /// @param event QDragMoveEvent*
 ///
 void q_colordialog_drag_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_drag_move_event` instead
-///
-#define q_colordialog_qbase_drag_move_event q_colordialog_super_drag_move_event
 
 /// Inherited from QWidget
 ///
@@ -4650,10 +4494,6 @@ void q_colordialog_on_drag_move_event(void* self, void (*callback)(void*, void*)
 ///
 void q_colordialog_drag_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_drag_leave_event` instead
-///
-#define q_colordialog_qbase_drag_leave_event q_colordialog_super_drag_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -4687,10 +4527,6 @@ void q_colordialog_on_drag_leave_event(void* self, void (*callback)(void*, void*
 ///
 void q_colordialog_drop_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_drop_event` instead
-///
-#define q_colordialog_qbase_drop_event q_colordialog_super_drop_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4723,10 +4559,6 @@ void q_colordialog_on_drop_event(void* self, void (*callback)(void*, void*));
 /// @param event QHideEvent*
 ///
 void q_colordialog_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_hide_event` instead
-///
-#define q_colordialog_qbase_hide_event q_colordialog_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -4763,10 +4595,6 @@ void q_colordialog_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_colordialog_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_native_event` instead
-///
-#define q_colordialog_qbase_native_event q_colordialog_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4802,10 +4630,6 @@ void q_colordialog_on_native_event(void* self, bool (*callback)(void*, libqt_str
 ///
 int32_t q_colordialog_metric(void* self, int32_t param1);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_metric` instead
-///
-#define q_colordialog_qbase_metric q_colordialog_super_metric
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -4838,10 +4662,6 @@ void q_colordialog_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 /// @param painter QPainter*
 ///
 void q_colordialog_init_painter(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_init_painter` instead
-///
-#define q_colordialog_qbase_init_painter q_colordialog_super_init_painter
 
 /// Inherited from QWidget
 ///
@@ -4876,10 +4696,6 @@ void q_colordialog_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_colordialog_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_redirected` instead
-///
-#define q_colordialog_qbase_redirected q_colordialog_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4911,10 +4727,6 @@ void q_colordialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, vo
 /// @param self QColorDialog*
 ///
 QPainter* q_colordialog_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_shared_painter` instead
-///
-#define q_colordialog_qbase_shared_painter q_colordialog_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -4948,10 +4760,6 @@ void q_colordialog_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void q_colordialog_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_input_method_event` instead
-///
-#define q_colordialog_qbase_input_method_event q_colordialog_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4984,10 +4792,6 @@ void q_colordialog_on_input_method_event(void* self, void (*callback)(void*, voi
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* q_colordialog_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_input_method_query` instead
-///
-#define q_colordialog_qbase_input_method_query q_colordialog_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -5024,10 +4828,6 @@ void q_colordialog_on_input_method_query(void* self, QVariant* (*callback)(void*
 ///
 bool q_colordialog_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_focus_next_prev_child` instead
-///
-#define q_colordialog_qbase_focus_next_prev_child q_colordialog_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -5060,10 +4860,6 @@ void q_colordialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, 
 /// @param event QTimerEvent*
 ///
 void q_colordialog_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_timer_event` instead
-///
-#define q_colordialog_qbase_timer_event q_colordialog_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -5098,10 +4894,6 @@ void q_colordialog_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_colordialog_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_child_event` instead
-///
-#define q_colordialog_qbase_child_event q_colordialog_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -5134,10 +4926,6 @@ void q_colordialog_on_child_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void q_colordialog_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_custom_event` instead
-///
-#define q_colordialog_qbase_custom_event q_colordialog_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -5172,10 +4960,6 @@ void q_colordialog_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_colordialog_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_connect_notify` instead
-///
-#define q_colordialog_qbase_connect_notify q_colordialog_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5208,10 +4992,6 @@ void q_colordialog_on_connect_notify(void* self, void (*callback)(void*, void*))
 /// @param signal QMetaMethod*
 ///
 void q_colordialog_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_disconnect_notify` instead
-///
-#define q_colordialog_qbase_disconnect_notify q_colordialog_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -5246,10 +5026,6 @@ void q_colordialog_on_disconnect_notify(void* self, void (*callback)(void*, void
 ///
 void q_colordialog_adjust_position(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_adjust_position` instead
-///
-#define q_colordialog_qbase_adjust_position q_colordialog_super_adjust_position
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
@@ -5282,10 +5058,6 @@ void q_colordialog_on_adjust_position(void* self, void (*callback)(void*, void*)
 ///
 void q_colordialog_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_update_micro_focus` instead
-///
-#define q_colordialog_qbase_update_micro_focus q_colordialog_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5316,10 +5088,6 @@ void q_colordialog_on_update_micro_focus(void* self, void (*callback)());
 /// @param self QColorDialog*
 ///
 void q_colordialog_create(void* self);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_create` instead
-///
-#define q_colordialog_qbase_create q_colordialog_super_create
 
 /// Inherited from QWidget
 ///
@@ -5352,10 +5120,6 @@ void q_colordialog_on_create(void* self, void (*callback)());
 ///
 void q_colordialog_destroy(void* self);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_destroy` instead
-///
-#define q_colordialog_qbase_destroy q_colordialog_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5386,10 +5150,6 @@ void q_colordialog_on_destroy(void* self, void (*callback)());
 /// @param self QColorDialog*
 ///
 bool q_colordialog_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_focus_next_child` instead
-///
-#define q_colordialog_qbase_focus_next_child q_colordialog_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -5422,10 +5182,6 @@ void q_colordialog_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_colordialog_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_focus_previous_child` instead
-///
-#define q_colordialog_qbase_focus_previous_child q_colordialog_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5456,10 +5212,6 @@ void q_colordialog_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self QColorDialog*
 ///
 QObject* q_colordialog_sender(void* self);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_sender` instead
-///
-#define q_colordialog_qbase_sender q_colordialog_super_sender
 
 /// Inherited from QObject
 ///
@@ -5492,10 +5244,6 @@ void q_colordialog_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_colordialog_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_sender_signal_index` instead
-///
-#define q_colordialog_qbase_sender_signal_index q_colordialog_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5527,10 +5275,6 @@ void q_colordialog_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t q_colordialog_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_receivers` instead
-///
-#define q_colordialog_qbase_receivers q_colordialog_super_receivers
 
 /// Inherited from QObject
 ///
@@ -5565,10 +5309,6 @@ void q_colordialog_on_receivers(void* self, int32_t (*callback)(void*, const cha
 ///
 bool q_colordialog_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_colordialog_super_is_signal_connected` instead
-///
-#define q_colordialog_qbase_is_signal_connected q_colordialog_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5602,10 +5342,6 @@ void q_colordialog_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double q_colordialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `q_colordialog_super_get_decoded_metric_f` instead
-///
-#define q_colordialog_qbase_get_decoded_metric_f q_colordialog_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

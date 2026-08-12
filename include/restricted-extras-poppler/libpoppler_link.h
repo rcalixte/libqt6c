@@ -142,10 +142,6 @@ int32_t q_poppler__link_link_type(void* self);
 ///
 void q_poppler__link_on_link_type(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_poppler__link_super_link_type` instead
-///
-#define q_poppler__link_qbase_link_type q_poppler__link_super_link_type
-
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Link.html)
 ///
 /// Base class method implementation
@@ -224,10 +220,6 @@ int32_t q_poppler__linkgoto_link_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_poppler__linkgoto_on_link_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_poppler__linkgoto_super_link_type` instead
-///
-#define q_poppler__linkgoto_qbase_link_type q_poppler__linkgoto_super_link_type
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkGoto.html)
 ///
@@ -308,10 +300,6 @@ int32_t q_poppler__linkexecute_link_type(void* self);
 ///
 void q_poppler__linkexecute_on_link_type(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_poppler__linkexecute_super_link_type` instead
-///
-#define q_poppler__linkexecute_qbase_link_type q_poppler__linkexecute_super_link_type
-
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkExecute.html)
 ///
 /// Base class method implementation
@@ -381,10 +369,6 @@ int32_t q_poppler__linkbrowse_link_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_poppler__linkbrowse_on_link_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_poppler__linkbrowse_super_link_type` instead
-///
-#define q_poppler__linkbrowse_qbase_link_type q_poppler__linkbrowse_super_link_type
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkBrowse.html)
 ///
@@ -456,10 +440,6 @@ int32_t q_poppler__linkaction_link_type(void* self);
 ///
 void q_poppler__linkaction_on_link_type(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_poppler__linkaction_super_link_type` instead
-///
-#define q_poppler__linkaction_qbase_link_type q_poppler__linkaction_super_link_type
-
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAction.html)
 ///
 /// Base class method implementation
@@ -525,10 +505,6 @@ int32_t q_poppler__linksound_link_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_poppler__linksound_on_link_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_poppler__linksound_super_link_type` instead
-///
-#define q_poppler__linksound_qbase_link_type q_poppler__linksound_super_link_type
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkSound.html)
 ///
@@ -686,10 +662,6 @@ int32_t q_poppler__linkjavascript_link_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_poppler__linkjavascript_on_link_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_poppler__linkjavascript_super_link_type` instead
-///
-#define q_poppler__linkjavascript_qbase_link_type q_poppler__linkjavascript_super_link_type
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkJavaScript.html)
 ///

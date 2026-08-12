@@ -71,10 +71,6 @@ QWidget* q_itemeditorfactory_create_editor(void* self, int userType, void* paren
 ///
 void q_itemeditorfactory_on_create_editor(void* self, QWidget* (*callback)(void*, int, void*));
 
-/// @warning DEPRECATED: Use `q_itemeditorfactory_super_create_editor` instead
-///
-#define q_itemeditorfactory_qbase_create_editor q_itemeditorfactory_super_create_editor
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorfactory.html#createEditor)
 ///
 /// Base class method implementation
@@ -102,10 +98,6 @@ char* q_itemeditorfactory_value_property_name(void* self, int userType);
 /// @param callback libqt_string func(QItemEditorFactory* self, int userType)
 ///
 void q_itemeditorfactory_on_value_property_name(void* self, libqt_string (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_itemeditorfactory_super_value_property_name` instead
-///
-#define q_itemeditorfactory_qbase_value_property_name q_itemeditorfactory_super_value_property_name
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorfactory.html#valuePropertyName)
 ///

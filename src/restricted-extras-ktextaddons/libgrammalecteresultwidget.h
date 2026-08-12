@@ -37,10 +37,6 @@ const QMetaObject* k_textgrammarcheck__grammalecteresultwidget_meta_object(void*
 ///
 void k_textgrammarcheck__grammalecteresultwidget_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_meta_object` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_meta_object k_textgrammarcheck__grammalecteresultwidget_super_meta_object
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammalecteResultWidget.html)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* k_textgrammarcheck__grammalecteresultwidget_metacast(void* self, const cha
 /// @param callback void* func(TextGrammarCheck__GrammalecteResultWidget* self, const char* param1)
 ///
 void k_textgrammarcheck__grammalecteresultwidget_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_metacast` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_metacast k_textgrammarcheck__grammalecteresultwidget_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t k_textgrammarcheck__grammalecteresultwidget_metacall(void* self, int32_t
 /// @param callback int32_t func(TextGrammarCheck__GrammalecteResultWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_textgrammarcheck__grammalecteresultwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_metacall` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_metacall k_textgrammarcheck__grammalecteresultwidget_super_metacall
 
 /// Base class method implementation
 ///
@@ -121,10 +109,6 @@ void k_textgrammarcheck__grammalecteresultwidget_check_grammar(void* self);
 /// @param callback void func()
 ///
 void k_textgrammarcheck__grammalecteresultwidget_on_check_grammar(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_check_grammar` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_check_grammar k_textgrammarcheck__grammalecteresultwidget_super_check_grammar
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammalecteResultWidget.html)
 ///
@@ -3207,10 +3191,6 @@ int32_t k_textgrammarcheck__grammalecteresultwidget_encode_metric_f(int32_t metr
 ///
 void k_textgrammarcheck__grammalecteresultwidget_add_extra_widget(void* self);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_add_extra_widget` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_add_extra_widget k_textgrammarcheck__grammalecteresultwidget_super_add_extra_widget
-
 /// Inherited from TextGrammarCheck::GrammarResultWidget
 ///
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarResultWidget.html)
@@ -3241,10 +3221,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_add_extra_widget(void* self,
 /// @param self TextGrammarCheck__GrammalecteResultWidget*
 ///
 int32_t k_textgrammarcheck__grammalecteresultwidget_dev_type(void* self);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_dev_type` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_dev_type k_textgrammarcheck__grammalecteresultwidget_super_dev_type
 
 /// Inherited from QWidget
 ///
@@ -3278,10 +3254,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_dev_type(void* self, int32_t
 ///
 void k_textgrammarcheck__grammalecteresultwidget_set_visible(void* self, bool visible);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_set_visible` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_set_visible k_textgrammarcheck__grammalecteresultwidget_super_set_visible
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -3313,10 +3285,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_set_visible(void* self, void
 /// @param self TextGrammarCheck__GrammalecteResultWidget*
 ///
 QSize* k_textgrammarcheck__grammalecteresultwidget_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_size_hint` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_size_hint k_textgrammarcheck__grammalecteresultwidget_super_size_hint
 
 /// Inherited from QWidget
 ///
@@ -3350,10 +3318,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_size_hint(void* self, QSize*
 /// @param self TextGrammarCheck__GrammalecteResultWidget*
 ///
 QSize* k_textgrammarcheck__grammalecteresultwidget_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_minimum_size_hint` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_minimum_size_hint k_textgrammarcheck__grammalecteresultwidget_super_minimum_size_hint
 
 /// Inherited from QWidget
 ///
@@ -3389,10 +3353,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_minimum_size_hint(void* self
 ///
 int32_t k_textgrammarcheck__grammalecteresultwidget_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_height_for_width` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_height_for_width k_textgrammarcheck__grammalecteresultwidget_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -3425,10 +3385,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_height_for_width(void* self,
 ///
 bool k_textgrammarcheck__grammalecteresultwidget_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_has_height_for_width` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_has_height_for_width k_textgrammarcheck__grammalecteresultwidget_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -3459,10 +3415,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_has_height_for_width(void* s
 /// @param self TextGrammarCheck__GrammalecteResultWidget*
 ///
 QPaintEngine* k_textgrammarcheck__grammalecteresultwidget_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_paint_engine` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_paint_engine k_textgrammarcheck__grammalecteresultwidget_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -3495,10 +3447,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_paint_engine(void* self, QPa
 /// @param event QEvent*
 ///
 bool k_textgrammarcheck__grammalecteresultwidget_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_event k_textgrammarcheck__grammalecteresultwidget_super_event
 
 /// Inherited from QWidget
 ///
@@ -3533,10 +3481,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_event(void* self, bool (*cal
 ///
 void k_textgrammarcheck__grammalecteresultwidget_mouse_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_mouse_press_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_mouse_press_event k_textgrammarcheck__grammalecteresultwidget_super_mouse_press_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -3569,10 +3513,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_mouse_press_event(void* self
 /// @param event QMouseEvent*
 ///
 void k_textgrammarcheck__grammalecteresultwidget_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_mouse_release_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_mouse_release_event k_textgrammarcheck__grammalecteresultwidget_super_mouse_release_event
 
 /// Inherited from QWidget
 ///
@@ -3607,10 +3547,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_mouse_release_event(void* se
 ///
 void k_textgrammarcheck__grammalecteresultwidget_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_mouse_double_click_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_mouse_double_click_event k_textgrammarcheck__grammalecteresultwidget_super_mouse_double_click_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -3643,10 +3579,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_mouse_double_click_event(voi
 /// @param event QMouseEvent*
 ///
 void k_textgrammarcheck__grammalecteresultwidget_mouse_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_mouse_move_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_mouse_move_event k_textgrammarcheck__grammalecteresultwidget_super_mouse_move_event
 
 /// Inherited from QWidget
 ///
@@ -3681,10 +3613,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_mouse_move_event(void* self,
 ///
 void k_textgrammarcheck__grammalecteresultwidget_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_wheel_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_wheel_event k_textgrammarcheck__grammalecteresultwidget_super_wheel_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -3717,10 +3645,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_wheel_event(void* self, void
 /// @param event QKeyEvent*
 ///
 void k_textgrammarcheck__grammalecteresultwidget_key_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_key_press_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_key_press_event k_textgrammarcheck__grammalecteresultwidget_super_key_press_event
 
 /// Inherited from QWidget
 ///
@@ -3755,10 +3679,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_key_press_event(void* self, 
 ///
 void k_textgrammarcheck__grammalecteresultwidget_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_key_release_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_key_release_event k_textgrammarcheck__grammalecteresultwidget_super_key_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -3791,10 +3711,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_key_release_event(void* self
 /// @param event QFocusEvent*
 ///
 void k_textgrammarcheck__grammalecteresultwidget_focus_in_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_focus_in_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_focus_in_event k_textgrammarcheck__grammalecteresultwidget_super_focus_in_event
 
 /// Inherited from QWidget
 ///
@@ -3829,10 +3745,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_focus_in_event(void* self, v
 ///
 void k_textgrammarcheck__grammalecteresultwidget_focus_out_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_focus_out_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_focus_out_event k_textgrammarcheck__grammalecteresultwidget_super_focus_out_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -3865,10 +3777,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_focus_out_event(void* self, 
 /// @param event QEnterEvent*
 ///
 void k_textgrammarcheck__grammalecteresultwidget_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_enter_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_enter_event k_textgrammarcheck__grammalecteresultwidget_super_enter_event
 
 /// Inherited from QWidget
 ///
@@ -3903,10 +3811,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_enter_event(void* self, void
 ///
 void k_textgrammarcheck__grammalecteresultwidget_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_leave_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_leave_event k_textgrammarcheck__grammalecteresultwidget_super_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -3939,10 +3843,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_leave_event(void* self, void
 /// @param event QPaintEvent*
 ///
 void k_textgrammarcheck__grammalecteresultwidget_paint_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_paint_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_paint_event k_textgrammarcheck__grammalecteresultwidget_super_paint_event
 
 /// Inherited from QWidget
 ///
@@ -3977,10 +3877,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_paint_event(void* self, void
 ///
 void k_textgrammarcheck__grammalecteresultwidget_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_move_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_move_event k_textgrammarcheck__grammalecteresultwidget_super_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -4013,10 +3909,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_move_event(void* self, void 
 /// @param event QResizeEvent*
 ///
 void k_textgrammarcheck__grammalecteresultwidget_resize_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_resize_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_resize_event k_textgrammarcheck__grammalecteresultwidget_super_resize_event
 
 /// Inherited from QWidget
 ///
@@ -4051,10 +3943,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_resize_event(void* self, voi
 ///
 void k_textgrammarcheck__grammalecteresultwidget_close_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_close_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_close_event k_textgrammarcheck__grammalecteresultwidget_super_close_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -4087,10 +3975,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_close_event(void* self, void
 /// @param event QContextMenuEvent*
 ///
 void k_textgrammarcheck__grammalecteresultwidget_context_menu_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_context_menu_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_context_menu_event k_textgrammarcheck__grammalecteresultwidget_super_context_menu_event
 
 /// Inherited from QWidget
 ///
@@ -4125,10 +4009,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_context_menu_event(void* sel
 ///
 void k_textgrammarcheck__grammalecteresultwidget_tablet_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_tablet_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_tablet_event k_textgrammarcheck__grammalecteresultwidget_super_tablet_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4161,10 +4041,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_tablet_event(void* self, voi
 /// @param event QActionEvent*
 ///
 void k_textgrammarcheck__grammalecteresultwidget_action_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_action_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_action_event k_textgrammarcheck__grammalecteresultwidget_super_action_event
 
 /// Inherited from QWidget
 ///
@@ -4199,10 +4075,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_action_event(void* self, voi
 ///
 void k_textgrammarcheck__grammalecteresultwidget_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_drag_enter_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_drag_enter_event k_textgrammarcheck__grammalecteresultwidget_super_drag_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4235,10 +4107,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_drag_enter_event(void* self,
 /// @param event QDragMoveEvent*
 ///
 void k_textgrammarcheck__grammalecteresultwidget_drag_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_drag_move_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_drag_move_event k_textgrammarcheck__grammalecteresultwidget_super_drag_move_event
 
 /// Inherited from QWidget
 ///
@@ -4273,10 +4141,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_drag_move_event(void* self, 
 ///
 void k_textgrammarcheck__grammalecteresultwidget_drag_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_drag_leave_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_drag_leave_event k_textgrammarcheck__grammalecteresultwidget_super_drag_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -4309,10 +4173,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_drag_leave_event(void* self,
 /// @param event QDropEvent*
 ///
 void k_textgrammarcheck__grammalecteresultwidget_drop_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_drop_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_drop_event k_textgrammarcheck__grammalecteresultwidget_super_drop_event
 
 /// Inherited from QWidget
 ///
@@ -4347,10 +4207,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_drop_event(void* self, void 
 ///
 void k_textgrammarcheck__grammalecteresultwidget_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_show_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_show_event k_textgrammarcheck__grammalecteresultwidget_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -4383,10 +4239,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_show_event(void* self, void 
 /// @param event QHideEvent*
 ///
 void k_textgrammarcheck__grammalecteresultwidget_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_hide_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_hide_event k_textgrammarcheck__grammalecteresultwidget_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -4423,10 +4275,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_hide_event(void* self, void 
 ///
 bool k_textgrammarcheck__grammalecteresultwidget_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_native_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_native_event k_textgrammarcheck__grammalecteresultwidget_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4462,10 +4310,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_native_event(void* self, boo
 ///
 void k_textgrammarcheck__grammalecteresultwidget_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_change_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_change_event k_textgrammarcheck__grammalecteresultwidget_super_change_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -4498,10 +4342,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_change_event(void* self, voi
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
 int32_t k_textgrammarcheck__grammalecteresultwidget_metric(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_metric` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_metric k_textgrammarcheck__grammalecteresultwidget_super_metric
 
 /// Inherited from QWidget
 ///
@@ -4536,10 +4376,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_metric(void* self, int32_t (
 ///
 void k_textgrammarcheck__grammalecteresultwidget_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_init_painter` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_init_painter k_textgrammarcheck__grammalecteresultwidget_super_init_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -4573,10 +4409,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_init_painter(void* self, voi
 ///
 QPaintDevice* k_textgrammarcheck__grammalecteresultwidget_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_redirected` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_redirected k_textgrammarcheck__grammalecteresultwidget_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4608,10 +4440,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_redirected(void* self, QPain
 /// @param self TextGrammarCheck__GrammalecteResultWidget*
 ///
 QPainter* k_textgrammarcheck__grammalecteresultwidget_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_shared_painter` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_shared_painter k_textgrammarcheck__grammalecteresultwidget_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -4645,10 +4473,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_shared_painter(void* self, Q
 ///
 void k_textgrammarcheck__grammalecteresultwidget_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_input_method_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_input_method_event k_textgrammarcheck__grammalecteresultwidget_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4681,10 +4505,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_input_method_event(void* sel
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* k_textgrammarcheck__grammalecteresultwidget_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_input_method_query` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_input_method_query k_textgrammarcheck__grammalecteresultwidget_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -4721,10 +4541,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_input_method_query(void* sel
 ///
 bool k_textgrammarcheck__grammalecteresultwidget_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_focus_next_prev_child` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_focus_next_prev_child k_textgrammarcheck__grammalecteresultwidget_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -4758,10 +4574,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_focus_next_prev_child(void* 
 /// @param event QEvent*
 ///
 bool k_textgrammarcheck__grammalecteresultwidget_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_event_filter` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_event_filter k_textgrammarcheck__grammalecteresultwidget_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -4797,10 +4609,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_event_filter(void* self, boo
 ///
 void k_textgrammarcheck__grammalecteresultwidget_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_timer_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_timer_event k_textgrammarcheck__grammalecteresultwidget_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -4833,10 +4641,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_timer_event(void* self, void
 /// @param event QChildEvent*
 ///
 void k_textgrammarcheck__grammalecteresultwidget_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_child_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_child_event k_textgrammarcheck__grammalecteresultwidget_super_child_event
 
 /// Inherited from QObject
 ///
@@ -4871,10 +4675,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_child_event(void* self, void
 ///
 void k_textgrammarcheck__grammalecteresultwidget_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_custom_event` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_custom_event k_textgrammarcheck__grammalecteresultwidget_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -4907,10 +4707,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_custom_event(void* self, voi
 /// @param signal QMetaMethod*
 ///
 void k_textgrammarcheck__grammalecteresultwidget_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_connect_notify` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_connect_notify k_textgrammarcheck__grammalecteresultwidget_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -4945,10 +4741,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_connect_notify(void* self, v
 ///
 void k_textgrammarcheck__grammalecteresultwidget_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_disconnect_notify` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_disconnect_notify k_textgrammarcheck__grammalecteresultwidget_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -4981,10 +4773,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_disconnect_notify(void* self
 ///
 void k_textgrammarcheck__grammalecteresultwidget_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_update_micro_focus` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_update_micro_focus k_textgrammarcheck__grammalecteresultwidget_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5015,10 +4803,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_update_micro_focus(void* sel
 /// @param self TextGrammarCheck__GrammalecteResultWidget*
 ///
 void k_textgrammarcheck__grammalecteresultwidget_create(void* self);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_create` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_create k_textgrammarcheck__grammalecteresultwidget_super_create
 
 /// Inherited from QWidget
 ///
@@ -5051,10 +4835,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_create(void* self, void (*ca
 ///
 void k_textgrammarcheck__grammalecteresultwidget_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_destroy` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_destroy k_textgrammarcheck__grammalecteresultwidget_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5085,10 +4865,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_destroy(void* self, void (*c
 /// @param self TextGrammarCheck__GrammalecteResultWidget*
 ///
 bool k_textgrammarcheck__grammalecteresultwidget_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_focus_next_child` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_focus_next_child k_textgrammarcheck__grammalecteresultwidget_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -5121,10 +4897,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_focus_next_child(void* self,
 ///
 bool k_textgrammarcheck__grammalecteresultwidget_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_focus_previous_child` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_focus_previous_child k_textgrammarcheck__grammalecteresultwidget_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5155,10 +4927,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_focus_previous_child(void* s
 /// @param self TextGrammarCheck__GrammalecteResultWidget*
 ///
 QObject* k_textgrammarcheck__grammalecteresultwidget_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_sender` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_sender k_textgrammarcheck__grammalecteresultwidget_super_sender
 
 /// Inherited from QObject
 ///
@@ -5191,10 +4959,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_sender(void* self, QObject* 
 ///
 int32_t k_textgrammarcheck__grammalecteresultwidget_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_sender_signal_index` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_sender_signal_index k_textgrammarcheck__grammalecteresultwidget_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5226,10 +4990,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_sender_signal_index(void* se
 /// @param signal const char*
 ///
 int32_t k_textgrammarcheck__grammalecteresultwidget_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_receivers` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_receivers k_textgrammarcheck__grammalecteresultwidget_super_receivers
 
 /// Inherited from QObject
 ///
@@ -5264,10 +5024,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_receivers(void* self, int32_
 ///
 bool k_textgrammarcheck__grammalecteresultwidget_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_is_signal_connected` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_is_signal_connected k_textgrammarcheck__grammalecteresultwidget_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5301,10 +5057,6 @@ void k_textgrammarcheck__grammalecteresultwidget_on_is_signal_connected(void* se
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_textgrammarcheck__grammalecteresultwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalecteresultwidget_super_get_decoded_metric_f` instead
-///
-#define k_textgrammarcheck__grammalecteresultwidget_qbase_get_decoded_metric_f k_textgrammarcheck__grammalecteresultwidget_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

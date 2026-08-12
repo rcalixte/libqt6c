@@ -37,10 +37,6 @@ const QMetaObject* q_extensionfactory_meta_object(void* self);
 ///
 void q_extensionfactory_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_extensionfactory_super_meta_object` instead
-///
-#define q_extensionfactory_qbase_meta_object q_extensionfactory_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_extensionfactory_metacast(void* self, const char* param1);
 /// @param callback void* func(QExtensionFactory* self, const char* param1)
 ///
 void q_extensionfactory_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_extensionfactory_super_metacast` instead
-///
-#define q_extensionfactory_qbase_metacast q_extensionfactory_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_extensionfactory_metacall(void* self, int32_t param1, int param2, void
 /// @param callback int32_t func(QExtensionFactory* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_extensionfactory_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_extensionfactory_super_metacall` instead
-///
-#define q_extensionfactory_qbase_metacall q_extensionfactory_super_metacall
 
 /// Base class method implementation
 ///
@@ -124,10 +112,6 @@ QObject* q_extensionfactory_extension(void* self, void* object, const char* iid)
 ///
 void q_extensionfactory_on_extension(void* self, QObject* (*callback)(void*, void*, const char*));
 
-/// @warning DEPRECATED: Use `q_extensionfactory_super_extension` instead
-///
-#define q_extensionfactory_qbase_extension q_extensionfactory_super_extension
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qextensionfactory.html#extension)
 ///
 /// Base class method implementation
@@ -161,10 +145,6 @@ QObject* q_extensionfactory_create_extension(void* self, void* object, const cha
 /// @param callback QObject* func(QExtensionFactory* self, QObject* object, const char* iid, QObject* parent)
 ///
 void q_extensionfactory_on_create_extension(void* self, QObject* (*callback)(void*, void*, const char*, void*));
-
-/// @warning DEPRECATED: Use `q_extensionfactory_super_create_extension` instead
-///
-#define q_extensionfactory_qbase_create_extension q_extensionfactory_super_create_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qextensionfactory.html#createExtension)
 ///
@@ -663,10 +643,6 @@ void q_extensionfactory_operator_assign(void* self, void* param1);
 ///
 bool q_extensionfactory_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_extensionfactory_super_event` instead
-///
-#define q_extensionfactory_qbase_event q_extensionfactory_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -700,10 +676,6 @@ void q_extensionfactory_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_extensionfactory_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_extensionfactory_super_event_filter` instead
-///
-#define q_extensionfactory_qbase_event_filter q_extensionfactory_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -739,10 +711,6 @@ void q_extensionfactory_on_event_filter(void* self, bool (*callback)(void*, void
 ///
 void q_extensionfactory_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_extensionfactory_super_timer_event` instead
-///
-#define q_extensionfactory_qbase_timer_event q_extensionfactory_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -775,10 +743,6 @@ void q_extensionfactory_on_timer_event(void* self, void (*callback)(void*, void*
 /// @param event QChildEvent*
 ///
 void q_extensionfactory_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_extensionfactory_super_child_event` instead
-///
-#define q_extensionfactory_qbase_child_event q_extensionfactory_super_child_event
 
 /// Inherited from QObject
 ///
@@ -813,10 +777,6 @@ void q_extensionfactory_on_child_event(void* self, void (*callback)(void*, void*
 ///
 void q_extensionfactory_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_extensionfactory_super_custom_event` instead
-///
-#define q_extensionfactory_qbase_custom_event q_extensionfactory_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -849,10 +809,6 @@ void q_extensionfactory_on_custom_event(void* self, void (*callback)(void*, void
 /// @param signal QMetaMethod*
 ///
 void q_extensionfactory_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_extensionfactory_super_connect_notify` instead
-///
-#define q_extensionfactory_qbase_connect_notify q_extensionfactory_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -887,10 +843,6 @@ void q_extensionfactory_on_connect_notify(void* self, void (*callback)(void*, vo
 ///
 void q_extensionfactory_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_extensionfactory_super_disconnect_notify` instead
-///
-#define q_extensionfactory_qbase_disconnect_notify q_extensionfactory_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -923,10 +875,6 @@ void q_extensionfactory_on_disconnect_notify(void* self, void (*callback)(void*,
 ///
 QObject* q_extensionfactory_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_extensionfactory_super_sender` instead
-///
-#define q_extensionfactory_qbase_sender q_extensionfactory_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -957,10 +905,6 @@ void q_extensionfactory_on_sender(void* self, QObject* (*callback)());
 /// @param self QExtensionFactory*
 ///
 int32_t q_extensionfactory_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_extensionfactory_super_sender_signal_index` instead
-///
-#define q_extensionfactory_qbase_sender_signal_index q_extensionfactory_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -994,10 +938,6 @@ void q_extensionfactory_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 int32_t q_extensionfactory_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_extensionfactory_super_receivers` instead
-///
-#define q_extensionfactory_qbase_receivers q_extensionfactory_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1030,10 +970,6 @@ void q_extensionfactory_on_receivers(void* self, int32_t (*callback)(void*, cons
 /// @param signal QMetaMethod*
 ///
 bool q_extensionfactory_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_extensionfactory_super_is_signal_connected` instead
-///
-#define q_extensionfactory_qbase_is_signal_connected q_extensionfactory_super_is_signal_connected
 
 /// Inherited from QObject
 ///

@@ -42,10 +42,6 @@ QInputEvent* q_inputevent_clone(void* self);
 ///
 void q_inputevent_on_clone(void* self, QInputEvent* (*callback)());
 
-/// @warning DEPRECATED: Use `q_inputevent_super_clone` instead
-///
-#define q_inputevent_qbase_clone q_inputevent_super_clone
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputevent.html#clone)
 ///
 /// Base class method implementation
@@ -104,10 +100,6 @@ void q_inputevent_set_timestamp(void* self, uint64_t timestamp);
 /// @param callback void func(QInputEvent* self, uint64_t timestamp)
 ///
 void q_inputevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t));
-
-/// @warning DEPRECATED: Use `q_inputevent_super_set_timestamp` instead
-///
-#define q_inputevent_qbase_set_timestamp q_inputevent_super_set_timestamp
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputevent.html#setTimestamp)
 ///
@@ -209,10 +201,6 @@ int32_t q_inputevent_register_event_type1(int hint);
 ///
 void q_inputevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_inputevent_super_set_accepted` instead
-///
-#define q_inputevent_qbase_set_accepted q_inputevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -288,10 +276,6 @@ QPointerEvent* q_pointerevent_clone(void* self);
 ///
 void q_pointerevent_on_clone(void* self, QPointerEvent* (*callback)());
 
-/// @warning DEPRECATED: Use `q_pointerevent_super_clone` instead
-///
-#define q_pointerevent_qbase_clone q_pointerevent_super_clone
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#clone)
 ///
 /// Base class method implementation
@@ -329,10 +313,6 @@ void q_pointerevent_set_timestamp(void* self, uint64_t timestamp);
 /// @param callback void func(QPointerEvent* self, uint64_t timestamp)
 ///
 void q_pointerevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t));
-
-/// @warning DEPRECATED: Use `q_pointerevent_super_set_timestamp` instead
-///
-#define q_pointerevent_qbase_set_timestamp q_pointerevent_super_set_timestamp
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
 ///
@@ -392,10 +372,6 @@ bool q_pointerevent_is_begin_event(void* self);
 ///
 void q_pointerevent_on_is_begin_event(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_pointerevent_super_is_begin_event` instead
-///
-#define q_pointerevent_qbase_is_begin_event q_pointerevent_super_is_begin_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#isBeginEvent)
 ///
 /// Base class method implementation
@@ -419,10 +395,6 @@ bool q_pointerevent_is_update_event(void* self);
 ///
 void q_pointerevent_on_is_update_event(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_pointerevent_super_is_update_event` instead
-///
-#define q_pointerevent_qbase_is_update_event q_pointerevent_super_is_update_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#isUpdateEvent)
 ///
 /// Base class method implementation
@@ -445,10 +417,6 @@ bool q_pointerevent_is_end_event(void* self);
 /// @param callback bool func()
 ///
 void q_pointerevent_on_is_end_event(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `q_pointerevent_super_is_end_event` instead
-///
-#define q_pointerevent_qbase_is_end_event q_pointerevent_super_is_end_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#isEndEvent)
 ///
@@ -479,10 +447,6 @@ void q_pointerevent_set_accepted(void* self, bool accepted);
 /// @param callback void func(QPointerEvent* self, bool accepted)
 ///
 void q_pointerevent_on_set_accepted(void* self, void (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `q_pointerevent_super_set_accepted` instead
-///
-#define q_pointerevent_qbase_set_accepted q_pointerevent_super_set_accepted
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#setAccepted)
 ///
@@ -1042,10 +1006,6 @@ QEnterEvent* q_enterevent_clone(void* self);
 ///
 void q_enterevent_on_clone(void* self, QEnterEvent* (*callback)());
 
-/// @warning DEPRECATED: Use `q_enterevent_super_clone` instead
-///
-#define q_enterevent_qbase_clone q_enterevent_super_clone
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qenterevent.html#clone)
 ///
 /// Base class method implementation
@@ -1422,10 +1382,6 @@ int32_t q_enterevent_register_event_type1(int hint);
 ///
 bool q_enterevent_is_begin_event(void* self);
 
-/// @warning DEPRECATED: Use `q_enterevent_super_is_begin_event` instead
-///
-#define q_enterevent_qbase_is_begin_event q_enterevent_super_is_begin_event
-
 /// Inherited from QSinglePointEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsinglepointevent.html#isBeginEvent)
@@ -1457,10 +1413,6 @@ void q_enterevent_on_is_begin_event(void* self, bool (*callback)());
 ///
 bool q_enterevent_is_update_event(void* self);
 
-/// @warning DEPRECATED: Use `q_enterevent_super_is_update_event` instead
-///
-#define q_enterevent_qbase_is_update_event q_enterevent_super_is_update_event
-
 /// Inherited from QSinglePointEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsinglepointevent.html#isUpdateEvent)
@@ -1491,10 +1443,6 @@ void q_enterevent_on_is_update_event(void* self, bool (*callback)());
 /// @param self QEnterEvent*
 ///
 bool q_enterevent_is_end_event(void* self);
-
-/// @warning DEPRECATED: Use `q_enterevent_super_is_end_event` instead
-///
-#define q_enterevent_qbase_is_end_event q_enterevent_super_is_end_event
 
 /// Inherited from QSinglePointEvent
 ///
@@ -1528,10 +1476,6 @@ void q_enterevent_on_is_end_event(void* self, bool (*callback)());
 ///
 void q_enterevent_set_timestamp(void* self, uint64_t timestamp);
 
-/// @warning DEPRECATED: Use `q_enterevent_super_set_timestamp` instead
-///
-#define q_enterevent_qbase_set_timestamp q_enterevent_super_set_timestamp
-
 /// Inherited from QPointerEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
@@ -1564,10 +1508,6 @@ void q_enterevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t)
 /// @param accepted bool
 ///
 void q_enterevent_set_accepted(void* self, bool accepted);
-
-/// @warning DEPRECATED: Use `q_enterevent_super_set_accepted` instead
-///
-#define q_enterevent_qbase_set_accepted q_enterevent_super_set_accepted
 
 /// Inherited from QPointerEvent
 ///
@@ -1725,10 +1665,6 @@ QMouseEvent* q_mouseevent_clone(void* self);
 /// @param callback QMouseEvent* func()
 ///
 void q_mouseevent_on_clone(void* self, QMouseEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_mouseevent_super_clone` instead
-///
-#define q_mouseevent_qbase_clone q_mouseevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmouseevent.html#clone)
 ///
@@ -2122,10 +2058,6 @@ int32_t q_mouseevent_register_event_type1(int hint);
 ///
 bool q_mouseevent_is_begin_event(void* self);
 
-/// @warning DEPRECATED: Use `q_mouseevent_super_is_begin_event` instead
-///
-#define q_mouseevent_qbase_is_begin_event q_mouseevent_super_is_begin_event
-
 /// Inherited from QSinglePointEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsinglepointevent.html#isBeginEvent)
@@ -2157,10 +2089,6 @@ void q_mouseevent_on_is_begin_event(void* self, bool (*callback)());
 ///
 bool q_mouseevent_is_update_event(void* self);
 
-/// @warning DEPRECATED: Use `q_mouseevent_super_is_update_event` instead
-///
-#define q_mouseevent_qbase_is_update_event q_mouseevent_super_is_update_event
-
 /// Inherited from QSinglePointEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsinglepointevent.html#isUpdateEvent)
@@ -2191,10 +2119,6 @@ void q_mouseevent_on_is_update_event(void* self, bool (*callback)());
 /// @param self QMouseEvent*
 ///
 bool q_mouseevent_is_end_event(void* self);
-
-/// @warning DEPRECATED: Use `q_mouseevent_super_is_end_event` instead
-///
-#define q_mouseevent_qbase_is_end_event q_mouseevent_super_is_end_event
 
 /// Inherited from QSinglePointEvent
 ///
@@ -2228,10 +2152,6 @@ void q_mouseevent_on_is_end_event(void* self, bool (*callback)());
 ///
 void q_mouseevent_set_timestamp(void* self, uint64_t timestamp);
 
-/// @warning DEPRECATED: Use `q_mouseevent_super_set_timestamp` instead
-///
-#define q_mouseevent_qbase_set_timestamp q_mouseevent_super_set_timestamp
-
 /// Inherited from QPointerEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
@@ -2264,10 +2184,6 @@ void q_mouseevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t)
 /// @param accepted bool
 ///
 void q_mouseevent_set_accepted(void* self, bool accepted);
-
-/// @warning DEPRECATED: Use `q_mouseevent_super_set_accepted` instead
-///
-#define q_mouseevent_qbase_set_accepted q_mouseevent_super_set_accepted
 
 /// Inherited from QPointerEvent
 ///
@@ -2383,10 +2299,6 @@ QHoverEvent* q_hoverevent_clone(void* self);
 ///
 void q_hoverevent_on_clone(void* self, QHoverEvent* (*callback)());
 
-/// @warning DEPRECATED: Use `q_hoverevent_super_clone` instead
-///
-#define q_hoverevent_qbase_clone q_hoverevent_super_clone
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qhoverevent.html#clone)
 ///
 /// Base class method implementation
@@ -2421,10 +2333,6 @@ bool q_hoverevent_is_update_event(void* self);
 /// @param callback bool func()
 ///
 void q_hoverevent_on_is_update_event(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `q_hoverevent_super_is_update_event` instead
-///
-#define q_hoverevent_qbase_is_update_event q_hoverevent_super_is_update_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhoverevent.html#isUpdateEvent)
 ///
@@ -2760,10 +2668,6 @@ int32_t q_hoverevent_register_event_type1(int hint);
 ///
 bool q_hoverevent_is_begin_event(void* self);
 
-/// @warning DEPRECATED: Use `q_hoverevent_super_is_begin_event` instead
-///
-#define q_hoverevent_qbase_is_begin_event q_hoverevent_super_is_begin_event
-
 /// Inherited from QSinglePointEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsinglepointevent.html#isBeginEvent)
@@ -2794,10 +2698,6 @@ void q_hoverevent_on_is_begin_event(void* self, bool (*callback)());
 /// @param self QHoverEvent*
 ///
 bool q_hoverevent_is_end_event(void* self);
-
-/// @warning DEPRECATED: Use `q_hoverevent_super_is_end_event` instead
-///
-#define q_hoverevent_qbase_is_end_event q_hoverevent_super_is_end_event
 
 /// Inherited from QSinglePointEvent
 ///
@@ -2831,10 +2731,6 @@ void q_hoverevent_on_is_end_event(void* self, bool (*callback)());
 ///
 void q_hoverevent_set_timestamp(void* self, uint64_t timestamp);
 
-/// @warning DEPRECATED: Use `q_hoverevent_super_set_timestamp` instead
-///
-#define q_hoverevent_qbase_set_timestamp q_hoverevent_super_set_timestamp
-
 /// Inherited from QPointerEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
@@ -2867,10 +2763,6 @@ void q_hoverevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t)
 /// @param accepted bool
 ///
 void q_hoverevent_set_accepted(void* self, bool accepted);
-
-/// @warning DEPRECATED: Use `q_hoverevent_super_set_accepted` instead
-///
-#define q_hoverevent_qbase_set_accepted q_hoverevent_super_set_accepted
 
 /// Inherited from QPointerEvent
 ///
@@ -2965,10 +2857,6 @@ QWheelEvent* q_wheelevent_clone(void* self);
 ///
 void q_wheelevent_on_clone(void* self, QWheelEvent* (*callback)());
 
-/// @warning DEPRECATED: Use `q_wheelevent_super_clone` instead
-///
-#define q_wheelevent_qbase_clone q_wheelevent_super_clone
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwheelevent.html#clone)
 ///
 /// Base class method implementation
@@ -3030,10 +2918,6 @@ bool q_wheelevent_is_begin_event(void* self);
 ///
 void q_wheelevent_on_is_begin_event(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_wheelevent_super_is_begin_event` instead
-///
-#define q_wheelevent_qbase_is_begin_event q_wheelevent_super_is_begin_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwheelevent.html#isBeginEvent)
 ///
 /// Base class method implementation
@@ -3057,10 +2941,6 @@ bool q_wheelevent_is_update_event(void* self);
 ///
 void q_wheelevent_on_is_update_event(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_wheelevent_super_is_update_event` instead
-///
-#define q_wheelevent_qbase_is_update_event q_wheelevent_super_is_update_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwheelevent.html#isUpdateEvent)
 ///
 /// Base class method implementation
@@ -3083,10 +2963,6 @@ bool q_wheelevent_is_end_event(void* self);
 /// @param callback bool func()
 ///
 void q_wheelevent_on_is_end_event(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `q_wheelevent_super_is_end_event` instead
-///
-#define q_wheelevent_qbase_is_end_event q_wheelevent_super_is_end_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwheelevent.html#isEndEvent)
 ///
@@ -3419,10 +3295,6 @@ int32_t q_wheelevent_register_event_type1(int hint);
 ///
 void q_wheelevent_set_timestamp(void* self, uint64_t timestamp);
 
-/// @warning DEPRECATED: Use `q_wheelevent_super_set_timestamp` instead
-///
-#define q_wheelevent_qbase_set_timestamp q_wheelevent_super_set_timestamp
-
 /// Inherited from QPointerEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
@@ -3455,10 +3327,6 @@ void q_wheelevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t)
 /// @param accepted bool
 ///
 void q_wheelevent_set_accepted(void* self, bool accepted);
-
-/// @warning DEPRECATED: Use `q_wheelevent_super_set_accepted` instead
-///
-#define q_wheelevent_qbase_set_accepted q_wheelevent_super_set_accepted
 
 /// Inherited from QPointerEvent
 ///
@@ -3524,10 +3392,6 @@ QTabletEvent* q_tabletevent_clone(void* self);
 /// @param callback QTabletEvent* func()
 ///
 void q_tabletevent_on_clone(void* self, QTabletEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_tabletevent_super_clone` instead
-///
-#define q_tabletevent_qbase_clone q_tabletevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabletevent.html#clone)
 ///
@@ -3953,10 +3817,6 @@ int32_t q_tabletevent_register_event_type1(int hint);
 ///
 bool q_tabletevent_is_begin_event(void* self);
 
-/// @warning DEPRECATED: Use `q_tabletevent_super_is_begin_event` instead
-///
-#define q_tabletevent_qbase_is_begin_event q_tabletevent_super_is_begin_event
-
 /// Inherited from QSinglePointEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsinglepointevent.html#isBeginEvent)
@@ -3988,10 +3848,6 @@ void q_tabletevent_on_is_begin_event(void* self, bool (*callback)());
 ///
 bool q_tabletevent_is_update_event(void* self);
 
-/// @warning DEPRECATED: Use `q_tabletevent_super_is_update_event` instead
-///
-#define q_tabletevent_qbase_is_update_event q_tabletevent_super_is_update_event
-
 /// Inherited from QSinglePointEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsinglepointevent.html#isUpdateEvent)
@@ -4022,10 +3878,6 @@ void q_tabletevent_on_is_update_event(void* self, bool (*callback)());
 /// @param self QTabletEvent*
 ///
 bool q_tabletevent_is_end_event(void* self);
-
-/// @warning DEPRECATED: Use `q_tabletevent_super_is_end_event` instead
-///
-#define q_tabletevent_qbase_is_end_event q_tabletevent_super_is_end_event
 
 /// Inherited from QSinglePointEvent
 ///
@@ -4059,10 +3911,6 @@ void q_tabletevent_on_is_end_event(void* self, bool (*callback)());
 ///
 void q_tabletevent_set_timestamp(void* self, uint64_t timestamp);
 
-/// @warning DEPRECATED: Use `q_tabletevent_super_set_timestamp` instead
-///
-#define q_tabletevent_qbase_set_timestamp q_tabletevent_super_set_timestamp
-
 /// Inherited from QPointerEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
@@ -4095,10 +3943,6 @@ void q_tabletevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t
 /// @param accepted bool
 ///
 void q_tabletevent_set_accepted(void* self, bool accepted);
-
-/// @warning DEPRECATED: Use `q_tabletevent_super_set_accepted` instead
-///
-#define q_tabletevent_qbase_set_accepted q_tabletevent_super_set_accepted
 
 /// Inherited from QPointerEvent
 ///
@@ -4190,10 +4034,6 @@ QNativeGestureEvent* q_nativegestureevent_clone(void* self);
 /// @param callback QNativeGestureEvent* func()
 ///
 void q_nativegestureevent_on_clone(void* self, QNativeGestureEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_nativegestureevent_super_clone` instead
-///
-#define q_nativegestureevent_qbase_clone q_nativegestureevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativegestureevent.html#clone)
 ///
@@ -4573,10 +4413,6 @@ int32_t q_nativegestureevent_register_event_type1(int hint);
 ///
 bool q_nativegestureevent_is_begin_event(void* self);
 
-/// @warning DEPRECATED: Use `q_nativegestureevent_super_is_begin_event` instead
-///
-#define q_nativegestureevent_qbase_is_begin_event q_nativegestureevent_super_is_begin_event
-
 /// Inherited from QSinglePointEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsinglepointevent.html#isBeginEvent)
@@ -4608,10 +4444,6 @@ void q_nativegestureevent_on_is_begin_event(void* self, bool (*callback)());
 ///
 bool q_nativegestureevent_is_update_event(void* self);
 
-/// @warning DEPRECATED: Use `q_nativegestureevent_super_is_update_event` instead
-///
-#define q_nativegestureevent_qbase_is_update_event q_nativegestureevent_super_is_update_event
-
 /// Inherited from QSinglePointEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsinglepointevent.html#isUpdateEvent)
@@ -4642,10 +4474,6 @@ void q_nativegestureevent_on_is_update_event(void* self, bool (*callback)());
 /// @param self QNativeGestureEvent*
 ///
 bool q_nativegestureevent_is_end_event(void* self);
-
-/// @warning DEPRECATED: Use `q_nativegestureevent_super_is_end_event` instead
-///
-#define q_nativegestureevent_qbase_is_end_event q_nativegestureevent_super_is_end_event
 
 /// Inherited from QSinglePointEvent
 ///
@@ -4679,10 +4507,6 @@ void q_nativegestureevent_on_is_end_event(void* self, bool (*callback)());
 ///
 void q_nativegestureevent_set_timestamp(void* self, uint64_t timestamp);
 
-/// @warning DEPRECATED: Use `q_nativegestureevent_super_set_timestamp` instead
-///
-#define q_nativegestureevent_qbase_set_timestamp q_nativegestureevent_super_set_timestamp
-
 /// Inherited from QPointerEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
@@ -4715,10 +4539,6 @@ void q_nativegestureevent_on_set_timestamp(void* self, void (*callback)(void*, u
 /// @param accepted bool
 ///
 void q_nativegestureevent_set_accepted(void* self, bool accepted);
-
-/// @warning DEPRECATED: Use `q_nativegestureevent_super_set_accepted` instead
-///
-#define q_nativegestureevent_qbase_set_accepted q_nativegestureevent_super_set_accepted
 
 /// Inherited from QPointerEvent
 ///
@@ -4885,10 +4705,6 @@ QKeyEvent* q_keyevent_clone(void* self);
 /// @param callback QKeyEvent* func()
 ///
 void q_keyevent_on_clone(void* self, QKeyEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_keyevent_super_clone` instead
-///
-#define q_keyevent_qbase_clone q_keyevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeyevent.html#clone)
 ///
@@ -5089,10 +4905,6 @@ int32_t q_keyevent_register_event_type1(int hint);
 ///
 void q_keyevent_set_timestamp(void* self, uint64_t timestamp);
 
-/// @warning DEPRECATED: Use `q_keyevent_super_set_timestamp` instead
-///
-#define q_keyevent_qbase_set_timestamp q_keyevent_super_set_timestamp
-
 /// Inherited from QInputEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputevent.html#setTimestamp)
@@ -5125,10 +4937,6 @@ void q_keyevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t));
 /// @param accepted bool
 ///
 void q_keyevent_set_accepted(void* self, bool accepted);
-
-/// @warning DEPRECATED: Use `q_keyevent_super_set_accepted` instead
-///
-#define q_keyevent_qbase_set_accepted q_keyevent_super_set_accepted
 
 /// Inherited from QEvent
 ///
@@ -5191,10 +4999,6 @@ QFocusEvent* q_focusevent_clone(void* self);
 /// @param callback QFocusEvent* func()
 ///
 void q_focusevent_on_clone(void* self, QFocusEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_focusevent_super_clone` instead
-///
-#define q_focusevent_qbase_clone q_focusevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfocusevent.html#clone)
 ///
@@ -5315,10 +5119,6 @@ int32_t q_focusevent_register_event_type1(int hint);
 ///
 void q_focusevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_focusevent_super_set_accepted` instead
-///
-#define q_focusevent_qbase_set_accepted q_focusevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -5379,10 +5179,6 @@ QPaintEvent* q_paintevent_clone(void* self);
 /// @param callback QPaintEvent* func()
 ///
 void q_paintevent_on_clone(void* self, QPaintEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_paintevent_super_clone` instead
-///
-#define q_paintevent_qbase_clone q_paintevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintevent.html#clone)
 ///
@@ -5495,10 +5291,6 @@ int32_t q_paintevent_register_event_type1(int hint);
 ///
 void q_paintevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_paintevent_super_set_accepted` instead
-///
-#define q_paintevent_qbase_set_accepted q_paintevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -5552,10 +5344,6 @@ QMoveEvent* q_moveevent_clone(void* self);
 /// @param callback QMoveEvent* func()
 ///
 void q_moveevent_on_clone(void* self, QMoveEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_moveevent_super_clone` instead
-///
-#define q_moveevent_qbase_clone q_moveevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmoveevent.html#clone)
 ///
@@ -5668,10 +5456,6 @@ int32_t q_moveevent_register_event_type1(int hint);
 ///
 void q_moveevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_moveevent_super_set_accepted` instead
-///
-#define q_moveevent_qbase_set_accepted q_moveevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -5724,10 +5508,6 @@ QExposeEvent* q_exposeevent_clone(void* self);
 /// @param callback QExposeEvent* func()
 ///
 void q_exposeevent_on_clone(void* self, QExposeEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_exposeevent_super_clone` instead
-///
-#define q_exposeevent_qbase_clone q_exposeevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qexposeevent.html#clone)
 ///
@@ -5834,10 +5614,6 @@ int32_t q_exposeevent_register_event_type1(int hint);
 ///
 void q_exposeevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_exposeevent_super_set_accepted` instead
-///
-#define q_exposeevent_qbase_set_accepted q_exposeevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -5890,10 +5666,6 @@ QPlatformSurfaceEvent* q_platformsurfaceevent_clone(void* self);
 /// @param callback QPlatformSurfaceEvent* func()
 ///
 void q_platformsurfaceevent_on_clone(void* self, QPlatformSurfaceEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_platformsurfaceevent_super_clone` instead
-///
-#define q_platformsurfaceevent_qbase_clone q_platformsurfaceevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplatformsurfaceevent.html#clone)
 ///
@@ -6002,10 +5774,6 @@ int32_t q_platformsurfaceevent_register_event_type1(int hint);
 ///
 void q_platformsurfaceevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_platformsurfaceevent_super_set_accepted` instead
-///
-#define q_platformsurfaceevent_qbase_set_accepted q_platformsurfaceevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -6059,10 +5827,6 @@ QResizeEvent* q_resizeevent_clone(void* self);
 /// @param callback QResizeEvent* func()
 ///
 void q_resizeevent_on_clone(void* self, QResizeEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_resizeevent_super_clone` instead
-///
-#define q_resizeevent_qbase_clone q_resizeevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qresizeevent.html#clone)
 ///
@@ -6175,10 +5939,6 @@ int32_t q_resizeevent_register_event_type1(int hint);
 ///
 void q_resizeevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_resizeevent_super_set_accepted` instead
-///
-#define q_resizeevent_qbase_set_accepted q_resizeevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -6229,10 +5989,6 @@ QCloseEvent* q_closeevent_clone(void* self);
 /// @param callback QCloseEvent* func()
 ///
 void q_closeevent_on_clone(void* self, QCloseEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_closeevent_super_clone` instead
-///
-#define q_closeevent_qbase_clone q_closeevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcloseevent.html#clone)
 ///
@@ -6333,10 +6089,6 @@ int32_t q_closeevent_register_event_type1(int hint);
 ///
 void q_closeevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_closeevent_super_set_accepted` instead
-///
-#define q_closeevent_qbase_set_accepted q_closeevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -6387,10 +6139,6 @@ QIconDragEvent* q_icondragevent_clone(void* self);
 /// @param callback QIconDragEvent* func()
 ///
 void q_icondragevent_on_clone(void* self, QIconDragEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_icondragevent_super_clone` instead
-///
-#define q_icondragevent_qbase_clone q_icondragevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicondragevent.html#clone)
 ///
@@ -6491,10 +6239,6 @@ int32_t q_icondragevent_register_event_type1(int hint);
 ///
 void q_icondragevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_icondragevent_super_set_accepted` instead
-///
-#define q_icondragevent_qbase_set_accepted q_icondragevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -6545,10 +6289,6 @@ QShowEvent* q_showevent_clone(void* self);
 /// @param callback QShowEvent* func()
 ///
 void q_showevent_on_clone(void* self, QShowEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_showevent_super_clone` instead
-///
-#define q_showevent_qbase_clone q_showevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshowevent.html#clone)
 ///
@@ -6649,10 +6389,6 @@ int32_t q_showevent_register_event_type1(int hint);
 ///
 void q_showevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_showevent_super_set_accepted` instead
-///
-#define q_showevent_qbase_set_accepted q_showevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -6703,10 +6439,6 @@ QHideEvent* q_hideevent_clone(void* self);
 /// @param callback QHideEvent* func()
 ///
 void q_hideevent_on_clone(void* self, QHideEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_hideevent_super_clone` instead
-///
-#define q_hideevent_qbase_clone q_hideevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhideevent.html#clone)
 ///
@@ -6807,10 +6539,6 @@ int32_t q_hideevent_register_event_type1(int hint);
 ///
 void q_hideevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_hideevent_super_set_accepted` instead
-///
-#define q_hideevent_qbase_set_accepted q_hideevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -6885,10 +6613,6 @@ QContextMenuEvent* q_contextmenuevent_clone(void* self);
 /// @param callback QContextMenuEvent* func()
 ///
 void q_contextmenuevent_on_clone(void* self, QContextMenuEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_contextmenuevent_super_clone` instead
-///
-#define q_contextmenuevent_qbase_clone q_contextmenuevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcontextmenuevent.html#clone)
 ///
@@ -7078,10 +6802,6 @@ int32_t q_contextmenuevent_register_event_type1(int hint);
 ///
 void q_contextmenuevent_set_timestamp(void* self, uint64_t timestamp);
 
-/// @warning DEPRECATED: Use `q_contextmenuevent_super_set_timestamp` instead
-///
-#define q_contextmenuevent_qbase_set_timestamp q_contextmenuevent_super_set_timestamp
-
 /// Inherited from QInputEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputevent.html#setTimestamp)
@@ -7114,10 +6834,6 @@ void q_contextmenuevent_on_set_timestamp(void* self, void (*callback)(void*, uin
 /// @param accepted bool
 ///
 void q_contextmenuevent_set_accepted(void* self, bool accepted);
-
-/// @warning DEPRECATED: Use `q_contextmenuevent_super_set_accepted` instead
-///
-#define q_contextmenuevent_qbase_set_accepted q_contextmenuevent_super_set_accepted
 
 /// Inherited from QEvent
 ///
@@ -7178,10 +6894,6 @@ QInputMethodEvent* q_inputmethodevent_clone(void* self);
 /// @param callback QInputMethodEvent* func()
 ///
 void q_inputmethodevent_on_clone(void* self, QInputMethodEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_inputmethodevent_super_clone` instead
-///
-#define q_inputmethodevent_qbase_clone q_inputmethodevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethodevent.html#clone)
 ///
@@ -7342,10 +7054,6 @@ int32_t q_inputmethodevent_register_event_type1(int hint);
 ///
 void q_inputmethodevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_inputmethodevent_super_set_accepted` instead
-///
-#define q_inputmethodevent_qbase_set_accepted q_inputmethodevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -7398,10 +7106,6 @@ QInputMethodQueryEvent* q_inputmethodqueryevent_clone(void* self);
 /// @param callback QInputMethodQueryEvent* func()
 ///
 void q_inputmethodqueryevent_on_clone(void* self, QInputMethodQueryEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_inputmethodqueryevent_super_clone` instead
-///
-#define q_inputmethodqueryevent_qbase_clone q_inputmethodqueryevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethodqueryevent.html#clone)
 ///
@@ -7525,10 +7229,6 @@ int32_t q_inputmethodqueryevent_register_event_type1(int hint);
 ///
 void q_inputmethodqueryevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_inputmethodqueryevent_super_set_accepted` instead
-///
-#define q_inputmethodqueryevent_qbase_set_accepted q_inputmethodqueryevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -7598,10 +7298,6 @@ QDropEvent* q_dropevent_clone(void* self);
 /// @param callback QDropEvent* func()
 ///
 void q_dropevent_on_clone(void* self, QDropEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_dropevent_super_clone` instead
-///
-#define q_dropevent_qbase_clone q_dropevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdropevent.html#clone)
 ///
@@ -7801,10 +7497,6 @@ int32_t q_dropevent_register_event_type1(int hint);
 ///
 void q_dropevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_dropevent_super_set_accepted` instead
-///
-#define q_dropevent_qbase_set_accepted q_dropevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -7874,10 +7566,6 @@ QDragMoveEvent* q_dragmoveevent_clone(void* self);
 /// @param callback QDragMoveEvent* func()
 ///
 void q_dragmoveevent_on_clone(void* self, QDragMoveEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_dragmoveevent_super_clone` instead
-///
-#define q_dragmoveevent_qbase_clone q_dragmoveevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdragmoveevent.html#clone)
 ///
@@ -8121,10 +7809,6 @@ int32_t q_dragmoveevent_register_event_type1(int hint);
 ///
 void q_dragmoveevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_dragmoveevent_super_set_accepted` instead
-///
-#define q_dragmoveevent_qbase_set_accepted q_dragmoveevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -8181,10 +7865,6 @@ QDragEnterEvent* q_dragenterevent_clone(void* self);
 /// @param callback QDragEnterEvent* func()
 ///
 void q_dragenterevent_on_clone(void* self, QDragEnterEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_dragenterevent_super_clone` instead
-///
-#define q_dragenterevent_qbase_clone q_dragenterevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdragenterevent.html#clone)
 ///
@@ -8438,10 +8118,6 @@ int32_t q_dragenterevent_register_event_type1(int hint);
 ///
 void q_dragenterevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_dragenterevent_super_set_accepted` instead
-///
-#define q_dragenterevent_qbase_set_accepted q_dragenterevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -8492,10 +8168,6 @@ QDragLeaveEvent* q_dragleaveevent_clone(void* self);
 /// @param callback QDragLeaveEvent* func()
 ///
 void q_dragleaveevent_on_clone(void* self, QDragLeaveEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_dragleaveevent_super_clone` instead
-///
-#define q_dragleaveevent_qbase_clone q_dragleaveevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdragleaveevent.html#clone)
 ///
@@ -8596,10 +8268,6 @@ int32_t q_dragleaveevent_register_event_type1(int hint);
 ///
 void q_dragleaveevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_dragleaveevent_super_set_accepted` instead
-///
-#define q_dragleaveevent_qbase_set_accepted q_dragleaveevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -8654,10 +8322,6 @@ QHelpEvent* q_helpevent_clone(void* self);
 /// @param callback QHelpEvent* func()
 ///
 void q_helpevent_on_clone(void* self, QHelpEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_helpevent_super_clone` instead
-///
-#define q_helpevent_qbase_clone q_helpevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhelpevent.html#clone)
 ///
@@ -8794,10 +8458,6 @@ int32_t q_helpevent_register_event_type1(int hint);
 ///
 void q_helpevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_helpevent_super_set_accepted` instead
-///
-#define q_helpevent_qbase_set_accepted q_helpevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -8850,10 +8510,6 @@ QStatusTipEvent* q_statustipevent_clone(void* self);
 /// @param callback QStatusTipEvent* func()
 ///
 void q_statustipevent_on_clone(void* self, QStatusTipEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_statustipevent_super_clone` instead
-///
-#define q_statustipevent_qbase_clone q_statustipevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatustipevent.html#clone)
 ///
@@ -8962,10 +8618,6 @@ int32_t q_statustipevent_register_event_type1(int hint);
 ///
 void q_statustipevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_statustipevent_super_set_accepted` instead
-///
-#define q_statustipevent_qbase_set_accepted q_statustipevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -9018,10 +8670,6 @@ QWhatsThisClickedEvent* q_whatsthisclickedevent_clone(void* self);
 /// @param callback QWhatsThisClickedEvent* func()
 ///
 void q_whatsthisclickedevent_on_clone(void* self, QWhatsThisClickedEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_whatsthisclickedevent_super_clone` instead
-///
-#define q_whatsthisclickedevent_qbase_clone q_whatsthisclickedevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwhatsthisclickedevent.html#clone)
 ///
@@ -9130,10 +8778,6 @@ int32_t q_whatsthisclickedevent_register_event_type1(int hint);
 ///
 void q_whatsthisclickedevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_whatsthisclickedevent_super_set_accepted` instead
-///
-#define q_whatsthisclickedevent_qbase_set_accepted q_whatsthisclickedevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -9197,10 +8841,6 @@ QActionEvent* q_actionevent_clone(void* self);
 /// @param callback QActionEvent* func()
 ///
 void q_actionevent_on_clone(void* self, QActionEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_actionevent_super_clone` instead
-///
-#define q_actionevent_qbase_clone q_actionevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qactionevent.html#clone)
 ///
@@ -9313,10 +8953,6 @@ int32_t q_actionevent_register_event_type1(int hint);
 ///
 void q_actionevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_actionevent_super_set_accepted` instead
-///
-#define q_actionevent_qbase_set_accepted q_actionevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -9377,10 +9013,6 @@ QFileOpenEvent* q_fileopenevent_clone(void* self);
 /// @param callback QFileOpenEvent* func()
 ///
 void q_fileopenevent_on_clone(void* self, QFileOpenEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_fileopenevent_super_clone` instead
-///
-#define q_fileopenevent_qbase_clone q_fileopenevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileopenevent.html#clone)
 ///
@@ -9503,10 +9135,6 @@ int32_t q_fileopenevent_register_event_type1(int hint);
 ///
 void q_fileopenevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_fileopenevent_super_set_accepted` instead
-///
-#define q_fileopenevent_qbase_set_accepted q_fileopenevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -9559,10 +9187,6 @@ QToolBarChangeEvent* q_toolbarchangeevent_clone(void* self);
 /// @param callback QToolBarChangeEvent* func()
 ///
 void q_toolbarchangeevent_on_clone(void* self, QToolBarChangeEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_toolbarchangeevent_super_clone` instead
-///
-#define q_toolbarchangeevent_qbase_clone q_toolbarchangeevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtoolbarchangeevent.html#clone)
 ///
@@ -9669,10 +9293,6 @@ int32_t q_toolbarchangeevent_register_event_type1(int hint);
 ///
 void q_toolbarchangeevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_toolbarchangeevent_super_set_accepted` instead
-///
-#define q_toolbarchangeevent_qbase_set_accepted q_toolbarchangeevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -9763,10 +9383,6 @@ QShortcutEvent* q_shortcutevent_clone(void* self);
 /// @param callback QShortcutEvent* func()
 ///
 void q_shortcutevent_on_clone(void* self, QShortcutEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_shortcutevent_super_clone` instead
-///
-#define q_shortcutevent_qbase_clone q_shortcutevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcutevent.html#clone)
 ///
@@ -9885,10 +9501,6 @@ int32_t q_shortcutevent_register_event_type1(int hint);
 ///
 void q_shortcutevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_shortcutevent_super_set_accepted` instead
-///
-#define q_shortcutevent_qbase_set_accepted q_shortcutevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -9950,10 +9562,6 @@ QWindowStateChangeEvent* q_windowstatechangeevent_clone(void* self);
 /// @param callback QWindowStateChangeEvent* func()
 ///
 void q_windowstatechangeevent_on_clone(void* self, QWindowStateChangeEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_windowstatechangeevent_super_clone` instead
-///
-#define q_windowstatechangeevent_qbase_clone q_windowstatechangeevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindowstatechangeevent.html#clone)
 ///
@@ -10068,10 +9676,6 @@ int32_t q_windowstatechangeevent_register_event_type1(int hint);
 ///
 void q_windowstatechangeevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_windowstatechangeevent_super_set_accepted` instead
-///
-#define q_windowstatechangeevent_qbase_set_accepted q_windowstatechangeevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -10178,10 +9782,6 @@ QTouchEvent* q_touchevent_clone(void* self);
 ///
 void q_touchevent_on_clone(void* self, QTouchEvent* (*callback)());
 
-/// @warning DEPRECATED: Use `q_touchevent_super_clone` instead
-///
-#define q_touchevent_qbase_clone q_touchevent_super_clone
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtouchevent.html#clone)
 ///
 /// Base class method implementation
@@ -10227,10 +9827,6 @@ bool q_touchevent_is_begin_event(void* self);
 ///
 void q_touchevent_on_is_begin_event(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_touchevent_super_is_begin_event` instead
-///
-#define q_touchevent_qbase_is_begin_event q_touchevent_super_is_begin_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtouchevent.html#isBeginEvent)
 ///
 /// Base class method implementation
@@ -10254,10 +9850,6 @@ bool q_touchevent_is_update_event(void* self);
 ///
 void q_touchevent_on_is_update_event(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_touchevent_super_is_update_event` instead
-///
-#define q_touchevent_qbase_is_update_event q_touchevent_super_is_update_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtouchevent.html#isUpdateEvent)
 ///
 /// Base class method implementation
@@ -10280,10 +9872,6 @@ bool q_touchevent_is_end_event(void* self);
 /// @param callback bool func()
 ///
 void q_touchevent_on_is_end_event(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `q_touchevent_super_is_end_event` instead
-///
-#define q_touchevent_qbase_is_end_event q_touchevent_super_is_end_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtouchevent.html#isEndEvent)
 ///
@@ -10547,10 +10135,6 @@ int32_t q_touchevent_register_event_type1(int hint);
 ///
 void q_touchevent_set_timestamp(void* self, uint64_t timestamp);
 
-/// @warning DEPRECATED: Use `q_touchevent_super_set_timestamp` instead
-///
-#define q_touchevent_qbase_set_timestamp q_touchevent_super_set_timestamp
-
 /// Inherited from QPointerEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
@@ -10583,10 +10167,6 @@ void q_touchevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t)
 /// @param accepted bool
 ///
 void q_touchevent_set_accepted(void* self, bool accepted);
-
-/// @warning DEPRECATED: Use `q_touchevent_super_set_accepted` instead
-///
-#define q_touchevent_qbase_set_accepted q_touchevent_super_set_accepted
 
 /// Inherited from QPointerEvent
 ///
@@ -10640,10 +10220,6 @@ QScrollPrepareEvent* q_scrollprepareevent_clone(void* self);
 /// @param callback QScrollPrepareEvent* func()
 ///
 void q_scrollprepareevent_on_clone(void* self, QScrollPrepareEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_scrollprepareevent_super_clone` instead
-///
-#define q_scrollprepareevent_qbase_clone q_scrollprepareevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollprepareevent.html#clone)
 ///
@@ -10789,10 +10365,6 @@ int32_t q_scrollprepareevent_register_event_type1(int hint);
 ///
 void q_scrollprepareevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_scrollprepareevent_super_set_accepted` instead
-///
-#define q_scrollprepareevent_qbase_set_accepted q_scrollprepareevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -10847,10 +10419,6 @@ QScrollEvent* q_scrollevent_clone(void* self);
 /// @param callback QScrollEvent* func()
 ///
 void q_scrollevent_on_clone(void* self, QScrollEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_scrollevent_super_clone` instead
-///
-#define q_scrollevent_qbase_clone q_scrollevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollevent.html#clone)
 ///
@@ -10971,10 +10539,6 @@ int32_t q_scrollevent_register_event_type1(int hint);
 ///
 void q_scrollevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_scrollevent_super_set_accepted` instead
-///
-#define q_scrollevent_qbase_set_accepted q_scrollevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -11028,10 +10592,6 @@ QScreenOrientationChangeEvent* q_screenorientationchangeevent_clone(void* self);
 /// @param callback QScreenOrientationChangeEvent* func()
 ///
 void q_screenorientationchangeevent_on_clone(void* self, QScreenOrientationChangeEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_screenorientationchangeevent_super_clone` instead
-///
-#define q_screenorientationchangeevent_qbase_clone q_screenorientationchangeevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreenorientationchangeevent.html#clone)
 ///
@@ -11146,10 +10706,6 @@ int32_t q_screenorientationchangeevent_register_event_type1(int hint);
 ///
 void q_screenorientationchangeevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_screenorientationchangeevent_super_set_accepted` instead
-///
-#define q_screenorientationchangeevent_qbase_set_accepted q_screenorientationchangeevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -11202,10 +10758,6 @@ QApplicationStateChangeEvent* q_applicationstatechangeevent_clone(void* self);
 /// @param callback QApplicationStateChangeEvent* func()
 ///
 void q_applicationstatechangeevent_on_clone(void* self, QApplicationStateChangeEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_applicationstatechangeevent_super_clone` instead
-///
-#define q_applicationstatechangeevent_qbase_clone q_applicationstatechangeevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qapplicationstatechangeevent.html#clone)
 ///
@@ -11314,10 +10866,6 @@ int32_t q_applicationstatechangeevent_register_event_type1(int hint);
 ///
 void q_applicationstatechangeevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `q_applicationstatechangeevent_super_set_accepted` instead
-///
-#define q_applicationstatechangeevent_qbase_set_accepted q_applicationstatechangeevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -11371,10 +10919,6 @@ QChildWindowEvent* q_childwindowevent_clone(void* self);
 /// @param callback QChildWindowEvent* func()
 ///
 void q_childwindowevent_on_clone(void* self, QChildWindowEvent* (*callback)());
-
-/// @warning DEPRECATED: Use `q_childwindowevent_super_clone` instead
-///
-#define q_childwindowevent_qbase_clone q_childwindowevent_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchildwindowevent.html#clone)
 ///
@@ -11480,10 +11024,6 @@ int32_t q_childwindowevent_register_event_type1(int hint);
 /// @param accepted bool
 ///
 void q_childwindowevent_set_accepted(void* self, bool accepted);
-
-/// @warning DEPRECATED: Use `q_childwindowevent_super_set_accepted` instead
-///
-#define q_childwindowevent_qbase_set_accepted q_childwindowevent_super_set_accepted
 
 /// Inherited from QEvent
 ///

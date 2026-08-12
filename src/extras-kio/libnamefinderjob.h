@@ -33,10 +33,6 @@ const QMetaObject* k_io__namefinderjob_meta_object(void* self);
 ///
 void k_io__namefinderjob_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_meta_object` instead
-///
-#define k_io__namefinderjob_qbase_meta_object k_io__namefinderjob_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -56,10 +52,6 @@ void* k_io__namefinderjob_metacast(void* self, const char* param1);
 /// @param callback void* func(KIO__NameFinderJob* self, const char* param1)
 ///
 void k_io__namefinderjob_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_metacast` instead
-///
-#define k_io__namefinderjob_qbase_metacast k_io__namefinderjob_super_metacast
 
 /// Base class method implementation
 ///
@@ -81,10 +73,6 @@ int32_t k_io__namefinderjob_metacall(void* self, int32_t param1, int param2, voi
 /// @param callback int32_t func(KIO__NameFinderJob* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_io__namefinderjob_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_metacall` instead
-///
-#define k_io__namefinderjob_qbase_metacall k_io__namefinderjob_super_metacall
 
 /// Base class method implementation
 ///
@@ -117,10 +105,6 @@ void k_io__namefinderjob_start(void* self);
 /// @param callback void func()
 ///
 void k_io__namefinderjob_on_start(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_start` instead
-///
-#define k_io__namefinderjob_qbase_start k_io__namefinderjob_super_start
 
 /// [Upstream resources](https://api.kde.org/kio-namefinderjob.html#start)
 ///
@@ -900,10 +884,6 @@ void k_io__namefinderjob_on_destroyed1(void* self, void (*callback)(void*, void*
 ///
 bool k_io__namefinderjob_add_subjob(void* self, void* job);
 
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_add_subjob` instead
-///
-#define k_io__namefinderjob_qbase_add_subjob k_io__namefinderjob_super_add_subjob
-
 /// Inherited from KCompositeJob
 ///
 /// [Upstream resources](https://api.kde.org/kcompositejob.html#addSubjob)
@@ -937,10 +917,6 @@ void k_io__namefinderjob_on_add_subjob(void* self, bool (*callback)(void*, void*
 ///
 bool k_io__namefinderjob_remove_subjob(void* self, void* job);
 
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_remove_subjob` instead
-///
-#define k_io__namefinderjob_qbase_remove_subjob k_io__namefinderjob_super_remove_subjob
-
 /// Inherited from KCompositeJob
 ///
 /// [Upstream resources](https://api.kde.org/kcompositejob.html#removeSubjob)
@@ -973,10 +949,6 @@ void k_io__namefinderjob_on_remove_subjob(void* self, bool (*callback)(void*, vo
 /// @param job KJob*
 ///
 void k_io__namefinderjob_slot_result(void* self, void* job);
-
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_slot_result` instead
-///
-#define k_io__namefinderjob_qbase_slot_result k_io__namefinderjob_super_slot_result
 
 /// Inherited from KCompositeJob
 ///
@@ -1012,10 +984,6 @@ void k_io__namefinderjob_on_slot_result(void* self, void (*callback)(void*, void
 ///
 void k_io__namefinderjob_slot_info_message(void* self, void* job, const char* message);
 
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_slot_info_message` instead
-///
-#define k_io__namefinderjob_qbase_slot_info_message k_io__namefinderjob_super_slot_info_message
-
 /// Inherited from KCompositeJob
 ///
 /// [Upstream resources](https://api.kde.org/kcompositejob.html#slotInfoMessage)
@@ -1049,10 +1017,6 @@ void k_io__namefinderjob_on_slot_info_message(void* self, void (*callback)(void*
 ///
 bool k_io__namefinderjob_do_kill(void* self);
 
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_do_kill` instead
-///
-#define k_io__namefinderjob_qbase_do_kill k_io__namefinderjob_super_do_kill
-
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#doKill)
@@ -1084,10 +1048,6 @@ void k_io__namefinderjob_on_do_kill(void* self, bool (*callback)());
 ///
 bool k_io__namefinderjob_do_suspend(void* self);
 
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_do_suspend` instead
-///
-#define k_io__namefinderjob_qbase_do_suspend k_io__namefinderjob_super_do_suspend
-
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#doSuspend)
@@ -1118,10 +1078,6 @@ void k_io__namefinderjob_on_do_suspend(void* self, bool (*callback)());
 /// @param self KIO__NameFinderJob*
 ///
 bool k_io__namefinderjob_do_resume(void* self);
-
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_do_resume` instead
-///
-#define k_io__namefinderjob_qbase_do_resume k_io__namefinderjob_super_do_resume
 
 /// Inherited from KJob
 ///
@@ -1155,10 +1111,6 @@ void k_io__namefinderjob_on_do_resume(void* self, bool (*callback)());
 /// @param self KIO__NameFinderJob*
 ///
 const char* k_io__namefinderjob_error_string(void* self);
-
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_error_string` instead
-///
-#define k_io__namefinderjob_qbase_error_string k_io__namefinderjob_super_error_string
 
 /// Inherited from KJob
 ///
@@ -1194,10 +1146,6 @@ void k_io__namefinderjob_on_error_string(void* self, const char* (*callback)());
 ///
 bool k_io__namefinderjob_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_event` instead
-///
-#define k_io__namefinderjob_qbase_event k_io__namefinderjob_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1231,10 +1179,6 @@ void k_io__namefinderjob_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool k_io__namefinderjob_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_event_filter` instead
-///
-#define k_io__namefinderjob_qbase_event_filter k_io__namefinderjob_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1270,10 +1214,6 @@ void k_io__namefinderjob_on_event_filter(void* self, bool (*callback)(void*, voi
 ///
 void k_io__namefinderjob_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_timer_event` instead
-///
-#define k_io__namefinderjob_qbase_timer_event k_io__namefinderjob_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1306,10 +1246,6 @@ void k_io__namefinderjob_on_timer_event(void* self, void (*callback)(void*, void
 /// @param event QChildEvent*
 ///
 void k_io__namefinderjob_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_child_event` instead
-///
-#define k_io__namefinderjob_qbase_child_event k_io__namefinderjob_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1344,10 +1280,6 @@ void k_io__namefinderjob_on_child_event(void* self, void (*callback)(void*, void
 ///
 void k_io__namefinderjob_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_custom_event` instead
-///
-#define k_io__namefinderjob_qbase_custom_event k_io__namefinderjob_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1380,10 +1312,6 @@ void k_io__namefinderjob_on_custom_event(void* self, void (*callback)(void*, voi
 /// @param signal QMetaMethod*
 ///
 void k_io__namefinderjob_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_connect_notify` instead
-///
-#define k_io__namefinderjob_qbase_connect_notify k_io__namefinderjob_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1418,10 +1346,6 @@ void k_io__namefinderjob_on_connect_notify(void* self, void (*callback)(void*, v
 ///
 void k_io__namefinderjob_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_disconnect_notify` instead
-///
-#define k_io__namefinderjob_qbase_disconnect_notify k_io__namefinderjob_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1453,10 +1377,6 @@ void k_io__namefinderjob_on_disconnect_notify(void* self, void (*callback)(void*
 /// @param self KIO__NameFinderJob*
 ///
 bool k_io__namefinderjob_has_subjobs(void* self);
-
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_has_subjobs` instead
-///
-#define k_io__namefinderjob_qbase_has_subjobs k_io__namefinderjob_super_has_subjobs
 
 /// Inherited from KCompositeJob
 ///
@@ -1491,10 +1411,6 @@ void k_io__namefinderjob_on_has_subjobs(void* self, bool (*callback)());
 ///
 libqt_list k_io__namefinderjob_subjobs(void* self);
 
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_subjobs` instead
-///
-#define k_io__namefinderjob_qbase_subjobs k_io__namefinderjob_super_subjobs
-
 /// Inherited from KCompositeJob
 ///
 /// [Upstream resources](https://api.kde.org/kcompositejob.html#subjobs)
@@ -1528,10 +1444,6 @@ void k_io__namefinderjob_on_subjobs(void* self, libqt_list (*callback)());
 ///
 void k_io__namefinderjob_clear_subjobs(void* self);
 
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_clear_subjobs` instead
-///
-#define k_io__namefinderjob_qbase_clear_subjobs k_io__namefinderjob_super_clear_subjobs
-
 /// Inherited from KCompositeJob
 ///
 /// [Upstream resources](https://api.kde.org/kcompositejob.html#clearSubjobs)
@@ -1563,10 +1475,6 @@ void k_io__namefinderjob_on_clear_subjobs(void* self, void (*callback)());
 /// @param capabilities flag of enum KJob__Capability
 ///
 void k_io__namefinderjob_set_capabilities(void* self, int32_t capabilities);
-
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_set_capabilities` instead
-///
-#define k_io__namefinderjob_qbase_set_capabilities k_io__namefinderjob_super_set_capabilities
 
 /// Inherited from KJob
 ///
@@ -1600,10 +1508,6 @@ void k_io__namefinderjob_on_set_capabilities(void* self, void (*callback)(void*,
 ///
 bool k_io__namefinderjob_is_finished(void* self);
 
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_is_finished` instead
-///
-#define k_io__namefinderjob_qbase_is_finished k_io__namefinderjob_super_is_finished
-
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isFinished)
@@ -1635,10 +1539,6 @@ void k_io__namefinderjob_on_is_finished(void* self, bool (*callback)());
 /// @param errorCode int
 ///
 void k_io__namefinderjob_set_error(void* self, int errorCode);
-
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_set_error` instead
-///
-#define k_io__namefinderjob_qbase_set_error k_io__namefinderjob_super_set_error
 
 /// Inherited from KJob
 ///
@@ -1673,10 +1573,6 @@ void k_io__namefinderjob_on_set_error(void* self, void (*callback)(void*, int));
 ///
 void k_io__namefinderjob_set_error_text(void* self, const char* errorText);
 
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_set_error_text` instead
-///
-#define k_io__namefinderjob_qbase_set_error_text k_io__namefinderjob_super_set_error_text
-
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setErrorText)
@@ -1710,10 +1606,6 @@ void k_io__namefinderjob_on_set_error_text(void* self, void (*callback)(void*, c
 /// @param amount uintptr_t
 ///
 void k_io__namefinderjob_set_processed_amount(void* self, int32_t unit, uintptr_t amount);
-
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_set_processed_amount` instead
-///
-#define k_io__namefinderjob_qbase_set_processed_amount k_io__namefinderjob_super_set_processed_amount
 
 /// Inherited from KJob
 ///
@@ -1750,10 +1642,6 @@ void k_io__namefinderjob_on_set_processed_amount(void* self, void (*callback)(vo
 ///
 void k_io__namefinderjob_set_total_amount(void* self, int32_t unit, uintptr_t amount);
 
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_set_total_amount` instead
-///
-#define k_io__namefinderjob_qbase_set_total_amount k_io__namefinderjob_super_set_total_amount
-
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setTotalAmount)
@@ -1788,10 +1676,6 @@ void k_io__namefinderjob_on_set_total_amount(void* self, void (*callback)(void*,
 ///
 void k_io__namefinderjob_set_progress_unit(void* self, int32_t unit);
 
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_set_progress_unit` instead
-///
-#define k_io__namefinderjob_qbase_set_progress_unit k_io__namefinderjob_super_set_progress_unit
-
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setProgressUnit)
@@ -1825,10 +1709,6 @@ void k_io__namefinderjob_on_set_progress_unit(void* self, void (*callback)(void*
 ///
 void k_io__namefinderjob_set_percent(void* self, uintptr_t percentage);
 
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_set_percent` instead
-///
-#define k_io__namefinderjob_qbase_set_percent k_io__namefinderjob_super_set_percent
-
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#setPercent)
@@ -1860,10 +1740,6 @@ void k_io__namefinderjob_on_set_percent(void* self, void (*callback)(void*, uint
 /// @param self KIO__NameFinderJob*
 ///
 void k_io__namefinderjob_emit_result(void* self);
-
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_emit_result` instead
-///
-#define k_io__namefinderjob_qbase_emit_result k_io__namefinderjob_super_emit_result
 
 /// Inherited from KJob
 ///
@@ -1897,10 +1773,6 @@ void k_io__namefinderjob_on_emit_result(void* self, void (*callback)());
 /// @param totalAmount uintptr_t
 ///
 void k_io__namefinderjob_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount);
-
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_emit_percent` instead
-///
-#define k_io__namefinderjob_qbase_emit_percent k_io__namefinderjob_super_emit_percent
 
 /// Inherited from KJob
 ///
@@ -1936,10 +1808,6 @@ void k_io__namefinderjob_on_emit_percent(void* self, void (*callback)(void*, uin
 ///
 void k_io__namefinderjob_emit_speed(void* self, uintptr_t speed);
 
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_emit_speed` instead
-///
-#define k_io__namefinderjob_qbase_emit_speed k_io__namefinderjob_super_emit_speed
-
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#emitSpeed)
@@ -1972,10 +1840,6 @@ void k_io__namefinderjob_on_emit_speed(void* self, void (*callback)(void*, uintp
 ///
 void k_io__namefinderjob_start_elapsed_timer(void* self);
 
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_start_elapsed_timer` instead
-///
-#define k_io__namefinderjob_qbase_start_elapsed_timer k_io__namefinderjob_super_start_elapsed_timer
-
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#startElapsedTimer)
@@ -2007,10 +1871,6 @@ void k_io__namefinderjob_on_start_elapsed_timer(void* self, void (*callback)());
 ///
 QObject* k_io__namefinderjob_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_sender` instead
-///
-#define k_io__namefinderjob_qbase_sender k_io__namefinderjob_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2041,10 +1901,6 @@ void k_io__namefinderjob_on_sender(void* self, QObject* (*callback)());
 /// @param self KIO__NameFinderJob*
 ///
 int32_t k_io__namefinderjob_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_sender_signal_index` instead
-///
-#define k_io__namefinderjob_qbase_sender_signal_index k_io__namefinderjob_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -2078,10 +1934,6 @@ void k_io__namefinderjob_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 int32_t k_io__namefinderjob_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_receivers` instead
-///
-#define k_io__namefinderjob_qbase_receivers k_io__namefinderjob_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2114,10 +1966,6 @@ void k_io__namefinderjob_on_receivers(void* self, int32_t (*callback)(void*, con
 /// @param signal QMetaMethod*
 ///
 bool k_io__namefinderjob_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_io__namefinderjob_super_is_signal_connected` instead
-///
-#define k_io__namefinderjob_qbase_is_signal_connected k_io__namefinderjob_super_is_signal_connected
 
 /// Inherited from QObject
 ///

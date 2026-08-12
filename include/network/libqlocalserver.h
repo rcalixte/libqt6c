@@ -37,10 +37,6 @@ const QMetaObject* q_localserver_meta_object(void* self);
 ///
 void q_localserver_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_localserver_super_meta_object` instead
-///
-#define q_localserver_qbase_meta_object q_localserver_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_localserver_metacast(void* self, const char* param1);
 /// @param callback void* func(QLocalServer* self, const char* param1)
 ///
 void q_localserver_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_localserver_super_metacast` instead
-///
-#define q_localserver_qbase_metacast q_localserver_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_localserver_metacall(void* self, int32_t param1, int param2, void* par
 /// @param callback int32_t func(QLocalServer* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_localserver_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_localserver_super_metacall` instead
-///
-#define q_localserver_qbase_metacall q_localserver_super_metacall
 
 /// Base class method implementation
 ///
@@ -149,10 +137,6 @@ bool q_localserver_has_pending_connections(void* self);
 ///
 void q_localserver_on_has_pending_connections(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_localserver_super_has_pending_connections` instead
-///
-#define q_localserver_qbase_has_pending_connections q_localserver_super_has_pending_connections
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalserver.html#hasPendingConnections)
 ///
 /// Base class method implementation
@@ -201,10 +185,6 @@ QLocalSocket* q_localserver_next_pending_connection(void* self);
 /// @param callback QLocalSocket* func()
 ///
 void q_localserver_on_next_pending_connection(void* self, QLocalSocket* (*callback)());
-
-/// @warning DEPRECATED: Use `q_localserver_super_next_pending_connection` instead
-///
-#define q_localserver_qbase_next_pending_connection q_localserver_super_next_pending_connection
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalserver.html#nextPendingConnection)
 ///
@@ -307,10 +287,6 @@ void q_localserver_incoming_connection(void* self, uintptr_t socketDescriptor);
 ///
 void q_localserver_on_incoming_connection(void* self, void (*callback)(void*, uintptr_t));
 
-/// @warning DEPRECATED: Use `q_localserver_super_incoming_connection` instead
-///
-#define q_localserver_qbase_incoming_connection q_localserver_super_incoming_connection
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalserver.html#incomingConnection)
 ///
 /// Base class method implementation
@@ -335,10 +311,6 @@ void q_localserver_add_pending_connection(void* self, void* socket);
 /// @param callback void func(QLocalServer* self, QLocalSocket* socket)
 ///
 void q_localserver_on_add_pending_connection(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_localserver_super_add_pending_connection` instead
-///
-#define q_localserver_qbase_add_pending_connection q_localserver_super_add_pending_connection
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalserver.html#addPendingConnection)
 ///
@@ -841,10 +813,6 @@ void q_localserver_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_localserver_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_localserver_super_event` instead
-///
-#define q_localserver_qbase_event q_localserver_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -878,10 +846,6 @@ void q_localserver_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_localserver_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_localserver_super_event_filter` instead
-///
-#define q_localserver_qbase_event_filter q_localserver_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -917,10 +881,6 @@ void q_localserver_on_event_filter(void* self, bool (*callback)(void*, void*, vo
 ///
 void q_localserver_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_localserver_super_timer_event` instead
-///
-#define q_localserver_qbase_timer_event q_localserver_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -953,10 +913,6 @@ void q_localserver_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_localserver_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_localserver_super_child_event` instead
-///
-#define q_localserver_qbase_child_event q_localserver_super_child_event
 
 /// Inherited from QObject
 ///
@@ -991,10 +947,6 @@ void q_localserver_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_localserver_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_localserver_super_custom_event` instead
-///
-#define q_localserver_qbase_custom_event q_localserver_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1027,10 +979,6 @@ void q_localserver_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_localserver_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_localserver_super_connect_notify` instead
-///
-#define q_localserver_qbase_connect_notify q_localserver_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1065,10 +1013,6 @@ void q_localserver_on_connect_notify(void* self, void (*callback)(void*, void*))
 ///
 void q_localserver_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_localserver_super_disconnect_notify` instead
-///
-#define q_localserver_qbase_disconnect_notify q_localserver_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1101,10 +1045,6 @@ void q_localserver_on_disconnect_notify(void* self, void (*callback)(void*, void
 ///
 QObject* q_localserver_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_localserver_super_sender` instead
-///
-#define q_localserver_qbase_sender q_localserver_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1135,10 +1075,6 @@ void q_localserver_on_sender(void* self, QObject* (*callback)());
 /// @param self QLocalServer*
 ///
 int32_t q_localserver_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_localserver_super_sender_signal_index` instead
-///
-#define q_localserver_qbase_sender_signal_index q_localserver_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1172,10 +1108,6 @@ void q_localserver_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_localserver_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_localserver_super_receivers` instead
-///
-#define q_localserver_qbase_receivers q_localserver_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1208,10 +1140,6 @@ void q_localserver_on_receivers(void* self, int32_t (*callback)(void*, const cha
 /// @param signal QMetaMethod*
 ///
 bool q_localserver_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_localserver_super_is_signal_connected` instead
-///
-#define q_localserver_qbase_is_signal_connected q_localserver_super_is_signal_connected
 
 /// Inherited from QObject
 ///

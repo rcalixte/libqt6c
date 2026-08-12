@@ -49,10 +49,6 @@ const QMetaObject* q_variantanimation_meta_object(void* self);
 ///
 void q_variantanimation_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_variantanimation_super_meta_object` instead
-///
-#define q_variantanimation_qbase_meta_object q_variantanimation_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -72,10 +68,6 @@ void* q_variantanimation_metacast(void* self, const char* param1);
 /// @param callback void* func(QVariantAnimation* self, const char* param1)
 ///
 void q_variantanimation_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_variantanimation_super_metacast` instead
-///
-#define q_variantanimation_qbase_metacast q_variantanimation_super_metacast
 
 /// Base class method implementation
 ///
@@ -97,10 +89,6 @@ int32_t q_variantanimation_metacall(void* self, int32_t param1, int param2, void
 /// @param callback int32_t func(QVariantAnimation* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_variantanimation_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_variantanimation_super_metacall` instead
-///
-#define q_variantanimation_qbase_metacall q_variantanimation_super_metacall
 
 /// Base class method implementation
 ///
@@ -196,10 +184,6 @@ int32_t q_variantanimation_duration(void* self);
 ///
 void q_variantanimation_on_duration(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_variantanimation_super_duration` instead
-///
-#define q_variantanimation_qbase_duration q_variantanimation_super_duration
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariantanimation.html#duration)
 ///
 /// Base class method implementation
@@ -258,10 +242,6 @@ bool q_variantanimation_event(void* self, void* event);
 ///
 void q_variantanimation_on_event(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_variantanimation_super_event` instead
-///
-#define q_variantanimation_qbase_event q_variantanimation_super_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariantanimation.html#event)
 ///
 /// Base class method implementation
@@ -286,10 +266,6 @@ void q_variantanimation_update_current_time(void* self, int param1);
 /// @param callback void func(QVariantAnimation* self, int param1)
 ///
 void q_variantanimation_on_update_current_time(void* self, void (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_variantanimation_super_update_current_time` instead
-///
-#define q_variantanimation_qbase_update_current_time q_variantanimation_super_update_current_time
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariantanimation.html#updateCurrentTime)
 ///
@@ -317,10 +293,6 @@ void q_variantanimation_update_state(void* self, int32_t newState, int32_t oldSt
 ///
 void q_variantanimation_on_update_state(void* self, void (*callback)(void*, int32_t, int32_t));
 
-/// @warning DEPRECATED: Use `q_variantanimation_super_update_state` instead
-///
-#define q_variantanimation_qbase_update_state q_variantanimation_super_update_state
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariantanimation.html#updateState)
 ///
 /// Base class method implementation
@@ -346,10 +318,6 @@ void q_variantanimation_update_current_value(void* self, void* value);
 /// @param callback void func(QVariantAnimation* self, QVariant* value)
 ///
 void q_variantanimation_on_update_current_value(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_variantanimation_super_update_current_value` instead
-///
-#define q_variantanimation_qbase_update_current_value q_variantanimation_super_update_current_value
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariantanimation.html#updateCurrentValue)
 ///
@@ -379,10 +347,6 @@ QVariant* q_variantanimation_interpolated(void* self, void* from, void* to, doub
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_variantanimation_on_interpolated(void* self, QVariant* (*callback)(void*, void*, void*, double));
-
-/// @warning DEPRECATED: Use `q_variantanimation_super_interpolated` instead
-///
-#define q_variantanimation_qbase_interpolated q_variantanimation_super_interpolated
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariantanimation.html#interpolated)
 ///
@@ -1089,10 +1053,6 @@ void q_variantanimation_on_destroyed1(void* self, void (*callback)(void*, void*)
 ///
 void q_variantanimation_update_direction(void* self, int32_t direction);
 
-/// @warning DEPRECATED: Use `q_variantanimation_super_update_direction` instead
-///
-#define q_variantanimation_qbase_update_direction q_variantanimation_super_update_direction
-
 /// Inherited from QAbstractAnimation
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractanimation.html#updateDirection)
@@ -1126,10 +1086,6 @@ void q_variantanimation_on_update_direction(void* self, void (*callback)(void*, 
 /// @param event QEvent*
 ///
 bool q_variantanimation_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_variantanimation_super_event_filter` instead
-///
-#define q_variantanimation_qbase_event_filter q_variantanimation_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1165,10 +1121,6 @@ void q_variantanimation_on_event_filter(void* self, bool (*callback)(void*, void
 ///
 void q_variantanimation_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_variantanimation_super_timer_event` instead
-///
-#define q_variantanimation_qbase_timer_event q_variantanimation_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1201,10 +1153,6 @@ void q_variantanimation_on_timer_event(void* self, void (*callback)(void*, void*
 /// @param event QChildEvent*
 ///
 void q_variantanimation_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_variantanimation_super_child_event` instead
-///
-#define q_variantanimation_qbase_child_event q_variantanimation_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1239,10 +1187,6 @@ void q_variantanimation_on_child_event(void* self, void (*callback)(void*, void*
 ///
 void q_variantanimation_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_variantanimation_super_custom_event` instead
-///
-#define q_variantanimation_qbase_custom_event q_variantanimation_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1275,10 +1219,6 @@ void q_variantanimation_on_custom_event(void* self, void (*callback)(void*, void
 /// @param signal QMetaMethod*
 ///
 void q_variantanimation_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_variantanimation_super_connect_notify` instead
-///
-#define q_variantanimation_qbase_connect_notify q_variantanimation_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1313,10 +1253,6 @@ void q_variantanimation_on_connect_notify(void* self, void (*callback)(void*, vo
 ///
 void q_variantanimation_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_variantanimation_super_disconnect_notify` instead
-///
-#define q_variantanimation_qbase_disconnect_notify q_variantanimation_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1349,10 +1285,6 @@ void q_variantanimation_on_disconnect_notify(void* self, void (*callback)(void*,
 ///
 QObject* q_variantanimation_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_variantanimation_super_sender` instead
-///
-#define q_variantanimation_qbase_sender q_variantanimation_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1383,10 +1315,6 @@ void q_variantanimation_on_sender(void* self, QObject* (*callback)());
 /// @param self QVariantAnimation*
 ///
 int32_t q_variantanimation_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_variantanimation_super_sender_signal_index` instead
-///
-#define q_variantanimation_qbase_sender_signal_index q_variantanimation_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1420,10 +1348,6 @@ void q_variantanimation_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 int32_t q_variantanimation_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_variantanimation_super_receivers` instead
-///
-#define q_variantanimation_qbase_receivers q_variantanimation_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1456,10 +1380,6 @@ void q_variantanimation_on_receivers(void* self, int32_t (*callback)(void*, cons
 /// @param signal QMetaMethod*
 ///
 bool q_variantanimation_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_variantanimation_super_is_signal_connected` instead
-///
-#define q_variantanimation_qbase_is_signal_connected q_variantanimation_super_is_signal_connected
 
 /// Inherited from QObject
 ///

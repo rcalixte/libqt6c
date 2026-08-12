@@ -40,10 +40,6 @@ bool k_textautocorrectioncore__importlibreofficeautocorrection_import(void* self
 ///
 void k_textautocorrectioncore__importlibreofficeautocorrection_on_import(void* self, bool (*callback)(void*, const char*, const char*, int32_t));
 
-/// @warning DEPRECATED: Use `k_textautocorrectioncore__importlibreofficeautocorrection_super_import` instead
-///
-#define k_textautocorrectioncore__importlibreofficeautocorrection_qbase_import k_textautocorrectioncore__importlibreofficeautocorrection_super_import
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportLibreOfficeAutocorrection.html)
 ///
 /// Base class method implementation

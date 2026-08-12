@@ -31,10 +31,6 @@ const QMetaObject* q_widgetaction_meta_object(void* self);
 ///
 void q_widgetaction_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_widgetaction_super_meta_object` instead
-///
-#define q_widgetaction_qbase_meta_object q_widgetaction_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -54,10 +50,6 @@ void* q_widgetaction_metacast(void* self, const char* param1);
 /// @param callback void* func(QWidgetAction* self, const char* param1)
 ///
 void q_widgetaction_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_widgetaction_super_metacast` instead
-///
-#define q_widgetaction_qbase_metacast q_widgetaction_super_metacast
 
 /// Base class method implementation
 ///
@@ -79,10 +71,6 @@ int32_t q_widgetaction_metacall(void* self, int32_t param1, int param2, void* pa
 /// @param callback int32_t func(QWidgetAction* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_widgetaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_widgetaction_super_metacall` instead
-///
-#define q_widgetaction_qbase_metacall q_widgetaction_super_metacall
 
 /// Base class method implementation
 ///
@@ -144,10 +132,6 @@ bool q_widgetaction_event(void* self, void* param1);
 ///
 void q_widgetaction_on_event(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_widgetaction_super_event` instead
-///
-#define q_widgetaction_qbase_event q_widgetaction_super_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#event)
 ///
 /// Base class method implementation
@@ -173,10 +157,6 @@ bool q_widgetaction_event_filter(void* self, void* param1, void* param2);
 /// @param callback bool func(QWidgetAction* self, QObject* param1, QEvent* param2)
 ///
 void q_widgetaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_widgetaction_super_event_filter` instead
-///
-#define q_widgetaction_qbase_event_filter q_widgetaction_super_event_filter
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#eventFilter)
 ///
@@ -204,10 +184,6 @@ QWidget* q_widgetaction_create_widget(void* self, void* parent);
 ///
 void q_widgetaction_on_create_widget(void* self, QWidget* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_widgetaction_super_create_widget` instead
-///
-#define q_widgetaction_qbase_create_widget q_widgetaction_super_create_widget
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#createWidget)
 ///
 /// Base class method implementation
@@ -232,10 +208,6 @@ void q_widgetaction_delete_widget(void* self, void* widget);
 /// @param callback void func(QWidgetAction* self, QWidget* widget)
 ///
 void q_widgetaction_on_delete_widget(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_widgetaction_super_delete_widget` instead
-///
-#define q_widgetaction_qbase_delete_widget q_widgetaction_super_delete_widget
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#deleteWidget)
 ///
@@ -262,10 +234,6 @@ libqt_list q_widgetaction_created_widgets(void* self);
 /// @param callback libqt_list of QWidget* func()
 ///
 void q_widgetaction_on_created_widgets(void* self, libqt_list (*callback)());
-
-/// @warning DEPRECATED: Use `q_widgetaction_super_created_widgets` instead
-///
-#define q_widgetaction_qbase_created_widgets q_widgetaction_super_created_widgets
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
 ///
@@ -1372,10 +1340,6 @@ void q_widgetaction_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 void q_widgetaction_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_widgetaction_super_timer_event` instead
-///
-#define q_widgetaction_qbase_timer_event q_widgetaction_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1408,10 +1372,6 @@ void q_widgetaction_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_widgetaction_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_widgetaction_super_child_event` instead
-///
-#define q_widgetaction_qbase_child_event q_widgetaction_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1446,10 +1406,6 @@ void q_widgetaction_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_widgetaction_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_widgetaction_super_custom_event` instead
-///
-#define q_widgetaction_qbase_custom_event q_widgetaction_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1482,10 +1438,6 @@ void q_widgetaction_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_widgetaction_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_widgetaction_super_connect_notify` instead
-///
-#define q_widgetaction_qbase_connect_notify q_widgetaction_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1520,10 +1472,6 @@ void q_widgetaction_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void q_widgetaction_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_widgetaction_super_disconnect_notify` instead
-///
-#define q_widgetaction_qbase_disconnect_notify q_widgetaction_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1556,10 +1504,6 @@ void q_widgetaction_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 QObject* q_widgetaction_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_widgetaction_super_sender` instead
-///
-#define q_widgetaction_qbase_sender q_widgetaction_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1590,10 +1534,6 @@ void q_widgetaction_on_sender(void* self, QObject* (*callback)());
 /// @param self QWidgetAction*
 ///
 int32_t q_widgetaction_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_widgetaction_super_sender_signal_index` instead
-///
-#define q_widgetaction_qbase_sender_signal_index q_widgetaction_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1627,10 +1567,6 @@ void q_widgetaction_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_widgetaction_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_widgetaction_super_receivers` instead
-///
-#define q_widgetaction_qbase_receivers q_widgetaction_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1663,10 +1599,6 @@ void q_widgetaction_on_receivers(void* self, int32_t (*callback)(void*, const ch
 /// @param signal QMetaMethod*
 ///
 bool q_widgetaction_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_widgetaction_super_is_signal_connected` instead
-///
-#define q_widgetaction_qbase_is_signal_connected q_widgetaction_super_is_signal_connected
 
 /// Inherited from QObject
 ///

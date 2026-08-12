@@ -37,10 +37,6 @@ const QMetaObject* q_screencapture_meta_object(void* self);
 ///
 void q_screencapture_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_screencapture_super_meta_object` instead
-///
-#define q_screencapture_qbase_meta_object q_screencapture_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_screencapture_metacast(void* self, const char* param1);
 /// @param callback void* func(QScreenCapture* self, const char* param1)
 ///
 void q_screencapture_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_screencapture_super_metacast` instead
-///
-#define q_screencapture_qbase_metacast q_screencapture_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_screencapture_metacall(void* self, int32_t param1, int param2, void* p
 /// @param callback int32_t func(QScreenCapture* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_screencapture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_screencapture_super_metacall` instead
-///
-#define q_screencapture_qbase_metacall q_screencapture_super_metacall
 
 /// Base class method implementation
 ///
@@ -700,10 +688,6 @@ void q_screencapture_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_screencapture_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_screencapture_super_event` instead
-///
-#define q_screencapture_qbase_event q_screencapture_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -737,10 +721,6 @@ void q_screencapture_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_screencapture_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_screencapture_super_event_filter` instead
-///
-#define q_screencapture_qbase_event_filter q_screencapture_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -776,10 +756,6 @@ void q_screencapture_on_event_filter(void* self, bool (*callback)(void*, void*, 
 ///
 void q_screencapture_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_screencapture_super_timer_event` instead
-///
-#define q_screencapture_qbase_timer_event q_screencapture_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -812,10 +788,6 @@ void q_screencapture_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_screencapture_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_screencapture_super_child_event` instead
-///
-#define q_screencapture_qbase_child_event q_screencapture_super_child_event
 
 /// Inherited from QObject
 ///
@@ -850,10 +822,6 @@ void q_screencapture_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_screencapture_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_screencapture_super_custom_event` instead
-///
-#define q_screencapture_qbase_custom_event q_screencapture_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -886,10 +854,6 @@ void q_screencapture_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param signal QMetaMethod*
 ///
 void q_screencapture_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_screencapture_super_connect_notify` instead
-///
-#define q_screencapture_qbase_connect_notify q_screencapture_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -924,10 +888,6 @@ void q_screencapture_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void q_screencapture_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_screencapture_super_disconnect_notify` instead
-///
-#define q_screencapture_qbase_disconnect_notify q_screencapture_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -960,10 +920,6 @@ void q_screencapture_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 QObject* q_screencapture_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_screencapture_super_sender` instead
-///
-#define q_screencapture_qbase_sender q_screencapture_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -994,10 +950,6 @@ void q_screencapture_on_sender(void* self, QObject* (*callback)());
 /// @param self QScreenCapture*
 ///
 int32_t q_screencapture_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_screencapture_super_sender_signal_index` instead
-///
-#define q_screencapture_qbase_sender_signal_index q_screencapture_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1031,10 +983,6 @@ void q_screencapture_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_screencapture_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_screencapture_super_receivers` instead
-///
-#define q_screencapture_qbase_receivers q_screencapture_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1067,10 +1015,6 @@ void q_screencapture_on_receivers(void* self, int32_t (*callback)(void*, const c
 /// @param signal QMetaMethod*
 ///
 bool q_screencapture_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_screencapture_super_is_signal_connected` instead
-///
-#define q_screencapture_qbase_is_signal_connected q_screencapture_super_is_signal_connected
 
 /// Inherited from QObject
 ///

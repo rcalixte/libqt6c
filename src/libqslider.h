@@ -54,10 +54,6 @@ const QMetaObject* q_slider_meta_object(void* self);
 ///
 void q_slider_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_slider_super_meta_object` instead
-///
-#define q_slider_qbase_meta_object q_slider_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -77,10 +73,6 @@ void* q_slider_metacast(void* self, const char* param1);
 /// @param callback void* func(QSlider* self, const char* param1)
 ///
 void q_slider_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_slider_super_metacast` instead
-///
-#define q_slider_qbase_metacast q_slider_super_metacast
 
 /// Base class method implementation
 ///
@@ -102,10 +94,6 @@ int32_t q_slider_metacall(void* self, int32_t param1, int param2, void* param3);
 /// @param callback int32_t func(QSlider* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_slider_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_slider_super_metacall` instead
-///
-#define q_slider_qbase_metacall q_slider_super_metacall
 
 /// Base class method implementation
 ///
@@ -141,10 +129,6 @@ QSize* q_slider_size_hint(void* self);
 ///
 void q_slider_on_size_hint(void* self, QSize* (*callback)());
 
-/// @warning DEPRECATED: Use `q_slider_super_size_hint` instead
-///
-#define q_slider_qbase_size_hint q_slider_super_size_hint
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qslider.html#sizeHint)
 ///
 /// Base class method implementation
@@ -169,10 +153,6 @@ QSize* q_slider_minimum_size_hint(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_slider_on_minimum_size_hint(void* self, QSize* (*callback)());
-
-/// @warning DEPRECATED: Use `q_slider_super_minimum_size_hint` instead
-///
-#define q_slider_qbase_minimum_size_hint q_slider_super_minimum_size_hint
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qslider.html#minimumSizeHint)
 ///
@@ -226,10 +206,6 @@ bool q_slider_event(void* self, void* event);
 ///
 void q_slider_on_event(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_slider_super_event` instead
-///
-#define q_slider_qbase_event q_slider_super_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qslider.html#event)
 ///
 /// Base class method implementation
@@ -254,10 +230,6 @@ void q_slider_paint_event(void* self, void* ev);
 /// @param callback void func(QSlider* self, QPaintEvent* ev)
 ///
 void q_slider_on_paint_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_slider_super_paint_event` instead
-///
-#define q_slider_qbase_paint_event q_slider_super_paint_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qslider.html#paintEvent)
 ///
@@ -284,10 +256,6 @@ void q_slider_mouse_press_event(void* self, void* ev);
 ///
 void q_slider_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_slider_super_mouse_press_event` instead
-///
-#define q_slider_qbase_mouse_press_event q_slider_super_mouse_press_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qslider.html#mousePressEvent)
 ///
 /// Base class method implementation
@@ -312,10 +280,6 @@ void q_slider_mouse_release_event(void* self, void* ev);
 /// @param callback void func(QSlider* self, QMouseEvent* ev)
 ///
 void q_slider_on_mouse_release_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_slider_super_mouse_release_event` instead
-///
-#define q_slider_qbase_mouse_release_event q_slider_super_mouse_release_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qslider.html#mouseReleaseEvent)
 ///
@@ -342,10 +306,6 @@ void q_slider_mouse_move_event(void* self, void* ev);
 ///
 void q_slider_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_slider_super_mouse_move_event` instead
-///
-#define q_slider_qbase_mouse_move_event q_slider_super_mouse_move_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qslider.html#mouseMoveEvent)
 ///
 /// Base class method implementation
@@ -370,10 +330,6 @@ void q_slider_init_style_option(void* self, void* option);
 /// @param callback void func(QSlider* self, QStyleOptionSlider* option)
 ///
 void q_slider_on_init_style_option(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_slider_super_init_style_option` instead
-///
-#define q_slider_qbase_init_style_option q_slider_super_init_style_option
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qslider.html#initStyleOption)
 ///
@@ -3686,10 +3642,6 @@ int32_t q_slider_encode_metric_f(int32_t metric, double value);
 ///
 void q_slider_slider_change(void* self, int32_t change);
 
-/// @warning DEPRECATED: Use `q_slider_super_slider_change` instead
-///
-#define q_slider_qbase_slider_change q_slider_super_slider_change
-
 /// Inherited from QAbstractSlider
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractslider.html#sliderChange)
@@ -3722,10 +3674,6 @@ void q_slider_on_slider_change(void* self, void (*callback)(void*, int32_t));
 /// @param ev QKeyEvent*
 ///
 void q_slider_key_press_event(void* self, void* ev);
-
-/// @warning DEPRECATED: Use `q_slider_super_key_press_event` instead
-///
-#define q_slider_qbase_key_press_event q_slider_super_key_press_event
 
 /// Inherited from QAbstractSlider
 ///
@@ -3760,10 +3708,6 @@ void q_slider_on_key_press_event(void* self, void (*callback)(void*, void*));
 ///
 void q_slider_timer_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_slider_super_timer_event` instead
-///
-#define q_slider_qbase_timer_event q_slider_super_timer_event
-
 /// Inherited from QAbstractSlider
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractslider.html#timerEvent)
@@ -3796,10 +3740,6 @@ void q_slider_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param e QWheelEvent*
 ///
 void q_slider_wheel_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `q_slider_super_wheel_event` instead
-///
-#define q_slider_qbase_wheel_event q_slider_super_wheel_event
 
 /// Inherited from QAbstractSlider
 ///
@@ -3834,10 +3774,6 @@ void q_slider_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void q_slider_change_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `q_slider_super_change_event` instead
-///
-#define q_slider_qbase_change_event q_slider_super_change_event
-
 /// Inherited from QAbstractSlider
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractslider.html#changeEvent)
@@ -3870,10 +3806,6 @@ void q_slider_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_slider_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `q_slider_super_dev_type` instead
-///
-#define q_slider_qbase_dev_type q_slider_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -3905,10 +3837,6 @@ void q_slider_on_dev_type(void* self, int32_t (*callback)());
 /// @param visible bool
 ///
 void q_slider_set_visible(void* self, bool visible);
-
-/// @warning DEPRECATED: Use `q_slider_super_set_visible` instead
-///
-#define q_slider_qbase_set_visible q_slider_super_set_visible
 
 /// Inherited from QWidget
 ///
@@ -3943,10 +3871,6 @@ void q_slider_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 int32_t q_slider_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `q_slider_super_height_for_width` instead
-///
-#define q_slider_qbase_height_for_width q_slider_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -3979,10 +3903,6 @@ void q_slider_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 ///
 bool q_slider_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `q_slider_super_has_height_for_width` instead
-///
-#define q_slider_qbase_has_height_for_width q_slider_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -4013,10 +3933,6 @@ void q_slider_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self QSlider*
 ///
 QPaintEngine* q_slider_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `q_slider_super_paint_engine` instead
-///
-#define q_slider_qbase_paint_engine q_slider_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -4049,10 +3965,6 @@ void q_slider_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QMouseEvent*
 ///
 void q_slider_mouse_double_click_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_slider_super_mouse_double_click_event` instead
-///
-#define q_slider_qbase_mouse_double_click_event q_slider_super_mouse_double_click_event
 
 /// Inherited from QWidget
 ///
@@ -4087,10 +3999,6 @@ void q_slider_on_mouse_double_click_event(void* self, void (*callback)(void*, vo
 ///
 void q_slider_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_slider_super_key_release_event` instead
-///
-#define q_slider_qbase_key_release_event q_slider_super_key_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -4123,10 +4031,6 @@ void q_slider_on_key_release_event(void* self, void (*callback)(void*, void*));
 /// @param event QFocusEvent*
 ///
 void q_slider_focus_in_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_slider_super_focus_in_event` instead
-///
-#define q_slider_qbase_focus_in_event q_slider_super_focus_in_event
 
 /// Inherited from QWidget
 ///
@@ -4161,10 +4065,6 @@ void q_slider_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 void q_slider_focus_out_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_slider_super_focus_out_event` instead
-///
-#define q_slider_qbase_focus_out_event q_slider_super_focus_out_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -4197,10 +4097,6 @@ void q_slider_on_focus_out_event(void* self, void (*callback)(void*, void*));
 /// @param event QEnterEvent*
 ///
 void q_slider_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_slider_super_enter_event` instead
-///
-#define q_slider_qbase_enter_event q_slider_super_enter_event
 
 /// Inherited from QWidget
 ///
@@ -4235,10 +4131,6 @@ void q_slider_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void q_slider_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_slider_super_leave_event` instead
-///
-#define q_slider_qbase_leave_event q_slider_super_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -4271,10 +4163,6 @@ void q_slider_on_leave_event(void* self, void (*callback)(void*, void*));
 /// @param event QMoveEvent*
 ///
 void q_slider_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_slider_super_move_event` instead
-///
-#define q_slider_qbase_move_event q_slider_super_move_event
 
 /// Inherited from QWidget
 ///
@@ -4309,10 +4197,6 @@ void q_slider_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_slider_resize_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_slider_super_resize_event` instead
-///
-#define q_slider_qbase_resize_event q_slider_super_resize_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
@@ -4345,10 +4229,6 @@ void q_slider_on_resize_event(void* self, void (*callback)(void*, void*));
 /// @param event QCloseEvent*
 ///
 void q_slider_close_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_slider_super_close_event` instead
-///
-#define q_slider_qbase_close_event q_slider_super_close_event
 
 /// Inherited from QWidget
 ///
@@ -4383,10 +4263,6 @@ void q_slider_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void q_slider_context_menu_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_slider_super_context_menu_event` instead
-///
-#define q_slider_qbase_context_menu_event q_slider_super_context_menu_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
@@ -4419,10 +4295,6 @@ void q_slider_on_context_menu_event(void* self, void (*callback)(void*, void*));
 /// @param event QTabletEvent*
 ///
 void q_slider_tablet_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_slider_super_tablet_event` instead
-///
-#define q_slider_qbase_tablet_event q_slider_super_tablet_event
 
 /// Inherited from QWidget
 ///
@@ -4457,10 +4329,6 @@ void q_slider_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void q_slider_action_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_slider_super_action_event` instead
-///
-#define q_slider_qbase_action_event q_slider_super_action_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -4493,10 +4361,6 @@ void q_slider_on_action_event(void* self, void (*callback)(void*, void*));
 /// @param event QDragEnterEvent*
 ///
 void q_slider_drag_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_slider_super_drag_enter_event` instead
-///
-#define q_slider_qbase_drag_enter_event q_slider_super_drag_enter_event
 
 /// Inherited from QWidget
 ///
@@ -4531,10 +4395,6 @@ void q_slider_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void q_slider_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_slider_super_drag_move_event` instead
-///
-#define q_slider_qbase_drag_move_event q_slider_super_drag_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -4567,10 +4427,6 @@ void q_slider_on_drag_move_event(void* self, void (*callback)(void*, void*));
 /// @param event QDragLeaveEvent*
 ///
 void q_slider_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_slider_super_drag_leave_event` instead
-///
-#define q_slider_qbase_drag_leave_event q_slider_super_drag_leave_event
 
 /// Inherited from QWidget
 ///
@@ -4605,10 +4461,6 @@ void q_slider_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_slider_drop_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_slider_super_drop_event` instead
-///
-#define q_slider_qbase_drop_event q_slider_super_drop_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4642,10 +4494,6 @@ void q_slider_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void q_slider_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_slider_super_show_event` instead
-///
-#define q_slider_qbase_show_event q_slider_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -4678,10 +4526,6 @@ void q_slider_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param event QHideEvent*
 ///
 void q_slider_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_slider_super_hide_event` instead
-///
-#define q_slider_qbase_hide_event q_slider_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -4718,10 +4562,6 @@ void q_slider_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_slider_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `q_slider_super_native_event` instead
-///
-#define q_slider_qbase_native_event q_slider_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4757,10 +4597,6 @@ void q_slider_on_native_event(void* self, bool (*callback)(void*, libqt_string, 
 ///
 int32_t q_slider_metric(void* self, int32_t param1);
 
-/// @warning DEPRECATED: Use `q_slider_super_metric` instead
-///
-#define q_slider_qbase_metric q_slider_super_metric
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -4793,10 +4629,6 @@ void q_slider_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 /// @param painter QPainter*
 ///
 void q_slider_init_painter(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_slider_super_init_painter` instead
-///
-#define q_slider_qbase_init_painter q_slider_super_init_painter
 
 /// Inherited from QWidget
 ///
@@ -4831,10 +4663,6 @@ void q_slider_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_slider_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `q_slider_super_redirected` instead
-///
-#define q_slider_qbase_redirected q_slider_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4866,10 +4694,6 @@ void q_slider_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*))
 /// @param self QSlider*
 ///
 QPainter* q_slider_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `q_slider_super_shared_painter` instead
-///
-#define q_slider_qbase_shared_painter q_slider_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -4903,10 +4727,6 @@ void q_slider_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void q_slider_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_slider_super_input_method_event` instead
-///
-#define q_slider_qbase_input_method_event q_slider_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4939,10 +4759,6 @@ void q_slider_on_input_method_event(void* self, void (*callback)(void*, void*));
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* q_slider_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `q_slider_super_input_method_query` instead
-///
-#define q_slider_qbase_input_method_query q_slider_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -4979,10 +4795,6 @@ void q_slider_on_input_method_query(void* self, QVariant* (*callback)(void*, int
 ///
 bool q_slider_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `q_slider_super_focus_next_prev_child` instead
-///
-#define q_slider_qbase_focus_next_prev_child q_slider_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -5016,10 +4828,6 @@ void q_slider_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)
 /// @param event QEvent*
 ///
 bool q_slider_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_slider_super_event_filter` instead
-///
-#define q_slider_qbase_event_filter q_slider_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -5055,10 +4863,6 @@ void q_slider_on_event_filter(void* self, bool (*callback)(void*, void*, void*))
 ///
 void q_slider_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_slider_super_child_event` instead
-///
-#define q_slider_qbase_child_event q_slider_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -5091,10 +4895,6 @@ void q_slider_on_child_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void q_slider_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_slider_super_custom_event` instead
-///
-#define q_slider_qbase_custom_event q_slider_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -5129,10 +4929,6 @@ void q_slider_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_slider_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_slider_super_connect_notify` instead
-///
-#define q_slider_qbase_connect_notify q_slider_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5166,10 +4962,6 @@ void q_slider_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_slider_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_slider_super_disconnect_notify` instead
-///
-#define q_slider_qbase_disconnect_notify q_slider_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5202,10 +4994,6 @@ void q_slider_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 /// @param action enum QAbstractSlider__SliderAction
 ///
 void q_slider_set_repeat_action(void* self, int32_t action);
-
-/// @warning DEPRECATED: Use `q_slider_super_set_repeat_action` instead
-///
-#define q_slider_qbase_set_repeat_action q_slider_super_set_repeat_action
 
 /// Inherited from QAbstractSlider
 ///
@@ -5241,10 +5029,6 @@ void q_slider_on_set_repeat_action(void* self, void (*callback)(void*, int32_t))
 ///
 int32_t q_slider_repeat_action(void* self);
 
-/// @warning DEPRECATED: Use `q_slider_super_repeat_action` instead
-///
-#define q_slider_qbase_repeat_action q_slider_super_repeat_action
-
 /// Inherited from QAbstractSlider
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractslider.html#repeatAction)
@@ -5278,10 +5062,6 @@ void q_slider_on_repeat_action(void* self, int32_t (*callback)());
 ///
 void q_slider_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_slider_super_update_micro_focus` instead
-///
-#define q_slider_qbase_update_micro_focus q_slider_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5312,10 +5092,6 @@ void q_slider_on_update_micro_focus(void* self, void (*callback)());
 /// @param self QSlider*
 ///
 void q_slider_create(void* self);
-
-/// @warning DEPRECATED: Use `q_slider_super_create` instead
-///
-#define q_slider_qbase_create q_slider_super_create
 
 /// Inherited from QWidget
 ///
@@ -5348,10 +5124,6 @@ void q_slider_on_create(void* self, void (*callback)());
 ///
 void q_slider_destroy(void* self);
 
-/// @warning DEPRECATED: Use `q_slider_super_destroy` instead
-///
-#define q_slider_qbase_destroy q_slider_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5382,10 +5154,6 @@ void q_slider_on_destroy(void* self, void (*callback)());
 /// @param self QSlider*
 ///
 bool q_slider_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `q_slider_super_focus_next_child` instead
-///
-#define q_slider_qbase_focus_next_child q_slider_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -5418,10 +5186,6 @@ void q_slider_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_slider_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `q_slider_super_focus_previous_child` instead
-///
-#define q_slider_qbase_focus_previous_child q_slider_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5452,10 +5216,6 @@ void q_slider_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self QSlider*
 ///
 QObject* q_slider_sender(void* self);
-
-/// @warning DEPRECATED: Use `q_slider_super_sender` instead
-///
-#define q_slider_qbase_sender q_slider_super_sender
 
 /// Inherited from QObject
 ///
@@ -5488,10 +5248,6 @@ void q_slider_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_slider_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `q_slider_super_sender_signal_index` instead
-///
-#define q_slider_qbase_sender_signal_index q_slider_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5523,10 +5279,6 @@ void q_slider_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t q_slider_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `q_slider_super_receivers` instead
-///
-#define q_slider_qbase_receivers q_slider_super_receivers
 
 /// Inherited from QObject
 ///
@@ -5561,10 +5313,6 @@ void q_slider_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 ///
 bool q_slider_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_slider_super_is_signal_connected` instead
-///
-#define q_slider_qbase_is_signal_connected q_slider_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5598,10 +5346,6 @@ void q_slider_on_is_signal_connected(void* self, bool (*callback)(void*, void*))
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double q_slider_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `q_slider_super_get_decoded_metric_f` instead
-///
-#define q_slider_qbase_get_decoded_metric_f q_slider_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

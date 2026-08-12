@@ -54,10 +54,6 @@ const QMetaObject* q_areaseries_meta_object(void* self);
 ///
 void q_areaseries_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_areaseries_super_meta_object` instead
-///
-#define q_areaseries_qbase_meta_object q_areaseries_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -77,10 +73,6 @@ void* q_areaseries_metacast(void* self, const char* param1);
 /// @param callback void* func(QAreaSeries* self, const char* param1)
 ///
 void q_areaseries_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_areaseries_super_metacast` instead
-///
-#define q_areaseries_qbase_metacast q_areaseries_super_metacast
 
 /// Base class method implementation
 ///
@@ -102,10 +94,6 @@ int32_t q_areaseries_metacall(void* self, int32_t param1, int param2, void* para
 /// @param callback int32_t func(QAreaSeries* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_areaseries_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_areaseries_super_metacall` instead
-///
-#define q_areaseries_qbase_metacall q_areaseries_super_metacall
 
 /// Base class method implementation
 ///
@@ -140,10 +128,6 @@ int32_t q_areaseries_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_areaseries_on_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_areaseries_super_type` instead
-///
-#define q_areaseries_qbase_type q_areaseries_super_type
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#type)
 ///
@@ -1196,10 +1180,6 @@ void q_areaseries_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_areaseries_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_areaseries_super_event` instead
-///
-#define q_areaseries_qbase_event q_areaseries_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1233,10 +1213,6 @@ void q_areaseries_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_areaseries_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_areaseries_super_event_filter` instead
-///
-#define q_areaseries_qbase_event_filter q_areaseries_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1272,10 +1248,6 @@ void q_areaseries_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void q_areaseries_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_areaseries_super_timer_event` instead
-///
-#define q_areaseries_qbase_timer_event q_areaseries_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1308,10 +1280,6 @@ void q_areaseries_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_areaseries_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_areaseries_super_child_event` instead
-///
-#define q_areaseries_qbase_child_event q_areaseries_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1346,10 +1314,6 @@ void q_areaseries_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_areaseries_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_areaseries_super_custom_event` instead
-///
-#define q_areaseries_qbase_custom_event q_areaseries_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1382,10 +1346,6 @@ void q_areaseries_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_areaseries_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_areaseries_super_connect_notify` instead
-///
-#define q_areaseries_qbase_connect_notify q_areaseries_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1420,10 +1380,6 @@ void q_areaseries_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_areaseries_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_areaseries_super_disconnect_notify` instead
-///
-#define q_areaseries_qbase_disconnect_notify q_areaseries_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1456,10 +1412,6 @@ void q_areaseries_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 QObject* q_areaseries_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_areaseries_super_sender` instead
-///
-#define q_areaseries_qbase_sender q_areaseries_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1490,10 +1442,6 @@ void q_areaseries_on_sender(void* self, QObject* (*callback)());
 /// @param self QAreaSeries*
 ///
 int32_t q_areaseries_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_areaseries_super_sender_signal_index` instead
-///
-#define q_areaseries_qbase_sender_signal_index q_areaseries_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1527,10 +1475,6 @@ void q_areaseries_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_areaseries_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_areaseries_super_receivers` instead
-///
-#define q_areaseries_qbase_receivers q_areaseries_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1563,10 +1507,6 @@ void q_areaseries_on_receivers(void* self, int32_t (*callback)(void*, const char
 /// @param signal QMetaMethod*
 ///
 bool q_areaseries_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_areaseries_super_is_signal_connected` instead
-///
-#define q_areaseries_qbase_is_signal_connected q_areaseries_super_is_signal_connected
 
 /// Inherited from QObject
 ///

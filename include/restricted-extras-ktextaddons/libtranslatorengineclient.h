@@ -37,10 +37,6 @@ const QMetaObject* k_texttranslator__translatorengineclient_meta_object(void* se
 ///
 void k_texttranslator__translatorengineclient_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_meta_object` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_meta_object k_texttranslator__translatorengineclient_super_meta_object
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineClient.html)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* k_texttranslator__translatorengineclient_metacast(void* self, const char* 
 /// @param callback void* func(TextTranslator__TranslatorEngineClient* self, const char* param1)
 ///
 void k_texttranslator__translatorengineclient_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_metacast` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_metacast k_texttranslator__translatorengineclient_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t k_texttranslator__translatorengineclient_metacall(void* self, int32_t pa
 /// @param callback int32_t func(TextTranslator__TranslatorEngineClient* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_texttranslator__translatorengineclient_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_metacall` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_metacall k_texttranslator__translatorengineclient_super_metacall
 
 /// Base class method implementation
 ///
@@ -124,10 +112,6 @@ const char* k_texttranslator__translatorengineclient_name(void* self);
 ///
 void k_texttranslator__translatorengineclient_on_name(void* self, const char* (*callback)());
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_name` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_name k_texttranslator__translatorengineclient_super_name
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineClient.html)
 ///
 /// Base class method implementation
@@ -153,10 +137,6 @@ const char* k_texttranslator__translatorengineclient_translated_name(void* self)
 ///
 void k_texttranslator__translatorengineclient_on_translated_name(void* self, const char* (*callback)());
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_translated_name` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_translated_name k_texttranslator__translatorengineclient_super_translated_name
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineClient.html)
 ///
 /// Base class method implementation
@@ -179,10 +159,6 @@ TextTranslator__TranslatorEnginePlugin* k_texttranslator__translatorengineclient
 /// @param callback TextTranslator__TranslatorEnginePlugin* func()
 ///
 void k_texttranslator__translatorengineclient_on_create_translator(void* self, TextTranslator__TranslatorEnginePlugin* (*callback)());
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_create_translator` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_create_translator k_texttranslator__translatorengineclient_super_create_translator
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineClient.html)
 ///
@@ -219,10 +195,6 @@ libqt_map k_texttranslator__translatorengineclient_supported_from_languages(void
 /// @param callback libqt_map of enum TextTranslator__TranslatorUtil__Language to const char* func()
 ///
 void k_texttranslator__translatorengineclient_on_supported_from_languages(void* self, libqt_map (*callback)());
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_supported_from_languages` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_supported_from_languages k_texttranslator__translatorengineclient_super_supported_from_languages
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineClient.html)
 ///
@@ -262,10 +234,6 @@ libqt_map k_texttranslator__translatorengineclient_supported_to_languages(void* 
 ///
 void k_texttranslator__translatorengineclient_on_supported_to_languages(void* self, libqt_map (*callback)());
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_supported_to_languages` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_supported_to_languages k_texttranslator__translatorengineclient_super_supported_to_languages
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineClient.html)
 ///
 /// Base class method implementation
@@ -291,10 +259,6 @@ void k_texttranslator__translatorengineclient_update_list_languages(void* self);
 ///
 void k_texttranslator__translatorengineclient_on_update_list_languages(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_update_list_languages` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_update_list_languages k_texttranslator__translatorengineclient_super_update_list_languages
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineClient.html)
 ///
 /// Base class method implementation
@@ -317,10 +281,6 @@ bool k_texttranslator__translatorengineclient_has_configuration_dialog(void* sel
 /// @param callback bool func()
 ///
 void k_texttranslator__translatorengineclient_on_has_configuration_dialog(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_has_configuration_dialog` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_has_configuration_dialog k_texttranslator__translatorengineclient_super_has_configuration_dialog
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineClient.html)
 ///
@@ -345,10 +305,6 @@ bool k_texttranslator__translatorengineclient_show_configure_dialog(void* self, 
 /// @param callback bool func(TextTranslator__TranslatorEngineClient* self, QWidget* parentWidget)
 ///
 void k_texttranslator__translatorengineclient_on_show_configure_dialog(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_show_configure_dialog` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_show_configure_dialog k_texttranslator__translatorengineclient_super_show_configure_dialog
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineClient.html)
 ///
@@ -375,10 +331,6 @@ void k_texttranslator__translatorengineclient_generate_to_list_from_current_to_l
 ///
 void k_texttranslator__translatorengineclient_on_generate_to_list_from_current_to_language(void* self, void (*callback)(void*, const char*));
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_generate_to_list_from_current_to_language` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_generate_to_list_from_current_to_language k_texttranslator__translatorengineclient_super_generate_to_list_from_current_to_language
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineClient.html)
 ///
 /// Base class method implementation
@@ -402,10 +354,6 @@ bool k_texttranslator__translatorengineclient_has_invert_support(void* self);
 /// @param callback bool func()
 ///
 void k_texttranslator__translatorengineclient_on_has_invert_support(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_has_invert_support` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_has_invert_support k_texttranslator__translatorengineclient_super_has_invert_support
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineClient.html)
 ///
@@ -431,10 +379,6 @@ int32_t k_texttranslator__translatorengineclient_engine_type(void* self);
 /// @param callback int32_t func()
 ///
 void k_texttranslator__translatorengineclient_on_engine_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_engine_type` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_engine_type k_texttranslator__translatorengineclient_super_engine_type
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineClient.html)
 ///
@@ -487,10 +431,6 @@ libqt_map k_texttranslator__translatorengineclient_fill_languages(void* self);
 ///
 void k_texttranslator__translatorengineclient_on_fill_languages(void* self, libqt_map (*callback)());
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_fill_languages` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_fill_languages k_texttranslator__translatorengineclient_super_fill_languages
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineClient.html)
 ///
 /// Base class method implementation
@@ -516,10 +456,6 @@ bool k_texttranslator__translatorengineclient_is_supported(void* self, int32_t l
 /// @param callback bool func(TextTranslator__TranslatorEngineClient* self, enum TextTranslator__TranslatorUtil__Language lang)
 ///
 void k_texttranslator__translatorengineclient_on_is_supported(void* self, bool (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_is_supported` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_is_supported k_texttranslator__translatorengineclient_super_is_supported
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineClient.html)
 ///
@@ -1007,10 +943,6 @@ void k_texttranslator__translatorengineclient_on_destroyed1(void* self, void (*c
 ///
 bool k_texttranslator__translatorengineclient_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_event` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_event k_texttranslator__translatorengineclient_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1044,10 +976,6 @@ void k_texttranslator__translatorengineclient_on_event(void* self, bool (*callba
 /// @param event QEvent*
 ///
 bool k_texttranslator__translatorengineclient_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_event_filter` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_event_filter k_texttranslator__translatorengineclient_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1083,10 +1011,6 @@ void k_texttranslator__translatorengineclient_on_event_filter(void* self, bool (
 ///
 void k_texttranslator__translatorengineclient_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_timer_event` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_timer_event k_texttranslator__translatorengineclient_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1119,10 +1043,6 @@ void k_texttranslator__translatorengineclient_on_timer_event(void* self, void (*
 /// @param event QChildEvent*
 ///
 void k_texttranslator__translatorengineclient_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_child_event` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_child_event k_texttranslator__translatorengineclient_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1157,10 +1077,6 @@ void k_texttranslator__translatorengineclient_on_child_event(void* self, void (*
 ///
 void k_texttranslator__translatorengineclient_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_custom_event` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_custom_event k_texttranslator__translatorengineclient_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1193,10 +1109,6 @@ void k_texttranslator__translatorengineclient_on_custom_event(void* self, void (
 /// @param signal QMetaMethod*
 ///
 void k_texttranslator__translatorengineclient_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_connect_notify` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_connect_notify k_texttranslator__translatorengineclient_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1231,10 +1143,6 @@ void k_texttranslator__translatorengineclient_on_connect_notify(void* self, void
 ///
 void k_texttranslator__translatorengineclient_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_disconnect_notify` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_disconnect_notify k_texttranslator__translatorengineclient_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1267,10 +1175,6 @@ void k_texttranslator__translatorengineclient_on_disconnect_notify(void* self, v
 ///
 QObject* k_texttranslator__translatorengineclient_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_sender` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_sender k_texttranslator__translatorengineclient_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1301,10 +1205,6 @@ void k_texttranslator__translatorengineclient_on_sender(void* self, QObject* (*c
 /// @param self TextTranslator__TranslatorEngineClient*
 ///
 int32_t k_texttranslator__translatorengineclient_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_sender_signal_index` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_sender_signal_index k_texttranslator__translatorengineclient_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1338,10 +1238,6 @@ void k_texttranslator__translatorengineclient_on_sender_signal_index(void* self,
 ///
 int32_t k_texttranslator__translatorengineclient_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_receivers` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_receivers k_texttranslator__translatorengineclient_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1374,10 +1270,6 @@ void k_texttranslator__translatorengineclient_on_receivers(void* self, int32_t (
 /// @param signal QMetaMethod*
 ///
 bool k_texttranslator__translatorengineclient_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineclient_super_is_signal_connected` instead
-///
-#define k_texttranslator__translatorengineclient_qbase_is_signal_connected k_texttranslator__translatorengineclient_super_is_signal_connected
 
 /// Inherited from QObject
 ///

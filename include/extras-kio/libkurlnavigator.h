@@ -47,10 +47,6 @@ const QMetaObject* k_urlnavigator_meta_object(void* self);
 ///
 void k_urlnavigator_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_meta_object` instead
-///
-#define k_urlnavigator_qbase_meta_object k_urlnavigator_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -70,10 +66,6 @@ void* k_urlnavigator_metacast(void* self, const char* param1);
 /// @param callback void* func(KUrlNavigator* self, const char* param1)
 ///
 void k_urlnavigator_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_metacast` instead
-///
-#define k_urlnavigator_qbase_metacast k_urlnavigator_super_metacast
 
 /// Base class method implementation
 ///
@@ -95,10 +87,6 @@ int32_t k_urlnavigator_metacall(void* self, int32_t param1, int param2, void* pa
 /// @param callback int32_t func(KUrlNavigator* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_urlnavigator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_metacall` instead
-///
-#define k_urlnavigator_qbase_metacall k_urlnavigator_super_metacall
 
 /// Base class method implementation
 ///
@@ -524,10 +512,6 @@ void k_urlnavigator_key_press_event(void* self, void* event);
 ///
 void k_urlnavigator_on_key_press_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_key_press_event` instead
-///
-#define k_urlnavigator_qbase_key_press_event k_urlnavigator_super_key_press_event
-
 /// [Upstream resources](https://api.kde.org/kurlnavigator.html#keyPressEvent)
 ///
 /// Base class method implementation
@@ -552,10 +536,6 @@ void k_urlnavigator_key_release_event(void* self, void* event);
 /// @param callback void func(KUrlNavigator* self, QKeyEvent* event)
 ///
 void k_urlnavigator_on_key_release_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_key_release_event` instead
-///
-#define k_urlnavigator_qbase_key_release_event k_urlnavigator_super_key_release_event
 
 /// [Upstream resources](https://api.kde.org/kurlnavigator.html#keyReleaseEvent)
 ///
@@ -582,10 +562,6 @@ void k_urlnavigator_mouse_release_event(void* self, void* event);
 ///
 void k_urlnavigator_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_mouse_release_event` instead
-///
-#define k_urlnavigator_qbase_mouse_release_event k_urlnavigator_super_mouse_release_event
-
 /// [Upstream resources](https://api.kde.org/kurlnavigator.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
@@ -610,10 +586,6 @@ void k_urlnavigator_mouse_press_event(void* self, void* event);
 /// @param callback void func(KUrlNavigator* self, QMouseEvent* event)
 ///
 void k_urlnavigator_on_mouse_press_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_mouse_press_event` instead
-///
-#define k_urlnavigator_qbase_mouse_press_event k_urlnavigator_super_mouse_press_event
 
 /// [Upstream resources](https://api.kde.org/kurlnavigator.html#mousePressEvent)
 ///
@@ -640,10 +612,6 @@ void k_urlnavigator_resize_event(void* self, void* event);
 ///
 void k_urlnavigator_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_resize_event` instead
-///
-#define k_urlnavigator_qbase_resize_event k_urlnavigator_super_resize_event
-
 /// [Upstream resources](https://api.kde.org/kurlnavigator.html#resizeEvent)
 ///
 /// Base class method implementation
@@ -669,10 +637,6 @@ void k_urlnavigator_wheel_event(void* self, void* event);
 ///
 void k_urlnavigator_on_wheel_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_wheel_event` instead
-///
-#define k_urlnavigator_qbase_wheel_event k_urlnavigator_super_wheel_event
-
 /// [Upstream resources](https://api.kde.org/kurlnavigator.html#wheelEvent)
 ///
 /// Base class method implementation
@@ -697,10 +661,6 @@ void k_urlnavigator_show_event(void* self, void* event);
 /// @param callback void func(KUrlNavigator* self, QShowEvent* event)
 ///
 void k_urlnavigator_on_show_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_show_event` instead
-///
-#define k_urlnavigator_qbase_show_event k_urlnavigator_super_show_event
 
 /// [Upstream resources](https://api.kde.org/kurlnavigator.html#showEvent)
 ///
@@ -728,10 +688,6 @@ bool k_urlnavigator_event_filter(void* self, void* watched, void* event);
 ///
 void k_urlnavigator_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_event_filter` instead
-///
-#define k_urlnavigator_qbase_event_filter k_urlnavigator_super_event_filter
-
 /// [Upstream resources](https://api.kde.org/kurlnavigator.html#eventFilter)
 ///
 /// Base class method implementation
@@ -757,10 +713,6 @@ void k_urlnavigator_paint_event(void* self, void* event);
 /// @param callback void func(KUrlNavigator* self, QPaintEvent* event)
 ///
 void k_urlnavigator_on_paint_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_paint_event` instead
-///
-#define k_urlnavigator_qbase_paint_event k_urlnavigator_super_paint_event
 
 /// [Upstream resources](https://api.kde.org/kurlnavigator.html#paintEvent)
 ///
@@ -3765,10 +3717,6 @@ int32_t k_urlnavigator_encode_metric_f(int32_t metric, double value);
 ///
 int32_t k_urlnavigator_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_dev_type` instead
-///
-#define k_urlnavigator_qbase_dev_type k_urlnavigator_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -3800,10 +3748,6 @@ void k_urlnavigator_on_dev_type(void* self, int32_t (*callback)());
 /// @param visible bool
 ///
 void k_urlnavigator_set_visible(void* self, bool visible);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_set_visible` instead
-///
-#define k_urlnavigator_qbase_set_visible k_urlnavigator_super_set_visible
 
 /// Inherited from QWidget
 ///
@@ -3837,10 +3781,6 @@ void k_urlnavigator_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 QSize* k_urlnavigator_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_size_hint` instead
-///
-#define k_urlnavigator_qbase_size_hint k_urlnavigator_super_size_hint
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
@@ -3873,10 +3813,6 @@ void k_urlnavigator_on_size_hint(void* self, QSize* (*callback)());
 /// @param self KUrlNavigator*
 ///
 QSize* k_urlnavigator_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_minimum_size_hint` instead
-///
-#define k_urlnavigator_qbase_minimum_size_hint k_urlnavigator_super_minimum_size_hint
 
 /// Inherited from QWidget
 ///
@@ -3912,10 +3848,6 @@ void k_urlnavigator_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 int32_t k_urlnavigator_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_height_for_width` instead
-///
-#define k_urlnavigator_qbase_height_for_width k_urlnavigator_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -3948,10 +3880,6 @@ void k_urlnavigator_on_height_for_width(void* self, int32_t (*callback)(void*, i
 ///
 bool k_urlnavigator_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_has_height_for_width` instead
-///
-#define k_urlnavigator_qbase_has_height_for_width k_urlnavigator_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -3982,10 +3910,6 @@ void k_urlnavigator_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self KUrlNavigator*
 ///
 QPaintEngine* k_urlnavigator_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_paint_engine` instead
-///
-#define k_urlnavigator_qbase_paint_engine k_urlnavigator_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -4018,10 +3942,6 @@ void k_urlnavigator_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QEvent*
 ///
 bool k_urlnavigator_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_event` instead
-///
-#define k_urlnavigator_qbase_event k_urlnavigator_super_event
 
 /// Inherited from QWidget
 ///
@@ -4056,10 +3976,6 @@ void k_urlnavigator_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void k_urlnavigator_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_mouse_double_click_event` instead
-///
-#define k_urlnavigator_qbase_mouse_double_click_event k_urlnavigator_super_mouse_double_click_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -4092,10 +4008,6 @@ void k_urlnavigator_on_mouse_double_click_event(void* self, void (*callback)(voi
 /// @param event QMouseEvent*
 ///
 void k_urlnavigator_mouse_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_mouse_move_event` instead
-///
-#define k_urlnavigator_qbase_mouse_move_event k_urlnavigator_super_mouse_move_event
 
 /// Inherited from QWidget
 ///
@@ -4130,10 +4042,6 @@ void k_urlnavigator_on_mouse_move_event(void* self, void (*callback)(void*, void
 ///
 void k_urlnavigator_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_focus_in_event` instead
-///
-#define k_urlnavigator_qbase_focus_in_event k_urlnavigator_super_focus_in_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -4166,10 +4074,6 @@ void k_urlnavigator_on_focus_in_event(void* self, void (*callback)(void*, void*)
 /// @param event QFocusEvent*
 ///
 void k_urlnavigator_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_focus_out_event` instead
-///
-#define k_urlnavigator_qbase_focus_out_event k_urlnavigator_super_focus_out_event
 
 /// Inherited from QWidget
 ///
@@ -4204,10 +4108,6 @@ void k_urlnavigator_on_focus_out_event(void* self, void (*callback)(void*, void*
 ///
 void k_urlnavigator_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_enter_event` instead
-///
-#define k_urlnavigator_qbase_enter_event k_urlnavigator_super_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -4240,10 +4140,6 @@ void k_urlnavigator_on_enter_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void k_urlnavigator_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_leave_event` instead
-///
-#define k_urlnavigator_qbase_leave_event k_urlnavigator_super_leave_event
 
 /// Inherited from QWidget
 ///
@@ -4278,10 +4174,6 @@ void k_urlnavigator_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urlnavigator_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_move_event` instead
-///
-#define k_urlnavigator_qbase_move_event k_urlnavigator_super_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -4314,10 +4206,6 @@ void k_urlnavigator_on_move_event(void* self, void (*callback)(void*, void*));
 /// @param event QCloseEvent*
 ///
 void k_urlnavigator_close_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_close_event` instead
-///
-#define k_urlnavigator_qbase_close_event k_urlnavigator_super_close_event
 
 /// Inherited from QWidget
 ///
@@ -4352,10 +4240,6 @@ void k_urlnavigator_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urlnavigator_context_menu_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_context_menu_event` instead
-///
-#define k_urlnavigator_qbase_context_menu_event k_urlnavigator_super_context_menu_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
@@ -4388,10 +4272,6 @@ void k_urlnavigator_on_context_menu_event(void* self, void (*callback)(void*, vo
 /// @param event QTabletEvent*
 ///
 void k_urlnavigator_tablet_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_tablet_event` instead
-///
-#define k_urlnavigator_qbase_tablet_event k_urlnavigator_super_tablet_event
 
 /// Inherited from QWidget
 ///
@@ -4426,10 +4306,6 @@ void k_urlnavigator_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urlnavigator_action_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_action_event` instead
-///
-#define k_urlnavigator_qbase_action_event k_urlnavigator_super_action_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -4462,10 +4338,6 @@ void k_urlnavigator_on_action_event(void* self, void (*callback)(void*, void*));
 /// @param event QDragEnterEvent*
 ///
 void k_urlnavigator_drag_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_drag_enter_event` instead
-///
-#define k_urlnavigator_qbase_drag_enter_event k_urlnavigator_super_drag_enter_event
 
 /// Inherited from QWidget
 ///
@@ -4500,10 +4372,6 @@ void k_urlnavigator_on_drag_enter_event(void* self, void (*callback)(void*, void
 ///
 void k_urlnavigator_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_drag_move_event` instead
-///
-#define k_urlnavigator_qbase_drag_move_event k_urlnavigator_super_drag_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -4536,10 +4404,6 @@ void k_urlnavigator_on_drag_move_event(void* self, void (*callback)(void*, void*
 /// @param event QDragLeaveEvent*
 ///
 void k_urlnavigator_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_drag_leave_event` instead
-///
-#define k_urlnavigator_qbase_drag_leave_event k_urlnavigator_super_drag_leave_event
 
 /// Inherited from QWidget
 ///
@@ -4574,10 +4438,6 @@ void k_urlnavigator_on_drag_leave_event(void* self, void (*callback)(void*, void
 ///
 void k_urlnavigator_drop_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_drop_event` instead
-///
-#define k_urlnavigator_qbase_drop_event k_urlnavigator_super_drop_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4610,10 +4470,6 @@ void k_urlnavigator_on_drop_event(void* self, void (*callback)(void*, void*));
 /// @param event QHideEvent*
 ///
 void k_urlnavigator_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_hide_event` instead
-///
-#define k_urlnavigator_qbase_hide_event k_urlnavigator_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -4650,10 +4506,6 @@ void k_urlnavigator_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool k_urlnavigator_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_native_event` instead
-///
-#define k_urlnavigator_qbase_native_event k_urlnavigator_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4689,10 +4541,6 @@ void k_urlnavigator_on_native_event(void* self, bool (*callback)(void*, libqt_st
 ///
 void k_urlnavigator_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_change_event` instead
-///
-#define k_urlnavigator_qbase_change_event k_urlnavigator_super_change_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -4725,10 +4573,6 @@ void k_urlnavigator_on_change_event(void* self, void (*callback)(void*, void*));
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
 int32_t k_urlnavigator_metric(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_metric` instead
-///
-#define k_urlnavigator_qbase_metric k_urlnavigator_super_metric
 
 /// Inherited from QWidget
 ///
@@ -4763,10 +4607,6 @@ void k_urlnavigator_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void k_urlnavigator_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_init_painter` instead
-///
-#define k_urlnavigator_qbase_init_painter k_urlnavigator_super_init_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -4800,10 +4640,6 @@ void k_urlnavigator_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* k_urlnavigator_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_redirected` instead
-///
-#define k_urlnavigator_qbase_redirected k_urlnavigator_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4835,10 +4671,6 @@ void k_urlnavigator_on_redirected(void* self, QPaintDevice* (*callback)(void*, v
 /// @param self KUrlNavigator*
 ///
 QPainter* k_urlnavigator_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_shared_painter` instead
-///
-#define k_urlnavigator_qbase_shared_painter k_urlnavigator_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -4872,10 +4704,6 @@ void k_urlnavigator_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void k_urlnavigator_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_input_method_event` instead
-///
-#define k_urlnavigator_qbase_input_method_event k_urlnavigator_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4908,10 +4736,6 @@ void k_urlnavigator_on_input_method_event(void* self, void (*callback)(void*, vo
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* k_urlnavigator_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_input_method_query` instead
-///
-#define k_urlnavigator_qbase_input_method_query k_urlnavigator_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -4948,10 +4772,6 @@ void k_urlnavigator_on_input_method_query(void* self, QVariant* (*callback)(void
 ///
 bool k_urlnavigator_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_focus_next_prev_child` instead
-///
-#define k_urlnavigator_qbase_focus_next_prev_child k_urlnavigator_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -4984,10 +4804,6 @@ void k_urlnavigator_on_focus_next_prev_child(void* self, bool (*callback)(void*,
 /// @param event QTimerEvent*
 ///
 void k_urlnavigator_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_timer_event` instead
-///
-#define k_urlnavigator_qbase_timer_event k_urlnavigator_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -5022,10 +4838,6 @@ void k_urlnavigator_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urlnavigator_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_child_event` instead
-///
-#define k_urlnavigator_qbase_child_event k_urlnavigator_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -5058,10 +4870,6 @@ void k_urlnavigator_on_child_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void k_urlnavigator_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_custom_event` instead
-///
-#define k_urlnavigator_qbase_custom_event k_urlnavigator_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -5096,10 +4904,6 @@ void k_urlnavigator_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urlnavigator_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_connect_notify` instead
-///
-#define k_urlnavigator_qbase_connect_notify k_urlnavigator_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5133,10 +4937,6 @@ void k_urlnavigator_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void k_urlnavigator_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_disconnect_notify` instead
-///
-#define k_urlnavigator_qbase_disconnect_notify k_urlnavigator_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5169,10 +4969,6 @@ void k_urlnavigator_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 void k_urlnavigator_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_update_micro_focus` instead
-///
-#define k_urlnavigator_qbase_update_micro_focus k_urlnavigator_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5203,10 +4999,6 @@ void k_urlnavigator_on_update_micro_focus(void* self, void (*callback)());
 /// @param self KUrlNavigator*
 ///
 void k_urlnavigator_create(void* self);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_create` instead
-///
-#define k_urlnavigator_qbase_create k_urlnavigator_super_create
 
 /// Inherited from QWidget
 ///
@@ -5239,10 +5031,6 @@ void k_urlnavigator_on_create(void* self, void (*callback)());
 ///
 void k_urlnavigator_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_destroy` instead
-///
-#define k_urlnavigator_qbase_destroy k_urlnavigator_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5273,10 +5061,6 @@ void k_urlnavigator_on_destroy(void* self, void (*callback)());
 /// @param self KUrlNavigator*
 ///
 bool k_urlnavigator_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_focus_next_child` instead
-///
-#define k_urlnavigator_qbase_focus_next_child k_urlnavigator_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -5309,10 +5093,6 @@ void k_urlnavigator_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_urlnavigator_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_focus_previous_child` instead
-///
-#define k_urlnavigator_qbase_focus_previous_child k_urlnavigator_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5343,10 +5123,6 @@ void k_urlnavigator_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self KUrlNavigator*
 ///
 QObject* k_urlnavigator_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_sender` instead
-///
-#define k_urlnavigator_qbase_sender k_urlnavigator_super_sender
 
 /// Inherited from QObject
 ///
@@ -5379,10 +5155,6 @@ void k_urlnavigator_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_urlnavigator_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_sender_signal_index` instead
-///
-#define k_urlnavigator_qbase_sender_signal_index k_urlnavigator_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5414,10 +5186,6 @@ void k_urlnavigator_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t k_urlnavigator_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_receivers` instead
-///
-#define k_urlnavigator_qbase_receivers k_urlnavigator_super_receivers
 
 /// Inherited from QObject
 ///
@@ -5452,10 +5220,6 @@ void k_urlnavigator_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 bool k_urlnavigator_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_urlnavigator_super_is_signal_connected` instead
-///
-#define k_urlnavigator_qbase_is_signal_connected k_urlnavigator_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5489,10 +5253,6 @@ void k_urlnavigator_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_urlnavigator_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_urlnavigator_super_get_decoded_metric_f` instead
-///
-#define k_urlnavigator_qbase_get_decoded_metric_f k_urlnavigator_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

@@ -2837,10 +2837,6 @@ QCPPainter* q_cpabstractpaintbuffer_start_painting(void* self);
 ///
 void q_cpabstractpaintbuffer_on_start_painting(void* self, QCPPainter* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpabstractpaintbuffer_super_start_painting` instead
-///
-#define q_cpabstractpaintbuffer_qbase_start_painting q_cpabstractpaintbuffer_super_start_painting
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPaintBuffer.html)
 ///
 /// Base class method implementation
@@ -2863,10 +2859,6 @@ void q_cpabstractpaintbuffer_done_painting(void* self);
 /// @param callback void func()
 ///
 void q_cpabstractpaintbuffer_on_done_painting(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpabstractpaintbuffer_super_done_painting` instead
-///
-#define q_cpabstractpaintbuffer_qbase_done_painting q_cpabstractpaintbuffer_super_done_painting
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPaintBuffer.html)
 ///
@@ -2891,10 +2883,6 @@ void q_cpabstractpaintbuffer_draw(void* self, void* painter);
 /// @param callback void func(QCPAbstractPaintBuffer* self, QCPPainter* painter)
 ///
 void q_cpabstractpaintbuffer_on_draw(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpabstractpaintbuffer_super_draw` instead
-///
-#define q_cpabstractpaintbuffer_qbase_draw q_cpabstractpaintbuffer_super_draw
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPaintBuffer.html)
 ///
@@ -2921,10 +2909,6 @@ void q_cpabstractpaintbuffer_clear(void* self, void* color);
 ///
 void q_cpabstractpaintbuffer_on_clear(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpabstractpaintbuffer_super_clear` instead
-///
-#define q_cpabstractpaintbuffer_qbase_clear q_cpabstractpaintbuffer_super_clear
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPaintBuffer.html)
 ///
 /// Base class method implementation
@@ -2949,10 +2933,6 @@ void q_cpabstractpaintbuffer_reallocate_buffer(void* self);
 ///
 void q_cpabstractpaintbuffer_on_reallocate_buffer(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpabstractpaintbuffer_super_reallocate_buffer` instead
-///
-#define q_cpabstractpaintbuffer_qbase_reallocate_buffer q_cpabstractpaintbuffer_super_reallocate_buffer
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPaintBuffer.html)
 ///
 /// Base class method implementation
@@ -2976,10 +2956,6 @@ void q_cpabstractpaintbuffer_operator_assign(void* self, void* param1);
 /// @param callback void func(QCPAbstractPaintBuffer* self, QCPAbstractPaintBuffer* param1)
 ///
 void q_cpabstractpaintbuffer_on_operator_assign(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpabstractpaintbuffer_super_operator_assign` instead
-///
-#define q_cpabstractpaintbuffer_qbase_operator_assign q_cpabstractpaintbuffer_super_operator_assign
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPaintBuffer.html)
 ///
@@ -3037,10 +3013,6 @@ QCPPainter* q_cppaintbufferpixmap_start_painting(void* self);
 ///
 void q_cppaintbufferpixmap_on_start_painting(void* self, QCPPainter* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cppaintbufferpixmap_super_start_painting` instead
-///
-#define q_cppaintbufferpixmap_qbase_start_painting q_cppaintbufferpixmap_super_start_painting
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPaintBufferPixmap.html)
 ///
 /// Base class method implementation
@@ -3064,10 +3036,6 @@ void q_cppaintbufferpixmap_draw(void* self, void* painter);
 /// @param callback void func(QCPPaintBufferPixmap* self, QCPPainter* painter)
 ///
 void q_cppaintbufferpixmap_on_draw(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cppaintbufferpixmap_super_draw` instead
-///
-#define q_cppaintbufferpixmap_qbase_draw q_cppaintbufferpixmap_super_draw
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPaintBufferPixmap.html)
 ///
@@ -3094,10 +3062,6 @@ void q_cppaintbufferpixmap_clear(void* self, void* color);
 ///
 void q_cppaintbufferpixmap_on_clear(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cppaintbufferpixmap_super_clear` instead
-///
-#define q_cppaintbufferpixmap_qbase_clear q_cppaintbufferpixmap_super_clear
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPaintBufferPixmap.html)
 ///
 /// Base class method implementation
@@ -3122,10 +3086,6 @@ void q_cppaintbufferpixmap_reallocate_buffer(void* self);
 ///
 void q_cppaintbufferpixmap_on_reallocate_buffer(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_cppaintbufferpixmap_super_reallocate_buffer` instead
-///
-#define q_cppaintbufferpixmap_qbase_reallocate_buffer q_cppaintbufferpixmap_super_reallocate_buffer
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPaintBufferPixmap.html)
 ///
 /// Base class method implementation
@@ -3149,10 +3109,6 @@ void q_cppaintbufferpixmap_operator_assign(void* self, void* param1);
 /// @param callback void func(QCPPaintBufferPixmap* self, QCPPaintBufferPixmap* param1)
 ///
 void q_cppaintbufferpixmap_on_operator_assign(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cppaintbufferpixmap_super_operator_assign` instead
-///
-#define q_cppaintbufferpixmap_qbase_operator_assign q_cppaintbufferpixmap_super_operator_assign
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPaintBufferPixmap.html)
 ///
@@ -3232,10 +3188,6 @@ void q_cppaintbufferpixmap_set_invalidated1(void* self, bool invalidated);
 ///
 void q_cppaintbufferpixmap_done_painting(void* self);
 
-/// @warning DEPRECATED: Use `q_cppaintbufferpixmap_super_done_painting` instead
-///
-#define q_cppaintbufferpixmap_qbase_done_painting q_cppaintbufferpixmap_super_done_painting
-
 /// Inherited from QCPAbstractPaintBuffer
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPaintBuffer.html)
@@ -3289,10 +3241,6 @@ const QMetaObject* q_cplayer_meta_object(void* self);
 ///
 void q_cplayer_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cplayer_super_meta_object` instead
-///
-#define q_cplayer_qbase_meta_object q_cplayer_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -3312,10 +3260,6 @@ void* q_cplayer_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPLayer* self, const char* param1)
 ///
 void q_cplayer_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cplayer_super_metacast` instead
-///
-#define q_cplayer_qbase_metacast q_cplayer_super_metacast
 
 /// Base class method implementation
 ///
@@ -3337,10 +3281,6 @@ int32_t q_cplayer_metacall(void* self, int32_t param1, int param2, void* param3)
 /// @param callback int32_t func(QCPLayer* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cplayer_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cplayer_super_metacall` instead
-///
-#define q_cplayer_qbase_metacall q_cplayer_super_metacall
 
 /// Base class method implementation
 ///
@@ -3437,10 +3377,6 @@ void q_cplayer_draw(void* self, void* painter);
 ///
 void q_cplayer_on_draw(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cplayer_super_draw` instead
-///
-#define q_cplayer_qbase_draw q_cplayer_super_draw
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayer.html)
 ///
 /// Base class method implementation
@@ -3464,10 +3400,6 @@ void q_cplayer_draw_to_paint_buffer(void* self);
 /// @param callback void func()
 ///
 void q_cplayer_on_draw_to_paint_buffer(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_cplayer_super_draw_to_paint_buffer` instead
-///
-#define q_cplayer_qbase_draw_to_paint_buffer q_cplayer_super_draw_to_paint_buffer
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayer.html)
 ///
@@ -3494,10 +3426,6 @@ void q_cplayer_add_child(void* self, void* layerable, bool prepend);
 ///
 void q_cplayer_on_add_child(void* self, void (*callback)(void*, void*, bool));
 
-/// @warning DEPRECATED: Use `q_cplayer_super_add_child` instead
-///
-#define q_cplayer_qbase_add_child q_cplayer_super_add_child
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayer.html)
 ///
 /// Base class method implementation
@@ -3523,10 +3451,6 @@ void q_cplayer_remove_child(void* self, void* layerable);
 /// @param callback void func(QCPLayer* self, QCPLayerable* layerable)
 ///
 void q_cplayer_on_remove_child(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cplayer_super_remove_child` instead
-///
-#define q_cplayer_qbase_remove_child q_cplayer_super_remove_child
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayer.html)
 ///
@@ -4004,10 +3928,6 @@ void q_cplayer_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_cplayer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayer_super_event` instead
-///
-#define q_cplayer_qbase_event q_cplayer_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -4041,10 +3961,6 @@ void q_cplayer_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cplayer_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_cplayer_super_event_filter` instead
-///
-#define q_cplayer_qbase_event_filter q_cplayer_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -4080,10 +3996,6 @@ void q_cplayer_on_event_filter(void* self, bool (*callback)(void*, void*, void*)
 ///
 void q_cplayer_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayer_super_timer_event` instead
-///
-#define q_cplayer_qbase_timer_event q_cplayer_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -4116,10 +4028,6 @@ void q_cplayer_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cplayer_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cplayer_super_child_event` instead
-///
-#define q_cplayer_qbase_child_event q_cplayer_super_child_event
 
 /// Inherited from QObject
 ///
@@ -4154,10 +4062,6 @@ void q_cplayer_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cplayer_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayer_super_custom_event` instead
-///
-#define q_cplayer_qbase_custom_event q_cplayer_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -4190,10 +4094,6 @@ void q_cplayer_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_cplayer_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cplayer_super_connect_notify` instead
-///
-#define q_cplayer_qbase_connect_notify q_cplayer_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -4228,10 +4128,6 @@ void q_cplayer_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_cplayer_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cplayer_super_disconnect_notify` instead
-///
-#define q_cplayer_qbase_disconnect_notify q_cplayer_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -4264,10 +4160,6 @@ void q_cplayer_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 ///
 QObject* q_cplayer_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cplayer_super_sender` instead
-///
-#define q_cplayer_qbase_sender q_cplayer_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -4298,10 +4190,6 @@ void q_cplayer_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPLayer*
 ///
 int32_t q_cplayer_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cplayer_super_sender_signal_index` instead
-///
-#define q_cplayer_qbase_sender_signal_index q_cplayer_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -4335,10 +4223,6 @@ void q_cplayer_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cplayer_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cplayer_super_receivers` instead
-///
-#define q_cplayer_qbase_receivers q_cplayer_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -4371,10 +4255,6 @@ void q_cplayer_on_receivers(void* self, int32_t (*callback)(void*, const char*))
 /// @param signal QMetaMethod*
 ///
 bool q_cplayer_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cplayer_super_is_signal_connected` instead
-///
-#define q_cplayer_qbase_is_signal_connected q_cplayer_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -4459,10 +4339,6 @@ const QMetaObject* q_cplayerable_meta_object(void* self);
 ///
 void q_cplayerable_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cplayerable_super_meta_object` instead
-///
-#define q_cplayerable_qbase_meta_object q_cplayerable_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -4482,10 +4358,6 @@ void* q_cplayerable_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPLayerable* self, const char* param1)
 ///
 void q_cplayerable_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cplayerable_super_metacast` instead
-///
-#define q_cplayerable_qbase_metacast q_cplayerable_super_metacast
 
 /// Base class method implementation
 ///
@@ -4507,10 +4379,6 @@ int32_t q_cplayerable_metacall(void* self, int32_t param1, int param2, void* par
 /// @param callback int32_t func(QCPLayerable* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cplayerable_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cplayerable_super_metacall` instead
-///
-#define q_cplayerable_qbase_metacall q_cplayerable_super_metacall
 
 /// Base class method implementation
 ///
@@ -4605,10 +4473,6 @@ double q_cplayerable_select_test(void* self, void* pos, bool onlySelectable, voi
 ///
 void q_cplayerable_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cplayerable_super_select_test` instead
-///
-#define q_cplayerable_qbase_select_test q_cplayerable_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
 ///
 /// Base class method implementation
@@ -4656,10 +4520,6 @@ void q_cplayerable_parent_plot_initialized(void* self, void* parentPlot);
 ///
 void q_cplayerable_on_parent_plot_initialized(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cplayerable_super_parent_plot_initialized` instead
-///
-#define q_cplayerable_qbase_parent_plot_initialized q_cplayerable_super_parent_plot_initialized
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
 ///
 /// Base class method implementation
@@ -4685,10 +4545,6 @@ int32_t q_cplayerable_selection_category(void* self);
 /// @param callback int32_t func()
 ///
 void q_cplayerable_on_selection_category(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_cplayerable_super_selection_category` instead
-///
-#define q_cplayerable_qbase_selection_category q_cplayerable_super_selection_category
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
 ///
@@ -4717,10 +4573,6 @@ QRect* q_cplayerable_clip_rect(void* self);
 ///
 void q_cplayerable_on_clip_rect(void* self, QRect* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cplayerable_super_clip_rect` instead
-///
-#define q_cplayerable_qbase_clip_rect q_cplayerable_super_clip_rect
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
 ///
 /// Base class method implementation
@@ -4744,10 +4596,6 @@ void q_cplayerable_apply_default_antialiasing_hint(void* self, void* painter);
 /// @param callback void func(QCPLayerable* self, QCPPainter* painter)
 ///
 void q_cplayerable_on_apply_default_antialiasing_hint(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cplayerable_super_apply_default_antialiasing_hint` instead
-///
-#define q_cplayerable_qbase_apply_default_antialiasing_hint q_cplayerable_super_apply_default_antialiasing_hint
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
 ///
@@ -4773,10 +4621,6 @@ void q_cplayerable_draw(void* self, void* painter);
 /// @param callback void func(QCPLayerable* self, QCPPainter* painter)
 ///
 void q_cplayerable_on_draw(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cplayerable_super_draw` instead
-///
-#define q_cplayerable_qbase_draw q_cplayerable_super_draw
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
 ///
@@ -4806,10 +4650,6 @@ void q_cplayerable_select_event(void* self, void* event, bool additive, void* de
 ///
 void q_cplayerable_on_select_event(void* self, void (*callback)(void*, void*, bool, void*, bool*));
 
-/// @warning DEPRECATED: Use `q_cplayerable_super_select_event` instead
-///
-#define q_cplayerable_qbase_select_event q_cplayerable_super_select_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
 ///
 /// Base class method implementation
@@ -4838,10 +4678,6 @@ void q_cplayerable_deselect_event(void* self, bool* selectionStateChanged);
 ///
 void q_cplayerable_on_deselect_event(void* self, void (*callback)(void*, bool*));
 
-/// @warning DEPRECATED: Use `q_cplayerable_super_deselect_event` instead
-///
-#define q_cplayerable_qbase_deselect_event q_cplayerable_super_deselect_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
 ///
 /// Base class method implementation
@@ -4867,10 +4703,6 @@ void q_cplayerable_mouse_press_event(void* self, void* event, void* details);
 /// @param callback void func(QCPLayerable* self, QMouseEvent* event, QVariant* details)
 ///
 void q_cplayerable_on_mouse_press_event(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_cplayerable_super_mouse_press_event` instead
-///
-#define q_cplayerable_qbase_mouse_press_event q_cplayerable_super_mouse_press_event
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
 ///
@@ -4899,10 +4731,6 @@ void q_cplayerable_mouse_move_event(void* self, void* event, void* startPos);
 ///
 void q_cplayerable_on_mouse_move_event(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_cplayerable_super_mouse_move_event` instead
-///
-#define q_cplayerable_qbase_mouse_move_event q_cplayerable_super_mouse_move_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
 ///
 /// Base class method implementation
@@ -4929,10 +4757,6 @@ void q_cplayerable_mouse_release_event(void* self, void* event, void* startPos);
 /// @param callback void func(QCPLayerable* self, QMouseEvent* event, QPointF* startPos)
 ///
 void q_cplayerable_on_mouse_release_event(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_cplayerable_super_mouse_release_event` instead
-///
-#define q_cplayerable_qbase_mouse_release_event q_cplayerable_super_mouse_release_event
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
 ///
@@ -4961,10 +4785,6 @@ void q_cplayerable_mouse_double_click_event(void* self, void* event, void* detai
 ///
 void q_cplayerable_on_mouse_double_click_event(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_cplayerable_super_mouse_double_click_event` instead
-///
-#define q_cplayerable_qbase_mouse_double_click_event q_cplayerable_super_mouse_double_click_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
 ///
 /// Base class method implementation
@@ -4991,10 +4811,6 @@ void q_cplayerable_wheel_event(void* self, void* event);
 ///
 void q_cplayerable_on_wheel_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cplayerable_super_wheel_event` instead
-///
-#define q_cplayerable_qbase_wheel_event q_cplayerable_super_wheel_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
 ///
 /// Base class method implementation
@@ -5019,10 +4835,6 @@ void q_cplayerable_initialize_parent_plot(void* self, void* parentPlot);
 /// @param callback void func(QCPLayerable* self, QCustomPlot* parentPlot)
 ///
 void q_cplayerable_on_initialize_parent_plot(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cplayerable_super_initialize_parent_plot` instead
-///
-#define q_cplayerable_qbase_initialize_parent_plot q_cplayerable_super_initialize_parent_plot
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
 ///
@@ -5049,10 +4861,6 @@ void q_cplayerable_set_parent_layerable(void* self, void* parentLayerable);
 ///
 void q_cplayerable_on_set_parent_layerable(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cplayerable_super_set_parent_layerable` instead
-///
-#define q_cplayerable_qbase_set_parent_layerable q_cplayerable_super_set_parent_layerable
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
 ///
 /// Base class method implementation
@@ -5078,10 +4886,6 @@ bool q_cplayerable_move_to_layer(void* self, void* layer, bool prepend);
 /// @param callback bool func(QCPLayerable* self, QCPLayer* layer, bool prepend)
 ///
 void q_cplayerable_on_move_to_layer(void* self, bool (*callback)(void*, void*, bool));
-
-/// @warning DEPRECATED: Use `q_cplayerable_super_move_to_layer` instead
-///
-#define q_cplayerable_qbase_move_to_layer q_cplayerable_super_move_to_layer
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
 ///
@@ -5110,10 +4914,6 @@ void q_cplayerable_apply_antialiasing_hint(void* self, void* painter, bool local
 /// @param callback void func(QCPLayerable* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
 void q_cplayerable_on_apply_antialiasing_hint(void* self, void (*callback)(void*, void*, bool, int32_t));
-
-/// @warning DEPRECATED: Use `q_cplayerable_super_apply_antialiasing_hint` instead
-///
-#define q_cplayerable_qbase_apply_antialiasing_hint q_cplayerable_super_apply_antialiasing_hint
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
 ///
@@ -5603,10 +5403,6 @@ void q_cplayerable_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_cplayerable_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayerable_super_event` instead
-///
-#define q_cplayerable_qbase_event q_cplayerable_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -5640,10 +5436,6 @@ void q_cplayerable_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cplayerable_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_cplayerable_super_event_filter` instead
-///
-#define q_cplayerable_qbase_event_filter q_cplayerable_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -5679,10 +5471,6 @@ void q_cplayerable_on_event_filter(void* self, bool (*callback)(void*, void*, vo
 ///
 void q_cplayerable_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayerable_super_timer_event` instead
-///
-#define q_cplayerable_qbase_timer_event q_cplayerable_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -5715,10 +5503,6 @@ void q_cplayerable_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cplayerable_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cplayerable_super_child_event` instead
-///
-#define q_cplayerable_qbase_child_event q_cplayerable_super_child_event
 
 /// Inherited from QObject
 ///
@@ -5753,10 +5537,6 @@ void q_cplayerable_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cplayerable_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayerable_super_custom_event` instead
-///
-#define q_cplayerable_qbase_custom_event q_cplayerable_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -5789,10 +5569,6 @@ void q_cplayerable_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_cplayerable_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cplayerable_super_connect_notify` instead
-///
-#define q_cplayerable_qbase_connect_notify q_cplayerable_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -5827,10 +5603,6 @@ void q_cplayerable_on_connect_notify(void* self, void (*callback)(void*, void*))
 ///
 void q_cplayerable_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cplayerable_super_disconnect_notify` instead
-///
-#define q_cplayerable_qbase_disconnect_notify q_cplayerable_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5863,10 +5635,6 @@ void q_cplayerable_on_disconnect_notify(void* self, void (*callback)(void*, void
 ///
 QObject* q_cplayerable_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cplayerable_super_sender` instead
-///
-#define q_cplayerable_qbase_sender q_cplayerable_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -5897,10 +5665,6 @@ void q_cplayerable_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPLayerable*
 ///
 int32_t q_cplayerable_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cplayerable_super_sender_signal_index` instead
-///
-#define q_cplayerable_qbase_sender_signal_index q_cplayerable_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -5934,10 +5698,6 @@ void q_cplayerable_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cplayerable_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cplayerable_super_receivers` instead
-///
-#define q_cplayerable_qbase_receivers q_cplayerable_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -5970,10 +5730,6 @@ void q_cplayerable_on_receivers(void* self, int32_t (*callback)(void*, const cha
 /// @param signal QMetaMethod*
 ///
 bool q_cplayerable_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cplayerable_super_is_signal_connected` instead
-///
-#define q_cplayerable_qbase_is_signal_connected q_cplayerable_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -6601,10 +6357,6 @@ const QMetaObject* q_cpselectionrect_meta_object(void* self);
 ///
 void q_cpselectionrect_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_meta_object` instead
-///
-#define q_cpselectionrect_qbase_meta_object q_cpselectionrect_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -6624,10 +6376,6 @@ void* q_cpselectionrect_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPSelectionRect* self, const char* param1)
 ///
 void q_cpselectionrect_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_metacast` instead
-///
-#define q_cpselectionrect_qbase_metacast q_cpselectionrect_super_metacast
 
 /// Base class method implementation
 ///
@@ -6649,10 +6397,6 @@ int32_t q_cpselectionrect_metacall(void* self, int32_t param1, int param2, void*
 /// @param callback int32_t func(QCPSelectionRect* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpselectionrect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_metacall` instead
-///
-#define q_cpselectionrect_qbase_metacall q_cpselectionrect_super_metacall
 
 /// Base class method implementation
 ///
@@ -6797,10 +6541,6 @@ void q_cpselectionrect_start_selection(void* self, void* event);
 ///
 void q_cpselectionrect_on_start_selection(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_start_selection` instead
-///
-#define q_cpselectionrect_qbase_start_selection q_cpselectionrect_super_start_selection
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPSelectionRect.html)
 ///
 /// Base class method implementation
@@ -6825,10 +6565,6 @@ void q_cpselectionrect_move_selection(void* self, void* event);
 /// @param callback void func(QCPSelectionRect* self, QMouseEvent* event)
 ///
 void q_cpselectionrect_on_move_selection(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_move_selection` instead
-///
-#define q_cpselectionrect_qbase_move_selection q_cpselectionrect_super_move_selection
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPSelectionRect.html)
 ///
@@ -6855,10 +6591,6 @@ void q_cpselectionrect_end_selection(void* self, void* event);
 ///
 void q_cpselectionrect_on_end_selection(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_end_selection` instead
-///
-#define q_cpselectionrect_qbase_end_selection q_cpselectionrect_super_end_selection
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPSelectionRect.html)
 ///
 /// Base class method implementation
@@ -6883,10 +6615,6 @@ void q_cpselectionrect_key_press_event(void* self, void* event);
 /// @param callback void func(QCPSelectionRect* self, QKeyEvent* event)
 ///
 void q_cpselectionrect_on_key_press_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_key_press_event` instead
-///
-#define q_cpselectionrect_qbase_key_press_event q_cpselectionrect_super_key_press_event
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPSelectionRect.html)
 ///
@@ -6913,10 +6641,6 @@ void q_cpselectionrect_apply_default_antialiasing_hint(void* self, void* painter
 ///
 void q_cpselectionrect_on_apply_default_antialiasing_hint(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpselectionrect_qbase_apply_default_antialiasing_hint q_cpselectionrect_super_apply_default_antialiasing_hint
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPSelectionRect.html)
 ///
 /// Base class method implementation
@@ -6941,10 +6665,6 @@ void q_cpselectionrect_draw(void* self, void* painter);
 /// @param callback void func(QCPSelectionRect* self, QCPPainter* painter)
 ///
 void q_cpselectionrect_on_draw(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_draw` instead
-///
-#define q_cpselectionrect_qbase_draw q_cpselectionrect_super_draw
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPSelectionRect.html)
 ///
@@ -7536,10 +7256,6 @@ void q_cpselectionrect_on_destroyed1(void* self, void (*callback)(void*, void*))
 ///
 double q_cpselectionrect_select_test(void* self, void* pos, bool onlySelectable, void* details);
 
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_select_test` instead
-///
-#define q_cpselectionrect_qbase_select_test q_cpselectionrect_super_select_test
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -7575,10 +7291,6 @@ void q_cpselectionrect_on_select_test(void* self, double (*callback)(void*, void
 ///
 void q_cpselectionrect_parent_plot_initialized(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_parent_plot_initialized` instead
-///
-#define q_cpselectionrect_qbase_parent_plot_initialized q_cpselectionrect_super_parent_plot_initialized
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -7613,10 +7325,6 @@ void q_cpselectionrect_on_parent_plot_initialized(void* self, void (*callback)(v
 ///
 int32_t q_cpselectionrect_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_selection_category` instead
-///
-#define q_cpselectionrect_qbase_selection_category q_cpselectionrect_super_selection_category
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -7649,10 +7357,6 @@ void q_cpselectionrect_on_selection_category(void* self, int32_t (*callback)());
 /// @param self QCPSelectionRect*
 ///
 QRect* q_cpselectionrect_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_clip_rect` instead
-///
-#define q_cpselectionrect_qbase_clip_rect q_cpselectionrect_super_clip_rect
 
 /// Inherited from QCPLayerable
 ///
@@ -7691,10 +7395,6 @@ void q_cpselectionrect_on_clip_rect(void* self, QRect* (*callback)());
 ///
 void q_cpselectionrect_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_select_event` instead
-///
-#define q_cpselectionrect_qbase_select_event q_cpselectionrect_super_select_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -7731,10 +7431,6 @@ void q_cpselectionrect_on_select_event(void* self, void (*callback)(void*, void*
 ///
 void q_cpselectionrect_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_deselect_event` instead
-///
-#define q_cpselectionrect_qbase_deselect_event q_cpselectionrect_super_deselect_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -7768,10 +7464,6 @@ void q_cpselectionrect_on_deselect_event(void* self, void (*callback)(void*, boo
 /// @param details QVariant*
 ///
 void q_cpselectionrect_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_mouse_press_event` instead
-///
-#define q_cpselectionrect_qbase_mouse_press_event q_cpselectionrect_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -7808,10 +7500,6 @@ void q_cpselectionrect_on_mouse_press_event(void* self, void (*callback)(void*, 
 ///
 void q_cpselectionrect_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_mouse_move_event` instead
-///
-#define q_cpselectionrect_qbase_mouse_move_event q_cpselectionrect_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -7846,10 +7534,6 @@ void q_cpselectionrect_on_mouse_move_event(void* self, void (*callback)(void*, v
 /// @param startPos QPointF*
 ///
 void q_cpselectionrect_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_mouse_release_event` instead
-///
-#define q_cpselectionrect_qbase_mouse_release_event q_cpselectionrect_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -7886,10 +7570,6 @@ void q_cpselectionrect_on_mouse_release_event(void* self, void (*callback)(void*
 ///
 void q_cpselectionrect_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_mouse_double_click_event` instead
-///
-#define q_cpselectionrect_qbase_mouse_double_click_event q_cpselectionrect_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -7924,10 +7604,6 @@ void q_cpselectionrect_on_mouse_double_click_event(void* self, void (*callback)(
 ///
 void q_cpselectionrect_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_wheel_event` instead
-///
-#define q_cpselectionrect_qbase_wheel_event q_cpselectionrect_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -7960,10 +7636,6 @@ void q_cpselectionrect_on_wheel_event(void* self, void (*callback)(void*, void*)
 /// @param event QEvent*
 ///
 bool q_cpselectionrect_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_event` instead
-///
-#define q_cpselectionrect_qbase_event q_cpselectionrect_super_event
 
 /// Inherited from QObject
 ///
@@ -7999,10 +7671,6 @@ void q_cpselectionrect_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cpselectionrect_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_event_filter` instead
-///
-#define q_cpselectionrect_qbase_event_filter q_cpselectionrect_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -8037,10 +7705,6 @@ void q_cpselectionrect_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 void q_cpselectionrect_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_timer_event` instead
-///
-#define q_cpselectionrect_qbase_timer_event q_cpselectionrect_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -8073,10 +7737,6 @@ void q_cpselectionrect_on_timer_event(void* self, void (*callback)(void*, void*)
 /// @param event QChildEvent*
 ///
 void q_cpselectionrect_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_child_event` instead
-///
-#define q_cpselectionrect_qbase_child_event q_cpselectionrect_super_child_event
 
 /// Inherited from QObject
 ///
@@ -8111,10 +7771,6 @@ void q_cpselectionrect_on_child_event(void* self, void (*callback)(void*, void*)
 ///
 void q_cpselectionrect_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_custom_event` instead
-///
-#define q_cpselectionrect_qbase_custom_event q_cpselectionrect_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -8147,10 +7803,6 @@ void q_cpselectionrect_on_custom_event(void* self, void (*callback)(void*, void*
 /// @param signal QMetaMethod*
 ///
 void q_cpselectionrect_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_connect_notify` instead
-///
-#define q_cpselectionrect_qbase_connect_notify q_cpselectionrect_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -8185,10 +7837,6 @@ void q_cpselectionrect_on_connect_notify(void* self, void (*callback)(void*, voi
 ///
 void q_cpselectionrect_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_disconnect_notify` instead
-///
-#define q_cpselectionrect_qbase_disconnect_notify q_cpselectionrect_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -8221,10 +7869,6 @@ void q_cpselectionrect_on_disconnect_notify(void* self, void (*callback)(void*, 
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpselectionrect_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_initialize_parent_plot` instead
-///
-#define q_cpselectionrect_qbase_initialize_parent_plot q_cpselectionrect_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -8259,10 +7903,6 @@ void q_cpselectionrect_on_initialize_parent_plot(void* self, void (*callback)(vo
 ///
 void q_cpselectionrect_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_set_parent_layerable` instead
-///
-#define q_cpselectionrect_qbase_set_parent_layerable q_cpselectionrect_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -8296,10 +7936,6 @@ void q_cpselectionrect_on_set_parent_layerable(void* self, void (*callback)(void
 /// @param prepend bool
 ///
 bool q_cpselectionrect_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_move_to_layer` instead
-///
-#define q_cpselectionrect_qbase_move_to_layer q_cpselectionrect_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -8337,10 +7973,6 @@ void q_cpselectionrect_on_move_to_layer(void* self, bool (*callback)(void*, void
 ///
 void q_cpselectionrect_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_apply_antialiasing_hint` instead
-///
-#define q_cpselectionrect_qbase_apply_antialiasing_hint q_cpselectionrect_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -8375,10 +8007,6 @@ void q_cpselectionrect_on_apply_antialiasing_hint(void* self, void (*callback)(v
 ///
 QObject* q_cpselectionrect_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_sender` instead
-///
-#define q_cpselectionrect_qbase_sender q_cpselectionrect_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -8409,10 +8037,6 @@ void q_cpselectionrect_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPSelectionRect*
 ///
 int32_t q_cpselectionrect_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_sender_signal_index` instead
-///
-#define q_cpselectionrect_qbase_sender_signal_index q_cpselectionrect_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -8446,10 +8070,6 @@ void q_cpselectionrect_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 int32_t q_cpselectionrect_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_receivers` instead
-///
-#define q_cpselectionrect_qbase_receivers q_cpselectionrect_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -8482,10 +8102,6 @@ void q_cpselectionrect_on_receivers(void* self, int32_t (*callback)(void*, const
 /// @param signal QMetaMethod*
 ///
 bool q_cpselectionrect_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpselectionrect_super_is_signal_connected` instead
-///
-#define q_cpselectionrect_qbase_is_signal_connected q_cpselectionrect_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -8551,10 +8167,6 @@ const QMetaObject* q_cpmargingroup_meta_object(void* self);
 ///
 void q_cpmargingroup_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpmargingroup_super_meta_object` instead
-///
-#define q_cpmargingroup_qbase_meta_object q_cpmargingroup_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -8574,10 +8186,6 @@ void* q_cpmargingroup_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPMarginGroup* self, const char* param1)
 ///
 void q_cpmargingroup_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpmargingroup_super_metacast` instead
-///
-#define q_cpmargingroup_qbase_metacast q_cpmargingroup_super_metacast
 
 /// Base class method implementation
 ///
@@ -8599,10 +8207,6 @@ int32_t q_cpmargingroup_metacall(void* self, int32_t param1, int param2, void* p
 /// @param callback int32_t func(QCPMarginGroup* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpmargingroup_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpmargingroup_super_metacall` instead
-///
-#define q_cpmargingroup_qbase_metacall q_cpmargingroup_super_metacall
 
 /// Base class method implementation
 ///
@@ -8658,10 +8262,6 @@ int32_t q_cpmargingroup_common_margin(void* self, int32_t side);
 ///
 void q_cpmargingroup_on_common_margin(void* self, int32_t (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_cpmargingroup_super_common_margin` instead
-///
-#define q_cpmargingroup_qbase_common_margin q_cpmargingroup_super_common_margin
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPMarginGroup.html)
 ///
 /// Base class method implementation
@@ -8687,10 +8287,6 @@ void q_cpmargingroup_add_child(void* self, int32_t side, void* element);
 /// @param callback void func(QCPMarginGroup* self, enum QCP__MarginSide side, QCPLayoutElement* element)
 ///
 void q_cpmargingroup_on_add_child(void* self, void (*callback)(void*, int32_t, void*));
-
-/// @warning DEPRECATED: Use `q_cpmargingroup_super_add_child` instead
-///
-#define q_cpmargingroup_qbase_add_child q_cpmargingroup_super_add_child
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPMarginGroup.html)
 ///
@@ -8718,10 +8314,6 @@ void q_cpmargingroup_remove_child(void* self, int32_t side, void* element);
 /// @param callback void func(QCPMarginGroup* self, enum QCP__MarginSide side, QCPLayoutElement* element)
 ///
 void q_cpmargingroup_on_remove_child(void* self, void (*callback)(void*, int32_t, void*));
-
-/// @warning DEPRECATED: Use `q_cpmargingroup_super_remove_child` instead
-///
-#define q_cpmargingroup_qbase_remove_child q_cpmargingroup_super_remove_child
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPMarginGroup.html)
 ///
@@ -9210,10 +8802,6 @@ void q_cpmargingroup_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_cpmargingroup_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpmargingroup_super_event` instead
-///
-#define q_cpmargingroup_qbase_event q_cpmargingroup_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -9247,10 +8835,6 @@ void q_cpmargingroup_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cpmargingroup_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_cpmargingroup_super_event_filter` instead
-///
-#define q_cpmargingroup_qbase_event_filter q_cpmargingroup_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -9286,10 +8870,6 @@ void q_cpmargingroup_on_event_filter(void* self, bool (*callback)(void*, void*, 
 ///
 void q_cpmargingroup_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpmargingroup_super_timer_event` instead
-///
-#define q_cpmargingroup_qbase_timer_event q_cpmargingroup_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -9322,10 +8902,6 @@ void q_cpmargingroup_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cpmargingroup_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpmargingroup_super_child_event` instead
-///
-#define q_cpmargingroup_qbase_child_event q_cpmargingroup_super_child_event
 
 /// Inherited from QObject
 ///
@@ -9360,10 +8936,6 @@ void q_cpmargingroup_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpmargingroup_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpmargingroup_super_custom_event` instead
-///
-#define q_cpmargingroup_qbase_custom_event q_cpmargingroup_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -9396,10 +8968,6 @@ void q_cpmargingroup_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param signal QMetaMethod*
 ///
 void q_cpmargingroup_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpmargingroup_super_connect_notify` instead
-///
-#define q_cpmargingroup_qbase_connect_notify q_cpmargingroup_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -9434,10 +9002,6 @@ void q_cpmargingroup_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void q_cpmargingroup_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpmargingroup_super_disconnect_notify` instead
-///
-#define q_cpmargingroup_qbase_disconnect_notify q_cpmargingroup_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -9470,10 +9034,6 @@ void q_cpmargingroup_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 QObject* q_cpmargingroup_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpmargingroup_super_sender` instead
-///
-#define q_cpmargingroup_qbase_sender q_cpmargingroup_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -9504,10 +9064,6 @@ void q_cpmargingroup_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPMarginGroup*
 ///
 int32_t q_cpmargingroup_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpmargingroup_super_sender_signal_index` instead
-///
-#define q_cpmargingroup_qbase_sender_signal_index q_cpmargingroup_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -9541,10 +9097,6 @@ void q_cpmargingroup_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cpmargingroup_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpmargingroup_super_receivers` instead
-///
-#define q_cpmargingroup_qbase_receivers q_cpmargingroup_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -9577,10 +9129,6 @@ void q_cpmargingroup_on_receivers(void* self, int32_t (*callback)(void*, const c
 /// @param signal QMetaMethod*
 ///
 bool q_cpmargingroup_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpmargingroup_super_is_signal_connected` instead
-///
-#define q_cpmargingroup_qbase_is_signal_connected q_cpmargingroup_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -9652,10 +9200,6 @@ const QMetaObject* q_cplayoutelement_meta_object(void* self);
 ///
 void q_cplayoutelement_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_meta_object` instead
-///
-#define q_cplayoutelement_qbase_meta_object q_cplayoutelement_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -9675,10 +9219,6 @@ void* q_cplayoutelement_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPLayoutElement* self, const char* param1)
 ///
 void q_cplayoutelement_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_metacast` instead
-///
-#define q_cplayoutelement_qbase_metacast q_cplayoutelement_super_metacast
 
 /// Base class method implementation
 ///
@@ -9700,10 +9240,6 @@ int32_t q_cplayoutelement_metacall(void* self, int32_t param1, int param2, void*
 /// @param callback int32_t func(QCPLayoutElement* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cplayoutelement_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_metacall` instead
-///
-#define q_cplayoutelement_qbase_metacall q_cplayoutelement_super_metacall
 
 /// Base class method implementation
 ///
@@ -9895,10 +9431,6 @@ void q_cplayoutelement_update(void* self, int32_t phase);
 ///
 void q_cplayoutelement_on_update(void* self, void (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_update` instead
-///
-#define q_cplayoutelement_qbase_update q_cplayoutelement_super_update
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
 /// Base class method implementation
@@ -9925,10 +9457,6 @@ QSize* q_cplayoutelement_minimum_outer_size_hint(void* self);
 ///
 void q_cplayoutelement_on_minimum_outer_size_hint(void* self, QSize* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_minimum_outer_size_hint` instead
-///
-#define q_cplayoutelement_qbase_minimum_outer_size_hint q_cplayoutelement_super_minimum_outer_size_hint
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
 /// Base class method implementation
@@ -9953,10 +9481,6 @@ QSize* q_cplayoutelement_maximum_outer_size_hint(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cplayoutelement_on_maximum_outer_size_hint(void* self, QSize* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_maximum_outer_size_hint` instead
-///
-#define q_cplayoutelement_qbase_maximum_outer_size_hint q_cplayoutelement_super_maximum_outer_size_hint
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
@@ -9983,10 +9507,6 @@ libqt_list q_cplayoutelement_elements(void* self, bool recursive);
 /// @param callback libqt_list of QCPLayoutElement* func(QCPLayoutElement* self, bool recursive)
 ///
 void q_cplayoutelement_on_elements(void* self, libqt_list (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_elements` instead
-///
-#define q_cplayoutelement_qbase_elements q_cplayoutelement_super_elements
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
@@ -10017,10 +9537,6 @@ double q_cplayoutelement_select_test(void* self, void* pos, bool onlySelectable,
 ///
 void q_cplayoutelement_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_select_test` instead
-///
-#define q_cplayoutelement_qbase_select_test q_cplayoutelement_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
 /// Base class method implementation
@@ -10048,10 +9564,6 @@ int32_t q_cplayoutelement_calculate_auto_margin(void* self, int32_t side);
 ///
 void q_cplayoutelement_on_calculate_auto_margin(void* self, int32_t (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_calculate_auto_margin` instead
-///
-#define q_cplayoutelement_qbase_calculate_auto_margin q_cplayoutelement_super_calculate_auto_margin
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
 /// Base class method implementation
@@ -10076,10 +9588,6 @@ void q_cplayoutelement_layout_changed(void* self);
 ///
 void q_cplayoutelement_on_layout_changed(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_layout_changed` instead
-///
-#define q_cplayoutelement_qbase_layout_changed q_cplayoutelement_super_layout_changed
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
 /// Base class method implementation
@@ -10103,10 +9611,6 @@ void q_cplayoutelement_apply_default_antialiasing_hint(void* self, void* painter
 /// @param callback void func(QCPLayoutElement* self, QCPPainter* painter)
 ///
 void q_cplayoutelement_on_apply_default_antialiasing_hint(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_apply_default_antialiasing_hint` instead
-///
-#define q_cplayoutelement_qbase_apply_default_antialiasing_hint q_cplayoutelement_super_apply_default_antialiasing_hint
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
@@ -10133,10 +9637,6 @@ void q_cplayoutelement_draw(void* self, void* painter);
 ///
 void q_cplayoutelement_on_draw(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_draw` instead
-///
-#define q_cplayoutelement_qbase_draw q_cplayoutelement_super_draw
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
 /// Base class method implementation
@@ -10161,10 +9661,6 @@ void q_cplayoutelement_parent_plot_initialized(void* self, void* parentPlot);
 /// @param callback void func(QCPLayoutElement* self, QCustomPlot* parentPlot)
 ///
 void q_cplayoutelement_on_parent_plot_initialized(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_parent_plot_initialized` instead
-///
-#define q_cplayoutelement_qbase_parent_plot_initialized q_cplayoutelement_super_parent_plot_initialized
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
@@ -10755,10 +10251,6 @@ void q_cplayoutelement_on_destroyed1(void* self, void (*callback)(void*, void*))
 ///
 int32_t q_cplayoutelement_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_selection_category` instead
-///
-#define q_cplayoutelement_qbase_selection_category q_cplayoutelement_super_selection_category
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -10791,10 +10283,6 @@ void q_cplayoutelement_on_selection_category(void* self, int32_t (*callback)());
 /// @param self QCPLayoutElement*
 ///
 QRect* q_cplayoutelement_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_clip_rect` instead
-///
-#define q_cplayoutelement_qbase_clip_rect q_cplayoutelement_super_clip_rect
 
 /// Inherited from QCPLayerable
 ///
@@ -10833,10 +10321,6 @@ void q_cplayoutelement_on_clip_rect(void* self, QRect* (*callback)());
 ///
 void q_cplayoutelement_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_select_event` instead
-///
-#define q_cplayoutelement_qbase_select_event q_cplayoutelement_super_select_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -10873,10 +10357,6 @@ void q_cplayoutelement_on_select_event(void* self, void (*callback)(void*, void*
 ///
 void q_cplayoutelement_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_deselect_event` instead
-///
-#define q_cplayoutelement_qbase_deselect_event q_cplayoutelement_super_deselect_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -10910,10 +10390,6 @@ void q_cplayoutelement_on_deselect_event(void* self, void (*callback)(void*, boo
 /// @param details QVariant*
 ///
 void q_cplayoutelement_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_mouse_press_event` instead
-///
-#define q_cplayoutelement_qbase_mouse_press_event q_cplayoutelement_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -10950,10 +10426,6 @@ void q_cplayoutelement_on_mouse_press_event(void* self, void (*callback)(void*, 
 ///
 void q_cplayoutelement_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_mouse_move_event` instead
-///
-#define q_cplayoutelement_qbase_mouse_move_event q_cplayoutelement_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -10988,10 +10460,6 @@ void q_cplayoutelement_on_mouse_move_event(void* self, void (*callback)(void*, v
 /// @param startPos QPointF*
 ///
 void q_cplayoutelement_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_mouse_release_event` instead
-///
-#define q_cplayoutelement_qbase_mouse_release_event q_cplayoutelement_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -11028,10 +10496,6 @@ void q_cplayoutelement_on_mouse_release_event(void* self, void (*callback)(void*
 ///
 void q_cplayoutelement_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_mouse_double_click_event` instead
-///
-#define q_cplayoutelement_qbase_mouse_double_click_event q_cplayoutelement_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -11066,10 +10530,6 @@ void q_cplayoutelement_on_mouse_double_click_event(void* self, void (*callback)(
 ///
 void q_cplayoutelement_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_wheel_event` instead
-///
-#define q_cplayoutelement_qbase_wheel_event q_cplayoutelement_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -11102,10 +10562,6 @@ void q_cplayoutelement_on_wheel_event(void* self, void (*callback)(void*, void*)
 /// @param event QEvent*
 ///
 bool q_cplayoutelement_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_event` instead
-///
-#define q_cplayoutelement_qbase_event q_cplayoutelement_super_event
 
 /// Inherited from QObject
 ///
@@ -11141,10 +10597,6 @@ void q_cplayoutelement_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cplayoutelement_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_event_filter` instead
-///
-#define q_cplayoutelement_qbase_event_filter q_cplayoutelement_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -11179,10 +10631,6 @@ void q_cplayoutelement_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 void q_cplayoutelement_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_timer_event` instead
-///
-#define q_cplayoutelement_qbase_timer_event q_cplayoutelement_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -11215,10 +10663,6 @@ void q_cplayoutelement_on_timer_event(void* self, void (*callback)(void*, void*)
 /// @param event QChildEvent*
 ///
 void q_cplayoutelement_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_child_event` instead
-///
-#define q_cplayoutelement_qbase_child_event q_cplayoutelement_super_child_event
 
 /// Inherited from QObject
 ///
@@ -11253,10 +10697,6 @@ void q_cplayoutelement_on_child_event(void* self, void (*callback)(void*, void*)
 ///
 void q_cplayoutelement_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_custom_event` instead
-///
-#define q_cplayoutelement_qbase_custom_event q_cplayoutelement_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -11289,10 +10729,6 @@ void q_cplayoutelement_on_custom_event(void* self, void (*callback)(void*, void*
 /// @param signal QMetaMethod*
 ///
 void q_cplayoutelement_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_connect_notify` instead
-///
-#define q_cplayoutelement_qbase_connect_notify q_cplayoutelement_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -11327,10 +10763,6 @@ void q_cplayoutelement_on_connect_notify(void* self, void (*callback)(void*, voi
 ///
 void q_cplayoutelement_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_disconnect_notify` instead
-///
-#define q_cplayoutelement_qbase_disconnect_notify q_cplayoutelement_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -11363,10 +10795,6 @@ void q_cplayoutelement_on_disconnect_notify(void* self, void (*callback)(void*, 
 /// @param parentPlot QCustomPlot*
 ///
 void q_cplayoutelement_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_initialize_parent_plot` instead
-///
-#define q_cplayoutelement_qbase_initialize_parent_plot q_cplayoutelement_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -11401,10 +10829,6 @@ void q_cplayoutelement_on_initialize_parent_plot(void* self, void (*callback)(vo
 ///
 void q_cplayoutelement_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_set_parent_layerable` instead
-///
-#define q_cplayoutelement_qbase_set_parent_layerable q_cplayoutelement_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -11438,10 +10862,6 @@ void q_cplayoutelement_on_set_parent_layerable(void* self, void (*callback)(void
 /// @param prepend bool
 ///
 bool q_cplayoutelement_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_move_to_layer` instead
-///
-#define q_cplayoutelement_qbase_move_to_layer q_cplayoutelement_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -11479,10 +10899,6 @@ void q_cplayoutelement_on_move_to_layer(void* self, bool (*callback)(void*, void
 ///
 void q_cplayoutelement_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_apply_antialiasing_hint` instead
-///
-#define q_cplayoutelement_qbase_apply_antialiasing_hint q_cplayoutelement_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -11517,10 +10933,6 @@ void q_cplayoutelement_on_apply_antialiasing_hint(void* self, void (*callback)(v
 ///
 QObject* q_cplayoutelement_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_sender` instead
-///
-#define q_cplayoutelement_qbase_sender q_cplayoutelement_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -11551,10 +10963,6 @@ void q_cplayoutelement_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPLayoutElement*
 ///
 int32_t q_cplayoutelement_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_sender_signal_index` instead
-///
-#define q_cplayoutelement_qbase_sender_signal_index q_cplayoutelement_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -11588,10 +10996,6 @@ void q_cplayoutelement_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 int32_t q_cplayoutelement_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_receivers` instead
-///
-#define q_cplayoutelement_qbase_receivers q_cplayoutelement_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -11624,10 +11028,6 @@ void q_cplayoutelement_on_receivers(void* self, int32_t (*callback)(void*, const
 /// @param signal QMetaMethod*
 ///
 bool q_cplayoutelement_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cplayoutelement_super_is_signal_connected` instead
-///
-#define q_cplayoutelement_qbase_is_signal_connected q_cplayoutelement_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -11691,10 +11091,6 @@ const QMetaObject* q_cplayout_meta_object(void* self);
 ///
 void q_cplayout_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cplayout_super_meta_object` instead
-///
-#define q_cplayout_qbase_meta_object q_cplayout_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -11714,10 +11110,6 @@ void* q_cplayout_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPLayout* self, const char* param1)
 ///
 void q_cplayout_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cplayout_super_metacast` instead
-///
-#define q_cplayout_qbase_metacast q_cplayout_super_metacast
 
 /// Base class method implementation
 ///
@@ -11739,10 +11131,6 @@ int32_t q_cplayout_metacall(void* self, int32_t param1, int param2, void* param3
 /// @param callback int32_t func(QCPLayout* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cplayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cplayout_super_metacall` instead
-///
-#define q_cplayout_qbase_metacall q_cplayout_super_metacall
 
 /// Base class method implementation
 ///
@@ -11777,10 +11165,6 @@ void q_cplayout_update(void* self, int32_t phase);
 ///
 void q_cplayout_on_update(void* self, void (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_cplayout_super_update` instead
-///
-#define q_cplayout_qbase_update q_cplayout_super_update
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
 ///
 /// Base class method implementation
@@ -11808,10 +11192,6 @@ libqt_list q_cplayout_elements(void* self, bool recursive);
 ///
 void q_cplayout_on_elements(void* self, libqt_list (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `q_cplayout_super_elements` instead
-///
-#define q_cplayout_qbase_elements q_cplayout_super_elements
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
 ///
 /// Base class method implementation
@@ -11838,10 +11218,6 @@ int32_t q_cplayout_element_count(void* self);
 ///
 void q_cplayout_on_element_count(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_cplayout_super_element_count` instead
-///
-#define q_cplayout_qbase_element_count q_cplayout_super_element_count
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
 ///
 /// Base class method implementation
@@ -11865,10 +11241,6 @@ QCPLayoutElement* q_cplayout_element_at(void* self, int index);
 /// @param callback QCPLayoutElement* func(QCPLayout* self, int index)
 ///
 void q_cplayout_on_element_at(void* self, QCPLayoutElement* (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_cplayout_super_element_at` instead
-///
-#define q_cplayout_qbase_element_at q_cplayout_super_element_at
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
 ///
@@ -11895,10 +11267,6 @@ QCPLayoutElement* q_cplayout_take_at(void* self, int index);
 ///
 void q_cplayout_on_take_at(void* self, QCPLayoutElement* (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_cplayout_super_take_at` instead
-///
-#define q_cplayout_qbase_take_at q_cplayout_super_take_at
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
 ///
 /// Base class method implementation
@@ -11924,10 +11292,6 @@ bool q_cplayout_take(void* self, void* element);
 ///
 void q_cplayout_on_take(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cplayout_super_take` instead
-///
-#define q_cplayout_qbase_take q_cplayout_super_take
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
 ///
 /// Base class method implementation
@@ -11951,10 +11315,6 @@ void q_cplayout_simplify(void* self);
 /// @param callback void func()
 ///
 void q_cplayout_on_simplify(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_cplayout_super_simplify` instead
-///
-#define q_cplayout_qbase_simplify q_cplayout_super_simplify
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
 ///
@@ -11999,10 +11359,6 @@ void q_cplayout_update_layout(void* self);
 ///
 void q_cplayout_on_update_layout(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_cplayout_super_update_layout` instead
-///
-#define q_cplayout_qbase_update_layout q_cplayout_super_update_layout
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
 ///
 /// Base class method implementation
@@ -12025,10 +11381,6 @@ void q_cplayout_size_constraints_changed(void* self);
 /// @param callback void func()
 ///
 void q_cplayout_on_size_constraints_changed(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_cplayout_super_size_constraints_changed` instead
-///
-#define q_cplayout_qbase_size_constraints_changed q_cplayout_super_size_constraints_changed
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
 ///
@@ -12054,10 +11406,6 @@ void q_cplayout_adopt_element(void* self, void* el);
 ///
 void q_cplayout_on_adopt_element(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cplayout_super_adopt_element` instead
-///
-#define q_cplayout_qbase_adopt_element q_cplayout_super_adopt_element
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
 ///
 /// Base class method implementation
@@ -12082,10 +11430,6 @@ void q_cplayout_release_element(void* self, void* el);
 /// @param callback void func(QCPLayout* self, QCPLayoutElement* el)
 ///
 void q_cplayout_on_release_element(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cplayout_super_release_element` instead
-///
-#define q_cplayout_qbase_release_element q_cplayout_super_release_element
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
 ///
@@ -12116,10 +11460,6 @@ libqt_list q_cplayout_get_section_sizes(void* self, libqt_list maxSizes, libqt_l
 /// @param callback libqt_list of int func(QCPLayout* self, libqt_list of int maxSizes, libqt_list of int minSizes, libqt_list of double stretchFactors, int totalSize)
 ///
 void q_cplayout_on_get_section_sizes(void* self, libqt_list (*callback)(void*, libqt_list, libqt_list, libqt_list, int));
-
-/// @warning DEPRECATED: Use `q_cplayout_super_get_section_sizes` instead
-///
-#define q_cplayout_qbase_get_section_sizes q_cplayout_super_get_section_sizes
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
 ///
@@ -12912,10 +12252,6 @@ void q_cplayout_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 QSize* q_cplayout_minimum_outer_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `q_cplayout_super_minimum_outer_size_hint` instead
-///
-#define q_cplayout_qbase_minimum_outer_size_hint q_cplayout_super_minimum_outer_size_hint
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -12948,10 +12284,6 @@ void q_cplayout_on_minimum_outer_size_hint(void* self, QSize* (*callback)());
 /// @param self QCPLayout*
 ///
 QSize* q_cplayout_maximum_outer_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `q_cplayout_super_maximum_outer_size_hint` instead
-///
-#define q_cplayout_qbase_maximum_outer_size_hint q_cplayout_super_maximum_outer_size_hint
 
 /// Inherited from QCPLayoutElement
 ///
@@ -12989,10 +12321,6 @@ void q_cplayout_on_maximum_outer_size_hint(void* self, QSize* (*callback)());
 ///
 double q_cplayout_select_test(void* self, void* pos, bool onlySelectable, void* details);
 
-/// @warning DEPRECATED: Use `q_cplayout_super_select_test` instead
-///
-#define q_cplayout_qbase_select_test q_cplayout_super_select_test
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -13028,10 +12356,6 @@ void q_cplayout_on_select_test(void* self, double (*callback)(void*, void*, bool
 ///
 int32_t q_cplayout_calculate_auto_margin(void* self, int32_t side);
 
-/// @warning DEPRECATED: Use `q_cplayout_super_calculate_auto_margin` instead
-///
-#define q_cplayout_qbase_calculate_auto_margin q_cplayout_super_calculate_auto_margin
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -13064,10 +12388,6 @@ void q_cplayout_on_calculate_auto_margin(void* self, int32_t (*callback)(void*, 
 ///
 void q_cplayout_layout_changed(void* self);
 
-/// @warning DEPRECATED: Use `q_cplayout_super_layout_changed` instead
-///
-#define q_cplayout_qbase_layout_changed q_cplayout_super_layout_changed
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -13099,10 +12419,6 @@ void q_cplayout_on_layout_changed(void* self, void (*callback)());
 /// @param painter QCPPainter*
 ///
 void q_cplayout_apply_default_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cplayout_super_apply_default_antialiasing_hint` instead
-///
-#define q_cplayout_qbase_apply_default_antialiasing_hint q_cplayout_super_apply_default_antialiasing_hint
 
 /// Inherited from QCPLayoutElement
 ///
@@ -13137,10 +12453,6 @@ void q_cplayout_on_apply_default_antialiasing_hint(void* self, void (*callback)(
 ///
 void q_cplayout_draw(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_cplayout_super_draw` instead
-///
-#define q_cplayout_qbase_draw q_cplayout_super_draw
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -13173,10 +12485,6 @@ void q_cplayout_on_draw(void* self, void (*callback)(void*, void*));
 /// @param parentPlot QCustomPlot*
 ///
 void q_cplayout_parent_plot_initialized(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cplayout_super_parent_plot_initialized` instead
-///
-#define q_cplayout_qbase_parent_plot_initialized q_cplayout_super_parent_plot_initialized
 
 /// Inherited from QCPLayoutElement
 ///
@@ -13212,10 +12520,6 @@ void q_cplayout_on_parent_plot_initialized(void* self, void (*callback)(void*, v
 ///
 int32_t q_cplayout_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cplayout_super_selection_category` instead
-///
-#define q_cplayout_qbase_selection_category q_cplayout_super_selection_category
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -13248,10 +12552,6 @@ void q_cplayout_on_selection_category(void* self, int32_t (*callback)());
 /// @param self QCPLayout*
 ///
 QRect* q_cplayout_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cplayout_super_clip_rect` instead
-///
-#define q_cplayout_qbase_clip_rect q_cplayout_super_clip_rect
 
 /// Inherited from QCPLayerable
 ///
@@ -13290,10 +12590,6 @@ void q_cplayout_on_clip_rect(void* self, QRect* (*callback)());
 ///
 void q_cplayout_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cplayout_super_select_event` instead
-///
-#define q_cplayout_qbase_select_event q_cplayout_super_select_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -13330,10 +12626,6 @@ void q_cplayout_on_select_event(void* self, void (*callback)(void*, void*, bool,
 ///
 void q_cplayout_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cplayout_super_deselect_event` instead
-///
-#define q_cplayout_qbase_deselect_event q_cplayout_super_deselect_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -13367,10 +12659,6 @@ void q_cplayout_on_deselect_event(void* self, void (*callback)(void*, bool*));
 /// @param details QVariant*
 ///
 void q_cplayout_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cplayout_super_mouse_press_event` instead
-///
-#define q_cplayout_qbase_mouse_press_event q_cplayout_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -13407,10 +12695,6 @@ void q_cplayout_on_mouse_press_event(void* self, void (*callback)(void*, void*, 
 ///
 void q_cplayout_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cplayout_super_mouse_move_event` instead
-///
-#define q_cplayout_qbase_mouse_move_event q_cplayout_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -13445,10 +12729,6 @@ void q_cplayout_on_mouse_move_event(void* self, void (*callback)(void*, void*, v
 /// @param startPos QPointF*
 ///
 void q_cplayout_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cplayout_super_mouse_release_event` instead
-///
-#define q_cplayout_qbase_mouse_release_event q_cplayout_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -13485,10 +12765,6 @@ void q_cplayout_on_mouse_release_event(void* self, void (*callback)(void*, void*
 ///
 void q_cplayout_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cplayout_super_mouse_double_click_event` instead
-///
-#define q_cplayout_qbase_mouse_double_click_event q_cplayout_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -13523,10 +12799,6 @@ void q_cplayout_on_mouse_double_click_event(void* self, void (*callback)(void*, 
 ///
 void q_cplayout_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayout_super_wheel_event` instead
-///
-#define q_cplayout_qbase_wheel_event q_cplayout_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -13559,10 +12831,6 @@ void q_cplayout_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cplayout_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cplayout_super_event` instead
-///
-#define q_cplayout_qbase_event q_cplayout_super_event
 
 /// Inherited from QObject
 ///
@@ -13598,10 +12866,6 @@ void q_cplayout_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cplayout_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayout_super_event_filter` instead
-///
-#define q_cplayout_qbase_event_filter q_cplayout_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -13636,10 +12900,6 @@ void q_cplayout_on_event_filter(void* self, bool (*callback)(void*, void*, void*
 ///
 void q_cplayout_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayout_super_timer_event` instead
-///
-#define q_cplayout_qbase_timer_event q_cplayout_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -13672,10 +12932,6 @@ void q_cplayout_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cplayout_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cplayout_super_child_event` instead
-///
-#define q_cplayout_qbase_child_event q_cplayout_super_child_event
 
 /// Inherited from QObject
 ///
@@ -13710,10 +12966,6 @@ void q_cplayout_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cplayout_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayout_super_custom_event` instead
-///
-#define q_cplayout_qbase_custom_event q_cplayout_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -13746,10 +12998,6 @@ void q_cplayout_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_cplayout_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cplayout_super_connect_notify` instead
-///
-#define q_cplayout_qbase_connect_notify q_cplayout_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -13784,10 +13032,6 @@ void q_cplayout_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_cplayout_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cplayout_super_disconnect_notify` instead
-///
-#define q_cplayout_qbase_disconnect_notify q_cplayout_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -13820,10 +13064,6 @@ void q_cplayout_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 /// @param parentPlot QCustomPlot*
 ///
 void q_cplayout_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cplayout_super_initialize_parent_plot` instead
-///
-#define q_cplayout_qbase_initialize_parent_plot q_cplayout_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -13858,10 +13098,6 @@ void q_cplayout_on_initialize_parent_plot(void* self, void (*callback)(void*, vo
 ///
 void q_cplayout_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cplayout_super_set_parent_layerable` instead
-///
-#define q_cplayout_qbase_set_parent_layerable q_cplayout_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -13895,10 +13131,6 @@ void q_cplayout_on_set_parent_layerable(void* self, void (*callback)(void*, void
 /// @param prepend bool
 ///
 bool q_cplayout_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cplayout_super_move_to_layer` instead
-///
-#define q_cplayout_qbase_move_to_layer q_cplayout_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -13936,10 +13168,6 @@ void q_cplayout_on_move_to_layer(void* self, bool (*callback)(void*, void*, bool
 ///
 void q_cplayout_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cplayout_super_apply_antialiasing_hint` instead
-///
-#define q_cplayout_qbase_apply_antialiasing_hint q_cplayout_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -13974,10 +13202,6 @@ void q_cplayout_on_apply_antialiasing_hint(void* self, void (*callback)(void*, v
 ///
 QObject* q_cplayout_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cplayout_super_sender` instead
-///
-#define q_cplayout_qbase_sender q_cplayout_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -14008,10 +13232,6 @@ void q_cplayout_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPLayout*
 ///
 int32_t q_cplayout_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cplayout_super_sender_signal_index` instead
-///
-#define q_cplayout_qbase_sender_signal_index q_cplayout_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -14045,10 +13265,6 @@ void q_cplayout_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cplayout_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cplayout_super_receivers` instead
-///
-#define q_cplayout_qbase_receivers q_cplayout_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -14081,10 +13297,6 @@ void q_cplayout_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 /// @param signal QMetaMethod*
 ///
 bool q_cplayout_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cplayout_super_is_signal_connected` instead
-///
-#define q_cplayout_qbase_is_signal_connected q_cplayout_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -14148,10 +13360,6 @@ const QMetaObject* q_cplayoutgrid_meta_object(void* self);
 ///
 void q_cplayoutgrid_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_meta_object` instead
-///
-#define q_cplayoutgrid_qbase_meta_object q_cplayoutgrid_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -14171,10 +13379,6 @@ void* q_cplayoutgrid_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPLayoutGrid* self, const char* param1)
 ///
 void q_cplayoutgrid_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_metacast` instead
-///
-#define q_cplayoutgrid_qbase_metacast q_cplayoutgrid_super_metacast
 
 /// Base class method implementation
 ///
@@ -14196,10 +13400,6 @@ int32_t q_cplayoutgrid_metacall(void* self, int32_t param1, int param2, void* pa
 /// @param callback int32_t func(QCPLayoutGrid* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cplayoutgrid_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_metacall` instead
-///
-#define q_cplayoutgrid_qbase_metacall q_cplayoutgrid_super_metacall
 
 /// Base class method implementation
 ///
@@ -14345,10 +13545,6 @@ void q_cplayoutgrid_update_layout(void* self);
 ///
 void q_cplayoutgrid_on_update_layout(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_update_layout` instead
-///
-#define q_cplayoutgrid_qbase_update_layout q_cplayoutgrid_super_update_layout
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
 /// Base class method implementation
@@ -14371,10 +13567,6 @@ int32_t q_cplayoutgrid_element_count(void* self);
 /// @param callback int32_t func()
 ///
 void q_cplayoutgrid_on_element_count(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_element_count` instead
-///
-#define q_cplayoutgrid_qbase_element_count q_cplayoutgrid_super_element_count
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
@@ -14399,10 +13591,6 @@ QCPLayoutElement* q_cplayoutgrid_element_at(void* self, int index);
 /// @param callback QCPLayoutElement* func(QCPLayoutGrid* self, int index)
 ///
 void q_cplayoutgrid_on_element_at(void* self, QCPLayoutElement* (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_element_at` instead
-///
-#define q_cplayoutgrid_qbase_element_at q_cplayoutgrid_super_element_at
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
@@ -14429,10 +13617,6 @@ QCPLayoutElement* q_cplayoutgrid_take_at(void* self, int index);
 ///
 void q_cplayoutgrid_on_take_at(void* self, QCPLayoutElement* (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_take_at` instead
-///
-#define q_cplayoutgrid_qbase_take_at q_cplayoutgrid_super_take_at
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
 /// Base class method implementation
@@ -14457,10 +13641,6 @@ bool q_cplayoutgrid_take(void* self, void* element);
 /// @param callback bool func(QCPLayoutGrid* self, QCPLayoutElement* element)
 ///
 void q_cplayoutgrid_on_take(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_take` instead
-///
-#define q_cplayoutgrid_qbase_take q_cplayoutgrid_super_take
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
@@ -14489,10 +13669,6 @@ libqt_list q_cplayoutgrid_elements(void* self, bool recursive);
 ///
 void q_cplayoutgrid_on_elements(void* self, libqt_list (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_elements` instead
-///
-#define q_cplayoutgrid_qbase_elements q_cplayoutgrid_super_elements
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
 /// Base class method implementation
@@ -14519,10 +13695,6 @@ void q_cplayoutgrid_simplify(void* self);
 ///
 void q_cplayoutgrid_on_simplify(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_simplify` instead
-///
-#define q_cplayoutgrid_qbase_simplify q_cplayoutgrid_super_simplify
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
 /// Base class method implementation
@@ -14548,10 +13720,6 @@ QSize* q_cplayoutgrid_minimum_outer_size_hint(void* self);
 ///
 void q_cplayoutgrid_on_minimum_outer_size_hint(void* self, QSize* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_minimum_outer_size_hint` instead
-///
-#define q_cplayoutgrid_qbase_minimum_outer_size_hint q_cplayoutgrid_super_minimum_outer_size_hint
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
 /// Base class method implementation
@@ -14576,10 +13744,6 @@ QSize* q_cplayoutgrid_maximum_outer_size_hint(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cplayoutgrid_on_maximum_outer_size_hint(void* self, QSize* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_maximum_outer_size_hint` instead
-///
-#define q_cplayoutgrid_qbase_maximum_outer_size_hint q_cplayoutgrid_super_maximum_outer_size_hint
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
@@ -14677,10 +13841,6 @@ void q_cplayoutgrid_get_minimum_row_col_sizes(void* self, libqt_list minColWidth
 ///
 void q_cplayoutgrid_on_get_minimum_row_col_sizes(void* self, void (*callback)(void*, libqt_list, libqt_list));
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_get_minimum_row_col_sizes` instead
-///
-#define q_cplayoutgrid_qbase_get_minimum_row_col_sizes q_cplayoutgrid_super_get_minimum_row_col_sizes
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
 /// Base class method implementation
@@ -14707,10 +13867,6 @@ void q_cplayoutgrid_get_maximum_row_col_sizes(void* self, libqt_list maxColWidth
 /// @param callback void func(QCPLayoutGrid* self, libqt_list of int maxColWidths, libqt_list of int maxRowHeights)
 ///
 void q_cplayoutgrid_on_get_maximum_row_col_sizes(void* self, void (*callback)(void*, libqt_list, libqt_list));
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_get_maximum_row_col_sizes` instead
-///
-#define q_cplayoutgrid_qbase_get_maximum_row_col_sizes q_cplayoutgrid_super_get_maximum_row_col_sizes
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
@@ -15534,10 +14690,6 @@ void q_cplayoutgrid_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 void q_cplayoutgrid_update(void* self, int32_t phase);
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_update` instead
-///
-#define q_cplayoutgrid_qbase_update q_cplayoutgrid_super_update
-
 /// Inherited from QCPLayout
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
@@ -15572,10 +14724,6 @@ void q_cplayoutgrid_on_update(void* self, void (*callback)(void*, int32_t));
 /// @param details QVariant*
 ///
 double q_cplayoutgrid_select_test(void* self, void* pos, bool onlySelectable, void* details);
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_select_test` instead
-///
-#define q_cplayoutgrid_qbase_select_test q_cplayoutgrid_super_select_test
 
 /// Inherited from QCPLayoutElement
 ///
@@ -15612,10 +14760,6 @@ void q_cplayoutgrid_on_select_test(void* self, double (*callback)(void*, void*, 
 ///
 int32_t q_cplayoutgrid_calculate_auto_margin(void* self, int32_t side);
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_calculate_auto_margin` instead
-///
-#define q_cplayoutgrid_qbase_calculate_auto_margin q_cplayoutgrid_super_calculate_auto_margin
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -15648,10 +14792,6 @@ void q_cplayoutgrid_on_calculate_auto_margin(void* self, int32_t (*callback)(voi
 ///
 void q_cplayoutgrid_layout_changed(void* self);
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_layout_changed` instead
-///
-#define q_cplayoutgrid_qbase_layout_changed q_cplayoutgrid_super_layout_changed
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -15683,10 +14823,6 @@ void q_cplayoutgrid_on_layout_changed(void* self, void (*callback)());
 /// @param painter QCPPainter*
 ///
 void q_cplayoutgrid_apply_default_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_apply_default_antialiasing_hint` instead
-///
-#define q_cplayoutgrid_qbase_apply_default_antialiasing_hint q_cplayoutgrid_super_apply_default_antialiasing_hint
 
 /// Inherited from QCPLayoutElement
 ///
@@ -15721,10 +14857,6 @@ void q_cplayoutgrid_on_apply_default_antialiasing_hint(void* self, void (*callba
 ///
 void q_cplayoutgrid_draw(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_draw` instead
-///
-#define q_cplayoutgrid_qbase_draw q_cplayoutgrid_super_draw
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -15757,10 +14889,6 @@ void q_cplayoutgrid_on_draw(void* self, void (*callback)(void*, void*));
 /// @param parentPlot QCustomPlot*
 ///
 void q_cplayoutgrid_parent_plot_initialized(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_parent_plot_initialized` instead
-///
-#define q_cplayoutgrid_qbase_parent_plot_initialized q_cplayoutgrid_super_parent_plot_initialized
 
 /// Inherited from QCPLayoutElement
 ///
@@ -15796,10 +14924,6 @@ void q_cplayoutgrid_on_parent_plot_initialized(void* self, void (*callback)(void
 ///
 int32_t q_cplayoutgrid_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_selection_category` instead
-///
-#define q_cplayoutgrid_qbase_selection_category q_cplayoutgrid_super_selection_category
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -15832,10 +14956,6 @@ void q_cplayoutgrid_on_selection_category(void* self, int32_t (*callback)());
 /// @param self QCPLayoutGrid*
 ///
 QRect* q_cplayoutgrid_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_clip_rect` instead
-///
-#define q_cplayoutgrid_qbase_clip_rect q_cplayoutgrid_super_clip_rect
 
 /// Inherited from QCPLayerable
 ///
@@ -15874,10 +14994,6 @@ void q_cplayoutgrid_on_clip_rect(void* self, QRect* (*callback)());
 ///
 void q_cplayoutgrid_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_select_event` instead
-///
-#define q_cplayoutgrid_qbase_select_event q_cplayoutgrid_super_select_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -15914,10 +15030,6 @@ void q_cplayoutgrid_on_select_event(void* self, void (*callback)(void*, void*, b
 ///
 void q_cplayoutgrid_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_deselect_event` instead
-///
-#define q_cplayoutgrid_qbase_deselect_event q_cplayoutgrid_super_deselect_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -15951,10 +15063,6 @@ void q_cplayoutgrid_on_deselect_event(void* self, void (*callback)(void*, bool*)
 /// @param details QVariant*
 ///
 void q_cplayoutgrid_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_mouse_press_event` instead
-///
-#define q_cplayoutgrid_qbase_mouse_press_event q_cplayoutgrid_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -15991,10 +15099,6 @@ void q_cplayoutgrid_on_mouse_press_event(void* self, void (*callback)(void*, voi
 ///
 void q_cplayoutgrid_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_mouse_move_event` instead
-///
-#define q_cplayoutgrid_qbase_mouse_move_event q_cplayoutgrid_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -16029,10 +15133,6 @@ void q_cplayoutgrid_on_mouse_move_event(void* self, void (*callback)(void*, void
 /// @param startPos QPointF*
 ///
 void q_cplayoutgrid_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_mouse_release_event` instead
-///
-#define q_cplayoutgrid_qbase_mouse_release_event q_cplayoutgrid_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -16069,10 +15169,6 @@ void q_cplayoutgrid_on_mouse_release_event(void* self, void (*callback)(void*, v
 ///
 void q_cplayoutgrid_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_mouse_double_click_event` instead
-///
-#define q_cplayoutgrid_qbase_mouse_double_click_event q_cplayoutgrid_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -16107,10 +15203,6 @@ void q_cplayoutgrid_on_mouse_double_click_event(void* self, void (*callback)(voi
 ///
 void q_cplayoutgrid_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_wheel_event` instead
-///
-#define q_cplayoutgrid_qbase_wheel_event q_cplayoutgrid_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -16143,10 +15235,6 @@ void q_cplayoutgrid_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cplayoutgrid_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_event` instead
-///
-#define q_cplayoutgrid_qbase_event q_cplayoutgrid_super_event
 
 /// Inherited from QObject
 ///
@@ -16182,10 +15270,6 @@ void q_cplayoutgrid_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cplayoutgrid_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_event_filter` instead
-///
-#define q_cplayoutgrid_qbase_event_filter q_cplayoutgrid_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -16220,10 +15304,6 @@ void q_cplayoutgrid_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void q_cplayoutgrid_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_timer_event` instead
-///
-#define q_cplayoutgrid_qbase_timer_event q_cplayoutgrid_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -16256,10 +15336,6 @@ void q_cplayoutgrid_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cplayoutgrid_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_child_event` instead
-///
-#define q_cplayoutgrid_qbase_child_event q_cplayoutgrid_super_child_event
 
 /// Inherited from QObject
 ///
@@ -16294,10 +15370,6 @@ void q_cplayoutgrid_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cplayoutgrid_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_custom_event` instead
-///
-#define q_cplayoutgrid_qbase_custom_event q_cplayoutgrid_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -16330,10 +15402,6 @@ void q_cplayoutgrid_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_cplayoutgrid_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_connect_notify` instead
-///
-#define q_cplayoutgrid_qbase_connect_notify q_cplayoutgrid_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -16368,10 +15436,6 @@ void q_cplayoutgrid_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void q_cplayoutgrid_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_disconnect_notify` instead
-///
-#define q_cplayoutgrid_qbase_disconnect_notify q_cplayoutgrid_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -16403,10 +15467,6 @@ void q_cplayoutgrid_on_disconnect_notify(void* self, void (*callback)(void*, voi
 /// @param self QCPLayoutGrid*
 ///
 void q_cplayoutgrid_size_constraints_changed(void* self);
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_size_constraints_changed` instead
-///
-#define q_cplayoutgrid_qbase_size_constraints_changed q_cplayoutgrid_super_size_constraints_changed
 
 /// Inherited from QCPLayout
 ///
@@ -16440,10 +15500,6 @@ void q_cplayoutgrid_on_size_constraints_changed(void* self, void (*callback)());
 ///
 void q_cplayoutgrid_adopt_element(void* self, void* el);
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_adopt_element` instead
-///
-#define q_cplayoutgrid_qbase_adopt_element q_cplayoutgrid_super_adopt_element
-
 /// Inherited from QCPLayout
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
@@ -16476,10 +15532,6 @@ void q_cplayoutgrid_on_adopt_element(void* self, void (*callback)(void*, void*))
 /// @param el QCPLayoutElement*
 ///
 void q_cplayoutgrid_release_element(void* self, void* el);
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_release_element` instead
-///
-#define q_cplayoutgrid_qbase_release_element q_cplayoutgrid_super_release_element
 
 /// Inherited from QCPLayout
 ///
@@ -16519,10 +15571,6 @@ void q_cplayoutgrid_on_release_element(void* self, void (*callback)(void*, void*
 ///
 libqt_list q_cplayoutgrid_get_section_sizes(void* self, libqt_list maxSizes, libqt_list minSizes, libqt_list stretchFactors, int totalSize);
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_get_section_sizes` instead
-///
-#define q_cplayoutgrid_qbase_get_section_sizes q_cplayoutgrid_super_get_section_sizes
-
 /// Inherited from QCPLayout
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
@@ -16561,10 +15609,6 @@ void q_cplayoutgrid_on_get_section_sizes(void* self, libqt_list (*callback)(void
 ///
 void q_cplayoutgrid_initialize_parent_plot(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_initialize_parent_plot` instead
-///
-#define q_cplayoutgrid_qbase_initialize_parent_plot q_cplayoutgrid_super_initialize_parent_plot
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -16597,10 +15641,6 @@ void q_cplayoutgrid_on_initialize_parent_plot(void* self, void (*callback)(void*
 /// @param parentLayerable QCPLayerable*
 ///
 void q_cplayoutgrid_set_parent_layerable(void* self, void* parentLayerable);
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_set_parent_layerable` instead
-///
-#define q_cplayoutgrid_qbase_set_parent_layerable q_cplayoutgrid_super_set_parent_layerable
 
 /// Inherited from QCPLayerable
 ///
@@ -16635,10 +15675,6 @@ void q_cplayoutgrid_on_set_parent_layerable(void* self, void (*callback)(void*, 
 /// @param prepend bool
 ///
 bool q_cplayoutgrid_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_move_to_layer` instead
-///
-#define q_cplayoutgrid_qbase_move_to_layer q_cplayoutgrid_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -16676,10 +15712,6 @@ void q_cplayoutgrid_on_move_to_layer(void* self, bool (*callback)(void*, void*, 
 ///
 void q_cplayoutgrid_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_apply_antialiasing_hint` instead
-///
-#define q_cplayoutgrid_qbase_apply_antialiasing_hint q_cplayoutgrid_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -16714,10 +15746,6 @@ void q_cplayoutgrid_on_apply_antialiasing_hint(void* self, void (*callback)(void
 ///
 QObject* q_cplayoutgrid_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_sender` instead
-///
-#define q_cplayoutgrid_qbase_sender q_cplayoutgrid_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -16748,10 +15776,6 @@ void q_cplayoutgrid_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPLayoutGrid*
 ///
 int32_t q_cplayoutgrid_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_sender_signal_index` instead
-///
-#define q_cplayoutgrid_qbase_sender_signal_index q_cplayoutgrid_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -16785,10 +15809,6 @@ void q_cplayoutgrid_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cplayoutgrid_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_receivers` instead
-///
-#define q_cplayoutgrid_qbase_receivers q_cplayoutgrid_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -16821,10 +15841,6 @@ void q_cplayoutgrid_on_receivers(void* self, int32_t (*callback)(void*, const ch
 /// @param signal QMetaMethod*
 ///
 bool q_cplayoutgrid_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cplayoutgrid_super_is_signal_connected` instead
-///
-#define q_cplayoutgrid_qbase_is_signal_connected q_cplayoutgrid_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -16888,10 +15904,6 @@ const QMetaObject* q_cplayoutinset_meta_object(void* self);
 ///
 void q_cplayoutinset_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_meta_object` instead
-///
-#define q_cplayoutinset_qbase_meta_object q_cplayoutinset_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -16911,10 +15923,6 @@ void* q_cplayoutinset_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPLayoutInset* self, const char* param1)
 ///
 void q_cplayoutinset_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_metacast` instead
-///
-#define q_cplayoutinset_qbase_metacast q_cplayoutinset_super_metacast
 
 /// Base class method implementation
 ///
@@ -16936,10 +15944,6 @@ int32_t q_cplayoutinset_metacall(void* self, int32_t param1, int param2, void* p
 /// @param callback int32_t func(QCPLayoutInset* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cplayoutinset_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_metacall` instead
-///
-#define q_cplayoutinset_qbase_metacall q_cplayoutinset_super_metacall
 
 /// Base class method implementation
 ///
@@ -17022,10 +16026,6 @@ void q_cplayoutinset_update_layout(void* self);
 ///
 void q_cplayoutinset_on_update_layout(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_update_layout` instead
-///
-#define q_cplayoutinset_qbase_update_layout q_cplayoutinset_super_update_layout
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutInset.html)
 ///
 /// Base class method implementation
@@ -17048,10 +16048,6 @@ int32_t q_cplayoutinset_element_count(void* self);
 /// @param callback int32_t func()
 ///
 void q_cplayoutinset_on_element_count(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_element_count` instead
-///
-#define q_cplayoutinset_qbase_element_count q_cplayoutinset_super_element_count
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutInset.html)
 ///
@@ -17076,10 +16072,6 @@ QCPLayoutElement* q_cplayoutinset_element_at(void* self, int index);
 /// @param callback QCPLayoutElement* func(QCPLayoutInset* self, int index)
 ///
 void q_cplayoutinset_on_element_at(void* self, QCPLayoutElement* (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_element_at` instead
-///
-#define q_cplayoutinset_qbase_element_at q_cplayoutinset_super_element_at
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutInset.html)
 ///
@@ -17106,10 +16098,6 @@ QCPLayoutElement* q_cplayoutinset_take_at(void* self, int index);
 ///
 void q_cplayoutinset_on_take_at(void* self, QCPLayoutElement* (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_take_at` instead
-///
-#define q_cplayoutinset_qbase_take_at q_cplayoutinset_super_take_at
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutInset.html)
 ///
 /// Base class method implementation
@@ -17135,10 +16123,6 @@ bool q_cplayoutinset_take(void* self, void* element);
 ///
 void q_cplayoutinset_on_take(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_take` instead
-///
-#define q_cplayoutinset_qbase_take q_cplayoutinset_super_take
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutInset.html)
 ///
 /// Base class method implementation
@@ -17162,10 +16146,6 @@ void q_cplayoutinset_simplify(void* self);
 /// @param callback void func()
 ///
 void q_cplayoutinset_on_simplify(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_simplify` instead
-///
-#define q_cplayoutinset_qbase_simplify q_cplayoutinset_super_simplify
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutInset.html)
 ///
@@ -17192,10 +16172,6 @@ double q_cplayoutinset_select_test(void* self, void* pos, bool onlySelectable, v
 /// @param callback double func(QCPLayoutInset* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
 void q_cplayoutinset_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
-
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_select_test` instead
-///
-#define q_cplayoutinset_qbase_select_test q_cplayoutinset_super_select_test
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutInset.html)
 ///
@@ -18028,10 +17004,6 @@ void q_cplayoutinset_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 void q_cplayoutinset_update(void* self, int32_t phase);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_update` instead
-///
-#define q_cplayoutinset_qbase_update q_cplayoutinset_super_update
-
 /// Inherited from QCPLayout
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
@@ -18067,10 +17039,6 @@ void q_cplayoutinset_on_update(void* self, void (*callback)(void*, int32_t));
 ///
 libqt_list q_cplayoutinset_elements(void* self, bool recursive);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_elements` instead
-///
-#define q_cplayoutinset_qbase_elements q_cplayoutinset_super_elements
-
 /// Inherited from QCPLayout
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
@@ -18105,10 +17073,6 @@ void q_cplayoutinset_on_elements(void* self, libqt_list (*callback)(void*, bool)
 ///
 QSize* q_cplayoutinset_minimum_outer_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_minimum_outer_size_hint` instead
-///
-#define q_cplayoutinset_qbase_minimum_outer_size_hint q_cplayoutinset_super_minimum_outer_size_hint
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -18141,10 +17105,6 @@ void q_cplayoutinset_on_minimum_outer_size_hint(void* self, QSize* (*callback)()
 /// @param self QCPLayoutInset*
 ///
 QSize* q_cplayoutinset_maximum_outer_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_maximum_outer_size_hint` instead
-///
-#define q_cplayoutinset_qbase_maximum_outer_size_hint q_cplayoutinset_super_maximum_outer_size_hint
 
 /// Inherited from QCPLayoutElement
 ///
@@ -18180,10 +17140,6 @@ void q_cplayoutinset_on_maximum_outer_size_hint(void* self, QSize* (*callback)()
 ///
 int32_t q_cplayoutinset_calculate_auto_margin(void* self, int32_t side);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_calculate_auto_margin` instead
-///
-#define q_cplayoutinset_qbase_calculate_auto_margin q_cplayoutinset_super_calculate_auto_margin
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -18216,10 +17172,6 @@ void q_cplayoutinset_on_calculate_auto_margin(void* self, int32_t (*callback)(vo
 ///
 void q_cplayoutinset_layout_changed(void* self);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_layout_changed` instead
-///
-#define q_cplayoutinset_qbase_layout_changed q_cplayoutinset_super_layout_changed
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -18251,10 +17203,6 @@ void q_cplayoutinset_on_layout_changed(void* self, void (*callback)());
 /// @param painter QCPPainter*
 ///
 void q_cplayoutinset_apply_default_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_apply_default_antialiasing_hint` instead
-///
-#define q_cplayoutinset_qbase_apply_default_antialiasing_hint q_cplayoutinset_super_apply_default_antialiasing_hint
 
 /// Inherited from QCPLayoutElement
 ///
@@ -18289,10 +17237,6 @@ void q_cplayoutinset_on_apply_default_antialiasing_hint(void* self, void (*callb
 ///
 void q_cplayoutinset_draw(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_draw` instead
-///
-#define q_cplayoutinset_qbase_draw q_cplayoutinset_super_draw
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -18325,10 +17269,6 @@ void q_cplayoutinset_on_draw(void* self, void (*callback)(void*, void*));
 /// @param parentPlot QCustomPlot*
 ///
 void q_cplayoutinset_parent_plot_initialized(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_parent_plot_initialized` instead
-///
-#define q_cplayoutinset_qbase_parent_plot_initialized q_cplayoutinset_super_parent_plot_initialized
 
 /// Inherited from QCPLayoutElement
 ///
@@ -18364,10 +17304,6 @@ void q_cplayoutinset_on_parent_plot_initialized(void* self, void (*callback)(voi
 ///
 int32_t q_cplayoutinset_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_selection_category` instead
-///
-#define q_cplayoutinset_qbase_selection_category q_cplayoutinset_super_selection_category
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -18400,10 +17336,6 @@ void q_cplayoutinset_on_selection_category(void* self, int32_t (*callback)());
 /// @param self QCPLayoutInset*
 ///
 QRect* q_cplayoutinset_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_clip_rect` instead
-///
-#define q_cplayoutinset_qbase_clip_rect q_cplayoutinset_super_clip_rect
 
 /// Inherited from QCPLayerable
 ///
@@ -18442,10 +17374,6 @@ void q_cplayoutinset_on_clip_rect(void* self, QRect* (*callback)());
 ///
 void q_cplayoutinset_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_select_event` instead
-///
-#define q_cplayoutinset_qbase_select_event q_cplayoutinset_super_select_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -18482,10 +17410,6 @@ void q_cplayoutinset_on_select_event(void* self, void (*callback)(void*, void*, 
 ///
 void q_cplayoutinset_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_deselect_event` instead
-///
-#define q_cplayoutinset_qbase_deselect_event q_cplayoutinset_super_deselect_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -18519,10 +17443,6 @@ void q_cplayoutinset_on_deselect_event(void* self, void (*callback)(void*, bool*
 /// @param details QVariant*
 ///
 void q_cplayoutinset_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_mouse_press_event` instead
-///
-#define q_cplayoutinset_qbase_mouse_press_event q_cplayoutinset_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -18559,10 +17479,6 @@ void q_cplayoutinset_on_mouse_press_event(void* self, void (*callback)(void*, vo
 ///
 void q_cplayoutinset_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_mouse_move_event` instead
-///
-#define q_cplayoutinset_qbase_mouse_move_event q_cplayoutinset_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -18597,10 +17513,6 @@ void q_cplayoutinset_on_mouse_move_event(void* self, void (*callback)(void*, voi
 /// @param startPos QPointF*
 ///
 void q_cplayoutinset_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_mouse_release_event` instead
-///
-#define q_cplayoutinset_qbase_mouse_release_event q_cplayoutinset_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -18637,10 +17549,6 @@ void q_cplayoutinset_on_mouse_release_event(void* self, void (*callback)(void*, 
 ///
 void q_cplayoutinset_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_mouse_double_click_event` instead
-///
-#define q_cplayoutinset_qbase_mouse_double_click_event q_cplayoutinset_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -18675,10 +17583,6 @@ void q_cplayoutinset_on_mouse_double_click_event(void* self, void (*callback)(vo
 ///
 void q_cplayoutinset_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_wheel_event` instead
-///
-#define q_cplayoutinset_qbase_wheel_event q_cplayoutinset_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -18711,10 +17615,6 @@ void q_cplayoutinset_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cplayoutinset_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_event` instead
-///
-#define q_cplayoutinset_qbase_event q_cplayoutinset_super_event
 
 /// Inherited from QObject
 ///
@@ -18750,10 +17650,6 @@ void q_cplayoutinset_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cplayoutinset_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_event_filter` instead
-///
-#define q_cplayoutinset_qbase_event_filter q_cplayoutinset_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -18788,10 +17684,6 @@ void q_cplayoutinset_on_event_filter(void* self, bool (*callback)(void*, void*, 
 ///
 void q_cplayoutinset_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_timer_event` instead
-///
-#define q_cplayoutinset_qbase_timer_event q_cplayoutinset_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -18824,10 +17716,6 @@ void q_cplayoutinset_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cplayoutinset_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_child_event` instead
-///
-#define q_cplayoutinset_qbase_child_event q_cplayoutinset_super_child_event
 
 /// Inherited from QObject
 ///
@@ -18862,10 +17750,6 @@ void q_cplayoutinset_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cplayoutinset_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_custom_event` instead
-///
-#define q_cplayoutinset_qbase_custom_event q_cplayoutinset_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -18898,10 +17782,6 @@ void q_cplayoutinset_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param signal QMetaMethod*
 ///
 void q_cplayoutinset_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_connect_notify` instead
-///
-#define q_cplayoutinset_qbase_connect_notify q_cplayoutinset_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -18936,10 +17816,6 @@ void q_cplayoutinset_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void q_cplayoutinset_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_disconnect_notify` instead
-///
-#define q_cplayoutinset_qbase_disconnect_notify q_cplayoutinset_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -18971,10 +17847,6 @@ void q_cplayoutinset_on_disconnect_notify(void* self, void (*callback)(void*, vo
 /// @param self QCPLayoutInset*
 ///
 void q_cplayoutinset_size_constraints_changed(void* self);
-
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_size_constraints_changed` instead
-///
-#define q_cplayoutinset_qbase_size_constraints_changed q_cplayoutinset_super_size_constraints_changed
 
 /// Inherited from QCPLayout
 ///
@@ -19008,10 +17880,6 @@ void q_cplayoutinset_on_size_constraints_changed(void* self, void (*callback)())
 ///
 void q_cplayoutinset_adopt_element(void* self, void* el);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_adopt_element` instead
-///
-#define q_cplayoutinset_qbase_adopt_element q_cplayoutinset_super_adopt_element
-
 /// Inherited from QCPLayout
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
@@ -19044,10 +17912,6 @@ void q_cplayoutinset_on_adopt_element(void* self, void (*callback)(void*, void*)
 /// @param el QCPLayoutElement*
 ///
 void q_cplayoutinset_release_element(void* self, void* el);
-
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_release_element` instead
-///
-#define q_cplayoutinset_qbase_release_element q_cplayoutinset_super_release_element
 
 /// Inherited from QCPLayout
 ///
@@ -19087,10 +17951,6 @@ void q_cplayoutinset_on_release_element(void* self, void (*callback)(void*, void
 ///
 libqt_list q_cplayoutinset_get_section_sizes(void* self, libqt_list maxSizes, libqt_list minSizes, libqt_list stretchFactors, int totalSize);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_get_section_sizes` instead
-///
-#define q_cplayoutinset_qbase_get_section_sizes q_cplayoutinset_super_get_section_sizes
-
 /// Inherited from QCPLayout
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
@@ -19129,10 +17989,6 @@ void q_cplayoutinset_on_get_section_sizes(void* self, libqt_list (*callback)(voi
 ///
 void q_cplayoutinset_initialize_parent_plot(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_initialize_parent_plot` instead
-///
-#define q_cplayoutinset_qbase_initialize_parent_plot q_cplayoutinset_super_initialize_parent_plot
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -19165,10 +18021,6 @@ void q_cplayoutinset_on_initialize_parent_plot(void* self, void (*callback)(void
 /// @param parentLayerable QCPLayerable*
 ///
 void q_cplayoutinset_set_parent_layerable(void* self, void* parentLayerable);
-
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_set_parent_layerable` instead
-///
-#define q_cplayoutinset_qbase_set_parent_layerable q_cplayoutinset_super_set_parent_layerable
 
 /// Inherited from QCPLayerable
 ///
@@ -19203,10 +18055,6 @@ void q_cplayoutinset_on_set_parent_layerable(void* self, void (*callback)(void*,
 /// @param prepend bool
 ///
 bool q_cplayoutinset_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_move_to_layer` instead
-///
-#define q_cplayoutinset_qbase_move_to_layer q_cplayoutinset_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -19244,10 +18092,6 @@ void q_cplayoutinset_on_move_to_layer(void* self, bool (*callback)(void*, void*,
 ///
 void q_cplayoutinset_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_apply_antialiasing_hint` instead
-///
-#define q_cplayoutinset_qbase_apply_antialiasing_hint q_cplayoutinset_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -19282,10 +18126,6 @@ void q_cplayoutinset_on_apply_antialiasing_hint(void* self, void (*callback)(voi
 ///
 QObject* q_cplayoutinset_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_sender` instead
-///
-#define q_cplayoutinset_qbase_sender q_cplayoutinset_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -19316,10 +18156,6 @@ void q_cplayoutinset_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPLayoutInset*
 ///
 int32_t q_cplayoutinset_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_sender_signal_index` instead
-///
-#define q_cplayoutinset_qbase_sender_signal_index q_cplayoutinset_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -19353,10 +18189,6 @@ void q_cplayoutinset_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cplayoutinset_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_receivers` instead
-///
-#define q_cplayoutinset_qbase_receivers q_cplayoutinset_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -19389,10 +18221,6 @@ void q_cplayoutinset_on_receivers(void* self, int32_t (*callback)(void*, const c
 /// @param signal QMetaMethod*
 ///
 bool q_cplayoutinset_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cplayoutinset_super_is_signal_connected` instead
-///
-#define q_cplayoutinset_qbase_is_signal_connected q_cplayoutinset_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -19678,10 +18506,6 @@ void q_cpaxisticker_generate(void* self, void* range, void* locale, void* format
 ///
 void q_cpaxisticker_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**));
 
-/// @warning DEPRECATED: Use `q_cpaxisticker_super_generate` instead
-///
-#define q_cpaxisticker_qbase_generate q_cpaxisticker_super_generate
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
 /// Base class method implementation
@@ -19713,10 +18537,6 @@ double q_cpaxisticker_get_tick_step(void* self, void* range);
 ///
 void q_cpaxisticker_on_get_tick_step(void* self, double (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpaxisticker_super_get_tick_step` instead
-///
-#define q_cpaxisticker_qbase_get_tick_step q_cpaxisticker_super_get_tick_step
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
 /// Base class method implementation
@@ -19741,10 +18561,6 @@ int32_t q_cpaxisticker_get_sub_tick_count(void* self, double tickStep);
 /// @param callback int32_t func(QCPAxisTicker* self, double tickStep)
 ///
 void q_cpaxisticker_on_get_sub_tick_count(void* self, int32_t (*callback)(void*, double));
-
-/// @warning DEPRECATED: Use `q_cpaxisticker_super_get_sub_tick_count` instead
-///
-#define q_cpaxisticker_qbase_get_sub_tick_count q_cpaxisticker_super_get_sub_tick_count
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
@@ -19775,10 +18591,6 @@ const char* q_cpaxisticker_get_tick_label(void* self, double tick, void* locale,
 /// @param callback const char* func(QCPAxisTicker* self, double tick, QLocale* locale, QChar* formatChar, int precision)
 ///
 void q_cpaxisticker_on_get_tick_label(void* self, const char* (*callback)(void*, double, void*, void*, int));
-
-/// @warning DEPRECATED: Use `q_cpaxisticker_super_get_tick_label` instead
-///
-#define q_cpaxisticker_qbase_get_tick_label q_cpaxisticker_super_get_tick_label
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
@@ -19811,10 +18623,6 @@ libqt_list q_cpaxisticker_create_tick_vector(void* self, double tickStep, void* 
 ///
 void q_cpaxisticker_on_create_tick_vector(void* self, libqt_list (*callback)(void*, double, void*));
 
-/// @warning DEPRECATED: Use `q_cpaxisticker_super_create_tick_vector` instead
-///
-#define q_cpaxisticker_qbase_create_tick_vector q_cpaxisticker_super_create_tick_vector
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
 /// Base class method implementation
@@ -19845,10 +18653,6 @@ libqt_list q_cpaxisticker_create_sub_tick_vector(void* self, int subTickCount, l
 /// @param callback libqt_list of double func(QCPAxisTicker* self, int subTickCount, libqt_list of double ticks)
 ///
 void q_cpaxisticker_on_create_sub_tick_vector(void* self, libqt_list (*callback)(void*, int, libqt_list));
-
-/// @warning DEPRECATED: Use `q_cpaxisticker_super_create_sub_tick_vector` instead
-///
-#define q_cpaxisticker_qbase_create_sub_tick_vector q_cpaxisticker_super_create_sub_tick_vector
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
@@ -19883,10 +18687,6 @@ const char** q_cpaxisticker_create_label_vector(void* self, libqt_list ticks, vo
 ///
 void q_cpaxisticker_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list, void*, void*, int));
 
-/// @warning DEPRECATED: Use `q_cpaxisticker_super_create_label_vector` instead
-///
-#define q_cpaxisticker_qbase_create_label_vector q_cpaxisticker_super_create_label_vector
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
 /// Base class method implementation
@@ -19917,10 +18717,6 @@ void q_cpaxisticker_trim_ticks(void* self, void* range, libqt_list ticks, bool k
 ///
 void q_cpaxisticker_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list, bool));
 
-/// @warning DEPRECATED: Use `q_cpaxisticker_super_trim_ticks` instead
-///
-#define q_cpaxisticker_qbase_trim_ticks q_cpaxisticker_super_trim_ticks
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
 /// Base class method implementation
@@ -19949,10 +18745,6 @@ double q_cpaxisticker_pick_closest(void* self, double target, libqt_list candida
 ///
 void q_cpaxisticker_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list));
 
-/// @warning DEPRECATED: Use `q_cpaxisticker_super_pick_closest` instead
-///
-#define q_cpaxisticker_qbase_pick_closest q_cpaxisticker_super_pick_closest
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
 /// Base class method implementation
@@ -19979,10 +18771,6 @@ double q_cpaxisticker_get_mantissa(void* self, double input);
 ///
 void q_cpaxisticker_on_get_mantissa(void* self, double (*callback)(void*, double));
 
-/// @warning DEPRECATED: Use `q_cpaxisticker_super_get_mantissa` instead
-///
-#define q_cpaxisticker_qbase_get_mantissa q_cpaxisticker_super_get_mantissa
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
 /// Base class method implementation
@@ -20007,10 +18795,6 @@ double q_cpaxisticker_clean_mantissa(void* self, double input);
 /// @param callback double func(QCPAxisTicker* self, double input)
 ///
 void q_cpaxisticker_on_clean_mantissa(void* self, double (*callback)(void*, double));
-
-/// @warning DEPRECATED: Use `q_cpaxisticker_super_clean_mantissa` instead
-///
-#define q_cpaxisticker_qbase_clean_mantissa q_cpaxisticker_super_clean_mantissa
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
@@ -20037,10 +18821,6 @@ double q_cpaxisticker_get_mantissa2(void* self, double input, double* magnitude)
 /// @param callback double func(QCPAxisTicker* self, double input, double* magnitude)
 ///
 void q_cpaxisticker_on_get_mantissa2(void* self, double (*callback)(void*, double, double*));
-
-/// @warning DEPRECATED: Use `q_cpaxisticker_super_get_mantissa2` instead
-///
-#define q_cpaxisticker_qbase_get_mantissa2 q_cpaxisticker_super_get_mantissa2
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
@@ -20157,10 +18937,6 @@ double q_cpaxistickerdatetime_get_tick_step(void* self, void* range);
 ///
 void q_cpaxistickerdatetime_on_get_tick_step(void* self, double (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpaxistickerdatetime_super_get_tick_step` instead
-///
-#define q_cpaxistickerdatetime_qbase_get_tick_step q_cpaxistickerdatetime_super_get_tick_step
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerDateTime.html)
 ///
 /// Base class method implementation
@@ -20185,10 +18961,6 @@ int32_t q_cpaxistickerdatetime_get_sub_tick_count(void* self, double tickStep);
 /// @param callback int32_t func(QCPAxisTickerDateTime* self, double tickStep)
 ///
 void q_cpaxistickerdatetime_on_get_sub_tick_count(void* self, int32_t (*callback)(void*, double));
-
-/// @warning DEPRECATED: Use `q_cpaxistickerdatetime_super_get_sub_tick_count` instead
-///
-#define q_cpaxistickerdatetime_qbase_get_sub_tick_count q_cpaxistickerdatetime_super_get_sub_tick_count
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerDateTime.html)
 ///
@@ -20220,10 +18992,6 @@ const char* q_cpaxistickerdatetime_get_tick_label(void* self, double tick, void*
 ///
 void q_cpaxistickerdatetime_on_get_tick_label(void* self, const char* (*callback)(void*, double, void*, void*, int));
 
-/// @warning DEPRECATED: Use `q_cpaxistickerdatetime_super_get_tick_label` instead
-///
-#define q_cpaxistickerdatetime_qbase_get_tick_label q_cpaxistickerdatetime_super_get_tick_label
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerDateTime.html)
 ///
 /// Base class method implementation
@@ -20254,10 +19022,6 @@ libqt_list q_cpaxistickerdatetime_create_tick_vector(void* self, double tickStep
 /// @param callback libqt_list of double func(QCPAxisTickerDateTime* self, double tickStep, QCPRange* range)
 ///
 void q_cpaxistickerdatetime_on_create_tick_vector(void* self, libqt_list (*callback)(void*, double, void*));
-
-/// @warning DEPRECATED: Use `q_cpaxistickerdatetime_super_create_tick_vector` instead
-///
-#define q_cpaxistickerdatetime_qbase_create_tick_vector q_cpaxistickerdatetime_super_create_tick_vector
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerDateTime.html)
 ///
@@ -20339,10 +19103,6 @@ void q_cpaxistickerdatetime_set_tick_count(void* self, int count);
 ///
 void q_cpaxistickerdatetime_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerdatetime_super_generate` instead
-///
-#define q_cpaxistickerdatetime_qbase_generate q_cpaxistickerdatetime_super_generate
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -20385,10 +19145,6 @@ void q_cpaxistickerdatetime_on_generate(void* self, void (*callback)(void*, void
 ///
 libqt_list q_cpaxistickerdatetime_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerdatetime_super_create_sub_tick_vector` instead
-///
-#define q_cpaxistickerdatetime_qbase_create_sub_tick_vector q_cpaxistickerdatetime_super_create_sub_tick_vector
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -20430,10 +19186,6 @@ void q_cpaxistickerdatetime_on_create_sub_tick_vector(void* self, libqt_list (*c
 ///
 const char** q_cpaxistickerdatetime_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerdatetime_super_create_label_vector` instead
-///
-#define q_cpaxistickerdatetime_qbase_create_label_vector q_cpaxistickerdatetime_super_create_label_vector
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -20474,10 +19226,6 @@ void q_cpaxistickerdatetime_on_create_label_vector(void* self, const char** (*ca
 ///
 void q_cpaxistickerdatetime_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerdatetime_super_trim_ticks` instead
-///
-#define q_cpaxistickerdatetime_qbase_trim_ticks q_cpaxistickerdatetime_super_trim_ticks
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -20514,10 +19262,6 @@ void q_cpaxistickerdatetime_on_trim_ticks(void* self, void (*callback)(void*, vo
 ///
 double q_cpaxistickerdatetime_pick_closest(void* self, double target, libqt_list candidates);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerdatetime_super_pick_closest` instead
-///
-#define q_cpaxistickerdatetime_qbase_pick_closest q_cpaxistickerdatetime_super_pick_closest
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -20552,10 +19296,6 @@ void q_cpaxistickerdatetime_on_pick_closest(void* self, double (*callback)(void*
 ///
 double q_cpaxistickerdatetime_get_mantissa(void* self, double input);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerdatetime_super_get_mantissa` instead
-///
-#define q_cpaxistickerdatetime_qbase_get_mantissa q_cpaxistickerdatetime_super_get_mantissa
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -20588,10 +19328,6 @@ void q_cpaxistickerdatetime_on_get_mantissa(void* self, double (*callback)(void*
 /// @param input double
 ///
 double q_cpaxistickerdatetime_clean_mantissa(void* self, double input);
-
-/// @warning DEPRECATED: Use `q_cpaxistickerdatetime_super_clean_mantissa` instead
-///
-#define q_cpaxistickerdatetime_qbase_clean_mantissa q_cpaxistickerdatetime_super_clean_mantissa
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20675,10 +19411,6 @@ double q_cpaxistickertime_get_tick_step(void* self, void* range);
 ///
 void q_cpaxistickertime_on_get_tick_step(void* self, double (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpaxistickertime_super_get_tick_step` instead
-///
-#define q_cpaxistickertime_qbase_get_tick_step q_cpaxistickertime_super_get_tick_step
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerTime.html)
 ///
 /// Base class method implementation
@@ -20703,10 +19435,6 @@ int32_t q_cpaxistickertime_get_sub_tick_count(void* self, double tickStep);
 /// @param callback int32_t func(QCPAxisTickerTime* self, double tickStep)
 ///
 void q_cpaxistickertime_on_get_sub_tick_count(void* self, int32_t (*callback)(void*, double));
-
-/// @warning DEPRECATED: Use `q_cpaxistickertime_super_get_sub_tick_count` instead
-///
-#define q_cpaxistickertime_qbase_get_sub_tick_count q_cpaxistickertime_super_get_sub_tick_count
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerTime.html)
 ///
@@ -20738,10 +19466,6 @@ const char* q_cpaxistickertime_get_tick_label(void* self, double tick, void* loc
 ///
 void q_cpaxistickertime_on_get_tick_label(void* self, const char* (*callback)(void*, double, void*, void*, int));
 
-/// @warning DEPRECATED: Use `q_cpaxistickertime_super_get_tick_label` instead
-///
-#define q_cpaxistickertime_qbase_get_tick_label q_cpaxistickertime_super_get_tick_label
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerTime.html)
 ///
 /// Base class method implementation
@@ -20771,10 +19495,6 @@ void q_cpaxistickertime_replace_unit(void* self, const char* text, int32_t unit,
 /// @param callback void func(QCPAxisTickerTime* self, const char* text, enum QCPAxisTickerTime__TimeUnit unit, int value)
 ///
 void q_cpaxistickertime_on_replace_unit(void* self, void (*callback)(void*, const char*, int32_t, int));
-
-/// @warning DEPRECATED: Use `q_cpaxistickertime_super_replace_unit` instead
-///
-#define q_cpaxistickertime_qbase_replace_unit q_cpaxistickertime_super_replace_unit
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerTime.html)
 ///
@@ -20857,10 +19577,6 @@ void q_cpaxistickertime_set_tick_origin(void* self, double origin);
 ///
 void q_cpaxistickertime_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
 
-/// @warning DEPRECATED: Use `q_cpaxistickertime_super_generate` instead
-///
-#define q_cpaxistickertime_qbase_generate q_cpaxistickertime_super_generate
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -20903,10 +19619,6 @@ void q_cpaxistickertime_on_generate(void* self, void (*callback)(void*, void*, v
 ///
 libqt_list q_cpaxistickertime_create_tick_vector(void* self, double tickStep, void* range);
 
-/// @warning DEPRECATED: Use `q_cpaxistickertime_super_create_tick_vector` instead
-///
-#define q_cpaxistickertime_qbase_create_tick_vector q_cpaxistickertime_super_create_tick_vector
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -20945,10 +19657,6 @@ void q_cpaxistickertime_on_create_tick_vector(void* self, libqt_list (*callback)
 /// @return libqt_list of double
 ///
 libqt_list q_cpaxistickertime_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks);
-
-/// @warning DEPRECATED: Use `q_cpaxistickertime_super_create_sub_tick_vector` instead
-///
-#define q_cpaxistickertime_qbase_create_sub_tick_vector q_cpaxistickertime_super_create_sub_tick_vector
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20991,10 +19699,6 @@ void q_cpaxistickertime_on_create_sub_tick_vector(void* self, libqt_list (*callb
 ///
 const char** q_cpaxistickertime_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision);
 
-/// @warning DEPRECATED: Use `q_cpaxistickertime_super_create_label_vector` instead
-///
-#define q_cpaxistickertime_qbase_create_label_vector q_cpaxistickertime_super_create_label_vector
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -21035,10 +19739,6 @@ void q_cpaxistickertime_on_create_label_vector(void* self, const char** (*callba
 ///
 void q_cpaxistickertime_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier);
 
-/// @warning DEPRECATED: Use `q_cpaxistickertime_super_trim_ticks` instead
-///
-#define q_cpaxistickertime_qbase_trim_ticks q_cpaxistickertime_super_trim_ticks
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -21075,10 +19775,6 @@ void q_cpaxistickertime_on_trim_ticks(void* self, void (*callback)(void*, void*,
 ///
 double q_cpaxistickertime_pick_closest(void* self, double target, libqt_list candidates);
 
-/// @warning DEPRECATED: Use `q_cpaxistickertime_super_pick_closest` instead
-///
-#define q_cpaxistickertime_qbase_pick_closest q_cpaxistickertime_super_pick_closest
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -21113,10 +19809,6 @@ void q_cpaxistickertime_on_pick_closest(void* self, double (*callback)(void*, do
 ///
 double q_cpaxistickertime_get_mantissa(void* self, double input);
 
-/// @warning DEPRECATED: Use `q_cpaxistickertime_super_get_mantissa` instead
-///
-#define q_cpaxistickertime_qbase_get_mantissa q_cpaxistickertime_super_get_mantissa
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -21149,10 +19841,6 @@ void q_cpaxistickertime_on_get_mantissa(void* self, double (*callback)(void*, do
 /// @param input double
 ///
 double q_cpaxistickertime_clean_mantissa(void* self, double input);
-
-/// @warning DEPRECATED: Use `q_cpaxistickertime_super_clean_mantissa` instead
-///
-#define q_cpaxistickertime_qbase_clean_mantissa q_cpaxistickertime_super_clean_mantissa
 
 /// Inherited from QCPAxisTicker
 ///
@@ -21234,10 +19922,6 @@ double q_cpaxistickerfixed_get_tick_step(void* self, void* range);
 ///
 void q_cpaxistickerfixed_on_get_tick_step(void* self, double (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpaxistickerfixed_super_get_tick_step` instead
-///
-#define q_cpaxistickerfixed_qbase_get_tick_step q_cpaxistickerfixed_super_get_tick_step
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerFixed.html)
 ///
 /// Base class method implementation
@@ -21317,10 +20001,6 @@ void q_cpaxistickerfixed_set_tick_origin(void* self, double origin);
 ///
 void q_cpaxistickerfixed_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerfixed_super_generate` instead
-///
-#define q_cpaxistickerfixed_qbase_generate q_cpaxistickerfixed_super_generate
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -21360,10 +20040,6 @@ void q_cpaxistickerfixed_on_generate(void* self, void (*callback)(void*, void*, 
 ///
 int32_t q_cpaxistickerfixed_get_sub_tick_count(void* self, double tickStep);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerfixed_super_get_sub_tick_count` instead
-///
-#define q_cpaxistickerfixed_qbase_get_sub_tick_count q_cpaxistickerfixed_super_get_sub_tick_count
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -21401,10 +20077,6 @@ void q_cpaxistickerfixed_on_get_sub_tick_count(void* self, int32_t (*callback)(v
 /// @param precision int
 ///
 const char* q_cpaxistickerfixed_get_tick_label(void* self, double tick, void* locale, void* formatChar, int precision);
-
-/// @warning DEPRECATED: Use `q_cpaxistickerfixed_super_get_tick_label` instead
-///
-#define q_cpaxistickerfixed_qbase_get_tick_label q_cpaxistickerfixed_super_get_tick_label
 
 /// Inherited from QCPAxisTicker
 ///
@@ -21447,10 +20119,6 @@ void q_cpaxistickerfixed_on_get_tick_label(void* self, const char* (*callback)(v
 ///
 libqt_list q_cpaxistickerfixed_create_tick_vector(void* self, double tickStep, void* range);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerfixed_super_create_tick_vector` instead
-///
-#define q_cpaxistickerfixed_qbase_create_tick_vector q_cpaxistickerfixed_super_create_tick_vector
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -21489,10 +20157,6 @@ void q_cpaxistickerfixed_on_create_tick_vector(void* self, libqt_list (*callback
 /// @return libqt_list of double
 ///
 libqt_list q_cpaxistickerfixed_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks);
-
-/// @warning DEPRECATED: Use `q_cpaxistickerfixed_super_create_sub_tick_vector` instead
-///
-#define q_cpaxistickerfixed_qbase_create_sub_tick_vector q_cpaxistickerfixed_super_create_sub_tick_vector
 
 /// Inherited from QCPAxisTicker
 ///
@@ -21535,10 +20199,6 @@ void q_cpaxistickerfixed_on_create_sub_tick_vector(void* self, libqt_list (*call
 ///
 const char** q_cpaxistickerfixed_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerfixed_super_create_label_vector` instead
-///
-#define q_cpaxistickerfixed_qbase_create_label_vector q_cpaxistickerfixed_super_create_label_vector
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -21579,10 +20239,6 @@ void q_cpaxistickerfixed_on_create_label_vector(void* self, const char** (*callb
 ///
 void q_cpaxistickerfixed_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerfixed_super_trim_ticks` instead
-///
-#define q_cpaxistickerfixed_qbase_trim_ticks q_cpaxistickerfixed_super_trim_ticks
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -21619,10 +20275,6 @@ void q_cpaxistickerfixed_on_trim_ticks(void* self, void (*callback)(void*, void*
 ///
 double q_cpaxistickerfixed_pick_closest(void* self, double target, libqt_list candidates);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerfixed_super_pick_closest` instead
-///
-#define q_cpaxistickerfixed_qbase_pick_closest q_cpaxistickerfixed_super_pick_closest
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -21657,10 +20309,6 @@ void q_cpaxistickerfixed_on_pick_closest(void* self, double (*callback)(void*, d
 ///
 double q_cpaxistickerfixed_get_mantissa(void* self, double input);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerfixed_super_get_mantissa` instead
-///
-#define q_cpaxistickerfixed_qbase_get_mantissa q_cpaxistickerfixed_super_get_mantissa
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -21693,10 +20341,6 @@ void q_cpaxistickerfixed_on_get_mantissa(void* self, double (*callback)(void*, d
 /// @param input double
 ///
 double q_cpaxistickerfixed_clean_mantissa(void* self, double input);
-
-/// @warning DEPRECATED: Use `q_cpaxistickerfixed_super_clean_mantissa` instead
-///
-#define q_cpaxistickerfixed_qbase_clean_mantissa q_cpaxistickerfixed_super_clean_mantissa
 
 /// Inherited from QCPAxisTicker
 ///
@@ -21826,10 +20470,6 @@ double q_cpaxistickertext_get_tick_step(void* self, void* range);
 ///
 void q_cpaxistickertext_on_get_tick_step(void* self, double (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpaxistickertext_super_get_tick_step` instead
-///
-#define q_cpaxistickertext_qbase_get_tick_step q_cpaxistickertext_super_get_tick_step
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerText.html)
 ///
 /// Base class method implementation
@@ -21854,10 +20494,6 @@ int32_t q_cpaxistickertext_get_sub_tick_count(void* self, double tickStep);
 /// @param callback int32_t func(QCPAxisTickerText* self, double tickStep)
 ///
 void q_cpaxistickertext_on_get_sub_tick_count(void* self, int32_t (*callback)(void*, double));
-
-/// @warning DEPRECATED: Use `q_cpaxistickertext_super_get_sub_tick_count` instead
-///
-#define q_cpaxistickertext_qbase_get_sub_tick_count q_cpaxistickertext_super_get_sub_tick_count
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerText.html)
 ///
@@ -21889,10 +20525,6 @@ const char* q_cpaxistickertext_get_tick_label(void* self, double tick, void* loc
 ///
 void q_cpaxistickertext_on_get_tick_label(void* self, const char* (*callback)(void*, double, void*, void*, int));
 
-/// @warning DEPRECATED: Use `q_cpaxistickertext_super_get_tick_label` instead
-///
-#define q_cpaxistickertext_qbase_get_tick_label q_cpaxistickertext_super_get_tick_label
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerText.html)
 ///
 /// Base class method implementation
@@ -21923,10 +20555,6 @@ libqt_list q_cpaxistickertext_create_tick_vector(void* self, double tickStep, vo
 /// @param callback libqt_list of double func(QCPAxisTickerText* self, double tickStep, QCPRange* range)
 ///
 void q_cpaxistickertext_on_create_tick_vector(void* self, libqt_list (*callback)(void*, double, void*));
-
-/// @warning DEPRECATED: Use `q_cpaxistickertext_super_create_tick_vector` instead
-///
-#define q_cpaxistickertext_qbase_create_tick_vector q_cpaxistickertext_super_create_tick_vector
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerText.html)
 ///
@@ -22010,10 +20638,6 @@ void q_cpaxistickertext_set_tick_origin(void* self, double origin);
 ///
 void q_cpaxistickertext_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
 
-/// @warning DEPRECATED: Use `q_cpaxistickertext_super_generate` instead
-///
-#define q_cpaxistickertext_qbase_generate q_cpaxistickertext_super_generate
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -22056,10 +20680,6 @@ void q_cpaxistickertext_on_generate(void* self, void (*callback)(void*, void*, v
 ///
 libqt_list q_cpaxistickertext_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks);
 
-/// @warning DEPRECATED: Use `q_cpaxistickertext_super_create_sub_tick_vector` instead
-///
-#define q_cpaxistickertext_qbase_create_sub_tick_vector q_cpaxistickertext_super_create_sub_tick_vector
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -22101,10 +20721,6 @@ void q_cpaxistickertext_on_create_sub_tick_vector(void* self, libqt_list (*callb
 ///
 const char** q_cpaxistickertext_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision);
 
-/// @warning DEPRECATED: Use `q_cpaxistickertext_super_create_label_vector` instead
-///
-#define q_cpaxistickertext_qbase_create_label_vector q_cpaxistickertext_super_create_label_vector
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -22145,10 +20761,6 @@ void q_cpaxistickertext_on_create_label_vector(void* self, const char** (*callba
 ///
 void q_cpaxistickertext_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier);
 
-/// @warning DEPRECATED: Use `q_cpaxistickertext_super_trim_ticks` instead
-///
-#define q_cpaxistickertext_qbase_trim_ticks q_cpaxistickertext_super_trim_ticks
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -22185,10 +20797,6 @@ void q_cpaxistickertext_on_trim_ticks(void* self, void (*callback)(void*, void*,
 ///
 double q_cpaxistickertext_pick_closest(void* self, double target, libqt_list candidates);
 
-/// @warning DEPRECATED: Use `q_cpaxistickertext_super_pick_closest` instead
-///
-#define q_cpaxistickertext_qbase_pick_closest q_cpaxistickertext_super_pick_closest
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -22223,10 +20831,6 @@ void q_cpaxistickertext_on_pick_closest(void* self, double (*callback)(void*, do
 ///
 double q_cpaxistickertext_get_mantissa(void* self, double input);
 
-/// @warning DEPRECATED: Use `q_cpaxistickertext_super_get_mantissa` instead
-///
-#define q_cpaxistickertext_qbase_get_mantissa q_cpaxistickertext_super_get_mantissa
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -22259,10 +20863,6 @@ void q_cpaxistickertext_on_get_mantissa(void* self, double (*callback)(void*, do
 /// @param input double
 ///
 double q_cpaxistickertext_clean_mantissa(void* self, double input);
-
-/// @warning DEPRECATED: Use `q_cpaxistickertext_super_clean_mantissa` instead
-///
-#define q_cpaxistickertext_qbase_clean_mantissa q_cpaxistickertext_super_clean_mantissa
 
 /// Inherited from QCPAxisTicker
 ///
@@ -22372,10 +20972,6 @@ double q_cpaxistickerpi_get_tick_step(void* self, void* range);
 ///
 void q_cpaxistickerpi_on_get_tick_step(void* self, double (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpaxistickerpi_super_get_tick_step` instead
-///
-#define q_cpaxistickerpi_qbase_get_tick_step q_cpaxistickerpi_super_get_tick_step
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerPi.html)
 ///
 /// Base class method implementation
@@ -22400,10 +20996,6 @@ int32_t q_cpaxistickerpi_get_sub_tick_count(void* self, double tickStep);
 /// @param callback int32_t func(QCPAxisTickerPi* self, double tickStep)
 ///
 void q_cpaxistickerpi_on_get_sub_tick_count(void* self, int32_t (*callback)(void*, double));
-
-/// @warning DEPRECATED: Use `q_cpaxistickerpi_super_get_sub_tick_count` instead
-///
-#define q_cpaxistickerpi_qbase_get_sub_tick_count q_cpaxistickerpi_super_get_sub_tick_count
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerPi.html)
 ///
@@ -22435,10 +21027,6 @@ const char* q_cpaxistickerpi_get_tick_label(void* self, double tick, void* local
 ///
 void q_cpaxistickerpi_on_get_tick_label(void* self, const char* (*callback)(void*, double, void*, void*, int));
 
-/// @warning DEPRECATED: Use `q_cpaxistickerpi_super_get_tick_label` instead
-///
-#define q_cpaxistickerpi_qbase_get_tick_label q_cpaxistickerpi_super_get_tick_label
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerPi.html)
 ///
 /// Base class method implementation
@@ -22467,10 +21055,6 @@ void q_cpaxistickerpi_simplify_fraction(void* self, int* numerator, int* denomin
 /// @param callback void func(QCPAxisTickerPi* self, int* numerator, int* denominator)
 ///
 void q_cpaxistickerpi_on_simplify_fraction(void* self, void (*callback)(void*, int*, int*));
-
-/// @warning DEPRECATED: Use `q_cpaxistickerpi_super_simplify_fraction` instead
-///
-#define q_cpaxistickerpi_qbase_simplify_fraction q_cpaxistickerpi_super_simplify_fraction
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerPi.html)
 ///
@@ -22501,10 +21085,6 @@ const char* q_cpaxistickerpi_fraction_to_string(void* self, int numerator, int d
 ///
 void q_cpaxistickerpi_on_fraction_to_string(void* self, const char* (*callback)(void*, int, int));
 
-/// @warning DEPRECATED: Use `q_cpaxistickerpi_super_fraction_to_string` instead
-///
-#define q_cpaxistickerpi_qbase_fraction_to_string q_cpaxistickerpi_super_fraction_to_string
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerPi.html)
 ///
 /// Base class method implementation
@@ -22534,10 +21114,6 @@ const char* q_cpaxistickerpi_unicode_fraction(void* self, int numerator, int den
 ///
 void q_cpaxistickerpi_on_unicode_fraction(void* self, const char* (*callback)(void*, int, int));
 
-/// @warning DEPRECATED: Use `q_cpaxistickerpi_super_unicode_fraction` instead
-///
-#define q_cpaxistickerpi_qbase_unicode_fraction q_cpaxistickerpi_super_unicode_fraction
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerPi.html)
 ///
 /// Base class method implementation
@@ -22566,10 +21142,6 @@ const char* q_cpaxistickerpi_unicode_superscript(void* self, int number);
 ///
 void q_cpaxistickerpi_on_unicode_superscript(void* self, const char* (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_cpaxistickerpi_super_unicode_superscript` instead
-///
-#define q_cpaxistickerpi_qbase_unicode_superscript q_cpaxistickerpi_super_unicode_superscript
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerPi.html)
 ///
 /// Base class method implementation
@@ -22596,10 +21168,6 @@ const char* q_cpaxistickerpi_unicode_subscript(void* self, int number);
 /// @param callback const char* func(QCPAxisTickerPi* self, int number)
 ///
 void q_cpaxistickerpi_on_unicode_subscript(void* self, const char* (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_cpaxistickerpi_super_unicode_subscript` instead
-///
-#define q_cpaxistickerpi_qbase_unicode_subscript q_cpaxistickerpi_super_unicode_subscript
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerPi.html)
 ///
@@ -22680,10 +21248,6 @@ void q_cpaxistickerpi_set_tick_origin(void* self, double origin);
 ///
 void q_cpaxistickerpi_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerpi_super_generate` instead
-///
-#define q_cpaxistickerpi_qbase_generate q_cpaxistickerpi_super_generate
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -22726,10 +21290,6 @@ void q_cpaxistickerpi_on_generate(void* self, void (*callback)(void*, void*, voi
 ///
 libqt_list q_cpaxistickerpi_create_tick_vector(void* self, double tickStep, void* range);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerpi_super_create_tick_vector` instead
-///
-#define q_cpaxistickerpi_qbase_create_tick_vector q_cpaxistickerpi_super_create_tick_vector
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -22768,10 +21328,6 @@ void q_cpaxistickerpi_on_create_tick_vector(void* self, libqt_list (*callback)(v
 /// @return libqt_list of double
 ///
 libqt_list q_cpaxistickerpi_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks);
-
-/// @warning DEPRECATED: Use `q_cpaxistickerpi_super_create_sub_tick_vector` instead
-///
-#define q_cpaxistickerpi_qbase_create_sub_tick_vector q_cpaxistickerpi_super_create_sub_tick_vector
 
 /// Inherited from QCPAxisTicker
 ///
@@ -22814,10 +21370,6 @@ void q_cpaxistickerpi_on_create_sub_tick_vector(void* self, libqt_list (*callbac
 ///
 const char** q_cpaxistickerpi_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerpi_super_create_label_vector` instead
-///
-#define q_cpaxistickerpi_qbase_create_label_vector q_cpaxistickerpi_super_create_label_vector
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -22858,10 +21410,6 @@ void q_cpaxistickerpi_on_create_label_vector(void* self, const char** (*callback
 ///
 void q_cpaxistickerpi_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerpi_super_trim_ticks` instead
-///
-#define q_cpaxistickerpi_qbase_trim_ticks q_cpaxistickerpi_super_trim_ticks
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -22898,10 +21446,6 @@ void q_cpaxistickerpi_on_trim_ticks(void* self, void (*callback)(void*, void*, l
 ///
 double q_cpaxistickerpi_pick_closest(void* self, double target, libqt_list candidates);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerpi_super_pick_closest` instead
-///
-#define q_cpaxistickerpi_qbase_pick_closest q_cpaxistickerpi_super_pick_closest
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -22936,10 +21480,6 @@ void q_cpaxistickerpi_on_pick_closest(void* self, double (*callback)(void*, doub
 ///
 double q_cpaxistickerpi_get_mantissa(void* self, double input);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerpi_super_get_mantissa` instead
-///
-#define q_cpaxistickerpi_qbase_get_mantissa q_cpaxistickerpi_super_get_mantissa
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -22972,10 +21512,6 @@ void q_cpaxistickerpi_on_get_mantissa(void* self, double (*callback)(void*, doub
 /// @param input double
 ///
 double q_cpaxistickerpi_clean_mantissa(void* self, double input);
-
-/// @warning DEPRECATED: Use `q_cpaxistickerpi_super_clean_mantissa` instead
-///
-#define q_cpaxistickerpi_qbase_clean_mantissa q_cpaxistickerpi_super_clean_mantissa
 
 /// Inherited from QCPAxisTicker
 ///
@@ -23055,10 +21591,6 @@ int32_t q_cpaxistickerlog_get_sub_tick_count(void* self, double tickStep);
 ///
 void q_cpaxistickerlog_on_get_sub_tick_count(void* self, int32_t (*callback)(void*, double));
 
-/// @warning DEPRECATED: Use `q_cpaxistickerlog_super_get_sub_tick_count` instead
-///
-#define q_cpaxistickerlog_qbase_get_sub_tick_count q_cpaxistickerlog_super_get_sub_tick_count
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerLog.html)
 ///
 /// Base class method implementation
@@ -23086,10 +21618,6 @@ libqt_list q_cpaxistickerlog_create_tick_vector(void* self, double tickStep, voi
 /// @param callback libqt_list of double func(QCPAxisTickerLog* self, double tickStep, QCPRange* range)
 ///
 void q_cpaxistickerlog_on_create_tick_vector(void* self, libqt_list (*callback)(void*, double, void*));
-
-/// @warning DEPRECATED: Use `q_cpaxistickerlog_super_create_tick_vector` instead
-///
-#define q_cpaxistickerlog_qbase_create_tick_vector q_cpaxistickerlog_super_create_tick_vector
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerLog.html)
 ///
@@ -23173,10 +21701,6 @@ void q_cpaxistickerlog_set_tick_origin(void* self, double origin);
 ///
 void q_cpaxistickerlog_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerlog_super_generate` instead
-///
-#define q_cpaxistickerlog_qbase_generate q_cpaxistickerlog_super_generate
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -23216,10 +21740,6 @@ void q_cpaxistickerlog_on_generate(void* self, void (*callback)(void*, void*, vo
 ///
 double q_cpaxistickerlog_get_tick_step(void* self, void* range);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerlog_super_get_tick_step` instead
-///
-#define q_cpaxistickerlog_qbase_get_tick_step q_cpaxistickerlog_super_get_tick_step
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -23257,10 +21777,6 @@ void q_cpaxistickerlog_on_get_tick_step(void* self, double (*callback)(void*, vo
 /// @param precision int
 ///
 const char* q_cpaxistickerlog_get_tick_label(void* self, double tick, void* locale, void* formatChar, int precision);
-
-/// @warning DEPRECATED: Use `q_cpaxistickerlog_super_get_tick_label` instead
-///
-#define q_cpaxistickerlog_qbase_get_tick_label q_cpaxistickerlog_super_get_tick_label
 
 /// Inherited from QCPAxisTicker
 ///
@@ -23303,10 +21819,6 @@ void q_cpaxistickerlog_on_get_tick_label(void* self, const char* (*callback)(voi
 ///
 libqt_list q_cpaxistickerlog_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerlog_super_create_sub_tick_vector` instead
-///
-#define q_cpaxistickerlog_qbase_create_sub_tick_vector q_cpaxistickerlog_super_create_sub_tick_vector
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -23348,10 +21860,6 @@ void q_cpaxistickerlog_on_create_sub_tick_vector(void* self, libqt_list (*callba
 ///
 const char** q_cpaxistickerlog_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerlog_super_create_label_vector` instead
-///
-#define q_cpaxistickerlog_qbase_create_label_vector q_cpaxistickerlog_super_create_label_vector
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -23392,10 +21900,6 @@ void q_cpaxistickerlog_on_create_label_vector(void* self, const char** (*callbac
 ///
 void q_cpaxistickerlog_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerlog_super_trim_ticks` instead
-///
-#define q_cpaxistickerlog_qbase_trim_ticks q_cpaxistickerlog_super_trim_ticks
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -23432,10 +21936,6 @@ void q_cpaxistickerlog_on_trim_ticks(void* self, void (*callback)(void*, void*, 
 ///
 double q_cpaxistickerlog_pick_closest(void* self, double target, libqt_list candidates);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerlog_super_pick_closest` instead
-///
-#define q_cpaxistickerlog_qbase_pick_closest q_cpaxistickerlog_super_pick_closest
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -23470,10 +21970,6 @@ void q_cpaxistickerlog_on_pick_closest(void* self, double (*callback)(void*, dou
 ///
 double q_cpaxistickerlog_get_mantissa(void* self, double input);
 
-/// @warning DEPRECATED: Use `q_cpaxistickerlog_super_get_mantissa` instead
-///
-#define q_cpaxistickerlog_qbase_get_mantissa q_cpaxistickerlog_super_get_mantissa
-
 /// Inherited from QCPAxisTicker
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
@@ -23506,10 +22002,6 @@ void q_cpaxistickerlog_on_get_mantissa(void* self, double (*callback)(void*, dou
 /// @param input double
 ///
 double q_cpaxistickerlog_clean_mantissa(void* self, double input);
-
-/// @warning DEPRECATED: Use `q_cpaxistickerlog_super_clean_mantissa` instead
-///
-#define q_cpaxistickerlog_qbase_clean_mantissa q_cpaxistickerlog_super_clean_mantissa
 
 /// Inherited from QCPAxisTicker
 ///
@@ -23564,10 +22056,6 @@ const QMetaObject* q_cpgrid_meta_object(void* self);
 ///
 void q_cpgrid_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpgrid_super_meta_object` instead
-///
-#define q_cpgrid_qbase_meta_object q_cpgrid_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -23587,10 +22075,6 @@ void* q_cpgrid_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPGrid* self, const char* param1)
 ///
 void q_cpgrid_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpgrid_super_metacast` instead
-///
-#define q_cpgrid_qbase_metacast q_cpgrid_super_metacast
 
 /// Base class method implementation
 ///
@@ -23612,10 +22096,6 @@ int32_t q_cpgrid_metacall(void* self, int32_t param1, int param2, void* param3);
 /// @param callback int32_t func(QCPGrid* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpgrid_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpgrid_super_metacall` instead
-///
-#define q_cpgrid_qbase_metacall q_cpgrid_super_metacall
 
 /// Base class method implementation
 ///
@@ -23728,10 +22208,6 @@ void q_cpgrid_apply_default_antialiasing_hint(void* self, void* painter);
 ///
 void q_cpgrid_on_apply_default_antialiasing_hint(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpgrid_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpgrid_qbase_apply_default_antialiasing_hint q_cpgrid_super_apply_default_antialiasing_hint
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGrid.html)
 ///
 /// Base class method implementation
@@ -23756,10 +22232,6 @@ void q_cpgrid_draw(void* self, void* painter);
 /// @param callback void func(QCPGrid* self, QCPPainter* painter)
 ///
 void q_cpgrid_on_draw(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpgrid_super_draw` instead
-///
-#define q_cpgrid_qbase_draw q_cpgrid_super_draw
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGrid.html)
 ///
@@ -23786,10 +22258,6 @@ void q_cpgrid_draw_grid_lines(void* self, void* painter);
 ///
 void q_cpgrid_on_draw_grid_lines(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpgrid_super_draw_grid_lines` instead
-///
-#define q_cpgrid_qbase_draw_grid_lines q_cpgrid_super_draw_grid_lines
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGrid.html)
 ///
 /// Base class method implementation
@@ -23814,10 +22282,6 @@ void q_cpgrid_draw_sub_grid_lines(void* self, void* painter);
 /// @param callback void func(QCPGrid* self, QCPPainter* painter)
 ///
 void q_cpgrid_on_draw_sub_grid_lines(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpgrid_super_draw_sub_grid_lines` instead
-///
-#define q_cpgrid_qbase_draw_sub_grid_lines q_cpgrid_super_draw_sub_grid_lines
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGrid.html)
 ///
@@ -24409,10 +22873,6 @@ void q_cpgrid_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 double q_cpgrid_select_test(void* self, void* pos, bool onlySelectable, void* details);
 
-/// @warning DEPRECATED: Use `q_cpgrid_super_select_test` instead
-///
-#define q_cpgrid_qbase_select_test q_cpgrid_super_select_test
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -24448,10 +22908,6 @@ void q_cpgrid_on_select_test(void* self, double (*callback)(void*, void*, bool, 
 ///
 void q_cpgrid_parent_plot_initialized(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cpgrid_super_parent_plot_initialized` instead
-///
-#define q_cpgrid_qbase_parent_plot_initialized q_cpgrid_super_parent_plot_initialized
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -24486,10 +22942,6 @@ void q_cpgrid_on_parent_plot_initialized(void* self, void (*callback)(void*, voi
 ///
 int32_t q_cpgrid_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cpgrid_super_selection_category` instead
-///
-#define q_cpgrid_qbase_selection_category q_cpgrid_super_selection_category
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -24522,10 +22974,6 @@ void q_cpgrid_on_selection_category(void* self, int32_t (*callback)());
 /// @param self QCPGrid*
 ///
 QRect* q_cpgrid_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cpgrid_super_clip_rect` instead
-///
-#define q_cpgrid_qbase_clip_rect q_cpgrid_super_clip_rect
 
 /// Inherited from QCPLayerable
 ///
@@ -24564,10 +23012,6 @@ void q_cpgrid_on_clip_rect(void* self, QRect* (*callback)());
 ///
 void q_cpgrid_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpgrid_super_select_event` instead
-///
-#define q_cpgrid_qbase_select_event q_cpgrid_super_select_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -24604,10 +23048,6 @@ void q_cpgrid_on_select_event(void* self, void (*callback)(void*, void*, bool, v
 ///
 void q_cpgrid_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpgrid_super_deselect_event` instead
-///
-#define q_cpgrid_qbase_deselect_event q_cpgrid_super_deselect_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -24641,10 +23081,6 @@ void q_cpgrid_on_deselect_event(void* self, void (*callback)(void*, bool*));
 /// @param details QVariant*
 ///
 void q_cpgrid_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpgrid_super_mouse_press_event` instead
-///
-#define q_cpgrid_qbase_mouse_press_event q_cpgrid_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -24681,10 +23117,6 @@ void q_cpgrid_on_mouse_press_event(void* self, void (*callback)(void*, void*, vo
 ///
 void q_cpgrid_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cpgrid_super_mouse_move_event` instead
-///
-#define q_cpgrid_qbase_mouse_move_event q_cpgrid_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -24719,10 +23151,6 @@ void q_cpgrid_on_mouse_move_event(void* self, void (*callback)(void*, void*, voi
 /// @param startPos QPointF*
 ///
 void q_cpgrid_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cpgrid_super_mouse_release_event` instead
-///
-#define q_cpgrid_qbase_mouse_release_event q_cpgrid_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -24759,10 +23187,6 @@ void q_cpgrid_on_mouse_release_event(void* self, void (*callback)(void*, void*, 
 ///
 void q_cpgrid_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpgrid_super_mouse_double_click_event` instead
-///
-#define q_cpgrid_qbase_mouse_double_click_event q_cpgrid_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -24797,10 +23221,6 @@ void q_cpgrid_on_mouse_double_click_event(void* self, void (*callback)(void*, vo
 ///
 void q_cpgrid_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpgrid_super_wheel_event` instead
-///
-#define q_cpgrid_qbase_wheel_event q_cpgrid_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -24833,10 +23253,6 @@ void q_cpgrid_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cpgrid_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpgrid_super_event` instead
-///
-#define q_cpgrid_qbase_event q_cpgrid_super_event
 
 /// Inherited from QObject
 ///
@@ -24872,10 +23288,6 @@ void q_cpgrid_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cpgrid_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpgrid_super_event_filter` instead
-///
-#define q_cpgrid_qbase_event_filter q_cpgrid_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -24910,10 +23322,6 @@ void q_cpgrid_on_event_filter(void* self, bool (*callback)(void*, void*, void*))
 ///
 void q_cpgrid_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpgrid_super_timer_event` instead
-///
-#define q_cpgrid_qbase_timer_event q_cpgrid_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -24946,10 +23354,6 @@ void q_cpgrid_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cpgrid_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpgrid_super_child_event` instead
-///
-#define q_cpgrid_qbase_child_event q_cpgrid_super_child_event
 
 /// Inherited from QObject
 ///
@@ -24984,10 +23388,6 @@ void q_cpgrid_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpgrid_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpgrid_super_custom_event` instead
-///
-#define q_cpgrid_qbase_custom_event q_cpgrid_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -25020,10 +23420,6 @@ void q_cpgrid_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_cpgrid_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpgrid_super_connect_notify` instead
-///
-#define q_cpgrid_qbase_connect_notify q_cpgrid_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -25058,10 +23454,6 @@ void q_cpgrid_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_cpgrid_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpgrid_super_disconnect_notify` instead
-///
-#define q_cpgrid_qbase_disconnect_notify q_cpgrid_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -25094,10 +23486,6 @@ void q_cpgrid_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpgrid_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpgrid_super_initialize_parent_plot` instead
-///
-#define q_cpgrid_qbase_initialize_parent_plot q_cpgrid_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -25132,10 +23520,6 @@ void q_cpgrid_on_initialize_parent_plot(void* self, void (*callback)(void*, void
 ///
 void q_cpgrid_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cpgrid_super_set_parent_layerable` instead
-///
-#define q_cpgrid_qbase_set_parent_layerable q_cpgrid_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -25169,10 +23553,6 @@ void q_cpgrid_on_set_parent_layerable(void* self, void (*callback)(void*, void*)
 /// @param prepend bool
 ///
 bool q_cpgrid_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpgrid_super_move_to_layer` instead
-///
-#define q_cpgrid_qbase_move_to_layer q_cpgrid_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -25210,10 +23590,6 @@ void q_cpgrid_on_move_to_layer(void* self, bool (*callback)(void*, void*, bool))
 ///
 void q_cpgrid_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpgrid_super_apply_antialiasing_hint` instead
-///
-#define q_cpgrid_qbase_apply_antialiasing_hint q_cpgrid_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -25248,10 +23624,6 @@ void q_cpgrid_on_apply_antialiasing_hint(void* self, void (*callback)(void*, voi
 ///
 QObject* q_cpgrid_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpgrid_super_sender` instead
-///
-#define q_cpgrid_qbase_sender q_cpgrid_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -25282,10 +23654,6 @@ void q_cpgrid_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPGrid*
 ///
 int32_t q_cpgrid_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpgrid_super_sender_signal_index` instead
-///
-#define q_cpgrid_qbase_sender_signal_index q_cpgrid_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -25319,10 +23687,6 @@ void q_cpgrid_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cpgrid_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpgrid_super_receivers` instead
-///
-#define q_cpgrid_qbase_receivers q_cpgrid_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -25355,10 +23719,6 @@ void q_cpgrid_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 /// @param signal QMetaMethod*
 ///
 bool q_cpgrid_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpgrid_super_is_signal_connected` instead
-///
-#define q_cpgrid_qbase_is_signal_connected q_cpgrid_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -25425,10 +23785,6 @@ const QMetaObject* q_cpaxis_meta_object(void* self);
 ///
 void q_cpaxis_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_meta_object` instead
-///
-#define q_cpaxis_qbase_meta_object q_cpaxis_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -25448,10 +23804,6 @@ void* q_cpaxis_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPAxis* self, const char* param1)
 ///
 void q_cpaxis_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpaxis_super_metacast` instead
-///
-#define q_cpaxis_qbase_metacast q_cpaxis_super_metacast
 
 /// Base class method implementation
 ///
@@ -25473,10 +23825,6 @@ int32_t q_cpaxis_metacall(void* self, int32_t param1, int param2, void* param3);
 /// @param callback int32_t func(QCPAxis* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpaxis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpaxis_super_metacall` instead
-///
-#define q_cpaxis_qbase_metacall q_cpaxis_super_metacall
 
 /// Base class method implementation
 ///
@@ -26087,10 +24435,6 @@ double q_cpaxis_select_test(void* self, void* pos, bool onlySelectable, void* de
 ///
 void q_cpaxis_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_select_test` instead
-///
-#define q_cpaxis_qbase_select_test q_cpaxis_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
 /// Base class method implementation
@@ -26273,10 +24617,6 @@ int32_t q_cpaxis_calculate_margin(void* self);
 ///
 void q_cpaxis_on_calculate_margin(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_calculate_margin` instead
-///
-#define q_cpaxis_qbase_calculate_margin q_cpaxis_super_calculate_margin
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
 /// Base class method implementation
@@ -26300,10 +24640,6 @@ void q_cpaxis_apply_default_antialiasing_hint(void* self, void* painter);
 /// @param callback void func(QCPAxis* self, QCPPainter* painter)
 ///
 void q_cpaxis_on_apply_default_antialiasing_hint(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpaxis_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpaxis_qbase_apply_default_antialiasing_hint q_cpaxis_super_apply_default_antialiasing_hint
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
@@ -26330,10 +24666,6 @@ void q_cpaxis_draw(void* self, void* painter);
 ///
 void q_cpaxis_on_draw(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_draw` instead
-///
-#define q_cpaxis_qbase_draw q_cpaxis_super_draw
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
 /// Base class method implementation
@@ -26359,10 +24691,6 @@ int32_t q_cpaxis_selection_category(void* self);
 /// @param callback int32_t func()
 ///
 void q_cpaxis_on_selection_category(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpaxis_super_selection_category` instead
-///
-#define q_cpaxis_qbase_selection_category q_cpaxis_super_selection_category
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
@@ -26393,10 +24721,6 @@ void q_cpaxis_select_event(void* self, void* event, bool additive, void* details
 ///
 void q_cpaxis_on_select_event(void* self, void (*callback)(void*, void*, bool, void*, bool*));
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_select_event` instead
-///
-#define q_cpaxis_qbase_select_event q_cpaxis_super_select_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
 /// Base class method implementation
@@ -26425,10 +24749,6 @@ void q_cpaxis_deselect_event(void* self, bool* selectionStateChanged);
 ///
 void q_cpaxis_on_deselect_event(void* self, void (*callback)(void*, bool*));
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_deselect_event` instead
-///
-#define q_cpaxis_qbase_deselect_event q_cpaxis_super_deselect_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
 /// Base class method implementation
@@ -26454,10 +24774,6 @@ void q_cpaxis_mouse_press_event(void* self, void* event, void* details);
 /// @param callback void func(QCPAxis* self, QMouseEvent* event, QVariant* details)
 ///
 void q_cpaxis_on_mouse_press_event(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpaxis_super_mouse_press_event` instead
-///
-#define q_cpaxis_qbase_mouse_press_event q_cpaxis_super_mouse_press_event
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
@@ -26486,10 +24802,6 @@ void q_cpaxis_mouse_move_event(void* self, void* event, void* startPos);
 ///
 void q_cpaxis_on_mouse_move_event(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_mouse_move_event` instead
-///
-#define q_cpaxis_qbase_mouse_move_event q_cpaxis_super_mouse_move_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
 /// Base class method implementation
@@ -26517,10 +24829,6 @@ void q_cpaxis_mouse_release_event(void* self, void* event, void* startPos);
 ///
 void q_cpaxis_on_mouse_release_event(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_mouse_release_event` instead
-///
-#define q_cpaxis_qbase_mouse_release_event q_cpaxis_super_mouse_release_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
 /// Base class method implementation
@@ -26547,10 +24855,6 @@ void q_cpaxis_wheel_event(void* self, void* event);
 ///
 void q_cpaxis_on_wheel_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_wheel_event` instead
-///
-#define q_cpaxis_qbase_wheel_event q_cpaxis_super_wheel_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
 /// Base class method implementation
@@ -26574,10 +24878,6 @@ void q_cpaxis_setup_tick_vectors(void* self);
 /// @param callback void func()
 ///
 void q_cpaxis_on_setup_tick_vectors(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpaxis_super_setup_tick_vectors` instead
-///
-#define q_cpaxis_qbase_setup_tick_vectors q_cpaxis_super_setup_tick_vectors
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
@@ -26604,10 +24904,6 @@ QPen* q_cpaxis_get_base_pen(void* self);
 ///
 void q_cpaxis_on_get_base_pen(void* self, QPen* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_get_base_pen` instead
-///
-#define q_cpaxis_qbase_get_base_pen q_cpaxis_super_get_base_pen
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
 /// Base class method implementation
@@ -26632,10 +24928,6 @@ QPen* q_cpaxis_get_tick_pen(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpaxis_on_get_tick_pen(void* self, QPen* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpaxis_super_get_tick_pen` instead
-///
-#define q_cpaxis_qbase_get_tick_pen q_cpaxis_super_get_tick_pen
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
@@ -26662,10 +24954,6 @@ QPen* q_cpaxis_get_sub_tick_pen(void* self);
 ///
 void q_cpaxis_on_get_sub_tick_pen(void* self, QPen* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_get_sub_tick_pen` instead
-///
-#define q_cpaxis_qbase_get_sub_tick_pen q_cpaxis_super_get_sub_tick_pen
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
 /// Base class method implementation
@@ -26690,10 +24978,6 @@ QFont* q_cpaxis_get_tick_label_font(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpaxis_on_get_tick_label_font(void* self, QFont* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpaxis_super_get_tick_label_font` instead
-///
-#define q_cpaxis_qbase_get_tick_label_font q_cpaxis_super_get_tick_label_font
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
@@ -26720,10 +25004,6 @@ QFont* q_cpaxis_get_label_font(void* self);
 ///
 void q_cpaxis_on_get_label_font(void* self, QFont* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_get_label_font` instead
-///
-#define q_cpaxis_qbase_get_label_font q_cpaxis_super_get_label_font
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
 /// Base class method implementation
@@ -26749,10 +25029,6 @@ QColor* q_cpaxis_get_tick_label_color(void* self);
 ///
 void q_cpaxis_on_get_tick_label_color(void* self, QColor* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_get_tick_label_color` instead
-///
-#define q_cpaxis_qbase_get_tick_label_color q_cpaxis_super_get_tick_label_color
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
 /// Base class method implementation
@@ -26777,10 +25053,6 @@ QColor* q_cpaxis_get_label_color(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpaxis_on_get_label_color(void* self, QColor* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpaxis_super_get_label_color` instead
-///
-#define q_cpaxis_qbase_get_label_color q_cpaxis_super_get_label_color
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
@@ -27400,10 +25672,6 @@ void q_cpaxis_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 void q_cpaxis_parent_plot_initialized(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_parent_plot_initialized` instead
-///
-#define q_cpaxis_qbase_parent_plot_initialized q_cpaxis_super_parent_plot_initialized
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -27435,10 +25703,6 @@ void q_cpaxis_on_parent_plot_initialized(void* self, void (*callback)(void*, voi
 /// @param self QCPAxis*
 ///
 QRect* q_cpaxis_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cpaxis_super_clip_rect` instead
-///
-#define q_cpaxis_qbase_clip_rect q_cpaxis_super_clip_rect
 
 /// Inherited from QCPLayerable
 ///
@@ -27475,10 +25739,6 @@ void q_cpaxis_on_clip_rect(void* self, QRect* (*callback)());
 ///
 void q_cpaxis_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_mouse_double_click_event` instead
-///
-#define q_cpaxis_qbase_mouse_double_click_event q_cpaxis_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -27512,10 +25772,6 @@ void q_cpaxis_on_mouse_double_click_event(void* self, void (*callback)(void*, vo
 /// @param event QEvent*
 ///
 bool q_cpaxis_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpaxis_super_event` instead
-///
-#define q_cpaxis_qbase_event q_cpaxis_super_event
 
 /// Inherited from QObject
 ///
@@ -27551,10 +25807,6 @@ void q_cpaxis_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cpaxis_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_event_filter` instead
-///
-#define q_cpaxis_qbase_event_filter q_cpaxis_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -27589,10 +25841,6 @@ void q_cpaxis_on_event_filter(void* self, bool (*callback)(void*, void*, void*))
 ///
 void q_cpaxis_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_timer_event` instead
-///
-#define q_cpaxis_qbase_timer_event q_cpaxis_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -27625,10 +25873,6 @@ void q_cpaxis_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cpaxis_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpaxis_super_child_event` instead
-///
-#define q_cpaxis_qbase_child_event q_cpaxis_super_child_event
 
 /// Inherited from QObject
 ///
@@ -27663,10 +25907,6 @@ void q_cpaxis_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpaxis_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_custom_event` instead
-///
-#define q_cpaxis_qbase_custom_event q_cpaxis_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -27699,10 +25939,6 @@ void q_cpaxis_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_cpaxis_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpaxis_super_connect_notify` instead
-///
-#define q_cpaxis_qbase_connect_notify q_cpaxis_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -27737,10 +25973,6 @@ void q_cpaxis_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_cpaxis_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_disconnect_notify` instead
-///
-#define q_cpaxis_qbase_disconnect_notify q_cpaxis_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -27773,10 +26005,6 @@ void q_cpaxis_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpaxis_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpaxis_super_initialize_parent_plot` instead
-///
-#define q_cpaxis_qbase_initialize_parent_plot q_cpaxis_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -27811,10 +26039,6 @@ void q_cpaxis_on_initialize_parent_plot(void* self, void (*callback)(void*, void
 ///
 void q_cpaxis_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_set_parent_layerable` instead
-///
-#define q_cpaxis_qbase_set_parent_layerable q_cpaxis_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -27848,10 +26072,6 @@ void q_cpaxis_on_set_parent_layerable(void* self, void (*callback)(void*, void*)
 /// @param prepend bool
 ///
 bool q_cpaxis_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpaxis_super_move_to_layer` instead
-///
-#define q_cpaxis_qbase_move_to_layer q_cpaxis_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -27889,10 +26109,6 @@ void q_cpaxis_on_move_to_layer(void* self, bool (*callback)(void*, void*, bool))
 ///
 void q_cpaxis_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_apply_antialiasing_hint` instead
-///
-#define q_cpaxis_qbase_apply_antialiasing_hint q_cpaxis_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -27927,10 +26143,6 @@ void q_cpaxis_on_apply_antialiasing_hint(void* self, void (*callback)(void*, voi
 ///
 QObject* q_cpaxis_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_sender` instead
-///
-#define q_cpaxis_qbase_sender q_cpaxis_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -27961,10 +26173,6 @@ void q_cpaxis_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPAxis*
 ///
 int32_t q_cpaxis_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpaxis_super_sender_signal_index` instead
-///
-#define q_cpaxis_qbase_sender_signal_index q_cpaxis_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -27998,10 +26206,6 @@ void q_cpaxis_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cpaxis_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpaxis_super_receivers` instead
-///
-#define q_cpaxis_qbase_receivers q_cpaxis_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -28034,10 +26238,6 @@ void q_cpaxis_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 /// @param signal QMetaMethod*
 ///
 bool q_cpaxis_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpaxis_super_is_signal_connected` instead
-///
-#define q_cpaxis_qbase_is_signal_connected q_cpaxis_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -28417,10 +26617,6 @@ void q_cpselectiondecorator_copy_from(void* self, void* other);
 ///
 void q_cpselectiondecorator_on_copy_from(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpselectiondecorator_super_copy_from` instead
-///
-#define q_cpselectiondecorator_qbase_copy_from q_cpselectiondecorator_super_copy_from
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPSelectionDecorator.html)
 ///
 /// Base class method implementation
@@ -28447,10 +26643,6 @@ void q_cpselectiondecorator_draw_decoration(void* self, void* painter, void* sel
 ///
 void q_cpselectiondecorator_on_draw_decoration(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpselectiondecorator_super_draw_decoration` instead
-///
-#define q_cpselectiondecorator_qbase_draw_decoration q_cpselectiondecorator_super_draw_decoration
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPSelectionDecorator.html)
 ///
 /// Base class method implementation
@@ -28476,10 +26668,6 @@ bool q_cpselectiondecorator_register_with_plottable(void* self, void* plottable)
 /// @param callback bool func(QCPSelectionDecorator* self, QCPAbstractPlottable* plottable)
 ///
 void q_cpselectiondecorator_on_register_with_plottable(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpselectiondecorator_super_register_with_plottable` instead
-///
-#define q_cpselectiondecorator_qbase_register_with_plottable q_cpselectiondecorator_super_register_with_plottable
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPSelectionDecorator.html)
 ///
@@ -28530,10 +26718,6 @@ const QMetaObject* q_cpabstractplottable_meta_object(void* self);
 ///
 void q_cpabstractplottable_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_meta_object` instead
-///
-#define q_cpabstractplottable_qbase_meta_object q_cpabstractplottable_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -28553,10 +26737,6 @@ void* q_cpabstractplottable_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPAbstractPlottable* self, const char* param1)
 ///
 void q_cpabstractplottable_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_metacast` instead
-///
-#define q_cpabstractplottable_qbase_metacast q_cpabstractplottable_super_metacast
 
 /// Base class method implementation
 ///
@@ -28578,10 +26758,6 @@ int32_t q_cpabstractplottable_metacall(void* self, int32_t param1, int param2, v
 /// @param callback int32_t func(QCPAbstractPlottable* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpabstractplottable_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_metacall` instead
-///
-#define q_cpabstractplottable_qbase_metacall q_cpabstractplottable_super_metacall
 
 /// Base class method implementation
 ///
@@ -28758,10 +26934,6 @@ double q_cpabstractplottable_select_test(void* self, void* pos, bool onlySelecta
 ///
 void q_cpabstractplottable_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_select_test` instead
-///
-#define q_cpabstractplottable_qbase_select_test q_cpabstractplottable_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// Base class method implementation
@@ -28787,10 +26959,6 @@ QCPPlottableInterface1D* q_cpabstractplottable_interface1_d(void* self);
 /// @param callback QCPPlottableInterface1D* func()
 ///
 void q_cpabstractplottable_on_interface1_d(void* self, QCPPlottableInterface1D* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_interface1_d` instead
-///
-#define q_cpabstractplottable_qbase_interface1_d q_cpabstractplottable_super_interface1_d
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
@@ -28818,10 +26986,6 @@ QCPRange* q_cpabstractplottable_get_key_range(void* self, bool* foundRange, int3
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpabstractplottable_on_get_key_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t));
-
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_get_key_range` instead
-///
-#define q_cpabstractplottable_qbase_get_key_range q_cpabstractplottable_super_get_key_range
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
@@ -28852,10 +27016,6 @@ QCPRange* q_cpabstractplottable_get_value_range(void* self, bool* foundRange, in
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpabstractplottable_on_get_value_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t, void*));
-
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_get_value_range` instead
-///
-#define q_cpabstractplottable_qbase_get_value_range q_cpabstractplottable_super_get_value_range
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
@@ -28987,10 +27147,6 @@ QRect* q_cpabstractplottable_clip_rect(void* self);
 ///
 void q_cpabstractplottable_on_clip_rect(void* self, QRect* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_clip_rect` instead
-///
-#define q_cpabstractplottable_qbase_clip_rect q_cpabstractplottable_super_clip_rect
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// Base class method implementation
@@ -29014,10 +27170,6 @@ void q_cpabstractplottable_draw(void* self, void* painter);
 /// @param callback void func(QCPAbstractPlottable* self, QCPPainter* painter)
 ///
 void q_cpabstractplottable_on_draw(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_draw` instead
-///
-#define q_cpabstractplottable_qbase_draw q_cpabstractplottable_super_draw
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
@@ -29045,10 +27197,6 @@ int32_t q_cpabstractplottable_selection_category(void* self);
 ///
 void q_cpabstractplottable_on_selection_category(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_selection_category` instead
-///
-#define q_cpabstractplottable_qbase_selection_category q_cpabstractplottable_super_selection_category
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// Base class method implementation
@@ -29074,10 +27222,6 @@ void q_cpabstractplottable_apply_default_antialiasing_hint(void* self, void* pai
 /// @param callback void func(QCPAbstractPlottable* self, QCPPainter* painter)
 ///
 void q_cpabstractplottable_on_apply_default_antialiasing_hint(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpabstractplottable_qbase_apply_default_antialiasing_hint q_cpabstractplottable_super_apply_default_antialiasing_hint
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
@@ -29107,10 +27251,6 @@ void q_cpabstractplottable_select_event(void* self, void* event, bool additive, 
 ///
 void q_cpabstractplottable_on_select_event(void* self, void (*callback)(void*, void*, bool, void*, bool*));
 
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_select_event` instead
-///
-#define q_cpabstractplottable_qbase_select_event q_cpabstractplottable_super_select_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// Base class method implementation
@@ -29139,10 +27279,6 @@ void q_cpabstractplottable_deselect_event(void* self, bool* selectionStateChange
 ///
 void q_cpabstractplottable_on_deselect_event(void* self, void (*callback)(void*, bool*));
 
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_deselect_event` instead
-///
-#define q_cpabstractplottable_qbase_deselect_event q_cpabstractplottable_super_deselect_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// Base class method implementation
@@ -29168,10 +27304,6 @@ void q_cpabstractplottable_draw_legend_icon(void* self, void* painter, void* rec
 /// @param callback void func(QCPAbstractPlottable* self, QCPPainter* painter, QRectF* rect)
 ///
 void q_cpabstractplottable_on_draw_legend_icon(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_draw_legend_icon` instead
-///
-#define q_cpabstractplottable_qbase_draw_legend_icon q_cpabstractplottable_super_draw_legend_icon
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
@@ -29199,10 +27331,6 @@ void q_cpabstractplottable_apply_fill_antialiasing_hint(void* self, void* painte
 ///
 void q_cpabstractplottable_on_apply_fill_antialiasing_hint(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_apply_fill_antialiasing_hint` instead
-///
-#define q_cpabstractplottable_qbase_apply_fill_antialiasing_hint q_cpabstractplottable_super_apply_fill_antialiasing_hint
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// Base class method implementation
@@ -29227,10 +27355,6 @@ void q_cpabstractplottable_apply_scatters_antialiasing_hint(void* self, void* pa
 /// @param callback void func(QCPAbstractPlottable* self, QCPPainter* painter)
 ///
 void q_cpabstractplottable_on_apply_scatters_antialiasing_hint(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_apply_scatters_antialiasing_hint` instead
-///
-#define q_cpabstractplottable_qbase_apply_scatters_antialiasing_hint q_cpabstractplottable_super_apply_scatters_antialiasing_hint
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
@@ -29849,10 +27973,6 @@ void q_cpabstractplottable_on_destroyed1(void* self, void (*callback)(void*, voi
 ///
 void q_cpabstractplottable_parent_plot_initialized(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_parent_plot_initialized` instead
-///
-#define q_cpabstractplottable_qbase_parent_plot_initialized q_cpabstractplottable_super_parent_plot_initialized
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -29886,10 +28006,6 @@ void q_cpabstractplottable_on_parent_plot_initialized(void* self, void (*callbac
 /// @param details QVariant*
 ///
 void q_cpabstractplottable_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_mouse_press_event` instead
-///
-#define q_cpabstractplottable_qbase_mouse_press_event q_cpabstractplottable_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -29926,10 +28042,6 @@ void q_cpabstractplottable_on_mouse_press_event(void* self, void (*callback)(voi
 ///
 void q_cpabstractplottable_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_mouse_move_event` instead
-///
-#define q_cpabstractplottable_qbase_mouse_move_event q_cpabstractplottable_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -29964,10 +28076,6 @@ void q_cpabstractplottable_on_mouse_move_event(void* self, void (*callback)(void
 /// @param startPos QPointF*
 ///
 void q_cpabstractplottable_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_mouse_release_event` instead
-///
-#define q_cpabstractplottable_qbase_mouse_release_event q_cpabstractplottable_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -30004,10 +28112,6 @@ void q_cpabstractplottable_on_mouse_release_event(void* self, void (*callback)(v
 ///
 void q_cpabstractplottable_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_mouse_double_click_event` instead
-///
-#define q_cpabstractplottable_qbase_mouse_double_click_event q_cpabstractplottable_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -30042,10 +28146,6 @@ void q_cpabstractplottable_on_mouse_double_click_event(void* self, void (*callba
 ///
 void q_cpabstractplottable_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_wheel_event` instead
-///
-#define q_cpabstractplottable_qbase_wheel_event q_cpabstractplottable_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -30078,10 +28178,6 @@ void q_cpabstractplottable_on_wheel_event(void* self, void (*callback)(void*, vo
 /// @param event QEvent*
 ///
 bool q_cpabstractplottable_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_event` instead
-///
-#define q_cpabstractplottable_qbase_event q_cpabstractplottable_super_event
 
 /// Inherited from QObject
 ///
@@ -30117,10 +28213,6 @@ void q_cpabstractplottable_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cpabstractplottable_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_event_filter` instead
-///
-#define q_cpabstractplottable_qbase_event_filter q_cpabstractplottable_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -30155,10 +28247,6 @@ void q_cpabstractplottable_on_event_filter(void* self, bool (*callback)(void*, v
 ///
 void q_cpabstractplottable_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_timer_event` instead
-///
-#define q_cpabstractplottable_qbase_timer_event q_cpabstractplottable_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -30191,10 +28279,6 @@ void q_cpabstractplottable_on_timer_event(void* self, void (*callback)(void*, vo
 /// @param event QChildEvent*
 ///
 void q_cpabstractplottable_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_child_event` instead
-///
-#define q_cpabstractplottable_qbase_child_event q_cpabstractplottable_super_child_event
 
 /// Inherited from QObject
 ///
@@ -30229,10 +28313,6 @@ void q_cpabstractplottable_on_child_event(void* self, void (*callback)(void*, vo
 ///
 void q_cpabstractplottable_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_custom_event` instead
-///
-#define q_cpabstractplottable_qbase_custom_event q_cpabstractplottable_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -30265,10 +28345,6 @@ void q_cpabstractplottable_on_custom_event(void* self, void (*callback)(void*, v
 /// @param signal QMetaMethod*
 ///
 void q_cpabstractplottable_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_connect_notify` instead
-///
-#define q_cpabstractplottable_qbase_connect_notify q_cpabstractplottable_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -30303,10 +28379,6 @@ void q_cpabstractplottable_on_connect_notify(void* self, void (*callback)(void*,
 ///
 void q_cpabstractplottable_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_disconnect_notify` instead
-///
-#define q_cpabstractplottable_qbase_disconnect_notify q_cpabstractplottable_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -30339,10 +28411,6 @@ void q_cpabstractplottable_on_disconnect_notify(void* self, void (*callback)(voi
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpabstractplottable_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_initialize_parent_plot` instead
-///
-#define q_cpabstractplottable_qbase_initialize_parent_plot q_cpabstractplottable_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -30377,10 +28445,6 @@ void q_cpabstractplottable_on_initialize_parent_plot(void* self, void (*callback
 ///
 void q_cpabstractplottable_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_set_parent_layerable` instead
-///
-#define q_cpabstractplottable_qbase_set_parent_layerable q_cpabstractplottable_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -30414,10 +28478,6 @@ void q_cpabstractplottable_on_set_parent_layerable(void* self, void (*callback)(
 /// @param prepend bool
 ///
 bool q_cpabstractplottable_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_move_to_layer` instead
-///
-#define q_cpabstractplottable_qbase_move_to_layer q_cpabstractplottable_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -30455,10 +28515,6 @@ void q_cpabstractplottable_on_move_to_layer(void* self, bool (*callback)(void*, 
 ///
 void q_cpabstractplottable_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_apply_antialiasing_hint` instead
-///
-#define q_cpabstractplottable_qbase_apply_antialiasing_hint q_cpabstractplottable_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -30493,10 +28549,6 @@ void q_cpabstractplottable_on_apply_antialiasing_hint(void* self, void (*callbac
 ///
 QObject* q_cpabstractplottable_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_sender` instead
-///
-#define q_cpabstractplottable_qbase_sender q_cpabstractplottable_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -30527,10 +28579,6 @@ void q_cpabstractplottable_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPAbstractPlottable*
 ///
 int32_t q_cpabstractplottable_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_sender_signal_index` instead
-///
-#define q_cpabstractplottable_qbase_sender_signal_index q_cpabstractplottable_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -30564,10 +28612,6 @@ void q_cpabstractplottable_on_sender_signal_index(void* self, int32_t (*callback
 ///
 int32_t q_cpabstractplottable_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_receivers` instead
-///
-#define q_cpabstractplottable_qbase_receivers q_cpabstractplottable_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -30600,10 +28644,6 @@ void q_cpabstractplottable_on_receivers(void* self, int32_t (*callback)(void*, c
 /// @param signal QMetaMethod*
 ///
 bool q_cpabstractplottable_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpabstractplottable_super_is_signal_connected` instead
-///
-#define q_cpabstractplottable_qbase_is_signal_connected q_cpabstractplottable_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -30692,10 +28732,6 @@ QPointF* q_cpitemanchor_pixel_position(void* self);
 ///
 void q_cpitemanchor_on_pixel_position(void* self, QPointF* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpitemanchor_super_pixel_position` instead
-///
-#define q_cpitemanchor_qbase_pixel_position q_cpitemanchor_super_pixel_position
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemAnchor.html)
 ///
 /// Base class method implementation
@@ -30718,10 +28754,6 @@ QCPItemPosition* q_cpitemanchor_to_q_c_p_item_position(void* self);
 /// @param callback QCPItemPosition* func()
 ///
 void q_cpitemanchor_on_to_q_c_p_item_position(void* self, QCPItemPosition* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpitemanchor_super_to_q_c_p_item_position` instead
-///
-#define q_cpitemanchor_qbase_to_q_c_p_item_position q_cpitemanchor_super_to_q_c_p_item_position
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemAnchor.html)
 ///
@@ -30746,10 +28778,6 @@ void q_cpitemanchor_add_child_x(void* self, void* pos);
 /// @param callback void func(QCPItemAnchor* self, QCPItemPosition* pos)
 ///
 void q_cpitemanchor_on_add_child_x(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpitemanchor_super_add_child_x` instead
-///
-#define q_cpitemanchor_qbase_add_child_x q_cpitemanchor_super_add_child_x
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemAnchor.html)
 ///
@@ -30776,10 +28804,6 @@ void q_cpitemanchor_remove_child_x(void* self, void* pos);
 ///
 void q_cpitemanchor_on_remove_child_x(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpitemanchor_super_remove_child_x` instead
-///
-#define q_cpitemanchor_qbase_remove_child_x q_cpitemanchor_super_remove_child_x
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemAnchor.html)
 ///
 /// Base class method implementation
@@ -30805,10 +28829,6 @@ void q_cpitemanchor_add_child_y(void* self, void* pos);
 ///
 void q_cpitemanchor_on_add_child_y(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpitemanchor_super_add_child_y` instead
-///
-#define q_cpitemanchor_qbase_add_child_y q_cpitemanchor_super_add_child_y
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemAnchor.html)
 ///
 /// Base class method implementation
@@ -30833,10 +28853,6 @@ void q_cpitemanchor_remove_child_y(void* self, void* pos);
 /// @param callback void func(QCPItemAnchor* self, QCPItemPosition* pos)
 ///
 void q_cpitemanchor_on_remove_child_y(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpitemanchor_super_remove_child_y` instead
-///
-#define q_cpitemanchor_qbase_remove_child_y q_cpitemanchor_super_remove_child_y
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemAnchor.html)
 ///
@@ -30960,10 +28976,6 @@ QPointF* q_cpitemposition_pixel_position(void* self);
 ///
 void q_cpitemposition_on_pixel_position(void* self, QPointF* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpitemposition_super_pixel_position` instead
-///
-#define q_cpitemposition_qbase_pixel_position q_cpitemposition_super_pixel_position
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemPosition.html)
 ///
 /// Base class method implementation
@@ -31066,10 +29078,6 @@ QCPItemPosition* q_cpitemposition_to_q_c_p_item_position(void* self);
 ///
 void q_cpitemposition_on_to_q_c_p_item_position(void* self, QCPItemPosition* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpitemposition_super_to_q_c_p_item_position` instead
-///
-#define q_cpitemposition_qbase_to_q_c_p_item_position q_cpitemposition_super_to_q_c_p_item_position
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemPosition.html)
 ///
 /// Base class method implementation
@@ -31123,10 +29131,6 @@ const char* q_cpitemposition_name(void* self);
 ///
 void q_cpitemposition_add_child_x(void* self, void* pos);
 
-/// @warning DEPRECATED: Use `q_cpitemposition_super_add_child_x` instead
-///
-#define q_cpitemposition_qbase_add_child_x q_cpitemposition_super_add_child_x
-
 /// Inherited from QCPItemAnchor
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemAnchor.html)
@@ -31159,10 +29163,6 @@ void q_cpitemposition_on_add_child_x(void* self, void (*callback)(void*, void*))
 /// @param pos QCPItemPosition*
 ///
 void q_cpitemposition_remove_child_x(void* self, void* pos);
-
-/// @warning DEPRECATED: Use `q_cpitemposition_super_remove_child_x` instead
-///
-#define q_cpitemposition_qbase_remove_child_x q_cpitemposition_super_remove_child_x
 
 /// Inherited from QCPItemAnchor
 ///
@@ -31197,10 +29197,6 @@ void q_cpitemposition_on_remove_child_x(void* self, void (*callback)(void*, void
 ///
 void q_cpitemposition_add_child_y(void* self, void* pos);
 
-/// @warning DEPRECATED: Use `q_cpitemposition_super_add_child_y` instead
-///
-#define q_cpitemposition_qbase_add_child_y q_cpitemposition_super_add_child_y
-
 /// Inherited from QCPItemAnchor
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemAnchor.html)
@@ -31233,10 +29229,6 @@ void q_cpitemposition_on_add_child_y(void* self, void (*callback)(void*, void*))
 /// @param pos QCPItemPosition*
 ///
 void q_cpitemposition_remove_child_y(void* self, void* pos);
-
-/// @warning DEPRECATED: Use `q_cpitemposition_super_remove_child_y` instead
-///
-#define q_cpitemposition_qbase_remove_child_y q_cpitemposition_super_remove_child_y
 
 /// Inherited from QCPItemAnchor
 ///
@@ -31291,10 +29283,6 @@ const QMetaObject* q_cpabstractitem_meta_object(void* self);
 ///
 void q_cpabstractitem_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_meta_object` instead
-///
-#define q_cpabstractitem_qbase_meta_object q_cpabstractitem_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -31314,10 +29302,6 @@ void* q_cpabstractitem_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPAbstractItem* self, const char* param1)
 ///
 void q_cpabstractitem_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_metacast` instead
-///
-#define q_cpabstractitem_qbase_metacast q_cpabstractitem_super_metacast
 
 /// Base class method implementation
 ///
@@ -31339,10 +29323,6 @@ int32_t q_cpabstractitem_metacall(void* self, int32_t param1, int param2, void* 
 /// @param callback int32_t func(QCPAbstractItem* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpabstractitem_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_metacall` instead
-///
-#define q_cpabstractitem_qbase_metacall q_cpabstractitem_super_metacall
 
 /// Base class method implementation
 ///
@@ -31430,10 +29410,6 @@ double q_cpabstractitem_select_test(void* self, void* pos, bool onlySelectable, 
 /// @param callback double func(QCPAbstractItem* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
 void q_cpabstractitem_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
-
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_select_test` instead
-///
-#define q_cpabstractitem_qbase_select_test q_cpabstractitem_super_select_test
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
 ///
@@ -31528,10 +29504,6 @@ int32_t q_cpabstractitem_selection_category(void* self);
 ///
 void q_cpabstractitem_on_selection_category(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_selection_category` instead
-///
-#define q_cpabstractitem_qbase_selection_category q_cpabstractitem_super_selection_category
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
 ///
 /// Base class method implementation
@@ -31559,10 +29531,6 @@ QRect* q_cpabstractitem_clip_rect(void* self);
 ///
 void q_cpabstractitem_on_clip_rect(void* self, QRect* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_clip_rect` instead
-///
-#define q_cpabstractitem_qbase_clip_rect q_cpabstractitem_super_clip_rect
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
 ///
 /// Base class method implementation
@@ -31586,10 +29554,6 @@ void q_cpabstractitem_apply_default_antialiasing_hint(void* self, void* painter)
 /// @param callback void func(QCPAbstractItem* self, QCPPainter* painter)
 ///
 void q_cpabstractitem_on_apply_default_antialiasing_hint(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpabstractitem_qbase_apply_default_antialiasing_hint q_cpabstractitem_super_apply_default_antialiasing_hint
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
 ///
@@ -31615,10 +29579,6 @@ void q_cpabstractitem_draw(void* self, void* painter);
 /// @param callback void func(QCPAbstractItem* self, QCPPainter* painter)
 ///
 void q_cpabstractitem_on_draw(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_draw` instead
-///
-#define q_cpabstractitem_qbase_draw q_cpabstractitem_super_draw
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
 ///
@@ -31648,10 +29608,6 @@ void q_cpabstractitem_select_event(void* self, void* event, bool additive, void*
 ///
 void q_cpabstractitem_on_select_event(void* self, void (*callback)(void*, void*, bool, void*, bool*));
 
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_select_event` instead
-///
-#define q_cpabstractitem_qbase_select_event q_cpabstractitem_super_select_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
 ///
 /// Base class method implementation
@@ -31680,10 +29636,6 @@ void q_cpabstractitem_deselect_event(void* self, bool* selectionStateChanged);
 ///
 void q_cpabstractitem_on_deselect_event(void* self, void (*callback)(void*, bool*));
 
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_deselect_event` instead
-///
-#define q_cpabstractitem_qbase_deselect_event q_cpabstractitem_super_deselect_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
 ///
 /// Base class method implementation
@@ -31710,10 +29662,6 @@ QPointF* q_cpabstractitem_anchor_pixel_position(void* self, int anchorId);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpabstractitem_on_anchor_pixel_position(void* self, QPointF* (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_anchor_pixel_position` instead
-///
-#define q_cpabstractitem_qbase_anchor_pixel_position q_cpabstractitem_super_anchor_pixel_position
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
 ///
@@ -31742,10 +29690,6 @@ double q_cpabstractitem_rect_distance(void* self, void* rect, void* pos, bool fi
 ///
 void q_cpabstractitem_on_rect_distance(void* self, double (*callback)(void*, void*, void*, bool));
 
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_rect_distance` instead
-///
-#define q_cpabstractitem_qbase_rect_distance q_cpabstractitem_super_rect_distance
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
 ///
 /// Base class method implementation
@@ -31773,10 +29717,6 @@ QCPItemPosition* q_cpabstractitem_create_position(void* self, const char* name);
 ///
 void q_cpabstractitem_on_create_position(void* self, QCPItemPosition* (*callback)(void*, const char*));
 
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_create_position` instead
-///
-#define q_cpabstractitem_qbase_create_position q_cpabstractitem_super_create_position
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
 ///
 /// Base class method implementation
@@ -31802,10 +29742,6 @@ QCPItemAnchor* q_cpabstractitem_create_anchor(void* self, const char* name, int 
 /// @param callback QCPItemAnchor* func(QCPAbstractItem* self, const char* name, int anchorId)
 ///
 void q_cpabstractitem_on_create_anchor(void* self, QCPItemAnchor* (*callback)(void*, const char*, int));
-
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_create_anchor` instead
-///
-#define q_cpabstractitem_qbase_create_anchor q_cpabstractitem_super_create_anchor
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
 ///
@@ -32396,10 +30332,6 @@ void q_cpabstractitem_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 void q_cpabstractitem_parent_plot_initialized(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_parent_plot_initialized` instead
-///
-#define q_cpabstractitem_qbase_parent_plot_initialized q_cpabstractitem_super_parent_plot_initialized
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -32433,10 +30365,6 @@ void q_cpabstractitem_on_parent_plot_initialized(void* self, void (*callback)(vo
 /// @param details QVariant*
 ///
 void q_cpabstractitem_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_mouse_press_event` instead
-///
-#define q_cpabstractitem_qbase_mouse_press_event q_cpabstractitem_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -32473,10 +30401,6 @@ void q_cpabstractitem_on_mouse_press_event(void* self, void (*callback)(void*, v
 ///
 void q_cpabstractitem_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_mouse_move_event` instead
-///
-#define q_cpabstractitem_qbase_mouse_move_event q_cpabstractitem_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -32511,10 +30435,6 @@ void q_cpabstractitem_on_mouse_move_event(void* self, void (*callback)(void*, vo
 /// @param startPos QPointF*
 ///
 void q_cpabstractitem_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_mouse_release_event` instead
-///
-#define q_cpabstractitem_qbase_mouse_release_event q_cpabstractitem_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -32551,10 +30471,6 @@ void q_cpabstractitem_on_mouse_release_event(void* self, void (*callback)(void*,
 ///
 void q_cpabstractitem_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_mouse_double_click_event` instead
-///
-#define q_cpabstractitem_qbase_mouse_double_click_event q_cpabstractitem_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -32589,10 +30505,6 @@ void q_cpabstractitem_on_mouse_double_click_event(void* self, void (*callback)(v
 ///
 void q_cpabstractitem_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_wheel_event` instead
-///
-#define q_cpabstractitem_qbase_wheel_event q_cpabstractitem_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -32625,10 +30537,6 @@ void q_cpabstractitem_on_wheel_event(void* self, void (*callback)(void*, void*))
 /// @param event QEvent*
 ///
 bool q_cpabstractitem_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_event` instead
-///
-#define q_cpabstractitem_qbase_event q_cpabstractitem_super_event
 
 /// Inherited from QObject
 ///
@@ -32664,10 +30572,6 @@ void q_cpabstractitem_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cpabstractitem_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_event_filter` instead
-///
-#define q_cpabstractitem_qbase_event_filter q_cpabstractitem_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -32702,10 +30606,6 @@ void q_cpabstractitem_on_event_filter(void* self, bool (*callback)(void*, void*,
 ///
 void q_cpabstractitem_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_timer_event` instead
-///
-#define q_cpabstractitem_qbase_timer_event q_cpabstractitem_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -32738,10 +30638,6 @@ void q_cpabstractitem_on_timer_event(void* self, void (*callback)(void*, void*))
 /// @param event QChildEvent*
 ///
 void q_cpabstractitem_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_child_event` instead
-///
-#define q_cpabstractitem_qbase_child_event q_cpabstractitem_super_child_event
 
 /// Inherited from QObject
 ///
@@ -32776,10 +30672,6 @@ void q_cpabstractitem_on_child_event(void* self, void (*callback)(void*, void*))
 ///
 void q_cpabstractitem_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_custom_event` instead
-///
-#define q_cpabstractitem_qbase_custom_event q_cpabstractitem_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -32812,10 +30704,6 @@ void q_cpabstractitem_on_custom_event(void* self, void (*callback)(void*, void*)
 /// @param signal QMetaMethod*
 ///
 void q_cpabstractitem_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_connect_notify` instead
-///
-#define q_cpabstractitem_qbase_connect_notify q_cpabstractitem_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -32850,10 +30738,6 @@ void q_cpabstractitem_on_connect_notify(void* self, void (*callback)(void*, void
 ///
 void q_cpabstractitem_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_disconnect_notify` instead
-///
-#define q_cpabstractitem_qbase_disconnect_notify q_cpabstractitem_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -32886,10 +30770,6 @@ void q_cpabstractitem_on_disconnect_notify(void* self, void (*callback)(void*, v
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpabstractitem_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_initialize_parent_plot` instead
-///
-#define q_cpabstractitem_qbase_initialize_parent_plot q_cpabstractitem_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -32924,10 +30804,6 @@ void q_cpabstractitem_on_initialize_parent_plot(void* self, void (*callback)(voi
 ///
 void q_cpabstractitem_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_set_parent_layerable` instead
-///
-#define q_cpabstractitem_qbase_set_parent_layerable q_cpabstractitem_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -32961,10 +30837,6 @@ void q_cpabstractitem_on_set_parent_layerable(void* self, void (*callback)(void*
 /// @param prepend bool
 ///
 bool q_cpabstractitem_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_move_to_layer` instead
-///
-#define q_cpabstractitem_qbase_move_to_layer q_cpabstractitem_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -33002,10 +30874,6 @@ void q_cpabstractitem_on_move_to_layer(void* self, bool (*callback)(void*, void*
 ///
 void q_cpabstractitem_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_apply_antialiasing_hint` instead
-///
-#define q_cpabstractitem_qbase_apply_antialiasing_hint q_cpabstractitem_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -33040,10 +30908,6 @@ void q_cpabstractitem_on_apply_antialiasing_hint(void* self, void (*callback)(vo
 ///
 QObject* q_cpabstractitem_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_sender` instead
-///
-#define q_cpabstractitem_qbase_sender q_cpabstractitem_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -33074,10 +30938,6 @@ void q_cpabstractitem_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPAbstractItem*
 ///
 int32_t q_cpabstractitem_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_sender_signal_index` instead
-///
-#define q_cpabstractitem_qbase_sender_signal_index q_cpabstractitem_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -33111,10 +30971,6 @@ void q_cpabstractitem_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cpabstractitem_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_receivers` instead
-///
-#define q_cpabstractitem_qbase_receivers q_cpabstractitem_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -33147,10 +31003,6 @@ void q_cpabstractitem_on_receivers(void* self, int32_t (*callback)(void*, const 
 /// @param signal QMetaMethod*
 ///
 bool q_cpabstractitem_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpabstractitem_super_is_signal_connected` instead
-///
-#define q_cpabstractitem_qbase_is_signal_connected q_cpabstractitem_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -33222,10 +31074,6 @@ const QMetaObject* q_customplot_meta_object(void* self);
 ///
 void q_customplot_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_customplot_super_meta_object` instead
-///
-#define q_customplot_qbase_meta_object q_customplot_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -33245,10 +31093,6 @@ void* q_customplot_metacast(void* self, const char* param1);
 /// @param callback void* func(QCustomPlot* self, const char* param1)
 ///
 void q_customplot_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_customplot_super_metacast` instead
-///
-#define q_customplot_qbase_metacast q_customplot_super_metacast
 
 /// Base class method implementation
 ///
@@ -33270,10 +31114,6 @@ int32_t q_customplot_metacall(void* self, int32_t param1, int param2, void* para
 /// @param callback int32_t func(QCustomPlot* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_customplot_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_customplot_super_metacall` instead
-///
-#define q_customplot_qbase_metacall q_customplot_super_metacall
 
 /// Base class method implementation
 ///
@@ -34256,10 +32096,6 @@ QSize* q_customplot_minimum_size_hint(void* self);
 ///
 void q_customplot_on_minimum_size_hint(void* self, QSize* (*callback)());
 
-/// @warning DEPRECATED: Use `q_customplot_super_minimum_size_hint` instead
-///
-#define q_customplot_qbase_minimum_size_hint q_customplot_super_minimum_size_hint
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// Base class method implementation
@@ -34285,10 +32121,6 @@ QSize* q_customplot_size_hint(void* self);
 ///
 void q_customplot_on_size_hint(void* self, QSize* (*callback)());
 
-/// @warning DEPRECATED: Use `q_customplot_super_size_hint` instead
-///
-#define q_customplot_qbase_size_hint q_customplot_super_size_hint
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// Base class method implementation
@@ -34312,10 +32144,6 @@ void q_customplot_paint_event(void* self, void* event);
 /// @param callback void func(QCustomPlot* self, QPaintEvent* event)
 ///
 void q_customplot_on_paint_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_customplot_super_paint_event` instead
-///
-#define q_customplot_qbase_paint_event q_customplot_super_paint_event
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -34342,10 +32170,6 @@ void q_customplot_resize_event(void* self, void* event);
 ///
 void q_customplot_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_customplot_super_resize_event` instead
-///
-#define q_customplot_qbase_resize_event q_customplot_super_resize_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// Base class method implementation
@@ -34370,10 +32194,6 @@ void q_customplot_mouse_double_click_event(void* self, void* event);
 /// @param callback void func(QCustomPlot* self, QMouseEvent* event)
 ///
 void q_customplot_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_customplot_super_mouse_double_click_event` instead
-///
-#define q_customplot_qbase_mouse_double_click_event q_customplot_super_mouse_double_click_event
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -34400,10 +32220,6 @@ void q_customplot_mouse_press_event(void* self, void* event);
 ///
 void q_customplot_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_customplot_super_mouse_press_event` instead
-///
-#define q_customplot_qbase_mouse_press_event q_customplot_super_mouse_press_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// Base class method implementation
@@ -34428,10 +32244,6 @@ void q_customplot_mouse_move_event(void* self, void* event);
 /// @param callback void func(QCustomPlot* self, QMouseEvent* event)
 ///
 void q_customplot_on_mouse_move_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_customplot_super_mouse_move_event` instead
-///
-#define q_customplot_qbase_mouse_move_event q_customplot_super_mouse_move_event
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -34458,10 +32270,6 @@ void q_customplot_mouse_release_event(void* self, void* event);
 ///
 void q_customplot_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_customplot_super_mouse_release_event` instead
-///
-#define q_customplot_qbase_mouse_release_event q_customplot_super_mouse_release_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// Base class method implementation
@@ -34486,10 +32294,6 @@ void q_customplot_wheel_event(void* self, void* event);
 /// @param callback void func(QCustomPlot* self, QWheelEvent* event)
 ///
 void q_customplot_on_wheel_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_customplot_super_wheel_event` instead
-///
-#define q_customplot_qbase_wheel_event q_customplot_super_wheel_event
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -34516,10 +32320,6 @@ void q_customplot_draw(void* self, void* painter);
 ///
 void q_customplot_on_draw(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_customplot_super_draw` instead
-///
-#define q_customplot_qbase_draw q_customplot_super_draw
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// Base class method implementation
@@ -34544,10 +32344,6 @@ void q_customplot_update_layout(void* self);
 ///
 void q_customplot_on_update_layout(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_customplot_super_update_layout` instead
-///
-#define q_customplot_qbase_update_layout q_customplot_super_update_layout
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// Base class method implementation
@@ -34571,10 +32367,6 @@ void q_customplot_axis_removed(void* self, void* axis);
 /// @param callback void func(QCustomPlot* self, QCPAxis* axis)
 ///
 void q_customplot_on_axis_removed(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_customplot_super_axis_removed` instead
-///
-#define q_customplot_qbase_axis_removed q_customplot_super_axis_removed
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -34601,10 +32393,6 @@ void q_customplot_legend_removed(void* self, void* legend);
 ///
 void q_customplot_on_legend_removed(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_customplot_super_legend_removed` instead
-///
-#define q_customplot_qbase_legend_removed q_customplot_super_legend_removed
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// Base class method implementation
@@ -34630,10 +32418,6 @@ void q_customplot_process_rect_selection(void* self, void* rect, void* event);
 /// @param callback void func(QCustomPlot* self, QRect* rect, QMouseEvent* event)
 ///
 void q_customplot_on_process_rect_selection(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_customplot_super_process_rect_selection` instead
-///
-#define q_customplot_qbase_process_rect_selection q_customplot_super_process_rect_selection
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -34662,10 +32446,6 @@ void q_customplot_process_rect_zoom(void* self, void* rect, void* event);
 ///
 void q_customplot_on_process_rect_zoom(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_customplot_super_process_rect_zoom` instead
-///
-#define q_customplot_qbase_process_rect_zoom q_customplot_super_process_rect_zoom
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// Base class method implementation
@@ -34692,10 +32472,6 @@ void q_customplot_process_point_selection(void* self, void* event);
 ///
 void q_customplot_on_process_point_selection(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_customplot_super_process_point_selection` instead
-///
-#define q_customplot_qbase_process_point_selection q_customplot_super_process_point_selection
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// Base class method implementation
@@ -34720,10 +32496,6 @@ bool q_customplot_register_plottable(void* self, void* plottable);
 /// @param callback bool func(QCustomPlot* self, QCPAbstractPlottable* plottable)
 ///
 void q_customplot_on_register_plottable(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_customplot_super_register_plottable` instead
-///
-#define q_customplot_qbase_register_plottable q_customplot_super_register_plottable
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -34750,10 +32522,6 @@ bool q_customplot_register_graph(void* self, void* graph);
 ///
 void q_customplot_on_register_graph(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_customplot_super_register_graph` instead
-///
-#define q_customplot_qbase_register_graph q_customplot_super_register_graph
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// Base class method implementation
@@ -34779,10 +32547,6 @@ bool q_customplot_register_item(void* self, void* item);
 ///
 void q_customplot_on_register_item(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_customplot_super_register_item` instead
-///
-#define q_customplot_qbase_register_item q_customplot_super_register_item
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// Base class method implementation
@@ -34806,10 +32570,6 @@ void q_customplot_update_layer_indices(void* self);
 /// @param callback void func()
 ///
 void q_customplot_on_update_layer_indices(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_customplot_super_update_layer_indices` instead
-///
-#define q_customplot_qbase_update_layer_indices q_customplot_super_update_layer_indices
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -34835,10 +32595,6 @@ QCPLayerable* q_customplot_layerable_at(void* self, void* pos, bool onlySelectab
 /// @param callback QCPLayerable* func(QCustomPlot* self, QPointF* pos, bool onlySelectable)
 ///
 void q_customplot_on_layerable_at(void* self, QCPLayerable* (*callback)(void*, void*, bool));
-
-/// @warning DEPRECATED: Use `q_customplot_super_layerable_at` instead
-///
-#define q_customplot_qbase_layerable_at q_customplot_super_layerable_at
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -34869,10 +32625,6 @@ libqt_list q_customplot_layerable_list_at(void* self, void* pos, bool onlySelect
 ///
 void q_customplot_on_layerable_list_at(void* self, libqt_list (*callback)(void*, void*, bool));
 
-/// @warning DEPRECATED: Use `q_customplot_super_layerable_list_at` instead
-///
-#define q_customplot_qbase_layerable_list_at q_customplot_super_layerable_list_at
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// Base class method implementation
@@ -34901,10 +32653,6 @@ void q_customplot_draw_background(void* self, void* painter);
 ///
 void q_customplot_on_draw_background(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_customplot_super_draw_background` instead
-///
-#define q_customplot_qbase_draw_background q_customplot_super_draw_background
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// Base class method implementation
@@ -34929,10 +32677,6 @@ void q_customplot_setup_paint_buffers(void* self);
 ///
 void q_customplot_on_setup_paint_buffers(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_customplot_super_setup_paint_buffers` instead
-///
-#define q_customplot_qbase_setup_paint_buffers q_customplot_super_setup_paint_buffers
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// Base class method implementation
@@ -34955,10 +32699,6 @@ QCPAbstractPaintBuffer* q_customplot_create_paint_buffer(void* self);
 /// @param callback QCPAbstractPaintBuffer* func()
 ///
 void q_customplot_on_create_paint_buffer(void* self, QCPAbstractPaintBuffer* (*callback)());
-
-/// @warning DEPRECATED: Use `q_customplot_super_create_paint_buffer` instead
-///
-#define q_customplot_qbase_create_paint_buffer q_customplot_super_create_paint_buffer
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -34983,10 +32723,6 @@ bool q_customplot_has_invalidated_paint_buffers(void* self);
 ///
 void q_customplot_on_has_invalidated_paint_buffers(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_customplot_super_has_invalidated_paint_buffers` instead
-///
-#define q_customplot_qbase_has_invalidated_paint_buffers q_customplot_super_has_invalidated_paint_buffers
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// Base class method implementation
@@ -35010,10 +32746,6 @@ bool q_customplot_setup_open_gl(void* self);
 ///
 void q_customplot_on_setup_open_gl(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_customplot_super_setup_open_gl` instead
-///
-#define q_customplot_qbase_setup_open_gl q_customplot_super_setup_open_gl
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// Base class method implementation
@@ -35036,10 +32768,6 @@ void q_customplot_free_open_gl(void* self);
 /// @param callback void func()
 ///
 void q_customplot_on_free_open_gl(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_customplot_super_free_open_gl` instead
-///
-#define q_customplot_qbase_free_open_gl q_customplot_super_free_open_gl
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -35535,10 +33263,6 @@ QCPLayerable* q_customplot_layerable_at3(void* self, void* pos, bool onlySelecta
 ///
 void q_customplot_on_layerable_at3(void* self, QCPLayerable* (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_customplot_super_layerable_at3` instead
-///
-#define q_customplot_qbase_layerable_at3 q_customplot_super_layerable_at3
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// Base class method implementation
@@ -35569,10 +33293,6 @@ libqt_list q_customplot_layerable_list_at3(void* self, void* pos, bool onlySelec
 /// @param callback libqt_list of QCPLayerable* func(QCustomPlot* self, QPointF* pos, bool onlySelectable, libqt_list of QVariant* selectionDetails)
 ///
 void q_customplot_on_layerable_list_at3(void* self, libqt_list (*callback)(void*, void*, bool, libqt_list));
-
-/// @warning DEPRECATED: Use `q_customplot_super_layerable_list_at3` instead
-///
-#define q_customplot_qbase_layerable_list_at3 q_customplot_super_layerable_list_at3
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -38554,10 +36274,6 @@ int32_t q_customplot_encode_metric_f(int32_t metric, double value);
 ///
 int32_t q_customplot_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `q_customplot_super_dev_type` instead
-///
-#define q_customplot_qbase_dev_type q_customplot_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -38589,10 +36305,6 @@ void q_customplot_on_dev_type(void* self, int32_t (*callback)());
 /// @param visible bool
 ///
 void q_customplot_set_visible(void* self, bool visible);
-
-/// @warning DEPRECATED: Use `q_customplot_super_set_visible` instead
-///
-#define q_customplot_qbase_set_visible q_customplot_super_set_visible
 
 /// Inherited from QWidget
 ///
@@ -38627,10 +36339,6 @@ void q_customplot_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 int32_t q_customplot_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `q_customplot_super_height_for_width` instead
-///
-#define q_customplot_qbase_height_for_width q_customplot_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -38663,10 +36371,6 @@ void q_customplot_on_height_for_width(void* self, int32_t (*callback)(void*, int
 ///
 bool q_customplot_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `q_customplot_super_has_height_for_width` instead
-///
-#define q_customplot_qbase_has_height_for_width q_customplot_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -38697,10 +36401,6 @@ void q_customplot_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self QCustomPlot*
 ///
 QPaintEngine* q_customplot_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `q_customplot_super_paint_engine` instead
-///
-#define q_customplot_qbase_paint_engine q_customplot_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -38733,10 +36433,6 @@ void q_customplot_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QEvent*
 ///
 bool q_customplot_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_customplot_super_event` instead
-///
-#define q_customplot_qbase_event q_customplot_super_event
 
 /// Inherited from QWidget
 ///
@@ -38771,10 +36467,6 @@ void q_customplot_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void q_customplot_key_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_customplot_super_key_press_event` instead
-///
-#define q_customplot_qbase_key_press_event q_customplot_super_key_press_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
@@ -38807,10 +36499,6 @@ void q_customplot_on_key_press_event(void* self, void (*callback)(void*, void*))
 /// @param event QKeyEvent*
 ///
 void q_customplot_key_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_customplot_super_key_release_event` instead
-///
-#define q_customplot_qbase_key_release_event q_customplot_super_key_release_event
 
 /// Inherited from QWidget
 ///
@@ -38845,10 +36533,6 @@ void q_customplot_on_key_release_event(void* self, void (*callback)(void*, void*
 ///
 void q_customplot_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_customplot_super_focus_in_event` instead
-///
-#define q_customplot_qbase_focus_in_event q_customplot_super_focus_in_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -38881,10 +36565,6 @@ void q_customplot_on_focus_in_event(void* self, void (*callback)(void*, void*));
 /// @param event QFocusEvent*
 ///
 void q_customplot_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_customplot_super_focus_out_event` instead
-///
-#define q_customplot_qbase_focus_out_event q_customplot_super_focus_out_event
 
 /// Inherited from QWidget
 ///
@@ -38919,10 +36599,6 @@ void q_customplot_on_focus_out_event(void* self, void (*callback)(void*, void*))
 ///
 void q_customplot_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_customplot_super_enter_event` instead
-///
-#define q_customplot_qbase_enter_event q_customplot_super_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -38955,10 +36631,6 @@ void q_customplot_on_enter_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void q_customplot_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_customplot_super_leave_event` instead
-///
-#define q_customplot_qbase_leave_event q_customplot_super_leave_event
 
 /// Inherited from QWidget
 ///
@@ -38993,10 +36665,6 @@ void q_customplot_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_customplot_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_customplot_super_move_event` instead
-///
-#define q_customplot_qbase_move_event q_customplot_super_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -39029,10 +36697,6 @@ void q_customplot_on_move_event(void* self, void (*callback)(void*, void*));
 /// @param event QCloseEvent*
 ///
 void q_customplot_close_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_customplot_super_close_event` instead
-///
-#define q_customplot_qbase_close_event q_customplot_super_close_event
 
 /// Inherited from QWidget
 ///
@@ -39067,10 +36731,6 @@ void q_customplot_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void q_customplot_context_menu_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_customplot_super_context_menu_event` instead
-///
-#define q_customplot_qbase_context_menu_event q_customplot_super_context_menu_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
@@ -39103,10 +36763,6 @@ void q_customplot_on_context_menu_event(void* self, void (*callback)(void*, void
 /// @param event QTabletEvent*
 ///
 void q_customplot_tablet_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_customplot_super_tablet_event` instead
-///
-#define q_customplot_qbase_tablet_event q_customplot_super_tablet_event
 
 /// Inherited from QWidget
 ///
@@ -39141,10 +36797,6 @@ void q_customplot_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void q_customplot_action_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_customplot_super_action_event` instead
-///
-#define q_customplot_qbase_action_event q_customplot_super_action_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -39177,10 +36829,6 @@ void q_customplot_on_action_event(void* self, void (*callback)(void*, void*));
 /// @param event QDragEnterEvent*
 ///
 void q_customplot_drag_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_customplot_super_drag_enter_event` instead
-///
-#define q_customplot_qbase_drag_enter_event q_customplot_super_drag_enter_event
 
 /// Inherited from QWidget
 ///
@@ -39215,10 +36863,6 @@ void q_customplot_on_drag_enter_event(void* self, void (*callback)(void*, void*)
 ///
 void q_customplot_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_customplot_super_drag_move_event` instead
-///
-#define q_customplot_qbase_drag_move_event q_customplot_super_drag_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -39251,10 +36895,6 @@ void q_customplot_on_drag_move_event(void* self, void (*callback)(void*, void*))
 /// @param event QDragLeaveEvent*
 ///
 void q_customplot_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_customplot_super_drag_leave_event` instead
-///
-#define q_customplot_qbase_drag_leave_event q_customplot_super_drag_leave_event
 
 /// Inherited from QWidget
 ///
@@ -39289,10 +36929,6 @@ void q_customplot_on_drag_leave_event(void* self, void (*callback)(void*, void*)
 ///
 void q_customplot_drop_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_customplot_super_drop_event` instead
-///
-#define q_customplot_qbase_drop_event q_customplot_super_drop_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -39326,10 +36962,6 @@ void q_customplot_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void q_customplot_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_customplot_super_show_event` instead
-///
-#define q_customplot_qbase_show_event q_customplot_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -39362,10 +36994,6 @@ void q_customplot_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param event QHideEvent*
 ///
 void q_customplot_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_customplot_super_hide_event` instead
-///
-#define q_customplot_qbase_hide_event q_customplot_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -39402,10 +37030,6 @@ void q_customplot_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_customplot_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `q_customplot_super_native_event` instead
-///
-#define q_customplot_qbase_native_event q_customplot_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -39441,10 +37065,6 @@ void q_customplot_on_native_event(void* self, bool (*callback)(void*, libqt_stri
 ///
 void q_customplot_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_customplot_super_change_event` instead
-///
-#define q_customplot_qbase_change_event q_customplot_super_change_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -39477,10 +37097,6 @@ void q_customplot_on_change_event(void* self, void (*callback)(void*, void*));
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
 int32_t q_customplot_metric(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `q_customplot_super_metric` instead
-///
-#define q_customplot_qbase_metric q_customplot_super_metric
 
 /// Inherited from QWidget
 ///
@@ -39515,10 +37131,6 @@ void q_customplot_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void q_customplot_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_customplot_super_init_painter` instead
-///
-#define q_customplot_qbase_init_painter q_customplot_super_init_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -39552,10 +37164,6 @@ void q_customplot_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_customplot_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `q_customplot_super_redirected` instead
-///
-#define q_customplot_qbase_redirected q_customplot_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -39587,10 +37195,6 @@ void q_customplot_on_redirected(void* self, QPaintDevice* (*callback)(void*, voi
 /// @param self QCustomPlot*
 ///
 QPainter* q_customplot_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `q_customplot_super_shared_painter` instead
-///
-#define q_customplot_qbase_shared_painter q_customplot_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -39624,10 +37228,6 @@ void q_customplot_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void q_customplot_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_customplot_super_input_method_event` instead
-///
-#define q_customplot_qbase_input_method_event q_customplot_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -39660,10 +37260,6 @@ void q_customplot_on_input_method_event(void* self, void (*callback)(void*, void
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* q_customplot_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `q_customplot_super_input_method_query` instead
-///
-#define q_customplot_qbase_input_method_query q_customplot_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -39700,10 +37296,6 @@ void q_customplot_on_input_method_query(void* self, QVariant* (*callback)(void*,
 ///
 bool q_customplot_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `q_customplot_super_focus_next_prev_child` instead
-///
-#define q_customplot_qbase_focus_next_prev_child q_customplot_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -39737,10 +37329,6 @@ void q_customplot_on_focus_next_prev_child(void* self, bool (*callback)(void*, b
 /// @param event QEvent*
 ///
 bool q_customplot_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_customplot_super_event_filter` instead
-///
-#define q_customplot_qbase_event_filter q_customplot_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -39776,10 +37364,6 @@ void q_customplot_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void q_customplot_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_customplot_super_timer_event` instead
-///
-#define q_customplot_qbase_timer_event q_customplot_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -39812,10 +37396,6 @@ void q_customplot_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_customplot_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_customplot_super_child_event` instead
-///
-#define q_customplot_qbase_child_event q_customplot_super_child_event
 
 /// Inherited from QObject
 ///
@@ -39850,10 +37430,6 @@ void q_customplot_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_customplot_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_customplot_super_custom_event` instead
-///
-#define q_customplot_qbase_custom_event q_customplot_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -39886,10 +37462,6 @@ void q_customplot_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_customplot_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_customplot_super_connect_notify` instead
-///
-#define q_customplot_qbase_connect_notify q_customplot_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -39924,10 +37496,6 @@ void q_customplot_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_customplot_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_customplot_super_disconnect_notify` instead
-///
-#define q_customplot_qbase_disconnect_notify q_customplot_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -39960,10 +37528,6 @@ void q_customplot_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 void q_customplot_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_customplot_super_update_micro_focus` instead
-///
-#define q_customplot_qbase_update_micro_focus q_customplot_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -39994,10 +37558,6 @@ void q_customplot_on_update_micro_focus(void* self, void (*callback)());
 /// @param self QCustomPlot*
 ///
 void q_customplot_create(void* self);
-
-/// @warning DEPRECATED: Use `q_customplot_super_create` instead
-///
-#define q_customplot_qbase_create q_customplot_super_create
 
 /// Inherited from QWidget
 ///
@@ -40030,10 +37590,6 @@ void q_customplot_on_create(void* self, void (*callback)());
 ///
 void q_customplot_destroy(void* self);
 
-/// @warning DEPRECATED: Use `q_customplot_super_destroy` instead
-///
-#define q_customplot_qbase_destroy q_customplot_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -40064,10 +37620,6 @@ void q_customplot_on_destroy(void* self, void (*callback)());
 /// @param self QCustomPlot*
 ///
 bool q_customplot_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `q_customplot_super_focus_next_child` instead
-///
-#define q_customplot_qbase_focus_next_child q_customplot_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -40100,10 +37652,6 @@ void q_customplot_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_customplot_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `q_customplot_super_focus_previous_child` instead
-///
-#define q_customplot_qbase_focus_previous_child q_customplot_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -40134,10 +37682,6 @@ void q_customplot_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self QCustomPlot*
 ///
 QObject* q_customplot_sender(void* self);
-
-/// @warning DEPRECATED: Use `q_customplot_super_sender` instead
-///
-#define q_customplot_qbase_sender q_customplot_super_sender
 
 /// Inherited from QObject
 ///
@@ -40170,10 +37714,6 @@ void q_customplot_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_customplot_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `q_customplot_super_sender_signal_index` instead
-///
-#define q_customplot_qbase_sender_signal_index q_customplot_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -40205,10 +37745,6 @@ void q_customplot_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t q_customplot_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `q_customplot_super_receivers` instead
-///
-#define q_customplot_qbase_receivers q_customplot_super_receivers
 
 /// Inherited from QObject
 ///
@@ -40243,10 +37779,6 @@ void q_customplot_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 bool q_customplot_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_customplot_super_is_signal_connected` instead
-///
-#define q_customplot_qbase_is_signal_connected q_customplot_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -40280,10 +37812,6 @@ void q_customplot_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double q_customplot_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `q_customplot_super_get_decoded_metric_f` instead
-///
-#define q_customplot_qbase_get_decoded_metric_f q_customplot_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///
@@ -40783,10 +38311,6 @@ void q_cpselectiondecoratorbracket_draw_bracket(void* self, void* painter, int d
 ///
 void q_cpselectiondecoratorbracket_on_draw_bracket(void* self, void (*callback)(void*, void*, int));
 
-/// @warning DEPRECATED: Use `q_cpselectiondecoratorbracket_super_draw_bracket` instead
-///
-#define q_cpselectiondecoratorbracket_qbase_draw_bracket q_cpselectiondecoratorbracket_super_draw_bracket
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPSelectionDecoratorBracket.html)
 ///
 /// Base class method implementation
@@ -40813,10 +38337,6 @@ void q_cpselectiondecoratorbracket_draw_decoration(void* self, void* painter, vo
 /// @param callback void func(QCPSelectionDecoratorBracket* self, QCPPainter* painter, QCPDataSelection* selection)
 ///
 void q_cpselectiondecoratorbracket_on_draw_decoration(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpselectiondecoratorbracket_super_draw_decoration` instead
-///
-#define q_cpselectiondecoratorbracket_qbase_draw_decoration q_cpselectiondecoratorbracket_super_draw_decoration
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPSelectionDecoratorBracket.html)
 ///
@@ -40845,10 +38365,6 @@ double q_cpselectiondecoratorbracket_get_tangent_angle(void* self, void* interfa
 /// @param callback double func(QCPSelectionDecoratorBracket* self, QCPPlottableInterface1D* interface1d, int dataIndex, int direction)
 ///
 void q_cpselectiondecoratorbracket_on_get_tangent_angle(void* self, double (*callback)(void*, void*, int, int));
-
-/// @warning DEPRECATED: Use `q_cpselectiondecoratorbracket_super_get_tangent_angle` instead
-///
-#define q_cpselectiondecoratorbracket_qbase_get_tangent_angle q_cpselectiondecoratorbracket_super_get_tangent_angle
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPSelectionDecoratorBracket.html)
 ///
@@ -40879,10 +38395,6 @@ QPointF* q_cpselectiondecoratorbracket_get_pixel_coordinates(void* self, void* i
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpselectiondecoratorbracket_on_get_pixel_coordinates(void* self, QPointF* (*callback)(void*, void*, int));
-
-/// @warning DEPRECATED: Use `q_cpselectiondecoratorbracket_super_get_pixel_coordinates` instead
-///
-#define q_cpselectiondecoratorbracket_qbase_get_pixel_coordinates q_cpselectiondecoratorbracket_super_get_pixel_coordinates
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPSelectionDecoratorBracket.html)
 ///
@@ -41012,10 +38524,6 @@ void q_cpselectiondecoratorbracket_set_scatter_style2(void* self, void* scatterS
 ///
 void q_cpselectiondecoratorbracket_copy_from(void* self, void* other);
 
-/// @warning DEPRECATED: Use `q_cpselectiondecoratorbracket_super_copy_from` instead
-///
-#define q_cpselectiondecoratorbracket_qbase_copy_from q_cpselectiondecoratorbracket_super_copy_from
-
 /// Inherited from QCPSelectionDecorator
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPSelectionDecorator.html)
@@ -41048,10 +38556,6 @@ void q_cpselectiondecoratorbracket_on_copy_from(void* self, void (*callback)(voi
 /// @param plottable QCPAbstractPlottable*
 ///
 bool q_cpselectiondecoratorbracket_register_with_plottable(void* self, void* plottable);
-
-/// @warning DEPRECATED: Use `q_cpselectiondecoratorbracket_super_register_with_plottable` instead
-///
-#define q_cpselectiondecoratorbracket_qbase_register_with_plottable q_cpselectiondecoratorbracket_super_register_with_plottable
 
 /// Inherited from QCPSelectionDecorator
 ///
@@ -41115,10 +38619,6 @@ const QMetaObject* q_cpaxisrect_meta_object(void* self);
 ///
 void q_cpaxisrect_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_meta_object` instead
-///
-#define q_cpaxisrect_qbase_meta_object q_cpaxisrect_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -41138,10 +38638,6 @@ void* q_cpaxisrect_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPAxisRect* self, const char* param1)
 ///
 void q_cpaxisrect_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_metacast` instead
-///
-#define q_cpaxisrect_qbase_metacast q_cpaxisrect_super_metacast
 
 /// Base class method implementation
 ///
@@ -41163,10 +38659,6 @@ int32_t q_cpaxisrect_metacall(void* self, int32_t param1, int param2, void* para
 /// @param callback int32_t func(QCPAxisRect* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpaxisrect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_metacall` instead
-///
-#define q_cpaxisrect_qbase_metacall q_cpaxisrect_super_metacall
 
 /// Base class method implementation
 ///
@@ -41570,10 +39062,6 @@ void q_cpaxisrect_update(void* self, int32_t phase);
 ///
 void q_cpaxisrect_on_update(void* self, void (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_update` instead
-///
-#define q_cpaxisrect_qbase_update q_cpaxisrect_super_update
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
 /// Base class method implementation
@@ -41600,10 +39088,6 @@ libqt_list q_cpaxisrect_elements(void* self, bool recursive);
 /// @param callback libqt_list of QCPLayoutElement* func(QCPAxisRect* self, bool recursive)
 ///
 void q_cpaxisrect_on_elements(void* self, libqt_list (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_elements` instead
-///
-#define q_cpaxisrect_qbase_elements q_cpaxisrect_super_elements
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
@@ -41632,10 +39116,6 @@ void q_cpaxisrect_apply_default_antialiasing_hint(void* self, void* painter);
 ///
 void q_cpaxisrect_on_apply_default_antialiasing_hint(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpaxisrect_qbase_apply_default_antialiasing_hint q_cpaxisrect_super_apply_default_antialiasing_hint
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
 /// Base class method implementation
@@ -41660,10 +39140,6 @@ void q_cpaxisrect_draw(void* self, void* painter);
 /// @param callback void func(QCPAxisRect* self, QCPPainter* painter)
 ///
 void q_cpaxisrect_on_draw(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_draw` instead
-///
-#define q_cpaxisrect_qbase_draw q_cpaxisrect_super_draw
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
@@ -41690,10 +39166,6 @@ int32_t q_cpaxisrect_calculate_auto_margin(void* self, int32_t side);
 ///
 void q_cpaxisrect_on_calculate_auto_margin(void* self, int32_t (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_calculate_auto_margin` instead
-///
-#define q_cpaxisrect_qbase_calculate_auto_margin q_cpaxisrect_super_calculate_auto_margin
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
 /// Base class method implementation
@@ -41717,10 +39189,6 @@ void q_cpaxisrect_layout_changed(void* self);
 /// @param callback void func()
 ///
 void q_cpaxisrect_on_layout_changed(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_layout_changed` instead
-///
-#define q_cpaxisrect_qbase_layout_changed q_cpaxisrect_super_layout_changed
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
@@ -41746,10 +39214,6 @@ void q_cpaxisrect_mouse_press_event(void* self, void* event, void* details);
 /// @param callback void func(QCPAxisRect* self, QMouseEvent* event, QVariant* details)
 ///
 void q_cpaxisrect_on_mouse_press_event(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_mouse_press_event` instead
-///
-#define q_cpaxisrect_qbase_mouse_press_event q_cpaxisrect_super_mouse_press_event
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
@@ -41778,10 +39242,6 @@ void q_cpaxisrect_mouse_move_event(void* self, void* event, void* startPos);
 ///
 void q_cpaxisrect_on_mouse_move_event(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_mouse_move_event` instead
-///
-#define q_cpaxisrect_qbase_mouse_move_event q_cpaxisrect_super_mouse_move_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
 /// Base class method implementation
@@ -41809,10 +39269,6 @@ void q_cpaxisrect_mouse_release_event(void* self, void* event, void* startPos);
 ///
 void q_cpaxisrect_on_mouse_release_event(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_mouse_release_event` instead
-///
-#define q_cpaxisrect_qbase_mouse_release_event q_cpaxisrect_super_mouse_release_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
 /// Base class method implementation
@@ -41839,10 +39295,6 @@ void q_cpaxisrect_wheel_event(void* self, void* event);
 ///
 void q_cpaxisrect_on_wheel_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_wheel_event` instead
-///
-#define q_cpaxisrect_qbase_wheel_event q_cpaxisrect_super_wheel_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
 /// Base class method implementation
@@ -41868,10 +39320,6 @@ void q_cpaxisrect_draw_background(void* self, void* painter);
 ///
 void q_cpaxisrect_on_draw_background(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_draw_background` instead
-///
-#define q_cpaxisrect_qbase_draw_background q_cpaxisrect_super_draw_background
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
 /// Base class method implementation
@@ -41896,10 +39344,6 @@ void q_cpaxisrect_update_axes_offset(void* self, int32_t type);
 /// @param callback void func(QCPAxisRect* self, enum QCPAxis__AxisType type)
 ///
 void q_cpaxisrect_on_update_axes_offset(void* self, void (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_update_axes_offset` instead
-///
-#define q_cpaxisrect_qbase_update_axes_offset q_cpaxisrect_super_update_axes_offset
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
@@ -42719,10 +40163,6 @@ void q_cpaxisrect_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 QSize* q_cpaxisrect_minimum_outer_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_minimum_outer_size_hint` instead
-///
-#define q_cpaxisrect_qbase_minimum_outer_size_hint q_cpaxisrect_super_minimum_outer_size_hint
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -42755,10 +40195,6 @@ void q_cpaxisrect_on_minimum_outer_size_hint(void* self, QSize* (*callback)());
 /// @param self QCPAxisRect*
 ///
 QSize* q_cpaxisrect_maximum_outer_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_maximum_outer_size_hint` instead
-///
-#define q_cpaxisrect_qbase_maximum_outer_size_hint q_cpaxisrect_super_maximum_outer_size_hint
 
 /// Inherited from QCPLayoutElement
 ///
@@ -42796,10 +40232,6 @@ void q_cpaxisrect_on_maximum_outer_size_hint(void* self, QSize* (*callback)());
 ///
 double q_cpaxisrect_select_test(void* self, void* pos, bool onlySelectable, void* details);
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_select_test` instead
-///
-#define q_cpaxisrect_qbase_select_test q_cpaxisrect_super_select_test
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -42835,10 +40267,6 @@ void q_cpaxisrect_on_select_test(void* self, double (*callback)(void*, void*, bo
 ///
 void q_cpaxisrect_parent_plot_initialized(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_parent_plot_initialized` instead
-///
-#define q_cpaxisrect_qbase_parent_plot_initialized q_cpaxisrect_super_parent_plot_initialized
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -42873,10 +40301,6 @@ void q_cpaxisrect_on_parent_plot_initialized(void* self, void (*callback)(void*,
 ///
 int32_t q_cpaxisrect_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_selection_category` instead
-///
-#define q_cpaxisrect_qbase_selection_category q_cpaxisrect_super_selection_category
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -42909,10 +40333,6 @@ void q_cpaxisrect_on_selection_category(void* self, int32_t (*callback)());
 /// @param self QCPAxisRect*
 ///
 QRect* q_cpaxisrect_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_clip_rect` instead
-///
-#define q_cpaxisrect_qbase_clip_rect q_cpaxisrect_super_clip_rect
 
 /// Inherited from QCPLayerable
 ///
@@ -42951,10 +40371,6 @@ void q_cpaxisrect_on_clip_rect(void* self, QRect* (*callback)());
 ///
 void q_cpaxisrect_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_select_event` instead
-///
-#define q_cpaxisrect_qbase_select_event q_cpaxisrect_super_select_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -42991,10 +40407,6 @@ void q_cpaxisrect_on_select_event(void* self, void (*callback)(void*, void*, boo
 ///
 void q_cpaxisrect_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_deselect_event` instead
-///
-#define q_cpaxisrect_qbase_deselect_event q_cpaxisrect_super_deselect_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -43028,10 +40440,6 @@ void q_cpaxisrect_on_deselect_event(void* self, void (*callback)(void*, bool*));
 /// @param details QVariant*
 ///
 void q_cpaxisrect_mouse_double_click_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_mouse_double_click_event` instead
-///
-#define q_cpaxisrect_qbase_mouse_double_click_event q_cpaxisrect_super_mouse_double_click_event
 
 /// Inherited from QCPLayerable
 ///
@@ -43067,10 +40475,6 @@ void q_cpaxisrect_on_mouse_double_click_event(void* self, void (*callback)(void*
 ///
 bool q_cpaxisrect_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_event` instead
-///
-#define q_cpaxisrect_qbase_event q_cpaxisrect_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -43104,10 +40508,6 @@ void q_cpaxisrect_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cpaxisrect_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_event_filter` instead
-///
-#define q_cpaxisrect_qbase_event_filter q_cpaxisrect_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -43143,10 +40543,6 @@ void q_cpaxisrect_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void q_cpaxisrect_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_timer_event` instead
-///
-#define q_cpaxisrect_qbase_timer_event q_cpaxisrect_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -43179,10 +40575,6 @@ void q_cpaxisrect_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cpaxisrect_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_child_event` instead
-///
-#define q_cpaxisrect_qbase_child_event q_cpaxisrect_super_child_event
 
 /// Inherited from QObject
 ///
@@ -43217,10 +40609,6 @@ void q_cpaxisrect_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpaxisrect_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_custom_event` instead
-///
-#define q_cpaxisrect_qbase_custom_event q_cpaxisrect_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -43253,10 +40641,6 @@ void q_cpaxisrect_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_cpaxisrect_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_connect_notify` instead
-///
-#define q_cpaxisrect_qbase_connect_notify q_cpaxisrect_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -43291,10 +40675,6 @@ void q_cpaxisrect_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_cpaxisrect_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_disconnect_notify` instead
-///
-#define q_cpaxisrect_qbase_disconnect_notify q_cpaxisrect_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -43327,10 +40707,6 @@ void q_cpaxisrect_on_disconnect_notify(void* self, void (*callback)(void*, void*
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpaxisrect_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_initialize_parent_plot` instead
-///
-#define q_cpaxisrect_qbase_initialize_parent_plot q_cpaxisrect_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -43365,10 +40741,6 @@ void q_cpaxisrect_on_initialize_parent_plot(void* self, void (*callback)(void*, 
 ///
 void q_cpaxisrect_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_set_parent_layerable` instead
-///
-#define q_cpaxisrect_qbase_set_parent_layerable q_cpaxisrect_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -43402,10 +40774,6 @@ void q_cpaxisrect_on_set_parent_layerable(void* self, void (*callback)(void*, vo
 /// @param prepend bool
 ///
 bool q_cpaxisrect_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_move_to_layer` instead
-///
-#define q_cpaxisrect_qbase_move_to_layer q_cpaxisrect_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -43443,10 +40811,6 @@ void q_cpaxisrect_on_move_to_layer(void* self, bool (*callback)(void*, void*, bo
 ///
 void q_cpaxisrect_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_apply_antialiasing_hint` instead
-///
-#define q_cpaxisrect_qbase_apply_antialiasing_hint q_cpaxisrect_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -43481,10 +40845,6 @@ void q_cpaxisrect_on_apply_antialiasing_hint(void* self, void (*callback)(void*,
 ///
 QObject* q_cpaxisrect_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_sender` instead
-///
-#define q_cpaxisrect_qbase_sender q_cpaxisrect_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -43515,10 +40875,6 @@ void q_cpaxisrect_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPAxisRect*
 ///
 int32_t q_cpaxisrect_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_sender_signal_index` instead
-///
-#define q_cpaxisrect_qbase_sender_signal_index q_cpaxisrect_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -43552,10 +40908,6 @@ void q_cpaxisrect_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cpaxisrect_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_receivers` instead
-///
-#define q_cpaxisrect_qbase_receivers q_cpaxisrect_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -43588,10 +40940,6 @@ void q_cpaxisrect_on_receivers(void* self, int32_t (*callback)(void*, const char
 /// @param signal QMetaMethod*
 ///
 bool q_cpaxisrect_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpaxisrect_super_is_signal_connected` instead
-///
-#define q_cpaxisrect_qbase_is_signal_connected q_cpaxisrect_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -43657,10 +41005,6 @@ const QMetaObject* q_cpabstractlegenditem_meta_object(void* self);
 ///
 void q_cpabstractlegenditem_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_meta_object` instead
-///
-#define q_cpabstractlegenditem_qbase_meta_object q_cpabstractlegenditem_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -43680,10 +41024,6 @@ void* q_cpabstractlegenditem_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPAbstractLegendItem* self, const char* param1)
 ///
 void q_cpabstractlegenditem_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_metacast` instead
-///
-#define q_cpabstractlegenditem_qbase_metacast q_cpabstractlegenditem_super_metacast
 
 /// Base class method implementation
 ///
@@ -43705,10 +41045,6 @@ int32_t q_cpabstractlegenditem_metacall(void* self, int32_t param1, int param2, 
 /// @param callback int32_t func(QCPAbstractLegendItem* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpabstractlegenditem_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_metacall` instead
-///
-#define q_cpabstractlegenditem_qbase_metacall q_cpabstractlegenditem_super_metacall
 
 /// Base class method implementation
 ///
@@ -43829,10 +41165,6 @@ double q_cpabstractlegenditem_select_test(void* self, void* pos, bool onlySelect
 ///
 void q_cpabstractlegenditem_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_select_test` instead
-///
-#define q_cpabstractlegenditem_qbase_select_test q_cpabstractlegenditem_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractLegendItem.html)
 ///
 /// Base class method implementation
@@ -43889,10 +41221,6 @@ int32_t q_cpabstractlegenditem_selection_category(void* self);
 ///
 void q_cpabstractlegenditem_on_selection_category(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_selection_category` instead
-///
-#define q_cpabstractlegenditem_qbase_selection_category q_cpabstractlegenditem_super_selection_category
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractLegendItem.html)
 ///
 /// Base class method implementation
@@ -43918,10 +41246,6 @@ void q_cpabstractlegenditem_apply_default_antialiasing_hint(void* self, void* pa
 /// @param callback void func(QCPAbstractLegendItem* self, QCPPainter* painter)
 ///
 void q_cpabstractlegenditem_on_apply_default_antialiasing_hint(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpabstractlegenditem_qbase_apply_default_antialiasing_hint q_cpabstractlegenditem_super_apply_default_antialiasing_hint
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractLegendItem.html)
 ///
@@ -43949,10 +41273,6 @@ QRect* q_cpabstractlegenditem_clip_rect(void* self);
 ///
 void q_cpabstractlegenditem_on_clip_rect(void* self, QRect* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_clip_rect` instead
-///
-#define q_cpabstractlegenditem_qbase_clip_rect q_cpabstractlegenditem_super_clip_rect
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractLegendItem.html)
 ///
 /// Base class method implementation
@@ -43976,10 +41296,6 @@ void q_cpabstractlegenditem_draw(void* self, void* painter);
 /// @param callback void func(QCPAbstractLegendItem* self, QCPPainter* painter)
 ///
 void q_cpabstractlegenditem_on_draw(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_draw` instead
-///
-#define q_cpabstractlegenditem_qbase_draw q_cpabstractlegenditem_super_draw
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractLegendItem.html)
 ///
@@ -44009,10 +41325,6 @@ void q_cpabstractlegenditem_select_event(void* self, void* event, bool additive,
 ///
 void q_cpabstractlegenditem_on_select_event(void* self, void (*callback)(void*, void*, bool, void*, bool*));
 
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_select_event` instead
-///
-#define q_cpabstractlegenditem_qbase_select_event q_cpabstractlegenditem_super_select_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractLegendItem.html)
 ///
 /// Base class method implementation
@@ -44040,10 +41352,6 @@ void q_cpabstractlegenditem_deselect_event(void* self, bool* selectionStateChang
 /// @param callback void func(QCPAbstractLegendItem* self, bool* selectionStateChanged)
 ///
 void q_cpabstractlegenditem_on_deselect_event(void* self, void (*callback)(void*, bool*));
-
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_deselect_event` instead
-///
-#define q_cpabstractlegenditem_qbase_deselect_event q_cpabstractlegenditem_super_deselect_event
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractLegendItem.html)
 ///
@@ -44832,10 +42140,6 @@ void q_cpabstractlegenditem_on_destroyed1(void* self, void (*callback)(void*, vo
 ///
 void q_cpabstractlegenditem_update(void* self, int32_t phase);
 
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_update` instead
-///
-#define q_cpabstractlegenditem_qbase_update q_cpabstractlegenditem_super_update
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -44867,10 +42171,6 @@ void q_cpabstractlegenditem_on_update(void* self, void (*callback)(void*, int32_
 /// @param self QCPAbstractLegendItem*
 ///
 QSize* q_cpabstractlegenditem_minimum_outer_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_minimum_outer_size_hint` instead
-///
-#define q_cpabstractlegenditem_qbase_minimum_outer_size_hint q_cpabstractlegenditem_super_minimum_outer_size_hint
 
 /// Inherited from QCPLayoutElement
 ///
@@ -44904,10 +42204,6 @@ void q_cpabstractlegenditem_on_minimum_outer_size_hint(void* self, QSize* (*call
 /// @param self QCPAbstractLegendItem*
 ///
 QSize* q_cpabstractlegenditem_maximum_outer_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_maximum_outer_size_hint` instead
-///
-#define q_cpabstractlegenditem_qbase_maximum_outer_size_hint q_cpabstractlegenditem_super_maximum_outer_size_hint
 
 /// Inherited from QCPLayoutElement
 ///
@@ -44945,10 +42241,6 @@ void q_cpabstractlegenditem_on_maximum_outer_size_hint(void* self, QSize* (*call
 ///
 libqt_list q_cpabstractlegenditem_elements(void* self, bool recursive);
 
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_elements` instead
-///
-#define q_cpabstractlegenditem_qbase_elements q_cpabstractlegenditem_super_elements
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -44984,10 +42276,6 @@ void q_cpabstractlegenditem_on_elements(void* self, libqt_list (*callback)(void*
 ///
 int32_t q_cpabstractlegenditem_calculate_auto_margin(void* self, int32_t side);
 
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_calculate_auto_margin` instead
-///
-#define q_cpabstractlegenditem_qbase_calculate_auto_margin q_cpabstractlegenditem_super_calculate_auto_margin
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -45020,10 +42308,6 @@ void q_cpabstractlegenditem_on_calculate_auto_margin(void* self, int32_t (*callb
 ///
 void q_cpabstractlegenditem_layout_changed(void* self);
 
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_layout_changed` instead
-///
-#define q_cpabstractlegenditem_qbase_layout_changed q_cpabstractlegenditem_super_layout_changed
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -45055,10 +42339,6 @@ void q_cpabstractlegenditem_on_layout_changed(void* self, void (*callback)());
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpabstractlegenditem_parent_plot_initialized(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_parent_plot_initialized` instead
-///
-#define q_cpabstractlegenditem_qbase_parent_plot_initialized q_cpabstractlegenditem_super_parent_plot_initialized
 
 /// Inherited from QCPLayoutElement
 ///
@@ -45093,10 +42373,6 @@ void q_cpabstractlegenditem_on_parent_plot_initialized(void* self, void (*callba
 /// @param details QVariant*
 ///
 void q_cpabstractlegenditem_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_mouse_press_event` instead
-///
-#define q_cpabstractlegenditem_qbase_mouse_press_event q_cpabstractlegenditem_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -45133,10 +42409,6 @@ void q_cpabstractlegenditem_on_mouse_press_event(void* self, void (*callback)(vo
 ///
 void q_cpabstractlegenditem_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_mouse_move_event` instead
-///
-#define q_cpabstractlegenditem_qbase_mouse_move_event q_cpabstractlegenditem_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -45171,10 +42443,6 @@ void q_cpabstractlegenditem_on_mouse_move_event(void* self, void (*callback)(voi
 /// @param startPos QPointF*
 ///
 void q_cpabstractlegenditem_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_mouse_release_event` instead
-///
-#define q_cpabstractlegenditem_qbase_mouse_release_event q_cpabstractlegenditem_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -45211,10 +42479,6 @@ void q_cpabstractlegenditem_on_mouse_release_event(void* self, void (*callback)(
 ///
 void q_cpabstractlegenditem_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_mouse_double_click_event` instead
-///
-#define q_cpabstractlegenditem_qbase_mouse_double_click_event q_cpabstractlegenditem_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -45249,10 +42513,6 @@ void q_cpabstractlegenditem_on_mouse_double_click_event(void* self, void (*callb
 ///
 void q_cpabstractlegenditem_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_wheel_event` instead
-///
-#define q_cpabstractlegenditem_qbase_wheel_event q_cpabstractlegenditem_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -45285,10 +42545,6 @@ void q_cpabstractlegenditem_on_wheel_event(void* self, void (*callback)(void*, v
 /// @param event QEvent*
 ///
 bool q_cpabstractlegenditem_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_event` instead
-///
-#define q_cpabstractlegenditem_qbase_event q_cpabstractlegenditem_super_event
 
 /// Inherited from QObject
 ///
@@ -45324,10 +42580,6 @@ void q_cpabstractlegenditem_on_event(void* self, bool (*callback)(void*, void*))
 ///
 bool q_cpabstractlegenditem_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_event_filter` instead
-///
-#define q_cpabstractlegenditem_qbase_event_filter q_cpabstractlegenditem_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -45362,10 +42614,6 @@ void q_cpabstractlegenditem_on_event_filter(void* self, bool (*callback)(void*, 
 ///
 void q_cpabstractlegenditem_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_timer_event` instead
-///
-#define q_cpabstractlegenditem_qbase_timer_event q_cpabstractlegenditem_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -45398,10 +42646,6 @@ void q_cpabstractlegenditem_on_timer_event(void* self, void (*callback)(void*, v
 /// @param event QChildEvent*
 ///
 void q_cpabstractlegenditem_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_child_event` instead
-///
-#define q_cpabstractlegenditem_qbase_child_event q_cpabstractlegenditem_super_child_event
 
 /// Inherited from QObject
 ///
@@ -45436,10 +42680,6 @@ void q_cpabstractlegenditem_on_child_event(void* self, void (*callback)(void*, v
 ///
 void q_cpabstractlegenditem_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_custom_event` instead
-///
-#define q_cpabstractlegenditem_qbase_custom_event q_cpabstractlegenditem_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -45472,10 +42712,6 @@ void q_cpabstractlegenditem_on_custom_event(void* self, void (*callback)(void*, 
 /// @param signal QMetaMethod*
 ///
 void q_cpabstractlegenditem_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_connect_notify` instead
-///
-#define q_cpabstractlegenditem_qbase_connect_notify q_cpabstractlegenditem_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -45510,10 +42746,6 @@ void q_cpabstractlegenditem_on_connect_notify(void* self, void (*callback)(void*
 ///
 void q_cpabstractlegenditem_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_disconnect_notify` instead
-///
-#define q_cpabstractlegenditem_qbase_disconnect_notify q_cpabstractlegenditem_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -45546,10 +42778,6 @@ void q_cpabstractlegenditem_on_disconnect_notify(void* self, void (*callback)(vo
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpabstractlegenditem_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_initialize_parent_plot` instead
-///
-#define q_cpabstractlegenditem_qbase_initialize_parent_plot q_cpabstractlegenditem_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -45584,10 +42812,6 @@ void q_cpabstractlegenditem_on_initialize_parent_plot(void* self, void (*callbac
 ///
 void q_cpabstractlegenditem_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_set_parent_layerable` instead
-///
-#define q_cpabstractlegenditem_qbase_set_parent_layerable q_cpabstractlegenditem_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -45621,10 +42845,6 @@ void q_cpabstractlegenditem_on_set_parent_layerable(void* self, void (*callback)
 /// @param prepend bool
 ///
 bool q_cpabstractlegenditem_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_move_to_layer` instead
-///
-#define q_cpabstractlegenditem_qbase_move_to_layer q_cpabstractlegenditem_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -45662,10 +42882,6 @@ void q_cpabstractlegenditem_on_move_to_layer(void* self, bool (*callback)(void*,
 ///
 void q_cpabstractlegenditem_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_apply_antialiasing_hint` instead
-///
-#define q_cpabstractlegenditem_qbase_apply_antialiasing_hint q_cpabstractlegenditem_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -45700,10 +42916,6 @@ void q_cpabstractlegenditem_on_apply_antialiasing_hint(void* self, void (*callba
 ///
 QObject* q_cpabstractlegenditem_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_sender` instead
-///
-#define q_cpabstractlegenditem_qbase_sender q_cpabstractlegenditem_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -45734,10 +42946,6 @@ void q_cpabstractlegenditem_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPAbstractLegendItem*
 ///
 int32_t q_cpabstractlegenditem_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_sender_signal_index` instead
-///
-#define q_cpabstractlegenditem_qbase_sender_signal_index q_cpabstractlegenditem_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -45771,10 +42979,6 @@ void q_cpabstractlegenditem_on_sender_signal_index(void* self, int32_t (*callbac
 ///
 int32_t q_cpabstractlegenditem_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_receivers` instead
-///
-#define q_cpabstractlegenditem_qbase_receivers q_cpabstractlegenditem_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -45807,10 +43011,6 @@ void q_cpabstractlegenditem_on_receivers(void* self, int32_t (*callback)(void*, 
 /// @param signal QMetaMethod*
 ///
 bool q_cpabstractlegenditem_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_is_signal_connected` instead
-///
-#define q_cpabstractlegenditem_qbase_is_signal_connected q_cpabstractlegenditem_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -45877,10 +43077,6 @@ const QMetaObject* q_cpplottablelegenditem_meta_object(void* self);
 ///
 void q_cpplottablelegenditem_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_meta_object` instead
-///
-#define q_cpplottablelegenditem_qbase_meta_object q_cpplottablelegenditem_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -45900,10 +43096,6 @@ void* q_cpplottablelegenditem_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPPlottableLegendItem* self, const char* param1)
 ///
 void q_cpplottablelegenditem_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_metacast` instead
-///
-#define q_cpplottablelegenditem_qbase_metacast q_cpplottablelegenditem_super_metacast
 
 /// Base class method implementation
 ///
@@ -45925,10 +43117,6 @@ int32_t q_cpplottablelegenditem_metacall(void* self, int32_t param1, int param2,
 /// @param callback int32_t func(QCPPlottableLegendItem* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpplottablelegenditem_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_metacall` instead
-///
-#define q_cpplottablelegenditem_qbase_metacall q_cpplottablelegenditem_super_metacall
 
 /// Base class method implementation
 ///
@@ -45969,10 +43157,6 @@ void q_cpplottablelegenditem_draw(void* self, void* painter);
 ///
 void q_cpplottablelegenditem_on_draw(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_draw` instead
-///
-#define q_cpplottablelegenditem_qbase_draw q_cpplottablelegenditem_super_draw
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableLegendItem.html)
 ///
 /// Base class method implementation
@@ -45999,10 +43183,6 @@ QSize* q_cpplottablelegenditem_minimum_outer_size_hint(void* self);
 ///
 void q_cpplottablelegenditem_on_minimum_outer_size_hint(void* self, QSize* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_minimum_outer_size_hint` instead
-///
-#define q_cpplottablelegenditem_qbase_minimum_outer_size_hint q_cpplottablelegenditem_super_minimum_outer_size_hint
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableLegendItem.html)
 ///
 /// Base class method implementation
@@ -46027,10 +43207,6 @@ QPen* q_cpplottablelegenditem_get_icon_border_pen(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpplottablelegenditem_on_get_icon_border_pen(void* self, QPen* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_get_icon_border_pen` instead
-///
-#define q_cpplottablelegenditem_qbase_get_icon_border_pen q_cpplottablelegenditem_super_get_icon_border_pen
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableLegendItem.html)
 ///
@@ -46057,10 +43233,6 @@ QColor* q_cpplottablelegenditem_get_text_color(void* self);
 ///
 void q_cpplottablelegenditem_on_get_text_color(void* self, QColor* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_get_text_color` instead
-///
-#define q_cpplottablelegenditem_qbase_get_text_color q_cpplottablelegenditem_super_get_text_color
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableLegendItem.html)
 ///
 /// Base class method implementation
@@ -46085,10 +43257,6 @@ QFont* q_cpplottablelegenditem_get_font(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpplottablelegenditem_on_get_font(void* self, QFont* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_get_font` instead
-///
-#define q_cpplottablelegenditem_qbase_get_font q_cpplottablelegenditem_super_get_font
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableLegendItem.html)
 ///
@@ -47024,10 +44192,6 @@ void q_cpplottablelegenditem_on_destroyed1(void* self, void (*callback)(void*, v
 ///
 double q_cpplottablelegenditem_select_test(void* self, void* pos, bool onlySelectable, void* details);
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_select_test` instead
-///
-#define q_cpplottablelegenditem_qbase_select_test q_cpplottablelegenditem_super_select_test
-
 /// Inherited from QCPAbstractLegendItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractLegendItem.html)
@@ -47064,10 +44228,6 @@ void q_cpplottablelegenditem_on_select_test(void* self, double (*callback)(void*
 ///
 int32_t q_cpplottablelegenditem_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_selection_category` instead
-///
-#define q_cpplottablelegenditem_qbase_selection_category q_cpplottablelegenditem_super_selection_category
-
 /// Inherited from QCPAbstractLegendItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractLegendItem.html)
@@ -47102,10 +44262,6 @@ void q_cpplottablelegenditem_on_selection_category(void* self, int32_t (*callbac
 ///
 void q_cpplottablelegenditem_apply_default_antialiasing_hint(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpplottablelegenditem_qbase_apply_default_antialiasing_hint q_cpplottablelegenditem_super_apply_default_antialiasing_hint
-
 /// Inherited from QCPAbstractLegendItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractLegendItem.html)
@@ -47137,10 +44293,6 @@ void q_cpplottablelegenditem_on_apply_default_antialiasing_hint(void* self, void
 /// @param self QCPPlottableLegendItem*
 ///
 QRect* q_cpplottablelegenditem_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_clip_rect` instead
-///
-#define q_cpplottablelegenditem_qbase_clip_rect q_cpplottablelegenditem_super_clip_rect
 
 /// Inherited from QCPAbstractLegendItem
 ///
@@ -47179,10 +44331,6 @@ void q_cpplottablelegenditem_on_clip_rect(void* self, QRect* (*callback)());
 ///
 void q_cpplottablelegenditem_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_select_event` instead
-///
-#define q_cpplottablelegenditem_qbase_select_event q_cpplottablelegenditem_super_select_event
-
 /// Inherited from QCPAbstractLegendItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractLegendItem.html)
@@ -47219,10 +44367,6 @@ void q_cpplottablelegenditem_on_select_event(void* self, void (*callback)(void*,
 ///
 void q_cpplottablelegenditem_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_deselect_event` instead
-///
-#define q_cpplottablelegenditem_qbase_deselect_event q_cpplottablelegenditem_super_deselect_event
-
 /// Inherited from QCPAbstractLegendItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractLegendItem.html)
@@ -47256,10 +44400,6 @@ void q_cpplottablelegenditem_on_deselect_event(void* self, void (*callback)(void
 ///
 void q_cpplottablelegenditem_update(void* self, int32_t phase);
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_update` instead
-///
-#define q_cpplottablelegenditem_qbase_update q_cpplottablelegenditem_super_update
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -47291,10 +44431,6 @@ void q_cpplottablelegenditem_on_update(void* self, void (*callback)(void*, int32
 /// @param self QCPPlottableLegendItem*
 ///
 QSize* q_cpplottablelegenditem_maximum_outer_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_maximum_outer_size_hint` instead
-///
-#define q_cpplottablelegenditem_qbase_maximum_outer_size_hint q_cpplottablelegenditem_super_maximum_outer_size_hint
 
 /// Inherited from QCPLayoutElement
 ///
@@ -47332,10 +44468,6 @@ void q_cpplottablelegenditem_on_maximum_outer_size_hint(void* self, QSize* (*cal
 ///
 libqt_list q_cpplottablelegenditem_elements(void* self, bool recursive);
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_elements` instead
-///
-#define q_cpplottablelegenditem_qbase_elements q_cpplottablelegenditem_super_elements
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -47371,10 +44503,6 @@ void q_cpplottablelegenditem_on_elements(void* self, libqt_list (*callback)(void
 ///
 int32_t q_cpplottablelegenditem_calculate_auto_margin(void* self, int32_t side);
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_calculate_auto_margin` instead
-///
-#define q_cpplottablelegenditem_qbase_calculate_auto_margin q_cpplottablelegenditem_super_calculate_auto_margin
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -47407,10 +44535,6 @@ void q_cpplottablelegenditem_on_calculate_auto_margin(void* self, int32_t (*call
 ///
 void q_cpplottablelegenditem_layout_changed(void* self);
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_layout_changed` instead
-///
-#define q_cpplottablelegenditem_qbase_layout_changed q_cpplottablelegenditem_super_layout_changed
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -47442,10 +44566,6 @@ void q_cpplottablelegenditem_on_layout_changed(void* self, void (*callback)());
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpplottablelegenditem_parent_plot_initialized(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_parent_plot_initialized` instead
-///
-#define q_cpplottablelegenditem_qbase_parent_plot_initialized q_cpplottablelegenditem_super_parent_plot_initialized
 
 /// Inherited from QCPLayoutElement
 ///
@@ -47480,10 +44600,6 @@ void q_cpplottablelegenditem_on_parent_plot_initialized(void* self, void (*callb
 /// @param details QVariant*
 ///
 void q_cpplottablelegenditem_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_mouse_press_event` instead
-///
-#define q_cpplottablelegenditem_qbase_mouse_press_event q_cpplottablelegenditem_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -47520,10 +44636,6 @@ void q_cpplottablelegenditem_on_mouse_press_event(void* self, void (*callback)(v
 ///
 void q_cpplottablelegenditem_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_mouse_move_event` instead
-///
-#define q_cpplottablelegenditem_qbase_mouse_move_event q_cpplottablelegenditem_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -47558,10 +44670,6 @@ void q_cpplottablelegenditem_on_mouse_move_event(void* self, void (*callback)(vo
 /// @param startPos QPointF*
 ///
 void q_cpplottablelegenditem_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_mouse_release_event` instead
-///
-#define q_cpplottablelegenditem_qbase_mouse_release_event q_cpplottablelegenditem_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -47598,10 +44706,6 @@ void q_cpplottablelegenditem_on_mouse_release_event(void* self, void (*callback)
 ///
 void q_cpplottablelegenditem_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_mouse_double_click_event` instead
-///
-#define q_cpplottablelegenditem_qbase_mouse_double_click_event q_cpplottablelegenditem_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -47636,10 +44740,6 @@ void q_cpplottablelegenditem_on_mouse_double_click_event(void* self, void (*call
 ///
 void q_cpplottablelegenditem_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_wheel_event` instead
-///
-#define q_cpplottablelegenditem_qbase_wheel_event q_cpplottablelegenditem_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -47672,10 +44772,6 @@ void q_cpplottablelegenditem_on_wheel_event(void* self, void (*callback)(void*, 
 /// @param event QEvent*
 ///
 bool q_cpplottablelegenditem_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_event` instead
-///
-#define q_cpplottablelegenditem_qbase_event q_cpplottablelegenditem_super_event
 
 /// Inherited from QObject
 ///
@@ -47711,10 +44807,6 @@ void q_cpplottablelegenditem_on_event(void* self, bool (*callback)(void*, void*)
 ///
 bool q_cpplottablelegenditem_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_event_filter` instead
-///
-#define q_cpplottablelegenditem_qbase_event_filter q_cpplottablelegenditem_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -47749,10 +44841,6 @@ void q_cpplottablelegenditem_on_event_filter(void* self, bool (*callback)(void*,
 ///
 void q_cpplottablelegenditem_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_timer_event` instead
-///
-#define q_cpplottablelegenditem_qbase_timer_event q_cpplottablelegenditem_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -47785,10 +44873,6 @@ void q_cpplottablelegenditem_on_timer_event(void* self, void (*callback)(void*, 
 /// @param event QChildEvent*
 ///
 void q_cpplottablelegenditem_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_child_event` instead
-///
-#define q_cpplottablelegenditem_qbase_child_event q_cpplottablelegenditem_super_child_event
 
 /// Inherited from QObject
 ///
@@ -47823,10 +44907,6 @@ void q_cpplottablelegenditem_on_child_event(void* self, void (*callback)(void*, 
 ///
 void q_cpplottablelegenditem_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_custom_event` instead
-///
-#define q_cpplottablelegenditem_qbase_custom_event q_cpplottablelegenditem_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -47859,10 +44939,6 @@ void q_cpplottablelegenditem_on_custom_event(void* self, void (*callback)(void*,
 /// @param signal QMetaMethod*
 ///
 void q_cpplottablelegenditem_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_connect_notify` instead
-///
-#define q_cpplottablelegenditem_qbase_connect_notify q_cpplottablelegenditem_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -47897,10 +44973,6 @@ void q_cpplottablelegenditem_on_connect_notify(void* self, void (*callback)(void
 ///
 void q_cpplottablelegenditem_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_disconnect_notify` instead
-///
-#define q_cpplottablelegenditem_qbase_disconnect_notify q_cpplottablelegenditem_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -47933,10 +45005,6 @@ void q_cpplottablelegenditem_on_disconnect_notify(void* self, void (*callback)(v
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpplottablelegenditem_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_initialize_parent_plot` instead
-///
-#define q_cpplottablelegenditem_qbase_initialize_parent_plot q_cpplottablelegenditem_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -47971,10 +45039,6 @@ void q_cpplottablelegenditem_on_initialize_parent_plot(void* self, void (*callba
 ///
 void q_cpplottablelegenditem_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_set_parent_layerable` instead
-///
-#define q_cpplottablelegenditem_qbase_set_parent_layerable q_cpplottablelegenditem_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -48008,10 +45072,6 @@ void q_cpplottablelegenditem_on_set_parent_layerable(void* self, void (*callback
 /// @param prepend bool
 ///
 bool q_cpplottablelegenditem_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_move_to_layer` instead
-///
-#define q_cpplottablelegenditem_qbase_move_to_layer q_cpplottablelegenditem_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -48049,10 +45109,6 @@ void q_cpplottablelegenditem_on_move_to_layer(void* self, bool (*callback)(void*
 ///
 void q_cpplottablelegenditem_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_apply_antialiasing_hint` instead
-///
-#define q_cpplottablelegenditem_qbase_apply_antialiasing_hint q_cpplottablelegenditem_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -48087,10 +45143,6 @@ void q_cpplottablelegenditem_on_apply_antialiasing_hint(void* self, void (*callb
 ///
 QObject* q_cpplottablelegenditem_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_sender` instead
-///
-#define q_cpplottablelegenditem_qbase_sender q_cpplottablelegenditem_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -48121,10 +45173,6 @@ void q_cpplottablelegenditem_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPPlottableLegendItem*
 ///
 int32_t q_cpplottablelegenditem_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_sender_signal_index` instead
-///
-#define q_cpplottablelegenditem_qbase_sender_signal_index q_cpplottablelegenditem_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -48158,10 +45206,6 @@ void q_cpplottablelegenditem_on_sender_signal_index(void* self, int32_t (*callba
 ///
 int32_t q_cpplottablelegenditem_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_receivers` instead
-///
-#define q_cpplottablelegenditem_qbase_receivers q_cpplottablelegenditem_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -48194,10 +45238,6 @@ void q_cpplottablelegenditem_on_receivers(void* self, int32_t (*callback)(void*,
 /// @param signal QMetaMethod*
 ///
 bool q_cpplottablelegenditem_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_is_signal_connected` instead
-///
-#define q_cpplottablelegenditem_qbase_is_signal_connected q_cpplottablelegenditem_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -48261,10 +45301,6 @@ const QMetaObject* q_cplegend_meta_object(void* self);
 ///
 void q_cplegend_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cplegend_super_meta_object` instead
-///
-#define q_cplegend_qbase_meta_object q_cplegend_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -48284,10 +45320,6 @@ void* q_cplegend_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPLegend* self, const char* param1)
 ///
 void q_cplegend_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cplegend_super_metacast` instead
-///
-#define q_cplegend_qbase_metacast q_cplegend_super_metacast
 
 /// Base class method implementation
 ///
@@ -48309,10 +45341,6 @@ int32_t q_cplegend_metacall(void* self, int32_t param1, int param2, void* param3
 /// @param callback int32_t func(QCPLegend* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cplegend_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cplegend_super_metacall` instead
-///
-#define q_cplegend_qbase_metacall q_cplegend_super_metacall
 
 /// Base class method implementation
 ///
@@ -48543,10 +45571,6 @@ double q_cplegend_select_test(void* self, void* pos, bool onlySelectable, void* 
 ///
 void q_cplegend_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cplegend_super_select_test` instead
-///
-#define q_cplegend_qbase_select_test q_cplegend_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLegend.html)
 ///
 /// Base class method implementation
@@ -48671,10 +45695,6 @@ void q_cplegend_parent_plot_initialized(void* self, void* parentPlot);
 ///
 void q_cplegend_on_parent_plot_initialized(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cplegend_super_parent_plot_initialized` instead
-///
-#define q_cplegend_qbase_parent_plot_initialized q_cplegend_super_parent_plot_initialized
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLegend.html)
 ///
 /// Base class method implementation
@@ -48700,10 +45720,6 @@ int32_t q_cplegend_selection_category(void* self);
 /// @param callback int32_t func()
 ///
 void q_cplegend_on_selection_category(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_cplegend_super_selection_category` instead
-///
-#define q_cplegend_qbase_selection_category q_cplegend_super_selection_category
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLegend.html)
 ///
@@ -48731,10 +45747,6 @@ void q_cplegend_apply_default_antialiasing_hint(void* self, void* painter);
 ///
 void q_cplegend_on_apply_default_antialiasing_hint(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cplegend_super_apply_default_antialiasing_hint` instead
-///
-#define q_cplegend_qbase_apply_default_antialiasing_hint q_cplegend_super_apply_default_antialiasing_hint
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLegend.html)
 ///
 /// Base class method implementation
@@ -48759,10 +45771,6 @@ void q_cplegend_draw(void* self, void* painter);
 /// @param callback void func(QCPLegend* self, QCPPainter* painter)
 ///
 void q_cplegend_on_draw(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cplegend_super_draw` instead
-///
-#define q_cplegend_qbase_draw q_cplegend_super_draw
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLegend.html)
 ///
@@ -48792,10 +45800,6 @@ void q_cplegend_select_event(void* self, void* event, bool additive, void* detai
 ///
 void q_cplegend_on_select_event(void* self, void (*callback)(void*, void*, bool, void*, bool*));
 
-/// @warning DEPRECATED: Use `q_cplegend_super_select_event` instead
-///
-#define q_cplegend_qbase_select_event q_cplegend_super_select_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLegend.html)
 ///
 /// Base class method implementation
@@ -48824,10 +45828,6 @@ void q_cplegend_deselect_event(void* self, bool* selectionStateChanged);
 ///
 void q_cplegend_on_deselect_event(void* self, void (*callback)(void*, bool*));
 
-/// @warning DEPRECATED: Use `q_cplegend_super_deselect_event` instead
-///
-#define q_cplegend_qbase_deselect_event q_cplegend_super_deselect_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLegend.html)
 ///
 /// Base class method implementation
@@ -48854,10 +45854,6 @@ QPen* q_cplegend_get_border_pen(void* self);
 ///
 void q_cplegend_on_get_border_pen(void* self, QPen* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cplegend_super_get_border_pen` instead
-///
-#define q_cplegend_qbase_get_border_pen q_cplegend_super_get_border_pen
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLegend.html)
 ///
 /// Base class method implementation
@@ -48882,10 +45878,6 @@ QBrush* q_cplegend_get_brush(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cplegend_on_get_brush(void* self, QBrush* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cplegend_super_get_brush` instead
-///
-#define q_cplegend_qbase_get_brush q_cplegend_super_get_brush
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLegend.html)
 ///
@@ -49941,10 +46933,6 @@ void q_cplegend_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 void q_cplegend_update_layout(void* self);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_update_layout` instead
-///
-#define q_cplegend_qbase_update_layout q_cplegend_super_update_layout
-
 /// Inherited from QCPLayoutGrid
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
@@ -49975,10 +46963,6 @@ void q_cplegend_on_update_layout(void* self, void (*callback)());
 /// @param self QCPLegend*
 ///
 int32_t q_cplegend_element_count(void* self);
-
-/// @warning DEPRECATED: Use `q_cplegend_super_element_count` instead
-///
-#define q_cplegend_qbase_element_count q_cplegend_super_element_count
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -50011,10 +46995,6 @@ void q_cplegend_on_element_count(void* self, int32_t (*callback)());
 /// @param index int
 ///
 QCPLayoutElement* q_cplegend_element_at(void* self, int index);
-
-/// @warning DEPRECATED: Use `q_cplegend_super_element_at` instead
-///
-#define q_cplegend_qbase_element_at q_cplegend_super_element_at
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -50049,10 +47029,6 @@ void q_cplegend_on_element_at(void* self, QCPLayoutElement* (*callback)(void*, i
 ///
 QCPLayoutElement* q_cplegend_take_at(void* self, int index);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_take_at` instead
-///
-#define q_cplegend_qbase_take_at q_cplegend_super_take_at
-
 /// Inherited from QCPLayoutGrid
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
@@ -50085,10 +47061,6 @@ void q_cplegend_on_take_at(void* self, QCPLayoutElement* (*callback)(void*, int)
 /// @param element QCPLayoutElement*
 ///
 bool q_cplegend_take(void* self, void* element);
-
-/// @warning DEPRECATED: Use `q_cplegend_super_take` instead
-///
-#define q_cplegend_qbase_take q_cplegend_super_take
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -50125,10 +47097,6 @@ void q_cplegend_on_take(void* self, bool (*callback)(void*, void*));
 ///
 libqt_list q_cplegend_elements(void* self, bool recursive);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_elements` instead
-///
-#define q_cplegend_qbase_elements q_cplegend_super_elements
-
 /// Inherited from QCPLayoutGrid
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
@@ -50163,10 +47131,6 @@ void q_cplegend_on_elements(void* self, libqt_list (*callback)(void*, bool));
 ///
 void q_cplegend_simplify(void* self);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_simplify` instead
-///
-#define q_cplegend_qbase_simplify q_cplegend_super_simplify
-
 /// Inherited from QCPLayoutGrid
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
@@ -50197,10 +47161,6 @@ void q_cplegend_on_simplify(void* self, void (*callback)());
 /// @param self QCPLegend*
 ///
 QSize* q_cplegend_minimum_outer_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `q_cplegend_super_minimum_outer_size_hint` instead
-///
-#define q_cplegend_qbase_minimum_outer_size_hint q_cplegend_super_minimum_outer_size_hint
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -50234,10 +47194,6 @@ void q_cplegend_on_minimum_outer_size_hint(void* self, QSize* (*callback)());
 /// @param self QCPLegend*
 ///
 QSize* q_cplegend_maximum_outer_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `q_cplegend_super_maximum_outer_size_hint` instead
-///
-#define q_cplegend_qbase_maximum_outer_size_hint q_cplegend_super_maximum_outer_size_hint
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -50273,10 +47229,6 @@ void q_cplegend_on_maximum_outer_size_hint(void* self, QSize* (*callback)());
 ///
 void q_cplegend_update(void* self, int32_t phase);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_update` instead
-///
-#define q_cplegend_qbase_update q_cplegend_super_update
-
 /// Inherited from QCPLayout
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
@@ -50310,10 +47262,6 @@ void q_cplegend_on_update(void* self, void (*callback)(void*, int32_t));
 ///
 int32_t q_cplegend_calculate_auto_margin(void* self, int32_t side);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_calculate_auto_margin` instead
-///
-#define q_cplegend_qbase_calculate_auto_margin q_cplegend_super_calculate_auto_margin
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -50346,10 +47294,6 @@ void q_cplegend_on_calculate_auto_margin(void* self, int32_t (*callback)(void*, 
 ///
 void q_cplegend_layout_changed(void* self);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_layout_changed` instead
-///
-#define q_cplegend_qbase_layout_changed q_cplegend_super_layout_changed
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -50380,10 +47324,6 @@ void q_cplegend_on_layout_changed(void* self, void (*callback)());
 /// @param self QCPLegend*
 ///
 QRect* q_cplegend_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cplegend_super_clip_rect` instead
-///
-#define q_cplegend_qbase_clip_rect q_cplegend_super_clip_rect
 
 /// Inherited from QCPLayerable
 ///
@@ -50420,10 +47360,6 @@ void q_cplegend_on_clip_rect(void* self, QRect* (*callback)());
 ///
 void q_cplegend_mouse_press_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_mouse_press_event` instead
-///
-#define q_cplegend_qbase_mouse_press_event q_cplegend_super_mouse_press_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -50458,10 +47394,6 @@ void q_cplegend_on_mouse_press_event(void* self, void (*callback)(void*, void*, 
 /// @param startPos QPointF*
 ///
 void q_cplegend_mouse_move_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cplegend_super_mouse_move_event` instead
-///
-#define q_cplegend_qbase_mouse_move_event q_cplegend_super_mouse_move_event
 
 /// Inherited from QCPLayerable
 ///
@@ -50498,10 +47430,6 @@ void q_cplegend_on_mouse_move_event(void* self, void (*callback)(void*, void*, v
 ///
 void q_cplegend_mouse_release_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_mouse_release_event` instead
-///
-#define q_cplegend_qbase_mouse_release_event q_cplegend_super_mouse_release_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -50537,10 +47465,6 @@ void q_cplegend_on_mouse_release_event(void* self, void (*callback)(void*, void*
 ///
 void q_cplegend_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_mouse_double_click_event` instead
-///
-#define q_cplegend_qbase_mouse_double_click_event q_cplegend_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -50575,10 +47499,6 @@ void q_cplegend_on_mouse_double_click_event(void* self, void (*callback)(void*, 
 ///
 void q_cplegend_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_wheel_event` instead
-///
-#define q_cplegend_qbase_wheel_event q_cplegend_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -50611,10 +47531,6 @@ void q_cplegend_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cplegend_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cplegend_super_event` instead
-///
-#define q_cplegend_qbase_event q_cplegend_super_event
 
 /// Inherited from QObject
 ///
@@ -50650,10 +47566,6 @@ void q_cplegend_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cplegend_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_event_filter` instead
-///
-#define q_cplegend_qbase_event_filter q_cplegend_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -50688,10 +47600,6 @@ void q_cplegend_on_event_filter(void* self, bool (*callback)(void*, void*, void*
 ///
 void q_cplegend_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_timer_event` instead
-///
-#define q_cplegend_qbase_timer_event q_cplegend_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -50724,10 +47632,6 @@ void q_cplegend_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cplegend_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cplegend_super_child_event` instead
-///
-#define q_cplegend_qbase_child_event q_cplegend_super_child_event
 
 /// Inherited from QObject
 ///
@@ -50762,10 +47666,6 @@ void q_cplegend_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cplegend_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_custom_event` instead
-///
-#define q_cplegend_qbase_custom_event q_cplegend_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -50798,10 +47698,6 @@ void q_cplegend_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_cplegend_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cplegend_super_connect_notify` instead
-///
-#define q_cplegend_qbase_connect_notify q_cplegend_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -50836,10 +47732,6 @@ void q_cplegend_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_cplegend_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_disconnect_notify` instead
-///
-#define q_cplegend_qbase_disconnect_notify q_cplegend_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -50873,10 +47765,6 @@ void q_cplegend_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 /// @param minRowHeights libqt_list of int
 ///
 void q_cplegend_get_minimum_row_col_sizes(void* self, libqt_list minColWidths, libqt_list minRowHeights);
-
-/// @warning DEPRECATED: Use `q_cplegend_super_get_minimum_row_col_sizes` instead
-///
-#define q_cplegend_qbase_get_minimum_row_col_sizes q_cplegend_super_get_minimum_row_col_sizes
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -50913,10 +47801,6 @@ void q_cplegend_on_get_minimum_row_col_sizes(void* self, void (*callback)(void*,
 ///
 void q_cplegend_get_maximum_row_col_sizes(void* self, libqt_list maxColWidths, libqt_list maxRowHeights);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_get_maximum_row_col_sizes` instead
-///
-#define q_cplegend_qbase_get_maximum_row_col_sizes q_cplegend_super_get_maximum_row_col_sizes
-
 /// Inherited from QCPLayoutGrid
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
@@ -50950,10 +47834,6 @@ void q_cplegend_on_get_maximum_row_col_sizes(void* self, void (*callback)(void*,
 ///
 void q_cplegend_size_constraints_changed(void* self);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_size_constraints_changed` instead
-///
-#define q_cplegend_qbase_size_constraints_changed q_cplegend_super_size_constraints_changed
-
 /// Inherited from QCPLayout
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
@@ -50985,10 +47865,6 @@ void q_cplegend_on_size_constraints_changed(void* self, void (*callback)());
 /// @param el QCPLayoutElement*
 ///
 void q_cplegend_adopt_element(void* self, void* el);
-
-/// @warning DEPRECATED: Use `q_cplegend_super_adopt_element` instead
-///
-#define q_cplegend_qbase_adopt_element q_cplegend_super_adopt_element
 
 /// Inherited from QCPLayout
 ///
@@ -51022,10 +47898,6 @@ void q_cplegend_on_adopt_element(void* self, void (*callback)(void*, void*));
 /// @param el QCPLayoutElement*
 ///
 void q_cplegend_release_element(void* self, void* el);
-
-/// @warning DEPRECATED: Use `q_cplegend_super_release_element` instead
-///
-#define q_cplegend_qbase_release_element q_cplegend_super_release_element
 
 /// Inherited from QCPLayout
 ///
@@ -51065,10 +47937,6 @@ void q_cplegend_on_release_element(void* self, void (*callback)(void*, void*));
 ///
 libqt_list q_cplegend_get_section_sizes(void* self, libqt_list maxSizes, libqt_list minSizes, libqt_list stretchFactors, int totalSize);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_get_section_sizes` instead
-///
-#define q_cplegend_qbase_get_section_sizes q_cplegend_super_get_section_sizes
-
 /// Inherited from QCPLayout
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
@@ -51107,10 +47975,6 @@ void q_cplegend_on_get_section_sizes(void* self, libqt_list (*callback)(void*, l
 ///
 void q_cplegend_initialize_parent_plot(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_initialize_parent_plot` instead
-///
-#define q_cplegend_qbase_initialize_parent_plot q_cplegend_super_initialize_parent_plot
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -51143,10 +48007,6 @@ void q_cplegend_on_initialize_parent_plot(void* self, void (*callback)(void*, vo
 /// @param parentLayerable QCPLayerable*
 ///
 void q_cplegend_set_parent_layerable(void* self, void* parentLayerable);
-
-/// @warning DEPRECATED: Use `q_cplegend_super_set_parent_layerable` instead
-///
-#define q_cplegend_qbase_set_parent_layerable q_cplegend_super_set_parent_layerable
 
 /// Inherited from QCPLayerable
 ///
@@ -51181,10 +48041,6 @@ void q_cplegend_on_set_parent_layerable(void* self, void (*callback)(void*, void
 /// @param prepend bool
 ///
 bool q_cplegend_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cplegend_super_move_to_layer` instead
-///
-#define q_cplegend_qbase_move_to_layer q_cplegend_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -51222,10 +48078,6 @@ void q_cplegend_on_move_to_layer(void* self, bool (*callback)(void*, void*, bool
 ///
 void q_cplegend_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_apply_antialiasing_hint` instead
-///
-#define q_cplegend_qbase_apply_antialiasing_hint q_cplegend_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -51260,10 +48112,6 @@ void q_cplegend_on_apply_antialiasing_hint(void* self, void (*callback)(void*, v
 ///
 QObject* q_cplegend_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_sender` instead
-///
-#define q_cplegend_qbase_sender q_cplegend_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -51294,10 +48142,6 @@ void q_cplegend_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPLegend*
 ///
 int32_t q_cplegend_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cplegend_super_sender_signal_index` instead
-///
-#define q_cplegend_qbase_sender_signal_index q_cplegend_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -51331,10 +48175,6 @@ void q_cplegend_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cplegend_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cplegend_super_receivers` instead
-///
-#define q_cplegend_qbase_receivers q_cplegend_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -51367,10 +48207,6 @@ void q_cplegend_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 /// @param signal QMetaMethod*
 ///
 bool q_cplegend_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cplegend_super_is_signal_connected` instead
-///
-#define q_cplegend_qbase_is_signal_connected q_cplegend_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -51476,10 +48312,6 @@ const QMetaObject* q_cptextelement_meta_object(void* self);
 ///
 void q_cptextelement_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_meta_object` instead
-///
-#define q_cptextelement_qbase_meta_object q_cptextelement_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -51499,10 +48331,6 @@ void* q_cptextelement_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPTextElement* self, const char* param1)
 ///
 void q_cptextelement_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cptextelement_super_metacast` instead
-///
-#define q_cptextelement_qbase_metacast q_cptextelement_super_metacast
 
 /// Base class method implementation
 ///
@@ -51524,10 +48352,6 @@ int32_t q_cptextelement_metacall(void* self, int32_t param1, int param2, void* p
 /// @param callback int32_t func(QCPTextElement* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cptextelement_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cptextelement_super_metacall` instead
-///
-#define q_cptextelement_qbase_metacall q_cptextelement_super_metacall
 
 /// Base class method implementation
 ///
@@ -51670,10 +48494,6 @@ double q_cptextelement_select_test(void* self, void* pos, bool onlySelectable, v
 ///
 void q_cptextelement_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_select_test` instead
-///
-#define q_cptextelement_qbase_select_test q_cptextelement_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPTextElement.html)
 ///
 /// Base class method implementation
@@ -51702,10 +48522,6 @@ void q_cptextelement_mouse_press_event(void* self, void* event, void* details);
 ///
 void q_cptextelement_on_mouse_press_event(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_mouse_press_event` instead
-///
-#define q_cptextelement_qbase_mouse_press_event q_cptextelement_super_mouse_press_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPTextElement.html)
 ///
 /// Base class method implementation
@@ -51733,10 +48549,6 @@ void q_cptextelement_mouse_release_event(void* self, void* event, void* startPos
 ///
 void q_cptextelement_on_mouse_release_event(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_mouse_release_event` instead
-///
-#define q_cptextelement_qbase_mouse_release_event q_cptextelement_super_mouse_release_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPTextElement.html)
 ///
 /// Base class method implementation
@@ -51763,10 +48575,6 @@ void q_cptextelement_mouse_double_click_event(void* self, void* event, void* det
 /// @param callback void func(QCPTextElement* self, QMouseEvent* event, QVariant* details)
 ///
 void q_cptextelement_on_mouse_double_click_event(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_cptextelement_super_mouse_double_click_event` instead
-///
-#define q_cptextelement_qbase_mouse_double_click_event q_cptextelement_super_mouse_double_click_event
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPTextElement.html)
 ///
@@ -51850,10 +48658,6 @@ void q_cptextelement_apply_default_antialiasing_hint(void* self, void* painter);
 ///
 void q_cptextelement_on_apply_default_antialiasing_hint(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_apply_default_antialiasing_hint` instead
-///
-#define q_cptextelement_qbase_apply_default_antialiasing_hint q_cptextelement_super_apply_default_antialiasing_hint
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPTextElement.html)
 ///
 /// Base class method implementation
@@ -51878,10 +48682,6 @@ void q_cptextelement_draw(void* self, void* painter);
 /// @param callback void func(QCPTextElement* self, QCPPainter* painter)
 ///
 void q_cptextelement_on_draw(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cptextelement_super_draw` instead
-///
-#define q_cptextelement_qbase_draw q_cptextelement_super_draw
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPTextElement.html)
 ///
@@ -51909,10 +48709,6 @@ QSize* q_cptextelement_minimum_outer_size_hint(void* self);
 ///
 void q_cptextelement_on_minimum_outer_size_hint(void* self, QSize* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_minimum_outer_size_hint` instead
-///
-#define q_cptextelement_qbase_minimum_outer_size_hint q_cptextelement_super_minimum_outer_size_hint
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPTextElement.html)
 ///
 /// Base class method implementation
@@ -51937,10 +48733,6 @@ QSize* q_cptextelement_maximum_outer_size_hint(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cptextelement_on_maximum_outer_size_hint(void* self, QSize* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cptextelement_super_maximum_outer_size_hint` instead
-///
-#define q_cptextelement_qbase_maximum_outer_size_hint q_cptextelement_super_maximum_outer_size_hint
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPTextElement.html)
 ///
@@ -51968,10 +48760,6 @@ void q_cptextelement_select_event(void* self, void* event, bool additive, void* 
 /// @param callback void func(QCPTextElement* self, QMouseEvent* event, bool additive, QVariant* details, bool* selectionStateChanged)
 ///
 void q_cptextelement_on_select_event(void* self, void (*callback)(void*, void*, bool, void*, bool*));
-
-/// @warning DEPRECATED: Use `q_cptextelement_super_select_event` instead
-///
-#define q_cptextelement_qbase_select_event q_cptextelement_super_select_event
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPTextElement.html)
 ///
@@ -52001,10 +48789,6 @@ void q_cptextelement_deselect_event(void* self, bool* selectionStateChanged);
 ///
 void q_cptextelement_on_deselect_event(void* self, void (*callback)(void*, bool*));
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_deselect_event` instead
-///
-#define q_cptextelement_qbase_deselect_event q_cptextelement_super_deselect_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPTextElement.html)
 ///
 /// Base class method implementation
@@ -52031,10 +48815,6 @@ QFont* q_cptextelement_main_font(void* self);
 ///
 void q_cptextelement_on_main_font(void* self, QFont* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_main_font` instead
-///
-#define q_cptextelement_qbase_main_font q_cptextelement_super_main_font
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPTextElement.html)
 ///
 /// Base class method implementation
@@ -52059,10 +48839,6 @@ QColor* q_cptextelement_main_text_color(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cptextelement_on_main_text_color(void* self, QColor* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cptextelement_super_main_text_color` instead
-///
-#define q_cptextelement_qbase_main_text_color q_cptextelement_super_main_text_color
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPTextElement.html)
 ///
@@ -52850,10 +49626,6 @@ void q_cptextelement_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 void q_cptextelement_update(void* self, int32_t phase);
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_update` instead
-///
-#define q_cptextelement_qbase_update q_cptextelement_super_update
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -52888,10 +49660,6 @@ void q_cptextelement_on_update(void* self, void (*callback)(void*, int32_t));
 /// @return libqt_list of QCPLayoutElement*
 ///
 libqt_list q_cptextelement_elements(void* self, bool recursive);
-
-/// @warning DEPRECATED: Use `q_cptextelement_super_elements` instead
-///
-#define q_cptextelement_qbase_elements q_cptextelement_super_elements
 
 /// Inherited from QCPLayoutElement
 ///
@@ -52928,10 +49696,6 @@ void q_cptextelement_on_elements(void* self, libqt_list (*callback)(void*, bool)
 ///
 int32_t q_cptextelement_calculate_auto_margin(void* self, int32_t side);
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_calculate_auto_margin` instead
-///
-#define q_cptextelement_qbase_calculate_auto_margin q_cptextelement_super_calculate_auto_margin
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -52964,10 +49728,6 @@ void q_cptextelement_on_calculate_auto_margin(void* self, int32_t (*callback)(vo
 ///
 void q_cptextelement_layout_changed(void* self);
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_layout_changed` instead
-///
-#define q_cptextelement_qbase_layout_changed q_cptextelement_super_layout_changed
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -52999,10 +49759,6 @@ void q_cptextelement_on_layout_changed(void* self, void (*callback)());
 /// @param parentPlot QCustomPlot*
 ///
 void q_cptextelement_parent_plot_initialized(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cptextelement_super_parent_plot_initialized` instead
-///
-#define q_cptextelement_qbase_parent_plot_initialized q_cptextelement_super_parent_plot_initialized
 
 /// Inherited from QCPLayoutElement
 ///
@@ -53038,10 +49794,6 @@ void q_cptextelement_on_parent_plot_initialized(void* self, void (*callback)(voi
 ///
 int32_t q_cptextelement_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_selection_category` instead
-///
-#define q_cptextelement_qbase_selection_category q_cptextelement_super_selection_category
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -53074,10 +49826,6 @@ void q_cptextelement_on_selection_category(void* self, int32_t (*callback)());
 /// @param self QCPTextElement*
 ///
 QRect* q_cptextelement_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cptextelement_super_clip_rect` instead
-///
-#define q_cptextelement_qbase_clip_rect q_cptextelement_super_clip_rect
 
 /// Inherited from QCPLayerable
 ///
@@ -53114,10 +49862,6 @@ void q_cptextelement_on_clip_rect(void* self, QRect* (*callback)());
 ///
 void q_cptextelement_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_mouse_move_event` instead
-///
-#define q_cptextelement_qbase_mouse_move_event q_cptextelement_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -53152,10 +49896,6 @@ void q_cptextelement_on_mouse_move_event(void* self, void (*callback)(void*, voi
 ///
 void q_cptextelement_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_wheel_event` instead
-///
-#define q_cptextelement_qbase_wheel_event q_cptextelement_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -53188,10 +49928,6 @@ void q_cptextelement_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cptextelement_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cptextelement_super_event` instead
-///
-#define q_cptextelement_qbase_event q_cptextelement_super_event
 
 /// Inherited from QObject
 ///
@@ -53227,10 +49963,6 @@ void q_cptextelement_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cptextelement_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_event_filter` instead
-///
-#define q_cptextelement_qbase_event_filter q_cptextelement_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -53265,10 +49997,6 @@ void q_cptextelement_on_event_filter(void* self, bool (*callback)(void*, void*, 
 ///
 void q_cptextelement_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_timer_event` instead
-///
-#define q_cptextelement_qbase_timer_event q_cptextelement_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -53301,10 +50029,6 @@ void q_cptextelement_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cptextelement_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cptextelement_super_child_event` instead
-///
-#define q_cptextelement_qbase_child_event q_cptextelement_super_child_event
 
 /// Inherited from QObject
 ///
@@ -53339,10 +50063,6 @@ void q_cptextelement_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cptextelement_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_custom_event` instead
-///
-#define q_cptextelement_qbase_custom_event q_cptextelement_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -53375,10 +50095,6 @@ void q_cptextelement_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param signal QMetaMethod*
 ///
 void q_cptextelement_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cptextelement_super_connect_notify` instead
-///
-#define q_cptextelement_qbase_connect_notify q_cptextelement_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -53413,10 +50129,6 @@ void q_cptextelement_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void q_cptextelement_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_disconnect_notify` instead
-///
-#define q_cptextelement_qbase_disconnect_notify q_cptextelement_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -53449,10 +50161,6 @@ void q_cptextelement_on_disconnect_notify(void* self, void (*callback)(void*, vo
 /// @param parentPlot QCustomPlot*
 ///
 void q_cptextelement_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cptextelement_super_initialize_parent_plot` instead
-///
-#define q_cptextelement_qbase_initialize_parent_plot q_cptextelement_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -53487,10 +50195,6 @@ void q_cptextelement_on_initialize_parent_plot(void* self, void (*callback)(void
 ///
 void q_cptextelement_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_set_parent_layerable` instead
-///
-#define q_cptextelement_qbase_set_parent_layerable q_cptextelement_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -53524,10 +50228,6 @@ void q_cptextelement_on_set_parent_layerable(void* self, void (*callback)(void*,
 /// @param prepend bool
 ///
 bool q_cptextelement_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cptextelement_super_move_to_layer` instead
-///
-#define q_cptextelement_qbase_move_to_layer q_cptextelement_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -53565,10 +50265,6 @@ void q_cptextelement_on_move_to_layer(void* self, bool (*callback)(void*, void*,
 ///
 void q_cptextelement_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_apply_antialiasing_hint` instead
-///
-#define q_cptextelement_qbase_apply_antialiasing_hint q_cptextelement_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -53603,10 +50299,6 @@ void q_cptextelement_on_apply_antialiasing_hint(void* self, void (*callback)(voi
 ///
 QObject* q_cptextelement_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_sender` instead
-///
-#define q_cptextelement_qbase_sender q_cptextelement_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -53637,10 +50329,6 @@ void q_cptextelement_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPTextElement*
 ///
 int32_t q_cptextelement_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cptextelement_super_sender_signal_index` instead
-///
-#define q_cptextelement_qbase_sender_signal_index q_cptextelement_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -53674,10 +50362,6 @@ void q_cptextelement_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cptextelement_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cptextelement_super_receivers` instead
-///
-#define q_cptextelement_qbase_receivers q_cptextelement_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -53710,10 +50394,6 @@ void q_cptextelement_on_receivers(void* self, int32_t (*callback)(void*, const c
 /// @param signal QMetaMethod*
 ///
 bool q_cptextelement_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cptextelement_super_is_signal_connected` instead
-///
-#define q_cptextelement_qbase_is_signal_connected q_cptextelement_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -53779,10 +50459,6 @@ const QMetaObject* q_cpcolorscale_meta_object(void* self);
 ///
 void q_cpcolorscale_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_meta_object` instead
-///
-#define q_cpcolorscale_qbase_meta_object q_cpcolorscale_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -53802,10 +50478,6 @@ void* q_cpcolorscale_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPColorScale* self, const char* param1)
 ///
 void q_cpcolorscale_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_metacast` instead
-///
-#define q_cpcolorscale_qbase_metacast q_cpcolorscale_super_metacast
 
 /// Base class method implementation
 ///
@@ -53827,10 +50499,6 @@ int32_t q_cpcolorscale_metacall(void* self, int32_t param1, int param2, void* pa
 /// @param callback int32_t func(QCPColorScale* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpcolorscale_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_metacall` instead
-///
-#define q_cpcolorscale_qbase_metacall q_cpcolorscale_super_metacall
 
 /// Base class method implementation
 ///
@@ -53996,10 +50664,6 @@ void q_cpcolorscale_update(void* self, int32_t phase);
 ///
 void q_cpcolorscale_on_update(void* self, void (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_update` instead
-///
-#define q_cpcolorscale_qbase_update q_cpcolorscale_super_update
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorScale.html)
 ///
 /// Base class method implementation
@@ -54067,10 +50731,6 @@ void q_cpcolorscale_apply_default_antialiasing_hint(void* self, void* painter);
 ///
 void q_cpcolorscale_on_apply_default_antialiasing_hint(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpcolorscale_qbase_apply_default_antialiasing_hint q_cpcolorscale_super_apply_default_antialiasing_hint
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorScale.html)
 ///
 /// Base class method implementation
@@ -54096,10 +50756,6 @@ void q_cpcolorscale_mouse_press_event(void* self, void* event, void* details);
 /// @param callback void func(QCPColorScale* self, QMouseEvent* event, QVariant* details)
 ///
 void q_cpcolorscale_on_mouse_press_event(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_mouse_press_event` instead
-///
-#define q_cpcolorscale_qbase_mouse_press_event q_cpcolorscale_super_mouse_press_event
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorScale.html)
 ///
@@ -54128,10 +50784,6 @@ void q_cpcolorscale_mouse_move_event(void* self, void* event, void* startPos);
 ///
 void q_cpcolorscale_on_mouse_move_event(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_mouse_move_event` instead
-///
-#define q_cpcolorscale_qbase_mouse_move_event q_cpcolorscale_super_mouse_move_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorScale.html)
 ///
 /// Base class method implementation
@@ -54159,10 +50811,6 @@ void q_cpcolorscale_mouse_release_event(void* self, void* event, void* startPos)
 ///
 void q_cpcolorscale_on_mouse_release_event(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_mouse_release_event` instead
-///
-#define q_cpcolorscale_qbase_mouse_release_event q_cpcolorscale_super_mouse_release_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorScale.html)
 ///
 /// Base class method implementation
@@ -54188,10 +50836,6 @@ void q_cpcolorscale_wheel_event(void* self, void* event);
 /// @param callback void func(QCPColorScale* self, QWheelEvent* event)
 ///
 void q_cpcolorscale_on_wheel_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_wheel_event` instead
-///
-#define q_cpcolorscale_qbase_wheel_event q_cpcolorscale_super_wheel_event
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorScale.html)
 ///
@@ -54979,10 +51623,6 @@ void q_cpcolorscale_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 QSize* q_cpcolorscale_minimum_outer_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_minimum_outer_size_hint` instead
-///
-#define q_cpcolorscale_qbase_minimum_outer_size_hint q_cpcolorscale_super_minimum_outer_size_hint
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -55015,10 +51655,6 @@ void q_cpcolorscale_on_minimum_outer_size_hint(void* self, QSize* (*callback)())
 /// @param self QCPColorScale*
 ///
 QSize* q_cpcolorscale_maximum_outer_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_maximum_outer_size_hint` instead
-///
-#define q_cpcolorscale_qbase_maximum_outer_size_hint q_cpcolorscale_super_maximum_outer_size_hint
 
 /// Inherited from QCPLayoutElement
 ///
@@ -55055,10 +51691,6 @@ void q_cpcolorscale_on_maximum_outer_size_hint(void* self, QSize* (*callback)())
 /// @return libqt_list of QCPLayoutElement*
 ///
 libqt_list q_cpcolorscale_elements(void* self, bool recursive);
-
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_elements` instead
-///
-#define q_cpcolorscale_qbase_elements q_cpcolorscale_super_elements
 
 /// Inherited from QCPLayoutElement
 ///
@@ -55097,10 +51729,6 @@ void q_cpcolorscale_on_elements(void* self, libqt_list (*callback)(void*, bool))
 ///
 double q_cpcolorscale_select_test(void* self, void* pos, bool onlySelectable, void* details);
 
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_select_test` instead
-///
-#define q_cpcolorscale_qbase_select_test q_cpcolorscale_super_select_test
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -55136,10 +51764,6 @@ void q_cpcolorscale_on_select_test(void* self, double (*callback)(void*, void*, 
 ///
 int32_t q_cpcolorscale_calculate_auto_margin(void* self, int32_t side);
 
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_calculate_auto_margin` instead
-///
-#define q_cpcolorscale_qbase_calculate_auto_margin q_cpcolorscale_super_calculate_auto_margin
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -55171,10 +51795,6 @@ void q_cpcolorscale_on_calculate_auto_margin(void* self, int32_t (*callback)(voi
 /// @param self QCPColorScale*
 ///
 void q_cpcolorscale_layout_changed(void* self);
-
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_layout_changed` instead
-///
-#define q_cpcolorscale_qbase_layout_changed q_cpcolorscale_super_layout_changed
 
 /// Inherited from QCPLayoutElement
 ///
@@ -55208,10 +51828,6 @@ void q_cpcolorscale_on_layout_changed(void* self, void (*callback)());
 ///
 void q_cpcolorscale_draw(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_draw` instead
-///
-#define q_cpcolorscale_qbase_draw q_cpcolorscale_super_draw
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -55244,10 +51860,6 @@ void q_cpcolorscale_on_draw(void* self, void (*callback)(void*, void*));
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpcolorscale_parent_plot_initialized(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_parent_plot_initialized` instead
-///
-#define q_cpcolorscale_qbase_parent_plot_initialized q_cpcolorscale_super_parent_plot_initialized
 
 /// Inherited from QCPLayoutElement
 ///
@@ -55283,10 +51895,6 @@ void q_cpcolorscale_on_parent_plot_initialized(void* self, void (*callback)(void
 ///
 int32_t q_cpcolorscale_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_selection_category` instead
-///
-#define q_cpcolorscale_qbase_selection_category q_cpcolorscale_super_selection_category
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -55319,10 +51927,6 @@ void q_cpcolorscale_on_selection_category(void* self, int32_t (*callback)());
 /// @param self QCPColorScale*
 ///
 QRect* q_cpcolorscale_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_clip_rect` instead
-///
-#define q_cpcolorscale_qbase_clip_rect q_cpcolorscale_super_clip_rect
 
 /// Inherited from QCPLayerable
 ///
@@ -55361,10 +51965,6 @@ void q_cpcolorscale_on_clip_rect(void* self, QRect* (*callback)());
 ///
 void q_cpcolorscale_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_select_event` instead
-///
-#define q_cpcolorscale_qbase_select_event q_cpcolorscale_super_select_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -55401,10 +52001,6 @@ void q_cpcolorscale_on_select_event(void* self, void (*callback)(void*, void*, b
 ///
 void q_cpcolorscale_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_deselect_event` instead
-///
-#define q_cpcolorscale_qbase_deselect_event q_cpcolorscale_super_deselect_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -55438,10 +52034,6 @@ void q_cpcolorscale_on_deselect_event(void* self, void (*callback)(void*, bool*)
 /// @param details QVariant*
 ///
 void q_cpcolorscale_mouse_double_click_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_mouse_double_click_event` instead
-///
-#define q_cpcolorscale_qbase_mouse_double_click_event q_cpcolorscale_super_mouse_double_click_event
 
 /// Inherited from QCPLayerable
 ///
@@ -55477,10 +52069,6 @@ void q_cpcolorscale_on_mouse_double_click_event(void* self, void (*callback)(voi
 ///
 bool q_cpcolorscale_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_event` instead
-///
-#define q_cpcolorscale_qbase_event q_cpcolorscale_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -55514,10 +52102,6 @@ void q_cpcolorscale_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cpcolorscale_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_event_filter` instead
-///
-#define q_cpcolorscale_qbase_event_filter q_cpcolorscale_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -55553,10 +52137,6 @@ void q_cpcolorscale_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void q_cpcolorscale_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_timer_event` instead
-///
-#define q_cpcolorscale_qbase_timer_event q_cpcolorscale_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -55589,10 +52169,6 @@ void q_cpcolorscale_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cpcolorscale_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_child_event` instead
-///
-#define q_cpcolorscale_qbase_child_event q_cpcolorscale_super_child_event
 
 /// Inherited from QObject
 ///
@@ -55627,10 +52203,6 @@ void q_cpcolorscale_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpcolorscale_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_custom_event` instead
-///
-#define q_cpcolorscale_qbase_custom_event q_cpcolorscale_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -55663,10 +52235,6 @@ void q_cpcolorscale_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_cpcolorscale_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_connect_notify` instead
-///
-#define q_cpcolorscale_qbase_connect_notify q_cpcolorscale_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -55701,10 +52269,6 @@ void q_cpcolorscale_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void q_cpcolorscale_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_disconnect_notify` instead
-///
-#define q_cpcolorscale_qbase_disconnect_notify q_cpcolorscale_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -55737,10 +52301,6 @@ void q_cpcolorscale_on_disconnect_notify(void* self, void (*callback)(void*, voi
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpcolorscale_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_initialize_parent_plot` instead
-///
-#define q_cpcolorscale_qbase_initialize_parent_plot q_cpcolorscale_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -55775,10 +52335,6 @@ void q_cpcolorscale_on_initialize_parent_plot(void* self, void (*callback)(void*
 ///
 void q_cpcolorscale_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_set_parent_layerable` instead
-///
-#define q_cpcolorscale_qbase_set_parent_layerable q_cpcolorscale_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -55812,10 +52368,6 @@ void q_cpcolorscale_on_set_parent_layerable(void* self, void (*callback)(void*, 
 /// @param prepend bool
 ///
 bool q_cpcolorscale_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_move_to_layer` instead
-///
-#define q_cpcolorscale_qbase_move_to_layer q_cpcolorscale_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -55853,10 +52405,6 @@ void q_cpcolorscale_on_move_to_layer(void* self, bool (*callback)(void*, void*, 
 ///
 void q_cpcolorscale_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_apply_antialiasing_hint` instead
-///
-#define q_cpcolorscale_qbase_apply_antialiasing_hint q_cpcolorscale_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -55891,10 +52439,6 @@ void q_cpcolorscale_on_apply_antialiasing_hint(void* self, void (*callback)(void
 ///
 QObject* q_cpcolorscale_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_sender` instead
-///
-#define q_cpcolorscale_qbase_sender q_cpcolorscale_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -55925,10 +52469,6 @@ void q_cpcolorscale_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPColorScale*
 ///
 int32_t q_cpcolorscale_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_sender_signal_index` instead
-///
-#define q_cpcolorscale_qbase_sender_signal_index q_cpcolorscale_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -55962,10 +52502,6 @@ void q_cpcolorscale_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cpcolorscale_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_receivers` instead
-///
-#define q_cpcolorscale_qbase_receivers q_cpcolorscale_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -55998,10 +52534,6 @@ void q_cpcolorscale_on_receivers(void* self, int32_t (*callback)(void*, const ch
 /// @param signal QMetaMethod*
 ///
 bool q_cpcolorscale_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpcolorscale_super_is_signal_connected` instead
-///
-#define q_cpcolorscale_qbase_is_signal_connected q_cpcolorscale_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -56189,10 +52721,6 @@ const QMetaObject* q_cpgraph_meta_object(void* self);
 ///
 void q_cpgraph_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_meta_object` instead
-///
-#define q_cpgraph_qbase_meta_object q_cpgraph_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -56212,10 +52740,6 @@ void* q_cpgraph_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPGraph* self, const char* param1)
 ///
 void q_cpgraph_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_metacast` instead
-///
-#define q_cpgraph_qbase_metacast q_cpgraph_super_metacast
 
 /// Base class method implementation
 ///
@@ -56237,10 +52761,6 @@ int32_t q_cpgraph_metacall(void* self, int32_t param1, int param2, void* param3)
 /// @param callback int32_t func(QCPGraph* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpgraph_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_metacall` instead
-///
-#define q_cpgraph_qbase_metacall q_cpgraph_super_metacall
 
 /// Base class method implementation
 ///
@@ -56368,10 +52888,6 @@ double q_cpgraph_select_test(void* self, void* pos, bool onlySelectable, void* d
 ///
 void q_cpgraph_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_select_test` instead
-///
-#define q_cpgraph_qbase_select_test q_cpgraph_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// Base class method implementation
@@ -56401,10 +52917,6 @@ QCPRange* q_cpgraph_get_key_range(void* self, bool* foundRange, int32_t inSignDo
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpgraph_on_get_key_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t));
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_get_key_range` instead
-///
-#define q_cpgraph_qbase_get_key_range q_cpgraph_super_get_key_range
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -56436,10 +52948,6 @@ QCPRange* q_cpgraph_get_value_range(void* self, bool* foundRange, int32_t inSign
 ///
 void q_cpgraph_on_get_value_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t, void*));
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_get_value_range` instead
-///
-#define q_cpgraph_qbase_get_value_range q_cpgraph_super_get_value_range
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// Base class method implementation
@@ -56467,10 +52975,6 @@ void q_cpgraph_draw(void* self, void* painter);
 ///
 void q_cpgraph_on_draw(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_draw` instead
-///
-#define q_cpgraph_qbase_draw q_cpgraph_super_draw
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// Base class method implementation
@@ -56496,10 +53000,6 @@ void q_cpgraph_draw_legend_icon(void* self, void* painter, void* rect);
 /// @param callback void func(QCPGraph* self, QCPPainter* painter, QRectF* rect)
 ///
 void q_cpgraph_on_draw_legend_icon(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_draw_legend_icon` instead
-///
-#define q_cpgraph_qbase_draw_legend_icon q_cpgraph_super_draw_legend_icon
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -56527,10 +53027,6 @@ void q_cpgraph_draw_fill(void* self, void* painter, libqt_list lines);
 /// @param callback void func(QCPGraph* self, QCPPainter* painter, libqt_list of QPointF* lines)
 ///
 void q_cpgraph_on_draw_fill(void* self, void (*callback)(void*, void*, libqt_list));
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_draw_fill` instead
-///
-#define q_cpgraph_qbase_draw_fill q_cpgraph_super_draw_fill
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -56560,10 +53056,6 @@ void q_cpgraph_draw_scatter_plot(void* self, void* painter, libqt_list scatters,
 ///
 void q_cpgraph_on_draw_scatter_plot(void* self, void (*callback)(void*, void*, libqt_list, void*));
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_draw_scatter_plot` instead
-///
-#define q_cpgraph_qbase_draw_scatter_plot q_cpgraph_super_draw_scatter_plot
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// Base class method implementation
@@ -56592,10 +53084,6 @@ void q_cpgraph_draw_line_plot(void* self, void* painter, libqt_list lines);
 ///
 void q_cpgraph_on_draw_line_plot(void* self, void (*callback)(void*, void*, libqt_list));
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_draw_line_plot` instead
-///
-#define q_cpgraph_qbase_draw_line_plot q_cpgraph_super_draw_line_plot
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// Base class method implementation
@@ -56622,10 +53110,6 @@ void q_cpgraph_draw_impulse_plot(void* self, void* painter, libqt_list lines);
 /// @param callback void func(QCPGraph* self, QCPPainter* painter, libqt_list of QPointF* lines)
 ///
 void q_cpgraph_on_draw_impulse_plot(void* self, void (*callback)(void*, void*, libqt_list));
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_draw_impulse_plot` instead
-///
-#define q_cpgraph_qbase_draw_impulse_plot q_cpgraph_super_draw_impulse_plot
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -56654,10 +53138,6 @@ void q_cpgraph_get_lines(void* self, libqt_list lines, void* dataRange);
 ///
 void q_cpgraph_on_get_lines(void* self, void (*callback)(void*, libqt_list, void*));
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_get_lines` instead
-///
-#define q_cpgraph_qbase_get_lines q_cpgraph_super_get_lines
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// Base class method implementation
@@ -56684,10 +53164,6 @@ void q_cpgraph_get_scatters(void* self, libqt_list scatters, void* dataRange);
 /// @param callback void func(QCPGraph* self, libqt_list of QPointF* scatters, QCPDataRange* dataRange)
 ///
 void q_cpgraph_on_get_scatters(void* self, void (*callback)(void*, libqt_list, void*));
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_get_scatters` instead
-///
-#define q_cpgraph_qbase_get_scatters q_cpgraph_super_get_scatters
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -56716,10 +53192,6 @@ libqt_list q_cpgraph_data_to_lines(void* self, libqt_list data);
 /// @param callback libqt_list of QPointF* func(QCPGraph* self, libqt_list of QCPGraphData* data)
 ///
 void q_cpgraph_on_data_to_lines(void* self, libqt_list (*callback)(void*, libqt_list));
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_data_to_lines` instead
-///
-#define q_cpgraph_qbase_data_to_lines q_cpgraph_super_data_to_lines
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -56750,10 +53222,6 @@ libqt_list q_cpgraph_data_to_step_left_lines(void* self, libqt_list data);
 ///
 void q_cpgraph_on_data_to_step_left_lines(void* self, libqt_list (*callback)(void*, libqt_list));
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_data_to_step_left_lines` instead
-///
-#define q_cpgraph_qbase_data_to_step_left_lines q_cpgraph_super_data_to_step_left_lines
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// Base class method implementation
@@ -56782,10 +53250,6 @@ libqt_list q_cpgraph_data_to_step_right_lines(void* self, libqt_list data);
 /// @param callback libqt_list of QPointF* func(QCPGraph* self, libqt_list of QCPGraphData* data)
 ///
 void q_cpgraph_on_data_to_step_right_lines(void* self, libqt_list (*callback)(void*, libqt_list));
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_data_to_step_right_lines` instead
-///
-#define q_cpgraph_qbase_data_to_step_right_lines q_cpgraph_super_data_to_step_right_lines
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -56816,10 +53280,6 @@ libqt_list q_cpgraph_data_to_step_center_lines(void* self, libqt_list data);
 ///
 void q_cpgraph_on_data_to_step_center_lines(void* self, libqt_list (*callback)(void*, libqt_list));
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_data_to_step_center_lines` instead
-///
-#define q_cpgraph_qbase_data_to_step_center_lines q_cpgraph_super_data_to_step_center_lines
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// Base class method implementation
@@ -56848,10 +53308,6 @@ libqt_list q_cpgraph_data_to_impulse_lines(void* self, libqt_list data);
 /// @param callback libqt_list of QPointF* func(QCPGraph* self, libqt_list of QCPGraphData* data)
 ///
 void q_cpgraph_on_data_to_impulse_lines(void* self, libqt_list (*callback)(void*, libqt_list));
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_data_to_impulse_lines` instead
-///
-#define q_cpgraph_qbase_data_to_impulse_lines q_cpgraph_super_data_to_impulse_lines
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -56882,10 +53338,6 @@ libqt_list q_cpgraph_get_non_nan_segments(void* self, libqt_list lineData, int32
 /// @param callback libqt_list of QCPDataRange* func(QCPGraph* self, libqt_list of QPointF* lineData, enum Qt__Orientation keyOrientation)
 ///
 void q_cpgraph_on_get_non_nan_segments(void* self, libqt_list (*callback)(void*, libqt_list, int32_t));
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_get_non_nan_segments` instead
-///
-#define q_cpgraph_qbase_get_non_nan_segments q_cpgraph_super_get_non_nan_segments
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -56922,10 +53374,6 @@ libqt_list q_cpgraph_get_overlapping_segments(void* self, libqt_list thisSegment
 ///
 void q_cpgraph_on_get_overlapping_segments(void* self, libqt_list (*callback)(void*, libqt_list, libqt_list, libqt_list, libqt_list));
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_get_overlapping_segments` instead
-///
-#define q_cpgraph_qbase_get_overlapping_segments q_cpgraph_super_get_overlapping_segments
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// Base class method implementation
@@ -56960,10 +53408,6 @@ bool q_cpgraph_segments_intersect(void* self, double aLower, double aUpper, doub
 ///
 void q_cpgraph_on_segments_intersect(void* self, bool (*callback)(void*, double, double, double, double, int*));
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_segments_intersect` instead
-///
-#define q_cpgraph_qbase_segments_intersect q_cpgraph_super_segments_intersect
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// Base class method implementation
@@ -56995,10 +53439,6 @@ QPointF* q_cpgraph_get_fill_base_point(void* self, void* matchingDataPoint);
 ///
 void q_cpgraph_on_get_fill_base_point(void* self, QPointF* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_get_fill_base_point` instead
-///
-#define q_cpgraph_qbase_get_fill_base_point q_cpgraph_super_get_fill_base_point
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// Base class method implementation
@@ -57024,10 +53464,6 @@ int32_t q_cpgraph_find_index_below_x(void* self, libqt_list data, double x);
 /// @param callback int32_t func(QCPGraph* self, libqt_list of QPointF* data, double x)
 ///
 void q_cpgraph_on_find_index_below_x(void* self, int32_t (*callback)(void*, libqt_list, double));
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_find_index_below_x` instead
-///
-#define q_cpgraph_qbase_find_index_below_x q_cpgraph_super_find_index_below_x
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -57056,10 +53492,6 @@ int32_t q_cpgraph_find_index_above_x(void* self, libqt_list data, double x);
 ///
 void q_cpgraph_on_find_index_above_x(void* self, int32_t (*callback)(void*, libqt_list, double));
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_find_index_above_x` instead
-///
-#define q_cpgraph_qbase_find_index_above_x q_cpgraph_super_find_index_above_x
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// Base class method implementation
@@ -57087,10 +53519,6 @@ int32_t q_cpgraph_find_index_below_y(void* self, libqt_list data, double y);
 ///
 void q_cpgraph_on_find_index_below_y(void* self, int32_t (*callback)(void*, libqt_list, double));
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_find_index_below_y` instead
-///
-#define q_cpgraph_qbase_find_index_below_y q_cpgraph_super_find_index_below_y
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// Base class method implementation
@@ -57117,10 +53545,6 @@ int32_t q_cpgraph_find_index_above_y(void* self, libqt_list data, double y);
 /// @param callback int32_t func(QCPGraph* self, libqt_list of QPointF* data, double y)
 ///
 void q_cpgraph_on_find_index_above_y(void* self, int32_t (*callback)(void*, libqt_list, double));
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_find_index_above_y` instead
-///
-#define q_cpgraph_qbase_find_index_above_y q_cpgraph_super_find_index_above_y
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -58086,10 +54510,6 @@ void q_cpgraph_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_cpgraph_data_count(void* self);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_data_count` instead
-///
-#define q_cpgraph_qbase_data_count q_cpgraph_super_data_count
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -58121,10 +54541,6 @@ void q_cpgraph_on_data_count(void* self, int32_t (*callback)());
 /// @param index int
 ///
 double q_cpgraph_data_main_key(void* self, int index);
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_data_main_key` instead
-///
-#define q_cpgraph_qbase_data_main_key q_cpgraph_super_data_main_key
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -58159,10 +54575,6 @@ void q_cpgraph_on_data_main_key(void* self, double (*callback)(void*, int));
 ///
 double q_cpgraph_data_sort_key(void* self, int index);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_data_sort_key` instead
-///
-#define q_cpgraph_qbase_data_sort_key q_cpgraph_super_data_sort_key
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -58196,10 +54608,6 @@ void q_cpgraph_on_data_sort_key(void* self, double (*callback)(void*, int));
 ///
 double q_cpgraph_data_main_value(void* self, int index);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_data_main_value` instead
-///
-#define q_cpgraph_qbase_data_main_value q_cpgraph_super_data_main_value
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -58232,10 +54640,6 @@ void q_cpgraph_on_data_main_value(void* self, double (*callback)(void*, int));
 /// @param index int
 ///
 QCPRange* q_cpgraph_data_value_range(void* self, int index);
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_data_value_range` instead
-///
-#define q_cpgraph_qbase_data_value_range q_cpgraph_super_data_value_range
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -58272,10 +54676,6 @@ void q_cpgraph_on_data_value_range(void* self, QCPRange* (*callback)(void*, int)
 ///
 QPointF* q_cpgraph_data_pixel_position(void* self, int index);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_data_pixel_position` instead
-///
-#define q_cpgraph_qbase_data_pixel_position q_cpgraph_super_data_pixel_position
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -58310,10 +54710,6 @@ void q_cpgraph_on_data_pixel_position(void* self, QPointF* (*callback)(void*, in
 ///
 bool q_cpgraph_sort_key_is_main_key(void* self);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_sort_key_is_main_key` instead
-///
-#define q_cpgraph_qbase_sort_key_is_main_key q_cpgraph_super_sort_key_is_main_key
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -58346,10 +54742,6 @@ void q_cpgraph_on_sort_key_is_main_key(void* self, bool (*callback)());
 /// @param onlySelectable bool
 ///
 QCPDataSelection* q_cpgraph_select_test_rect(void* self, void* rect, bool onlySelectable);
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_select_test_rect` instead
-///
-#define q_cpgraph_qbase_select_test_rect q_cpgraph_super_select_test_rect
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -58388,10 +54780,6 @@ void q_cpgraph_on_select_test_rect(void* self, QCPDataSelection* (*callback)(voi
 ///
 int32_t q_cpgraph_find_begin(void* self, double sortKey, bool expandedRange);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_find_begin` instead
-///
-#define q_cpgraph_qbase_find_begin q_cpgraph_super_find_begin
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -58427,10 +54815,6 @@ void q_cpgraph_on_find_begin(void* self, int32_t (*callback)(void*, double, bool
 ///
 int32_t q_cpgraph_find_end(void* self, double sortKey, bool expandedRange);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_find_end` instead
-///
-#define q_cpgraph_qbase_find_end q_cpgraph_super_find_end
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -58464,10 +54848,6 @@ void q_cpgraph_on_find_end(void* self, int32_t (*callback)(void*, double, bool))
 ///
 QCPPlottableInterface1D* q_cpgraph_interface1_d(void* self);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_interface1_d` instead
-///
-#define q_cpgraph_qbase_interface1_d q_cpgraph_super_interface1_d
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -58498,10 +54878,6 @@ void q_cpgraph_on_interface1_d(void* self, QCPPlottableInterface1D* (*callback)(
 /// @param self QCPGraph*
 ///
 QRect* q_cpgraph_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_clip_rect` instead
-///
-#define q_cpgraph_qbase_clip_rect q_cpgraph_super_clip_rect
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -58538,10 +54914,6 @@ void q_cpgraph_on_clip_rect(void* self, QRect* (*callback)());
 ///
 int32_t q_cpgraph_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_selection_category` instead
-///
-#define q_cpgraph_qbase_selection_category q_cpgraph_super_selection_category
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -58575,10 +54947,6 @@ void q_cpgraph_on_selection_category(void* self, int32_t (*callback)());
 /// @param painter QCPPainter*
 ///
 void q_cpgraph_apply_default_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpgraph_qbase_apply_default_antialiasing_hint q_cpgraph_super_apply_default_antialiasing_hint
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -58616,10 +54984,6 @@ void q_cpgraph_on_apply_default_antialiasing_hint(void* self, void (*callback)(v
 ///
 void q_cpgraph_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_select_event` instead
-///
-#define q_cpgraph_qbase_select_event q_cpgraph_super_select_event
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -58656,10 +55020,6 @@ void q_cpgraph_on_select_event(void* self, void (*callback)(void*, void*, bool, 
 ///
 void q_cpgraph_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_deselect_event` instead
-///
-#define q_cpgraph_qbase_deselect_event q_cpgraph_super_deselect_event
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -58692,10 +55052,6 @@ void q_cpgraph_on_deselect_event(void* self, void (*callback)(void*, bool*));
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpgraph_parent_plot_initialized(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_parent_plot_initialized` instead
-///
-#define q_cpgraph_qbase_parent_plot_initialized q_cpgraph_super_parent_plot_initialized
 
 /// Inherited from QCPLayerable
 ///
@@ -58730,10 +55086,6 @@ void q_cpgraph_on_parent_plot_initialized(void* self, void (*callback)(void*, vo
 /// @param details QVariant*
 ///
 void q_cpgraph_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_mouse_press_event` instead
-///
-#define q_cpgraph_qbase_mouse_press_event q_cpgraph_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -58770,10 +55122,6 @@ void q_cpgraph_on_mouse_press_event(void* self, void (*callback)(void*, void*, v
 ///
 void q_cpgraph_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_mouse_move_event` instead
-///
-#define q_cpgraph_qbase_mouse_move_event q_cpgraph_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -58808,10 +55156,6 @@ void q_cpgraph_on_mouse_move_event(void* self, void (*callback)(void*, void*, vo
 /// @param startPos QPointF*
 ///
 void q_cpgraph_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_mouse_release_event` instead
-///
-#define q_cpgraph_qbase_mouse_release_event q_cpgraph_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -58848,10 +55192,6 @@ void q_cpgraph_on_mouse_release_event(void* self, void (*callback)(void*, void*,
 ///
 void q_cpgraph_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_mouse_double_click_event` instead
-///
-#define q_cpgraph_qbase_mouse_double_click_event q_cpgraph_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -58886,10 +55226,6 @@ void q_cpgraph_on_mouse_double_click_event(void* self, void (*callback)(void*, v
 ///
 void q_cpgraph_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_wheel_event` instead
-///
-#define q_cpgraph_qbase_wheel_event q_cpgraph_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -58922,10 +55258,6 @@ void q_cpgraph_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cpgraph_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_event` instead
-///
-#define q_cpgraph_qbase_event q_cpgraph_super_event
 
 /// Inherited from QObject
 ///
@@ -58961,10 +55293,6 @@ void q_cpgraph_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cpgraph_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_event_filter` instead
-///
-#define q_cpgraph_qbase_event_filter q_cpgraph_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -58999,10 +55327,6 @@ void q_cpgraph_on_event_filter(void* self, bool (*callback)(void*, void*, void*)
 ///
 void q_cpgraph_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_timer_event` instead
-///
-#define q_cpgraph_qbase_timer_event q_cpgraph_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -59035,10 +55359,6 @@ void q_cpgraph_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cpgraph_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_child_event` instead
-///
-#define q_cpgraph_qbase_child_event q_cpgraph_super_child_event
 
 /// Inherited from QObject
 ///
@@ -59073,10 +55393,6 @@ void q_cpgraph_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpgraph_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_custom_event` instead
-///
-#define q_cpgraph_qbase_custom_event q_cpgraph_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -59109,10 +55425,6 @@ void q_cpgraph_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_cpgraph_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_connect_notify` instead
-///
-#define q_cpgraph_qbase_connect_notify q_cpgraph_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -59147,10 +55459,6 @@ void q_cpgraph_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_cpgraph_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_disconnect_notify` instead
-///
-#define q_cpgraph_qbase_disconnect_notify q_cpgraph_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -59183,10 +55491,6 @@ void q_cpgraph_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 /// @param painter QCPPainter*
 ///
 void q_cpgraph_apply_fill_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_apply_fill_antialiasing_hint` instead
-///
-#define q_cpgraph_qbase_apply_fill_antialiasing_hint q_cpgraph_super_apply_fill_antialiasing_hint
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -59221,10 +55525,6 @@ void q_cpgraph_on_apply_fill_antialiasing_hint(void* self, void (*callback)(void
 ///
 void q_cpgraph_apply_scatters_antialiasing_hint(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_apply_scatters_antialiasing_hint` instead
-///
-#define q_cpgraph_qbase_apply_scatters_antialiasing_hint q_cpgraph_super_apply_scatters_antialiasing_hint
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -59257,10 +55557,6 @@ void q_cpgraph_on_apply_scatters_antialiasing_hint(void* self, void (*callback)(
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpgraph_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_initialize_parent_plot` instead
-///
-#define q_cpgraph_qbase_initialize_parent_plot q_cpgraph_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -59295,10 +55591,6 @@ void q_cpgraph_on_initialize_parent_plot(void* self, void (*callback)(void*, voi
 ///
 void q_cpgraph_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_set_parent_layerable` instead
-///
-#define q_cpgraph_qbase_set_parent_layerable q_cpgraph_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -59332,10 +55624,6 @@ void q_cpgraph_on_set_parent_layerable(void* self, void (*callback)(void*, void*
 /// @param prepend bool
 ///
 bool q_cpgraph_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_move_to_layer` instead
-///
-#define q_cpgraph_qbase_move_to_layer q_cpgraph_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -59373,10 +55661,6 @@ void q_cpgraph_on_move_to_layer(void* self, bool (*callback)(void*, void*, bool)
 ///
 void q_cpgraph_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_apply_antialiasing_hint` instead
-///
-#define q_cpgraph_qbase_apply_antialiasing_hint q_cpgraph_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -59411,10 +55695,6 @@ void q_cpgraph_on_apply_antialiasing_hint(void* self, void (*callback)(void*, vo
 ///
 QObject* q_cpgraph_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_sender` instead
-///
-#define q_cpgraph_qbase_sender q_cpgraph_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -59445,10 +55725,6 @@ void q_cpgraph_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPGraph*
 ///
 int32_t q_cpgraph_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_sender_signal_index` instead
-///
-#define q_cpgraph_qbase_sender_signal_index q_cpgraph_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -59482,10 +55758,6 @@ void q_cpgraph_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cpgraph_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpgraph_super_receivers` instead
-///
-#define q_cpgraph_qbase_receivers q_cpgraph_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -59518,10 +55790,6 @@ void q_cpgraph_on_receivers(void* self, int32_t (*callback)(void*, const char*))
 /// @param signal QMetaMethod*
 ///
 bool q_cpgraph_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpgraph_super_is_signal_connected` instead
-///
-#define q_cpgraph_qbase_is_signal_connected q_cpgraph_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -59723,10 +55991,6 @@ const QMetaObject* q_cpcurve_meta_object(void* self);
 ///
 void q_cpcurve_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_meta_object` instead
-///
-#define q_cpcurve_qbase_meta_object q_cpcurve_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -59746,10 +56010,6 @@ void* q_cpcurve_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPCurve* self, const char* param1)
 ///
 void q_cpcurve_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_metacast` instead
-///
-#define q_cpcurve_qbase_metacast q_cpcurve_super_metacast
 
 /// Base class method implementation
 ///
@@ -59771,10 +56031,6 @@ int32_t q_cpcurve_metacall(void* self, int32_t param1, int param2, void* param3)
 /// @param callback int32_t func(QCPCurve* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpcurve_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_metacall` instead
-///
-#define q_cpcurve_qbase_metacall q_cpcurve_super_metacall
 
 /// Base class method implementation
 ///
@@ -59903,10 +56159,6 @@ double q_cpcurve_select_test(void* self, void* pos, bool onlySelectable, void* d
 ///
 void q_cpcurve_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_select_test` instead
-///
-#define q_cpcurve_qbase_select_test q_cpcurve_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
 /// Base class method implementation
@@ -59936,10 +56188,6 @@ QCPRange* q_cpcurve_get_key_range(void* self, bool* foundRange, int32_t inSignDo
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpcurve_on_get_key_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t));
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_get_key_range` instead
-///
-#define q_cpcurve_qbase_get_key_range q_cpcurve_super_get_key_range
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -59971,10 +56219,6 @@ QCPRange* q_cpcurve_get_value_range(void* self, bool* foundRange, int32_t inSign
 ///
 void q_cpcurve_on_get_value_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t, void*));
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_get_value_range` instead
-///
-#define q_cpcurve_qbase_get_value_range q_cpcurve_super_get_value_range
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
 /// Base class method implementation
@@ -60002,10 +56246,6 @@ void q_cpcurve_draw(void* self, void* painter);
 ///
 void q_cpcurve_on_draw(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_draw` instead
-///
-#define q_cpcurve_qbase_draw q_cpcurve_super_draw
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
 /// Base class method implementation
@@ -60031,10 +56271,6 @@ void q_cpcurve_draw_legend_icon(void* self, void* painter, void* rect);
 /// @param callback void func(QCPCurve* self, QCPPainter* painter, QRectF* rect)
 ///
 void q_cpcurve_on_draw_legend_icon(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_draw_legend_icon` instead
-///
-#define q_cpcurve_qbase_draw_legend_icon q_cpcurve_super_draw_legend_icon
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -60063,10 +56299,6 @@ void q_cpcurve_draw_curve_line(void* self, void* painter, libqt_list lines);
 ///
 void q_cpcurve_on_draw_curve_line(void* self, void (*callback)(void*, void*, libqt_list));
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_draw_curve_line` instead
-///
-#define q_cpcurve_qbase_draw_curve_line q_cpcurve_super_draw_curve_line
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
 /// Base class method implementation
@@ -60094,10 +56326,6 @@ void q_cpcurve_draw_scatter_plot(void* self, void* painter, libqt_list points, v
 /// @param callback void func(QCPCurve* self, QCPPainter* painter, libqt_list of QPointF* points, QCPScatterStyle* style)
 ///
 void q_cpcurve_on_draw_scatter_plot(void* self, void (*callback)(void*, void*, libqt_list, void*));
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_draw_scatter_plot` instead
-///
-#define q_cpcurve_qbase_draw_scatter_plot q_cpcurve_super_draw_scatter_plot
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -60128,10 +56356,6 @@ void q_cpcurve_get_curve_lines(void* self, libqt_list lines, void* dataRange, do
 ///
 void q_cpcurve_on_get_curve_lines(void* self, void (*callback)(void*, libqt_list, void*, double));
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_get_curve_lines` instead
-///
-#define q_cpcurve_qbase_get_curve_lines q_cpcurve_super_get_curve_lines
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
 /// Base class method implementation
@@ -60160,10 +56384,6 @@ void q_cpcurve_get_scatters(void* self, libqt_list scatters, void* dataRange, do
 /// @param callback void func(QCPCurve* self, libqt_list of QPointF* scatters, QCPDataRange* dataRange, double scatterWidth)
 ///
 void q_cpcurve_on_get_scatters(void* self, void (*callback)(void*, libqt_list, void*, double));
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_get_scatters` instead
-///
-#define q_cpcurve_qbase_get_scatters q_cpcurve_super_get_scatters
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -60196,10 +56416,6 @@ int32_t q_cpcurve_get_region(void* self, double key, double value, double keyMin
 /// @param callback int32_t func(QCPCurve* self, double key, double value, double keyMin, double valueMax, double keyMax, double valueMin)
 ///
 void q_cpcurve_on_get_region(void* self, int32_t (*callback)(void*, double, double, double, double, double, double));
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_get_region` instead
-///
-#define q_cpcurve_qbase_get_region q_cpcurve_super_get_region
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -60240,10 +56456,6 @@ QPointF* q_cpcurve_get_optimized_point(void* self, int otherRegion, double other
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpcurve_on_get_optimized_point(void* self, QPointF* (*callback)(void*, int, double, double, double, double, double, double, double, double));
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_get_optimized_point` instead
-///
-#define q_cpcurve_qbase_get_optimized_point q_cpcurve_super_get_optimized_point
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -60289,10 +56501,6 @@ libqt_list q_cpcurve_get_optimized_corner_points(void* self, int prevRegion, int
 ///
 void q_cpcurve_on_get_optimized_corner_points(void* self, libqt_list (*callback)(void*, int, int, double, double, double, double, double, double, double, double));
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_get_optimized_corner_points` instead
-///
-#define q_cpcurve_qbase_get_optimized_corner_points q_cpcurve_super_get_optimized_corner_points
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
 /// Base class method implementation
@@ -60330,10 +56538,6 @@ bool q_cpcurve_may_traverse(void* self, int prevRegion, int currentRegion);
 ///
 void q_cpcurve_on_may_traverse(void* self, bool (*callback)(void*, int, int));
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_may_traverse` instead
-///
-#define q_cpcurve_qbase_may_traverse q_cpcurve_super_may_traverse
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
 /// Base class method implementation
@@ -60368,10 +56572,6 @@ bool q_cpcurve_get_traverse(void* self, double prevKey, double prevValue, double
 /// @param callback bool func(QCPCurve* self, double prevKey, double prevValue, double key, double value, double keyMin, double valueMax, double keyMax, double valueMin, QPointF* crossA, QPointF* crossB)
 ///
 void q_cpcurve_on_get_traverse(void* self, bool (*callback)(void*, double, double, double, double, double, double, double, double, void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_get_traverse` instead
-///
-#define q_cpcurve_qbase_get_traverse q_cpcurve_super_get_traverse
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -60413,10 +56613,6 @@ void q_cpcurve_get_traverse_corner_points(void* self, int prevRegion, int curren
 /// @param callback void func(QCPCurve* self, int prevRegion, int currentRegion, double keyMin, double valueMax, double keyMax, double valueMin, libqt_list of QPointF* beforeTraverse, libqt_list of QPointF* afterTraverse)
 ///
 void q_cpcurve_on_get_traverse_corner_points(void* self, void (*callback)(void*, int, int, double, double, double, double, libqt_list, libqt_list));
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_get_traverse_corner_points` instead
-///
-#define q_cpcurve_qbase_get_traverse_corner_points q_cpcurve_super_get_traverse_corner_points
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -61390,10 +57586,6 @@ void q_cpcurve_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_cpcurve_data_count(void* self);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_data_count` instead
-///
-#define q_cpcurve_qbase_data_count q_cpcurve_super_data_count
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -61425,10 +57617,6 @@ void q_cpcurve_on_data_count(void* self, int32_t (*callback)());
 /// @param index int
 ///
 double q_cpcurve_data_main_key(void* self, int index);
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_data_main_key` instead
-///
-#define q_cpcurve_qbase_data_main_key q_cpcurve_super_data_main_key
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -61463,10 +57651,6 @@ void q_cpcurve_on_data_main_key(void* self, double (*callback)(void*, int));
 ///
 double q_cpcurve_data_sort_key(void* self, int index);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_data_sort_key` instead
-///
-#define q_cpcurve_qbase_data_sort_key q_cpcurve_super_data_sort_key
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -61500,10 +57684,6 @@ void q_cpcurve_on_data_sort_key(void* self, double (*callback)(void*, int));
 ///
 double q_cpcurve_data_main_value(void* self, int index);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_data_main_value` instead
-///
-#define q_cpcurve_qbase_data_main_value q_cpcurve_super_data_main_value
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -61536,10 +57716,6 @@ void q_cpcurve_on_data_main_value(void* self, double (*callback)(void*, int));
 /// @param index int
 ///
 QCPRange* q_cpcurve_data_value_range(void* self, int index);
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_data_value_range` instead
-///
-#define q_cpcurve_qbase_data_value_range q_cpcurve_super_data_value_range
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -61576,10 +57752,6 @@ void q_cpcurve_on_data_value_range(void* self, QCPRange* (*callback)(void*, int)
 ///
 QPointF* q_cpcurve_data_pixel_position(void* self, int index);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_data_pixel_position` instead
-///
-#define q_cpcurve_qbase_data_pixel_position q_cpcurve_super_data_pixel_position
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -61614,10 +57786,6 @@ void q_cpcurve_on_data_pixel_position(void* self, QPointF* (*callback)(void*, in
 ///
 bool q_cpcurve_sort_key_is_main_key(void* self);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_sort_key_is_main_key` instead
-///
-#define q_cpcurve_qbase_sort_key_is_main_key q_cpcurve_super_sort_key_is_main_key
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -61650,10 +57818,6 @@ void q_cpcurve_on_sort_key_is_main_key(void* self, bool (*callback)());
 /// @param onlySelectable bool
 ///
 QCPDataSelection* q_cpcurve_select_test_rect(void* self, void* rect, bool onlySelectable);
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_select_test_rect` instead
-///
-#define q_cpcurve_qbase_select_test_rect q_cpcurve_super_select_test_rect
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -61692,10 +57856,6 @@ void q_cpcurve_on_select_test_rect(void* self, QCPDataSelection* (*callback)(voi
 ///
 int32_t q_cpcurve_find_begin(void* self, double sortKey, bool expandedRange);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_find_begin` instead
-///
-#define q_cpcurve_qbase_find_begin q_cpcurve_super_find_begin
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -61731,10 +57891,6 @@ void q_cpcurve_on_find_begin(void* self, int32_t (*callback)(void*, double, bool
 ///
 int32_t q_cpcurve_find_end(void* self, double sortKey, bool expandedRange);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_find_end` instead
-///
-#define q_cpcurve_qbase_find_end q_cpcurve_super_find_end
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -61768,10 +57924,6 @@ void q_cpcurve_on_find_end(void* self, int32_t (*callback)(void*, double, bool))
 ///
 QCPPlottableInterface1D* q_cpcurve_interface1_d(void* self);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_interface1_d` instead
-///
-#define q_cpcurve_qbase_interface1_d q_cpcurve_super_interface1_d
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -61802,10 +57954,6 @@ void q_cpcurve_on_interface1_d(void* self, QCPPlottableInterface1D* (*callback)(
 /// @param self QCPCurve*
 ///
 QRect* q_cpcurve_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_clip_rect` instead
-///
-#define q_cpcurve_qbase_clip_rect q_cpcurve_super_clip_rect
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -61842,10 +57990,6 @@ void q_cpcurve_on_clip_rect(void* self, QRect* (*callback)());
 ///
 int32_t q_cpcurve_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_selection_category` instead
-///
-#define q_cpcurve_qbase_selection_category q_cpcurve_super_selection_category
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -61879,10 +58023,6 @@ void q_cpcurve_on_selection_category(void* self, int32_t (*callback)());
 /// @param painter QCPPainter*
 ///
 void q_cpcurve_apply_default_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpcurve_qbase_apply_default_antialiasing_hint q_cpcurve_super_apply_default_antialiasing_hint
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -61920,10 +58060,6 @@ void q_cpcurve_on_apply_default_antialiasing_hint(void* self, void (*callback)(v
 ///
 void q_cpcurve_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_select_event` instead
-///
-#define q_cpcurve_qbase_select_event q_cpcurve_super_select_event
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -61960,10 +58096,6 @@ void q_cpcurve_on_select_event(void* self, void (*callback)(void*, void*, bool, 
 ///
 void q_cpcurve_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_deselect_event` instead
-///
-#define q_cpcurve_qbase_deselect_event q_cpcurve_super_deselect_event
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -61996,10 +58128,6 @@ void q_cpcurve_on_deselect_event(void* self, void (*callback)(void*, bool*));
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpcurve_parent_plot_initialized(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_parent_plot_initialized` instead
-///
-#define q_cpcurve_qbase_parent_plot_initialized q_cpcurve_super_parent_plot_initialized
 
 /// Inherited from QCPLayerable
 ///
@@ -62034,10 +58162,6 @@ void q_cpcurve_on_parent_plot_initialized(void* self, void (*callback)(void*, vo
 /// @param details QVariant*
 ///
 void q_cpcurve_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_mouse_press_event` instead
-///
-#define q_cpcurve_qbase_mouse_press_event q_cpcurve_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -62074,10 +58198,6 @@ void q_cpcurve_on_mouse_press_event(void* self, void (*callback)(void*, void*, v
 ///
 void q_cpcurve_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_mouse_move_event` instead
-///
-#define q_cpcurve_qbase_mouse_move_event q_cpcurve_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -62112,10 +58232,6 @@ void q_cpcurve_on_mouse_move_event(void* self, void (*callback)(void*, void*, vo
 /// @param startPos QPointF*
 ///
 void q_cpcurve_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_mouse_release_event` instead
-///
-#define q_cpcurve_qbase_mouse_release_event q_cpcurve_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -62152,10 +58268,6 @@ void q_cpcurve_on_mouse_release_event(void* self, void (*callback)(void*, void*,
 ///
 void q_cpcurve_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_mouse_double_click_event` instead
-///
-#define q_cpcurve_qbase_mouse_double_click_event q_cpcurve_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -62190,10 +58302,6 @@ void q_cpcurve_on_mouse_double_click_event(void* self, void (*callback)(void*, v
 ///
 void q_cpcurve_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_wheel_event` instead
-///
-#define q_cpcurve_qbase_wheel_event q_cpcurve_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -62226,10 +58334,6 @@ void q_cpcurve_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cpcurve_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_event` instead
-///
-#define q_cpcurve_qbase_event q_cpcurve_super_event
 
 /// Inherited from QObject
 ///
@@ -62265,10 +58369,6 @@ void q_cpcurve_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cpcurve_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_event_filter` instead
-///
-#define q_cpcurve_qbase_event_filter q_cpcurve_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -62303,10 +58403,6 @@ void q_cpcurve_on_event_filter(void* self, bool (*callback)(void*, void*, void*)
 ///
 void q_cpcurve_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_timer_event` instead
-///
-#define q_cpcurve_qbase_timer_event q_cpcurve_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -62339,10 +58435,6 @@ void q_cpcurve_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cpcurve_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_child_event` instead
-///
-#define q_cpcurve_qbase_child_event q_cpcurve_super_child_event
 
 /// Inherited from QObject
 ///
@@ -62377,10 +58469,6 @@ void q_cpcurve_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpcurve_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_custom_event` instead
-///
-#define q_cpcurve_qbase_custom_event q_cpcurve_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -62413,10 +58501,6 @@ void q_cpcurve_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_cpcurve_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_connect_notify` instead
-///
-#define q_cpcurve_qbase_connect_notify q_cpcurve_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -62451,10 +58535,6 @@ void q_cpcurve_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_cpcurve_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_disconnect_notify` instead
-///
-#define q_cpcurve_qbase_disconnect_notify q_cpcurve_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -62487,10 +58567,6 @@ void q_cpcurve_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 /// @param painter QCPPainter*
 ///
 void q_cpcurve_apply_fill_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_apply_fill_antialiasing_hint` instead
-///
-#define q_cpcurve_qbase_apply_fill_antialiasing_hint q_cpcurve_super_apply_fill_antialiasing_hint
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -62525,10 +58601,6 @@ void q_cpcurve_on_apply_fill_antialiasing_hint(void* self, void (*callback)(void
 ///
 void q_cpcurve_apply_scatters_antialiasing_hint(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_apply_scatters_antialiasing_hint` instead
-///
-#define q_cpcurve_qbase_apply_scatters_antialiasing_hint q_cpcurve_super_apply_scatters_antialiasing_hint
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -62561,10 +58633,6 @@ void q_cpcurve_on_apply_scatters_antialiasing_hint(void* self, void (*callback)(
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpcurve_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_initialize_parent_plot` instead
-///
-#define q_cpcurve_qbase_initialize_parent_plot q_cpcurve_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -62599,10 +58667,6 @@ void q_cpcurve_on_initialize_parent_plot(void* self, void (*callback)(void*, voi
 ///
 void q_cpcurve_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_set_parent_layerable` instead
-///
-#define q_cpcurve_qbase_set_parent_layerable q_cpcurve_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -62636,10 +58700,6 @@ void q_cpcurve_on_set_parent_layerable(void* self, void (*callback)(void*, void*
 /// @param prepend bool
 ///
 bool q_cpcurve_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_move_to_layer` instead
-///
-#define q_cpcurve_qbase_move_to_layer q_cpcurve_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -62677,10 +58737,6 @@ void q_cpcurve_on_move_to_layer(void* self, bool (*callback)(void*, void*, bool)
 ///
 void q_cpcurve_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_apply_antialiasing_hint` instead
-///
-#define q_cpcurve_qbase_apply_antialiasing_hint q_cpcurve_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -62715,10 +58771,6 @@ void q_cpcurve_on_apply_antialiasing_hint(void* self, void (*callback)(void*, vo
 ///
 QObject* q_cpcurve_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_sender` instead
-///
-#define q_cpcurve_qbase_sender q_cpcurve_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -62749,10 +58801,6 @@ void q_cpcurve_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPCurve*
 ///
 int32_t q_cpcurve_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_sender_signal_index` instead
-///
-#define q_cpcurve_qbase_sender_signal_index q_cpcurve_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -62786,10 +58834,6 @@ void q_cpcurve_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cpcurve_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpcurve_super_receivers` instead
-///
-#define q_cpcurve_qbase_receivers q_cpcurve_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -62822,10 +58866,6 @@ void q_cpcurve_on_receivers(void* self, int32_t (*callback)(void*, const char*))
 /// @param signal QMetaMethod*
 ///
 bool q_cpcurve_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpcurve_super_is_signal_connected` instead
-///
-#define q_cpcurve_qbase_is_signal_connected q_cpcurve_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -62891,10 +58931,6 @@ const QMetaObject* q_cpbarsgroup_meta_object(void* self);
 ///
 void q_cpbarsgroup_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpbarsgroup_super_meta_object` instead
-///
-#define q_cpbarsgroup_qbase_meta_object q_cpbarsgroup_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -62914,10 +58950,6 @@ void* q_cpbarsgroup_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPBarsGroup* self, const char* param1)
 ///
 void q_cpbarsgroup_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpbarsgroup_super_metacast` instead
-///
-#define q_cpbarsgroup_qbase_metacast q_cpbarsgroup_super_metacast
 
 /// Base class method implementation
 ///
@@ -62939,10 +58971,6 @@ int32_t q_cpbarsgroup_metacall(void* self, int32_t param1, int param2, void* par
 /// @param callback int32_t func(QCPBarsGroup* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpbarsgroup_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpbarsgroup_super_metacall` instead
-///
-#define q_cpbarsgroup_qbase_metacall q_cpbarsgroup_super_metacall
 
 /// Base class method implementation
 ///
@@ -63067,10 +59095,6 @@ void q_cpbarsgroup_register_bars(void* self, void* bars);
 ///
 void q_cpbarsgroup_on_register_bars(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpbarsgroup_super_register_bars` instead
-///
-#define q_cpbarsgroup_qbase_register_bars q_cpbarsgroup_super_register_bars
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBarsGroup.html)
 ///
 /// Base class method implementation
@@ -63095,10 +59119,6 @@ void q_cpbarsgroup_unregister_bars(void* self, void* bars);
 /// @param callback void func(QCPBarsGroup* self, QCPBars* bars)
 ///
 void q_cpbarsgroup_on_unregister_bars(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpbarsgroup_super_unregister_bars` instead
-///
-#define q_cpbarsgroup_qbase_unregister_bars q_cpbarsgroup_super_unregister_bars
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBarsGroup.html)
 ///
@@ -63126,10 +59146,6 @@ double q_cpbarsgroup_key_pixel_offset(void* self, void* bars, double keyCoord);
 ///
 void q_cpbarsgroup_on_key_pixel_offset(void* self, double (*callback)(void*, void*, double));
 
-/// @warning DEPRECATED: Use `q_cpbarsgroup_super_key_pixel_offset` instead
-///
-#define q_cpbarsgroup_qbase_key_pixel_offset q_cpbarsgroup_super_key_pixel_offset
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBarsGroup.html)
 ///
 /// Base class method implementation
@@ -63156,10 +59172,6 @@ double q_cpbarsgroup_get_pixel_spacing(void* self, void* bars, double keyCoord);
 /// @param callback double func(QCPBarsGroup* self, QCPBars* bars, double keyCoord)
 ///
 void q_cpbarsgroup_on_get_pixel_spacing(void* self, double (*callback)(void*, void*, double));
-
-/// @warning DEPRECATED: Use `q_cpbarsgroup_super_get_pixel_spacing` instead
-///
-#define q_cpbarsgroup_qbase_get_pixel_spacing q_cpbarsgroup_super_get_pixel_spacing
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBarsGroup.html)
 ///
@@ -63648,10 +59660,6 @@ void q_cpbarsgroup_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_cpbarsgroup_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpbarsgroup_super_event` instead
-///
-#define q_cpbarsgroup_qbase_event q_cpbarsgroup_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -63685,10 +59693,6 @@ void q_cpbarsgroup_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cpbarsgroup_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_cpbarsgroup_super_event_filter` instead
-///
-#define q_cpbarsgroup_qbase_event_filter q_cpbarsgroup_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -63724,10 +59728,6 @@ void q_cpbarsgroup_on_event_filter(void* self, bool (*callback)(void*, void*, vo
 ///
 void q_cpbarsgroup_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpbarsgroup_super_timer_event` instead
-///
-#define q_cpbarsgroup_qbase_timer_event q_cpbarsgroup_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -63760,10 +59760,6 @@ void q_cpbarsgroup_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cpbarsgroup_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpbarsgroup_super_child_event` instead
-///
-#define q_cpbarsgroup_qbase_child_event q_cpbarsgroup_super_child_event
 
 /// Inherited from QObject
 ///
@@ -63798,10 +59794,6 @@ void q_cpbarsgroup_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpbarsgroup_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpbarsgroup_super_custom_event` instead
-///
-#define q_cpbarsgroup_qbase_custom_event q_cpbarsgroup_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -63834,10 +59826,6 @@ void q_cpbarsgroup_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_cpbarsgroup_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpbarsgroup_super_connect_notify` instead
-///
-#define q_cpbarsgroup_qbase_connect_notify q_cpbarsgroup_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -63872,10 +59860,6 @@ void q_cpbarsgroup_on_connect_notify(void* self, void (*callback)(void*, void*))
 ///
 void q_cpbarsgroup_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpbarsgroup_super_disconnect_notify` instead
-///
-#define q_cpbarsgroup_qbase_disconnect_notify q_cpbarsgroup_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -63908,10 +59892,6 @@ void q_cpbarsgroup_on_disconnect_notify(void* self, void (*callback)(void*, void
 ///
 QObject* q_cpbarsgroup_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpbarsgroup_super_sender` instead
-///
-#define q_cpbarsgroup_qbase_sender q_cpbarsgroup_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -63942,10 +59922,6 @@ void q_cpbarsgroup_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPBarsGroup*
 ///
 int32_t q_cpbarsgroup_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpbarsgroup_super_sender_signal_index` instead
-///
-#define q_cpbarsgroup_qbase_sender_signal_index q_cpbarsgroup_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -63979,10 +59955,6 @@ void q_cpbarsgroup_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cpbarsgroup_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpbarsgroup_super_receivers` instead
-///
-#define q_cpbarsgroup_qbase_receivers q_cpbarsgroup_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -64015,10 +59987,6 @@ void q_cpbarsgroup_on_receivers(void* self, int32_t (*callback)(void*, const cha
 /// @param signal QMetaMethod*
 ///
 bool q_cpbarsgroup_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpbarsgroup_super_is_signal_connected` instead
-///
-#define q_cpbarsgroup_qbase_is_signal_connected q_cpbarsgroup_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -64206,10 +60174,6 @@ const QMetaObject* q_cpbars_meta_object(void* self);
 ///
 void q_cpbars_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpbars_super_meta_object` instead
-///
-#define q_cpbars_qbase_meta_object q_cpbars_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -64229,10 +60193,6 @@ void* q_cpbars_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPBars* self, const char* param1)
 ///
 void q_cpbars_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpbars_super_metacast` instead
-///
-#define q_cpbars_qbase_metacast q_cpbars_super_metacast
 
 /// Base class method implementation
 ///
@@ -64254,10 +60214,6 @@ int32_t q_cpbars_metacall(void* self, int32_t param1, int param2, void* param3);
 /// @param callback int32_t func(QCPBars* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpbars_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpbars_super_metacall` instead
-///
-#define q_cpbars_qbase_metacall q_cpbars_super_metacall
 
 /// Base class method implementation
 ///
@@ -64412,10 +60368,6 @@ QCPDataSelection* q_cpbars_select_test_rect(void* self, void* rect, bool onlySel
 ///
 void q_cpbars_on_select_test_rect(void* self, QCPDataSelection* (*callback)(void*, void*, bool));
 
-/// @warning DEPRECATED: Use `q_cpbars_super_select_test_rect` instead
-///
-#define q_cpbars_qbase_select_test_rect q_cpbars_super_select_test_rect
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
 /// Base class method implementation
@@ -64443,10 +60395,6 @@ double q_cpbars_select_test(void* self, void* pos, bool onlySelectable, void* de
 /// @param callback double func(QCPBars* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
 void q_cpbars_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
-
-/// @warning DEPRECATED: Use `q_cpbars_super_select_test` instead
-///
-#define q_cpbars_qbase_select_test q_cpbars_super_select_test
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
@@ -64478,10 +60426,6 @@ QCPRange* q_cpbars_get_key_range(void* self, bool* foundRange, int32_t inSignDom
 ///
 void q_cpbars_on_get_key_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t));
 
-/// @warning DEPRECATED: Use `q_cpbars_super_get_key_range` instead
-///
-#define q_cpbars_qbase_get_key_range q_cpbars_super_get_key_range
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
 /// Base class method implementation
@@ -64512,10 +60456,6 @@ QCPRange* q_cpbars_get_value_range(void* self, bool* foundRange, int32_t inSignD
 ///
 void q_cpbars_on_get_value_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t, void*));
 
-/// @warning DEPRECATED: Use `q_cpbars_super_get_value_range` instead
-///
-#define q_cpbars_qbase_get_value_range q_cpbars_super_get_value_range
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
 /// Base class method implementation
@@ -64545,10 +60485,6 @@ QPointF* q_cpbars_data_pixel_position(void* self, int index);
 ///
 void q_cpbars_on_data_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_cpbars_super_data_pixel_position` instead
-///
-#define q_cpbars_qbase_data_pixel_position q_cpbars_super_data_pixel_position
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
 /// Base class method implementation
@@ -64573,10 +60509,6 @@ void q_cpbars_draw(void* self, void* painter);
 /// @param callback void func(QCPBars* self, QCPPainter* painter)
 ///
 void q_cpbars_on_draw(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpbars_super_draw` instead
-///
-#define q_cpbars_qbase_draw q_cpbars_super_draw
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
@@ -64603,10 +60535,6 @@ void q_cpbars_draw_legend_icon(void* self, void* painter, void* rect);
 /// @param callback void func(QCPBars* self, QCPPainter* painter, QRectF* rect)
 ///
 void q_cpbars_on_draw_legend_icon(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpbars_super_draw_legend_icon` instead
-///
-#define q_cpbars_qbase_draw_legend_icon q_cpbars_super_draw_legend_icon
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
@@ -64637,10 +60565,6 @@ QRectF* q_cpbars_get_bar_rect(void* self, double key, double value);
 ///
 void q_cpbars_on_get_bar_rect(void* self, QRectF* (*callback)(void*, double, double));
 
-/// @warning DEPRECATED: Use `q_cpbars_super_get_bar_rect` instead
-///
-#define q_cpbars_qbase_get_bar_rect q_cpbars_super_get_bar_rect
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
 /// Base class method implementation
@@ -64668,10 +60592,6 @@ void q_cpbars_get_pixel_width(void* self, double key, double* lower, double* upp
 /// @param callback void func(QCPBars* self, double key, double* lower, double* upper)
 ///
 void q_cpbars_on_get_pixel_width(void* self, void (*callback)(void*, double, double*, double*));
-
-/// @warning DEPRECATED: Use `q_cpbars_super_get_pixel_width` instead
-///
-#define q_cpbars_qbase_get_pixel_width q_cpbars_super_get_pixel_width
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
@@ -64701,10 +60621,6 @@ double q_cpbars_get_stacked_base_value(void* self, double key, bool positive);
 ///
 void q_cpbars_on_get_stacked_base_value(void* self, double (*callback)(void*, double, bool));
 
-/// @warning DEPRECATED: Use `q_cpbars_super_get_stacked_base_value` instead
-///
-#define q_cpbars_qbase_get_stacked_base_value q_cpbars_super_get_stacked_base_value
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
 /// Base class method implementation
@@ -64731,10 +60647,6 @@ void q_cpbars_connect_bars(void* self, void* lower, void* upper);
 /// @param callback void func(QCPBars* self, QCPBars* lower, QCPBars* upper)
 ///
 void q_cpbars_on_connect_bars(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpbars_super_connect_bars` instead
-///
-#define q_cpbars_qbase_connect_bars q_cpbars_super_connect_bars
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
@@ -65700,10 +61612,6 @@ void q_cpbars_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_cpbars_data_count(void* self);
 
-/// @warning DEPRECATED: Use `q_cpbars_super_data_count` instead
-///
-#define q_cpbars_qbase_data_count q_cpbars_super_data_count
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -65735,10 +61643,6 @@ void q_cpbars_on_data_count(void* self, int32_t (*callback)());
 /// @param index int
 ///
 double q_cpbars_data_main_key(void* self, int index);
-
-/// @warning DEPRECATED: Use `q_cpbars_super_data_main_key` instead
-///
-#define q_cpbars_qbase_data_main_key q_cpbars_super_data_main_key
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -65773,10 +61677,6 @@ void q_cpbars_on_data_main_key(void* self, double (*callback)(void*, int));
 ///
 double q_cpbars_data_sort_key(void* self, int index);
 
-/// @warning DEPRECATED: Use `q_cpbars_super_data_sort_key` instead
-///
-#define q_cpbars_qbase_data_sort_key q_cpbars_super_data_sort_key
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -65810,10 +61710,6 @@ void q_cpbars_on_data_sort_key(void* self, double (*callback)(void*, int));
 ///
 double q_cpbars_data_main_value(void* self, int index);
 
-/// @warning DEPRECATED: Use `q_cpbars_super_data_main_value` instead
-///
-#define q_cpbars_qbase_data_main_value q_cpbars_super_data_main_value
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -65846,10 +61742,6 @@ void q_cpbars_on_data_main_value(void* self, double (*callback)(void*, int));
 /// @param index int
 ///
 QCPRange* q_cpbars_data_value_range(void* self, int index);
-
-/// @warning DEPRECATED: Use `q_cpbars_super_data_value_range` instead
-///
-#define q_cpbars_qbase_data_value_range q_cpbars_super_data_value_range
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -65885,10 +61777,6 @@ void q_cpbars_on_data_value_range(void* self, QCPRange* (*callback)(void*, int))
 ///
 bool q_cpbars_sort_key_is_main_key(void* self);
 
-/// @warning DEPRECATED: Use `q_cpbars_super_sort_key_is_main_key` instead
-///
-#define q_cpbars_qbase_sort_key_is_main_key q_cpbars_super_sort_key_is_main_key
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -65921,10 +61809,6 @@ void q_cpbars_on_sort_key_is_main_key(void* self, bool (*callback)());
 /// @param expandedRange bool
 ///
 int32_t q_cpbars_find_begin(void* self, double sortKey, bool expandedRange);
-
-/// @warning DEPRECATED: Use `q_cpbars_super_find_begin` instead
-///
-#define q_cpbars_qbase_find_begin q_cpbars_super_find_begin
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -65961,10 +61845,6 @@ void q_cpbars_on_find_begin(void* self, int32_t (*callback)(void*, double, bool)
 ///
 int32_t q_cpbars_find_end(void* self, double sortKey, bool expandedRange);
 
-/// @warning DEPRECATED: Use `q_cpbars_super_find_end` instead
-///
-#define q_cpbars_qbase_find_end q_cpbars_super_find_end
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -65998,10 +61878,6 @@ void q_cpbars_on_find_end(void* self, int32_t (*callback)(void*, double, bool));
 ///
 QCPPlottableInterface1D* q_cpbars_interface1_d(void* self);
 
-/// @warning DEPRECATED: Use `q_cpbars_super_interface1_d` instead
-///
-#define q_cpbars_qbase_interface1_d q_cpbars_super_interface1_d
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -66032,10 +61908,6 @@ void q_cpbars_on_interface1_d(void* self, QCPPlottableInterface1D* (*callback)()
 /// @param self QCPBars*
 ///
 QRect* q_cpbars_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cpbars_super_clip_rect` instead
-///
-#define q_cpbars_qbase_clip_rect q_cpbars_super_clip_rect
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -66072,10 +61944,6 @@ void q_cpbars_on_clip_rect(void* self, QRect* (*callback)());
 ///
 int32_t q_cpbars_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cpbars_super_selection_category` instead
-///
-#define q_cpbars_qbase_selection_category q_cpbars_super_selection_category
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -66109,10 +61977,6 @@ void q_cpbars_on_selection_category(void* self, int32_t (*callback)());
 /// @param painter QCPPainter*
 ///
 void q_cpbars_apply_default_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cpbars_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpbars_qbase_apply_default_antialiasing_hint q_cpbars_super_apply_default_antialiasing_hint
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -66150,10 +62014,6 @@ void q_cpbars_on_apply_default_antialiasing_hint(void* self, void (*callback)(vo
 ///
 void q_cpbars_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpbars_super_select_event` instead
-///
-#define q_cpbars_qbase_select_event q_cpbars_super_select_event
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -66190,10 +62050,6 @@ void q_cpbars_on_select_event(void* self, void (*callback)(void*, void*, bool, v
 ///
 void q_cpbars_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpbars_super_deselect_event` instead
-///
-#define q_cpbars_qbase_deselect_event q_cpbars_super_deselect_event
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -66226,10 +62082,6 @@ void q_cpbars_on_deselect_event(void* self, void (*callback)(void*, bool*));
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpbars_parent_plot_initialized(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpbars_super_parent_plot_initialized` instead
-///
-#define q_cpbars_qbase_parent_plot_initialized q_cpbars_super_parent_plot_initialized
 
 /// Inherited from QCPLayerable
 ///
@@ -66264,10 +62116,6 @@ void q_cpbars_on_parent_plot_initialized(void* self, void (*callback)(void*, voi
 /// @param details QVariant*
 ///
 void q_cpbars_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpbars_super_mouse_press_event` instead
-///
-#define q_cpbars_qbase_mouse_press_event q_cpbars_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -66304,10 +62152,6 @@ void q_cpbars_on_mouse_press_event(void* self, void (*callback)(void*, void*, vo
 ///
 void q_cpbars_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cpbars_super_mouse_move_event` instead
-///
-#define q_cpbars_qbase_mouse_move_event q_cpbars_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -66342,10 +62186,6 @@ void q_cpbars_on_mouse_move_event(void* self, void (*callback)(void*, void*, voi
 /// @param startPos QPointF*
 ///
 void q_cpbars_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cpbars_super_mouse_release_event` instead
-///
-#define q_cpbars_qbase_mouse_release_event q_cpbars_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -66382,10 +62222,6 @@ void q_cpbars_on_mouse_release_event(void* self, void (*callback)(void*, void*, 
 ///
 void q_cpbars_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpbars_super_mouse_double_click_event` instead
-///
-#define q_cpbars_qbase_mouse_double_click_event q_cpbars_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -66420,10 +62256,6 @@ void q_cpbars_on_mouse_double_click_event(void* self, void (*callback)(void*, vo
 ///
 void q_cpbars_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpbars_super_wheel_event` instead
-///
-#define q_cpbars_qbase_wheel_event q_cpbars_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -66456,10 +62288,6 @@ void q_cpbars_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cpbars_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpbars_super_event` instead
-///
-#define q_cpbars_qbase_event q_cpbars_super_event
 
 /// Inherited from QObject
 ///
@@ -66495,10 +62323,6 @@ void q_cpbars_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cpbars_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpbars_super_event_filter` instead
-///
-#define q_cpbars_qbase_event_filter q_cpbars_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -66533,10 +62357,6 @@ void q_cpbars_on_event_filter(void* self, bool (*callback)(void*, void*, void*))
 ///
 void q_cpbars_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpbars_super_timer_event` instead
-///
-#define q_cpbars_qbase_timer_event q_cpbars_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -66569,10 +62389,6 @@ void q_cpbars_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cpbars_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpbars_super_child_event` instead
-///
-#define q_cpbars_qbase_child_event q_cpbars_super_child_event
 
 /// Inherited from QObject
 ///
@@ -66607,10 +62423,6 @@ void q_cpbars_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpbars_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpbars_super_custom_event` instead
-///
-#define q_cpbars_qbase_custom_event q_cpbars_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -66643,10 +62455,6 @@ void q_cpbars_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_cpbars_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpbars_super_connect_notify` instead
-///
-#define q_cpbars_qbase_connect_notify q_cpbars_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -66681,10 +62489,6 @@ void q_cpbars_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_cpbars_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpbars_super_disconnect_notify` instead
-///
-#define q_cpbars_qbase_disconnect_notify q_cpbars_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -66717,10 +62521,6 @@ void q_cpbars_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 /// @param painter QCPPainter*
 ///
 void q_cpbars_apply_fill_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cpbars_super_apply_fill_antialiasing_hint` instead
-///
-#define q_cpbars_qbase_apply_fill_antialiasing_hint q_cpbars_super_apply_fill_antialiasing_hint
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -66755,10 +62555,6 @@ void q_cpbars_on_apply_fill_antialiasing_hint(void* self, void (*callback)(void*
 ///
 void q_cpbars_apply_scatters_antialiasing_hint(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_cpbars_super_apply_scatters_antialiasing_hint` instead
-///
-#define q_cpbars_qbase_apply_scatters_antialiasing_hint q_cpbars_super_apply_scatters_antialiasing_hint
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -66791,10 +62587,6 @@ void q_cpbars_on_apply_scatters_antialiasing_hint(void* self, void (*callback)(v
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpbars_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpbars_super_initialize_parent_plot` instead
-///
-#define q_cpbars_qbase_initialize_parent_plot q_cpbars_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -66829,10 +62621,6 @@ void q_cpbars_on_initialize_parent_plot(void* self, void (*callback)(void*, void
 ///
 void q_cpbars_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cpbars_super_set_parent_layerable` instead
-///
-#define q_cpbars_qbase_set_parent_layerable q_cpbars_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -66866,10 +62654,6 @@ void q_cpbars_on_set_parent_layerable(void* self, void (*callback)(void*, void*)
 /// @param prepend bool
 ///
 bool q_cpbars_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpbars_super_move_to_layer` instead
-///
-#define q_cpbars_qbase_move_to_layer q_cpbars_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -66907,10 +62691,6 @@ void q_cpbars_on_move_to_layer(void* self, bool (*callback)(void*, void*, bool))
 ///
 void q_cpbars_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpbars_super_apply_antialiasing_hint` instead
-///
-#define q_cpbars_qbase_apply_antialiasing_hint q_cpbars_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -66945,10 +62725,6 @@ void q_cpbars_on_apply_antialiasing_hint(void* self, void (*callback)(void*, voi
 ///
 QObject* q_cpbars_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpbars_super_sender` instead
-///
-#define q_cpbars_qbase_sender q_cpbars_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -66979,10 +62755,6 @@ void q_cpbars_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPBars*
 ///
 int32_t q_cpbars_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpbars_super_sender_signal_index` instead
-///
-#define q_cpbars_qbase_sender_signal_index q_cpbars_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -67016,10 +62788,6 @@ void q_cpbars_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cpbars_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpbars_super_receivers` instead
-///
-#define q_cpbars_qbase_receivers q_cpbars_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -67052,10 +62820,6 @@ void q_cpbars_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 /// @param signal QMetaMethod*
 ///
 bool q_cpbars_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpbars_super_is_signal_connected` instead
-///
-#define q_cpbars_qbase_is_signal_connected q_cpbars_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -67298,10 +63062,6 @@ const QMetaObject* q_cpstatisticalbox_meta_object(void* self);
 ///
 void q_cpstatisticalbox_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_meta_object` instead
-///
-#define q_cpstatisticalbox_qbase_meta_object q_cpstatisticalbox_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -67321,10 +63081,6 @@ void* q_cpstatisticalbox_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPStatisticalBox* self, const char* param1)
 ///
 void q_cpstatisticalbox_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_metacast` instead
-///
-#define q_cpstatisticalbox_qbase_metacast q_cpstatisticalbox_super_metacast
 
 /// Base class method implementation
 ///
@@ -67346,10 +63102,6 @@ int32_t q_cpstatisticalbox_metacall(void* self, int32_t param1, int param2, void
 /// @param callback int32_t func(QCPStatisticalBox* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpstatisticalbox_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_metacall` instead
-///
-#define q_cpstatisticalbox_qbase_metacall q_cpstatisticalbox_super_metacall
 
 /// Base class method implementation
 ///
@@ -67514,10 +63266,6 @@ QCPDataSelection* q_cpstatisticalbox_select_test_rect(void* self, void* rect, bo
 ///
 void q_cpstatisticalbox_on_select_test_rect(void* self, QCPDataSelection* (*callback)(void*, void*, bool));
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_select_test_rect` instead
-///
-#define q_cpstatisticalbox_qbase_select_test_rect q_cpstatisticalbox_super_select_test_rect
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPStatisticalBox.html)
 ///
 /// Base class method implementation
@@ -67545,10 +63293,6 @@ double q_cpstatisticalbox_select_test(void* self, void* pos, bool onlySelectable
 /// @param callback double func(QCPStatisticalBox* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
 void q_cpstatisticalbox_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
-
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_select_test` instead
-///
-#define q_cpstatisticalbox_qbase_select_test q_cpstatisticalbox_super_select_test
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPStatisticalBox.html)
 ///
@@ -67580,10 +63324,6 @@ QCPRange* q_cpstatisticalbox_get_key_range(void* self, bool* foundRange, int32_t
 ///
 void q_cpstatisticalbox_on_get_key_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t));
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_get_key_range` instead
-///
-#define q_cpstatisticalbox_qbase_get_key_range q_cpstatisticalbox_super_get_key_range
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPStatisticalBox.html)
 ///
 /// Base class method implementation
@@ -67614,10 +63354,6 @@ QCPRange* q_cpstatisticalbox_get_value_range(void* self, bool* foundRange, int32
 ///
 void q_cpstatisticalbox_on_get_value_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t, void*));
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_get_value_range` instead
-///
-#define q_cpstatisticalbox_qbase_get_value_range q_cpstatisticalbox_super_get_value_range
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPStatisticalBox.html)
 ///
 /// Base class method implementation
@@ -67645,10 +63381,6 @@ void q_cpstatisticalbox_draw(void* self, void* painter);
 ///
 void q_cpstatisticalbox_on_draw(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_draw` instead
-///
-#define q_cpstatisticalbox_qbase_draw q_cpstatisticalbox_super_draw
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPStatisticalBox.html)
 ///
 /// Base class method implementation
@@ -67674,10 +63406,6 @@ void q_cpstatisticalbox_draw_legend_icon(void* self, void* painter, void* rect);
 /// @param callback void func(QCPStatisticalBox* self, QCPPainter* painter, QRectF* rect)
 ///
 void q_cpstatisticalbox_on_draw_legend_icon(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_draw_legend_icon` instead
-///
-#define q_cpstatisticalbox_qbase_draw_legend_icon q_cpstatisticalbox_super_draw_legend_icon
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPStatisticalBox.html)
 ///
@@ -68664,10 +64392,6 @@ void q_cpstatisticalbox_on_destroyed1(void* self, void (*callback)(void*, void*)
 ///
 int32_t q_cpstatisticalbox_data_count(void* self);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_data_count` instead
-///
-#define q_cpstatisticalbox_qbase_data_count q_cpstatisticalbox_super_data_count
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -68699,10 +64423,6 @@ void q_cpstatisticalbox_on_data_count(void* self, int32_t (*callback)());
 /// @param index int
 ///
 double q_cpstatisticalbox_data_main_key(void* self, int index);
-
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_data_main_key` instead
-///
-#define q_cpstatisticalbox_qbase_data_main_key q_cpstatisticalbox_super_data_main_key
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -68737,10 +64457,6 @@ void q_cpstatisticalbox_on_data_main_key(void* self, double (*callback)(void*, i
 ///
 double q_cpstatisticalbox_data_sort_key(void* self, int index);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_data_sort_key` instead
-///
-#define q_cpstatisticalbox_qbase_data_sort_key q_cpstatisticalbox_super_data_sort_key
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -68774,10 +64490,6 @@ void q_cpstatisticalbox_on_data_sort_key(void* self, double (*callback)(void*, i
 ///
 double q_cpstatisticalbox_data_main_value(void* self, int index);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_data_main_value` instead
-///
-#define q_cpstatisticalbox_qbase_data_main_value q_cpstatisticalbox_super_data_main_value
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -68810,10 +64522,6 @@ void q_cpstatisticalbox_on_data_main_value(void* self, double (*callback)(void*,
 /// @param index int
 ///
 QCPRange* q_cpstatisticalbox_data_value_range(void* self, int index);
-
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_data_value_range` instead
-///
-#define q_cpstatisticalbox_qbase_data_value_range q_cpstatisticalbox_super_data_value_range
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -68850,10 +64558,6 @@ void q_cpstatisticalbox_on_data_value_range(void* self, QCPRange* (*callback)(vo
 ///
 QPointF* q_cpstatisticalbox_data_pixel_position(void* self, int index);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_data_pixel_position` instead
-///
-#define q_cpstatisticalbox_qbase_data_pixel_position q_cpstatisticalbox_super_data_pixel_position
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -68888,10 +64592,6 @@ void q_cpstatisticalbox_on_data_pixel_position(void* self, QPointF* (*callback)(
 ///
 bool q_cpstatisticalbox_sort_key_is_main_key(void* self);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_sort_key_is_main_key` instead
-///
-#define q_cpstatisticalbox_qbase_sort_key_is_main_key q_cpstatisticalbox_super_sort_key_is_main_key
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -68924,10 +64624,6 @@ void q_cpstatisticalbox_on_sort_key_is_main_key(void* self, bool (*callback)());
 /// @param expandedRange bool
 ///
 int32_t q_cpstatisticalbox_find_begin(void* self, double sortKey, bool expandedRange);
-
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_find_begin` instead
-///
-#define q_cpstatisticalbox_qbase_find_begin q_cpstatisticalbox_super_find_begin
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -68964,10 +64660,6 @@ void q_cpstatisticalbox_on_find_begin(void* self, int32_t (*callback)(void*, dou
 ///
 int32_t q_cpstatisticalbox_find_end(void* self, double sortKey, bool expandedRange);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_find_end` instead
-///
-#define q_cpstatisticalbox_qbase_find_end q_cpstatisticalbox_super_find_end
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -69001,10 +64693,6 @@ void q_cpstatisticalbox_on_find_end(void* self, int32_t (*callback)(void*, doubl
 ///
 QCPPlottableInterface1D* q_cpstatisticalbox_interface1_d(void* self);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_interface1_d` instead
-///
-#define q_cpstatisticalbox_qbase_interface1_d q_cpstatisticalbox_super_interface1_d
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -69035,10 +64723,6 @@ void q_cpstatisticalbox_on_interface1_d(void* self, QCPPlottableInterface1D* (*c
 /// @param self QCPStatisticalBox*
 ///
 QRect* q_cpstatisticalbox_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_clip_rect` instead
-///
-#define q_cpstatisticalbox_qbase_clip_rect q_cpstatisticalbox_super_clip_rect
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -69075,10 +64759,6 @@ void q_cpstatisticalbox_on_clip_rect(void* self, QRect* (*callback)());
 ///
 int32_t q_cpstatisticalbox_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_selection_category` instead
-///
-#define q_cpstatisticalbox_qbase_selection_category q_cpstatisticalbox_super_selection_category
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -69112,10 +64792,6 @@ void q_cpstatisticalbox_on_selection_category(void* self, int32_t (*callback)())
 /// @param painter QCPPainter*
 ///
 void q_cpstatisticalbox_apply_default_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpstatisticalbox_qbase_apply_default_antialiasing_hint q_cpstatisticalbox_super_apply_default_antialiasing_hint
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -69153,10 +64829,6 @@ void q_cpstatisticalbox_on_apply_default_antialiasing_hint(void* self, void (*ca
 ///
 void q_cpstatisticalbox_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_select_event` instead
-///
-#define q_cpstatisticalbox_qbase_select_event q_cpstatisticalbox_super_select_event
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -69193,10 +64865,6 @@ void q_cpstatisticalbox_on_select_event(void* self, void (*callback)(void*, void
 ///
 void q_cpstatisticalbox_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_deselect_event` instead
-///
-#define q_cpstatisticalbox_qbase_deselect_event q_cpstatisticalbox_super_deselect_event
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -69229,10 +64897,6 @@ void q_cpstatisticalbox_on_deselect_event(void* self, void (*callback)(void*, bo
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpstatisticalbox_parent_plot_initialized(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_parent_plot_initialized` instead
-///
-#define q_cpstatisticalbox_qbase_parent_plot_initialized q_cpstatisticalbox_super_parent_plot_initialized
 
 /// Inherited from QCPLayerable
 ///
@@ -69267,10 +64931,6 @@ void q_cpstatisticalbox_on_parent_plot_initialized(void* self, void (*callback)(
 /// @param details QVariant*
 ///
 void q_cpstatisticalbox_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_mouse_press_event` instead
-///
-#define q_cpstatisticalbox_qbase_mouse_press_event q_cpstatisticalbox_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -69307,10 +64967,6 @@ void q_cpstatisticalbox_on_mouse_press_event(void* self, void (*callback)(void*,
 ///
 void q_cpstatisticalbox_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_mouse_move_event` instead
-///
-#define q_cpstatisticalbox_qbase_mouse_move_event q_cpstatisticalbox_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -69345,10 +65001,6 @@ void q_cpstatisticalbox_on_mouse_move_event(void* self, void (*callback)(void*, 
 /// @param startPos QPointF*
 ///
 void q_cpstatisticalbox_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_mouse_release_event` instead
-///
-#define q_cpstatisticalbox_qbase_mouse_release_event q_cpstatisticalbox_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -69385,10 +65037,6 @@ void q_cpstatisticalbox_on_mouse_release_event(void* self, void (*callback)(void
 ///
 void q_cpstatisticalbox_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_mouse_double_click_event` instead
-///
-#define q_cpstatisticalbox_qbase_mouse_double_click_event q_cpstatisticalbox_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -69423,10 +65071,6 @@ void q_cpstatisticalbox_on_mouse_double_click_event(void* self, void (*callback)
 ///
 void q_cpstatisticalbox_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_wheel_event` instead
-///
-#define q_cpstatisticalbox_qbase_wheel_event q_cpstatisticalbox_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -69459,10 +65103,6 @@ void q_cpstatisticalbox_on_wheel_event(void* self, void (*callback)(void*, void*
 /// @param event QEvent*
 ///
 bool q_cpstatisticalbox_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_event` instead
-///
-#define q_cpstatisticalbox_qbase_event q_cpstatisticalbox_super_event
 
 /// Inherited from QObject
 ///
@@ -69498,10 +65138,6 @@ void q_cpstatisticalbox_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cpstatisticalbox_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_event_filter` instead
-///
-#define q_cpstatisticalbox_qbase_event_filter q_cpstatisticalbox_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -69536,10 +65172,6 @@ void q_cpstatisticalbox_on_event_filter(void* self, bool (*callback)(void*, void
 ///
 void q_cpstatisticalbox_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_timer_event` instead
-///
-#define q_cpstatisticalbox_qbase_timer_event q_cpstatisticalbox_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -69572,10 +65204,6 @@ void q_cpstatisticalbox_on_timer_event(void* self, void (*callback)(void*, void*
 /// @param event QChildEvent*
 ///
 void q_cpstatisticalbox_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_child_event` instead
-///
-#define q_cpstatisticalbox_qbase_child_event q_cpstatisticalbox_super_child_event
 
 /// Inherited from QObject
 ///
@@ -69610,10 +65238,6 @@ void q_cpstatisticalbox_on_child_event(void* self, void (*callback)(void*, void*
 ///
 void q_cpstatisticalbox_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_custom_event` instead
-///
-#define q_cpstatisticalbox_qbase_custom_event q_cpstatisticalbox_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -69646,10 +65270,6 @@ void q_cpstatisticalbox_on_custom_event(void* self, void (*callback)(void*, void
 /// @param signal QMetaMethod*
 ///
 void q_cpstatisticalbox_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_connect_notify` instead
-///
-#define q_cpstatisticalbox_qbase_connect_notify q_cpstatisticalbox_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -69684,10 +65304,6 @@ void q_cpstatisticalbox_on_connect_notify(void* self, void (*callback)(void*, vo
 ///
 void q_cpstatisticalbox_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_disconnect_notify` instead
-///
-#define q_cpstatisticalbox_qbase_disconnect_notify q_cpstatisticalbox_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -69720,10 +65336,6 @@ void q_cpstatisticalbox_on_disconnect_notify(void* self, void (*callback)(void*,
 /// @param painter QCPPainter*
 ///
 void q_cpstatisticalbox_apply_fill_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_apply_fill_antialiasing_hint` instead
-///
-#define q_cpstatisticalbox_qbase_apply_fill_antialiasing_hint q_cpstatisticalbox_super_apply_fill_antialiasing_hint
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -69758,10 +65370,6 @@ void q_cpstatisticalbox_on_apply_fill_antialiasing_hint(void* self, void (*callb
 ///
 void q_cpstatisticalbox_apply_scatters_antialiasing_hint(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_apply_scatters_antialiasing_hint` instead
-///
-#define q_cpstatisticalbox_qbase_apply_scatters_antialiasing_hint q_cpstatisticalbox_super_apply_scatters_antialiasing_hint
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -69794,10 +65402,6 @@ void q_cpstatisticalbox_on_apply_scatters_antialiasing_hint(void* self, void (*c
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpstatisticalbox_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_initialize_parent_plot` instead
-///
-#define q_cpstatisticalbox_qbase_initialize_parent_plot q_cpstatisticalbox_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -69832,10 +65436,6 @@ void q_cpstatisticalbox_on_initialize_parent_plot(void* self, void (*callback)(v
 ///
 void q_cpstatisticalbox_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_set_parent_layerable` instead
-///
-#define q_cpstatisticalbox_qbase_set_parent_layerable q_cpstatisticalbox_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -69869,10 +65469,6 @@ void q_cpstatisticalbox_on_set_parent_layerable(void* self, void (*callback)(voi
 /// @param prepend bool
 ///
 bool q_cpstatisticalbox_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_move_to_layer` instead
-///
-#define q_cpstatisticalbox_qbase_move_to_layer q_cpstatisticalbox_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -69910,10 +65506,6 @@ void q_cpstatisticalbox_on_move_to_layer(void* self, bool (*callback)(void*, voi
 ///
 void q_cpstatisticalbox_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_apply_antialiasing_hint` instead
-///
-#define q_cpstatisticalbox_qbase_apply_antialiasing_hint q_cpstatisticalbox_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -69948,10 +65540,6 @@ void q_cpstatisticalbox_on_apply_antialiasing_hint(void* self, void (*callback)(
 ///
 QObject* q_cpstatisticalbox_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_sender` instead
-///
-#define q_cpstatisticalbox_qbase_sender q_cpstatisticalbox_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -69982,10 +65570,6 @@ void q_cpstatisticalbox_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPStatisticalBox*
 ///
 int32_t q_cpstatisticalbox_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_sender_signal_index` instead
-///
-#define q_cpstatisticalbox_qbase_sender_signal_index q_cpstatisticalbox_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -70019,10 +65603,6 @@ void q_cpstatisticalbox_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 int32_t q_cpstatisticalbox_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_receivers` instead
-///
-#define q_cpstatisticalbox_qbase_receivers q_cpstatisticalbox_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -70055,10 +65635,6 @@ void q_cpstatisticalbox_on_receivers(void* self, int32_t (*callback)(void*, cons
 /// @param signal QMetaMethod*
 ///
 bool q_cpstatisticalbox_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpstatisticalbox_super_is_signal_connected` instead
-///
-#define q_cpstatisticalbox_qbase_is_signal_connected q_cpstatisticalbox_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -70342,10 +65918,6 @@ const QMetaObject* q_cpcolormap_meta_object(void* self);
 ///
 void q_cpcolormap_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpcolormap_super_meta_object` instead
-///
-#define q_cpcolormap_qbase_meta_object q_cpcolormap_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -70365,10 +65937,6 @@ void* q_cpcolormap_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPColorMap* self, const char* param1)
 ///
 void q_cpcolormap_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpcolormap_super_metacast` instead
-///
-#define q_cpcolormap_qbase_metacast q_cpcolormap_super_metacast
 
 /// Base class method implementation
 ///
@@ -70390,10 +65958,6 @@ int32_t q_cpcolormap_metacall(void* self, int32_t param1, int param2, void* para
 /// @param callback int32_t func(QCPColorMap* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpcolormap_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpcolormap_super_metacall` instead
-///
-#define q_cpcolormap_qbase_metacall q_cpcolormap_super_metacall
 
 /// Base class method implementation
 ///
@@ -70535,10 +66099,6 @@ double q_cpcolormap_select_test(void* self, void* pos, bool onlySelectable, void
 ///
 void q_cpcolormap_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cpcolormap_super_select_test` instead
-///
-#define q_cpcolormap_qbase_select_test q_cpcolormap_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorMap.html)
 ///
 /// Base class method implementation
@@ -70569,10 +66129,6 @@ QCPRange* q_cpcolormap_get_key_range(void* self, bool* foundRange, int32_t inSig
 ///
 void q_cpcolormap_on_get_key_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t));
 
-/// @warning DEPRECATED: Use `q_cpcolormap_super_get_key_range` instead
-///
-#define q_cpcolormap_qbase_get_key_range q_cpcolormap_super_get_key_range
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorMap.html)
 ///
 /// Base class method implementation
@@ -70602,10 +66158,6 @@ QCPRange* q_cpcolormap_get_value_range(void* self, bool* foundRange, int32_t inS
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpcolormap_on_get_value_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t, void*));
-
-/// @warning DEPRECATED: Use `q_cpcolormap_super_get_value_range` instead
-///
-#define q_cpcolormap_qbase_get_value_range q_cpcolormap_super_get_value_range
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorMap.html)
 ///
@@ -70675,10 +66227,6 @@ void q_cpcolormap_update_map_image(void* self);
 ///
 void q_cpcolormap_on_update_map_image(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpcolormap_super_update_map_image` instead
-///
-#define q_cpcolormap_qbase_update_map_image q_cpcolormap_super_update_map_image
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorMap.html)
 ///
 /// Base class method implementation
@@ -70702,10 +66250,6 @@ void q_cpcolormap_draw(void* self, void* painter);
 /// @param callback void func(QCPColorMap* self, QCPPainter* painter)
 ///
 void q_cpcolormap_on_draw(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpcolormap_super_draw` instead
-///
-#define q_cpcolormap_qbase_draw q_cpcolormap_super_draw
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorMap.html)
 ///
@@ -70732,10 +66276,6 @@ void q_cpcolormap_draw_legend_icon(void* self, void* painter, void* rect);
 /// @param callback void func(QCPColorMap* self, QCPPainter* painter, QRectF* rect)
 ///
 void q_cpcolormap_on_draw_legend_icon(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpcolormap_super_draw_legend_icon` instead
-///
-#define q_cpcolormap_qbase_draw_legend_icon q_cpcolormap_super_draw_legend_icon
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorMap.html)
 ///
@@ -71704,10 +67244,6 @@ void q_cpcolormap_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 QCPPlottableInterface1D* q_cpcolormap_interface1_d(void* self);
 
-/// @warning DEPRECATED: Use `q_cpcolormap_super_interface1_d` instead
-///
-#define q_cpcolormap_qbase_interface1_d q_cpcolormap_super_interface1_d
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -71738,10 +67274,6 @@ void q_cpcolormap_on_interface1_d(void* self, QCPPlottableInterface1D* (*callbac
 /// @param self QCPColorMap*
 ///
 QRect* q_cpcolormap_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cpcolormap_super_clip_rect` instead
-///
-#define q_cpcolormap_qbase_clip_rect q_cpcolormap_super_clip_rect
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -71778,10 +67310,6 @@ void q_cpcolormap_on_clip_rect(void* self, QRect* (*callback)());
 ///
 int32_t q_cpcolormap_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cpcolormap_super_selection_category` instead
-///
-#define q_cpcolormap_qbase_selection_category q_cpcolormap_super_selection_category
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -71815,10 +67343,6 @@ void q_cpcolormap_on_selection_category(void* self, int32_t (*callback)());
 /// @param painter QCPPainter*
 ///
 void q_cpcolormap_apply_default_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cpcolormap_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpcolormap_qbase_apply_default_antialiasing_hint q_cpcolormap_super_apply_default_antialiasing_hint
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -71856,10 +67380,6 @@ void q_cpcolormap_on_apply_default_antialiasing_hint(void* self, void (*callback
 ///
 void q_cpcolormap_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpcolormap_super_select_event` instead
-///
-#define q_cpcolormap_qbase_select_event q_cpcolormap_super_select_event
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -71896,10 +67416,6 @@ void q_cpcolormap_on_select_event(void* self, void (*callback)(void*, void*, boo
 ///
 void q_cpcolormap_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpcolormap_super_deselect_event` instead
-///
-#define q_cpcolormap_qbase_deselect_event q_cpcolormap_super_deselect_event
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -71932,10 +67448,6 @@ void q_cpcolormap_on_deselect_event(void* self, void (*callback)(void*, bool*));
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpcolormap_parent_plot_initialized(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpcolormap_super_parent_plot_initialized` instead
-///
-#define q_cpcolormap_qbase_parent_plot_initialized q_cpcolormap_super_parent_plot_initialized
 
 /// Inherited from QCPLayerable
 ///
@@ -71970,10 +67482,6 @@ void q_cpcolormap_on_parent_plot_initialized(void* self, void (*callback)(void*,
 /// @param details QVariant*
 ///
 void q_cpcolormap_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpcolormap_super_mouse_press_event` instead
-///
-#define q_cpcolormap_qbase_mouse_press_event q_cpcolormap_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -72010,10 +67518,6 @@ void q_cpcolormap_on_mouse_press_event(void* self, void (*callback)(void*, void*
 ///
 void q_cpcolormap_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cpcolormap_super_mouse_move_event` instead
-///
-#define q_cpcolormap_qbase_mouse_move_event q_cpcolormap_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -72048,10 +67552,6 @@ void q_cpcolormap_on_mouse_move_event(void* self, void (*callback)(void*, void*,
 /// @param startPos QPointF*
 ///
 void q_cpcolormap_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cpcolormap_super_mouse_release_event` instead
-///
-#define q_cpcolormap_qbase_mouse_release_event q_cpcolormap_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -72088,10 +67588,6 @@ void q_cpcolormap_on_mouse_release_event(void* self, void (*callback)(void*, voi
 ///
 void q_cpcolormap_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpcolormap_super_mouse_double_click_event` instead
-///
-#define q_cpcolormap_qbase_mouse_double_click_event q_cpcolormap_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -72126,10 +67622,6 @@ void q_cpcolormap_on_mouse_double_click_event(void* self, void (*callback)(void*
 ///
 void q_cpcolormap_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpcolormap_super_wheel_event` instead
-///
-#define q_cpcolormap_qbase_wheel_event q_cpcolormap_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -72162,10 +67654,6 @@ void q_cpcolormap_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cpcolormap_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpcolormap_super_event` instead
-///
-#define q_cpcolormap_qbase_event q_cpcolormap_super_event
 
 /// Inherited from QObject
 ///
@@ -72201,10 +67689,6 @@ void q_cpcolormap_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cpcolormap_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpcolormap_super_event_filter` instead
-///
-#define q_cpcolormap_qbase_event_filter q_cpcolormap_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -72239,10 +67723,6 @@ void q_cpcolormap_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void q_cpcolormap_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpcolormap_super_timer_event` instead
-///
-#define q_cpcolormap_qbase_timer_event q_cpcolormap_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -72275,10 +67755,6 @@ void q_cpcolormap_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cpcolormap_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpcolormap_super_child_event` instead
-///
-#define q_cpcolormap_qbase_child_event q_cpcolormap_super_child_event
 
 /// Inherited from QObject
 ///
@@ -72313,10 +67789,6 @@ void q_cpcolormap_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpcolormap_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpcolormap_super_custom_event` instead
-///
-#define q_cpcolormap_qbase_custom_event q_cpcolormap_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -72349,10 +67821,6 @@ void q_cpcolormap_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_cpcolormap_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpcolormap_super_connect_notify` instead
-///
-#define q_cpcolormap_qbase_connect_notify q_cpcolormap_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -72387,10 +67855,6 @@ void q_cpcolormap_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_cpcolormap_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpcolormap_super_disconnect_notify` instead
-///
-#define q_cpcolormap_qbase_disconnect_notify q_cpcolormap_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -72423,10 +67887,6 @@ void q_cpcolormap_on_disconnect_notify(void* self, void (*callback)(void*, void*
 /// @param painter QCPPainter*
 ///
 void q_cpcolormap_apply_fill_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cpcolormap_super_apply_fill_antialiasing_hint` instead
-///
-#define q_cpcolormap_qbase_apply_fill_antialiasing_hint q_cpcolormap_super_apply_fill_antialiasing_hint
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -72461,10 +67921,6 @@ void q_cpcolormap_on_apply_fill_antialiasing_hint(void* self, void (*callback)(v
 ///
 void q_cpcolormap_apply_scatters_antialiasing_hint(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_cpcolormap_super_apply_scatters_antialiasing_hint` instead
-///
-#define q_cpcolormap_qbase_apply_scatters_antialiasing_hint q_cpcolormap_super_apply_scatters_antialiasing_hint
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -72497,10 +67953,6 @@ void q_cpcolormap_on_apply_scatters_antialiasing_hint(void* self, void (*callbac
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpcolormap_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpcolormap_super_initialize_parent_plot` instead
-///
-#define q_cpcolormap_qbase_initialize_parent_plot q_cpcolormap_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -72535,10 +67987,6 @@ void q_cpcolormap_on_initialize_parent_plot(void* self, void (*callback)(void*, 
 ///
 void q_cpcolormap_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cpcolormap_super_set_parent_layerable` instead
-///
-#define q_cpcolormap_qbase_set_parent_layerable q_cpcolormap_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -72572,10 +68020,6 @@ void q_cpcolormap_on_set_parent_layerable(void* self, void (*callback)(void*, vo
 /// @param prepend bool
 ///
 bool q_cpcolormap_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpcolormap_super_move_to_layer` instead
-///
-#define q_cpcolormap_qbase_move_to_layer q_cpcolormap_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -72613,10 +68057,6 @@ void q_cpcolormap_on_move_to_layer(void* self, bool (*callback)(void*, void*, bo
 ///
 void q_cpcolormap_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpcolormap_super_apply_antialiasing_hint` instead
-///
-#define q_cpcolormap_qbase_apply_antialiasing_hint q_cpcolormap_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -72651,10 +68091,6 @@ void q_cpcolormap_on_apply_antialiasing_hint(void* self, void (*callback)(void*,
 ///
 QObject* q_cpcolormap_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpcolormap_super_sender` instead
-///
-#define q_cpcolormap_qbase_sender q_cpcolormap_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -72685,10 +68121,6 @@ void q_cpcolormap_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPColorMap*
 ///
 int32_t q_cpcolormap_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpcolormap_super_sender_signal_index` instead
-///
-#define q_cpcolormap_qbase_sender_signal_index q_cpcolormap_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -72722,10 +68154,6 @@ void q_cpcolormap_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cpcolormap_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpcolormap_super_receivers` instead
-///
-#define q_cpcolormap_qbase_receivers q_cpcolormap_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -72758,10 +68186,6 @@ void q_cpcolormap_on_receivers(void* self, int32_t (*callback)(void*, const char
 /// @param signal QMetaMethod*
 ///
 bool q_cpcolormap_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpcolormap_super_is_signal_connected` instead
-///
-#define q_cpcolormap_qbase_is_signal_connected q_cpcolormap_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -72991,10 +68415,6 @@ const QMetaObject* q_cpfinancial_meta_object(void* self);
 ///
 void q_cpfinancial_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_meta_object` instead
-///
-#define q_cpfinancial_qbase_meta_object q_cpfinancial_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -73014,10 +68434,6 @@ void* q_cpfinancial_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPFinancial* self, const char* param1)
 ///
 void q_cpfinancial_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpfinancial_super_metacast` instead
-///
-#define q_cpfinancial_qbase_metacast q_cpfinancial_super_metacast
 
 /// Base class method implementation
 ///
@@ -73039,10 +68455,6 @@ int32_t q_cpfinancial_metacall(void* self, int32_t param1, int param2, void* par
 /// @param callback int32_t func(QCPFinancial* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpfinancial_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpfinancial_super_metacall` instead
-///
-#define q_cpfinancial_qbase_metacall q_cpfinancial_super_metacall
 
 /// Base class method implementation
 ///
@@ -73221,10 +68633,6 @@ QCPDataSelection* q_cpfinancial_select_test_rect(void* self, void* rect, bool on
 ///
 void q_cpfinancial_on_select_test_rect(void* self, QCPDataSelection* (*callback)(void*, void*, bool));
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_select_test_rect` instead
-///
-#define q_cpfinancial_qbase_select_test_rect q_cpfinancial_super_select_test_rect
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPFinancial.html)
 ///
 /// Base class method implementation
@@ -73252,10 +68660,6 @@ double q_cpfinancial_select_test(void* self, void* pos, bool onlySelectable, voi
 /// @param callback double func(QCPFinancial* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
 void q_cpfinancial_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
-
-/// @warning DEPRECATED: Use `q_cpfinancial_super_select_test` instead
-///
-#define q_cpfinancial_qbase_select_test q_cpfinancial_super_select_test
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPFinancial.html)
 ///
@@ -73287,10 +68691,6 @@ QCPRange* q_cpfinancial_get_key_range(void* self, bool* foundRange, int32_t inSi
 ///
 void q_cpfinancial_on_get_key_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t));
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_get_key_range` instead
-///
-#define q_cpfinancial_qbase_get_key_range q_cpfinancial_super_get_key_range
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPFinancial.html)
 ///
 /// Base class method implementation
@@ -73321,10 +68721,6 @@ QCPRange* q_cpfinancial_get_value_range(void* self, bool* foundRange, int32_t in
 ///
 void q_cpfinancial_on_get_value_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t, void*));
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_get_value_range` instead
-///
-#define q_cpfinancial_qbase_get_value_range q_cpfinancial_super_get_value_range
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPFinancial.html)
 ///
 /// Base class method implementation
@@ -73352,10 +68748,6 @@ void q_cpfinancial_draw(void* self, void* painter);
 ///
 void q_cpfinancial_on_draw(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_draw` instead
-///
-#define q_cpfinancial_qbase_draw q_cpfinancial_super_draw
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPFinancial.html)
 ///
 /// Base class method implementation
@@ -73381,10 +68773,6 @@ void q_cpfinancial_draw_legend_icon(void* self, void* painter, void* rect);
 /// @param callback void func(QCPFinancial* self, QCPPainter* painter, QRectF* rect)
 ///
 void q_cpfinancial_on_draw_legend_icon(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_cpfinancial_super_draw_legend_icon` instead
-///
-#define q_cpfinancial_qbase_draw_legend_icon q_cpfinancial_super_draw_legend_icon
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPFinancial.html)
 ///
@@ -73412,10 +68800,6 @@ double q_cpfinancial_get_pixel_width(void* self, double key, double keyPixel);
 /// @param callback double func(QCPFinancial* self, double key, double keyPixel)
 ///
 void q_cpfinancial_on_get_pixel_width(void* self, double (*callback)(void*, double, double));
-
-/// @warning DEPRECATED: Use `q_cpfinancial_super_get_pixel_width` instead
-///
-#define q_cpfinancial_qbase_get_pixel_width q_cpfinancial_super_get_pixel_width
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPFinancial.html)
 ///
@@ -74387,10 +69771,6 @@ void q_cpfinancial_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_cpfinancial_data_count(void* self);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_data_count` instead
-///
-#define q_cpfinancial_qbase_data_count q_cpfinancial_super_data_count
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -74422,10 +69802,6 @@ void q_cpfinancial_on_data_count(void* self, int32_t (*callback)());
 /// @param index int
 ///
 double q_cpfinancial_data_main_key(void* self, int index);
-
-/// @warning DEPRECATED: Use `q_cpfinancial_super_data_main_key` instead
-///
-#define q_cpfinancial_qbase_data_main_key q_cpfinancial_super_data_main_key
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -74460,10 +69836,6 @@ void q_cpfinancial_on_data_main_key(void* self, double (*callback)(void*, int));
 ///
 double q_cpfinancial_data_sort_key(void* self, int index);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_data_sort_key` instead
-///
-#define q_cpfinancial_qbase_data_sort_key q_cpfinancial_super_data_sort_key
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -74497,10 +69869,6 @@ void q_cpfinancial_on_data_sort_key(void* self, double (*callback)(void*, int));
 ///
 double q_cpfinancial_data_main_value(void* self, int index);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_data_main_value` instead
-///
-#define q_cpfinancial_qbase_data_main_value q_cpfinancial_super_data_main_value
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -74533,10 +69901,6 @@ void q_cpfinancial_on_data_main_value(void* self, double (*callback)(void*, int)
 /// @param index int
 ///
 QCPRange* q_cpfinancial_data_value_range(void* self, int index);
-
-/// @warning DEPRECATED: Use `q_cpfinancial_super_data_value_range` instead
-///
-#define q_cpfinancial_qbase_data_value_range q_cpfinancial_super_data_value_range
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -74573,10 +69937,6 @@ void q_cpfinancial_on_data_value_range(void* self, QCPRange* (*callback)(void*, 
 ///
 QPointF* q_cpfinancial_data_pixel_position(void* self, int index);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_data_pixel_position` instead
-///
-#define q_cpfinancial_qbase_data_pixel_position q_cpfinancial_super_data_pixel_position
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -74611,10 +69971,6 @@ void q_cpfinancial_on_data_pixel_position(void* self, QPointF* (*callback)(void*
 ///
 bool q_cpfinancial_sort_key_is_main_key(void* self);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_sort_key_is_main_key` instead
-///
-#define q_cpfinancial_qbase_sort_key_is_main_key q_cpfinancial_super_sort_key_is_main_key
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -74647,10 +70003,6 @@ void q_cpfinancial_on_sort_key_is_main_key(void* self, bool (*callback)());
 /// @param expandedRange bool
 ///
 int32_t q_cpfinancial_find_begin(void* self, double sortKey, bool expandedRange);
-
-/// @warning DEPRECATED: Use `q_cpfinancial_super_find_begin` instead
-///
-#define q_cpfinancial_qbase_find_begin q_cpfinancial_super_find_begin
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -74687,10 +70039,6 @@ void q_cpfinancial_on_find_begin(void* self, int32_t (*callback)(void*, double, 
 ///
 int32_t q_cpfinancial_find_end(void* self, double sortKey, bool expandedRange);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_find_end` instead
-///
-#define q_cpfinancial_qbase_find_end q_cpfinancial_super_find_end
-
 /// Inherited from QCPPlottableInterface1D
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
@@ -74724,10 +70072,6 @@ void q_cpfinancial_on_find_end(void* self, int32_t (*callback)(void*, double, bo
 ///
 QCPPlottableInterface1D* q_cpfinancial_interface1_d(void* self);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_interface1_d` instead
-///
-#define q_cpfinancial_qbase_interface1_d q_cpfinancial_super_interface1_d
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -74758,10 +70102,6 @@ void q_cpfinancial_on_interface1_d(void* self, QCPPlottableInterface1D* (*callba
 /// @param self QCPFinancial*
 ///
 QRect* q_cpfinancial_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cpfinancial_super_clip_rect` instead
-///
-#define q_cpfinancial_qbase_clip_rect q_cpfinancial_super_clip_rect
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -74798,10 +70138,6 @@ void q_cpfinancial_on_clip_rect(void* self, QRect* (*callback)());
 ///
 int32_t q_cpfinancial_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_selection_category` instead
-///
-#define q_cpfinancial_qbase_selection_category q_cpfinancial_super_selection_category
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -74835,10 +70171,6 @@ void q_cpfinancial_on_selection_category(void* self, int32_t (*callback)());
 /// @param painter QCPPainter*
 ///
 void q_cpfinancial_apply_default_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cpfinancial_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpfinancial_qbase_apply_default_antialiasing_hint q_cpfinancial_super_apply_default_antialiasing_hint
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -74876,10 +70208,6 @@ void q_cpfinancial_on_apply_default_antialiasing_hint(void* self, void (*callbac
 ///
 void q_cpfinancial_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_select_event` instead
-///
-#define q_cpfinancial_qbase_select_event q_cpfinancial_super_select_event
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -74916,10 +70244,6 @@ void q_cpfinancial_on_select_event(void* self, void (*callback)(void*, void*, bo
 ///
 void q_cpfinancial_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_deselect_event` instead
-///
-#define q_cpfinancial_qbase_deselect_event q_cpfinancial_super_deselect_event
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -74952,10 +70276,6 @@ void q_cpfinancial_on_deselect_event(void* self, void (*callback)(void*, bool*))
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpfinancial_parent_plot_initialized(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpfinancial_super_parent_plot_initialized` instead
-///
-#define q_cpfinancial_qbase_parent_plot_initialized q_cpfinancial_super_parent_plot_initialized
 
 /// Inherited from QCPLayerable
 ///
@@ -74990,10 +70310,6 @@ void q_cpfinancial_on_parent_plot_initialized(void* self, void (*callback)(void*
 /// @param details QVariant*
 ///
 void q_cpfinancial_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpfinancial_super_mouse_press_event` instead
-///
-#define q_cpfinancial_qbase_mouse_press_event q_cpfinancial_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -75030,10 +70346,6 @@ void q_cpfinancial_on_mouse_press_event(void* self, void (*callback)(void*, void
 ///
 void q_cpfinancial_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_mouse_move_event` instead
-///
-#define q_cpfinancial_qbase_mouse_move_event q_cpfinancial_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -75068,10 +70380,6 @@ void q_cpfinancial_on_mouse_move_event(void* self, void (*callback)(void*, void*
 /// @param startPos QPointF*
 ///
 void q_cpfinancial_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cpfinancial_super_mouse_release_event` instead
-///
-#define q_cpfinancial_qbase_mouse_release_event q_cpfinancial_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -75108,10 +70416,6 @@ void q_cpfinancial_on_mouse_release_event(void* self, void (*callback)(void*, vo
 ///
 void q_cpfinancial_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_mouse_double_click_event` instead
-///
-#define q_cpfinancial_qbase_mouse_double_click_event q_cpfinancial_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -75146,10 +70450,6 @@ void q_cpfinancial_on_mouse_double_click_event(void* self, void (*callback)(void
 ///
 void q_cpfinancial_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_wheel_event` instead
-///
-#define q_cpfinancial_qbase_wheel_event q_cpfinancial_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -75182,10 +70482,6 @@ void q_cpfinancial_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cpfinancial_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpfinancial_super_event` instead
-///
-#define q_cpfinancial_qbase_event q_cpfinancial_super_event
 
 /// Inherited from QObject
 ///
@@ -75221,10 +70517,6 @@ void q_cpfinancial_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cpfinancial_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_event_filter` instead
-///
-#define q_cpfinancial_qbase_event_filter q_cpfinancial_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -75259,10 +70551,6 @@ void q_cpfinancial_on_event_filter(void* self, bool (*callback)(void*, void*, vo
 ///
 void q_cpfinancial_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_timer_event` instead
-///
-#define q_cpfinancial_qbase_timer_event q_cpfinancial_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -75295,10 +70583,6 @@ void q_cpfinancial_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cpfinancial_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpfinancial_super_child_event` instead
-///
-#define q_cpfinancial_qbase_child_event q_cpfinancial_super_child_event
 
 /// Inherited from QObject
 ///
@@ -75333,10 +70617,6 @@ void q_cpfinancial_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpfinancial_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_custom_event` instead
-///
-#define q_cpfinancial_qbase_custom_event q_cpfinancial_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -75369,10 +70649,6 @@ void q_cpfinancial_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_cpfinancial_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpfinancial_super_connect_notify` instead
-///
-#define q_cpfinancial_qbase_connect_notify q_cpfinancial_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -75407,10 +70683,6 @@ void q_cpfinancial_on_connect_notify(void* self, void (*callback)(void*, void*))
 ///
 void q_cpfinancial_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_disconnect_notify` instead
-///
-#define q_cpfinancial_qbase_disconnect_notify q_cpfinancial_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -75443,10 +70715,6 @@ void q_cpfinancial_on_disconnect_notify(void* self, void (*callback)(void*, void
 /// @param painter QCPPainter*
 ///
 void q_cpfinancial_apply_fill_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cpfinancial_super_apply_fill_antialiasing_hint` instead
-///
-#define q_cpfinancial_qbase_apply_fill_antialiasing_hint q_cpfinancial_super_apply_fill_antialiasing_hint
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -75481,10 +70749,6 @@ void q_cpfinancial_on_apply_fill_antialiasing_hint(void* self, void (*callback)(
 ///
 void q_cpfinancial_apply_scatters_antialiasing_hint(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_apply_scatters_antialiasing_hint` instead
-///
-#define q_cpfinancial_qbase_apply_scatters_antialiasing_hint q_cpfinancial_super_apply_scatters_antialiasing_hint
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -75517,10 +70781,6 @@ void q_cpfinancial_on_apply_scatters_antialiasing_hint(void* self, void (*callba
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpfinancial_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpfinancial_super_initialize_parent_plot` instead
-///
-#define q_cpfinancial_qbase_initialize_parent_plot q_cpfinancial_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -75555,10 +70815,6 @@ void q_cpfinancial_on_initialize_parent_plot(void* self, void (*callback)(void*,
 ///
 void q_cpfinancial_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_set_parent_layerable` instead
-///
-#define q_cpfinancial_qbase_set_parent_layerable q_cpfinancial_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -75592,10 +70848,6 @@ void q_cpfinancial_on_set_parent_layerable(void* self, void (*callback)(void*, v
 /// @param prepend bool
 ///
 bool q_cpfinancial_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpfinancial_super_move_to_layer` instead
-///
-#define q_cpfinancial_qbase_move_to_layer q_cpfinancial_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -75633,10 +70885,6 @@ void q_cpfinancial_on_move_to_layer(void* self, bool (*callback)(void*, void*, b
 ///
 void q_cpfinancial_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_apply_antialiasing_hint` instead
-///
-#define q_cpfinancial_qbase_apply_antialiasing_hint q_cpfinancial_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -75671,10 +70919,6 @@ void q_cpfinancial_on_apply_antialiasing_hint(void* self, void (*callback)(void*
 ///
 QObject* q_cpfinancial_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_sender` instead
-///
-#define q_cpfinancial_qbase_sender q_cpfinancial_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -75705,10 +70949,6 @@ void q_cpfinancial_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPFinancial*
 ///
 int32_t q_cpfinancial_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpfinancial_super_sender_signal_index` instead
-///
-#define q_cpfinancial_qbase_sender_signal_index q_cpfinancial_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -75742,10 +70982,6 @@ void q_cpfinancial_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cpfinancial_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpfinancial_super_receivers` instead
-///
-#define q_cpfinancial_qbase_receivers q_cpfinancial_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -75778,10 +71014,6 @@ void q_cpfinancial_on_receivers(void* self, int32_t (*callback)(void*, const cha
 /// @param signal QMetaMethod*
 ///
 bool q_cpfinancial_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpfinancial_super_is_signal_connected` instead
-///
-#define q_cpfinancial_qbase_is_signal_connected q_cpfinancial_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -75943,10 +71175,6 @@ const QMetaObject* q_cperrorbars_meta_object(void* self);
 ///
 void q_cperrorbars_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_meta_object` instead
-///
-#define q_cperrorbars_qbase_meta_object q_cperrorbars_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -75966,10 +71194,6 @@ void* q_cperrorbars_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPErrorBars* self, const char* param1)
 ///
 void q_cperrorbars_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_metacast` instead
-///
-#define q_cperrorbars_qbase_metacast q_cperrorbars_super_metacast
 
 /// Base class method implementation
 ///
@@ -75991,10 +71215,6 @@ int32_t q_cperrorbars_metacall(void* self, int32_t param1, int param2, void* par
 /// @param callback int32_t func(QCPErrorBars* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cperrorbars_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_metacall` instead
-///
-#define q_cperrorbars_qbase_metacall q_cperrorbars_super_metacall
 
 /// Base class method implementation
 ///
@@ -76127,10 +71347,6 @@ int32_t q_cperrorbars_data_count(void* self);
 ///
 void q_cperrorbars_on_data_count(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_data_count` instead
-///
-#define q_cperrorbars_qbase_data_count q_cperrorbars_super_data_count
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
 /// Base class method implementation
@@ -76154,10 +71370,6 @@ double q_cperrorbars_data_main_key(void* self, int index);
 /// @param callback double func(QCPErrorBars* self, int index)
 ///
 void q_cperrorbars_on_data_main_key(void* self, double (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_data_main_key` instead
-///
-#define q_cperrorbars_qbase_data_main_key q_cperrorbars_super_data_main_key
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -76184,10 +71396,6 @@ double q_cperrorbars_data_sort_key(void* self, int index);
 ///
 void q_cperrorbars_on_data_sort_key(void* self, double (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_data_sort_key` instead
-///
-#define q_cperrorbars_qbase_data_sort_key q_cperrorbars_super_data_sort_key
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
 /// Base class method implementation
@@ -76212,10 +71420,6 @@ double q_cperrorbars_data_main_value(void* self, int index);
 /// @param callback double func(QCPErrorBars* self, int index)
 ///
 void q_cperrorbars_on_data_main_value(void* self, double (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_data_main_value` instead
-///
-#define q_cperrorbars_qbase_data_main_value q_cperrorbars_super_data_main_value
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -76244,10 +71448,6 @@ QCPRange* q_cperrorbars_data_value_range(void* self, int index);
 ///
 void q_cperrorbars_on_data_value_range(void* self, QCPRange* (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_data_value_range` instead
-///
-#define q_cperrorbars_qbase_data_value_range q_cperrorbars_super_data_value_range
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
 /// Base class method implementation
@@ -76275,10 +71475,6 @@ QPointF* q_cperrorbars_data_pixel_position(void* self, int index);
 ///
 void q_cperrorbars_on_data_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_data_pixel_position` instead
-///
-#define q_cperrorbars_qbase_data_pixel_position q_cperrorbars_super_data_pixel_position
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
 /// Base class method implementation
@@ -76302,10 +71498,6 @@ bool q_cperrorbars_sort_key_is_main_key(void* self);
 /// @param callback bool func()
 ///
 void q_cperrorbars_on_sort_key_is_main_key(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_sort_key_is_main_key` instead
-///
-#define q_cperrorbars_qbase_sort_key_is_main_key q_cperrorbars_super_sort_key_is_main_key
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -76334,10 +71526,6 @@ QCPDataSelection* q_cperrorbars_select_test_rect(void* self, void* rect, bool on
 ///
 void q_cperrorbars_on_select_test_rect(void* self, QCPDataSelection* (*callback)(void*, void*, bool));
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_select_test_rect` instead
-///
-#define q_cperrorbars_qbase_select_test_rect q_cperrorbars_super_select_test_rect
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
 /// Base class method implementation
@@ -76365,10 +71553,6 @@ int32_t q_cperrorbars_find_begin(void* self, double sortKey, bool expandedRange)
 ///
 void q_cperrorbars_on_find_begin(void* self, int32_t (*callback)(void*, double, bool));
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_find_begin` instead
-///
-#define q_cperrorbars_qbase_find_begin q_cperrorbars_super_find_begin
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
 /// Base class method implementation
@@ -76395,10 +71579,6 @@ int32_t q_cperrorbars_find_end(void* self, double sortKey, bool expandedRange);
 /// @param callback int32_t func(QCPErrorBars* self, double sortKey, bool expandedRange)
 ///
 void q_cperrorbars_on_find_end(void* self, int32_t (*callback)(void*, double, bool));
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_find_end` instead
-///
-#define q_cperrorbars_qbase_find_end q_cperrorbars_super_find_end
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -76428,10 +71608,6 @@ double q_cperrorbars_select_test(void* self, void* pos, bool onlySelectable, voi
 ///
 void q_cperrorbars_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_select_test` instead
-///
-#define q_cperrorbars_qbase_select_test q_cperrorbars_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
 /// Base class method implementation
@@ -76458,10 +71634,6 @@ QCPPlottableInterface1D* q_cperrorbars_interface1_d(void* self);
 ///
 void q_cperrorbars_on_interface1_d(void* self, QCPPlottableInterface1D* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_interface1_d` instead
-///
-#define q_cperrorbars_qbase_interface1_d q_cperrorbars_super_interface1_d
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
 /// Base class method implementation
@@ -76485,10 +71657,6 @@ void q_cperrorbars_draw(void* self, void* painter);
 /// @param callback void func(QCPErrorBars* self, QCPPainter* painter)
 ///
 void q_cperrorbars_on_draw(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_draw` instead
-///
-#define q_cperrorbars_qbase_draw q_cperrorbars_super_draw
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -76515,10 +71683,6 @@ void q_cperrorbars_draw_legend_icon(void* self, void* painter, void* rect);
 /// @param callback void func(QCPErrorBars* self, QCPPainter* painter, QRectF* rect)
 ///
 void q_cperrorbars_on_draw_legend_icon(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_draw_legend_icon` instead
-///
-#define q_cperrorbars_qbase_draw_legend_icon q_cperrorbars_super_draw_legend_icon
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -76548,10 +71712,6 @@ QCPRange* q_cperrorbars_get_key_range(void* self, bool* foundRange, int32_t inSi
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cperrorbars_on_get_key_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t));
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_get_key_range` instead
-///
-#define q_cperrorbars_qbase_get_key_range q_cperrorbars_super_get_key_range
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -76583,10 +71743,6 @@ QCPRange* q_cperrorbars_get_value_range(void* self, bool* foundRange, int32_t in
 ///
 void q_cperrorbars_on_get_value_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t, void*));
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_get_value_range` instead
-///
-#define q_cperrorbars_qbase_get_value_range q_cperrorbars_super_get_value_range
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
 /// Base class method implementation
@@ -76615,10 +71771,6 @@ void q_cperrorbars_get_data_segments(void* self, libqt_list selectedSegments, li
 ///
 void q_cperrorbars_on_get_data_segments(void* self, void (*callback)(void*, libqt_list, libqt_list));
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_get_data_segments` instead
-///
-#define q_cperrorbars_qbase_get_data_segments q_cperrorbars_super_get_data_segments
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
 /// Base class method implementation
@@ -76645,10 +71797,6 @@ bool q_cperrorbars_error_bar_visible(void* self, int index);
 ///
 void q_cperrorbars_on_error_bar_visible(void* self, bool (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_error_bar_visible` instead
-///
-#define q_cperrorbars_qbase_error_bar_visible q_cperrorbars_super_error_bar_visible
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
 /// Base class method implementation
@@ -76674,10 +71822,6 @@ bool q_cperrorbars_rect_intersects_line(void* self, void* pixelRect, void* line)
 /// @param callback bool func(QCPErrorBars* self, QRectF* pixelRect, QLineF* line)
 ///
 void q_cperrorbars_on_rect_intersects_line(void* self, bool (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_rect_intersects_line` instead
-///
-#define q_cperrorbars_qbase_rect_intersects_line q_cperrorbars_super_rect_intersects_line
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -77625,10 +72769,6 @@ void q_cperrorbars_operator_assign(void* self, void* param1);
 ///
 QRect* q_cperrorbars_clip_rect(void* self);
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_clip_rect` instead
-///
-#define q_cperrorbars_qbase_clip_rect q_cperrorbars_super_clip_rect
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -77664,10 +72804,6 @@ void q_cperrorbars_on_clip_rect(void* self, QRect* (*callback)());
 ///
 int32_t q_cperrorbars_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_selection_category` instead
-///
-#define q_cperrorbars_qbase_selection_category q_cperrorbars_super_selection_category
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -77701,10 +72837,6 @@ void q_cperrorbars_on_selection_category(void* self, int32_t (*callback)());
 /// @param painter QCPPainter*
 ///
 void q_cperrorbars_apply_default_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_apply_default_antialiasing_hint` instead
-///
-#define q_cperrorbars_qbase_apply_default_antialiasing_hint q_cperrorbars_super_apply_default_antialiasing_hint
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -77742,10 +72874,6 @@ void q_cperrorbars_on_apply_default_antialiasing_hint(void* self, void (*callbac
 ///
 void q_cperrorbars_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_select_event` instead
-///
-#define q_cperrorbars_qbase_select_event q_cperrorbars_super_select_event
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -77782,10 +72910,6 @@ void q_cperrorbars_on_select_event(void* self, void (*callback)(void*, void*, bo
 ///
 void q_cperrorbars_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_deselect_event` instead
-///
-#define q_cperrorbars_qbase_deselect_event q_cperrorbars_super_deselect_event
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -77818,10 +72942,6 @@ void q_cperrorbars_on_deselect_event(void* self, void (*callback)(void*, bool*))
 /// @param parentPlot QCustomPlot*
 ///
 void q_cperrorbars_parent_plot_initialized(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_parent_plot_initialized` instead
-///
-#define q_cperrorbars_qbase_parent_plot_initialized q_cperrorbars_super_parent_plot_initialized
 
 /// Inherited from QCPLayerable
 ///
@@ -77856,10 +72976,6 @@ void q_cperrorbars_on_parent_plot_initialized(void* self, void (*callback)(void*
 /// @param details QVariant*
 ///
 void q_cperrorbars_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_mouse_press_event` instead
-///
-#define q_cperrorbars_qbase_mouse_press_event q_cperrorbars_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -77896,10 +73012,6 @@ void q_cperrorbars_on_mouse_press_event(void* self, void (*callback)(void*, void
 ///
 void q_cperrorbars_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_mouse_move_event` instead
-///
-#define q_cperrorbars_qbase_mouse_move_event q_cperrorbars_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -77934,10 +73046,6 @@ void q_cperrorbars_on_mouse_move_event(void* self, void (*callback)(void*, void*
 /// @param startPos QPointF*
 ///
 void q_cperrorbars_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_mouse_release_event` instead
-///
-#define q_cperrorbars_qbase_mouse_release_event q_cperrorbars_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -77974,10 +73082,6 @@ void q_cperrorbars_on_mouse_release_event(void* self, void (*callback)(void*, vo
 ///
 void q_cperrorbars_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_mouse_double_click_event` instead
-///
-#define q_cperrorbars_qbase_mouse_double_click_event q_cperrorbars_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -78012,10 +73116,6 @@ void q_cperrorbars_on_mouse_double_click_event(void* self, void (*callback)(void
 ///
 void q_cperrorbars_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_wheel_event` instead
-///
-#define q_cperrorbars_qbase_wheel_event q_cperrorbars_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -78048,10 +73148,6 @@ void q_cperrorbars_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cperrorbars_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_event` instead
-///
-#define q_cperrorbars_qbase_event q_cperrorbars_super_event
 
 /// Inherited from QObject
 ///
@@ -78087,10 +73183,6 @@ void q_cperrorbars_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cperrorbars_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_event_filter` instead
-///
-#define q_cperrorbars_qbase_event_filter q_cperrorbars_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -78125,10 +73217,6 @@ void q_cperrorbars_on_event_filter(void* self, bool (*callback)(void*, void*, vo
 ///
 void q_cperrorbars_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_timer_event` instead
-///
-#define q_cperrorbars_qbase_timer_event q_cperrorbars_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -78161,10 +73249,6 @@ void q_cperrorbars_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cperrorbars_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_child_event` instead
-///
-#define q_cperrorbars_qbase_child_event q_cperrorbars_super_child_event
 
 /// Inherited from QObject
 ///
@@ -78199,10 +73283,6 @@ void q_cperrorbars_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cperrorbars_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_custom_event` instead
-///
-#define q_cperrorbars_qbase_custom_event q_cperrorbars_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -78235,10 +73315,6 @@ void q_cperrorbars_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_cperrorbars_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_connect_notify` instead
-///
-#define q_cperrorbars_qbase_connect_notify q_cperrorbars_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -78273,10 +73349,6 @@ void q_cperrorbars_on_connect_notify(void* self, void (*callback)(void*, void*))
 ///
 void q_cperrorbars_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_disconnect_notify` instead
-///
-#define q_cperrorbars_qbase_disconnect_notify q_cperrorbars_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -78309,10 +73381,6 @@ void q_cperrorbars_on_disconnect_notify(void* self, void (*callback)(void*, void
 /// @param painter QCPPainter*
 ///
 void q_cperrorbars_apply_fill_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_apply_fill_antialiasing_hint` instead
-///
-#define q_cperrorbars_qbase_apply_fill_antialiasing_hint q_cperrorbars_super_apply_fill_antialiasing_hint
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -78347,10 +73415,6 @@ void q_cperrorbars_on_apply_fill_antialiasing_hint(void* self, void (*callback)(
 ///
 void q_cperrorbars_apply_scatters_antialiasing_hint(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_apply_scatters_antialiasing_hint` instead
-///
-#define q_cperrorbars_qbase_apply_scatters_antialiasing_hint q_cperrorbars_super_apply_scatters_antialiasing_hint
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -78383,10 +73447,6 @@ void q_cperrorbars_on_apply_scatters_antialiasing_hint(void* self, void (*callba
 /// @param parentPlot QCustomPlot*
 ///
 void q_cperrorbars_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_initialize_parent_plot` instead
-///
-#define q_cperrorbars_qbase_initialize_parent_plot q_cperrorbars_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -78421,10 +73481,6 @@ void q_cperrorbars_on_initialize_parent_plot(void* self, void (*callback)(void*,
 ///
 void q_cperrorbars_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_set_parent_layerable` instead
-///
-#define q_cperrorbars_qbase_set_parent_layerable q_cperrorbars_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -78458,10 +73514,6 @@ void q_cperrorbars_on_set_parent_layerable(void* self, void (*callback)(void*, v
 /// @param prepend bool
 ///
 bool q_cperrorbars_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_move_to_layer` instead
-///
-#define q_cperrorbars_qbase_move_to_layer q_cperrorbars_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -78499,10 +73551,6 @@ void q_cperrorbars_on_move_to_layer(void* self, bool (*callback)(void*, void*, b
 ///
 void q_cperrorbars_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_apply_antialiasing_hint` instead
-///
-#define q_cperrorbars_qbase_apply_antialiasing_hint q_cperrorbars_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -78537,10 +73585,6 @@ void q_cperrorbars_on_apply_antialiasing_hint(void* self, void (*callback)(void*
 ///
 QObject* q_cperrorbars_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_sender` instead
-///
-#define q_cperrorbars_qbase_sender q_cperrorbars_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -78571,10 +73615,6 @@ void q_cperrorbars_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPErrorBars*
 ///
 int32_t q_cperrorbars_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_sender_signal_index` instead
-///
-#define q_cperrorbars_qbase_sender_signal_index q_cperrorbars_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -78608,10 +73648,6 @@ void q_cperrorbars_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cperrorbars_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cperrorbars_super_receivers` instead
-///
-#define q_cperrorbars_qbase_receivers q_cperrorbars_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -78644,10 +73680,6 @@ void q_cperrorbars_on_receivers(void* self, int32_t (*callback)(void*, const cha
 /// @param signal QMetaMethod*
 ///
 bool q_cperrorbars_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cperrorbars_super_is_signal_connected` instead
-///
-#define q_cperrorbars_qbase_is_signal_connected q_cperrorbars_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -78713,10 +73745,6 @@ const QMetaObject* q_cpitemstraightline_meta_object(void* self);
 ///
 void q_cpitemstraightline_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_meta_object` instead
-///
-#define q_cpitemstraightline_qbase_meta_object q_cpitemstraightline_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -78736,10 +73764,6 @@ void* q_cpitemstraightline_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPItemStraightLine* self, const char* param1)
 ///
 void q_cpitemstraightline_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_metacast` instead
-///
-#define q_cpitemstraightline_qbase_metacast q_cpitemstraightline_super_metacast
 
 /// Base class method implementation
 ///
@@ -78761,10 +73785,6 @@ int32_t q_cpitemstraightline_metacall(void* self, int32_t param1, int param2, vo
 /// @param callback int32_t func(QCPItemStraightLine* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpitemstraightline_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_metacall` instead
-///
-#define q_cpitemstraightline_qbase_metacall q_cpitemstraightline_super_metacall
 
 /// Base class method implementation
 ///
@@ -78827,10 +73847,6 @@ double q_cpitemstraightline_select_test(void* self, void* pos, bool onlySelectab
 ///
 void q_cpitemstraightline_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_select_test` instead
-///
-#define q_cpitemstraightline_qbase_select_test q_cpitemstraightline_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemStraightLine.html)
 ///
 /// Base class method implementation
@@ -78870,10 +73886,6 @@ void q_cpitemstraightline_draw(void* self, void* painter);
 ///
 void q_cpitemstraightline_on_draw(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_draw` instead
-///
-#define q_cpitemstraightline_qbase_draw q_cpitemstraightline_super_draw
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemStraightLine.html)
 ///
 /// Base class method implementation
@@ -78903,10 +73915,6 @@ QLineF* q_cpitemstraightline_get_rect_clipped_straight_line(void* self, void* ba
 ///
 void q_cpitemstraightline_on_get_rect_clipped_straight_line(void* self, QLineF* (*callback)(void*, void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_get_rect_clipped_straight_line` instead
-///
-#define q_cpitemstraightline_qbase_get_rect_clipped_straight_line q_cpitemstraightline_super_get_rect_clipped_straight_line
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemStraightLine.html)
 ///
 /// Base class method implementation
@@ -78934,10 +73942,6 @@ QPen* q_cpitemstraightline_main_pen(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemstraightline_on_main_pen(void* self, QPen* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_main_pen` instead
-///
-#define q_cpitemstraightline_qbase_main_pen q_cpitemstraightline_super_main_pen
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemStraightLine.html)
 ///
@@ -79678,10 +74682,6 @@ void q_cpitemstraightline_on_destroyed1(void* self, void (*callback)(void*, void
 ///
 int32_t q_cpitemstraightline_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_selection_category` instead
-///
-#define q_cpitemstraightline_qbase_selection_category q_cpitemstraightline_super_selection_category
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -79714,10 +74714,6 @@ void q_cpitemstraightline_on_selection_category(void* self, int32_t (*callback)(
 /// @param self QCPItemStraightLine*
 ///
 QRect* q_cpitemstraightline_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_clip_rect` instead
-///
-#define q_cpitemstraightline_qbase_clip_rect q_cpitemstraightline_super_clip_rect
 
 /// Inherited from QCPAbstractItem
 ///
@@ -79752,10 +74748,6 @@ void q_cpitemstraightline_on_clip_rect(void* self, QRect* (*callback)());
 /// @param painter QCPPainter*
 ///
 void q_cpitemstraightline_apply_default_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpitemstraightline_qbase_apply_default_antialiasing_hint q_cpitemstraightline_super_apply_default_antialiasing_hint
 
 /// Inherited from QCPAbstractItem
 ///
@@ -79793,10 +74785,6 @@ void q_cpitemstraightline_on_apply_default_antialiasing_hint(void* self, void (*
 ///
 void q_cpitemstraightline_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_select_event` instead
-///
-#define q_cpitemstraightline_qbase_select_event q_cpitemstraightline_super_select_event
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -79833,10 +74821,6 @@ void q_cpitemstraightline_on_select_event(void* self, void (*callback)(void*, vo
 ///
 void q_cpitemstraightline_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_deselect_event` instead
-///
-#define q_cpitemstraightline_qbase_deselect_event q_cpitemstraightline_super_deselect_event
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -79869,10 +74853,6 @@ void q_cpitemstraightline_on_deselect_event(void* self, void (*callback)(void*, 
 /// @param anchorId int
 ///
 QPointF* q_cpitemstraightline_anchor_pixel_position(void* self, int anchorId);
-
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_anchor_pixel_position` instead
-///
-#define q_cpitemstraightline_qbase_anchor_pixel_position q_cpitemstraightline_super_anchor_pixel_position
 
 /// Inherited from QCPAbstractItem
 ///
@@ -79909,10 +74889,6 @@ void q_cpitemstraightline_on_anchor_pixel_position(void* self, QPointF* (*callba
 ///
 void q_cpitemstraightline_parent_plot_initialized(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_parent_plot_initialized` instead
-///
-#define q_cpitemstraightline_qbase_parent_plot_initialized q_cpitemstraightline_super_parent_plot_initialized
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -79946,10 +74922,6 @@ void q_cpitemstraightline_on_parent_plot_initialized(void* self, void (*callback
 /// @param details QVariant*
 ///
 void q_cpitemstraightline_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_mouse_press_event` instead
-///
-#define q_cpitemstraightline_qbase_mouse_press_event q_cpitemstraightline_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -79986,10 +74958,6 @@ void q_cpitemstraightline_on_mouse_press_event(void* self, void (*callback)(void
 ///
 void q_cpitemstraightline_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_mouse_move_event` instead
-///
-#define q_cpitemstraightline_qbase_mouse_move_event q_cpitemstraightline_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -80024,10 +74992,6 @@ void q_cpitemstraightline_on_mouse_move_event(void* self, void (*callback)(void*
 /// @param startPos QPointF*
 ///
 void q_cpitemstraightline_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_mouse_release_event` instead
-///
-#define q_cpitemstraightline_qbase_mouse_release_event q_cpitemstraightline_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -80064,10 +75028,6 @@ void q_cpitemstraightline_on_mouse_release_event(void* self, void (*callback)(vo
 ///
 void q_cpitemstraightline_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_mouse_double_click_event` instead
-///
-#define q_cpitemstraightline_qbase_mouse_double_click_event q_cpitemstraightline_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -80102,10 +75062,6 @@ void q_cpitemstraightline_on_mouse_double_click_event(void* self, void (*callbac
 ///
 void q_cpitemstraightline_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_wheel_event` instead
-///
-#define q_cpitemstraightline_qbase_wheel_event q_cpitemstraightline_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -80138,10 +75094,6 @@ void q_cpitemstraightline_on_wheel_event(void* self, void (*callback)(void*, voi
 /// @param event QEvent*
 ///
 bool q_cpitemstraightline_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_event` instead
-///
-#define q_cpitemstraightline_qbase_event q_cpitemstraightline_super_event
 
 /// Inherited from QObject
 ///
@@ -80177,10 +75129,6 @@ void q_cpitemstraightline_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cpitemstraightline_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_event_filter` instead
-///
-#define q_cpitemstraightline_qbase_event_filter q_cpitemstraightline_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -80215,10 +75163,6 @@ void q_cpitemstraightline_on_event_filter(void* self, bool (*callback)(void*, vo
 ///
 void q_cpitemstraightline_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_timer_event` instead
-///
-#define q_cpitemstraightline_qbase_timer_event q_cpitemstraightline_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -80251,10 +75195,6 @@ void q_cpitemstraightline_on_timer_event(void* self, void (*callback)(void*, voi
 /// @param event QChildEvent*
 ///
 void q_cpitemstraightline_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_child_event` instead
-///
-#define q_cpitemstraightline_qbase_child_event q_cpitemstraightline_super_child_event
 
 /// Inherited from QObject
 ///
@@ -80289,10 +75229,6 @@ void q_cpitemstraightline_on_child_event(void* self, void (*callback)(void*, voi
 ///
 void q_cpitemstraightline_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_custom_event` instead
-///
-#define q_cpitemstraightline_qbase_custom_event q_cpitemstraightline_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -80326,10 +75262,6 @@ void q_cpitemstraightline_on_custom_event(void* self, void (*callback)(void*, vo
 ///
 void q_cpitemstraightline_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_connect_notify` instead
-///
-#define q_cpitemstraightline_qbase_connect_notify q_cpitemstraightline_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -80362,10 +75294,6 @@ void q_cpitemstraightline_on_connect_notify(void* self, void (*callback)(void*, 
 /// @param signal QMetaMethod*
 ///
 void q_cpitemstraightline_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_disconnect_notify` instead
-///
-#define q_cpitemstraightline_qbase_disconnect_notify q_cpitemstraightline_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -80402,10 +75330,6 @@ void q_cpitemstraightline_on_disconnect_notify(void* self, void (*callback)(void
 ///
 double q_cpitemstraightline_rect_distance(void* self, void* rect, void* pos, bool filledRect);
 
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_rect_distance` instead
-///
-#define q_cpitemstraightline_qbase_rect_distance q_cpitemstraightline_super_rect_distance
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -80441,10 +75365,6 @@ void q_cpitemstraightline_on_rect_distance(void* self, double (*callback)(void*,
 ///
 QCPItemPosition* q_cpitemstraightline_create_position(void* self, const char* name);
 
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_create_position` instead
-///
-#define q_cpitemstraightline_qbase_create_position q_cpitemstraightline_super_create_position
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -80478,10 +75398,6 @@ void q_cpitemstraightline_on_create_position(void* self, QCPItemPosition* (*call
 /// @param anchorId int
 ///
 QCPItemAnchor* q_cpitemstraightline_create_anchor(void* self, const char* name, int anchorId);
-
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_create_anchor` instead
-///
-#define q_cpitemstraightline_qbase_create_anchor q_cpitemstraightline_super_create_anchor
 
 /// Inherited from QCPAbstractItem
 ///
@@ -80517,10 +75433,6 @@ void q_cpitemstraightline_on_create_anchor(void* self, QCPItemAnchor* (*callback
 ///
 void q_cpitemstraightline_initialize_parent_plot(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_initialize_parent_plot` instead
-///
-#define q_cpitemstraightline_qbase_initialize_parent_plot q_cpitemstraightline_super_initialize_parent_plot
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -80553,10 +75465,6 @@ void q_cpitemstraightline_on_initialize_parent_plot(void* self, void (*callback)
 /// @param parentLayerable QCPLayerable*
 ///
 void q_cpitemstraightline_set_parent_layerable(void* self, void* parentLayerable);
-
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_set_parent_layerable` instead
-///
-#define q_cpitemstraightline_qbase_set_parent_layerable q_cpitemstraightline_super_set_parent_layerable
 
 /// Inherited from QCPLayerable
 ///
@@ -80591,10 +75499,6 @@ void q_cpitemstraightline_on_set_parent_layerable(void* self, void (*callback)(v
 /// @param prepend bool
 ///
 bool q_cpitemstraightline_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_move_to_layer` instead
-///
-#define q_cpitemstraightline_qbase_move_to_layer q_cpitemstraightline_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -80632,10 +75536,6 @@ void q_cpitemstraightline_on_move_to_layer(void* self, bool (*callback)(void*, v
 ///
 void q_cpitemstraightline_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_apply_antialiasing_hint` instead
-///
-#define q_cpitemstraightline_qbase_apply_antialiasing_hint q_cpitemstraightline_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -80670,10 +75570,6 @@ void q_cpitemstraightline_on_apply_antialiasing_hint(void* self, void (*callback
 ///
 QObject* q_cpitemstraightline_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_sender` instead
-///
-#define q_cpitemstraightline_qbase_sender q_cpitemstraightline_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -80704,10 +75600,6 @@ void q_cpitemstraightline_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPItemStraightLine*
 ///
 int32_t q_cpitemstraightline_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_sender_signal_index` instead
-///
-#define q_cpitemstraightline_qbase_sender_signal_index q_cpitemstraightline_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -80741,10 +75633,6 @@ void q_cpitemstraightline_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 int32_t q_cpitemstraightline_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_receivers` instead
-///
-#define q_cpitemstraightline_qbase_receivers q_cpitemstraightline_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -80777,10 +75665,6 @@ void q_cpitemstraightline_on_receivers(void* self, int32_t (*callback)(void*, co
 /// @param signal QMetaMethod*
 ///
 bool q_cpitemstraightline_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpitemstraightline_super_is_signal_connected` instead
-///
-#define q_cpitemstraightline_qbase_is_signal_connected q_cpitemstraightline_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -80846,10 +75730,6 @@ const QMetaObject* q_cpitemline_meta_object(void* self);
 ///
 void q_cpitemline_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpitemline_super_meta_object` instead
-///
-#define q_cpitemline_qbase_meta_object q_cpitemline_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -80869,10 +75749,6 @@ void* q_cpitemline_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPItemLine* self, const char* param1)
 ///
 void q_cpitemline_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpitemline_super_metacast` instead
-///
-#define q_cpitemline_qbase_metacast q_cpitemline_super_metacast
 
 /// Base class method implementation
 ///
@@ -80894,10 +75770,6 @@ int32_t q_cpitemline_metacall(void* self, int32_t param1, int param2, void* para
 /// @param callback int32_t func(QCPItemLine* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpitemline_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpitemline_super_metacall` instead
-///
-#define q_cpitemline_qbase_metacall q_cpitemline_super_metacall
 
 /// Base class method implementation
 ///
@@ -80986,10 +75858,6 @@ double q_cpitemline_select_test(void* self, void* pos, bool onlySelectable, void
 ///
 void q_cpitemline_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cpitemline_super_select_test` instead
-///
-#define q_cpitemline_qbase_select_test q_cpitemline_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemLine.html)
 ///
 /// Base class method implementation
@@ -81029,10 +75897,6 @@ void q_cpitemline_draw(void* self, void* painter);
 ///
 void q_cpitemline_on_draw(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpitemline_super_draw` instead
-///
-#define q_cpitemline_qbase_draw q_cpitemline_super_draw
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemLine.html)
 ///
 /// Base class method implementation
@@ -81062,10 +75926,6 @@ QLineF* q_cpitemline_get_rect_clipped_line(void* self, void* start, void* end, v
 ///
 void q_cpitemline_on_get_rect_clipped_line(void* self, QLineF* (*callback)(void*, void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpitemline_super_get_rect_clipped_line` instead
-///
-#define q_cpitemline_qbase_get_rect_clipped_line q_cpitemline_super_get_rect_clipped_line
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemLine.html)
 ///
 /// Base class method implementation
@@ -81093,10 +75953,6 @@ QPen* q_cpitemline_main_pen(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemline_on_main_pen(void* self, QPen* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpitemline_super_main_pen` instead
-///
-#define q_cpitemline_qbase_main_pen q_cpitemline_super_main_pen
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemLine.html)
 ///
@@ -81837,10 +76693,6 @@ void q_cpitemline_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_cpitemline_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cpitemline_super_selection_category` instead
-///
-#define q_cpitemline_qbase_selection_category q_cpitemline_super_selection_category
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -81873,10 +76725,6 @@ void q_cpitemline_on_selection_category(void* self, int32_t (*callback)());
 /// @param self QCPItemLine*
 ///
 QRect* q_cpitemline_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cpitemline_super_clip_rect` instead
-///
-#define q_cpitemline_qbase_clip_rect q_cpitemline_super_clip_rect
 
 /// Inherited from QCPAbstractItem
 ///
@@ -81911,10 +76759,6 @@ void q_cpitemline_on_clip_rect(void* self, QRect* (*callback)());
 /// @param painter QCPPainter*
 ///
 void q_cpitemline_apply_default_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cpitemline_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpitemline_qbase_apply_default_antialiasing_hint q_cpitemline_super_apply_default_antialiasing_hint
 
 /// Inherited from QCPAbstractItem
 ///
@@ -81952,10 +76796,6 @@ void q_cpitemline_on_apply_default_antialiasing_hint(void* self, void (*callback
 ///
 void q_cpitemline_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpitemline_super_select_event` instead
-///
-#define q_cpitemline_qbase_select_event q_cpitemline_super_select_event
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -81992,10 +76832,6 @@ void q_cpitemline_on_select_event(void* self, void (*callback)(void*, void*, boo
 ///
 void q_cpitemline_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpitemline_super_deselect_event` instead
-///
-#define q_cpitemline_qbase_deselect_event q_cpitemline_super_deselect_event
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -82028,10 +76864,6 @@ void q_cpitemline_on_deselect_event(void* self, void (*callback)(void*, bool*));
 /// @param anchorId int
 ///
 QPointF* q_cpitemline_anchor_pixel_position(void* self, int anchorId);
-
-/// @warning DEPRECATED: Use `q_cpitemline_super_anchor_pixel_position` instead
-///
-#define q_cpitemline_qbase_anchor_pixel_position q_cpitemline_super_anchor_pixel_position
 
 /// Inherited from QCPAbstractItem
 ///
@@ -82068,10 +76900,6 @@ void q_cpitemline_on_anchor_pixel_position(void* self, QPointF* (*callback)(void
 ///
 void q_cpitemline_parent_plot_initialized(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cpitemline_super_parent_plot_initialized` instead
-///
-#define q_cpitemline_qbase_parent_plot_initialized q_cpitemline_super_parent_plot_initialized
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -82105,10 +76933,6 @@ void q_cpitemline_on_parent_plot_initialized(void* self, void (*callback)(void*,
 /// @param details QVariant*
 ///
 void q_cpitemline_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpitemline_super_mouse_press_event` instead
-///
-#define q_cpitemline_qbase_mouse_press_event q_cpitemline_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -82145,10 +76969,6 @@ void q_cpitemline_on_mouse_press_event(void* self, void (*callback)(void*, void*
 ///
 void q_cpitemline_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cpitemline_super_mouse_move_event` instead
-///
-#define q_cpitemline_qbase_mouse_move_event q_cpitemline_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -82183,10 +77003,6 @@ void q_cpitemline_on_mouse_move_event(void* self, void (*callback)(void*, void*,
 /// @param startPos QPointF*
 ///
 void q_cpitemline_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cpitemline_super_mouse_release_event` instead
-///
-#define q_cpitemline_qbase_mouse_release_event q_cpitemline_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -82223,10 +77039,6 @@ void q_cpitemline_on_mouse_release_event(void* self, void (*callback)(void*, voi
 ///
 void q_cpitemline_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpitemline_super_mouse_double_click_event` instead
-///
-#define q_cpitemline_qbase_mouse_double_click_event q_cpitemline_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -82261,10 +77073,6 @@ void q_cpitemline_on_mouse_double_click_event(void* self, void (*callback)(void*
 ///
 void q_cpitemline_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemline_super_wheel_event` instead
-///
-#define q_cpitemline_qbase_wheel_event q_cpitemline_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -82297,10 +77105,6 @@ void q_cpitemline_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cpitemline_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpitemline_super_event` instead
-///
-#define q_cpitemline_qbase_event q_cpitemline_super_event
 
 /// Inherited from QObject
 ///
@@ -82336,10 +77140,6 @@ void q_cpitemline_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cpitemline_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemline_super_event_filter` instead
-///
-#define q_cpitemline_qbase_event_filter q_cpitemline_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -82374,10 +77174,6 @@ void q_cpitemline_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void q_cpitemline_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemline_super_timer_event` instead
-///
-#define q_cpitemline_qbase_timer_event q_cpitemline_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -82410,10 +77206,6 @@ void q_cpitemline_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cpitemline_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpitemline_super_child_event` instead
-///
-#define q_cpitemline_qbase_child_event q_cpitemline_super_child_event
 
 /// Inherited from QObject
 ///
@@ -82448,10 +77240,6 @@ void q_cpitemline_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpitemline_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemline_super_custom_event` instead
-///
-#define q_cpitemline_qbase_custom_event q_cpitemline_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -82485,10 +77273,6 @@ void q_cpitemline_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpitemline_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpitemline_super_connect_notify` instead
-///
-#define q_cpitemline_qbase_connect_notify q_cpitemline_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -82521,10 +77305,6 @@ void q_cpitemline_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_cpitemline_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpitemline_super_disconnect_notify` instead
-///
-#define q_cpitemline_qbase_disconnect_notify q_cpitemline_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -82561,10 +77341,6 @@ void q_cpitemline_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 double q_cpitemline_rect_distance(void* self, void* rect, void* pos, bool filledRect);
 
-/// @warning DEPRECATED: Use `q_cpitemline_super_rect_distance` instead
-///
-#define q_cpitemline_qbase_rect_distance q_cpitemline_super_rect_distance
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -82600,10 +77376,6 @@ void q_cpitemline_on_rect_distance(void* self, double (*callback)(void*, void*, 
 ///
 QCPItemPosition* q_cpitemline_create_position(void* self, const char* name);
 
-/// @warning DEPRECATED: Use `q_cpitemline_super_create_position` instead
-///
-#define q_cpitemline_qbase_create_position q_cpitemline_super_create_position
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -82637,10 +77409,6 @@ void q_cpitemline_on_create_position(void* self, QCPItemPosition* (*callback)(vo
 /// @param anchorId int
 ///
 QCPItemAnchor* q_cpitemline_create_anchor(void* self, const char* name, int anchorId);
-
-/// @warning DEPRECATED: Use `q_cpitemline_super_create_anchor` instead
-///
-#define q_cpitemline_qbase_create_anchor q_cpitemline_super_create_anchor
 
 /// Inherited from QCPAbstractItem
 ///
@@ -82676,10 +77444,6 @@ void q_cpitemline_on_create_anchor(void* self, QCPItemAnchor* (*callback)(void*,
 ///
 void q_cpitemline_initialize_parent_plot(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cpitemline_super_initialize_parent_plot` instead
-///
-#define q_cpitemline_qbase_initialize_parent_plot q_cpitemline_super_initialize_parent_plot
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -82712,10 +77476,6 @@ void q_cpitemline_on_initialize_parent_plot(void* self, void (*callback)(void*, 
 /// @param parentLayerable QCPLayerable*
 ///
 void q_cpitemline_set_parent_layerable(void* self, void* parentLayerable);
-
-/// @warning DEPRECATED: Use `q_cpitemline_super_set_parent_layerable` instead
-///
-#define q_cpitemline_qbase_set_parent_layerable q_cpitemline_super_set_parent_layerable
 
 /// Inherited from QCPLayerable
 ///
@@ -82750,10 +77510,6 @@ void q_cpitemline_on_set_parent_layerable(void* self, void (*callback)(void*, vo
 /// @param prepend bool
 ///
 bool q_cpitemline_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpitemline_super_move_to_layer` instead
-///
-#define q_cpitemline_qbase_move_to_layer q_cpitemline_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -82791,10 +77547,6 @@ void q_cpitemline_on_move_to_layer(void* self, bool (*callback)(void*, void*, bo
 ///
 void q_cpitemline_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpitemline_super_apply_antialiasing_hint` instead
-///
-#define q_cpitemline_qbase_apply_antialiasing_hint q_cpitemline_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -82829,10 +77581,6 @@ void q_cpitemline_on_apply_antialiasing_hint(void* self, void (*callback)(void*,
 ///
 QObject* q_cpitemline_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpitemline_super_sender` instead
-///
-#define q_cpitemline_qbase_sender q_cpitemline_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -82863,10 +77611,6 @@ void q_cpitemline_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPItemLine*
 ///
 int32_t q_cpitemline_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpitemline_super_sender_signal_index` instead
-///
-#define q_cpitemline_qbase_sender_signal_index q_cpitemline_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -82900,10 +77644,6 @@ void q_cpitemline_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cpitemline_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpitemline_super_receivers` instead
-///
-#define q_cpitemline_qbase_receivers q_cpitemline_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -82936,10 +77676,6 @@ void q_cpitemline_on_receivers(void* self, int32_t (*callback)(void*, const char
 /// @param signal QMetaMethod*
 ///
 bool q_cpitemline_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpitemline_super_is_signal_connected` instead
-///
-#define q_cpitemline_qbase_is_signal_connected q_cpitemline_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -83005,10 +77741,6 @@ const QMetaObject* q_cpitemcurve_meta_object(void* self);
 ///
 void q_cpitemcurve_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_meta_object` instead
-///
-#define q_cpitemcurve_qbase_meta_object q_cpitemcurve_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -83028,10 +77760,6 @@ void* q_cpitemcurve_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPItemCurve* self, const char* param1)
 ///
 void q_cpitemcurve_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_metacast` instead
-///
-#define q_cpitemcurve_qbase_metacast q_cpitemcurve_super_metacast
 
 /// Base class method implementation
 ///
@@ -83053,10 +77781,6 @@ int32_t q_cpitemcurve_metacall(void* self, int32_t param1, int param2, void* par
 /// @param callback int32_t func(QCPItemCurve* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpitemcurve_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_metacall` instead
-///
-#define q_cpitemcurve_qbase_metacall q_cpitemcurve_super_metacall
 
 /// Base class method implementation
 ///
@@ -83145,10 +77869,6 @@ double q_cpitemcurve_select_test(void* self, void* pos, bool onlySelectable, voi
 ///
 void q_cpitemcurve_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_select_test` instead
-///
-#define q_cpitemcurve_qbase_select_test q_cpitemcurve_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemCurve.html)
 ///
 /// Base class method implementation
@@ -83200,10 +77920,6 @@ void q_cpitemcurve_draw(void* self, void* painter);
 ///
 void q_cpitemcurve_on_draw(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_draw` instead
-///
-#define q_cpitemcurve_qbase_draw q_cpitemcurve_super_draw
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemCurve.html)
 ///
 /// Base class method implementation
@@ -83229,10 +77945,6 @@ QPen* q_cpitemcurve_main_pen(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemcurve_on_main_pen(void* self, QPen* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_main_pen` instead
-///
-#define q_cpitemcurve_qbase_main_pen q_cpitemcurve_super_main_pen
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemCurve.html)
 ///
@@ -83973,10 +78685,6 @@ void q_cpitemcurve_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_cpitemcurve_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_selection_category` instead
-///
-#define q_cpitemcurve_qbase_selection_category q_cpitemcurve_super_selection_category
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -84009,10 +78717,6 @@ void q_cpitemcurve_on_selection_category(void* self, int32_t (*callback)());
 /// @param self QCPItemCurve*
 ///
 QRect* q_cpitemcurve_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_clip_rect` instead
-///
-#define q_cpitemcurve_qbase_clip_rect q_cpitemcurve_super_clip_rect
 
 /// Inherited from QCPAbstractItem
 ///
@@ -84047,10 +78751,6 @@ void q_cpitemcurve_on_clip_rect(void* self, QRect* (*callback)());
 /// @param painter QCPPainter*
 ///
 void q_cpitemcurve_apply_default_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpitemcurve_qbase_apply_default_antialiasing_hint q_cpitemcurve_super_apply_default_antialiasing_hint
 
 /// Inherited from QCPAbstractItem
 ///
@@ -84088,10 +78788,6 @@ void q_cpitemcurve_on_apply_default_antialiasing_hint(void* self, void (*callbac
 ///
 void q_cpitemcurve_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_select_event` instead
-///
-#define q_cpitemcurve_qbase_select_event q_cpitemcurve_super_select_event
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -84128,10 +78824,6 @@ void q_cpitemcurve_on_select_event(void* self, void (*callback)(void*, void*, bo
 ///
 void q_cpitemcurve_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_deselect_event` instead
-///
-#define q_cpitemcurve_qbase_deselect_event q_cpitemcurve_super_deselect_event
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -84164,10 +78856,6 @@ void q_cpitemcurve_on_deselect_event(void* self, void (*callback)(void*, bool*))
 /// @param anchorId int
 ///
 QPointF* q_cpitemcurve_anchor_pixel_position(void* self, int anchorId);
-
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_anchor_pixel_position` instead
-///
-#define q_cpitemcurve_qbase_anchor_pixel_position q_cpitemcurve_super_anchor_pixel_position
 
 /// Inherited from QCPAbstractItem
 ///
@@ -84204,10 +78892,6 @@ void q_cpitemcurve_on_anchor_pixel_position(void* self, QPointF* (*callback)(voi
 ///
 void q_cpitemcurve_parent_plot_initialized(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_parent_plot_initialized` instead
-///
-#define q_cpitemcurve_qbase_parent_plot_initialized q_cpitemcurve_super_parent_plot_initialized
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -84241,10 +78925,6 @@ void q_cpitemcurve_on_parent_plot_initialized(void* self, void (*callback)(void*
 /// @param details QVariant*
 ///
 void q_cpitemcurve_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_mouse_press_event` instead
-///
-#define q_cpitemcurve_qbase_mouse_press_event q_cpitemcurve_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -84281,10 +78961,6 @@ void q_cpitemcurve_on_mouse_press_event(void* self, void (*callback)(void*, void
 ///
 void q_cpitemcurve_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_mouse_move_event` instead
-///
-#define q_cpitemcurve_qbase_mouse_move_event q_cpitemcurve_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -84319,10 +78995,6 @@ void q_cpitemcurve_on_mouse_move_event(void* self, void (*callback)(void*, void*
 /// @param startPos QPointF*
 ///
 void q_cpitemcurve_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_mouse_release_event` instead
-///
-#define q_cpitemcurve_qbase_mouse_release_event q_cpitemcurve_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -84359,10 +79031,6 @@ void q_cpitemcurve_on_mouse_release_event(void* self, void (*callback)(void*, vo
 ///
 void q_cpitemcurve_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_mouse_double_click_event` instead
-///
-#define q_cpitemcurve_qbase_mouse_double_click_event q_cpitemcurve_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -84397,10 +79065,6 @@ void q_cpitemcurve_on_mouse_double_click_event(void* self, void (*callback)(void
 ///
 void q_cpitemcurve_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_wheel_event` instead
-///
-#define q_cpitemcurve_qbase_wheel_event q_cpitemcurve_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -84433,10 +79097,6 @@ void q_cpitemcurve_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cpitemcurve_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_event` instead
-///
-#define q_cpitemcurve_qbase_event q_cpitemcurve_super_event
 
 /// Inherited from QObject
 ///
@@ -84472,10 +79132,6 @@ void q_cpitemcurve_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cpitemcurve_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_event_filter` instead
-///
-#define q_cpitemcurve_qbase_event_filter q_cpitemcurve_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -84510,10 +79166,6 @@ void q_cpitemcurve_on_event_filter(void* self, bool (*callback)(void*, void*, vo
 ///
 void q_cpitemcurve_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_timer_event` instead
-///
-#define q_cpitemcurve_qbase_timer_event q_cpitemcurve_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -84546,10 +79198,6 @@ void q_cpitemcurve_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cpitemcurve_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_child_event` instead
-///
-#define q_cpitemcurve_qbase_child_event q_cpitemcurve_super_child_event
 
 /// Inherited from QObject
 ///
@@ -84584,10 +79232,6 @@ void q_cpitemcurve_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpitemcurve_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_custom_event` instead
-///
-#define q_cpitemcurve_qbase_custom_event q_cpitemcurve_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -84621,10 +79265,6 @@ void q_cpitemcurve_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpitemcurve_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_connect_notify` instead
-///
-#define q_cpitemcurve_qbase_connect_notify q_cpitemcurve_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -84657,10 +79297,6 @@ void q_cpitemcurve_on_connect_notify(void* self, void (*callback)(void*, void*))
 /// @param signal QMetaMethod*
 ///
 void q_cpitemcurve_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_disconnect_notify` instead
-///
-#define q_cpitemcurve_qbase_disconnect_notify q_cpitemcurve_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -84697,10 +79333,6 @@ void q_cpitemcurve_on_disconnect_notify(void* self, void (*callback)(void*, void
 ///
 double q_cpitemcurve_rect_distance(void* self, void* rect, void* pos, bool filledRect);
 
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_rect_distance` instead
-///
-#define q_cpitemcurve_qbase_rect_distance q_cpitemcurve_super_rect_distance
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -84736,10 +79368,6 @@ void q_cpitemcurve_on_rect_distance(void* self, double (*callback)(void*, void*,
 ///
 QCPItemPosition* q_cpitemcurve_create_position(void* self, const char* name);
 
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_create_position` instead
-///
-#define q_cpitemcurve_qbase_create_position q_cpitemcurve_super_create_position
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -84773,10 +79401,6 @@ void q_cpitemcurve_on_create_position(void* self, QCPItemPosition* (*callback)(v
 /// @param anchorId int
 ///
 QCPItemAnchor* q_cpitemcurve_create_anchor(void* self, const char* name, int anchorId);
-
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_create_anchor` instead
-///
-#define q_cpitemcurve_qbase_create_anchor q_cpitemcurve_super_create_anchor
 
 /// Inherited from QCPAbstractItem
 ///
@@ -84812,10 +79436,6 @@ void q_cpitemcurve_on_create_anchor(void* self, QCPItemAnchor* (*callback)(void*
 ///
 void q_cpitemcurve_initialize_parent_plot(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_initialize_parent_plot` instead
-///
-#define q_cpitemcurve_qbase_initialize_parent_plot q_cpitemcurve_super_initialize_parent_plot
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -84848,10 +79468,6 @@ void q_cpitemcurve_on_initialize_parent_plot(void* self, void (*callback)(void*,
 /// @param parentLayerable QCPLayerable*
 ///
 void q_cpitemcurve_set_parent_layerable(void* self, void* parentLayerable);
-
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_set_parent_layerable` instead
-///
-#define q_cpitemcurve_qbase_set_parent_layerable q_cpitemcurve_super_set_parent_layerable
 
 /// Inherited from QCPLayerable
 ///
@@ -84886,10 +79502,6 @@ void q_cpitemcurve_on_set_parent_layerable(void* self, void (*callback)(void*, v
 /// @param prepend bool
 ///
 bool q_cpitemcurve_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_move_to_layer` instead
-///
-#define q_cpitemcurve_qbase_move_to_layer q_cpitemcurve_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -84927,10 +79539,6 @@ void q_cpitemcurve_on_move_to_layer(void* self, bool (*callback)(void*, void*, b
 ///
 void q_cpitemcurve_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_apply_antialiasing_hint` instead
-///
-#define q_cpitemcurve_qbase_apply_antialiasing_hint q_cpitemcurve_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -84965,10 +79573,6 @@ void q_cpitemcurve_on_apply_antialiasing_hint(void* self, void (*callback)(void*
 ///
 QObject* q_cpitemcurve_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_sender` instead
-///
-#define q_cpitemcurve_qbase_sender q_cpitemcurve_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -84999,10 +79603,6 @@ void q_cpitemcurve_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPItemCurve*
 ///
 int32_t q_cpitemcurve_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_sender_signal_index` instead
-///
-#define q_cpitemcurve_qbase_sender_signal_index q_cpitemcurve_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -85036,10 +79636,6 @@ void q_cpitemcurve_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cpitemcurve_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_receivers` instead
-///
-#define q_cpitemcurve_qbase_receivers q_cpitemcurve_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -85072,10 +79668,6 @@ void q_cpitemcurve_on_receivers(void* self, int32_t (*callback)(void*, const cha
 /// @param signal QMetaMethod*
 ///
 bool q_cpitemcurve_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpitemcurve_super_is_signal_connected` instead
-///
-#define q_cpitemcurve_qbase_is_signal_connected q_cpitemcurve_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -85141,10 +79733,6 @@ const QMetaObject* q_cpitemrect_meta_object(void* self);
 ///
 void q_cpitemrect_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpitemrect_super_meta_object` instead
-///
-#define q_cpitemrect_qbase_meta_object q_cpitemrect_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -85164,10 +79752,6 @@ void* q_cpitemrect_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPItemRect* self, const char* param1)
 ///
 void q_cpitemrect_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpitemrect_super_metacast` instead
-///
-#define q_cpitemrect_qbase_metacast q_cpitemrect_super_metacast
 
 /// Base class method implementation
 ///
@@ -85189,10 +79773,6 @@ int32_t q_cpitemrect_metacall(void* self, int32_t param1, int param2, void* para
 /// @param callback int32_t func(QCPItemRect* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpitemrect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpitemrect_super_metacall` instead
-///
-#define q_cpitemrect_qbase_metacall q_cpitemrect_super_metacall
 
 /// Base class method implementation
 ///
@@ -85281,10 +79861,6 @@ double q_cpitemrect_select_test(void* self, void* pos, bool onlySelectable, void
 ///
 void q_cpitemrect_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cpitemrect_super_select_test` instead
-///
-#define q_cpitemrect_qbase_select_test q_cpitemrect_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemRect.html)
 ///
 /// Base class method implementation
@@ -85360,10 +79936,6 @@ void q_cpitemrect_draw(void* self, void* painter);
 ///
 void q_cpitemrect_on_draw(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpitemrect_super_draw` instead
-///
-#define q_cpitemrect_qbase_draw q_cpitemrect_super_draw
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemRect.html)
 ///
 /// Base class method implementation
@@ -85391,10 +79963,6 @@ QPointF* q_cpitemrect_anchor_pixel_position(void* self, int anchorId);
 ///
 void q_cpitemrect_on_anchor_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_cpitemrect_super_anchor_pixel_position` instead
-///
-#define q_cpitemrect_qbase_anchor_pixel_position q_cpitemrect_super_anchor_pixel_position
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemRect.html)
 ///
 /// Base class method implementation
@@ -85421,10 +79989,6 @@ QPen* q_cpitemrect_main_pen(void* self);
 ///
 void q_cpitemrect_on_main_pen(void* self, QPen* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpitemrect_super_main_pen` instead
-///
-#define q_cpitemrect_qbase_main_pen q_cpitemrect_super_main_pen
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemRect.html)
 ///
 /// Base class method implementation
@@ -85449,10 +80013,6 @@ QBrush* q_cpitemrect_main_brush(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemrect_on_main_brush(void* self, QBrush* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpitemrect_super_main_brush` instead
-///
-#define q_cpitemrect_qbase_main_brush q_cpitemrect_super_main_brush
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemRect.html)
 ///
@@ -86193,10 +80753,6 @@ void q_cpitemrect_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_cpitemrect_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cpitemrect_super_selection_category` instead
-///
-#define q_cpitemrect_qbase_selection_category q_cpitemrect_super_selection_category
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -86229,10 +80785,6 @@ void q_cpitemrect_on_selection_category(void* self, int32_t (*callback)());
 /// @param self QCPItemRect*
 ///
 QRect* q_cpitemrect_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cpitemrect_super_clip_rect` instead
-///
-#define q_cpitemrect_qbase_clip_rect q_cpitemrect_super_clip_rect
 
 /// Inherited from QCPAbstractItem
 ///
@@ -86267,10 +80819,6 @@ void q_cpitemrect_on_clip_rect(void* self, QRect* (*callback)());
 /// @param painter QCPPainter*
 ///
 void q_cpitemrect_apply_default_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cpitemrect_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpitemrect_qbase_apply_default_antialiasing_hint q_cpitemrect_super_apply_default_antialiasing_hint
 
 /// Inherited from QCPAbstractItem
 ///
@@ -86308,10 +80856,6 @@ void q_cpitemrect_on_apply_default_antialiasing_hint(void* self, void (*callback
 ///
 void q_cpitemrect_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpitemrect_super_select_event` instead
-///
-#define q_cpitemrect_qbase_select_event q_cpitemrect_super_select_event
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -86348,10 +80892,6 @@ void q_cpitemrect_on_select_event(void* self, void (*callback)(void*, void*, boo
 ///
 void q_cpitemrect_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpitemrect_super_deselect_event` instead
-///
-#define q_cpitemrect_qbase_deselect_event q_cpitemrect_super_deselect_event
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -86384,10 +80924,6 @@ void q_cpitemrect_on_deselect_event(void* self, void (*callback)(void*, bool*));
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpitemrect_parent_plot_initialized(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpitemrect_super_parent_plot_initialized` instead
-///
-#define q_cpitemrect_qbase_parent_plot_initialized q_cpitemrect_super_parent_plot_initialized
 
 /// Inherited from QCPLayerable
 ///
@@ -86422,10 +80958,6 @@ void q_cpitemrect_on_parent_plot_initialized(void* self, void (*callback)(void*,
 /// @param details QVariant*
 ///
 void q_cpitemrect_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpitemrect_super_mouse_press_event` instead
-///
-#define q_cpitemrect_qbase_mouse_press_event q_cpitemrect_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -86462,10 +80994,6 @@ void q_cpitemrect_on_mouse_press_event(void* self, void (*callback)(void*, void*
 ///
 void q_cpitemrect_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cpitemrect_super_mouse_move_event` instead
-///
-#define q_cpitemrect_qbase_mouse_move_event q_cpitemrect_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -86500,10 +81028,6 @@ void q_cpitemrect_on_mouse_move_event(void* self, void (*callback)(void*, void*,
 /// @param startPos QPointF*
 ///
 void q_cpitemrect_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cpitemrect_super_mouse_release_event` instead
-///
-#define q_cpitemrect_qbase_mouse_release_event q_cpitemrect_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -86540,10 +81064,6 @@ void q_cpitemrect_on_mouse_release_event(void* self, void (*callback)(void*, voi
 ///
 void q_cpitemrect_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpitemrect_super_mouse_double_click_event` instead
-///
-#define q_cpitemrect_qbase_mouse_double_click_event q_cpitemrect_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -86578,10 +81098,6 @@ void q_cpitemrect_on_mouse_double_click_event(void* self, void (*callback)(void*
 ///
 void q_cpitemrect_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemrect_super_wheel_event` instead
-///
-#define q_cpitemrect_qbase_wheel_event q_cpitemrect_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -86614,10 +81130,6 @@ void q_cpitemrect_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cpitemrect_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpitemrect_super_event` instead
-///
-#define q_cpitemrect_qbase_event q_cpitemrect_super_event
 
 /// Inherited from QObject
 ///
@@ -86653,10 +81165,6 @@ void q_cpitemrect_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cpitemrect_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemrect_super_event_filter` instead
-///
-#define q_cpitemrect_qbase_event_filter q_cpitemrect_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -86691,10 +81199,6 @@ void q_cpitemrect_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void q_cpitemrect_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemrect_super_timer_event` instead
-///
-#define q_cpitemrect_qbase_timer_event q_cpitemrect_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -86727,10 +81231,6 @@ void q_cpitemrect_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cpitemrect_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpitemrect_super_child_event` instead
-///
-#define q_cpitemrect_qbase_child_event q_cpitemrect_super_child_event
 
 /// Inherited from QObject
 ///
@@ -86765,10 +81265,6 @@ void q_cpitemrect_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpitemrect_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemrect_super_custom_event` instead
-///
-#define q_cpitemrect_qbase_custom_event q_cpitemrect_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -86802,10 +81298,6 @@ void q_cpitemrect_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpitemrect_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpitemrect_super_connect_notify` instead
-///
-#define q_cpitemrect_qbase_connect_notify q_cpitemrect_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -86838,10 +81330,6 @@ void q_cpitemrect_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_cpitemrect_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpitemrect_super_disconnect_notify` instead
-///
-#define q_cpitemrect_qbase_disconnect_notify q_cpitemrect_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -86878,10 +81366,6 @@ void q_cpitemrect_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 double q_cpitemrect_rect_distance(void* self, void* rect, void* pos, bool filledRect);
 
-/// @warning DEPRECATED: Use `q_cpitemrect_super_rect_distance` instead
-///
-#define q_cpitemrect_qbase_rect_distance q_cpitemrect_super_rect_distance
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -86917,10 +81401,6 @@ void q_cpitemrect_on_rect_distance(void* self, double (*callback)(void*, void*, 
 ///
 QCPItemPosition* q_cpitemrect_create_position(void* self, const char* name);
 
-/// @warning DEPRECATED: Use `q_cpitemrect_super_create_position` instead
-///
-#define q_cpitemrect_qbase_create_position q_cpitemrect_super_create_position
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -86954,10 +81434,6 @@ void q_cpitemrect_on_create_position(void* self, QCPItemPosition* (*callback)(vo
 /// @param anchorId int
 ///
 QCPItemAnchor* q_cpitemrect_create_anchor(void* self, const char* name, int anchorId);
-
-/// @warning DEPRECATED: Use `q_cpitemrect_super_create_anchor` instead
-///
-#define q_cpitemrect_qbase_create_anchor q_cpitemrect_super_create_anchor
 
 /// Inherited from QCPAbstractItem
 ///
@@ -86993,10 +81469,6 @@ void q_cpitemrect_on_create_anchor(void* self, QCPItemAnchor* (*callback)(void*,
 ///
 void q_cpitemrect_initialize_parent_plot(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cpitemrect_super_initialize_parent_plot` instead
-///
-#define q_cpitemrect_qbase_initialize_parent_plot q_cpitemrect_super_initialize_parent_plot
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -87029,10 +81501,6 @@ void q_cpitemrect_on_initialize_parent_plot(void* self, void (*callback)(void*, 
 /// @param parentLayerable QCPLayerable*
 ///
 void q_cpitemrect_set_parent_layerable(void* self, void* parentLayerable);
-
-/// @warning DEPRECATED: Use `q_cpitemrect_super_set_parent_layerable` instead
-///
-#define q_cpitemrect_qbase_set_parent_layerable q_cpitemrect_super_set_parent_layerable
 
 /// Inherited from QCPLayerable
 ///
@@ -87067,10 +81535,6 @@ void q_cpitemrect_on_set_parent_layerable(void* self, void (*callback)(void*, vo
 /// @param prepend bool
 ///
 bool q_cpitemrect_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpitemrect_super_move_to_layer` instead
-///
-#define q_cpitemrect_qbase_move_to_layer q_cpitemrect_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -87108,10 +81572,6 @@ void q_cpitemrect_on_move_to_layer(void* self, bool (*callback)(void*, void*, bo
 ///
 void q_cpitemrect_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpitemrect_super_apply_antialiasing_hint` instead
-///
-#define q_cpitemrect_qbase_apply_antialiasing_hint q_cpitemrect_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -87146,10 +81606,6 @@ void q_cpitemrect_on_apply_antialiasing_hint(void* self, void (*callback)(void*,
 ///
 QObject* q_cpitemrect_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpitemrect_super_sender` instead
-///
-#define q_cpitemrect_qbase_sender q_cpitemrect_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -87180,10 +81636,6 @@ void q_cpitemrect_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPItemRect*
 ///
 int32_t q_cpitemrect_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpitemrect_super_sender_signal_index` instead
-///
-#define q_cpitemrect_qbase_sender_signal_index q_cpitemrect_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -87217,10 +81669,6 @@ void q_cpitemrect_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cpitemrect_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpitemrect_super_receivers` instead
-///
-#define q_cpitemrect_qbase_receivers q_cpitemrect_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -87253,10 +81701,6 @@ void q_cpitemrect_on_receivers(void* self, int32_t (*callback)(void*, const char
 /// @param signal QMetaMethod*
 ///
 bool q_cpitemrect_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpitemrect_super_is_signal_connected` instead
-///
-#define q_cpitemrect_qbase_is_signal_connected q_cpitemrect_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -87322,10 +81766,6 @@ const QMetaObject* q_cpitemtext_meta_object(void* self);
 ///
 void q_cpitemtext_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_meta_object` instead
-///
-#define q_cpitemtext_qbase_meta_object q_cpitemtext_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -87345,10 +81785,6 @@ void* q_cpitemtext_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPItemText* self, const char* param1)
 ///
 void q_cpitemtext_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpitemtext_super_metacast` instead
-///
-#define q_cpitemtext_qbase_metacast q_cpitemtext_super_metacast
 
 /// Base class method implementation
 ///
@@ -87370,10 +81806,6 @@ int32_t q_cpitemtext_metacall(void* self, int32_t param1, int param2, void* para
 /// @param callback int32_t func(QCPItemText* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpitemtext_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpitemtext_super_metacall` instead
-///
-#define q_cpitemtext_qbase_metacall q_cpitemtext_super_metacall
 
 /// Base class method implementation
 ///
@@ -87585,10 +82017,6 @@ double q_cpitemtext_select_test(void* self, void* pos, bool onlySelectable, void
 ///
 void q_cpitemtext_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_select_test` instead
-///
-#define q_cpitemtext_qbase_select_test q_cpitemtext_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemText.html)
 ///
 /// Base class method implementation
@@ -87670,10 +82098,6 @@ void q_cpitemtext_draw(void* self, void* painter);
 ///
 void q_cpitemtext_on_draw(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_draw` instead
-///
-#define q_cpitemtext_qbase_draw q_cpitemtext_super_draw
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemText.html)
 ///
 /// Base class method implementation
@@ -87700,10 +82124,6 @@ QPointF* q_cpitemtext_anchor_pixel_position(void* self, int anchorId);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemtext_on_anchor_pixel_position(void* self, QPointF* (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_cpitemtext_super_anchor_pixel_position` instead
-///
-#define q_cpitemtext_qbase_anchor_pixel_position q_cpitemtext_super_anchor_pixel_position
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemText.html)
 ///
@@ -87734,10 +82154,6 @@ QPointF* q_cpitemtext_get_text_draw_point(void* self, void* pos, void* rect, int
 ///
 void q_cpitemtext_on_get_text_draw_point(void* self, QPointF* (*callback)(void*, void*, void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_get_text_draw_point` instead
-///
-#define q_cpitemtext_qbase_get_text_draw_point q_cpitemtext_super_get_text_draw_point
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemText.html)
 ///
 /// Base class method implementation
@@ -87766,10 +82182,6 @@ QFont* q_cpitemtext_main_font(void* self);
 ///
 void q_cpitemtext_on_main_font(void* self, QFont* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_main_font` instead
-///
-#define q_cpitemtext_qbase_main_font q_cpitemtext_super_main_font
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemText.html)
 ///
 /// Base class method implementation
@@ -87794,10 +82206,6 @@ QColor* q_cpitemtext_main_color(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemtext_on_main_color(void* self, QColor* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpitemtext_super_main_color` instead
-///
-#define q_cpitemtext_qbase_main_color q_cpitemtext_super_main_color
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemText.html)
 ///
@@ -87824,10 +82232,6 @@ QPen* q_cpitemtext_main_pen(void* self);
 ///
 void q_cpitemtext_on_main_pen(void* self, QPen* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_main_pen` instead
-///
-#define q_cpitemtext_qbase_main_pen q_cpitemtext_super_main_pen
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemText.html)
 ///
 /// Base class method implementation
@@ -87852,10 +82256,6 @@ QBrush* q_cpitemtext_main_brush(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemtext_on_main_brush(void* self, QBrush* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpitemtext_super_main_brush` instead
-///
-#define q_cpitemtext_qbase_main_brush q_cpitemtext_super_main_brush
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemText.html)
 ///
@@ -88587,10 +82987,6 @@ void q_cpitemtext_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_cpitemtext_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_selection_category` instead
-///
-#define q_cpitemtext_qbase_selection_category q_cpitemtext_super_selection_category
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -88623,10 +83019,6 @@ void q_cpitemtext_on_selection_category(void* self, int32_t (*callback)());
 /// @param self QCPItemText*
 ///
 QRect* q_cpitemtext_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cpitemtext_super_clip_rect` instead
-///
-#define q_cpitemtext_qbase_clip_rect q_cpitemtext_super_clip_rect
 
 /// Inherited from QCPAbstractItem
 ///
@@ -88661,10 +83053,6 @@ void q_cpitemtext_on_clip_rect(void* self, QRect* (*callback)());
 /// @param painter QCPPainter*
 ///
 void q_cpitemtext_apply_default_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cpitemtext_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpitemtext_qbase_apply_default_antialiasing_hint q_cpitemtext_super_apply_default_antialiasing_hint
 
 /// Inherited from QCPAbstractItem
 ///
@@ -88702,10 +83090,6 @@ void q_cpitemtext_on_apply_default_antialiasing_hint(void* self, void (*callback
 ///
 void q_cpitemtext_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_select_event` instead
-///
-#define q_cpitemtext_qbase_select_event q_cpitemtext_super_select_event
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -88742,10 +83126,6 @@ void q_cpitemtext_on_select_event(void* self, void (*callback)(void*, void*, boo
 ///
 void q_cpitemtext_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_deselect_event` instead
-///
-#define q_cpitemtext_qbase_deselect_event q_cpitemtext_super_deselect_event
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -88778,10 +83158,6 @@ void q_cpitemtext_on_deselect_event(void* self, void (*callback)(void*, bool*));
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpitemtext_parent_plot_initialized(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpitemtext_super_parent_plot_initialized` instead
-///
-#define q_cpitemtext_qbase_parent_plot_initialized q_cpitemtext_super_parent_plot_initialized
 
 /// Inherited from QCPLayerable
 ///
@@ -88816,10 +83192,6 @@ void q_cpitemtext_on_parent_plot_initialized(void* self, void (*callback)(void*,
 /// @param details QVariant*
 ///
 void q_cpitemtext_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpitemtext_super_mouse_press_event` instead
-///
-#define q_cpitemtext_qbase_mouse_press_event q_cpitemtext_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -88856,10 +83228,6 @@ void q_cpitemtext_on_mouse_press_event(void* self, void (*callback)(void*, void*
 ///
 void q_cpitemtext_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_mouse_move_event` instead
-///
-#define q_cpitemtext_qbase_mouse_move_event q_cpitemtext_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -88894,10 +83262,6 @@ void q_cpitemtext_on_mouse_move_event(void* self, void (*callback)(void*, void*,
 /// @param startPos QPointF*
 ///
 void q_cpitemtext_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cpitemtext_super_mouse_release_event` instead
-///
-#define q_cpitemtext_qbase_mouse_release_event q_cpitemtext_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -88934,10 +83298,6 @@ void q_cpitemtext_on_mouse_release_event(void* self, void (*callback)(void*, voi
 ///
 void q_cpitemtext_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_mouse_double_click_event` instead
-///
-#define q_cpitemtext_qbase_mouse_double_click_event q_cpitemtext_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -88972,10 +83332,6 @@ void q_cpitemtext_on_mouse_double_click_event(void* self, void (*callback)(void*
 ///
 void q_cpitemtext_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_wheel_event` instead
-///
-#define q_cpitemtext_qbase_wheel_event q_cpitemtext_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -89008,10 +83364,6 @@ void q_cpitemtext_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cpitemtext_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpitemtext_super_event` instead
-///
-#define q_cpitemtext_qbase_event q_cpitemtext_super_event
 
 /// Inherited from QObject
 ///
@@ -89047,10 +83399,6 @@ void q_cpitemtext_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cpitemtext_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_event_filter` instead
-///
-#define q_cpitemtext_qbase_event_filter q_cpitemtext_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -89085,10 +83433,6 @@ void q_cpitemtext_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void q_cpitemtext_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_timer_event` instead
-///
-#define q_cpitemtext_qbase_timer_event q_cpitemtext_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -89121,10 +83465,6 @@ void q_cpitemtext_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cpitemtext_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpitemtext_super_child_event` instead
-///
-#define q_cpitemtext_qbase_child_event q_cpitemtext_super_child_event
 
 /// Inherited from QObject
 ///
@@ -89159,10 +83499,6 @@ void q_cpitemtext_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpitemtext_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_custom_event` instead
-///
-#define q_cpitemtext_qbase_custom_event q_cpitemtext_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -89196,10 +83532,6 @@ void q_cpitemtext_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpitemtext_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_connect_notify` instead
-///
-#define q_cpitemtext_qbase_connect_notify q_cpitemtext_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -89232,10 +83564,6 @@ void q_cpitemtext_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_cpitemtext_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpitemtext_super_disconnect_notify` instead
-///
-#define q_cpitemtext_qbase_disconnect_notify q_cpitemtext_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -89272,10 +83600,6 @@ void q_cpitemtext_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 double q_cpitemtext_rect_distance(void* self, void* rect, void* pos, bool filledRect);
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_rect_distance` instead
-///
-#define q_cpitemtext_qbase_rect_distance q_cpitemtext_super_rect_distance
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -89311,10 +83635,6 @@ void q_cpitemtext_on_rect_distance(void* self, double (*callback)(void*, void*, 
 ///
 QCPItemPosition* q_cpitemtext_create_position(void* self, const char* name);
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_create_position` instead
-///
-#define q_cpitemtext_qbase_create_position q_cpitemtext_super_create_position
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -89348,10 +83668,6 @@ void q_cpitemtext_on_create_position(void* self, QCPItemPosition* (*callback)(vo
 /// @param anchorId int
 ///
 QCPItemAnchor* q_cpitemtext_create_anchor(void* self, const char* name, int anchorId);
-
-/// @warning DEPRECATED: Use `q_cpitemtext_super_create_anchor` instead
-///
-#define q_cpitemtext_qbase_create_anchor q_cpitemtext_super_create_anchor
 
 /// Inherited from QCPAbstractItem
 ///
@@ -89387,10 +83703,6 @@ void q_cpitemtext_on_create_anchor(void* self, QCPItemAnchor* (*callback)(void*,
 ///
 void q_cpitemtext_initialize_parent_plot(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_initialize_parent_plot` instead
-///
-#define q_cpitemtext_qbase_initialize_parent_plot q_cpitemtext_super_initialize_parent_plot
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -89423,10 +83735,6 @@ void q_cpitemtext_on_initialize_parent_plot(void* self, void (*callback)(void*, 
 /// @param parentLayerable QCPLayerable*
 ///
 void q_cpitemtext_set_parent_layerable(void* self, void* parentLayerable);
-
-/// @warning DEPRECATED: Use `q_cpitemtext_super_set_parent_layerable` instead
-///
-#define q_cpitemtext_qbase_set_parent_layerable q_cpitemtext_super_set_parent_layerable
 
 /// Inherited from QCPLayerable
 ///
@@ -89461,10 +83769,6 @@ void q_cpitemtext_on_set_parent_layerable(void* self, void (*callback)(void*, vo
 /// @param prepend bool
 ///
 bool q_cpitemtext_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpitemtext_super_move_to_layer` instead
-///
-#define q_cpitemtext_qbase_move_to_layer q_cpitemtext_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -89502,10 +83806,6 @@ void q_cpitemtext_on_move_to_layer(void* self, bool (*callback)(void*, void*, bo
 ///
 void q_cpitemtext_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_apply_antialiasing_hint` instead
-///
-#define q_cpitemtext_qbase_apply_antialiasing_hint q_cpitemtext_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -89540,10 +83840,6 @@ void q_cpitemtext_on_apply_antialiasing_hint(void* self, void (*callback)(void*,
 ///
 QObject* q_cpitemtext_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_sender` instead
-///
-#define q_cpitemtext_qbase_sender q_cpitemtext_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -89574,10 +83870,6 @@ void q_cpitemtext_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPItemText*
 ///
 int32_t q_cpitemtext_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpitemtext_super_sender_signal_index` instead
-///
-#define q_cpitemtext_qbase_sender_signal_index q_cpitemtext_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -89611,10 +83903,6 @@ void q_cpitemtext_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cpitemtext_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpitemtext_super_receivers` instead
-///
-#define q_cpitemtext_qbase_receivers q_cpitemtext_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -89647,10 +83935,6 @@ void q_cpitemtext_on_receivers(void* self, int32_t (*callback)(void*, const char
 /// @param signal QMetaMethod*
 ///
 bool q_cpitemtext_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpitemtext_super_is_signal_connected` instead
-///
-#define q_cpitemtext_qbase_is_signal_connected q_cpitemtext_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -89716,10 +84000,6 @@ const QMetaObject* q_cpitemellipse_meta_object(void* self);
 ///
 void q_cpitemellipse_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_meta_object` instead
-///
-#define q_cpitemellipse_qbase_meta_object q_cpitemellipse_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -89739,10 +84019,6 @@ void* q_cpitemellipse_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPItemEllipse* self, const char* param1)
 ///
 void q_cpitemellipse_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_metacast` instead
-///
-#define q_cpitemellipse_qbase_metacast q_cpitemellipse_super_metacast
 
 /// Base class method implementation
 ///
@@ -89764,10 +84040,6 @@ int32_t q_cpitemellipse_metacall(void* self, int32_t param1, int param2, void* p
 /// @param callback int32_t func(QCPItemEllipse* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpitemellipse_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_metacall` instead
-///
-#define q_cpitemellipse_qbase_metacall q_cpitemellipse_super_metacall
 
 /// Base class method implementation
 ///
@@ -89855,10 +84127,6 @@ double q_cpitemellipse_select_test(void* self, void* pos, bool onlySelectable, v
 /// @param callback double func(QCPItemEllipse* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
 void q_cpitemellipse_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
-
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_select_test` instead
-///
-#define q_cpitemellipse_qbase_select_test q_cpitemellipse_super_select_test
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemEllipse.html)
 ///
@@ -89953,10 +84221,6 @@ void q_cpitemellipse_draw(void* self, void* painter);
 ///
 void q_cpitemellipse_on_draw(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_draw` instead
-///
-#define q_cpitemellipse_qbase_draw q_cpitemellipse_super_draw
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemEllipse.html)
 ///
 /// Base class method implementation
@@ -89984,10 +84248,6 @@ QPointF* q_cpitemellipse_anchor_pixel_position(void* self, int anchorId);
 ///
 void q_cpitemellipse_on_anchor_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_anchor_pixel_position` instead
-///
-#define q_cpitemellipse_qbase_anchor_pixel_position q_cpitemellipse_super_anchor_pixel_position
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemEllipse.html)
 ///
 /// Base class method implementation
@@ -90014,10 +84274,6 @@ QPen* q_cpitemellipse_main_pen(void* self);
 ///
 void q_cpitemellipse_on_main_pen(void* self, QPen* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_main_pen` instead
-///
-#define q_cpitemellipse_qbase_main_pen q_cpitemellipse_super_main_pen
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemEllipse.html)
 ///
 /// Base class method implementation
@@ -90042,10 +84298,6 @@ QBrush* q_cpitemellipse_main_brush(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemellipse_on_main_brush(void* self, QBrush* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_main_brush` instead
-///
-#define q_cpitemellipse_qbase_main_brush q_cpitemellipse_super_main_brush
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemEllipse.html)
 ///
@@ -90786,10 +85038,6 @@ void q_cpitemellipse_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_cpitemellipse_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_selection_category` instead
-///
-#define q_cpitemellipse_qbase_selection_category q_cpitemellipse_super_selection_category
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -90822,10 +85070,6 @@ void q_cpitemellipse_on_selection_category(void* self, int32_t (*callback)());
 /// @param self QCPItemEllipse*
 ///
 QRect* q_cpitemellipse_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_clip_rect` instead
-///
-#define q_cpitemellipse_qbase_clip_rect q_cpitemellipse_super_clip_rect
 
 /// Inherited from QCPAbstractItem
 ///
@@ -90860,10 +85104,6 @@ void q_cpitemellipse_on_clip_rect(void* self, QRect* (*callback)());
 /// @param painter QCPPainter*
 ///
 void q_cpitemellipse_apply_default_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpitemellipse_qbase_apply_default_antialiasing_hint q_cpitemellipse_super_apply_default_antialiasing_hint
 
 /// Inherited from QCPAbstractItem
 ///
@@ -90901,10 +85141,6 @@ void q_cpitemellipse_on_apply_default_antialiasing_hint(void* self, void (*callb
 ///
 void q_cpitemellipse_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_select_event` instead
-///
-#define q_cpitemellipse_qbase_select_event q_cpitemellipse_super_select_event
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -90941,10 +85177,6 @@ void q_cpitemellipse_on_select_event(void* self, void (*callback)(void*, void*, 
 ///
 void q_cpitemellipse_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_deselect_event` instead
-///
-#define q_cpitemellipse_qbase_deselect_event q_cpitemellipse_super_deselect_event
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -90977,10 +85209,6 @@ void q_cpitemellipse_on_deselect_event(void* self, void (*callback)(void*, bool*
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpitemellipse_parent_plot_initialized(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_parent_plot_initialized` instead
-///
-#define q_cpitemellipse_qbase_parent_plot_initialized q_cpitemellipse_super_parent_plot_initialized
 
 /// Inherited from QCPLayerable
 ///
@@ -91015,10 +85243,6 @@ void q_cpitemellipse_on_parent_plot_initialized(void* self, void (*callback)(voi
 /// @param details QVariant*
 ///
 void q_cpitemellipse_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_mouse_press_event` instead
-///
-#define q_cpitemellipse_qbase_mouse_press_event q_cpitemellipse_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -91055,10 +85279,6 @@ void q_cpitemellipse_on_mouse_press_event(void* self, void (*callback)(void*, vo
 ///
 void q_cpitemellipse_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_mouse_move_event` instead
-///
-#define q_cpitemellipse_qbase_mouse_move_event q_cpitemellipse_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -91093,10 +85313,6 @@ void q_cpitemellipse_on_mouse_move_event(void* self, void (*callback)(void*, voi
 /// @param startPos QPointF*
 ///
 void q_cpitemellipse_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_mouse_release_event` instead
-///
-#define q_cpitemellipse_qbase_mouse_release_event q_cpitemellipse_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -91133,10 +85349,6 @@ void q_cpitemellipse_on_mouse_release_event(void* self, void (*callback)(void*, 
 ///
 void q_cpitemellipse_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_mouse_double_click_event` instead
-///
-#define q_cpitemellipse_qbase_mouse_double_click_event q_cpitemellipse_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -91171,10 +85383,6 @@ void q_cpitemellipse_on_mouse_double_click_event(void* self, void (*callback)(vo
 ///
 void q_cpitemellipse_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_wheel_event` instead
-///
-#define q_cpitemellipse_qbase_wheel_event q_cpitemellipse_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -91207,10 +85415,6 @@ void q_cpitemellipse_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cpitemellipse_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_event` instead
-///
-#define q_cpitemellipse_qbase_event q_cpitemellipse_super_event
 
 /// Inherited from QObject
 ///
@@ -91246,10 +85450,6 @@ void q_cpitemellipse_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cpitemellipse_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_event_filter` instead
-///
-#define q_cpitemellipse_qbase_event_filter q_cpitemellipse_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -91284,10 +85484,6 @@ void q_cpitemellipse_on_event_filter(void* self, bool (*callback)(void*, void*, 
 ///
 void q_cpitemellipse_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_timer_event` instead
-///
-#define q_cpitemellipse_qbase_timer_event q_cpitemellipse_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -91320,10 +85516,6 @@ void q_cpitemellipse_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cpitemellipse_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_child_event` instead
-///
-#define q_cpitemellipse_qbase_child_event q_cpitemellipse_super_child_event
 
 /// Inherited from QObject
 ///
@@ -91358,10 +85550,6 @@ void q_cpitemellipse_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpitemellipse_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_custom_event` instead
-///
-#define q_cpitemellipse_qbase_custom_event q_cpitemellipse_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -91395,10 +85583,6 @@ void q_cpitemellipse_on_custom_event(void* self, void (*callback)(void*, void*))
 ///
 void q_cpitemellipse_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_connect_notify` instead
-///
-#define q_cpitemellipse_qbase_connect_notify q_cpitemellipse_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -91431,10 +85615,6 @@ void q_cpitemellipse_on_connect_notify(void* self, void (*callback)(void*, void*
 /// @param signal QMetaMethod*
 ///
 void q_cpitemellipse_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_disconnect_notify` instead
-///
-#define q_cpitemellipse_qbase_disconnect_notify q_cpitemellipse_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -91471,10 +85651,6 @@ void q_cpitemellipse_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 double q_cpitemellipse_rect_distance(void* self, void* rect, void* pos, bool filledRect);
 
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_rect_distance` instead
-///
-#define q_cpitemellipse_qbase_rect_distance q_cpitemellipse_super_rect_distance
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -91510,10 +85686,6 @@ void q_cpitemellipse_on_rect_distance(void* self, double (*callback)(void*, void
 ///
 QCPItemPosition* q_cpitemellipse_create_position(void* self, const char* name);
 
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_create_position` instead
-///
-#define q_cpitemellipse_qbase_create_position q_cpitemellipse_super_create_position
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -91547,10 +85719,6 @@ void q_cpitemellipse_on_create_position(void* self, QCPItemPosition* (*callback)
 /// @param anchorId int
 ///
 QCPItemAnchor* q_cpitemellipse_create_anchor(void* self, const char* name, int anchorId);
-
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_create_anchor` instead
-///
-#define q_cpitemellipse_qbase_create_anchor q_cpitemellipse_super_create_anchor
 
 /// Inherited from QCPAbstractItem
 ///
@@ -91586,10 +85754,6 @@ void q_cpitemellipse_on_create_anchor(void* self, QCPItemAnchor* (*callback)(voi
 ///
 void q_cpitemellipse_initialize_parent_plot(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_initialize_parent_plot` instead
-///
-#define q_cpitemellipse_qbase_initialize_parent_plot q_cpitemellipse_super_initialize_parent_plot
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -91622,10 +85786,6 @@ void q_cpitemellipse_on_initialize_parent_plot(void* self, void (*callback)(void
 /// @param parentLayerable QCPLayerable*
 ///
 void q_cpitemellipse_set_parent_layerable(void* self, void* parentLayerable);
-
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_set_parent_layerable` instead
-///
-#define q_cpitemellipse_qbase_set_parent_layerable q_cpitemellipse_super_set_parent_layerable
 
 /// Inherited from QCPLayerable
 ///
@@ -91660,10 +85820,6 @@ void q_cpitemellipse_on_set_parent_layerable(void* self, void (*callback)(void*,
 /// @param prepend bool
 ///
 bool q_cpitemellipse_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_move_to_layer` instead
-///
-#define q_cpitemellipse_qbase_move_to_layer q_cpitemellipse_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -91701,10 +85857,6 @@ void q_cpitemellipse_on_move_to_layer(void* self, bool (*callback)(void*, void*,
 ///
 void q_cpitemellipse_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_apply_antialiasing_hint` instead
-///
-#define q_cpitemellipse_qbase_apply_antialiasing_hint q_cpitemellipse_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -91739,10 +85891,6 @@ void q_cpitemellipse_on_apply_antialiasing_hint(void* self, void (*callback)(voi
 ///
 QObject* q_cpitemellipse_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_sender` instead
-///
-#define q_cpitemellipse_qbase_sender q_cpitemellipse_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -91773,10 +85921,6 @@ void q_cpitemellipse_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPItemEllipse*
 ///
 int32_t q_cpitemellipse_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_sender_signal_index` instead
-///
-#define q_cpitemellipse_qbase_sender_signal_index q_cpitemellipse_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -91810,10 +85954,6 @@ void q_cpitemellipse_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cpitemellipse_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_receivers` instead
-///
-#define q_cpitemellipse_qbase_receivers q_cpitemellipse_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -91846,10 +85986,6 @@ void q_cpitemellipse_on_receivers(void* self, int32_t (*callback)(void*, const c
 /// @param signal QMetaMethod*
 ///
 bool q_cpitemellipse_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpitemellipse_super_is_signal_connected` instead
-///
-#define q_cpitemellipse_qbase_is_signal_connected q_cpitemellipse_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -91915,10 +86051,6 @@ const QMetaObject* q_cpitempixmap_meta_object(void* self);
 ///
 void q_cpitempixmap_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_meta_object` instead
-///
-#define q_cpitempixmap_qbase_meta_object q_cpitempixmap_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -91938,10 +86070,6 @@ void* q_cpitempixmap_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPItemPixmap* self, const char* param1)
 ///
 void q_cpitempixmap_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_metacast` instead
-///
-#define q_cpitempixmap_qbase_metacast q_cpitempixmap_super_metacast
 
 /// Base class method implementation
 ///
@@ -91963,10 +86091,6 @@ int32_t q_cpitempixmap_metacall(void* self, int32_t param1, int param2, void* pa
 /// @param callback int32_t func(QCPItemPixmap* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpitempixmap_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_metacall` instead
-///
-#define q_cpitempixmap_qbase_metacall q_cpitempixmap_super_metacall
 
 /// Base class method implementation
 ///
@@ -92071,10 +86195,6 @@ double q_cpitempixmap_select_test(void* self, void* pos, bool onlySelectable, vo
 ///
 void q_cpitempixmap_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_select_test` instead
-///
-#define q_cpitempixmap_qbase_select_test q_cpitempixmap_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemPixmap.html)
 ///
 /// Base class method implementation
@@ -92150,10 +86270,6 @@ void q_cpitempixmap_draw(void* self, void* painter);
 ///
 void q_cpitempixmap_on_draw(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_draw` instead
-///
-#define q_cpitempixmap_qbase_draw q_cpitempixmap_super_draw
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemPixmap.html)
 ///
 /// Base class method implementation
@@ -92181,10 +86297,6 @@ QPointF* q_cpitempixmap_anchor_pixel_position(void* self, int anchorId);
 ///
 void q_cpitempixmap_on_anchor_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_anchor_pixel_position` instead
-///
-#define q_cpitempixmap_qbase_anchor_pixel_position q_cpitempixmap_super_anchor_pixel_position
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemPixmap.html)
 ///
 /// Base class method implementation
@@ -92208,10 +86320,6 @@ void q_cpitempixmap_update_scaled_pixmap(void* self);
 /// @param callback void func()
 ///
 void q_cpitempixmap_on_update_scaled_pixmap(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_update_scaled_pixmap` instead
-///
-#define q_cpitempixmap_qbase_update_scaled_pixmap q_cpitempixmap_super_update_scaled_pixmap
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemPixmap.html)
 ///
@@ -92238,10 +86346,6 @@ QRect* q_cpitempixmap_get_final_rect(void* self);
 ///
 void q_cpitempixmap_on_get_final_rect(void* self, QRect* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_get_final_rect` instead
-///
-#define q_cpitempixmap_qbase_get_final_rect q_cpitempixmap_super_get_final_rect
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemPixmap.html)
 ///
 /// Base class method implementation
@@ -92266,10 +86370,6 @@ QPen* q_cpitempixmap_main_pen(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitempixmap_on_main_pen(void* self, QPen* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_main_pen` instead
-///
-#define q_cpitempixmap_qbase_main_pen q_cpitempixmap_super_main_pen
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemPixmap.html)
 ///
@@ -92331,10 +86431,6 @@ void q_cpitempixmap_update_scaled_pixmap1(void* self, void* finalRect);
 ///
 void q_cpitempixmap_on_update_scaled_pixmap1(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_update_scaled_pixmap1` instead
-///
-#define q_cpitempixmap_qbase_update_scaled_pixmap1 q_cpitempixmap_super_update_scaled_pixmap1
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemPixmap.html)
 ///
 /// Base class method implementation
@@ -92360,10 +86456,6 @@ void q_cpitempixmap_update_scaled_pixmap2(void* self, void* finalRect, bool flip
 /// @param callback void func(QCPItemPixmap* self, QRect* finalRect, bool flipHorz)
 ///
 void q_cpitempixmap_on_update_scaled_pixmap2(void* self, void (*callback)(void*, void*, bool));
-
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_update_scaled_pixmap2` instead
-///
-#define q_cpitempixmap_qbase_update_scaled_pixmap2 q_cpitempixmap_super_update_scaled_pixmap2
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemPixmap.html)
 ///
@@ -92392,10 +86484,6 @@ void q_cpitempixmap_update_scaled_pixmap3(void* self, void* finalRect, bool flip
 /// @param callback void func(QCPItemPixmap* self, QRect* finalRect, bool flipHorz, bool flipVert)
 ///
 void q_cpitempixmap_on_update_scaled_pixmap3(void* self, void (*callback)(void*, void*, bool, bool));
-
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_update_scaled_pixmap3` instead
-///
-#define q_cpitempixmap_qbase_update_scaled_pixmap3 q_cpitempixmap_super_update_scaled_pixmap3
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemPixmap.html)
 ///
@@ -92426,10 +86514,6 @@ QRect* q_cpitempixmap_get_final_rect1(void* self, bool* flippedHorz);
 ///
 void q_cpitempixmap_on_get_final_rect1(void* self, QRect* (*callback)(void*, bool*));
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_get_final_rect1` instead
-///
-#define q_cpitempixmap_qbase_get_final_rect1 q_cpitempixmap_super_get_final_rect1
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemPixmap.html)
 ///
 /// Base class method implementation
@@ -92457,10 +86541,6 @@ QRect* q_cpitempixmap_get_final_rect2(void* self, bool* flippedHorz, bool* flipp
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitempixmap_on_get_final_rect2(void* self, QRect* (*callback)(void*, bool*, bool*));
-
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_get_final_rect2` instead
-///
-#define q_cpitempixmap_qbase_get_final_rect2 q_cpitempixmap_super_get_final_rect2
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemPixmap.html)
 ///
@@ -93184,10 +87264,6 @@ void q_cpitempixmap_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_cpitempixmap_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_selection_category` instead
-///
-#define q_cpitempixmap_qbase_selection_category q_cpitempixmap_super_selection_category
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -93220,10 +87296,6 @@ void q_cpitempixmap_on_selection_category(void* self, int32_t (*callback)());
 /// @param self QCPItemPixmap*
 ///
 QRect* q_cpitempixmap_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_clip_rect` instead
-///
-#define q_cpitempixmap_qbase_clip_rect q_cpitempixmap_super_clip_rect
 
 /// Inherited from QCPAbstractItem
 ///
@@ -93258,10 +87330,6 @@ void q_cpitempixmap_on_clip_rect(void* self, QRect* (*callback)());
 /// @param painter QCPPainter*
 ///
 void q_cpitempixmap_apply_default_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpitempixmap_qbase_apply_default_antialiasing_hint q_cpitempixmap_super_apply_default_antialiasing_hint
 
 /// Inherited from QCPAbstractItem
 ///
@@ -93299,10 +87367,6 @@ void q_cpitempixmap_on_apply_default_antialiasing_hint(void* self, void (*callba
 ///
 void q_cpitempixmap_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_select_event` instead
-///
-#define q_cpitempixmap_qbase_select_event q_cpitempixmap_super_select_event
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -93339,10 +87403,6 @@ void q_cpitempixmap_on_select_event(void* self, void (*callback)(void*, void*, b
 ///
 void q_cpitempixmap_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_deselect_event` instead
-///
-#define q_cpitempixmap_qbase_deselect_event q_cpitempixmap_super_deselect_event
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -93375,10 +87435,6 @@ void q_cpitempixmap_on_deselect_event(void* self, void (*callback)(void*, bool*)
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpitempixmap_parent_plot_initialized(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_parent_plot_initialized` instead
-///
-#define q_cpitempixmap_qbase_parent_plot_initialized q_cpitempixmap_super_parent_plot_initialized
 
 /// Inherited from QCPLayerable
 ///
@@ -93413,10 +87469,6 @@ void q_cpitempixmap_on_parent_plot_initialized(void* self, void (*callback)(void
 /// @param details QVariant*
 ///
 void q_cpitempixmap_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_mouse_press_event` instead
-///
-#define q_cpitempixmap_qbase_mouse_press_event q_cpitempixmap_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -93453,10 +87505,6 @@ void q_cpitempixmap_on_mouse_press_event(void* self, void (*callback)(void*, voi
 ///
 void q_cpitempixmap_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_mouse_move_event` instead
-///
-#define q_cpitempixmap_qbase_mouse_move_event q_cpitempixmap_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -93491,10 +87539,6 @@ void q_cpitempixmap_on_mouse_move_event(void* self, void (*callback)(void*, void
 /// @param startPos QPointF*
 ///
 void q_cpitempixmap_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_mouse_release_event` instead
-///
-#define q_cpitempixmap_qbase_mouse_release_event q_cpitempixmap_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -93531,10 +87575,6 @@ void q_cpitempixmap_on_mouse_release_event(void* self, void (*callback)(void*, v
 ///
 void q_cpitempixmap_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_mouse_double_click_event` instead
-///
-#define q_cpitempixmap_qbase_mouse_double_click_event q_cpitempixmap_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -93569,10 +87609,6 @@ void q_cpitempixmap_on_mouse_double_click_event(void* self, void (*callback)(voi
 ///
 void q_cpitempixmap_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_wheel_event` instead
-///
-#define q_cpitempixmap_qbase_wheel_event q_cpitempixmap_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -93605,10 +87641,6 @@ void q_cpitempixmap_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cpitempixmap_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_event` instead
-///
-#define q_cpitempixmap_qbase_event q_cpitempixmap_super_event
 
 /// Inherited from QObject
 ///
@@ -93644,10 +87676,6 @@ void q_cpitempixmap_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cpitempixmap_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_event_filter` instead
-///
-#define q_cpitempixmap_qbase_event_filter q_cpitempixmap_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -93682,10 +87710,6 @@ void q_cpitempixmap_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void q_cpitempixmap_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_timer_event` instead
-///
-#define q_cpitempixmap_qbase_timer_event q_cpitempixmap_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -93718,10 +87742,6 @@ void q_cpitempixmap_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cpitempixmap_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_child_event` instead
-///
-#define q_cpitempixmap_qbase_child_event q_cpitempixmap_super_child_event
 
 /// Inherited from QObject
 ///
@@ -93756,10 +87776,6 @@ void q_cpitempixmap_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpitempixmap_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_custom_event` instead
-///
-#define q_cpitempixmap_qbase_custom_event q_cpitempixmap_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -93793,10 +87809,6 @@ void q_cpitempixmap_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpitempixmap_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_connect_notify` instead
-///
-#define q_cpitempixmap_qbase_connect_notify q_cpitempixmap_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -93829,10 +87841,6 @@ void q_cpitempixmap_on_connect_notify(void* self, void (*callback)(void*, void*)
 /// @param signal QMetaMethod*
 ///
 void q_cpitempixmap_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_disconnect_notify` instead
-///
-#define q_cpitempixmap_qbase_disconnect_notify q_cpitempixmap_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -93869,10 +87877,6 @@ void q_cpitempixmap_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 double q_cpitempixmap_rect_distance(void* self, void* rect, void* pos, bool filledRect);
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_rect_distance` instead
-///
-#define q_cpitempixmap_qbase_rect_distance q_cpitempixmap_super_rect_distance
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -93908,10 +87912,6 @@ void q_cpitempixmap_on_rect_distance(void* self, double (*callback)(void*, void*
 ///
 QCPItemPosition* q_cpitempixmap_create_position(void* self, const char* name);
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_create_position` instead
-///
-#define q_cpitempixmap_qbase_create_position q_cpitempixmap_super_create_position
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -93945,10 +87945,6 @@ void q_cpitempixmap_on_create_position(void* self, QCPItemPosition* (*callback)(
 /// @param anchorId int
 ///
 QCPItemAnchor* q_cpitempixmap_create_anchor(void* self, const char* name, int anchorId);
-
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_create_anchor` instead
-///
-#define q_cpitempixmap_qbase_create_anchor q_cpitempixmap_super_create_anchor
 
 /// Inherited from QCPAbstractItem
 ///
@@ -93984,10 +87980,6 @@ void q_cpitempixmap_on_create_anchor(void* self, QCPItemAnchor* (*callback)(void
 ///
 void q_cpitempixmap_initialize_parent_plot(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_initialize_parent_plot` instead
-///
-#define q_cpitempixmap_qbase_initialize_parent_plot q_cpitempixmap_super_initialize_parent_plot
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -94020,10 +88012,6 @@ void q_cpitempixmap_on_initialize_parent_plot(void* self, void (*callback)(void*
 /// @param parentLayerable QCPLayerable*
 ///
 void q_cpitempixmap_set_parent_layerable(void* self, void* parentLayerable);
-
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_set_parent_layerable` instead
-///
-#define q_cpitempixmap_qbase_set_parent_layerable q_cpitempixmap_super_set_parent_layerable
 
 /// Inherited from QCPLayerable
 ///
@@ -94058,10 +88046,6 @@ void q_cpitempixmap_on_set_parent_layerable(void* self, void (*callback)(void*, 
 /// @param prepend bool
 ///
 bool q_cpitempixmap_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_move_to_layer` instead
-///
-#define q_cpitempixmap_qbase_move_to_layer q_cpitempixmap_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -94099,10 +88083,6 @@ void q_cpitempixmap_on_move_to_layer(void* self, bool (*callback)(void*, void*, 
 ///
 void q_cpitempixmap_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_apply_antialiasing_hint` instead
-///
-#define q_cpitempixmap_qbase_apply_antialiasing_hint q_cpitempixmap_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -94137,10 +88117,6 @@ void q_cpitempixmap_on_apply_antialiasing_hint(void* self, void (*callback)(void
 ///
 QObject* q_cpitempixmap_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_sender` instead
-///
-#define q_cpitempixmap_qbase_sender q_cpitempixmap_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -94171,10 +88147,6 @@ void q_cpitempixmap_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPItemPixmap*
 ///
 int32_t q_cpitempixmap_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_sender_signal_index` instead
-///
-#define q_cpitempixmap_qbase_sender_signal_index q_cpitempixmap_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -94208,10 +88180,6 @@ void q_cpitempixmap_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cpitempixmap_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_receivers` instead
-///
-#define q_cpitempixmap_qbase_receivers q_cpitempixmap_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -94244,10 +88212,6 @@ void q_cpitempixmap_on_receivers(void* self, int32_t (*callback)(void*, const ch
 /// @param signal QMetaMethod*
 ///
 bool q_cpitempixmap_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpitempixmap_super_is_signal_connected` instead
-///
-#define q_cpitempixmap_qbase_is_signal_connected q_cpitempixmap_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -94313,10 +88277,6 @@ const QMetaObject* q_cpitemtracer_meta_object(void* self);
 ///
 void q_cpitemtracer_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_meta_object` instead
-///
-#define q_cpitemtracer_qbase_meta_object q_cpitemtracer_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -94336,10 +88296,6 @@ void* q_cpitemtracer_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPItemTracer* self, const char* param1)
 ///
 void q_cpitemtracer_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_metacast` instead
-///
-#define q_cpitemtracer_qbase_metacast q_cpitemtracer_super_metacast
 
 /// Base class method implementation
 ///
@@ -94361,10 +88317,6 @@ int32_t q_cpitemtracer_metacall(void* self, int32_t param1, int param2, void* pa
 /// @param callback int32_t func(QCPItemTracer* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpitemtracer_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_metacall` instead
-///
-#define q_cpitemtracer_qbase_metacall q_cpitemtracer_super_metacall
 
 /// Base class method implementation
 ///
@@ -94520,10 +88472,6 @@ double q_cpitemtracer_select_test(void* self, void* pos, bool onlySelectable, vo
 ///
 void q_cpitemtracer_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_select_test` instead
-///
-#define q_cpitemtracer_qbase_select_test q_cpitemtracer_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemTracer.html)
 ///
 /// Base class method implementation
@@ -94563,10 +88511,6 @@ void q_cpitemtracer_draw(void* self, void* painter);
 ///
 void q_cpitemtracer_on_draw(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_draw` instead
-///
-#define q_cpitemtracer_qbase_draw q_cpitemtracer_super_draw
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemTracer.html)
 ///
 /// Base class method implementation
@@ -94593,10 +88537,6 @@ QPen* q_cpitemtracer_main_pen(void* self);
 ///
 void q_cpitemtracer_on_main_pen(void* self, QPen* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_main_pen` instead
-///
-#define q_cpitemtracer_qbase_main_pen q_cpitemtracer_super_main_pen
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemTracer.html)
 ///
 /// Base class method implementation
@@ -94621,10 +88561,6 @@ QBrush* q_cpitemtracer_main_brush(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemtracer_on_main_brush(void* self, QBrush* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_main_brush` instead
-///
-#define q_cpitemtracer_qbase_main_brush q_cpitemtracer_super_main_brush
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemTracer.html)
 ///
@@ -95356,10 +89292,6 @@ void q_cpitemtracer_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_cpitemtracer_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_selection_category` instead
-///
-#define q_cpitemtracer_qbase_selection_category q_cpitemtracer_super_selection_category
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -95392,10 +89324,6 @@ void q_cpitemtracer_on_selection_category(void* self, int32_t (*callback)());
 /// @param self QCPItemTracer*
 ///
 QRect* q_cpitemtracer_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_clip_rect` instead
-///
-#define q_cpitemtracer_qbase_clip_rect q_cpitemtracer_super_clip_rect
 
 /// Inherited from QCPAbstractItem
 ///
@@ -95430,10 +89358,6 @@ void q_cpitemtracer_on_clip_rect(void* self, QRect* (*callback)());
 /// @param painter QCPPainter*
 ///
 void q_cpitemtracer_apply_default_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpitemtracer_qbase_apply_default_antialiasing_hint q_cpitemtracer_super_apply_default_antialiasing_hint
 
 /// Inherited from QCPAbstractItem
 ///
@@ -95471,10 +89395,6 @@ void q_cpitemtracer_on_apply_default_antialiasing_hint(void* self, void (*callba
 ///
 void q_cpitemtracer_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_select_event` instead
-///
-#define q_cpitemtracer_qbase_select_event q_cpitemtracer_super_select_event
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -95511,10 +89431,6 @@ void q_cpitemtracer_on_select_event(void* self, void (*callback)(void*, void*, b
 ///
 void q_cpitemtracer_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_deselect_event` instead
-///
-#define q_cpitemtracer_qbase_deselect_event q_cpitemtracer_super_deselect_event
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -95547,10 +89463,6 @@ void q_cpitemtracer_on_deselect_event(void* self, void (*callback)(void*, bool*)
 /// @param anchorId int
 ///
 QPointF* q_cpitemtracer_anchor_pixel_position(void* self, int anchorId);
-
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_anchor_pixel_position` instead
-///
-#define q_cpitemtracer_qbase_anchor_pixel_position q_cpitemtracer_super_anchor_pixel_position
 
 /// Inherited from QCPAbstractItem
 ///
@@ -95587,10 +89499,6 @@ void q_cpitemtracer_on_anchor_pixel_position(void* self, QPointF* (*callback)(vo
 ///
 void q_cpitemtracer_parent_plot_initialized(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_parent_plot_initialized` instead
-///
-#define q_cpitemtracer_qbase_parent_plot_initialized q_cpitemtracer_super_parent_plot_initialized
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -95624,10 +89532,6 @@ void q_cpitemtracer_on_parent_plot_initialized(void* self, void (*callback)(void
 /// @param details QVariant*
 ///
 void q_cpitemtracer_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_mouse_press_event` instead
-///
-#define q_cpitemtracer_qbase_mouse_press_event q_cpitemtracer_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -95664,10 +89568,6 @@ void q_cpitemtracer_on_mouse_press_event(void* self, void (*callback)(void*, voi
 ///
 void q_cpitemtracer_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_mouse_move_event` instead
-///
-#define q_cpitemtracer_qbase_mouse_move_event q_cpitemtracer_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -95702,10 +89602,6 @@ void q_cpitemtracer_on_mouse_move_event(void* self, void (*callback)(void*, void
 /// @param startPos QPointF*
 ///
 void q_cpitemtracer_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_mouse_release_event` instead
-///
-#define q_cpitemtracer_qbase_mouse_release_event q_cpitemtracer_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -95742,10 +89638,6 @@ void q_cpitemtracer_on_mouse_release_event(void* self, void (*callback)(void*, v
 ///
 void q_cpitemtracer_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_mouse_double_click_event` instead
-///
-#define q_cpitemtracer_qbase_mouse_double_click_event q_cpitemtracer_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -95780,10 +89672,6 @@ void q_cpitemtracer_on_mouse_double_click_event(void* self, void (*callback)(voi
 ///
 void q_cpitemtracer_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_wheel_event` instead
-///
-#define q_cpitemtracer_qbase_wheel_event q_cpitemtracer_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -95816,10 +89704,6 @@ void q_cpitemtracer_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cpitemtracer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_event` instead
-///
-#define q_cpitemtracer_qbase_event q_cpitemtracer_super_event
 
 /// Inherited from QObject
 ///
@@ -95855,10 +89739,6 @@ void q_cpitemtracer_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cpitemtracer_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_event_filter` instead
-///
-#define q_cpitemtracer_qbase_event_filter q_cpitemtracer_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -95893,10 +89773,6 @@ void q_cpitemtracer_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void q_cpitemtracer_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_timer_event` instead
-///
-#define q_cpitemtracer_qbase_timer_event q_cpitemtracer_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -95929,10 +89805,6 @@ void q_cpitemtracer_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cpitemtracer_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_child_event` instead
-///
-#define q_cpitemtracer_qbase_child_event q_cpitemtracer_super_child_event
 
 /// Inherited from QObject
 ///
@@ -95967,10 +89839,6 @@ void q_cpitemtracer_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpitemtracer_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_custom_event` instead
-///
-#define q_cpitemtracer_qbase_custom_event q_cpitemtracer_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -96004,10 +89872,6 @@ void q_cpitemtracer_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpitemtracer_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_connect_notify` instead
-///
-#define q_cpitemtracer_qbase_connect_notify q_cpitemtracer_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -96040,10 +89904,6 @@ void q_cpitemtracer_on_connect_notify(void* self, void (*callback)(void*, void*)
 /// @param signal QMetaMethod*
 ///
 void q_cpitemtracer_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_disconnect_notify` instead
-///
-#define q_cpitemtracer_qbase_disconnect_notify q_cpitemtracer_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -96080,10 +89940,6 @@ void q_cpitemtracer_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 double q_cpitemtracer_rect_distance(void* self, void* rect, void* pos, bool filledRect);
 
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_rect_distance` instead
-///
-#define q_cpitemtracer_qbase_rect_distance q_cpitemtracer_super_rect_distance
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -96119,10 +89975,6 @@ void q_cpitemtracer_on_rect_distance(void* self, double (*callback)(void*, void*
 ///
 QCPItemPosition* q_cpitemtracer_create_position(void* self, const char* name);
 
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_create_position` instead
-///
-#define q_cpitemtracer_qbase_create_position q_cpitemtracer_super_create_position
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -96156,10 +90008,6 @@ void q_cpitemtracer_on_create_position(void* self, QCPItemPosition* (*callback)(
 /// @param anchorId int
 ///
 QCPItemAnchor* q_cpitemtracer_create_anchor(void* self, const char* name, int anchorId);
-
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_create_anchor` instead
-///
-#define q_cpitemtracer_qbase_create_anchor q_cpitemtracer_super_create_anchor
 
 /// Inherited from QCPAbstractItem
 ///
@@ -96195,10 +90043,6 @@ void q_cpitemtracer_on_create_anchor(void* self, QCPItemAnchor* (*callback)(void
 ///
 void q_cpitemtracer_initialize_parent_plot(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_initialize_parent_plot` instead
-///
-#define q_cpitemtracer_qbase_initialize_parent_plot q_cpitemtracer_super_initialize_parent_plot
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -96231,10 +90075,6 @@ void q_cpitemtracer_on_initialize_parent_plot(void* self, void (*callback)(void*
 /// @param parentLayerable QCPLayerable*
 ///
 void q_cpitemtracer_set_parent_layerable(void* self, void* parentLayerable);
-
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_set_parent_layerable` instead
-///
-#define q_cpitemtracer_qbase_set_parent_layerable q_cpitemtracer_super_set_parent_layerable
 
 /// Inherited from QCPLayerable
 ///
@@ -96269,10 +90109,6 @@ void q_cpitemtracer_on_set_parent_layerable(void* self, void (*callback)(void*, 
 /// @param prepend bool
 ///
 bool q_cpitemtracer_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_move_to_layer` instead
-///
-#define q_cpitemtracer_qbase_move_to_layer q_cpitemtracer_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -96310,10 +90146,6 @@ void q_cpitemtracer_on_move_to_layer(void* self, bool (*callback)(void*, void*, 
 ///
 void q_cpitemtracer_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_apply_antialiasing_hint` instead
-///
-#define q_cpitemtracer_qbase_apply_antialiasing_hint q_cpitemtracer_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -96348,10 +90180,6 @@ void q_cpitemtracer_on_apply_antialiasing_hint(void* self, void (*callback)(void
 ///
 QObject* q_cpitemtracer_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_sender` instead
-///
-#define q_cpitemtracer_qbase_sender q_cpitemtracer_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -96382,10 +90210,6 @@ void q_cpitemtracer_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPItemTracer*
 ///
 int32_t q_cpitemtracer_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_sender_signal_index` instead
-///
-#define q_cpitemtracer_qbase_sender_signal_index q_cpitemtracer_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -96419,10 +90243,6 @@ void q_cpitemtracer_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cpitemtracer_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_receivers` instead
-///
-#define q_cpitemtracer_qbase_receivers q_cpitemtracer_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -96455,10 +90275,6 @@ void q_cpitemtracer_on_receivers(void* self, int32_t (*callback)(void*, const ch
 /// @param signal QMetaMethod*
 ///
 bool q_cpitemtracer_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpitemtracer_super_is_signal_connected` instead
-///
-#define q_cpitemtracer_qbase_is_signal_connected q_cpitemtracer_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -96524,10 +90340,6 @@ const QMetaObject* q_cpitembracket_meta_object(void* self);
 ///
 void q_cpitembracket_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cpitembracket_super_meta_object` instead
-///
-#define q_cpitembracket_qbase_meta_object q_cpitembracket_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -96547,10 +90359,6 @@ void* q_cpitembracket_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPItemBracket* self, const char* param1)
 ///
 void q_cpitembracket_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cpitembracket_super_metacast` instead
-///
-#define q_cpitembracket_qbase_metacast q_cpitembracket_super_metacast
 
 /// Base class method implementation
 ///
@@ -96572,10 +90380,6 @@ int32_t q_cpitembracket_metacall(void* self, int32_t param1, int param2, void* p
 /// @param callback int32_t func(QCPItemBracket* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cpitembracket_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cpitembracket_super_metacall` instead
-///
-#define q_cpitembracket_qbase_metacall q_cpitembracket_super_metacall
 
 /// Base class method implementation
 ///
@@ -96666,10 +90470,6 @@ double q_cpitembracket_select_test(void* self, void* pos, bool onlySelectable, v
 ///
 void q_cpitembracket_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cpitembracket_super_select_test` instead
-///
-#define q_cpitembracket_qbase_select_test q_cpitembracket_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemBracket.html)
 ///
 /// Base class method implementation
@@ -96715,10 +90515,6 @@ void q_cpitembracket_draw(void* self, void* painter);
 ///
 void q_cpitembracket_on_draw(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cpitembracket_super_draw` instead
-///
-#define q_cpitembracket_qbase_draw q_cpitembracket_super_draw
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemBracket.html)
 ///
 /// Base class method implementation
@@ -96746,10 +90542,6 @@ QPointF* q_cpitembracket_anchor_pixel_position(void* self, int anchorId);
 ///
 void q_cpitembracket_on_anchor_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_cpitembracket_super_anchor_pixel_position` instead
-///
-#define q_cpitembracket_qbase_anchor_pixel_position q_cpitembracket_super_anchor_pixel_position
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemBracket.html)
 ///
 /// Base class method implementation
@@ -96775,10 +90567,6 @@ QPen* q_cpitembracket_main_pen(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitembracket_on_main_pen(void* self, QPen* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cpitembracket_super_main_pen` instead
-///
-#define q_cpitembracket_qbase_main_pen q_cpitembracket_super_main_pen
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemBracket.html)
 ///
@@ -97519,10 +91307,6 @@ void q_cpitembracket_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_cpitembracket_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cpitembracket_super_selection_category` instead
-///
-#define q_cpitembracket_qbase_selection_category q_cpitembracket_super_selection_category
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -97555,10 +91339,6 @@ void q_cpitembracket_on_selection_category(void* self, int32_t (*callback)());
 /// @param self QCPItemBracket*
 ///
 QRect* q_cpitembracket_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cpitembracket_super_clip_rect` instead
-///
-#define q_cpitembracket_qbase_clip_rect q_cpitembracket_super_clip_rect
 
 /// Inherited from QCPAbstractItem
 ///
@@ -97593,10 +91373,6 @@ void q_cpitembracket_on_clip_rect(void* self, QRect* (*callback)());
 /// @param painter QCPPainter*
 ///
 void q_cpitembracket_apply_default_antialiasing_hint(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_cpitembracket_super_apply_default_antialiasing_hint` instead
-///
-#define q_cpitembracket_qbase_apply_default_antialiasing_hint q_cpitembracket_super_apply_default_antialiasing_hint
 
 /// Inherited from QCPAbstractItem
 ///
@@ -97634,10 +91410,6 @@ void q_cpitembracket_on_apply_default_antialiasing_hint(void* self, void (*callb
 ///
 void q_cpitembracket_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpitembracket_super_select_event` instead
-///
-#define q_cpitembracket_qbase_select_event q_cpitembracket_super_select_event
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -97674,10 +91446,6 @@ void q_cpitembracket_on_select_event(void* self, void (*callback)(void*, void*, 
 ///
 void q_cpitembracket_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cpitembracket_super_deselect_event` instead
-///
-#define q_cpitembracket_qbase_deselect_event q_cpitembracket_super_deselect_event
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -97710,10 +91478,6 @@ void q_cpitembracket_on_deselect_event(void* self, void (*callback)(void*, bool*
 /// @param parentPlot QCustomPlot*
 ///
 void q_cpitembracket_parent_plot_initialized(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cpitembracket_super_parent_plot_initialized` instead
-///
-#define q_cpitembracket_qbase_parent_plot_initialized q_cpitembracket_super_parent_plot_initialized
 
 /// Inherited from QCPLayerable
 ///
@@ -97748,10 +91512,6 @@ void q_cpitembracket_on_parent_plot_initialized(void* self, void (*callback)(voi
 /// @param details QVariant*
 ///
 void q_cpitembracket_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cpitembracket_super_mouse_press_event` instead
-///
-#define q_cpitembracket_qbase_mouse_press_event q_cpitembracket_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -97788,10 +91548,6 @@ void q_cpitembracket_on_mouse_press_event(void* self, void (*callback)(void*, vo
 ///
 void q_cpitembracket_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cpitembracket_super_mouse_move_event` instead
-///
-#define q_cpitembracket_qbase_mouse_move_event q_cpitembracket_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -97826,10 +91582,6 @@ void q_cpitembracket_on_mouse_move_event(void* self, void (*callback)(void*, voi
 /// @param startPos QPointF*
 ///
 void q_cpitembracket_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cpitembracket_super_mouse_release_event` instead
-///
-#define q_cpitembracket_qbase_mouse_release_event q_cpitembracket_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -97866,10 +91618,6 @@ void q_cpitembracket_on_mouse_release_event(void* self, void (*callback)(void*, 
 ///
 void q_cpitembracket_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cpitembracket_super_mouse_double_click_event` instead
-///
-#define q_cpitembracket_qbase_mouse_double_click_event q_cpitembracket_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -97904,10 +91652,6 @@ void q_cpitembracket_on_mouse_double_click_event(void* self, void (*callback)(vo
 ///
 void q_cpitembracket_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitembracket_super_wheel_event` instead
-///
-#define q_cpitembracket_qbase_wheel_event q_cpitembracket_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -97940,10 +91684,6 @@ void q_cpitembracket_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cpitembracket_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpitembracket_super_event` instead
-///
-#define q_cpitembracket_qbase_event q_cpitembracket_super_event
 
 /// Inherited from QObject
 ///
@@ -97979,10 +91719,6 @@ void q_cpitembracket_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cpitembracket_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitembracket_super_event_filter` instead
-///
-#define q_cpitembracket_qbase_event_filter q_cpitembracket_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -98017,10 +91753,6 @@ void q_cpitembracket_on_event_filter(void* self, bool (*callback)(void*, void*, 
 ///
 void q_cpitembracket_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitembracket_super_timer_event` instead
-///
-#define q_cpitembracket_qbase_timer_event q_cpitembracket_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -98053,10 +91785,6 @@ void q_cpitembracket_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cpitembracket_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cpitembracket_super_child_event` instead
-///
-#define q_cpitembracket_qbase_child_event q_cpitembracket_super_child_event
 
 /// Inherited from QObject
 ///
@@ -98091,10 +91819,6 @@ void q_cpitembracket_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cpitembracket_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cpitembracket_super_custom_event` instead
-///
-#define q_cpitembracket_qbase_custom_event q_cpitembracket_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -98128,10 +91852,6 @@ void q_cpitembracket_on_custom_event(void* self, void (*callback)(void*, void*))
 ///
 void q_cpitembracket_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cpitembracket_super_connect_notify` instead
-///
-#define q_cpitembracket_qbase_connect_notify q_cpitembracket_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -98164,10 +91884,6 @@ void q_cpitembracket_on_connect_notify(void* self, void (*callback)(void*, void*
 /// @param signal QMetaMethod*
 ///
 void q_cpitembracket_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpitembracket_super_disconnect_notify` instead
-///
-#define q_cpitembracket_qbase_disconnect_notify q_cpitembracket_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -98204,10 +91920,6 @@ void q_cpitembracket_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 double q_cpitembracket_rect_distance(void* self, void* rect, void* pos, bool filledRect);
 
-/// @warning DEPRECATED: Use `q_cpitembracket_super_rect_distance` instead
-///
-#define q_cpitembracket_qbase_rect_distance q_cpitembracket_super_rect_distance
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -98243,10 +91955,6 @@ void q_cpitembracket_on_rect_distance(void* self, double (*callback)(void*, void
 ///
 QCPItemPosition* q_cpitembracket_create_position(void* self, const char* name);
 
-/// @warning DEPRECATED: Use `q_cpitembracket_super_create_position` instead
-///
-#define q_cpitembracket_qbase_create_position q_cpitembracket_super_create_position
-
 /// Inherited from QCPAbstractItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
@@ -98280,10 +91988,6 @@ void q_cpitembracket_on_create_position(void* self, QCPItemPosition* (*callback)
 /// @param anchorId int
 ///
 QCPItemAnchor* q_cpitembracket_create_anchor(void* self, const char* name, int anchorId);
-
-/// @warning DEPRECATED: Use `q_cpitembracket_super_create_anchor` instead
-///
-#define q_cpitembracket_qbase_create_anchor q_cpitembracket_super_create_anchor
 
 /// Inherited from QCPAbstractItem
 ///
@@ -98319,10 +92023,6 @@ void q_cpitembracket_on_create_anchor(void* self, QCPItemAnchor* (*callback)(voi
 ///
 void q_cpitembracket_initialize_parent_plot(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cpitembracket_super_initialize_parent_plot` instead
-///
-#define q_cpitembracket_qbase_initialize_parent_plot q_cpitembracket_super_initialize_parent_plot
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -98355,10 +92055,6 @@ void q_cpitembracket_on_initialize_parent_plot(void* self, void (*callback)(void
 /// @param parentLayerable QCPLayerable*
 ///
 void q_cpitembracket_set_parent_layerable(void* self, void* parentLayerable);
-
-/// @warning DEPRECATED: Use `q_cpitembracket_super_set_parent_layerable` instead
-///
-#define q_cpitembracket_qbase_set_parent_layerable q_cpitembracket_super_set_parent_layerable
 
 /// Inherited from QCPLayerable
 ///
@@ -98393,10 +92089,6 @@ void q_cpitembracket_on_set_parent_layerable(void* self, void (*callback)(void*,
 /// @param prepend bool
 ///
 bool q_cpitembracket_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cpitembracket_super_move_to_layer` instead
-///
-#define q_cpitembracket_qbase_move_to_layer q_cpitembracket_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -98434,10 +92126,6 @@ void q_cpitembracket_on_move_to_layer(void* self, bool (*callback)(void*, void*,
 ///
 void q_cpitembracket_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cpitembracket_super_apply_antialiasing_hint` instead
-///
-#define q_cpitembracket_qbase_apply_antialiasing_hint q_cpitembracket_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -98472,10 +92160,6 @@ void q_cpitembracket_on_apply_antialiasing_hint(void* self, void (*callback)(voi
 ///
 QObject* q_cpitembracket_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cpitembracket_super_sender` instead
-///
-#define q_cpitembracket_qbase_sender q_cpitembracket_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -98506,10 +92190,6 @@ void q_cpitembracket_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPItemBracket*
 ///
 int32_t q_cpitembracket_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cpitembracket_super_sender_signal_index` instead
-///
-#define q_cpitembracket_qbase_sender_signal_index q_cpitembracket_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -98543,10 +92223,6 @@ void q_cpitembracket_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cpitembracket_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cpitembracket_super_receivers` instead
-///
-#define q_cpitembracket_qbase_receivers q_cpitembracket_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -98579,10 +92255,6 @@ void q_cpitembracket_on_receivers(void* self, int32_t (*callback)(void*, const c
 /// @param signal QMetaMethod*
 ///
 bool q_cpitembracket_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cpitembracket_super_is_signal_connected` instead
-///
-#define q_cpitembracket_qbase_is_signal_connected q_cpitembracket_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -98648,10 +92320,6 @@ const QMetaObject* q_cppolaraxisradial_meta_object(void* self);
 ///
 void q_cppolaraxisradial_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_meta_object` instead
-///
-#define q_cppolaraxisradial_qbase_meta_object q_cppolaraxisradial_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -98671,10 +92339,6 @@ void* q_cppolaraxisradial_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPPolarAxisRadial* self, const char* param1)
 ///
 void q_cppolaraxisradial_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_metacast` instead
-///
-#define q_cppolaraxisradial_qbase_metacast q_cppolaraxisradial_super_metacast
 
 /// Base class method implementation
 ///
@@ -98696,10 +92360,6 @@ int32_t q_cppolaraxisradial_metacall(void* self, int32_t param1, int param2, voi
 /// @param callback int32_t func(QCPPolarAxisRadial* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cppolaraxisradial_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_metacall` instead
-///
-#define q_cppolaraxisradial_qbase_metacall q_cppolaraxisradial_super_metacall
 
 /// Base class method implementation
 ///
@@ -99319,10 +92979,6 @@ double q_cppolaraxisradial_select_test(void* self, void* pos, bool onlySelectabl
 ///
 void q_cppolaraxisradial_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_select_test` instead
-///
-#define q_cppolaraxisradial_qbase_select_test q_cppolaraxisradial_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
 /// Base class method implementation
@@ -99454,10 +93110,6 @@ void q_cppolaraxisradial_apply_default_antialiasing_hint(void* self, void* paint
 ///
 void q_cppolaraxisradial_on_apply_default_antialiasing_hint(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_apply_default_antialiasing_hint` instead
-///
-#define q_cppolaraxisradial_qbase_apply_default_antialiasing_hint q_cppolaraxisradial_super_apply_default_antialiasing_hint
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
 /// Base class method implementation
@@ -99482,10 +93134,6 @@ void q_cppolaraxisradial_draw(void* self, void* painter);
 /// @param callback void func(QCPPolarAxisRadial* self, QCPPainter* painter)
 ///
 void q_cppolaraxisradial_on_draw(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_draw` instead
-///
-#define q_cppolaraxisradial_qbase_draw q_cppolaraxisradial_super_draw
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
@@ -99512,10 +93160,6 @@ int32_t q_cppolaraxisradial_selection_category(void* self);
 /// @param callback int32_t func()
 ///
 void q_cppolaraxisradial_on_selection_category(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_selection_category` instead
-///
-#define q_cppolaraxisradial_qbase_selection_category q_cppolaraxisradial_super_selection_category
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
@@ -99546,10 +93190,6 @@ void q_cppolaraxisradial_select_event(void* self, void* event, bool additive, vo
 ///
 void q_cppolaraxisradial_on_select_event(void* self, void (*callback)(void*, void*, bool, void*, bool*));
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_select_event` instead
-///
-#define q_cppolaraxisradial_qbase_select_event q_cppolaraxisradial_super_select_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
 /// Base class method implementation
@@ -99578,10 +93218,6 @@ void q_cppolaraxisradial_deselect_event(void* self, bool* selectionStateChanged)
 ///
 void q_cppolaraxisradial_on_deselect_event(void* self, void (*callback)(void*, bool*));
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_deselect_event` instead
-///
-#define q_cppolaraxisradial_qbase_deselect_event q_cppolaraxisradial_super_deselect_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
 /// Base class method implementation
@@ -99607,10 +93243,6 @@ void q_cppolaraxisradial_mouse_press_event(void* self, void* event, void* detail
 /// @param callback void func(QCPPolarAxisRadial* self, QMouseEvent* event, QVariant* details)
 ///
 void q_cppolaraxisradial_on_mouse_press_event(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_mouse_press_event` instead
-///
-#define q_cppolaraxisradial_qbase_mouse_press_event q_cppolaraxisradial_super_mouse_press_event
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
@@ -99639,10 +93271,6 @@ void q_cppolaraxisradial_mouse_move_event(void* self, void* event, void* startPo
 ///
 void q_cppolaraxisradial_on_mouse_move_event(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_mouse_move_event` instead
-///
-#define q_cppolaraxisradial_qbase_mouse_move_event q_cppolaraxisradial_super_mouse_move_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
 /// Base class method implementation
@@ -99670,10 +93298,6 @@ void q_cppolaraxisradial_mouse_release_event(void* self, void* event, void* star
 ///
 void q_cppolaraxisradial_on_mouse_release_event(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_mouse_release_event` instead
-///
-#define q_cppolaraxisradial_qbase_mouse_release_event q_cppolaraxisradial_super_mouse_release_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
 /// Base class method implementation
@@ -99699,10 +93323,6 @@ void q_cppolaraxisradial_wheel_event(void* self, void* event);
 /// @param callback void func(QCPPolarAxisRadial* self, QWheelEvent* event)
 ///
 void q_cppolaraxisradial_on_wheel_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_wheel_event` instead
-///
-#define q_cppolaraxisradial_qbase_wheel_event q_cppolaraxisradial_super_wheel_event
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
@@ -99730,10 +93350,6 @@ void q_cppolaraxisradial_update_geometry(void* self, void* center, double radius
 ///
 void q_cppolaraxisradial_on_update_geometry(void* self, void (*callback)(void*, void*, double));
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_update_geometry` instead
-///
-#define q_cppolaraxisradial_qbase_update_geometry q_cppolaraxisradial_super_update_geometry
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
 /// Base class method implementation
@@ -99758,10 +93374,6 @@ void q_cppolaraxisradial_setup_tick_vectors(void* self);
 /// @param callback void func()
 ///
 void q_cppolaraxisradial_on_setup_tick_vectors(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_setup_tick_vectors` instead
-///
-#define q_cppolaraxisradial_qbase_setup_tick_vectors q_cppolaraxisradial_super_setup_tick_vectors
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
@@ -99788,10 +93400,6 @@ QPen* q_cppolaraxisradial_get_base_pen(void* self);
 ///
 void q_cppolaraxisradial_on_get_base_pen(void* self, QPen* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_get_base_pen` instead
-///
-#define q_cppolaraxisradial_qbase_get_base_pen q_cppolaraxisradial_super_get_base_pen
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
 /// Base class method implementation
@@ -99816,10 +93424,6 @@ QPen* q_cppolaraxisradial_get_tick_pen(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolaraxisradial_on_get_tick_pen(void* self, QPen* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_get_tick_pen` instead
-///
-#define q_cppolaraxisradial_qbase_get_tick_pen q_cppolaraxisradial_super_get_tick_pen
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
@@ -99846,10 +93450,6 @@ QPen* q_cppolaraxisradial_get_sub_tick_pen(void* self);
 ///
 void q_cppolaraxisradial_on_get_sub_tick_pen(void* self, QPen* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_get_sub_tick_pen` instead
-///
-#define q_cppolaraxisradial_qbase_get_sub_tick_pen q_cppolaraxisradial_super_get_sub_tick_pen
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
 /// Base class method implementation
@@ -99874,10 +93474,6 @@ QFont* q_cppolaraxisradial_get_tick_label_font(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolaraxisradial_on_get_tick_label_font(void* self, QFont* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_get_tick_label_font` instead
-///
-#define q_cppolaraxisradial_qbase_get_tick_label_font q_cppolaraxisradial_super_get_tick_label_font
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
@@ -99904,10 +93500,6 @@ QFont* q_cppolaraxisradial_get_label_font(void* self);
 ///
 void q_cppolaraxisradial_on_get_label_font(void* self, QFont* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_get_label_font` instead
-///
-#define q_cppolaraxisradial_qbase_get_label_font q_cppolaraxisradial_super_get_label_font
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
 /// Base class method implementation
@@ -99933,10 +93525,6 @@ QColor* q_cppolaraxisradial_get_tick_label_color(void* self);
 ///
 void q_cppolaraxisradial_on_get_tick_label_color(void* self, QColor* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_get_tick_label_color` instead
-///
-#define q_cppolaraxisradial_qbase_get_tick_label_color q_cppolaraxisradial_super_get_tick_label_color
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
 /// Base class method implementation
@@ -99961,10 +93549,6 @@ QColor* q_cppolaraxisradial_get_label_color(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolaraxisradial_on_get_label_color(void* self, QColor* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_get_label_color` instead
-///
-#define q_cppolaraxisradial_qbase_get_label_color q_cppolaraxisradial_super_get_label_color
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
@@ -100576,10 +94160,6 @@ void q_cppolaraxisradial_on_destroyed1(void* self, void (*callback)(void*, void*
 ///
 void q_cppolaraxisradial_parent_plot_initialized(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_parent_plot_initialized` instead
-///
-#define q_cppolaraxisradial_qbase_parent_plot_initialized q_cppolaraxisradial_super_parent_plot_initialized
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -100611,10 +94191,6 @@ void q_cppolaraxisradial_on_parent_plot_initialized(void* self, void (*callback)
 /// @param self QCPPolarAxisRadial*
 ///
 QRect* q_cppolaraxisradial_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_clip_rect` instead
-///
-#define q_cppolaraxisradial_qbase_clip_rect q_cppolaraxisradial_super_clip_rect
 
 /// Inherited from QCPLayerable
 ///
@@ -100651,10 +94227,6 @@ void q_cppolaraxisradial_on_clip_rect(void* self, QRect* (*callback)());
 ///
 void q_cppolaraxisradial_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_mouse_double_click_event` instead
-///
-#define q_cppolaraxisradial_qbase_mouse_double_click_event q_cppolaraxisradial_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -100688,10 +94260,6 @@ void q_cppolaraxisradial_on_mouse_double_click_event(void* self, void (*callback
 /// @param event QEvent*
 ///
 bool q_cppolaraxisradial_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_event` instead
-///
-#define q_cppolaraxisradial_qbase_event q_cppolaraxisradial_super_event
 
 /// Inherited from QObject
 ///
@@ -100727,10 +94295,6 @@ void q_cppolaraxisradial_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cppolaraxisradial_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_event_filter` instead
-///
-#define q_cppolaraxisradial_qbase_event_filter q_cppolaraxisradial_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -100765,10 +94329,6 @@ void q_cppolaraxisradial_on_event_filter(void* self, bool (*callback)(void*, voi
 ///
 void q_cppolaraxisradial_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_timer_event` instead
-///
-#define q_cppolaraxisradial_qbase_timer_event q_cppolaraxisradial_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -100801,10 +94361,6 @@ void q_cppolaraxisradial_on_timer_event(void* self, void (*callback)(void*, void
 /// @param event QChildEvent*
 ///
 void q_cppolaraxisradial_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_child_event` instead
-///
-#define q_cppolaraxisradial_qbase_child_event q_cppolaraxisradial_super_child_event
 
 /// Inherited from QObject
 ///
@@ -100839,10 +94395,6 @@ void q_cppolaraxisradial_on_child_event(void* self, void (*callback)(void*, void
 ///
 void q_cppolaraxisradial_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_custom_event` instead
-///
-#define q_cppolaraxisradial_qbase_custom_event q_cppolaraxisradial_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -100875,10 +94427,6 @@ void q_cppolaraxisradial_on_custom_event(void* self, void (*callback)(void*, voi
 /// @param signal QMetaMethod*
 ///
 void q_cppolaraxisradial_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_connect_notify` instead
-///
-#define q_cppolaraxisradial_qbase_connect_notify q_cppolaraxisradial_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -100913,10 +94461,6 @@ void q_cppolaraxisradial_on_connect_notify(void* self, void (*callback)(void*, v
 ///
 void q_cppolaraxisradial_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_disconnect_notify` instead
-///
-#define q_cppolaraxisradial_qbase_disconnect_notify q_cppolaraxisradial_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -100949,10 +94493,6 @@ void q_cppolaraxisradial_on_disconnect_notify(void* self, void (*callback)(void*
 /// @param parentPlot QCustomPlot*
 ///
 void q_cppolaraxisradial_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_initialize_parent_plot` instead
-///
-#define q_cppolaraxisradial_qbase_initialize_parent_plot q_cppolaraxisradial_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -100987,10 +94527,6 @@ void q_cppolaraxisradial_on_initialize_parent_plot(void* self, void (*callback)(
 ///
 void q_cppolaraxisradial_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_set_parent_layerable` instead
-///
-#define q_cppolaraxisradial_qbase_set_parent_layerable q_cppolaraxisradial_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -101024,10 +94560,6 @@ void q_cppolaraxisradial_on_set_parent_layerable(void* self, void (*callback)(vo
 /// @param prepend bool
 ///
 bool q_cppolaraxisradial_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_move_to_layer` instead
-///
-#define q_cppolaraxisradial_qbase_move_to_layer q_cppolaraxisradial_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -101065,10 +94597,6 @@ void q_cppolaraxisradial_on_move_to_layer(void* self, bool (*callback)(void*, vo
 ///
 void q_cppolaraxisradial_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_apply_antialiasing_hint` instead
-///
-#define q_cppolaraxisradial_qbase_apply_antialiasing_hint q_cppolaraxisradial_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -101103,10 +94631,6 @@ void q_cppolaraxisradial_on_apply_antialiasing_hint(void* self, void (*callback)
 ///
 QObject* q_cppolaraxisradial_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_sender` instead
-///
-#define q_cppolaraxisradial_qbase_sender q_cppolaraxisradial_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -101137,10 +94661,6 @@ void q_cppolaraxisradial_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPPolarAxisRadial*
 ///
 int32_t q_cppolaraxisradial_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_sender_signal_index` instead
-///
-#define q_cppolaraxisradial_qbase_sender_signal_index q_cppolaraxisradial_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -101174,10 +94694,6 @@ void q_cppolaraxisradial_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 int32_t q_cppolaraxisradial_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_receivers` instead
-///
-#define q_cppolaraxisradial_qbase_receivers q_cppolaraxisradial_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -101210,10 +94726,6 @@ void q_cppolaraxisradial_on_receivers(void* self, int32_t (*callback)(void*, con
 /// @param signal QMetaMethod*
 ///
 bool q_cppolaraxisradial_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cppolaraxisradial_super_is_signal_connected` instead
-///
-#define q_cppolaraxisradial_qbase_is_signal_connected q_cppolaraxisradial_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -101279,10 +94791,6 @@ const QMetaObject* q_cppolaraxisangular_meta_object(void* self);
 ///
 void q_cppolaraxisangular_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_meta_object` instead
-///
-#define q_cppolaraxisangular_qbase_meta_object q_cppolaraxisangular_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -101302,10 +94810,6 @@ void* q_cppolaraxisangular_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPPolarAxisAngular* self, const char* param1)
 ///
 void q_cppolaraxisangular_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_metacast` instead
-///
-#define q_cppolaraxisangular_qbase_metacast q_cppolaraxisangular_super_metacast
 
 /// Base class method implementation
 ///
@@ -101327,10 +94831,6 @@ int32_t q_cppolaraxisangular_metacall(void* self, int32_t param1, int param2, vo
 /// @param callback int32_t func(QCPPolarAxisAngular* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cppolaraxisangular_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_metacall` instead
-///
-#define q_cppolaraxisangular_qbase_metacall q_cppolaraxisangular_super_metacall
 
 /// Base class method implementation
 ///
@@ -101974,10 +95474,6 @@ double q_cppolaraxisangular_select_test(void* self, void* pos, bool onlySelectab
 ///
 void q_cppolaraxisangular_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_select_test` instead
-///
-#define q_cppolaraxisangular_qbase_select_test q_cppolaraxisangular_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
 /// Base class method implementation
@@ -102005,10 +95501,6 @@ void q_cppolaraxisangular_update(void* self, int32_t phase);
 ///
 void q_cppolaraxisangular_on_update(void* self, void (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_update` instead
-///
-#define q_cppolaraxisangular_qbase_update q_cppolaraxisangular_super_update
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
 /// Base class method implementation
@@ -102035,10 +95527,6 @@ libqt_list q_cppolaraxisangular_elements(void* self, bool recursive);
 /// @param callback libqt_list of QCPLayoutElement* func(QCPPolarAxisAngular* self, bool recursive)
 ///
 void q_cppolaraxisangular_on_elements(void* self, libqt_list (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_elements` instead
-///
-#define q_cppolaraxisangular_qbase_elements q_cppolaraxisangular_super_elements
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
@@ -102294,10 +95782,6 @@ void q_cppolaraxisangular_apply_default_antialiasing_hint(void* self, void* pain
 ///
 void q_cppolaraxisangular_on_apply_default_antialiasing_hint(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_apply_default_antialiasing_hint` instead
-///
-#define q_cppolaraxisangular_qbase_apply_default_antialiasing_hint q_cppolaraxisangular_super_apply_default_antialiasing_hint
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
 /// Base class method implementation
@@ -102322,10 +95806,6 @@ void q_cppolaraxisangular_draw(void* self, void* painter);
 /// @param callback void func(QCPPolarAxisAngular* self, QCPPainter* painter)
 ///
 void q_cppolaraxisangular_on_draw(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_draw` instead
-///
-#define q_cppolaraxisangular_qbase_draw q_cppolaraxisangular_super_draw
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
@@ -102352,10 +95832,6 @@ int32_t q_cppolaraxisangular_selection_category(void* self);
 /// @param callback int32_t func()
 ///
 void q_cppolaraxisangular_on_selection_category(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_selection_category` instead
-///
-#define q_cppolaraxisangular_qbase_selection_category q_cppolaraxisangular_super_selection_category
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
@@ -102384,10 +95860,6 @@ void q_cppolaraxisangular_mouse_press_event(void* self, void* event, void* detai
 ///
 void q_cppolaraxisangular_on_mouse_press_event(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_mouse_press_event` instead
-///
-#define q_cppolaraxisangular_qbase_mouse_press_event q_cppolaraxisangular_super_mouse_press_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
 /// Base class method implementation
@@ -102414,10 +95886,6 @@ void q_cppolaraxisangular_mouse_move_event(void* self, void* event, void* startP
 /// @param callback void func(QCPPolarAxisAngular* self, QMouseEvent* event, QPointF* startPos)
 ///
 void q_cppolaraxisangular_on_mouse_move_event(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_mouse_move_event` instead
-///
-#define q_cppolaraxisangular_qbase_mouse_move_event q_cppolaraxisangular_super_mouse_move_event
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
@@ -102446,10 +95914,6 @@ void q_cppolaraxisangular_mouse_release_event(void* self, void* event, void* sta
 ///
 void q_cppolaraxisangular_on_mouse_release_event(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_mouse_release_event` instead
-///
-#define q_cppolaraxisangular_qbase_mouse_release_event q_cppolaraxisangular_super_mouse_release_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
 /// Base class method implementation
@@ -102476,10 +95940,6 @@ void q_cppolaraxisangular_wheel_event(void* self, void* event);
 ///
 void q_cppolaraxisangular_on_wheel_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_wheel_event` instead
-///
-#define q_cppolaraxisangular_qbase_wheel_event q_cppolaraxisangular_super_wheel_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
 /// Base class method implementation
@@ -102504,10 +95964,6 @@ bool q_cppolaraxisangular_register_polar_graph(void* self, void* graph);
 /// @param callback bool func(QCPPolarAxisAngular* self, QCPPolarGraph* graph)
 ///
 void q_cppolaraxisangular_on_register_polar_graph(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_register_polar_graph` instead
-///
-#define q_cppolaraxisangular_qbase_register_polar_graph q_cppolaraxisangular_super_register_polar_graph
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
@@ -102536,10 +95992,6 @@ void q_cppolaraxisangular_draw_background(void* self, void* painter, void* cente
 ///
 void q_cppolaraxisangular_on_draw_background(void* self, void (*callback)(void*, void*, void*, double));
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_draw_background` instead
-///
-#define q_cppolaraxisangular_qbase_draw_background q_cppolaraxisangular_super_draw_background
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
 /// Base class method implementation
@@ -102566,10 +96018,6 @@ void q_cppolaraxisangular_setup_tick_vectors(void* self);
 ///
 void q_cppolaraxisangular_on_setup_tick_vectors(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_setup_tick_vectors` instead
-///
-#define q_cppolaraxisangular_qbase_setup_tick_vectors q_cppolaraxisangular_super_setup_tick_vectors
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
 /// Base class method implementation
@@ -102594,10 +96042,6 @@ QPen* q_cppolaraxisangular_get_base_pen(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolaraxisangular_on_get_base_pen(void* self, QPen* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_get_base_pen` instead
-///
-#define q_cppolaraxisangular_qbase_get_base_pen q_cppolaraxisangular_super_get_base_pen
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
@@ -102624,10 +96068,6 @@ QPen* q_cppolaraxisangular_get_tick_pen(void* self);
 ///
 void q_cppolaraxisangular_on_get_tick_pen(void* self, QPen* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_get_tick_pen` instead
-///
-#define q_cppolaraxisangular_qbase_get_tick_pen q_cppolaraxisangular_super_get_tick_pen
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
 /// Base class method implementation
@@ -102652,10 +96092,6 @@ QPen* q_cppolaraxisangular_get_sub_tick_pen(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolaraxisangular_on_get_sub_tick_pen(void* self, QPen* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_get_sub_tick_pen` instead
-///
-#define q_cppolaraxisangular_qbase_get_sub_tick_pen q_cppolaraxisangular_super_get_sub_tick_pen
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
@@ -102682,10 +96118,6 @@ QFont* q_cppolaraxisangular_get_tick_label_font(void* self);
 ///
 void q_cppolaraxisangular_on_get_tick_label_font(void* self, QFont* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_get_tick_label_font` instead
-///
-#define q_cppolaraxisangular_qbase_get_tick_label_font q_cppolaraxisangular_super_get_tick_label_font
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
 /// Base class method implementation
@@ -102710,10 +96142,6 @@ QFont* q_cppolaraxisangular_get_label_font(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolaraxisangular_on_get_label_font(void* self, QFont* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_get_label_font` instead
-///
-#define q_cppolaraxisangular_qbase_get_label_font q_cppolaraxisangular_super_get_label_font
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
@@ -102740,10 +96168,6 @@ QColor* q_cppolaraxisangular_get_tick_label_color(void* self);
 ///
 void q_cppolaraxisangular_on_get_tick_label_color(void* self, QColor* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_get_tick_label_color` instead
-///
-#define q_cppolaraxisangular_qbase_get_tick_label_color q_cppolaraxisangular_super_get_tick_label_color
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
 /// Base class method implementation
@@ -102768,10 +96192,6 @@ QColor* q_cppolaraxisangular_get_label_color(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolaraxisangular_on_get_label_color(void* self, QColor* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_get_label_color` instead
-///
-#define q_cppolaraxisangular_qbase_get_label_color q_cppolaraxisangular_super_get_label_color
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
@@ -103604,10 +97024,6 @@ void q_cppolaraxisangular_on_destroyed1(void* self, void (*callback)(void*, void
 ///
 QSize* q_cppolaraxisangular_minimum_outer_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_minimum_outer_size_hint` instead
-///
-#define q_cppolaraxisangular_qbase_minimum_outer_size_hint q_cppolaraxisangular_super_minimum_outer_size_hint
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -103640,10 +97056,6 @@ void q_cppolaraxisangular_on_minimum_outer_size_hint(void* self, QSize* (*callba
 /// @param self QCPPolarAxisAngular*
 ///
 QSize* q_cppolaraxisangular_maximum_outer_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_maximum_outer_size_hint` instead
-///
-#define q_cppolaraxisangular_qbase_maximum_outer_size_hint q_cppolaraxisangular_super_maximum_outer_size_hint
 
 /// Inherited from QCPLayoutElement
 ///
@@ -103679,10 +97091,6 @@ void q_cppolaraxisangular_on_maximum_outer_size_hint(void* self, QSize* (*callba
 ///
 int32_t q_cppolaraxisangular_calculate_auto_margin(void* self, int32_t side);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_calculate_auto_margin` instead
-///
-#define q_cppolaraxisangular_qbase_calculate_auto_margin q_cppolaraxisangular_super_calculate_auto_margin
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -103714,10 +97122,6 @@ void q_cppolaraxisangular_on_calculate_auto_margin(void* self, int32_t (*callbac
 /// @param self QCPPolarAxisAngular*
 ///
 void q_cppolaraxisangular_layout_changed(void* self);
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_layout_changed` instead
-///
-#define q_cppolaraxisangular_qbase_layout_changed q_cppolaraxisangular_super_layout_changed
 
 /// Inherited from QCPLayoutElement
 ///
@@ -103751,10 +97155,6 @@ void q_cppolaraxisangular_on_layout_changed(void* self, void (*callback)());
 ///
 void q_cppolaraxisangular_parent_plot_initialized(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_parent_plot_initialized` instead
-///
-#define q_cppolaraxisangular_qbase_parent_plot_initialized q_cppolaraxisangular_super_parent_plot_initialized
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -103786,10 +97186,6 @@ void q_cppolaraxisangular_on_parent_plot_initialized(void* self, void (*callback
 /// @param self QCPPolarAxisAngular*
 ///
 QRect* q_cppolaraxisangular_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_clip_rect` instead
-///
-#define q_cppolaraxisangular_qbase_clip_rect q_cppolaraxisangular_super_clip_rect
 
 /// Inherited from QCPLayerable
 ///
@@ -103828,10 +97224,6 @@ void q_cppolaraxisangular_on_clip_rect(void* self, QRect* (*callback)());
 ///
 void q_cppolaraxisangular_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_select_event` instead
-///
-#define q_cppolaraxisangular_qbase_select_event q_cppolaraxisangular_super_select_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -103868,10 +97260,6 @@ void q_cppolaraxisangular_on_select_event(void* self, void (*callback)(void*, vo
 ///
 void q_cppolaraxisangular_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_deselect_event` instead
-///
-#define q_cppolaraxisangular_qbase_deselect_event q_cppolaraxisangular_super_deselect_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -103905,10 +97293,6 @@ void q_cppolaraxisangular_on_deselect_event(void* self, void (*callback)(void*, 
 /// @param details QVariant*
 ///
 void q_cppolaraxisangular_mouse_double_click_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_mouse_double_click_event` instead
-///
-#define q_cppolaraxisangular_qbase_mouse_double_click_event q_cppolaraxisangular_super_mouse_double_click_event
 
 /// Inherited from QCPLayerable
 ///
@@ -103944,10 +97328,6 @@ void q_cppolaraxisangular_on_mouse_double_click_event(void* self, void (*callbac
 ///
 bool q_cppolaraxisangular_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_event` instead
-///
-#define q_cppolaraxisangular_qbase_event q_cppolaraxisangular_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -103981,10 +97361,6 @@ void q_cppolaraxisangular_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cppolaraxisangular_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_event_filter` instead
-///
-#define q_cppolaraxisangular_qbase_event_filter q_cppolaraxisangular_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -104020,10 +97396,6 @@ void q_cppolaraxisangular_on_event_filter(void* self, bool (*callback)(void*, vo
 ///
 void q_cppolaraxisangular_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_timer_event` instead
-///
-#define q_cppolaraxisangular_qbase_timer_event q_cppolaraxisangular_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -104056,10 +97428,6 @@ void q_cppolaraxisangular_on_timer_event(void* self, void (*callback)(void*, voi
 /// @param event QChildEvent*
 ///
 void q_cppolaraxisangular_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_child_event` instead
-///
-#define q_cppolaraxisangular_qbase_child_event q_cppolaraxisangular_super_child_event
 
 /// Inherited from QObject
 ///
@@ -104094,10 +97462,6 @@ void q_cppolaraxisangular_on_child_event(void* self, void (*callback)(void*, voi
 ///
 void q_cppolaraxisangular_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_custom_event` instead
-///
-#define q_cppolaraxisangular_qbase_custom_event q_cppolaraxisangular_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -104130,10 +97494,6 @@ void q_cppolaraxisangular_on_custom_event(void* self, void (*callback)(void*, vo
 /// @param signal QMetaMethod*
 ///
 void q_cppolaraxisangular_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_connect_notify` instead
-///
-#define q_cppolaraxisangular_qbase_connect_notify q_cppolaraxisangular_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -104168,10 +97528,6 @@ void q_cppolaraxisangular_on_connect_notify(void* self, void (*callback)(void*, 
 ///
 void q_cppolaraxisangular_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_disconnect_notify` instead
-///
-#define q_cppolaraxisangular_qbase_disconnect_notify q_cppolaraxisangular_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -104204,10 +97560,6 @@ void q_cppolaraxisangular_on_disconnect_notify(void* self, void (*callback)(void
 /// @param parentPlot QCustomPlot*
 ///
 void q_cppolaraxisangular_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_initialize_parent_plot` instead
-///
-#define q_cppolaraxisangular_qbase_initialize_parent_plot q_cppolaraxisangular_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -104242,10 +97594,6 @@ void q_cppolaraxisangular_on_initialize_parent_plot(void* self, void (*callback)
 ///
 void q_cppolaraxisangular_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_set_parent_layerable` instead
-///
-#define q_cppolaraxisangular_qbase_set_parent_layerable q_cppolaraxisangular_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -104279,10 +97627,6 @@ void q_cppolaraxisangular_on_set_parent_layerable(void* self, void (*callback)(v
 /// @param prepend bool
 ///
 bool q_cppolaraxisangular_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_move_to_layer` instead
-///
-#define q_cppolaraxisangular_qbase_move_to_layer q_cppolaraxisangular_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -104320,10 +97664,6 @@ void q_cppolaraxisangular_on_move_to_layer(void* self, bool (*callback)(void*, v
 ///
 void q_cppolaraxisangular_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_apply_antialiasing_hint` instead
-///
-#define q_cppolaraxisangular_qbase_apply_antialiasing_hint q_cppolaraxisangular_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -104358,10 +97698,6 @@ void q_cppolaraxisangular_on_apply_antialiasing_hint(void* self, void (*callback
 ///
 QObject* q_cppolaraxisangular_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_sender` instead
-///
-#define q_cppolaraxisangular_qbase_sender q_cppolaraxisangular_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -104392,10 +97728,6 @@ void q_cppolaraxisangular_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPPolarAxisAngular*
 ///
 int32_t q_cppolaraxisangular_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_sender_signal_index` instead
-///
-#define q_cppolaraxisangular_qbase_sender_signal_index q_cppolaraxisangular_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -104429,10 +97761,6 @@ void q_cppolaraxisangular_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 int32_t q_cppolaraxisangular_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_receivers` instead
-///
-#define q_cppolaraxisangular_qbase_receivers q_cppolaraxisangular_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -104465,10 +97793,6 @@ void q_cppolaraxisangular_on_receivers(void* self, int32_t (*callback)(void*, co
 /// @param signal QMetaMethod*
 ///
 bool q_cppolaraxisangular_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cppolaraxisangular_super_is_signal_connected` instead
-///
-#define q_cppolaraxisangular_qbase_is_signal_connected q_cppolaraxisangular_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -104534,10 +97858,6 @@ const QMetaObject* q_cppolargrid_meta_object(void* self);
 ///
 void q_cppolargrid_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cppolargrid_super_meta_object` instead
-///
-#define q_cppolargrid_qbase_meta_object q_cppolargrid_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -104557,10 +97877,6 @@ void* q_cppolargrid_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPPolarGrid* self, const char* param1)
 ///
 void q_cppolargrid_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cppolargrid_super_metacast` instead
-///
-#define q_cppolargrid_qbase_metacast q_cppolargrid_super_metacast
 
 /// Base class method implementation
 ///
@@ -104582,10 +97898,6 @@ int32_t q_cppolargrid_metacall(void* self, int32_t param1, int param2, void* par
 /// @param callback int32_t func(QCPPolarGrid* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cppolargrid_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cppolargrid_super_metacall` instead
-///
-#define q_cppolargrid_qbase_metacall q_cppolargrid_super_metacall
 
 /// Base class method implementation
 ///
@@ -104754,10 +98066,6 @@ void q_cppolargrid_apply_default_antialiasing_hint(void* self, void* painter);
 ///
 void q_cppolargrid_on_apply_default_antialiasing_hint(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cppolargrid_super_apply_default_antialiasing_hint` instead
-///
-#define q_cppolargrid_qbase_apply_default_antialiasing_hint q_cppolargrid_super_apply_default_antialiasing_hint
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGrid.html)
 ///
 /// Base class method implementation
@@ -104782,10 +98090,6 @@ void q_cppolargrid_draw(void* self, void* painter);
 /// @param callback void func(QCPPolarGrid* self, QCPPainter* painter)
 ///
 void q_cppolargrid_on_draw(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cppolargrid_super_draw` instead
-///
-#define q_cppolargrid_qbase_draw q_cppolargrid_super_draw
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGrid.html)
 ///
@@ -104814,10 +98118,6 @@ void q_cppolargrid_draw_radial_grid(void* self, void* painter, void* center, lib
 /// @param callback void func(QCPPolarGrid* self, QCPPainter* painter, QPointF* center, libqt_list of double coords, QPen* pen)
 ///
 void q_cppolargrid_on_draw_radial_grid(void* self, void (*callback)(void*, void*, void*, libqt_list, void*));
-
-/// @warning DEPRECATED: Use `q_cppolargrid_super_draw_radial_grid` instead
-///
-#define q_cppolargrid_qbase_draw_radial_grid q_cppolargrid_super_draw_radial_grid
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGrid.html)
 ///
@@ -104850,10 +98150,6 @@ void q_cppolargrid_draw_angular_grid(void* self, void* painter, void* center, do
 /// @param callback void func(QCPPolarGrid* self, QCPPainter* painter, QPointF* center, double radius, libqt_list of QPointF* ticksCosSin, QPen* pen)
 ///
 void q_cppolargrid_on_draw_angular_grid(void* self, void (*callback)(void*, void*, void*, double, libqt_list, void*));
-
-/// @warning DEPRECATED: Use `q_cppolargrid_super_draw_angular_grid` instead
-///
-#define q_cppolargrid_qbase_draw_angular_grid q_cppolargrid_super_draw_angular_grid
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGrid.html)
 ///
@@ -104906,10 +98202,6 @@ void q_cppolargrid_draw_radial_grid5(void* self, void* painter, void* center, li
 /// @param callback void func(QCPPolarGrid* self, QCPPainter* painter, QPointF* center, libqt_list of double coords, QPen* pen, QPen* zeroPen)
 ///
 void q_cppolargrid_on_draw_radial_grid5(void* self, void (*callback)(void*, void*, void*, libqt_list, void*, void*));
-
-/// @warning DEPRECATED: Use `q_cppolargrid_super_draw_radial_grid5` instead
-///
-#define q_cppolargrid_qbase_draw_radial_grid5 q_cppolargrid_super_draw_radial_grid5
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGrid.html)
 ///
@@ -105486,10 +98778,6 @@ void q_cppolargrid_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 double q_cppolargrid_select_test(void* self, void* pos, bool onlySelectable, void* details);
 
-/// @warning DEPRECATED: Use `q_cppolargrid_super_select_test` instead
-///
-#define q_cppolargrid_qbase_select_test q_cppolargrid_super_select_test
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -105525,10 +98813,6 @@ void q_cppolargrid_on_select_test(void* self, double (*callback)(void*, void*, b
 ///
 void q_cppolargrid_parent_plot_initialized(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cppolargrid_super_parent_plot_initialized` instead
-///
-#define q_cppolargrid_qbase_parent_plot_initialized q_cppolargrid_super_parent_plot_initialized
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -105563,10 +98847,6 @@ void q_cppolargrid_on_parent_plot_initialized(void* self, void (*callback)(void*
 ///
 int32_t q_cppolargrid_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cppolargrid_super_selection_category` instead
-///
-#define q_cppolargrid_qbase_selection_category q_cppolargrid_super_selection_category
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -105599,10 +98879,6 @@ void q_cppolargrid_on_selection_category(void* self, int32_t (*callback)());
 /// @param self QCPPolarGrid*
 ///
 QRect* q_cppolargrid_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cppolargrid_super_clip_rect` instead
-///
-#define q_cppolargrid_qbase_clip_rect q_cppolargrid_super_clip_rect
 
 /// Inherited from QCPLayerable
 ///
@@ -105641,10 +98917,6 @@ void q_cppolargrid_on_clip_rect(void* self, QRect* (*callback)());
 ///
 void q_cppolargrid_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cppolargrid_super_select_event` instead
-///
-#define q_cppolargrid_qbase_select_event q_cppolargrid_super_select_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -105681,10 +98953,6 @@ void q_cppolargrid_on_select_event(void* self, void (*callback)(void*, void*, bo
 ///
 void q_cppolargrid_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cppolargrid_super_deselect_event` instead
-///
-#define q_cppolargrid_qbase_deselect_event q_cppolargrid_super_deselect_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -105718,10 +98986,6 @@ void q_cppolargrid_on_deselect_event(void* self, void (*callback)(void*, bool*))
 /// @param details QVariant*
 ///
 void q_cppolargrid_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cppolargrid_super_mouse_press_event` instead
-///
-#define q_cppolargrid_qbase_mouse_press_event q_cppolargrid_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -105758,10 +99022,6 @@ void q_cppolargrid_on_mouse_press_event(void* self, void (*callback)(void*, void
 ///
 void q_cppolargrid_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cppolargrid_super_mouse_move_event` instead
-///
-#define q_cppolargrid_qbase_mouse_move_event q_cppolargrid_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -105796,10 +99056,6 @@ void q_cppolargrid_on_mouse_move_event(void* self, void (*callback)(void*, void*
 /// @param startPos QPointF*
 ///
 void q_cppolargrid_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cppolargrid_super_mouse_release_event` instead
-///
-#define q_cppolargrid_qbase_mouse_release_event q_cppolargrid_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -105836,10 +99092,6 @@ void q_cppolargrid_on_mouse_release_event(void* self, void (*callback)(void*, vo
 ///
 void q_cppolargrid_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cppolargrid_super_mouse_double_click_event` instead
-///
-#define q_cppolargrid_qbase_mouse_double_click_event q_cppolargrid_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -105874,10 +99126,6 @@ void q_cppolargrid_on_mouse_double_click_event(void* self, void (*callback)(void
 ///
 void q_cppolargrid_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cppolargrid_super_wheel_event` instead
-///
-#define q_cppolargrid_qbase_wheel_event q_cppolargrid_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -105910,10 +99158,6 @@ void q_cppolargrid_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cppolargrid_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cppolargrid_super_event` instead
-///
-#define q_cppolargrid_qbase_event q_cppolargrid_super_event
 
 /// Inherited from QObject
 ///
@@ -105949,10 +99193,6 @@ void q_cppolargrid_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cppolargrid_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cppolargrid_super_event_filter` instead
-///
-#define q_cppolargrid_qbase_event_filter q_cppolargrid_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -105987,10 +99227,6 @@ void q_cppolargrid_on_event_filter(void* self, bool (*callback)(void*, void*, vo
 ///
 void q_cppolargrid_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cppolargrid_super_timer_event` instead
-///
-#define q_cppolargrid_qbase_timer_event q_cppolargrid_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -106023,10 +99259,6 @@ void q_cppolargrid_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cppolargrid_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cppolargrid_super_child_event` instead
-///
-#define q_cppolargrid_qbase_child_event q_cppolargrid_super_child_event
 
 /// Inherited from QObject
 ///
@@ -106061,10 +99293,6 @@ void q_cppolargrid_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cppolargrid_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cppolargrid_super_custom_event` instead
-///
-#define q_cppolargrid_qbase_custom_event q_cppolargrid_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -106097,10 +99325,6 @@ void q_cppolargrid_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_cppolargrid_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cppolargrid_super_connect_notify` instead
-///
-#define q_cppolargrid_qbase_connect_notify q_cppolargrid_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -106135,10 +99359,6 @@ void q_cppolargrid_on_connect_notify(void* self, void (*callback)(void*, void*))
 ///
 void q_cppolargrid_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cppolargrid_super_disconnect_notify` instead
-///
-#define q_cppolargrid_qbase_disconnect_notify q_cppolargrid_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -106171,10 +99391,6 @@ void q_cppolargrid_on_disconnect_notify(void* self, void (*callback)(void*, void
 /// @param parentPlot QCustomPlot*
 ///
 void q_cppolargrid_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cppolargrid_super_initialize_parent_plot` instead
-///
-#define q_cppolargrid_qbase_initialize_parent_plot q_cppolargrid_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -106209,10 +99425,6 @@ void q_cppolargrid_on_initialize_parent_plot(void* self, void (*callback)(void*,
 ///
 void q_cppolargrid_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cppolargrid_super_set_parent_layerable` instead
-///
-#define q_cppolargrid_qbase_set_parent_layerable q_cppolargrid_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -106246,10 +99458,6 @@ void q_cppolargrid_on_set_parent_layerable(void* self, void (*callback)(void*, v
 /// @param prepend bool
 ///
 bool q_cppolargrid_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cppolargrid_super_move_to_layer` instead
-///
-#define q_cppolargrid_qbase_move_to_layer q_cppolargrid_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -106287,10 +99495,6 @@ void q_cppolargrid_on_move_to_layer(void* self, bool (*callback)(void*, void*, b
 ///
 void q_cppolargrid_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cppolargrid_super_apply_antialiasing_hint` instead
-///
-#define q_cppolargrid_qbase_apply_antialiasing_hint q_cppolargrid_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -106325,10 +99529,6 @@ void q_cppolargrid_on_apply_antialiasing_hint(void* self, void (*callback)(void*
 ///
 QObject* q_cppolargrid_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cppolargrid_super_sender` instead
-///
-#define q_cppolargrid_qbase_sender q_cppolargrid_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -106359,10 +99559,6 @@ void q_cppolargrid_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPPolarGrid*
 ///
 int32_t q_cppolargrid_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cppolargrid_super_sender_signal_index` instead
-///
-#define q_cppolargrid_qbase_sender_signal_index q_cppolargrid_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -106396,10 +99592,6 @@ void q_cppolargrid_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cppolargrid_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cppolargrid_super_receivers` instead
-///
-#define q_cppolargrid_qbase_receivers q_cppolargrid_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -106432,10 +99624,6 @@ void q_cppolargrid_on_receivers(void* self, int32_t (*callback)(void*, const cha
 /// @param signal QMetaMethod*
 ///
 bool q_cppolargrid_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cppolargrid_super_is_signal_connected` instead
-///
-#define q_cppolargrid_qbase_is_signal_connected q_cppolargrid_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -106502,10 +99690,6 @@ const QMetaObject* q_cppolarlegenditem_meta_object(void* self);
 ///
 void q_cppolarlegenditem_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_meta_object` instead
-///
-#define q_cppolarlegenditem_qbase_meta_object q_cppolarlegenditem_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -106525,10 +99709,6 @@ void* q_cppolarlegenditem_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPPolarLegendItem* self, const char* param1)
 ///
 void q_cppolarlegenditem_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_metacast` instead
-///
-#define q_cppolarlegenditem_qbase_metacast q_cppolarlegenditem_super_metacast
 
 /// Base class method implementation
 ///
@@ -106550,10 +99730,6 @@ int32_t q_cppolarlegenditem_metacall(void* self, int32_t param1, int param2, voi
 /// @param callback int32_t func(QCPPolarLegendItem* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cppolarlegenditem_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_metacall` instead
-///
-#define q_cppolarlegenditem_qbase_metacall q_cppolarlegenditem_super_metacall
 
 /// Base class method implementation
 ///
@@ -106594,10 +99770,6 @@ void q_cppolarlegenditem_draw(void* self, void* painter);
 ///
 void q_cppolarlegenditem_on_draw(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_draw` instead
-///
-#define q_cppolarlegenditem_qbase_draw q_cppolarlegenditem_super_draw
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarLegendItem.html)
 ///
 /// Base class method implementation
@@ -106624,10 +99796,6 @@ QSize* q_cppolarlegenditem_minimum_outer_size_hint(void* self);
 ///
 void q_cppolarlegenditem_on_minimum_outer_size_hint(void* self, QSize* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_minimum_outer_size_hint` instead
-///
-#define q_cppolarlegenditem_qbase_minimum_outer_size_hint q_cppolarlegenditem_super_minimum_outer_size_hint
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarLegendItem.html)
 ///
 /// Base class method implementation
@@ -106652,10 +99820,6 @@ QPen* q_cppolarlegenditem_get_icon_border_pen(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolarlegenditem_on_get_icon_border_pen(void* self, QPen* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_get_icon_border_pen` instead
-///
-#define q_cppolarlegenditem_qbase_get_icon_border_pen q_cppolarlegenditem_super_get_icon_border_pen
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarLegendItem.html)
 ///
@@ -106682,10 +99846,6 @@ QColor* q_cppolarlegenditem_get_text_color(void* self);
 ///
 void q_cppolarlegenditem_on_get_text_color(void* self, QColor* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_get_text_color` instead
-///
-#define q_cppolarlegenditem_qbase_get_text_color q_cppolarlegenditem_super_get_text_color
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarLegendItem.html)
 ///
 /// Base class method implementation
@@ -106710,10 +99870,6 @@ QFont* q_cppolarlegenditem_get_font(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolarlegenditem_on_get_font(void* self, QFont* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_get_font` instead
-///
-#define q_cppolarlegenditem_qbase_get_font q_cppolarlegenditem_super_get_font
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarLegendItem.html)
 ///
@@ -107649,10 +100805,6 @@ void q_cppolarlegenditem_on_destroyed1(void* self, void (*callback)(void*, void*
 ///
 double q_cppolarlegenditem_select_test(void* self, void* pos, bool onlySelectable, void* details);
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_select_test` instead
-///
-#define q_cppolarlegenditem_qbase_select_test q_cppolarlegenditem_super_select_test
-
 /// Inherited from QCPAbstractLegendItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractLegendItem.html)
@@ -107689,10 +100841,6 @@ void q_cppolarlegenditem_on_select_test(void* self, double (*callback)(void*, vo
 ///
 int32_t q_cppolarlegenditem_selection_category(void* self);
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_selection_category` instead
-///
-#define q_cppolarlegenditem_qbase_selection_category q_cppolarlegenditem_super_selection_category
-
 /// Inherited from QCPAbstractLegendItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractLegendItem.html)
@@ -107727,10 +100875,6 @@ void q_cppolarlegenditem_on_selection_category(void* self, int32_t (*callback)()
 ///
 void q_cppolarlegenditem_apply_default_antialiasing_hint(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_apply_default_antialiasing_hint` instead
-///
-#define q_cppolarlegenditem_qbase_apply_default_antialiasing_hint q_cppolarlegenditem_super_apply_default_antialiasing_hint
-
 /// Inherited from QCPAbstractLegendItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractLegendItem.html)
@@ -107762,10 +100906,6 @@ void q_cppolarlegenditem_on_apply_default_antialiasing_hint(void* self, void (*c
 /// @param self QCPPolarLegendItem*
 ///
 QRect* q_cppolarlegenditem_clip_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_clip_rect` instead
-///
-#define q_cppolarlegenditem_qbase_clip_rect q_cppolarlegenditem_super_clip_rect
 
 /// Inherited from QCPAbstractLegendItem
 ///
@@ -107804,10 +100944,6 @@ void q_cppolarlegenditem_on_clip_rect(void* self, QRect* (*callback)());
 ///
 void q_cppolarlegenditem_select_event(void* self, void* event, bool additive, void* details, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_select_event` instead
-///
-#define q_cppolarlegenditem_qbase_select_event q_cppolarlegenditem_super_select_event
-
 /// Inherited from QCPAbstractLegendItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractLegendItem.html)
@@ -107844,10 +100980,6 @@ void q_cppolarlegenditem_on_select_event(void* self, void (*callback)(void*, voi
 ///
 void q_cppolarlegenditem_deselect_event(void* self, bool* selectionStateChanged);
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_deselect_event` instead
-///
-#define q_cppolarlegenditem_qbase_deselect_event q_cppolarlegenditem_super_deselect_event
-
 /// Inherited from QCPAbstractLegendItem
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractLegendItem.html)
@@ -107881,10 +101013,6 @@ void q_cppolarlegenditem_on_deselect_event(void* self, void (*callback)(void*, b
 ///
 void q_cppolarlegenditem_update(void* self, int32_t phase);
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_update` instead
-///
-#define q_cppolarlegenditem_qbase_update q_cppolarlegenditem_super_update
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -107916,10 +101044,6 @@ void q_cppolarlegenditem_on_update(void* self, void (*callback)(void*, int32_t))
 /// @param self QCPPolarLegendItem*
 ///
 QSize* q_cppolarlegenditem_maximum_outer_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_maximum_outer_size_hint` instead
-///
-#define q_cppolarlegenditem_qbase_maximum_outer_size_hint q_cppolarlegenditem_super_maximum_outer_size_hint
 
 /// Inherited from QCPLayoutElement
 ///
@@ -107957,10 +101081,6 @@ void q_cppolarlegenditem_on_maximum_outer_size_hint(void* self, QSize* (*callbac
 ///
 libqt_list q_cppolarlegenditem_elements(void* self, bool recursive);
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_elements` instead
-///
-#define q_cppolarlegenditem_qbase_elements q_cppolarlegenditem_super_elements
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -107996,10 +101116,6 @@ void q_cppolarlegenditem_on_elements(void* self, libqt_list (*callback)(void*, b
 ///
 int32_t q_cppolarlegenditem_calculate_auto_margin(void* self, int32_t side);
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_calculate_auto_margin` instead
-///
-#define q_cppolarlegenditem_qbase_calculate_auto_margin q_cppolarlegenditem_super_calculate_auto_margin
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -108032,10 +101148,6 @@ void q_cppolarlegenditem_on_calculate_auto_margin(void* self, int32_t (*callback
 ///
 void q_cppolarlegenditem_layout_changed(void* self);
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_layout_changed` instead
-///
-#define q_cppolarlegenditem_qbase_layout_changed q_cppolarlegenditem_super_layout_changed
-
 /// Inherited from QCPLayoutElement
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
@@ -108067,10 +101179,6 @@ void q_cppolarlegenditem_on_layout_changed(void* self, void (*callback)());
 /// @param parentPlot QCustomPlot*
 ///
 void q_cppolarlegenditem_parent_plot_initialized(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_parent_plot_initialized` instead
-///
-#define q_cppolarlegenditem_qbase_parent_plot_initialized q_cppolarlegenditem_super_parent_plot_initialized
 
 /// Inherited from QCPLayoutElement
 ///
@@ -108105,10 +101213,6 @@ void q_cppolarlegenditem_on_parent_plot_initialized(void* self, void (*callback)
 /// @param details QVariant*
 ///
 void q_cppolarlegenditem_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_mouse_press_event` instead
-///
-#define q_cppolarlegenditem_qbase_mouse_press_event q_cppolarlegenditem_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -108145,10 +101249,6 @@ void q_cppolarlegenditem_on_mouse_press_event(void* self, void (*callback)(void*
 ///
 void q_cppolarlegenditem_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_mouse_move_event` instead
-///
-#define q_cppolarlegenditem_qbase_mouse_move_event q_cppolarlegenditem_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -108183,10 +101283,6 @@ void q_cppolarlegenditem_on_mouse_move_event(void* self, void (*callback)(void*,
 /// @param startPos QPointF*
 ///
 void q_cppolarlegenditem_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_mouse_release_event` instead
-///
-#define q_cppolarlegenditem_qbase_mouse_release_event q_cppolarlegenditem_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -108223,10 +101319,6 @@ void q_cppolarlegenditem_on_mouse_release_event(void* self, void (*callback)(voi
 ///
 void q_cppolarlegenditem_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_mouse_double_click_event` instead
-///
-#define q_cppolarlegenditem_qbase_mouse_double_click_event q_cppolarlegenditem_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -108261,10 +101353,6 @@ void q_cppolarlegenditem_on_mouse_double_click_event(void* self, void (*callback
 ///
 void q_cppolarlegenditem_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_wheel_event` instead
-///
-#define q_cppolarlegenditem_qbase_wheel_event q_cppolarlegenditem_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -108297,10 +101385,6 @@ void q_cppolarlegenditem_on_wheel_event(void* self, void (*callback)(void*, void
 /// @param event QEvent*
 ///
 bool q_cppolarlegenditem_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_event` instead
-///
-#define q_cppolarlegenditem_qbase_event q_cppolarlegenditem_super_event
 
 /// Inherited from QObject
 ///
@@ -108336,10 +101420,6 @@ void q_cppolarlegenditem_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cppolarlegenditem_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_event_filter` instead
-///
-#define q_cppolarlegenditem_qbase_event_filter q_cppolarlegenditem_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -108374,10 +101454,6 @@ void q_cppolarlegenditem_on_event_filter(void* self, bool (*callback)(void*, voi
 ///
 void q_cppolarlegenditem_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_timer_event` instead
-///
-#define q_cppolarlegenditem_qbase_timer_event q_cppolarlegenditem_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -108410,10 +101486,6 @@ void q_cppolarlegenditem_on_timer_event(void* self, void (*callback)(void*, void
 /// @param event QChildEvent*
 ///
 void q_cppolarlegenditem_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_child_event` instead
-///
-#define q_cppolarlegenditem_qbase_child_event q_cppolarlegenditem_super_child_event
 
 /// Inherited from QObject
 ///
@@ -108448,10 +101520,6 @@ void q_cppolarlegenditem_on_child_event(void* self, void (*callback)(void*, void
 ///
 void q_cppolarlegenditem_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_custom_event` instead
-///
-#define q_cppolarlegenditem_qbase_custom_event q_cppolarlegenditem_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -108484,10 +101552,6 @@ void q_cppolarlegenditem_on_custom_event(void* self, void (*callback)(void*, voi
 /// @param signal QMetaMethod*
 ///
 void q_cppolarlegenditem_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_connect_notify` instead
-///
-#define q_cppolarlegenditem_qbase_connect_notify q_cppolarlegenditem_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -108522,10 +101586,6 @@ void q_cppolarlegenditem_on_connect_notify(void* self, void (*callback)(void*, v
 ///
 void q_cppolarlegenditem_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_disconnect_notify` instead
-///
-#define q_cppolarlegenditem_qbase_disconnect_notify q_cppolarlegenditem_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -108558,10 +101618,6 @@ void q_cppolarlegenditem_on_disconnect_notify(void* self, void (*callback)(void*
 /// @param parentPlot QCustomPlot*
 ///
 void q_cppolarlegenditem_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_initialize_parent_plot` instead
-///
-#define q_cppolarlegenditem_qbase_initialize_parent_plot q_cppolarlegenditem_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -108596,10 +101652,6 @@ void q_cppolarlegenditem_on_initialize_parent_plot(void* self, void (*callback)(
 ///
 void q_cppolarlegenditem_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_set_parent_layerable` instead
-///
-#define q_cppolarlegenditem_qbase_set_parent_layerable q_cppolarlegenditem_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -108633,10 +101685,6 @@ void q_cppolarlegenditem_on_set_parent_layerable(void* self, void (*callback)(vo
 /// @param prepend bool
 ///
 bool q_cppolarlegenditem_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_move_to_layer` instead
-///
-#define q_cppolarlegenditem_qbase_move_to_layer q_cppolarlegenditem_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -108674,10 +101722,6 @@ void q_cppolarlegenditem_on_move_to_layer(void* self, bool (*callback)(void*, vo
 ///
 void q_cppolarlegenditem_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_apply_antialiasing_hint` instead
-///
-#define q_cppolarlegenditem_qbase_apply_antialiasing_hint q_cppolarlegenditem_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -108712,10 +101756,6 @@ void q_cppolarlegenditem_on_apply_antialiasing_hint(void* self, void (*callback)
 ///
 QObject* q_cppolarlegenditem_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_sender` instead
-///
-#define q_cppolarlegenditem_qbase_sender q_cppolarlegenditem_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -108746,10 +101786,6 @@ void q_cppolarlegenditem_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPPolarLegendItem*
 ///
 int32_t q_cppolarlegenditem_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_sender_signal_index` instead
-///
-#define q_cppolarlegenditem_qbase_sender_signal_index q_cppolarlegenditem_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -108783,10 +101819,6 @@ void q_cppolarlegenditem_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 int32_t q_cppolarlegenditem_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_receivers` instead
-///
-#define q_cppolarlegenditem_qbase_receivers q_cppolarlegenditem_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -108819,10 +101851,6 @@ void q_cppolarlegenditem_on_receivers(void* self, int32_t (*callback)(void*, con
 /// @param signal QMetaMethod*
 ///
 bool q_cppolarlegenditem_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cppolarlegenditem_super_is_signal_connected` instead
-///
-#define q_cppolarlegenditem_qbase_is_signal_connected q_cppolarlegenditem_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -108889,10 +101917,6 @@ const QMetaObject* q_cppolargraph_meta_object(void* self);
 ///
 void q_cppolargraph_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_meta_object` instead
-///
-#define q_cppolargraph_qbase_meta_object q_cppolargraph_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -108912,10 +101936,6 @@ void* q_cppolargraph_metacast(void* self, const char* param1);
 /// @param callback void* func(QCPPolarGraph* self, const char* param1)
 ///
 void q_cppolargraph_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_metacast` instead
-///
-#define q_cppolargraph_qbase_metacast q_cppolargraph_super_metacast
 
 /// Base class method implementation
 ///
@@ -108937,10 +101957,6 @@ int32_t q_cppolargraph_metacall(void* self, int32_t param1, int param2, void* pa
 /// @param callback int32_t func(QCPPolarGraph* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_cppolargraph_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_metacall` instead
-///
-#define q_cppolargraph_qbase_metacall q_cppolargraph_super_metacall
 
 /// Base class method implementation
 ///
@@ -109250,10 +102266,6 @@ double q_cppolargraph_select_test(void* self, void* pos, bool onlySelectable, vo
 ///
 void q_cppolargraph_on_select_test(void* self, double (*callback)(void*, void*, bool, void*));
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_select_test` instead
-///
-#define q_cppolargraph_qbase_select_test q_cppolargraph_super_select_test
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// Base class method implementation
@@ -109279,10 +102291,6 @@ QCPPlottableInterface1D* q_cppolargraph_interface1_d(void* self);
 /// @param callback QCPPlottableInterface1D* func()
 ///
 void q_cppolargraph_on_interface1_d(void* self, QCPPlottableInterface1D* (*callback)());
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_interface1_d` instead
-///
-#define q_cppolargraph_qbase_interface1_d q_cppolargraph_super_interface1_d
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -109310,10 +102318,6 @@ QCPRange* q_cppolargraph_get_key_range(void* self, bool* foundRange, int32_t inS
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolargraph_on_get_key_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t));
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_get_key_range` instead
-///
-#define q_cppolargraph_qbase_get_key_range q_cppolargraph_super_get_key_range
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -109344,10 +102348,6 @@ QCPRange* q_cppolargraph_get_value_range(void* self, bool* foundRange, int32_t i
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolargraph_on_get_value_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t, void*));
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_get_value_range` instead
-///
-#define q_cppolargraph_qbase_get_value_range q_cppolargraph_super_get_value_range
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -109398,10 +102398,6 @@ QRect* q_cppolargraph_clip_rect(void* self);
 ///
 void q_cppolargraph_on_clip_rect(void* self, QRect* (*callback)());
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_clip_rect` instead
-///
-#define q_cppolargraph_qbase_clip_rect q_cppolargraph_super_clip_rect
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// Base class method implementation
@@ -109425,10 +102421,6 @@ void q_cppolargraph_draw(void* self, void* painter);
 /// @param callback void func(QCPPolarGraph* self, QCPPainter* painter)
 ///
 void q_cppolargraph_on_draw(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_draw` instead
-///
-#define q_cppolargraph_qbase_draw q_cppolargraph_super_draw
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -109456,10 +102448,6 @@ int32_t q_cppolargraph_selection_category(void* self);
 ///
 void q_cppolargraph_on_selection_category(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_selection_category` instead
-///
-#define q_cppolargraph_qbase_selection_category q_cppolargraph_super_selection_category
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// Base class method implementation
@@ -109485,10 +102473,6 @@ void q_cppolargraph_apply_default_antialiasing_hint(void* self, void* painter);
 /// @param callback void func(QCPPolarGraph* self, QCPPainter* painter)
 ///
 void q_cppolargraph_on_apply_default_antialiasing_hint(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_apply_default_antialiasing_hint` instead
-///
-#define q_cppolargraph_qbase_apply_default_antialiasing_hint q_cppolargraph_super_apply_default_antialiasing_hint
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -109518,10 +102502,6 @@ void q_cppolargraph_select_event(void* self, void* event, bool additive, void* d
 ///
 void q_cppolargraph_on_select_event(void* self, void (*callback)(void*, void*, bool, void*, bool*));
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_select_event` instead
-///
-#define q_cppolargraph_qbase_select_event q_cppolargraph_super_select_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// Base class method implementation
@@ -109550,10 +102530,6 @@ void q_cppolargraph_deselect_event(void* self, bool* selectionStateChanged);
 ///
 void q_cppolargraph_on_deselect_event(void* self, void (*callback)(void*, bool*));
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_deselect_event` instead
-///
-#define q_cppolargraph_qbase_deselect_event q_cppolargraph_super_deselect_event
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// Base class method implementation
@@ -109579,10 +102555,6 @@ void q_cppolargraph_draw_line_plot(void* self, void* painter, libqt_list lines);
 /// @param callback void func(QCPPolarGraph* self, QCPPainter* painter, libqt_list of QPointF* lines)
 ///
 void q_cppolargraph_on_draw_line_plot(void* self, void (*callback)(void*, void*, libqt_list));
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_draw_line_plot` instead
-///
-#define q_cppolargraph_qbase_draw_line_plot q_cppolargraph_super_draw_line_plot
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -109610,10 +102582,6 @@ void q_cppolargraph_draw_fill(void* self, void* painter, libqt_list lines);
 /// @param callback void func(QCPPolarGraph* self, QCPPainter* painter, libqt_list of QPointF* lines)
 ///
 void q_cppolargraph_on_draw_fill(void* self, void (*callback)(void*, void*, libqt_list));
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_draw_fill` instead
-///
-#define q_cppolargraph_qbase_draw_fill q_cppolargraph_super_draw_fill
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -109643,10 +102611,6 @@ void q_cppolargraph_draw_scatter_plot(void* self, void* painter, libqt_list scat
 ///
 void q_cppolargraph_on_draw_scatter_plot(void* self, void (*callback)(void*, void*, libqt_list, void*));
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_draw_scatter_plot` instead
-///
-#define q_cppolargraph_qbase_draw_scatter_plot q_cppolargraph_super_draw_scatter_plot
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// Base class method implementation
@@ -109675,10 +102639,6 @@ void q_cppolargraph_draw_legend_icon(void* self, void* painter, void* rect);
 ///
 void q_cppolargraph_on_draw_legend_icon(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_draw_legend_icon` instead
-///
-#define q_cppolargraph_qbase_draw_legend_icon q_cppolargraph_super_draw_legend_icon
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// Base class method implementation
@@ -109705,10 +102665,6 @@ void q_cppolargraph_apply_fill_antialiasing_hint(void* self, void* painter);
 ///
 void q_cppolargraph_on_apply_fill_antialiasing_hint(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_apply_fill_antialiasing_hint` instead
-///
-#define q_cppolargraph_qbase_apply_fill_antialiasing_hint q_cppolargraph_super_apply_fill_antialiasing_hint
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// Base class method implementation
@@ -109734,10 +102690,6 @@ void q_cppolargraph_apply_scatters_antialiasing_hint(void* self, void* painter);
 ///
 void q_cppolargraph_on_apply_scatters_antialiasing_hint(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_apply_scatters_antialiasing_hint` instead
-///
-#define q_cppolargraph_qbase_apply_scatters_antialiasing_hint q_cppolargraph_super_apply_scatters_antialiasing_hint
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// Base class method implementation
@@ -109761,10 +102713,6 @@ int32_t q_cppolargraph_data_count(void* self);
 /// @param callback int32_t func()
 ///
 void q_cppolargraph_on_data_count(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_data_count` instead
-///
-#define q_cppolargraph_qbase_data_count q_cppolargraph_super_data_count
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -109790,10 +102738,6 @@ void q_cppolargraph_get_data_segments(void* self, libqt_list selectedSegments, l
 /// @param callback void func(QCPPolarGraph* self, libqt_list of QCPDataRange* selectedSegments, libqt_list of QCPDataRange* unselectedSegments)
 ///
 void q_cppolargraph_on_get_data_segments(void* self, void (*callback)(void*, libqt_list, libqt_list));
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_get_data_segments` instead
-///
-#define q_cppolargraph_qbase_get_data_segments q_cppolargraph_super_get_data_segments
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -109822,10 +102766,6 @@ void q_cppolargraph_draw_polyline(void* self, void* painter, libqt_list lineData
 ///
 void q_cppolargraph_on_draw_polyline(void* self, void (*callback)(void*, void*, libqt_list));
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_draw_polyline` instead
-///
-#define q_cppolargraph_qbase_draw_polyline q_cppolargraph_super_draw_polyline
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// Base class method implementation
@@ -109852,10 +102792,6 @@ void q_cppolargraph_get_lines(void* self, libqt_list lines, void* dataRange);
 /// @param callback void func(QCPPolarGraph* self, libqt_list of QPointF* lines, QCPDataRange* dataRange)
 ///
 void q_cppolargraph_on_get_lines(void* self, void (*callback)(void*, libqt_list, void*));
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_get_lines` instead
-///
-#define q_cppolargraph_qbase_get_lines q_cppolargraph_super_get_lines
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -109884,10 +102820,6 @@ void q_cppolargraph_get_scatters(void* self, libqt_list scatters, void* dataRang
 ///
 void q_cppolargraph_on_get_scatters(void* self, void (*callback)(void*, libqt_list, void*));
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_get_scatters` instead
-///
-#define q_cppolargraph_qbase_get_scatters q_cppolargraph_super_get_scatters
-
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// Base class method implementation
@@ -109915,10 +102847,6 @@ libqt_list q_cppolargraph_data_to_lines(void* self, libqt_list data);
 /// @param callback libqt_list of QPointF* func(QCPPolarGraph* self, libqt_list of QCPGraphData* data)
 ///
 void q_cppolargraph_on_data_to_lines(void* self, libqt_list (*callback)(void*, libqt_list));
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_data_to_lines` instead
-///
-#define q_cppolargraph_qbase_data_to_lines q_cppolargraph_super_data_to_lines
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -110557,10 +103485,6 @@ void q_cppolargraph_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 void q_cppolargraph_parent_plot_initialized(void* self, void* parentPlot);
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_parent_plot_initialized` instead
-///
-#define q_cppolargraph_qbase_parent_plot_initialized q_cppolargraph_super_parent_plot_initialized
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -110594,10 +103518,6 @@ void q_cppolargraph_on_parent_plot_initialized(void* self, void (*callback)(void
 /// @param details QVariant*
 ///
 void q_cppolargraph_mouse_press_event(void* self, void* event, void* details);
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_mouse_press_event` instead
-///
-#define q_cppolargraph_qbase_mouse_press_event q_cppolargraph_super_mouse_press_event
 
 /// Inherited from QCPLayerable
 ///
@@ -110634,10 +103554,6 @@ void q_cppolargraph_on_mouse_press_event(void* self, void (*callback)(void*, voi
 ///
 void q_cppolargraph_mouse_move_event(void* self, void* event, void* startPos);
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_mouse_move_event` instead
-///
-#define q_cppolargraph_qbase_mouse_move_event q_cppolargraph_super_mouse_move_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -110672,10 +103588,6 @@ void q_cppolargraph_on_mouse_move_event(void* self, void (*callback)(void*, void
 /// @param startPos QPointF*
 ///
 void q_cppolargraph_mouse_release_event(void* self, void* event, void* startPos);
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_mouse_release_event` instead
-///
-#define q_cppolargraph_qbase_mouse_release_event q_cppolargraph_super_mouse_release_event
 
 /// Inherited from QCPLayerable
 ///
@@ -110712,10 +103624,6 @@ void q_cppolargraph_on_mouse_release_event(void* self, void (*callback)(void*, v
 ///
 void q_cppolargraph_mouse_double_click_event(void* self, void* event, void* details);
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_mouse_double_click_event` instead
-///
-#define q_cppolargraph_qbase_mouse_double_click_event q_cppolargraph_super_mouse_double_click_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -110750,10 +103658,6 @@ void q_cppolargraph_on_mouse_double_click_event(void* self, void (*callback)(voi
 ///
 void q_cppolargraph_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_wheel_event` instead
-///
-#define q_cppolargraph_qbase_wheel_event q_cppolargraph_super_wheel_event
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -110786,10 +103690,6 @@ void q_cppolargraph_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_cppolargraph_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_event` instead
-///
-#define q_cppolargraph_qbase_event q_cppolargraph_super_event
 
 /// Inherited from QObject
 ///
@@ -110825,10 +103725,6 @@ void q_cppolargraph_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_cppolargraph_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_event_filter` instead
-///
-#define q_cppolargraph_qbase_event_filter q_cppolargraph_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -110863,10 +103759,6 @@ void q_cppolargraph_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void q_cppolargraph_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_timer_event` instead
-///
-#define q_cppolargraph_qbase_timer_event q_cppolargraph_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -110899,10 +103791,6 @@ void q_cppolargraph_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_cppolargraph_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_child_event` instead
-///
-#define q_cppolargraph_qbase_child_event q_cppolargraph_super_child_event
 
 /// Inherited from QObject
 ///
@@ -110937,10 +103825,6 @@ void q_cppolargraph_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_cppolargraph_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_custom_event` instead
-///
-#define q_cppolargraph_qbase_custom_event q_cppolargraph_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -110973,10 +103857,6 @@ void q_cppolargraph_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_cppolargraph_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_connect_notify` instead
-///
-#define q_cppolargraph_qbase_connect_notify q_cppolargraph_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -111011,10 +103891,6 @@ void q_cppolargraph_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void q_cppolargraph_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_disconnect_notify` instead
-///
-#define q_cppolargraph_qbase_disconnect_notify q_cppolargraph_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -111047,10 +103923,6 @@ void q_cppolargraph_on_disconnect_notify(void* self, void (*callback)(void*, voi
 /// @param parentPlot QCustomPlot*
 ///
 void q_cppolargraph_initialize_parent_plot(void* self, void* parentPlot);
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_initialize_parent_plot` instead
-///
-#define q_cppolargraph_qbase_initialize_parent_plot q_cppolargraph_super_initialize_parent_plot
 
 /// Inherited from QCPLayerable
 ///
@@ -111085,10 +103957,6 @@ void q_cppolargraph_on_initialize_parent_plot(void* self, void (*callback)(void*
 ///
 void q_cppolargraph_set_parent_layerable(void* self, void* parentLayerable);
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_set_parent_layerable` instead
-///
-#define q_cppolargraph_qbase_set_parent_layerable q_cppolargraph_super_set_parent_layerable
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -111122,10 +103990,6 @@ void q_cppolargraph_on_set_parent_layerable(void* self, void (*callback)(void*, 
 /// @param prepend bool
 ///
 bool q_cppolargraph_move_to_layer(void* self, void* layer, bool prepend);
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_move_to_layer` instead
-///
-#define q_cppolargraph_qbase_move_to_layer q_cppolargraph_super_move_to_layer
 
 /// Inherited from QCPLayerable
 ///
@@ -111163,10 +104027,6 @@ void q_cppolargraph_on_move_to_layer(void* self, bool (*callback)(void*, void*, 
 ///
 void q_cppolargraph_apply_antialiasing_hint(void* self, void* painter, bool localAntialiased, int32_t overrideElement);
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_apply_antialiasing_hint` instead
-///
-#define q_cppolargraph_qbase_apply_antialiasing_hint q_cppolargraph_super_apply_antialiasing_hint
-
 /// Inherited from QCPLayerable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
@@ -111201,10 +104061,6 @@ void q_cppolargraph_on_apply_antialiasing_hint(void* self, void (*callback)(void
 ///
 QObject* q_cppolargraph_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_sender` instead
-///
-#define q_cppolargraph_qbase_sender q_cppolargraph_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -111235,10 +104091,6 @@ void q_cppolargraph_on_sender(void* self, QObject* (*callback)());
 /// @param self QCPPolarGraph*
 ///
 int32_t q_cppolargraph_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_sender_signal_index` instead
-///
-#define q_cppolargraph_qbase_sender_signal_index q_cppolargraph_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -111272,10 +104124,6 @@ void q_cppolargraph_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_cppolargraph_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_cppolargraph_super_receivers` instead
-///
-#define q_cppolargraph_qbase_receivers q_cppolargraph_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -111308,10 +104156,6 @@ void q_cppolargraph_on_receivers(void* self, int32_t (*callback)(void*, const ch
 /// @param signal QMetaMethod*
 ///
 bool q_cppolargraph_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_cppolargraph_super_is_signal_connected` instead
-///
-#define q_cppolargraph_qbase_is_signal_connected q_cppolargraph_super_is_signal_connected
 
 /// Inherited from QObject
 ///

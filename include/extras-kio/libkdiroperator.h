@@ -46,10 +46,6 @@ const QMetaObject* k_diroperator_meta_object(void* self);
 ///
 void k_diroperator_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_diroperator_super_meta_object` instead
-///
-#define k_diroperator_qbase_meta_object k_diroperator_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -69,10 +65,6 @@ void* k_diroperator_metacast(void* self, const char* param1);
 /// @param callback void* func(KDirOperator* self, const char* param1)
 ///
 void k_diroperator_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_diroperator_super_metacast` instead
-///
-#define k_diroperator_qbase_metacast k_diroperator_super_metacast
 
 /// Base class method implementation
 ///
@@ -94,10 +86,6 @@ int32_t k_diroperator_metacall(void* self, int32_t param1, int param2, void* par
 /// @param callback int32_t func(KDirOperator* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_diroperator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_diroperator_super_metacall` instead
-///
-#define k_diroperator_qbase_metacall k_diroperator_super_metacall
 
 /// Base class method implementation
 ///
@@ -131,10 +119,6 @@ void k_diroperator_set_show_hidden_files(void* self, bool s);
 /// @param callback void func(KDirOperator* self, bool s)
 ///
 void k_diroperator_on_set_show_hidden_files(void* self, void (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `k_diroperator_super_set_show_hidden_files` instead
-///
-#define k_diroperator_qbase_set_show_hidden_files k_diroperator_super_set_show_hidden_files
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setShowHiddenFiles)
 ///
@@ -237,10 +221,6 @@ void k_diroperator_set_url(void* self, void* url, bool clearforward);
 /// @param callback void func(KDirOperator* self, QUrl* url, bool clearforward)
 ///
 void k_diroperator_on_set_url(void* self, void (*callback)(void*, void*, bool));
-
-/// @warning DEPRECATED: Use `k_diroperator_super_set_url` instead
-///
-#define k_diroperator_qbase_set_url k_diroperator_super_set_url
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setUrl)
 ///
@@ -350,10 +330,6 @@ void k_diroperator_set_mode(void* self, int32_t m);
 ///
 void k_diroperator_on_set_mode(void* self, void (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `k_diroperator_super_set_mode` instead
-///
-#define k_diroperator_qbase_set_mode k_diroperator_super_set_mode
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setMode)
 ///
 /// Base class method implementation
@@ -386,10 +362,6 @@ void k_diroperator_set_preview_widget(void* self, void* w);
 /// @param callback void func(KDirOperator* self, KPreviewWidgetBase* w)
 ///
 void k_diroperator_on_set_preview_widget(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_diroperator_super_set_preview_widget` instead
-///
-#define k_diroperator_qbase_set_preview_widget k_diroperator_super_set_preview_widget
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setPreviewWidget)
 ///
@@ -468,10 +440,6 @@ void k_diroperator_set_view_config(void* self, void* configGroup);
 ///
 void k_diroperator_on_set_view_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_diroperator_super_set_view_config` instead
-///
-#define k_diroperator_qbase_set_view_config k_diroperator_super_set_view_config
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setViewConfig)
 ///
 /// Base class method implementation
@@ -503,10 +471,6 @@ void k_diroperator_read_config(void* self, void* configGroup);
 ///
 void k_diroperator_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_diroperator_super_read_config` instead
-///
-#define k_diroperator_qbase_read_config k_diroperator_super_read_config
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#readConfig)
 ///
 /// Base class method implementation
@@ -531,10 +495,6 @@ void k_diroperator_write_config(void* self, void* configGroup);
 /// @param callback void func(KDirOperator* self, KConfigGroup* configGroup)
 ///
 void k_diroperator_on_write_config(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_diroperator_super_write_config` instead
-///
-#define k_diroperator_qbase_write_config k_diroperator_super_write_config
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#writeConfig)
 ///
@@ -603,10 +563,6 @@ KIO__DeleteJob* k_diroperator_del(void* self, void* items, void* parent, bool as
 ///
 void k_diroperator_on_del(void* self, KIO__DeleteJob* (*callback)(void*, void*, void*, bool, bool));
 
-/// @warning DEPRECATED: Use `k_diroperator_super_del` instead
-///
-#define k_diroperator_qbase_del k_diroperator_super_del
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#del)
 ///
 /// Base class method implementation
@@ -640,10 +596,6 @@ void k_diroperator_set_enable_dir_highlighting(void* self, bool enable);
 /// @param callback void func(KDirOperator* self, bool enable)
 ///
 void k_diroperator_on_set_enable_dir_highlighting(void* self, void (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `k_diroperator_super_set_enable_dir_highlighting` instead
-///
-#define k_diroperator_qbase_set_enable_dir_highlighting k_diroperator_super_set_enable_dir_highlighting
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setEnableDirHighlighting)
 ///
@@ -695,10 +647,6 @@ void k_diroperator_set_accept_drops(void* self, bool b);
 ///
 void k_diroperator_on_set_accept_drops(void* self, void (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `k_diroperator_super_set_accept_drops` instead
-///
-#define k_diroperator_qbase_set_accept_drops k_diroperator_super_set_accept_drops
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setAcceptDrops)
 ///
 /// Base class method implementation
@@ -723,10 +671,6 @@ void k_diroperator_set_drop_options(void* self, int options);
 /// @param callback void func(KDirOperator* self, int options)
 ///
 void k_diroperator_on_set_drop_options(void* self, void (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `k_diroperator_super_set_drop_options` instead
-///
-#define k_diroperator_qbase_set_drop_options k_diroperator_super_set_drop_options
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setDropOptions)
 ///
@@ -755,10 +699,6 @@ KIO__CopyJob* k_diroperator_trash(void* self, void* items, void* parent, bool as
 /// @param callback KIO__CopyJob* func(KDirOperator* self, KFileItemList* items, QWidget* parent, bool ask, bool showProgress)
 ///
 void k_diroperator_on_trash(void* self, KIO__CopyJob* (*callback)(void*, void*, void*, bool, bool));
-
-/// @warning DEPRECATED: Use `k_diroperator_super_trash` instead
-///
-#define k_diroperator_qbase_trash k_diroperator_super_trash
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#trash)
 ///
@@ -863,10 +803,6 @@ QAbstractItemView* k_diroperator_create_view(void* self, void* parent, int32_t v
 ///
 void k_diroperator_on_create_view(void* self, QAbstractItemView* (*callback)(void*, void*, int32_t));
 
-/// @warning DEPRECATED: Use `k_diroperator_super_create_view` instead
-///
-#define k_diroperator_qbase_create_view k_diroperator_super_create_view
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#createView)
 ///
 /// Base class method implementation
@@ -893,10 +829,6 @@ void k_diroperator_set_dir_lister(void* self, void* lister);
 ///
 void k_diroperator_on_set_dir_lister(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_diroperator_super_set_dir_lister` instead
-///
-#define k_diroperator_qbase_set_dir_lister k_diroperator_super_set_dir_lister
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setDirLister)
 ///
 /// Base class method implementation
@@ -922,10 +854,6 @@ void k_diroperator_resize_event(void* self, void* event);
 ///
 void k_diroperator_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_diroperator_super_resize_event` instead
-///
-#define k_diroperator_qbase_resize_event k_diroperator_super_resize_event
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#resizeEvent)
 ///
 /// Base class method implementation
@@ -950,10 +878,6 @@ void k_diroperator_setup_actions(void* self);
 ///
 void k_diroperator_on_setup_actions(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_diroperator_super_setup_actions` instead
-///
-#define k_diroperator_qbase_setup_actions k_diroperator_super_setup_actions
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setupActions)
 ///
 /// Base class method implementation
@@ -976,10 +900,6 @@ void k_diroperator_update_sort_actions(void* self);
 /// @param callback void func()
 ///
 void k_diroperator_on_update_sort_actions(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_diroperator_super_update_sort_actions` instead
-///
-#define k_diroperator_qbase_update_sort_actions k_diroperator_super_update_sort_actions
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#updateSortActions)
 ///
@@ -1004,10 +924,6 @@ void k_diroperator_update_view_actions(void* self);
 ///
 void k_diroperator_on_update_view_actions(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_diroperator_super_update_view_actions` instead
-///
-#define k_diroperator_qbase_update_view_actions k_diroperator_super_update_view_actions
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#updateViewActions)
 ///
 /// Base class method implementation
@@ -1030,10 +946,6 @@ void k_diroperator_setup_menu2(void* self);
 /// @param callback void func()
 ///
 void k_diroperator_on_setup_menu2(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_diroperator_super_setup_menu2` instead
-///
-#define k_diroperator_qbase_setup_menu2 k_diroperator_super_setup_menu2
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setupMenu)
 ///
@@ -1058,10 +970,6 @@ void k_diroperator_prepare_completion_objects(void* self);
 ///
 void k_diroperator_on_prepare_completion_objects(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_diroperator_super_prepare_completion_objects` instead
-///
-#define k_diroperator_qbase_prepare_completion_objects k_diroperator_super_prepare_completion_objects
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#prepareCompletionObjects)
 ///
 /// Base class method implementation
@@ -1084,10 +992,6 @@ bool k_diroperator_check_preview_support(void* self);
 /// @param callback bool func()
 ///
 void k_diroperator_on_check_preview_support(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `k_diroperator_super_check_preview_support` instead
-///
-#define k_diroperator_qbase_check_preview_support k_diroperator_super_check_preview_support
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#checkPreviewSupport)
 ///
@@ -1113,10 +1017,6 @@ void k_diroperator_activated_menu(void* self, void* item, void* pos);
 /// @param callback void func(KDirOperator* self, KFileItem* item, QPoint* pos)
 ///
 void k_diroperator_on_activated_menu(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_diroperator_super_activated_menu` instead
-///
-#define k_diroperator_qbase_activated_menu k_diroperator_super_activated_menu
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#activatedMenu)
 ///
@@ -1144,10 +1044,6 @@ void k_diroperator_change_event(void* self, void* event);
 ///
 void k_diroperator_on_change_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_diroperator_super_change_event` instead
-///
-#define k_diroperator_qbase_change_event k_diroperator_super_change_event
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#changeEvent)
 ///
 /// Base class method implementation
@@ -1174,10 +1070,6 @@ bool k_diroperator_event_filter(void* self, void* watched, void* event);
 ///
 void k_diroperator_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_diroperator_super_event_filter` instead
-///
-#define k_diroperator_qbase_event_filter k_diroperator_super_event_filter
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#eventFilter)
 ///
 /// Base class method implementation
@@ -1203,10 +1095,6 @@ void k_diroperator_back(void* self);
 ///
 void k_diroperator_on_back(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_diroperator_super_back` instead
-///
-#define k_diroperator_qbase_back k_diroperator_super_back
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#back)
 ///
 /// Base class method implementation
@@ -1229,10 +1117,6 @@ void k_diroperator_forward(void* self);
 /// @param callback void func()
 ///
 void k_diroperator_on_forward(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_diroperator_super_forward` instead
-///
-#define k_diroperator_qbase_forward k_diroperator_super_forward
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#forward)
 ///
@@ -1257,10 +1141,6 @@ void k_diroperator_home(void* self);
 ///
 void k_diroperator_on_home(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_diroperator_super_home` instead
-///
-#define k_diroperator_qbase_home k_diroperator_super_home
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#home)
 ///
 /// Base class method implementation
@@ -1283,10 +1163,6 @@ void k_diroperator_cd_up(void* self);
 /// @param callback void func()
 ///
 void k_diroperator_on_cd_up(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_diroperator_super_cd_up` instead
-///
-#define k_diroperator_qbase_cd_up k_diroperator_super_cd_up
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#cdUp)
 ///
@@ -1317,10 +1193,6 @@ void k_diroperator_reread_dir(void* self);
 ///
 void k_diroperator_on_reread_dir(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_diroperator_super_reread_dir` instead
-///
-#define k_diroperator_qbase_reread_dir k_diroperator_super_reread_dir
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#rereadDir)
 ///
 /// Base class method implementation
@@ -1344,10 +1216,6 @@ void k_diroperator_mkdir(void* self);
 ///
 void k_diroperator_on_mkdir(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_diroperator_super_mkdir` instead
-///
-#define k_diroperator_qbase_mkdir k_diroperator_super_mkdir
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#mkdir)
 ///
 /// Base class method implementation
@@ -1370,10 +1238,6 @@ void k_diroperator_delete_selected(void* self);
 /// @param callback void func()
 ///
 void k_diroperator_on_delete_selected(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_diroperator_super_delete_selected` instead
-///
-#define k_diroperator_qbase_delete_selected k_diroperator_super_delete_selected
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#deleteSelected)
 ///
@@ -1428,10 +1292,6 @@ void k_diroperator_trash_selected(void* self);
 ///
 void k_diroperator_on_trash_selected(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_diroperator_super_trash_selected` instead
-///
-#define k_diroperator_qbase_trash_selected k_diroperator_super_trash_selected
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#trashSelected)
 ///
 /// Base class method implementation
@@ -1469,10 +1329,6 @@ void k_diroperator_reset_cursor(void* self);
 ///
 void k_diroperator_on_reset_cursor(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_diroperator_super_reset_cursor` instead
-///
-#define k_diroperator_qbase_reset_cursor k_diroperator_super_reset_cursor
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#resetCursor)
 ///
 /// Base class method implementation
@@ -1495,10 +1351,6 @@ void k_diroperator_path_changed(void* self);
 /// @param callback void func()
 ///
 void k_diroperator_on_path_changed(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_diroperator_super_path_changed` instead
-///
-#define k_diroperator_qbase_path_changed k_diroperator_super_path_changed
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#pathChanged)
 ///
@@ -1523,10 +1375,6 @@ void k_diroperator_select_dir(void* self, void* item);
 /// @param callback void func(KDirOperator* self, KFileItem* item)
 ///
 void k_diroperator_on_select_dir(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_diroperator_super_select_dir` instead
-///
-#define k_diroperator_qbase_select_dir k_diroperator_super_select_dir
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#selectDir)
 ///
@@ -1553,10 +1401,6 @@ void k_diroperator_select_file(void* self, void* item);
 ///
 void k_diroperator_on_select_file(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_diroperator_super_select_file` instead
-///
-#define k_diroperator_qbase_select_file k_diroperator_super_select_file
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#selectFile)
 ///
 /// Base class method implementation
@@ -1582,10 +1426,6 @@ void k_diroperator_highlight_file(void* self, void* item);
 ///
 void k_diroperator_on_highlight_file(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_diroperator_super_highlight_file` instead
-///
-#define k_diroperator_qbase_highlight_file k_diroperator_super_highlight_file
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#highlightFile)
 ///
 /// Base class method implementation
@@ -1610,10 +1450,6 @@ void k_diroperator_sort_by_name(void* self);
 ///
 void k_diroperator_on_sort_by_name(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_diroperator_super_sort_by_name` instead
-///
-#define k_diroperator_qbase_sort_by_name k_diroperator_super_sort_by_name
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#sortByName)
 ///
 /// Base class method implementation
@@ -1636,10 +1472,6 @@ void k_diroperator_sort_by_size(void* self);
 /// @param callback void func()
 ///
 void k_diroperator_on_sort_by_size(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_diroperator_super_sort_by_size` instead
-///
-#define k_diroperator_qbase_sort_by_size k_diroperator_super_sort_by_size
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#sortBySize)
 ///
@@ -1664,10 +1496,6 @@ void k_diroperator_sort_by_date(void* self);
 ///
 void k_diroperator_on_sort_by_date(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_diroperator_super_sort_by_date` instead
-///
-#define k_diroperator_qbase_sort_by_date k_diroperator_super_sort_by_date
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#sortByDate)
 ///
 /// Base class method implementation
@@ -1690,10 +1518,6 @@ void k_diroperator_sort_by_type(void* self);
 /// @param callback void func()
 ///
 void k_diroperator_on_sort_by_type(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_diroperator_super_sort_by_type` instead
-///
-#define k_diroperator_qbase_sort_by_type k_diroperator_super_sort_by_type
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#sortByType)
 ///
@@ -1718,10 +1542,6 @@ void k_diroperator_sort_reversed(void* self);
 ///
 void k_diroperator_on_sort_reversed(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_diroperator_super_sort_reversed` instead
-///
-#define k_diroperator_qbase_sort_reversed k_diroperator_super_sort_reversed
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#sortReversed)
 ///
 /// Base class method implementation
@@ -1744,10 +1564,6 @@ void k_diroperator_toggle_dirs_first(void* self);
 /// @param callback void func()
 ///
 void k_diroperator_on_toggle_dirs_first(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_diroperator_super_toggle_dirs_first` instead
-///
-#define k_diroperator_qbase_toggle_dirs_first k_diroperator_super_toggle_dirs_first
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#toggleDirsFirst)
 ///
@@ -1772,10 +1588,6 @@ void k_diroperator_toggle_ignore_case(void* self);
 ///
 void k_diroperator_on_toggle_ignore_case(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_diroperator_super_toggle_ignore_case` instead
-///
-#define k_diroperator_qbase_toggle_ignore_case k_diroperator_super_toggle_ignore_case
-
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#toggleIgnoreCase)
 ///
 /// Base class method implementation
@@ -1799,10 +1611,6 @@ void k_diroperator_slot_completion_match(void* self, const char* match);
 /// @param callback void func(KDirOperator* self, const char* match)
 ///
 void k_diroperator_on_slot_completion_match(void* self, void (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_diroperator_super_slot_completion_match` instead
-///
-#define k_diroperator_qbase_slot_completion_match k_diroperator_super_slot_completion_match
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#slotCompletionMatch)
 ///
@@ -4966,10 +4774,6 @@ int32_t k_diroperator_encode_metric_f(int32_t metric, double value);
 ///
 int32_t k_diroperator_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_dev_type` instead
-///
-#define k_diroperator_qbase_dev_type k_diroperator_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -5001,10 +4805,6 @@ void k_diroperator_on_dev_type(void* self, int32_t (*callback)());
 /// @param visible bool
 ///
 void k_diroperator_set_visible(void* self, bool visible);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_set_visible` instead
-///
-#define k_diroperator_qbase_set_visible k_diroperator_super_set_visible
 
 /// Inherited from QWidget
 ///
@@ -5038,10 +4838,6 @@ void k_diroperator_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 QSize* k_diroperator_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_size_hint` instead
-///
-#define k_diroperator_qbase_size_hint k_diroperator_super_size_hint
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
@@ -5074,10 +4870,6 @@ void k_diroperator_on_size_hint(void* self, QSize* (*callback)());
 /// @param self KDirOperator*
 ///
 QSize* k_diroperator_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_minimum_size_hint` instead
-///
-#define k_diroperator_qbase_minimum_size_hint k_diroperator_super_minimum_size_hint
 
 /// Inherited from QWidget
 ///
@@ -5113,10 +4905,6 @@ void k_diroperator_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 int32_t k_diroperator_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_height_for_width` instead
-///
-#define k_diroperator_qbase_height_for_width k_diroperator_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -5149,10 +4937,6 @@ void k_diroperator_on_height_for_width(void* self, int32_t (*callback)(void*, in
 ///
 bool k_diroperator_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_has_height_for_width` instead
-///
-#define k_diroperator_qbase_has_height_for_width k_diroperator_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -5183,10 +4967,6 @@ void k_diroperator_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self KDirOperator*
 ///
 QPaintEngine* k_diroperator_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_paint_engine` instead
-///
-#define k_diroperator_qbase_paint_engine k_diroperator_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -5219,10 +4999,6 @@ void k_diroperator_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QEvent*
 ///
 bool k_diroperator_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_event` instead
-///
-#define k_diroperator_qbase_event k_diroperator_super_event
 
 /// Inherited from QWidget
 ///
@@ -5257,10 +5033,6 @@ void k_diroperator_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void k_diroperator_mouse_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_mouse_press_event` instead
-///
-#define k_diroperator_qbase_mouse_press_event k_diroperator_super_mouse_press_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -5293,10 +5065,6 @@ void k_diroperator_on_mouse_press_event(void* self, void (*callback)(void*, void
 /// @param event QMouseEvent*
 ///
 void k_diroperator_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_mouse_release_event` instead
-///
-#define k_diroperator_qbase_mouse_release_event k_diroperator_super_mouse_release_event
 
 /// Inherited from QWidget
 ///
@@ -5331,10 +5099,6 @@ void k_diroperator_on_mouse_release_event(void* self, void (*callback)(void*, vo
 ///
 void k_diroperator_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_mouse_double_click_event` instead
-///
-#define k_diroperator_qbase_mouse_double_click_event k_diroperator_super_mouse_double_click_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -5367,10 +5131,6 @@ void k_diroperator_on_mouse_double_click_event(void* self, void (*callback)(void
 /// @param event QMouseEvent*
 ///
 void k_diroperator_mouse_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_mouse_move_event` instead
-///
-#define k_diroperator_qbase_mouse_move_event k_diroperator_super_mouse_move_event
 
 /// Inherited from QWidget
 ///
@@ -5405,10 +5165,6 @@ void k_diroperator_on_mouse_move_event(void* self, void (*callback)(void*, void*
 ///
 void k_diroperator_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_wheel_event` instead
-///
-#define k_diroperator_qbase_wheel_event k_diroperator_super_wheel_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -5441,10 +5197,6 @@ void k_diroperator_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QKeyEvent*
 ///
 void k_diroperator_key_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_key_press_event` instead
-///
-#define k_diroperator_qbase_key_press_event k_diroperator_super_key_press_event
 
 /// Inherited from QWidget
 ///
@@ -5479,10 +5231,6 @@ void k_diroperator_on_key_press_event(void* self, void (*callback)(void*, void*)
 ///
 void k_diroperator_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_key_release_event` instead
-///
-#define k_diroperator_qbase_key_release_event k_diroperator_super_key_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -5515,10 +5263,6 @@ void k_diroperator_on_key_release_event(void* self, void (*callback)(void*, void
 /// @param event QFocusEvent*
 ///
 void k_diroperator_focus_in_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_focus_in_event` instead
-///
-#define k_diroperator_qbase_focus_in_event k_diroperator_super_focus_in_event
 
 /// Inherited from QWidget
 ///
@@ -5553,10 +5297,6 @@ void k_diroperator_on_focus_in_event(void* self, void (*callback)(void*, void*))
 ///
 void k_diroperator_focus_out_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_focus_out_event` instead
-///
-#define k_diroperator_qbase_focus_out_event k_diroperator_super_focus_out_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -5589,10 +5329,6 @@ void k_diroperator_on_focus_out_event(void* self, void (*callback)(void*, void*)
 /// @param event QEnterEvent*
 ///
 void k_diroperator_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_enter_event` instead
-///
-#define k_diroperator_qbase_enter_event k_diroperator_super_enter_event
 
 /// Inherited from QWidget
 ///
@@ -5627,10 +5363,6 @@ void k_diroperator_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void k_diroperator_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_leave_event` instead
-///
-#define k_diroperator_qbase_leave_event k_diroperator_super_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -5663,10 +5395,6 @@ void k_diroperator_on_leave_event(void* self, void (*callback)(void*, void*));
 /// @param event QPaintEvent*
 ///
 void k_diroperator_paint_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_paint_event` instead
-///
-#define k_diroperator_qbase_paint_event k_diroperator_super_paint_event
 
 /// Inherited from QWidget
 ///
@@ -5701,10 +5429,6 @@ void k_diroperator_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 void k_diroperator_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_move_event` instead
-///
-#define k_diroperator_qbase_move_event k_diroperator_super_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -5737,10 +5461,6 @@ void k_diroperator_on_move_event(void* self, void (*callback)(void*, void*));
 /// @param event QCloseEvent*
 ///
 void k_diroperator_close_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_close_event` instead
-///
-#define k_diroperator_qbase_close_event k_diroperator_super_close_event
 
 /// Inherited from QWidget
 ///
@@ -5775,10 +5495,6 @@ void k_diroperator_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void k_diroperator_context_menu_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_context_menu_event` instead
-///
-#define k_diroperator_qbase_context_menu_event k_diroperator_super_context_menu_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
@@ -5811,10 +5527,6 @@ void k_diroperator_on_context_menu_event(void* self, void (*callback)(void*, voi
 /// @param event QTabletEvent*
 ///
 void k_diroperator_tablet_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_tablet_event` instead
-///
-#define k_diroperator_qbase_tablet_event k_diroperator_super_tablet_event
 
 /// Inherited from QWidget
 ///
@@ -5849,10 +5561,6 @@ void k_diroperator_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void k_diroperator_action_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_action_event` instead
-///
-#define k_diroperator_qbase_action_event k_diroperator_super_action_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -5885,10 +5593,6 @@ void k_diroperator_on_action_event(void* self, void (*callback)(void*, void*));
 /// @param event QDragEnterEvent*
 ///
 void k_diroperator_drag_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_drag_enter_event` instead
-///
-#define k_diroperator_qbase_drag_enter_event k_diroperator_super_drag_enter_event
 
 /// Inherited from QWidget
 ///
@@ -5923,10 +5627,6 @@ void k_diroperator_on_drag_enter_event(void* self, void (*callback)(void*, void*
 ///
 void k_diroperator_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_drag_move_event` instead
-///
-#define k_diroperator_qbase_drag_move_event k_diroperator_super_drag_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -5959,10 +5659,6 @@ void k_diroperator_on_drag_move_event(void* self, void (*callback)(void*, void*)
 /// @param event QDragLeaveEvent*
 ///
 void k_diroperator_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_drag_leave_event` instead
-///
-#define k_diroperator_qbase_drag_leave_event k_diroperator_super_drag_leave_event
 
 /// Inherited from QWidget
 ///
@@ -5997,10 +5693,6 @@ void k_diroperator_on_drag_leave_event(void* self, void (*callback)(void*, void*
 ///
 void k_diroperator_drop_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_drop_event` instead
-///
-#define k_diroperator_qbase_drop_event k_diroperator_super_drop_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -6034,10 +5726,6 @@ void k_diroperator_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void k_diroperator_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_show_event` instead
-///
-#define k_diroperator_qbase_show_event k_diroperator_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -6070,10 +5758,6 @@ void k_diroperator_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param event QHideEvent*
 ///
 void k_diroperator_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_hide_event` instead
-///
-#define k_diroperator_qbase_hide_event k_diroperator_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -6110,10 +5794,6 @@ void k_diroperator_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool k_diroperator_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_native_event` instead
-///
-#define k_diroperator_qbase_native_event k_diroperator_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -6149,10 +5829,6 @@ void k_diroperator_on_native_event(void* self, bool (*callback)(void*, libqt_str
 ///
 int32_t k_diroperator_metric(void* self, int32_t param1);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_metric` instead
-///
-#define k_diroperator_qbase_metric k_diroperator_super_metric
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -6185,10 +5861,6 @@ void k_diroperator_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 /// @param painter QPainter*
 ///
 void k_diroperator_init_painter(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_init_painter` instead
-///
-#define k_diroperator_qbase_init_painter k_diroperator_super_init_painter
 
 /// Inherited from QWidget
 ///
@@ -6223,10 +5895,6 @@ void k_diroperator_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* k_diroperator_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_redirected` instead
-///
-#define k_diroperator_qbase_redirected k_diroperator_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -6258,10 +5926,6 @@ void k_diroperator_on_redirected(void* self, QPaintDevice* (*callback)(void*, vo
 /// @param self KDirOperator*
 ///
 QPainter* k_diroperator_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_shared_painter` instead
-///
-#define k_diroperator_qbase_shared_painter k_diroperator_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -6295,10 +5959,6 @@ void k_diroperator_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void k_diroperator_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_input_method_event` instead
-///
-#define k_diroperator_qbase_input_method_event k_diroperator_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -6331,10 +5991,6 @@ void k_diroperator_on_input_method_event(void* self, void (*callback)(void*, voi
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* k_diroperator_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_input_method_query` instead
-///
-#define k_diroperator_qbase_input_method_query k_diroperator_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -6371,10 +6027,6 @@ void k_diroperator_on_input_method_query(void* self, QVariant* (*callback)(void*
 ///
 bool k_diroperator_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_focus_next_prev_child` instead
-///
-#define k_diroperator_qbase_focus_next_prev_child k_diroperator_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -6407,10 +6059,6 @@ void k_diroperator_on_focus_next_prev_child(void* self, bool (*callback)(void*, 
 /// @param event QTimerEvent*
 ///
 void k_diroperator_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_timer_event` instead
-///
-#define k_diroperator_qbase_timer_event k_diroperator_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -6445,10 +6093,6 @@ void k_diroperator_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_diroperator_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_child_event` instead
-///
-#define k_diroperator_qbase_child_event k_diroperator_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -6481,10 +6125,6 @@ void k_diroperator_on_child_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void k_diroperator_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_custom_event` instead
-///
-#define k_diroperator_qbase_custom_event k_diroperator_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -6519,10 +6159,6 @@ void k_diroperator_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void k_diroperator_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_connect_notify` instead
-///
-#define k_diroperator_qbase_connect_notify k_diroperator_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -6556,10 +6192,6 @@ void k_diroperator_on_connect_notify(void* self, void (*callback)(void*, void*))
 ///
 void k_diroperator_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_disconnect_notify` instead
-///
-#define k_diroperator_qbase_disconnect_notify k_diroperator_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -6592,10 +6224,6 @@ void k_diroperator_on_disconnect_notify(void* self, void (*callback)(void*, void
 ///
 void k_diroperator_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_update_micro_focus` instead
-///
-#define k_diroperator_qbase_update_micro_focus k_diroperator_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -6626,10 +6254,6 @@ void k_diroperator_on_update_micro_focus(void* self, void (*callback)());
 /// @param self KDirOperator*
 ///
 void k_diroperator_create(void* self);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_create` instead
-///
-#define k_diroperator_qbase_create k_diroperator_super_create
 
 /// Inherited from QWidget
 ///
@@ -6662,10 +6286,6 @@ void k_diroperator_on_create(void* self, void (*callback)());
 ///
 void k_diroperator_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_destroy` instead
-///
-#define k_diroperator_qbase_destroy k_diroperator_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -6696,10 +6316,6 @@ void k_diroperator_on_destroy(void* self, void (*callback)());
 /// @param self KDirOperator*
 ///
 bool k_diroperator_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_focus_next_child` instead
-///
-#define k_diroperator_qbase_focus_next_child k_diroperator_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -6732,10 +6348,6 @@ void k_diroperator_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_diroperator_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_focus_previous_child` instead
-///
-#define k_diroperator_qbase_focus_previous_child k_diroperator_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -6766,10 +6378,6 @@ void k_diroperator_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self KDirOperator*
 ///
 QObject* k_diroperator_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_sender` instead
-///
-#define k_diroperator_qbase_sender k_diroperator_super_sender
 
 /// Inherited from QObject
 ///
@@ -6802,10 +6410,6 @@ void k_diroperator_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_diroperator_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_sender_signal_index` instead
-///
-#define k_diroperator_qbase_sender_signal_index k_diroperator_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -6837,10 +6441,6 @@ void k_diroperator_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t k_diroperator_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_receivers` instead
-///
-#define k_diroperator_qbase_receivers k_diroperator_super_receivers
 
 /// Inherited from QObject
 ///
@@ -6875,10 +6475,6 @@ void k_diroperator_on_receivers(void* self, int32_t (*callback)(void*, const cha
 ///
 bool k_diroperator_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_diroperator_super_is_signal_connected` instead
-///
-#define k_diroperator_qbase_is_signal_connected k_diroperator_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -6912,10 +6508,6 @@ void k_diroperator_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_diroperator_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_diroperator_super_get_decoded_metric_f` instead
-///
-#define k_diroperator_qbase_get_decoded_metric_f k_diroperator_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

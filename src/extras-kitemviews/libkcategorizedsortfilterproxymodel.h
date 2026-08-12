@@ -37,10 +37,6 @@ const QMetaObject* k_categorizedsortfilterproxymodel_meta_object(void* self);
 ///
 void k_categorizedsortfilterproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_meta_object` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_meta_object k_categorizedsortfilterproxymodel_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* k_categorizedsortfilterproxymodel_metacast(void* self, const char* param1)
 /// @param callback void* func(KCategorizedSortFilterProxyModel* self, const char* param1)
 ///
 void k_categorizedsortfilterproxymodel_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_metacast` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_metacast k_categorizedsortfilterproxymodel_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t k_categorizedsortfilterproxymodel_metacall(void* self, int32_t param1, i
 /// @param callback int32_t func(KCategorizedSortFilterProxyModel* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_categorizedsortfilterproxymodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_metacall` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_metacall k_categorizedsortfilterproxymodel_super_metacall
 
 /// Base class method implementation
 ///
@@ -123,10 +111,6 @@ void k_categorizedsortfilterproxymodel_sort(void* self, int column, int32_t orde
 /// @param callback void func(KCategorizedSortFilterProxyModel* self, int column, enum Qt__SortOrder order)
 ///
 void k_categorizedsortfilterproxymodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_sort` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_sort k_categorizedsortfilterproxymodel_super_sort
 
 /// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sort)
 ///
@@ -195,10 +179,6 @@ bool k_categorizedsortfilterproxymodel_less_than(void* self, void* left, void* r
 ///
 void k_categorizedsortfilterproxymodel_on_less_than(void* self, bool (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_less_than` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_less_than k_categorizedsortfilterproxymodel_super_less_than
-
 /// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#lessThan)
 ///
 /// Base class method implementation
@@ -226,10 +206,6 @@ bool k_categorizedsortfilterproxymodel_sub_sort_less_than(void* self, void* left
 ///
 void k_categorizedsortfilterproxymodel_on_sub_sort_less_than(void* self, bool (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_sub_sort_less_than` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_sub_sort_less_than k_categorizedsortfilterproxymodel_super_sub_sort_less_than
-
 /// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#subSortLessThan)
 ///
 /// Base class method implementation
@@ -256,10 +232,6 @@ int32_t k_categorizedsortfilterproxymodel_compare_categories(void* self, void* l
 /// @param callback int32_t func(KCategorizedSortFilterProxyModel* self, QModelIndex* left, QModelIndex* right)
 ///
 void k_categorizedsortfilterproxymodel_on_compare_categories(void* self, int32_t (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_compare_categories` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_compare_categories k_categorizedsortfilterproxymodel_super_compare_categories
 
 /// [Upstream resources](https://api.kde.org/kcategorizedsortfilterproxymodel.html#compareCategories)
 ///
@@ -1408,10 +1380,6 @@ void k_categorizedsortfilterproxymodel_on_destroyed1(void* self, void (*callback
 ///
 void k_categorizedsortfilterproxymodel_set_source_model(void* self, void* sourceModel);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_set_source_model` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_set_source_model k_categorizedsortfilterproxymodel_super_set_source_model
-
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSourceModel)
@@ -1444,10 +1412,6 @@ void k_categorizedsortfilterproxymodel_on_set_source_model(void* self, void (*ca
 /// @param proxyIndex QModelIndex*
 ///
 QModelIndex* k_categorizedsortfilterproxymodel_map_to_source(void* self, void* proxyIndex);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_map_to_source` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_map_to_source k_categorizedsortfilterproxymodel_super_map_to_source
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1484,10 +1448,6 @@ void k_categorizedsortfilterproxymodel_on_map_to_source(void* self, QModelIndex*
 ///
 QModelIndex* k_categorizedsortfilterproxymodel_map_from_source(void* self, void* sourceIndex);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_map_from_source` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_map_from_source k_categorizedsortfilterproxymodel_super_map_from_source
-
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapFromSource)
@@ -1523,10 +1483,6 @@ void k_categorizedsortfilterproxymodel_on_map_from_source(void* self, QModelInde
 ///
 QItemSelection* k_categorizedsortfilterproxymodel_map_selection_to_source(void* self, void* proxySelection);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_map_selection_to_source` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_map_selection_to_source k_categorizedsortfilterproxymodel_super_map_selection_to_source
-
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionToSource)
@@ -1561,10 +1517,6 @@ void k_categorizedsortfilterproxymodel_on_map_selection_to_source(void* self, QI
 /// @param sourceSelection QItemSelection*
 ///
 QItemSelection* k_categorizedsortfilterproxymodel_map_selection_from_source(void* self, void* sourceSelection);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_map_selection_from_source` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_map_selection_from_source k_categorizedsortfilterproxymodel_super_map_selection_from_source
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1602,10 +1554,6 @@ void k_categorizedsortfilterproxymodel_on_map_selection_from_source(void* self, 
 ///
 bool k_categorizedsortfilterproxymodel_filter_accepts_row(void* self, int source_row, void* source_parent);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_filter_accepts_row` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_filter_accepts_row k_categorizedsortfilterproxymodel_super_filter_accepts_row
-
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsRow)
@@ -1640,10 +1588,6 @@ void k_categorizedsortfilterproxymodel_on_filter_accepts_row(void* self, bool (*
 /// @param source_parent QModelIndex*
 ///
 bool k_categorizedsortfilterproxymodel_filter_accepts_column(void* self, int source_column, void* source_parent);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_filter_accepts_column` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_filter_accepts_column k_categorizedsortfilterproxymodel_super_filter_accepts_column
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1680,10 +1624,6 @@ void k_categorizedsortfilterproxymodel_on_filter_accepts_column(void* self, bool
 /// @param parent QModelIndex*
 ///
 QModelIndex* k_categorizedsortfilterproxymodel_index(void* self, int row, int column, void* parent);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_index` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_index k_categorizedsortfilterproxymodel_super_index
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1722,10 +1662,6 @@ void k_categorizedsortfilterproxymodel_on_index(void* self, QModelIndex* (*callb
 ///
 QModelIndex* k_categorizedsortfilterproxymodel_parent(void* self, void* child);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_parent` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_parent k_categorizedsortfilterproxymodel_super_parent
-
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#parent)
@@ -1762,10 +1698,6 @@ void k_categorizedsortfilterproxymodel_on_parent(void* self, QModelIndex* (*call
 /// @param idx QModelIndex*
 ///
 QModelIndex* k_categorizedsortfilterproxymodel_sibling(void* self, int row, int column, void* idx);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_sibling` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_sibling k_categorizedsortfilterproxymodel_super_sibling
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1804,10 +1736,6 @@ void k_categorizedsortfilterproxymodel_on_sibling(void* self, QModelIndex* (*cal
 ///
 int32_t k_categorizedsortfilterproxymodel_row_count(void* self, void* parent);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_row_count` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_row_count k_categorizedsortfilterproxymodel_super_row_count
-
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#rowCount)
@@ -1840,10 +1768,6 @@ void k_categorizedsortfilterproxymodel_on_row_count(void* self, int32_t (*callba
 /// @param parent QModelIndex*
 ///
 int32_t k_categorizedsortfilterproxymodel_column_count(void* self, void* parent);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_column_count` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_column_count k_categorizedsortfilterproxymodel_super_column_count
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1878,10 +1802,6 @@ void k_categorizedsortfilterproxymodel_on_column_count(void* self, int32_t (*cal
 ///
 bool k_categorizedsortfilterproxymodel_has_children(void* self, void* parent);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_has_children` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_has_children k_categorizedsortfilterproxymodel_super_has_children
-
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#hasChildren)
@@ -1915,10 +1835,6 @@ void k_categorizedsortfilterproxymodel_on_has_children(void* self, bool (*callba
 /// @param role int
 ///
 QVariant* k_categorizedsortfilterproxymodel_data(void* self, void* index, int role);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_data` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_data k_categorizedsortfilterproxymodel_super_data
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1958,10 +1874,6 @@ void k_categorizedsortfilterproxymodel_on_data(void* self, QVariant* (*callback)
 ///
 bool k_categorizedsortfilterproxymodel_set_data(void* self, void* index, void* value, int role);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_set_data` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_set_data k_categorizedsortfilterproxymodel_super_set_data
-
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setData)
@@ -1998,10 +1910,6 @@ void k_categorizedsortfilterproxymodel_on_set_data(void* self, bool (*callback)(
 /// @param role int
 ///
 QVariant* k_categorizedsortfilterproxymodel_header_data(void* self, int section, int32_t orientation, int role);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_header_data` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_header_data k_categorizedsortfilterproxymodel_super_header_data
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2043,10 +1951,6 @@ void k_categorizedsortfilterproxymodel_on_header_data(void* self, QVariant* (*ca
 ///
 bool k_categorizedsortfilterproxymodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_set_header_data` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_set_header_data k_categorizedsortfilterproxymodel_super_set_header_data
-
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setHeaderData)
@@ -2082,10 +1986,6 @@ void k_categorizedsortfilterproxymodel_on_set_header_data(void* self, bool (*cal
 /// @param indexes libqt_list of QModelIndex*
 ///
 QMimeData* k_categorizedsortfilterproxymodel_mime_data(void* self, libqt_list indexes);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_mime_data` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_mime_data k_categorizedsortfilterproxymodel_super_mime_data
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2123,10 +2023,6 @@ void k_categorizedsortfilterproxymodel_on_mime_data(void* self, QMimeData* (*cal
 /// @param parent QModelIndex*
 ///
 bool k_categorizedsortfilterproxymodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_drop_mime_data` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_drop_mime_data k_categorizedsortfilterproxymodel_super_drop_mime_data
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2167,10 +2063,6 @@ void k_categorizedsortfilterproxymodel_on_drop_mime_data(void* self, bool (*call
 ///
 bool k_categorizedsortfilterproxymodel_insert_rows(void* self, int row, int count, void* parent);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_insert_rows` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_insert_rows k_categorizedsortfilterproxymodel_super_insert_rows
-
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertRows)
@@ -2207,10 +2099,6 @@ void k_categorizedsortfilterproxymodel_on_insert_rows(void* self, bool (*callbac
 /// @param parent QModelIndex*
 ///
 bool k_categorizedsortfilterproxymodel_insert_columns(void* self, int column, int count, void* parent);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_insert_columns` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_insert_columns k_categorizedsortfilterproxymodel_super_insert_columns
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2249,10 +2137,6 @@ void k_categorizedsortfilterproxymodel_on_insert_columns(void* self, bool (*call
 ///
 bool k_categorizedsortfilterproxymodel_remove_rows(void* self, int row, int count, void* parent);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_remove_rows` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_remove_rows k_categorizedsortfilterproxymodel_super_remove_rows
-
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeRows)
@@ -2290,10 +2174,6 @@ void k_categorizedsortfilterproxymodel_on_remove_rows(void* self, bool (*callbac
 ///
 bool k_categorizedsortfilterproxymodel_remove_columns(void* self, int column, int count, void* parent);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_remove_columns` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_remove_columns k_categorizedsortfilterproxymodel_super_remove_columns
-
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeColumns)
@@ -2329,10 +2209,6 @@ void k_categorizedsortfilterproxymodel_on_remove_columns(void* self, bool (*call
 ///
 void k_categorizedsortfilterproxymodel_fetch_more(void* self, void* parent);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_fetch_more` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_fetch_more k_categorizedsortfilterproxymodel_super_fetch_more
-
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#fetchMore)
@@ -2365,10 +2241,6 @@ void k_categorizedsortfilterproxymodel_on_fetch_more(void* self, void (*callback
 /// @param parent QModelIndex*
 ///
 bool k_categorizedsortfilterproxymodel_can_fetch_more(void* self, void* parent);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_can_fetch_more` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_can_fetch_more k_categorizedsortfilterproxymodel_super_can_fetch_more
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2405,10 +2277,6 @@ void k_categorizedsortfilterproxymodel_on_can_fetch_more(void* self, bool (*call
 ///
 int32_t k_categorizedsortfilterproxymodel_flags(void* self, void* index);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_flags` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_flags k_categorizedsortfilterproxymodel_super_flags
-
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#flags)
@@ -2443,10 +2311,6 @@ void k_categorizedsortfilterproxymodel_on_flags(void* self, int32_t (*callback)(
 /// @param index QModelIndex*
 ///
 QModelIndex* k_categorizedsortfilterproxymodel_buddy(void* self, void* index);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_buddy` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_buddy k_categorizedsortfilterproxymodel_super_buddy
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2489,10 +2353,6 @@ void k_categorizedsortfilterproxymodel_on_buddy(void* self, QModelIndex* (*callb
 ///
 libqt_list k_categorizedsortfilterproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_match` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_match k_categorizedsortfilterproxymodel_super_match
-
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#match)
@@ -2532,10 +2392,6 @@ void k_categorizedsortfilterproxymodel_on_match(void* self, libqt_list (*callbac
 ///
 QSize* k_categorizedsortfilterproxymodel_span(void* self, void* index);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_span` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_span k_categorizedsortfilterproxymodel_super_span
-
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#span)
@@ -2572,10 +2428,6 @@ void k_categorizedsortfilterproxymodel_on_span(void* self, QSize* (*callback)(vo
 ///
 const char** k_categorizedsortfilterproxymodel_mime_types(void* self);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_mime_types` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_mime_types k_categorizedsortfilterproxymodel_super_mime_types
-
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeTypes)
@@ -2611,10 +2463,6 @@ void k_categorizedsortfilterproxymodel_on_mime_types(void* self, const char** (*
 ///
 int32_t k_categorizedsortfilterproxymodel_supported_drop_actions(void* self);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_supported_drop_actions` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_supported_drop_actions k_categorizedsortfilterproxymodel_super_supported_drop_actions
-
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#supportedDropActions)
@@ -2648,10 +2496,6 @@ void k_categorizedsortfilterproxymodel_on_supported_drop_actions(void* self, int
 ///
 bool k_categorizedsortfilterproxymodel_submit(void* self);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_submit` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_submit k_categorizedsortfilterproxymodel_super_submit
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
@@ -2682,10 +2526,6 @@ void k_categorizedsortfilterproxymodel_on_submit(void* self, bool (*callback)())
 /// @param self KCategorizedSortFilterProxyModel*
 ///
 void k_categorizedsortfilterproxymodel_revert(void* self);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_revert` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_revert k_categorizedsortfilterproxymodel_super_revert
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2731,10 +2571,6 @@ void k_categorizedsortfilterproxymodel_on_revert(void* self, void (*callback)())
 /// @return libqt_map of int to QVariant*
 ///
 libqt_map k_categorizedsortfilterproxymodel_item_data(void* self, void* index);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_item_data` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_item_data k_categorizedsortfilterproxymodel_super_item_data
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2783,10 +2619,6 @@ void k_categorizedsortfilterproxymodel_on_item_data(void* self, libqt_map (*call
 ///
 bool k_categorizedsortfilterproxymodel_set_item_data(void* self, void* index, libqt_map roles);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_set_item_data` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_set_item_data k_categorizedsortfilterproxymodel_super_set_item_data
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
@@ -2820,10 +2652,6 @@ void k_categorizedsortfilterproxymodel_on_set_item_data(void* self, bool (*callb
 /// @param index QModelIndex*
 ///
 bool k_categorizedsortfilterproxymodel_clear_item_data(void* self, void* index);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_clear_item_data` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_clear_item_data k_categorizedsortfilterproxymodel_super_clear_item_data
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2862,10 +2690,6 @@ void k_categorizedsortfilterproxymodel_on_clear_item_data(void* self, bool (*cal
 ///
 bool k_categorizedsortfilterproxymodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_can_drop_mime_data` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_can_drop_mime_data k_categorizedsortfilterproxymodel_super_can_drop_mime_data
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
@@ -2903,10 +2727,6 @@ void k_categorizedsortfilterproxymodel_on_can_drop_mime_data(void* self, bool (*
 /// @return flag of enum Qt__DropAction
 ///
 int32_t k_categorizedsortfilterproxymodel_supported_drag_actions(void* self);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_supported_drag_actions` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_supported_drag_actions k_categorizedsortfilterproxymodel_super_supported_drag_actions
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2953,10 +2773,6 @@ void k_categorizedsortfilterproxymodel_on_supported_drag_actions(void* self, int
 /// @return libqt_map of int to char*
 ///
 libqt_map k_categorizedsortfilterproxymodel_role_names(void* self);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_role_names` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_role_names k_categorizedsortfilterproxymodel_super_role_names
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -3007,10 +2823,6 @@ void k_categorizedsortfilterproxymodel_on_role_names(void* self, libqt_map (*cal
 ///
 bool k_categorizedsortfilterproxymodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_move_rows` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_move_rows k_categorizedsortfilterproxymodel_super_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
@@ -3052,10 +2864,6 @@ void k_categorizedsortfilterproxymodel_on_move_rows(void* self, bool (*callback)
 ///
 bool k_categorizedsortfilterproxymodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_move_columns` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_move_columns k_categorizedsortfilterproxymodel_super_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
@@ -3094,10 +2902,6 @@ void k_categorizedsortfilterproxymodel_on_move_columns(void* self, bool (*callba
 ///
 void k_categorizedsortfilterproxymodel_multi_data(void* self, void* index, void* roleDataSpan);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_multi_data` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_multi_data k_categorizedsortfilterproxymodel_super_multi_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
@@ -3131,10 +2935,6 @@ void k_categorizedsortfilterproxymodel_on_multi_data(void* self, void (*callback
 ///
 void k_categorizedsortfilterproxymodel_reset_internal_data(void* self);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_reset_internal_data` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_reset_internal_data k_categorizedsortfilterproxymodel_super_reset_internal_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
@@ -3166,10 +2966,6 @@ void k_categorizedsortfilterproxymodel_on_reset_internal_data(void* self, void (
 /// @param event QEvent*
 ///
 bool k_categorizedsortfilterproxymodel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_event` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_event k_categorizedsortfilterproxymodel_super_event
 
 /// Inherited from QObject
 ///
@@ -3205,10 +3001,6 @@ void k_categorizedsortfilterproxymodel_on_event(void* self, bool (*callback)(voi
 ///
 bool k_categorizedsortfilterproxymodel_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_event_filter` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_event_filter k_categorizedsortfilterproxymodel_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -3243,10 +3035,6 @@ void k_categorizedsortfilterproxymodel_on_event_filter(void* self, bool (*callba
 ///
 void k_categorizedsortfilterproxymodel_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_timer_event` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_timer_event k_categorizedsortfilterproxymodel_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -3279,10 +3067,6 @@ void k_categorizedsortfilterproxymodel_on_timer_event(void* self, void (*callbac
 /// @param event QChildEvent*
 ///
 void k_categorizedsortfilterproxymodel_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_child_event` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_child_event k_categorizedsortfilterproxymodel_super_child_event
 
 /// Inherited from QObject
 ///
@@ -3317,10 +3101,6 @@ void k_categorizedsortfilterproxymodel_on_child_event(void* self, void (*callbac
 ///
 void k_categorizedsortfilterproxymodel_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_custom_event` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_custom_event k_categorizedsortfilterproxymodel_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -3353,10 +3133,6 @@ void k_categorizedsortfilterproxymodel_on_custom_event(void* self, void (*callba
 /// @param signal QMetaMethod*
 ///
 void k_categorizedsortfilterproxymodel_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_connect_notify` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_connect_notify k_categorizedsortfilterproxymodel_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -3391,10 +3167,6 @@ void k_categorizedsortfilterproxymodel_on_connect_notify(void* self, void (*call
 ///
 void k_categorizedsortfilterproxymodel_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_disconnect_notify` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_disconnect_notify k_categorizedsortfilterproxymodel_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -3427,10 +3199,6 @@ void k_categorizedsortfilterproxymodel_on_disconnect_notify(void* self, void (*c
 ///
 void k_categorizedsortfilterproxymodel_invalidate_filter(void* self);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_invalidate_filter` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_invalidate_filter k_categorizedsortfilterproxymodel_super_invalidate_filter
-
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateFilter)
@@ -3462,10 +3230,6 @@ void k_categorizedsortfilterproxymodel_on_invalidate_filter(void* self, void (*c
 ///
 void k_categorizedsortfilterproxymodel_invalidate_rows_filter(void* self);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_invalidate_rows_filter` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_invalidate_rows_filter k_categorizedsortfilterproxymodel_super_invalidate_rows_filter
-
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateRowsFilter)
@@ -3496,10 +3260,6 @@ void k_categorizedsortfilterproxymodel_on_invalidate_rows_filter(void* self, voi
 /// @param self KCategorizedSortFilterProxyModel*
 ///
 void k_categorizedsortfilterproxymodel_invalidate_columns_filter(void* self);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_invalidate_columns_filter` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_invalidate_columns_filter k_categorizedsortfilterproxymodel_super_invalidate_columns_filter
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -3534,10 +3294,6 @@ void k_categorizedsortfilterproxymodel_on_invalidate_columns_filter(void* self, 
 /// @param internalPtr void*
 ///
 QModelIndex* k_categorizedsortfilterproxymodel_create_source_index(void* self, int row, int col, void* internalPtr);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_create_source_index` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_create_source_index k_categorizedsortfilterproxymodel_super_create_source_index
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -3577,10 +3333,6 @@ void k_categorizedsortfilterproxymodel_on_create_source_index(void* self, QModel
 ///
 QModelIndex* k_categorizedsortfilterproxymodel_create_index(void* self, int row, int column);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_create_index` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_create_index k_categorizedsortfilterproxymodel_super_create_index
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
@@ -3618,10 +3370,6 @@ void k_categorizedsortfilterproxymodel_on_create_index(void* self, QModelIndex* 
 ///
 void k_categorizedsortfilterproxymodel_encode_data(void* self, libqt_list indexes, void* stream);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_encode_data` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_encode_data k_categorizedsortfilterproxymodel_super_encode_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
@@ -3658,10 +3406,6 @@ void k_categorizedsortfilterproxymodel_on_encode_data(void* self, void (*callbac
 /// @param stream QDataStream*
 ///
 bool k_categorizedsortfilterproxymodel_decode_data(void* self, int row, int column, void* parent, void* stream);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_decode_data` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_decode_data k_categorizedsortfilterproxymodel_super_decode_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3701,10 +3445,6 @@ void k_categorizedsortfilterproxymodel_on_decode_data(void* self, bool (*callbac
 ///
 void k_categorizedsortfilterproxymodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_begin_insert_rows` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_begin_insert_rows k_categorizedsortfilterproxymodel_super_begin_insert_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
@@ -3738,10 +3478,6 @@ void k_categorizedsortfilterproxymodel_on_begin_insert_rows(void* self, void (*c
 /// @param self KCategorizedSortFilterProxyModel*
 ///
 void k_categorizedsortfilterproxymodel_end_insert_rows(void* self);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_end_insert_rows` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_end_insert_rows k_categorizedsortfilterproxymodel_super_end_insert_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3777,10 +3513,6 @@ void k_categorizedsortfilterproxymodel_on_end_insert_rows(void* self, void (*cal
 ///
 void k_categorizedsortfilterproxymodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_begin_remove_rows` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_begin_remove_rows k_categorizedsortfilterproxymodel_super_begin_remove_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
@@ -3814,10 +3546,6 @@ void k_categorizedsortfilterproxymodel_on_begin_remove_rows(void* self, void (*c
 /// @param self KCategorizedSortFilterProxyModel*
 ///
 void k_categorizedsortfilterproxymodel_end_remove_rows(void* self);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_end_remove_rows` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_end_remove_rows k_categorizedsortfilterproxymodel_super_end_remove_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3855,10 +3583,6 @@ void k_categorizedsortfilterproxymodel_on_end_remove_rows(void* self, void (*cal
 ///
 bool k_categorizedsortfilterproxymodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_begin_move_rows` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_begin_move_rows k_categorizedsortfilterproxymodel_super_begin_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
@@ -3895,10 +3619,6 @@ void k_categorizedsortfilterproxymodel_on_begin_move_rows(void* self, bool (*cal
 ///
 void k_categorizedsortfilterproxymodel_end_move_rows(void* self);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_end_move_rows` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_end_move_rows k_categorizedsortfilterproxymodel_super_end_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
@@ -3932,10 +3652,6 @@ void k_categorizedsortfilterproxymodel_on_end_move_rows(void* self, void (*callb
 /// @param last int
 ///
 void k_categorizedsortfilterproxymodel_begin_insert_columns(void* self, void* parent, int first, int last);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_begin_insert_columns` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_begin_insert_columns k_categorizedsortfilterproxymodel_super_begin_insert_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3971,10 +3687,6 @@ void k_categorizedsortfilterproxymodel_on_begin_insert_columns(void* self, void 
 ///
 void k_categorizedsortfilterproxymodel_end_insert_columns(void* self);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_end_insert_columns` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_end_insert_columns k_categorizedsortfilterproxymodel_super_end_insert_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
@@ -4009,10 +3721,6 @@ void k_categorizedsortfilterproxymodel_on_end_insert_columns(void* self, void (*
 ///
 void k_categorizedsortfilterproxymodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_begin_remove_columns` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_begin_remove_columns k_categorizedsortfilterproxymodel_super_begin_remove_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
@@ -4046,10 +3754,6 @@ void k_categorizedsortfilterproxymodel_on_begin_remove_columns(void* self, void 
 /// @param self KCategorizedSortFilterProxyModel*
 ///
 void k_categorizedsortfilterproxymodel_end_remove_columns(void* self);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_end_remove_columns` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_end_remove_columns k_categorizedsortfilterproxymodel_super_end_remove_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4087,10 +3791,6 @@ void k_categorizedsortfilterproxymodel_on_end_remove_columns(void* self, void (*
 ///
 bool k_categorizedsortfilterproxymodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_begin_move_columns` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_begin_move_columns k_categorizedsortfilterproxymodel_super_begin_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
@@ -4127,10 +3827,6 @@ void k_categorizedsortfilterproxymodel_on_begin_move_columns(void* self, bool (*
 ///
 void k_categorizedsortfilterproxymodel_end_move_columns(void* self);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_end_move_columns` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_end_move_columns k_categorizedsortfilterproxymodel_super_end_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
@@ -4162,10 +3858,6 @@ void k_categorizedsortfilterproxymodel_on_end_move_columns(void* self, void (*ca
 ///
 void k_categorizedsortfilterproxymodel_begin_reset_model(void* self);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_begin_reset_model` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_begin_reset_model k_categorizedsortfilterproxymodel_super_begin_reset_model
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
@@ -4196,10 +3888,6 @@ void k_categorizedsortfilterproxymodel_on_begin_reset_model(void* self, void (*c
 /// @param self KCategorizedSortFilterProxyModel*
 ///
 void k_categorizedsortfilterproxymodel_end_reset_model(void* self);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_end_reset_model` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_end_reset_model k_categorizedsortfilterproxymodel_super_end_reset_model
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4233,10 +3921,6 @@ void k_categorizedsortfilterproxymodel_on_end_reset_model(void* self, void (*cal
 /// @param to QModelIndex*
 ///
 void k_categorizedsortfilterproxymodel_change_persistent_index(void* self, void* from, void* to);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_change_persistent_index` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_change_persistent_index k_categorizedsortfilterproxymodel_super_change_persistent_index
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4273,10 +3957,6 @@ void k_categorizedsortfilterproxymodel_on_change_persistent_index(void* self, vo
 ///
 void k_categorizedsortfilterproxymodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_change_persistent_index_list` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_change_persistent_index_list k_categorizedsortfilterproxymodel_super_change_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
@@ -4312,10 +3992,6 @@ void k_categorizedsortfilterproxymodel_on_change_persistent_index_list(void* sel
 ///
 libqt_list k_categorizedsortfilterproxymodel_persistent_index_list(void* self);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_persistent_index_list` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_persistent_index_list k_categorizedsortfilterproxymodel_super_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
@@ -4349,10 +4025,6 @@ void k_categorizedsortfilterproxymodel_on_persistent_index_list(void* self, libq
 ///
 QObject* k_categorizedsortfilterproxymodel_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_sender` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_sender k_categorizedsortfilterproxymodel_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -4383,10 +4055,6 @@ void k_categorizedsortfilterproxymodel_on_sender(void* self, QObject* (*callback
 /// @param self KCategorizedSortFilterProxyModel*
 ///
 int32_t k_categorizedsortfilterproxymodel_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_sender_signal_index` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_sender_signal_index k_categorizedsortfilterproxymodel_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -4420,10 +4088,6 @@ void k_categorizedsortfilterproxymodel_on_sender_signal_index(void* self, int32_
 ///
 int32_t k_categorizedsortfilterproxymodel_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_receivers` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_receivers k_categorizedsortfilterproxymodel_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -4456,10 +4120,6 @@ void k_categorizedsortfilterproxymodel_on_receivers(void* self, int32_t (*callba
 /// @param signal QMetaMethod*
 ///
 bool k_categorizedsortfilterproxymodel_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_categorizedsortfilterproxymodel_super_is_signal_connected` instead
-///
-#define k_categorizedsortfilterproxymodel_qbase_is_signal_connected k_categorizedsortfilterproxymodel_super_is_signal_connected
 
 /// Inherited from QObject
 ///

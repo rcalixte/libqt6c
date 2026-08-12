@@ -37,10 +37,6 @@ const QMetaObject* k_texttranslator__translatortextedit_meta_object(void* self);
 ///
 void k_texttranslator__translatortextedit_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_meta_object` instead
-///
-#define k_texttranslator__translatortextedit_qbase_meta_object k_texttranslator__translatortextedit_super_meta_object
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorTextEdit.html)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* k_texttranslator__translatortextedit_metacast(void* self, const char* para
 /// @param callback void* func(TextTranslator__TranslatorTextEdit* self, const char* param1)
 ///
 void k_texttranslator__translatortextedit_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_metacast` instead
-///
-#define k_texttranslator__translatortextedit_qbase_metacast k_texttranslator__translatortextedit_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t k_texttranslator__translatortextedit_metacall(void* self, int32_t param1
 /// @param callback int32_t func(TextTranslator__TranslatorTextEdit* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_texttranslator__translatortextedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_metacall` instead
-///
-#define k_texttranslator__translatortextedit_qbase_metacall k_texttranslator__translatortextedit_super_metacall
 
 /// Base class method implementation
 ///
@@ -135,10 +123,6 @@ void k_texttranslator__translatortextedit_drop_event(void* self, void* param1);
 /// @param callback void func(TextTranslator__TranslatorTextEdit* self, QDropEvent* param1)
 ///
 void k_texttranslator__translatortextedit_on_drop_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_drop_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_drop_event k_texttranslator__translatortextedit_super_drop_event
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorTextEdit.html)
 ///
@@ -4182,10 +4166,6 @@ int32_t k_texttranslator__translatortextedit_encode_metric_f(int32_t metric, dou
 ///
 QVariant* k_texttranslator__translatortextedit_load_resource(void* self, int type, void* name);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_load_resource` instead
-///
-#define k_texttranslator__translatortextedit_qbase_load_resource k_texttranslator__translatortextedit_super_load_resource
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#loadResource)
@@ -4222,10 +4202,6 @@ void k_texttranslator__translatortextedit_on_load_resource(void* self, QVariant*
 ///
 QVariant* k_texttranslator__translatortextedit_input_method_query(void* self, int32_t property);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_input_method_query` instead
-///
-#define k_texttranslator__translatortextedit_qbase_input_method_query k_texttranslator__translatortextedit_super_input_method_query
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#inputMethodQuery)
@@ -4261,10 +4237,6 @@ void k_texttranslator__translatortextedit_on_input_method_query(void* self, QVar
 ///
 bool k_texttranslator__translatortextedit_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_event k_texttranslator__translatortextedit_super_event
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#event)
@@ -4297,10 +4269,6 @@ void k_texttranslator__translatortextedit_on_event(void* self, bool (*callback)(
 /// @param e QTimerEvent*
 ///
 void k_texttranslator__translatortextedit_timer_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_timer_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_timer_event k_texttranslator__translatortextedit_super_timer_event
 
 /// Inherited from QPlainTextEdit
 ///
@@ -4335,10 +4303,6 @@ void k_texttranslator__translatortextedit_on_timer_event(void* self, void (*call
 ///
 void k_texttranslator__translatortextedit_key_press_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_key_press_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_key_press_event k_texttranslator__translatortextedit_super_key_press_event
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#keyPressEvent)
@@ -4371,10 +4335,6 @@ void k_texttranslator__translatortextedit_on_key_press_event(void* self, void (*
 /// @param e QKeyEvent*
 ///
 void k_texttranslator__translatortextedit_key_release_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_key_release_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_key_release_event k_texttranslator__translatortextedit_super_key_release_event
 
 /// Inherited from QPlainTextEdit
 ///
@@ -4409,10 +4369,6 @@ void k_texttranslator__translatortextedit_on_key_release_event(void* self, void 
 ///
 void k_texttranslator__translatortextedit_resize_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_resize_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_resize_event k_texttranslator__translatortextedit_super_resize_event
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#resizeEvent)
@@ -4445,10 +4401,6 @@ void k_texttranslator__translatortextedit_on_resize_event(void* self, void (*cal
 /// @param e QPaintEvent*
 ///
 void k_texttranslator__translatortextedit_paint_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_paint_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_paint_event k_texttranslator__translatortextedit_super_paint_event
 
 /// Inherited from QPlainTextEdit
 ///
@@ -4483,10 +4435,6 @@ void k_texttranslator__translatortextedit_on_paint_event(void* self, void (*call
 ///
 void k_texttranslator__translatortextedit_mouse_press_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_mouse_press_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_mouse_press_event k_texttranslator__translatortextedit_super_mouse_press_event
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#mousePressEvent)
@@ -4519,10 +4467,6 @@ void k_texttranslator__translatortextedit_on_mouse_press_event(void* self, void 
 /// @param e QMouseEvent*
 ///
 void k_texttranslator__translatortextedit_mouse_move_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_mouse_move_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_mouse_move_event k_texttranslator__translatortextedit_super_mouse_move_event
 
 /// Inherited from QPlainTextEdit
 ///
@@ -4557,10 +4501,6 @@ void k_texttranslator__translatortextedit_on_mouse_move_event(void* self, void (
 ///
 void k_texttranslator__translatortextedit_mouse_release_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_mouse_release_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_mouse_release_event k_texttranslator__translatortextedit_super_mouse_release_event
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#mouseReleaseEvent)
@@ -4593,10 +4533,6 @@ void k_texttranslator__translatortextedit_on_mouse_release_event(void* self, voi
 /// @param e QMouseEvent*
 ///
 void k_texttranslator__translatortextedit_mouse_double_click_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_mouse_double_click_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_mouse_double_click_event k_texttranslator__translatortextedit_super_mouse_double_click_event
 
 /// Inherited from QPlainTextEdit
 ///
@@ -4631,10 +4567,6 @@ void k_texttranslator__translatortextedit_on_mouse_double_click_event(void* self
 ///
 bool k_texttranslator__translatortextedit_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_focus_next_prev_child` instead
-///
-#define k_texttranslator__translatortextedit_qbase_focus_next_prev_child k_texttranslator__translatortextedit_super_focus_next_prev_child
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#focusNextPrevChild)
@@ -4667,10 +4599,6 @@ void k_texttranslator__translatortextedit_on_focus_next_prev_child(void* self, b
 /// @param e QContextMenuEvent*
 ///
 void k_texttranslator__translatortextedit_context_menu_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_context_menu_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_context_menu_event k_texttranslator__translatortextedit_super_context_menu_event
 
 /// Inherited from QPlainTextEdit
 ///
@@ -4705,10 +4633,6 @@ void k_texttranslator__translatortextedit_on_context_menu_event(void* self, void
 ///
 void k_texttranslator__translatortextedit_drag_enter_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_drag_enter_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_drag_enter_event k_texttranslator__translatortextedit_super_drag_enter_event
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#dragEnterEvent)
@@ -4741,10 +4665,6 @@ void k_texttranslator__translatortextedit_on_drag_enter_event(void* self, void (
 /// @param e QDragLeaveEvent*
 ///
 void k_texttranslator__translatortextedit_drag_leave_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_drag_leave_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_drag_leave_event k_texttranslator__translatortextedit_super_drag_leave_event
 
 /// Inherited from QPlainTextEdit
 ///
@@ -4779,10 +4699,6 @@ void k_texttranslator__translatortextedit_on_drag_leave_event(void* self, void (
 ///
 void k_texttranslator__translatortextedit_drag_move_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_drag_move_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_drag_move_event k_texttranslator__translatortextedit_super_drag_move_event
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#dragMoveEvent)
@@ -4815,10 +4731,6 @@ void k_texttranslator__translatortextedit_on_drag_move_event(void* self, void (*
 /// @param e QFocusEvent*
 ///
 void k_texttranslator__translatortextedit_focus_in_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_focus_in_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_focus_in_event k_texttranslator__translatortextedit_super_focus_in_event
 
 /// Inherited from QPlainTextEdit
 ///
@@ -4853,10 +4765,6 @@ void k_texttranslator__translatortextedit_on_focus_in_event(void* self, void (*c
 ///
 void k_texttranslator__translatortextedit_focus_out_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_focus_out_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_focus_out_event k_texttranslator__translatortextedit_super_focus_out_event
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#focusOutEvent)
@@ -4889,10 +4797,6 @@ void k_texttranslator__translatortextedit_on_focus_out_event(void* self, void (*
 /// @param param1 QShowEvent*
 ///
 void k_texttranslator__translatortextedit_show_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_show_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_show_event k_texttranslator__translatortextedit_super_show_event
 
 /// Inherited from QPlainTextEdit
 ///
@@ -4927,10 +4831,6 @@ void k_texttranslator__translatortextedit_on_show_event(void* self, void (*callb
 ///
 void k_texttranslator__translatortextedit_change_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_change_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_change_event k_texttranslator__translatortextedit_super_change_event
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#changeEvent)
@@ -4964,10 +4864,6 @@ void k_texttranslator__translatortextedit_on_change_event(void* self, void (*cal
 ///
 void k_texttranslator__translatortextedit_wheel_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_wheel_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_wheel_event k_texttranslator__translatortextedit_super_wheel_event
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#wheelEvent)
@@ -5000,10 +4896,6 @@ void k_texttranslator__translatortextedit_on_wheel_event(void* self, void (*call
 ///
 QMimeData* k_texttranslator__translatortextedit_create_mime_data_from_selection(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_create_mime_data_from_selection` instead
-///
-#define k_texttranslator__translatortextedit_qbase_create_mime_data_from_selection k_texttranslator__translatortextedit_super_create_mime_data_from_selection
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#createMimeDataFromSelection)
@@ -5035,10 +4927,6 @@ void k_texttranslator__translatortextedit_on_create_mime_data_from_selection(voi
 /// @param source QMimeData*
 ///
 bool k_texttranslator__translatortextedit_can_insert_from_mime_data(void* self, void* source);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_can_insert_from_mime_data` instead
-///
-#define k_texttranslator__translatortextedit_qbase_can_insert_from_mime_data k_texttranslator__translatortextedit_super_can_insert_from_mime_data
 
 /// Inherited from QPlainTextEdit
 ///
@@ -5073,10 +4961,6 @@ void k_texttranslator__translatortextedit_on_can_insert_from_mime_data(void* sel
 ///
 void k_texttranslator__translatortextedit_insert_from_mime_data(void* self, void* source);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_insert_from_mime_data` instead
-///
-#define k_texttranslator__translatortextedit_qbase_insert_from_mime_data k_texttranslator__translatortextedit_super_insert_from_mime_data
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#insertFromMimeData)
@@ -5109,10 +4993,6 @@ void k_texttranslator__translatortextedit_on_insert_from_mime_data(void* self, v
 /// @param param1 QInputMethodEvent*
 ///
 void k_texttranslator__translatortextedit_input_method_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_input_method_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_input_method_event k_texttranslator__translatortextedit_super_input_method_event
 
 /// Inherited from QPlainTextEdit
 ///
@@ -5148,10 +5028,6 @@ void k_texttranslator__translatortextedit_on_input_method_event(void* self, void
 ///
 void k_texttranslator__translatortextedit_scroll_contents_by(void* self, int dx, int dy);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_scroll_contents_by` instead
-///
-#define k_texttranslator__translatortextedit_qbase_scroll_contents_by k_texttranslator__translatortextedit_super_scroll_contents_by
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#scrollContentsBy)
@@ -5186,10 +5062,6 @@ void k_texttranslator__translatortextedit_on_scroll_contents_by(void* self, void
 ///
 void k_texttranslator__translatortextedit_do_set_text_cursor(void* self, void* cursor);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_do_set_text_cursor` instead
-///
-#define k_texttranslator__translatortextedit_qbase_do_set_text_cursor k_texttranslator__translatortextedit_super_do_set_text_cursor
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#doSetTextCursor)
@@ -5221,10 +5093,6 @@ void k_texttranslator__translatortextedit_on_do_set_text_cursor(void* self, void
 /// @param self TextTranslator__TranslatorTextEdit*
 ///
 QSize* k_texttranslator__translatortextedit_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_minimum_size_hint` instead
-///
-#define k_texttranslator__translatortextedit_qbase_minimum_size_hint k_texttranslator__translatortextedit_super_minimum_size_hint
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5258,10 +5126,6 @@ void k_texttranslator__translatortextedit_on_minimum_size_hint(void* self, QSize
 /// @param self TextTranslator__TranslatorTextEdit*
 ///
 QSize* k_texttranslator__translatortextedit_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_size_hint` instead
-///
-#define k_texttranslator__translatortextedit_qbase_size_hint k_texttranslator__translatortextedit_super_size_hint
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5297,10 +5161,6 @@ void k_texttranslator__translatortextedit_on_size_hint(void* self, QSize* (*call
 ///
 void k_texttranslator__translatortextedit_setup_viewport(void* self, void* viewport);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_setup_viewport` instead
-///
-#define k_texttranslator__translatortextedit_qbase_setup_viewport k_texttranslator__translatortextedit_super_setup_viewport
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
@@ -5334,10 +5194,6 @@ void k_texttranslator__translatortextedit_on_setup_viewport(void* self, void (*c
 /// @param param2 QEvent*
 ///
 bool k_texttranslator__translatortextedit_event_filter(void* self, void* param1, void* param2);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_event_filter` instead
-///
-#define k_texttranslator__translatortextedit_qbase_event_filter k_texttranslator__translatortextedit_super_event_filter
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5373,10 +5229,6 @@ void k_texttranslator__translatortextedit_on_event_filter(void* self, bool (*cal
 ///
 bool k_texttranslator__translatortextedit_viewport_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_viewport_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_viewport_event k_texttranslator__translatortextedit_super_viewport_event
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportEvent)
@@ -5408,10 +5260,6 @@ void k_texttranslator__translatortextedit_on_viewport_event(void* self, bool (*c
 /// @param self TextTranslator__TranslatorTextEdit*
 ///
 QSize* k_texttranslator__translatortextedit_viewport_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_viewport_size_hint` instead
-///
-#define k_texttranslator__translatortextedit_qbase_viewport_size_hint k_texttranslator__translatortextedit_super_viewport_size_hint
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5447,10 +5295,6 @@ void k_texttranslator__translatortextedit_on_viewport_size_hint(void* self, QSiz
 ///
 void k_texttranslator__translatortextedit_init_style_option(void* self, void* option);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_init_style_option` instead
-///
-#define k_texttranslator__translatortextedit_qbase_init_style_option k_texttranslator__translatortextedit_super_init_style_option
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
@@ -5483,10 +5327,6 @@ void k_texttranslator__translatortextedit_on_init_style_option(void* self, void 
 ///
 int32_t k_texttranslator__translatortextedit_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_dev_type` instead
-///
-#define k_texttranslator__translatortextedit_qbase_dev_type k_texttranslator__translatortextedit_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -5518,10 +5358,6 @@ void k_texttranslator__translatortextedit_on_dev_type(void* self, int32_t (*call
 /// @param visible bool
 ///
 void k_texttranslator__translatortextedit_set_visible(void* self, bool visible);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_set_visible` instead
-///
-#define k_texttranslator__translatortextedit_qbase_set_visible k_texttranslator__translatortextedit_super_set_visible
 
 /// Inherited from QWidget
 ///
@@ -5556,10 +5392,6 @@ void k_texttranslator__translatortextedit_on_set_visible(void* self, void (*call
 ///
 int32_t k_texttranslator__translatortextedit_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_height_for_width` instead
-///
-#define k_texttranslator__translatortextedit_qbase_height_for_width k_texttranslator__translatortextedit_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -5592,10 +5424,6 @@ void k_texttranslator__translatortextedit_on_height_for_width(void* self, int32_
 ///
 bool k_texttranslator__translatortextedit_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_has_height_for_width` instead
-///
-#define k_texttranslator__translatortextedit_qbase_has_height_for_width k_texttranslator__translatortextedit_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -5626,10 +5454,6 @@ void k_texttranslator__translatortextedit_on_has_height_for_width(void* self, bo
 /// @param self TextTranslator__TranslatorTextEdit*
 ///
 QPaintEngine* k_texttranslator__translatortextedit_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_paint_engine` instead
-///
-#define k_texttranslator__translatortextedit_qbase_paint_engine k_texttranslator__translatortextedit_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -5662,10 +5486,6 @@ void k_texttranslator__translatortextedit_on_paint_engine(void* self, QPaintEngi
 /// @param event QEnterEvent*
 ///
 void k_texttranslator__translatortextedit_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_enter_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_enter_event k_texttranslator__translatortextedit_super_enter_event
 
 /// Inherited from QWidget
 ///
@@ -5700,10 +5520,6 @@ void k_texttranslator__translatortextedit_on_enter_event(void* self, void (*call
 ///
 void k_texttranslator__translatortextedit_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_leave_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_leave_event k_texttranslator__translatortextedit_super_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -5736,10 +5552,6 @@ void k_texttranslator__translatortextedit_on_leave_event(void* self, void (*call
 /// @param event QMoveEvent*
 ///
 void k_texttranslator__translatortextedit_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_move_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_move_event k_texttranslator__translatortextedit_super_move_event
 
 /// Inherited from QWidget
 ///
@@ -5774,10 +5586,6 @@ void k_texttranslator__translatortextedit_on_move_event(void* self, void (*callb
 ///
 void k_texttranslator__translatortextedit_close_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_close_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_close_event k_texttranslator__translatortextedit_super_close_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -5810,10 +5618,6 @@ void k_texttranslator__translatortextedit_on_close_event(void* self, void (*call
 /// @param event QTabletEvent*
 ///
 void k_texttranslator__translatortextedit_tablet_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_tablet_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_tablet_event k_texttranslator__translatortextedit_super_tablet_event
 
 /// Inherited from QWidget
 ///
@@ -5848,10 +5652,6 @@ void k_texttranslator__translatortextedit_on_tablet_event(void* self, void (*cal
 ///
 void k_texttranslator__translatortextedit_action_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_action_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_action_event k_texttranslator__translatortextedit_super_action_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -5884,10 +5684,6 @@ void k_texttranslator__translatortextedit_on_action_event(void* self, void (*cal
 /// @param event QHideEvent*
 ///
 void k_texttranslator__translatortextedit_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_hide_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_hide_event k_texttranslator__translatortextedit_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -5924,10 +5720,6 @@ void k_texttranslator__translatortextedit_on_hide_event(void* self, void (*callb
 ///
 bool k_texttranslator__translatortextedit_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_native_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_native_event k_texttranslator__translatortextedit_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -5963,10 +5755,6 @@ void k_texttranslator__translatortextedit_on_native_event(void* self, bool (*cal
 ///
 int32_t k_texttranslator__translatortextedit_metric(void* self, int32_t param1);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_metric` instead
-///
-#define k_texttranslator__translatortextedit_qbase_metric k_texttranslator__translatortextedit_super_metric
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -5999,10 +5787,6 @@ void k_texttranslator__translatortextedit_on_metric(void* self, int32_t (*callba
 /// @param painter QPainter*
 ///
 void k_texttranslator__translatortextedit_init_painter(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_init_painter` instead
-///
-#define k_texttranslator__translatortextedit_qbase_init_painter k_texttranslator__translatortextedit_super_init_painter
 
 /// Inherited from QWidget
 ///
@@ -6037,10 +5821,6 @@ void k_texttranslator__translatortextedit_on_init_painter(void* self, void (*cal
 ///
 QPaintDevice* k_texttranslator__translatortextedit_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_redirected` instead
-///
-#define k_texttranslator__translatortextedit_qbase_redirected k_texttranslator__translatortextedit_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -6073,10 +5853,6 @@ void k_texttranslator__translatortextedit_on_redirected(void* self, QPaintDevice
 ///
 QPainter* k_texttranslator__translatortextedit_shared_painter(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_shared_painter` instead
-///
-#define k_texttranslator__translatortextedit_qbase_shared_painter k_texttranslator__translatortextedit_super_shared_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -6108,10 +5884,6 @@ void k_texttranslator__translatortextedit_on_shared_painter(void* self, QPainter
 /// @param event QChildEvent*
 ///
 void k_texttranslator__translatortextedit_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_child_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_child_event k_texttranslator__translatortextedit_super_child_event
 
 /// Inherited from QObject
 ///
@@ -6146,10 +5918,6 @@ void k_texttranslator__translatortextedit_on_child_event(void* self, void (*call
 ///
 void k_texttranslator__translatortextedit_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_custom_event` instead
-///
-#define k_texttranslator__translatortextedit_qbase_custom_event k_texttranslator__translatortextedit_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -6182,10 +5950,6 @@ void k_texttranslator__translatortextedit_on_custom_event(void* self, void (*cal
 /// @param signal QMetaMethod*
 ///
 void k_texttranslator__translatortextedit_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_connect_notify` instead
-///
-#define k_texttranslator__translatortextedit_qbase_connect_notify k_texttranslator__translatortextedit_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -6220,10 +5984,6 @@ void k_texttranslator__translatortextedit_on_connect_notify(void* self, void (*c
 ///
 void k_texttranslator__translatortextedit_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_disconnect_notify` instead
-///
-#define k_texttranslator__translatortextedit_qbase_disconnect_notify k_texttranslator__translatortextedit_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -6255,10 +6015,6 @@ void k_texttranslator__translatortextedit_on_disconnect_notify(void* self, void 
 /// @param self TextTranslator__TranslatorTextEdit*
 ///
 QTextBlock* k_texttranslator__translatortextedit_first_visible_block(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_first_visible_block` instead
-///
-#define k_texttranslator__translatortextedit_qbase_first_visible_block k_texttranslator__translatortextedit_super_first_visible_block
 
 /// Inherited from QPlainTextEdit
 ///
@@ -6293,10 +6049,6 @@ void k_texttranslator__translatortextedit_on_first_visible_block(void* self, QTe
 ///
 QPointF* k_texttranslator__translatortextedit_content_offset(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_content_offset` instead
-///
-#define k_texttranslator__translatortextedit_qbase_content_offset k_texttranslator__translatortextedit_super_content_offset
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#contentOffset)
@@ -6330,10 +6082,6 @@ void k_texttranslator__translatortextedit_on_content_offset(void* self, QPointF*
 /// @param block QTextBlock*
 ///
 QRectF* k_texttranslator__translatortextedit_block_bounding_rect(void* self, void* block);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_block_bounding_rect` instead
-///
-#define k_texttranslator__translatortextedit_qbase_block_bounding_rect k_texttranslator__translatortextedit_super_block_bounding_rect
 
 /// Inherited from QPlainTextEdit
 ///
@@ -6370,10 +6118,6 @@ void k_texttranslator__translatortextedit_on_block_bounding_rect(void* self, QRe
 ///
 QRectF* k_texttranslator__translatortextedit_block_bounding_geometry(void* self, void* block);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_block_bounding_geometry` instead
-///
-#define k_texttranslator__translatortextedit_qbase_block_bounding_geometry k_texttranslator__translatortextedit_super_block_bounding_geometry
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#blockBoundingGeometry)
@@ -6408,10 +6152,6 @@ void k_texttranslator__translatortextedit_on_block_bounding_geometry(void* self,
 ///
 QAbstractTextDocumentLayout__PaintContext* k_texttranslator__translatortextedit_get_paint_context(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_get_paint_context` instead
-///
-#define k_texttranslator__translatortextedit_qbase_get_paint_context k_texttranslator__translatortextedit_super_get_paint_context
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#getPaintContext)
@@ -6445,10 +6185,6 @@ void k_texttranslator__translatortextedit_on_get_paint_context(void* self, QAbst
 /// @param range float
 ///
 void k_texttranslator__translatortextedit_zoom_in_f(void* self, float range);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_zoom_in_f` instead
-///
-#define k_texttranslator__translatortextedit_qbase_zoom_in_f k_texttranslator__translatortextedit_super_zoom_in_f
 
 /// Inherited from QPlainTextEdit
 ///
@@ -6486,10 +6222,6 @@ void k_texttranslator__translatortextedit_on_zoom_in_f(void* self, void (*callba
 ///
 void k_texttranslator__translatortextedit_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_set_viewport_margins` instead
-///
-#define k_texttranslator__translatortextedit_qbase_set_viewport_margins k_texttranslator__translatortextedit_super_set_viewport_margins
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
@@ -6525,10 +6257,6 @@ void k_texttranslator__translatortextedit_on_set_viewport_margins(void* self, vo
 ///
 QMargins* k_texttranslator__translatortextedit_viewport_margins(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_viewport_margins` instead
-///
-#define k_texttranslator__translatortextedit_qbase_viewport_margins k_texttranslator__translatortextedit_super_viewport_margins
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
@@ -6563,10 +6291,6 @@ void k_texttranslator__translatortextedit_on_viewport_margins(void* self, QMargi
 ///
 void k_texttranslator__translatortextedit_draw_frame(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_draw_frame` instead
-///
-#define k_texttranslator__translatortextedit_qbase_draw_frame k_texttranslator__translatortextedit_super_draw_frame
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#drawFrame)
@@ -6599,10 +6323,6 @@ void k_texttranslator__translatortextedit_on_draw_frame(void* self, void (*callb
 ///
 void k_texttranslator__translatortextedit_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_update_micro_focus` instead
-///
-#define k_texttranslator__translatortextedit_qbase_update_micro_focus k_texttranslator__translatortextedit_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -6633,10 +6353,6 @@ void k_texttranslator__translatortextedit_on_update_micro_focus(void* self, void
 /// @param self TextTranslator__TranslatorTextEdit*
 ///
 void k_texttranslator__translatortextedit_create(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_create` instead
-///
-#define k_texttranslator__translatortextedit_qbase_create k_texttranslator__translatortextedit_super_create
 
 /// Inherited from QWidget
 ///
@@ -6669,10 +6385,6 @@ void k_texttranslator__translatortextedit_on_create(void* self, void (*callback)
 ///
 void k_texttranslator__translatortextedit_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_destroy` instead
-///
-#define k_texttranslator__translatortextedit_qbase_destroy k_texttranslator__translatortextedit_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -6703,10 +6415,6 @@ void k_texttranslator__translatortextedit_on_destroy(void* self, void (*callback
 /// @param self TextTranslator__TranslatorTextEdit*
 ///
 bool k_texttranslator__translatortextedit_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_focus_next_child` instead
-///
-#define k_texttranslator__translatortextedit_qbase_focus_next_child k_texttranslator__translatortextedit_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -6739,10 +6447,6 @@ void k_texttranslator__translatortextedit_on_focus_next_child(void* self, bool (
 ///
 bool k_texttranslator__translatortextedit_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_focus_previous_child` instead
-///
-#define k_texttranslator__translatortextedit_qbase_focus_previous_child k_texttranslator__translatortextedit_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -6773,10 +6477,6 @@ void k_texttranslator__translatortextedit_on_focus_previous_child(void* self, bo
 /// @param self TextTranslator__TranslatorTextEdit*
 ///
 QObject* k_texttranslator__translatortextedit_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_sender` instead
-///
-#define k_texttranslator__translatortextedit_qbase_sender k_texttranslator__translatortextedit_super_sender
 
 /// Inherited from QObject
 ///
@@ -6809,10 +6509,6 @@ void k_texttranslator__translatortextedit_on_sender(void* self, QObject* (*callb
 ///
 int32_t k_texttranslator__translatortextedit_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_sender_signal_index` instead
-///
-#define k_texttranslator__translatortextedit_qbase_sender_signal_index k_texttranslator__translatortextedit_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -6844,10 +6540,6 @@ void k_texttranslator__translatortextedit_on_sender_signal_index(void* self, int
 /// @param signal const char*
 ///
 int32_t k_texttranslator__translatortextedit_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_receivers` instead
-///
-#define k_texttranslator__translatortextedit_qbase_receivers k_texttranslator__translatortextedit_super_receivers
 
 /// Inherited from QObject
 ///
@@ -6882,10 +6574,6 @@ void k_texttranslator__translatortextedit_on_receivers(void* self, int32_t (*cal
 ///
 bool k_texttranslator__translatortextedit_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_is_signal_connected` instead
-///
-#define k_texttranslator__translatortextedit_qbase_is_signal_connected k_texttranslator__translatortextedit_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -6919,10 +6607,6 @@ void k_texttranslator__translatortextedit_on_is_signal_connected(void* self, boo
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_texttranslator__translatortextedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatortextedit_super_get_decoded_metric_f` instead
-///
-#define k_texttranslator__translatortextedit_qbase_get_decoded_metric_f k_texttranslator__translatortextedit_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///
@@ -7012,10 +6696,6 @@ const QMetaObject* k_texttranslator__translatorwidget_meta_object(void* self);
 ///
 void k_texttranslator__translatorwidget_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_meta_object` instead
-///
-#define k_texttranslator__translatorwidget_qbase_meta_object k_texttranslator__translatorwidget_super_meta_object
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorWidget.html)
 ///
 /// Base class method implementation
@@ -7035,10 +6715,6 @@ void* k_texttranslator__translatorwidget_metacast(void* self, const char* param1
 /// @param callback void* func(TextTranslator__TranslatorWidget* self, const char* param1)
 ///
 void k_texttranslator__translatorwidget_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_metacast` instead
-///
-#define k_texttranslator__translatorwidget_qbase_metacast k_texttranslator__translatorwidget_super_metacast
 
 /// Base class method implementation
 ///
@@ -7060,10 +6736,6 @@ int32_t k_texttranslator__translatorwidget_metacall(void* self, int32_t param1, 
 /// @param callback int32_t func(TextTranslator__TranslatorWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_texttranslator__translatorwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_metacall` instead
-///
-#define k_texttranslator__translatorwidget_qbase_metacall k_texttranslator__translatorwidget_super_metacall
 
 /// Base class method implementation
 ///
@@ -7135,10 +6807,6 @@ bool k_texttranslator__translatorwidget_event(void* self, void* e);
 /// @param callback bool func(TextTranslator__TranslatorWidget* self, QEvent* e)
 ///
 void k_texttranslator__translatorwidget_on_event(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_event k_texttranslator__translatorwidget_super_event
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorWidget.html)
 ///
@@ -10148,10 +9816,6 @@ int32_t k_texttranslator__translatorwidget_encode_metric_f(int32_t metric, doubl
 ///
 int32_t k_texttranslator__translatorwidget_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_dev_type` instead
-///
-#define k_texttranslator__translatorwidget_qbase_dev_type k_texttranslator__translatorwidget_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -10183,10 +9847,6 @@ void k_texttranslator__translatorwidget_on_dev_type(void* self, int32_t (*callba
 /// @param visible bool
 ///
 void k_texttranslator__translatorwidget_set_visible(void* self, bool visible);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_set_visible` instead
-///
-#define k_texttranslator__translatorwidget_qbase_set_visible k_texttranslator__translatorwidget_super_set_visible
 
 /// Inherited from QWidget
 ///
@@ -10220,10 +9880,6 @@ void k_texttranslator__translatorwidget_on_set_visible(void* self, void (*callba
 ///
 QSize* k_texttranslator__translatorwidget_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_size_hint` instead
-///
-#define k_texttranslator__translatorwidget_qbase_size_hint k_texttranslator__translatorwidget_super_size_hint
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
@@ -10256,10 +9912,6 @@ void k_texttranslator__translatorwidget_on_size_hint(void* self, QSize* (*callba
 /// @param self TextTranslator__TranslatorWidget*
 ///
 QSize* k_texttranslator__translatorwidget_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_minimum_size_hint` instead
-///
-#define k_texttranslator__translatorwidget_qbase_minimum_size_hint k_texttranslator__translatorwidget_super_minimum_size_hint
 
 /// Inherited from QWidget
 ///
@@ -10295,10 +9947,6 @@ void k_texttranslator__translatorwidget_on_minimum_size_hint(void* self, QSize* 
 ///
 int32_t k_texttranslator__translatorwidget_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_height_for_width` instead
-///
-#define k_texttranslator__translatorwidget_qbase_height_for_width k_texttranslator__translatorwidget_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -10331,10 +9979,6 @@ void k_texttranslator__translatorwidget_on_height_for_width(void* self, int32_t 
 ///
 bool k_texttranslator__translatorwidget_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_has_height_for_width` instead
-///
-#define k_texttranslator__translatorwidget_qbase_has_height_for_width k_texttranslator__translatorwidget_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -10365,10 +10009,6 @@ void k_texttranslator__translatorwidget_on_has_height_for_width(void* self, bool
 /// @param self TextTranslator__TranslatorWidget*
 ///
 QPaintEngine* k_texttranslator__translatorwidget_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_paint_engine` instead
-///
-#define k_texttranslator__translatorwidget_qbase_paint_engine k_texttranslator__translatorwidget_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -10401,10 +10041,6 @@ void k_texttranslator__translatorwidget_on_paint_engine(void* self, QPaintEngine
 /// @param event QMouseEvent*
 ///
 void k_texttranslator__translatorwidget_mouse_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_mouse_press_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_mouse_press_event k_texttranslator__translatorwidget_super_mouse_press_event
 
 /// Inherited from QWidget
 ///
@@ -10439,10 +10075,6 @@ void k_texttranslator__translatorwidget_on_mouse_press_event(void* self, void (*
 ///
 void k_texttranslator__translatorwidget_mouse_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_mouse_release_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_mouse_release_event k_texttranslator__translatorwidget_super_mouse_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
@@ -10475,10 +10107,6 @@ void k_texttranslator__translatorwidget_on_mouse_release_event(void* self, void 
 /// @param event QMouseEvent*
 ///
 void k_texttranslator__translatorwidget_mouse_double_click_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_mouse_double_click_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_mouse_double_click_event k_texttranslator__translatorwidget_super_mouse_double_click_event
 
 /// Inherited from QWidget
 ///
@@ -10513,10 +10141,6 @@ void k_texttranslator__translatorwidget_on_mouse_double_click_event(void* self, 
 ///
 void k_texttranslator__translatorwidget_mouse_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_mouse_move_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_mouse_move_event k_texttranslator__translatorwidget_super_mouse_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -10549,10 +10173,6 @@ void k_texttranslator__translatorwidget_on_mouse_move_event(void* self, void (*c
 /// @param event QWheelEvent*
 ///
 void k_texttranslator__translatorwidget_wheel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_wheel_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_wheel_event k_texttranslator__translatorwidget_super_wheel_event
 
 /// Inherited from QWidget
 ///
@@ -10587,10 +10207,6 @@ void k_texttranslator__translatorwidget_on_wheel_event(void* self, void (*callba
 ///
 void k_texttranslator__translatorwidget_key_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_key_press_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_key_press_event k_texttranslator__translatorwidget_super_key_press_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
@@ -10623,10 +10239,6 @@ void k_texttranslator__translatorwidget_on_key_press_event(void* self, void (*ca
 /// @param event QKeyEvent*
 ///
 void k_texttranslator__translatorwidget_key_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_key_release_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_key_release_event k_texttranslator__translatorwidget_super_key_release_event
 
 /// Inherited from QWidget
 ///
@@ -10661,10 +10273,6 @@ void k_texttranslator__translatorwidget_on_key_release_event(void* self, void (*
 ///
 void k_texttranslator__translatorwidget_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_focus_in_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_focus_in_event k_texttranslator__translatorwidget_super_focus_in_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -10697,10 +10305,6 @@ void k_texttranslator__translatorwidget_on_focus_in_event(void* self, void (*cal
 /// @param event QFocusEvent*
 ///
 void k_texttranslator__translatorwidget_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_focus_out_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_focus_out_event k_texttranslator__translatorwidget_super_focus_out_event
 
 /// Inherited from QWidget
 ///
@@ -10735,10 +10339,6 @@ void k_texttranslator__translatorwidget_on_focus_out_event(void* self, void (*ca
 ///
 void k_texttranslator__translatorwidget_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_enter_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_enter_event k_texttranslator__translatorwidget_super_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -10771,10 +10371,6 @@ void k_texttranslator__translatorwidget_on_enter_event(void* self, void (*callba
 /// @param event QEvent*
 ///
 void k_texttranslator__translatorwidget_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_leave_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_leave_event k_texttranslator__translatorwidget_super_leave_event
 
 /// Inherited from QWidget
 ///
@@ -10809,10 +10405,6 @@ void k_texttranslator__translatorwidget_on_leave_event(void* self, void (*callba
 ///
 void k_texttranslator__translatorwidget_paint_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_paint_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_paint_event k_texttranslator__translatorwidget_super_paint_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
@@ -10845,10 +10437,6 @@ void k_texttranslator__translatorwidget_on_paint_event(void* self, void (*callba
 /// @param event QMoveEvent*
 ///
 void k_texttranslator__translatorwidget_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_move_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_move_event k_texttranslator__translatorwidget_super_move_event
 
 /// Inherited from QWidget
 ///
@@ -10883,10 +10471,6 @@ void k_texttranslator__translatorwidget_on_move_event(void* self, void (*callbac
 ///
 void k_texttranslator__translatorwidget_resize_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_resize_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_resize_event k_texttranslator__translatorwidget_super_resize_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
@@ -10919,10 +10503,6 @@ void k_texttranslator__translatorwidget_on_resize_event(void* self, void (*callb
 /// @param event QCloseEvent*
 ///
 void k_texttranslator__translatorwidget_close_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_close_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_close_event k_texttranslator__translatorwidget_super_close_event
 
 /// Inherited from QWidget
 ///
@@ -10957,10 +10537,6 @@ void k_texttranslator__translatorwidget_on_close_event(void* self, void (*callba
 ///
 void k_texttranslator__translatorwidget_context_menu_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_context_menu_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_context_menu_event k_texttranslator__translatorwidget_super_context_menu_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
@@ -10993,10 +10569,6 @@ void k_texttranslator__translatorwidget_on_context_menu_event(void* self, void (
 /// @param event QTabletEvent*
 ///
 void k_texttranslator__translatorwidget_tablet_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_tablet_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_tablet_event k_texttranslator__translatorwidget_super_tablet_event
 
 /// Inherited from QWidget
 ///
@@ -11031,10 +10603,6 @@ void k_texttranslator__translatorwidget_on_tablet_event(void* self, void (*callb
 ///
 void k_texttranslator__translatorwidget_action_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_action_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_action_event k_texttranslator__translatorwidget_super_action_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -11067,10 +10635,6 @@ void k_texttranslator__translatorwidget_on_action_event(void* self, void (*callb
 /// @param event QDragEnterEvent*
 ///
 void k_texttranslator__translatorwidget_drag_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_drag_enter_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_drag_enter_event k_texttranslator__translatorwidget_super_drag_enter_event
 
 /// Inherited from QWidget
 ///
@@ -11105,10 +10669,6 @@ void k_texttranslator__translatorwidget_on_drag_enter_event(void* self, void (*c
 ///
 void k_texttranslator__translatorwidget_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_drag_move_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_drag_move_event k_texttranslator__translatorwidget_super_drag_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -11141,10 +10701,6 @@ void k_texttranslator__translatorwidget_on_drag_move_event(void* self, void (*ca
 /// @param event QDragLeaveEvent*
 ///
 void k_texttranslator__translatorwidget_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_drag_leave_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_drag_leave_event k_texttranslator__translatorwidget_super_drag_leave_event
 
 /// Inherited from QWidget
 ///
@@ -11179,10 +10735,6 @@ void k_texttranslator__translatorwidget_on_drag_leave_event(void* self, void (*c
 ///
 void k_texttranslator__translatorwidget_drop_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_drop_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_drop_event k_texttranslator__translatorwidget_super_drop_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -11216,10 +10768,6 @@ void k_texttranslator__translatorwidget_on_drop_event(void* self, void (*callbac
 ///
 void k_texttranslator__translatorwidget_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_show_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_show_event k_texttranslator__translatorwidget_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -11252,10 +10800,6 @@ void k_texttranslator__translatorwidget_on_show_event(void* self, void (*callbac
 /// @param event QHideEvent*
 ///
 void k_texttranslator__translatorwidget_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_hide_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_hide_event k_texttranslator__translatorwidget_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -11292,10 +10836,6 @@ void k_texttranslator__translatorwidget_on_hide_event(void* self, void (*callbac
 ///
 bool k_texttranslator__translatorwidget_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_native_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_native_event k_texttranslator__translatorwidget_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -11331,10 +10871,6 @@ void k_texttranslator__translatorwidget_on_native_event(void* self, bool (*callb
 ///
 void k_texttranslator__translatorwidget_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_change_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_change_event k_texttranslator__translatorwidget_super_change_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -11367,10 +10903,6 @@ void k_texttranslator__translatorwidget_on_change_event(void* self, void (*callb
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
 int32_t k_texttranslator__translatorwidget_metric(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_metric` instead
-///
-#define k_texttranslator__translatorwidget_qbase_metric k_texttranslator__translatorwidget_super_metric
 
 /// Inherited from QWidget
 ///
@@ -11405,10 +10937,6 @@ void k_texttranslator__translatorwidget_on_metric(void* self, int32_t (*callback
 ///
 void k_texttranslator__translatorwidget_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_init_painter` instead
-///
-#define k_texttranslator__translatorwidget_qbase_init_painter k_texttranslator__translatorwidget_super_init_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -11442,10 +10970,6 @@ void k_texttranslator__translatorwidget_on_init_painter(void* self, void (*callb
 ///
 QPaintDevice* k_texttranslator__translatorwidget_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_redirected` instead
-///
-#define k_texttranslator__translatorwidget_qbase_redirected k_texttranslator__translatorwidget_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -11477,10 +11001,6 @@ void k_texttranslator__translatorwidget_on_redirected(void* self, QPaintDevice* 
 /// @param self TextTranslator__TranslatorWidget*
 ///
 QPainter* k_texttranslator__translatorwidget_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_shared_painter` instead
-///
-#define k_texttranslator__translatorwidget_qbase_shared_painter k_texttranslator__translatorwidget_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -11514,10 +11034,6 @@ void k_texttranslator__translatorwidget_on_shared_painter(void* self, QPainter* 
 ///
 void k_texttranslator__translatorwidget_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_input_method_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_input_method_event k_texttranslator__translatorwidget_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -11550,10 +11066,6 @@ void k_texttranslator__translatorwidget_on_input_method_event(void* self, void (
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* k_texttranslator__translatorwidget_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_input_method_query` instead
-///
-#define k_texttranslator__translatorwidget_qbase_input_method_query k_texttranslator__translatorwidget_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -11590,10 +11102,6 @@ void k_texttranslator__translatorwidget_on_input_method_query(void* self, QVaria
 ///
 bool k_texttranslator__translatorwidget_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_focus_next_prev_child` instead
-///
-#define k_texttranslator__translatorwidget_qbase_focus_next_prev_child k_texttranslator__translatorwidget_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -11627,10 +11135,6 @@ void k_texttranslator__translatorwidget_on_focus_next_prev_child(void* self, boo
 /// @param event QEvent*
 ///
 bool k_texttranslator__translatorwidget_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_event_filter` instead
-///
-#define k_texttranslator__translatorwidget_qbase_event_filter k_texttranslator__translatorwidget_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -11666,10 +11170,6 @@ void k_texttranslator__translatorwidget_on_event_filter(void* self, bool (*callb
 ///
 void k_texttranslator__translatorwidget_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_timer_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_timer_event k_texttranslator__translatorwidget_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -11702,10 +11202,6 @@ void k_texttranslator__translatorwidget_on_timer_event(void* self, void (*callba
 /// @param event QChildEvent*
 ///
 void k_texttranslator__translatorwidget_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_child_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_child_event k_texttranslator__translatorwidget_super_child_event
 
 /// Inherited from QObject
 ///
@@ -11740,10 +11236,6 @@ void k_texttranslator__translatorwidget_on_child_event(void* self, void (*callba
 ///
 void k_texttranslator__translatorwidget_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_custom_event` instead
-///
-#define k_texttranslator__translatorwidget_qbase_custom_event k_texttranslator__translatorwidget_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -11776,10 +11268,6 @@ void k_texttranslator__translatorwidget_on_custom_event(void* self, void (*callb
 /// @param signal QMetaMethod*
 ///
 void k_texttranslator__translatorwidget_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_connect_notify` instead
-///
-#define k_texttranslator__translatorwidget_qbase_connect_notify k_texttranslator__translatorwidget_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -11814,10 +11302,6 @@ void k_texttranslator__translatorwidget_on_connect_notify(void* self, void (*cal
 ///
 void k_texttranslator__translatorwidget_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_disconnect_notify` instead
-///
-#define k_texttranslator__translatorwidget_qbase_disconnect_notify k_texttranslator__translatorwidget_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -11850,10 +11334,6 @@ void k_texttranslator__translatorwidget_on_disconnect_notify(void* self, void (*
 ///
 void k_texttranslator__translatorwidget_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_update_micro_focus` instead
-///
-#define k_texttranslator__translatorwidget_qbase_update_micro_focus k_texttranslator__translatorwidget_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -11884,10 +11364,6 @@ void k_texttranslator__translatorwidget_on_update_micro_focus(void* self, void (
 /// @param self TextTranslator__TranslatorWidget*
 ///
 void k_texttranslator__translatorwidget_create(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_create` instead
-///
-#define k_texttranslator__translatorwidget_qbase_create k_texttranslator__translatorwidget_super_create
 
 /// Inherited from QWidget
 ///
@@ -11920,10 +11396,6 @@ void k_texttranslator__translatorwidget_on_create(void* self, void (*callback)()
 ///
 void k_texttranslator__translatorwidget_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_destroy` instead
-///
-#define k_texttranslator__translatorwidget_qbase_destroy k_texttranslator__translatorwidget_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -11954,10 +11426,6 @@ void k_texttranslator__translatorwidget_on_destroy(void* self, void (*callback)(
 /// @param self TextTranslator__TranslatorWidget*
 ///
 bool k_texttranslator__translatorwidget_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_focus_next_child` instead
-///
-#define k_texttranslator__translatorwidget_qbase_focus_next_child k_texttranslator__translatorwidget_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -11990,10 +11458,6 @@ void k_texttranslator__translatorwidget_on_focus_next_child(void* self, bool (*c
 ///
 bool k_texttranslator__translatorwidget_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_focus_previous_child` instead
-///
-#define k_texttranslator__translatorwidget_qbase_focus_previous_child k_texttranslator__translatorwidget_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -12024,10 +11488,6 @@ void k_texttranslator__translatorwidget_on_focus_previous_child(void* self, bool
 /// @param self TextTranslator__TranslatorWidget*
 ///
 QObject* k_texttranslator__translatorwidget_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_sender` instead
-///
-#define k_texttranslator__translatorwidget_qbase_sender k_texttranslator__translatorwidget_super_sender
 
 /// Inherited from QObject
 ///
@@ -12060,10 +11520,6 @@ void k_texttranslator__translatorwidget_on_sender(void* self, QObject* (*callbac
 ///
 int32_t k_texttranslator__translatorwidget_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_sender_signal_index` instead
-///
-#define k_texttranslator__translatorwidget_qbase_sender_signal_index k_texttranslator__translatorwidget_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -12095,10 +11551,6 @@ void k_texttranslator__translatorwidget_on_sender_signal_index(void* self, int32
 /// @param signal const char*
 ///
 int32_t k_texttranslator__translatorwidget_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_receivers` instead
-///
-#define k_texttranslator__translatorwidget_qbase_receivers k_texttranslator__translatorwidget_super_receivers
 
 /// Inherited from QObject
 ///
@@ -12133,10 +11585,6 @@ void k_texttranslator__translatorwidget_on_receivers(void* self, int32_t (*callb
 ///
 bool k_texttranslator__translatorwidget_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_is_signal_connected` instead
-///
-#define k_texttranslator__translatorwidget_qbase_is_signal_connected k_texttranslator__translatorwidget_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -12170,10 +11618,6 @@ void k_texttranslator__translatorwidget_on_is_signal_connected(void* self, bool 
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_texttranslator__translatorwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorwidget_super_get_decoded_metric_f` instead
-///
-#define k_texttranslator__translatorwidget_qbase_get_decoded_metric_f k_texttranslator__translatorwidget_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

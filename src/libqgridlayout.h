@@ -37,10 +37,6 @@ const QMetaObject* q_gridlayout_meta_object(void* self);
 ///
 void q_gridlayout_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_meta_object` instead
-///
-#define q_gridlayout_qbase_meta_object q_gridlayout_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_gridlayout_metacast(void* self, const char* param1);
 /// @param callback void* func(QGridLayout* self, const char* param1)
 ///
 void q_gridlayout_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_gridlayout_super_metacast` instead
-///
-#define q_gridlayout_qbase_metacast q_gridlayout_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_gridlayout_metacall(void* self, int32_t param1, int param2, void* para
 /// @param callback int32_t func(QGridLayout* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_gridlayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_gridlayout_super_metacall` instead
-///
-#define q_gridlayout_qbase_metacall q_gridlayout_super_metacall
 
 /// Base class method implementation
 ///
@@ -124,10 +112,6 @@ QSize* q_gridlayout_size_hint(void* self);
 ///
 void q_gridlayout_on_size_hint(void* self, QSize* (*callback)());
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_size_hint` instead
-///
-#define q_gridlayout_qbase_size_hint q_gridlayout_super_size_hint
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#sizeHint)
 ///
 /// Base class method implementation
@@ -153,10 +137,6 @@ QSize* q_gridlayout_minimum_size(void* self);
 ///
 void q_gridlayout_on_minimum_size(void* self, QSize* (*callback)());
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_minimum_size` instead
-///
-#define q_gridlayout_qbase_minimum_size q_gridlayout_super_minimum_size
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#minimumSize)
 ///
 /// Base class method implementation
@@ -181,10 +161,6 @@ QSize* q_gridlayout_maximum_size(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_gridlayout_on_maximum_size(void* self, QSize* (*callback)());
-
-/// @warning DEPRECATED: Use `q_gridlayout_super_maximum_size` instead
-///
-#define q_gridlayout_qbase_maximum_size q_gridlayout_super_maximum_size
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#maximumSize)
 ///
@@ -236,10 +212,6 @@ void q_gridlayout_set_spacing(void* self, int spacing);
 ///
 void q_gridlayout_on_set_spacing(void* self, void (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_set_spacing` instead
-///
-#define q_gridlayout_qbase_set_spacing q_gridlayout_super_set_spacing
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#setSpacing)
 ///
 /// Base class method implementation
@@ -263,10 +235,6 @@ int32_t q_gridlayout_spacing(void* self);
 /// @param callback int32_t func()
 ///
 void q_gridlayout_on_spacing(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_gridlayout_super_spacing` instead
-///
-#define q_gridlayout_qbase_spacing q_gridlayout_super_spacing
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#spacing)
 ///
@@ -371,10 +339,6 @@ bool q_gridlayout_has_height_for_width(void* self);
 ///
 void q_gridlayout_on_has_height_for_width(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_has_height_for_width` instead
-///
-#define q_gridlayout_qbase_has_height_for_width q_gridlayout_super_has_height_for_width
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#hasHeightForWidth)
 ///
 /// Base class method implementation
@@ -398,10 +362,6 @@ int32_t q_gridlayout_height_for_width(void* self, int param1);
 /// @param callback int32_t func(QGridLayout* self, int param1)
 ///
 void q_gridlayout_on_height_for_width(void* self, int32_t (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_gridlayout_super_height_for_width` instead
-///
-#define q_gridlayout_qbase_height_for_width q_gridlayout_super_height_for_width
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#heightForWidth)
 ///
@@ -427,10 +387,6 @@ int32_t q_gridlayout_minimum_height_for_width(void* self, int param1);
 /// @param callback int32_t func(QGridLayout* self, int param1)
 ///
 void q_gridlayout_on_minimum_height_for_width(void* self, int32_t (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_gridlayout_super_minimum_height_for_width` instead
-///
-#define q_gridlayout_qbase_minimum_height_for_width q_gridlayout_super_minimum_height_for_width
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#minimumHeightForWidth)
 ///
@@ -458,10 +414,6 @@ int32_t q_gridlayout_expanding_directions(void* self);
 ///
 void q_gridlayout_on_expanding_directions(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_expanding_directions` instead
-///
-#define q_gridlayout_qbase_expanding_directions q_gridlayout_super_expanding_directions
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#expandingDirections)
 ///
 /// Base class method implementation
@@ -486,10 +438,6 @@ void q_gridlayout_invalidate(void* self);
 /// @param callback void func()
 ///
 void q_gridlayout_on_invalidate(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_gridlayout_super_invalidate` instead
-///
-#define q_gridlayout_qbase_invalidate q_gridlayout_super_invalidate
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#invalidate)
 ///
@@ -577,10 +525,6 @@ QLayoutItem* q_gridlayout_item_at(void* self, int index);
 ///
 void q_gridlayout_on_item_at(void* self, QLayoutItem* (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_item_at` instead
-///
-#define q_gridlayout_qbase_item_at q_gridlayout_super_item_at
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#itemAt)
 ///
 /// Base class method implementation
@@ -614,10 +558,6 @@ QLayoutItem* q_gridlayout_take_at(void* self, int index);
 ///
 void q_gridlayout_on_take_at(void* self, QLayoutItem* (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_take_at` instead
-///
-#define q_gridlayout_qbase_take_at q_gridlayout_super_take_at
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#takeAt)
 ///
 /// Base class method implementation
@@ -642,10 +582,6 @@ int32_t q_gridlayout_count(void* self);
 ///
 void q_gridlayout_on_count(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_count` instead
-///
-#define q_gridlayout_qbase_count q_gridlayout_super_count
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#count)
 ///
 /// Base class method implementation
@@ -669,10 +605,6 @@ void q_gridlayout_set_geometry(void* self, void* geometry);
 /// @param callback void func(QGridLayout* self, QRect* geometry)
 ///
 void q_gridlayout_on_set_geometry(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_gridlayout_super_set_geometry` instead
-///
-#define q_gridlayout_qbase_set_geometry q_gridlayout_super_set_geometry
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#setGeometry)
 ///
@@ -726,10 +658,6 @@ void q_gridlayout_add_item2(void* self, void* param1);
 /// @param callback void func(QGridLayout* self, QLayoutItem* param1)
 ///
 void q_gridlayout_on_add_item2(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_gridlayout_super_add_item2` instead
-///
-#define q_gridlayout_qbase_add_item2 q_gridlayout_super_add_item2
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#addItem)
 ///
@@ -1010,10 +938,6 @@ int32_t q_gridlayout_index_of2(void* self, void* param1);
 /// @param callback int32_t func(QGridLayout* self, QLayoutItem* param1)
 ///
 void q_gridlayout_on_index_of2(void* self, int32_t (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_gridlayout_super_index_of2` instead
-///
-#define q_gridlayout_qbase_index_of2 q_gridlayout_super_index_of2
 
 /// Inherited from QLayout
 ///
@@ -1561,10 +1485,6 @@ int32_t q_gridlayout_alignment(void* self);
 ///
 QRect* q_gridlayout_geometry(void* self);
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_geometry` instead
-///
-#define q_gridlayout_qbase_geometry q_gridlayout_super_geometry
-
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#geometry)
@@ -1599,10 +1519,6 @@ void q_gridlayout_on_geometry(void* self, QRect* (*callback)());
 ///
 int32_t q_gridlayout_index_of(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_index_of` instead
-///
-#define q_gridlayout_qbase_index_of q_gridlayout_super_index_of
-
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#indexOf)
@@ -1634,10 +1550,6 @@ void q_gridlayout_on_index_of(void* self, int32_t (*callback)(void*, void*));
 /// @param self QGridLayout*
 ///
 bool q_gridlayout_is_empty(void* self);
-
-/// @warning DEPRECATED: Use `q_gridlayout_super_is_empty` instead
-///
-#define q_gridlayout_qbase_is_empty q_gridlayout_super_is_empty
 
 /// Inherited from QLayout
 ///
@@ -1671,10 +1583,6 @@ void q_gridlayout_on_is_empty(void* self, bool (*callback)());
 /// @return flag of enum QSizePolicy__ControlType
 ///
 int32_t q_gridlayout_control_types(void* self);
-
-/// @warning DEPRECATED: Use `q_gridlayout_super_control_types` instead
-///
-#define q_gridlayout_qbase_control_types q_gridlayout_super_control_types
 
 /// Inherited from QLayout
 ///
@@ -1712,10 +1620,6 @@ void q_gridlayout_on_control_types(void* self, int32_t (*callback)());
 ///
 QLayoutItem* q_gridlayout_replace_widget(void* self, void* from, void* to, int32_t options);
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_replace_widget` instead
-///
-#define q_gridlayout_qbase_replace_widget q_gridlayout_super_replace_widget
-
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#replaceWidget)
@@ -1750,10 +1654,6 @@ void q_gridlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, 
 ///
 QLayout* q_gridlayout_layout(void* self);
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_layout` instead
-///
-#define q_gridlayout_qbase_layout q_gridlayout_super_layout
-
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#layout)
@@ -1785,10 +1685,6 @@ void q_gridlayout_on_layout(void* self, QLayout* (*callback)());
 /// @param e QChildEvent*
 ///
 void q_gridlayout_child_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `q_gridlayout_super_child_event` instead
-///
-#define q_gridlayout_qbase_child_event q_gridlayout_super_child_event
 
 /// Inherited from QLayout
 ///
@@ -1822,10 +1718,6 @@ void q_gridlayout_on_child_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_gridlayout_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_gridlayout_super_event` instead
-///
-#define q_gridlayout_qbase_event q_gridlayout_super_event
 
 /// Inherited from QObject
 ///
@@ -1861,10 +1753,6 @@ void q_gridlayout_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_gridlayout_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_event_filter` instead
-///
-#define q_gridlayout_qbase_event_filter q_gridlayout_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1899,10 +1787,6 @@ void q_gridlayout_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void q_gridlayout_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_timer_event` instead
-///
-#define q_gridlayout_qbase_timer_event q_gridlayout_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1935,10 +1819,6 @@ void q_gridlayout_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void q_gridlayout_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_gridlayout_super_custom_event` instead
-///
-#define q_gridlayout_qbase_custom_event q_gridlayout_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -1973,10 +1853,6 @@ void q_gridlayout_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_gridlayout_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_connect_notify` instead
-///
-#define q_gridlayout_qbase_connect_notify q_gridlayout_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -2010,10 +1886,6 @@ void q_gridlayout_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_gridlayout_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_disconnect_notify` instead
-///
-#define q_gridlayout_qbase_disconnect_notify q_gridlayout_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -2046,10 +1918,6 @@ void q_gridlayout_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 QWidget* q_gridlayout_widget(void* self);
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_widget` instead
-///
-#define q_gridlayout_qbase_widget q_gridlayout_super_widget
-
 /// Inherited from QLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#widget)
@@ -2080,10 +1948,6 @@ void q_gridlayout_on_widget(void* self, QWidget* (*callback)());
 /// @param self QGridLayout*
 ///
 QSpacerItem* q_gridlayout_spacer_item(void* self);
-
-/// @warning DEPRECATED: Use `q_gridlayout_super_spacer_item` instead
-///
-#define q_gridlayout_qbase_spacer_item q_gridlayout_super_spacer_item
 
 /// Inherited from QLayoutItem
 ///
@@ -2116,10 +1980,6 @@ void q_gridlayout_on_spacer_item(void* self, QSpacerItem* (*callback)());
 /// @param param1 QEvent*
 ///
 void q_gridlayout_widget_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_gridlayout_super_widget_event` instead
-///
-#define q_gridlayout_qbase_widget_event q_gridlayout_super_widget_event
 
 /// Inherited from QLayout
 ///
@@ -2154,10 +2014,6 @@ void q_gridlayout_on_widget_event(void* self, void (*callback)(void*, void*));
 ///
 void q_gridlayout_add_child_layout(void* self, void* l);
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_add_child_layout` instead
-///
-#define q_gridlayout_qbase_add_child_layout q_gridlayout_super_add_child_layout
-
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#addChildLayout)
@@ -2190,10 +2046,6 @@ void q_gridlayout_on_add_child_layout(void* self, void (*callback)(void*, void*)
 /// @param w QWidget*
 ///
 void q_gridlayout_add_child_widget(void* self, void* w);
-
-/// @warning DEPRECATED: Use `q_gridlayout_super_add_child_widget` instead
-///
-#define q_gridlayout_qbase_add_child_widget q_gridlayout_super_add_child_widget
 
 /// Inherited from QLayout
 ///
@@ -2228,10 +2080,6 @@ void q_gridlayout_on_add_child_widget(void* self, void (*callback)(void*, void*)
 ///
 bool q_gridlayout_adopt_layout(void* self, void* layout);
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_adopt_layout` instead
-///
-#define q_gridlayout_qbase_adopt_layout q_gridlayout_super_adopt_layout
-
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#adoptLayout)
@@ -2264,10 +2112,6 @@ void q_gridlayout_on_adopt_layout(void* self, bool (*callback)(void*, void*));
 /// @param param1 QRect*
 ///
 QRect* q_gridlayout_alignment_rect(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_gridlayout_super_alignment_rect` instead
-///
-#define q_gridlayout_qbase_alignment_rect q_gridlayout_super_alignment_rect
 
 /// Inherited from QLayout
 ///
@@ -2303,10 +2147,6 @@ void q_gridlayout_on_alignment_rect(void* self, QRect* (*callback)(void*, void*)
 ///
 QObject* q_gridlayout_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_sender` instead
-///
-#define q_gridlayout_qbase_sender q_gridlayout_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2337,10 +2177,6 @@ void q_gridlayout_on_sender(void* self, QObject* (*callback)());
 /// @param self QGridLayout*
 ///
 int32_t q_gridlayout_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_gridlayout_super_sender_signal_index` instead
-///
-#define q_gridlayout_qbase_sender_signal_index q_gridlayout_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -2374,10 +2210,6 @@ void q_gridlayout_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_gridlayout_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_gridlayout_super_receivers` instead
-///
-#define q_gridlayout_qbase_receivers q_gridlayout_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2410,10 +2242,6 @@ void q_gridlayout_on_receivers(void* self, int32_t (*callback)(void*, const char
 /// @param signal QMetaMethod*
 ///
 bool q_gridlayout_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_gridlayout_super_is_signal_connected` instead
-///
-#define q_gridlayout_qbase_is_signal_connected q_gridlayout_super_is_signal_connected
 
 /// Inherited from QObject
 ///

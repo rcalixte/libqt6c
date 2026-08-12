@@ -37,10 +37,6 @@ const QMetaObject* q_sslsocket_meta_object(void* self);
 ///
 void q_sslsocket_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_meta_object` instead
-///
-#define q_sslsocket_qbase_meta_object q_sslsocket_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_sslsocket_metacast(void* self, const char* param1);
 /// @param callback void* func(QSslSocket* self, const char* param1)
 ///
 void q_sslsocket_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_metacast` instead
-///
-#define q_sslsocket_qbase_metacast q_sslsocket_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_sslsocket_metacall(void* self, int32_t param1, int param2, void* param
 /// @param callback int32_t func(QSslSocket* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_sslsocket_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_metacall` instead
-///
-#define q_sslsocket_qbase_metacall q_sslsocket_super_metacall
 
 /// Base class method implementation
 ///
@@ -121,10 +109,6 @@ void q_sslsocket_resume(void* self);
 /// @param callback void func()
 ///
 void q_sslsocket_on_resume(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_resume` instead
-///
-#define q_sslsocket_qbase_resume q_sslsocket_super_resume
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#resume)
 ///
@@ -169,10 +153,6 @@ bool q_sslsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, in
 ///
 void q_sslsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int32_t, int32_t));
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_set_socket_descriptor` instead
-///
-#define q_sslsocket_qbase_set_socket_descriptor q_sslsocket_super_set_socket_descriptor
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#setSocketDescriptor)
 ///
 /// Base class method implementation
@@ -203,10 +183,6 @@ void q_sslsocket_connect_to_host(void* self, const char* hostName, uint16_t port
 ///
 void q_sslsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, uint16_t, int32_t, int32_t));
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_connect_to_host` instead
-///
-#define q_sslsocket_qbase_connect_to_host q_sslsocket_super_connect_to_host
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#connectToHost)
 ///
 /// Base class method implementation
@@ -234,10 +210,6 @@ void q_sslsocket_disconnect_from_host(void* self);
 ///
 void q_sslsocket_on_disconnect_from_host(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_disconnect_from_host` instead
-///
-#define q_sslsocket_qbase_disconnect_from_host q_sslsocket_super_disconnect_from_host
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#disconnectFromHost)
 ///
 /// Base class method implementation
@@ -262,10 +234,6 @@ void q_sslsocket_set_socket_option(void* self, int32_t option, void* value);
 /// @param callback void func(QSslSocket* self, enum QAbstractSocket__SocketOption option, QVariant* value)
 ///
 void q_sslsocket_on_set_socket_option(void* self, void (*callback)(void*, int32_t, void*));
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_set_socket_option` instead
-///
-#define q_sslsocket_qbase_set_socket_option q_sslsocket_super_set_socket_option
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#setSocketOption)
 ///
@@ -294,10 +262,6 @@ QVariant* q_sslsocket_socket_option(void* self, int32_t option);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_sslsocket_on_socket_option(void* self, QVariant* (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_socket_option` instead
-///
-#define q_sslsocket_qbase_socket_option q_sslsocket_super_socket_option
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#socketOption)
 ///
@@ -395,10 +359,6 @@ int64_t q_sslsocket_bytes_available(void* self);
 ///
 void q_sslsocket_on_bytes_available(void* self, int64_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_bytes_available` instead
-///
-#define q_sslsocket_qbase_bytes_available q_sslsocket_super_bytes_available
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#bytesAvailable)
 ///
 /// Base class method implementation
@@ -421,10 +381,6 @@ int64_t q_sslsocket_bytes_to_write(void* self);
 /// @param callback int64_t func()
 ///
 void q_sslsocket_on_bytes_to_write(void* self, int64_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_bytes_to_write` instead
-///
-#define q_sslsocket_qbase_bytes_to_write q_sslsocket_super_bytes_to_write
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#bytesToWrite)
 ///
@@ -449,10 +405,6 @@ bool q_sslsocket_can_read_line(void* self);
 ///
 void q_sslsocket_on_can_read_line(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_can_read_line` instead
-///
-#define q_sslsocket_qbase_can_read_line q_sslsocket_super_can_read_line
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#canReadLine)
 ///
 /// Base class method implementation
@@ -475,10 +427,6 @@ void q_sslsocket_close(void* self);
 /// @param callback void func()
 ///
 void q_sslsocket_on_close(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_close` instead
-///
-#define q_sslsocket_qbase_close q_sslsocket_super_close
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#close)
 ///
@@ -503,10 +451,6 @@ bool q_sslsocket_at_end(void* self);
 ///
 void q_sslsocket_on_at_end(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_at_end` instead
-///
-#define q_sslsocket_qbase_at_end q_sslsocket_super_at_end
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#atEnd)
 ///
 /// Base class method implementation
@@ -530,10 +474,6 @@ void q_sslsocket_set_read_buffer_size(void* self, int64_t size);
 /// @param callback void func(QSslSocket* self, int64_t size)
 ///
 void q_sslsocket_on_set_read_buffer_size(void* self, void (*callback)(void*, int64_t));
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_set_read_buffer_size` instead
-///
-#define q_sslsocket_qbase_set_read_buffer_size q_sslsocket_super_set_read_buffer_size
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#setReadBufferSize)
 ///
@@ -676,10 +616,6 @@ bool q_sslsocket_wait_for_connected(void* self, int msecs);
 ///
 void q_sslsocket_on_wait_for_connected(void* self, bool (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_wait_for_connected` instead
-///
-#define q_sslsocket_qbase_wait_for_connected q_sslsocket_super_wait_for_connected
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#waitForConnected)
 ///
 /// Base class method implementation
@@ -711,10 +647,6 @@ bool q_sslsocket_wait_for_ready_read(void* self, int msecs);
 ///
 void q_sslsocket_on_wait_for_ready_read(void* self, bool (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_wait_for_ready_read` instead
-///
-#define q_sslsocket_qbase_wait_for_ready_read q_sslsocket_super_wait_for_ready_read
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#waitForReadyRead)
 ///
 /// Base class method implementation
@@ -740,10 +672,6 @@ bool q_sslsocket_wait_for_bytes_written(void* self, int msecs);
 ///
 void q_sslsocket_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_wait_for_bytes_written` instead
-///
-#define q_sslsocket_qbase_wait_for_bytes_written q_sslsocket_super_wait_for_bytes_written
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#waitForBytesWritten)
 ///
 /// Base class method implementation
@@ -768,10 +696,6 @@ bool q_sslsocket_wait_for_disconnected(void* self, int msecs);
 /// @param callback bool func(QSslSocket* self, int msecs)
 ///
 void q_sslsocket_on_wait_for_disconnected(void* self, bool (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_wait_for_disconnected` instead
-///
-#define q_sslsocket_qbase_wait_for_disconnected q_sslsocket_super_wait_for_disconnected
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#waitForDisconnected)
 ///
@@ -1058,10 +982,6 @@ int64_t q_sslsocket_read_data(void* self, char* data, int64_t maxlen);
 ///
 void q_sslsocket_on_read_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_read_data` instead
-///
-#define q_sslsocket_qbase_read_data q_sslsocket_super_read_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#readData)
 ///
 /// Base class method implementation
@@ -1088,10 +1008,6 @@ int64_t q_sslsocket_skip_data(void* self, int64_t maxSize);
 ///
 void q_sslsocket_on_skip_data(void* self, int64_t (*callback)(void*, int64_t));
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_skip_data` instead
-///
-#define q_sslsocket_qbase_skip_data q_sslsocket_super_skip_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#skipData)
 ///
 /// Base class method implementation
@@ -1117,10 +1033,6 @@ int64_t q_sslsocket_write_data(void* self, const char* data, int64_t lenVal);
 /// @param callback int64_t func(QSslSocket* self, const char* data, int64_t lenVal)
 ///
 void q_sslsocket_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_write_data` instead
-///
-#define q_sslsocket_qbase_write_data q_sslsocket_super_write_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#writeData)
 ///
@@ -2460,10 +2372,6 @@ void q_sslsocket_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_sslsocket_bind(void* self, void* address, uint16_t port, int32_t mode);
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_bind` instead
-///
-#define q_sslsocket_qbase_bind q_sslsocket_super_bind
-
 /// Inherited from QAbstractSocket
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#bind)
@@ -2498,10 +2406,6 @@ void q_sslsocket_on_bind(void* self, bool (*callback)(void*, void*, uint16_t, in
 ///
 intptr_t q_sslsocket_socket_descriptor(void* self);
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_socket_descriptor` instead
-///
-#define q_sslsocket_qbase_socket_descriptor q_sslsocket_super_socket_descriptor
-
 /// Inherited from QAbstractSocket
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#socketDescriptor)
@@ -2532,10 +2436,6 @@ void q_sslsocket_on_socket_descriptor(void* self, intptr_t (*callback)());
 /// @param self QSslSocket*
 ///
 bool q_sslsocket_is_sequential(void* self);
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_is_sequential` instead
-///
-#define q_sslsocket_qbase_is_sequential q_sslsocket_super_is_sequential
 
 /// Inherited from QAbstractSocket
 ///
@@ -2569,10 +2469,6 @@ void q_sslsocket_on_is_sequential(void* self, bool (*callback)());
 /// @param maxlen int64_t
 ///
 int64_t q_sslsocket_read_line_data(void* self, char* data, int64_t maxlen);
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_read_line_data` instead
-///
-#define q_sslsocket_qbase_read_line_data q_sslsocket_super_read_line_data
 
 /// Inherited from QAbstractSocket
 ///
@@ -2608,10 +2504,6 @@ void q_sslsocket_on_read_line_data(void* self, int64_t (*callback)(void*, char*,
 ///
 bool q_sslsocket_open(void* self, int32_t mode);
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_open` instead
-///
-#define q_sslsocket_qbase_open q_sslsocket_super_open
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#open)
@@ -2644,10 +2536,6 @@ void q_sslsocket_on_open(void* self, bool (*callback)(void*, int32_t));
 ///
 int64_t q_sslsocket_pos(void* self);
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_pos` instead
-///
-#define q_sslsocket_qbase_pos q_sslsocket_super_pos
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#pos)
@@ -2678,10 +2566,6 @@ void q_sslsocket_on_pos(void* self, int64_t (*callback)());
 /// @param self QSslSocket*
 ///
 int64_t q_sslsocket_size(void* self);
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_size` instead
-///
-#define q_sslsocket_qbase_size q_sslsocket_super_size
 
 /// Inherited from QIODevice
 ///
@@ -2715,10 +2599,6 @@ void q_sslsocket_on_size(void* self, int64_t (*callback)());
 ///
 bool q_sslsocket_seek(void* self, int64_t pos);
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_seek` instead
-///
-#define q_sslsocket_qbase_seek q_sslsocket_super_seek
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#seek)
@@ -2751,10 +2631,6 @@ void q_sslsocket_on_seek(void* self, bool (*callback)(void*, int64_t));
 ///
 bool q_sslsocket_reset(void* self);
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_reset` instead
-///
-#define q_sslsocket_qbase_reset q_sslsocket_super_reset
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#reset)
@@ -2786,10 +2662,6 @@ void q_sslsocket_on_reset(void* self, bool (*callback)());
 /// @param event QEvent*
 ///
 bool q_sslsocket_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_event` instead
-///
-#define q_sslsocket_qbase_event q_sslsocket_super_event
 
 /// Inherited from QObject
 ///
@@ -2825,10 +2697,6 @@ void q_sslsocket_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_sslsocket_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_event_filter` instead
-///
-#define q_sslsocket_qbase_event_filter q_sslsocket_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -2863,10 +2731,6 @@ void q_sslsocket_on_event_filter(void* self, bool (*callback)(void*, void*, void
 ///
 void q_sslsocket_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_timer_event` instead
-///
-#define q_sslsocket_qbase_timer_event q_sslsocket_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2899,10 +2763,6 @@ void q_sslsocket_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_sslsocket_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_child_event` instead
-///
-#define q_sslsocket_qbase_child_event q_sslsocket_super_child_event
 
 /// Inherited from QObject
 ///
@@ -2937,10 +2797,6 @@ void q_sslsocket_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_sslsocket_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_custom_event` instead
-///
-#define q_sslsocket_qbase_custom_event q_sslsocket_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2973,10 +2829,6 @@ void q_sslsocket_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_sslsocket_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_connect_notify` instead
-///
-#define q_sslsocket_qbase_connect_notify q_sslsocket_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -3011,10 +2863,6 @@ void q_sslsocket_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_sslsocket_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_disconnect_notify` instead
-///
-#define q_sslsocket_qbase_disconnect_notify q_sslsocket_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -3047,10 +2895,6 @@ void q_sslsocket_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 /// @param state enum QAbstractSocket__SocketState
 ///
 void q_sslsocket_set_socket_state(void* self, int32_t state);
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_set_socket_state` instead
-///
-#define q_sslsocket_qbase_set_socket_state q_sslsocket_super_set_socket_state
 
 /// Inherited from QAbstractSocket
 ///
@@ -3085,10 +2929,6 @@ void q_sslsocket_on_set_socket_state(void* self, void (*callback)(void*, int32_t
 ///
 void q_sslsocket_set_socket_error(void* self, int32_t socketError);
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_set_socket_error` instead
-///
-#define q_sslsocket_qbase_set_socket_error q_sslsocket_super_set_socket_error
-
 /// Inherited from QAbstractSocket
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketError)
@@ -3121,10 +2961,6 @@ void q_sslsocket_on_set_socket_error(void* self, void (*callback)(void*, int32_t
 /// @param port uint16_t
 ///
 void q_sslsocket_set_local_port(void* self, uint16_t port);
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_set_local_port` instead
-///
-#define q_sslsocket_qbase_set_local_port q_sslsocket_super_set_local_port
 
 /// Inherited from QAbstractSocket
 ///
@@ -3159,10 +2995,6 @@ void q_sslsocket_on_set_local_port(void* self, void (*callback)(void*, uint16_t)
 ///
 void q_sslsocket_set_local_address(void* self, void* address);
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_set_local_address` instead
-///
-#define q_sslsocket_qbase_set_local_address q_sslsocket_super_set_local_address
-
 /// Inherited from QAbstractSocket
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#setLocalAddress)
@@ -3195,10 +3027,6 @@ void q_sslsocket_on_set_local_address(void* self, void (*callback)(void*, void*)
 /// @param port uint16_t
 ///
 void q_sslsocket_set_peer_port(void* self, uint16_t port);
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_set_peer_port` instead
-///
-#define q_sslsocket_qbase_set_peer_port q_sslsocket_super_set_peer_port
 
 /// Inherited from QAbstractSocket
 ///
@@ -3233,10 +3061,6 @@ void q_sslsocket_on_set_peer_port(void* self, void (*callback)(void*, uint16_t))
 ///
 void q_sslsocket_set_peer_address(void* self, void* address);
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_set_peer_address` instead
-///
-#define q_sslsocket_qbase_set_peer_address q_sslsocket_super_set_peer_address
-
 /// Inherited from QAbstractSocket
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#setPeerAddress)
@@ -3269,10 +3093,6 @@ void q_sslsocket_on_set_peer_address(void* self, void (*callback)(void*, void*))
 /// @param name const char*
 ///
 void q_sslsocket_set_peer_name(void* self, const char* name);
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_set_peer_name` instead
-///
-#define q_sslsocket_qbase_set_peer_name q_sslsocket_super_set_peer_name
 
 /// Inherited from QAbstractSocket
 ///
@@ -3307,10 +3127,6 @@ void q_sslsocket_on_set_peer_name(void* self, void (*callback)(void*, const char
 ///
 void q_sslsocket_set_open_mode(void* self, int32_t openMode);
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_set_open_mode` instead
-///
-#define q_sslsocket_qbase_set_open_mode q_sslsocket_super_set_open_mode
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#setOpenMode)
@@ -3344,10 +3160,6 @@ void q_sslsocket_on_set_open_mode(void* self, void (*callback)(void*, int32_t));
 ///
 void q_sslsocket_set_error_string(void* self, const char* errorString);
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_set_error_string` instead
-///
-#define q_sslsocket_qbase_set_error_string q_sslsocket_super_set_error_string
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
@@ -3380,10 +3192,6 @@ void q_sslsocket_on_set_error_string(void* self, void (*callback)(void*, const c
 ///
 QObject* q_sslsocket_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_sender` instead
-///
-#define q_sslsocket_qbase_sender q_sslsocket_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -3414,10 +3222,6 @@ void q_sslsocket_on_sender(void* self, QObject* (*callback)());
 /// @param self QSslSocket*
 ///
 int32_t q_sslsocket_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_sender_signal_index` instead
-///
-#define q_sslsocket_qbase_sender_signal_index q_sslsocket_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -3451,10 +3255,6 @@ void q_sslsocket_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_sslsocket_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_sslsocket_super_receivers` instead
-///
-#define q_sslsocket_qbase_receivers q_sslsocket_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -3487,10 +3287,6 @@ void q_sslsocket_on_receivers(void* self, int32_t (*callback)(void*, const char*
 /// @param signal QMetaMethod*
 ///
 bool q_sslsocket_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_sslsocket_super_is_signal_connected` instead
-///
-#define q_sslsocket_qbase_is_signal_connected q_sslsocket_super_is_signal_connected
 
 /// Inherited from QObject
 ///

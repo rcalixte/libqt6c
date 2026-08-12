@@ -32,10 +32,6 @@ QIcon* q_abstractfileiconprovider_icon(void* self, int32_t param1);
 ///
 void q_abstractfileiconprovider_on_icon(void* self, QIcon* (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_abstractfileiconprovider_super_icon` instead
-///
-#define q_abstractfileiconprovider_qbase_icon q_abstractfileiconprovider_super_icon
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
 ///
 /// Base class method implementation
@@ -62,10 +58,6 @@ QIcon* q_abstractfileiconprovider_icon2(void* self, void* param1);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractfileiconprovider_on_icon2(void* self, QIcon* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_abstractfileiconprovider_super_icon2` instead
-///
-#define q_abstractfileiconprovider_qbase_icon2 q_abstractfileiconprovider_super_icon2
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
 ///
@@ -94,10 +86,6 @@ const char* q_abstractfileiconprovider_type(void* self, void* param1);
 ///
 void q_abstractfileiconprovider_on_type(void* self, const char* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_abstractfileiconprovider_super_type` instead
-///
-#define q_abstractfileiconprovider_qbase_type q_abstractfileiconprovider_super_type
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#type)
 ///
 /// Base class method implementation
@@ -122,10 +110,6 @@ void q_abstractfileiconprovider_set_options(void* self, int32_t options);
 /// @param callback void func(QAbstractFileIconProvider* self, flag of enum QAbstractFileIconProvider__Option options)
 ///
 void q_abstractfileiconprovider_on_set_options(void* self, void (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_abstractfileiconprovider_super_set_options` instead
-///
-#define q_abstractfileiconprovider_qbase_set_options q_abstractfileiconprovider_super_set_options
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#setOptions)
 ///
@@ -152,10 +136,6 @@ int32_t q_abstractfileiconprovider_options(void* self);
 /// @param callback int32_t func()
 ///
 void q_abstractfileiconprovider_on_options(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_abstractfileiconprovider_super_options` instead
-///
-#define q_abstractfileiconprovider_qbase_options q_abstractfileiconprovider_super_options
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#options)
 ///

@@ -37,10 +37,6 @@ const QMetaObject* q_sqlquerymodel_meta_object(void* self);
 ///
 void q_sqlquerymodel_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_meta_object` instead
-///
-#define q_sqlquerymodel_qbase_meta_object q_sqlquerymodel_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_sqlquerymodel_metacast(void* self, const char* param1);
 /// @param callback void* func(QSqlQueryModel* self, const char* param1)
 ///
 void q_sqlquerymodel_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_metacast` instead
-///
-#define q_sqlquerymodel_qbase_metacast q_sqlquerymodel_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_sqlquerymodel_metacall(void* self, int32_t param1, int param2, void* p
 /// @param callback int32_t func(QSqlQueryModel* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_sqlquerymodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_metacall` instead
-///
-#define q_sqlquerymodel_qbase_metacall q_sqlquerymodel_super_metacall
 
 /// Base class method implementation
 ///
@@ -123,10 +111,6 @@ int32_t q_sqlquerymodel_row_count(void* self, void* parent);
 ///
 void q_sqlquerymodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_row_count` instead
-///
-#define q_sqlquerymodel_qbase_row_count q_sqlquerymodel_super_row_count
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#rowCount)
 ///
 /// Base class method implementation
@@ -151,10 +135,6 @@ int32_t q_sqlquerymodel_column_count(void* self, void* parent);
 /// @param callback int32_t func(QSqlQueryModel* self, QModelIndex* parent)
 ///
 void q_sqlquerymodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_column_count` instead
-///
-#define q_sqlquerymodel_qbase_column_count q_sqlquerymodel_super_column_count
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#columnCount)
 ///
@@ -197,10 +177,6 @@ QVariant* q_sqlquerymodel_data(void* self, void* item, int role);
 ///
 void q_sqlquerymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_data` instead
-///
-#define q_sqlquerymodel_qbase_data q_sqlquerymodel_super_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#data)
 ///
 /// Base class method implementation
@@ -230,10 +206,6 @@ QVariant* q_sqlquerymodel_header_data(void* self, int section, int32_t orientati
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_sqlquerymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_header_data` instead
-///
-#define q_sqlquerymodel_qbase_header_data q_sqlquerymodel_super_header_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#headerData)
 ///
@@ -265,10 +237,6 @@ bool q_sqlquerymodel_set_header_data(void* self, int section, int32_t orientatio
 ///
 void q_sqlquerymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_set_header_data` instead
-///
-#define q_sqlquerymodel_qbase_set_header_data q_sqlquerymodel_super_set_header_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#setHeaderData)
 ///
 /// Base class method implementation
@@ -299,10 +267,6 @@ bool q_sqlquerymodel_insert_columns(void* self, int column, int count, void* par
 ///
 void q_sqlquerymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_insert_columns` instead
-///
-#define q_sqlquerymodel_qbase_insert_columns q_sqlquerymodel_super_insert_columns
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#insertColumns)
 ///
 /// Base class method implementation
@@ -331,10 +295,6 @@ bool q_sqlquerymodel_remove_columns(void* self, int column, int count, void* par
 /// @param callback bool func(QSqlQueryModel* self, int column, int count, QModelIndex* parent)
 ///
 void q_sqlquerymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_remove_columns` instead
-///
-#define q_sqlquerymodel_qbase_remove_columns q_sqlquerymodel_super_remove_columns
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#removeColumns)
 ///
@@ -382,10 +342,6 @@ void q_sqlquerymodel_clear(void* self);
 ///
 void q_sqlquerymodel_on_clear(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_clear` instead
-///
-#define q_sqlquerymodel_qbase_clear q_sqlquerymodel_super_clear
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#clear)
 ///
 /// Base class method implementation
@@ -416,10 +372,6 @@ void q_sqlquerymodel_fetch_more(void* self, void* parent);
 ///
 void q_sqlquerymodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_fetch_more` instead
-///
-#define q_sqlquerymodel_qbase_fetch_more q_sqlquerymodel_super_fetch_more
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#fetchMore)
 ///
 /// Base class method implementation
@@ -444,10 +396,6 @@ bool q_sqlquerymodel_can_fetch_more(void* self, void* parent);
 /// @param callback bool func(QSqlQueryModel* self, QModelIndex* parent)
 ///
 void q_sqlquerymodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_can_fetch_more` instead
-///
-#define q_sqlquerymodel_qbase_can_fetch_more q_sqlquerymodel_super_can_fetch_more
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#canFetchMore)
 ///
@@ -486,10 +434,6 @@ libqt_map q_sqlquerymodel_role_names(void* self);
 ///
 void q_sqlquerymodel_on_role_names(void* self, libqt_map (*callback)());
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_role_names` instead
-///
-#define q_sqlquerymodel_qbase_role_names q_sqlquerymodel_super_role_names
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#roleNames)
 ///
 /// Base class method implementation
@@ -518,10 +462,6 @@ void q_sqlquerymodel_begin_insert_rows(void* self, void* parent, int first, int 
 ///
 void q_sqlquerymodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_begin_insert_rows` instead
-///
-#define q_sqlquerymodel_qbase_begin_insert_rows q_sqlquerymodel_super_begin_insert_rows
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#beginInsertRows)
 ///
 /// Base class method implementation
@@ -547,10 +487,6 @@ void q_sqlquerymodel_end_insert_rows(void* self);
 /// @param callback void func()
 ///
 void q_sqlquerymodel_on_end_insert_rows(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_end_insert_rows` instead
-///
-#define q_sqlquerymodel_qbase_end_insert_rows q_sqlquerymodel_super_end_insert_rows
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#endInsertRows)
 ///
@@ -578,10 +514,6 @@ void q_sqlquerymodel_begin_remove_rows(void* self, void* parent, int first, int 
 ///
 void q_sqlquerymodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_begin_remove_rows` instead
-///
-#define q_sqlquerymodel_qbase_begin_remove_rows q_sqlquerymodel_super_begin_remove_rows
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#beginRemoveRows)
 ///
 /// Base class method implementation
@@ -607,10 +539,6 @@ void q_sqlquerymodel_end_remove_rows(void* self);
 /// @param callback void func()
 ///
 void q_sqlquerymodel_on_end_remove_rows(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_end_remove_rows` instead
-///
-#define q_sqlquerymodel_qbase_end_remove_rows q_sqlquerymodel_super_end_remove_rows
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#endRemoveRows)
 ///
@@ -638,10 +566,6 @@ void q_sqlquerymodel_begin_insert_columns(void* self, void* parent, int first, i
 ///
 void q_sqlquerymodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_begin_insert_columns` instead
-///
-#define q_sqlquerymodel_qbase_begin_insert_columns q_sqlquerymodel_super_begin_insert_columns
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#beginInsertColumns)
 ///
 /// Base class method implementation
@@ -667,10 +591,6 @@ void q_sqlquerymodel_end_insert_columns(void* self);
 /// @param callback void func()
 ///
 void q_sqlquerymodel_on_end_insert_columns(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_end_insert_columns` instead
-///
-#define q_sqlquerymodel_qbase_end_insert_columns q_sqlquerymodel_super_end_insert_columns
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#endInsertColumns)
 ///
@@ -698,10 +618,6 @@ void q_sqlquerymodel_begin_remove_columns(void* self, void* parent, int first, i
 ///
 void q_sqlquerymodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_begin_remove_columns` instead
-///
-#define q_sqlquerymodel_qbase_begin_remove_columns q_sqlquerymodel_super_begin_remove_columns
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#beginRemoveColumns)
 ///
 /// Base class method implementation
@@ -728,10 +644,6 @@ void q_sqlquerymodel_end_remove_columns(void* self);
 ///
 void q_sqlquerymodel_on_end_remove_columns(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_end_remove_columns` instead
-///
-#define q_sqlquerymodel_qbase_end_remove_columns q_sqlquerymodel_super_end_remove_columns
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#endRemoveColumns)
 ///
 /// Base class method implementation
@@ -754,10 +666,6 @@ void q_sqlquerymodel_begin_reset_model(void* self);
 /// @param callback void func()
 ///
 void q_sqlquerymodel_on_begin_reset_model(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_begin_reset_model` instead
-///
-#define q_sqlquerymodel_qbase_begin_reset_model q_sqlquerymodel_super_begin_reset_model
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#beginResetModel)
 ///
@@ -782,10 +690,6 @@ void q_sqlquerymodel_end_reset_model(void* self);
 ///
 void q_sqlquerymodel_on_end_reset_model(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_end_reset_model` instead
-///
-#define q_sqlquerymodel_qbase_end_reset_model q_sqlquerymodel_super_end_reset_model
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#endResetModel)
 ///
 /// Base class method implementation
@@ -808,10 +712,6 @@ void q_sqlquerymodel_query_change(void* self);
 /// @param callback void func()
 ///
 void q_sqlquerymodel_on_query_change(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_query_change` instead
-///
-#define q_sqlquerymodel_qbase_query_change q_sqlquerymodel_super_query_change
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#queryChange)
 ///
@@ -839,10 +739,6 @@ QModelIndex* q_sqlquerymodel_index_in_query(void* self, void* item);
 ///
 void q_sqlquerymodel_on_index_in_query(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_index_in_query` instead
-///
-#define q_sqlquerymodel_qbase_index_in_query q_sqlquerymodel_super_index_in_query
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#indexInQuery)
 ///
 /// Base class method implementation
@@ -867,10 +763,6 @@ void q_sqlquerymodel_set_last_error(void* self, void* error);
 /// @param callback void func(QSqlQueryModel* self, QSqlError* error)
 ///
 void q_sqlquerymodel_on_set_last_error(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_set_last_error` instead
-///
-#define q_sqlquerymodel_qbase_set_last_error q_sqlquerymodel_super_set_last_error
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#setLastError)
 ///
@@ -940,10 +832,6 @@ QModelIndex* q_sqlquerymodel_parent(void* self, void* child);
 ///
 void q_sqlquerymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_parent` instead
-///
-#define q_sqlquerymodel_qbase_parent q_sqlquerymodel_super_parent
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#parent)
@@ -974,10 +862,6 @@ bool q_sqlquerymodel_has_children(void* self, void* parent);
 /// @param callback bool func(QSqlQueryModel* self, QModelIndex* parent)
 ///
 void q_sqlquerymodel_on_has_children(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_has_children` instead
-///
-#define q_sqlquerymodel_qbase_has_children q_sqlquerymodel_super_has_children
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1739,10 +1623,6 @@ void q_sqlquerymodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 QModelIndex* q_sqlquerymodel_index(void* self, int row, int column, void* parent);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_index` instead
-///
-#define q_sqlquerymodel_qbase_index q_sqlquerymodel_super_index
-
 /// Inherited from QAbstractTableModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttablemodel.html#index)
@@ -1781,10 +1661,6 @@ void q_sqlquerymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, i
 /// @param idx QModelIndex*
 ///
 QModelIndex* q_sqlquerymodel_sibling(void* self, int row, int column, void* idx);
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_sibling` instead
-///
-#define q_sqlquerymodel_qbase_sibling q_sqlquerymodel_super_sibling
 
 /// Inherited from QAbstractTableModel
 ///
@@ -1827,10 +1703,6 @@ void q_sqlquerymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int,
 ///
 bool q_sqlquerymodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_drop_mime_data` instead
-///
-#define q_sqlquerymodel_qbase_drop_mime_data q_sqlquerymodel_super_drop_mime_data
-
 /// Inherited from QAbstractTableModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttablemodel.html#dropMimeData)
@@ -1870,10 +1742,6 @@ void q_sqlquerymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*
 ///
 int32_t q_sqlquerymodel_flags(void* self, void* index);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_flags` instead
-///
-#define q_sqlquerymodel_qbase_flags q_sqlquerymodel_super_flags
-
 /// Inherited from QAbstractTableModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttablemodel.html#flags)
@@ -1910,10 +1778,6 @@ void q_sqlquerymodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 /// @param role int
 ///
 bool q_sqlquerymodel_set_data(void* self, void* index, void* value, int role);
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_set_data` instead
-///
-#define q_sqlquerymodel_qbase_set_data q_sqlquerymodel_super_set_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1963,10 +1827,6 @@ void q_sqlquerymodel_on_set_data(void* self, bool (*callback)(void*, void*, void
 ///
 libqt_map q_sqlquerymodel_item_data(void* self, void* index);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_item_data` instead
-///
-#define q_sqlquerymodel_qbase_item_data q_sqlquerymodel_super_item_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#itemData)
@@ -2014,10 +1874,6 @@ void q_sqlquerymodel_on_item_data(void* self, libqt_map (*callback)(void*, void*
 ///
 bool q_sqlquerymodel_set_item_data(void* self, void* index, libqt_map roles);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_set_item_data` instead
-///
-#define q_sqlquerymodel_qbase_set_item_data q_sqlquerymodel_super_set_item_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setItemData)
@@ -2051,10 +1907,6 @@ void q_sqlquerymodel_on_set_item_data(void* self, bool (*callback)(void*, void*,
 /// @param index QModelIndex*
 ///
 bool q_sqlquerymodel_clear_item_data(void* self, void* index);
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_clear_item_data` instead
-///
-#define q_sqlquerymodel_qbase_clear_item_data q_sqlquerymodel_super_clear_item_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2090,10 +1942,6 @@ void q_sqlquerymodel_on_clear_item_data(void* self, bool (*callback)(void*, void
 ///
 const char** q_sqlquerymodel_mime_types(void* self);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_mime_types` instead
-///
-#define q_sqlquerymodel_qbase_mime_types q_sqlquerymodel_super_mime_types
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
@@ -2127,10 +1975,6 @@ void q_sqlquerymodel_on_mime_types(void* self, const char** (*callback)());
 /// @param indexes libqt_list of QModelIndex*
 ///
 QMimeData* q_sqlquerymodel_mime_data(void* self, libqt_list indexes);
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_mime_data` instead
-///
-#define q_sqlquerymodel_qbase_mime_data q_sqlquerymodel_super_mime_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2168,10 +2012,6 @@ void q_sqlquerymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libq
 /// @param parent QModelIndex*
 ///
 bool q_sqlquerymodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_can_drop_mime_data` instead
-///
-#define q_sqlquerymodel_qbase_can_drop_mime_data q_sqlquerymodel_super_can_drop_mime_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2211,10 +2051,6 @@ void q_sqlquerymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, v
 ///
 int32_t q_sqlquerymodel_supported_drop_actions(void* self);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_supported_drop_actions` instead
-///
-#define q_sqlquerymodel_qbase_supported_drop_actions q_sqlquerymodel_super_supported_drop_actions
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDropActions)
@@ -2249,10 +2085,6 @@ void q_sqlquerymodel_on_supported_drop_actions(void* self, int32_t (*callback)()
 /// @return flag of enum Qt__DropAction
 ///
 int32_t q_sqlquerymodel_supported_drag_actions(void* self);
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_supported_drag_actions` instead
-///
-#define q_sqlquerymodel_qbase_supported_drag_actions q_sqlquerymodel_super_supported_drag_actions
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2290,10 +2122,6 @@ void q_sqlquerymodel_on_supported_drag_actions(void* self, int32_t (*callback)()
 ///
 bool q_sqlquerymodel_insert_rows(void* self, int row, int count, void* parent);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_insert_rows` instead
-///
-#define q_sqlquerymodel_qbase_insert_rows q_sqlquerymodel_super_insert_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
@@ -2330,10 +2158,6 @@ void q_sqlquerymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int
 /// @param parent QModelIndex*
 ///
 bool q_sqlquerymodel_remove_rows(void* self, int row, int count, void* parent);
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_remove_rows` instead
-///
-#define q_sqlquerymodel_qbase_remove_rows q_sqlquerymodel_super_remove_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2373,10 +2197,6 @@ void q_sqlquerymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int
 /// @param destinationChild int
 ///
 bool q_sqlquerymodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_move_rows` instead
-///
-#define q_sqlquerymodel_qbase_move_rows q_sqlquerymodel_super_move_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2419,10 +2239,6 @@ void q_sqlquerymodel_on_move_rows(void* self, bool (*callback)(void*, void*, int
 ///
 bool q_sqlquerymodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_move_columns` instead
-///
-#define q_sqlquerymodel_qbase_move_columns q_sqlquerymodel_super_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
@@ -2461,10 +2277,6 @@ void q_sqlquerymodel_on_move_columns(void* self, bool (*callback)(void*, void*, 
 ///
 void q_sqlquerymodel_sort(void* self, int column, int32_t order);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_sort` instead
-///
-#define q_sqlquerymodel_qbase_sort q_sqlquerymodel_super_sort
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#sort)
@@ -2498,10 +2310,6 @@ void q_sqlquerymodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 /// @param index QModelIndex*
 ///
 QModelIndex* q_sqlquerymodel_buddy(void* self, void* index);
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_buddy` instead
-///
-#define q_sqlquerymodel_qbase_buddy q_sqlquerymodel_super_buddy
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2544,10 +2352,6 @@ void q_sqlquerymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*)
 ///
 libqt_list q_sqlquerymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_match` instead
-///
-#define q_sqlquerymodel_qbase_match q_sqlquerymodel_super_match
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
@@ -2587,10 +2391,6 @@ void q_sqlquerymodel_on_match(void* self, libqt_list (*callback)(void*, void*, i
 ///
 QSize* q_sqlquerymodel_span(void* self, void* index);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_span` instead
-///
-#define q_sqlquerymodel_qbase_span q_sqlquerymodel_super_span
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#span)
@@ -2627,10 +2427,6 @@ void q_sqlquerymodel_on_span(void* self, QSize* (*callback)(void*, void*));
 ///
 void q_sqlquerymodel_multi_data(void* self, void* index, void* roleDataSpan);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_multi_data` instead
-///
-#define q_sqlquerymodel_qbase_multi_data q_sqlquerymodel_super_multi_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
@@ -2664,10 +2460,6 @@ void q_sqlquerymodel_on_multi_data(void* self, void (*callback)(void*, void*, vo
 ///
 bool q_sqlquerymodel_submit(void* self);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_submit` instead
-///
-#define q_sqlquerymodel_qbase_submit q_sqlquerymodel_super_submit
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#submit)
@@ -2698,10 +2490,6 @@ void q_sqlquerymodel_on_submit(void* self, bool (*callback)());
 /// @param self QSqlQueryModel*
 ///
 void q_sqlquerymodel_revert(void* self);
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_revert` instead
-///
-#define q_sqlquerymodel_qbase_revert q_sqlquerymodel_super_revert
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2734,10 +2522,6 @@ void q_sqlquerymodel_on_revert(void* self, void (*callback)());
 ///
 void q_sqlquerymodel_reset_internal_data(void* self);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_reset_internal_data` instead
-///
-#define q_sqlquerymodel_qbase_reset_internal_data q_sqlquerymodel_super_reset_internal_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
@@ -2769,10 +2553,6 @@ void q_sqlquerymodel_on_reset_internal_data(void* self, void (*callback)());
 /// @param event QEvent*
 ///
 bool q_sqlquerymodel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_event` instead
-///
-#define q_sqlquerymodel_qbase_event q_sqlquerymodel_super_event
 
 /// Inherited from QObject
 ///
@@ -2808,10 +2588,6 @@ void q_sqlquerymodel_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_sqlquerymodel_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_event_filter` instead
-///
-#define q_sqlquerymodel_qbase_event_filter q_sqlquerymodel_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -2846,10 +2622,6 @@ void q_sqlquerymodel_on_event_filter(void* self, bool (*callback)(void*, void*, 
 ///
 void q_sqlquerymodel_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_timer_event` instead
-///
-#define q_sqlquerymodel_qbase_timer_event q_sqlquerymodel_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2882,10 +2654,6 @@ void q_sqlquerymodel_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_sqlquerymodel_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_child_event` instead
-///
-#define q_sqlquerymodel_qbase_child_event q_sqlquerymodel_super_child_event
 
 /// Inherited from QObject
 ///
@@ -2920,10 +2688,6 @@ void q_sqlquerymodel_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_sqlquerymodel_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_custom_event` instead
-///
-#define q_sqlquerymodel_qbase_custom_event q_sqlquerymodel_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2956,10 +2720,6 @@ void q_sqlquerymodel_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param signal QMetaMethod*
 ///
 void q_sqlquerymodel_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_connect_notify` instead
-///
-#define q_sqlquerymodel_qbase_connect_notify q_sqlquerymodel_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -2994,10 +2754,6 @@ void q_sqlquerymodel_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void q_sqlquerymodel_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_disconnect_notify` instead
-///
-#define q_sqlquerymodel_qbase_disconnect_notify q_sqlquerymodel_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -3031,10 +2787,6 @@ void q_sqlquerymodel_on_disconnect_notify(void* self, void (*callback)(void*, vo
 /// @param column int
 ///
 QModelIndex* q_sqlquerymodel_create_index(void* self, int row, int column);
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_create_index` instead
-///
-#define q_sqlquerymodel_qbase_create_index q_sqlquerymodel_super_create_index
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3073,10 +2825,6 @@ void q_sqlquerymodel_on_create_index(void* self, QModelIndex* (*callback)(void*,
 ///
 void q_sqlquerymodel_encode_data(void* self, libqt_list indexes, void* stream);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_encode_data` instead
-///
-#define q_sqlquerymodel_qbase_encode_data q_sqlquerymodel_super_encode_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
@@ -3113,10 +2861,6 @@ void q_sqlquerymodel_on_encode_data(void* self, void (*callback)(void*, libqt_li
 /// @param stream QDataStream*
 ///
 bool q_sqlquerymodel_decode_data(void* self, int row, int column, void* parent, void* stream);
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_decode_data` instead
-///
-#define q_sqlquerymodel_qbase_decode_data q_sqlquerymodel_super_decode_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3158,10 +2902,6 @@ void q_sqlquerymodel_on_decode_data(void* self, bool (*callback)(void*, int, int
 ///
 bool q_sqlquerymodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_begin_move_rows` instead
-///
-#define q_sqlquerymodel_qbase_begin_move_rows q_sqlquerymodel_super_begin_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
@@ -3197,10 +2937,6 @@ void q_sqlquerymodel_on_begin_move_rows(void* self, bool (*callback)(void*, void
 /// @param self QSqlQueryModel*
 ///
 void q_sqlquerymodel_end_move_rows(void* self);
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_end_move_rows` instead
-///
-#define q_sqlquerymodel_qbase_end_move_rows q_sqlquerymodel_super_end_move_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3238,10 +2974,6 @@ void q_sqlquerymodel_on_end_move_rows(void* self, void (*callback)());
 ///
 bool q_sqlquerymodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_begin_move_columns` instead
-///
-#define q_sqlquerymodel_qbase_begin_move_columns q_sqlquerymodel_super_begin_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
@@ -3278,10 +3010,6 @@ void q_sqlquerymodel_on_begin_move_columns(void* self, bool (*callback)(void*, v
 ///
 void q_sqlquerymodel_end_move_columns(void* self);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_end_move_columns` instead
-///
-#define q_sqlquerymodel_qbase_end_move_columns q_sqlquerymodel_super_end_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
@@ -3314,10 +3042,6 @@ void q_sqlquerymodel_on_end_move_columns(void* self, void (*callback)());
 /// @param to QModelIndex*
 ///
 void q_sqlquerymodel_change_persistent_index(void* self, void* from, void* to);
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_change_persistent_index` instead
-///
-#define q_sqlquerymodel_qbase_change_persistent_index q_sqlquerymodel_super_change_persistent_index
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3354,10 +3078,6 @@ void q_sqlquerymodel_on_change_persistent_index(void* self, void (*callback)(voi
 ///
 void q_sqlquerymodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_change_persistent_index_list` instead
-///
-#define q_sqlquerymodel_qbase_change_persistent_index_list q_sqlquerymodel_super_change_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
@@ -3393,10 +3113,6 @@ void q_sqlquerymodel_on_change_persistent_index_list(void* self, void (*callback
 ///
 libqt_list q_sqlquerymodel_persistent_index_list(void* self);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_persistent_index_list` instead
-///
-#define q_sqlquerymodel_qbase_persistent_index_list q_sqlquerymodel_super_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
@@ -3430,10 +3146,6 @@ void q_sqlquerymodel_on_persistent_index_list(void* self, libqt_list (*callback)
 ///
 QObject* q_sqlquerymodel_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_sender` instead
-///
-#define q_sqlquerymodel_qbase_sender q_sqlquerymodel_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -3464,10 +3176,6 @@ void q_sqlquerymodel_on_sender(void* self, QObject* (*callback)());
 /// @param self QSqlQueryModel*
 ///
 int32_t q_sqlquerymodel_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_sender_signal_index` instead
-///
-#define q_sqlquerymodel_qbase_sender_signal_index q_sqlquerymodel_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -3501,10 +3209,6 @@ void q_sqlquerymodel_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_sqlquerymodel_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_receivers` instead
-///
-#define q_sqlquerymodel_qbase_receivers q_sqlquerymodel_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -3537,10 +3241,6 @@ void q_sqlquerymodel_on_receivers(void* self, int32_t (*callback)(void*, const c
 /// @param signal QMetaMethod*
 ///
 bool q_sqlquerymodel_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_sqlquerymodel_super_is_signal_connected` instead
-///
-#define q_sqlquerymodel_qbase_is_signal_connected q_sqlquerymodel_super_is_signal_connected
 
 /// Inherited from QObject
 ///

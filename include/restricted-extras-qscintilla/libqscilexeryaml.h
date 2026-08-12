@@ -37,10 +37,6 @@ const QMetaObject* q_scilexeryaml_meta_object(void* self);
 ///
 void q_scilexeryaml_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_meta_object` instead
-///
-#define q_scilexeryaml_qbase_meta_object q_scilexeryaml_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_scilexeryaml_metacast(void* self, const char* param1);
 /// @param callback void* func(QsciLexerYAML* self, const char* param1)
 ///
 void q_scilexeryaml_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_metacast` instead
-///
-#define q_scilexeryaml_qbase_metacast q_scilexeryaml_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_scilexeryaml_metacall(void* self, int32_t param1, int param2, void* pa
 /// @param callback int32_t func(QsciLexerYAML* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_scilexeryaml_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_metacall` instead
-///
-#define q_scilexeryaml_qbase_metacall q_scilexeryaml_super_metacall
 
 /// Base class method implementation
 ///
@@ -197,10 +185,6 @@ void q_scilexeryaml_set_fold_comments(void* self, bool fold);
 ///
 void q_scilexeryaml_on_set_fold_comments(void* self, void (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_set_fold_comments` instead
-///
-#define q_scilexeryaml_qbase_set_fold_comments q_scilexeryaml_super_set_fold_comments
-
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerYAML.html)
 ///
 /// Base class method implementation
@@ -226,10 +210,6 @@ bool q_scilexeryaml_read_properties(void* self, void* qs, const char* prefix);
 /// @param callback bool func(QsciLexerYAML* self, QSettings* qs, const char* prefix)
 ///
 void q_scilexeryaml_on_read_properties(void* self, bool (*callback)(void*, void*, const char*));
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_read_properties` instead
-///
-#define q_scilexeryaml_qbase_read_properties q_scilexeryaml_super_read_properties
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerYAML.html)
 ///
@@ -257,10 +237,6 @@ bool q_scilexeryaml_write_properties(void* self, void* qs, const char* prefix);
 /// @param callback bool func(QsciLexerYAML* self, QSettings* qs, const char* prefix)
 ///
 void q_scilexeryaml_on_write_properties(void* self, bool (*callback)(void*, void*, const char*));
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_write_properties` instead
-///
-#define q_scilexeryaml_qbase_write_properties q_scilexeryaml_super_write_properties
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerYAML.html)
 ///
@@ -941,10 +917,6 @@ void q_scilexeryaml_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_scilexeryaml_lexer_id(void* self);
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_lexer_id` instead
-///
-#define q_scilexeryaml_qbase_lexer_id q_scilexeryaml_super_lexer_id
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -977,10 +949,6 @@ void q_scilexeryaml_on_lexer_id(void* self, int32_t (*callback)());
 /// @param self QsciLexerYAML*
 ///
 const char* q_scilexeryaml_auto_completion_fillups(void* self);
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_auto_completion_fillups` instead
-///
-#define q_scilexeryaml_qbase_auto_completion_fillups q_scilexeryaml_super_auto_completion_fillups
 
 /// Inherited from QsciLexer
 ///
@@ -1016,10 +984,6 @@ void q_scilexeryaml_on_auto_completion_fillups(void* self, const char* (*callbac
 /// @param self QsciLexerYAML*
 ///
 const char** q_scilexeryaml_auto_completion_word_separators(void* self);
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_auto_completion_word_separators` instead
-///
-#define q_scilexeryaml_qbase_auto_completion_word_separators q_scilexeryaml_super_auto_completion_word_separators
 
 /// Inherited from QsciLexer
 ///
@@ -1057,10 +1021,6 @@ void q_scilexeryaml_on_auto_completion_word_separators(void* self, const char** 
 ///
 const char* q_scilexeryaml_block_end(void* self, int* style);
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_block_end` instead
-///
-#define q_scilexeryaml_qbase_block_end q_scilexeryaml_super_block_end
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1095,10 +1055,6 @@ void q_scilexeryaml_on_block_end(void* self, const char* (*callback)(void*, int*
 ///
 int32_t q_scilexeryaml_block_lookback(void* self);
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_block_lookback` instead
-///
-#define q_scilexeryaml_qbase_block_lookback q_scilexeryaml_super_block_lookback
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1132,10 +1088,6 @@ void q_scilexeryaml_on_block_lookback(void* self, int32_t (*callback)());
 /// @param style int*
 ///
 const char* q_scilexeryaml_block_start(void* self, int* style);
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_block_start` instead
-///
-#define q_scilexeryaml_qbase_block_start q_scilexeryaml_super_block_start
 
 /// Inherited from QsciLexer
 ///
@@ -1174,10 +1126,6 @@ void q_scilexeryaml_on_block_start(void* self, const char* (*callback)(void*, in
 ///
 const char* q_scilexeryaml_block_start_keyword(void* self, int* style);
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_block_start_keyword` instead
-///
-#define q_scilexeryaml_qbase_block_start_keyword q_scilexeryaml_super_block_start_keyword
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1212,10 +1160,6 @@ void q_scilexeryaml_on_block_start_keyword(void* self, const char* (*callback)(v
 ///
 int32_t q_scilexeryaml_brace_style(void* self);
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_brace_style` instead
-///
-#define q_scilexeryaml_qbase_brace_style q_scilexeryaml_super_brace_style
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1246,10 +1190,6 @@ void q_scilexeryaml_on_brace_style(void* self, int32_t (*callback)());
 /// @param self QsciLexerYAML*
 ///
 bool q_scilexeryaml_case_sensitive(void* self);
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_case_sensitive` instead
-///
-#define q_scilexeryaml_qbase_case_sensitive q_scilexeryaml_super_case_sensitive
 
 /// Inherited from QsciLexer
 ///
@@ -1282,10 +1222,6 @@ void q_scilexeryaml_on_case_sensitive(void* self, bool (*callback)());
 /// @param style int
 ///
 QColor* q_scilexeryaml_color(void* self, int style);
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_color` instead
-///
-#define q_scilexeryaml_qbase_color q_scilexeryaml_super_color
 
 /// Inherited from QsciLexer
 ///
@@ -1322,10 +1258,6 @@ void q_scilexeryaml_on_color(void* self, QColor* (*callback)(void*, int));
 ///
 bool q_scilexeryaml_eol_fill(void* self, int style);
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_eol_fill` instead
-///
-#define q_scilexeryaml_qbase_eol_fill q_scilexeryaml_super_eol_fill
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1358,10 +1290,6 @@ void q_scilexeryaml_on_eol_fill(void* self, bool (*callback)(void*, int));
 /// @param style int
 ///
 QFont* q_scilexeryaml_font(void* self, int style);
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_font` instead
-///
-#define q_scilexeryaml_qbase_font q_scilexeryaml_super_font
 
 /// Inherited from QsciLexer
 ///
@@ -1397,10 +1325,6 @@ void q_scilexeryaml_on_font(void* self, QFont* (*callback)(void*, int));
 ///
 int32_t q_scilexeryaml_indentation_guide_view(void* self);
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_indentation_guide_view` instead
-///
-#define q_scilexeryaml_qbase_indentation_guide_view q_scilexeryaml_super_indentation_guide_view
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1431,10 +1355,6 @@ void q_scilexeryaml_on_indentation_guide_view(void* self, int32_t (*callback)())
 /// @param self QsciLexerYAML*
 ///
 int32_t q_scilexeryaml_default_style(void* self);
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_default_style` instead
-///
-#define q_scilexeryaml_qbase_default_style q_scilexeryaml_super_default_style
 
 /// Inherited from QsciLexer
 ///
@@ -1467,10 +1387,6 @@ void q_scilexeryaml_on_default_style(void* self, int32_t (*callback)());
 /// @param style int
 ///
 QColor* q_scilexeryaml_paper(void* self, int style);
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_paper` instead
-///
-#define q_scilexeryaml_qbase_paper q_scilexeryaml_super_paper
 
 /// Inherited from QsciLexer
 ///
@@ -1507,10 +1423,6 @@ void q_scilexeryaml_on_paper(void* self, QColor* (*callback)(void*, int));
 ///
 QColor* q_scilexeryaml_default_color2(void* self, int style);
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_default_color2` instead
-///
-#define q_scilexeryaml_qbase_default_color2 q_scilexeryaml_super_default_color2
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1545,10 +1457,6 @@ void q_scilexeryaml_on_default_color2(void* self, QColor* (*callback)(void*, int
 /// @param style int
 ///
 QFont* q_scilexeryaml_default_font2(void* self, int style);
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_default_font2` instead
-///
-#define q_scilexeryaml_qbase_default_font2 q_scilexeryaml_super_default_font2
 
 /// Inherited from QsciLexer
 ///
@@ -1585,10 +1493,6 @@ void q_scilexeryaml_on_default_font2(void* self, QFont* (*callback)(void*, int))
 ///
 QColor* q_scilexeryaml_default_paper2(void* self, int style);
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_default_paper2` instead
-///
-#define q_scilexeryaml_qbase_default_paper2 q_scilexeryaml_super_default_paper2
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1624,10 +1528,6 @@ void q_scilexeryaml_on_default_paper2(void* self, QColor* (*callback)(void*, int
 ///
 void q_scilexeryaml_set_editor(void* self, void* editor);
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_set_editor` instead
-///
-#define q_scilexeryaml_qbase_set_editor q_scilexeryaml_super_set_editor
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1659,10 +1559,6 @@ void q_scilexeryaml_on_set_editor(void* self, void (*callback)(void*, void*));
 /// @param self QsciLexerYAML*
 ///
 int32_t q_scilexeryaml_style_bits_needed(void* self);
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_style_bits_needed` instead
-///
-#define q_scilexeryaml_qbase_style_bits_needed q_scilexeryaml_super_style_bits_needed
 
 /// Inherited from QsciLexer
 ///
@@ -1696,10 +1592,6 @@ void q_scilexeryaml_on_style_bits_needed(void* self, int32_t (*callback)());
 /// @param self QsciLexerYAML*
 ///
 const char* q_scilexeryaml_word_characters(void* self);
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_word_characters` instead
-///
-#define q_scilexeryaml_qbase_word_characters q_scilexeryaml_super_word_characters
 
 /// Inherited from QsciLexer
 ///
@@ -1735,10 +1627,6 @@ void q_scilexeryaml_on_word_characters(void* self, const char* (*callback)());
 ///
 void q_scilexeryaml_set_auto_indent_style(void* self, int autoindentstyle);
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_set_auto_indent_style` instead
-///
-#define q_scilexeryaml_qbase_set_auto_indent_style q_scilexeryaml_super_set_auto_indent_style
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1772,10 +1660,6 @@ void q_scilexeryaml_on_set_auto_indent_style(void* self, void (*callback)(void*,
 /// @param style int
 ///
 void q_scilexeryaml_set_color(void* self, void* c, int style);
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_set_color` instead
-///
-#define q_scilexeryaml_qbase_set_color q_scilexeryaml_super_set_color
 
 /// Inherited from QsciLexer
 ///
@@ -1812,10 +1696,6 @@ void q_scilexeryaml_on_set_color(void* self, void (*callback)(void*, void*, int)
 ///
 void q_scilexeryaml_set_eol_fill(void* self, bool eoffill, int style);
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_set_eol_fill` instead
-///
-#define q_scilexeryaml_qbase_set_eol_fill q_scilexeryaml_super_set_eol_fill
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1850,10 +1730,6 @@ void q_scilexeryaml_on_set_eol_fill(void* self, void (*callback)(void*, bool, in
 /// @param style int
 ///
 void q_scilexeryaml_set_font(void* self, void* f, int style);
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_set_font` instead
-///
-#define q_scilexeryaml_qbase_set_font q_scilexeryaml_super_set_font
 
 /// Inherited from QsciLexer
 ///
@@ -1890,10 +1766,6 @@ void q_scilexeryaml_on_set_font(void* self, void (*callback)(void*, void*, int))
 ///
 void q_scilexeryaml_set_paper(void* self, void* c, int style);
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_set_paper` instead
-///
-#define q_scilexeryaml_qbase_set_paper q_scilexeryaml_super_set_paper
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1927,10 +1799,6 @@ void q_scilexeryaml_on_set_paper(void* self, void (*callback)(void*, void*, int)
 /// @param event QEvent*
 ///
 bool q_scilexeryaml_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_event` instead
-///
-#define q_scilexeryaml_qbase_event q_scilexeryaml_super_event
 
 /// Inherited from QObject
 ///
@@ -1966,10 +1834,6 @@ void q_scilexeryaml_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_scilexeryaml_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_event_filter` instead
-///
-#define q_scilexeryaml_qbase_event_filter q_scilexeryaml_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -2004,10 +1868,6 @@ void q_scilexeryaml_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void q_scilexeryaml_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_timer_event` instead
-///
-#define q_scilexeryaml_qbase_timer_event q_scilexeryaml_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2040,10 +1900,6 @@ void q_scilexeryaml_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_scilexeryaml_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_child_event` instead
-///
-#define q_scilexeryaml_qbase_child_event q_scilexeryaml_super_child_event
 
 /// Inherited from QObject
 ///
@@ -2078,10 +1934,6 @@ void q_scilexeryaml_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_scilexeryaml_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_custom_event` instead
-///
-#define q_scilexeryaml_qbase_custom_event q_scilexeryaml_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2115,10 +1967,6 @@ void q_scilexeryaml_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_scilexeryaml_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_connect_notify` instead
-///
-#define q_scilexeryaml_qbase_connect_notify q_scilexeryaml_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -2151,10 +1999,6 @@ void q_scilexeryaml_on_connect_notify(void* self, void (*callback)(void*, void*)
 /// @param signal QMetaMethod*
 ///
 void q_scilexeryaml_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_disconnect_notify` instead
-///
-#define q_scilexeryaml_qbase_disconnect_notify q_scilexeryaml_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -2190,10 +2034,6 @@ void q_scilexeryaml_on_disconnect_notify(void* self, void (*callback)(void*, voi
 /// @param text const char*
 ///
 char* q_scilexeryaml_text_as_bytes(void* self, const char* text);
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_text_as_bytes` instead
-///
-#define q_scilexeryaml_qbase_text_as_bytes q_scilexeryaml_super_text_as_bytes
 
 /// Inherited from QsciLexer
 ///
@@ -2233,10 +2073,6 @@ void q_scilexeryaml_on_text_as_bytes(void* self, libqt_string (*callback)(void*,
 ///
 const char* q_scilexeryaml_bytes_as_text(void* self, const char* bytes, int size);
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_bytes_as_text` instead
-///
-#define q_scilexeryaml_qbase_bytes_as_text q_scilexeryaml_super_bytes_as_text
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -2272,10 +2108,6 @@ void q_scilexeryaml_on_bytes_as_text(void* self, const char* (*callback)(void*, 
 ///
 QObject* q_scilexeryaml_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_sender` instead
-///
-#define q_scilexeryaml_qbase_sender q_scilexeryaml_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2306,10 +2138,6 @@ void q_scilexeryaml_on_sender(void* self, QObject* (*callback)());
 /// @param self QsciLexerYAML*
 ///
 int32_t q_scilexeryaml_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_sender_signal_index` instead
-///
-#define q_scilexeryaml_qbase_sender_signal_index q_scilexeryaml_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -2343,10 +2171,6 @@ void q_scilexeryaml_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_scilexeryaml_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_receivers` instead
-///
-#define q_scilexeryaml_qbase_receivers q_scilexeryaml_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2379,10 +2203,6 @@ void q_scilexeryaml_on_receivers(void* self, int32_t (*callback)(void*, const ch
 /// @param signal QMetaMethod*
 ///
 bool q_scilexeryaml_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_scilexeryaml_super_is_signal_connected` instead
-///
-#define q_scilexeryaml_qbase_is_signal_connected q_scilexeryaml_super_is_signal_connected
 
 /// Inherited from QObject
 ///

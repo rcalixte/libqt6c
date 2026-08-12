@@ -37,10 +37,6 @@ const QMetaObject* q_styleditemdelegate_meta_object(void* self);
 ///
 void q_styleditemdelegate_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_meta_object` instead
-///
-#define q_styleditemdelegate_qbase_meta_object q_styleditemdelegate_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_styleditemdelegate_metacast(void* self, const char* param1);
 /// @param callback void* func(QStyledItemDelegate* self, const char* param1)
 ///
 void q_styleditemdelegate_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_metacast` instead
-///
-#define q_styleditemdelegate_qbase_metacast q_styleditemdelegate_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_styleditemdelegate_metacall(void* self, int32_t param1, int param2, vo
 /// @param callback int32_t func(QStyledItemDelegate* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_styleditemdelegate_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_metacall` instead
-///
-#define q_styleditemdelegate_qbase_metacall q_styleditemdelegate_super_metacall
 
 /// Base class method implementation
 ///
@@ -125,10 +113,6 @@ void q_styleditemdelegate_paint(void* self, void* painter, void* option, void* i
 ///
 void q_styleditemdelegate_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_paint` instead
-///
-#define q_styleditemdelegate_qbase_paint q_styleditemdelegate_super_paint
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleditemdelegate.html#paint)
 ///
 /// Base class method implementation
@@ -159,10 +143,6 @@ QSize* q_styleditemdelegate_size_hint(void* self, void* option, void* index);
 ///
 void q_styleditemdelegate_on_size_hint(void* self, QSize* (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_size_hint` instead
-///
-#define q_styleditemdelegate_qbase_size_hint q_styleditemdelegate_super_size_hint
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleditemdelegate.html#sizeHint)
 ///
 /// Base class method implementation
@@ -190,10 +170,6 @@ QWidget* q_styleditemdelegate_create_editor(void* self, void* parent, void* opti
 /// @param callback QWidget* func(QStyledItemDelegate* self, QWidget* parent, QStyleOptionViewItem* option, QModelIndex* index)
 ///
 void q_styleditemdelegate_on_create_editor(void* self, QWidget* (*callback)(void*, void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_create_editor` instead
-///
-#define q_styleditemdelegate_qbase_create_editor q_styleditemdelegate_super_create_editor
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleditemdelegate.html#createEditor)
 ///
@@ -223,10 +199,6 @@ void q_styleditemdelegate_set_editor_data(void* self, void* editor, void* index)
 ///
 void q_styleditemdelegate_on_set_editor_data(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_set_editor_data` instead
-///
-#define q_styleditemdelegate_qbase_set_editor_data q_styleditemdelegate_super_set_editor_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleditemdelegate.html#setEditorData)
 ///
 /// Base class method implementation
@@ -254,10 +226,6 @@ void q_styleditemdelegate_set_model_data(void* self, void* editor, void* model, 
 /// @param callback void func(QStyledItemDelegate* self, QWidget* editor, QAbstractItemModel* model, QModelIndex* index)
 ///
 void q_styleditemdelegate_on_set_model_data(void* self, void (*callback)(void*, void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_set_model_data` instead
-///
-#define q_styleditemdelegate_qbase_set_model_data q_styleditemdelegate_super_set_model_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleditemdelegate.html#setModelData)
 ///
@@ -287,10 +255,6 @@ void q_styleditemdelegate_update_editor_geometry(void* self, void* editor, void*
 /// @param callback void func(QStyledItemDelegate* self, QWidget* editor, QStyleOptionViewItem* option, QModelIndex* index)
 ///
 void q_styleditemdelegate_on_update_editor_geometry(void* self, void (*callback)(void*, void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_update_editor_geometry` instead
-///
-#define q_styleditemdelegate_qbase_update_editor_geometry q_styleditemdelegate_super_update_editor_geometry
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleditemdelegate.html#updateEditorGeometry)
 ///
@@ -335,10 +299,6 @@ const char* q_styleditemdelegate_display_text(void* self, void* value, void* loc
 ///
 void q_styleditemdelegate_on_display_text(void* self, const char* (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_display_text` instead
-///
-#define q_styleditemdelegate_qbase_display_text q_styleditemdelegate_super_display_text
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleditemdelegate.html#displayText)
 ///
 /// Base class method implementation
@@ -366,10 +326,6 @@ void q_styleditemdelegate_init_style_option(void* self, void* option, void* inde
 ///
 void q_styleditemdelegate_on_init_style_option(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_init_style_option` instead
-///
-#define q_styleditemdelegate_qbase_init_style_option q_styleditemdelegate_super_init_style_option
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleditemdelegate.html#initStyleOption)
 ///
 /// Base class method implementation
@@ -396,10 +352,6 @@ bool q_styleditemdelegate_event_filter(void* self, void* object, void* event);
 /// @param callback bool func(QStyledItemDelegate* self, QObject* object, QEvent* event)
 ///
 void q_styleditemdelegate_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_event_filter` instead
-///
-#define q_styleditemdelegate_qbase_event_filter q_styleditemdelegate_super_event_filter
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleditemdelegate.html#eventFilter)
 ///
@@ -429,10 +381,6 @@ bool q_styleditemdelegate_editor_event(void* self, void* event, void* model, voi
 /// @param callback bool func(QStyledItemDelegate* self, QEvent* event, QAbstractItemModel* model, QStyleOptionViewItem* option, QModelIndex* index)
 ///
 void q_styleditemdelegate_on_editor_event(void* self, bool (*callback)(void*, void*, void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_editor_event` instead
-///
-#define q_styleditemdelegate_qbase_editor_event q_styleditemdelegate_super_editor_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleditemdelegate.html#editorEvent)
 ///
@@ -997,10 +945,6 @@ void q_styleditemdelegate_on_destroyed1(void* self, void (*callback)(void*, void
 ///
 void q_styleditemdelegate_destroy_editor(void* self, void* editor, void* index);
 
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_destroy_editor` instead
-///
-#define q_styleditemdelegate_qbase_destroy_editor q_styleditemdelegate_super_destroy_editor
-
 /// Inherited from QAbstractItemDelegate
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#destroyEditor)
@@ -1037,10 +981,6 @@ void q_styleditemdelegate_on_destroy_editor(void* self, void (*callback)(void*, 
 /// @param index QModelIndex*
 ///
 bool q_styleditemdelegate_help_event(void* self, void* event, void* view, void* option, void* index);
-
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_help_event` instead
-///
-#define q_styleditemdelegate_qbase_help_event q_styleditemdelegate_super_help_event
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -1079,10 +1019,6 @@ void q_styleditemdelegate_on_help_event(void* self, bool (*callback)(void*, void
 ///
 libqt_list q_styleditemdelegate_painting_roles(void* self);
 
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_painting_roles` instead
-///
-#define q_styleditemdelegate_qbase_painting_roles q_styleditemdelegate_super_painting_roles
-
 /// Inherited from QAbstractItemDelegate
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paintingRoles)
@@ -1117,10 +1053,6 @@ void q_styleditemdelegate_on_painting_roles(void* self, libqt_list (*callback)()
 ///
 bool q_styleditemdelegate_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_event` instead
-///
-#define q_styleditemdelegate_qbase_event q_styleditemdelegate_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1153,10 +1085,6 @@ void q_styleditemdelegate_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QTimerEvent*
 ///
 void q_styleditemdelegate_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_timer_event` instead
-///
-#define q_styleditemdelegate_qbase_timer_event q_styleditemdelegate_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -1191,10 +1119,6 @@ void q_styleditemdelegate_on_timer_event(void* self, void (*callback)(void*, voi
 ///
 void q_styleditemdelegate_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_child_event` instead
-///
-#define q_styleditemdelegate_qbase_child_event q_styleditemdelegate_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1227,10 +1151,6 @@ void q_styleditemdelegate_on_child_event(void* self, void (*callback)(void*, voi
 /// @param event QEvent*
 ///
 void q_styleditemdelegate_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_custom_event` instead
-///
-#define q_styleditemdelegate_qbase_custom_event q_styleditemdelegate_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -1265,10 +1185,6 @@ void q_styleditemdelegate_on_custom_event(void* self, void (*callback)(void*, vo
 ///
 void q_styleditemdelegate_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_connect_notify` instead
-///
-#define q_styleditemdelegate_qbase_connect_notify q_styleditemdelegate_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1302,10 +1218,6 @@ void q_styleditemdelegate_on_connect_notify(void* self, void (*callback)(void*, 
 ///
 void q_styleditemdelegate_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_disconnect_notify` instead
-///
-#define q_styleditemdelegate_qbase_disconnect_notify q_styleditemdelegate_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1338,10 +1250,6 @@ void q_styleditemdelegate_on_disconnect_notify(void* self, void (*callback)(void
 ///
 QObject* q_styleditemdelegate_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_sender` instead
-///
-#define q_styleditemdelegate_qbase_sender q_styleditemdelegate_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1372,10 +1280,6 @@ void q_styleditemdelegate_on_sender(void* self, QObject* (*callback)());
 /// @param self QStyledItemDelegate*
 ///
 int32_t q_styleditemdelegate_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_sender_signal_index` instead
-///
-#define q_styleditemdelegate_qbase_sender_signal_index q_styleditemdelegate_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1409,10 +1313,6 @@ void q_styleditemdelegate_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 int32_t q_styleditemdelegate_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_receivers` instead
-///
-#define q_styleditemdelegate_qbase_receivers q_styleditemdelegate_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1445,10 +1345,6 @@ void q_styleditemdelegate_on_receivers(void* self, int32_t (*callback)(void*, co
 /// @param signal QMetaMethod*
 ///
 bool q_styleditemdelegate_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_styleditemdelegate_super_is_signal_connected` instead
-///
-#define q_styleditemdelegate_qbase_is_signal_connected q_styleditemdelegate_super_is_signal_connected
 
 /// Inherited from QObject
 ///

@@ -29,10 +29,6 @@ int32_t q_designerpropertysheetextension_count(void* self);
 ///
 void q_designerpropertysheetextension_on_count(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_designerpropertysheetextension_super_count` instead
-///
-#define q_designerpropertysheetextension_qbase_count q_designerpropertysheetextension_super_count
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#count)
 ///
 /// Base class method implementation
@@ -56,10 +52,6 @@ int32_t q_designerpropertysheetextension_index_of(void* self, const char* name);
 /// @param callback int32_t func(QDesignerPropertySheetExtension* self, const char* name)
 ///
 void q_designerpropertysheetextension_on_index_of(void* self, int32_t (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_designerpropertysheetextension_super_index_of` instead
-///
-#define q_designerpropertysheetextension_qbase_index_of q_designerpropertysheetextension_super_index_of
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#indexOf)
 ///
@@ -88,10 +80,6 @@ const char* q_designerpropertysheetextension_property_name(void* self, int index
 ///
 void q_designerpropertysheetextension_on_property_name(void* self, const char* (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_designerpropertysheetextension_super_property_name` instead
-///
-#define q_designerpropertysheetextension_qbase_property_name q_designerpropertysheetextension_super_property_name
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#propertyName)
 ///
 /// Base class method implementation
@@ -119,10 +107,6 @@ const char* q_designerpropertysheetextension_property_group(void* self, int inde
 ///
 void q_designerpropertysheetextension_on_property_group(void* self, const char* (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_designerpropertysheetextension_super_property_group` instead
-///
-#define q_designerpropertysheetextension_qbase_property_group q_designerpropertysheetextension_super_property_group
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#propertyGroup)
 ///
 /// Base class method implementation
@@ -148,10 +132,6 @@ void q_designerpropertysheetextension_set_property_group(void* self, int index, 
 /// @param callback void func(QDesignerPropertySheetExtension* self, int index, const char* group)
 ///
 void q_designerpropertysheetextension_on_set_property_group(void* self, void (*callback)(void*, int, const char*));
-
-/// @warning DEPRECATED: Use `q_designerpropertysheetextension_super_set_property_group` instead
-///
-#define q_designerpropertysheetextension_qbase_set_property_group q_designerpropertysheetextension_super_set_property_group
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#setPropertyGroup)
 ///
@@ -179,10 +159,6 @@ bool q_designerpropertysheetextension_has_reset(void* self, int index);
 ///
 void q_designerpropertysheetextension_on_has_reset(void* self, bool (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_designerpropertysheetextension_super_has_reset` instead
-///
-#define q_designerpropertysheetextension_qbase_has_reset q_designerpropertysheetextension_super_has_reset
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#hasReset)
 ///
 /// Base class method implementation
@@ -208,10 +184,6 @@ bool q_designerpropertysheetextension_reset(void* self, int index);
 ///
 void q_designerpropertysheetextension_on_reset(void* self, bool (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_designerpropertysheetextension_super_reset` instead
-///
-#define q_designerpropertysheetextension_qbase_reset q_designerpropertysheetextension_super_reset
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#reset)
 ///
 /// Base class method implementation
@@ -236,10 +208,6 @@ bool q_designerpropertysheetextension_is_visible(void* self, int index);
 /// @param callback bool func(QDesignerPropertySheetExtension* self, int index)
 ///
 void q_designerpropertysheetextension_on_is_visible(void* self, bool (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_designerpropertysheetextension_super_is_visible` instead
-///
-#define q_designerpropertysheetextension_qbase_is_visible q_designerpropertysheetextension_super_is_visible
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#isVisible)
 ///
@@ -267,10 +235,6 @@ void q_designerpropertysheetextension_set_visible(void* self, int index, bool b)
 ///
 void q_designerpropertysheetextension_on_set_visible(void* self, void (*callback)(void*, int, bool));
 
-/// @warning DEPRECATED: Use `q_designerpropertysheetextension_super_set_visible` instead
-///
-#define q_designerpropertysheetextension_qbase_set_visible q_designerpropertysheetextension_super_set_visible
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#setVisible)
 ///
 /// Base class method implementation
@@ -297,10 +261,6 @@ bool q_designerpropertysheetextension_is_attribute(void* self, int index);
 ///
 void q_designerpropertysheetextension_on_is_attribute(void* self, bool (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_designerpropertysheetextension_super_is_attribute` instead
-///
-#define q_designerpropertysheetextension_qbase_is_attribute q_designerpropertysheetextension_super_is_attribute
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#isAttribute)
 ///
 /// Base class method implementation
@@ -326,10 +286,6 @@ void q_designerpropertysheetextension_set_attribute(void* self, int index, bool 
 /// @param callback void func(QDesignerPropertySheetExtension* self, int index, bool b)
 ///
 void q_designerpropertysheetextension_on_set_attribute(void* self, void (*callback)(void*, int, bool));
-
-/// @warning DEPRECATED: Use `q_designerpropertysheetextension_super_set_attribute` instead
-///
-#define q_designerpropertysheetextension_qbase_set_attribute q_designerpropertysheetextension_super_set_attribute
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#setAttribute)
 ///
@@ -359,10 +315,6 @@ QVariant* q_designerpropertysheetextension_property(void* self, int index);
 ///
 void q_designerpropertysheetextension_on_property(void* self, QVariant* (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_designerpropertysheetextension_super_property` instead
-///
-#define q_designerpropertysheetextension_qbase_property q_designerpropertysheetextension_super_property
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#property)
 ///
 /// Base class method implementation
@@ -388,10 +340,6 @@ void q_designerpropertysheetextension_set_property(void* self, int index, void* 
 /// @param callback void func(QDesignerPropertySheetExtension* self, int index, QVariant* value)
 ///
 void q_designerpropertysheetextension_on_set_property(void* self, void (*callback)(void*, int, void*));
-
-/// @warning DEPRECATED: Use `q_designerpropertysheetextension_super_set_property` instead
-///
-#define q_designerpropertysheetextension_qbase_set_property q_designerpropertysheetextension_super_set_property
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#setProperty)
 ///
@@ -419,10 +367,6 @@ bool q_designerpropertysheetextension_is_changed(void* self, int index);
 ///
 void q_designerpropertysheetextension_on_is_changed(void* self, bool (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_designerpropertysheetextension_super_is_changed` instead
-///
-#define q_designerpropertysheetextension_qbase_is_changed q_designerpropertysheetextension_super_is_changed
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#isChanged)
 ///
 /// Base class method implementation
@@ -449,10 +393,6 @@ void q_designerpropertysheetextension_set_changed(void* self, int index, bool ch
 ///
 void q_designerpropertysheetextension_on_set_changed(void* self, void (*callback)(void*, int, bool));
 
-/// @warning DEPRECATED: Use `q_designerpropertysheetextension_super_set_changed` instead
-///
-#define q_designerpropertysheetextension_qbase_set_changed q_designerpropertysheetextension_super_set_changed
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#setChanged)
 ///
 /// Base class method implementation
@@ -478,10 +418,6 @@ bool q_designerpropertysheetextension_is_enabled(void* self, int index);
 /// @param callback bool func(QDesignerPropertySheetExtension* self, int index)
 ///
 void q_designerpropertysheetextension_on_is_enabled(void* self, bool (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_designerpropertysheetextension_super_is_enabled` instead
-///
-#define q_designerpropertysheetextension_qbase_is_enabled q_designerpropertysheetextension_super_is_enabled
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#isEnabled)
 ///

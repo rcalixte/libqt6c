@@ -37,10 +37,6 @@ const QMetaObject* q_designerformwindowtoolinterface_meta_object(void* self);
 ///
 void q_designerformwindowtoolinterface_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_designerformwindowtoolinterface_super_meta_object` instead
-///
-#define q_designerformwindowtoolinterface_qbase_meta_object q_designerformwindowtoolinterface_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_designerformwindowtoolinterface_metacast(void* self, const char* param1)
 /// @param callback void* func(QDesignerFormWindowToolInterface* self, const char* param1)
 ///
 void q_designerformwindowtoolinterface_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_designerformwindowtoolinterface_super_metacast` instead
-///
-#define q_designerformwindowtoolinterface_qbase_metacast q_designerformwindowtoolinterface_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_designerformwindowtoolinterface_metacall(void* self, int32_t param1, i
 /// @param callback int32_t func(QDesignerFormWindowToolInterface* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_designerformwindowtoolinterface_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_designerformwindowtoolinterface_super_metacall` instead
-///
-#define q_designerformwindowtoolinterface_qbase_metacall q_designerformwindowtoolinterface_super_metacall
 
 /// Base class method implementation
 ///
@@ -122,10 +110,6 @@ QDesignerFormEditorInterface* q_designerformwindowtoolinterface_core(void* self)
 ///
 void q_designerformwindowtoolinterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)());
 
-/// @warning DEPRECATED: Use `q_designerformwindowtoolinterface_super_core` instead
-///
-#define q_designerformwindowtoolinterface_qbase_core q_designerformwindowtoolinterface_super_core
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowtoolinterface.html#core)
 ///
 /// Base class method implementation
@@ -148,10 +132,6 @@ QDesignerFormWindowInterface* q_designerformwindowtoolinterface_form_window(void
 /// @param callback QDesignerFormWindowInterface* func()
 ///
 void q_designerformwindowtoolinterface_on_form_window(void* self, QDesignerFormWindowInterface* (*callback)());
-
-/// @warning DEPRECATED: Use `q_designerformwindowtoolinterface_super_form_window` instead
-///
-#define q_designerformwindowtoolinterface_qbase_form_window q_designerformwindowtoolinterface_super_form_window
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowtoolinterface.html#formWindow)
 ///
@@ -176,10 +156,6 @@ QWidget* q_designerformwindowtoolinterface_editor(void* self);
 ///
 void q_designerformwindowtoolinterface_on_editor(void* self, QWidget* (*callback)());
 
-/// @warning DEPRECATED: Use `q_designerformwindowtoolinterface_super_editor` instead
-///
-#define q_designerformwindowtoolinterface_qbase_editor q_designerformwindowtoolinterface_super_editor
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowtoolinterface.html#editor)
 ///
 /// Base class method implementation
@@ -202,10 +178,6 @@ QAction* q_designerformwindowtoolinterface_action(void* self);
 /// @param callback QAction* func()
 ///
 void q_designerformwindowtoolinterface_on_action(void* self, QAction* (*callback)());
-
-/// @warning DEPRECATED: Use `q_designerformwindowtoolinterface_super_action` instead
-///
-#define q_designerformwindowtoolinterface_qbase_action q_designerformwindowtoolinterface_super_action
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowtoolinterface.html#action)
 ///
@@ -230,10 +202,6 @@ void q_designerformwindowtoolinterface_activated(void* self);
 ///
 void q_designerformwindowtoolinterface_on_activated(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_designerformwindowtoolinterface_super_activated` instead
-///
-#define q_designerformwindowtoolinterface_qbase_activated q_designerformwindowtoolinterface_super_activated
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowtoolinterface.html#activated)
 ///
 /// Base class method implementation
@@ -256,10 +224,6 @@ void q_designerformwindowtoolinterface_deactivated(void* self);
 /// @param callback void func()
 ///
 void q_designerformwindowtoolinterface_on_deactivated(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_designerformwindowtoolinterface_super_deactivated` instead
-///
-#define q_designerformwindowtoolinterface_qbase_deactivated q_designerformwindowtoolinterface_super_deactivated
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowtoolinterface.html#deactivated)
 ///
@@ -286,10 +250,6 @@ bool q_designerformwindowtoolinterface_handle_event(void* self, void* widget, vo
 /// @param callback bool func(QDesignerFormWindowToolInterface* self, QWidget* widget, QWidget* managedWidget, QEvent* event)
 ///
 void q_designerformwindowtoolinterface_on_handle_event(void* self, bool (*callback)(void*, void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_designerformwindowtoolinterface_super_handle_event` instead
-///
-#define q_designerformwindowtoolinterface_qbase_handle_event q_designerformwindowtoolinterface_super_handle_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowtoolinterface.html#handleEvent)
 ///
@@ -779,10 +739,6 @@ void q_designerformwindowtoolinterface_on_destroyed1(void* self, void (*callback
 ///
 bool q_designerformwindowtoolinterface_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_designerformwindowtoolinterface_super_event` instead
-///
-#define q_designerformwindowtoolinterface_qbase_event q_designerformwindowtoolinterface_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -816,10 +772,6 @@ void q_designerformwindowtoolinterface_on_event(void* self, bool (*callback)(voi
 /// @param event QEvent*
 ///
 bool q_designerformwindowtoolinterface_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_designerformwindowtoolinterface_super_event_filter` instead
-///
-#define q_designerformwindowtoolinterface_qbase_event_filter q_designerformwindowtoolinterface_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -855,10 +807,6 @@ void q_designerformwindowtoolinterface_on_event_filter(void* self, bool (*callba
 ///
 void q_designerformwindowtoolinterface_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_designerformwindowtoolinterface_super_timer_event` instead
-///
-#define q_designerformwindowtoolinterface_qbase_timer_event q_designerformwindowtoolinterface_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -891,10 +839,6 @@ void q_designerformwindowtoolinterface_on_timer_event(void* self, void (*callbac
 /// @param event QChildEvent*
 ///
 void q_designerformwindowtoolinterface_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_designerformwindowtoolinterface_super_child_event` instead
-///
-#define q_designerformwindowtoolinterface_qbase_child_event q_designerformwindowtoolinterface_super_child_event
 
 /// Inherited from QObject
 ///
@@ -929,10 +873,6 @@ void q_designerformwindowtoolinterface_on_child_event(void* self, void (*callbac
 ///
 void q_designerformwindowtoolinterface_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_designerformwindowtoolinterface_super_custom_event` instead
-///
-#define q_designerformwindowtoolinterface_qbase_custom_event q_designerformwindowtoolinterface_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -965,10 +905,6 @@ void q_designerformwindowtoolinterface_on_custom_event(void* self, void (*callba
 /// @param signal QMetaMethod*
 ///
 void q_designerformwindowtoolinterface_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_designerformwindowtoolinterface_super_connect_notify` instead
-///
-#define q_designerformwindowtoolinterface_qbase_connect_notify q_designerformwindowtoolinterface_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1003,10 +939,6 @@ void q_designerformwindowtoolinterface_on_connect_notify(void* self, void (*call
 ///
 void q_designerformwindowtoolinterface_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_designerformwindowtoolinterface_super_disconnect_notify` instead
-///
-#define q_designerformwindowtoolinterface_qbase_disconnect_notify q_designerformwindowtoolinterface_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1039,10 +971,6 @@ void q_designerformwindowtoolinterface_on_disconnect_notify(void* self, void (*c
 ///
 QObject* q_designerformwindowtoolinterface_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_designerformwindowtoolinterface_super_sender` instead
-///
-#define q_designerformwindowtoolinterface_qbase_sender q_designerformwindowtoolinterface_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1073,10 +1001,6 @@ void q_designerformwindowtoolinterface_on_sender(void* self, QObject* (*callback
 /// @param self QDesignerFormWindowToolInterface*
 ///
 int32_t q_designerformwindowtoolinterface_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_designerformwindowtoolinterface_super_sender_signal_index` instead
-///
-#define q_designerformwindowtoolinterface_qbase_sender_signal_index q_designerformwindowtoolinterface_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1110,10 +1034,6 @@ void q_designerformwindowtoolinterface_on_sender_signal_index(void* self, int32_
 ///
 int32_t q_designerformwindowtoolinterface_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_designerformwindowtoolinterface_super_receivers` instead
-///
-#define q_designerformwindowtoolinterface_qbase_receivers q_designerformwindowtoolinterface_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1146,10 +1066,6 @@ void q_designerformwindowtoolinterface_on_receivers(void* self, int32_t (*callba
 /// @param signal QMetaMethod*
 ///
 bool q_designerformwindowtoolinterface_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_designerformwindowtoolinterface_super_is_signal_connected` instead
-///
-#define q_designerformwindowtoolinterface_qbase_is_signal_connected q_designerformwindowtoolinterface_super_is_signal_connected
 
 /// Inherited from QObject
 ///

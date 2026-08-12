@@ -37,10 +37,6 @@ const QMetaObject* k_io__widgetsaskuseractionhandler_meta_object(void* self);
 ///
 void k_io__widgetsaskuseractionhandler_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_meta_object` instead
-///
-#define k_io__widgetsaskuseractionhandler_qbase_meta_object k_io__widgetsaskuseractionhandler_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* k_io__widgetsaskuseractionhandler_metacast(void* self, const char* param1)
 /// @param callback void* func(KIO__WidgetsAskUserActionHandler* self, const char* param1)
 ///
 void k_io__widgetsaskuseractionhandler_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_metacast` instead
-///
-#define k_io__widgetsaskuseractionhandler_qbase_metacast k_io__widgetsaskuseractionhandler_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t k_io__widgetsaskuseractionhandler_metacall(void* self, int32_t param1, i
 /// @param callback int32_t func(KIO__WidgetsAskUserActionHandler* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_io__widgetsaskuseractionhandler_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_metacall` instead
-///
-#define k_io__widgetsaskuseractionhandler_qbase_metacall k_io__widgetsaskuseractionhandler_super_metacall
 
 /// Base class method implementation
 ///
@@ -133,10 +121,6 @@ void k_io__widgetsaskuseractionhandler_ask_user_rename(void* self, void* job, co
 ///
 void k_io__widgetsaskuseractionhandler_on_ask_user_rename(void* self, void (*callback)(void*, void*, const char*, void*, void*, int32_t, uintptr_t, uintptr_t, void*, void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_ask_user_rename` instead
-///
-#define k_io__widgetsaskuseractionhandler_qbase_ask_user_rename k_io__widgetsaskuseractionhandler_super_ask_user_rename
-
 /// [Upstream resources](https://api.kde.org/kio-widgetsaskuseractionhandler.html#askUserRename)
 ///
 /// Base class method implementation
@@ -174,10 +158,6 @@ void k_io__widgetsaskuseractionhandler_ask_user_skip(void* self, void* job, int3
 ///
 void k_io__widgetsaskuseractionhandler_on_ask_user_skip(void* self, void (*callback)(void*, void*, int32_t, const char*));
 
-/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_ask_user_skip` instead
-///
-#define k_io__widgetsaskuseractionhandler_qbase_ask_user_skip k_io__widgetsaskuseractionhandler_super_ask_user_skip
-
 /// [Upstream resources](https://api.kde.org/kio-widgetsaskuseractionhandler.html#askUserSkip)
 ///
 /// Base class method implementation
@@ -207,10 +187,6 @@ void k_io__widgetsaskuseractionhandler_ask_user_delete(void* self, libqt_list ur
 /// @param callback void func(KIO__WidgetsAskUserActionHandler* self, libqt_list of QUrl* urls, enum KIO__AskUserActionInterface__DeletionType deletionType, enum KIO__AskUserActionInterface__ConfirmationType confirmationType, QWidget* parent)
 ///
 void k_io__widgetsaskuseractionhandler_on_ask_user_delete(void* self, void (*callback)(void*, libqt_list, int32_t, int32_t, void*));
-
-/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_ask_user_delete` instead
-///
-#define k_io__widgetsaskuseractionhandler_qbase_ask_user_delete k_io__widgetsaskuseractionhandler_super_ask_user_delete
 
 /// [Upstream resources](https://api.kde.org/kio-widgetsaskuseractionhandler.html#askUserDelete)
 ///
@@ -249,10 +225,6 @@ void k_io__widgetsaskuseractionhandler_request_user_message_box(void* self, int3
 ///
 void k_io__widgetsaskuseractionhandler_on_request_user_message_box(void* self, void (*callback)(void*, int32_t, const char*, const char*, const char*, const char*, const char*, const char*, const char*, const char*, void*));
 
-/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_request_user_message_box` instead
-///
-#define k_io__widgetsaskuseractionhandler_qbase_request_user_message_box k_io__widgetsaskuseractionhandler_super_request_user_message_box
-
 /// [Upstream resources](https://api.kde.org/kio-widgetsaskuseractionhandler.html#requestUserMessageBox)
 ///
 /// Base class method implementation
@@ -287,10 +259,6 @@ void k_io__widgetsaskuseractionhandler_ask_ignore_ssl_errors(void* self, libqt_m
 /// @param callback void func(KIO__WidgetsAskUserActionHandler* self, libqt_map of const char* to QVariant* sslErrorData, QWidget* parent)
 ///
 void k_io__widgetsaskuseractionhandler_on_ask_ignore_ssl_errors(void* self, void (*callback)(void*, libqt_map, void*));
-
-/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_ask_ignore_ssl_errors` instead
-///
-#define k_io__widgetsaskuseractionhandler_qbase_ask_ignore_ssl_errors k_io__widgetsaskuseractionhandler_super_ask_ignore_ssl_errors
 
 /// [Upstream resources](https://api.kde.org/kio-widgetsaskuseractionhandler.html#askIgnoreSslErrors)
 ///
@@ -882,10 +850,6 @@ void k_io__widgetsaskuseractionhandler_on_destroyed1(void* self, void (*callback
 ///
 bool k_io__widgetsaskuseractionhandler_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_event` instead
-///
-#define k_io__widgetsaskuseractionhandler_qbase_event k_io__widgetsaskuseractionhandler_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -919,10 +883,6 @@ void k_io__widgetsaskuseractionhandler_on_event(void* self, bool (*callback)(voi
 /// @param event QEvent*
 ///
 bool k_io__widgetsaskuseractionhandler_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_event_filter` instead
-///
-#define k_io__widgetsaskuseractionhandler_qbase_event_filter k_io__widgetsaskuseractionhandler_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -958,10 +918,6 @@ void k_io__widgetsaskuseractionhandler_on_event_filter(void* self, bool (*callba
 ///
 void k_io__widgetsaskuseractionhandler_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_timer_event` instead
-///
-#define k_io__widgetsaskuseractionhandler_qbase_timer_event k_io__widgetsaskuseractionhandler_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -994,10 +950,6 @@ void k_io__widgetsaskuseractionhandler_on_timer_event(void* self, void (*callbac
 /// @param event QChildEvent*
 ///
 void k_io__widgetsaskuseractionhandler_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_child_event` instead
-///
-#define k_io__widgetsaskuseractionhandler_qbase_child_event k_io__widgetsaskuseractionhandler_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1032,10 +984,6 @@ void k_io__widgetsaskuseractionhandler_on_child_event(void* self, void (*callbac
 ///
 void k_io__widgetsaskuseractionhandler_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_custom_event` instead
-///
-#define k_io__widgetsaskuseractionhandler_qbase_custom_event k_io__widgetsaskuseractionhandler_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1068,10 +1016,6 @@ void k_io__widgetsaskuseractionhandler_on_custom_event(void* self, void (*callba
 /// @param signal QMetaMethod*
 ///
 void k_io__widgetsaskuseractionhandler_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_connect_notify` instead
-///
-#define k_io__widgetsaskuseractionhandler_qbase_connect_notify k_io__widgetsaskuseractionhandler_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1106,10 +1050,6 @@ void k_io__widgetsaskuseractionhandler_on_connect_notify(void* self, void (*call
 ///
 void k_io__widgetsaskuseractionhandler_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_disconnect_notify` instead
-///
-#define k_io__widgetsaskuseractionhandler_qbase_disconnect_notify k_io__widgetsaskuseractionhandler_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1142,10 +1082,6 @@ void k_io__widgetsaskuseractionhandler_on_disconnect_notify(void* self, void (*c
 ///
 QObject* k_io__widgetsaskuseractionhandler_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_sender` instead
-///
-#define k_io__widgetsaskuseractionhandler_qbase_sender k_io__widgetsaskuseractionhandler_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1176,10 +1112,6 @@ void k_io__widgetsaskuseractionhandler_on_sender(void* self, QObject* (*callback
 /// @param self KIO__WidgetsAskUserActionHandler*
 ///
 int32_t k_io__widgetsaskuseractionhandler_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_sender_signal_index` instead
-///
-#define k_io__widgetsaskuseractionhandler_qbase_sender_signal_index k_io__widgetsaskuseractionhandler_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1213,10 +1145,6 @@ void k_io__widgetsaskuseractionhandler_on_sender_signal_index(void* self, int32_
 ///
 int32_t k_io__widgetsaskuseractionhandler_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_receivers` instead
-///
-#define k_io__widgetsaskuseractionhandler_qbase_receivers k_io__widgetsaskuseractionhandler_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1249,10 +1177,6 @@ void k_io__widgetsaskuseractionhandler_on_receivers(void* self, int32_t (*callba
 /// @param signal QMetaMethod*
 ///
 bool k_io__widgetsaskuseractionhandler_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_is_signal_connected` instead
-///
-#define k_io__widgetsaskuseractionhandler_qbase_is_signal_connected k_io__widgetsaskuseractionhandler_super_is_signal_connected
 
 /// Inherited from QObject
 ///

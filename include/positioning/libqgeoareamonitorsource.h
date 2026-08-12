@@ -31,10 +31,6 @@ const QMetaObject* q_geoareamonitorsource_meta_object(void* self);
 ///
 void q_geoareamonitorsource_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_meta_object` instead
-///
-#define q_geoareamonitorsource_qbase_meta_object q_geoareamonitorsource_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -54,10 +50,6 @@ void* q_geoareamonitorsource_metacast(void* self, const char* param1);
 /// @param callback void* func(QGeoAreaMonitorSource* self, const char* param1)
 ///
 void q_geoareamonitorsource_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_metacast` instead
-///
-#define q_geoareamonitorsource_qbase_metacast q_geoareamonitorsource_super_metacast
 
 /// Base class method implementation
 ///
@@ -79,10 +71,6 @@ int32_t q_geoareamonitorsource_metacall(void* self, int32_t param1, int param2, 
 /// @param callback int32_t func(QGeoAreaMonitorSource* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_geoareamonitorsource_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_metacall` instead
-///
-#define q_geoareamonitorsource_qbase_metacall q_geoareamonitorsource_super_metacall
 
 /// Base class method implementation
 ///
@@ -136,10 +124,6 @@ void q_geoareamonitorsource_set_position_info_source(void* self, void* source);
 ///
 void q_geoareamonitorsource_on_set_position_info_source(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_set_position_info_source` instead
-///
-#define q_geoareamonitorsource_qbase_set_position_info_source q_geoareamonitorsource_super_set_position_info_source
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#setPositionInfoSource)
 ///
 /// Base class method implementation
@@ -163,10 +147,6 @@ QGeoPositionInfoSource* q_geoareamonitorsource_position_info_source(void* self);
 /// @param callback QGeoPositionInfoSource* func()
 ///
 void q_geoareamonitorsource_on_position_info_source(void* self, QGeoPositionInfoSource* (*callback)());
-
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_position_info_source` instead
-///
-#define q_geoareamonitorsource_qbase_position_info_source q_geoareamonitorsource_super_position_info_source
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#positionInfoSource)
 ///
@@ -201,10 +181,6 @@ int32_t q_geoareamonitorsource_error(void* self);
 ///
 void q_geoareamonitorsource_on_error(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_error` instead
-///
-#define q_geoareamonitorsource_qbase_error q_geoareamonitorsource_super_error
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#error)
 ///
 /// Base class method implementation
@@ -232,10 +208,6 @@ int32_t q_geoareamonitorsource_supported_area_monitor_features(void* self);
 ///
 void q_geoareamonitorsource_on_supported_area_monitor_features(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_supported_area_monitor_features` instead
-///
-#define q_geoareamonitorsource_qbase_supported_area_monitor_features q_geoareamonitorsource_super_supported_area_monitor_features
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#supportedAreaMonitorFeatures)
 ///
 /// Base class method implementation
@@ -262,10 +234,6 @@ bool q_geoareamonitorsource_start_monitoring(void* self, void* monitor);
 ///
 void q_geoareamonitorsource_on_start_monitoring(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_start_monitoring` instead
-///
-#define q_geoareamonitorsource_qbase_start_monitoring q_geoareamonitorsource_super_start_monitoring
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#startMonitoring)
 ///
 /// Base class method implementation
@@ -290,10 +258,6 @@ bool q_geoareamonitorsource_stop_monitoring(void* self, void* monitor);
 /// @param callback bool func(QGeoAreaMonitorSource* self, QGeoAreaMonitorInfo* monitor)
 ///
 void q_geoareamonitorsource_on_stop_monitoring(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_stop_monitoring` instead
-///
-#define q_geoareamonitorsource_qbase_stop_monitoring q_geoareamonitorsource_super_stop_monitoring
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#stopMonitoring)
 ///
@@ -321,10 +285,6 @@ bool q_geoareamonitorsource_request_update(void* self, void* monitor, const char
 ///
 void q_geoareamonitorsource_on_request_update(void* self, bool (*callback)(void*, void*, const char*));
 
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_request_update` instead
-///
-#define q_geoareamonitorsource_qbase_request_update q_geoareamonitorsource_super_request_update
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#requestUpdate)
 ///
 /// Base class method implementation
@@ -351,10 +311,6 @@ libqt_list q_geoareamonitorsource_active_monitors(void* self);
 /// @param callback libqt_list of QGeoAreaMonitorInfo* func()
 ///
 void q_geoareamonitorsource_on_active_monitors(void* self, libqt_list (*callback)());
-
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_active_monitors` instead
-///
-#define q_geoareamonitorsource_qbase_active_monitors q_geoareamonitorsource_super_active_monitors
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#activeMonitors)
 ///
@@ -384,10 +340,6 @@ libqt_list q_geoareamonitorsource_active_monitors2(void* self, void* lookupArea)
 ///
 void q_geoareamonitorsource_on_active_monitors2(void* self, libqt_list (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_active_monitors2` instead
-///
-#define q_geoareamonitorsource_qbase_active_monitors2 q_geoareamonitorsource_super_active_monitors2
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#activeMonitors)
 ///
 /// Base class method implementation
@@ -416,10 +368,6 @@ bool q_geoareamonitorsource_set_backend_property(void* self, const char* name, v
 ///
 void q_geoareamonitorsource_on_set_backend_property(void* self, bool (*callback)(void*, const char*, void*));
 
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_set_backend_property` instead
-///
-#define q_geoareamonitorsource_qbase_set_backend_property q_geoareamonitorsource_super_set_backend_property
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#setBackendProperty)
 ///
 /// Base class method implementation
@@ -447,10 +395,6 @@ QVariant* q_geoareamonitorsource_backend_property(void* self, const char* name);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_geoareamonitorsource_on_backend_property(void* self, QVariant* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_backend_property` instead
-///
-#define q_geoareamonitorsource_qbase_backend_property q_geoareamonitorsource_super_backend_property
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#backendProperty)
 ///
@@ -996,10 +940,6 @@ void q_geoareamonitorsource_on_destroyed1(void* self, void (*callback)(void*, vo
 ///
 bool q_geoareamonitorsource_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_event` instead
-///
-#define q_geoareamonitorsource_qbase_event q_geoareamonitorsource_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1033,10 +973,6 @@ void q_geoareamonitorsource_on_event(void* self, bool (*callback)(void*, void*))
 /// @param event QEvent*
 ///
 bool q_geoareamonitorsource_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_event_filter` instead
-///
-#define q_geoareamonitorsource_qbase_event_filter q_geoareamonitorsource_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1072,10 +1008,6 @@ void q_geoareamonitorsource_on_event_filter(void* self, bool (*callback)(void*, 
 ///
 void q_geoareamonitorsource_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_timer_event` instead
-///
-#define q_geoareamonitorsource_qbase_timer_event q_geoareamonitorsource_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1108,10 +1040,6 @@ void q_geoareamonitorsource_on_timer_event(void* self, void (*callback)(void*, v
 /// @param event QChildEvent*
 ///
 void q_geoareamonitorsource_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_child_event` instead
-///
-#define q_geoareamonitorsource_qbase_child_event q_geoareamonitorsource_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1146,10 +1074,6 @@ void q_geoareamonitorsource_on_child_event(void* self, void (*callback)(void*, v
 ///
 void q_geoareamonitorsource_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_custom_event` instead
-///
-#define q_geoareamonitorsource_qbase_custom_event q_geoareamonitorsource_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1182,10 +1106,6 @@ void q_geoareamonitorsource_on_custom_event(void* self, void (*callback)(void*, 
 /// @param signal QMetaMethod*
 ///
 void q_geoareamonitorsource_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_connect_notify` instead
-///
-#define q_geoareamonitorsource_qbase_connect_notify q_geoareamonitorsource_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1220,10 +1140,6 @@ void q_geoareamonitorsource_on_connect_notify(void* self, void (*callback)(void*
 ///
 void q_geoareamonitorsource_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_disconnect_notify` instead
-///
-#define q_geoareamonitorsource_qbase_disconnect_notify q_geoareamonitorsource_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1256,10 +1172,6 @@ void q_geoareamonitorsource_on_disconnect_notify(void* self, void (*callback)(vo
 ///
 QObject* q_geoareamonitorsource_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_sender` instead
-///
-#define q_geoareamonitorsource_qbase_sender q_geoareamonitorsource_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1290,10 +1202,6 @@ void q_geoareamonitorsource_on_sender(void* self, QObject* (*callback)());
 /// @param self QGeoAreaMonitorSource*
 ///
 int32_t q_geoareamonitorsource_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_sender_signal_index` instead
-///
-#define q_geoareamonitorsource_qbase_sender_signal_index q_geoareamonitorsource_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1327,10 +1235,6 @@ void q_geoareamonitorsource_on_sender_signal_index(void* self, int32_t (*callbac
 ///
 int32_t q_geoareamonitorsource_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_receivers` instead
-///
-#define q_geoareamonitorsource_qbase_receivers q_geoareamonitorsource_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1363,10 +1267,6 @@ void q_geoareamonitorsource_on_receivers(void* self, int32_t (*callback)(void*, 
 /// @param signal QMetaMethod*
 ///
 bool q_geoareamonitorsource_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_geoareamonitorsource_super_is_signal_connected` instead
-///
-#define q_geoareamonitorsource_qbase_is_signal_connected q_geoareamonitorsource_super_is_signal_connected
 
 /// Inherited from QObject
 ///

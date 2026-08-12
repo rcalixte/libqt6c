@@ -46,10 +46,6 @@ const QMetaObject* k_selectionproxymodel_meta_object(void* self);
 ///
 void k_selectionproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_meta_object` instead
-///
-#define k_selectionproxymodel_qbase_meta_object k_selectionproxymodel_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -69,10 +65,6 @@ void* k_selectionproxymodel_metacast(void* self, const char* param1);
 /// @param callback void* func(KSelectionProxyModel* self, const char* param1)
 ///
 void k_selectionproxymodel_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_metacast` instead
-///
-#define k_selectionproxymodel_qbase_metacast k_selectionproxymodel_super_metacast
 
 /// Base class method implementation
 ///
@@ -94,10 +86,6 @@ int32_t k_selectionproxymodel_metacall(void* self, int32_t param1, int param2, v
 /// @param callback int32_t func(KSelectionProxyModel* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_selectionproxymodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_metacall` instead
-///
-#define k_selectionproxymodel_qbase_metacall k_selectionproxymodel_super_metacall
 
 /// Base class method implementation
 ///
@@ -131,10 +119,6 @@ void k_selectionproxymodel_set_source_model(void* self, void* sourceModel);
 /// @param callback void func(KSelectionProxyModel* self, QAbstractItemModel* sourceModel)
 ///
 void k_selectionproxymodel_on_set_source_model(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_set_source_model` instead
-///
-#define k_selectionproxymodel_qbase_set_source_model k_selectionproxymodel_super_set_source_model
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#setSourceModel)
 ///
@@ -191,10 +175,6 @@ QModelIndex* k_selectionproxymodel_map_from_source(void* self, void* sourceIndex
 ///
 void k_selectionproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_map_from_source` instead
-///
-#define k_selectionproxymodel_qbase_map_from_source k_selectionproxymodel_super_map_from_source
-
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#mapFromSource)
 ///
 /// Base class method implementation
@@ -221,10 +201,6 @@ QModelIndex* k_selectionproxymodel_map_to_source(void* self, void* proxyIndex);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_selectionproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_map_to_source` instead
-///
-#define k_selectionproxymodel_qbase_map_to_source k_selectionproxymodel_super_map_to_source
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#mapToSource)
 ///
@@ -253,10 +229,6 @@ QItemSelection* k_selectionproxymodel_map_selection_from_source(void* self, void
 ///
 void k_selectionproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_map_selection_from_source` instead
-///
-#define k_selectionproxymodel_qbase_map_selection_from_source k_selectionproxymodel_super_map_selection_from_source
-
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#mapSelectionFromSource)
 ///
 /// Base class method implementation
@@ -284,10 +256,6 @@ QItemSelection* k_selectionproxymodel_map_selection_to_source(void* self, void* 
 ///
 void k_selectionproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_map_selection_to_source` instead
-///
-#define k_selectionproxymodel_qbase_map_selection_to_source k_selectionproxymodel_super_map_selection_to_source
-
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#mapSelectionToSource)
 ///
 /// Base class method implementation
@@ -314,10 +282,6 @@ int32_t k_selectionproxymodel_flags(void* self, void* index);
 /// @param callback int32_t func(KSelectionProxyModel* self, QModelIndex* index)
 ///
 void k_selectionproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_flags` instead
-///
-#define k_selectionproxymodel_qbase_flags k_selectionproxymodel_super_flags
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#flags)
 ///
@@ -349,10 +313,6 @@ QVariant* k_selectionproxymodel_data(void* self, void* index, int role);
 ///
 void k_selectionproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_data` instead
-///
-#define k_selectionproxymodel_qbase_data k_selectionproxymodel_super_data
-
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#data)
 ///
 /// Base class method implementation
@@ -378,10 +338,6 @@ int32_t k_selectionproxymodel_row_count(void* self, void* parent);
 /// @param callback int32_t func(KSelectionProxyModel* self, QModelIndex* parent)
 ///
 void k_selectionproxymodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_row_count` instead
-///
-#define k_selectionproxymodel_qbase_row_count k_selectionproxymodel_super_row_count
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#rowCount)
 ///
@@ -412,10 +368,6 @@ QVariant* k_selectionproxymodel_header_data(void* self, int section, int32_t ori
 ///
 void k_selectionproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_header_data` instead
-///
-#define k_selectionproxymodel_qbase_header_data k_selectionproxymodel_super_header_data
-
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#headerData)
 ///
 /// Base class method implementation
@@ -443,10 +395,6 @@ QMimeData* k_selectionproxymodel_mime_data(void* self, libqt_list indexes);
 ///
 void k_selectionproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_mime_data` instead
-///
-#define k_selectionproxymodel_qbase_mime_data k_selectionproxymodel_super_mime_data
-
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#mimeData)
 ///
 /// Base class method implementation
@@ -473,10 +421,6 @@ const char** k_selectionproxymodel_mime_types(void* self);
 ///
 void k_selectionproxymodel_on_mime_types(void* self, const char** (*callback)());
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_mime_types` instead
-///
-#define k_selectionproxymodel_qbase_mime_types k_selectionproxymodel_super_mime_types
-
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#mimeTypes)
 ///
 /// Base class method implementation
@@ -501,10 +445,6 @@ int32_t k_selectionproxymodel_supported_drop_actions(void* self);
 /// @param callback int32_t func()
 ///
 void k_selectionproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_supported_drop_actions` instead
-///
-#define k_selectionproxymodel_qbase_supported_drop_actions k_selectionproxymodel_super_supported_drop_actions
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#supportedDropActions)
 ///
@@ -536,10 +476,6 @@ bool k_selectionproxymodel_drop_mime_data(void* self, void* data, int32_t action
 ///
 void k_selectionproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_drop_mime_data` instead
-///
-#define k_selectionproxymodel_qbase_drop_mime_data k_selectionproxymodel_super_drop_mime_data
-
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#dropMimeData)
 ///
 /// Base class method implementation
@@ -568,10 +504,6 @@ bool k_selectionproxymodel_has_children(void* self, void* parent);
 /// @param callback bool func(KSelectionProxyModel* self, QModelIndex* parent)
 ///
 void k_selectionproxymodel_on_has_children(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_has_children` instead
-///
-#define k_selectionproxymodel_qbase_has_children k_selectionproxymodel_super_has_children
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#hasChildren)
 ///
@@ -602,10 +534,6 @@ QModelIndex* k_selectionproxymodel_index(void* self, int param1, int param2, voi
 ///
 void k_selectionproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_index` instead
-///
-#define k_selectionproxymodel_qbase_index k_selectionproxymodel_super_index
-
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#index)
 ///
 /// Base class method implementation
@@ -635,10 +563,6 @@ QModelIndex* k_selectionproxymodel_parent(void* self, void* param1);
 ///
 void k_selectionproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_parent` instead
-///
-#define k_selectionproxymodel_qbase_parent k_selectionproxymodel_super_parent
-
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#parent)
 ///
 /// Base class method implementation
@@ -663,10 +587,6 @@ int32_t k_selectionproxymodel_column_count(void* self, void* param1);
 /// @param callback int32_t func(KSelectionProxyModel* self, QModelIndex* param1)
 ///
 void k_selectionproxymodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_column_count` instead
-///
-#define k_selectionproxymodel_qbase_column_count k_selectionproxymodel_super_column_count
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#columnCount)
 ///
@@ -699,10 +619,6 @@ libqt_list k_selectionproxymodel_match(void* self, void* start, int role, void* 
 ///
 void k_selectionproxymodel_on_match(void* self, libqt_list (*callback)(void*, void*, int, void*, int, int32_t));
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_match` instead
-///
-#define k_selectionproxymodel_qbase_match k_selectionproxymodel_super_match
-
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#match)
 ///
 /// Base class method implementation
@@ -734,10 +650,6 @@ libqt_list k_selectionproxymodel_source_root_indexes(void* self);
 /// @param callback libqt_list of QPersistentModelIndex* func()
 ///
 void k_selectionproxymodel_on_source_root_indexes(void* self, libqt_list (*callback)());
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_source_root_indexes` instead
-///
-#define k_selectionproxymodel_qbase_source_root_indexes k_selectionproxymodel_super_source_root_indexes
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#sourceRootIndexes)
 ///
@@ -1532,10 +1444,6 @@ void k_selectionproxymodel_on_destroyed1(void* self, void (*callback)(void*, voi
 ///
 bool k_selectionproxymodel_submit(void* self);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_submit` instead
-///
-#define k_selectionproxymodel_qbase_submit k_selectionproxymodel_super_submit
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
@@ -1566,10 +1474,6 @@ void k_selectionproxymodel_on_submit(void* self, bool (*callback)());
 /// @param self KSelectionProxyModel*
 ///
 void k_selectionproxymodel_revert(void* self);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_revert` instead
-///
-#define k_selectionproxymodel_qbase_revert k_selectionproxymodel_super_revert
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1615,10 +1519,6 @@ void k_selectionproxymodel_on_revert(void* self, void (*callback)());
 /// @return libqt_map of int to QVariant*
 ///
 libqt_map k_selectionproxymodel_item_data(void* self, void* index);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_item_data` instead
-///
-#define k_selectionproxymodel_qbase_item_data k_selectionproxymodel_super_item_data
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1668,10 +1568,6 @@ void k_selectionproxymodel_on_item_data(void* self, libqt_map (*callback)(void*,
 ///
 bool k_selectionproxymodel_set_data(void* self, void* index, void* value, int role);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_set_data` instead
-///
-#define k_selectionproxymodel_qbase_set_data k_selectionproxymodel_super_set_data
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setData)
@@ -1707,10 +1603,6 @@ void k_selectionproxymodel_on_set_data(void* self, bool (*callback)(void*, void*
 /// @param roles libqt_map of int to QVariant*
 ///
 bool k_selectionproxymodel_set_item_data(void* self, void* index, libqt_map roles);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_set_item_data` instead
-///
-#define k_selectionproxymodel_qbase_set_item_data k_selectionproxymodel_super_set_item_data
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1749,10 +1641,6 @@ void k_selectionproxymodel_on_set_item_data(void* self, bool (*callback)(void*, 
 ///
 bool k_selectionproxymodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_set_header_data` instead
-///
-#define k_selectionproxymodel_qbase_set_header_data k_selectionproxymodel_super_set_header_data
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setHeaderData)
@@ -1789,10 +1677,6 @@ void k_selectionproxymodel_on_set_header_data(void* self, bool (*callback)(void*
 ///
 bool k_selectionproxymodel_clear_item_data(void* self, void* index);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_clear_item_data` instead
-///
-#define k_selectionproxymodel_qbase_clear_item_data k_selectionproxymodel_super_clear_item_data
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
@@ -1825,10 +1709,6 @@ void k_selectionproxymodel_on_clear_item_data(void* self, bool (*callback)(void*
 /// @param index QModelIndex*
 ///
 QModelIndex* k_selectionproxymodel_buddy(void* self, void* index);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_buddy` instead
-///
-#define k_selectionproxymodel_qbase_buddy k_selectionproxymodel_super_buddy
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1865,10 +1745,6 @@ void k_selectionproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, 
 ///
 bool k_selectionproxymodel_can_fetch_more(void* self, void* parent);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_can_fetch_more` instead
-///
-#define k_selectionproxymodel_qbase_can_fetch_more k_selectionproxymodel_super_can_fetch_more
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canFetchMore)
@@ -1901,10 +1777,6 @@ void k_selectionproxymodel_on_can_fetch_more(void* self, bool (*callback)(void*,
 /// @param parent QModelIndex*
 ///
 void k_selectionproxymodel_fetch_more(void* self, void* parent);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_fetch_more` instead
-///
-#define k_selectionproxymodel_qbase_fetch_more k_selectionproxymodel_super_fetch_more
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1940,10 +1812,6 @@ void k_selectionproxymodel_on_fetch_more(void* self, void (*callback)(void*, voi
 ///
 void k_selectionproxymodel_sort(void* self, int column, int32_t order);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_sort` instead
-///
-#define k_selectionproxymodel_qbase_sort k_selectionproxymodel_super_sort
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sort)
@@ -1977,10 +1845,6 @@ void k_selectionproxymodel_on_sort(void* self, void (*callback)(void*, int, int3
 /// @param index QModelIndex*
 ///
 QSize* k_selectionproxymodel_span(void* self, void* index);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_span` instead
-///
-#define k_selectionproxymodel_qbase_span k_selectionproxymodel_super_span
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2018,10 +1882,6 @@ void k_selectionproxymodel_on_span(void* self, QSize* (*callback)(void*, void*))
 /// @param idx QModelIndex*
 ///
 QModelIndex* k_selectionproxymodel_sibling(void* self, int row, int column, void* idx);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_sibling` instead
-///
-#define k_selectionproxymodel_qbase_sibling k_selectionproxymodel_super_sibling
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2064,10 +1924,6 @@ void k_selectionproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*
 ///
 bool k_selectionproxymodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_can_drop_mime_data` instead
-///
-#define k_selectionproxymodel_qbase_can_drop_mime_data k_selectionproxymodel_super_can_drop_mime_data
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
@@ -2105,10 +1961,6 @@ void k_selectionproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(vo
 /// @return flag of enum Qt__DropAction
 ///
 int32_t k_selectionproxymodel_supported_drag_actions(void* self);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_supported_drag_actions` instead
-///
-#define k_selectionproxymodel_qbase_supported_drag_actions k_selectionproxymodel_super_supported_drag_actions
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2155,10 +2007,6 @@ void k_selectionproxymodel_on_supported_drag_actions(void* self, int32_t (*callb
 /// @return libqt_map of int to char*
 ///
 libqt_map k_selectionproxymodel_role_names(void* self);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_role_names` instead
-///
-#define k_selectionproxymodel_qbase_role_names k_selectionproxymodel_super_role_names
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2207,10 +2055,6 @@ void k_selectionproxymodel_on_role_names(void* self, libqt_map (*callback)());
 ///
 bool k_selectionproxymodel_insert_rows(void* self, int row, int count, void* parent);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_insert_rows` instead
-///
-#define k_selectionproxymodel_qbase_insert_rows k_selectionproxymodel_super_insert_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
@@ -2247,10 +2091,6 @@ void k_selectionproxymodel_on_insert_rows(void* self, bool (*callback)(void*, in
 /// @param parent QModelIndex*
 ///
 bool k_selectionproxymodel_insert_columns(void* self, int column, int count, void* parent);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_insert_columns` instead
-///
-#define k_selectionproxymodel_qbase_insert_columns k_selectionproxymodel_super_insert_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2289,10 +2129,6 @@ void k_selectionproxymodel_on_insert_columns(void* self, bool (*callback)(void*,
 ///
 bool k_selectionproxymodel_remove_rows(void* self, int row, int count, void* parent);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_remove_rows` instead
-///
-#define k_selectionproxymodel_qbase_remove_rows k_selectionproxymodel_super_remove_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
@@ -2329,10 +2165,6 @@ void k_selectionproxymodel_on_remove_rows(void* self, bool (*callback)(void*, in
 /// @param parent QModelIndex*
 ///
 bool k_selectionproxymodel_remove_columns(void* self, int column, int count, void* parent);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_remove_columns` instead
-///
-#define k_selectionproxymodel_qbase_remove_columns k_selectionproxymodel_super_remove_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2372,10 +2204,6 @@ void k_selectionproxymodel_on_remove_columns(void* self, bool (*callback)(void*,
 /// @param destinationChild int
 ///
 bool k_selectionproxymodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_move_rows` instead
-///
-#define k_selectionproxymodel_qbase_move_rows k_selectionproxymodel_super_move_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2418,10 +2246,6 @@ void k_selectionproxymodel_on_move_rows(void* self, bool (*callback)(void*, void
 ///
 bool k_selectionproxymodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_move_columns` instead
-///
-#define k_selectionproxymodel_qbase_move_columns k_selectionproxymodel_super_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
@@ -2460,10 +2284,6 @@ void k_selectionproxymodel_on_move_columns(void* self, bool (*callback)(void*, v
 ///
 void k_selectionproxymodel_multi_data(void* self, void* index, void* roleDataSpan);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_multi_data` instead
-///
-#define k_selectionproxymodel_qbase_multi_data k_selectionproxymodel_super_multi_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
@@ -2497,10 +2317,6 @@ void k_selectionproxymodel_on_multi_data(void* self, void (*callback)(void*, voi
 ///
 void k_selectionproxymodel_reset_internal_data(void* self);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_reset_internal_data` instead
-///
-#define k_selectionproxymodel_qbase_reset_internal_data k_selectionproxymodel_super_reset_internal_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
@@ -2532,10 +2348,6 @@ void k_selectionproxymodel_on_reset_internal_data(void* self, void (*callback)()
 /// @param event QEvent*
 ///
 bool k_selectionproxymodel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_event` instead
-///
-#define k_selectionproxymodel_qbase_event k_selectionproxymodel_super_event
 
 /// Inherited from QObject
 ///
@@ -2571,10 +2383,6 @@ void k_selectionproxymodel_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_selectionproxymodel_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_event_filter` instead
-///
-#define k_selectionproxymodel_qbase_event_filter k_selectionproxymodel_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -2609,10 +2417,6 @@ void k_selectionproxymodel_on_event_filter(void* self, bool (*callback)(void*, v
 ///
 void k_selectionproxymodel_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_timer_event` instead
-///
-#define k_selectionproxymodel_qbase_timer_event k_selectionproxymodel_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2645,10 +2449,6 @@ void k_selectionproxymodel_on_timer_event(void* self, void (*callback)(void*, vo
 /// @param event QChildEvent*
 ///
 void k_selectionproxymodel_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_child_event` instead
-///
-#define k_selectionproxymodel_qbase_child_event k_selectionproxymodel_super_child_event
 
 /// Inherited from QObject
 ///
@@ -2683,10 +2483,6 @@ void k_selectionproxymodel_on_child_event(void* self, void (*callback)(void*, vo
 ///
 void k_selectionproxymodel_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_custom_event` instead
-///
-#define k_selectionproxymodel_qbase_custom_event k_selectionproxymodel_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2720,10 +2516,6 @@ void k_selectionproxymodel_on_custom_event(void* self, void (*callback)(void*, v
 ///
 void k_selectionproxymodel_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_connect_notify` instead
-///
-#define k_selectionproxymodel_qbase_connect_notify k_selectionproxymodel_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -2756,10 +2548,6 @@ void k_selectionproxymodel_on_connect_notify(void* self, void (*callback)(void*,
 /// @param signal QMetaMethod*
 ///
 void k_selectionproxymodel_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_disconnect_notify` instead
-///
-#define k_selectionproxymodel_qbase_disconnect_notify k_selectionproxymodel_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -2795,10 +2583,6 @@ void k_selectionproxymodel_on_disconnect_notify(void* self, void (*callback)(voi
 /// @param internalPtr void*
 ///
 QModelIndex* k_selectionproxymodel_create_source_index(void* self, int row, int col, void* internalPtr);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_create_source_index` instead
-///
-#define k_selectionproxymodel_qbase_create_source_index k_selectionproxymodel_super_create_source_index
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2838,10 +2622,6 @@ void k_selectionproxymodel_on_create_source_index(void* self, QModelIndex* (*cal
 ///
 QModelIndex* k_selectionproxymodel_create_index(void* self, int row, int column);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_create_index` instead
-///
-#define k_selectionproxymodel_qbase_create_index k_selectionproxymodel_super_create_index
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
@@ -2879,10 +2659,6 @@ void k_selectionproxymodel_on_create_index(void* self, QModelIndex* (*callback)(
 ///
 void k_selectionproxymodel_encode_data(void* self, libqt_list indexes, void* stream);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_encode_data` instead
-///
-#define k_selectionproxymodel_qbase_encode_data k_selectionproxymodel_super_encode_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
@@ -2919,10 +2695,6 @@ void k_selectionproxymodel_on_encode_data(void* self, void (*callback)(void*, li
 /// @param stream QDataStream*
 ///
 bool k_selectionproxymodel_decode_data(void* self, int row, int column, void* parent, void* stream);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_decode_data` instead
-///
-#define k_selectionproxymodel_qbase_decode_data k_selectionproxymodel_super_decode_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2962,10 +2734,6 @@ void k_selectionproxymodel_on_decode_data(void* self, bool (*callback)(void*, in
 ///
 void k_selectionproxymodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_begin_insert_rows` instead
-///
-#define k_selectionproxymodel_qbase_begin_insert_rows k_selectionproxymodel_super_begin_insert_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
@@ -2999,10 +2767,6 @@ void k_selectionproxymodel_on_begin_insert_rows(void* self, void (*callback)(voi
 /// @param self KSelectionProxyModel*
 ///
 void k_selectionproxymodel_end_insert_rows(void* self);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_end_insert_rows` instead
-///
-#define k_selectionproxymodel_qbase_end_insert_rows k_selectionproxymodel_super_end_insert_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3038,10 +2802,6 @@ void k_selectionproxymodel_on_end_insert_rows(void* self, void (*callback)());
 ///
 void k_selectionproxymodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_begin_remove_rows` instead
-///
-#define k_selectionproxymodel_qbase_begin_remove_rows k_selectionproxymodel_super_begin_remove_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
@@ -3075,10 +2835,6 @@ void k_selectionproxymodel_on_begin_remove_rows(void* self, void (*callback)(voi
 /// @param self KSelectionProxyModel*
 ///
 void k_selectionproxymodel_end_remove_rows(void* self);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_end_remove_rows` instead
-///
-#define k_selectionproxymodel_qbase_end_remove_rows k_selectionproxymodel_super_end_remove_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3116,10 +2872,6 @@ void k_selectionproxymodel_on_end_remove_rows(void* self, void (*callback)());
 ///
 bool k_selectionproxymodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_begin_move_rows` instead
-///
-#define k_selectionproxymodel_qbase_begin_move_rows k_selectionproxymodel_super_begin_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
@@ -3156,10 +2908,6 @@ void k_selectionproxymodel_on_begin_move_rows(void* self, bool (*callback)(void*
 ///
 void k_selectionproxymodel_end_move_rows(void* self);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_end_move_rows` instead
-///
-#define k_selectionproxymodel_qbase_end_move_rows k_selectionproxymodel_super_end_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
@@ -3193,10 +2941,6 @@ void k_selectionproxymodel_on_end_move_rows(void* self, void (*callback)());
 /// @param last int
 ///
 void k_selectionproxymodel_begin_insert_columns(void* self, void* parent, int first, int last);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_begin_insert_columns` instead
-///
-#define k_selectionproxymodel_qbase_begin_insert_columns k_selectionproxymodel_super_begin_insert_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3232,10 +2976,6 @@ void k_selectionproxymodel_on_begin_insert_columns(void* self, void (*callback)(
 ///
 void k_selectionproxymodel_end_insert_columns(void* self);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_end_insert_columns` instead
-///
-#define k_selectionproxymodel_qbase_end_insert_columns k_selectionproxymodel_super_end_insert_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
@@ -3270,10 +3010,6 @@ void k_selectionproxymodel_on_end_insert_columns(void* self, void (*callback)())
 ///
 void k_selectionproxymodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_begin_remove_columns` instead
-///
-#define k_selectionproxymodel_qbase_begin_remove_columns k_selectionproxymodel_super_begin_remove_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
@@ -3307,10 +3043,6 @@ void k_selectionproxymodel_on_begin_remove_columns(void* self, void (*callback)(
 /// @param self KSelectionProxyModel*
 ///
 void k_selectionproxymodel_end_remove_columns(void* self);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_end_remove_columns` instead
-///
-#define k_selectionproxymodel_qbase_end_remove_columns k_selectionproxymodel_super_end_remove_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3348,10 +3080,6 @@ void k_selectionproxymodel_on_end_remove_columns(void* self, void (*callback)())
 ///
 bool k_selectionproxymodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_begin_move_columns` instead
-///
-#define k_selectionproxymodel_qbase_begin_move_columns k_selectionproxymodel_super_begin_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
@@ -3388,10 +3116,6 @@ void k_selectionproxymodel_on_begin_move_columns(void* self, bool (*callback)(vo
 ///
 void k_selectionproxymodel_end_move_columns(void* self);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_end_move_columns` instead
-///
-#define k_selectionproxymodel_qbase_end_move_columns k_selectionproxymodel_super_end_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
@@ -3423,10 +3147,6 @@ void k_selectionproxymodel_on_end_move_columns(void* self, void (*callback)());
 ///
 void k_selectionproxymodel_begin_reset_model(void* self);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_begin_reset_model` instead
-///
-#define k_selectionproxymodel_qbase_begin_reset_model k_selectionproxymodel_super_begin_reset_model
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
@@ -3457,10 +3177,6 @@ void k_selectionproxymodel_on_begin_reset_model(void* self, void (*callback)());
 /// @param self KSelectionProxyModel*
 ///
 void k_selectionproxymodel_end_reset_model(void* self);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_end_reset_model` instead
-///
-#define k_selectionproxymodel_qbase_end_reset_model k_selectionproxymodel_super_end_reset_model
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3494,10 +3210,6 @@ void k_selectionproxymodel_on_end_reset_model(void* self, void (*callback)());
 /// @param to QModelIndex*
 ///
 void k_selectionproxymodel_change_persistent_index(void* self, void* from, void* to);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_change_persistent_index` instead
-///
-#define k_selectionproxymodel_qbase_change_persistent_index k_selectionproxymodel_super_change_persistent_index
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3534,10 +3246,6 @@ void k_selectionproxymodel_on_change_persistent_index(void* self, void (*callbac
 ///
 void k_selectionproxymodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_change_persistent_index_list` instead
-///
-#define k_selectionproxymodel_qbase_change_persistent_index_list k_selectionproxymodel_super_change_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
@@ -3573,10 +3281,6 @@ void k_selectionproxymodel_on_change_persistent_index_list(void* self, void (*ca
 ///
 libqt_list k_selectionproxymodel_persistent_index_list(void* self);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_persistent_index_list` instead
-///
-#define k_selectionproxymodel_qbase_persistent_index_list k_selectionproxymodel_super_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
@@ -3610,10 +3314,6 @@ void k_selectionproxymodel_on_persistent_index_list(void* self, libqt_list (*cal
 ///
 QObject* k_selectionproxymodel_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_sender` instead
-///
-#define k_selectionproxymodel_qbase_sender k_selectionproxymodel_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -3644,10 +3344,6 @@ void k_selectionproxymodel_on_sender(void* self, QObject* (*callback)());
 /// @param self KSelectionProxyModel*
 ///
 int32_t k_selectionproxymodel_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_sender_signal_index` instead
-///
-#define k_selectionproxymodel_qbase_sender_signal_index k_selectionproxymodel_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -3681,10 +3377,6 @@ void k_selectionproxymodel_on_sender_signal_index(void* self, int32_t (*callback
 ///
 int32_t k_selectionproxymodel_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_receivers` instead
-///
-#define k_selectionproxymodel_qbase_receivers k_selectionproxymodel_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -3717,10 +3409,6 @@ void k_selectionproxymodel_on_receivers(void* self, int32_t (*callback)(void*, c
 /// @param signal QMetaMethod*
 ///
 bool k_selectionproxymodel_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_selectionproxymodel_super_is_signal_connected` instead
-///
-#define k_selectionproxymodel_qbase_is_signal_connected k_selectionproxymodel_super_is_signal_connected
 
 /// Inherited from QObject
 ///

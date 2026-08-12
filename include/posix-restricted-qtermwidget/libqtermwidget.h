@@ -54,10 +54,6 @@ const QMetaObject* q_termwidget_meta_object(void* self);
 ///
 void q_termwidget_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_termwidget_super_meta_object` instead
-///
-#define q_termwidget_qbase_meta_object q_termwidget_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -77,10 +73,6 @@ void* q_termwidget_metacast(void* self, const char* param1);
 /// @param callback void* func(QTermWidget* self, const char* param1)
 ///
 void q_termwidget_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_metacast` instead
-///
-#define q_termwidget_qbase_metacast q_termwidget_super_metacast
 
 /// Base class method implementation
 ///
@@ -102,10 +94,6 @@ int32_t q_termwidget_metacall(void* self, int32_t param1, int param2, void* para
 /// @param callback int32_t func(QTermWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_termwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_metacall` instead
-///
-#define q_termwidget_qbase_metacall q_termwidget_super_metacall
 
 /// Base class method implementation
 ///
@@ -141,10 +129,6 @@ QSize* q_termwidget_size_hint(void* self);
 ///
 void q_termwidget_on_size_hint(void* self, QSize* (*callback)());
 
-/// @warning DEPRECATED: Use `q_termwidget_super_size_hint` instead
-///
-#define q_termwidget_qbase_size_hint q_termwidget_super_size_hint
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -168,10 +152,6 @@ void q_termwidget_set_terminal_size_hint(void* self, bool enabled);
 /// @param callback void func(QTermWidget* self, bool enabled)
 ///
 void q_termwidget_on_set_terminal_size_hint(void* self, void (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_set_terminal_size_hint` instead
-///
-#define q_termwidget_qbase_set_terminal_size_hint q_termwidget_super_set_terminal_size_hint
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -197,10 +177,6 @@ bool q_termwidget_terminal_size_hint(void* self);
 ///
 void q_termwidget_on_terminal_size_hint(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_termwidget_super_terminal_size_hint` instead
-///
-#define q_termwidget_qbase_terminal_size_hint q_termwidget_super_terminal_size_hint
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -223,10 +199,6 @@ void q_termwidget_start_shell_program(void* self);
 /// @param callback void func()
 ///
 void q_termwidget_on_start_shell_program(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_termwidget_super_start_shell_program` instead
-///
-#define q_termwidget_qbase_start_shell_program q_termwidget_super_start_shell_program
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -251,10 +223,6 @@ void q_termwidget_start_terminal_teletype(void* self);
 ///
 void q_termwidget_on_start_terminal_teletype(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_termwidget_super_start_terminal_teletype` instead
-///
-#define q_termwidget_qbase_start_terminal_teletype q_termwidget_super_start_terminal_teletype
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -278,10 +246,6 @@ int32_t q_termwidget_get_shell_p_i_d(void* self);
 ///
 void q_termwidget_on_get_shell_p_i_d(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_termwidget_super_get_shell_p_i_d` instead
-///
-#define q_termwidget_qbase_get_shell_p_i_d q_termwidget_super_get_shell_p_i_d
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -304,10 +268,6 @@ int32_t q_termwidget_get_foreground_process_id(void* self);
 /// @param callback int32_t func()
 ///
 void q_termwidget_on_get_foreground_process_id(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_termwidget_super_get_foreground_process_id` instead
-///
-#define q_termwidget_qbase_get_foreground_process_id q_termwidget_super_get_foreground_process_id
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -333,10 +293,6 @@ void q_termwidget_change_dir(void* self, const char* dir);
 ///
 void q_termwidget_on_change_dir(void* self, void (*callback)(void*, const char*));
 
-/// @warning DEPRECATED: Use `q_termwidget_super_change_dir` instead
-///
-#define q_termwidget_qbase_change_dir q_termwidget_super_change_dir
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -361,10 +317,6 @@ void q_termwidget_set_terminal_font(void* self, void* font);
 /// @param callback void func(QTermWidget* self, QFont* font)
 ///
 void q_termwidget_on_set_terminal_font(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_set_terminal_font` instead
-///
-#define q_termwidget_qbase_set_terminal_font q_termwidget_super_set_terminal_font
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -392,10 +344,6 @@ QFont* q_termwidget_get_terminal_font(void* self);
 ///
 void q_termwidget_on_get_terminal_font(void* self, QFont* (*callback)());
 
-/// @warning DEPRECATED: Use `q_termwidget_super_get_terminal_font` instead
-///
-#define q_termwidget_qbase_get_terminal_font q_termwidget_super_get_terminal_font
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -419,10 +367,6 @@ void q_termwidget_set_terminal_opacity(void* self, double level);
 /// @param callback void func(QTermWidget* self, double level)
 ///
 void q_termwidget_on_set_terminal_opacity(void* self, void (*callback)(void*, double));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_set_terminal_opacity` instead
-///
-#define q_termwidget_qbase_set_terminal_opacity q_termwidget_super_set_terminal_opacity
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -449,10 +393,6 @@ void q_termwidget_set_terminal_background_image(void* self, const char* backgrou
 ///
 void q_termwidget_on_set_terminal_background_image(void* self, void (*callback)(void*, const char*));
 
-/// @warning DEPRECATED: Use `q_termwidget_super_set_terminal_background_image` instead
-///
-#define q_termwidget_qbase_set_terminal_background_image q_termwidget_super_set_terminal_background_image
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -477,10 +417,6 @@ void q_termwidget_set_terminal_background_mode(void* self, int mode);
 /// @param callback void func(QTermWidget* self, int mode)
 ///
 void q_termwidget_on_set_terminal_background_mode(void* self, void (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_set_terminal_background_mode` instead
-///
-#define q_termwidget_qbase_set_terminal_background_mode q_termwidget_super_set_terminal_background_mode
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -507,10 +443,6 @@ void q_termwidget_set_environment(void* self, const char* environment[static 1])
 ///
 void q_termwidget_on_set_environment(void* self, void (*callback)(void*, const char**));
 
-/// @warning DEPRECATED: Use `q_termwidget_super_set_environment` instead
-///
-#define q_termwidget_qbase_set_environment q_termwidget_super_set_environment
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -536,10 +468,6 @@ void q_termwidget_set_shell_program(void* self, const char* program);
 ///
 void q_termwidget_on_set_shell_program(void* self, void (*callback)(void*, const char*));
 
-/// @warning DEPRECATED: Use `q_termwidget_super_set_shell_program` instead
-///
-#define q_termwidget_qbase_set_shell_program q_termwidget_super_set_shell_program
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -564,10 +492,6 @@ void q_termwidget_set_working_directory(void* self, const char* dir);
 /// @param callback void func(QTermWidget* self, const char* dir)
 ///
 void q_termwidget_on_set_working_directory(void* self, void (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_set_working_directory` instead
-///
-#define q_termwidget_qbase_set_working_directory q_termwidget_super_set_working_directory
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -595,10 +519,6 @@ const char* q_termwidget_working_directory(void* self);
 ///
 void q_termwidget_on_working_directory(void* self, const char* (*callback)());
 
-/// @warning DEPRECATED: Use `q_termwidget_super_working_directory` instead
-///
-#define q_termwidget_qbase_working_directory q_termwidget_super_working_directory
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -622,10 +542,6 @@ void q_termwidget_set_args(void* self, const char* args[static 1]);
 /// @param callback void func(QTermWidget* self, const char** args)
 ///
 void q_termwidget_on_set_args(void* self, void (*callback)(void*, const char**));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_set_args` instead
-///
-#define q_termwidget_qbase_set_args q_termwidget_super_set_args
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -652,10 +568,6 @@ void q_termwidget_set_color_scheme(void* self, const char* name);
 ///
 void q_termwidget_on_set_color_scheme(void* self, void (*callback)(void*, const char*));
 
-/// @warning DEPRECATED: Use `q_termwidget_super_set_color_scheme` instead
-///
-#define q_termwidget_qbase_set_color_scheme q_termwidget_super_set_color_scheme
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -681,10 +593,6 @@ const char** q_termwidget_get_available_color_schemes(void* self);
 /// @param callback const char** func()
 ///
 void q_termwidget_on_get_available_color_schemes(void* self, const char** (*callback)());
-
-/// @warning DEPRECATED: Use `q_termwidget_super_get_available_color_schemes` instead
-///
-#define q_termwidget_qbase_get_available_color_schemes q_termwidget_super_get_available_color_schemes
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -722,10 +630,6 @@ void q_termwidget_set_history_size(void* self, int lines);
 ///
 void q_termwidget_on_set_history_size(void* self, void (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_termwidget_super_set_history_size` instead
-///
-#define q_termwidget_qbase_set_history_size q_termwidget_super_set_history_size
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -749,10 +653,6 @@ int32_t q_termwidget_history_size(void* self);
 /// @param callback int32_t func()
 ///
 void q_termwidget_on_history_size(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_termwidget_super_history_size` instead
-///
-#define q_termwidget_qbase_history_size q_termwidget_super_history_size
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -778,10 +678,6 @@ void q_termwidget_set_scroll_bar_position(void* self, int32_t scrollBarPosition)
 ///
 void q_termwidget_on_set_scroll_bar_position(void* self, void (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_termwidget_super_set_scroll_bar_position` instead
-///
-#define q_termwidget_qbase_set_scroll_bar_position q_termwidget_super_set_scroll_bar_position
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -806,10 +702,6 @@ void q_termwidget_scroll_to_end(void* self);
 ///
 void q_termwidget_on_scroll_to_end(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_termwidget_super_scroll_to_end` instead
-///
-#define q_termwidget_qbase_scroll_to_end q_termwidget_super_scroll_to_end
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -833,10 +725,6 @@ void q_termwidget_send_text(void* self, const char* text);
 /// @param callback void func(QTermWidget* self, const char* text)
 ///
 void q_termwidget_on_send_text(void* self, void (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_send_text` instead
-///
-#define q_termwidget_qbase_send_text q_termwidget_super_send_text
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -863,10 +751,6 @@ void q_termwidget_send_key_event(void* self, void* e);
 ///
 void q_termwidget_on_send_key_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_termwidget_super_send_key_event` instead
-///
-#define q_termwidget_qbase_send_key_event q_termwidget_super_send_key_event
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -892,10 +776,6 @@ void q_termwidget_set_flow_control_enabled(void* self, bool enabled);
 ///
 void q_termwidget_on_set_flow_control_enabled(void* self, void (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `q_termwidget_super_set_flow_control_enabled` instead
-///
-#define q_termwidget_qbase_set_flow_control_enabled q_termwidget_super_set_flow_control_enabled
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -920,10 +800,6 @@ bool q_termwidget_flow_control_enabled(void* self);
 ///
 void q_termwidget_on_flow_control_enabled(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_termwidget_super_flow_control_enabled` instead
-///
-#define q_termwidget_qbase_flow_control_enabled q_termwidget_super_flow_control_enabled
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -947,10 +823,6 @@ void q_termwidget_set_flow_control_warning_enabled(void* self, bool enabled);
 /// @param callback void func(QTermWidget* self, bool enabled)
 ///
 void q_termwidget_on_set_flow_control_warning_enabled(void* self, void (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_set_flow_control_warning_enabled` instead
-///
-#define q_termwidget_qbase_set_flow_control_warning_enabled q_termwidget_super_set_flow_control_warning_enabled
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -984,10 +856,6 @@ const char* q_termwidget_key_bindings(void* self);
 ///
 void q_termwidget_on_key_bindings(void* self, const char* (*callback)());
 
-/// @warning DEPRECATED: Use `q_termwidget_super_key_bindings` instead
-///
-#define q_termwidget_qbase_key_bindings q_termwidget_super_key_bindings
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -1011,10 +879,6 @@ void q_termwidget_set_motion_after_pasting(void* self, int motionAfterPasting);
 /// @param callback void func(QTermWidget* self, int motionAfterPasting)
 ///
 void q_termwidget_on_set_motion_after_pasting(void* self, void (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_set_motion_after_pasting` instead
-///
-#define q_termwidget_qbase_set_motion_after_pasting q_termwidget_super_set_motion_after_pasting
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -1040,10 +904,6 @@ int32_t q_termwidget_history_lines_count(void* self);
 ///
 void q_termwidget_on_history_lines_count(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_termwidget_super_history_lines_count` instead
-///
-#define q_termwidget_qbase_history_lines_count q_termwidget_super_history_lines_count
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -1067,10 +927,6 @@ int32_t q_termwidget_screen_columns_count(void* self);
 ///
 void q_termwidget_on_screen_columns_count(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_termwidget_super_screen_columns_count` instead
-///
-#define q_termwidget_qbase_screen_columns_count q_termwidget_super_screen_columns_count
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -1093,10 +949,6 @@ int32_t q_termwidget_screen_lines_count(void* self);
 /// @param callback int32_t func()
 ///
 void q_termwidget_on_screen_lines_count(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_termwidget_super_screen_lines_count` instead
-///
-#define q_termwidget_qbase_screen_lines_count q_termwidget_super_screen_lines_count
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -1122,10 +974,6 @@ void q_termwidget_set_selection_start(void* self, int row, int column);
 /// @param callback void func(QTermWidget* self, int row, int column)
 ///
 void q_termwidget_on_set_selection_start(void* self, void (*callback)(void*, int, int));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_set_selection_start` instead
-///
-#define q_termwidget_qbase_set_selection_start q_termwidget_super_set_selection_start
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -1154,10 +1002,6 @@ void q_termwidget_set_selection_end(void* self, int row, int column);
 ///
 void q_termwidget_on_set_selection_end(void* self, void (*callback)(void*, int, int));
 
-/// @warning DEPRECATED: Use `q_termwidget_super_set_selection_end` instead
-///
-#define q_termwidget_qbase_set_selection_end q_termwidget_super_set_selection_end
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -1185,10 +1029,6 @@ void q_termwidget_get_selection_start(void* self, int* row, int* column);
 ///
 void q_termwidget_on_get_selection_start(void* self, void (*callback)(void*, int*, int*));
 
-/// @warning DEPRECATED: Use `q_termwidget_super_get_selection_start` instead
-///
-#define q_termwidget_qbase_get_selection_start q_termwidget_super_get_selection_start
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -1215,10 +1055,6 @@ void q_termwidget_get_selection_end(void* self, int* row, int* column);
 /// @param callback void func(QTermWidget* self, int* row, int* column)
 ///
 void q_termwidget_on_get_selection_end(void* self, void (*callback)(void*, int*, int*));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_get_selection_end` instead
-///
-#define q_termwidget_qbase_get_selection_end q_termwidget_super_get_selection_end
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -1248,10 +1084,6 @@ const char* q_termwidget_selected_text(void* self, bool preserveLineBreaks);
 ///
 void q_termwidget_on_selected_text(void* self, const char* (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `q_termwidget_super_selected_text` instead
-///
-#define q_termwidget_qbase_selected_text q_termwidget_super_selected_text
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -1276,10 +1108,6 @@ void q_termwidget_set_monitor_activity(void* self, bool monitorActivity);
 /// @param callback void func(QTermWidget* self, bool monitorActivity)
 ///
 void q_termwidget_on_set_monitor_activity(void* self, void (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_set_monitor_activity` instead
-///
-#define q_termwidget_qbase_set_monitor_activity q_termwidget_super_set_monitor_activity
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -1306,10 +1134,6 @@ void q_termwidget_set_monitor_silence(void* self, bool monitorSilence);
 ///
 void q_termwidget_on_set_monitor_silence(void* self, void (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `q_termwidget_super_set_monitor_silence` instead
-///
-#define q_termwidget_qbase_set_monitor_silence q_termwidget_super_set_monitor_silence
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -1334,10 +1158,6 @@ void q_termwidget_set_silence_timeout(void* self, int seconds);
 /// @param callback void func(QTermWidget* self, int seconds)
 ///
 void q_termwidget_on_set_silence_timeout(void* self, void (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_set_silence_timeout` instead
-///
-#define q_termwidget_qbase_set_silence_timeout q_termwidget_super_set_silence_timeout
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -1381,10 +1201,6 @@ libqt_list q_termwidget_filter_actions(void* self, void* position);
 ///
 void q_termwidget_on_filter_actions(void* self, libqt_list (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_termwidget_super_filter_actions` instead
-///
-#define q_termwidget_qbase_filter_actions q_termwidget_super_filter_actions
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -1410,10 +1226,6 @@ int32_t q_termwidget_get_pty_slave_fd(void* self);
 /// @param callback int32_t func()
 ///
 void q_termwidget_on_get_pty_slave_fd(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_termwidget_super_get_pty_slave_fd` instead
-///
-#define q_termwidget_qbase_get_pty_slave_fd q_termwidget_super_get_pty_slave_fd
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -1446,10 +1258,6 @@ void q_termwidget_set_blinking_cursor(void* self, bool blink);
 ///
 void q_termwidget_on_set_blinking_cursor(void* self, void (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `q_termwidget_super_set_blinking_cursor` instead
-///
-#define q_termwidget_qbase_set_blinking_cursor q_termwidget_super_set_blinking_cursor
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -1475,10 +1283,6 @@ void q_termwidget_set_bidi_enabled(void* self, bool enabled);
 ///
 void q_termwidget_on_set_bidi_enabled(void* self, void (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `q_termwidget_super_set_bidi_enabled` instead
-///
-#define q_termwidget_qbase_set_bidi_enabled q_termwidget_super_set_bidi_enabled
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -1503,10 +1307,6 @@ bool q_termwidget_is_bidi_enabled(void* self);
 ///
 void q_termwidget_on_is_bidi_enabled(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_termwidget_super_is_bidi_enabled` instead
-///
-#define q_termwidget_qbase_is_bidi_enabled q_termwidget_super_is_bidi_enabled
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -1530,10 +1330,6 @@ void q_termwidget_set_auto_close(void* self, bool autoClose);
 /// @param callback void func(QTermWidget* self, bool autoClose)
 ///
 void q_termwidget_on_set_auto_close(void* self, void (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_set_auto_close` instead
-///
-#define q_termwidget_qbase_set_auto_close q_termwidget_super_set_auto_close
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -1561,10 +1357,6 @@ const char* q_termwidget_title(void* self);
 ///
 void q_termwidget_on_title(void* self, const char* (*callback)());
 
-/// @warning DEPRECATED: Use `q_termwidget_super_title` instead
-///
-#define q_termwidget_qbase_title q_termwidget_super_title
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -1590,10 +1382,6 @@ const char* q_termwidget_icon(void* self);
 ///
 void q_termwidget_on_icon(void* self, const char* (*callback)());
 
-/// @warning DEPRECATED: Use `q_termwidget_super_icon` instead
-///
-#define q_termwidget_qbase_icon q_termwidget_super_icon
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -1616,10 +1404,6 @@ bool q_termwidget_is_title_changed(void* self);
 /// @param callback bool func()
 ///
 void q_termwidget_on_is_title_changed(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `q_termwidget_super_is_title_changed` instead
-///
-#define q_termwidget_qbase_is_title_changed q_termwidget_super_is_title_changed
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -1644,10 +1428,6 @@ void q_termwidget_bracket_text(void* self, const char* text);
 /// @param callback void func(QTermWidget* self, const char* text)
 ///
 void q_termwidget_on_bracket_text(void* self, void (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_bracket_text` instead
-///
-#define q_termwidget_qbase_bracket_text q_termwidget_super_bracket_text
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -1674,10 +1454,6 @@ void q_termwidget_disable_bracketed_paste_mode(void* self, bool disable);
 ///
 void q_termwidget_on_disable_bracketed_paste_mode(void* self, void (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `q_termwidget_super_disable_bracketed_paste_mode` instead
-///
-#define q_termwidget_qbase_disable_bracketed_paste_mode q_termwidget_super_disable_bracketed_paste_mode
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -1701,10 +1477,6 @@ bool q_termwidget_bracketed_paste_mode_is_disabled(void* self);
 /// @param callback bool func()
 ///
 void q_termwidget_on_bracketed_paste_mode_is_disabled(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `q_termwidget_super_bracketed_paste_mode_is_disabled` instead
-///
-#define q_termwidget_qbase_bracketed_paste_mode_is_disabled q_termwidget_super_bracketed_paste_mode_is_disabled
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -1730,10 +1502,6 @@ void q_termwidget_set_margin(void* self, int margin);
 ///
 void q_termwidget_on_set_margin(void* self, void (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_termwidget_super_set_margin` instead
-///
-#define q_termwidget_qbase_set_margin q_termwidget_super_set_margin
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -1758,10 +1526,6 @@ int32_t q_termwidget_get_margin(void* self);
 ///
 void q_termwidget_on_get_margin(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_termwidget_super_get_margin` instead
-///
-#define q_termwidget_qbase_get_margin q_termwidget_super_get_margin
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -1785,10 +1549,6 @@ void q_termwidget_set_draw_line_chars(void* self, bool drawLineChars);
 /// @param callback void func(QTermWidget* self, bool drawLineChars)
 ///
 void q_termwidget_on_set_draw_line_chars(void* self, void (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_set_draw_line_chars` instead
-///
-#define q_termwidget_qbase_set_draw_line_chars q_termwidget_super_set_draw_line_chars
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -1815,10 +1575,6 @@ void q_termwidget_set_bold_intense(void* self, bool boldIntense);
 ///
 void q_termwidget_on_set_bold_intense(void* self, void (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `q_termwidget_super_set_bold_intense` instead
-///
-#define q_termwidget_qbase_set_bold_intense q_termwidget_super_set_bold_intense
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -1844,10 +1600,6 @@ void q_termwidget_set_confirm_multiline_paste(void* self, bool confirmMultilineP
 ///
 void q_termwidget_on_set_confirm_multiline_paste(void* self, void (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `q_termwidget_super_set_confirm_multiline_paste` instead
-///
-#define q_termwidget_qbase_set_confirm_multiline_paste q_termwidget_super_set_confirm_multiline_paste
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -1872,10 +1624,6 @@ void q_termwidget_set_trim_pasted_trailing_newlines(void* self, bool trimPastedT
 /// @param callback void func(QTermWidget* self, bool trimPastedTrailingNewlines)
 ///
 void q_termwidget_on_set_trim_pasted_trailing_newlines(void* self, void (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_set_trim_pasted_trailing_newlines` instead
-///
-#define q_termwidget_qbase_set_trim_pasted_trailing_newlines q_termwidget_super_set_trim_pasted_trailing_newlines
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -1903,10 +1651,6 @@ const char* q_termwidget_word_characters(void* self);
 ///
 void q_termwidget_on_word_characters(void* self, const char* (*callback)());
 
-/// @warning DEPRECATED: Use `q_termwidget_super_word_characters` instead
-///
-#define q_termwidget_qbase_word_characters q_termwidget_super_word_characters
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -1930,10 +1674,6 @@ void q_termwidget_set_word_characters(void* self, const char* chars);
 /// @param callback void func(QTermWidget* self, const char* chars)
 ///
 void q_termwidget_on_set_word_characters(void* self, void (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_set_word_characters` instead
-///
-#define q_termwidget_qbase_set_word_characters q_termwidget_super_set_word_characters
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -1959,10 +1699,6 @@ QTermWidgetInterface* q_termwidget_create_widget(void* self, int startnow);
 /// @param callback QTermWidgetInterface* func(QTermWidget* self, int startnow)
 ///
 void q_termwidget_on_create_widget(void* self, QTermWidgetInterface* (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_create_widget` instead
-///
-#define q_termwidget_qbase_create_widget q_termwidget_super_create_widget
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -2230,10 +1966,6 @@ void q_termwidget_resize_event(void* self, void* param1);
 ///
 void q_termwidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_termwidget_super_resize_event` instead
-///
-#define q_termwidget_qbase_resize_event q_termwidget_super_resize_event
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -2258,10 +1990,6 @@ void q_termwidget_session_finished(void* self);
 ///
 void q_termwidget_on_session_finished(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_termwidget_super_session_finished` instead
-///
-#define q_termwidget_qbase_session_finished q_termwidget_super_session_finished
-
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Base class method implementation
@@ -2285,10 +2013,6 @@ void q_termwidget_selection_changed(void* self, bool textSelected);
 /// @param callback void func(QTermWidget* self, bool textSelected)
 ///
 void q_termwidget_on_selection_changed(void* self, void (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `q_termwidget_super_selection_changed` instead
-///
-#define q_termwidget_qbase_selection_changed q_termwidget_super_selection_changed
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -5294,10 +5018,6 @@ void q_termwidget_operator_assign(void* self, void* param1);
 ///
 int32_t q_termwidget_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_dev_type` instead
-///
-#define q_termwidget_qbase_dev_type q_termwidget_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -5330,10 +5050,6 @@ void q_termwidget_on_dev_type(void* self, int32_t (*callback)());
 ///
 void q_termwidget_set_visible(void* self, bool visible);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_set_visible` instead
-///
-#define q_termwidget_qbase_set_visible q_termwidget_super_set_visible
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -5365,10 +5081,6 @@ void q_termwidget_on_set_visible(void* self, void (*callback)(void*, bool));
 /// @param self QTermWidget*
 ///
 QSize* q_termwidget_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_minimum_size_hint` instead
-///
-#define q_termwidget_qbase_minimum_size_hint q_termwidget_super_minimum_size_hint
 
 /// Inherited from QWidget
 ///
@@ -5404,10 +5116,6 @@ void q_termwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 int32_t q_termwidget_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_height_for_width` instead
-///
-#define q_termwidget_qbase_height_for_width q_termwidget_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -5440,10 +5148,6 @@ void q_termwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int
 ///
 bool q_termwidget_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_has_height_for_width` instead
-///
-#define q_termwidget_qbase_has_height_for_width q_termwidget_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -5474,10 +5178,6 @@ void q_termwidget_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self QTermWidget*
 ///
 QPaintEngine* q_termwidget_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_paint_engine` instead
-///
-#define q_termwidget_qbase_paint_engine q_termwidget_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -5510,10 +5210,6 @@ void q_termwidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QEvent*
 ///
 bool q_termwidget_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_event` instead
-///
-#define q_termwidget_qbase_event q_termwidget_super_event
 
 /// Inherited from QWidget
 ///
@@ -5548,10 +5244,6 @@ void q_termwidget_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void q_termwidget_mouse_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_mouse_press_event` instead
-///
-#define q_termwidget_qbase_mouse_press_event q_termwidget_super_mouse_press_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -5584,10 +5276,6 @@ void q_termwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*
 /// @param event QMouseEvent*
 ///
 void q_termwidget_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_mouse_release_event` instead
-///
-#define q_termwidget_qbase_mouse_release_event q_termwidget_super_mouse_release_event
 
 /// Inherited from QWidget
 ///
@@ -5622,10 +5310,6 @@ void q_termwidget_on_mouse_release_event(void* self, void (*callback)(void*, voi
 ///
 void q_termwidget_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_mouse_double_click_event` instead
-///
-#define q_termwidget_qbase_mouse_double_click_event q_termwidget_super_mouse_double_click_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -5658,10 +5342,6 @@ void q_termwidget_on_mouse_double_click_event(void* self, void (*callback)(void*
 /// @param event QMouseEvent*
 ///
 void q_termwidget_mouse_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_mouse_move_event` instead
-///
-#define q_termwidget_qbase_mouse_move_event q_termwidget_super_mouse_move_event
 
 /// Inherited from QWidget
 ///
@@ -5696,10 +5376,6 @@ void q_termwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*)
 ///
 void q_termwidget_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_wheel_event` instead
-///
-#define q_termwidget_qbase_wheel_event q_termwidget_super_wheel_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -5732,10 +5408,6 @@ void q_termwidget_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QKeyEvent*
 ///
 void q_termwidget_key_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_key_press_event` instead
-///
-#define q_termwidget_qbase_key_press_event q_termwidget_super_key_press_event
 
 /// Inherited from QWidget
 ///
@@ -5770,10 +5442,6 @@ void q_termwidget_on_key_press_event(void* self, void (*callback)(void*, void*))
 ///
 void q_termwidget_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_key_release_event` instead
-///
-#define q_termwidget_qbase_key_release_event q_termwidget_super_key_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -5806,10 +5474,6 @@ void q_termwidget_on_key_release_event(void* self, void (*callback)(void*, void*
 /// @param event QFocusEvent*
 ///
 void q_termwidget_focus_in_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_focus_in_event` instead
-///
-#define q_termwidget_qbase_focus_in_event q_termwidget_super_focus_in_event
 
 /// Inherited from QWidget
 ///
@@ -5844,10 +5508,6 @@ void q_termwidget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 void q_termwidget_focus_out_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_focus_out_event` instead
-///
-#define q_termwidget_qbase_focus_out_event q_termwidget_super_focus_out_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -5880,10 +5540,6 @@ void q_termwidget_on_focus_out_event(void* self, void (*callback)(void*, void*))
 /// @param event QEnterEvent*
 ///
 void q_termwidget_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_enter_event` instead
-///
-#define q_termwidget_qbase_enter_event q_termwidget_super_enter_event
 
 /// Inherited from QWidget
 ///
@@ -5918,10 +5574,6 @@ void q_termwidget_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void q_termwidget_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_leave_event` instead
-///
-#define q_termwidget_qbase_leave_event q_termwidget_super_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -5954,10 +5606,6 @@ void q_termwidget_on_leave_event(void* self, void (*callback)(void*, void*));
 /// @param event QPaintEvent*
 ///
 void q_termwidget_paint_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_paint_event` instead
-///
-#define q_termwidget_qbase_paint_event q_termwidget_super_paint_event
 
 /// Inherited from QWidget
 ///
@@ -5992,10 +5640,6 @@ void q_termwidget_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 void q_termwidget_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_move_event` instead
-///
-#define q_termwidget_qbase_move_event q_termwidget_super_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -6028,10 +5672,6 @@ void q_termwidget_on_move_event(void* self, void (*callback)(void*, void*));
 /// @param event QCloseEvent*
 ///
 void q_termwidget_close_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_close_event` instead
-///
-#define q_termwidget_qbase_close_event q_termwidget_super_close_event
 
 /// Inherited from QWidget
 ///
@@ -6066,10 +5706,6 @@ void q_termwidget_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void q_termwidget_context_menu_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_context_menu_event` instead
-///
-#define q_termwidget_qbase_context_menu_event q_termwidget_super_context_menu_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
@@ -6102,10 +5738,6 @@ void q_termwidget_on_context_menu_event(void* self, void (*callback)(void*, void
 /// @param event QTabletEvent*
 ///
 void q_termwidget_tablet_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_tablet_event` instead
-///
-#define q_termwidget_qbase_tablet_event q_termwidget_super_tablet_event
 
 /// Inherited from QWidget
 ///
@@ -6140,10 +5772,6 @@ void q_termwidget_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void q_termwidget_action_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_action_event` instead
-///
-#define q_termwidget_qbase_action_event q_termwidget_super_action_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -6176,10 +5804,6 @@ void q_termwidget_on_action_event(void* self, void (*callback)(void*, void*));
 /// @param event QDragEnterEvent*
 ///
 void q_termwidget_drag_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_drag_enter_event` instead
-///
-#define q_termwidget_qbase_drag_enter_event q_termwidget_super_drag_enter_event
 
 /// Inherited from QWidget
 ///
@@ -6214,10 +5838,6 @@ void q_termwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*)
 ///
 void q_termwidget_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_drag_move_event` instead
-///
-#define q_termwidget_qbase_drag_move_event q_termwidget_super_drag_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -6250,10 +5870,6 @@ void q_termwidget_on_drag_move_event(void* self, void (*callback)(void*, void*))
 /// @param event QDragLeaveEvent*
 ///
 void q_termwidget_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_drag_leave_event` instead
-///
-#define q_termwidget_qbase_drag_leave_event q_termwidget_super_drag_leave_event
 
 /// Inherited from QWidget
 ///
@@ -6288,10 +5904,6 @@ void q_termwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*)
 ///
 void q_termwidget_drop_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_drop_event` instead
-///
-#define q_termwidget_qbase_drop_event q_termwidget_super_drop_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -6325,10 +5937,6 @@ void q_termwidget_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void q_termwidget_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_show_event` instead
-///
-#define q_termwidget_qbase_show_event q_termwidget_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -6361,10 +5969,6 @@ void q_termwidget_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param event QHideEvent*
 ///
 void q_termwidget_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_hide_event` instead
-///
-#define q_termwidget_qbase_hide_event q_termwidget_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -6401,10 +6005,6 @@ void q_termwidget_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_termwidget_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_native_event` instead
-///
-#define q_termwidget_qbase_native_event q_termwidget_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -6440,10 +6040,6 @@ void q_termwidget_on_native_event(void* self, bool (*callback)(void*, libqt_stri
 ///
 void q_termwidget_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_change_event` instead
-///
-#define q_termwidget_qbase_change_event q_termwidget_super_change_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -6476,10 +6072,6 @@ void q_termwidget_on_change_event(void* self, void (*callback)(void*, void*));
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
 int32_t q_termwidget_metric(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_metric` instead
-///
-#define q_termwidget_qbase_metric q_termwidget_super_metric
 
 /// Inherited from QWidget
 ///
@@ -6514,10 +6106,6 @@ void q_termwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void q_termwidget_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_init_painter` instead
-///
-#define q_termwidget_qbase_init_painter q_termwidget_super_init_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -6551,10 +6139,6 @@ void q_termwidget_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_termwidget_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_redirected` instead
-///
-#define q_termwidget_qbase_redirected q_termwidget_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -6586,10 +6170,6 @@ void q_termwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, voi
 /// @param self QTermWidget*
 ///
 QPainter* q_termwidget_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_shared_painter` instead
-///
-#define q_termwidget_qbase_shared_painter q_termwidget_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -6623,10 +6203,6 @@ void q_termwidget_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void q_termwidget_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_input_method_event` instead
-///
-#define q_termwidget_qbase_input_method_event q_termwidget_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -6659,10 +6235,6 @@ void q_termwidget_on_input_method_event(void* self, void (*callback)(void*, void
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* q_termwidget_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_input_method_query` instead
-///
-#define q_termwidget_qbase_input_method_query q_termwidget_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -6699,10 +6271,6 @@ void q_termwidget_on_input_method_query(void* self, QVariant* (*callback)(void*,
 ///
 bool q_termwidget_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_focus_next_prev_child` instead
-///
-#define q_termwidget_qbase_focus_next_prev_child q_termwidget_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -6736,10 +6304,6 @@ void q_termwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, b
 /// @param event QEvent*
 ///
 bool q_termwidget_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_event_filter` instead
-///
-#define q_termwidget_qbase_event_filter q_termwidget_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -6775,10 +6339,6 @@ void q_termwidget_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void q_termwidget_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_timer_event` instead
-///
-#define q_termwidget_qbase_timer_event q_termwidget_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -6811,10 +6371,6 @@ void q_termwidget_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_termwidget_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_child_event` instead
-///
-#define q_termwidget_qbase_child_event q_termwidget_super_child_event
 
 /// Inherited from QObject
 ///
@@ -6849,10 +6405,6 @@ void q_termwidget_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_termwidget_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_custom_event` instead
-///
-#define q_termwidget_qbase_custom_event q_termwidget_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -6885,10 +6437,6 @@ void q_termwidget_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_termwidget_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_connect_notify` instead
-///
-#define q_termwidget_qbase_connect_notify q_termwidget_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -6923,10 +6471,6 @@ void q_termwidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_termwidget_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_disconnect_notify` instead
-///
-#define q_termwidget_qbase_disconnect_notify q_termwidget_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -6959,10 +6503,6 @@ void q_termwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 void q_termwidget_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_update_micro_focus` instead
-///
-#define q_termwidget_qbase_update_micro_focus q_termwidget_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -6993,10 +6533,6 @@ void q_termwidget_on_update_micro_focus(void* self, void (*callback)());
 /// @param self QTermWidget*
 ///
 void q_termwidget_create(void* self);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_create` instead
-///
-#define q_termwidget_qbase_create q_termwidget_super_create
 
 /// Inherited from QWidget
 ///
@@ -7029,10 +6565,6 @@ void q_termwidget_on_create(void* self, void (*callback)());
 ///
 void q_termwidget_destroy(void* self);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_destroy` instead
-///
-#define q_termwidget_qbase_destroy q_termwidget_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -7063,10 +6595,6 @@ void q_termwidget_on_destroy(void* self, void (*callback)());
 /// @param self QTermWidget*
 ///
 bool q_termwidget_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_focus_next_child` instead
-///
-#define q_termwidget_qbase_focus_next_child q_termwidget_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -7099,10 +6627,6 @@ void q_termwidget_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_termwidget_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_focus_previous_child` instead
-///
-#define q_termwidget_qbase_focus_previous_child q_termwidget_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -7133,10 +6657,6 @@ void q_termwidget_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self QTermWidget*
 ///
 QObject* q_termwidget_sender(void* self);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_sender` instead
-///
-#define q_termwidget_qbase_sender q_termwidget_super_sender
 
 /// Inherited from QObject
 ///
@@ -7169,10 +6689,6 @@ void q_termwidget_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_termwidget_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_sender_signal_index` instead
-///
-#define q_termwidget_qbase_sender_signal_index q_termwidget_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -7204,10 +6720,6 @@ void q_termwidget_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t q_termwidget_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_receivers` instead
-///
-#define q_termwidget_qbase_receivers q_termwidget_super_receivers
 
 /// Inherited from QObject
 ///
@@ -7242,10 +6754,6 @@ void q_termwidget_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 bool q_termwidget_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_termwidget_super_is_signal_connected` instead
-///
-#define q_termwidget_qbase_is_signal_connected q_termwidget_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -7279,10 +6787,6 @@ void q_termwidget_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double q_termwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `q_termwidget_super_get_decoded_metric_f` instead
-///
-#define q_termwidget_qbase_get_decoded_metric_f q_termwidget_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

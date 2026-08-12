@@ -39,10 +39,6 @@ const QMetaObject* q_syntaxhighlighter_meta_object(void* self);
 ///
 void q_syntaxhighlighter_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_meta_object` instead
-///
-#define q_syntaxhighlighter_qbase_meta_object q_syntaxhighlighter_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -62,10 +58,6 @@ void* q_syntaxhighlighter_metacast(void* self, const char* param1);
 /// @param callback void* func(QSyntaxHighlighter* self, const char* param1)
 ///
 void q_syntaxhighlighter_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_metacast` instead
-///
-#define q_syntaxhighlighter_qbase_metacast q_syntaxhighlighter_super_metacast
 
 /// Base class method implementation
 ///
@@ -87,10 +79,6 @@ int32_t q_syntaxhighlighter_metacall(void* self, int32_t param1, int param2, voi
 /// @param callback int32_t func(QSyntaxHighlighter* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_syntaxhighlighter_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_metacall` instead
-///
-#define q_syntaxhighlighter_qbase_metacall q_syntaxhighlighter_super_metacall
 
 /// Base class method implementation
 ///
@@ -151,10 +139,6 @@ void q_syntaxhighlighter_highlight_block(void* self, const char* text);
 ///
 void q_syntaxhighlighter_on_highlight_block(void* self, void (*callback)(void*, const char*));
 
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_highlight_block` instead
-///
-#define q_syntaxhighlighter_qbase_highlight_block q_syntaxhighlighter_super_highlight_block
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#highlightBlock)
 ///
 /// Base class method implementation
@@ -181,10 +165,6 @@ void q_syntaxhighlighter_set_format(void* self, int start, int count, void* form
 /// @param callback void func(QSyntaxHighlighter* self, int start, int count, QTextCharFormat* format)
 ///
 void q_syntaxhighlighter_on_set_format(void* self, void (*callback)(void*, int, int, void*));
-
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_set_format` instead
-///
-#define q_syntaxhighlighter_qbase_set_format q_syntaxhighlighter_super_set_format
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setFormat)
 ///
@@ -215,10 +195,6 @@ void q_syntaxhighlighter_set_format2(void* self, int start, int count, void* col
 ///
 void q_syntaxhighlighter_on_set_format2(void* self, void (*callback)(void*, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_set_format2` instead
-///
-#define q_syntaxhighlighter_qbase_set_format2 q_syntaxhighlighter_super_set_format2
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setFormat)
 ///
 /// Base class method implementation
@@ -247,10 +223,6 @@ void q_syntaxhighlighter_set_format3(void* self, int start, int count, void* fon
 /// @param callback void func(QSyntaxHighlighter* self, int start, int count, QFont* font)
 ///
 void q_syntaxhighlighter_on_set_format3(void* self, void (*callback)(void*, int, int, void*));
-
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_set_format3` instead
-///
-#define q_syntaxhighlighter_qbase_set_format3 q_syntaxhighlighter_super_set_format3
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setFormat)
 ///
@@ -281,10 +253,6 @@ QTextCharFormat* q_syntaxhighlighter_format(void* self, int pos);
 ///
 void q_syntaxhighlighter_on_format(void* self, QTextCharFormat* (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_format` instead
-///
-#define q_syntaxhighlighter_qbase_format q_syntaxhighlighter_super_format
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#format)
 ///
 /// Base class method implementation
@@ -309,10 +277,6 @@ int32_t q_syntaxhighlighter_previous_block_state(void* self);
 ///
 void q_syntaxhighlighter_on_previous_block_state(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_previous_block_state` instead
-///
-#define q_syntaxhighlighter_qbase_previous_block_state q_syntaxhighlighter_super_previous_block_state
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#previousBlockState)
 ///
 /// Base class method implementation
@@ -335,10 +299,6 @@ int32_t q_syntaxhighlighter_current_block_state(void* self);
 /// @param callback int32_t func()
 ///
 void q_syntaxhighlighter_on_current_block_state(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_current_block_state` instead
-///
-#define q_syntaxhighlighter_qbase_current_block_state q_syntaxhighlighter_super_current_block_state
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlockState)
 ///
@@ -363,10 +323,6 @@ void q_syntaxhighlighter_set_current_block_state(void* self, int newState);
 /// @param callback void func(QSyntaxHighlighter* self, int newState)
 ///
 void q_syntaxhighlighter_on_set_current_block_state(void* self, void (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_set_current_block_state` instead
-///
-#define q_syntaxhighlighter_qbase_set_current_block_state q_syntaxhighlighter_super_set_current_block_state
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setCurrentBlockState)
 ///
@@ -393,10 +349,6 @@ void q_syntaxhighlighter_set_current_block_user_data(void* self, void* data);
 ///
 void q_syntaxhighlighter_on_set_current_block_user_data(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_set_current_block_user_data` instead
-///
-#define q_syntaxhighlighter_qbase_set_current_block_user_data q_syntaxhighlighter_super_set_current_block_user_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setCurrentBlockUserData)
 ///
 /// Base class method implementation
@@ -420,10 +372,6 @@ QTextBlockUserData* q_syntaxhighlighter_current_block_user_data(void* self);
 /// @param callback QTextBlockUserData* func()
 ///
 void q_syntaxhighlighter_on_current_block_user_data(void* self, QTextBlockUserData* (*callback)());
-
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_current_block_user_data` instead
-///
-#define q_syntaxhighlighter_qbase_current_block_user_data q_syntaxhighlighter_super_current_block_user_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlockUserData)
 ///
@@ -449,10 +397,6 @@ QTextBlock* q_syntaxhighlighter_current_block(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_syntaxhighlighter_on_current_block(void* self, QTextBlock* (*callback)());
-
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_current_block` instead
-///
-#define q_syntaxhighlighter_qbase_current_block q_syntaxhighlighter_super_current_block
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlock)
 ///
@@ -939,10 +883,6 @@ void q_syntaxhighlighter_on_destroyed1(void* self, void (*callback)(void*, void*
 ///
 bool q_syntaxhighlighter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_event` instead
-///
-#define q_syntaxhighlighter_qbase_event q_syntaxhighlighter_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -976,10 +916,6 @@ void q_syntaxhighlighter_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_syntaxhighlighter_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_event_filter` instead
-///
-#define q_syntaxhighlighter_qbase_event_filter q_syntaxhighlighter_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1015,10 +951,6 @@ void q_syntaxhighlighter_on_event_filter(void* self, bool (*callback)(void*, voi
 ///
 void q_syntaxhighlighter_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_timer_event` instead
-///
-#define q_syntaxhighlighter_qbase_timer_event q_syntaxhighlighter_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1051,10 +983,6 @@ void q_syntaxhighlighter_on_timer_event(void* self, void (*callback)(void*, void
 /// @param event QChildEvent*
 ///
 void q_syntaxhighlighter_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_child_event` instead
-///
-#define q_syntaxhighlighter_qbase_child_event q_syntaxhighlighter_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1089,10 +1017,6 @@ void q_syntaxhighlighter_on_child_event(void* self, void (*callback)(void*, void
 ///
 void q_syntaxhighlighter_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_custom_event` instead
-///
-#define q_syntaxhighlighter_qbase_custom_event q_syntaxhighlighter_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1125,10 +1049,6 @@ void q_syntaxhighlighter_on_custom_event(void* self, void (*callback)(void*, voi
 /// @param signal QMetaMethod*
 ///
 void q_syntaxhighlighter_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_connect_notify` instead
-///
-#define q_syntaxhighlighter_qbase_connect_notify q_syntaxhighlighter_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1163,10 +1083,6 @@ void q_syntaxhighlighter_on_connect_notify(void* self, void (*callback)(void*, v
 ///
 void q_syntaxhighlighter_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_disconnect_notify` instead
-///
-#define q_syntaxhighlighter_qbase_disconnect_notify q_syntaxhighlighter_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1199,10 +1115,6 @@ void q_syntaxhighlighter_on_disconnect_notify(void* self, void (*callback)(void*
 ///
 QObject* q_syntaxhighlighter_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_sender` instead
-///
-#define q_syntaxhighlighter_qbase_sender q_syntaxhighlighter_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1233,10 +1145,6 @@ void q_syntaxhighlighter_on_sender(void* self, QObject* (*callback)());
 /// @param self QSyntaxHighlighter*
 ///
 int32_t q_syntaxhighlighter_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_sender_signal_index` instead
-///
-#define q_syntaxhighlighter_qbase_sender_signal_index q_syntaxhighlighter_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1270,10 +1178,6 @@ void q_syntaxhighlighter_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 int32_t q_syntaxhighlighter_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_receivers` instead
-///
-#define q_syntaxhighlighter_qbase_receivers q_syntaxhighlighter_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1306,10 +1210,6 @@ void q_syntaxhighlighter_on_receivers(void* self, int32_t (*callback)(void*, con
 /// @param signal QMetaMethod*
 ///
 bool q_syntaxhighlighter_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_syntaxhighlighter_super_is_signal_connected` instead
-///
-#define q_syntaxhighlighter_qbase_is_signal_connected q_syntaxhighlighter_super_is_signal_connected
 
 /// Inherited from QObject
 ///

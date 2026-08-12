@@ -33,10 +33,6 @@ const char* k_texteditor__texthintprovider_text_hint(void* self, void* view, voi
 ///
 void k_texteditor__texthintprovider_on_text_hint(void* self, const char* (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_texteditor__texthintprovider_super_text_hint` instead
-///
-#define k_texteditor__texthintprovider_qbase_text_hint k_texteditor__texthintprovider_super_text_hint
-
 /// [Upstream resources](https://api.kde.org/ktexteditor-texthintprovider.html#textHint)
 ///
 /// Base class method implementation

@@ -39,10 +39,6 @@ const QMetaObject* q_pdfwriter_meta_object(void* self);
 ///
 void q_pdfwriter_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_pdfwriter_super_meta_object` instead
-///
-#define q_pdfwriter_qbase_meta_object q_pdfwriter_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -62,10 +58,6 @@ void* q_pdfwriter_metacast(void* self, const char* param1);
 /// @param callback void* func(QPdfWriter* self, const char* param1)
 ///
 void q_pdfwriter_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_pdfwriter_super_metacast` instead
-///
-#define q_pdfwriter_qbase_metacast q_pdfwriter_super_metacast
 
 /// Base class method implementation
 ///
@@ -87,10 +79,6 @@ int32_t q_pdfwriter_metacall(void* self, int32_t param1, int param2, void* param
 /// @param callback int32_t func(QPdfWriter* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_pdfwriter_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_pdfwriter_super_metacall` instead
-///
-#define q_pdfwriter_qbase_metacall q_pdfwriter_super_metacall
 
 /// Base class method implementation
 ///
@@ -182,10 +170,6 @@ bool q_pdfwriter_new_page(void* self);
 ///
 void q_pdfwriter_on_new_page(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_pdfwriter_super_new_page` instead
-///
-#define q_pdfwriter_qbase_new_page q_pdfwriter_super_new_page
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfwriter.html#newPage)
 ///
 /// Base class method implementation
@@ -273,10 +257,6 @@ QPaintEngine* q_pdfwriter_paint_engine(void* self);
 ///
 void q_pdfwriter_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
-/// @warning DEPRECATED: Use `q_pdfwriter_super_paint_engine` instead
-///
-#define q_pdfwriter_qbase_paint_engine q_pdfwriter_super_paint_engine
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfwriter.html#paintEngine)
 ///
 /// Base class method implementation
@@ -300,10 +280,6 @@ int32_t q_pdfwriter_metric(void* self, int32_t id);
 /// @param callback int32_t func(QPdfWriter* self, enum QPaintDevice__PaintDeviceMetric id)
 ///
 void q_pdfwriter_on_metric(void* self, int32_t (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_pdfwriter_super_metric` instead
-///
-#define q_pdfwriter_qbase_metric q_pdfwriter_super_metric
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfwriter.html#metric)
 ///
@@ -935,10 +911,6 @@ int32_t q_pdfwriter_encode_metric_f(int32_t metric, double value);
 ///
 bool q_pdfwriter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_pdfwriter_super_event` instead
-///
-#define q_pdfwriter_qbase_event q_pdfwriter_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -972,10 +944,6 @@ void q_pdfwriter_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_pdfwriter_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_pdfwriter_super_event_filter` instead
-///
-#define q_pdfwriter_qbase_event_filter q_pdfwriter_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1011,10 +979,6 @@ void q_pdfwriter_on_event_filter(void* self, bool (*callback)(void*, void*, void
 ///
 void q_pdfwriter_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_pdfwriter_super_timer_event` instead
-///
-#define q_pdfwriter_qbase_timer_event q_pdfwriter_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1047,10 +1011,6 @@ void q_pdfwriter_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_pdfwriter_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_pdfwriter_super_child_event` instead
-///
-#define q_pdfwriter_qbase_child_event q_pdfwriter_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1085,10 +1045,6 @@ void q_pdfwriter_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_pdfwriter_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_pdfwriter_super_custom_event` instead
-///
-#define q_pdfwriter_qbase_custom_event q_pdfwriter_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1121,10 +1077,6 @@ void q_pdfwriter_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_pdfwriter_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_pdfwriter_super_connect_notify` instead
-///
-#define q_pdfwriter_qbase_connect_notify q_pdfwriter_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1159,10 +1111,6 @@ void q_pdfwriter_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_pdfwriter_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_pdfwriter_super_disconnect_notify` instead
-///
-#define q_pdfwriter_qbase_disconnect_notify q_pdfwriter_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1195,10 +1143,6 @@ void q_pdfwriter_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 /// @param pageLayout QPageLayout*
 ///
 bool q_pdfwriter_set_page_layout(void* self, void* pageLayout);
-
-/// @warning DEPRECATED: Use `q_pdfwriter_super_set_page_layout` instead
-///
-#define q_pdfwriter_qbase_set_page_layout q_pdfwriter_super_set_page_layout
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -1233,10 +1177,6 @@ void q_pdfwriter_on_set_page_layout(void* self, bool (*callback)(void*, void*));
 ///
 bool q_pdfwriter_set_page_size(void* self, void* pageSize);
 
-/// @warning DEPRECATED: Use `q_pdfwriter_super_set_page_size` instead
-///
-#define q_pdfwriter_qbase_set_page_size q_pdfwriter_super_set_page_size
-
 /// Inherited from QPagedPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagedpaintdevice.html#setPageSize)
@@ -1269,10 +1209,6 @@ void q_pdfwriter_on_set_page_size(void* self, bool (*callback)(void*, void*));
 /// @param orientation enum QPageLayout__Orientation
 ///
 bool q_pdfwriter_set_page_orientation(void* self, int32_t orientation);
-
-/// @warning DEPRECATED: Use `q_pdfwriter_super_set_page_orientation` instead
-///
-#define q_pdfwriter_qbase_set_page_orientation q_pdfwriter_super_set_page_orientation
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -1308,10 +1244,6 @@ void q_pdfwriter_on_set_page_orientation(void* self, bool (*callback)(void*, int
 ///
 bool q_pdfwriter_set_page_margins(void* self, void* margins, int32_t units);
 
-/// @warning DEPRECATED: Use `q_pdfwriter_super_set_page_margins` instead
-///
-#define q_pdfwriter_qbase_set_page_margins q_pdfwriter_super_set_page_margins
-
 /// Inherited from QPagedPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagedpaintdevice.html#setPageMargins)
@@ -1346,10 +1278,6 @@ void q_pdfwriter_on_set_page_margins(void* self, bool (*callback)(void*, void*, 
 ///
 void q_pdfwriter_set_page_ranges(void* self, void* ranges);
 
-/// @warning DEPRECATED: Use `q_pdfwriter_super_set_page_ranges` instead
-///
-#define q_pdfwriter_qbase_set_page_ranges q_pdfwriter_super_set_page_ranges
-
 /// Inherited from QPagedPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagedpaintdevice.html#setPageRanges)
@@ -1382,10 +1310,6 @@ void q_pdfwriter_on_set_page_ranges(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_pdfwriter_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `q_pdfwriter_super_dev_type` instead
-///
-#define q_pdfwriter_qbase_dev_type q_pdfwriter_super_dev_type
-
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devType)
@@ -1417,10 +1341,6 @@ void q_pdfwriter_on_dev_type(void* self, int32_t (*callback)());
 /// @param painter QPainter*
 ///
 void q_pdfwriter_init_painter(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_pdfwriter_super_init_painter` instead
-///
-#define q_pdfwriter_qbase_init_painter q_pdfwriter_super_init_painter
 
 /// Inherited from QPaintDevice
 ///
@@ -1455,10 +1375,6 @@ void q_pdfwriter_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_pdfwriter_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `q_pdfwriter_super_redirected` instead
-///
-#define q_pdfwriter_qbase_redirected q_pdfwriter_super_redirected
-
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#redirected)
@@ -1491,10 +1407,6 @@ void q_pdfwriter_on_redirected(void* self, QPaintDevice* (*callback)(void*, void
 ///
 QPainter* q_pdfwriter_shared_painter(void* self);
 
-/// @warning DEPRECATED: Use `q_pdfwriter_super_shared_painter` instead
-///
-#define q_pdfwriter_qbase_shared_painter q_pdfwriter_super_shared_painter
-
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#sharedPainter)
@@ -1525,10 +1437,6 @@ void q_pdfwriter_on_shared_painter(void* self, QPainter* (*callback)());
 /// @param self QPdfWriter*
 ///
 QObject* q_pdfwriter_sender(void* self);
-
-/// @warning DEPRECATED: Use `q_pdfwriter_super_sender` instead
-///
-#define q_pdfwriter_qbase_sender q_pdfwriter_super_sender
 
 /// Inherited from QObject
 ///
@@ -1561,10 +1469,6 @@ void q_pdfwriter_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_pdfwriter_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `q_pdfwriter_super_sender_signal_index` instead
-///
-#define q_pdfwriter_qbase_sender_signal_index q_pdfwriter_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1596,10 +1500,6 @@ void q_pdfwriter_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t q_pdfwriter_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `q_pdfwriter_super_receivers` instead
-///
-#define q_pdfwriter_qbase_receivers q_pdfwriter_super_receivers
 
 /// Inherited from QObject
 ///
@@ -1634,10 +1534,6 @@ void q_pdfwriter_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 bool q_pdfwriter_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_pdfwriter_super_is_signal_connected` instead
-///
-#define q_pdfwriter_qbase_is_signal_connected q_pdfwriter_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1671,10 +1567,6 @@ void q_pdfwriter_on_is_signal_connected(void* self, bool (*callback)(void*, void
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double q_pdfwriter_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `q_pdfwriter_super_get_decoded_metric_f` instead
-///
-#define q_pdfwriter_qbase_get_decoded_metric_f q_pdfwriter_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

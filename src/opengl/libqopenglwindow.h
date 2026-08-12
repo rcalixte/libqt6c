@@ -73,10 +73,6 @@ const QMetaObject* q_openglwindow_meta_object(void* self);
 ///
 void q_openglwindow_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_meta_object` instead
-///
-#define q_openglwindow_qbase_meta_object q_openglwindow_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -96,10 +92,6 @@ void* q_openglwindow_metacast(void* self, const char* param1);
 /// @param callback void* func(QOpenGLWindow* self, const char* param1)
 ///
 void q_openglwindow_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_metacast` instead
-///
-#define q_openglwindow_qbase_metacast q_openglwindow_super_metacast
 
 /// Base class method implementation
 ///
@@ -121,10 +113,6 @@ int32_t q_openglwindow_metacall(void* self, int32_t param1, int param2, void* pa
 /// @param callback int32_t func(QOpenGLWindow* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_openglwindow_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_metacall` instead
-///
-#define q_openglwindow_qbase_metacall q_openglwindow_super_metacall
 
 /// Base class method implementation
 ///
@@ -221,10 +209,6 @@ void q_openglwindow_initialize_g_l(void* self);
 ///
 void q_openglwindow_on_initialize_g_l(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_initialize_g_l` instead
-///
-#define q_openglwindow_qbase_initialize_g_l q_openglwindow_super_initialize_g_l
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#initializeGL)
 ///
 /// Base class method implementation
@@ -249,10 +233,6 @@ void q_openglwindow_resize_g_l(void* self, int w, int h);
 /// @param callback void func(QOpenGLWindow* self, int w, int h)
 ///
 void q_openglwindow_on_resize_g_l(void* self, void (*callback)(void*, int, int));
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_resize_g_l` instead
-///
-#define q_openglwindow_qbase_resize_g_l q_openglwindow_super_resize_g_l
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#resizeGL)
 ///
@@ -279,10 +259,6 @@ void q_openglwindow_paint_g_l(void* self);
 ///
 void q_openglwindow_on_paint_g_l(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_paint_g_l` instead
-///
-#define q_openglwindow_qbase_paint_g_l q_openglwindow_super_paint_g_l
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#paintGL)
 ///
 /// Base class method implementation
@@ -305,10 +281,6 @@ void q_openglwindow_paint_under_g_l(void* self);
 /// @param callback void func()
 ///
 void q_openglwindow_on_paint_under_g_l(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_paint_under_g_l` instead
-///
-#define q_openglwindow_qbase_paint_under_g_l q_openglwindow_super_paint_under_g_l
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#paintUnderGL)
 ///
@@ -333,10 +305,6 @@ void q_openglwindow_paint_over_g_l(void* self);
 ///
 void q_openglwindow_on_paint_over_g_l(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_paint_over_g_l` instead
-///
-#define q_openglwindow_qbase_paint_over_g_l q_openglwindow_super_paint_over_g_l
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#paintOverGL)
 ///
 /// Base class method implementation
@@ -360,10 +328,6 @@ void q_openglwindow_paint_event(void* self, void* event);
 /// @param callback void func(QOpenGLWindow* self, QPaintEvent* event)
 ///
 void q_openglwindow_on_paint_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_paint_event` instead
-///
-#define q_openglwindow_qbase_paint_event q_openglwindow_super_paint_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#paintEvent)
 ///
@@ -390,10 +354,6 @@ void q_openglwindow_resize_event(void* self, void* event);
 ///
 void q_openglwindow_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_resize_event` instead
-///
-#define q_openglwindow_qbase_resize_event q_openglwindow_super_resize_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#resizeEvent)
 ///
 /// Base class method implementation
@@ -419,10 +379,6 @@ int32_t q_openglwindow_metric(void* self, int32_t metric);
 ///
 void q_openglwindow_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_metric` instead
-///
-#define q_openglwindow_qbase_metric q_openglwindow_super_metric
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#metric)
 ///
 /// Base class method implementation
@@ -447,10 +403,6 @@ QPaintDevice* q_openglwindow_redirected(void* self, void* param1);
 /// @param callback QPaintDevice* func(QOpenGLWindow* self, QPoint* param1)
 ///
 void q_openglwindow_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_redirected` instead
-///
-#define q_openglwindow_qbase_redirected q_openglwindow_super_redirected
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglwindow.html#redirected)
 ///
@@ -2340,10 +2292,6 @@ int32_t q_openglwindow_encode_metric_f(int32_t metric, double value);
 ///
 void q_openglwindow_expose_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_expose_event` instead
-///
-#define q_openglwindow_qbase_expose_event q_openglwindow_super_expose_event
-
 /// Inherited from QPaintDeviceWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevicewindow.html#exposeEvent)
@@ -2376,10 +2324,6 @@ void q_openglwindow_on_expose_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_openglwindow_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_event` instead
-///
-#define q_openglwindow_qbase_event q_openglwindow_super_event
 
 /// Inherited from QPaintDeviceWindow
 ///
@@ -2415,10 +2359,6 @@ void q_openglwindow_on_event(void* self, bool (*callback)(void*, void*));
 ///
 int32_t q_openglwindow_surface_type(void* self);
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_surface_type` instead
-///
-#define q_openglwindow_qbase_surface_type q_openglwindow_super_surface_type
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#surfaceType)
@@ -2451,10 +2391,6 @@ void q_openglwindow_on_surface_type(void* self, int32_t (*callback)());
 /// @param self QOpenGLWindow*
 ///
 QSurfaceFormat* q_openglwindow_format(void* self);
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_format` instead
-///
-#define q_openglwindow_qbase_format q_openglwindow_super_format
 
 /// Inherited from QWindow
 ///
@@ -2489,10 +2425,6 @@ void q_openglwindow_on_format(void* self, QSurfaceFormat* (*callback)());
 ///
 QSize* q_openglwindow_size(void* self);
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_size` instead
-///
-#define q_openglwindow_qbase_size q_openglwindow_super_size
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#size)
@@ -2526,10 +2458,6 @@ void q_openglwindow_on_size(void* self, QSize* (*callback)());
 ///
 QAccessibleInterface* q_openglwindow_accessible_root(void* self);
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_accessible_root` instead
-///
-#define q_openglwindow_qbase_accessible_root q_openglwindow_super_accessible_root
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#accessibleRoot)
@@ -2560,10 +2488,6 @@ void q_openglwindow_on_accessible_root(void* self, QAccessibleInterface* (*callb
 /// @param self QOpenGLWindow*
 ///
 QObject* q_openglwindow_focus_object(void* self);
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_focus_object` instead
-///
-#define q_openglwindow_qbase_focus_object q_openglwindow_super_focus_object
 
 /// Inherited from QWindow
 ///
@@ -2596,10 +2520,6 @@ void q_openglwindow_on_focus_object(void* self, QObject* (*callback)());
 /// @param param1 QMoveEvent*
 ///
 void q_openglwindow_move_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_move_event` instead
-///
-#define q_openglwindow_qbase_move_event q_openglwindow_super_move_event
 
 /// Inherited from QWindow
 ///
@@ -2634,10 +2554,6 @@ void q_openglwindow_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_openglwindow_focus_in_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_focus_in_event` instead
-///
-#define q_openglwindow_qbase_focus_in_event q_openglwindow_super_focus_in_event
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#focusInEvent)
@@ -2670,10 +2586,6 @@ void q_openglwindow_on_focus_in_event(void* self, void (*callback)(void*, void*)
 /// @param param1 QFocusEvent*
 ///
 void q_openglwindow_focus_out_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_focus_out_event` instead
-///
-#define q_openglwindow_qbase_focus_out_event q_openglwindow_super_focus_out_event
 
 /// Inherited from QWindow
 ///
@@ -2708,10 +2620,6 @@ void q_openglwindow_on_focus_out_event(void* self, void (*callback)(void*, void*
 ///
 void q_openglwindow_show_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_show_event` instead
-///
-#define q_openglwindow_qbase_show_event q_openglwindow_super_show_event
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#showEvent)
@@ -2744,10 +2652,6 @@ void q_openglwindow_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QHideEvent*
 ///
 void q_openglwindow_hide_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_hide_event` instead
-///
-#define q_openglwindow_qbase_hide_event q_openglwindow_super_hide_event
 
 /// Inherited from QWindow
 ///
@@ -2782,10 +2686,6 @@ void q_openglwindow_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 void q_openglwindow_close_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_close_event` instead
-///
-#define q_openglwindow_qbase_close_event q_openglwindow_super_close_event
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#closeEvent)
@@ -2818,10 +2718,6 @@ void q_openglwindow_on_close_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QKeyEvent*
 ///
 void q_openglwindow_key_press_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_key_press_event` instead
-///
-#define q_openglwindow_qbase_key_press_event q_openglwindow_super_key_press_event
 
 /// Inherited from QWindow
 ///
@@ -2856,10 +2752,6 @@ void q_openglwindow_on_key_press_event(void* self, void (*callback)(void*, void*
 ///
 void q_openglwindow_key_release_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_key_release_event` instead
-///
-#define q_openglwindow_qbase_key_release_event q_openglwindow_super_key_release_event
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#keyReleaseEvent)
@@ -2892,10 +2784,6 @@ void q_openglwindow_on_key_release_event(void* self, void (*callback)(void*, voi
 /// @param param1 QMouseEvent*
 ///
 void q_openglwindow_mouse_press_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_mouse_press_event` instead
-///
-#define q_openglwindow_qbase_mouse_press_event q_openglwindow_super_mouse_press_event
 
 /// Inherited from QWindow
 ///
@@ -2930,10 +2818,6 @@ void q_openglwindow_on_mouse_press_event(void* self, void (*callback)(void*, voi
 ///
 void q_openglwindow_mouse_release_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_mouse_release_event` instead
-///
-#define q_openglwindow_qbase_mouse_release_event q_openglwindow_super_mouse_release_event
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mouseReleaseEvent)
@@ -2966,10 +2850,6 @@ void q_openglwindow_on_mouse_release_event(void* self, void (*callback)(void*, v
 /// @param param1 QMouseEvent*
 ///
 void q_openglwindow_mouse_double_click_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_mouse_double_click_event` instead
-///
-#define q_openglwindow_qbase_mouse_double_click_event q_openglwindow_super_mouse_double_click_event
 
 /// Inherited from QWindow
 ///
@@ -3004,10 +2884,6 @@ void q_openglwindow_on_mouse_double_click_event(void* self, void (*callback)(voi
 ///
 void q_openglwindow_mouse_move_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_mouse_move_event` instead
-///
-#define q_openglwindow_qbase_mouse_move_event q_openglwindow_super_mouse_move_event
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mouseMoveEvent)
@@ -3040,10 +2916,6 @@ void q_openglwindow_on_mouse_move_event(void* self, void (*callback)(void*, void
 /// @param param1 QWheelEvent*
 ///
 void q_openglwindow_wheel_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_wheel_event` instead
-///
-#define q_openglwindow_qbase_wheel_event q_openglwindow_super_wheel_event
 
 /// Inherited from QWindow
 ///
@@ -3078,10 +2950,6 @@ void q_openglwindow_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void q_openglwindow_touch_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_touch_event` instead
-///
-#define q_openglwindow_qbase_touch_event q_openglwindow_super_touch_event
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#touchEvent)
@@ -3114,10 +2982,6 @@ void q_openglwindow_on_touch_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QTabletEvent*
 ///
 void q_openglwindow_tablet_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_tablet_event` instead
-///
-#define q_openglwindow_qbase_tablet_event q_openglwindow_super_tablet_event
 
 /// Inherited from QWindow
 ///
@@ -3153,10 +3017,6 @@ void q_openglwindow_on_tablet_event(void* self, void (*callback)(void*, void*));
 /// @param result intptr_t*
 ///
 bool q_openglwindow_native_event(void* self, char* eventType, void* message, intptr_t* result);
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_native_event` instead
-///
-#define q_openglwindow_qbase_native_event q_openglwindow_super_native_event
 
 /// Inherited from QWindow
 ///
@@ -3194,10 +3054,6 @@ void q_openglwindow_on_native_event(void* self, bool (*callback)(void*, libqt_st
 ///
 bool q_openglwindow_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_event_filter` instead
-///
-#define q_openglwindow_qbase_event_filter q_openglwindow_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -3232,10 +3088,6 @@ void q_openglwindow_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void q_openglwindow_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_timer_event` instead
-///
-#define q_openglwindow_qbase_timer_event q_openglwindow_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -3268,10 +3120,6 @@ void q_openglwindow_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_openglwindow_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_child_event` instead
-///
-#define q_openglwindow_qbase_child_event q_openglwindow_super_child_event
 
 /// Inherited from QObject
 ///
@@ -3306,10 +3154,6 @@ void q_openglwindow_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_openglwindow_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_custom_event` instead
-///
-#define q_openglwindow_qbase_custom_event q_openglwindow_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -3342,10 +3186,6 @@ void q_openglwindow_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_openglwindow_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_connect_notify` instead
-///
-#define q_openglwindow_qbase_connect_notify q_openglwindow_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -3380,10 +3220,6 @@ void q_openglwindow_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void q_openglwindow_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_disconnect_notify` instead
-///
-#define q_openglwindow_qbase_disconnect_notify q_openglwindow_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -3415,10 +3251,6 @@ void q_openglwindow_on_disconnect_notify(void* self, void (*callback)(void*, voi
 /// @param self QOpenGLWindow*
 ///
 int32_t q_openglwindow_dev_type(void* self);
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_dev_type` instead
-///
-#define q_openglwindow_qbase_dev_type q_openglwindow_super_dev_type
 
 /// Inherited from QPaintDevice
 ///
@@ -3452,10 +3284,6 @@ void q_openglwindow_on_dev_type(void* self, int32_t (*callback)());
 ///
 void q_openglwindow_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_init_painter` instead
-///
-#define q_openglwindow_qbase_init_painter q_openglwindow_super_init_painter
-
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#initPainter)
@@ -3487,10 +3315,6 @@ void q_openglwindow_on_init_painter(void* self, void (*callback)(void*, void*));
 /// @param self QOpenGLWindow*
 ///
 QPainter* q_openglwindow_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_shared_painter` instead
-///
-#define q_openglwindow_qbase_shared_painter q_openglwindow_super_shared_painter
 
 /// Inherited from QPaintDevice
 ///
@@ -3525,10 +3349,6 @@ void q_openglwindow_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void* q_openglwindow_resolve_interface(void* self, const char* name, int revision);
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_resolve_interface` instead
-///
-#define q_openglwindow_qbase_resolve_interface q_openglwindow_super_resolve_interface
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#resolveInterface)
@@ -3562,10 +3382,6 @@ void q_openglwindow_on_resolve_interface(void* self, void* (*callback)(void*, co
 ///
 QObject* q_openglwindow_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_sender` instead
-///
-#define q_openglwindow_qbase_sender q_openglwindow_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -3596,10 +3412,6 @@ void q_openglwindow_on_sender(void* self, QObject* (*callback)());
 /// @param self QOpenGLWindow*
 ///
 int32_t q_openglwindow_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_sender_signal_index` instead
-///
-#define q_openglwindow_qbase_sender_signal_index q_openglwindow_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -3632,10 +3444,6 @@ void q_openglwindow_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t q_openglwindow_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_receivers` instead
-///
-#define q_openglwindow_qbase_receivers q_openglwindow_super_receivers
 
 /// Inherited from QObject
 ///
@@ -3670,10 +3478,6 @@ void q_openglwindow_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 bool q_openglwindow_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_openglwindow_super_is_signal_connected` instead
-///
-#define q_openglwindow_qbase_is_signal_connected q_openglwindow_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -3707,10 +3511,6 @@ void q_openglwindow_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double q_openglwindow_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `q_openglwindow_super_get_decoded_metric_f` instead
-///
-#define q_openglwindow_qbase_get_decoded_metric_f q_openglwindow_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

@@ -31,10 +31,6 @@ QAbstractItemModel* k_abstractviewadapter_model(void* self);
 ///
 void k_abstractviewadapter_on_model(void* self, QAbstractItemModel* (*callback)());
 
-/// @warning DEPRECATED: Use `k_abstractviewadapter_super_model` instead
-///
-#define k_abstractviewadapter_qbase_model k_abstractviewadapter_super_model
-
 /// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#model)
 ///
 /// Base class method implementation
@@ -59,10 +55,6 @@ QSize* k_abstractviewadapter_icon_size(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_abstractviewadapter_on_icon_size(void* self, QSize* (*callback)());
-
-/// @warning DEPRECATED: Use `k_abstractviewadapter_super_icon_size` instead
-///
-#define k_abstractviewadapter_qbase_icon_size k_abstractviewadapter_super_icon_size
 
 /// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#iconSize)
 ///
@@ -89,10 +81,6 @@ QPalette* k_abstractviewadapter_palette(void* self);
 ///
 void k_abstractviewadapter_on_palette(void* self, QPalette* (*callback)());
 
-/// @warning DEPRECATED: Use `k_abstractviewadapter_super_palette` instead
-///
-#define k_abstractviewadapter_qbase_palette k_abstractviewadapter_super_palette
-
 /// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#palette)
 ///
 /// Base class method implementation
@@ -117,10 +105,6 @@ QRect* k_abstractviewadapter_visible_area(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_abstractviewadapter_on_visible_area(void* self, QRect* (*callback)());
-
-/// @warning DEPRECATED: Use `k_abstractviewadapter_super_visible_area` instead
-///
-#define k_abstractviewadapter_qbase_visible_area k_abstractviewadapter_super_visible_area
 
 /// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#visibleArea)
 ///
@@ -148,10 +132,6 @@ QRect* k_abstractviewadapter_visual_rect(void* self, void* index);
 ///
 void k_abstractviewadapter_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_abstractviewadapter_super_visual_rect` instead
-///
-#define k_abstractviewadapter_qbase_visual_rect k_abstractviewadapter_super_visual_rect
-
 /// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#visualRect)
 ///
 /// Base class method implementation
@@ -178,10 +158,6 @@ void k_abstractviewadapter_connect(void* self, int32_t signal, void* receiver, c
 /// @param callback void func(KAbstractViewAdapter* self, enum KAbstractViewAdapter__Signal signal, QObject* receiver, const char* slot)
 ///
 void k_abstractviewadapter_on_connect(void* self, void (*callback)(void*, int32_t, void*, const char*));
-
-/// @warning DEPRECATED: Use `k_abstractviewadapter_super_connect` instead
-///
-#define k_abstractviewadapter_qbase_connect k_abstractviewadapter_super_connect
 
 /// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#connect)
 ///
@@ -673,10 +649,6 @@ void k_abstractviewadapter_on_destroyed1(void* self, void (*callback)(void*, voi
 ///
 const QMetaObject* k_abstractviewadapter_meta_object(void* self);
 
-/// @warning DEPRECATED: Use `k_abstractviewadapter_super_meta_object` instead
-///
-#define k_abstractviewadapter_qbase_meta_object k_abstractviewadapter_super_meta_object
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
@@ -708,10 +680,6 @@ void k_abstractviewadapter_on_meta_object(void* self, const QMetaObject* (*callb
 /// @param param1 const char*
 ///
 void* k_abstractviewadapter_metacast(void* self, const char* param1);
-
-/// @warning DEPRECATED: Use `k_abstractviewadapter_super_metacast` instead
-///
-#define k_abstractviewadapter_qbase_metacast k_abstractviewadapter_super_metacast
 
 /// Inherited from QObject
 ///
@@ -748,10 +716,6 @@ void k_abstractviewadapter_on_metacast(void* self, void* (*callback)(void*, cons
 ///
 int32_t k_abstractviewadapter_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// @warning DEPRECATED: Use `k_abstractviewadapter_super_metacall` instead
-///
-#define k_abstractviewadapter_qbase_metacall k_abstractviewadapter_super_metacall
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacall)
@@ -787,10 +751,6 @@ void k_abstractviewadapter_on_metacall(void* self, int32_t (*callback)(void*, in
 ///
 bool k_abstractviewadapter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_abstractviewadapter_super_event` instead
-///
-#define k_abstractviewadapter_qbase_event k_abstractviewadapter_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -824,10 +784,6 @@ void k_abstractviewadapter_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool k_abstractviewadapter_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_abstractviewadapter_super_event_filter` instead
-///
-#define k_abstractviewadapter_qbase_event_filter k_abstractviewadapter_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -863,10 +819,6 @@ void k_abstractviewadapter_on_event_filter(void* self, bool (*callback)(void*, v
 ///
 void k_abstractviewadapter_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_abstractviewadapter_super_timer_event` instead
-///
-#define k_abstractviewadapter_qbase_timer_event k_abstractviewadapter_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -899,10 +851,6 @@ void k_abstractviewadapter_on_timer_event(void* self, void (*callback)(void*, vo
 /// @param event QChildEvent*
 ///
 void k_abstractviewadapter_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_abstractviewadapter_super_child_event` instead
-///
-#define k_abstractviewadapter_qbase_child_event k_abstractviewadapter_super_child_event
 
 /// Inherited from QObject
 ///
@@ -937,10 +885,6 @@ void k_abstractviewadapter_on_child_event(void* self, void (*callback)(void*, vo
 ///
 void k_abstractviewadapter_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_abstractviewadapter_super_custom_event` instead
-///
-#define k_abstractviewadapter_qbase_custom_event k_abstractviewadapter_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -973,10 +917,6 @@ void k_abstractviewadapter_on_custom_event(void* self, void (*callback)(void*, v
 /// @param signal QMetaMethod*
 ///
 void k_abstractviewadapter_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_abstractviewadapter_super_connect_notify` instead
-///
-#define k_abstractviewadapter_qbase_connect_notify k_abstractviewadapter_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1011,10 +951,6 @@ void k_abstractviewadapter_on_connect_notify(void* self, void (*callback)(void*,
 ///
 void k_abstractviewadapter_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_abstractviewadapter_super_disconnect_notify` instead
-///
-#define k_abstractviewadapter_qbase_disconnect_notify k_abstractviewadapter_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1047,10 +983,6 @@ void k_abstractviewadapter_on_disconnect_notify(void* self, void (*callback)(voi
 ///
 QObject* k_abstractviewadapter_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_abstractviewadapter_super_sender` instead
-///
-#define k_abstractviewadapter_qbase_sender k_abstractviewadapter_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1081,10 +1013,6 @@ void k_abstractviewadapter_on_sender(void* self, QObject* (*callback)());
 /// @param self KAbstractViewAdapter*
 ///
 int32_t k_abstractviewadapter_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_abstractviewadapter_super_sender_signal_index` instead
-///
-#define k_abstractviewadapter_qbase_sender_signal_index k_abstractviewadapter_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1118,10 +1046,6 @@ void k_abstractviewadapter_on_sender_signal_index(void* self, int32_t (*callback
 ///
 int32_t k_abstractviewadapter_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_abstractviewadapter_super_receivers` instead
-///
-#define k_abstractviewadapter_qbase_receivers k_abstractviewadapter_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1154,10 +1078,6 @@ void k_abstractviewadapter_on_receivers(void* self, int32_t (*callback)(void*, c
 /// @param signal QMetaMethod*
 ///
 bool k_abstractviewadapter_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_abstractviewadapter_super_is_signal_connected` instead
-///
-#define k_abstractviewadapter_qbase_is_signal_connected k_abstractviewadapter_super_is_signal_connected
 
 /// Inherited from QObject
 ///

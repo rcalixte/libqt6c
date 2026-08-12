@@ -37,10 +37,6 @@ const QMetaObject* k_rearrangecolumnsproxymodel_meta_object(void* self);
 ///
 void k_rearrangecolumnsproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_meta_object` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_meta_object k_rearrangecolumnsproxymodel_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* k_rearrangecolumnsproxymodel_metacast(void* self, const char* param1);
 /// @param callback void* func(KRearrangeColumnsProxyModel* self, const char* param1)
 ///
 void k_rearrangecolumnsproxymodel_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_metacast` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_metacast k_rearrangecolumnsproxymodel_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t k_rearrangecolumnsproxymodel_metacall(void* self, int32_t param1, int pa
 /// @param callback int32_t func(KRearrangeColumnsProxyModel* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_rearrangecolumnsproxymodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_metacall` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_metacall k_rearrangecolumnsproxymodel_super_metacall
 
 /// Base class method implementation
 ///
@@ -130,10 +118,6 @@ int32_t k_rearrangecolumnsproxymodel_column_count(void* self, void* parent);
 ///
 void k_rearrangecolumnsproxymodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_column_count` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_column_count k_rearrangecolumnsproxymodel_super_column_count
-
 /// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#columnCount)
 ///
 /// Base class method implementation
@@ -158,10 +142,6 @@ int32_t k_rearrangecolumnsproxymodel_row_count(void* self, void* parent);
 /// @param callback int32_t func(KRearrangeColumnsProxyModel* self, QModelIndex* parent)
 ///
 void k_rearrangecolumnsproxymodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_row_count` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_row_count k_rearrangecolumnsproxymodel_super_row_count
 
 /// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#rowCount)
 ///
@@ -192,10 +172,6 @@ QModelIndex* k_rearrangecolumnsproxymodel_index(void* self, int row, int column,
 ///
 void k_rearrangecolumnsproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_index` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_index k_rearrangecolumnsproxymodel_super_index
-
 /// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#index)
 ///
 /// Base class method implementation
@@ -225,10 +201,6 @@ QModelIndex* k_rearrangecolumnsproxymodel_parent(void* self, void* child);
 ///
 void k_rearrangecolumnsproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_parent` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_parent k_rearrangecolumnsproxymodel_super_parent
-
 /// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#parent)
 ///
 /// Base class method implementation
@@ -256,10 +228,6 @@ QModelIndex* k_rearrangecolumnsproxymodel_map_from_source(void* self, void* sour
 ///
 void k_rearrangecolumnsproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_map_from_source` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_map_from_source k_rearrangecolumnsproxymodel_super_map_from_source
-
 /// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#mapFromSource)
 ///
 /// Base class method implementation
@@ -286,10 +254,6 @@ QModelIndex* k_rearrangecolumnsproxymodel_map_to_source(void* self, void* proxyI
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_rearrangecolumnsproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_map_to_source` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_map_to_source k_rearrangecolumnsproxymodel_super_map_to_source
 
 /// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#mapToSource)
 ///
@@ -320,10 +284,6 @@ QVariant* k_rearrangecolumnsproxymodel_header_data(void* self, int section, int3
 ///
 void k_rearrangecolumnsproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_header_data` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_header_data k_rearrangecolumnsproxymodel_super_header_data
-
 /// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#headerData)
 ///
 /// Base class method implementation
@@ -350,10 +310,6 @@ bool k_rearrangecolumnsproxymodel_has_children(void* self, void* parent);
 /// @param callback bool func(KRearrangeColumnsProxyModel* self, QModelIndex* parent)
 ///
 void k_rearrangecolumnsproxymodel_on_has_children(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_has_children` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_has_children k_rearrangecolumnsproxymodel_super_has_children
 
 /// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#hasChildren)
 ///
@@ -383,10 +339,6 @@ QModelIndex* k_rearrangecolumnsproxymodel_sibling(void* self, int row, int colum
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_rearrangecolumnsproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_sibling` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_sibling k_rearrangecolumnsproxymodel_super_sibling
 
 /// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#sibling)
 ///
@@ -1217,10 +1169,6 @@ void k_rearrangecolumnsproxymodel_on_destroyed1(void* self, void (*callback)(voi
 ///
 bool k_rearrangecolumnsproxymodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_drop_mime_data` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_drop_mime_data k_rearrangecolumnsproxymodel_super_drop_mime_data
-
 /// Inherited from QIdentityProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#dropMimeData)
@@ -1258,10 +1206,6 @@ void k_rearrangecolumnsproxymodel_on_drop_mime_data(void* self, bool (*callback)
 ///
 QItemSelection* k_rearrangecolumnsproxymodel_map_selection_from_source(void* self, void* selection);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_map_selection_from_source` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_map_selection_from_source k_rearrangecolumnsproxymodel_super_map_selection_from_source
-
 /// Inherited from QIdentityProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapSelectionFromSource)
@@ -1296,10 +1240,6 @@ void k_rearrangecolumnsproxymodel_on_map_selection_from_source(void* self, QItem
 /// @param selection QItemSelection*
 ///
 QItemSelection* k_rearrangecolumnsproxymodel_map_selection_to_source(void* self, void* selection);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_map_selection_to_source` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_map_selection_to_source k_rearrangecolumnsproxymodel_super_map_selection_to_source
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1342,10 +1282,6 @@ void k_rearrangecolumnsproxymodel_on_map_selection_to_source(void* self, QItemSe
 ///
 libqt_list k_rearrangecolumnsproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_match` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_match k_rearrangecolumnsproxymodel_super_match
-
 /// Inherited from QIdentityProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#match)
@@ -1385,10 +1321,6 @@ void k_rearrangecolumnsproxymodel_on_match(void* self, libqt_list (*callback)(vo
 ///
 void k_rearrangecolumnsproxymodel_set_source_model(void* self, void* sourceModel);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_set_source_model` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_set_source_model k_rearrangecolumnsproxymodel_super_set_source_model
-
 /// Inherited from QIdentityProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#setSourceModel)
@@ -1423,10 +1355,6 @@ void k_rearrangecolumnsproxymodel_on_set_source_model(void* self, void (*callbac
 /// @param parent QModelIndex*
 ///
 bool k_rearrangecolumnsproxymodel_insert_columns(void* self, int column, int count, void* parent);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_insert_columns` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_insert_columns k_rearrangecolumnsproxymodel_super_insert_columns
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1465,10 +1393,6 @@ void k_rearrangecolumnsproxymodel_on_insert_columns(void* self, bool (*callback)
 ///
 bool k_rearrangecolumnsproxymodel_insert_rows(void* self, int row, int count, void* parent);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_insert_rows` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_insert_rows k_rearrangecolumnsproxymodel_super_insert_rows
-
 /// Inherited from QIdentityProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#insertRows)
@@ -1506,10 +1430,6 @@ void k_rearrangecolumnsproxymodel_on_insert_rows(void* self, bool (*callback)(vo
 ///
 bool k_rearrangecolumnsproxymodel_remove_columns(void* self, int column, int count, void* parent);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_remove_columns` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_remove_columns k_rearrangecolumnsproxymodel_super_remove_columns
-
 /// Inherited from QIdentityProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#removeColumns)
@@ -1546,10 +1466,6 @@ void k_rearrangecolumnsproxymodel_on_remove_columns(void* self, bool (*callback)
 /// @param parent QModelIndex*
 ///
 bool k_rearrangecolumnsproxymodel_remove_rows(void* self, int row, int count, void* parent);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_remove_rows` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_remove_rows k_rearrangecolumnsproxymodel_super_remove_rows
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1589,10 +1505,6 @@ void k_rearrangecolumnsproxymodel_on_remove_rows(void* self, bool (*callback)(vo
 /// @param destinationChild int
 ///
 bool k_rearrangecolumnsproxymodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_move_rows` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_move_rows k_rearrangecolumnsproxymodel_super_move_rows
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1635,10 +1547,6 @@ void k_rearrangecolumnsproxymodel_on_move_rows(void* self, bool (*callback)(void
 ///
 bool k_rearrangecolumnsproxymodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_move_columns` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_move_columns k_rearrangecolumnsproxymodel_super_move_columns
-
 /// Inherited from QIdentityProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#moveColumns)
@@ -1675,10 +1583,6 @@ void k_rearrangecolumnsproxymodel_on_move_columns(void* self, bool (*callback)(v
 ///
 bool k_rearrangecolumnsproxymodel_submit(void* self);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_submit` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_submit k_rearrangecolumnsproxymodel_super_submit
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
@@ -1709,10 +1613,6 @@ void k_rearrangecolumnsproxymodel_on_submit(void* self, bool (*callback)());
 /// @param self KRearrangeColumnsProxyModel*
 ///
 void k_rearrangecolumnsproxymodel_revert(void* self);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_revert` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_revert k_rearrangecolumnsproxymodel_super_revert
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1746,10 +1646,6 @@ void k_rearrangecolumnsproxymodel_on_revert(void* self, void (*callback)());
 /// @param role int
 ///
 QVariant* k_rearrangecolumnsproxymodel_data(void* self, void* proxyIndex, int role);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_data` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_data k_rearrangecolumnsproxymodel_super_data
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1800,10 +1696,6 @@ void k_rearrangecolumnsproxymodel_on_data(void* self, QVariant* (*callback)(void
 ///
 libqt_map k_rearrangecolumnsproxymodel_item_data(void* self, void* index);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_item_data` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_item_data k_rearrangecolumnsproxymodel_super_item_data
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
@@ -1852,10 +1744,6 @@ void k_rearrangecolumnsproxymodel_on_item_data(void* self, libqt_map (*callback)
 ///
 int32_t k_rearrangecolumnsproxymodel_flags(void* self, void* index);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_flags` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_flags k_rearrangecolumnsproxymodel_super_flags
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#flags)
@@ -1893,10 +1781,6 @@ void k_rearrangecolumnsproxymodel_on_flags(void* self, int32_t (*callback)(void*
 ///
 bool k_rearrangecolumnsproxymodel_set_data(void* self, void* index, void* value, int role);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_set_data` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_set_data k_rearrangecolumnsproxymodel_super_set_data
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setData)
@@ -1932,10 +1816,6 @@ void k_rearrangecolumnsproxymodel_on_set_data(void* self, bool (*callback)(void*
 /// @param roles libqt_map of int to QVariant*
 ///
 bool k_rearrangecolumnsproxymodel_set_item_data(void* self, void* index, libqt_map roles);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_set_item_data` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_set_item_data k_rearrangecolumnsproxymodel_super_set_item_data
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1974,10 +1854,6 @@ void k_rearrangecolumnsproxymodel_on_set_item_data(void* self, bool (*callback)(
 ///
 bool k_rearrangecolumnsproxymodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_set_header_data` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_set_header_data k_rearrangecolumnsproxymodel_super_set_header_data
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setHeaderData)
@@ -2014,10 +1890,6 @@ void k_rearrangecolumnsproxymodel_on_set_header_data(void* self, bool (*callback
 ///
 bool k_rearrangecolumnsproxymodel_clear_item_data(void* self, void* index);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_clear_item_data` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_clear_item_data k_rearrangecolumnsproxymodel_super_clear_item_data
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
@@ -2050,10 +1922,6 @@ void k_rearrangecolumnsproxymodel_on_clear_item_data(void* self, bool (*callback
 /// @param index QModelIndex*
 ///
 QModelIndex* k_rearrangecolumnsproxymodel_buddy(void* self, void* index);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_buddy` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_buddy k_rearrangecolumnsproxymodel_super_buddy
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2090,10 +1958,6 @@ void k_rearrangecolumnsproxymodel_on_buddy(void* self, QModelIndex* (*callback)(
 ///
 bool k_rearrangecolumnsproxymodel_can_fetch_more(void* self, void* parent);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_can_fetch_more` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_can_fetch_more k_rearrangecolumnsproxymodel_super_can_fetch_more
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canFetchMore)
@@ -2126,10 +1990,6 @@ void k_rearrangecolumnsproxymodel_on_can_fetch_more(void* self, bool (*callback)
 /// @param parent QModelIndex*
 ///
 void k_rearrangecolumnsproxymodel_fetch_more(void* self, void* parent);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_fetch_more` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_fetch_more k_rearrangecolumnsproxymodel_super_fetch_more
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2165,10 +2025,6 @@ void k_rearrangecolumnsproxymodel_on_fetch_more(void* self, void (*callback)(voi
 ///
 void k_rearrangecolumnsproxymodel_sort(void* self, int column, int32_t order);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_sort` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_sort k_rearrangecolumnsproxymodel_super_sort
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sort)
@@ -2202,10 +2058,6 @@ void k_rearrangecolumnsproxymodel_on_sort(void* self, void (*callback)(void*, in
 /// @param index QModelIndex*
 ///
 QSize* k_rearrangecolumnsproxymodel_span(void* self, void* index);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_span` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_span k_rearrangecolumnsproxymodel_super_span
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2241,10 +2093,6 @@ void k_rearrangecolumnsproxymodel_on_span(void* self, QSize* (*callback)(void*, 
 /// @param indexes libqt_list of QModelIndex*
 ///
 QMimeData* k_rearrangecolumnsproxymodel_mime_data(void* self, libqt_list indexes);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_mime_data` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_mime_data k_rearrangecolumnsproxymodel_super_mime_data
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2282,10 +2130,6 @@ void k_rearrangecolumnsproxymodel_on_mime_data(void* self, QMimeData* (*callback
 /// @param parent QModelIndex*
 ///
 bool k_rearrangecolumnsproxymodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_can_drop_mime_data` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_can_drop_mime_data k_rearrangecolumnsproxymodel_super_can_drop_mime_data
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2325,10 +2169,6 @@ void k_rearrangecolumnsproxymodel_on_can_drop_mime_data(void* self, bool (*callb
 ///
 const char** k_rearrangecolumnsproxymodel_mime_types(void* self);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_mime_types` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_mime_types k_rearrangecolumnsproxymodel_super_mime_types
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeTypes)
@@ -2364,10 +2204,6 @@ void k_rearrangecolumnsproxymodel_on_mime_types(void* self, const char** (*callb
 ///
 int32_t k_rearrangecolumnsproxymodel_supported_drag_actions(void* self);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_supported_drag_actions` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_supported_drag_actions k_rearrangecolumnsproxymodel_super_supported_drag_actions
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
@@ -2402,10 +2238,6 @@ void k_rearrangecolumnsproxymodel_on_supported_drag_actions(void* self, int32_t 
 /// @return flag of enum Qt__DropAction
 ///
 int32_t k_rearrangecolumnsproxymodel_supported_drop_actions(void* self);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_supported_drop_actions` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_supported_drop_actions k_rearrangecolumnsproxymodel_super_supported_drop_actions
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2453,10 +2285,6 @@ void k_rearrangecolumnsproxymodel_on_supported_drop_actions(void* self, int32_t 
 ///
 libqt_map k_rearrangecolumnsproxymodel_role_names(void* self);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_role_names` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_role_names k_rearrangecolumnsproxymodel_super_role_names
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
@@ -2503,10 +2331,6 @@ void k_rearrangecolumnsproxymodel_on_role_names(void* self, libqt_map (*callback
 ///
 void k_rearrangecolumnsproxymodel_multi_data(void* self, void* index, void* roleDataSpan);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_multi_data` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_multi_data k_rearrangecolumnsproxymodel_super_multi_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
@@ -2540,10 +2364,6 @@ void k_rearrangecolumnsproxymodel_on_multi_data(void* self, void (*callback)(voi
 ///
 void k_rearrangecolumnsproxymodel_reset_internal_data(void* self);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_reset_internal_data` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_reset_internal_data k_rearrangecolumnsproxymodel_super_reset_internal_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
@@ -2575,10 +2395,6 @@ void k_rearrangecolumnsproxymodel_on_reset_internal_data(void* self, void (*call
 /// @param event QEvent*
 ///
 bool k_rearrangecolumnsproxymodel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_event` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_event k_rearrangecolumnsproxymodel_super_event
 
 /// Inherited from QObject
 ///
@@ -2614,10 +2430,6 @@ void k_rearrangecolumnsproxymodel_on_event(void* self, bool (*callback)(void*, v
 ///
 bool k_rearrangecolumnsproxymodel_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_event_filter` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_event_filter k_rearrangecolumnsproxymodel_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -2652,10 +2464,6 @@ void k_rearrangecolumnsproxymodel_on_event_filter(void* self, bool (*callback)(v
 ///
 void k_rearrangecolumnsproxymodel_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_timer_event` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_timer_event k_rearrangecolumnsproxymodel_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2688,10 +2496,6 @@ void k_rearrangecolumnsproxymodel_on_timer_event(void* self, void (*callback)(vo
 /// @param event QChildEvent*
 ///
 void k_rearrangecolumnsproxymodel_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_child_event` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_child_event k_rearrangecolumnsproxymodel_super_child_event
 
 /// Inherited from QObject
 ///
@@ -2726,10 +2530,6 @@ void k_rearrangecolumnsproxymodel_on_child_event(void* self, void (*callback)(vo
 ///
 void k_rearrangecolumnsproxymodel_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_custom_event` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_custom_event k_rearrangecolumnsproxymodel_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2762,10 +2562,6 @@ void k_rearrangecolumnsproxymodel_on_custom_event(void* self, void (*callback)(v
 /// @param signal QMetaMethod*
 ///
 void k_rearrangecolumnsproxymodel_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_connect_notify` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_connect_notify k_rearrangecolumnsproxymodel_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -2800,10 +2596,6 @@ void k_rearrangecolumnsproxymodel_on_connect_notify(void* self, void (*callback)
 ///
 void k_rearrangecolumnsproxymodel_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_disconnect_notify` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_disconnect_notify k_rearrangecolumnsproxymodel_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -2837,10 +2629,6 @@ void k_rearrangecolumnsproxymodel_on_disconnect_notify(void* self, void (*callba
 ///
 void k_rearrangecolumnsproxymodel_set_handle_source_layout_changes(void* self, bool handleSourceLayoutChanges);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_set_handle_source_layout_changes` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_set_handle_source_layout_changes k_rearrangecolumnsproxymodel_super_set_handle_source_layout_changes
-
 /// Inherited from QIdentityProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceLayoutChanges)
@@ -2873,10 +2661,6 @@ void k_rearrangecolumnsproxymodel_on_set_handle_source_layout_changes(void* self
 /// @param handleSourceDataChanges bool
 ///
 void k_rearrangecolumnsproxymodel_set_handle_source_data_changes(void* self, bool handleSourceDataChanges);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_set_handle_source_data_changes` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_set_handle_source_data_changes k_rearrangecolumnsproxymodel_super_set_handle_source_data_changes
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -2912,10 +2696,6 @@ void k_rearrangecolumnsproxymodel_on_set_handle_source_data_changes(void* self, 
 /// @param internalPtr void*
 ///
 QModelIndex* k_rearrangecolumnsproxymodel_create_source_index(void* self, int row, int col, void* internalPtr);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_create_source_index` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_create_source_index k_rearrangecolumnsproxymodel_super_create_source_index
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2955,10 +2735,6 @@ void k_rearrangecolumnsproxymodel_on_create_source_index(void* self, QModelIndex
 ///
 QModelIndex* k_rearrangecolumnsproxymodel_create_index(void* self, int row, int column);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_create_index` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_create_index k_rearrangecolumnsproxymodel_super_create_index
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
@@ -2996,10 +2772,6 @@ void k_rearrangecolumnsproxymodel_on_create_index(void* self, QModelIndex* (*cal
 ///
 void k_rearrangecolumnsproxymodel_encode_data(void* self, libqt_list indexes, void* stream);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_encode_data` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_encode_data k_rearrangecolumnsproxymodel_super_encode_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
@@ -3036,10 +2808,6 @@ void k_rearrangecolumnsproxymodel_on_encode_data(void* self, void (*callback)(vo
 /// @param stream QDataStream*
 ///
 bool k_rearrangecolumnsproxymodel_decode_data(void* self, int row, int column, void* parent, void* stream);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_decode_data` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_decode_data k_rearrangecolumnsproxymodel_super_decode_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3079,10 +2847,6 @@ void k_rearrangecolumnsproxymodel_on_decode_data(void* self, bool (*callback)(vo
 ///
 void k_rearrangecolumnsproxymodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_begin_insert_rows` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_begin_insert_rows k_rearrangecolumnsproxymodel_super_begin_insert_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
@@ -3116,10 +2880,6 @@ void k_rearrangecolumnsproxymodel_on_begin_insert_rows(void* self, void (*callba
 /// @param self KRearrangeColumnsProxyModel*
 ///
 void k_rearrangecolumnsproxymodel_end_insert_rows(void* self);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_end_insert_rows` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_end_insert_rows k_rearrangecolumnsproxymodel_super_end_insert_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3155,10 +2915,6 @@ void k_rearrangecolumnsproxymodel_on_end_insert_rows(void* self, void (*callback
 ///
 void k_rearrangecolumnsproxymodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_begin_remove_rows` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_begin_remove_rows k_rearrangecolumnsproxymodel_super_begin_remove_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
@@ -3192,10 +2948,6 @@ void k_rearrangecolumnsproxymodel_on_begin_remove_rows(void* self, void (*callba
 /// @param self KRearrangeColumnsProxyModel*
 ///
 void k_rearrangecolumnsproxymodel_end_remove_rows(void* self);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_end_remove_rows` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_end_remove_rows k_rearrangecolumnsproxymodel_super_end_remove_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3233,10 +2985,6 @@ void k_rearrangecolumnsproxymodel_on_end_remove_rows(void* self, void (*callback
 ///
 bool k_rearrangecolumnsproxymodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_begin_move_rows` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_begin_move_rows k_rearrangecolumnsproxymodel_super_begin_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
@@ -3273,10 +3021,6 @@ void k_rearrangecolumnsproxymodel_on_begin_move_rows(void* self, bool (*callback
 ///
 void k_rearrangecolumnsproxymodel_end_move_rows(void* self);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_end_move_rows` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_end_move_rows k_rearrangecolumnsproxymodel_super_end_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
@@ -3310,10 +3054,6 @@ void k_rearrangecolumnsproxymodel_on_end_move_rows(void* self, void (*callback)(
 /// @param last int
 ///
 void k_rearrangecolumnsproxymodel_begin_insert_columns(void* self, void* parent, int first, int last);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_begin_insert_columns` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_begin_insert_columns k_rearrangecolumnsproxymodel_super_begin_insert_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3349,10 +3089,6 @@ void k_rearrangecolumnsproxymodel_on_begin_insert_columns(void* self, void (*cal
 ///
 void k_rearrangecolumnsproxymodel_end_insert_columns(void* self);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_end_insert_columns` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_end_insert_columns k_rearrangecolumnsproxymodel_super_end_insert_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
@@ -3387,10 +3123,6 @@ void k_rearrangecolumnsproxymodel_on_end_insert_columns(void* self, void (*callb
 ///
 void k_rearrangecolumnsproxymodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_begin_remove_columns` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_begin_remove_columns k_rearrangecolumnsproxymodel_super_begin_remove_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
@@ -3424,10 +3156,6 @@ void k_rearrangecolumnsproxymodel_on_begin_remove_columns(void* self, void (*cal
 /// @param self KRearrangeColumnsProxyModel*
 ///
 void k_rearrangecolumnsproxymodel_end_remove_columns(void* self);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_end_remove_columns` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_end_remove_columns k_rearrangecolumnsproxymodel_super_end_remove_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3465,10 +3193,6 @@ void k_rearrangecolumnsproxymodel_on_end_remove_columns(void* self, void (*callb
 ///
 bool k_rearrangecolumnsproxymodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_begin_move_columns` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_begin_move_columns k_rearrangecolumnsproxymodel_super_begin_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
@@ -3505,10 +3229,6 @@ void k_rearrangecolumnsproxymodel_on_begin_move_columns(void* self, bool (*callb
 ///
 void k_rearrangecolumnsproxymodel_end_move_columns(void* self);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_end_move_columns` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_end_move_columns k_rearrangecolumnsproxymodel_super_end_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
@@ -3540,10 +3260,6 @@ void k_rearrangecolumnsproxymodel_on_end_move_columns(void* self, void (*callbac
 ///
 void k_rearrangecolumnsproxymodel_begin_reset_model(void* self);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_begin_reset_model` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_begin_reset_model k_rearrangecolumnsproxymodel_super_begin_reset_model
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
@@ -3574,10 +3290,6 @@ void k_rearrangecolumnsproxymodel_on_begin_reset_model(void* self, void (*callba
 /// @param self KRearrangeColumnsProxyModel*
 ///
 void k_rearrangecolumnsproxymodel_end_reset_model(void* self);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_end_reset_model` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_end_reset_model k_rearrangecolumnsproxymodel_super_end_reset_model
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3611,10 +3323,6 @@ void k_rearrangecolumnsproxymodel_on_end_reset_model(void* self, void (*callback
 /// @param to QModelIndex*
 ///
 void k_rearrangecolumnsproxymodel_change_persistent_index(void* self, void* from, void* to);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_change_persistent_index` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_change_persistent_index k_rearrangecolumnsproxymodel_super_change_persistent_index
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3651,10 +3359,6 @@ void k_rearrangecolumnsproxymodel_on_change_persistent_index(void* self, void (*
 ///
 void k_rearrangecolumnsproxymodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_change_persistent_index_list` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_change_persistent_index_list k_rearrangecolumnsproxymodel_super_change_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
@@ -3690,10 +3394,6 @@ void k_rearrangecolumnsproxymodel_on_change_persistent_index_list(void* self, vo
 ///
 libqt_list k_rearrangecolumnsproxymodel_persistent_index_list(void* self);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_persistent_index_list` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_persistent_index_list k_rearrangecolumnsproxymodel_super_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
@@ -3727,10 +3427,6 @@ void k_rearrangecolumnsproxymodel_on_persistent_index_list(void* self, libqt_lis
 ///
 QObject* k_rearrangecolumnsproxymodel_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_sender` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_sender k_rearrangecolumnsproxymodel_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -3761,10 +3457,6 @@ void k_rearrangecolumnsproxymodel_on_sender(void* self, QObject* (*callback)());
 /// @param self KRearrangeColumnsProxyModel*
 ///
 int32_t k_rearrangecolumnsproxymodel_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_sender_signal_index` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_sender_signal_index k_rearrangecolumnsproxymodel_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -3798,10 +3490,6 @@ void k_rearrangecolumnsproxymodel_on_sender_signal_index(void* self, int32_t (*c
 ///
 int32_t k_rearrangecolumnsproxymodel_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_receivers` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_receivers k_rearrangecolumnsproxymodel_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -3834,10 +3522,6 @@ void k_rearrangecolumnsproxymodel_on_receivers(void* self, int32_t (*callback)(v
 /// @param signal QMetaMethod*
 ///
 bool k_rearrangecolumnsproxymodel_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_rearrangecolumnsproxymodel_super_is_signal_connected` instead
-///
-#define k_rearrangecolumnsproxymodel_qbase_is_signal_connected k_rearrangecolumnsproxymodel_super_is_signal_connected
 
 /// Inherited from QObject
 ///

@@ -31,10 +31,6 @@ const char* q_designeroptionspageinterface_name(void* self);
 ///
 void q_designeroptionspageinterface_on_name(void* self, const char* (*callback)());
 
-/// @warning DEPRECATED: Use `q_designeroptionspageinterface_super_name` instead
-///
-#define q_designeroptionspageinterface_qbase_name q_designeroptionspageinterface_super_name
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesigneroptionspageinterface.html#name)
 ///
 /// Base class method implementation
@@ -58,10 +54,6 @@ QWidget* q_designeroptionspageinterface_create_page(void* self, void* parent);
 /// @param callback QWidget* func(QDesignerOptionsPageInterface* self, QWidget* parent)
 ///
 void q_designeroptionspageinterface_on_create_page(void* self, QWidget* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_designeroptionspageinterface_super_create_page` instead
-///
-#define q_designeroptionspageinterface_qbase_create_page q_designeroptionspageinterface_super_create_page
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesigneroptionspageinterface.html#createPage)
 ///
@@ -87,10 +79,6 @@ void q_designeroptionspageinterface_apply(void* self);
 ///
 void q_designeroptionspageinterface_on_apply(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_designeroptionspageinterface_super_apply` instead
-///
-#define q_designeroptionspageinterface_qbase_apply q_designeroptionspageinterface_super_apply
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesigneroptionspageinterface.html#apply)
 ///
 /// Base class method implementation
@@ -113,10 +101,6 @@ void q_designeroptionspageinterface_finish(void* self);
 /// @param callback void func()
 ///
 void q_designeroptionspageinterface_on_finish(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_designeroptionspageinterface_super_finish` instead
-///
-#define q_designeroptionspageinterface_qbase_finish q_designeroptionspageinterface_super_finish
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesigneroptionspageinterface.html#finish)
 ///

@@ -29,10 +29,6 @@ const QMetaObject* k_pluginfactory_meta_object(void* self);
 ///
 void k_pluginfactory_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_pluginfactory_super_meta_object` instead
-///
-#define k_pluginfactory_qbase_meta_object k_pluginfactory_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -52,10 +48,6 @@ void* k_pluginfactory_metacast(void* self, const char* param1);
 /// @param callback void* func(KPluginFactory* self, const char* param1)
 ///
 void k_pluginfactory_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_pluginfactory_super_metacast` instead
-///
-#define k_pluginfactory_qbase_metacast k_pluginfactory_super_metacast
 
 /// Base class method implementation
 ///
@@ -77,10 +69,6 @@ int32_t k_pluginfactory_metacall(void* self, int32_t param1, int param2, void* p
 /// @param callback int32_t func(KPluginFactory* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_pluginfactory_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_pluginfactory_super_metacall` instead
-///
-#define k_pluginfactory_qbase_metacall k_pluginfactory_super_metacall
 
 /// Base class method implementation
 ///
@@ -130,10 +118,6 @@ QObject* k_pluginfactory_create(void* self, const char* iface, void* parentWidge
 /// @param callback QObject* func(KPluginFactory* self, const char* iface, QWidget* parentWidget, QObject* parent, libqt_list of QVariant* args)
 ///
 void k_pluginfactory_on_create(void* self, QObject* (*callback)(void*, const char*, void*, void*, libqt_list));
-
-/// @warning DEPRECATED: Use `k_pluginfactory_super_create` instead
-///
-#define k_pluginfactory_qbase_create k_pluginfactory_super_create
 
 /// [Upstream resources](https://api.kde.org/kpluginfactory.html#create)
 ///
@@ -624,10 +608,6 @@ void k_pluginfactory_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool k_pluginfactory_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_pluginfactory_super_event` instead
-///
-#define k_pluginfactory_qbase_event k_pluginfactory_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -661,10 +641,6 @@ void k_pluginfactory_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool k_pluginfactory_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_pluginfactory_super_event_filter` instead
-///
-#define k_pluginfactory_qbase_event_filter k_pluginfactory_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -700,10 +676,6 @@ void k_pluginfactory_on_event_filter(void* self, bool (*callback)(void*, void*, 
 ///
 void k_pluginfactory_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_pluginfactory_super_timer_event` instead
-///
-#define k_pluginfactory_qbase_timer_event k_pluginfactory_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -736,10 +708,6 @@ void k_pluginfactory_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void k_pluginfactory_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_pluginfactory_super_child_event` instead
-///
-#define k_pluginfactory_qbase_child_event k_pluginfactory_super_child_event
 
 /// Inherited from QObject
 ///
@@ -774,10 +742,6 @@ void k_pluginfactory_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_pluginfactory_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_pluginfactory_super_custom_event` instead
-///
-#define k_pluginfactory_qbase_custom_event k_pluginfactory_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -810,10 +774,6 @@ void k_pluginfactory_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param signal QMetaMethod*
 ///
 void k_pluginfactory_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_pluginfactory_super_connect_notify` instead
-///
-#define k_pluginfactory_qbase_connect_notify k_pluginfactory_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -848,10 +808,6 @@ void k_pluginfactory_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void k_pluginfactory_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_pluginfactory_super_disconnect_notify` instead
-///
-#define k_pluginfactory_qbase_disconnect_notify k_pluginfactory_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -884,10 +840,6 @@ void k_pluginfactory_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 QObject* k_pluginfactory_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_pluginfactory_super_sender` instead
-///
-#define k_pluginfactory_qbase_sender k_pluginfactory_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -918,10 +870,6 @@ void k_pluginfactory_on_sender(void* self, QObject* (*callback)());
 /// @param self KPluginFactory*
 ///
 int32_t k_pluginfactory_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_pluginfactory_super_sender_signal_index` instead
-///
-#define k_pluginfactory_qbase_sender_signal_index k_pluginfactory_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -955,10 +903,6 @@ void k_pluginfactory_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_pluginfactory_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_pluginfactory_super_receivers` instead
-///
-#define k_pluginfactory_qbase_receivers k_pluginfactory_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -991,10 +935,6 @@ void k_pluginfactory_on_receivers(void* self, int32_t (*callback)(void*, const c
 /// @param signal QMetaMethod*
 ///
 bool k_pluginfactory_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_pluginfactory_super_is_signal_connected` instead
-///
-#define k_pluginfactory_qbase_is_signal_connected k_pluginfactory_super_is_signal_connected
 
 /// Inherited from QObject
 ///

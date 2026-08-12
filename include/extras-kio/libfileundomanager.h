@@ -715,10 +715,6 @@ void k_io__fileundomanager__uiinterface_job_error(void* self, void* job);
 ///
 void k_io__fileundomanager__uiinterface_on_job_error(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_io__fileundomanager__uiinterface_super_job_error` instead
-///
-#define k_io__fileundomanager__uiinterface_qbase_job_error k_io__fileundomanager__uiinterface_super_job_error
-
 /// [Upstream resources](https://api.kde.org/kio-fileundomanager-uiinterface.html#jobError)
 ///
 /// Base class method implementation
@@ -746,10 +742,6 @@ bool k_io__fileundomanager__uiinterface_copied_file_was_modified(void* self, voi
 /// @param callback bool func(KIO__FileUndoManager__UiInterface* self, QUrl* src, QUrl* dest, QDateTime* srcTime, QDateTime* destTime)
 ///
 void k_io__fileundomanager__uiinterface_on_copied_file_was_modified(void* self, bool (*callback)(void*, void*, void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_io__fileundomanager__uiinterface_super_copied_file_was_modified` instead
-///
-#define k_io__fileundomanager__uiinterface_qbase_copied_file_was_modified k_io__fileundomanager__uiinterface_super_copied_file_was_modified
 
 /// [Upstream resources](https://api.kde.org/kio-fileundomanager-uiinterface.html#copiedFileWasModified)
 ///
@@ -779,10 +771,6 @@ void k_io__fileundomanager__uiinterface_virtual_hook(void* self, int id, void* d
 /// @param callback void func(KIO__FileUndoManager__UiInterface* self, int id, void* data)
 ///
 void k_io__fileundomanager__uiinterface_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
-
-/// @warning DEPRECATED: Use `k_io__fileundomanager__uiinterface_super_virtual_hook` instead
-///
-#define k_io__fileundomanager__uiinterface_qbase_virtual_hook k_io__fileundomanager__uiinterface_super_virtual_hook
 
 /// [Upstream resources](https://api.kde.org/kio-fileundomanager-uiinterface.html#virtual_hook)
 ///

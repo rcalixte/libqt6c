@@ -29,10 +29,6 @@ bool q_designerformeditorplugininterface_is_initialized(void* self);
 ///
 void q_designerformeditorplugininterface_on_is_initialized(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_designerformeditorplugininterface_super_is_initialized` instead
-///
-#define q_designerformeditorplugininterface_qbase_is_initialized q_designerformeditorplugininterface_super_is_initialized
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#isInitialized)
 ///
 /// Base class method implementation
@@ -56,10 +52,6 @@ void q_designerformeditorplugininterface_initialize(void* self, void* core);
 /// @param callback void func(QDesignerFormEditorPluginInterface* self, QDesignerFormEditorInterface* core)
 ///
 void q_designerformeditorplugininterface_on_initialize(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_designerformeditorplugininterface_super_initialize` instead
-///
-#define q_designerformeditorplugininterface_qbase_initialize q_designerformeditorplugininterface_super_initialize
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#initialize)
 ///
@@ -85,10 +77,6 @@ QAction* q_designerformeditorplugininterface_action(void* self);
 ///
 void q_designerformeditorplugininterface_on_action(void* self, QAction* (*callback)());
 
-/// @warning DEPRECATED: Use `q_designerformeditorplugininterface_super_action` instead
-///
-#define q_designerformeditorplugininterface_qbase_action q_designerformeditorplugininterface_super_action
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#action)
 ///
 /// Base class method implementation
@@ -111,10 +99,6 @@ QDesignerFormEditorInterface* q_designerformeditorplugininterface_core(void* sel
 /// @param callback QDesignerFormEditorInterface* func()
 ///
 void q_designerformeditorplugininterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)());
-
-/// @warning DEPRECATED: Use `q_designerformeditorplugininterface_super_core` instead
-///
-#define q_designerformeditorplugininterface_qbase_core q_designerformeditorplugininterface_super_core
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#core)
 ///

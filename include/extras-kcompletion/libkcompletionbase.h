@@ -37,10 +37,6 @@ void k_completionbase_set_completion_object(void* self, void* completionObject, 
 ///
 void k_completionbase_on_set_completion_object(void* self, void (*callback)(void*, void*, bool));
 
-/// @warning DEPRECATED: Use `k_completionbase_super_set_completion_object` instead
-///
-#define k_completionbase_qbase_set_completion_object k_completionbase_super_set_completion_object
-
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setCompletionObject)
 ///
 /// Base class method implementation
@@ -66,10 +62,6 @@ void k_completionbase_set_handle_signals(void* self, bool handle);
 /// @param callback void func(KCompletionBase* self, bool handle)
 ///
 void k_completionbase_on_set_handle_signals(void* self, void (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `k_completionbase_super_set_handle_signals` instead
-///
-#define k_completionbase_qbase_set_handle_signals k_completionbase_super_set_handle_signals
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setHandleSignals)
 ///
@@ -135,10 +127,6 @@ void k_completionbase_set_completion_mode(void* self, int32_t mode);
 ///
 void k_completionbase_on_set_completion_mode(void* self, void (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `k_completionbase_super_set_completion_mode` instead
-///
-#define k_completionbase_qbase_set_completion_mode k_completionbase_super_set_completion_mode
-
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setCompletionMode)
 ///
 /// Base class method implementation
@@ -195,10 +183,6 @@ void k_completionbase_set_completed_text(void* self, const char* text);
 ///
 void k_completionbase_on_set_completed_text(void* self, void (*callback)(void*, const char*));
 
-/// @warning DEPRECATED: Use `k_completionbase_super_set_completed_text` instead
-///
-#define k_completionbase_qbase_set_completed_text k_completionbase_super_set_completed_text
-
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setCompletedText)
 ///
 /// Base class method implementation
@@ -224,10 +208,6 @@ void k_completionbase_set_completed_items(void* self, const char* items[static 1
 /// @param callback void func(KCompletionBase* self, const char** items, bool autoSuggest)
 ///
 void k_completionbase_on_set_completed_items(void* self, void (*callback)(void*, const char**, bool));
-
-/// @warning DEPRECATED: Use `k_completionbase_super_set_completed_items` instead
-///
-#define k_completionbase_qbase_set_completed_items k_completionbase_super_set_completed_items
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setCompletedItems)
 ///
@@ -276,10 +256,6 @@ libqt_map k_completionbase_key_binding_map(void* self);
 ///
 void k_completionbase_on_key_binding_map(void* self, libqt_map (*callback)());
 
-/// @warning DEPRECATED: Use `k_completionbase_super_key_binding_map` instead
-///
-#define k_completionbase_qbase_key_binding_map k_completionbase_super_key_binding_map
-
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#keyBindingMap)
 ///
 /// Base class method implementation
@@ -306,10 +282,6 @@ void k_completionbase_set_key_binding_map(void* self, libqt_map keyBindingMap);
 ///
 void k_completionbase_on_set_key_binding_map(void* self, void (*callback)(void*, libqt_map));
 
-/// @warning DEPRECATED: Use `k_completionbase_super_set_key_binding_map` instead
-///
-#define k_completionbase_qbase_set_key_binding_map k_completionbase_super_set_key_binding_map
-
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setKeyBindingMap)
 ///
 /// Base class method implementation
@@ -335,10 +307,6 @@ void k_completionbase_set_delegate(void* self, void* delegate);
 ///
 void k_completionbase_on_set_delegate(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_completionbase_super_set_delegate` instead
-///
-#define k_completionbase_qbase_set_delegate k_completionbase_super_set_delegate
-
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setDelegate)
 ///
 /// Base class method implementation
@@ -362,10 +330,6 @@ KCompletionBase* k_completionbase_delegate(void* self);
 /// @param callback KCompletionBase* func()
 ///
 void k_completionbase_on_delegate(void* self, KCompletionBase* (*callback)());
-
-/// @warning DEPRECATED: Use `k_completionbase_super_delegate` instead
-///
-#define k_completionbase_qbase_delegate k_completionbase_super_delegate
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#delegate)
 ///
@@ -391,10 +355,6 @@ void k_completionbase_virtual_hook(void* self, int id, void* data);
 /// @param callback void func(KCompletionBase* self, int id, void* data)
 ///
 void k_completionbase_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
-
-/// @warning DEPRECATED: Use `k_completionbase_super_virtual_hook` instead
-///
-#define k_completionbase_qbase_virtual_hook k_completionbase_super_virtual_hook
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#virtual_hook)
 ///

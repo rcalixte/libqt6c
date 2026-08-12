@@ -37,10 +37,6 @@ const QMetaObject* q_dtlsclientverifier_meta_object(void* self);
 ///
 void q_dtlsclientverifier_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_dtlsclientverifier_super_meta_object` instead
-///
-#define q_dtlsclientverifier_qbase_meta_object q_dtlsclientverifier_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_dtlsclientverifier_metacast(void* self, const char* param1);
 /// @param callback void* func(QDtlsClientVerifier* self, const char* param1)
 ///
 void q_dtlsclientverifier_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_dtlsclientverifier_super_metacast` instead
-///
-#define q_dtlsclientverifier_qbase_metacast q_dtlsclientverifier_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_dtlsclientverifier_metacall(void* self, int32_t param1, int param2, vo
 /// @param callback int32_t func(QDtlsClientVerifier* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_dtlsclientverifier_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_dtlsclientverifier_super_metacall` instead
-///
-#define q_dtlsclientverifier_qbase_metacall q_dtlsclientverifier_super_metacall
 
 /// Base class method implementation
 ///
@@ -631,10 +619,6 @@ void q_dtlsclientverifier_on_destroyed1(void* self, void (*callback)(void*, void
 ///
 bool q_dtlsclientverifier_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_dtlsclientverifier_super_event` instead
-///
-#define q_dtlsclientverifier_qbase_event q_dtlsclientverifier_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -668,10 +652,6 @@ void q_dtlsclientverifier_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_dtlsclientverifier_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_dtlsclientverifier_super_event_filter` instead
-///
-#define q_dtlsclientverifier_qbase_event_filter q_dtlsclientverifier_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -707,10 +687,6 @@ void q_dtlsclientverifier_on_event_filter(void* self, bool (*callback)(void*, vo
 ///
 void q_dtlsclientverifier_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_dtlsclientverifier_super_timer_event` instead
-///
-#define q_dtlsclientverifier_qbase_timer_event q_dtlsclientverifier_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -743,10 +719,6 @@ void q_dtlsclientverifier_on_timer_event(void* self, void (*callback)(void*, voi
 /// @param event QChildEvent*
 ///
 void q_dtlsclientverifier_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_dtlsclientverifier_super_child_event` instead
-///
-#define q_dtlsclientverifier_qbase_child_event q_dtlsclientverifier_super_child_event
 
 /// Inherited from QObject
 ///
@@ -781,10 +753,6 @@ void q_dtlsclientverifier_on_child_event(void* self, void (*callback)(void*, voi
 ///
 void q_dtlsclientverifier_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_dtlsclientverifier_super_custom_event` instead
-///
-#define q_dtlsclientverifier_qbase_custom_event q_dtlsclientverifier_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -817,10 +785,6 @@ void q_dtlsclientverifier_on_custom_event(void* self, void (*callback)(void*, vo
 /// @param signal QMetaMethod*
 ///
 void q_dtlsclientverifier_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_dtlsclientverifier_super_connect_notify` instead
-///
-#define q_dtlsclientverifier_qbase_connect_notify q_dtlsclientverifier_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -855,10 +819,6 @@ void q_dtlsclientverifier_on_connect_notify(void* self, void (*callback)(void*, 
 ///
 void q_dtlsclientverifier_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_dtlsclientverifier_super_disconnect_notify` instead
-///
-#define q_dtlsclientverifier_qbase_disconnect_notify q_dtlsclientverifier_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -891,10 +851,6 @@ void q_dtlsclientverifier_on_disconnect_notify(void* self, void (*callback)(void
 ///
 QObject* q_dtlsclientverifier_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_dtlsclientverifier_super_sender` instead
-///
-#define q_dtlsclientverifier_qbase_sender q_dtlsclientverifier_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -925,10 +881,6 @@ void q_dtlsclientverifier_on_sender(void* self, QObject* (*callback)());
 /// @param self QDtlsClientVerifier*
 ///
 int32_t q_dtlsclientverifier_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_dtlsclientverifier_super_sender_signal_index` instead
-///
-#define q_dtlsclientverifier_qbase_sender_signal_index q_dtlsclientverifier_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -962,10 +914,6 @@ void q_dtlsclientverifier_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 int32_t q_dtlsclientverifier_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_dtlsclientverifier_super_receivers` instead
-///
-#define q_dtlsclientverifier_qbase_receivers q_dtlsclientverifier_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -998,10 +946,6 @@ void q_dtlsclientverifier_on_receivers(void* self, int32_t (*callback)(void*, co
 /// @param signal QMetaMethod*
 ///
 bool q_dtlsclientverifier_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_dtlsclientverifier_super_is_signal_connected` instead
-///
-#define q_dtlsclientverifier_qbase_is_signal_connected q_dtlsclientverifier_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -1076,10 +1020,6 @@ const QMetaObject* q_dtls_meta_object(void* self);
 ///
 void q_dtls_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_dtls_super_meta_object` instead
-///
-#define q_dtls_qbase_meta_object q_dtls_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -1099,10 +1039,6 @@ void* q_dtls_metacast(void* self, const char* param1);
 /// @param callback void* func(QDtls* self, const char* param1)
 ///
 void q_dtls_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_dtls_super_metacast` instead
-///
-#define q_dtls_qbase_metacast q_dtls_super_metacast
 
 /// Base class method implementation
 ///
@@ -1124,10 +1060,6 @@ int32_t q_dtls_metacall(void* self, int32_t param1, int param2, void* param3);
 /// @param callback int32_t func(QDtls* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_dtls_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_dtls_super_metacall` instead
-///
-#define q_dtls_qbase_metacall q_dtls_super_metacall
 
 /// Base class method implementation
 ///
@@ -1861,10 +1793,6 @@ void q_dtls_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_dtls_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_dtls_super_event` instead
-///
-#define q_dtls_qbase_event q_dtls_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1898,10 +1826,6 @@ void q_dtls_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_dtls_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_dtls_super_event_filter` instead
-///
-#define q_dtls_qbase_event_filter q_dtls_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1937,10 +1861,6 @@ void q_dtls_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 ///
 void q_dtls_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_dtls_super_timer_event` instead
-///
-#define q_dtls_qbase_timer_event q_dtls_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1973,10 +1893,6 @@ void q_dtls_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_dtls_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_dtls_super_child_event` instead
-///
-#define q_dtls_qbase_child_event q_dtls_super_child_event
 
 /// Inherited from QObject
 ///
@@ -2011,10 +1927,6 @@ void q_dtls_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dtls_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_dtls_super_custom_event` instead
-///
-#define q_dtls_qbase_custom_event q_dtls_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2047,10 +1959,6 @@ void q_dtls_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_dtls_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_dtls_super_connect_notify` instead
-///
-#define q_dtls_qbase_connect_notify q_dtls_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -2085,10 +1993,6 @@ void q_dtls_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_dtls_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_dtls_super_disconnect_notify` instead
-///
-#define q_dtls_qbase_disconnect_notify q_dtls_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -2121,10 +2025,6 @@ void q_dtls_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 ///
 QObject* q_dtls_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_dtls_super_sender` instead
-///
-#define q_dtls_qbase_sender q_dtls_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2155,10 +2055,6 @@ void q_dtls_on_sender(void* self, QObject* (*callback)());
 /// @param self QDtls*
 ///
 int32_t q_dtls_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_dtls_super_sender_signal_index` instead
-///
-#define q_dtls_qbase_sender_signal_index q_dtls_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -2192,10 +2088,6 @@ void q_dtls_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_dtls_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_dtls_super_receivers` instead
-///
-#define q_dtls_qbase_receivers q_dtls_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2228,10 +2120,6 @@ void q_dtls_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 /// @param signal QMetaMethod*
 ///
 bool q_dtls_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_dtls_super_is_signal_connected` instead
-///
-#define q_dtls_qbase_is_signal_connected q_dtls_super_is_signal_connected
 
 /// Inherited from QObject
 ///

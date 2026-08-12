@@ -95,10 +95,6 @@ bool k_archivedirectory_is_directory(void* self);
 ///
 void k_archivedirectory_on_is_directory(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `k_archivedirectory_super_is_directory` instead
-///
-#define k_archivedirectory_qbase_is_directory k_archivedirectory_super_is_directory
-
 /// [Upstream resources](https://api.kde.org/karchivedirectory.html#isDirectory)
 ///
 /// Base class method implementation
@@ -130,10 +126,6 @@ void k_archivedirectory_virtual_hook(void* self, int id, void* data);
 /// @param callback void func(KArchiveDirectory* self, int id, void* data)
 ///
 void k_archivedirectory_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
-
-/// @warning DEPRECATED: Use `k_archivedirectory_super_virtual_hook` instead
-///
-#define k_archivedirectory_qbase_virtual_hook k_archivedirectory_super_virtual_hook
 
 /// [Upstream resources](https://api.kde.org/karchivedirectory.html#virtual_hook)
 ///
@@ -219,10 +211,6 @@ const char* k_archivedirectory_sym_link_target(void* self);
 ///
 bool k_archivedirectory_is_file(void* self);
 
-/// @warning DEPRECATED: Use `k_archivedirectory_super_is_file` instead
-///
-#define k_archivedirectory_qbase_is_file k_archivedirectory_super_is_file
-
 /// Inherited from KArchiveEntry
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#isFile)
@@ -253,10 +241,6 @@ void k_archivedirectory_on_is_file(void* self, bool (*callback)());
 /// @param self KArchiveDirectory*
 ///
 KArchive* k_archivedirectory_archive(void* self);
-
-/// @warning DEPRECATED: Use `k_archivedirectory_super_archive` instead
-///
-#define k_archivedirectory_qbase_archive k_archivedirectory_super_archive
 
 /// Inherited from KArchiveEntry
 ///

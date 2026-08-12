@@ -64,10 +64,6 @@ const QMetaObject* k_urllabel_meta_object(void* self);
 ///
 void k_urllabel_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_urllabel_super_meta_object` instead
-///
-#define k_urllabel_qbase_meta_object k_urllabel_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -87,10 +83,6 @@ void* k_urllabel_metacast(void* self, const char* param1);
 /// @param callback void* func(KUrlLabel* self, const char* param1)
 ///
 void k_urllabel_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_urllabel_super_metacast` instead
-///
-#define k_urllabel_qbase_metacast k_urllabel_super_metacast
 
 /// Base class method implementation
 ///
@@ -112,10 +104,6 @@ int32_t k_urllabel_metacall(void* self, int32_t param1, int param2, void* param3
 /// @param callback int32_t func(KUrlLabel* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_urllabel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_urllabel_super_metacall` instead
-///
-#define k_urllabel_qbase_metacall k_urllabel_super_metacall
 
 /// Base class method implementation
 ///
@@ -208,10 +196,6 @@ void k_urllabel_set_font(void* self, void* font);
 /// @param callback void func(KUrlLabel* self, QFont* font)
 ///
 void k_urllabel_on_set_font(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_urllabel_super_set_font` instead
-///
-#define k_urllabel_qbase_set_font k_urllabel_super_set_font
 
 /// [Upstream resources](https://api.kde.org/kurllabel.html#setFont)
 ///
@@ -370,10 +354,6 @@ void k_urllabel_mouse_release_event(void* self, void* param1);
 ///
 void k_urllabel_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_urllabel_super_mouse_release_event` instead
-///
-#define k_urllabel_qbase_mouse_release_event k_urllabel_super_mouse_release_event
-
 /// [Upstream resources](https://api.kde.org/kurllabel.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
@@ -398,10 +378,6 @@ void k_urllabel_enter_event(void* self, void* event);
 /// @param callback void func(KUrlLabel* self, QEnterEvent* event)
 ///
 void k_urllabel_on_enter_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_urllabel_super_enter_event` instead
-///
-#define k_urllabel_qbase_enter_event k_urllabel_super_enter_event
 
 /// [Upstream resources](https://api.kde.org/kurllabel.html#enterEvent)
 ///
@@ -428,10 +404,6 @@ void k_urllabel_leave_event(void* self, void* param1);
 ///
 void k_urllabel_on_leave_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_urllabel_super_leave_event` instead
-///
-#define k_urllabel_qbase_leave_event k_urllabel_super_leave_event
-
 /// [Upstream resources](https://api.kde.org/kurllabel.html#leaveEvent)
 ///
 /// Base class method implementation
@@ -456,10 +428,6 @@ bool k_urllabel_event(void* self, void* param1);
 /// @param callback bool func(KUrlLabel* self, QEvent* param1)
 ///
 void k_urllabel_on_event(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_urllabel_super_event` instead
-///
-#define k_urllabel_qbase_event k_urllabel_super_event
 
 /// [Upstream resources](https://api.kde.org/kurllabel.html#event)
 ///
@@ -3951,10 +3919,6 @@ int32_t k_urllabel_encode_metric_f(int32_t metric, double value);
 ///
 QSize* k_urllabel_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_size_hint` instead
-///
-#define k_urllabel_qbase_size_hint k_urllabel_super_size_hint
-
 /// Inherited from QLabel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#sizeHint)
@@ -3987,10 +3951,6 @@ void k_urllabel_on_size_hint(void* self, QSize* (*callback)());
 /// @param self KUrlLabel*
 ///
 QSize* k_urllabel_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_minimum_size_hint` instead
-///
-#define k_urllabel_qbase_minimum_size_hint k_urllabel_super_minimum_size_hint
 
 /// Inherited from QLabel
 ///
@@ -4026,10 +3986,6 @@ void k_urllabel_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 int32_t k_urllabel_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_height_for_width` instead
-///
-#define k_urllabel_qbase_height_for_width k_urllabel_super_height_for_width
-
 /// Inherited from QLabel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#heightForWidth)
@@ -4062,10 +4018,6 @@ void k_urllabel_on_height_for_width(void* self, int32_t (*callback)(void*, int))
 /// @param ev QKeyEvent*
 ///
 void k_urllabel_key_press_event(void* self, void* ev);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_key_press_event` instead
-///
-#define k_urllabel_qbase_key_press_event k_urllabel_super_key_press_event
 
 /// Inherited from QLabel
 ///
@@ -4100,10 +4052,6 @@ void k_urllabel_on_key_press_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urllabel_paint_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_paint_event` instead
-///
-#define k_urllabel_qbase_paint_event k_urllabel_super_paint_event
-
 /// Inherited from QLabel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#paintEvent)
@@ -4136,10 +4084,6 @@ void k_urllabel_on_paint_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QEvent*
 ///
 void k_urllabel_change_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_change_event` instead
-///
-#define k_urllabel_qbase_change_event k_urllabel_super_change_event
 
 /// Inherited from QLabel
 ///
@@ -4174,10 +4118,6 @@ void k_urllabel_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urllabel_mouse_press_event(void* self, void* ev);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_mouse_press_event` instead
-///
-#define k_urllabel_qbase_mouse_press_event k_urllabel_super_mouse_press_event
-
 /// Inherited from QLabel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#mousePressEvent)
@@ -4210,10 +4150,6 @@ void k_urllabel_on_mouse_press_event(void* self, void (*callback)(void*, void*))
 /// @param ev QMouseEvent*
 ///
 void k_urllabel_mouse_move_event(void* self, void* ev);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_mouse_move_event` instead
-///
-#define k_urllabel_qbase_mouse_move_event k_urllabel_super_mouse_move_event
 
 /// Inherited from QLabel
 ///
@@ -4248,10 +4184,6 @@ void k_urllabel_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urllabel_context_menu_event(void* self, void* ev);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_context_menu_event` instead
-///
-#define k_urllabel_qbase_context_menu_event k_urllabel_super_context_menu_event
-
 /// Inherited from QLabel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#contextMenuEvent)
@@ -4284,10 +4216,6 @@ void k_urllabel_on_context_menu_event(void* self, void (*callback)(void*, void*)
 /// @param ev QFocusEvent*
 ///
 void k_urllabel_focus_in_event(void* self, void* ev);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_focus_in_event` instead
-///
-#define k_urllabel_qbase_focus_in_event k_urllabel_super_focus_in_event
 
 /// Inherited from QLabel
 ///
@@ -4322,10 +4250,6 @@ void k_urllabel_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urllabel_focus_out_event(void* self, void* ev);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_focus_out_event` instead
-///
-#define k_urllabel_qbase_focus_out_event k_urllabel_super_focus_out_event
-
 /// Inherited from QLabel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#focusOutEvent)
@@ -4358,10 +4282,6 @@ void k_urllabel_on_focus_out_event(void* self, void (*callback)(void*, void*));
 /// @param next bool
 ///
 bool k_urllabel_focus_next_prev_child(void* self, bool next);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_focus_next_prev_child` instead
-///
-#define k_urllabel_qbase_focus_next_prev_child k_urllabel_super_focus_next_prev_child
 
 /// Inherited from QLabel
 ///
@@ -4396,10 +4316,6 @@ void k_urllabel_on_focus_next_prev_child(void* self, bool (*callback)(void*, boo
 ///
 void k_urllabel_init_style_option(void* self, void* option);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_init_style_option` instead
-///
-#define k_urllabel_qbase_init_style_option k_urllabel_super_init_style_option
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
@@ -4431,10 +4347,6 @@ void k_urllabel_on_init_style_option(void* self, void (*callback)(void*, void*))
 /// @param self KUrlLabel*
 ///
 int32_t k_urllabel_dev_type(void* self);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_dev_type` instead
-///
-#define k_urllabel_qbase_dev_type k_urllabel_super_dev_type
 
 /// Inherited from QWidget
 ///
@@ -4468,10 +4380,6 @@ void k_urllabel_on_dev_type(void* self, int32_t (*callback)());
 ///
 void k_urllabel_set_visible(void* self, bool visible);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_set_visible` instead
-///
-#define k_urllabel_qbase_set_visible k_urllabel_super_set_visible
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -4504,10 +4412,6 @@ void k_urllabel_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 bool k_urllabel_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_has_height_for_width` instead
-///
-#define k_urllabel_qbase_has_height_for_width k_urllabel_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -4538,10 +4442,6 @@ void k_urllabel_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self KUrlLabel*
 ///
 QPaintEngine* k_urllabel_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_paint_engine` instead
-///
-#define k_urllabel_qbase_paint_engine k_urllabel_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -4574,10 +4474,6 @@ void k_urllabel_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QMouseEvent*
 ///
 void k_urllabel_mouse_double_click_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_mouse_double_click_event` instead
-///
-#define k_urllabel_qbase_mouse_double_click_event k_urllabel_super_mouse_double_click_event
 
 /// Inherited from QWidget
 ///
@@ -4612,10 +4508,6 @@ void k_urllabel_on_mouse_double_click_event(void* self, void (*callback)(void*, 
 ///
 void k_urllabel_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_wheel_event` instead
-///
-#define k_urllabel_qbase_wheel_event k_urllabel_super_wheel_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -4648,10 +4540,6 @@ void k_urllabel_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QKeyEvent*
 ///
 void k_urllabel_key_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_key_release_event` instead
-///
-#define k_urllabel_qbase_key_release_event k_urllabel_super_key_release_event
 
 /// Inherited from QWidget
 ///
@@ -4686,10 +4574,6 @@ void k_urllabel_on_key_release_event(void* self, void (*callback)(void*, void*))
 ///
 void k_urllabel_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_move_event` instead
-///
-#define k_urllabel_qbase_move_event k_urllabel_super_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -4722,10 +4606,6 @@ void k_urllabel_on_move_event(void* self, void (*callback)(void*, void*));
 /// @param event QResizeEvent*
 ///
 void k_urllabel_resize_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_resize_event` instead
-///
-#define k_urllabel_qbase_resize_event k_urllabel_super_resize_event
 
 /// Inherited from QWidget
 ///
@@ -4760,10 +4640,6 @@ void k_urllabel_on_resize_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urllabel_close_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_close_event` instead
-///
-#define k_urllabel_qbase_close_event k_urllabel_super_close_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -4796,10 +4672,6 @@ void k_urllabel_on_close_event(void* self, void (*callback)(void*, void*));
 /// @param event QTabletEvent*
 ///
 void k_urllabel_tablet_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_tablet_event` instead
-///
-#define k_urllabel_qbase_tablet_event k_urllabel_super_tablet_event
 
 /// Inherited from QWidget
 ///
@@ -4834,10 +4706,6 @@ void k_urllabel_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urllabel_action_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_action_event` instead
-///
-#define k_urllabel_qbase_action_event k_urllabel_super_action_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -4870,10 +4738,6 @@ void k_urllabel_on_action_event(void* self, void (*callback)(void*, void*));
 /// @param event QDragEnterEvent*
 ///
 void k_urllabel_drag_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_drag_enter_event` instead
-///
-#define k_urllabel_qbase_drag_enter_event k_urllabel_super_drag_enter_event
 
 /// Inherited from QWidget
 ///
@@ -4908,10 +4772,6 @@ void k_urllabel_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urllabel_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_drag_move_event` instead
-///
-#define k_urllabel_qbase_drag_move_event k_urllabel_super_drag_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -4944,10 +4804,6 @@ void k_urllabel_on_drag_move_event(void* self, void (*callback)(void*, void*));
 /// @param event QDragLeaveEvent*
 ///
 void k_urllabel_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_drag_leave_event` instead
-///
-#define k_urllabel_qbase_drag_leave_event k_urllabel_super_drag_leave_event
 
 /// Inherited from QWidget
 ///
@@ -4982,10 +4838,6 @@ void k_urllabel_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urllabel_drop_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_drop_event` instead
-///
-#define k_urllabel_qbase_drop_event k_urllabel_super_drop_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -5019,10 +4871,6 @@ void k_urllabel_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urllabel_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_show_event` instead
-///
-#define k_urllabel_qbase_show_event k_urllabel_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -5055,10 +4903,6 @@ void k_urllabel_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param event QHideEvent*
 ///
 void k_urllabel_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_hide_event` instead
-///
-#define k_urllabel_qbase_hide_event k_urllabel_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -5095,10 +4939,6 @@ void k_urllabel_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool k_urllabel_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_native_event` instead
-///
-#define k_urllabel_qbase_native_event k_urllabel_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -5134,10 +4974,6 @@ void k_urllabel_on_native_event(void* self, bool (*callback)(void*, libqt_string
 ///
 int32_t k_urllabel_metric(void* self, int32_t param1);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_metric` instead
-///
-#define k_urllabel_qbase_metric k_urllabel_super_metric
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -5170,10 +5006,6 @@ void k_urllabel_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 /// @param painter QPainter*
 ///
 void k_urllabel_init_painter(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_init_painter` instead
-///
-#define k_urllabel_qbase_init_painter k_urllabel_super_init_painter
 
 /// Inherited from QWidget
 ///
@@ -5208,10 +5040,6 @@ void k_urllabel_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* k_urllabel_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_redirected` instead
-///
-#define k_urllabel_qbase_redirected k_urllabel_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -5243,10 +5071,6 @@ void k_urllabel_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*
 /// @param self KUrlLabel*
 ///
 QPainter* k_urllabel_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_shared_painter` instead
-///
-#define k_urllabel_qbase_shared_painter k_urllabel_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -5280,10 +5104,6 @@ void k_urllabel_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void k_urllabel_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_input_method_event` instead
-///
-#define k_urllabel_qbase_input_method_event k_urllabel_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -5316,10 +5136,6 @@ void k_urllabel_on_input_method_event(void* self, void (*callback)(void*, void*)
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* k_urllabel_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_input_method_query` instead
-///
-#define k_urllabel_qbase_input_method_query k_urllabel_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -5357,10 +5173,6 @@ void k_urllabel_on_input_method_query(void* self, QVariant* (*callback)(void*, i
 ///
 bool k_urllabel_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_event_filter` instead
-///
-#define k_urllabel_qbase_event_filter k_urllabel_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -5395,10 +5207,6 @@ void k_urllabel_on_event_filter(void* self, bool (*callback)(void*, void*, void*
 ///
 void k_urllabel_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_timer_event` instead
-///
-#define k_urllabel_qbase_timer_event k_urllabel_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -5431,10 +5239,6 @@ void k_urllabel_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void k_urllabel_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_child_event` instead
-///
-#define k_urllabel_qbase_child_event k_urllabel_super_child_event
 
 /// Inherited from QObject
 ///
@@ -5469,10 +5273,6 @@ void k_urllabel_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urllabel_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_custom_event` instead
-///
-#define k_urllabel_qbase_custom_event k_urllabel_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -5505,10 +5305,6 @@ void k_urllabel_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void k_urllabel_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_connect_notify` instead
-///
-#define k_urllabel_qbase_connect_notify k_urllabel_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -5543,10 +5339,6 @@ void k_urllabel_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void k_urllabel_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_disconnect_notify` instead
-///
-#define k_urllabel_qbase_disconnect_notify k_urllabel_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5580,10 +5372,6 @@ void k_urllabel_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 void k_urllabel_draw_frame(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_draw_frame` instead
-///
-#define k_urllabel_qbase_draw_frame k_urllabel_super_draw_frame
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#drawFrame)
@@ -5616,10 +5404,6 @@ void k_urllabel_on_draw_frame(void* self, void (*callback)(void*, void*));
 ///
 void k_urllabel_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_update_micro_focus` instead
-///
-#define k_urllabel_qbase_update_micro_focus k_urllabel_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5650,10 +5434,6 @@ void k_urllabel_on_update_micro_focus(void* self, void (*callback)());
 /// @param self KUrlLabel*
 ///
 void k_urllabel_create(void* self);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_create` instead
-///
-#define k_urllabel_qbase_create k_urllabel_super_create
 
 /// Inherited from QWidget
 ///
@@ -5686,10 +5466,6 @@ void k_urllabel_on_create(void* self, void (*callback)());
 ///
 void k_urllabel_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_destroy` instead
-///
-#define k_urllabel_qbase_destroy k_urllabel_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5720,10 +5496,6 @@ void k_urllabel_on_destroy(void* self, void (*callback)());
 /// @param self KUrlLabel*
 ///
 bool k_urllabel_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_focus_next_child` instead
-///
-#define k_urllabel_qbase_focus_next_child k_urllabel_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -5756,10 +5528,6 @@ void k_urllabel_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_urllabel_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_focus_previous_child` instead
-///
-#define k_urllabel_qbase_focus_previous_child k_urllabel_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5790,10 +5558,6 @@ void k_urllabel_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self KUrlLabel*
 ///
 QObject* k_urllabel_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_sender` instead
-///
-#define k_urllabel_qbase_sender k_urllabel_super_sender
 
 /// Inherited from QObject
 ///
@@ -5826,10 +5590,6 @@ void k_urllabel_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_urllabel_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_sender_signal_index` instead
-///
-#define k_urllabel_qbase_sender_signal_index k_urllabel_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5861,10 +5621,6 @@ void k_urllabel_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t k_urllabel_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_receivers` instead
-///
-#define k_urllabel_qbase_receivers k_urllabel_super_receivers
 
 /// Inherited from QObject
 ///
@@ -5899,10 +5655,6 @@ void k_urllabel_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 bool k_urllabel_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_urllabel_super_is_signal_connected` instead
-///
-#define k_urllabel_qbase_is_signal_connected k_urllabel_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5936,10 +5688,6 @@ void k_urllabel_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_urllabel_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_urllabel_super_get_decoded_metric_f` instead
-///
-#define k_urllabel_qbase_get_decoded_metric_f k_urllabel_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

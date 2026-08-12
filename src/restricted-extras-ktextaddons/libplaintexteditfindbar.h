@@ -40,10 +40,6 @@ const QMetaObject* k_textcustomeditor__plaintexteditfindbar_meta_object(void* se
 ///
 void k_textcustomeditor__plaintexteditfindbar_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_meta_object` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_meta_object k_textcustomeditor__plaintexteditfindbar_super_meta_object
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditFindBar.html)
 ///
 /// Base class method implementation
@@ -63,10 +59,6 @@ void* k_textcustomeditor__plaintexteditfindbar_metacast(void* self, const char* 
 /// @param callback void* func(TextCustomEditor__PlainTextEditFindBar* self, const char* param1)
 ///
 void k_textcustomeditor__plaintexteditfindbar_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_metacast` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_metacast k_textcustomeditor__plaintexteditfindbar_super_metacast
 
 /// Base class method implementation
 ///
@@ -88,10 +80,6 @@ int32_t k_textcustomeditor__plaintexteditfindbar_metacall(void* self, int32_t pa
 /// @param callback int32_t func(TextCustomEditor__PlainTextEditFindBar* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_textcustomeditor__plaintexteditfindbar_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_metacall` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_metacall k_textcustomeditor__plaintexteditfindbar_super_metacall
 
 /// Base class method implementation
 ///
@@ -125,10 +113,6 @@ bool k_textcustomeditor__plaintexteditfindbar_view_is_read_only(void* self);
 ///
 void k_textcustomeditor__plaintexteditfindbar_on_view_is_read_only(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_view_is_read_only` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_view_is_read_only k_textcustomeditor__plaintexteditfindbar_super_view_is_read_only
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditFindBar.html)
 ///
 /// Base class method implementation
@@ -151,10 +135,6 @@ bool k_textcustomeditor__plaintexteditfindbar_document_is_empty(void* self);
 /// @param callback bool func()
 ///
 void k_textcustomeditor__plaintexteditfindbar_on_document_is_empty(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_document_is_empty` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_document_is_empty k_textcustomeditor__plaintexteditfindbar_super_document_is_empty
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditFindBar.html)
 ///
@@ -180,10 +160,6 @@ bool k_textcustomeditor__plaintexteditfindbar_search_in_document(void* self, con
 /// @param callback bool func(TextCustomEditor__PlainTextEditFindBar* self, const char* text, flag of enum TextCustomEditor__TextEditFindBarBase__FindFlag searchOptions)
 ///
 void k_textcustomeditor__plaintexteditfindbar_on_search_in_document(void* self, bool (*callback)(void*, const char*, int32_t));
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_search_in_document` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_search_in_document k_textcustomeditor__plaintexteditfindbar_super_search_in_document
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditFindBar.html)
 ///
@@ -212,10 +188,6 @@ bool k_textcustomeditor__plaintexteditfindbar_search_in_document2(void* self, vo
 ///
 void k_textcustomeditor__plaintexteditfindbar_on_search_in_document2(void* self, bool (*callback)(void*, void*, int32_t));
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_search_in_document2` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_search_in_document2 k_textcustomeditor__plaintexteditfindbar_super_search_in_document2
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditFindBar.html)
 ///
 /// Base class method implementation
@@ -241,10 +213,6 @@ void k_textcustomeditor__plaintexteditfindbar_auto_search_move_cursor(void* self
 ///
 void k_textcustomeditor__plaintexteditfindbar_on_auto_search_move_cursor(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_auto_search_move_cursor` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_auto_search_move_cursor k_textcustomeditor__plaintexteditfindbar_super_auto_search_move_cursor
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditFindBar.html)
 ///
 /// Base class method implementation
@@ -269,10 +237,6 @@ void k_textcustomeditor__plaintexteditfindbar_slot_search_text(void* self, bool 
 /// @param callback void func(TextCustomEditor__PlainTextEditFindBar* self, bool backward, bool isAutoSearch)
 ///
 void k_textcustomeditor__plaintexteditfindbar_on_slot_search_text(void* self, void (*callback)(void*, bool, bool));
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_slot_search_text` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_slot_search_text k_textcustomeditor__plaintexteditfindbar_super_slot_search_text
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditFindBar.html)
 ///
@@ -3391,10 +3355,6 @@ int32_t k_textcustomeditor__plaintexteditfindbar_encode_metric_f(int32_t metric,
 ///
 bool k_textcustomeditor__plaintexteditfindbar_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_event k_textcustomeditor__plaintexteditfindbar_super_event
-
 /// Inherited from TextCustomEditor::TextEditFindBarBase
 ///
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
@@ -3426,10 +3386,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_event(void* self, bool (*callba
 /// @param self TextCustomEditor__PlainTextEditFindBar*
 ///
 int32_t k_textcustomeditor__plaintexteditfindbar_dev_type(void* self);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_dev_type` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_dev_type k_textcustomeditor__plaintexteditfindbar_super_dev_type
 
 /// Inherited from QWidget
 ///
@@ -3463,10 +3419,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_dev_type(void* self, int32_t (*
 ///
 void k_textcustomeditor__plaintexteditfindbar_set_visible(void* self, bool visible);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_set_visible` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_set_visible k_textcustomeditor__plaintexteditfindbar_super_set_visible
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -3498,10 +3450,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_set_visible(void* self, void (*
 /// @param self TextCustomEditor__PlainTextEditFindBar*
 ///
 QSize* k_textcustomeditor__plaintexteditfindbar_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_size_hint` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_size_hint k_textcustomeditor__plaintexteditfindbar_super_size_hint
 
 /// Inherited from QWidget
 ///
@@ -3535,10 +3483,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_size_hint(void* self, QSize* (*
 /// @param self TextCustomEditor__PlainTextEditFindBar*
 ///
 QSize* k_textcustomeditor__plaintexteditfindbar_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_minimum_size_hint` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_minimum_size_hint k_textcustomeditor__plaintexteditfindbar_super_minimum_size_hint
 
 /// Inherited from QWidget
 ///
@@ -3574,10 +3518,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_minimum_size_hint(void* self, Q
 ///
 int32_t k_textcustomeditor__plaintexteditfindbar_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_height_for_width` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_height_for_width k_textcustomeditor__plaintexteditfindbar_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -3610,10 +3550,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_height_for_width(void* self, in
 ///
 bool k_textcustomeditor__plaintexteditfindbar_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_has_height_for_width` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_has_height_for_width k_textcustomeditor__plaintexteditfindbar_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -3644,10 +3580,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_has_height_for_width(void* self
 /// @param self TextCustomEditor__PlainTextEditFindBar*
 ///
 QPaintEngine* k_textcustomeditor__plaintexteditfindbar_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_paint_engine` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_paint_engine k_textcustomeditor__plaintexteditfindbar_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -3680,10 +3612,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_paint_engine(void* self, QPaint
 /// @param event QMouseEvent*
 ///
 void k_textcustomeditor__plaintexteditfindbar_mouse_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_mouse_press_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_mouse_press_event k_textcustomeditor__plaintexteditfindbar_super_mouse_press_event
 
 /// Inherited from QWidget
 ///
@@ -3718,10 +3646,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_mouse_press_event(void* self, v
 ///
 void k_textcustomeditor__plaintexteditfindbar_mouse_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_mouse_release_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_mouse_release_event k_textcustomeditor__plaintexteditfindbar_super_mouse_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
@@ -3754,10 +3678,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_mouse_release_event(void* self,
 /// @param event QMouseEvent*
 ///
 void k_textcustomeditor__plaintexteditfindbar_mouse_double_click_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_mouse_double_click_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_mouse_double_click_event k_textcustomeditor__plaintexteditfindbar_super_mouse_double_click_event
 
 /// Inherited from QWidget
 ///
@@ -3792,10 +3712,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_mouse_double_click_event(void* 
 ///
 void k_textcustomeditor__plaintexteditfindbar_mouse_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_mouse_move_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_mouse_move_event k_textcustomeditor__plaintexteditfindbar_super_mouse_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -3828,10 +3744,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_mouse_move_event(void* self, vo
 /// @param event QWheelEvent*
 ///
 void k_textcustomeditor__plaintexteditfindbar_wheel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_wheel_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_wheel_event k_textcustomeditor__plaintexteditfindbar_super_wheel_event
 
 /// Inherited from QWidget
 ///
@@ -3866,10 +3778,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_wheel_event(void* self, void (*
 ///
 void k_textcustomeditor__plaintexteditfindbar_key_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_key_press_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_key_press_event k_textcustomeditor__plaintexteditfindbar_super_key_press_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
@@ -3902,10 +3810,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_key_press_event(void* self, voi
 /// @param event QKeyEvent*
 ///
 void k_textcustomeditor__plaintexteditfindbar_key_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_key_release_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_key_release_event k_textcustomeditor__plaintexteditfindbar_super_key_release_event
 
 /// Inherited from QWidget
 ///
@@ -3940,10 +3844,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_key_release_event(void* self, v
 ///
 void k_textcustomeditor__plaintexteditfindbar_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_focus_in_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_focus_in_event k_textcustomeditor__plaintexteditfindbar_super_focus_in_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -3976,10 +3876,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_focus_in_event(void* self, void
 /// @param event QFocusEvent*
 ///
 void k_textcustomeditor__plaintexteditfindbar_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_focus_out_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_focus_out_event k_textcustomeditor__plaintexteditfindbar_super_focus_out_event
 
 /// Inherited from QWidget
 ///
@@ -4014,10 +3910,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_focus_out_event(void* self, voi
 ///
 void k_textcustomeditor__plaintexteditfindbar_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_enter_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_enter_event k_textcustomeditor__plaintexteditfindbar_super_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -4050,10 +3942,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_enter_event(void* self, void (*
 /// @param event QEvent*
 ///
 void k_textcustomeditor__plaintexteditfindbar_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_leave_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_leave_event k_textcustomeditor__plaintexteditfindbar_super_leave_event
 
 /// Inherited from QWidget
 ///
@@ -4088,10 +3976,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_leave_event(void* self, void (*
 ///
 void k_textcustomeditor__plaintexteditfindbar_paint_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_paint_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_paint_event k_textcustomeditor__plaintexteditfindbar_super_paint_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
@@ -4124,10 +4008,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_paint_event(void* self, void (*
 /// @param event QMoveEvent*
 ///
 void k_textcustomeditor__plaintexteditfindbar_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_move_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_move_event k_textcustomeditor__plaintexteditfindbar_super_move_event
 
 /// Inherited from QWidget
 ///
@@ -4162,10 +4042,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_move_event(void* self, void (*c
 ///
 void k_textcustomeditor__plaintexteditfindbar_resize_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_resize_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_resize_event k_textcustomeditor__plaintexteditfindbar_super_resize_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
@@ -4198,10 +4074,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_resize_event(void* self, void (
 /// @param event QCloseEvent*
 ///
 void k_textcustomeditor__plaintexteditfindbar_close_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_close_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_close_event k_textcustomeditor__plaintexteditfindbar_super_close_event
 
 /// Inherited from QWidget
 ///
@@ -4236,10 +4108,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_close_event(void* self, void (*
 ///
 void k_textcustomeditor__plaintexteditfindbar_context_menu_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_context_menu_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_context_menu_event k_textcustomeditor__plaintexteditfindbar_super_context_menu_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
@@ -4272,10 +4140,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_context_menu_event(void* self, 
 /// @param event QTabletEvent*
 ///
 void k_textcustomeditor__plaintexteditfindbar_tablet_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_tablet_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_tablet_event k_textcustomeditor__plaintexteditfindbar_super_tablet_event
 
 /// Inherited from QWidget
 ///
@@ -4310,10 +4174,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_tablet_event(void* self, void (
 ///
 void k_textcustomeditor__plaintexteditfindbar_action_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_action_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_action_event k_textcustomeditor__plaintexteditfindbar_super_action_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -4346,10 +4206,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_action_event(void* self, void (
 /// @param event QDragEnterEvent*
 ///
 void k_textcustomeditor__plaintexteditfindbar_drag_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_drag_enter_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_drag_enter_event k_textcustomeditor__plaintexteditfindbar_super_drag_enter_event
 
 /// Inherited from QWidget
 ///
@@ -4384,10 +4240,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_drag_enter_event(void* self, vo
 ///
 void k_textcustomeditor__plaintexteditfindbar_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_drag_move_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_drag_move_event k_textcustomeditor__plaintexteditfindbar_super_drag_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -4420,10 +4272,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_drag_move_event(void* self, voi
 /// @param event QDragLeaveEvent*
 ///
 void k_textcustomeditor__plaintexteditfindbar_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_drag_leave_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_drag_leave_event k_textcustomeditor__plaintexteditfindbar_super_drag_leave_event
 
 /// Inherited from QWidget
 ///
@@ -4458,10 +4306,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_drag_leave_event(void* self, vo
 ///
 void k_textcustomeditor__plaintexteditfindbar_drop_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_drop_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_drop_event k_textcustomeditor__plaintexteditfindbar_super_drop_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4495,10 +4339,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_drop_event(void* self, void (*c
 ///
 void k_textcustomeditor__plaintexteditfindbar_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_show_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_show_event k_textcustomeditor__plaintexteditfindbar_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -4531,10 +4371,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_show_event(void* self, void (*c
 /// @param event QHideEvent*
 ///
 void k_textcustomeditor__plaintexteditfindbar_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_hide_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_hide_event k_textcustomeditor__plaintexteditfindbar_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -4571,10 +4407,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_hide_event(void* self, void (*c
 ///
 bool k_textcustomeditor__plaintexteditfindbar_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_native_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_native_event k_textcustomeditor__plaintexteditfindbar_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4610,10 +4442,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_native_event(void* self, bool (
 ///
 void k_textcustomeditor__plaintexteditfindbar_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_change_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_change_event k_textcustomeditor__plaintexteditfindbar_super_change_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -4646,10 +4474,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_change_event(void* self, void (
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
 int32_t k_textcustomeditor__plaintexteditfindbar_metric(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_metric` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_metric k_textcustomeditor__plaintexteditfindbar_super_metric
 
 /// Inherited from QWidget
 ///
@@ -4684,10 +4508,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_metric(void* self, int32_t (*ca
 ///
 void k_textcustomeditor__plaintexteditfindbar_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_init_painter` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_init_painter k_textcustomeditor__plaintexteditfindbar_super_init_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -4721,10 +4541,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_init_painter(void* self, void (
 ///
 QPaintDevice* k_textcustomeditor__plaintexteditfindbar_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_redirected` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_redirected k_textcustomeditor__plaintexteditfindbar_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4756,10 +4572,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_redirected(void* self, QPaintDe
 /// @param self TextCustomEditor__PlainTextEditFindBar*
 ///
 QPainter* k_textcustomeditor__plaintexteditfindbar_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_shared_painter` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_shared_painter k_textcustomeditor__plaintexteditfindbar_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -4793,10 +4605,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_shared_painter(void* self, QPai
 ///
 void k_textcustomeditor__plaintexteditfindbar_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_input_method_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_input_method_event k_textcustomeditor__plaintexteditfindbar_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4829,10 +4637,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_input_method_event(void* self, 
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* k_textcustomeditor__plaintexteditfindbar_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_input_method_query` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_input_method_query k_textcustomeditor__plaintexteditfindbar_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -4869,10 +4673,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_input_method_query(void* self, 
 ///
 bool k_textcustomeditor__plaintexteditfindbar_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_focus_next_prev_child` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_focus_next_prev_child k_textcustomeditor__plaintexteditfindbar_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -4906,10 +4706,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_focus_next_prev_child(void* sel
 /// @param event QEvent*
 ///
 bool k_textcustomeditor__plaintexteditfindbar_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_event_filter` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_event_filter k_textcustomeditor__plaintexteditfindbar_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -4945,10 +4741,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_event_filter(void* self, bool (
 ///
 void k_textcustomeditor__plaintexteditfindbar_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_timer_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_timer_event k_textcustomeditor__plaintexteditfindbar_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -4981,10 +4773,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_timer_event(void* self, void (*
 /// @param event QChildEvent*
 ///
 void k_textcustomeditor__plaintexteditfindbar_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_child_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_child_event k_textcustomeditor__plaintexteditfindbar_super_child_event
 
 /// Inherited from QObject
 ///
@@ -5019,10 +4807,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_child_event(void* self, void (*
 ///
 void k_textcustomeditor__plaintexteditfindbar_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_custom_event` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_custom_event k_textcustomeditor__plaintexteditfindbar_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -5055,10 +4839,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_custom_event(void* self, void (
 /// @param signal QMetaMethod*
 ///
 void k_textcustomeditor__plaintexteditfindbar_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_connect_notify` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_connect_notify k_textcustomeditor__plaintexteditfindbar_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -5093,10 +4873,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_connect_notify(void* self, void
 ///
 void k_textcustomeditor__plaintexteditfindbar_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_disconnect_notify` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_disconnect_notify k_textcustomeditor__plaintexteditfindbar_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5128,10 +4904,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_disconnect_notify(void* self, v
 /// @param self TextCustomEditor__PlainTextEditFindBar*
 ///
 void k_textcustomeditor__plaintexteditfindbar_clear_selections(void* self);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_clear_selections` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_clear_selections k_textcustomeditor__plaintexteditfindbar_super_clear_selections
 
 /// Inherited from TextCustomEditor::TextEditFindBarBase
 ///
@@ -5166,10 +4938,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_clear_selections(void* self, vo
 ///
 bool k_textcustomeditor__plaintexteditfindbar_search_text(void* self, bool backward, bool isAutoSearch);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_search_text` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_search_text k_textcustomeditor__plaintexteditfindbar_super_search_text
-
 /// Inherited from TextCustomEditor::TextEditFindBarBase
 ///
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
@@ -5203,10 +4971,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_search_text(void* self, bool (*
 /// @param match bool
 ///
 void k_textcustomeditor__plaintexteditfindbar_set_found_match(void* self, bool match);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_set_found_match` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_set_found_match k_textcustomeditor__plaintexteditfindbar_super_set_found_match
 
 /// Inherited from TextCustomEditor::TextEditFindBarBase
 ///
@@ -5243,10 +5007,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_set_found_match(void* self, voi
 ///
 void k_textcustomeditor__plaintexteditfindbar_message_info(void* self, bool backward, bool isAutoSearch, bool found);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_message_info` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_message_info k_textcustomeditor__plaintexteditfindbar_super_message_info
-
 /// Inherited from TextCustomEditor::TextEditFindBarBase
 ///
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditFindBarBase.html)
@@ -5281,10 +5041,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_message_info(void* self, void (
 ///
 void k_textcustomeditor__plaintexteditfindbar_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_update_micro_focus` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_update_micro_focus k_textcustomeditor__plaintexteditfindbar_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5315,10 +5071,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_update_micro_focus(void* self, 
 /// @param self TextCustomEditor__PlainTextEditFindBar*
 ///
 void k_textcustomeditor__plaintexteditfindbar_create(void* self);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_create` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_create k_textcustomeditor__plaintexteditfindbar_super_create
 
 /// Inherited from QWidget
 ///
@@ -5351,10 +5103,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_create(void* self, void (*callb
 ///
 void k_textcustomeditor__plaintexteditfindbar_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_destroy` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_destroy k_textcustomeditor__plaintexteditfindbar_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5385,10 +5133,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_destroy(void* self, void (*call
 /// @param self TextCustomEditor__PlainTextEditFindBar*
 ///
 bool k_textcustomeditor__plaintexteditfindbar_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_focus_next_child` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_focus_next_child k_textcustomeditor__plaintexteditfindbar_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -5421,10 +5165,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_focus_next_child(void* self, bo
 ///
 bool k_textcustomeditor__plaintexteditfindbar_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_focus_previous_child` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_focus_previous_child k_textcustomeditor__plaintexteditfindbar_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5455,10 +5195,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_focus_previous_child(void* self
 /// @param self TextCustomEditor__PlainTextEditFindBar*
 ///
 QObject* k_textcustomeditor__plaintexteditfindbar_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_sender` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_sender k_textcustomeditor__plaintexteditfindbar_super_sender
 
 /// Inherited from QObject
 ///
@@ -5491,10 +5227,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_sender(void* self, QObject* (*c
 ///
 int32_t k_textcustomeditor__plaintexteditfindbar_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_sender_signal_index` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_sender_signal_index k_textcustomeditor__plaintexteditfindbar_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5526,10 +5258,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_sender_signal_index(void* self,
 /// @param signal const char*
 ///
 int32_t k_textcustomeditor__plaintexteditfindbar_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_receivers` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_receivers k_textcustomeditor__plaintexteditfindbar_super_receivers
 
 /// Inherited from QObject
 ///
@@ -5564,10 +5292,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_receivers(void* self, int32_t (
 ///
 bool k_textcustomeditor__plaintexteditfindbar_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_is_signal_connected` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_is_signal_connected k_textcustomeditor__plaintexteditfindbar_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5601,10 +5325,6 @@ void k_textcustomeditor__plaintexteditfindbar_on_is_signal_connected(void* self,
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_textcustomeditor__plaintexteditfindbar_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditfindbar_super_get_decoded_metric_f` instead
-///
-#define k_textcustomeditor__plaintexteditfindbar_qbase_get_decoded_metric_f k_textcustomeditor__plaintexteditfindbar_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

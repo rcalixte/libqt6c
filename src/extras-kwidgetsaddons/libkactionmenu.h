@@ -50,10 +50,6 @@ const QMetaObject* k_actionmenu_meta_object(void* self);
 ///
 void k_actionmenu_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_actionmenu_super_meta_object` instead
-///
-#define k_actionmenu_qbase_meta_object k_actionmenu_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -73,10 +69,6 @@ void* k_actionmenu_metacast(void* self, const char* param1);
 /// @param callback void* func(KActionMenu* self, const char* param1)
 ///
 void k_actionmenu_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_actionmenu_super_metacast` instead
-///
-#define k_actionmenu_qbase_metacast k_actionmenu_super_metacast
 
 /// Base class method implementation
 ///
@@ -98,10 +90,6 @@ int32_t k_actionmenu_metacall(void* self, int32_t param1, int param2, void* para
 /// @param callback int32_t func(KActionMenu* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_actionmenu_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_actionmenu_super_metacall` instead
-///
-#define k_actionmenu_qbase_metacall k_actionmenu_super_metacall
 
 /// Base class method implementation
 ///
@@ -185,10 +173,6 @@ QWidget* k_actionmenu_create_widget(void* self, void* parent);
 /// @param callback QWidget* func(KActionMenu* self, QWidget* parent)
 ///
 void k_actionmenu_on_create_widget(void* self, QWidget* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_actionmenu_super_create_widget` instead
-///
-#define k_actionmenu_qbase_create_widget k_actionmenu_super_create_widget
 
 /// [Upstream resources](https://api.kde.org/kactionmenu.html#createWidget)
 ///
@@ -1329,10 +1313,6 @@ void k_actionmenu_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool k_actionmenu_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_actionmenu_super_event` instead
-///
-#define k_actionmenu_qbase_event k_actionmenu_super_event
-
 /// Inherited from QWidgetAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#event)
@@ -1366,10 +1346,6 @@ void k_actionmenu_on_event(void* self, bool (*callback)(void*, void*));
 /// @param param2 QEvent*
 ///
 bool k_actionmenu_event_filter(void* self, void* param1, void* param2);
-
-/// @warning DEPRECATED: Use `k_actionmenu_super_event_filter` instead
-///
-#define k_actionmenu_qbase_event_filter k_actionmenu_super_event_filter
 
 /// Inherited from QWidgetAction
 ///
@@ -1405,10 +1381,6 @@ void k_actionmenu_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void k_actionmenu_delete_widget(void* self, void* widget);
 
-/// @warning DEPRECATED: Use `k_actionmenu_super_delete_widget` instead
-///
-#define k_actionmenu_qbase_delete_widget k_actionmenu_super_delete_widget
-
 /// Inherited from QWidgetAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#deleteWidget)
@@ -1441,10 +1413,6 @@ void k_actionmenu_on_delete_widget(void* self, void (*callback)(void*, void*));
 /// @param event QTimerEvent*
 ///
 void k_actionmenu_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_actionmenu_super_timer_event` instead
-///
-#define k_actionmenu_qbase_timer_event k_actionmenu_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -1479,10 +1447,6 @@ void k_actionmenu_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_actionmenu_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_actionmenu_super_child_event` instead
-///
-#define k_actionmenu_qbase_child_event k_actionmenu_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1515,10 +1479,6 @@ void k_actionmenu_on_child_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void k_actionmenu_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_actionmenu_super_custom_event` instead
-///
-#define k_actionmenu_qbase_custom_event k_actionmenu_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -1553,10 +1513,6 @@ void k_actionmenu_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void k_actionmenu_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_actionmenu_super_connect_notify` instead
-///
-#define k_actionmenu_qbase_connect_notify k_actionmenu_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1589,10 +1545,6 @@ void k_actionmenu_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void k_actionmenu_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_actionmenu_super_disconnect_notify` instead
-///
-#define k_actionmenu_qbase_disconnect_notify k_actionmenu_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -1628,10 +1580,6 @@ void k_actionmenu_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 libqt_list k_actionmenu_created_widgets(void* self);
 
-/// @warning DEPRECATED: Use `k_actionmenu_super_created_widgets` instead
-///
-#define k_actionmenu_qbase_created_widgets k_actionmenu_super_created_widgets
-
 /// Inherited from QWidgetAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
@@ -1665,10 +1613,6 @@ void k_actionmenu_on_created_widgets(void* self, libqt_list (*callback)());
 ///
 QObject* k_actionmenu_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_actionmenu_super_sender` instead
-///
-#define k_actionmenu_qbase_sender k_actionmenu_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1699,10 +1643,6 @@ void k_actionmenu_on_sender(void* self, QObject* (*callback)());
 /// @param self KActionMenu*
 ///
 int32_t k_actionmenu_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_actionmenu_super_sender_signal_index` instead
-///
-#define k_actionmenu_qbase_sender_signal_index k_actionmenu_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1736,10 +1676,6 @@ void k_actionmenu_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_actionmenu_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_actionmenu_super_receivers` instead
-///
-#define k_actionmenu_qbase_receivers k_actionmenu_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1772,10 +1708,6 @@ void k_actionmenu_on_receivers(void* self, int32_t (*callback)(void*, const char
 /// @param signal QMetaMethod*
 ///
 bool k_actionmenu_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_actionmenu_super_is_signal_connected` instead
-///
-#define k_actionmenu_qbase_is_signal_connected k_actionmenu_super_is_signal_connected
 
 /// Inherited from QObject
 ///

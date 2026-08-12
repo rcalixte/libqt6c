@@ -160,10 +160,6 @@ void k_configskeletonitem_read_config(void* self, void* param1);
 ///
 void k_configskeletonitem_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_configskeletonitem_super_read_config` instead
-///
-#define k_configskeletonitem_qbase_read_config k_configskeletonitem_super_read_config
-
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#readConfig)
 ///
 /// Base class method implementation
@@ -188,10 +184,6 @@ void k_configskeletonitem_write_config(void* self, void* param1);
 /// @param callback void func(KConfigSkeletonItem* self, KConfig* param1)
 ///
 void k_configskeletonitem_on_write_config(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_configskeletonitem_super_write_config` instead
-///
-#define k_configskeletonitem_qbase_write_config k_configskeletonitem_super_write_config
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#writeConfig)
 ///
@@ -218,10 +210,6 @@ void k_configskeletonitem_read_default(void* self, void* param1);
 ///
 void k_configskeletonitem_on_read_default(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_configskeletonitem_super_read_default` instead
-///
-#define k_configskeletonitem_qbase_read_default k_configskeletonitem_super_read_default
-
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#readDefault)
 ///
 /// Base class method implementation
@@ -247,10 +235,6 @@ void k_configskeletonitem_set_property(void* self, void* p);
 ///
 void k_configskeletonitem_on_set_property(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_configskeletonitem_super_set_property` instead
-///
-#define k_configskeletonitem_qbase_set_property k_configskeletonitem_super_set_property
-
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#setProperty)
 ///
 /// Base class method implementation
@@ -275,10 +259,6 @@ bool k_configskeletonitem_is_equal(void* self, void* p);
 /// @param callback bool func(KConfigSkeletonItem* self, QVariant* p)
 ///
 void k_configskeletonitem_on_is_equal(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_configskeletonitem_super_is_equal` instead
-///
-#define k_configskeletonitem_qbase_is_equal k_configskeletonitem_super_is_equal
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#isEqual)
 ///
@@ -306,10 +286,6 @@ QVariant* k_configskeletonitem_property(void* self);
 ///
 void k_configskeletonitem_on_property(void* self, QVariant* (*callback)());
 
-/// @warning DEPRECATED: Use `k_configskeletonitem_super_property` instead
-///
-#define k_configskeletonitem_qbase_property k_configskeletonitem_super_property
-
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#property)
 ///
 /// Base class method implementation
@@ -334,10 +310,6 @@ QVariant* k_configskeletonitem_min_value(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_configskeletonitem_on_min_value(void* self, QVariant* (*callback)());
-
-/// @warning DEPRECATED: Use `k_configskeletonitem_super_min_value` instead
-///
-#define k_configskeletonitem_qbase_min_value k_configskeletonitem_super_min_value
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#minValue)
 ///
@@ -364,10 +336,6 @@ QVariant* k_configskeletonitem_max_value(void* self);
 ///
 void k_configskeletonitem_on_max_value(void* self, QVariant* (*callback)());
 
-/// @warning DEPRECATED: Use `k_configskeletonitem_super_max_value` instead
-///
-#define k_configskeletonitem_qbase_max_value k_configskeletonitem_super_max_value
-
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#maxValue)
 ///
 /// Base class method implementation
@@ -391,10 +359,6 @@ void k_configskeletonitem_set_default(void* self);
 ///
 void k_configskeletonitem_on_set_default(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_configskeletonitem_super_set_default` instead
-///
-#define k_configskeletonitem_qbase_set_default k_configskeletonitem_super_set_default
-
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#setDefault)
 ///
 /// Base class method implementation
@@ -417,10 +381,6 @@ void k_configskeletonitem_swap_default(void* self);
 /// @param callback void func()
 ///
 void k_configskeletonitem_on_swap_default(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_configskeletonitem_super_swap_default` instead
-///
-#define k_configskeletonitem_qbase_swap_default k_configskeletonitem_super_swap_default
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#swapDefault)
 ///
@@ -469,10 +429,6 @@ void k_configskeletonitem_read_immutability(void* self, void* group);
 /// @param callback void func(KConfigSkeletonItem* self, KConfigGroup* group)
 ///
 void k_configskeletonitem_on_read_immutability(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_configskeletonitem_super_read_immutability` instead
-///
-#define k_configskeletonitem_qbase_read_immutability k_configskeletonitem_super_read_immutability
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#readImmutability)
 ///
@@ -526,10 +482,6 @@ QVariant* k_propertyskeletonitem_property(void* self);
 ///
 void k_propertyskeletonitem_on_property(void* self, QVariant* (*callback)());
 
-/// @warning DEPRECATED: Use `k_propertyskeletonitem_super_property` instead
-///
-#define k_propertyskeletonitem_qbase_property k_propertyskeletonitem_super_property
-
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#property)
 ///
 /// Base class method implementation
@@ -553,10 +505,6 @@ void k_propertyskeletonitem_set_property(void* self, void* p);
 /// @param callback void func(KPropertySkeletonItem* self, QVariant* p)
 ///
 void k_propertyskeletonitem_on_set_property(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_propertyskeletonitem_super_set_property` instead
-///
-#define k_propertyskeletonitem_qbase_set_property k_propertyskeletonitem_super_set_property
 
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#setProperty)
 ///
@@ -583,10 +531,6 @@ bool k_propertyskeletonitem_is_equal(void* self, void* p);
 ///
 void k_propertyskeletonitem_on_is_equal(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_propertyskeletonitem_super_is_equal` instead
-///
-#define k_propertyskeletonitem_qbase_is_equal k_propertyskeletonitem_super_is_equal
-
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#isEqual)
 ///
 /// Base class method implementation
@@ -611,10 +555,6 @@ void k_propertyskeletonitem_read_config(void* self, void* param1);
 /// @param callback void func(KPropertySkeletonItem* self, KConfig* param1)
 ///
 void k_propertyskeletonitem_on_read_config(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_propertyskeletonitem_super_read_config` instead
-///
-#define k_propertyskeletonitem_qbase_read_config k_propertyskeletonitem_super_read_config
 
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#readConfig)
 ///
@@ -641,10 +581,6 @@ void k_propertyskeletonitem_write_config(void* self, void* param1);
 ///
 void k_propertyskeletonitem_on_write_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_propertyskeletonitem_super_write_config` instead
-///
-#define k_propertyskeletonitem_qbase_write_config k_propertyskeletonitem_super_write_config
-
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#writeConfig)
 ///
 /// Base class method implementation
@@ -670,10 +606,6 @@ void k_propertyskeletonitem_read_default(void* self, void* param1);
 ///
 void k_propertyskeletonitem_on_read_default(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_propertyskeletonitem_super_read_default` instead
-///
-#define k_propertyskeletonitem_qbase_read_default k_propertyskeletonitem_super_read_default
-
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#readDefault)
 ///
 /// Base class method implementation
@@ -698,10 +630,6 @@ void k_propertyskeletonitem_set_default(void* self);
 ///
 void k_propertyskeletonitem_on_set_default(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_propertyskeletonitem_super_set_default` instead
-///
-#define k_propertyskeletonitem_qbase_set_default k_propertyskeletonitem_super_set_default
-
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#setDefault)
 ///
 /// Base class method implementation
@@ -724,10 +652,6 @@ void k_propertyskeletonitem_swap_default(void* self);
 /// @param callback void func()
 ///
 void k_propertyskeletonitem_on_swap_default(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_propertyskeletonitem_super_swap_default` instead
-///
-#define k_propertyskeletonitem_qbase_swap_default k_propertyskeletonitem_super_swap_default
 
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#swapDefault)
 ///
@@ -937,10 +861,6 @@ QVariant* k_propertyskeletonitem_get_default(void* self);
 ///
 QVariant* k_propertyskeletonitem_min_value(void* self);
 
-/// @warning DEPRECATED: Use `k_propertyskeletonitem_super_min_value` instead
-///
-#define k_propertyskeletonitem_qbase_min_value k_propertyskeletonitem_super_min_value
-
 /// Inherited from KConfigSkeletonItem
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#minValue)
@@ -973,10 +893,6 @@ void k_propertyskeletonitem_on_min_value(void* self, QVariant* (*callback)());
 /// @param self KPropertySkeletonItem*
 ///
 QVariant* k_propertyskeletonitem_max_value(void* self);
-
-/// @warning DEPRECATED: Use `k_propertyskeletonitem_super_max_value` instead
-///
-#define k_propertyskeletonitem_qbase_max_value k_propertyskeletonitem_super_max_value
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -1011,10 +927,6 @@ void k_propertyskeletonitem_on_max_value(void* self, QVariant* (*callback)());
 /// @param group KConfigGroup*
 ///
 void k_propertyskeletonitem_read_immutability(void* self, void* group);
-
-/// @warning DEPRECATED: Use `k_propertyskeletonitem_super_read_immutability` instead
-///
-#define k_propertyskeletonitem_qbase_read_immutability k_propertyskeletonitem_super_read_immutability
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -1334,10 +1246,6 @@ const QMetaObject* k_coreconfigskeleton_meta_object(void* self);
 ///
 void k_coreconfigskeleton_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton_super_meta_object` instead
-///
-#define k_coreconfigskeleton_qbase_meta_object k_coreconfigskeleton_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -1357,10 +1265,6 @@ void* k_coreconfigskeleton_metacast(void* self, const char* param1);
 /// @param callback void* func(KCoreConfigSkeleton* self, const char* param1)
 ///
 void k_coreconfigskeleton_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton_super_metacast` instead
-///
-#define k_coreconfigskeleton_qbase_metacast k_coreconfigskeleton_super_metacast
 
 /// Base class method implementation
 ///
@@ -1382,10 +1286,6 @@ int32_t k_coreconfigskeleton_metacall(void* self, int32_t param1, int param2, vo
 /// @param callback int32_t func(KCoreConfigSkeleton* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_coreconfigskeleton_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton_super_metacall` instead
-///
-#define k_coreconfigskeleton_qbase_metacall k_coreconfigskeleton_super_metacall
 
 /// Base class method implementation
 ///
@@ -1418,10 +1318,6 @@ void k_coreconfigskeleton_set_defaults(void* self);
 /// @param callback void func()
 ///
 void k_coreconfigskeleton_on_set_defaults(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton_super_set_defaults` instead
-///
-#define k_coreconfigskeleton_qbase_set_defaults k_coreconfigskeleton_super_set_defaults
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#setDefaults)
 ///
@@ -1692,10 +1588,6 @@ bool k_coreconfigskeleton_use_defaults(void* self, bool b);
 ///
 void k_coreconfigskeleton_on_use_defaults(void* self, bool (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton_super_use_defaults` instead
-///
-#define k_coreconfigskeleton_qbase_use_defaults k_coreconfigskeleton_super_use_defaults
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#useDefaults)
 ///
 /// Base class method implementation
@@ -1740,10 +1632,6 @@ bool k_coreconfigskeleton_usr_use_defaults(void* self, bool b);
 ///
 void k_coreconfigskeleton_on_usr_use_defaults(void* self, bool (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton_super_usr_use_defaults` instead
-///
-#define k_coreconfigskeleton_qbase_usr_use_defaults k_coreconfigskeleton_super_usr_use_defaults
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrUseDefaults)
 ///
 /// Base class method implementation
@@ -1768,10 +1656,6 @@ void k_coreconfigskeleton_usr_set_defaults(void* self);
 ///
 void k_coreconfigskeleton_on_usr_set_defaults(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton_super_usr_set_defaults` instead
-///
-#define k_coreconfigskeleton_qbase_usr_set_defaults k_coreconfigskeleton_super_usr_set_defaults
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrSetDefaults)
 ///
 /// Base class method implementation
@@ -1795,10 +1679,6 @@ void k_coreconfigskeleton_usr_read(void* self);
 ///
 void k_coreconfigskeleton_on_usr_read(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton_super_usr_read` instead
-///
-#define k_coreconfigskeleton_qbase_usr_read k_coreconfigskeleton_super_usr_read
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrRead)
 ///
 /// Base class method implementation
@@ -1821,10 +1701,6 @@ bool k_coreconfigskeleton_usr_save(void* self);
 /// @param callback bool func()
 ///
 void k_coreconfigskeleton_on_usr_save(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton_super_usr_save` instead
-///
-#define k_coreconfigskeleton_qbase_usr_save k_coreconfigskeleton_super_usr_save
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#usrSave)
 ///
@@ -2680,10 +2556,6 @@ void k_coreconfigskeleton_on_destroyed1(void* self, void (*callback)(void*, void
 ///
 bool k_coreconfigskeleton_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton_super_event` instead
-///
-#define k_coreconfigskeleton_qbase_event k_coreconfigskeleton_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -2717,10 +2589,6 @@ void k_coreconfigskeleton_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool k_coreconfigskeleton_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton_super_event_filter` instead
-///
-#define k_coreconfigskeleton_qbase_event_filter k_coreconfigskeleton_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -2756,10 +2624,6 @@ void k_coreconfigskeleton_on_event_filter(void* self, bool (*callback)(void*, vo
 ///
 void k_coreconfigskeleton_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton_super_timer_event` instead
-///
-#define k_coreconfigskeleton_qbase_timer_event k_coreconfigskeleton_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2792,10 +2656,6 @@ void k_coreconfigskeleton_on_timer_event(void* self, void (*callback)(void*, voi
 /// @param event QChildEvent*
 ///
 void k_coreconfigskeleton_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton_super_child_event` instead
-///
-#define k_coreconfigskeleton_qbase_child_event k_coreconfigskeleton_super_child_event
 
 /// Inherited from QObject
 ///
@@ -2830,10 +2690,6 @@ void k_coreconfigskeleton_on_child_event(void* self, void (*callback)(void*, voi
 ///
 void k_coreconfigskeleton_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton_super_custom_event` instead
-///
-#define k_coreconfigskeleton_qbase_custom_event k_coreconfigskeleton_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2866,10 +2722,6 @@ void k_coreconfigskeleton_on_custom_event(void* self, void (*callback)(void*, vo
 /// @param signal QMetaMethod*
 ///
 void k_coreconfigskeleton_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton_super_connect_notify` instead
-///
-#define k_coreconfigskeleton_qbase_connect_notify k_coreconfigskeleton_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -2904,10 +2756,6 @@ void k_coreconfigskeleton_on_connect_notify(void* self, void (*callback)(void*, 
 ///
 void k_coreconfigskeleton_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton_super_disconnect_notify` instead
-///
-#define k_coreconfigskeleton_qbase_disconnect_notify k_coreconfigskeleton_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -2940,10 +2788,6 @@ void k_coreconfigskeleton_on_disconnect_notify(void* self, void (*callback)(void
 ///
 QObject* k_coreconfigskeleton_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton_super_sender` instead
-///
-#define k_coreconfigskeleton_qbase_sender k_coreconfigskeleton_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2974,10 +2818,6 @@ void k_coreconfigskeleton_on_sender(void* self, QObject* (*callback)());
 /// @param self KCoreConfigSkeleton*
 ///
 int32_t k_coreconfigskeleton_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton_super_sender_signal_index` instead
-///
-#define k_coreconfigskeleton_qbase_sender_signal_index k_coreconfigskeleton_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -3011,10 +2851,6 @@ void k_coreconfigskeleton_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 int32_t k_coreconfigskeleton_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton_super_receivers` instead
-///
-#define k_coreconfigskeleton_qbase_receivers k_coreconfigskeleton_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -3047,10 +2883,6 @@ void k_coreconfigskeleton_on_receivers(void* self, int32_t (*callback)(void*, co
 /// @param signal QMetaMethod*
 ///
 bool k_coreconfigskeleton_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton_super_is_signal_connected` instead
-///
-#define k_coreconfigskeleton_qbase_is_signal_connected k_coreconfigskeleton_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -3142,10 +2974,6 @@ void k_coreconfigskeleton__itemstring_write_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itemstring_on_write_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemstring_super_write_config` instead
-///
-#define k_coreconfigskeleton__itemstring_qbase_write_config k_coreconfigskeleton__itemstring_super_write_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstring.html#writeConfig)
 ///
 /// Base class method implementation
@@ -3170,10 +2998,6 @@ void k_coreconfigskeleton__itemstring_read_config(void* self, void* config);
 /// @param callback void func(KCoreConfigSkeleton__ItemString* self, KConfig* config)
 ///
 void k_coreconfigskeleton__itemstring_on_read_config(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemstring_super_read_config` instead
-///
-#define k_coreconfigskeleton__itemstring_qbase_read_config k_coreconfigskeleton__itemstring_super_read_config
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstring.html#readConfig)
 ///
@@ -3200,10 +3024,6 @@ void k_coreconfigskeleton__itemstring_set_property(void* self, void* p);
 ///
 void k_coreconfigskeleton__itemstring_on_set_property(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemstring_super_set_property` instead
-///
-#define k_coreconfigskeleton__itemstring_qbase_set_property k_coreconfigskeleton__itemstring_super_set_property
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstring.html#setProperty)
 ///
 /// Base class method implementation
@@ -3228,10 +3048,6 @@ bool k_coreconfigskeleton__itemstring_is_equal(void* self, void* p);
 /// @param callback bool func(KCoreConfigSkeleton__ItemString* self, QVariant* p)
 ///
 void k_coreconfigskeleton__itemstring_on_is_equal(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemstring_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itemstring_qbase_is_equal k_coreconfigskeleton__itemstring_super_is_equal
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstring.html#isEqual)
 ///
@@ -3258,10 +3074,6 @@ QVariant* k_coreconfigskeleton__itemstring_property(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemstring_on_property(void* self, QVariant* (*callback)());
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemstring_super_property` instead
-///
-#define k_coreconfigskeleton__itemstring_qbase_property k_coreconfigskeleton__itemstring_super_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstring.html#property)
 ///
@@ -3309,10 +3121,6 @@ KCoreConfigSkeleton__ItemPassword* k_coreconfigskeleton__itempassword_new2(const
 ///
 void k_coreconfigskeleton__itempassword_write_config(void* self, void* config);
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempassword_super_write_config` instead
-///
-#define k_coreconfigskeleton__itempassword_qbase_write_config k_coreconfigskeleton__itempassword_super_write_config
-
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstring.html#writeConfig)
@@ -3345,10 +3153,6 @@ void k_coreconfigskeleton__itempassword_on_write_config(void* self, void (*callb
 /// @param config KConfig*
 ///
 void k_coreconfigskeleton__itempassword_read_config(void* self, void* config);
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempassword_super_read_config` instead
-///
-#define k_coreconfigskeleton__itempassword_qbase_read_config k_coreconfigskeleton__itempassword_super_read_config
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3383,10 +3187,6 @@ void k_coreconfigskeleton__itempassword_on_read_config(void* self, void (*callba
 ///
 void k_coreconfigskeleton__itempassword_set_property(void* self, void* p);
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempassword_super_set_property` instead
-///
-#define k_coreconfigskeleton__itempassword_qbase_set_property k_coreconfigskeleton__itempassword_super_set_property
-
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstring.html#setProperty)
@@ -3420,10 +3220,6 @@ void k_coreconfigskeleton__itempassword_on_set_property(void* self, void (*callb
 ///
 bool k_coreconfigskeleton__itempassword_is_equal(void* self, void* p);
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempassword_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itempassword_qbase_is_equal k_coreconfigskeleton__itempassword_super_is_equal
-
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstring.html#isEqual)
@@ -3455,10 +3251,6 @@ void k_coreconfigskeleton__itempassword_on_is_equal(void* self, bool (*callback)
 /// @param self KCoreConfigSkeleton__ItemPassword*
 ///
 QVariant* k_coreconfigskeleton__itempassword_property(void* self);
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempassword_super_property` instead
-///
-#define k_coreconfigskeleton__itempassword_qbase_property k_coreconfigskeleton__itempassword_super_property
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3521,10 +3313,6 @@ KCoreConfigSkeleton__ItemPath* k_coreconfigskeleton__itempath_new2(const char* _
 ///
 void k_coreconfigskeleton__itempath_write_config(void* self, void* config);
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempath_super_write_config` instead
-///
-#define k_coreconfigskeleton__itempath_qbase_write_config k_coreconfigskeleton__itempath_super_write_config
-
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstring.html#writeConfig)
@@ -3557,10 +3345,6 @@ void k_coreconfigskeleton__itempath_on_write_config(void* self, void (*callback)
 /// @param config KConfig*
 ///
 void k_coreconfigskeleton__itempath_read_config(void* self, void* config);
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempath_super_read_config` instead
-///
-#define k_coreconfigskeleton__itempath_qbase_read_config k_coreconfigskeleton__itempath_super_read_config
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3595,10 +3379,6 @@ void k_coreconfigskeleton__itempath_on_read_config(void* self, void (*callback)(
 ///
 void k_coreconfigskeleton__itempath_set_property(void* self, void* p);
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempath_super_set_property` instead
-///
-#define k_coreconfigskeleton__itempath_qbase_set_property k_coreconfigskeleton__itempath_super_set_property
-
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstring.html#setProperty)
@@ -3632,10 +3412,6 @@ void k_coreconfigskeleton__itempath_on_set_property(void* self, void (*callback)
 ///
 bool k_coreconfigskeleton__itempath_is_equal(void* self, void* p);
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempath_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itempath_qbase_is_equal k_coreconfigskeleton__itempath_super_is_equal
-
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstring.html#isEqual)
@@ -3667,10 +3443,6 @@ void k_coreconfigskeleton__itempath_on_is_equal(void* self, bool (*callback)(voi
 /// @param self KCoreConfigSkeleton__ItemPath*
 ///
 QVariant* k_coreconfigskeleton__itempath_property(void* self);
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempath_super_property` instead
-///
-#define k_coreconfigskeleton__itempath_qbase_property k_coreconfigskeleton__itempath_super_property
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3738,10 +3510,6 @@ void k_coreconfigskeleton__itemurl_write_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itemurl_on_write_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemurl_super_write_config` instead
-///
-#define k_coreconfigskeleton__itemurl_qbase_write_config k_coreconfigskeleton__itemurl_super_write_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurl.html#writeConfig)
 ///
 /// Base class method implementation
@@ -3766,10 +3534,6 @@ void k_coreconfigskeleton__itemurl_read_config(void* self, void* config);
 /// @param callback void func(KCoreConfigSkeleton__ItemUrl* self, KConfig* config)
 ///
 void k_coreconfigskeleton__itemurl_on_read_config(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemurl_super_read_config` instead
-///
-#define k_coreconfigskeleton__itemurl_qbase_read_config k_coreconfigskeleton__itemurl_super_read_config
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurl.html#readConfig)
 ///
@@ -3796,10 +3560,6 @@ void k_coreconfigskeleton__itemurl_set_property(void* self, void* p);
 ///
 void k_coreconfigskeleton__itemurl_on_set_property(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemurl_super_set_property` instead
-///
-#define k_coreconfigskeleton__itemurl_qbase_set_property k_coreconfigskeleton__itemurl_super_set_property
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurl.html#setProperty)
 ///
 /// Base class method implementation
@@ -3824,10 +3584,6 @@ bool k_coreconfigskeleton__itemurl_is_equal(void* self, void* p);
 /// @param callback bool func(KCoreConfigSkeleton__ItemUrl* self, QVariant* p)
 ///
 void k_coreconfigskeleton__itemurl_on_is_equal(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemurl_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itemurl_qbase_is_equal k_coreconfigskeleton__itemurl_super_is_equal
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurl.html#isEqual)
 ///
@@ -3854,10 +3610,6 @@ QVariant* k_coreconfigskeleton__itemurl_property(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemurl_on_property(void* self, QVariant* (*callback)());
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemurl_super_property` instead
-///
-#define k_coreconfigskeleton__itemurl_qbase_property k_coreconfigskeleton__itemurl_super_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurl.html#property)
 ///
@@ -3910,10 +3662,6 @@ void k_coreconfigskeleton__itemproperty_read_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itemproperty_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemproperty_super_read_config` instead
-///
-#define k_coreconfigskeleton__itemproperty_qbase_read_config k_coreconfigskeleton__itemproperty_super_read_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#readConfig)
 ///
 /// Base class method implementation
@@ -3938,10 +3686,6 @@ void k_coreconfigskeleton__itemproperty_set_property(void* self, void* p);
 /// @param callback void func(KCoreConfigSkeleton__ItemProperty* self, QVariant* p)
 ///
 void k_coreconfigskeleton__itemproperty_on_set_property(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemproperty_super_set_property` instead
-///
-#define k_coreconfigskeleton__itemproperty_qbase_set_property k_coreconfigskeleton__itemproperty_super_set_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#setProperty)
 ///
@@ -3968,10 +3712,6 @@ bool k_coreconfigskeleton__itemproperty_is_equal(void* self, void* p);
 ///
 void k_coreconfigskeleton__itemproperty_on_is_equal(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemproperty_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itemproperty_qbase_is_equal k_coreconfigskeleton__itemproperty_super_is_equal
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#isEqual)
 ///
 /// Base class method implementation
@@ -3997,10 +3737,6 @@ QVariant* k_coreconfigskeleton__itemproperty_property(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemproperty_on_property(void* self, QVariant* (*callback)());
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemproperty_super_property` instead
-///
-#define k_coreconfigskeleton__itemproperty_qbase_property k_coreconfigskeleton__itemproperty_super_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#property)
 ///
@@ -4053,10 +3789,6 @@ void k_coreconfigskeleton__itembool_read_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itembool_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itembool_super_read_config` instead
-///
-#define k_coreconfigskeleton__itembool_qbase_read_config k_coreconfigskeleton__itembool_super_read_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itembool.html#readConfig)
 ///
 /// Base class method implementation
@@ -4081,10 +3813,6 @@ void k_coreconfigskeleton__itembool_set_property(void* self, void* p);
 /// @param callback void func(KCoreConfigSkeleton__ItemBool* self, QVariant* p)
 ///
 void k_coreconfigskeleton__itembool_on_set_property(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itembool_super_set_property` instead
-///
-#define k_coreconfigskeleton__itembool_qbase_set_property k_coreconfigskeleton__itembool_super_set_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itembool.html#setProperty)
 ///
@@ -4111,10 +3839,6 @@ bool k_coreconfigskeleton__itembool_is_equal(void* self, void* p);
 ///
 void k_coreconfigskeleton__itembool_on_is_equal(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itembool_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itembool_qbase_is_equal k_coreconfigskeleton__itembool_super_is_equal
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itembool.html#isEqual)
 ///
 /// Base class method implementation
@@ -4140,10 +3864,6 @@ QVariant* k_coreconfigskeleton__itembool_property(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itembool_on_property(void* self, QVariant* (*callback)());
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itembool_super_property` instead
-///
-#define k_coreconfigskeleton__itembool_qbase_property k_coreconfigskeleton__itembool_super_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itembool.html#property)
 ///
@@ -4196,10 +3916,6 @@ void k_coreconfigskeleton__itemint_read_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itemint_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemint_super_read_config` instead
-///
-#define k_coreconfigskeleton__itemint_qbase_read_config k_coreconfigskeleton__itemint_super_read_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#readConfig)
 ///
 /// Base class method implementation
@@ -4225,10 +3941,6 @@ void k_coreconfigskeleton__itemint_set_property(void* self, void* p);
 ///
 void k_coreconfigskeleton__itemint_on_set_property(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemint_super_set_property` instead
-///
-#define k_coreconfigskeleton__itemint_qbase_set_property k_coreconfigskeleton__itemint_super_set_property
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#setProperty)
 ///
 /// Base class method implementation
@@ -4253,10 +3965,6 @@ bool k_coreconfigskeleton__itemint_is_equal(void* self, void* p);
 /// @param callback bool func(KCoreConfigSkeleton__ItemInt* self, QVariant* p)
 ///
 void k_coreconfigskeleton__itemint_on_is_equal(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemint_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itemint_qbase_is_equal k_coreconfigskeleton__itemint_super_is_equal
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#isEqual)
 ///
@@ -4284,10 +3992,6 @@ QVariant* k_coreconfigskeleton__itemint_property(void* self);
 ///
 void k_coreconfigskeleton__itemint_on_property(void* self, QVariant* (*callback)());
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemint_super_property` instead
-///
-#define k_coreconfigskeleton__itemint_qbase_property k_coreconfigskeleton__itemint_super_property
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#property)
 ///
 /// Base class method implementation
@@ -4313,10 +4017,6 @@ QVariant* k_coreconfigskeleton__itemint_min_value(void* self);
 ///
 void k_coreconfigskeleton__itemint_on_min_value(void* self, QVariant* (*callback)());
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemint_super_min_value` instead
-///
-#define k_coreconfigskeleton__itemint_qbase_min_value k_coreconfigskeleton__itemint_super_min_value
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#minValue)
 ///
 /// Base class method implementation
@@ -4341,10 +4041,6 @@ QVariant* k_coreconfigskeleton__itemint_max_value(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemint_on_max_value(void* self, QVariant* (*callback)());
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemint_super_max_value` instead
-///
-#define k_coreconfigskeleton__itemint_qbase_max_value k_coreconfigskeleton__itemint_super_max_value
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#maxValue)
 ///
@@ -4397,10 +4093,6 @@ void k_coreconfigskeleton__itemlonglong_read_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itemlonglong_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemlonglong_super_read_config` instead
-///
-#define k_coreconfigskeleton__itemlonglong_qbase_read_config k_coreconfigskeleton__itemlonglong_super_read_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#readConfig)
 ///
 /// Base class method implementation
@@ -4426,10 +4118,6 @@ void k_coreconfigskeleton__itemlonglong_set_property(void* self, void* p);
 ///
 void k_coreconfigskeleton__itemlonglong_on_set_property(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemlonglong_super_set_property` instead
-///
-#define k_coreconfigskeleton__itemlonglong_qbase_set_property k_coreconfigskeleton__itemlonglong_super_set_property
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#setProperty)
 ///
 /// Base class method implementation
@@ -4454,10 +4142,6 @@ bool k_coreconfigskeleton__itemlonglong_is_equal(void* self, void* p);
 /// @param callback bool func(KCoreConfigSkeleton__ItemLongLong* self, QVariant* p)
 ///
 void k_coreconfigskeleton__itemlonglong_on_is_equal(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemlonglong_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itemlonglong_qbase_is_equal k_coreconfigskeleton__itemlonglong_super_is_equal
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#isEqual)
 ///
@@ -4485,10 +4169,6 @@ QVariant* k_coreconfigskeleton__itemlonglong_property(void* self);
 ///
 void k_coreconfigskeleton__itemlonglong_on_property(void* self, QVariant* (*callback)());
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemlonglong_super_property` instead
-///
-#define k_coreconfigskeleton__itemlonglong_qbase_property k_coreconfigskeleton__itemlonglong_super_property
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#property)
 ///
 /// Base class method implementation
@@ -4514,10 +4194,6 @@ QVariant* k_coreconfigskeleton__itemlonglong_min_value(void* self);
 ///
 void k_coreconfigskeleton__itemlonglong_on_min_value(void* self, QVariant* (*callback)());
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemlonglong_super_min_value` instead
-///
-#define k_coreconfigskeleton__itemlonglong_qbase_min_value k_coreconfigskeleton__itemlonglong_super_min_value
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#minValue)
 ///
 /// Base class method implementation
@@ -4542,10 +4218,6 @@ QVariant* k_coreconfigskeleton__itemlonglong_max_value(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemlonglong_on_max_value(void* self, QVariant* (*callback)());
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemlonglong_super_max_value` instead
-///
-#define k_coreconfigskeleton__itemlonglong_qbase_max_value k_coreconfigskeleton__itemlonglong_super_max_value
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#maxValue)
 ///
@@ -4724,10 +4396,6 @@ void k_coreconfigskeleton__itemenum_read_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itemenum_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemenum_super_read_config` instead
-///
-#define k_coreconfigskeleton__itemenum_qbase_read_config k_coreconfigskeleton__itemenum_super_read_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum.html#readConfig)
 ///
 /// Base class method implementation
@@ -4752,10 +4420,6 @@ void k_coreconfigskeleton__itemenum_write_config(void* self, void* config);
 /// @param callback void func(KCoreConfigSkeleton__ItemEnum* self, KConfig* config)
 ///
 void k_coreconfigskeleton__itemenum_on_write_config(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemenum_super_write_config` instead
-///
-#define k_coreconfigskeleton__itemenum_qbase_write_config k_coreconfigskeleton__itemenum_super_write_config
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum.html#writeConfig)
 ///
@@ -4794,10 +4458,6 @@ void k_coreconfigskeleton__itemenum_set_value_for_choice(void* self, const char*
 ///
 void k_coreconfigskeleton__itemenum_set_property(void* self, void* p);
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemenum_super_set_property` instead
-///
-#define k_coreconfigskeleton__itemenum_qbase_set_property k_coreconfigskeleton__itemenum_super_set_property
-
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#setProperty)
@@ -4831,10 +4491,6 @@ void k_coreconfigskeleton__itemenum_on_set_property(void* self, void (*callback)
 ///
 bool k_coreconfigskeleton__itemenum_is_equal(void* self, void* p);
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemenum_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itemenum_qbase_is_equal k_coreconfigskeleton__itemenum_super_is_equal
-
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#isEqual)
@@ -4866,10 +4522,6 @@ void k_coreconfigskeleton__itemenum_on_is_equal(void* self, bool (*callback)(voi
 /// @param self KCoreConfigSkeleton__ItemEnum*
 ///
 QVariant* k_coreconfigskeleton__itemenum_property(void* self);
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemenum_super_property` instead
-///
-#define k_coreconfigskeleton__itemenum_qbase_property k_coreconfigskeleton__itemenum_super_property
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
@@ -4904,10 +4556,6 @@ void k_coreconfigskeleton__itemenum_on_property(void* self, QVariant* (*callback
 ///
 QVariant* k_coreconfigskeleton__itemenum_min_value(void* self);
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemenum_super_min_value` instead
-///
-#define k_coreconfigskeleton__itemenum_qbase_min_value k_coreconfigskeleton__itemenum_super_min_value
-
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#minValue)
@@ -4940,10 +4588,6 @@ void k_coreconfigskeleton__itemenum_on_min_value(void* self, QVariant* (*callbac
 /// @param self KCoreConfigSkeleton__ItemEnum*
 ///
 QVariant* k_coreconfigskeleton__itemenum_max_value(void* self);
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemenum_super_max_value` instead
-///
-#define k_coreconfigskeleton__itemenum_qbase_max_value k_coreconfigskeleton__itemenum_super_max_value
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
@@ -5011,10 +4655,6 @@ void k_coreconfigskeleton__itemuint_read_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itemuint_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemuint_super_read_config` instead
-///
-#define k_coreconfigskeleton__itemuint_qbase_read_config k_coreconfigskeleton__itemuint_super_read_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#readConfig)
 ///
 /// Base class method implementation
@@ -5040,10 +4680,6 @@ void k_coreconfigskeleton__itemuint_set_property(void* self, void* p);
 ///
 void k_coreconfigskeleton__itemuint_on_set_property(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemuint_super_set_property` instead
-///
-#define k_coreconfigskeleton__itemuint_qbase_set_property k_coreconfigskeleton__itemuint_super_set_property
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#setProperty)
 ///
 /// Base class method implementation
@@ -5068,10 +4704,6 @@ bool k_coreconfigskeleton__itemuint_is_equal(void* self, void* p);
 /// @param callback bool func(KCoreConfigSkeleton__ItemUInt* self, QVariant* p)
 ///
 void k_coreconfigskeleton__itemuint_on_is_equal(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemuint_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itemuint_qbase_is_equal k_coreconfigskeleton__itemuint_super_is_equal
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#isEqual)
 ///
@@ -5099,10 +4731,6 @@ QVariant* k_coreconfigskeleton__itemuint_property(void* self);
 ///
 void k_coreconfigskeleton__itemuint_on_property(void* self, QVariant* (*callback)());
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemuint_super_property` instead
-///
-#define k_coreconfigskeleton__itemuint_qbase_property k_coreconfigskeleton__itemuint_super_property
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#property)
 ///
 /// Base class method implementation
@@ -5128,10 +4756,6 @@ QVariant* k_coreconfigskeleton__itemuint_min_value(void* self);
 ///
 void k_coreconfigskeleton__itemuint_on_min_value(void* self, QVariant* (*callback)());
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemuint_super_min_value` instead
-///
-#define k_coreconfigskeleton__itemuint_qbase_min_value k_coreconfigskeleton__itemuint_super_min_value
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#minValue)
 ///
 /// Base class method implementation
@@ -5156,10 +4780,6 @@ QVariant* k_coreconfigskeleton__itemuint_max_value(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemuint_on_max_value(void* self, QVariant* (*callback)());
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemuint_super_max_value` instead
-///
-#define k_coreconfigskeleton__itemuint_qbase_max_value k_coreconfigskeleton__itemuint_super_max_value
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#maxValue)
 ///
@@ -5226,10 +4846,6 @@ void k_coreconfigskeleton__itemulonglong_read_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itemulonglong_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemulonglong_super_read_config` instead
-///
-#define k_coreconfigskeleton__itemulonglong_qbase_read_config k_coreconfigskeleton__itemulonglong_super_read_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#readConfig)
 ///
 /// Base class method implementation
@@ -5255,10 +4871,6 @@ void k_coreconfigskeleton__itemulonglong_set_property(void* self, void* p);
 ///
 void k_coreconfigskeleton__itemulonglong_on_set_property(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemulonglong_super_set_property` instead
-///
-#define k_coreconfigskeleton__itemulonglong_qbase_set_property k_coreconfigskeleton__itemulonglong_super_set_property
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#setProperty)
 ///
 /// Base class method implementation
@@ -5283,10 +4895,6 @@ bool k_coreconfigskeleton__itemulonglong_is_equal(void* self, void* p);
 /// @param callback bool func(KCoreConfigSkeleton__ItemULongLong* self, QVariant* p)
 ///
 void k_coreconfigskeleton__itemulonglong_on_is_equal(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemulonglong_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itemulonglong_qbase_is_equal k_coreconfigskeleton__itemulonglong_super_is_equal
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#isEqual)
 ///
@@ -5314,10 +4922,6 @@ QVariant* k_coreconfigskeleton__itemulonglong_property(void* self);
 ///
 void k_coreconfigskeleton__itemulonglong_on_property(void* self, QVariant* (*callback)());
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemulonglong_super_property` instead
-///
-#define k_coreconfigskeleton__itemulonglong_qbase_property k_coreconfigskeleton__itemulonglong_super_property
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#property)
 ///
 /// Base class method implementation
@@ -5343,10 +4947,6 @@ QVariant* k_coreconfigskeleton__itemulonglong_min_value(void* self);
 ///
 void k_coreconfigskeleton__itemulonglong_on_min_value(void* self, QVariant* (*callback)());
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemulonglong_super_min_value` instead
-///
-#define k_coreconfigskeleton__itemulonglong_qbase_min_value k_coreconfigskeleton__itemulonglong_super_min_value
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#minValue)
 ///
 /// Base class method implementation
@@ -5371,10 +4971,6 @@ QVariant* k_coreconfigskeleton__itemulonglong_max_value(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemulonglong_on_max_value(void* self, QVariant* (*callback)());
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemulonglong_super_max_value` instead
-///
-#define k_coreconfigskeleton__itemulonglong_qbase_max_value k_coreconfigskeleton__itemulonglong_super_max_value
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#maxValue)
 ///
@@ -5441,10 +5037,6 @@ void k_coreconfigskeleton__itemdouble_read_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itemdouble_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemdouble_super_read_config` instead
-///
-#define k_coreconfigskeleton__itemdouble_qbase_read_config k_coreconfigskeleton__itemdouble_super_read_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#readConfig)
 ///
 /// Base class method implementation
@@ -5470,10 +5062,6 @@ void k_coreconfigskeleton__itemdouble_set_property(void* self, void* p);
 ///
 void k_coreconfigskeleton__itemdouble_on_set_property(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemdouble_super_set_property` instead
-///
-#define k_coreconfigskeleton__itemdouble_qbase_set_property k_coreconfigskeleton__itemdouble_super_set_property
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#setProperty)
 ///
 /// Base class method implementation
@@ -5498,10 +5086,6 @@ bool k_coreconfigskeleton__itemdouble_is_equal(void* self, void* p);
 /// @param callback bool func(KCoreConfigSkeleton__ItemDouble* self, QVariant* p)
 ///
 void k_coreconfigskeleton__itemdouble_on_is_equal(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemdouble_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itemdouble_qbase_is_equal k_coreconfigskeleton__itemdouble_super_is_equal
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#isEqual)
 ///
@@ -5529,10 +5113,6 @@ QVariant* k_coreconfigskeleton__itemdouble_property(void* self);
 ///
 void k_coreconfigskeleton__itemdouble_on_property(void* self, QVariant* (*callback)());
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemdouble_super_property` instead
-///
-#define k_coreconfigskeleton__itemdouble_qbase_property k_coreconfigskeleton__itemdouble_super_property
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#property)
 ///
 /// Base class method implementation
@@ -5558,10 +5138,6 @@ QVariant* k_coreconfigskeleton__itemdouble_min_value(void* self);
 ///
 void k_coreconfigskeleton__itemdouble_on_min_value(void* self, QVariant* (*callback)());
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemdouble_super_min_value` instead
-///
-#define k_coreconfigskeleton__itemdouble_qbase_min_value k_coreconfigskeleton__itemdouble_super_min_value
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#minValue)
 ///
 /// Base class method implementation
@@ -5586,10 +5162,6 @@ QVariant* k_coreconfigskeleton__itemdouble_max_value(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemdouble_on_max_value(void* self, QVariant* (*callback)());
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemdouble_super_max_value` instead
-///
-#define k_coreconfigskeleton__itemdouble_qbase_max_value k_coreconfigskeleton__itemdouble_super_max_value
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#maxValue)
 ///
@@ -5656,10 +5228,6 @@ void k_coreconfigskeleton__itemrect_read_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itemrect_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemrect_super_read_config` instead
-///
-#define k_coreconfigskeleton__itemrect_qbase_read_config k_coreconfigskeleton__itemrect_super_read_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrect.html#readConfig)
 ///
 /// Base class method implementation
@@ -5684,10 +5252,6 @@ void k_coreconfigskeleton__itemrect_set_property(void* self, void* p);
 /// @param callback void func(KCoreConfigSkeleton__ItemRect* self, QVariant* p)
 ///
 void k_coreconfigskeleton__itemrect_on_set_property(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemrect_super_set_property` instead
-///
-#define k_coreconfigskeleton__itemrect_qbase_set_property k_coreconfigskeleton__itemrect_super_set_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrect.html#setProperty)
 ///
@@ -5714,10 +5278,6 @@ bool k_coreconfigskeleton__itemrect_is_equal(void* self, void* p);
 ///
 void k_coreconfigskeleton__itemrect_on_is_equal(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemrect_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itemrect_qbase_is_equal k_coreconfigskeleton__itemrect_super_is_equal
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrect.html#isEqual)
 ///
 /// Base class method implementation
@@ -5743,10 +5303,6 @@ QVariant* k_coreconfigskeleton__itemrect_property(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemrect_on_property(void* self, QVariant* (*callback)());
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemrect_super_property` instead
-///
-#define k_coreconfigskeleton__itemrect_qbase_property k_coreconfigskeleton__itemrect_super_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrect.html#property)
 ///
@@ -5799,10 +5355,6 @@ void k_coreconfigskeleton__itemrectf_read_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itemrectf_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemrectf_super_read_config` instead
-///
-#define k_coreconfigskeleton__itemrectf_qbase_read_config k_coreconfigskeleton__itemrectf_super_read_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#readConfig)
 ///
 /// Base class method implementation
@@ -5827,10 +5379,6 @@ void k_coreconfigskeleton__itemrectf_set_property(void* self, void* p);
 /// @param callback void func(KCoreConfigSkeleton__ItemRectF* self, QVariant* p)
 ///
 void k_coreconfigskeleton__itemrectf_on_set_property(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemrectf_super_set_property` instead
-///
-#define k_coreconfigskeleton__itemrectf_qbase_set_property k_coreconfigskeleton__itemrectf_super_set_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#setProperty)
 ///
@@ -5857,10 +5405,6 @@ bool k_coreconfigskeleton__itemrectf_is_equal(void* self, void* p);
 ///
 void k_coreconfigskeleton__itemrectf_on_is_equal(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemrectf_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itemrectf_qbase_is_equal k_coreconfigskeleton__itemrectf_super_is_equal
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#isEqual)
 ///
 /// Base class method implementation
@@ -5886,10 +5430,6 @@ QVariant* k_coreconfigskeleton__itemrectf_property(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemrectf_on_property(void* self, QVariant* (*callback)());
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemrectf_super_property` instead
-///
-#define k_coreconfigskeleton__itemrectf_qbase_property k_coreconfigskeleton__itemrectf_super_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#property)
 ///
@@ -5942,10 +5482,6 @@ void k_coreconfigskeleton__itempoint_read_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itempoint_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempoint_super_read_config` instead
-///
-#define k_coreconfigskeleton__itempoint_qbase_read_config k_coreconfigskeleton__itempoint_super_read_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempoint.html#readConfig)
 ///
 /// Base class method implementation
@@ -5970,10 +5506,6 @@ void k_coreconfigskeleton__itempoint_set_property(void* self, void* p);
 /// @param callback void func(KCoreConfigSkeleton__ItemPoint* self, QVariant* p)
 ///
 void k_coreconfigskeleton__itempoint_on_set_property(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempoint_super_set_property` instead
-///
-#define k_coreconfigskeleton__itempoint_qbase_set_property k_coreconfigskeleton__itempoint_super_set_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempoint.html#setProperty)
 ///
@@ -6000,10 +5532,6 @@ bool k_coreconfigskeleton__itempoint_is_equal(void* self, void* p);
 ///
 void k_coreconfigskeleton__itempoint_on_is_equal(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempoint_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itempoint_qbase_is_equal k_coreconfigskeleton__itempoint_super_is_equal
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempoint.html#isEqual)
 ///
 /// Base class method implementation
@@ -6029,10 +5557,6 @@ QVariant* k_coreconfigskeleton__itempoint_property(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itempoint_on_property(void* self, QVariant* (*callback)());
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempoint_super_property` instead
-///
-#define k_coreconfigskeleton__itempoint_qbase_property k_coreconfigskeleton__itempoint_super_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempoint.html#property)
 ///
@@ -6085,10 +5609,6 @@ void k_coreconfigskeleton__itempointf_read_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itempointf_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempointf_super_read_config` instead
-///
-#define k_coreconfigskeleton__itempointf_qbase_read_config k_coreconfigskeleton__itempointf_super_read_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempointf.html#readConfig)
 ///
 /// Base class method implementation
@@ -6113,10 +5633,6 @@ void k_coreconfigskeleton__itempointf_set_property(void* self, void* p);
 /// @param callback void func(KCoreConfigSkeleton__ItemPointF* self, QVariant* p)
 ///
 void k_coreconfigskeleton__itempointf_on_set_property(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempointf_super_set_property` instead
-///
-#define k_coreconfigskeleton__itempointf_qbase_set_property k_coreconfigskeleton__itempointf_super_set_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempointf.html#setProperty)
 ///
@@ -6143,10 +5659,6 @@ bool k_coreconfigskeleton__itempointf_is_equal(void* self, void* p);
 ///
 void k_coreconfigskeleton__itempointf_on_is_equal(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempointf_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itempointf_qbase_is_equal k_coreconfigskeleton__itempointf_super_is_equal
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempointf.html#isEqual)
 ///
 /// Base class method implementation
@@ -6172,10 +5684,6 @@ QVariant* k_coreconfigskeleton__itempointf_property(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itempointf_on_property(void* self, QVariant* (*callback)());
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempointf_super_property` instead
-///
-#define k_coreconfigskeleton__itempointf_qbase_property k_coreconfigskeleton__itempointf_super_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempointf.html#property)
 ///
@@ -6228,10 +5736,6 @@ void k_coreconfigskeleton__itemsize_read_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itemsize_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemsize_super_read_config` instead
-///
-#define k_coreconfigskeleton__itemsize_qbase_read_config k_coreconfigskeleton__itemsize_super_read_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsize.html#readConfig)
 ///
 /// Base class method implementation
@@ -6256,10 +5760,6 @@ void k_coreconfigskeleton__itemsize_set_property(void* self, void* p);
 /// @param callback void func(KCoreConfigSkeleton__ItemSize* self, QVariant* p)
 ///
 void k_coreconfigskeleton__itemsize_on_set_property(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemsize_super_set_property` instead
-///
-#define k_coreconfigskeleton__itemsize_qbase_set_property k_coreconfigskeleton__itemsize_super_set_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsize.html#setProperty)
 ///
@@ -6286,10 +5786,6 @@ bool k_coreconfigskeleton__itemsize_is_equal(void* self, void* p);
 ///
 void k_coreconfigskeleton__itemsize_on_is_equal(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemsize_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itemsize_qbase_is_equal k_coreconfigskeleton__itemsize_super_is_equal
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsize.html#isEqual)
 ///
 /// Base class method implementation
@@ -6315,10 +5811,6 @@ QVariant* k_coreconfigskeleton__itemsize_property(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemsize_on_property(void* self, QVariant* (*callback)());
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemsize_super_property` instead
-///
-#define k_coreconfigskeleton__itemsize_qbase_property k_coreconfigskeleton__itemsize_super_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsize.html#property)
 ///
@@ -6371,10 +5863,6 @@ void k_coreconfigskeleton__itemsizef_read_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itemsizef_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemsizef_super_read_config` instead
-///
-#define k_coreconfigskeleton__itemsizef_qbase_read_config k_coreconfigskeleton__itemsizef_super_read_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#readConfig)
 ///
 /// Base class method implementation
@@ -6399,10 +5887,6 @@ void k_coreconfigskeleton__itemsizef_set_property(void* self, void* p);
 /// @param callback void func(KCoreConfigSkeleton__ItemSizeF* self, QVariant* p)
 ///
 void k_coreconfigskeleton__itemsizef_on_set_property(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemsizef_super_set_property` instead
-///
-#define k_coreconfigskeleton__itemsizef_qbase_set_property k_coreconfigskeleton__itemsizef_super_set_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#setProperty)
 ///
@@ -6429,10 +5913,6 @@ bool k_coreconfigskeleton__itemsizef_is_equal(void* self, void* p);
 ///
 void k_coreconfigskeleton__itemsizef_on_is_equal(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemsizef_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itemsizef_qbase_is_equal k_coreconfigskeleton__itemsizef_super_is_equal
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#isEqual)
 ///
 /// Base class method implementation
@@ -6458,10 +5938,6 @@ QVariant* k_coreconfigskeleton__itemsizef_property(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemsizef_on_property(void* self, QVariant* (*callback)());
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemsizef_super_property` instead
-///
-#define k_coreconfigskeleton__itemsizef_qbase_property k_coreconfigskeleton__itemsizef_super_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#property)
 ///
@@ -6514,10 +5990,6 @@ void k_coreconfigskeleton__itemdatetime_read_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itemdatetime_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemdatetime_super_read_config` instead
-///
-#define k_coreconfigskeleton__itemdatetime_qbase_read_config k_coreconfigskeleton__itemdatetime_super_read_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#readConfig)
 ///
 /// Base class method implementation
@@ -6542,10 +6014,6 @@ void k_coreconfigskeleton__itemdatetime_set_property(void* self, void* p);
 /// @param callback void func(KCoreConfigSkeleton__ItemDateTime* self, QVariant* p)
 ///
 void k_coreconfigskeleton__itemdatetime_on_set_property(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemdatetime_super_set_property` instead
-///
-#define k_coreconfigskeleton__itemdatetime_qbase_set_property k_coreconfigskeleton__itemdatetime_super_set_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#setProperty)
 ///
@@ -6572,10 +6040,6 @@ bool k_coreconfigskeleton__itemdatetime_is_equal(void* self, void* p);
 ///
 void k_coreconfigskeleton__itemdatetime_on_is_equal(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemdatetime_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itemdatetime_qbase_is_equal k_coreconfigskeleton__itemdatetime_super_is_equal
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#isEqual)
 ///
 /// Base class method implementation
@@ -6601,10 +6065,6 @@ QVariant* k_coreconfigskeleton__itemdatetime_property(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemdatetime_on_property(void* self, QVariant* (*callback)());
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemdatetime_super_property` instead
-///
-#define k_coreconfigskeleton__itemdatetime_qbase_property k_coreconfigskeleton__itemdatetime_super_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#property)
 ///
@@ -6657,10 +6117,6 @@ void k_coreconfigskeleton__itemstringlist_read_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itemstringlist_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemstringlist_super_read_config` instead
-///
-#define k_coreconfigskeleton__itemstringlist_qbase_read_config k_coreconfigskeleton__itemstringlist_super_read_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#readConfig)
 ///
 /// Base class method implementation
@@ -6685,10 +6141,6 @@ void k_coreconfigskeleton__itemstringlist_set_property(void* self, void* p);
 /// @param callback void func(KCoreConfigSkeleton__ItemStringList* self, QVariant* p)
 ///
 void k_coreconfigskeleton__itemstringlist_on_set_property(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemstringlist_super_set_property` instead
-///
-#define k_coreconfigskeleton__itemstringlist_qbase_set_property k_coreconfigskeleton__itemstringlist_super_set_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#setProperty)
 ///
@@ -6715,10 +6167,6 @@ bool k_coreconfigskeleton__itemstringlist_is_equal(void* self, void* p);
 ///
 void k_coreconfigskeleton__itemstringlist_on_is_equal(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemstringlist_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itemstringlist_qbase_is_equal k_coreconfigskeleton__itemstringlist_super_is_equal
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#isEqual)
 ///
 /// Base class method implementation
@@ -6744,10 +6192,6 @@ QVariant* k_coreconfigskeleton__itemstringlist_property(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemstringlist_on_property(void* self, QVariant* (*callback)());
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemstringlist_super_property` instead
-///
-#define k_coreconfigskeleton__itemstringlist_qbase_property k_coreconfigskeleton__itemstringlist_super_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#property)
 ///
@@ -6800,10 +6244,6 @@ void k_coreconfigskeleton__itempathlist_read_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itempathlist_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempathlist_super_read_config` instead
-///
-#define k_coreconfigskeleton__itempathlist_qbase_read_config k_coreconfigskeleton__itempathlist_super_read_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempathlist.html#readConfig)
 ///
 /// Base class method implementation
@@ -6829,10 +6269,6 @@ void k_coreconfigskeleton__itempathlist_write_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itempathlist_on_write_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempathlist_super_write_config` instead
-///
-#define k_coreconfigskeleton__itempathlist_qbase_write_config k_coreconfigskeleton__itempathlist_super_write_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempathlist.html#writeConfig)
 ///
 /// Base class method implementation
@@ -6852,10 +6288,6 @@ void k_coreconfigskeleton__itempathlist_super_write_config(void* self, void* con
 /// @param p QVariant*
 ///
 void k_coreconfigskeleton__itempathlist_set_property(void* self, void* p);
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempathlist_super_set_property` instead
-///
-#define k_coreconfigskeleton__itempathlist_qbase_set_property k_coreconfigskeleton__itempathlist_super_set_property
 
 /// Inherited from KCoreConfigSkeleton::ItemStringList
 ///
@@ -6890,10 +6322,6 @@ void k_coreconfigskeleton__itempathlist_on_set_property(void* self, void (*callb
 ///
 bool k_coreconfigskeleton__itempathlist_is_equal(void* self, void* p);
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempathlist_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itempathlist_qbase_is_equal k_coreconfigskeleton__itempathlist_super_is_equal
-
 /// Inherited from KCoreConfigSkeleton::ItemStringList
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#isEqual)
@@ -6925,10 +6353,6 @@ void k_coreconfigskeleton__itempathlist_on_is_equal(void* self, bool (*callback)
 /// @param self KCoreConfigSkeleton__ItemPathList*
 ///
 QVariant* k_coreconfigskeleton__itempathlist_property(void* self);
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itempathlist_super_property` instead
-///
-#define k_coreconfigskeleton__itempathlist_qbase_property k_coreconfigskeleton__itempathlist_super_property
 
 /// Inherited from KCoreConfigSkeleton::ItemStringList
 ///
@@ -6996,10 +6420,6 @@ void k_coreconfigskeleton__itemurllist_read_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itemurllist_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemurllist_super_read_config` instead
-///
-#define k_coreconfigskeleton__itemurllist_qbase_read_config k_coreconfigskeleton__itemurllist_super_read_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#readConfig)
 ///
 /// Base class method implementation
@@ -7024,10 +6444,6 @@ void k_coreconfigskeleton__itemurllist_write_config(void* self, void* config);
 /// @param callback void func(KCoreConfigSkeleton__ItemUrlList* self, KConfig* config)
 ///
 void k_coreconfigskeleton__itemurllist_on_write_config(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemurllist_super_write_config` instead
-///
-#define k_coreconfigskeleton__itemurllist_qbase_write_config k_coreconfigskeleton__itemurllist_super_write_config
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#writeConfig)
 ///
@@ -7054,10 +6470,6 @@ void k_coreconfigskeleton__itemurllist_set_property(void* self, void* p);
 ///
 void k_coreconfigskeleton__itemurllist_on_set_property(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemurllist_super_set_property` instead
-///
-#define k_coreconfigskeleton__itemurllist_qbase_set_property k_coreconfigskeleton__itemurllist_super_set_property
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#setProperty)
 ///
 /// Base class method implementation
@@ -7082,10 +6494,6 @@ bool k_coreconfigskeleton__itemurllist_is_equal(void* self, void* p);
 /// @param callback bool func(KCoreConfigSkeleton__ItemUrlList* self, QVariant* p)
 ///
 void k_coreconfigskeleton__itemurllist_on_is_equal(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemurllist_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itemurllist_qbase_is_equal k_coreconfigskeleton__itemurllist_super_is_equal
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#isEqual)
 ///
@@ -7112,10 +6520,6 @@ QVariant* k_coreconfigskeleton__itemurllist_property(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemurllist_on_property(void* self, QVariant* (*callback)());
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemurllist_super_property` instead
-///
-#define k_coreconfigskeleton__itemurllist_qbase_property k_coreconfigskeleton__itemurllist_super_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#property)
 ///
@@ -7168,10 +6572,6 @@ void k_coreconfigskeleton__itemintlist_read_config(void* self, void* config);
 ///
 void k_coreconfigskeleton__itemintlist_on_read_config(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemintlist_super_read_config` instead
-///
-#define k_coreconfigskeleton__itemintlist_qbase_read_config k_coreconfigskeleton__itemintlist_super_read_config
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#readConfig)
 ///
 /// Base class method implementation
@@ -7196,10 +6596,6 @@ void k_coreconfigskeleton__itemintlist_set_property(void* self, void* p);
 /// @param callback void func(KCoreConfigSkeleton__ItemIntList* self, QVariant* p)
 ///
 void k_coreconfigskeleton__itemintlist_on_set_property(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemintlist_super_set_property` instead
-///
-#define k_coreconfigskeleton__itemintlist_qbase_set_property k_coreconfigskeleton__itemintlist_super_set_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#setProperty)
 ///
@@ -7226,10 +6622,6 @@ bool k_coreconfigskeleton__itemintlist_is_equal(void* self, void* p);
 ///
 void k_coreconfigskeleton__itemintlist_on_is_equal(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemintlist_super_is_equal` instead
-///
-#define k_coreconfigskeleton__itemintlist_qbase_is_equal k_coreconfigskeleton__itemintlist_super_is_equal
-
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#isEqual)
 ///
 /// Base class method implementation
@@ -7255,10 +6647,6 @@ QVariant* k_coreconfigskeleton__itemintlist_property(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemintlist_on_property(void* self, QVariant* (*callback)());
-
-/// @warning DEPRECATED: Use `k_coreconfigskeleton__itemintlist_super_property` instead
-///
-#define k_coreconfigskeleton__itemintlist_qbase_property k_coreconfigskeleton__itemintlist_super_property
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#property)
 ///

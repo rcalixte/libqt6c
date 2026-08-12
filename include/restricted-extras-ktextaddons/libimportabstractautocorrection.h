@@ -40,10 +40,6 @@ bool k_textautocorrectioncore__importabstractautocorrection_import(void* self, c
 ///
 void k_textautocorrectioncore__importabstractautocorrection_on_import(void* self, bool (*callback)(void*, const char*, const char*, int32_t));
 
-/// @warning DEPRECATED: Use `k_textautocorrectioncore__importabstractautocorrection_super_import` instead
-///
-#define k_textautocorrectioncore__importabstractautocorrection_qbase_import k_textautocorrectioncore__importabstractautocorrection_super_import
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
 ///
 /// Base class method implementation
@@ -150,10 +146,6 @@ void k_textautocorrectioncore__importabstractautocorrection_operator_assign(void
 /// @param callback void func(TextAutoCorrectionCore__ImportAbstractAutocorrection* self, TextAutoCorrectionCore__ImportAbstractAutocorrection* param1)
 ///
 void k_textautocorrectioncore__importabstractautocorrection_on_operator_assign(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_textautocorrectioncore__importabstractautocorrection_super_operator_assign` instead
-///
-#define k_textautocorrectioncore__importabstractautocorrection_qbase_operator_assign k_textautocorrectioncore__importabstractautocorrection_super_operator_assign
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
 ///

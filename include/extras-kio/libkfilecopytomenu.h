@@ -31,10 +31,6 @@ const QMetaObject* k_filecopytomenu_meta_object(void* self);
 ///
 void k_filecopytomenu_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_filecopytomenu_super_meta_object` instead
-///
-#define k_filecopytomenu_qbase_meta_object k_filecopytomenu_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -54,10 +50,6 @@ void* k_filecopytomenu_metacast(void* self, const char* param1);
 /// @param callback void* func(KFileCopyToMenu* self, const char* param1)
 ///
 void k_filecopytomenu_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_filecopytomenu_super_metacast` instead
-///
-#define k_filecopytomenu_qbase_metacast k_filecopytomenu_super_metacast
 
 /// Base class method implementation
 ///
@@ -79,10 +71,6 @@ int32_t k_filecopytomenu_metacall(void* self, int32_t param1, int param2, void* 
 /// @param callback int32_t func(KFileCopyToMenu* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_filecopytomenu_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_filecopytomenu_super_metacall` instead
-///
-#define k_filecopytomenu_qbase_metacall k_filecopytomenu_super_metacall
 
 /// Base class method implementation
 ///
@@ -621,10 +609,6 @@ void k_filecopytomenu_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool k_filecopytomenu_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_filecopytomenu_super_event` instead
-///
-#define k_filecopytomenu_qbase_event k_filecopytomenu_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -658,10 +642,6 @@ void k_filecopytomenu_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool k_filecopytomenu_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_filecopytomenu_super_event_filter` instead
-///
-#define k_filecopytomenu_qbase_event_filter k_filecopytomenu_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -697,10 +677,6 @@ void k_filecopytomenu_on_event_filter(void* self, bool (*callback)(void*, void*,
 ///
 void k_filecopytomenu_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_filecopytomenu_super_timer_event` instead
-///
-#define k_filecopytomenu_qbase_timer_event k_filecopytomenu_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -733,10 +709,6 @@ void k_filecopytomenu_on_timer_event(void* self, void (*callback)(void*, void*))
 /// @param event QChildEvent*
 ///
 void k_filecopytomenu_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_filecopytomenu_super_child_event` instead
-///
-#define k_filecopytomenu_qbase_child_event k_filecopytomenu_super_child_event
 
 /// Inherited from QObject
 ///
@@ -771,10 +743,6 @@ void k_filecopytomenu_on_child_event(void* self, void (*callback)(void*, void*))
 ///
 void k_filecopytomenu_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_filecopytomenu_super_custom_event` instead
-///
-#define k_filecopytomenu_qbase_custom_event k_filecopytomenu_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -807,10 +775,6 @@ void k_filecopytomenu_on_custom_event(void* self, void (*callback)(void*, void*)
 /// @param signal QMetaMethod*
 ///
 void k_filecopytomenu_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_filecopytomenu_super_connect_notify` instead
-///
-#define k_filecopytomenu_qbase_connect_notify k_filecopytomenu_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -845,10 +809,6 @@ void k_filecopytomenu_on_connect_notify(void* self, void (*callback)(void*, void
 ///
 void k_filecopytomenu_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_filecopytomenu_super_disconnect_notify` instead
-///
-#define k_filecopytomenu_qbase_disconnect_notify k_filecopytomenu_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -881,10 +841,6 @@ void k_filecopytomenu_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 QObject* k_filecopytomenu_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_filecopytomenu_super_sender` instead
-///
-#define k_filecopytomenu_qbase_sender k_filecopytomenu_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -915,10 +871,6 @@ void k_filecopytomenu_on_sender(void* self, QObject* (*callback)());
 /// @param self KFileCopyToMenu*
 ///
 int32_t k_filecopytomenu_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_filecopytomenu_super_sender_signal_index` instead
-///
-#define k_filecopytomenu_qbase_sender_signal_index k_filecopytomenu_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -952,10 +904,6 @@ void k_filecopytomenu_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_filecopytomenu_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_filecopytomenu_super_receivers` instead
-///
-#define k_filecopytomenu_qbase_receivers k_filecopytomenu_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -988,10 +936,6 @@ void k_filecopytomenu_on_receivers(void* self, int32_t (*callback)(void*, const 
 /// @param signal QMetaMethod*
 ///
 bool k_filecopytomenu_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_filecopytomenu_super_is_signal_connected` instead
-///
-#define k_filecopytomenu_qbase_is_signal_connected k_filecopytomenu_super_is_signal_connected
 
 /// Inherited from QObject
 ///

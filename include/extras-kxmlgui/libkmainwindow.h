@@ -46,10 +46,6 @@ const QMetaObject* k_mainwindow_meta_object(void* self);
 ///
 void k_mainwindow_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_meta_object` instead
-///
-#define k_mainwindow_qbase_meta_object k_mainwindow_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -69,10 +65,6 @@ void* k_mainwindow_metacast(void* self, const char* param1);
 /// @param callback void* func(KMainWindow* self, const char* param1)
 ///
 void k_mainwindow_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_metacast` instead
-///
-#define k_mainwindow_qbase_metacast k_mainwindow_super_metacast
 
 /// Base class method implementation
 ///
@@ -94,10 +86,6 @@ int32_t k_mainwindow_metacall(void* self, int32_t param1, int param2, void* para
 /// @param callback int32_t func(KMainWindow* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_mainwindow_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_metacall` instead
-///
-#define k_mainwindow_qbase_metacall k_mainwindow_super_metacall
 
 /// Base class method implementation
 ///
@@ -231,10 +219,6 @@ void k_mainwindow_apply_main_window_settings(void* self, void* config);
 ///
 void k_mainwindow_on_apply_main_window_settings(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_apply_main_window_settings` instead
-///
-#define k_mainwindow_qbase_apply_main_window_settings k_mainwindow_super_apply_main_window_settings
-
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#applyMainWindowSettings)
 ///
 /// Base class method implementation
@@ -275,10 +259,6 @@ void k_mainwindow_set_caption(void* self, const char* caption);
 ///
 void k_mainwindow_on_set_caption(void* self, void (*callback)(void*, const char*));
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_set_caption` instead
-///
-#define k_mainwindow_qbase_set_caption k_mainwindow_super_set_caption
-
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#setCaption)
 ///
 /// Base class method implementation
@@ -305,10 +285,6 @@ void k_mainwindow_set_caption2(void* self, const char* caption, bool modified);
 ///
 void k_mainwindow_on_set_caption2(void* self, void (*callback)(void*, const char*, bool));
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_set_caption2` instead
-///
-#define k_mainwindow_qbase_set_caption2 k_mainwindow_super_set_caption2
-
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#setCaption)
 ///
 /// Base class method implementation
@@ -334,10 +310,6 @@ void k_mainwindow_set_plain_caption(void* self, const char* caption);
 /// @param callback void func(KMainWindow* self, const char* caption)
 ///
 void k_mainwindow_on_set_plain_caption(void* self, void (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_set_plain_caption` instead
-///
-#define k_mainwindow_qbase_set_plain_caption k_mainwindow_super_set_plain_caption
 
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#setPlainCaption)
 ///
@@ -376,10 +348,6 @@ bool k_mainwindow_event(void* self, void* event);
 ///
 void k_mainwindow_on_event(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_event` instead
-///
-#define k_mainwindow_qbase_event k_mainwindow_super_event
-
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#event)
 ///
 /// Base class method implementation
@@ -404,10 +372,6 @@ void k_mainwindow_key_press_event(void* self, void* keyEvent);
 /// @param callback void func(KMainWindow* self, QKeyEvent* keyEvent)
 ///
 void k_mainwindow_on_key_press_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_key_press_event` instead
-///
-#define k_mainwindow_qbase_key_press_event k_mainwindow_super_key_press_event
 
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#keyPressEvent)
 ///
@@ -434,10 +398,6 @@ void k_mainwindow_close_event(void* self, void* param1);
 ///
 void k_mainwindow_on_close_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_close_event` instead
-///
-#define k_mainwindow_qbase_close_event k_mainwindow_super_close_event
-
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#closeEvent)
 ///
 /// Base class method implementation
@@ -462,10 +422,6 @@ bool k_mainwindow_query_close(void* self);
 ///
 void k_mainwindow_on_query_close(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_query_close` instead
-///
-#define k_mainwindow_qbase_query_close k_mainwindow_super_query_close
-
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#queryClose)
 ///
 /// Base class method implementation
@@ -489,10 +445,6 @@ void k_mainwindow_save_properties(void* self, void* param1);
 /// @param callback void func(KMainWindow* self, KConfigGroup* param1)
 ///
 void k_mainwindow_on_save_properties(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_save_properties` instead
-///
-#define k_mainwindow_qbase_save_properties k_mainwindow_super_save_properties
 
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#saveProperties)
 ///
@@ -519,10 +471,6 @@ void k_mainwindow_read_properties(void* self, void* param1);
 ///
 void k_mainwindow_on_read_properties(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_read_properties` instead
-///
-#define k_mainwindow_qbase_read_properties k_mainwindow_super_read_properties
-
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#readProperties)
 ///
 /// Base class method implementation
@@ -547,10 +495,6 @@ void k_mainwindow_save_global_properties(void* self, void* sessionConfig);
 /// @param callback void func(KMainWindow* self, KConfig* sessionConfig)
 ///
 void k_mainwindow_on_save_global_properties(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_save_global_properties` instead
-///
-#define k_mainwindow_qbase_save_global_properties k_mainwindow_super_save_global_properties
 
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#saveGlobalProperties)
 ///
@@ -577,10 +521,6 @@ void k_mainwindow_read_global_properties(void* self, void* sessionConfig);
 ///
 void k_mainwindow_on_read_global_properties(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_read_global_properties` instead
-///
-#define k_mainwindow_qbase_read_global_properties k_mainwindow_super_read_global_properties
-
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#readGlobalProperties)
 ///
 /// Base class method implementation
@@ -606,10 +546,6 @@ void k_mainwindow_save_properties_internal(void* self, void* param1, int param2)
 /// @param callback void func(KMainWindow* self, KConfig* param1, int param2)
 ///
 void k_mainwindow_on_save_properties_internal(void* self, void (*callback)(void*, void*, int));
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_save_properties_internal` instead
-///
-#define k_mainwindow_qbase_save_properties_internal k_mainwindow_super_save_properties_internal
 
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#savePropertiesInternal)
 ///
@@ -638,10 +574,6 @@ bool k_mainwindow_read_properties_internal(void* self, void* param1, int param2)
 ///
 void k_mainwindow_on_read_properties_internal(void* self, bool (*callback)(void*, void*, int));
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_read_properties_internal` instead
-///
-#define k_mainwindow_qbase_read_properties_internal k_mainwindow_super_read_properties_internal
-
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#readPropertiesInternal)
 ///
 /// Base class method implementation
@@ -667,10 +599,6 @@ bool k_mainwindow_settings_dirty(void* self);
 ///
 void k_mainwindow_on_settings_dirty(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_settings_dirty` instead
-///
-#define k_mainwindow_qbase_settings_dirty k_mainwindow_super_settings_dirty
-
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#settingsDirty)
 ///
 /// Base class method implementation
@@ -693,10 +621,6 @@ void k_mainwindow_save_auto_save_settings(void* self);
 /// @param callback void func()
 ///
 void k_mainwindow_on_save_auto_save_settings(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_save_auto_save_settings` instead
-///
-#define k_mainwindow_qbase_save_auto_save_settings k_mainwindow_super_save_auto_save_settings
 
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#saveAutoSaveSettings)
 ///
@@ -4288,10 +4212,6 @@ int32_t k_mainwindow_encode_metric_f(int32_t metric, double value);
 ///
 QMenu* k_mainwindow_create_popup_menu(void* self);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_create_popup_menu` instead
-///
-#define k_mainwindow_qbase_create_popup_menu k_mainwindow_super_create_popup_menu
-
 /// Inherited from QMainWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#createPopupMenu)
@@ -4323,10 +4243,6 @@ void k_mainwindow_on_create_popup_menu(void* self, QMenu* (*callback)());
 /// @param event QContextMenuEvent*
 ///
 void k_mainwindow_context_menu_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_context_menu_event` instead
-///
-#define k_mainwindow_qbase_context_menu_event k_mainwindow_super_context_menu_event
 
 /// Inherited from QMainWindow
 ///
@@ -4360,10 +4276,6 @@ void k_mainwindow_on_context_menu_event(void* self, void (*callback)(void*, void
 ///
 int32_t k_mainwindow_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_dev_type` instead
-///
-#define k_mainwindow_qbase_dev_type k_mainwindow_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -4395,10 +4307,6 @@ void k_mainwindow_on_dev_type(void* self, int32_t (*callback)());
 /// @param visible bool
 ///
 void k_mainwindow_set_visible(void* self, bool visible);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_set_visible` instead
-///
-#define k_mainwindow_qbase_set_visible k_mainwindow_super_set_visible
 
 /// Inherited from QWidget
 ///
@@ -4432,10 +4340,6 @@ void k_mainwindow_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 QSize* k_mainwindow_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_size_hint` instead
-///
-#define k_mainwindow_qbase_size_hint k_mainwindow_super_size_hint
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
@@ -4468,10 +4372,6 @@ void k_mainwindow_on_size_hint(void* self, QSize* (*callback)());
 /// @param self KMainWindow*
 ///
 QSize* k_mainwindow_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_minimum_size_hint` instead
-///
-#define k_mainwindow_qbase_minimum_size_hint k_mainwindow_super_minimum_size_hint
 
 /// Inherited from QWidget
 ///
@@ -4507,10 +4407,6 @@ void k_mainwindow_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 int32_t k_mainwindow_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_height_for_width` instead
-///
-#define k_mainwindow_qbase_height_for_width k_mainwindow_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -4543,10 +4439,6 @@ void k_mainwindow_on_height_for_width(void* self, int32_t (*callback)(void*, int
 ///
 bool k_mainwindow_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_has_height_for_width` instead
-///
-#define k_mainwindow_qbase_has_height_for_width k_mainwindow_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -4577,10 +4469,6 @@ void k_mainwindow_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self KMainWindow*
 ///
 QPaintEngine* k_mainwindow_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_paint_engine` instead
-///
-#define k_mainwindow_qbase_paint_engine k_mainwindow_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -4613,10 +4501,6 @@ void k_mainwindow_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QMouseEvent*
 ///
 void k_mainwindow_mouse_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_mouse_press_event` instead
-///
-#define k_mainwindow_qbase_mouse_press_event k_mainwindow_super_mouse_press_event
 
 /// Inherited from QWidget
 ///
@@ -4651,10 +4535,6 @@ void k_mainwindow_on_mouse_press_event(void* self, void (*callback)(void*, void*
 ///
 void k_mainwindow_mouse_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_mouse_release_event` instead
-///
-#define k_mainwindow_qbase_mouse_release_event k_mainwindow_super_mouse_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
@@ -4687,10 +4567,6 @@ void k_mainwindow_on_mouse_release_event(void* self, void (*callback)(void*, voi
 /// @param event QMouseEvent*
 ///
 void k_mainwindow_mouse_double_click_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_mouse_double_click_event` instead
-///
-#define k_mainwindow_qbase_mouse_double_click_event k_mainwindow_super_mouse_double_click_event
 
 /// Inherited from QWidget
 ///
@@ -4725,10 +4601,6 @@ void k_mainwindow_on_mouse_double_click_event(void* self, void (*callback)(void*
 ///
 void k_mainwindow_mouse_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_mouse_move_event` instead
-///
-#define k_mainwindow_qbase_mouse_move_event k_mainwindow_super_mouse_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -4761,10 +4633,6 @@ void k_mainwindow_on_mouse_move_event(void* self, void (*callback)(void*, void*)
 /// @param event QWheelEvent*
 ///
 void k_mainwindow_wheel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_wheel_event` instead
-///
-#define k_mainwindow_qbase_wheel_event k_mainwindow_super_wheel_event
 
 /// Inherited from QWidget
 ///
@@ -4799,10 +4667,6 @@ void k_mainwindow_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void k_mainwindow_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_key_release_event` instead
-///
-#define k_mainwindow_qbase_key_release_event k_mainwindow_super_key_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -4835,10 +4699,6 @@ void k_mainwindow_on_key_release_event(void* self, void (*callback)(void*, void*
 /// @param event QFocusEvent*
 ///
 void k_mainwindow_focus_in_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_focus_in_event` instead
-///
-#define k_mainwindow_qbase_focus_in_event k_mainwindow_super_focus_in_event
 
 /// Inherited from QWidget
 ///
@@ -4873,10 +4733,6 @@ void k_mainwindow_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 void k_mainwindow_focus_out_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_focus_out_event` instead
-///
-#define k_mainwindow_qbase_focus_out_event k_mainwindow_super_focus_out_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -4909,10 +4765,6 @@ void k_mainwindow_on_focus_out_event(void* self, void (*callback)(void*, void*))
 /// @param event QEnterEvent*
 ///
 void k_mainwindow_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_enter_event` instead
-///
-#define k_mainwindow_qbase_enter_event k_mainwindow_super_enter_event
 
 /// Inherited from QWidget
 ///
@@ -4947,10 +4799,6 @@ void k_mainwindow_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void k_mainwindow_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_leave_event` instead
-///
-#define k_mainwindow_qbase_leave_event k_mainwindow_super_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -4983,10 +4831,6 @@ void k_mainwindow_on_leave_event(void* self, void (*callback)(void*, void*));
 /// @param event QPaintEvent*
 ///
 void k_mainwindow_paint_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_paint_event` instead
-///
-#define k_mainwindow_qbase_paint_event k_mainwindow_super_paint_event
 
 /// Inherited from QWidget
 ///
@@ -5021,10 +4865,6 @@ void k_mainwindow_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 void k_mainwindow_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_move_event` instead
-///
-#define k_mainwindow_qbase_move_event k_mainwindow_super_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -5057,10 +4897,6 @@ void k_mainwindow_on_move_event(void* self, void (*callback)(void*, void*));
 /// @param event QResizeEvent*
 ///
 void k_mainwindow_resize_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_resize_event` instead
-///
-#define k_mainwindow_qbase_resize_event k_mainwindow_super_resize_event
 
 /// Inherited from QWidget
 ///
@@ -5095,10 +4931,6 @@ void k_mainwindow_on_resize_event(void* self, void (*callback)(void*, void*));
 ///
 void k_mainwindow_tablet_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_tablet_event` instead
-///
-#define k_mainwindow_qbase_tablet_event k_mainwindow_super_tablet_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -5131,10 +4963,6 @@ void k_mainwindow_on_tablet_event(void* self, void (*callback)(void*, void*));
 /// @param event QActionEvent*
 ///
 void k_mainwindow_action_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_action_event` instead
-///
-#define k_mainwindow_qbase_action_event k_mainwindow_super_action_event
 
 /// Inherited from QWidget
 ///
@@ -5169,10 +4997,6 @@ void k_mainwindow_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 void k_mainwindow_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_drag_enter_event` instead
-///
-#define k_mainwindow_qbase_drag_enter_event k_mainwindow_super_drag_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -5205,10 +5029,6 @@ void k_mainwindow_on_drag_enter_event(void* self, void (*callback)(void*, void*)
 /// @param event QDragMoveEvent*
 ///
 void k_mainwindow_drag_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_drag_move_event` instead
-///
-#define k_mainwindow_qbase_drag_move_event k_mainwindow_super_drag_move_event
 
 /// Inherited from QWidget
 ///
@@ -5243,10 +5063,6 @@ void k_mainwindow_on_drag_move_event(void* self, void (*callback)(void*, void*))
 ///
 void k_mainwindow_drag_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_drag_leave_event` instead
-///
-#define k_mainwindow_qbase_drag_leave_event k_mainwindow_super_drag_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -5279,10 +5095,6 @@ void k_mainwindow_on_drag_leave_event(void* self, void (*callback)(void*, void*)
 /// @param event QDropEvent*
 ///
 void k_mainwindow_drop_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_drop_event` instead
-///
-#define k_mainwindow_qbase_drop_event k_mainwindow_super_drop_event
 
 /// Inherited from QWidget
 ///
@@ -5317,10 +5129,6 @@ void k_mainwindow_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void k_mainwindow_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_show_event` instead
-///
-#define k_mainwindow_qbase_show_event k_mainwindow_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -5353,10 +5161,6 @@ void k_mainwindow_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param event QHideEvent*
 ///
 void k_mainwindow_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_hide_event` instead
-///
-#define k_mainwindow_qbase_hide_event k_mainwindow_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -5393,10 +5197,6 @@ void k_mainwindow_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool k_mainwindow_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_native_event` instead
-///
-#define k_mainwindow_qbase_native_event k_mainwindow_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -5432,10 +5232,6 @@ void k_mainwindow_on_native_event(void* self, bool (*callback)(void*, libqt_stri
 ///
 void k_mainwindow_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_change_event` instead
-///
-#define k_mainwindow_qbase_change_event k_mainwindow_super_change_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -5468,10 +5264,6 @@ void k_mainwindow_on_change_event(void* self, void (*callback)(void*, void*));
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
 int32_t k_mainwindow_metric(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_metric` instead
-///
-#define k_mainwindow_qbase_metric k_mainwindow_super_metric
 
 /// Inherited from QWidget
 ///
@@ -5506,10 +5298,6 @@ void k_mainwindow_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void k_mainwindow_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_init_painter` instead
-///
-#define k_mainwindow_qbase_init_painter k_mainwindow_super_init_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -5543,10 +5331,6 @@ void k_mainwindow_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* k_mainwindow_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_redirected` instead
-///
-#define k_mainwindow_qbase_redirected k_mainwindow_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -5578,10 +5362,6 @@ void k_mainwindow_on_redirected(void* self, QPaintDevice* (*callback)(void*, voi
 /// @param self KMainWindow*
 ///
 QPainter* k_mainwindow_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_shared_painter` instead
-///
-#define k_mainwindow_qbase_shared_painter k_mainwindow_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -5615,10 +5395,6 @@ void k_mainwindow_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void k_mainwindow_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_input_method_event` instead
-///
-#define k_mainwindow_qbase_input_method_event k_mainwindow_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -5651,10 +5427,6 @@ void k_mainwindow_on_input_method_event(void* self, void (*callback)(void*, void
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* k_mainwindow_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_input_method_query` instead
-///
-#define k_mainwindow_qbase_input_method_query k_mainwindow_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -5691,10 +5463,6 @@ void k_mainwindow_on_input_method_query(void* self, QVariant* (*callback)(void*,
 ///
 bool k_mainwindow_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_focus_next_prev_child` instead
-///
-#define k_mainwindow_qbase_focus_next_prev_child k_mainwindow_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -5728,10 +5496,6 @@ void k_mainwindow_on_focus_next_prev_child(void* self, bool (*callback)(void*, b
 /// @param event QEvent*
 ///
 bool k_mainwindow_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_event_filter` instead
-///
-#define k_mainwindow_qbase_event_filter k_mainwindow_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -5767,10 +5531,6 @@ void k_mainwindow_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void k_mainwindow_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_timer_event` instead
-///
-#define k_mainwindow_qbase_timer_event k_mainwindow_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -5803,10 +5563,6 @@ void k_mainwindow_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void k_mainwindow_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_child_event` instead
-///
-#define k_mainwindow_qbase_child_event k_mainwindow_super_child_event
 
 /// Inherited from QObject
 ///
@@ -5841,10 +5597,6 @@ void k_mainwindow_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_mainwindow_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_custom_event` instead
-///
-#define k_mainwindow_qbase_custom_event k_mainwindow_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -5877,10 +5629,6 @@ void k_mainwindow_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void k_mainwindow_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_connect_notify` instead
-///
-#define k_mainwindow_qbase_connect_notify k_mainwindow_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -5915,10 +5663,6 @@ void k_mainwindow_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void k_mainwindow_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_disconnect_notify` instead
-///
-#define k_mainwindow_qbase_disconnect_notify k_mainwindow_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5951,10 +5695,6 @@ void k_mainwindow_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 void k_mainwindow_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_update_micro_focus` instead
-///
-#define k_mainwindow_qbase_update_micro_focus k_mainwindow_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5985,10 +5725,6 @@ void k_mainwindow_on_update_micro_focus(void* self, void (*callback)());
 /// @param self KMainWindow*
 ///
 void k_mainwindow_create(void* self);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_create` instead
-///
-#define k_mainwindow_qbase_create k_mainwindow_super_create
 
 /// Inherited from QWidget
 ///
@@ -6021,10 +5757,6 @@ void k_mainwindow_on_create(void* self, void (*callback)());
 ///
 void k_mainwindow_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_destroy` instead
-///
-#define k_mainwindow_qbase_destroy k_mainwindow_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -6055,10 +5787,6 @@ void k_mainwindow_on_destroy(void* self, void (*callback)());
 /// @param self KMainWindow*
 ///
 bool k_mainwindow_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_focus_next_child` instead
-///
-#define k_mainwindow_qbase_focus_next_child k_mainwindow_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -6091,10 +5819,6 @@ void k_mainwindow_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_mainwindow_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_focus_previous_child` instead
-///
-#define k_mainwindow_qbase_focus_previous_child k_mainwindow_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -6125,10 +5849,6 @@ void k_mainwindow_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self KMainWindow*
 ///
 QObject* k_mainwindow_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_sender` instead
-///
-#define k_mainwindow_qbase_sender k_mainwindow_super_sender
 
 /// Inherited from QObject
 ///
@@ -6161,10 +5881,6 @@ void k_mainwindow_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_mainwindow_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_sender_signal_index` instead
-///
-#define k_mainwindow_qbase_sender_signal_index k_mainwindow_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -6196,10 +5912,6 @@ void k_mainwindow_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t k_mainwindow_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_receivers` instead
-///
-#define k_mainwindow_qbase_receivers k_mainwindow_super_receivers
 
 /// Inherited from QObject
 ///
@@ -6234,10 +5946,6 @@ void k_mainwindow_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 bool k_mainwindow_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_mainwindow_super_is_signal_connected` instead
-///
-#define k_mainwindow_qbase_is_signal_connected k_mainwindow_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -6271,10 +5979,6 @@ void k_mainwindow_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_mainwindow_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_mainwindow_super_get_decoded_metric_f` instead
-///
-#define k_mainwindow_qbase_get_decoded_metric_f k_mainwindow_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

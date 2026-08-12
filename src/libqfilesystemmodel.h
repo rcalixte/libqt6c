@@ -37,10 +37,6 @@ const QMetaObject* q_filesystemmodel_meta_object(void* self);
 ///
 void q_filesystemmodel_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_meta_object` instead
-///
-#define q_filesystemmodel_qbase_meta_object q_filesystemmodel_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_filesystemmodel_metacast(void* self, const char* param1);
 /// @param callback void* func(QFileSystemModel* self, const char* param1)
 ///
 void q_filesystemmodel_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_metacast` instead
-///
-#define q_filesystemmodel_qbase_metacast q_filesystemmodel_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_filesystemmodel_metacall(void* self, int32_t param1, int param2, void*
 /// @param callback int32_t func(QFileSystemModel* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_filesystemmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_metacall` instead
-///
-#define q_filesystemmodel_qbase_metacall q_filesystemmodel_super_metacall
 
 /// Base class method implementation
 ///
@@ -171,10 +159,6 @@ QModelIndex* q_filesystemmodel_index(void* self, int row, int column, void* pare
 ///
 void q_filesystemmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_index` instead
-///
-#define q_filesystemmodel_qbase_index q_filesystemmodel_super_index
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#index)
 ///
 /// Base class method implementation
@@ -211,10 +195,6 @@ QModelIndex* q_filesystemmodel_parent(void* self, void* child);
 ///
 void q_filesystemmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_parent` instead
-///
-#define q_filesystemmodel_qbase_parent q_filesystemmodel_super_parent
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#parent)
 ///
 /// Base class method implementation
@@ -244,10 +224,6 @@ QModelIndex* q_filesystemmodel_sibling(void* self, int row, int column, void* id
 ///
 void q_filesystemmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_sibling` instead
-///
-#define q_filesystemmodel_qbase_sibling q_filesystemmodel_super_sibling
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#sibling)
 ///
 /// Base class method implementation
@@ -275,10 +251,6 @@ bool q_filesystemmodel_has_children(void* self, void* parent);
 ///
 void q_filesystemmodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_has_children` instead
-///
-#define q_filesystemmodel_qbase_has_children q_filesystemmodel_super_has_children
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#hasChildren)
 ///
 /// Base class method implementation
@@ -303,10 +275,6 @@ bool q_filesystemmodel_can_fetch_more(void* self, void* parent);
 /// @param callback bool func(QFileSystemModel* self, QModelIndex* parent)
 ///
 void q_filesystemmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_can_fetch_more` instead
-///
-#define q_filesystemmodel_qbase_can_fetch_more q_filesystemmodel_super_can_fetch_more
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#canFetchMore)
 ///
@@ -333,10 +301,6 @@ void q_filesystemmodel_fetch_more(void* self, void* parent);
 ///
 void q_filesystemmodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_fetch_more` instead
-///
-#define q_filesystemmodel_qbase_fetch_more q_filesystemmodel_super_fetch_more
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#fetchMore)
 ///
 /// Base class method implementation
@@ -362,10 +326,6 @@ int32_t q_filesystemmodel_row_count(void* self, void* parent);
 ///
 void q_filesystemmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_row_count` instead
-///
-#define q_filesystemmodel_qbase_row_count q_filesystemmodel_super_row_count
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#rowCount)
 ///
 /// Base class method implementation
@@ -390,10 +350,6 @@ int32_t q_filesystemmodel_column_count(void* self, void* parent);
 /// @param callback int32_t func(QFileSystemModel* self, QModelIndex* parent)
 ///
 void q_filesystemmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_column_count` instead
-///
-#define q_filesystemmodel_qbase_column_count q_filesystemmodel_super_column_count
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#columnCount)
 ///
@@ -429,10 +385,6 @@ QVariant* q_filesystemmodel_data(void* self, void* index, int role);
 ///
 void q_filesystemmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_data` instead
-///
-#define q_filesystemmodel_qbase_data q_filesystemmodel_super_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#data)
 ///
 /// Base class method implementation
@@ -460,10 +412,6 @@ bool q_filesystemmodel_set_data(void* self, void* index, void* value, int role);
 /// @param callback bool func(QFileSystemModel* self, QModelIndex* index, QVariant* value, int role)
 ///
 void q_filesystemmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_set_data` instead
-///
-#define q_filesystemmodel_qbase_set_data q_filesystemmodel_super_set_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#setData)
 ///
@@ -496,10 +444,6 @@ QVariant* q_filesystemmodel_header_data(void* self, int section, int32_t orienta
 ///
 void q_filesystemmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_header_data` instead
-///
-#define q_filesystemmodel_qbase_header_data q_filesystemmodel_super_header_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#headerData)
 ///
 /// Base class method implementation
@@ -529,10 +473,6 @@ int32_t q_filesystemmodel_flags(void* self, void* index);
 ///
 void q_filesystemmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_flags` instead
-///
-#define q_filesystemmodel_qbase_flags q_filesystemmodel_super_flags
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#flags)
 ///
 /// Base class method implementation
@@ -561,10 +501,6 @@ void q_filesystemmodel_sort(void* self, int column, int32_t order);
 ///
 void q_filesystemmodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_sort` instead
-///
-#define q_filesystemmodel_qbase_sort q_filesystemmodel_super_sort
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#sort)
 ///
 /// Base class method implementation
@@ -592,10 +528,6 @@ const char** q_filesystemmodel_mime_types(void* self);
 ///
 void q_filesystemmodel_on_mime_types(void* self, const char** (*callback)());
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_mime_types` instead
-///
-#define q_filesystemmodel_qbase_mime_types q_filesystemmodel_super_mime_types
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#mimeTypes)
 ///
 /// Base class method implementation
@@ -619,10 +551,6 @@ QMimeData* q_filesystemmodel_mime_data(void* self, libqt_list indexes);
 /// @param callback QMimeData* func(QFileSystemModel* self, libqt_list of QModelIndex* indexes)
 ///
 void q_filesystemmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_mime_data` instead
-///
-#define q_filesystemmodel_qbase_mime_data q_filesystemmodel_super_mime_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#mimeData)
 ///
@@ -653,10 +581,6 @@ bool q_filesystemmodel_drop_mime_data(void* self, void* data, int32_t action, in
 ///
 void q_filesystemmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_drop_mime_data` instead
-///
-#define q_filesystemmodel_qbase_drop_mime_data q_filesystemmodel_super_drop_mime_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#dropMimeData)
 ///
 /// Base class method implementation
@@ -686,10 +610,6 @@ int32_t q_filesystemmodel_supported_drop_actions(void* self);
 /// @param callback int32_t func()
 ///
 void q_filesystemmodel_on_supported_drop_actions(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_supported_drop_actions` instead
-///
-#define q_filesystemmodel_qbase_supported_drop_actions q_filesystemmodel_super_supported_drop_actions
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#supportedDropActions)
 ///
@@ -728,10 +648,6 @@ libqt_map q_filesystemmodel_role_names(void* self);
 /// @param callback libqt_map of int to char* func()
 ///
 void q_filesystemmodel_on_role_names(void* self, libqt_map (*callback)());
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_role_names` instead
-///
-#define q_filesystemmodel_qbase_role_names q_filesystemmodel_super_role_names
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#roleNames)
 ///
@@ -992,10 +908,6 @@ void q_filesystemmodel_timer_event(void* self, void* event);
 ///
 void q_filesystemmodel_on_timer_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_timer_event` instead
-///
-#define q_filesystemmodel_qbase_timer_event q_filesystemmodel_super_timer_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#timerEvent)
 ///
 /// Base class method implementation
@@ -1020,10 +932,6 @@ bool q_filesystemmodel_event(void* self, void* event);
 /// @param callback bool func(QFileSystemModel* self, QEvent* event)
 ///
 void q_filesystemmodel_on_event(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_event` instead
-///
-#define q_filesystemmodel_qbase_event q_filesystemmodel_super_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#event)
 ///
@@ -1836,10 +1744,6 @@ void q_filesystemmodel_on_destroyed1(void* self, void (*callback)(void*, void*))
 ///
 bool q_filesystemmodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_set_header_data` instead
-///
-#define q_filesystemmodel_qbase_set_header_data q_filesystemmodel_super_set_header_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setHeaderData)
@@ -1889,10 +1793,6 @@ void q_filesystemmodel_on_set_header_data(void* self, bool (*callback)(void*, in
 ///
 libqt_map q_filesystemmodel_item_data(void* self, void* index);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_item_data` instead
-///
-#define q_filesystemmodel_qbase_item_data q_filesystemmodel_super_item_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#itemData)
@@ -1940,10 +1840,6 @@ void q_filesystemmodel_on_item_data(void* self, libqt_map (*callback)(void*, voi
 ///
 bool q_filesystemmodel_set_item_data(void* self, void* index, libqt_map roles);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_set_item_data` instead
-///
-#define q_filesystemmodel_qbase_set_item_data q_filesystemmodel_super_set_item_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setItemData)
@@ -1977,10 +1873,6 @@ void q_filesystemmodel_on_set_item_data(void* self, bool (*callback)(void*, void
 /// @param index QModelIndex*
 ///
 bool q_filesystemmodel_clear_item_data(void* self, void* index);
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_clear_item_data` instead
-///
-#define q_filesystemmodel_qbase_clear_item_data q_filesystemmodel_super_clear_item_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2018,10 +1910,6 @@ void q_filesystemmodel_on_clear_item_data(void* self, bool (*callback)(void*, vo
 /// @param parent QModelIndex*
 ///
 bool q_filesystemmodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_can_drop_mime_data` instead
-///
-#define q_filesystemmodel_qbase_can_drop_mime_data q_filesystemmodel_super_can_drop_mime_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2061,10 +1949,6 @@ void q_filesystemmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*,
 ///
 int32_t q_filesystemmodel_supported_drag_actions(void* self);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_supported_drag_actions` instead
-///
-#define q_filesystemmodel_qbase_supported_drag_actions q_filesystemmodel_super_supported_drag_actions
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
@@ -2100,10 +1984,6 @@ void q_filesystemmodel_on_supported_drag_actions(void* self, int32_t (*callback)
 /// @param parent QModelIndex*
 ///
 bool q_filesystemmodel_insert_rows(void* self, int row, int count, void* parent);
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_insert_rows` instead
-///
-#define q_filesystemmodel_qbase_insert_rows q_filesystemmodel_super_insert_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2142,10 +2022,6 @@ void q_filesystemmodel_on_insert_rows(void* self, bool (*callback)(void*, int, i
 ///
 bool q_filesystemmodel_insert_columns(void* self, int column, int count, void* parent);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_insert_columns` instead
-///
-#define q_filesystemmodel_qbase_insert_columns q_filesystemmodel_super_insert_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
@@ -2183,10 +2059,6 @@ void q_filesystemmodel_on_insert_columns(void* self, bool (*callback)(void*, int
 ///
 bool q_filesystemmodel_remove_rows(void* self, int row, int count, void* parent);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_remove_rows` instead
-///
-#define q_filesystemmodel_qbase_remove_rows q_filesystemmodel_super_remove_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
@@ -2223,10 +2095,6 @@ void q_filesystemmodel_on_remove_rows(void* self, bool (*callback)(void*, int, i
 /// @param parent QModelIndex*
 ///
 bool q_filesystemmodel_remove_columns(void* self, int column, int count, void* parent);
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_remove_columns` instead
-///
-#define q_filesystemmodel_qbase_remove_columns q_filesystemmodel_super_remove_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2266,10 +2134,6 @@ void q_filesystemmodel_on_remove_columns(void* self, bool (*callback)(void*, int
 /// @param destinationChild int
 ///
 bool q_filesystemmodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_move_rows` instead
-///
-#define q_filesystemmodel_qbase_move_rows q_filesystemmodel_super_move_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2312,10 +2176,6 @@ void q_filesystemmodel_on_move_rows(void* self, bool (*callback)(void*, void*, i
 ///
 bool q_filesystemmodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_move_columns` instead
-///
-#define q_filesystemmodel_qbase_move_columns q_filesystemmodel_super_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
@@ -2352,10 +2212,6 @@ void q_filesystemmodel_on_move_columns(void* self, bool (*callback)(void*, void*
 /// @param index QModelIndex*
 ///
 QModelIndex* q_filesystemmodel_buddy(void* self, void* index);
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_buddy` instead
-///
-#define q_filesystemmodel_qbase_buddy q_filesystemmodel_super_buddy
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2398,10 +2254,6 @@ void q_filesystemmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void
 ///
 libqt_list q_filesystemmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_match` instead
-///
-#define q_filesystemmodel_qbase_match q_filesystemmodel_super_match
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
@@ -2441,10 +2293,6 @@ void q_filesystemmodel_on_match(void* self, libqt_list (*callback)(void*, void*,
 ///
 QSize* q_filesystemmodel_span(void* self, void* index);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_span` instead
-///
-#define q_filesystemmodel_qbase_span q_filesystemmodel_super_span
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#span)
@@ -2481,10 +2329,6 @@ void q_filesystemmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 ///
 void q_filesystemmodel_multi_data(void* self, void* index, void* roleDataSpan);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_multi_data` instead
-///
-#define q_filesystemmodel_qbase_multi_data q_filesystemmodel_super_multi_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
@@ -2518,10 +2362,6 @@ void q_filesystemmodel_on_multi_data(void* self, void (*callback)(void*, void*, 
 ///
 bool q_filesystemmodel_submit(void* self);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_submit` instead
-///
-#define q_filesystemmodel_qbase_submit q_filesystemmodel_super_submit
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#submit)
@@ -2553,10 +2393,6 @@ void q_filesystemmodel_on_submit(void* self, bool (*callback)());
 ///
 void q_filesystemmodel_revert(void* self);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_revert` instead
-///
-#define q_filesystemmodel_qbase_revert q_filesystemmodel_super_revert
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#revert)
@@ -2587,10 +2423,6 @@ void q_filesystemmodel_on_revert(void* self, void (*callback)());
 /// @param self QFileSystemModel*
 ///
 void q_filesystemmodel_reset_internal_data(void* self);
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_reset_internal_data` instead
-///
-#define q_filesystemmodel_qbase_reset_internal_data q_filesystemmodel_super_reset_internal_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2624,10 +2456,6 @@ void q_filesystemmodel_on_reset_internal_data(void* self, void (*callback)());
 /// @param event QEvent*
 ///
 bool q_filesystemmodel_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_event_filter` instead
-///
-#define q_filesystemmodel_qbase_event_filter q_filesystemmodel_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -2663,10 +2491,6 @@ void q_filesystemmodel_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 void q_filesystemmodel_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_child_event` instead
-///
-#define q_filesystemmodel_qbase_child_event q_filesystemmodel_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -2699,10 +2523,6 @@ void q_filesystemmodel_on_child_event(void* self, void (*callback)(void*, void*)
 /// @param event QEvent*
 ///
 void q_filesystemmodel_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_custom_event` instead
-///
-#define q_filesystemmodel_qbase_custom_event q_filesystemmodel_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -2737,10 +2557,6 @@ void q_filesystemmodel_on_custom_event(void* self, void (*callback)(void*, void*
 ///
 void q_filesystemmodel_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_connect_notify` instead
-///
-#define q_filesystemmodel_qbase_connect_notify q_filesystemmodel_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -2773,10 +2589,6 @@ void q_filesystemmodel_on_connect_notify(void* self, void (*callback)(void*, voi
 /// @param signal QMetaMethod*
 ///
 void q_filesystemmodel_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_disconnect_notify` instead
-///
-#define q_filesystemmodel_qbase_disconnect_notify q_filesystemmodel_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -2811,10 +2623,6 @@ void q_filesystemmodel_on_disconnect_notify(void* self, void (*callback)(void*, 
 /// @param column int
 ///
 QModelIndex* q_filesystemmodel_create_index(void* self, int row, int column);
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_create_index` instead
-///
-#define q_filesystemmodel_qbase_create_index q_filesystemmodel_super_create_index
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2853,10 +2661,6 @@ void q_filesystemmodel_on_create_index(void* self, QModelIndex* (*callback)(void
 ///
 void q_filesystemmodel_encode_data(void* self, libqt_list indexes, void* stream);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_encode_data` instead
-///
-#define q_filesystemmodel_qbase_encode_data q_filesystemmodel_super_encode_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
@@ -2893,10 +2697,6 @@ void q_filesystemmodel_on_encode_data(void* self, void (*callback)(void*, libqt_
 /// @param stream QDataStream*
 ///
 bool q_filesystemmodel_decode_data(void* self, int row, int column, void* parent, void* stream);
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_decode_data` instead
-///
-#define q_filesystemmodel_qbase_decode_data q_filesystemmodel_super_decode_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2936,10 +2736,6 @@ void q_filesystemmodel_on_decode_data(void* self, bool (*callback)(void*, int, i
 ///
 void q_filesystemmodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_begin_insert_rows` instead
-///
-#define q_filesystemmodel_qbase_begin_insert_rows q_filesystemmodel_super_begin_insert_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
@@ -2973,10 +2769,6 @@ void q_filesystemmodel_on_begin_insert_rows(void* self, void (*callback)(void*, 
 /// @param self QFileSystemModel*
 ///
 void q_filesystemmodel_end_insert_rows(void* self);
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_end_insert_rows` instead
-///
-#define q_filesystemmodel_qbase_end_insert_rows q_filesystemmodel_super_end_insert_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3012,10 +2804,6 @@ void q_filesystemmodel_on_end_insert_rows(void* self, void (*callback)());
 ///
 void q_filesystemmodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_begin_remove_rows` instead
-///
-#define q_filesystemmodel_qbase_begin_remove_rows q_filesystemmodel_super_begin_remove_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
@@ -3049,10 +2837,6 @@ void q_filesystemmodel_on_begin_remove_rows(void* self, void (*callback)(void*, 
 /// @param self QFileSystemModel*
 ///
 void q_filesystemmodel_end_remove_rows(void* self);
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_end_remove_rows` instead
-///
-#define q_filesystemmodel_qbase_end_remove_rows q_filesystemmodel_super_end_remove_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3090,10 +2874,6 @@ void q_filesystemmodel_on_end_remove_rows(void* self, void (*callback)());
 ///
 bool q_filesystemmodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_begin_move_rows` instead
-///
-#define q_filesystemmodel_qbase_begin_move_rows q_filesystemmodel_super_begin_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
@@ -3130,10 +2910,6 @@ void q_filesystemmodel_on_begin_move_rows(void* self, bool (*callback)(void*, vo
 ///
 void q_filesystemmodel_end_move_rows(void* self);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_end_move_rows` instead
-///
-#define q_filesystemmodel_qbase_end_move_rows q_filesystemmodel_super_end_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
@@ -3167,10 +2943,6 @@ void q_filesystemmodel_on_end_move_rows(void* self, void (*callback)());
 /// @param last int
 ///
 void q_filesystemmodel_begin_insert_columns(void* self, void* parent, int first, int last);
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_begin_insert_columns` instead
-///
-#define q_filesystemmodel_qbase_begin_insert_columns q_filesystemmodel_super_begin_insert_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3206,10 +2978,6 @@ void q_filesystemmodel_on_begin_insert_columns(void* self, void (*callback)(void
 ///
 void q_filesystemmodel_end_insert_columns(void* self);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_end_insert_columns` instead
-///
-#define q_filesystemmodel_qbase_end_insert_columns q_filesystemmodel_super_end_insert_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
@@ -3244,10 +3012,6 @@ void q_filesystemmodel_on_end_insert_columns(void* self, void (*callback)());
 ///
 void q_filesystemmodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_begin_remove_columns` instead
-///
-#define q_filesystemmodel_qbase_begin_remove_columns q_filesystemmodel_super_begin_remove_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
@@ -3281,10 +3045,6 @@ void q_filesystemmodel_on_begin_remove_columns(void* self, void (*callback)(void
 /// @param self QFileSystemModel*
 ///
 void q_filesystemmodel_end_remove_columns(void* self);
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_end_remove_columns` instead
-///
-#define q_filesystemmodel_qbase_end_remove_columns q_filesystemmodel_super_end_remove_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3322,10 +3082,6 @@ void q_filesystemmodel_on_end_remove_columns(void* self, void (*callback)());
 ///
 bool q_filesystemmodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_begin_move_columns` instead
-///
-#define q_filesystemmodel_qbase_begin_move_columns q_filesystemmodel_super_begin_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
@@ -3362,10 +3118,6 @@ void q_filesystemmodel_on_begin_move_columns(void* self, bool (*callback)(void*,
 ///
 void q_filesystemmodel_end_move_columns(void* self);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_end_move_columns` instead
-///
-#define q_filesystemmodel_qbase_end_move_columns q_filesystemmodel_super_end_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
@@ -3397,10 +3149,6 @@ void q_filesystemmodel_on_end_move_columns(void* self, void (*callback)());
 ///
 void q_filesystemmodel_begin_reset_model(void* self);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_begin_reset_model` instead
-///
-#define q_filesystemmodel_qbase_begin_reset_model q_filesystemmodel_super_begin_reset_model
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
@@ -3431,10 +3179,6 @@ void q_filesystemmodel_on_begin_reset_model(void* self, void (*callback)());
 /// @param self QFileSystemModel*
 ///
 void q_filesystemmodel_end_reset_model(void* self);
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_end_reset_model` instead
-///
-#define q_filesystemmodel_qbase_end_reset_model q_filesystemmodel_super_end_reset_model
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3468,10 +3212,6 @@ void q_filesystemmodel_on_end_reset_model(void* self, void (*callback)());
 /// @param to QModelIndex*
 ///
 void q_filesystemmodel_change_persistent_index(void* self, void* from, void* to);
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_change_persistent_index` instead
-///
-#define q_filesystemmodel_qbase_change_persistent_index q_filesystemmodel_super_change_persistent_index
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3508,10 +3248,6 @@ void q_filesystemmodel_on_change_persistent_index(void* self, void (*callback)(v
 ///
 void q_filesystemmodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_change_persistent_index_list` instead
-///
-#define q_filesystemmodel_qbase_change_persistent_index_list q_filesystemmodel_super_change_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
@@ -3547,10 +3283,6 @@ void q_filesystemmodel_on_change_persistent_index_list(void* self, void (*callba
 ///
 libqt_list q_filesystemmodel_persistent_index_list(void* self);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_persistent_index_list` instead
-///
-#define q_filesystemmodel_qbase_persistent_index_list q_filesystemmodel_super_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
@@ -3584,10 +3316,6 @@ void q_filesystemmodel_on_persistent_index_list(void* self, libqt_list (*callbac
 ///
 QObject* q_filesystemmodel_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_sender` instead
-///
-#define q_filesystemmodel_qbase_sender q_filesystemmodel_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -3618,10 +3346,6 @@ void q_filesystemmodel_on_sender(void* self, QObject* (*callback)());
 /// @param self QFileSystemModel*
 ///
 int32_t q_filesystemmodel_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_sender_signal_index` instead
-///
-#define q_filesystemmodel_qbase_sender_signal_index q_filesystemmodel_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -3655,10 +3379,6 @@ void q_filesystemmodel_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 int32_t q_filesystemmodel_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_receivers` instead
-///
-#define q_filesystemmodel_qbase_receivers q_filesystemmodel_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -3691,10 +3411,6 @@ void q_filesystemmodel_on_receivers(void* self, int32_t (*callback)(void*, const
 /// @param signal QMetaMethod*
 ///
 bool q_filesystemmodel_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_filesystemmodel_super_is_signal_connected` instead
-///
-#define q_filesystemmodel_qbase_is_signal_connected q_filesystemmodel_super_is_signal_connected
 
 /// Inherited from QObject
 ///

@@ -45,10 +45,6 @@ const QMetaObject* k_syntaxhighlighting__syntaxhighlighter_meta_object(void* sel
 ///
 void k_syntaxhighlighting__syntaxhighlighter_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_meta_object` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_meta_object k_syntaxhighlighting__syntaxhighlighter_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -68,10 +64,6 @@ void* k_syntaxhighlighting__syntaxhighlighter_metacast(void* self, const char* p
 /// @param callback void* func(KSyntaxHighlighting__SyntaxHighlighter* self, const char* param1)
 ///
 void k_syntaxhighlighting__syntaxhighlighter_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_metacast` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_metacast k_syntaxhighlighting__syntaxhighlighter_super_metacast
 
 /// Base class method implementation
 ///
@@ -93,10 +85,6 @@ int32_t k_syntaxhighlighting__syntaxhighlighter_metacall(void* self, int32_t par
 /// @param callback int32_t func(KSyntaxHighlighting__SyntaxHighlighter* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_syntaxhighlighting__syntaxhighlighter_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_metacall` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_metacall k_syntaxhighlighting__syntaxhighlighter_super_metacall
 
 /// Base class method implementation
 ///
@@ -131,10 +119,6 @@ void k_syntaxhighlighting__syntaxhighlighter_set_definition(void* self, void* de
 ///
 void k_syntaxhighlighting__syntaxhighlighter_on_set_definition(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_set_definition` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_set_definition k_syntaxhighlighting__syntaxhighlighter_super_set_definition
-
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#setDefinition)
 ///
 /// Base class method implementation
@@ -159,10 +143,6 @@ void k_syntaxhighlighting__syntaxhighlighter_set_theme(void* self, void* theme);
 /// @param callback void func(KSyntaxHighlighting__SyntaxHighlighter* self, KSyntaxHighlighting__Theme* theme)
 ///
 void k_syntaxhighlighting__syntaxhighlighter_on_set_theme(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_set_theme` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_set_theme k_syntaxhighlighting__syntaxhighlighter_super_set_theme
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#setTheme)
 ///
@@ -203,10 +183,6 @@ void k_syntaxhighlighting__syntaxhighlighter_highlight_block(void* self, const c
 ///
 void k_syntaxhighlighting__syntaxhighlighter_on_highlight_block(void* self, void (*callback)(void*, const char*));
 
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_highlight_block` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_highlight_block k_syntaxhighlighting__syntaxhighlighter_super_highlight_block
-
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#highlightBlock)
 ///
 /// Base class method implementation
@@ -233,10 +209,6 @@ void k_syntaxhighlighting__syntaxhighlighter_apply_format(void* self, int offset
 /// @param callback void func(KSyntaxHighlighting__SyntaxHighlighter* self, int offset, int length, KSyntaxHighlighting__Format* format)
 ///
 void k_syntaxhighlighting__syntaxhighlighter_on_apply_format(void* self, void (*callback)(void*, int, int, void*));
-
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_apply_format` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_apply_format k_syntaxhighlighting__syntaxhighlighter_super_apply_format
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#applyFormat)
 ///
@@ -266,10 +238,6 @@ void k_syntaxhighlighting__syntaxhighlighter_apply_folding(void* self, int offse
 /// @param callback void func(KSyntaxHighlighting__SyntaxHighlighter* self, int offset, int length, KSyntaxHighlighting__FoldingRegion* region)
 ///
 void k_syntaxhighlighting__syntaxhighlighter_on_apply_folding(void* self, void (*callback)(void*, int, int, void*));
-
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_apply_folding` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_apply_folding k_syntaxhighlighting__syntaxhighlighter_super_apply_folding
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-syntaxhighlighter.html#applyFolding)
 ///
@@ -809,10 +777,6 @@ KSyntaxHighlighting__Theme* k_syntaxhighlighting__syntaxhighlighter_theme(void* 
 ///
 bool k_syntaxhighlighting__syntaxhighlighter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_event` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_event k_syntaxhighlighting__syntaxhighlighter_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -846,10 +810,6 @@ void k_syntaxhighlighting__syntaxhighlighter_on_event(void* self, bool (*callbac
 /// @param event QEvent*
 ///
 bool k_syntaxhighlighting__syntaxhighlighter_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_event_filter` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_event_filter k_syntaxhighlighting__syntaxhighlighter_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -885,10 +845,6 @@ void k_syntaxhighlighting__syntaxhighlighter_on_event_filter(void* self, bool (*
 ///
 void k_syntaxhighlighting__syntaxhighlighter_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_timer_event` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_timer_event k_syntaxhighlighting__syntaxhighlighter_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -921,10 +877,6 @@ void k_syntaxhighlighting__syntaxhighlighter_on_timer_event(void* self, void (*c
 /// @param event QChildEvent*
 ///
 void k_syntaxhighlighting__syntaxhighlighter_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_child_event` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_child_event k_syntaxhighlighting__syntaxhighlighter_super_child_event
 
 /// Inherited from QObject
 ///
@@ -959,10 +911,6 @@ void k_syntaxhighlighting__syntaxhighlighter_on_child_event(void* self, void (*c
 ///
 void k_syntaxhighlighting__syntaxhighlighter_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_custom_event` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_custom_event k_syntaxhighlighting__syntaxhighlighter_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -996,10 +944,6 @@ void k_syntaxhighlighting__syntaxhighlighter_on_custom_event(void* self, void (*
 ///
 void k_syntaxhighlighting__syntaxhighlighter_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_connect_notify` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_connect_notify k_syntaxhighlighting__syntaxhighlighter_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1032,10 +976,6 @@ void k_syntaxhighlighting__syntaxhighlighter_on_connect_notify(void* self, void 
 /// @param signal QMetaMethod*
 ///
 void k_syntaxhighlighting__syntaxhighlighter_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_disconnect_notify` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_disconnect_notify k_syntaxhighlighting__syntaxhighlighter_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -1072,10 +1012,6 @@ void k_syntaxhighlighting__syntaxhighlighter_on_disconnect_notify(void* self, vo
 ///
 void k_syntaxhighlighting__syntaxhighlighter_set_format(void* self, int start, int count, void* format);
 
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_set_format` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_set_format k_syntaxhighlighting__syntaxhighlighter_super_set_format
-
 /// Inherited from QSyntaxHighlighter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setFormat)
@@ -1111,10 +1047,6 @@ void k_syntaxhighlighting__syntaxhighlighter_on_set_format(void* self, void (*ca
 ///
 QTextCharFormat* k_syntaxhighlighting__syntaxhighlighter_format(void* self, int pos);
 
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_format` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_format k_syntaxhighlighting__syntaxhighlighter_super_format
-
 /// Inherited from QSyntaxHighlighter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#format)
@@ -1149,10 +1081,6 @@ void k_syntaxhighlighting__syntaxhighlighter_on_format(void* self, QTextCharForm
 ///
 int32_t k_syntaxhighlighting__syntaxhighlighter_previous_block_state(void* self);
 
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_previous_block_state` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_previous_block_state k_syntaxhighlighting__syntaxhighlighter_super_previous_block_state
-
 /// Inherited from QSyntaxHighlighter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#previousBlockState)
@@ -1183,10 +1111,6 @@ void k_syntaxhighlighting__syntaxhighlighter_on_previous_block_state(void* self,
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 ///
 int32_t k_syntaxhighlighting__syntaxhighlighter_current_block_state(void* self);
-
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_current_block_state` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_current_block_state k_syntaxhighlighting__syntaxhighlighter_super_current_block_state
 
 /// Inherited from QSyntaxHighlighter
 ///
@@ -1219,10 +1143,6 @@ void k_syntaxhighlighting__syntaxhighlighter_on_current_block_state(void* self, 
 /// @param newState int
 ///
 void k_syntaxhighlighting__syntaxhighlighter_set_current_block_state(void* self, int newState);
-
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_set_current_block_state` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_set_current_block_state k_syntaxhighlighting__syntaxhighlighter_super_set_current_block_state
 
 /// Inherited from QSyntaxHighlighter
 ///
@@ -1257,10 +1177,6 @@ void k_syntaxhighlighting__syntaxhighlighter_on_set_current_block_state(void* se
 ///
 void k_syntaxhighlighting__syntaxhighlighter_set_current_block_user_data(void* self, void* data);
 
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_set_current_block_user_data` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_set_current_block_user_data k_syntaxhighlighting__syntaxhighlighter_super_set_current_block_user_data
-
 /// Inherited from QSyntaxHighlighter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setCurrentBlockUserData)
@@ -1293,10 +1209,6 @@ void k_syntaxhighlighting__syntaxhighlighter_on_set_current_block_user_data(void
 ///
 QTextBlockUserData* k_syntaxhighlighting__syntaxhighlighter_current_block_user_data(void* self);
 
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_current_block_user_data` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_current_block_user_data k_syntaxhighlighting__syntaxhighlighter_super_current_block_user_data
-
 /// Inherited from QSyntaxHighlighter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlockUserData)
@@ -1327,10 +1239,6 @@ void k_syntaxhighlighting__syntaxhighlighter_on_current_block_user_data(void* se
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 ///
 QTextBlock* k_syntaxhighlighting__syntaxhighlighter_current_block(void* self);
-
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_current_block` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_current_block k_syntaxhighlighting__syntaxhighlighter_super_current_block
 
 /// Inherited from QSyntaxHighlighter
 ///
@@ -1365,10 +1273,6 @@ void k_syntaxhighlighting__syntaxhighlighter_on_current_block(void* self, QTextB
 ///
 QObject* k_syntaxhighlighting__syntaxhighlighter_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_sender` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_sender k_syntaxhighlighting__syntaxhighlighter_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1399,10 +1303,6 @@ void k_syntaxhighlighting__syntaxhighlighter_on_sender(void* self, QObject* (*ca
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 ///
 int32_t k_syntaxhighlighting__syntaxhighlighter_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_sender_signal_index` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_sender_signal_index k_syntaxhighlighting__syntaxhighlighter_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1435,10 +1335,6 @@ void k_syntaxhighlighting__syntaxhighlighter_on_sender_signal_index(void* self, 
 /// @param signal const char*
 ///
 int32_t k_syntaxhighlighting__syntaxhighlighter_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_receivers` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_receivers k_syntaxhighlighting__syntaxhighlighter_super_receivers
 
 /// Inherited from QObject
 ///
@@ -1473,10 +1369,6 @@ void k_syntaxhighlighting__syntaxhighlighter_on_receivers(void* self, int32_t (*
 ///
 bool k_syntaxhighlighting__syntaxhighlighter_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_is_signal_connected` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_is_signal_connected k_syntaxhighlighting__syntaxhighlighter_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1510,10 +1402,6 @@ void k_syntaxhighlighting__syntaxhighlighter_on_is_signal_connected(void* self, 
 /// @param state KSyntaxHighlighting__State*
 ///
 KSyntaxHighlighting__State* k_syntaxhighlighting__syntaxhighlighter_highlight_line(void* self, const char* text, void* state);
-
-/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_highlight_line` instead
-///
-#define k_syntaxhighlighting__syntaxhighlighter_qbase_highlight_line k_syntaxhighlighting__syntaxhighlighter_super_highlight_line
 
 /// Inherited from KSyntaxHighlighting::AbstractHighlighter
 ///

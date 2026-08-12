@@ -31,10 +31,6 @@ const char* q_designermetadatabaseiteminterface_name(void* self);
 ///
 void q_designermetadatabaseiteminterface_on_name(void* self, const char* (*callback)());
 
-/// @warning DEPRECATED: Use `q_designermetadatabaseiteminterface_super_name` instead
-///
-#define q_designermetadatabaseiteminterface_qbase_name q_designermetadatabaseiteminterface_super_name
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#name)
 ///
 /// Base class method implementation
@@ -58,10 +54,6 @@ void q_designermetadatabaseiteminterface_set_name(void* self, const char* name);
 /// @param callback void func(QDesignerMetaDataBaseItemInterface* self, const char* name)
 ///
 void q_designermetadatabaseiteminterface_on_set_name(void* self, void (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_designermetadatabaseiteminterface_super_set_name` instead
-///
-#define q_designermetadatabaseiteminterface_qbase_set_name q_designermetadatabaseiteminterface_super_set_name
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#setName)
 ///
@@ -89,10 +81,6 @@ libqt_list q_designermetadatabaseiteminterface_tab_order(void* self);
 ///
 void q_designermetadatabaseiteminterface_on_tab_order(void* self, libqt_list (*callback)());
 
-/// @warning DEPRECATED: Use `q_designermetadatabaseiteminterface_super_tab_order` instead
-///
-#define q_designermetadatabaseiteminterface_qbase_tab_order q_designermetadatabaseiteminterface_super_tab_order
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#tabOrder)
 ///
 /// Base class method implementation
@@ -119,10 +107,6 @@ void q_designermetadatabaseiteminterface_set_tab_order(void* self, libqt_list ta
 ///
 void q_designermetadatabaseiteminterface_on_set_tab_order(void* self, void (*callback)(void*, libqt_list));
 
-/// @warning DEPRECATED: Use `q_designermetadatabaseiteminterface_super_set_tab_order` instead
-///
-#define q_designermetadatabaseiteminterface_qbase_set_tab_order q_designermetadatabaseiteminterface_super_set_tab_order
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#setTabOrder)
 ///
 /// Base class method implementation
@@ -147,10 +131,6 @@ bool q_designermetadatabaseiteminterface_enabled(void* self);
 ///
 void q_designermetadatabaseiteminterface_on_enabled(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_designermetadatabaseiteminterface_super_enabled` instead
-///
-#define q_designermetadatabaseiteminterface_qbase_enabled q_designermetadatabaseiteminterface_super_enabled
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#enabled)
 ///
 /// Base class method implementation
@@ -174,10 +154,6 @@ void q_designermetadatabaseiteminterface_set_enabled(void* self, bool b);
 /// @param callback void func(QDesignerMetaDataBaseItemInterface* self, bool b)
 ///
 void q_designermetadatabaseiteminterface_on_set_enabled(void* self, void (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `q_designermetadatabaseiteminterface_super_set_enabled` instead
-///
-#define q_designermetadatabaseiteminterface_qbase_set_enabled q_designermetadatabaseiteminterface_super_set_enabled
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#setEnabled)
 ///
@@ -225,10 +201,6 @@ const QMetaObject* q_designermetadatabaseinterface_meta_object(void* self);
 ///
 void q_designermetadatabaseinterface_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_designermetadatabaseinterface_super_meta_object` instead
-///
-#define q_designermetadatabaseinterface_qbase_meta_object q_designermetadatabaseinterface_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -248,10 +220,6 @@ void* q_designermetadatabaseinterface_metacast(void* self, const char* param1);
 /// @param callback void* func(QDesignerMetaDataBaseInterface* self, const char* param1)
 ///
 void q_designermetadatabaseinterface_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_designermetadatabaseinterface_super_metacast` instead
-///
-#define q_designermetadatabaseinterface_qbase_metacast q_designermetadatabaseinterface_super_metacast
 
 /// Base class method implementation
 ///
@@ -273,10 +241,6 @@ int32_t q_designermetadatabaseinterface_metacall(void* self, int32_t param1, int
 /// @param callback int32_t func(QDesignerMetaDataBaseInterface* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_designermetadatabaseinterface_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_designermetadatabaseinterface_super_metacall` instead
-///
-#define q_designermetadatabaseinterface_qbase_metacall q_designermetadatabaseinterface_super_metacall
 
 /// Base class method implementation
 ///
@@ -311,10 +275,6 @@ QDesignerMetaDataBaseItemInterface* q_designermetadatabaseinterface_item(void* s
 ///
 void q_designermetadatabaseinterface_on_item(void* self, QDesignerMetaDataBaseItemInterface* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_designermetadatabaseinterface_super_item` instead
-///
-#define q_designermetadatabaseinterface_qbase_item q_designermetadatabaseinterface_super_item
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#item)
 ///
 /// Base class method implementation
@@ -340,10 +300,6 @@ void q_designermetadatabaseinterface_add(void* self, void* object);
 ///
 void q_designermetadatabaseinterface_on_add(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_designermetadatabaseinterface_super_add` instead
-///
-#define q_designermetadatabaseinterface_qbase_add q_designermetadatabaseinterface_super_add
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#add)
 ///
 /// Base class method implementation
@@ -368,10 +324,6 @@ void q_designermetadatabaseinterface_remove(void* self, void* object);
 /// @param callback void func(QDesignerMetaDataBaseInterface* self, QObject* object)
 ///
 void q_designermetadatabaseinterface_on_remove(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_designermetadatabaseinterface_super_remove` instead
-///
-#define q_designermetadatabaseinterface_qbase_remove q_designermetadatabaseinterface_super_remove
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#remove)
 ///
@@ -399,10 +351,6 @@ libqt_list q_designermetadatabaseinterface_objects(void* self);
 ///
 void q_designermetadatabaseinterface_on_objects(void* self, libqt_list (*callback)());
 
-/// @warning DEPRECATED: Use `q_designermetadatabaseinterface_super_objects` instead
-///
-#define q_designermetadatabaseinterface_qbase_objects q_designermetadatabaseinterface_super_objects
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#objects)
 ///
 /// Base class method implementation
@@ -427,10 +375,6 @@ QDesignerFormEditorInterface* q_designermetadatabaseinterface_core(void* self);
 /// @param callback QDesignerFormEditorInterface* func()
 ///
 void q_designermetadatabaseinterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)());
-
-/// @warning DEPRECATED: Use `q_designermetadatabaseinterface_super_core` instead
-///
-#define q_designermetadatabaseinterface_qbase_core q_designermetadatabaseinterface_super_core
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#core)
 ///
@@ -930,10 +874,6 @@ void q_designermetadatabaseinterface_on_destroyed1(void* self, void (*callback)(
 ///
 bool q_designermetadatabaseinterface_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_designermetadatabaseinterface_super_event` instead
-///
-#define q_designermetadatabaseinterface_qbase_event q_designermetadatabaseinterface_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -967,10 +907,6 @@ void q_designermetadatabaseinterface_on_event(void* self, bool (*callback)(void*
 /// @param event QEvent*
 ///
 bool q_designermetadatabaseinterface_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_designermetadatabaseinterface_super_event_filter` instead
-///
-#define q_designermetadatabaseinterface_qbase_event_filter q_designermetadatabaseinterface_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1006,10 +942,6 @@ void q_designermetadatabaseinterface_on_event_filter(void* self, bool (*callback
 ///
 void q_designermetadatabaseinterface_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_designermetadatabaseinterface_super_timer_event` instead
-///
-#define q_designermetadatabaseinterface_qbase_timer_event q_designermetadatabaseinterface_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1042,10 +974,6 @@ void q_designermetadatabaseinterface_on_timer_event(void* self, void (*callback)
 /// @param event QChildEvent*
 ///
 void q_designermetadatabaseinterface_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_designermetadatabaseinterface_super_child_event` instead
-///
-#define q_designermetadatabaseinterface_qbase_child_event q_designermetadatabaseinterface_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1080,10 +1008,6 @@ void q_designermetadatabaseinterface_on_child_event(void* self, void (*callback)
 ///
 void q_designermetadatabaseinterface_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_designermetadatabaseinterface_super_custom_event` instead
-///
-#define q_designermetadatabaseinterface_qbase_custom_event q_designermetadatabaseinterface_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1116,10 +1040,6 @@ void q_designermetadatabaseinterface_on_custom_event(void* self, void (*callback
 /// @param signal QMetaMethod*
 ///
 void q_designermetadatabaseinterface_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_designermetadatabaseinterface_super_connect_notify` instead
-///
-#define q_designermetadatabaseinterface_qbase_connect_notify q_designermetadatabaseinterface_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1154,10 +1074,6 @@ void q_designermetadatabaseinterface_on_connect_notify(void* self, void (*callba
 ///
 void q_designermetadatabaseinterface_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_designermetadatabaseinterface_super_disconnect_notify` instead
-///
-#define q_designermetadatabaseinterface_qbase_disconnect_notify q_designermetadatabaseinterface_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1190,10 +1106,6 @@ void q_designermetadatabaseinterface_on_disconnect_notify(void* self, void (*cal
 ///
 QObject* q_designermetadatabaseinterface_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_designermetadatabaseinterface_super_sender` instead
-///
-#define q_designermetadatabaseinterface_qbase_sender q_designermetadatabaseinterface_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1224,10 +1136,6 @@ void q_designermetadatabaseinterface_on_sender(void* self, QObject* (*callback)(
 /// @param self QDesignerMetaDataBaseInterface*
 ///
 int32_t q_designermetadatabaseinterface_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_designermetadatabaseinterface_super_sender_signal_index` instead
-///
-#define q_designermetadatabaseinterface_qbase_sender_signal_index q_designermetadatabaseinterface_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1261,10 +1169,6 @@ void q_designermetadatabaseinterface_on_sender_signal_index(void* self, int32_t 
 ///
 int32_t q_designermetadatabaseinterface_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_designermetadatabaseinterface_super_receivers` instead
-///
-#define q_designermetadatabaseinterface_qbase_receivers q_designermetadatabaseinterface_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1297,10 +1201,6 @@ void q_designermetadatabaseinterface_on_receivers(void* self, int32_t (*callback
 /// @param signal QMetaMethod*
 ///
 bool q_designermetadatabaseinterface_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_designermetadatabaseinterface_super_is_signal_connected` instead
-///
-#define q_designermetadatabaseinterface_qbase_is_signal_connected q_designermetadatabaseinterface_super_is_signal_connected
 
 /// Inherited from QObject
 ///

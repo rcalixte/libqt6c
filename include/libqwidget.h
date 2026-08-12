@@ -46,10 +46,6 @@ const QMetaObject* q_widget_meta_object(void* self);
 ///
 void q_widget_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_widget_super_meta_object` instead
-///
-#define q_widget_qbase_meta_object q_widget_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -69,10 +65,6 @@ void* q_widget_metacast(void* self, const char* param1);
 /// @param callback void* func(QWidget* self, const char* param1)
 ///
 void q_widget_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_widget_super_metacast` instead
-///
-#define q_widget_qbase_metacast q_widget_super_metacast
 
 /// Base class method implementation
 ///
@@ -94,10 +86,6 @@ int32_t q_widget_metacall(void* self, int32_t param1, int param2, void* param3);
 /// @param callback int32_t func(QWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_widget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_widget_super_metacall` instead
-///
-#define q_widget_qbase_metacall q_widget_super_metacall
 
 /// Base class method implementation
 ///
@@ -130,10 +118,6 @@ int32_t q_widget_dev_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_widget_on_dev_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_widget_super_dev_type` instead
-///
-#define q_widget_qbase_dev_type q_widget_super_dev_type
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
@@ -1284,10 +1268,6 @@ void q_widget_set_visible(void* self, bool visible);
 ///
 void q_widget_on_set_visible(void* self, void (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `q_widget_super_set_visible` instead
-///
-#define q_widget_qbase_set_visible q_widget_super_set_visible
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Base class method implementation
@@ -1509,10 +1489,6 @@ QSize* q_widget_size_hint(void* self);
 ///
 void q_widget_on_size_hint(void* self, QSize* (*callback)());
 
-/// @warning DEPRECATED: Use `q_widget_super_size_hint` instead
-///
-#define q_widget_qbase_size_hint q_widget_super_size_hint
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
 ///
 /// Base class method implementation
@@ -1537,10 +1513,6 @@ QSize* q_widget_minimum_size_hint(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_widget_on_minimum_size_hint(void* self, QSize* (*callback)());
-
-/// @warning DEPRECATED: Use `q_widget_super_minimum_size_hint` instead
-///
-#define q_widget_qbase_minimum_size_hint q_widget_super_minimum_size_hint
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
 ///
@@ -1587,10 +1559,6 @@ int32_t q_widget_height_for_width(void* self, int param1);
 ///
 void q_widget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_widget_super_height_for_width` instead
-///
-#define q_widget_qbase_height_for_width q_widget_super_height_for_width
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Base class method implementation
@@ -1614,10 +1582,6 @@ bool q_widget_has_height_for_width(void* self);
 /// @param callback bool func()
 ///
 void q_widget_on_has_height_for_width(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `q_widget_super_has_height_for_width` instead
-///
-#define q_widget_qbase_has_height_for_width q_widget_super_has_height_for_width
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
@@ -1921,10 +1885,6 @@ QPaintEngine* q_widget_paint_engine(void* self);
 ///
 void q_widget_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
-/// @warning DEPRECATED: Use `q_widget_super_paint_engine` instead
-///
-#define q_widget_qbase_paint_engine q_widget_super_paint_engine
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Base class method implementation
@@ -2062,10 +2022,6 @@ bool q_widget_event(void* self, void* event);
 ///
 void q_widget_on_event(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_widget_super_event` instead
-///
-#define q_widget_qbase_event q_widget_super_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#event)
 ///
 /// Base class method implementation
@@ -2090,10 +2046,6 @@ void q_widget_mouse_press_event(void* self, void* event);
 /// @param callback void func(QWidget* self, QMouseEvent* event)
 ///
 void q_widget_on_mouse_press_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_widget_super_mouse_press_event` instead
-///
-#define q_widget_qbase_mouse_press_event q_widget_super_mouse_press_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
 ///
@@ -2120,10 +2072,6 @@ void q_widget_mouse_release_event(void* self, void* event);
 ///
 void q_widget_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_widget_super_mouse_release_event` instead
-///
-#define q_widget_qbase_mouse_release_event q_widget_super_mouse_release_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
@@ -2148,10 +2096,6 @@ void q_widget_mouse_double_click_event(void* self, void* event);
 /// @param callback void func(QWidget* self, QMouseEvent* event)
 ///
 void q_widget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_widget_super_mouse_double_click_event` instead
-///
-#define q_widget_qbase_mouse_double_click_event q_widget_super_mouse_double_click_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
@@ -2178,10 +2122,6 @@ void q_widget_mouse_move_event(void* self, void* event);
 ///
 void q_widget_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_widget_super_mouse_move_event` instead
-///
-#define q_widget_qbase_mouse_move_event q_widget_super_mouse_move_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
 ///
 /// Base class method implementation
@@ -2206,10 +2146,6 @@ void q_widget_wheel_event(void* self, void* event);
 /// @param callback void func(QWidget* self, QWheelEvent* event)
 ///
 void q_widget_on_wheel_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_widget_super_wheel_event` instead
-///
-#define q_widget_qbase_wheel_event q_widget_super_wheel_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
@@ -2236,10 +2172,6 @@ void q_widget_key_press_event(void* self, void* event);
 ///
 void q_widget_on_key_press_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_widget_super_key_press_event` instead
-///
-#define q_widget_qbase_key_press_event q_widget_super_key_press_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
 ///
 /// Base class method implementation
@@ -2264,10 +2196,6 @@ void q_widget_key_release_event(void* self, void* event);
 /// @param callback void func(QWidget* self, QKeyEvent* event)
 ///
 void q_widget_on_key_release_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_widget_super_key_release_event` instead
-///
-#define q_widget_qbase_key_release_event q_widget_super_key_release_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
@@ -2294,10 +2222,6 @@ void q_widget_focus_in_event(void* self, void* event);
 ///
 void q_widget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_widget_super_focus_in_event` instead
-///
-#define q_widget_qbase_focus_in_event q_widget_super_focus_in_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
 ///
 /// Base class method implementation
@@ -2322,10 +2246,6 @@ void q_widget_focus_out_event(void* self, void* event);
 /// @param callback void func(QWidget* self, QFocusEvent* event)
 ///
 void q_widget_on_focus_out_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_widget_super_focus_out_event` instead
-///
-#define q_widget_qbase_focus_out_event q_widget_super_focus_out_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
 ///
@@ -2352,10 +2272,6 @@ void q_widget_enter_event(void* self, void* event);
 ///
 void q_widget_on_enter_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_widget_super_enter_event` instead
-///
-#define q_widget_qbase_enter_event q_widget_super_enter_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Base class method implementation
@@ -2380,10 +2296,6 @@ void q_widget_leave_event(void* self, void* event);
 /// @param callback void func(QWidget* self, QEvent* event)
 ///
 void q_widget_on_leave_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_widget_super_leave_event` instead
-///
-#define q_widget_qbase_leave_event q_widget_super_leave_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
@@ -2410,10 +2322,6 @@ void q_widget_paint_event(void* self, void* event);
 ///
 void q_widget_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_widget_super_paint_event` instead
-///
-#define q_widget_qbase_paint_event q_widget_super_paint_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
 ///
 /// Base class method implementation
@@ -2438,10 +2346,6 @@ void q_widget_move_event(void* self, void* event);
 /// @param callback void func(QWidget* self, QMoveEvent* event)
 ///
 void q_widget_on_move_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_widget_super_move_event` instead
-///
-#define q_widget_qbase_move_event q_widget_super_move_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
@@ -2468,10 +2372,6 @@ void q_widget_resize_event(void* self, void* event);
 ///
 void q_widget_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_widget_super_resize_event` instead
-///
-#define q_widget_qbase_resize_event q_widget_super_resize_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
 ///
 /// Base class method implementation
@@ -2496,10 +2396,6 @@ void q_widget_close_event(void* self, void* event);
 /// @param callback void func(QWidget* self, QCloseEvent* event)
 ///
 void q_widget_on_close_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_widget_super_close_event` instead
-///
-#define q_widget_qbase_close_event q_widget_super_close_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
@@ -2526,10 +2422,6 @@ void q_widget_context_menu_event(void* self, void* event);
 ///
 void q_widget_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_widget_super_context_menu_event` instead
-///
-#define q_widget_qbase_context_menu_event q_widget_super_context_menu_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
 ///
 /// Base class method implementation
@@ -2554,10 +2446,6 @@ void q_widget_tablet_event(void* self, void* event);
 /// @param callback void func(QWidget* self, QTabletEvent* event)
 ///
 void q_widget_on_tablet_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_widget_super_tablet_event` instead
-///
-#define q_widget_qbase_tablet_event q_widget_super_tablet_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
@@ -2584,10 +2472,6 @@ void q_widget_action_event(void* self, void* event);
 ///
 void q_widget_on_action_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_widget_super_action_event` instead
-///
-#define q_widget_qbase_action_event q_widget_super_action_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Base class method implementation
@@ -2612,10 +2496,6 @@ void q_widget_drag_enter_event(void* self, void* event);
 /// @param callback void func(QWidget* self, QDragEnterEvent* event)
 ///
 void q_widget_on_drag_enter_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_widget_super_drag_enter_event` instead
-///
-#define q_widget_qbase_drag_enter_event q_widget_super_drag_enter_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
@@ -2642,10 +2522,6 @@ void q_widget_drag_move_event(void* self, void* event);
 ///
 void q_widget_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_widget_super_drag_move_event` instead
-///
-#define q_widget_qbase_drag_move_event q_widget_super_drag_move_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Base class method implementation
@@ -2670,10 +2546,6 @@ void q_widget_drag_leave_event(void* self, void* event);
 /// @param callback void func(QWidget* self, QDragLeaveEvent* event)
 ///
 void q_widget_on_drag_leave_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_widget_super_drag_leave_event` instead
-///
-#define q_widget_qbase_drag_leave_event q_widget_super_drag_leave_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
@@ -2700,10 +2572,6 @@ void q_widget_drop_event(void* self, void* event);
 ///
 void q_widget_on_drop_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_widget_super_drop_event` instead
-///
-#define q_widget_qbase_drop_event q_widget_super_drop_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Base class method implementation
@@ -2729,10 +2597,6 @@ void q_widget_show_event(void* self, void* event);
 ///
 void q_widget_on_show_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_widget_super_show_event` instead
-///
-#define q_widget_qbase_show_event q_widget_super_show_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
 ///
 /// Base class method implementation
@@ -2757,10 +2621,6 @@ void q_widget_hide_event(void* self, void* event);
 /// @param callback void func(QWidget* self, QHideEvent* event)
 ///
 void q_widget_on_hide_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_widget_super_hide_event` instead
-///
-#define q_widget_qbase_hide_event q_widget_super_hide_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
@@ -2789,10 +2649,6 @@ bool q_widget_native_event(void* self, char* eventType, void* message, intptr_t*
 ///
 void q_widget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
-/// @warning DEPRECATED: Use `q_widget_super_native_event` instead
-///
-#define q_widget_qbase_native_event q_widget_super_native_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Base class method implementation
@@ -2820,10 +2676,6 @@ void q_widget_change_event(void* self, void* param1);
 ///
 void q_widget_on_change_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_widget_super_change_event` instead
-///
-#define q_widget_qbase_change_event q_widget_super_change_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
 ///
 /// Base class method implementation
@@ -2848,10 +2700,6 @@ int32_t q_widget_metric(void* self, int32_t param1);
 /// @param callback int32_t func(QWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
 void q_widget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_widget_super_metric` instead
-///
-#define q_widget_qbase_metric q_widget_super_metric
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
@@ -2878,10 +2726,6 @@ void q_widget_init_painter(void* self, void* painter);
 ///
 void q_widget_on_init_painter(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_widget_super_init_painter` instead
-///
-#define q_widget_qbase_init_painter q_widget_super_init_painter
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Base class method implementation
@@ -2907,10 +2751,6 @@ QPaintDevice* q_widget_redirected(void* self, void* offset);
 ///
 void q_widget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_widget_super_redirected` instead
-///
-#define q_widget_qbase_redirected q_widget_super_redirected
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Base class method implementation
@@ -2935,10 +2775,6 @@ QPainter* q_widget_shared_painter(void* self);
 ///
 void q_widget_on_shared_painter(void* self, QPainter* (*callback)());
 
-/// @warning DEPRECATED: Use `q_widget_super_shared_painter` instead
-///
-#define q_widget_qbase_shared_painter q_widget_super_shared_painter
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Base class method implementation
@@ -2962,10 +2798,6 @@ void q_widget_input_method_event(void* self, void* param1);
 /// @param callback void func(QWidget* self, QInputMethodEvent* param1)
 ///
 void q_widget_on_input_method_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_widget_super_input_method_event` instead
-///
-#define q_widget_qbase_input_method_event q_widget_super_input_method_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
@@ -2993,10 +2825,6 @@ QVariant* q_widget_input_method_query(void* self, int32_t param1);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_widget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_widget_super_input_method_query` instead
-///
-#define q_widget_qbase_input_method_query q_widget_super_input_method_query
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
@@ -3037,10 +2865,6 @@ void q_widget_update_micro_focus(void* self);
 ///
 void q_widget_on_update_micro_focus(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_widget_super_update_micro_focus` instead
-///
-#define q_widget_qbase_update_micro_focus q_widget_super_update_micro_focus
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Base class method implementation
@@ -3064,10 +2888,6 @@ void q_widget_create(void* self);
 ///
 void q_widget_on_create(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_widget_super_create` instead
-///
-#define q_widget_qbase_create q_widget_super_create
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Base class method implementation
@@ -3090,10 +2910,6 @@ void q_widget_destroy(void* self);
 /// @param callback void func()
 ///
 void q_widget_on_destroy(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_widget_super_destroy` instead
-///
-#define q_widget_qbase_destroy q_widget_super_destroy
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
@@ -3119,10 +2935,6 @@ bool q_widget_focus_next_prev_child(void* self, bool next);
 ///
 void q_widget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `q_widget_super_focus_next_prev_child` instead
-///
-#define q_widget_qbase_focus_next_prev_child q_widget_super_focus_next_prev_child
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Base class method implementation
@@ -3147,10 +2959,6 @@ bool q_widget_focus_next_child(void* self);
 ///
 void q_widget_on_focus_next_child(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_widget_super_focus_next_child` instead
-///
-#define q_widget_qbase_focus_next_child q_widget_super_focus_next_child
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Base class method implementation
@@ -3173,10 +2981,6 @@ bool q_widget_focus_previous_child(void* self);
 /// @param callback bool func()
 ///
 void q_widget_on_focus_previous_child(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `q_widget_super_focus_previous_child` instead
-///
-#define q_widget_qbase_focus_previous_child q_widget_super_focus_previous_child
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
@@ -3345,10 +3149,6 @@ void q_widget_update_micro_focus1(void* self, int32_t query);
 ///
 void q_widget_on_update_micro_focus1(void* self, void (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_widget_super_update_micro_focus1` instead
-///
-#define q_widget_qbase_update_micro_focus1 q_widget_super_update_micro_focus1
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Base class method implementation
@@ -3373,10 +3173,6 @@ void q_widget_create1(void* self, uintptr_t param1);
 /// @param callback void func(QWidget* self, uintptr_t param1)
 ///
 void q_widget_on_create1(void* self, void (*callback)(void*, uintptr_t));
-
-/// @warning DEPRECATED: Use `q_widget_super_create1` instead
-///
-#define q_widget_qbase_create1 q_widget_super_create1
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
@@ -3403,10 +3199,6 @@ void q_widget_create2(void* self, uintptr_t param1, bool initializeWindow);
 /// @param callback void func(QWidget* self, uintptr_t param1, bool initializeWindow)
 ///
 void q_widget_on_create2(void* self, void (*callback)(void*, uintptr_t, bool));
-
-/// @warning DEPRECATED: Use `q_widget_super_create2` instead
-///
-#define q_widget_qbase_create2 q_widget_super_create2
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
@@ -3436,10 +3228,6 @@ void q_widget_create3(void* self, uintptr_t param1, bool initializeWindow, bool 
 ///
 void q_widget_on_create3(void* self, void (*callback)(void*, uintptr_t, bool, bool));
 
-/// @warning DEPRECATED: Use `q_widget_super_create3` instead
-///
-#define q_widget_qbase_create3 q_widget_super_create3
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Base class method implementation
@@ -3467,10 +3255,6 @@ void q_widget_destroy1(void* self, bool destroyWindow);
 ///
 void q_widget_on_destroy1(void* self, void (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `q_widget_super_destroy1` instead
-///
-#define q_widget_qbase_destroy1 q_widget_super_destroy1
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Base class method implementation
@@ -3496,10 +3280,6 @@ void q_widget_destroy2(void* self, bool destroyWindow, bool destroySubWindows);
 /// @param callback void func(QWidget* self, bool destroyWindow, bool destroySubWindows)
 ///
 void q_widget_on_destroy2(void* self, void (*callback)(void*, bool, bool));
-
-/// @warning DEPRECATED: Use `q_widget_super_destroy2` instead
-///
-#define q_widget_qbase_destroy2 q_widget_super_destroy2
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
@@ -4064,10 +3844,6 @@ int32_t q_widget_encode_metric_f(int32_t metric, double value);
 ///
 bool q_widget_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_widget_super_event_filter` instead
-///
-#define q_widget_qbase_event_filter q_widget_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -4102,10 +3878,6 @@ void q_widget_on_event_filter(void* self, bool (*callback)(void*, void*, void*))
 ///
 void q_widget_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_widget_super_timer_event` instead
-///
-#define q_widget_qbase_timer_event q_widget_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -4138,10 +3910,6 @@ void q_widget_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_widget_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_widget_super_child_event` instead
-///
-#define q_widget_qbase_child_event q_widget_super_child_event
 
 /// Inherited from QObject
 ///
@@ -4176,10 +3944,6 @@ void q_widget_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_widget_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_widget_super_custom_event` instead
-///
-#define q_widget_qbase_custom_event q_widget_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -4212,10 +3976,6 @@ void q_widget_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_widget_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_widget_super_connect_notify` instead
-///
-#define q_widget_qbase_connect_notify q_widget_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -4250,10 +4010,6 @@ void q_widget_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_widget_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_widget_super_disconnect_notify` instead
-///
-#define q_widget_qbase_disconnect_notify q_widget_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -4286,10 +4042,6 @@ void q_widget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 ///
 QObject* q_widget_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_widget_super_sender` instead
-///
-#define q_widget_qbase_sender q_widget_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -4320,10 +4072,6 @@ void q_widget_on_sender(void* self, QObject* (*callback)());
 /// @param self QWidget*
 ///
 int32_t q_widget_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_widget_super_sender_signal_index` instead
-///
-#define q_widget_qbase_sender_signal_index q_widget_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -4356,10 +4104,6 @@ void q_widget_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t q_widget_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `q_widget_super_receivers` instead
-///
-#define q_widget_qbase_receivers q_widget_super_receivers
 
 /// Inherited from QObject
 ///
@@ -4394,10 +4138,6 @@ void q_widget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 ///
 bool q_widget_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_widget_super_is_signal_connected` instead
-///
-#define q_widget_qbase_is_signal_connected q_widget_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -4431,10 +4171,6 @@ void q_widget_on_is_signal_connected(void* self, bool (*callback)(void*, void*))
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double q_widget_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `q_widget_super_get_decoded_metric_f` instead
-///
-#define q_widget_qbase_get_decoded_metric_f q_widget_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

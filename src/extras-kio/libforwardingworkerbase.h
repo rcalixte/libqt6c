@@ -33,10 +33,6 @@ const QMetaObject* k_io__forwardingworkerbase_meta_object(void* self);
 ///
 void k_io__forwardingworkerbase_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_meta_object` instead
-///
-#define k_io__forwardingworkerbase_qbase_meta_object k_io__forwardingworkerbase_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -56,10 +52,6 @@ void* k_io__forwardingworkerbase_metacast(void* self, const char* param1);
 /// @param callback void* func(KIO__ForwardingWorkerBase* self, const char* param1)
 ///
 void k_io__forwardingworkerbase_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_metacast` instead
-///
-#define k_io__forwardingworkerbase_qbase_metacast k_io__forwardingworkerbase_super_metacast
 
 /// Base class method implementation
 ///
@@ -81,10 +73,6 @@ int32_t k_io__forwardingworkerbase_metacall(void* self, int32_t param1, int para
 /// @param callback int32_t func(KIO__ForwardingWorkerBase* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_io__forwardingworkerbase_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_metacall` instead
-///
-#define k_io__forwardingworkerbase_qbase_metacall k_io__forwardingworkerbase_super_metacall
 
 /// Base class method implementation
 ///
@@ -121,10 +109,6 @@ KIO__WorkerResult* k_io__forwardingworkerbase_get(void* self, void* url);
 ///
 void k_io__forwardingworkerbase_on_get(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_get` instead
-///
-#define k_io__forwardingworkerbase_qbase_get k_io__forwardingworkerbase_super_get
-
 /// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#get)
 ///
 /// Base class method implementation
@@ -153,10 +137,6 @@ KIO__WorkerResult* k_io__forwardingworkerbase_put(void* self, void* url, int per
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__forwardingworkerbase_on_put(void* self, KIO__WorkerResult* (*callback)(void*, void*, int, int32_t));
-
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_put` instead
-///
-#define k_io__forwardingworkerbase_qbase_put k_io__forwardingworkerbase_super_put
 
 /// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#put)
 ///
@@ -187,10 +167,6 @@ KIO__WorkerResult* k_io__forwardingworkerbase_stat(void* self, void* url);
 ///
 void k_io__forwardingworkerbase_on_stat(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_stat` instead
-///
-#define k_io__forwardingworkerbase_qbase_stat k_io__forwardingworkerbase_super_stat
-
 /// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#stat)
 ///
 /// Base class method implementation
@@ -217,10 +193,6 @@ KIO__WorkerResult* k_io__forwardingworkerbase_mimetype(void* self, void* url);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__forwardingworkerbase_on_mimetype(void* self, KIO__WorkerResult* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_mimetype` instead
-///
-#define k_io__forwardingworkerbase_qbase_mimetype k_io__forwardingworkerbase_super_mimetype
 
 /// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#mimetype)
 ///
@@ -249,10 +221,6 @@ KIO__WorkerResult* k_io__forwardingworkerbase_list_dir(void* self, void* url);
 ///
 void k_io__forwardingworkerbase_on_list_dir(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_list_dir` instead
-///
-#define k_io__forwardingworkerbase_qbase_list_dir k_io__forwardingworkerbase_super_list_dir
-
 /// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#listDir)
 ///
 /// Base class method implementation
@@ -280,10 +248,6 @@ KIO__WorkerResult* k_io__forwardingworkerbase_mkdir(void* self, void* url, int p
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__forwardingworkerbase_on_mkdir(void* self, KIO__WorkerResult* (*callback)(void*, void*, int));
-
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_mkdir` instead
-///
-#define k_io__forwardingworkerbase_qbase_mkdir k_io__forwardingworkerbase_super_mkdir
 
 /// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#mkdir)
 ///
@@ -314,10 +278,6 @@ KIO__WorkerResult* k_io__forwardingworkerbase_rename(void* self, void* src, void
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__forwardingworkerbase_on_rename(void* self, KIO__WorkerResult* (*callback)(void*, void*, void*, int32_t));
-
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_rename` instead
-///
-#define k_io__forwardingworkerbase_qbase_rename k_io__forwardingworkerbase_super_rename
 
 /// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#rename)
 ///
@@ -350,10 +310,6 @@ KIO__WorkerResult* k_io__forwardingworkerbase_symlink(void* self, const char* ta
 ///
 void k_io__forwardingworkerbase_on_symlink(void* self, KIO__WorkerResult* (*callback)(void*, const char*, void*, int32_t));
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_symlink` instead
-///
-#define k_io__forwardingworkerbase_qbase_symlink k_io__forwardingworkerbase_super_symlink
-
 /// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#symlink)
 ///
 /// Base class method implementation
@@ -384,10 +340,6 @@ KIO__WorkerResult* k_io__forwardingworkerbase_chmod(void* self, void* url, int p
 ///
 void k_io__forwardingworkerbase_on_chmod(void* self, KIO__WorkerResult* (*callback)(void*, void*, int));
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_chmod` instead
-///
-#define k_io__forwardingworkerbase_qbase_chmod k_io__forwardingworkerbase_super_chmod
-
 /// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#chmod)
 ///
 /// Base class method implementation
@@ -416,10 +368,6 @@ KIO__WorkerResult* k_io__forwardingworkerbase_set_modification_time(void* self, 
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__forwardingworkerbase_on_set_modification_time(void* self, KIO__WorkerResult* (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_set_modification_time` instead
-///
-#define k_io__forwardingworkerbase_qbase_set_modification_time k_io__forwardingworkerbase_super_set_modification_time
 
 /// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#setModificationTime)
 ///
@@ -452,10 +400,6 @@ KIO__WorkerResult* k_io__forwardingworkerbase_copy(void* self, void* src, void* 
 ///
 void k_io__forwardingworkerbase_on_copy(void* self, KIO__WorkerResult* (*callback)(void*, void*, void*, int, int32_t));
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_copy` instead
-///
-#define k_io__forwardingworkerbase_qbase_copy k_io__forwardingworkerbase_super_copy
-
 /// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#copy)
 ///
 /// Base class method implementation
@@ -487,10 +431,6 @@ KIO__WorkerResult* k_io__forwardingworkerbase_del(void* self, void* url, bool is
 ///
 void k_io__forwardingworkerbase_on_del(void* self, KIO__WorkerResult* (*callback)(void*, void*, bool));
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_del` instead
-///
-#define k_io__forwardingworkerbase_qbase_del k_io__forwardingworkerbase_super_del
-
 /// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#del)
 ///
 /// Base class method implementation
@@ -517,10 +457,6 @@ bool k_io__forwardingworkerbase_rewrite_url(void* self, void* url, void* newURL)
 /// @param callback bool func(KIO__ForwardingWorkerBase* self, QUrl* url, QUrl* newURL)
 ///
 void k_io__forwardingworkerbase_on_rewrite_url(void* self, bool (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_rewrite_url` instead
-///
-#define k_io__forwardingworkerbase_qbase_rewrite_url k_io__forwardingworkerbase_super_rewrite_url
 
 /// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#rewriteUrl)
 ///
@@ -549,10 +485,6 @@ void k_io__forwardingworkerbase_adjust_u_d_s_entry(void* self, void* entry, int3
 ///
 void k_io__forwardingworkerbase_on_adjust_u_d_s_entry(void* self, void (*callback)(void*, void*, int32_t));
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_adjust_u_d_s_entry` instead
-///
-#define k_io__forwardingworkerbase_qbase_adjust_u_d_s_entry k_io__forwardingworkerbase_super_adjust_u_d_s_entry
-
 /// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#adjustUDSEntry)
 ///
 /// Base class method implementation
@@ -580,10 +512,6 @@ QUrl* k_io__forwardingworkerbase_processed_url(void* self);
 ///
 void k_io__forwardingworkerbase_on_processed_url(void* self, QUrl* (*callback)());
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_processed_url` instead
-///
-#define k_io__forwardingworkerbase_qbase_processed_url k_io__forwardingworkerbase_super_processed_url
-
 /// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#processedUrl)
 ///
 /// Base class method implementation
@@ -608,10 +536,6 @@ QUrl* k_io__forwardingworkerbase_requested_url(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__forwardingworkerbase_on_requested_url(void* self, QUrl* (*callback)());
-
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_requested_url` instead
-///
-#define k_io__forwardingworkerbase_qbase_requested_url k_io__forwardingworkerbase_super_requested_url
 
 /// [Upstream resources](https://api.kde.org/kio-forwardingworkerbase.html#requestedUrl)
 ///
@@ -1725,10 +1649,6 @@ int32_t k_io__forwardingworkerbase_wait_for_answer4(void* self, int expected1, i
 ///
 bool k_io__forwardingworkerbase_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_event` instead
-///
-#define k_io__forwardingworkerbase_qbase_event k_io__forwardingworkerbase_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1762,10 +1682,6 @@ void k_io__forwardingworkerbase_on_event(void* self, bool (*callback)(void*, voi
 /// @param event QEvent*
 ///
 bool k_io__forwardingworkerbase_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_event_filter` instead
-///
-#define k_io__forwardingworkerbase_qbase_event_filter k_io__forwardingworkerbase_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1801,10 +1717,6 @@ void k_io__forwardingworkerbase_on_event_filter(void* self, bool (*callback)(voi
 ///
 void k_io__forwardingworkerbase_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_timer_event` instead
-///
-#define k_io__forwardingworkerbase_qbase_timer_event k_io__forwardingworkerbase_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1837,10 +1749,6 @@ void k_io__forwardingworkerbase_on_timer_event(void* self, void (*callback)(void
 /// @param event QChildEvent*
 ///
 void k_io__forwardingworkerbase_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_child_event` instead
-///
-#define k_io__forwardingworkerbase_qbase_child_event k_io__forwardingworkerbase_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1875,10 +1783,6 @@ void k_io__forwardingworkerbase_on_child_event(void* self, void (*callback)(void
 ///
 void k_io__forwardingworkerbase_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_custom_event` instead
-///
-#define k_io__forwardingworkerbase_qbase_custom_event k_io__forwardingworkerbase_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1911,10 +1815,6 @@ void k_io__forwardingworkerbase_on_custom_event(void* self, void (*callback)(voi
 /// @param signal QMetaMethod*
 ///
 void k_io__forwardingworkerbase_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_connect_notify` instead
-///
-#define k_io__forwardingworkerbase_qbase_connect_notify k_io__forwardingworkerbase_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1949,10 +1849,6 @@ void k_io__forwardingworkerbase_on_connect_notify(void* self, void (*callback)(v
 ///
 void k_io__forwardingworkerbase_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_disconnect_notify` instead
-///
-#define k_io__forwardingworkerbase_qbase_disconnect_notify k_io__forwardingworkerbase_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1984,10 +1880,6 @@ void k_io__forwardingworkerbase_on_disconnect_notify(void* self, void (*callback
 /// @param self KIO__ForwardingWorkerBase*
 ///
 void k_io__forwardingworkerbase_app_connection_made(void* self);
-
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_app_connection_made` instead
-///
-#define k_io__forwardingworkerbase_qbase_app_connection_made k_io__forwardingworkerbase_super_app_connection_made
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2024,10 +1916,6 @@ void k_io__forwardingworkerbase_on_app_connection_made(void* self, void (*callba
 ///
 void k_io__forwardingworkerbase_set_host(void* self, const char* host, uint16_t port, const char* user, const char* pass);
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_set_host` instead
-///
-#define k_io__forwardingworkerbase_qbase_set_host k_io__forwardingworkerbase_super_set_host
-
 /// Inherited from KIO::WorkerBase
 ///
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#setHost)
@@ -2063,10 +1951,6 @@ void k_io__forwardingworkerbase_on_set_host(void* self, void (*callback)(void*, 
 ///
 KIO__WorkerResult* k_io__forwardingworkerbase_open_connection(void* self);
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_open_connection` instead
-///
-#define k_io__forwardingworkerbase_qbase_open_connection k_io__forwardingworkerbase_super_open_connection
-
 /// Inherited from KIO::WorkerBase
 ///
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#openConnection)
@@ -2100,10 +1984,6 @@ void k_io__forwardingworkerbase_on_open_connection(void* self, KIO__WorkerResult
 ///
 void k_io__forwardingworkerbase_close_connection(void* self);
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_close_connection` instead
-///
-#define k_io__forwardingworkerbase_qbase_close_connection k_io__forwardingworkerbase_super_close_connection
-
 /// Inherited from KIO::WorkerBase
 ///
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#closeConnection)
@@ -2136,10 +2016,6 @@ void k_io__forwardingworkerbase_on_close_connection(void* self, void (*callback)
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 ///
 KIO__WorkerResult* k_io__forwardingworkerbase_open(void* self, void* url, int32_t mode);
-
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_open` instead
-///
-#define k_io__forwardingworkerbase_qbase_open k_io__forwardingworkerbase_super_open
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2177,10 +2053,6 @@ void k_io__forwardingworkerbase_on_open(void* self, KIO__WorkerResult* (*callbac
 ///
 KIO__WorkerResult* k_io__forwardingworkerbase_read(void* self, uintptr_t size);
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_read` instead
-///
-#define k_io__forwardingworkerbase_qbase_read k_io__forwardingworkerbase_super_read
-
 /// Inherited from KIO::WorkerBase
 ///
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#read)
@@ -2215,10 +2087,6 @@ void k_io__forwardingworkerbase_on_read(void* self, KIO__WorkerResult* (*callbac
 /// @param data char*
 ///
 KIO__WorkerResult* k_io__forwardingworkerbase_write(void* self, char* data);
-
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_write` instead
-///
-#define k_io__forwardingworkerbase_qbase_write k_io__forwardingworkerbase_super_write
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2255,10 +2123,6 @@ void k_io__forwardingworkerbase_on_write(void* self, KIO__WorkerResult* (*callba
 ///
 KIO__WorkerResult* k_io__forwardingworkerbase_seek(void* self, uintptr_t offset);
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_seek` instead
-///
-#define k_io__forwardingworkerbase_qbase_seek k_io__forwardingworkerbase_super_seek
-
 /// Inherited from KIO::WorkerBase
 ///
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#seek)
@@ -2294,10 +2158,6 @@ void k_io__forwardingworkerbase_on_seek(void* self, KIO__WorkerResult* (*callbac
 ///
 KIO__WorkerResult* k_io__forwardingworkerbase_truncate(void* self, uintptr_t size);
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_truncate` instead
-///
-#define k_io__forwardingworkerbase_qbase_truncate k_io__forwardingworkerbase_super_truncate
-
 /// Inherited from KIO::WorkerBase
 ///
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#truncate)
@@ -2331,10 +2191,6 @@ void k_io__forwardingworkerbase_on_truncate(void* self, KIO__WorkerResult* (*cal
 /// @param self KIO__ForwardingWorkerBase*
 ///
 KIO__WorkerResult* k_io__forwardingworkerbase_close(void* self);
-
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_close` instead
-///
-#define k_io__forwardingworkerbase_qbase_close k_io__forwardingworkerbase_super_close
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2371,10 +2227,6 @@ void k_io__forwardingworkerbase_on_close(void* self, KIO__WorkerResult* (*callba
 /// @param group const char*
 ///
 KIO__WorkerResult* k_io__forwardingworkerbase_chown(void* self, void* url, const char* owner, const char* group);
-
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_chown` instead
-///
-#define k_io__forwardingworkerbase_qbase_chown k_io__forwardingworkerbase_super_chown
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2413,10 +2265,6 @@ void k_io__forwardingworkerbase_on_chown(void* self, KIO__WorkerResult* (*callba
 ///
 KIO__WorkerResult* k_io__forwardingworkerbase_special(void* self, char* data);
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_special` instead
-///
-#define k_io__forwardingworkerbase_qbase_special k_io__forwardingworkerbase_super_special
-
 /// Inherited from KIO::WorkerBase
 ///
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#special)
@@ -2452,10 +2300,6 @@ void k_io__forwardingworkerbase_on_special(void* self, KIO__WorkerResult* (*call
 ///
 KIO__WorkerResult* k_io__forwardingworkerbase_file_system_free_space(void* self, void* url);
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_file_system_free_space` instead
-///
-#define k_io__forwardingworkerbase_qbase_file_system_free_space k_io__forwardingworkerbase_super_file_system_free_space
-
 /// Inherited from KIO::WorkerBase
 ///
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#fileSystemFreeSpace)
@@ -2490,10 +2334,6 @@ void k_io__forwardingworkerbase_on_file_system_free_space(void* self, KIO__Worke
 ///
 void k_io__forwardingworkerbase_worker_status2(void* self);
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_worker_status2` instead
-///
-#define k_io__forwardingworkerbase_qbase_worker_status2 k_io__forwardingworkerbase_super_worker_status2
-
 /// Inherited from KIO::WorkerBase
 ///
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#worker_status)
@@ -2524,10 +2364,6 @@ void k_io__forwardingworkerbase_on_worker_status2(void* self, void (*callback)()
 /// @param self KIO__ForwardingWorkerBase*
 ///
 void k_io__forwardingworkerbase_reparse_configuration(void* self);
-
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_reparse_configuration` instead
-///
-#define k_io__forwardingworkerbase_qbase_reparse_configuration k_io__forwardingworkerbase_super_reparse_configuration
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2560,10 +2396,6 @@ void k_io__forwardingworkerbase_on_reparse_configuration(void* self, void (*call
 ///
 QObject* k_io__forwardingworkerbase_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_sender` instead
-///
-#define k_io__forwardingworkerbase_qbase_sender k_io__forwardingworkerbase_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2594,10 +2426,6 @@ void k_io__forwardingworkerbase_on_sender(void* self, QObject* (*callback)());
 /// @param self KIO__ForwardingWorkerBase*
 ///
 int32_t k_io__forwardingworkerbase_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_sender_signal_index` instead
-///
-#define k_io__forwardingworkerbase_qbase_sender_signal_index k_io__forwardingworkerbase_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -2631,10 +2459,6 @@ void k_io__forwardingworkerbase_on_sender_signal_index(void* self, int32_t (*cal
 ///
 int32_t k_io__forwardingworkerbase_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_receivers` instead
-///
-#define k_io__forwardingworkerbase_qbase_receivers k_io__forwardingworkerbase_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2667,10 +2491,6 @@ void k_io__forwardingworkerbase_on_receivers(void* self, int32_t (*callback)(voi
 /// @param signal QMetaMethod*
 ///
 bool k_io__forwardingworkerbase_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_is_signal_connected` instead
-///
-#define k_io__forwardingworkerbase_qbase_is_signal_connected k_io__forwardingworkerbase_super_is_signal_connected
 
 /// Inherited from QObject
 ///

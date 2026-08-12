@@ -37,10 +37,6 @@ const QMetaObject* k_fileitemdelegate_meta_object(void* self);
 ///
 void k_fileitemdelegate_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_meta_object` instead
-///
-#define k_fileitemdelegate_qbase_meta_object k_fileitemdelegate_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* k_fileitemdelegate_metacast(void* self, const char* param1);
 /// @param callback void* func(KFileItemDelegate* self, const char* param1)
 ///
 void k_fileitemdelegate_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_metacast` instead
-///
-#define k_fileitemdelegate_qbase_metacast k_fileitemdelegate_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t k_fileitemdelegate_metacall(void* self, int32_t param1, int param2, void
 /// @param callback int32_t func(KFileItemDelegate* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_fileitemdelegate_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_metacall` instead
-///
-#define k_fileitemdelegate_qbase_metacall k_fileitemdelegate_super_metacall
 
 /// Base class method implementation
 ///
@@ -126,10 +114,6 @@ QSize* k_fileitemdelegate_size_hint(void* self, void* option, void* index);
 ///
 void k_fileitemdelegate_on_size_hint(void* self, QSize* (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_size_hint` instead
-///
-#define k_fileitemdelegate_qbase_size_hint k_fileitemdelegate_super_size_hint
-
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#sizeHint)
 ///
 /// Base class method implementation
@@ -157,10 +141,6 @@ void k_fileitemdelegate_paint(void* self, void* painter, void* option, void* ind
 /// @param callback void func(KFileItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index)
 ///
 void k_fileitemdelegate_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_paint` instead
-///
-#define k_fileitemdelegate_qbase_paint k_fileitemdelegate_super_paint
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#paint)
 ///
@@ -190,10 +170,6 @@ QWidget* k_fileitemdelegate_create_editor(void* self, void* parent, void* option
 /// @param callback QWidget* func(KFileItemDelegate* self, QWidget* parent, QStyleOptionViewItem* option, QModelIndex* index)
 ///
 void k_fileitemdelegate_on_create_editor(void* self, QWidget* (*callback)(void*, void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_create_editor` instead
-///
-#define k_fileitemdelegate_qbase_create_editor k_fileitemdelegate_super_create_editor
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#createEditor)
 ///
@@ -225,10 +201,6 @@ bool k_fileitemdelegate_editor_event(void* self, void* event, void* model, void*
 ///
 void k_fileitemdelegate_on_editor_event(void* self, bool (*callback)(void*, void*, void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_editor_event` instead
-///
-#define k_fileitemdelegate_qbase_editor_event k_fileitemdelegate_super_editor_event
-
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#editorEvent)
 ///
 /// Base class method implementation
@@ -258,10 +230,6 @@ void k_fileitemdelegate_set_editor_data(void* self, void* editor, void* index);
 ///
 void k_fileitemdelegate_on_set_editor_data(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_set_editor_data` instead
-///
-#define k_fileitemdelegate_qbase_set_editor_data k_fileitemdelegate_super_set_editor_data
-
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setEditorData)
 ///
 /// Base class method implementation
@@ -289,10 +257,6 @@ void k_fileitemdelegate_set_model_data(void* self, void* editor, void* model, vo
 /// @param callback void func(KFileItemDelegate* self, QWidget* editor, QAbstractItemModel* model, QModelIndex* index)
 ///
 void k_fileitemdelegate_on_set_model_data(void* self, void (*callback)(void*, void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_set_model_data` instead
-///
-#define k_fileitemdelegate_qbase_set_model_data k_fileitemdelegate_super_set_model_data
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setModelData)
 ///
@@ -322,10 +286,6 @@ void k_fileitemdelegate_update_editor_geometry(void* self, void* editor, void* o
 /// @param callback void func(KFileItemDelegate* self, QWidget* editor, QStyleOptionViewItem* option, QModelIndex* index)
 ///
 void k_fileitemdelegate_on_update_editor_geometry(void* self, void (*callback)(void*, void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_update_editor_geometry` instead
-///
-#define k_fileitemdelegate_qbase_update_editor_geometry k_fileitemdelegate_super_update_editor_geometry
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#updateEditorGeometry)
 ///
@@ -478,10 +438,6 @@ bool k_fileitemdelegate_event_filter(void* self, void* object, void* event);
 ///
 void k_fileitemdelegate_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_event_filter` instead
-///
-#define k_fileitemdelegate_qbase_event_filter k_fileitemdelegate_super_event_filter
-
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#eventFilter)
 ///
 /// Base class method implementation
@@ -531,10 +487,6 @@ bool k_fileitemdelegate_help_event(void* self, void* event, void* view, void* op
 /// @param callback bool func(KFileItemDelegate* self, QHelpEvent* event, QAbstractItemView* view, QStyleOptionViewItem* option, QModelIndex* index)
 ///
 void k_fileitemdelegate_on_help_event(void* self, bool (*callback)(void*, void*, void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_help_event` instead
-///
-#define k_fileitemdelegate_qbase_help_event k_fileitemdelegate_super_help_event
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#helpEvent)
 ///
@@ -1107,10 +1059,6 @@ void k_fileitemdelegate_on_destroyed1(void* self, void (*callback)(void*, void*)
 ///
 void k_fileitemdelegate_destroy_editor(void* self, void* editor, void* index);
 
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_destroy_editor` instead
-///
-#define k_fileitemdelegate_qbase_destroy_editor k_fileitemdelegate_super_destroy_editor
-
 /// Inherited from QAbstractItemDelegate
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#destroyEditor)
@@ -1146,10 +1094,6 @@ void k_fileitemdelegate_on_destroy_editor(void* self, void (*callback)(void*, vo
 ///
 libqt_list k_fileitemdelegate_painting_roles(void* self);
 
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_painting_roles` instead
-///
-#define k_fileitemdelegate_qbase_painting_roles k_fileitemdelegate_super_painting_roles
-
 /// Inherited from QAbstractItemDelegate
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paintingRoles)
@@ -1184,10 +1128,6 @@ void k_fileitemdelegate_on_painting_roles(void* self, libqt_list (*callback)());
 ///
 bool k_fileitemdelegate_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_event` instead
-///
-#define k_fileitemdelegate_qbase_event k_fileitemdelegate_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1220,10 +1160,6 @@ void k_fileitemdelegate_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QTimerEvent*
 ///
 void k_fileitemdelegate_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_timer_event` instead
-///
-#define k_fileitemdelegate_qbase_timer_event k_fileitemdelegate_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -1258,10 +1194,6 @@ void k_fileitemdelegate_on_timer_event(void* self, void (*callback)(void*, void*
 ///
 void k_fileitemdelegate_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_child_event` instead
-///
-#define k_fileitemdelegate_qbase_child_event k_fileitemdelegate_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1294,10 +1226,6 @@ void k_fileitemdelegate_on_child_event(void* self, void (*callback)(void*, void*
 /// @param event QEvent*
 ///
 void k_fileitemdelegate_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_custom_event` instead
-///
-#define k_fileitemdelegate_qbase_custom_event k_fileitemdelegate_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -1332,10 +1260,6 @@ void k_fileitemdelegate_on_custom_event(void* self, void (*callback)(void*, void
 ///
 void k_fileitemdelegate_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_connect_notify` instead
-///
-#define k_fileitemdelegate_qbase_connect_notify k_fileitemdelegate_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1369,10 +1293,6 @@ void k_fileitemdelegate_on_connect_notify(void* self, void (*callback)(void*, vo
 ///
 void k_fileitemdelegate_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_disconnect_notify` instead
-///
-#define k_fileitemdelegate_qbase_disconnect_notify k_fileitemdelegate_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1405,10 +1325,6 @@ void k_fileitemdelegate_on_disconnect_notify(void* self, void (*callback)(void*,
 ///
 QObject* k_fileitemdelegate_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_sender` instead
-///
-#define k_fileitemdelegate_qbase_sender k_fileitemdelegate_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1439,10 +1355,6 @@ void k_fileitemdelegate_on_sender(void* self, QObject* (*callback)());
 /// @param self KFileItemDelegate*
 ///
 int32_t k_fileitemdelegate_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_sender_signal_index` instead
-///
-#define k_fileitemdelegate_qbase_sender_signal_index k_fileitemdelegate_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1476,10 +1388,6 @@ void k_fileitemdelegate_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 int32_t k_fileitemdelegate_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_receivers` instead
-///
-#define k_fileitemdelegate_qbase_receivers k_fileitemdelegate_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1512,10 +1420,6 @@ void k_fileitemdelegate_on_receivers(void* self, int32_t (*callback)(void*, cons
 /// @param signal QMetaMethod*
 ///
 bool k_fileitemdelegate_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_fileitemdelegate_super_is_signal_connected` instead
-///
-#define k_fileitemdelegate_qbase_is_signal_connected k_fileitemdelegate_super_is_signal_connected
 
 /// Inherited from QObject
 ///

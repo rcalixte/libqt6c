@@ -39,10 +39,6 @@ const QMetaObject* k_sonnet__spellcheckdecorator_meta_object(void* self);
 ///
 void k_sonnet__spellcheckdecorator_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_sonnet__spellcheckdecorator_super_meta_object` instead
-///
-#define k_sonnet__spellcheckdecorator_qbase_meta_object k_sonnet__spellcheckdecorator_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -62,10 +58,6 @@ void* k_sonnet__spellcheckdecorator_metacast(void* self, const char* param1);
 /// @param callback void* func(Sonnet__SpellCheckDecorator* self, const char* param1)
 ///
 void k_sonnet__spellcheckdecorator_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_sonnet__spellcheckdecorator_super_metacast` instead
-///
-#define k_sonnet__spellcheckdecorator_qbase_metacast k_sonnet__spellcheckdecorator_super_metacast
 
 /// Base class method implementation
 ///
@@ -87,10 +79,6 @@ int32_t k_sonnet__spellcheckdecorator_metacall(void* self, int32_t param1, int p
 /// @param callback int32_t func(Sonnet__SpellCheckDecorator* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_sonnet__spellcheckdecorator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_sonnet__spellcheckdecorator_super_metacall` instead
-///
-#define k_sonnet__spellcheckdecorator_qbase_metacall k_sonnet__spellcheckdecorator_super_metacall
 
 /// Base class method implementation
 ///
@@ -139,10 +127,6 @@ bool k_sonnet__spellcheckdecorator_event_filter(void* self, void* obj, void* eve
 ///
 void k_sonnet__spellcheckdecorator_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_sonnet__spellcheckdecorator_super_event_filter` instead
-///
-#define k_sonnet__spellcheckdecorator_qbase_event_filter k_sonnet__spellcheckdecorator_super_event_filter
-
 /// [Upstream resources](https://api.kde.org/sonnet-spellcheckdecorator.html#eventFilter)
 ///
 /// Base class method implementation
@@ -168,10 +152,6 @@ bool k_sonnet__spellcheckdecorator_is_spell_checking_enabled_for_block(void* sel
 /// @param callback bool func(Sonnet__SpellCheckDecorator* self, const char* textBlock)
 ///
 void k_sonnet__spellcheckdecorator_on_is_spell_checking_enabled_for_block(void* self, bool (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_sonnet__spellcheckdecorator_super_is_spell_checking_enabled_for_block` instead
-///
-#define k_sonnet__spellcheckdecorator_qbase_is_spell_checking_enabled_for_block k_sonnet__spellcheckdecorator_super_is_spell_checking_enabled_for_block
 
 /// [Upstream resources](https://api.kde.org/sonnet-spellcheckdecorator.html#isSpellCheckingEnabledForBlock)
 ///
@@ -659,10 +639,6 @@ void k_sonnet__spellcheckdecorator_on_destroyed1(void* self, void (*callback)(vo
 ///
 bool k_sonnet__spellcheckdecorator_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_sonnet__spellcheckdecorator_super_event` instead
-///
-#define k_sonnet__spellcheckdecorator_qbase_event k_sonnet__spellcheckdecorator_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -695,10 +671,6 @@ void k_sonnet__spellcheckdecorator_on_event(void* self, bool (*callback)(void*, 
 /// @param event QTimerEvent*
 ///
 void k_sonnet__spellcheckdecorator_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_sonnet__spellcheckdecorator_super_timer_event` instead
-///
-#define k_sonnet__spellcheckdecorator_qbase_timer_event k_sonnet__spellcheckdecorator_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -733,10 +705,6 @@ void k_sonnet__spellcheckdecorator_on_timer_event(void* self, void (*callback)(v
 ///
 void k_sonnet__spellcheckdecorator_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_sonnet__spellcheckdecorator_super_child_event` instead
-///
-#define k_sonnet__spellcheckdecorator_qbase_child_event k_sonnet__spellcheckdecorator_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -769,10 +737,6 @@ void k_sonnet__spellcheckdecorator_on_child_event(void* self, void (*callback)(v
 /// @param event QEvent*
 ///
 void k_sonnet__spellcheckdecorator_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_sonnet__spellcheckdecorator_super_custom_event` instead
-///
-#define k_sonnet__spellcheckdecorator_qbase_custom_event k_sonnet__spellcheckdecorator_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -807,10 +771,6 @@ void k_sonnet__spellcheckdecorator_on_custom_event(void* self, void (*callback)(
 ///
 void k_sonnet__spellcheckdecorator_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_sonnet__spellcheckdecorator_super_connect_notify` instead
-///
-#define k_sonnet__spellcheckdecorator_qbase_connect_notify k_sonnet__spellcheckdecorator_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -844,10 +804,6 @@ void k_sonnet__spellcheckdecorator_on_connect_notify(void* self, void (*callback
 ///
 void k_sonnet__spellcheckdecorator_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_sonnet__spellcheckdecorator_super_disconnect_notify` instead
-///
-#define k_sonnet__spellcheckdecorator_qbase_disconnect_notify k_sonnet__spellcheckdecorator_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -880,10 +836,6 @@ void k_sonnet__spellcheckdecorator_on_disconnect_notify(void* self, void (*callb
 ///
 QObject* k_sonnet__spellcheckdecorator_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_sonnet__spellcheckdecorator_super_sender` instead
-///
-#define k_sonnet__spellcheckdecorator_qbase_sender k_sonnet__spellcheckdecorator_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -914,10 +866,6 @@ void k_sonnet__spellcheckdecorator_on_sender(void* self, QObject* (*callback)())
 /// @param self Sonnet__SpellCheckDecorator*
 ///
 int32_t k_sonnet__spellcheckdecorator_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_sonnet__spellcheckdecorator_super_sender_signal_index` instead
-///
-#define k_sonnet__spellcheckdecorator_qbase_sender_signal_index k_sonnet__spellcheckdecorator_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -951,10 +899,6 @@ void k_sonnet__spellcheckdecorator_on_sender_signal_index(void* self, int32_t (*
 ///
 int32_t k_sonnet__spellcheckdecorator_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_sonnet__spellcheckdecorator_super_receivers` instead
-///
-#define k_sonnet__spellcheckdecorator_qbase_receivers k_sonnet__spellcheckdecorator_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -987,10 +931,6 @@ void k_sonnet__spellcheckdecorator_on_receivers(void* self, int32_t (*callback)(
 /// @param signal QMetaMethod*
 ///
 bool k_sonnet__spellcheckdecorator_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_sonnet__spellcheckdecorator_super_is_signal_connected` instead
-///
-#define k_sonnet__spellcheckdecorator_qbase_is_signal_connected k_sonnet__spellcheckdecorator_super_is_signal_connected
 
 /// Inherited from QObject
 ///

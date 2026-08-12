@@ -133,10 +133,6 @@ const QMetaObject* k_selectionowner_meta_object(void* self);
 ///
 void k_selectionowner_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_selectionowner_super_meta_object` instead
-///
-#define k_selectionowner_qbase_meta_object k_selectionowner_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -156,10 +152,6 @@ void* k_selectionowner_metacast(void* self, const char* param1);
 /// @param callback void* func(KSelectionOwner* self, const char* param1)
 ///
 void k_selectionowner_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_selectionowner_super_metacast` instead
-///
-#define k_selectionowner_qbase_metacast k_selectionowner_super_metacast
 
 /// Base class method implementation
 ///
@@ -181,10 +173,6 @@ int32_t k_selectionowner_metacall(void* self, int32_t param1, int param2, void* 
 /// @param callback int32_t func(KSelectionOwner* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_selectionowner_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_selectionowner_super_metacall` instead
-///
-#define k_selectionowner_qbase_metacall k_selectionowner_super_metacall
 
 /// Base class method implementation
 ///
@@ -246,10 +234,6 @@ void k_selectionowner_timer_event(void* self, void* event);
 /// @param callback void func(KSelectionOwner* self, QTimerEvent* event)
 ///
 void k_selectionowner_on_timer_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_selectionowner_super_timer_event` instead
-///
-#define k_selectionowner_qbase_timer_event k_selectionowner_super_timer_event
 
 /// [Upstream resources](https://api.kde.org/kselectionowner.html#timerEvent)
 ///
@@ -322,12 +306,6 @@ void k_selectionowner_on_generic_reply(void* self, bool (*callback)(void*, xcb_a
 #endif
 
 #ifdef __linux__
-/// @warning DEPRECATED: Use `k_selectionowner_super_generic_reply` instead
-///
-#define k_selectionowner_qbase_generic_reply k_selectionowner_super_generic_reply
-#endif
-
-#ifdef __linux__
 /// [Upstream resources](https://api.kde.org/kselectionowner.html#genericReply)
 ///
 /// Base class method implementation
@@ -362,12 +340,6 @@ void k_selectionowner_on_reply_targets(void* self, void (*callback)(void*, xcb_a
 #endif
 
 #ifdef __linux__
-/// @warning DEPRECATED: Use `k_selectionowner_super_reply_targets` instead
-///
-#define k_selectionowner_qbase_reply_targets k_selectionowner_super_reply_targets
-#endif
-
-#ifdef __linux__
 /// [Upstream resources](https://api.kde.org/kselectionowner.html#replyTargets)
 ///
 /// Base class method implementation
@@ -394,10 +366,6 @@ void k_selectionowner_get_atoms(void* self);
 ///
 void k_selectionowner_on_get_atoms(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_selectionowner_super_get_atoms` instead
-///
-#define k_selectionowner_qbase_get_atoms k_selectionowner_super_get_atoms
-
 /// [Upstream resources](https://api.kde.org/kselectionowner.html#getAtoms)
 ///
 /// Base class method implementation
@@ -422,10 +390,6 @@ void k_selectionowner_set_data(void* self, uint32_t extra1, uint32_t extra2);
 /// @param callback void func(KSelectionOwner* self, uint32_t extra1, uint32_t extra2)
 ///
 void k_selectionowner_on_set_data(void* self, void (*callback)(void*, uint32_t, uint32_t));
-
-/// @warning DEPRECATED: Use `k_selectionowner_super_set_data` instead
-///
-#define k_selectionowner_qbase_set_data k_selectionowner_super_set_data
 
 /// [Upstream resources](https://api.kde.org/kselectionowner.html#setData)
 ///
@@ -922,10 +886,6 @@ void k_selectionowner_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool k_selectionowner_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_selectionowner_super_event` instead
-///
-#define k_selectionowner_qbase_event k_selectionowner_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -959,10 +919,6 @@ void k_selectionowner_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool k_selectionowner_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_selectionowner_super_event_filter` instead
-///
-#define k_selectionowner_qbase_event_filter k_selectionowner_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -998,10 +954,6 @@ void k_selectionowner_on_event_filter(void* self, bool (*callback)(void*, void*,
 ///
 void k_selectionowner_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_selectionowner_super_child_event` instead
-///
-#define k_selectionowner_qbase_child_event k_selectionowner_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1034,10 +986,6 @@ void k_selectionowner_on_child_event(void* self, void (*callback)(void*, void*))
 /// @param event QEvent*
 ///
 void k_selectionowner_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_selectionowner_super_custom_event` instead
-///
-#define k_selectionowner_qbase_custom_event k_selectionowner_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -1072,10 +1020,6 @@ void k_selectionowner_on_custom_event(void* self, void (*callback)(void*, void*)
 ///
 void k_selectionowner_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_selectionowner_super_connect_notify` instead
-///
-#define k_selectionowner_qbase_connect_notify k_selectionowner_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1109,10 +1053,6 @@ void k_selectionowner_on_connect_notify(void* self, void (*callback)(void*, void
 ///
 void k_selectionowner_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_selectionowner_super_disconnect_notify` instead
-///
-#define k_selectionowner_qbase_disconnect_notify k_selectionowner_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1145,10 +1085,6 @@ void k_selectionowner_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 QObject* k_selectionowner_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_selectionowner_super_sender` instead
-///
-#define k_selectionowner_qbase_sender k_selectionowner_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1179,10 +1115,6 @@ void k_selectionowner_on_sender(void* self, QObject* (*callback)());
 /// @param self KSelectionOwner*
 ///
 int32_t k_selectionowner_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_selectionowner_super_sender_signal_index` instead
-///
-#define k_selectionowner_qbase_sender_signal_index k_selectionowner_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1216,10 +1148,6 @@ void k_selectionowner_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_selectionowner_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_selectionowner_super_receivers` instead
-///
-#define k_selectionowner_qbase_receivers k_selectionowner_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1252,10 +1180,6 @@ void k_selectionowner_on_receivers(void* self, int32_t (*callback)(void*, const 
 /// @param signal QMetaMethod*
 ///
 bool k_selectionowner_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_selectionowner_super_is_signal_connected` instead
-///
-#define k_selectionowner_qbase_is_signal_connected k_selectionowner_super_is_signal_connected
 
 /// Inherited from QObject
 ///

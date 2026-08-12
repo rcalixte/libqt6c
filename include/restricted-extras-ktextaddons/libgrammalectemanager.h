@@ -37,10 +37,6 @@ const QMetaObject* k_textgrammarcheck__grammalectemanager_meta_object(void* self
 ///
 void k_textgrammarcheck__grammalectemanager_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalectemanager_super_meta_object` instead
-///
-#define k_textgrammarcheck__grammalectemanager_qbase_meta_object k_textgrammarcheck__grammalectemanager_super_meta_object
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammalecteManager.html)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* k_textgrammarcheck__grammalectemanager_metacast(void* self, const char* pa
 /// @param callback void* func(TextGrammarCheck__GrammalecteManager* self, const char* param1)
 ///
 void k_textgrammarcheck__grammalectemanager_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalectemanager_super_metacast` instead
-///
-#define k_textgrammarcheck__grammalectemanager_qbase_metacast k_textgrammarcheck__grammalectemanager_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t k_textgrammarcheck__grammalectemanager_metacall(void* self, int32_t para
 /// @param callback int32_t func(TextGrammarCheck__GrammalecteManager* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_textgrammarcheck__grammalectemanager_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalectemanager_super_metacall` instead
-///
-#define k_textgrammarcheck__grammalectemanager_qbase_metacall k_textgrammarcheck__grammalectemanager_super_metacall
 
 /// Base class method implementation
 ///
@@ -645,10 +633,6 @@ void k_textgrammarcheck__grammalectemanager_on_destroyed1(void* self, void (*cal
 ///
 bool k_textgrammarcheck__grammalectemanager_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalectemanager_super_event` instead
-///
-#define k_textgrammarcheck__grammalectemanager_qbase_event k_textgrammarcheck__grammalectemanager_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -682,10 +666,6 @@ void k_textgrammarcheck__grammalectemanager_on_event(void* self, bool (*callback
 /// @param event QEvent*
 ///
 bool k_textgrammarcheck__grammalectemanager_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalectemanager_super_event_filter` instead
-///
-#define k_textgrammarcheck__grammalectemanager_qbase_event_filter k_textgrammarcheck__grammalectemanager_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -721,10 +701,6 @@ void k_textgrammarcheck__grammalectemanager_on_event_filter(void* self, bool (*c
 ///
 void k_textgrammarcheck__grammalectemanager_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalectemanager_super_timer_event` instead
-///
-#define k_textgrammarcheck__grammalectemanager_qbase_timer_event k_textgrammarcheck__grammalectemanager_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -757,10 +733,6 @@ void k_textgrammarcheck__grammalectemanager_on_timer_event(void* self, void (*ca
 /// @param event QChildEvent*
 ///
 void k_textgrammarcheck__grammalectemanager_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalectemanager_super_child_event` instead
-///
-#define k_textgrammarcheck__grammalectemanager_qbase_child_event k_textgrammarcheck__grammalectemanager_super_child_event
 
 /// Inherited from QObject
 ///
@@ -795,10 +767,6 @@ void k_textgrammarcheck__grammalectemanager_on_child_event(void* self, void (*ca
 ///
 void k_textgrammarcheck__grammalectemanager_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalectemanager_super_custom_event` instead
-///
-#define k_textgrammarcheck__grammalectemanager_qbase_custom_event k_textgrammarcheck__grammalectemanager_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -831,10 +799,6 @@ void k_textgrammarcheck__grammalectemanager_on_custom_event(void* self, void (*c
 /// @param signal QMetaMethod*
 ///
 void k_textgrammarcheck__grammalectemanager_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalectemanager_super_connect_notify` instead
-///
-#define k_textgrammarcheck__grammalectemanager_qbase_connect_notify k_textgrammarcheck__grammalectemanager_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -869,10 +833,6 @@ void k_textgrammarcheck__grammalectemanager_on_connect_notify(void* self, void (
 ///
 void k_textgrammarcheck__grammalectemanager_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalectemanager_super_disconnect_notify` instead
-///
-#define k_textgrammarcheck__grammalectemanager_qbase_disconnect_notify k_textgrammarcheck__grammalectemanager_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -905,10 +865,6 @@ void k_textgrammarcheck__grammalectemanager_on_disconnect_notify(void* self, voi
 ///
 QObject* k_textgrammarcheck__grammalectemanager_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalectemanager_super_sender` instead
-///
-#define k_textgrammarcheck__grammalectemanager_qbase_sender k_textgrammarcheck__grammalectemanager_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -939,10 +895,6 @@ void k_textgrammarcheck__grammalectemanager_on_sender(void* self, QObject* (*cal
 /// @param self TextGrammarCheck__GrammalecteManager*
 ///
 int32_t k_textgrammarcheck__grammalectemanager_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalectemanager_super_sender_signal_index` instead
-///
-#define k_textgrammarcheck__grammalectemanager_qbase_sender_signal_index k_textgrammarcheck__grammalectemanager_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -976,10 +928,6 @@ void k_textgrammarcheck__grammalectemanager_on_sender_signal_index(void* self, i
 ///
 int32_t k_textgrammarcheck__grammalectemanager_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalectemanager_super_receivers` instead
-///
-#define k_textgrammarcheck__grammalectemanager_qbase_receivers k_textgrammarcheck__grammalectemanager_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1012,10 +960,6 @@ void k_textgrammarcheck__grammalectemanager_on_receivers(void* self, int32_t (*c
 /// @param signal QMetaMethod*
 ///
 bool k_textgrammarcheck__grammalectemanager_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammalectemanager_super_is_signal_connected` instead
-///
-#define k_textgrammarcheck__grammalectemanager_qbase_is_signal_connected k_textgrammarcheck__grammalectemanager_super_is_signal_connected
 
 /// Inherited from QObject
 ///

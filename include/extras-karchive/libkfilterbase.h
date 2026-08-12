@@ -43,10 +43,6 @@ bool k_filterbase_init(void* self, int mode);
 ///
 void k_filterbase_on_init(void* self, bool (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `k_filterbase_super_init` instead
-///
-#define k_filterbase_qbase_init k_filterbase_super_init
-
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#init)
 ///
 /// Base class method implementation
@@ -71,10 +67,6 @@ int32_t k_filterbase_mode(void* self);
 ///
 void k_filterbase_on_mode(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `k_filterbase_super_mode` instead
-///
-#define k_filterbase_qbase_mode k_filterbase_super_mode
-
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#mode)
 ///
 /// Base class method implementation
@@ -97,10 +89,6 @@ bool k_filterbase_terminate(void* self);
 /// @param callback bool func()
 ///
 void k_filterbase_on_terminate(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `k_filterbase_super_terminate` instead
-///
-#define k_filterbase_qbase_terminate k_filterbase_super_terminate
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#terminate)
 ///
@@ -125,10 +113,6 @@ void k_filterbase_reset(void* self);
 ///
 void k_filterbase_on_reset(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_filterbase_super_reset` instead
-///
-#define k_filterbase_qbase_reset k_filterbase_super_reset
-
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#reset)
 ///
 /// Base class method implementation
@@ -151,10 +135,6 @@ bool k_filterbase_read_header(void* self);
 /// @param callback bool func()
 ///
 void k_filterbase_on_read_header(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `k_filterbase_super_read_header` instead
-///
-#define k_filterbase_qbase_read_header k_filterbase_super_read_header
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#readHeader)
 ///
@@ -179,10 +159,6 @@ bool k_filterbase_write_header(void* self, char* filename);
 /// @param callback bool func(KFilterBase* self, libqt_string filename)
 ///
 void k_filterbase_on_write_header(void* self, bool (*callback)(void*, libqt_string));
-
-/// @warning DEPRECATED: Use `k_filterbase_super_write_header` instead
-///
-#define k_filterbase_qbase_write_header k_filterbase_super_write_header
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#writeHeader)
 ///
@@ -209,10 +185,6 @@ void k_filterbase_set_out_buffer(void* self, char* data, uint32_t maxlen);
 /// @param callback void func(KFilterBase* self, char* data, uint32_t maxlen)
 ///
 void k_filterbase_on_set_out_buffer(void* self, void (*callback)(void*, char*, uint32_t));
-
-/// @warning DEPRECATED: Use `k_filterbase_super_set_out_buffer` instead
-///
-#define k_filterbase_qbase_set_out_buffer k_filterbase_super_set_out_buffer
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#setOutBuffer)
 ///
@@ -241,10 +213,6 @@ void k_filterbase_set_in_buffer(void* self, const char* data, uint32_t size);
 ///
 void k_filterbase_on_set_in_buffer(void* self, void (*callback)(void*, const char*, uint32_t));
 
-/// @warning DEPRECATED: Use `k_filterbase_super_set_in_buffer` instead
-///
-#define k_filterbase_qbase_set_in_buffer k_filterbase_super_set_in_buffer
-
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#setInBuffer)
 ///
 /// Base class method implementation
@@ -270,10 +238,6 @@ bool k_filterbase_in_buffer_empty(void* self);
 ///
 void k_filterbase_on_in_buffer_empty(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `k_filterbase_super_in_buffer_empty` instead
-///
-#define k_filterbase_qbase_in_buffer_empty k_filterbase_super_in_buffer_empty
-
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#inBufferEmpty)
 ///
 /// Base class method implementation
@@ -296,10 +260,6 @@ int32_t k_filterbase_in_buffer_available(void* self);
 /// @param callback int32_t func()
 ///
 void k_filterbase_on_in_buffer_available(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `k_filterbase_super_in_buffer_available` instead
-///
-#define k_filterbase_qbase_in_buffer_available k_filterbase_super_in_buffer_available
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#inBufferAvailable)
 ///
@@ -324,10 +284,6 @@ bool k_filterbase_out_buffer_full(void* self);
 ///
 void k_filterbase_on_out_buffer_full(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `k_filterbase_super_out_buffer_full` instead
-///
-#define k_filterbase_qbase_out_buffer_full k_filterbase_super_out_buffer_full
-
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#outBufferFull)
 ///
 /// Base class method implementation
@@ -350,10 +306,6 @@ int32_t k_filterbase_out_buffer_available(void* self);
 /// @param callback int32_t func()
 ///
 void k_filterbase_on_out_buffer_available(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `k_filterbase_super_out_buffer_available` instead
-///
-#define k_filterbase_qbase_out_buffer_available k_filterbase_super_out_buffer_available
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#outBufferAvailable)
 ///
@@ -379,10 +331,6 @@ int32_t k_filterbase_uncompress(void* self);
 /// @param callback int32_t func()
 ///
 void k_filterbase_on_uncompress(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `k_filterbase_super_uncompress` instead
-///
-#define k_filterbase_qbase_uncompress k_filterbase_super_uncompress
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#uncompress)
 ///
@@ -411,10 +359,6 @@ int32_t k_filterbase_compress(void* self, bool finish);
 /// @param callback int32_t func(KFilterBase* self, bool finish)
 ///
 void k_filterbase_on_compress(void* self, int32_t (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `k_filterbase_super_compress` instead
-///
-#define k_filterbase_qbase_compress k_filterbase_super_compress
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#compress)
 ///
@@ -458,10 +402,6 @@ void k_filterbase_virtual_hook(void* self, int id, void* data);
 /// @param callback void func(KFilterBase* self, int id, void* data)
 ///
 void k_filterbase_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
-
-/// @warning DEPRECATED: Use `k_filterbase_super_virtual_hook` instead
-///
-#define k_filterbase_qbase_virtual_hook k_filterbase_super_virtual_hook
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#virtual_hook)
 ///

@@ -37,10 +37,6 @@ const QMetaObject* k_urlcompletion_meta_object(void* self);
 ///
 void k_urlcompletion_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_urlcompletion_super_meta_object` instead
-///
-#define k_urlcompletion_qbase_meta_object k_urlcompletion_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* k_urlcompletion_metacast(void* self, const char* param1);
 /// @param callback void* func(KUrlCompletion* self, const char* param1)
 ///
 void k_urlcompletion_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_urlcompletion_super_metacast` instead
-///
-#define k_urlcompletion_qbase_metacast k_urlcompletion_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t k_urlcompletion_metacall(void* self, int32_t param1, int param2, void* p
 /// @param callback int32_t func(KUrlCompletion* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_urlcompletion_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_urlcompletion_super_metacall` instead
-///
-#define k_urlcompletion_qbase_metacall k_urlcompletion_super_metacall
 
 /// Base class method implementation
 ///
@@ -125,10 +113,6 @@ const char* k_urlcompletion_make_completion(void* self, const char* text);
 ///
 void k_urlcompletion_on_make_completion(void* self, const char* (*callback)(void*, const char*));
 
-/// @warning DEPRECATED: Use `k_urlcompletion_super_make_completion` instead
-///
-#define k_urlcompletion_qbase_make_completion k_urlcompletion_super_make_completion
-
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#makeCompletion)
 ///
 /// Base class method implementation
@@ -153,10 +137,6 @@ void k_urlcompletion_set_dir(void* self, void* dir);
 /// @param callback void func(KUrlCompletion* self, QUrl* dir)
 ///
 void k_urlcompletion_on_set_dir(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_urlcompletion_super_set_dir` instead
-///
-#define k_urlcompletion_qbase_set_dir k_urlcompletion_super_set_dir
 
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#setDir)
 ///
@@ -184,10 +164,6 @@ QUrl* k_urlcompletion_dir(void* self);
 ///
 void k_urlcompletion_on_dir(void* self, QUrl* (*callback)());
 
-/// @warning DEPRECATED: Use `k_urlcompletion_super_dir` instead
-///
-#define k_urlcompletion_qbase_dir k_urlcompletion_super_dir
-
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#dir)
 ///
 /// Base class method implementation
@@ -211,10 +187,6 @@ bool k_urlcompletion_is_running(void* self);
 ///
 void k_urlcompletion_on_is_running(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `k_urlcompletion_super_is_running` instead
-///
-#define k_urlcompletion_qbase_is_running k_urlcompletion_super_is_running
-
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#isRunning)
 ///
 /// Base class method implementation
@@ -237,10 +209,6 @@ void k_urlcompletion_stop(void* self);
 /// @param callback void func()
 ///
 void k_urlcompletion_on_stop(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_urlcompletion_super_stop` instead
-///
-#define k_urlcompletion_qbase_stop k_urlcompletion_super_stop
 
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#stop)
 ///
@@ -266,10 +234,6 @@ int32_t k_urlcompletion_mode(void* self);
 /// @param callback int32_t func()
 ///
 void k_urlcompletion_on_mode(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `k_urlcompletion_super_mode` instead
-///
-#define k_urlcompletion_qbase_mode k_urlcompletion_super_mode
 
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#mode)
 ///
@@ -297,10 +261,6 @@ void k_urlcompletion_set_mode(void* self, int32_t mode);
 ///
 void k_urlcompletion_on_set_mode(void* self, void (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `k_urlcompletion_super_set_mode` instead
-///
-#define k_urlcompletion_qbase_set_mode k_urlcompletion_super_set_mode
-
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#setMode)
 ///
 /// Base class method implementation
@@ -324,10 +284,6 @@ bool k_urlcompletion_replace_env(void* self);
 /// @param callback bool func()
 ///
 void k_urlcompletion_on_replace_env(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `k_urlcompletion_super_replace_env` instead
-///
-#define k_urlcompletion_qbase_replace_env k_urlcompletion_super_replace_env
 
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#replaceEnv)
 ///
@@ -353,10 +309,6 @@ void k_urlcompletion_set_replace_env(void* self, bool replace);
 ///
 void k_urlcompletion_on_set_replace_env(void* self, void (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `k_urlcompletion_super_set_replace_env` instead
-///
-#define k_urlcompletion_qbase_set_replace_env k_urlcompletion_super_set_replace_env
-
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#setReplaceEnv)
 ///
 /// Base class method implementation
@@ -381,10 +333,6 @@ bool k_urlcompletion_replace_home(void* self);
 ///
 void k_urlcompletion_on_replace_home(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `k_urlcompletion_super_replace_home` instead
-///
-#define k_urlcompletion_qbase_replace_home k_urlcompletion_super_replace_home
-
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#replaceHome)
 ///
 /// Base class method implementation
@@ -408,10 +356,6 @@ void k_urlcompletion_set_replace_home(void* self, bool replace);
 /// @param callback void func(KUrlCompletion* self, bool replace)
 ///
 void k_urlcompletion_on_set_replace_home(void* self, void (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `k_urlcompletion_super_set_replace_home` instead
-///
-#define k_urlcompletion_qbase_set_replace_home k_urlcompletion_super_set_replace_home
 
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#setReplaceHome)
 ///
@@ -471,10 +415,6 @@ void k_urlcompletion_post_process_matches(void* self, const char* matches[static
 ///
 void k_urlcompletion_on_post_process_matches(void* self, void (*callback)(void*, const char**));
 
-/// @warning DEPRECATED: Use `k_urlcompletion_super_post_process_matches` instead
-///
-#define k_urlcompletion_qbase_post_process_matches k_urlcompletion_super_post_process_matches
-
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#postProcessMatches)
 ///
 /// Base class method implementation
@@ -499,10 +439,6 @@ void k_urlcompletion_post_process_matches2(void* self, void* matches);
 /// @param callback void func(KUrlCompletion* self, KCompletionMatches* matches)
 ///
 void k_urlcompletion_on_post_process_matches2(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_urlcompletion_super_post_process_matches2` instead
-///
-#define k_urlcompletion_qbase_post_process_matches2 k_urlcompletion_super_post_process_matches2
 
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#postProcessMatches)
 ///
@@ -1230,10 +1166,6 @@ void k_urlcompletion_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 const char* k_urlcompletion_last_match(void* self);
 
-/// @warning DEPRECATED: Use `k_urlcompletion_super_last_match` instead
-///
-#define k_urlcompletion_qbase_last_match k_urlcompletion_super_last_match
-
 /// Inherited from KCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#lastMatch)
@@ -1268,10 +1200,6 @@ void k_urlcompletion_on_last_match(void* self, const char* (*callback)());
 ///
 void k_urlcompletion_set_completion_mode(void* self, int32_t mode);
 
-/// @warning DEPRECATED: Use `k_urlcompletion_super_set_completion_mode` instead
-///
-#define k_urlcompletion_qbase_set_completion_mode k_urlcompletion_super_set_completion_mode
-
 /// Inherited from KCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#setCompletionMode)
@@ -1304,10 +1232,6 @@ void k_urlcompletion_on_set_completion_mode(void* self, void (*callback)(void*, 
 /// @param order enum KCompletion__CompOrder
 ///
 void k_urlcompletion_set_order(void* self, int32_t order);
-
-/// @warning DEPRECATED: Use `k_urlcompletion_super_set_order` instead
-///
-#define k_urlcompletion_qbase_set_order k_urlcompletion_super_set_order
 
 /// Inherited from KCompletion
 ///
@@ -1342,10 +1266,6 @@ void k_urlcompletion_on_set_order(void* self, void (*callback)(void*, int32_t));
 ///
 void k_urlcompletion_set_ignore_case(void* self, bool ignoreCase);
 
-/// @warning DEPRECATED: Use `k_urlcompletion_super_set_ignore_case` instead
-///
-#define k_urlcompletion_qbase_set_ignore_case k_urlcompletion_super_set_ignore_case
-
 /// Inherited from KCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#setIgnoreCase)
@@ -1378,10 +1298,6 @@ void k_urlcompletion_on_set_ignore_case(void* self, void (*callback)(void*, bool
 /// @param enable bool
 ///
 void k_urlcompletion_set_sounds_enabled(void* self, bool enable);
-
-/// @warning DEPRECATED: Use `k_urlcompletion_super_set_sounds_enabled` instead
-///
-#define k_urlcompletion_qbase_set_sounds_enabled k_urlcompletion_super_set_sounds_enabled
 
 /// Inherited from KCompletion
 ///
@@ -1416,10 +1332,6 @@ void k_urlcompletion_on_set_sounds_enabled(void* self, void (*callback)(void*, b
 ///
 void k_urlcompletion_set_items(void* self, const char* itemList[static 1]);
 
-/// @warning DEPRECATED: Use `k_urlcompletion_super_set_items` instead
-///
-#define k_urlcompletion_qbase_set_items k_urlcompletion_super_set_items
-
 /// Inherited from KCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#setItems)
@@ -1452,10 +1364,6 @@ void k_urlcompletion_on_set_items(void* self, void (*callback)(void*, const char
 ///
 void k_urlcompletion_clear(void* self);
 
-/// @warning DEPRECATED: Use `k_urlcompletion_super_clear` instead
-///
-#define k_urlcompletion_qbase_clear k_urlcompletion_super_clear
-
 /// Inherited from KCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#clear)
@@ -1487,10 +1395,6 @@ void k_urlcompletion_on_clear(void* self, void (*callback)());
 /// @param event QEvent*
 ///
 bool k_urlcompletion_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_urlcompletion_super_event` instead
-///
-#define k_urlcompletion_qbase_event k_urlcompletion_super_event
 
 /// Inherited from QObject
 ///
@@ -1526,10 +1430,6 @@ void k_urlcompletion_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_urlcompletion_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `k_urlcompletion_super_event_filter` instead
-///
-#define k_urlcompletion_qbase_event_filter k_urlcompletion_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1564,10 +1464,6 @@ void k_urlcompletion_on_event_filter(void* self, bool (*callback)(void*, void*, 
 ///
 void k_urlcompletion_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_urlcompletion_super_timer_event` instead
-///
-#define k_urlcompletion_qbase_timer_event k_urlcompletion_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1600,10 +1496,6 @@ void k_urlcompletion_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void k_urlcompletion_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_urlcompletion_super_child_event` instead
-///
-#define k_urlcompletion_qbase_child_event k_urlcompletion_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1638,10 +1530,6 @@ void k_urlcompletion_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_urlcompletion_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_urlcompletion_super_custom_event` instead
-///
-#define k_urlcompletion_qbase_custom_event k_urlcompletion_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1674,10 +1562,6 @@ void k_urlcompletion_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param signal QMetaMethod*
 ///
 void k_urlcompletion_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_urlcompletion_super_connect_notify` instead
-///
-#define k_urlcompletion_qbase_connect_notify k_urlcompletion_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1712,10 +1596,6 @@ void k_urlcompletion_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void k_urlcompletion_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_urlcompletion_super_disconnect_notify` instead
-///
-#define k_urlcompletion_qbase_disconnect_notify k_urlcompletion_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1749,10 +1629,6 @@ void k_urlcompletion_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 void k_urlcompletion_set_should_auto_suggest(void* self, bool shouldAutosuggest);
 
-/// @warning DEPRECATED: Use `k_urlcompletion_super_set_should_auto_suggest` instead
-///
-#define k_urlcompletion_qbase_set_should_auto_suggest k_urlcompletion_super_set_should_auto_suggest
-
 /// Inherited from KCompletion
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#setShouldAutoSuggest)
@@ -1785,10 +1661,6 @@ void k_urlcompletion_on_set_should_auto_suggest(void* self, void (*callback)(voi
 ///
 QObject* k_urlcompletion_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_urlcompletion_super_sender` instead
-///
-#define k_urlcompletion_qbase_sender k_urlcompletion_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1819,10 +1691,6 @@ void k_urlcompletion_on_sender(void* self, QObject* (*callback)());
 /// @param self KUrlCompletion*
 ///
 int32_t k_urlcompletion_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_urlcompletion_super_sender_signal_index` instead
-///
-#define k_urlcompletion_qbase_sender_signal_index k_urlcompletion_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1856,10 +1724,6 @@ void k_urlcompletion_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_urlcompletion_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_urlcompletion_super_receivers` instead
-///
-#define k_urlcompletion_qbase_receivers k_urlcompletion_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1892,10 +1756,6 @@ void k_urlcompletion_on_receivers(void* self, int32_t (*callback)(void*, const c
 /// @param signal QMetaMethod*
 ///
 bool k_urlcompletion_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_urlcompletion_super_is_signal_connected` instead
-///
-#define k_urlcompletion_qbase_is_signal_connected k_urlcompletion_super_is_signal_connected
 
 /// Inherited from QObject
 ///

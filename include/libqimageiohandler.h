@@ -64,10 +64,6 @@ bool q_imageiohandler_can_read(void* self);
 ///
 void q_imageiohandler_on_can_read(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_imageiohandler_super_can_read` instead
-///
-#define q_imageiohandler_qbase_can_read q_imageiohandler_super_can_read
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#canRead)
 ///
 /// Base class method implementation
@@ -91,10 +87,6 @@ bool q_imageiohandler_read(void* self, void* image);
 /// @param callback bool func(QImageIOHandler* self, QImage* image)
 ///
 void q_imageiohandler_on_read(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_imageiohandler_super_read` instead
-///
-#define q_imageiohandler_qbase_read q_imageiohandler_super_read
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#read)
 ///
@@ -120,10 +112,6 @@ bool q_imageiohandler_write(void* self, void* image);
 /// @param callback bool func(QImageIOHandler* self, QImage* image)
 ///
 void q_imageiohandler_on_write(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_imageiohandler_super_write` instead
-///
-#define q_imageiohandler_qbase_write q_imageiohandler_super_write
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#write)
 ///
@@ -152,10 +140,6 @@ QVariant* q_imageiohandler_option(void* self, int32_t option);
 ///
 void q_imageiohandler_on_option(void* self, QVariant* (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_imageiohandler_super_option` instead
-///
-#define q_imageiohandler_qbase_option q_imageiohandler_super_option
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#option)
 ///
 /// Base class method implementation
@@ -181,10 +165,6 @@ void q_imageiohandler_set_option(void* self, int32_t option, void* value);
 /// @param callback void func(QImageIOHandler* self, enum QImageIOHandler__ImageOption option, QVariant* value)
 ///
 void q_imageiohandler_on_set_option(void* self, void (*callback)(void*, int32_t, void*));
-
-/// @warning DEPRECATED: Use `q_imageiohandler_super_set_option` instead
-///
-#define q_imageiohandler_qbase_set_option q_imageiohandler_super_set_option
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#setOption)
 ///
@@ -212,10 +192,6 @@ bool q_imageiohandler_supports_option(void* self, int32_t option);
 ///
 void q_imageiohandler_on_supports_option(void* self, bool (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_imageiohandler_super_supports_option` instead
-///
-#define q_imageiohandler_qbase_supports_option q_imageiohandler_super_supports_option
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#supportsOption)
 ///
 /// Base class method implementation
@@ -239,10 +215,6 @@ bool q_imageiohandler_jump_to_next_image(void* self);
 /// @param callback bool func()
 ///
 void q_imageiohandler_on_jump_to_next_image(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `q_imageiohandler_super_jump_to_next_image` instead
-///
-#define q_imageiohandler_qbase_jump_to_next_image q_imageiohandler_super_jump_to_next_image
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#jumpToNextImage)
 ///
@@ -268,10 +240,6 @@ bool q_imageiohandler_jump_to_image(void* self, int imageNumber);
 ///
 void q_imageiohandler_on_jump_to_image(void* self, bool (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_imageiohandler_super_jump_to_image` instead
-///
-#define q_imageiohandler_qbase_jump_to_image q_imageiohandler_super_jump_to_image
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#jumpToImage)
 ///
 /// Base class method implementation
@@ -296,10 +264,6 @@ int32_t q_imageiohandler_loop_count(void* self);
 ///
 void q_imageiohandler_on_loop_count(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_imageiohandler_super_loop_count` instead
-///
-#define q_imageiohandler_qbase_loop_count q_imageiohandler_super_loop_count
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#loopCount)
 ///
 /// Base class method implementation
@@ -322,10 +286,6 @@ int32_t q_imageiohandler_image_count(void* self);
 /// @param callback int32_t func()
 ///
 void q_imageiohandler_on_image_count(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_imageiohandler_super_image_count` instead
-///
-#define q_imageiohandler_qbase_image_count q_imageiohandler_super_image_count
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#imageCount)
 ///
@@ -350,10 +310,6 @@ int32_t q_imageiohandler_next_image_delay(void* self);
 ///
 void q_imageiohandler_on_next_image_delay(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_imageiohandler_super_next_image_delay` instead
-///
-#define q_imageiohandler_qbase_next_image_delay q_imageiohandler_super_next_image_delay
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#nextImageDelay)
 ///
 /// Base class method implementation
@@ -376,10 +332,6 @@ int32_t q_imageiohandler_current_image_number(void* self);
 /// @param callback int32_t func()
 ///
 void q_imageiohandler_on_current_image_number(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_imageiohandler_super_current_image_number` instead
-///
-#define q_imageiohandler_qbase_current_image_number q_imageiohandler_super_current_image_number
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#currentImageNumber)
 ///
@@ -405,10 +357,6 @@ QRect* q_imageiohandler_current_image_rect(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_imageiohandler_on_current_image_rect(void* self, QRect* (*callback)());
-
-/// @warning DEPRECATED: Use `q_imageiohandler_super_current_image_rect` instead
-///
-#define q_imageiohandler_qbase_current_image_rect q_imageiohandler_super_current_image_rect
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#currentImageRect)
 ///
@@ -463,10 +411,6 @@ const QMetaObject* q_imageioplugin_meta_object(void* self);
 ///
 void q_imageioplugin_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_imageioplugin_super_meta_object` instead
-///
-#define q_imageioplugin_qbase_meta_object q_imageioplugin_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -486,10 +430,6 @@ void* q_imageioplugin_metacast(void* self, const char* param1);
 /// @param callback void* func(QImageIOPlugin* self, const char* param1)
 ///
 void q_imageioplugin_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_imageioplugin_super_metacast` instead
-///
-#define q_imageioplugin_qbase_metacast q_imageioplugin_super_metacast
 
 /// Base class method implementation
 ///
@@ -511,10 +451,6 @@ int32_t q_imageioplugin_metacall(void* self, int32_t param1, int param2, void* p
 /// @param callback int32_t func(QImageIOPlugin* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_imageioplugin_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_imageioplugin_super_metacall` instead
-///
-#define q_imageioplugin_qbase_metacall q_imageioplugin_super_metacall
 
 /// Base class method implementation
 ///
@@ -552,10 +488,6 @@ int32_t q_imageioplugin_capabilities(void* self, void* device, char* format);
 ///
 void q_imageioplugin_on_capabilities(void* self, int32_t (*callback)(void*, void*, libqt_string));
 
-/// @warning DEPRECATED: Use `q_imageioplugin_super_capabilities` instead
-///
-#define q_imageioplugin_qbase_capabilities q_imageioplugin_super_capabilities
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageioplugin.html#capabilities)
 ///
 /// Base class method implementation
@@ -584,10 +516,6 @@ QImageIOHandler* q_imageioplugin_create(void* self, void* device, char* format);
 /// @param callback QImageIOHandler* func(QImageIOPlugin* self, QIODevice* device, libqt_string format)
 ///
 void q_imageioplugin_on_create(void* self, QImageIOHandler* (*callback)(void*, void*, libqt_string));
-
-/// @warning DEPRECATED: Use `q_imageioplugin_super_create` instead
-///
-#define q_imageioplugin_qbase_create q_imageioplugin_super_create
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageioplugin.html#create)
 ///
@@ -1076,10 +1004,6 @@ void q_imageioplugin_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_imageioplugin_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_imageioplugin_super_event` instead
-///
-#define q_imageioplugin_qbase_event q_imageioplugin_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1113,10 +1037,6 @@ void q_imageioplugin_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_imageioplugin_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_imageioplugin_super_event_filter` instead
-///
-#define q_imageioplugin_qbase_event_filter q_imageioplugin_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1152,10 +1072,6 @@ void q_imageioplugin_on_event_filter(void* self, bool (*callback)(void*, void*, 
 ///
 void q_imageioplugin_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_imageioplugin_super_timer_event` instead
-///
-#define q_imageioplugin_qbase_timer_event q_imageioplugin_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1188,10 +1104,6 @@ void q_imageioplugin_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_imageioplugin_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_imageioplugin_super_child_event` instead
-///
-#define q_imageioplugin_qbase_child_event q_imageioplugin_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1226,10 +1138,6 @@ void q_imageioplugin_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_imageioplugin_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_imageioplugin_super_custom_event` instead
-///
-#define q_imageioplugin_qbase_custom_event q_imageioplugin_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1262,10 +1170,6 @@ void q_imageioplugin_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param signal QMetaMethod*
 ///
 void q_imageioplugin_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_imageioplugin_super_connect_notify` instead
-///
-#define q_imageioplugin_qbase_connect_notify q_imageioplugin_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1300,10 +1204,6 @@ void q_imageioplugin_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void q_imageioplugin_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_imageioplugin_super_disconnect_notify` instead
-///
-#define q_imageioplugin_qbase_disconnect_notify q_imageioplugin_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1336,10 +1236,6 @@ void q_imageioplugin_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 QObject* q_imageioplugin_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_imageioplugin_super_sender` instead
-///
-#define q_imageioplugin_qbase_sender q_imageioplugin_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1370,10 +1266,6 @@ void q_imageioplugin_on_sender(void* self, QObject* (*callback)());
 /// @param self QImageIOPlugin*
 ///
 int32_t q_imageioplugin_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_imageioplugin_super_sender_signal_index` instead
-///
-#define q_imageioplugin_qbase_sender_signal_index q_imageioplugin_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1407,10 +1299,6 @@ void q_imageioplugin_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_imageioplugin_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_imageioplugin_super_receivers` instead
-///
-#define q_imageioplugin_qbase_receivers q_imageioplugin_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1443,10 +1331,6 @@ void q_imageioplugin_on_receivers(void* self, int32_t (*callback)(void*, const c
 /// @param signal QMetaMethod*
 ///
 bool q_imageioplugin_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_imageioplugin_super_is_signal_connected` instead
-///
-#define q_imageioplugin_qbase_is_signal_connected q_imageioplugin_super_is_signal_connected
 
 /// Inherited from QObject
 ///

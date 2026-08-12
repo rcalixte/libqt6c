@@ -350,16 +350,16 @@ bool q_webenginecookiestore__filterrequest_reserved_flag(void* self) {
     return QWebEngineCookieStore__FilterRequest_ReservedFlag((QWebEngineCookieStore__FilterRequest*)self);
 }
 
-void q_webenginecookiestore__filterrequest_set_reserved_flag(void* self, bool _reservedFlag) {
-    QWebEngineCookieStore__FilterRequest_SetReservedFlag((QWebEngineCookieStore__FilterRequest*)self, _reservedFlag);
+void q_webenginecookiestore__filterrequest_set_reserved_flag(void* self, bool reservedFlag) {
+    QWebEngineCookieStore__FilterRequest_SetReservedFlag((QWebEngineCookieStore__FilterRequest*)self, reservedFlag);
 }
 
 uint16_t q_webenginecookiestore__filterrequest_reserved_type(void* self) {
     return QWebEngineCookieStore__FilterRequest_ReservedType((QWebEngineCookieStore__FilterRequest*)self);
 }
 
-void q_webenginecookiestore__filterrequest_set_reserved_type(void* self, uint16_t _reservedType) {
-    QWebEngineCookieStore__FilterRequest_SetReservedType((QWebEngineCookieStore__FilterRequest*)self, _reservedType);
+void q_webenginecookiestore__filterrequest_set_reserved_type(void* self, uint16_t reservedType) {
+    QWebEngineCookieStore__FilterRequest_SetReservedType((QWebEngineCookieStore__FilterRequest*)self, reservedType);
 }
 
 void q_webenginecookiestore__filterrequest_operator_assign(void* self, void* param1) {

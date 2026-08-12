@@ -684,10 +684,6 @@ const QMetaObject* q_keychain__readpasswordjob_meta_object(void* self);
 ///
 void q_keychain__readpasswordjob_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_keychain__readpasswordjob_super_meta_object` instead
-///
-#define q_keychain__readpasswordjob_qbase_meta_object q_keychain__readpasswordjob_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -707,10 +703,6 @@ void* q_keychain__readpasswordjob_metacast(void* self, const char* param1);
 /// @param callback void* func(QKeychain__ReadPasswordJob* self, const char* param1)
 ///
 void q_keychain__readpasswordjob_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_keychain__readpasswordjob_super_metacast` instead
-///
-#define q_keychain__readpasswordjob_qbase_metacast q_keychain__readpasswordjob_super_metacast
 
 /// Base class method implementation
 ///
@@ -732,10 +724,6 @@ int32_t q_keychain__readpasswordjob_metacall(void* self, int32_t param1, int par
 /// @param callback int32_t func(QKeychain__ReadPasswordJob* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_keychain__readpasswordjob_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_keychain__readpasswordjob_super_metacall` instead
-///
-#define q_keychain__readpasswordjob_qbase_metacall q_keychain__readpasswordjob_super_metacall
 
 /// Base class method implementation
 ///
@@ -1391,10 +1379,6 @@ void q_keychain__readpasswordjob_on_destroyed1(void* self, void (*callback)(void
 ///
 bool q_keychain__readpasswordjob_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_keychain__readpasswordjob_super_event` instead
-///
-#define q_keychain__readpasswordjob_qbase_event q_keychain__readpasswordjob_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1428,10 +1412,6 @@ void q_keychain__readpasswordjob_on_event(void* self, bool (*callback)(void*, vo
 /// @param event QEvent*
 ///
 bool q_keychain__readpasswordjob_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_keychain__readpasswordjob_super_event_filter` instead
-///
-#define q_keychain__readpasswordjob_qbase_event_filter q_keychain__readpasswordjob_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1467,10 +1447,6 @@ void q_keychain__readpasswordjob_on_event_filter(void* self, bool (*callback)(vo
 ///
 void q_keychain__readpasswordjob_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_keychain__readpasswordjob_super_timer_event` instead
-///
-#define q_keychain__readpasswordjob_qbase_timer_event q_keychain__readpasswordjob_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1503,10 +1479,6 @@ void q_keychain__readpasswordjob_on_timer_event(void* self, void (*callback)(voi
 /// @param event QChildEvent*
 ///
 void q_keychain__readpasswordjob_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_keychain__readpasswordjob_super_child_event` instead
-///
-#define q_keychain__readpasswordjob_qbase_child_event q_keychain__readpasswordjob_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1541,10 +1513,6 @@ void q_keychain__readpasswordjob_on_child_event(void* self, void (*callback)(voi
 ///
 void q_keychain__readpasswordjob_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_keychain__readpasswordjob_super_custom_event` instead
-///
-#define q_keychain__readpasswordjob_qbase_custom_event q_keychain__readpasswordjob_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1577,10 +1545,6 @@ void q_keychain__readpasswordjob_on_custom_event(void* self, void (*callback)(vo
 /// @param signal QMetaMethod*
 ///
 void q_keychain__readpasswordjob_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_keychain__readpasswordjob_super_connect_notify` instead
-///
-#define q_keychain__readpasswordjob_qbase_connect_notify q_keychain__readpasswordjob_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1615,10 +1579,6 @@ void q_keychain__readpasswordjob_on_connect_notify(void* self, void (*callback)(
 ///
 void q_keychain__readpasswordjob_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_keychain__readpasswordjob_super_disconnect_notify` instead
-///
-#define q_keychain__readpasswordjob_qbase_disconnect_notify q_keychain__readpasswordjob_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1651,10 +1611,6 @@ void q_keychain__readpasswordjob_on_disconnect_notify(void* self, void (*callbac
 ///
 void q_keychain__readpasswordjob_do_start(void* self);
 
-/// @warning DEPRECATED: Use `q_keychain__readpasswordjob_super_do_start` instead
-///
-#define q_keychain__readpasswordjob_qbase_do_start q_keychain__readpasswordjob_super_do_start
-
 /// Inherited from QKeychain::Job
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
@@ -1686,10 +1642,6 @@ void q_keychain__readpasswordjob_on_do_start(void* self, void (*callback)());
 ///
 QObject* q_keychain__readpasswordjob_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_keychain__readpasswordjob_super_sender` instead
-///
-#define q_keychain__readpasswordjob_qbase_sender q_keychain__readpasswordjob_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1720,10 +1672,6 @@ void q_keychain__readpasswordjob_on_sender(void* self, QObject* (*callback)());
 /// @param self QKeychain__ReadPasswordJob*
 ///
 int32_t q_keychain__readpasswordjob_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_keychain__readpasswordjob_super_sender_signal_index` instead
-///
-#define q_keychain__readpasswordjob_qbase_sender_signal_index q_keychain__readpasswordjob_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1757,10 +1705,6 @@ void q_keychain__readpasswordjob_on_sender_signal_index(void* self, int32_t (*ca
 ///
 int32_t q_keychain__readpasswordjob_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_keychain__readpasswordjob_super_receivers` instead
-///
-#define q_keychain__readpasswordjob_qbase_receivers q_keychain__readpasswordjob_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1793,10 +1737,6 @@ void q_keychain__readpasswordjob_on_receivers(void* self, int32_t (*callback)(vo
 /// @param signal QMetaMethod*
 ///
 bool q_keychain__readpasswordjob_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_keychain__readpasswordjob_super_is_signal_connected` instead
-///
-#define q_keychain__readpasswordjob_qbase_is_signal_connected q_keychain__readpasswordjob_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -1871,10 +1811,6 @@ const QMetaObject* q_keychain__writepasswordjob_meta_object(void* self);
 ///
 void q_keychain__writepasswordjob_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_keychain__writepasswordjob_super_meta_object` instead
-///
-#define q_keychain__writepasswordjob_qbase_meta_object q_keychain__writepasswordjob_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -1894,10 +1830,6 @@ void* q_keychain__writepasswordjob_metacast(void* self, const char* param1);
 /// @param callback void* func(QKeychain__WritePasswordJob* self, const char* param1)
 ///
 void q_keychain__writepasswordjob_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_keychain__writepasswordjob_super_metacast` instead
-///
-#define q_keychain__writepasswordjob_qbase_metacast q_keychain__writepasswordjob_super_metacast
 
 /// Base class method implementation
 ///
@@ -1919,10 +1851,6 @@ int32_t q_keychain__writepasswordjob_metacall(void* self, int32_t param1, int pa
 /// @param callback int32_t func(QKeychain__WritePasswordJob* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_keychain__writepasswordjob_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_keychain__writepasswordjob_super_metacall` instead
-///
-#define q_keychain__writepasswordjob_qbase_metacall q_keychain__writepasswordjob_super_metacall
 
 /// Base class method implementation
 ///
@@ -2576,10 +2504,6 @@ void q_keychain__writepasswordjob_on_destroyed1(void* self, void (*callback)(voi
 ///
 bool q_keychain__writepasswordjob_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_keychain__writepasswordjob_super_event` instead
-///
-#define q_keychain__writepasswordjob_qbase_event q_keychain__writepasswordjob_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -2613,10 +2537,6 @@ void q_keychain__writepasswordjob_on_event(void* self, bool (*callback)(void*, v
 /// @param event QEvent*
 ///
 bool q_keychain__writepasswordjob_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_keychain__writepasswordjob_super_event_filter` instead
-///
-#define q_keychain__writepasswordjob_qbase_event_filter q_keychain__writepasswordjob_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -2652,10 +2572,6 @@ void q_keychain__writepasswordjob_on_event_filter(void* self, bool (*callback)(v
 ///
 void q_keychain__writepasswordjob_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_keychain__writepasswordjob_super_timer_event` instead
-///
-#define q_keychain__writepasswordjob_qbase_timer_event q_keychain__writepasswordjob_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2688,10 +2604,6 @@ void q_keychain__writepasswordjob_on_timer_event(void* self, void (*callback)(vo
 /// @param event QChildEvent*
 ///
 void q_keychain__writepasswordjob_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_keychain__writepasswordjob_super_child_event` instead
-///
-#define q_keychain__writepasswordjob_qbase_child_event q_keychain__writepasswordjob_super_child_event
 
 /// Inherited from QObject
 ///
@@ -2726,10 +2638,6 @@ void q_keychain__writepasswordjob_on_child_event(void* self, void (*callback)(vo
 ///
 void q_keychain__writepasswordjob_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_keychain__writepasswordjob_super_custom_event` instead
-///
-#define q_keychain__writepasswordjob_qbase_custom_event q_keychain__writepasswordjob_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2762,10 +2670,6 @@ void q_keychain__writepasswordjob_on_custom_event(void* self, void (*callback)(v
 /// @param signal QMetaMethod*
 ///
 void q_keychain__writepasswordjob_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_keychain__writepasswordjob_super_connect_notify` instead
-///
-#define q_keychain__writepasswordjob_qbase_connect_notify q_keychain__writepasswordjob_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -2800,10 +2704,6 @@ void q_keychain__writepasswordjob_on_connect_notify(void* self, void (*callback)
 ///
 void q_keychain__writepasswordjob_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_keychain__writepasswordjob_super_disconnect_notify` instead
-///
-#define q_keychain__writepasswordjob_qbase_disconnect_notify q_keychain__writepasswordjob_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -2836,10 +2736,6 @@ void q_keychain__writepasswordjob_on_disconnect_notify(void* self, void (*callba
 ///
 void q_keychain__writepasswordjob_do_start(void* self);
 
-/// @warning DEPRECATED: Use `q_keychain__writepasswordjob_super_do_start` instead
-///
-#define q_keychain__writepasswordjob_qbase_do_start q_keychain__writepasswordjob_super_do_start
-
 /// Inherited from QKeychain::Job
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
@@ -2871,10 +2767,6 @@ void q_keychain__writepasswordjob_on_do_start(void* self, void (*callback)());
 ///
 QObject* q_keychain__writepasswordjob_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_keychain__writepasswordjob_super_sender` instead
-///
-#define q_keychain__writepasswordjob_qbase_sender q_keychain__writepasswordjob_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2905,10 +2797,6 @@ void q_keychain__writepasswordjob_on_sender(void* self, QObject* (*callback)());
 /// @param self QKeychain__WritePasswordJob*
 ///
 int32_t q_keychain__writepasswordjob_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_keychain__writepasswordjob_super_sender_signal_index` instead
-///
-#define q_keychain__writepasswordjob_qbase_sender_signal_index q_keychain__writepasswordjob_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -2942,10 +2830,6 @@ void q_keychain__writepasswordjob_on_sender_signal_index(void* self, int32_t (*c
 ///
 int32_t q_keychain__writepasswordjob_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_keychain__writepasswordjob_super_receivers` instead
-///
-#define q_keychain__writepasswordjob_qbase_receivers q_keychain__writepasswordjob_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2978,10 +2862,6 @@ void q_keychain__writepasswordjob_on_receivers(void* self, int32_t (*callback)(v
 /// @param signal QMetaMethod*
 ///
 bool q_keychain__writepasswordjob_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_keychain__writepasswordjob_super_is_signal_connected` instead
-///
-#define q_keychain__writepasswordjob_qbase_is_signal_connected q_keychain__writepasswordjob_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -3056,10 +2936,6 @@ const QMetaObject* q_keychain__deletepasswordjob_meta_object(void* self);
 ///
 void q_keychain__deletepasswordjob_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_keychain__deletepasswordjob_super_meta_object` instead
-///
-#define q_keychain__deletepasswordjob_qbase_meta_object q_keychain__deletepasswordjob_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -3079,10 +2955,6 @@ void* q_keychain__deletepasswordjob_metacast(void* self, const char* param1);
 /// @param callback void* func(QKeychain__DeletePasswordJob* self, const char* param1)
 ///
 void q_keychain__deletepasswordjob_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_keychain__deletepasswordjob_super_metacast` instead
-///
-#define q_keychain__deletepasswordjob_qbase_metacast q_keychain__deletepasswordjob_super_metacast
 
 /// Base class method implementation
 ///
@@ -3104,10 +2976,6 @@ int32_t q_keychain__deletepasswordjob_metacall(void* self, int32_t param1, int p
 /// @param callback int32_t func(QKeychain__DeletePasswordJob* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_keychain__deletepasswordjob_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_keychain__deletepasswordjob_super_metacall` instead
-///
-#define q_keychain__deletepasswordjob_qbase_metacall q_keychain__deletepasswordjob_super_metacall
 
 /// Base class method implementation
 ///
@@ -3747,10 +3615,6 @@ void q_keychain__deletepasswordjob_on_destroyed1(void* self, void (*callback)(vo
 ///
 bool q_keychain__deletepasswordjob_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_keychain__deletepasswordjob_super_event` instead
-///
-#define q_keychain__deletepasswordjob_qbase_event q_keychain__deletepasswordjob_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -3784,10 +3648,6 @@ void q_keychain__deletepasswordjob_on_event(void* self, bool (*callback)(void*, 
 /// @param event QEvent*
 ///
 bool q_keychain__deletepasswordjob_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_keychain__deletepasswordjob_super_event_filter` instead
-///
-#define q_keychain__deletepasswordjob_qbase_event_filter q_keychain__deletepasswordjob_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -3823,10 +3683,6 @@ void q_keychain__deletepasswordjob_on_event_filter(void* self, bool (*callback)(
 ///
 void q_keychain__deletepasswordjob_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_keychain__deletepasswordjob_super_timer_event` instead
-///
-#define q_keychain__deletepasswordjob_qbase_timer_event q_keychain__deletepasswordjob_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -3859,10 +3715,6 @@ void q_keychain__deletepasswordjob_on_timer_event(void* self, void (*callback)(v
 /// @param event QChildEvent*
 ///
 void q_keychain__deletepasswordjob_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_keychain__deletepasswordjob_super_child_event` instead
-///
-#define q_keychain__deletepasswordjob_qbase_child_event q_keychain__deletepasswordjob_super_child_event
 
 /// Inherited from QObject
 ///
@@ -3897,10 +3749,6 @@ void q_keychain__deletepasswordjob_on_child_event(void* self, void (*callback)(v
 ///
 void q_keychain__deletepasswordjob_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_keychain__deletepasswordjob_super_custom_event` instead
-///
-#define q_keychain__deletepasswordjob_qbase_custom_event q_keychain__deletepasswordjob_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -3933,10 +3781,6 @@ void q_keychain__deletepasswordjob_on_custom_event(void* self, void (*callback)(
 /// @param signal QMetaMethod*
 ///
 void q_keychain__deletepasswordjob_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_keychain__deletepasswordjob_super_connect_notify` instead
-///
-#define q_keychain__deletepasswordjob_qbase_connect_notify q_keychain__deletepasswordjob_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -3971,10 +3815,6 @@ void q_keychain__deletepasswordjob_on_connect_notify(void* self, void (*callback
 ///
 void q_keychain__deletepasswordjob_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_keychain__deletepasswordjob_super_disconnect_notify` instead
-///
-#define q_keychain__deletepasswordjob_qbase_disconnect_notify q_keychain__deletepasswordjob_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -4007,10 +3847,6 @@ void q_keychain__deletepasswordjob_on_disconnect_notify(void* self, void (*callb
 ///
 void q_keychain__deletepasswordjob_do_start(void* self);
 
-/// @warning DEPRECATED: Use `q_keychain__deletepasswordjob_super_do_start` instead
-///
-#define q_keychain__deletepasswordjob_qbase_do_start q_keychain__deletepasswordjob_super_do_start
-
 /// Inherited from QKeychain::Job
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
@@ -4042,10 +3878,6 @@ void q_keychain__deletepasswordjob_on_do_start(void* self, void (*callback)());
 ///
 QObject* q_keychain__deletepasswordjob_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_keychain__deletepasswordjob_super_sender` instead
-///
-#define q_keychain__deletepasswordjob_qbase_sender q_keychain__deletepasswordjob_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -4076,10 +3908,6 @@ void q_keychain__deletepasswordjob_on_sender(void* self, QObject* (*callback)())
 /// @param self QKeychain__DeletePasswordJob*
 ///
 int32_t q_keychain__deletepasswordjob_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_keychain__deletepasswordjob_super_sender_signal_index` instead
-///
-#define q_keychain__deletepasswordjob_qbase_sender_signal_index q_keychain__deletepasswordjob_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -4113,10 +3941,6 @@ void q_keychain__deletepasswordjob_on_sender_signal_index(void* self, int32_t (*
 ///
 int32_t q_keychain__deletepasswordjob_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_keychain__deletepasswordjob_super_receivers` instead
-///
-#define q_keychain__deletepasswordjob_qbase_receivers q_keychain__deletepasswordjob_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -4149,10 +3973,6 @@ void q_keychain__deletepasswordjob_on_receivers(void* self, int32_t (*callback)(
 /// @param signal QMetaMethod*
 ///
 bool q_keychain__deletepasswordjob_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_keychain__deletepasswordjob_super_is_signal_connected` instead
-///
-#define q_keychain__deletepasswordjob_qbase_is_signal_connected q_keychain__deletepasswordjob_super_is_signal_connected
 
 /// Inherited from QObject
 ///

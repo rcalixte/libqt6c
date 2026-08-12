@@ -509,7 +509,7 @@ Under normal conditions, the first compilation of the entire library should take
 
 ### Q3. How does the `libqt6c` API differ from the official Qt C++ API?
 
-Supported Qt C++ class methods are implemented 1:1 as C functions where the function names in C correspond to the snake_case equivalent of the combined Qt C++ class and method names, with the `Q` prefix altered to `q_`. [The official Qt documentation](https://doc.qt.io/qt-6/classes.html) should be used for reference and is included in the library wrapper header code (though not all links are guaranteed to work perfectly, nor is this functionality in scope for this project). Some of the main concepts are described below with a table of code equivalents following for reference.
+Supported Qt C++ class methods are implemented 1:1 as C functions where the function names in C correspond to the snake_case equivalent of the combined Qt C++ class and method names, with the `Q` prefix altered to `q_`. [The official Qt documentation](https://doc.qt.io/qt-6/classes.html) or the third-party library links should be used for reference and is included in the library wrapper header code (though not all links are guaranteed to work perfectly, nor is this functionality in scope for this project). Some of the main concepts are described below with a table of code equivalents following for reference.
 
 - `QWidget::show()` is projected as `q_widget_show(void*)`
 - `QPushButton::setText(QString)` is projected as `q_pushbutton_set_text(void*, const char*)`
@@ -556,7 +556,7 @@ Qt C++ enums are projected as PascalCase C typedef enums, replacing namespace in
 
 ```cpp
 // Qt 6 C++ API
-QWidget* widget = new QWidget();
+QWidget* widget = new QWidget;
 widget->setWindowTitle("Hello world!");
 widget->show();
 

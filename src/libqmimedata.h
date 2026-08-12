@@ -29,10 +29,6 @@ const QMetaObject* q_mimedata_meta_object(void* self);
 ///
 void q_mimedata_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_mimedata_super_meta_object` instead
-///
-#define q_mimedata_qbase_meta_object q_mimedata_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -52,10 +48,6 @@ void* q_mimedata_metacast(void* self, const char* param1);
 /// @param callback void* func(QMimeData* self, const char* param1)
 ///
 void q_mimedata_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_mimedata_super_metacast` instead
-///
-#define q_mimedata_qbase_metacast q_mimedata_super_metacast
 
 /// Base class method implementation
 ///
@@ -77,10 +69,6 @@ int32_t q_mimedata_metacall(void* self, int32_t param1, int param2, void* param3
 /// @param callback int32_t func(QMimeData* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_mimedata_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_mimedata_super_metacall` instead
-///
-#define q_mimedata_qbase_metacall q_mimedata_super_metacall
 
 /// Base class method implementation
 ///
@@ -240,10 +228,6 @@ bool q_mimedata_has_format(void* self, const char* mimetype);
 ///
 void q_mimedata_on_has_format(void* self, bool (*callback)(void*, const char*));
 
-/// @warning DEPRECATED: Use `q_mimedata_super_has_format` instead
-///
-#define q_mimedata_qbase_has_format q_mimedata_super_has_format
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#hasFormat)
 ///
 /// Base class method implementation
@@ -269,10 +253,6 @@ const char** q_mimedata_formats(void* self);
 /// @param callback const char** func()
 ///
 void q_mimedata_on_formats(void* self, const char** (*callback)());
-
-/// @warning DEPRECATED: Use `q_mimedata_super_formats` instead
-///
-#define q_mimedata_qbase_formats q_mimedata_super_formats
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#formats)
 ///
@@ -306,10 +286,6 @@ QVariant* q_mimedata_retrieve_data(void* self, const char* mimetype, void* prefe
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_mimedata_on_retrieve_data(void* self, QVariant* (*callback)(void*, const char*, void*));
-
-/// @warning DEPRECATED: Use `q_mimedata_super_retrieve_data` instead
-///
-#define q_mimedata_qbase_retrieve_data q_mimedata_super_retrieve_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#retrieveData)
 ///
@@ -798,10 +774,6 @@ void q_mimedata_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_mimedata_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_mimedata_super_event` instead
-///
-#define q_mimedata_qbase_event q_mimedata_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -835,10 +807,6 @@ void q_mimedata_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_mimedata_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_mimedata_super_event_filter` instead
-///
-#define q_mimedata_qbase_event_filter q_mimedata_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -874,10 +842,6 @@ void q_mimedata_on_event_filter(void* self, bool (*callback)(void*, void*, void*
 ///
 void q_mimedata_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_mimedata_super_timer_event` instead
-///
-#define q_mimedata_qbase_timer_event q_mimedata_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -910,10 +874,6 @@ void q_mimedata_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_mimedata_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_mimedata_super_child_event` instead
-///
-#define q_mimedata_qbase_child_event q_mimedata_super_child_event
 
 /// Inherited from QObject
 ///
@@ -948,10 +908,6 @@ void q_mimedata_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_mimedata_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_mimedata_super_custom_event` instead
-///
-#define q_mimedata_qbase_custom_event q_mimedata_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -984,10 +940,6 @@ void q_mimedata_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_mimedata_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_mimedata_super_connect_notify` instead
-///
-#define q_mimedata_qbase_connect_notify q_mimedata_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1022,10 +974,6 @@ void q_mimedata_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_mimedata_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_mimedata_super_disconnect_notify` instead
-///
-#define q_mimedata_qbase_disconnect_notify q_mimedata_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1058,10 +1006,6 @@ void q_mimedata_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 QObject* q_mimedata_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_mimedata_super_sender` instead
-///
-#define q_mimedata_qbase_sender q_mimedata_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1092,10 +1036,6 @@ void q_mimedata_on_sender(void* self, QObject* (*callback)());
 /// @param self QMimeData*
 ///
 int32_t q_mimedata_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_mimedata_super_sender_signal_index` instead
-///
-#define q_mimedata_qbase_sender_signal_index q_mimedata_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1129,10 +1069,6 @@ void q_mimedata_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_mimedata_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_mimedata_super_receivers` instead
-///
-#define q_mimedata_qbase_receivers q_mimedata_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1165,10 +1101,6 @@ void q_mimedata_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 /// @param signal QMetaMethod*
 ///
 bool q_mimedata_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_mimedata_super_is_signal_connected` instead
-///
-#define q_mimedata_qbase_is_signal_connected q_mimedata_super_is_signal_connected
 
 /// Inherited from QObject
 ///

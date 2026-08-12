@@ -54,10 +54,6 @@ const QMetaObject* q_bluetoothsocket_meta_object(void* self);
 ///
 void q_bluetoothsocket_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_meta_object` instead
-///
-#define q_bluetoothsocket_qbase_meta_object q_bluetoothsocket_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -77,10 +73,6 @@ void* q_bluetoothsocket_metacast(void* self, const char* param1);
 /// @param callback void* func(QBluetoothSocket* self, const char* param1)
 ///
 void q_bluetoothsocket_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_metacast` instead
-///
-#define q_bluetoothsocket_qbase_metacast q_bluetoothsocket_super_metacast
 
 /// Base class method implementation
 ///
@@ -102,10 +94,6 @@ int32_t q_bluetoothsocket_metacall(void* self, int32_t param1, int param2, void*
 /// @param callback int32_t func(QBluetoothSocket* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_bluetoothsocket_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_metacall` instead
-///
-#define q_bluetoothsocket_qbase_metacall q_bluetoothsocket_super_metacall
 
 /// Base class method implementation
 ///
@@ -145,10 +133,6 @@ void q_bluetoothsocket_close(void* self);
 ///
 void q_bluetoothsocket_on_close(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_close` instead
-///
-#define q_bluetoothsocket_qbase_close q_bluetoothsocket_super_close
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#close)
 ///
 /// Base class method implementation
@@ -171,10 +155,6 @@ bool q_bluetoothsocket_is_sequential(void* self);
 /// @param callback bool func()
 ///
 void q_bluetoothsocket_on_is_sequential(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_is_sequential` instead
-///
-#define q_bluetoothsocket_qbase_is_sequential q_bluetoothsocket_super_is_sequential
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#isSequential)
 ///
@@ -199,10 +179,6 @@ int64_t q_bluetoothsocket_bytes_available(void* self);
 ///
 void q_bluetoothsocket_on_bytes_available(void* self, int64_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_bytes_available` instead
-///
-#define q_bluetoothsocket_qbase_bytes_available q_bluetoothsocket_super_bytes_available
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#bytesAvailable)
 ///
 /// Base class method implementation
@@ -226,10 +202,6 @@ int64_t q_bluetoothsocket_bytes_to_write(void* self);
 ///
 void q_bluetoothsocket_on_bytes_to_write(void* self, int64_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_bytes_to_write` instead
-///
-#define q_bluetoothsocket_qbase_bytes_to_write q_bluetoothsocket_super_bytes_to_write
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#bytesToWrite)
 ///
 /// Base class method implementation
@@ -252,10 +224,6 @@ bool q_bluetoothsocket_can_read_line(void* self);
 /// @param callback bool func()
 ///
 void q_bluetoothsocket_on_can_read_line(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_can_read_line` instead
-///
-#define q_bluetoothsocket_qbase_can_read_line q_bluetoothsocket_super_can_read_line
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#canReadLine)
 ///
@@ -474,10 +442,6 @@ int64_t q_bluetoothsocket_read_data(void* self, char* data, int64_t maxSize);
 ///
 void q_bluetoothsocket_on_read_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_read_data` instead
-///
-#define q_bluetoothsocket_qbase_read_data q_bluetoothsocket_super_read_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#readData)
 ///
 /// Base class method implementation
@@ -505,10 +469,6 @@ int64_t q_bluetoothsocket_write_data(void* self, const char* data, int64_t maxSi
 ///
 void q_bluetoothsocket_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_write_data` instead
-///
-#define q_bluetoothsocket_qbase_write_data q_bluetoothsocket_super_write_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#writeData)
 ///
 /// Base class method implementation
@@ -535,10 +495,6 @@ void q_bluetoothsocket_set_socket_state(void* self, int32_t state);
 ///
 void q_bluetoothsocket_on_set_socket_state(void* self, void (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_set_socket_state` instead
-///
-#define q_bluetoothsocket_qbase_set_socket_state q_bluetoothsocket_super_set_socket_state
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#setSocketState)
 ///
 /// Base class method implementation
@@ -563,10 +519,6 @@ void q_bluetoothsocket_set_socket_error(void* self, int32_t error);
 /// @param callback void func(QBluetoothSocket* self, enum QBluetoothSocket__SocketError error)
 ///
 void q_bluetoothsocket_on_set_socket_error(void* self, void (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_set_socket_error` instead
-///
-#define q_bluetoothsocket_qbase_set_socket_error q_bluetoothsocket_super_set_socket_error
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#setSocketError)
 ///
@@ -593,10 +545,6 @@ void q_bluetoothsocket_do_device_discovery(void* self, void* service, int32_t op
 /// @param callback void func(QBluetoothSocket* self, QBluetoothServiceInfo* service, flag of enum QIODeviceBase__OpenModeFlag openMode)
 ///
 void q_bluetoothsocket_on_do_device_discovery(void* self, void (*callback)(void*, void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_do_device_discovery` instead
-///
-#define q_bluetoothsocket_qbase_do_device_discovery q_bluetoothsocket_super_do_device_discovery
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#doDeviceDiscovery)
 ///
@@ -1525,10 +1473,6 @@ void q_bluetoothsocket_on_destroyed1(void* self, void (*callback)(void*, void*))
 ///
 bool q_bluetoothsocket_open(void* self, int32_t mode);
 
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_open` instead
-///
-#define q_bluetoothsocket_qbase_open q_bluetoothsocket_super_open
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#open)
@@ -1561,10 +1505,6 @@ void q_bluetoothsocket_on_open(void* self, bool (*callback)(void*, int32_t));
 ///
 int64_t q_bluetoothsocket_pos(void* self);
 
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_pos` instead
-///
-#define q_bluetoothsocket_qbase_pos q_bluetoothsocket_super_pos
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#pos)
@@ -1595,10 +1535,6 @@ void q_bluetoothsocket_on_pos(void* self, int64_t (*callback)());
 /// @param self QBluetoothSocket*
 ///
 int64_t q_bluetoothsocket_size(void* self);
-
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_size` instead
-///
-#define q_bluetoothsocket_qbase_size q_bluetoothsocket_super_size
 
 /// Inherited from QIODevice
 ///
@@ -1632,10 +1568,6 @@ void q_bluetoothsocket_on_size(void* self, int64_t (*callback)());
 ///
 bool q_bluetoothsocket_seek(void* self, int64_t pos);
 
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_seek` instead
-///
-#define q_bluetoothsocket_qbase_seek q_bluetoothsocket_super_seek
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#seek)
@@ -1668,10 +1600,6 @@ void q_bluetoothsocket_on_seek(void* self, bool (*callback)(void*, int64_t));
 ///
 bool q_bluetoothsocket_at_end(void* self);
 
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_at_end` instead
-///
-#define q_bluetoothsocket_qbase_at_end q_bluetoothsocket_super_at_end
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#atEnd)
@@ -1702,10 +1630,6 @@ void q_bluetoothsocket_on_at_end(void* self, bool (*callback)());
 /// @param self QBluetoothSocket*
 ///
 bool q_bluetoothsocket_reset(void* self);
-
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_reset` instead
-///
-#define q_bluetoothsocket_qbase_reset q_bluetoothsocket_super_reset
 
 /// Inherited from QIODevice
 ///
@@ -1739,10 +1663,6 @@ void q_bluetoothsocket_on_reset(void* self, bool (*callback)());
 ///
 bool q_bluetoothsocket_wait_for_ready_read(void* self, int msecs);
 
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_wait_for_ready_read` instead
-///
-#define q_bluetoothsocket_qbase_wait_for_ready_read q_bluetoothsocket_super_wait_for_ready_read
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#waitForReadyRead)
@@ -1775,10 +1695,6 @@ void q_bluetoothsocket_on_wait_for_ready_read(void* self, bool (*callback)(void*
 /// @param msecs int
 ///
 bool q_bluetoothsocket_wait_for_bytes_written(void* self, int msecs);
-
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_wait_for_bytes_written` instead
-///
-#define q_bluetoothsocket_qbase_wait_for_bytes_written q_bluetoothsocket_super_wait_for_bytes_written
 
 /// Inherited from QIODevice
 ///
@@ -1814,10 +1730,6 @@ void q_bluetoothsocket_on_wait_for_bytes_written(void* self, bool (*callback)(vo
 ///
 int64_t q_bluetoothsocket_read_line_data(void* self, char* data, int64_t maxlen);
 
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_read_line_data` instead
-///
-#define q_bluetoothsocket_qbase_read_line_data q_bluetoothsocket_super_read_line_data
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLineData)
@@ -1852,10 +1764,6 @@ void q_bluetoothsocket_on_read_line_data(void* self, int64_t (*callback)(void*, 
 ///
 int64_t q_bluetoothsocket_skip_data(void* self, int64_t maxSize);
 
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_skip_data` instead
-///
-#define q_bluetoothsocket_qbase_skip_data q_bluetoothsocket_super_skip_data
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skipData)
@@ -1888,10 +1796,6 @@ void q_bluetoothsocket_on_skip_data(void* self, int64_t (*callback)(void*, int64
 /// @param event QEvent*
 ///
 bool q_bluetoothsocket_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_event` instead
-///
-#define q_bluetoothsocket_qbase_event q_bluetoothsocket_super_event
 
 /// Inherited from QObject
 ///
@@ -1927,10 +1831,6 @@ void q_bluetoothsocket_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_bluetoothsocket_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_event_filter` instead
-///
-#define q_bluetoothsocket_qbase_event_filter q_bluetoothsocket_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1965,10 +1865,6 @@ void q_bluetoothsocket_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 void q_bluetoothsocket_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_timer_event` instead
-///
-#define q_bluetoothsocket_qbase_timer_event q_bluetoothsocket_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2001,10 +1897,6 @@ void q_bluetoothsocket_on_timer_event(void* self, void (*callback)(void*, void*)
 /// @param event QChildEvent*
 ///
 void q_bluetoothsocket_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_child_event` instead
-///
-#define q_bluetoothsocket_qbase_child_event q_bluetoothsocket_super_child_event
 
 /// Inherited from QObject
 ///
@@ -2039,10 +1931,6 @@ void q_bluetoothsocket_on_child_event(void* self, void (*callback)(void*, void*)
 ///
 void q_bluetoothsocket_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_custom_event` instead
-///
-#define q_bluetoothsocket_qbase_custom_event q_bluetoothsocket_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2075,10 +1963,6 @@ void q_bluetoothsocket_on_custom_event(void* self, void (*callback)(void*, void*
 /// @param signal QMetaMethod*
 ///
 void q_bluetoothsocket_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_connect_notify` instead
-///
-#define q_bluetoothsocket_qbase_connect_notify q_bluetoothsocket_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -2113,10 +1997,6 @@ void q_bluetoothsocket_on_connect_notify(void* self, void (*callback)(void*, voi
 ///
 void q_bluetoothsocket_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_disconnect_notify` instead
-///
-#define q_bluetoothsocket_qbase_disconnect_notify q_bluetoothsocket_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -2149,10 +2029,6 @@ void q_bluetoothsocket_on_disconnect_notify(void* self, void (*callback)(void*, 
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
 ///
 void q_bluetoothsocket_set_open_mode(void* self, int32_t openMode);
-
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_set_open_mode` instead
-///
-#define q_bluetoothsocket_qbase_set_open_mode q_bluetoothsocket_super_set_open_mode
 
 /// Inherited from QIODevice
 ///
@@ -2187,10 +2063,6 @@ void q_bluetoothsocket_on_set_open_mode(void* self, void (*callback)(void*, int3
 ///
 void q_bluetoothsocket_set_error_string(void* self, const char* errorString);
 
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_set_error_string` instead
-///
-#define q_bluetoothsocket_qbase_set_error_string q_bluetoothsocket_super_set_error_string
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
@@ -2223,10 +2095,6 @@ void q_bluetoothsocket_on_set_error_string(void* self, void (*callback)(void*, c
 ///
 QObject* q_bluetoothsocket_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_sender` instead
-///
-#define q_bluetoothsocket_qbase_sender q_bluetoothsocket_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2257,10 +2125,6 @@ void q_bluetoothsocket_on_sender(void* self, QObject* (*callback)());
 /// @param self QBluetoothSocket*
 ///
 int32_t q_bluetoothsocket_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_sender_signal_index` instead
-///
-#define q_bluetoothsocket_qbase_sender_signal_index q_bluetoothsocket_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -2294,10 +2158,6 @@ void q_bluetoothsocket_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 int32_t q_bluetoothsocket_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_receivers` instead
-///
-#define q_bluetoothsocket_qbase_receivers q_bluetoothsocket_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2330,10 +2190,6 @@ void q_bluetoothsocket_on_receivers(void* self, int32_t (*callback)(void*, const
 /// @param signal QMetaMethod*
 ///
 bool q_bluetoothsocket_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_bluetoothsocket_super_is_signal_connected` instead
-///
-#define q_bluetoothsocket_qbase_is_signal_connected q_bluetoothsocket_super_is_signal_connected
 
 /// Inherited from QObject
 ///

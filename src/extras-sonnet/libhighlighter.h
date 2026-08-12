@@ -57,10 +57,6 @@ const QMetaObject* k_sonnet__highlighter_meta_object(void* self);
 ///
 void k_sonnet__highlighter_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_meta_object` instead
-///
-#define k_sonnet__highlighter_qbase_meta_object k_sonnet__highlighter_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -80,10 +76,6 @@ void* k_sonnet__highlighter_metacast(void* self, const char* param1);
 /// @param callback void* func(Sonnet__Highlighter* self, const char* param1)
 ///
 void k_sonnet__highlighter_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_metacast` instead
-///
-#define k_sonnet__highlighter_qbase_metacast k_sonnet__highlighter_super_metacast
 
 /// Base class method implementation
 ///
@@ -105,10 +97,6 @@ int32_t k_sonnet__highlighter_metacall(void* self, int32_t param1, int param2, v
 /// @param callback int32_t func(Sonnet__Highlighter* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_sonnet__highlighter_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_metacall` instead
-///
-#define k_sonnet__highlighter_qbase_metacall k_sonnet__highlighter_super_metacall
 
 /// Base class method implementation
 ///
@@ -270,10 +258,6 @@ void k_sonnet__highlighter_highlight_block(void* self, const char* text);
 ///
 void k_sonnet__highlighter_on_highlight_block(void* self, void (*callback)(void*, const char*));
 
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_highlight_block` instead
-///
-#define k_sonnet__highlighter_qbase_highlight_block k_sonnet__highlighter_super_highlight_block
-
 /// [Upstream resources](https://api.kde.org/sonnet-highlighter.html#highlightBlock)
 ///
 /// Base class method implementation
@@ -299,10 +283,6 @@ void k_sonnet__highlighter_set_misspelled(void* self, int start, int count);
 /// @param callback void func(Sonnet__Highlighter* self, int start, int count)
 ///
 void k_sonnet__highlighter_on_set_misspelled(void* self, void (*callback)(void*, int, int));
-
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_set_misspelled` instead
-///
-#define k_sonnet__highlighter_qbase_set_misspelled k_sonnet__highlighter_super_set_misspelled
 
 /// [Upstream resources](https://api.kde.org/sonnet-highlighter.html#setMisspelled)
 ///
@@ -331,10 +311,6 @@ void k_sonnet__highlighter_unset_misspelled(void* self, int start, int count);
 ///
 void k_sonnet__highlighter_on_unset_misspelled(void* self, void (*callback)(void*, int, int));
 
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_unset_misspelled` instead
-///
-#define k_sonnet__highlighter_qbase_unset_misspelled k_sonnet__highlighter_super_unset_misspelled
-
 /// [Upstream resources](https://api.kde.org/sonnet-highlighter.html#unsetMisspelled)
 ///
 /// Base class method implementation
@@ -362,10 +338,6 @@ bool k_sonnet__highlighter_event_filter(void* self, void* o, void* e);
 ///
 void k_sonnet__highlighter_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_event_filter` instead
-///
-#define k_sonnet__highlighter_qbase_event_filter k_sonnet__highlighter_super_event_filter
-
 /// [Upstream resources](https://api.kde.org/sonnet-highlighter.html#eventFilter)
 ///
 /// Base class method implementation
@@ -391,10 +363,6 @@ bool k_sonnet__highlighter_intra_word_editing(void* self);
 ///
 void k_sonnet__highlighter_on_intra_word_editing(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_intra_word_editing` instead
-///
-#define k_sonnet__highlighter_qbase_intra_word_editing k_sonnet__highlighter_super_intra_word_editing
-
 /// [Upstream resources](https://api.kde.org/sonnet-highlighter.html#intraWordEditing)
 ///
 /// Base class method implementation
@@ -418,10 +386,6 @@ void k_sonnet__highlighter_set_intra_word_editing(void* self, bool editing);
 /// @param callback void func(Sonnet__Highlighter* self, bool editing)
 ///
 void k_sonnet__highlighter_on_set_intra_word_editing(void* self, void (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_set_intra_word_editing` instead
-///
-#define k_sonnet__highlighter_qbase_set_intra_word_editing k_sonnet__highlighter_super_set_intra_word_editing
 
 /// [Upstream resources](https://api.kde.org/sonnet-highlighter.html#setIntraWordEditing)
 ///
@@ -974,10 +938,6 @@ void k_sonnet__highlighter_on_destroyed1(void* self, void (*callback)(void*, voi
 ///
 bool k_sonnet__highlighter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_event` instead
-///
-#define k_sonnet__highlighter_qbase_event k_sonnet__highlighter_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1010,10 +970,6 @@ void k_sonnet__highlighter_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QTimerEvent*
 ///
 void k_sonnet__highlighter_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_timer_event` instead
-///
-#define k_sonnet__highlighter_qbase_timer_event k_sonnet__highlighter_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -1048,10 +1004,6 @@ void k_sonnet__highlighter_on_timer_event(void* self, void (*callback)(void*, vo
 ///
 void k_sonnet__highlighter_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_child_event` instead
-///
-#define k_sonnet__highlighter_qbase_child_event k_sonnet__highlighter_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1084,10 +1036,6 @@ void k_sonnet__highlighter_on_child_event(void* self, void (*callback)(void*, vo
 /// @param event QEvent*
 ///
 void k_sonnet__highlighter_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_custom_event` instead
-///
-#define k_sonnet__highlighter_qbase_custom_event k_sonnet__highlighter_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -1122,10 +1070,6 @@ void k_sonnet__highlighter_on_custom_event(void* self, void (*callback)(void*, v
 ///
 void k_sonnet__highlighter_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_connect_notify` instead
-///
-#define k_sonnet__highlighter_qbase_connect_notify k_sonnet__highlighter_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1158,10 +1102,6 @@ void k_sonnet__highlighter_on_connect_notify(void* self, void (*callback)(void*,
 /// @param signal QMetaMethod*
 ///
 void k_sonnet__highlighter_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_disconnect_notify` instead
-///
-#define k_sonnet__highlighter_qbase_disconnect_notify k_sonnet__highlighter_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -1198,10 +1138,6 @@ void k_sonnet__highlighter_on_disconnect_notify(void* self, void (*callback)(voi
 ///
 void k_sonnet__highlighter_set_format(void* self, int start, int count, void* format);
 
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_set_format` instead
-///
-#define k_sonnet__highlighter_qbase_set_format k_sonnet__highlighter_super_set_format
-
 /// Inherited from QSyntaxHighlighter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setFormat)
@@ -1237,10 +1173,6 @@ void k_sonnet__highlighter_on_set_format(void* self, void (*callback)(void*, int
 ///
 QTextCharFormat* k_sonnet__highlighter_format(void* self, int pos);
 
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_format` instead
-///
-#define k_sonnet__highlighter_qbase_format k_sonnet__highlighter_super_format
-
 /// Inherited from QSyntaxHighlighter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#format)
@@ -1275,10 +1207,6 @@ void k_sonnet__highlighter_on_format(void* self, QTextCharFormat* (*callback)(vo
 ///
 int32_t k_sonnet__highlighter_previous_block_state(void* self);
 
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_previous_block_state` instead
-///
-#define k_sonnet__highlighter_qbase_previous_block_state k_sonnet__highlighter_super_previous_block_state
-
 /// Inherited from QSyntaxHighlighter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#previousBlockState)
@@ -1309,10 +1237,6 @@ void k_sonnet__highlighter_on_previous_block_state(void* self, int32_t (*callbac
 /// @param self Sonnet__Highlighter*
 ///
 int32_t k_sonnet__highlighter_current_block_state(void* self);
-
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_current_block_state` instead
-///
-#define k_sonnet__highlighter_qbase_current_block_state k_sonnet__highlighter_super_current_block_state
 
 /// Inherited from QSyntaxHighlighter
 ///
@@ -1345,10 +1269,6 @@ void k_sonnet__highlighter_on_current_block_state(void* self, int32_t (*callback
 /// @param newState int
 ///
 void k_sonnet__highlighter_set_current_block_state(void* self, int newState);
-
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_set_current_block_state` instead
-///
-#define k_sonnet__highlighter_qbase_set_current_block_state k_sonnet__highlighter_super_set_current_block_state
 
 /// Inherited from QSyntaxHighlighter
 ///
@@ -1383,10 +1303,6 @@ void k_sonnet__highlighter_on_set_current_block_state(void* self, void (*callbac
 ///
 void k_sonnet__highlighter_set_current_block_user_data(void* self, void* data);
 
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_set_current_block_user_data` instead
-///
-#define k_sonnet__highlighter_qbase_set_current_block_user_data k_sonnet__highlighter_super_set_current_block_user_data
-
 /// Inherited from QSyntaxHighlighter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setCurrentBlockUserData)
@@ -1419,10 +1335,6 @@ void k_sonnet__highlighter_on_set_current_block_user_data(void* self, void (*cal
 ///
 QTextBlockUserData* k_sonnet__highlighter_current_block_user_data(void* self);
 
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_current_block_user_data` instead
-///
-#define k_sonnet__highlighter_qbase_current_block_user_data k_sonnet__highlighter_super_current_block_user_data
-
 /// Inherited from QSyntaxHighlighter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlockUserData)
@@ -1453,10 +1365,6 @@ void k_sonnet__highlighter_on_current_block_user_data(void* self, QTextBlockUser
 /// @param self Sonnet__Highlighter*
 ///
 QTextBlock* k_sonnet__highlighter_current_block(void* self);
-
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_current_block` instead
-///
-#define k_sonnet__highlighter_qbase_current_block k_sonnet__highlighter_super_current_block
 
 /// Inherited from QSyntaxHighlighter
 ///
@@ -1491,10 +1399,6 @@ void k_sonnet__highlighter_on_current_block(void* self, QTextBlock* (*callback)(
 ///
 QObject* k_sonnet__highlighter_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_sender` instead
-///
-#define k_sonnet__highlighter_qbase_sender k_sonnet__highlighter_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1525,10 +1429,6 @@ void k_sonnet__highlighter_on_sender(void* self, QObject* (*callback)());
 /// @param self Sonnet__Highlighter*
 ///
 int32_t k_sonnet__highlighter_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_sender_signal_index` instead
-///
-#define k_sonnet__highlighter_qbase_sender_signal_index k_sonnet__highlighter_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1562,10 +1462,6 @@ void k_sonnet__highlighter_on_sender_signal_index(void* self, int32_t (*callback
 ///
 int32_t k_sonnet__highlighter_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_receivers` instead
-///
-#define k_sonnet__highlighter_qbase_receivers k_sonnet__highlighter_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1598,10 +1494,6 @@ void k_sonnet__highlighter_on_receivers(void* self, int32_t (*callback)(void*, c
 /// @param signal QMetaMethod*
 ///
 bool k_sonnet__highlighter_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_sonnet__highlighter_super_is_signal_connected` instead
-///
-#define k_sonnet__highlighter_qbase_is_signal_connected k_sonnet__highlighter_super_is_signal_connected
 
 /// Inherited from QObject
 ///

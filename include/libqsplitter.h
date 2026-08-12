@@ -54,10 +54,6 @@ const QMetaObject* q_splitter_meta_object(void* self);
 ///
 void q_splitter_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_splitter_super_meta_object` instead
-///
-#define q_splitter_qbase_meta_object q_splitter_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -77,10 +73,6 @@ void* q_splitter_metacast(void* self, const char* param1);
 /// @param callback void* func(QSplitter* self, const char* param1)
 ///
 void q_splitter_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_splitter_super_metacast` instead
-///
-#define q_splitter_qbase_metacast q_splitter_super_metacast
 
 /// Base class method implementation
 ///
@@ -102,10 +94,6 @@ int32_t q_splitter_metacall(void* self, int32_t param1, int param2, void* param3
 /// @param callback int32_t func(QSplitter* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_splitter_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_splitter_super_metacall` instead
-///
-#define q_splitter_qbase_metacall q_splitter_super_metacall
 
 /// Base class method implementation
 ///
@@ -225,10 +213,6 @@ QSize* q_splitter_size_hint(void* self);
 ///
 void q_splitter_on_size_hint(void* self, QSize* (*callback)());
 
-/// @warning DEPRECATED: Use `q_splitter_super_size_hint` instead
-///
-#define q_splitter_qbase_size_hint q_splitter_super_size_hint
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitter.html#sizeHint)
 ///
 /// Base class method implementation
@@ -253,10 +237,6 @@ QSize* q_splitter_minimum_size_hint(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_splitter_on_minimum_size_hint(void* self, QSize* (*callback)());
-
-/// @warning DEPRECATED: Use `q_splitter_super_minimum_size_hint` instead
-///
-#define q_splitter_qbase_minimum_size_hint q_splitter_super_minimum_size_hint
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitter.html#minimumSizeHint)
 ///
@@ -383,10 +363,6 @@ QSplitterHandle* q_splitter_create_handle(void* self);
 ///
 void q_splitter_on_create_handle(void* self, QSplitterHandle* (*callback)());
 
-/// @warning DEPRECATED: Use `q_splitter_super_create_handle` instead
-///
-#define q_splitter_qbase_create_handle q_splitter_super_create_handle
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitter.html#createHandle)
 ///
 /// Base class method implementation
@@ -410,10 +386,6 @@ void q_splitter_child_event(void* self, void* param1);
 /// @param callback void func(QSplitter* self, QChildEvent* param1)
 ///
 void q_splitter_on_child_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_splitter_super_child_event` instead
-///
-#define q_splitter_qbase_child_event q_splitter_super_child_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitter.html#childEvent)
 ///
@@ -440,10 +412,6 @@ bool q_splitter_event(void* self, void* param1);
 ///
 void q_splitter_on_event(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_splitter_super_event` instead
-///
-#define q_splitter_qbase_event q_splitter_super_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitter.html#event)
 ///
 /// Base class method implementation
@@ -469,10 +437,6 @@ void q_splitter_resize_event(void* self, void* param1);
 ///
 void q_splitter_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_splitter_super_resize_event` instead
-///
-#define q_splitter_qbase_resize_event q_splitter_super_resize_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitter.html#resizeEvent)
 ///
 /// Base class method implementation
@@ -497,10 +461,6 @@ void q_splitter_change_event(void* self, void* param1);
 /// @param callback void func(QSplitter* self, QEvent* param1)
 ///
 void q_splitter_on_change_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_splitter_super_change_event` instead
-///
-#define q_splitter_qbase_change_event q_splitter_super_change_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitter.html#changeEvent)
 ///
@@ -528,10 +488,6 @@ void q_splitter_move_splitter(void* self, int pos, int index);
 ///
 void q_splitter_on_move_splitter(void* self, void (*callback)(void*, int, int));
 
-/// @warning DEPRECATED: Use `q_splitter_super_move_splitter` instead
-///
-#define q_splitter_qbase_move_splitter q_splitter_super_move_splitter
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitter.html#moveSplitter)
 ///
 /// Base class method implementation
@@ -558,10 +514,6 @@ void q_splitter_set_rubber_band(void* self, int position);
 ///
 void q_splitter_on_set_rubber_band(void* self, void (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_splitter_super_set_rubber_band` instead
-///
-#define q_splitter_qbase_set_rubber_band q_splitter_super_set_rubber_band
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitter.html#setRubberBand)
 ///
 /// Base class method implementation
@@ -587,10 +539,6 @@ int32_t q_splitter_closest_legal_position(void* self, int param1, int param2);
 /// @param callback int32_t func(QSplitter* self, int param1, int param2)
 ///
 void q_splitter_on_closest_legal_position(void* self, int32_t (*callback)(void*, int, int));
-
-/// @warning DEPRECATED: Use `q_splitter_super_closest_legal_position` instead
-///
-#define q_splitter_qbase_closest_legal_position q_splitter_super_closest_legal_position
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitter.html#closestLegalPosition)
 ///
@@ -3710,10 +3658,6 @@ int32_t q_splitter_encode_metric_f(int32_t metric, double value);
 ///
 void q_splitter_paint_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_splitter_super_paint_event` instead
-///
-#define q_splitter_qbase_paint_event q_splitter_super_paint_event
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#paintEvent)
@@ -3747,10 +3691,6 @@ void q_splitter_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 void q_splitter_init_style_option(void* self, void* option);
 
-/// @warning DEPRECATED: Use `q_splitter_super_init_style_option` instead
-///
-#define q_splitter_qbase_init_style_option q_splitter_super_init_style_option
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
@@ -3783,10 +3723,6 @@ void q_splitter_on_init_style_option(void* self, void (*callback)(void*, void*))
 ///
 int32_t q_splitter_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `q_splitter_super_dev_type` instead
-///
-#define q_splitter_qbase_dev_type q_splitter_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -3818,10 +3754,6 @@ void q_splitter_on_dev_type(void* self, int32_t (*callback)());
 /// @param visible bool
 ///
 void q_splitter_set_visible(void* self, bool visible);
-
-/// @warning DEPRECATED: Use `q_splitter_super_set_visible` instead
-///
-#define q_splitter_qbase_set_visible q_splitter_super_set_visible
 
 /// Inherited from QWidget
 ///
@@ -3856,10 +3788,6 @@ void q_splitter_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 int32_t q_splitter_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `q_splitter_super_height_for_width` instead
-///
-#define q_splitter_qbase_height_for_width q_splitter_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -3892,10 +3820,6 @@ void q_splitter_on_height_for_width(void* self, int32_t (*callback)(void*, int))
 ///
 bool q_splitter_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `q_splitter_super_has_height_for_width` instead
-///
-#define q_splitter_qbase_has_height_for_width q_splitter_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -3926,10 +3850,6 @@ void q_splitter_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self QSplitter*
 ///
 QPaintEngine* q_splitter_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `q_splitter_super_paint_engine` instead
-///
-#define q_splitter_qbase_paint_engine q_splitter_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -3962,10 +3882,6 @@ void q_splitter_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QMouseEvent*
 ///
 void q_splitter_mouse_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitter_super_mouse_press_event` instead
-///
-#define q_splitter_qbase_mouse_press_event q_splitter_super_mouse_press_event
 
 /// Inherited from QWidget
 ///
@@ -4000,10 +3916,6 @@ void q_splitter_on_mouse_press_event(void* self, void (*callback)(void*, void*))
 ///
 void q_splitter_mouse_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitter_super_mouse_release_event` instead
-///
-#define q_splitter_qbase_mouse_release_event q_splitter_super_mouse_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
@@ -4036,10 +3948,6 @@ void q_splitter_on_mouse_release_event(void* self, void (*callback)(void*, void*
 /// @param event QMouseEvent*
 ///
 void q_splitter_mouse_double_click_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitter_super_mouse_double_click_event` instead
-///
-#define q_splitter_qbase_mouse_double_click_event q_splitter_super_mouse_double_click_event
 
 /// Inherited from QWidget
 ///
@@ -4074,10 +3982,6 @@ void q_splitter_on_mouse_double_click_event(void* self, void (*callback)(void*, 
 ///
 void q_splitter_mouse_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitter_super_mouse_move_event` instead
-///
-#define q_splitter_qbase_mouse_move_event q_splitter_super_mouse_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -4110,10 +4014,6 @@ void q_splitter_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 /// @param event QWheelEvent*
 ///
 void q_splitter_wheel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitter_super_wheel_event` instead
-///
-#define q_splitter_qbase_wheel_event q_splitter_super_wheel_event
 
 /// Inherited from QWidget
 ///
@@ -4148,10 +4048,6 @@ void q_splitter_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void q_splitter_key_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitter_super_key_press_event` instead
-///
-#define q_splitter_qbase_key_press_event q_splitter_super_key_press_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
@@ -4184,10 +4080,6 @@ void q_splitter_on_key_press_event(void* self, void (*callback)(void*, void*));
 /// @param event QKeyEvent*
 ///
 void q_splitter_key_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitter_super_key_release_event` instead
-///
-#define q_splitter_qbase_key_release_event q_splitter_super_key_release_event
 
 /// Inherited from QWidget
 ///
@@ -4222,10 +4114,6 @@ void q_splitter_on_key_release_event(void* self, void (*callback)(void*, void*))
 ///
 void q_splitter_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitter_super_focus_in_event` instead
-///
-#define q_splitter_qbase_focus_in_event q_splitter_super_focus_in_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -4258,10 +4146,6 @@ void q_splitter_on_focus_in_event(void* self, void (*callback)(void*, void*));
 /// @param event QFocusEvent*
 ///
 void q_splitter_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitter_super_focus_out_event` instead
-///
-#define q_splitter_qbase_focus_out_event q_splitter_super_focus_out_event
 
 /// Inherited from QWidget
 ///
@@ -4296,10 +4180,6 @@ void q_splitter_on_focus_out_event(void* self, void (*callback)(void*, void*));
 ///
 void q_splitter_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitter_super_enter_event` instead
-///
-#define q_splitter_qbase_enter_event q_splitter_super_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -4332,10 +4212,6 @@ void q_splitter_on_enter_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void q_splitter_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitter_super_leave_event` instead
-///
-#define q_splitter_qbase_leave_event q_splitter_super_leave_event
 
 /// Inherited from QWidget
 ///
@@ -4370,10 +4246,6 @@ void q_splitter_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_splitter_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitter_super_move_event` instead
-///
-#define q_splitter_qbase_move_event q_splitter_super_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -4406,10 +4278,6 @@ void q_splitter_on_move_event(void* self, void (*callback)(void*, void*));
 /// @param event QCloseEvent*
 ///
 void q_splitter_close_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitter_super_close_event` instead
-///
-#define q_splitter_qbase_close_event q_splitter_super_close_event
 
 /// Inherited from QWidget
 ///
@@ -4444,10 +4312,6 @@ void q_splitter_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void q_splitter_context_menu_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitter_super_context_menu_event` instead
-///
-#define q_splitter_qbase_context_menu_event q_splitter_super_context_menu_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
@@ -4480,10 +4344,6 @@ void q_splitter_on_context_menu_event(void* self, void (*callback)(void*, void*)
 /// @param event QTabletEvent*
 ///
 void q_splitter_tablet_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitter_super_tablet_event` instead
-///
-#define q_splitter_qbase_tablet_event q_splitter_super_tablet_event
 
 /// Inherited from QWidget
 ///
@@ -4518,10 +4378,6 @@ void q_splitter_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void q_splitter_action_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitter_super_action_event` instead
-///
-#define q_splitter_qbase_action_event q_splitter_super_action_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -4554,10 +4410,6 @@ void q_splitter_on_action_event(void* self, void (*callback)(void*, void*));
 /// @param event QDragEnterEvent*
 ///
 void q_splitter_drag_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitter_super_drag_enter_event` instead
-///
-#define q_splitter_qbase_drag_enter_event q_splitter_super_drag_enter_event
 
 /// Inherited from QWidget
 ///
@@ -4592,10 +4444,6 @@ void q_splitter_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void q_splitter_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitter_super_drag_move_event` instead
-///
-#define q_splitter_qbase_drag_move_event q_splitter_super_drag_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -4628,10 +4476,6 @@ void q_splitter_on_drag_move_event(void* self, void (*callback)(void*, void*));
 /// @param event QDragLeaveEvent*
 ///
 void q_splitter_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitter_super_drag_leave_event` instead
-///
-#define q_splitter_qbase_drag_leave_event q_splitter_super_drag_leave_event
 
 /// Inherited from QWidget
 ///
@@ -4666,10 +4510,6 @@ void q_splitter_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_splitter_drop_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitter_super_drop_event` instead
-///
-#define q_splitter_qbase_drop_event q_splitter_super_drop_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4703,10 +4543,6 @@ void q_splitter_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void q_splitter_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitter_super_show_event` instead
-///
-#define q_splitter_qbase_show_event q_splitter_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -4739,10 +4575,6 @@ void q_splitter_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param event QHideEvent*
 ///
 void q_splitter_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitter_super_hide_event` instead
-///
-#define q_splitter_qbase_hide_event q_splitter_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -4779,10 +4611,6 @@ void q_splitter_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_splitter_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `q_splitter_super_native_event` instead
-///
-#define q_splitter_qbase_native_event q_splitter_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4818,10 +4646,6 @@ void q_splitter_on_native_event(void* self, bool (*callback)(void*, libqt_string
 ///
 int32_t q_splitter_metric(void* self, int32_t param1);
 
-/// @warning DEPRECATED: Use `q_splitter_super_metric` instead
-///
-#define q_splitter_qbase_metric q_splitter_super_metric
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -4854,10 +4678,6 @@ void q_splitter_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 /// @param painter QPainter*
 ///
 void q_splitter_init_painter(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_splitter_super_init_painter` instead
-///
-#define q_splitter_qbase_init_painter q_splitter_super_init_painter
 
 /// Inherited from QWidget
 ///
@@ -4892,10 +4712,6 @@ void q_splitter_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_splitter_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `q_splitter_super_redirected` instead
-///
-#define q_splitter_qbase_redirected q_splitter_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4927,10 +4743,6 @@ void q_splitter_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*
 /// @param self QSplitter*
 ///
 QPainter* q_splitter_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `q_splitter_super_shared_painter` instead
-///
-#define q_splitter_qbase_shared_painter q_splitter_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -4964,10 +4776,6 @@ void q_splitter_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void q_splitter_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_splitter_super_input_method_event` instead
-///
-#define q_splitter_qbase_input_method_event q_splitter_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -5000,10 +4808,6 @@ void q_splitter_on_input_method_event(void* self, void (*callback)(void*, void*)
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* q_splitter_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `q_splitter_super_input_method_query` instead
-///
-#define q_splitter_qbase_input_method_query q_splitter_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -5040,10 +4844,6 @@ void q_splitter_on_input_method_query(void* self, QVariant* (*callback)(void*, i
 ///
 bool q_splitter_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `q_splitter_super_focus_next_prev_child` instead
-///
-#define q_splitter_qbase_focus_next_prev_child q_splitter_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -5077,10 +4877,6 @@ void q_splitter_on_focus_next_prev_child(void* self, bool (*callback)(void*, boo
 /// @param event QEvent*
 ///
 bool q_splitter_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_splitter_super_event_filter` instead
-///
-#define q_splitter_qbase_event_filter q_splitter_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -5116,10 +4912,6 @@ void q_splitter_on_event_filter(void* self, bool (*callback)(void*, void*, void*
 ///
 void q_splitter_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitter_super_timer_event` instead
-///
-#define q_splitter_qbase_timer_event q_splitter_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -5152,10 +4944,6 @@ void q_splitter_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void q_splitter_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitter_super_custom_event` instead
-///
-#define q_splitter_qbase_custom_event q_splitter_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -5190,10 +4978,6 @@ void q_splitter_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_splitter_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_splitter_super_connect_notify` instead
-///
-#define q_splitter_qbase_connect_notify q_splitter_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5226,10 +5010,6 @@ void q_splitter_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_splitter_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_splitter_super_disconnect_notify` instead
-///
-#define q_splitter_qbase_disconnect_notify q_splitter_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -5264,10 +5044,6 @@ void q_splitter_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 void q_splitter_draw_frame(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_splitter_super_draw_frame` instead
-///
-#define q_splitter_qbase_draw_frame q_splitter_super_draw_frame
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#drawFrame)
@@ -5300,10 +5076,6 @@ void q_splitter_on_draw_frame(void* self, void (*callback)(void*, void*));
 ///
 void q_splitter_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_splitter_super_update_micro_focus` instead
-///
-#define q_splitter_qbase_update_micro_focus q_splitter_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5334,10 +5106,6 @@ void q_splitter_on_update_micro_focus(void* self, void (*callback)());
 /// @param self QSplitter*
 ///
 void q_splitter_create(void* self);
-
-/// @warning DEPRECATED: Use `q_splitter_super_create` instead
-///
-#define q_splitter_qbase_create q_splitter_super_create
 
 /// Inherited from QWidget
 ///
@@ -5370,10 +5138,6 @@ void q_splitter_on_create(void* self, void (*callback)());
 ///
 void q_splitter_destroy(void* self);
 
-/// @warning DEPRECATED: Use `q_splitter_super_destroy` instead
-///
-#define q_splitter_qbase_destroy q_splitter_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5404,10 +5168,6 @@ void q_splitter_on_destroy(void* self, void (*callback)());
 /// @param self QSplitter*
 ///
 bool q_splitter_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `q_splitter_super_focus_next_child` instead
-///
-#define q_splitter_qbase_focus_next_child q_splitter_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -5440,10 +5200,6 @@ void q_splitter_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_splitter_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `q_splitter_super_focus_previous_child` instead
-///
-#define q_splitter_qbase_focus_previous_child q_splitter_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5474,10 +5230,6 @@ void q_splitter_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self QSplitter*
 ///
 QObject* q_splitter_sender(void* self);
-
-/// @warning DEPRECATED: Use `q_splitter_super_sender` instead
-///
-#define q_splitter_qbase_sender q_splitter_super_sender
 
 /// Inherited from QObject
 ///
@@ -5510,10 +5262,6 @@ void q_splitter_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_splitter_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `q_splitter_super_sender_signal_index` instead
-///
-#define q_splitter_qbase_sender_signal_index q_splitter_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5545,10 +5293,6 @@ void q_splitter_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t q_splitter_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `q_splitter_super_receivers` instead
-///
-#define q_splitter_qbase_receivers q_splitter_super_receivers
 
 /// Inherited from QObject
 ///
@@ -5583,10 +5327,6 @@ void q_splitter_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 bool q_splitter_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_splitter_super_is_signal_connected` instead
-///
-#define q_splitter_qbase_is_signal_connected q_splitter_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5620,10 +5360,6 @@ void q_splitter_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double q_splitter_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `q_splitter_super_get_decoded_metric_f` instead
-///
-#define q_splitter_qbase_get_decoded_metric_f q_splitter_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///
@@ -5691,10 +5427,6 @@ const QMetaObject* q_splitterhandle_meta_object(void* self);
 ///
 void q_splitterhandle_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_meta_object` instead
-///
-#define q_splitterhandle_qbase_meta_object q_splitterhandle_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -5714,10 +5446,6 @@ void* q_splitterhandle_metacast(void* self, const char* param1);
 /// @param callback void* func(QSplitterHandle* self, const char* param1)
 ///
 void q_splitterhandle_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_metacast` instead
-///
-#define q_splitterhandle_qbase_metacast q_splitterhandle_super_metacast
 
 /// Base class method implementation
 ///
@@ -5739,10 +5467,6 @@ int32_t q_splitterhandle_metacall(void* self, int32_t param1, int param2, void* 
 /// @param callback int32_t func(QSplitterHandle* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_splitterhandle_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_metacall` instead
-///
-#define q_splitterhandle_qbase_metacall q_splitterhandle_super_metacall
 
 /// Base class method implementation
 ///
@@ -5805,10 +5529,6 @@ QSize* q_splitterhandle_size_hint(void* self);
 ///
 void q_splitterhandle_on_size_hint(void* self, QSize* (*callback)());
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_size_hint` instead
-///
-#define q_splitterhandle_qbase_size_hint q_splitterhandle_super_size_hint
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitterhandle.html#sizeHint)
 ///
 /// Base class method implementation
@@ -5832,10 +5552,6 @@ void q_splitterhandle_paint_event(void* self, void* param1);
 /// @param callback void func(QSplitterHandle* self, QPaintEvent* param1)
 ///
 void q_splitterhandle_on_paint_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_paint_event` instead
-///
-#define q_splitterhandle_qbase_paint_event q_splitterhandle_super_paint_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitterhandle.html#paintEvent)
 ///
@@ -5862,10 +5578,6 @@ void q_splitterhandle_mouse_move_event(void* self, void* param1);
 ///
 void q_splitterhandle_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_mouse_move_event` instead
-///
-#define q_splitterhandle_qbase_mouse_move_event q_splitterhandle_super_mouse_move_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitterhandle.html#mouseMoveEvent)
 ///
 /// Base class method implementation
@@ -5890,10 +5602,6 @@ void q_splitterhandle_mouse_press_event(void* self, void* param1);
 /// @param callback void func(QSplitterHandle* self, QMouseEvent* param1)
 ///
 void q_splitterhandle_on_mouse_press_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_mouse_press_event` instead
-///
-#define q_splitterhandle_qbase_mouse_press_event q_splitterhandle_super_mouse_press_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitterhandle.html#mousePressEvent)
 ///
@@ -5920,10 +5628,6 @@ void q_splitterhandle_mouse_release_event(void* self, void* param1);
 ///
 void q_splitterhandle_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_mouse_release_event` instead
-///
-#define q_splitterhandle_qbase_mouse_release_event q_splitterhandle_super_mouse_release_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitterhandle.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
@@ -5948,10 +5652,6 @@ void q_splitterhandle_resize_event(void* self, void* param1);
 /// @param callback void func(QSplitterHandle* self, QResizeEvent* param1)
 ///
 void q_splitterhandle_on_resize_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_resize_event` instead
-///
-#define q_splitterhandle_qbase_resize_event q_splitterhandle_super_resize_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitterhandle.html#resizeEvent)
 ///
@@ -5978,10 +5678,6 @@ bool q_splitterhandle_event(void* self, void* param1);
 ///
 void q_splitterhandle_on_event(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_event` instead
-///
-#define q_splitterhandle_qbase_event q_splitterhandle_super_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitterhandle.html#event)
 ///
 /// Base class method implementation
@@ -6007,10 +5703,6 @@ void q_splitterhandle_move_splitter(void* self, int p);
 ///
 void q_splitterhandle_on_move_splitter(void* self, void (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_move_splitter` instead
-///
-#define q_splitterhandle_qbase_move_splitter q_splitterhandle_super_move_splitter
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitterhandle.html#moveSplitter)
 ///
 /// Base class method implementation
@@ -6035,10 +5727,6 @@ int32_t q_splitterhandle_closest_legal_position(void* self, int p);
 /// @param callback int32_t func(QSplitterHandle* self, int p)
 ///
 void q_splitterhandle_on_closest_legal_position(void* self, int32_t (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_closest_legal_position` instead
-///
-#define q_splitterhandle_qbase_closest_legal_position q_splitterhandle_super_closest_legal_position
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitterhandle.html#closestLegalPosition)
 ///
@@ -9035,10 +8723,6 @@ int32_t q_splitterhandle_encode_metric_f(int32_t metric, double value);
 ///
 int32_t q_splitterhandle_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_dev_type` instead
-///
-#define q_splitterhandle_qbase_dev_type q_splitterhandle_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -9071,10 +8755,6 @@ void q_splitterhandle_on_dev_type(void* self, int32_t (*callback)());
 ///
 void q_splitterhandle_set_visible(void* self, bool visible);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_set_visible` instead
-///
-#define q_splitterhandle_qbase_set_visible q_splitterhandle_super_set_visible
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -9106,10 +8786,6 @@ void q_splitterhandle_on_set_visible(void* self, void (*callback)(void*, bool));
 /// @param self QSplitterHandle*
 ///
 QSize* q_splitterhandle_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_minimum_size_hint` instead
-///
-#define q_splitterhandle_qbase_minimum_size_hint q_splitterhandle_super_minimum_size_hint
 
 /// Inherited from QWidget
 ///
@@ -9145,10 +8821,6 @@ void q_splitterhandle_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 int32_t q_splitterhandle_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_height_for_width` instead
-///
-#define q_splitterhandle_qbase_height_for_width q_splitterhandle_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -9181,10 +8853,6 @@ void q_splitterhandle_on_height_for_width(void* self, int32_t (*callback)(void*,
 ///
 bool q_splitterhandle_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_has_height_for_width` instead
-///
-#define q_splitterhandle_qbase_has_height_for_width q_splitterhandle_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -9215,10 +8883,6 @@ void q_splitterhandle_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self QSplitterHandle*
 ///
 QPaintEngine* q_splitterhandle_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_paint_engine` instead
-///
-#define q_splitterhandle_qbase_paint_engine q_splitterhandle_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -9251,10 +8915,6 @@ void q_splitterhandle_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QMouseEvent*
 ///
 void q_splitterhandle_mouse_double_click_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_mouse_double_click_event` instead
-///
-#define q_splitterhandle_qbase_mouse_double_click_event q_splitterhandle_super_mouse_double_click_event
 
 /// Inherited from QWidget
 ///
@@ -9289,10 +8949,6 @@ void q_splitterhandle_on_mouse_double_click_event(void* self, void (*callback)(v
 ///
 void q_splitterhandle_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_wheel_event` instead
-///
-#define q_splitterhandle_qbase_wheel_event q_splitterhandle_super_wheel_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -9325,10 +8981,6 @@ void q_splitterhandle_on_wheel_event(void* self, void (*callback)(void*, void*))
 /// @param event QKeyEvent*
 ///
 void q_splitterhandle_key_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_key_press_event` instead
-///
-#define q_splitterhandle_qbase_key_press_event q_splitterhandle_super_key_press_event
 
 /// Inherited from QWidget
 ///
@@ -9363,10 +9015,6 @@ void q_splitterhandle_on_key_press_event(void* self, void (*callback)(void*, voi
 ///
 void q_splitterhandle_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_key_release_event` instead
-///
-#define q_splitterhandle_qbase_key_release_event q_splitterhandle_super_key_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -9399,10 +9047,6 @@ void q_splitterhandle_on_key_release_event(void* self, void (*callback)(void*, v
 /// @param event QFocusEvent*
 ///
 void q_splitterhandle_focus_in_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_focus_in_event` instead
-///
-#define q_splitterhandle_qbase_focus_in_event q_splitterhandle_super_focus_in_event
 
 /// Inherited from QWidget
 ///
@@ -9437,10 +9081,6 @@ void q_splitterhandle_on_focus_in_event(void* self, void (*callback)(void*, void
 ///
 void q_splitterhandle_focus_out_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_focus_out_event` instead
-///
-#define q_splitterhandle_qbase_focus_out_event q_splitterhandle_super_focus_out_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -9473,10 +9113,6 @@ void q_splitterhandle_on_focus_out_event(void* self, void (*callback)(void*, voi
 /// @param event QEnterEvent*
 ///
 void q_splitterhandle_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_enter_event` instead
-///
-#define q_splitterhandle_qbase_enter_event q_splitterhandle_super_enter_event
 
 /// Inherited from QWidget
 ///
@@ -9511,10 +9147,6 @@ void q_splitterhandle_on_enter_event(void* self, void (*callback)(void*, void*))
 ///
 void q_splitterhandle_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_leave_event` instead
-///
-#define q_splitterhandle_qbase_leave_event q_splitterhandle_super_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -9547,10 +9179,6 @@ void q_splitterhandle_on_leave_event(void* self, void (*callback)(void*, void*))
 /// @param event QMoveEvent*
 ///
 void q_splitterhandle_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_move_event` instead
-///
-#define q_splitterhandle_qbase_move_event q_splitterhandle_super_move_event
 
 /// Inherited from QWidget
 ///
@@ -9585,10 +9213,6 @@ void q_splitterhandle_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_splitterhandle_close_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_close_event` instead
-///
-#define q_splitterhandle_qbase_close_event q_splitterhandle_super_close_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -9621,10 +9245,6 @@ void q_splitterhandle_on_close_event(void* self, void (*callback)(void*, void*))
 /// @param event QContextMenuEvent*
 ///
 void q_splitterhandle_context_menu_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_context_menu_event` instead
-///
-#define q_splitterhandle_qbase_context_menu_event q_splitterhandle_super_context_menu_event
 
 /// Inherited from QWidget
 ///
@@ -9659,10 +9279,6 @@ void q_splitterhandle_on_context_menu_event(void* self, void (*callback)(void*, 
 ///
 void q_splitterhandle_tablet_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_tablet_event` instead
-///
-#define q_splitterhandle_qbase_tablet_event q_splitterhandle_super_tablet_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -9695,10 +9311,6 @@ void q_splitterhandle_on_tablet_event(void* self, void (*callback)(void*, void*)
 /// @param event QActionEvent*
 ///
 void q_splitterhandle_action_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_action_event` instead
-///
-#define q_splitterhandle_qbase_action_event q_splitterhandle_super_action_event
 
 /// Inherited from QWidget
 ///
@@ -9733,10 +9345,6 @@ void q_splitterhandle_on_action_event(void* self, void (*callback)(void*, void*)
 ///
 void q_splitterhandle_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_drag_enter_event` instead
-///
-#define q_splitterhandle_qbase_drag_enter_event q_splitterhandle_super_drag_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -9769,10 +9377,6 @@ void q_splitterhandle_on_drag_enter_event(void* self, void (*callback)(void*, vo
 /// @param event QDragMoveEvent*
 ///
 void q_splitterhandle_drag_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_drag_move_event` instead
-///
-#define q_splitterhandle_qbase_drag_move_event q_splitterhandle_super_drag_move_event
 
 /// Inherited from QWidget
 ///
@@ -9807,10 +9411,6 @@ void q_splitterhandle_on_drag_move_event(void* self, void (*callback)(void*, voi
 ///
 void q_splitterhandle_drag_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_drag_leave_event` instead
-///
-#define q_splitterhandle_qbase_drag_leave_event q_splitterhandle_super_drag_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -9843,10 +9443,6 @@ void q_splitterhandle_on_drag_leave_event(void* self, void (*callback)(void*, vo
 /// @param event QDropEvent*
 ///
 void q_splitterhandle_drop_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_drop_event` instead
-///
-#define q_splitterhandle_qbase_drop_event q_splitterhandle_super_drop_event
 
 /// Inherited from QWidget
 ///
@@ -9881,10 +9477,6 @@ void q_splitterhandle_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void q_splitterhandle_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_show_event` instead
-///
-#define q_splitterhandle_qbase_show_event q_splitterhandle_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -9917,10 +9509,6 @@ void q_splitterhandle_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param event QHideEvent*
 ///
 void q_splitterhandle_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_hide_event` instead
-///
-#define q_splitterhandle_qbase_hide_event q_splitterhandle_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -9957,10 +9545,6 @@ void q_splitterhandle_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_splitterhandle_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_native_event` instead
-///
-#define q_splitterhandle_qbase_native_event q_splitterhandle_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -9996,10 +9580,6 @@ void q_splitterhandle_on_native_event(void* self, bool (*callback)(void*, libqt_
 ///
 void q_splitterhandle_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_change_event` instead
-///
-#define q_splitterhandle_qbase_change_event q_splitterhandle_super_change_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -10032,10 +9612,6 @@ void q_splitterhandle_on_change_event(void* self, void (*callback)(void*, void*)
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
 int32_t q_splitterhandle_metric(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_metric` instead
-///
-#define q_splitterhandle_qbase_metric q_splitterhandle_super_metric
 
 /// Inherited from QWidget
 ///
@@ -10070,10 +9646,6 @@ void q_splitterhandle_on_metric(void* self, int32_t (*callback)(void*, int32_t))
 ///
 void q_splitterhandle_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_init_painter` instead
-///
-#define q_splitterhandle_qbase_init_painter q_splitterhandle_super_init_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -10107,10 +9679,6 @@ void q_splitterhandle_on_init_painter(void* self, void (*callback)(void*, void*)
 ///
 QPaintDevice* q_splitterhandle_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_redirected` instead
-///
-#define q_splitterhandle_qbase_redirected q_splitterhandle_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -10142,10 +9710,6 @@ void q_splitterhandle_on_redirected(void* self, QPaintDevice* (*callback)(void*,
 /// @param self QSplitterHandle*
 ///
 QPainter* q_splitterhandle_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_shared_painter` instead
-///
-#define q_splitterhandle_qbase_shared_painter q_splitterhandle_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -10179,10 +9743,6 @@ void q_splitterhandle_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void q_splitterhandle_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_input_method_event` instead
-///
-#define q_splitterhandle_qbase_input_method_event q_splitterhandle_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -10215,10 +9775,6 @@ void q_splitterhandle_on_input_method_event(void* self, void (*callback)(void*, 
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* q_splitterhandle_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_input_method_query` instead
-///
-#define q_splitterhandle_qbase_input_method_query q_splitterhandle_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -10255,10 +9811,6 @@ void q_splitterhandle_on_input_method_query(void* self, QVariant* (*callback)(vo
 ///
 bool q_splitterhandle_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_focus_next_prev_child` instead
-///
-#define q_splitterhandle_qbase_focus_next_prev_child q_splitterhandle_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -10292,10 +9844,6 @@ void q_splitterhandle_on_focus_next_prev_child(void* self, bool (*callback)(void
 /// @param event QEvent*
 ///
 bool q_splitterhandle_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_event_filter` instead
-///
-#define q_splitterhandle_qbase_event_filter q_splitterhandle_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -10331,10 +9879,6 @@ void q_splitterhandle_on_event_filter(void* self, bool (*callback)(void*, void*,
 ///
 void q_splitterhandle_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_timer_event` instead
-///
-#define q_splitterhandle_qbase_timer_event q_splitterhandle_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -10367,10 +9911,6 @@ void q_splitterhandle_on_timer_event(void* self, void (*callback)(void*, void*))
 /// @param event QChildEvent*
 ///
 void q_splitterhandle_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_child_event` instead
-///
-#define q_splitterhandle_qbase_child_event q_splitterhandle_super_child_event
 
 /// Inherited from QObject
 ///
@@ -10405,10 +9945,6 @@ void q_splitterhandle_on_child_event(void* self, void (*callback)(void*, void*))
 ///
 void q_splitterhandle_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_custom_event` instead
-///
-#define q_splitterhandle_qbase_custom_event q_splitterhandle_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -10441,10 +9977,6 @@ void q_splitterhandle_on_custom_event(void* self, void (*callback)(void*, void*)
 /// @param signal QMetaMethod*
 ///
 void q_splitterhandle_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_connect_notify` instead
-///
-#define q_splitterhandle_qbase_connect_notify q_splitterhandle_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -10479,10 +10011,6 @@ void q_splitterhandle_on_connect_notify(void* self, void (*callback)(void*, void
 ///
 void q_splitterhandle_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_disconnect_notify` instead
-///
-#define q_splitterhandle_qbase_disconnect_notify q_splitterhandle_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -10515,10 +10043,6 @@ void q_splitterhandle_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 void q_splitterhandle_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_update_micro_focus` instead
-///
-#define q_splitterhandle_qbase_update_micro_focus q_splitterhandle_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -10549,10 +10073,6 @@ void q_splitterhandle_on_update_micro_focus(void* self, void (*callback)());
 /// @param self QSplitterHandle*
 ///
 void q_splitterhandle_create(void* self);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_create` instead
-///
-#define q_splitterhandle_qbase_create q_splitterhandle_super_create
 
 /// Inherited from QWidget
 ///
@@ -10585,10 +10105,6 @@ void q_splitterhandle_on_create(void* self, void (*callback)());
 ///
 void q_splitterhandle_destroy(void* self);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_destroy` instead
-///
-#define q_splitterhandle_qbase_destroy q_splitterhandle_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -10619,10 +10135,6 @@ void q_splitterhandle_on_destroy(void* self, void (*callback)());
 /// @param self QSplitterHandle*
 ///
 bool q_splitterhandle_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_focus_next_child` instead
-///
-#define q_splitterhandle_qbase_focus_next_child q_splitterhandle_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -10655,10 +10167,6 @@ void q_splitterhandle_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_splitterhandle_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_focus_previous_child` instead
-///
-#define q_splitterhandle_qbase_focus_previous_child q_splitterhandle_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -10689,10 +10197,6 @@ void q_splitterhandle_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self QSplitterHandle*
 ///
 QObject* q_splitterhandle_sender(void* self);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_sender` instead
-///
-#define q_splitterhandle_qbase_sender q_splitterhandle_super_sender
 
 /// Inherited from QObject
 ///
@@ -10725,10 +10229,6 @@ void q_splitterhandle_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_splitterhandle_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_sender_signal_index` instead
-///
-#define q_splitterhandle_qbase_sender_signal_index q_splitterhandle_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -10760,10 +10260,6 @@ void q_splitterhandle_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t q_splitterhandle_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_receivers` instead
-///
-#define q_splitterhandle_qbase_receivers q_splitterhandle_super_receivers
 
 /// Inherited from QObject
 ///
@@ -10798,10 +10294,6 @@ void q_splitterhandle_on_receivers(void* self, int32_t (*callback)(void*, const 
 ///
 bool q_splitterhandle_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_splitterhandle_super_is_signal_connected` instead
-///
-#define q_splitterhandle_qbase_is_signal_connected q_splitterhandle_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -10835,10 +10327,6 @@ void q_splitterhandle_on_is_signal_connected(void* self, bool (*callback)(void*,
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double q_splitterhandle_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `q_splitterhandle_super_get_decoded_metric_f` instead
-///
-#define q_splitterhandle_qbase_get_decoded_metric_f q_splitterhandle_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

@@ -37,10 +37,6 @@ const QMetaObject* q_networkcookiejar_meta_object(void* self);
 ///
 void q_networkcookiejar_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_meta_object` instead
-///
-#define q_networkcookiejar_qbase_meta_object q_networkcookiejar_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_networkcookiejar_metacast(void* self, const char* param1);
 /// @param callback void* func(QNetworkCookieJar* self, const char* param1)
 ///
 void q_networkcookiejar_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_metacast` instead
-///
-#define q_networkcookiejar_qbase_metacast q_networkcookiejar_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_networkcookiejar_metacall(void* self, int32_t param1, int param2, void
 /// @param callback int32_t func(QNetworkCookieJar* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_networkcookiejar_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_metacall` instead
-///
-#define q_networkcookiejar_qbase_metacall q_networkcookiejar_super_metacall
 
 /// Base class method implementation
 ///
@@ -125,10 +113,6 @@ libqt_list q_networkcookiejar_cookies_for_url(void* self, void* url);
 ///
 void q_networkcookiejar_on_cookies_for_url(void* self, libqt_list (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_cookies_for_url` instead
-///
-#define q_networkcookiejar_qbase_cookies_for_url q_networkcookiejar_super_cookies_for_url
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#cookiesForUrl)
 ///
 /// Base class method implementation
@@ -157,10 +141,6 @@ bool q_networkcookiejar_set_cookies_from_url(void* self, libqt_list cookieList, 
 ///
 void q_networkcookiejar_on_set_cookies_from_url(void* self, bool (*callback)(void*, libqt_list, void*));
 
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_set_cookies_from_url` instead
-///
-#define q_networkcookiejar_qbase_set_cookies_from_url q_networkcookiejar_super_set_cookies_from_url
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#setCookiesFromUrl)
 ///
 /// Base class method implementation
@@ -187,10 +167,6 @@ bool q_networkcookiejar_insert_cookie(void* self, void* cookie);
 ///
 void q_networkcookiejar_on_insert_cookie(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_insert_cookie` instead
-///
-#define q_networkcookiejar_qbase_insert_cookie q_networkcookiejar_super_insert_cookie
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#insertCookie)
 ///
 /// Base class method implementation
@@ -216,10 +192,6 @@ bool q_networkcookiejar_update_cookie(void* self, void* cookie);
 ///
 void q_networkcookiejar_on_update_cookie(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_update_cookie` instead
-///
-#define q_networkcookiejar_qbase_update_cookie q_networkcookiejar_super_update_cookie
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#updateCookie)
 ///
 /// Base class method implementation
@@ -244,10 +216,6 @@ bool q_networkcookiejar_delete_cookie(void* self, void* cookie);
 /// @param callback bool func(QNetworkCookieJar* self, QNetworkCookie* cookie)
 ///
 void q_networkcookiejar_on_delete_cookie(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_delete_cookie` instead
-///
-#define q_networkcookiejar_qbase_delete_cookie q_networkcookiejar_super_delete_cookie
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#deleteCookie)
 ///
@@ -275,10 +243,6 @@ libqt_list q_networkcookiejar_all_cookies(void* self);
 ///
 void q_networkcookiejar_on_all_cookies(void* self, libqt_list (*callback)());
 
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_all_cookies` instead
-///
-#define q_networkcookiejar_qbase_all_cookies q_networkcookiejar_super_all_cookies
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#allCookies)
 ///
 /// Base class method implementation
@@ -305,10 +269,6 @@ void q_networkcookiejar_set_all_cookies(void* self, libqt_list cookieList);
 ///
 void q_networkcookiejar_on_set_all_cookies(void* self, void (*callback)(void*, libqt_list));
 
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_set_all_cookies` instead
-///
-#define q_networkcookiejar_qbase_set_all_cookies q_networkcookiejar_super_set_all_cookies
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#setAllCookies)
 ///
 /// Base class method implementation
@@ -334,10 +294,6 @@ bool q_networkcookiejar_validate_cookie(void* self, void* cookie, void* url);
 /// @param callback bool func(QNetworkCookieJar* self, QNetworkCookie* cookie, QUrl* url)
 ///
 void q_networkcookiejar_on_validate_cookie(void* self, bool (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_validate_cookie` instead
-///
-#define q_networkcookiejar_qbase_validate_cookie q_networkcookiejar_super_validate_cookie
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#validateCookie)
 ///
@@ -826,10 +782,6 @@ void q_networkcookiejar_on_destroyed1(void* self, void (*callback)(void*, void*)
 ///
 bool q_networkcookiejar_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_event` instead
-///
-#define q_networkcookiejar_qbase_event q_networkcookiejar_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -863,10 +815,6 @@ void q_networkcookiejar_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_networkcookiejar_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_event_filter` instead
-///
-#define q_networkcookiejar_qbase_event_filter q_networkcookiejar_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -902,10 +850,6 @@ void q_networkcookiejar_on_event_filter(void* self, bool (*callback)(void*, void
 ///
 void q_networkcookiejar_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_timer_event` instead
-///
-#define q_networkcookiejar_qbase_timer_event q_networkcookiejar_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -938,10 +882,6 @@ void q_networkcookiejar_on_timer_event(void* self, void (*callback)(void*, void*
 /// @param event QChildEvent*
 ///
 void q_networkcookiejar_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_child_event` instead
-///
-#define q_networkcookiejar_qbase_child_event q_networkcookiejar_super_child_event
 
 /// Inherited from QObject
 ///
@@ -976,10 +916,6 @@ void q_networkcookiejar_on_child_event(void* self, void (*callback)(void*, void*
 ///
 void q_networkcookiejar_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_custom_event` instead
-///
-#define q_networkcookiejar_qbase_custom_event q_networkcookiejar_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1012,10 +948,6 @@ void q_networkcookiejar_on_custom_event(void* self, void (*callback)(void*, void
 /// @param signal QMetaMethod*
 ///
 void q_networkcookiejar_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_connect_notify` instead
-///
-#define q_networkcookiejar_qbase_connect_notify q_networkcookiejar_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1050,10 +982,6 @@ void q_networkcookiejar_on_connect_notify(void* self, void (*callback)(void*, vo
 ///
 void q_networkcookiejar_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_disconnect_notify` instead
-///
-#define q_networkcookiejar_qbase_disconnect_notify q_networkcookiejar_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1086,10 +1014,6 @@ void q_networkcookiejar_on_disconnect_notify(void* self, void (*callback)(void*,
 ///
 QObject* q_networkcookiejar_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_sender` instead
-///
-#define q_networkcookiejar_qbase_sender q_networkcookiejar_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1120,10 +1044,6 @@ void q_networkcookiejar_on_sender(void* self, QObject* (*callback)());
 /// @param self QNetworkCookieJar*
 ///
 int32_t q_networkcookiejar_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_sender_signal_index` instead
-///
-#define q_networkcookiejar_qbase_sender_signal_index q_networkcookiejar_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1157,10 +1077,6 @@ void q_networkcookiejar_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 int32_t q_networkcookiejar_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_receivers` instead
-///
-#define q_networkcookiejar_qbase_receivers q_networkcookiejar_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1193,10 +1109,6 @@ void q_networkcookiejar_on_receivers(void* self, int32_t (*callback)(void*, cons
 /// @param signal QMetaMethod*
 ///
 bool q_networkcookiejar_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_networkcookiejar_super_is_signal_connected` instead
-///
-#define q_networkcookiejar_qbase_is_signal_connected q_networkcookiejar_super_is_signal_connected
 
 /// Inherited from QObject
 ///

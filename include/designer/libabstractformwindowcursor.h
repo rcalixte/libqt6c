@@ -29,10 +29,6 @@ QDesignerFormWindowInterface* q_designerformwindowcursorinterface_form_window(vo
 ///
 void q_designerformwindowcursorinterface_on_form_window(void* self, QDesignerFormWindowInterface* (*callback)());
 
-/// @warning DEPRECATED: Use `q_designerformwindowcursorinterface_super_form_window` instead
-///
-#define q_designerformwindowcursorinterface_qbase_form_window q_designerformwindowcursorinterface_super_form_window
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowcursorinterface.html#formWindow)
 ///
 /// Base class method implementation
@@ -57,10 +53,6 @@ bool q_designerformwindowcursorinterface_move_position(void* self, int32_t op, i
 /// @param callback bool func(QDesignerFormWindowCursorInterface* self, enum QDesignerFormWindowCursorInterface__MoveOperation op, enum QDesignerFormWindowCursorInterface__MoveMode mode)
 ///
 void q_designerformwindowcursorinterface_on_move_position(void* self, bool (*callback)(void*, int32_t, int32_t));
-
-/// @warning DEPRECATED: Use `q_designerformwindowcursorinterface_super_move_position` instead
-///
-#define q_designerformwindowcursorinterface_qbase_move_position q_designerformwindowcursorinterface_super_move_position
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowcursorinterface.html#movePosition)
 ///
@@ -87,10 +79,6 @@ int32_t q_designerformwindowcursorinterface_position(void* self);
 ///
 void q_designerformwindowcursorinterface_on_position(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_designerformwindowcursorinterface_super_position` instead
-///
-#define q_designerformwindowcursorinterface_qbase_position q_designerformwindowcursorinterface_super_position
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowcursorinterface.html#position)
 ///
 /// Base class method implementation
@@ -115,10 +103,6 @@ void q_designerformwindowcursorinterface_set_position(void* self, int pos, int32
 /// @param callback void func(QDesignerFormWindowCursorInterface* self, int pos, enum QDesignerFormWindowCursorInterface__MoveMode mode)
 ///
 void q_designerformwindowcursorinterface_on_set_position(void* self, void (*callback)(void*, int, int32_t));
-
-/// @warning DEPRECATED: Use `q_designerformwindowcursorinterface_super_set_position` instead
-///
-#define q_designerformwindowcursorinterface_qbase_set_position q_designerformwindowcursorinterface_super_set_position
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowcursorinterface.html#setPosition)
 ///
@@ -145,10 +129,6 @@ QWidget* q_designerformwindowcursorinterface_current(void* self);
 ///
 void q_designerformwindowcursorinterface_on_current(void* self, QWidget* (*callback)());
 
-/// @warning DEPRECATED: Use `q_designerformwindowcursorinterface_super_current` instead
-///
-#define q_designerformwindowcursorinterface_qbase_current q_designerformwindowcursorinterface_super_current
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowcursorinterface.html#current)
 ///
 /// Base class method implementation
@@ -171,10 +151,6 @@ int32_t q_designerformwindowcursorinterface_widget_count(void* self);
 /// @param callback int32_t func()
 ///
 void q_designerformwindowcursorinterface_on_widget_count(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_designerformwindowcursorinterface_super_widget_count` instead
-///
-#define q_designerformwindowcursorinterface_qbase_widget_count q_designerformwindowcursorinterface_super_widget_count
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowcursorinterface.html#widgetCount)
 ///
@@ -200,10 +176,6 @@ QWidget* q_designerformwindowcursorinterface_widget(void* self, int index);
 ///
 void q_designerformwindowcursorinterface_on_widget(void* self, QWidget* (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_designerformwindowcursorinterface_super_widget` instead
-///
-#define q_designerformwindowcursorinterface_qbase_widget q_designerformwindowcursorinterface_super_widget
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowcursorinterface.html#widget)
 ///
 /// Base class method implementation
@@ -228,10 +200,6 @@ bool q_designerformwindowcursorinterface_has_selection(void* self);
 ///
 void q_designerformwindowcursorinterface_on_has_selection(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_designerformwindowcursorinterface_super_has_selection` instead
-///
-#define q_designerformwindowcursorinterface_qbase_has_selection q_designerformwindowcursorinterface_super_has_selection
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowcursorinterface.html#hasSelection)
 ///
 /// Base class method implementation
@@ -254,10 +222,6 @@ int32_t q_designerformwindowcursorinterface_selected_widget_count(void* self);
 /// @param callback int32_t func()
 ///
 void q_designerformwindowcursorinterface_on_selected_widget_count(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_designerformwindowcursorinterface_super_selected_widget_count` instead
-///
-#define q_designerformwindowcursorinterface_qbase_selected_widget_count q_designerformwindowcursorinterface_super_selected_widget_count
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowcursorinterface.html#selectedWidgetCount)
 ///
@@ -282,10 +246,6 @@ QWidget* q_designerformwindowcursorinterface_selected_widget(void* self, int ind
 /// @param callback QWidget* func(QDesignerFormWindowCursorInterface* self, int index)
 ///
 void q_designerformwindowcursorinterface_on_selected_widget(void* self, QWidget* (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_designerformwindowcursorinterface_super_selected_widget` instead
-///
-#define q_designerformwindowcursorinterface_qbase_selected_widget q_designerformwindowcursorinterface_super_selected_widget
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowcursorinterface.html#selectedWidget)
 ///
@@ -312,10 +272,6 @@ void q_designerformwindowcursorinterface_set_property(void* self, const char* na
 /// @param callback void func(QDesignerFormWindowCursorInterface* self, const char* name, QVariant* value)
 ///
 void q_designerformwindowcursorinterface_on_set_property(void* self, void (*callback)(void*, const char*, void*));
-
-/// @warning DEPRECATED: Use `q_designerformwindowcursorinterface_super_set_property` instead
-///
-#define q_designerformwindowcursorinterface_qbase_set_property q_designerformwindowcursorinterface_super_set_property
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowcursorinterface.html#setProperty)
 ///
@@ -345,10 +301,6 @@ void q_designerformwindowcursorinterface_set_widget_property(void* self, void* w
 ///
 void q_designerformwindowcursorinterface_on_set_widget_property(void* self, void (*callback)(void*, void*, const char*, void*));
 
-/// @warning DEPRECATED: Use `q_designerformwindowcursorinterface_super_set_widget_property` instead
-///
-#define q_designerformwindowcursorinterface_qbase_set_widget_property q_designerformwindowcursorinterface_super_set_widget_property
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowcursorinterface.html#setWidgetProperty)
 ///
 /// Base class method implementation
@@ -376,10 +328,6 @@ void q_designerformwindowcursorinterface_reset_widget_property(void* self, void*
 /// @param callback void func(QDesignerFormWindowCursorInterface* self, QWidget* widget, const char* name)
 ///
 void q_designerformwindowcursorinterface_on_reset_widget_property(void* self, void (*callback)(void*, void*, const char*));
-
-/// @warning DEPRECATED: Use `q_designerformwindowcursorinterface_super_reset_widget_property` instead
-///
-#define q_designerformwindowcursorinterface_qbase_reset_widget_property q_designerformwindowcursorinterface_super_reset_widget_property
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowcursorinterface.html#resetWidgetProperty)
 ///

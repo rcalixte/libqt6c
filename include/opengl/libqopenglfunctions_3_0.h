@@ -29,10 +29,6 @@ bool q_openglfunctions_3_0_initialize_open_g_l_functions(void* self);
 ///
 void q_openglfunctions_3_0_on_initialize_open_g_l_functions(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_openglfunctions_3_0_super_initialize_open_g_l_functions` instead
-///
-#define q_openglfunctions_3_0_qbase_initialize_open_g_l_functions q_openglfunctions_3_0_super_initialize_open_g_l_functions
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0.html#initializeOpenGLFunctions)
 ///
 /// Base class method implementation
@@ -5761,10 +5757,6 @@ void q_openglfunctions_3_0_gl_vertex_attrib_i1i(void* self, uint32_t index, int3
 ///
 bool q_openglfunctions_3_0_is_initialized(void* self);
 
-/// @warning DEPRECATED: Use `q_openglfunctions_3_0_super_is_initialized` instead
-///
-#define q_openglfunctions_3_0_qbase_is_initialized q_openglfunctions_3_0_super_is_initialized
-
 /// Inherited from QAbstractOpenGLFunctions
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractopenglfunctions.html#isInitialized)
@@ -5797,10 +5789,6 @@ void q_openglfunctions_3_0_on_is_initialized(void* self, bool (*callback)());
 ///
 void q_openglfunctions_3_0_set_owning_context(void* self, void* context);
 
-/// @warning DEPRECATED: Use `q_openglfunctions_3_0_super_set_owning_context` instead
-///
-#define q_openglfunctions_3_0_qbase_set_owning_context q_openglfunctions_3_0_super_set_owning_context
-
 /// Inherited from QAbstractOpenGLFunctions
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractopenglfunctions.html#setOwningContext)
@@ -5832,10 +5820,6 @@ void q_openglfunctions_3_0_on_set_owning_context(void* self, void (*callback)(vo
 /// @param self QOpenGLFunctions_3_0*
 ///
 QOpenGLContext* q_openglfunctions_3_0_owning_context(void* self);
-
-/// @warning DEPRECATED: Use `q_openglfunctions_3_0_super_owning_context` instead
-///
-#define q_openglfunctions_3_0_qbase_owning_context q_openglfunctions_3_0_super_owning_context
 
 /// Inherited from QAbstractOpenGLFunctions
 ///

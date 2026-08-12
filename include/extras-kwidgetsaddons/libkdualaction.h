@@ -41,10 +41,6 @@ const QMetaObject* k_dualaction_meta_object(void* self);
 ///
 void k_dualaction_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_dualaction_super_meta_object` instead
-///
-#define k_dualaction_qbase_meta_object k_dualaction_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -64,10 +60,6 @@ void* k_dualaction_metacast(void* self, const char* param1);
 /// @param callback void* func(KDualAction* self, const char* param1)
 ///
 void k_dualaction_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_dualaction_super_metacast` instead
-///
-#define k_dualaction_qbase_metacast k_dualaction_super_metacast
 
 /// Base class method implementation
 ///
@@ -89,10 +81,6 @@ int32_t k_dualaction_metacall(void* self, int32_t param1, int param2, void* para
 /// @param callback int32_t func(KDualAction* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_dualaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_dualaction_super_metacall` instead
-///
-#define k_dualaction_qbase_metacall k_dualaction_super_metacall
 
 /// Base class method implementation
 ///
@@ -1379,10 +1367,6 @@ void k_dualaction_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool k_dualaction_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_dualaction_super_event` instead
-///
-#define k_dualaction_qbase_event k_dualaction_super_event
-
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#event)
@@ -1416,10 +1400,6 @@ void k_dualaction_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool k_dualaction_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_dualaction_super_event_filter` instead
-///
-#define k_dualaction_qbase_event_filter k_dualaction_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1455,10 +1435,6 @@ void k_dualaction_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void k_dualaction_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_dualaction_super_timer_event` instead
-///
-#define k_dualaction_qbase_timer_event k_dualaction_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1491,10 +1467,6 @@ void k_dualaction_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void k_dualaction_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_dualaction_super_child_event` instead
-///
-#define k_dualaction_qbase_child_event k_dualaction_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1529,10 +1501,6 @@ void k_dualaction_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_dualaction_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_dualaction_super_custom_event` instead
-///
-#define k_dualaction_qbase_custom_event k_dualaction_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1565,10 +1533,6 @@ void k_dualaction_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void k_dualaction_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_dualaction_super_connect_notify` instead
-///
-#define k_dualaction_qbase_connect_notify k_dualaction_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1603,10 +1567,6 @@ void k_dualaction_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void k_dualaction_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_dualaction_super_disconnect_notify` instead
-///
-#define k_dualaction_qbase_disconnect_notify k_dualaction_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1639,10 +1599,6 @@ void k_dualaction_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 QObject* k_dualaction_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_dualaction_super_sender` instead
-///
-#define k_dualaction_qbase_sender k_dualaction_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1673,10 +1629,6 @@ void k_dualaction_on_sender(void* self, QObject* (*callback)());
 /// @param self KDualAction*
 ///
 int32_t k_dualaction_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_dualaction_super_sender_signal_index` instead
-///
-#define k_dualaction_qbase_sender_signal_index k_dualaction_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1710,10 +1662,6 @@ void k_dualaction_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_dualaction_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_dualaction_super_receivers` instead
-///
-#define k_dualaction_qbase_receivers k_dualaction_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1746,10 +1694,6 @@ void k_dualaction_on_receivers(void* self, int32_t (*callback)(void*, const char
 /// @param signal QMetaMethod*
 ///
 bool k_dualaction_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_dualaction_super_is_signal_connected` instead
-///
-#define k_dualaction_qbase_is_signal_connected k_dualaction_super_is_signal_connected
 
 /// Inherited from QObject
 ///

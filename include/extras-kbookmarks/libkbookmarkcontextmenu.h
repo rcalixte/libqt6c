@@ -44,10 +44,6 @@ const QMetaObject* k_bookmarkcontextmenu_meta_object(void* self);
 ///
 void k_bookmarkcontextmenu_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_meta_object` instead
-///
-#define k_bookmarkcontextmenu_qbase_meta_object k_bookmarkcontextmenu_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -67,10 +63,6 @@ void* k_bookmarkcontextmenu_metacast(void* self, const char* param1);
 /// @param callback void* func(KBookmarkContextMenu* self, const char* param1)
 ///
 void k_bookmarkcontextmenu_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_metacast` instead
-///
-#define k_bookmarkcontextmenu_qbase_metacast k_bookmarkcontextmenu_super_metacast
 
 /// Base class method implementation
 ///
@@ -92,10 +84,6 @@ int32_t k_bookmarkcontextmenu_metacall(void* self, int32_t param1, int param2, v
 /// @param callback int32_t func(KBookmarkContextMenu* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_bookmarkcontextmenu_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_metacall` instead
-///
-#define k_bookmarkcontextmenu_qbase_metacall k_bookmarkcontextmenu_super_metacall
 
 /// Base class method implementation
 ///
@@ -128,10 +116,6 @@ void k_bookmarkcontextmenu_add_actions(void* self);
 /// @param callback void func()
 ///
 void k_bookmarkcontextmenu_on_add_actions(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_add_actions` instead
-///
-#define k_bookmarkcontextmenu_qbase_add_actions k_bookmarkcontextmenu_super_add_actions
 
 /// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#addActions)
 ///
@@ -205,10 +189,6 @@ void k_bookmarkcontextmenu_add_bookmark(void* self);
 ///
 void k_bookmarkcontextmenu_on_add_bookmark(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_add_bookmark` instead
-///
-#define k_bookmarkcontextmenu_qbase_add_bookmark k_bookmarkcontextmenu_super_add_bookmark
-
 /// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#addBookmark)
 ///
 /// Base class method implementation
@@ -231,10 +211,6 @@ void k_bookmarkcontextmenu_add_folder_actions(void* self);
 /// @param callback void func()
 ///
 void k_bookmarkcontextmenu_on_add_folder_actions(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_add_folder_actions` instead
-///
-#define k_bookmarkcontextmenu_qbase_add_folder_actions k_bookmarkcontextmenu_super_add_folder_actions
 
 /// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#addFolderActions)
 ///
@@ -259,10 +235,6 @@ void k_bookmarkcontextmenu_add_properties(void* self);
 ///
 void k_bookmarkcontextmenu_on_add_properties(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_add_properties` instead
-///
-#define k_bookmarkcontextmenu_qbase_add_properties k_bookmarkcontextmenu_super_add_properties
-
 /// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#addProperties)
 ///
 /// Base class method implementation
@@ -285,10 +257,6 @@ void k_bookmarkcontextmenu_add_bookmark_actions(void* self);
 /// @param callback void func()
 ///
 void k_bookmarkcontextmenu_on_add_bookmark_actions(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_add_bookmark_actions` instead
-///
-#define k_bookmarkcontextmenu_qbase_add_bookmark_actions k_bookmarkcontextmenu_super_add_bookmark_actions
 
 /// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#addBookmarkActions)
 ///
@@ -313,10 +281,6 @@ void k_bookmarkcontextmenu_add_open_folder_in_tabs(void* self);
 ///
 void k_bookmarkcontextmenu_on_add_open_folder_in_tabs(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_add_open_folder_in_tabs` instead
-///
-#define k_bookmarkcontextmenu_qbase_add_open_folder_in_tabs k_bookmarkcontextmenu_super_add_open_folder_in_tabs
-
 /// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#addOpenFolderInTabs)
 ///
 /// Base class method implementation
@@ -340,10 +304,6 @@ KBookmarkManager* k_bookmarkcontextmenu_manager(void* self);
 ///
 void k_bookmarkcontextmenu_on_manager(void* self, KBookmarkManager* (*callback)());
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_manager` instead
-///
-#define k_bookmarkcontextmenu_qbase_manager k_bookmarkcontextmenu_super_manager
-
 /// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#manager)
 ///
 /// Base class method implementation
@@ -366,10 +326,6 @@ KBookmarkOwner* k_bookmarkcontextmenu_owner(void* self);
 /// @param callback KBookmarkOwner* func()
 ///
 void k_bookmarkcontextmenu_on_owner(void* self, KBookmarkOwner* (*callback)());
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_owner` instead
-///
-#define k_bookmarkcontextmenu_qbase_owner k_bookmarkcontextmenu_super_owner
 
 /// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#owner)
 ///
@@ -395,10 +351,6 @@ KBookmark* k_bookmarkcontextmenu_bookmark(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_bookmarkcontextmenu_on_bookmark(void* self, KBookmark* (*callback)());
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_bookmark` instead
-///
-#define k_bookmarkcontextmenu_qbase_bookmark k_bookmarkcontextmenu_super_bookmark
 
 /// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#bookmark)
 ///
@@ -3849,10 +3801,6 @@ int32_t k_bookmarkcontextmenu_encode_metric_f(int32_t metric, double value);
 ///
 QSize* k_bookmarkcontextmenu_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_size_hint` instead
-///
-#define k_bookmarkcontextmenu_qbase_size_hint k_bookmarkcontextmenu_super_size_hint
-
 /// Inherited from QMenu
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#sizeHint)
@@ -3887,10 +3835,6 @@ void k_bookmarkcontextmenu_on_size_hint(void* self, QSize* (*callback)());
 ///
 void k_bookmarkcontextmenu_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_change_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_change_event k_bookmarkcontextmenu_super_change_event
-
 /// Inherited from QMenu
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#changeEvent)
@@ -3923,10 +3867,6 @@ void k_bookmarkcontextmenu_on_change_event(void* self, void (*callback)(void*, v
 /// @param param1 QKeyEvent*
 ///
 void k_bookmarkcontextmenu_key_press_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_key_press_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_key_press_event k_bookmarkcontextmenu_super_key_press_event
 
 /// Inherited from QMenu
 ///
@@ -3961,10 +3901,6 @@ void k_bookmarkcontextmenu_on_key_press_event(void* self, void (*callback)(void*
 ///
 void k_bookmarkcontextmenu_mouse_release_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_mouse_release_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_mouse_release_event k_bookmarkcontextmenu_super_mouse_release_event
-
 /// Inherited from QMenu
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#mouseReleaseEvent)
@@ -3997,10 +3933,6 @@ void k_bookmarkcontextmenu_on_mouse_release_event(void* self, void (*callback)(v
 /// @param param1 QMouseEvent*
 ///
 void k_bookmarkcontextmenu_mouse_press_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_mouse_press_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_mouse_press_event k_bookmarkcontextmenu_super_mouse_press_event
 
 /// Inherited from QMenu
 ///
@@ -4035,10 +3967,6 @@ void k_bookmarkcontextmenu_on_mouse_press_event(void* self, void (*callback)(voi
 ///
 void k_bookmarkcontextmenu_mouse_move_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_mouse_move_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_mouse_move_event k_bookmarkcontextmenu_super_mouse_move_event
-
 /// Inherited from QMenu
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#mouseMoveEvent)
@@ -4071,10 +3999,6 @@ void k_bookmarkcontextmenu_on_mouse_move_event(void* self, void (*callback)(void
 /// @param param1 QWheelEvent*
 ///
 void k_bookmarkcontextmenu_wheel_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_wheel_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_wheel_event k_bookmarkcontextmenu_super_wheel_event
 
 /// Inherited from QMenu
 ///
@@ -4109,10 +4033,6 @@ void k_bookmarkcontextmenu_on_wheel_event(void* self, void (*callback)(void*, vo
 ///
 void k_bookmarkcontextmenu_enter_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_enter_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_enter_event k_bookmarkcontextmenu_super_enter_event
-
 /// Inherited from QMenu
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#enterEvent)
@@ -4145,10 +4065,6 @@ void k_bookmarkcontextmenu_on_enter_event(void* self, void (*callback)(void*, vo
 /// @param param1 QEvent*
 ///
 void k_bookmarkcontextmenu_leave_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_leave_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_leave_event k_bookmarkcontextmenu_super_leave_event
 
 /// Inherited from QMenu
 ///
@@ -4183,10 +4099,6 @@ void k_bookmarkcontextmenu_on_leave_event(void* self, void (*callback)(void*, vo
 ///
 void k_bookmarkcontextmenu_hide_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_hide_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_hide_event k_bookmarkcontextmenu_super_hide_event
-
 /// Inherited from QMenu
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#hideEvent)
@@ -4219,10 +4131,6 @@ void k_bookmarkcontextmenu_on_hide_event(void* self, void (*callback)(void*, voi
 /// @param param1 QPaintEvent*
 ///
 void k_bookmarkcontextmenu_paint_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_paint_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_paint_event k_bookmarkcontextmenu_super_paint_event
 
 /// Inherited from QMenu
 ///
@@ -4257,10 +4165,6 @@ void k_bookmarkcontextmenu_on_paint_event(void* self, void (*callback)(void*, vo
 ///
 void k_bookmarkcontextmenu_action_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_action_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_action_event k_bookmarkcontextmenu_super_action_event
-
 /// Inherited from QMenu
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#actionEvent)
@@ -4293,10 +4197,6 @@ void k_bookmarkcontextmenu_on_action_event(void* self, void (*callback)(void*, v
 /// @param param1 QTimerEvent*
 ///
 void k_bookmarkcontextmenu_timer_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_timer_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_timer_event k_bookmarkcontextmenu_super_timer_event
 
 /// Inherited from QMenu
 ///
@@ -4331,10 +4231,6 @@ void k_bookmarkcontextmenu_on_timer_event(void* self, void (*callback)(void*, vo
 ///
 bool k_bookmarkcontextmenu_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_event k_bookmarkcontextmenu_super_event
-
 /// Inherited from QMenu
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#event)
@@ -4367,10 +4263,6 @@ void k_bookmarkcontextmenu_on_event(void* self, bool (*callback)(void*, void*));
 /// @param next bool
 ///
 bool k_bookmarkcontextmenu_focus_next_prev_child(void* self, bool next);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_focus_next_prev_child` instead
-///
-#define k_bookmarkcontextmenu_qbase_focus_next_prev_child k_bookmarkcontextmenu_super_focus_next_prev_child
 
 /// Inherited from QMenu
 ///
@@ -4406,10 +4298,6 @@ void k_bookmarkcontextmenu_on_focus_next_prev_child(void* self, bool (*callback)
 ///
 void k_bookmarkcontextmenu_init_style_option(void* self, void* option, void* action);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_init_style_option` instead
-///
-#define k_bookmarkcontextmenu_qbase_init_style_option k_bookmarkcontextmenu_super_init_style_option
-
 /// Inherited from QMenu
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#initStyleOption)
@@ -4443,10 +4331,6 @@ void k_bookmarkcontextmenu_on_init_style_option(void* self, void (*callback)(voi
 ///
 int32_t k_bookmarkcontextmenu_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_dev_type` instead
-///
-#define k_bookmarkcontextmenu_qbase_dev_type k_bookmarkcontextmenu_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -4479,10 +4363,6 @@ void k_bookmarkcontextmenu_on_dev_type(void* self, int32_t (*callback)());
 ///
 void k_bookmarkcontextmenu_set_visible(void* self, bool visible);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_set_visible` instead
-///
-#define k_bookmarkcontextmenu_qbase_set_visible k_bookmarkcontextmenu_super_set_visible
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -4514,10 +4394,6 @@ void k_bookmarkcontextmenu_on_set_visible(void* self, void (*callback)(void*, bo
 /// @param self KBookmarkContextMenu*
 ///
 QSize* k_bookmarkcontextmenu_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_minimum_size_hint` instead
-///
-#define k_bookmarkcontextmenu_qbase_minimum_size_hint k_bookmarkcontextmenu_super_minimum_size_hint
 
 /// Inherited from QWidget
 ///
@@ -4553,10 +4429,6 @@ void k_bookmarkcontextmenu_on_minimum_size_hint(void* self, QSize* (*callback)()
 ///
 int32_t k_bookmarkcontextmenu_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_height_for_width` instead
-///
-#define k_bookmarkcontextmenu_qbase_height_for_width k_bookmarkcontextmenu_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -4589,10 +4461,6 @@ void k_bookmarkcontextmenu_on_height_for_width(void* self, int32_t (*callback)(v
 ///
 bool k_bookmarkcontextmenu_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_has_height_for_width` instead
-///
-#define k_bookmarkcontextmenu_qbase_has_height_for_width k_bookmarkcontextmenu_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -4623,10 +4491,6 @@ void k_bookmarkcontextmenu_on_has_height_for_width(void* self, bool (*callback)(
 /// @param self KBookmarkContextMenu*
 ///
 QPaintEngine* k_bookmarkcontextmenu_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_paint_engine` instead
-///
-#define k_bookmarkcontextmenu_qbase_paint_engine k_bookmarkcontextmenu_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -4659,10 +4523,6 @@ void k_bookmarkcontextmenu_on_paint_engine(void* self, QPaintEngine* (*callback)
 /// @param event QMouseEvent*
 ///
 void k_bookmarkcontextmenu_mouse_double_click_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_mouse_double_click_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_mouse_double_click_event k_bookmarkcontextmenu_super_mouse_double_click_event
 
 /// Inherited from QWidget
 ///
@@ -4697,10 +4557,6 @@ void k_bookmarkcontextmenu_on_mouse_double_click_event(void* self, void (*callba
 ///
 void k_bookmarkcontextmenu_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_key_release_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_key_release_event k_bookmarkcontextmenu_super_key_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -4733,10 +4589,6 @@ void k_bookmarkcontextmenu_on_key_release_event(void* self, void (*callback)(voi
 /// @param event QFocusEvent*
 ///
 void k_bookmarkcontextmenu_focus_in_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_focus_in_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_focus_in_event k_bookmarkcontextmenu_super_focus_in_event
 
 /// Inherited from QWidget
 ///
@@ -4771,10 +4623,6 @@ void k_bookmarkcontextmenu_on_focus_in_event(void* self, void (*callback)(void*,
 ///
 void k_bookmarkcontextmenu_focus_out_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_focus_out_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_focus_out_event k_bookmarkcontextmenu_super_focus_out_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -4807,10 +4655,6 @@ void k_bookmarkcontextmenu_on_focus_out_event(void* self, void (*callback)(void*
 /// @param event QMoveEvent*
 ///
 void k_bookmarkcontextmenu_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_move_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_move_event k_bookmarkcontextmenu_super_move_event
 
 /// Inherited from QWidget
 ///
@@ -4845,10 +4689,6 @@ void k_bookmarkcontextmenu_on_move_event(void* self, void (*callback)(void*, voi
 ///
 void k_bookmarkcontextmenu_resize_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_resize_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_resize_event k_bookmarkcontextmenu_super_resize_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
@@ -4881,10 +4721,6 @@ void k_bookmarkcontextmenu_on_resize_event(void* self, void (*callback)(void*, v
 /// @param event QCloseEvent*
 ///
 void k_bookmarkcontextmenu_close_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_close_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_close_event k_bookmarkcontextmenu_super_close_event
 
 /// Inherited from QWidget
 ///
@@ -4919,10 +4755,6 @@ void k_bookmarkcontextmenu_on_close_event(void* self, void (*callback)(void*, vo
 ///
 void k_bookmarkcontextmenu_context_menu_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_context_menu_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_context_menu_event k_bookmarkcontextmenu_super_context_menu_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
@@ -4955,10 +4787,6 @@ void k_bookmarkcontextmenu_on_context_menu_event(void* self, void (*callback)(vo
 /// @param event QTabletEvent*
 ///
 void k_bookmarkcontextmenu_tablet_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_tablet_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_tablet_event k_bookmarkcontextmenu_super_tablet_event
 
 /// Inherited from QWidget
 ///
@@ -4993,10 +4821,6 @@ void k_bookmarkcontextmenu_on_tablet_event(void* self, void (*callback)(void*, v
 ///
 void k_bookmarkcontextmenu_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_drag_enter_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_drag_enter_event k_bookmarkcontextmenu_super_drag_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -5029,10 +4853,6 @@ void k_bookmarkcontextmenu_on_drag_enter_event(void* self, void (*callback)(void
 /// @param event QDragMoveEvent*
 ///
 void k_bookmarkcontextmenu_drag_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_drag_move_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_drag_move_event k_bookmarkcontextmenu_super_drag_move_event
 
 /// Inherited from QWidget
 ///
@@ -5067,10 +4887,6 @@ void k_bookmarkcontextmenu_on_drag_move_event(void* self, void (*callback)(void*
 ///
 void k_bookmarkcontextmenu_drag_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_drag_leave_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_drag_leave_event k_bookmarkcontextmenu_super_drag_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -5104,10 +4920,6 @@ void k_bookmarkcontextmenu_on_drag_leave_event(void* self, void (*callback)(void
 ///
 void k_bookmarkcontextmenu_drop_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_drop_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_drop_event k_bookmarkcontextmenu_super_drop_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -5140,10 +4952,6 @@ void k_bookmarkcontextmenu_on_drop_event(void* self, void (*callback)(void*, voi
 /// @param event QShowEvent*
 ///
 void k_bookmarkcontextmenu_show_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_show_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_show_event k_bookmarkcontextmenu_super_show_event
 
 /// Inherited from QWidget
 ///
@@ -5180,10 +4988,6 @@ void k_bookmarkcontextmenu_on_show_event(void* self, void (*callback)(void*, voi
 ///
 bool k_bookmarkcontextmenu_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_native_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_native_event k_bookmarkcontextmenu_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -5219,10 +5023,6 @@ void k_bookmarkcontextmenu_on_native_event(void* self, bool (*callback)(void*, l
 ///
 int32_t k_bookmarkcontextmenu_metric(void* self, int32_t param1);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_metric` instead
-///
-#define k_bookmarkcontextmenu_qbase_metric k_bookmarkcontextmenu_super_metric
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -5255,10 +5055,6 @@ void k_bookmarkcontextmenu_on_metric(void* self, int32_t (*callback)(void*, int3
 /// @param painter QPainter*
 ///
 void k_bookmarkcontextmenu_init_painter(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_init_painter` instead
-///
-#define k_bookmarkcontextmenu_qbase_init_painter k_bookmarkcontextmenu_super_init_painter
 
 /// Inherited from QWidget
 ///
@@ -5293,10 +5089,6 @@ void k_bookmarkcontextmenu_on_init_painter(void* self, void (*callback)(void*, v
 ///
 QPaintDevice* k_bookmarkcontextmenu_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_redirected` instead
-///
-#define k_bookmarkcontextmenu_qbase_redirected k_bookmarkcontextmenu_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -5328,10 +5120,6 @@ void k_bookmarkcontextmenu_on_redirected(void* self, QPaintDevice* (*callback)(v
 /// @param self KBookmarkContextMenu*
 ///
 QPainter* k_bookmarkcontextmenu_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_shared_painter` instead
-///
-#define k_bookmarkcontextmenu_qbase_shared_painter k_bookmarkcontextmenu_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -5365,10 +5153,6 @@ void k_bookmarkcontextmenu_on_shared_painter(void* self, QPainter* (*callback)()
 ///
 void k_bookmarkcontextmenu_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_input_method_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_input_method_event k_bookmarkcontextmenu_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -5401,10 +5185,6 @@ void k_bookmarkcontextmenu_on_input_method_event(void* self, void (*callback)(vo
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* k_bookmarkcontextmenu_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_input_method_query` instead
-///
-#define k_bookmarkcontextmenu_qbase_input_method_query k_bookmarkcontextmenu_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -5442,10 +5222,6 @@ void k_bookmarkcontextmenu_on_input_method_query(void* self, QVariant* (*callbac
 ///
 bool k_bookmarkcontextmenu_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_event_filter` instead
-///
-#define k_bookmarkcontextmenu_qbase_event_filter k_bookmarkcontextmenu_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -5480,10 +5256,6 @@ void k_bookmarkcontextmenu_on_event_filter(void* self, bool (*callback)(void*, v
 ///
 void k_bookmarkcontextmenu_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_child_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_child_event k_bookmarkcontextmenu_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -5516,10 +5288,6 @@ void k_bookmarkcontextmenu_on_child_event(void* self, void (*callback)(void*, vo
 /// @param event QEvent*
 ///
 void k_bookmarkcontextmenu_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_custom_event` instead
-///
-#define k_bookmarkcontextmenu_qbase_custom_event k_bookmarkcontextmenu_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -5554,10 +5322,6 @@ void k_bookmarkcontextmenu_on_custom_event(void* self, void (*callback)(void*, v
 ///
 void k_bookmarkcontextmenu_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_connect_notify` instead
-///
-#define k_bookmarkcontextmenu_qbase_connect_notify k_bookmarkcontextmenu_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5591,10 +5355,6 @@ void k_bookmarkcontextmenu_on_connect_notify(void* self, void (*callback)(void*,
 ///
 void k_bookmarkcontextmenu_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_disconnect_notify` instead
-///
-#define k_bookmarkcontextmenu_qbase_disconnect_notify k_bookmarkcontextmenu_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5627,10 +5387,6 @@ void k_bookmarkcontextmenu_on_disconnect_notify(void* self, void (*callback)(voi
 ///
 int32_t k_bookmarkcontextmenu_column_count(void* self);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_column_count` instead
-///
-#define k_bookmarkcontextmenu_qbase_column_count k_bookmarkcontextmenu_super_column_count
-
 /// Inherited from QMenu
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#columnCount)
@@ -5661,10 +5417,6 @@ void k_bookmarkcontextmenu_on_column_count(void* self, int32_t (*callback)());
 /// @param self KBookmarkContextMenu*
 ///
 void k_bookmarkcontextmenu_update_micro_focus(void* self);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_update_micro_focus` instead
-///
-#define k_bookmarkcontextmenu_qbase_update_micro_focus k_bookmarkcontextmenu_super_update_micro_focus
 
 /// Inherited from QWidget
 ///
@@ -5697,10 +5449,6 @@ void k_bookmarkcontextmenu_on_update_micro_focus(void* self, void (*callback)())
 ///
 void k_bookmarkcontextmenu_create(void* self);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_create` instead
-///
-#define k_bookmarkcontextmenu_qbase_create k_bookmarkcontextmenu_super_create
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -5731,10 +5479,6 @@ void k_bookmarkcontextmenu_on_create(void* self, void (*callback)());
 /// @param self KBookmarkContextMenu*
 ///
 void k_bookmarkcontextmenu_destroy(void* self);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_destroy` instead
-///
-#define k_bookmarkcontextmenu_qbase_destroy k_bookmarkcontextmenu_super_destroy
 
 /// Inherited from QWidget
 ///
@@ -5767,10 +5511,6 @@ void k_bookmarkcontextmenu_on_destroy(void* self, void (*callback)());
 ///
 bool k_bookmarkcontextmenu_focus_next_child(void* self);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_focus_next_child` instead
-///
-#define k_bookmarkcontextmenu_qbase_focus_next_child k_bookmarkcontextmenu_super_focus_next_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -5801,10 +5541,6 @@ void k_bookmarkcontextmenu_on_focus_next_child(void* self, bool (*callback)());
 /// @param self KBookmarkContextMenu*
 ///
 bool k_bookmarkcontextmenu_focus_previous_child(void* self);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_focus_previous_child` instead
-///
-#define k_bookmarkcontextmenu_qbase_focus_previous_child k_bookmarkcontextmenu_super_focus_previous_child
 
 /// Inherited from QWidget
 ///
@@ -5837,10 +5573,6 @@ void k_bookmarkcontextmenu_on_focus_previous_child(void* self, bool (*callback)(
 ///
 QObject* k_bookmarkcontextmenu_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_sender` instead
-///
-#define k_bookmarkcontextmenu_qbase_sender k_bookmarkcontextmenu_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -5871,10 +5603,6 @@ void k_bookmarkcontextmenu_on_sender(void* self, QObject* (*callback)());
 /// @param self KBookmarkContextMenu*
 ///
 int32_t k_bookmarkcontextmenu_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_sender_signal_index` instead
-///
-#define k_bookmarkcontextmenu_qbase_sender_signal_index k_bookmarkcontextmenu_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -5907,10 +5635,6 @@ void k_bookmarkcontextmenu_on_sender_signal_index(void* self, int32_t (*callback
 /// @param signal const char*
 ///
 int32_t k_bookmarkcontextmenu_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_receivers` instead
-///
-#define k_bookmarkcontextmenu_qbase_receivers k_bookmarkcontextmenu_super_receivers
 
 /// Inherited from QObject
 ///
@@ -5945,10 +5669,6 @@ void k_bookmarkcontextmenu_on_receivers(void* self, int32_t (*callback)(void*, c
 ///
 bool k_bookmarkcontextmenu_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_is_signal_connected` instead
-///
-#define k_bookmarkcontextmenu_qbase_is_signal_connected k_bookmarkcontextmenu_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5982,10 +5702,6 @@ void k_bookmarkcontextmenu_on_is_signal_connected(void* self, bool (*callback)(v
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_bookmarkcontextmenu_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_get_decoded_metric_f` instead
-///
-#define k_bookmarkcontextmenu_qbase_get_decoded_metric_f k_bookmarkcontextmenu_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///
