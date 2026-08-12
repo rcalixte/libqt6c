@@ -40,10 +40,6 @@ const QMetaObject* k_widgetitemdelegate_meta_object(void* self);
 ///
 void k_widgetitemdelegate_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_meta_object` instead
-///
-#define k_widgetitemdelegate_qbase_meta_object k_widgetitemdelegate_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -63,10 +59,6 @@ void* k_widgetitemdelegate_metacast(void* self, const char* param1);
 /// @param callback void* func(KWidgetItemDelegate* self, const char* param1)
 ///
 void k_widgetitemdelegate_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_metacast` instead
-///
-#define k_widgetitemdelegate_qbase_metacast k_widgetitemdelegate_super_metacast
 
 /// Base class method implementation
 ///
@@ -88,10 +80,6 @@ int32_t k_widgetitemdelegate_metacall(void* self, int32_t param1, int param2, vo
 /// @param callback int32_t func(KWidgetItemDelegate* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_widgetitemdelegate_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_metacall` instead
-///
-#define k_widgetitemdelegate_qbase_metacall k_widgetitemdelegate_super_metacall
 
 /// Base class method implementation
 ///
@@ -146,10 +134,6 @@ libqt_list k_widgetitemdelegate_create_item_widgets(void* self, void* index);
 ///
 void k_widgetitemdelegate_on_create_item_widgets(void* self, libqt_list (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_create_item_widgets` instead
-///
-#define k_widgetitemdelegate_qbase_create_item_widgets k_widgetitemdelegate_super_create_item_widgets
-
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#createItemWidgets)
 ///
 /// Base class method implementation
@@ -179,10 +163,6 @@ void k_widgetitemdelegate_update_item_widgets(void* self, libqt_list widgets, vo
 ///
 void k_widgetitemdelegate_on_update_item_widgets(void* self, void (*callback)(void*, libqt_list, void*, void*));
 
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_update_item_widgets` instead
-///
-#define k_widgetitemdelegate_qbase_update_item_widgets k_widgetitemdelegate_super_update_item_widgets
-
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#updateItemWidgets)
 ///
 /// Base class method implementation
@@ -211,10 +191,6 @@ void k_widgetitemdelegate_set_blocked_event_types(void* self, void* widget, libq
 ///
 void k_widgetitemdelegate_on_set_blocked_event_types(void* self, void (*callback)(void*, void*, libqt_list));
 
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_set_blocked_event_types` instead
-///
-#define k_widgetitemdelegate_qbase_set_blocked_event_types k_widgetitemdelegate_super_set_blocked_event_types
-
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#setBlockedEventTypes)
 ///
 /// Base class method implementation
@@ -242,10 +218,6 @@ libqt_list k_widgetitemdelegate_blocked_event_types(void* self, void* widget);
 /// @param callback libqt_list of enum QEvent__Type func(KWidgetItemDelegate* self, QWidget* widget)
 ///
 void k_widgetitemdelegate_on_blocked_event_types(void* self, libqt_list (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_blocked_event_types` instead
-///
-#define k_widgetitemdelegate_qbase_blocked_event_types k_widgetitemdelegate_super_blocked_event_types
 
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#blockedEventTypes)
 ///
@@ -810,10 +782,6 @@ void k_widgetitemdelegate_on_destroyed1(void* self, void (*callback)(void*, void
 ///
 void k_widgetitemdelegate_paint(void* self, void* painter, void* option, void* index);
 
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_paint` instead
-///
-#define k_widgetitemdelegate_qbase_paint k_widgetitemdelegate_super_paint
-
 /// Inherited from QAbstractItemDelegate
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paint)
@@ -849,10 +817,6 @@ void k_widgetitemdelegate_on_paint(void* self, void (*callback)(void*, void*, vo
 /// @param index QModelIndex*
 ///
 QSize* k_widgetitemdelegate_size_hint(void* self, void* option, void* index);
-
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_size_hint` instead
-///
-#define k_widgetitemdelegate_qbase_size_hint k_widgetitemdelegate_super_size_hint
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -892,10 +856,6 @@ void k_widgetitemdelegate_on_size_hint(void* self, QSize* (*callback)(void*, voi
 ///
 QWidget* k_widgetitemdelegate_create_editor(void* self, void* parent, void* option, void* index);
 
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_create_editor` instead
-///
-#define k_widgetitemdelegate_qbase_create_editor k_widgetitemdelegate_super_create_editor
-
 /// Inherited from QAbstractItemDelegate
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#createEditor)
@@ -932,10 +892,6 @@ void k_widgetitemdelegate_on_create_editor(void* self, QWidget* (*callback)(void
 ///
 void k_widgetitemdelegate_destroy_editor(void* self, void* editor, void* index);
 
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_destroy_editor` instead
-///
-#define k_widgetitemdelegate_qbase_destroy_editor k_widgetitemdelegate_super_destroy_editor
-
 /// Inherited from QAbstractItemDelegate
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#destroyEditor)
@@ -970,10 +926,6 @@ void k_widgetitemdelegate_on_destroy_editor(void* self, void (*callback)(void*, 
 /// @param index QModelIndex*
 ///
 void k_widgetitemdelegate_set_editor_data(void* self, void* editor, void* index);
-
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_set_editor_data` instead
-///
-#define k_widgetitemdelegate_qbase_set_editor_data k_widgetitemdelegate_super_set_editor_data
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -1010,10 +962,6 @@ void k_widgetitemdelegate_on_set_editor_data(void* self, void (*callback)(void*,
 /// @param index QModelIndex*
 ///
 void k_widgetitemdelegate_set_model_data(void* self, void* editor, void* model, void* index);
-
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_set_model_data` instead
-///
-#define k_widgetitemdelegate_qbase_set_model_data k_widgetitemdelegate_super_set_model_data
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -1052,10 +1000,6 @@ void k_widgetitemdelegate_on_set_model_data(void* self, void (*callback)(void*, 
 ///
 void k_widgetitemdelegate_update_editor_geometry(void* self, void* editor, void* option, void* index);
 
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_update_editor_geometry` instead
-///
-#define k_widgetitemdelegate_qbase_update_editor_geometry k_widgetitemdelegate_super_update_editor_geometry
-
 /// Inherited from QAbstractItemDelegate
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#updateEditorGeometry)
@@ -1093,10 +1037,6 @@ void k_widgetitemdelegate_on_update_editor_geometry(void* self, void (*callback)
 /// @param index QModelIndex*
 ///
 bool k_widgetitemdelegate_editor_event(void* self, void* event, void* model, void* option, void* index);
-
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_editor_event` instead
-///
-#define k_widgetitemdelegate_qbase_editor_event k_widgetitemdelegate_super_editor_event
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -1137,10 +1077,6 @@ void k_widgetitemdelegate_on_editor_event(void* self, bool (*callback)(void*, vo
 ///
 bool k_widgetitemdelegate_help_event(void* self, void* event, void* view, void* option, void* index);
 
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_help_event` instead
-///
-#define k_widgetitemdelegate_qbase_help_event k_widgetitemdelegate_super_help_event
-
 /// Inherited from QAbstractItemDelegate
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#helpEvent)
@@ -1178,10 +1114,6 @@ void k_widgetitemdelegate_on_help_event(void* self, bool (*callback)(void*, void
 ///
 libqt_list k_widgetitemdelegate_painting_roles(void* self);
 
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_painting_roles` instead
-///
-#define k_widgetitemdelegate_qbase_painting_roles k_widgetitemdelegate_super_painting_roles
-
 /// Inherited from QAbstractItemDelegate
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paintingRoles)
@@ -1215,10 +1147,6 @@ void k_widgetitemdelegate_on_painting_roles(void* self, libqt_list (*callback)()
 /// @param event QEvent*
 ///
 bool k_widgetitemdelegate_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_event` instead
-///
-#define k_widgetitemdelegate_qbase_event k_widgetitemdelegate_super_event
 
 /// Inherited from QObject
 ///
@@ -1254,10 +1182,6 @@ void k_widgetitemdelegate_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_widgetitemdelegate_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_event_filter` instead
-///
-#define k_widgetitemdelegate_qbase_event_filter k_widgetitemdelegate_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1292,10 +1216,6 @@ void k_widgetitemdelegate_on_event_filter(void* self, bool (*callback)(void*, vo
 ///
 void k_widgetitemdelegate_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_timer_event` instead
-///
-#define k_widgetitemdelegate_qbase_timer_event k_widgetitemdelegate_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1328,10 +1248,6 @@ void k_widgetitemdelegate_on_timer_event(void* self, void (*callback)(void*, voi
 /// @param event QChildEvent*
 ///
 void k_widgetitemdelegate_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_child_event` instead
-///
-#define k_widgetitemdelegate_qbase_child_event k_widgetitemdelegate_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1366,10 +1282,6 @@ void k_widgetitemdelegate_on_child_event(void* self, void (*callback)(void*, voi
 ///
 void k_widgetitemdelegate_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_custom_event` instead
-///
-#define k_widgetitemdelegate_qbase_custom_event k_widgetitemdelegate_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1402,10 +1314,6 @@ void k_widgetitemdelegate_on_custom_event(void* self, void (*callback)(void*, vo
 /// @param signal QMetaMethod*
 ///
 void k_widgetitemdelegate_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_connect_notify` instead
-///
-#define k_widgetitemdelegate_qbase_connect_notify k_widgetitemdelegate_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1440,10 +1348,6 @@ void k_widgetitemdelegate_on_connect_notify(void* self, void (*callback)(void*, 
 ///
 void k_widgetitemdelegate_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_disconnect_notify` instead
-///
-#define k_widgetitemdelegate_qbase_disconnect_notify k_widgetitemdelegate_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1476,10 +1380,6 @@ void k_widgetitemdelegate_on_disconnect_notify(void* self, void (*callback)(void
 ///
 QObject* k_widgetitemdelegate_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_sender` instead
-///
-#define k_widgetitemdelegate_qbase_sender k_widgetitemdelegate_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1510,10 +1410,6 @@ void k_widgetitemdelegate_on_sender(void* self, QObject* (*callback)());
 /// @param self KWidgetItemDelegate*
 ///
 int32_t k_widgetitemdelegate_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_sender_signal_index` instead
-///
-#define k_widgetitemdelegate_qbase_sender_signal_index k_widgetitemdelegate_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1547,10 +1443,6 @@ void k_widgetitemdelegate_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 int32_t k_widgetitemdelegate_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_receivers` instead
-///
-#define k_widgetitemdelegate_qbase_receivers k_widgetitemdelegate_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1583,10 +1475,6 @@ void k_widgetitemdelegate_on_receivers(void* self, int32_t (*callback)(void*, co
 /// @param signal QMetaMethod*
 ///
 bool k_widgetitemdelegate_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_widgetitemdelegate_super_is_signal_connected` instead
-///
-#define k_widgetitemdelegate_qbase_is_signal_connected k_widgetitemdelegate_super_is_signal_connected
 
 /// Inherited from QObject
 ///

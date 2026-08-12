@@ -92,10 +92,6 @@ const QMetaObject* k_mimetypechooser_meta_object(void* self);
 ///
 void k_mimetypechooser_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_meta_object` instead
-///
-#define k_mimetypechooser_qbase_meta_object k_mimetypechooser_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -115,10 +111,6 @@ void* k_mimetypechooser_metacast(void* self, const char* param1);
 /// @param callback void* func(KMimeTypeChooser* self, const char* param1)
 ///
 void k_mimetypechooser_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_metacast` instead
-///
-#define k_mimetypechooser_qbase_metacast k_mimetypechooser_super_metacast
 
 /// Base class method implementation
 ///
@@ -140,10 +132,6 @@ int32_t k_mimetypechooser_metacall(void* self, int32_t param1, int param2, void*
 /// @param callback int32_t func(KMimeTypeChooser* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_mimetypechooser_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_metacall` instead
-///
-#define k_mimetypechooser_qbase_metacall k_mimetypechooser_super_metacall
 
 /// Base class method implementation
 ///
@@ -3164,10 +3152,6 @@ int32_t k_mimetypechooser_encode_metric_f(int32_t metric, double value);
 ///
 int32_t k_mimetypechooser_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_dev_type` instead
-///
-#define k_mimetypechooser_qbase_dev_type k_mimetypechooser_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -3199,10 +3183,6 @@ void k_mimetypechooser_on_dev_type(void* self, int32_t (*callback)());
 /// @param visible bool
 ///
 void k_mimetypechooser_set_visible(void* self, bool visible);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_set_visible` instead
-///
-#define k_mimetypechooser_qbase_set_visible k_mimetypechooser_super_set_visible
 
 /// Inherited from QWidget
 ///
@@ -3236,10 +3216,6 @@ void k_mimetypechooser_on_set_visible(void* self, void (*callback)(void*, bool))
 ///
 QSize* k_mimetypechooser_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_size_hint` instead
-///
-#define k_mimetypechooser_qbase_size_hint k_mimetypechooser_super_size_hint
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
@@ -3272,10 +3248,6 @@ void k_mimetypechooser_on_size_hint(void* self, QSize* (*callback)());
 /// @param self KMimeTypeChooser*
 ///
 QSize* k_mimetypechooser_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_minimum_size_hint` instead
-///
-#define k_mimetypechooser_qbase_minimum_size_hint k_mimetypechooser_super_minimum_size_hint
 
 /// Inherited from QWidget
 ///
@@ -3311,10 +3283,6 @@ void k_mimetypechooser_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 int32_t k_mimetypechooser_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_height_for_width` instead
-///
-#define k_mimetypechooser_qbase_height_for_width k_mimetypechooser_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -3347,10 +3315,6 @@ void k_mimetypechooser_on_height_for_width(void* self, int32_t (*callback)(void*
 ///
 bool k_mimetypechooser_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_has_height_for_width` instead
-///
-#define k_mimetypechooser_qbase_has_height_for_width k_mimetypechooser_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -3381,10 +3345,6 @@ void k_mimetypechooser_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self KMimeTypeChooser*
 ///
 QPaintEngine* k_mimetypechooser_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_paint_engine` instead
-///
-#define k_mimetypechooser_qbase_paint_engine k_mimetypechooser_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -3417,10 +3377,6 @@ void k_mimetypechooser_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QEvent*
 ///
 bool k_mimetypechooser_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_event` instead
-///
-#define k_mimetypechooser_qbase_event k_mimetypechooser_super_event
 
 /// Inherited from QWidget
 ///
@@ -3455,10 +3411,6 @@ void k_mimetypechooser_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void k_mimetypechooser_mouse_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_mouse_press_event` instead
-///
-#define k_mimetypechooser_qbase_mouse_press_event k_mimetypechooser_super_mouse_press_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -3491,10 +3443,6 @@ void k_mimetypechooser_on_mouse_press_event(void* self, void (*callback)(void*, 
 /// @param event QMouseEvent*
 ///
 void k_mimetypechooser_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_mouse_release_event` instead
-///
-#define k_mimetypechooser_qbase_mouse_release_event k_mimetypechooser_super_mouse_release_event
 
 /// Inherited from QWidget
 ///
@@ -3529,10 +3477,6 @@ void k_mimetypechooser_on_mouse_release_event(void* self, void (*callback)(void*
 ///
 void k_mimetypechooser_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_mouse_double_click_event` instead
-///
-#define k_mimetypechooser_qbase_mouse_double_click_event k_mimetypechooser_super_mouse_double_click_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -3565,10 +3509,6 @@ void k_mimetypechooser_on_mouse_double_click_event(void* self, void (*callback)(
 /// @param event QMouseEvent*
 ///
 void k_mimetypechooser_mouse_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_mouse_move_event` instead
-///
-#define k_mimetypechooser_qbase_mouse_move_event k_mimetypechooser_super_mouse_move_event
 
 /// Inherited from QWidget
 ///
@@ -3603,10 +3543,6 @@ void k_mimetypechooser_on_mouse_move_event(void* self, void (*callback)(void*, v
 ///
 void k_mimetypechooser_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_wheel_event` instead
-///
-#define k_mimetypechooser_qbase_wheel_event k_mimetypechooser_super_wheel_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -3639,10 +3575,6 @@ void k_mimetypechooser_on_wheel_event(void* self, void (*callback)(void*, void*)
 /// @param event QKeyEvent*
 ///
 void k_mimetypechooser_key_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_key_press_event` instead
-///
-#define k_mimetypechooser_qbase_key_press_event k_mimetypechooser_super_key_press_event
 
 /// Inherited from QWidget
 ///
@@ -3677,10 +3609,6 @@ void k_mimetypechooser_on_key_press_event(void* self, void (*callback)(void*, vo
 ///
 void k_mimetypechooser_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_key_release_event` instead
-///
-#define k_mimetypechooser_qbase_key_release_event k_mimetypechooser_super_key_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -3713,10 +3641,6 @@ void k_mimetypechooser_on_key_release_event(void* self, void (*callback)(void*, 
 /// @param event QFocusEvent*
 ///
 void k_mimetypechooser_focus_in_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_focus_in_event` instead
-///
-#define k_mimetypechooser_qbase_focus_in_event k_mimetypechooser_super_focus_in_event
 
 /// Inherited from QWidget
 ///
@@ -3751,10 +3675,6 @@ void k_mimetypechooser_on_focus_in_event(void* self, void (*callback)(void*, voi
 ///
 void k_mimetypechooser_focus_out_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_focus_out_event` instead
-///
-#define k_mimetypechooser_qbase_focus_out_event k_mimetypechooser_super_focus_out_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -3787,10 +3707,6 @@ void k_mimetypechooser_on_focus_out_event(void* self, void (*callback)(void*, vo
 /// @param event QEnterEvent*
 ///
 void k_mimetypechooser_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_enter_event` instead
-///
-#define k_mimetypechooser_qbase_enter_event k_mimetypechooser_super_enter_event
 
 /// Inherited from QWidget
 ///
@@ -3825,10 +3741,6 @@ void k_mimetypechooser_on_enter_event(void* self, void (*callback)(void*, void*)
 ///
 void k_mimetypechooser_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_leave_event` instead
-///
-#define k_mimetypechooser_qbase_leave_event k_mimetypechooser_super_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -3861,10 +3773,6 @@ void k_mimetypechooser_on_leave_event(void* self, void (*callback)(void*, void*)
 /// @param event QPaintEvent*
 ///
 void k_mimetypechooser_paint_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_paint_event` instead
-///
-#define k_mimetypechooser_qbase_paint_event k_mimetypechooser_super_paint_event
 
 /// Inherited from QWidget
 ///
@@ -3899,10 +3807,6 @@ void k_mimetypechooser_on_paint_event(void* self, void (*callback)(void*, void*)
 ///
 void k_mimetypechooser_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_move_event` instead
-///
-#define k_mimetypechooser_qbase_move_event k_mimetypechooser_super_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -3935,10 +3839,6 @@ void k_mimetypechooser_on_move_event(void* self, void (*callback)(void*, void*))
 /// @param event QResizeEvent*
 ///
 void k_mimetypechooser_resize_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_resize_event` instead
-///
-#define k_mimetypechooser_qbase_resize_event k_mimetypechooser_super_resize_event
 
 /// Inherited from QWidget
 ///
@@ -3973,10 +3873,6 @@ void k_mimetypechooser_on_resize_event(void* self, void (*callback)(void*, void*
 ///
 void k_mimetypechooser_close_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_close_event` instead
-///
-#define k_mimetypechooser_qbase_close_event k_mimetypechooser_super_close_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -4009,10 +3905,6 @@ void k_mimetypechooser_on_close_event(void* self, void (*callback)(void*, void*)
 /// @param event QContextMenuEvent*
 ///
 void k_mimetypechooser_context_menu_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_context_menu_event` instead
-///
-#define k_mimetypechooser_qbase_context_menu_event k_mimetypechooser_super_context_menu_event
 
 /// Inherited from QWidget
 ///
@@ -4047,10 +3939,6 @@ void k_mimetypechooser_on_context_menu_event(void* self, void (*callback)(void*,
 ///
 void k_mimetypechooser_tablet_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_tablet_event` instead
-///
-#define k_mimetypechooser_qbase_tablet_event k_mimetypechooser_super_tablet_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4083,10 +3971,6 @@ void k_mimetypechooser_on_tablet_event(void* self, void (*callback)(void*, void*
 /// @param event QActionEvent*
 ///
 void k_mimetypechooser_action_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_action_event` instead
-///
-#define k_mimetypechooser_qbase_action_event k_mimetypechooser_super_action_event
 
 /// Inherited from QWidget
 ///
@@ -4121,10 +4005,6 @@ void k_mimetypechooser_on_action_event(void* self, void (*callback)(void*, void*
 ///
 void k_mimetypechooser_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_drag_enter_event` instead
-///
-#define k_mimetypechooser_qbase_drag_enter_event k_mimetypechooser_super_drag_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4157,10 +4037,6 @@ void k_mimetypechooser_on_drag_enter_event(void* self, void (*callback)(void*, v
 /// @param event QDragMoveEvent*
 ///
 void k_mimetypechooser_drag_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_drag_move_event` instead
-///
-#define k_mimetypechooser_qbase_drag_move_event k_mimetypechooser_super_drag_move_event
 
 /// Inherited from QWidget
 ///
@@ -4195,10 +4071,6 @@ void k_mimetypechooser_on_drag_move_event(void* self, void (*callback)(void*, vo
 ///
 void k_mimetypechooser_drag_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_drag_leave_event` instead
-///
-#define k_mimetypechooser_qbase_drag_leave_event k_mimetypechooser_super_drag_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -4231,10 +4103,6 @@ void k_mimetypechooser_on_drag_leave_event(void* self, void (*callback)(void*, v
 /// @param event QDropEvent*
 ///
 void k_mimetypechooser_drop_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_drop_event` instead
-///
-#define k_mimetypechooser_qbase_drop_event k_mimetypechooser_super_drop_event
 
 /// Inherited from QWidget
 ///
@@ -4269,10 +4137,6 @@ void k_mimetypechooser_on_drop_event(void* self, void (*callback)(void*, void*))
 ///
 void k_mimetypechooser_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_show_event` instead
-///
-#define k_mimetypechooser_qbase_show_event k_mimetypechooser_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -4305,10 +4169,6 @@ void k_mimetypechooser_on_show_event(void* self, void (*callback)(void*, void*))
 /// @param event QHideEvent*
 ///
 void k_mimetypechooser_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_hide_event` instead
-///
-#define k_mimetypechooser_qbase_hide_event k_mimetypechooser_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -4345,10 +4205,6 @@ void k_mimetypechooser_on_hide_event(void* self, void (*callback)(void*, void*))
 ///
 bool k_mimetypechooser_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_native_event` instead
-///
-#define k_mimetypechooser_qbase_native_event k_mimetypechooser_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4384,10 +4240,6 @@ void k_mimetypechooser_on_native_event(void* self, bool (*callback)(void*, libqt
 ///
 void k_mimetypechooser_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_change_event` instead
-///
-#define k_mimetypechooser_qbase_change_event k_mimetypechooser_super_change_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -4420,10 +4272,6 @@ void k_mimetypechooser_on_change_event(void* self, void (*callback)(void*, void*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
 int32_t k_mimetypechooser_metric(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_metric` instead
-///
-#define k_mimetypechooser_qbase_metric k_mimetypechooser_super_metric
 
 /// Inherited from QWidget
 ///
@@ -4458,10 +4306,6 @@ void k_mimetypechooser_on_metric(void* self, int32_t (*callback)(void*, int32_t)
 ///
 void k_mimetypechooser_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_init_painter` instead
-///
-#define k_mimetypechooser_qbase_init_painter k_mimetypechooser_super_init_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -4495,10 +4339,6 @@ void k_mimetypechooser_on_init_painter(void* self, void (*callback)(void*, void*
 ///
 QPaintDevice* k_mimetypechooser_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_redirected` instead
-///
-#define k_mimetypechooser_qbase_redirected k_mimetypechooser_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4530,10 +4370,6 @@ void k_mimetypechooser_on_redirected(void* self, QPaintDevice* (*callback)(void*
 /// @param self KMimeTypeChooser*
 ///
 QPainter* k_mimetypechooser_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_shared_painter` instead
-///
-#define k_mimetypechooser_qbase_shared_painter k_mimetypechooser_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -4567,10 +4403,6 @@ void k_mimetypechooser_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void k_mimetypechooser_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_input_method_event` instead
-///
-#define k_mimetypechooser_qbase_input_method_event k_mimetypechooser_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4603,10 +4435,6 @@ void k_mimetypechooser_on_input_method_event(void* self, void (*callback)(void*,
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* k_mimetypechooser_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_input_method_query` instead
-///
-#define k_mimetypechooser_qbase_input_method_query k_mimetypechooser_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -4643,10 +4471,6 @@ void k_mimetypechooser_on_input_method_query(void* self, QVariant* (*callback)(v
 ///
 bool k_mimetypechooser_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_focus_next_prev_child` instead
-///
-#define k_mimetypechooser_qbase_focus_next_prev_child k_mimetypechooser_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -4680,10 +4504,6 @@ void k_mimetypechooser_on_focus_next_prev_child(void* self, bool (*callback)(voi
 /// @param event QEvent*
 ///
 bool k_mimetypechooser_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_event_filter` instead
-///
-#define k_mimetypechooser_qbase_event_filter k_mimetypechooser_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -4719,10 +4539,6 @@ void k_mimetypechooser_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 void k_mimetypechooser_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_timer_event` instead
-///
-#define k_mimetypechooser_qbase_timer_event k_mimetypechooser_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -4755,10 +4571,6 @@ void k_mimetypechooser_on_timer_event(void* self, void (*callback)(void*, void*)
 /// @param event QChildEvent*
 ///
 void k_mimetypechooser_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_child_event` instead
-///
-#define k_mimetypechooser_qbase_child_event k_mimetypechooser_super_child_event
 
 /// Inherited from QObject
 ///
@@ -4793,10 +4605,6 @@ void k_mimetypechooser_on_child_event(void* self, void (*callback)(void*, void*)
 ///
 void k_mimetypechooser_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_custom_event` instead
-///
-#define k_mimetypechooser_qbase_custom_event k_mimetypechooser_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -4829,10 +4637,6 @@ void k_mimetypechooser_on_custom_event(void* self, void (*callback)(void*, void*
 /// @param signal QMetaMethod*
 ///
 void k_mimetypechooser_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_connect_notify` instead
-///
-#define k_mimetypechooser_qbase_connect_notify k_mimetypechooser_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -4867,10 +4671,6 @@ void k_mimetypechooser_on_connect_notify(void* self, void (*callback)(void*, voi
 ///
 void k_mimetypechooser_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_disconnect_notify` instead
-///
-#define k_mimetypechooser_qbase_disconnect_notify k_mimetypechooser_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -4903,10 +4703,6 @@ void k_mimetypechooser_on_disconnect_notify(void* self, void (*callback)(void*, 
 ///
 void k_mimetypechooser_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_update_micro_focus` instead
-///
-#define k_mimetypechooser_qbase_update_micro_focus k_mimetypechooser_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -4937,10 +4733,6 @@ void k_mimetypechooser_on_update_micro_focus(void* self, void (*callback)());
 /// @param self KMimeTypeChooser*
 ///
 void k_mimetypechooser_create(void* self);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_create` instead
-///
-#define k_mimetypechooser_qbase_create k_mimetypechooser_super_create
 
 /// Inherited from QWidget
 ///
@@ -4973,10 +4765,6 @@ void k_mimetypechooser_on_create(void* self, void (*callback)());
 ///
 void k_mimetypechooser_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_destroy` instead
-///
-#define k_mimetypechooser_qbase_destroy k_mimetypechooser_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5007,10 +4795,6 @@ void k_mimetypechooser_on_destroy(void* self, void (*callback)());
 /// @param self KMimeTypeChooser*
 ///
 bool k_mimetypechooser_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_focus_next_child` instead
-///
-#define k_mimetypechooser_qbase_focus_next_child k_mimetypechooser_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -5043,10 +4827,6 @@ void k_mimetypechooser_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_mimetypechooser_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_focus_previous_child` instead
-///
-#define k_mimetypechooser_qbase_focus_previous_child k_mimetypechooser_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5077,10 +4857,6 @@ void k_mimetypechooser_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self KMimeTypeChooser*
 ///
 QObject* k_mimetypechooser_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_sender` instead
-///
-#define k_mimetypechooser_qbase_sender k_mimetypechooser_super_sender
 
 /// Inherited from QObject
 ///
@@ -5113,10 +4889,6 @@ void k_mimetypechooser_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_mimetypechooser_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_sender_signal_index` instead
-///
-#define k_mimetypechooser_qbase_sender_signal_index k_mimetypechooser_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5148,10 +4920,6 @@ void k_mimetypechooser_on_sender_signal_index(void* self, int32_t (*callback)())
 /// @param signal const char*
 ///
 int32_t k_mimetypechooser_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_receivers` instead
-///
-#define k_mimetypechooser_qbase_receivers k_mimetypechooser_super_receivers
 
 /// Inherited from QObject
 ///
@@ -5186,10 +4954,6 @@ void k_mimetypechooser_on_receivers(void* self, int32_t (*callback)(void*, const
 ///
 bool k_mimetypechooser_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_is_signal_connected` instead
-///
-#define k_mimetypechooser_qbase_is_signal_connected k_mimetypechooser_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5223,10 +4987,6 @@ void k_mimetypechooser_on_is_signal_connected(void* self, bool (*callback)(void*
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_mimetypechooser_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_mimetypechooser_super_get_decoded_metric_f` instead
-///
-#define k_mimetypechooser_qbase_get_decoded_metric_f k_mimetypechooser_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///
@@ -5391,10 +5151,6 @@ const QMetaObject* k_mimetypechooserdialog_meta_object(void* self);
 ///
 void k_mimetypechooserdialog_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_meta_object` instead
-///
-#define k_mimetypechooserdialog_qbase_meta_object k_mimetypechooserdialog_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -5414,10 +5170,6 @@ void* k_mimetypechooserdialog_metacast(void* self, const char* param1);
 /// @param callback void* func(KMimeTypeChooserDialog* self, const char* param1)
 ///
 void k_mimetypechooserdialog_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_metacast` instead
-///
-#define k_mimetypechooserdialog_qbase_metacast k_mimetypechooserdialog_super_metacast
 
 /// Base class method implementation
 ///
@@ -5439,10 +5191,6 @@ int32_t k_mimetypechooserdialog_metacall(void* self, int32_t param1, int param2,
 /// @param callback int32_t func(KMimeTypeChooserDialog* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_mimetypechooserdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_metacall` instead
-///
-#define k_mimetypechooserdialog_qbase_metacall k_mimetypechooserdialog_super_metacall
 
 /// Base class method implementation
 ///
@@ -5483,10 +5231,6 @@ QSize* k_mimetypechooserdialog_size_hint(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_mimetypechooserdialog_on_size_hint(void* self, QSize* (*callback)());
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_size_hint` instead
-///
-#define k_mimetypechooserdialog_qbase_size_hint k_mimetypechooserdialog_super_size_hint
 
 /// [Upstream resources](https://api.kde.org/kmimetypechooserdialog.html#sizeHint)
 ///
@@ -8578,10 +8322,6 @@ int32_t k_mimetypechooserdialog_encode_metric_f(int32_t metric, double value);
 ///
 void k_mimetypechooserdialog_set_visible(void* self, bool visible);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_set_visible` instead
-///
-#define k_mimetypechooserdialog_qbase_set_visible k_mimetypechooserdialog_super_set_visible
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#setVisible)
@@ -8613,10 +8353,6 @@ void k_mimetypechooserdialog_on_set_visible(void* self, void (*callback)(void*, 
 /// @param self KMimeTypeChooserDialog*
 ///
 QSize* k_mimetypechooserdialog_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_minimum_size_hint` instead
-///
-#define k_mimetypechooserdialog_qbase_minimum_size_hint k_mimetypechooserdialog_super_minimum_size_hint
 
 /// Inherited from QDialog
 ///
@@ -8651,10 +8387,6 @@ void k_mimetypechooserdialog_on_minimum_size_hint(void* self, QSize* (*callback)
 ///
 void k_mimetypechooserdialog_open(void* self);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_open` instead
-///
-#define k_mimetypechooserdialog_qbase_open k_mimetypechooserdialog_super_open
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#open)
@@ -8685,10 +8417,6 @@ void k_mimetypechooserdialog_on_open(void* self, void (*callback)());
 /// @param self KMimeTypeChooserDialog*
 ///
 int32_t k_mimetypechooserdialog_exec(void* self);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_exec` instead
-///
-#define k_mimetypechooserdialog_qbase_exec k_mimetypechooserdialog_super_exec
 
 /// Inherited from QDialog
 ///
@@ -8722,10 +8450,6 @@ void k_mimetypechooserdialog_on_exec(void* self, int32_t (*callback)());
 ///
 void k_mimetypechooserdialog_done(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_done` instead
-///
-#define k_mimetypechooserdialog_qbase_done k_mimetypechooserdialog_super_done
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#done)
@@ -8758,10 +8482,6 @@ void k_mimetypechooserdialog_on_done(void* self, void (*callback)(void*, int));
 ///
 void k_mimetypechooserdialog_accept(void* self);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_accept` instead
-///
-#define k_mimetypechooserdialog_qbase_accept k_mimetypechooserdialog_super_accept
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#accept)
@@ -8792,10 +8512,6 @@ void k_mimetypechooserdialog_on_accept(void* self, void (*callback)());
 /// @param self KMimeTypeChooserDialog*
 ///
 void k_mimetypechooserdialog_reject(void* self);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_reject` instead
-///
-#define k_mimetypechooserdialog_qbase_reject k_mimetypechooserdialog_super_reject
 
 /// Inherited from QDialog
 ///
@@ -8828,10 +8544,6 @@ void k_mimetypechooserdialog_on_reject(void* self, void (*callback)());
 /// @param param1 QKeyEvent*
 ///
 void k_mimetypechooserdialog_key_press_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_key_press_event` instead
-///
-#define k_mimetypechooserdialog_qbase_key_press_event k_mimetypechooserdialog_super_key_press_event
 
 /// Inherited from QDialog
 ///
@@ -8866,10 +8578,6 @@ void k_mimetypechooserdialog_on_key_press_event(void* self, void (*callback)(voi
 ///
 void k_mimetypechooserdialog_close_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_close_event` instead
-///
-#define k_mimetypechooserdialog_qbase_close_event k_mimetypechooserdialog_super_close_event
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
@@ -8902,10 +8610,6 @@ void k_mimetypechooserdialog_on_close_event(void* self, void (*callback)(void*, 
 /// @param param1 QShowEvent*
 ///
 void k_mimetypechooserdialog_show_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_show_event` instead
-///
-#define k_mimetypechooserdialog_qbase_show_event k_mimetypechooserdialog_super_show_event
 
 /// Inherited from QDialog
 ///
@@ -8940,10 +8644,6 @@ void k_mimetypechooserdialog_on_show_event(void* self, void (*callback)(void*, v
 ///
 void k_mimetypechooserdialog_resize_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_resize_event` instead
-///
-#define k_mimetypechooserdialog_qbase_resize_event k_mimetypechooserdialog_super_resize_event
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
@@ -8976,10 +8676,6 @@ void k_mimetypechooserdialog_on_resize_event(void* self, void (*callback)(void*,
 /// @param param1 QContextMenuEvent*
 ///
 void k_mimetypechooserdialog_context_menu_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_context_menu_event` instead
-///
-#define k_mimetypechooserdialog_qbase_context_menu_event k_mimetypechooserdialog_super_context_menu_event
 
 /// Inherited from QDialog
 ///
@@ -9015,10 +8711,6 @@ void k_mimetypechooserdialog_on_context_menu_event(void* self, void (*callback)(
 ///
 bool k_mimetypechooserdialog_event_filter(void* self, void* param1, void* param2);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_event_filter` instead
-///
-#define k_mimetypechooserdialog_qbase_event_filter k_mimetypechooserdialog_super_event_filter
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
@@ -9052,10 +8744,6 @@ void k_mimetypechooserdialog_on_event_filter(void* self, bool (*callback)(void*,
 ///
 int32_t k_mimetypechooserdialog_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_dev_type` instead
-///
-#define k_mimetypechooserdialog_qbase_dev_type k_mimetypechooserdialog_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -9087,10 +8775,6 @@ void k_mimetypechooserdialog_on_dev_type(void* self, int32_t (*callback)());
 /// @param param1 int
 ///
 int32_t k_mimetypechooserdialog_height_for_width(void* self, int param1);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_height_for_width` instead
-///
-#define k_mimetypechooserdialog_qbase_height_for_width k_mimetypechooserdialog_super_height_for_width
 
 /// Inherited from QWidget
 ///
@@ -9124,10 +8808,6 @@ void k_mimetypechooserdialog_on_height_for_width(void* self, int32_t (*callback)
 ///
 bool k_mimetypechooserdialog_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_has_height_for_width` instead
-///
-#define k_mimetypechooserdialog_qbase_has_height_for_width k_mimetypechooserdialog_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -9158,10 +8838,6 @@ void k_mimetypechooserdialog_on_has_height_for_width(void* self, bool (*callback
 /// @param self KMimeTypeChooserDialog*
 ///
 QPaintEngine* k_mimetypechooserdialog_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_paint_engine` instead
-///
-#define k_mimetypechooserdialog_qbase_paint_engine k_mimetypechooserdialog_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -9194,10 +8870,6 @@ void k_mimetypechooserdialog_on_paint_engine(void* self, QPaintEngine* (*callbac
 /// @param event QEvent*
 ///
 bool k_mimetypechooserdialog_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_event` instead
-///
-#define k_mimetypechooserdialog_qbase_event k_mimetypechooserdialog_super_event
 
 /// Inherited from QWidget
 ///
@@ -9232,10 +8904,6 @@ void k_mimetypechooserdialog_on_event(void* self, bool (*callback)(void*, void*)
 ///
 void k_mimetypechooserdialog_mouse_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_mouse_press_event` instead
-///
-#define k_mimetypechooserdialog_qbase_mouse_press_event k_mimetypechooserdialog_super_mouse_press_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -9268,10 +8936,6 @@ void k_mimetypechooserdialog_on_mouse_press_event(void* self, void (*callback)(v
 /// @param event QMouseEvent*
 ///
 void k_mimetypechooserdialog_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_mouse_release_event` instead
-///
-#define k_mimetypechooserdialog_qbase_mouse_release_event k_mimetypechooserdialog_super_mouse_release_event
 
 /// Inherited from QWidget
 ///
@@ -9306,10 +8970,6 @@ void k_mimetypechooserdialog_on_mouse_release_event(void* self, void (*callback)
 ///
 void k_mimetypechooserdialog_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_mouse_double_click_event` instead
-///
-#define k_mimetypechooserdialog_qbase_mouse_double_click_event k_mimetypechooserdialog_super_mouse_double_click_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -9342,10 +9002,6 @@ void k_mimetypechooserdialog_on_mouse_double_click_event(void* self, void (*call
 /// @param event QMouseEvent*
 ///
 void k_mimetypechooserdialog_mouse_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_mouse_move_event` instead
-///
-#define k_mimetypechooserdialog_qbase_mouse_move_event k_mimetypechooserdialog_super_mouse_move_event
 
 /// Inherited from QWidget
 ///
@@ -9380,10 +9036,6 @@ void k_mimetypechooserdialog_on_mouse_move_event(void* self, void (*callback)(vo
 ///
 void k_mimetypechooserdialog_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_wheel_event` instead
-///
-#define k_mimetypechooserdialog_qbase_wheel_event k_mimetypechooserdialog_super_wheel_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -9416,10 +9068,6 @@ void k_mimetypechooserdialog_on_wheel_event(void* self, void (*callback)(void*, 
 /// @param event QKeyEvent*
 ///
 void k_mimetypechooserdialog_key_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_key_release_event` instead
-///
-#define k_mimetypechooserdialog_qbase_key_release_event k_mimetypechooserdialog_super_key_release_event
 
 /// Inherited from QWidget
 ///
@@ -9454,10 +9102,6 @@ void k_mimetypechooserdialog_on_key_release_event(void* self, void (*callback)(v
 ///
 void k_mimetypechooserdialog_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_focus_in_event` instead
-///
-#define k_mimetypechooserdialog_qbase_focus_in_event k_mimetypechooserdialog_super_focus_in_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -9490,10 +9134,6 @@ void k_mimetypechooserdialog_on_focus_in_event(void* self, void (*callback)(void
 /// @param event QFocusEvent*
 ///
 void k_mimetypechooserdialog_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_focus_out_event` instead
-///
-#define k_mimetypechooserdialog_qbase_focus_out_event k_mimetypechooserdialog_super_focus_out_event
 
 /// Inherited from QWidget
 ///
@@ -9528,10 +9168,6 @@ void k_mimetypechooserdialog_on_focus_out_event(void* self, void (*callback)(voi
 ///
 void k_mimetypechooserdialog_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_enter_event` instead
-///
-#define k_mimetypechooserdialog_qbase_enter_event k_mimetypechooserdialog_super_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -9564,10 +9200,6 @@ void k_mimetypechooserdialog_on_enter_event(void* self, void (*callback)(void*, 
 /// @param event QEvent*
 ///
 void k_mimetypechooserdialog_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_leave_event` instead
-///
-#define k_mimetypechooserdialog_qbase_leave_event k_mimetypechooserdialog_super_leave_event
 
 /// Inherited from QWidget
 ///
@@ -9602,10 +9234,6 @@ void k_mimetypechooserdialog_on_leave_event(void* self, void (*callback)(void*, 
 ///
 void k_mimetypechooserdialog_paint_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_paint_event` instead
-///
-#define k_mimetypechooserdialog_qbase_paint_event k_mimetypechooserdialog_super_paint_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
@@ -9638,10 +9266,6 @@ void k_mimetypechooserdialog_on_paint_event(void* self, void (*callback)(void*, 
 /// @param event QMoveEvent*
 ///
 void k_mimetypechooserdialog_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_move_event` instead
-///
-#define k_mimetypechooserdialog_qbase_move_event k_mimetypechooserdialog_super_move_event
 
 /// Inherited from QWidget
 ///
@@ -9676,10 +9300,6 @@ void k_mimetypechooserdialog_on_move_event(void* self, void (*callback)(void*, v
 ///
 void k_mimetypechooserdialog_tablet_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_tablet_event` instead
-///
-#define k_mimetypechooserdialog_qbase_tablet_event k_mimetypechooserdialog_super_tablet_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -9712,10 +9332,6 @@ void k_mimetypechooserdialog_on_tablet_event(void* self, void (*callback)(void*,
 /// @param event QActionEvent*
 ///
 void k_mimetypechooserdialog_action_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_action_event` instead
-///
-#define k_mimetypechooserdialog_qbase_action_event k_mimetypechooserdialog_super_action_event
 
 /// Inherited from QWidget
 ///
@@ -9750,10 +9366,6 @@ void k_mimetypechooserdialog_on_action_event(void* self, void (*callback)(void*,
 ///
 void k_mimetypechooserdialog_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_drag_enter_event` instead
-///
-#define k_mimetypechooserdialog_qbase_drag_enter_event k_mimetypechooserdialog_super_drag_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -9786,10 +9398,6 @@ void k_mimetypechooserdialog_on_drag_enter_event(void* self, void (*callback)(vo
 /// @param event QDragMoveEvent*
 ///
 void k_mimetypechooserdialog_drag_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_drag_move_event` instead
-///
-#define k_mimetypechooserdialog_qbase_drag_move_event k_mimetypechooserdialog_super_drag_move_event
 
 /// Inherited from QWidget
 ///
@@ -9824,10 +9432,6 @@ void k_mimetypechooserdialog_on_drag_move_event(void* self, void (*callback)(voi
 ///
 void k_mimetypechooserdialog_drag_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_drag_leave_event` instead
-///
-#define k_mimetypechooserdialog_qbase_drag_leave_event k_mimetypechooserdialog_super_drag_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -9861,10 +9465,6 @@ void k_mimetypechooserdialog_on_drag_leave_event(void* self, void (*callback)(vo
 ///
 void k_mimetypechooserdialog_drop_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_drop_event` instead
-///
-#define k_mimetypechooserdialog_qbase_drop_event k_mimetypechooserdialog_super_drop_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -9897,10 +9497,6 @@ void k_mimetypechooserdialog_on_drop_event(void* self, void (*callback)(void*, v
 /// @param event QHideEvent*
 ///
 void k_mimetypechooserdialog_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_hide_event` instead
-///
-#define k_mimetypechooserdialog_qbase_hide_event k_mimetypechooserdialog_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -9937,10 +9533,6 @@ void k_mimetypechooserdialog_on_hide_event(void* self, void (*callback)(void*, v
 ///
 bool k_mimetypechooserdialog_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_native_event` instead
-///
-#define k_mimetypechooserdialog_qbase_native_event k_mimetypechooserdialog_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -9976,10 +9568,6 @@ void k_mimetypechooserdialog_on_native_event(void* self, bool (*callback)(void*,
 ///
 void k_mimetypechooserdialog_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_change_event` instead
-///
-#define k_mimetypechooserdialog_qbase_change_event k_mimetypechooserdialog_super_change_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -10012,10 +9600,6 @@ void k_mimetypechooserdialog_on_change_event(void* self, void (*callback)(void*,
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
 int32_t k_mimetypechooserdialog_metric(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_metric` instead
-///
-#define k_mimetypechooserdialog_qbase_metric k_mimetypechooserdialog_super_metric
 
 /// Inherited from QWidget
 ///
@@ -10050,10 +9634,6 @@ void k_mimetypechooserdialog_on_metric(void* self, int32_t (*callback)(void*, in
 ///
 void k_mimetypechooserdialog_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_init_painter` instead
-///
-#define k_mimetypechooserdialog_qbase_init_painter k_mimetypechooserdialog_super_init_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -10087,10 +9667,6 @@ void k_mimetypechooserdialog_on_init_painter(void* self, void (*callback)(void*,
 ///
 QPaintDevice* k_mimetypechooserdialog_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_redirected` instead
-///
-#define k_mimetypechooserdialog_qbase_redirected k_mimetypechooserdialog_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -10122,10 +9698,6 @@ void k_mimetypechooserdialog_on_redirected(void* self, QPaintDevice* (*callback)
 /// @param self KMimeTypeChooserDialog*
 ///
 QPainter* k_mimetypechooserdialog_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_shared_painter` instead
-///
-#define k_mimetypechooserdialog_qbase_shared_painter k_mimetypechooserdialog_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -10159,10 +9731,6 @@ void k_mimetypechooserdialog_on_shared_painter(void* self, QPainter* (*callback)
 ///
 void k_mimetypechooserdialog_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_input_method_event` instead
-///
-#define k_mimetypechooserdialog_qbase_input_method_event k_mimetypechooserdialog_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -10195,10 +9763,6 @@ void k_mimetypechooserdialog_on_input_method_event(void* self, void (*callback)(
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* k_mimetypechooserdialog_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_input_method_query` instead
-///
-#define k_mimetypechooserdialog_qbase_input_method_query k_mimetypechooserdialog_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -10235,10 +9799,6 @@ void k_mimetypechooserdialog_on_input_method_query(void* self, QVariant* (*callb
 ///
 bool k_mimetypechooserdialog_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_focus_next_prev_child` instead
-///
-#define k_mimetypechooserdialog_qbase_focus_next_prev_child k_mimetypechooserdialog_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -10271,10 +9831,6 @@ void k_mimetypechooserdialog_on_focus_next_prev_child(void* self, bool (*callbac
 /// @param event QTimerEvent*
 ///
 void k_mimetypechooserdialog_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_timer_event` instead
-///
-#define k_mimetypechooserdialog_qbase_timer_event k_mimetypechooserdialog_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -10309,10 +9865,6 @@ void k_mimetypechooserdialog_on_timer_event(void* self, void (*callback)(void*, 
 ///
 void k_mimetypechooserdialog_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_child_event` instead
-///
-#define k_mimetypechooserdialog_qbase_child_event k_mimetypechooserdialog_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -10345,10 +9897,6 @@ void k_mimetypechooserdialog_on_child_event(void* self, void (*callback)(void*, 
 /// @param event QEvent*
 ///
 void k_mimetypechooserdialog_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_custom_event` instead
-///
-#define k_mimetypechooserdialog_qbase_custom_event k_mimetypechooserdialog_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -10383,10 +9931,6 @@ void k_mimetypechooserdialog_on_custom_event(void* self, void (*callback)(void*,
 ///
 void k_mimetypechooserdialog_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_connect_notify` instead
-///
-#define k_mimetypechooserdialog_qbase_connect_notify k_mimetypechooserdialog_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -10419,10 +9963,6 @@ void k_mimetypechooserdialog_on_connect_notify(void* self, void (*callback)(void
 /// @param signal QMetaMethod*
 ///
 void k_mimetypechooserdialog_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_disconnect_notify` instead
-///
-#define k_mimetypechooserdialog_qbase_disconnect_notify k_mimetypechooserdialog_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -10457,10 +9997,6 @@ void k_mimetypechooserdialog_on_disconnect_notify(void* self, void (*callback)(v
 ///
 void k_mimetypechooserdialog_adjust_position(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_adjust_position` instead
-///
-#define k_mimetypechooserdialog_qbase_adjust_position k_mimetypechooserdialog_super_adjust_position
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
@@ -10493,10 +10029,6 @@ void k_mimetypechooserdialog_on_adjust_position(void* self, void (*callback)(voi
 ///
 void k_mimetypechooserdialog_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_update_micro_focus` instead
-///
-#define k_mimetypechooserdialog_qbase_update_micro_focus k_mimetypechooserdialog_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -10527,10 +10059,6 @@ void k_mimetypechooserdialog_on_update_micro_focus(void* self, void (*callback)(
 /// @param self KMimeTypeChooserDialog*
 ///
 void k_mimetypechooserdialog_create(void* self);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_create` instead
-///
-#define k_mimetypechooserdialog_qbase_create k_mimetypechooserdialog_super_create
 
 /// Inherited from QWidget
 ///
@@ -10563,10 +10091,6 @@ void k_mimetypechooserdialog_on_create(void* self, void (*callback)());
 ///
 void k_mimetypechooserdialog_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_destroy` instead
-///
-#define k_mimetypechooserdialog_qbase_destroy k_mimetypechooserdialog_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -10597,10 +10121,6 @@ void k_mimetypechooserdialog_on_destroy(void* self, void (*callback)());
 /// @param self KMimeTypeChooserDialog*
 ///
 bool k_mimetypechooserdialog_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_focus_next_child` instead
-///
-#define k_mimetypechooserdialog_qbase_focus_next_child k_mimetypechooserdialog_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -10633,10 +10153,6 @@ void k_mimetypechooserdialog_on_focus_next_child(void* self, bool (*callback)())
 ///
 bool k_mimetypechooserdialog_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_focus_previous_child` instead
-///
-#define k_mimetypechooserdialog_qbase_focus_previous_child k_mimetypechooserdialog_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -10667,10 +10183,6 @@ void k_mimetypechooserdialog_on_focus_previous_child(void* self, bool (*callback
 /// @param self KMimeTypeChooserDialog*
 ///
 QObject* k_mimetypechooserdialog_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_sender` instead
-///
-#define k_mimetypechooserdialog_qbase_sender k_mimetypechooserdialog_super_sender
 
 /// Inherited from QObject
 ///
@@ -10703,10 +10215,6 @@ void k_mimetypechooserdialog_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_mimetypechooserdialog_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_sender_signal_index` instead
-///
-#define k_mimetypechooserdialog_qbase_sender_signal_index k_mimetypechooserdialog_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -10738,10 +10246,6 @@ void k_mimetypechooserdialog_on_sender_signal_index(void* self, int32_t (*callba
 /// @param signal const char*
 ///
 int32_t k_mimetypechooserdialog_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_receivers` instead
-///
-#define k_mimetypechooserdialog_qbase_receivers k_mimetypechooserdialog_super_receivers
 
 /// Inherited from QObject
 ///
@@ -10776,10 +10280,6 @@ void k_mimetypechooserdialog_on_receivers(void* self, int32_t (*callback)(void*,
 ///
 bool k_mimetypechooserdialog_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_is_signal_connected` instead
-///
-#define k_mimetypechooserdialog_qbase_is_signal_connected k_mimetypechooserdialog_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -10813,10 +10313,6 @@ void k_mimetypechooserdialog_on_is_signal_connected(void* self, bool (*callback)
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_mimetypechooserdialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_mimetypechooserdialog_super_get_decoded_metric_f` instead
-///
-#define k_mimetypechooserdialog_qbase_get_decoded_metric_f k_mimetypechooserdialog_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

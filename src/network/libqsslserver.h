@@ -37,10 +37,6 @@ const QMetaObject* q_sslserver_meta_object(void* self);
 ///
 void q_sslserver_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_sslserver_super_meta_object` instead
-///
-#define q_sslserver_qbase_meta_object q_sslserver_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_sslserver_metacast(void* self, const char* param1);
 /// @param callback void* func(QSslServer* self, const char* param1)
 ///
 void q_sslserver_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_sslserver_super_metacast` instead
-///
-#define q_sslserver_qbase_metacast q_sslserver_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_sslserver_metacall(void* self, int32_t param1, int param2, void* param
 /// @param callback int32_t func(QSslServer* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_sslserver_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_sslserver_super_metacall` instead
-///
-#define q_sslserver_qbase_metacall q_sslserver_super_metacall
 
 /// Base class method implementation
 ///
@@ -271,10 +259,6 @@ void q_sslserver_incoming_connection(void* self, intptr_t socket);
 /// @param callback void func(QSslServer* self, intptr_t socket)
 ///
 void q_sslserver_on_incoming_connection(void* self, void (*callback)(void*, intptr_t));
-
-/// @warning DEPRECATED: Use `q_sslserver_super_incoming_connection` instead
-///
-#define q_sslserver_qbase_incoming_connection q_sslserver_super_incoming_connection
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslserver.html#incomingConnection)
 ///
@@ -986,10 +970,6 @@ void q_sslserver_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_sslserver_has_pending_connections(void* self);
 
-/// @warning DEPRECATED: Use `q_sslserver_super_has_pending_connections` instead
-///
-#define q_sslserver_qbase_has_pending_connections q_sslserver_super_has_pending_connections
-
 /// Inherited from QTcpServer
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtcpserver.html#hasPendingConnections)
@@ -1020,10 +1000,6 @@ void q_sslserver_on_has_pending_connections(void* self, bool (*callback)());
 /// @param self QSslServer*
 ///
 QTcpSocket* q_sslserver_next_pending_connection(void* self);
-
-/// @warning DEPRECATED: Use `q_sslserver_super_next_pending_connection` instead
-///
-#define q_sslserver_qbase_next_pending_connection q_sslserver_super_next_pending_connection
 
 /// Inherited from QTcpServer
 ///
@@ -1056,10 +1032,6 @@ void q_sslserver_on_next_pending_connection(void* self, QTcpSocket* (*callback)(
 /// @param event QEvent*
 ///
 bool q_sslserver_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_sslserver_super_event` instead
-///
-#define q_sslserver_qbase_event q_sslserver_super_event
 
 /// Inherited from QObject
 ///
@@ -1095,10 +1067,6 @@ void q_sslserver_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_sslserver_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_sslserver_super_event_filter` instead
-///
-#define q_sslserver_qbase_event_filter q_sslserver_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1133,10 +1101,6 @@ void q_sslserver_on_event_filter(void* self, bool (*callback)(void*, void*, void
 ///
 void q_sslserver_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_sslserver_super_timer_event` instead
-///
-#define q_sslserver_qbase_timer_event q_sslserver_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1169,10 +1133,6 @@ void q_sslserver_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_sslserver_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_sslserver_super_child_event` instead
-///
-#define q_sslserver_qbase_child_event q_sslserver_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1207,10 +1167,6 @@ void q_sslserver_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_sslserver_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_sslserver_super_custom_event` instead
-///
-#define q_sslserver_qbase_custom_event q_sslserver_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1243,10 +1199,6 @@ void q_sslserver_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_sslserver_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_sslserver_super_connect_notify` instead
-///
-#define q_sslserver_qbase_connect_notify q_sslserver_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1281,10 +1233,6 @@ void q_sslserver_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_sslserver_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_sslserver_super_disconnect_notify` instead
-///
-#define q_sslserver_qbase_disconnect_notify q_sslserver_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1318,10 +1266,6 @@ void q_sslserver_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 void q_sslserver_add_pending_connection(void* self, void* socket);
 
-/// @warning DEPRECATED: Use `q_sslserver_super_add_pending_connection` instead
-///
-#define q_sslserver_qbase_add_pending_connection q_sslserver_super_add_pending_connection
-
 /// Inherited from QTcpServer
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtcpserver.html#addPendingConnection)
@@ -1354,10 +1298,6 @@ void q_sslserver_on_add_pending_connection(void* self, void (*callback)(void*, v
 ///
 QObject* q_sslserver_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_sslserver_super_sender` instead
-///
-#define q_sslserver_qbase_sender q_sslserver_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1388,10 +1328,6 @@ void q_sslserver_on_sender(void* self, QObject* (*callback)());
 /// @param self QSslServer*
 ///
 int32_t q_sslserver_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_sslserver_super_sender_signal_index` instead
-///
-#define q_sslserver_qbase_sender_signal_index q_sslserver_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1425,10 +1361,6 @@ void q_sslserver_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_sslserver_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_sslserver_super_receivers` instead
-///
-#define q_sslserver_qbase_receivers q_sslserver_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1461,10 +1393,6 @@ void q_sslserver_on_receivers(void* self, int32_t (*callback)(void*, const char*
 /// @param signal QMetaMethod*
 ///
 bool q_sslserver_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_sslserver_super_is_signal_connected` instead
-///
-#define q_sslserver_qbase_is_signal_connected q_sslserver_super_is_signal_connected
 
 /// Inherited from QObject
 ///

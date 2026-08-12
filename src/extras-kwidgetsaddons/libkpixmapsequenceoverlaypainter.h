@@ -54,10 +54,6 @@ const QMetaObject* k_pixmapsequenceoverlaypainter_meta_object(void* self);
 ///
 void k_pixmapsequenceoverlaypainter_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_pixmapsequenceoverlaypainter_super_meta_object` instead
-///
-#define k_pixmapsequenceoverlaypainter_qbase_meta_object k_pixmapsequenceoverlaypainter_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -77,10 +73,6 @@ void* k_pixmapsequenceoverlaypainter_metacast(void* self, const char* param1);
 /// @param callback void* func(KPixmapSequenceOverlayPainter* self, const char* param1)
 ///
 void k_pixmapsequenceoverlaypainter_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_pixmapsequenceoverlaypainter_super_metacast` instead
-///
-#define k_pixmapsequenceoverlaypainter_qbase_metacast k_pixmapsequenceoverlaypainter_super_metacast
 
 /// Base class method implementation
 ///
@@ -102,10 +94,6 @@ int32_t k_pixmapsequenceoverlaypainter_metacall(void* self, int32_t param1, int 
 /// @param callback int32_t func(KPixmapSequenceOverlayPainter* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_pixmapsequenceoverlaypainter_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_pixmapsequenceoverlaypainter_super_metacall` instead
-///
-#define k_pixmapsequenceoverlaypainter_qbase_metacall k_pixmapsequenceoverlaypainter_super_metacall
 
 /// Base class method implementation
 ///
@@ -226,10 +214,6 @@ bool k_pixmapsequenceoverlaypainter_event_filter(void* self, void* obj, void* ev
 /// @param callback bool func(KPixmapSequenceOverlayPainter* self, QObject* obj, QEvent* event)
 ///
 void k_pixmapsequenceoverlaypainter_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_pixmapsequenceoverlaypainter_super_event_filter` instead
-///
-#define k_pixmapsequenceoverlaypainter_qbase_event_filter k_pixmapsequenceoverlaypainter_super_event_filter
 
 /// [Upstream resources](https://api.kde.org/kpixmapsequenceoverlaypainter.html#eventFilter)
 ///
@@ -718,10 +702,6 @@ void k_pixmapsequenceoverlaypainter_on_destroyed1(void* self, void (*callback)(v
 ///
 bool k_pixmapsequenceoverlaypainter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_pixmapsequenceoverlaypainter_super_event` instead
-///
-#define k_pixmapsequenceoverlaypainter_qbase_event k_pixmapsequenceoverlaypainter_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -754,10 +734,6 @@ void k_pixmapsequenceoverlaypainter_on_event(void* self, bool (*callback)(void*,
 /// @param event QTimerEvent*
 ///
 void k_pixmapsequenceoverlaypainter_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_pixmapsequenceoverlaypainter_super_timer_event` instead
-///
-#define k_pixmapsequenceoverlaypainter_qbase_timer_event k_pixmapsequenceoverlaypainter_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -792,10 +768,6 @@ void k_pixmapsequenceoverlaypainter_on_timer_event(void* self, void (*callback)(
 ///
 void k_pixmapsequenceoverlaypainter_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_pixmapsequenceoverlaypainter_super_child_event` instead
-///
-#define k_pixmapsequenceoverlaypainter_qbase_child_event k_pixmapsequenceoverlaypainter_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -828,10 +800,6 @@ void k_pixmapsequenceoverlaypainter_on_child_event(void* self, void (*callback)(
 /// @param event QEvent*
 ///
 void k_pixmapsequenceoverlaypainter_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_pixmapsequenceoverlaypainter_super_custom_event` instead
-///
-#define k_pixmapsequenceoverlaypainter_qbase_custom_event k_pixmapsequenceoverlaypainter_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -866,10 +834,6 @@ void k_pixmapsequenceoverlaypainter_on_custom_event(void* self, void (*callback)
 ///
 void k_pixmapsequenceoverlaypainter_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_pixmapsequenceoverlaypainter_super_connect_notify` instead
-///
-#define k_pixmapsequenceoverlaypainter_qbase_connect_notify k_pixmapsequenceoverlaypainter_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -903,10 +867,6 @@ void k_pixmapsequenceoverlaypainter_on_connect_notify(void* self, void (*callbac
 ///
 void k_pixmapsequenceoverlaypainter_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_pixmapsequenceoverlaypainter_super_disconnect_notify` instead
-///
-#define k_pixmapsequenceoverlaypainter_qbase_disconnect_notify k_pixmapsequenceoverlaypainter_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -939,10 +899,6 @@ void k_pixmapsequenceoverlaypainter_on_disconnect_notify(void* self, void (*call
 ///
 QObject* k_pixmapsequenceoverlaypainter_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_pixmapsequenceoverlaypainter_super_sender` instead
-///
-#define k_pixmapsequenceoverlaypainter_qbase_sender k_pixmapsequenceoverlaypainter_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -973,10 +929,6 @@ void k_pixmapsequenceoverlaypainter_on_sender(void* self, QObject* (*callback)()
 /// @param self KPixmapSequenceOverlayPainter*
 ///
 int32_t k_pixmapsequenceoverlaypainter_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_pixmapsequenceoverlaypainter_super_sender_signal_index` instead
-///
-#define k_pixmapsequenceoverlaypainter_qbase_sender_signal_index k_pixmapsequenceoverlaypainter_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1010,10 +962,6 @@ void k_pixmapsequenceoverlaypainter_on_sender_signal_index(void* self, int32_t (
 ///
 int32_t k_pixmapsequenceoverlaypainter_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_pixmapsequenceoverlaypainter_super_receivers` instead
-///
-#define k_pixmapsequenceoverlaypainter_qbase_receivers k_pixmapsequenceoverlaypainter_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1046,10 +994,6 @@ void k_pixmapsequenceoverlaypainter_on_receivers(void* self, int32_t (*callback)
 /// @param signal QMetaMethod*
 ///
 bool k_pixmapsequenceoverlaypainter_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_pixmapsequenceoverlaypainter_super_is_signal_connected` instead
-///
-#define k_pixmapsequenceoverlaypainter_qbase_is_signal_connected k_pixmapsequenceoverlaypainter_super_is_signal_connected
 
 /// Inherited from QObject
 ///

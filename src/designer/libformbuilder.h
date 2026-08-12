@@ -68,10 +68,6 @@ QWidget* q_formbuilder_create_widget(void* self, const char* widgetName, void* p
 ///
 void q_formbuilder_on_create_widget(void* self, QWidget* (*callback)(void*, const char*, void*, const char*));
 
-/// @warning DEPRECATED: Use `q_formbuilder_super_create_widget` instead
-///
-#define q_formbuilder_qbase_create_widget q_formbuilder_super_create_widget
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qformbuilder.html#createWidget)
 ///
 /// Base class method implementation
@@ -101,10 +97,6 @@ QLayout* q_formbuilder_create_layout(void* self, const char* layoutName, void* p
 ///
 void q_formbuilder_on_create_layout(void* self, QLayout* (*callback)(void*, const char*, void*, const char*));
 
-/// @warning DEPRECATED: Use `q_formbuilder_super_create_layout` instead
-///
-#define q_formbuilder_qbase_create_layout q_formbuilder_super_create_layout
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qformbuilder.html#createLayout)
 ///
 /// Base class method implementation
@@ -131,10 +123,6 @@ void q_formbuilder_update_custom_widgets(void* self);
 ///
 void q_formbuilder_on_update_custom_widgets(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_formbuilder_super_update_custom_widgets` instead
-///
-#define q_formbuilder_qbase_update_custom_widgets q_formbuilder_super_update_custom_widgets
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qformbuilder.html#updateCustomWidgets)
 ///
 /// Base class method implementation
@@ -159,10 +147,6 @@ QWidget* q_formbuilder_widget_by_name(void* self, void* topLevel, const char* na
 /// @param callback QWidget* func(QFormBuilder* self, QWidget* topLevel, const char* name)
 ///
 void q_formbuilder_on_widget_by_name(void* self, QWidget* (*callback)(void*, void*, const char*));
-
-/// @warning DEPRECATED: Use `q_formbuilder_super_widget_by_name` instead
-///
-#define q_formbuilder_qbase_widget_by_name q_formbuilder_super_widget_by_name
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qformbuilder.html#widgetByName)
 ///
@@ -213,10 +197,6 @@ const char* q_formbuilder_error_string(void* self);
 ///
 QWidget* q_formbuilder_load(void* self, void* dev, void* parentWidget);
 
-/// @warning DEPRECATED: Use `q_formbuilder_super_load` instead
-///
-#define q_formbuilder_qbase_load q_formbuilder_super_load
-
 /// Inherited from QAbstractFormBuilder
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#load)
@@ -252,10 +232,6 @@ void q_formbuilder_on_load(void* self, QWidget* (*callback)(void*, void*, void*)
 ///
 void q_formbuilder_save(void* self, void* dev, void* widget);
 
-/// @warning DEPRECATED: Use `q_formbuilder_super_save` instead
-///
-#define q_formbuilder_qbase_save q_formbuilder_super_save
-
 /// Inherited from QAbstractFormBuilder
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#save)
@@ -290,10 +266,6 @@ void q_formbuilder_on_save(void* self, void (*callback)(void*, void*, void*));
 ///
 void q_formbuilder_add_menu_action(void* self, void* action);
 
-/// @warning DEPRECATED: Use `q_formbuilder_super_add_menu_action` instead
-///
-#define q_formbuilder_qbase_add_menu_action q_formbuilder_super_add_menu_action
-
 /// Inherited from QAbstractFormBuilder
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#addMenuAction)
@@ -327,10 +299,6 @@ void q_formbuilder_on_add_menu_action(void* self, void (*callback)(void*, void*)
 /// @param name const char*
 ///
 QAction* q_formbuilder_create_action(void* self, void* parent, const char* name);
-
-/// @warning DEPRECATED: Use `q_formbuilder_super_create_action` instead
-///
-#define q_formbuilder_qbase_create_action q_formbuilder_super_create_action
 
 /// Inherited from QAbstractFormBuilder
 ///
@@ -367,10 +335,6 @@ void q_formbuilder_on_create_action(void* self, QAction* (*callback)(void*, void
 ///
 QActionGroup* q_formbuilder_create_action_group(void* self, void* parent, const char* name);
 
-/// @warning DEPRECATED: Use `q_formbuilder_super_create_action_group` instead
-///
-#define q_formbuilder_qbase_create_action_group q_formbuilder_super_create_action_group
-
 /// Inherited from QAbstractFormBuilder
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#createActionGroup)
@@ -405,10 +369,6 @@ void q_formbuilder_on_create_action_group(void* self, QActionGroup* (*callback)(
 /// @param prop const char*
 ///
 bool q_formbuilder_check_property(void* self, void* obj, const char* prop);
-
-/// @warning DEPRECATED: Use `q_formbuilder_super_check_property` instead
-///
-#define q_formbuilder_qbase_check_property q_formbuilder_super_check_property
 
 /// Inherited from QAbstractFormBuilder
 ///
@@ -446,10 +406,6 @@ void q_formbuilder_on_check_property(void* self, bool (*callback)(void*, void*, 
 ///
 bool q_formbuilder_apply_property_internally(void* self, void* o, const char* propertyName, void* value);
 
-/// @warning DEPRECATED: Use `q_formbuilder_super_apply_property_internally` instead
-///
-#define q_formbuilder_qbase_apply_property_internally q_formbuilder_super_apply_property_internally
-
 /// Inherited from QAbstractFormBuilder
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#applyPropertyInternally)
@@ -484,10 +440,6 @@ void q_formbuilder_on_apply_property_internally(void* self, bool (*callback)(voi
 ///
 void q_formbuilder_reset(void* self);
 
-/// @warning DEPRECATED: Use `q_formbuilder_super_reset` instead
-///
-#define q_formbuilder_qbase_reset q_formbuilder_super_reset
-
 /// Inherited from QAbstractFormBuilder
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#reset)
@@ -518,10 +470,6 @@ void q_formbuilder_on_reset(void* self, void (*callback)());
 /// @param self QFormBuilder*
 ///
 QMetaEnum* q_formbuilder_tool_bar_area_meta_enum(void* self);
-
-/// @warning DEPRECATED: Use `q_formbuilder_super_tool_bar_area_meta_enum` instead
-///
-#define q_formbuilder_qbase_tool_bar_area_meta_enum q_formbuilder_super_tool_bar_area_meta_enum
 
 /// Inherited from QAbstractFormBuilder
 ///

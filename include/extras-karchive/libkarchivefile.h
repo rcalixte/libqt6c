@@ -68,10 +68,6 @@ char* k_archivefile_data(void* self);
 ///
 void k_archivefile_on_data(void* self, libqt_string (*callback)());
 
-/// @warning DEPRECATED: Use `k_archivefile_super_data` instead
-///
-#define k_archivefile_qbase_data k_archivefile_super_data
-
 /// [Upstream resources](https://api.kde.org/karchivefile.html#data)
 ///
 /// Base class method implementation
@@ -95,10 +91,6 @@ QIODevice* k_archivefile_create_device(void* self);
 ///
 void k_archivefile_on_create_device(void* self, QIODevice* (*callback)());
 
-/// @warning DEPRECATED: Use `k_archivefile_super_create_device` instead
-///
-#define k_archivefile_qbase_create_device k_archivefile_super_create_device
-
 /// [Upstream resources](https://api.kde.org/karchivefile.html#createDevice)
 ///
 /// Base class method implementation
@@ -121,10 +113,6 @@ bool k_archivefile_is_file(void* self);
 /// @param callback bool func()
 ///
 void k_archivefile_on_is_file(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `k_archivefile_super_is_file` instead
-///
-#define k_archivefile_qbase_is_file k_archivefile_super_is_file
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#isFile)
 ///
@@ -157,10 +145,6 @@ void k_archivefile_virtual_hook(void* self, int id, void* data);
 /// @param callback void func(KArchiveFile* self, int id, void* data)
 ///
 void k_archivefile_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
-
-/// @warning DEPRECATED: Use `k_archivefile_super_virtual_hook` instead
-///
-#define k_archivefile_qbase_virtual_hook k_archivefile_super_virtual_hook
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#virtual_hook)
 ///
@@ -238,10 +222,6 @@ const char* k_archivefile_sym_link_target(void* self);
 ///
 bool k_archivefile_is_directory(void* self);
 
-/// @warning DEPRECATED: Use `k_archivefile_super_is_directory` instead
-///
-#define k_archivefile_qbase_is_directory k_archivefile_super_is_directory
-
 /// Inherited from KArchiveEntry
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#isDirectory)
@@ -272,10 +252,6 @@ void k_archivefile_on_is_directory(void* self, bool (*callback)());
 /// @param self KArchiveFile*
 ///
 KArchive* k_archivefile_archive(void* self);
-
-/// @warning DEPRECATED: Use `k_archivefile_super_archive` instead
-///
-#define k_archivefile_qbase_archive k_archivefile_super_archive
 
 /// Inherited from KArchiveEntry
 ///

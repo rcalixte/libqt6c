@@ -30,10 +30,6 @@ void k_texteditor__movingrangefeedback_range_empty(void* self, void* range);
 ///
 void k_texteditor__movingrangefeedback_on_range_empty(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_texteditor__movingrangefeedback_super_range_empty` instead
-///
-#define k_texteditor__movingrangefeedback_qbase_range_empty k_texteditor__movingrangefeedback_super_range_empty
-
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#rangeEmpty)
 ///
 /// Base class method implementation
@@ -58,10 +54,6 @@ void k_texteditor__movingrangefeedback_range_invalid(void* self, void* range);
 /// @param callback void func(KTextEditor__MovingRangeFeedback* self, KTextEditor__MovingRange* range)
 ///
 void k_texteditor__movingrangefeedback_on_range_invalid(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_texteditor__movingrangefeedback_super_range_invalid` instead
-///
-#define k_texteditor__movingrangefeedback_qbase_range_invalid k_texteditor__movingrangefeedback_super_range_invalid
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#rangeInvalid)
 ///
@@ -88,10 +80,6 @@ void k_texteditor__movingrangefeedback_mouse_entered_range(void* self, void* ran
 /// @param callback void func(KTextEditor__MovingRangeFeedback* self, KTextEditor__MovingRange* range, KTextEditor__View* view)
 ///
 void k_texteditor__movingrangefeedback_on_mouse_entered_range(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_texteditor__movingrangefeedback_super_mouse_entered_range` instead
-///
-#define k_texteditor__movingrangefeedback_qbase_mouse_entered_range k_texteditor__movingrangefeedback_super_mouse_entered_range
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#mouseEnteredRange)
 ///
@@ -120,10 +108,6 @@ void k_texteditor__movingrangefeedback_mouse_exited_range(void* self, void* rang
 ///
 void k_texteditor__movingrangefeedback_on_mouse_exited_range(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_texteditor__movingrangefeedback_super_mouse_exited_range` instead
-///
-#define k_texteditor__movingrangefeedback_qbase_mouse_exited_range k_texteditor__movingrangefeedback_super_mouse_exited_range
-
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#mouseExitedRange)
 ///
 /// Base class method implementation
@@ -151,10 +135,6 @@ void k_texteditor__movingrangefeedback_caret_entered_range(void* self, void* ran
 ///
 void k_texteditor__movingrangefeedback_on_caret_entered_range(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_texteditor__movingrangefeedback_super_caret_entered_range` instead
-///
-#define k_texteditor__movingrangefeedback_qbase_caret_entered_range k_texteditor__movingrangefeedback_super_caret_entered_range
-
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#caretEnteredRange)
 ///
 /// Base class method implementation
@@ -181,10 +161,6 @@ void k_texteditor__movingrangefeedback_caret_exited_range(void* self, void* rang
 /// @param callback void func(KTextEditor__MovingRangeFeedback* self, KTextEditor__MovingRange* range, KTextEditor__View* view)
 ///
 void k_texteditor__movingrangefeedback_on_caret_exited_range(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_texteditor__movingrangefeedback_super_caret_exited_range` instead
-///
-#define k_texteditor__movingrangefeedback_qbase_caret_exited_range k_texteditor__movingrangefeedback_super_caret_exited_range
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#caretExitedRange)
 ///

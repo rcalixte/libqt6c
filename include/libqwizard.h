@@ -46,10 +46,6 @@ const QMetaObject* q_wizard_meta_object(void* self);
 ///
 void q_wizard_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_wizard_super_meta_object` instead
-///
-#define q_wizard_qbase_meta_object q_wizard_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -69,10 +65,6 @@ void* q_wizard_metacast(void* self, const char* param1);
 /// @param callback void* func(QWizard* self, const char* param1)
 ///
 void q_wizard_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_wizard_super_metacast` instead
-///
-#define q_wizard_qbase_metacast q_wizard_super_metacast
 
 /// Base class method implementation
 ///
@@ -94,10 +86,6 @@ int32_t q_wizard_metacall(void* self, int32_t param1, int param2, void* param3);
 /// @param callback int32_t func(QWizard* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_wizard_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_wizard_super_metacall` instead
-///
-#define q_wizard_qbase_metacall q_wizard_super_metacall
 
 /// Base class method implementation
 ///
@@ -208,10 +196,6 @@ bool q_wizard_validate_current_page(void* self);
 ///
 void q_wizard_on_validate_current_page(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_wizard_super_validate_current_page` instead
-///
-#define q_wizard_qbase_validate_current_page q_wizard_super_validate_current_page
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#validateCurrentPage)
 ///
 /// Base class method implementation
@@ -234,10 +218,6 @@ int32_t q_wizard_next_id(void* self);
 /// @param callback int32_t func()
 ///
 void q_wizard_on_next_id(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_wizard_super_next_id` instead
-///
-#define q_wizard_qbase_next_id q_wizard_super_next_id
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#nextId)
 ///
@@ -428,10 +408,6 @@ void q_wizard_set_visible(void* self, bool visible);
 ///
 void q_wizard_on_set_visible(void* self, void (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `q_wizard_super_set_visible` instead
-///
-#define q_wizard_qbase_set_visible q_wizard_super_set_visible
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#setVisible)
 ///
 /// Base class method implementation
@@ -457,10 +433,6 @@ QSize* q_wizard_size_hint(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_wizard_on_size_hint(void* self, QSize* (*callback)());
-
-/// @warning DEPRECATED: Use `q_wizard_super_size_hint` instead
-///
-#define q_wizard_qbase_size_hint q_wizard_super_size_hint
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#sizeHint)
 ///
@@ -580,10 +552,6 @@ bool q_wizard_event(void* self, void* event);
 ///
 void q_wizard_on_event(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_wizard_super_event` instead
-///
-#define q_wizard_qbase_event q_wizard_super_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#event)
 ///
 /// Base class method implementation
@@ -608,10 +576,6 @@ void q_wizard_resize_event(void* self, void* event);
 /// @param callback void func(QWizard* self, QResizeEvent* event)
 ///
 void q_wizard_on_resize_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_wizard_super_resize_event` instead
-///
-#define q_wizard_qbase_resize_event q_wizard_super_resize_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#resizeEvent)
 ///
@@ -638,10 +602,6 @@ void q_wizard_paint_event(void* self, void* event);
 ///
 void q_wizard_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_wizard_super_paint_event` instead
-///
-#define q_wizard_qbase_paint_event q_wizard_super_paint_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#paintEvent)
 ///
 /// Base class method implementation
@@ -666,10 +626,6 @@ void q_wizard_done(void* self, int result);
 /// @param callback void func(QWizard* self, int result)
 ///
 void q_wizard_on_done(void* self, void (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_wizard_super_done` instead
-///
-#define q_wizard_qbase_done q_wizard_super_done
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#done)
 ///
@@ -696,10 +652,6 @@ void q_wizard_initialize_page(void* self, int id);
 ///
 void q_wizard_on_initialize_page(void* self, void (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_wizard_super_initialize_page` instead
-///
-#define q_wizard_qbase_initialize_page q_wizard_super_initialize_page
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#initializePage)
 ///
 /// Base class method implementation
@@ -724,10 +676,6 @@ void q_wizard_cleanup_page(void* self, int id);
 /// @param callback void func(QWizard* self, int id)
 ///
 void q_wizard_on_cleanup_page(void* self, void (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_wizard_super_cleanup_page` instead
-///
-#define q_wizard_qbase_cleanup_page q_wizard_super_cleanup_page
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#cleanupPage)
 ///
@@ -3827,10 +3775,6 @@ int32_t q_wizard_encode_metric_f(int32_t metric, double value);
 ///
 QSize* q_wizard_minimum_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `q_wizard_super_minimum_size_hint` instead
-///
-#define q_wizard_qbase_minimum_size_hint q_wizard_super_minimum_size_hint
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
@@ -3864,10 +3808,6 @@ void q_wizard_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 void q_wizard_open(void* self);
 
-/// @warning DEPRECATED: Use `q_wizard_super_open` instead
-///
-#define q_wizard_qbase_open q_wizard_super_open
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#open)
@@ -3898,10 +3838,6 @@ void q_wizard_on_open(void* self, void (*callback)());
 /// @param self QWizard*
 ///
 int32_t q_wizard_exec(void* self);
-
-/// @warning DEPRECATED: Use `q_wizard_super_exec` instead
-///
-#define q_wizard_qbase_exec q_wizard_super_exec
 
 /// Inherited from QDialog
 ///
@@ -3934,10 +3870,6 @@ void q_wizard_on_exec(void* self, int32_t (*callback)());
 ///
 void q_wizard_accept(void* self);
 
-/// @warning DEPRECATED: Use `q_wizard_super_accept` instead
-///
-#define q_wizard_qbase_accept q_wizard_super_accept
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#accept)
@@ -3968,10 +3900,6 @@ void q_wizard_on_accept(void* self, void (*callback)());
 /// @param self QWizard*
 ///
 void q_wizard_reject(void* self);
-
-/// @warning DEPRECATED: Use `q_wizard_super_reject` instead
-///
-#define q_wizard_qbase_reject q_wizard_super_reject
 
 /// Inherited from QDialog
 ///
@@ -4004,10 +3932,6 @@ void q_wizard_on_reject(void* self, void (*callback)());
 /// @param param1 QKeyEvent*
 ///
 void q_wizard_key_press_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_wizard_super_key_press_event` instead
-///
-#define q_wizard_qbase_key_press_event q_wizard_super_key_press_event
 
 /// Inherited from QDialog
 ///
@@ -4042,10 +3966,6 @@ void q_wizard_on_key_press_event(void* self, void (*callback)(void*, void*));
 ///
 void q_wizard_close_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_wizard_super_close_event` instead
-///
-#define q_wizard_qbase_close_event q_wizard_super_close_event
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
@@ -4079,10 +3999,6 @@ void q_wizard_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void q_wizard_show_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_wizard_super_show_event` instead
-///
-#define q_wizard_qbase_show_event q_wizard_super_show_event
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#showEvent)
@@ -4115,10 +4031,6 @@ void q_wizard_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QContextMenuEvent*
 ///
 void q_wizard_context_menu_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_wizard_super_context_menu_event` instead
-///
-#define q_wizard_qbase_context_menu_event q_wizard_super_context_menu_event
 
 /// Inherited from QDialog
 ///
@@ -4154,10 +4066,6 @@ void q_wizard_on_context_menu_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_wizard_event_filter(void* self, void* param1, void* param2);
 
-/// @warning DEPRECATED: Use `q_wizard_super_event_filter` instead
-///
-#define q_wizard_qbase_event_filter q_wizard_super_event_filter
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
@@ -4191,10 +4099,6 @@ void q_wizard_on_event_filter(void* self, bool (*callback)(void*, void*, void*))
 ///
 int32_t q_wizard_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `q_wizard_super_dev_type` instead
-///
-#define q_wizard_qbase_dev_type q_wizard_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -4226,10 +4130,6 @@ void q_wizard_on_dev_type(void* self, int32_t (*callback)());
 /// @param param1 int
 ///
 int32_t q_wizard_height_for_width(void* self, int param1);
-
-/// @warning DEPRECATED: Use `q_wizard_super_height_for_width` instead
-///
-#define q_wizard_qbase_height_for_width q_wizard_super_height_for_width
 
 /// Inherited from QWidget
 ///
@@ -4263,10 +4163,6 @@ void q_wizard_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 ///
 bool q_wizard_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `q_wizard_super_has_height_for_width` instead
-///
-#define q_wizard_qbase_has_height_for_width q_wizard_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -4297,10 +4193,6 @@ void q_wizard_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self QWizard*
 ///
 QPaintEngine* q_wizard_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `q_wizard_super_paint_engine` instead
-///
-#define q_wizard_qbase_paint_engine q_wizard_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -4333,10 +4225,6 @@ void q_wizard_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QMouseEvent*
 ///
 void q_wizard_mouse_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizard_super_mouse_press_event` instead
-///
-#define q_wizard_qbase_mouse_press_event q_wizard_super_mouse_press_event
 
 /// Inherited from QWidget
 ///
@@ -4371,10 +4259,6 @@ void q_wizard_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 ///
 void q_wizard_mouse_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizard_super_mouse_release_event` instead
-///
-#define q_wizard_qbase_mouse_release_event q_wizard_super_mouse_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
@@ -4407,10 +4291,6 @@ void q_wizard_on_mouse_release_event(void* self, void (*callback)(void*, void*))
 /// @param event QMouseEvent*
 ///
 void q_wizard_mouse_double_click_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizard_super_mouse_double_click_event` instead
-///
-#define q_wizard_qbase_mouse_double_click_event q_wizard_super_mouse_double_click_event
 
 /// Inherited from QWidget
 ///
@@ -4445,10 +4325,6 @@ void q_wizard_on_mouse_double_click_event(void* self, void (*callback)(void*, vo
 ///
 void q_wizard_mouse_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizard_super_mouse_move_event` instead
-///
-#define q_wizard_qbase_mouse_move_event q_wizard_super_mouse_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -4481,10 +4357,6 @@ void q_wizard_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 /// @param event QWheelEvent*
 ///
 void q_wizard_wheel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizard_super_wheel_event` instead
-///
-#define q_wizard_qbase_wheel_event q_wizard_super_wheel_event
 
 /// Inherited from QWidget
 ///
@@ -4519,10 +4391,6 @@ void q_wizard_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void q_wizard_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizard_super_key_release_event` instead
-///
-#define q_wizard_qbase_key_release_event q_wizard_super_key_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -4555,10 +4423,6 @@ void q_wizard_on_key_release_event(void* self, void (*callback)(void*, void*));
 /// @param event QFocusEvent*
 ///
 void q_wizard_focus_in_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizard_super_focus_in_event` instead
-///
-#define q_wizard_qbase_focus_in_event q_wizard_super_focus_in_event
 
 /// Inherited from QWidget
 ///
@@ -4593,10 +4457,6 @@ void q_wizard_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 void q_wizard_focus_out_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizard_super_focus_out_event` instead
-///
-#define q_wizard_qbase_focus_out_event q_wizard_super_focus_out_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -4629,10 +4489,6 @@ void q_wizard_on_focus_out_event(void* self, void (*callback)(void*, void*));
 /// @param event QEnterEvent*
 ///
 void q_wizard_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizard_super_enter_event` instead
-///
-#define q_wizard_qbase_enter_event q_wizard_super_enter_event
 
 /// Inherited from QWidget
 ///
@@ -4667,10 +4523,6 @@ void q_wizard_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void q_wizard_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizard_super_leave_event` instead
-///
-#define q_wizard_qbase_leave_event q_wizard_super_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -4703,10 +4555,6 @@ void q_wizard_on_leave_event(void* self, void (*callback)(void*, void*));
 /// @param event QMoveEvent*
 ///
 void q_wizard_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizard_super_move_event` instead
-///
-#define q_wizard_qbase_move_event q_wizard_super_move_event
 
 /// Inherited from QWidget
 ///
@@ -4741,10 +4589,6 @@ void q_wizard_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_wizard_tablet_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizard_super_tablet_event` instead
-///
-#define q_wizard_qbase_tablet_event q_wizard_super_tablet_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4777,10 +4621,6 @@ void q_wizard_on_tablet_event(void* self, void (*callback)(void*, void*));
 /// @param event QActionEvent*
 ///
 void q_wizard_action_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizard_super_action_event` instead
-///
-#define q_wizard_qbase_action_event q_wizard_super_action_event
 
 /// Inherited from QWidget
 ///
@@ -4815,10 +4655,6 @@ void q_wizard_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 void q_wizard_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizard_super_drag_enter_event` instead
-///
-#define q_wizard_qbase_drag_enter_event q_wizard_super_drag_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4851,10 +4687,6 @@ void q_wizard_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 /// @param event QDragMoveEvent*
 ///
 void q_wizard_drag_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizard_super_drag_move_event` instead
-///
-#define q_wizard_qbase_drag_move_event q_wizard_super_drag_move_event
 
 /// Inherited from QWidget
 ///
@@ -4889,10 +4721,6 @@ void q_wizard_on_drag_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_wizard_drag_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizard_super_drag_leave_event` instead
-///
-#define q_wizard_qbase_drag_leave_event q_wizard_super_drag_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -4926,10 +4754,6 @@ void q_wizard_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_wizard_drop_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizard_super_drop_event` instead
-///
-#define q_wizard_qbase_drop_event q_wizard_super_drop_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4962,10 +4786,6 @@ void q_wizard_on_drop_event(void* self, void (*callback)(void*, void*));
 /// @param event QHideEvent*
 ///
 void q_wizard_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizard_super_hide_event` instead
-///
-#define q_wizard_qbase_hide_event q_wizard_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -5002,10 +4822,6 @@ void q_wizard_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_wizard_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `q_wizard_super_native_event` instead
-///
-#define q_wizard_qbase_native_event q_wizard_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -5041,10 +4857,6 @@ void q_wizard_on_native_event(void* self, bool (*callback)(void*, libqt_string, 
 ///
 void q_wizard_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_wizard_super_change_event` instead
-///
-#define q_wizard_qbase_change_event q_wizard_super_change_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -5077,10 +4889,6 @@ void q_wizard_on_change_event(void* self, void (*callback)(void*, void*));
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
 int32_t q_wizard_metric(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `q_wizard_super_metric` instead
-///
-#define q_wizard_qbase_metric q_wizard_super_metric
 
 /// Inherited from QWidget
 ///
@@ -5115,10 +4923,6 @@ void q_wizard_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void q_wizard_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_wizard_super_init_painter` instead
-///
-#define q_wizard_qbase_init_painter q_wizard_super_init_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -5152,10 +4956,6 @@ void q_wizard_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_wizard_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `q_wizard_super_redirected` instead
-///
-#define q_wizard_qbase_redirected q_wizard_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -5187,10 +4987,6 @@ void q_wizard_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*))
 /// @param self QWizard*
 ///
 QPainter* q_wizard_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `q_wizard_super_shared_painter` instead
-///
-#define q_wizard_qbase_shared_painter q_wizard_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -5224,10 +5020,6 @@ void q_wizard_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void q_wizard_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_wizard_super_input_method_event` instead
-///
-#define q_wizard_qbase_input_method_event q_wizard_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -5260,10 +5052,6 @@ void q_wizard_on_input_method_event(void* self, void (*callback)(void*, void*));
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* q_wizard_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `q_wizard_super_input_method_query` instead
-///
-#define q_wizard_qbase_input_method_query q_wizard_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -5300,10 +5088,6 @@ void q_wizard_on_input_method_query(void* self, QVariant* (*callback)(void*, int
 ///
 bool q_wizard_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `q_wizard_super_focus_next_prev_child` instead
-///
-#define q_wizard_qbase_focus_next_prev_child q_wizard_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -5336,10 +5120,6 @@ void q_wizard_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)
 /// @param event QTimerEvent*
 ///
 void q_wizard_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizard_super_timer_event` instead
-///
-#define q_wizard_qbase_timer_event q_wizard_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -5374,10 +5154,6 @@ void q_wizard_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_wizard_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizard_super_child_event` instead
-///
-#define q_wizard_qbase_child_event q_wizard_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -5410,10 +5186,6 @@ void q_wizard_on_child_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void q_wizard_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizard_super_custom_event` instead
-///
-#define q_wizard_qbase_custom_event q_wizard_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -5448,10 +5220,6 @@ void q_wizard_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_wizard_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_wizard_super_connect_notify` instead
-///
-#define q_wizard_qbase_connect_notify q_wizard_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5484,10 +5252,6 @@ void q_wizard_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_wizard_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_wizard_super_disconnect_notify` instead
-///
-#define q_wizard_qbase_disconnect_notify q_wizard_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -5522,10 +5286,6 @@ void q_wizard_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_wizard_adjust_position(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_wizard_super_adjust_position` instead
-///
-#define q_wizard_qbase_adjust_position q_wizard_super_adjust_position
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
@@ -5558,10 +5318,6 @@ void q_wizard_on_adjust_position(void* self, void (*callback)(void*, void*));
 ///
 void q_wizard_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_wizard_super_update_micro_focus` instead
-///
-#define q_wizard_qbase_update_micro_focus q_wizard_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5592,10 +5348,6 @@ void q_wizard_on_update_micro_focus(void* self, void (*callback)());
 /// @param self QWizard*
 ///
 void q_wizard_create(void* self);
-
-/// @warning DEPRECATED: Use `q_wizard_super_create` instead
-///
-#define q_wizard_qbase_create q_wizard_super_create
 
 /// Inherited from QWidget
 ///
@@ -5628,10 +5380,6 @@ void q_wizard_on_create(void* self, void (*callback)());
 ///
 void q_wizard_destroy(void* self);
 
-/// @warning DEPRECATED: Use `q_wizard_super_destroy` instead
-///
-#define q_wizard_qbase_destroy q_wizard_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5662,10 +5410,6 @@ void q_wizard_on_destroy(void* self, void (*callback)());
 /// @param self QWizard*
 ///
 bool q_wizard_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `q_wizard_super_focus_next_child` instead
-///
-#define q_wizard_qbase_focus_next_child q_wizard_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -5698,10 +5442,6 @@ void q_wizard_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_wizard_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `q_wizard_super_focus_previous_child` instead
-///
-#define q_wizard_qbase_focus_previous_child q_wizard_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5732,10 +5472,6 @@ void q_wizard_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self QWizard*
 ///
 QObject* q_wizard_sender(void* self);
-
-/// @warning DEPRECATED: Use `q_wizard_super_sender` instead
-///
-#define q_wizard_qbase_sender q_wizard_super_sender
 
 /// Inherited from QObject
 ///
@@ -5768,10 +5504,6 @@ void q_wizard_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_wizard_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `q_wizard_super_sender_signal_index` instead
-///
-#define q_wizard_qbase_sender_signal_index q_wizard_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5803,10 +5535,6 @@ void q_wizard_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t q_wizard_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `q_wizard_super_receivers` instead
-///
-#define q_wizard_qbase_receivers q_wizard_super_receivers
 
 /// Inherited from QObject
 ///
@@ -5841,10 +5569,6 @@ void q_wizard_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 ///
 bool q_wizard_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_wizard_super_is_signal_connected` instead
-///
-#define q_wizard_qbase_is_signal_connected q_wizard_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5878,10 +5602,6 @@ void q_wizard_on_is_signal_connected(void* self, bool (*callback)(void*, void*))
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double q_wizard_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `q_wizard_super_get_decoded_metric_f` instead
-///
-#define q_wizard_qbase_get_decoded_metric_f q_wizard_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///
@@ -5954,10 +5674,6 @@ const QMetaObject* q_wizardpage_meta_object(void* self);
 ///
 void q_wizardpage_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_meta_object` instead
-///
-#define q_wizardpage_qbase_meta_object q_wizardpage_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -5977,10 +5693,6 @@ void* q_wizardpage_metacast(void* self, const char* param1);
 /// @param callback void* func(QWizardPage* self, const char* param1)
 ///
 void q_wizardpage_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_metacast` instead
-///
-#define q_wizardpage_qbase_metacast q_wizardpage_super_metacast
 
 /// Base class method implementation
 ///
@@ -6002,10 +5714,6 @@ int32_t q_wizardpage_metacall(void* self, int32_t param1, int param2, void* para
 /// @param callback int32_t func(QWizardPage* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_wizardpage_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_metacall` instead
-///
-#define q_wizardpage_qbase_metacall q_wizardpage_super_metacall
 
 /// Base class method implementation
 ///
@@ -6127,10 +5835,6 @@ void q_wizardpage_initialize_page(void* self);
 ///
 void q_wizardpage_on_initialize_page(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_initialize_page` instead
-///
-#define q_wizardpage_qbase_initialize_page q_wizardpage_super_initialize_page
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#initializePage)
 ///
 /// Base class method implementation
@@ -6153,10 +5857,6 @@ void q_wizardpage_cleanup_page(void* self);
 /// @param callback void func()
 ///
 void q_wizardpage_on_cleanup_page(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_cleanup_page` instead
-///
-#define q_wizardpage_qbase_cleanup_page q_wizardpage_super_cleanup_page
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#cleanupPage)
 ///
@@ -6181,10 +5881,6 @@ bool q_wizardpage_validate_page(void* self);
 ///
 void q_wizardpage_on_validate_page(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_validate_page` instead
-///
-#define q_wizardpage_qbase_validate_page q_wizardpage_super_validate_page
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#validatePage)
 ///
 /// Base class method implementation
@@ -6208,10 +5904,6 @@ bool q_wizardpage_is_complete(void* self);
 ///
 void q_wizardpage_on_is_complete(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_is_complete` instead
-///
-#define q_wizardpage_qbase_is_complete q_wizardpage_super_is_complete
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#isComplete)
 ///
 /// Base class method implementation
@@ -6234,10 +5926,6 @@ int32_t q_wizardpage_next_id(void* self);
 /// @param callback int32_t func()
 ///
 void q_wizardpage_on_next_id(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_next_id` instead
-///
-#define q_wizardpage_qbase_next_id q_wizardpage_super_next_id
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#nextId)
 ///
@@ -6277,10 +5965,6 @@ void q_wizardpage_set_field(void* self, const char* name, void* value);
 ///
 void q_wizardpage_on_set_field(void* self, void (*callback)(void*, const char*, void*));
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_set_field` instead
-///
-#define q_wizardpage_qbase_set_field q_wizardpage_super_set_field
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#setField)
 ///
 /// Base class method implementation
@@ -6309,10 +5993,6 @@ QVariant* q_wizardpage_field(void* self, const char* name);
 ///
 void q_wizardpage_on_field(void* self, QVariant* (*callback)(void*, const char*));
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_field` instead
-///
-#define q_wizardpage_qbase_field q_wizardpage_super_field
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#field)
 ///
 /// Base class method implementation
@@ -6339,10 +6019,6 @@ void q_wizardpage_register_field(void* self, const char* name, void* widget);
 ///
 void q_wizardpage_on_register_field(void* self, void (*callback)(void*, const char*, void*));
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_register_field` instead
-///
-#define q_wizardpage_qbase_register_field q_wizardpage_super_register_field
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#registerField)
 ///
 /// Base class method implementation
@@ -6367,10 +6043,6 @@ QWizard* q_wizardpage_wizard(void* self);
 /// @param callback QWizard* func()
 ///
 void q_wizardpage_on_wizard(void* self, QWizard* (*callback)());
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_wizard` instead
-///
-#define q_wizardpage_qbase_wizard q_wizardpage_super_wizard
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#wizard)
 ///
@@ -6417,10 +6089,6 @@ void q_wizardpage_register_field3(void* self, const char* name, void* widget, co
 ///
 void q_wizardpage_on_register_field3(void* self, void (*callback)(void*, const char*, void*, const char*));
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_register_field3` instead
-///
-#define q_wizardpage_qbase_register_field3 q_wizardpage_super_register_field3
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#registerField)
 ///
 /// Base class method implementation
@@ -6450,10 +6118,6 @@ void q_wizardpage_register_field4(void* self, const char* name, void* widget, co
 /// @param callback void func(QWizardPage* self, const char* name, QWidget* widget, const char* property, const char* changedSignal)
 ///
 void q_wizardpage_on_register_field4(void* self, void (*callback)(void*, const char*, void*, const char*, const char*));
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_register_field4` instead
-///
-#define q_wizardpage_qbase_register_field4 q_wizardpage_super_register_field4
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#registerField)
 ///
@@ -9434,10 +9098,6 @@ int32_t q_wizardpage_encode_metric_f(int32_t metric, double value);
 ///
 int32_t q_wizardpage_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_dev_type` instead
-///
-#define q_wizardpage_qbase_dev_type q_wizardpage_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -9469,10 +9129,6 @@ void q_wizardpage_on_dev_type(void* self, int32_t (*callback)());
 /// @param visible bool
 ///
 void q_wizardpage_set_visible(void* self, bool visible);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_set_visible` instead
-///
-#define q_wizardpage_qbase_set_visible q_wizardpage_super_set_visible
 
 /// Inherited from QWidget
 ///
@@ -9506,10 +9162,6 @@ void q_wizardpage_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 QSize* q_wizardpage_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_size_hint` instead
-///
-#define q_wizardpage_qbase_size_hint q_wizardpage_super_size_hint
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
@@ -9542,10 +9194,6 @@ void q_wizardpage_on_size_hint(void* self, QSize* (*callback)());
 /// @param self QWizardPage*
 ///
 QSize* q_wizardpage_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_minimum_size_hint` instead
-///
-#define q_wizardpage_qbase_minimum_size_hint q_wizardpage_super_minimum_size_hint
 
 /// Inherited from QWidget
 ///
@@ -9581,10 +9229,6 @@ void q_wizardpage_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 int32_t q_wizardpage_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_height_for_width` instead
-///
-#define q_wizardpage_qbase_height_for_width q_wizardpage_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -9617,10 +9261,6 @@ void q_wizardpage_on_height_for_width(void* self, int32_t (*callback)(void*, int
 ///
 bool q_wizardpage_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_has_height_for_width` instead
-///
-#define q_wizardpage_qbase_has_height_for_width q_wizardpage_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -9651,10 +9291,6 @@ void q_wizardpage_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self QWizardPage*
 ///
 QPaintEngine* q_wizardpage_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_paint_engine` instead
-///
-#define q_wizardpage_qbase_paint_engine q_wizardpage_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -9687,10 +9323,6 @@ void q_wizardpage_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QEvent*
 ///
 bool q_wizardpage_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_event` instead
-///
-#define q_wizardpage_qbase_event q_wizardpage_super_event
 
 /// Inherited from QWidget
 ///
@@ -9725,10 +9357,6 @@ void q_wizardpage_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void q_wizardpage_mouse_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_mouse_press_event` instead
-///
-#define q_wizardpage_qbase_mouse_press_event q_wizardpage_super_mouse_press_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -9761,10 +9389,6 @@ void q_wizardpage_on_mouse_press_event(void* self, void (*callback)(void*, void*
 /// @param event QMouseEvent*
 ///
 void q_wizardpage_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_mouse_release_event` instead
-///
-#define q_wizardpage_qbase_mouse_release_event q_wizardpage_super_mouse_release_event
 
 /// Inherited from QWidget
 ///
@@ -9799,10 +9423,6 @@ void q_wizardpage_on_mouse_release_event(void* self, void (*callback)(void*, voi
 ///
 void q_wizardpage_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_mouse_double_click_event` instead
-///
-#define q_wizardpage_qbase_mouse_double_click_event q_wizardpage_super_mouse_double_click_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -9835,10 +9455,6 @@ void q_wizardpage_on_mouse_double_click_event(void* self, void (*callback)(void*
 /// @param event QMouseEvent*
 ///
 void q_wizardpage_mouse_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_mouse_move_event` instead
-///
-#define q_wizardpage_qbase_mouse_move_event q_wizardpage_super_mouse_move_event
 
 /// Inherited from QWidget
 ///
@@ -9873,10 +9489,6 @@ void q_wizardpage_on_mouse_move_event(void* self, void (*callback)(void*, void*)
 ///
 void q_wizardpage_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_wheel_event` instead
-///
-#define q_wizardpage_qbase_wheel_event q_wizardpage_super_wheel_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -9909,10 +9521,6 @@ void q_wizardpage_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QKeyEvent*
 ///
 void q_wizardpage_key_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_key_press_event` instead
-///
-#define q_wizardpage_qbase_key_press_event q_wizardpage_super_key_press_event
 
 /// Inherited from QWidget
 ///
@@ -9947,10 +9555,6 @@ void q_wizardpage_on_key_press_event(void* self, void (*callback)(void*, void*))
 ///
 void q_wizardpage_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_key_release_event` instead
-///
-#define q_wizardpage_qbase_key_release_event q_wizardpage_super_key_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -9983,10 +9587,6 @@ void q_wizardpage_on_key_release_event(void* self, void (*callback)(void*, void*
 /// @param event QFocusEvent*
 ///
 void q_wizardpage_focus_in_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_focus_in_event` instead
-///
-#define q_wizardpage_qbase_focus_in_event q_wizardpage_super_focus_in_event
 
 /// Inherited from QWidget
 ///
@@ -10021,10 +9621,6 @@ void q_wizardpage_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 void q_wizardpage_focus_out_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_focus_out_event` instead
-///
-#define q_wizardpage_qbase_focus_out_event q_wizardpage_super_focus_out_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -10057,10 +9653,6 @@ void q_wizardpage_on_focus_out_event(void* self, void (*callback)(void*, void*))
 /// @param event QEnterEvent*
 ///
 void q_wizardpage_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_enter_event` instead
-///
-#define q_wizardpage_qbase_enter_event q_wizardpage_super_enter_event
 
 /// Inherited from QWidget
 ///
@@ -10095,10 +9687,6 @@ void q_wizardpage_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void q_wizardpage_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_leave_event` instead
-///
-#define q_wizardpage_qbase_leave_event q_wizardpage_super_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -10131,10 +9719,6 @@ void q_wizardpage_on_leave_event(void* self, void (*callback)(void*, void*));
 /// @param event QPaintEvent*
 ///
 void q_wizardpage_paint_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_paint_event` instead
-///
-#define q_wizardpage_qbase_paint_event q_wizardpage_super_paint_event
 
 /// Inherited from QWidget
 ///
@@ -10169,10 +9753,6 @@ void q_wizardpage_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 void q_wizardpage_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_move_event` instead
-///
-#define q_wizardpage_qbase_move_event q_wizardpage_super_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -10205,10 +9785,6 @@ void q_wizardpage_on_move_event(void* self, void (*callback)(void*, void*));
 /// @param event QResizeEvent*
 ///
 void q_wizardpage_resize_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_resize_event` instead
-///
-#define q_wizardpage_qbase_resize_event q_wizardpage_super_resize_event
 
 /// Inherited from QWidget
 ///
@@ -10243,10 +9819,6 @@ void q_wizardpage_on_resize_event(void* self, void (*callback)(void*, void*));
 ///
 void q_wizardpage_close_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_close_event` instead
-///
-#define q_wizardpage_qbase_close_event q_wizardpage_super_close_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -10279,10 +9851,6 @@ void q_wizardpage_on_close_event(void* self, void (*callback)(void*, void*));
 /// @param event QContextMenuEvent*
 ///
 void q_wizardpage_context_menu_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_context_menu_event` instead
-///
-#define q_wizardpage_qbase_context_menu_event q_wizardpage_super_context_menu_event
 
 /// Inherited from QWidget
 ///
@@ -10317,10 +9885,6 @@ void q_wizardpage_on_context_menu_event(void* self, void (*callback)(void*, void
 ///
 void q_wizardpage_tablet_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_tablet_event` instead
-///
-#define q_wizardpage_qbase_tablet_event q_wizardpage_super_tablet_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -10353,10 +9917,6 @@ void q_wizardpage_on_tablet_event(void* self, void (*callback)(void*, void*));
 /// @param event QActionEvent*
 ///
 void q_wizardpage_action_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_action_event` instead
-///
-#define q_wizardpage_qbase_action_event q_wizardpage_super_action_event
 
 /// Inherited from QWidget
 ///
@@ -10391,10 +9951,6 @@ void q_wizardpage_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 void q_wizardpage_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_drag_enter_event` instead
-///
-#define q_wizardpage_qbase_drag_enter_event q_wizardpage_super_drag_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -10427,10 +9983,6 @@ void q_wizardpage_on_drag_enter_event(void* self, void (*callback)(void*, void*)
 /// @param event QDragMoveEvent*
 ///
 void q_wizardpage_drag_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_drag_move_event` instead
-///
-#define q_wizardpage_qbase_drag_move_event q_wizardpage_super_drag_move_event
 
 /// Inherited from QWidget
 ///
@@ -10465,10 +10017,6 @@ void q_wizardpage_on_drag_move_event(void* self, void (*callback)(void*, void*))
 ///
 void q_wizardpage_drag_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_drag_leave_event` instead
-///
-#define q_wizardpage_qbase_drag_leave_event q_wizardpage_super_drag_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -10501,10 +10049,6 @@ void q_wizardpage_on_drag_leave_event(void* self, void (*callback)(void*, void*)
 /// @param event QDropEvent*
 ///
 void q_wizardpage_drop_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_drop_event` instead
-///
-#define q_wizardpage_qbase_drop_event q_wizardpage_super_drop_event
 
 /// Inherited from QWidget
 ///
@@ -10539,10 +10083,6 @@ void q_wizardpage_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void q_wizardpage_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_show_event` instead
-///
-#define q_wizardpage_qbase_show_event q_wizardpage_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -10575,10 +10115,6 @@ void q_wizardpage_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param event QHideEvent*
 ///
 void q_wizardpage_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_hide_event` instead
-///
-#define q_wizardpage_qbase_hide_event q_wizardpage_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -10615,10 +10151,6 @@ void q_wizardpage_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_wizardpage_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_native_event` instead
-///
-#define q_wizardpage_qbase_native_event q_wizardpage_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -10654,10 +10186,6 @@ void q_wizardpage_on_native_event(void* self, bool (*callback)(void*, libqt_stri
 ///
 void q_wizardpage_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_change_event` instead
-///
-#define q_wizardpage_qbase_change_event q_wizardpage_super_change_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -10690,10 +10218,6 @@ void q_wizardpage_on_change_event(void* self, void (*callback)(void*, void*));
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
 int32_t q_wizardpage_metric(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_metric` instead
-///
-#define q_wizardpage_qbase_metric q_wizardpage_super_metric
 
 /// Inherited from QWidget
 ///
@@ -10728,10 +10252,6 @@ void q_wizardpage_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void q_wizardpage_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_init_painter` instead
-///
-#define q_wizardpage_qbase_init_painter q_wizardpage_super_init_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -10765,10 +10285,6 @@ void q_wizardpage_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_wizardpage_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_redirected` instead
-///
-#define q_wizardpage_qbase_redirected q_wizardpage_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -10800,10 +10316,6 @@ void q_wizardpage_on_redirected(void* self, QPaintDevice* (*callback)(void*, voi
 /// @param self QWizardPage*
 ///
 QPainter* q_wizardpage_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_shared_painter` instead
-///
-#define q_wizardpage_qbase_shared_painter q_wizardpage_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -10837,10 +10349,6 @@ void q_wizardpage_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void q_wizardpage_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_input_method_event` instead
-///
-#define q_wizardpage_qbase_input_method_event q_wizardpage_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -10873,10 +10381,6 @@ void q_wizardpage_on_input_method_event(void* self, void (*callback)(void*, void
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* q_wizardpage_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_input_method_query` instead
-///
-#define q_wizardpage_qbase_input_method_query q_wizardpage_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -10913,10 +10417,6 @@ void q_wizardpage_on_input_method_query(void* self, QVariant* (*callback)(void*,
 ///
 bool q_wizardpage_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_focus_next_prev_child` instead
-///
-#define q_wizardpage_qbase_focus_next_prev_child q_wizardpage_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -10950,10 +10450,6 @@ void q_wizardpage_on_focus_next_prev_child(void* self, bool (*callback)(void*, b
 /// @param event QEvent*
 ///
 bool q_wizardpage_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_event_filter` instead
-///
-#define q_wizardpage_qbase_event_filter q_wizardpage_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -10989,10 +10485,6 @@ void q_wizardpage_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void q_wizardpage_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_timer_event` instead
-///
-#define q_wizardpage_qbase_timer_event q_wizardpage_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -11025,10 +10517,6 @@ void q_wizardpage_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_wizardpage_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_child_event` instead
-///
-#define q_wizardpage_qbase_child_event q_wizardpage_super_child_event
 
 /// Inherited from QObject
 ///
@@ -11063,10 +10551,6 @@ void q_wizardpage_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_wizardpage_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_custom_event` instead
-///
-#define q_wizardpage_qbase_custom_event q_wizardpage_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -11099,10 +10583,6 @@ void q_wizardpage_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_wizardpage_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_connect_notify` instead
-///
-#define q_wizardpage_qbase_connect_notify q_wizardpage_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -11137,10 +10617,6 @@ void q_wizardpage_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_wizardpage_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_disconnect_notify` instead
-///
-#define q_wizardpage_qbase_disconnect_notify q_wizardpage_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -11173,10 +10649,6 @@ void q_wizardpage_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 void q_wizardpage_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_update_micro_focus` instead
-///
-#define q_wizardpage_qbase_update_micro_focus q_wizardpage_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -11207,10 +10679,6 @@ void q_wizardpage_on_update_micro_focus(void* self, void (*callback)());
 /// @param self QWizardPage*
 ///
 void q_wizardpage_create(void* self);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_create` instead
-///
-#define q_wizardpage_qbase_create q_wizardpage_super_create
 
 /// Inherited from QWidget
 ///
@@ -11243,10 +10711,6 @@ void q_wizardpage_on_create(void* self, void (*callback)());
 ///
 void q_wizardpage_destroy(void* self);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_destroy` instead
-///
-#define q_wizardpage_qbase_destroy q_wizardpage_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -11277,10 +10741,6 @@ void q_wizardpage_on_destroy(void* self, void (*callback)());
 /// @param self QWizardPage*
 ///
 bool q_wizardpage_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_focus_next_child` instead
-///
-#define q_wizardpage_qbase_focus_next_child q_wizardpage_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -11313,10 +10773,6 @@ void q_wizardpage_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_wizardpage_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_focus_previous_child` instead
-///
-#define q_wizardpage_qbase_focus_previous_child q_wizardpage_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -11347,10 +10803,6 @@ void q_wizardpage_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self QWizardPage*
 ///
 QObject* q_wizardpage_sender(void* self);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_sender` instead
-///
-#define q_wizardpage_qbase_sender q_wizardpage_super_sender
 
 /// Inherited from QObject
 ///
@@ -11383,10 +10835,6 @@ void q_wizardpage_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_wizardpage_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_sender_signal_index` instead
-///
-#define q_wizardpage_qbase_sender_signal_index q_wizardpage_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -11418,10 +10866,6 @@ void q_wizardpage_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t q_wizardpage_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_receivers` instead
-///
-#define q_wizardpage_qbase_receivers q_wizardpage_super_receivers
 
 /// Inherited from QObject
 ///
@@ -11456,10 +10900,6 @@ void q_wizardpage_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 bool q_wizardpage_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_wizardpage_super_is_signal_connected` instead
-///
-#define q_wizardpage_qbase_is_signal_connected q_wizardpage_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -11493,10 +10933,6 @@ void q_wizardpage_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double q_wizardpage_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `q_wizardpage_super_get_decoded_metric_f` instead
-///
-#define q_wizardpage_qbase_get_decoded_metric_f q_wizardpage_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

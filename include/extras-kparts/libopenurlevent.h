@@ -142,10 +142,6 @@ int32_t k_parts__openurlevent_register_event_type1(int hint);
 ///
 void k_parts__openurlevent_set_accepted(void* self, bool accepted);
 
-/// @warning DEPRECATED: Use `k_parts__openurlevent_super_set_accepted` instead
-///
-#define k_parts__openurlevent_qbase_set_accepted k_parts__openurlevent_super_set_accepted
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -177,10 +173,6 @@ void k_parts__openurlevent_on_set_accepted(void* self, void (*callback)(void*, b
 /// @param self KParts__OpenUrlEvent*
 ///
 QEvent* k_parts__openurlevent_clone(void* self);
-
-/// @warning DEPRECATED: Use `k_parts__openurlevent_super_clone` instead
-///
-#define k_parts__openurlevent_qbase_clone k_parts__openurlevent_super_clone
 
 /// Inherited from QEvent
 ///

@@ -99,10 +99,6 @@ void k_remoteencoding_virtual_hook(void* self, int id, void* data);
 ///
 void k_remoteencoding_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
 
-/// @warning DEPRECATED: Use `k_remoteencoding_super_virtual_hook` instead
-///
-#define k_remoteencoding_qbase_virtual_hook k_remoteencoding_super_virtual_hook
-
 /// [Upstream resources](https://api.kde.org/kremoteencoding.html#virtual_hook)
 ///
 /// Base class method implementation

@@ -40,10 +40,6 @@ const QMetaObject* q_openglshader_meta_object(void* self);
 ///
 void q_openglshader_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_openglshader_super_meta_object` instead
-///
-#define q_openglshader_qbase_meta_object q_openglshader_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -63,10 +59,6 @@ void* q_openglshader_metacast(void* self, const char* param1);
 /// @param callback void* func(QOpenGLShader* self, const char* param1)
 ///
 void q_openglshader_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_openglshader_super_metacast` instead
-///
-#define q_openglshader_qbase_metacast q_openglshader_super_metacast
 
 /// Base class method implementation
 ///
@@ -88,10 +80,6 @@ int32_t q_openglshader_metacall(void* self, int32_t param1, int param2, void* pa
 /// @param callback int32_t func(QOpenGLShader* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_openglshader_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_openglshader_super_metacall` instead
-///
-#define q_openglshader_qbase_metacall q_openglshader_super_metacall
 
 /// Base class method implementation
 ///
@@ -664,10 +652,6 @@ void q_openglshader_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_openglshader_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_openglshader_super_event` instead
-///
-#define q_openglshader_qbase_event q_openglshader_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -701,10 +685,6 @@ void q_openglshader_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_openglshader_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_openglshader_super_event_filter` instead
-///
-#define q_openglshader_qbase_event_filter q_openglshader_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -740,10 +720,6 @@ void q_openglshader_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void q_openglshader_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_openglshader_super_timer_event` instead
-///
-#define q_openglshader_qbase_timer_event q_openglshader_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -776,10 +752,6 @@ void q_openglshader_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_openglshader_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_openglshader_super_child_event` instead
-///
-#define q_openglshader_qbase_child_event q_openglshader_super_child_event
 
 /// Inherited from QObject
 ///
@@ -814,10 +786,6 @@ void q_openglshader_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_openglshader_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_openglshader_super_custom_event` instead
-///
-#define q_openglshader_qbase_custom_event q_openglshader_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -850,10 +818,6 @@ void q_openglshader_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_openglshader_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_openglshader_super_connect_notify` instead
-///
-#define q_openglshader_qbase_connect_notify q_openglshader_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -888,10 +852,6 @@ void q_openglshader_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void q_openglshader_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_openglshader_super_disconnect_notify` instead
-///
-#define q_openglshader_qbase_disconnect_notify q_openglshader_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -924,10 +884,6 @@ void q_openglshader_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 QObject* q_openglshader_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_openglshader_super_sender` instead
-///
-#define q_openglshader_qbase_sender q_openglshader_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -958,10 +914,6 @@ void q_openglshader_on_sender(void* self, QObject* (*callback)());
 /// @param self QOpenGLShader*
 ///
 int32_t q_openglshader_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_openglshader_super_sender_signal_index` instead
-///
-#define q_openglshader_qbase_sender_signal_index q_openglshader_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -995,10 +947,6 @@ void q_openglshader_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_openglshader_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_openglshader_super_receivers` instead
-///
-#define q_openglshader_qbase_receivers q_openglshader_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1031,10 +979,6 @@ void q_openglshader_on_receivers(void* self, int32_t (*callback)(void*, const ch
 /// @param signal QMetaMethod*
 ///
 bool q_openglshader_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_openglshader_super_is_signal_connected` instead
-///
-#define q_openglshader_qbase_is_signal_connected q_openglshader_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -1106,10 +1050,6 @@ const QMetaObject* q_openglshaderprogram_meta_object(void* self);
 ///
 void q_openglshaderprogram_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_openglshaderprogram_super_meta_object` instead
-///
-#define q_openglshaderprogram_qbase_meta_object q_openglshaderprogram_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -1129,10 +1069,6 @@ void* q_openglshaderprogram_metacast(void* self, const char* param1);
 /// @param callback void* func(QOpenGLShaderProgram* self, const char* param1)
 ///
 void q_openglshaderprogram_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_openglshaderprogram_super_metacast` instead
-///
-#define q_openglshaderprogram_qbase_metacast q_openglshaderprogram_super_metacast
 
 /// Base class method implementation
 ///
@@ -1154,10 +1090,6 @@ int32_t q_openglshaderprogram_metacall(void* self, int32_t param1, int param2, v
 /// @param callback int32_t func(QOpenGLShaderProgram* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_openglshaderprogram_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_openglshaderprogram_super_metacall` instead
-///
-#define q_openglshaderprogram_qbase_metacall q_openglshaderprogram_super_metacall
 
 /// Base class method implementation
 ///
@@ -1282,10 +1214,6 @@ bool q_openglshaderprogram_link(void* self);
 /// @param callback bool func()
 ///
 void q_openglshaderprogram_on_link(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `q_openglshaderprogram_super_link` instead
-///
-#define q_openglshaderprogram_qbase_link q_openglshaderprogram_super_link
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#link)
 ///
@@ -2743,10 +2671,6 @@ void q_openglshaderprogram_on_destroyed1(void* self, void (*callback)(void*, voi
 ///
 bool q_openglshaderprogram_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_openglshaderprogram_super_event` instead
-///
-#define q_openglshaderprogram_qbase_event q_openglshaderprogram_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -2780,10 +2704,6 @@ void q_openglshaderprogram_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_openglshaderprogram_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_openglshaderprogram_super_event_filter` instead
-///
-#define q_openglshaderprogram_qbase_event_filter q_openglshaderprogram_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -2819,10 +2739,6 @@ void q_openglshaderprogram_on_event_filter(void* self, bool (*callback)(void*, v
 ///
 void q_openglshaderprogram_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_openglshaderprogram_super_timer_event` instead
-///
-#define q_openglshaderprogram_qbase_timer_event q_openglshaderprogram_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2855,10 +2771,6 @@ void q_openglshaderprogram_on_timer_event(void* self, void (*callback)(void*, vo
 /// @param event QChildEvent*
 ///
 void q_openglshaderprogram_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_openglshaderprogram_super_child_event` instead
-///
-#define q_openglshaderprogram_qbase_child_event q_openglshaderprogram_super_child_event
 
 /// Inherited from QObject
 ///
@@ -2893,10 +2805,6 @@ void q_openglshaderprogram_on_child_event(void* self, void (*callback)(void*, vo
 ///
 void q_openglshaderprogram_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_openglshaderprogram_super_custom_event` instead
-///
-#define q_openglshaderprogram_qbase_custom_event q_openglshaderprogram_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2929,10 +2837,6 @@ void q_openglshaderprogram_on_custom_event(void* self, void (*callback)(void*, v
 /// @param signal QMetaMethod*
 ///
 void q_openglshaderprogram_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_openglshaderprogram_super_connect_notify` instead
-///
-#define q_openglshaderprogram_qbase_connect_notify q_openglshaderprogram_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -2967,10 +2871,6 @@ void q_openglshaderprogram_on_connect_notify(void* self, void (*callback)(void*,
 ///
 void q_openglshaderprogram_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_openglshaderprogram_super_disconnect_notify` instead
-///
-#define q_openglshaderprogram_qbase_disconnect_notify q_openglshaderprogram_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -3003,10 +2903,6 @@ void q_openglshaderprogram_on_disconnect_notify(void* self, void (*callback)(voi
 ///
 QObject* q_openglshaderprogram_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_openglshaderprogram_super_sender` instead
-///
-#define q_openglshaderprogram_qbase_sender q_openglshaderprogram_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -3037,10 +2933,6 @@ void q_openglshaderprogram_on_sender(void* self, QObject* (*callback)());
 /// @param self QOpenGLShaderProgram*
 ///
 int32_t q_openglshaderprogram_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_openglshaderprogram_super_sender_signal_index` instead
-///
-#define q_openglshaderprogram_qbase_sender_signal_index q_openglshaderprogram_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -3074,10 +2966,6 @@ void q_openglshaderprogram_on_sender_signal_index(void* self, int32_t (*callback
 ///
 int32_t q_openglshaderprogram_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_openglshaderprogram_super_receivers` instead
-///
-#define q_openglshaderprogram_qbase_receivers q_openglshaderprogram_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -3110,10 +2998,6 @@ void q_openglshaderprogram_on_receivers(void* self, int32_t (*callback)(void*, c
 /// @param signal QMetaMethod*
 ///
 bool q_openglshaderprogram_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_openglshaderprogram_super_is_signal_connected` instead
-///
-#define q_openglshaderprogram_qbase_is_signal_connected q_openglshaderprogram_super_is_signal_connected
 
 /// Inherited from QObject
 ///

@@ -31,10 +31,6 @@ const QMetaObject* k_parts__navigationextension_meta_object(void* self);
 ///
 void k_parts__navigationextension_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_parts__navigationextension_super_meta_object` instead
-///
-#define k_parts__navigationextension_qbase_meta_object k_parts__navigationextension_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -54,10 +50,6 @@ void* k_parts__navigationextension_metacast(void* self, const char* param1);
 /// @param callback void* func(KParts__NavigationExtension* self, const char* param1)
 ///
 void k_parts__navigationextension_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_parts__navigationextension_super_metacast` instead
-///
-#define k_parts__navigationextension_qbase_metacast k_parts__navigationextension_super_metacast
 
 /// Base class method implementation
 ///
@@ -79,10 +71,6 @@ int32_t k_parts__navigationextension_metacall(void* self, int32_t param1, int pa
 /// @param callback int32_t func(KParts__NavigationExtension* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_parts__navigationextension_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_parts__navigationextension_super_metacall` instead
-///
-#define k_parts__navigationextension_qbase_metacall k_parts__navigationextension_super_metacall
 
 /// Base class method implementation
 ///
@@ -116,10 +104,6 @@ int32_t k_parts__navigationextension_x_offset(void* self);
 ///
 void k_parts__navigationextension_on_x_offset(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `k_parts__navigationextension_super_x_offset` instead
-///
-#define k_parts__navigationextension_qbase_x_offset k_parts__navigationextension_super_x_offset
-
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#xOffset)
 ///
 /// Base class method implementation
@@ -142,10 +126,6 @@ int32_t k_parts__navigationextension_y_offset(void* self);
 /// @param callback int32_t func()
 ///
 void k_parts__navigationextension_on_y_offset(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `k_parts__navigationextension_super_y_offset` instead
-///
-#define k_parts__navigationextension_qbase_y_offset k_parts__navigationextension_super_y_offset
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#yOffset)
 ///
@@ -171,10 +151,6 @@ void k_parts__navigationextension_save_state(void* self, void* stream);
 ///
 void k_parts__navigationextension_on_save_state(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_parts__navigationextension_super_save_state` instead
-///
-#define k_parts__navigationextension_qbase_save_state k_parts__navigationextension_super_save_state
-
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#saveState)
 ///
 /// Base class method implementation
@@ -199,10 +175,6 @@ void k_parts__navigationextension_restore_state(void* self, void* stream);
 /// @param callback void func(KParts__NavigationExtension* self, QDataStream* stream)
 ///
 void k_parts__navigationextension_on_restore_state(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_parts__navigationextension_super_restore_state` instead
-///
-#define k_parts__navigationextension_qbase_restore_state k_parts__navigationextension_super_restore_state
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#restoreState)
 ///
@@ -984,10 +956,6 @@ void k_parts__navigationextension_on_destroyed1(void* self, void (*callback)(voi
 ///
 bool k_parts__navigationextension_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_parts__navigationextension_super_event` instead
-///
-#define k_parts__navigationextension_qbase_event k_parts__navigationextension_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1021,10 +989,6 @@ void k_parts__navigationextension_on_event(void* self, bool (*callback)(void*, v
 /// @param event QEvent*
 ///
 bool k_parts__navigationextension_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_parts__navigationextension_super_event_filter` instead
-///
-#define k_parts__navigationextension_qbase_event_filter k_parts__navigationextension_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1060,10 +1024,6 @@ void k_parts__navigationextension_on_event_filter(void* self, bool (*callback)(v
 ///
 void k_parts__navigationextension_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_parts__navigationextension_super_timer_event` instead
-///
-#define k_parts__navigationextension_qbase_timer_event k_parts__navigationextension_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1096,10 +1056,6 @@ void k_parts__navigationextension_on_timer_event(void* self, void (*callback)(vo
 /// @param event QChildEvent*
 ///
 void k_parts__navigationextension_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_parts__navigationextension_super_child_event` instead
-///
-#define k_parts__navigationextension_qbase_child_event k_parts__navigationextension_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1134,10 +1090,6 @@ void k_parts__navigationextension_on_child_event(void* self, void (*callback)(vo
 ///
 void k_parts__navigationextension_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_parts__navigationextension_super_custom_event` instead
-///
-#define k_parts__navigationextension_qbase_custom_event k_parts__navigationextension_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1170,10 +1122,6 @@ void k_parts__navigationextension_on_custom_event(void* self, void (*callback)(v
 /// @param signal QMetaMethod*
 ///
 void k_parts__navigationextension_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_parts__navigationextension_super_connect_notify` instead
-///
-#define k_parts__navigationextension_qbase_connect_notify k_parts__navigationextension_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1208,10 +1156,6 @@ void k_parts__navigationextension_on_connect_notify(void* self, void (*callback)
 ///
 void k_parts__navigationextension_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_parts__navigationextension_super_disconnect_notify` instead
-///
-#define k_parts__navigationextension_qbase_disconnect_notify k_parts__navigationextension_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1244,10 +1188,6 @@ void k_parts__navigationextension_on_disconnect_notify(void* self, void (*callba
 ///
 QObject* k_parts__navigationextension_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_parts__navigationextension_super_sender` instead
-///
-#define k_parts__navigationextension_qbase_sender k_parts__navigationextension_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1278,10 +1218,6 @@ void k_parts__navigationextension_on_sender(void* self, QObject* (*callback)());
 /// @param self KParts__NavigationExtension*
 ///
 int32_t k_parts__navigationextension_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_parts__navigationextension_super_sender_signal_index` instead
-///
-#define k_parts__navigationextension_qbase_sender_signal_index k_parts__navigationextension_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1315,10 +1251,6 @@ void k_parts__navigationextension_on_sender_signal_index(void* self, int32_t (*c
 ///
 int32_t k_parts__navigationextension_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_parts__navigationextension_super_receivers` instead
-///
-#define k_parts__navigationextension_qbase_receivers k_parts__navigationextension_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1351,10 +1283,6 @@ void k_parts__navigationextension_on_receivers(void* self, int32_t (*callback)(v
 /// @param signal QMetaMethod*
 ///
 bool k_parts__navigationextension_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_parts__navigationextension_super_is_signal_connected` instead
-///
-#define k_parts__navigationextension_qbase_is_signal_connected k_parts__navigationextension_super_is_signal_connected
 
 /// Inherited from QObject
 ///

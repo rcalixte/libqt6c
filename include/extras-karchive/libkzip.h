@@ -93,10 +93,6 @@ bool k_zip_do_write_sym_link(void* self, const char* name, const char* target, c
 ///
 void k_zip_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*, const char*, const char*, const char*, mode_t, void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_zip_super_do_write_sym_link` instead
-///
-#define k_zip_qbase_do_write_sym_link k_zip_super_do_write_sym_link
-
 /// [Upstream resources](https://api.kde.org/kzip.html#doWriteSymLink)
 ///
 /// Base class method implementation
@@ -136,10 +132,6 @@ bool k_zip_do_prepare_writing(void* self, const char* name, const char* user, co
 ///
 void k_zip_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*, const char*, const char*, int64_t, mode_t, void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_zip_super_do_prepare_writing` instead
-///
-#define k_zip_qbase_do_prepare_writing k_zip_super_do_prepare_writing
-
 /// [Upstream resources](https://api.kde.org/kzip.html#doPrepareWriting)
 ///
 /// Base class method implementation
@@ -172,10 +164,6 @@ bool k_zip_do_finish_writing(void* self, int64_t size);
 ///
 void k_zip_on_do_finish_writing(void* self, bool (*callback)(void*, int64_t));
 
-/// @warning DEPRECATED: Use `k_zip_super_do_finish_writing` instead
-///
-#define k_zip_qbase_do_finish_writing k_zip_super_do_finish_writing
-
 /// [Upstream resources](https://api.kde.org/kzip.html#doFinishWriting)
 ///
 /// Base class method implementation
@@ -201,10 +189,6 @@ bool k_zip_do_write_data(void* self, const char* data, int64_t size);
 /// @param callback bool func(KZip* self, const char* data, int64_t size)
 ///
 void k_zip_on_do_write_data(void* self, bool (*callback)(void*, const char*, int64_t));
-
-/// @warning DEPRECATED: Use `k_zip_super_do_write_data` instead
-///
-#define k_zip_qbase_do_write_data k_zip_super_do_write_data
 
 /// [Upstream resources](https://api.kde.org/kzip.html#doWriteData)
 ///
@@ -232,10 +216,6 @@ bool k_zip_open_archive(void* self, int32_t mode);
 ///
 void k_zip_on_open_archive(void* self, bool (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `k_zip_super_open_archive` instead
-///
-#define k_zip_qbase_open_archive k_zip_super_open_archive
-
 /// [Upstream resources](https://api.kde.org/kzip.html#openArchive)
 ///
 /// Base class method implementation
@@ -259,10 +239,6 @@ bool k_zip_close_archive(void* self);
 /// @param callback bool func()
 ///
 void k_zip_on_close_archive(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `k_zip_super_close_archive` instead
-///
-#define k_zip_qbase_close_archive k_zip_super_close_archive
 
 /// [Upstream resources](https://api.kde.org/kzip.html#closeArchive)
 ///
@@ -293,10 +269,6 @@ bool k_zip_do_write_dir(void* self, const char* name, const char* user, const ch
 /// @param callback bool func(KZip* self, const char* name, const char* user, const char* group, mode_t perm, QDateTime* atime, QDateTime* mtime, QDateTime* ctime)
 ///
 void k_zip_on_do_write_dir(void* self, bool (*callback)(void*, const char*, const char*, const char*, mode_t, void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_zip_super_do_write_dir` instead
-///
-#define k_zip_qbase_do_write_dir k_zip_super_do_write_dir
 
 /// [Upstream resources](https://api.kde.org/kzip.html#doWriteDir)
 ///
@@ -329,10 +301,6 @@ void k_zip_virtual_hook(void* self, int id, void* data);
 /// @param callback void func(KZip* self, int id, void* data)
 ///
 void k_zip_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
-
-/// @warning DEPRECATED: Use `k_zip_super_virtual_hook` instead
-///
-#define k_zip_qbase_virtual_hook k_zip_super_virtual_hook
 
 /// [Upstream resources](https://api.kde.org/kzip.html#virtual_hook)
 ///
@@ -812,10 +780,6 @@ bool k_zip_prepare_writing8(void* self, const char* name, const char* user, cons
 ///
 bool k_zip_open(void* self, int32_t mode);
 
-/// @warning DEPRECATED: Use `k_zip_super_open` instead
-///
-#define k_zip_qbase_open k_zip_super_open
-
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#open)
@@ -848,10 +812,6 @@ void k_zip_on_open(void* self, bool (*callback)(void*, int32_t));
 ///
 bool k_zip_close(void* self);
 
-/// @warning DEPRECATED: Use `k_zip_super_close` instead
-///
-#define k_zip_qbase_close k_zip_super_close
-
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#close)
@@ -882,10 +842,6 @@ void k_zip_on_close(void* self, bool (*callback)());
 /// @param self KZip*
 ///
 KArchiveDirectory* k_zip_root_dir(void* self);
-
-/// @warning DEPRECATED: Use `k_zip_super_root_dir` instead
-///
-#define k_zip_qbase_root_dir k_zip_super_root_dir
 
 /// Inherited from KArchive
 ///
@@ -918,10 +874,6 @@ void k_zip_on_root_dir(void* self, KArchiveDirectory* (*callback)());
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 ///
 bool k_zip_create_device(void* self, int32_t mode);
-
-/// @warning DEPRECATED: Use `k_zip_super_create_device` instead
-///
-#define k_zip_qbase_create_device k_zip_super_create_device
 
 /// Inherited from KArchive
 ///
@@ -956,10 +908,6 @@ void k_zip_on_create_device(void* self, bool (*callback)(void*, int32_t));
 ///
 void k_zip_set_error_string(void* self, const char* errorStr);
 
-/// @warning DEPRECATED: Use `k_zip_super_set_error_string` instead
-///
-#define k_zip_qbase_set_error_string k_zip_super_set_error_string
-
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#setErrorString)
@@ -992,10 +940,6 @@ void k_zip_on_set_error_string(void* self, void (*callback)(void*, const char*))
 /// @param path const char*
 ///
 KArchiveDirectory* k_zip_find_or_create(void* self, const char* path);
-
-/// @warning DEPRECATED: Use `k_zip_super_find_or_create` instead
-///
-#define k_zip_qbase_find_or_create k_zip_super_find_or_create
 
 /// Inherited from KArchive
 ///
@@ -1030,10 +974,6 @@ void k_zip_on_find_or_create(void* self, KArchiveDirectory* (*callback)(void*, c
 ///
 void k_zip_set_device(void* self, void* dev);
 
-/// @warning DEPRECATED: Use `k_zip_super_set_device` instead
-///
-#define k_zip_qbase_set_device k_zip_super_set_device
-
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#setDevice)
@@ -1066,10 +1006,6 @@ void k_zip_on_set_device(void* self, void (*callback)(void*, void*));
 /// @param rootDir KArchiveDirectory*
 ///
 void k_zip_set_root_dir(void* self, void* rootDir);
-
-/// @warning DEPRECATED: Use `k_zip_super_set_root_dir` instead
-///
-#define k_zip_qbase_set_root_dir k_zip_super_set_root_dir
 
 /// Inherited from KArchive
 ///

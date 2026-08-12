@@ -29,10 +29,6 @@ int32_t q_designercontainerextension_count(void* self);
 ///
 void q_designercontainerextension_on_count(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_designercontainerextension_super_count` instead
-///
-#define q_designercontainerextension_qbase_count q_designercontainerextension_super_count
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercontainerextension.html#count)
 ///
 /// Base class method implementation
@@ -56,10 +52,6 @@ QWidget* q_designercontainerextension_widget(void* self, int index);
 /// @param callback QWidget* func(QDesignerContainerExtension* self, int index)
 ///
 void q_designercontainerextension_on_widget(void* self, QWidget* (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_designercontainerextension_super_widget` instead
-///
-#define q_designercontainerextension_qbase_widget q_designercontainerextension_super_widget
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercontainerextension.html#widget)
 ///
@@ -85,10 +77,6 @@ int32_t q_designercontainerextension_current_index(void* self);
 ///
 void q_designercontainerextension_on_current_index(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_designercontainerextension_super_current_index` instead
-///
-#define q_designercontainerextension_qbase_current_index q_designercontainerextension_super_current_index
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercontainerextension.html#currentIndex)
 ///
 /// Base class method implementation
@@ -112,10 +100,6 @@ void q_designercontainerextension_set_current_index(void* self, int index);
 /// @param callback void func(QDesignerContainerExtension* self, int index)
 ///
 void q_designercontainerextension_on_set_current_index(void* self, void (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_designercontainerextension_super_set_current_index` instead
-///
-#define q_designercontainerextension_qbase_set_current_index q_designercontainerextension_super_set_current_index
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercontainerextension.html#setCurrentIndex)
 ///
@@ -141,10 +125,6 @@ bool q_designercontainerextension_can_add_widget(void* self);
 ///
 void q_designercontainerextension_on_can_add_widget(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_designercontainerextension_super_can_add_widget` instead
-///
-#define q_designercontainerextension_qbase_can_add_widget q_designercontainerextension_super_can_add_widget
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercontainerextension.html#canAddWidget)
 ///
 /// Base class method implementation
@@ -168,10 +148,6 @@ void q_designercontainerextension_add_widget(void* self, void* widget);
 /// @param callback void func(QDesignerContainerExtension* self, QWidget* widget)
 ///
 void q_designercontainerextension_on_add_widget(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_designercontainerextension_super_add_widget` instead
-///
-#define q_designercontainerextension_qbase_add_widget q_designercontainerextension_super_add_widget
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercontainerextension.html#addWidget)
 ///
@@ -199,10 +175,6 @@ void q_designercontainerextension_insert_widget(void* self, int index, void* wid
 ///
 void q_designercontainerextension_on_insert_widget(void* self, void (*callback)(void*, int, void*));
 
-/// @warning DEPRECATED: Use `q_designercontainerextension_super_insert_widget` instead
-///
-#define q_designercontainerextension_qbase_insert_widget q_designercontainerextension_super_insert_widget
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercontainerextension.html#insertWidget)
 ///
 /// Base class method implementation
@@ -229,10 +201,6 @@ bool q_designercontainerextension_can_remove(void* self, int index);
 ///
 void q_designercontainerextension_on_can_remove(void* self, bool (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_designercontainerextension_super_can_remove` instead
-///
-#define q_designercontainerextension_qbase_can_remove q_designercontainerextension_super_can_remove
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercontainerextension.html#canRemove)
 ///
 /// Base class method implementation
@@ -257,10 +225,6 @@ void q_designercontainerextension_remove(void* self, int index);
 /// @param callback void func(QDesignerContainerExtension* self, int index)
 ///
 void q_designercontainerextension_on_remove(void* self, void (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_designercontainerextension_super_remove` instead
-///
-#define q_designercontainerextension_qbase_remove q_designercontainerextension_super_remove
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercontainerextension.html#remove)
 ///

@@ -31,10 +31,6 @@ const QMetaObject* k_filemetadata__extractorplugin_meta_object(void* self);
 ///
 void k_filemetadata__extractorplugin_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_filemetadata__extractorplugin_super_meta_object` instead
-///
-#define k_filemetadata__extractorplugin_qbase_meta_object k_filemetadata__extractorplugin_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -54,10 +50,6 @@ void* k_filemetadata__extractorplugin_metacast(void* self, const char* param1);
 /// @param callback void* func(KFileMetaData__ExtractorPlugin* self, const char* param1)
 ///
 void k_filemetadata__extractorplugin_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_filemetadata__extractorplugin_super_metacast` instead
-///
-#define k_filemetadata__extractorplugin_qbase_metacast k_filemetadata__extractorplugin_super_metacast
 
 /// Base class method implementation
 ///
@@ -79,10 +71,6 @@ int32_t k_filemetadata__extractorplugin_metacall(void* self, int32_t param1, int
 /// @param callback int32_t func(KFileMetaData__ExtractorPlugin* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_filemetadata__extractorplugin_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_filemetadata__extractorplugin_super_metacall` instead
-///
-#define k_filemetadata__extractorplugin_qbase_metacall k_filemetadata__extractorplugin_super_metacall
 
 /// Base class method implementation
 ///
@@ -118,10 +106,6 @@ const char** k_filemetadata__extractorplugin_mimetypes(void* self);
 ///
 void k_filemetadata__extractorplugin_on_mimetypes(void* self, const char** (*callback)());
 
-/// @warning DEPRECATED: Use `k_filemetadata__extractorplugin_super_mimetypes` instead
-///
-#define k_filemetadata__extractorplugin_qbase_mimetypes k_filemetadata__extractorplugin_super_mimetypes
-
 /// [Upstream resources](https://api.kde.org/kfilemetadata-extractorplugin.html#mimetypes)
 ///
 /// Base class method implementation
@@ -145,10 +129,6 @@ void k_filemetadata__extractorplugin_extract(void* self, void* result);
 /// @param callback void func(KFileMetaData__ExtractorPlugin* self, KFileMetaData__ExtractionResult* result)
 ///
 void k_filemetadata__extractorplugin_on_extract(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_filemetadata__extractorplugin_super_extract` instead
-///
-#define k_filemetadata__extractorplugin_qbase_extract k_filemetadata__extractorplugin_super_extract
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-extractorplugin.html#extract)
 ///
@@ -190,10 +170,6 @@ const char* k_filemetadata__extractorplugin_get_supported_mime_type(void* self, 
 /// @param callback const char* func(KFileMetaData__ExtractorPlugin* self, const char* mimetype)
 ///
 void k_filemetadata__extractorplugin_on_get_supported_mime_type(void* self, const char* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_filemetadata__extractorplugin_super_get_supported_mime_type` instead
-///
-#define k_filemetadata__extractorplugin_qbase_get_supported_mime_type k_filemetadata__extractorplugin_super_get_supported_mime_type
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-extractorplugin.html#getSupportedMimeType)
 ///
@@ -681,10 +657,6 @@ void k_filemetadata__extractorplugin_on_destroyed1(void* self, void (*callback)(
 ///
 bool k_filemetadata__extractorplugin_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_filemetadata__extractorplugin_super_event` instead
-///
-#define k_filemetadata__extractorplugin_qbase_event k_filemetadata__extractorplugin_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -718,10 +690,6 @@ void k_filemetadata__extractorplugin_on_event(void* self, bool (*callback)(void*
 /// @param event QEvent*
 ///
 bool k_filemetadata__extractorplugin_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_filemetadata__extractorplugin_super_event_filter` instead
-///
-#define k_filemetadata__extractorplugin_qbase_event_filter k_filemetadata__extractorplugin_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -757,10 +725,6 @@ void k_filemetadata__extractorplugin_on_event_filter(void* self, bool (*callback
 ///
 void k_filemetadata__extractorplugin_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_filemetadata__extractorplugin_super_timer_event` instead
-///
-#define k_filemetadata__extractorplugin_qbase_timer_event k_filemetadata__extractorplugin_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -793,10 +757,6 @@ void k_filemetadata__extractorplugin_on_timer_event(void* self, void (*callback)
 /// @param event QChildEvent*
 ///
 void k_filemetadata__extractorplugin_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_filemetadata__extractorplugin_super_child_event` instead
-///
-#define k_filemetadata__extractorplugin_qbase_child_event k_filemetadata__extractorplugin_super_child_event
 
 /// Inherited from QObject
 ///
@@ -831,10 +791,6 @@ void k_filemetadata__extractorplugin_on_child_event(void* self, void (*callback)
 ///
 void k_filemetadata__extractorplugin_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_filemetadata__extractorplugin_super_custom_event` instead
-///
-#define k_filemetadata__extractorplugin_qbase_custom_event k_filemetadata__extractorplugin_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -867,10 +823,6 @@ void k_filemetadata__extractorplugin_on_custom_event(void* self, void (*callback
 /// @param signal QMetaMethod*
 ///
 void k_filemetadata__extractorplugin_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_filemetadata__extractorplugin_super_connect_notify` instead
-///
-#define k_filemetadata__extractorplugin_qbase_connect_notify k_filemetadata__extractorplugin_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -905,10 +857,6 @@ void k_filemetadata__extractorplugin_on_connect_notify(void* self, void (*callba
 ///
 void k_filemetadata__extractorplugin_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_filemetadata__extractorplugin_super_disconnect_notify` instead
-///
-#define k_filemetadata__extractorplugin_qbase_disconnect_notify k_filemetadata__extractorplugin_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -941,10 +889,6 @@ void k_filemetadata__extractorplugin_on_disconnect_notify(void* self, void (*cal
 ///
 QObject* k_filemetadata__extractorplugin_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_filemetadata__extractorplugin_super_sender` instead
-///
-#define k_filemetadata__extractorplugin_qbase_sender k_filemetadata__extractorplugin_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -975,10 +919,6 @@ void k_filemetadata__extractorplugin_on_sender(void* self, QObject* (*callback)(
 /// @param self KFileMetaData__ExtractorPlugin*
 ///
 int32_t k_filemetadata__extractorplugin_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_filemetadata__extractorplugin_super_sender_signal_index` instead
-///
-#define k_filemetadata__extractorplugin_qbase_sender_signal_index k_filemetadata__extractorplugin_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1012,10 +952,6 @@ void k_filemetadata__extractorplugin_on_sender_signal_index(void* self, int32_t 
 ///
 int32_t k_filemetadata__extractorplugin_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_filemetadata__extractorplugin_super_receivers` instead
-///
-#define k_filemetadata__extractorplugin_qbase_receivers k_filemetadata__extractorplugin_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1048,10 +984,6 @@ void k_filemetadata__extractorplugin_on_receivers(void* self, int32_t (*callback
 /// @param signal QMetaMethod*
 ///
 bool k_filemetadata__extractorplugin_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_filemetadata__extractorplugin_super_is_signal_connected` instead
-///
-#define k_filemetadata__extractorplugin_qbase_is_signal_connected k_filemetadata__extractorplugin_super_is_signal_connected
 
 /// Inherited from QObject
 ///

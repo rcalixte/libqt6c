@@ -37,10 +37,6 @@ bool q_maskgenerator_seed(void* self);
 ///
 void q_maskgenerator_on_seed(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_maskgenerator_super_seed` instead
-///
-#define q_maskgenerator_qbase_seed q_maskgenerator_super_seed
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qmaskgenerator.html#seed)
 ///
 /// Base class method implementation
@@ -63,10 +59,6 @@ uint32_t q_maskgenerator_next_mask(void* self);
 /// @param callback uint32_t func()
 ///
 void q_maskgenerator_on_next_mask(void* self, uint32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_maskgenerator_super_next_mask` instead
-///
-#define q_maskgenerator_qbase_next_mask q_maskgenerator_super_next_mask
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmaskgenerator.html#nextMask)
 ///
@@ -566,10 +558,6 @@ void q_maskgenerator_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 const QMetaObject* q_maskgenerator_meta_object(void* self);
 
-/// @warning DEPRECATED: Use `q_maskgenerator_super_meta_object` instead
-///
-#define q_maskgenerator_qbase_meta_object q_maskgenerator_super_meta_object
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
@@ -601,10 +589,6 @@ void q_maskgenerator_on_meta_object(void* self, const QMetaObject* (*callback)()
 /// @param param1 const char*
 ///
 void* q_maskgenerator_metacast(void* self, const char* param1);
-
-/// @warning DEPRECATED: Use `q_maskgenerator_super_metacast` instead
-///
-#define q_maskgenerator_qbase_metacast q_maskgenerator_super_metacast
 
 /// Inherited from QObject
 ///
@@ -641,10 +625,6 @@ void q_maskgenerator_on_metacast(void* self, void* (*callback)(void*, const char
 ///
 int32_t q_maskgenerator_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// @warning DEPRECATED: Use `q_maskgenerator_super_metacall` instead
-///
-#define q_maskgenerator_qbase_metacall q_maskgenerator_super_metacall
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacall)
@@ -680,10 +660,6 @@ void q_maskgenerator_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
 ///
 bool q_maskgenerator_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_maskgenerator_super_event` instead
-///
-#define q_maskgenerator_qbase_event q_maskgenerator_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -717,10 +693,6 @@ void q_maskgenerator_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_maskgenerator_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_maskgenerator_super_event_filter` instead
-///
-#define q_maskgenerator_qbase_event_filter q_maskgenerator_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -756,10 +728,6 @@ void q_maskgenerator_on_event_filter(void* self, bool (*callback)(void*, void*, 
 ///
 void q_maskgenerator_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_maskgenerator_super_timer_event` instead
-///
-#define q_maskgenerator_qbase_timer_event q_maskgenerator_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -792,10 +760,6 @@ void q_maskgenerator_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_maskgenerator_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_maskgenerator_super_child_event` instead
-///
-#define q_maskgenerator_qbase_child_event q_maskgenerator_super_child_event
 
 /// Inherited from QObject
 ///
@@ -830,10 +794,6 @@ void q_maskgenerator_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_maskgenerator_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_maskgenerator_super_custom_event` instead
-///
-#define q_maskgenerator_qbase_custom_event q_maskgenerator_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -866,10 +826,6 @@ void q_maskgenerator_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param signal QMetaMethod*
 ///
 void q_maskgenerator_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_maskgenerator_super_connect_notify` instead
-///
-#define q_maskgenerator_qbase_connect_notify q_maskgenerator_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -904,10 +860,6 @@ void q_maskgenerator_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void q_maskgenerator_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_maskgenerator_super_disconnect_notify` instead
-///
-#define q_maskgenerator_qbase_disconnect_notify q_maskgenerator_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -940,10 +892,6 @@ void q_maskgenerator_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 QObject* q_maskgenerator_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_maskgenerator_super_sender` instead
-///
-#define q_maskgenerator_qbase_sender q_maskgenerator_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -974,10 +922,6 @@ void q_maskgenerator_on_sender(void* self, QObject* (*callback)());
 /// @param self QMaskGenerator*
 ///
 int32_t q_maskgenerator_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_maskgenerator_super_sender_signal_index` instead
-///
-#define q_maskgenerator_qbase_sender_signal_index q_maskgenerator_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1011,10 +955,6 @@ void q_maskgenerator_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_maskgenerator_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_maskgenerator_super_receivers` instead
-///
-#define q_maskgenerator_qbase_receivers q_maskgenerator_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1047,10 +987,6 @@ void q_maskgenerator_on_receivers(void* self, int32_t (*callback)(void*, const c
 /// @param signal QMetaMethod*
 ///
 bool q_maskgenerator_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_maskgenerator_super_is_signal_connected` instead
-///
-#define q_maskgenerator_qbase_is_signal_connected q_maskgenerator_super_is_signal_connected
 
 /// Inherited from QObject
 ///

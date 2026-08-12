@@ -40,10 +40,6 @@ const QMetaObject* k_filewidget_meta_object(void* self);
 ///
 void k_filewidget_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_filewidget_super_meta_object` instead
-///
-#define k_filewidget_qbase_meta_object k_filewidget_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -63,10 +59,6 @@ void* k_filewidget_metacast(void* self, const char* param1);
 /// @param callback void* func(KFileWidget* self, const char* param1)
 ///
 void k_filewidget_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_filewidget_super_metacast` instead
-///
-#define k_filewidget_qbase_metacast k_filewidget_super_metacast
 
 /// Base class method implementation
 ///
@@ -88,10 +80,6 @@ int32_t k_filewidget_metacall(void* self, int32_t param1, int param2, void* para
 /// @param callback int32_t func(KFileWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_filewidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_filewidget_super_metacall` instead
-///
-#define k_filewidget_qbase_metacall k_filewidget_super_metacall
 
 /// Base class method implementation
 ///
@@ -347,10 +335,6 @@ QSize* k_filewidget_size_hint(void* self);
 ///
 void k_filewidget_on_size_hint(void* self, QSize* (*callback)());
 
-/// @warning DEPRECATED: Use `k_filewidget_super_size_hint` instead
-///
-#define k_filewidget_qbase_size_hint k_filewidget_super_size_hint
-
 /// [Upstream resources](https://api.kde.org/kfilewidget.html#sizeHint)
 ///
 /// Base class method implementation
@@ -408,10 +392,6 @@ void k_filewidget_resize_event(void* self, void* event);
 ///
 void k_filewidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_filewidget_super_resize_event` instead
-///
-#define k_filewidget_qbase_resize_event k_filewidget_super_resize_event
-
 /// [Upstream resources](https://api.kde.org/kfilewidget.html#resizeEvent)
 ///
 /// Base class method implementation
@@ -436,10 +416,6 @@ void k_filewidget_show_event(void* self, void* event);
 /// @param callback void func(KFileWidget* self, QShowEvent* event)
 ///
 void k_filewidget_on_show_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_filewidget_super_show_event` instead
-///
-#define k_filewidget_qbase_show_event k_filewidget_super_show_event
 
 /// [Upstream resources](https://api.kde.org/kfilewidget.html#showEvent)
 ///
@@ -466,10 +442,6 @@ bool k_filewidget_event_filter(void* self, void* watched, void* event);
 /// @param callback bool func(KFileWidget* self, QObject* watched, QEvent* event)
 ///
 void k_filewidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_filewidget_super_event_filter` instead
-///
-#define k_filewidget_qbase_event_filter k_filewidget_super_event_filter
 
 /// [Upstream resources](https://api.kde.org/kfilewidget.html#eventFilter)
 ///
@@ -3564,10 +3536,6 @@ int32_t k_filewidget_encode_metric_f(int32_t metric, double value);
 ///
 int32_t k_filewidget_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_dev_type` instead
-///
-#define k_filewidget_qbase_dev_type k_filewidget_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -3600,10 +3568,6 @@ void k_filewidget_on_dev_type(void* self, int32_t (*callback)());
 ///
 void k_filewidget_set_visible(void* self, bool visible);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_set_visible` instead
-///
-#define k_filewidget_qbase_set_visible k_filewidget_super_set_visible
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -3635,10 +3599,6 @@ void k_filewidget_on_set_visible(void* self, void (*callback)(void*, bool));
 /// @param self KFileWidget*
 ///
 QSize* k_filewidget_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_minimum_size_hint` instead
-///
-#define k_filewidget_qbase_minimum_size_hint k_filewidget_super_minimum_size_hint
 
 /// Inherited from QWidget
 ///
@@ -3674,10 +3634,6 @@ void k_filewidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 int32_t k_filewidget_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_height_for_width` instead
-///
-#define k_filewidget_qbase_height_for_width k_filewidget_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -3710,10 +3666,6 @@ void k_filewidget_on_height_for_width(void* self, int32_t (*callback)(void*, int
 ///
 bool k_filewidget_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_has_height_for_width` instead
-///
-#define k_filewidget_qbase_has_height_for_width k_filewidget_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -3744,10 +3696,6 @@ void k_filewidget_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self KFileWidget*
 ///
 QPaintEngine* k_filewidget_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_paint_engine` instead
-///
-#define k_filewidget_qbase_paint_engine k_filewidget_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -3780,10 +3728,6 @@ void k_filewidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QEvent*
 ///
 bool k_filewidget_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_event` instead
-///
-#define k_filewidget_qbase_event k_filewidget_super_event
 
 /// Inherited from QWidget
 ///
@@ -3818,10 +3762,6 @@ void k_filewidget_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void k_filewidget_mouse_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_mouse_press_event` instead
-///
-#define k_filewidget_qbase_mouse_press_event k_filewidget_super_mouse_press_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -3854,10 +3794,6 @@ void k_filewidget_on_mouse_press_event(void* self, void (*callback)(void*, void*
 /// @param event QMouseEvent*
 ///
 void k_filewidget_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_mouse_release_event` instead
-///
-#define k_filewidget_qbase_mouse_release_event k_filewidget_super_mouse_release_event
 
 /// Inherited from QWidget
 ///
@@ -3892,10 +3828,6 @@ void k_filewidget_on_mouse_release_event(void* self, void (*callback)(void*, voi
 ///
 void k_filewidget_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_mouse_double_click_event` instead
-///
-#define k_filewidget_qbase_mouse_double_click_event k_filewidget_super_mouse_double_click_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -3928,10 +3860,6 @@ void k_filewidget_on_mouse_double_click_event(void* self, void (*callback)(void*
 /// @param event QMouseEvent*
 ///
 void k_filewidget_mouse_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_mouse_move_event` instead
-///
-#define k_filewidget_qbase_mouse_move_event k_filewidget_super_mouse_move_event
 
 /// Inherited from QWidget
 ///
@@ -3966,10 +3894,6 @@ void k_filewidget_on_mouse_move_event(void* self, void (*callback)(void*, void*)
 ///
 void k_filewidget_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_wheel_event` instead
-///
-#define k_filewidget_qbase_wheel_event k_filewidget_super_wheel_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -4002,10 +3926,6 @@ void k_filewidget_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QKeyEvent*
 ///
 void k_filewidget_key_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_key_press_event` instead
-///
-#define k_filewidget_qbase_key_press_event k_filewidget_super_key_press_event
 
 /// Inherited from QWidget
 ///
@@ -4040,10 +3960,6 @@ void k_filewidget_on_key_press_event(void* self, void (*callback)(void*, void*))
 ///
 void k_filewidget_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_key_release_event` instead
-///
-#define k_filewidget_qbase_key_release_event k_filewidget_super_key_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -4076,10 +3992,6 @@ void k_filewidget_on_key_release_event(void* self, void (*callback)(void*, void*
 /// @param event QFocusEvent*
 ///
 void k_filewidget_focus_in_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_focus_in_event` instead
-///
-#define k_filewidget_qbase_focus_in_event k_filewidget_super_focus_in_event
 
 /// Inherited from QWidget
 ///
@@ -4114,10 +4026,6 @@ void k_filewidget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 void k_filewidget_focus_out_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_focus_out_event` instead
-///
-#define k_filewidget_qbase_focus_out_event k_filewidget_super_focus_out_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -4150,10 +4058,6 @@ void k_filewidget_on_focus_out_event(void* self, void (*callback)(void*, void*))
 /// @param event QEnterEvent*
 ///
 void k_filewidget_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_enter_event` instead
-///
-#define k_filewidget_qbase_enter_event k_filewidget_super_enter_event
 
 /// Inherited from QWidget
 ///
@@ -4188,10 +4092,6 @@ void k_filewidget_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void k_filewidget_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_leave_event` instead
-///
-#define k_filewidget_qbase_leave_event k_filewidget_super_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -4224,10 +4124,6 @@ void k_filewidget_on_leave_event(void* self, void (*callback)(void*, void*));
 /// @param event QPaintEvent*
 ///
 void k_filewidget_paint_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_paint_event` instead
-///
-#define k_filewidget_qbase_paint_event k_filewidget_super_paint_event
 
 /// Inherited from QWidget
 ///
@@ -4262,10 +4158,6 @@ void k_filewidget_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 void k_filewidget_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_move_event` instead
-///
-#define k_filewidget_qbase_move_event k_filewidget_super_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -4298,10 +4190,6 @@ void k_filewidget_on_move_event(void* self, void (*callback)(void*, void*));
 /// @param event QCloseEvent*
 ///
 void k_filewidget_close_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_close_event` instead
-///
-#define k_filewidget_qbase_close_event k_filewidget_super_close_event
 
 /// Inherited from QWidget
 ///
@@ -4336,10 +4224,6 @@ void k_filewidget_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void k_filewidget_context_menu_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_context_menu_event` instead
-///
-#define k_filewidget_qbase_context_menu_event k_filewidget_super_context_menu_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
@@ -4372,10 +4256,6 @@ void k_filewidget_on_context_menu_event(void* self, void (*callback)(void*, void
 /// @param event QTabletEvent*
 ///
 void k_filewidget_tablet_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_tablet_event` instead
-///
-#define k_filewidget_qbase_tablet_event k_filewidget_super_tablet_event
 
 /// Inherited from QWidget
 ///
@@ -4410,10 +4290,6 @@ void k_filewidget_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void k_filewidget_action_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_action_event` instead
-///
-#define k_filewidget_qbase_action_event k_filewidget_super_action_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -4446,10 +4322,6 @@ void k_filewidget_on_action_event(void* self, void (*callback)(void*, void*));
 /// @param event QDragEnterEvent*
 ///
 void k_filewidget_drag_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_drag_enter_event` instead
-///
-#define k_filewidget_qbase_drag_enter_event k_filewidget_super_drag_enter_event
 
 /// Inherited from QWidget
 ///
@@ -4484,10 +4356,6 @@ void k_filewidget_on_drag_enter_event(void* self, void (*callback)(void*, void*)
 ///
 void k_filewidget_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_drag_move_event` instead
-///
-#define k_filewidget_qbase_drag_move_event k_filewidget_super_drag_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -4520,10 +4388,6 @@ void k_filewidget_on_drag_move_event(void* self, void (*callback)(void*, void*))
 /// @param event QDragLeaveEvent*
 ///
 void k_filewidget_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_drag_leave_event` instead
-///
-#define k_filewidget_qbase_drag_leave_event k_filewidget_super_drag_leave_event
 
 /// Inherited from QWidget
 ///
@@ -4558,10 +4422,6 @@ void k_filewidget_on_drag_leave_event(void* self, void (*callback)(void*, void*)
 ///
 void k_filewidget_drop_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_drop_event` instead
-///
-#define k_filewidget_qbase_drop_event k_filewidget_super_drop_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4594,10 +4454,6 @@ void k_filewidget_on_drop_event(void* self, void (*callback)(void*, void*));
 /// @param event QHideEvent*
 ///
 void k_filewidget_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_hide_event` instead
-///
-#define k_filewidget_qbase_hide_event k_filewidget_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -4634,10 +4490,6 @@ void k_filewidget_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool k_filewidget_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_native_event` instead
-///
-#define k_filewidget_qbase_native_event k_filewidget_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4673,10 +4525,6 @@ void k_filewidget_on_native_event(void* self, bool (*callback)(void*, libqt_stri
 ///
 void k_filewidget_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_change_event` instead
-///
-#define k_filewidget_qbase_change_event k_filewidget_super_change_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -4709,10 +4557,6 @@ void k_filewidget_on_change_event(void* self, void (*callback)(void*, void*));
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
 int32_t k_filewidget_metric(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_metric` instead
-///
-#define k_filewidget_qbase_metric k_filewidget_super_metric
 
 /// Inherited from QWidget
 ///
@@ -4747,10 +4591,6 @@ void k_filewidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void k_filewidget_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_init_painter` instead
-///
-#define k_filewidget_qbase_init_painter k_filewidget_super_init_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -4784,10 +4624,6 @@ void k_filewidget_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* k_filewidget_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_redirected` instead
-///
-#define k_filewidget_qbase_redirected k_filewidget_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4819,10 +4655,6 @@ void k_filewidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, voi
 /// @param self KFileWidget*
 ///
 QPainter* k_filewidget_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_shared_painter` instead
-///
-#define k_filewidget_qbase_shared_painter k_filewidget_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -4856,10 +4688,6 @@ void k_filewidget_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void k_filewidget_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_input_method_event` instead
-///
-#define k_filewidget_qbase_input_method_event k_filewidget_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4892,10 +4720,6 @@ void k_filewidget_on_input_method_event(void* self, void (*callback)(void*, void
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* k_filewidget_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_input_method_query` instead
-///
-#define k_filewidget_qbase_input_method_query k_filewidget_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -4932,10 +4756,6 @@ void k_filewidget_on_input_method_query(void* self, QVariant* (*callback)(void*,
 ///
 bool k_filewidget_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_focus_next_prev_child` instead
-///
-#define k_filewidget_qbase_focus_next_prev_child k_filewidget_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -4968,10 +4788,6 @@ void k_filewidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, b
 /// @param event QTimerEvent*
 ///
 void k_filewidget_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_timer_event` instead
-///
-#define k_filewidget_qbase_timer_event k_filewidget_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -5006,10 +4822,6 @@ void k_filewidget_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_filewidget_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_child_event` instead
-///
-#define k_filewidget_qbase_child_event k_filewidget_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -5042,10 +4854,6 @@ void k_filewidget_on_child_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void k_filewidget_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_custom_event` instead
-///
-#define k_filewidget_qbase_custom_event k_filewidget_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -5080,10 +4888,6 @@ void k_filewidget_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void k_filewidget_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_connect_notify` instead
-///
-#define k_filewidget_qbase_connect_notify k_filewidget_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5117,10 +4921,6 @@ void k_filewidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void k_filewidget_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_disconnect_notify` instead
-///
-#define k_filewidget_qbase_disconnect_notify k_filewidget_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5153,10 +4953,6 @@ void k_filewidget_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 void k_filewidget_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_update_micro_focus` instead
-///
-#define k_filewidget_qbase_update_micro_focus k_filewidget_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5187,10 +4983,6 @@ void k_filewidget_on_update_micro_focus(void* self, void (*callback)());
 /// @param self KFileWidget*
 ///
 void k_filewidget_create(void* self);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_create` instead
-///
-#define k_filewidget_qbase_create k_filewidget_super_create
 
 /// Inherited from QWidget
 ///
@@ -5223,10 +5015,6 @@ void k_filewidget_on_create(void* self, void (*callback)());
 ///
 void k_filewidget_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_destroy` instead
-///
-#define k_filewidget_qbase_destroy k_filewidget_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5257,10 +5045,6 @@ void k_filewidget_on_destroy(void* self, void (*callback)());
 /// @param self KFileWidget*
 ///
 bool k_filewidget_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_focus_next_child` instead
-///
-#define k_filewidget_qbase_focus_next_child k_filewidget_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -5293,10 +5077,6 @@ void k_filewidget_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_filewidget_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_focus_previous_child` instead
-///
-#define k_filewidget_qbase_focus_previous_child k_filewidget_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5327,10 +5107,6 @@ void k_filewidget_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self KFileWidget*
 ///
 QObject* k_filewidget_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_sender` instead
-///
-#define k_filewidget_qbase_sender k_filewidget_super_sender
 
 /// Inherited from QObject
 ///
@@ -5363,10 +5139,6 @@ void k_filewidget_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_filewidget_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_sender_signal_index` instead
-///
-#define k_filewidget_qbase_sender_signal_index k_filewidget_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5398,10 +5170,6 @@ void k_filewidget_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t k_filewidget_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_receivers` instead
-///
-#define k_filewidget_qbase_receivers k_filewidget_super_receivers
 
 /// Inherited from QObject
 ///
@@ -5436,10 +5204,6 @@ void k_filewidget_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 bool k_filewidget_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_filewidget_super_is_signal_connected` instead
-///
-#define k_filewidget_qbase_is_signal_connected k_filewidget_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5473,10 +5237,6 @@ void k_filewidget_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_filewidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_filewidget_super_get_decoded_metric_f` instead
-///
-#define k_filewidget_qbase_get_decoded_metric_f k_filewidget_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

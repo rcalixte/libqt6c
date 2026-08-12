@@ -31,10 +31,6 @@ const QMetaObject* q_sciapis_meta_object(void* self);
 ///
 void q_sciapis_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_sciapis_super_meta_object` instead
-///
-#define q_sciapis_qbase_meta_object q_sciapis_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -54,10 +50,6 @@ void* q_sciapis_metacast(void* self, const char* param1);
 /// @param callback void* func(QsciAPIs* self, const char* param1)
 ///
 void q_sciapis_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_sciapis_super_metacast` instead
-///
-#define q_sciapis_qbase_metacast q_sciapis_super_metacast
 
 /// Base class method implementation
 ///
@@ -79,10 +71,6 @@ int32_t q_sciapis_metacall(void* self, int32_t param1, int param2, void* param3)
 /// @param callback int32_t func(QsciAPIs* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_sciapis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_sciapis_super_metacall` instead
-///
-#define q_sciapis_qbase_metacall q_sciapis_super_metacall
 
 /// Base class method implementation
 ///
@@ -183,10 +171,6 @@ void q_sciapis_update_auto_completion_list(void* self, const char* context[stati
 ///
 void q_sciapis_on_update_auto_completion_list(void* self, void (*callback)(void*, const char**, const char**));
 
-/// @warning DEPRECATED: Use `q_sciapis_super_update_auto_completion_list` instead
-///
-#define q_sciapis_qbase_update_auto_completion_list q_sciapis_super_update_auto_completion_list
-
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Base class method implementation
@@ -212,10 +196,6 @@ void q_sciapis_auto_completion_selected(void* self, const char* sel);
 /// @param callback void func(QsciAPIs* self, const char* sel)
 ///
 void q_sciapis_on_auto_completion_selected(void* self, void (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_sciapis_super_auto_completion_selected` instead
-///
-#define q_sciapis_qbase_auto_completion_selected q_sciapis_super_auto_completion_selected
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
@@ -247,10 +227,6 @@ const char** q_sciapis_call_tips(void* self, const char* context[static 1], int 
 ///
 void q_sciapis_on_call_tips(void* self, const char** (*callback)(void*, const char**, int, int32_t, libqt_list));
 
-/// @warning DEPRECATED: Use `q_sciapis_super_call_tips` instead
-///
-#define q_sciapis_qbase_call_tips q_sciapis_super_call_tips
-
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Base class method implementation
@@ -278,10 +254,6 @@ bool q_sciapis_event(void* self, void* e);
 /// @param callback bool func(QsciAPIs* self, QEvent* e)
 ///
 void q_sciapis_on_event(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_sciapis_super_event` instead
-///
-#define q_sciapis_qbase_event q_sciapis_super_event
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
@@ -846,10 +818,6 @@ void q_sciapis_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_sciapis_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_sciapis_super_event_filter` instead
-///
-#define q_sciapis_qbase_event_filter q_sciapis_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -884,10 +852,6 @@ void q_sciapis_on_event_filter(void* self, bool (*callback)(void*, void*, void*)
 ///
 void q_sciapis_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_sciapis_super_timer_event` instead
-///
-#define q_sciapis_qbase_timer_event q_sciapis_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -920,10 +884,6 @@ void q_sciapis_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_sciapis_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_sciapis_super_child_event` instead
-///
-#define q_sciapis_qbase_child_event q_sciapis_super_child_event
 
 /// Inherited from QObject
 ///
@@ -958,10 +918,6 @@ void q_sciapis_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_sciapis_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_sciapis_super_custom_event` instead
-///
-#define q_sciapis_qbase_custom_event q_sciapis_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -994,10 +950,6 @@ void q_sciapis_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_sciapis_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_sciapis_super_connect_notify` instead
-///
-#define q_sciapis_qbase_connect_notify q_sciapis_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1032,10 +984,6 @@ void q_sciapis_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_sciapis_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_sciapis_super_disconnect_notify` instead
-///
-#define q_sciapis_qbase_disconnect_notify q_sciapis_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1068,10 +1016,6 @@ void q_sciapis_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 ///
 QObject* q_sciapis_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_sciapis_super_sender` instead
-///
-#define q_sciapis_qbase_sender q_sciapis_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1102,10 +1046,6 @@ void q_sciapis_on_sender(void* self, QObject* (*callback)());
 /// @param self QsciAPIs*
 ///
 int32_t q_sciapis_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_sciapis_super_sender_signal_index` instead
-///
-#define q_sciapis_qbase_sender_signal_index q_sciapis_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1139,10 +1079,6 @@ void q_sciapis_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_sciapis_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_sciapis_super_receivers` instead
-///
-#define q_sciapis_qbase_receivers q_sciapis_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1175,10 +1111,6 @@ void q_sciapis_on_receivers(void* self, int32_t (*callback)(void*, const char*))
 /// @param signal QMetaMethod*
 ///
 bool q_sciapis_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_sciapis_super_is_signal_connected` instead
-///
-#define q_sciapis_qbase_is_signal_connected q_sciapis_super_is_signal_connected
 
 /// Inherited from QObject
 ///

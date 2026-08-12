@@ -40,10 +40,6 @@ const QMetaObject* q_designerpropertyeditorinterface_meta_object(void* self);
 ///
 void q_designerpropertyeditorinterface_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_meta_object` instead
-///
-#define q_designerpropertyeditorinterface_qbase_meta_object q_designerpropertyeditorinterface_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -63,10 +59,6 @@ void* q_designerpropertyeditorinterface_metacast(void* self, const char* param1)
 /// @param callback void* func(QDesignerPropertyEditorInterface* self, const char* param1)
 ///
 void q_designerpropertyeditorinterface_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_metacast` instead
-///
-#define q_designerpropertyeditorinterface_qbase_metacast q_designerpropertyeditorinterface_super_metacast
 
 /// Base class method implementation
 ///
@@ -88,10 +80,6 @@ int32_t q_designerpropertyeditorinterface_metacall(void* self, int32_t param1, i
 /// @param callback int32_t func(QDesignerPropertyEditorInterface* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_designerpropertyeditorinterface_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_metacall` instead
-///
-#define q_designerpropertyeditorinterface_qbase_metacall q_designerpropertyeditorinterface_super_metacall
 
 /// Base class method implementation
 ///
@@ -125,10 +113,6 @@ QDesignerFormEditorInterface* q_designerpropertyeditorinterface_core(void* self)
 ///
 void q_designerpropertyeditorinterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)());
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_core` instead
-///
-#define q_designerpropertyeditorinterface_qbase_core q_designerpropertyeditorinterface_super_core
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#core)
 ///
 /// Base class method implementation
@@ -152,10 +136,6 @@ bool q_designerpropertyeditorinterface_is_read_only(void* self);
 ///
 void q_designerpropertyeditorinterface_on_is_read_only(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_is_read_only` instead
-///
-#define q_designerpropertyeditorinterface_qbase_is_read_only q_designerpropertyeditorinterface_super_is_read_only
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#isReadOnly)
 ///
 /// Base class method implementation
@@ -178,10 +158,6 @@ QObject* q_designerpropertyeditorinterface_object(void* self);
 /// @param callback QObject* func()
 ///
 void q_designerpropertyeditorinterface_on_object(void* self, QObject* (*callback)());
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_object` instead
-///
-#define q_designerpropertyeditorinterface_qbase_object q_designerpropertyeditorinterface_super_object
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#object)
 ///
@@ -207,10 +183,6 @@ const char* q_designerpropertyeditorinterface_current_property_name(void* self);
 /// @param callback const char* func()
 ///
 void q_designerpropertyeditorinterface_on_current_property_name(void* self, const char* (*callback)());
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_current_property_name` instead
-///
-#define q_designerpropertyeditorinterface_qbase_current_property_name q_designerpropertyeditorinterface_super_current_property_name
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#currentPropertyName)
 ///
@@ -251,10 +223,6 @@ void q_designerpropertyeditorinterface_set_object(void* self, void* object);
 ///
 void q_designerpropertyeditorinterface_on_set_object(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_set_object` instead
-///
-#define q_designerpropertyeditorinterface_qbase_set_object q_designerpropertyeditorinterface_super_set_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#setObject)
 ///
 /// Base class method implementation
@@ -282,10 +250,6 @@ void q_designerpropertyeditorinterface_set_property_value(void* self, const char
 ///
 void q_designerpropertyeditorinterface_on_set_property_value(void* self, void (*callback)(void*, const char*, void*, bool));
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_set_property_value` instead
-///
-#define q_designerpropertyeditorinterface_qbase_set_property_value q_designerpropertyeditorinterface_super_set_property_value
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#setPropertyValue)
 ///
 /// Base class method implementation
@@ -312,10 +276,6 @@ void q_designerpropertyeditorinterface_set_read_only(void* self, bool readOnly);
 /// @param callback void func(QDesignerPropertyEditorInterface* self, bool readOnly)
 ///
 void q_designerpropertyeditorinterface_on_set_read_only(void* self, void (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_set_read_only` instead
-///
-#define q_designerpropertyeditorinterface_qbase_set_read_only q_designerpropertyeditorinterface_super_set_read_only
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#setReadOnly)
 ///
@@ -3312,10 +3272,6 @@ int32_t q_designerpropertyeditorinterface_encode_metric_f(int32_t metric, double
 ///
 int32_t q_designerpropertyeditorinterface_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_dev_type` instead
-///
-#define q_designerpropertyeditorinterface_qbase_dev_type q_designerpropertyeditorinterface_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -3347,10 +3303,6 @@ void q_designerpropertyeditorinterface_on_dev_type(void* self, int32_t (*callbac
 /// @param visible bool
 ///
 void q_designerpropertyeditorinterface_set_visible(void* self, bool visible);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_set_visible` instead
-///
-#define q_designerpropertyeditorinterface_qbase_set_visible q_designerpropertyeditorinterface_super_set_visible
 
 /// Inherited from QWidget
 ///
@@ -3384,10 +3336,6 @@ void q_designerpropertyeditorinterface_on_set_visible(void* self, void (*callbac
 ///
 QSize* q_designerpropertyeditorinterface_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_size_hint` instead
-///
-#define q_designerpropertyeditorinterface_qbase_size_hint q_designerpropertyeditorinterface_super_size_hint
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
@@ -3420,10 +3368,6 @@ void q_designerpropertyeditorinterface_on_size_hint(void* self, QSize* (*callbac
 /// @param self QDesignerPropertyEditorInterface*
 ///
 QSize* q_designerpropertyeditorinterface_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_minimum_size_hint` instead
-///
-#define q_designerpropertyeditorinterface_qbase_minimum_size_hint q_designerpropertyeditorinterface_super_minimum_size_hint
 
 /// Inherited from QWidget
 ///
@@ -3459,10 +3403,6 @@ void q_designerpropertyeditorinterface_on_minimum_size_hint(void* self, QSize* (
 ///
 int32_t q_designerpropertyeditorinterface_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_height_for_width` instead
-///
-#define q_designerpropertyeditorinterface_qbase_height_for_width q_designerpropertyeditorinterface_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -3495,10 +3435,6 @@ void q_designerpropertyeditorinterface_on_height_for_width(void* self, int32_t (
 ///
 bool q_designerpropertyeditorinterface_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_has_height_for_width` instead
-///
-#define q_designerpropertyeditorinterface_qbase_has_height_for_width q_designerpropertyeditorinterface_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -3529,10 +3465,6 @@ void q_designerpropertyeditorinterface_on_has_height_for_width(void* self, bool 
 /// @param self QDesignerPropertyEditorInterface*
 ///
 QPaintEngine* q_designerpropertyeditorinterface_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_paint_engine` instead
-///
-#define q_designerpropertyeditorinterface_qbase_paint_engine q_designerpropertyeditorinterface_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -3565,10 +3497,6 @@ void q_designerpropertyeditorinterface_on_paint_engine(void* self, QPaintEngine*
 /// @param event QEvent*
 ///
 bool q_designerpropertyeditorinterface_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_event q_designerpropertyeditorinterface_super_event
 
 /// Inherited from QWidget
 ///
@@ -3603,10 +3531,6 @@ void q_designerpropertyeditorinterface_on_event(void* self, bool (*callback)(voi
 ///
 void q_designerpropertyeditorinterface_mouse_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_mouse_press_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_mouse_press_event q_designerpropertyeditorinterface_super_mouse_press_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -3639,10 +3563,6 @@ void q_designerpropertyeditorinterface_on_mouse_press_event(void* self, void (*c
 /// @param event QMouseEvent*
 ///
 void q_designerpropertyeditorinterface_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_mouse_release_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_mouse_release_event q_designerpropertyeditorinterface_super_mouse_release_event
 
 /// Inherited from QWidget
 ///
@@ -3677,10 +3597,6 @@ void q_designerpropertyeditorinterface_on_mouse_release_event(void* self, void (
 ///
 void q_designerpropertyeditorinterface_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_mouse_double_click_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_mouse_double_click_event q_designerpropertyeditorinterface_super_mouse_double_click_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -3713,10 +3629,6 @@ void q_designerpropertyeditorinterface_on_mouse_double_click_event(void* self, v
 /// @param event QMouseEvent*
 ///
 void q_designerpropertyeditorinterface_mouse_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_mouse_move_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_mouse_move_event q_designerpropertyeditorinterface_super_mouse_move_event
 
 /// Inherited from QWidget
 ///
@@ -3751,10 +3663,6 @@ void q_designerpropertyeditorinterface_on_mouse_move_event(void* self, void (*ca
 ///
 void q_designerpropertyeditorinterface_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_wheel_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_wheel_event q_designerpropertyeditorinterface_super_wheel_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -3787,10 +3695,6 @@ void q_designerpropertyeditorinterface_on_wheel_event(void* self, void (*callbac
 /// @param event QKeyEvent*
 ///
 void q_designerpropertyeditorinterface_key_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_key_press_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_key_press_event q_designerpropertyeditorinterface_super_key_press_event
 
 /// Inherited from QWidget
 ///
@@ -3825,10 +3729,6 @@ void q_designerpropertyeditorinterface_on_key_press_event(void* self, void (*cal
 ///
 void q_designerpropertyeditorinterface_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_key_release_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_key_release_event q_designerpropertyeditorinterface_super_key_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -3861,10 +3761,6 @@ void q_designerpropertyeditorinterface_on_key_release_event(void* self, void (*c
 /// @param event QFocusEvent*
 ///
 void q_designerpropertyeditorinterface_focus_in_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_focus_in_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_focus_in_event q_designerpropertyeditorinterface_super_focus_in_event
 
 /// Inherited from QWidget
 ///
@@ -3899,10 +3795,6 @@ void q_designerpropertyeditorinterface_on_focus_in_event(void* self, void (*call
 ///
 void q_designerpropertyeditorinterface_focus_out_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_focus_out_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_focus_out_event q_designerpropertyeditorinterface_super_focus_out_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -3935,10 +3827,6 @@ void q_designerpropertyeditorinterface_on_focus_out_event(void* self, void (*cal
 /// @param event QEnterEvent*
 ///
 void q_designerpropertyeditorinterface_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_enter_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_enter_event q_designerpropertyeditorinterface_super_enter_event
 
 /// Inherited from QWidget
 ///
@@ -3973,10 +3861,6 @@ void q_designerpropertyeditorinterface_on_enter_event(void* self, void (*callbac
 ///
 void q_designerpropertyeditorinterface_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_leave_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_leave_event q_designerpropertyeditorinterface_super_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -4009,10 +3893,6 @@ void q_designerpropertyeditorinterface_on_leave_event(void* self, void (*callbac
 /// @param event QPaintEvent*
 ///
 void q_designerpropertyeditorinterface_paint_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_paint_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_paint_event q_designerpropertyeditorinterface_super_paint_event
 
 /// Inherited from QWidget
 ///
@@ -4047,10 +3927,6 @@ void q_designerpropertyeditorinterface_on_paint_event(void* self, void (*callbac
 ///
 void q_designerpropertyeditorinterface_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_move_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_move_event q_designerpropertyeditorinterface_super_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -4083,10 +3959,6 @@ void q_designerpropertyeditorinterface_on_move_event(void* self, void (*callback
 /// @param event QResizeEvent*
 ///
 void q_designerpropertyeditorinterface_resize_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_resize_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_resize_event q_designerpropertyeditorinterface_super_resize_event
 
 /// Inherited from QWidget
 ///
@@ -4121,10 +3993,6 @@ void q_designerpropertyeditorinterface_on_resize_event(void* self, void (*callba
 ///
 void q_designerpropertyeditorinterface_close_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_close_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_close_event q_designerpropertyeditorinterface_super_close_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -4157,10 +4025,6 @@ void q_designerpropertyeditorinterface_on_close_event(void* self, void (*callbac
 /// @param event QContextMenuEvent*
 ///
 void q_designerpropertyeditorinterface_context_menu_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_context_menu_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_context_menu_event q_designerpropertyeditorinterface_super_context_menu_event
 
 /// Inherited from QWidget
 ///
@@ -4195,10 +4059,6 @@ void q_designerpropertyeditorinterface_on_context_menu_event(void* self, void (*
 ///
 void q_designerpropertyeditorinterface_tablet_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_tablet_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_tablet_event q_designerpropertyeditorinterface_super_tablet_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4231,10 +4091,6 @@ void q_designerpropertyeditorinterface_on_tablet_event(void* self, void (*callba
 /// @param event QActionEvent*
 ///
 void q_designerpropertyeditorinterface_action_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_action_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_action_event q_designerpropertyeditorinterface_super_action_event
 
 /// Inherited from QWidget
 ///
@@ -4269,10 +4125,6 @@ void q_designerpropertyeditorinterface_on_action_event(void* self, void (*callba
 ///
 void q_designerpropertyeditorinterface_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_drag_enter_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_drag_enter_event q_designerpropertyeditorinterface_super_drag_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4305,10 +4157,6 @@ void q_designerpropertyeditorinterface_on_drag_enter_event(void* self, void (*ca
 /// @param event QDragMoveEvent*
 ///
 void q_designerpropertyeditorinterface_drag_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_drag_move_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_drag_move_event q_designerpropertyeditorinterface_super_drag_move_event
 
 /// Inherited from QWidget
 ///
@@ -4343,10 +4191,6 @@ void q_designerpropertyeditorinterface_on_drag_move_event(void* self, void (*cal
 ///
 void q_designerpropertyeditorinterface_drag_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_drag_leave_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_drag_leave_event q_designerpropertyeditorinterface_super_drag_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -4379,10 +4223,6 @@ void q_designerpropertyeditorinterface_on_drag_leave_event(void* self, void (*ca
 /// @param event QDropEvent*
 ///
 void q_designerpropertyeditorinterface_drop_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_drop_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_drop_event q_designerpropertyeditorinterface_super_drop_event
 
 /// Inherited from QWidget
 ///
@@ -4417,10 +4257,6 @@ void q_designerpropertyeditorinterface_on_drop_event(void* self, void (*callback
 ///
 void q_designerpropertyeditorinterface_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_show_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_show_event q_designerpropertyeditorinterface_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -4453,10 +4289,6 @@ void q_designerpropertyeditorinterface_on_show_event(void* self, void (*callback
 /// @param event QHideEvent*
 ///
 void q_designerpropertyeditorinterface_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_hide_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_hide_event q_designerpropertyeditorinterface_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -4493,10 +4325,6 @@ void q_designerpropertyeditorinterface_on_hide_event(void* self, void (*callback
 ///
 bool q_designerpropertyeditorinterface_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_native_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_native_event q_designerpropertyeditorinterface_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4532,10 +4360,6 @@ void q_designerpropertyeditorinterface_on_native_event(void* self, bool (*callba
 ///
 void q_designerpropertyeditorinterface_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_change_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_change_event q_designerpropertyeditorinterface_super_change_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -4568,10 +4392,6 @@ void q_designerpropertyeditorinterface_on_change_event(void* self, void (*callba
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
 int32_t q_designerpropertyeditorinterface_metric(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_metric` instead
-///
-#define q_designerpropertyeditorinterface_qbase_metric q_designerpropertyeditorinterface_super_metric
 
 /// Inherited from QWidget
 ///
@@ -4606,10 +4426,6 @@ void q_designerpropertyeditorinterface_on_metric(void* self, int32_t (*callback)
 ///
 void q_designerpropertyeditorinterface_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_init_painter` instead
-///
-#define q_designerpropertyeditorinterface_qbase_init_painter q_designerpropertyeditorinterface_super_init_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -4643,10 +4459,6 @@ void q_designerpropertyeditorinterface_on_init_painter(void* self, void (*callba
 ///
 QPaintDevice* q_designerpropertyeditorinterface_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_redirected` instead
-///
-#define q_designerpropertyeditorinterface_qbase_redirected q_designerpropertyeditorinterface_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4678,10 +4490,6 @@ void q_designerpropertyeditorinterface_on_redirected(void* self, QPaintDevice* (
 /// @param self QDesignerPropertyEditorInterface*
 ///
 QPainter* q_designerpropertyeditorinterface_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_shared_painter` instead
-///
-#define q_designerpropertyeditorinterface_qbase_shared_painter q_designerpropertyeditorinterface_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -4715,10 +4523,6 @@ void q_designerpropertyeditorinterface_on_shared_painter(void* self, QPainter* (
 ///
 void q_designerpropertyeditorinterface_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_input_method_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_input_method_event q_designerpropertyeditorinterface_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4751,10 +4555,6 @@ void q_designerpropertyeditorinterface_on_input_method_event(void* self, void (*
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* q_designerpropertyeditorinterface_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_input_method_query` instead
-///
-#define q_designerpropertyeditorinterface_qbase_input_method_query q_designerpropertyeditorinterface_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -4791,10 +4591,6 @@ void q_designerpropertyeditorinterface_on_input_method_query(void* self, QVarian
 ///
 bool q_designerpropertyeditorinterface_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_focus_next_prev_child` instead
-///
-#define q_designerpropertyeditorinterface_qbase_focus_next_prev_child q_designerpropertyeditorinterface_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -4828,10 +4624,6 @@ void q_designerpropertyeditorinterface_on_focus_next_prev_child(void* self, bool
 /// @param event QEvent*
 ///
 bool q_designerpropertyeditorinterface_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_event_filter` instead
-///
-#define q_designerpropertyeditorinterface_qbase_event_filter q_designerpropertyeditorinterface_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -4867,10 +4659,6 @@ void q_designerpropertyeditorinterface_on_event_filter(void* self, bool (*callba
 ///
 void q_designerpropertyeditorinterface_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_timer_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_timer_event q_designerpropertyeditorinterface_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -4903,10 +4691,6 @@ void q_designerpropertyeditorinterface_on_timer_event(void* self, void (*callbac
 /// @param event QChildEvent*
 ///
 void q_designerpropertyeditorinterface_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_child_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_child_event q_designerpropertyeditorinterface_super_child_event
 
 /// Inherited from QObject
 ///
@@ -4941,10 +4725,6 @@ void q_designerpropertyeditorinterface_on_child_event(void* self, void (*callbac
 ///
 void q_designerpropertyeditorinterface_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_custom_event` instead
-///
-#define q_designerpropertyeditorinterface_qbase_custom_event q_designerpropertyeditorinterface_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -4977,10 +4757,6 @@ void q_designerpropertyeditorinterface_on_custom_event(void* self, void (*callba
 /// @param signal QMetaMethod*
 ///
 void q_designerpropertyeditorinterface_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_connect_notify` instead
-///
-#define q_designerpropertyeditorinterface_qbase_connect_notify q_designerpropertyeditorinterface_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -5015,10 +4791,6 @@ void q_designerpropertyeditorinterface_on_connect_notify(void* self, void (*call
 ///
 void q_designerpropertyeditorinterface_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_disconnect_notify` instead
-///
-#define q_designerpropertyeditorinterface_qbase_disconnect_notify q_designerpropertyeditorinterface_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5051,10 +4823,6 @@ void q_designerpropertyeditorinterface_on_disconnect_notify(void* self, void (*c
 ///
 void q_designerpropertyeditorinterface_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_update_micro_focus` instead
-///
-#define q_designerpropertyeditorinterface_qbase_update_micro_focus q_designerpropertyeditorinterface_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5085,10 +4853,6 @@ void q_designerpropertyeditorinterface_on_update_micro_focus(void* self, void (*
 /// @param self QDesignerPropertyEditorInterface*
 ///
 void q_designerpropertyeditorinterface_create(void* self);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_create` instead
-///
-#define q_designerpropertyeditorinterface_qbase_create q_designerpropertyeditorinterface_super_create
 
 /// Inherited from QWidget
 ///
@@ -5121,10 +4885,6 @@ void q_designerpropertyeditorinterface_on_create(void* self, void (*callback)())
 ///
 void q_designerpropertyeditorinterface_destroy(void* self);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_destroy` instead
-///
-#define q_designerpropertyeditorinterface_qbase_destroy q_designerpropertyeditorinterface_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5155,10 +4915,6 @@ void q_designerpropertyeditorinterface_on_destroy(void* self, void (*callback)()
 /// @param self QDesignerPropertyEditorInterface*
 ///
 bool q_designerpropertyeditorinterface_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_focus_next_child` instead
-///
-#define q_designerpropertyeditorinterface_qbase_focus_next_child q_designerpropertyeditorinterface_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -5191,10 +4947,6 @@ void q_designerpropertyeditorinterface_on_focus_next_child(void* self, bool (*ca
 ///
 bool q_designerpropertyeditorinterface_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_focus_previous_child` instead
-///
-#define q_designerpropertyeditorinterface_qbase_focus_previous_child q_designerpropertyeditorinterface_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5225,10 +4977,6 @@ void q_designerpropertyeditorinterface_on_focus_previous_child(void* self, bool 
 /// @param self QDesignerPropertyEditorInterface*
 ///
 QObject* q_designerpropertyeditorinterface_sender(void* self);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_sender` instead
-///
-#define q_designerpropertyeditorinterface_qbase_sender q_designerpropertyeditorinterface_super_sender
 
 /// Inherited from QObject
 ///
@@ -5261,10 +5009,6 @@ void q_designerpropertyeditorinterface_on_sender(void* self, QObject* (*callback
 ///
 int32_t q_designerpropertyeditorinterface_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_sender_signal_index` instead
-///
-#define q_designerpropertyeditorinterface_qbase_sender_signal_index q_designerpropertyeditorinterface_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5296,10 +5040,6 @@ void q_designerpropertyeditorinterface_on_sender_signal_index(void* self, int32_
 /// @param signal const char*
 ///
 int32_t q_designerpropertyeditorinterface_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_receivers` instead
-///
-#define q_designerpropertyeditorinterface_qbase_receivers q_designerpropertyeditorinterface_super_receivers
 
 /// Inherited from QObject
 ///
@@ -5334,10 +5074,6 @@ void q_designerpropertyeditorinterface_on_receivers(void* self, int32_t (*callba
 ///
 bool q_designerpropertyeditorinterface_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_is_signal_connected` instead
-///
-#define q_designerpropertyeditorinterface_qbase_is_signal_connected q_designerpropertyeditorinterface_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5371,10 +5107,6 @@ void q_designerpropertyeditorinterface_on_is_signal_connected(void* self, bool (
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double q_designerpropertyeditorinterface_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `q_designerpropertyeditorinterface_super_get_decoded_metric_f` instead
-///
-#define q_designerpropertyeditorinterface_qbase_get_decoded_metric_f q_designerpropertyeditorinterface_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

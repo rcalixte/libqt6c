@@ -71,10 +71,6 @@ const QMetaObject* q_webengineview_meta_object(void* self);
 ///
 void q_webengineview_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_webengineview_super_meta_object` instead
-///
-#define q_webengineview_qbase_meta_object q_webengineview_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -94,10 +90,6 @@ void* q_webengineview_metacast(void* self, const char* param1);
 /// @param callback void* func(QWebEngineView* self, const char* param1)
 ///
 void q_webengineview_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_webengineview_super_metacast` instead
-///
-#define q_webengineview_qbase_metacast q_webengineview_super_metacast
 
 /// Base class method implementation
 ///
@@ -119,10 +111,6 @@ int32_t q_webengineview_metacall(void* self, int32_t param1, int param2, void* p
 /// @param callback int32_t func(QWebEngineView* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_webengineview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_webengineview_super_metacall` instead
-///
-#define q_webengineview_qbase_metacall q_webengineview_super_metacall
 
 /// Base class method implementation
 ///
@@ -291,10 +279,6 @@ QSize* q_webengineview_size_hint(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_webengineview_on_size_hint(void* self, QSize* (*callback)());
-
-/// @warning DEPRECATED: Use `q_webengineview_super_size_hint` instead
-///
-#define q_webengineview_qbase_size_hint q_webengineview_super_size_hint
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#sizeHint)
 ///
@@ -564,10 +548,6 @@ QWebEngineView* q_webengineview_create_window(void* self, int32_t type);
 ///
 void q_webengineview_on_create_window(void* self, QWebEngineView* (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_webengineview_super_create_window` instead
-///
-#define q_webengineview_qbase_create_window q_webengineview_super_create_window
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#createWindow)
 ///
 /// Base class method implementation
@@ -592,10 +572,6 @@ void q_webengineview_context_menu_event(void* self, void* param1);
 /// @param callback void func(QWebEngineView* self, QContextMenuEvent* param1)
 ///
 void q_webengineview_on_context_menu_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_webengineview_super_context_menu_event` instead
-///
-#define q_webengineview_qbase_context_menu_event q_webengineview_super_context_menu_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#contextMenuEvent)
 ///
@@ -622,10 +598,6 @@ bool q_webengineview_event(void* self, void* param1);
 ///
 void q_webengineview_on_event(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_webengineview_super_event` instead
-///
-#define q_webengineview_qbase_event q_webengineview_super_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#event)
 ///
 /// Base class method implementation
@@ -650,10 +622,6 @@ void q_webengineview_show_event(void* self, void* param1);
 /// @param callback void func(QWebEngineView* self, QShowEvent* param1)
 ///
 void q_webengineview_on_show_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_webengineview_super_show_event` instead
-///
-#define q_webengineview_qbase_show_event q_webengineview_super_show_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#showEvent)
 ///
@@ -680,10 +648,6 @@ void q_webengineview_hide_event(void* self, void* param1);
 ///
 void q_webengineview_on_hide_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_webengineview_super_hide_event` instead
-///
-#define q_webengineview_qbase_hide_event q_webengineview_super_hide_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#hideEvent)
 ///
 /// Base class method implementation
@@ -708,10 +672,6 @@ void q_webengineview_close_event(void* self, void* param1);
 /// @param callback void func(QWebEngineView* self, QCloseEvent* param1)
 ///
 void q_webengineview_on_close_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_webengineview_super_close_event` instead
-///
-#define q_webengineview_qbase_close_event q_webengineview_super_close_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#closeEvent)
 ///
@@ -738,10 +698,6 @@ void q_webengineview_drag_enter_event(void* self, void* e);
 ///
 void q_webengineview_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_webengineview_super_drag_enter_event` instead
-///
-#define q_webengineview_qbase_drag_enter_event q_webengineview_super_drag_enter_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#dragEnterEvent)
 ///
 /// Base class method implementation
@@ -766,10 +722,6 @@ void q_webengineview_drag_leave_event(void* self, void* e);
 /// @param callback void func(QWebEngineView* self, QDragLeaveEvent* e)
 ///
 void q_webengineview_on_drag_leave_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_webengineview_super_drag_leave_event` instead
-///
-#define q_webengineview_qbase_drag_leave_event q_webengineview_super_drag_leave_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#dragLeaveEvent)
 ///
@@ -796,10 +748,6 @@ void q_webengineview_drag_move_event(void* self, void* e);
 ///
 void q_webengineview_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_webengineview_super_drag_move_event` instead
-///
-#define q_webengineview_qbase_drag_move_event q_webengineview_super_drag_move_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#dragMoveEvent)
 ///
 /// Base class method implementation
@@ -824,10 +772,6 @@ void q_webengineview_drop_event(void* self, void* e);
 /// @param callback void func(QWebEngineView* self, QDropEvent* e)
 ///
 void q_webengineview_on_drop_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_webengineview_super_drop_event` instead
-///
-#define q_webengineview_qbase_drop_event q_webengineview_super_drop_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#dropEvent)
 ///
@@ -3908,10 +3852,6 @@ int32_t q_webengineview_encode_metric_f(int32_t metric, double value);
 ///
 int32_t q_webengineview_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_dev_type` instead
-///
-#define q_webengineview_qbase_dev_type q_webengineview_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -3944,10 +3884,6 @@ void q_webengineview_on_dev_type(void* self, int32_t (*callback)());
 ///
 void q_webengineview_set_visible(void* self, bool visible);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_set_visible` instead
-///
-#define q_webengineview_qbase_set_visible q_webengineview_super_set_visible
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -3979,10 +3915,6 @@ void q_webengineview_on_set_visible(void* self, void (*callback)(void*, bool));
 /// @param self QWebEngineView*
 ///
 QSize* q_webengineview_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `q_webengineview_super_minimum_size_hint` instead
-///
-#define q_webengineview_qbase_minimum_size_hint q_webengineview_super_minimum_size_hint
 
 /// Inherited from QWidget
 ///
@@ -4018,10 +3950,6 @@ void q_webengineview_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 int32_t q_webengineview_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_height_for_width` instead
-///
-#define q_webengineview_qbase_height_for_width q_webengineview_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -4054,10 +3982,6 @@ void q_webengineview_on_height_for_width(void* self, int32_t (*callback)(void*, 
 ///
 bool q_webengineview_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_has_height_for_width` instead
-///
-#define q_webengineview_qbase_has_height_for_width q_webengineview_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -4088,10 +4012,6 @@ void q_webengineview_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self QWebEngineView*
 ///
 QPaintEngine* q_webengineview_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `q_webengineview_super_paint_engine` instead
-///
-#define q_webengineview_qbase_paint_engine q_webengineview_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -4124,10 +4044,6 @@ void q_webengineview_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QMouseEvent*
 ///
 void q_webengineview_mouse_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_webengineview_super_mouse_press_event` instead
-///
-#define q_webengineview_qbase_mouse_press_event q_webengineview_super_mouse_press_event
 
 /// Inherited from QWidget
 ///
@@ -4162,10 +4078,6 @@ void q_webengineview_on_mouse_press_event(void* self, void (*callback)(void*, vo
 ///
 void q_webengineview_mouse_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_mouse_release_event` instead
-///
-#define q_webengineview_qbase_mouse_release_event q_webengineview_super_mouse_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
@@ -4198,10 +4110,6 @@ void q_webengineview_on_mouse_release_event(void* self, void (*callback)(void*, 
 /// @param event QMouseEvent*
 ///
 void q_webengineview_mouse_double_click_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_webengineview_super_mouse_double_click_event` instead
-///
-#define q_webengineview_qbase_mouse_double_click_event q_webengineview_super_mouse_double_click_event
 
 /// Inherited from QWidget
 ///
@@ -4236,10 +4144,6 @@ void q_webengineview_on_mouse_double_click_event(void* self, void (*callback)(vo
 ///
 void q_webengineview_mouse_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_mouse_move_event` instead
-///
-#define q_webengineview_qbase_mouse_move_event q_webengineview_super_mouse_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -4272,10 +4176,6 @@ void q_webengineview_on_mouse_move_event(void* self, void (*callback)(void*, voi
 /// @param event QWheelEvent*
 ///
 void q_webengineview_wheel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_webengineview_super_wheel_event` instead
-///
-#define q_webengineview_qbase_wheel_event q_webengineview_super_wheel_event
 
 /// Inherited from QWidget
 ///
@@ -4310,10 +4210,6 @@ void q_webengineview_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void q_webengineview_key_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_key_press_event` instead
-///
-#define q_webengineview_qbase_key_press_event q_webengineview_super_key_press_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
@@ -4346,10 +4242,6 @@ void q_webengineview_on_key_press_event(void* self, void (*callback)(void*, void
 /// @param event QKeyEvent*
 ///
 void q_webengineview_key_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_webengineview_super_key_release_event` instead
-///
-#define q_webengineview_qbase_key_release_event q_webengineview_super_key_release_event
 
 /// Inherited from QWidget
 ///
@@ -4384,10 +4276,6 @@ void q_webengineview_on_key_release_event(void* self, void (*callback)(void*, vo
 ///
 void q_webengineview_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_focus_in_event` instead
-///
-#define q_webengineview_qbase_focus_in_event q_webengineview_super_focus_in_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -4420,10 +4308,6 @@ void q_webengineview_on_focus_in_event(void* self, void (*callback)(void*, void*
 /// @param event QFocusEvent*
 ///
 void q_webengineview_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_webengineview_super_focus_out_event` instead
-///
-#define q_webengineview_qbase_focus_out_event q_webengineview_super_focus_out_event
 
 /// Inherited from QWidget
 ///
@@ -4458,10 +4342,6 @@ void q_webengineview_on_focus_out_event(void* self, void (*callback)(void*, void
 ///
 void q_webengineview_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_enter_event` instead
-///
-#define q_webengineview_qbase_enter_event q_webengineview_super_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -4494,10 +4374,6 @@ void q_webengineview_on_enter_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void q_webengineview_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_webengineview_super_leave_event` instead
-///
-#define q_webengineview_qbase_leave_event q_webengineview_super_leave_event
 
 /// Inherited from QWidget
 ///
@@ -4532,10 +4408,6 @@ void q_webengineview_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_webengineview_paint_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_paint_event` instead
-///
-#define q_webengineview_qbase_paint_event q_webengineview_super_paint_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
@@ -4568,10 +4440,6 @@ void q_webengineview_on_paint_event(void* self, void (*callback)(void*, void*));
 /// @param event QMoveEvent*
 ///
 void q_webengineview_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_webengineview_super_move_event` instead
-///
-#define q_webengineview_qbase_move_event q_webengineview_super_move_event
 
 /// Inherited from QWidget
 ///
@@ -4606,10 +4474,6 @@ void q_webengineview_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_webengineview_resize_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_resize_event` instead
-///
-#define q_webengineview_qbase_resize_event q_webengineview_super_resize_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
@@ -4643,10 +4507,6 @@ void q_webengineview_on_resize_event(void* self, void (*callback)(void*, void*))
 ///
 void q_webengineview_tablet_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_tablet_event` instead
-///
-#define q_webengineview_qbase_tablet_event q_webengineview_super_tablet_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4679,10 +4539,6 @@ void q_webengineview_on_tablet_event(void* self, void (*callback)(void*, void*))
 /// @param event QActionEvent*
 ///
 void q_webengineview_action_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_webengineview_super_action_event` instead
-///
-#define q_webengineview_qbase_action_event q_webengineview_super_action_event
 
 /// Inherited from QWidget
 ///
@@ -4719,10 +4575,6 @@ void q_webengineview_on_action_event(void* self, void (*callback)(void*, void*))
 ///
 bool q_webengineview_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_native_event` instead
-///
-#define q_webengineview_qbase_native_event q_webengineview_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4758,10 +4610,6 @@ void q_webengineview_on_native_event(void* self, bool (*callback)(void*, libqt_s
 ///
 void q_webengineview_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_change_event` instead
-///
-#define q_webengineview_qbase_change_event q_webengineview_super_change_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -4794,10 +4642,6 @@ void q_webengineview_on_change_event(void* self, void (*callback)(void*, void*))
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
 int32_t q_webengineview_metric(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `q_webengineview_super_metric` instead
-///
-#define q_webengineview_qbase_metric q_webengineview_super_metric
 
 /// Inherited from QWidget
 ///
@@ -4832,10 +4676,6 @@ void q_webengineview_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void q_webengineview_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_init_painter` instead
-///
-#define q_webengineview_qbase_init_painter q_webengineview_super_init_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -4869,10 +4709,6 @@ void q_webengineview_on_init_painter(void* self, void (*callback)(void*, void*))
 ///
 QPaintDevice* q_webengineview_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_redirected` instead
-///
-#define q_webengineview_qbase_redirected q_webengineview_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4904,10 +4740,6 @@ void q_webengineview_on_redirected(void* self, QPaintDevice* (*callback)(void*, 
 /// @param self QWebEngineView*
 ///
 QPainter* q_webengineview_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `q_webengineview_super_shared_painter` instead
-///
-#define q_webengineview_qbase_shared_painter q_webengineview_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -4941,10 +4773,6 @@ void q_webengineview_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void q_webengineview_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_input_method_event` instead
-///
-#define q_webengineview_qbase_input_method_event q_webengineview_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4977,10 +4805,6 @@ void q_webengineview_on_input_method_event(void* self, void (*callback)(void*, v
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* q_webengineview_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `q_webengineview_super_input_method_query` instead
-///
-#define q_webengineview_qbase_input_method_query q_webengineview_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -5017,10 +4841,6 @@ void q_webengineview_on_input_method_query(void* self, QVariant* (*callback)(voi
 ///
 bool q_webengineview_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_focus_next_prev_child` instead
-///
-#define q_webengineview_qbase_focus_next_prev_child q_webengineview_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -5054,10 +4874,6 @@ void q_webengineview_on_focus_next_prev_child(void* self, bool (*callback)(void*
 /// @param event QEvent*
 ///
 bool q_webengineview_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_webengineview_super_event_filter` instead
-///
-#define q_webengineview_qbase_event_filter q_webengineview_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -5093,10 +4909,6 @@ void q_webengineview_on_event_filter(void* self, bool (*callback)(void*, void*, 
 ///
 void q_webengineview_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_timer_event` instead
-///
-#define q_webengineview_qbase_timer_event q_webengineview_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -5129,10 +4941,6 @@ void q_webengineview_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_webengineview_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_webengineview_super_child_event` instead
-///
-#define q_webengineview_qbase_child_event q_webengineview_super_child_event
 
 /// Inherited from QObject
 ///
@@ -5167,10 +4975,6 @@ void q_webengineview_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_webengineview_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_custom_event` instead
-///
-#define q_webengineview_qbase_custom_event q_webengineview_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -5203,10 +5007,6 @@ void q_webengineview_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param signal QMetaMethod*
 ///
 void q_webengineview_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_webengineview_super_connect_notify` instead
-///
-#define q_webengineview_qbase_connect_notify q_webengineview_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -5241,10 +5041,6 @@ void q_webengineview_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void q_webengineview_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_disconnect_notify` instead
-///
-#define q_webengineview_qbase_disconnect_notify q_webengineview_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5277,10 +5073,6 @@ void q_webengineview_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 void q_webengineview_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_update_micro_focus` instead
-///
-#define q_webengineview_qbase_update_micro_focus q_webengineview_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5311,10 +5103,6 @@ void q_webengineview_on_update_micro_focus(void* self, void (*callback)());
 /// @param self QWebEngineView*
 ///
 void q_webengineview_create(void* self);
-
-/// @warning DEPRECATED: Use `q_webengineview_super_create` instead
-///
-#define q_webengineview_qbase_create q_webengineview_super_create
 
 /// Inherited from QWidget
 ///
@@ -5347,10 +5135,6 @@ void q_webengineview_on_create(void* self, void (*callback)());
 ///
 void q_webengineview_destroy(void* self);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_destroy` instead
-///
-#define q_webengineview_qbase_destroy q_webengineview_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5381,10 +5165,6 @@ void q_webengineview_on_destroy(void* self, void (*callback)());
 /// @param self QWebEngineView*
 ///
 bool q_webengineview_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `q_webengineview_super_focus_next_child` instead
-///
-#define q_webengineview_qbase_focus_next_child q_webengineview_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -5417,10 +5197,6 @@ void q_webengineview_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_webengineview_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_focus_previous_child` instead
-///
-#define q_webengineview_qbase_focus_previous_child q_webengineview_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5451,10 +5227,6 @@ void q_webengineview_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self QWebEngineView*
 ///
 QObject* q_webengineview_sender(void* self);
-
-/// @warning DEPRECATED: Use `q_webengineview_super_sender` instead
-///
-#define q_webengineview_qbase_sender q_webengineview_super_sender
 
 /// Inherited from QObject
 ///
@@ -5487,10 +5259,6 @@ void q_webengineview_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_webengineview_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_sender_signal_index` instead
-///
-#define q_webengineview_qbase_sender_signal_index q_webengineview_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5522,10 +5290,6 @@ void q_webengineview_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t q_webengineview_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `q_webengineview_super_receivers` instead
-///
-#define q_webengineview_qbase_receivers q_webengineview_super_receivers
 
 /// Inherited from QObject
 ///
@@ -5560,10 +5324,6 @@ void q_webengineview_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 bool q_webengineview_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_webengineview_super_is_signal_connected` instead
-///
-#define q_webengineview_qbase_is_signal_connected q_webengineview_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5597,10 +5357,6 @@ void q_webengineview_on_is_signal_connected(void* self, bool (*callback)(void*, 
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double q_webengineview_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `q_webengineview_super_get_decoded_metric_f` instead
-///
-#define q_webengineview_qbase_get_decoded_metric_f q_webengineview_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

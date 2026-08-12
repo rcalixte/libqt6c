@@ -40,10 +40,6 @@ const QMetaObject* q_geocodingmanagerengine_meta_object(void* self);
 ///
 void q_geocodingmanagerengine_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_geocodingmanagerengine_super_meta_object` instead
-///
-#define q_geocodingmanagerengine_qbase_meta_object q_geocodingmanagerengine_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -63,10 +59,6 @@ void* q_geocodingmanagerengine_metacast(void* self, const char* param1);
 /// @param callback void* func(QGeoCodingManagerEngine* self, const char* param1)
 ///
 void q_geocodingmanagerengine_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_geocodingmanagerengine_super_metacast` instead
-///
-#define q_geocodingmanagerengine_qbase_metacast q_geocodingmanagerengine_super_metacast
 
 /// Base class method implementation
 ///
@@ -88,10 +80,6 @@ int32_t q_geocodingmanagerengine_metacall(void* self, int32_t param1, int param2
 /// @param callback int32_t func(QGeoCodingManagerEngine* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_geocodingmanagerengine_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_geocodingmanagerengine_super_metacall` instead
-///
-#define q_geocodingmanagerengine_qbase_metacall q_geocodingmanagerengine_super_metacall
 
 /// Base class method implementation
 ///
@@ -141,10 +129,6 @@ QGeoCodeReply* q_geocodingmanagerengine_geocode(void* self, void* address, void*
 ///
 void q_geocodingmanagerengine_on_geocode(void* self, QGeoCodeReply* (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_geocodingmanagerengine_super_geocode` instead
-///
-#define q_geocodingmanagerengine_qbase_geocode q_geocodingmanagerengine_super_geocode
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodingmanagerengine.html#geocode)
 ///
 /// Base class method implementation
@@ -174,10 +158,6 @@ QGeoCodeReply* q_geocodingmanagerengine_geocode2(void* self, const char* address
 ///
 void q_geocodingmanagerengine_on_geocode2(void* self, QGeoCodeReply* (*callback)(void*, const char*, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_geocodingmanagerengine_super_geocode2` instead
-///
-#define q_geocodingmanagerengine_qbase_geocode2 q_geocodingmanagerengine_super_geocode2
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodingmanagerengine.html#geocode)
 ///
 /// Base class method implementation
@@ -206,10 +186,6 @@ QGeoCodeReply* q_geocodingmanagerengine_reverse_geocode(void* self, void* coordi
 /// @param callback QGeoCodeReply* func(QGeoCodingManagerEngine* self, QGeoCoordinate* coordinate, QGeoShape* bounds)
 ///
 void q_geocodingmanagerengine_on_reverse_geocode(void* self, QGeoCodeReply* (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_geocodingmanagerengine_super_reverse_geocode` instead
-///
-#define q_geocodingmanagerengine_qbase_reverse_geocode q_geocodingmanagerengine_super_reverse_geocode
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodingmanagerengine.html#reverseGeocode)
 ///
@@ -756,10 +732,6 @@ void q_geocodingmanagerengine_on_destroyed1(void* self, void (*callback)(void*, 
 ///
 bool q_geocodingmanagerengine_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_geocodingmanagerengine_super_event` instead
-///
-#define q_geocodingmanagerengine_qbase_event q_geocodingmanagerengine_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -793,10 +765,6 @@ void q_geocodingmanagerengine_on_event(void* self, bool (*callback)(void*, void*
 /// @param event QEvent*
 ///
 bool q_geocodingmanagerengine_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_geocodingmanagerengine_super_event_filter` instead
-///
-#define q_geocodingmanagerengine_qbase_event_filter q_geocodingmanagerengine_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -832,10 +800,6 @@ void q_geocodingmanagerengine_on_event_filter(void* self, bool (*callback)(void*
 ///
 void q_geocodingmanagerengine_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_geocodingmanagerengine_super_timer_event` instead
-///
-#define q_geocodingmanagerengine_qbase_timer_event q_geocodingmanagerengine_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -868,10 +832,6 @@ void q_geocodingmanagerengine_on_timer_event(void* self, void (*callback)(void*,
 /// @param event QChildEvent*
 ///
 void q_geocodingmanagerengine_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_geocodingmanagerengine_super_child_event` instead
-///
-#define q_geocodingmanagerengine_qbase_child_event q_geocodingmanagerengine_super_child_event
 
 /// Inherited from QObject
 ///
@@ -906,10 +866,6 @@ void q_geocodingmanagerengine_on_child_event(void* self, void (*callback)(void*,
 ///
 void q_geocodingmanagerengine_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_geocodingmanagerengine_super_custom_event` instead
-///
-#define q_geocodingmanagerengine_qbase_custom_event q_geocodingmanagerengine_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -942,10 +898,6 @@ void q_geocodingmanagerengine_on_custom_event(void* self, void (*callback)(void*
 /// @param signal QMetaMethod*
 ///
 void q_geocodingmanagerengine_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_geocodingmanagerengine_super_connect_notify` instead
-///
-#define q_geocodingmanagerengine_qbase_connect_notify q_geocodingmanagerengine_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -980,10 +932,6 @@ void q_geocodingmanagerengine_on_connect_notify(void* self, void (*callback)(voi
 ///
 void q_geocodingmanagerengine_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_geocodingmanagerengine_super_disconnect_notify` instead
-///
-#define q_geocodingmanagerengine_qbase_disconnect_notify q_geocodingmanagerengine_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1016,10 +964,6 @@ void q_geocodingmanagerengine_on_disconnect_notify(void* self, void (*callback)(
 ///
 QObject* q_geocodingmanagerengine_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_geocodingmanagerengine_super_sender` instead
-///
-#define q_geocodingmanagerengine_qbase_sender q_geocodingmanagerengine_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1050,10 +994,6 @@ void q_geocodingmanagerengine_on_sender(void* self, QObject* (*callback)());
 /// @param self QGeoCodingManagerEngine*
 ///
 int32_t q_geocodingmanagerengine_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_geocodingmanagerengine_super_sender_signal_index` instead
-///
-#define q_geocodingmanagerengine_qbase_sender_signal_index q_geocodingmanagerengine_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1087,10 +1027,6 @@ void q_geocodingmanagerengine_on_sender_signal_index(void* self, int32_t (*callb
 ///
 int32_t q_geocodingmanagerengine_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_geocodingmanagerengine_super_receivers` instead
-///
-#define q_geocodingmanagerengine_qbase_receivers q_geocodingmanagerengine_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1123,10 +1059,6 @@ void q_geocodingmanagerengine_on_receivers(void* self, int32_t (*callback)(void*
 /// @param signal QMetaMethod*
 ///
 bool q_geocodingmanagerengine_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_geocodingmanagerengine_super_is_signal_connected` instead
-///
-#define q_geocodingmanagerengine_qbase_is_signal_connected q_geocodingmanagerengine_super_is_signal_connected
 
 /// Inherited from QObject
 ///

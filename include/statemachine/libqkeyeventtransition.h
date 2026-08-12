@@ -58,10 +58,6 @@ const QMetaObject* q_keyeventtransition_meta_object(void* self);
 ///
 void q_keyeventtransition_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_keyeventtransition_super_meta_object` instead
-///
-#define q_keyeventtransition_qbase_meta_object q_keyeventtransition_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -81,10 +77,6 @@ void* q_keyeventtransition_metacast(void* self, const char* param1);
 /// @param callback void* func(QKeyEventTransition* self, const char* param1)
 ///
 void q_keyeventtransition_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_keyeventtransition_super_metacast` instead
-///
-#define q_keyeventtransition_qbase_metacast q_keyeventtransition_super_metacast
 
 /// Base class method implementation
 ///
@@ -106,10 +98,6 @@ int32_t q_keyeventtransition_metacall(void* self, int32_t param1, int param2, vo
 /// @param callback int32_t func(QKeyEventTransition* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_keyeventtransition_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_keyeventtransition_super_metacall` instead
-///
-#define q_keyeventtransition_qbase_metacall q_keyeventtransition_super_metacall
 
 /// Base class method implementation
 ///
@@ -172,10 +160,6 @@ void q_keyeventtransition_on_transition(void* self, void* event);
 ///
 void q_keyeventtransition_on_on_transition(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_keyeventtransition_super_on_transition` instead
-///
-#define q_keyeventtransition_qbase_on_transition q_keyeventtransition_super_on_transition
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeyeventtransition.html#onTransition)
 ///
 /// Base class method implementation
@@ -200,10 +184,6 @@ bool q_keyeventtransition_event_test(void* self, void* event);
 /// @param callback bool func(QKeyEventTransition* self, QEvent* event)
 ///
 void q_keyeventtransition_on_event_test(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_keyeventtransition_super_event_test` instead
-///
-#define q_keyeventtransition_qbase_event_test q_keyeventtransition_super_event_test
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeyeventtransition.html#eventTest)
 ///
@@ -826,10 +806,6 @@ void q_keyeventtransition_on_destroyed1(void* self, void (*callback)(void*, void
 ///
 bool q_keyeventtransition_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `q_keyeventtransition_super_event` instead
-///
-#define q_keyeventtransition_qbase_event q_keyeventtransition_super_event
-
 /// Inherited from QEventTransition
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qeventtransition.html#event)
@@ -863,10 +839,6 @@ void q_keyeventtransition_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_keyeventtransition_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_keyeventtransition_super_event_filter` instead
-///
-#define q_keyeventtransition_qbase_event_filter q_keyeventtransition_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -902,10 +874,6 @@ void q_keyeventtransition_on_event_filter(void* self, bool (*callback)(void*, vo
 ///
 void q_keyeventtransition_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_keyeventtransition_super_timer_event` instead
-///
-#define q_keyeventtransition_qbase_timer_event q_keyeventtransition_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -938,10 +906,6 @@ void q_keyeventtransition_on_timer_event(void* self, void (*callback)(void*, voi
 /// @param event QChildEvent*
 ///
 void q_keyeventtransition_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_keyeventtransition_super_child_event` instead
-///
-#define q_keyeventtransition_qbase_child_event q_keyeventtransition_super_child_event
 
 /// Inherited from QObject
 ///
@@ -976,10 +940,6 @@ void q_keyeventtransition_on_child_event(void* self, void (*callback)(void*, voi
 ///
 void q_keyeventtransition_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_keyeventtransition_super_custom_event` instead
-///
-#define q_keyeventtransition_qbase_custom_event q_keyeventtransition_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1012,10 +972,6 @@ void q_keyeventtransition_on_custom_event(void* self, void (*callback)(void*, vo
 /// @param signal QMetaMethod*
 ///
 void q_keyeventtransition_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_keyeventtransition_super_connect_notify` instead
-///
-#define q_keyeventtransition_qbase_connect_notify q_keyeventtransition_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1050,10 +1006,6 @@ void q_keyeventtransition_on_connect_notify(void* self, void (*callback)(void*, 
 ///
 void q_keyeventtransition_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_keyeventtransition_super_disconnect_notify` instead
-///
-#define q_keyeventtransition_qbase_disconnect_notify q_keyeventtransition_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1086,10 +1038,6 @@ void q_keyeventtransition_on_disconnect_notify(void* self, void (*callback)(void
 ///
 QObject* q_keyeventtransition_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_keyeventtransition_super_sender` instead
-///
-#define q_keyeventtransition_qbase_sender q_keyeventtransition_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1120,10 +1068,6 @@ void q_keyeventtransition_on_sender(void* self, QObject* (*callback)());
 /// @param self QKeyEventTransition*
 ///
 int32_t q_keyeventtransition_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_keyeventtransition_super_sender_signal_index` instead
-///
-#define q_keyeventtransition_qbase_sender_signal_index q_keyeventtransition_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1157,10 +1101,6 @@ void q_keyeventtransition_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 int32_t q_keyeventtransition_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_keyeventtransition_super_receivers` instead
-///
-#define q_keyeventtransition_qbase_receivers q_keyeventtransition_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1193,10 +1133,6 @@ void q_keyeventtransition_on_receivers(void* self, int32_t (*callback)(void*, co
 /// @param signal QMetaMethod*
 ///
 bool q_keyeventtransition_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_keyeventtransition_super_is_signal_connected` instead
-///
-#define q_keyeventtransition_qbase_is_signal_connected q_keyeventtransition_super_is_signal_connected
 
 /// Inherited from QObject
 ///

@@ -29,10 +29,6 @@ const QMetaObject* k_texteditor__inlinenoteprovider_meta_object(void* self);
 ///
 void k_texteditor__inlinenoteprovider_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_meta_object` instead
-///
-#define k_texteditor__inlinenoteprovider_qbase_meta_object k_texteditor__inlinenoteprovider_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -52,10 +48,6 @@ void* k_texteditor__inlinenoteprovider_metacast(void* self, const char* param1);
 /// @param callback void* func(KTextEditor__InlineNoteProvider* self, const char* param1)
 ///
 void k_texteditor__inlinenoteprovider_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_metacast` instead
-///
-#define k_texteditor__inlinenoteprovider_qbase_metacast k_texteditor__inlinenoteprovider_super_metacast
 
 /// Base class method implementation
 ///
@@ -77,10 +69,6 @@ int32_t k_texteditor__inlinenoteprovider_metacall(void* self, int32_t param1, in
 /// @param callback int32_t func(KTextEditor__InlineNoteProvider* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_texteditor__inlinenoteprovider_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_metacall` instead
-///
-#define k_texteditor__inlinenoteprovider_qbase_metacall k_texteditor__inlinenoteprovider_super_metacall
 
 /// Base class method implementation
 ///
@@ -117,10 +105,6 @@ libqt_list k_texteditor__inlinenoteprovider_inline_notes(void* self, int line);
 ///
 void k_texteditor__inlinenoteprovider_on_inline_notes(void* self, libqt_list (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_inline_notes` instead
-///
-#define k_texteditor__inlinenoteprovider_qbase_inline_notes k_texteditor__inlinenoteprovider_super_inline_notes
-
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenoteprovider.html#inlineNotes)
 ///
 /// Base class method implementation
@@ -150,10 +134,6 @@ QSize* k_texteditor__inlinenoteprovider_inline_note_size(void* self, void* note)
 ///
 void k_texteditor__inlinenoteprovider_on_inline_note_size(void* self, QSize* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_inline_note_size` instead
-///
-#define k_texteditor__inlinenoteprovider_qbase_inline_note_size k_texteditor__inlinenoteprovider_super_inline_note_size
-
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenoteprovider.html#inlineNoteSize)
 ///
 /// Base class method implementation
@@ -180,10 +160,6 @@ void k_texteditor__inlinenoteprovider_paint_inline_note(void* self, void* note, 
 /// @param callback void func(KTextEditor__InlineNoteProvider* self, KTextEditor__InlineNote* note, QPainter* painter, enum Qt__LayoutDirection direction)
 ///
 void k_texteditor__inlinenoteprovider_on_paint_inline_note(void* self, void (*callback)(void*, void*, void*, int32_t));
-
-/// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_paint_inline_note` instead
-///
-#define k_texteditor__inlinenoteprovider_qbase_paint_inline_note k_texteditor__inlinenoteprovider_super_paint_inline_note
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenoteprovider.html#paintInlineNote)
 ///
@@ -214,10 +190,6 @@ void k_texteditor__inlinenoteprovider_inline_note_activated(void* self, void* no
 ///
 void k_texteditor__inlinenoteprovider_on_inline_note_activated(void* self, void (*callback)(void*, void*, int32_t, void*));
 
-/// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_inline_note_activated` instead
-///
-#define k_texteditor__inlinenoteprovider_qbase_inline_note_activated k_texteditor__inlinenoteprovider_super_inline_note_activated
-
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenoteprovider.html#inlineNoteActivated)
 ///
 /// Base class method implementation
@@ -246,10 +218,6 @@ void k_texteditor__inlinenoteprovider_inline_note_focus_in_event(void* self, voi
 ///
 void k_texteditor__inlinenoteprovider_on_inline_note_focus_in_event(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_inline_note_focus_in_event` instead
-///
-#define k_texteditor__inlinenoteprovider_qbase_inline_note_focus_in_event k_texteditor__inlinenoteprovider_super_inline_note_focus_in_event
-
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenoteprovider.html#inlineNoteFocusInEvent)
 ///
 /// Base class method implementation
@@ -276,10 +244,6 @@ void k_texteditor__inlinenoteprovider_inline_note_focus_out_event(void* self, vo
 ///
 void k_texteditor__inlinenoteprovider_on_inline_note_focus_out_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_inline_note_focus_out_event` instead
-///
-#define k_texteditor__inlinenoteprovider_qbase_inline_note_focus_out_event k_texteditor__inlinenoteprovider_super_inline_note_focus_out_event
-
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenoteprovider.html#inlineNoteFocusOutEvent)
 ///
 /// Base class method implementation
@@ -305,10 +269,6 @@ void k_texteditor__inlinenoteprovider_inline_note_mouse_move_event(void* self, v
 /// @param callback void func(KTextEditor__InlineNoteProvider* self, KTextEditor__InlineNote* note, QPoint* globalPos)
 ///
 void k_texteditor__inlinenoteprovider_on_inline_note_mouse_move_event(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_inline_note_mouse_move_event` instead
-///
-#define k_texteditor__inlinenoteprovider_qbase_inline_note_mouse_move_event k_texteditor__inlinenoteprovider_super_inline_note_mouse_move_event
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenoteprovider.html#inlineNoteMouseMoveEvent)
 ///
@@ -824,10 +784,6 @@ void k_texteditor__inlinenoteprovider_on_destroyed1(void* self, void (*callback)
 ///
 bool k_texteditor__inlinenoteprovider_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_event` instead
-///
-#define k_texteditor__inlinenoteprovider_qbase_event k_texteditor__inlinenoteprovider_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -861,10 +817,6 @@ void k_texteditor__inlinenoteprovider_on_event(void* self, bool (*callback)(void
 /// @param event QEvent*
 ///
 bool k_texteditor__inlinenoteprovider_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_event_filter` instead
-///
-#define k_texteditor__inlinenoteprovider_qbase_event_filter k_texteditor__inlinenoteprovider_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -900,10 +852,6 @@ void k_texteditor__inlinenoteprovider_on_event_filter(void* self, bool (*callbac
 ///
 void k_texteditor__inlinenoteprovider_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_timer_event` instead
-///
-#define k_texteditor__inlinenoteprovider_qbase_timer_event k_texteditor__inlinenoteprovider_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -936,10 +884,6 @@ void k_texteditor__inlinenoteprovider_on_timer_event(void* self, void (*callback
 /// @param event QChildEvent*
 ///
 void k_texteditor__inlinenoteprovider_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_child_event` instead
-///
-#define k_texteditor__inlinenoteprovider_qbase_child_event k_texteditor__inlinenoteprovider_super_child_event
 
 /// Inherited from QObject
 ///
@@ -974,10 +918,6 @@ void k_texteditor__inlinenoteprovider_on_child_event(void* self, void (*callback
 ///
 void k_texteditor__inlinenoteprovider_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_custom_event` instead
-///
-#define k_texteditor__inlinenoteprovider_qbase_custom_event k_texteditor__inlinenoteprovider_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1010,10 +950,6 @@ void k_texteditor__inlinenoteprovider_on_custom_event(void* self, void (*callbac
 /// @param signal QMetaMethod*
 ///
 void k_texteditor__inlinenoteprovider_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_connect_notify` instead
-///
-#define k_texteditor__inlinenoteprovider_qbase_connect_notify k_texteditor__inlinenoteprovider_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1048,10 +984,6 @@ void k_texteditor__inlinenoteprovider_on_connect_notify(void* self, void (*callb
 ///
 void k_texteditor__inlinenoteprovider_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_disconnect_notify` instead
-///
-#define k_texteditor__inlinenoteprovider_qbase_disconnect_notify k_texteditor__inlinenoteprovider_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1084,10 +1016,6 @@ void k_texteditor__inlinenoteprovider_on_disconnect_notify(void* self, void (*ca
 ///
 QObject* k_texteditor__inlinenoteprovider_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_sender` instead
-///
-#define k_texteditor__inlinenoteprovider_qbase_sender k_texteditor__inlinenoteprovider_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1118,10 +1046,6 @@ void k_texteditor__inlinenoteprovider_on_sender(void* self, QObject* (*callback)
 /// @param self KTextEditor__InlineNoteProvider*
 ///
 int32_t k_texteditor__inlinenoteprovider_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_sender_signal_index` instead
-///
-#define k_texteditor__inlinenoteprovider_qbase_sender_signal_index k_texteditor__inlinenoteprovider_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1155,10 +1079,6 @@ void k_texteditor__inlinenoteprovider_on_sender_signal_index(void* self, int32_t
 ///
 int32_t k_texteditor__inlinenoteprovider_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_receivers` instead
-///
-#define k_texteditor__inlinenoteprovider_qbase_receivers k_texteditor__inlinenoteprovider_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1191,10 +1111,6 @@ void k_texteditor__inlinenoteprovider_on_receivers(void* self, int32_t (*callbac
 /// @param signal QMetaMethod*
 ///
 bool k_texteditor__inlinenoteprovider_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_is_signal_connected` instead
-///
-#define k_texteditor__inlinenoteprovider_qbase_is_signal_connected k_texteditor__inlinenoteprovider_super_is_signal_connected
 
 /// Inherited from QObject
 ///

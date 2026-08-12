@@ -44,10 +44,6 @@ const QMetaObject* q_barlegendmarker_meta_object(void* self);
 ///
 void q_barlegendmarker_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_barlegendmarker_super_meta_object` instead
-///
-#define q_barlegendmarker_qbase_meta_object q_barlegendmarker_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -67,10 +63,6 @@ void* q_barlegendmarker_metacast(void* self, const char* param1);
 /// @param callback void* func(QBarLegendMarker* self, const char* param1)
 ///
 void q_barlegendmarker_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_barlegendmarker_super_metacast` instead
-///
-#define q_barlegendmarker_qbase_metacast q_barlegendmarker_super_metacast
 
 /// Base class method implementation
 ///
@@ -92,10 +84,6 @@ int32_t q_barlegendmarker_metacall(void* self, int32_t param1, int param2, void*
 /// @param callback int32_t func(QBarLegendMarker* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_barlegendmarker_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_barlegendmarker_super_metacall` instead
-///
-#define q_barlegendmarker_qbase_metacall q_barlegendmarker_super_metacall
 
 /// Base class method implementation
 ///
@@ -131,10 +119,6 @@ int32_t q_barlegendmarker_type(void* self);
 ///
 void q_barlegendmarker_on_type(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_barlegendmarker_super_type` instead
-///
-#define q_barlegendmarker_qbase_type q_barlegendmarker_super_type
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarlegendmarker-qtcharts.html#type)
 ///
 /// Base class method implementation
@@ -159,10 +143,6 @@ QAbstractBarSeries* q_barlegendmarker_series(void* self);
 /// @param callback QAbstractBarSeries* func()
 ///
 void q_barlegendmarker_on_series(void* self, QAbstractBarSeries* (*callback)());
-
-/// @warning DEPRECATED: Use `q_barlegendmarker_super_series` instead
-///
-#define q_barlegendmarker_qbase_series q_barlegendmarker_super_series
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarlegendmarker-qtcharts.html#series)
 ///
@@ -932,10 +912,6 @@ void q_barlegendmarker_on_destroyed1(void* self, void (*callback)(void*, void*))
 ///
 bool q_barlegendmarker_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_barlegendmarker_super_event` instead
-///
-#define q_barlegendmarker_qbase_event q_barlegendmarker_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -969,10 +945,6 @@ void q_barlegendmarker_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_barlegendmarker_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_barlegendmarker_super_event_filter` instead
-///
-#define q_barlegendmarker_qbase_event_filter q_barlegendmarker_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1008,10 +980,6 @@ void q_barlegendmarker_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 void q_barlegendmarker_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_barlegendmarker_super_timer_event` instead
-///
-#define q_barlegendmarker_qbase_timer_event q_barlegendmarker_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1044,10 +1012,6 @@ void q_barlegendmarker_on_timer_event(void* self, void (*callback)(void*, void*)
 /// @param event QChildEvent*
 ///
 void q_barlegendmarker_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_barlegendmarker_super_child_event` instead
-///
-#define q_barlegendmarker_qbase_child_event q_barlegendmarker_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1082,10 +1046,6 @@ void q_barlegendmarker_on_child_event(void* self, void (*callback)(void*, void*)
 ///
 void q_barlegendmarker_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_barlegendmarker_super_custom_event` instead
-///
-#define q_barlegendmarker_qbase_custom_event q_barlegendmarker_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1118,10 +1078,6 @@ void q_barlegendmarker_on_custom_event(void* self, void (*callback)(void*, void*
 /// @param signal QMetaMethod*
 ///
 void q_barlegendmarker_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_barlegendmarker_super_connect_notify` instead
-///
-#define q_barlegendmarker_qbase_connect_notify q_barlegendmarker_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1156,10 +1112,6 @@ void q_barlegendmarker_on_connect_notify(void* self, void (*callback)(void*, voi
 ///
 void q_barlegendmarker_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_barlegendmarker_super_disconnect_notify` instead
-///
-#define q_barlegendmarker_qbase_disconnect_notify q_barlegendmarker_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1192,10 +1144,6 @@ void q_barlegendmarker_on_disconnect_notify(void* self, void (*callback)(void*, 
 ///
 QObject* q_barlegendmarker_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_barlegendmarker_super_sender` instead
-///
-#define q_barlegendmarker_qbase_sender q_barlegendmarker_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1226,10 +1174,6 @@ void q_barlegendmarker_on_sender(void* self, QObject* (*callback)());
 /// @param self QBarLegendMarker*
 ///
 int32_t q_barlegendmarker_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_barlegendmarker_super_sender_signal_index` instead
-///
-#define q_barlegendmarker_qbase_sender_signal_index q_barlegendmarker_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1263,10 +1207,6 @@ void q_barlegendmarker_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 int32_t q_barlegendmarker_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_barlegendmarker_super_receivers` instead
-///
-#define q_barlegendmarker_qbase_receivers q_barlegendmarker_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1299,10 +1239,6 @@ void q_barlegendmarker_on_receivers(void* self, int32_t (*callback)(void*, const
 /// @param signal QMetaMethod*
 ///
 bool q_barlegendmarker_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_barlegendmarker_super_is_signal_connected` instead
-///
-#define q_barlegendmarker_qbase_is_signal_connected q_barlegendmarker_super_is_signal_connected
 
 /// Inherited from QObject
 ///

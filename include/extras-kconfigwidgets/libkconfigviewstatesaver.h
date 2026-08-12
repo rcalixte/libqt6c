@@ -37,10 +37,6 @@ const QMetaObject* k_configviewstatesaver_meta_object(void* self);
 ///
 void k_configviewstatesaver_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_configviewstatesaver_super_meta_object` instead
-///
-#define k_configviewstatesaver_qbase_meta_object k_configviewstatesaver_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* k_configviewstatesaver_metacast(void* self, const char* param1);
 /// @param callback void* func(KConfigViewStateSaver* self, const char* param1)
 ///
 void k_configviewstatesaver_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_configviewstatesaver_super_metacast` instead
-///
-#define k_configviewstatesaver_qbase_metacast k_configviewstatesaver_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t k_configviewstatesaver_metacall(void* self, int32_t param1, int param2, 
 /// @param callback int32_t func(KConfigViewStateSaver* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_configviewstatesaver_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_configviewstatesaver_super_metacall` instead
-///
-#define k_configviewstatesaver_qbase_metacall k_configviewstatesaver_super_metacall
 
 /// Base class method implementation
 ///
@@ -710,10 +698,6 @@ void k_configviewstatesaver_on_destroyed1(void* self, void (*callback)(void*, vo
 ///
 QModelIndex* k_configviewstatesaver_index_from_config_string(void* self, void* model, const char* key);
 
-/// @warning DEPRECATED: Use `k_configviewstatesaver_super_index_from_config_string` instead
-///
-#define k_configviewstatesaver_qbase_index_from_config_string k_configviewstatesaver_super_index_from_config_string
-
 /// Inherited from KViewStateSerializer
 ///
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#indexFromConfigString)
@@ -752,10 +736,6 @@ void k_configviewstatesaver_on_index_from_config_string(void* self, QModelIndex*
 ///
 const char* k_configviewstatesaver_index_to_config_string(void* self, void* index);
 
-/// @warning DEPRECATED: Use `k_configviewstatesaver_super_index_to_config_string` instead
-///
-#define k_configviewstatesaver_qbase_index_to_config_string k_configviewstatesaver_super_index_to_config_string
-
 /// Inherited from KViewStateSerializer
 ///
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#indexToConfigString)
@@ -791,10 +771,6 @@ void k_configviewstatesaver_on_index_to_config_string(void* self, const char* (*
 ///
 bool k_configviewstatesaver_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_configviewstatesaver_super_event` instead
-///
-#define k_configviewstatesaver_qbase_event k_configviewstatesaver_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -828,10 +804,6 @@ void k_configviewstatesaver_on_event(void* self, bool (*callback)(void*, void*))
 /// @param event QEvent*
 ///
 bool k_configviewstatesaver_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_configviewstatesaver_super_event_filter` instead
-///
-#define k_configviewstatesaver_qbase_event_filter k_configviewstatesaver_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -867,10 +839,6 @@ void k_configviewstatesaver_on_event_filter(void* self, bool (*callback)(void*, 
 ///
 void k_configviewstatesaver_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_configviewstatesaver_super_timer_event` instead
-///
-#define k_configviewstatesaver_qbase_timer_event k_configviewstatesaver_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -903,10 +871,6 @@ void k_configviewstatesaver_on_timer_event(void* self, void (*callback)(void*, v
 /// @param event QChildEvent*
 ///
 void k_configviewstatesaver_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_configviewstatesaver_super_child_event` instead
-///
-#define k_configviewstatesaver_qbase_child_event k_configviewstatesaver_super_child_event
 
 /// Inherited from QObject
 ///
@@ -941,10 +905,6 @@ void k_configviewstatesaver_on_child_event(void* self, void (*callback)(void*, v
 ///
 void k_configviewstatesaver_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_configviewstatesaver_super_custom_event` instead
-///
-#define k_configviewstatesaver_qbase_custom_event k_configviewstatesaver_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -977,10 +937,6 @@ void k_configviewstatesaver_on_custom_event(void* self, void (*callback)(void*, 
 /// @param signal QMetaMethod*
 ///
 void k_configviewstatesaver_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_configviewstatesaver_super_connect_notify` instead
-///
-#define k_configviewstatesaver_qbase_connect_notify k_configviewstatesaver_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1015,10 +971,6 @@ void k_configviewstatesaver_on_connect_notify(void* self, void (*callback)(void*
 ///
 void k_configviewstatesaver_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_configviewstatesaver_super_disconnect_notify` instead
-///
-#define k_configviewstatesaver_qbase_disconnect_notify k_configviewstatesaver_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1051,10 +1003,6 @@ void k_configviewstatesaver_on_disconnect_notify(void* self, void (*callback)(vo
 ///
 QObject* k_configviewstatesaver_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_configviewstatesaver_super_sender` instead
-///
-#define k_configviewstatesaver_qbase_sender k_configviewstatesaver_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1085,10 +1033,6 @@ void k_configviewstatesaver_on_sender(void* self, QObject* (*callback)());
 /// @param self KConfigViewStateSaver*
 ///
 int32_t k_configviewstatesaver_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_configviewstatesaver_super_sender_signal_index` instead
-///
-#define k_configviewstatesaver_qbase_sender_signal_index k_configviewstatesaver_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1122,10 +1066,6 @@ void k_configviewstatesaver_on_sender_signal_index(void* self, int32_t (*callbac
 ///
 int32_t k_configviewstatesaver_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_configviewstatesaver_super_receivers` instead
-///
-#define k_configviewstatesaver_qbase_receivers k_configviewstatesaver_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1158,10 +1098,6 @@ void k_configviewstatesaver_on_receivers(void* self, int32_t (*callback)(void*, 
 /// @param signal QMetaMethod*
 ///
 bool k_configviewstatesaver_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_configviewstatesaver_super_is_signal_connected` instead
-///
-#define k_configviewstatesaver_qbase_is_signal_connected k_configviewstatesaver_super_is_signal_connected
 
 /// Inherited from QObject
 ///

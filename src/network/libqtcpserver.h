@@ -37,10 +37,6 @@ const QMetaObject* q_tcpserver_meta_object(void* self);
 ///
 void q_tcpserver_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_tcpserver_super_meta_object` instead
-///
-#define q_tcpserver_qbase_meta_object q_tcpserver_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_tcpserver_metacast(void* self, const char* param1);
 /// @param callback void* func(QTcpServer* self, const char* param1)
 ///
 void q_tcpserver_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_tcpserver_super_metacast` instead
-///
-#define q_tcpserver_qbase_metacast q_tcpserver_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_tcpserver_metacall(void* self, int32_t param1, int param2, void* param
 /// @param callback int32_t func(QTcpServer* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_tcpserver_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_tcpserver_super_metacall` instead
-///
-#define q_tcpserver_qbase_metacall q_tcpserver_super_metacall
 
 /// Base class method implementation
 ///
@@ -197,10 +185,6 @@ bool q_tcpserver_has_pending_connections(void* self);
 ///
 void q_tcpserver_on_has_pending_connections(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_tcpserver_super_has_pending_connections` instead
-///
-#define q_tcpserver_qbase_has_pending_connections q_tcpserver_super_has_pending_connections
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtcpserver.html#hasPendingConnections)
 ///
 /// Base class method implementation
@@ -223,10 +207,6 @@ QTcpSocket* q_tcpserver_next_pending_connection(void* self);
 /// @param callback QTcpSocket* func()
 ///
 void q_tcpserver_on_next_pending_connection(void* self, QTcpSocket* (*callback)());
-
-/// @warning DEPRECATED: Use `q_tcpserver_super_next_pending_connection` instead
-///
-#define q_tcpserver_qbase_next_pending_connection q_tcpserver_super_next_pending_connection
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtcpserver.html#nextPendingConnection)
 ///
@@ -293,10 +273,6 @@ void q_tcpserver_incoming_connection(void* self, intptr_t handle);
 ///
 void q_tcpserver_on_incoming_connection(void* self, void (*callback)(void*, intptr_t));
 
-/// @warning DEPRECATED: Use `q_tcpserver_super_incoming_connection` instead
-///
-#define q_tcpserver_qbase_incoming_connection q_tcpserver_super_incoming_connection
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtcpserver.html#incomingConnection)
 ///
 /// Base class method implementation
@@ -321,10 +297,6 @@ void q_tcpserver_add_pending_connection(void* self, void* socket);
 /// @param callback void func(QTcpServer* self, QTcpSocket* socket)
 ///
 void q_tcpserver_on_add_pending_connection(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_tcpserver_super_add_pending_connection` instead
-///
-#define q_tcpserver_qbase_add_pending_connection q_tcpserver_super_add_pending_connection
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtcpserver.html#addPendingConnection)
 ///
@@ -869,10 +841,6 @@ void q_tcpserver_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_tcpserver_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_tcpserver_super_event` instead
-///
-#define q_tcpserver_qbase_event q_tcpserver_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -906,10 +874,6 @@ void q_tcpserver_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_tcpserver_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_tcpserver_super_event_filter` instead
-///
-#define q_tcpserver_qbase_event_filter q_tcpserver_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -945,10 +909,6 @@ void q_tcpserver_on_event_filter(void* self, bool (*callback)(void*, void*, void
 ///
 void q_tcpserver_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_tcpserver_super_timer_event` instead
-///
-#define q_tcpserver_qbase_timer_event q_tcpserver_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -981,10 +941,6 @@ void q_tcpserver_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_tcpserver_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_tcpserver_super_child_event` instead
-///
-#define q_tcpserver_qbase_child_event q_tcpserver_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1019,10 +975,6 @@ void q_tcpserver_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_tcpserver_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_tcpserver_super_custom_event` instead
-///
-#define q_tcpserver_qbase_custom_event q_tcpserver_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1055,10 +1007,6 @@ void q_tcpserver_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_tcpserver_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_tcpserver_super_connect_notify` instead
-///
-#define q_tcpserver_qbase_connect_notify q_tcpserver_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1093,10 +1041,6 @@ void q_tcpserver_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_tcpserver_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_tcpserver_super_disconnect_notify` instead
-///
-#define q_tcpserver_qbase_disconnect_notify q_tcpserver_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1129,10 +1073,6 @@ void q_tcpserver_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 QObject* q_tcpserver_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_tcpserver_super_sender` instead
-///
-#define q_tcpserver_qbase_sender q_tcpserver_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1163,10 +1103,6 @@ void q_tcpserver_on_sender(void* self, QObject* (*callback)());
 /// @param self QTcpServer*
 ///
 int32_t q_tcpserver_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_tcpserver_super_sender_signal_index` instead
-///
-#define q_tcpserver_qbase_sender_signal_index q_tcpserver_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1200,10 +1136,6 @@ void q_tcpserver_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_tcpserver_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_tcpserver_super_receivers` instead
-///
-#define q_tcpserver_qbase_receivers q_tcpserver_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1236,10 +1168,6 @@ void q_tcpserver_on_receivers(void* self, int32_t (*callback)(void*, const char*
 /// @param signal QMetaMethod*
 ///
 bool q_tcpserver_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_tcpserver_super_is_signal_connected` instead
-///
-#define q_tcpserver_qbase_is_signal_connected q_tcpserver_super_is_signal_connected
 
 /// Inherited from QObject
 ///

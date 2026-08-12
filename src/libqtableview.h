@@ -37,10 +37,6 @@ const QMetaObject* q_tableview_meta_object(void* self);
 ///
 void q_tableview_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_tableview_super_meta_object` instead
-///
-#define q_tableview_qbase_meta_object q_tableview_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_tableview_metacast(void* self, const char* param1);
 /// @param callback void* func(QTableView* self, const char* param1)
 ///
 void q_tableview_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_tableview_super_metacast` instead
-///
-#define q_tableview_qbase_metacast q_tableview_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_tableview_metacall(void* self, int32_t param1, int param2, void* param
 /// @param callback int32_t func(QTableView* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_tableview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_tableview_super_metacall` instead
-///
-#define q_tableview_qbase_metacall q_tableview_super_metacall
 
 /// Base class method implementation
 ///
@@ -123,10 +111,6 @@ void q_tableview_set_model(void* self, void* model);
 ///
 void q_tableview_on_set_model(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_tableview_super_set_model` instead
-///
-#define q_tableview_qbase_set_model q_tableview_super_set_model
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#setModel)
 ///
 /// Base class method implementation
@@ -151,10 +135,6 @@ void q_tableview_set_root_index(void* self, void* index);
 /// @param callback void func(QTableView* self, QModelIndex* index)
 ///
 void q_tableview_on_set_root_index(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_tableview_super_set_root_index` instead
-///
-#define q_tableview_qbase_set_root_index q_tableview_super_set_root_index
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#setRootIndex)
 ///
@@ -181,10 +161,6 @@ void q_tableview_set_selection_model(void* self, void* selectionModel);
 ///
 void q_tableview_on_set_selection_model(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_tableview_super_set_selection_model` instead
-///
-#define q_tableview_qbase_set_selection_model q_tableview_super_set_selection_model
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#setSelectionModel)
 ///
 /// Base class method implementation
@@ -208,10 +184,6 @@ void q_tableview_do_items_layout(void* self);
 /// @param callback void func()
 ///
 void q_tableview_on_do_items_layout(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_tableview_super_do_items_layout` instead
-///
-#define q_tableview_qbase_do_items_layout q_tableview_super_do_items_layout
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#doItemsLayout)
 ///
@@ -413,10 +385,6 @@ QRect* q_tableview_visual_rect(void* self, void* index);
 ///
 void q_tableview_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_tableview_super_visual_rect` instead
-///
-#define q_tableview_qbase_visual_rect q_tableview_super_visual_rect
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#visualRect)
 ///
 /// Base class method implementation
@@ -442,10 +410,6 @@ void q_tableview_scroll_to(void* self, void* index, int32_t hint);
 /// @param callback void func(QTableView* self, QModelIndex* index, enum QAbstractItemView__ScrollHint hint)
 ///
 void q_tableview_on_scroll_to(void* self, void (*callback)(void*, void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_tableview_super_scroll_to` instead
-///
-#define q_tableview_qbase_scroll_to q_tableview_super_scroll_to
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#scrollTo)
 ///
@@ -474,10 +438,6 @@ QModelIndex* q_tableview_index_at(void* self, void* p);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_tableview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_tableview_super_index_at` instead
-///
-#define q_tableview_qbase_index_at q_tableview_super_index_at
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#indexAt)
 ///
@@ -621,10 +581,6 @@ void q_tableview_row_moved(void* self, int row, int oldIndex, int newIndex);
 ///
 void q_tableview_on_row_moved(void* self, void (*callback)(void*, int, int, int));
 
-/// @warning DEPRECATED: Use `q_tableview_super_row_moved` instead
-///
-#define q_tableview_qbase_row_moved q_tableview_super_row_moved
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#rowMoved)
 ///
 /// Base class method implementation
@@ -653,10 +609,6 @@ void q_tableview_column_moved(void* self, int column, int oldIndex, int newIndex
 /// @param callback void func(QTableView* self, int column, int oldIndex, int newIndex)
 ///
 void q_tableview_on_column_moved(void* self, void (*callback)(void*, int, int, int));
-
-/// @warning DEPRECATED: Use `q_tableview_super_column_moved` instead
-///
-#define q_tableview_qbase_column_moved q_tableview_super_column_moved
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#columnMoved)
 ///
@@ -687,10 +639,6 @@ void q_tableview_row_resized(void* self, int row, int oldHeight, int newHeight);
 ///
 void q_tableview_on_row_resized(void* self, void (*callback)(void*, int, int, int));
 
-/// @warning DEPRECATED: Use `q_tableview_super_row_resized` instead
-///
-#define q_tableview_qbase_row_resized q_tableview_super_row_resized
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#rowResized)
 ///
 /// Base class method implementation
@@ -720,10 +668,6 @@ void q_tableview_column_resized(void* self, int column, int oldWidth, int newWid
 ///
 void q_tableview_on_column_resized(void* self, void (*callback)(void*, int, int, int));
 
-/// @warning DEPRECATED: Use `q_tableview_super_column_resized` instead
-///
-#define q_tableview_qbase_column_resized q_tableview_super_column_resized
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#columnResized)
 ///
 /// Base class method implementation
@@ -752,10 +696,6 @@ void q_tableview_row_count_changed(void* self, int oldCount, int newCount);
 ///
 void q_tableview_on_row_count_changed(void* self, void (*callback)(void*, int, int));
 
-/// @warning DEPRECATED: Use `q_tableview_super_row_count_changed` instead
-///
-#define q_tableview_qbase_row_count_changed q_tableview_super_row_count_changed
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#rowCountChanged)
 ///
 /// Base class method implementation
@@ -782,10 +722,6 @@ void q_tableview_column_count_changed(void* self, int oldCount, int newCount);
 /// @param callback void func(QTableView* self, int oldCount, int newCount)
 ///
 void q_tableview_on_column_count_changed(void* self, void (*callback)(void*, int, int));
-
-/// @warning DEPRECATED: Use `q_tableview_super_column_count_changed` instead
-///
-#define q_tableview_qbase_column_count_changed q_tableview_super_column_count_changed
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#columnCountChanged)
 ///
@@ -814,10 +750,6 @@ void q_tableview_scroll_contents_by(void* self, int dx, int dy);
 ///
 void q_tableview_on_scroll_contents_by(void* self, void (*callback)(void*, int, int));
 
-/// @warning DEPRECATED: Use `q_tableview_super_scroll_contents_by` instead
-///
-#define q_tableview_qbase_scroll_contents_by q_tableview_super_scroll_contents_by
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#scrollContentsBy)
 ///
 /// Base class method implementation
@@ -844,10 +776,6 @@ void q_tableview_init_view_item_option(void* self, void* option);
 ///
 void q_tableview_on_init_view_item_option(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_tableview_super_init_view_item_option` instead
-///
-#define q_tableview_qbase_init_view_item_option q_tableview_super_init_view_item_option
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#initViewItemOption)
 ///
 /// Base class method implementation
@@ -872,10 +800,6 @@ void q_tableview_paint_event(void* self, void* e);
 /// @param callback void func(QTableView* self, QPaintEvent* e)
 ///
 void q_tableview_on_paint_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_tableview_super_paint_event` instead
-///
-#define q_tableview_qbase_paint_event q_tableview_super_paint_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#paintEvent)
 ///
@@ -902,10 +826,6 @@ void q_tableview_timer_event(void* self, void* event);
 ///
 void q_tableview_on_timer_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_tableview_super_timer_event` instead
-///
-#define q_tableview_qbase_timer_event q_tableview_super_timer_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#timerEvent)
 ///
 /// Base class method implementation
@@ -931,10 +851,6 @@ void q_tableview_drop_event(void* self, void* event);
 ///
 void q_tableview_on_drop_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_tableview_super_drop_event` instead
-///
-#define q_tableview_qbase_drop_event q_tableview_super_drop_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#dropEvent)
 ///
 /// Base class method implementation
@@ -959,10 +875,6 @@ int32_t q_tableview_horizontal_offset(void* self);
 ///
 void q_tableview_on_horizontal_offset(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_tableview_super_horizontal_offset` instead
-///
-#define q_tableview_qbase_horizontal_offset q_tableview_super_horizontal_offset
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#horizontalOffset)
 ///
 /// Base class method implementation
@@ -985,10 +897,6 @@ int32_t q_tableview_vertical_offset(void* self);
 /// @param callback int32_t func()
 ///
 void q_tableview_on_vertical_offset(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_tableview_super_vertical_offset` instead
-///
-#define q_tableview_qbase_vertical_offset q_tableview_super_vertical_offset
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#verticalOffset)
 ///
@@ -1017,10 +925,6 @@ QModelIndex* q_tableview_move_cursor(void* self, int32_t cursorAction, int32_t m
 ///
 void q_tableview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int32_t));
 
-/// @warning DEPRECATED: Use `q_tableview_super_move_cursor` instead
-///
-#define q_tableview_qbase_move_cursor q_tableview_super_move_cursor
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#moveCursor)
 ///
 /// Base class method implementation
@@ -1047,10 +951,6 @@ void q_tableview_set_selection(void* self, void* rect, int32_t command);
 /// @param callback void func(QTableView* self, QRect* rect, flag of enum QItemSelectionModel__SelectionFlag command)
 ///
 void q_tableview_on_set_selection(void* self, void (*callback)(void*, void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_tableview_super_set_selection` instead
-///
-#define q_tableview_qbase_set_selection q_tableview_super_set_selection
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#setSelection)
 ///
@@ -1080,10 +980,6 @@ QRegion* q_tableview_visual_region_for_selection(void* self, void* selection);
 ///
 void q_tableview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_tableview_super_visual_region_for_selection` instead
-///
-#define q_tableview_qbase_visual_region_for_selection q_tableview_super_visual_region_for_selection
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#visualRegionForSelection)
 ///
 /// Base class method implementation
@@ -1110,10 +1006,6 @@ libqt_list q_tableview_selected_indexes(void* self);
 ///
 void q_tableview_on_selected_indexes(void* self, libqt_list (*callback)());
 
-/// @warning DEPRECATED: Use `q_tableview_super_selected_indexes` instead
-///
-#define q_tableview_qbase_selected_indexes q_tableview_super_selected_indexes
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#selectedIndexes)
 ///
 /// Base class method implementation
@@ -1138,10 +1030,6 @@ void q_tableview_update_geometries(void* self);
 /// @param callback void func()
 ///
 void q_tableview_on_update_geometries(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_tableview_super_update_geometries` instead
-///
-#define q_tableview_qbase_update_geometries q_tableview_super_update_geometries
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#updateGeometries)
 ///
@@ -1168,10 +1056,6 @@ QSize* q_tableview_viewport_size_hint(void* self);
 ///
 void q_tableview_on_viewport_size_hint(void* self, QSize* (*callback)());
 
-/// @warning DEPRECATED: Use `q_tableview_super_viewport_size_hint` instead
-///
-#define q_tableview_qbase_viewport_size_hint q_tableview_super_viewport_size_hint
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#viewportSizeHint)
 ///
 /// Base class method implementation
@@ -1195,10 +1079,6 @@ int32_t q_tableview_size_hint_for_row(void* self, int row);
 /// @param callback int32_t func(QTableView* self, int row)
 ///
 void q_tableview_on_size_hint_for_row(void* self, int32_t (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_tableview_super_size_hint_for_row` instead
-///
-#define q_tableview_qbase_size_hint_for_row q_tableview_super_size_hint_for_row
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#sizeHintForRow)
 ///
@@ -1225,10 +1105,6 @@ int32_t q_tableview_size_hint_for_column(void* self, int column);
 ///
 void q_tableview_on_size_hint_for_column(void* self, int32_t (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_tableview_super_size_hint_for_column` instead
-///
-#define q_tableview_qbase_size_hint_for_column q_tableview_super_size_hint_for_column
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#sizeHintForColumn)
 ///
 /// Base class method implementation
@@ -1253,10 +1129,6 @@ void q_tableview_vertical_scrollbar_action(void* self, int action);
 /// @param callback void func(QTableView* self, int action)
 ///
 void q_tableview_on_vertical_scrollbar_action(void* self, void (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_tableview_super_vertical_scrollbar_action` instead
-///
-#define q_tableview_qbase_vertical_scrollbar_action q_tableview_super_vertical_scrollbar_action
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#verticalScrollbarAction)
 ///
@@ -1283,10 +1155,6 @@ void q_tableview_horizontal_scrollbar_action(void* self, int action);
 ///
 void q_tableview_on_horizontal_scrollbar_action(void* self, void (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_tableview_super_horizontal_scrollbar_action` instead
-///
-#define q_tableview_qbase_horizontal_scrollbar_action q_tableview_super_horizontal_scrollbar_action
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#horizontalScrollbarAction)
 ///
 /// Base class method implementation
@@ -1311,10 +1179,6 @@ bool q_tableview_is_index_hidden(void* self, void* index);
 /// @param callback bool func(QTableView* self, QModelIndex* index)
 ///
 void q_tableview_on_is_index_hidden(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_tableview_super_is_index_hidden` instead
-///
-#define q_tableview_qbase_is_index_hidden q_tableview_super_is_index_hidden
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#isIndexHidden)
 ///
@@ -1342,10 +1206,6 @@ void q_tableview_selection_changed(void* self, void* selected, void* deselected)
 ///
 void q_tableview_on_selection_changed(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_tableview_super_selection_changed` instead
-///
-#define q_tableview_qbase_selection_changed q_tableview_super_selection_changed
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#selectionChanged)
 ///
 /// Base class method implementation
@@ -1372,10 +1232,6 @@ void q_tableview_current_changed(void* self, void* current, void* previous);
 /// @param callback void func(QTableView* self, QModelIndex* current, QModelIndex* previous)
 ///
 void q_tableview_on_current_changed(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_tableview_super_current_changed` instead
-///
-#define q_tableview_qbase_current_changed q_tableview_super_current_changed
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#currentChanged)
 ///
@@ -5265,10 +5121,6 @@ int32_t q_tableview_encode_metric_f(int32_t metric, double value);
 ///
 void q_tableview_keyboard_search(void* self, const char* search);
 
-/// @warning DEPRECATED: Use `q_tableview_super_keyboard_search` instead
-///
-#define q_tableview_qbase_keyboard_search q_tableview_super_keyboard_search
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#keyboardSearch)
@@ -5302,10 +5154,6 @@ void q_tableview_on_keyboard_search(void* self, void (*callback)(void*, const ch
 ///
 QAbstractItemDelegate* q_tableview_item_delegate_for_index(void* self, void* index);
 
-/// @warning DEPRECATED: Use `q_tableview_super_item_delegate_for_index` instead
-///
-#define q_tableview_qbase_item_delegate_for_index q_tableview_super_item_delegate_for_index
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForIndex)
@@ -5338,10 +5186,6 @@ void q_tableview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (
 /// @param query enum Qt__InputMethodQuery
 ///
 QVariant* q_tableview_input_method_query(void* self, int32_t query);
-
-/// @warning DEPRECATED: Use `q_tableview_super_input_method_query` instead
-///
-#define q_tableview_qbase_input_method_query q_tableview_super_input_method_query
 
 /// Inherited from QAbstractItemView
 ///
@@ -5377,10 +5221,6 @@ void q_tableview_on_input_method_query(void* self, QVariant* (*callback)(void*, 
 ///
 void q_tableview_reset(void* self);
 
-/// @warning DEPRECATED: Use `q_tableview_super_reset` instead
-///
-#define q_tableview_qbase_reset q_tableview_super_reset
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#reset)
@@ -5411,10 +5251,6 @@ void q_tableview_on_reset(void* self, void (*callback)());
 /// @param self QTableView*
 ///
 void q_tableview_select_all(void* self);
-
-/// @warning DEPRECATED: Use `q_tableview_super_select_all` instead
-///
-#define q_tableview_qbase_select_all q_tableview_super_select_all
 
 /// Inherited from QAbstractItemView
 ///
@@ -5449,10 +5285,6 @@ void q_tableview_on_select_all(void* self, void (*callback)());
 /// @param roles libqt_list of int
 ///
 void q_tableview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
-
-/// @warning DEPRECATED: Use `q_tableview_super_data_changed` instead
-///
-#define q_tableview_qbase_data_changed q_tableview_super_data_changed
 
 /// Inherited from QAbstractItemView
 ///
@@ -5491,10 +5323,6 @@ void q_tableview_on_data_changed(void* self, void (*callback)(void*, void*, void
 ///
 void q_tableview_rows_inserted(void* self, void* parent, int start, int end);
 
-/// @warning DEPRECATED: Use `q_tableview_super_rows_inserted` instead
-///
-#define q_tableview_qbase_rows_inserted q_tableview_super_rows_inserted
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#rowsInserted)
@@ -5532,10 +5360,6 @@ void q_tableview_on_rows_inserted(void* self, void (*callback)(void*, void*, int
 ///
 void q_tableview_rows_about_to_be_removed(void* self, void* parent, int start, int end);
 
-/// @warning DEPRECATED: Use `q_tableview_super_rows_about_to_be_removed` instead
-///
-#define q_tableview_qbase_rows_about_to_be_removed q_tableview_super_rows_about_to_be_removed
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#rowsAboutToBeRemoved)
@@ -5570,10 +5394,6 @@ void q_tableview_on_rows_about_to_be_removed(void* self, void (*callback)(void*,
 ///
 void q_tableview_update_editor_data(void* self);
 
-/// @warning DEPRECATED: Use `q_tableview_super_update_editor_data` instead
-///
-#define q_tableview_qbase_update_editor_data q_tableview_super_update_editor_data
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorData)
@@ -5604,10 +5424,6 @@ void q_tableview_on_update_editor_data(void* self, void (*callback)());
 /// @param self QTableView*
 ///
 void q_tableview_update_editor_geometries(void* self);
-
-/// @warning DEPRECATED: Use `q_tableview_super_update_editor_geometries` instead
-///
-#define q_tableview_qbase_update_editor_geometries q_tableview_super_update_editor_geometries
 
 /// Inherited from QAbstractItemView
 ///
@@ -5641,10 +5457,6 @@ void q_tableview_on_update_editor_geometries(void* self, void (*callback)());
 ///
 void q_tableview_vertical_scrollbar_value_changed(void* self, int value);
 
-/// @warning DEPRECATED: Use `q_tableview_super_vertical_scrollbar_value_changed` instead
-///
-#define q_tableview_qbase_vertical_scrollbar_value_changed q_tableview_super_vertical_scrollbar_value_changed
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollbarValueChanged)
@@ -5677,10 +5489,6 @@ void q_tableview_on_vertical_scrollbar_value_changed(void* self, void (*callback
 /// @param value int
 ///
 void q_tableview_horizontal_scrollbar_value_changed(void* self, int value);
-
-/// @warning DEPRECATED: Use `q_tableview_super_horizontal_scrollbar_value_changed` instead
-///
-#define q_tableview_qbase_horizontal_scrollbar_value_changed q_tableview_super_horizontal_scrollbar_value_changed
 
 /// Inherited from QAbstractItemView
 ///
@@ -5716,10 +5524,6 @@ void q_tableview_on_horizontal_scrollbar_value_changed(void* self, void (*callba
 ///
 void q_tableview_close_editor(void* self, void* editor, int32_t hint);
 
-/// @warning DEPRECATED: Use `q_tableview_super_close_editor` instead
-///
-#define q_tableview_qbase_close_editor q_tableview_super_close_editor
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#closeEditor)
@@ -5754,10 +5558,6 @@ void q_tableview_on_close_editor(void* self, void (*callback)(void*, void*, int3
 ///
 void q_tableview_commit_data(void* self, void* editor);
 
-/// @warning DEPRECATED: Use `q_tableview_super_commit_data` instead
-///
-#define q_tableview_qbase_commit_data q_tableview_super_commit_data
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#commitData)
@@ -5790,10 +5590,6 @@ void q_tableview_on_commit_data(void* self, void (*callback)(void*, void*));
 /// @param editor QObject*
 ///
 void q_tableview_editor_destroyed(void* self, void* editor);
-
-/// @warning DEPRECATED: Use `q_tableview_super_editor_destroyed` instead
-///
-#define q_tableview_qbase_editor_destroyed q_tableview_super_editor_destroyed
 
 /// Inherited from QAbstractItemView
 ///
@@ -5829,10 +5625,6 @@ void q_tableview_on_editor_destroyed(void* self, void (*callback)(void*, void*))
 /// @param event QEvent*
 ///
 bool q_tableview_edit2(void* self, void* index, int32_t trigger, void* event);
-
-/// @warning DEPRECATED: Use `q_tableview_super_edit2` instead
-///
-#define q_tableview_qbase_edit2 q_tableview_super_edit2
 
 /// Inherited from QAbstractItemView
 ///
@@ -5872,10 +5664,6 @@ void q_tableview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, vo
 ///
 int32_t q_tableview_selection_command(void* self, void* index, void* event);
 
-/// @warning DEPRECATED: Use `q_tableview_super_selection_command` instead
-///
-#define q_tableview_qbase_selection_command q_tableview_super_selection_command
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectionCommand)
@@ -5912,10 +5700,6 @@ void q_tableview_on_selection_command(void* self, int32_t (*callback)(void*, voi
 ///
 void q_tableview_start_drag(void* self, int32_t supportedActions);
 
-/// @warning DEPRECATED: Use `q_tableview_super_start_drag` instead
-///
-#define q_tableview_qbase_start_drag q_tableview_super_start_drag
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#startDrag)
@@ -5948,10 +5732,6 @@ void q_tableview_on_start_drag(void* self, void (*callback)(void*, int32_t));
 /// @param next bool
 ///
 bool q_tableview_focus_next_prev_child(void* self, bool next);
-
-/// @warning DEPRECATED: Use `q_tableview_super_focus_next_prev_child` instead
-///
-#define q_tableview_qbase_focus_next_prev_child q_tableview_super_focus_next_prev_child
 
 /// Inherited from QAbstractItemView
 ///
@@ -5986,10 +5766,6 @@ void q_tableview_on_focus_next_prev_child(void* self, bool (*callback)(void*, bo
 ///
 bool q_tableview_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_tableview_super_event` instead
-///
-#define q_tableview_qbase_event q_tableview_super_event
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#event)
@@ -6022,10 +5798,6 @@ void q_tableview_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_tableview_viewport_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_tableview_super_viewport_event` instead
-///
-#define q_tableview_qbase_viewport_event q_tableview_super_viewport_event
 
 /// Inherited from QAbstractItemView
 ///
@@ -6060,10 +5832,6 @@ void q_tableview_on_viewport_event(void* self, bool (*callback)(void*, void*));
 ///
 void q_tableview_mouse_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_tableview_super_mouse_press_event` instead
-///
-#define q_tableview_qbase_mouse_press_event q_tableview_super_mouse_press_event
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#mousePressEvent)
@@ -6096,10 +5864,6 @@ void q_tableview_on_mouse_press_event(void* self, void (*callback)(void*, void*)
 /// @param event QMouseEvent*
 ///
 void q_tableview_mouse_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_tableview_super_mouse_move_event` instead
-///
-#define q_tableview_qbase_mouse_move_event q_tableview_super_mouse_move_event
 
 /// Inherited from QAbstractItemView
 ///
@@ -6134,10 +5898,6 @@ void q_tableview_on_mouse_move_event(void* self, void (*callback)(void*, void*))
 ///
 void q_tableview_mouse_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_tableview_super_mouse_release_event` instead
-///
-#define q_tableview_qbase_mouse_release_event q_tableview_super_mouse_release_event
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#mouseReleaseEvent)
@@ -6170,10 +5930,6 @@ void q_tableview_on_mouse_release_event(void* self, void (*callback)(void*, void
 /// @param event QMouseEvent*
 ///
 void q_tableview_mouse_double_click_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_tableview_super_mouse_double_click_event` instead
-///
-#define q_tableview_qbase_mouse_double_click_event q_tableview_super_mouse_double_click_event
 
 /// Inherited from QAbstractItemView
 ///
@@ -6208,10 +5964,6 @@ void q_tableview_on_mouse_double_click_event(void* self, void (*callback)(void*,
 ///
 void q_tableview_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_tableview_super_drag_enter_event` instead
-///
-#define q_tableview_qbase_drag_enter_event q_tableview_super_drag_enter_event
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dragEnterEvent)
@@ -6244,10 +5996,6 @@ void q_tableview_on_drag_enter_event(void* self, void (*callback)(void*, void*))
 /// @param event QDragMoveEvent*
 ///
 void q_tableview_drag_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_tableview_super_drag_move_event` instead
-///
-#define q_tableview_qbase_drag_move_event q_tableview_super_drag_move_event
 
 /// Inherited from QAbstractItemView
 ///
@@ -6282,10 +6030,6 @@ void q_tableview_on_drag_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_tableview_drag_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_tableview_super_drag_leave_event` instead
-///
-#define q_tableview_qbase_drag_leave_event q_tableview_super_drag_leave_event
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dragLeaveEvent)
@@ -6318,10 +6062,6 @@ void q_tableview_on_drag_leave_event(void* self, void (*callback)(void*, void*))
 /// @param event QFocusEvent*
 ///
 void q_tableview_focus_in_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_tableview_super_focus_in_event` instead
-///
-#define q_tableview_qbase_focus_in_event q_tableview_super_focus_in_event
 
 /// Inherited from QAbstractItemView
 ///
@@ -6356,10 +6096,6 @@ void q_tableview_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 void q_tableview_focus_out_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_tableview_super_focus_out_event` instead
-///
-#define q_tableview_qbase_focus_out_event q_tableview_super_focus_out_event
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#focusOutEvent)
@@ -6392,10 +6128,6 @@ void q_tableview_on_focus_out_event(void* self, void (*callback)(void*, void*));
 /// @param event QKeyEvent*
 ///
 void q_tableview_key_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_tableview_super_key_press_event` instead
-///
-#define q_tableview_qbase_key_press_event q_tableview_super_key_press_event
 
 /// Inherited from QAbstractItemView
 ///
@@ -6430,10 +6162,6 @@ void q_tableview_on_key_press_event(void* self, void (*callback)(void*, void*));
 ///
 void q_tableview_resize_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_tableview_super_resize_event` instead
-///
-#define q_tableview_qbase_resize_event q_tableview_super_resize_event
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#resizeEvent)
@@ -6466,10 +6194,6 @@ void q_tableview_on_resize_event(void* self, void (*callback)(void*, void*));
 /// @param event QInputMethodEvent*
 ///
 void q_tableview_input_method_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_tableview_super_input_method_event` instead
-///
-#define q_tableview_qbase_input_method_event q_tableview_super_input_method_event
 
 /// Inherited from QAbstractItemView
 ///
@@ -6505,10 +6229,6 @@ void q_tableview_on_input_method_event(void* self, void (*callback)(void*, void*
 ///
 bool q_tableview_event_filter(void* self, void* object, void* event);
 
-/// @warning DEPRECATED: Use `q_tableview_super_event_filter` instead
-///
-#define q_tableview_qbase_event_filter q_tableview_super_event_filter
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#eventFilter)
@@ -6542,10 +6262,6 @@ void q_tableview_on_event_filter(void* self, bool (*callback)(void*, void*, void
 ///
 QSize* q_tableview_minimum_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `q_tableview_super_minimum_size_hint` instead
-///
-#define q_tableview_qbase_minimum_size_hint q_tableview_super_minimum_size_hint
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
@@ -6578,10 +6294,6 @@ void q_tableview_on_minimum_size_hint(void* self, QSize* (*callback)());
 /// @param self QTableView*
 ///
 QSize* q_tableview_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `q_tableview_super_size_hint` instead
-///
-#define q_tableview_qbase_size_hint q_tableview_super_size_hint
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6617,10 +6329,6 @@ void q_tableview_on_size_hint(void* self, QSize* (*callback)());
 ///
 void q_tableview_setup_viewport(void* self, void* viewport);
 
-/// @warning DEPRECATED: Use `q_tableview_super_setup_viewport` instead
-///
-#define q_tableview_qbase_setup_viewport q_tableview_super_setup_viewport
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
@@ -6653,10 +6361,6 @@ void q_tableview_on_setup_viewport(void* self, void (*callback)(void*, void*));
 /// @param param1 QWheelEvent*
 ///
 void q_tableview_wheel_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_tableview_super_wheel_event` instead
-///
-#define q_tableview_qbase_wheel_event q_tableview_super_wheel_event
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6691,10 +6395,6 @@ void q_tableview_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void q_tableview_context_menu_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_tableview_super_context_menu_event` instead
-///
-#define q_tableview_qbase_context_menu_event q_tableview_super_context_menu_event
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#contextMenuEvent)
@@ -6727,10 +6427,6 @@ void q_tableview_on_context_menu_event(void* self, void (*callback)(void*, void*
 /// @param param1 QEvent*
 ///
 void q_tableview_change_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_tableview_super_change_event` instead
-///
-#define q_tableview_qbase_change_event q_tableview_super_change_event
 
 /// Inherited from QFrame
 ///
@@ -6765,10 +6461,6 @@ void q_tableview_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 void q_tableview_init_style_option(void* self, void* option);
 
-/// @warning DEPRECATED: Use `q_tableview_super_init_style_option` instead
-///
-#define q_tableview_qbase_init_style_option q_tableview_super_init_style_option
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
@@ -6801,10 +6493,6 @@ void q_tableview_on_init_style_option(void* self, void (*callback)(void*, void*)
 ///
 int32_t q_tableview_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `q_tableview_super_dev_type` instead
-///
-#define q_tableview_qbase_dev_type q_tableview_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -6836,10 +6524,6 @@ void q_tableview_on_dev_type(void* self, int32_t (*callback)());
 /// @param visible bool
 ///
 void q_tableview_set_visible(void* self, bool visible);
-
-/// @warning DEPRECATED: Use `q_tableview_super_set_visible` instead
-///
-#define q_tableview_qbase_set_visible q_tableview_super_set_visible
 
 /// Inherited from QWidget
 ///
@@ -6874,10 +6558,6 @@ void q_tableview_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 int32_t q_tableview_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `q_tableview_super_height_for_width` instead
-///
-#define q_tableview_qbase_height_for_width q_tableview_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -6910,10 +6590,6 @@ void q_tableview_on_height_for_width(void* self, int32_t (*callback)(void*, int)
 ///
 bool q_tableview_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `q_tableview_super_has_height_for_width` instead
-///
-#define q_tableview_qbase_has_height_for_width q_tableview_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -6944,10 +6620,6 @@ void q_tableview_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self QTableView*
 ///
 QPaintEngine* q_tableview_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `q_tableview_super_paint_engine` instead
-///
-#define q_tableview_qbase_paint_engine q_tableview_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -6980,10 +6652,6 @@ void q_tableview_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QKeyEvent*
 ///
 void q_tableview_key_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_tableview_super_key_release_event` instead
-///
-#define q_tableview_qbase_key_release_event q_tableview_super_key_release_event
 
 /// Inherited from QWidget
 ///
@@ -7018,10 +6686,6 @@ void q_tableview_on_key_release_event(void* self, void (*callback)(void*, void*)
 ///
 void q_tableview_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_tableview_super_enter_event` instead
-///
-#define q_tableview_qbase_enter_event q_tableview_super_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -7054,10 +6718,6 @@ void q_tableview_on_enter_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void q_tableview_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_tableview_super_leave_event` instead
-///
-#define q_tableview_qbase_leave_event q_tableview_super_leave_event
 
 /// Inherited from QWidget
 ///
@@ -7092,10 +6752,6 @@ void q_tableview_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_tableview_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_tableview_super_move_event` instead
-///
-#define q_tableview_qbase_move_event q_tableview_super_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -7128,10 +6784,6 @@ void q_tableview_on_move_event(void* self, void (*callback)(void*, void*));
 /// @param event QCloseEvent*
 ///
 void q_tableview_close_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_tableview_super_close_event` instead
-///
-#define q_tableview_qbase_close_event q_tableview_super_close_event
 
 /// Inherited from QWidget
 ///
@@ -7166,10 +6818,6 @@ void q_tableview_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void q_tableview_tablet_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_tableview_super_tablet_event` instead
-///
-#define q_tableview_qbase_tablet_event q_tableview_super_tablet_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -7202,10 +6850,6 @@ void q_tableview_on_tablet_event(void* self, void (*callback)(void*, void*));
 /// @param event QActionEvent*
 ///
 void q_tableview_action_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_tableview_super_action_event` instead
-///
-#define q_tableview_qbase_action_event q_tableview_super_action_event
 
 /// Inherited from QWidget
 ///
@@ -7240,10 +6884,6 @@ void q_tableview_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 void q_tableview_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_tableview_super_show_event` instead
-///
-#define q_tableview_qbase_show_event q_tableview_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -7276,10 +6916,6 @@ void q_tableview_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param event QHideEvent*
 ///
 void q_tableview_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_tableview_super_hide_event` instead
-///
-#define q_tableview_qbase_hide_event q_tableview_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -7316,10 +6952,6 @@ void q_tableview_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_tableview_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `q_tableview_super_native_event` instead
-///
-#define q_tableview_qbase_native_event q_tableview_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -7355,10 +6987,6 @@ void q_tableview_on_native_event(void* self, bool (*callback)(void*, libqt_strin
 ///
 int32_t q_tableview_metric(void* self, int32_t param1);
 
-/// @warning DEPRECATED: Use `q_tableview_super_metric` instead
-///
-#define q_tableview_qbase_metric q_tableview_super_metric
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -7391,10 +7019,6 @@ void q_tableview_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 /// @param painter QPainter*
 ///
 void q_tableview_init_painter(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_tableview_super_init_painter` instead
-///
-#define q_tableview_qbase_init_painter q_tableview_super_init_painter
 
 /// Inherited from QWidget
 ///
@@ -7429,10 +7053,6 @@ void q_tableview_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_tableview_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `q_tableview_super_redirected` instead
-///
-#define q_tableview_qbase_redirected q_tableview_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -7465,10 +7085,6 @@ void q_tableview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void
 ///
 QPainter* q_tableview_shared_painter(void* self);
 
-/// @warning DEPRECATED: Use `q_tableview_super_shared_painter` instead
-///
-#define q_tableview_qbase_shared_painter q_tableview_super_shared_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -7500,10 +7116,6 @@ void q_tableview_on_shared_painter(void* self, QPainter* (*callback)());
 /// @param event QChildEvent*
 ///
 void q_tableview_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_tableview_super_child_event` instead
-///
-#define q_tableview_qbase_child_event q_tableview_super_child_event
 
 /// Inherited from QObject
 ///
@@ -7538,10 +7150,6 @@ void q_tableview_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_tableview_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_tableview_super_custom_event` instead
-///
-#define q_tableview_qbase_custom_event q_tableview_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -7575,10 +7183,6 @@ void q_tableview_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_tableview_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_tableview_super_connect_notify` instead
-///
-#define q_tableview_qbase_connect_notify q_tableview_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -7611,10 +7215,6 @@ void q_tableview_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_tableview_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_tableview_super_disconnect_notify` instead
-///
-#define q_tableview_qbase_disconnect_notify q_tableview_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -7650,10 +7250,6 @@ void q_tableview_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 int32_t q_tableview_state(void* self);
 
-/// @warning DEPRECATED: Use `q_tableview_super_state` instead
-///
-#define q_tableview_qbase_state q_tableview_super_state
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#state)
@@ -7688,10 +7284,6 @@ void q_tableview_on_state(void* self, int32_t (*callback)());
 ///
 void q_tableview_set_state(void* self, int32_t state);
 
-/// @warning DEPRECATED: Use `q_tableview_super_set_state` instead
-///
-#define q_tableview_qbase_set_state q_tableview_super_set_state
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#setState)
@@ -7724,10 +7316,6 @@ void q_tableview_on_set_state(void* self, void (*callback)(void*, int32_t));
 ///
 void q_tableview_schedule_delayed_items_layout(void* self);
 
-/// @warning DEPRECATED: Use `q_tableview_super_schedule_delayed_items_layout` instead
-///
-#define q_tableview_qbase_schedule_delayed_items_layout q_tableview_super_schedule_delayed_items_layout
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#scheduleDelayedItemsLayout)
@@ -7758,10 +7346,6 @@ void q_tableview_on_schedule_delayed_items_layout(void* self, void (*callback)()
 /// @param self QTableView*
 ///
 void q_tableview_execute_delayed_items_layout(void* self);
-
-/// @warning DEPRECATED: Use `q_tableview_super_execute_delayed_items_layout` instead
-///
-#define q_tableview_qbase_execute_delayed_items_layout q_tableview_super_execute_delayed_items_layout
 
 /// Inherited from QAbstractItemView
 ///
@@ -7794,10 +7378,6 @@ void q_tableview_on_execute_delayed_items_layout(void* self, void (*callback)())
 /// @param region QRegion*
 ///
 void q_tableview_set_dirty_region(void* self, void* region);
-
-/// @warning DEPRECATED: Use `q_tableview_super_set_dirty_region` instead
-///
-#define q_tableview_qbase_set_dirty_region q_tableview_super_set_dirty_region
 
 /// Inherited from QAbstractItemView
 ///
@@ -7833,10 +7413,6 @@ void q_tableview_on_set_dirty_region(void* self, void (*callback)(void*, void*))
 ///
 void q_tableview_scroll_dirty_region(void* self, int dx, int dy);
 
-/// @warning DEPRECATED: Use `q_tableview_super_scroll_dirty_region` instead
-///
-#define q_tableview_qbase_scroll_dirty_region q_tableview_super_scroll_dirty_region
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#scrollDirtyRegion)
@@ -7869,10 +7445,6 @@ void q_tableview_on_scroll_dirty_region(void* self, void (*callback)(void*, int,
 /// @param self QTableView*
 ///
 QPoint* q_tableview_dirty_region_offset(void* self);
-
-/// @warning DEPRECATED: Use `q_tableview_super_dirty_region_offset` instead
-///
-#define q_tableview_qbase_dirty_region_offset q_tableview_super_dirty_region_offset
 
 /// Inherited from QAbstractItemView
 ///
@@ -7907,10 +7479,6 @@ void q_tableview_on_dirty_region_offset(void* self, QPoint* (*callback)());
 ///
 void q_tableview_start_auto_scroll(void* self);
 
-/// @warning DEPRECATED: Use `q_tableview_super_start_auto_scroll` instead
-///
-#define q_tableview_qbase_start_auto_scroll q_tableview_super_start_auto_scroll
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#startAutoScroll)
@@ -7942,10 +7510,6 @@ void q_tableview_on_start_auto_scroll(void* self, void (*callback)());
 ///
 void q_tableview_stop_auto_scroll(void* self);
 
-/// @warning DEPRECATED: Use `q_tableview_super_stop_auto_scroll` instead
-///
-#define q_tableview_qbase_stop_auto_scroll q_tableview_super_stop_auto_scroll
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#stopAutoScroll)
@@ -7976,10 +7540,6 @@ void q_tableview_on_stop_auto_scroll(void* self, void (*callback)());
 /// @param self QTableView*
 ///
 void q_tableview_do_auto_scroll(void* self);
-
-/// @warning DEPRECATED: Use `q_tableview_super_do_auto_scroll` instead
-///
-#define q_tableview_qbase_do_auto_scroll q_tableview_super_do_auto_scroll
 
 /// Inherited from QAbstractItemView
 ///
@@ -8013,10 +7573,6 @@ void q_tableview_on_do_auto_scroll(void* self, void (*callback)());
 /// @return enum QAbstractItemView__DropIndicatorPosition
 ///
 int32_t q_tableview_drop_indicator_position(void* self);
-
-/// @warning DEPRECATED: Use `q_tableview_super_drop_indicator_position` instead
-///
-#define q_tableview_qbase_drop_indicator_position q_tableview_super_drop_indicator_position
 
 /// Inherited from QAbstractItemView
 ///
@@ -8055,10 +7611,6 @@ void q_tableview_on_drop_indicator_position(void* self, int32_t (*callback)());
 ///
 void q_tableview_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
-/// @warning DEPRECATED: Use `q_tableview_super_set_viewport_margins` instead
-///
-#define q_tableview_qbase_set_viewport_margins q_tableview_super_set_viewport_margins
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
@@ -8094,10 +7646,6 @@ void q_tableview_on_set_viewport_margins(void* self, void (*callback)(void*, int
 ///
 QMargins* q_tableview_viewport_margins(void* self);
 
-/// @warning DEPRECATED: Use `q_tableview_super_viewport_margins` instead
-///
-#define q_tableview_qbase_viewport_margins q_tableview_super_viewport_margins
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
@@ -8132,10 +7680,6 @@ void q_tableview_on_viewport_margins(void* self, QMargins* (*callback)());
 ///
 void q_tableview_draw_frame(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_tableview_super_draw_frame` instead
-///
-#define q_tableview_qbase_draw_frame q_tableview_super_draw_frame
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#drawFrame)
@@ -8168,10 +7712,6 @@ void q_tableview_on_draw_frame(void* self, void (*callback)(void*, void*));
 ///
 void q_tableview_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_tableview_super_update_micro_focus` instead
-///
-#define q_tableview_qbase_update_micro_focus q_tableview_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -8202,10 +7742,6 @@ void q_tableview_on_update_micro_focus(void* self, void (*callback)());
 /// @param self QTableView*
 ///
 void q_tableview_create(void* self);
-
-/// @warning DEPRECATED: Use `q_tableview_super_create` instead
-///
-#define q_tableview_qbase_create q_tableview_super_create
 
 /// Inherited from QWidget
 ///
@@ -8238,10 +7774,6 @@ void q_tableview_on_create(void* self, void (*callback)());
 ///
 void q_tableview_destroy(void* self);
 
-/// @warning DEPRECATED: Use `q_tableview_super_destroy` instead
-///
-#define q_tableview_qbase_destroy q_tableview_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -8272,10 +7804,6 @@ void q_tableview_on_destroy(void* self, void (*callback)());
 /// @param self QTableView*
 ///
 bool q_tableview_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `q_tableview_super_focus_next_child` instead
-///
-#define q_tableview_qbase_focus_next_child q_tableview_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -8308,10 +7836,6 @@ void q_tableview_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_tableview_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `q_tableview_super_focus_previous_child` instead
-///
-#define q_tableview_qbase_focus_previous_child q_tableview_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -8342,10 +7866,6 @@ void q_tableview_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self QTableView*
 ///
 QObject* q_tableview_sender(void* self);
-
-/// @warning DEPRECATED: Use `q_tableview_super_sender` instead
-///
-#define q_tableview_qbase_sender q_tableview_super_sender
 
 /// Inherited from QObject
 ///
@@ -8378,10 +7898,6 @@ void q_tableview_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_tableview_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `q_tableview_super_sender_signal_index` instead
-///
-#define q_tableview_qbase_sender_signal_index q_tableview_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -8413,10 +7929,6 @@ void q_tableview_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t q_tableview_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `q_tableview_super_receivers` instead
-///
-#define q_tableview_qbase_receivers q_tableview_super_receivers
 
 /// Inherited from QObject
 ///
@@ -8451,10 +7963,6 @@ void q_tableview_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 bool q_tableview_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_tableview_super_is_signal_connected` instead
-///
-#define q_tableview_qbase_is_signal_connected q_tableview_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -8488,10 +7996,6 @@ void q_tableview_on_is_signal_connected(void* self, bool (*callback)(void*, void
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double q_tableview_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `q_tableview_super_get_decoded_metric_f` instead
-///
-#define q_tableview_qbase_get_decoded_metric_f q_tableview_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

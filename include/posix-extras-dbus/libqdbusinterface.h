@@ -65,10 +65,6 @@ const QMetaObject* q_dbusinterface_meta_object(void* self);
 ///
 void q_dbusinterface_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_dbusinterface_super_meta_object` instead
-///
-#define q_dbusinterface_qbase_meta_object q_dbusinterface_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -88,10 +84,6 @@ void* q_dbusinterface_metacast(void* self, const char* param1);
 /// @param callback void* func(QDBusInterface* self, const char* param1)
 ///
 void q_dbusinterface_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_dbusinterface_super_metacast` instead
-///
-#define q_dbusinterface_qbase_metacast q_dbusinterface_super_metacast
 
 /// Base class method implementation
 ///
@@ -113,10 +105,6 @@ int32_t q_dbusinterface_metacall(void* self, int32_t param1, int param2, void* p
 /// @param callback int32_t func(QDBusInterface* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_dbusinterface_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_dbusinterface_super_metacall` instead
-///
-#define q_dbusinterface_qbase_metacall q_dbusinterface_super_metacall
 
 /// Base class method implementation
 ///
@@ -780,10 +768,6 @@ void q_dbusinterface_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 void q_dbusinterface_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_dbusinterface_super_connect_notify` instead
-///
-#define q_dbusinterface_qbase_connect_notify q_dbusinterface_super_connect_notify
-
 /// Inherited from QDBusAbstractInterface
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#connectNotify)
@@ -817,10 +801,6 @@ void q_dbusinterface_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void q_dbusinterface_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_dbusinterface_super_disconnect_notify` instead
-///
-#define q_dbusinterface_qbase_disconnect_notify q_dbusinterface_super_disconnect_notify
-
 /// Inherited from QDBusAbstractInterface
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#disconnectNotify)
@@ -853,10 +833,6 @@ void q_dbusinterface_on_disconnect_notify(void* self, void (*callback)(void*, vo
 /// @param event QEvent*
 ///
 bool q_dbusinterface_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_dbusinterface_super_event` instead
-///
-#define q_dbusinterface_qbase_event q_dbusinterface_super_event
 
 /// Inherited from QObject
 ///
@@ -892,10 +868,6 @@ void q_dbusinterface_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_dbusinterface_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_dbusinterface_super_event_filter` instead
-///
-#define q_dbusinterface_qbase_event_filter q_dbusinterface_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -930,10 +902,6 @@ void q_dbusinterface_on_event_filter(void* self, bool (*callback)(void*, void*, 
 ///
 void q_dbusinterface_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_dbusinterface_super_timer_event` instead
-///
-#define q_dbusinterface_qbase_timer_event q_dbusinterface_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -966,10 +934,6 @@ void q_dbusinterface_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_dbusinterface_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_dbusinterface_super_child_event` instead
-///
-#define q_dbusinterface_qbase_child_event q_dbusinterface_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1004,10 +968,6 @@ void q_dbusinterface_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dbusinterface_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_dbusinterface_super_custom_event` instead
-///
-#define q_dbusinterface_qbase_custom_event q_dbusinterface_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1040,10 +1000,6 @@ void q_dbusinterface_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param propname const char*
 ///
 QVariant* q_dbusinterface_internal_prop_get(void* self, const char* propname);
-
-/// @warning DEPRECATED: Use `q_dbusinterface_super_internal_prop_get` instead
-///
-#define q_dbusinterface_qbase_internal_prop_get q_dbusinterface_super_internal_prop_get
 
 /// Inherited from QDBusAbstractInterface
 ///
@@ -1081,10 +1037,6 @@ void q_dbusinterface_on_internal_prop_get(void* self, QVariant* (*callback)(void
 ///
 void q_dbusinterface_internal_prop_set(void* self, const char* propname, void* value);
 
-/// @warning DEPRECATED: Use `q_dbusinterface_super_internal_prop_set` instead
-///
-#define q_dbusinterface_qbase_internal_prop_set q_dbusinterface_super_internal_prop_set
-
 /// Inherited from QDBusAbstractInterface
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#internalPropSet)
@@ -1119,10 +1071,6 @@ void q_dbusinterface_on_internal_prop_set(void* self, void (*callback)(void*, co
 /// @param method const char*
 ///
 QDBusMessage* q_dbusinterface_internal_const_call(void* self, int32_t mode, const char* method);
-
-/// @warning DEPRECATED: Use `q_dbusinterface_super_internal_const_call` instead
-///
-#define q_dbusinterface_qbase_internal_const_call q_dbusinterface_super_internal_const_call
 
 /// Inherited from QDBusAbstractInterface
 ///
@@ -1159,10 +1107,6 @@ void q_dbusinterface_on_internal_const_call(void* self, QDBusMessage* (*callback
 ///
 QObject* q_dbusinterface_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_dbusinterface_super_sender` instead
-///
-#define q_dbusinterface_qbase_sender q_dbusinterface_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1193,10 +1137,6 @@ void q_dbusinterface_on_sender(void* self, QObject* (*callback)());
 /// @param self QDBusInterface*
 ///
 int32_t q_dbusinterface_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_dbusinterface_super_sender_signal_index` instead
-///
-#define q_dbusinterface_qbase_sender_signal_index q_dbusinterface_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1230,10 +1170,6 @@ void q_dbusinterface_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_dbusinterface_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_dbusinterface_super_receivers` instead
-///
-#define q_dbusinterface_qbase_receivers q_dbusinterface_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1266,10 +1202,6 @@ void q_dbusinterface_on_receivers(void* self, int32_t (*callback)(void*, const c
 /// @param signal QMetaMethod*
 ///
 bool q_dbusinterface_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_dbusinterface_super_is_signal_connected` instead
-///
-#define q_dbusinterface_qbase_is_signal_connected q_dbusinterface_super_is_signal_connected
 
 /// Inherited from QObject
 ///

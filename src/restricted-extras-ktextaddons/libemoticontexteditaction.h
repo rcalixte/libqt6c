@@ -31,10 +31,6 @@ const QMetaObject* k_textemoticonswidgets__emoticontexteditaction_meta_object(vo
 ///
 void k_textemoticonswidgets__emoticontexteditaction_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_textemoticonswidgets__emoticontexteditaction_super_meta_object` instead
-///
-#define k_textemoticonswidgets__emoticontexteditaction_qbase_meta_object k_textemoticonswidgets__emoticontexteditaction_super_meta_object
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsWidgets_1_1EmoticonTextEditAction.html)
 ///
 /// Base class method implementation
@@ -54,10 +50,6 @@ void* k_textemoticonswidgets__emoticontexteditaction_metacast(void* self, const 
 /// @param callback void* func(TextEmoticonsWidgets__EmoticonTextEditAction* self, const char* param1)
 ///
 void k_textemoticonswidgets__emoticontexteditaction_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_textemoticonswidgets__emoticontexteditaction_super_metacast` instead
-///
-#define k_textemoticonswidgets__emoticontexteditaction_qbase_metacast k_textemoticonswidgets__emoticontexteditaction_super_metacast
 
 /// Base class method implementation
 ///
@@ -79,10 +71,6 @@ int32_t k_textemoticonswidgets__emoticontexteditaction_metacall(void* self, int3
 /// @param callback int32_t func(TextEmoticonsWidgets__EmoticonTextEditAction* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_textemoticonswidgets__emoticontexteditaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_textemoticonswidgets__emoticontexteditaction_super_metacall` instead
-///
-#define k_textemoticonswidgets__emoticontexteditaction_qbase_metacall k_textemoticonswidgets__emoticontexteditaction_super_metacall
 
 /// Base class method implementation
 ///
@@ -1322,10 +1310,6 @@ void k_textemoticonswidgets__emoticontexteditaction_on_destroyed1(void* self, vo
 ///
 QWidget* k_textemoticonswidgets__emoticontexteditaction_create_widget(void* self, void* parent);
 
-/// @warning DEPRECATED: Use `k_textemoticonswidgets__emoticontexteditaction_super_create_widget` instead
-///
-#define k_textemoticonswidgets__emoticontexteditaction_qbase_create_widget k_textemoticonswidgets__emoticontexteditaction_super_create_widget
-
 /// Inherited from KActionMenu
 ///
 /// [Upstream resources](https://api.kde.org/kactionmenu.html#createWidget)
@@ -1358,10 +1342,6 @@ void k_textemoticonswidgets__emoticontexteditaction_on_create_widget(void* self,
 /// @param param1 QEvent*
 ///
 bool k_textemoticonswidgets__emoticontexteditaction_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_textemoticonswidgets__emoticontexteditaction_super_event` instead
-///
-#define k_textemoticonswidgets__emoticontexteditaction_qbase_event k_textemoticonswidgets__emoticontexteditaction_super_event
 
 /// Inherited from QWidgetAction
 ///
@@ -1397,10 +1377,6 @@ void k_textemoticonswidgets__emoticontexteditaction_on_event(void* self, bool (*
 ///
 bool k_textemoticonswidgets__emoticontexteditaction_event_filter(void* self, void* param1, void* param2);
 
-/// @warning DEPRECATED: Use `k_textemoticonswidgets__emoticontexteditaction_super_event_filter` instead
-///
-#define k_textemoticonswidgets__emoticontexteditaction_qbase_event_filter k_textemoticonswidgets__emoticontexteditaction_super_event_filter
-
 /// Inherited from QWidgetAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#eventFilter)
@@ -1435,10 +1411,6 @@ void k_textemoticonswidgets__emoticontexteditaction_on_event_filter(void* self, 
 ///
 void k_textemoticonswidgets__emoticontexteditaction_delete_widget(void* self, void* widget);
 
-/// @warning DEPRECATED: Use `k_textemoticonswidgets__emoticontexteditaction_super_delete_widget` instead
-///
-#define k_textemoticonswidgets__emoticontexteditaction_qbase_delete_widget k_textemoticonswidgets__emoticontexteditaction_super_delete_widget
-
 /// Inherited from QWidgetAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#deleteWidget)
@@ -1471,10 +1443,6 @@ void k_textemoticonswidgets__emoticontexteditaction_on_delete_widget(void* self,
 /// @param event QTimerEvent*
 ///
 void k_textemoticonswidgets__emoticontexteditaction_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textemoticonswidgets__emoticontexteditaction_super_timer_event` instead
-///
-#define k_textemoticonswidgets__emoticontexteditaction_qbase_timer_event k_textemoticonswidgets__emoticontexteditaction_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -1509,10 +1477,6 @@ void k_textemoticonswidgets__emoticontexteditaction_on_timer_event(void* self, v
 ///
 void k_textemoticonswidgets__emoticontexteditaction_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textemoticonswidgets__emoticontexteditaction_super_child_event` instead
-///
-#define k_textemoticonswidgets__emoticontexteditaction_qbase_child_event k_textemoticonswidgets__emoticontexteditaction_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1545,10 +1509,6 @@ void k_textemoticonswidgets__emoticontexteditaction_on_child_event(void* self, v
 /// @param event QEvent*
 ///
 void k_textemoticonswidgets__emoticontexteditaction_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textemoticonswidgets__emoticontexteditaction_super_custom_event` instead
-///
-#define k_textemoticonswidgets__emoticontexteditaction_qbase_custom_event k_textemoticonswidgets__emoticontexteditaction_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -1583,10 +1543,6 @@ void k_textemoticonswidgets__emoticontexteditaction_on_custom_event(void* self, 
 ///
 void k_textemoticonswidgets__emoticontexteditaction_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_textemoticonswidgets__emoticontexteditaction_super_connect_notify` instead
-///
-#define k_textemoticonswidgets__emoticontexteditaction_qbase_connect_notify k_textemoticonswidgets__emoticontexteditaction_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1619,10 +1575,6 @@ void k_textemoticonswidgets__emoticontexteditaction_on_connect_notify(void* self
 /// @param signal QMetaMethod*
 ///
 void k_textemoticonswidgets__emoticontexteditaction_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_textemoticonswidgets__emoticontexteditaction_super_disconnect_notify` instead
-///
-#define k_textemoticonswidgets__emoticontexteditaction_qbase_disconnect_notify k_textemoticonswidgets__emoticontexteditaction_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -1658,10 +1610,6 @@ void k_textemoticonswidgets__emoticontexteditaction_on_disconnect_notify(void* s
 ///
 libqt_list k_textemoticonswidgets__emoticontexteditaction_created_widgets(void* self);
 
-/// @warning DEPRECATED: Use `k_textemoticonswidgets__emoticontexteditaction_super_created_widgets` instead
-///
-#define k_textemoticonswidgets__emoticontexteditaction_qbase_created_widgets k_textemoticonswidgets__emoticontexteditaction_super_created_widgets
-
 /// Inherited from QWidgetAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
@@ -1695,10 +1643,6 @@ void k_textemoticonswidgets__emoticontexteditaction_on_created_widgets(void* sel
 ///
 QObject* k_textemoticonswidgets__emoticontexteditaction_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_textemoticonswidgets__emoticontexteditaction_super_sender` instead
-///
-#define k_textemoticonswidgets__emoticontexteditaction_qbase_sender k_textemoticonswidgets__emoticontexteditaction_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1729,10 +1673,6 @@ void k_textemoticonswidgets__emoticontexteditaction_on_sender(void* self, QObjec
 /// @param self TextEmoticonsWidgets__EmoticonTextEditAction*
 ///
 int32_t k_textemoticonswidgets__emoticontexteditaction_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_textemoticonswidgets__emoticontexteditaction_super_sender_signal_index` instead
-///
-#define k_textemoticonswidgets__emoticontexteditaction_qbase_sender_signal_index k_textemoticonswidgets__emoticontexteditaction_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1766,10 +1706,6 @@ void k_textemoticonswidgets__emoticontexteditaction_on_sender_signal_index(void*
 ///
 int32_t k_textemoticonswidgets__emoticontexteditaction_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_textemoticonswidgets__emoticontexteditaction_super_receivers` instead
-///
-#define k_textemoticonswidgets__emoticontexteditaction_qbase_receivers k_textemoticonswidgets__emoticontexteditaction_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1802,10 +1738,6 @@ void k_textemoticonswidgets__emoticontexteditaction_on_receivers(void* self, int
 /// @param signal QMetaMethod*
 ///
 bool k_textemoticonswidgets__emoticontexteditaction_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_textemoticonswidgets__emoticontexteditaction_super_is_signal_connected` instead
-///
-#define k_textemoticonswidgets__emoticontexteditaction_qbase_is_signal_connected k_textemoticonswidgets__emoticontexteditaction_super_is_signal_connected
 
 /// Inherited from QObject
 ///

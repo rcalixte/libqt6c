@@ -3117,10 +3117,6 @@ int32_t k_texttranslator__translatorconfiguredialog_encode_metric_f(int32_t metr
 ///
 const QMetaObject* k_texttranslator__translatorconfiguredialog_meta_object(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_meta_object` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_meta_object k_texttranslator__translatorconfiguredialog_super_meta_object
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#metaObject)
@@ -3152,10 +3148,6 @@ void k_texttranslator__translatorconfiguredialog_on_meta_object(void* self, cons
 /// @param param1 const char*
 ///
 void* k_texttranslator__translatorconfiguredialog_metacast(void* self, const char* param1);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_metacast` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_metacast k_texttranslator__translatorconfiguredialog_super_metacast
 
 /// Inherited from QDialog
 ///
@@ -3192,10 +3184,6 @@ void k_texttranslator__translatorconfiguredialog_on_metacast(void* self, void* (
 ///
 int32_t k_texttranslator__translatorconfiguredialog_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_metacall` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_metacall k_texttranslator__translatorconfiguredialog_super_metacall
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#qt_metacall)
@@ -3231,10 +3219,6 @@ void k_texttranslator__translatorconfiguredialog_on_metacall(void* self, int32_t
 ///
 void k_texttranslator__translatorconfiguredialog_set_visible(void* self, bool visible);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_set_visible` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_set_visible k_texttranslator__translatorconfiguredialog_super_set_visible
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#setVisible)
@@ -3266,10 +3250,6 @@ void k_texttranslator__translatorconfiguredialog_on_set_visible(void* self, void
 /// @param self TextTranslator__TranslatorConfigureDialog*
 ///
 QSize* k_texttranslator__translatorconfiguredialog_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_size_hint` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_size_hint k_texttranslator__translatorconfiguredialog_super_size_hint
 
 /// Inherited from QDialog
 ///
@@ -3304,10 +3284,6 @@ void k_texttranslator__translatorconfiguredialog_on_size_hint(void* self, QSize*
 ///
 QSize* k_texttranslator__translatorconfiguredialog_minimum_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_minimum_size_hint` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_minimum_size_hint k_texttranslator__translatorconfiguredialog_super_minimum_size_hint
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
@@ -3341,10 +3317,6 @@ void k_texttranslator__translatorconfiguredialog_on_minimum_size_hint(void* self
 ///
 void k_texttranslator__translatorconfiguredialog_open(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_open` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_open k_texttranslator__translatorconfiguredialog_super_open
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#open)
@@ -3375,10 +3347,6 @@ void k_texttranslator__translatorconfiguredialog_on_open(void* self, void (*call
 /// @param self TextTranslator__TranslatorConfigureDialog*
 ///
 int32_t k_texttranslator__translatorconfiguredialog_exec(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_exec` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_exec k_texttranslator__translatorconfiguredialog_super_exec
 
 /// Inherited from QDialog
 ///
@@ -3412,10 +3380,6 @@ void k_texttranslator__translatorconfiguredialog_on_exec(void* self, int32_t (*c
 ///
 void k_texttranslator__translatorconfiguredialog_done(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_done` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_done k_texttranslator__translatorconfiguredialog_super_done
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#done)
@@ -3448,10 +3412,6 @@ void k_texttranslator__translatorconfiguredialog_on_done(void* self, void (*call
 ///
 void k_texttranslator__translatorconfiguredialog_accept(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_accept` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_accept k_texttranslator__translatorconfiguredialog_super_accept
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#accept)
@@ -3482,10 +3442,6 @@ void k_texttranslator__translatorconfiguredialog_on_accept(void* self, void (*ca
 /// @param self TextTranslator__TranslatorConfigureDialog*
 ///
 void k_texttranslator__translatorconfiguredialog_reject(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_reject` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_reject k_texttranslator__translatorconfiguredialog_super_reject
 
 /// Inherited from QDialog
 ///
@@ -3518,10 +3474,6 @@ void k_texttranslator__translatorconfiguredialog_on_reject(void* self, void (*ca
 /// @param param1 QKeyEvent*
 ///
 void k_texttranslator__translatorconfiguredialog_key_press_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_key_press_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_key_press_event k_texttranslator__translatorconfiguredialog_super_key_press_event
 
 /// Inherited from QDialog
 ///
@@ -3556,10 +3508,6 @@ void k_texttranslator__translatorconfiguredialog_on_key_press_event(void* self, 
 ///
 void k_texttranslator__translatorconfiguredialog_close_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_close_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_close_event k_texttranslator__translatorconfiguredialog_super_close_event
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
@@ -3592,10 +3540,6 @@ void k_texttranslator__translatorconfiguredialog_on_close_event(void* self, void
 /// @param param1 QShowEvent*
 ///
 void k_texttranslator__translatorconfiguredialog_show_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_show_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_show_event k_texttranslator__translatorconfiguredialog_super_show_event
 
 /// Inherited from QDialog
 ///
@@ -3630,10 +3574,6 @@ void k_texttranslator__translatorconfiguredialog_on_show_event(void* self, void 
 ///
 void k_texttranslator__translatorconfiguredialog_resize_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_resize_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_resize_event k_texttranslator__translatorconfiguredialog_super_resize_event
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
@@ -3666,10 +3606,6 @@ void k_texttranslator__translatorconfiguredialog_on_resize_event(void* self, voi
 /// @param param1 QContextMenuEvent*
 ///
 void k_texttranslator__translatorconfiguredialog_context_menu_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_context_menu_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_context_menu_event k_texttranslator__translatorconfiguredialog_super_context_menu_event
 
 /// Inherited from QDialog
 ///
@@ -3705,10 +3641,6 @@ void k_texttranslator__translatorconfiguredialog_on_context_menu_event(void* sel
 ///
 bool k_texttranslator__translatorconfiguredialog_event_filter(void* self, void* param1, void* param2);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_event_filter` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_event_filter k_texttranslator__translatorconfiguredialog_super_event_filter
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
@@ -3742,10 +3674,6 @@ void k_texttranslator__translatorconfiguredialog_on_event_filter(void* self, boo
 ///
 int32_t k_texttranslator__translatorconfiguredialog_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_dev_type` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_dev_type k_texttranslator__translatorconfiguredialog_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -3777,10 +3705,6 @@ void k_texttranslator__translatorconfiguredialog_on_dev_type(void* self, int32_t
 /// @param param1 int
 ///
 int32_t k_texttranslator__translatorconfiguredialog_height_for_width(void* self, int param1);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_height_for_width` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_height_for_width k_texttranslator__translatorconfiguredialog_super_height_for_width
 
 /// Inherited from QWidget
 ///
@@ -3814,10 +3738,6 @@ void k_texttranslator__translatorconfiguredialog_on_height_for_width(void* self,
 ///
 bool k_texttranslator__translatorconfiguredialog_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_has_height_for_width` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_has_height_for_width k_texttranslator__translatorconfiguredialog_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -3848,10 +3768,6 @@ void k_texttranslator__translatorconfiguredialog_on_has_height_for_width(void* s
 /// @param self TextTranslator__TranslatorConfigureDialog*
 ///
 QPaintEngine* k_texttranslator__translatorconfiguredialog_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_paint_engine` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_paint_engine k_texttranslator__translatorconfiguredialog_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -3884,10 +3800,6 @@ void k_texttranslator__translatorconfiguredialog_on_paint_engine(void* self, QPa
 /// @param event QEvent*
 ///
 bool k_texttranslator__translatorconfiguredialog_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_event k_texttranslator__translatorconfiguredialog_super_event
 
 /// Inherited from QWidget
 ///
@@ -3922,10 +3834,6 @@ void k_texttranslator__translatorconfiguredialog_on_event(void* self, bool (*cal
 ///
 void k_texttranslator__translatorconfiguredialog_mouse_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_mouse_press_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_mouse_press_event k_texttranslator__translatorconfiguredialog_super_mouse_press_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -3958,10 +3866,6 @@ void k_texttranslator__translatorconfiguredialog_on_mouse_press_event(void* self
 /// @param event QMouseEvent*
 ///
 void k_texttranslator__translatorconfiguredialog_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_mouse_release_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_mouse_release_event k_texttranslator__translatorconfiguredialog_super_mouse_release_event
 
 /// Inherited from QWidget
 ///
@@ -3996,10 +3900,6 @@ void k_texttranslator__translatorconfiguredialog_on_mouse_release_event(void* se
 ///
 void k_texttranslator__translatorconfiguredialog_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_mouse_double_click_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_mouse_double_click_event k_texttranslator__translatorconfiguredialog_super_mouse_double_click_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -4032,10 +3932,6 @@ void k_texttranslator__translatorconfiguredialog_on_mouse_double_click_event(voi
 /// @param event QMouseEvent*
 ///
 void k_texttranslator__translatorconfiguredialog_mouse_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_mouse_move_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_mouse_move_event k_texttranslator__translatorconfiguredialog_super_mouse_move_event
 
 /// Inherited from QWidget
 ///
@@ -4070,10 +3966,6 @@ void k_texttranslator__translatorconfiguredialog_on_mouse_move_event(void* self,
 ///
 void k_texttranslator__translatorconfiguredialog_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_wheel_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_wheel_event k_texttranslator__translatorconfiguredialog_super_wheel_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -4106,10 +3998,6 @@ void k_texttranslator__translatorconfiguredialog_on_wheel_event(void* self, void
 /// @param event QKeyEvent*
 ///
 void k_texttranslator__translatorconfiguredialog_key_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_key_release_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_key_release_event k_texttranslator__translatorconfiguredialog_super_key_release_event
 
 /// Inherited from QWidget
 ///
@@ -4144,10 +4032,6 @@ void k_texttranslator__translatorconfiguredialog_on_key_release_event(void* self
 ///
 void k_texttranslator__translatorconfiguredialog_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_focus_in_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_focus_in_event k_texttranslator__translatorconfiguredialog_super_focus_in_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -4180,10 +4064,6 @@ void k_texttranslator__translatorconfiguredialog_on_focus_in_event(void* self, v
 /// @param event QFocusEvent*
 ///
 void k_texttranslator__translatorconfiguredialog_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_focus_out_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_focus_out_event k_texttranslator__translatorconfiguredialog_super_focus_out_event
 
 /// Inherited from QWidget
 ///
@@ -4218,10 +4098,6 @@ void k_texttranslator__translatorconfiguredialog_on_focus_out_event(void* self, 
 ///
 void k_texttranslator__translatorconfiguredialog_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_enter_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_enter_event k_texttranslator__translatorconfiguredialog_super_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -4254,10 +4130,6 @@ void k_texttranslator__translatorconfiguredialog_on_enter_event(void* self, void
 /// @param event QEvent*
 ///
 void k_texttranslator__translatorconfiguredialog_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_leave_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_leave_event k_texttranslator__translatorconfiguredialog_super_leave_event
 
 /// Inherited from QWidget
 ///
@@ -4292,10 +4164,6 @@ void k_texttranslator__translatorconfiguredialog_on_leave_event(void* self, void
 ///
 void k_texttranslator__translatorconfiguredialog_paint_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_paint_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_paint_event k_texttranslator__translatorconfiguredialog_super_paint_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
@@ -4328,10 +4196,6 @@ void k_texttranslator__translatorconfiguredialog_on_paint_event(void* self, void
 /// @param event QMoveEvent*
 ///
 void k_texttranslator__translatorconfiguredialog_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_move_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_move_event k_texttranslator__translatorconfiguredialog_super_move_event
 
 /// Inherited from QWidget
 ///
@@ -4366,10 +4230,6 @@ void k_texttranslator__translatorconfiguredialog_on_move_event(void* self, void 
 ///
 void k_texttranslator__translatorconfiguredialog_tablet_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_tablet_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_tablet_event k_texttranslator__translatorconfiguredialog_super_tablet_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4402,10 +4262,6 @@ void k_texttranslator__translatorconfiguredialog_on_tablet_event(void* self, voi
 /// @param event QActionEvent*
 ///
 void k_texttranslator__translatorconfiguredialog_action_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_action_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_action_event k_texttranslator__translatorconfiguredialog_super_action_event
 
 /// Inherited from QWidget
 ///
@@ -4440,10 +4296,6 @@ void k_texttranslator__translatorconfiguredialog_on_action_event(void* self, voi
 ///
 void k_texttranslator__translatorconfiguredialog_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_drag_enter_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_drag_enter_event k_texttranslator__translatorconfiguredialog_super_drag_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4476,10 +4328,6 @@ void k_texttranslator__translatorconfiguredialog_on_drag_enter_event(void* self,
 /// @param event QDragMoveEvent*
 ///
 void k_texttranslator__translatorconfiguredialog_drag_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_drag_move_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_drag_move_event k_texttranslator__translatorconfiguredialog_super_drag_move_event
 
 /// Inherited from QWidget
 ///
@@ -4514,10 +4362,6 @@ void k_texttranslator__translatorconfiguredialog_on_drag_move_event(void* self, 
 ///
 void k_texttranslator__translatorconfiguredialog_drag_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_drag_leave_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_drag_leave_event k_texttranslator__translatorconfiguredialog_super_drag_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -4551,10 +4395,6 @@ void k_texttranslator__translatorconfiguredialog_on_drag_leave_event(void* self,
 ///
 void k_texttranslator__translatorconfiguredialog_drop_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_drop_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_drop_event k_texttranslator__translatorconfiguredialog_super_drop_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4587,10 +4427,6 @@ void k_texttranslator__translatorconfiguredialog_on_drop_event(void* self, void 
 /// @param event QHideEvent*
 ///
 void k_texttranslator__translatorconfiguredialog_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_hide_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_hide_event k_texttranslator__translatorconfiguredialog_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -4627,10 +4463,6 @@ void k_texttranslator__translatorconfiguredialog_on_hide_event(void* self, void 
 ///
 bool k_texttranslator__translatorconfiguredialog_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_native_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_native_event k_texttranslator__translatorconfiguredialog_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4666,10 +4498,6 @@ void k_texttranslator__translatorconfiguredialog_on_native_event(void* self, boo
 ///
 void k_texttranslator__translatorconfiguredialog_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_change_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_change_event k_texttranslator__translatorconfiguredialog_super_change_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -4702,10 +4530,6 @@ void k_texttranslator__translatorconfiguredialog_on_change_event(void* self, voi
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
 int32_t k_texttranslator__translatorconfiguredialog_metric(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_metric` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_metric k_texttranslator__translatorconfiguredialog_super_metric
 
 /// Inherited from QWidget
 ///
@@ -4740,10 +4564,6 @@ void k_texttranslator__translatorconfiguredialog_on_metric(void* self, int32_t (
 ///
 void k_texttranslator__translatorconfiguredialog_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_init_painter` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_init_painter k_texttranslator__translatorconfiguredialog_super_init_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -4777,10 +4597,6 @@ void k_texttranslator__translatorconfiguredialog_on_init_painter(void* self, voi
 ///
 QPaintDevice* k_texttranslator__translatorconfiguredialog_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_redirected` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_redirected k_texttranslator__translatorconfiguredialog_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4812,10 +4628,6 @@ void k_texttranslator__translatorconfiguredialog_on_redirected(void* self, QPain
 /// @param self TextTranslator__TranslatorConfigureDialog*
 ///
 QPainter* k_texttranslator__translatorconfiguredialog_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_shared_painter` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_shared_painter k_texttranslator__translatorconfiguredialog_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -4849,10 +4661,6 @@ void k_texttranslator__translatorconfiguredialog_on_shared_painter(void* self, Q
 ///
 void k_texttranslator__translatorconfiguredialog_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_input_method_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_input_method_event k_texttranslator__translatorconfiguredialog_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4885,10 +4693,6 @@ void k_texttranslator__translatorconfiguredialog_on_input_method_event(void* sel
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* k_texttranslator__translatorconfiguredialog_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_input_method_query` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_input_method_query k_texttranslator__translatorconfiguredialog_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -4925,10 +4729,6 @@ void k_texttranslator__translatorconfiguredialog_on_input_method_query(void* sel
 ///
 bool k_texttranslator__translatorconfiguredialog_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_focus_next_prev_child` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_focus_next_prev_child k_texttranslator__translatorconfiguredialog_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -4961,10 +4761,6 @@ void k_texttranslator__translatorconfiguredialog_on_focus_next_prev_child(void* 
 /// @param event QTimerEvent*
 ///
 void k_texttranslator__translatorconfiguredialog_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_timer_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_timer_event k_texttranslator__translatorconfiguredialog_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -4999,10 +4795,6 @@ void k_texttranslator__translatorconfiguredialog_on_timer_event(void* self, void
 ///
 void k_texttranslator__translatorconfiguredialog_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_child_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_child_event k_texttranslator__translatorconfiguredialog_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -5035,10 +4827,6 @@ void k_texttranslator__translatorconfiguredialog_on_child_event(void* self, void
 /// @param event QEvent*
 ///
 void k_texttranslator__translatorconfiguredialog_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_custom_event` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_custom_event k_texttranslator__translatorconfiguredialog_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -5073,10 +4861,6 @@ void k_texttranslator__translatorconfiguredialog_on_custom_event(void* self, voi
 ///
 void k_texttranslator__translatorconfiguredialog_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_connect_notify` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_connect_notify k_texttranslator__translatorconfiguredialog_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5109,10 +4893,6 @@ void k_texttranslator__translatorconfiguredialog_on_connect_notify(void* self, v
 /// @param signal QMetaMethod*
 ///
 void k_texttranslator__translatorconfiguredialog_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_disconnect_notify` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_disconnect_notify k_texttranslator__translatorconfiguredialog_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -5147,10 +4927,6 @@ void k_texttranslator__translatorconfiguredialog_on_disconnect_notify(void* self
 ///
 void k_texttranslator__translatorconfiguredialog_adjust_position(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_adjust_position` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_adjust_position k_texttranslator__translatorconfiguredialog_super_adjust_position
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
@@ -5183,10 +4959,6 @@ void k_texttranslator__translatorconfiguredialog_on_adjust_position(void* self, 
 ///
 void k_texttranslator__translatorconfiguredialog_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_update_micro_focus` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_update_micro_focus k_texttranslator__translatorconfiguredialog_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5217,10 +4989,6 @@ void k_texttranslator__translatorconfiguredialog_on_update_micro_focus(void* sel
 /// @param self TextTranslator__TranslatorConfigureDialog*
 ///
 void k_texttranslator__translatorconfiguredialog_create(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_create` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_create k_texttranslator__translatorconfiguredialog_super_create
 
 /// Inherited from QWidget
 ///
@@ -5253,10 +5021,6 @@ void k_texttranslator__translatorconfiguredialog_on_create(void* self, void (*ca
 ///
 void k_texttranslator__translatorconfiguredialog_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_destroy` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_destroy k_texttranslator__translatorconfiguredialog_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5287,10 +5051,6 @@ void k_texttranslator__translatorconfiguredialog_on_destroy(void* self, void (*c
 /// @param self TextTranslator__TranslatorConfigureDialog*
 ///
 bool k_texttranslator__translatorconfiguredialog_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_focus_next_child` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_focus_next_child k_texttranslator__translatorconfiguredialog_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -5323,10 +5083,6 @@ void k_texttranslator__translatorconfiguredialog_on_focus_next_child(void* self,
 ///
 bool k_texttranslator__translatorconfiguredialog_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_focus_previous_child` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_focus_previous_child k_texttranslator__translatorconfiguredialog_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5357,10 +5113,6 @@ void k_texttranslator__translatorconfiguredialog_on_focus_previous_child(void* s
 /// @param self TextTranslator__TranslatorConfigureDialog*
 ///
 QObject* k_texttranslator__translatorconfiguredialog_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_sender` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_sender k_texttranslator__translatorconfiguredialog_super_sender
 
 /// Inherited from QObject
 ///
@@ -5393,10 +5145,6 @@ void k_texttranslator__translatorconfiguredialog_on_sender(void* self, QObject* 
 ///
 int32_t k_texttranslator__translatorconfiguredialog_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_sender_signal_index` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_sender_signal_index k_texttranslator__translatorconfiguredialog_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5428,10 +5176,6 @@ void k_texttranslator__translatorconfiguredialog_on_sender_signal_index(void* se
 /// @param signal const char*
 ///
 int32_t k_texttranslator__translatorconfiguredialog_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_receivers` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_receivers k_texttranslator__translatorconfiguredialog_super_receivers
 
 /// Inherited from QObject
 ///
@@ -5466,10 +5210,6 @@ void k_texttranslator__translatorconfiguredialog_on_receivers(void* self, int32_
 ///
 bool k_texttranslator__translatorconfiguredialog_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_is_signal_connected` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_is_signal_connected k_texttranslator__translatorconfiguredialog_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5503,10 +5243,6 @@ void k_texttranslator__translatorconfiguredialog_on_is_signal_connected(void* se
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_texttranslator__translatorconfiguredialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorconfiguredialog_super_get_decoded_metric_f` instead
-///
-#define k_texttranslator__translatorconfiguredialog_qbase_get_decoded_metric_f k_texttranslator__translatorconfiguredialog_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

@@ -46,10 +46,6 @@ const QMetaObject* k_pagedialog_meta_object(void* self);
 ///
 void k_pagedialog_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_meta_object` instead
-///
-#define k_pagedialog_qbase_meta_object k_pagedialog_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -69,10 +65,6 @@ void* k_pagedialog_metacast(void* self, const char* param1);
 /// @param callback void* func(KPageDialog* self, const char* param1)
 ///
 void k_pagedialog_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_metacast` instead
-///
-#define k_pagedialog_qbase_metacast k_pagedialog_super_metacast
 
 /// Base class method implementation
 ///
@@ -94,10 +86,6 @@ int32_t k_pagedialog_metacall(void* self, int32_t param1, int param2, void* para
 /// @param callback int32_t func(KPageDialog* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_pagedialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_metacall` instead
-///
-#define k_pagedialog_qbase_metacall k_pagedialog_super_metacall
 
 /// Base class method implementation
 ///
@@ -257,10 +245,6 @@ KPageWidget* k_pagedialog_page_widget(void* self);
 ///
 void k_pagedialog_on_page_widget(void* self, KPageWidget* (*callback)());
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_page_widget` instead
-///
-#define k_pagedialog_qbase_page_widget k_pagedialog_super_page_widget
-
 /// [Upstream resources](https://api.kde.org/kpagedialog.html#pageWidget)
 ///
 /// Base class method implementation
@@ -283,10 +267,6 @@ const KPageWidget* k_pagedialog_page_widget2(void* self);
 /// @param callback const KPageWidget* func()
 ///
 void k_pagedialog_on_page_widget2(void* self, const KPageWidget* (*callback)());
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_page_widget2` instead
-///
-#define k_pagedialog_qbase_page_widget2 k_pagedialog_super_page_widget2
 
 /// [Upstream resources](https://api.kde.org/kpagedialog.html#pageWidget)
 ///
@@ -312,10 +292,6 @@ void k_pagedialog_set_page_widget(void* self, void* widget);
 ///
 void k_pagedialog_on_set_page_widget(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_set_page_widget` instead
-///
-#define k_pagedialog_qbase_set_page_widget k_pagedialog_super_set_page_widget
-
 /// [Upstream resources](https://api.kde.org/kpagedialog.html#setPageWidget)
 ///
 /// Base class method implementation
@@ -340,10 +316,6 @@ QDialogButtonBox* k_pagedialog_button_box(void* self);
 ///
 void k_pagedialog_on_button_box(void* self, QDialogButtonBox* (*callback)());
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_button_box` instead
-///
-#define k_pagedialog_qbase_button_box k_pagedialog_super_button_box
-
 /// [Upstream resources](https://api.kde.org/kpagedialog.html#buttonBox)
 ///
 /// Base class method implementation
@@ -366,10 +338,6 @@ const QDialogButtonBox* k_pagedialog_button_box2(void* self);
 /// @param callback const QDialogButtonBox* func()
 ///
 void k_pagedialog_on_button_box2(void* self, const QDialogButtonBox* (*callback)());
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_button_box2` instead
-///
-#define k_pagedialog_qbase_button_box2 k_pagedialog_super_button_box2
 
 /// [Upstream resources](https://api.kde.org/kpagedialog.html#buttonBox)
 ///
@@ -394,10 +362,6 @@ void k_pagedialog_set_button_box(void* self, void* box);
 /// @param callback void func(KPageDialog* self, QDialogButtonBox* box)
 ///
 void k_pagedialog_on_set_button_box(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_set_button_box` instead
-///
-#define k_pagedialog_qbase_set_button_box k_pagedialog_super_set_button_box
 
 /// [Upstream resources](https://api.kde.org/kpagedialog.html#setButtonBox)
 ///
@@ -3490,10 +3454,6 @@ int32_t k_pagedialog_encode_metric_f(int32_t metric, double value);
 ///
 void k_pagedialog_set_visible(void* self, bool visible);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_set_visible` instead
-///
-#define k_pagedialog_qbase_set_visible k_pagedialog_super_set_visible
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#setVisible)
@@ -3525,10 +3485,6 @@ void k_pagedialog_on_set_visible(void* self, void (*callback)(void*, bool));
 /// @param self KPageDialog*
 ///
 QSize* k_pagedialog_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_size_hint` instead
-///
-#define k_pagedialog_qbase_size_hint k_pagedialog_super_size_hint
 
 /// Inherited from QDialog
 ///
@@ -3563,10 +3519,6 @@ void k_pagedialog_on_size_hint(void* self, QSize* (*callback)());
 ///
 QSize* k_pagedialog_minimum_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_minimum_size_hint` instead
-///
-#define k_pagedialog_qbase_minimum_size_hint k_pagedialog_super_minimum_size_hint
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
@@ -3600,10 +3552,6 @@ void k_pagedialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 void k_pagedialog_open(void* self);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_open` instead
-///
-#define k_pagedialog_qbase_open k_pagedialog_super_open
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#open)
@@ -3634,10 +3582,6 @@ void k_pagedialog_on_open(void* self, void (*callback)());
 /// @param self KPageDialog*
 ///
 int32_t k_pagedialog_exec(void* self);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_exec` instead
-///
-#define k_pagedialog_qbase_exec k_pagedialog_super_exec
 
 /// Inherited from QDialog
 ///
@@ -3671,10 +3615,6 @@ void k_pagedialog_on_exec(void* self, int32_t (*callback)());
 ///
 void k_pagedialog_done(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_done` instead
-///
-#define k_pagedialog_qbase_done k_pagedialog_super_done
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#done)
@@ -3707,10 +3647,6 @@ void k_pagedialog_on_done(void* self, void (*callback)(void*, int));
 ///
 void k_pagedialog_accept(void* self);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_accept` instead
-///
-#define k_pagedialog_qbase_accept k_pagedialog_super_accept
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#accept)
@@ -3741,10 +3677,6 @@ void k_pagedialog_on_accept(void* self, void (*callback)());
 /// @param self KPageDialog*
 ///
 void k_pagedialog_reject(void* self);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_reject` instead
-///
-#define k_pagedialog_qbase_reject k_pagedialog_super_reject
 
 /// Inherited from QDialog
 ///
@@ -3777,10 +3709,6 @@ void k_pagedialog_on_reject(void* self, void (*callback)());
 /// @param param1 QKeyEvent*
 ///
 void k_pagedialog_key_press_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_key_press_event` instead
-///
-#define k_pagedialog_qbase_key_press_event k_pagedialog_super_key_press_event
 
 /// Inherited from QDialog
 ///
@@ -3815,10 +3743,6 @@ void k_pagedialog_on_key_press_event(void* self, void (*callback)(void*, void*))
 ///
 void k_pagedialog_close_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_close_event` instead
-///
-#define k_pagedialog_qbase_close_event k_pagedialog_super_close_event
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
@@ -3851,10 +3775,6 @@ void k_pagedialog_on_close_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QShowEvent*
 ///
 void k_pagedialog_show_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_show_event` instead
-///
-#define k_pagedialog_qbase_show_event k_pagedialog_super_show_event
 
 /// Inherited from QDialog
 ///
@@ -3889,10 +3809,6 @@ void k_pagedialog_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 void k_pagedialog_resize_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_resize_event` instead
-///
-#define k_pagedialog_qbase_resize_event k_pagedialog_super_resize_event
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
@@ -3925,10 +3841,6 @@ void k_pagedialog_on_resize_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QContextMenuEvent*
 ///
 void k_pagedialog_context_menu_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_context_menu_event` instead
-///
-#define k_pagedialog_qbase_context_menu_event k_pagedialog_super_context_menu_event
 
 /// Inherited from QDialog
 ///
@@ -3964,10 +3876,6 @@ void k_pagedialog_on_context_menu_event(void* self, void (*callback)(void*, void
 ///
 bool k_pagedialog_event_filter(void* self, void* param1, void* param2);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_event_filter` instead
-///
-#define k_pagedialog_qbase_event_filter k_pagedialog_super_event_filter
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
@@ -4001,10 +3909,6 @@ void k_pagedialog_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 int32_t k_pagedialog_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_dev_type` instead
-///
-#define k_pagedialog_qbase_dev_type k_pagedialog_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -4036,10 +3940,6 @@ void k_pagedialog_on_dev_type(void* self, int32_t (*callback)());
 /// @param param1 int
 ///
 int32_t k_pagedialog_height_for_width(void* self, int param1);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_height_for_width` instead
-///
-#define k_pagedialog_qbase_height_for_width k_pagedialog_super_height_for_width
 
 /// Inherited from QWidget
 ///
@@ -4073,10 +3973,6 @@ void k_pagedialog_on_height_for_width(void* self, int32_t (*callback)(void*, int
 ///
 bool k_pagedialog_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_has_height_for_width` instead
-///
-#define k_pagedialog_qbase_has_height_for_width k_pagedialog_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -4107,10 +4003,6 @@ void k_pagedialog_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self KPageDialog*
 ///
 QPaintEngine* k_pagedialog_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_paint_engine` instead
-///
-#define k_pagedialog_qbase_paint_engine k_pagedialog_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -4143,10 +4035,6 @@ void k_pagedialog_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QEvent*
 ///
 bool k_pagedialog_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_event` instead
-///
-#define k_pagedialog_qbase_event k_pagedialog_super_event
 
 /// Inherited from QWidget
 ///
@@ -4181,10 +4069,6 @@ void k_pagedialog_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void k_pagedialog_mouse_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_mouse_press_event` instead
-///
-#define k_pagedialog_qbase_mouse_press_event k_pagedialog_super_mouse_press_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -4217,10 +4101,6 @@ void k_pagedialog_on_mouse_press_event(void* self, void (*callback)(void*, void*
 /// @param event QMouseEvent*
 ///
 void k_pagedialog_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_mouse_release_event` instead
-///
-#define k_pagedialog_qbase_mouse_release_event k_pagedialog_super_mouse_release_event
 
 /// Inherited from QWidget
 ///
@@ -4255,10 +4135,6 @@ void k_pagedialog_on_mouse_release_event(void* self, void (*callback)(void*, voi
 ///
 void k_pagedialog_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_mouse_double_click_event` instead
-///
-#define k_pagedialog_qbase_mouse_double_click_event k_pagedialog_super_mouse_double_click_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -4291,10 +4167,6 @@ void k_pagedialog_on_mouse_double_click_event(void* self, void (*callback)(void*
 /// @param event QMouseEvent*
 ///
 void k_pagedialog_mouse_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_mouse_move_event` instead
-///
-#define k_pagedialog_qbase_mouse_move_event k_pagedialog_super_mouse_move_event
 
 /// Inherited from QWidget
 ///
@@ -4329,10 +4201,6 @@ void k_pagedialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)
 ///
 void k_pagedialog_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_wheel_event` instead
-///
-#define k_pagedialog_qbase_wheel_event k_pagedialog_super_wheel_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -4365,10 +4233,6 @@ void k_pagedialog_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QKeyEvent*
 ///
 void k_pagedialog_key_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_key_release_event` instead
-///
-#define k_pagedialog_qbase_key_release_event k_pagedialog_super_key_release_event
 
 /// Inherited from QWidget
 ///
@@ -4403,10 +4267,6 @@ void k_pagedialog_on_key_release_event(void* self, void (*callback)(void*, void*
 ///
 void k_pagedialog_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_focus_in_event` instead
-///
-#define k_pagedialog_qbase_focus_in_event k_pagedialog_super_focus_in_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -4439,10 +4299,6 @@ void k_pagedialog_on_focus_in_event(void* self, void (*callback)(void*, void*));
 /// @param event QFocusEvent*
 ///
 void k_pagedialog_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_focus_out_event` instead
-///
-#define k_pagedialog_qbase_focus_out_event k_pagedialog_super_focus_out_event
 
 /// Inherited from QWidget
 ///
@@ -4477,10 +4333,6 @@ void k_pagedialog_on_focus_out_event(void* self, void (*callback)(void*, void*))
 ///
 void k_pagedialog_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_enter_event` instead
-///
-#define k_pagedialog_qbase_enter_event k_pagedialog_super_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -4513,10 +4365,6 @@ void k_pagedialog_on_enter_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void k_pagedialog_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_leave_event` instead
-///
-#define k_pagedialog_qbase_leave_event k_pagedialog_super_leave_event
 
 /// Inherited from QWidget
 ///
@@ -4551,10 +4399,6 @@ void k_pagedialog_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void k_pagedialog_paint_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_paint_event` instead
-///
-#define k_pagedialog_qbase_paint_event k_pagedialog_super_paint_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
@@ -4587,10 +4431,6 @@ void k_pagedialog_on_paint_event(void* self, void (*callback)(void*, void*));
 /// @param event QMoveEvent*
 ///
 void k_pagedialog_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_move_event` instead
-///
-#define k_pagedialog_qbase_move_event k_pagedialog_super_move_event
 
 /// Inherited from QWidget
 ///
@@ -4625,10 +4465,6 @@ void k_pagedialog_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void k_pagedialog_tablet_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_tablet_event` instead
-///
-#define k_pagedialog_qbase_tablet_event k_pagedialog_super_tablet_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4661,10 +4497,6 @@ void k_pagedialog_on_tablet_event(void* self, void (*callback)(void*, void*));
 /// @param event QActionEvent*
 ///
 void k_pagedialog_action_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_action_event` instead
-///
-#define k_pagedialog_qbase_action_event k_pagedialog_super_action_event
 
 /// Inherited from QWidget
 ///
@@ -4699,10 +4531,6 @@ void k_pagedialog_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 void k_pagedialog_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_drag_enter_event` instead
-///
-#define k_pagedialog_qbase_drag_enter_event k_pagedialog_super_drag_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4735,10 +4563,6 @@ void k_pagedialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)
 /// @param event QDragMoveEvent*
 ///
 void k_pagedialog_drag_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_drag_move_event` instead
-///
-#define k_pagedialog_qbase_drag_move_event k_pagedialog_super_drag_move_event
 
 /// Inherited from QWidget
 ///
@@ -4773,10 +4597,6 @@ void k_pagedialog_on_drag_move_event(void* self, void (*callback)(void*, void*))
 ///
 void k_pagedialog_drag_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_drag_leave_event` instead
-///
-#define k_pagedialog_qbase_drag_leave_event k_pagedialog_super_drag_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -4810,10 +4630,6 @@ void k_pagedialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)
 ///
 void k_pagedialog_drop_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_drop_event` instead
-///
-#define k_pagedialog_qbase_drop_event k_pagedialog_super_drop_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4846,10 +4662,6 @@ void k_pagedialog_on_drop_event(void* self, void (*callback)(void*, void*));
 /// @param event QHideEvent*
 ///
 void k_pagedialog_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_hide_event` instead
-///
-#define k_pagedialog_qbase_hide_event k_pagedialog_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -4886,10 +4698,6 @@ void k_pagedialog_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool k_pagedialog_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_native_event` instead
-///
-#define k_pagedialog_qbase_native_event k_pagedialog_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4925,10 +4733,6 @@ void k_pagedialog_on_native_event(void* self, bool (*callback)(void*, libqt_stri
 ///
 void k_pagedialog_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_change_event` instead
-///
-#define k_pagedialog_qbase_change_event k_pagedialog_super_change_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -4961,10 +4765,6 @@ void k_pagedialog_on_change_event(void* self, void (*callback)(void*, void*));
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
 int32_t k_pagedialog_metric(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_metric` instead
-///
-#define k_pagedialog_qbase_metric k_pagedialog_super_metric
 
 /// Inherited from QWidget
 ///
@@ -4999,10 +4799,6 @@ void k_pagedialog_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void k_pagedialog_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_init_painter` instead
-///
-#define k_pagedialog_qbase_init_painter k_pagedialog_super_init_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -5036,10 +4832,6 @@ void k_pagedialog_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* k_pagedialog_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_redirected` instead
-///
-#define k_pagedialog_qbase_redirected k_pagedialog_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -5071,10 +4863,6 @@ void k_pagedialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, voi
 /// @param self KPageDialog*
 ///
 QPainter* k_pagedialog_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_shared_painter` instead
-///
-#define k_pagedialog_qbase_shared_painter k_pagedialog_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -5108,10 +4896,6 @@ void k_pagedialog_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void k_pagedialog_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_input_method_event` instead
-///
-#define k_pagedialog_qbase_input_method_event k_pagedialog_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -5144,10 +4928,6 @@ void k_pagedialog_on_input_method_event(void* self, void (*callback)(void*, void
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* k_pagedialog_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_input_method_query` instead
-///
-#define k_pagedialog_qbase_input_method_query k_pagedialog_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -5184,10 +4964,6 @@ void k_pagedialog_on_input_method_query(void* self, QVariant* (*callback)(void*,
 ///
 bool k_pagedialog_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_focus_next_prev_child` instead
-///
-#define k_pagedialog_qbase_focus_next_prev_child k_pagedialog_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -5220,10 +4996,6 @@ void k_pagedialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, b
 /// @param event QTimerEvent*
 ///
 void k_pagedialog_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_timer_event` instead
-///
-#define k_pagedialog_qbase_timer_event k_pagedialog_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -5258,10 +5030,6 @@ void k_pagedialog_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_pagedialog_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_child_event` instead
-///
-#define k_pagedialog_qbase_child_event k_pagedialog_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -5294,10 +5062,6 @@ void k_pagedialog_on_child_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void k_pagedialog_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_custom_event` instead
-///
-#define k_pagedialog_qbase_custom_event k_pagedialog_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -5332,10 +5096,6 @@ void k_pagedialog_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void k_pagedialog_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_connect_notify` instead
-///
-#define k_pagedialog_qbase_connect_notify k_pagedialog_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5368,10 +5128,6 @@ void k_pagedialog_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void k_pagedialog_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_disconnect_notify` instead
-///
-#define k_pagedialog_qbase_disconnect_notify k_pagedialog_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -5406,10 +5162,6 @@ void k_pagedialog_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 void k_pagedialog_adjust_position(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_adjust_position` instead
-///
-#define k_pagedialog_qbase_adjust_position k_pagedialog_super_adjust_position
-
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
@@ -5442,10 +5194,6 @@ void k_pagedialog_on_adjust_position(void* self, void (*callback)(void*, void*))
 ///
 void k_pagedialog_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_update_micro_focus` instead
-///
-#define k_pagedialog_qbase_update_micro_focus k_pagedialog_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5476,10 +5224,6 @@ void k_pagedialog_on_update_micro_focus(void* self, void (*callback)());
 /// @param self KPageDialog*
 ///
 void k_pagedialog_create(void* self);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_create` instead
-///
-#define k_pagedialog_qbase_create k_pagedialog_super_create
 
 /// Inherited from QWidget
 ///
@@ -5512,10 +5256,6 @@ void k_pagedialog_on_create(void* self, void (*callback)());
 ///
 void k_pagedialog_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_destroy` instead
-///
-#define k_pagedialog_qbase_destroy k_pagedialog_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5546,10 +5286,6 @@ void k_pagedialog_on_destroy(void* self, void (*callback)());
 /// @param self KPageDialog*
 ///
 bool k_pagedialog_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_focus_next_child` instead
-///
-#define k_pagedialog_qbase_focus_next_child k_pagedialog_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -5582,10 +5318,6 @@ void k_pagedialog_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_pagedialog_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_focus_previous_child` instead
-///
-#define k_pagedialog_qbase_focus_previous_child k_pagedialog_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5616,10 +5348,6 @@ void k_pagedialog_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self KPageDialog*
 ///
 QObject* k_pagedialog_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_sender` instead
-///
-#define k_pagedialog_qbase_sender k_pagedialog_super_sender
 
 /// Inherited from QObject
 ///
@@ -5652,10 +5380,6 @@ void k_pagedialog_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_pagedialog_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_sender_signal_index` instead
-///
-#define k_pagedialog_qbase_sender_signal_index k_pagedialog_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5687,10 +5411,6 @@ void k_pagedialog_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t k_pagedialog_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_receivers` instead
-///
-#define k_pagedialog_qbase_receivers k_pagedialog_super_receivers
 
 /// Inherited from QObject
 ///
@@ -5725,10 +5445,6 @@ void k_pagedialog_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 bool k_pagedialog_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_pagedialog_super_is_signal_connected` instead
-///
-#define k_pagedialog_qbase_is_signal_connected k_pagedialog_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5762,10 +5478,6 @@ void k_pagedialog_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_pagedialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_pagedialog_super_get_decoded_metric_f` instead
-///
-#define k_pagedialog_qbase_get_decoded_metric_f k_pagedialog_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

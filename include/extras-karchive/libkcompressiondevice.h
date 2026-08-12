@@ -50,10 +50,6 @@ const QMetaObject* k_compressiondevice_meta_object(void* self);
 ///
 void k_compressiondevice_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_compressiondevice_super_meta_object` instead
-///
-#define k_compressiondevice_qbase_meta_object k_compressiondevice_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -73,10 +69,6 @@ void* k_compressiondevice_metacast(void* self, const char* param1);
 /// @param callback void* func(KCompressionDevice* self, const char* param1)
 ///
 void k_compressiondevice_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_compressiondevice_super_metacast` instead
-///
-#define k_compressiondevice_qbase_metacast k_compressiondevice_super_metacast
 
 /// Base class method implementation
 ///
@@ -98,10 +90,6 @@ int32_t k_compressiondevice_metacall(void* self, int32_t param1, int param2, voi
 /// @param callback int32_t func(KCompressionDevice* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_compressiondevice_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_compressiondevice_super_metacall` instead
-///
-#define k_compressiondevice_qbase_metacall k_compressiondevice_super_metacall
 
 /// Base class method implementation
 ///
@@ -144,10 +132,6 @@ bool k_compressiondevice_open(void* self, int32_t mode);
 ///
 void k_compressiondevice_on_open(void* self, bool (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `k_compressiondevice_super_open` instead
-///
-#define k_compressiondevice_qbase_open k_compressiondevice_super_open
-
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#open)
 ///
 /// Base class method implementation
@@ -171,10 +155,6 @@ void k_compressiondevice_close(void* self);
 /// @param callback void func()
 ///
 void k_compressiondevice_on_close(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_compressiondevice_super_close` instead
-///
-#define k_compressiondevice_qbase_close k_compressiondevice_super_close
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#close)
 ///
@@ -213,10 +193,6 @@ bool k_compressiondevice_seek(void* self, int64_t param1);
 ///
 void k_compressiondevice_on_seek(void* self, bool (*callback)(void*, int64_t));
 
-/// @warning DEPRECATED: Use `k_compressiondevice_super_seek` instead
-///
-#define k_compressiondevice_qbase_seek k_compressiondevice_super_seek
-
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#seek)
 ///
 /// Base class method implementation
@@ -240,10 +216,6 @@ bool k_compressiondevice_at_end(void* self);
 /// @param callback bool func()
 ///
 void k_compressiondevice_on_at_end(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `k_compressiondevice_super_at_end` instead
-///
-#define k_compressiondevice_qbase_at_end k_compressiondevice_super_at_end
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#atEnd)
 ///
@@ -292,10 +264,6 @@ int64_t k_compressiondevice_read_data(void* self, char* data, int64_t maxlen);
 ///
 void k_compressiondevice_on_read_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
-/// @warning DEPRECATED: Use `k_compressiondevice_super_read_data` instead
-///
-#define k_compressiondevice_qbase_read_data k_compressiondevice_super_read_data
-
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#readData)
 ///
 /// Base class method implementation
@@ -323,10 +291,6 @@ int64_t k_compressiondevice_write_data(void* self, const char* data, int64_t len
 ///
 void k_compressiondevice_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 
-/// @warning DEPRECATED: Use `k_compressiondevice_super_write_data` instead
-///
-#define k_compressiondevice_qbase_write_data k_compressiondevice_super_write_data
-
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#writeData)
 ///
 /// Base class method implementation
@@ -351,10 +315,6 @@ KFilterBase* k_compressiondevice_filter_base(void* self);
 /// @param callback KFilterBase* func()
 ///
 void k_compressiondevice_on_filter_base(void* self, KFilterBase* (*callback)());
-
-/// @warning DEPRECATED: Use `k_compressiondevice_super_filter_base` instead
-///
-#define k_compressiondevice_qbase_filter_base k_compressiondevice_super_filter_base
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#filterBase)
 ///
@@ -1236,10 +1196,6 @@ void k_compressiondevice_on_destroyed1(void* self, void (*callback)(void*, void*
 ///
 bool k_compressiondevice_is_sequential(void* self);
 
-/// @warning DEPRECATED: Use `k_compressiondevice_super_is_sequential` instead
-///
-#define k_compressiondevice_qbase_is_sequential k_compressiondevice_super_is_sequential
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isSequential)
@@ -1270,10 +1226,6 @@ void k_compressiondevice_on_is_sequential(void* self, bool (*callback)());
 /// @param self KCompressionDevice*
 ///
 int64_t k_compressiondevice_pos(void* self);
-
-/// @warning DEPRECATED: Use `k_compressiondevice_super_pos` instead
-///
-#define k_compressiondevice_qbase_pos k_compressiondevice_super_pos
 
 /// Inherited from QIODevice
 ///
@@ -1306,10 +1258,6 @@ void k_compressiondevice_on_pos(void* self, int64_t (*callback)());
 ///
 int64_t k_compressiondevice_size(void* self);
 
-/// @warning DEPRECATED: Use `k_compressiondevice_super_size` instead
-///
-#define k_compressiondevice_qbase_size k_compressiondevice_super_size
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#size)
@@ -1340,10 +1288,6 @@ void k_compressiondevice_on_size(void* self, int64_t (*callback)());
 /// @param self KCompressionDevice*
 ///
 bool k_compressiondevice_reset(void* self);
-
-/// @warning DEPRECATED: Use `k_compressiondevice_super_reset` instead
-///
-#define k_compressiondevice_qbase_reset k_compressiondevice_super_reset
 
 /// Inherited from QIODevice
 ///
@@ -1376,10 +1320,6 @@ void k_compressiondevice_on_reset(void* self, bool (*callback)());
 ///
 int64_t k_compressiondevice_bytes_available(void* self);
 
-/// @warning DEPRECATED: Use `k_compressiondevice_super_bytes_available` instead
-///
-#define k_compressiondevice_qbase_bytes_available k_compressiondevice_super_bytes_available
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesAvailable)
@@ -1411,10 +1351,6 @@ void k_compressiondevice_on_bytes_available(void* self, int64_t (*callback)());
 ///
 int64_t k_compressiondevice_bytes_to_write(void* self);
 
-/// @warning DEPRECATED: Use `k_compressiondevice_super_bytes_to_write` instead
-///
-#define k_compressiondevice_qbase_bytes_to_write k_compressiondevice_super_bytes_to_write
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesToWrite)
@@ -1445,10 +1381,6 @@ void k_compressiondevice_on_bytes_to_write(void* self, int64_t (*callback)());
 /// @param self KCompressionDevice*
 ///
 bool k_compressiondevice_can_read_line(void* self);
-
-/// @warning DEPRECATED: Use `k_compressiondevice_super_can_read_line` instead
-///
-#define k_compressiondevice_qbase_can_read_line k_compressiondevice_super_can_read_line
 
 /// Inherited from QIODevice
 ///
@@ -1482,10 +1414,6 @@ void k_compressiondevice_on_can_read_line(void* self, bool (*callback)());
 ///
 bool k_compressiondevice_wait_for_ready_read(void* self, int msecs);
 
-/// @warning DEPRECATED: Use `k_compressiondevice_super_wait_for_ready_read` instead
-///
-#define k_compressiondevice_qbase_wait_for_ready_read k_compressiondevice_super_wait_for_ready_read
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#waitForReadyRead)
@@ -1518,10 +1446,6 @@ void k_compressiondevice_on_wait_for_ready_read(void* self, bool (*callback)(voi
 /// @param msecs int
 ///
 bool k_compressiondevice_wait_for_bytes_written(void* self, int msecs);
-
-/// @warning DEPRECATED: Use `k_compressiondevice_super_wait_for_bytes_written` instead
-///
-#define k_compressiondevice_qbase_wait_for_bytes_written k_compressiondevice_super_wait_for_bytes_written
 
 /// Inherited from QIODevice
 ///
@@ -1557,10 +1481,6 @@ void k_compressiondevice_on_wait_for_bytes_written(void* self, bool (*callback)(
 ///
 int64_t k_compressiondevice_read_line_data(void* self, char* data, int64_t maxlen);
 
-/// @warning DEPRECATED: Use `k_compressiondevice_super_read_line_data` instead
-///
-#define k_compressiondevice_qbase_read_line_data k_compressiondevice_super_read_line_data
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLineData)
@@ -1595,10 +1515,6 @@ void k_compressiondevice_on_read_line_data(void* self, int64_t (*callback)(void*
 ///
 int64_t k_compressiondevice_skip_data(void* self, int64_t maxSize);
 
-/// @warning DEPRECATED: Use `k_compressiondevice_super_skip_data` instead
-///
-#define k_compressiondevice_qbase_skip_data k_compressiondevice_super_skip_data
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skipData)
@@ -1631,10 +1547,6 @@ void k_compressiondevice_on_skip_data(void* self, int64_t (*callback)(void*, int
 /// @param event QEvent*
 ///
 bool k_compressiondevice_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_compressiondevice_super_event` instead
-///
-#define k_compressiondevice_qbase_event k_compressiondevice_super_event
 
 /// Inherited from QObject
 ///
@@ -1670,10 +1582,6 @@ void k_compressiondevice_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_compressiondevice_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `k_compressiondevice_super_event_filter` instead
-///
-#define k_compressiondevice_qbase_event_filter k_compressiondevice_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1708,10 +1616,6 @@ void k_compressiondevice_on_event_filter(void* self, bool (*callback)(void*, voi
 ///
 void k_compressiondevice_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_compressiondevice_super_timer_event` instead
-///
-#define k_compressiondevice_qbase_timer_event k_compressiondevice_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1744,10 +1648,6 @@ void k_compressiondevice_on_timer_event(void* self, void (*callback)(void*, void
 /// @param event QChildEvent*
 ///
 void k_compressiondevice_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_compressiondevice_super_child_event` instead
-///
-#define k_compressiondevice_qbase_child_event k_compressiondevice_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1782,10 +1682,6 @@ void k_compressiondevice_on_child_event(void* self, void (*callback)(void*, void
 ///
 void k_compressiondevice_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_compressiondevice_super_custom_event` instead
-///
-#define k_compressiondevice_qbase_custom_event k_compressiondevice_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1818,10 +1714,6 @@ void k_compressiondevice_on_custom_event(void* self, void (*callback)(void*, voi
 /// @param signal QMetaMethod*
 ///
 void k_compressiondevice_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_compressiondevice_super_connect_notify` instead
-///
-#define k_compressiondevice_qbase_connect_notify k_compressiondevice_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1856,10 +1748,6 @@ void k_compressiondevice_on_connect_notify(void* self, void (*callback)(void*, v
 ///
 void k_compressiondevice_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_compressiondevice_super_disconnect_notify` instead
-///
-#define k_compressiondevice_qbase_disconnect_notify k_compressiondevice_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1892,10 +1780,6 @@ void k_compressiondevice_on_disconnect_notify(void* self, void (*callback)(void*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
 ///
 void k_compressiondevice_set_open_mode(void* self, int32_t openMode);
-
-/// @warning DEPRECATED: Use `k_compressiondevice_super_set_open_mode` instead
-///
-#define k_compressiondevice_qbase_set_open_mode k_compressiondevice_super_set_open_mode
 
 /// Inherited from QIODevice
 ///
@@ -1930,10 +1814,6 @@ void k_compressiondevice_on_set_open_mode(void* self, void (*callback)(void*, in
 ///
 void k_compressiondevice_set_error_string(void* self, const char* errorString);
 
-/// @warning DEPRECATED: Use `k_compressiondevice_super_set_error_string` instead
-///
-#define k_compressiondevice_qbase_set_error_string k_compressiondevice_super_set_error_string
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
@@ -1966,10 +1846,6 @@ void k_compressiondevice_on_set_error_string(void* self, void (*callback)(void*,
 ///
 QObject* k_compressiondevice_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_compressiondevice_super_sender` instead
-///
-#define k_compressiondevice_qbase_sender k_compressiondevice_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2000,10 +1876,6 @@ void k_compressiondevice_on_sender(void* self, QObject* (*callback)());
 /// @param self KCompressionDevice*
 ///
 int32_t k_compressiondevice_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_compressiondevice_super_sender_signal_index` instead
-///
-#define k_compressiondevice_qbase_sender_signal_index k_compressiondevice_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -2037,10 +1909,6 @@ void k_compressiondevice_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 int32_t k_compressiondevice_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_compressiondevice_super_receivers` instead
-///
-#define k_compressiondevice_qbase_receivers k_compressiondevice_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2073,10 +1941,6 @@ void k_compressiondevice_on_receivers(void* self, int32_t (*callback)(void*, con
 /// @param signal QMetaMethod*
 ///
 bool k_compressiondevice_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_compressiondevice_super_is_signal_connected` instead
-///
-#define k_compressiondevice_qbase_is_signal_connected k_compressiondevice_super_is_signal_connected
 
 /// Inherited from QObject
 ///

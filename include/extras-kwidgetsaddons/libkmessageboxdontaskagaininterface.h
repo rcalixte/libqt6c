@@ -31,10 +31,6 @@ bool k_messageboxdontaskagaininterface_should_be_shown_two_actions(void* self, c
 ///
 void k_messageboxdontaskagaininterface_on_should_be_shown_two_actions(void* self, bool (*callback)(void*, const char*, int32_t*));
 
-/// @warning DEPRECATED: Use `k_messageboxdontaskagaininterface_super_should_be_shown_two_actions` instead
-///
-#define k_messageboxdontaskagaininterface_qbase_should_be_shown_two_actions k_messageboxdontaskagaininterface_super_should_be_shown_two_actions
-
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#shouldBeShownTwoActions)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ bool k_messageboxdontaskagaininterface_should_be_shown_continue(void* self, cons
 /// @param callback bool func(KMessageBoxDontAskAgainInterface* self, const char* dontShowAgainName)
 ///
 void k_messageboxdontaskagaininterface_on_should_be_shown_continue(void* self, bool (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_messageboxdontaskagaininterface_super_should_be_shown_continue` instead
-///
-#define k_messageboxdontaskagaininterface_qbase_should_be_shown_continue k_messageboxdontaskagaininterface_super_should_be_shown_continue
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#shouldBeShownContinue)
 ///
@@ -91,10 +83,6 @@ void k_messageboxdontaskagaininterface_save_dont_show_again_two_actions(void* se
 ///
 void k_messageboxdontaskagaininterface_on_save_dont_show_again_two_actions(void* self, void (*callback)(void*, const char*, int32_t));
 
-/// @warning DEPRECATED: Use `k_messageboxdontaskagaininterface_super_save_dont_show_again_two_actions` instead
-///
-#define k_messageboxdontaskagaininterface_qbase_save_dont_show_again_two_actions k_messageboxdontaskagaininterface_super_save_dont_show_again_two_actions
-
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#saveDontShowAgainTwoActions)
 ///
 /// Base class method implementation
@@ -121,10 +109,6 @@ void k_messageboxdontaskagaininterface_save_dont_show_again_continue(void* self,
 ///
 void k_messageboxdontaskagaininterface_on_save_dont_show_again_continue(void* self, void (*callback)(void*, const char*));
 
-/// @warning DEPRECATED: Use `k_messageboxdontaskagaininterface_super_save_dont_show_again_continue` instead
-///
-#define k_messageboxdontaskagaininterface_qbase_save_dont_show_again_continue k_messageboxdontaskagaininterface_super_save_dont_show_again_continue
-
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#saveDontShowAgainContinue)
 ///
 /// Base class method implementation
@@ -148,10 +132,6 @@ void k_messageboxdontaskagaininterface_enable_all_messages(void* self);
 /// @param callback void func()
 ///
 void k_messageboxdontaskagaininterface_on_enable_all_messages(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_messageboxdontaskagaininterface_super_enable_all_messages` instead
-///
-#define k_messageboxdontaskagaininterface_qbase_enable_all_messages k_messageboxdontaskagaininterface_super_enable_all_messages
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#enableAllMessages)
 ///
@@ -177,10 +157,6 @@ void k_messageboxdontaskagaininterface_enable_message(void* self, const char* do
 ///
 void k_messageboxdontaskagaininterface_on_enable_message(void* self, void (*callback)(void*, const char*));
 
-/// @warning DEPRECATED: Use `k_messageboxdontaskagaininterface_super_enable_message` instead
-///
-#define k_messageboxdontaskagaininterface_qbase_enable_message k_messageboxdontaskagaininterface_super_enable_message
-
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#enableMessage)
 ///
 /// Base class method implementation
@@ -205,10 +181,6 @@ void k_messageboxdontaskagaininterface_set_config(void* self, void* config);
 /// @param callback void func(KMessageBoxDontAskAgainInterface* self, KConfig* config)
 ///
 void k_messageboxdontaskagaininterface_on_set_config(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_messageboxdontaskagaininterface_super_set_config` instead
-///
-#define k_messageboxdontaskagaininterface_qbase_set_config k_messageboxdontaskagaininterface_super_set_config
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#setConfig)
 ///

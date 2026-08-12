@@ -75,10 +75,6 @@ int32_t k_macroexpanderbase_expand_plain_macro(void* self, const char* str, int 
 ///
 void k_macroexpanderbase_on_expand_plain_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
-/// @warning DEPRECATED: Use `k_macroexpanderbase_super_expand_plain_macro` instead
-///
-#define k_macroexpanderbase_qbase_expand_plain_macro k_macroexpanderbase_super_expand_plain_macro
-
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#expandPlainMacro)
 ///
 /// Base class method implementation
@@ -107,10 +103,6 @@ int32_t k_macroexpanderbase_expand_escaped_macro(void* self, const char* str, in
 /// @param callback int32_t func(KMacroExpanderBase* self, const char* str, int pos, const char** retVal)
 ///
 void k_macroexpanderbase_on_expand_escaped_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
-
-/// @warning DEPRECATED: Use `k_macroexpanderbase_super_expand_escaped_macro` instead
-///
-#define k_macroexpanderbase_qbase_expand_escaped_macro k_macroexpanderbase_super_expand_escaped_macro
 
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#expandEscapedMacro)
 ///
@@ -163,10 +155,6 @@ int32_t k_wordmacroexpander_expand_plain_macro(void* self, const char* str, int 
 ///
 void k_wordmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
-/// @warning DEPRECATED: Use `k_wordmacroexpander_super_expand_plain_macro` instead
-///
-#define k_wordmacroexpander_qbase_expand_plain_macro k_wordmacroexpander_super_expand_plain_macro
-
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandPlainMacro)
 ///
 /// Base class method implementation
@@ -196,10 +184,6 @@ int32_t k_wordmacroexpander_expand_escaped_macro(void* self, const char* str, in
 ///
 void k_wordmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
-/// @warning DEPRECATED: Use `k_wordmacroexpander_super_expand_escaped_macro` instead
-///
-#define k_wordmacroexpander_qbase_expand_escaped_macro k_wordmacroexpander_super_expand_escaped_macro
-
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandEscapedMacro)
 ///
 /// Base class method implementation
@@ -227,10 +211,6 @@ bool k_wordmacroexpander_expand_macro(void* self, const char* str, const char* r
 /// @param callback bool func(KWordMacroExpander* self, const char* str, const char** retVal)
 ///
 void k_wordmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, const char*, const char**));
-
-/// @warning DEPRECATED: Use `k_wordmacroexpander_super_expand_macro` instead
-///
-#define k_wordmacroexpander_qbase_expand_macro k_wordmacroexpander_super_expand_macro
 
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandMacro)
 ///
@@ -327,10 +307,6 @@ int32_t k_charmacroexpander_expand_plain_macro(void* self, const char* str, int 
 ///
 void k_charmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
-/// @warning DEPRECATED: Use `k_charmacroexpander_super_expand_plain_macro` instead
-///
-#define k_charmacroexpander_qbase_expand_plain_macro k_charmacroexpander_super_expand_plain_macro
-
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandPlainMacro)
 ///
 /// Base class method implementation
@@ -360,10 +336,6 @@ int32_t k_charmacroexpander_expand_escaped_macro(void* self, const char* str, in
 ///
 void k_charmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
-/// @warning DEPRECATED: Use `k_charmacroexpander_super_expand_escaped_macro` instead
-///
-#define k_charmacroexpander_qbase_expand_escaped_macro k_charmacroexpander_super_expand_escaped_macro
-
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandEscapedMacro)
 ///
 /// Base class method implementation
@@ -391,10 +363,6 @@ bool k_charmacroexpander_expand_macro(void* self, void* chr, const char* retVal[
 /// @param callback bool func(KCharMacroExpander* self, QChar* chr, const char** retVal)
 ///
 void k_charmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, void*, const char**));
-
-/// @warning DEPRECATED: Use `k_charmacroexpander_super_expand_macro` instead
-///
-#define k_charmacroexpander_qbase_expand_macro k_charmacroexpander_super_expand_macro
 
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandMacro)
 ///

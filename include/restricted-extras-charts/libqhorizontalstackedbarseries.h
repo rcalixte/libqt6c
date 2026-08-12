@@ -37,10 +37,6 @@ const QMetaObject* q_horizontalstackedbarseries_meta_object(void* self);
 ///
 void q_horizontalstackedbarseries_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_horizontalstackedbarseries_super_meta_object` instead
-///
-#define q_horizontalstackedbarseries_qbase_meta_object q_horizontalstackedbarseries_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_horizontalstackedbarseries_metacast(void* self, const char* param1);
 /// @param callback void* func(QHorizontalStackedBarSeries* self, const char* param1)
 ///
 void q_horizontalstackedbarseries_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_horizontalstackedbarseries_super_metacast` instead
-///
-#define q_horizontalstackedbarseries_qbase_metacast q_horizontalstackedbarseries_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_horizontalstackedbarseries_metacall(void* self, int32_t param1, int pa
 /// @param callback int32_t func(QHorizontalStackedBarSeries* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_horizontalstackedbarseries_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_horizontalstackedbarseries_super_metacall` instead
-///
-#define q_horizontalstackedbarseries_qbase_metacall q_horizontalstackedbarseries_super_metacall
 
 /// Base class method implementation
 ///
@@ -123,10 +111,6 @@ int32_t q_horizontalstackedbarseries_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_horizontalstackedbarseries_on_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_horizontalstackedbarseries_super_type` instead
-///
-#define q_horizontalstackedbarseries_qbase_type q_horizontalstackedbarseries_super_type
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhorizontalstackedbarseries-qtcharts.html#type)
 ///
@@ -1245,10 +1229,6 @@ void q_horizontalstackedbarseries_on_destroyed1(void* self, void (*callback)(voi
 ///
 bool q_horizontalstackedbarseries_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_horizontalstackedbarseries_super_event` instead
-///
-#define q_horizontalstackedbarseries_qbase_event q_horizontalstackedbarseries_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1282,10 +1262,6 @@ void q_horizontalstackedbarseries_on_event(void* self, bool (*callback)(void*, v
 /// @param event QEvent*
 ///
 bool q_horizontalstackedbarseries_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_horizontalstackedbarseries_super_event_filter` instead
-///
-#define q_horizontalstackedbarseries_qbase_event_filter q_horizontalstackedbarseries_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1321,10 +1297,6 @@ void q_horizontalstackedbarseries_on_event_filter(void* self, bool (*callback)(v
 ///
 void q_horizontalstackedbarseries_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_horizontalstackedbarseries_super_timer_event` instead
-///
-#define q_horizontalstackedbarseries_qbase_timer_event q_horizontalstackedbarseries_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1357,10 +1329,6 @@ void q_horizontalstackedbarseries_on_timer_event(void* self, void (*callback)(vo
 /// @param event QChildEvent*
 ///
 void q_horizontalstackedbarseries_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_horizontalstackedbarseries_super_child_event` instead
-///
-#define q_horizontalstackedbarseries_qbase_child_event q_horizontalstackedbarseries_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1395,10 +1363,6 @@ void q_horizontalstackedbarseries_on_child_event(void* self, void (*callback)(vo
 ///
 void q_horizontalstackedbarseries_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_horizontalstackedbarseries_super_custom_event` instead
-///
-#define q_horizontalstackedbarseries_qbase_custom_event q_horizontalstackedbarseries_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1431,10 +1395,6 @@ void q_horizontalstackedbarseries_on_custom_event(void* self, void (*callback)(v
 /// @param signal QMetaMethod*
 ///
 void q_horizontalstackedbarseries_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_horizontalstackedbarseries_super_connect_notify` instead
-///
-#define q_horizontalstackedbarseries_qbase_connect_notify q_horizontalstackedbarseries_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1469,10 +1429,6 @@ void q_horizontalstackedbarseries_on_connect_notify(void* self, void (*callback)
 ///
 void q_horizontalstackedbarseries_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_horizontalstackedbarseries_super_disconnect_notify` instead
-///
-#define q_horizontalstackedbarseries_qbase_disconnect_notify q_horizontalstackedbarseries_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1505,10 +1461,6 @@ void q_horizontalstackedbarseries_on_disconnect_notify(void* self, void (*callba
 ///
 QObject* q_horizontalstackedbarseries_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_horizontalstackedbarseries_super_sender` instead
-///
-#define q_horizontalstackedbarseries_qbase_sender q_horizontalstackedbarseries_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1539,10 +1491,6 @@ void q_horizontalstackedbarseries_on_sender(void* self, QObject* (*callback)());
 /// @param self QHorizontalStackedBarSeries*
 ///
 int32_t q_horizontalstackedbarseries_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_horizontalstackedbarseries_super_sender_signal_index` instead
-///
-#define q_horizontalstackedbarseries_qbase_sender_signal_index q_horizontalstackedbarseries_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1576,10 +1524,6 @@ void q_horizontalstackedbarseries_on_sender_signal_index(void* self, int32_t (*c
 ///
 int32_t q_horizontalstackedbarseries_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_horizontalstackedbarseries_super_receivers` instead
-///
-#define q_horizontalstackedbarseries_qbase_receivers q_horizontalstackedbarseries_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1612,10 +1556,6 @@ void q_horizontalstackedbarseries_on_receivers(void* self, int32_t (*callback)(v
 /// @param signal QMetaMethod*
 ///
 bool q_horizontalstackedbarseries_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_horizontalstackedbarseries_super_is_signal_connected` instead
-///
-#define q_horizontalstackedbarseries_qbase_is_signal_connected q_horizontalstackedbarseries_super_is_signal_connected
 
 /// Inherited from QObject
 ///

@@ -675,10 +675,6 @@ void q_graphicsanchorlayout_remove_at(void* self, int index);
 ///
 void q_graphicsanchorlayout_on_remove_at(void* self, void (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_graphicsanchorlayout_super_remove_at` instead
-///
-#define q_graphicsanchorlayout_qbase_remove_at q_graphicsanchorlayout_super_remove_at
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#removeAt)
 ///
 /// Base class method implementation
@@ -704,10 +700,6 @@ void q_graphicsanchorlayout_set_geometry(void* self, void* rect);
 ///
 void q_graphicsanchorlayout_on_set_geometry(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicsanchorlayout_super_set_geometry` instead
-///
-#define q_graphicsanchorlayout_qbase_set_geometry q_graphicsanchorlayout_super_set_geometry
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#setGeometry)
 ///
 /// Base class method implementation
@@ -731,10 +723,6 @@ int32_t q_graphicsanchorlayout_count(void* self);
 /// @param callback int32_t func()
 ///
 void q_graphicsanchorlayout_on_count(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_graphicsanchorlayout_super_count` instead
-///
-#define q_graphicsanchorlayout_qbase_count q_graphicsanchorlayout_super_count
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#count)
 ///
@@ -760,10 +748,6 @@ QGraphicsLayoutItem* q_graphicsanchorlayout_item_at(void* self, int index);
 ///
 void q_graphicsanchorlayout_on_item_at(void* self, QGraphicsLayoutItem* (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_graphicsanchorlayout_super_item_at` instead
-///
-#define q_graphicsanchorlayout_qbase_item_at q_graphicsanchorlayout_super_item_at
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#itemAt)
 ///
 /// Base class method implementation
@@ -787,10 +771,6 @@ void q_graphicsanchorlayout_invalidate(void* self);
 /// @param callback void func()
 ///
 void q_graphicsanchorlayout_on_invalidate(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_graphicsanchorlayout_super_invalidate` instead
-///
-#define q_graphicsanchorlayout_qbase_invalidate q_graphicsanchorlayout_super_invalidate
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#invalidate)
 ///
@@ -818,10 +798,6 @@ QSizeF* q_graphicsanchorlayout_size_hint(void* self, int32_t which, void* constr
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsanchorlayout_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsanchorlayout_super_size_hint` instead
-///
-#define q_graphicsanchorlayout_qbase_size_hint q_graphicsanchorlayout_super_size_hint
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#sizeHint)
 ///
@@ -1195,10 +1171,6 @@ QSizeF* q_graphicsanchorlayout_effective_size_hint2(void* self, int32_t which, v
 ///
 void q_graphicsanchorlayout_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom);
 
-/// @warning DEPRECATED: Use `q_graphicsanchorlayout_super_get_contents_margins` instead
-///
-#define q_graphicsanchorlayout_qbase_get_contents_margins q_graphicsanchorlayout_super_get_contents_margins
-
 /// Inherited from QGraphicsLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#getContentsMargins)
@@ -1234,10 +1206,6 @@ void q_graphicsanchorlayout_on_get_contents_margins(void* self, void (*callback)
 ///
 void q_graphicsanchorlayout_update_geometry(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicsanchorlayout_super_update_geometry` instead
-///
-#define q_graphicsanchorlayout_qbase_update_geometry q_graphicsanchorlayout_super_update_geometry
-
 /// Inherited from QGraphicsLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#updateGeometry)
@@ -1269,10 +1237,6 @@ void q_graphicsanchorlayout_on_update_geometry(void* self, void (*callback)());
 /// @param e QEvent*
 ///
 void q_graphicsanchorlayout_widget_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `q_graphicsanchorlayout_super_widget_event` instead
-///
-#define q_graphicsanchorlayout_qbase_widget_event q_graphicsanchorlayout_super_widget_event
 
 /// Inherited from QGraphicsLayout
 ///
@@ -1306,10 +1270,6 @@ void q_graphicsanchorlayout_on_widget_event(void* self, void (*callback)(void*, 
 ///
 bool q_graphicsanchorlayout_is_empty(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicsanchorlayout_super_is_empty` instead
-///
-#define q_graphicsanchorlayout_qbase_is_empty q_graphicsanchorlayout_super_is_empty
-
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isEmpty)
@@ -1341,10 +1301,6 @@ void q_graphicsanchorlayout_on_is_empty(void* self, bool (*callback)());
 /// @param layoutItem QGraphicsLayoutItem*
 ///
 void q_graphicsanchorlayout_add_child_layout_item(void* self, void* layoutItem);
-
-/// @warning DEPRECATED: Use `q_graphicsanchorlayout_super_add_child_layout_item` instead
-///
-#define q_graphicsanchorlayout_qbase_add_child_layout_item q_graphicsanchorlayout_super_add_child_layout_item
 
 /// Inherited from QGraphicsLayout
 ///
@@ -1379,10 +1335,6 @@ void q_graphicsanchorlayout_on_add_child_layout_item(void* self, void (*callback
 ///
 void q_graphicsanchorlayout_set_graphics_item(void* self, void* item);
 
-/// @warning DEPRECATED: Use `q_graphicsanchorlayout_super_set_graphics_item` instead
-///
-#define q_graphicsanchorlayout_qbase_set_graphics_item q_graphicsanchorlayout_super_set_graphics_item
-
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setGraphicsItem)
@@ -1415,10 +1367,6 @@ void q_graphicsanchorlayout_on_set_graphics_item(void* self, void (*callback)(vo
 /// @param ownedByLayout bool
 ///
 void q_graphicsanchorlayout_set_owned_by_layout(void* self, bool ownedByLayout);
-
-/// @warning DEPRECATED: Use `q_graphicsanchorlayout_super_set_owned_by_layout` instead
-///
-#define q_graphicsanchorlayout_qbase_set_owned_by_layout q_graphicsanchorlayout_super_set_owned_by_layout
 
 /// Inherited from QGraphicsLayoutItem
 ///

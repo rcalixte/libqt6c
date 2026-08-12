@@ -33,10 +33,6 @@ bool k_texteditor__codecompletionmodelcontrollerinterface_should_start_completio
 ///
 void k_texteditor__codecompletionmodelcontrollerinterface_on_should_start_completion(void* self, bool (*callback)(void*, void*, const char*, bool, void*));
 
-/// @warning DEPRECATED: Use `k_texteditor__codecompletionmodelcontrollerinterface_super_should_start_completion` instead
-///
-#define k_texteditor__codecompletionmodelcontrollerinterface_qbase_should_start_completion k_texteditor__codecompletionmodelcontrollerinterface_super_should_start_completion
-
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodelcontrollerinterface.html#shouldStartCompletion)
 ///
 /// Base class method implementation
@@ -68,10 +64,6 @@ KTextEditor__Range* k_texteditor__codecompletionmodelcontrollerinterface_complet
 ///
 void k_texteditor__codecompletionmodelcontrollerinterface_on_completion_range(void* self, KTextEditor__Range* (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_texteditor__codecompletionmodelcontrollerinterface_super_completion_range` instead
-///
-#define k_texteditor__codecompletionmodelcontrollerinterface_qbase_completion_range k_texteditor__codecompletionmodelcontrollerinterface_super_completion_range
-
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodelcontrollerinterface.html#completionRange)
 ///
 /// Base class method implementation
@@ -100,10 +92,6 @@ KTextEditor__Range* k_texteditor__codecompletionmodelcontrollerinterface_update_
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_texteditor__codecompletionmodelcontrollerinterface_on_update_completion_range(void* self, KTextEditor__Range* (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_texteditor__codecompletionmodelcontrollerinterface_super_update_completion_range` instead
-///
-#define k_texteditor__codecompletionmodelcontrollerinterface_qbase_update_completion_range k_texteditor__codecompletionmodelcontrollerinterface_super_update_completion_range
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodelcontrollerinterface.html#updateCompletionRange)
 ///
@@ -135,10 +123,6 @@ const char* k_texteditor__codecompletionmodelcontrollerinterface_filter_string(v
 ///
 void k_texteditor__codecompletionmodelcontrollerinterface_on_filter_string(void* self, const char* (*callback)(void*, void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_texteditor__codecompletionmodelcontrollerinterface_super_filter_string` instead
-///
-#define k_texteditor__codecompletionmodelcontrollerinterface_qbase_filter_string k_texteditor__codecompletionmodelcontrollerinterface_super_filter_string
-
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodelcontrollerinterface.html#filterString)
 ///
 /// Base class method implementation
@@ -168,10 +152,6 @@ bool k_texteditor__codecompletionmodelcontrollerinterface_should_abort_completio
 ///
 void k_texteditor__codecompletionmodelcontrollerinterface_on_should_abort_completion(void* self, bool (*callback)(void*, void*, void*, const char*));
 
-/// @warning DEPRECATED: Use `k_texteditor__codecompletionmodelcontrollerinterface_super_should_abort_completion` instead
-///
-#define k_texteditor__codecompletionmodelcontrollerinterface_qbase_should_abort_completion k_texteditor__codecompletionmodelcontrollerinterface_super_should_abort_completion
-
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodelcontrollerinterface.html#shouldAbortCompletion)
 ///
 /// Base class method implementation
@@ -200,10 +180,6 @@ bool k_texteditor__codecompletionmodelcontrollerinterface_should_execute(void* s
 ///
 void k_texteditor__codecompletionmodelcontrollerinterface_on_should_execute(void* self, bool (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_texteditor__codecompletionmodelcontrollerinterface_super_should_execute` instead
-///
-#define k_texteditor__codecompletionmodelcontrollerinterface_qbase_should_execute k_texteditor__codecompletionmodelcontrollerinterface_super_should_execute
-
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodelcontrollerinterface.html#shouldExecute)
 ///
 /// Base class method implementation
@@ -229,10 +205,6 @@ void k_texteditor__codecompletionmodelcontrollerinterface_aborted(void* self, vo
 /// @param callback void func(KTextEditor__CodeCompletionModelControllerInterface* self, KTextEditor__View* view)
 ///
 void k_texteditor__codecompletionmodelcontrollerinterface_on_aborted(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_texteditor__codecompletionmodelcontrollerinterface_super_aborted` instead
-///
-#define k_texteditor__codecompletionmodelcontrollerinterface_qbase_aborted k_texteditor__codecompletionmodelcontrollerinterface_super_aborted
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodelcontrollerinterface.html#aborted)
 ///
@@ -261,10 +233,6 @@ int32_t k_texteditor__codecompletionmodelcontrollerinterface_matching_item(void*
 ///
 void k_texteditor__codecompletionmodelcontrollerinterface_on_matching_item(void* self, int32_t (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_texteditor__codecompletionmodelcontrollerinterface_super_matching_item` instead
-///
-#define k_texteditor__codecompletionmodelcontrollerinterface_qbase_matching_item k_texteditor__codecompletionmodelcontrollerinterface_super_matching_item
-
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodelcontrollerinterface.html#matchingItem)
 ///
 /// Base class method implementation
@@ -290,10 +258,6 @@ bool k_texteditor__codecompletionmodelcontrollerinterface_should_hide_items_with
 /// @param callback bool func()
 ///
 void k_texteditor__codecompletionmodelcontrollerinterface_on_should_hide_items_with_equal_names(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `k_texteditor__codecompletionmodelcontrollerinterface_super_should_hide_items_with_equal_names` instead
-///
-#define k_texteditor__codecompletionmodelcontrollerinterface_qbase_should_hide_items_with_equal_names k_texteditor__codecompletionmodelcontrollerinterface_super_should_hide_items_with_equal_names
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodelcontrollerinterface.html#shouldHideItemsWithEqualNames)
 ///

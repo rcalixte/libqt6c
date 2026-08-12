@@ -461,10 +461,6 @@ void k_desktopfile_delete_group2(void* self, const char* group, int32_t flags);
 ///
 bool k_desktopfile_sync(void* self);
 
-/// @warning DEPRECATED: Use `k_desktopfile_super_sync` instead
-///
-#define k_desktopfile_qbase_sync k_desktopfile_super_sync
-
 /// Inherited from KConfig
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#sync)
@@ -495,10 +491,6 @@ void k_desktopfile_on_sync(void* self, bool (*callback)());
 /// @param self KDesktopFile*
 ///
 void k_desktopfile_mark_as_clean(void* self);
-
-/// @warning DEPRECATED: Use `k_desktopfile_super_mark_as_clean` instead
-///
-#define k_desktopfile_qbase_mark_as_clean k_desktopfile_super_mark_as_clean
 
 /// Inherited from KConfig
 ///
@@ -533,10 +525,6 @@ void k_desktopfile_on_mark_as_clean(void* self, void (*callback)());
 ///
 int32_t k_desktopfile_access_mode(void* self);
 
-/// @warning DEPRECATED: Use `k_desktopfile_super_access_mode` instead
-///
-#define k_desktopfile_qbase_access_mode k_desktopfile_super_access_mode
-
 /// Inherited from KConfig
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#accessMode)
@@ -570,10 +558,6 @@ void k_desktopfile_on_access_mode(void* self, int32_t (*callback)());
 ///
 bool k_desktopfile_is_immutable(void* self);
 
-/// @warning DEPRECATED: Use `k_desktopfile_super_is_immutable` instead
-///
-#define k_desktopfile_qbase_is_immutable k_desktopfile_super_is_immutable
-
 /// Inherited from KConfig
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#isImmutable)
@@ -606,10 +590,6 @@ void k_desktopfile_on_is_immutable(void* self, bool (*callback)());
 /// @param self KDesktopFile*
 ///
 const char** k_desktopfile_group_list(void* self);
-
-/// @warning DEPRECATED: Use `k_desktopfile_super_group_list` instead
-///
-#define k_desktopfile_qbase_group_list k_desktopfile_super_group_list
 
 /// Inherited from KConfig
 ///
@@ -645,10 +625,6 @@ void k_desktopfile_on_group_list(void* self, const char** (*callback)());
 ///
 bool k_desktopfile_has_group_impl(void* self, const char* groupName);
 
-/// @warning DEPRECATED: Use `k_desktopfile_super_has_group_impl` instead
-///
-#define k_desktopfile_qbase_has_group_impl k_desktopfile_super_has_group_impl
-
 /// Inherited from KConfig
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#hasGroupImpl)
@@ -681,10 +657,6 @@ void k_desktopfile_on_has_group_impl(void* self, bool (*callback)(void*, const c
 /// @param groupName const char*
 ///
 KConfigGroup* k_desktopfile_group_impl(void* self, const char* groupName);
-
-/// @warning DEPRECATED: Use `k_desktopfile_super_group_impl` instead
-///
-#define k_desktopfile_qbase_group_impl k_desktopfile_super_group_impl
 
 /// Inherited from KConfig
 ///
@@ -722,10 +694,6 @@ void k_desktopfile_on_group_impl(void* self, KConfigGroup* (*callback)(void*, co
 ///
 void k_desktopfile_delete_group_impl(void* self, const char* groupName, int32_t flags);
 
-/// @warning DEPRECATED: Use `k_desktopfile_super_delete_group_impl` instead
-///
-#define k_desktopfile_qbase_delete_group_impl k_desktopfile_super_delete_group_impl
-
 /// Inherited from KConfig
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#deleteGroupImpl)
@@ -760,10 +728,6 @@ void k_desktopfile_on_delete_group_impl(void* self, void (*callback)(void*, cons
 ///
 bool k_desktopfile_is_group_immutable_impl(void* self, const char* groupName);
 
-/// @warning DEPRECATED: Use `k_desktopfile_super_is_group_immutable_impl` instead
-///
-#define k_desktopfile_qbase_is_group_immutable_impl k_desktopfile_super_is_group_immutable_impl
-
 /// Inherited from KConfig
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#isGroupImmutableImpl)
@@ -797,10 +761,6 @@ void k_desktopfile_on_is_group_immutable_impl(void* self, bool (*callback)(void*
 /// @param data void*
 ///
 void k_desktopfile_virtual_hook(void* self, int id, void* data);
-
-/// @warning DEPRECATED: Use `k_desktopfile_super_virtual_hook` instead
-///
-#define k_desktopfile_qbase_virtual_hook k_desktopfile_super_virtual_hook
 
 /// Inherited from KConfig
 ///

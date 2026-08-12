@@ -40,10 +40,6 @@ QIcon* k_textemoticonscore__customemojiiconmanager_generate_icon(void* self, con
 ///
 void k_textemoticonscore__customemojiiconmanager_on_generate_icon(void* self, QIcon* (*callback)(void*, const char*));
 
-/// @warning DEPRECATED: Use `k_textemoticonscore__customemojiiconmanager_super_generate_icon` instead
-///
-#define k_textemoticonscore__customemojiiconmanager_qbase_generate_icon k_textemoticonscore__customemojiiconmanager_super_generate_icon
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1CustomEmojiIconManager.html)
 ///
 /// Base class method implementation
@@ -70,10 +66,6 @@ const char* k_textemoticonscore__customemojiiconmanager_file_name(void* self, co
 /// @param callback const char* func(TextEmoticonsCore__CustomEmojiIconManager* self, const char* customIdentifier)
 ///
 void k_textemoticonscore__customemojiiconmanager_on_file_name(void* self, const char* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_textemoticonscore__customemojiiconmanager_super_file_name` instead
-///
-#define k_textemoticonscore__customemojiiconmanager_qbase_file_name k_textemoticonscore__customemojiiconmanager_super_file_name
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1CustomEmojiIconManager.html)
 ///
@@ -574,10 +566,6 @@ void k_textemoticonscore__customemojiiconmanager_on_destroyed1(void* self, void 
 ///
 const QMetaObject* k_textemoticonscore__customemojiiconmanager_meta_object(void* self);
 
-/// @warning DEPRECATED: Use `k_textemoticonscore__customemojiiconmanager_super_meta_object` instead
-///
-#define k_textemoticonscore__customemojiiconmanager_qbase_meta_object k_textemoticonscore__customemojiiconmanager_super_meta_object
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
@@ -609,10 +597,6 @@ void k_textemoticonscore__customemojiiconmanager_on_meta_object(void* self, cons
 /// @param param1 const char*
 ///
 void* k_textemoticonscore__customemojiiconmanager_metacast(void* self, const char* param1);
-
-/// @warning DEPRECATED: Use `k_textemoticonscore__customemojiiconmanager_super_metacast` instead
-///
-#define k_textemoticonscore__customemojiiconmanager_qbase_metacast k_textemoticonscore__customemojiiconmanager_super_metacast
 
 /// Inherited from QObject
 ///
@@ -649,10 +633,6 @@ void k_textemoticonscore__customemojiiconmanager_on_metacast(void* self, void* (
 ///
 int32_t k_textemoticonscore__customemojiiconmanager_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// @warning DEPRECATED: Use `k_textemoticonscore__customemojiiconmanager_super_metacall` instead
-///
-#define k_textemoticonscore__customemojiiconmanager_qbase_metacall k_textemoticonscore__customemojiiconmanager_super_metacall
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacall)
@@ -688,10 +668,6 @@ void k_textemoticonscore__customemojiiconmanager_on_metacall(void* self, int32_t
 ///
 bool k_textemoticonscore__customemojiiconmanager_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textemoticonscore__customemojiiconmanager_super_event` instead
-///
-#define k_textemoticonscore__customemojiiconmanager_qbase_event k_textemoticonscore__customemojiiconmanager_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -725,10 +701,6 @@ void k_textemoticonscore__customemojiiconmanager_on_event(void* self, bool (*cal
 /// @param event QEvent*
 ///
 bool k_textemoticonscore__customemojiiconmanager_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_textemoticonscore__customemojiiconmanager_super_event_filter` instead
-///
-#define k_textemoticonscore__customemojiiconmanager_qbase_event_filter k_textemoticonscore__customemojiiconmanager_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -764,10 +736,6 @@ void k_textemoticonscore__customemojiiconmanager_on_event_filter(void* self, boo
 ///
 void k_textemoticonscore__customemojiiconmanager_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textemoticonscore__customemojiiconmanager_super_timer_event` instead
-///
-#define k_textemoticonscore__customemojiiconmanager_qbase_timer_event k_textemoticonscore__customemojiiconmanager_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -800,10 +768,6 @@ void k_textemoticonscore__customemojiiconmanager_on_timer_event(void* self, void
 /// @param event QChildEvent*
 ///
 void k_textemoticonscore__customemojiiconmanager_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textemoticonscore__customemojiiconmanager_super_child_event` instead
-///
-#define k_textemoticonscore__customemojiiconmanager_qbase_child_event k_textemoticonscore__customemojiiconmanager_super_child_event
 
 /// Inherited from QObject
 ///
@@ -838,10 +802,6 @@ void k_textemoticonscore__customemojiiconmanager_on_child_event(void* self, void
 ///
 void k_textemoticonscore__customemojiiconmanager_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textemoticonscore__customemojiiconmanager_super_custom_event` instead
-///
-#define k_textemoticonscore__customemojiiconmanager_qbase_custom_event k_textemoticonscore__customemojiiconmanager_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -874,10 +834,6 @@ void k_textemoticonscore__customemojiiconmanager_on_custom_event(void* self, voi
 /// @param signal QMetaMethod*
 ///
 void k_textemoticonscore__customemojiiconmanager_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_textemoticonscore__customemojiiconmanager_super_connect_notify` instead
-///
-#define k_textemoticonscore__customemojiiconmanager_qbase_connect_notify k_textemoticonscore__customemojiiconmanager_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -912,10 +868,6 @@ void k_textemoticonscore__customemojiiconmanager_on_connect_notify(void* self, v
 ///
 void k_textemoticonscore__customemojiiconmanager_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_textemoticonscore__customemojiiconmanager_super_disconnect_notify` instead
-///
-#define k_textemoticonscore__customemojiiconmanager_qbase_disconnect_notify k_textemoticonscore__customemojiiconmanager_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -948,10 +900,6 @@ void k_textemoticonscore__customemojiiconmanager_on_disconnect_notify(void* self
 ///
 QObject* k_textemoticonscore__customemojiiconmanager_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_textemoticonscore__customemojiiconmanager_super_sender` instead
-///
-#define k_textemoticonscore__customemojiiconmanager_qbase_sender k_textemoticonscore__customemojiiconmanager_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -982,10 +930,6 @@ void k_textemoticonscore__customemojiiconmanager_on_sender(void* self, QObject* 
 /// @param self TextEmoticonsCore__CustomEmojiIconManager*
 ///
 int32_t k_textemoticonscore__customemojiiconmanager_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_textemoticonscore__customemojiiconmanager_super_sender_signal_index` instead
-///
-#define k_textemoticonscore__customemojiiconmanager_qbase_sender_signal_index k_textemoticonscore__customemojiiconmanager_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1019,10 +963,6 @@ void k_textemoticonscore__customemojiiconmanager_on_sender_signal_index(void* se
 ///
 int32_t k_textemoticonscore__customemojiiconmanager_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_textemoticonscore__customemojiiconmanager_super_receivers` instead
-///
-#define k_textemoticonscore__customemojiiconmanager_qbase_receivers k_textemoticonscore__customemojiiconmanager_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1055,10 +995,6 @@ void k_textemoticonscore__customemojiiconmanager_on_receivers(void* self, int32_
 /// @param signal QMetaMethod*
 ///
 bool k_textemoticonscore__customemojiiconmanager_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_textemoticonscore__customemojiiconmanager_super_is_signal_connected` instead
-///
-#define k_textemoticonscore__customemojiiconmanager_qbase_is_signal_connected k_textemoticonscore__customemojiiconmanager_super_is_signal_connected
 
 /// Inherited from QObject
 ///

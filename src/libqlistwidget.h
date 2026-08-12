@@ -111,10 +111,6 @@ QListWidgetItem* q_listwidgetitem_clone(void* self);
 ///
 void q_listwidgetitem_on_clone(void* self, QListWidgetItem* (*callback)());
 
-/// @warning DEPRECATED: Use `q_listwidgetitem_super_clone` instead
-///
-#define q_listwidgetitem_qbase_clone q_listwidgetitem_super_clone
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#clone)
 ///
 /// Base class method implementation
@@ -355,10 +351,6 @@ QVariant* q_listwidgetitem_data(void* self, int role);
 ///
 void q_listwidgetitem_on_data(void* self, QVariant* (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_listwidgetitem_super_data` instead
-///
-#define q_listwidgetitem_qbase_data q_listwidgetitem_super_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#data)
 ///
 /// Base class method implementation
@@ -384,10 +376,6 @@ void q_listwidgetitem_set_data(void* self, int role, void* value);
 /// @param callback void func(QListWidgetItem* self, int role, QVariant* value)
 ///
 void q_listwidgetitem_on_set_data(void* self, void (*callback)(void*, int, void*));
-
-/// @warning DEPRECATED: Use `q_listwidgetitem_super_set_data` instead
-///
-#define q_listwidgetitem_qbase_set_data q_listwidgetitem_super_set_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#setData)
 ///
@@ -415,10 +403,6 @@ bool q_listwidgetitem_operator_lesser(void* self, void* other);
 ///
 void q_listwidgetitem_on_operator_lesser(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_listwidgetitem_super_operator_lesser` instead
-///
-#define q_listwidgetitem_qbase_operator_lesser q_listwidgetitem_super_operator_lesser
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#operator-lt)
 ///
 /// Base class method implementation
@@ -444,10 +428,6 @@ void q_listwidgetitem_read(void* self, void* in);
 ///
 void q_listwidgetitem_on_read(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_listwidgetitem_super_read` instead
-///
-#define q_listwidgetitem_qbase_read q_listwidgetitem_super_read
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#read)
 ///
 /// Base class method implementation
@@ -472,10 +452,6 @@ void q_listwidgetitem_write(void* self, void* out);
 /// @param callback void func(QListWidgetItem* self, QDataStream* out)
 ///
 void q_listwidgetitem_on_write(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_listwidgetitem_super_write` instead
-///
-#define q_listwidgetitem_qbase_write q_listwidgetitem_super_write
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#write)
 ///
@@ -536,10 +512,6 @@ const QMetaObject* q_listwidget_meta_object(void* self);
 ///
 void q_listwidget_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_listwidget_super_meta_object` instead
-///
-#define q_listwidget_qbase_meta_object q_listwidget_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -559,10 +531,6 @@ void* q_listwidget_metacast(void* self, const char* param1);
 /// @param callback void* func(QListWidget* self, const char* param1)
 ///
 void q_listwidget_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_listwidget_super_metacast` instead
-///
-#define q_listwidget_qbase_metacast q_listwidget_super_metacast
 
 /// Base class method implementation
 ///
@@ -584,10 +552,6 @@ int32_t q_listwidget_metacall(void* self, int32_t param1, int param2, void* para
 /// @param callback int32_t func(QListWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_listwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_listwidget_super_metacall` instead
-///
-#define q_listwidget_qbase_metacall q_listwidget_super_metacall
 
 /// Base class method implementation
 ///
@@ -621,10 +585,6 @@ void q_listwidget_set_selection_model(void* self, void* selectionModel);
 /// @param callback void func(QListWidget* self, QItemSelectionModel* selectionModel)
 ///
 void q_listwidget_on_set_selection_model(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_listwidget_super_set_selection_model` instead
-///
-#define q_listwidget_qbase_set_selection_model q_listwidget_super_set_selection_model
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#setSelectionModel)
 ///
@@ -897,10 +857,6 @@ void q_listwidget_drop_event(void* self, void* event);
 ///
 void q_listwidget_on_drop_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_listwidget_super_drop_event` instead
-///
-#define q_listwidget_qbase_drop_event q_listwidget_super_drop_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#dropEvent)
 ///
 /// Base class method implementation
@@ -1079,10 +1035,6 @@ bool q_listwidget_event(void* self, void* e);
 ///
 void q_listwidget_on_event(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_listwidget_super_event` instead
-///
-#define q_listwidget_qbase_event q_listwidget_super_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#event)
 ///
 /// Base class method implementation
@@ -1109,10 +1061,6 @@ const char** q_listwidget_mime_types(void* self);
 ///
 void q_listwidget_on_mime_types(void* self, const char** (*callback)());
 
-/// @warning DEPRECATED: Use `q_listwidget_super_mime_types` instead
-///
-#define q_listwidget_qbase_mime_types q_listwidget_super_mime_types
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#mimeTypes)
 ///
 /// Base class method implementation
@@ -1136,10 +1084,6 @@ QMimeData* q_listwidget_mime_data(void* self, libqt_list items);
 /// @param callback QMimeData* func(QListWidget* self, libqt_list of QListWidgetItem* items)
 ///
 void q_listwidget_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
-
-/// @warning DEPRECATED: Use `q_listwidget_super_mime_data` instead
-///
-#define q_listwidget_qbase_mime_data q_listwidget_super_mime_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#mimeData)
 ///
@@ -1168,10 +1112,6 @@ bool q_listwidget_drop_mime_data(void* self, int index, void* data, int32_t acti
 ///
 void q_listwidget_on_drop_mime_data(void* self, bool (*callback)(void*, int, void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_listwidget_super_drop_mime_data` instead
-///
-#define q_listwidget_qbase_drop_mime_data q_listwidget_super_drop_mime_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#dropMimeData)
 ///
 /// Base class method implementation
@@ -1199,10 +1139,6 @@ int32_t q_listwidget_supported_drop_actions(void* self);
 /// @param callback int32_t func()
 ///
 void q_listwidget_on_supported_drop_actions(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_listwidget_super_supported_drop_actions` instead
-///
-#define q_listwidget_qbase_supported_drop_actions q_listwidget_super_supported_drop_actions
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#supportedDropActions)
 ///
@@ -1562,10 +1498,6 @@ void q_listwidget_set_model(void* self, void* model);
 /// @param callback void func(QListWidget* self, QAbstractItemModel* model)
 ///
 void q_listwidget_on_set_model(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_listwidget_super_set_model` instead
-///
-#define q_listwidget_qbase_set_model q_listwidget_super_set_model
 
 /// Inherited from QAbstractItemView
 ///
@@ -5410,10 +5342,6 @@ int32_t q_listwidget_encode_metric_f(int32_t metric, double value);
 ///
 QRect* q_listwidget_visual_rect(void* self, void* index);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_visual_rect` instead
-///
-#define q_listwidget_qbase_visual_rect q_listwidget_super_visual_rect
-
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#visualRect)
@@ -5450,10 +5378,6 @@ void q_listwidget_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 ///
 void q_listwidget_scroll_to(void* self, void* index, int32_t hint);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_scroll_to` instead
-///
-#define q_listwidget_qbase_scroll_to q_listwidget_super_scroll_to
-
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#scrollTo)
@@ -5487,10 +5411,6 @@ void q_listwidget_on_scroll_to(void* self, void (*callback)(void*, void*, int32_
 /// @param p QPoint*
 ///
 QModelIndex* q_listwidget_index_at(void* self, void* p);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_index_at` instead
-///
-#define q_listwidget_qbase_index_at q_listwidget_super_index_at
 
 /// Inherited from QListView
 ///
@@ -5526,10 +5446,6 @@ void q_listwidget_on_index_at(void* self, QModelIndex* (*callback)(void*, void*)
 ///
 void q_listwidget_do_items_layout(void* self);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_do_items_layout` instead
-///
-#define q_listwidget_qbase_do_items_layout q_listwidget_super_do_items_layout
-
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#doItemsLayout)
@@ -5560,10 +5476,6 @@ void q_listwidget_on_do_items_layout(void* self, void (*callback)());
 /// @param self QListWidget*
 ///
 void q_listwidget_reset(void* self);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_reset` instead
-///
-#define q_listwidget_qbase_reset q_listwidget_super_reset
 
 /// Inherited from QListView
 ///
@@ -5596,10 +5508,6 @@ void q_listwidget_on_reset(void* self, void (*callback)());
 /// @param index QModelIndex*
 ///
 void q_listwidget_set_root_index(void* self, void* index);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_set_root_index` instead
-///
-#define q_listwidget_qbase_set_root_index q_listwidget_super_set_root_index
 
 /// Inherited from QListView
 ///
@@ -5634,10 +5542,6 @@ void q_listwidget_on_set_root_index(void* self, void (*callback)(void*, void*));
 /// @param dy int
 ///
 void q_listwidget_scroll_contents_by(void* self, int dx, int dy);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_scroll_contents_by` instead
-///
-#define q_listwidget_qbase_scroll_contents_by q_listwidget_super_scroll_contents_by
 
 /// Inherited from QListView
 ///
@@ -5674,10 +5578,6 @@ void q_listwidget_on_scroll_contents_by(void* self, void (*callback)(void*, int,
 /// @param roles libqt_list of int
 ///
 void q_listwidget_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_data_changed` instead
-///
-#define q_listwidget_qbase_data_changed q_listwidget_super_data_changed
 
 /// Inherited from QListView
 ///
@@ -5716,10 +5616,6 @@ void q_listwidget_on_data_changed(void* self, void (*callback)(void*, void*, voi
 ///
 void q_listwidget_rows_inserted(void* self, void* parent, int start, int end);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_rows_inserted` instead
-///
-#define q_listwidget_qbase_rows_inserted q_listwidget_super_rows_inserted
-
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#rowsInserted)
@@ -5757,10 +5653,6 @@ void q_listwidget_on_rows_inserted(void* self, void (*callback)(void*, void*, in
 ///
 void q_listwidget_rows_about_to_be_removed(void* self, void* parent, int start, int end);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_rows_about_to_be_removed` instead
-///
-#define q_listwidget_qbase_rows_about_to_be_removed q_listwidget_super_rows_about_to_be_removed
-
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#rowsAboutToBeRemoved)
@@ -5796,10 +5688,6 @@ void q_listwidget_on_rows_about_to_be_removed(void* self, void (*callback)(void*
 ///
 void q_listwidget_mouse_move_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_mouse_move_event` instead
-///
-#define q_listwidget_qbase_mouse_move_event q_listwidget_super_mouse_move_event
-
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#mouseMoveEvent)
@@ -5832,10 +5720,6 @@ void q_listwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*)
 /// @param e QMouseEvent*
 ///
 void q_listwidget_mouse_release_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_mouse_release_event` instead
-///
-#define q_listwidget_qbase_mouse_release_event q_listwidget_super_mouse_release_event
 
 /// Inherited from QListView
 ///
@@ -5870,10 +5754,6 @@ void q_listwidget_on_mouse_release_event(void* self, void (*callback)(void*, voi
 ///
 void q_listwidget_wheel_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_wheel_event` instead
-///
-#define q_listwidget_qbase_wheel_event q_listwidget_super_wheel_event
-
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#wheelEvent)
@@ -5906,10 +5786,6 @@ void q_listwidget_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param e QTimerEvent*
 ///
 void q_listwidget_timer_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_timer_event` instead
-///
-#define q_listwidget_qbase_timer_event q_listwidget_super_timer_event
 
 /// Inherited from QListView
 ///
@@ -5944,10 +5820,6 @@ void q_listwidget_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_listwidget_resize_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_resize_event` instead
-///
-#define q_listwidget_qbase_resize_event q_listwidget_super_resize_event
-
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#resizeEvent)
@@ -5980,10 +5852,6 @@ void q_listwidget_on_resize_event(void* self, void (*callback)(void*, void*));
 /// @param e QDragMoveEvent*
 ///
 void q_listwidget_drag_move_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_drag_move_event` instead
-///
-#define q_listwidget_qbase_drag_move_event q_listwidget_super_drag_move_event
 
 /// Inherited from QListView
 ///
@@ -6018,10 +5886,6 @@ void q_listwidget_on_drag_move_event(void* self, void (*callback)(void*, void*))
 ///
 void q_listwidget_drag_leave_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_drag_leave_event` instead
-///
-#define q_listwidget_qbase_drag_leave_event q_listwidget_super_drag_leave_event
-
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#dragLeaveEvent)
@@ -6054,10 +5918,6 @@ void q_listwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*)
 /// @param supportedActions flag of enum Qt__DropAction
 ///
 void q_listwidget_start_drag(void* self, int32_t supportedActions);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_start_drag` instead
-///
-#define q_listwidget_qbase_start_drag q_listwidget_super_start_drag
 
 /// Inherited from QListView
 ///
@@ -6092,10 +5952,6 @@ void q_listwidget_on_start_drag(void* self, void (*callback)(void*, int32_t));
 ///
 void q_listwidget_init_view_item_option(void* self, void* option);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_init_view_item_option` instead
-///
-#define q_listwidget_qbase_init_view_item_option q_listwidget_super_init_view_item_option
-
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#initViewItemOption)
@@ -6129,10 +5985,6 @@ void q_listwidget_on_init_view_item_option(void* self, void (*callback)(void*, v
 ///
 void q_listwidget_paint_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_paint_event` instead
-///
-#define q_listwidget_qbase_paint_event q_listwidget_super_paint_event
-
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#paintEvent)
@@ -6165,10 +6017,6 @@ void q_listwidget_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_listwidget_horizontal_offset(void* self);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_horizontal_offset` instead
-///
-#define q_listwidget_qbase_horizontal_offset q_listwidget_super_horizontal_offset
-
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#horizontalOffset)
@@ -6199,10 +6047,6 @@ void q_listwidget_on_horizontal_offset(void* self, int32_t (*callback)());
 /// @param self QListWidget*
 ///
 int32_t q_listwidget_vertical_offset(void* self);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_vertical_offset` instead
-///
-#define q_listwidget_qbase_vertical_offset q_listwidget_super_vertical_offset
 
 /// Inherited from QListView
 ///
@@ -6236,10 +6080,6 @@ void q_listwidget_on_vertical_offset(void* self, int32_t (*callback)());
 /// @param modifiers flag of enum Qt__KeyboardModifier
 ///
 QModelIndex* q_listwidget_move_cursor(void* self, int32_t cursorAction, int32_t modifiers);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_move_cursor` instead
-///
-#define q_listwidget_qbase_move_cursor q_listwidget_super_move_cursor
 
 /// Inherited from QListView
 ///
@@ -6278,10 +6118,6 @@ void q_listwidget_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int
 ///
 void q_listwidget_set_selection(void* self, void* rect, int32_t command);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_set_selection` instead
-///
-#define q_listwidget_qbase_set_selection q_listwidget_super_set_selection
-
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#setSelection)
@@ -6315,10 +6151,6 @@ void q_listwidget_on_set_selection(void* self, void (*callback)(void*, void*, in
 /// @param selection QItemSelection*
 ///
 QRegion* q_listwidget_visual_region_for_selection(void* self, void* selection);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_visual_region_for_selection` instead
-///
-#define q_listwidget_qbase_visual_region_for_selection q_listwidget_super_visual_region_for_selection
 
 /// Inherited from QListView
 ///
@@ -6356,10 +6188,6 @@ void q_listwidget_on_visual_region_for_selection(void* self, QRegion* (*callback
 ///
 libqt_list q_listwidget_selected_indexes(void* self);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_selected_indexes` instead
-///
-#define q_listwidget_qbase_selected_indexes q_listwidget_super_selected_indexes
-
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#selectedIndexes)
@@ -6393,10 +6221,6 @@ void q_listwidget_on_selected_indexes(void* self, libqt_list (*callback)());
 ///
 void q_listwidget_update_geometries(void* self);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_update_geometries` instead
-///
-#define q_listwidget_qbase_update_geometries q_listwidget_super_update_geometries
-
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#updateGeometries)
@@ -6428,10 +6252,6 @@ void q_listwidget_on_update_geometries(void* self, void (*callback)());
 /// @param index QModelIndex*
 ///
 bool q_listwidget_is_index_hidden(void* self, void* index);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_is_index_hidden` instead
-///
-#define q_listwidget_qbase_is_index_hidden q_listwidget_super_is_index_hidden
 
 /// Inherited from QListView
 ///
@@ -6466,10 +6286,6 @@ void q_listwidget_on_is_index_hidden(void* self, bool (*callback)(void*, void*))
 /// @param deselected QItemSelection*
 ///
 void q_listwidget_selection_changed(void* self, void* selected, void* deselected);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_selection_changed` instead
-///
-#define q_listwidget_qbase_selection_changed q_listwidget_super_selection_changed
 
 /// Inherited from QListView
 ///
@@ -6506,10 +6322,6 @@ void q_listwidget_on_selection_changed(void* self, void (*callback)(void*, void*
 ///
 void q_listwidget_current_changed(void* self, void* current, void* previous);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_current_changed` instead
-///
-#define q_listwidget_qbase_current_changed q_listwidget_super_current_changed
-
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#currentChanged)
@@ -6542,10 +6354,6 @@ void q_listwidget_on_current_changed(void* self, void (*callback)(void*, void*, 
 /// @param self QListWidget*
 ///
 QSize* q_listwidget_viewport_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_viewport_size_hint` instead
-///
-#define q_listwidget_qbase_viewport_size_hint q_listwidget_super_viewport_size_hint
 
 /// Inherited from QListView
 ///
@@ -6581,10 +6389,6 @@ void q_listwidget_on_viewport_size_hint(void* self, QSize* (*callback)());
 ///
 void q_listwidget_keyboard_search(void* self, const char* search);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_keyboard_search` instead
-///
-#define q_listwidget_qbase_keyboard_search q_listwidget_super_keyboard_search
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#keyboardSearch)
@@ -6617,10 +6421,6 @@ void q_listwidget_on_keyboard_search(void* self, void (*callback)(void*, const c
 /// @param row int
 ///
 int32_t q_listwidget_size_hint_for_row(void* self, int row);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_size_hint_for_row` instead
-///
-#define q_listwidget_qbase_size_hint_for_row q_listwidget_super_size_hint_for_row
 
 /// Inherited from QAbstractItemView
 ///
@@ -6655,10 +6455,6 @@ void q_listwidget_on_size_hint_for_row(void* self, int32_t (*callback)(void*, in
 ///
 int32_t q_listwidget_size_hint_for_column(void* self, int column);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_size_hint_for_column` instead
-///
-#define q_listwidget_qbase_size_hint_for_column q_listwidget_super_size_hint_for_column
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForColumn)
@@ -6692,10 +6488,6 @@ void q_listwidget_on_size_hint_for_column(void* self, int32_t (*callback)(void*,
 ///
 QAbstractItemDelegate* q_listwidget_item_delegate_for_index(void* self, void* index);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_item_delegate_for_index` instead
-///
-#define q_listwidget_qbase_item_delegate_for_index q_listwidget_super_item_delegate_for_index
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForIndex)
@@ -6728,10 +6520,6 @@ void q_listwidget_on_item_delegate_for_index(void* self, QAbstractItemDelegate* 
 /// @param query enum Qt__InputMethodQuery
 ///
 QVariant* q_listwidget_input_method_query(void* self, int32_t query);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_input_method_query` instead
-///
-#define q_listwidget_qbase_input_method_query q_listwidget_super_input_method_query
 
 /// Inherited from QAbstractItemView
 ///
@@ -6767,10 +6555,6 @@ void q_listwidget_on_input_method_query(void* self, QVariant* (*callback)(void*,
 ///
 void q_listwidget_select_all(void* self);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_select_all` instead
-///
-#define q_listwidget_qbase_select_all q_listwidget_super_select_all
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectAll)
@@ -6801,10 +6585,6 @@ void q_listwidget_on_select_all(void* self, void (*callback)());
 /// @param self QListWidget*
 ///
 void q_listwidget_update_editor_data(void* self);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_update_editor_data` instead
-///
-#define q_listwidget_qbase_update_editor_data q_listwidget_super_update_editor_data
 
 /// Inherited from QAbstractItemView
 ///
@@ -6837,10 +6617,6 @@ void q_listwidget_on_update_editor_data(void* self, void (*callback)());
 ///
 void q_listwidget_update_editor_geometries(void* self);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_update_editor_geometries` instead
-///
-#define q_listwidget_qbase_update_editor_geometries q_listwidget_super_update_editor_geometries
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorGeometries)
@@ -6872,10 +6648,6 @@ void q_listwidget_on_update_editor_geometries(void* self, void (*callback)());
 /// @param action int
 ///
 void q_listwidget_vertical_scrollbar_action(void* self, int action);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_vertical_scrollbar_action` instead
-///
-#define q_listwidget_qbase_vertical_scrollbar_action q_listwidget_super_vertical_scrollbar_action
 
 /// Inherited from QAbstractItemView
 ///
@@ -6910,10 +6682,6 @@ void q_listwidget_on_vertical_scrollbar_action(void* self, void (*callback)(void
 ///
 void q_listwidget_horizontal_scrollbar_action(void* self, int action);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_horizontal_scrollbar_action` instead
-///
-#define q_listwidget_qbase_horizontal_scrollbar_action q_listwidget_super_horizontal_scrollbar_action
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollbarAction)
@@ -6947,10 +6715,6 @@ void q_listwidget_on_horizontal_scrollbar_action(void* self, void (*callback)(vo
 ///
 void q_listwidget_vertical_scrollbar_value_changed(void* self, int value);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_vertical_scrollbar_value_changed` instead
-///
-#define q_listwidget_qbase_vertical_scrollbar_value_changed q_listwidget_super_vertical_scrollbar_value_changed
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollbarValueChanged)
@@ -6983,10 +6747,6 @@ void q_listwidget_on_vertical_scrollbar_value_changed(void* self, void (*callbac
 /// @param value int
 ///
 void q_listwidget_horizontal_scrollbar_value_changed(void* self, int value);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_horizontal_scrollbar_value_changed` instead
-///
-#define q_listwidget_qbase_horizontal_scrollbar_value_changed q_listwidget_super_horizontal_scrollbar_value_changed
 
 /// Inherited from QAbstractItemView
 ///
@@ -7022,10 +6782,6 @@ void q_listwidget_on_horizontal_scrollbar_value_changed(void* self, void (*callb
 ///
 void q_listwidget_close_editor(void* self, void* editor, int32_t hint);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_close_editor` instead
-///
-#define q_listwidget_qbase_close_editor q_listwidget_super_close_editor
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#closeEditor)
@@ -7060,10 +6816,6 @@ void q_listwidget_on_close_editor(void* self, void (*callback)(void*, void*, int
 ///
 void q_listwidget_commit_data(void* self, void* editor);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_commit_data` instead
-///
-#define q_listwidget_qbase_commit_data q_listwidget_super_commit_data
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#commitData)
@@ -7096,10 +6848,6 @@ void q_listwidget_on_commit_data(void* self, void (*callback)(void*, void*));
 /// @param editor QObject*
 ///
 void q_listwidget_editor_destroyed(void* self, void* editor);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_editor_destroyed` instead
-///
-#define q_listwidget_qbase_editor_destroyed q_listwidget_super_editor_destroyed
 
 /// Inherited from QAbstractItemView
 ///
@@ -7135,10 +6883,6 @@ void q_listwidget_on_editor_destroyed(void* self, void (*callback)(void*, void*)
 /// @param event QEvent*
 ///
 bool q_listwidget_edit2(void* self, void* index, int32_t trigger, void* event);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_edit2` instead
-///
-#define q_listwidget_qbase_edit2 q_listwidget_super_edit2
 
 /// Inherited from QAbstractItemView
 ///
@@ -7178,10 +6922,6 @@ void q_listwidget_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, v
 ///
 int32_t q_listwidget_selection_command(void* self, void* index, void* event);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_selection_command` instead
-///
-#define q_listwidget_qbase_selection_command q_listwidget_super_selection_command
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectionCommand)
@@ -7218,10 +6958,6 @@ void q_listwidget_on_selection_command(void* self, int32_t (*callback)(void*, vo
 ///
 bool q_listwidget_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_focus_next_prev_child` instead
-///
-#define q_listwidget_qbase_focus_next_prev_child q_listwidget_super_focus_next_prev_child
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#focusNextPrevChild)
@@ -7254,10 +6990,6 @@ void q_listwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, b
 /// @param event QEvent*
 ///
 bool q_listwidget_viewport_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_viewport_event` instead
-///
-#define q_listwidget_qbase_viewport_event q_listwidget_super_viewport_event
 
 /// Inherited from QAbstractItemView
 ///
@@ -7292,10 +7024,6 @@ void q_listwidget_on_viewport_event(void* self, bool (*callback)(void*, void*));
 ///
 void q_listwidget_mouse_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_mouse_press_event` instead
-///
-#define q_listwidget_qbase_mouse_press_event q_listwidget_super_mouse_press_event
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#mousePressEvent)
@@ -7328,10 +7056,6 @@ void q_listwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*
 /// @param event QMouseEvent*
 ///
 void q_listwidget_mouse_double_click_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_mouse_double_click_event` instead
-///
-#define q_listwidget_qbase_mouse_double_click_event q_listwidget_super_mouse_double_click_event
 
 /// Inherited from QAbstractItemView
 ///
@@ -7366,10 +7090,6 @@ void q_listwidget_on_mouse_double_click_event(void* self, void (*callback)(void*
 ///
 void q_listwidget_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_drag_enter_event` instead
-///
-#define q_listwidget_qbase_drag_enter_event q_listwidget_super_drag_enter_event
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dragEnterEvent)
@@ -7402,10 +7122,6 @@ void q_listwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*)
 /// @param event QFocusEvent*
 ///
 void q_listwidget_focus_in_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_focus_in_event` instead
-///
-#define q_listwidget_qbase_focus_in_event q_listwidget_super_focus_in_event
 
 /// Inherited from QAbstractItemView
 ///
@@ -7440,10 +7156,6 @@ void q_listwidget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 void q_listwidget_focus_out_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_focus_out_event` instead
-///
-#define q_listwidget_qbase_focus_out_event q_listwidget_super_focus_out_event
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#focusOutEvent)
@@ -7477,10 +7189,6 @@ void q_listwidget_on_focus_out_event(void* self, void (*callback)(void*, void*))
 ///
 void q_listwidget_key_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_key_press_event` instead
-///
-#define q_listwidget_qbase_key_press_event q_listwidget_super_key_press_event
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#keyPressEvent)
@@ -7513,10 +7221,6 @@ void q_listwidget_on_key_press_event(void* self, void (*callback)(void*, void*))
 /// @param event QInputMethodEvent*
 ///
 void q_listwidget_input_method_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_input_method_event` instead
-///
-#define q_listwidget_qbase_input_method_event q_listwidget_super_input_method_event
 
 /// Inherited from QAbstractItemView
 ///
@@ -7552,10 +7256,6 @@ void q_listwidget_on_input_method_event(void* self, void (*callback)(void*, void
 ///
 bool q_listwidget_event_filter(void* self, void* object, void* event);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_event_filter` instead
-///
-#define q_listwidget_qbase_event_filter q_listwidget_super_event_filter
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#eventFilter)
@@ -7589,10 +7289,6 @@ void q_listwidget_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 QSize* q_listwidget_minimum_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_minimum_size_hint` instead
-///
-#define q_listwidget_qbase_minimum_size_hint q_listwidget_super_minimum_size_hint
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
@@ -7625,10 +7321,6 @@ void q_listwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 /// @param self QListWidget*
 ///
 QSize* q_listwidget_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_size_hint` instead
-///
-#define q_listwidget_qbase_size_hint q_listwidget_super_size_hint
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7664,10 +7356,6 @@ void q_listwidget_on_size_hint(void* self, QSize* (*callback)());
 ///
 void q_listwidget_setup_viewport(void* self, void* viewport);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_setup_viewport` instead
-///
-#define q_listwidget_qbase_setup_viewport q_listwidget_super_setup_viewport
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
@@ -7700,10 +7388,6 @@ void q_listwidget_on_setup_viewport(void* self, void (*callback)(void*, void*));
 /// @param param1 QContextMenuEvent*
 ///
 void q_listwidget_context_menu_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_context_menu_event` instead
-///
-#define q_listwidget_qbase_context_menu_event q_listwidget_super_context_menu_event
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7738,10 +7422,6 @@ void q_listwidget_on_context_menu_event(void* self, void (*callback)(void*, void
 ///
 void q_listwidget_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_change_event` instead
-///
-#define q_listwidget_qbase_change_event q_listwidget_super_change_event
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#changeEvent)
@@ -7775,10 +7455,6 @@ void q_listwidget_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 void q_listwidget_init_style_option(void* self, void* option);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_init_style_option` instead
-///
-#define q_listwidget_qbase_init_style_option q_listwidget_super_init_style_option
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
@@ -7811,10 +7487,6 @@ void q_listwidget_on_init_style_option(void* self, void (*callback)(void*, void*
 ///
 int32_t q_listwidget_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_dev_type` instead
-///
-#define q_listwidget_qbase_dev_type q_listwidget_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -7846,10 +7518,6 @@ void q_listwidget_on_dev_type(void* self, int32_t (*callback)());
 /// @param visible bool
 ///
 void q_listwidget_set_visible(void* self, bool visible);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_set_visible` instead
-///
-#define q_listwidget_qbase_set_visible q_listwidget_super_set_visible
 
 /// Inherited from QWidget
 ///
@@ -7884,10 +7552,6 @@ void q_listwidget_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 int32_t q_listwidget_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_height_for_width` instead
-///
-#define q_listwidget_qbase_height_for_width q_listwidget_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -7920,10 +7584,6 @@ void q_listwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int
 ///
 bool q_listwidget_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_has_height_for_width` instead
-///
-#define q_listwidget_qbase_has_height_for_width q_listwidget_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -7954,10 +7614,6 @@ void q_listwidget_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self QListWidget*
 ///
 QPaintEngine* q_listwidget_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_paint_engine` instead
-///
-#define q_listwidget_qbase_paint_engine q_listwidget_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -7990,10 +7646,6 @@ void q_listwidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QKeyEvent*
 ///
 void q_listwidget_key_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_key_release_event` instead
-///
-#define q_listwidget_qbase_key_release_event q_listwidget_super_key_release_event
 
 /// Inherited from QWidget
 ///
@@ -8028,10 +7680,6 @@ void q_listwidget_on_key_release_event(void* self, void (*callback)(void*, void*
 ///
 void q_listwidget_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_enter_event` instead
-///
-#define q_listwidget_qbase_enter_event q_listwidget_super_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -8064,10 +7712,6 @@ void q_listwidget_on_enter_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void q_listwidget_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_leave_event` instead
-///
-#define q_listwidget_qbase_leave_event q_listwidget_super_leave_event
 
 /// Inherited from QWidget
 ///
@@ -8102,10 +7746,6 @@ void q_listwidget_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_listwidget_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_move_event` instead
-///
-#define q_listwidget_qbase_move_event q_listwidget_super_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -8138,10 +7778,6 @@ void q_listwidget_on_move_event(void* self, void (*callback)(void*, void*));
 /// @param event QCloseEvent*
 ///
 void q_listwidget_close_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_close_event` instead
-///
-#define q_listwidget_qbase_close_event q_listwidget_super_close_event
 
 /// Inherited from QWidget
 ///
@@ -8176,10 +7812,6 @@ void q_listwidget_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void q_listwidget_tablet_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_tablet_event` instead
-///
-#define q_listwidget_qbase_tablet_event q_listwidget_super_tablet_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -8212,10 +7844,6 @@ void q_listwidget_on_tablet_event(void* self, void (*callback)(void*, void*));
 /// @param event QActionEvent*
 ///
 void q_listwidget_action_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_action_event` instead
-///
-#define q_listwidget_qbase_action_event q_listwidget_super_action_event
 
 /// Inherited from QWidget
 ///
@@ -8250,10 +7878,6 @@ void q_listwidget_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 void q_listwidget_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_show_event` instead
-///
-#define q_listwidget_qbase_show_event q_listwidget_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -8286,10 +7910,6 @@ void q_listwidget_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param event QHideEvent*
 ///
 void q_listwidget_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_hide_event` instead
-///
-#define q_listwidget_qbase_hide_event q_listwidget_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -8326,10 +7946,6 @@ void q_listwidget_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_listwidget_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_native_event` instead
-///
-#define q_listwidget_qbase_native_event q_listwidget_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -8365,10 +7981,6 @@ void q_listwidget_on_native_event(void* self, bool (*callback)(void*, libqt_stri
 ///
 int32_t q_listwidget_metric(void* self, int32_t param1);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_metric` instead
-///
-#define q_listwidget_qbase_metric q_listwidget_super_metric
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -8401,10 +8013,6 @@ void q_listwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 /// @param painter QPainter*
 ///
 void q_listwidget_init_painter(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_init_painter` instead
-///
-#define q_listwidget_qbase_init_painter q_listwidget_super_init_painter
 
 /// Inherited from QWidget
 ///
@@ -8439,10 +8047,6 @@ void q_listwidget_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_listwidget_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_redirected` instead
-///
-#define q_listwidget_qbase_redirected q_listwidget_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -8475,10 +8079,6 @@ void q_listwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, voi
 ///
 QPainter* q_listwidget_shared_painter(void* self);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_shared_painter` instead
-///
-#define q_listwidget_qbase_shared_painter q_listwidget_super_shared_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -8510,10 +8110,6 @@ void q_listwidget_on_shared_painter(void* self, QPainter* (*callback)());
 /// @param event QChildEvent*
 ///
 void q_listwidget_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_child_event` instead
-///
-#define q_listwidget_qbase_child_event q_listwidget_super_child_event
 
 /// Inherited from QObject
 ///
@@ -8548,10 +8144,6 @@ void q_listwidget_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_listwidget_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_custom_event` instead
-///
-#define q_listwidget_qbase_custom_event q_listwidget_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -8585,10 +8177,6 @@ void q_listwidget_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_listwidget_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_connect_notify` instead
-///
-#define q_listwidget_qbase_connect_notify q_listwidget_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -8621,10 +8209,6 @@ void q_listwidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_listwidget_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_disconnect_notify` instead
-///
-#define q_listwidget_qbase_disconnect_notify q_listwidget_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -8660,10 +8244,6 @@ void q_listwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 void q_listwidget_resize_contents(void* self, int width, int height);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_resize_contents` instead
-///
-#define q_listwidget_qbase_resize_contents q_listwidget_super_resize_contents
-
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#resizeContents)
@@ -8696,10 +8276,6 @@ void q_listwidget_on_resize_contents(void* self, void (*callback)(void*, int, in
 /// @param self QListWidget*
 ///
 QSize* q_listwidget_contents_size(void* self);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_contents_size` instead
-///
-#define q_listwidget_qbase_contents_size q_listwidget_super_contents_size
 
 /// Inherited from QListView
 ///
@@ -8734,10 +8310,6 @@ void q_listwidget_on_contents_size(void* self, QSize* (*callback)());
 /// @param index QModelIndex*
 ///
 QRect* q_listwidget_rect_for_index(void* self, void* index);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_rect_for_index` instead
-///
-#define q_listwidget_qbase_rect_for_index q_listwidget_super_rect_for_index
 
 /// Inherited from QListView
 ///
@@ -8775,10 +8347,6 @@ void q_listwidget_on_rect_for_index(void* self, QRect* (*callback)(void*, void*)
 ///
 void q_listwidget_set_position_for_index(void* self, void* position, void* index);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_set_position_for_index` instead
-///
-#define q_listwidget_qbase_set_position_for_index q_listwidget_super_set_position_for_index
-
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#setPositionForIndex)
@@ -8814,10 +8382,6 @@ void q_listwidget_on_set_position_for_index(void* self, void (*callback)(void*, 
 ///
 int32_t q_listwidget_state(void* self);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_state` instead
-///
-#define q_listwidget_qbase_state q_listwidget_super_state
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#state)
@@ -8852,10 +8416,6 @@ void q_listwidget_on_state(void* self, int32_t (*callback)());
 ///
 void q_listwidget_set_state(void* self, int32_t state);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_set_state` instead
-///
-#define q_listwidget_qbase_set_state q_listwidget_super_set_state
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#setState)
@@ -8888,10 +8448,6 @@ void q_listwidget_on_set_state(void* self, void (*callback)(void*, int32_t));
 ///
 void q_listwidget_schedule_delayed_items_layout(void* self);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_schedule_delayed_items_layout` instead
-///
-#define q_listwidget_qbase_schedule_delayed_items_layout q_listwidget_super_schedule_delayed_items_layout
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#scheduleDelayedItemsLayout)
@@ -8922,10 +8478,6 @@ void q_listwidget_on_schedule_delayed_items_layout(void* self, void (*callback)(
 /// @param self QListWidget*
 ///
 void q_listwidget_execute_delayed_items_layout(void* self);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_execute_delayed_items_layout` instead
-///
-#define q_listwidget_qbase_execute_delayed_items_layout q_listwidget_super_execute_delayed_items_layout
 
 /// Inherited from QAbstractItemView
 ///
@@ -8958,10 +8510,6 @@ void q_listwidget_on_execute_delayed_items_layout(void* self, void (*callback)()
 /// @param region QRegion*
 ///
 void q_listwidget_set_dirty_region(void* self, void* region);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_set_dirty_region` instead
-///
-#define q_listwidget_qbase_set_dirty_region q_listwidget_super_set_dirty_region
 
 /// Inherited from QAbstractItemView
 ///
@@ -8997,10 +8545,6 @@ void q_listwidget_on_set_dirty_region(void* self, void (*callback)(void*, void*)
 ///
 void q_listwidget_scroll_dirty_region(void* self, int dx, int dy);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_scroll_dirty_region` instead
-///
-#define q_listwidget_qbase_scroll_dirty_region q_listwidget_super_scroll_dirty_region
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#scrollDirtyRegion)
@@ -9033,10 +8577,6 @@ void q_listwidget_on_scroll_dirty_region(void* self, void (*callback)(void*, int
 /// @param self QListWidget*
 ///
 QPoint* q_listwidget_dirty_region_offset(void* self);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_dirty_region_offset` instead
-///
-#define q_listwidget_qbase_dirty_region_offset q_listwidget_super_dirty_region_offset
 
 /// Inherited from QAbstractItemView
 ///
@@ -9071,10 +8611,6 @@ void q_listwidget_on_dirty_region_offset(void* self, QPoint* (*callback)());
 ///
 void q_listwidget_start_auto_scroll(void* self);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_start_auto_scroll` instead
-///
-#define q_listwidget_qbase_start_auto_scroll q_listwidget_super_start_auto_scroll
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#startAutoScroll)
@@ -9106,10 +8642,6 @@ void q_listwidget_on_start_auto_scroll(void* self, void (*callback)());
 ///
 void q_listwidget_stop_auto_scroll(void* self);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_stop_auto_scroll` instead
-///
-#define q_listwidget_qbase_stop_auto_scroll q_listwidget_super_stop_auto_scroll
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#stopAutoScroll)
@@ -9140,10 +8672,6 @@ void q_listwidget_on_stop_auto_scroll(void* self, void (*callback)());
 /// @param self QListWidget*
 ///
 void q_listwidget_do_auto_scroll(void* self);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_do_auto_scroll` instead
-///
-#define q_listwidget_qbase_do_auto_scroll q_listwidget_super_do_auto_scroll
 
 /// Inherited from QAbstractItemView
 ///
@@ -9177,10 +8705,6 @@ void q_listwidget_on_do_auto_scroll(void* self, void (*callback)());
 /// @return enum QAbstractItemView__DropIndicatorPosition
 ///
 int32_t q_listwidget_drop_indicator_position(void* self);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_drop_indicator_position` instead
-///
-#define q_listwidget_qbase_drop_indicator_position q_listwidget_super_drop_indicator_position
 
 /// Inherited from QAbstractItemView
 ///
@@ -9219,10 +8743,6 @@ void q_listwidget_on_drop_indicator_position(void* self, int32_t (*callback)());
 ///
 void q_listwidget_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_set_viewport_margins` instead
-///
-#define q_listwidget_qbase_set_viewport_margins q_listwidget_super_set_viewport_margins
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
@@ -9258,10 +8778,6 @@ void q_listwidget_on_set_viewport_margins(void* self, void (*callback)(void*, in
 ///
 QMargins* q_listwidget_viewport_margins(void* self);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_viewport_margins` instead
-///
-#define q_listwidget_qbase_viewport_margins q_listwidget_super_viewport_margins
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
@@ -9296,10 +8812,6 @@ void q_listwidget_on_viewport_margins(void* self, QMargins* (*callback)());
 ///
 void q_listwidget_draw_frame(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_draw_frame` instead
-///
-#define q_listwidget_qbase_draw_frame q_listwidget_super_draw_frame
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#drawFrame)
@@ -9332,10 +8844,6 @@ void q_listwidget_on_draw_frame(void* self, void (*callback)(void*, void*));
 ///
 void q_listwidget_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_update_micro_focus` instead
-///
-#define q_listwidget_qbase_update_micro_focus q_listwidget_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -9366,10 +8874,6 @@ void q_listwidget_on_update_micro_focus(void* self, void (*callback)());
 /// @param self QListWidget*
 ///
 void q_listwidget_create(void* self);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_create` instead
-///
-#define q_listwidget_qbase_create q_listwidget_super_create
 
 /// Inherited from QWidget
 ///
@@ -9402,10 +8906,6 @@ void q_listwidget_on_create(void* self, void (*callback)());
 ///
 void q_listwidget_destroy(void* self);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_destroy` instead
-///
-#define q_listwidget_qbase_destroy q_listwidget_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -9436,10 +8936,6 @@ void q_listwidget_on_destroy(void* self, void (*callback)());
 /// @param self QListWidget*
 ///
 bool q_listwidget_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_focus_next_child` instead
-///
-#define q_listwidget_qbase_focus_next_child q_listwidget_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -9472,10 +8968,6 @@ void q_listwidget_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_listwidget_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_focus_previous_child` instead
-///
-#define q_listwidget_qbase_focus_previous_child q_listwidget_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -9506,10 +8998,6 @@ void q_listwidget_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self QListWidget*
 ///
 QObject* q_listwidget_sender(void* self);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_sender` instead
-///
-#define q_listwidget_qbase_sender q_listwidget_super_sender
 
 /// Inherited from QObject
 ///
@@ -9542,10 +9030,6 @@ void q_listwidget_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_listwidget_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_sender_signal_index` instead
-///
-#define q_listwidget_qbase_sender_signal_index q_listwidget_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -9577,10 +9061,6 @@ void q_listwidget_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t q_listwidget_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_receivers` instead
-///
-#define q_listwidget_qbase_receivers q_listwidget_super_receivers
 
 /// Inherited from QObject
 ///
@@ -9615,10 +9095,6 @@ void q_listwidget_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 bool q_listwidget_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_listwidget_super_is_signal_connected` instead
-///
-#define q_listwidget_qbase_is_signal_connected q_listwidget_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -9652,10 +9128,6 @@ void q_listwidget_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double q_listwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `q_listwidget_super_get_decoded_metric_f` instead
-///
-#define q_listwidget_qbase_get_decoded_metric_f q_listwidget_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

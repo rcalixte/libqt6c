@@ -127,10 +127,6 @@ void k_textgrammarcheck__grammarerror_parse(void* self, void* obj, int blockinde
 ///
 void k_textgrammarcheck__grammarerror_on_parse(void* self, void (*callback)(void*, void*, int));
 
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammarerror_super_parse` instead
-///
-#define k_textgrammarcheck__grammarerror_qbase_parse k_textgrammarcheck__grammarerror_super_parse
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
 /// Base class method implementation
@@ -208,10 +204,6 @@ void k_textgrammarcheck__grammarerror_operator_assign(void* self, void* param1);
 /// @param callback void func(TextGrammarCheck__GrammarError* self, TextGrammarCheck__GrammarError* param1)
 ///
 void k_textgrammarcheck__grammarerror_on_operator_assign(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_textgrammarcheck__grammarerror_super_operator_assign` instead
-///
-#define k_textgrammarcheck__grammarerror_qbase_operator_assign k_textgrammarcheck__grammarerror_super_operator_assign
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///

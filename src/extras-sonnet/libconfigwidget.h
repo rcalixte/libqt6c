@@ -31,10 +31,6 @@ const QMetaObject* k_sonnet__configwidget_meta_object(void* self);
 ///
 void k_sonnet__configwidget_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_meta_object` instead
-///
-#define k_sonnet__configwidget_qbase_meta_object k_sonnet__configwidget_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -54,10 +50,6 @@ void* k_sonnet__configwidget_metacast(void* self, const char* param1);
 /// @param callback void* func(Sonnet__ConfigWidget* self, const char* param1)
 ///
 void k_sonnet__configwidget_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_metacast` instead
-///
-#define k_sonnet__configwidget_qbase_metacast k_sonnet__configwidget_super_metacast
 
 /// Base class method implementation
 ///
@@ -79,10 +71,6 @@ int32_t k_sonnet__configwidget_metacall(void* self, int32_t param1, int param2, 
 /// @param callback int32_t func(Sonnet__ConfigWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_sonnet__configwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_metacall` instead
-///
-#define k_sonnet__configwidget_qbase_metacall k_sonnet__configwidget_super_metacall
 
 /// Base class method implementation
 ///
@@ -156,10 +144,6 @@ void k_sonnet__configwidget_slot_ignore_word_removed(void* self);
 ///
 void k_sonnet__configwidget_on_slot_ignore_word_removed(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_slot_ignore_word_removed` instead
-///
-#define k_sonnet__configwidget_qbase_slot_ignore_word_removed k_sonnet__configwidget_super_slot_ignore_word_removed
-
 /// [Upstream resources](https://api.kde.org/sonnet-configwidget.html#slotIgnoreWordRemoved)
 ///
 /// Base class method implementation
@@ -182,10 +166,6 @@ void k_sonnet__configwidget_slot_ignore_word_added(void* self);
 /// @param callback void func()
 ///
 void k_sonnet__configwidget_on_slot_ignore_word_added(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_slot_ignore_word_added` instead
-///
-#define k_sonnet__configwidget_qbase_slot_ignore_word_added k_sonnet__configwidget_super_slot_ignore_word_added
 
 /// [Upstream resources](https://api.kde.org/sonnet-configwidget.html#slotIgnoreWordAdded)
 ///
@@ -3194,10 +3174,6 @@ int32_t k_sonnet__configwidget_encode_metric_f(int32_t metric, double value);
 ///
 int32_t k_sonnet__configwidget_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_dev_type` instead
-///
-#define k_sonnet__configwidget_qbase_dev_type k_sonnet__configwidget_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -3229,10 +3205,6 @@ void k_sonnet__configwidget_on_dev_type(void* self, int32_t (*callback)());
 /// @param visible bool
 ///
 void k_sonnet__configwidget_set_visible(void* self, bool visible);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_set_visible` instead
-///
-#define k_sonnet__configwidget_qbase_set_visible k_sonnet__configwidget_super_set_visible
 
 /// Inherited from QWidget
 ///
@@ -3266,10 +3238,6 @@ void k_sonnet__configwidget_on_set_visible(void* self, void (*callback)(void*, b
 ///
 QSize* k_sonnet__configwidget_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_size_hint` instead
-///
-#define k_sonnet__configwidget_qbase_size_hint k_sonnet__configwidget_super_size_hint
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
@@ -3302,10 +3270,6 @@ void k_sonnet__configwidget_on_size_hint(void* self, QSize* (*callback)());
 /// @param self Sonnet__ConfigWidget*
 ///
 QSize* k_sonnet__configwidget_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_minimum_size_hint` instead
-///
-#define k_sonnet__configwidget_qbase_minimum_size_hint k_sonnet__configwidget_super_minimum_size_hint
 
 /// Inherited from QWidget
 ///
@@ -3341,10 +3305,6 @@ void k_sonnet__configwidget_on_minimum_size_hint(void* self, QSize* (*callback)(
 ///
 int32_t k_sonnet__configwidget_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_height_for_width` instead
-///
-#define k_sonnet__configwidget_qbase_height_for_width k_sonnet__configwidget_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -3377,10 +3337,6 @@ void k_sonnet__configwidget_on_height_for_width(void* self, int32_t (*callback)(
 ///
 bool k_sonnet__configwidget_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_has_height_for_width` instead
-///
-#define k_sonnet__configwidget_qbase_has_height_for_width k_sonnet__configwidget_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -3411,10 +3367,6 @@ void k_sonnet__configwidget_on_has_height_for_width(void* self, bool (*callback)
 /// @param self Sonnet__ConfigWidget*
 ///
 QPaintEngine* k_sonnet__configwidget_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_paint_engine` instead
-///
-#define k_sonnet__configwidget_qbase_paint_engine k_sonnet__configwidget_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -3447,10 +3399,6 @@ void k_sonnet__configwidget_on_paint_engine(void* self, QPaintEngine* (*callback
 /// @param event QEvent*
 ///
 bool k_sonnet__configwidget_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_event` instead
-///
-#define k_sonnet__configwidget_qbase_event k_sonnet__configwidget_super_event
 
 /// Inherited from QWidget
 ///
@@ -3485,10 +3433,6 @@ void k_sonnet__configwidget_on_event(void* self, bool (*callback)(void*, void*))
 ///
 void k_sonnet__configwidget_mouse_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_mouse_press_event` instead
-///
-#define k_sonnet__configwidget_qbase_mouse_press_event k_sonnet__configwidget_super_mouse_press_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -3521,10 +3465,6 @@ void k_sonnet__configwidget_on_mouse_press_event(void* self, void (*callback)(vo
 /// @param event QMouseEvent*
 ///
 void k_sonnet__configwidget_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_mouse_release_event` instead
-///
-#define k_sonnet__configwidget_qbase_mouse_release_event k_sonnet__configwidget_super_mouse_release_event
 
 /// Inherited from QWidget
 ///
@@ -3559,10 +3499,6 @@ void k_sonnet__configwidget_on_mouse_release_event(void* self, void (*callback)(
 ///
 void k_sonnet__configwidget_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_mouse_double_click_event` instead
-///
-#define k_sonnet__configwidget_qbase_mouse_double_click_event k_sonnet__configwidget_super_mouse_double_click_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -3595,10 +3531,6 @@ void k_sonnet__configwidget_on_mouse_double_click_event(void* self, void (*callb
 /// @param event QMouseEvent*
 ///
 void k_sonnet__configwidget_mouse_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_mouse_move_event` instead
-///
-#define k_sonnet__configwidget_qbase_mouse_move_event k_sonnet__configwidget_super_mouse_move_event
 
 /// Inherited from QWidget
 ///
@@ -3633,10 +3565,6 @@ void k_sonnet__configwidget_on_mouse_move_event(void* self, void (*callback)(voi
 ///
 void k_sonnet__configwidget_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_wheel_event` instead
-///
-#define k_sonnet__configwidget_qbase_wheel_event k_sonnet__configwidget_super_wheel_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -3669,10 +3597,6 @@ void k_sonnet__configwidget_on_wheel_event(void* self, void (*callback)(void*, v
 /// @param event QKeyEvent*
 ///
 void k_sonnet__configwidget_key_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_key_press_event` instead
-///
-#define k_sonnet__configwidget_qbase_key_press_event k_sonnet__configwidget_super_key_press_event
 
 /// Inherited from QWidget
 ///
@@ -3707,10 +3631,6 @@ void k_sonnet__configwidget_on_key_press_event(void* self, void (*callback)(void
 ///
 void k_sonnet__configwidget_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_key_release_event` instead
-///
-#define k_sonnet__configwidget_qbase_key_release_event k_sonnet__configwidget_super_key_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -3743,10 +3663,6 @@ void k_sonnet__configwidget_on_key_release_event(void* self, void (*callback)(vo
 /// @param event QFocusEvent*
 ///
 void k_sonnet__configwidget_focus_in_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_focus_in_event` instead
-///
-#define k_sonnet__configwidget_qbase_focus_in_event k_sonnet__configwidget_super_focus_in_event
 
 /// Inherited from QWidget
 ///
@@ -3781,10 +3697,6 @@ void k_sonnet__configwidget_on_focus_in_event(void* self, void (*callback)(void*
 ///
 void k_sonnet__configwidget_focus_out_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_focus_out_event` instead
-///
-#define k_sonnet__configwidget_qbase_focus_out_event k_sonnet__configwidget_super_focus_out_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -3817,10 +3729,6 @@ void k_sonnet__configwidget_on_focus_out_event(void* self, void (*callback)(void
 /// @param event QEnterEvent*
 ///
 void k_sonnet__configwidget_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_enter_event` instead
-///
-#define k_sonnet__configwidget_qbase_enter_event k_sonnet__configwidget_super_enter_event
 
 /// Inherited from QWidget
 ///
@@ -3855,10 +3763,6 @@ void k_sonnet__configwidget_on_enter_event(void* self, void (*callback)(void*, v
 ///
 void k_sonnet__configwidget_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_leave_event` instead
-///
-#define k_sonnet__configwidget_qbase_leave_event k_sonnet__configwidget_super_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -3891,10 +3795,6 @@ void k_sonnet__configwidget_on_leave_event(void* self, void (*callback)(void*, v
 /// @param event QPaintEvent*
 ///
 void k_sonnet__configwidget_paint_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_paint_event` instead
-///
-#define k_sonnet__configwidget_qbase_paint_event k_sonnet__configwidget_super_paint_event
 
 /// Inherited from QWidget
 ///
@@ -3929,10 +3829,6 @@ void k_sonnet__configwidget_on_paint_event(void* self, void (*callback)(void*, v
 ///
 void k_sonnet__configwidget_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_move_event` instead
-///
-#define k_sonnet__configwidget_qbase_move_event k_sonnet__configwidget_super_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -3965,10 +3861,6 @@ void k_sonnet__configwidget_on_move_event(void* self, void (*callback)(void*, vo
 /// @param event QResizeEvent*
 ///
 void k_sonnet__configwidget_resize_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_resize_event` instead
-///
-#define k_sonnet__configwidget_qbase_resize_event k_sonnet__configwidget_super_resize_event
 
 /// Inherited from QWidget
 ///
@@ -4003,10 +3895,6 @@ void k_sonnet__configwidget_on_resize_event(void* self, void (*callback)(void*, 
 ///
 void k_sonnet__configwidget_close_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_close_event` instead
-///
-#define k_sonnet__configwidget_qbase_close_event k_sonnet__configwidget_super_close_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -4039,10 +3927,6 @@ void k_sonnet__configwidget_on_close_event(void* self, void (*callback)(void*, v
 /// @param event QContextMenuEvent*
 ///
 void k_sonnet__configwidget_context_menu_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_context_menu_event` instead
-///
-#define k_sonnet__configwidget_qbase_context_menu_event k_sonnet__configwidget_super_context_menu_event
 
 /// Inherited from QWidget
 ///
@@ -4077,10 +3961,6 @@ void k_sonnet__configwidget_on_context_menu_event(void* self, void (*callback)(v
 ///
 void k_sonnet__configwidget_tablet_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_tablet_event` instead
-///
-#define k_sonnet__configwidget_qbase_tablet_event k_sonnet__configwidget_super_tablet_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4113,10 +3993,6 @@ void k_sonnet__configwidget_on_tablet_event(void* self, void (*callback)(void*, 
 /// @param event QActionEvent*
 ///
 void k_sonnet__configwidget_action_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_action_event` instead
-///
-#define k_sonnet__configwidget_qbase_action_event k_sonnet__configwidget_super_action_event
 
 /// Inherited from QWidget
 ///
@@ -4151,10 +4027,6 @@ void k_sonnet__configwidget_on_action_event(void* self, void (*callback)(void*, 
 ///
 void k_sonnet__configwidget_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_drag_enter_event` instead
-///
-#define k_sonnet__configwidget_qbase_drag_enter_event k_sonnet__configwidget_super_drag_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4187,10 +4059,6 @@ void k_sonnet__configwidget_on_drag_enter_event(void* self, void (*callback)(voi
 /// @param event QDragMoveEvent*
 ///
 void k_sonnet__configwidget_drag_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_drag_move_event` instead
-///
-#define k_sonnet__configwidget_qbase_drag_move_event k_sonnet__configwidget_super_drag_move_event
 
 /// Inherited from QWidget
 ///
@@ -4225,10 +4093,6 @@ void k_sonnet__configwidget_on_drag_move_event(void* self, void (*callback)(void
 ///
 void k_sonnet__configwidget_drag_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_drag_leave_event` instead
-///
-#define k_sonnet__configwidget_qbase_drag_leave_event k_sonnet__configwidget_super_drag_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -4261,10 +4125,6 @@ void k_sonnet__configwidget_on_drag_leave_event(void* self, void (*callback)(voi
 /// @param event QDropEvent*
 ///
 void k_sonnet__configwidget_drop_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_drop_event` instead
-///
-#define k_sonnet__configwidget_qbase_drop_event k_sonnet__configwidget_super_drop_event
 
 /// Inherited from QWidget
 ///
@@ -4299,10 +4159,6 @@ void k_sonnet__configwidget_on_drop_event(void* self, void (*callback)(void*, vo
 ///
 void k_sonnet__configwidget_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_show_event` instead
-///
-#define k_sonnet__configwidget_qbase_show_event k_sonnet__configwidget_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -4335,10 +4191,6 @@ void k_sonnet__configwidget_on_show_event(void* self, void (*callback)(void*, vo
 /// @param event QHideEvent*
 ///
 void k_sonnet__configwidget_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_hide_event` instead
-///
-#define k_sonnet__configwidget_qbase_hide_event k_sonnet__configwidget_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -4375,10 +4227,6 @@ void k_sonnet__configwidget_on_hide_event(void* self, void (*callback)(void*, vo
 ///
 bool k_sonnet__configwidget_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_native_event` instead
-///
-#define k_sonnet__configwidget_qbase_native_event k_sonnet__configwidget_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4414,10 +4262,6 @@ void k_sonnet__configwidget_on_native_event(void* self, bool (*callback)(void*, 
 ///
 void k_sonnet__configwidget_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_change_event` instead
-///
-#define k_sonnet__configwidget_qbase_change_event k_sonnet__configwidget_super_change_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -4450,10 +4294,6 @@ void k_sonnet__configwidget_on_change_event(void* self, void (*callback)(void*, 
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
 int32_t k_sonnet__configwidget_metric(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_metric` instead
-///
-#define k_sonnet__configwidget_qbase_metric k_sonnet__configwidget_super_metric
 
 /// Inherited from QWidget
 ///
@@ -4488,10 +4328,6 @@ void k_sonnet__configwidget_on_metric(void* self, int32_t (*callback)(void*, int
 ///
 void k_sonnet__configwidget_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_init_painter` instead
-///
-#define k_sonnet__configwidget_qbase_init_painter k_sonnet__configwidget_super_init_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -4525,10 +4361,6 @@ void k_sonnet__configwidget_on_init_painter(void* self, void (*callback)(void*, 
 ///
 QPaintDevice* k_sonnet__configwidget_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_redirected` instead
-///
-#define k_sonnet__configwidget_qbase_redirected k_sonnet__configwidget_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4560,10 +4392,6 @@ void k_sonnet__configwidget_on_redirected(void* self, QPaintDevice* (*callback)(
 /// @param self Sonnet__ConfigWidget*
 ///
 QPainter* k_sonnet__configwidget_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_shared_painter` instead
-///
-#define k_sonnet__configwidget_qbase_shared_painter k_sonnet__configwidget_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -4597,10 +4425,6 @@ void k_sonnet__configwidget_on_shared_painter(void* self, QPainter* (*callback)(
 ///
 void k_sonnet__configwidget_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_input_method_event` instead
-///
-#define k_sonnet__configwidget_qbase_input_method_event k_sonnet__configwidget_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4633,10 +4457,6 @@ void k_sonnet__configwidget_on_input_method_event(void* self, void (*callback)(v
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* k_sonnet__configwidget_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_input_method_query` instead
-///
-#define k_sonnet__configwidget_qbase_input_method_query k_sonnet__configwidget_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -4673,10 +4493,6 @@ void k_sonnet__configwidget_on_input_method_query(void* self, QVariant* (*callba
 ///
 bool k_sonnet__configwidget_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_focus_next_prev_child` instead
-///
-#define k_sonnet__configwidget_qbase_focus_next_prev_child k_sonnet__configwidget_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -4710,10 +4526,6 @@ void k_sonnet__configwidget_on_focus_next_prev_child(void* self, bool (*callback
 /// @param event QEvent*
 ///
 bool k_sonnet__configwidget_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_event_filter` instead
-///
-#define k_sonnet__configwidget_qbase_event_filter k_sonnet__configwidget_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -4749,10 +4561,6 @@ void k_sonnet__configwidget_on_event_filter(void* self, bool (*callback)(void*, 
 ///
 void k_sonnet__configwidget_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_timer_event` instead
-///
-#define k_sonnet__configwidget_qbase_timer_event k_sonnet__configwidget_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -4785,10 +4593,6 @@ void k_sonnet__configwidget_on_timer_event(void* self, void (*callback)(void*, v
 /// @param event QChildEvent*
 ///
 void k_sonnet__configwidget_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_child_event` instead
-///
-#define k_sonnet__configwidget_qbase_child_event k_sonnet__configwidget_super_child_event
 
 /// Inherited from QObject
 ///
@@ -4823,10 +4627,6 @@ void k_sonnet__configwidget_on_child_event(void* self, void (*callback)(void*, v
 ///
 void k_sonnet__configwidget_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_custom_event` instead
-///
-#define k_sonnet__configwidget_qbase_custom_event k_sonnet__configwidget_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -4859,10 +4659,6 @@ void k_sonnet__configwidget_on_custom_event(void* self, void (*callback)(void*, 
 /// @param signal QMetaMethod*
 ///
 void k_sonnet__configwidget_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_connect_notify` instead
-///
-#define k_sonnet__configwidget_qbase_connect_notify k_sonnet__configwidget_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -4897,10 +4693,6 @@ void k_sonnet__configwidget_on_connect_notify(void* self, void (*callback)(void*
 ///
 void k_sonnet__configwidget_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_disconnect_notify` instead
-///
-#define k_sonnet__configwidget_qbase_disconnect_notify k_sonnet__configwidget_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -4933,10 +4725,6 @@ void k_sonnet__configwidget_on_disconnect_notify(void* self, void (*callback)(vo
 ///
 void k_sonnet__configwidget_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_update_micro_focus` instead
-///
-#define k_sonnet__configwidget_qbase_update_micro_focus k_sonnet__configwidget_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -4967,10 +4755,6 @@ void k_sonnet__configwidget_on_update_micro_focus(void* self, void (*callback)()
 /// @param self Sonnet__ConfigWidget*
 ///
 void k_sonnet__configwidget_create(void* self);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_create` instead
-///
-#define k_sonnet__configwidget_qbase_create k_sonnet__configwidget_super_create
 
 /// Inherited from QWidget
 ///
@@ -5003,10 +4787,6 @@ void k_sonnet__configwidget_on_create(void* self, void (*callback)());
 ///
 void k_sonnet__configwidget_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_destroy` instead
-///
-#define k_sonnet__configwidget_qbase_destroy k_sonnet__configwidget_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5037,10 +4817,6 @@ void k_sonnet__configwidget_on_destroy(void* self, void (*callback)());
 /// @param self Sonnet__ConfigWidget*
 ///
 bool k_sonnet__configwidget_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_focus_next_child` instead
-///
-#define k_sonnet__configwidget_qbase_focus_next_child k_sonnet__configwidget_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -5073,10 +4849,6 @@ void k_sonnet__configwidget_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_sonnet__configwidget_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_focus_previous_child` instead
-///
-#define k_sonnet__configwidget_qbase_focus_previous_child k_sonnet__configwidget_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5107,10 +4879,6 @@ void k_sonnet__configwidget_on_focus_previous_child(void* self, bool (*callback)
 /// @param self Sonnet__ConfigWidget*
 ///
 QObject* k_sonnet__configwidget_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_sender` instead
-///
-#define k_sonnet__configwidget_qbase_sender k_sonnet__configwidget_super_sender
 
 /// Inherited from QObject
 ///
@@ -5143,10 +4911,6 @@ void k_sonnet__configwidget_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_sonnet__configwidget_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_sender_signal_index` instead
-///
-#define k_sonnet__configwidget_qbase_sender_signal_index k_sonnet__configwidget_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5178,10 +4942,6 @@ void k_sonnet__configwidget_on_sender_signal_index(void* self, int32_t (*callbac
 /// @param signal const char*
 ///
 int32_t k_sonnet__configwidget_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_receivers` instead
-///
-#define k_sonnet__configwidget_qbase_receivers k_sonnet__configwidget_super_receivers
 
 /// Inherited from QObject
 ///
@@ -5216,10 +4976,6 @@ void k_sonnet__configwidget_on_receivers(void* self, int32_t (*callback)(void*, 
 ///
 bool k_sonnet__configwidget_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_is_signal_connected` instead
-///
-#define k_sonnet__configwidget_qbase_is_signal_connected k_sonnet__configwidget_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5253,10 +5009,6 @@ void k_sonnet__configwidget_on_is_signal_connected(void* self, bool (*callback)(
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_sonnet__configwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_sonnet__configwidget_super_get_decoded_metric_f` instead
-///
-#define k_sonnet__configwidget_qbase_get_decoded_metric_f k_sonnet__configwidget_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

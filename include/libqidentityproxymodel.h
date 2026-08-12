@@ -37,10 +37,6 @@ const QMetaObject* q_identityproxymodel_meta_object(void* self);
 ///
 void q_identityproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_meta_object` instead
-///
-#define q_identityproxymodel_qbase_meta_object q_identityproxymodel_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_identityproxymodel_metacast(void* self, const char* param1);
 /// @param callback void* func(QIdentityProxyModel* self, const char* param1)
 ///
 void q_identityproxymodel_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_metacast` instead
-///
-#define q_identityproxymodel_qbase_metacast q_identityproxymodel_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_identityproxymodel_metacall(void* self, int32_t param1, int param2, vo
 /// @param callback int32_t func(QIdentityProxyModel* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_identityproxymodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_metacall` instead
-///
-#define q_identityproxymodel_qbase_metacall q_identityproxymodel_super_metacall
 
 /// Base class method implementation
 ///
@@ -123,10 +111,6 @@ int32_t q_identityproxymodel_column_count(void* self, void* parent);
 ///
 void q_identityproxymodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_column_count` instead
-///
-#define q_identityproxymodel_qbase_column_count q_identityproxymodel_super_column_count
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#columnCount)
 ///
 /// Base class method implementation
@@ -155,10 +139,6 @@ QModelIndex* q_identityproxymodel_index(void* self, int row, int column, void* p
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_identityproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_index` instead
-///
-#define q_identityproxymodel_qbase_index q_identityproxymodel_super_index
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#index)
 ///
@@ -189,10 +169,6 @@ QModelIndex* q_identityproxymodel_map_from_source(void* self, void* sourceIndex)
 ///
 void q_identityproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_map_from_source` instead
-///
-#define q_identityproxymodel_qbase_map_from_source q_identityproxymodel_super_map_from_source
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapFromSource)
 ///
 /// Base class method implementation
@@ -219,10 +195,6 @@ QModelIndex* q_identityproxymodel_map_to_source(void* self, void* proxyIndex);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_identityproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_map_to_source` instead
-///
-#define q_identityproxymodel_qbase_map_to_source q_identityproxymodel_super_map_to_source
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapToSource)
 ///
@@ -251,10 +223,6 @@ QModelIndex* q_identityproxymodel_parent(void* self, void* child);
 ///
 void q_identityproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_parent` instead
-///
-#define q_identityproxymodel_qbase_parent q_identityproxymodel_super_parent
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#parent)
 ///
 /// Base class method implementation
@@ -279,10 +247,6 @@ int32_t q_identityproxymodel_row_count(void* self, void* parent);
 /// @param callback int32_t func(QIdentityProxyModel* self, QModelIndex* parent)
 ///
 void q_identityproxymodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_row_count` instead
-///
-#define q_identityproxymodel_qbase_row_count q_identityproxymodel_super_row_count
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#rowCount)
 ///
@@ -312,10 +276,6 @@ QVariant* q_identityproxymodel_header_data(void* self, int section, int32_t orie
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_identityproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_header_data` instead
-///
-#define q_identityproxymodel_qbase_header_data q_identityproxymodel_super_header_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#headerData)
 ///
@@ -347,10 +307,6 @@ bool q_identityproxymodel_drop_mime_data(void* self, void* data, int32_t action,
 /// @param callback bool func(QIdentityProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
 void q_identityproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_drop_mime_data` instead
-///
-#define q_identityproxymodel_qbase_drop_mime_data q_identityproxymodel_super_drop_mime_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#dropMimeData)
 ///
@@ -385,10 +341,6 @@ QModelIndex* q_identityproxymodel_sibling(void* self, int row, int column, void*
 ///
 void q_identityproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_sibling` instead
-///
-#define q_identityproxymodel_qbase_sibling q_identityproxymodel_super_sibling
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#sibling)
 ///
 /// Base class method implementation
@@ -418,10 +370,6 @@ QItemSelection* q_identityproxymodel_map_selection_from_source(void* self, void*
 ///
 void q_identityproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_map_selection_from_source` instead
-///
-#define q_identityproxymodel_qbase_map_selection_from_source q_identityproxymodel_super_map_selection_from_source
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapSelectionFromSource)
 ///
 /// Base class method implementation
@@ -448,10 +396,6 @@ QItemSelection* q_identityproxymodel_map_selection_to_source(void* self, void* s
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_identityproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_map_selection_to_source` instead
-///
-#define q_identityproxymodel_qbase_map_selection_to_source q_identityproxymodel_super_map_selection_to_source
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapSelectionToSource)
 ///
@@ -484,10 +428,6 @@ libqt_list q_identityproxymodel_match(void* self, void* start, int role, void* v
 ///
 void q_identityproxymodel_on_match(void* self, libqt_list (*callback)(void*, void*, int, void*, int, int32_t));
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_match` instead
-///
-#define q_identityproxymodel_qbase_match q_identityproxymodel_super_match
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#match)
 ///
 /// Base class method implementation
@@ -519,10 +459,6 @@ void q_identityproxymodel_set_source_model(void* self, void* sourceModel);
 ///
 void q_identityproxymodel_on_set_source_model(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_set_source_model` instead
-///
-#define q_identityproxymodel_qbase_set_source_model q_identityproxymodel_super_set_source_model
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#setSourceModel)
 ///
 /// Base class method implementation
@@ -549,10 +485,6 @@ bool q_identityproxymodel_insert_columns(void* self, int column, int count, void
 /// @param callback bool func(QIdentityProxyModel* self, int column, int count, QModelIndex* parent)
 ///
 void q_identityproxymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_insert_columns` instead
-///
-#define q_identityproxymodel_qbase_insert_columns q_identityproxymodel_super_insert_columns
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#insertColumns)
 ///
@@ -583,10 +515,6 @@ bool q_identityproxymodel_insert_rows(void* self, int row, int count, void* pare
 ///
 void q_identityproxymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_insert_rows` instead
-///
-#define q_identityproxymodel_qbase_insert_rows q_identityproxymodel_super_insert_rows
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#insertRows)
 ///
 /// Base class method implementation
@@ -616,10 +544,6 @@ bool q_identityproxymodel_remove_columns(void* self, int column, int count, void
 ///
 void q_identityproxymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_remove_columns` instead
-///
-#define q_identityproxymodel_qbase_remove_columns q_identityproxymodel_super_remove_columns
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#removeColumns)
 ///
 /// Base class method implementation
@@ -648,10 +572,6 @@ bool q_identityproxymodel_remove_rows(void* self, int row, int count, void* pare
 /// @param callback bool func(QIdentityProxyModel* self, int row, int count, QModelIndex* parent)
 ///
 void q_identityproxymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_remove_rows` instead
-///
-#define q_identityproxymodel_qbase_remove_rows q_identityproxymodel_super_remove_rows
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#removeRows)
 ///
@@ -683,10 +603,6 @@ bool q_identityproxymodel_move_rows(void* self, void* sourceParent, int sourceRo
 /// @param callback bool func(QIdentityProxyModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
 ///
 void q_identityproxymodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_move_rows` instead
-///
-#define q_identityproxymodel_qbase_move_rows q_identityproxymodel_super_move_rows
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#moveRows)
 ///
@@ -720,10 +636,6 @@ bool q_identityproxymodel_move_columns(void* self, void* sourceParent, int sourc
 /// @param callback bool func(QIdentityProxyModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
 ///
 void q_identityproxymodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_move_columns` instead
-///
-#define q_identityproxymodel_qbase_move_columns q_identityproxymodel_super_move_columns
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#moveColumns)
 ///
@@ -766,10 +678,6 @@ void q_identityproxymodel_set_handle_source_layout_changes(void* self, bool hand
 ///
 void q_identityproxymodel_on_set_handle_source_layout_changes(void* self, void (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_set_handle_source_layout_changes` instead
-///
-#define q_identityproxymodel_qbase_set_handle_source_layout_changes q_identityproxymodel_super_set_handle_source_layout_changes
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceLayoutChanges)
 ///
 /// Base class method implementation
@@ -794,10 +702,6 @@ void q_identityproxymodel_set_handle_source_data_changes(void* self, bool handle
 /// @param callback void func(QIdentityProxyModel* self, bool handleSourceDataChanges)
 ///
 void q_identityproxymodel_on_set_handle_source_data_changes(void* self, void (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_set_handle_source_data_changes` instead
-///
-#define q_identityproxymodel_qbase_set_handle_source_data_changes q_identityproxymodel_super_set_handle_source_data_changes
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceDataChanges)
 ///
@@ -1591,10 +1495,6 @@ void q_identityproxymodel_on_destroyed1(void* self, void (*callback)(void*, void
 ///
 bool q_identityproxymodel_submit(void* self);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_submit` instead
-///
-#define q_identityproxymodel_qbase_submit q_identityproxymodel_super_submit
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
@@ -1625,10 +1525,6 @@ void q_identityproxymodel_on_submit(void* self, bool (*callback)());
 /// @param self QIdentityProxyModel*
 ///
 void q_identityproxymodel_revert(void* self);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_revert` instead
-///
-#define q_identityproxymodel_qbase_revert q_identityproxymodel_super_revert
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1662,10 +1558,6 @@ void q_identityproxymodel_on_revert(void* self, void (*callback)());
 /// @param role int
 ///
 QVariant* q_identityproxymodel_data(void* self, void* proxyIndex, int role);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_data` instead
-///
-#define q_identityproxymodel_qbase_data q_identityproxymodel_super_data
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1716,10 +1608,6 @@ void q_identityproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*
 ///
 libqt_map q_identityproxymodel_item_data(void* self, void* index);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_item_data` instead
-///
-#define q_identityproxymodel_qbase_item_data q_identityproxymodel_super_item_data
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
@@ -1768,10 +1656,6 @@ void q_identityproxymodel_on_item_data(void* self, libqt_map (*callback)(void*, 
 ///
 int32_t q_identityproxymodel_flags(void* self, void* index);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_flags` instead
-///
-#define q_identityproxymodel_qbase_flags q_identityproxymodel_super_flags
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#flags)
@@ -1809,10 +1693,6 @@ void q_identityproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*)
 ///
 bool q_identityproxymodel_set_data(void* self, void* index, void* value, int role);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_set_data` instead
-///
-#define q_identityproxymodel_qbase_set_data q_identityproxymodel_super_set_data
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setData)
@@ -1848,10 +1728,6 @@ void q_identityproxymodel_on_set_data(void* self, bool (*callback)(void*, void*,
 /// @param roles libqt_map of int to QVariant*
 ///
 bool q_identityproxymodel_set_item_data(void* self, void* index, libqt_map roles);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_set_item_data` instead
-///
-#define q_identityproxymodel_qbase_set_item_data q_identityproxymodel_super_set_item_data
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1890,10 +1766,6 @@ void q_identityproxymodel_on_set_item_data(void* self, bool (*callback)(void*, v
 ///
 bool q_identityproxymodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_set_header_data` instead
-///
-#define q_identityproxymodel_qbase_set_header_data q_identityproxymodel_super_set_header_data
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#setHeaderData)
@@ -1930,10 +1802,6 @@ void q_identityproxymodel_on_set_header_data(void* self, bool (*callback)(void*,
 ///
 bool q_identityproxymodel_clear_item_data(void* self, void* index);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_clear_item_data` instead
-///
-#define q_identityproxymodel_qbase_clear_item_data q_identityproxymodel_super_clear_item_data
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
@@ -1966,10 +1834,6 @@ void q_identityproxymodel_on_clear_item_data(void* self, bool (*callback)(void*,
 /// @param index QModelIndex*
 ///
 QModelIndex* q_identityproxymodel_buddy(void* self, void* index);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_buddy` instead
-///
-#define q_identityproxymodel_qbase_buddy q_identityproxymodel_super_buddy
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2006,10 +1870,6 @@ void q_identityproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, v
 ///
 bool q_identityproxymodel_can_fetch_more(void* self, void* parent);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_can_fetch_more` instead
-///
-#define q_identityproxymodel_qbase_can_fetch_more q_identityproxymodel_super_can_fetch_more
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#canFetchMore)
@@ -2042,10 +1902,6 @@ void q_identityproxymodel_on_can_fetch_more(void* self, bool (*callback)(void*, 
 /// @param parent QModelIndex*
 ///
 void q_identityproxymodel_fetch_more(void* self, void* parent);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_fetch_more` instead
-///
-#define q_identityproxymodel_qbase_fetch_more q_identityproxymodel_super_fetch_more
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2081,10 +1937,6 @@ void q_identityproxymodel_on_fetch_more(void* self, void (*callback)(void*, void
 ///
 void q_identityproxymodel_sort(void* self, int column, int32_t order);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_sort` instead
-///
-#define q_identityproxymodel_qbase_sort q_identityproxymodel_super_sort
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sort)
@@ -2118,10 +1970,6 @@ void q_identityproxymodel_on_sort(void* self, void (*callback)(void*, int, int32
 /// @param index QModelIndex*
 ///
 QSize* q_identityproxymodel_span(void* self, void* index);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_span` instead
-///
-#define q_identityproxymodel_qbase_span q_identityproxymodel_super_span
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2158,10 +2006,6 @@ void q_identityproxymodel_on_span(void* self, QSize* (*callback)(void*, void*));
 ///
 bool q_identityproxymodel_has_children(void* self, void* parent);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_has_children` instead
-///
-#define q_identityproxymodel_qbase_has_children q_identityproxymodel_super_has_children
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#hasChildren)
@@ -2194,10 +2038,6 @@ void q_identityproxymodel_on_has_children(void* self, bool (*callback)(void*, vo
 /// @param indexes libqt_list of QModelIndex*
 ///
 QMimeData* q_identityproxymodel_mime_data(void* self, libqt_list indexes);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_mime_data` instead
-///
-#define q_identityproxymodel_qbase_mime_data q_identityproxymodel_super_mime_data
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2235,10 +2075,6 @@ void q_identityproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*,
 /// @param parent QModelIndex*
 ///
 bool q_identityproxymodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_can_drop_mime_data` instead
-///
-#define q_identityproxymodel_qbase_can_drop_mime_data q_identityproxymodel_super_can_drop_mime_data
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2278,10 +2114,6 @@ void q_identityproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(voi
 ///
 const char** q_identityproxymodel_mime_types(void* self);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_mime_types` instead
-///
-#define q_identityproxymodel_qbase_mime_types q_identityproxymodel_super_mime_types
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeTypes)
@@ -2317,10 +2149,6 @@ void q_identityproxymodel_on_mime_types(void* self, const char** (*callback)());
 ///
 int32_t q_identityproxymodel_supported_drag_actions(void* self);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_supported_drag_actions` instead
-///
-#define q_identityproxymodel_qbase_supported_drag_actions q_identityproxymodel_super_supported_drag_actions
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
@@ -2355,10 +2183,6 @@ void q_identityproxymodel_on_supported_drag_actions(void* self, int32_t (*callba
 /// @return flag of enum Qt__DropAction
 ///
 int32_t q_identityproxymodel_supported_drop_actions(void* self);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_supported_drop_actions` instead
-///
-#define q_identityproxymodel_qbase_supported_drop_actions q_identityproxymodel_super_supported_drop_actions
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2406,10 +2230,6 @@ void q_identityproxymodel_on_supported_drop_actions(void* self, int32_t (*callba
 ///
 libqt_map q_identityproxymodel_role_names(void* self);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_role_names` instead
-///
-#define q_identityproxymodel_qbase_role_names q_identityproxymodel_super_role_names
-
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
@@ -2456,10 +2276,6 @@ void q_identityproxymodel_on_role_names(void* self, libqt_map (*callback)());
 ///
 void q_identityproxymodel_multi_data(void* self, void* index, void* roleDataSpan);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_multi_data` instead
-///
-#define q_identityproxymodel_qbase_multi_data q_identityproxymodel_super_multi_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
@@ -2493,10 +2309,6 @@ void q_identityproxymodel_on_multi_data(void* self, void (*callback)(void*, void
 ///
 void q_identityproxymodel_reset_internal_data(void* self);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_reset_internal_data` instead
-///
-#define q_identityproxymodel_qbase_reset_internal_data q_identityproxymodel_super_reset_internal_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
@@ -2528,10 +2340,6 @@ void q_identityproxymodel_on_reset_internal_data(void* self, void (*callback)())
 /// @param event QEvent*
 ///
 bool q_identityproxymodel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_event` instead
-///
-#define q_identityproxymodel_qbase_event q_identityproxymodel_super_event
 
 /// Inherited from QObject
 ///
@@ -2567,10 +2375,6 @@ void q_identityproxymodel_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_identityproxymodel_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_event_filter` instead
-///
-#define q_identityproxymodel_qbase_event_filter q_identityproxymodel_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -2605,10 +2409,6 @@ void q_identityproxymodel_on_event_filter(void* self, bool (*callback)(void*, vo
 ///
 void q_identityproxymodel_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_timer_event` instead
-///
-#define q_identityproxymodel_qbase_timer_event q_identityproxymodel_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2641,10 +2441,6 @@ void q_identityproxymodel_on_timer_event(void* self, void (*callback)(void*, voi
 /// @param event QChildEvent*
 ///
 void q_identityproxymodel_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_child_event` instead
-///
-#define q_identityproxymodel_qbase_child_event q_identityproxymodel_super_child_event
 
 /// Inherited from QObject
 ///
@@ -2679,10 +2475,6 @@ void q_identityproxymodel_on_child_event(void* self, void (*callback)(void*, voi
 ///
 void q_identityproxymodel_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_custom_event` instead
-///
-#define q_identityproxymodel_qbase_custom_event q_identityproxymodel_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2716,10 +2508,6 @@ void q_identityproxymodel_on_custom_event(void* self, void (*callback)(void*, vo
 ///
 void q_identityproxymodel_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_connect_notify` instead
-///
-#define q_identityproxymodel_qbase_connect_notify q_identityproxymodel_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -2752,10 +2540,6 @@ void q_identityproxymodel_on_connect_notify(void* self, void (*callback)(void*, 
 /// @param signal QMetaMethod*
 ///
 void q_identityproxymodel_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_disconnect_notify` instead
-///
-#define q_identityproxymodel_qbase_disconnect_notify q_identityproxymodel_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -2791,10 +2575,6 @@ void q_identityproxymodel_on_disconnect_notify(void* self, void (*callback)(void
 /// @param internalPtr void*
 ///
 QModelIndex* q_identityproxymodel_create_source_index(void* self, int row, int col, void* internalPtr);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_create_source_index` instead
-///
-#define q_identityproxymodel_qbase_create_source_index q_identityproxymodel_super_create_source_index
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2834,10 +2614,6 @@ void q_identityproxymodel_on_create_source_index(void* self, QModelIndex* (*call
 ///
 QModelIndex* q_identityproxymodel_create_index(void* self, int row, int column);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_create_index` instead
-///
-#define q_identityproxymodel_qbase_create_index q_identityproxymodel_super_create_index
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
@@ -2875,10 +2651,6 @@ void q_identityproxymodel_on_create_index(void* self, QModelIndex* (*callback)(v
 ///
 void q_identityproxymodel_encode_data(void* self, libqt_list indexes, void* stream);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_encode_data` instead
-///
-#define q_identityproxymodel_qbase_encode_data q_identityproxymodel_super_encode_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
@@ -2915,10 +2687,6 @@ void q_identityproxymodel_on_encode_data(void* self, void (*callback)(void*, lib
 /// @param stream QDataStream*
 ///
 bool q_identityproxymodel_decode_data(void* self, int row, int column, void* parent, void* stream);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_decode_data` instead
-///
-#define q_identityproxymodel_qbase_decode_data q_identityproxymodel_super_decode_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2958,10 +2726,6 @@ void q_identityproxymodel_on_decode_data(void* self, bool (*callback)(void*, int
 ///
 void q_identityproxymodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_begin_insert_rows` instead
-///
-#define q_identityproxymodel_qbase_begin_insert_rows q_identityproxymodel_super_begin_insert_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
@@ -2995,10 +2759,6 @@ void q_identityproxymodel_on_begin_insert_rows(void* self, void (*callback)(void
 /// @param self QIdentityProxyModel*
 ///
 void q_identityproxymodel_end_insert_rows(void* self);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_end_insert_rows` instead
-///
-#define q_identityproxymodel_qbase_end_insert_rows q_identityproxymodel_super_end_insert_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3034,10 +2794,6 @@ void q_identityproxymodel_on_end_insert_rows(void* self, void (*callback)());
 ///
 void q_identityproxymodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_begin_remove_rows` instead
-///
-#define q_identityproxymodel_qbase_begin_remove_rows q_identityproxymodel_super_begin_remove_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
@@ -3071,10 +2827,6 @@ void q_identityproxymodel_on_begin_remove_rows(void* self, void (*callback)(void
 /// @param self QIdentityProxyModel*
 ///
 void q_identityproxymodel_end_remove_rows(void* self);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_end_remove_rows` instead
-///
-#define q_identityproxymodel_qbase_end_remove_rows q_identityproxymodel_super_end_remove_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3112,10 +2864,6 @@ void q_identityproxymodel_on_end_remove_rows(void* self, void (*callback)());
 ///
 bool q_identityproxymodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_begin_move_rows` instead
-///
-#define q_identityproxymodel_qbase_begin_move_rows q_identityproxymodel_super_begin_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
@@ -3152,10 +2900,6 @@ void q_identityproxymodel_on_begin_move_rows(void* self, bool (*callback)(void*,
 ///
 void q_identityproxymodel_end_move_rows(void* self);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_end_move_rows` instead
-///
-#define q_identityproxymodel_qbase_end_move_rows q_identityproxymodel_super_end_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
@@ -3189,10 +2933,6 @@ void q_identityproxymodel_on_end_move_rows(void* self, void (*callback)());
 /// @param last int
 ///
 void q_identityproxymodel_begin_insert_columns(void* self, void* parent, int first, int last);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_begin_insert_columns` instead
-///
-#define q_identityproxymodel_qbase_begin_insert_columns q_identityproxymodel_super_begin_insert_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3228,10 +2968,6 @@ void q_identityproxymodel_on_begin_insert_columns(void* self, void (*callback)(v
 ///
 void q_identityproxymodel_end_insert_columns(void* self);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_end_insert_columns` instead
-///
-#define q_identityproxymodel_qbase_end_insert_columns q_identityproxymodel_super_end_insert_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
@@ -3266,10 +3002,6 @@ void q_identityproxymodel_on_end_insert_columns(void* self, void (*callback)());
 ///
 void q_identityproxymodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_begin_remove_columns` instead
-///
-#define q_identityproxymodel_qbase_begin_remove_columns q_identityproxymodel_super_begin_remove_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
@@ -3303,10 +3035,6 @@ void q_identityproxymodel_on_begin_remove_columns(void* self, void (*callback)(v
 /// @param self QIdentityProxyModel*
 ///
 void q_identityproxymodel_end_remove_columns(void* self);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_end_remove_columns` instead
-///
-#define q_identityproxymodel_qbase_end_remove_columns q_identityproxymodel_super_end_remove_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3344,10 +3072,6 @@ void q_identityproxymodel_on_end_remove_columns(void* self, void (*callback)());
 ///
 bool q_identityproxymodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_begin_move_columns` instead
-///
-#define q_identityproxymodel_qbase_begin_move_columns q_identityproxymodel_super_begin_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
@@ -3384,10 +3108,6 @@ void q_identityproxymodel_on_begin_move_columns(void* self, bool (*callback)(voi
 ///
 void q_identityproxymodel_end_move_columns(void* self);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_end_move_columns` instead
-///
-#define q_identityproxymodel_qbase_end_move_columns q_identityproxymodel_super_end_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
@@ -3419,10 +3139,6 @@ void q_identityproxymodel_on_end_move_columns(void* self, void (*callback)());
 ///
 void q_identityproxymodel_begin_reset_model(void* self);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_begin_reset_model` instead
-///
-#define q_identityproxymodel_qbase_begin_reset_model q_identityproxymodel_super_begin_reset_model
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
@@ -3453,10 +3169,6 @@ void q_identityproxymodel_on_begin_reset_model(void* self, void (*callback)());
 /// @param self QIdentityProxyModel*
 ///
 void q_identityproxymodel_end_reset_model(void* self);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_end_reset_model` instead
-///
-#define q_identityproxymodel_qbase_end_reset_model q_identityproxymodel_super_end_reset_model
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3490,10 +3202,6 @@ void q_identityproxymodel_on_end_reset_model(void* self, void (*callback)());
 /// @param to QModelIndex*
 ///
 void q_identityproxymodel_change_persistent_index(void* self, void* from, void* to);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_change_persistent_index` instead
-///
-#define q_identityproxymodel_qbase_change_persistent_index q_identityproxymodel_super_change_persistent_index
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3530,10 +3238,6 @@ void q_identityproxymodel_on_change_persistent_index(void* self, void (*callback
 ///
 void q_identityproxymodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_change_persistent_index_list` instead
-///
-#define q_identityproxymodel_qbase_change_persistent_index_list q_identityproxymodel_super_change_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
@@ -3569,10 +3273,6 @@ void q_identityproxymodel_on_change_persistent_index_list(void* self, void (*cal
 ///
 libqt_list q_identityproxymodel_persistent_index_list(void* self);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_persistent_index_list` instead
-///
-#define q_identityproxymodel_qbase_persistent_index_list q_identityproxymodel_super_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
@@ -3606,10 +3306,6 @@ void q_identityproxymodel_on_persistent_index_list(void* self, libqt_list (*call
 ///
 QObject* q_identityproxymodel_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_sender` instead
-///
-#define q_identityproxymodel_qbase_sender q_identityproxymodel_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -3640,10 +3336,6 @@ void q_identityproxymodel_on_sender(void* self, QObject* (*callback)());
 /// @param self QIdentityProxyModel*
 ///
 int32_t q_identityproxymodel_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_sender_signal_index` instead
-///
-#define q_identityproxymodel_qbase_sender_signal_index q_identityproxymodel_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -3677,10 +3369,6 @@ void q_identityproxymodel_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 int32_t q_identityproxymodel_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_receivers` instead
-///
-#define q_identityproxymodel_qbase_receivers q_identityproxymodel_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -3713,10 +3401,6 @@ void q_identityproxymodel_on_receivers(void* self, int32_t (*callback)(void*, co
 /// @param signal QMetaMethod*
 ///
 bool q_identityproxymodel_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_identityproxymodel_super_is_signal_connected` instead
-///
-#define q_identityproxymodel_qbase_is_signal_connected q_identityproxymodel_super_is_signal_connected
 
 /// Inherited from QObject
 ///

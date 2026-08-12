@@ -115,10 +115,6 @@ int32_t q_pixmap_dev_type(void* self);
 ///
 void q_pixmap_on_dev_type(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_pixmap_super_dev_type` instead
-///
-#define q_pixmap_qbase_dev_type q_pixmap_super_dev_type
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#devType)
 ///
 /// Base class method implementation
@@ -405,10 +401,6 @@ QPaintEngine* q_pixmap_paint_engine(void* self);
 ///
 void q_pixmap_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
-/// @warning DEPRECATED: Use `q_pixmap_super_paint_engine` instead
-///
-#define q_pixmap_qbase_paint_engine q_pixmap_super_paint_engine
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#paintEngine)
 ///
 /// Base class method implementation
@@ -439,10 +431,6 @@ int32_t q_pixmap_metric(void* self, int32_t param1);
 ///
 void q_pixmap_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_pixmap_super_metric` instead
-///
-#define q_pixmap_qbase_metric q_pixmap_super_metric
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#metric)
 ///
 /// Base class method implementation
@@ -469,10 +457,6 @@ QPixmap* q_pixmap_from_image_in_place(void* self, void* image);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_pixmap_on_from_image_in_place(void* self, QPixmap* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_pixmap_super_from_image_in_place` instead
-///
-#define q_pixmap_qbase_from_image_in_place q_pixmap_super_from_image_in_place
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fromImageInPlace)
 ///
@@ -723,10 +707,6 @@ QPixmap* q_pixmap_from_image_in_place2(void* self, void* image, int32_t flags);
 ///
 void q_pixmap_on_from_image_in_place2(void* self, QPixmap* (*callback)(void*, void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_pixmap_super_from_image_in_place2` instead
-///
-#define q_pixmap_qbase_from_image_in_place2 q_pixmap_super_from_image_in_place2
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fromImageInPlace)
 ///
 /// Base class method implementation
@@ -835,10 +815,6 @@ int32_t q_pixmap_encode_metric_f(int32_t metric, double value);
 ///
 void q_pixmap_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_pixmap_super_init_painter` instead
-///
-#define q_pixmap_qbase_init_painter q_pixmap_super_init_painter
-
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#initPainter)
@@ -872,10 +848,6 @@ void q_pixmap_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_pixmap_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `q_pixmap_super_redirected` instead
-///
-#define q_pixmap_qbase_redirected q_pixmap_super_redirected
-
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#redirected)
@@ -907,10 +879,6 @@ void q_pixmap_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*))
 /// @param self QPixmap*
 ///
 QPainter* q_pixmap_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `q_pixmap_super_shared_painter` instead
-///
-#define q_pixmap_qbase_shared_painter q_pixmap_super_shared_painter
 
 /// Inherited from QPaintDevice
 ///
@@ -944,10 +912,6 @@ void q_pixmap_on_shared_painter(void* self, QPainter* (*callback)());
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double q_pixmap_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `q_pixmap_super_get_decoded_metric_f` instead
-///
-#define q_pixmap_qbase_get_decoded_metric_f q_pixmap_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

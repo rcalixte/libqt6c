@@ -42,10 +42,6 @@ const QMetaObject* q_xylegendmarker_meta_object(void* self);
 ///
 void q_xylegendmarker_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_xylegendmarker_super_meta_object` instead
-///
-#define q_xylegendmarker_qbase_meta_object q_xylegendmarker_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -65,10 +61,6 @@ void* q_xylegendmarker_metacast(void* self, const char* param1);
 /// @param callback void* func(QXYLegendMarker* self, const char* param1)
 ///
 void q_xylegendmarker_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_xylegendmarker_super_metacast` instead
-///
-#define q_xylegendmarker_qbase_metacast q_xylegendmarker_super_metacast
 
 /// Base class method implementation
 ///
@@ -90,10 +82,6 @@ int32_t q_xylegendmarker_metacall(void* self, int32_t param1, int param2, void* 
 /// @param callback int32_t func(QXYLegendMarker* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_xylegendmarker_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_xylegendmarker_super_metacall` instead
-///
-#define q_xylegendmarker_qbase_metacall q_xylegendmarker_super_metacall
 
 /// Base class method implementation
 ///
@@ -129,10 +117,6 @@ int32_t q_xylegendmarker_type(void* self);
 ///
 void q_xylegendmarker_on_type(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_xylegendmarker_super_type` instead
-///
-#define q_xylegendmarker_qbase_type q_xylegendmarker_super_type
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qxylegendmarker-qtcharts.html#type)
 ///
 /// Base class method implementation
@@ -157,10 +141,6 @@ QXYSeries* q_xylegendmarker_series(void* self);
 /// @param callback QXYSeries* func()
 ///
 void q_xylegendmarker_on_series(void* self, QXYSeries* (*callback)());
-
-/// @warning DEPRECATED: Use `q_xylegendmarker_super_series` instead
-///
-#define q_xylegendmarker_qbase_series q_xylegendmarker_super_series
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxylegendmarker-qtcharts.html#series)
 ///
@@ -924,10 +904,6 @@ void q_xylegendmarker_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_xylegendmarker_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_xylegendmarker_super_event` instead
-///
-#define q_xylegendmarker_qbase_event q_xylegendmarker_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -961,10 +937,6 @@ void q_xylegendmarker_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_xylegendmarker_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_xylegendmarker_super_event_filter` instead
-///
-#define q_xylegendmarker_qbase_event_filter q_xylegendmarker_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1000,10 +972,6 @@ void q_xylegendmarker_on_event_filter(void* self, bool (*callback)(void*, void*,
 ///
 void q_xylegendmarker_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_xylegendmarker_super_timer_event` instead
-///
-#define q_xylegendmarker_qbase_timer_event q_xylegendmarker_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1036,10 +1004,6 @@ void q_xylegendmarker_on_timer_event(void* self, void (*callback)(void*, void*))
 /// @param event QChildEvent*
 ///
 void q_xylegendmarker_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_xylegendmarker_super_child_event` instead
-///
-#define q_xylegendmarker_qbase_child_event q_xylegendmarker_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1074,10 +1038,6 @@ void q_xylegendmarker_on_child_event(void* self, void (*callback)(void*, void*))
 ///
 void q_xylegendmarker_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_xylegendmarker_super_custom_event` instead
-///
-#define q_xylegendmarker_qbase_custom_event q_xylegendmarker_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1110,10 +1070,6 @@ void q_xylegendmarker_on_custom_event(void* self, void (*callback)(void*, void*)
 /// @param signal QMetaMethod*
 ///
 void q_xylegendmarker_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_xylegendmarker_super_connect_notify` instead
-///
-#define q_xylegendmarker_qbase_connect_notify q_xylegendmarker_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1148,10 +1104,6 @@ void q_xylegendmarker_on_connect_notify(void* self, void (*callback)(void*, void
 ///
 void q_xylegendmarker_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_xylegendmarker_super_disconnect_notify` instead
-///
-#define q_xylegendmarker_qbase_disconnect_notify q_xylegendmarker_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1184,10 +1136,6 @@ void q_xylegendmarker_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 QObject* q_xylegendmarker_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_xylegendmarker_super_sender` instead
-///
-#define q_xylegendmarker_qbase_sender q_xylegendmarker_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1218,10 +1166,6 @@ void q_xylegendmarker_on_sender(void* self, QObject* (*callback)());
 /// @param self QXYLegendMarker*
 ///
 int32_t q_xylegendmarker_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_xylegendmarker_super_sender_signal_index` instead
-///
-#define q_xylegendmarker_qbase_sender_signal_index q_xylegendmarker_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1255,10 +1199,6 @@ void q_xylegendmarker_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_xylegendmarker_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_xylegendmarker_super_receivers` instead
-///
-#define q_xylegendmarker_qbase_receivers q_xylegendmarker_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1291,10 +1231,6 @@ void q_xylegendmarker_on_receivers(void* self, int32_t (*callback)(void*, const 
 /// @param signal QMetaMethod*
 ///
 bool q_xylegendmarker_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_xylegendmarker_super_is_signal_connected` instead
-///
-#define q_xylegendmarker_qbase_is_signal_connected q_xylegendmarker_super_is_signal_connected
 
 /// Inherited from QObject
 ///

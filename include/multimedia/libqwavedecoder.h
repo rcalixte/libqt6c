@@ -59,10 +59,6 @@ const QMetaObject* q_wavedecoder_meta_object(void* self);
 ///
 void q_wavedecoder_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_wavedecoder_super_meta_object` instead
-///
-#define q_wavedecoder_qbase_meta_object q_wavedecoder_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -82,10 +78,6 @@ void* q_wavedecoder_metacast(void* self, const char* param1);
 /// @param callback void* func(QWaveDecoder* self, const char* param1)
 ///
 void q_wavedecoder_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_wavedecoder_super_metacast` instead
-///
-#define q_wavedecoder_qbase_metacast q_wavedecoder_super_metacast
 
 /// Base class method implementation
 ///
@@ -107,10 +99,6 @@ int32_t q_wavedecoder_metacall(void* self, int32_t param1, int param2, void* par
 /// @param callback int32_t func(QWaveDecoder* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_wavedecoder_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_wavedecoder_super_metacall` instead
-///
-#define q_wavedecoder_qbase_metacall q_wavedecoder_super_metacall
 
 /// Base class method implementation
 ///
@@ -167,10 +155,6 @@ bool q_wavedecoder_open(void* self, int32_t mode);
 ///
 void q_wavedecoder_on_open(void* self, bool (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_wavedecoder_super_open` instead
-///
-#define q_wavedecoder_qbase_open q_wavedecoder_super_open
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#open)
 ///
 /// Base class method implementation
@@ -194,10 +178,6 @@ void q_wavedecoder_close(void* self);
 /// @param callback void func()
 ///
 void q_wavedecoder_on_close(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_wavedecoder_super_close` instead
-///
-#define q_wavedecoder_qbase_close q_wavedecoder_super_close
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#close)
 ///
@@ -223,10 +203,6 @@ bool q_wavedecoder_seek(void* self, int64_t pos);
 ///
 void q_wavedecoder_on_seek(void* self, bool (*callback)(void*, int64_t));
 
-/// @warning DEPRECATED: Use `q_wavedecoder_super_seek` instead
-///
-#define q_wavedecoder_qbase_seek q_wavedecoder_super_seek
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#seek)
 ///
 /// Base class method implementation
@@ -250,10 +226,6 @@ int64_t q_wavedecoder_pos(void* self);
 /// @param callback int64_t func()
 ///
 void q_wavedecoder_on_pos(void* self, int64_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_wavedecoder_super_pos` instead
-///
-#define q_wavedecoder_qbase_pos q_wavedecoder_super_pos
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#pos)
 ///
@@ -285,10 +257,6 @@ int64_t q_wavedecoder_size(void* self);
 ///
 void q_wavedecoder_on_size(void* self, int64_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_wavedecoder_super_size` instead
-///
-#define q_wavedecoder_qbase_size q_wavedecoder_super_size
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#size)
 ///
 /// Base class method implementation
@@ -312,10 +280,6 @@ bool q_wavedecoder_is_sequential(void* self);
 ///
 void q_wavedecoder_on_is_sequential(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_wavedecoder_super_is_sequential` instead
-///
-#define q_wavedecoder_qbase_is_sequential q_wavedecoder_super_is_sequential
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#isSequential)
 ///
 /// Base class method implementation
@@ -338,10 +302,6 @@ int64_t q_wavedecoder_bytes_available(void* self);
 /// @param callback int64_t func()
 ///
 void q_wavedecoder_on_bytes_available(void* self, int64_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_wavedecoder_super_bytes_available` instead
-///
-#define q_wavedecoder_qbase_bytes_available q_wavedecoder_super_bytes_available
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#bytesAvailable)
 ///
@@ -1249,10 +1209,6 @@ void q_wavedecoder_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_wavedecoder_at_end(void* self);
 
-/// @warning DEPRECATED: Use `q_wavedecoder_super_at_end` instead
-///
-#define q_wavedecoder_qbase_at_end q_wavedecoder_super_at_end
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#atEnd)
@@ -1283,10 +1239,6 @@ void q_wavedecoder_on_at_end(void* self, bool (*callback)());
 /// @param self QWaveDecoder*
 ///
 bool q_wavedecoder_reset(void* self);
-
-/// @warning DEPRECATED: Use `q_wavedecoder_super_reset` instead
-///
-#define q_wavedecoder_qbase_reset q_wavedecoder_super_reset
 
 /// Inherited from QIODevice
 ///
@@ -1319,10 +1271,6 @@ void q_wavedecoder_on_reset(void* self, bool (*callback)());
 ///
 int64_t q_wavedecoder_bytes_to_write(void* self);
 
-/// @warning DEPRECATED: Use `q_wavedecoder_super_bytes_to_write` instead
-///
-#define q_wavedecoder_qbase_bytes_to_write q_wavedecoder_super_bytes_to_write
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesToWrite)
@@ -1353,10 +1301,6 @@ void q_wavedecoder_on_bytes_to_write(void* self, int64_t (*callback)());
 /// @param self QWaveDecoder*
 ///
 bool q_wavedecoder_can_read_line(void* self);
-
-/// @warning DEPRECATED: Use `q_wavedecoder_super_can_read_line` instead
-///
-#define q_wavedecoder_qbase_can_read_line q_wavedecoder_super_can_read_line
 
 /// Inherited from QIODevice
 ///
@@ -1390,10 +1334,6 @@ void q_wavedecoder_on_can_read_line(void* self, bool (*callback)());
 ///
 bool q_wavedecoder_wait_for_ready_read(void* self, int msecs);
 
-/// @warning DEPRECATED: Use `q_wavedecoder_super_wait_for_ready_read` instead
-///
-#define q_wavedecoder_qbase_wait_for_ready_read q_wavedecoder_super_wait_for_ready_read
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#waitForReadyRead)
@@ -1426,10 +1366,6 @@ void q_wavedecoder_on_wait_for_ready_read(void* self, bool (*callback)(void*, in
 /// @param msecs int
 ///
 bool q_wavedecoder_wait_for_bytes_written(void* self, int msecs);
-
-/// @warning DEPRECATED: Use `q_wavedecoder_super_wait_for_bytes_written` instead
-///
-#define q_wavedecoder_qbase_wait_for_bytes_written q_wavedecoder_super_wait_for_bytes_written
 
 /// Inherited from QIODevice
 ///
@@ -1465,10 +1401,6 @@ void q_wavedecoder_on_wait_for_bytes_written(void* self, bool (*callback)(void*,
 ///
 int64_t q_wavedecoder_read_line_data(void* self, char* data, int64_t maxlen);
 
-/// @warning DEPRECATED: Use `q_wavedecoder_super_read_line_data` instead
-///
-#define q_wavedecoder_qbase_read_line_data q_wavedecoder_super_read_line_data
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLineData)
@@ -1503,10 +1435,6 @@ void q_wavedecoder_on_read_line_data(void* self, int64_t (*callback)(void*, char
 ///
 int64_t q_wavedecoder_skip_data(void* self, int64_t maxSize);
 
-/// @warning DEPRECATED: Use `q_wavedecoder_super_skip_data` instead
-///
-#define q_wavedecoder_qbase_skip_data q_wavedecoder_super_skip_data
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skipData)
@@ -1539,10 +1467,6 @@ void q_wavedecoder_on_skip_data(void* self, int64_t (*callback)(void*, int64_t))
 /// @param event QEvent*
 ///
 bool q_wavedecoder_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wavedecoder_super_event` instead
-///
-#define q_wavedecoder_qbase_event q_wavedecoder_super_event
 
 /// Inherited from QObject
 ///
@@ -1578,10 +1502,6 @@ void q_wavedecoder_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_wavedecoder_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_wavedecoder_super_event_filter` instead
-///
-#define q_wavedecoder_qbase_event_filter q_wavedecoder_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1616,10 +1536,6 @@ void q_wavedecoder_on_event_filter(void* self, bool (*callback)(void*, void*, vo
 ///
 void q_wavedecoder_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wavedecoder_super_timer_event` instead
-///
-#define q_wavedecoder_qbase_timer_event q_wavedecoder_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1652,10 +1568,6 @@ void q_wavedecoder_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_wavedecoder_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_wavedecoder_super_child_event` instead
-///
-#define q_wavedecoder_qbase_child_event q_wavedecoder_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1690,10 +1602,6 @@ void q_wavedecoder_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_wavedecoder_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_wavedecoder_super_custom_event` instead
-///
-#define q_wavedecoder_qbase_custom_event q_wavedecoder_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1726,10 +1634,6 @@ void q_wavedecoder_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_wavedecoder_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_wavedecoder_super_connect_notify` instead
-///
-#define q_wavedecoder_qbase_connect_notify q_wavedecoder_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1764,10 +1668,6 @@ void q_wavedecoder_on_connect_notify(void* self, void (*callback)(void*, void*))
 ///
 void q_wavedecoder_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_wavedecoder_super_disconnect_notify` instead
-///
-#define q_wavedecoder_qbase_disconnect_notify q_wavedecoder_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1800,10 +1700,6 @@ void q_wavedecoder_on_disconnect_notify(void* self, void (*callback)(void*, void
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
 ///
 void q_wavedecoder_set_open_mode(void* self, int32_t openMode);
-
-/// @warning DEPRECATED: Use `q_wavedecoder_super_set_open_mode` instead
-///
-#define q_wavedecoder_qbase_set_open_mode q_wavedecoder_super_set_open_mode
 
 /// Inherited from QIODevice
 ///
@@ -1838,10 +1734,6 @@ void q_wavedecoder_on_set_open_mode(void* self, void (*callback)(void*, int32_t)
 ///
 void q_wavedecoder_set_error_string(void* self, const char* errorString);
 
-/// @warning DEPRECATED: Use `q_wavedecoder_super_set_error_string` instead
-///
-#define q_wavedecoder_qbase_set_error_string q_wavedecoder_super_set_error_string
-
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
@@ -1874,10 +1766,6 @@ void q_wavedecoder_on_set_error_string(void* self, void (*callback)(void*, const
 ///
 QObject* q_wavedecoder_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_wavedecoder_super_sender` instead
-///
-#define q_wavedecoder_qbase_sender q_wavedecoder_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1908,10 +1796,6 @@ void q_wavedecoder_on_sender(void* self, QObject* (*callback)());
 /// @param self QWaveDecoder*
 ///
 int32_t q_wavedecoder_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_wavedecoder_super_sender_signal_index` instead
-///
-#define q_wavedecoder_qbase_sender_signal_index q_wavedecoder_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1945,10 +1829,6 @@ void q_wavedecoder_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_wavedecoder_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_wavedecoder_super_receivers` instead
-///
-#define q_wavedecoder_qbase_receivers q_wavedecoder_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1981,10 +1861,6 @@ void q_wavedecoder_on_receivers(void* self, int32_t (*callback)(void*, const cha
 /// @param signal QMetaMethod*
 ///
 bool q_wavedecoder_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_wavedecoder_super_is_signal_connected` instead
-///
-#define q_wavedecoder_qbase_is_signal_connected q_wavedecoder_super_is_signal_connected
 
 /// Inherited from QObject
 ///

@@ -37,10 +37,6 @@ const QMetaObject* k_dragwidgetdecoratorbase_meta_object(void* self);
 ///
 void k_dragwidgetdecoratorbase_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_dragwidgetdecoratorbase_super_meta_object` instead
-///
-#define k_dragwidgetdecoratorbase_qbase_meta_object k_dragwidgetdecoratorbase_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* k_dragwidgetdecoratorbase_metacast(void* self, const char* param1);
 /// @param callback void* func(KDragWidgetDecoratorBase* self, const char* param1)
 ///
 void k_dragwidgetdecoratorbase_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_dragwidgetdecoratorbase_super_metacast` instead
-///
-#define k_dragwidgetdecoratorbase_qbase_metacast k_dragwidgetdecoratorbase_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t k_dragwidgetdecoratorbase_metacall(void* self, int32_t param1, int param
 /// @param callback int32_t func(KDragWidgetDecoratorBase* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_dragwidgetdecoratorbase_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_dragwidgetdecoratorbase_super_metacall` instead
-///
-#define k_dragwidgetdecoratorbase_qbase_metacall k_dragwidgetdecoratorbase_super_metacall
 
 /// Base class method implementation
 ///
@@ -135,10 +123,6 @@ QWidget* k_dragwidgetdecoratorbase_decorated_widget(void* self);
 ///
 void k_dragwidgetdecoratorbase_on_decorated_widget(void* self, QWidget* (*callback)());
 
-/// @warning DEPRECATED: Use `k_dragwidgetdecoratorbase_super_decorated_widget` instead
-///
-#define k_dragwidgetdecoratorbase_qbase_decorated_widget k_dragwidgetdecoratorbase_super_decorated_widget
-
 /// [Upstream resources](https://api.kde.org/kdragwidgetdecoratorbase.html#decoratedWidget)
 ///
 /// Base class method implementation
@@ -161,10 +145,6 @@ QDrag* k_dragwidgetdecoratorbase_drag_object(void* self);
 /// @param callback QDrag* func()
 ///
 void k_dragwidgetdecoratorbase_on_drag_object(void* self, QDrag* (*callback)());
-
-/// @warning DEPRECATED: Use `k_dragwidgetdecoratorbase_super_drag_object` instead
-///
-#define k_dragwidgetdecoratorbase_qbase_drag_object k_dragwidgetdecoratorbase_super_drag_object
 
 /// [Upstream resources](https://api.kde.org/kdragwidgetdecoratorbase.html#dragObject)
 ///
@@ -191,10 +171,6 @@ bool k_dragwidgetdecoratorbase_event_filter(void* self, void* watched, void* eve
 ///
 void k_dragwidgetdecoratorbase_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_dragwidgetdecoratorbase_super_event_filter` instead
-///
-#define k_dragwidgetdecoratorbase_qbase_event_filter k_dragwidgetdecoratorbase_super_event_filter
-
 /// [Upstream resources](https://api.kde.org/kdragwidgetdecoratorbase.html#eventFilter)
 ///
 /// Base class method implementation
@@ -219,10 +195,6 @@ void k_dragwidgetdecoratorbase_start_drag(void* self);
 /// @param callback void func()
 ///
 void k_dragwidgetdecoratorbase_on_start_drag(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_dragwidgetdecoratorbase_super_start_drag` instead
-///
-#define k_dragwidgetdecoratorbase_qbase_start_drag k_dragwidgetdecoratorbase_super_start_drag
 
 /// [Upstream resources](https://api.kde.org/kdragwidgetdecoratorbase.html#startDrag)
 ///
@@ -709,10 +681,6 @@ void k_dragwidgetdecoratorbase_on_destroyed1(void* self, void (*callback)(void*,
 ///
 bool k_dragwidgetdecoratorbase_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_dragwidgetdecoratorbase_super_event` instead
-///
-#define k_dragwidgetdecoratorbase_qbase_event k_dragwidgetdecoratorbase_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -745,10 +713,6 @@ void k_dragwidgetdecoratorbase_on_event(void* self, bool (*callback)(void*, void
 /// @param event QTimerEvent*
 ///
 void k_dragwidgetdecoratorbase_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_dragwidgetdecoratorbase_super_timer_event` instead
-///
-#define k_dragwidgetdecoratorbase_qbase_timer_event k_dragwidgetdecoratorbase_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -783,10 +747,6 @@ void k_dragwidgetdecoratorbase_on_timer_event(void* self, void (*callback)(void*
 ///
 void k_dragwidgetdecoratorbase_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_dragwidgetdecoratorbase_super_child_event` instead
-///
-#define k_dragwidgetdecoratorbase_qbase_child_event k_dragwidgetdecoratorbase_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -819,10 +779,6 @@ void k_dragwidgetdecoratorbase_on_child_event(void* self, void (*callback)(void*
 /// @param event QEvent*
 ///
 void k_dragwidgetdecoratorbase_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_dragwidgetdecoratorbase_super_custom_event` instead
-///
-#define k_dragwidgetdecoratorbase_qbase_custom_event k_dragwidgetdecoratorbase_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -857,10 +813,6 @@ void k_dragwidgetdecoratorbase_on_custom_event(void* self, void (*callback)(void
 ///
 void k_dragwidgetdecoratorbase_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_dragwidgetdecoratorbase_super_connect_notify` instead
-///
-#define k_dragwidgetdecoratorbase_qbase_connect_notify k_dragwidgetdecoratorbase_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -894,10 +846,6 @@ void k_dragwidgetdecoratorbase_on_connect_notify(void* self, void (*callback)(vo
 ///
 void k_dragwidgetdecoratorbase_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_dragwidgetdecoratorbase_super_disconnect_notify` instead
-///
-#define k_dragwidgetdecoratorbase_qbase_disconnect_notify k_dragwidgetdecoratorbase_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -930,10 +878,6 @@ void k_dragwidgetdecoratorbase_on_disconnect_notify(void* self, void (*callback)
 ///
 QObject* k_dragwidgetdecoratorbase_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_dragwidgetdecoratorbase_super_sender` instead
-///
-#define k_dragwidgetdecoratorbase_qbase_sender k_dragwidgetdecoratorbase_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -964,10 +908,6 @@ void k_dragwidgetdecoratorbase_on_sender(void* self, QObject* (*callback)());
 /// @param self KDragWidgetDecoratorBase*
 ///
 int32_t k_dragwidgetdecoratorbase_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_dragwidgetdecoratorbase_super_sender_signal_index` instead
-///
-#define k_dragwidgetdecoratorbase_qbase_sender_signal_index k_dragwidgetdecoratorbase_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1001,10 +941,6 @@ void k_dragwidgetdecoratorbase_on_sender_signal_index(void* self, int32_t (*call
 ///
 int32_t k_dragwidgetdecoratorbase_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_dragwidgetdecoratorbase_super_receivers` instead
-///
-#define k_dragwidgetdecoratorbase_qbase_receivers k_dragwidgetdecoratorbase_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1037,10 +973,6 @@ void k_dragwidgetdecoratorbase_on_receivers(void* self, int32_t (*callback)(void
 /// @param signal QMetaMethod*
 ///
 bool k_dragwidgetdecoratorbase_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_dragwidgetdecoratorbase_super_is_signal_connected` instead
-///
-#define k_dragwidgetdecoratorbase_qbase_is_signal_connected k_dragwidgetdecoratorbase_super_is_signal_connected
 
 /// Inherited from QObject
 ///

@@ -31,10 +31,6 @@ const QMetaObject* k_parts__listingfilterextension_meta_object(void* self);
 ///
 void k_parts__listingfilterextension_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_parts__listingfilterextension_super_meta_object` instead
-///
-#define k_parts__listingfilterextension_qbase_meta_object k_parts__listingfilterextension_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -54,10 +50,6 @@ void* k_parts__listingfilterextension_metacast(void* self, const char* param1);
 /// @param callback void* func(KParts__ListingFilterExtension* self, const char* param1)
 ///
 void k_parts__listingfilterextension_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_parts__listingfilterextension_super_metacast` instead
-///
-#define k_parts__listingfilterextension_qbase_metacast k_parts__listingfilterextension_super_metacast
 
 /// Base class method implementation
 ///
@@ -79,10 +71,6 @@ int32_t k_parts__listingfilterextension_metacall(void* self, int32_t param1, int
 /// @param callback int32_t func(KParts__ListingFilterExtension* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_parts__listingfilterextension_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_parts__listingfilterextension_super_metacall` instead
-///
-#define k_parts__listingfilterextension_qbase_metacall k_parts__listingfilterextension_super_metacall
 
 /// Base class method implementation
 ///
@@ -124,10 +112,6 @@ int32_t k_parts__listingfilterextension_supported_filter_modes(void* self);
 ///
 void k_parts__listingfilterextension_on_supported_filter_modes(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `k_parts__listingfilterextension_super_supported_filter_modes` instead
-///
-#define k_parts__listingfilterextension_qbase_supported_filter_modes k_parts__listingfilterextension_super_supported_filter_modes
-
 /// [Upstream resources](https://api.kde.org/kparts-listingfilterextension.html#supportedFilterModes)
 ///
 /// Base class method implementation
@@ -153,10 +137,6 @@ bool k_parts__listingfilterextension_supports_multiple_filters(void* self, int32
 /// @param callback bool func(KParts__ListingFilterExtension* self, enum KParts__ListingFilterExtension__FilterMode mode)
 ///
 void k_parts__listingfilterextension_on_supports_multiple_filters(void* self, bool (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `k_parts__listingfilterextension_super_supports_multiple_filters` instead
-///
-#define k_parts__listingfilterextension_qbase_supports_multiple_filters k_parts__listingfilterextension_super_supports_multiple_filters
 
 /// [Upstream resources](https://api.kde.org/kparts-listingfilterextension.html#supportsMultipleFilters)
 ///
@@ -185,10 +165,6 @@ QVariant* k_parts__listingfilterextension_filter(void* self, int32_t mode);
 ///
 void k_parts__listingfilterextension_on_filter(void* self, QVariant* (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `k_parts__listingfilterextension_super_filter` instead
-///
-#define k_parts__listingfilterextension_qbase_filter k_parts__listingfilterextension_super_filter
-
 /// [Upstream resources](https://api.kde.org/kparts-listingfilterextension.html#filter)
 ///
 /// Base class method implementation
@@ -214,10 +190,6 @@ void k_parts__listingfilterextension_set_filter(void* self, int32_t mode, void* 
 /// @param callback void func(KParts__ListingFilterExtension* self, enum KParts__ListingFilterExtension__FilterMode mode, QVariant* filter)
 ///
 void k_parts__listingfilterextension_on_set_filter(void* self, void (*callback)(void*, int32_t, void*));
-
-/// @warning DEPRECATED: Use `k_parts__listingfilterextension_super_set_filter` instead
-///
-#define k_parts__listingfilterextension_qbase_set_filter k_parts__listingfilterextension_super_set_filter
 
 /// [Upstream resources](https://api.kde.org/kparts-listingfilterextension.html#setFilter)
 ///
@@ -706,10 +678,6 @@ void k_parts__listingfilterextension_on_destroyed1(void* self, void (*callback)(
 ///
 bool k_parts__listingfilterextension_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_parts__listingfilterextension_super_event` instead
-///
-#define k_parts__listingfilterextension_qbase_event k_parts__listingfilterextension_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -743,10 +711,6 @@ void k_parts__listingfilterextension_on_event(void* self, bool (*callback)(void*
 /// @param event QEvent*
 ///
 bool k_parts__listingfilterextension_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_parts__listingfilterextension_super_event_filter` instead
-///
-#define k_parts__listingfilterextension_qbase_event_filter k_parts__listingfilterextension_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -782,10 +746,6 @@ void k_parts__listingfilterextension_on_event_filter(void* self, bool (*callback
 ///
 void k_parts__listingfilterextension_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_parts__listingfilterextension_super_timer_event` instead
-///
-#define k_parts__listingfilterextension_qbase_timer_event k_parts__listingfilterextension_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -818,10 +778,6 @@ void k_parts__listingfilterextension_on_timer_event(void* self, void (*callback)
 /// @param event QChildEvent*
 ///
 void k_parts__listingfilterextension_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_parts__listingfilterextension_super_child_event` instead
-///
-#define k_parts__listingfilterextension_qbase_child_event k_parts__listingfilterextension_super_child_event
 
 /// Inherited from QObject
 ///
@@ -856,10 +812,6 @@ void k_parts__listingfilterextension_on_child_event(void* self, void (*callback)
 ///
 void k_parts__listingfilterextension_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_parts__listingfilterextension_super_custom_event` instead
-///
-#define k_parts__listingfilterextension_qbase_custom_event k_parts__listingfilterextension_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -892,10 +844,6 @@ void k_parts__listingfilterextension_on_custom_event(void* self, void (*callback
 /// @param signal QMetaMethod*
 ///
 void k_parts__listingfilterextension_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_parts__listingfilterextension_super_connect_notify` instead
-///
-#define k_parts__listingfilterextension_qbase_connect_notify k_parts__listingfilterextension_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -930,10 +878,6 @@ void k_parts__listingfilterextension_on_connect_notify(void* self, void (*callba
 ///
 void k_parts__listingfilterextension_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_parts__listingfilterextension_super_disconnect_notify` instead
-///
-#define k_parts__listingfilterextension_qbase_disconnect_notify k_parts__listingfilterextension_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -966,10 +910,6 @@ void k_parts__listingfilterextension_on_disconnect_notify(void* self, void (*cal
 ///
 QObject* k_parts__listingfilterextension_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_parts__listingfilterextension_super_sender` instead
-///
-#define k_parts__listingfilterextension_qbase_sender k_parts__listingfilterextension_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1000,10 +940,6 @@ void k_parts__listingfilterextension_on_sender(void* self, QObject* (*callback)(
 /// @param self KParts__ListingFilterExtension*
 ///
 int32_t k_parts__listingfilterextension_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_parts__listingfilterextension_super_sender_signal_index` instead
-///
-#define k_parts__listingfilterextension_qbase_sender_signal_index k_parts__listingfilterextension_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1037,10 +973,6 @@ void k_parts__listingfilterextension_on_sender_signal_index(void* self, int32_t 
 ///
 int32_t k_parts__listingfilterextension_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_parts__listingfilterextension_super_receivers` instead
-///
-#define k_parts__listingfilterextension_qbase_receivers k_parts__listingfilterextension_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1073,10 +1005,6 @@ void k_parts__listingfilterextension_on_receivers(void* self, int32_t (*callback
 /// @param signal QMetaMethod*
 ///
 bool k_parts__listingfilterextension_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_parts__listingfilterextension_super_is_signal_connected` instead
-///
-#define k_parts__listingfilterextension_qbase_is_signal_connected k_parts__listingfilterextension_super_is_signal_connected
 
 /// Inherited from QObject
 ///

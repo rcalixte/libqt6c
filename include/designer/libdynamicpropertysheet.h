@@ -29,10 +29,6 @@ bool q_designerdynamicpropertysheetextension_dynamic_properties_allowed(void* se
 ///
 void q_designerdynamicpropertysheetextension_on_dynamic_properties_allowed(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_designerdynamicpropertysheetextension_super_dynamic_properties_allowed` instead
-///
-#define q_designerdynamicpropertysheetextension_qbase_dynamic_properties_allowed q_designerdynamicpropertysheetextension_super_dynamic_properties_allowed
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdynamicpropertysheetextension.html#dynamicPropertiesAllowed)
 ///
 /// Base class method implementation
@@ -57,10 +53,6 @@ int32_t q_designerdynamicpropertysheetextension_add_dynamic_property(void* self,
 /// @param callback int32_t func(QDesignerDynamicPropertySheetExtension* self, const char* propertyName, QVariant* value)
 ///
 void q_designerdynamicpropertysheetextension_on_add_dynamic_property(void* self, int32_t (*callback)(void*, const char*, void*));
-
-/// @warning DEPRECATED: Use `q_designerdynamicpropertysheetextension_super_add_dynamic_property` instead
-///
-#define q_designerdynamicpropertysheetextension_qbase_add_dynamic_property q_designerdynamicpropertysheetextension_super_add_dynamic_property
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdynamicpropertysheetextension.html#addDynamicProperty)
 ///
@@ -88,10 +80,6 @@ bool q_designerdynamicpropertysheetextension_remove_dynamic_property(void* self,
 ///
 void q_designerdynamicpropertysheetextension_on_remove_dynamic_property(void* self, bool (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_designerdynamicpropertysheetextension_super_remove_dynamic_property` instead
-///
-#define q_designerdynamicpropertysheetextension_qbase_remove_dynamic_property q_designerdynamicpropertysheetextension_super_remove_dynamic_property
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdynamicpropertysheetextension.html#removeDynamicProperty)
 ///
 /// Base class method implementation
@@ -117,10 +105,6 @@ bool q_designerdynamicpropertysheetextension_is_dynamic_property(void* self, int
 ///
 void q_designerdynamicpropertysheetextension_on_is_dynamic_property(void* self, bool (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_designerdynamicpropertysheetextension_super_is_dynamic_property` instead
-///
-#define q_designerdynamicpropertysheetextension_qbase_is_dynamic_property q_designerdynamicpropertysheetextension_super_is_dynamic_property
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdynamicpropertysheetextension.html#isDynamicProperty)
 ///
 /// Base class method implementation
@@ -145,10 +129,6 @@ bool q_designerdynamicpropertysheetextension_can_add_dynamic_property(void* self
 /// @param callback bool func(QDesignerDynamicPropertySheetExtension* self, const char* propertyName)
 ///
 void q_designerdynamicpropertysheetextension_on_can_add_dynamic_property(void* self, bool (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_designerdynamicpropertysheetextension_super_can_add_dynamic_property` instead
-///
-#define q_designerdynamicpropertysheetextension_qbase_can_add_dynamic_property q_designerdynamicpropertysheetextension_super_can_add_dynamic_property
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdynamicpropertysheetextension.html#canAddDynamicProperty)
 ///

@@ -37,10 +37,6 @@ const QMetaObject* k_adjustingscrollarea_meta_object(void* self);
 ///
 void k_adjustingscrollarea_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_meta_object` instead
-///
-#define k_adjustingscrollarea_qbase_meta_object k_adjustingscrollarea_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* k_adjustingscrollarea_metacast(void* self, const char* param1);
 /// @param callback void* func(KAdjustingScrollArea* self, const char* param1)
 ///
 void k_adjustingscrollarea_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_metacast` instead
-///
-#define k_adjustingscrollarea_qbase_metacast k_adjustingscrollarea_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t k_adjustingscrollarea_metacall(void* self, int32_t param1, int param2, v
 /// @param callback int32_t func(KAdjustingScrollArea* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_adjustingscrollarea_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_metacall` instead
-///
-#define k_adjustingscrollarea_qbase_metacall k_adjustingscrollarea_super_metacall
 
 /// Base class method implementation
 ///
@@ -124,10 +112,6 @@ QSize* k_adjustingscrollarea_minimum_size_hint(void* self);
 ///
 void k_adjustingscrollarea_on_minimum_size_hint(void* self, QSize* (*callback)());
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_minimum_size_hint` instead
-///
-#define k_adjustingscrollarea_qbase_minimum_size_hint k_adjustingscrollarea_super_minimum_size_hint
-
 /// [Upstream resources](https://api.kde.org/kadjustingscrollarea.html#minimumSizeHint)
 ///
 /// Base class method implementation
@@ -153,10 +137,6 @@ QSize* k_adjustingscrollarea_size_hint(void* self);
 ///
 void k_adjustingscrollarea_on_size_hint(void* self, QSize* (*callback)());
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_size_hint` instead
-///
-#define k_adjustingscrollarea_qbase_size_hint k_adjustingscrollarea_super_size_hint
-
 /// [Upstream resources](https://api.kde.org/kadjustingscrollarea.html#sizeHint)
 ///
 /// Base class method implementation
@@ -180,10 +160,6 @@ bool k_adjustingscrollarea_event(void* self, void* event);
 /// @param callback bool func(KAdjustingScrollArea* self, QEvent* event)
 ///
 void k_adjustingscrollarea_on_event(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_event` instead
-///
-#define k_adjustingscrollarea_qbase_event k_adjustingscrollarea_super_event
 
 /// [Upstream resources](https://api.kde.org/kadjustingscrollarea.html#event)
 ///
@@ -3573,10 +3549,6 @@ int32_t k_adjustingscrollarea_encode_metric_f(int32_t metric, double value);
 ///
 bool k_adjustingscrollarea_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_focus_next_prev_child` instead
-///
-#define k_adjustingscrollarea_qbase_focus_next_prev_child k_adjustingscrollarea_super_focus_next_prev_child
-
 /// Inherited from QScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#focusNextPrevChild)
@@ -3609,10 +3581,6 @@ void k_adjustingscrollarea_on_focus_next_prev_child(void* self, bool (*callback)
 /// @param param1 QResizeEvent*
 ///
 void k_adjustingscrollarea_resize_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_resize_event` instead
-///
-#define k_adjustingscrollarea_qbase_resize_event k_adjustingscrollarea_super_resize_event
 
 /// Inherited from QScrollArea
 ///
@@ -3648,10 +3616,6 @@ void k_adjustingscrollarea_on_resize_event(void* self, void (*callback)(void*, v
 ///
 void k_adjustingscrollarea_scroll_contents_by(void* self, int dx, int dy);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_scroll_contents_by` instead
-///
-#define k_adjustingscrollarea_qbase_scroll_contents_by k_adjustingscrollarea_super_scroll_contents_by
-
 /// Inherited from QScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollarea.html#scrollContentsBy)
@@ -3684,10 +3648,6 @@ void k_adjustingscrollarea_on_scroll_contents_by(void* self, void (*callback)(vo
 /// @param self KAdjustingScrollArea*
 ///
 QSize* k_adjustingscrollarea_viewport_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_viewport_size_hint` instead
-///
-#define k_adjustingscrollarea_qbase_viewport_size_hint k_adjustingscrollarea_super_viewport_size_hint
 
 /// Inherited from QScrollArea
 ///
@@ -3723,10 +3683,6 @@ void k_adjustingscrollarea_on_viewport_size_hint(void* self, QSize* (*callback)(
 ///
 void k_adjustingscrollarea_setup_viewport(void* self, void* viewport);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_setup_viewport` instead
-///
-#define k_adjustingscrollarea_qbase_setup_viewport k_adjustingscrollarea_super_setup_viewport
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
@@ -3759,10 +3715,6 @@ void k_adjustingscrollarea_on_setup_viewport(void* self, void (*callback)(void*,
 /// @param param1 QEvent*
 ///
 bool k_adjustingscrollarea_viewport_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_viewport_event` instead
-///
-#define k_adjustingscrollarea_qbase_viewport_event k_adjustingscrollarea_super_viewport_event
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -3797,10 +3749,6 @@ void k_adjustingscrollarea_on_viewport_event(void* self, bool (*callback)(void*,
 ///
 void k_adjustingscrollarea_paint_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_paint_event` instead
-///
-#define k_adjustingscrollarea_qbase_paint_event k_adjustingscrollarea_super_paint_event
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#paintEvent)
@@ -3833,10 +3781,6 @@ void k_adjustingscrollarea_on_paint_event(void* self, void (*callback)(void*, vo
 /// @param param1 QMouseEvent*
 ///
 void k_adjustingscrollarea_mouse_press_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_mouse_press_event` instead
-///
-#define k_adjustingscrollarea_qbase_mouse_press_event k_adjustingscrollarea_super_mouse_press_event
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -3871,10 +3815,6 @@ void k_adjustingscrollarea_on_mouse_press_event(void* self, void (*callback)(voi
 ///
 void k_adjustingscrollarea_mouse_release_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_mouse_release_event` instead
-///
-#define k_adjustingscrollarea_qbase_mouse_release_event k_adjustingscrollarea_super_mouse_release_event
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#mouseReleaseEvent)
@@ -3907,10 +3847,6 @@ void k_adjustingscrollarea_on_mouse_release_event(void* self, void (*callback)(v
 /// @param param1 QMouseEvent*
 ///
 void k_adjustingscrollarea_mouse_double_click_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_mouse_double_click_event` instead
-///
-#define k_adjustingscrollarea_qbase_mouse_double_click_event k_adjustingscrollarea_super_mouse_double_click_event
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -3945,10 +3881,6 @@ void k_adjustingscrollarea_on_mouse_double_click_event(void* self, void (*callba
 ///
 void k_adjustingscrollarea_mouse_move_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_mouse_move_event` instead
-///
-#define k_adjustingscrollarea_qbase_mouse_move_event k_adjustingscrollarea_super_mouse_move_event
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#mouseMoveEvent)
@@ -3981,10 +3913,6 @@ void k_adjustingscrollarea_on_mouse_move_event(void* self, void (*callback)(void
 /// @param param1 QWheelEvent*
 ///
 void k_adjustingscrollarea_wheel_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_wheel_event` instead
-///
-#define k_adjustingscrollarea_qbase_wheel_event k_adjustingscrollarea_super_wheel_event
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4019,10 +3947,6 @@ void k_adjustingscrollarea_on_wheel_event(void* self, void (*callback)(void*, vo
 ///
 void k_adjustingscrollarea_context_menu_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_context_menu_event` instead
-///
-#define k_adjustingscrollarea_qbase_context_menu_event k_adjustingscrollarea_super_context_menu_event
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#contextMenuEvent)
@@ -4055,10 +3979,6 @@ void k_adjustingscrollarea_on_context_menu_event(void* self, void (*callback)(vo
 /// @param param1 QDragEnterEvent*
 ///
 void k_adjustingscrollarea_drag_enter_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_drag_enter_event` instead
-///
-#define k_adjustingscrollarea_qbase_drag_enter_event k_adjustingscrollarea_super_drag_enter_event
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4093,10 +4013,6 @@ void k_adjustingscrollarea_on_drag_enter_event(void* self, void (*callback)(void
 ///
 void k_adjustingscrollarea_drag_move_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_drag_move_event` instead
-///
-#define k_adjustingscrollarea_qbase_drag_move_event k_adjustingscrollarea_super_drag_move_event
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#dragMoveEvent)
@@ -4129,10 +4045,6 @@ void k_adjustingscrollarea_on_drag_move_event(void* self, void (*callback)(void*
 /// @param param1 QDragLeaveEvent*
 ///
 void k_adjustingscrollarea_drag_leave_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_drag_leave_event` instead
-///
-#define k_adjustingscrollarea_qbase_drag_leave_event k_adjustingscrollarea_super_drag_leave_event
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4167,10 +4079,6 @@ void k_adjustingscrollarea_on_drag_leave_event(void* self, void (*callback)(void
 ///
 void k_adjustingscrollarea_drop_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_drop_event` instead
-///
-#define k_adjustingscrollarea_qbase_drop_event k_adjustingscrollarea_super_drop_event
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#dropEvent)
@@ -4203,10 +4111,6 @@ void k_adjustingscrollarea_on_drop_event(void* self, void (*callback)(void*, voi
 /// @param param1 QKeyEvent*
 ///
 void k_adjustingscrollarea_key_press_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_key_press_event` instead
-///
-#define k_adjustingscrollarea_qbase_key_press_event k_adjustingscrollarea_super_key_press_event
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4241,10 +4145,6 @@ void k_adjustingscrollarea_on_key_press_event(void* self, void (*callback)(void*
 ///
 void k_adjustingscrollarea_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_change_event` instead
-///
-#define k_adjustingscrollarea_qbase_change_event k_adjustingscrollarea_super_change_event
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#changeEvent)
@@ -4278,10 +4178,6 @@ void k_adjustingscrollarea_on_change_event(void* self, void (*callback)(void*, v
 ///
 void k_adjustingscrollarea_init_style_option(void* self, void* option);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_init_style_option` instead
-///
-#define k_adjustingscrollarea_qbase_init_style_option k_adjustingscrollarea_super_init_style_option
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
@@ -4314,10 +4210,6 @@ void k_adjustingscrollarea_on_init_style_option(void* self, void (*callback)(voi
 ///
 int32_t k_adjustingscrollarea_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_dev_type` instead
-///
-#define k_adjustingscrollarea_qbase_dev_type k_adjustingscrollarea_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -4349,10 +4241,6 @@ void k_adjustingscrollarea_on_dev_type(void* self, int32_t (*callback)());
 /// @param visible bool
 ///
 void k_adjustingscrollarea_set_visible(void* self, bool visible);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_set_visible` instead
-///
-#define k_adjustingscrollarea_qbase_set_visible k_adjustingscrollarea_super_set_visible
 
 /// Inherited from QWidget
 ///
@@ -4387,10 +4275,6 @@ void k_adjustingscrollarea_on_set_visible(void* self, void (*callback)(void*, bo
 ///
 int32_t k_adjustingscrollarea_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_height_for_width` instead
-///
-#define k_adjustingscrollarea_qbase_height_for_width k_adjustingscrollarea_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -4423,10 +4307,6 @@ void k_adjustingscrollarea_on_height_for_width(void* self, int32_t (*callback)(v
 ///
 bool k_adjustingscrollarea_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_has_height_for_width` instead
-///
-#define k_adjustingscrollarea_qbase_has_height_for_width k_adjustingscrollarea_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -4457,10 +4337,6 @@ void k_adjustingscrollarea_on_has_height_for_width(void* self, bool (*callback)(
 /// @param self KAdjustingScrollArea*
 ///
 QPaintEngine* k_adjustingscrollarea_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_paint_engine` instead
-///
-#define k_adjustingscrollarea_qbase_paint_engine k_adjustingscrollarea_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -4493,10 +4369,6 @@ void k_adjustingscrollarea_on_paint_engine(void* self, QPaintEngine* (*callback)
 /// @param event QKeyEvent*
 ///
 void k_adjustingscrollarea_key_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_key_release_event` instead
-///
-#define k_adjustingscrollarea_qbase_key_release_event k_adjustingscrollarea_super_key_release_event
 
 /// Inherited from QWidget
 ///
@@ -4531,10 +4403,6 @@ void k_adjustingscrollarea_on_key_release_event(void* self, void (*callback)(voi
 ///
 void k_adjustingscrollarea_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_focus_in_event` instead
-///
-#define k_adjustingscrollarea_qbase_focus_in_event k_adjustingscrollarea_super_focus_in_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -4567,10 +4435,6 @@ void k_adjustingscrollarea_on_focus_in_event(void* self, void (*callback)(void*,
 /// @param event QFocusEvent*
 ///
 void k_adjustingscrollarea_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_focus_out_event` instead
-///
-#define k_adjustingscrollarea_qbase_focus_out_event k_adjustingscrollarea_super_focus_out_event
 
 /// Inherited from QWidget
 ///
@@ -4605,10 +4469,6 @@ void k_adjustingscrollarea_on_focus_out_event(void* self, void (*callback)(void*
 ///
 void k_adjustingscrollarea_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_enter_event` instead
-///
-#define k_adjustingscrollarea_qbase_enter_event k_adjustingscrollarea_super_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -4641,10 +4501,6 @@ void k_adjustingscrollarea_on_enter_event(void* self, void (*callback)(void*, vo
 /// @param event QEvent*
 ///
 void k_adjustingscrollarea_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_leave_event` instead
-///
-#define k_adjustingscrollarea_qbase_leave_event k_adjustingscrollarea_super_leave_event
 
 /// Inherited from QWidget
 ///
@@ -4679,10 +4535,6 @@ void k_adjustingscrollarea_on_leave_event(void* self, void (*callback)(void*, vo
 ///
 void k_adjustingscrollarea_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_move_event` instead
-///
-#define k_adjustingscrollarea_qbase_move_event k_adjustingscrollarea_super_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -4715,10 +4567,6 @@ void k_adjustingscrollarea_on_move_event(void* self, void (*callback)(void*, voi
 /// @param event QCloseEvent*
 ///
 void k_adjustingscrollarea_close_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_close_event` instead
-///
-#define k_adjustingscrollarea_qbase_close_event k_adjustingscrollarea_super_close_event
 
 /// Inherited from QWidget
 ///
@@ -4753,10 +4601,6 @@ void k_adjustingscrollarea_on_close_event(void* self, void (*callback)(void*, vo
 ///
 void k_adjustingscrollarea_tablet_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_tablet_event` instead
-///
-#define k_adjustingscrollarea_qbase_tablet_event k_adjustingscrollarea_super_tablet_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4789,10 +4633,6 @@ void k_adjustingscrollarea_on_tablet_event(void* self, void (*callback)(void*, v
 /// @param event QActionEvent*
 ///
 void k_adjustingscrollarea_action_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_action_event` instead
-///
-#define k_adjustingscrollarea_qbase_action_event k_adjustingscrollarea_super_action_event
 
 /// Inherited from QWidget
 ///
@@ -4827,10 +4667,6 @@ void k_adjustingscrollarea_on_action_event(void* self, void (*callback)(void*, v
 ///
 void k_adjustingscrollarea_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_show_event` instead
-///
-#define k_adjustingscrollarea_qbase_show_event k_adjustingscrollarea_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -4863,10 +4699,6 @@ void k_adjustingscrollarea_on_show_event(void* self, void (*callback)(void*, voi
 /// @param event QHideEvent*
 ///
 void k_adjustingscrollarea_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_hide_event` instead
-///
-#define k_adjustingscrollarea_qbase_hide_event k_adjustingscrollarea_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -4903,10 +4735,6 @@ void k_adjustingscrollarea_on_hide_event(void* self, void (*callback)(void*, voi
 ///
 bool k_adjustingscrollarea_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_native_event` instead
-///
-#define k_adjustingscrollarea_qbase_native_event k_adjustingscrollarea_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4942,10 +4770,6 @@ void k_adjustingscrollarea_on_native_event(void* self, bool (*callback)(void*, l
 ///
 int32_t k_adjustingscrollarea_metric(void* self, int32_t param1);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_metric` instead
-///
-#define k_adjustingscrollarea_qbase_metric k_adjustingscrollarea_super_metric
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -4978,10 +4802,6 @@ void k_adjustingscrollarea_on_metric(void* self, int32_t (*callback)(void*, int3
 /// @param painter QPainter*
 ///
 void k_adjustingscrollarea_init_painter(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_init_painter` instead
-///
-#define k_adjustingscrollarea_qbase_init_painter k_adjustingscrollarea_super_init_painter
 
 /// Inherited from QWidget
 ///
@@ -5016,10 +4836,6 @@ void k_adjustingscrollarea_on_init_painter(void* self, void (*callback)(void*, v
 ///
 QPaintDevice* k_adjustingscrollarea_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_redirected` instead
-///
-#define k_adjustingscrollarea_qbase_redirected k_adjustingscrollarea_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -5051,10 +4867,6 @@ void k_adjustingscrollarea_on_redirected(void* self, QPaintDevice* (*callback)(v
 /// @param self KAdjustingScrollArea*
 ///
 QPainter* k_adjustingscrollarea_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_shared_painter` instead
-///
-#define k_adjustingscrollarea_qbase_shared_painter k_adjustingscrollarea_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -5088,10 +4900,6 @@ void k_adjustingscrollarea_on_shared_painter(void* self, QPainter* (*callback)()
 ///
 void k_adjustingscrollarea_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_input_method_event` instead
-///
-#define k_adjustingscrollarea_qbase_input_method_event k_adjustingscrollarea_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -5124,10 +4932,6 @@ void k_adjustingscrollarea_on_input_method_event(void* self, void (*callback)(vo
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* k_adjustingscrollarea_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_input_method_query` instead
-///
-#define k_adjustingscrollarea_qbase_input_method_query k_adjustingscrollarea_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -5164,10 +4968,6 @@ void k_adjustingscrollarea_on_input_method_query(void* self, QVariant* (*callbac
 ///
 void k_adjustingscrollarea_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_timer_event` instead
-///
-#define k_adjustingscrollarea_qbase_timer_event k_adjustingscrollarea_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -5200,10 +5000,6 @@ void k_adjustingscrollarea_on_timer_event(void* self, void (*callback)(void*, vo
 /// @param event QChildEvent*
 ///
 void k_adjustingscrollarea_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_child_event` instead
-///
-#define k_adjustingscrollarea_qbase_child_event k_adjustingscrollarea_super_child_event
 
 /// Inherited from QObject
 ///
@@ -5238,10 +5034,6 @@ void k_adjustingscrollarea_on_child_event(void* self, void (*callback)(void*, vo
 ///
 void k_adjustingscrollarea_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_custom_event` instead
-///
-#define k_adjustingscrollarea_qbase_custom_event k_adjustingscrollarea_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -5275,10 +5067,6 @@ void k_adjustingscrollarea_on_custom_event(void* self, void (*callback)(void*, v
 ///
 void k_adjustingscrollarea_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_connect_notify` instead
-///
-#define k_adjustingscrollarea_qbase_connect_notify k_adjustingscrollarea_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5311,10 +5099,6 @@ void k_adjustingscrollarea_on_connect_notify(void* self, void (*callback)(void*,
 /// @param signal QMetaMethod*
 ///
 void k_adjustingscrollarea_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_disconnect_notify` instead
-///
-#define k_adjustingscrollarea_qbase_disconnect_notify k_adjustingscrollarea_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -5352,10 +5136,6 @@ void k_adjustingscrollarea_on_disconnect_notify(void* self, void (*callback)(voi
 ///
 void k_adjustingscrollarea_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_set_viewport_margins` instead
-///
-#define k_adjustingscrollarea_qbase_set_viewport_margins k_adjustingscrollarea_super_set_viewport_margins
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
@@ -5391,10 +5171,6 @@ void k_adjustingscrollarea_on_set_viewport_margins(void* self, void (*callback)(
 ///
 QMargins* k_adjustingscrollarea_viewport_margins(void* self);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_viewport_margins` instead
-///
-#define k_adjustingscrollarea_qbase_viewport_margins k_adjustingscrollarea_super_viewport_margins
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
@@ -5429,10 +5205,6 @@ void k_adjustingscrollarea_on_viewport_margins(void* self, QMargins* (*callback)
 ///
 void k_adjustingscrollarea_draw_frame(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_draw_frame` instead
-///
-#define k_adjustingscrollarea_qbase_draw_frame k_adjustingscrollarea_super_draw_frame
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#drawFrame)
@@ -5465,10 +5237,6 @@ void k_adjustingscrollarea_on_draw_frame(void* self, void (*callback)(void*, voi
 ///
 void k_adjustingscrollarea_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_update_micro_focus` instead
-///
-#define k_adjustingscrollarea_qbase_update_micro_focus k_adjustingscrollarea_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5499,10 +5267,6 @@ void k_adjustingscrollarea_on_update_micro_focus(void* self, void (*callback)())
 /// @param self KAdjustingScrollArea*
 ///
 void k_adjustingscrollarea_create(void* self);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_create` instead
-///
-#define k_adjustingscrollarea_qbase_create k_adjustingscrollarea_super_create
 
 /// Inherited from QWidget
 ///
@@ -5535,10 +5299,6 @@ void k_adjustingscrollarea_on_create(void* self, void (*callback)());
 ///
 void k_adjustingscrollarea_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_destroy` instead
-///
-#define k_adjustingscrollarea_qbase_destroy k_adjustingscrollarea_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5569,10 +5329,6 @@ void k_adjustingscrollarea_on_destroy(void* self, void (*callback)());
 /// @param self KAdjustingScrollArea*
 ///
 bool k_adjustingscrollarea_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_focus_next_child` instead
-///
-#define k_adjustingscrollarea_qbase_focus_next_child k_adjustingscrollarea_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -5605,10 +5361,6 @@ void k_adjustingscrollarea_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_adjustingscrollarea_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_focus_previous_child` instead
-///
-#define k_adjustingscrollarea_qbase_focus_previous_child k_adjustingscrollarea_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5639,10 +5391,6 @@ void k_adjustingscrollarea_on_focus_previous_child(void* self, bool (*callback)(
 /// @param self KAdjustingScrollArea*
 ///
 QObject* k_adjustingscrollarea_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_sender` instead
-///
-#define k_adjustingscrollarea_qbase_sender k_adjustingscrollarea_super_sender
 
 /// Inherited from QObject
 ///
@@ -5675,10 +5423,6 @@ void k_adjustingscrollarea_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_adjustingscrollarea_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_sender_signal_index` instead
-///
-#define k_adjustingscrollarea_qbase_sender_signal_index k_adjustingscrollarea_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5710,10 +5454,6 @@ void k_adjustingscrollarea_on_sender_signal_index(void* self, int32_t (*callback
 /// @param signal const char*
 ///
 int32_t k_adjustingscrollarea_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_receivers` instead
-///
-#define k_adjustingscrollarea_qbase_receivers k_adjustingscrollarea_super_receivers
 
 /// Inherited from QObject
 ///
@@ -5748,10 +5488,6 @@ void k_adjustingscrollarea_on_receivers(void* self, int32_t (*callback)(void*, c
 ///
 bool k_adjustingscrollarea_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_is_signal_connected` instead
-///
-#define k_adjustingscrollarea_qbase_is_signal_connected k_adjustingscrollarea_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5785,10 +5521,6 @@ void k_adjustingscrollarea_on_is_signal_connected(void* self, bool (*callback)(v
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_adjustingscrollarea_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_adjustingscrollarea_super_get_decoded_metric_f` instead
-///
-#define k_adjustingscrollarea_qbase_get_decoded_metric_f k_adjustingscrollarea_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

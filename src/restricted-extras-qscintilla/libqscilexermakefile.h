@@ -37,10 +37,6 @@ const QMetaObject* q_scilexermakefile_meta_object(void* self);
 ///
 void q_scilexermakefile_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_meta_object` instead
-///
-#define q_scilexermakefile_qbase_meta_object q_scilexermakefile_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_scilexermakefile_metacast(void* self, const char* param1);
 /// @param callback void* func(QsciLexerMakefile* self, const char* param1)
 ///
 void q_scilexermakefile_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_metacast` instead
-///
-#define q_scilexermakefile_qbase_metacast q_scilexermakefile_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_scilexermakefile_metacall(void* self, int32_t param1, int param2, void
 /// @param callback int32_t func(QsciLexerMakefile* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_scilexermakefile_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_metacall` instead
-///
-#define q_scilexermakefile_qbase_metacall q_scilexermakefile_super_metacall
 
 /// Base class method implementation
 ///
@@ -837,10 +825,6 @@ void q_scilexermakefile_on_destroyed1(void* self, void (*callback)(void*, void*)
 ///
 int32_t q_scilexermakefile_lexer_id(void* self);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_lexer_id` instead
-///
-#define q_scilexermakefile_qbase_lexer_id q_scilexermakefile_super_lexer_id
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -873,10 +857,6 @@ void q_scilexermakefile_on_lexer_id(void* self, int32_t (*callback)());
 /// @param self QsciLexerMakefile*
 ///
 const char* q_scilexermakefile_auto_completion_fillups(void* self);
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_auto_completion_fillups` instead
-///
-#define q_scilexermakefile_qbase_auto_completion_fillups q_scilexermakefile_super_auto_completion_fillups
 
 /// Inherited from QsciLexer
 ///
@@ -912,10 +892,6 @@ void q_scilexermakefile_on_auto_completion_fillups(void* self, const char* (*cal
 /// @param self QsciLexerMakefile*
 ///
 const char** q_scilexermakefile_auto_completion_word_separators(void* self);
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_auto_completion_word_separators` instead
-///
-#define q_scilexermakefile_qbase_auto_completion_word_separators q_scilexermakefile_super_auto_completion_word_separators
 
 /// Inherited from QsciLexer
 ///
@@ -953,10 +929,6 @@ void q_scilexermakefile_on_auto_completion_word_separators(void* self, const cha
 ///
 const char* q_scilexermakefile_block_end(void* self, int* style);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_block_end` instead
-///
-#define q_scilexermakefile_qbase_block_end q_scilexermakefile_super_block_end
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -991,10 +963,6 @@ void q_scilexermakefile_on_block_end(void* self, const char* (*callback)(void*, 
 ///
 int32_t q_scilexermakefile_block_lookback(void* self);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_block_lookback` instead
-///
-#define q_scilexermakefile_qbase_block_lookback q_scilexermakefile_super_block_lookback
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1028,10 +996,6 @@ void q_scilexermakefile_on_block_lookback(void* self, int32_t (*callback)());
 /// @param style int*
 ///
 const char* q_scilexermakefile_block_start(void* self, int* style);
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_block_start` instead
-///
-#define q_scilexermakefile_qbase_block_start q_scilexermakefile_super_block_start
 
 /// Inherited from QsciLexer
 ///
@@ -1070,10 +1034,6 @@ void q_scilexermakefile_on_block_start(void* self, const char* (*callback)(void*
 ///
 const char* q_scilexermakefile_block_start_keyword(void* self, int* style);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_block_start_keyword` instead
-///
-#define q_scilexermakefile_qbase_block_start_keyword q_scilexermakefile_super_block_start_keyword
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1108,10 +1068,6 @@ void q_scilexermakefile_on_block_start_keyword(void* self, const char* (*callbac
 ///
 int32_t q_scilexermakefile_brace_style(void* self);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_brace_style` instead
-///
-#define q_scilexermakefile_qbase_brace_style q_scilexermakefile_super_brace_style
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1142,10 +1098,6 @@ void q_scilexermakefile_on_brace_style(void* self, int32_t (*callback)());
 /// @param self QsciLexerMakefile*
 ///
 bool q_scilexermakefile_case_sensitive(void* self);
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_case_sensitive` instead
-///
-#define q_scilexermakefile_qbase_case_sensitive q_scilexermakefile_super_case_sensitive
 
 /// Inherited from QsciLexer
 ///
@@ -1178,10 +1130,6 @@ void q_scilexermakefile_on_case_sensitive(void* self, bool (*callback)());
 /// @param style int
 ///
 QColor* q_scilexermakefile_color(void* self, int style);
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_color` instead
-///
-#define q_scilexermakefile_qbase_color q_scilexermakefile_super_color
 
 /// Inherited from QsciLexer
 ///
@@ -1218,10 +1166,6 @@ void q_scilexermakefile_on_color(void* self, QColor* (*callback)(void*, int));
 ///
 bool q_scilexermakefile_eol_fill(void* self, int style);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_eol_fill` instead
-///
-#define q_scilexermakefile_qbase_eol_fill q_scilexermakefile_super_eol_fill
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1254,10 +1198,6 @@ void q_scilexermakefile_on_eol_fill(void* self, bool (*callback)(void*, int));
 /// @param style int
 ///
 QFont* q_scilexermakefile_font(void* self, int style);
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_font` instead
-///
-#define q_scilexermakefile_qbase_font q_scilexermakefile_super_font
 
 /// Inherited from QsciLexer
 ///
@@ -1293,10 +1233,6 @@ void q_scilexermakefile_on_font(void* self, QFont* (*callback)(void*, int));
 ///
 int32_t q_scilexermakefile_indentation_guide_view(void* self);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_indentation_guide_view` instead
-///
-#define q_scilexermakefile_qbase_indentation_guide_view q_scilexermakefile_super_indentation_guide_view
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1330,10 +1266,6 @@ void q_scilexermakefile_on_indentation_guide_view(void* self, int32_t (*callback
 /// @param set int
 ///
 const char* q_scilexermakefile_keywords(void* self, int set);
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_keywords` instead
-///
-#define q_scilexermakefile_qbase_keywords q_scilexermakefile_super_keywords
 
 /// Inherited from QsciLexer
 ///
@@ -1369,10 +1301,6 @@ void q_scilexermakefile_on_keywords(void* self, const char* (*callback)(void*, i
 ///
 int32_t q_scilexermakefile_default_style(void* self);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_default_style` instead
-///
-#define q_scilexermakefile_qbase_default_style q_scilexermakefile_super_default_style
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1404,10 +1332,6 @@ void q_scilexermakefile_on_default_style(void* self, int32_t (*callback)());
 /// @param style int
 ///
 QColor* q_scilexermakefile_paper(void* self, int style);
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_paper` instead
-///
-#define q_scilexermakefile_qbase_paper q_scilexermakefile_super_paper
 
 /// Inherited from QsciLexer
 ///
@@ -1444,10 +1368,6 @@ void q_scilexermakefile_on_paper(void* self, QColor* (*callback)(void*, int));
 ///
 QColor* q_scilexermakefile_default_color2(void* self, int style);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_default_color2` instead
-///
-#define q_scilexermakefile_qbase_default_color2 q_scilexermakefile_super_default_color2
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1482,10 +1402,6 @@ void q_scilexermakefile_on_default_color2(void* self, QColor* (*callback)(void*,
 /// @param style int
 ///
 QFont* q_scilexermakefile_default_font2(void* self, int style);
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_default_font2` instead
-///
-#define q_scilexermakefile_qbase_default_font2 q_scilexermakefile_super_default_font2
 
 /// Inherited from QsciLexer
 ///
@@ -1522,10 +1438,6 @@ void q_scilexermakefile_on_default_font2(void* self, QFont* (*callback)(void*, i
 ///
 QColor* q_scilexermakefile_default_paper2(void* self, int style);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_default_paper2` instead
-///
-#define q_scilexermakefile_qbase_default_paper2 q_scilexermakefile_super_default_paper2
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1561,10 +1473,6 @@ void q_scilexermakefile_on_default_paper2(void* self, QColor* (*callback)(void*,
 ///
 void q_scilexermakefile_set_editor(void* self, void* editor);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_set_editor` instead
-///
-#define q_scilexermakefile_qbase_set_editor q_scilexermakefile_super_set_editor
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1597,10 +1505,6 @@ void q_scilexermakefile_on_set_editor(void* self, void (*callback)(void*, void*)
 ///
 void q_scilexermakefile_refresh_properties(void* self);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_refresh_properties` instead
-///
-#define q_scilexermakefile_qbase_refresh_properties q_scilexermakefile_super_refresh_properties
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1631,10 +1535,6 @@ void q_scilexermakefile_on_refresh_properties(void* self, void (*callback)());
 /// @param self QsciLexerMakefile*
 ///
 int32_t q_scilexermakefile_style_bits_needed(void* self);
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_style_bits_needed` instead
-///
-#define q_scilexermakefile_qbase_style_bits_needed q_scilexermakefile_super_style_bits_needed
 
 /// Inherited from QsciLexer
 ///
@@ -1667,10 +1567,6 @@ void q_scilexermakefile_on_style_bits_needed(void* self, int32_t (*callback)());
 /// @param autoindentstyle int
 ///
 void q_scilexermakefile_set_auto_indent_style(void* self, int autoindentstyle);
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_set_auto_indent_style` instead
-///
-#define q_scilexermakefile_qbase_set_auto_indent_style q_scilexermakefile_super_set_auto_indent_style
 
 /// Inherited from QsciLexer
 ///
@@ -1705,10 +1601,6 @@ void q_scilexermakefile_on_set_auto_indent_style(void* self, void (*callback)(vo
 /// @param style int
 ///
 void q_scilexermakefile_set_color(void* self, void* c, int style);
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_set_color` instead
-///
-#define q_scilexermakefile_qbase_set_color q_scilexermakefile_super_set_color
 
 /// Inherited from QsciLexer
 ///
@@ -1745,10 +1637,6 @@ void q_scilexermakefile_on_set_color(void* self, void (*callback)(void*, void*, 
 ///
 void q_scilexermakefile_set_eol_fill(void* self, bool eoffill, int style);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_set_eol_fill` instead
-///
-#define q_scilexermakefile_qbase_set_eol_fill q_scilexermakefile_super_set_eol_fill
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1783,10 +1671,6 @@ void q_scilexermakefile_on_set_eol_fill(void* self, void (*callback)(void*, bool
 /// @param style int
 ///
 void q_scilexermakefile_set_font(void* self, void* f, int style);
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_set_font` instead
-///
-#define q_scilexermakefile_qbase_set_font q_scilexermakefile_super_set_font
 
 /// Inherited from QsciLexer
 ///
@@ -1823,10 +1707,6 @@ void q_scilexermakefile_on_set_font(void* self, void (*callback)(void*, void*, i
 ///
 void q_scilexermakefile_set_paper(void* self, void* c, int style);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_set_paper` instead
-///
-#define q_scilexermakefile_qbase_set_paper q_scilexermakefile_super_set_paper
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1861,10 +1741,6 @@ void q_scilexermakefile_on_set_paper(void* self, void (*callback)(void*, void*, 
 /// @param prefix const char*
 ///
 bool q_scilexermakefile_read_properties(void* self, void* qs, const char* prefix);
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_read_properties` instead
-///
-#define q_scilexermakefile_qbase_read_properties q_scilexermakefile_super_read_properties
 
 /// Inherited from QsciLexer
 ///
@@ -1901,10 +1777,6 @@ void q_scilexermakefile_on_read_properties(void* self, bool (*callback)(void*, v
 ///
 bool q_scilexermakefile_write_properties(void* self, void* qs, const char* prefix);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_write_properties` instead
-///
-#define q_scilexermakefile_qbase_write_properties q_scilexermakefile_super_write_properties
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -1938,10 +1810,6 @@ void q_scilexermakefile_on_write_properties(void* self, bool (*callback)(void*, 
 /// @param event QEvent*
 ///
 bool q_scilexermakefile_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_event` instead
-///
-#define q_scilexermakefile_qbase_event q_scilexermakefile_super_event
 
 /// Inherited from QObject
 ///
@@ -1977,10 +1845,6 @@ void q_scilexermakefile_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_scilexermakefile_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_event_filter` instead
-///
-#define q_scilexermakefile_qbase_event_filter q_scilexermakefile_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -2015,10 +1879,6 @@ void q_scilexermakefile_on_event_filter(void* self, bool (*callback)(void*, void
 ///
 void q_scilexermakefile_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_timer_event` instead
-///
-#define q_scilexermakefile_qbase_timer_event q_scilexermakefile_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2051,10 +1911,6 @@ void q_scilexermakefile_on_timer_event(void* self, void (*callback)(void*, void*
 /// @param event QChildEvent*
 ///
 void q_scilexermakefile_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_child_event` instead
-///
-#define q_scilexermakefile_qbase_child_event q_scilexermakefile_super_child_event
 
 /// Inherited from QObject
 ///
@@ -2089,10 +1945,6 @@ void q_scilexermakefile_on_child_event(void* self, void (*callback)(void*, void*
 ///
 void q_scilexermakefile_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_custom_event` instead
-///
-#define q_scilexermakefile_qbase_custom_event q_scilexermakefile_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2126,10 +1978,6 @@ void q_scilexermakefile_on_custom_event(void* self, void (*callback)(void*, void
 ///
 void q_scilexermakefile_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_connect_notify` instead
-///
-#define q_scilexermakefile_qbase_connect_notify q_scilexermakefile_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -2162,10 +2010,6 @@ void q_scilexermakefile_on_connect_notify(void* self, void (*callback)(void*, vo
 /// @param signal QMetaMethod*
 ///
 void q_scilexermakefile_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_disconnect_notify` instead
-///
-#define q_scilexermakefile_qbase_disconnect_notify q_scilexermakefile_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -2201,10 +2045,6 @@ void q_scilexermakefile_on_disconnect_notify(void* self, void (*callback)(void*,
 /// @param text const char*
 ///
 char* q_scilexermakefile_text_as_bytes(void* self, const char* text);
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_text_as_bytes` instead
-///
-#define q_scilexermakefile_qbase_text_as_bytes q_scilexermakefile_super_text_as_bytes
 
 /// Inherited from QsciLexer
 ///
@@ -2244,10 +2084,6 @@ void q_scilexermakefile_on_text_as_bytes(void* self, libqt_string (*callback)(vo
 ///
 const char* q_scilexermakefile_bytes_as_text(void* self, const char* bytes, int size);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_bytes_as_text` instead
-///
-#define q_scilexermakefile_qbase_bytes_as_text q_scilexermakefile_super_bytes_as_text
-
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
@@ -2283,10 +2119,6 @@ void q_scilexermakefile_on_bytes_as_text(void* self, const char* (*callback)(voi
 ///
 QObject* q_scilexermakefile_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_sender` instead
-///
-#define q_scilexermakefile_qbase_sender q_scilexermakefile_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2317,10 +2149,6 @@ void q_scilexermakefile_on_sender(void* self, QObject* (*callback)());
 /// @param self QsciLexerMakefile*
 ///
 int32_t q_scilexermakefile_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_sender_signal_index` instead
-///
-#define q_scilexermakefile_qbase_sender_signal_index q_scilexermakefile_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -2354,10 +2182,6 @@ void q_scilexermakefile_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 int32_t q_scilexermakefile_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_receivers` instead
-///
-#define q_scilexermakefile_qbase_receivers q_scilexermakefile_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2390,10 +2214,6 @@ void q_scilexermakefile_on_receivers(void* self, int32_t (*callback)(void*, cons
 /// @param signal QMetaMethod*
 ///
 bool q_scilexermakefile_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_scilexermakefile_super_is_signal_connected` instead
-///
-#define q_scilexermakefile_qbase_is_signal_connected q_scilexermakefile_super_is_signal_connected
 
 /// Inherited from QObject
 ///

@@ -33,10 +33,6 @@ void q_iconengine_paint(void* self, void* painter, void* rect, int32_t mode, int
 ///
 void q_iconengine_on_paint(void* self, void (*callback)(void*, void*, void*, int32_t, int32_t));
 
-/// @warning DEPRECATED: Use `q_iconengine_super_paint` instead
-///
-#define q_iconengine_qbase_paint q_iconengine_super_paint
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#paint)
 ///
 /// Base class method implementation
@@ -69,10 +65,6 @@ QSize* q_iconengine_actual_size(void* self, void* size, int32_t mode, int32_t st
 ///
 void q_iconengine_on_actual_size(void* self, QSize* (*callback)(void*, void*, int32_t, int32_t));
 
-/// @warning DEPRECATED: Use `q_iconengine_super_actual_size` instead
-///
-#define q_iconengine_qbase_actual_size q_iconengine_super_actual_size
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#actualSize)
 ///
 /// Base class method implementation
@@ -104,10 +96,6 @@ QPixmap* q_iconengine_pixmap(void* self, void* size, int32_t mode, int32_t state
 ///
 void q_iconengine_on_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t));
 
-/// @warning DEPRECATED: Use `q_iconengine_super_pixmap` instead
-///
-#define q_iconengine_qbase_pixmap q_iconengine_super_pixmap
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#pixmap)
 ///
 /// Base class method implementation
@@ -136,10 +124,6 @@ void q_iconengine_add_pixmap(void* self, void* pixmap, int32_t mode, int32_t sta
 /// @param callback void func(QIconEngine* self, QPixmap* pixmap, enum QIcon__Mode mode, enum QIcon__State state)
 ///
 void q_iconengine_on_add_pixmap(void* self, void (*callback)(void*, void*, int32_t, int32_t));
-
-/// @warning DEPRECATED: Use `q_iconengine_super_add_pixmap` instead
-///
-#define q_iconengine_qbase_add_pixmap q_iconengine_super_add_pixmap
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#addPixmap)
 ///
@@ -171,10 +155,6 @@ void q_iconengine_add_file(void* self, const char* fileName, void* size, int32_t
 ///
 void q_iconengine_on_add_file(void* self, void (*callback)(void*, const char*, void*, int32_t, int32_t));
 
-/// @warning DEPRECATED: Use `q_iconengine_super_add_file` instead
-///
-#define q_iconengine_qbase_add_file q_iconengine_super_add_file
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#addFile)
 ///
 /// Base class method implementation
@@ -204,10 +184,6 @@ const char* q_iconengine_key(void* self);
 ///
 void q_iconengine_on_key(void* self, const char* (*callback)());
 
-/// @warning DEPRECATED: Use `q_iconengine_super_key` instead
-///
-#define q_iconengine_qbase_key q_iconengine_super_key
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#key)
 ///
 /// Base class method implementation
@@ -230,10 +206,6 @@ QIconEngine* q_iconengine_clone(void* self);
 /// @param callback QIconEngine* func()
 ///
 void q_iconengine_on_clone(void* self, QIconEngine* (*callback)());
-
-/// @warning DEPRECATED: Use `q_iconengine_super_clone` instead
-///
-#define q_iconengine_qbase_clone q_iconengine_super_clone
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#clone)
 ///
@@ -259,10 +231,6 @@ bool q_iconengine_read(void* self, void* in);
 ///
 void q_iconengine_on_read(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_iconengine_super_read` instead
-///
-#define q_iconengine_qbase_read q_iconengine_super_read
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#read)
 ///
 /// Base class method implementation
@@ -287,10 +255,6 @@ bool q_iconengine_write(void* self, void* out);
 /// @param callback bool func(QIconEngine* self, QDataStream* out)
 ///
 void q_iconengine_on_write(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_iconengine_super_write` instead
-///
-#define q_iconengine_qbase_write q_iconengine_super_write
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#write)
 ///
@@ -319,10 +283,6 @@ libqt_list q_iconengine_available_sizes(void* self, int32_t mode, int32_t state)
 /// @param callback libqt_list of QSize* func(QIconEngine* self, enum QIcon__Mode mode, enum QIcon__State state)
 ///
 void q_iconengine_on_available_sizes(void* self, libqt_list (*callback)(void*, int32_t, int32_t));
-
-/// @warning DEPRECATED: Use `q_iconengine_super_available_sizes` instead
-///
-#define q_iconengine_qbase_available_sizes q_iconengine_super_available_sizes
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#availableSizes)
 ///
@@ -353,10 +313,6 @@ const char* q_iconengine_icon_name(void* self);
 ///
 void q_iconengine_on_icon_name(void* self, const char* (*callback)());
 
-/// @warning DEPRECATED: Use `q_iconengine_super_icon_name` instead
-///
-#define q_iconengine_qbase_icon_name q_iconengine_super_icon_name
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#iconName)
 ///
 /// Base class method implementation
@@ -379,10 +335,6 @@ bool q_iconengine_is_null(void* self);
 /// @param callback bool func()
 ///
 void q_iconengine_on_is_null(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `q_iconengine_super_is_null` instead
-///
-#define q_iconengine_qbase_is_null q_iconengine_super_is_null
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#isNull)
 ///
@@ -413,10 +365,6 @@ QPixmap* q_iconengine_scaled_pixmap(void* self, void* size, int32_t mode, int32_
 ///
 void q_iconengine_on_scaled_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t, double));
 
-/// @warning DEPRECATED: Use `q_iconengine_super_scaled_pixmap` instead
-///
-#define q_iconengine_qbase_scaled_pixmap q_iconengine_super_scaled_pixmap
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#scaledPixmap)
 ///
 /// Base class method implementation
@@ -445,10 +393,6 @@ void q_iconengine_virtual_hook(void* self, int id, void* data);
 /// @param callback void func(QIconEngine* self, int id, void* data)
 ///
 void q_iconengine_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
-
-/// @warning DEPRECATED: Use `q_iconengine_super_virtual_hook` instead
-///
-#define q_iconengine_qbase_virtual_hook q_iconengine_super_virtual_hook
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#virtual_hook)
 ///

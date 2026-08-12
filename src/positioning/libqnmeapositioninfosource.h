@@ -40,10 +40,6 @@ const QMetaObject* q_nmeapositioninfosource_meta_object(void* self);
 ///
 void q_nmeapositioninfosource_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_meta_object` instead
-///
-#define q_nmeapositioninfosource_qbase_meta_object q_nmeapositioninfosource_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -63,10 +59,6 @@ void* q_nmeapositioninfosource_metacast(void* self, const char* param1);
 /// @param callback void* func(QNmeaPositionInfoSource* self, const char* param1)
 ///
 void q_nmeapositioninfosource_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_metacast` instead
-///
-#define q_nmeapositioninfosource_qbase_metacast q_nmeapositioninfosource_super_metacast
 
 /// Base class method implementation
 ///
@@ -88,10 +80,6 @@ int32_t q_nmeapositioninfosource_metacall(void* self, int32_t param1, int param2
 /// @param callback int32_t func(QNmeaPositionInfoSource* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_nmeapositioninfosource_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_metacall` instead
-///
-#define q_nmeapositioninfosource_qbase_metacall q_nmeapositioninfosource_super_metacall
 
 /// Base class method implementation
 ///
@@ -160,10 +148,6 @@ void q_nmeapositioninfosource_set_update_interval(void* self, int msec);
 ///
 void q_nmeapositioninfosource_on_set_update_interval(void* self, void (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_set_update_interval` instead
-///
-#define q_nmeapositioninfosource_qbase_set_update_interval q_nmeapositioninfosource_super_set_update_interval
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeapositioninfosource.html#setUpdateInterval)
 ///
 /// Base class method implementation
@@ -191,10 +175,6 @@ QGeoPositionInfo* q_nmeapositioninfosource_last_known_position(void* self, bool 
 ///
 void q_nmeapositioninfosource_on_last_known_position(void* self, QGeoPositionInfo* (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_last_known_position` instead
-///
-#define q_nmeapositioninfosource_qbase_last_known_position q_nmeapositioninfosource_super_last_known_position
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeapositioninfosource.html#lastKnownPosition)
 ///
 /// Base class method implementation
@@ -221,10 +201,6 @@ int32_t q_nmeapositioninfosource_supported_positioning_methods(void* self);
 ///
 void q_nmeapositioninfosource_on_supported_positioning_methods(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_supported_positioning_methods` instead
-///
-#define q_nmeapositioninfosource_qbase_supported_positioning_methods q_nmeapositioninfosource_super_supported_positioning_methods
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeapositioninfosource.html#supportedPositioningMethods)
 ///
 /// Base class method implementation
@@ -249,10 +225,6 @@ int32_t q_nmeapositioninfosource_minimum_update_interval(void* self);
 /// @param callback int32_t func()
 ///
 void q_nmeapositioninfosource_on_minimum_update_interval(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_minimum_update_interval` instead
-///
-#define q_nmeapositioninfosource_qbase_minimum_update_interval q_nmeapositioninfosource_super_minimum_update_interval
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeapositioninfosource.html#minimumUpdateInterval)
 ///
@@ -279,10 +251,6 @@ int32_t q_nmeapositioninfosource_error(void* self);
 ///
 void q_nmeapositioninfosource_on_error(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_error` instead
-///
-#define q_nmeapositioninfosource_qbase_error q_nmeapositioninfosource_super_error
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeapositioninfosource.html#error)
 ///
 /// Base class method implementation
@@ -308,10 +276,6 @@ void q_nmeapositioninfosource_start_updates(void* self);
 ///
 void q_nmeapositioninfosource_on_start_updates(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_start_updates` instead
-///
-#define q_nmeapositioninfosource_qbase_start_updates q_nmeapositioninfosource_super_start_updates
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeapositioninfosource.html#startUpdates)
 ///
 /// Base class method implementation
@@ -334,10 +298,6 @@ void q_nmeapositioninfosource_stop_updates(void* self);
 /// @param callback void func()
 ///
 void q_nmeapositioninfosource_on_stop_updates(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_stop_updates` instead
-///
-#define q_nmeapositioninfosource_qbase_stop_updates q_nmeapositioninfosource_super_stop_updates
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeapositioninfosource.html#stopUpdates)
 ///
@@ -362,10 +322,6 @@ void q_nmeapositioninfosource_request_update(void* self, int timeout);
 /// @param callback void func(QNmeaPositionInfoSource* self, int timeout)
 ///
 void q_nmeapositioninfosource_on_request_update(void* self, void (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_request_update` instead
-///
-#define q_nmeapositioninfosource_qbase_request_update q_nmeapositioninfosource_super_request_update
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeapositioninfosource.html#requestUpdate)
 ///
@@ -394,10 +350,6 @@ bool q_nmeapositioninfosource_parse_pos_info_from_nmea_data(void* self, const ch
 /// @param callback bool func(QNmeaPositionInfoSource* self, const char* data, int size, QGeoPositionInfo* posInfo, bool* hasFix)
 ///
 void q_nmeapositioninfosource_on_parse_pos_info_from_nmea_data(void* self, bool (*callback)(void*, const char*, int, void*, bool*));
-
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_parse_pos_info_from_nmea_data` instead
-///
-#define q_nmeapositioninfosource_qbase_parse_pos_info_from_nmea_data q_nmeapositioninfosource_super_parse_pos_info_from_nmea_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeapositioninfosource.html#parsePosInfoFromNmeaData)
 ///
@@ -429,10 +381,6 @@ bool q_nmeapositioninfosource_parse_pos_info_from_nmea_data2(void* self, char* d
 ///
 void q_nmeapositioninfosource_on_parse_pos_info_from_nmea_data2(void* self, bool (*callback)(void*, char*, void*, bool*));
 
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_parse_pos_info_from_nmea_data2` instead
-///
-#define q_nmeapositioninfosource_qbase_parse_pos_info_from_nmea_data2 q_nmeapositioninfosource_super_parse_pos_info_from_nmea_data2
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeapositioninfosource.html#parsePosInfoFromNmeaData)
 ///
 /// Base class method implementation
@@ -459,10 +407,6 @@ void q_nmeapositioninfosource_set_error(void* self, int32_t positionError);
 /// @param callback void func(QNmeaPositionInfoSource* self, enum QGeoPositionInfoSource__Error positionError)
 ///
 void q_nmeapositioninfosource_on_set_error(void* self, void (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_set_error` instead
-///
-#define q_nmeapositioninfosource_qbase_set_error q_nmeapositioninfosource_super_set_error
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeapositioninfosource.html#setError)
 ///
@@ -1075,10 +1019,6 @@ void q_nmeapositioninfosource_on_destroyed1(void* self, void (*callback)(void*, 
 ///
 void q_nmeapositioninfosource_set_preferred_positioning_methods(void* self, int32_t methods);
 
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_set_preferred_positioning_methods` instead
-///
-#define q_nmeapositioninfosource_qbase_set_preferred_positioning_methods q_nmeapositioninfosource_super_set_preferred_positioning_methods
-
 /// Inherited from QGeoPositionInfoSource
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#setPreferredPositioningMethods)
@@ -1113,10 +1053,6 @@ void q_nmeapositioninfosource_on_set_preferred_positioning_methods(void* self, v
 ///
 bool q_nmeapositioninfosource_set_backend_property(void* self, const char* name, void* value);
 
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_set_backend_property` instead
-///
-#define q_nmeapositioninfosource_qbase_set_backend_property q_nmeapositioninfosource_super_set_backend_property
-
 /// Inherited from QGeoPositionInfoSource
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#setBackendProperty)
@@ -1150,10 +1086,6 @@ void q_nmeapositioninfosource_on_set_backend_property(void* self, bool (*callbac
 /// @param name const char*
 ///
 QVariant* q_nmeapositioninfosource_backend_property(void* self, const char* name);
-
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_backend_property` instead
-///
-#define q_nmeapositioninfosource_qbase_backend_property q_nmeapositioninfosource_super_backend_property
 
 /// Inherited from QGeoPositionInfoSource
 ///
@@ -1190,10 +1122,6 @@ void q_nmeapositioninfosource_on_backend_property(void* self, QVariant* (*callba
 ///
 bool q_nmeapositioninfosource_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_event` instead
-///
-#define q_nmeapositioninfosource_qbase_event q_nmeapositioninfosource_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1227,10 +1155,6 @@ void q_nmeapositioninfosource_on_event(void* self, bool (*callback)(void*, void*
 /// @param event QEvent*
 ///
 bool q_nmeapositioninfosource_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_event_filter` instead
-///
-#define q_nmeapositioninfosource_qbase_event_filter q_nmeapositioninfosource_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1266,10 +1190,6 @@ void q_nmeapositioninfosource_on_event_filter(void* self, bool (*callback)(void*
 ///
 void q_nmeapositioninfosource_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_timer_event` instead
-///
-#define q_nmeapositioninfosource_qbase_timer_event q_nmeapositioninfosource_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1302,10 +1222,6 @@ void q_nmeapositioninfosource_on_timer_event(void* self, void (*callback)(void*,
 /// @param event QChildEvent*
 ///
 void q_nmeapositioninfosource_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_child_event` instead
-///
-#define q_nmeapositioninfosource_qbase_child_event q_nmeapositioninfosource_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1340,10 +1256,6 @@ void q_nmeapositioninfosource_on_child_event(void* self, void (*callback)(void*,
 ///
 void q_nmeapositioninfosource_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_custom_event` instead
-///
-#define q_nmeapositioninfosource_qbase_custom_event q_nmeapositioninfosource_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1376,10 +1288,6 @@ void q_nmeapositioninfosource_on_custom_event(void* self, void (*callback)(void*
 /// @param signal QMetaMethod*
 ///
 void q_nmeapositioninfosource_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_connect_notify` instead
-///
-#define q_nmeapositioninfosource_qbase_connect_notify q_nmeapositioninfosource_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1414,10 +1322,6 @@ void q_nmeapositioninfosource_on_connect_notify(void* self, void (*callback)(voi
 ///
 void q_nmeapositioninfosource_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_disconnect_notify` instead
-///
-#define q_nmeapositioninfosource_qbase_disconnect_notify q_nmeapositioninfosource_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1450,10 +1354,6 @@ void q_nmeapositioninfosource_on_disconnect_notify(void* self, void (*callback)(
 ///
 QObject* q_nmeapositioninfosource_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_sender` instead
-///
-#define q_nmeapositioninfosource_qbase_sender q_nmeapositioninfosource_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1484,10 +1384,6 @@ void q_nmeapositioninfosource_on_sender(void* self, QObject* (*callback)());
 /// @param self QNmeaPositionInfoSource*
 ///
 int32_t q_nmeapositioninfosource_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_sender_signal_index` instead
-///
-#define q_nmeapositioninfosource_qbase_sender_signal_index q_nmeapositioninfosource_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1521,10 +1417,6 @@ void q_nmeapositioninfosource_on_sender_signal_index(void* self, int32_t (*callb
 ///
 int32_t q_nmeapositioninfosource_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_receivers` instead
-///
-#define q_nmeapositioninfosource_qbase_receivers q_nmeapositioninfosource_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1557,10 +1449,6 @@ void q_nmeapositioninfosource_on_receivers(void* self, int32_t (*callback)(void*
 /// @param signal QMetaMethod*
 ///
 bool q_nmeapositioninfosource_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_nmeapositioninfosource_super_is_signal_connected` instead
-///
-#define q_nmeapositioninfosource_qbase_is_signal_connected q_nmeapositioninfosource_super_is_signal_connected
 
 /// Inherited from QObject
 ///

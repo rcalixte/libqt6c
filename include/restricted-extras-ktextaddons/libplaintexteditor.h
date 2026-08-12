@@ -37,10 +37,6 @@ const QMetaObject* k_textcustomeditor__plaintexteditor_meta_object(void* self);
 ///
 void k_textcustomeditor__plaintexteditor_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_meta_object` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_meta_object k_textcustomeditor__plaintexteditor_super_meta_object
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditor.html)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* k_textcustomeditor__plaintexteditor_metacast(void* self, const char* param
 /// @param callback void* func(TextCustomEditor__PlainTextEditor* self, const char* param1)
 ///
 void k_textcustomeditor__plaintexteditor_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_metacast` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_metacast k_textcustomeditor__plaintexteditor_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t k_textcustomeditor__plaintexteditor_metacall(void* self, int32_t param1,
 /// @param callback int32_t func(TextCustomEditor__PlainTextEditor* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_textcustomeditor__plaintexteditor_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_metacall` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_metacall k_textcustomeditor__plaintexteditor_super_metacall
 
 /// Base class method implementation
 ///
@@ -149,10 +137,6 @@ void k_textcustomeditor__plaintexteditor_set_read_only(void* self, bool readOnly
 ///
 void k_textcustomeditor__plaintexteditor_on_set_read_only(void* self, void (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_set_read_only` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_set_read_only k_textcustomeditor__plaintexteditor_super_set_read_only
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditor.html)
 ///
 /// Base class method implementation
@@ -202,10 +186,6 @@ void k_textcustomeditor__plaintexteditor_create_highlighter(void* self);
 /// @param callback void func()
 ///
 void k_textcustomeditor__plaintexteditor_on_create_highlighter(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_create_highlighter` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_create_highlighter k_textcustomeditor__plaintexteditor_super_create_highlighter
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditor.html)
 ///
@@ -339,10 +319,6 @@ void k_textcustomeditor__plaintexteditor_add_extra_menu_entry(void* self, void* 
 ///
 void k_textcustomeditor__plaintexteditor_on_add_extra_menu_entry(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_add_extra_menu_entry` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_add_extra_menu_entry k_textcustomeditor__plaintexteditor_super_add_extra_menu_entry
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditor.html)
 ///
 /// Base class method implementation
@@ -369,10 +345,6 @@ void k_textcustomeditor__plaintexteditor_context_menu_event(void* self, void* ev
 ///
 void k_textcustomeditor__plaintexteditor_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_context_menu_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_context_menu_event k_textcustomeditor__plaintexteditor_super_context_menu_event
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditor.html)
 ///
 /// Base class method implementation
@@ -397,10 +369,6 @@ bool k_textcustomeditor__plaintexteditor_event(void* self, void* ev);
 /// @param callback bool func(TextCustomEditor__PlainTextEditor* self, QEvent* ev)
 ///
 void k_textcustomeditor__plaintexteditor_on_event(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_event k_textcustomeditor__plaintexteditor_super_event
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditor.html)
 ///
@@ -427,10 +395,6 @@ void k_textcustomeditor__plaintexteditor_key_press_event(void* self, void* event
 ///
 void k_textcustomeditor__plaintexteditor_on_key_press_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_key_press_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_key_press_event k_textcustomeditor__plaintexteditor_super_key_press_event
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditor.html)
 ///
 /// Base class method implementation
@@ -455,10 +419,6 @@ bool k_textcustomeditor__plaintexteditor_override_shortcut(void* self, void* eve
 /// @param callback bool func(TextCustomEditor__PlainTextEditor* self, QKeyEvent* event)
 ///
 void k_textcustomeditor__plaintexteditor_on_override_shortcut(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_override_shortcut` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_override_shortcut k_textcustomeditor__plaintexteditor_super_override_shortcut
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditor.html)
 ///
@@ -485,10 +445,6 @@ bool k_textcustomeditor__plaintexteditor_handle_shortcut(void* self, void* event
 ///
 void k_textcustomeditor__plaintexteditor_on_handle_shortcut(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_handle_shortcut` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_handle_shortcut k_textcustomeditor__plaintexteditor_super_handle_shortcut
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditor.html)
 ///
 /// Base class method implementation
@@ -514,10 +470,6 @@ void k_textcustomeditor__plaintexteditor_wheel_event(void* self, void* event);
 ///
 void k_textcustomeditor__plaintexteditor_on_wheel_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_wheel_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_wheel_event k_textcustomeditor__plaintexteditor_super_wheel_event
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditor.html)
 ///
 /// Base class method implementation
@@ -542,10 +494,6 @@ Sonnet__SpellCheckDecorator* k_textcustomeditor__plaintexteditor_create_spell_ch
 ///
 void k_textcustomeditor__plaintexteditor_on_create_spell_check_decorator(void* self, Sonnet__SpellCheckDecorator* (*callback)());
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_create_spell_check_decorator` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_create_spell_check_decorator k_textcustomeditor__plaintexteditor_super_create_spell_check_decorator
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditor.html)
 ///
 /// Base class method implementation
@@ -569,10 +517,6 @@ void k_textcustomeditor__plaintexteditor_set_highlighter(void* self, void* _high
 /// @param callback void func(TextCustomEditor__PlainTextEditor* self, Sonnet__Highlighter* _highLighter)
 ///
 void k_textcustomeditor__plaintexteditor_on_set_highlighter(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_set_highlighter` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_set_highlighter k_textcustomeditor__plaintexteditor_super_set_highlighter
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditor.html)
 ///
@@ -599,10 +543,6 @@ void k_textcustomeditor__plaintexteditor_focus_in_event(void* self, void* event)
 ///
 void k_textcustomeditor__plaintexteditor_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_focus_in_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_focus_in_event k_textcustomeditor__plaintexteditor_super_focus_in_event
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditor.html)
 ///
 /// Base class method implementation
@@ -627,10 +567,6 @@ void k_textcustomeditor__plaintexteditor_update_high_lighter(void* self);
 ///
 void k_textcustomeditor__plaintexteditor_on_update_high_lighter(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_update_high_lighter` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_update_high_lighter k_textcustomeditor__plaintexteditor_super_update_high_lighter
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditor.html)
 ///
 /// Base class method implementation
@@ -653,10 +589,6 @@ void k_textcustomeditor__plaintexteditor_clear_decorator(void* self);
 /// @param callback void func()
 ///
 void k_textcustomeditor__plaintexteditor_on_clear_decorator(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_clear_decorator` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_clear_decorator k_textcustomeditor__plaintexteditor_super_clear_decorator
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditor.html)
 ///
@@ -4787,10 +4719,6 @@ int32_t k_textcustomeditor__plaintexteditor_encode_metric_f(int32_t metric, doub
 ///
 QVariant* k_textcustomeditor__plaintexteditor_load_resource(void* self, int type, void* name);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_load_resource` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_load_resource k_textcustomeditor__plaintexteditor_super_load_resource
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#loadResource)
@@ -4827,10 +4755,6 @@ void k_textcustomeditor__plaintexteditor_on_load_resource(void* self, QVariant* 
 ///
 QVariant* k_textcustomeditor__plaintexteditor_input_method_query(void* self, int32_t property);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_input_method_query` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_input_method_query k_textcustomeditor__plaintexteditor_super_input_method_query
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#inputMethodQuery)
@@ -4866,10 +4790,6 @@ void k_textcustomeditor__plaintexteditor_on_input_method_query(void* self, QVari
 ///
 void k_textcustomeditor__plaintexteditor_timer_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_timer_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_timer_event k_textcustomeditor__plaintexteditor_super_timer_event
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#timerEvent)
@@ -4902,10 +4822,6 @@ void k_textcustomeditor__plaintexteditor_on_timer_event(void* self, void (*callb
 /// @param e QKeyEvent*
 ///
 void k_textcustomeditor__plaintexteditor_key_release_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_key_release_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_key_release_event k_textcustomeditor__plaintexteditor_super_key_release_event
 
 /// Inherited from QPlainTextEdit
 ///
@@ -4940,10 +4856,6 @@ void k_textcustomeditor__plaintexteditor_on_key_release_event(void* self, void (
 ///
 void k_textcustomeditor__plaintexteditor_resize_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_resize_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_resize_event k_textcustomeditor__plaintexteditor_super_resize_event
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#resizeEvent)
@@ -4976,10 +4888,6 @@ void k_textcustomeditor__plaintexteditor_on_resize_event(void* self, void (*call
 /// @param e QPaintEvent*
 ///
 void k_textcustomeditor__plaintexteditor_paint_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_paint_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_paint_event k_textcustomeditor__plaintexteditor_super_paint_event
 
 /// Inherited from QPlainTextEdit
 ///
@@ -5014,10 +4922,6 @@ void k_textcustomeditor__plaintexteditor_on_paint_event(void* self, void (*callb
 ///
 void k_textcustomeditor__plaintexteditor_mouse_press_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_mouse_press_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_mouse_press_event k_textcustomeditor__plaintexteditor_super_mouse_press_event
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#mousePressEvent)
@@ -5050,10 +4954,6 @@ void k_textcustomeditor__plaintexteditor_on_mouse_press_event(void* self, void (
 /// @param e QMouseEvent*
 ///
 void k_textcustomeditor__plaintexteditor_mouse_move_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_mouse_move_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_mouse_move_event k_textcustomeditor__plaintexteditor_super_mouse_move_event
 
 /// Inherited from QPlainTextEdit
 ///
@@ -5088,10 +4988,6 @@ void k_textcustomeditor__plaintexteditor_on_mouse_move_event(void* self, void (*
 ///
 void k_textcustomeditor__plaintexteditor_mouse_release_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_mouse_release_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_mouse_release_event k_textcustomeditor__plaintexteditor_super_mouse_release_event
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#mouseReleaseEvent)
@@ -5124,10 +5020,6 @@ void k_textcustomeditor__plaintexteditor_on_mouse_release_event(void* self, void
 /// @param e QMouseEvent*
 ///
 void k_textcustomeditor__plaintexteditor_mouse_double_click_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_mouse_double_click_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_mouse_double_click_event k_textcustomeditor__plaintexteditor_super_mouse_double_click_event
 
 /// Inherited from QPlainTextEdit
 ///
@@ -5162,10 +5054,6 @@ void k_textcustomeditor__plaintexteditor_on_mouse_double_click_event(void* self,
 ///
 bool k_textcustomeditor__plaintexteditor_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_focus_next_prev_child` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_focus_next_prev_child k_textcustomeditor__plaintexteditor_super_focus_next_prev_child
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#focusNextPrevChild)
@@ -5198,10 +5086,6 @@ void k_textcustomeditor__plaintexteditor_on_focus_next_prev_child(void* self, bo
 /// @param e QDragEnterEvent*
 ///
 void k_textcustomeditor__plaintexteditor_drag_enter_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_drag_enter_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_drag_enter_event k_textcustomeditor__plaintexteditor_super_drag_enter_event
 
 /// Inherited from QPlainTextEdit
 ///
@@ -5236,10 +5120,6 @@ void k_textcustomeditor__plaintexteditor_on_drag_enter_event(void* self, void (*
 ///
 void k_textcustomeditor__plaintexteditor_drag_leave_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_drag_leave_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_drag_leave_event k_textcustomeditor__plaintexteditor_super_drag_leave_event
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#dragLeaveEvent)
@@ -5272,10 +5152,6 @@ void k_textcustomeditor__plaintexteditor_on_drag_leave_event(void* self, void (*
 /// @param e QDragMoveEvent*
 ///
 void k_textcustomeditor__plaintexteditor_drag_move_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_drag_move_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_drag_move_event k_textcustomeditor__plaintexteditor_super_drag_move_event
 
 /// Inherited from QPlainTextEdit
 ///
@@ -5310,10 +5186,6 @@ void k_textcustomeditor__plaintexteditor_on_drag_move_event(void* self, void (*c
 ///
 void k_textcustomeditor__plaintexteditor_drop_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_drop_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_drop_event k_textcustomeditor__plaintexteditor_super_drop_event
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#dropEvent)
@@ -5346,10 +5218,6 @@ void k_textcustomeditor__plaintexteditor_on_drop_event(void* self, void (*callba
 /// @param e QFocusEvent*
 ///
 void k_textcustomeditor__plaintexteditor_focus_out_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_focus_out_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_focus_out_event k_textcustomeditor__plaintexteditor_super_focus_out_event
 
 /// Inherited from QPlainTextEdit
 ///
@@ -5384,10 +5252,6 @@ void k_textcustomeditor__plaintexteditor_on_focus_out_event(void* self, void (*c
 ///
 void k_textcustomeditor__plaintexteditor_show_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_show_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_show_event k_textcustomeditor__plaintexteditor_super_show_event
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#showEvent)
@@ -5421,10 +5285,6 @@ void k_textcustomeditor__plaintexteditor_on_show_event(void* self, void (*callba
 ///
 void k_textcustomeditor__plaintexteditor_change_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_change_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_change_event k_textcustomeditor__plaintexteditor_super_change_event
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#changeEvent)
@@ -5457,10 +5317,6 @@ void k_textcustomeditor__plaintexteditor_on_change_event(void* self, void (*call
 ///
 QMimeData* k_textcustomeditor__plaintexteditor_create_mime_data_from_selection(void* self);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_create_mime_data_from_selection` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_create_mime_data_from_selection k_textcustomeditor__plaintexteditor_super_create_mime_data_from_selection
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#createMimeDataFromSelection)
@@ -5492,10 +5348,6 @@ void k_textcustomeditor__plaintexteditor_on_create_mime_data_from_selection(void
 /// @param source QMimeData*
 ///
 bool k_textcustomeditor__plaintexteditor_can_insert_from_mime_data(void* self, void* source);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_can_insert_from_mime_data` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_can_insert_from_mime_data k_textcustomeditor__plaintexteditor_super_can_insert_from_mime_data
 
 /// Inherited from QPlainTextEdit
 ///
@@ -5530,10 +5382,6 @@ void k_textcustomeditor__plaintexteditor_on_can_insert_from_mime_data(void* self
 ///
 void k_textcustomeditor__plaintexteditor_insert_from_mime_data(void* self, void* source);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_insert_from_mime_data` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_insert_from_mime_data k_textcustomeditor__plaintexteditor_super_insert_from_mime_data
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#insertFromMimeData)
@@ -5566,10 +5414,6 @@ void k_textcustomeditor__plaintexteditor_on_insert_from_mime_data(void* self, vo
 /// @param param1 QInputMethodEvent*
 ///
 void k_textcustomeditor__plaintexteditor_input_method_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_input_method_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_input_method_event k_textcustomeditor__plaintexteditor_super_input_method_event
 
 /// Inherited from QPlainTextEdit
 ///
@@ -5605,10 +5449,6 @@ void k_textcustomeditor__plaintexteditor_on_input_method_event(void* self, void 
 ///
 void k_textcustomeditor__plaintexteditor_scroll_contents_by(void* self, int dx, int dy);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_scroll_contents_by` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_scroll_contents_by k_textcustomeditor__plaintexteditor_super_scroll_contents_by
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#scrollContentsBy)
@@ -5643,10 +5483,6 @@ void k_textcustomeditor__plaintexteditor_on_scroll_contents_by(void* self, void 
 ///
 void k_textcustomeditor__plaintexteditor_do_set_text_cursor(void* self, void* cursor);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_do_set_text_cursor` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_do_set_text_cursor k_textcustomeditor__plaintexteditor_super_do_set_text_cursor
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#doSetTextCursor)
@@ -5678,10 +5514,6 @@ void k_textcustomeditor__plaintexteditor_on_do_set_text_cursor(void* self, void 
 /// @param self TextCustomEditor__PlainTextEditor*
 ///
 QSize* k_textcustomeditor__plaintexteditor_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_minimum_size_hint` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_minimum_size_hint k_textcustomeditor__plaintexteditor_super_minimum_size_hint
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5715,10 +5547,6 @@ void k_textcustomeditor__plaintexteditor_on_minimum_size_hint(void* self, QSize*
 /// @param self TextCustomEditor__PlainTextEditor*
 ///
 QSize* k_textcustomeditor__plaintexteditor_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_size_hint` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_size_hint k_textcustomeditor__plaintexteditor_super_size_hint
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5754,10 +5582,6 @@ void k_textcustomeditor__plaintexteditor_on_size_hint(void* self, QSize* (*callb
 ///
 void k_textcustomeditor__plaintexteditor_setup_viewport(void* self, void* viewport);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_setup_viewport` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_setup_viewport k_textcustomeditor__plaintexteditor_super_setup_viewport
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
@@ -5791,10 +5615,6 @@ void k_textcustomeditor__plaintexteditor_on_setup_viewport(void* self, void (*ca
 /// @param param2 QEvent*
 ///
 bool k_textcustomeditor__plaintexteditor_event_filter(void* self, void* param1, void* param2);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_event_filter` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_event_filter k_textcustomeditor__plaintexteditor_super_event_filter
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5830,10 +5650,6 @@ void k_textcustomeditor__plaintexteditor_on_event_filter(void* self, bool (*call
 ///
 bool k_textcustomeditor__plaintexteditor_viewport_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_viewport_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_viewport_event k_textcustomeditor__plaintexteditor_super_viewport_event
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportEvent)
@@ -5865,10 +5681,6 @@ void k_textcustomeditor__plaintexteditor_on_viewport_event(void* self, bool (*ca
 /// @param self TextCustomEditor__PlainTextEditor*
 ///
 QSize* k_textcustomeditor__plaintexteditor_viewport_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_viewport_size_hint` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_viewport_size_hint k_textcustomeditor__plaintexteditor_super_viewport_size_hint
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5904,10 +5716,6 @@ void k_textcustomeditor__plaintexteditor_on_viewport_size_hint(void* self, QSize
 ///
 void k_textcustomeditor__plaintexteditor_init_style_option(void* self, void* option);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_init_style_option` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_init_style_option k_textcustomeditor__plaintexteditor_super_init_style_option
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
@@ -5940,10 +5748,6 @@ void k_textcustomeditor__plaintexteditor_on_init_style_option(void* self, void (
 ///
 int32_t k_textcustomeditor__plaintexteditor_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_dev_type` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_dev_type k_textcustomeditor__plaintexteditor_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -5975,10 +5779,6 @@ void k_textcustomeditor__plaintexteditor_on_dev_type(void* self, int32_t (*callb
 /// @param visible bool
 ///
 void k_textcustomeditor__plaintexteditor_set_visible(void* self, bool visible);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_set_visible` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_set_visible k_textcustomeditor__plaintexteditor_super_set_visible
 
 /// Inherited from QWidget
 ///
@@ -6013,10 +5813,6 @@ void k_textcustomeditor__plaintexteditor_on_set_visible(void* self, void (*callb
 ///
 int32_t k_textcustomeditor__plaintexteditor_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_height_for_width` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_height_for_width k_textcustomeditor__plaintexteditor_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -6049,10 +5845,6 @@ void k_textcustomeditor__plaintexteditor_on_height_for_width(void* self, int32_t
 ///
 bool k_textcustomeditor__plaintexteditor_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_has_height_for_width` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_has_height_for_width k_textcustomeditor__plaintexteditor_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -6083,10 +5875,6 @@ void k_textcustomeditor__plaintexteditor_on_has_height_for_width(void* self, boo
 /// @param self TextCustomEditor__PlainTextEditor*
 ///
 QPaintEngine* k_textcustomeditor__plaintexteditor_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_paint_engine` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_paint_engine k_textcustomeditor__plaintexteditor_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -6119,10 +5907,6 @@ void k_textcustomeditor__plaintexteditor_on_paint_engine(void* self, QPaintEngin
 /// @param event QEnterEvent*
 ///
 void k_textcustomeditor__plaintexteditor_enter_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_enter_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_enter_event k_textcustomeditor__plaintexteditor_super_enter_event
 
 /// Inherited from QWidget
 ///
@@ -6157,10 +5941,6 @@ void k_textcustomeditor__plaintexteditor_on_enter_event(void* self, void (*callb
 ///
 void k_textcustomeditor__plaintexteditor_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_leave_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_leave_event k_textcustomeditor__plaintexteditor_super_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -6193,10 +5973,6 @@ void k_textcustomeditor__plaintexteditor_on_leave_event(void* self, void (*callb
 /// @param event QMoveEvent*
 ///
 void k_textcustomeditor__plaintexteditor_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_move_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_move_event k_textcustomeditor__plaintexteditor_super_move_event
 
 /// Inherited from QWidget
 ///
@@ -6231,10 +6007,6 @@ void k_textcustomeditor__plaintexteditor_on_move_event(void* self, void (*callba
 ///
 void k_textcustomeditor__plaintexteditor_close_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_close_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_close_event k_textcustomeditor__plaintexteditor_super_close_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -6267,10 +6039,6 @@ void k_textcustomeditor__plaintexteditor_on_close_event(void* self, void (*callb
 /// @param event QTabletEvent*
 ///
 void k_textcustomeditor__plaintexteditor_tablet_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_tablet_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_tablet_event k_textcustomeditor__plaintexteditor_super_tablet_event
 
 /// Inherited from QWidget
 ///
@@ -6305,10 +6073,6 @@ void k_textcustomeditor__plaintexteditor_on_tablet_event(void* self, void (*call
 ///
 void k_textcustomeditor__plaintexteditor_action_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_action_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_action_event k_textcustomeditor__plaintexteditor_super_action_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -6341,10 +6105,6 @@ void k_textcustomeditor__plaintexteditor_on_action_event(void* self, void (*call
 /// @param event QHideEvent*
 ///
 void k_textcustomeditor__plaintexteditor_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_hide_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_hide_event k_textcustomeditor__plaintexteditor_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -6381,10 +6141,6 @@ void k_textcustomeditor__plaintexteditor_on_hide_event(void* self, void (*callba
 ///
 bool k_textcustomeditor__plaintexteditor_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_native_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_native_event k_textcustomeditor__plaintexteditor_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -6420,10 +6176,6 @@ void k_textcustomeditor__plaintexteditor_on_native_event(void* self, bool (*call
 ///
 int32_t k_textcustomeditor__plaintexteditor_metric(void* self, int32_t param1);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_metric` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_metric k_textcustomeditor__plaintexteditor_super_metric
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -6456,10 +6208,6 @@ void k_textcustomeditor__plaintexteditor_on_metric(void* self, int32_t (*callbac
 /// @param painter QPainter*
 ///
 void k_textcustomeditor__plaintexteditor_init_painter(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_init_painter` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_init_painter k_textcustomeditor__plaintexteditor_super_init_painter
 
 /// Inherited from QWidget
 ///
@@ -6494,10 +6242,6 @@ void k_textcustomeditor__plaintexteditor_on_init_painter(void* self, void (*call
 ///
 QPaintDevice* k_textcustomeditor__plaintexteditor_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_redirected` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_redirected k_textcustomeditor__plaintexteditor_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -6530,10 +6274,6 @@ void k_textcustomeditor__plaintexteditor_on_redirected(void* self, QPaintDevice*
 ///
 QPainter* k_textcustomeditor__plaintexteditor_shared_painter(void* self);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_shared_painter` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_shared_painter k_textcustomeditor__plaintexteditor_super_shared_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -6565,10 +6305,6 @@ void k_textcustomeditor__plaintexteditor_on_shared_painter(void* self, QPainter*
 /// @param event QChildEvent*
 ///
 void k_textcustomeditor__plaintexteditor_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_child_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_child_event k_textcustomeditor__plaintexteditor_super_child_event
 
 /// Inherited from QObject
 ///
@@ -6603,10 +6339,6 @@ void k_textcustomeditor__plaintexteditor_on_child_event(void* self, void (*callb
 ///
 void k_textcustomeditor__plaintexteditor_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_custom_event` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_custom_event k_textcustomeditor__plaintexteditor_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -6639,10 +6371,6 @@ void k_textcustomeditor__plaintexteditor_on_custom_event(void* self, void (*call
 /// @param signal QMetaMethod*
 ///
 void k_textcustomeditor__plaintexteditor_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_connect_notify` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_connect_notify k_textcustomeditor__plaintexteditor_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -6677,10 +6405,6 @@ void k_textcustomeditor__plaintexteditor_on_connect_notify(void* self, void (*ca
 ///
 void k_textcustomeditor__plaintexteditor_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_disconnect_notify` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_disconnect_notify k_textcustomeditor__plaintexteditor_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -6712,10 +6436,6 @@ void k_textcustomeditor__plaintexteditor_on_disconnect_notify(void* self, void (
 /// @param self TextCustomEditor__PlainTextEditor*
 ///
 QTextBlock* k_textcustomeditor__plaintexteditor_first_visible_block(void* self);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_first_visible_block` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_first_visible_block k_textcustomeditor__plaintexteditor_super_first_visible_block
 
 /// Inherited from QPlainTextEdit
 ///
@@ -6750,10 +6470,6 @@ void k_textcustomeditor__plaintexteditor_on_first_visible_block(void* self, QTex
 ///
 QPointF* k_textcustomeditor__plaintexteditor_content_offset(void* self);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_content_offset` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_content_offset k_textcustomeditor__plaintexteditor_super_content_offset
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#contentOffset)
@@ -6787,10 +6503,6 @@ void k_textcustomeditor__plaintexteditor_on_content_offset(void* self, QPointF* 
 /// @param block QTextBlock*
 ///
 QRectF* k_textcustomeditor__plaintexteditor_block_bounding_rect(void* self, void* block);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_block_bounding_rect` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_block_bounding_rect k_textcustomeditor__plaintexteditor_super_block_bounding_rect
 
 /// Inherited from QPlainTextEdit
 ///
@@ -6827,10 +6539,6 @@ void k_textcustomeditor__plaintexteditor_on_block_bounding_rect(void* self, QRec
 ///
 QRectF* k_textcustomeditor__plaintexteditor_block_bounding_geometry(void* self, void* block);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_block_bounding_geometry` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_block_bounding_geometry k_textcustomeditor__plaintexteditor_super_block_bounding_geometry
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#blockBoundingGeometry)
@@ -6865,10 +6573,6 @@ void k_textcustomeditor__plaintexteditor_on_block_bounding_geometry(void* self, 
 ///
 QAbstractTextDocumentLayout__PaintContext* k_textcustomeditor__plaintexteditor_get_paint_context(void* self);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_get_paint_context` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_get_paint_context k_textcustomeditor__plaintexteditor_super_get_paint_context
-
 /// Inherited from QPlainTextEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#getPaintContext)
@@ -6902,10 +6606,6 @@ void k_textcustomeditor__plaintexteditor_on_get_paint_context(void* self, QAbstr
 /// @param range float
 ///
 void k_textcustomeditor__plaintexteditor_zoom_in_f(void* self, float range);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_zoom_in_f` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_zoom_in_f k_textcustomeditor__plaintexteditor_super_zoom_in_f
 
 /// Inherited from QPlainTextEdit
 ///
@@ -6943,10 +6643,6 @@ void k_textcustomeditor__plaintexteditor_on_zoom_in_f(void* self, void (*callbac
 ///
 void k_textcustomeditor__plaintexteditor_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_set_viewport_margins` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_set_viewport_margins k_textcustomeditor__plaintexteditor_super_set_viewport_margins
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
@@ -6982,10 +6678,6 @@ void k_textcustomeditor__plaintexteditor_on_set_viewport_margins(void* self, voi
 ///
 QMargins* k_textcustomeditor__plaintexteditor_viewport_margins(void* self);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_viewport_margins` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_viewport_margins k_textcustomeditor__plaintexteditor_super_viewport_margins
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
@@ -7020,10 +6712,6 @@ void k_textcustomeditor__plaintexteditor_on_viewport_margins(void* self, QMargin
 ///
 void k_textcustomeditor__plaintexteditor_draw_frame(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_draw_frame` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_draw_frame k_textcustomeditor__plaintexteditor_super_draw_frame
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#drawFrame)
@@ -7056,10 +6744,6 @@ void k_textcustomeditor__plaintexteditor_on_draw_frame(void* self, void (*callba
 ///
 void k_textcustomeditor__plaintexteditor_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_update_micro_focus` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_update_micro_focus k_textcustomeditor__plaintexteditor_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -7090,10 +6774,6 @@ void k_textcustomeditor__plaintexteditor_on_update_micro_focus(void* self, void 
 /// @param self TextCustomEditor__PlainTextEditor*
 ///
 void k_textcustomeditor__plaintexteditor_create(void* self);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_create` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_create k_textcustomeditor__plaintexteditor_super_create
 
 /// Inherited from QWidget
 ///
@@ -7126,10 +6806,6 @@ void k_textcustomeditor__plaintexteditor_on_create(void* self, void (*callback)(
 ///
 void k_textcustomeditor__plaintexteditor_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_destroy` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_destroy k_textcustomeditor__plaintexteditor_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -7160,10 +6836,6 @@ void k_textcustomeditor__plaintexteditor_on_destroy(void* self, void (*callback)
 /// @param self TextCustomEditor__PlainTextEditor*
 ///
 bool k_textcustomeditor__plaintexteditor_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_focus_next_child` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_focus_next_child k_textcustomeditor__plaintexteditor_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -7196,10 +6868,6 @@ void k_textcustomeditor__plaintexteditor_on_focus_next_child(void* self, bool (*
 ///
 bool k_textcustomeditor__plaintexteditor_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_focus_previous_child` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_focus_previous_child k_textcustomeditor__plaintexteditor_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -7230,10 +6898,6 @@ void k_textcustomeditor__plaintexteditor_on_focus_previous_child(void* self, boo
 /// @param self TextCustomEditor__PlainTextEditor*
 ///
 QObject* k_textcustomeditor__plaintexteditor_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_sender` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_sender k_textcustomeditor__plaintexteditor_super_sender
 
 /// Inherited from QObject
 ///
@@ -7266,10 +6930,6 @@ void k_textcustomeditor__plaintexteditor_on_sender(void* self, QObject* (*callba
 ///
 int32_t k_textcustomeditor__plaintexteditor_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_sender_signal_index` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_sender_signal_index k_textcustomeditor__plaintexteditor_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -7301,10 +6961,6 @@ void k_textcustomeditor__plaintexteditor_on_sender_signal_index(void* self, int3
 /// @param signal const char*
 ///
 int32_t k_textcustomeditor__plaintexteditor_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_receivers` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_receivers k_textcustomeditor__plaintexteditor_super_receivers
 
 /// Inherited from QObject
 ///
@@ -7339,10 +6995,6 @@ void k_textcustomeditor__plaintexteditor_on_receivers(void* self, int32_t (*call
 ///
 bool k_textcustomeditor__plaintexteditor_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_is_signal_connected` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_is_signal_connected k_textcustomeditor__plaintexteditor_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -7376,10 +7028,6 @@ void k_textcustomeditor__plaintexteditor_on_is_signal_connected(void* self, bool
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_textcustomeditor__plaintexteditor_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintexteditor_super_get_decoded_metric_f` instead
-///
-#define k_textcustomeditor__plaintexteditor_qbase_get_decoded_metric_f k_textcustomeditor__plaintexteditor_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

@@ -31,10 +31,6 @@ const char* k_bookmarkowner_current_title(void* self);
 ///
 void k_bookmarkowner_on_current_title(void* self, const char* (*callback)());
 
-/// @warning DEPRECATED: Use `k_bookmarkowner_super_current_title` instead
-///
-#define k_bookmarkowner_qbase_current_title k_bookmarkowner_super_current_title
-
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#currentTitle)
 ///
 /// Base class method implementation
@@ -59,10 +55,6 @@ QUrl* k_bookmarkowner_current_url(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_bookmarkowner_on_current_url(void* self, QUrl* (*callback)());
-
-/// @warning DEPRECATED: Use `k_bookmarkowner_super_current_url` instead
-///
-#define k_bookmarkowner_qbase_current_url k_bookmarkowner_super_current_url
 
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#currentUrl)
 ///
@@ -89,10 +81,6 @@ const char* k_bookmarkowner_current_icon(void* self);
 ///
 void k_bookmarkowner_on_current_icon(void* self, const char* (*callback)());
 
-/// @warning DEPRECATED: Use `k_bookmarkowner_super_current_icon` instead
-///
-#define k_bookmarkowner_qbase_current_icon k_bookmarkowner_super_current_icon
-
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#currentIcon)
 ///
 /// Base class method implementation
@@ -115,10 +103,6 @@ bool k_bookmarkowner_supports_tabs(void* self);
 /// @param callback bool func()
 ///
 void k_bookmarkowner_on_supports_tabs(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `k_bookmarkowner_super_supports_tabs` instead
-///
-#define k_bookmarkowner_qbase_supports_tabs k_bookmarkowner_super_supports_tabs
 
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#supportsTabs)
 ///
@@ -145,10 +129,6 @@ libqt_list k_bookmarkowner_current_bookmark_list(void* self);
 ///
 void k_bookmarkowner_on_current_bookmark_list(void* self, libqt_list (*callback)());
 
-/// @warning DEPRECATED: Use `k_bookmarkowner_super_current_bookmark_list` instead
-///
-#define k_bookmarkowner_qbase_current_bookmark_list k_bookmarkowner_super_current_bookmark_list
-
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#currentBookmarkList)
 ///
 /// Base class method implementation
@@ -174,10 +154,6 @@ bool k_bookmarkowner_enable_option(void* self, int32_t option);
 /// @param callback bool func(KBookmarkOwner* self, enum KBookmarkOwner__BookmarkOption option)
 ///
 void k_bookmarkowner_on_enable_option(void* self, bool (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `k_bookmarkowner_super_enable_option` instead
-///
-#define k_bookmarkowner_qbase_enable_option k_bookmarkowner_super_enable_option
 
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#enableOption)
 ///
@@ -206,10 +182,6 @@ void k_bookmarkowner_open_bookmark(void* self, void* bm, int32_t mb, int32_t km)
 ///
 void k_bookmarkowner_on_open_bookmark(void* self, void (*callback)(void*, void*, int32_t, int32_t));
 
-/// @warning DEPRECATED: Use `k_bookmarkowner_super_open_bookmark` instead
-///
-#define k_bookmarkowner_qbase_open_bookmark k_bookmarkowner_super_open_bookmark
-
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#openBookmark)
 ///
 /// Base class method implementation
@@ -237,10 +209,6 @@ void k_bookmarkowner_open_folderin_tabs(void* self, void* bm);
 ///
 void k_bookmarkowner_on_open_folderin_tabs(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_bookmarkowner_super_open_folderin_tabs` instead
-///
-#define k_bookmarkowner_qbase_open_folderin_tabs k_bookmarkowner_super_open_folderin_tabs
-
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#openFolderinTabs)
 ///
 /// Base class method implementation
@@ -266,10 +234,6 @@ void k_bookmarkowner_open_in_new_tab(void* self, void* bm);
 ///
 void k_bookmarkowner_on_open_in_new_tab(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_bookmarkowner_super_open_in_new_tab` instead
-///
-#define k_bookmarkowner_qbase_open_in_new_tab k_bookmarkowner_super_open_in_new_tab
-
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#openInNewTab)
 ///
 /// Base class method implementation
@@ -294,10 +258,6 @@ void k_bookmarkowner_open_in_new_window(void* self, void* bm);
 /// @param callback void func(KBookmarkOwner* self, KBookmark* bm)
 ///
 void k_bookmarkowner_on_open_in_new_window(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_bookmarkowner_super_open_in_new_window` instead
-///
-#define k_bookmarkowner_qbase_open_in_new_window k_bookmarkowner_super_open_in_new_window
 
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#openInNewWindow)
 ///

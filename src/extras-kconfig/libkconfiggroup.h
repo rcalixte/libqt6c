@@ -82,10 +82,6 @@ bool k_configgroup_sync(void* self);
 ///
 void k_configgroup_on_sync(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `k_configgroup_super_sync` instead
-///
-#define k_configgroup_qbase_sync k_configgroup_super_sync
-
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#sync)
 ///
 /// Base class method implementation
@@ -108,10 +104,6 @@ void k_configgroup_mark_as_clean(void* self);
 /// @param callback void func()
 ///
 void k_configgroup_on_mark_as_clean(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_configgroup_super_mark_as_clean` instead
-///
-#define k_configgroup_qbase_mark_as_clean k_configgroup_super_mark_as_clean
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#markAsClean)
 ///
@@ -137,10 +129,6 @@ int32_t k_configgroup_access_mode(void* self);
 /// @param callback int32_t func()
 ///
 void k_configgroup_on_access_mode(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `k_configgroup_super_access_mode` instead
-///
-#define k_configgroup_qbase_access_mode k_configgroup_super_access_mode
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#accessMode)
 ///
@@ -215,10 +203,6 @@ const char** k_configgroup_group_list(void* self);
 /// @param callback const char** func()
 ///
 void k_configgroup_on_group_list(void* self, const char** (*callback)());
-
-/// @warning DEPRECATED: Use `k_configgroup_super_group_list` instead
-///
-#define k_configgroup_qbase_group_list k_configgroup_super_group_list
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupList)
 ///
@@ -599,10 +583,6 @@ bool k_configgroup_is_immutable(void* self);
 ///
 void k_configgroup_on_is_immutable(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `k_configgroup_super_is_immutable` instead
-///
-#define k_configgroup_qbase_is_immutable k_configgroup_super_is_immutable
-
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#isImmutable)
 ///
 /// Base class method implementation
@@ -689,10 +669,6 @@ bool k_configgroup_has_group_impl(void* self, const char* groupName);
 ///
 void k_configgroup_on_has_group_impl(void* self, bool (*callback)(void*, const char*));
 
-/// @warning DEPRECATED: Use `k_configgroup_super_has_group_impl` instead
-///
-#define k_configgroup_qbase_has_group_impl k_configgroup_super_has_group_impl
-
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#hasGroupImpl)
 ///
 /// Base class method implementation
@@ -719,10 +695,6 @@ KConfigGroup* k_configgroup_group_impl(void* self, const char* groupName);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_configgroup_on_group_impl(void* self, KConfigGroup* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_configgroup_super_group_impl` instead
-///
-#define k_configgroup_qbase_group_impl k_configgroup_super_group_impl
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupImpl)
 ///
@@ -751,10 +723,6 @@ const KConfigGroup* k_configgroup_group_impl2(void* self, const char* groupName)
 ///
 void k_configgroup_on_group_impl2(void* self, const KConfigGroup* (*callback)(void*, const char*));
 
-/// @warning DEPRECATED: Use `k_configgroup_super_group_impl2` instead
-///
-#define k_configgroup_qbase_group_impl2 k_configgroup_super_group_impl2
-
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#groupImpl)
 ///
 /// Base class method implementation
@@ -781,10 +749,6 @@ void k_configgroup_delete_group_impl(void* self, const char* groupName, int32_t 
 ///
 void k_configgroup_on_delete_group_impl(void* self, void (*callback)(void*, const char*, int32_t));
 
-/// @warning DEPRECATED: Use `k_configgroup_super_delete_group_impl` instead
-///
-#define k_configgroup_qbase_delete_group_impl k_configgroup_super_delete_group_impl
-
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#deleteGroupImpl)
 ///
 /// Base class method implementation
@@ -810,10 +774,6 @@ bool k_configgroup_is_group_immutable_impl(void* self, const char* groupName);
 /// @param callback bool func(KConfigGroup* self, const char* groupName)
 ///
 void k_configgroup_on_is_group_immutable_impl(void* self, bool (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_configgroup_super_is_group_immutable_impl` instead
-///
-#define k_configgroup_qbase_is_group_immutable_impl k_configgroup_super_is_group_immutable_impl
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#isGroupImmutableImpl)
 ///
@@ -1175,10 +1135,6 @@ void k_configgroup_delete_group2(void* self, const char* group, int32_t flags);
 /// @param data void*
 ///
 void k_configgroup_virtual_hook(void* self, int id, void* data);
-
-/// @warning DEPRECATED: Use `k_configgroup_super_virtual_hook` instead
-///
-#define k_configgroup_qbase_virtual_hook k_configgroup_super_virtual_hook
 
 /// Inherited from KConfigBase
 ///

@@ -31,10 +31,6 @@ const QMetaObject* k_texteditor__plugin_meta_object(void* self);
 ///
 void k_texteditor__plugin_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_texteditor__plugin_super_meta_object` instead
-///
-#define k_texteditor__plugin_qbase_meta_object k_texteditor__plugin_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -54,10 +50,6 @@ void* k_texteditor__plugin_metacast(void* self, const char* param1);
 /// @param callback void* func(KTextEditor__Plugin* self, const char* param1)
 ///
 void k_texteditor__plugin_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_texteditor__plugin_super_metacast` instead
-///
-#define k_texteditor__plugin_qbase_metacast k_texteditor__plugin_super_metacast
 
 /// Base class method implementation
 ///
@@ -79,10 +71,6 @@ int32_t k_texteditor__plugin_metacall(void* self, int32_t param1, int param2, vo
 /// @param callback int32_t func(KTextEditor__Plugin* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_texteditor__plugin_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_texteditor__plugin_super_metacall` instead
-///
-#define k_texteditor__plugin_qbase_metacall k_texteditor__plugin_super_metacall
 
 /// Base class method implementation
 ///
@@ -117,10 +105,6 @@ QObject* k_texteditor__plugin_create_view(void* self, void* mainWindow);
 ///
 void k_texteditor__plugin_on_create_view(void* self, QObject* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_texteditor__plugin_super_create_view` instead
-///
-#define k_texteditor__plugin_qbase_create_view k_texteditor__plugin_super_create_view
-
 /// [Upstream resources](https://api.kde.org/ktexteditor-plugin.html#createView)
 ///
 /// Base class method implementation
@@ -144,10 +128,6 @@ int32_t k_texteditor__plugin_config_pages(void* self);
 /// @param callback int32_t func()
 ///
 void k_texteditor__plugin_on_config_pages(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `k_texteditor__plugin_super_config_pages` instead
-///
-#define k_texteditor__plugin_qbase_config_pages k_texteditor__plugin_super_config_pages
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-plugin.html#configPages)
 ///
@@ -173,10 +153,6 @@ KTextEditor__ConfigPage* k_texteditor__plugin_config_page(void* self, int number
 /// @param callback KTextEditor__ConfigPage* func(KTextEditor__Plugin* self, int number, QWidget* parent)
 ///
 void k_texteditor__plugin_on_config_page(void* self, KTextEditor__ConfigPage* (*callback)(void*, int, void*));
-
-/// @warning DEPRECATED: Use `k_texteditor__plugin_super_config_page` instead
-///
-#define k_texteditor__plugin_qbase_config_page k_texteditor__plugin_super_config_page
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-plugin.html#configPage)
 ///
@@ -665,10 +641,6 @@ void k_texteditor__plugin_on_destroyed1(void* self, void (*callback)(void*, void
 ///
 bool k_texteditor__plugin_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texteditor__plugin_super_event` instead
-///
-#define k_texteditor__plugin_qbase_event k_texteditor__plugin_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -702,10 +674,6 @@ void k_texteditor__plugin_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool k_texteditor__plugin_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_texteditor__plugin_super_event_filter` instead
-///
-#define k_texteditor__plugin_qbase_event_filter k_texteditor__plugin_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -741,10 +709,6 @@ void k_texteditor__plugin_on_event_filter(void* self, bool (*callback)(void*, vo
 ///
 void k_texteditor__plugin_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texteditor__plugin_super_timer_event` instead
-///
-#define k_texteditor__plugin_qbase_timer_event k_texteditor__plugin_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -777,10 +741,6 @@ void k_texteditor__plugin_on_timer_event(void* self, void (*callback)(void*, voi
 /// @param event QChildEvent*
 ///
 void k_texteditor__plugin_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texteditor__plugin_super_child_event` instead
-///
-#define k_texteditor__plugin_qbase_child_event k_texteditor__plugin_super_child_event
 
 /// Inherited from QObject
 ///
@@ -815,10 +775,6 @@ void k_texteditor__plugin_on_child_event(void* self, void (*callback)(void*, voi
 ///
 void k_texteditor__plugin_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texteditor__plugin_super_custom_event` instead
-///
-#define k_texteditor__plugin_qbase_custom_event k_texteditor__plugin_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -851,10 +807,6 @@ void k_texteditor__plugin_on_custom_event(void* self, void (*callback)(void*, vo
 /// @param signal QMetaMethod*
 ///
 void k_texteditor__plugin_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_texteditor__plugin_super_connect_notify` instead
-///
-#define k_texteditor__plugin_qbase_connect_notify k_texteditor__plugin_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -889,10 +841,6 @@ void k_texteditor__plugin_on_connect_notify(void* self, void (*callback)(void*, 
 ///
 void k_texteditor__plugin_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_texteditor__plugin_super_disconnect_notify` instead
-///
-#define k_texteditor__plugin_qbase_disconnect_notify k_texteditor__plugin_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -925,10 +873,6 @@ void k_texteditor__plugin_on_disconnect_notify(void* self, void (*callback)(void
 ///
 QObject* k_texteditor__plugin_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_texteditor__plugin_super_sender` instead
-///
-#define k_texteditor__plugin_qbase_sender k_texteditor__plugin_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -959,10 +903,6 @@ void k_texteditor__plugin_on_sender(void* self, QObject* (*callback)());
 /// @param self KTextEditor__Plugin*
 ///
 int32_t k_texteditor__plugin_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_texteditor__plugin_super_sender_signal_index` instead
-///
-#define k_texteditor__plugin_qbase_sender_signal_index k_texteditor__plugin_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -996,10 +936,6 @@ void k_texteditor__plugin_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 int32_t k_texteditor__plugin_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_texteditor__plugin_super_receivers` instead
-///
-#define k_texteditor__plugin_qbase_receivers k_texteditor__plugin_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1032,10 +968,6 @@ void k_texteditor__plugin_on_receivers(void* self, int32_t (*callback)(void*, co
 /// @param signal QMetaMethod*
 ///
 bool k_texteditor__plugin_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_texteditor__plugin_super_is_signal_connected` instead
-///
-#define k_texteditor__plugin_qbase_is_signal_connected k_texteditor__plugin_super_is_signal_connected
 
 /// Inherited from QObject
 ///

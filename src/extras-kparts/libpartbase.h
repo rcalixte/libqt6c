@@ -258,10 +258,6 @@ void k_parts__partbase_replace_x_m_l_file3(void* self, const char* xmlfile, cons
 ///
 QAction* k_parts__partbase_action2(void* self, void* element);
 
-/// @warning DEPRECATED: Use `k_parts__partbase_super_action2` instead
-///
-#define k_parts__partbase_qbase_action2 k_parts__partbase_super_action2
-
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
@@ -293,10 +289,6 @@ void k_parts__partbase_on_action2(void* self, QAction* (*callback)(void*, void*)
 /// @param self KParts__PartBase*
 ///
 KActionCollection* k_parts__partbase_action_collection(void* self);
-
-/// @warning DEPRECATED: Use `k_parts__partbase_super_action_collection` instead
-///
-#define k_parts__partbase_qbase_action_collection k_parts__partbase_super_action_collection
 
 /// Inherited from KXMLGUIClient
 ///
@@ -331,10 +323,6 @@ void k_parts__partbase_on_action_collection(void* self, KActionCollection* (*cal
 ///
 const char* k_parts__partbase_component_name(void* self);
 
-/// @warning DEPRECATED: Use `k_parts__partbase_super_component_name` instead
-///
-#define k_parts__partbase_qbase_component_name k_parts__partbase_super_component_name
-
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
@@ -367,10 +355,6 @@ void k_parts__partbase_on_component_name(void* self, const char* (*callback)());
 /// @param self KParts__PartBase*
 ///
 QDomDocument* k_parts__partbase_dom_document(void* self);
-
-/// @warning DEPRECATED: Use `k_parts__partbase_super_dom_document` instead
-///
-#define k_parts__partbase_qbase_dom_document k_parts__partbase_super_dom_document
 
 /// Inherited from KXMLGUIClient
 ///
@@ -407,10 +391,6 @@ void k_parts__partbase_on_dom_document(void* self, QDomDocument* (*callback)());
 ///
 const char* k_parts__partbase_xml_file(void* self);
 
-/// @warning DEPRECATED: Use `k_parts__partbase_super_xml_file` instead
-///
-#define k_parts__partbase_qbase_xml_file k_parts__partbase_super_xml_file
-
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
@@ -446,10 +426,6 @@ void k_parts__partbase_on_xml_file(void* self, const char* (*callback)());
 ///
 const char* k_parts__partbase_local_x_m_l_file(void* self);
 
-/// @warning DEPRECATED: Use `k_parts__partbase_super_local_x_m_l_file` instead
-///
-#define k_parts__partbase_qbase_local_x_m_l_file k_parts__partbase_super_local_x_m_l_file
-
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
@@ -484,10 +460,6 @@ void k_parts__partbase_on_local_x_m_l_file(void* self, const char* (*callback)()
 /// @param componentDisplayName const char*
 ///
 void k_parts__partbase_set_component_name(void* self, const char* componentName, const char* componentDisplayName);
-
-/// @warning DEPRECATED: Use `k_parts__partbase_super_set_component_name` instead
-///
-#define k_parts__partbase_qbase_set_component_name k_parts__partbase_super_set_component_name
 
 /// Inherited from KXMLGUIClient
 ///
@@ -525,10 +497,6 @@ void k_parts__partbase_on_set_component_name(void* self, void (*callback)(void*,
 ///
 void k_parts__partbase_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc);
 
-/// @warning DEPRECATED: Use `k_parts__partbase_super_set_x_m_l_file` instead
-///
-#define k_parts__partbase_qbase_set_x_m_l_file k_parts__partbase_super_set_x_m_l_file
-
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXMLFile)
@@ -564,10 +532,6 @@ void k_parts__partbase_on_set_x_m_l_file(void* self, void (*callback)(void*, con
 ///
 void k_parts__partbase_set_local_x_m_l_file(void* self, const char* file);
 
-/// @warning DEPRECATED: Use `k_parts__partbase_super_set_local_x_m_l_file` instead
-///
-#define k_parts__partbase_qbase_set_local_x_m_l_file k_parts__partbase_super_set_local_x_m_l_file
-
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
@@ -601,10 +565,6 @@ void k_parts__partbase_on_set_local_x_m_l_file(void* self, void (*callback)(void
 /// @param merge bool
 ///
 void k_parts__partbase_set_x_m_l(void* self, const char* document, bool merge);
-
-/// @warning DEPRECATED: Use `k_parts__partbase_super_set_x_m_l` instead
-///
-#define k_parts__partbase_qbase_set_x_m_l k_parts__partbase_super_set_x_m_l
 
 /// Inherited from KXMLGUIClient
 ///
@@ -641,10 +601,6 @@ void k_parts__partbase_on_set_x_m_l(void* self, void (*callback)(void*, const ch
 ///
 void k_parts__partbase_set_d_o_m_document(void* self, void* document, bool merge);
 
-/// @warning DEPRECATED: Use `k_parts__partbase_super_set_d_o_m_document` instead
-///
-#define k_parts__partbase_qbase_set_d_o_m_document k_parts__partbase_super_set_d_o_m_document
-
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
@@ -679,10 +635,6 @@ void k_parts__partbase_on_set_d_o_m_document(void* self, void (*callback)(void*,
 /// @param reverse enum KXMLGUIClient__ReverseStateChange
 ///
 void k_parts__partbase_state_changed(void* self, const char* newstate, int32_t reverse);
-
-/// @warning DEPRECATED: Use `k_parts__partbase_super_state_changed` instead
-///
-#define k_parts__partbase_qbase_state_changed k_parts__partbase_super_state_changed
 
 /// Inherited from KXMLGUIClient
 ///
@@ -719,10 +671,6 @@ void k_parts__partbase_on_state_changed(void* self, void (*callback)(void*, cons
 ///
 const char* k_parts__partbase_standards_xml_file_location(void* self);
 
-/// @warning DEPRECATED: Use `k_parts__partbase_super_standards_xml_file_location` instead
-///
-#define k_parts__partbase_qbase_standards_xml_file_location k_parts__partbase_super_standards_xml_file_location
-
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
@@ -755,10 +703,6 @@ void k_parts__partbase_on_standards_xml_file_location(void* self, const char* (*
 /// @param self KParts__PartBase*
 ///
 void k_parts__partbase_load_standards_xml_file(void* self);
-
-/// @warning DEPRECATED: Use `k_parts__partbase_super_load_standards_xml_file` instead
-///
-#define k_parts__partbase_qbase_load_standards_xml_file k_parts__partbase_super_load_standards_xml_file
 
 /// Inherited from KXMLGUIClient
 ///

@@ -42,10 +42,6 @@ const QMetaObject* k_toolbarlabelaction_meta_object(void* self);
 ///
 void k_toolbarlabelaction_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_toolbarlabelaction_super_meta_object` instead
-///
-#define k_toolbarlabelaction_qbase_meta_object k_toolbarlabelaction_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -65,10 +61,6 @@ void* k_toolbarlabelaction_metacast(void* self, const char* param1);
 /// @param callback void* func(KToolBarLabelAction* self, const char* param1)
 ///
 void k_toolbarlabelaction_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_toolbarlabelaction_super_metacast` instead
-///
-#define k_toolbarlabelaction_qbase_metacast k_toolbarlabelaction_super_metacast
 
 /// Base class method implementation
 ///
@@ -90,10 +82,6 @@ int32_t k_toolbarlabelaction_metacall(void* self, int32_t param1, int param2, vo
 /// @param callback int32_t func(KToolBarLabelAction* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_toolbarlabelaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_toolbarlabelaction_super_metacall` instead
-///
-#define k_toolbarlabelaction_qbase_metacall k_toolbarlabelaction_super_metacall
 
 /// Base class method implementation
 ///
@@ -141,10 +129,6 @@ QWidget* k_toolbarlabelaction_create_widget(void* self, void* parent);
 ///
 void k_toolbarlabelaction_on_create_widget(void* self, QWidget* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_toolbarlabelaction_super_create_widget` instead
-///
-#define k_toolbarlabelaction_qbase_create_widget k_toolbarlabelaction_super_create_widget
-
 /// [Upstream resources](https://api.kde.org/ktoolbarlabelaction.html#createWidget)
 ///
 /// Base class method implementation
@@ -184,10 +168,6 @@ bool k_toolbarlabelaction_event(void* self, void* param1);
 ///
 void k_toolbarlabelaction_on_event(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_toolbarlabelaction_super_event` instead
-///
-#define k_toolbarlabelaction_qbase_event k_toolbarlabelaction_super_event
-
 /// [Upstream resources](https://api.kde.org/ktoolbarlabelaction.html#event)
 ///
 /// Base class method implementation
@@ -213,10 +193,6 @@ bool k_toolbarlabelaction_event_filter(void* self, void* watched, void* event);
 /// @param callback bool func(KToolBarLabelAction* self, QObject* watched, QEvent* event)
 ///
 void k_toolbarlabelaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_toolbarlabelaction_super_event_filter` instead
-///
-#define k_toolbarlabelaction_qbase_event_filter k_toolbarlabelaction_super_event_filter
 
 /// [Upstream resources](https://api.kde.org/ktoolbarlabelaction.html#eventFilter)
 ///
@@ -1358,10 +1334,6 @@ void k_toolbarlabelaction_on_destroyed1(void* self, void (*callback)(void*, void
 ///
 void k_toolbarlabelaction_delete_widget(void* self, void* widget);
 
-/// @warning DEPRECATED: Use `k_toolbarlabelaction_super_delete_widget` instead
-///
-#define k_toolbarlabelaction_qbase_delete_widget k_toolbarlabelaction_super_delete_widget
-
 /// Inherited from QWidgetAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#deleteWidget)
@@ -1394,10 +1366,6 @@ void k_toolbarlabelaction_on_delete_widget(void* self, void (*callback)(void*, v
 /// @param event QTimerEvent*
 ///
 void k_toolbarlabelaction_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_toolbarlabelaction_super_timer_event` instead
-///
-#define k_toolbarlabelaction_qbase_timer_event k_toolbarlabelaction_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -1432,10 +1400,6 @@ void k_toolbarlabelaction_on_timer_event(void* self, void (*callback)(void*, voi
 ///
 void k_toolbarlabelaction_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_toolbarlabelaction_super_child_event` instead
-///
-#define k_toolbarlabelaction_qbase_child_event k_toolbarlabelaction_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1468,10 +1432,6 @@ void k_toolbarlabelaction_on_child_event(void* self, void (*callback)(void*, voi
 /// @param event QEvent*
 ///
 void k_toolbarlabelaction_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_toolbarlabelaction_super_custom_event` instead
-///
-#define k_toolbarlabelaction_qbase_custom_event k_toolbarlabelaction_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -1506,10 +1466,6 @@ void k_toolbarlabelaction_on_custom_event(void* self, void (*callback)(void*, vo
 ///
 void k_toolbarlabelaction_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_toolbarlabelaction_super_connect_notify` instead
-///
-#define k_toolbarlabelaction_qbase_connect_notify k_toolbarlabelaction_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1542,10 +1498,6 @@ void k_toolbarlabelaction_on_connect_notify(void* self, void (*callback)(void*, 
 /// @param signal QMetaMethod*
 ///
 void k_toolbarlabelaction_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_toolbarlabelaction_super_disconnect_notify` instead
-///
-#define k_toolbarlabelaction_qbase_disconnect_notify k_toolbarlabelaction_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -1581,10 +1533,6 @@ void k_toolbarlabelaction_on_disconnect_notify(void* self, void (*callback)(void
 ///
 libqt_list k_toolbarlabelaction_created_widgets(void* self);
 
-/// @warning DEPRECATED: Use `k_toolbarlabelaction_super_created_widgets` instead
-///
-#define k_toolbarlabelaction_qbase_created_widgets k_toolbarlabelaction_super_created_widgets
-
 /// Inherited from QWidgetAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
@@ -1618,10 +1566,6 @@ void k_toolbarlabelaction_on_created_widgets(void* self, libqt_list (*callback)(
 ///
 QObject* k_toolbarlabelaction_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_toolbarlabelaction_super_sender` instead
-///
-#define k_toolbarlabelaction_qbase_sender k_toolbarlabelaction_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1652,10 +1596,6 @@ void k_toolbarlabelaction_on_sender(void* self, QObject* (*callback)());
 /// @param self KToolBarLabelAction*
 ///
 int32_t k_toolbarlabelaction_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_toolbarlabelaction_super_sender_signal_index` instead
-///
-#define k_toolbarlabelaction_qbase_sender_signal_index k_toolbarlabelaction_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1689,10 +1629,6 @@ void k_toolbarlabelaction_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 int32_t k_toolbarlabelaction_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_toolbarlabelaction_super_receivers` instead
-///
-#define k_toolbarlabelaction_qbase_receivers k_toolbarlabelaction_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1725,10 +1661,6 @@ void k_toolbarlabelaction_on_receivers(void* self, int32_t (*callback)(void*, co
 /// @param signal QMetaMethod*
 ///
 bool k_toolbarlabelaction_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_toolbarlabelaction_super_is_signal_connected` instead
-///
-#define k_toolbarlabelaction_qbase_is_signal_connected k_toolbarlabelaction_super_is_signal_connected
 
 /// Inherited from QObject
 ///

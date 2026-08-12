@@ -58,10 +58,6 @@ QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_stationary(v
 ///
 void q_test__qtoucheventwidgetsequence_on_stationary(void* self, QTest__QTouchEventWidgetSequence* (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_test__qtoucheventwidgetsequence_super_stationary` instead
-///
-#define q_test__qtoucheventwidgetsequence_qbase_stationary q_test__qtoucheventwidgetsequence_super_stationary
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#stationary)
 ///
 /// Base class method implementation
@@ -86,10 +82,6 @@ bool q_test__qtoucheventwidgetsequence_commit(void* self, bool processEvents);
 /// @param callback bool func(QTest__QTouchEventWidgetSequence* self, bool processEvents)
 ///
 void q_test__qtoucheventwidgetsequence_on_commit(void* self, bool (*callback)(void*, bool));
-
-/// @warning DEPRECATED: Use `q_test__qtoucheventwidgetsequence_super_commit` instead
-///
-#define q_test__qtoucheventwidgetsequence_qbase_commit q_test__qtoucheventwidgetsequence_super_commit
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#commit)
 ///
@@ -138,10 +130,6 @@ QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_release3(voi
 ///
 QEventPoint* q_test__qtoucheventwidgetsequence_point(void* self, int touchId);
 
-/// @warning DEPRECATED: Use `q_test__qtoucheventwidgetsequence_super_point` instead
-///
-#define q_test__qtoucheventwidgetsequence_qbase_point q_test__qtoucheventwidgetsequence_super_point
-
 /// Inherited from QTest::QTouchEventSequence
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#point)
@@ -176,10 +164,6 @@ void q_test__qtoucheventwidgetsequence_on_point(void* self, QEventPoint* (*callb
 /// @param touchId int
 ///
 QEventPoint* q_test__qtoucheventwidgetsequence_point_or_previous_point(void* self, int touchId);
-
-/// @warning DEPRECATED: Use `q_test__qtoucheventwidgetsequence_super_point_or_previous_point` instead
-///
-#define q_test__qtoucheventwidgetsequence_qbase_point_or_previous_point q_test__qtoucheventwidgetsequence_super_point_or_previous_point
 
 /// Inherited from QTest::QTouchEventSequence
 ///

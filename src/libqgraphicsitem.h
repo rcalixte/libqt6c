@@ -670,10 +670,6 @@ void q_graphicsitem_advance(void* self, int phase);
 ///
 void q_graphicsitem_on_advance(void* self, void (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_advance` instead
-///
-#define q_graphicsitem_qbase_advance q_graphicsitem_super_advance
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#advance)
 ///
 /// Base class method implementation
@@ -720,10 +716,6 @@ QRectF* q_graphicsitem_bounding_rect(void* self);
 ///
 void q_graphicsitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_bounding_rect` instead
-///
-#define q_graphicsitem_qbase_bounding_rect q_graphicsitem_super_bounding_rect
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRect)
 ///
 /// Base class method implementation
@@ -761,10 +753,6 @@ QPainterPath* q_graphicsitem_shape(void* self);
 ///
 void q_graphicsitem_on_shape(void* self, QPainterPath* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_shape` instead
-///
-#define q_graphicsitem_qbase_shape q_graphicsitem_super_shape
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#shape)
 ///
 /// Base class method implementation
@@ -801,10 +789,6 @@ bool q_graphicsitem_contains(void* self, void* point);
 ///
 void q_graphicsitem_on_contains(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_contains` instead
-///
-#define q_graphicsitem_qbase_contains q_graphicsitem_super_contains
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#contains)
 ///
 /// Base class method implementation
@@ -830,10 +814,6 @@ bool q_graphicsitem_collides_with_item(void* self, void* other, int32_t mode);
 /// @param callback bool func(QGraphicsItem* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode)
 ///
 void q_graphicsitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_graphicsitem_super_collides_with_item` instead
-///
-#define q_graphicsitem_qbase_collides_with_item q_graphicsitem_super_collides_with_item
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithItem)
 ///
@@ -861,10 +841,6 @@ bool q_graphicsitem_collides_with_path(void* self, void* path, int32_t mode);
 /// @param callback bool func(QGraphicsItem* self, QPainterPath* path, enum Qt__ItemSelectionMode mode)
 ///
 void q_graphicsitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_graphicsitem_super_collides_with_path` instead
-///
-#define q_graphicsitem_qbase_collides_with_path q_graphicsitem_super_collides_with_path
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
 ///
@@ -916,10 +892,6 @@ bool q_graphicsitem_is_obscured_by(void* self, void* item);
 ///
 void q_graphicsitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_is_obscured_by` instead
-///
-#define q_graphicsitem_qbase_is_obscured_by q_graphicsitem_super_is_obscured_by
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscuredBy)
 ///
 /// Base class method implementation
@@ -945,10 +917,6 @@ QPainterPath* q_graphicsitem_opaque_area(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsitem_on_opaque_area(void* self, QPainterPath* (*callback)());
-
-/// @warning DEPRECATED: Use `q_graphicsitem_super_opaque_area` instead
-///
-#define q_graphicsitem_qbase_opaque_area q_graphicsitem_super_opaque_area
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#opaqueArea)
 ///
@@ -995,10 +963,6 @@ void q_graphicsitem_paint(void* self, void* painter, void* option, void* widget)
 /// @param callback void func(QGraphicsItem* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 ///
 void q_graphicsitem_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsitem_super_paint` instead
-///
-#define q_graphicsitem_qbase_paint q_graphicsitem_super_paint
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#paint)
 ///
@@ -1344,10 +1308,6 @@ int32_t q_graphicsitem_type(void* self);
 ///
 void q_graphicsitem_on_type(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_type` instead
-///
-#define q_graphicsitem_qbase_type q_graphicsitem_super_type
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#type)
 ///
 /// Base class method implementation
@@ -1385,10 +1345,6 @@ void q_graphicsitem_update_micro_focus(void* self);
 ///
 void q_graphicsitem_on_update_micro_focus(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_update_micro_focus` instead
-///
-#define q_graphicsitem_qbase_update_micro_focus q_graphicsitem_super_update_micro_focus
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#updateMicroFocus)
 ///
 /// Base class method implementation
@@ -1413,10 +1369,6 @@ bool q_graphicsitem_scene_event_filter(void* self, void* watched, void* event);
 /// @param callback bool func(QGraphicsItem* self, QGraphicsItem* watched, QEvent* event)
 ///
 void q_graphicsitem_on_scene_event_filter(void* self, bool (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsitem_super_scene_event_filter` instead
-///
-#define q_graphicsitem_qbase_scene_event_filter q_graphicsitem_super_scene_event_filter
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEventFilter)
 ///
@@ -1444,10 +1396,6 @@ bool q_graphicsitem_scene_event(void* self, void* event);
 ///
 void q_graphicsitem_on_scene_event(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_scene_event` instead
-///
-#define q_graphicsitem_qbase_scene_event q_graphicsitem_super_scene_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEvent)
 ///
 /// Base class method implementation
@@ -1472,10 +1420,6 @@ void q_graphicsitem_context_menu_event(void* self, void* event);
 /// @param callback void func(QGraphicsItem* self, QGraphicsSceneContextMenuEvent* event)
 ///
 void q_graphicsitem_on_context_menu_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsitem_super_context_menu_event` instead
-///
-#define q_graphicsitem_qbase_context_menu_event q_graphicsitem_super_context_menu_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#contextMenuEvent)
 ///
@@ -1502,10 +1446,6 @@ void q_graphicsitem_drag_enter_event(void* self, void* event);
 ///
 void q_graphicsitem_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_drag_enter_event` instead
-///
-#define q_graphicsitem_qbase_drag_enter_event q_graphicsitem_super_drag_enter_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragEnterEvent)
 ///
 /// Base class method implementation
@@ -1530,10 +1470,6 @@ void q_graphicsitem_drag_leave_event(void* self, void* event);
 /// @param callback void func(QGraphicsItem* self, QGraphicsSceneDragDropEvent* event)
 ///
 void q_graphicsitem_on_drag_leave_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsitem_super_drag_leave_event` instead
-///
-#define q_graphicsitem_qbase_drag_leave_event q_graphicsitem_super_drag_leave_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragLeaveEvent)
 ///
@@ -1560,10 +1496,6 @@ void q_graphicsitem_drag_move_event(void* self, void* event);
 ///
 void q_graphicsitem_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_drag_move_event` instead
-///
-#define q_graphicsitem_qbase_drag_move_event q_graphicsitem_super_drag_move_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragMoveEvent)
 ///
 /// Base class method implementation
@@ -1588,10 +1520,6 @@ void q_graphicsitem_drop_event(void* self, void* event);
 /// @param callback void func(QGraphicsItem* self, QGraphicsSceneDragDropEvent* event)
 ///
 void q_graphicsitem_on_drop_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsitem_super_drop_event` instead
-///
-#define q_graphicsitem_qbase_drop_event q_graphicsitem_super_drop_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dropEvent)
 ///
@@ -1618,10 +1546,6 @@ void q_graphicsitem_focus_in_event(void* self, void* event);
 ///
 void q_graphicsitem_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_focus_in_event` instead
-///
-#define q_graphicsitem_qbase_focus_in_event q_graphicsitem_super_focus_in_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusInEvent)
 ///
 /// Base class method implementation
@@ -1646,10 +1570,6 @@ void q_graphicsitem_focus_out_event(void* self, void* event);
 /// @param callback void func(QGraphicsItem* self, QFocusEvent* event)
 ///
 void q_graphicsitem_on_focus_out_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsitem_super_focus_out_event` instead
-///
-#define q_graphicsitem_qbase_focus_out_event q_graphicsitem_super_focus_out_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusOutEvent)
 ///
@@ -1676,10 +1596,6 @@ void q_graphicsitem_hover_enter_event(void* self, void* event);
 ///
 void q_graphicsitem_on_hover_enter_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_hover_enter_event` instead
-///
-#define q_graphicsitem_qbase_hover_enter_event q_graphicsitem_super_hover_enter_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverEnterEvent)
 ///
 /// Base class method implementation
@@ -1704,10 +1620,6 @@ void q_graphicsitem_hover_move_event(void* self, void* event);
 /// @param callback void func(QGraphicsItem* self, QGraphicsSceneHoverEvent* event)
 ///
 void q_graphicsitem_on_hover_move_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsitem_super_hover_move_event` instead
-///
-#define q_graphicsitem_qbase_hover_move_event q_graphicsitem_super_hover_move_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverMoveEvent)
 ///
@@ -1734,10 +1646,6 @@ void q_graphicsitem_hover_leave_event(void* self, void* event);
 ///
 void q_graphicsitem_on_hover_leave_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_hover_leave_event` instead
-///
-#define q_graphicsitem_qbase_hover_leave_event q_graphicsitem_super_hover_leave_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverLeaveEvent)
 ///
 /// Base class method implementation
@@ -1762,10 +1670,6 @@ void q_graphicsitem_key_press_event(void* self, void* event);
 /// @param callback void func(QGraphicsItem* self, QKeyEvent* event)
 ///
 void q_graphicsitem_on_key_press_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsitem_super_key_press_event` instead
-///
-#define q_graphicsitem_qbase_key_press_event q_graphicsitem_super_key_press_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#keyPressEvent)
 ///
@@ -1792,10 +1696,6 @@ void q_graphicsitem_key_release_event(void* self, void* event);
 ///
 void q_graphicsitem_on_key_release_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_key_release_event` instead
-///
-#define q_graphicsitem_qbase_key_release_event q_graphicsitem_super_key_release_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#keyReleaseEvent)
 ///
 /// Base class method implementation
@@ -1820,10 +1720,6 @@ void q_graphicsitem_mouse_press_event(void* self, void* event);
 /// @param callback void func(QGraphicsItem* self, QGraphicsSceneMouseEvent* event)
 ///
 void q_graphicsitem_on_mouse_press_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsitem_super_mouse_press_event` instead
-///
-#define q_graphicsitem_qbase_mouse_press_event q_graphicsitem_super_mouse_press_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mousePressEvent)
 ///
@@ -1850,10 +1746,6 @@ void q_graphicsitem_mouse_move_event(void* self, void* event);
 ///
 void q_graphicsitem_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_mouse_move_event` instead
-///
-#define q_graphicsitem_qbase_mouse_move_event q_graphicsitem_super_mouse_move_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseMoveEvent)
 ///
 /// Base class method implementation
@@ -1878,10 +1770,6 @@ void q_graphicsitem_mouse_release_event(void* self, void* event);
 /// @param callback void func(QGraphicsItem* self, QGraphicsSceneMouseEvent* event)
 ///
 void q_graphicsitem_on_mouse_release_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsitem_super_mouse_release_event` instead
-///
-#define q_graphicsitem_qbase_mouse_release_event q_graphicsitem_super_mouse_release_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseReleaseEvent)
 ///
@@ -1908,10 +1796,6 @@ void q_graphicsitem_mouse_double_click_event(void* self, void* event);
 ///
 void q_graphicsitem_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_mouse_double_click_event` instead
-///
-#define q_graphicsitem_qbase_mouse_double_click_event q_graphicsitem_super_mouse_double_click_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseDoubleClickEvent)
 ///
 /// Base class method implementation
@@ -1937,10 +1821,6 @@ void q_graphicsitem_wheel_event(void* self, void* event);
 ///
 void q_graphicsitem_on_wheel_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_wheel_event` instead
-///
-#define q_graphicsitem_qbase_wheel_event q_graphicsitem_super_wheel_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#wheelEvent)
 ///
 /// Base class method implementation
@@ -1965,10 +1845,6 @@ void q_graphicsitem_input_method_event(void* self, void* event);
 /// @param callback void func(QGraphicsItem* self, QInputMethodEvent* event)
 ///
 void q_graphicsitem_on_input_method_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsitem_super_input_method_event` instead
-///
-#define q_graphicsitem_qbase_input_method_event q_graphicsitem_super_input_method_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodEvent)
 ///
@@ -1996,10 +1872,6 @@ QVariant* q_graphicsitem_input_method_query(void* self, int32_t query);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_graphicsitem_super_input_method_query` instead
-///
-#define q_graphicsitem_qbase_input_method_query q_graphicsitem_super_input_method_query
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodQuery)
 ///
@@ -2029,10 +1901,6 @@ QVariant* q_graphicsitem_item_change(void* self, int32_t change, void* value);
 ///
 void q_graphicsitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_item_change` instead
-///
-#define q_graphicsitem_qbase_item_change q_graphicsitem_super_item_change
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemChange)
 ///
 /// Base class method implementation
@@ -2059,10 +1927,6 @@ bool q_graphicsitem_supports_extension(void* self, int32_t extension);
 ///
 void q_graphicsitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_supports_extension` instead
-///
-#define q_graphicsitem_qbase_supports_extension q_graphicsitem_super_supports_extension
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#supportsExtension)
 ///
 /// Base class method implementation
@@ -2088,10 +1952,6 @@ void q_graphicsitem_set_extension(void* self, int32_t extension, void* variant);
 /// @param callback void func(QGraphicsItem* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
 void q_graphicsitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsitem_super_set_extension` instead
-///
-#define q_graphicsitem_qbase_set_extension q_graphicsitem_super_set_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setExtension)
 ///
@@ -2121,10 +1981,6 @@ QVariant* q_graphicsitem_extension(void* self, void* variant);
 ///
 void q_graphicsitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_extension` instead
-///
-#define q_graphicsitem_qbase_extension q_graphicsitem_super_extension
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#extension)
 ///
 /// Base class method implementation
@@ -2149,10 +2005,6 @@ void q_graphicsitem_add_to_index(void* self);
 ///
 void q_graphicsitem_on_add_to_index(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_add_to_index` instead
-///
-#define q_graphicsitem_qbase_add_to_index q_graphicsitem_super_add_to_index
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#addToIndex)
 ///
 /// Base class method implementation
@@ -2176,10 +2028,6 @@ void q_graphicsitem_remove_from_index(void* self);
 ///
 void q_graphicsitem_on_remove_from_index(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicsitem_super_remove_from_index` instead
-///
-#define q_graphicsitem_qbase_remove_from_index q_graphicsitem_super_remove_from_index
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
 ///
 /// Base class method implementation
@@ -2202,10 +2050,6 @@ void q_graphicsitem_prepare_geometry_change(void* self);
 /// @param callback void func()
 ///
 void q_graphicsitem_on_prepare_geometry_change(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_graphicsitem_super_prepare_geometry_change` instead
-///
-#define q_graphicsitem_qbase_prepare_geometry_change q_graphicsitem_super_prepare_geometry_change
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#prepareGeometryChange)
 ///
@@ -2377,10 +2221,6 @@ const QMetaObject* q_graphicsobject_meta_object(void* self);
 ///
 void q_graphicsobject_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_meta_object` instead
-///
-#define q_graphicsobject_qbase_meta_object q_graphicsobject_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -2400,10 +2240,6 @@ void* q_graphicsobject_metacast(void* self, const char* param1);
 /// @param callback void* func(QGraphicsObject* self, const char* param1)
 ///
 void q_graphicsobject_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_metacast` instead
-///
-#define q_graphicsobject_qbase_metacast q_graphicsobject_super_metacast
 
 /// Base class method implementation
 ///
@@ -2425,10 +2261,6 @@ int32_t q_graphicsobject_metacall(void* self, int32_t param1, int param2, void* 
 /// @param callback int32_t func(QGraphicsObject* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_graphicsobject_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_metacall` instead
-///
-#define q_graphicsobject_qbase_metacall q_graphicsobject_super_metacall
 
 /// Base class method implementation
 ///
@@ -2475,10 +2307,6 @@ void q_graphicsobject_update_micro_focus(void* self);
 /// @param callback void func()
 ///
 void q_graphicsobject_on_update_micro_focus(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_update_micro_focus` instead
-///
-#define q_graphicsobject_qbase_update_micro_focus q_graphicsobject_super_update_micro_focus
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsobject.html#updateMicroFocus)
 ///
@@ -2659,10 +2487,6 @@ bool q_graphicsobject_event(void* self, void* ev);
 /// @param callback bool func(QGraphicsObject* self, QEvent* ev)
 ///
 void q_graphicsobject_on_event(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_event` instead
-///
-#define q_graphicsobject_qbase_event q_graphicsobject_super_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsobject.html#event)
 ///
@@ -4668,10 +4492,6 @@ void q_graphicsobject_scroll3(void* self, double dx, double dy, void* rect);
 ///
 bool q_graphicsobject_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_event_filter` instead
-///
-#define q_graphicsobject_qbase_event_filter q_graphicsobject_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -4706,10 +4526,6 @@ void q_graphicsobject_on_event_filter(void* self, bool (*callback)(void*, void*,
 ///
 void q_graphicsobject_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_timer_event` instead
-///
-#define q_graphicsobject_qbase_timer_event q_graphicsobject_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -4742,10 +4558,6 @@ void q_graphicsobject_on_timer_event(void* self, void (*callback)(void*, void*))
 /// @param event QChildEvent*
 ///
 void q_graphicsobject_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_child_event` instead
-///
-#define q_graphicsobject_qbase_child_event q_graphicsobject_super_child_event
 
 /// Inherited from QObject
 ///
@@ -4780,10 +4592,6 @@ void q_graphicsobject_on_child_event(void* self, void (*callback)(void*, void*))
 ///
 void q_graphicsobject_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_custom_event` instead
-///
-#define q_graphicsobject_qbase_custom_event q_graphicsobject_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -4816,10 +4624,6 @@ void q_graphicsobject_on_custom_event(void* self, void (*callback)(void*, void*)
 /// @param signal QMetaMethod*
 ///
 void q_graphicsobject_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_connect_notify` instead
-///
-#define q_graphicsobject_qbase_connect_notify q_graphicsobject_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -4854,10 +4658,6 @@ void q_graphicsobject_on_connect_notify(void* self, void (*callback)(void*, void
 ///
 void q_graphicsobject_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_disconnect_notify` instead
-///
-#define q_graphicsobject_qbase_disconnect_notify q_graphicsobject_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -4891,10 +4691,6 @@ void q_graphicsobject_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 void q_graphicsobject_advance(void* self, int phase);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_advance` instead
-///
-#define q_graphicsobject_qbase_advance q_graphicsobject_super_advance
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#advance)
@@ -4926,10 +4722,6 @@ void q_graphicsobject_on_advance(void* self, void (*callback)(void*, int));
 /// @param self QGraphicsObject*
 ///
 QRectF* q_graphicsobject_bounding_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_bounding_rect` instead
-///
-#define q_graphicsobject_qbase_bounding_rect q_graphicsobject_super_bounding_rect
 
 /// Inherited from QGraphicsItem
 ///
@@ -4963,10 +4755,6 @@ void q_graphicsobject_on_bounding_rect(void* self, QRectF* (*callback)());
 /// @param self QGraphicsObject*
 ///
 QPainterPath* q_graphicsobject_shape(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_shape` instead
-///
-#define q_graphicsobject_qbase_shape q_graphicsobject_super_shape
 
 /// Inherited from QGraphicsItem
 ///
@@ -5002,10 +4790,6 @@ void q_graphicsobject_on_shape(void* self, QPainterPath* (*callback)());
 ///
 bool q_graphicsobject_contains(void* self, void* point);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_contains` instead
-///
-#define q_graphicsobject_qbase_contains q_graphicsobject_super_contains
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#contains)
@@ -5039,10 +4823,6 @@ void q_graphicsobject_on_contains(void* self, bool (*callback)(void*, void*));
 /// @param mode enum Qt__ItemSelectionMode
 ///
 bool q_graphicsobject_collides_with_item(void* self, void* other, int32_t mode);
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_collides_with_item` instead
-///
-#define q_graphicsobject_qbase_collides_with_item q_graphicsobject_super_collides_with_item
 
 /// Inherited from QGraphicsItem
 ///
@@ -5079,10 +4859,6 @@ void q_graphicsobject_on_collides_with_item(void* self, bool (*callback)(void*, 
 ///
 bool q_graphicsobject_collides_with_path(void* self, void* path, int32_t mode);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_collides_with_path` instead
-///
-#define q_graphicsobject_qbase_collides_with_path q_graphicsobject_super_collides_with_path
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
@@ -5117,10 +4893,6 @@ void q_graphicsobject_on_collides_with_path(void* self, bool (*callback)(void*, 
 ///
 bool q_graphicsobject_is_obscured_by(void* self, void* item);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_is_obscured_by` instead
-///
-#define q_graphicsobject_qbase_is_obscured_by q_graphicsobject_super_is_obscured_by
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscuredBy)
@@ -5152,10 +4924,6 @@ void q_graphicsobject_on_is_obscured_by(void* self, bool (*callback)(void*, void
 /// @param self QGraphicsObject*
 ///
 QPainterPath* q_graphicsobject_opaque_area(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_opaque_area` instead
-///
-#define q_graphicsobject_qbase_opaque_area q_graphicsobject_super_opaque_area
 
 /// Inherited from QGraphicsItem
 ///
@@ -5193,10 +4961,6 @@ void q_graphicsobject_on_opaque_area(void* self, QPainterPath* (*callback)());
 ///
 void q_graphicsobject_paint(void* self, void* painter, void* option, void* widget);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_paint` instead
-///
-#define q_graphicsobject_qbase_paint q_graphicsobject_super_paint
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#paint)
@@ -5231,10 +4995,6 @@ void q_graphicsobject_on_paint(void* self, void (*callback)(void*, void*, void*,
 ///
 int32_t q_graphicsobject_type(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_type` instead
-///
-#define q_graphicsobject_qbase_type q_graphicsobject_super_type
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#type)
@@ -5267,10 +5027,6 @@ void q_graphicsobject_on_type(void* self, int32_t (*callback)());
 /// @param event QEvent*
 ///
 bool q_graphicsobject_scene_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_scene_event_filter` instead
-///
-#define q_graphicsobject_qbase_scene_event_filter q_graphicsobject_super_scene_event_filter
 
 /// Inherited from QGraphicsItem
 ///
@@ -5306,10 +5062,6 @@ void q_graphicsobject_on_scene_event_filter(void* self, bool (*callback)(void*, 
 ///
 bool q_graphicsobject_scene_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_scene_event` instead
-///
-#define q_graphicsobject_qbase_scene_event q_graphicsobject_super_scene_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEvent)
@@ -5342,10 +5094,6 @@ void q_graphicsobject_on_scene_event(void* self, bool (*callback)(void*, void*))
 /// @param event QGraphicsSceneContextMenuEvent*
 ///
 void q_graphicsobject_context_menu_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_context_menu_event` instead
-///
-#define q_graphicsobject_qbase_context_menu_event q_graphicsobject_super_context_menu_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -5380,10 +5128,6 @@ void q_graphicsobject_on_context_menu_event(void* self, void (*callback)(void*, 
 ///
 void q_graphicsobject_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_drag_enter_event` instead
-///
-#define q_graphicsobject_qbase_drag_enter_event q_graphicsobject_super_drag_enter_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragEnterEvent)
@@ -5416,10 +5160,6 @@ void q_graphicsobject_on_drag_enter_event(void* self, void (*callback)(void*, vo
 /// @param event QGraphicsSceneDragDropEvent*
 ///
 void q_graphicsobject_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_drag_leave_event` instead
-///
-#define q_graphicsobject_qbase_drag_leave_event q_graphicsobject_super_drag_leave_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -5454,10 +5194,6 @@ void q_graphicsobject_on_drag_leave_event(void* self, void (*callback)(void*, vo
 ///
 void q_graphicsobject_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_drag_move_event` instead
-///
-#define q_graphicsobject_qbase_drag_move_event q_graphicsobject_super_drag_move_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragMoveEvent)
@@ -5490,10 +5226,6 @@ void q_graphicsobject_on_drag_move_event(void* self, void (*callback)(void*, voi
 /// @param event QGraphicsSceneDragDropEvent*
 ///
 void q_graphicsobject_drop_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_drop_event` instead
-///
-#define q_graphicsobject_qbase_drop_event q_graphicsobject_super_drop_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -5528,10 +5260,6 @@ void q_graphicsobject_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void q_graphicsobject_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_focus_in_event` instead
-///
-#define q_graphicsobject_qbase_focus_in_event q_graphicsobject_super_focus_in_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusInEvent)
@@ -5564,10 +5292,6 @@ void q_graphicsobject_on_focus_in_event(void* self, void (*callback)(void*, void
 /// @param event QFocusEvent*
 ///
 void q_graphicsobject_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_focus_out_event` instead
-///
-#define q_graphicsobject_qbase_focus_out_event q_graphicsobject_super_focus_out_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -5602,10 +5326,6 @@ void q_graphicsobject_on_focus_out_event(void* self, void (*callback)(void*, voi
 ///
 void q_graphicsobject_hover_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_hover_enter_event` instead
-///
-#define q_graphicsobject_qbase_hover_enter_event q_graphicsobject_super_hover_enter_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverEnterEvent)
@@ -5638,10 +5358,6 @@ void q_graphicsobject_on_hover_enter_event(void* self, void (*callback)(void*, v
 /// @param event QGraphicsSceneHoverEvent*
 ///
 void q_graphicsobject_hover_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_hover_move_event` instead
-///
-#define q_graphicsobject_qbase_hover_move_event q_graphicsobject_super_hover_move_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -5676,10 +5392,6 @@ void q_graphicsobject_on_hover_move_event(void* self, void (*callback)(void*, vo
 ///
 void q_graphicsobject_hover_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_hover_leave_event` instead
-///
-#define q_graphicsobject_qbase_hover_leave_event q_graphicsobject_super_hover_leave_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverLeaveEvent)
@@ -5712,10 +5424,6 @@ void q_graphicsobject_on_hover_leave_event(void* self, void (*callback)(void*, v
 /// @param event QKeyEvent*
 ///
 void q_graphicsobject_key_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_key_press_event` instead
-///
-#define q_graphicsobject_qbase_key_press_event q_graphicsobject_super_key_press_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -5750,10 +5458,6 @@ void q_graphicsobject_on_key_press_event(void* self, void (*callback)(void*, voi
 ///
 void q_graphicsobject_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_key_release_event` instead
-///
-#define q_graphicsobject_qbase_key_release_event q_graphicsobject_super_key_release_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#keyReleaseEvent)
@@ -5786,10 +5490,6 @@ void q_graphicsobject_on_key_release_event(void* self, void (*callback)(void*, v
 /// @param event QGraphicsSceneMouseEvent*
 ///
 void q_graphicsobject_mouse_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_mouse_press_event` instead
-///
-#define q_graphicsobject_qbase_mouse_press_event q_graphicsobject_super_mouse_press_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -5824,10 +5524,6 @@ void q_graphicsobject_on_mouse_press_event(void* self, void (*callback)(void*, v
 ///
 void q_graphicsobject_mouse_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_mouse_move_event` instead
-///
-#define q_graphicsobject_qbase_mouse_move_event q_graphicsobject_super_mouse_move_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseMoveEvent)
@@ -5860,10 +5556,6 @@ void q_graphicsobject_on_mouse_move_event(void* self, void (*callback)(void*, vo
 /// @param event QGraphicsSceneMouseEvent*
 ///
 void q_graphicsobject_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_mouse_release_event` instead
-///
-#define q_graphicsobject_qbase_mouse_release_event q_graphicsobject_super_mouse_release_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -5898,10 +5590,6 @@ void q_graphicsobject_on_mouse_release_event(void* self, void (*callback)(void*,
 ///
 void q_graphicsobject_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_mouse_double_click_event` instead
-///
-#define q_graphicsobject_qbase_mouse_double_click_event q_graphicsobject_super_mouse_double_click_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseDoubleClickEvent)
@@ -5934,10 +5622,6 @@ void q_graphicsobject_on_mouse_double_click_event(void* self, void (*callback)(v
 /// @param event QGraphicsSceneWheelEvent*
 ///
 void q_graphicsobject_wheel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_wheel_event` instead
-///
-#define q_graphicsobject_qbase_wheel_event q_graphicsobject_super_wheel_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -5972,10 +5656,6 @@ void q_graphicsobject_on_wheel_event(void* self, void (*callback)(void*, void*))
 ///
 void q_graphicsobject_input_method_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_input_method_event` instead
-///
-#define q_graphicsobject_qbase_input_method_event q_graphicsobject_super_input_method_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodEvent)
@@ -6008,10 +5688,6 @@ void q_graphicsobject_on_input_method_event(void* self, void (*callback)(void*, 
 /// @param query enum Qt__InputMethodQuery
 ///
 QVariant* q_graphicsobject_input_method_query(void* self, int32_t query);
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_input_method_query` instead
-///
-#define q_graphicsobject_qbase_input_method_query q_graphicsobject_super_input_method_query
 
 /// Inherited from QGraphicsItem
 ///
@@ -6049,10 +5725,6 @@ void q_graphicsobject_on_input_method_query(void* self, QVariant* (*callback)(vo
 ///
 QVariant* q_graphicsobject_item_change(void* self, int32_t change, void* value);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_item_change` instead
-///
-#define q_graphicsobject_qbase_item_change q_graphicsobject_super_item_change
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemChange)
@@ -6089,10 +5761,6 @@ void q_graphicsobject_on_item_change(void* self, QVariant* (*callback)(void*, in
 ///
 bool q_graphicsobject_supports_extension(void* self, int32_t extension);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_supports_extension` instead
-///
-#define q_graphicsobject_qbase_supports_extension q_graphicsobject_super_supports_extension
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#supportsExtension)
@@ -6126,10 +5794,6 @@ void q_graphicsobject_on_supports_extension(void* self, bool (*callback)(void*, 
 /// @param variant QVariant*
 ///
 void q_graphicsobject_set_extension(void* self, int32_t extension, void* variant);
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_set_extension` instead
-///
-#define q_graphicsobject_qbase_set_extension q_graphicsobject_super_set_extension
 
 /// Inherited from QGraphicsItem
 ///
@@ -6165,10 +5829,6 @@ void q_graphicsobject_on_set_extension(void* self, void (*callback)(void*, int32
 ///
 QVariant* q_graphicsobject_extension(void* self, void* variant);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_extension` instead
-///
-#define q_graphicsobject_qbase_extension q_graphicsobject_super_extension
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#extension)
@@ -6203,10 +5863,6 @@ void q_graphicsobject_on_extension(void* self, QVariant* (*callback)(void*, void
 ///
 QObject* q_graphicsobject_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_sender` instead
-///
-#define q_graphicsobject_qbase_sender q_graphicsobject_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -6237,10 +5893,6 @@ void q_graphicsobject_on_sender(void* self, QObject* (*callback)());
 /// @param self QGraphicsObject*
 ///
 int32_t q_graphicsobject_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_sender_signal_index` instead
-///
-#define q_graphicsobject_qbase_sender_signal_index q_graphicsobject_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -6273,10 +5925,6 @@ void q_graphicsobject_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t q_graphicsobject_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_receivers` instead
-///
-#define q_graphicsobject_qbase_receivers q_graphicsobject_super_receivers
 
 /// Inherited from QObject
 ///
@@ -6311,10 +5959,6 @@ void q_graphicsobject_on_receivers(void* self, int32_t (*callback)(void*, const 
 ///
 bool q_graphicsobject_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_is_signal_connected` instead
-///
-#define q_graphicsobject_qbase_is_signal_connected q_graphicsobject_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -6347,10 +5991,6 @@ void q_graphicsobject_on_is_signal_connected(void* self, bool (*callback)(void*,
 ///
 void q_graphicsobject_add_to_index(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_add_to_index` instead
-///
-#define q_graphicsobject_qbase_add_to_index q_graphicsobject_super_add_to_index
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#addToIndex)
@@ -6382,10 +6022,6 @@ void q_graphicsobject_on_add_to_index(void* self, void (*callback)());
 ///
 void q_graphicsobject_remove_from_index(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicsobject_super_remove_from_index` instead
-///
-#define q_graphicsobject_qbase_remove_from_index q_graphicsobject_super_remove_from_index
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
@@ -6416,10 +6052,6 @@ void q_graphicsobject_on_remove_from_index(void* self, void (*callback)());
 /// @param self QGraphicsObject*
 ///
 void q_graphicsobject_prepare_geometry_change(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicsobject_super_prepare_geometry_change` instead
-///
-#define q_graphicsobject_qbase_prepare_geometry_change q_graphicsobject_super_prepare_geometry_change
 
 /// Inherited from QGraphicsItem
 ///
@@ -6517,10 +6149,6 @@ bool q_abstractgraphicsshapeitem_is_obscured_by(void* self, void* item);
 ///
 void q_abstractgraphicsshapeitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_is_obscured_by` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_is_obscured_by q_abstractgraphicsshapeitem_super_is_obscured_by
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#isObscuredBy)
 ///
 /// Base class method implementation
@@ -6546,10 +6174,6 @@ QPainterPath* q_abstractgraphicsshapeitem_opaque_area(void* self);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractgraphicsshapeitem_on_opaque_area(void* self, QPainterPath* (*callback)());
-
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_opaque_area` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_opaque_area q_abstractgraphicsshapeitem_super_opaque_area
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractgraphicsshapeitem.html#opaqueArea)
 ///
@@ -8079,10 +7703,6 @@ void q_abstractgraphicsshapeitem_scroll3(void* self, double dx, double dy, void*
 ///
 void q_abstractgraphicsshapeitem_advance(void* self, int phase);
 
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_advance` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_advance q_abstractgraphicsshapeitem_super_advance
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#advance)
@@ -8114,10 +7734,6 @@ void q_abstractgraphicsshapeitem_on_advance(void* self, void (*callback)(void*, 
 /// @param self QAbstractGraphicsShapeItem*
 ///
 QRectF* q_abstractgraphicsshapeitem_bounding_rect(void* self);
-
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_bounding_rect` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_bounding_rect q_abstractgraphicsshapeitem_super_bounding_rect
 
 /// Inherited from QGraphicsItem
 ///
@@ -8151,10 +7767,6 @@ void q_abstractgraphicsshapeitem_on_bounding_rect(void* self, QRectF* (*callback
 /// @param self QAbstractGraphicsShapeItem*
 ///
 QPainterPath* q_abstractgraphicsshapeitem_shape(void* self);
-
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_shape` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_shape q_abstractgraphicsshapeitem_super_shape
 
 /// Inherited from QGraphicsItem
 ///
@@ -8190,10 +7802,6 @@ void q_abstractgraphicsshapeitem_on_shape(void* self, QPainterPath* (*callback)(
 ///
 bool q_abstractgraphicsshapeitem_contains(void* self, void* point);
 
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_contains` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_contains q_abstractgraphicsshapeitem_super_contains
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#contains)
@@ -8227,10 +7835,6 @@ void q_abstractgraphicsshapeitem_on_contains(void* self, bool (*callback)(void*,
 /// @param mode enum Qt__ItemSelectionMode
 ///
 bool q_abstractgraphicsshapeitem_collides_with_item(void* self, void* other, int32_t mode);
-
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_collides_with_item` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_collides_with_item q_abstractgraphicsshapeitem_super_collides_with_item
 
 /// Inherited from QGraphicsItem
 ///
@@ -8266,10 +7870,6 @@ void q_abstractgraphicsshapeitem_on_collides_with_item(void* self, bool (*callba
 /// @param mode enum Qt__ItemSelectionMode
 ///
 bool q_abstractgraphicsshapeitem_collides_with_path(void* self, void* path, int32_t mode);
-
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_collides_with_path` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_collides_with_path q_abstractgraphicsshapeitem_super_collides_with_path
 
 /// Inherited from QGraphicsItem
 ///
@@ -8307,10 +7907,6 @@ void q_abstractgraphicsshapeitem_on_collides_with_path(void* self, bool (*callba
 ///
 void q_abstractgraphicsshapeitem_paint(void* self, void* painter, void* option, void* widget);
 
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_paint` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_paint q_abstractgraphicsshapeitem_super_paint
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#paint)
@@ -8345,10 +7941,6 @@ void q_abstractgraphicsshapeitem_on_paint(void* self, void (*callback)(void*, vo
 ///
 int32_t q_abstractgraphicsshapeitem_type(void* self);
 
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_type` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_type q_abstractgraphicsshapeitem_super_type
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#type)
@@ -8381,10 +7973,6 @@ void q_abstractgraphicsshapeitem_on_type(void* self, int32_t (*callback)());
 /// @param event QEvent*
 ///
 bool q_abstractgraphicsshapeitem_scene_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_scene_event_filter` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_scene_event_filter q_abstractgraphicsshapeitem_super_scene_event_filter
 
 /// Inherited from QGraphicsItem
 ///
@@ -8420,10 +8008,6 @@ void q_abstractgraphicsshapeitem_on_scene_event_filter(void* self, bool (*callba
 ///
 bool q_abstractgraphicsshapeitem_scene_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_scene_event` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_scene_event q_abstractgraphicsshapeitem_super_scene_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEvent)
@@ -8456,10 +8040,6 @@ void q_abstractgraphicsshapeitem_on_scene_event(void* self, bool (*callback)(voi
 /// @param event QGraphicsSceneContextMenuEvent*
 ///
 void q_abstractgraphicsshapeitem_context_menu_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_context_menu_event` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_context_menu_event q_abstractgraphicsshapeitem_super_context_menu_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -8494,10 +8074,6 @@ void q_abstractgraphicsshapeitem_on_context_menu_event(void* self, void (*callba
 ///
 void q_abstractgraphicsshapeitem_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_drag_enter_event` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_drag_enter_event q_abstractgraphicsshapeitem_super_drag_enter_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragEnterEvent)
@@ -8530,10 +8106,6 @@ void q_abstractgraphicsshapeitem_on_drag_enter_event(void* self, void (*callback
 /// @param event QGraphicsSceneDragDropEvent*
 ///
 void q_abstractgraphicsshapeitem_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_drag_leave_event` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_drag_leave_event q_abstractgraphicsshapeitem_super_drag_leave_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -8568,10 +8140,6 @@ void q_abstractgraphicsshapeitem_on_drag_leave_event(void* self, void (*callback
 ///
 void q_abstractgraphicsshapeitem_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_drag_move_event` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_drag_move_event q_abstractgraphicsshapeitem_super_drag_move_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragMoveEvent)
@@ -8604,10 +8172,6 @@ void q_abstractgraphicsshapeitem_on_drag_move_event(void* self, void (*callback)
 /// @param event QGraphicsSceneDragDropEvent*
 ///
 void q_abstractgraphicsshapeitem_drop_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_drop_event` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_drop_event q_abstractgraphicsshapeitem_super_drop_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -8642,10 +8206,6 @@ void q_abstractgraphicsshapeitem_on_drop_event(void* self, void (*callback)(void
 ///
 void q_abstractgraphicsshapeitem_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_focus_in_event` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_focus_in_event q_abstractgraphicsshapeitem_super_focus_in_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusInEvent)
@@ -8678,10 +8238,6 @@ void q_abstractgraphicsshapeitem_on_focus_in_event(void* self, void (*callback)(
 /// @param event QFocusEvent*
 ///
 void q_abstractgraphicsshapeitem_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_focus_out_event` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_focus_out_event q_abstractgraphicsshapeitem_super_focus_out_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -8716,10 +8272,6 @@ void q_abstractgraphicsshapeitem_on_focus_out_event(void* self, void (*callback)
 ///
 void q_abstractgraphicsshapeitem_hover_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_hover_enter_event` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_hover_enter_event q_abstractgraphicsshapeitem_super_hover_enter_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverEnterEvent)
@@ -8752,10 +8304,6 @@ void q_abstractgraphicsshapeitem_on_hover_enter_event(void* self, void (*callbac
 /// @param event QGraphicsSceneHoverEvent*
 ///
 void q_abstractgraphicsshapeitem_hover_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_hover_move_event` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_hover_move_event q_abstractgraphicsshapeitem_super_hover_move_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -8790,10 +8338,6 @@ void q_abstractgraphicsshapeitem_on_hover_move_event(void* self, void (*callback
 ///
 void q_abstractgraphicsshapeitem_hover_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_hover_leave_event` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_hover_leave_event q_abstractgraphicsshapeitem_super_hover_leave_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverLeaveEvent)
@@ -8826,10 +8370,6 @@ void q_abstractgraphicsshapeitem_on_hover_leave_event(void* self, void (*callbac
 /// @param event QKeyEvent*
 ///
 void q_abstractgraphicsshapeitem_key_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_key_press_event` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_key_press_event q_abstractgraphicsshapeitem_super_key_press_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -8864,10 +8404,6 @@ void q_abstractgraphicsshapeitem_on_key_press_event(void* self, void (*callback)
 ///
 void q_abstractgraphicsshapeitem_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_key_release_event` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_key_release_event q_abstractgraphicsshapeitem_super_key_release_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#keyReleaseEvent)
@@ -8900,10 +8436,6 @@ void q_abstractgraphicsshapeitem_on_key_release_event(void* self, void (*callbac
 /// @param event QGraphicsSceneMouseEvent*
 ///
 void q_abstractgraphicsshapeitem_mouse_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_mouse_press_event` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_mouse_press_event q_abstractgraphicsshapeitem_super_mouse_press_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -8938,10 +8470,6 @@ void q_abstractgraphicsshapeitem_on_mouse_press_event(void* self, void (*callbac
 ///
 void q_abstractgraphicsshapeitem_mouse_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_mouse_move_event` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_mouse_move_event q_abstractgraphicsshapeitem_super_mouse_move_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseMoveEvent)
@@ -8974,10 +8502,6 @@ void q_abstractgraphicsshapeitem_on_mouse_move_event(void* self, void (*callback
 /// @param event QGraphicsSceneMouseEvent*
 ///
 void q_abstractgraphicsshapeitem_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_mouse_release_event` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_mouse_release_event q_abstractgraphicsshapeitem_super_mouse_release_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -9012,10 +8536,6 @@ void q_abstractgraphicsshapeitem_on_mouse_release_event(void* self, void (*callb
 ///
 void q_abstractgraphicsshapeitem_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_mouse_double_click_event` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_mouse_double_click_event q_abstractgraphicsshapeitem_super_mouse_double_click_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseDoubleClickEvent)
@@ -9048,10 +8568,6 @@ void q_abstractgraphicsshapeitem_on_mouse_double_click_event(void* self, void (*
 /// @param event QGraphicsSceneWheelEvent*
 ///
 void q_abstractgraphicsshapeitem_wheel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_wheel_event` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_wheel_event q_abstractgraphicsshapeitem_super_wheel_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -9086,10 +8602,6 @@ void q_abstractgraphicsshapeitem_on_wheel_event(void* self, void (*callback)(voi
 ///
 void q_abstractgraphicsshapeitem_input_method_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_input_method_event` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_input_method_event q_abstractgraphicsshapeitem_super_input_method_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodEvent)
@@ -9122,10 +8634,6 @@ void q_abstractgraphicsshapeitem_on_input_method_event(void* self, void (*callba
 /// @param query enum Qt__InputMethodQuery
 ///
 QVariant* q_abstractgraphicsshapeitem_input_method_query(void* self, int32_t query);
-
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_input_method_query` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_input_method_query q_abstractgraphicsshapeitem_super_input_method_query
 
 /// Inherited from QGraphicsItem
 ///
@@ -9163,10 +8671,6 @@ void q_abstractgraphicsshapeitem_on_input_method_query(void* self, QVariant* (*c
 ///
 QVariant* q_abstractgraphicsshapeitem_item_change(void* self, int32_t change, void* value);
 
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_item_change` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_item_change q_abstractgraphicsshapeitem_super_item_change
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemChange)
@@ -9203,10 +8707,6 @@ void q_abstractgraphicsshapeitem_on_item_change(void* self, QVariant* (*callback
 ///
 bool q_abstractgraphicsshapeitem_supports_extension(void* self, int32_t extension);
 
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_supports_extension` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_supports_extension q_abstractgraphicsshapeitem_super_supports_extension
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#supportsExtension)
@@ -9240,10 +8740,6 @@ void q_abstractgraphicsshapeitem_on_supports_extension(void* self, bool (*callba
 /// @param variant QVariant*
 ///
 void q_abstractgraphicsshapeitem_set_extension(void* self, int32_t extension, void* variant);
-
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_set_extension` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_set_extension q_abstractgraphicsshapeitem_super_set_extension
 
 /// Inherited from QGraphicsItem
 ///
@@ -9279,10 +8775,6 @@ void q_abstractgraphicsshapeitem_on_set_extension(void* self, void (*callback)(v
 ///
 QVariant* q_abstractgraphicsshapeitem_extension(void* self, void* variant);
 
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_extension` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_extension q_abstractgraphicsshapeitem_super_extension
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#extension)
@@ -9317,10 +8809,6 @@ void q_abstractgraphicsshapeitem_on_extension(void* self, QVariant* (*callback)(
 ///
 void q_abstractgraphicsshapeitem_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_update_micro_focus` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_update_micro_focus q_abstractgraphicsshapeitem_super_update_micro_focus
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#updateMicroFocus)
@@ -9351,10 +8839,6 @@ void q_abstractgraphicsshapeitem_on_update_micro_focus(void* self, void (*callba
 /// @param self QAbstractGraphicsShapeItem*
 ///
 void q_abstractgraphicsshapeitem_add_to_index(void* self);
-
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_add_to_index` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_add_to_index q_abstractgraphicsshapeitem_super_add_to_index
 
 /// Inherited from QGraphicsItem
 ///
@@ -9387,10 +8871,6 @@ void q_abstractgraphicsshapeitem_on_add_to_index(void* self, void (*callback)())
 ///
 void q_abstractgraphicsshapeitem_remove_from_index(void* self);
 
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_remove_from_index` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_remove_from_index q_abstractgraphicsshapeitem_super_remove_from_index
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
@@ -9421,10 +8901,6 @@ void q_abstractgraphicsshapeitem_on_remove_from_index(void* self, void (*callbac
 /// @param self QAbstractGraphicsShapeItem*
 ///
 void q_abstractgraphicsshapeitem_prepare_geometry_change(void* self);
-
-/// @warning DEPRECATED: Use `q_abstractgraphicsshapeitem_super_prepare_geometry_change` instead
-///
-#define q_abstractgraphicsshapeitem_qbase_prepare_geometry_change q_abstractgraphicsshapeitem_super_prepare_geometry_change
 
 /// Inherited from QGraphicsItem
 ///
@@ -9516,10 +8992,6 @@ QRectF* q_graphicspathitem_bounding_rect(void* self);
 ///
 void q_graphicspathitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_bounding_rect` instead
-///
-#define q_graphicspathitem_qbase_bounding_rect q_graphicspathitem_super_bounding_rect
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#boundingRect)
 ///
 /// Base class method implementation
@@ -9545,10 +9017,6 @@ QPainterPath* q_graphicspathitem_shape(void* self);
 ///
 void q_graphicspathitem_on_shape(void* self, QPainterPath* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_shape` instead
-///
-#define q_graphicspathitem_qbase_shape q_graphicspathitem_super_shape
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#shape)
 ///
 /// Base class method implementation
@@ -9572,10 +9040,6 @@ bool q_graphicspathitem_contains(void* self, void* point);
 /// @param callback bool func(QGraphicsPathItem* self, QPointF* point)
 ///
 void q_graphicspathitem_on_contains(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_contains` instead
-///
-#define q_graphicspathitem_qbase_contains q_graphicspathitem_super_contains
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#contains)
 ///
@@ -9604,10 +9068,6 @@ void q_graphicspathitem_paint(void* self, void* painter, void* option, void* wid
 ///
 void q_graphicspathitem_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_paint` instead
-///
-#define q_graphicspathitem_qbase_paint q_graphicspathitem_super_paint
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#paint)
 ///
 /// Base class method implementation
@@ -9635,10 +9095,6 @@ bool q_graphicspathitem_is_obscured_by(void* self, void* item);
 ///
 void q_graphicspathitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_is_obscured_by` instead
-///
-#define q_graphicspathitem_qbase_is_obscured_by q_graphicspathitem_super_is_obscured_by
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#isObscuredBy)
 ///
 /// Base class method implementation
@@ -9665,10 +9121,6 @@ QPainterPath* q_graphicspathitem_opaque_area(void* self);
 ///
 void q_graphicspathitem_on_opaque_area(void* self, QPainterPath* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_opaque_area` instead
-///
-#define q_graphicspathitem_qbase_opaque_area q_graphicspathitem_super_opaque_area
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#opaqueArea)
 ///
 /// Base class method implementation
@@ -9691,10 +9143,6 @@ int32_t q_graphicspathitem_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_graphicspathitem_on_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_type` instead
-///
-#define q_graphicspathitem_qbase_type q_graphicspathitem_super_type
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#type)
 ///
@@ -9719,10 +9167,6 @@ bool q_graphicspathitem_supports_extension(void* self, int32_t extension);
 /// @param callback bool func(QGraphicsPathItem* self, enum QGraphicsItem__Extension extension)
 ///
 void q_graphicspathitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_supports_extension` instead
-///
-#define q_graphicspathitem_qbase_supports_extension q_graphicspathitem_super_supports_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#supportsExtension)
 ///
@@ -9749,10 +9193,6 @@ void q_graphicspathitem_set_extension(void* self, int32_t extension, void* varia
 /// @param callback void func(QGraphicsPathItem* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
 void q_graphicspathitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
-
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_set_extension` instead
-///
-#define q_graphicspathitem_qbase_set_extension q_graphicspathitem_super_set_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#setExtension)
 ///
@@ -9781,10 +9221,6 @@ QVariant* q_graphicspathitem_extension(void* self, void* variant);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicspathitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_extension` instead
-///
-#define q_graphicspathitem_qbase_extension q_graphicspathitem_super_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspathitem.html#extension)
 ///
@@ -11349,10 +10785,6 @@ void q_graphicspathitem_scroll3(void* self, double dx, double dy, void* rect);
 ///
 void q_graphicspathitem_advance(void* self, int phase);
 
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_advance` instead
-///
-#define q_graphicspathitem_qbase_advance q_graphicspathitem_super_advance
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#advance)
@@ -11386,10 +10818,6 @@ void q_graphicspathitem_on_advance(void* self, void (*callback)(void*, int));
 /// @param mode enum Qt__ItemSelectionMode
 ///
 bool q_graphicspathitem_collides_with_item(void* self, void* other, int32_t mode);
-
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_collides_with_item` instead
-///
-#define q_graphicspathitem_qbase_collides_with_item q_graphicspathitem_super_collides_with_item
 
 /// Inherited from QGraphicsItem
 ///
@@ -11426,10 +10854,6 @@ void q_graphicspathitem_on_collides_with_item(void* self, bool (*callback)(void*
 ///
 bool q_graphicspathitem_collides_with_path(void* self, void* path, int32_t mode);
 
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_collides_with_path` instead
-///
-#define q_graphicspathitem_qbase_collides_with_path q_graphicspathitem_super_collides_with_path
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
@@ -11465,10 +10889,6 @@ void q_graphicspathitem_on_collides_with_path(void* self, bool (*callback)(void*
 ///
 bool q_graphicspathitem_scene_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_scene_event_filter` instead
-///
-#define q_graphicspathitem_qbase_scene_event_filter q_graphicspathitem_super_scene_event_filter
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEventFilter)
@@ -11503,10 +10923,6 @@ void q_graphicspathitem_on_scene_event_filter(void* self, bool (*callback)(void*
 ///
 bool q_graphicspathitem_scene_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_scene_event` instead
-///
-#define q_graphicspathitem_qbase_scene_event q_graphicspathitem_super_scene_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEvent)
@@ -11539,10 +10955,6 @@ void q_graphicspathitem_on_scene_event(void* self, bool (*callback)(void*, void*
 /// @param event QGraphicsSceneContextMenuEvent*
 ///
 void q_graphicspathitem_context_menu_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_context_menu_event` instead
-///
-#define q_graphicspathitem_qbase_context_menu_event q_graphicspathitem_super_context_menu_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -11577,10 +10989,6 @@ void q_graphicspathitem_on_context_menu_event(void* self, void (*callback)(void*
 ///
 void q_graphicspathitem_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_drag_enter_event` instead
-///
-#define q_graphicspathitem_qbase_drag_enter_event q_graphicspathitem_super_drag_enter_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragEnterEvent)
@@ -11613,10 +11021,6 @@ void q_graphicspathitem_on_drag_enter_event(void* self, void (*callback)(void*, 
 /// @param event QGraphicsSceneDragDropEvent*
 ///
 void q_graphicspathitem_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_drag_leave_event` instead
-///
-#define q_graphicspathitem_qbase_drag_leave_event q_graphicspathitem_super_drag_leave_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -11651,10 +11055,6 @@ void q_graphicspathitem_on_drag_leave_event(void* self, void (*callback)(void*, 
 ///
 void q_graphicspathitem_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_drag_move_event` instead
-///
-#define q_graphicspathitem_qbase_drag_move_event q_graphicspathitem_super_drag_move_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragMoveEvent)
@@ -11687,10 +11087,6 @@ void q_graphicspathitem_on_drag_move_event(void* self, void (*callback)(void*, v
 /// @param event QGraphicsSceneDragDropEvent*
 ///
 void q_graphicspathitem_drop_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_drop_event` instead
-///
-#define q_graphicspathitem_qbase_drop_event q_graphicspathitem_super_drop_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -11725,10 +11121,6 @@ void q_graphicspathitem_on_drop_event(void* self, void (*callback)(void*, void*)
 ///
 void q_graphicspathitem_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_focus_in_event` instead
-///
-#define q_graphicspathitem_qbase_focus_in_event q_graphicspathitem_super_focus_in_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusInEvent)
@@ -11761,10 +11153,6 @@ void q_graphicspathitem_on_focus_in_event(void* self, void (*callback)(void*, vo
 /// @param event QFocusEvent*
 ///
 void q_graphicspathitem_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_focus_out_event` instead
-///
-#define q_graphicspathitem_qbase_focus_out_event q_graphicspathitem_super_focus_out_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -11799,10 +11187,6 @@ void q_graphicspathitem_on_focus_out_event(void* self, void (*callback)(void*, v
 ///
 void q_graphicspathitem_hover_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_hover_enter_event` instead
-///
-#define q_graphicspathitem_qbase_hover_enter_event q_graphicspathitem_super_hover_enter_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverEnterEvent)
@@ -11835,10 +11219,6 @@ void q_graphicspathitem_on_hover_enter_event(void* self, void (*callback)(void*,
 /// @param event QGraphicsSceneHoverEvent*
 ///
 void q_graphicspathitem_hover_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_hover_move_event` instead
-///
-#define q_graphicspathitem_qbase_hover_move_event q_graphicspathitem_super_hover_move_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -11873,10 +11253,6 @@ void q_graphicspathitem_on_hover_move_event(void* self, void (*callback)(void*, 
 ///
 void q_graphicspathitem_hover_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_hover_leave_event` instead
-///
-#define q_graphicspathitem_qbase_hover_leave_event q_graphicspathitem_super_hover_leave_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverLeaveEvent)
@@ -11909,10 +11285,6 @@ void q_graphicspathitem_on_hover_leave_event(void* self, void (*callback)(void*,
 /// @param event QKeyEvent*
 ///
 void q_graphicspathitem_key_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_key_press_event` instead
-///
-#define q_graphicspathitem_qbase_key_press_event q_graphicspathitem_super_key_press_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -11947,10 +11319,6 @@ void q_graphicspathitem_on_key_press_event(void* self, void (*callback)(void*, v
 ///
 void q_graphicspathitem_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_key_release_event` instead
-///
-#define q_graphicspathitem_qbase_key_release_event q_graphicspathitem_super_key_release_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#keyReleaseEvent)
@@ -11983,10 +11351,6 @@ void q_graphicspathitem_on_key_release_event(void* self, void (*callback)(void*,
 /// @param event QGraphicsSceneMouseEvent*
 ///
 void q_graphicspathitem_mouse_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_mouse_press_event` instead
-///
-#define q_graphicspathitem_qbase_mouse_press_event q_graphicspathitem_super_mouse_press_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -12021,10 +11385,6 @@ void q_graphicspathitem_on_mouse_press_event(void* self, void (*callback)(void*,
 ///
 void q_graphicspathitem_mouse_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_mouse_move_event` instead
-///
-#define q_graphicspathitem_qbase_mouse_move_event q_graphicspathitem_super_mouse_move_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseMoveEvent)
@@ -12057,10 +11417,6 @@ void q_graphicspathitem_on_mouse_move_event(void* self, void (*callback)(void*, 
 /// @param event QGraphicsSceneMouseEvent*
 ///
 void q_graphicspathitem_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_mouse_release_event` instead
-///
-#define q_graphicspathitem_qbase_mouse_release_event q_graphicspathitem_super_mouse_release_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -12095,10 +11451,6 @@ void q_graphicspathitem_on_mouse_release_event(void* self, void (*callback)(void
 ///
 void q_graphicspathitem_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_mouse_double_click_event` instead
-///
-#define q_graphicspathitem_qbase_mouse_double_click_event q_graphicspathitem_super_mouse_double_click_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseDoubleClickEvent)
@@ -12131,10 +11483,6 @@ void q_graphicspathitem_on_mouse_double_click_event(void* self, void (*callback)
 /// @param event QGraphicsSceneWheelEvent*
 ///
 void q_graphicspathitem_wheel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_wheel_event` instead
-///
-#define q_graphicspathitem_qbase_wheel_event q_graphicspathitem_super_wheel_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -12169,10 +11517,6 @@ void q_graphicspathitem_on_wheel_event(void* self, void (*callback)(void*, void*
 ///
 void q_graphicspathitem_input_method_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_input_method_event` instead
-///
-#define q_graphicspathitem_qbase_input_method_event q_graphicspathitem_super_input_method_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodEvent)
@@ -12205,10 +11549,6 @@ void q_graphicspathitem_on_input_method_event(void* self, void (*callback)(void*
 /// @param query enum Qt__InputMethodQuery
 ///
 QVariant* q_graphicspathitem_input_method_query(void* self, int32_t query);
-
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_input_method_query` instead
-///
-#define q_graphicspathitem_qbase_input_method_query q_graphicspathitem_super_input_method_query
 
 /// Inherited from QGraphicsItem
 ///
@@ -12246,10 +11586,6 @@ void q_graphicspathitem_on_input_method_query(void* self, QVariant* (*callback)(
 ///
 QVariant* q_graphicspathitem_item_change(void* self, int32_t change, void* value);
 
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_item_change` instead
-///
-#define q_graphicspathitem_qbase_item_change q_graphicspathitem_super_item_change
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemChange)
@@ -12285,10 +11621,6 @@ void q_graphicspathitem_on_item_change(void* self, QVariant* (*callback)(void*, 
 ///
 void q_graphicspathitem_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_update_micro_focus` instead
-///
-#define q_graphicspathitem_qbase_update_micro_focus q_graphicspathitem_super_update_micro_focus
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#updateMicroFocus)
@@ -12319,10 +11651,6 @@ void q_graphicspathitem_on_update_micro_focus(void* self, void (*callback)());
 /// @param self QGraphicsPathItem*
 ///
 void q_graphicspathitem_add_to_index(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_add_to_index` instead
-///
-#define q_graphicspathitem_qbase_add_to_index q_graphicspathitem_super_add_to_index
 
 /// Inherited from QGraphicsItem
 ///
@@ -12355,10 +11683,6 @@ void q_graphicspathitem_on_add_to_index(void* self, void (*callback)());
 ///
 void q_graphicspathitem_remove_from_index(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_remove_from_index` instead
-///
-#define q_graphicspathitem_qbase_remove_from_index q_graphicspathitem_super_remove_from_index
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
@@ -12389,10 +11713,6 @@ void q_graphicspathitem_on_remove_from_index(void* self, void (*callback)());
 /// @param self QGraphicsPathItem*
 ///
 void q_graphicspathitem_prepare_geometry_change(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicspathitem_super_prepare_geometry_change` instead
-///
-#define q_graphicspathitem_qbase_prepare_geometry_change q_graphicspathitem_super_prepare_geometry_change
 
 /// Inherited from QGraphicsItem
 ///
@@ -12517,10 +11837,6 @@ QRectF* q_graphicsrectitem_bounding_rect(void* self);
 ///
 void q_graphicsrectitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_bounding_rect` instead
-///
-#define q_graphicsrectitem_qbase_bounding_rect q_graphicsrectitem_super_bounding_rect
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#boundingRect)
 ///
 /// Base class method implementation
@@ -12546,10 +11862,6 @@ QPainterPath* q_graphicsrectitem_shape(void* self);
 ///
 void q_graphicsrectitem_on_shape(void* self, QPainterPath* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_shape` instead
-///
-#define q_graphicsrectitem_qbase_shape q_graphicsrectitem_super_shape
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#shape)
 ///
 /// Base class method implementation
@@ -12573,10 +11885,6 @@ bool q_graphicsrectitem_contains(void* self, void* point);
 /// @param callback bool func(QGraphicsRectItem* self, QPointF* point)
 ///
 void q_graphicsrectitem_on_contains(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_contains` instead
-///
-#define q_graphicsrectitem_qbase_contains q_graphicsrectitem_super_contains
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#contains)
 ///
@@ -12605,10 +11913,6 @@ void q_graphicsrectitem_paint(void* self, void* painter, void* option, void* wid
 ///
 void q_graphicsrectitem_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_paint` instead
-///
-#define q_graphicsrectitem_qbase_paint q_graphicsrectitem_super_paint
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#paint)
 ///
 /// Base class method implementation
@@ -12636,10 +11940,6 @@ bool q_graphicsrectitem_is_obscured_by(void* self, void* item);
 ///
 void q_graphicsrectitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_is_obscured_by` instead
-///
-#define q_graphicsrectitem_qbase_is_obscured_by q_graphicsrectitem_super_is_obscured_by
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#isObscuredBy)
 ///
 /// Base class method implementation
@@ -12666,10 +11966,6 @@ QPainterPath* q_graphicsrectitem_opaque_area(void* self);
 ///
 void q_graphicsrectitem_on_opaque_area(void* self, QPainterPath* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_opaque_area` instead
-///
-#define q_graphicsrectitem_qbase_opaque_area q_graphicsrectitem_super_opaque_area
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#opaqueArea)
 ///
 /// Base class method implementation
@@ -12692,10 +11988,6 @@ int32_t q_graphicsrectitem_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_graphicsrectitem_on_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_type` instead
-///
-#define q_graphicsrectitem_qbase_type q_graphicsrectitem_super_type
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#type)
 ///
@@ -12720,10 +12012,6 @@ bool q_graphicsrectitem_supports_extension(void* self, int32_t extension);
 /// @param callback bool func(QGraphicsRectItem* self, enum QGraphicsItem__Extension extension)
 ///
 void q_graphicsrectitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_supports_extension` instead
-///
-#define q_graphicsrectitem_qbase_supports_extension q_graphicsrectitem_super_supports_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#supportsExtension)
 ///
@@ -12750,10 +12038,6 @@ void q_graphicsrectitem_set_extension(void* self, int32_t extension, void* varia
 /// @param callback void func(QGraphicsRectItem* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
 void q_graphicsrectitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_set_extension` instead
-///
-#define q_graphicsrectitem_qbase_set_extension q_graphicsrectitem_super_set_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#setExtension)
 ///
@@ -12782,10 +12066,6 @@ QVariant* q_graphicsrectitem_extension(void* self, void* variant);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsrectitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_extension` instead
-///
-#define q_graphicsrectitem_qbase_extension q_graphicsrectitem_super_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrectitem.html#extension)
 ///
@@ -14350,10 +13630,6 @@ void q_graphicsrectitem_scroll3(void* self, double dx, double dy, void* rect);
 ///
 void q_graphicsrectitem_advance(void* self, int phase);
 
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_advance` instead
-///
-#define q_graphicsrectitem_qbase_advance q_graphicsrectitem_super_advance
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#advance)
@@ -14387,10 +13663,6 @@ void q_graphicsrectitem_on_advance(void* self, void (*callback)(void*, int));
 /// @param mode enum Qt__ItemSelectionMode
 ///
 bool q_graphicsrectitem_collides_with_item(void* self, void* other, int32_t mode);
-
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_collides_with_item` instead
-///
-#define q_graphicsrectitem_qbase_collides_with_item q_graphicsrectitem_super_collides_with_item
 
 /// Inherited from QGraphicsItem
 ///
@@ -14427,10 +13699,6 @@ void q_graphicsrectitem_on_collides_with_item(void* self, bool (*callback)(void*
 ///
 bool q_graphicsrectitem_collides_with_path(void* self, void* path, int32_t mode);
 
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_collides_with_path` instead
-///
-#define q_graphicsrectitem_qbase_collides_with_path q_graphicsrectitem_super_collides_with_path
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
@@ -14466,10 +13734,6 @@ void q_graphicsrectitem_on_collides_with_path(void* self, bool (*callback)(void*
 ///
 bool q_graphicsrectitem_scene_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_scene_event_filter` instead
-///
-#define q_graphicsrectitem_qbase_scene_event_filter q_graphicsrectitem_super_scene_event_filter
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEventFilter)
@@ -14504,10 +13768,6 @@ void q_graphicsrectitem_on_scene_event_filter(void* self, bool (*callback)(void*
 ///
 bool q_graphicsrectitem_scene_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_scene_event` instead
-///
-#define q_graphicsrectitem_qbase_scene_event q_graphicsrectitem_super_scene_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEvent)
@@ -14540,10 +13800,6 @@ void q_graphicsrectitem_on_scene_event(void* self, bool (*callback)(void*, void*
 /// @param event QGraphicsSceneContextMenuEvent*
 ///
 void q_graphicsrectitem_context_menu_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_context_menu_event` instead
-///
-#define q_graphicsrectitem_qbase_context_menu_event q_graphicsrectitem_super_context_menu_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -14578,10 +13834,6 @@ void q_graphicsrectitem_on_context_menu_event(void* self, void (*callback)(void*
 ///
 void q_graphicsrectitem_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_drag_enter_event` instead
-///
-#define q_graphicsrectitem_qbase_drag_enter_event q_graphicsrectitem_super_drag_enter_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragEnterEvent)
@@ -14614,10 +13866,6 @@ void q_graphicsrectitem_on_drag_enter_event(void* self, void (*callback)(void*, 
 /// @param event QGraphicsSceneDragDropEvent*
 ///
 void q_graphicsrectitem_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_drag_leave_event` instead
-///
-#define q_graphicsrectitem_qbase_drag_leave_event q_graphicsrectitem_super_drag_leave_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -14652,10 +13900,6 @@ void q_graphicsrectitem_on_drag_leave_event(void* self, void (*callback)(void*, 
 ///
 void q_graphicsrectitem_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_drag_move_event` instead
-///
-#define q_graphicsrectitem_qbase_drag_move_event q_graphicsrectitem_super_drag_move_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragMoveEvent)
@@ -14688,10 +13932,6 @@ void q_graphicsrectitem_on_drag_move_event(void* self, void (*callback)(void*, v
 /// @param event QGraphicsSceneDragDropEvent*
 ///
 void q_graphicsrectitem_drop_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_drop_event` instead
-///
-#define q_graphicsrectitem_qbase_drop_event q_graphicsrectitem_super_drop_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -14726,10 +13966,6 @@ void q_graphicsrectitem_on_drop_event(void* self, void (*callback)(void*, void*)
 ///
 void q_graphicsrectitem_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_focus_in_event` instead
-///
-#define q_graphicsrectitem_qbase_focus_in_event q_graphicsrectitem_super_focus_in_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusInEvent)
@@ -14762,10 +13998,6 @@ void q_graphicsrectitem_on_focus_in_event(void* self, void (*callback)(void*, vo
 /// @param event QFocusEvent*
 ///
 void q_graphicsrectitem_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_focus_out_event` instead
-///
-#define q_graphicsrectitem_qbase_focus_out_event q_graphicsrectitem_super_focus_out_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -14800,10 +14032,6 @@ void q_graphicsrectitem_on_focus_out_event(void* self, void (*callback)(void*, v
 ///
 void q_graphicsrectitem_hover_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_hover_enter_event` instead
-///
-#define q_graphicsrectitem_qbase_hover_enter_event q_graphicsrectitem_super_hover_enter_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverEnterEvent)
@@ -14836,10 +14064,6 @@ void q_graphicsrectitem_on_hover_enter_event(void* self, void (*callback)(void*,
 /// @param event QGraphicsSceneHoverEvent*
 ///
 void q_graphicsrectitem_hover_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_hover_move_event` instead
-///
-#define q_graphicsrectitem_qbase_hover_move_event q_graphicsrectitem_super_hover_move_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -14874,10 +14098,6 @@ void q_graphicsrectitem_on_hover_move_event(void* self, void (*callback)(void*, 
 ///
 void q_graphicsrectitem_hover_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_hover_leave_event` instead
-///
-#define q_graphicsrectitem_qbase_hover_leave_event q_graphicsrectitem_super_hover_leave_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverLeaveEvent)
@@ -14910,10 +14130,6 @@ void q_graphicsrectitem_on_hover_leave_event(void* self, void (*callback)(void*,
 /// @param event QKeyEvent*
 ///
 void q_graphicsrectitem_key_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_key_press_event` instead
-///
-#define q_graphicsrectitem_qbase_key_press_event q_graphicsrectitem_super_key_press_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -14948,10 +14164,6 @@ void q_graphicsrectitem_on_key_press_event(void* self, void (*callback)(void*, v
 ///
 void q_graphicsrectitem_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_key_release_event` instead
-///
-#define q_graphicsrectitem_qbase_key_release_event q_graphicsrectitem_super_key_release_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#keyReleaseEvent)
@@ -14984,10 +14196,6 @@ void q_graphicsrectitem_on_key_release_event(void* self, void (*callback)(void*,
 /// @param event QGraphicsSceneMouseEvent*
 ///
 void q_graphicsrectitem_mouse_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_mouse_press_event` instead
-///
-#define q_graphicsrectitem_qbase_mouse_press_event q_graphicsrectitem_super_mouse_press_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -15022,10 +14230,6 @@ void q_graphicsrectitem_on_mouse_press_event(void* self, void (*callback)(void*,
 ///
 void q_graphicsrectitem_mouse_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_mouse_move_event` instead
-///
-#define q_graphicsrectitem_qbase_mouse_move_event q_graphicsrectitem_super_mouse_move_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseMoveEvent)
@@ -15058,10 +14262,6 @@ void q_graphicsrectitem_on_mouse_move_event(void* self, void (*callback)(void*, 
 /// @param event QGraphicsSceneMouseEvent*
 ///
 void q_graphicsrectitem_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_mouse_release_event` instead
-///
-#define q_graphicsrectitem_qbase_mouse_release_event q_graphicsrectitem_super_mouse_release_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -15096,10 +14296,6 @@ void q_graphicsrectitem_on_mouse_release_event(void* self, void (*callback)(void
 ///
 void q_graphicsrectitem_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_mouse_double_click_event` instead
-///
-#define q_graphicsrectitem_qbase_mouse_double_click_event q_graphicsrectitem_super_mouse_double_click_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseDoubleClickEvent)
@@ -15132,10 +14328,6 @@ void q_graphicsrectitem_on_mouse_double_click_event(void* self, void (*callback)
 /// @param event QGraphicsSceneWheelEvent*
 ///
 void q_graphicsrectitem_wheel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_wheel_event` instead
-///
-#define q_graphicsrectitem_qbase_wheel_event q_graphicsrectitem_super_wheel_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -15170,10 +14362,6 @@ void q_graphicsrectitem_on_wheel_event(void* self, void (*callback)(void*, void*
 ///
 void q_graphicsrectitem_input_method_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_input_method_event` instead
-///
-#define q_graphicsrectitem_qbase_input_method_event q_graphicsrectitem_super_input_method_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodEvent)
@@ -15206,10 +14394,6 @@ void q_graphicsrectitem_on_input_method_event(void* self, void (*callback)(void*
 /// @param query enum Qt__InputMethodQuery
 ///
 QVariant* q_graphicsrectitem_input_method_query(void* self, int32_t query);
-
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_input_method_query` instead
-///
-#define q_graphicsrectitem_qbase_input_method_query q_graphicsrectitem_super_input_method_query
 
 /// Inherited from QGraphicsItem
 ///
@@ -15247,10 +14431,6 @@ void q_graphicsrectitem_on_input_method_query(void* self, QVariant* (*callback)(
 ///
 QVariant* q_graphicsrectitem_item_change(void* self, int32_t change, void* value);
 
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_item_change` instead
-///
-#define q_graphicsrectitem_qbase_item_change q_graphicsrectitem_super_item_change
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemChange)
@@ -15286,10 +14466,6 @@ void q_graphicsrectitem_on_item_change(void* self, QVariant* (*callback)(void*, 
 ///
 void q_graphicsrectitem_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_update_micro_focus` instead
-///
-#define q_graphicsrectitem_qbase_update_micro_focus q_graphicsrectitem_super_update_micro_focus
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#updateMicroFocus)
@@ -15320,10 +14496,6 @@ void q_graphicsrectitem_on_update_micro_focus(void* self, void (*callback)());
 /// @param self QGraphicsRectItem*
 ///
 void q_graphicsrectitem_add_to_index(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_add_to_index` instead
-///
-#define q_graphicsrectitem_qbase_add_to_index q_graphicsrectitem_super_add_to_index
 
 /// Inherited from QGraphicsItem
 ///
@@ -15356,10 +14528,6 @@ void q_graphicsrectitem_on_add_to_index(void* self, void (*callback)());
 ///
 void q_graphicsrectitem_remove_from_index(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_remove_from_index` instead
-///
-#define q_graphicsrectitem_qbase_remove_from_index q_graphicsrectitem_super_remove_from_index
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
@@ -15390,10 +14558,6 @@ void q_graphicsrectitem_on_remove_from_index(void* self, void (*callback)());
 /// @param self QGraphicsRectItem*
 ///
 void q_graphicsrectitem_prepare_geometry_change(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicsrectitem_super_prepare_geometry_change` instead
-///
-#define q_graphicsrectitem_qbase_prepare_geometry_change q_graphicsrectitem_super_prepare_geometry_change
 
 /// Inherited from QGraphicsItem
 ///
@@ -15544,10 +14708,6 @@ QRectF* q_graphicsellipseitem_bounding_rect(void* self);
 ///
 void q_graphicsellipseitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_bounding_rect` instead
-///
-#define q_graphicsellipseitem_qbase_bounding_rect q_graphicsellipseitem_super_bounding_rect
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#boundingRect)
 ///
 /// Base class method implementation
@@ -15573,10 +14733,6 @@ QPainterPath* q_graphicsellipseitem_shape(void* self);
 ///
 void q_graphicsellipseitem_on_shape(void* self, QPainterPath* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_shape` instead
-///
-#define q_graphicsellipseitem_qbase_shape q_graphicsellipseitem_super_shape
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#shape)
 ///
 /// Base class method implementation
@@ -15600,10 +14756,6 @@ bool q_graphicsellipseitem_contains(void* self, void* point);
 /// @param callback bool func(QGraphicsEllipseItem* self, QPointF* point)
 ///
 void q_graphicsellipseitem_on_contains(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_contains` instead
-///
-#define q_graphicsellipseitem_qbase_contains q_graphicsellipseitem_super_contains
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#contains)
 ///
@@ -15632,10 +14784,6 @@ void q_graphicsellipseitem_paint(void* self, void* painter, void* option, void* 
 ///
 void q_graphicsellipseitem_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_paint` instead
-///
-#define q_graphicsellipseitem_qbase_paint q_graphicsellipseitem_super_paint
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#paint)
 ///
 /// Base class method implementation
@@ -15663,10 +14811,6 @@ bool q_graphicsellipseitem_is_obscured_by(void* self, void* item);
 ///
 void q_graphicsellipseitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_is_obscured_by` instead
-///
-#define q_graphicsellipseitem_qbase_is_obscured_by q_graphicsellipseitem_super_is_obscured_by
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#isObscuredBy)
 ///
 /// Base class method implementation
@@ -15693,10 +14837,6 @@ QPainterPath* q_graphicsellipseitem_opaque_area(void* self);
 ///
 void q_graphicsellipseitem_on_opaque_area(void* self, QPainterPath* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_opaque_area` instead
-///
-#define q_graphicsellipseitem_qbase_opaque_area q_graphicsellipseitem_super_opaque_area
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#opaqueArea)
 ///
 /// Base class method implementation
@@ -15719,10 +14859,6 @@ int32_t q_graphicsellipseitem_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_graphicsellipseitem_on_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_type` instead
-///
-#define q_graphicsellipseitem_qbase_type q_graphicsellipseitem_super_type
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#type)
 ///
@@ -15747,10 +14883,6 @@ bool q_graphicsellipseitem_supports_extension(void* self, int32_t extension);
 /// @param callback bool func(QGraphicsEllipseItem* self, enum QGraphicsItem__Extension extension)
 ///
 void q_graphicsellipseitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_supports_extension` instead
-///
-#define q_graphicsellipseitem_qbase_supports_extension q_graphicsellipseitem_super_supports_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#supportsExtension)
 ///
@@ -15777,10 +14909,6 @@ void q_graphicsellipseitem_set_extension(void* self, int32_t extension, void* va
 /// @param callback void func(QGraphicsEllipseItem* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
 void q_graphicsellipseitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_set_extension` instead
-///
-#define q_graphicsellipseitem_qbase_set_extension q_graphicsellipseitem_super_set_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#setExtension)
 ///
@@ -15809,10 +14937,6 @@ QVariant* q_graphicsellipseitem_extension(void* self, void* variant);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsellipseitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_extension` instead
-///
-#define q_graphicsellipseitem_qbase_extension q_graphicsellipseitem_super_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsellipseitem.html#extension)
 ///
@@ -17377,10 +16501,6 @@ void q_graphicsellipseitem_scroll3(void* self, double dx, double dy, void* rect)
 ///
 void q_graphicsellipseitem_advance(void* self, int phase);
 
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_advance` instead
-///
-#define q_graphicsellipseitem_qbase_advance q_graphicsellipseitem_super_advance
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#advance)
@@ -17414,10 +16534,6 @@ void q_graphicsellipseitem_on_advance(void* self, void (*callback)(void*, int));
 /// @param mode enum Qt__ItemSelectionMode
 ///
 bool q_graphicsellipseitem_collides_with_item(void* self, void* other, int32_t mode);
-
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_collides_with_item` instead
-///
-#define q_graphicsellipseitem_qbase_collides_with_item q_graphicsellipseitem_super_collides_with_item
 
 /// Inherited from QGraphicsItem
 ///
@@ -17454,10 +16570,6 @@ void q_graphicsellipseitem_on_collides_with_item(void* self, bool (*callback)(vo
 ///
 bool q_graphicsellipseitem_collides_with_path(void* self, void* path, int32_t mode);
 
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_collides_with_path` instead
-///
-#define q_graphicsellipseitem_qbase_collides_with_path q_graphicsellipseitem_super_collides_with_path
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
@@ -17493,10 +16605,6 @@ void q_graphicsellipseitem_on_collides_with_path(void* self, bool (*callback)(vo
 ///
 bool q_graphicsellipseitem_scene_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_scene_event_filter` instead
-///
-#define q_graphicsellipseitem_qbase_scene_event_filter q_graphicsellipseitem_super_scene_event_filter
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEventFilter)
@@ -17531,10 +16639,6 @@ void q_graphicsellipseitem_on_scene_event_filter(void* self, bool (*callback)(vo
 ///
 bool q_graphicsellipseitem_scene_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_scene_event` instead
-///
-#define q_graphicsellipseitem_qbase_scene_event q_graphicsellipseitem_super_scene_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEvent)
@@ -17567,10 +16671,6 @@ void q_graphicsellipseitem_on_scene_event(void* self, bool (*callback)(void*, vo
 /// @param event QGraphicsSceneContextMenuEvent*
 ///
 void q_graphicsellipseitem_context_menu_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_context_menu_event` instead
-///
-#define q_graphicsellipseitem_qbase_context_menu_event q_graphicsellipseitem_super_context_menu_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -17605,10 +16705,6 @@ void q_graphicsellipseitem_on_context_menu_event(void* self, void (*callback)(vo
 ///
 void q_graphicsellipseitem_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_drag_enter_event` instead
-///
-#define q_graphicsellipseitem_qbase_drag_enter_event q_graphicsellipseitem_super_drag_enter_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragEnterEvent)
@@ -17641,10 +16737,6 @@ void q_graphicsellipseitem_on_drag_enter_event(void* self, void (*callback)(void
 /// @param event QGraphicsSceneDragDropEvent*
 ///
 void q_graphicsellipseitem_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_drag_leave_event` instead
-///
-#define q_graphicsellipseitem_qbase_drag_leave_event q_graphicsellipseitem_super_drag_leave_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -17679,10 +16771,6 @@ void q_graphicsellipseitem_on_drag_leave_event(void* self, void (*callback)(void
 ///
 void q_graphicsellipseitem_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_drag_move_event` instead
-///
-#define q_graphicsellipseitem_qbase_drag_move_event q_graphicsellipseitem_super_drag_move_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragMoveEvent)
@@ -17715,10 +16803,6 @@ void q_graphicsellipseitem_on_drag_move_event(void* self, void (*callback)(void*
 /// @param event QGraphicsSceneDragDropEvent*
 ///
 void q_graphicsellipseitem_drop_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_drop_event` instead
-///
-#define q_graphicsellipseitem_qbase_drop_event q_graphicsellipseitem_super_drop_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -17753,10 +16837,6 @@ void q_graphicsellipseitem_on_drop_event(void* self, void (*callback)(void*, voi
 ///
 void q_graphicsellipseitem_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_focus_in_event` instead
-///
-#define q_graphicsellipseitem_qbase_focus_in_event q_graphicsellipseitem_super_focus_in_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusInEvent)
@@ -17789,10 +16869,6 @@ void q_graphicsellipseitem_on_focus_in_event(void* self, void (*callback)(void*,
 /// @param event QFocusEvent*
 ///
 void q_graphicsellipseitem_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_focus_out_event` instead
-///
-#define q_graphicsellipseitem_qbase_focus_out_event q_graphicsellipseitem_super_focus_out_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -17827,10 +16903,6 @@ void q_graphicsellipseitem_on_focus_out_event(void* self, void (*callback)(void*
 ///
 void q_graphicsellipseitem_hover_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_hover_enter_event` instead
-///
-#define q_graphicsellipseitem_qbase_hover_enter_event q_graphicsellipseitem_super_hover_enter_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverEnterEvent)
@@ -17863,10 +16935,6 @@ void q_graphicsellipseitem_on_hover_enter_event(void* self, void (*callback)(voi
 /// @param event QGraphicsSceneHoverEvent*
 ///
 void q_graphicsellipseitem_hover_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_hover_move_event` instead
-///
-#define q_graphicsellipseitem_qbase_hover_move_event q_graphicsellipseitem_super_hover_move_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -17901,10 +16969,6 @@ void q_graphicsellipseitem_on_hover_move_event(void* self, void (*callback)(void
 ///
 void q_graphicsellipseitem_hover_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_hover_leave_event` instead
-///
-#define q_graphicsellipseitem_qbase_hover_leave_event q_graphicsellipseitem_super_hover_leave_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverLeaveEvent)
@@ -17937,10 +17001,6 @@ void q_graphicsellipseitem_on_hover_leave_event(void* self, void (*callback)(voi
 /// @param event QKeyEvent*
 ///
 void q_graphicsellipseitem_key_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_key_press_event` instead
-///
-#define q_graphicsellipseitem_qbase_key_press_event q_graphicsellipseitem_super_key_press_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -17975,10 +17035,6 @@ void q_graphicsellipseitem_on_key_press_event(void* self, void (*callback)(void*
 ///
 void q_graphicsellipseitem_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_key_release_event` instead
-///
-#define q_graphicsellipseitem_qbase_key_release_event q_graphicsellipseitem_super_key_release_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#keyReleaseEvent)
@@ -18011,10 +17067,6 @@ void q_graphicsellipseitem_on_key_release_event(void* self, void (*callback)(voi
 /// @param event QGraphicsSceneMouseEvent*
 ///
 void q_graphicsellipseitem_mouse_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_mouse_press_event` instead
-///
-#define q_graphicsellipseitem_qbase_mouse_press_event q_graphicsellipseitem_super_mouse_press_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -18049,10 +17101,6 @@ void q_graphicsellipseitem_on_mouse_press_event(void* self, void (*callback)(voi
 ///
 void q_graphicsellipseitem_mouse_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_mouse_move_event` instead
-///
-#define q_graphicsellipseitem_qbase_mouse_move_event q_graphicsellipseitem_super_mouse_move_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseMoveEvent)
@@ -18085,10 +17133,6 @@ void q_graphicsellipseitem_on_mouse_move_event(void* self, void (*callback)(void
 /// @param event QGraphicsSceneMouseEvent*
 ///
 void q_graphicsellipseitem_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_mouse_release_event` instead
-///
-#define q_graphicsellipseitem_qbase_mouse_release_event q_graphicsellipseitem_super_mouse_release_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -18123,10 +17167,6 @@ void q_graphicsellipseitem_on_mouse_release_event(void* self, void (*callback)(v
 ///
 void q_graphicsellipseitem_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_mouse_double_click_event` instead
-///
-#define q_graphicsellipseitem_qbase_mouse_double_click_event q_graphicsellipseitem_super_mouse_double_click_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseDoubleClickEvent)
@@ -18159,10 +17199,6 @@ void q_graphicsellipseitem_on_mouse_double_click_event(void* self, void (*callba
 /// @param event QGraphicsSceneWheelEvent*
 ///
 void q_graphicsellipseitem_wheel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_wheel_event` instead
-///
-#define q_graphicsellipseitem_qbase_wheel_event q_graphicsellipseitem_super_wheel_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -18197,10 +17233,6 @@ void q_graphicsellipseitem_on_wheel_event(void* self, void (*callback)(void*, vo
 ///
 void q_graphicsellipseitem_input_method_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_input_method_event` instead
-///
-#define q_graphicsellipseitem_qbase_input_method_event q_graphicsellipseitem_super_input_method_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodEvent)
@@ -18233,10 +17265,6 @@ void q_graphicsellipseitem_on_input_method_event(void* self, void (*callback)(vo
 /// @param query enum Qt__InputMethodQuery
 ///
 QVariant* q_graphicsellipseitem_input_method_query(void* self, int32_t query);
-
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_input_method_query` instead
-///
-#define q_graphicsellipseitem_qbase_input_method_query q_graphicsellipseitem_super_input_method_query
 
 /// Inherited from QGraphicsItem
 ///
@@ -18274,10 +17302,6 @@ void q_graphicsellipseitem_on_input_method_query(void* self, QVariant* (*callbac
 ///
 QVariant* q_graphicsellipseitem_item_change(void* self, int32_t change, void* value);
 
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_item_change` instead
-///
-#define q_graphicsellipseitem_qbase_item_change q_graphicsellipseitem_super_item_change
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemChange)
@@ -18313,10 +17337,6 @@ void q_graphicsellipseitem_on_item_change(void* self, QVariant* (*callback)(void
 ///
 void q_graphicsellipseitem_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_update_micro_focus` instead
-///
-#define q_graphicsellipseitem_qbase_update_micro_focus q_graphicsellipseitem_super_update_micro_focus
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#updateMicroFocus)
@@ -18347,10 +17367,6 @@ void q_graphicsellipseitem_on_update_micro_focus(void* self, void (*callback)())
 /// @param self QGraphicsEllipseItem*
 ///
 void q_graphicsellipseitem_add_to_index(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_add_to_index` instead
-///
-#define q_graphicsellipseitem_qbase_add_to_index q_graphicsellipseitem_super_add_to_index
 
 /// Inherited from QGraphicsItem
 ///
@@ -18383,10 +17399,6 @@ void q_graphicsellipseitem_on_add_to_index(void* self, void (*callback)());
 ///
 void q_graphicsellipseitem_remove_from_index(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_remove_from_index` instead
-///
-#define q_graphicsellipseitem_qbase_remove_from_index q_graphicsellipseitem_super_remove_from_index
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
@@ -18417,10 +17429,6 @@ void q_graphicsellipseitem_on_remove_from_index(void* self, void (*callback)());
 /// @param self QGraphicsEllipseItem*
 ///
 void q_graphicsellipseitem_prepare_geometry_change(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicsellipseitem_super_prepare_geometry_change` instead
-///
-#define q_graphicsellipseitem_qbase_prepare_geometry_change q_graphicsellipseitem_super_prepare_geometry_change
 
 /// Inherited from QGraphicsItem
 ///
@@ -18497,10 +17505,6 @@ QRectF* q_graphicspolygonitem_bounding_rect(void* self);
 ///
 void q_graphicspolygonitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_bounding_rect` instead
-///
-#define q_graphicspolygonitem_qbase_bounding_rect q_graphicspolygonitem_super_bounding_rect
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#boundingRect)
 ///
 /// Base class method implementation
@@ -18526,10 +17530,6 @@ QPainterPath* q_graphicspolygonitem_shape(void* self);
 ///
 void q_graphicspolygonitem_on_shape(void* self, QPainterPath* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_shape` instead
-///
-#define q_graphicspolygonitem_qbase_shape q_graphicspolygonitem_super_shape
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#shape)
 ///
 /// Base class method implementation
@@ -18553,10 +17553,6 @@ bool q_graphicspolygonitem_contains(void* self, void* point);
 /// @param callback bool func(QGraphicsPolygonItem* self, QPointF* point)
 ///
 void q_graphicspolygonitem_on_contains(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_contains` instead
-///
-#define q_graphicspolygonitem_qbase_contains q_graphicspolygonitem_super_contains
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#contains)
 ///
@@ -18585,10 +17581,6 @@ void q_graphicspolygonitem_paint(void* self, void* painter, void* option, void* 
 ///
 void q_graphicspolygonitem_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_paint` instead
-///
-#define q_graphicspolygonitem_qbase_paint q_graphicspolygonitem_super_paint
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#paint)
 ///
 /// Base class method implementation
@@ -18616,10 +17608,6 @@ bool q_graphicspolygonitem_is_obscured_by(void* self, void* item);
 ///
 void q_graphicspolygonitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_is_obscured_by` instead
-///
-#define q_graphicspolygonitem_qbase_is_obscured_by q_graphicspolygonitem_super_is_obscured_by
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#isObscuredBy)
 ///
 /// Base class method implementation
@@ -18646,10 +17634,6 @@ QPainterPath* q_graphicspolygonitem_opaque_area(void* self);
 ///
 void q_graphicspolygonitem_on_opaque_area(void* self, QPainterPath* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_opaque_area` instead
-///
-#define q_graphicspolygonitem_qbase_opaque_area q_graphicspolygonitem_super_opaque_area
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#opaqueArea)
 ///
 /// Base class method implementation
@@ -18672,10 +17656,6 @@ int32_t q_graphicspolygonitem_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_graphicspolygonitem_on_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_type` instead
-///
-#define q_graphicspolygonitem_qbase_type q_graphicspolygonitem_super_type
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#type)
 ///
@@ -18700,10 +17680,6 @@ bool q_graphicspolygonitem_supports_extension(void* self, int32_t extension);
 /// @param callback bool func(QGraphicsPolygonItem* self, enum QGraphicsItem__Extension extension)
 ///
 void q_graphicspolygonitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_supports_extension` instead
-///
-#define q_graphicspolygonitem_qbase_supports_extension q_graphicspolygonitem_super_supports_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#supportsExtension)
 ///
@@ -18730,10 +17706,6 @@ void q_graphicspolygonitem_set_extension(void* self, int32_t extension, void* va
 /// @param callback void func(QGraphicsPolygonItem* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
 void q_graphicspolygonitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
-
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_set_extension` instead
-///
-#define q_graphicspolygonitem_qbase_set_extension q_graphicspolygonitem_super_set_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#setExtension)
 ///
@@ -18762,10 +17734,6 @@ QVariant* q_graphicspolygonitem_extension(void* self, void* variant);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicspolygonitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_extension` instead
-///
-#define q_graphicspolygonitem_qbase_extension q_graphicspolygonitem_super_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#extension)
 ///
@@ -20330,10 +19298,6 @@ void q_graphicspolygonitem_scroll3(void* self, double dx, double dy, void* rect)
 ///
 void q_graphicspolygonitem_advance(void* self, int phase);
 
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_advance` instead
-///
-#define q_graphicspolygonitem_qbase_advance q_graphicspolygonitem_super_advance
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#advance)
@@ -20367,10 +19331,6 @@ void q_graphicspolygonitem_on_advance(void* self, void (*callback)(void*, int));
 /// @param mode enum Qt__ItemSelectionMode
 ///
 bool q_graphicspolygonitem_collides_with_item(void* self, void* other, int32_t mode);
-
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_collides_with_item` instead
-///
-#define q_graphicspolygonitem_qbase_collides_with_item q_graphicspolygonitem_super_collides_with_item
 
 /// Inherited from QGraphicsItem
 ///
@@ -20407,10 +19367,6 @@ void q_graphicspolygonitem_on_collides_with_item(void* self, bool (*callback)(vo
 ///
 bool q_graphicspolygonitem_collides_with_path(void* self, void* path, int32_t mode);
 
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_collides_with_path` instead
-///
-#define q_graphicspolygonitem_qbase_collides_with_path q_graphicspolygonitem_super_collides_with_path
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
@@ -20446,10 +19402,6 @@ void q_graphicspolygonitem_on_collides_with_path(void* self, bool (*callback)(vo
 ///
 bool q_graphicspolygonitem_scene_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_scene_event_filter` instead
-///
-#define q_graphicspolygonitem_qbase_scene_event_filter q_graphicspolygonitem_super_scene_event_filter
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEventFilter)
@@ -20484,10 +19436,6 @@ void q_graphicspolygonitem_on_scene_event_filter(void* self, bool (*callback)(vo
 ///
 bool q_graphicspolygonitem_scene_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_scene_event` instead
-///
-#define q_graphicspolygonitem_qbase_scene_event q_graphicspolygonitem_super_scene_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEvent)
@@ -20520,10 +19468,6 @@ void q_graphicspolygonitem_on_scene_event(void* self, bool (*callback)(void*, vo
 /// @param event QGraphicsSceneContextMenuEvent*
 ///
 void q_graphicspolygonitem_context_menu_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_context_menu_event` instead
-///
-#define q_graphicspolygonitem_qbase_context_menu_event q_graphicspolygonitem_super_context_menu_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -20558,10 +19502,6 @@ void q_graphicspolygonitem_on_context_menu_event(void* self, void (*callback)(vo
 ///
 void q_graphicspolygonitem_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_drag_enter_event` instead
-///
-#define q_graphicspolygonitem_qbase_drag_enter_event q_graphicspolygonitem_super_drag_enter_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragEnterEvent)
@@ -20594,10 +19534,6 @@ void q_graphicspolygonitem_on_drag_enter_event(void* self, void (*callback)(void
 /// @param event QGraphicsSceneDragDropEvent*
 ///
 void q_graphicspolygonitem_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_drag_leave_event` instead
-///
-#define q_graphicspolygonitem_qbase_drag_leave_event q_graphicspolygonitem_super_drag_leave_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -20632,10 +19568,6 @@ void q_graphicspolygonitem_on_drag_leave_event(void* self, void (*callback)(void
 ///
 void q_graphicspolygonitem_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_drag_move_event` instead
-///
-#define q_graphicspolygonitem_qbase_drag_move_event q_graphicspolygonitem_super_drag_move_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragMoveEvent)
@@ -20668,10 +19600,6 @@ void q_graphicspolygonitem_on_drag_move_event(void* self, void (*callback)(void*
 /// @param event QGraphicsSceneDragDropEvent*
 ///
 void q_graphicspolygonitem_drop_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_drop_event` instead
-///
-#define q_graphicspolygonitem_qbase_drop_event q_graphicspolygonitem_super_drop_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -20706,10 +19634,6 @@ void q_graphicspolygonitem_on_drop_event(void* self, void (*callback)(void*, voi
 ///
 void q_graphicspolygonitem_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_focus_in_event` instead
-///
-#define q_graphicspolygonitem_qbase_focus_in_event q_graphicspolygonitem_super_focus_in_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusInEvent)
@@ -20742,10 +19666,6 @@ void q_graphicspolygonitem_on_focus_in_event(void* self, void (*callback)(void*,
 /// @param event QFocusEvent*
 ///
 void q_graphicspolygonitem_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_focus_out_event` instead
-///
-#define q_graphicspolygonitem_qbase_focus_out_event q_graphicspolygonitem_super_focus_out_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -20780,10 +19700,6 @@ void q_graphicspolygonitem_on_focus_out_event(void* self, void (*callback)(void*
 ///
 void q_graphicspolygonitem_hover_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_hover_enter_event` instead
-///
-#define q_graphicspolygonitem_qbase_hover_enter_event q_graphicspolygonitem_super_hover_enter_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverEnterEvent)
@@ -20816,10 +19732,6 @@ void q_graphicspolygonitem_on_hover_enter_event(void* self, void (*callback)(voi
 /// @param event QGraphicsSceneHoverEvent*
 ///
 void q_graphicspolygonitem_hover_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_hover_move_event` instead
-///
-#define q_graphicspolygonitem_qbase_hover_move_event q_graphicspolygonitem_super_hover_move_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -20854,10 +19766,6 @@ void q_graphicspolygonitem_on_hover_move_event(void* self, void (*callback)(void
 ///
 void q_graphicspolygonitem_hover_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_hover_leave_event` instead
-///
-#define q_graphicspolygonitem_qbase_hover_leave_event q_graphicspolygonitem_super_hover_leave_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverLeaveEvent)
@@ -20890,10 +19798,6 @@ void q_graphicspolygonitem_on_hover_leave_event(void* self, void (*callback)(voi
 /// @param event QKeyEvent*
 ///
 void q_graphicspolygonitem_key_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_key_press_event` instead
-///
-#define q_graphicspolygonitem_qbase_key_press_event q_graphicspolygonitem_super_key_press_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -20928,10 +19832,6 @@ void q_graphicspolygonitem_on_key_press_event(void* self, void (*callback)(void*
 ///
 void q_graphicspolygonitem_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_key_release_event` instead
-///
-#define q_graphicspolygonitem_qbase_key_release_event q_graphicspolygonitem_super_key_release_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#keyReleaseEvent)
@@ -20964,10 +19864,6 @@ void q_graphicspolygonitem_on_key_release_event(void* self, void (*callback)(voi
 /// @param event QGraphicsSceneMouseEvent*
 ///
 void q_graphicspolygonitem_mouse_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_mouse_press_event` instead
-///
-#define q_graphicspolygonitem_qbase_mouse_press_event q_graphicspolygonitem_super_mouse_press_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -21002,10 +19898,6 @@ void q_graphicspolygonitem_on_mouse_press_event(void* self, void (*callback)(voi
 ///
 void q_graphicspolygonitem_mouse_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_mouse_move_event` instead
-///
-#define q_graphicspolygonitem_qbase_mouse_move_event q_graphicspolygonitem_super_mouse_move_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseMoveEvent)
@@ -21038,10 +19930,6 @@ void q_graphicspolygonitem_on_mouse_move_event(void* self, void (*callback)(void
 /// @param event QGraphicsSceneMouseEvent*
 ///
 void q_graphicspolygonitem_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_mouse_release_event` instead
-///
-#define q_graphicspolygonitem_qbase_mouse_release_event q_graphicspolygonitem_super_mouse_release_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -21076,10 +19964,6 @@ void q_graphicspolygonitem_on_mouse_release_event(void* self, void (*callback)(v
 ///
 void q_graphicspolygonitem_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_mouse_double_click_event` instead
-///
-#define q_graphicspolygonitem_qbase_mouse_double_click_event q_graphicspolygonitem_super_mouse_double_click_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseDoubleClickEvent)
@@ -21112,10 +19996,6 @@ void q_graphicspolygonitem_on_mouse_double_click_event(void* self, void (*callba
 /// @param event QGraphicsSceneWheelEvent*
 ///
 void q_graphicspolygonitem_wheel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_wheel_event` instead
-///
-#define q_graphicspolygonitem_qbase_wheel_event q_graphicspolygonitem_super_wheel_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -21150,10 +20030,6 @@ void q_graphicspolygonitem_on_wheel_event(void* self, void (*callback)(void*, vo
 ///
 void q_graphicspolygonitem_input_method_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_input_method_event` instead
-///
-#define q_graphicspolygonitem_qbase_input_method_event q_graphicspolygonitem_super_input_method_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodEvent)
@@ -21186,10 +20062,6 @@ void q_graphicspolygonitem_on_input_method_event(void* self, void (*callback)(vo
 /// @param query enum Qt__InputMethodQuery
 ///
 QVariant* q_graphicspolygonitem_input_method_query(void* self, int32_t query);
-
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_input_method_query` instead
-///
-#define q_graphicspolygonitem_qbase_input_method_query q_graphicspolygonitem_super_input_method_query
 
 /// Inherited from QGraphicsItem
 ///
@@ -21227,10 +20099,6 @@ void q_graphicspolygonitem_on_input_method_query(void* self, QVariant* (*callbac
 ///
 QVariant* q_graphicspolygonitem_item_change(void* self, int32_t change, void* value);
 
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_item_change` instead
-///
-#define q_graphicspolygonitem_qbase_item_change q_graphicspolygonitem_super_item_change
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemChange)
@@ -21266,10 +20134,6 @@ void q_graphicspolygonitem_on_item_change(void* self, QVariant* (*callback)(void
 ///
 void q_graphicspolygonitem_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_update_micro_focus` instead
-///
-#define q_graphicspolygonitem_qbase_update_micro_focus q_graphicspolygonitem_super_update_micro_focus
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#updateMicroFocus)
@@ -21300,10 +20164,6 @@ void q_graphicspolygonitem_on_update_micro_focus(void* self, void (*callback)())
 /// @param self QGraphicsPolygonItem*
 ///
 void q_graphicspolygonitem_add_to_index(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_add_to_index` instead
-///
-#define q_graphicspolygonitem_qbase_add_to_index q_graphicspolygonitem_super_add_to_index
 
 /// Inherited from QGraphicsItem
 ///
@@ -21336,10 +20196,6 @@ void q_graphicspolygonitem_on_add_to_index(void* self, void (*callback)());
 ///
 void q_graphicspolygonitem_remove_from_index(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_remove_from_index` instead
-///
-#define q_graphicspolygonitem_qbase_remove_from_index q_graphicspolygonitem_super_remove_from_index
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
@@ -21370,10 +20226,6 @@ void q_graphicspolygonitem_on_remove_from_index(void* self, void (*callback)());
 /// @param self QGraphicsPolygonItem*
 ///
 void q_graphicspolygonitem_prepare_geometry_change(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicspolygonitem_super_prepare_geometry_change` instead
-///
-#define q_graphicspolygonitem_qbase_prepare_geometry_change q_graphicspolygonitem_super_prepare_geometry_change
 
 /// Inherited from QGraphicsItem
 ///
@@ -21511,10 +20363,6 @@ QRectF* q_graphicslineitem_bounding_rect(void* self);
 ///
 void q_graphicslineitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_bounding_rect` instead
-///
-#define q_graphicslineitem_qbase_bounding_rect q_graphicslineitem_super_bounding_rect
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#boundingRect)
 ///
 /// Base class method implementation
@@ -21540,10 +20388,6 @@ QPainterPath* q_graphicslineitem_shape(void* self);
 ///
 void q_graphicslineitem_on_shape(void* self, QPainterPath* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_shape` instead
-///
-#define q_graphicslineitem_qbase_shape q_graphicslineitem_super_shape
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#shape)
 ///
 /// Base class method implementation
@@ -21567,10 +20411,6 @@ bool q_graphicslineitem_contains(void* self, void* point);
 /// @param callback bool func(QGraphicsLineItem* self, QPointF* point)
 ///
 void q_graphicslineitem_on_contains(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_contains` instead
-///
-#define q_graphicslineitem_qbase_contains q_graphicslineitem_super_contains
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#contains)
 ///
@@ -21599,10 +20439,6 @@ void q_graphicslineitem_paint(void* self, void* painter, void* option, void* wid
 ///
 void q_graphicslineitem_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_paint` instead
-///
-#define q_graphicslineitem_qbase_paint q_graphicslineitem_super_paint
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#paint)
 ///
 /// Base class method implementation
@@ -21630,10 +20466,6 @@ bool q_graphicslineitem_is_obscured_by(void* self, void* item);
 ///
 void q_graphicslineitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_is_obscured_by` instead
-///
-#define q_graphicslineitem_qbase_is_obscured_by q_graphicslineitem_super_is_obscured_by
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#isObscuredBy)
 ///
 /// Base class method implementation
@@ -21660,10 +20492,6 @@ QPainterPath* q_graphicslineitem_opaque_area(void* self);
 ///
 void q_graphicslineitem_on_opaque_area(void* self, QPainterPath* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_opaque_area` instead
-///
-#define q_graphicslineitem_qbase_opaque_area q_graphicslineitem_super_opaque_area
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#opaqueArea)
 ///
 /// Base class method implementation
@@ -21686,10 +20514,6 @@ int32_t q_graphicslineitem_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_graphicslineitem_on_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_type` instead
-///
-#define q_graphicslineitem_qbase_type q_graphicslineitem_super_type
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#type)
 ///
@@ -21714,10 +20538,6 @@ bool q_graphicslineitem_supports_extension(void* self, int32_t extension);
 /// @param callback bool func(QGraphicsLineItem* self, enum QGraphicsItem__Extension extension)
 ///
 void q_graphicslineitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_supports_extension` instead
-///
-#define q_graphicslineitem_qbase_supports_extension q_graphicslineitem_super_supports_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#supportsExtension)
 ///
@@ -21744,10 +20564,6 @@ void q_graphicslineitem_set_extension(void* self, int32_t extension, void* varia
 /// @param callback void func(QGraphicsLineItem* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
 void q_graphicslineitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
-
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_set_extension` instead
-///
-#define q_graphicslineitem_qbase_set_extension q_graphicslineitem_super_set_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#setExtension)
 ///
@@ -21776,10 +20592,6 @@ QVariant* q_graphicslineitem_extension(void* self, void* variant);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicslineitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_extension` instead
-///
-#define q_graphicslineitem_qbase_extension q_graphicslineitem_super_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslineitem.html#extension)
 ///
@@ -23310,10 +22122,6 @@ void q_graphicslineitem_scroll3(void* self, double dx, double dy, void* rect);
 ///
 void q_graphicslineitem_advance(void* self, int phase);
 
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_advance` instead
-///
-#define q_graphicslineitem_qbase_advance q_graphicslineitem_super_advance
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#advance)
@@ -23347,10 +22155,6 @@ void q_graphicslineitem_on_advance(void* self, void (*callback)(void*, int));
 /// @param mode enum Qt__ItemSelectionMode
 ///
 bool q_graphicslineitem_collides_with_item(void* self, void* other, int32_t mode);
-
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_collides_with_item` instead
-///
-#define q_graphicslineitem_qbase_collides_with_item q_graphicslineitem_super_collides_with_item
 
 /// Inherited from QGraphicsItem
 ///
@@ -23387,10 +22191,6 @@ void q_graphicslineitem_on_collides_with_item(void* self, bool (*callback)(void*
 ///
 bool q_graphicslineitem_collides_with_path(void* self, void* path, int32_t mode);
 
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_collides_with_path` instead
-///
-#define q_graphicslineitem_qbase_collides_with_path q_graphicslineitem_super_collides_with_path
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
@@ -23426,10 +22226,6 @@ void q_graphicslineitem_on_collides_with_path(void* self, bool (*callback)(void*
 ///
 bool q_graphicslineitem_scene_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_scene_event_filter` instead
-///
-#define q_graphicslineitem_qbase_scene_event_filter q_graphicslineitem_super_scene_event_filter
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEventFilter)
@@ -23464,10 +22260,6 @@ void q_graphicslineitem_on_scene_event_filter(void* self, bool (*callback)(void*
 ///
 bool q_graphicslineitem_scene_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_scene_event` instead
-///
-#define q_graphicslineitem_qbase_scene_event q_graphicslineitem_super_scene_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEvent)
@@ -23500,10 +22292,6 @@ void q_graphicslineitem_on_scene_event(void* self, bool (*callback)(void*, void*
 /// @param event QGraphicsSceneContextMenuEvent*
 ///
 void q_graphicslineitem_context_menu_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_context_menu_event` instead
-///
-#define q_graphicslineitem_qbase_context_menu_event q_graphicslineitem_super_context_menu_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -23538,10 +22326,6 @@ void q_graphicslineitem_on_context_menu_event(void* self, void (*callback)(void*
 ///
 void q_graphicslineitem_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_drag_enter_event` instead
-///
-#define q_graphicslineitem_qbase_drag_enter_event q_graphicslineitem_super_drag_enter_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragEnterEvent)
@@ -23574,10 +22358,6 @@ void q_graphicslineitem_on_drag_enter_event(void* self, void (*callback)(void*, 
 /// @param event QGraphicsSceneDragDropEvent*
 ///
 void q_graphicslineitem_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_drag_leave_event` instead
-///
-#define q_graphicslineitem_qbase_drag_leave_event q_graphicslineitem_super_drag_leave_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -23612,10 +22392,6 @@ void q_graphicslineitem_on_drag_leave_event(void* self, void (*callback)(void*, 
 ///
 void q_graphicslineitem_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_drag_move_event` instead
-///
-#define q_graphicslineitem_qbase_drag_move_event q_graphicslineitem_super_drag_move_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragMoveEvent)
@@ -23648,10 +22424,6 @@ void q_graphicslineitem_on_drag_move_event(void* self, void (*callback)(void*, v
 /// @param event QGraphicsSceneDragDropEvent*
 ///
 void q_graphicslineitem_drop_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_drop_event` instead
-///
-#define q_graphicslineitem_qbase_drop_event q_graphicslineitem_super_drop_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -23686,10 +22458,6 @@ void q_graphicslineitem_on_drop_event(void* self, void (*callback)(void*, void*)
 ///
 void q_graphicslineitem_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_focus_in_event` instead
-///
-#define q_graphicslineitem_qbase_focus_in_event q_graphicslineitem_super_focus_in_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusInEvent)
@@ -23722,10 +22490,6 @@ void q_graphicslineitem_on_focus_in_event(void* self, void (*callback)(void*, vo
 /// @param event QFocusEvent*
 ///
 void q_graphicslineitem_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_focus_out_event` instead
-///
-#define q_graphicslineitem_qbase_focus_out_event q_graphicslineitem_super_focus_out_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -23760,10 +22524,6 @@ void q_graphicslineitem_on_focus_out_event(void* self, void (*callback)(void*, v
 ///
 void q_graphicslineitem_hover_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_hover_enter_event` instead
-///
-#define q_graphicslineitem_qbase_hover_enter_event q_graphicslineitem_super_hover_enter_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverEnterEvent)
@@ -23796,10 +22556,6 @@ void q_graphicslineitem_on_hover_enter_event(void* self, void (*callback)(void*,
 /// @param event QGraphicsSceneHoverEvent*
 ///
 void q_graphicslineitem_hover_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_hover_move_event` instead
-///
-#define q_graphicslineitem_qbase_hover_move_event q_graphicslineitem_super_hover_move_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -23834,10 +22590,6 @@ void q_graphicslineitem_on_hover_move_event(void* self, void (*callback)(void*, 
 ///
 void q_graphicslineitem_hover_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_hover_leave_event` instead
-///
-#define q_graphicslineitem_qbase_hover_leave_event q_graphicslineitem_super_hover_leave_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverLeaveEvent)
@@ -23870,10 +22622,6 @@ void q_graphicslineitem_on_hover_leave_event(void* self, void (*callback)(void*,
 /// @param event QKeyEvent*
 ///
 void q_graphicslineitem_key_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_key_press_event` instead
-///
-#define q_graphicslineitem_qbase_key_press_event q_graphicslineitem_super_key_press_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -23908,10 +22656,6 @@ void q_graphicslineitem_on_key_press_event(void* self, void (*callback)(void*, v
 ///
 void q_graphicslineitem_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_key_release_event` instead
-///
-#define q_graphicslineitem_qbase_key_release_event q_graphicslineitem_super_key_release_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#keyReleaseEvent)
@@ -23944,10 +22688,6 @@ void q_graphicslineitem_on_key_release_event(void* self, void (*callback)(void*,
 /// @param event QGraphicsSceneMouseEvent*
 ///
 void q_graphicslineitem_mouse_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_mouse_press_event` instead
-///
-#define q_graphicslineitem_qbase_mouse_press_event q_graphicslineitem_super_mouse_press_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -23982,10 +22722,6 @@ void q_graphicslineitem_on_mouse_press_event(void* self, void (*callback)(void*,
 ///
 void q_graphicslineitem_mouse_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_mouse_move_event` instead
-///
-#define q_graphicslineitem_qbase_mouse_move_event q_graphicslineitem_super_mouse_move_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseMoveEvent)
@@ -24018,10 +22754,6 @@ void q_graphicslineitem_on_mouse_move_event(void* self, void (*callback)(void*, 
 /// @param event QGraphicsSceneMouseEvent*
 ///
 void q_graphicslineitem_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_mouse_release_event` instead
-///
-#define q_graphicslineitem_qbase_mouse_release_event q_graphicslineitem_super_mouse_release_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -24056,10 +22788,6 @@ void q_graphicslineitem_on_mouse_release_event(void* self, void (*callback)(void
 ///
 void q_graphicslineitem_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_mouse_double_click_event` instead
-///
-#define q_graphicslineitem_qbase_mouse_double_click_event q_graphicslineitem_super_mouse_double_click_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseDoubleClickEvent)
@@ -24092,10 +22820,6 @@ void q_graphicslineitem_on_mouse_double_click_event(void* self, void (*callback)
 /// @param event QGraphicsSceneWheelEvent*
 ///
 void q_graphicslineitem_wheel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_wheel_event` instead
-///
-#define q_graphicslineitem_qbase_wheel_event q_graphicslineitem_super_wheel_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -24130,10 +22854,6 @@ void q_graphicslineitem_on_wheel_event(void* self, void (*callback)(void*, void*
 ///
 void q_graphicslineitem_input_method_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_input_method_event` instead
-///
-#define q_graphicslineitem_qbase_input_method_event q_graphicslineitem_super_input_method_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodEvent)
@@ -24166,10 +22886,6 @@ void q_graphicslineitem_on_input_method_event(void* self, void (*callback)(void*
 /// @param query enum Qt__InputMethodQuery
 ///
 QVariant* q_graphicslineitem_input_method_query(void* self, int32_t query);
-
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_input_method_query` instead
-///
-#define q_graphicslineitem_qbase_input_method_query q_graphicslineitem_super_input_method_query
 
 /// Inherited from QGraphicsItem
 ///
@@ -24207,10 +22923,6 @@ void q_graphicslineitem_on_input_method_query(void* self, QVariant* (*callback)(
 ///
 QVariant* q_graphicslineitem_item_change(void* self, int32_t change, void* value);
 
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_item_change` instead
-///
-#define q_graphicslineitem_qbase_item_change q_graphicslineitem_super_item_change
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemChange)
@@ -24246,10 +22958,6 @@ void q_graphicslineitem_on_item_change(void* self, QVariant* (*callback)(void*, 
 ///
 void q_graphicslineitem_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_update_micro_focus` instead
-///
-#define q_graphicslineitem_qbase_update_micro_focus q_graphicslineitem_super_update_micro_focus
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#updateMicroFocus)
@@ -24280,10 +22988,6 @@ void q_graphicslineitem_on_update_micro_focus(void* self, void (*callback)());
 /// @param self QGraphicsLineItem*
 ///
 void q_graphicslineitem_add_to_index(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_add_to_index` instead
-///
-#define q_graphicslineitem_qbase_add_to_index q_graphicslineitem_super_add_to_index
 
 /// Inherited from QGraphicsItem
 ///
@@ -24316,10 +23020,6 @@ void q_graphicslineitem_on_add_to_index(void* self, void (*callback)());
 ///
 void q_graphicslineitem_remove_from_index(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_remove_from_index` instead
-///
-#define q_graphicslineitem_qbase_remove_from_index q_graphicslineitem_super_remove_from_index
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
@@ -24350,10 +23050,6 @@ void q_graphicslineitem_on_remove_from_index(void* self, void (*callback)());
 /// @param self QGraphicsLineItem*
 ///
 void q_graphicslineitem_prepare_geometry_change(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicslineitem_super_prepare_geometry_change` instead
-///
-#define q_graphicslineitem_qbase_prepare_geometry_change q_graphicslineitem_super_prepare_geometry_change
 
 /// Inherited from QGraphicsItem
 ///
@@ -24481,10 +23177,6 @@ QRectF* q_graphicspixmapitem_bounding_rect(void* self);
 ///
 void q_graphicspixmapitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_bounding_rect` instead
-///
-#define q_graphicspixmapitem_qbase_bounding_rect q_graphicspixmapitem_super_bounding_rect
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#boundingRect)
 ///
 /// Base class method implementation
@@ -24510,10 +23202,6 @@ QPainterPath* q_graphicspixmapitem_shape(void* self);
 ///
 void q_graphicspixmapitem_on_shape(void* self, QPainterPath* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_shape` instead
-///
-#define q_graphicspixmapitem_qbase_shape q_graphicspixmapitem_super_shape
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#shape)
 ///
 /// Base class method implementation
@@ -24537,10 +23225,6 @@ bool q_graphicspixmapitem_contains(void* self, void* point);
 /// @param callback bool func(QGraphicsPixmapItem* self, QPointF* point)
 ///
 void q_graphicspixmapitem_on_contains(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_contains` instead
-///
-#define q_graphicspixmapitem_qbase_contains q_graphicspixmapitem_super_contains
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#contains)
 ///
@@ -24569,10 +23253,6 @@ void q_graphicspixmapitem_paint(void* self, void* painter, void* option, void* w
 ///
 void q_graphicspixmapitem_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_paint` instead
-///
-#define q_graphicspixmapitem_qbase_paint q_graphicspixmapitem_super_paint
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#paint)
 ///
 /// Base class method implementation
@@ -24600,10 +23280,6 @@ bool q_graphicspixmapitem_is_obscured_by(void* self, void* item);
 ///
 void q_graphicspixmapitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_is_obscured_by` instead
-///
-#define q_graphicspixmapitem_qbase_is_obscured_by q_graphicspixmapitem_super_is_obscured_by
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#isObscuredBy)
 ///
 /// Base class method implementation
@@ -24630,10 +23306,6 @@ QPainterPath* q_graphicspixmapitem_opaque_area(void* self);
 ///
 void q_graphicspixmapitem_on_opaque_area(void* self, QPainterPath* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_opaque_area` instead
-///
-#define q_graphicspixmapitem_qbase_opaque_area q_graphicspixmapitem_super_opaque_area
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#opaqueArea)
 ///
 /// Base class method implementation
@@ -24656,10 +23328,6 @@ int32_t q_graphicspixmapitem_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_graphicspixmapitem_on_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_type` instead
-///
-#define q_graphicspixmapitem_qbase_type q_graphicspixmapitem_super_type
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#type)
 ///
@@ -24700,10 +23368,6 @@ bool q_graphicspixmapitem_supports_extension(void* self, int32_t extension);
 ///
 void q_graphicspixmapitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_supports_extension` instead
-///
-#define q_graphicspixmapitem_qbase_supports_extension q_graphicspixmapitem_super_supports_extension
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#supportsExtension)
 ///
 /// Base class method implementation
@@ -24729,10 +23393,6 @@ void q_graphicspixmapitem_set_extension(void* self, int32_t extension, void* var
 /// @param callback void func(QGraphicsPixmapItem* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
 void q_graphicspixmapitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
-
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_set_extension` instead
-///
-#define q_graphicspixmapitem_qbase_set_extension q_graphicspixmapitem_super_set_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#setExtension)
 ///
@@ -24761,10 +23421,6 @@ QVariant* q_graphicspixmapitem_extension(void* self, void* variant);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicspixmapitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_extension` instead
-///
-#define q_graphicspixmapitem_qbase_extension q_graphicspixmapitem_super_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#extension)
 ///
@@ -26295,10 +24951,6 @@ void q_graphicspixmapitem_scroll3(void* self, double dx, double dy, void* rect);
 ///
 void q_graphicspixmapitem_advance(void* self, int phase);
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_advance` instead
-///
-#define q_graphicspixmapitem_qbase_advance q_graphicspixmapitem_super_advance
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#advance)
@@ -26332,10 +24984,6 @@ void q_graphicspixmapitem_on_advance(void* self, void (*callback)(void*, int));
 /// @param mode enum Qt__ItemSelectionMode
 ///
 bool q_graphicspixmapitem_collides_with_item(void* self, void* other, int32_t mode);
-
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_collides_with_item` instead
-///
-#define q_graphicspixmapitem_qbase_collides_with_item q_graphicspixmapitem_super_collides_with_item
 
 /// Inherited from QGraphicsItem
 ///
@@ -26372,10 +25020,6 @@ void q_graphicspixmapitem_on_collides_with_item(void* self, bool (*callback)(voi
 ///
 bool q_graphicspixmapitem_collides_with_path(void* self, void* path, int32_t mode);
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_collides_with_path` instead
-///
-#define q_graphicspixmapitem_qbase_collides_with_path q_graphicspixmapitem_super_collides_with_path
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
@@ -26411,10 +25055,6 @@ void q_graphicspixmapitem_on_collides_with_path(void* self, bool (*callback)(voi
 ///
 bool q_graphicspixmapitem_scene_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_scene_event_filter` instead
-///
-#define q_graphicspixmapitem_qbase_scene_event_filter q_graphicspixmapitem_super_scene_event_filter
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEventFilter)
@@ -26449,10 +25089,6 @@ void q_graphicspixmapitem_on_scene_event_filter(void* self, bool (*callback)(voi
 ///
 bool q_graphicspixmapitem_scene_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_scene_event` instead
-///
-#define q_graphicspixmapitem_qbase_scene_event q_graphicspixmapitem_super_scene_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEvent)
@@ -26485,10 +25121,6 @@ void q_graphicspixmapitem_on_scene_event(void* self, bool (*callback)(void*, voi
 /// @param event QGraphicsSceneContextMenuEvent*
 ///
 void q_graphicspixmapitem_context_menu_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_context_menu_event` instead
-///
-#define q_graphicspixmapitem_qbase_context_menu_event q_graphicspixmapitem_super_context_menu_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -26523,10 +25155,6 @@ void q_graphicspixmapitem_on_context_menu_event(void* self, void (*callback)(voi
 ///
 void q_graphicspixmapitem_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_drag_enter_event` instead
-///
-#define q_graphicspixmapitem_qbase_drag_enter_event q_graphicspixmapitem_super_drag_enter_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragEnterEvent)
@@ -26559,10 +25187,6 @@ void q_graphicspixmapitem_on_drag_enter_event(void* self, void (*callback)(void*
 /// @param event QGraphicsSceneDragDropEvent*
 ///
 void q_graphicspixmapitem_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_drag_leave_event` instead
-///
-#define q_graphicspixmapitem_qbase_drag_leave_event q_graphicspixmapitem_super_drag_leave_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -26597,10 +25221,6 @@ void q_graphicspixmapitem_on_drag_leave_event(void* self, void (*callback)(void*
 ///
 void q_graphicspixmapitem_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_drag_move_event` instead
-///
-#define q_graphicspixmapitem_qbase_drag_move_event q_graphicspixmapitem_super_drag_move_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragMoveEvent)
@@ -26633,10 +25253,6 @@ void q_graphicspixmapitem_on_drag_move_event(void* self, void (*callback)(void*,
 /// @param event QGraphicsSceneDragDropEvent*
 ///
 void q_graphicspixmapitem_drop_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_drop_event` instead
-///
-#define q_graphicspixmapitem_qbase_drop_event q_graphicspixmapitem_super_drop_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -26671,10 +25287,6 @@ void q_graphicspixmapitem_on_drop_event(void* self, void (*callback)(void*, void
 ///
 void q_graphicspixmapitem_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_focus_in_event` instead
-///
-#define q_graphicspixmapitem_qbase_focus_in_event q_graphicspixmapitem_super_focus_in_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusInEvent)
@@ -26707,10 +25319,6 @@ void q_graphicspixmapitem_on_focus_in_event(void* self, void (*callback)(void*, 
 /// @param event QFocusEvent*
 ///
 void q_graphicspixmapitem_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_focus_out_event` instead
-///
-#define q_graphicspixmapitem_qbase_focus_out_event q_graphicspixmapitem_super_focus_out_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -26745,10 +25353,6 @@ void q_graphicspixmapitem_on_focus_out_event(void* self, void (*callback)(void*,
 ///
 void q_graphicspixmapitem_hover_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_hover_enter_event` instead
-///
-#define q_graphicspixmapitem_qbase_hover_enter_event q_graphicspixmapitem_super_hover_enter_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverEnterEvent)
@@ -26781,10 +25385,6 @@ void q_graphicspixmapitem_on_hover_enter_event(void* self, void (*callback)(void
 /// @param event QGraphicsSceneHoverEvent*
 ///
 void q_graphicspixmapitem_hover_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_hover_move_event` instead
-///
-#define q_graphicspixmapitem_qbase_hover_move_event q_graphicspixmapitem_super_hover_move_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -26819,10 +25419,6 @@ void q_graphicspixmapitem_on_hover_move_event(void* self, void (*callback)(void*
 ///
 void q_graphicspixmapitem_hover_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_hover_leave_event` instead
-///
-#define q_graphicspixmapitem_qbase_hover_leave_event q_graphicspixmapitem_super_hover_leave_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverLeaveEvent)
@@ -26855,10 +25451,6 @@ void q_graphicspixmapitem_on_hover_leave_event(void* self, void (*callback)(void
 /// @param event QKeyEvent*
 ///
 void q_graphicspixmapitem_key_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_key_press_event` instead
-///
-#define q_graphicspixmapitem_qbase_key_press_event q_graphicspixmapitem_super_key_press_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -26893,10 +25485,6 @@ void q_graphicspixmapitem_on_key_press_event(void* self, void (*callback)(void*,
 ///
 void q_graphicspixmapitem_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_key_release_event` instead
-///
-#define q_graphicspixmapitem_qbase_key_release_event q_graphicspixmapitem_super_key_release_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#keyReleaseEvent)
@@ -26929,10 +25517,6 @@ void q_graphicspixmapitem_on_key_release_event(void* self, void (*callback)(void
 /// @param event QGraphicsSceneMouseEvent*
 ///
 void q_graphicspixmapitem_mouse_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_mouse_press_event` instead
-///
-#define q_graphicspixmapitem_qbase_mouse_press_event q_graphicspixmapitem_super_mouse_press_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -26967,10 +25551,6 @@ void q_graphicspixmapitem_on_mouse_press_event(void* self, void (*callback)(void
 ///
 void q_graphicspixmapitem_mouse_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_mouse_move_event` instead
-///
-#define q_graphicspixmapitem_qbase_mouse_move_event q_graphicspixmapitem_super_mouse_move_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseMoveEvent)
@@ -27003,10 +25583,6 @@ void q_graphicspixmapitem_on_mouse_move_event(void* self, void (*callback)(void*
 /// @param event QGraphicsSceneMouseEvent*
 ///
 void q_graphicspixmapitem_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_mouse_release_event` instead
-///
-#define q_graphicspixmapitem_qbase_mouse_release_event q_graphicspixmapitem_super_mouse_release_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -27041,10 +25617,6 @@ void q_graphicspixmapitem_on_mouse_release_event(void* self, void (*callback)(vo
 ///
 void q_graphicspixmapitem_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_mouse_double_click_event` instead
-///
-#define q_graphicspixmapitem_qbase_mouse_double_click_event q_graphicspixmapitem_super_mouse_double_click_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseDoubleClickEvent)
@@ -27077,10 +25649,6 @@ void q_graphicspixmapitem_on_mouse_double_click_event(void* self, void (*callbac
 /// @param event QGraphicsSceneWheelEvent*
 ///
 void q_graphicspixmapitem_wheel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_wheel_event` instead
-///
-#define q_graphicspixmapitem_qbase_wheel_event q_graphicspixmapitem_super_wheel_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -27115,10 +25683,6 @@ void q_graphicspixmapitem_on_wheel_event(void* self, void (*callback)(void*, voi
 ///
 void q_graphicspixmapitem_input_method_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_input_method_event` instead
-///
-#define q_graphicspixmapitem_qbase_input_method_event q_graphicspixmapitem_super_input_method_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodEvent)
@@ -27151,10 +25715,6 @@ void q_graphicspixmapitem_on_input_method_event(void* self, void (*callback)(voi
 /// @param query enum Qt__InputMethodQuery
 ///
 QVariant* q_graphicspixmapitem_input_method_query(void* self, int32_t query);
-
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_input_method_query` instead
-///
-#define q_graphicspixmapitem_qbase_input_method_query q_graphicspixmapitem_super_input_method_query
 
 /// Inherited from QGraphicsItem
 ///
@@ -27192,10 +25752,6 @@ void q_graphicspixmapitem_on_input_method_query(void* self, QVariant* (*callback
 ///
 QVariant* q_graphicspixmapitem_item_change(void* self, int32_t change, void* value);
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_item_change` instead
-///
-#define q_graphicspixmapitem_qbase_item_change q_graphicspixmapitem_super_item_change
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemChange)
@@ -27231,10 +25787,6 @@ void q_graphicspixmapitem_on_item_change(void* self, QVariant* (*callback)(void*
 ///
 void q_graphicspixmapitem_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_update_micro_focus` instead
-///
-#define q_graphicspixmapitem_qbase_update_micro_focus q_graphicspixmapitem_super_update_micro_focus
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#updateMicroFocus)
@@ -27265,10 +25817,6 @@ void q_graphicspixmapitem_on_update_micro_focus(void* self, void (*callback)());
 /// @param self QGraphicsPixmapItem*
 ///
 void q_graphicspixmapitem_add_to_index(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_add_to_index` instead
-///
-#define q_graphicspixmapitem_qbase_add_to_index q_graphicspixmapitem_super_add_to_index
 
 /// Inherited from QGraphicsItem
 ///
@@ -27301,10 +25849,6 @@ void q_graphicspixmapitem_on_add_to_index(void* self, void (*callback)());
 ///
 void q_graphicspixmapitem_remove_from_index(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_remove_from_index` instead
-///
-#define q_graphicspixmapitem_qbase_remove_from_index q_graphicspixmapitem_super_remove_from_index
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
@@ -27335,10 +25879,6 @@ void q_graphicspixmapitem_on_remove_from_index(void* self, void (*callback)());
 /// @param self QGraphicsPixmapItem*
 ///
 void q_graphicspixmapitem_prepare_geometry_change(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicspixmapitem_super_prepare_geometry_change` instead
-///
-#define q_graphicspixmapitem_qbase_prepare_geometry_change q_graphicspixmapitem_super_prepare_geometry_change
 
 /// Inherited from QGraphicsItem
 ///
@@ -27415,10 +25955,6 @@ const QMetaObject* q_graphicstextitem_meta_object(void* self);
 ///
 void q_graphicstextitem_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_meta_object` instead
-///
-#define q_graphicstextitem_qbase_meta_object q_graphicstextitem_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -27438,10 +25974,6 @@ void* q_graphicstextitem_metacast(void* self, const char* param1);
 /// @param callback void* func(QGraphicsTextItem* self, const char* param1)
 ///
 void q_graphicstextitem_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_metacast` instead
-///
-#define q_graphicstextitem_qbase_metacast q_graphicstextitem_super_metacast
 
 /// Base class method implementation
 ///
@@ -27463,10 +25995,6 @@ int32_t q_graphicstextitem_metacall(void* self, int32_t param1, int param2, void
 /// @param callback int32_t func(QGraphicsTextItem* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_graphicstextitem_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_metacall` instead
-///
-#define q_graphicstextitem_qbase_metacall q_graphicstextitem_super_metacall
 
 /// Base class method implementation
 ///
@@ -27558,10 +26086,6 @@ QRectF* q_graphicstextitem_bounding_rect(void* self);
 ///
 void q_graphicstextitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_bounding_rect` instead
-///
-#define q_graphicstextitem_qbase_bounding_rect q_graphicstextitem_super_bounding_rect
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#boundingRect)
 ///
 /// Base class method implementation
@@ -27587,10 +26111,6 @@ QPainterPath* q_graphicstextitem_shape(void* self);
 ///
 void q_graphicstextitem_on_shape(void* self, QPainterPath* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_shape` instead
-///
-#define q_graphicstextitem_qbase_shape q_graphicstextitem_super_shape
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#shape)
 ///
 /// Base class method implementation
@@ -27614,10 +26134,6 @@ bool q_graphicstextitem_contains(void* self, void* point);
 /// @param callback bool func(QGraphicsTextItem* self, QPointF* point)
 ///
 void q_graphicstextitem_on_contains(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_contains` instead
-///
-#define q_graphicstextitem_qbase_contains q_graphicstextitem_super_contains
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#contains)
 ///
@@ -27646,10 +26162,6 @@ void q_graphicstextitem_paint(void* self, void* painter, void* option, void* wid
 ///
 void q_graphicstextitem_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_paint` instead
-///
-#define q_graphicstextitem_qbase_paint q_graphicstextitem_super_paint
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#paint)
 ///
 /// Base class method implementation
@@ -27677,10 +26189,6 @@ bool q_graphicstextitem_is_obscured_by(void* self, void* item);
 ///
 void q_graphicstextitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_is_obscured_by` instead
-///
-#define q_graphicstextitem_qbase_is_obscured_by q_graphicstextitem_super_is_obscured_by
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#isObscuredBy)
 ///
 /// Base class method implementation
@@ -27707,10 +26215,6 @@ QPainterPath* q_graphicstextitem_opaque_area(void* self);
 ///
 void q_graphicstextitem_on_opaque_area(void* self, QPainterPath* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_opaque_area` instead
-///
-#define q_graphicstextitem_qbase_opaque_area q_graphicstextitem_super_opaque_area
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#opaqueArea)
 ///
 /// Base class method implementation
@@ -27733,10 +26237,6 @@ int32_t q_graphicstextitem_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_graphicstextitem_on_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_type` instead
-///
-#define q_graphicstextitem_qbase_type q_graphicstextitem_super_type
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#type)
 ///
@@ -27876,10 +26376,6 @@ bool q_graphicstextitem_scene_event(void* self, void* event);
 ///
 void q_graphicstextitem_on_scene_event(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_scene_event` instead
-///
-#define q_graphicstextitem_qbase_scene_event q_graphicstextitem_super_scene_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#sceneEvent)
 ///
 /// Base class method implementation
@@ -27904,10 +26400,6 @@ void q_graphicstextitem_mouse_press_event(void* self, void* event);
 /// @param callback void func(QGraphicsTextItem* self, QGraphicsSceneMouseEvent* event)
 ///
 void q_graphicstextitem_on_mouse_press_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_mouse_press_event` instead
-///
-#define q_graphicstextitem_qbase_mouse_press_event q_graphicstextitem_super_mouse_press_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#mousePressEvent)
 ///
@@ -27934,10 +26426,6 @@ void q_graphicstextitem_mouse_move_event(void* self, void* event);
 ///
 void q_graphicstextitem_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_mouse_move_event` instead
-///
-#define q_graphicstextitem_qbase_mouse_move_event q_graphicstextitem_super_mouse_move_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#mouseMoveEvent)
 ///
 /// Base class method implementation
@@ -27962,10 +26450,6 @@ void q_graphicstextitem_mouse_release_event(void* self, void* event);
 /// @param callback void func(QGraphicsTextItem* self, QGraphicsSceneMouseEvent* event)
 ///
 void q_graphicstextitem_on_mouse_release_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_mouse_release_event` instead
-///
-#define q_graphicstextitem_qbase_mouse_release_event q_graphicstextitem_super_mouse_release_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#mouseReleaseEvent)
 ///
@@ -27992,10 +26476,6 @@ void q_graphicstextitem_mouse_double_click_event(void* self, void* event);
 ///
 void q_graphicstextitem_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_mouse_double_click_event` instead
-///
-#define q_graphicstextitem_qbase_mouse_double_click_event q_graphicstextitem_super_mouse_double_click_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#mouseDoubleClickEvent)
 ///
 /// Base class method implementation
@@ -28020,10 +26500,6 @@ void q_graphicstextitem_context_menu_event(void* self, void* event);
 /// @param callback void func(QGraphicsTextItem* self, QGraphicsSceneContextMenuEvent* event)
 ///
 void q_graphicstextitem_on_context_menu_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_context_menu_event` instead
-///
-#define q_graphicstextitem_qbase_context_menu_event q_graphicstextitem_super_context_menu_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#contextMenuEvent)
 ///
@@ -28050,10 +26526,6 @@ void q_graphicstextitem_key_press_event(void* self, void* event);
 ///
 void q_graphicstextitem_on_key_press_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_key_press_event` instead
-///
-#define q_graphicstextitem_qbase_key_press_event q_graphicstextitem_super_key_press_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#keyPressEvent)
 ///
 /// Base class method implementation
@@ -28078,10 +26550,6 @@ void q_graphicstextitem_key_release_event(void* self, void* event);
 /// @param callback void func(QGraphicsTextItem* self, QKeyEvent* event)
 ///
 void q_graphicstextitem_on_key_release_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_key_release_event` instead
-///
-#define q_graphicstextitem_qbase_key_release_event q_graphicstextitem_super_key_release_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#keyReleaseEvent)
 ///
@@ -28108,10 +26576,6 @@ void q_graphicstextitem_focus_in_event(void* self, void* event);
 ///
 void q_graphicstextitem_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_focus_in_event` instead
-///
-#define q_graphicstextitem_qbase_focus_in_event q_graphicstextitem_super_focus_in_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#focusInEvent)
 ///
 /// Base class method implementation
@@ -28136,10 +26600,6 @@ void q_graphicstextitem_focus_out_event(void* self, void* event);
 /// @param callback void func(QGraphicsTextItem* self, QFocusEvent* event)
 ///
 void q_graphicstextitem_on_focus_out_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_focus_out_event` instead
-///
-#define q_graphicstextitem_qbase_focus_out_event q_graphicstextitem_super_focus_out_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#focusOutEvent)
 ///
@@ -28166,10 +26626,6 @@ void q_graphicstextitem_drag_enter_event(void* self, void* event);
 ///
 void q_graphicstextitem_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_drag_enter_event` instead
-///
-#define q_graphicstextitem_qbase_drag_enter_event q_graphicstextitem_super_drag_enter_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#dragEnterEvent)
 ///
 /// Base class method implementation
@@ -28194,10 +26650,6 @@ void q_graphicstextitem_drag_leave_event(void* self, void* event);
 /// @param callback void func(QGraphicsTextItem* self, QGraphicsSceneDragDropEvent* event)
 ///
 void q_graphicstextitem_on_drag_leave_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_drag_leave_event` instead
-///
-#define q_graphicstextitem_qbase_drag_leave_event q_graphicstextitem_super_drag_leave_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#dragLeaveEvent)
 ///
@@ -28224,10 +26676,6 @@ void q_graphicstextitem_drag_move_event(void* self, void* event);
 ///
 void q_graphicstextitem_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_drag_move_event` instead
-///
-#define q_graphicstextitem_qbase_drag_move_event q_graphicstextitem_super_drag_move_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#dragMoveEvent)
 ///
 /// Base class method implementation
@@ -28252,10 +26700,6 @@ void q_graphicstextitem_drop_event(void* self, void* event);
 /// @param callback void func(QGraphicsTextItem* self, QGraphicsSceneDragDropEvent* event)
 ///
 void q_graphicstextitem_on_drop_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_drop_event` instead
-///
-#define q_graphicstextitem_qbase_drop_event q_graphicstextitem_super_drop_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#dropEvent)
 ///
@@ -28282,10 +26726,6 @@ void q_graphicstextitem_input_method_event(void* self, void* event);
 ///
 void q_graphicstextitem_on_input_method_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_input_method_event` instead
-///
-#define q_graphicstextitem_qbase_input_method_event q_graphicstextitem_super_input_method_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#inputMethodEvent)
 ///
 /// Base class method implementation
@@ -28310,10 +26750,6 @@ void q_graphicstextitem_hover_enter_event(void* self, void* event);
 /// @param callback void func(QGraphicsTextItem* self, QGraphicsSceneHoverEvent* event)
 ///
 void q_graphicstextitem_on_hover_enter_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_hover_enter_event` instead
-///
-#define q_graphicstextitem_qbase_hover_enter_event q_graphicstextitem_super_hover_enter_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#hoverEnterEvent)
 ///
@@ -28340,10 +26776,6 @@ void q_graphicstextitem_hover_move_event(void* self, void* event);
 ///
 void q_graphicstextitem_on_hover_move_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_hover_move_event` instead
-///
-#define q_graphicstextitem_qbase_hover_move_event q_graphicstextitem_super_hover_move_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#hoverMoveEvent)
 ///
 /// Base class method implementation
@@ -28368,10 +26800,6 @@ void q_graphicstextitem_hover_leave_event(void* self, void* event);
 /// @param callback void func(QGraphicsTextItem* self, QGraphicsSceneHoverEvent* event)
 ///
 void q_graphicstextitem_on_hover_leave_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_hover_leave_event` instead
-///
-#define q_graphicstextitem_qbase_hover_leave_event q_graphicstextitem_super_hover_leave_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#hoverLeaveEvent)
 ///
@@ -28400,10 +26828,6 @@ QVariant* q_graphicstextitem_input_method_query(void* self, int32_t query);
 ///
 void q_graphicstextitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_input_method_query` instead
-///
-#define q_graphicstextitem_qbase_input_method_query q_graphicstextitem_super_input_method_query
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#inputMethodQuery)
 ///
 /// Base class method implementation
@@ -28428,10 +26852,6 @@ bool q_graphicstextitem_supports_extension(void* self, int32_t extension);
 /// @param callback bool func(QGraphicsTextItem* self, enum QGraphicsItem__Extension extension)
 ///
 void q_graphicstextitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_supports_extension` instead
-///
-#define q_graphicstextitem_qbase_supports_extension q_graphicstextitem_super_supports_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#supportsExtension)
 ///
@@ -28458,10 +26878,6 @@ void q_graphicstextitem_set_extension(void* self, int32_t extension, void* varia
 /// @param callback void func(QGraphicsTextItem* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
 void q_graphicstextitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_set_extension` instead
-///
-#define q_graphicstextitem_qbase_set_extension q_graphicstextitem_super_set_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#setExtension)
 ///
@@ -28490,10 +26906,6 @@ QVariant* q_graphicstextitem_extension(void* self, void* variant);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicstextitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_extension` instead
-///
-#define q_graphicstextitem_qbase_extension q_graphicstextitem_super_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#extension)
 ///
@@ -30722,10 +29134,6 @@ void q_graphicstextitem_scroll3(void* self, double dx, double dy, void* rect);
 ///
 bool q_graphicstextitem_event(void* self, void* ev);
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_event` instead
-///
-#define q_graphicstextitem_qbase_event q_graphicstextitem_super_event
-
 /// Inherited from QGraphicsObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsobject.html#event)
@@ -30759,10 +29167,6 @@ void q_graphicstextitem_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_graphicstextitem_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_event_filter` instead
-///
-#define q_graphicstextitem_qbase_event_filter q_graphicstextitem_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -30798,10 +29202,6 @@ void q_graphicstextitem_on_event_filter(void* self, bool (*callback)(void*, void
 ///
 void q_graphicstextitem_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_timer_event` instead
-///
-#define q_graphicstextitem_qbase_timer_event q_graphicstextitem_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -30834,10 +29234,6 @@ void q_graphicstextitem_on_timer_event(void* self, void (*callback)(void*, void*
 /// @param event QChildEvent*
 ///
 void q_graphicstextitem_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_child_event` instead
-///
-#define q_graphicstextitem_qbase_child_event q_graphicstextitem_super_child_event
 
 /// Inherited from QObject
 ///
@@ -30872,10 +29268,6 @@ void q_graphicstextitem_on_child_event(void* self, void (*callback)(void*, void*
 ///
 void q_graphicstextitem_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_custom_event` instead
-///
-#define q_graphicstextitem_qbase_custom_event q_graphicstextitem_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -30908,10 +29300,6 @@ void q_graphicstextitem_on_custom_event(void* self, void (*callback)(void*, void
 /// @param signal QMetaMethod*
 ///
 void q_graphicstextitem_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_connect_notify` instead
-///
-#define q_graphicstextitem_qbase_connect_notify q_graphicstextitem_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -30946,10 +29334,6 @@ void q_graphicstextitem_on_connect_notify(void* self, void (*callback)(void*, vo
 ///
 void q_graphicstextitem_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_disconnect_notify` instead
-///
-#define q_graphicstextitem_qbase_disconnect_notify q_graphicstextitem_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -30982,10 +29366,6 @@ void q_graphicstextitem_on_disconnect_notify(void* self, void (*callback)(void*,
 /// @param phase int
 ///
 void q_graphicstextitem_advance(void* self, int phase);
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_advance` instead
-///
-#define q_graphicstextitem_qbase_advance q_graphicstextitem_super_advance
 
 /// Inherited from QGraphicsItem
 ///
@@ -31020,10 +29400,6 @@ void q_graphicstextitem_on_advance(void* self, void (*callback)(void*, int));
 /// @param mode enum Qt__ItemSelectionMode
 ///
 bool q_graphicstextitem_collides_with_item(void* self, void* other, int32_t mode);
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_collides_with_item` instead
-///
-#define q_graphicstextitem_qbase_collides_with_item q_graphicstextitem_super_collides_with_item
 
 /// Inherited from QGraphicsItem
 ///
@@ -31060,10 +29436,6 @@ void q_graphicstextitem_on_collides_with_item(void* self, bool (*callback)(void*
 ///
 bool q_graphicstextitem_collides_with_path(void* self, void* path, int32_t mode);
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_collides_with_path` instead
-///
-#define q_graphicstextitem_qbase_collides_with_path q_graphicstextitem_super_collides_with_path
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
@@ -31099,10 +29471,6 @@ void q_graphicstextitem_on_collides_with_path(void* self, bool (*callback)(void*
 ///
 bool q_graphicstextitem_scene_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_scene_event_filter` instead
-///
-#define q_graphicstextitem_qbase_scene_event_filter q_graphicstextitem_super_scene_event_filter
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEventFilter)
@@ -31137,10 +29505,6 @@ void q_graphicstextitem_on_scene_event_filter(void* self, bool (*callback)(void*
 ///
 void q_graphicstextitem_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_wheel_event` instead
-///
-#define q_graphicstextitem_qbase_wheel_event q_graphicstextitem_super_wheel_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#wheelEvent)
@@ -31174,10 +29538,6 @@ void q_graphicstextitem_on_wheel_event(void* self, void (*callback)(void*, void*
 /// @param value QVariant*
 ///
 QVariant* q_graphicstextitem_item_change(void* self, int32_t change, void* value);
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_item_change` instead
-///
-#define q_graphicstextitem_qbase_item_change q_graphicstextitem_super_item_change
 
 /// Inherited from QGraphicsItem
 ///
@@ -31214,10 +29574,6 @@ void q_graphicstextitem_on_item_change(void* self, QVariant* (*callback)(void*, 
 ///
 void q_graphicstextitem_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_update_micro_focus` instead
-///
-#define q_graphicstextitem_qbase_update_micro_focus q_graphicstextitem_super_update_micro_focus
-
 /// Inherited from QGraphicsObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsobject.html#updateMicroFocus)
@@ -31248,10 +29604,6 @@ void q_graphicstextitem_on_update_micro_focus(void* self, void (*callback)());
 /// @param self QGraphicsTextItem*
 ///
 QObject* q_graphicstextitem_sender(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_sender` instead
-///
-#define q_graphicstextitem_qbase_sender q_graphicstextitem_super_sender
 
 /// Inherited from QObject
 ///
@@ -31284,10 +29636,6 @@ void q_graphicstextitem_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_graphicstextitem_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_sender_signal_index` instead
-///
-#define q_graphicstextitem_qbase_sender_signal_index q_graphicstextitem_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -31319,10 +29667,6 @@ void q_graphicstextitem_on_sender_signal_index(void* self, int32_t (*callback)()
 /// @param signal const char*
 ///
 int32_t q_graphicstextitem_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_receivers` instead
-///
-#define q_graphicstextitem_qbase_receivers q_graphicstextitem_super_receivers
 
 /// Inherited from QObject
 ///
@@ -31357,10 +29701,6 @@ void q_graphicstextitem_on_receivers(void* self, int32_t (*callback)(void*, cons
 ///
 bool q_graphicstextitem_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_is_signal_connected` instead
-///
-#define q_graphicstextitem_qbase_is_signal_connected q_graphicstextitem_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -31393,10 +29733,6 @@ void q_graphicstextitem_on_is_signal_connected(void* self, bool (*callback)(void
 ///
 void q_graphicstextitem_add_to_index(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_add_to_index` instead
-///
-#define q_graphicstextitem_qbase_add_to_index q_graphicstextitem_super_add_to_index
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#addToIndex)
@@ -31428,10 +29764,6 @@ void q_graphicstextitem_on_add_to_index(void* self, void (*callback)());
 ///
 void q_graphicstextitem_remove_from_index(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_remove_from_index` instead
-///
-#define q_graphicstextitem_qbase_remove_from_index q_graphicstextitem_super_remove_from_index
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
@@ -31462,10 +29794,6 @@ void q_graphicstextitem_on_remove_from_index(void* self, void (*callback)());
 /// @param self QGraphicsTextItem*
 ///
 void q_graphicstextitem_prepare_geometry_change(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicstextitem_super_prepare_geometry_change` instead
-///
-#define q_graphicstextitem_qbase_prepare_geometry_change q_graphicstextitem_super_prepare_geometry_change
 
 /// Inherited from QGraphicsItem
 ///
@@ -31583,10 +29911,6 @@ QRectF* q_graphicssimpletextitem_bounding_rect(void* self);
 ///
 void q_graphicssimpletextitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_bounding_rect` instead
-///
-#define q_graphicssimpletextitem_qbase_bounding_rect q_graphicssimpletextitem_super_bounding_rect
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#boundingRect)
 ///
 /// Base class method implementation
@@ -31612,10 +29936,6 @@ QPainterPath* q_graphicssimpletextitem_shape(void* self);
 ///
 void q_graphicssimpletextitem_on_shape(void* self, QPainterPath* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_shape` instead
-///
-#define q_graphicssimpletextitem_qbase_shape q_graphicssimpletextitem_super_shape
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#shape)
 ///
 /// Base class method implementation
@@ -31639,10 +29959,6 @@ bool q_graphicssimpletextitem_contains(void* self, void* point);
 /// @param callback bool func(QGraphicsSimpleTextItem* self, QPointF* point)
 ///
 void q_graphicssimpletextitem_on_contains(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_contains` instead
-///
-#define q_graphicssimpletextitem_qbase_contains q_graphicssimpletextitem_super_contains
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#contains)
 ///
@@ -31671,10 +29987,6 @@ void q_graphicssimpletextitem_paint(void* self, void* painter, void* option, voi
 ///
 void q_graphicssimpletextitem_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_paint` instead
-///
-#define q_graphicssimpletextitem_qbase_paint q_graphicssimpletextitem_super_paint
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#paint)
 ///
 /// Base class method implementation
@@ -31702,10 +30014,6 @@ bool q_graphicssimpletextitem_is_obscured_by(void* self, void* item);
 ///
 void q_graphicssimpletextitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_is_obscured_by` instead
-///
-#define q_graphicssimpletextitem_qbase_is_obscured_by q_graphicssimpletextitem_super_is_obscured_by
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#isObscuredBy)
 ///
 /// Base class method implementation
@@ -31732,10 +30040,6 @@ QPainterPath* q_graphicssimpletextitem_opaque_area(void* self);
 ///
 void q_graphicssimpletextitem_on_opaque_area(void* self, QPainterPath* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_opaque_area` instead
-///
-#define q_graphicssimpletextitem_qbase_opaque_area q_graphicssimpletextitem_super_opaque_area
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#opaqueArea)
 ///
 /// Base class method implementation
@@ -31758,10 +30062,6 @@ int32_t q_graphicssimpletextitem_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_graphicssimpletextitem_on_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_type` instead
-///
-#define q_graphicssimpletextitem_qbase_type q_graphicssimpletextitem_super_type
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#type)
 ///
@@ -31786,10 +30086,6 @@ bool q_graphicssimpletextitem_supports_extension(void* self, int32_t extension);
 /// @param callback bool func(QGraphicsSimpleTextItem* self, enum QGraphicsItem__Extension extension)
 ///
 void q_graphicssimpletextitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_supports_extension` instead
-///
-#define q_graphicssimpletextitem_qbase_supports_extension q_graphicssimpletextitem_super_supports_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#supportsExtension)
 ///
@@ -31816,10 +30112,6 @@ void q_graphicssimpletextitem_set_extension(void* self, int32_t extension, void*
 /// @param callback void func(QGraphicsSimpleTextItem* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
 void q_graphicssimpletextitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
-
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_set_extension` instead
-///
-#define q_graphicssimpletextitem_qbase_set_extension q_graphicssimpletextitem_super_set_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#setExtension)
 ///
@@ -31848,10 +30140,6 @@ QVariant* q_graphicssimpletextitem_extension(void* self, void* variant);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicssimpletextitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_extension` instead
-///
-#define q_graphicssimpletextitem_qbase_extension q_graphicssimpletextitem_super_extension
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#extension)
 ///
@@ -33416,10 +31704,6 @@ void q_graphicssimpletextitem_scroll3(void* self, double dx, double dy, void* re
 ///
 void q_graphicssimpletextitem_advance(void* self, int phase);
 
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_advance` instead
-///
-#define q_graphicssimpletextitem_qbase_advance q_graphicssimpletextitem_super_advance
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#advance)
@@ -33453,10 +31737,6 @@ void q_graphicssimpletextitem_on_advance(void* self, void (*callback)(void*, int
 /// @param mode enum Qt__ItemSelectionMode
 ///
 bool q_graphicssimpletextitem_collides_with_item(void* self, void* other, int32_t mode);
-
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_collides_with_item` instead
-///
-#define q_graphicssimpletextitem_qbase_collides_with_item q_graphicssimpletextitem_super_collides_with_item
 
 /// Inherited from QGraphicsItem
 ///
@@ -33493,10 +31773,6 @@ void q_graphicssimpletextitem_on_collides_with_item(void* self, bool (*callback)
 ///
 bool q_graphicssimpletextitem_collides_with_path(void* self, void* path, int32_t mode);
 
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_collides_with_path` instead
-///
-#define q_graphicssimpletextitem_qbase_collides_with_path q_graphicssimpletextitem_super_collides_with_path
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
@@ -33532,10 +31808,6 @@ void q_graphicssimpletextitem_on_collides_with_path(void* self, bool (*callback)
 ///
 bool q_graphicssimpletextitem_scene_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_scene_event_filter` instead
-///
-#define q_graphicssimpletextitem_qbase_scene_event_filter q_graphicssimpletextitem_super_scene_event_filter
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEventFilter)
@@ -33570,10 +31842,6 @@ void q_graphicssimpletextitem_on_scene_event_filter(void* self, bool (*callback)
 ///
 bool q_graphicssimpletextitem_scene_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_scene_event` instead
-///
-#define q_graphicssimpletextitem_qbase_scene_event q_graphicssimpletextitem_super_scene_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEvent)
@@ -33606,10 +31874,6 @@ void q_graphicssimpletextitem_on_scene_event(void* self, bool (*callback)(void*,
 /// @param event QGraphicsSceneContextMenuEvent*
 ///
 void q_graphicssimpletextitem_context_menu_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_context_menu_event` instead
-///
-#define q_graphicssimpletextitem_qbase_context_menu_event q_graphicssimpletextitem_super_context_menu_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -33644,10 +31908,6 @@ void q_graphicssimpletextitem_on_context_menu_event(void* self, void (*callback)
 ///
 void q_graphicssimpletextitem_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_drag_enter_event` instead
-///
-#define q_graphicssimpletextitem_qbase_drag_enter_event q_graphicssimpletextitem_super_drag_enter_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragEnterEvent)
@@ -33680,10 +31940,6 @@ void q_graphicssimpletextitem_on_drag_enter_event(void* self, void (*callback)(v
 /// @param event QGraphicsSceneDragDropEvent*
 ///
 void q_graphicssimpletextitem_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_drag_leave_event` instead
-///
-#define q_graphicssimpletextitem_qbase_drag_leave_event q_graphicssimpletextitem_super_drag_leave_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -33718,10 +31974,6 @@ void q_graphicssimpletextitem_on_drag_leave_event(void* self, void (*callback)(v
 ///
 void q_graphicssimpletextitem_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_drag_move_event` instead
-///
-#define q_graphicssimpletextitem_qbase_drag_move_event q_graphicssimpletextitem_super_drag_move_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragMoveEvent)
@@ -33754,10 +32006,6 @@ void q_graphicssimpletextitem_on_drag_move_event(void* self, void (*callback)(vo
 /// @param event QGraphicsSceneDragDropEvent*
 ///
 void q_graphicssimpletextitem_drop_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_drop_event` instead
-///
-#define q_graphicssimpletextitem_qbase_drop_event q_graphicssimpletextitem_super_drop_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -33792,10 +32040,6 @@ void q_graphicssimpletextitem_on_drop_event(void* self, void (*callback)(void*, 
 ///
 void q_graphicssimpletextitem_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_focus_in_event` instead
-///
-#define q_graphicssimpletextitem_qbase_focus_in_event q_graphicssimpletextitem_super_focus_in_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusInEvent)
@@ -33828,10 +32072,6 @@ void q_graphicssimpletextitem_on_focus_in_event(void* self, void (*callback)(voi
 /// @param event QFocusEvent*
 ///
 void q_graphicssimpletextitem_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_focus_out_event` instead
-///
-#define q_graphicssimpletextitem_qbase_focus_out_event q_graphicssimpletextitem_super_focus_out_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -33866,10 +32106,6 @@ void q_graphicssimpletextitem_on_focus_out_event(void* self, void (*callback)(vo
 ///
 void q_graphicssimpletextitem_hover_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_hover_enter_event` instead
-///
-#define q_graphicssimpletextitem_qbase_hover_enter_event q_graphicssimpletextitem_super_hover_enter_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverEnterEvent)
@@ -33902,10 +32138,6 @@ void q_graphicssimpletextitem_on_hover_enter_event(void* self, void (*callback)(
 /// @param event QGraphicsSceneHoverEvent*
 ///
 void q_graphicssimpletextitem_hover_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_hover_move_event` instead
-///
-#define q_graphicssimpletextitem_qbase_hover_move_event q_graphicssimpletextitem_super_hover_move_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -33940,10 +32172,6 @@ void q_graphicssimpletextitem_on_hover_move_event(void* self, void (*callback)(v
 ///
 void q_graphicssimpletextitem_hover_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_hover_leave_event` instead
-///
-#define q_graphicssimpletextitem_qbase_hover_leave_event q_graphicssimpletextitem_super_hover_leave_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverLeaveEvent)
@@ -33976,10 +32204,6 @@ void q_graphicssimpletextitem_on_hover_leave_event(void* self, void (*callback)(
 /// @param event QKeyEvent*
 ///
 void q_graphicssimpletextitem_key_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_key_press_event` instead
-///
-#define q_graphicssimpletextitem_qbase_key_press_event q_graphicssimpletextitem_super_key_press_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -34014,10 +32238,6 @@ void q_graphicssimpletextitem_on_key_press_event(void* self, void (*callback)(vo
 ///
 void q_graphicssimpletextitem_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_key_release_event` instead
-///
-#define q_graphicssimpletextitem_qbase_key_release_event q_graphicssimpletextitem_super_key_release_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#keyReleaseEvent)
@@ -34050,10 +32270,6 @@ void q_graphicssimpletextitem_on_key_release_event(void* self, void (*callback)(
 /// @param event QGraphicsSceneMouseEvent*
 ///
 void q_graphicssimpletextitem_mouse_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_mouse_press_event` instead
-///
-#define q_graphicssimpletextitem_qbase_mouse_press_event q_graphicssimpletextitem_super_mouse_press_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -34088,10 +32304,6 @@ void q_graphicssimpletextitem_on_mouse_press_event(void* self, void (*callback)(
 ///
 void q_graphicssimpletextitem_mouse_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_mouse_move_event` instead
-///
-#define q_graphicssimpletextitem_qbase_mouse_move_event q_graphicssimpletextitem_super_mouse_move_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseMoveEvent)
@@ -34124,10 +32336,6 @@ void q_graphicssimpletextitem_on_mouse_move_event(void* self, void (*callback)(v
 /// @param event QGraphicsSceneMouseEvent*
 ///
 void q_graphicssimpletextitem_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_mouse_release_event` instead
-///
-#define q_graphicssimpletextitem_qbase_mouse_release_event q_graphicssimpletextitem_super_mouse_release_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -34162,10 +32370,6 @@ void q_graphicssimpletextitem_on_mouse_release_event(void* self, void (*callback
 ///
 void q_graphicssimpletextitem_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_mouse_double_click_event` instead
-///
-#define q_graphicssimpletextitem_qbase_mouse_double_click_event q_graphicssimpletextitem_super_mouse_double_click_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseDoubleClickEvent)
@@ -34198,10 +32402,6 @@ void q_graphicssimpletextitem_on_mouse_double_click_event(void* self, void (*cal
 /// @param event QGraphicsSceneWheelEvent*
 ///
 void q_graphicssimpletextitem_wheel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_wheel_event` instead
-///
-#define q_graphicssimpletextitem_qbase_wheel_event q_graphicssimpletextitem_super_wheel_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -34236,10 +32436,6 @@ void q_graphicssimpletextitem_on_wheel_event(void* self, void (*callback)(void*,
 ///
 void q_graphicssimpletextitem_input_method_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_input_method_event` instead
-///
-#define q_graphicssimpletextitem_qbase_input_method_event q_graphicssimpletextitem_super_input_method_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodEvent)
@@ -34272,10 +32468,6 @@ void q_graphicssimpletextitem_on_input_method_event(void* self, void (*callback)
 /// @param query enum Qt__InputMethodQuery
 ///
 QVariant* q_graphicssimpletextitem_input_method_query(void* self, int32_t query);
-
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_input_method_query` instead
-///
-#define q_graphicssimpletextitem_qbase_input_method_query q_graphicssimpletextitem_super_input_method_query
 
 /// Inherited from QGraphicsItem
 ///
@@ -34313,10 +32505,6 @@ void q_graphicssimpletextitem_on_input_method_query(void* self, QVariant* (*call
 ///
 QVariant* q_graphicssimpletextitem_item_change(void* self, int32_t change, void* value);
 
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_item_change` instead
-///
-#define q_graphicssimpletextitem_qbase_item_change q_graphicssimpletextitem_super_item_change
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemChange)
@@ -34352,10 +32540,6 @@ void q_graphicssimpletextitem_on_item_change(void* self, QVariant* (*callback)(v
 ///
 void q_graphicssimpletextitem_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_update_micro_focus` instead
-///
-#define q_graphicssimpletextitem_qbase_update_micro_focus q_graphicssimpletextitem_super_update_micro_focus
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#updateMicroFocus)
@@ -34386,10 +32570,6 @@ void q_graphicssimpletextitem_on_update_micro_focus(void* self, void (*callback)
 /// @param self QGraphicsSimpleTextItem*
 ///
 void q_graphicssimpletextitem_add_to_index(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_add_to_index` instead
-///
-#define q_graphicssimpletextitem_qbase_add_to_index q_graphicssimpletextitem_super_add_to_index
 
 /// Inherited from QGraphicsItem
 ///
@@ -34422,10 +32602,6 @@ void q_graphicssimpletextitem_on_add_to_index(void* self, void (*callback)());
 ///
 void q_graphicssimpletextitem_remove_from_index(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_remove_from_index` instead
-///
-#define q_graphicssimpletextitem_qbase_remove_from_index q_graphicssimpletextitem_super_remove_from_index
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
@@ -34456,10 +32632,6 @@ void q_graphicssimpletextitem_on_remove_from_index(void* self, void (*callback)(
 /// @param self QGraphicsSimpleTextItem*
 ///
 void q_graphicssimpletextitem_prepare_geometry_change(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_prepare_geometry_change` instead
-///
-#define q_graphicssimpletextitem_qbase_prepare_geometry_change q_graphicssimpletextitem_super_prepare_geometry_change
 
 /// Inherited from QGraphicsItem
 ///
@@ -34535,10 +32707,6 @@ QRectF* q_graphicsitemgroup_bounding_rect(void* self);
 ///
 void q_graphicsitemgroup_on_bounding_rect(void* self, QRectF* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_bounding_rect` instead
-///
-#define q_graphicsitemgroup_qbase_bounding_rect q_graphicsitemgroup_super_bounding_rect
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemgroup.html#boundingRect)
 ///
 /// Base class method implementation
@@ -34564,10 +32732,6 @@ void q_graphicsitemgroup_paint(void* self, void* painter, void* option, void* wi
 /// @param callback void func(QGraphicsItemGroup* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 ///
 void q_graphicsitemgroup_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_paint` instead
-///
-#define q_graphicsitemgroup_qbase_paint q_graphicsitemgroup_super_paint
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemgroup.html#paint)
 ///
@@ -34596,10 +32760,6 @@ bool q_graphicsitemgroup_is_obscured_by(void* self, void* item);
 ///
 void q_graphicsitemgroup_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_is_obscured_by` instead
-///
-#define q_graphicsitemgroup_qbase_is_obscured_by q_graphicsitemgroup_super_is_obscured_by
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemgroup.html#isObscuredBy)
 ///
 /// Base class method implementation
@@ -34626,10 +32786,6 @@ QPainterPath* q_graphicsitemgroup_opaque_area(void* self);
 ///
 void q_graphicsitemgroup_on_opaque_area(void* self, QPainterPath* (*callback)());
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_opaque_area` instead
-///
-#define q_graphicsitemgroup_qbase_opaque_area q_graphicsitemgroup_super_opaque_area
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemgroup.html#opaqueArea)
 ///
 /// Base class method implementation
@@ -34652,10 +32808,6 @@ int32_t q_graphicsitemgroup_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_graphicsitemgroup_on_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_type` instead
-///
-#define q_graphicsitemgroup_qbase_type q_graphicsitemgroup_super_type
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemgroup.html#type)
 ///
@@ -36185,10 +34337,6 @@ void q_graphicsitemgroup_scroll3(void* self, double dx, double dy, void* rect);
 ///
 void q_graphicsitemgroup_advance(void* self, int phase);
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_advance` instead
-///
-#define q_graphicsitemgroup_qbase_advance q_graphicsitemgroup_super_advance
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#advance)
@@ -36220,10 +34368,6 @@ void q_graphicsitemgroup_on_advance(void* self, void (*callback)(void*, int));
 /// @param self QGraphicsItemGroup*
 ///
 QPainterPath* q_graphicsitemgroup_shape(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_shape` instead
-///
-#define q_graphicsitemgroup_qbase_shape q_graphicsitemgroup_super_shape
 
 /// Inherited from QGraphicsItem
 ///
@@ -36259,10 +34403,6 @@ void q_graphicsitemgroup_on_shape(void* self, QPainterPath* (*callback)());
 ///
 bool q_graphicsitemgroup_contains(void* self, void* point);
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_contains` instead
-///
-#define q_graphicsitemgroup_qbase_contains q_graphicsitemgroup_super_contains
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#contains)
@@ -36296,10 +34436,6 @@ void q_graphicsitemgroup_on_contains(void* self, bool (*callback)(void*, void*))
 /// @param mode enum Qt__ItemSelectionMode
 ///
 bool q_graphicsitemgroup_collides_with_item(void* self, void* other, int32_t mode);
-
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_collides_with_item` instead
-///
-#define q_graphicsitemgroup_qbase_collides_with_item q_graphicsitemgroup_super_collides_with_item
 
 /// Inherited from QGraphicsItem
 ///
@@ -36336,10 +34472,6 @@ void q_graphicsitemgroup_on_collides_with_item(void* self, bool (*callback)(void
 ///
 bool q_graphicsitemgroup_collides_with_path(void* self, void* path, int32_t mode);
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_collides_with_path` instead
-///
-#define q_graphicsitemgroup_qbase_collides_with_path q_graphicsitemgroup_super_collides_with_path
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
@@ -36375,10 +34507,6 @@ void q_graphicsitemgroup_on_collides_with_path(void* self, bool (*callback)(void
 ///
 bool q_graphicsitemgroup_scene_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_scene_event_filter` instead
-///
-#define q_graphicsitemgroup_qbase_scene_event_filter q_graphicsitemgroup_super_scene_event_filter
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEventFilter)
@@ -36413,10 +34541,6 @@ void q_graphicsitemgroup_on_scene_event_filter(void* self, bool (*callback)(void
 ///
 bool q_graphicsitemgroup_scene_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_scene_event` instead
-///
-#define q_graphicsitemgroup_qbase_scene_event q_graphicsitemgroup_super_scene_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEvent)
@@ -36449,10 +34573,6 @@ void q_graphicsitemgroup_on_scene_event(void* self, bool (*callback)(void*, void
 /// @param event QGraphicsSceneContextMenuEvent*
 ///
 void q_graphicsitemgroup_context_menu_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_context_menu_event` instead
-///
-#define q_graphicsitemgroup_qbase_context_menu_event q_graphicsitemgroup_super_context_menu_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -36487,10 +34607,6 @@ void q_graphicsitemgroup_on_context_menu_event(void* self, void (*callback)(void
 ///
 void q_graphicsitemgroup_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_drag_enter_event` instead
-///
-#define q_graphicsitemgroup_qbase_drag_enter_event q_graphicsitemgroup_super_drag_enter_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragEnterEvent)
@@ -36523,10 +34639,6 @@ void q_graphicsitemgroup_on_drag_enter_event(void* self, void (*callback)(void*,
 /// @param event QGraphicsSceneDragDropEvent*
 ///
 void q_graphicsitemgroup_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_drag_leave_event` instead
-///
-#define q_graphicsitemgroup_qbase_drag_leave_event q_graphicsitemgroup_super_drag_leave_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -36561,10 +34673,6 @@ void q_graphicsitemgroup_on_drag_leave_event(void* self, void (*callback)(void*,
 ///
 void q_graphicsitemgroup_drag_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_drag_move_event` instead
-///
-#define q_graphicsitemgroup_qbase_drag_move_event q_graphicsitemgroup_super_drag_move_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#dragMoveEvent)
@@ -36597,10 +34705,6 @@ void q_graphicsitemgroup_on_drag_move_event(void* self, void (*callback)(void*, 
 /// @param event QGraphicsSceneDragDropEvent*
 ///
 void q_graphicsitemgroup_drop_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_drop_event` instead
-///
-#define q_graphicsitemgroup_qbase_drop_event q_graphicsitemgroup_super_drop_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -36635,10 +34739,6 @@ void q_graphicsitemgroup_on_drop_event(void* self, void (*callback)(void*, void*
 ///
 void q_graphicsitemgroup_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_focus_in_event` instead
-///
-#define q_graphicsitemgroup_qbase_focus_in_event q_graphicsitemgroup_super_focus_in_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusInEvent)
@@ -36671,10 +34771,6 @@ void q_graphicsitemgroup_on_focus_in_event(void* self, void (*callback)(void*, v
 /// @param event QFocusEvent*
 ///
 void q_graphicsitemgroup_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_focus_out_event` instead
-///
-#define q_graphicsitemgroup_qbase_focus_out_event q_graphicsitemgroup_super_focus_out_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -36709,10 +34805,6 @@ void q_graphicsitemgroup_on_focus_out_event(void* self, void (*callback)(void*, 
 ///
 void q_graphicsitemgroup_hover_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_hover_enter_event` instead
-///
-#define q_graphicsitemgroup_qbase_hover_enter_event q_graphicsitemgroup_super_hover_enter_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverEnterEvent)
@@ -36745,10 +34837,6 @@ void q_graphicsitemgroup_on_hover_enter_event(void* self, void (*callback)(void*
 /// @param event QGraphicsSceneHoverEvent*
 ///
 void q_graphicsitemgroup_hover_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_hover_move_event` instead
-///
-#define q_graphicsitemgroup_qbase_hover_move_event q_graphicsitemgroup_super_hover_move_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -36783,10 +34871,6 @@ void q_graphicsitemgroup_on_hover_move_event(void* self, void (*callback)(void*,
 ///
 void q_graphicsitemgroup_hover_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_hover_leave_event` instead
-///
-#define q_graphicsitemgroup_qbase_hover_leave_event q_graphicsitemgroup_super_hover_leave_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverLeaveEvent)
@@ -36819,10 +34903,6 @@ void q_graphicsitemgroup_on_hover_leave_event(void* self, void (*callback)(void*
 /// @param event QKeyEvent*
 ///
 void q_graphicsitemgroup_key_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_key_press_event` instead
-///
-#define q_graphicsitemgroup_qbase_key_press_event q_graphicsitemgroup_super_key_press_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -36857,10 +34937,6 @@ void q_graphicsitemgroup_on_key_press_event(void* self, void (*callback)(void*, 
 ///
 void q_graphicsitemgroup_key_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_key_release_event` instead
-///
-#define q_graphicsitemgroup_qbase_key_release_event q_graphicsitemgroup_super_key_release_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#keyReleaseEvent)
@@ -36893,10 +34969,6 @@ void q_graphicsitemgroup_on_key_release_event(void* self, void (*callback)(void*
 /// @param event QGraphicsSceneMouseEvent*
 ///
 void q_graphicsitemgroup_mouse_press_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_mouse_press_event` instead
-///
-#define q_graphicsitemgroup_qbase_mouse_press_event q_graphicsitemgroup_super_mouse_press_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -36931,10 +35003,6 @@ void q_graphicsitemgroup_on_mouse_press_event(void* self, void (*callback)(void*
 ///
 void q_graphicsitemgroup_mouse_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_mouse_move_event` instead
-///
-#define q_graphicsitemgroup_qbase_mouse_move_event q_graphicsitemgroup_super_mouse_move_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseMoveEvent)
@@ -36967,10 +35035,6 @@ void q_graphicsitemgroup_on_mouse_move_event(void* self, void (*callback)(void*,
 /// @param event QGraphicsSceneMouseEvent*
 ///
 void q_graphicsitemgroup_mouse_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_mouse_release_event` instead
-///
-#define q_graphicsitemgroup_qbase_mouse_release_event q_graphicsitemgroup_super_mouse_release_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -37005,10 +35069,6 @@ void q_graphicsitemgroup_on_mouse_release_event(void* self, void (*callback)(voi
 ///
 void q_graphicsitemgroup_mouse_double_click_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_mouse_double_click_event` instead
-///
-#define q_graphicsitemgroup_qbase_mouse_double_click_event q_graphicsitemgroup_super_mouse_double_click_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseDoubleClickEvent)
@@ -37041,10 +35101,6 @@ void q_graphicsitemgroup_on_mouse_double_click_event(void* self, void (*callback
 /// @param event QGraphicsSceneWheelEvent*
 ///
 void q_graphicsitemgroup_wheel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_wheel_event` instead
-///
-#define q_graphicsitemgroup_qbase_wheel_event q_graphicsitemgroup_super_wheel_event
 
 /// Inherited from QGraphicsItem
 ///
@@ -37079,10 +35135,6 @@ void q_graphicsitemgroup_on_wheel_event(void* self, void (*callback)(void*, void
 ///
 void q_graphicsitemgroup_input_method_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_input_method_event` instead
-///
-#define q_graphicsitemgroup_qbase_input_method_event q_graphicsitemgroup_super_input_method_event
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodEvent)
@@ -37115,10 +35167,6 @@ void q_graphicsitemgroup_on_input_method_event(void* self, void (*callback)(void
 /// @param query enum Qt__InputMethodQuery
 ///
 QVariant* q_graphicsitemgroup_input_method_query(void* self, int32_t query);
-
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_input_method_query` instead
-///
-#define q_graphicsitemgroup_qbase_input_method_query q_graphicsitemgroup_super_input_method_query
 
 /// Inherited from QGraphicsItem
 ///
@@ -37156,10 +35204,6 @@ void q_graphicsitemgroup_on_input_method_query(void* self, QVariant* (*callback)
 ///
 QVariant* q_graphicsitemgroup_item_change(void* self, int32_t change, void* value);
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_item_change` instead
-///
-#define q_graphicsitemgroup_qbase_item_change q_graphicsitemgroup_super_item_change
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemChange)
@@ -37196,10 +35240,6 @@ void q_graphicsitemgroup_on_item_change(void* self, QVariant* (*callback)(void*,
 ///
 bool q_graphicsitemgroup_supports_extension(void* self, int32_t extension);
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_supports_extension` instead
-///
-#define q_graphicsitemgroup_qbase_supports_extension q_graphicsitemgroup_super_supports_extension
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#supportsExtension)
@@ -37233,10 +35273,6 @@ void q_graphicsitemgroup_on_supports_extension(void* self, bool (*callback)(void
 /// @param variant QVariant*
 ///
 void q_graphicsitemgroup_set_extension(void* self, int32_t extension, void* variant);
-
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_set_extension` instead
-///
-#define q_graphicsitemgroup_qbase_set_extension q_graphicsitemgroup_super_set_extension
 
 /// Inherited from QGraphicsItem
 ///
@@ -37272,10 +35308,6 @@ void q_graphicsitemgroup_on_set_extension(void* self, void (*callback)(void*, in
 ///
 QVariant* q_graphicsitemgroup_extension(void* self, void* variant);
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_extension` instead
-///
-#define q_graphicsitemgroup_qbase_extension q_graphicsitemgroup_super_extension
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#extension)
@@ -37310,10 +35342,6 @@ void q_graphicsitemgroup_on_extension(void* self, QVariant* (*callback)(void*, v
 ///
 void q_graphicsitemgroup_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_update_micro_focus` instead
-///
-#define q_graphicsitemgroup_qbase_update_micro_focus q_graphicsitemgroup_super_update_micro_focus
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#updateMicroFocus)
@@ -37344,10 +35372,6 @@ void q_graphicsitemgroup_on_update_micro_focus(void* self, void (*callback)());
 /// @param self QGraphicsItemGroup*
 ///
 void q_graphicsitemgroup_add_to_index(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_add_to_index` instead
-///
-#define q_graphicsitemgroup_qbase_add_to_index q_graphicsitemgroup_super_add_to_index
 
 /// Inherited from QGraphicsItem
 ///
@@ -37380,10 +35404,6 @@ void q_graphicsitemgroup_on_add_to_index(void* self, void (*callback)());
 ///
 void q_graphicsitemgroup_remove_from_index(void* self);
 
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_remove_from_index` instead
-///
-#define q_graphicsitemgroup_qbase_remove_from_index q_graphicsitemgroup_super_remove_from_index
-
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
@@ -37414,10 +35434,6 @@ void q_graphicsitemgroup_on_remove_from_index(void* self, void (*callback)());
 /// @param self QGraphicsItemGroup*
 ///
 void q_graphicsitemgroup_prepare_geometry_change(void* self);
-
-/// @warning DEPRECATED: Use `q_graphicsitemgroup_super_prepare_geometry_change` instead
-///
-#define q_graphicsitemgroup_qbase_prepare_geometry_change q_graphicsitemgroup_super_prepare_geometry_change
 
 /// Inherited from QGraphicsItem
 ///

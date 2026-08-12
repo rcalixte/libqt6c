@@ -37,10 +37,6 @@ const QMetaObject* q_treeview_meta_object(void* self);
 ///
 void q_treeview_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_treeview_super_meta_object` instead
-///
-#define q_treeview_qbase_meta_object q_treeview_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_treeview_metacast(void* self, const char* param1);
 /// @param callback void* func(QTreeView* self, const char* param1)
 ///
 void q_treeview_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_treeview_super_metacast` instead
-///
-#define q_treeview_qbase_metacast q_treeview_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_treeview_metacall(void* self, int32_t param1, int param2, void* param3
 /// @param callback int32_t func(QTreeView* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_treeview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_treeview_super_metacall` instead
-///
-#define q_treeview_qbase_metacall q_treeview_super_metacall
 
 /// Base class method implementation
 ///
@@ -123,10 +111,6 @@ void q_treeview_set_model(void* self, void* model);
 ///
 void q_treeview_on_set_model(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_treeview_super_set_model` instead
-///
-#define q_treeview_qbase_set_model q_treeview_super_set_model
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#setModel)
 ///
 /// Base class method implementation
@@ -152,10 +136,6 @@ void q_treeview_set_root_index(void* self, void* index);
 ///
 void q_treeview_on_set_root_index(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_treeview_super_set_root_index` instead
-///
-#define q_treeview_qbase_set_root_index q_treeview_super_set_root_index
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#setRootIndex)
 ///
 /// Base class method implementation
@@ -180,10 +160,6 @@ void q_treeview_set_selection_model(void* self, void* selectionModel);
 /// @param callback void func(QTreeView* self, QItemSelectionModel* selectionModel)
 ///
 void q_treeview_on_set_selection_model(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_treeview_super_set_selection_model` instead
-///
-#define q_treeview_qbase_set_selection_model q_treeview_super_set_selection_model
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#setSelectionModel)
 ///
@@ -478,10 +454,6 @@ void q_treeview_keyboard_search(void* self, const char* search);
 ///
 void q_treeview_on_keyboard_search(void* self, void (*callback)(void*, const char*));
 
-/// @warning DEPRECATED: Use `q_treeview_super_keyboard_search` instead
-///
-#define q_treeview_qbase_keyboard_search q_treeview_super_keyboard_search
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#keyboardSearch)
 ///
 /// Base class method implementation
@@ -509,10 +481,6 @@ QRect* q_treeview_visual_rect(void* self, void* index);
 ///
 void q_treeview_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_treeview_super_visual_rect` instead
-///
-#define q_treeview_qbase_visual_rect q_treeview_super_visual_rect
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#visualRect)
 ///
 /// Base class method implementation
@@ -538,10 +506,6 @@ void q_treeview_scroll_to(void* self, void* index, int32_t hint);
 /// @param callback void func(QTreeView* self, QModelIndex* index, enum QAbstractItemView__ScrollHint hint)
 ///
 void q_treeview_on_scroll_to(void* self, void (*callback)(void*, void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_treeview_super_scroll_to` instead
-///
-#define q_treeview_qbase_scroll_to q_treeview_super_scroll_to
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#scrollTo)
 ///
@@ -570,10 +534,6 @@ QModelIndex* q_treeview_index_at(void* self, void* p);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_treeview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_treeview_super_index_at` instead
-///
-#define q_treeview_qbase_index_at q_treeview_super_index_at
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#indexAt)
 ///
@@ -613,10 +573,6 @@ void q_treeview_do_items_layout(void* self);
 ///
 void q_treeview_on_do_items_layout(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_treeview_super_do_items_layout` instead
-///
-#define q_treeview_qbase_do_items_layout q_treeview_super_do_items_layout
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#doItemsLayout)
 ///
 /// Base class method implementation
@@ -639,10 +595,6 @@ void q_treeview_reset(void* self);
 /// @param callback void func()
 ///
 void q_treeview_on_reset(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_treeview_super_reset` instead
-///
-#define q_treeview_qbase_reset q_treeview_super_reset
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#reset)
 ///
@@ -670,10 +622,6 @@ void q_treeview_data_changed(void* self, void* topLeft, void* bottomRight, libqt
 ///
 void q_treeview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
-/// @warning DEPRECATED: Use `q_treeview_super_data_changed` instead
-///
-#define q_treeview_qbase_data_changed q_treeview_super_data_changed
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#dataChanged)
 ///
 /// Base class method implementation
@@ -699,10 +647,6 @@ void q_treeview_select_all(void* self);
 /// @param callback void func()
 ///
 void q_treeview_on_select_all(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_treeview_super_select_all` instead
-///
-#define q_treeview_qbase_select_all q_treeview_super_select_all
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#selectAll)
 ///
@@ -827,10 +771,6 @@ void q_treeview_column_resized(void* self, int column, int oldSize, int newSize)
 ///
 void q_treeview_on_column_resized(void* self, void (*callback)(void*, int, int, int));
 
-/// @warning DEPRECATED: Use `q_treeview_super_column_resized` instead
-///
-#define q_treeview_qbase_column_resized q_treeview_super_column_resized
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#columnResized)
 ///
 /// Base class method implementation
@@ -859,10 +799,6 @@ void q_treeview_column_count_changed(void* self, int oldCount, int newCount);
 ///
 void q_treeview_on_column_count_changed(void* self, void (*callback)(void*, int, int));
 
-/// @warning DEPRECATED: Use `q_treeview_super_column_count_changed` instead
-///
-#define q_treeview_qbase_column_count_changed q_treeview_super_column_count_changed
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#columnCountChanged)
 ///
 /// Base class method implementation
@@ -888,10 +824,6 @@ void q_treeview_column_moved(void* self);
 ///
 void q_treeview_on_column_moved(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_treeview_super_column_moved` instead
-///
-#define q_treeview_qbase_column_moved q_treeview_super_column_moved
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#columnMoved)
 ///
 /// Base class method implementation
@@ -914,10 +846,6 @@ void q_treeview_reexpand(void* self);
 /// @param callback void func()
 ///
 void q_treeview_on_reexpand(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_treeview_super_reexpand` instead
-///
-#define q_treeview_qbase_reexpand q_treeview_super_reexpand
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#reexpand)
 ///
@@ -944,10 +872,6 @@ void q_treeview_rows_removed(void* self, void* parent, int first, int last);
 /// @param callback void func(QTreeView* self, QModelIndex* parent, int first, int last)
 ///
 void q_treeview_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
-
-/// @warning DEPRECATED: Use `q_treeview_super_rows_removed` instead
-///
-#define q_treeview_qbase_rows_removed q_treeview_super_rows_removed
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#rowsRemoved)
 ///
@@ -976,10 +900,6 @@ void q_treeview_vertical_scrollbar_value_changed(void* self, int value);
 ///
 void q_treeview_on_vertical_scrollbar_value_changed(void* self, void (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_treeview_super_vertical_scrollbar_value_changed` instead
-///
-#define q_treeview_qbase_vertical_scrollbar_value_changed q_treeview_super_vertical_scrollbar_value_changed
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#verticalScrollbarValueChanged)
 ///
 /// Base class method implementation
@@ -1005,10 +925,6 @@ void q_treeview_scroll_contents_by(void* self, int dx, int dy);
 /// @param callback void func(QTreeView* self, int dx, int dy)
 ///
 void q_treeview_on_scroll_contents_by(void* self, void (*callback)(void*, int, int));
-
-/// @warning DEPRECATED: Use `q_treeview_super_scroll_contents_by` instead
-///
-#define q_treeview_qbase_scroll_contents_by q_treeview_super_scroll_contents_by
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#scrollContentsBy)
 ///
@@ -1038,10 +954,6 @@ void q_treeview_rows_inserted(void* self, void* parent, int start, int end);
 ///
 void q_treeview_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
-/// @warning DEPRECATED: Use `q_treeview_super_rows_inserted` instead
-///
-#define q_treeview_qbase_rows_inserted q_treeview_super_rows_inserted
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#rowsInserted)
 ///
 /// Base class method implementation
@@ -1070,10 +982,6 @@ void q_treeview_rows_about_to_be_removed(void* self, void* parent, int start, in
 /// @param callback void func(QTreeView* self, QModelIndex* parent, int start, int end)
 ///
 void q_treeview_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
-
-/// @warning DEPRECATED: Use `q_treeview_super_rows_about_to_be_removed` instead
-///
-#define q_treeview_qbase_rows_about_to_be_removed q_treeview_super_rows_about_to_be_removed
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#rowsAboutToBeRemoved)
 ///
@@ -1105,10 +1013,6 @@ QModelIndex* q_treeview_move_cursor(void* self, int32_t cursorAction, int32_t mo
 ///
 void q_treeview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int32_t));
 
-/// @warning DEPRECATED: Use `q_treeview_super_move_cursor` instead
-///
-#define q_treeview_qbase_move_cursor q_treeview_super_move_cursor
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#moveCursor)
 ///
 /// Base class method implementation
@@ -1134,10 +1038,6 @@ int32_t q_treeview_horizontal_offset(void* self);
 ///
 void q_treeview_on_horizontal_offset(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_treeview_super_horizontal_offset` instead
-///
-#define q_treeview_qbase_horizontal_offset q_treeview_super_horizontal_offset
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#horizontalOffset)
 ///
 /// Base class method implementation
@@ -1160,10 +1060,6 @@ int32_t q_treeview_vertical_offset(void* self);
 /// @param callback int32_t func()
 ///
 void q_treeview_on_vertical_offset(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_treeview_super_vertical_offset` instead
-///
-#define q_treeview_qbase_vertical_offset q_treeview_super_vertical_offset
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#verticalOffset)
 ///
@@ -1189,10 +1085,6 @@ void q_treeview_set_selection(void* self, void* rect, int32_t command);
 /// @param callback void func(QTreeView* self, QRect* rect, flag of enum QItemSelectionModel__SelectionFlag command)
 ///
 void q_treeview_on_set_selection(void* self, void (*callback)(void*, void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_treeview_super_set_selection` instead
-///
-#define q_treeview_qbase_set_selection q_treeview_super_set_selection
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#setSelection)
 ///
@@ -1222,10 +1114,6 @@ QRegion* q_treeview_visual_region_for_selection(void* self, void* selection);
 ///
 void q_treeview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_treeview_super_visual_region_for_selection` instead
-///
-#define q_treeview_qbase_visual_region_for_selection q_treeview_super_visual_region_for_selection
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#visualRegionForSelection)
 ///
 /// Base class method implementation
@@ -1251,10 +1139,6 @@ libqt_list q_treeview_selected_indexes(void* self);
 /// @param callback libqt_list of QModelIndex* func()
 ///
 void q_treeview_on_selected_indexes(void* self, libqt_list (*callback)());
-
-/// @warning DEPRECATED: Use `q_treeview_super_selected_indexes` instead
-///
-#define q_treeview_qbase_selected_indexes q_treeview_super_selected_indexes
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#selectedIndexes)
 ///
@@ -1282,10 +1166,6 @@ void q_treeview_change_event(void* self, void* event);
 ///
 void q_treeview_on_change_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_treeview_super_change_event` instead
-///
-#define q_treeview_qbase_change_event q_treeview_super_change_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#changeEvent)
 ///
 /// Base class method implementation
@@ -1310,10 +1190,6 @@ void q_treeview_timer_event(void* self, void* event);
 /// @param callback void func(QTreeView* self, QTimerEvent* event)
 ///
 void q_treeview_on_timer_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_treeview_super_timer_event` instead
-///
-#define q_treeview_qbase_timer_event q_treeview_super_timer_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#timerEvent)
 ///
@@ -1340,10 +1216,6 @@ void q_treeview_paint_event(void* self, void* event);
 ///
 void q_treeview_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_treeview_super_paint_event` instead
-///
-#define q_treeview_qbase_paint_event q_treeview_super_paint_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#paintEvent)
 ///
 /// Base class method implementation
@@ -1369,10 +1241,6 @@ void q_treeview_draw_tree(void* self, void* painter, void* region);
 /// @param callback void func(QTreeView* self, QPainter* painter, QRegion* region)
 ///
 void q_treeview_on_draw_tree(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_treeview_super_draw_tree` instead
-///
-#define q_treeview_qbase_draw_tree q_treeview_super_draw_tree
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#drawTree)
 ///
@@ -1401,10 +1269,6 @@ void q_treeview_draw_row(void* self, void* painter, void* options, void* index);
 /// @param callback void func(QTreeView* self, QPainter* painter, QStyleOptionViewItem* options, QModelIndex* index)
 ///
 void q_treeview_on_draw_row(void* self, void (*callback)(void*, void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_treeview_super_draw_row` instead
-///
-#define q_treeview_qbase_draw_row q_treeview_super_draw_row
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#drawRow)
 ///
@@ -1435,10 +1299,6 @@ void q_treeview_draw_branches(void* self, void* painter, void* rect, void* index
 ///
 void q_treeview_on_draw_branches(void* self, void (*callback)(void*, void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_treeview_super_draw_branches` instead
-///
-#define q_treeview_qbase_draw_branches q_treeview_super_draw_branches
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#drawBranches)
 ///
 /// Base class method implementation
@@ -1466,10 +1326,6 @@ void q_treeview_mouse_press_event(void* self, void* event);
 ///
 void q_treeview_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_treeview_super_mouse_press_event` instead
-///
-#define q_treeview_qbase_mouse_press_event q_treeview_super_mouse_press_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#mousePressEvent)
 ///
 /// Base class method implementation
@@ -1494,10 +1350,6 @@ void q_treeview_mouse_release_event(void* self, void* event);
 /// @param callback void func(QTreeView* self, QMouseEvent* event)
 ///
 void q_treeview_on_mouse_release_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_treeview_super_mouse_release_event` instead
-///
-#define q_treeview_qbase_mouse_release_event q_treeview_super_mouse_release_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#mouseReleaseEvent)
 ///
@@ -1524,10 +1376,6 @@ void q_treeview_mouse_double_click_event(void* self, void* event);
 ///
 void q_treeview_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_treeview_super_mouse_double_click_event` instead
-///
-#define q_treeview_qbase_mouse_double_click_event q_treeview_super_mouse_double_click_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#mouseDoubleClickEvent)
 ///
 /// Base class method implementation
@@ -1552,10 +1400,6 @@ void q_treeview_mouse_move_event(void* self, void* event);
 /// @param callback void func(QTreeView* self, QMouseEvent* event)
 ///
 void q_treeview_on_mouse_move_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_treeview_super_mouse_move_event` instead
-///
-#define q_treeview_qbase_mouse_move_event q_treeview_super_mouse_move_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#mouseMoveEvent)
 ///
@@ -1582,10 +1426,6 @@ void q_treeview_key_press_event(void* self, void* event);
 ///
 void q_treeview_on_key_press_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_treeview_super_key_press_event` instead
-///
-#define q_treeview_qbase_key_press_event q_treeview_super_key_press_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#keyPressEvent)
 ///
 /// Base class method implementation
@@ -1610,10 +1450,6 @@ void q_treeview_drag_move_event(void* self, void* event);
 /// @param callback void func(QTreeView* self, QDragMoveEvent* event)
 ///
 void q_treeview_on_drag_move_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_treeview_super_drag_move_event` instead
-///
-#define q_treeview_qbase_drag_move_event q_treeview_super_drag_move_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#dragMoveEvent)
 ///
@@ -1640,10 +1476,6 @@ bool q_treeview_viewport_event(void* self, void* event);
 ///
 void q_treeview_on_viewport_event(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_treeview_super_viewport_event` instead
-///
-#define q_treeview_qbase_viewport_event q_treeview_super_viewport_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#viewportEvent)
 ///
 /// Base class method implementation
@@ -1667,10 +1499,6 @@ void q_treeview_update_geometries(void* self);
 /// @param callback void func()
 ///
 void q_treeview_on_update_geometries(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_treeview_super_update_geometries` instead
-///
-#define q_treeview_qbase_update_geometries q_treeview_super_update_geometries
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#updateGeometries)
 ///
@@ -1697,10 +1525,6 @@ QSize* q_treeview_viewport_size_hint(void* self);
 ///
 void q_treeview_on_viewport_size_hint(void* self, QSize* (*callback)());
 
-/// @warning DEPRECATED: Use `q_treeview_super_viewport_size_hint` instead
-///
-#define q_treeview_qbase_viewport_size_hint q_treeview_super_viewport_size_hint
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#viewportSizeHint)
 ///
 /// Base class method implementation
@@ -1724,10 +1548,6 @@ int32_t q_treeview_size_hint_for_column(void* self, int column);
 /// @param callback int32_t func(QTreeView* self, int column)
 ///
 void q_treeview_on_size_hint_for_column(void* self, int32_t (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_treeview_super_size_hint_for_column` instead
-///
-#define q_treeview_qbase_size_hint_for_column q_treeview_super_size_hint_for_column
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#sizeHintForColumn)
 ///
@@ -1754,10 +1574,6 @@ int32_t q_treeview_index_row_size_hint(void* self, void* index);
 ///
 void q_treeview_on_index_row_size_hint(void* self, int32_t (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_treeview_super_index_row_size_hint` instead
-///
-#define q_treeview_qbase_index_row_size_hint q_treeview_super_index_row_size_hint
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#indexRowSizeHint)
 ///
 /// Base class method implementation
@@ -1782,10 +1598,6 @@ int32_t q_treeview_row_height(void* self, void* index);
 /// @param callback int32_t func(QTreeView* self, QModelIndex* index)
 ///
 void q_treeview_on_row_height(void* self, int32_t (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_treeview_super_row_height` instead
-///
-#define q_treeview_qbase_row_height q_treeview_super_row_height
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#rowHeight)
 ///
@@ -1812,10 +1624,6 @@ void q_treeview_horizontal_scrollbar_action(void* self, int action);
 ///
 void q_treeview_on_horizontal_scrollbar_action(void* self, void (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_treeview_super_horizontal_scrollbar_action` instead
-///
-#define q_treeview_qbase_horizontal_scrollbar_action q_treeview_super_horizontal_scrollbar_action
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#horizontalScrollbarAction)
 ///
 /// Base class method implementation
@@ -1840,10 +1648,6 @@ bool q_treeview_is_index_hidden(void* self, void* index);
 /// @param callback bool func(QTreeView* self, QModelIndex* index)
 ///
 void q_treeview_on_is_index_hidden(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_treeview_super_is_index_hidden` instead
-///
-#define q_treeview_qbase_is_index_hidden q_treeview_super_is_index_hidden
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#isIndexHidden)
 ///
@@ -1871,10 +1675,6 @@ void q_treeview_selection_changed(void* self, void* selected, void* deselected);
 ///
 void q_treeview_on_selection_changed(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_treeview_super_selection_changed` instead
-///
-#define q_treeview_qbase_selection_changed q_treeview_super_selection_changed
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#selectionChanged)
 ///
 /// Base class method implementation
@@ -1901,10 +1701,6 @@ void q_treeview_current_changed(void* self, void* current, void* previous);
 /// @param callback void func(QTreeView* self, QModelIndex* current, QModelIndex* previous)
 ///
 void q_treeview_on_current_changed(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_treeview_super_current_changed` instead
-///
-#define q_treeview_qbase_current_changed q_treeview_super_current_changed
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#currentChanged)
 ///
@@ -5802,10 +5598,6 @@ int32_t q_treeview_encode_metric_f(int32_t metric, double value);
 ///
 int32_t q_treeview_size_hint_for_row(void* self, int row);
 
-/// @warning DEPRECATED: Use `q_treeview_super_size_hint_for_row` instead
-///
-#define q_treeview_qbase_size_hint_for_row q_treeview_super_size_hint_for_row
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForRow)
@@ -5839,10 +5631,6 @@ void q_treeview_on_size_hint_for_row(void* self, int32_t (*callback)(void*, int)
 ///
 QAbstractItemDelegate* q_treeview_item_delegate_for_index(void* self, void* index);
 
-/// @warning DEPRECATED: Use `q_treeview_super_item_delegate_for_index` instead
-///
-#define q_treeview_qbase_item_delegate_for_index q_treeview_super_item_delegate_for_index
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForIndex)
@@ -5875,10 +5663,6 @@ void q_treeview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*
 /// @param query enum Qt__InputMethodQuery
 ///
 QVariant* q_treeview_input_method_query(void* self, int32_t query);
-
-/// @warning DEPRECATED: Use `q_treeview_super_input_method_query` instead
-///
-#define q_treeview_qbase_input_method_query q_treeview_super_input_method_query
 
 /// Inherited from QAbstractItemView
 ///
@@ -5914,10 +5698,6 @@ void q_treeview_on_input_method_query(void* self, QVariant* (*callback)(void*, i
 ///
 void q_treeview_update_editor_data(void* self);
 
-/// @warning DEPRECATED: Use `q_treeview_super_update_editor_data` instead
-///
-#define q_treeview_qbase_update_editor_data q_treeview_super_update_editor_data
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorData)
@@ -5948,10 +5728,6 @@ void q_treeview_on_update_editor_data(void* self, void (*callback)());
 /// @param self QTreeView*
 ///
 void q_treeview_update_editor_geometries(void* self);
-
-/// @warning DEPRECATED: Use `q_treeview_super_update_editor_geometries` instead
-///
-#define q_treeview_qbase_update_editor_geometries q_treeview_super_update_editor_geometries
 
 /// Inherited from QAbstractItemView
 ///
@@ -5985,10 +5761,6 @@ void q_treeview_on_update_editor_geometries(void* self, void (*callback)());
 ///
 void q_treeview_vertical_scrollbar_action(void* self, int action);
 
-/// @warning DEPRECATED: Use `q_treeview_super_vertical_scrollbar_action` instead
-///
-#define q_treeview_qbase_vertical_scrollbar_action q_treeview_super_vertical_scrollbar_action
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollbarAction)
@@ -6021,10 +5793,6 @@ void q_treeview_on_vertical_scrollbar_action(void* self, void (*callback)(void*,
 /// @param value int
 ///
 void q_treeview_horizontal_scrollbar_value_changed(void* self, int value);
-
-/// @warning DEPRECATED: Use `q_treeview_super_horizontal_scrollbar_value_changed` instead
-///
-#define q_treeview_qbase_horizontal_scrollbar_value_changed q_treeview_super_horizontal_scrollbar_value_changed
 
 /// Inherited from QAbstractItemView
 ///
@@ -6060,10 +5828,6 @@ void q_treeview_on_horizontal_scrollbar_value_changed(void* self, void (*callbac
 ///
 void q_treeview_close_editor(void* self, void* editor, int32_t hint);
 
-/// @warning DEPRECATED: Use `q_treeview_super_close_editor` instead
-///
-#define q_treeview_qbase_close_editor q_treeview_super_close_editor
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#closeEditor)
@@ -6098,10 +5862,6 @@ void q_treeview_on_close_editor(void* self, void (*callback)(void*, void*, int32
 ///
 void q_treeview_commit_data(void* self, void* editor);
 
-/// @warning DEPRECATED: Use `q_treeview_super_commit_data` instead
-///
-#define q_treeview_qbase_commit_data q_treeview_super_commit_data
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#commitData)
@@ -6134,10 +5894,6 @@ void q_treeview_on_commit_data(void* self, void (*callback)(void*, void*));
 /// @param editor QObject*
 ///
 void q_treeview_editor_destroyed(void* self, void* editor);
-
-/// @warning DEPRECATED: Use `q_treeview_super_editor_destroyed` instead
-///
-#define q_treeview_qbase_editor_destroyed q_treeview_super_editor_destroyed
 
 /// Inherited from QAbstractItemView
 ///
@@ -6173,10 +5929,6 @@ void q_treeview_on_editor_destroyed(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_treeview_edit2(void* self, void* index, int32_t trigger, void* event);
-
-/// @warning DEPRECATED: Use `q_treeview_super_edit2` instead
-///
-#define q_treeview_qbase_edit2 q_treeview_super_edit2
 
 /// Inherited from QAbstractItemView
 ///
@@ -6216,10 +5968,6 @@ void q_treeview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, voi
 ///
 int32_t q_treeview_selection_command(void* self, void* index, void* event);
 
-/// @warning DEPRECATED: Use `q_treeview_super_selection_command` instead
-///
-#define q_treeview_qbase_selection_command q_treeview_super_selection_command
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectionCommand)
@@ -6256,10 +6004,6 @@ void q_treeview_on_selection_command(void* self, int32_t (*callback)(void*, void
 ///
 void q_treeview_start_drag(void* self, int32_t supportedActions);
 
-/// @warning DEPRECATED: Use `q_treeview_super_start_drag` instead
-///
-#define q_treeview_qbase_start_drag q_treeview_super_start_drag
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#startDrag)
@@ -6292,10 +6036,6 @@ void q_treeview_on_start_drag(void* self, void (*callback)(void*, int32_t));
 /// @param option QStyleOptionViewItem*
 ///
 void q_treeview_init_view_item_option(void* self, void* option);
-
-/// @warning DEPRECATED: Use `q_treeview_super_init_view_item_option` instead
-///
-#define q_treeview_qbase_init_view_item_option q_treeview_super_init_view_item_option
 
 /// Inherited from QAbstractItemView
 ///
@@ -6330,10 +6070,6 @@ void q_treeview_on_init_view_item_option(void* self, void (*callback)(void*, voi
 ///
 bool q_treeview_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `q_treeview_super_focus_next_prev_child` instead
-///
-#define q_treeview_qbase_focus_next_prev_child q_treeview_super_focus_next_prev_child
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#focusNextPrevChild)
@@ -6366,10 +6102,6 @@ void q_treeview_on_focus_next_prev_child(void* self, bool (*callback)(void*, boo
 /// @param event QEvent*
 ///
 bool q_treeview_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_treeview_super_event` instead
-///
-#define q_treeview_qbase_event q_treeview_super_event
 
 /// Inherited from QAbstractItemView
 ///
@@ -6404,10 +6136,6 @@ void q_treeview_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void q_treeview_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_treeview_super_drag_enter_event` instead
-///
-#define q_treeview_qbase_drag_enter_event q_treeview_super_drag_enter_event
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dragEnterEvent)
@@ -6440,10 +6168,6 @@ void q_treeview_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 /// @param event QDragLeaveEvent*
 ///
 void q_treeview_drag_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_treeview_super_drag_leave_event` instead
-///
-#define q_treeview_qbase_drag_leave_event q_treeview_super_drag_leave_event
 
 /// Inherited from QAbstractItemView
 ///
@@ -6478,10 +6202,6 @@ void q_treeview_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_treeview_drop_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_treeview_super_drop_event` instead
-///
-#define q_treeview_qbase_drop_event q_treeview_super_drop_event
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dropEvent)
@@ -6514,10 +6234,6 @@ void q_treeview_on_drop_event(void* self, void (*callback)(void*, void*));
 /// @param event QFocusEvent*
 ///
 void q_treeview_focus_in_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_treeview_super_focus_in_event` instead
-///
-#define q_treeview_qbase_focus_in_event q_treeview_super_focus_in_event
 
 /// Inherited from QAbstractItemView
 ///
@@ -6552,10 +6268,6 @@ void q_treeview_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 void q_treeview_focus_out_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_treeview_super_focus_out_event` instead
-///
-#define q_treeview_qbase_focus_out_event q_treeview_super_focus_out_event
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#focusOutEvent)
@@ -6589,10 +6301,6 @@ void q_treeview_on_focus_out_event(void* self, void (*callback)(void*, void*));
 ///
 void q_treeview_resize_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_treeview_super_resize_event` instead
-///
-#define q_treeview_qbase_resize_event q_treeview_super_resize_event
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#resizeEvent)
@@ -6625,10 +6333,6 @@ void q_treeview_on_resize_event(void* self, void (*callback)(void*, void*));
 /// @param event QInputMethodEvent*
 ///
 void q_treeview_input_method_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_treeview_super_input_method_event` instead
-///
-#define q_treeview_qbase_input_method_event q_treeview_super_input_method_event
 
 /// Inherited from QAbstractItemView
 ///
@@ -6664,10 +6368,6 @@ void q_treeview_on_input_method_event(void* self, void (*callback)(void*, void*)
 ///
 bool q_treeview_event_filter(void* self, void* object, void* event);
 
-/// @warning DEPRECATED: Use `q_treeview_super_event_filter` instead
-///
-#define q_treeview_qbase_event_filter q_treeview_super_event_filter
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#eventFilter)
@@ -6701,10 +6401,6 @@ void q_treeview_on_event_filter(void* self, bool (*callback)(void*, void*, void*
 ///
 QSize* q_treeview_minimum_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `q_treeview_super_minimum_size_hint` instead
-///
-#define q_treeview_qbase_minimum_size_hint q_treeview_super_minimum_size_hint
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
@@ -6737,10 +6433,6 @@ void q_treeview_on_minimum_size_hint(void* self, QSize* (*callback)());
 /// @param self QTreeView*
 ///
 QSize* q_treeview_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `q_treeview_super_size_hint` instead
-///
-#define q_treeview_qbase_size_hint q_treeview_super_size_hint
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6776,10 +6468,6 @@ void q_treeview_on_size_hint(void* self, QSize* (*callback)());
 ///
 void q_treeview_setup_viewport(void* self, void* viewport);
 
-/// @warning DEPRECATED: Use `q_treeview_super_setup_viewport` instead
-///
-#define q_treeview_qbase_setup_viewport q_treeview_super_setup_viewport
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
@@ -6812,10 +6500,6 @@ void q_treeview_on_setup_viewport(void* self, void (*callback)(void*, void*));
 /// @param param1 QWheelEvent*
 ///
 void q_treeview_wheel_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_treeview_super_wheel_event` instead
-///
-#define q_treeview_qbase_wheel_event q_treeview_super_wheel_event
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6850,10 +6534,6 @@ void q_treeview_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void q_treeview_context_menu_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_treeview_super_context_menu_event` instead
-///
-#define q_treeview_qbase_context_menu_event q_treeview_super_context_menu_event
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#contextMenuEvent)
@@ -6887,10 +6567,6 @@ void q_treeview_on_context_menu_event(void* self, void (*callback)(void*, void*)
 ///
 void q_treeview_init_style_option(void* self, void* option);
 
-/// @warning DEPRECATED: Use `q_treeview_super_init_style_option` instead
-///
-#define q_treeview_qbase_init_style_option q_treeview_super_init_style_option
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
@@ -6923,10 +6599,6 @@ void q_treeview_on_init_style_option(void* self, void (*callback)(void*, void*))
 ///
 int32_t q_treeview_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `q_treeview_super_dev_type` instead
-///
-#define q_treeview_qbase_dev_type q_treeview_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -6958,10 +6630,6 @@ void q_treeview_on_dev_type(void* self, int32_t (*callback)());
 /// @param visible bool
 ///
 void q_treeview_set_visible(void* self, bool visible);
-
-/// @warning DEPRECATED: Use `q_treeview_super_set_visible` instead
-///
-#define q_treeview_qbase_set_visible q_treeview_super_set_visible
 
 /// Inherited from QWidget
 ///
@@ -6996,10 +6664,6 @@ void q_treeview_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 int32_t q_treeview_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `q_treeview_super_height_for_width` instead
-///
-#define q_treeview_qbase_height_for_width q_treeview_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -7032,10 +6696,6 @@ void q_treeview_on_height_for_width(void* self, int32_t (*callback)(void*, int))
 ///
 bool q_treeview_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `q_treeview_super_has_height_for_width` instead
-///
-#define q_treeview_qbase_has_height_for_width q_treeview_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -7066,10 +6726,6 @@ void q_treeview_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self QTreeView*
 ///
 QPaintEngine* q_treeview_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `q_treeview_super_paint_engine` instead
-///
-#define q_treeview_qbase_paint_engine q_treeview_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -7102,10 +6758,6 @@ void q_treeview_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QKeyEvent*
 ///
 void q_treeview_key_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_treeview_super_key_release_event` instead
-///
-#define q_treeview_qbase_key_release_event q_treeview_super_key_release_event
 
 /// Inherited from QWidget
 ///
@@ -7140,10 +6792,6 @@ void q_treeview_on_key_release_event(void* self, void (*callback)(void*, void*))
 ///
 void q_treeview_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_treeview_super_enter_event` instead
-///
-#define q_treeview_qbase_enter_event q_treeview_super_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -7176,10 +6824,6 @@ void q_treeview_on_enter_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void q_treeview_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_treeview_super_leave_event` instead
-///
-#define q_treeview_qbase_leave_event q_treeview_super_leave_event
 
 /// Inherited from QWidget
 ///
@@ -7214,10 +6858,6 @@ void q_treeview_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_treeview_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_treeview_super_move_event` instead
-///
-#define q_treeview_qbase_move_event q_treeview_super_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -7250,10 +6890,6 @@ void q_treeview_on_move_event(void* self, void (*callback)(void*, void*));
 /// @param event QCloseEvent*
 ///
 void q_treeview_close_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_treeview_super_close_event` instead
-///
-#define q_treeview_qbase_close_event q_treeview_super_close_event
 
 /// Inherited from QWidget
 ///
@@ -7288,10 +6924,6 @@ void q_treeview_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void q_treeview_tablet_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_treeview_super_tablet_event` instead
-///
-#define q_treeview_qbase_tablet_event q_treeview_super_tablet_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -7324,10 +6956,6 @@ void q_treeview_on_tablet_event(void* self, void (*callback)(void*, void*));
 /// @param event QActionEvent*
 ///
 void q_treeview_action_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_treeview_super_action_event` instead
-///
-#define q_treeview_qbase_action_event q_treeview_super_action_event
 
 /// Inherited from QWidget
 ///
@@ -7362,10 +6990,6 @@ void q_treeview_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 void q_treeview_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_treeview_super_show_event` instead
-///
-#define q_treeview_qbase_show_event q_treeview_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -7398,10 +7022,6 @@ void q_treeview_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param event QHideEvent*
 ///
 void q_treeview_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_treeview_super_hide_event` instead
-///
-#define q_treeview_qbase_hide_event q_treeview_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -7438,10 +7058,6 @@ void q_treeview_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_treeview_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `q_treeview_super_native_event` instead
-///
-#define q_treeview_qbase_native_event q_treeview_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -7477,10 +7093,6 @@ void q_treeview_on_native_event(void* self, bool (*callback)(void*, libqt_string
 ///
 int32_t q_treeview_metric(void* self, int32_t param1);
 
-/// @warning DEPRECATED: Use `q_treeview_super_metric` instead
-///
-#define q_treeview_qbase_metric q_treeview_super_metric
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -7513,10 +7125,6 @@ void q_treeview_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 /// @param painter QPainter*
 ///
 void q_treeview_init_painter(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `q_treeview_super_init_painter` instead
-///
-#define q_treeview_qbase_init_painter q_treeview_super_init_painter
 
 /// Inherited from QWidget
 ///
@@ -7551,10 +7159,6 @@ void q_treeview_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_treeview_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `q_treeview_super_redirected` instead
-///
-#define q_treeview_qbase_redirected q_treeview_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -7587,10 +7191,6 @@ void q_treeview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*
 ///
 QPainter* q_treeview_shared_painter(void* self);
 
-/// @warning DEPRECATED: Use `q_treeview_super_shared_painter` instead
-///
-#define q_treeview_qbase_shared_painter q_treeview_super_shared_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -7622,10 +7222,6 @@ void q_treeview_on_shared_painter(void* self, QPainter* (*callback)());
 /// @param event QChildEvent*
 ///
 void q_treeview_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_treeview_super_child_event` instead
-///
-#define q_treeview_qbase_child_event q_treeview_super_child_event
 
 /// Inherited from QObject
 ///
@@ -7660,10 +7256,6 @@ void q_treeview_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_treeview_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_treeview_super_custom_event` instead
-///
-#define q_treeview_qbase_custom_event q_treeview_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -7697,10 +7289,6 @@ void q_treeview_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_treeview_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_treeview_super_connect_notify` instead
-///
-#define q_treeview_qbase_connect_notify q_treeview_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -7733,10 +7321,6 @@ void q_treeview_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_treeview_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_treeview_super_disconnect_notify` instead
-///
-#define q_treeview_qbase_disconnect_notify q_treeview_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -7772,10 +7356,6 @@ void q_treeview_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 int32_t q_treeview_state(void* self);
 
-/// @warning DEPRECATED: Use `q_treeview_super_state` instead
-///
-#define q_treeview_qbase_state q_treeview_super_state
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#state)
@@ -7810,10 +7390,6 @@ void q_treeview_on_state(void* self, int32_t (*callback)());
 ///
 void q_treeview_set_state(void* self, int32_t state);
 
-/// @warning DEPRECATED: Use `q_treeview_super_set_state` instead
-///
-#define q_treeview_qbase_set_state q_treeview_super_set_state
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#setState)
@@ -7846,10 +7422,6 @@ void q_treeview_on_set_state(void* self, void (*callback)(void*, int32_t));
 ///
 void q_treeview_schedule_delayed_items_layout(void* self);
 
-/// @warning DEPRECATED: Use `q_treeview_super_schedule_delayed_items_layout` instead
-///
-#define q_treeview_qbase_schedule_delayed_items_layout q_treeview_super_schedule_delayed_items_layout
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#scheduleDelayedItemsLayout)
@@ -7880,10 +7452,6 @@ void q_treeview_on_schedule_delayed_items_layout(void* self, void (*callback)())
 /// @param self QTreeView*
 ///
 void q_treeview_execute_delayed_items_layout(void* self);
-
-/// @warning DEPRECATED: Use `q_treeview_super_execute_delayed_items_layout` instead
-///
-#define q_treeview_qbase_execute_delayed_items_layout q_treeview_super_execute_delayed_items_layout
 
 /// Inherited from QAbstractItemView
 ///
@@ -7916,10 +7484,6 @@ void q_treeview_on_execute_delayed_items_layout(void* self, void (*callback)());
 /// @param region QRegion*
 ///
 void q_treeview_set_dirty_region(void* self, void* region);
-
-/// @warning DEPRECATED: Use `q_treeview_super_set_dirty_region` instead
-///
-#define q_treeview_qbase_set_dirty_region q_treeview_super_set_dirty_region
 
 /// Inherited from QAbstractItemView
 ///
@@ -7955,10 +7519,6 @@ void q_treeview_on_set_dirty_region(void* self, void (*callback)(void*, void*));
 ///
 void q_treeview_scroll_dirty_region(void* self, int dx, int dy);
 
-/// @warning DEPRECATED: Use `q_treeview_super_scroll_dirty_region` instead
-///
-#define q_treeview_qbase_scroll_dirty_region q_treeview_super_scroll_dirty_region
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#scrollDirtyRegion)
@@ -7991,10 +7551,6 @@ void q_treeview_on_scroll_dirty_region(void* self, void (*callback)(void*, int, 
 /// @param self QTreeView*
 ///
 QPoint* q_treeview_dirty_region_offset(void* self);
-
-/// @warning DEPRECATED: Use `q_treeview_super_dirty_region_offset` instead
-///
-#define q_treeview_qbase_dirty_region_offset q_treeview_super_dirty_region_offset
 
 /// Inherited from QAbstractItemView
 ///
@@ -8029,10 +7585,6 @@ void q_treeview_on_dirty_region_offset(void* self, QPoint* (*callback)());
 ///
 void q_treeview_start_auto_scroll(void* self);
 
-/// @warning DEPRECATED: Use `q_treeview_super_start_auto_scroll` instead
-///
-#define q_treeview_qbase_start_auto_scroll q_treeview_super_start_auto_scroll
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#startAutoScroll)
@@ -8064,10 +7616,6 @@ void q_treeview_on_start_auto_scroll(void* self, void (*callback)());
 ///
 void q_treeview_stop_auto_scroll(void* self);
 
-/// @warning DEPRECATED: Use `q_treeview_super_stop_auto_scroll` instead
-///
-#define q_treeview_qbase_stop_auto_scroll q_treeview_super_stop_auto_scroll
-
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#stopAutoScroll)
@@ -8098,10 +7646,6 @@ void q_treeview_on_stop_auto_scroll(void* self, void (*callback)());
 /// @param self QTreeView*
 ///
 void q_treeview_do_auto_scroll(void* self);
-
-/// @warning DEPRECATED: Use `q_treeview_super_do_auto_scroll` instead
-///
-#define q_treeview_qbase_do_auto_scroll q_treeview_super_do_auto_scroll
 
 /// Inherited from QAbstractItemView
 ///
@@ -8135,10 +7679,6 @@ void q_treeview_on_do_auto_scroll(void* self, void (*callback)());
 /// @return enum QAbstractItemView__DropIndicatorPosition
 ///
 int32_t q_treeview_drop_indicator_position(void* self);
-
-/// @warning DEPRECATED: Use `q_treeview_super_drop_indicator_position` instead
-///
-#define q_treeview_qbase_drop_indicator_position q_treeview_super_drop_indicator_position
 
 /// Inherited from QAbstractItemView
 ///
@@ -8177,10 +7717,6 @@ void q_treeview_on_drop_indicator_position(void* self, int32_t (*callback)());
 ///
 void q_treeview_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
-/// @warning DEPRECATED: Use `q_treeview_super_set_viewport_margins` instead
-///
-#define q_treeview_qbase_set_viewport_margins q_treeview_super_set_viewport_margins
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
@@ -8216,10 +7752,6 @@ void q_treeview_on_set_viewport_margins(void* self, void (*callback)(void*, int,
 ///
 QMargins* q_treeview_viewport_margins(void* self);
 
-/// @warning DEPRECATED: Use `q_treeview_super_viewport_margins` instead
-///
-#define q_treeview_qbase_viewport_margins q_treeview_super_viewport_margins
-
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
@@ -8254,10 +7786,6 @@ void q_treeview_on_viewport_margins(void* self, QMargins* (*callback)());
 ///
 void q_treeview_draw_frame(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_treeview_super_draw_frame` instead
-///
-#define q_treeview_qbase_draw_frame q_treeview_super_draw_frame
-
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#drawFrame)
@@ -8290,10 +7818,6 @@ void q_treeview_on_draw_frame(void* self, void (*callback)(void*, void*));
 ///
 void q_treeview_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `q_treeview_super_update_micro_focus` instead
-///
-#define q_treeview_qbase_update_micro_focus q_treeview_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -8324,10 +7848,6 @@ void q_treeview_on_update_micro_focus(void* self, void (*callback)());
 /// @param self QTreeView*
 ///
 void q_treeview_create(void* self);
-
-/// @warning DEPRECATED: Use `q_treeview_super_create` instead
-///
-#define q_treeview_qbase_create q_treeview_super_create
 
 /// Inherited from QWidget
 ///
@@ -8360,10 +7880,6 @@ void q_treeview_on_create(void* self, void (*callback)());
 ///
 void q_treeview_destroy(void* self);
 
-/// @warning DEPRECATED: Use `q_treeview_super_destroy` instead
-///
-#define q_treeview_qbase_destroy q_treeview_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -8394,10 +7910,6 @@ void q_treeview_on_destroy(void* self, void (*callback)());
 /// @param self QTreeView*
 ///
 bool q_treeview_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `q_treeview_super_focus_next_child` instead
-///
-#define q_treeview_qbase_focus_next_child q_treeview_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -8430,10 +7942,6 @@ void q_treeview_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_treeview_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `q_treeview_super_focus_previous_child` instead
-///
-#define q_treeview_qbase_focus_previous_child q_treeview_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -8464,10 +7972,6 @@ void q_treeview_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self QTreeView*
 ///
 QObject* q_treeview_sender(void* self);
-
-/// @warning DEPRECATED: Use `q_treeview_super_sender` instead
-///
-#define q_treeview_qbase_sender q_treeview_super_sender
 
 /// Inherited from QObject
 ///
@@ -8500,10 +8004,6 @@ void q_treeview_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_treeview_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `q_treeview_super_sender_signal_index` instead
-///
-#define q_treeview_qbase_sender_signal_index q_treeview_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -8535,10 +8035,6 @@ void q_treeview_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t q_treeview_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `q_treeview_super_receivers` instead
-///
-#define q_treeview_qbase_receivers q_treeview_super_receivers
 
 /// Inherited from QObject
 ///
@@ -8573,10 +8069,6 @@ void q_treeview_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 bool q_treeview_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_treeview_super_is_signal_connected` instead
-///
-#define q_treeview_qbase_is_signal_connected q_treeview_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -8610,10 +8102,6 @@ void q_treeview_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double q_treeview_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `q_treeview_super_get_decoded_metric_f` instead
-///
-#define q_treeview_qbase_get_decoded_metric_f q_treeview_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

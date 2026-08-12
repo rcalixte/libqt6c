@@ -40,10 +40,6 @@ const QMetaObject* q_georoutingmanagerengine_meta_object(void* self);
 ///
 void q_georoutingmanagerengine_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_meta_object` instead
-///
-#define q_georoutingmanagerengine_qbase_meta_object q_georoutingmanagerengine_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -63,10 +59,6 @@ void* q_georoutingmanagerengine_metacast(void* self, const char* param1);
 /// @param callback void* func(QGeoRoutingManagerEngine* self, const char* param1)
 ///
 void q_georoutingmanagerengine_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_metacast` instead
-///
-#define q_georoutingmanagerengine_qbase_metacast q_georoutingmanagerengine_super_metacast
 
 /// Base class method implementation
 ///
@@ -88,10 +80,6 @@ int32_t q_georoutingmanagerengine_metacall(void* self, int32_t param1, int param
 /// @param callback int32_t func(QGeoRoutingManagerEngine* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_georoutingmanagerengine_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_metacall` instead
-///
-#define q_georoutingmanagerengine_qbase_metacall q_georoutingmanagerengine_super_metacall
 
 /// Base class method implementation
 ///
@@ -140,10 +128,6 @@ QGeoRouteReply* q_georoutingmanagerengine_calculate_route(void* self, void* requ
 ///
 void q_georoutingmanagerengine_on_calculate_route(void* self, QGeoRouteReply* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_calculate_route` instead
-///
-#define q_georoutingmanagerengine_qbase_calculate_route q_georoutingmanagerengine_super_calculate_route
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutingmanagerengine.html#calculateRoute)
 ///
 /// Base class method implementation
@@ -169,10 +153,6 @@ QGeoRouteReply* q_georoutingmanagerengine_update_route(void* self, void* route, 
 /// @param callback QGeoRouteReply* func(QGeoRoutingManagerEngine* self, QGeoRoute* route, QGeoCoordinate* position)
 ///
 void q_georoutingmanagerengine_on_update_route(void* self, QGeoRouteReply* (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_update_route` instead
-///
-#define q_georoutingmanagerengine_qbase_update_route q_georoutingmanagerengine_super_update_route
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutingmanagerengine.html#updateRoute)
 ///
@@ -305,10 +285,6 @@ void q_georoutingmanagerengine_set_supported_travel_modes(void* self, int32_t tr
 ///
 void q_georoutingmanagerengine_on_set_supported_travel_modes(void* self, void (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_set_supported_travel_modes` instead
-///
-#define q_georoutingmanagerengine_qbase_set_supported_travel_modes q_georoutingmanagerengine_super_set_supported_travel_modes
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutingmanagerengine.html#setSupportedTravelModes)
 ///
 /// Base class method implementation
@@ -333,10 +309,6 @@ void q_georoutingmanagerengine_set_supported_feature_types(void* self, int32_t f
 /// @param callback void func(QGeoRoutingManagerEngine* self, flag of enum QGeoRouteRequest__FeatureType featureTypes)
 ///
 void q_georoutingmanagerengine_on_set_supported_feature_types(void* self, void (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_set_supported_feature_types` instead
-///
-#define q_georoutingmanagerengine_qbase_set_supported_feature_types q_georoutingmanagerengine_super_set_supported_feature_types
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutingmanagerengine.html#setSupportedFeatureTypes)
 ///
@@ -363,10 +335,6 @@ void q_georoutingmanagerengine_set_supported_feature_weights(void* self, int32_t
 ///
 void q_georoutingmanagerengine_on_set_supported_feature_weights(void* self, void (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_set_supported_feature_weights` instead
-///
-#define q_georoutingmanagerengine_qbase_set_supported_feature_weights q_georoutingmanagerengine_super_set_supported_feature_weights
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutingmanagerengine.html#setSupportedFeatureWeights)
 ///
 /// Base class method implementation
@@ -391,10 +359,6 @@ void q_georoutingmanagerengine_set_supported_route_optimizations(void* self, int
 /// @param callback void func(QGeoRoutingManagerEngine* self, flag of enum QGeoRouteRequest__RouteOptimization optimizations)
 ///
 void q_georoutingmanagerengine_on_set_supported_route_optimizations(void* self, void (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_set_supported_route_optimizations` instead
-///
-#define q_georoutingmanagerengine_qbase_set_supported_route_optimizations q_georoutingmanagerengine_super_set_supported_route_optimizations
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutingmanagerengine.html#setSupportedRouteOptimizations)
 ///
@@ -421,10 +385,6 @@ void q_georoutingmanagerengine_set_supported_segment_details(void* self, int32_t
 ///
 void q_georoutingmanagerengine_on_set_supported_segment_details(void* self, void (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_set_supported_segment_details` instead
-///
-#define q_georoutingmanagerengine_qbase_set_supported_segment_details q_georoutingmanagerengine_super_set_supported_segment_details
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutingmanagerengine.html#setSupportedSegmentDetails)
 ///
 /// Base class method implementation
@@ -449,10 +409,6 @@ void q_georoutingmanagerengine_set_supported_maneuver_details(void* self, int32_
 /// @param callback void func(QGeoRoutingManagerEngine* self, flag of enum QGeoRouteRequest__ManeuverDetail maneuverDetails)
 ///
 void q_georoutingmanagerengine_on_set_supported_maneuver_details(void* self, void (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_set_supported_maneuver_details` instead
-///
-#define q_georoutingmanagerengine_qbase_set_supported_maneuver_details q_georoutingmanagerengine_super_set_supported_maneuver_details
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutingmanagerengine.html#setSupportedManeuverDetails)
 ///
@@ -956,10 +912,6 @@ void q_georoutingmanagerengine_on_destroyed1(void* self, void (*callback)(void*,
 ///
 bool q_georoutingmanagerengine_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_event` instead
-///
-#define q_georoutingmanagerengine_qbase_event q_georoutingmanagerengine_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -993,10 +945,6 @@ void q_georoutingmanagerengine_on_event(void* self, bool (*callback)(void*, void
 /// @param event QEvent*
 ///
 bool q_georoutingmanagerengine_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_event_filter` instead
-///
-#define q_georoutingmanagerengine_qbase_event_filter q_georoutingmanagerengine_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1032,10 +980,6 @@ void q_georoutingmanagerengine_on_event_filter(void* self, bool (*callback)(void
 ///
 void q_georoutingmanagerengine_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_timer_event` instead
-///
-#define q_georoutingmanagerengine_qbase_timer_event q_georoutingmanagerengine_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1068,10 +1012,6 @@ void q_georoutingmanagerengine_on_timer_event(void* self, void (*callback)(void*
 /// @param event QChildEvent*
 ///
 void q_georoutingmanagerengine_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_child_event` instead
-///
-#define q_georoutingmanagerengine_qbase_child_event q_georoutingmanagerengine_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1106,10 +1046,6 @@ void q_georoutingmanagerengine_on_child_event(void* self, void (*callback)(void*
 ///
 void q_georoutingmanagerengine_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_custom_event` instead
-///
-#define q_georoutingmanagerengine_qbase_custom_event q_georoutingmanagerengine_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1142,10 +1078,6 @@ void q_georoutingmanagerengine_on_custom_event(void* self, void (*callback)(void
 /// @param signal QMetaMethod*
 ///
 void q_georoutingmanagerengine_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_connect_notify` instead
-///
-#define q_georoutingmanagerengine_qbase_connect_notify q_georoutingmanagerengine_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1180,10 +1112,6 @@ void q_georoutingmanagerengine_on_connect_notify(void* self, void (*callback)(vo
 ///
 void q_georoutingmanagerengine_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_disconnect_notify` instead
-///
-#define q_georoutingmanagerengine_qbase_disconnect_notify q_georoutingmanagerengine_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1216,10 +1144,6 @@ void q_georoutingmanagerengine_on_disconnect_notify(void* self, void (*callback)
 ///
 QObject* q_georoutingmanagerengine_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_sender` instead
-///
-#define q_georoutingmanagerengine_qbase_sender q_georoutingmanagerengine_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1250,10 +1174,6 @@ void q_georoutingmanagerengine_on_sender(void* self, QObject* (*callback)());
 /// @param self QGeoRoutingManagerEngine*
 ///
 int32_t q_georoutingmanagerengine_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_sender_signal_index` instead
-///
-#define q_georoutingmanagerengine_qbase_sender_signal_index q_georoutingmanagerengine_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1287,10 +1207,6 @@ void q_georoutingmanagerengine_on_sender_signal_index(void* self, int32_t (*call
 ///
 int32_t q_georoutingmanagerengine_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_receivers` instead
-///
-#define q_georoutingmanagerengine_qbase_receivers q_georoutingmanagerengine_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1323,10 +1239,6 @@ void q_georoutingmanagerengine_on_receivers(void* self, int32_t (*callback)(void
 /// @param signal QMetaMethod*
 ///
 bool q_georoutingmanagerengine_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_georoutingmanagerengine_super_is_signal_connected` instead
-///
-#define q_georoutingmanagerengine_qbase_is_signal_connected q_georoutingmanagerengine_super_is_signal_connected
 
 /// Inherited from QObject
 ///

@@ -42,10 +42,6 @@ const QMetaObject* k_bookmarkactionmenu_meta_object(void* self);
 ///
 void k_bookmarkactionmenu_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_bookmarkactionmenu_super_meta_object` instead
-///
-#define k_bookmarkactionmenu_qbase_meta_object k_bookmarkactionmenu_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -65,10 +61,6 @@ void* k_bookmarkactionmenu_metacast(void* self, const char* param1);
 /// @param callback void* func(KBookmarkActionMenu* self, const char* param1)
 ///
 void k_bookmarkactionmenu_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_bookmarkactionmenu_super_metacast` instead
-///
-#define k_bookmarkactionmenu_qbase_metacast k_bookmarkactionmenu_super_metacast
 
 /// Base class method implementation
 ///
@@ -90,10 +82,6 @@ int32_t k_bookmarkactionmenu_metacall(void* self, int32_t param1, int param2, vo
 /// @param callback int32_t func(KBookmarkActionMenu* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_bookmarkactionmenu_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_bookmarkactionmenu_super_metacall` instead
-///
-#define k_bookmarkactionmenu_qbase_metacall k_bookmarkactionmenu_super_metacall
 
 /// Base class method implementation
 ///
@@ -1314,10 +1302,6 @@ const KBookmark* k_bookmarkactionmenu_bookmark(void* self);
 ///
 QWidget* k_bookmarkactionmenu_create_widget(void* self, void* parent);
 
-/// @warning DEPRECATED: Use `k_bookmarkactionmenu_super_create_widget` instead
-///
-#define k_bookmarkactionmenu_qbase_create_widget k_bookmarkactionmenu_super_create_widget
-
 /// Inherited from KActionMenu
 ///
 /// [Upstream resources](https://api.kde.org/kactionmenu.html#createWidget)
@@ -1350,10 +1334,6 @@ void k_bookmarkactionmenu_on_create_widget(void* self, QWidget* (*callback)(void
 /// @param param1 QEvent*
 ///
 bool k_bookmarkactionmenu_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_bookmarkactionmenu_super_event` instead
-///
-#define k_bookmarkactionmenu_qbase_event k_bookmarkactionmenu_super_event
 
 /// Inherited from QWidgetAction
 ///
@@ -1389,10 +1369,6 @@ void k_bookmarkactionmenu_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_bookmarkactionmenu_event_filter(void* self, void* param1, void* param2);
 
-/// @warning DEPRECATED: Use `k_bookmarkactionmenu_super_event_filter` instead
-///
-#define k_bookmarkactionmenu_qbase_event_filter k_bookmarkactionmenu_super_event_filter
-
 /// Inherited from QWidgetAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#eventFilter)
@@ -1427,10 +1403,6 @@ void k_bookmarkactionmenu_on_event_filter(void* self, bool (*callback)(void*, vo
 ///
 void k_bookmarkactionmenu_delete_widget(void* self, void* widget);
 
-/// @warning DEPRECATED: Use `k_bookmarkactionmenu_super_delete_widget` instead
-///
-#define k_bookmarkactionmenu_qbase_delete_widget k_bookmarkactionmenu_super_delete_widget
-
 /// Inherited from QWidgetAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#deleteWidget)
@@ -1463,10 +1435,6 @@ void k_bookmarkactionmenu_on_delete_widget(void* self, void (*callback)(void*, v
 /// @param event QTimerEvent*
 ///
 void k_bookmarkactionmenu_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_bookmarkactionmenu_super_timer_event` instead
-///
-#define k_bookmarkactionmenu_qbase_timer_event k_bookmarkactionmenu_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -1501,10 +1469,6 @@ void k_bookmarkactionmenu_on_timer_event(void* self, void (*callback)(void*, voi
 ///
 void k_bookmarkactionmenu_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_bookmarkactionmenu_super_child_event` instead
-///
-#define k_bookmarkactionmenu_qbase_child_event k_bookmarkactionmenu_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1537,10 +1501,6 @@ void k_bookmarkactionmenu_on_child_event(void* self, void (*callback)(void*, voi
 /// @param event QEvent*
 ///
 void k_bookmarkactionmenu_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_bookmarkactionmenu_super_custom_event` instead
-///
-#define k_bookmarkactionmenu_qbase_custom_event k_bookmarkactionmenu_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -1575,10 +1535,6 @@ void k_bookmarkactionmenu_on_custom_event(void* self, void (*callback)(void*, vo
 ///
 void k_bookmarkactionmenu_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_bookmarkactionmenu_super_connect_notify` instead
-///
-#define k_bookmarkactionmenu_qbase_connect_notify k_bookmarkactionmenu_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1611,10 +1567,6 @@ void k_bookmarkactionmenu_on_connect_notify(void* self, void (*callback)(void*, 
 /// @param signal QMetaMethod*
 ///
 void k_bookmarkactionmenu_disconnect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_bookmarkactionmenu_super_disconnect_notify` instead
-///
-#define k_bookmarkactionmenu_qbase_disconnect_notify k_bookmarkactionmenu_super_disconnect_notify
 
 /// Inherited from QObject
 ///
@@ -1650,10 +1602,6 @@ void k_bookmarkactionmenu_on_disconnect_notify(void* self, void (*callback)(void
 ///
 libqt_list k_bookmarkactionmenu_created_widgets(void* self);
 
-/// @warning DEPRECATED: Use `k_bookmarkactionmenu_super_created_widgets` instead
-///
-#define k_bookmarkactionmenu_qbase_created_widgets k_bookmarkactionmenu_super_created_widgets
-
 /// Inherited from QWidgetAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
@@ -1687,10 +1635,6 @@ void k_bookmarkactionmenu_on_created_widgets(void* self, libqt_list (*callback)(
 ///
 QObject* k_bookmarkactionmenu_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_bookmarkactionmenu_super_sender` instead
-///
-#define k_bookmarkactionmenu_qbase_sender k_bookmarkactionmenu_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1721,10 +1665,6 @@ void k_bookmarkactionmenu_on_sender(void* self, QObject* (*callback)());
 /// @param self KBookmarkActionMenu*
 ///
 int32_t k_bookmarkactionmenu_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_bookmarkactionmenu_super_sender_signal_index` instead
-///
-#define k_bookmarkactionmenu_qbase_sender_signal_index k_bookmarkactionmenu_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1758,10 +1698,6 @@ void k_bookmarkactionmenu_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 int32_t k_bookmarkactionmenu_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_bookmarkactionmenu_super_receivers` instead
-///
-#define k_bookmarkactionmenu_qbase_receivers k_bookmarkactionmenu_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1794,10 +1730,6 @@ void k_bookmarkactionmenu_on_receivers(void* self, int32_t (*callback)(void*, co
 /// @param signal QMetaMethod*
 ///
 bool k_bookmarkactionmenu_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_bookmarkactionmenu_super_is_signal_connected` instead
-///
-#define k_bookmarkactionmenu_qbase_is_signal_connected k_bookmarkactionmenu_super_is_signal_connected
 
 /// Inherited from QObject
 ///

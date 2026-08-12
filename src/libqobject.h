@@ -37,10 +37,6 @@ const QMetaObject* q_object_meta_object(void* self);
 ///
 void q_object_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_object_super_meta_object` instead
-///
-#define q_object_qbase_meta_object q_object_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_object_metacast(void* self, const char* param1);
 /// @param callback void* func(QObject* self, const char* param1)
 ///
 void q_object_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_object_super_metacast` instead
-///
-#define q_object_qbase_metacast q_object_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_object_metacall(void* self, int32_t param1, int param2, void* param3);
 /// @param callback int32_t func(QObject* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_object_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_object_super_metacall` instead
-///
-#define q_object_qbase_metacall q_object_super_metacall
 
 /// Base class method implementation
 ///
@@ -123,10 +111,6 @@ bool q_object_event(void* self, void* event);
 ///
 void q_object_on_event(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_object_super_event` instead
-///
-#define q_object_qbase_event q_object_super_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Base class method implementation
@@ -152,10 +136,6 @@ bool q_object_event_filter(void* self, void* watched, void* event);
 /// @param callback bool func(QObject* self, QObject* watched, QEvent* event)
 ///
 void q_object_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_object_super_event_filter` instead
-///
-#define q_object_qbase_event_filter q_object_super_event_filter
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
@@ -441,10 +421,6 @@ QObject* q_object_sender(void* self);
 ///
 void q_object_on_sender(void* self, QObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_object_super_sender` instead
-///
-#define q_object_qbase_sender q_object_super_sender
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Base class method implementation
@@ -467,10 +443,6 @@ int32_t q_object_sender_signal_index(void* self);
 /// @param callback int32_t func()
 ///
 void q_object_on_sender_signal_index(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_object_super_sender_signal_index` instead
-///
-#define q_object_qbase_sender_signal_index q_object_super_sender_signal_index
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
@@ -495,10 +467,6 @@ int32_t q_object_receivers(void* self, const char* signal);
 /// @param callback int32_t func(QObject* self, const char* signal)
 ///
 void q_object_on_receivers(void* self, int32_t (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_object_super_receivers` instead
-///
-#define q_object_qbase_receivers q_object_super_receivers
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
@@ -525,10 +493,6 @@ bool q_object_is_signal_connected(void* self, void* signal);
 ///
 void q_object_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_object_super_is_signal_connected` instead
-///
-#define q_object_qbase_is_signal_connected q_object_super_is_signal_connected
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Base class method implementation
@@ -553,10 +517,6 @@ void q_object_timer_event(void* self, void* event);
 /// @param callback void func(QObject* self, QTimerEvent* event)
 ///
 void q_object_on_timer_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_object_super_timer_event` instead
-///
-#define q_object_qbase_timer_event q_object_super_timer_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
@@ -583,10 +543,6 @@ void q_object_child_event(void* self, void* event);
 ///
 void q_object_on_child_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_object_super_child_event` instead
-///
-#define q_object_qbase_child_event q_object_super_child_event
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Base class method implementation
@@ -611,10 +567,6 @@ void q_object_custom_event(void* self, void* event);
 /// @param callback void func(QObject* self, QEvent* event)
 ///
 void q_object_on_custom_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_object_super_custom_event` instead
-///
-#define q_object_qbase_custom_event q_object_super_custom_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
@@ -641,10 +593,6 @@ void q_object_connect_notify(void* self, void* signal);
 ///
 void q_object_on_connect_notify(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_object_super_connect_notify` instead
-///
-#define q_object_qbase_connect_notify q_object_super_connect_notify
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Base class method implementation
@@ -669,10 +617,6 @@ void q_object_disconnect_notify(void* self, void* signal);
 /// @param callback void func(QObject* self, QMetaMethod* signal)
 ///
 void q_object_on_disconnect_notify(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_object_super_disconnect_notify` instead
-///
-#define q_object_qbase_disconnect_notify q_object_super_disconnect_notify
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///

@@ -213,10 +213,6 @@ int32_t q_poppler__textannotation_sub_type(void* self);
 ///
 void q_poppler__textannotation_on_sub_type(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_poppler__textannotation_super_sub_type` instead
-///
-#define q_poppler__textannotation_qbase_sub_type q_poppler__textannotation_super_sub_type
-
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
 /// Base class method implementation
@@ -568,10 +564,6 @@ int32_t q_poppler__lineannotation_sub_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_poppler__lineannotation_on_sub_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_poppler__lineannotation_super_sub_type` instead
-///
-#define q_poppler__lineannotation_qbase_sub_type q_poppler__lineannotation_super_sub_type
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
@@ -955,10 +947,6 @@ int32_t q_poppler__geomannotation_sub_type(void* self);
 ///
 void q_poppler__geomannotation_on_sub_type(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_poppler__geomannotation_super_sub_type` instead
-///
-#define q_poppler__geomannotation_qbase_sub_type q_poppler__geomannotation_super_sub_type
-
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1GeomAnnotation.html)
 ///
 /// Base class method implementation
@@ -1235,10 +1223,6 @@ int32_t q_poppler__highlightannotation_sub_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_poppler__highlightannotation_on_sub_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_poppler__highlightannotation_super_sub_type` instead
-///
-#define q_poppler__highlightannotation_qbase_sub_type q_poppler__highlightannotation_super_sub_type
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1HighlightAnnotation.html)
 ///
@@ -1519,10 +1503,6 @@ int32_t q_poppler__stampannotation_sub_type(void* self);
 ///
 void q_poppler__stampannotation_on_sub_type(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_poppler__stampannotation_super_sub_type` instead
-///
-#define q_poppler__stampannotation_qbase_sub_type q_poppler__stampannotation_super_sub_type
-
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1StampAnnotation.html)
 ///
 /// Base class method implementation
@@ -1793,10 +1773,6 @@ int32_t q_poppler__signatureannotation_sub_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_poppler__signatureannotation_on_sub_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_poppler__signatureannotation_super_sub_type` instead
-///
-#define q_poppler__signatureannotation_qbase_sub_type q_poppler__signatureannotation_super_sub_type
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
@@ -2178,10 +2154,6 @@ int32_t q_poppler__inkannotation_sub_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_poppler__inkannotation_on_sub_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_poppler__inkannotation_super_sub_type` instead
-///
-#define q_poppler__inkannotation_qbase_sub_type q_poppler__inkannotation_super_sub_type
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1InkAnnotation.html)
 ///
@@ -2708,10 +2680,6 @@ int32_t q_poppler__caretannotation_sub_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_poppler__caretannotation_on_sub_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_poppler__caretannotation_super_sub_type` instead
-///
-#define q_poppler__caretannotation_qbase_sub_type q_poppler__caretannotation_super_sub_type
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CaretAnnotation.html)
 ///

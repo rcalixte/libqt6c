@@ -30,10 +30,6 @@ QGesture* q_gesturerecognizer_create(void* self, void* target);
 ///
 void q_gesturerecognizer_on_create(void* self, QGesture* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_gesturerecognizer_super_create` instead
-///
-#define q_gesturerecognizer_qbase_create q_gesturerecognizer_super_create
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#create)
 ///
 /// Base class method implementation
@@ -63,10 +59,6 @@ int32_t q_gesturerecognizer_recognize(void* self, void* state, void* watched, vo
 ///
 void q_gesturerecognizer_on_recognize(void* self, int32_t (*callback)(void*, void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_gesturerecognizer_super_recognize` instead
-///
-#define q_gesturerecognizer_qbase_recognize q_gesturerecognizer_super_recognize
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#recognize)
 ///
 /// Base class method implementation
@@ -95,10 +87,6 @@ void q_gesturerecognizer_reset(void* self, void* state);
 /// @param callback void func(QGestureRecognizer* self, QGesture* state)
 ///
 void q_gesturerecognizer_on_reset(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_gesturerecognizer_super_reset` instead
-///
-#define q_gesturerecognizer_qbase_reset q_gesturerecognizer_super_reset
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#reset)
 ///

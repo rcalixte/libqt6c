@@ -676,31 +676,31 @@ bool q_webenginecookiestore__filterrequest_third_party(void* self);
 ///
 void q_webenginecookiestore__filterrequest_set_third_party(void* self, bool thirdParty);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#_reservedFlag-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#reservedFlag-var)
 ///
 /// @param self QWebEngineCookieStore__FilterRequest*
 ///
 bool q_webenginecookiestore__filterrequest_reserved_flag(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#_reservedFlag-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#reservedFlag-var)
 ///
 /// @param self QWebEngineCookieStore__FilterRequest*
-/// @param _reservedFlag bool
+/// @param reservedFlag bool
 ///
-void q_webenginecookiestore__filterrequest_set_reserved_flag(void* self, bool _reservedFlag);
+void q_webenginecookiestore__filterrequest_set_reserved_flag(void* self, bool reservedFlag);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#_reservedType-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#reservedType-var)
 ///
 /// @param self QWebEngineCookieStore__FilterRequest*
 ///
 uint16_t q_webenginecookiestore__filterrequest_reserved_type(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#_reservedType-var)
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#reservedType-var)
 ///
 /// @param self QWebEngineCookieStore__FilterRequest*
-/// @param _reservedType uint16_t
+/// @param reservedType uint16_t
 ///
-void q_webenginecookiestore__filterrequest_set_reserved_type(void* self, uint16_t _reservedType);
+void q_webenginecookiestore__filterrequest_set_reserved_type(void* self, uint16_t reservedType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#operator-eq)
 ///

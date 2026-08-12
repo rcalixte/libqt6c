@@ -37,10 +37,6 @@ const QMetaObject* k_columnresizer_meta_object(void* self);
 ///
 void k_columnresizer_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_columnresizer_super_meta_object` instead
-///
-#define k_columnresizer_qbase_meta_object k_columnresizer_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* k_columnresizer_metacast(void* self, const char* param1);
 /// @param callback void* func(KColumnResizer* self, const char* param1)
 ///
 void k_columnresizer_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_columnresizer_super_metacast` instead
-///
-#define k_columnresizer_qbase_metacast k_columnresizer_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t k_columnresizer_metacall(void* self, int32_t param1, int param2, void* p
 /// @param callback int32_t func(KColumnResizer* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_columnresizer_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_columnresizer_super_metacall` instead
-///
-#define k_columnresizer_qbase_metacall k_columnresizer_super_metacall
 
 /// Base class method implementation
 ///
@@ -144,10 +132,6 @@ bool k_columnresizer_event_filter(void* self, void* param1, void* event);
 /// @param callback bool func(KColumnResizer* self, QObject* param1, QEvent* event)
 ///
 void k_columnresizer_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_columnresizer_super_event_filter` instead
-///
-#define k_columnresizer_qbase_event_filter k_columnresizer_super_event_filter
 
 /// [Upstream resources](https://api.kde.org/kcolumnresizer.html#eventFilter)
 ///
@@ -644,10 +628,6 @@ void k_columnresizer_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool k_columnresizer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_columnresizer_super_event` instead
-///
-#define k_columnresizer_qbase_event k_columnresizer_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -680,10 +660,6 @@ void k_columnresizer_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QTimerEvent*
 ///
 void k_columnresizer_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_columnresizer_super_timer_event` instead
-///
-#define k_columnresizer_qbase_timer_event k_columnresizer_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -718,10 +694,6 @@ void k_columnresizer_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_columnresizer_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_columnresizer_super_child_event` instead
-///
-#define k_columnresizer_qbase_child_event k_columnresizer_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -754,10 +726,6 @@ void k_columnresizer_on_child_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void k_columnresizer_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_columnresizer_super_custom_event` instead
-///
-#define k_columnresizer_qbase_custom_event k_columnresizer_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -792,10 +760,6 @@ void k_columnresizer_on_custom_event(void* self, void (*callback)(void*, void*))
 ///
 void k_columnresizer_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_columnresizer_super_connect_notify` instead
-///
-#define k_columnresizer_qbase_connect_notify k_columnresizer_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -829,10 +793,6 @@ void k_columnresizer_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void k_columnresizer_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_columnresizer_super_disconnect_notify` instead
-///
-#define k_columnresizer_qbase_disconnect_notify k_columnresizer_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -865,10 +825,6 @@ void k_columnresizer_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 QObject* k_columnresizer_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_columnresizer_super_sender` instead
-///
-#define k_columnresizer_qbase_sender k_columnresizer_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -899,10 +855,6 @@ void k_columnresizer_on_sender(void* self, QObject* (*callback)());
 /// @param self KColumnResizer*
 ///
 int32_t k_columnresizer_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_columnresizer_super_sender_signal_index` instead
-///
-#define k_columnresizer_qbase_sender_signal_index k_columnresizer_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -936,10 +888,6 @@ void k_columnresizer_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_columnresizer_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_columnresizer_super_receivers` instead
-///
-#define k_columnresizer_qbase_receivers k_columnresizer_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -972,10 +920,6 @@ void k_columnresizer_on_receivers(void* self, int32_t (*callback)(void*, const c
 /// @param signal QMetaMethod*
 ///
 bool k_columnresizer_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_columnresizer_super_is_signal_connected` instead
-///
-#define k_columnresizer_qbase_is_signal_connected k_columnresizer_super_is_signal_connected
 
 /// Inherited from QObject
 ///

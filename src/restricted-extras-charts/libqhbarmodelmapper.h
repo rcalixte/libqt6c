@@ -37,10 +37,6 @@ const QMetaObject* q_hbarmodelmapper_meta_object(void* self);
 ///
 void q_hbarmodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_meta_object` instead
-///
-#define q_hbarmodelmapper_qbase_meta_object q_hbarmodelmapper_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_hbarmodelmapper_metacast(void* self, const char* param1);
 /// @param callback void* func(QHBarModelMapper* self, const char* param1)
 ///
 void q_hbarmodelmapper_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_metacast` instead
-///
-#define q_hbarmodelmapper_qbase_metacast q_hbarmodelmapper_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_hbarmodelmapper_metacall(void* self, int32_t param1, int param2, void*
 /// @param callback int32_t func(QHBarModelMapper* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_hbarmodelmapper_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_metacall` instead
-///
-#define q_hbarmodelmapper_qbase_metacall q_hbarmodelmapper_super_metacall
 
 /// Base class method implementation
 ///
@@ -740,10 +728,6 @@ void q_hbarmodelmapper_on_destroyed1(void* self, void (*callback)(void*, void*))
 ///
 bool q_hbarmodelmapper_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_event` instead
-///
-#define q_hbarmodelmapper_qbase_event q_hbarmodelmapper_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -777,10 +761,6 @@ void q_hbarmodelmapper_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_hbarmodelmapper_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_event_filter` instead
-///
-#define q_hbarmodelmapper_qbase_event_filter q_hbarmodelmapper_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -816,10 +796,6 @@ void q_hbarmodelmapper_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 void q_hbarmodelmapper_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_timer_event` instead
-///
-#define q_hbarmodelmapper_qbase_timer_event q_hbarmodelmapper_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -852,10 +828,6 @@ void q_hbarmodelmapper_on_timer_event(void* self, void (*callback)(void*, void*)
 /// @param event QChildEvent*
 ///
 void q_hbarmodelmapper_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_child_event` instead
-///
-#define q_hbarmodelmapper_qbase_child_event q_hbarmodelmapper_super_child_event
 
 /// Inherited from QObject
 ///
@@ -890,10 +862,6 @@ void q_hbarmodelmapper_on_child_event(void* self, void (*callback)(void*, void*)
 ///
 void q_hbarmodelmapper_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_custom_event` instead
-///
-#define q_hbarmodelmapper_qbase_custom_event q_hbarmodelmapper_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -926,10 +894,6 @@ void q_hbarmodelmapper_on_custom_event(void* self, void (*callback)(void*, void*
 /// @param signal QMetaMethod*
 ///
 void q_hbarmodelmapper_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_connect_notify` instead
-///
-#define q_hbarmodelmapper_qbase_connect_notify q_hbarmodelmapper_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -964,10 +928,6 @@ void q_hbarmodelmapper_on_connect_notify(void* self, void (*callback)(void*, voi
 ///
 void q_hbarmodelmapper_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_disconnect_notify` instead
-///
-#define q_hbarmodelmapper_qbase_disconnect_notify q_hbarmodelmapper_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -999,10 +959,6 @@ void q_hbarmodelmapper_on_disconnect_notify(void* self, void (*callback)(void*, 
 /// @param self QHBarModelMapper*
 ///
 int32_t q_hbarmodelmapper_first(void* self);
-
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_first` instead
-///
-#define q_hbarmodelmapper_qbase_first q_hbarmodelmapper_super_first
 
 /// Inherited from QBarModelMapper
 ///
@@ -1036,10 +992,6 @@ void q_hbarmodelmapper_on_first(void* self, int32_t (*callback)());
 ///
 void q_hbarmodelmapper_set_first(void* self, int first);
 
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_set_first` instead
-///
-#define q_hbarmodelmapper_qbase_set_first q_hbarmodelmapper_super_set_first
-
 /// Inherited from QBarModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarmodelmapper.html#setFirst)
@@ -1071,10 +1023,6 @@ void q_hbarmodelmapper_on_set_first(void* self, void (*callback)(void*, int));
 /// @param self QHBarModelMapper*
 ///
 int32_t q_hbarmodelmapper_count(void* self);
-
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_count` instead
-///
-#define q_hbarmodelmapper_qbase_count q_hbarmodelmapper_super_count
 
 /// Inherited from QBarModelMapper
 ///
@@ -1108,10 +1056,6 @@ void q_hbarmodelmapper_on_count(void* self, int32_t (*callback)());
 ///
 void q_hbarmodelmapper_set_count(void* self, int count);
 
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_set_count` instead
-///
-#define q_hbarmodelmapper_qbase_set_count q_hbarmodelmapper_super_set_count
-
 /// Inherited from QBarModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarmodelmapper.html#setCount)
@@ -1143,10 +1087,6 @@ void q_hbarmodelmapper_on_set_count(void* self, void (*callback)(void*, int));
 /// @param self QHBarModelMapper*
 ///
 int32_t q_hbarmodelmapper_first_bar_set_section(void* self);
-
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_first_bar_set_section` instead
-///
-#define q_hbarmodelmapper_qbase_first_bar_set_section q_hbarmodelmapper_super_first_bar_set_section
 
 /// Inherited from QBarModelMapper
 ///
@@ -1180,10 +1120,6 @@ void q_hbarmodelmapper_on_first_bar_set_section(void* self, int32_t (*callback)(
 ///
 void q_hbarmodelmapper_set_first_bar_set_section(void* self, int firstBarSetSection);
 
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_set_first_bar_set_section` instead
-///
-#define q_hbarmodelmapper_qbase_set_first_bar_set_section q_hbarmodelmapper_super_set_first_bar_set_section
-
 /// Inherited from QBarModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarmodelmapper.html#setFirstBarSetSection)
@@ -1216,10 +1152,6 @@ void q_hbarmodelmapper_on_set_first_bar_set_section(void* self, void (*callback)
 ///
 int32_t q_hbarmodelmapper_last_bar_set_section(void* self);
 
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_last_bar_set_section` instead
-///
-#define q_hbarmodelmapper_qbase_last_bar_set_section q_hbarmodelmapper_super_last_bar_set_section
-
 /// Inherited from QBarModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarmodelmapper.html#lastBarSetSection)
@@ -1251,10 +1183,6 @@ void q_hbarmodelmapper_on_last_bar_set_section(void* self, int32_t (*callback)()
 /// @param lastBarSetSection int
 ///
 void q_hbarmodelmapper_set_last_bar_set_section(void* self, int lastBarSetSection);
-
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_set_last_bar_set_section` instead
-///
-#define q_hbarmodelmapper_qbase_set_last_bar_set_section q_hbarmodelmapper_super_set_last_bar_set_section
 
 /// Inherited from QBarModelMapper
 ///
@@ -1290,10 +1218,6 @@ void q_hbarmodelmapper_on_set_last_bar_set_section(void* self, void (*callback)(
 ///
 int32_t q_hbarmodelmapper_orientation(void* self);
 
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_orientation` instead
-///
-#define q_hbarmodelmapper_qbase_orientation q_hbarmodelmapper_super_orientation
-
 /// Inherited from QBarModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarmodelmapper.html#orientation)
@@ -1328,10 +1252,6 @@ void q_hbarmodelmapper_on_orientation(void* self, int32_t (*callback)());
 ///
 void q_hbarmodelmapper_set_orientation(void* self, int32_t orientation);
 
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_set_orientation` instead
-///
-#define q_hbarmodelmapper_qbase_set_orientation q_hbarmodelmapper_super_set_orientation
-
 /// Inherited from QBarModelMapper
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarmodelmapper.html#setOrientation)
@@ -1364,10 +1284,6 @@ void q_hbarmodelmapper_on_set_orientation(void* self, void (*callback)(void*, in
 ///
 QObject* q_hbarmodelmapper_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_sender` instead
-///
-#define q_hbarmodelmapper_qbase_sender q_hbarmodelmapper_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1398,10 +1314,6 @@ void q_hbarmodelmapper_on_sender(void* self, QObject* (*callback)());
 /// @param self QHBarModelMapper*
 ///
 int32_t q_hbarmodelmapper_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_sender_signal_index` instead
-///
-#define q_hbarmodelmapper_qbase_sender_signal_index q_hbarmodelmapper_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1435,10 +1347,6 @@ void q_hbarmodelmapper_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 int32_t q_hbarmodelmapper_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_receivers` instead
-///
-#define q_hbarmodelmapper_qbase_receivers q_hbarmodelmapper_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1471,10 +1379,6 @@ void q_hbarmodelmapper_on_receivers(void* self, int32_t (*callback)(void*, const
 /// @param signal QMetaMethod*
 ///
 bool q_hbarmodelmapper_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_hbarmodelmapper_super_is_signal_connected` instead
-///
-#define q_hbarmodelmapper_qbase_is_signal_connected q_hbarmodelmapper_super_is_signal_connected
 
 /// Inherited from QObject
 ///

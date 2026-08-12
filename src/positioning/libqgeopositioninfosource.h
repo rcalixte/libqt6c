@@ -31,10 +31,6 @@ const QMetaObject* q_geopositioninfosource_meta_object(void* self);
 ///
 void q_geopositioninfosource_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_meta_object` instead
-///
-#define q_geopositioninfosource_qbase_meta_object q_geopositioninfosource_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -54,10 +50,6 @@ void* q_geopositioninfosource_metacast(void* self, const char* param1);
 /// @param callback void* func(QGeoPositionInfoSource* self, const char* param1)
 ///
 void q_geopositioninfosource_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_metacast` instead
-///
-#define q_geopositioninfosource_qbase_metacast q_geopositioninfosource_super_metacast
 
 /// Base class method implementation
 ///
@@ -79,10 +71,6 @@ int32_t q_geopositioninfosource_metacall(void* self, int32_t param1, int param2,
 /// @param callback int32_t func(QGeoPositionInfoSource* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_geopositioninfosource_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_metacall` instead
-///
-#define q_geopositioninfosource_qbase_metacall q_geopositioninfosource_super_metacall
 
 /// Base class method implementation
 ///
@@ -117,10 +105,6 @@ void q_geopositioninfosource_set_update_interval(void* self, int msec);
 ///
 void q_geopositioninfosource_on_set_update_interval(void* self, void (*callback)(void*, int));
 
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_set_update_interval` instead
-///
-#define q_geopositioninfosource_qbase_set_update_interval q_geopositioninfosource_super_set_update_interval
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#setUpdateInterval)
 ///
 /// Base class method implementation
@@ -151,10 +135,6 @@ void q_geopositioninfosource_set_preferred_positioning_methods(void* self, int32
 /// @param callback void func(QGeoPositionInfoSource* self, flag of enum QGeoPositionInfoSource__PositioningMethod methods)
 ///
 void q_geopositioninfosource_on_set_preferred_positioning_methods(void* self, void (*callback)(void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_set_preferred_positioning_methods` instead
-///
-#define q_geopositioninfosource_qbase_set_preferred_positioning_methods q_geopositioninfosource_super_set_preferred_positioning_methods
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#setPreferredPositioningMethods)
 ///
@@ -191,10 +171,6 @@ QGeoPositionInfo* q_geopositioninfosource_last_known_position(void* self, bool f
 ///
 void q_geopositioninfosource_on_last_known_position(void* self, QGeoPositionInfo* (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_last_known_position` instead
-///
-#define q_geopositioninfosource_qbase_last_known_position q_geopositioninfosource_super_last_known_position
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#lastKnownPosition)
 ///
 /// Base class method implementation
@@ -221,10 +197,6 @@ int32_t q_geopositioninfosource_supported_positioning_methods(void* self);
 ///
 void q_geopositioninfosource_on_supported_positioning_methods(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_supported_positioning_methods` instead
-///
-#define q_geopositioninfosource_qbase_supported_positioning_methods q_geopositioninfosource_super_supported_positioning_methods
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#supportedPositioningMethods)
 ///
 /// Base class method implementation
@@ -249,10 +221,6 @@ int32_t q_geopositioninfosource_minimum_update_interval(void* self);
 /// @param callback int32_t func()
 ///
 void q_geopositioninfosource_on_minimum_update_interval(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_minimum_update_interval` instead
-///
-#define q_geopositioninfosource_qbase_minimum_update_interval q_geopositioninfosource_super_minimum_update_interval
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#minimumUpdateInterval)
 ///
@@ -287,10 +255,6 @@ bool q_geopositioninfosource_set_backend_property(void* self, const char* name, 
 ///
 void q_geopositioninfosource_on_set_backend_property(void* self, bool (*callback)(void*, const char*, void*));
 
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_set_backend_property` instead
-///
-#define q_geopositioninfosource_qbase_set_backend_property q_geopositioninfosource_super_set_backend_property
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#setBackendProperty)
 ///
 /// Base class method implementation
@@ -318,10 +282,6 @@ QVariant* q_geopositioninfosource_backend_property(void* self, const char* name)
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_geopositioninfosource_on_backend_property(void* self, QVariant* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_backend_property` instead
-///
-#define q_geopositioninfosource_qbase_backend_property q_geopositioninfosource_super_backend_property
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#backendProperty)
 ///
@@ -383,10 +343,6 @@ int32_t q_geopositioninfosource_error(void* self);
 ///
 void q_geopositioninfosource_on_error(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_error` instead
-///
-#define q_geopositioninfosource_qbase_error q_geopositioninfosource_super_error
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#error)
 ///
 /// Base class method implementation
@@ -412,10 +368,6 @@ void q_geopositioninfosource_start_updates(void* self);
 ///
 void q_geopositioninfosource_on_start_updates(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_start_updates` instead
-///
-#define q_geopositioninfosource_qbase_start_updates q_geopositioninfosource_super_start_updates
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#startUpdates)
 ///
 /// Base class method implementation
@@ -438,10 +390,6 @@ void q_geopositioninfosource_stop_updates(void* self);
 /// @param callback void func()
 ///
 void q_geopositioninfosource_on_stop_updates(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_stop_updates` instead
-///
-#define q_geopositioninfosource_qbase_stop_updates q_geopositioninfosource_super_stop_updates
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#stopUpdates)
 ///
@@ -466,10 +414,6 @@ void q_geopositioninfosource_request_update(void* self, int timeout);
 /// @param callback void func(QGeoPositionInfoSource* self, int timeout)
 ///
 void q_geopositioninfosource_on_request_update(void* self, void (*callback)(void*, int));
-
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_request_update` instead
-///
-#define q_geopositioninfosource_qbase_request_update q_geopositioninfosource_super_request_update
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#requestUpdate)
 ///
@@ -998,10 +942,6 @@ void q_geopositioninfosource_on_destroyed1(void* self, void (*callback)(void*, v
 ///
 bool q_geopositioninfosource_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_event` instead
-///
-#define q_geopositioninfosource_qbase_event q_geopositioninfosource_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1035,10 +975,6 @@ void q_geopositioninfosource_on_event(void* self, bool (*callback)(void*, void*)
 /// @param event QEvent*
 ///
 bool q_geopositioninfosource_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_event_filter` instead
-///
-#define q_geopositioninfosource_qbase_event_filter q_geopositioninfosource_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1074,10 +1010,6 @@ void q_geopositioninfosource_on_event_filter(void* self, bool (*callback)(void*,
 ///
 void q_geopositioninfosource_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_timer_event` instead
-///
-#define q_geopositioninfosource_qbase_timer_event q_geopositioninfosource_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1110,10 +1042,6 @@ void q_geopositioninfosource_on_timer_event(void* self, void (*callback)(void*, 
 /// @param event QChildEvent*
 ///
 void q_geopositioninfosource_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_child_event` instead
-///
-#define q_geopositioninfosource_qbase_child_event q_geopositioninfosource_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1148,10 +1076,6 @@ void q_geopositioninfosource_on_child_event(void* self, void (*callback)(void*, 
 ///
 void q_geopositioninfosource_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_custom_event` instead
-///
-#define q_geopositioninfosource_qbase_custom_event q_geopositioninfosource_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1184,10 +1108,6 @@ void q_geopositioninfosource_on_custom_event(void* self, void (*callback)(void*,
 /// @param signal QMetaMethod*
 ///
 void q_geopositioninfosource_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_connect_notify` instead
-///
-#define q_geopositioninfosource_qbase_connect_notify q_geopositioninfosource_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1222,10 +1142,6 @@ void q_geopositioninfosource_on_connect_notify(void* self, void (*callback)(void
 ///
 void q_geopositioninfosource_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_disconnect_notify` instead
-///
-#define q_geopositioninfosource_qbase_disconnect_notify q_geopositioninfosource_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1258,10 +1174,6 @@ void q_geopositioninfosource_on_disconnect_notify(void* self, void (*callback)(v
 ///
 QObject* q_geopositioninfosource_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_sender` instead
-///
-#define q_geopositioninfosource_qbase_sender q_geopositioninfosource_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1292,10 +1204,6 @@ void q_geopositioninfosource_on_sender(void* self, QObject* (*callback)());
 /// @param self QGeoPositionInfoSource*
 ///
 int32_t q_geopositioninfosource_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_sender_signal_index` instead
-///
-#define q_geopositioninfosource_qbase_sender_signal_index q_geopositioninfosource_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1329,10 +1237,6 @@ void q_geopositioninfosource_on_sender_signal_index(void* self, int32_t (*callba
 ///
 int32_t q_geopositioninfosource_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_receivers` instead
-///
-#define q_geopositioninfosource_qbase_receivers q_geopositioninfosource_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1365,10 +1269,6 @@ void q_geopositioninfosource_on_receivers(void* self, int32_t (*callback)(void*,
 /// @param signal QMetaMethod*
 ///
 bool q_geopositioninfosource_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_geopositioninfosource_super_is_signal_connected` instead
-///
-#define q_geopositioninfosource_qbase_is_signal_connected q_geopositioninfosource_super_is_signal_connected
 
 /// Inherited from QObject
 ///

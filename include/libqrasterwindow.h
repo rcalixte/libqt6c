@@ -37,10 +37,6 @@ const QMetaObject* q_rasterwindow_meta_object(void* self);
 ///
 void q_rasterwindow_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_meta_object` instead
-///
-#define q_rasterwindow_qbase_meta_object q_rasterwindow_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* q_rasterwindow_metacast(void* self, const char* param1);
 /// @param callback void* func(QRasterWindow* self, const char* param1)
 ///
 void q_rasterwindow_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_metacast` instead
-///
-#define q_rasterwindow_qbase_metacast q_rasterwindow_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t q_rasterwindow_metacall(void* self, int32_t param1, int param2, void* pa
 /// @param callback int32_t func(QRasterWindow* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_rasterwindow_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_metacall` instead
-///
-#define q_rasterwindow_qbase_metacall q_rasterwindow_super_metacall
 
 /// Base class method implementation
 ///
@@ -123,10 +111,6 @@ int32_t q_rasterwindow_metric(void* self, int32_t metric);
 ///
 void q_rasterwindow_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_metric` instead
-///
-#define q_rasterwindow_qbase_metric q_rasterwindow_super_metric
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qrasterwindow.html#metric)
 ///
 /// Base class method implementation
@@ -152,10 +136,6 @@ QPaintDevice* q_rasterwindow_redirected(void* self, void* param1);
 ///
 void q_rasterwindow_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_redirected` instead
-///
-#define q_rasterwindow_qbase_redirected q_rasterwindow_super_redirected
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qrasterwindow.html#redirected)
 ///
 /// Base class method implementation
@@ -180,10 +160,6 @@ void q_rasterwindow_resize_event(void* self, void* event);
 /// @param callback void func(QRasterWindow* self, QResizeEvent* event)
 ///
 void q_rasterwindow_on_resize_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_resize_event` instead
-///
-#define q_rasterwindow_qbase_resize_event q_rasterwindow_super_resize_event
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrasterwindow.html#resizeEvent)
 ///
@@ -2073,10 +2049,6 @@ int32_t q_rasterwindow_encode_metric_f(int32_t metric, double value);
 ///
 void q_rasterwindow_expose_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_expose_event` instead
-///
-#define q_rasterwindow_qbase_expose_event q_rasterwindow_super_expose_event
-
 /// Inherited from QPaintDeviceWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevicewindow.html#exposeEvent)
@@ -2110,10 +2082,6 @@ void q_rasterwindow_on_expose_event(void* self, void (*callback)(void*, void*));
 ///
 void q_rasterwindow_paint_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_paint_event` instead
-///
-#define q_rasterwindow_qbase_paint_event q_rasterwindow_super_paint_event
-
 /// Inherited from QPaintDeviceWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevicewindow.html#paintEvent)
@@ -2146,10 +2114,6 @@ void q_rasterwindow_on_paint_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_rasterwindow_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_event` instead
-///
-#define q_rasterwindow_qbase_event q_rasterwindow_super_event
 
 /// Inherited from QPaintDeviceWindow
 ///
@@ -2185,10 +2149,6 @@ void q_rasterwindow_on_event(void* self, bool (*callback)(void*, void*));
 ///
 int32_t q_rasterwindow_surface_type(void* self);
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_surface_type` instead
-///
-#define q_rasterwindow_qbase_surface_type q_rasterwindow_super_surface_type
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#surfaceType)
@@ -2221,10 +2181,6 @@ void q_rasterwindow_on_surface_type(void* self, int32_t (*callback)());
 /// @param self QRasterWindow*
 ///
 QSurfaceFormat* q_rasterwindow_format(void* self);
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_format` instead
-///
-#define q_rasterwindow_qbase_format q_rasterwindow_super_format
 
 /// Inherited from QWindow
 ///
@@ -2259,10 +2215,6 @@ void q_rasterwindow_on_format(void* self, QSurfaceFormat* (*callback)());
 ///
 QSize* q_rasterwindow_size(void* self);
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_size` instead
-///
-#define q_rasterwindow_qbase_size q_rasterwindow_super_size
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#size)
@@ -2296,10 +2248,6 @@ void q_rasterwindow_on_size(void* self, QSize* (*callback)());
 ///
 QAccessibleInterface* q_rasterwindow_accessible_root(void* self);
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_accessible_root` instead
-///
-#define q_rasterwindow_qbase_accessible_root q_rasterwindow_super_accessible_root
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#accessibleRoot)
@@ -2330,10 +2278,6 @@ void q_rasterwindow_on_accessible_root(void* self, QAccessibleInterface* (*callb
 /// @param self QRasterWindow*
 ///
 QObject* q_rasterwindow_focus_object(void* self);
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_focus_object` instead
-///
-#define q_rasterwindow_qbase_focus_object q_rasterwindow_super_focus_object
 
 /// Inherited from QWindow
 ///
@@ -2366,10 +2310,6 @@ void q_rasterwindow_on_focus_object(void* self, QObject* (*callback)());
 /// @param param1 QMoveEvent*
 ///
 void q_rasterwindow_move_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_move_event` instead
-///
-#define q_rasterwindow_qbase_move_event q_rasterwindow_super_move_event
 
 /// Inherited from QWindow
 ///
@@ -2404,10 +2344,6 @@ void q_rasterwindow_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_rasterwindow_focus_in_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_focus_in_event` instead
-///
-#define q_rasterwindow_qbase_focus_in_event q_rasterwindow_super_focus_in_event
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#focusInEvent)
@@ -2440,10 +2376,6 @@ void q_rasterwindow_on_focus_in_event(void* self, void (*callback)(void*, void*)
 /// @param param1 QFocusEvent*
 ///
 void q_rasterwindow_focus_out_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_focus_out_event` instead
-///
-#define q_rasterwindow_qbase_focus_out_event q_rasterwindow_super_focus_out_event
 
 /// Inherited from QWindow
 ///
@@ -2478,10 +2410,6 @@ void q_rasterwindow_on_focus_out_event(void* self, void (*callback)(void*, void*
 ///
 void q_rasterwindow_show_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_show_event` instead
-///
-#define q_rasterwindow_qbase_show_event q_rasterwindow_super_show_event
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#showEvent)
@@ -2514,10 +2442,6 @@ void q_rasterwindow_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QHideEvent*
 ///
 void q_rasterwindow_hide_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_hide_event` instead
-///
-#define q_rasterwindow_qbase_hide_event q_rasterwindow_super_hide_event
 
 /// Inherited from QWindow
 ///
@@ -2552,10 +2476,6 @@ void q_rasterwindow_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 void q_rasterwindow_close_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_close_event` instead
-///
-#define q_rasterwindow_qbase_close_event q_rasterwindow_super_close_event
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#closeEvent)
@@ -2588,10 +2508,6 @@ void q_rasterwindow_on_close_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QKeyEvent*
 ///
 void q_rasterwindow_key_press_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_key_press_event` instead
-///
-#define q_rasterwindow_qbase_key_press_event q_rasterwindow_super_key_press_event
 
 /// Inherited from QWindow
 ///
@@ -2626,10 +2542,6 @@ void q_rasterwindow_on_key_press_event(void* self, void (*callback)(void*, void*
 ///
 void q_rasterwindow_key_release_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_key_release_event` instead
-///
-#define q_rasterwindow_qbase_key_release_event q_rasterwindow_super_key_release_event
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#keyReleaseEvent)
@@ -2662,10 +2574,6 @@ void q_rasterwindow_on_key_release_event(void* self, void (*callback)(void*, voi
 /// @param param1 QMouseEvent*
 ///
 void q_rasterwindow_mouse_press_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_mouse_press_event` instead
-///
-#define q_rasterwindow_qbase_mouse_press_event q_rasterwindow_super_mouse_press_event
 
 /// Inherited from QWindow
 ///
@@ -2700,10 +2608,6 @@ void q_rasterwindow_on_mouse_press_event(void* self, void (*callback)(void*, voi
 ///
 void q_rasterwindow_mouse_release_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_mouse_release_event` instead
-///
-#define q_rasterwindow_qbase_mouse_release_event q_rasterwindow_super_mouse_release_event
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mouseReleaseEvent)
@@ -2736,10 +2640,6 @@ void q_rasterwindow_on_mouse_release_event(void* self, void (*callback)(void*, v
 /// @param param1 QMouseEvent*
 ///
 void q_rasterwindow_mouse_double_click_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_mouse_double_click_event` instead
-///
-#define q_rasterwindow_qbase_mouse_double_click_event q_rasterwindow_super_mouse_double_click_event
 
 /// Inherited from QWindow
 ///
@@ -2774,10 +2674,6 @@ void q_rasterwindow_on_mouse_double_click_event(void* self, void (*callback)(voi
 ///
 void q_rasterwindow_mouse_move_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_mouse_move_event` instead
-///
-#define q_rasterwindow_qbase_mouse_move_event q_rasterwindow_super_mouse_move_event
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#mouseMoveEvent)
@@ -2810,10 +2706,6 @@ void q_rasterwindow_on_mouse_move_event(void* self, void (*callback)(void*, void
 /// @param param1 QWheelEvent*
 ///
 void q_rasterwindow_wheel_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_wheel_event` instead
-///
-#define q_rasterwindow_qbase_wheel_event q_rasterwindow_super_wheel_event
 
 /// Inherited from QWindow
 ///
@@ -2848,10 +2740,6 @@ void q_rasterwindow_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void q_rasterwindow_touch_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_touch_event` instead
-///
-#define q_rasterwindow_qbase_touch_event q_rasterwindow_super_touch_event
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#touchEvent)
@@ -2884,10 +2772,6 @@ void q_rasterwindow_on_touch_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QTabletEvent*
 ///
 void q_rasterwindow_tablet_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_tablet_event` instead
-///
-#define q_rasterwindow_qbase_tablet_event q_rasterwindow_super_tablet_event
 
 /// Inherited from QWindow
 ///
@@ -2923,10 +2807,6 @@ void q_rasterwindow_on_tablet_event(void* self, void (*callback)(void*, void*));
 /// @param result intptr_t*
 ///
 bool q_rasterwindow_native_event(void* self, char* eventType, void* message, intptr_t* result);
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_native_event` instead
-///
-#define q_rasterwindow_qbase_native_event q_rasterwindow_super_native_event
 
 /// Inherited from QWindow
 ///
@@ -2964,10 +2844,6 @@ void q_rasterwindow_on_native_event(void* self, bool (*callback)(void*, libqt_st
 ///
 bool q_rasterwindow_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_event_filter` instead
-///
-#define q_rasterwindow_qbase_event_filter q_rasterwindow_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -3002,10 +2878,6 @@ void q_rasterwindow_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void q_rasterwindow_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_timer_event` instead
-///
-#define q_rasterwindow_qbase_timer_event q_rasterwindow_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -3038,10 +2910,6 @@ void q_rasterwindow_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_rasterwindow_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_child_event` instead
-///
-#define q_rasterwindow_qbase_child_event q_rasterwindow_super_child_event
 
 /// Inherited from QObject
 ///
@@ -3076,10 +2944,6 @@ void q_rasterwindow_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_rasterwindow_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_custom_event` instead
-///
-#define q_rasterwindow_qbase_custom_event q_rasterwindow_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -3112,10 +2976,6 @@ void q_rasterwindow_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_rasterwindow_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_connect_notify` instead
-///
-#define q_rasterwindow_qbase_connect_notify q_rasterwindow_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -3150,10 +3010,6 @@ void q_rasterwindow_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void q_rasterwindow_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_disconnect_notify` instead
-///
-#define q_rasterwindow_qbase_disconnect_notify q_rasterwindow_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -3185,10 +3041,6 @@ void q_rasterwindow_on_disconnect_notify(void* self, void (*callback)(void*, voi
 /// @param self QRasterWindow*
 ///
 int32_t q_rasterwindow_dev_type(void* self);
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_dev_type` instead
-///
-#define q_rasterwindow_qbase_dev_type q_rasterwindow_super_dev_type
 
 /// Inherited from QPaintDevice
 ///
@@ -3222,10 +3074,6 @@ void q_rasterwindow_on_dev_type(void* self, int32_t (*callback)());
 ///
 void q_rasterwindow_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_init_painter` instead
-///
-#define q_rasterwindow_qbase_init_painter q_rasterwindow_super_init_painter
-
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#initPainter)
@@ -3257,10 +3105,6 @@ void q_rasterwindow_on_init_painter(void* self, void (*callback)(void*, void*));
 /// @param self QRasterWindow*
 ///
 QPainter* q_rasterwindow_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_shared_painter` instead
-///
-#define q_rasterwindow_qbase_shared_painter q_rasterwindow_super_shared_painter
 
 /// Inherited from QPaintDevice
 ///
@@ -3295,10 +3139,6 @@ void q_rasterwindow_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void* q_rasterwindow_resolve_interface(void* self, const char* name, int revision);
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_resolve_interface` instead
-///
-#define q_rasterwindow_qbase_resolve_interface q_rasterwindow_super_resolve_interface
-
 /// Inherited from QWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#resolveInterface)
@@ -3332,10 +3172,6 @@ void q_rasterwindow_on_resolve_interface(void* self, void* (*callback)(void*, co
 ///
 QObject* q_rasterwindow_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_sender` instead
-///
-#define q_rasterwindow_qbase_sender q_rasterwindow_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -3366,10 +3202,6 @@ void q_rasterwindow_on_sender(void* self, QObject* (*callback)());
 /// @param self QRasterWindow*
 ///
 int32_t q_rasterwindow_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_sender_signal_index` instead
-///
-#define q_rasterwindow_qbase_sender_signal_index q_rasterwindow_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -3402,10 +3234,6 @@ void q_rasterwindow_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t q_rasterwindow_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_receivers` instead
-///
-#define q_rasterwindow_qbase_receivers q_rasterwindow_super_receivers
 
 /// Inherited from QObject
 ///
@@ -3440,10 +3268,6 @@ void q_rasterwindow_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 bool q_rasterwindow_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_rasterwindow_super_is_signal_connected` instead
-///
-#define q_rasterwindow_qbase_is_signal_connected q_rasterwindow_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -3477,10 +3301,6 @@ void q_rasterwindow_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double q_rasterwindow_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `q_rasterwindow_super_get_decoded_metric_f` instead
-///
-#define q_rasterwindow_qbase_get_decoded_metric_f q_rasterwindow_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

@@ -143,10 +143,6 @@ bool q_paintengine_begin(void* self, void* pdev);
 ///
 void q_paintengine_on_begin(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_paintengine_super_begin` instead
-///
-#define q_paintengine_qbase_begin q_paintengine_super_begin
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#begin)
 ///
 /// Base class method implementation
@@ -171,10 +167,6 @@ bool q_paintengine_end(void* self);
 ///
 void q_paintengine_on_end(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_paintengine_super_end` instead
-///
-#define q_paintengine_qbase_end q_paintengine_super_end
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#end)
 ///
 /// Base class method implementation
@@ -198,10 +190,6 @@ void q_paintengine_update_state(void* self, void* state);
 /// @param callback void func(QPaintEngine* self, QPaintEngineState* state)
 ///
 void q_paintengine_on_update_state(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_paintengine_super_update_state` instead
-///
-#define q_paintengine_qbase_update_state q_paintengine_super_update_state
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#updateState)
 ///
@@ -228,10 +216,6 @@ void q_paintengine_draw_rects(void* self, void* rects, int rectCount);
 /// @param callback void func(QPaintEngine* self, QRect* rects, int rectCount)
 ///
 void q_paintengine_on_draw_rects(void* self, void (*callback)(void*, void*, int));
-
-/// @warning DEPRECATED: Use `q_paintengine_super_draw_rects` instead
-///
-#define q_paintengine_qbase_draw_rects q_paintengine_super_draw_rects
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
 ///
@@ -260,10 +244,6 @@ void q_paintengine_draw_rects2(void* self, void* rects, int rectCount);
 ///
 void q_paintengine_on_draw_rects2(void* self, void (*callback)(void*, void*, int));
 
-/// @warning DEPRECATED: Use `q_paintengine_super_draw_rects2` instead
-///
-#define q_paintengine_qbase_draw_rects2 q_paintengine_super_draw_rects2
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
 ///
 /// Base class method implementation
@@ -290,10 +270,6 @@ void q_paintengine_draw_lines(void* self, void* lines, int lineCount);
 /// @param callback void func(QPaintEngine* self, QLine* lines, int lineCount)
 ///
 void q_paintengine_on_draw_lines(void* self, void (*callback)(void*, void*, int));
-
-/// @warning DEPRECATED: Use `q_paintengine_super_draw_lines` instead
-///
-#define q_paintengine_qbase_draw_lines q_paintengine_super_draw_lines
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
 ///
@@ -322,10 +298,6 @@ void q_paintengine_draw_lines2(void* self, void* lines, int lineCount);
 ///
 void q_paintengine_on_draw_lines2(void* self, void (*callback)(void*, void*, int));
 
-/// @warning DEPRECATED: Use `q_paintengine_super_draw_lines2` instead
-///
-#define q_paintengine_qbase_draw_lines2 q_paintengine_super_draw_lines2
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
 ///
 /// Base class method implementation
@@ -352,10 +324,6 @@ void q_paintengine_draw_ellipse(void* self, void* r);
 ///
 void q_paintengine_on_draw_ellipse(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_paintengine_super_draw_ellipse` instead
-///
-#define q_paintengine_qbase_draw_ellipse q_paintengine_super_draw_ellipse
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
 ///
 /// Base class method implementation
@@ -380,10 +348,6 @@ void q_paintengine_draw_ellipse2(void* self, void* r);
 /// @param callback void func(QPaintEngine* self, QRect* r)
 ///
 void q_paintengine_on_draw_ellipse2(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_paintengine_super_draw_ellipse2` instead
-///
-#define q_paintengine_qbase_draw_ellipse2 q_paintengine_super_draw_ellipse2
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
 ///
@@ -410,10 +374,6 @@ void q_paintengine_draw_path(void* self, void* path);
 ///
 void q_paintengine_on_draw_path(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_paintengine_super_draw_path` instead
-///
-#define q_paintengine_qbase_draw_path q_paintengine_super_draw_path
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPath)
 ///
 /// Base class method implementation
@@ -439,10 +399,6 @@ void q_paintengine_draw_points(void* self, void* points, int pointCount);
 /// @param callback void func(QPaintEngine* self, QPointF* points, int pointCount)
 ///
 void q_paintengine_on_draw_points(void* self, void (*callback)(void*, void*, int));
-
-/// @warning DEPRECATED: Use `q_paintengine_super_draw_points` instead
-///
-#define q_paintengine_qbase_draw_points q_paintengine_super_draw_points
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
 ///
@@ -471,10 +427,6 @@ void q_paintengine_draw_points2(void* self, void* points, int pointCount);
 ///
 void q_paintengine_on_draw_points2(void* self, void (*callback)(void*, void*, int));
 
-/// @warning DEPRECATED: Use `q_paintengine_super_draw_points2` instead
-///
-#define q_paintengine_qbase_draw_points2 q_paintengine_super_draw_points2
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
 ///
 /// Base class method implementation
@@ -502,10 +454,6 @@ void q_paintengine_draw_polygon(void* self, void* points, int pointCount, int32_
 /// @param callback void func(QPaintEngine* self, QPointF* points, int pointCount, enum QPaintEngine__PolygonDrawMode mode)
 ///
 void q_paintengine_on_draw_polygon(void* self, void (*callback)(void*, void*, int, int32_t));
-
-/// @warning DEPRECATED: Use `q_paintengine_super_draw_polygon` instead
-///
-#define q_paintengine_qbase_draw_polygon q_paintengine_super_draw_polygon
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
 ///
@@ -536,10 +484,6 @@ void q_paintengine_draw_polygon2(void* self, void* points, int pointCount, int32
 ///
 void q_paintengine_on_draw_polygon2(void* self, void (*callback)(void*, void*, int, int32_t));
 
-/// @warning DEPRECATED: Use `q_paintengine_super_draw_polygon2` instead
-///
-#define q_paintengine_qbase_draw_polygon2 q_paintengine_super_draw_polygon2
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
 ///
 /// Base class method implementation
@@ -569,10 +513,6 @@ void q_paintengine_draw_pixmap(void* self, void* r, void* pm, void* sr);
 ///
 void q_paintengine_on_draw_pixmap(void* self, void (*callback)(void*, void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_paintengine_super_draw_pixmap` instead
-///
-#define q_paintengine_qbase_draw_pixmap q_paintengine_super_draw_pixmap
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawPixmap)
 ///
 /// Base class method implementation
@@ -601,10 +541,6 @@ void q_paintengine_draw_text_item(void* self, void* p, void* textItem);
 ///
 void q_paintengine_on_draw_text_item(void* self, void (*callback)(void*, void*, void*));
 
-/// @warning DEPRECATED: Use `q_paintengine_super_draw_text_item` instead
-///
-#define q_paintengine_qbase_draw_text_item q_paintengine_super_draw_text_item
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawTextItem)
 ///
 /// Base class method implementation
@@ -632,10 +568,6 @@ void q_paintengine_draw_tiled_pixmap(void* self, void* r, void* pixmap, void* s)
 /// @param callback void func(QPaintEngine* self, QRectF* r, QPixmap* pixmap, QPointF* s)
 ///
 void q_paintengine_on_draw_tiled_pixmap(void* self, void (*callback)(void*, void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_paintengine_super_draw_tiled_pixmap` instead
-///
-#define q_paintengine_qbase_draw_tiled_pixmap q_paintengine_super_draw_tiled_pixmap
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawTiledPixmap)
 ///
@@ -666,10 +598,6 @@ void q_paintengine_draw_image(void* self, void* r, void* pm, void* sr, int32_t f
 /// @param callback void func(QPaintEngine* self, QRectF* r, QImage* pm, QRectF* sr, flag of enum Qt__ImageConversionFlag flags)
 ///
 void q_paintengine_on_draw_image(void* self, void (*callback)(void*, void*, void*, void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_paintengine_super_draw_image` instead
-///
-#define q_paintengine_qbase_draw_image q_paintengine_super_draw_image
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#drawImage)
 ///
@@ -739,10 +667,6 @@ QPoint* q_paintengine_coordinate_offset(void* self);
 ///
 void q_paintengine_on_coordinate_offset(void* self, QPoint* (*callback)());
 
-/// @warning DEPRECATED: Use `q_paintengine_super_coordinate_offset` instead
-///
-#define q_paintengine_qbase_coordinate_offset q_paintengine_super_coordinate_offset
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#coordinateOffset)
 ///
 /// Base class method implementation
@@ -767,10 +691,6 @@ int32_t q_paintengine_type(void* self);
 /// @param callback int32_t func()
 ///
 void q_paintengine_on_type(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_paintengine_super_type` instead
-///
-#define q_paintengine_qbase_type q_paintengine_super_type
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#type)
 ///
@@ -856,10 +776,6 @@ QPixmap* q_paintengine_create_pixmap(void* self, void* size);
 ///
 void q_paintengine_on_create_pixmap(void* self, QPixmap* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_paintengine_super_create_pixmap` instead
-///
-#define q_paintengine_qbase_create_pixmap q_paintengine_super_create_pixmap
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#createPixmap)
 ///
 /// Base class method implementation
@@ -887,10 +803,6 @@ QPixmap* q_paintengine_create_pixmap_from_image(void* self, void* image, int32_t
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_paintengine_on_create_pixmap_from_image(void* self, QPixmap* (*callback)(void*, void*, int32_t));
-
-/// @warning DEPRECATED: Use `q_paintengine_super_create_pixmap_from_image` instead
-///
-#define q_paintengine_qbase_create_pixmap_from_image q_paintengine_super_create_pixmap_from_image
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#createPixmapFromImage)
 ///

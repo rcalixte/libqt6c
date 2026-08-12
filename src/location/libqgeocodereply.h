@@ -42,10 +42,6 @@ const QMetaObject* q_geocodereply_meta_object(void* self);
 ///
 void q_geocodereply_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_geocodereply_super_meta_object` instead
-///
-#define q_geocodereply_qbase_meta_object q_geocodereply_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -65,10 +61,6 @@ void* q_geocodereply_metacast(void* self, const char* param1);
 /// @param callback void* func(QGeoCodeReply* self, const char* param1)
 ///
 void q_geocodereply_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_geocodereply_super_metacast` instead
-///
-#define q_geocodereply_qbase_metacast q_geocodereply_super_metacast
 
 /// Base class method implementation
 ///
@@ -90,10 +82,6 @@ int32_t q_geocodereply_metacall(void* self, int32_t param1, int param2, void* pa
 /// @param callback int32_t func(QGeoCodeReply* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_geocodereply_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_geocodereply_super_metacall` instead
-///
-#define q_geocodereply_qbase_metacall q_geocodereply_super_metacall
 
 /// Base class method implementation
 ///
@@ -175,10 +163,6 @@ void q_geocodereply_abort(void* self);
 ///
 void q_geocodereply_on_abort(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_geocodereply_super_abort` instead
-///
-#define q_geocodereply_qbase_abort q_geocodereply_super_abort
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#abort)
 ///
 /// Base class method implementation
@@ -244,10 +228,6 @@ void q_geocodereply_set_error(void* self, int32_t error, const char* errorString
 ///
 void q_geocodereply_on_set_error(void* self, void (*callback)(void*, int32_t, const char*));
 
-/// @warning DEPRECATED: Use `q_geocodereply_super_set_error` instead
-///
-#define q_geocodereply_qbase_set_error q_geocodereply_super_set_error
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setError)
 ///
 /// Base class method implementation
@@ -274,10 +254,6 @@ void q_geocodereply_set_finished(void* self, bool finished);
 ///
 void q_geocodereply_on_set_finished(void* self, void (*callback)(void*, bool));
 
-/// @warning DEPRECATED: Use `q_geocodereply_super_set_finished` instead
-///
-#define q_geocodereply_qbase_set_finished q_geocodereply_super_set_finished
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setFinished)
 ///
 /// Base class method implementation
@@ -302,10 +278,6 @@ void q_geocodereply_set_viewport(void* self, void* viewport);
 /// @param callback void func(QGeoCodeReply* self, QGeoShape* viewport)
 ///
 void q_geocodereply_on_set_viewport(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_geocodereply_super_set_viewport` instead
-///
-#define q_geocodereply_qbase_set_viewport q_geocodereply_super_set_viewport
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setViewport)
 ///
@@ -332,10 +304,6 @@ void q_geocodereply_add_location(void* self, void* location);
 ///
 void q_geocodereply_on_add_location(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_geocodereply_super_add_location` instead
-///
-#define q_geocodereply_qbase_add_location q_geocodereply_super_add_location
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#addLocation)
 ///
 /// Base class method implementation
@@ -360,10 +328,6 @@ void q_geocodereply_set_locations(void* self, libqt_list locations);
 /// @param callback void func(QGeoCodeReply* self, libqt_list of QGeoLocation* locations)
 ///
 void q_geocodereply_on_set_locations(void* self, void (*callback)(void*, libqt_list));
-
-/// @warning DEPRECATED: Use `q_geocodereply_super_set_locations` instead
-///
-#define q_geocodereply_qbase_set_locations q_geocodereply_super_set_locations
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setLocations)
 ///
@@ -390,10 +354,6 @@ void q_geocodereply_set_limit(void* self, intptr_t limit);
 ///
 void q_geocodereply_on_set_limit(void* self, void (*callback)(void*, intptr_t));
 
-/// @warning DEPRECATED: Use `q_geocodereply_super_set_limit` instead
-///
-#define q_geocodereply_qbase_set_limit q_geocodereply_super_set_limit
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setLimit)
 ///
 /// Base class method implementation
@@ -418,10 +378,6 @@ void q_geocodereply_set_offset(void* self, intptr_t offset);
 /// @param callback void func(QGeoCodeReply* self, intptr_t offset)
 ///
 void q_geocodereply_on_set_offset(void* self, void (*callback)(void*, intptr_t));
-
-/// @warning DEPRECATED: Use `q_geocodereply_super_set_offset` instead
-///
-#define q_geocodereply_qbase_set_offset q_geocodereply_super_set_offset
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setOffset)
 ///
@@ -924,10 +880,6 @@ void q_geocodereply_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_geocodereply_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_geocodereply_super_event` instead
-///
-#define q_geocodereply_qbase_event q_geocodereply_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -961,10 +913,6 @@ void q_geocodereply_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_geocodereply_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_geocodereply_super_event_filter` instead
-///
-#define q_geocodereply_qbase_event_filter q_geocodereply_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1000,10 +948,6 @@ void q_geocodereply_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void q_geocodereply_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_geocodereply_super_timer_event` instead
-///
-#define q_geocodereply_qbase_timer_event q_geocodereply_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1036,10 +980,6 @@ void q_geocodereply_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_geocodereply_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_geocodereply_super_child_event` instead
-///
-#define q_geocodereply_qbase_child_event q_geocodereply_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1074,10 +1014,6 @@ void q_geocodereply_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_geocodereply_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_geocodereply_super_custom_event` instead
-///
-#define q_geocodereply_qbase_custom_event q_geocodereply_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1110,10 +1046,6 @@ void q_geocodereply_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_geocodereply_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_geocodereply_super_connect_notify` instead
-///
-#define q_geocodereply_qbase_connect_notify q_geocodereply_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1148,10 +1080,6 @@ void q_geocodereply_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void q_geocodereply_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_geocodereply_super_disconnect_notify` instead
-///
-#define q_geocodereply_qbase_disconnect_notify q_geocodereply_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1184,10 +1112,6 @@ void q_geocodereply_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 QObject* q_geocodereply_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_geocodereply_super_sender` instead
-///
-#define q_geocodereply_qbase_sender q_geocodereply_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1218,10 +1142,6 @@ void q_geocodereply_on_sender(void* self, QObject* (*callback)());
 /// @param self QGeoCodeReply*
 ///
 int32_t q_geocodereply_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_geocodereply_super_sender_signal_index` instead
-///
-#define q_geocodereply_qbase_sender_signal_index q_geocodereply_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1255,10 +1175,6 @@ void q_geocodereply_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_geocodereply_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_geocodereply_super_receivers` instead
-///
-#define q_geocodereply_qbase_receivers q_geocodereply_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1291,10 +1207,6 @@ void q_geocodereply_on_receivers(void* self, int32_t (*callback)(void*, const ch
 /// @param signal QMetaMethod*
 ///
 bool q_geocodereply_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_geocodereply_super_is_signal_connected` instead
-///
-#define q_geocodereply_qbase_is_signal_connected q_geocodereply_super_is_signal_connected
 
 /// Inherited from QObject
 ///

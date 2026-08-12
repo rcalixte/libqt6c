@@ -44,10 +44,6 @@ const QMetaObject* k_bookmarkmenu_meta_object(void* self);
 ///
 void k_bookmarkmenu_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_meta_object` instead
-///
-#define k_bookmarkmenu_qbase_meta_object k_bookmarkmenu_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -67,10 +63,6 @@ void* k_bookmarkmenu_metacast(void* self, const char* param1);
 /// @param callback void* func(KBookmarkMenu* self, const char* param1)
 ///
 void k_bookmarkmenu_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_metacast` instead
-///
-#define k_bookmarkmenu_qbase_metacast k_bookmarkmenu_super_metacast
 
 /// Base class method implementation
 ///
@@ -92,10 +84,6 @@ int32_t k_bookmarkmenu_metacall(void* self, int32_t param1, int param2, void* pa
 /// @param callback int32_t func(KBookmarkMenu* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_bookmarkmenu_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_metacall` instead
-///
-#define k_bookmarkmenu_qbase_metacall k_bookmarkmenu_super_metacall
 
 /// Base class method implementation
 ///
@@ -179,10 +167,6 @@ void k_bookmarkmenu_slot_about_to_show(void* self);
 ///
 void k_bookmarkmenu_on_slot_about_to_show(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_slot_about_to_show` instead
-///
-#define k_bookmarkmenu_qbase_slot_about_to_show k_bookmarkmenu_super_slot_about_to_show
-
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#slotAboutToShow)
 ///
 /// Base class method implementation
@@ -205,10 +189,6 @@ void k_bookmarkmenu_slot_add_bookmarks_list(void* self);
 /// @param callback void func()
 ///
 void k_bookmarkmenu_on_slot_add_bookmarks_list(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_slot_add_bookmarks_list` instead
-///
-#define k_bookmarkmenu_qbase_slot_add_bookmarks_list k_bookmarkmenu_super_slot_add_bookmarks_list
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#slotAddBookmarksList)
 ///
@@ -233,10 +213,6 @@ void k_bookmarkmenu_slot_add_bookmark(void* self);
 ///
 void k_bookmarkmenu_on_slot_add_bookmark(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_slot_add_bookmark` instead
-///
-#define k_bookmarkmenu_qbase_slot_add_bookmark k_bookmarkmenu_super_slot_add_bookmark
-
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#slotAddBookmark)
 ///
 /// Base class method implementation
@@ -259,10 +235,6 @@ void k_bookmarkmenu_slot_new_folder(void* self);
 /// @param callback void func()
 ///
 void k_bookmarkmenu_on_slot_new_folder(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_slot_new_folder` instead
-///
-#define k_bookmarkmenu_qbase_slot_new_folder k_bookmarkmenu_super_slot_new_folder
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#slotNewFolder)
 ///
@@ -287,10 +259,6 @@ void k_bookmarkmenu_slot_open_folder_in_tabs(void* self);
 ///
 void k_bookmarkmenu_on_slot_open_folder_in_tabs(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_slot_open_folder_in_tabs` instead
-///
-#define k_bookmarkmenu_qbase_slot_open_folder_in_tabs k_bookmarkmenu_super_slot_open_folder_in_tabs
-
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#slotOpenFolderInTabs)
 ///
 /// Base class method implementation
@@ -313,10 +281,6 @@ void k_bookmarkmenu_clear(void* self);
 /// @param callback void func()
 ///
 void k_bookmarkmenu_on_clear(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_clear` instead
-///
-#define k_bookmarkmenu_qbase_clear k_bookmarkmenu_super_clear
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#clear)
 ///
@@ -341,10 +305,6 @@ void k_bookmarkmenu_refill(void* self);
 ///
 void k_bookmarkmenu_on_refill(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_refill` instead
-///
-#define k_bookmarkmenu_qbase_refill k_bookmarkmenu_super_refill
-
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#refill)
 ///
 /// Base class method implementation
@@ -368,10 +328,6 @@ QAction* k_bookmarkmenu_action_for_bookmark(void* self, void* bm);
 /// @param callback QAction* func(KBookmarkMenu* self, KBookmark* bm)
 ///
 void k_bookmarkmenu_on_action_for_bookmark(void* self, QAction* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_action_for_bookmark` instead
-///
-#define k_bookmarkmenu_qbase_action_for_bookmark k_bookmarkmenu_super_action_for_bookmark
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#actionForBookmark)
 ///
@@ -398,10 +354,6 @@ QMenu* k_bookmarkmenu_context_menu(void* self, void* action);
 ///
 void k_bookmarkmenu_on_context_menu(void* self, QMenu* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_context_menu` instead
-///
-#define k_bookmarkmenu_qbase_context_menu k_bookmarkmenu_super_context_menu
-
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#contextMenu)
 ///
 /// Base class method implementation
@@ -426,10 +378,6 @@ void k_bookmarkmenu_add_actions(void* self);
 ///
 void k_bookmarkmenu_on_add_actions(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_add_actions` instead
-///
-#define k_bookmarkmenu_qbase_add_actions k_bookmarkmenu_super_add_actions
-
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addActions)
 ///
 /// Base class method implementation
@@ -452,10 +400,6 @@ void k_bookmarkmenu_fill_bookmarks(void* self);
 /// @param callback void func()
 ///
 void k_bookmarkmenu_on_fill_bookmarks(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_fill_bookmarks` instead
-///
-#define k_bookmarkmenu_qbase_fill_bookmarks k_bookmarkmenu_super_fill_bookmarks
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#fillBookmarks)
 ///
@@ -480,10 +424,6 @@ void k_bookmarkmenu_add_add_bookmark(void* self);
 ///
 void k_bookmarkmenu_on_add_add_bookmark(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_add_add_bookmark` instead
-///
-#define k_bookmarkmenu_qbase_add_add_bookmark k_bookmarkmenu_super_add_add_bookmark
-
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addAddBookmark)
 ///
 /// Base class method implementation
@@ -506,10 +446,6 @@ void k_bookmarkmenu_add_add_bookmarks_list(void* self);
 /// @param callback void func()
 ///
 void k_bookmarkmenu_on_add_add_bookmarks_list(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_add_add_bookmarks_list` instead
-///
-#define k_bookmarkmenu_qbase_add_add_bookmarks_list k_bookmarkmenu_super_add_add_bookmarks_list
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addAddBookmarksList)
 ///
@@ -534,10 +470,6 @@ void k_bookmarkmenu_add_edit_bookmarks(void* self);
 ///
 void k_bookmarkmenu_on_add_edit_bookmarks(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_add_edit_bookmarks` instead
-///
-#define k_bookmarkmenu_qbase_add_edit_bookmarks k_bookmarkmenu_super_add_edit_bookmarks
-
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addEditBookmarks)
 ///
 /// Base class method implementation
@@ -560,10 +492,6 @@ void k_bookmarkmenu_add_new_folder(void* self);
 /// @param callback void func()
 ///
 void k_bookmarkmenu_on_add_new_folder(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_add_new_folder` instead
-///
-#define k_bookmarkmenu_qbase_add_new_folder k_bookmarkmenu_super_add_new_folder
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addNewFolder)
 ///
@@ -588,10 +516,6 @@ void k_bookmarkmenu_add_open_in_tabs(void* self);
 ///
 void k_bookmarkmenu_on_add_open_in_tabs(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_add_open_in_tabs` instead
-///
-#define k_bookmarkmenu_qbase_add_open_in_tabs k_bookmarkmenu_super_add_open_in_tabs
-
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#addOpenInTabs)
 ///
 /// Base class method implementation
@@ -615,10 +539,6 @@ bool k_bookmarkmenu_is_root(void* self);
 ///
 void k_bookmarkmenu_on_is_root(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_is_root` instead
-///
-#define k_bookmarkmenu_qbase_is_root k_bookmarkmenu_super_is_root
-
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#isRoot)
 ///
 /// Base class method implementation
@@ -641,10 +561,6 @@ bool k_bookmarkmenu_is_dirty(void* self);
 /// @param callback bool func()
 ///
 void k_bookmarkmenu_on_is_dirty(void* self, bool (*callback)());
-
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_is_dirty` instead
-///
-#define k_bookmarkmenu_qbase_is_dirty k_bookmarkmenu_super_is_dirty
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#isDirty)
 ///
@@ -671,10 +587,6 @@ const char* k_bookmarkmenu_parent_address(void* self);
 ///
 void k_bookmarkmenu_on_parent_address(void* self, const char* (*callback)());
 
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_parent_address` instead
-///
-#define k_bookmarkmenu_qbase_parent_address k_bookmarkmenu_super_parent_address
-
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#parentAddress)
 ///
 /// Base class method implementation
@@ -697,10 +609,6 @@ KBookmarkManager* k_bookmarkmenu_manager(void* self);
 /// @param callback KBookmarkManager* func()
 ///
 void k_bookmarkmenu_on_manager(void* self, KBookmarkManager* (*callback)());
-
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_manager` instead
-///
-#define k_bookmarkmenu_qbase_manager k_bookmarkmenu_super_manager
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#manager)
 ///
@@ -725,10 +633,6 @@ KBookmarkOwner* k_bookmarkmenu_owner(void* self);
 ///
 void k_bookmarkmenu_on_owner(void* self, KBookmarkOwner* (*callback)());
 
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_owner` instead
-///
-#define k_bookmarkmenu_qbase_owner k_bookmarkmenu_super_owner
-
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#owner)
 ///
 /// Base class method implementation
@@ -751,10 +655,6 @@ QMenu* k_bookmarkmenu_parent_menu(void* self);
 /// @param callback QMenu* func()
 ///
 void k_bookmarkmenu_on_parent_menu(void* self, QMenu* (*callback)());
-
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_parent_menu` instead
-///
-#define k_bookmarkmenu_qbase_parent_menu k_bookmarkmenu_super_parent_menu
 
 /// [Upstream resources](https://api.kde.org/kbookmarkmenu.html#parentMenu)
 ///
@@ -1241,10 +1141,6 @@ void k_bookmarkmenu_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool k_bookmarkmenu_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_event` instead
-///
-#define k_bookmarkmenu_qbase_event k_bookmarkmenu_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1278,10 +1174,6 @@ void k_bookmarkmenu_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool k_bookmarkmenu_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_event_filter` instead
-///
-#define k_bookmarkmenu_qbase_event_filter k_bookmarkmenu_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -1317,10 +1209,6 @@ void k_bookmarkmenu_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void k_bookmarkmenu_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_timer_event` instead
-///
-#define k_bookmarkmenu_qbase_timer_event k_bookmarkmenu_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1353,10 +1241,6 @@ void k_bookmarkmenu_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void k_bookmarkmenu_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_child_event` instead
-///
-#define k_bookmarkmenu_qbase_child_event k_bookmarkmenu_super_child_event
 
 /// Inherited from QObject
 ///
@@ -1391,10 +1275,6 @@ void k_bookmarkmenu_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_bookmarkmenu_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_custom_event` instead
-///
-#define k_bookmarkmenu_qbase_custom_event k_bookmarkmenu_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1427,10 +1307,6 @@ void k_bookmarkmenu_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void k_bookmarkmenu_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_connect_notify` instead
-///
-#define k_bookmarkmenu_qbase_connect_notify k_bookmarkmenu_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -1465,10 +1341,6 @@ void k_bookmarkmenu_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void k_bookmarkmenu_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_disconnect_notify` instead
-///
-#define k_bookmarkmenu_qbase_disconnect_notify k_bookmarkmenu_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1501,10 +1373,6 @@ void k_bookmarkmenu_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 QObject* k_bookmarkmenu_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_sender` instead
-///
-#define k_bookmarkmenu_qbase_sender k_bookmarkmenu_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1535,10 +1403,6 @@ void k_bookmarkmenu_on_sender(void* self, QObject* (*callback)());
 /// @param self KBookmarkMenu*
 ///
 int32_t k_bookmarkmenu_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_sender_signal_index` instead
-///
-#define k_bookmarkmenu_qbase_sender_signal_index k_bookmarkmenu_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1572,10 +1436,6 @@ void k_bookmarkmenu_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_bookmarkmenu_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_receivers` instead
-///
-#define k_bookmarkmenu_qbase_receivers k_bookmarkmenu_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1608,10 +1468,6 @@ void k_bookmarkmenu_on_receivers(void* self, int32_t (*callback)(void*, const ch
 /// @param signal QMetaMethod*
 ///
 bool k_bookmarkmenu_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_bookmarkmenu_super_is_signal_connected` instead
-///
-#define k_bookmarkmenu_qbase_is_signal_connected k_bookmarkmenu_super_is_signal_connected
 
 /// Inherited from QObject
 ///

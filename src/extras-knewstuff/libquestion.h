@@ -46,10 +46,6 @@ const QMetaObject* k_nscore__question_meta_object(void* self);
 ///
 void k_nscore__question_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_nscore__question_super_meta_object` instead
-///
-#define k_nscore__question_qbase_meta_object k_nscore__question_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -69,10 +65,6 @@ void* k_nscore__question_metacast(void* self, const char* param1);
 /// @param callback void* func(KNSCore__Question* self, const char* param1)
 ///
 void k_nscore__question_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_nscore__question_super_metacast` instead
-///
-#define k_nscore__question_qbase_metacast k_nscore__question_super_metacast
 
 /// Base class method implementation
 ///
@@ -94,10 +86,6 @@ int32_t k_nscore__question_metacall(void* self, int32_t param1, int param2, void
 /// @param callback int32_t func(KNSCore__Question* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_nscore__question_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_nscore__question_super_metacall` instead
-///
-#define k_nscore__question_qbase_metacall k_nscore__question_super_metacall
 
 /// Base class method implementation
 ///
@@ -702,10 +690,6 @@ void k_nscore__question_on_destroyed1(void* self, void (*callback)(void*, void*)
 ///
 bool k_nscore__question_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_nscore__question_super_event` instead
-///
-#define k_nscore__question_qbase_event k_nscore__question_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -739,10 +723,6 @@ void k_nscore__question_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool k_nscore__question_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_nscore__question_super_event_filter` instead
-///
-#define k_nscore__question_qbase_event_filter k_nscore__question_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -778,10 +758,6 @@ void k_nscore__question_on_event_filter(void* self, bool (*callback)(void*, void
 ///
 void k_nscore__question_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_nscore__question_super_timer_event` instead
-///
-#define k_nscore__question_qbase_timer_event k_nscore__question_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -814,10 +790,6 @@ void k_nscore__question_on_timer_event(void* self, void (*callback)(void*, void*
 /// @param event QChildEvent*
 ///
 void k_nscore__question_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_nscore__question_super_child_event` instead
-///
-#define k_nscore__question_qbase_child_event k_nscore__question_super_child_event
 
 /// Inherited from QObject
 ///
@@ -852,10 +824,6 @@ void k_nscore__question_on_child_event(void* self, void (*callback)(void*, void*
 ///
 void k_nscore__question_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_nscore__question_super_custom_event` instead
-///
-#define k_nscore__question_qbase_custom_event k_nscore__question_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -888,10 +856,6 @@ void k_nscore__question_on_custom_event(void* self, void (*callback)(void*, void
 /// @param signal QMetaMethod*
 ///
 void k_nscore__question_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_nscore__question_super_connect_notify` instead
-///
-#define k_nscore__question_qbase_connect_notify k_nscore__question_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -926,10 +890,6 @@ void k_nscore__question_on_connect_notify(void* self, void (*callback)(void*, vo
 ///
 void k_nscore__question_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_nscore__question_super_disconnect_notify` instead
-///
-#define k_nscore__question_qbase_disconnect_notify k_nscore__question_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -962,10 +922,6 @@ void k_nscore__question_on_disconnect_notify(void* self, void (*callback)(void*,
 ///
 QObject* k_nscore__question_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_nscore__question_super_sender` instead
-///
-#define k_nscore__question_qbase_sender k_nscore__question_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -996,10 +952,6 @@ void k_nscore__question_on_sender(void* self, QObject* (*callback)());
 /// @param self KNSCore__Question*
 ///
 int32_t k_nscore__question_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_nscore__question_super_sender_signal_index` instead
-///
-#define k_nscore__question_qbase_sender_signal_index k_nscore__question_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1033,10 +985,6 @@ void k_nscore__question_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 int32_t k_nscore__question_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_nscore__question_super_receivers` instead
-///
-#define k_nscore__question_qbase_receivers k_nscore__question_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1069,10 +1017,6 @@ void k_nscore__question_on_receivers(void* self, int32_t (*callback)(void*, cons
 /// @param signal QMetaMethod*
 ///
 bool k_nscore__question_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_nscore__question_super_is_signal_connected` instead
-///
-#define k_nscore__question_qbase_is_signal_connected k_nscore__question_super_is_signal_connected
 
 /// Inherited from QObject
 ///

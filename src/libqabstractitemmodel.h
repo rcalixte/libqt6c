@@ -496,10 +496,6 @@ const QMetaObject* q_abstractitemmodel_meta_object(void* self);
 ///
 void q_abstractitemmodel_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_meta_object` instead
-///
-#define q_abstractitemmodel_qbase_meta_object q_abstractitemmodel_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -519,10 +515,6 @@ void* q_abstractitemmodel_metacast(void* self, const char* param1);
 /// @param callback void* func(QAbstractItemModel* self, const char* param1)
 ///
 void q_abstractitemmodel_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_metacast` instead
-///
-#define q_abstractitemmodel_qbase_metacast q_abstractitemmodel_super_metacast
 
 /// Base class method implementation
 ///
@@ -544,10 +536,6 @@ int32_t q_abstractitemmodel_metacall(void* self, int32_t param1, int param2, voi
 /// @param callback int32_t func(QAbstractItemModel* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_abstractitemmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_metacall` instead
-///
-#define q_abstractitemmodel_qbase_metacall q_abstractitemmodel_super_metacall
 
 /// Base class method implementation
 ///
@@ -594,10 +582,6 @@ QModelIndex* q_abstractitemmodel_index(void* self, int row, int column, void* pa
 ///
 void q_abstractitemmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_index` instead
-///
-#define q_abstractitemmodel_qbase_index q_abstractitemmodel_super_index
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#index)
 ///
 /// Base class method implementation
@@ -626,10 +610,6 @@ QModelIndex* q_abstractitemmodel_parent(void* self, void* child);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractitemmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_parent` instead
-///
-#define q_abstractitemmodel_qbase_parent q_abstractitemmodel_super_parent
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#parent)
 ///
@@ -660,10 +640,6 @@ QModelIndex* q_abstractitemmodel_sibling(void* self, int row, int column, void* 
 ///
 void q_abstractitemmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_sibling` instead
-///
-#define q_abstractitemmodel_qbase_sibling q_abstractitemmodel_super_sibling
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#sibling)
 ///
 /// Base class method implementation
@@ -691,10 +667,6 @@ int32_t q_abstractitemmodel_row_count(void* self, void* parent);
 ///
 void q_abstractitemmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_row_count` instead
-///
-#define q_abstractitemmodel_qbase_row_count q_abstractitemmodel_super_row_count
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowCount)
 ///
 /// Base class method implementation
@@ -720,10 +692,6 @@ int32_t q_abstractitemmodel_column_count(void* self, void* parent);
 ///
 void q_abstractitemmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_column_count` instead
-///
-#define q_abstractitemmodel_qbase_column_count q_abstractitemmodel_super_column_count
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnCount)
 ///
 /// Base class method implementation
@@ -748,10 +716,6 @@ bool q_abstractitemmodel_has_children(void* self, void* parent);
 /// @param callback bool func(QAbstractItemModel* self, QModelIndex* parent)
 ///
 void q_abstractitemmodel_on_has_children(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_has_children` instead
-///
-#define q_abstractitemmodel_qbase_has_children q_abstractitemmodel_super_has_children
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasChildren)
 ///
@@ -781,10 +745,6 @@ QVariant* q_abstractitemmodel_data(void* self, void* index, int role);
 ///
 void q_abstractitemmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_data` instead
-///
-#define q_abstractitemmodel_qbase_data q_abstractitemmodel_super_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#data)
 ///
 /// Base class method implementation
@@ -812,10 +772,6 @@ bool q_abstractitemmodel_set_data(void* self, void* index, void* value, int role
 /// @param callback bool func(QAbstractItemModel* self, QModelIndex* index, QVariant* value, int role)
 ///
 void q_abstractitemmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_set_data` instead
-///
-#define q_abstractitemmodel_qbase_set_data q_abstractitemmodel_super_set_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData)
 ///
@@ -848,10 +804,6 @@ QVariant* q_abstractitemmodel_header_data(void* self, int section, int32_t orien
 ///
 void q_abstractitemmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_header_data` instead
-///
-#define q_abstractitemmodel_qbase_header_data q_abstractitemmodel_super_header_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerData)
 ///
 /// Base class method implementation
@@ -881,10 +833,6 @@ bool q_abstractitemmodel_set_header_data(void* self, int section, int32_t orient
 /// @param callback bool func(QAbstractItemModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role)
 ///
 void q_abstractitemmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_set_header_data` instead
-///
-#define q_abstractitemmodel_qbase_set_header_data q_abstractitemmodel_super_set_header_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setHeaderData)
 ///
@@ -927,10 +875,6 @@ libqt_map q_abstractitemmodel_item_data(void* self, void* index);
 ///
 void q_abstractitemmodel_on_item_data(void* self, libqt_map (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_item_data` instead
-///
-#define q_abstractitemmodel_qbase_item_data q_abstractitemmodel_super_item_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#itemData)
 ///
 /// Base class method implementation
@@ -959,10 +903,6 @@ bool q_abstractitemmodel_set_item_data(void* self, void* index, libqt_map roles)
 ///
 void q_abstractitemmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map));
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_set_item_data` instead
-///
-#define q_abstractitemmodel_qbase_set_item_data q_abstractitemmodel_super_set_item_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setItemData)
 ///
 /// Base class method implementation
@@ -988,10 +928,6 @@ bool q_abstractitemmodel_clear_item_data(void* self, void* index);
 /// @param callback bool func(QAbstractItemModel* self, QModelIndex* index)
 ///
 void q_abstractitemmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_clear_item_data` instead
-///
-#define q_abstractitemmodel_qbase_clear_item_data q_abstractitemmodel_super_clear_item_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#clearItemData)
 ///
@@ -1019,10 +955,6 @@ const char** q_abstractitemmodel_mime_types(void* self);
 ///
 void q_abstractitemmodel_on_mime_types(void* self, const char** (*callback)());
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_mime_types` instead
-///
-#define q_abstractitemmodel_qbase_mime_types q_abstractitemmodel_super_mime_types
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
 ///
 /// Base class method implementation
@@ -1046,10 +978,6 @@ QMimeData* q_abstractitemmodel_mime_data(void* self, libqt_list indexes);
 /// @param callback QMimeData* func(QAbstractItemModel* self, libqt_list of QModelIndex* indexes)
 ///
 void q_abstractitemmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_mime_data` instead
-///
-#define q_abstractitemmodel_qbase_mime_data q_abstractitemmodel_super_mime_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeData)
 ///
@@ -1079,10 +1007,6 @@ bool q_abstractitemmodel_can_drop_mime_data(void* self, void* data, int32_t acti
 /// @param callback bool func(QAbstractItemModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
 void q_abstractitemmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_can_drop_mime_data` instead
-///
-#define q_abstractitemmodel_qbase_can_drop_mime_data q_abstractitemmodel_super_can_drop_mime_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#canDropMimeData)
 ///
@@ -1117,10 +1041,6 @@ bool q_abstractitemmodel_drop_mime_data(void* self, void* data, int32_t action, 
 ///
 void q_abstractitemmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_drop_mime_data` instead
-///
-#define q_abstractitemmodel_qbase_drop_mime_data q_abstractitemmodel_super_drop_mime_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dropMimeData)
 ///
 /// Base class method implementation
@@ -1151,10 +1071,6 @@ int32_t q_abstractitemmodel_supported_drop_actions(void* self);
 ///
 void q_abstractitemmodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_supported_drop_actions` instead
-///
-#define q_abstractitemmodel_qbase_supported_drop_actions q_abstractitemmodel_super_supported_drop_actions
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDropActions)
 ///
 /// Base class method implementation
@@ -1181,10 +1097,6 @@ int32_t q_abstractitemmodel_supported_drag_actions(void* self);
 /// @param callback int32_t func()
 ///
 void q_abstractitemmodel_on_supported_drag_actions(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_supported_drag_actions` instead
-///
-#define q_abstractitemmodel_qbase_supported_drag_actions q_abstractitemmodel_super_supported_drag_actions
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
 ///
@@ -1213,10 +1125,6 @@ bool q_abstractitemmodel_insert_rows(void* self, int row, int count, void* paren
 /// @param callback bool func(QAbstractItemModel* self, int row, int count, QModelIndex* parent)
 ///
 void q_abstractitemmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_insert_rows` instead
-///
-#define q_abstractitemmodel_qbase_insert_rows q_abstractitemmodel_super_insert_rows
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
 ///
@@ -1247,10 +1155,6 @@ bool q_abstractitemmodel_insert_columns(void* self, int column, int count, void*
 ///
 void q_abstractitemmodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_insert_columns` instead
-///
-#define q_abstractitemmodel_qbase_insert_columns q_abstractitemmodel_super_insert_columns
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
 ///
 /// Base class method implementation
@@ -1280,10 +1184,6 @@ bool q_abstractitemmodel_remove_rows(void* self, int row, int count, void* paren
 ///
 void q_abstractitemmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_remove_rows` instead
-///
-#define q_abstractitemmodel_qbase_remove_rows q_abstractitemmodel_super_remove_rows
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
 ///
 /// Base class method implementation
@@ -1312,10 +1212,6 @@ bool q_abstractitemmodel_remove_columns(void* self, int column, int count, void*
 /// @param callback bool func(QAbstractItemModel* self, int column, int count, QModelIndex* parent)
 ///
 void q_abstractitemmodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_remove_columns` instead
-///
-#define q_abstractitemmodel_qbase_remove_columns q_abstractitemmodel_super_remove_columns
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumns)
 ///
@@ -1347,10 +1243,6 @@ bool q_abstractitemmodel_move_rows(void* self, void* sourceParent, int sourceRow
 /// @param callback bool func(QAbstractItemModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
 ///
 void q_abstractitemmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_move_rows` instead
-///
-#define q_abstractitemmodel_qbase_move_rows q_abstractitemmodel_super_move_rows
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
 ///
@@ -1384,10 +1276,6 @@ bool q_abstractitemmodel_move_columns(void* self, void* sourceParent, int source
 /// @param callback bool func(QAbstractItemModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
 ///
 void q_abstractitemmodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_move_columns` instead
-///
-#define q_abstractitemmodel_qbase_move_columns q_abstractitemmodel_super_move_columns
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
 ///
@@ -1466,10 +1354,6 @@ void q_abstractitemmodel_fetch_more(void* self, void* parent);
 ///
 void q_abstractitemmodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_fetch_more` instead
-///
-#define q_abstractitemmodel_qbase_fetch_more q_abstractitemmodel_super_fetch_more
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#fetchMore)
 ///
 /// Base class method implementation
@@ -1494,10 +1378,6 @@ bool q_abstractitemmodel_can_fetch_more(void* self, void* parent);
 /// @param callback bool func(QAbstractItemModel* self, QModelIndex* parent)
 ///
 void q_abstractitemmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_can_fetch_more` instead
-///
-#define q_abstractitemmodel_qbase_can_fetch_more q_abstractitemmodel_super_can_fetch_more
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#canFetchMore)
 ///
@@ -1525,10 +1405,6 @@ int32_t q_abstractitemmodel_flags(void* self, void* index);
 /// @param callback int32_t func(QAbstractItemModel* self, QModelIndex* index)
 ///
 void q_abstractitemmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_flags` instead
-///
-#define q_abstractitemmodel_qbase_flags q_abstractitemmodel_super_flags
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#flags)
 ///
@@ -1558,10 +1434,6 @@ void q_abstractitemmodel_sort(void* self, int column, int32_t order);
 ///
 void q_abstractitemmodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_sort` instead
-///
-#define q_abstractitemmodel_qbase_sort q_abstractitemmodel_super_sort
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#sort)
 ///
 /// Base class method implementation
@@ -1589,10 +1461,6 @@ QModelIndex* q_abstractitemmodel_buddy(void* self, void* index);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractitemmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_buddy` instead
-///
-#define q_abstractitemmodel_qbase_buddy q_abstractitemmodel_super_buddy
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#buddy)
 ///
@@ -1624,10 +1492,6 @@ libqt_list q_abstractitemmodel_match(void* self, void* start, int role, void* va
 /// @param callback libqt_list of QModelIndex* func(QAbstractItemModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 ///
 void q_abstractitemmodel_on_match(void* self, libqt_list (*callback)(void*, void*, int, void*, int, int32_t));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_match` instead
-///
-#define q_abstractitemmodel_qbase_match q_abstractitemmodel_super_match
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
 ///
@@ -1661,10 +1525,6 @@ QSize* q_abstractitemmodel_span(void* self, void* index);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractitemmodel_on_span(void* self, QSize* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_span` instead
-///
-#define q_abstractitemmodel_qbase_span q_abstractitemmodel_super_span
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#span)
 ///
@@ -1703,10 +1563,6 @@ libqt_map q_abstractitemmodel_role_names(void* self);
 ///
 void q_abstractitemmodel_on_role_names(void* self, libqt_map (*callback)());
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_role_names` instead
-///
-#define q_abstractitemmodel_qbase_role_names q_abstractitemmodel_super_role_names
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames)
 ///
 /// Base class method implementation
@@ -1740,10 +1596,6 @@ void q_abstractitemmodel_multi_data(void* self, void* index, void* roleDataSpan)
 /// @param callback void func(QAbstractItemModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 ///
 void q_abstractitemmodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_multi_data` instead
-///
-#define q_abstractitemmodel_qbase_multi_data q_abstractitemmodel_super_multi_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
 ///
@@ -1827,10 +1679,6 @@ bool q_abstractitemmodel_submit(void* self);
 ///
 void q_abstractitemmodel_on_submit(void* self, bool (*callback)());
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_submit` instead
-///
-#define q_abstractitemmodel_qbase_submit q_abstractitemmodel_super_submit
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#submit)
 ///
 /// Base class method implementation
@@ -1854,10 +1702,6 @@ void q_abstractitemmodel_revert(void* self);
 ///
 void q_abstractitemmodel_on_revert(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_revert` instead
-///
-#define q_abstractitemmodel_qbase_revert q_abstractitemmodel_super_revert
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#revert)
 ///
 /// Base class method implementation
@@ -1880,10 +1724,6 @@ void q_abstractitemmodel_reset_internal_data(void* self);
 /// @param callback void func()
 ///
 void q_abstractitemmodel_on_reset_internal_data(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_reset_internal_data` instead
-///
-#define q_abstractitemmodel_qbase_reset_internal_data q_abstractitemmodel_super_reset_internal_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
 ///
@@ -1911,10 +1751,6 @@ QModelIndex* q_abstractitemmodel_create_index(void* self, int row, int column);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractitemmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_create_index` instead
-///
-#define q_abstractitemmodel_qbase_create_index q_abstractitemmodel_super_create_index
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
 ///
@@ -1946,10 +1782,6 @@ QModelIndex* q_abstractitemmodel_create_index2(void* self, int row, int column, 
 ///
 void q_abstractitemmodel_on_create_index2(void* self, QModelIndex* (*callback)(void*, int, int, uintptr_t));
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_create_index2` instead
-///
-#define q_abstractitemmodel_qbase_create_index2 q_abstractitemmodel_super_create_index2
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
 ///
 /// Base class method implementation
@@ -1977,10 +1809,6 @@ void q_abstractitemmodel_encode_data(void* self, libqt_list indexes, void* strea
 /// @param callback void func(QAbstractItemModel* self, libqt_list of QModelIndex* indexes, QDataStream* stream)
 ///
 void q_abstractitemmodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_encode_data` instead
-///
-#define q_abstractitemmodel_qbase_encode_data q_abstractitemmodel_super_encode_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
 ///
@@ -2010,10 +1838,6 @@ bool q_abstractitemmodel_decode_data(void* self, int row, int column, void* pare
 /// @param callback bool func(QAbstractItemModel* self, int row, int column, QModelIndex* parent, QDataStream* stream)
 ///
 void q_abstractitemmodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_decode_data` instead
-///
-#define q_abstractitemmodel_qbase_decode_data q_abstractitemmodel_super_decode_data
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
 ///
@@ -2045,10 +1869,6 @@ void q_abstractitemmodel_begin_insert_rows(void* self, void* parent, int first, 
 ///
 void q_abstractitemmodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_begin_insert_rows` instead
-///
-#define q_abstractitemmodel_qbase_begin_insert_rows q_abstractitemmodel_super_begin_insert_rows
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
 ///
 /// Base class method implementation
@@ -2074,10 +1894,6 @@ void q_abstractitemmodel_end_insert_rows(void* self);
 /// @param callback void func()
 ///
 void q_abstractitemmodel_on_end_insert_rows(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_end_insert_rows` instead
-///
-#define q_abstractitemmodel_qbase_end_insert_rows q_abstractitemmodel_super_end_insert_rows
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
 ///
@@ -2105,10 +1921,6 @@ void q_abstractitemmodel_begin_remove_rows(void* self, void* parent, int first, 
 ///
 void q_abstractitemmodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_begin_remove_rows` instead
-///
-#define q_abstractitemmodel_qbase_begin_remove_rows q_abstractitemmodel_super_begin_remove_rows
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
 ///
 /// Base class method implementation
@@ -2134,10 +1946,6 @@ void q_abstractitemmodel_end_remove_rows(void* self);
 /// @param callback void func()
 ///
 void q_abstractitemmodel_on_end_remove_rows(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_end_remove_rows` instead
-///
-#define q_abstractitemmodel_qbase_end_remove_rows q_abstractitemmodel_super_end_remove_rows
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
 ///
@@ -2167,10 +1975,6 @@ bool q_abstractitemmodel_begin_move_rows(void* self, void* sourceParent, int sou
 ///
 void q_abstractitemmodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_begin_move_rows` instead
-///
-#define q_abstractitemmodel_qbase_begin_move_rows q_abstractitemmodel_super_begin_move_rows
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
 ///
 /// Base class method implementation
@@ -2199,10 +2003,6 @@ void q_abstractitemmodel_end_move_rows(void* self);
 ///
 void q_abstractitemmodel_on_end_move_rows(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_end_move_rows` instead
-///
-#define q_abstractitemmodel_qbase_end_move_rows q_abstractitemmodel_super_end_move_rows
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
 ///
 /// Base class method implementation
@@ -2228,10 +2028,6 @@ void q_abstractitemmodel_begin_insert_columns(void* self, void* parent, int firs
 /// @param callback void func(QAbstractItemModel* self, QModelIndex* parent, int first, int last)
 ///
 void q_abstractitemmodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_begin_insert_columns` instead
-///
-#define q_abstractitemmodel_qbase_begin_insert_columns q_abstractitemmodel_super_begin_insert_columns
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
 ///
@@ -2259,10 +2055,6 @@ void q_abstractitemmodel_end_insert_columns(void* self);
 ///
 void q_abstractitemmodel_on_end_insert_columns(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_end_insert_columns` instead
-///
-#define q_abstractitemmodel_qbase_end_insert_columns q_abstractitemmodel_super_end_insert_columns
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
 ///
 /// Base class method implementation
@@ -2289,10 +2081,6 @@ void q_abstractitemmodel_begin_remove_columns(void* self, void* parent, int firs
 ///
 void q_abstractitemmodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_begin_remove_columns` instead
-///
-#define q_abstractitemmodel_qbase_begin_remove_columns q_abstractitemmodel_super_begin_remove_columns
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
 ///
 /// Base class method implementation
@@ -2318,10 +2106,6 @@ void q_abstractitemmodel_end_remove_columns(void* self);
 /// @param callback void func()
 ///
 void q_abstractitemmodel_on_end_remove_columns(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_end_remove_columns` instead
-///
-#define q_abstractitemmodel_qbase_end_remove_columns q_abstractitemmodel_super_end_remove_columns
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
 ///
@@ -2351,10 +2135,6 @@ bool q_abstractitemmodel_begin_move_columns(void* self, void* sourceParent, int 
 ///
 void q_abstractitemmodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_begin_move_columns` instead
-///
-#define q_abstractitemmodel_qbase_begin_move_columns q_abstractitemmodel_super_begin_move_columns
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
 ///
 /// Base class method implementation
@@ -2383,10 +2163,6 @@ void q_abstractitemmodel_end_move_columns(void* self);
 ///
 void q_abstractitemmodel_on_end_move_columns(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_end_move_columns` instead
-///
-#define q_abstractitemmodel_qbase_end_move_columns q_abstractitemmodel_super_end_move_columns
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
 ///
 /// Base class method implementation
@@ -2410,10 +2186,6 @@ void q_abstractitemmodel_begin_reset_model(void* self);
 ///
 void q_abstractitemmodel_on_begin_reset_model(void* self, void (*callback)());
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_begin_reset_model` instead
-///
-#define q_abstractitemmodel_qbase_begin_reset_model q_abstractitemmodel_super_begin_reset_model
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
 ///
 /// Base class method implementation
@@ -2436,10 +2208,6 @@ void q_abstractitemmodel_end_reset_model(void* self);
 /// @param callback void func()
 ///
 void q_abstractitemmodel_on_end_reset_model(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_end_reset_model` instead
-///
-#define q_abstractitemmodel_qbase_end_reset_model q_abstractitemmodel_super_end_reset_model
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
 ///
@@ -2465,10 +2233,6 @@ void q_abstractitemmodel_change_persistent_index(void* self, void* from, void* t
 /// @param callback void func(QAbstractItemModel* self, QModelIndex* from, QModelIndex* to)
 ///
 void q_abstractitemmodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_change_persistent_index` instead
-///
-#define q_abstractitemmodel_qbase_change_persistent_index q_abstractitemmodel_super_change_persistent_index
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
 ///
@@ -2497,10 +2261,6 @@ void q_abstractitemmodel_change_persistent_index_list(void* self, libqt_list fro
 ///
 void q_abstractitemmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list));
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_change_persistent_index_list` instead
-///
-#define q_abstractitemmodel_qbase_change_persistent_index_list q_abstractitemmodel_super_change_persistent_index_list
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
 ///
 /// Base class method implementation
@@ -2527,10 +2287,6 @@ libqt_list q_abstractitemmodel_persistent_index_list(void* self);
 /// @param callback libqt_list of QModelIndex* func()
 ///
 void q_abstractitemmodel_on_persistent_index_list(void* self, libqt_list (*callback)());
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_persistent_index_list` instead
-///
-#define q_abstractitemmodel_qbase_persistent_index_list q_abstractitemmodel_super_persistent_index_list
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
 ///
@@ -2703,10 +2459,6 @@ QModelIndex* q_abstractitemmodel_create_index3(void* self, int row, int column, 
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractitemmodel_on_create_index3(void* self, QModelIndex* (*callback)(void*, int, int, void*));
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_create_index3` instead
-///
-#define q_abstractitemmodel_qbase_create_index3 q_abstractitemmodel_super_create_index3
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
 ///
@@ -3169,10 +2921,6 @@ void q_abstractitemmodel_on_destroyed1(void* self, void (*callback)(void*, void*
 ///
 bool q_abstractitemmodel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_event` instead
-///
-#define q_abstractitemmodel_qbase_event q_abstractitemmodel_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -3206,10 +2954,6 @@ void q_abstractitemmodel_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_abstractitemmodel_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_event_filter` instead
-///
-#define q_abstractitemmodel_qbase_event_filter q_abstractitemmodel_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -3245,10 +2989,6 @@ void q_abstractitemmodel_on_event_filter(void* self, bool (*callback)(void*, voi
 ///
 void q_abstractitemmodel_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_timer_event` instead
-///
-#define q_abstractitemmodel_qbase_timer_event q_abstractitemmodel_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -3281,10 +3021,6 @@ void q_abstractitemmodel_on_timer_event(void* self, void (*callback)(void*, void
 /// @param event QChildEvent*
 ///
 void q_abstractitemmodel_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_child_event` instead
-///
-#define q_abstractitemmodel_qbase_child_event q_abstractitemmodel_super_child_event
 
 /// Inherited from QObject
 ///
@@ -3319,10 +3055,6 @@ void q_abstractitemmodel_on_child_event(void* self, void (*callback)(void*, void
 ///
 void q_abstractitemmodel_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_custom_event` instead
-///
-#define q_abstractitemmodel_qbase_custom_event q_abstractitemmodel_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -3355,10 +3087,6 @@ void q_abstractitemmodel_on_custom_event(void* self, void (*callback)(void*, voi
 /// @param signal QMetaMethod*
 ///
 void q_abstractitemmodel_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_connect_notify` instead
-///
-#define q_abstractitemmodel_qbase_connect_notify q_abstractitemmodel_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -3393,10 +3121,6 @@ void q_abstractitemmodel_on_connect_notify(void* self, void (*callback)(void*, v
 ///
 void q_abstractitemmodel_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_disconnect_notify` instead
-///
-#define q_abstractitemmodel_qbase_disconnect_notify q_abstractitemmodel_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -3429,10 +3153,6 @@ void q_abstractitemmodel_on_disconnect_notify(void* self, void (*callback)(void*
 ///
 QObject* q_abstractitemmodel_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_sender` instead
-///
-#define q_abstractitemmodel_qbase_sender q_abstractitemmodel_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -3463,10 +3183,6 @@ void q_abstractitemmodel_on_sender(void* self, QObject* (*callback)());
 /// @param self QAbstractItemModel*
 ///
 int32_t q_abstractitemmodel_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_sender_signal_index` instead
-///
-#define q_abstractitemmodel_qbase_sender_signal_index q_abstractitemmodel_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -3500,10 +3216,6 @@ void q_abstractitemmodel_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 int32_t q_abstractitemmodel_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_receivers` instead
-///
-#define q_abstractitemmodel_qbase_receivers q_abstractitemmodel_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -3536,10 +3248,6 @@ void q_abstractitemmodel_on_receivers(void* self, int32_t (*callback)(void*, con
 /// @param signal QMetaMethod*
 ///
 bool q_abstractitemmodel_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_abstractitemmodel_super_is_signal_connected` instead
-///
-#define q_abstractitemmodel_qbase_is_signal_connected q_abstractitemmodel_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -3737,10 +3445,6 @@ const QMetaObject* q_abstracttablemodel_meta_object(void* self);
 ///
 void q_abstracttablemodel_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_meta_object` instead
-///
-#define q_abstracttablemodel_qbase_meta_object q_abstracttablemodel_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -3760,10 +3464,6 @@ void* q_abstracttablemodel_metacast(void* self, const char* param1);
 /// @param callback void* func(QAbstractTableModel* self, const char* param1)
 ///
 void q_abstracttablemodel_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_metacast` instead
-///
-#define q_abstracttablemodel_qbase_metacast q_abstracttablemodel_super_metacast
 
 /// Base class method implementation
 ///
@@ -3785,10 +3485,6 @@ int32_t q_abstracttablemodel_metacall(void* self, int32_t param1, int param2, vo
 /// @param callback int32_t func(QAbstractTableModel* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_abstracttablemodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_metacall` instead
-///
-#define q_abstracttablemodel_qbase_metacall q_abstracttablemodel_super_metacall
 
 /// Base class method implementation
 ///
@@ -3827,10 +3523,6 @@ QModelIndex* q_abstracttablemodel_index(void* self, int row, int column, void* p
 ///
 void q_abstracttablemodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_index` instead
-///
-#define q_abstracttablemodel_qbase_index q_abstracttablemodel_super_index
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttablemodel.html#index)
 ///
 /// Base class method implementation
@@ -3861,10 +3553,6 @@ QModelIndex* q_abstracttablemodel_sibling(void* self, int row, int column, void*
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstracttablemodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_sibling` instead
-///
-#define q_abstracttablemodel_qbase_sibling q_abstracttablemodel_super_sibling
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttablemodel.html#sibling)
 ///
@@ -3897,10 +3585,6 @@ bool q_abstracttablemodel_drop_mime_data(void* self, void* data, int32_t action,
 ///
 void q_abstracttablemodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_drop_mime_data` instead
-///
-#define q_abstracttablemodel_qbase_drop_mime_data q_abstracttablemodel_super_drop_mime_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttablemodel.html#dropMimeData)
 ///
 /// Base class method implementation
@@ -3931,10 +3615,6 @@ int32_t q_abstracttablemodel_flags(void* self, void* index);
 /// @param callback int32_t func(QAbstractTableModel* self, QModelIndex* index)
 ///
 void q_abstracttablemodel_on_flags(void* self, int32_t (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_flags` instead
-///
-#define q_abstracttablemodel_qbase_flags q_abstracttablemodel_super_flags
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttablemodel.html#flags)
 ///
@@ -3998,10 +3678,6 @@ QModelIndex* q_abstracttablemodel_parent(void* self, void* child);
 ///
 void q_abstracttablemodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_parent` instead
-///
-#define q_abstracttablemodel_qbase_parent q_abstracttablemodel_super_parent
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#parent)
@@ -4032,10 +3708,6 @@ bool q_abstracttablemodel_has_children(void* self, void* parent);
 /// @param callback bool func(QAbstractTableModel* self, QModelIndex* parent)
 ///
 void q_abstracttablemodel_on_has_children(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_has_children` instead
-///
-#define q_abstracttablemodel_qbase_has_children q_abstracttablemodel_super_has_children
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4795,10 +4467,6 @@ void q_abstracttablemodel_on_destroyed1(void* self, void (*callback)(void*, void
 ///
 int32_t q_abstracttablemodel_row_count(void* self, void* parent);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_row_count` instead
-///
-#define q_abstracttablemodel_qbase_row_count q_abstracttablemodel_super_row_count
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowCount)
@@ -4831,10 +4499,6 @@ void q_abstracttablemodel_on_row_count(void* self, int32_t (*callback)(void*, vo
 /// @param parent QModelIndex*
 ///
 int32_t q_abstracttablemodel_column_count(void* self, void* parent);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_column_count` instead
-///
-#define q_abstracttablemodel_qbase_column_count q_abstracttablemodel_super_column_count
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4869,10 +4533,6 @@ void q_abstracttablemodel_on_column_count(void* self, int32_t (*callback)(void*,
 /// @param role int
 ///
 QVariant* q_abstracttablemodel_data(void* self, void* index, int role);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_data` instead
-///
-#define q_abstracttablemodel_qbase_data q_abstracttablemodel_super_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4912,10 +4572,6 @@ void q_abstracttablemodel_on_data(void* self, QVariant* (*callback)(void*, void*
 ///
 bool q_abstracttablemodel_set_data(void* self, void* index, void* value, int role);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_set_data` instead
-///
-#define q_abstracttablemodel_qbase_set_data q_abstracttablemodel_super_set_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData)
@@ -4952,10 +4608,6 @@ void q_abstracttablemodel_on_set_data(void* self, bool (*callback)(void*, void*,
 /// @param role int
 ///
 QVariant* q_abstracttablemodel_header_data(void* self, int section, int32_t orientation, int role);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_header_data` instead
-///
-#define q_abstracttablemodel_qbase_header_data q_abstracttablemodel_super_header_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4996,10 +4648,6 @@ void q_abstracttablemodel_on_header_data(void* self, QVariant* (*callback)(void*
 /// @param role int
 ///
 bool q_abstracttablemodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_set_header_data` instead
-///
-#define q_abstracttablemodel_qbase_set_header_data q_abstracttablemodel_super_set_header_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -5050,10 +4698,6 @@ void q_abstracttablemodel_on_set_header_data(void* self, bool (*callback)(void*,
 ///
 libqt_map q_abstracttablemodel_item_data(void* self, void* index);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_item_data` instead
-///
-#define q_abstracttablemodel_qbase_item_data q_abstracttablemodel_super_item_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#itemData)
@@ -5101,10 +4745,6 @@ void q_abstracttablemodel_on_item_data(void* self, libqt_map (*callback)(void*, 
 ///
 bool q_abstracttablemodel_set_item_data(void* self, void* index, libqt_map roles);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_set_item_data` instead
-///
-#define q_abstracttablemodel_qbase_set_item_data q_abstracttablemodel_super_set_item_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setItemData)
@@ -5138,10 +4778,6 @@ void q_abstracttablemodel_on_set_item_data(void* self, bool (*callback)(void*, v
 /// @param index QModelIndex*
 ///
 bool q_abstracttablemodel_clear_item_data(void* self, void* index);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_clear_item_data` instead
-///
-#define q_abstracttablemodel_qbase_clear_item_data q_abstracttablemodel_super_clear_item_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -5177,10 +4813,6 @@ void q_abstracttablemodel_on_clear_item_data(void* self, bool (*callback)(void*,
 ///
 const char** q_abstracttablemodel_mime_types(void* self);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_mime_types` instead
-///
-#define q_abstracttablemodel_qbase_mime_types q_abstracttablemodel_super_mime_types
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
@@ -5214,10 +4846,6 @@ void q_abstracttablemodel_on_mime_types(void* self, const char** (*callback)());
 /// @param indexes libqt_list of QModelIndex*
 ///
 QMimeData* q_abstracttablemodel_mime_data(void* self, libqt_list indexes);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_mime_data` instead
-///
-#define q_abstracttablemodel_qbase_mime_data q_abstracttablemodel_super_mime_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -5255,10 +4883,6 @@ void q_abstracttablemodel_on_mime_data(void* self, QMimeData* (*callback)(void*,
 /// @param parent QModelIndex*
 ///
 bool q_abstracttablemodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_can_drop_mime_data` instead
-///
-#define q_abstracttablemodel_qbase_can_drop_mime_data q_abstracttablemodel_super_can_drop_mime_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -5298,10 +4922,6 @@ void q_abstracttablemodel_on_can_drop_mime_data(void* self, bool (*callback)(voi
 ///
 int32_t q_abstracttablemodel_supported_drop_actions(void* self);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_supported_drop_actions` instead
-///
-#define q_abstracttablemodel_qbase_supported_drop_actions q_abstracttablemodel_super_supported_drop_actions
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDropActions)
@@ -5336,10 +4956,6 @@ void q_abstracttablemodel_on_supported_drop_actions(void* self, int32_t (*callba
 /// @return flag of enum Qt__DropAction
 ///
 int32_t q_abstracttablemodel_supported_drag_actions(void* self);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_supported_drag_actions` instead
-///
-#define q_abstracttablemodel_qbase_supported_drag_actions q_abstracttablemodel_super_supported_drag_actions
 
 /// Inherited from QAbstractItemModel
 ///
@@ -5376,10 +4992,6 @@ void q_abstracttablemodel_on_supported_drag_actions(void* self, int32_t (*callba
 /// @param parent QModelIndex*
 ///
 bool q_abstracttablemodel_insert_rows(void* self, int row, int count, void* parent);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_insert_rows` instead
-///
-#define q_abstracttablemodel_qbase_insert_rows q_abstracttablemodel_super_insert_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -5418,10 +5030,6 @@ void q_abstracttablemodel_on_insert_rows(void* self, bool (*callback)(void*, int
 ///
 bool q_abstracttablemodel_insert_columns(void* self, int column, int count, void* parent);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_insert_columns` instead
-///
-#define q_abstracttablemodel_qbase_insert_columns q_abstracttablemodel_super_insert_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
@@ -5459,10 +5067,6 @@ void q_abstracttablemodel_on_insert_columns(void* self, bool (*callback)(void*, 
 ///
 bool q_abstracttablemodel_remove_rows(void* self, int row, int count, void* parent);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_remove_rows` instead
-///
-#define q_abstracttablemodel_qbase_remove_rows q_abstracttablemodel_super_remove_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
@@ -5499,10 +5103,6 @@ void q_abstracttablemodel_on_remove_rows(void* self, bool (*callback)(void*, int
 /// @param parent QModelIndex*
 ///
 bool q_abstracttablemodel_remove_columns(void* self, int column, int count, void* parent);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_remove_columns` instead
-///
-#define q_abstracttablemodel_qbase_remove_columns q_abstracttablemodel_super_remove_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -5542,10 +5142,6 @@ void q_abstracttablemodel_on_remove_columns(void* self, bool (*callback)(void*, 
 /// @param destinationChild int
 ///
 bool q_abstracttablemodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_move_rows` instead
-///
-#define q_abstracttablemodel_qbase_move_rows q_abstracttablemodel_super_move_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -5588,10 +5184,6 @@ void q_abstracttablemodel_on_move_rows(void* self, bool (*callback)(void*, void*
 ///
 bool q_abstracttablemodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_move_columns` instead
-///
-#define q_abstracttablemodel_qbase_move_columns q_abstracttablemodel_super_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
@@ -5629,10 +5221,6 @@ void q_abstracttablemodel_on_move_columns(void* self, bool (*callback)(void*, vo
 ///
 void q_abstracttablemodel_fetch_more(void* self, void* parent);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_fetch_more` instead
-///
-#define q_abstracttablemodel_qbase_fetch_more q_abstracttablemodel_super_fetch_more
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#fetchMore)
@@ -5665,10 +5253,6 @@ void q_abstracttablemodel_on_fetch_more(void* self, void (*callback)(void*, void
 /// @param parent QModelIndex*
 ///
 bool q_abstracttablemodel_can_fetch_more(void* self, void* parent);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_can_fetch_more` instead
-///
-#define q_abstracttablemodel_qbase_can_fetch_more q_abstracttablemodel_super_can_fetch_more
 
 /// Inherited from QAbstractItemModel
 ///
@@ -5704,10 +5288,6 @@ void q_abstracttablemodel_on_can_fetch_more(void* self, bool (*callback)(void*, 
 ///
 void q_abstracttablemodel_sort(void* self, int column, int32_t order);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_sort` instead
-///
-#define q_abstracttablemodel_qbase_sort q_abstracttablemodel_super_sort
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#sort)
@@ -5741,10 +5321,6 @@ void q_abstracttablemodel_on_sort(void* self, void (*callback)(void*, int, int32
 /// @param index QModelIndex*
 ///
 QModelIndex* q_abstracttablemodel_buddy(void* self, void* index);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_buddy` instead
-///
-#define q_abstracttablemodel_qbase_buddy q_abstracttablemodel_super_buddy
 
 /// Inherited from QAbstractItemModel
 ///
@@ -5787,10 +5363,6 @@ void q_abstracttablemodel_on_buddy(void* self, QModelIndex* (*callback)(void*, v
 ///
 libqt_list q_abstracttablemodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_match` instead
-///
-#define q_abstracttablemodel_qbase_match q_abstracttablemodel_super_match
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
@@ -5829,10 +5401,6 @@ void q_abstracttablemodel_on_match(void* self, libqt_list (*callback)(void*, voi
 /// @param index QModelIndex*
 ///
 QSize* q_abstracttablemodel_span(void* self, void* index);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_span` instead
-///
-#define q_abstracttablemodel_qbase_span q_abstracttablemodel_super_span
 
 /// Inherited from QAbstractItemModel
 ///
@@ -5881,10 +5449,6 @@ void q_abstracttablemodel_on_span(void* self, QSize* (*callback)(void*, void*));
 ///
 libqt_map q_abstracttablemodel_role_names(void* self);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_role_names` instead
-///
-#define q_abstracttablemodel_qbase_role_names q_abstracttablemodel_super_role_names
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames)
@@ -5931,10 +5495,6 @@ void q_abstracttablemodel_on_role_names(void* self, libqt_map (*callback)());
 ///
 void q_abstracttablemodel_multi_data(void* self, void* index, void* roleDataSpan);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_multi_data` instead
-///
-#define q_abstracttablemodel_qbase_multi_data q_abstracttablemodel_super_multi_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
@@ -5968,10 +5528,6 @@ void q_abstracttablemodel_on_multi_data(void* self, void (*callback)(void*, void
 ///
 bool q_abstracttablemodel_submit(void* self);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_submit` instead
-///
-#define q_abstracttablemodel_qbase_submit q_abstracttablemodel_super_submit
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#submit)
@@ -6002,10 +5558,6 @@ void q_abstracttablemodel_on_submit(void* self, bool (*callback)());
 /// @param self QAbstractTableModel*
 ///
 void q_abstracttablemodel_revert(void* self);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_revert` instead
-///
-#define q_abstracttablemodel_qbase_revert q_abstracttablemodel_super_revert
 
 /// Inherited from QAbstractItemModel
 ///
@@ -6038,10 +5590,6 @@ void q_abstracttablemodel_on_revert(void* self, void (*callback)());
 ///
 void q_abstracttablemodel_reset_internal_data(void* self);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_reset_internal_data` instead
-///
-#define q_abstracttablemodel_qbase_reset_internal_data q_abstracttablemodel_super_reset_internal_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
@@ -6073,10 +5621,6 @@ void q_abstracttablemodel_on_reset_internal_data(void* self, void (*callback)())
 /// @param event QEvent*
 ///
 bool q_abstracttablemodel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_event` instead
-///
-#define q_abstracttablemodel_qbase_event q_abstracttablemodel_super_event
 
 /// Inherited from QObject
 ///
@@ -6112,10 +5656,6 @@ void q_abstracttablemodel_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_abstracttablemodel_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_event_filter` instead
-///
-#define q_abstracttablemodel_qbase_event_filter q_abstracttablemodel_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -6150,10 +5690,6 @@ void q_abstracttablemodel_on_event_filter(void* self, bool (*callback)(void*, vo
 ///
 void q_abstracttablemodel_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_timer_event` instead
-///
-#define q_abstracttablemodel_qbase_timer_event q_abstracttablemodel_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -6186,10 +5722,6 @@ void q_abstracttablemodel_on_timer_event(void* self, void (*callback)(void*, voi
 /// @param event QChildEvent*
 ///
 void q_abstracttablemodel_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_child_event` instead
-///
-#define q_abstracttablemodel_qbase_child_event q_abstracttablemodel_super_child_event
 
 /// Inherited from QObject
 ///
@@ -6224,10 +5756,6 @@ void q_abstracttablemodel_on_child_event(void* self, void (*callback)(void*, voi
 ///
 void q_abstracttablemodel_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_custom_event` instead
-///
-#define q_abstracttablemodel_qbase_custom_event q_abstracttablemodel_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -6260,10 +5788,6 @@ void q_abstracttablemodel_on_custom_event(void* self, void (*callback)(void*, vo
 /// @param signal QMetaMethod*
 ///
 void q_abstracttablemodel_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_connect_notify` instead
-///
-#define q_abstracttablemodel_qbase_connect_notify q_abstracttablemodel_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -6298,10 +5822,6 @@ void q_abstracttablemodel_on_connect_notify(void* self, void (*callback)(void*, 
 ///
 void q_abstracttablemodel_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_disconnect_notify` instead
-///
-#define q_abstracttablemodel_qbase_disconnect_notify q_abstracttablemodel_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -6335,10 +5855,6 @@ void q_abstracttablemodel_on_disconnect_notify(void* self, void (*callback)(void
 /// @param column int
 ///
 QModelIndex* q_abstracttablemodel_create_index(void* self, int row, int column);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_create_index` instead
-///
-#define q_abstracttablemodel_qbase_create_index q_abstracttablemodel_super_create_index
 
 /// Inherited from QAbstractItemModel
 ///
@@ -6377,10 +5893,6 @@ void q_abstracttablemodel_on_create_index(void* self, QModelIndex* (*callback)(v
 ///
 void q_abstracttablemodel_encode_data(void* self, libqt_list indexes, void* stream);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_encode_data` instead
-///
-#define q_abstracttablemodel_qbase_encode_data q_abstracttablemodel_super_encode_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
@@ -6417,10 +5929,6 @@ void q_abstracttablemodel_on_encode_data(void* self, void (*callback)(void*, lib
 /// @param stream QDataStream*
 ///
 bool q_abstracttablemodel_decode_data(void* self, int row, int column, void* parent, void* stream);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_decode_data` instead
-///
-#define q_abstracttablemodel_qbase_decode_data q_abstracttablemodel_super_decode_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -6460,10 +5968,6 @@ void q_abstracttablemodel_on_decode_data(void* self, bool (*callback)(void*, int
 ///
 void q_abstracttablemodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_begin_insert_rows` instead
-///
-#define q_abstracttablemodel_qbase_begin_insert_rows q_abstracttablemodel_super_begin_insert_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
@@ -6497,10 +6001,6 @@ void q_abstracttablemodel_on_begin_insert_rows(void* self, void (*callback)(void
 /// @param self QAbstractTableModel*
 ///
 void q_abstracttablemodel_end_insert_rows(void* self);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_end_insert_rows` instead
-///
-#define q_abstracttablemodel_qbase_end_insert_rows q_abstracttablemodel_super_end_insert_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -6536,10 +6036,6 @@ void q_abstracttablemodel_on_end_insert_rows(void* self, void (*callback)());
 ///
 void q_abstracttablemodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_begin_remove_rows` instead
-///
-#define q_abstracttablemodel_qbase_begin_remove_rows q_abstracttablemodel_super_begin_remove_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
@@ -6573,10 +6069,6 @@ void q_abstracttablemodel_on_begin_remove_rows(void* self, void (*callback)(void
 /// @param self QAbstractTableModel*
 ///
 void q_abstracttablemodel_end_remove_rows(void* self);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_end_remove_rows` instead
-///
-#define q_abstracttablemodel_qbase_end_remove_rows q_abstracttablemodel_super_end_remove_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -6614,10 +6106,6 @@ void q_abstracttablemodel_on_end_remove_rows(void* self, void (*callback)());
 ///
 bool q_abstracttablemodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_begin_move_rows` instead
-///
-#define q_abstracttablemodel_qbase_begin_move_rows q_abstracttablemodel_super_begin_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
@@ -6654,10 +6142,6 @@ void q_abstracttablemodel_on_begin_move_rows(void* self, bool (*callback)(void*,
 ///
 void q_abstracttablemodel_end_move_rows(void* self);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_end_move_rows` instead
-///
-#define q_abstracttablemodel_qbase_end_move_rows q_abstracttablemodel_super_end_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
@@ -6691,10 +6175,6 @@ void q_abstracttablemodel_on_end_move_rows(void* self, void (*callback)());
 /// @param last int
 ///
 void q_abstracttablemodel_begin_insert_columns(void* self, void* parent, int first, int last);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_begin_insert_columns` instead
-///
-#define q_abstracttablemodel_qbase_begin_insert_columns q_abstracttablemodel_super_begin_insert_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -6730,10 +6210,6 @@ void q_abstracttablemodel_on_begin_insert_columns(void* self, void (*callback)(v
 ///
 void q_abstracttablemodel_end_insert_columns(void* self);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_end_insert_columns` instead
-///
-#define q_abstracttablemodel_qbase_end_insert_columns q_abstracttablemodel_super_end_insert_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
@@ -6768,10 +6244,6 @@ void q_abstracttablemodel_on_end_insert_columns(void* self, void (*callback)());
 ///
 void q_abstracttablemodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_begin_remove_columns` instead
-///
-#define q_abstracttablemodel_qbase_begin_remove_columns q_abstracttablemodel_super_begin_remove_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
@@ -6805,10 +6277,6 @@ void q_abstracttablemodel_on_begin_remove_columns(void* self, void (*callback)(v
 /// @param self QAbstractTableModel*
 ///
 void q_abstracttablemodel_end_remove_columns(void* self);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_end_remove_columns` instead
-///
-#define q_abstracttablemodel_qbase_end_remove_columns q_abstracttablemodel_super_end_remove_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -6846,10 +6314,6 @@ void q_abstracttablemodel_on_end_remove_columns(void* self, void (*callback)());
 ///
 bool q_abstracttablemodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_begin_move_columns` instead
-///
-#define q_abstracttablemodel_qbase_begin_move_columns q_abstracttablemodel_super_begin_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
@@ -6886,10 +6350,6 @@ void q_abstracttablemodel_on_begin_move_columns(void* self, bool (*callback)(voi
 ///
 void q_abstracttablemodel_end_move_columns(void* self);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_end_move_columns` instead
-///
-#define q_abstracttablemodel_qbase_end_move_columns q_abstracttablemodel_super_end_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
@@ -6921,10 +6381,6 @@ void q_abstracttablemodel_on_end_move_columns(void* self, void (*callback)());
 ///
 void q_abstracttablemodel_begin_reset_model(void* self);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_begin_reset_model` instead
-///
-#define q_abstracttablemodel_qbase_begin_reset_model q_abstracttablemodel_super_begin_reset_model
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
@@ -6955,10 +6411,6 @@ void q_abstracttablemodel_on_begin_reset_model(void* self, void (*callback)());
 /// @param self QAbstractTableModel*
 ///
 void q_abstracttablemodel_end_reset_model(void* self);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_end_reset_model` instead
-///
-#define q_abstracttablemodel_qbase_end_reset_model q_abstracttablemodel_super_end_reset_model
 
 /// Inherited from QAbstractItemModel
 ///
@@ -6992,10 +6444,6 @@ void q_abstracttablemodel_on_end_reset_model(void* self, void (*callback)());
 /// @param to QModelIndex*
 ///
 void q_abstracttablemodel_change_persistent_index(void* self, void* from, void* to);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_change_persistent_index` instead
-///
-#define q_abstracttablemodel_qbase_change_persistent_index q_abstracttablemodel_super_change_persistent_index
 
 /// Inherited from QAbstractItemModel
 ///
@@ -7032,10 +6480,6 @@ void q_abstracttablemodel_on_change_persistent_index(void* self, void (*callback
 ///
 void q_abstracttablemodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_change_persistent_index_list` instead
-///
-#define q_abstracttablemodel_qbase_change_persistent_index_list q_abstracttablemodel_super_change_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
@@ -7071,10 +6515,6 @@ void q_abstracttablemodel_on_change_persistent_index_list(void* self, void (*cal
 ///
 libqt_list q_abstracttablemodel_persistent_index_list(void* self);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_persistent_index_list` instead
-///
-#define q_abstracttablemodel_qbase_persistent_index_list q_abstracttablemodel_super_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
@@ -7108,10 +6548,6 @@ void q_abstracttablemodel_on_persistent_index_list(void* self, libqt_list (*call
 ///
 QObject* q_abstracttablemodel_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_sender` instead
-///
-#define q_abstracttablemodel_qbase_sender q_abstracttablemodel_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -7142,10 +6578,6 @@ void q_abstracttablemodel_on_sender(void* self, QObject* (*callback)());
 /// @param self QAbstractTableModel*
 ///
 int32_t q_abstracttablemodel_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_sender_signal_index` instead
-///
-#define q_abstracttablemodel_qbase_sender_signal_index q_abstracttablemodel_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -7179,10 +6611,6 @@ void q_abstracttablemodel_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 int32_t q_abstracttablemodel_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_receivers` instead
-///
-#define q_abstracttablemodel_qbase_receivers q_abstracttablemodel_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -7215,10 +6643,6 @@ void q_abstracttablemodel_on_receivers(void* self, int32_t (*callback)(void*, co
 /// @param signal QMetaMethod*
 ///
 bool q_abstracttablemodel_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_abstracttablemodel_super_is_signal_connected` instead
-///
-#define q_abstracttablemodel_qbase_is_signal_connected q_abstracttablemodel_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -7444,10 +6868,6 @@ const QMetaObject* q_abstractlistmodel_meta_object(void* self);
 ///
 void q_abstractlistmodel_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_meta_object` instead
-///
-#define q_abstractlistmodel_qbase_meta_object q_abstractlistmodel_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -7467,10 +6887,6 @@ void* q_abstractlistmodel_metacast(void* self, const char* param1);
 /// @param callback void* func(QAbstractListModel* self, const char* param1)
 ///
 void q_abstractlistmodel_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_metacast` instead
-///
-#define q_abstractlistmodel_qbase_metacast q_abstractlistmodel_super_metacast
 
 /// Base class method implementation
 ///
@@ -7492,10 +6908,6 @@ int32_t q_abstractlistmodel_metacall(void* self, int32_t param1, int param2, voi
 /// @param callback int32_t func(QAbstractListModel* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_abstractlistmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_metacall` instead
-///
-#define q_abstractlistmodel_qbase_metacall q_abstractlistmodel_super_metacall
 
 /// Base class method implementation
 ///
@@ -7534,10 +6946,6 @@ QModelIndex* q_abstractlistmodel_index(void* self, int row, int column, void* pa
 ///
 void q_abstractlistmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_index` instead
-///
-#define q_abstractlistmodel_qbase_index q_abstractlistmodel_super_index
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractlistmodel.html#index)
 ///
 /// Base class method implementation
@@ -7568,10 +6976,6 @@ QModelIndex* q_abstractlistmodel_sibling(void* self, int row, int column, void* 
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractlistmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_sibling` instead
-///
-#define q_abstractlistmodel_qbase_sibling q_abstractlistmodel_super_sibling
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractlistmodel.html#sibling)
 ///
@@ -7604,10 +7008,6 @@ bool q_abstractlistmodel_drop_mime_data(void* self, void* data, int32_t action, 
 ///
 void q_abstractlistmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_drop_mime_data` instead
-///
-#define q_abstractlistmodel_qbase_drop_mime_data q_abstractlistmodel_super_drop_mime_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractlistmodel.html#dropMimeData)
 ///
 /// Base class method implementation
@@ -7638,10 +7038,6 @@ int32_t q_abstractlistmodel_flags(void* self, void* index);
 /// @param callback int32_t func(QAbstractListModel* self, QModelIndex* index)
 ///
 void q_abstractlistmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_flags` instead
-///
-#define q_abstractlistmodel_qbase_flags q_abstractlistmodel_super_flags
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractlistmodel.html#flags)
 ///
@@ -7705,10 +7101,6 @@ QModelIndex* q_abstractlistmodel_parent(void* self, void* child);
 ///
 void q_abstractlistmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_parent` instead
-///
-#define q_abstractlistmodel_qbase_parent q_abstractlistmodel_super_parent
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#parent)
@@ -7740,10 +7132,6 @@ int32_t q_abstractlistmodel_column_count(void* self, void* parent);
 ///
 void q_abstractlistmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_column_count` instead
-///
-#define q_abstractlistmodel_qbase_column_count q_abstractlistmodel_super_column_count
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnCount)
@@ -7774,10 +7162,6 @@ bool q_abstractlistmodel_has_children(void* self, void* parent);
 /// @param callback bool func(QAbstractListModel* self, QModelIndex* parent)
 ///
 void q_abstractlistmodel_on_has_children(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_has_children` instead
-///
-#define q_abstractlistmodel_qbase_has_children q_abstractlistmodel_super_has_children
 
 /// Inherited from QAbstractItemModel
 ///
@@ -8537,10 +7921,6 @@ void q_abstractlistmodel_on_destroyed1(void* self, void (*callback)(void*, void*
 ///
 int32_t q_abstractlistmodel_row_count(void* self, void* parent);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_row_count` instead
-///
-#define q_abstractlistmodel_qbase_row_count q_abstractlistmodel_super_row_count
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowCount)
@@ -8574,10 +7954,6 @@ void q_abstractlistmodel_on_row_count(void* self, int32_t (*callback)(void*, voi
 /// @param role int
 ///
 QVariant* q_abstractlistmodel_data(void* self, void* index, int role);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_data` instead
-///
-#define q_abstractlistmodel_qbase_data q_abstractlistmodel_super_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -8617,10 +7993,6 @@ void q_abstractlistmodel_on_data(void* self, QVariant* (*callback)(void*, void*,
 ///
 bool q_abstractlistmodel_set_data(void* self, void* index, void* value, int role);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_set_data` instead
-///
-#define q_abstractlistmodel_qbase_set_data q_abstractlistmodel_super_set_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData)
@@ -8657,10 +8029,6 @@ void q_abstractlistmodel_on_set_data(void* self, bool (*callback)(void*, void*, 
 /// @param role int
 ///
 QVariant* q_abstractlistmodel_header_data(void* self, int section, int32_t orientation, int role);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_header_data` instead
-///
-#define q_abstractlistmodel_qbase_header_data q_abstractlistmodel_super_header_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -8701,10 +8069,6 @@ void q_abstractlistmodel_on_header_data(void* self, QVariant* (*callback)(void*,
 /// @param role int
 ///
 bool q_abstractlistmodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_set_header_data` instead
-///
-#define q_abstractlistmodel_qbase_set_header_data q_abstractlistmodel_super_set_header_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -8755,10 +8119,6 @@ void q_abstractlistmodel_on_set_header_data(void* self, bool (*callback)(void*, 
 ///
 libqt_map q_abstractlistmodel_item_data(void* self, void* index);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_item_data` instead
-///
-#define q_abstractlistmodel_qbase_item_data q_abstractlistmodel_super_item_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#itemData)
@@ -8806,10 +8166,6 @@ void q_abstractlistmodel_on_item_data(void* self, libqt_map (*callback)(void*, v
 ///
 bool q_abstractlistmodel_set_item_data(void* self, void* index, libqt_map roles);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_set_item_data` instead
-///
-#define q_abstractlistmodel_qbase_set_item_data q_abstractlistmodel_super_set_item_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setItemData)
@@ -8843,10 +8199,6 @@ void q_abstractlistmodel_on_set_item_data(void* self, bool (*callback)(void*, vo
 /// @param index QModelIndex*
 ///
 bool q_abstractlistmodel_clear_item_data(void* self, void* index);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_clear_item_data` instead
-///
-#define q_abstractlistmodel_qbase_clear_item_data q_abstractlistmodel_super_clear_item_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -8882,10 +8234,6 @@ void q_abstractlistmodel_on_clear_item_data(void* self, bool (*callback)(void*, 
 ///
 const char** q_abstractlistmodel_mime_types(void* self);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_mime_types` instead
-///
-#define q_abstractlistmodel_qbase_mime_types q_abstractlistmodel_super_mime_types
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
@@ -8919,10 +8267,6 @@ void q_abstractlistmodel_on_mime_types(void* self, const char** (*callback)());
 /// @param indexes libqt_list of QModelIndex*
 ///
 QMimeData* q_abstractlistmodel_mime_data(void* self, libqt_list indexes);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_mime_data` instead
-///
-#define q_abstractlistmodel_qbase_mime_data q_abstractlistmodel_super_mime_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -8960,10 +8304,6 @@ void q_abstractlistmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, 
 /// @param parent QModelIndex*
 ///
 bool q_abstractlistmodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_can_drop_mime_data` instead
-///
-#define q_abstractlistmodel_qbase_can_drop_mime_data q_abstractlistmodel_super_can_drop_mime_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -9003,10 +8343,6 @@ void q_abstractlistmodel_on_can_drop_mime_data(void* self, bool (*callback)(void
 ///
 int32_t q_abstractlistmodel_supported_drop_actions(void* self);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_supported_drop_actions` instead
-///
-#define q_abstractlistmodel_qbase_supported_drop_actions q_abstractlistmodel_super_supported_drop_actions
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDropActions)
@@ -9041,10 +8377,6 @@ void q_abstractlistmodel_on_supported_drop_actions(void* self, int32_t (*callbac
 /// @return flag of enum Qt__DropAction
 ///
 int32_t q_abstractlistmodel_supported_drag_actions(void* self);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_supported_drag_actions` instead
-///
-#define q_abstractlistmodel_qbase_supported_drag_actions q_abstractlistmodel_super_supported_drag_actions
 
 /// Inherited from QAbstractItemModel
 ///
@@ -9081,10 +8413,6 @@ void q_abstractlistmodel_on_supported_drag_actions(void* self, int32_t (*callbac
 /// @param parent QModelIndex*
 ///
 bool q_abstractlistmodel_insert_rows(void* self, int row, int count, void* parent);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_insert_rows` instead
-///
-#define q_abstractlistmodel_qbase_insert_rows q_abstractlistmodel_super_insert_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -9123,10 +8451,6 @@ void q_abstractlistmodel_on_insert_rows(void* self, bool (*callback)(void*, int,
 ///
 bool q_abstractlistmodel_insert_columns(void* self, int column, int count, void* parent);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_insert_columns` instead
-///
-#define q_abstractlistmodel_qbase_insert_columns q_abstractlistmodel_super_insert_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
@@ -9164,10 +8488,6 @@ void q_abstractlistmodel_on_insert_columns(void* self, bool (*callback)(void*, i
 ///
 bool q_abstractlistmodel_remove_rows(void* self, int row, int count, void* parent);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_remove_rows` instead
-///
-#define q_abstractlistmodel_qbase_remove_rows q_abstractlistmodel_super_remove_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
@@ -9204,10 +8524,6 @@ void q_abstractlistmodel_on_remove_rows(void* self, bool (*callback)(void*, int,
 /// @param parent QModelIndex*
 ///
 bool q_abstractlistmodel_remove_columns(void* self, int column, int count, void* parent);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_remove_columns` instead
-///
-#define q_abstractlistmodel_qbase_remove_columns q_abstractlistmodel_super_remove_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -9247,10 +8563,6 @@ void q_abstractlistmodel_on_remove_columns(void* self, bool (*callback)(void*, i
 /// @param destinationChild int
 ///
 bool q_abstractlistmodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_move_rows` instead
-///
-#define q_abstractlistmodel_qbase_move_rows q_abstractlistmodel_super_move_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -9293,10 +8605,6 @@ void q_abstractlistmodel_on_move_rows(void* self, bool (*callback)(void*, void*,
 ///
 bool q_abstractlistmodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_move_columns` instead
-///
-#define q_abstractlistmodel_qbase_move_columns q_abstractlistmodel_super_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
@@ -9334,10 +8642,6 @@ void q_abstractlistmodel_on_move_columns(void* self, bool (*callback)(void*, voi
 ///
 void q_abstractlistmodel_fetch_more(void* self, void* parent);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_fetch_more` instead
-///
-#define q_abstractlistmodel_qbase_fetch_more q_abstractlistmodel_super_fetch_more
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#fetchMore)
@@ -9370,10 +8674,6 @@ void q_abstractlistmodel_on_fetch_more(void* self, void (*callback)(void*, void*
 /// @param parent QModelIndex*
 ///
 bool q_abstractlistmodel_can_fetch_more(void* self, void* parent);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_can_fetch_more` instead
-///
-#define q_abstractlistmodel_qbase_can_fetch_more q_abstractlistmodel_super_can_fetch_more
 
 /// Inherited from QAbstractItemModel
 ///
@@ -9409,10 +8709,6 @@ void q_abstractlistmodel_on_can_fetch_more(void* self, bool (*callback)(void*, v
 ///
 void q_abstractlistmodel_sort(void* self, int column, int32_t order);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_sort` instead
-///
-#define q_abstractlistmodel_qbase_sort q_abstractlistmodel_super_sort
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#sort)
@@ -9446,10 +8742,6 @@ void q_abstractlistmodel_on_sort(void* self, void (*callback)(void*, int, int32_
 /// @param index QModelIndex*
 ///
 QModelIndex* q_abstractlistmodel_buddy(void* self, void* index);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_buddy` instead
-///
-#define q_abstractlistmodel_qbase_buddy q_abstractlistmodel_super_buddy
 
 /// Inherited from QAbstractItemModel
 ///
@@ -9492,10 +8784,6 @@ void q_abstractlistmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, vo
 ///
 libqt_list q_abstractlistmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_match` instead
-///
-#define q_abstractlistmodel_qbase_match q_abstractlistmodel_super_match
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
@@ -9534,10 +8822,6 @@ void q_abstractlistmodel_on_match(void* self, libqt_list (*callback)(void*, void
 /// @param index QModelIndex*
 ///
 QSize* q_abstractlistmodel_span(void* self, void* index);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_span` instead
-///
-#define q_abstractlistmodel_qbase_span q_abstractlistmodel_super_span
 
 /// Inherited from QAbstractItemModel
 ///
@@ -9586,10 +8870,6 @@ void q_abstractlistmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 ///
 libqt_map q_abstractlistmodel_role_names(void* self);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_role_names` instead
-///
-#define q_abstractlistmodel_qbase_role_names q_abstractlistmodel_super_role_names
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames)
@@ -9636,10 +8916,6 @@ void q_abstractlistmodel_on_role_names(void* self, libqt_map (*callback)());
 ///
 void q_abstractlistmodel_multi_data(void* self, void* index, void* roleDataSpan);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_multi_data` instead
-///
-#define q_abstractlistmodel_qbase_multi_data q_abstractlistmodel_super_multi_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
@@ -9673,10 +8949,6 @@ void q_abstractlistmodel_on_multi_data(void* self, void (*callback)(void*, void*
 ///
 bool q_abstractlistmodel_submit(void* self);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_submit` instead
-///
-#define q_abstractlistmodel_qbase_submit q_abstractlistmodel_super_submit
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#submit)
@@ -9707,10 +8979,6 @@ void q_abstractlistmodel_on_submit(void* self, bool (*callback)());
 /// @param self QAbstractListModel*
 ///
 void q_abstractlistmodel_revert(void* self);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_revert` instead
-///
-#define q_abstractlistmodel_qbase_revert q_abstractlistmodel_super_revert
 
 /// Inherited from QAbstractItemModel
 ///
@@ -9743,10 +9011,6 @@ void q_abstractlistmodel_on_revert(void* self, void (*callback)());
 ///
 void q_abstractlistmodel_reset_internal_data(void* self);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_reset_internal_data` instead
-///
-#define q_abstractlistmodel_qbase_reset_internal_data q_abstractlistmodel_super_reset_internal_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
@@ -9778,10 +9042,6 @@ void q_abstractlistmodel_on_reset_internal_data(void* self, void (*callback)());
 /// @param event QEvent*
 ///
 bool q_abstractlistmodel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_event` instead
-///
-#define q_abstractlistmodel_qbase_event q_abstractlistmodel_super_event
 
 /// Inherited from QObject
 ///
@@ -9817,10 +9077,6 @@ void q_abstractlistmodel_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_abstractlistmodel_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_event_filter` instead
-///
-#define q_abstractlistmodel_qbase_event_filter q_abstractlistmodel_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -9855,10 +9111,6 @@ void q_abstractlistmodel_on_event_filter(void* self, bool (*callback)(void*, voi
 ///
 void q_abstractlistmodel_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_timer_event` instead
-///
-#define q_abstractlistmodel_qbase_timer_event q_abstractlistmodel_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -9891,10 +9143,6 @@ void q_abstractlistmodel_on_timer_event(void* self, void (*callback)(void*, void
 /// @param event QChildEvent*
 ///
 void q_abstractlistmodel_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_child_event` instead
-///
-#define q_abstractlistmodel_qbase_child_event q_abstractlistmodel_super_child_event
 
 /// Inherited from QObject
 ///
@@ -9929,10 +9177,6 @@ void q_abstractlistmodel_on_child_event(void* self, void (*callback)(void*, void
 ///
 void q_abstractlistmodel_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_custom_event` instead
-///
-#define q_abstractlistmodel_qbase_custom_event q_abstractlistmodel_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -9965,10 +9209,6 @@ void q_abstractlistmodel_on_custom_event(void* self, void (*callback)(void*, voi
 /// @param signal QMetaMethod*
 ///
 void q_abstractlistmodel_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_connect_notify` instead
-///
-#define q_abstractlistmodel_qbase_connect_notify q_abstractlistmodel_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -10003,10 +9243,6 @@ void q_abstractlistmodel_on_connect_notify(void* self, void (*callback)(void*, v
 ///
 void q_abstractlistmodel_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_disconnect_notify` instead
-///
-#define q_abstractlistmodel_qbase_disconnect_notify q_abstractlistmodel_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -10040,10 +9276,6 @@ void q_abstractlistmodel_on_disconnect_notify(void* self, void (*callback)(void*
 /// @param column int
 ///
 QModelIndex* q_abstractlistmodel_create_index(void* self, int row, int column);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_create_index` instead
-///
-#define q_abstractlistmodel_qbase_create_index q_abstractlistmodel_super_create_index
 
 /// Inherited from QAbstractItemModel
 ///
@@ -10082,10 +9314,6 @@ void q_abstractlistmodel_on_create_index(void* self, QModelIndex* (*callback)(vo
 ///
 void q_abstractlistmodel_encode_data(void* self, libqt_list indexes, void* stream);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_encode_data` instead
-///
-#define q_abstractlistmodel_qbase_encode_data q_abstractlistmodel_super_encode_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
@@ -10122,10 +9350,6 @@ void q_abstractlistmodel_on_encode_data(void* self, void (*callback)(void*, libq
 /// @param stream QDataStream*
 ///
 bool q_abstractlistmodel_decode_data(void* self, int row, int column, void* parent, void* stream);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_decode_data` instead
-///
-#define q_abstractlistmodel_qbase_decode_data q_abstractlistmodel_super_decode_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -10165,10 +9389,6 @@ void q_abstractlistmodel_on_decode_data(void* self, bool (*callback)(void*, int,
 ///
 void q_abstractlistmodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_begin_insert_rows` instead
-///
-#define q_abstractlistmodel_qbase_begin_insert_rows q_abstractlistmodel_super_begin_insert_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
@@ -10202,10 +9422,6 @@ void q_abstractlistmodel_on_begin_insert_rows(void* self, void (*callback)(void*
 /// @param self QAbstractListModel*
 ///
 void q_abstractlistmodel_end_insert_rows(void* self);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_end_insert_rows` instead
-///
-#define q_abstractlistmodel_qbase_end_insert_rows q_abstractlistmodel_super_end_insert_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -10241,10 +9457,6 @@ void q_abstractlistmodel_on_end_insert_rows(void* self, void (*callback)());
 ///
 void q_abstractlistmodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_begin_remove_rows` instead
-///
-#define q_abstractlistmodel_qbase_begin_remove_rows q_abstractlistmodel_super_begin_remove_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
@@ -10278,10 +9490,6 @@ void q_abstractlistmodel_on_begin_remove_rows(void* self, void (*callback)(void*
 /// @param self QAbstractListModel*
 ///
 void q_abstractlistmodel_end_remove_rows(void* self);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_end_remove_rows` instead
-///
-#define q_abstractlistmodel_qbase_end_remove_rows q_abstractlistmodel_super_end_remove_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -10319,10 +9527,6 @@ void q_abstractlistmodel_on_end_remove_rows(void* self, void (*callback)());
 ///
 bool q_abstractlistmodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_begin_move_rows` instead
-///
-#define q_abstractlistmodel_qbase_begin_move_rows q_abstractlistmodel_super_begin_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
@@ -10359,10 +9563,6 @@ void q_abstractlistmodel_on_begin_move_rows(void* self, bool (*callback)(void*, 
 ///
 void q_abstractlistmodel_end_move_rows(void* self);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_end_move_rows` instead
-///
-#define q_abstractlistmodel_qbase_end_move_rows q_abstractlistmodel_super_end_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
@@ -10396,10 +9596,6 @@ void q_abstractlistmodel_on_end_move_rows(void* self, void (*callback)());
 /// @param last int
 ///
 void q_abstractlistmodel_begin_insert_columns(void* self, void* parent, int first, int last);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_begin_insert_columns` instead
-///
-#define q_abstractlistmodel_qbase_begin_insert_columns q_abstractlistmodel_super_begin_insert_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -10435,10 +9631,6 @@ void q_abstractlistmodel_on_begin_insert_columns(void* self, void (*callback)(vo
 ///
 void q_abstractlistmodel_end_insert_columns(void* self);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_end_insert_columns` instead
-///
-#define q_abstractlistmodel_qbase_end_insert_columns q_abstractlistmodel_super_end_insert_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
@@ -10473,10 +9665,6 @@ void q_abstractlistmodel_on_end_insert_columns(void* self, void (*callback)());
 ///
 void q_abstractlistmodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_begin_remove_columns` instead
-///
-#define q_abstractlistmodel_qbase_begin_remove_columns q_abstractlistmodel_super_begin_remove_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
@@ -10510,10 +9698,6 @@ void q_abstractlistmodel_on_begin_remove_columns(void* self, void (*callback)(vo
 /// @param self QAbstractListModel*
 ///
 void q_abstractlistmodel_end_remove_columns(void* self);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_end_remove_columns` instead
-///
-#define q_abstractlistmodel_qbase_end_remove_columns q_abstractlistmodel_super_end_remove_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -10551,10 +9735,6 @@ void q_abstractlistmodel_on_end_remove_columns(void* self, void (*callback)());
 ///
 bool q_abstractlistmodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_begin_move_columns` instead
-///
-#define q_abstractlistmodel_qbase_begin_move_columns q_abstractlistmodel_super_begin_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
@@ -10591,10 +9771,6 @@ void q_abstractlistmodel_on_begin_move_columns(void* self, bool (*callback)(void
 ///
 void q_abstractlistmodel_end_move_columns(void* self);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_end_move_columns` instead
-///
-#define q_abstractlistmodel_qbase_end_move_columns q_abstractlistmodel_super_end_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
@@ -10626,10 +9802,6 @@ void q_abstractlistmodel_on_end_move_columns(void* self, void (*callback)());
 ///
 void q_abstractlistmodel_begin_reset_model(void* self);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_begin_reset_model` instead
-///
-#define q_abstractlistmodel_qbase_begin_reset_model q_abstractlistmodel_super_begin_reset_model
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
@@ -10660,10 +9832,6 @@ void q_abstractlistmodel_on_begin_reset_model(void* self, void (*callback)());
 /// @param self QAbstractListModel*
 ///
 void q_abstractlistmodel_end_reset_model(void* self);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_end_reset_model` instead
-///
-#define q_abstractlistmodel_qbase_end_reset_model q_abstractlistmodel_super_end_reset_model
 
 /// Inherited from QAbstractItemModel
 ///
@@ -10697,10 +9865,6 @@ void q_abstractlistmodel_on_end_reset_model(void* self, void (*callback)());
 /// @param to QModelIndex*
 ///
 void q_abstractlistmodel_change_persistent_index(void* self, void* from, void* to);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_change_persistent_index` instead
-///
-#define q_abstractlistmodel_qbase_change_persistent_index q_abstractlistmodel_super_change_persistent_index
 
 /// Inherited from QAbstractItemModel
 ///
@@ -10737,10 +9901,6 @@ void q_abstractlistmodel_on_change_persistent_index(void* self, void (*callback)
 ///
 void q_abstractlistmodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_change_persistent_index_list` instead
-///
-#define q_abstractlistmodel_qbase_change_persistent_index_list q_abstractlistmodel_super_change_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
@@ -10776,10 +9936,6 @@ void q_abstractlistmodel_on_change_persistent_index_list(void* self, void (*call
 ///
 libqt_list q_abstractlistmodel_persistent_index_list(void* self);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_persistent_index_list` instead
-///
-#define q_abstractlistmodel_qbase_persistent_index_list q_abstractlistmodel_super_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
@@ -10813,10 +9969,6 @@ void q_abstractlistmodel_on_persistent_index_list(void* self, libqt_list (*callb
 ///
 QObject* q_abstractlistmodel_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_sender` instead
-///
-#define q_abstractlistmodel_qbase_sender q_abstractlistmodel_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -10847,10 +9999,6 @@ void q_abstractlistmodel_on_sender(void* self, QObject* (*callback)());
 /// @param self QAbstractListModel*
 ///
 int32_t q_abstractlistmodel_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_sender_signal_index` instead
-///
-#define q_abstractlistmodel_qbase_sender_signal_index q_abstractlistmodel_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -10884,10 +10032,6 @@ void q_abstractlistmodel_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 int32_t q_abstractlistmodel_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_receivers` instead
-///
-#define q_abstractlistmodel_qbase_receivers q_abstractlistmodel_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -10920,10 +10064,6 @@ void q_abstractlistmodel_on_receivers(void* self, int32_t (*callback)(void*, con
 /// @param signal QMetaMethod*
 ///
 bool q_abstractlistmodel_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_abstractlistmodel_super_is_signal_connected` instead
-///
-#define q_abstractlistmodel_qbase_is_signal_connected q_abstractlistmodel_super_is_signal_connected
 
 /// Inherited from QObject
 ///

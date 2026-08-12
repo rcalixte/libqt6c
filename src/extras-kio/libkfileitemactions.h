@@ -37,10 +37,6 @@ const QMetaObject* k_fileitemactions_meta_object(void* self);
 ///
 void k_fileitemactions_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_fileitemactions_super_meta_object` instead
-///
-#define k_fileitemactions_qbase_meta_object k_fileitemactions_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* k_fileitemactions_metacast(void* self, const char* param1);
 /// @param callback void* func(KFileItemActions* self, const char* param1)
 ///
 void k_fileitemactions_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_fileitemactions_super_metacast` instead
-///
-#define k_fileitemactions_qbase_metacast k_fileitemactions_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t k_fileitemactions_metacall(void* self, int32_t param1, int param2, void*
 /// @param callback int32_t func(KFileItemActions* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_fileitemactions_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_fileitemactions_super_metacall` instead
-///
-#define k_fileitemactions_qbase_metacall k_fileitemactions_super_metacall
 
 /// Base class method implementation
 ///
@@ -675,10 +663,6 @@ void k_fileitemactions_on_destroyed1(void* self, void (*callback)(void*, void*))
 ///
 bool k_fileitemactions_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_fileitemactions_super_event` instead
-///
-#define k_fileitemactions_qbase_event k_fileitemactions_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -712,10 +696,6 @@ void k_fileitemactions_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool k_fileitemactions_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_fileitemactions_super_event_filter` instead
-///
-#define k_fileitemactions_qbase_event_filter k_fileitemactions_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -751,10 +731,6 @@ void k_fileitemactions_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 void k_fileitemactions_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_fileitemactions_super_timer_event` instead
-///
-#define k_fileitemactions_qbase_timer_event k_fileitemactions_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -787,10 +763,6 @@ void k_fileitemactions_on_timer_event(void* self, void (*callback)(void*, void*)
 /// @param event QChildEvent*
 ///
 void k_fileitemactions_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_fileitemactions_super_child_event` instead
-///
-#define k_fileitemactions_qbase_child_event k_fileitemactions_super_child_event
 
 /// Inherited from QObject
 ///
@@ -825,10 +797,6 @@ void k_fileitemactions_on_child_event(void* self, void (*callback)(void*, void*)
 ///
 void k_fileitemactions_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_fileitemactions_super_custom_event` instead
-///
-#define k_fileitemactions_qbase_custom_event k_fileitemactions_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -861,10 +829,6 @@ void k_fileitemactions_on_custom_event(void* self, void (*callback)(void*, void*
 /// @param signal QMetaMethod*
 ///
 void k_fileitemactions_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_fileitemactions_super_connect_notify` instead
-///
-#define k_fileitemactions_qbase_connect_notify k_fileitemactions_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -899,10 +863,6 @@ void k_fileitemactions_on_connect_notify(void* self, void (*callback)(void*, voi
 ///
 void k_fileitemactions_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_fileitemactions_super_disconnect_notify` instead
-///
-#define k_fileitemactions_qbase_disconnect_notify k_fileitemactions_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -935,10 +895,6 @@ void k_fileitemactions_on_disconnect_notify(void* self, void (*callback)(void*, 
 ///
 QObject* k_fileitemactions_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_fileitemactions_super_sender` instead
-///
-#define k_fileitemactions_qbase_sender k_fileitemactions_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -969,10 +925,6 @@ void k_fileitemactions_on_sender(void* self, QObject* (*callback)());
 /// @param self KFileItemActions*
 ///
 int32_t k_fileitemactions_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_fileitemactions_super_sender_signal_index` instead
-///
-#define k_fileitemactions_qbase_sender_signal_index k_fileitemactions_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1006,10 +958,6 @@ void k_fileitemactions_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 int32_t k_fileitemactions_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_fileitemactions_super_receivers` instead
-///
-#define k_fileitemactions_qbase_receivers k_fileitemactions_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1042,10 +990,6 @@ void k_fileitemactions_on_receivers(void* self, int32_t (*callback)(void*, const
 /// @param signal QMetaMethod*
 ///
 bool k_fileitemactions_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_fileitemactions_super_is_signal_connected` instead
-///
-#define k_fileitemactions_qbase_is_signal_connected k_fileitemactions_super_is_signal_connected
 
 /// Inherited from QObject
 ///

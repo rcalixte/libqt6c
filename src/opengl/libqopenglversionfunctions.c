@@ -298,8 +298,8 @@ GLboolean__GLenum__Function q_openglfunctions_1_0_corebackend__functions_is_enab
     return (GLboolean__GLenum__Function)QOpenGLFunctions_1_0_CoreBackend__Functions_IsEnabled((QOpenGLFunctions_1_0_CoreBackend__Functions*)self);
 }
 
-void q_openglfunctions_1_0_corebackend__functions_set_is_enabled(void* self, uint8_t (*isEnabled)(uint32_t funcparam1)) {
-    QOpenGLFunctions_1_0_CoreBackend__Functions_SetIsEnabled((QOpenGLFunctions_1_0_CoreBackend__Functions*)self, (intptr_t)isEnabled);
+void q_openglfunctions_1_0_corebackend__functions_set_is_enabled(void* self, uint8_t (*IsEnabled)(uint32_t funcparam1)) {
+    QOpenGLFunctions_1_0_CoreBackend__Functions_SetIsEnabled((QOpenGLFunctions_1_0_CoreBackend__Functions*)self, (intptr_t)IsEnabled);
 }
 
 void q_openglfunctions_1_0_corebackend__functions_delete(void* self) {
@@ -310,8 +310,8 @@ GLboolean__GLuint__Function q_openglfunctions_1_1_corebackend__functions_is_text
     return (GLboolean__GLuint__Function)QOpenGLFunctions_1_1_CoreBackend__Functions_IsTexture((QOpenGLFunctions_1_1_CoreBackend__Functions*)self);
 }
 
-void q_openglfunctions_1_1_corebackend__functions_set_is_texture(void* self, uint8_t (*isTexture)(uint32_t funcparam1)) {
-    QOpenGLFunctions_1_1_CoreBackend__Functions_SetIsTexture((QOpenGLFunctions_1_1_CoreBackend__Functions*)self, (intptr_t)isTexture);
+void q_openglfunctions_1_1_corebackend__functions_set_is_texture(void* self, uint8_t (*IsTexture)(uint32_t funcparam1)) {
+    QOpenGLFunctions_1_1_CoreBackend__Functions_SetIsTexture((QOpenGLFunctions_1_1_CoreBackend__Functions*)self, (intptr_t)IsTexture);
 }
 
 void q_openglfunctions_1_1_corebackend__functions_delete(void* self) {
@@ -322,24 +322,24 @@ GLboolean__GLenum__Function q_openglfunctions_1_5_corebackend__functions_unmap_b
     return (GLboolean__GLenum__Function)QOpenGLFunctions_1_5_CoreBackend__Functions_UnmapBuffer((QOpenGLFunctions_1_5_CoreBackend__Functions*)self);
 }
 
-void q_openglfunctions_1_5_corebackend__functions_set_unmap_buffer(void* self, uint8_t (*unmapBuffer)(uint32_t funcparam1)) {
-    QOpenGLFunctions_1_5_CoreBackend__Functions_SetUnmapBuffer((QOpenGLFunctions_1_5_CoreBackend__Functions*)self, (intptr_t)unmapBuffer);
+void q_openglfunctions_1_5_corebackend__functions_set_unmap_buffer(void* self, uint8_t (*UnmapBuffer)(uint32_t funcparam1)) {
+    QOpenGLFunctions_1_5_CoreBackend__Functions_SetUnmapBuffer((QOpenGLFunctions_1_5_CoreBackend__Functions*)self, (intptr_t)UnmapBuffer);
 }
 
 GLboolean__GLuint__Function q_openglfunctions_1_5_corebackend__functions_is_buffer(void* self) {
     return (GLboolean__GLuint__Function)QOpenGLFunctions_1_5_CoreBackend__Functions_IsBuffer((QOpenGLFunctions_1_5_CoreBackend__Functions*)self);
 }
 
-void q_openglfunctions_1_5_corebackend__functions_set_is_buffer(void* self, uint8_t (*isBuffer)(uint32_t funcparam1)) {
-    QOpenGLFunctions_1_5_CoreBackend__Functions_SetIsBuffer((QOpenGLFunctions_1_5_CoreBackend__Functions*)self, (intptr_t)isBuffer);
+void q_openglfunctions_1_5_corebackend__functions_set_is_buffer(void* self, uint8_t (*IsBuffer)(uint32_t funcparam1)) {
+    QOpenGLFunctions_1_5_CoreBackend__Functions_SetIsBuffer((QOpenGLFunctions_1_5_CoreBackend__Functions*)self, (intptr_t)IsBuffer);
 }
 
 GLboolean__GLuint__Function q_openglfunctions_1_5_corebackend__functions_is_query(void* self) {
     return (GLboolean__GLuint__Function)QOpenGLFunctions_1_5_CoreBackend__Functions_IsQuery((QOpenGLFunctions_1_5_CoreBackend__Functions*)self);
 }
 
-void q_openglfunctions_1_5_corebackend__functions_set_is_query(void* self, uint8_t (*isQuery)(uint32_t funcparam1)) {
-    QOpenGLFunctions_1_5_CoreBackend__Functions_SetIsQuery((QOpenGLFunctions_1_5_CoreBackend__Functions*)self, (intptr_t)isQuery);
+void q_openglfunctions_1_5_corebackend__functions_set_is_query(void* self, uint8_t (*IsQuery)(uint32_t funcparam1)) {
+    QOpenGLFunctions_1_5_CoreBackend__Functions_SetIsQuery((QOpenGLFunctions_1_5_CoreBackend__Functions*)self, (intptr_t)IsQuery);
 }
 
 void q_openglfunctions_1_5_corebackend__functions_delete(void* self) {
@@ -350,32 +350,32 @@ GLboolean__GLuint__Function q_openglfunctions_2_0_corebackend__functions_is_shad
     return (GLboolean__GLuint__Function)QOpenGLFunctions_2_0_CoreBackend__Functions_IsShader((QOpenGLFunctions_2_0_CoreBackend__Functions*)self);
 }
 
-void q_openglfunctions_2_0_corebackend__functions_set_is_shader(void* self, uint8_t (*isShader)(uint32_t funcparam1)) {
-    QOpenGLFunctions_2_0_CoreBackend__Functions_SetIsShader((QOpenGLFunctions_2_0_CoreBackend__Functions*)self, (intptr_t)isShader);
+void q_openglfunctions_2_0_corebackend__functions_set_is_shader(void* self, uint8_t (*IsShader)(uint32_t funcparam1)) {
+    QOpenGLFunctions_2_0_CoreBackend__Functions_SetIsShader((QOpenGLFunctions_2_0_CoreBackend__Functions*)self, (intptr_t)IsShader);
 }
 
 GLboolean__GLuint__Function q_openglfunctions_2_0_corebackend__functions_is_program(void* self) {
     return (GLboolean__GLuint__Function)QOpenGLFunctions_2_0_CoreBackend__Functions_IsProgram((QOpenGLFunctions_2_0_CoreBackend__Functions*)self);
 }
 
-void q_openglfunctions_2_0_corebackend__functions_set_is_program(void* self, uint8_t (*isProgram)(uint32_t funcparam1)) {
-    QOpenGLFunctions_2_0_CoreBackend__Functions_SetIsProgram((QOpenGLFunctions_2_0_CoreBackend__Functions*)self, (intptr_t)isProgram);
+void q_openglfunctions_2_0_corebackend__functions_set_is_program(void* self, uint8_t (*IsProgram)(uint32_t funcparam1)) {
+    QOpenGLFunctions_2_0_CoreBackend__Functions_SetIsProgram((QOpenGLFunctions_2_0_CoreBackend__Functions*)self, (intptr_t)IsProgram);
 }
 
 GLuint__GLenum__Function q_openglfunctions_2_0_corebackend__functions_create_shader(void* self) {
     return (GLuint__GLenum__Function)QOpenGLFunctions_2_0_CoreBackend__Functions_CreateShader((QOpenGLFunctions_2_0_CoreBackend__Functions*)self);
 }
 
-void q_openglfunctions_2_0_corebackend__functions_set_create_shader(void* self, uint32_t (*createShader)(uint32_t funcparam1)) {
-    QOpenGLFunctions_2_0_CoreBackend__Functions_SetCreateShader((QOpenGLFunctions_2_0_CoreBackend__Functions*)self, (intptr_t)createShader);
+void q_openglfunctions_2_0_corebackend__functions_set_create_shader(void* self, uint32_t (*CreateShader)(uint32_t funcparam1)) {
+    QOpenGLFunctions_2_0_CoreBackend__Functions_SetCreateShader((QOpenGLFunctions_2_0_CoreBackend__Functions*)self, (intptr_t)CreateShader);
 }
 
 GLuint__void__Function q_openglfunctions_2_0_corebackend__functions_create_program(void* self) {
     return (GLuint__void__Function)QOpenGLFunctions_2_0_CoreBackend__Functions_CreateProgram((QOpenGLFunctions_2_0_CoreBackend__Functions*)self);
 }
 
-void q_openglfunctions_2_0_corebackend__functions_set_create_program(void* self, uint32_t (*createProgram)()) {
-    QOpenGLFunctions_2_0_CoreBackend__Functions_SetCreateProgram((QOpenGLFunctions_2_0_CoreBackend__Functions*)self, (intptr_t)createProgram);
+void q_openglfunctions_2_0_corebackend__functions_set_create_program(void* self, uint32_t (*CreateProgram)()) {
+    QOpenGLFunctions_2_0_CoreBackend__Functions_SetCreateProgram((QOpenGLFunctions_2_0_CoreBackend__Functions*)self, (intptr_t)CreateProgram);
 }
 
 void q_openglfunctions_2_0_corebackend__functions_delete(void* self) {
@@ -386,32 +386,32 @@ GLboolean__GLuint__Function q_openglfunctions_3_0_corebackend__functions_is_vert
     return (GLboolean__GLuint__Function)QOpenGLFunctions_3_0_CoreBackend__Functions_IsVertexArray((QOpenGLFunctions_3_0_CoreBackend__Functions*)self);
 }
 
-void q_openglfunctions_3_0_corebackend__functions_set_is_vertex_array(void* self, uint8_t (*isVertexArray)(uint32_t funcparam1)) {
-    QOpenGLFunctions_3_0_CoreBackend__Functions_SetIsVertexArray((QOpenGLFunctions_3_0_CoreBackend__Functions*)self, (intptr_t)isVertexArray);
+void q_openglfunctions_3_0_corebackend__functions_set_is_vertex_array(void* self, uint8_t (*IsVertexArray)(uint32_t funcparam1)) {
+    QOpenGLFunctions_3_0_CoreBackend__Functions_SetIsVertexArray((QOpenGLFunctions_3_0_CoreBackend__Functions*)self, (intptr_t)IsVertexArray);
 }
 
 GLboolean__GLuint__Function q_openglfunctions_3_0_corebackend__functions_is_framebuffer(void* self) {
     return (GLboolean__GLuint__Function)QOpenGLFunctions_3_0_CoreBackend__Functions_IsFramebuffer((QOpenGLFunctions_3_0_CoreBackend__Functions*)self);
 }
 
-void q_openglfunctions_3_0_corebackend__functions_set_is_framebuffer(void* self, uint8_t (*isFramebuffer)(uint32_t funcparam1)) {
-    QOpenGLFunctions_3_0_CoreBackend__Functions_SetIsFramebuffer((QOpenGLFunctions_3_0_CoreBackend__Functions*)self, (intptr_t)isFramebuffer);
+void q_openglfunctions_3_0_corebackend__functions_set_is_framebuffer(void* self, uint8_t (*IsFramebuffer)(uint32_t funcparam1)) {
+    QOpenGLFunctions_3_0_CoreBackend__Functions_SetIsFramebuffer((QOpenGLFunctions_3_0_CoreBackend__Functions*)self, (intptr_t)IsFramebuffer);
 }
 
 GLboolean__GLuint__Function q_openglfunctions_3_0_corebackend__functions_is_renderbuffer(void* self) {
     return (GLboolean__GLuint__Function)QOpenGLFunctions_3_0_CoreBackend__Functions_IsRenderbuffer((QOpenGLFunctions_3_0_CoreBackend__Functions*)self);
 }
 
-void q_openglfunctions_3_0_corebackend__functions_set_is_renderbuffer(void* self, uint8_t (*isRenderbuffer)(uint32_t funcparam1)) {
-    QOpenGLFunctions_3_0_CoreBackend__Functions_SetIsRenderbuffer((QOpenGLFunctions_3_0_CoreBackend__Functions*)self, (intptr_t)isRenderbuffer);
+void q_openglfunctions_3_0_corebackend__functions_set_is_renderbuffer(void* self, uint8_t (*IsRenderbuffer)(uint32_t funcparam1)) {
+    QOpenGLFunctions_3_0_CoreBackend__Functions_SetIsRenderbuffer((QOpenGLFunctions_3_0_CoreBackend__Functions*)self, (intptr_t)IsRenderbuffer);
 }
 
 GLboolean__GLenum_GLuint__Function q_openglfunctions_3_0_corebackend__functions_is_enabledi(void* self) {
     return (GLboolean__GLenum_GLuint__Function)QOpenGLFunctions_3_0_CoreBackend__Functions_IsEnabledi((QOpenGLFunctions_3_0_CoreBackend__Functions*)self);
 }
 
-void q_openglfunctions_3_0_corebackend__functions_set_is_enabledi(void* self, uint8_t (*isEnabledi)(uint32_t funcparam1, uint32_t funcparam2)) {
-    QOpenGLFunctions_3_0_CoreBackend__Functions_SetIsEnabledi((QOpenGLFunctions_3_0_CoreBackend__Functions*)self, (intptr_t)isEnabledi);
+void q_openglfunctions_3_0_corebackend__functions_set_is_enabledi(void* self, uint8_t (*IsEnabledi)(uint32_t funcparam1, uint32_t funcparam2)) {
+    QOpenGLFunctions_3_0_CoreBackend__Functions_SetIsEnabledi((QOpenGLFunctions_3_0_CoreBackend__Functions*)self, (intptr_t)IsEnabledi);
 }
 
 void q_openglfunctions_3_0_corebackend__functions_delete(void* self) {
@@ -422,8 +422,8 @@ GLboolean__GLuint__Function q_openglfunctions_3_3_corebackend__functions_is_samp
     return (GLboolean__GLuint__Function)QOpenGLFunctions_3_3_CoreBackend__Functions_IsSampler((QOpenGLFunctions_3_3_CoreBackend__Functions*)self);
 }
 
-void q_openglfunctions_3_3_corebackend__functions_set_is_sampler(void* self, uint8_t (*isSampler)(uint32_t funcparam1)) {
-    QOpenGLFunctions_3_3_CoreBackend__Functions_SetIsSampler((QOpenGLFunctions_3_3_CoreBackend__Functions*)self, (intptr_t)isSampler);
+void q_openglfunctions_3_3_corebackend__functions_set_is_sampler(void* self, uint8_t (*IsSampler)(uint32_t funcparam1)) {
+    QOpenGLFunctions_3_3_CoreBackend__Functions_SetIsSampler((QOpenGLFunctions_3_3_CoreBackend__Functions*)self, (intptr_t)IsSampler);
 }
 
 void q_openglfunctions_3_3_corebackend__functions_delete(void* self) {
@@ -434,8 +434,8 @@ GLboolean__GLuint__Function q_openglfunctions_4_0_corebackend__functions_is_tran
     return (GLboolean__GLuint__Function)QOpenGLFunctions_4_0_CoreBackend__Functions_IsTransformFeedback((QOpenGLFunctions_4_0_CoreBackend__Functions*)self);
 }
 
-void q_openglfunctions_4_0_corebackend__functions_set_is_transform_feedback(void* self, uint8_t (*isTransformFeedback)(uint32_t funcparam1)) {
-    QOpenGLFunctions_4_0_CoreBackend__Functions_SetIsTransformFeedback((QOpenGLFunctions_4_0_CoreBackend__Functions*)self, (intptr_t)isTransformFeedback);
+void q_openglfunctions_4_0_corebackend__functions_set_is_transform_feedback(void* self, uint8_t (*IsTransformFeedback)(uint32_t funcparam1)) {
+    QOpenGLFunctions_4_0_CoreBackend__Functions_SetIsTransformFeedback((QOpenGLFunctions_4_0_CoreBackend__Functions*)self, (intptr_t)IsTransformFeedback);
 }
 
 void q_openglfunctions_4_0_corebackend__functions_delete(void* self) {
@@ -446,8 +446,8 @@ GLboolean__GLuint__Function q_openglfunctions_4_1_corebackend__functions_is_prog
     return (GLboolean__GLuint__Function)QOpenGLFunctions_4_1_CoreBackend__Functions_IsProgramPipeline((QOpenGLFunctions_4_1_CoreBackend__Functions*)self);
 }
 
-void q_openglfunctions_4_1_corebackend__functions_set_is_program_pipeline(void* self, uint8_t (*isProgramPipeline)(uint32_t funcparam1)) {
-    QOpenGLFunctions_4_1_CoreBackend__Functions_SetIsProgramPipeline((QOpenGLFunctions_4_1_CoreBackend__Functions*)self, (intptr_t)isProgramPipeline);
+void q_openglfunctions_4_1_corebackend__functions_set_is_program_pipeline(void* self, uint8_t (*IsProgramPipeline)(uint32_t funcparam1)) {
+    QOpenGLFunctions_4_1_CoreBackend__Functions_SetIsProgramPipeline((QOpenGLFunctions_4_1_CoreBackend__Functions*)self, (intptr_t)IsProgramPipeline);
 }
 
 void q_openglfunctions_4_1_corebackend__functions_delete(void* self) {
@@ -458,8 +458,8 @@ GLboolean__GLuint__Function q_openglfunctions_4_5_corebackend__functions_unmap_n
     return (GLboolean__GLuint__Function)QOpenGLFunctions_4_5_CoreBackend__Functions_UnmapNamedBuffer((QOpenGLFunctions_4_5_CoreBackend__Functions*)self);
 }
 
-void q_openglfunctions_4_5_corebackend__functions_set_unmap_named_buffer(void* self, uint8_t (*unmapNamedBuffer)(uint32_t funcparam1)) {
-    QOpenGLFunctions_4_5_CoreBackend__Functions_SetUnmapNamedBuffer((QOpenGLFunctions_4_5_CoreBackend__Functions*)self, (intptr_t)unmapNamedBuffer);
+void q_openglfunctions_4_5_corebackend__functions_set_unmap_named_buffer(void* self, uint8_t (*UnmapNamedBuffer)(uint32_t funcparam1)) {
+    QOpenGLFunctions_4_5_CoreBackend__Functions_SetUnmapNamedBuffer((QOpenGLFunctions_4_5_CoreBackend__Functions*)self, (intptr_t)UnmapNamedBuffer);
 }
 
 void q_openglfunctions_4_5_corebackend__functions_delete(void* self) {
@@ -470,24 +470,24 @@ GLboolean__GLuint__Function q_openglfunctions_1_0_deprecatedbackend__functions_i
     return (GLboolean__GLuint__Function)QOpenGLFunctions_1_0_DeprecatedBackend__Functions_IsList((QOpenGLFunctions_1_0_DeprecatedBackend__Functions*)self);
 }
 
-void q_openglfunctions_1_0_deprecatedbackend__functions_set_is_list(void* self, uint8_t (*isList)(uint32_t funcparam1)) {
-    QOpenGLFunctions_1_0_DeprecatedBackend__Functions_SetIsList((QOpenGLFunctions_1_0_DeprecatedBackend__Functions*)self, (intptr_t)isList);
+void q_openglfunctions_1_0_deprecatedbackend__functions_set_is_list(void* self, uint8_t (*IsList)(uint32_t funcparam1)) {
+    QOpenGLFunctions_1_0_DeprecatedBackend__Functions_SetIsList((QOpenGLFunctions_1_0_DeprecatedBackend__Functions*)self, (intptr_t)IsList);
 }
 
 GLint__GLenum__Function q_openglfunctions_1_0_deprecatedbackend__functions_render_mode(void* self) {
     return (GLint__GLenum__Function)QOpenGLFunctions_1_0_DeprecatedBackend__Functions_RenderMode((QOpenGLFunctions_1_0_DeprecatedBackend__Functions*)self);
 }
 
-void q_openglfunctions_1_0_deprecatedbackend__functions_set_render_mode(void* self, int32_t (*renderMode)(uint32_t funcparam1)) {
-    QOpenGLFunctions_1_0_DeprecatedBackend__Functions_SetRenderMode((QOpenGLFunctions_1_0_DeprecatedBackend__Functions*)self, (intptr_t)renderMode);
+void q_openglfunctions_1_0_deprecatedbackend__functions_set_render_mode(void* self, int32_t (*RenderMode)(uint32_t funcparam1)) {
+    QOpenGLFunctions_1_0_DeprecatedBackend__Functions_SetRenderMode((QOpenGLFunctions_1_0_DeprecatedBackend__Functions*)self, (intptr_t)RenderMode);
 }
 
 GLuint__GLsizei__Function q_openglfunctions_1_0_deprecatedbackend__functions_gen_lists(void* self) {
     return (GLuint__GLsizei__Function)QOpenGLFunctions_1_0_DeprecatedBackend__Functions_GenLists((QOpenGLFunctions_1_0_DeprecatedBackend__Functions*)self);
 }
 
-void q_openglfunctions_1_0_deprecatedbackend__functions_set_gen_lists(void* self, uint32_t (*genLists)(int32_t funcparam1)) {
-    QOpenGLFunctions_1_0_DeprecatedBackend__Functions_SetGenLists((QOpenGLFunctions_1_0_DeprecatedBackend__Functions*)self, (intptr_t)genLists);
+void q_openglfunctions_1_0_deprecatedbackend__functions_set_gen_lists(void* self, uint32_t (*GenLists)(int32_t funcparam1)) {
+    QOpenGLFunctions_1_0_DeprecatedBackend__Functions_SetGenLists((QOpenGLFunctions_1_0_DeprecatedBackend__Functions*)self, (intptr_t)GenLists);
 }
 
 void q_openglfunctions_1_0_deprecatedbackend__functions_delete(void* self) {

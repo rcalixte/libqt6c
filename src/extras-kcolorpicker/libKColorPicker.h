@@ -46,10 +46,6 @@ const QMetaObject* k_colorpicker__kcolorpicker_meta_object(void* self);
 ///
 void k_colorpicker__kcolorpicker_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_meta_object` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_meta_object k_colorpicker__kcolorpicker_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -69,10 +65,6 @@ void* k_colorpicker__kcolorpicker_metacast(void* self, const char* param1);
 /// @param callback void* func(kColorPicker__KColorPicker* self, const char* param1)
 ///
 void k_colorpicker__kcolorpicker_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_metacast` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_metacast k_colorpicker__kcolorpicker_super_metacast
 
 /// Base class method implementation
 ///
@@ -94,10 +86,6 @@ int32_t k_colorpicker__kcolorpicker_metacall(void* self, int32_t param1, int par
 /// @param callback int32_t func(kColorPicker__KColorPicker* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_colorpicker__kcolorpicker_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_metacall` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_metacall k_colorpicker__kcolorpicker_super_metacall
 
 /// Base class method implementation
 ///
@@ -3580,10 +3568,6 @@ int32_t k_colorpicker__kcolorpicker_encode_metric_f(int32_t metric, double value
 ///
 QSize* k_colorpicker__kcolorpicker_size_hint(void* self);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_size_hint` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_size_hint k_colorpicker__kcolorpicker_super_size_hint
-
 /// Inherited from QToolButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtoolbutton.html#sizeHint)
@@ -3616,10 +3600,6 @@ void k_colorpicker__kcolorpicker_on_size_hint(void* self, QSize* (*callback)());
 /// @param self kColorPicker__KColorPicker*
 ///
 QSize* k_colorpicker__kcolorpicker_minimum_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_minimum_size_hint` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_minimum_size_hint k_colorpicker__kcolorpicker_super_minimum_size_hint
 
 /// Inherited from QToolButton
 ///
@@ -3655,10 +3635,6 @@ void k_colorpicker__kcolorpicker_on_minimum_size_hint(void* self, QSize* (*callb
 ///
 bool k_colorpicker__kcolorpicker_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_event k_colorpicker__kcolorpicker_super_event
-
 /// Inherited from QToolButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtoolbutton.html#event)
@@ -3691,10 +3667,6 @@ void k_colorpicker__kcolorpicker_on_event(void* self, bool (*callback)(void*, vo
 /// @param param1 QMouseEvent*
 ///
 void k_colorpicker__kcolorpicker_mouse_press_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_mouse_press_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_mouse_press_event k_colorpicker__kcolorpicker_super_mouse_press_event
 
 /// Inherited from QToolButton
 ///
@@ -3729,10 +3701,6 @@ void k_colorpicker__kcolorpicker_on_mouse_press_event(void* self, void (*callbac
 ///
 void k_colorpicker__kcolorpicker_mouse_release_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_mouse_release_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_mouse_release_event k_colorpicker__kcolorpicker_super_mouse_release_event
-
 /// Inherited from QToolButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtoolbutton.html#mouseReleaseEvent)
@@ -3765,10 +3733,6 @@ void k_colorpicker__kcolorpicker_on_mouse_release_event(void* self, void (*callb
 /// @param param1 QPaintEvent*
 ///
 void k_colorpicker__kcolorpicker_paint_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_paint_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_paint_event k_colorpicker__kcolorpicker_super_paint_event
 
 /// Inherited from QToolButton
 ///
@@ -3803,10 +3767,6 @@ void k_colorpicker__kcolorpicker_on_paint_event(void* self, void (*callback)(voi
 ///
 void k_colorpicker__kcolorpicker_action_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_action_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_action_event k_colorpicker__kcolorpicker_super_action_event
-
 /// Inherited from QToolButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtoolbutton.html#actionEvent)
@@ -3839,10 +3799,6 @@ void k_colorpicker__kcolorpicker_on_action_event(void* self, void (*callback)(vo
 /// @param param1 QEnterEvent*
 ///
 void k_colorpicker__kcolorpicker_enter_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_enter_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_enter_event k_colorpicker__kcolorpicker_super_enter_event
 
 /// Inherited from QToolButton
 ///
@@ -3877,10 +3833,6 @@ void k_colorpicker__kcolorpicker_on_enter_event(void* self, void (*callback)(voi
 ///
 void k_colorpicker__kcolorpicker_leave_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_leave_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_leave_event k_colorpicker__kcolorpicker_super_leave_event
-
 /// Inherited from QToolButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtoolbutton.html#leaveEvent)
@@ -3913,10 +3865,6 @@ void k_colorpicker__kcolorpicker_on_leave_event(void* self, void (*callback)(voi
 /// @param param1 QTimerEvent*
 ///
 void k_colorpicker__kcolorpicker_timer_event(void* self, void* param1);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_timer_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_timer_event k_colorpicker__kcolorpicker_super_timer_event
 
 /// Inherited from QToolButton
 ///
@@ -3951,10 +3899,6 @@ void k_colorpicker__kcolorpicker_on_timer_event(void* self, void (*callback)(voi
 ///
 void k_colorpicker__kcolorpicker_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_change_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_change_event k_colorpicker__kcolorpicker_super_change_event
-
 /// Inherited from QToolButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtoolbutton.html#changeEvent)
@@ -3988,10 +3932,6 @@ void k_colorpicker__kcolorpicker_on_change_event(void* self, void (*callback)(vo
 ///
 bool k_colorpicker__kcolorpicker_hit_button(void* self, void* pos);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_hit_button` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_hit_button k_colorpicker__kcolorpicker_super_hit_button
-
 /// Inherited from QToolButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtoolbutton.html#hitButton)
@@ -4024,10 +3964,6 @@ void k_colorpicker__kcolorpicker_on_hit_button(void* self, bool (*callback)(void
 ///
 void k_colorpicker__kcolorpicker_check_state_set(void* self);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_check_state_set` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_check_state_set k_colorpicker__kcolorpicker_super_check_state_set
-
 /// Inherited from QToolButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtoolbutton.html#checkStateSet)
@@ -4058,10 +3994,6 @@ void k_colorpicker__kcolorpicker_on_check_state_set(void* self, void (*callback)
 /// @param self kColorPicker__KColorPicker*
 ///
 void k_colorpicker__kcolorpicker_next_check_state(void* self);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_next_check_state` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_next_check_state k_colorpicker__kcolorpicker_super_next_check_state
 
 /// Inherited from QToolButton
 ///
@@ -4094,10 +4026,6 @@ void k_colorpicker__kcolorpicker_on_next_check_state(void* self, void (*callback
 /// @param option QStyleOptionToolButton*
 ///
 void k_colorpicker__kcolorpicker_init_style_option(void* self, void* option);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_init_style_option` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_init_style_option k_colorpicker__kcolorpicker_super_init_style_option
 
 /// Inherited from QToolButton
 ///
@@ -4132,10 +4060,6 @@ void k_colorpicker__kcolorpicker_on_init_style_option(void* self, void (*callbac
 ///
 void k_colorpicker__kcolorpicker_key_press_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_key_press_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_key_press_event k_colorpicker__kcolorpicker_super_key_press_event
-
 /// Inherited from QAbstractButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#keyPressEvent)
@@ -4168,10 +4092,6 @@ void k_colorpicker__kcolorpicker_on_key_press_event(void* self, void (*callback)
 /// @param e QKeyEvent*
 ///
 void k_colorpicker__kcolorpicker_key_release_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_key_release_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_key_release_event k_colorpicker__kcolorpicker_super_key_release_event
 
 /// Inherited from QAbstractButton
 ///
@@ -4206,10 +4126,6 @@ void k_colorpicker__kcolorpicker_on_key_release_event(void* self, void (*callbac
 ///
 void k_colorpicker__kcolorpicker_mouse_move_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_mouse_move_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_mouse_move_event k_colorpicker__kcolorpicker_super_mouse_move_event
-
 /// Inherited from QAbstractButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#mouseMoveEvent)
@@ -4242,10 +4158,6 @@ void k_colorpicker__kcolorpicker_on_mouse_move_event(void* self, void (*callback
 /// @param e QFocusEvent*
 ///
 void k_colorpicker__kcolorpicker_focus_in_event(void* self, void* e);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_focus_in_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_focus_in_event k_colorpicker__kcolorpicker_super_focus_in_event
 
 /// Inherited from QAbstractButton
 ///
@@ -4280,10 +4192,6 @@ void k_colorpicker__kcolorpicker_on_focus_in_event(void* self, void (*callback)(
 ///
 void k_colorpicker__kcolorpicker_focus_out_event(void* self, void* e);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_focus_out_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_focus_out_event k_colorpicker__kcolorpicker_super_focus_out_event
-
 /// Inherited from QAbstractButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#focusOutEvent)
@@ -4316,10 +4224,6 @@ void k_colorpicker__kcolorpicker_on_focus_out_event(void* self, void (*callback)
 ///
 int32_t k_colorpicker__kcolorpicker_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_dev_type` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_dev_type k_colorpicker__kcolorpicker_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -4351,10 +4255,6 @@ void k_colorpicker__kcolorpicker_on_dev_type(void* self, int32_t (*callback)());
 /// @param visible bool
 ///
 void k_colorpicker__kcolorpicker_set_visible(void* self, bool visible);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_set_visible` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_set_visible k_colorpicker__kcolorpicker_super_set_visible
 
 /// Inherited from QWidget
 ///
@@ -4389,10 +4289,6 @@ void k_colorpicker__kcolorpicker_on_set_visible(void* self, void (*callback)(voi
 ///
 int32_t k_colorpicker__kcolorpicker_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_height_for_width` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_height_for_width k_colorpicker__kcolorpicker_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -4425,10 +4321,6 @@ void k_colorpicker__kcolorpicker_on_height_for_width(void* self, int32_t (*callb
 ///
 bool k_colorpicker__kcolorpicker_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_has_height_for_width` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_has_height_for_width k_colorpicker__kcolorpicker_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -4459,10 +4351,6 @@ void k_colorpicker__kcolorpicker_on_has_height_for_width(void* self, bool (*call
 /// @param self kColorPicker__KColorPicker*
 ///
 QPaintEngine* k_colorpicker__kcolorpicker_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_paint_engine` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_paint_engine k_colorpicker__kcolorpicker_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -4495,10 +4383,6 @@ void k_colorpicker__kcolorpicker_on_paint_engine(void* self, QPaintEngine* (*cal
 /// @param event QMouseEvent*
 ///
 void k_colorpicker__kcolorpicker_mouse_double_click_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_mouse_double_click_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_mouse_double_click_event k_colorpicker__kcolorpicker_super_mouse_double_click_event
 
 /// Inherited from QWidget
 ///
@@ -4533,10 +4417,6 @@ void k_colorpicker__kcolorpicker_on_mouse_double_click_event(void* self, void (*
 ///
 void k_colorpicker__kcolorpicker_wheel_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_wheel_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_wheel_event k_colorpicker__kcolorpicker_super_wheel_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -4569,10 +4449,6 @@ void k_colorpicker__kcolorpicker_on_wheel_event(void* self, void (*callback)(voi
 /// @param event QMoveEvent*
 ///
 void k_colorpicker__kcolorpicker_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_move_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_move_event k_colorpicker__kcolorpicker_super_move_event
 
 /// Inherited from QWidget
 ///
@@ -4607,10 +4483,6 @@ void k_colorpicker__kcolorpicker_on_move_event(void* self, void (*callback)(void
 ///
 void k_colorpicker__kcolorpicker_resize_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_resize_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_resize_event k_colorpicker__kcolorpicker_super_resize_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
@@ -4643,10 +4515,6 @@ void k_colorpicker__kcolorpicker_on_resize_event(void* self, void (*callback)(vo
 /// @param event QCloseEvent*
 ///
 void k_colorpicker__kcolorpicker_close_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_close_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_close_event k_colorpicker__kcolorpicker_super_close_event
 
 /// Inherited from QWidget
 ///
@@ -4681,10 +4549,6 @@ void k_colorpicker__kcolorpicker_on_close_event(void* self, void (*callback)(voi
 ///
 void k_colorpicker__kcolorpicker_context_menu_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_context_menu_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_context_menu_event k_colorpicker__kcolorpicker_super_context_menu_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
@@ -4717,10 +4581,6 @@ void k_colorpicker__kcolorpicker_on_context_menu_event(void* self, void (*callba
 /// @param event QTabletEvent*
 ///
 void k_colorpicker__kcolorpicker_tablet_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_tablet_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_tablet_event k_colorpicker__kcolorpicker_super_tablet_event
 
 /// Inherited from QWidget
 ///
@@ -4755,10 +4615,6 @@ void k_colorpicker__kcolorpicker_on_tablet_event(void* self, void (*callback)(vo
 ///
 void k_colorpicker__kcolorpicker_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_drag_enter_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_drag_enter_event k_colorpicker__kcolorpicker_super_drag_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4791,10 +4647,6 @@ void k_colorpicker__kcolorpicker_on_drag_enter_event(void* self, void (*callback
 /// @param event QDragMoveEvent*
 ///
 void k_colorpicker__kcolorpicker_drag_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_drag_move_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_drag_move_event k_colorpicker__kcolorpicker_super_drag_move_event
 
 /// Inherited from QWidget
 ///
@@ -4829,10 +4681,6 @@ void k_colorpicker__kcolorpicker_on_drag_move_event(void* self, void (*callback)
 ///
 void k_colorpicker__kcolorpicker_drag_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_drag_leave_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_drag_leave_event k_colorpicker__kcolorpicker_super_drag_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -4865,10 +4713,6 @@ void k_colorpicker__kcolorpicker_on_drag_leave_event(void* self, void (*callback
 /// @param event QDropEvent*
 ///
 void k_colorpicker__kcolorpicker_drop_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_drop_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_drop_event k_colorpicker__kcolorpicker_super_drop_event
 
 /// Inherited from QWidget
 ///
@@ -4903,10 +4747,6 @@ void k_colorpicker__kcolorpicker_on_drop_event(void* self, void (*callback)(void
 ///
 void k_colorpicker__kcolorpicker_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_show_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_show_event k_colorpicker__kcolorpicker_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -4939,10 +4779,6 @@ void k_colorpicker__kcolorpicker_on_show_event(void* self, void (*callback)(void
 /// @param event QHideEvent*
 ///
 void k_colorpicker__kcolorpicker_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_hide_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_hide_event k_colorpicker__kcolorpicker_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -4979,10 +4815,6 @@ void k_colorpicker__kcolorpicker_on_hide_event(void* self, void (*callback)(void
 ///
 bool k_colorpicker__kcolorpicker_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_native_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_native_event k_colorpicker__kcolorpicker_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -5018,10 +4850,6 @@ void k_colorpicker__kcolorpicker_on_native_event(void* self, bool (*callback)(vo
 ///
 int32_t k_colorpicker__kcolorpicker_metric(void* self, int32_t param1);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_metric` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_metric k_colorpicker__kcolorpicker_super_metric
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -5054,10 +4882,6 @@ void k_colorpicker__kcolorpicker_on_metric(void* self, int32_t (*callback)(void*
 /// @param painter QPainter*
 ///
 void k_colorpicker__kcolorpicker_init_painter(void* self, void* painter);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_init_painter` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_init_painter k_colorpicker__kcolorpicker_super_init_painter
 
 /// Inherited from QWidget
 ///
@@ -5092,10 +4916,6 @@ void k_colorpicker__kcolorpicker_on_init_painter(void* self, void (*callback)(vo
 ///
 QPaintDevice* k_colorpicker__kcolorpicker_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_redirected` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_redirected k_colorpicker__kcolorpicker_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -5127,10 +4947,6 @@ void k_colorpicker__kcolorpicker_on_redirected(void* self, QPaintDevice* (*callb
 /// @param self kColorPicker__KColorPicker*
 ///
 QPainter* k_colorpicker__kcolorpicker_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_shared_painter` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_shared_painter k_colorpicker__kcolorpicker_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -5164,10 +4980,6 @@ void k_colorpicker__kcolorpicker_on_shared_painter(void* self, QPainter* (*callb
 ///
 void k_colorpicker__kcolorpicker_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_input_method_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_input_method_event k_colorpicker__kcolorpicker_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -5200,10 +5012,6 @@ void k_colorpicker__kcolorpicker_on_input_method_event(void* self, void (*callba
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* k_colorpicker__kcolorpicker_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_input_method_query` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_input_method_query k_colorpicker__kcolorpicker_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -5240,10 +5048,6 @@ void k_colorpicker__kcolorpicker_on_input_method_query(void* self, QVariant* (*c
 ///
 bool k_colorpicker__kcolorpicker_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_focus_next_prev_child` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_focus_next_prev_child k_colorpicker__kcolorpicker_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -5277,10 +5081,6 @@ void k_colorpicker__kcolorpicker_on_focus_next_prev_child(void* self, bool (*cal
 /// @param event QEvent*
 ///
 bool k_colorpicker__kcolorpicker_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_event_filter` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_event_filter k_colorpicker__kcolorpicker_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -5316,10 +5116,6 @@ void k_colorpicker__kcolorpicker_on_event_filter(void* self, bool (*callback)(vo
 ///
 void k_colorpicker__kcolorpicker_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_child_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_child_event k_colorpicker__kcolorpicker_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -5352,10 +5148,6 @@ void k_colorpicker__kcolorpicker_on_child_event(void* self, void (*callback)(voi
 /// @param event QEvent*
 ///
 void k_colorpicker__kcolorpicker_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_custom_event` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_custom_event k_colorpicker__kcolorpicker_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -5390,10 +5182,6 @@ void k_colorpicker__kcolorpicker_on_custom_event(void* self, void (*callback)(vo
 ///
 void k_colorpicker__kcolorpicker_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_connect_notify` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_connect_notify k_colorpicker__kcolorpicker_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5427,10 +5215,6 @@ void k_colorpicker__kcolorpicker_on_connect_notify(void* self, void (*callback)(
 ///
 void k_colorpicker__kcolorpicker_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_disconnect_notify` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_disconnect_notify k_colorpicker__kcolorpicker_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5463,10 +5247,6 @@ void k_colorpicker__kcolorpicker_on_disconnect_notify(void* self, void (*callbac
 ///
 void k_colorpicker__kcolorpicker_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_update_micro_focus` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_update_micro_focus k_colorpicker__kcolorpicker_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5497,10 +5277,6 @@ void k_colorpicker__kcolorpicker_on_update_micro_focus(void* self, void (*callba
 /// @param self kColorPicker__KColorPicker*
 ///
 void k_colorpicker__kcolorpicker_create(void* self);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_create` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_create k_colorpicker__kcolorpicker_super_create
 
 /// Inherited from QWidget
 ///
@@ -5533,10 +5309,6 @@ void k_colorpicker__kcolorpicker_on_create(void* self, void (*callback)());
 ///
 void k_colorpicker__kcolorpicker_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_destroy` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_destroy k_colorpicker__kcolorpicker_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5567,10 +5339,6 @@ void k_colorpicker__kcolorpicker_on_destroy(void* self, void (*callback)());
 /// @param self kColorPicker__KColorPicker*
 ///
 bool k_colorpicker__kcolorpicker_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_focus_next_child` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_focus_next_child k_colorpicker__kcolorpicker_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -5603,10 +5371,6 @@ void k_colorpicker__kcolorpicker_on_focus_next_child(void* self, bool (*callback
 ///
 bool k_colorpicker__kcolorpicker_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_focus_previous_child` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_focus_previous_child k_colorpicker__kcolorpicker_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5637,10 +5401,6 @@ void k_colorpicker__kcolorpicker_on_focus_previous_child(void* self, bool (*call
 /// @param self kColorPicker__KColorPicker*
 ///
 QObject* k_colorpicker__kcolorpicker_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_sender` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_sender k_colorpicker__kcolorpicker_super_sender
 
 /// Inherited from QObject
 ///
@@ -5673,10 +5433,6 @@ void k_colorpicker__kcolorpicker_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_colorpicker__kcolorpicker_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_sender_signal_index` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_sender_signal_index k_colorpicker__kcolorpicker_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5708,10 +5464,6 @@ void k_colorpicker__kcolorpicker_on_sender_signal_index(void* self, int32_t (*ca
 /// @param signal const char*
 ///
 int32_t k_colorpicker__kcolorpicker_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_receivers` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_receivers k_colorpicker__kcolorpicker_super_receivers
 
 /// Inherited from QObject
 ///
@@ -5746,10 +5498,6 @@ void k_colorpicker__kcolorpicker_on_receivers(void* self, int32_t (*callback)(vo
 ///
 bool k_colorpicker__kcolorpicker_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_is_signal_connected` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_is_signal_connected k_colorpicker__kcolorpicker_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5783,10 +5531,6 @@ void k_colorpicker__kcolorpicker_on_is_signal_connected(void* self, bool (*callb
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_colorpicker__kcolorpicker_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_colorpicker__kcolorpicker_super_get_decoded_metric_f` instead
-///
-#define k_colorpicker__kcolorpicker_qbase_get_decoded_metric_f k_colorpicker__kcolorpicker_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

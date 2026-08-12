@@ -40,10 +40,6 @@ const QMetaObject* k_pagewidgetitem_meta_object(void* self);
 ///
 void k_pagewidgetitem_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_pagewidgetitem_super_meta_object` instead
-///
-#define k_pagewidgetitem_qbase_meta_object k_pagewidgetitem_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -63,10 +59,6 @@ void* k_pagewidgetitem_metacast(void* self, const char* param1);
 /// @param callback void* func(KPageWidgetItem* self, const char* param1)
 ///
 void k_pagewidgetitem_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_pagewidgetitem_super_metacast` instead
-///
-#define k_pagewidgetitem_qbase_metacast k_pagewidgetitem_super_metacast
 
 /// Base class method implementation
 ///
@@ -88,10 +80,6 @@ int32_t k_pagewidgetitem_metacall(void* self, int32_t param1, int param2, void* 
 /// @param callback int32_t func(KPageWidgetItem* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_pagewidgetitem_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_pagewidgetitem_super_metacall` instead
-///
-#define k_pagewidgetitem_qbase_metacall k_pagewidgetitem_super_metacall
 
 /// Base class method implementation
 ///
@@ -743,10 +731,6 @@ void k_pagewidgetitem_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool k_pagewidgetitem_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_pagewidgetitem_super_event` instead
-///
-#define k_pagewidgetitem_qbase_event k_pagewidgetitem_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -780,10 +764,6 @@ void k_pagewidgetitem_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool k_pagewidgetitem_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_pagewidgetitem_super_event_filter` instead
-///
-#define k_pagewidgetitem_qbase_event_filter k_pagewidgetitem_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -819,10 +799,6 @@ void k_pagewidgetitem_on_event_filter(void* self, bool (*callback)(void*, void*,
 ///
 void k_pagewidgetitem_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_pagewidgetitem_super_timer_event` instead
-///
-#define k_pagewidgetitem_qbase_timer_event k_pagewidgetitem_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -855,10 +831,6 @@ void k_pagewidgetitem_on_timer_event(void* self, void (*callback)(void*, void*))
 /// @param event QChildEvent*
 ///
 void k_pagewidgetitem_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_pagewidgetitem_super_child_event` instead
-///
-#define k_pagewidgetitem_qbase_child_event k_pagewidgetitem_super_child_event
 
 /// Inherited from QObject
 ///
@@ -893,10 +865,6 @@ void k_pagewidgetitem_on_child_event(void* self, void (*callback)(void*, void*))
 ///
 void k_pagewidgetitem_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_pagewidgetitem_super_custom_event` instead
-///
-#define k_pagewidgetitem_qbase_custom_event k_pagewidgetitem_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -929,10 +897,6 @@ void k_pagewidgetitem_on_custom_event(void* self, void (*callback)(void*, void*)
 /// @param signal QMetaMethod*
 ///
 void k_pagewidgetitem_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_pagewidgetitem_super_connect_notify` instead
-///
-#define k_pagewidgetitem_qbase_connect_notify k_pagewidgetitem_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -967,10 +931,6 @@ void k_pagewidgetitem_on_connect_notify(void* self, void (*callback)(void*, void
 ///
 void k_pagewidgetitem_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_pagewidgetitem_super_disconnect_notify` instead
-///
-#define k_pagewidgetitem_qbase_disconnect_notify k_pagewidgetitem_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1003,10 +963,6 @@ void k_pagewidgetitem_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 QObject* k_pagewidgetitem_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_pagewidgetitem_super_sender` instead
-///
-#define k_pagewidgetitem_qbase_sender k_pagewidgetitem_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1037,10 +993,6 @@ void k_pagewidgetitem_on_sender(void* self, QObject* (*callback)());
 /// @param self KPageWidgetItem*
 ///
 int32_t k_pagewidgetitem_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_pagewidgetitem_super_sender_signal_index` instead
-///
-#define k_pagewidgetitem_qbase_sender_signal_index k_pagewidgetitem_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1074,10 +1026,6 @@ void k_pagewidgetitem_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_pagewidgetitem_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_pagewidgetitem_super_receivers` instead
-///
-#define k_pagewidgetitem_qbase_receivers k_pagewidgetitem_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1110,10 +1058,6 @@ void k_pagewidgetitem_on_receivers(void* self, int32_t (*callback)(void*, const 
 /// @param signal QMetaMethod*
 ///
 bool k_pagewidgetitem_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_pagewidgetitem_super_is_signal_connected` instead
-///
-#define k_pagewidgetitem_qbase_is_signal_connected k_pagewidgetitem_super_is_signal_connected
 
 /// Inherited from QObject
 ///
@@ -1185,10 +1129,6 @@ const QMetaObject* k_pagewidgetmodel_meta_object(void* self);
 ///
 void k_pagewidgetmodel_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_meta_object` instead
-///
-#define k_pagewidgetmodel_qbase_meta_object k_pagewidgetmodel_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -1208,10 +1148,6 @@ void* k_pagewidgetmodel_metacast(void* self, const char* param1);
 /// @param callback void* func(KPageWidgetModel* self, const char* param1)
 ///
 void k_pagewidgetmodel_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_metacast` instead
-///
-#define k_pagewidgetmodel_qbase_metacast k_pagewidgetmodel_super_metacast
 
 /// Base class method implementation
 ///
@@ -1233,10 +1169,6 @@ int32_t k_pagewidgetmodel_metacall(void* self, int32_t param1, int param2, void*
 /// @param callback int32_t func(KPageWidgetModel* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_pagewidgetmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_metacall` instead
-///
-#define k_pagewidgetmodel_qbase_metacall k_pagewidgetmodel_super_metacall
 
 /// Base class method implementation
 ///
@@ -1327,10 +1259,6 @@ int32_t k_pagewidgetmodel_column_count(void* self, void* parent);
 ///
 void k_pagewidgetmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_column_count` instead
-///
-#define k_pagewidgetmodel_qbase_column_count k_pagewidgetmodel_super_column_count
-
 /// [Upstream resources](https://api.kde.org/kpagewidgetmodel.html#columnCount)
 ///
 /// Base class method implementation
@@ -1358,10 +1286,6 @@ QVariant* k_pagewidgetmodel_data(void* self, void* index, int role);
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_pagewidgetmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_data` instead
-///
-#define k_pagewidgetmodel_qbase_data k_pagewidgetmodel_super_data
 
 /// [Upstream resources](https://api.kde.org/kpagewidgetmodel.html#data)
 ///
@@ -1391,10 +1315,6 @@ bool k_pagewidgetmodel_set_data(void* self, void* index, void* value, int role);
 ///
 void k_pagewidgetmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_set_data` instead
-///
-#define k_pagewidgetmodel_qbase_set_data k_pagewidgetmodel_super_set_data
-
 /// [Upstream resources](https://api.kde.org/kpagewidgetmodel.html#setData)
 ///
 /// Base class method implementation
@@ -1423,10 +1343,6 @@ int32_t k_pagewidgetmodel_flags(void* self, void* index);
 /// @param callback int32_t func(KPageWidgetModel* self, QModelIndex* index)
 ///
 void k_pagewidgetmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_flags` instead
-///
-#define k_pagewidgetmodel_qbase_flags k_pagewidgetmodel_super_flags
 
 /// [Upstream resources](https://api.kde.org/kpagewidgetmodel.html#flags)
 ///
@@ -1459,10 +1375,6 @@ QModelIndex* k_pagewidgetmodel_index(void* self, int row, int column, void* pare
 ///
 void k_pagewidgetmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_index` instead
-///
-#define k_pagewidgetmodel_qbase_index k_pagewidgetmodel_super_index
-
 /// [Upstream resources](https://api.kde.org/kpagewidgetmodel.html#index)
 ///
 /// Base class method implementation
@@ -1492,10 +1404,6 @@ QModelIndex* k_pagewidgetmodel_parent(void* self, void* index);
 ///
 void k_pagewidgetmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_parent` instead
-///
-#define k_pagewidgetmodel_qbase_parent k_pagewidgetmodel_super_parent
-
 /// [Upstream resources](https://api.kde.org/kpagewidgetmodel.html#parent)
 ///
 /// Base class method implementation
@@ -1520,10 +1428,6 @@ int32_t k_pagewidgetmodel_row_count(void* self, void* parent);
 /// @param callback int32_t func(KPageWidgetModel* self, QModelIndex* parent)
 ///
 void k_pagewidgetmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_row_count` instead
-///
-#define k_pagewidgetmodel_qbase_row_count k_pagewidgetmodel_super_row_count
 
 /// [Upstream resources](https://api.kde.org/kpagewidgetmodel.html#rowCount)
 ///
@@ -2341,10 +2245,6 @@ void k_pagewidgetmodel_on_destroyed1(void* self, void (*callback)(void*, void*))
 ///
 QModelIndex* k_pagewidgetmodel_sibling(void* self, int row, int column, void* idx);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_sibling` instead
-///
-#define k_pagewidgetmodel_qbase_sibling k_pagewidgetmodel_super_sibling
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#sibling)
@@ -2382,10 +2282,6 @@ void k_pagewidgetmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, in
 ///
 bool k_pagewidgetmodel_has_children(void* self, void* parent);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_has_children` instead
-///
-#define k_pagewidgetmodel_qbase_has_children k_pagewidgetmodel_super_has_children
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasChildren)
@@ -2420,10 +2316,6 @@ void k_pagewidgetmodel_on_has_children(void* self, bool (*callback)(void*, void*
 /// @param role int
 ///
 QVariant* k_pagewidgetmodel_header_data(void* self, int section, int32_t orientation, int role);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_header_data` instead
-///
-#define k_pagewidgetmodel_qbase_header_data k_pagewidgetmodel_super_header_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2464,10 +2356,6 @@ void k_pagewidgetmodel_on_header_data(void* self, QVariant* (*callback)(void*, i
 /// @param role int
 ///
 bool k_pagewidgetmodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_set_header_data` instead
-///
-#define k_pagewidgetmodel_qbase_set_header_data k_pagewidgetmodel_super_set_header_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2518,10 +2406,6 @@ void k_pagewidgetmodel_on_set_header_data(void* self, bool (*callback)(void*, in
 ///
 libqt_map k_pagewidgetmodel_item_data(void* self, void* index);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_item_data` instead
-///
-#define k_pagewidgetmodel_qbase_item_data k_pagewidgetmodel_super_item_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#itemData)
@@ -2569,10 +2453,6 @@ void k_pagewidgetmodel_on_item_data(void* self, libqt_map (*callback)(void*, voi
 ///
 bool k_pagewidgetmodel_set_item_data(void* self, void* index, libqt_map roles);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_set_item_data` instead
-///
-#define k_pagewidgetmodel_qbase_set_item_data k_pagewidgetmodel_super_set_item_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setItemData)
@@ -2606,10 +2486,6 @@ void k_pagewidgetmodel_on_set_item_data(void* self, bool (*callback)(void*, void
 /// @param index QModelIndex*
 ///
 bool k_pagewidgetmodel_clear_item_data(void* self, void* index);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_clear_item_data` instead
-///
-#define k_pagewidgetmodel_qbase_clear_item_data k_pagewidgetmodel_super_clear_item_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2645,10 +2521,6 @@ void k_pagewidgetmodel_on_clear_item_data(void* self, bool (*callback)(void*, vo
 ///
 const char** k_pagewidgetmodel_mime_types(void* self);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_mime_types` instead
-///
-#define k_pagewidgetmodel_qbase_mime_types k_pagewidgetmodel_super_mime_types
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
@@ -2682,10 +2554,6 @@ void k_pagewidgetmodel_on_mime_types(void* self, const char** (*callback)());
 /// @param indexes libqt_list of QModelIndex*
 ///
 QMimeData* k_pagewidgetmodel_mime_data(void* self, libqt_list indexes);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_mime_data` instead
-///
-#define k_pagewidgetmodel_qbase_mime_data k_pagewidgetmodel_super_mime_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2723,10 +2591,6 @@ void k_pagewidgetmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, li
 /// @param parent QModelIndex*
 ///
 bool k_pagewidgetmodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_can_drop_mime_data` instead
-///
-#define k_pagewidgetmodel_qbase_can_drop_mime_data k_pagewidgetmodel_super_can_drop_mime_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2769,10 +2633,6 @@ void k_pagewidgetmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*,
 ///
 bool k_pagewidgetmodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_drop_mime_data` instead
-///
-#define k_pagewidgetmodel_qbase_drop_mime_data k_pagewidgetmodel_super_drop_mime_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dropMimeData)
@@ -2811,10 +2671,6 @@ void k_pagewidgetmodel_on_drop_mime_data(void* self, bool (*callback)(void*, voi
 ///
 int32_t k_pagewidgetmodel_supported_drop_actions(void* self);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_supported_drop_actions` instead
-///
-#define k_pagewidgetmodel_qbase_supported_drop_actions k_pagewidgetmodel_super_supported_drop_actions
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDropActions)
@@ -2849,10 +2705,6 @@ void k_pagewidgetmodel_on_supported_drop_actions(void* self, int32_t (*callback)
 /// @return flag of enum Qt__DropAction
 ///
 int32_t k_pagewidgetmodel_supported_drag_actions(void* self);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_supported_drag_actions` instead
-///
-#define k_pagewidgetmodel_qbase_supported_drag_actions k_pagewidgetmodel_super_supported_drag_actions
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2889,10 +2741,6 @@ void k_pagewidgetmodel_on_supported_drag_actions(void* self, int32_t (*callback)
 /// @param parent QModelIndex*
 ///
 bool k_pagewidgetmodel_insert_rows(void* self, int row, int count, void* parent);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_insert_rows` instead
-///
-#define k_pagewidgetmodel_qbase_insert_rows k_pagewidgetmodel_super_insert_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2931,10 +2779,6 @@ void k_pagewidgetmodel_on_insert_rows(void* self, bool (*callback)(void*, int, i
 ///
 bool k_pagewidgetmodel_insert_columns(void* self, int column, int count, void* parent);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_insert_columns` instead
-///
-#define k_pagewidgetmodel_qbase_insert_columns k_pagewidgetmodel_super_insert_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
@@ -2972,10 +2816,6 @@ void k_pagewidgetmodel_on_insert_columns(void* self, bool (*callback)(void*, int
 ///
 bool k_pagewidgetmodel_remove_rows(void* self, int row, int count, void* parent);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_remove_rows` instead
-///
-#define k_pagewidgetmodel_qbase_remove_rows k_pagewidgetmodel_super_remove_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
@@ -3012,10 +2852,6 @@ void k_pagewidgetmodel_on_remove_rows(void* self, bool (*callback)(void*, int, i
 /// @param parent QModelIndex*
 ///
 bool k_pagewidgetmodel_remove_columns(void* self, int column, int count, void* parent);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_remove_columns` instead
-///
-#define k_pagewidgetmodel_qbase_remove_columns k_pagewidgetmodel_super_remove_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3055,10 +2891,6 @@ void k_pagewidgetmodel_on_remove_columns(void* self, bool (*callback)(void*, int
 /// @param destinationChild int
 ///
 bool k_pagewidgetmodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_move_rows` instead
-///
-#define k_pagewidgetmodel_qbase_move_rows k_pagewidgetmodel_super_move_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3101,10 +2933,6 @@ void k_pagewidgetmodel_on_move_rows(void* self, bool (*callback)(void*, void*, i
 ///
 bool k_pagewidgetmodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_move_columns` instead
-///
-#define k_pagewidgetmodel_qbase_move_columns k_pagewidgetmodel_super_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
@@ -3142,10 +2970,6 @@ void k_pagewidgetmodel_on_move_columns(void* self, bool (*callback)(void*, void*
 ///
 void k_pagewidgetmodel_fetch_more(void* self, void* parent);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_fetch_more` instead
-///
-#define k_pagewidgetmodel_qbase_fetch_more k_pagewidgetmodel_super_fetch_more
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#fetchMore)
@@ -3178,10 +3002,6 @@ void k_pagewidgetmodel_on_fetch_more(void* self, void (*callback)(void*, void*))
 /// @param parent QModelIndex*
 ///
 bool k_pagewidgetmodel_can_fetch_more(void* self, void* parent);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_can_fetch_more` instead
-///
-#define k_pagewidgetmodel_qbase_can_fetch_more k_pagewidgetmodel_super_can_fetch_more
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3217,10 +3037,6 @@ void k_pagewidgetmodel_on_can_fetch_more(void* self, bool (*callback)(void*, voi
 ///
 void k_pagewidgetmodel_sort(void* self, int column, int32_t order);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_sort` instead
-///
-#define k_pagewidgetmodel_qbase_sort k_pagewidgetmodel_super_sort
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#sort)
@@ -3254,10 +3070,6 @@ void k_pagewidgetmodel_on_sort(void* self, void (*callback)(void*, int, int32_t)
 /// @param index QModelIndex*
 ///
 QModelIndex* k_pagewidgetmodel_buddy(void* self, void* index);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_buddy` instead
-///
-#define k_pagewidgetmodel_qbase_buddy k_pagewidgetmodel_super_buddy
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3300,10 +3112,6 @@ void k_pagewidgetmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void
 ///
 libqt_list k_pagewidgetmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_match` instead
-///
-#define k_pagewidgetmodel_qbase_match k_pagewidgetmodel_super_match
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
@@ -3342,10 +3150,6 @@ void k_pagewidgetmodel_on_match(void* self, libqt_list (*callback)(void*, void*,
 /// @param index QModelIndex*
 ///
 QSize* k_pagewidgetmodel_span(void* self, void* index);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_span` instead
-///
-#define k_pagewidgetmodel_qbase_span k_pagewidgetmodel_super_span
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3394,10 +3198,6 @@ void k_pagewidgetmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 ///
 libqt_map k_pagewidgetmodel_role_names(void* self);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_role_names` instead
-///
-#define k_pagewidgetmodel_qbase_role_names k_pagewidgetmodel_super_role_names
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames)
@@ -3444,10 +3244,6 @@ void k_pagewidgetmodel_on_role_names(void* self, libqt_map (*callback)());
 ///
 void k_pagewidgetmodel_multi_data(void* self, void* index, void* roleDataSpan);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_multi_data` instead
-///
-#define k_pagewidgetmodel_qbase_multi_data k_pagewidgetmodel_super_multi_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
@@ -3481,10 +3277,6 @@ void k_pagewidgetmodel_on_multi_data(void* self, void (*callback)(void*, void*, 
 ///
 bool k_pagewidgetmodel_submit(void* self);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_submit` instead
-///
-#define k_pagewidgetmodel_qbase_submit k_pagewidgetmodel_super_submit
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#submit)
@@ -3515,10 +3307,6 @@ void k_pagewidgetmodel_on_submit(void* self, bool (*callback)());
 /// @param self KPageWidgetModel*
 ///
 void k_pagewidgetmodel_revert(void* self);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_revert` instead
-///
-#define k_pagewidgetmodel_qbase_revert k_pagewidgetmodel_super_revert
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3551,10 +3339,6 @@ void k_pagewidgetmodel_on_revert(void* self, void (*callback)());
 ///
 void k_pagewidgetmodel_reset_internal_data(void* self);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_reset_internal_data` instead
-///
-#define k_pagewidgetmodel_qbase_reset_internal_data k_pagewidgetmodel_super_reset_internal_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
@@ -3586,10 +3370,6 @@ void k_pagewidgetmodel_on_reset_internal_data(void* self, void (*callback)());
 /// @param event QEvent*
 ///
 bool k_pagewidgetmodel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_event` instead
-///
-#define k_pagewidgetmodel_qbase_event k_pagewidgetmodel_super_event
 
 /// Inherited from QObject
 ///
@@ -3625,10 +3405,6 @@ void k_pagewidgetmodel_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_pagewidgetmodel_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_event_filter` instead
-///
-#define k_pagewidgetmodel_qbase_event_filter k_pagewidgetmodel_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -3663,10 +3439,6 @@ void k_pagewidgetmodel_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 void k_pagewidgetmodel_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_timer_event` instead
-///
-#define k_pagewidgetmodel_qbase_timer_event k_pagewidgetmodel_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -3699,10 +3471,6 @@ void k_pagewidgetmodel_on_timer_event(void* self, void (*callback)(void*, void*)
 /// @param event QChildEvent*
 ///
 void k_pagewidgetmodel_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_child_event` instead
-///
-#define k_pagewidgetmodel_qbase_child_event k_pagewidgetmodel_super_child_event
 
 /// Inherited from QObject
 ///
@@ -3737,10 +3505,6 @@ void k_pagewidgetmodel_on_child_event(void* self, void (*callback)(void*, void*)
 ///
 void k_pagewidgetmodel_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_custom_event` instead
-///
-#define k_pagewidgetmodel_qbase_custom_event k_pagewidgetmodel_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -3773,10 +3537,6 @@ void k_pagewidgetmodel_on_custom_event(void* self, void (*callback)(void*, void*
 /// @param signal QMetaMethod*
 ///
 void k_pagewidgetmodel_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_connect_notify` instead
-///
-#define k_pagewidgetmodel_qbase_connect_notify k_pagewidgetmodel_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -3811,10 +3571,6 @@ void k_pagewidgetmodel_on_connect_notify(void* self, void (*callback)(void*, voi
 ///
 void k_pagewidgetmodel_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_disconnect_notify` instead
-///
-#define k_pagewidgetmodel_qbase_disconnect_notify k_pagewidgetmodel_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -3848,10 +3604,6 @@ void k_pagewidgetmodel_on_disconnect_notify(void* self, void (*callback)(void*, 
 /// @param column int
 ///
 QModelIndex* k_pagewidgetmodel_create_index(void* self, int row, int column);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_create_index` instead
-///
-#define k_pagewidgetmodel_qbase_create_index k_pagewidgetmodel_super_create_index
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3890,10 +3642,6 @@ void k_pagewidgetmodel_on_create_index(void* self, QModelIndex* (*callback)(void
 ///
 void k_pagewidgetmodel_encode_data(void* self, libqt_list indexes, void* stream);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_encode_data` instead
-///
-#define k_pagewidgetmodel_qbase_encode_data k_pagewidgetmodel_super_encode_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
@@ -3930,10 +3678,6 @@ void k_pagewidgetmodel_on_encode_data(void* self, void (*callback)(void*, libqt_
 /// @param stream QDataStream*
 ///
 bool k_pagewidgetmodel_decode_data(void* self, int row, int column, void* parent, void* stream);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_decode_data` instead
-///
-#define k_pagewidgetmodel_qbase_decode_data k_pagewidgetmodel_super_decode_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3973,10 +3717,6 @@ void k_pagewidgetmodel_on_decode_data(void* self, bool (*callback)(void*, int, i
 ///
 void k_pagewidgetmodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_begin_insert_rows` instead
-///
-#define k_pagewidgetmodel_qbase_begin_insert_rows k_pagewidgetmodel_super_begin_insert_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
@@ -4010,10 +3750,6 @@ void k_pagewidgetmodel_on_begin_insert_rows(void* self, void (*callback)(void*, 
 /// @param self KPageWidgetModel*
 ///
 void k_pagewidgetmodel_end_insert_rows(void* self);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_end_insert_rows` instead
-///
-#define k_pagewidgetmodel_qbase_end_insert_rows k_pagewidgetmodel_super_end_insert_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4049,10 +3785,6 @@ void k_pagewidgetmodel_on_end_insert_rows(void* self, void (*callback)());
 ///
 void k_pagewidgetmodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_begin_remove_rows` instead
-///
-#define k_pagewidgetmodel_qbase_begin_remove_rows k_pagewidgetmodel_super_begin_remove_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
@@ -4086,10 +3818,6 @@ void k_pagewidgetmodel_on_begin_remove_rows(void* self, void (*callback)(void*, 
 /// @param self KPageWidgetModel*
 ///
 void k_pagewidgetmodel_end_remove_rows(void* self);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_end_remove_rows` instead
-///
-#define k_pagewidgetmodel_qbase_end_remove_rows k_pagewidgetmodel_super_end_remove_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4127,10 +3855,6 @@ void k_pagewidgetmodel_on_end_remove_rows(void* self, void (*callback)());
 ///
 bool k_pagewidgetmodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_begin_move_rows` instead
-///
-#define k_pagewidgetmodel_qbase_begin_move_rows k_pagewidgetmodel_super_begin_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
@@ -4167,10 +3891,6 @@ void k_pagewidgetmodel_on_begin_move_rows(void* self, bool (*callback)(void*, vo
 ///
 void k_pagewidgetmodel_end_move_rows(void* self);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_end_move_rows` instead
-///
-#define k_pagewidgetmodel_qbase_end_move_rows k_pagewidgetmodel_super_end_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
@@ -4204,10 +3924,6 @@ void k_pagewidgetmodel_on_end_move_rows(void* self, void (*callback)());
 /// @param last int
 ///
 void k_pagewidgetmodel_begin_insert_columns(void* self, void* parent, int first, int last);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_begin_insert_columns` instead
-///
-#define k_pagewidgetmodel_qbase_begin_insert_columns k_pagewidgetmodel_super_begin_insert_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4243,10 +3959,6 @@ void k_pagewidgetmodel_on_begin_insert_columns(void* self, void (*callback)(void
 ///
 void k_pagewidgetmodel_end_insert_columns(void* self);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_end_insert_columns` instead
-///
-#define k_pagewidgetmodel_qbase_end_insert_columns k_pagewidgetmodel_super_end_insert_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
@@ -4281,10 +3993,6 @@ void k_pagewidgetmodel_on_end_insert_columns(void* self, void (*callback)());
 ///
 void k_pagewidgetmodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_begin_remove_columns` instead
-///
-#define k_pagewidgetmodel_qbase_begin_remove_columns k_pagewidgetmodel_super_begin_remove_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
@@ -4318,10 +4026,6 @@ void k_pagewidgetmodel_on_begin_remove_columns(void* self, void (*callback)(void
 /// @param self KPageWidgetModel*
 ///
 void k_pagewidgetmodel_end_remove_columns(void* self);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_end_remove_columns` instead
-///
-#define k_pagewidgetmodel_qbase_end_remove_columns k_pagewidgetmodel_super_end_remove_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4359,10 +4063,6 @@ void k_pagewidgetmodel_on_end_remove_columns(void* self, void (*callback)());
 ///
 bool k_pagewidgetmodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_begin_move_columns` instead
-///
-#define k_pagewidgetmodel_qbase_begin_move_columns k_pagewidgetmodel_super_begin_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
@@ -4399,10 +4099,6 @@ void k_pagewidgetmodel_on_begin_move_columns(void* self, bool (*callback)(void*,
 ///
 void k_pagewidgetmodel_end_move_columns(void* self);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_end_move_columns` instead
-///
-#define k_pagewidgetmodel_qbase_end_move_columns k_pagewidgetmodel_super_end_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
@@ -4434,10 +4130,6 @@ void k_pagewidgetmodel_on_end_move_columns(void* self, void (*callback)());
 ///
 void k_pagewidgetmodel_begin_reset_model(void* self);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_begin_reset_model` instead
-///
-#define k_pagewidgetmodel_qbase_begin_reset_model k_pagewidgetmodel_super_begin_reset_model
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
@@ -4468,10 +4160,6 @@ void k_pagewidgetmodel_on_begin_reset_model(void* self, void (*callback)());
 /// @param self KPageWidgetModel*
 ///
 void k_pagewidgetmodel_end_reset_model(void* self);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_end_reset_model` instead
-///
-#define k_pagewidgetmodel_qbase_end_reset_model k_pagewidgetmodel_super_end_reset_model
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4505,10 +4193,6 @@ void k_pagewidgetmodel_on_end_reset_model(void* self, void (*callback)());
 /// @param to QModelIndex*
 ///
 void k_pagewidgetmodel_change_persistent_index(void* self, void* from, void* to);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_change_persistent_index` instead
-///
-#define k_pagewidgetmodel_qbase_change_persistent_index k_pagewidgetmodel_super_change_persistent_index
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4545,10 +4229,6 @@ void k_pagewidgetmodel_on_change_persistent_index(void* self, void (*callback)(v
 ///
 void k_pagewidgetmodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_change_persistent_index_list` instead
-///
-#define k_pagewidgetmodel_qbase_change_persistent_index_list k_pagewidgetmodel_super_change_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
@@ -4584,10 +4264,6 @@ void k_pagewidgetmodel_on_change_persistent_index_list(void* self, void (*callba
 ///
 libqt_list k_pagewidgetmodel_persistent_index_list(void* self);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_persistent_index_list` instead
-///
-#define k_pagewidgetmodel_qbase_persistent_index_list k_pagewidgetmodel_super_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
@@ -4621,10 +4297,6 @@ void k_pagewidgetmodel_on_persistent_index_list(void* self, libqt_list (*callbac
 ///
 QObject* k_pagewidgetmodel_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_sender` instead
-///
-#define k_pagewidgetmodel_qbase_sender k_pagewidgetmodel_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -4655,10 +4327,6 @@ void k_pagewidgetmodel_on_sender(void* self, QObject* (*callback)());
 /// @param self KPageWidgetModel*
 ///
 int32_t k_pagewidgetmodel_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_sender_signal_index` instead
-///
-#define k_pagewidgetmodel_qbase_sender_signal_index k_pagewidgetmodel_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -4692,10 +4360,6 @@ void k_pagewidgetmodel_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 int32_t k_pagewidgetmodel_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_receivers` instead
-///
-#define k_pagewidgetmodel_qbase_receivers k_pagewidgetmodel_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -4728,10 +4392,6 @@ void k_pagewidgetmodel_on_receivers(void* self, int32_t (*callback)(void*, const
 /// @param signal QMetaMethod*
 ///
 bool k_pagewidgetmodel_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_pagewidgetmodel_super_is_signal_connected` instead
-///
-#define k_pagewidgetmodel_qbase_is_signal_connected k_pagewidgetmodel_super_is_signal_connected
 
 /// Inherited from QObject
 ///

@@ -37,10 +37,6 @@ const QMetaObject* k_texttranslator__translatorengineaccessmanager_meta_object(v
 ///
 void k_texttranslator__translatorengineaccessmanager_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineaccessmanager_super_meta_object` instead
-///
-#define k_texttranslator__translatorengineaccessmanager_qbase_meta_object k_texttranslator__translatorengineaccessmanager_super_meta_object
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineAccessManager.html)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* k_texttranslator__translatorengineaccessmanager_metacast(void* self, const
 /// @param callback void* func(TextTranslator__TranslatorEngineAccessManager* self, const char* param1)
 ///
 void k_texttranslator__translatorengineaccessmanager_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineaccessmanager_super_metacast` instead
-///
-#define k_texttranslator__translatorengineaccessmanager_qbase_metacast k_texttranslator__translatorengineaccessmanager_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t k_texttranslator__translatorengineaccessmanager_metacall(void* self, int
 /// @param callback int32_t func(TextTranslator__TranslatorEngineAccessManager* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_texttranslator__translatorengineaccessmanager_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineaccessmanager_super_metacall` instead
-///
-#define k_texttranslator__translatorengineaccessmanager_qbase_metacall k_texttranslator__translatorengineaccessmanager_super_metacall
 
 /// Base class method implementation
 ///
@@ -594,10 +582,6 @@ void k_texttranslator__translatorengineaccessmanager_on_destroyed1(void* self, v
 ///
 bool k_texttranslator__translatorengineaccessmanager_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineaccessmanager_super_event` instead
-///
-#define k_texttranslator__translatorengineaccessmanager_qbase_event k_texttranslator__translatorengineaccessmanager_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -631,10 +615,6 @@ void k_texttranslator__translatorengineaccessmanager_on_event(void* self, bool (
 /// @param event QEvent*
 ///
 bool k_texttranslator__translatorengineaccessmanager_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineaccessmanager_super_event_filter` instead
-///
-#define k_texttranslator__translatorengineaccessmanager_qbase_event_filter k_texttranslator__translatorengineaccessmanager_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -670,10 +650,6 @@ void k_texttranslator__translatorengineaccessmanager_on_event_filter(void* self,
 ///
 void k_texttranslator__translatorengineaccessmanager_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineaccessmanager_super_timer_event` instead
-///
-#define k_texttranslator__translatorengineaccessmanager_qbase_timer_event k_texttranslator__translatorengineaccessmanager_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -706,10 +682,6 @@ void k_texttranslator__translatorengineaccessmanager_on_timer_event(void* self, 
 /// @param event QChildEvent*
 ///
 void k_texttranslator__translatorengineaccessmanager_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineaccessmanager_super_child_event` instead
-///
-#define k_texttranslator__translatorengineaccessmanager_qbase_child_event k_texttranslator__translatorengineaccessmanager_super_child_event
 
 /// Inherited from QObject
 ///
@@ -744,10 +716,6 @@ void k_texttranslator__translatorengineaccessmanager_on_child_event(void* self, 
 ///
 void k_texttranslator__translatorengineaccessmanager_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineaccessmanager_super_custom_event` instead
-///
-#define k_texttranslator__translatorengineaccessmanager_qbase_custom_event k_texttranslator__translatorengineaccessmanager_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -780,10 +748,6 @@ void k_texttranslator__translatorengineaccessmanager_on_custom_event(void* self,
 /// @param signal QMetaMethod*
 ///
 void k_texttranslator__translatorengineaccessmanager_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineaccessmanager_super_connect_notify` instead
-///
-#define k_texttranslator__translatorengineaccessmanager_qbase_connect_notify k_texttranslator__translatorengineaccessmanager_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -818,10 +782,6 @@ void k_texttranslator__translatorengineaccessmanager_on_connect_notify(void* sel
 ///
 void k_texttranslator__translatorengineaccessmanager_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineaccessmanager_super_disconnect_notify` instead
-///
-#define k_texttranslator__translatorengineaccessmanager_qbase_disconnect_notify k_texttranslator__translatorengineaccessmanager_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -854,10 +814,6 @@ void k_texttranslator__translatorengineaccessmanager_on_disconnect_notify(void* 
 ///
 QObject* k_texttranslator__translatorengineaccessmanager_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineaccessmanager_super_sender` instead
-///
-#define k_texttranslator__translatorengineaccessmanager_qbase_sender k_texttranslator__translatorengineaccessmanager_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -888,10 +844,6 @@ void k_texttranslator__translatorengineaccessmanager_on_sender(void* self, QObje
 /// @param self TextTranslator__TranslatorEngineAccessManager*
 ///
 int32_t k_texttranslator__translatorengineaccessmanager_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineaccessmanager_super_sender_signal_index` instead
-///
-#define k_texttranslator__translatorengineaccessmanager_qbase_sender_signal_index k_texttranslator__translatorengineaccessmanager_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -925,10 +877,6 @@ void k_texttranslator__translatorengineaccessmanager_on_sender_signal_index(void
 ///
 int32_t k_texttranslator__translatorengineaccessmanager_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineaccessmanager_super_receivers` instead
-///
-#define k_texttranslator__translatorengineaccessmanager_qbase_receivers k_texttranslator__translatorengineaccessmanager_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -961,10 +909,6 @@ void k_texttranslator__translatorengineaccessmanager_on_receivers(void* self, in
 /// @param signal QMetaMethod*
 ///
 bool k_texttranslator__translatorengineaccessmanager_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_texttranslator__translatorengineaccessmanager_super_is_signal_connected` instead
-///
-#define k_texttranslator__translatorengineaccessmanager_qbase_is_signal_connected k_texttranslator__translatorengineaccessmanager_super_is_signal_connected
 
 /// Inherited from QObject
 ///

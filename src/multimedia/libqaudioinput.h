@@ -54,10 +54,6 @@ const QMetaObject* q_audioinput_meta_object(void* self);
 ///
 void q_audioinput_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_audioinput_super_meta_object` instead
-///
-#define q_audioinput_qbase_meta_object q_audioinput_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -77,10 +73,6 @@ void* q_audioinput_metacast(void* self, const char* param1);
 /// @param callback void* func(QAudioInput* self, const char* param1)
 ///
 void q_audioinput_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_audioinput_super_metacast` instead
-///
-#define q_audioinput_qbase_metacast q_audioinput_super_metacast
 
 /// Base class method implementation
 ///
@@ -102,10 +94,6 @@ int32_t q_audioinput_metacall(void* self, int32_t param1, int param2, void* para
 /// @param callback int32_t func(QAudioInput* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_audioinput_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_audioinput_super_metacall` instead
-///
-#define q_audioinput_qbase_metacall q_audioinput_super_metacall
 
 /// Base class method implementation
 ///
@@ -681,10 +669,6 @@ void q_audioinput_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_audioinput_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_audioinput_super_event` instead
-///
-#define q_audioinput_qbase_event q_audioinput_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -718,10 +702,6 @@ void q_audioinput_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 bool q_audioinput_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `q_audioinput_super_event_filter` instead
-///
-#define q_audioinput_qbase_event_filter q_audioinput_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -757,10 +737,6 @@ void q_audioinput_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void q_audioinput_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_audioinput_super_timer_event` instead
-///
-#define q_audioinput_qbase_timer_event q_audioinput_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -793,10 +769,6 @@ void q_audioinput_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void q_audioinput_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_audioinput_super_child_event` instead
-///
-#define q_audioinput_qbase_child_event q_audioinput_super_child_event
 
 /// Inherited from QObject
 ///
@@ -831,10 +803,6 @@ void q_audioinput_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_audioinput_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_audioinput_super_custom_event` instead
-///
-#define q_audioinput_qbase_custom_event q_audioinput_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -867,10 +835,6 @@ void q_audioinput_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void q_audioinput_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_audioinput_super_connect_notify` instead
-///
-#define q_audioinput_qbase_connect_notify q_audioinput_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -905,10 +869,6 @@ void q_audioinput_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_audioinput_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_audioinput_super_disconnect_notify` instead
-///
-#define q_audioinput_qbase_disconnect_notify q_audioinput_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -941,10 +901,6 @@ void q_audioinput_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 QObject* q_audioinput_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_audioinput_super_sender` instead
-///
-#define q_audioinput_qbase_sender q_audioinput_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -975,10 +931,6 @@ void q_audioinput_on_sender(void* self, QObject* (*callback)());
 /// @param self QAudioInput*
 ///
 int32_t q_audioinput_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_audioinput_super_sender_signal_index` instead
-///
-#define q_audioinput_qbase_sender_signal_index q_audioinput_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1012,10 +964,6 @@ void q_audioinput_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_audioinput_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_audioinput_super_receivers` instead
-///
-#define q_audioinput_qbase_receivers q_audioinput_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1048,10 +996,6 @@ void q_audioinput_on_receivers(void* self, int32_t (*callback)(void*, const char
 /// @param signal QMetaMethod*
 ///
 bool q_audioinput_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_audioinput_super_is_signal_connected` instead
-///
-#define q_audioinput_qbase_is_signal_connected q_audioinput_super_is_signal_connected
 
 /// Inherited from QObject
 ///

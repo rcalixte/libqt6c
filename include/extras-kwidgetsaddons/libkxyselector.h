@@ -37,10 +37,6 @@ const QMetaObject* k_xyselector_meta_object(void* self);
 ///
 void k_xyselector_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_xyselector_super_meta_object` instead
-///
-#define k_xyselector_qbase_meta_object k_xyselector_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -60,10 +56,6 @@ void* k_xyselector_metacast(void* self, const char* param1);
 /// @param callback void* func(KXYSelector* self, const char* param1)
 ///
 void k_xyselector_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_xyselector_super_metacast` instead
-///
-#define k_xyselector_qbase_metacast k_xyselector_super_metacast
 
 /// Base class method implementation
 ///
@@ -85,10 +77,6 @@ int32_t k_xyselector_metacall(void* self, int32_t param1, int param2, void* para
 /// @param callback int32_t func(KXYSelector* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_xyselector_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_xyselector_super_metacall` instead
-///
-#define k_xyselector_qbase_metacall k_xyselector_super_metacall
 
 /// Base class method implementation
 ///
@@ -181,10 +169,6 @@ QSize* k_xyselector_minimum_size_hint(void* self);
 ///
 void k_xyselector_on_minimum_size_hint(void* self, QSize* (*callback)());
 
-/// @warning DEPRECATED: Use `k_xyselector_super_minimum_size_hint` instead
-///
-#define k_xyselector_qbase_minimum_size_hint k_xyselector_super_minimum_size_hint
-
 /// [Upstream resources](https://api.kde.org/kxyselector.html#minimumSizeHint)
 ///
 /// Base class method implementation
@@ -224,10 +208,6 @@ void k_xyselector_draw_contents(void* self, void* param1);
 ///
 void k_xyselector_on_draw_contents(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_xyselector_super_draw_contents` instead
-///
-#define k_xyselector_qbase_draw_contents k_xyselector_super_draw_contents
-
 /// [Upstream resources](https://api.kde.org/kxyselector.html#drawContents)
 ///
 /// Base class method implementation
@@ -254,10 +234,6 @@ void k_xyselector_draw_marker(void* self, void* p, int xp, int yp);
 /// @param callback void func(KXYSelector* self, QPainter* p, int xp, int yp)
 ///
 void k_xyselector_on_draw_marker(void* self, void (*callback)(void*, void*, int, int));
-
-/// @warning DEPRECATED: Use `k_xyselector_super_draw_marker` instead
-///
-#define k_xyselector_qbase_draw_marker k_xyselector_super_draw_marker
 
 /// [Upstream resources](https://api.kde.org/kxyselector.html#drawMarker)
 ///
@@ -286,10 +262,6 @@ void k_xyselector_paint_event(void* self, void* e);
 ///
 void k_xyselector_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_xyselector_super_paint_event` instead
-///
-#define k_xyselector_qbase_paint_event k_xyselector_super_paint_event
-
 /// [Upstream resources](https://api.kde.org/kxyselector.html#paintEvent)
 ///
 /// Base class method implementation
@@ -314,10 +286,6 @@ void k_xyselector_mouse_press_event(void* self, void* e);
 /// @param callback void func(KXYSelector* self, QMouseEvent* e)
 ///
 void k_xyselector_on_mouse_press_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_xyselector_super_mouse_press_event` instead
-///
-#define k_xyselector_qbase_mouse_press_event k_xyselector_super_mouse_press_event
 
 /// [Upstream resources](https://api.kde.org/kxyselector.html#mousePressEvent)
 ///
@@ -344,10 +312,6 @@ void k_xyselector_mouse_move_event(void* self, void* e);
 ///
 void k_xyselector_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_xyselector_super_mouse_move_event` instead
-///
-#define k_xyselector_qbase_mouse_move_event k_xyselector_super_mouse_move_event
-
 /// [Upstream resources](https://api.kde.org/kxyselector.html#mouseMoveEvent)
 ///
 /// Base class method implementation
@@ -372,10 +336,6 @@ void k_xyselector_wheel_event(void* self, void* param1);
 /// @param callback void func(KXYSelector* self, QWheelEvent* param1)
 ///
 void k_xyselector_on_wheel_event(void* self, void (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_xyselector_super_wheel_event` instead
-///
-#define k_xyselector_qbase_wheel_event k_xyselector_super_wheel_event
 
 /// [Upstream resources](https://api.kde.org/kxyselector.html#wheelEvent)
 ///
@@ -404,10 +364,6 @@ void k_xyselector_values_from_position(void* self, int x, int y, int* xVal, int*
 /// @param callback void func(KXYSelector* self, int x, int y, int* xVal, int* yVal)
 ///
 void k_xyselector_on_values_from_position(void* self, void (*callback)(void*, int, int, int*, int*));
-
-/// @warning DEPRECATED: Use `k_xyselector_super_values_from_position` instead
-///
-#define k_xyselector_qbase_values_from_position k_xyselector_super_values_from_position
 
 /// [Upstream resources](https://api.kde.org/kxyselector.html#valuesFromPosition)
 ///
@@ -3399,10 +3355,6 @@ int32_t k_xyselector_encode_metric_f(int32_t metric, double value);
 ///
 int32_t k_xyselector_dev_type(void* self);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_dev_type` instead
-///
-#define k_xyselector_qbase_dev_type k_xyselector_super_dev_type
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -3435,10 +3387,6 @@ void k_xyselector_on_dev_type(void* self, int32_t (*callback)());
 ///
 void k_xyselector_set_visible(void* self, bool visible);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_set_visible` instead
-///
-#define k_xyselector_qbase_set_visible k_xyselector_super_set_visible
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -3470,10 +3418,6 @@ void k_xyselector_on_set_visible(void* self, void (*callback)(void*, bool));
 /// @param self KXYSelector*
 ///
 QSize* k_xyselector_size_hint(void* self);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_size_hint` instead
-///
-#define k_xyselector_qbase_size_hint k_xyselector_super_size_hint
 
 /// Inherited from QWidget
 ///
@@ -3509,10 +3453,6 @@ void k_xyselector_on_size_hint(void* self, QSize* (*callback)());
 ///
 int32_t k_xyselector_height_for_width(void* self, int param1);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_height_for_width` instead
-///
-#define k_xyselector_qbase_height_for_width k_xyselector_super_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -3545,10 +3485,6 @@ void k_xyselector_on_height_for_width(void* self, int32_t (*callback)(void*, int
 ///
 bool k_xyselector_has_height_for_width(void* self);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_has_height_for_width` instead
-///
-#define k_xyselector_qbase_has_height_for_width k_xyselector_super_has_height_for_width
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -3579,10 +3515,6 @@ void k_xyselector_on_has_height_for_width(void* self, bool (*callback)());
 /// @param self KXYSelector*
 ///
 QPaintEngine* k_xyselector_paint_engine(void* self);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_paint_engine` instead
-///
-#define k_xyselector_qbase_paint_engine k_xyselector_super_paint_engine
 
 /// Inherited from QWidget
 ///
@@ -3615,10 +3547,6 @@ void k_xyselector_on_paint_engine(void* self, QPaintEngine* (*callback)());
 /// @param event QEvent*
 ///
 bool k_xyselector_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_event` instead
-///
-#define k_xyselector_qbase_event k_xyselector_super_event
 
 /// Inherited from QWidget
 ///
@@ -3653,10 +3581,6 @@ void k_xyselector_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void k_xyselector_mouse_release_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_mouse_release_event` instead
-///
-#define k_xyselector_qbase_mouse_release_event k_xyselector_super_mouse_release_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
@@ -3689,10 +3613,6 @@ void k_xyselector_on_mouse_release_event(void* self, void (*callback)(void*, voi
 /// @param event QMouseEvent*
 ///
 void k_xyselector_mouse_double_click_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_mouse_double_click_event` instead
-///
-#define k_xyselector_qbase_mouse_double_click_event k_xyselector_super_mouse_double_click_event
 
 /// Inherited from QWidget
 ///
@@ -3727,10 +3647,6 @@ void k_xyselector_on_mouse_double_click_event(void* self, void (*callback)(void*
 ///
 void k_xyselector_key_press_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_key_press_event` instead
-///
-#define k_xyselector_qbase_key_press_event k_xyselector_super_key_press_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
@@ -3763,10 +3679,6 @@ void k_xyselector_on_key_press_event(void* self, void (*callback)(void*, void*))
 /// @param event QKeyEvent*
 ///
 void k_xyselector_key_release_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_key_release_event` instead
-///
-#define k_xyselector_qbase_key_release_event k_xyselector_super_key_release_event
 
 /// Inherited from QWidget
 ///
@@ -3801,10 +3713,6 @@ void k_xyselector_on_key_release_event(void* self, void (*callback)(void*, void*
 ///
 void k_xyselector_focus_in_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_focus_in_event` instead
-///
-#define k_xyselector_qbase_focus_in_event k_xyselector_super_focus_in_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -3837,10 +3745,6 @@ void k_xyselector_on_focus_in_event(void* self, void (*callback)(void*, void*));
 /// @param event QFocusEvent*
 ///
 void k_xyselector_focus_out_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_focus_out_event` instead
-///
-#define k_xyselector_qbase_focus_out_event k_xyselector_super_focus_out_event
 
 /// Inherited from QWidget
 ///
@@ -3875,10 +3779,6 @@ void k_xyselector_on_focus_out_event(void* self, void (*callback)(void*, void*))
 ///
 void k_xyselector_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_enter_event` instead
-///
-#define k_xyselector_qbase_enter_event k_xyselector_super_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -3911,10 +3811,6 @@ void k_xyselector_on_enter_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 ///
 void k_xyselector_leave_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_leave_event` instead
-///
-#define k_xyselector_qbase_leave_event k_xyselector_super_leave_event
 
 /// Inherited from QWidget
 ///
@@ -3949,10 +3845,6 @@ void k_xyselector_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void k_xyselector_move_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_move_event` instead
-///
-#define k_xyselector_qbase_move_event k_xyselector_super_move_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -3985,10 +3877,6 @@ void k_xyselector_on_move_event(void* self, void (*callback)(void*, void*));
 /// @param event QResizeEvent*
 ///
 void k_xyselector_resize_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_resize_event` instead
-///
-#define k_xyselector_qbase_resize_event k_xyselector_super_resize_event
 
 /// Inherited from QWidget
 ///
@@ -4023,10 +3911,6 @@ void k_xyselector_on_resize_event(void* self, void (*callback)(void*, void*));
 ///
 void k_xyselector_close_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_close_event` instead
-///
-#define k_xyselector_qbase_close_event k_xyselector_super_close_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -4059,10 +3943,6 @@ void k_xyselector_on_close_event(void* self, void (*callback)(void*, void*));
 /// @param event QContextMenuEvent*
 ///
 void k_xyselector_context_menu_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_context_menu_event` instead
-///
-#define k_xyselector_qbase_context_menu_event k_xyselector_super_context_menu_event
 
 /// Inherited from QWidget
 ///
@@ -4097,10 +3977,6 @@ void k_xyselector_on_context_menu_event(void* self, void (*callback)(void*, void
 ///
 void k_xyselector_tablet_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_tablet_event` instead
-///
-#define k_xyselector_qbase_tablet_event k_xyselector_super_tablet_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4133,10 +4009,6 @@ void k_xyselector_on_tablet_event(void* self, void (*callback)(void*, void*));
 /// @param event QActionEvent*
 ///
 void k_xyselector_action_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_action_event` instead
-///
-#define k_xyselector_qbase_action_event k_xyselector_super_action_event
 
 /// Inherited from QWidget
 ///
@@ -4171,10 +4043,6 @@ void k_xyselector_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 void k_xyselector_drag_enter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_drag_enter_event` instead
-///
-#define k_xyselector_qbase_drag_enter_event k_xyselector_super_drag_enter_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4207,10 +4075,6 @@ void k_xyselector_on_drag_enter_event(void* self, void (*callback)(void*, void*)
 /// @param event QDragMoveEvent*
 ///
 void k_xyselector_drag_move_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_drag_move_event` instead
-///
-#define k_xyselector_qbase_drag_move_event k_xyselector_super_drag_move_event
 
 /// Inherited from QWidget
 ///
@@ -4245,10 +4109,6 @@ void k_xyselector_on_drag_move_event(void* self, void (*callback)(void*, void*))
 ///
 void k_xyselector_drag_leave_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_drag_leave_event` instead
-///
-#define k_xyselector_qbase_drag_leave_event k_xyselector_super_drag_leave_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -4281,10 +4141,6 @@ void k_xyselector_on_drag_leave_event(void* self, void (*callback)(void*, void*)
 /// @param event QDropEvent*
 ///
 void k_xyselector_drop_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_drop_event` instead
-///
-#define k_xyselector_qbase_drop_event k_xyselector_super_drop_event
 
 /// Inherited from QWidget
 ///
@@ -4319,10 +4175,6 @@ void k_xyselector_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void k_xyselector_show_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_show_event` instead
-///
-#define k_xyselector_qbase_show_event k_xyselector_super_show_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -4355,10 +4207,6 @@ void k_xyselector_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param event QHideEvent*
 ///
 void k_xyselector_hide_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_hide_event` instead
-///
-#define k_xyselector_qbase_hide_event k_xyselector_super_hide_event
 
 /// Inherited from QWidget
 ///
@@ -4395,10 +4243,6 @@ void k_xyselector_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool k_xyselector_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_native_event` instead
-///
-#define k_xyselector_qbase_native_event k_xyselector_super_native_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4434,10 +4278,6 @@ void k_xyselector_on_native_event(void* self, bool (*callback)(void*, libqt_stri
 ///
 void k_xyselector_change_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_change_event` instead
-///
-#define k_xyselector_qbase_change_event k_xyselector_super_change_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -4470,10 +4310,6 @@ void k_xyselector_on_change_event(void* self, void (*callback)(void*, void*));
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
 int32_t k_xyselector_metric(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_metric` instead
-///
-#define k_xyselector_qbase_metric k_xyselector_super_metric
 
 /// Inherited from QWidget
 ///
@@ -4508,10 +4344,6 @@ void k_xyselector_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void k_xyselector_init_painter(void* self, void* painter);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_init_painter` instead
-///
-#define k_xyselector_qbase_init_painter k_xyselector_super_init_painter
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -4545,10 +4377,6 @@ void k_xyselector_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* k_xyselector_redirected(void* self, void* offset);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_redirected` instead
-///
-#define k_xyselector_qbase_redirected k_xyselector_super_redirected
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4580,10 +4408,6 @@ void k_xyselector_on_redirected(void* self, QPaintDevice* (*callback)(void*, voi
 /// @param self KXYSelector*
 ///
 QPainter* k_xyselector_shared_painter(void* self);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_shared_painter` instead
-///
-#define k_xyselector_qbase_shared_painter k_xyselector_super_shared_painter
 
 /// Inherited from QWidget
 ///
@@ -4617,10 +4441,6 @@ void k_xyselector_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void k_xyselector_input_method_event(void* self, void* param1);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_input_method_event` instead
-///
-#define k_xyselector_qbase_input_method_event k_xyselector_super_input_method_event
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4653,10 +4473,6 @@ void k_xyselector_on_input_method_event(void* self, void (*callback)(void*, void
 /// @param param1 enum Qt__InputMethodQuery
 ///
 QVariant* k_xyselector_input_method_query(void* self, int32_t param1);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_input_method_query` instead
-///
-#define k_xyselector_qbase_input_method_query k_xyselector_super_input_method_query
 
 /// Inherited from QWidget
 ///
@@ -4693,10 +4509,6 @@ void k_xyselector_on_input_method_query(void* self, QVariant* (*callback)(void*,
 ///
 bool k_xyselector_focus_next_prev_child(void* self, bool next);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_focus_next_prev_child` instead
-///
-#define k_xyselector_qbase_focus_next_prev_child k_xyselector_super_focus_next_prev_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -4730,10 +4542,6 @@ void k_xyselector_on_focus_next_prev_child(void* self, bool (*callback)(void*, b
 /// @param event QEvent*
 ///
 bool k_xyselector_event_filter(void* self, void* watched, void* event);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_event_filter` instead
-///
-#define k_xyselector_qbase_event_filter k_xyselector_super_event_filter
 
 /// Inherited from QObject
 ///
@@ -4769,10 +4577,6 @@ void k_xyselector_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void k_xyselector_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_timer_event` instead
-///
-#define k_xyselector_qbase_timer_event k_xyselector_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -4805,10 +4609,6 @@ void k_xyselector_on_timer_event(void* self, void (*callback)(void*, void*));
 /// @param event QChildEvent*
 ///
 void k_xyselector_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_child_event` instead
-///
-#define k_xyselector_qbase_child_event k_xyselector_super_child_event
 
 /// Inherited from QObject
 ///
@@ -4843,10 +4643,6 @@ void k_xyselector_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_xyselector_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_custom_event` instead
-///
-#define k_xyselector_qbase_custom_event k_xyselector_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -4879,10 +4675,6 @@ void k_xyselector_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param signal QMetaMethod*
 ///
 void k_xyselector_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_connect_notify` instead
-///
-#define k_xyselector_qbase_connect_notify k_xyselector_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -4917,10 +4709,6 @@ void k_xyselector_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void k_xyselector_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_disconnect_notify` instead
-///
-#define k_xyselector_qbase_disconnect_notify k_xyselector_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -4953,10 +4741,6 @@ void k_xyselector_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 void k_xyselector_update_micro_focus(void* self);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_update_micro_focus` instead
-///
-#define k_xyselector_qbase_update_micro_focus k_xyselector_super_update_micro_focus
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -4987,10 +4771,6 @@ void k_xyselector_on_update_micro_focus(void* self, void (*callback)());
 /// @param self KXYSelector*
 ///
 void k_xyselector_create(void* self);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_create` instead
-///
-#define k_xyselector_qbase_create k_xyselector_super_create
 
 /// Inherited from QWidget
 ///
@@ -5023,10 +4803,6 @@ void k_xyselector_on_create(void* self, void (*callback)());
 ///
 void k_xyselector_destroy(void* self);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_destroy` instead
-///
-#define k_xyselector_qbase_destroy k_xyselector_super_destroy
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5057,10 +4833,6 @@ void k_xyselector_on_destroy(void* self, void (*callback)());
 /// @param self KXYSelector*
 ///
 bool k_xyselector_focus_next_child(void* self);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_focus_next_child` instead
-///
-#define k_xyselector_qbase_focus_next_child k_xyselector_super_focus_next_child
 
 /// Inherited from QWidget
 ///
@@ -5093,10 +4865,6 @@ void k_xyselector_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_xyselector_focus_previous_child(void* self);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_focus_previous_child` instead
-///
-#define k_xyselector_qbase_focus_previous_child k_xyselector_super_focus_previous_child
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5127,10 +4895,6 @@ void k_xyselector_on_focus_previous_child(void* self, bool (*callback)());
 /// @param self KXYSelector*
 ///
 QObject* k_xyselector_sender(void* self);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_sender` instead
-///
-#define k_xyselector_qbase_sender k_xyselector_super_sender
 
 /// Inherited from QObject
 ///
@@ -5163,10 +4927,6 @@ void k_xyselector_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_xyselector_sender_signal_index(void* self);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_sender_signal_index` instead
-///
-#define k_xyselector_qbase_sender_signal_index k_xyselector_super_sender_signal_index
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5198,10 +4958,6 @@ void k_xyselector_on_sender_signal_index(void* self, int32_t (*callback)());
 /// @param signal const char*
 ///
 int32_t k_xyselector_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_receivers` instead
-///
-#define k_xyselector_qbase_receivers k_xyselector_super_receivers
 
 /// Inherited from QObject
 ///
@@ -5236,10 +4992,6 @@ void k_xyselector_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 bool k_xyselector_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_xyselector_super_is_signal_connected` instead
-///
-#define k_xyselector_qbase_is_signal_connected k_xyselector_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5273,10 +5025,6 @@ void k_xyselector_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
 double k_xyselector_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
-
-/// @warning DEPRECATED: Use `k_xyselector_super_get_decoded_metric_f` instead
-///
-#define k_xyselector_qbase_get_decoded_metric_f k_xyselector_super_get_decoded_metric_f
 
 /// Inherited from QPaintDevice
 ///

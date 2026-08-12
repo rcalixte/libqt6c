@@ -50,10 +50,6 @@ const QMetaObject* k_recentfilesaction_meta_object(void* self);
 ///
 void k_recentfilesaction_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_meta_object` instead
-///
-#define k_recentfilesaction_qbase_meta_object k_recentfilesaction_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -73,10 +69,6 @@ void* k_recentfilesaction_metacast(void* self, const char* param1);
 /// @param callback void* func(KRecentFilesAction* self, const char* param1)
 ///
 void k_recentfilesaction_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_metacast` instead
-///
-#define k_recentfilesaction_qbase_metacast k_recentfilesaction_super_metacast
 
 /// Base class method implementation
 ///
@@ -98,10 +90,6 @@ int32_t k_recentfilesaction_metacall(void* self, int32_t param1, int param2, voi
 /// @param callback int32_t func(KRecentFilesAction* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_recentfilesaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_metacall` instead
-///
-#define k_recentfilesaction_qbase_metacall k_recentfilesaction_super_metacall
 
 /// Base class method implementation
 ///
@@ -144,10 +132,6 @@ QAction* k_recentfilesaction_remove_action(void* self, void* action);
 /// @param callback QAction* func(KRecentFilesAction* self, QAction* action)
 ///
 void k_recentfilesaction_on_remove_action(void* self, QAction* (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_remove_action` instead
-///
-#define k_recentfilesaction_qbase_remove_action k_recentfilesaction_super_remove_action
 
 /// [Upstream resources](https://api.kde.org/krecentfilesaction.html#removeAction)
 ///
@@ -230,10 +214,6 @@ void k_recentfilesaction_clear(void* self);
 /// @param callback void func()
 ///
 void k_recentfilesaction_on_clear(void* self, void (*callback)());
-
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_clear` instead
-///
-#define k_recentfilesaction_qbase_clear k_recentfilesaction_super_clear
 
 /// [Upstream resources](https://api.kde.org/krecentfilesaction.html#clear)
 ///
@@ -1736,10 +1716,6 @@ void k_recentfilesaction_on_destroyed1(void* self, void (*callback)(void*, void*
 ///
 void k_recentfilesaction_insert_action(void* self, void* before, void* action);
 
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_insert_action` instead
-///
-#define k_recentfilesaction_qbase_insert_action k_recentfilesaction_super_insert_action
-
 /// Inherited from KSelectAction
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#insertAction)
@@ -1774,10 +1750,6 @@ void k_recentfilesaction_on_insert_action(void* self, void (*callback)(void*, vo
 ///
 void k_recentfilesaction_slot_action_triggered(void* self, void* action);
 
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_slot_action_triggered` instead
-///
-#define k_recentfilesaction_qbase_slot_action_triggered k_recentfilesaction_super_slot_action_triggered
-
 /// Inherited from KSelectAction
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#slotActionTriggered)
@@ -1810,10 +1782,6 @@ void k_recentfilesaction_on_slot_action_triggered(void* self, void (*callback)(v
 /// @param parent QWidget*
 ///
 QWidget* k_recentfilesaction_create_widget(void* self, void* parent);
-
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_create_widget` instead
-///
-#define k_recentfilesaction_qbase_create_widget k_recentfilesaction_super_create_widget
 
 /// Inherited from KSelectAction
 ///
@@ -1848,10 +1816,6 @@ void k_recentfilesaction_on_create_widget(void* self, QWidget* (*callback)(void*
 ///
 void k_recentfilesaction_delete_widget(void* self, void* widget);
 
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_delete_widget` instead
-///
-#define k_recentfilesaction_qbase_delete_widget k_recentfilesaction_super_delete_widget
-
 /// Inherited from KSelectAction
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#deleteWidget)
@@ -1884,10 +1848,6 @@ void k_recentfilesaction_on_delete_widget(void* self, void (*callback)(void*, vo
 /// @param event QEvent*
 ///
 bool k_recentfilesaction_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_event` instead
-///
-#define k_recentfilesaction_qbase_event k_recentfilesaction_super_event
 
 /// Inherited from KSelectAction
 ///
@@ -1923,10 +1883,6 @@ void k_recentfilesaction_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_recentfilesaction_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_event_filter` instead
-///
-#define k_recentfilesaction_qbase_event_filter k_recentfilesaction_super_event_filter
-
 /// Inherited from KSelectAction
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#eventFilter)
@@ -1961,10 +1917,6 @@ void k_recentfilesaction_on_event_filter(void* self, bool (*callback)(void*, voi
 ///
 void k_recentfilesaction_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_timer_event` instead
-///
-#define k_recentfilesaction_qbase_timer_event k_recentfilesaction_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1997,10 +1949,6 @@ void k_recentfilesaction_on_timer_event(void* self, void (*callback)(void*, void
 /// @param event QChildEvent*
 ///
 void k_recentfilesaction_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_child_event` instead
-///
-#define k_recentfilesaction_qbase_child_event k_recentfilesaction_super_child_event
 
 /// Inherited from QObject
 ///
@@ -2035,10 +1983,6 @@ void k_recentfilesaction_on_child_event(void* self, void (*callback)(void*, void
 ///
 void k_recentfilesaction_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_custom_event` instead
-///
-#define k_recentfilesaction_qbase_custom_event k_recentfilesaction_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2071,10 +2015,6 @@ void k_recentfilesaction_on_custom_event(void* self, void (*callback)(void*, voi
 /// @param signal QMetaMethod*
 ///
 void k_recentfilesaction_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_connect_notify` instead
-///
-#define k_recentfilesaction_qbase_connect_notify k_recentfilesaction_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -2109,10 +2049,6 @@ void k_recentfilesaction_on_connect_notify(void* self, void (*callback)(void*, v
 ///
 void k_recentfilesaction_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_disconnect_notify` instead
-///
-#define k_recentfilesaction_qbase_disconnect_notify k_recentfilesaction_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -2145,10 +2081,6 @@ void k_recentfilesaction_on_disconnect_notify(void* self, void (*callback)(void*
 /// @param param1 bool
 ///
 void k_recentfilesaction_slot_toggled(void* self, bool param1);
-
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_slot_toggled` instead
-///
-#define k_recentfilesaction_qbase_slot_toggled k_recentfilesaction_super_slot_toggled
 
 /// Inherited from KSelectAction
 ///
@@ -2184,10 +2116,6 @@ void k_recentfilesaction_on_slot_toggled(void* self, void (*callback)(void*, boo
 ///
 libqt_list k_recentfilesaction_created_widgets(void* self);
 
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_created_widgets` instead
-///
-#define k_recentfilesaction_qbase_created_widgets k_recentfilesaction_super_created_widgets
-
 /// Inherited from QWidgetAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
@@ -2221,10 +2149,6 @@ void k_recentfilesaction_on_created_widgets(void* self, libqt_list (*callback)()
 ///
 QObject* k_recentfilesaction_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_sender` instead
-///
-#define k_recentfilesaction_qbase_sender k_recentfilesaction_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2255,10 +2179,6 @@ void k_recentfilesaction_on_sender(void* self, QObject* (*callback)());
 /// @param self KRecentFilesAction*
 ///
 int32_t k_recentfilesaction_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_sender_signal_index` instead
-///
-#define k_recentfilesaction_qbase_sender_signal_index k_recentfilesaction_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -2292,10 +2212,6 @@ void k_recentfilesaction_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 int32_t k_recentfilesaction_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_receivers` instead
-///
-#define k_recentfilesaction_qbase_receivers k_recentfilesaction_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2328,10 +2244,6 @@ void k_recentfilesaction_on_receivers(void* self, int32_t (*callback)(void*, con
 /// @param signal QMetaMethod*
 ///
 bool k_recentfilesaction_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_recentfilesaction_super_is_signal_connected` instead
-///
-#define k_recentfilesaction_qbase_is_signal_connected k_recentfilesaction_super_is_signal_connected
 
 /// Inherited from QObject
 ///

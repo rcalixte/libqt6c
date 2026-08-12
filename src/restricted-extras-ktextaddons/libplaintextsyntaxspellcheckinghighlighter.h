@@ -48,10 +48,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_set_definition(
 ///
 void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_set_definition(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_set_definition` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_set_definition k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_set_definition
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextSyntaxSpellCheckingHighlighter.html)
 ///
 /// Base class method implementation
@@ -76,10 +72,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_highlight_block
 /// @param callback void func(TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter* self, const char* text)
 ///
 void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_highlight_block(void* self, void (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_highlight_block` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_highlight_block k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_highlight_block
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextSyntaxSpellCheckingHighlighter.html)
 ///
@@ -106,10 +98,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_unset_misspelle
 /// @param callback void func(TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter* self, int start, int count)
 ///
 void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_unset_misspelled(void* self, void (*callback)(void*, int, int));
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_unset_misspelled` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_unset_misspelled k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_unset_misspelled
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextSyntaxSpellCheckingHighlighter.html)
 ///
@@ -138,10 +126,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_set_misspelled(
 ///
 void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_set_misspelled(void* self, void (*callback)(void*, int, int));
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_set_misspelled` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_set_misspelled k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_set_misspelled
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextSyntaxSpellCheckingHighlighter.html)
 ///
 /// Base class method implementation
@@ -169,10 +153,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_apply_format(vo
 /// @param callback void func(TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter* self, int offset, int length, KSyntaxHighlighting__Format* format)
 ///
 void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_apply_format(void* self, void (*callback)(void*, int, int, void*));
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_apply_format` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_apply_format k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_apply_format
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextSyntaxSpellCheckingHighlighter.html)
 ///
@@ -929,10 +909,6 @@ KSyntaxHighlighting__Theme* k_textcustomeditor__plaintextsyntaxspellcheckinghigh
 ///
 const QMetaObject* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_meta_object(void* self);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_meta_object` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_meta_object k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_meta_object
-
 /// Inherited from Sonnet::Highlighter
 ///
 /// [Upstream resources](https://api.kde.org/sonnet-highlighter.html#metaObject)
@@ -964,10 +940,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_meta_object(
 /// @param param1 const char*
 ///
 void* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_metacast(void* self, const char* param1);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_metacast` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_metacast k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_metacast
 
 /// Inherited from Sonnet::Highlighter
 ///
@@ -1003,10 +975,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_metacast(voi
 /// @param param3 void*
 ///
 int32_t k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_metacall(void* self, int32_t param1, int param2, void* param3);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_metacall` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_metacall k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_metacall
 
 /// Inherited from Sonnet::Highlighter
 ///
@@ -1044,10 +1012,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_metacall(voi
 ///
 bool k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_event_filter(void* self, void* o, void* e);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_event_filter` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_event_filter k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_event_filter
-
 /// Inherited from Sonnet::Highlighter
 ///
 /// [Upstream resources](https://api.kde.org/sonnet-highlighter.html#eventFilter)
@@ -1082,10 +1046,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_event_filter
 ///
 bool k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_event` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_event k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1118,10 +1078,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_event(void* 
 /// @param event QTimerEvent*
 ///
 void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_timer_event` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_timer_event k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -1156,10 +1112,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_timer_event(
 ///
 void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_child_event` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_child_event k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1192,10 +1144,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_child_event(
 /// @param event QEvent*
 ///
 void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_custom_event` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_custom_event k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -1230,10 +1178,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_custom_event
 ///
 void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_connect_notify` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_connect_notify k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1267,10 +1211,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_connect_noti
 ///
 void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_disconnect_notify` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_disconnect_notify k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1303,10 +1243,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_disconnect_n
 /// @param theme KSyntaxHighlighting__Theme*
 ///
 void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_set_theme(void* self, void* theme);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_set_theme` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_set_theme k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_set_theme
 
 /// Inherited from KSyntaxHighlighting::AbstractHighlighter
 ///
@@ -1343,10 +1279,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_set_theme(vo
 ///
 void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_apply_folding(void* self, int offset, int length, void* region);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_apply_folding` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_apply_folding k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_apply_folding
-
 /// Inherited from KSyntaxHighlighting::AbstractHighlighter
 ///
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-abstracthighlighter.html#applyFolding)
@@ -1381,10 +1313,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_apply_foldin
 ///
 bool k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_intra_word_editing(void* self);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_intra_word_editing` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_intra_word_editing k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_intra_word_editing
-
 /// Inherited from Sonnet::Highlighter
 ///
 /// [Upstream resources](https://api.kde.org/sonnet-highlighter.html#intraWordEditing)
@@ -1416,10 +1344,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_intra_word_e
 /// @param editing bool
 ///
 void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_set_intra_word_editing(void* self, bool editing);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_set_intra_word_editing` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_set_intra_word_editing k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_set_intra_word_editing
 
 /// Inherited from Sonnet::Highlighter
 ///
@@ -1456,10 +1380,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_set_intra_wo
 ///
 void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_set_format(void* self, int start, int count, void* format);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_set_format` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_set_format k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_set_format
-
 /// Inherited from QSyntaxHighlighter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setFormat)
@@ -1495,10 +1415,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_set_format(v
 ///
 QTextCharFormat* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_format(void* self, int pos);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_format` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_format k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_format
-
 /// Inherited from QSyntaxHighlighter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#format)
@@ -1533,10 +1449,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_format(void*
 ///
 int32_t k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_previous_block_state(void* self);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_previous_block_state` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_previous_block_state k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_previous_block_state
-
 /// Inherited from QSyntaxHighlighter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#previousBlockState)
@@ -1567,10 +1479,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_previous_blo
 /// @param self TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter*
 ///
 int32_t k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_current_block_state(void* self);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_current_block_state` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_current_block_state k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_current_block_state
 
 /// Inherited from QSyntaxHighlighter
 ///
@@ -1603,10 +1511,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_current_bloc
 /// @param newState int
 ///
 void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_set_current_block_state(void* self, int newState);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_set_current_block_state` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_set_current_block_state k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_set_current_block_state
 
 /// Inherited from QSyntaxHighlighter
 ///
@@ -1641,10 +1545,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_set_current_
 ///
 void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_set_current_block_user_data(void* self, void* data);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_set_current_block_user_data` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_set_current_block_user_data k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_set_current_block_user_data
-
 /// Inherited from QSyntaxHighlighter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setCurrentBlockUserData)
@@ -1677,10 +1577,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_set_current_
 ///
 QTextBlockUserData* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_current_block_user_data(void* self);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_current_block_user_data` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_current_block_user_data k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_current_block_user_data
-
 /// Inherited from QSyntaxHighlighter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlockUserData)
@@ -1711,10 +1607,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_current_bloc
 /// @param self TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter*
 ///
 QTextBlock* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_current_block(void* self);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_current_block` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_current_block k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_current_block
 
 /// Inherited from QSyntaxHighlighter
 ///
@@ -1749,10 +1641,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_current_bloc
 ///
 QObject* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_sender` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_sender k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1783,10 +1671,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_sender(void*
 /// @param self TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter*
 ///
 int32_t k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_sender_signal_index` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_sender_signal_index k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1819,10 +1703,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_sender_signa
 /// @param signal const char*
 ///
 int32_t k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_receivers(void* self, const char* signal);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_receivers` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_receivers k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_receivers
 
 /// Inherited from QObject
 ///
@@ -1857,10 +1737,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_receivers(vo
 ///
 bool k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_is_signal_connected(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_is_signal_connected` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_is_signal_connected k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_is_signal_connected
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1894,10 +1770,6 @@ void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_is_signal_co
 /// @param state KSyntaxHighlighting__State*
 ///
 KSyntaxHighlighting__State* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_highlight_line(void* self, const char* text, void* state);
-
-/// @warning DEPRECATED: Use `k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_highlight_line` instead
-///
-#define k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_qbase_highlight_line k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_highlight_line
 
 /// Inherited from KSyntaxHighlighting::AbstractHighlighter
 ///

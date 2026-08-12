@@ -54,10 +54,6 @@ const QMetaObject* q_stringlistmodel_meta_object(void* self);
 ///
 void q_stringlistmodel_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_meta_object` instead
-///
-#define q_stringlistmodel_qbase_meta_object q_stringlistmodel_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -77,10 +73,6 @@ void* q_stringlistmodel_metacast(void* self, const char* param1);
 /// @param callback void* func(QStringListModel* self, const char* param1)
 ///
 void q_stringlistmodel_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_metacast` instead
-///
-#define q_stringlistmodel_qbase_metacast q_stringlistmodel_super_metacast
 
 /// Base class method implementation
 ///
@@ -102,10 +94,6 @@ int32_t q_stringlistmodel_metacall(void* self, int32_t param1, int param2, void*
 /// @param callback int32_t func(QStringListModel* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void q_stringlistmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_metacall` instead
-///
-#define q_stringlistmodel_qbase_metacall q_stringlistmodel_super_metacall
 
 /// Base class method implementation
 ///
@@ -140,10 +128,6 @@ int32_t q_stringlistmodel_row_count(void* self, void* parent);
 ///
 void q_stringlistmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_row_count` instead
-///
-#define q_stringlistmodel_qbase_row_count q_stringlistmodel_super_row_count
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#rowCount)
 ///
 /// Base class method implementation
@@ -172,10 +156,6 @@ QModelIndex* q_stringlistmodel_sibling(void* self, int row, int column, void* id
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_stringlistmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_sibling` instead
-///
-#define q_stringlistmodel_qbase_sibling q_stringlistmodel_super_sibling
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#sibling)
 ///
@@ -207,10 +187,6 @@ QVariant* q_stringlistmodel_data(void* self, void* index, int role);
 ///
 void q_stringlistmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_data` instead
-///
-#define q_stringlistmodel_qbase_data q_stringlistmodel_super_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#data)
 ///
 /// Base class method implementation
@@ -239,10 +215,6 @@ bool q_stringlistmodel_set_data(void* self, void* index, void* value, int role);
 ///
 void q_stringlistmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_set_data` instead
-///
-#define q_stringlistmodel_qbase_set_data q_stringlistmodel_super_set_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#setData)
 ///
 /// Base class method implementation
@@ -270,10 +242,6 @@ bool q_stringlistmodel_clear_item_data(void* self, void* index);
 ///
 void q_stringlistmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_clear_item_data` instead
-///
-#define q_stringlistmodel_qbase_clear_item_data q_stringlistmodel_super_clear_item_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#clearItemData)
 ///
 /// Base class method implementation
@@ -300,10 +268,6 @@ int32_t q_stringlistmodel_flags(void* self, void* index);
 /// @param callback int32_t func(QStringListModel* self, QModelIndex* index)
 ///
 void q_stringlistmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_flags` instead
-///
-#define q_stringlistmodel_qbase_flags q_stringlistmodel_super_flags
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#flags)
 ///
@@ -334,10 +298,6 @@ bool q_stringlistmodel_insert_rows(void* self, int row, int count, void* parent)
 ///
 void q_stringlistmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_insert_rows` instead
-///
-#define q_stringlistmodel_qbase_insert_rows q_stringlistmodel_super_insert_rows
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#insertRows)
 ///
 /// Base class method implementation
@@ -366,10 +326,6 @@ bool q_stringlistmodel_remove_rows(void* self, int row, int count, void* parent)
 /// @param callback bool func(QStringListModel* self, int row, int count, QModelIndex* parent)
 ///
 void q_stringlistmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_remove_rows` instead
-///
-#define q_stringlistmodel_qbase_remove_rows q_stringlistmodel_super_remove_rows
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#removeRows)
 ///
@@ -401,10 +357,6 @@ bool q_stringlistmodel_move_rows(void* self, void* sourceParent, int sourceRow, 
 /// @param callback bool func(QStringListModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
 ///
 void q_stringlistmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_move_rows` instead
-///
-#define q_stringlistmodel_qbase_move_rows q_stringlistmodel_super_move_rows
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#moveRows)
 ///
@@ -448,10 +400,6 @@ libqt_map q_stringlistmodel_item_data(void* self, void* index);
 ///
 void q_stringlistmodel_on_item_data(void* self, libqt_map (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_item_data` instead
-///
-#define q_stringlistmodel_qbase_item_data q_stringlistmodel_super_item_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#itemData)
 ///
 /// Base class method implementation
@@ -480,10 +428,6 @@ bool q_stringlistmodel_set_item_data(void* self, void* index, libqt_map roles);
 ///
 void q_stringlistmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map));
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_set_item_data` instead
-///
-#define q_stringlistmodel_qbase_set_item_data q_stringlistmodel_super_set_item_data
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#setItemData)
 ///
 /// Base class method implementation
@@ -510,10 +454,6 @@ void q_stringlistmodel_sort(void* self, int column, int32_t order);
 /// @param callback void func(QStringListModel* self, int column, enum Qt__SortOrder order)
 ///
 void q_stringlistmodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_sort` instead
-///
-#define q_stringlistmodel_qbase_sort q_stringlistmodel_super_sort
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#sort)
 ///
@@ -556,10 +496,6 @@ int32_t q_stringlistmodel_supported_drop_actions(void* self);
 /// @param callback int32_t func()
 ///
 void q_stringlistmodel_on_supported_drop_actions(void* self, int32_t (*callback)());
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_supported_drop_actions` instead
-///
-#define q_stringlistmodel_qbase_supported_drop_actions q_stringlistmodel_super_supported_drop_actions
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#supportedDropActions)
 ///
@@ -622,10 +558,6 @@ QModelIndex* q_stringlistmodel_parent(void* self, void* child);
 ///
 void q_stringlistmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_parent` instead
-///
-#define q_stringlistmodel_qbase_parent q_stringlistmodel_super_parent
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#parent)
@@ -657,10 +589,6 @@ int32_t q_stringlistmodel_column_count(void* self, void* parent);
 ///
 void q_stringlistmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_column_count` instead
-///
-#define q_stringlistmodel_qbase_column_count q_stringlistmodel_super_column_count
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnCount)
@@ -691,10 +619,6 @@ bool q_stringlistmodel_has_children(void* self, void* parent);
 /// @param callback bool func(QStringListModel* self, QModelIndex* parent)
 ///
 void q_stringlistmodel_on_has_children(void* self, bool (*callback)(void*, void*));
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_has_children` instead
-///
-#define q_stringlistmodel_qbase_has_children q_stringlistmodel_super_has_children
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1456,10 +1380,6 @@ void q_stringlistmodel_on_destroyed1(void* self, void (*callback)(void*, void*))
 ///
 QModelIndex* q_stringlistmodel_index(void* self, int row, int column, void* parent);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_index` instead
-///
-#define q_stringlistmodel_qbase_index q_stringlistmodel_super_index
-
 /// Inherited from QAbstractListModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractlistmodel.html#index)
@@ -1501,10 +1421,6 @@ void q_stringlistmodel_on_index(void* self, QModelIndex* (*callback)(void*, int,
 ///
 bool q_stringlistmodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_drop_mime_data` instead
-///
-#define q_stringlistmodel_qbase_drop_mime_data q_stringlistmodel_super_drop_mime_data
-
 /// Inherited from QAbstractListModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractlistmodel.html#dropMimeData)
@@ -1543,10 +1459,6 @@ void q_stringlistmodel_on_drop_mime_data(void* self, bool (*callback)(void*, voi
 /// @param role int
 ///
 QVariant* q_stringlistmodel_header_data(void* self, int section, int32_t orientation, int role);
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_header_data` instead
-///
-#define q_stringlistmodel_qbase_header_data q_stringlistmodel_super_header_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1588,10 +1500,6 @@ void q_stringlistmodel_on_header_data(void* self, QVariant* (*callback)(void*, i
 ///
 bool q_stringlistmodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_set_header_data` instead
-///
-#define q_stringlistmodel_qbase_set_header_data q_stringlistmodel_super_set_header_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setHeaderData)
@@ -1629,10 +1537,6 @@ void q_stringlistmodel_on_set_header_data(void* self, bool (*callback)(void*, in
 ///
 const char** q_stringlistmodel_mime_types(void* self);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_mime_types` instead
-///
-#define q_stringlistmodel_qbase_mime_types q_stringlistmodel_super_mime_types
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
@@ -1666,10 +1570,6 @@ void q_stringlistmodel_on_mime_types(void* self, const char** (*callback)());
 /// @param indexes libqt_list of QModelIndex*
 ///
 QMimeData* q_stringlistmodel_mime_data(void* self, libqt_list indexes);
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_mime_data` instead
-///
-#define q_stringlistmodel_qbase_mime_data q_stringlistmodel_super_mime_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1707,10 +1607,6 @@ void q_stringlistmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, li
 /// @param parent QModelIndex*
 ///
 bool q_stringlistmodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_can_drop_mime_data` instead
-///
-#define q_stringlistmodel_qbase_can_drop_mime_data q_stringlistmodel_super_can_drop_mime_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1750,10 +1646,6 @@ void q_stringlistmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*,
 ///
 int32_t q_stringlistmodel_supported_drag_actions(void* self);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_supported_drag_actions` instead
-///
-#define q_stringlistmodel_qbase_supported_drag_actions q_stringlistmodel_super_supported_drag_actions
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
@@ -1789,10 +1681,6 @@ void q_stringlistmodel_on_supported_drag_actions(void* self, int32_t (*callback)
 /// @param parent QModelIndex*
 ///
 bool q_stringlistmodel_insert_columns(void* self, int column, int count, void* parent);
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_insert_columns` instead
-///
-#define q_stringlistmodel_qbase_insert_columns q_stringlistmodel_super_insert_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1830,10 +1718,6 @@ void q_stringlistmodel_on_insert_columns(void* self, bool (*callback)(void*, int
 /// @param parent QModelIndex*
 ///
 bool q_stringlistmodel_remove_columns(void* self, int column, int count, void* parent);
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_remove_columns` instead
-///
-#define q_stringlistmodel_qbase_remove_columns q_stringlistmodel_super_remove_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1874,10 +1758,6 @@ void q_stringlistmodel_on_remove_columns(void* self, bool (*callback)(void*, int
 ///
 bool q_stringlistmodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_move_columns` instead
-///
-#define q_stringlistmodel_qbase_move_columns q_stringlistmodel_super_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
@@ -1915,10 +1795,6 @@ void q_stringlistmodel_on_move_columns(void* self, bool (*callback)(void*, void*
 ///
 void q_stringlistmodel_fetch_more(void* self, void* parent);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_fetch_more` instead
-///
-#define q_stringlistmodel_qbase_fetch_more q_stringlistmodel_super_fetch_more
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#fetchMore)
@@ -1952,10 +1828,6 @@ void q_stringlistmodel_on_fetch_more(void* self, void (*callback)(void*, void*))
 ///
 bool q_stringlistmodel_can_fetch_more(void* self, void* parent);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_can_fetch_more` instead
-///
-#define q_stringlistmodel_qbase_can_fetch_more q_stringlistmodel_super_can_fetch_more
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#canFetchMore)
@@ -1988,10 +1860,6 @@ void q_stringlistmodel_on_can_fetch_more(void* self, bool (*callback)(void*, voi
 /// @param index QModelIndex*
 ///
 QModelIndex* q_stringlistmodel_buddy(void* self, void* index);
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_buddy` instead
-///
-#define q_stringlistmodel_qbase_buddy q_stringlistmodel_super_buddy
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2034,10 +1902,6 @@ void q_stringlistmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void
 ///
 libqt_list q_stringlistmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_match` instead
-///
-#define q_stringlistmodel_qbase_match q_stringlistmodel_super_match
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
@@ -2076,10 +1940,6 @@ void q_stringlistmodel_on_match(void* self, libqt_list (*callback)(void*, void*,
 /// @param index QModelIndex*
 ///
 QSize* q_stringlistmodel_span(void* self, void* index);
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_span` instead
-///
-#define q_stringlistmodel_qbase_span q_stringlistmodel_super_span
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2128,10 +1988,6 @@ void q_stringlistmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 ///
 libqt_map q_stringlistmodel_role_names(void* self);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_role_names` instead
-///
-#define q_stringlistmodel_qbase_role_names q_stringlistmodel_super_role_names
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames)
@@ -2178,10 +2034,6 @@ void q_stringlistmodel_on_role_names(void* self, libqt_map (*callback)());
 ///
 void q_stringlistmodel_multi_data(void* self, void* index, void* roleDataSpan);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_multi_data` instead
-///
-#define q_stringlistmodel_qbase_multi_data q_stringlistmodel_super_multi_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
@@ -2215,10 +2067,6 @@ void q_stringlistmodel_on_multi_data(void* self, void (*callback)(void*, void*, 
 ///
 bool q_stringlistmodel_submit(void* self);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_submit` instead
-///
-#define q_stringlistmodel_qbase_submit q_stringlistmodel_super_submit
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#submit)
@@ -2249,10 +2097,6 @@ void q_stringlistmodel_on_submit(void* self, bool (*callback)());
 /// @param self QStringListModel*
 ///
 void q_stringlistmodel_revert(void* self);
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_revert` instead
-///
-#define q_stringlistmodel_qbase_revert q_stringlistmodel_super_revert
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2285,10 +2129,6 @@ void q_stringlistmodel_on_revert(void* self, void (*callback)());
 ///
 void q_stringlistmodel_reset_internal_data(void* self);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_reset_internal_data` instead
-///
-#define q_stringlistmodel_qbase_reset_internal_data q_stringlistmodel_super_reset_internal_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
@@ -2320,10 +2160,6 @@ void q_stringlistmodel_on_reset_internal_data(void* self, void (*callback)());
 /// @param event QEvent*
 ///
 bool q_stringlistmodel_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_event` instead
-///
-#define q_stringlistmodel_qbase_event q_stringlistmodel_super_event
 
 /// Inherited from QObject
 ///
@@ -2359,10 +2195,6 @@ void q_stringlistmodel_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_stringlistmodel_event_filter(void* self, void* watched, void* event);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_event_filter` instead
-///
-#define q_stringlistmodel_qbase_event_filter q_stringlistmodel_super_event_filter
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -2397,10 +2229,6 @@ void q_stringlistmodel_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 void q_stringlistmodel_timer_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_timer_event` instead
-///
-#define q_stringlistmodel_qbase_timer_event q_stringlistmodel_super_timer_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2433,10 +2261,6 @@ void q_stringlistmodel_on_timer_event(void* self, void (*callback)(void*, void*)
 /// @param event QChildEvent*
 ///
 void q_stringlistmodel_child_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_child_event` instead
-///
-#define q_stringlistmodel_qbase_child_event q_stringlistmodel_super_child_event
 
 /// Inherited from QObject
 ///
@@ -2471,10 +2295,6 @@ void q_stringlistmodel_on_child_event(void* self, void (*callback)(void*, void*)
 ///
 void q_stringlistmodel_custom_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_custom_event` instead
-///
-#define q_stringlistmodel_qbase_custom_event q_stringlistmodel_super_custom_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2507,10 +2327,6 @@ void q_stringlistmodel_on_custom_event(void* self, void (*callback)(void*, void*
 /// @param signal QMetaMethod*
 ///
 void q_stringlistmodel_connect_notify(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_connect_notify` instead
-///
-#define q_stringlistmodel_qbase_connect_notify q_stringlistmodel_super_connect_notify
 
 /// Inherited from QObject
 ///
@@ -2545,10 +2361,6 @@ void q_stringlistmodel_on_connect_notify(void* self, void (*callback)(void*, voi
 ///
 void q_stringlistmodel_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_disconnect_notify` instead
-///
-#define q_stringlistmodel_qbase_disconnect_notify q_stringlistmodel_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -2582,10 +2394,6 @@ void q_stringlistmodel_on_disconnect_notify(void* self, void (*callback)(void*, 
 /// @param column int
 ///
 QModelIndex* q_stringlistmodel_create_index(void* self, int row, int column);
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_create_index` instead
-///
-#define q_stringlistmodel_qbase_create_index q_stringlistmodel_super_create_index
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2624,10 +2432,6 @@ void q_stringlistmodel_on_create_index(void* self, QModelIndex* (*callback)(void
 ///
 void q_stringlistmodel_encode_data(void* self, libqt_list indexes, void* stream);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_encode_data` instead
-///
-#define q_stringlistmodel_qbase_encode_data q_stringlistmodel_super_encode_data
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
@@ -2664,10 +2468,6 @@ void q_stringlistmodel_on_encode_data(void* self, void (*callback)(void*, libqt_
 /// @param stream QDataStream*
 ///
 bool q_stringlistmodel_decode_data(void* self, int row, int column, void* parent, void* stream);
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_decode_data` instead
-///
-#define q_stringlistmodel_qbase_decode_data q_stringlistmodel_super_decode_data
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2707,10 +2507,6 @@ void q_stringlistmodel_on_decode_data(void* self, bool (*callback)(void*, int, i
 ///
 void q_stringlistmodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_begin_insert_rows` instead
-///
-#define q_stringlistmodel_qbase_begin_insert_rows q_stringlistmodel_super_begin_insert_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
@@ -2744,10 +2540,6 @@ void q_stringlistmodel_on_begin_insert_rows(void* self, void (*callback)(void*, 
 /// @param self QStringListModel*
 ///
 void q_stringlistmodel_end_insert_rows(void* self);
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_end_insert_rows` instead
-///
-#define q_stringlistmodel_qbase_end_insert_rows q_stringlistmodel_super_end_insert_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2783,10 +2575,6 @@ void q_stringlistmodel_on_end_insert_rows(void* self, void (*callback)());
 ///
 void q_stringlistmodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_begin_remove_rows` instead
-///
-#define q_stringlistmodel_qbase_begin_remove_rows q_stringlistmodel_super_begin_remove_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
@@ -2820,10 +2608,6 @@ void q_stringlistmodel_on_begin_remove_rows(void* self, void (*callback)(void*, 
 /// @param self QStringListModel*
 ///
 void q_stringlistmodel_end_remove_rows(void* self);
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_end_remove_rows` instead
-///
-#define q_stringlistmodel_qbase_end_remove_rows q_stringlistmodel_super_end_remove_rows
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2861,10 +2645,6 @@ void q_stringlistmodel_on_end_remove_rows(void* self, void (*callback)());
 ///
 bool q_stringlistmodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_begin_move_rows` instead
-///
-#define q_stringlistmodel_qbase_begin_move_rows q_stringlistmodel_super_begin_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
@@ -2901,10 +2681,6 @@ void q_stringlistmodel_on_begin_move_rows(void* self, bool (*callback)(void*, vo
 ///
 void q_stringlistmodel_end_move_rows(void* self);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_end_move_rows` instead
-///
-#define q_stringlistmodel_qbase_end_move_rows q_stringlistmodel_super_end_move_rows
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
@@ -2938,10 +2714,6 @@ void q_stringlistmodel_on_end_move_rows(void* self, void (*callback)());
 /// @param last int
 ///
 void q_stringlistmodel_begin_insert_columns(void* self, void* parent, int first, int last);
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_begin_insert_columns` instead
-///
-#define q_stringlistmodel_qbase_begin_insert_columns q_stringlistmodel_super_begin_insert_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2977,10 +2749,6 @@ void q_stringlistmodel_on_begin_insert_columns(void* self, void (*callback)(void
 ///
 void q_stringlistmodel_end_insert_columns(void* self);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_end_insert_columns` instead
-///
-#define q_stringlistmodel_qbase_end_insert_columns q_stringlistmodel_super_end_insert_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
@@ -3015,10 +2783,6 @@ void q_stringlistmodel_on_end_insert_columns(void* self, void (*callback)());
 ///
 void q_stringlistmodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_begin_remove_columns` instead
-///
-#define q_stringlistmodel_qbase_begin_remove_columns q_stringlistmodel_super_begin_remove_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
@@ -3052,10 +2816,6 @@ void q_stringlistmodel_on_begin_remove_columns(void* self, void (*callback)(void
 /// @param self QStringListModel*
 ///
 void q_stringlistmodel_end_remove_columns(void* self);
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_end_remove_columns` instead
-///
-#define q_stringlistmodel_qbase_end_remove_columns q_stringlistmodel_super_end_remove_columns
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3093,10 +2853,6 @@ void q_stringlistmodel_on_end_remove_columns(void* self, void (*callback)());
 ///
 bool q_stringlistmodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_begin_move_columns` instead
-///
-#define q_stringlistmodel_qbase_begin_move_columns q_stringlistmodel_super_begin_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
@@ -3133,10 +2889,6 @@ void q_stringlistmodel_on_begin_move_columns(void* self, bool (*callback)(void*,
 ///
 void q_stringlistmodel_end_move_columns(void* self);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_end_move_columns` instead
-///
-#define q_stringlistmodel_qbase_end_move_columns q_stringlistmodel_super_end_move_columns
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
@@ -3168,10 +2920,6 @@ void q_stringlistmodel_on_end_move_columns(void* self, void (*callback)());
 ///
 void q_stringlistmodel_begin_reset_model(void* self);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_begin_reset_model` instead
-///
-#define q_stringlistmodel_qbase_begin_reset_model q_stringlistmodel_super_begin_reset_model
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
@@ -3202,10 +2950,6 @@ void q_stringlistmodel_on_begin_reset_model(void* self, void (*callback)());
 /// @param self QStringListModel*
 ///
 void q_stringlistmodel_end_reset_model(void* self);
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_end_reset_model` instead
-///
-#define q_stringlistmodel_qbase_end_reset_model q_stringlistmodel_super_end_reset_model
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3239,10 +2983,6 @@ void q_stringlistmodel_on_end_reset_model(void* self, void (*callback)());
 /// @param to QModelIndex*
 ///
 void q_stringlistmodel_change_persistent_index(void* self, void* from, void* to);
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_change_persistent_index` instead
-///
-#define q_stringlistmodel_qbase_change_persistent_index q_stringlistmodel_super_change_persistent_index
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3279,10 +3019,6 @@ void q_stringlistmodel_on_change_persistent_index(void* self, void (*callback)(v
 ///
 void q_stringlistmodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_change_persistent_index_list` instead
-///
-#define q_stringlistmodel_qbase_change_persistent_index_list q_stringlistmodel_super_change_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
@@ -3318,10 +3054,6 @@ void q_stringlistmodel_on_change_persistent_index_list(void* self, void (*callba
 ///
 libqt_list q_stringlistmodel_persistent_index_list(void* self);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_persistent_index_list` instead
-///
-#define q_stringlistmodel_qbase_persistent_index_list q_stringlistmodel_super_persistent_index_list
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
@@ -3355,10 +3087,6 @@ void q_stringlistmodel_on_persistent_index_list(void* self, libqt_list (*callbac
 ///
 QObject* q_stringlistmodel_sender(void* self);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_sender` instead
-///
-#define q_stringlistmodel_qbase_sender q_stringlistmodel_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -3389,10 +3117,6 @@ void q_stringlistmodel_on_sender(void* self, QObject* (*callback)());
 /// @param self QStringListModel*
 ///
 int32_t q_stringlistmodel_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_sender_signal_index` instead
-///
-#define q_stringlistmodel_qbase_sender_signal_index q_stringlistmodel_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -3426,10 +3150,6 @@ void q_stringlistmodel_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 int32_t q_stringlistmodel_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_receivers` instead
-///
-#define q_stringlistmodel_qbase_receivers q_stringlistmodel_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -3462,10 +3182,6 @@ void q_stringlistmodel_on_receivers(void* self, int32_t (*callback)(void*, const
 /// @param signal QMetaMethod*
 ///
 bool q_stringlistmodel_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `q_stringlistmodel_super_is_signal_connected` instead
-///
-#define q_stringlistmodel_qbase_is_signal_connected q_stringlistmodel_super_is_signal_connected
 
 /// Inherited from QObject
 ///

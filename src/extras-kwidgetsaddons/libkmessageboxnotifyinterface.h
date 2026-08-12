@@ -32,10 +32,6 @@ void k_messageboxnotifyinterface_send_notification(void* self, int32_t notificat
 ///
 void k_messageboxnotifyinterface_on_send_notification(void* self, void (*callback)(void*, int32_t, const char*, void*));
 
-/// @warning DEPRECATED: Use `k_messageboxnotifyinterface_super_send_notification` instead
-///
-#define k_messageboxnotifyinterface_qbase_send_notification k_messageboxnotifyinterface_super_send_notification
-
 /// [Upstream resources](https://api.kde.org/kmessageboxnotifyinterface.html#sendNotification)
 ///
 /// Base class method implementation

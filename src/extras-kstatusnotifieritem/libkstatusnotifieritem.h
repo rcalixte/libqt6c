@@ -54,10 +54,6 @@ const QMetaObject* k_statusnotifieritem_meta_object(void* self);
 ///
 void k_statusnotifieritem_on_meta_object(void* self, const QMetaObject* (*callback)());
 
-/// @warning DEPRECATED: Use `k_statusnotifieritem_super_meta_object` instead
-///
-#define k_statusnotifieritem_qbase_meta_object k_statusnotifieritem_super_meta_object
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -77,10 +73,6 @@ void* k_statusnotifieritem_metacast(void* self, const char* param1);
 /// @param callback void* func(KStatusNotifierItem* self, const char* param1)
 ///
 void k_statusnotifieritem_on_metacast(void* self, void* (*callback)(void*, const char*));
-
-/// @warning DEPRECATED: Use `k_statusnotifieritem_super_metacast` instead
-///
-#define k_statusnotifieritem_qbase_metacast k_statusnotifieritem_super_metacast
 
 /// Base class method implementation
 ///
@@ -102,10 +94,6 @@ int32_t k_statusnotifieritem_metacall(void* self, int32_t param1, int param2, vo
 /// @param callback int32_t func(KStatusNotifierItem* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_statusnotifieritem_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// @warning DEPRECATED: Use `k_statusnotifieritem_super_metacall` instead
-///
-#define k_statusnotifieritem_qbase_metacall k_statusnotifieritem_super_metacall
 
 /// Base class method implementation
 ///
@@ -460,10 +448,6 @@ void k_statusnotifieritem_activate(void* self, void* pos);
 ///
 void k_statusnotifieritem_on_activate(void* self, void (*callback)(void*, void*));
 
-/// @warning DEPRECATED: Use `k_statusnotifieritem_super_activate` instead
-///
-#define k_statusnotifieritem_qbase_activate k_statusnotifieritem_super_activate
-
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#activate)
 ///
 /// Base class method implementation
@@ -552,10 +536,6 @@ bool k_statusnotifieritem_event_filter(void* self, void* watched, void* event);
 /// @param callback bool func(KStatusNotifierItem* self, QObject* watched, QEvent* event)
 ///
 void k_statusnotifieritem_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
-
-/// @warning DEPRECATED: Use `k_statusnotifieritem_super_event_filter` instead
-///
-#define k_statusnotifieritem_qbase_event_filter k_statusnotifieritem_super_event_filter
 
 /// [Upstream resources](https://api.kde.org/kstatusnotifieritem.html#eventFilter)
 ///
@@ -1054,10 +1034,6 @@ void k_statusnotifieritem_on_destroyed1(void* self, void (*callback)(void*, void
 ///
 bool k_statusnotifieritem_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_statusnotifieritem_super_event` instead
-///
-#define k_statusnotifieritem_qbase_event k_statusnotifieritem_super_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1090,10 +1066,6 @@ void k_statusnotifieritem_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QTimerEvent*
 ///
 void k_statusnotifieritem_timer_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_statusnotifieritem_super_timer_event` instead
-///
-#define k_statusnotifieritem_qbase_timer_event k_statusnotifieritem_super_timer_event
 
 /// Inherited from QObject
 ///
@@ -1128,10 +1100,6 @@ void k_statusnotifieritem_on_timer_event(void* self, void (*callback)(void*, voi
 ///
 void k_statusnotifieritem_child_event(void* self, void* event);
 
-/// @warning DEPRECATED: Use `k_statusnotifieritem_super_child_event` instead
-///
-#define k_statusnotifieritem_qbase_child_event k_statusnotifieritem_super_child_event
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1164,10 +1132,6 @@ void k_statusnotifieritem_on_child_event(void* self, void (*callback)(void*, voi
 /// @param event QEvent*
 ///
 void k_statusnotifieritem_custom_event(void* self, void* event);
-
-/// @warning DEPRECATED: Use `k_statusnotifieritem_super_custom_event` instead
-///
-#define k_statusnotifieritem_qbase_custom_event k_statusnotifieritem_super_custom_event
 
 /// Inherited from QObject
 ///
@@ -1202,10 +1166,6 @@ void k_statusnotifieritem_on_custom_event(void* self, void (*callback)(void*, vo
 ///
 void k_statusnotifieritem_connect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_statusnotifieritem_super_connect_notify` instead
-///
-#define k_statusnotifieritem_qbase_connect_notify k_statusnotifieritem_super_connect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1239,10 +1199,6 @@ void k_statusnotifieritem_on_connect_notify(void* self, void (*callback)(void*, 
 ///
 void k_statusnotifieritem_disconnect_notify(void* self, void* signal);
 
-/// @warning DEPRECATED: Use `k_statusnotifieritem_super_disconnect_notify` instead
-///
-#define k_statusnotifieritem_qbase_disconnect_notify k_statusnotifieritem_super_disconnect_notify
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1275,10 +1231,6 @@ void k_statusnotifieritem_on_disconnect_notify(void* self, void (*callback)(void
 ///
 QObject* k_statusnotifieritem_sender(void* self);
 
-/// @warning DEPRECATED: Use `k_statusnotifieritem_super_sender` instead
-///
-#define k_statusnotifieritem_qbase_sender k_statusnotifieritem_super_sender
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1309,10 +1261,6 @@ void k_statusnotifieritem_on_sender(void* self, QObject* (*callback)());
 /// @param self KStatusNotifierItem*
 ///
 int32_t k_statusnotifieritem_sender_signal_index(void* self);
-
-/// @warning DEPRECATED: Use `k_statusnotifieritem_super_sender_signal_index` instead
-///
-#define k_statusnotifieritem_qbase_sender_signal_index k_statusnotifieritem_super_sender_signal_index
 
 /// Inherited from QObject
 ///
@@ -1346,10 +1294,6 @@ void k_statusnotifieritem_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 int32_t k_statusnotifieritem_receivers(void* self, const char* signal);
 
-/// @warning DEPRECATED: Use `k_statusnotifieritem_super_receivers` instead
-///
-#define k_statusnotifieritem_qbase_receivers k_statusnotifieritem_super_receivers
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1382,10 +1326,6 @@ void k_statusnotifieritem_on_receivers(void* self, int32_t (*callback)(void*, co
 /// @param signal QMetaMethod*
 ///
 bool k_statusnotifieritem_is_signal_connected(void* self, void* signal);
-
-/// @warning DEPRECATED: Use `k_statusnotifieritem_super_is_signal_connected` instead
-///
-#define k_statusnotifieritem_qbase_is_signal_connected k_statusnotifieritem_super_is_signal_connected
 
 /// Inherited from QObject
 ///

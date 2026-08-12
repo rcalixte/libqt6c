@@ -40,10 +40,6 @@ bool k_textautocorrectioncore__importkmailautocorrection_import(void* self, cons
 ///
 void k_textautocorrectioncore__importkmailautocorrection_on_import(void* self, bool (*callback)(void*, const char*, const char*, int32_t));
 
-/// @warning DEPRECATED: Use `k_textautocorrectioncore__importkmailautocorrection_super_import` instead
-///
-#define k_textautocorrectioncore__importkmailautocorrection_qbase_import k_textautocorrectioncore__importkmailautocorrection_super_import
-
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportKMailAutocorrection.html)
 ///
 /// Base class method implementation
