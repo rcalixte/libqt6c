@@ -469,8 +469,8 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 			}
 
 			if prop.Name == "richTextSupport" {
-				ret.WriteString("const int32_t " + targetName + "_" + prop.Name + " = " + emit + ";\n")
-				ret.WriteString(cMethodPrefix + setterFunc + "(ui->" + targetName + ", &" + targetName + "_" + prop.Name + ");\n")
+				ret.WriteString("const int32_t " + targetName + "_rich_text_support = " + emit + ";\n")
+				ret.WriteString(cMethodPrefix + setterFunc + "(ui->" + targetName + ", &" + targetName + "_rich_text_support);\n")
 			} else {
 				ret.WriteString(cMethodPrefix + setterFunc + "(ui->" + targetName + ", " + emit + ");\n")
 			}
@@ -487,18 +487,18 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 			if !ok {
 				sizePolicyNum = strconv.Itoa(SizePolicyCounter)
 				SizePolicyMap[mapKey] = sizePolicyNum
-				ret.WriteString("QSizePolicy* sizePolicy" + sizePolicyNum + " = q_sizepolicy_new3();\n")
-				ret.WriteString("q_sizepolicy_set_horizontal_policy(sizePolicy" + sizePolicyNum + ", " + normalizeEnumName("", "QSizePolicy::Policy::"+prop.SizePolicyVal.HSizeType) + ");\n")
-				ret.WriteString("q_sizepolicy_set_vertical_policy(sizePolicy" + sizePolicyNum + ", " + normalizeEnumName("", "QSizePolicy::Policy::"+prop.SizePolicyVal.VSizeType) + ");\n")
-				ret.WriteString("q_sizepolicy_set_horizontal_stretch(sizePolicy" + sizePolicyNum + ", " + strconv.Itoa(prop.SizePolicyVal.HStretch) + ");\n")
-				ret.WriteString("q_sizepolicy_set_vertical_stretch(sizePolicy" + sizePolicyNum + ", " + strconv.Itoa(prop.SizePolicyVal.VStretch) + ");\n")
+				ret.WriteString("QSizePolicy* size_policy" + sizePolicyNum + " = q_sizepolicy_new3();\n")
+				ret.WriteString("q_sizepolicy_set_horizontal_policy(size_policy" + sizePolicyNum + ", " + normalizeEnumName("", "QSizePolicy::Policy::"+prop.SizePolicyVal.HSizeType) + ");\n")
+				ret.WriteString("q_sizepolicy_set_vertical_policy(size_policy" + sizePolicyNum + ", " + normalizeEnumName("", "QSizePolicy::Policy::"+prop.SizePolicyVal.VSizeType) + ");\n")
+				ret.WriteString("q_sizepolicy_set_horizontal_stretch(size_policy" + sizePolicyNum + ", " + strconv.Itoa(prop.SizePolicyVal.HStretch) + ");\n")
+				ret.WriteString("q_sizepolicy_set_vertical_stretch(size_policy" + sizePolicyNum + ", " + strconv.Itoa(prop.SizePolicyVal.VStretch) + ");\n")
 				SizePolicyCounter++
 			}
 
 			targetSP := targetName + "_sp"
 			ret.WriteString("QSizePolicy* " + targetSP + " = " + cMethodPrefix + "_size_policy(ui->" + targetName + ");\n")
-			ret.WriteString("q_sizepolicy_set_height_for_width(sizePolicy" + sizePolicyNum + ", q_sizepolicy_has_height_for_width(" + targetSP + "));\n")
-			ret.WriteString(cMethodPrefix + "_set_size_policy(ui->" + targetName + ", sizePolicy" + sizePolicyNum + ");\n")
+			ret.WriteString("q_sizepolicy_set_height_for_width(size_policy" + sizePolicyNum + ", q_sizepolicy_has_height_for_width(" + targetSP + "));\n")
+			ret.WriteString(cMethodPrefix + "_set_size_policy(ui->" + targetName + ", size_policy" + sizePolicyNum + ");\n")
 			ret.WriteString("q_sizepolicy_delete(" + targetSP + ");\n")
 
 		} else if prop.Name == "font" {
@@ -1307,7 +1307,7 @@ func generateWidget(w UiWidget, parentName, parentClass string) (string, error) 
 			setStatusBar = true
 		}
 
-		// QTabWidget->QTab handling
+		// QTabWidget->add_tab handling
 		if wClass == "QTabWidget" {
 			if icon, ok := propertyByName(child.Attributes, "icon"); ok {
 				// addTab() overload with icon
@@ -1318,6 +1318,11 @@ func generateWidget(w UiWidget, parentName, parentClass string) (string, error) 
 				// addTab() overload without icon
 				ret.WriteString("\n" + wClassC + "_add_tab(ui->" + w.Name + ", ui->" + child.Name + `, "");` + "\n")
 			}
+		}
+
+		// QWizard->QWizardPage handling
+		if w.Class == "QWizard" && child.Class == "QWizardPage" {
+			ret.WriteString("q_wizard_add_page(ui->" + w.Name + ", ui->" + child.Name + ");\n")
 		}
 
 		// child attributes
@@ -1448,10 +1453,10 @@ func generate(goGenerateArgs string, flagExtraOps UiFlagOptions, u UiFile) ([]by
 				retLine, parentItem, parentClass := splitLastWords(line)
 				line = retLine
 				if lastParentItem != parentItem && !foundWidgetItem {
-					sortingBlockBegin := "bool " + parentItem + "_sortingEnabled = " + parentClass + "_is_sorting_enabled(ui->" + parentItem + ");\n"
+					sortingBlockBegin := "bool " + parentItem + "_sorting_enabled = " + parentClass + "_is_sorting_enabled(ui->" + parentItem + ");\n"
 					sortingBlockBegin += parentClass + "_set_sorting_enabled(ui->" + parentItem + ", false);"
 					translateFunc = append(translateFunc, sortingBlockBegin)
-					sortingBlockEnds = append(sortingBlockEnds, parentClass+"_set_sorting_enabled(ui->"+parentItem+", "+parentItem+"_sortingEnabled);\n")
+					sortingBlockEnds = append(sortingBlockEnds, parentClass+"_set_sorting_enabled(ui->"+parentItem+", "+parentItem+"_sorting_enabled);\n")
 				}
 				foundWidgetItem = true
 				lastParentItem = parentItem
@@ -1526,7 +1531,7 @@ static ` + uClass + "Ui* new" + cMethod + `_ui() {
 
 	// QSizePolicy deallocation(s)
 	for num := range SizePolicyCounter {
-		ret.WriteString("q_sizepolicy_delete(sizePolicy" + strconv.Itoa(num) + ");\n")
+		ret.WriteString("q_sizepolicy_delete(size_policy" + strconv.Itoa(num) + ");\n")
 	}
 
 	// QColor and QBrush deallocation(s)
