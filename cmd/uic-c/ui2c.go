@@ -934,6 +934,9 @@ func generateWidget(w UiWidget, parentName, parentClass string) (string, error) 
 	}
 
 	ret.WriteString(wClassC + "_set_object_name(ui->" + w.Name + ", " + strconv.Quote(w.Name) + ");\n")
+	if w.Name == GlobalContext {
+		ret.WriteString(wClassC + "_set_parent(ui->" + w.Name + ", parent);\n")
+	}
 
 	if wClass == "QMenu" {
 		QMenus = append(QMenus, w.Name)
@@ -1501,31 +1504,30 @@ typedef struct {
 ` + strings.Join(collectClassNames_Widget(&u.Widget), "\n") + `
 } ` + uClass + `Ui;
 
-/// Cleanup the memory allocated for ` + uClass + `Ui and the child Qt objects
-static void cleanup_` + strings.TrimPrefix(cMethod, "_") + "_ui(" + uClass + `Ui* ui) {
-    ` + cClassMethodPrefix(u.Widget.Class) + `_delete(ui->` + u.Widget.Name + `);
-    free(ui);
+/// If there is no parent widget, delete the main widget for
+/// ` + uClass + `Ui and the child Qt objects
+static void cleanup_` + strings.TrimPrefix(cMethod, "_") + "_ui(const " + uClass + `Ui* ui) {
+    if (` + cClassMethodPrefix(u.Widget.Class) + `_parent_widget(ui->` + u.Widget.Name + `) == NULL)
+        ` + cClassMethodPrefix(u.Widget.Class) + `_delete(ui->` + u.Widget.Name + `);
 }
 `)
 
 	if len(translateFunc) > 0 {
 		ret.WriteString(`
-/// Retranslate reapplies all text translations
-static void retranslate_` + strings.TrimPrefix(cMethod, "_") + "_ui(" + uClass + `Ui* ui) {
+/// Reapply all text translations
+static void retranslate_` + strings.TrimPrefix(cMethod, "_") + "_ui(const " + uClass + `Ui* ui) {
     ` + strings.Join(translateFunc, "\n") + `
 }
 `)
 	}
 
 	ret.WriteString(`
-/// new` + cMethod + "_ui creates all the Qt objects for " + uClass + `Ui
-static ` + uClass + "Ui* new" + cMethod + `_ui() {
-    ` + uClass + "Ui* ui = (" + uClass + "Ui*)malloc(sizeof(" + uClass + `Ui));
-    if (ui == NULL) {
-        fprintf(stderr, "Failed to create ` + uClass + `Ui\n");
-        abort();
-    }
-`)
+/// Initialize all of the Qt objects for ` + uClass + `Ui
+///
+/// @param ui ` + uClass + `Ui*
+/// @param parent QWidget* (can be NULL)
+///
+void initialize` + cMethod + `_ui(` + uClass + `Ui* ui, void* parent) {`)
 
 	ret.WriteString(strings.Join(newFuncBody, ""))
 
@@ -1613,9 +1615,7 @@ static ` + uClass + "Ui* new" + cMethod + `_ui() {
 		ret.WriteString(maybeComment + cClass + qtCMethod + "(ui->" + c.Sender + ", " + c.Sender + "_" + slot + ");\n")
 	}
 
-	ret.WriteString(`
-    return ui;
-}`)
+	ret.WriteString("\n}")
 
 	output := ret.String()
 

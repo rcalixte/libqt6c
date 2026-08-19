@@ -11,9 +11,11 @@ where possible. See the full usage for more details.
 
 One key difference from the C++ and Python implementations is that rather than
 taking a widget-based parameter and forming it into the root of the target
-creation, the C setup function takes no parameters and heap allocates the
-generated creation that is returned. This aims to facilitate more fine-grained
-control over how the created objects are managed from within C.
+object, the C setup function takes a pointer to the struct type of the target
+object to create and a nullable parameter for a widget to assign as a parent
+widget. If a widget is set as the parent, the cleanup function becomes a no-op
+function. This approach aims to facilitate more fine-grained control over how
+the created objects are managed from within C.
 
 Example
 -------
