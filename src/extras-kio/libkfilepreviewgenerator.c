@@ -74,9 +74,8 @@ void k_filepreviewgenerator_set_enabled_plugins(void* self, const char* list[sta
         fprintf(stderr, "Failed to allocate memory for string list in k_filepreviewgenerator_set_enabled_plugins\n");
         abort();
     }
-    for (size_t i = 0; i < list_len; ++i) {
+    for (size_t i = 0; i < list_len; ++i)
         list_qstr[i] = qstring(list[i]);
-    }
     libqt_list list_list = qlist(list_qstr, list_len);
     KFilePreviewGenerator_SetEnabledPlugins((KFilePreviewGenerator*)self, list_list);
     free(list_qstr);
@@ -92,11 +91,9 @@ const char** k_filepreviewgenerator_enabled_plugins(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -253,11 +250,9 @@ const char** k_filepreviewgenerator_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

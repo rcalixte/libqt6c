@@ -571,6 +571,22 @@ void k_filewidget_set_filters2(void* self, libqt_list filters, void* activeFilte
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KFileWidget*
+///
+QPaintDevice* k_filewidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KFileWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KFileWidget* k_filewidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KFileWidget*

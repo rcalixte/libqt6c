@@ -67,9 +67,8 @@ void q_dir_set_search_paths(const char* prefix, const char* searchPaths[static 1
         fprintf(stderr, "Failed to allocate memory for string list in q_dir_set_search_paths\n");
         abort();
     }
-    for (size_t i = 0; i < searchPaths_len; ++i) {
+    for (size_t i = 0; i < searchPaths_len; ++i)
         searchPaths_qstr[i] = qstring(searchPaths[i]);
-    }
     libqt_list searchPaths_list = qlist(searchPaths_qstr, searchPaths_len);
     QDir_SetSearchPaths(qstring(prefix), searchPaths_list);
     free(searchPaths_qstr);
@@ -89,11 +88,9 @@ const char** q_dir_search_paths(const char* prefix) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -158,11 +155,9 @@ const char** q_dir_name_filters(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -174,9 +169,8 @@ void q_dir_set_name_filters(void* self, const char* nameFilters[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_dir_set_name_filters\n");
         abort();
     }
-    for (size_t i = 0; i < nameFilters_len; ++i) {
+    for (size_t i = 0; i < nameFilters_len; ++i)
         nameFilters_qstr[i] = qstring(nameFilters[i]);
-    }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
     QDir_SetNameFilters((QDir*)self, nameFilters_list);
     free(nameFilters_qstr);
@@ -223,11 +217,9 @@ const char** q_dir_name_filters_from_string(const char* nameFilter) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -242,11 +234,9 @@ const char** q_dir_entry_list(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -258,9 +248,8 @@ const char** q_dir_entry_list2(void* self, const char* nameFilters[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_dir_entry_list2\n");
         abort();
     }
-    for (size_t i = 0; i < nameFilters_len; ++i) {
+    for (size_t i = 0; i < nameFilters_len; ++i)
         nameFilters_qstr[i] = qstring(nameFilters[i]);
-    }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
     libqt_list _arr = QDir_EntryList2((QDir*)self, nameFilters_list);
     free(nameFilters_qstr);
@@ -272,11 +261,9 @@ const char** q_dir_entry_list2(void* self, const char* nameFilters[static 1]) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -293,9 +280,8 @@ libqt_list /* of QFileInfo* */ q_dir_entry_info_list2(void* self, const char* na
         fprintf(stderr, "Failed to allocate memory for string list in q_dir_entry_info_list2\n");
         abort();
     }
-    for (size_t i = 0; i < nameFilters_len; ++i) {
+    for (size_t i = 0; i < nameFilters_len; ++i)
         nameFilters_qstr[i] = qstring(nameFilters[i]);
-    }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
     libqt_list _arr = QDir_EntryInfoList2((QDir*)self, nameFilters_list);
     free(nameFilters_qstr);
@@ -438,9 +424,8 @@ bool q_dir_match(const char* filters[static 1], const char* fileName) {
         fprintf(stderr, "Failed to allocate memory for string list in q_dir_match\n");
         abort();
     }
-    for (size_t i = 0; i < filters_len; ++i) {
+    for (size_t i = 0; i < filters_len; ++i)
         filters_qstr[i] = qstring(filters[i]);
-    }
     libqt_list filters_list = qlist(filters_qstr, filters_len);
     bool _out = QDir_Match(filters_list, qstring(fileName));
     free(filters_qstr);
@@ -476,11 +461,9 @@ const char** q_dir_entry_list1(void* self, int32_t filters) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -495,11 +478,9 @@ const char** q_dir_entry_list22(void* self, int32_t filters, int32_t sort) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -511,9 +492,8 @@ const char** q_dir_entry_list23(void* self, const char* nameFilters[static 1], i
         fprintf(stderr, "Failed to allocate memory for string list in q_dir_entry_list23\n");
         abort();
     }
-    for (size_t i = 0; i < nameFilters_len; ++i) {
+    for (size_t i = 0; i < nameFilters_len; ++i)
         nameFilters_qstr[i] = qstring(nameFilters[i]);
-    }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
     libqt_list _arr = QDir_EntryList23((QDir*)self, nameFilters_list, filters);
     free(nameFilters_qstr);
@@ -525,11 +505,9 @@ const char** q_dir_entry_list23(void* self, const char* nameFilters[static 1], i
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -541,9 +519,8 @@ const char** q_dir_entry_list3(void* self, const char* nameFilters[static 1], in
         fprintf(stderr, "Failed to allocate memory for string list in q_dir_entry_list3\n");
         abort();
     }
-    for (size_t i = 0; i < nameFilters_len; ++i) {
+    for (size_t i = 0; i < nameFilters_len; ++i)
         nameFilters_qstr[i] = qstring(nameFilters[i]);
-    }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
     libqt_list _arr = QDir_EntryList3((QDir*)self, nameFilters_list, filters, sort);
     free(nameFilters_qstr);
@@ -555,11 +532,9 @@ const char** q_dir_entry_list3(void* self, const char* nameFilters[static 1], in
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -581,9 +556,8 @@ libqt_list /* of QFileInfo* */ q_dir_entry_info_list23(void* self, const char* n
         fprintf(stderr, "Failed to allocate memory for string list in q_dir_entry_info_list23\n");
         abort();
     }
-    for (size_t i = 0; i < nameFilters_len; ++i) {
+    for (size_t i = 0; i < nameFilters_len; ++i)
         nameFilters_qstr[i] = qstring(nameFilters[i]);
-    }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
     libqt_list _arr = QDir_EntryInfoList23((QDir*)self, nameFilters_list, filters);
     free(nameFilters_qstr);
@@ -597,9 +571,8 @@ libqt_list /* of QFileInfo* */ q_dir_entry_info_list3(void* self, const char* na
         fprintf(stderr, "Failed to allocate memory for string list in q_dir_entry_info_list3\n");
         abort();
     }
-    for (size_t i = 0; i < nameFilters_len; ++i) {
+    for (size_t i = 0; i < nameFilters_len; ++i)
         nameFilters_qstr[i] = qstring(nameFilters[i]);
-    }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
     libqt_list _arr = QDir_EntryInfoList3((QDir*)self, nameFilters_list, filters, sort);
     free(nameFilters_qstr);

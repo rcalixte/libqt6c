@@ -87,9 +87,8 @@ void k_svg__imageset_set_selectors(void* self, const char* selectors[static 1]) 
         fprintf(stderr, "Failed to allocate memory for string list in k_svg__imageset_set_selectors\n");
         abort();
     }
-    for (size_t i = 0; i < selectors_len; ++i) {
+    for (size_t i = 0; i < selectors_len; ++i)
         selectors_qstr[i] = qstring(selectors[i]);
-    }
     libqt_list selectors_list = qlist(selectors_qstr, selectors_len);
     KSvg__ImageSet_SetSelectors((KSvg__ImageSet*)self, selectors_list);
     free(selectors_qstr);
@@ -105,11 +104,9 @@ const char** k_svg__imageset_selectors(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -319,11 +316,9 @@ const char** k_svg__imageset_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

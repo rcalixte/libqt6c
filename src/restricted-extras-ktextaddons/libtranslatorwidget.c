@@ -599,6 +599,14 @@ void k_texttranslator__translatortextedit_set_frame_rect(void* self, void* frame
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
+QPaintDevice* k_texttranslator__translatortextedit_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+TextTranslator__TranslatorTextEdit* k_texttranslator__translatortextedit_from_q_paint_device(void* _qpaintdevice) {
+    return (TextTranslator__TranslatorTextEdit*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
+}
+
 uintptr_t k_texttranslator__translatortextedit_win_id(void* self) {
     return QWidget_WinId((QWidget*)self);
 }
@@ -1843,11 +1851,9 @@ const char** k_texttranslator__translatortextedit_dynamic_property_names(void* s
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1925,47 +1931,47 @@ void k_texttranslator__translatortextedit_on_destroyed1(void* self, void (*callb
 }
 
 bool k_texttranslator__translatortextedit_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_texttranslator__translatortextedit_as_q_paint_device(self));
 }
 
 int32_t k_texttranslator__translatortextedit_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_texttranslator__translatortextedit_as_q_paint_device(self));
 }
 
 int32_t k_texttranslator__translatortextedit_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_texttranslator__translatortextedit_as_q_paint_device(self));
 }
 
 int32_t k_texttranslator__translatortextedit_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_texttranslator__translatortextedit_as_q_paint_device(self));
 }
 
 int32_t k_texttranslator__translatortextedit_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_texttranslator__translatortextedit_as_q_paint_device(self));
 }
 
 int32_t k_texttranslator__translatortextedit_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_texttranslator__translatortextedit_as_q_paint_device(self));
 }
 
 int32_t k_texttranslator__translatortextedit_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_texttranslator__translatortextedit_as_q_paint_device(self));
 }
 
 double k_texttranslator__translatortextedit_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_texttranslator__translatortextedit_as_q_paint_device(self));
 }
 
 double k_texttranslator__translatortextedit_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_texttranslator__translatortextedit_as_q_paint_device(self));
 }
 
 int32_t k_texttranslator__translatortextedit_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_texttranslator__translatortextedit_as_q_paint_device(self));
 }
 
 int32_t k_texttranslator__translatortextedit_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_texttranslator__translatortextedit_as_q_paint_device(self));
 }
 
 double k_texttranslator__translatortextedit_device_pixel_ratio_f_scale() {
@@ -2999,6 +3005,14 @@ const char* k_texttranslator__translatorwidget_tr3(const char* s, const char* c,
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+QPaintDevice* k_texttranslator__translatorwidget_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+TextTranslator__TranslatorWidget* k_texttranslator__translatorwidget_from_q_paint_device(void* _qpaintdevice) {
+    return (TextTranslator__TranslatorWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t k_texttranslator__translatorwidget_win_id(void* self) {
@@ -4249,11 +4263,9 @@ const char** k_texttranslator__translatorwidget_dynamic_property_names(void* sel
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -4331,47 +4343,47 @@ void k_texttranslator__translatorwidget_on_destroyed1(void* self, void (*callbac
 }
 
 bool k_texttranslator__translatorwidget_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_texttranslator__translatorwidget_as_q_paint_device(self));
 }
 
 int32_t k_texttranslator__translatorwidget_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_texttranslator__translatorwidget_as_q_paint_device(self));
 }
 
 int32_t k_texttranslator__translatorwidget_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_texttranslator__translatorwidget_as_q_paint_device(self));
 }
 
 int32_t k_texttranslator__translatorwidget_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_texttranslator__translatorwidget_as_q_paint_device(self));
 }
 
 int32_t k_texttranslator__translatorwidget_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_texttranslator__translatorwidget_as_q_paint_device(self));
 }
 
 int32_t k_texttranslator__translatorwidget_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_texttranslator__translatorwidget_as_q_paint_device(self));
 }
 
 int32_t k_texttranslator__translatorwidget_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_texttranslator__translatorwidget_as_q_paint_device(self));
 }
 
 double k_texttranslator__translatorwidget_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_texttranslator__translatorwidget_as_q_paint_device(self));
 }
 
 double k_texttranslator__translatorwidget_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_texttranslator__translatorwidget_as_q_paint_device(self));
 }
 
 int32_t k_texttranslator__translatorwidget_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_texttranslator__translatorwidget_as_q_paint_device(self));
 }
 
 int32_t k_texttranslator__translatorwidget_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_texttranslator__translatorwidget_as_q_paint_device(self));
 }
 
 double k_texttranslator__translatorwidget_device_pixel_ratio_f_scale() {

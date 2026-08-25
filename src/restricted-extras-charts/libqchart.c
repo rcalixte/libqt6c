@@ -399,6 +399,14 @@ QPointF* q_chart_map_to_position2(void* self, void* value, void* series) {
     return QChart_MapToPosition2((QChart*)self, (QPointF*)value, (QAbstractSeries*)series);
 }
 
+QGraphicsLayoutItem* q_chart_as_q_graphics_layout_item(void* self) {
+    return QGraphicsWidget_AsQGraphicsLayoutItem((QGraphicsWidget*)self);
+}
+
+QChart* q_chart_from_q_graphics_layout_item(void* _qgraphicslayoutitem) {
+    return (QChart*)QGraphicsWidget_FromQGraphicsLayoutItem((QGraphicsLayoutItem*)_qgraphicslayoutitem);
+}
+
 QGraphicsLayout* q_chart_layout(void* self) {
     return QGraphicsWidget_Layout((QGraphicsWidget*)self);
 }
@@ -633,6 +641,14 @@ void q_chart_set_shortcut_auto_repeat2(void* self, int id, bool enabled) {
 
 void q_chart_set_attribute2(void* self, int32_t attribute, bool on) {
     QGraphicsWidget_SetAttribute2((QGraphicsWidget*)self, attribute, on);
+}
+
+QGraphicsItem* q_chart_as_q_graphics_item(void* self) {
+    return QGraphicsObject_AsQGraphicsItem((QGraphicsObject*)self);
+}
+
+QChart* q_chart_from_q_graphics_item(void* _qgraphicsitem) {
+    return (QChart*)QGraphicsObject_FromQGraphicsItem((QGraphicsItem*)_qgraphicsitem);
 }
 
 void q_chart_grab_gesture(void* self, int32_t type) {
@@ -873,11 +889,9 @@ const char** q_chart_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -955,806 +969,806 @@ void q_chart_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 QGraphicsScene* q_chart_scene(void* self) {
-    return QGraphicsItem_Scene((QGraphicsItem*)self);
+    return QGraphicsItem_Scene(q_chart_as_q_graphics_item(self));
 }
 
 QGraphicsItem* q_chart_parent_item(void* self) {
-    return QGraphicsItem_ParentItem((QGraphicsItem*)self);
+    return QGraphicsItem_ParentItem(q_chart_as_q_graphics_item(self));
 }
 
 QGraphicsItem* q_chart_top_level_item(void* self) {
-    return QGraphicsItem_TopLevelItem((QGraphicsItem*)self);
+    return QGraphicsItem_TopLevelItem(q_chart_as_q_graphics_item(self));
 }
 
 QGraphicsObject* q_chart_parent_object(void* self) {
-    return QGraphicsItem_ParentObject((QGraphicsItem*)self);
+    return QGraphicsItem_ParentObject(q_chart_as_q_graphics_item(self));
 }
 
 QGraphicsWidget* q_chart_parent_widget(void* self) {
-    return QGraphicsItem_ParentWidget((QGraphicsItem*)self);
+    return QGraphicsItem_ParentWidget(q_chart_as_q_graphics_item(self));
 }
 
 QGraphicsWidget* q_chart_top_level_widget(void* self) {
-    return QGraphicsItem_TopLevelWidget((QGraphicsItem*)self);
+    return QGraphicsItem_TopLevelWidget(q_chart_as_q_graphics_item(self));
 }
 
 QGraphicsWidget* q_chart_window(void* self) {
-    return QGraphicsItem_Window((QGraphicsItem*)self);
+    return QGraphicsItem_Window(q_chart_as_q_graphics_item(self));
 }
 
 QGraphicsItem* q_chart_panel(void* self) {
-    return QGraphicsItem_Panel((QGraphicsItem*)self);
+    return QGraphicsItem_Panel(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_parent_item(void* self, void* parent) {
-    QGraphicsItem_SetParentItem((QGraphicsItem*)self, (QGraphicsItem*)parent);
+    QGraphicsItem_SetParentItem(q_chart_as_q_graphics_item(self), (QGraphicsItem*)parent);
 }
 
 libqt_list /* of QGraphicsItem* */ q_chart_child_items(void* self) {
-    libqt_list _arr = QGraphicsItem_ChildItems((QGraphicsItem*)self);
+    libqt_list _arr = QGraphicsItem_ChildItems(q_chart_as_q_graphics_item(self));
     return _arr;
 }
 
 bool q_chart_is_widget(void* self) {
-    return QGraphicsItem_IsWidget((QGraphicsItem*)self);
+    return QGraphicsItem_IsWidget(q_chart_as_q_graphics_item(self));
 }
 
 bool q_chart_is_window(void* self) {
-    return QGraphicsItem_IsWindow((QGraphicsItem*)self);
+    return QGraphicsItem_IsWindow(q_chart_as_q_graphics_item(self));
 }
 
 bool q_chart_is_panel(void* self) {
-    return QGraphicsItem_IsPanel((QGraphicsItem*)self);
+    return QGraphicsItem_IsPanel(q_chart_as_q_graphics_item(self));
 }
 
 QGraphicsObject* q_chart_to_graphics_object(void* self) {
-    return QGraphicsItem_ToGraphicsObject((QGraphicsItem*)self);
+    return QGraphicsItem_ToGraphicsObject(q_chart_as_q_graphics_item(self));
 }
 
 const QGraphicsObject* q_chart_to_graphics_object2(void* self) {
-    return QGraphicsItem_ToGraphicsObject2((QGraphicsItem*)self);
+    return QGraphicsItem_ToGraphicsObject2(q_chart_as_q_graphics_item(self));
 }
 
 QGraphicsItemGroup* q_chart_group(void* self) {
-    return QGraphicsItem_Group((QGraphicsItem*)self);
+    return QGraphicsItem_Group(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_group(void* self, void* group) {
-    QGraphicsItem_SetGroup((QGraphicsItem*)self, (QGraphicsItemGroup*)group);
+    QGraphicsItem_SetGroup(q_chart_as_q_graphics_item(self), (QGraphicsItemGroup*)group);
 }
 
 int32_t q_chart_flags(void* self) {
-    return QGraphicsItem_Flags((QGraphicsItem*)self);
+    return QGraphicsItem_Flags(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_flag(void* self, int32_t flag) {
-    QGraphicsItem_SetFlag((QGraphicsItem*)self, flag);
+    QGraphicsItem_SetFlag(q_chart_as_q_graphics_item(self), flag);
 }
 
 void q_chart_set_flags(void* self, int32_t flags) {
-    QGraphicsItem_SetFlags((QGraphicsItem*)self, flags);
+    QGraphicsItem_SetFlags(q_chart_as_q_graphics_item(self), flags);
 }
 
 int32_t q_chart_cache_mode(void* self) {
-    return QGraphicsItem_CacheMode((QGraphicsItem*)self);
+    return QGraphicsItem_CacheMode(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_cache_mode(void* self, int32_t mode) {
-    QGraphicsItem_SetCacheMode((QGraphicsItem*)self, mode);
+    QGraphicsItem_SetCacheMode(q_chart_as_q_graphics_item(self), mode);
 }
 
 int32_t q_chart_panel_modality(void* self) {
-    return QGraphicsItem_PanelModality((QGraphicsItem*)self);
+    return QGraphicsItem_PanelModality(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_panel_modality(void* self, int32_t panelModality) {
-    QGraphicsItem_SetPanelModality((QGraphicsItem*)self, panelModality);
+    QGraphicsItem_SetPanelModality(q_chart_as_q_graphics_item(self), panelModality);
 }
 
 bool q_chart_is_blocked_by_modal_panel(void* self) {
-    return QGraphicsItem_IsBlockedByModalPanel((QGraphicsItem*)self);
+    return QGraphicsItem_IsBlockedByModalPanel(q_chart_as_q_graphics_item(self));
 }
 
 const char* q_chart_tool_tip(void* self) {
-    libqt_string _str = QGraphicsItem_ToolTip((QGraphicsItem*)self);
+    libqt_string _str = QGraphicsItem_ToolTip(q_chart_as_q_graphics_item(self));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 void q_chart_set_tool_tip(void* self, const char* toolTip) {
-    QGraphicsItem_SetToolTip((QGraphicsItem*)self, qstring(toolTip));
+    QGraphicsItem_SetToolTip(q_chart_as_q_graphics_item(self), qstring(toolTip));
 }
 
 QCursor* q_chart_cursor(void* self) {
-    return QGraphicsItem_Cursor((QGraphicsItem*)self);
+    return QGraphicsItem_Cursor(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_cursor(void* self, void* cursor) {
-    QGraphicsItem_SetCursor((QGraphicsItem*)self, (QCursor*)cursor);
+    QGraphicsItem_SetCursor(q_chart_as_q_graphics_item(self), (QCursor*)cursor);
 }
 
 bool q_chart_has_cursor(void* self) {
-    return QGraphicsItem_HasCursor((QGraphicsItem*)self);
+    return QGraphicsItem_HasCursor(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_unset_cursor(void* self) {
-    QGraphicsItem_UnsetCursor((QGraphicsItem*)self);
+    QGraphicsItem_UnsetCursor(q_chart_as_q_graphics_item(self));
 }
 
 bool q_chart_is_visible(void* self) {
-    return QGraphicsItem_IsVisible((QGraphicsItem*)self);
+    return QGraphicsItem_IsVisible(q_chart_as_q_graphics_item(self));
 }
 
 bool q_chart_is_visible_to(void* self, void* parent) {
-    return QGraphicsItem_IsVisibleTo((QGraphicsItem*)self, (QGraphicsItem*)parent);
+    return QGraphicsItem_IsVisibleTo(q_chart_as_q_graphics_item(self), (QGraphicsItem*)parent);
 }
 
 void q_chart_set_visible(void* self, bool visible) {
-    QGraphicsItem_SetVisible((QGraphicsItem*)self, visible);
+    QGraphicsItem_SetVisible(q_chart_as_q_graphics_item(self), visible);
 }
 
 void q_chart_hide(void* self) {
-    QGraphicsItem_Hide((QGraphicsItem*)self);
+    QGraphicsItem_Hide(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_show(void* self) {
-    QGraphicsItem_Show((QGraphicsItem*)self);
+    QGraphicsItem_Show(q_chart_as_q_graphics_item(self));
 }
 
 bool q_chart_is_enabled(void* self) {
-    return QGraphicsItem_IsEnabled((QGraphicsItem*)self);
+    return QGraphicsItem_IsEnabled(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_enabled(void* self, bool enabled) {
-    QGraphicsItem_SetEnabled((QGraphicsItem*)self, enabled);
+    QGraphicsItem_SetEnabled(q_chart_as_q_graphics_item(self), enabled);
 }
 
 bool q_chart_is_selected(void* self) {
-    return QGraphicsItem_IsSelected((QGraphicsItem*)self);
+    return QGraphicsItem_IsSelected(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_selected(void* self, bool selected) {
-    QGraphicsItem_SetSelected((QGraphicsItem*)self, selected);
+    QGraphicsItem_SetSelected(q_chart_as_q_graphics_item(self), selected);
 }
 
 bool q_chart_accept_drops(void* self) {
-    return QGraphicsItem_AcceptDrops((QGraphicsItem*)self);
+    return QGraphicsItem_AcceptDrops(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_accept_drops(void* self, bool on) {
-    QGraphicsItem_SetAcceptDrops((QGraphicsItem*)self, on);
+    QGraphicsItem_SetAcceptDrops(q_chart_as_q_graphics_item(self), on);
 }
 
 double q_chart_opacity(void* self) {
-    return QGraphicsItem_Opacity((QGraphicsItem*)self);
+    return QGraphicsItem_Opacity(q_chart_as_q_graphics_item(self));
 }
 
 double q_chart_effective_opacity(void* self) {
-    return QGraphicsItem_EffectiveOpacity((QGraphicsItem*)self);
+    return QGraphicsItem_EffectiveOpacity(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_opacity(void* self, double opacity) {
-    QGraphicsItem_SetOpacity((QGraphicsItem*)self, opacity);
+    QGraphicsItem_SetOpacity(q_chart_as_q_graphics_item(self), opacity);
 }
 
 QGraphicsEffect* q_chart_graphics_effect(void* self) {
-    return QGraphicsItem_GraphicsEffect((QGraphicsItem*)self);
+    return QGraphicsItem_GraphicsEffect(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_graphics_effect(void* self, void* effect) {
-    QGraphicsItem_SetGraphicsEffect((QGraphicsItem*)self, (QGraphicsEffect*)effect);
+    QGraphicsItem_SetGraphicsEffect(q_chart_as_q_graphics_item(self), (QGraphicsEffect*)effect);
 }
 
 int32_t q_chart_accepted_mouse_buttons(void* self) {
-    return QGraphicsItem_AcceptedMouseButtons((QGraphicsItem*)self);
+    return QGraphicsItem_AcceptedMouseButtons(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_accepted_mouse_buttons(void* self, int32_t buttons) {
-    QGraphicsItem_SetAcceptedMouseButtons((QGraphicsItem*)self, buttons);
+    QGraphicsItem_SetAcceptedMouseButtons(q_chart_as_q_graphics_item(self), buttons);
 }
 
 bool q_chart_accept_hover_events(void* self) {
-    return QGraphicsItem_AcceptHoverEvents((QGraphicsItem*)self);
+    return QGraphicsItem_AcceptHoverEvents(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_accept_hover_events(void* self, bool enabled) {
-    QGraphicsItem_SetAcceptHoverEvents((QGraphicsItem*)self, enabled);
+    QGraphicsItem_SetAcceptHoverEvents(q_chart_as_q_graphics_item(self), enabled);
 }
 
 bool q_chart_accept_touch_events(void* self) {
-    return QGraphicsItem_AcceptTouchEvents((QGraphicsItem*)self);
+    return QGraphicsItem_AcceptTouchEvents(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_accept_touch_events(void* self, bool enabled) {
-    QGraphicsItem_SetAcceptTouchEvents((QGraphicsItem*)self, enabled);
+    QGraphicsItem_SetAcceptTouchEvents(q_chart_as_q_graphics_item(self), enabled);
 }
 
 bool q_chart_filters_child_events(void* self) {
-    return QGraphicsItem_FiltersChildEvents((QGraphicsItem*)self);
+    return QGraphicsItem_FiltersChildEvents(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_filters_child_events(void* self, bool enabled) {
-    QGraphicsItem_SetFiltersChildEvents((QGraphicsItem*)self, enabled);
+    QGraphicsItem_SetFiltersChildEvents(q_chart_as_q_graphics_item(self), enabled);
 }
 
 bool q_chart_handles_child_events(void* self) {
-    return QGraphicsItem_HandlesChildEvents((QGraphicsItem*)self);
+    return QGraphicsItem_HandlesChildEvents(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_handles_child_events(void* self, bool enabled) {
-    QGraphicsItem_SetHandlesChildEvents((QGraphicsItem*)self, enabled);
+    QGraphicsItem_SetHandlesChildEvents(q_chart_as_q_graphics_item(self), enabled);
 }
 
 bool q_chart_is_active(void* self) {
-    return QGraphicsItem_IsActive((QGraphicsItem*)self);
+    return QGraphicsItem_IsActive(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_active(void* self, bool active) {
-    QGraphicsItem_SetActive((QGraphicsItem*)self, active);
+    QGraphicsItem_SetActive(q_chart_as_q_graphics_item(self), active);
 }
 
 bool q_chart_has_focus(void* self) {
-    return QGraphicsItem_HasFocus((QGraphicsItem*)self);
+    return QGraphicsItem_HasFocus(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_focus(void* self) {
-    QGraphicsItem_SetFocus((QGraphicsItem*)self);
+    QGraphicsItem_SetFocus(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_clear_focus(void* self) {
-    QGraphicsItem_ClearFocus((QGraphicsItem*)self);
+    QGraphicsItem_ClearFocus(q_chart_as_q_graphics_item(self));
 }
 
 QGraphicsItem* q_chart_focus_proxy(void* self) {
-    return QGraphicsItem_FocusProxy((QGraphicsItem*)self);
+    return QGraphicsItem_FocusProxy(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_focus_proxy(void* self, void* item) {
-    QGraphicsItem_SetFocusProxy((QGraphicsItem*)self, (QGraphicsItem*)item);
+    QGraphicsItem_SetFocusProxy(q_chart_as_q_graphics_item(self), (QGraphicsItem*)item);
 }
 
 QGraphicsItem* q_chart_focus_item(void* self) {
-    return QGraphicsItem_FocusItem((QGraphicsItem*)self);
+    return QGraphicsItem_FocusItem(q_chart_as_q_graphics_item(self));
 }
 
 QGraphicsItem* q_chart_focus_scope_item(void* self) {
-    return QGraphicsItem_FocusScopeItem((QGraphicsItem*)self);
+    return QGraphicsItem_FocusScopeItem(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_grab_mouse(void* self) {
-    QGraphicsItem_GrabMouse((QGraphicsItem*)self);
+    QGraphicsItem_GrabMouse(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_ungrab_mouse(void* self) {
-    QGraphicsItem_UngrabMouse((QGraphicsItem*)self);
+    QGraphicsItem_UngrabMouse(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_grab_keyboard(void* self) {
-    QGraphicsItem_GrabKeyboard((QGraphicsItem*)self);
+    QGraphicsItem_GrabKeyboard(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_ungrab_keyboard(void* self) {
-    QGraphicsItem_UngrabKeyboard((QGraphicsItem*)self);
+    QGraphicsItem_UngrabKeyboard(q_chart_as_q_graphics_item(self));
 }
 
 QPointF* q_chart_pos(void* self) {
-    return QGraphicsItem_Pos((QGraphicsItem*)self);
+    return QGraphicsItem_Pos(q_chart_as_q_graphics_item(self));
 }
 
 double q_chart_x(void* self) {
-    return QGraphicsItem_X((QGraphicsItem*)self);
+    return QGraphicsItem_X(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_x(void* self, double x) {
-    QGraphicsItem_SetX((QGraphicsItem*)self, x);
+    QGraphicsItem_SetX(q_chart_as_q_graphics_item(self), x);
 }
 
 double q_chart_y(void* self) {
-    return QGraphicsItem_Y((QGraphicsItem*)self);
+    return QGraphicsItem_Y(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_y(void* self, double y) {
-    QGraphicsItem_SetY((QGraphicsItem*)self, y);
+    QGraphicsItem_SetY(q_chart_as_q_graphics_item(self), y);
 }
 
 QPointF* q_chart_scene_pos(void* self) {
-    return QGraphicsItem_ScenePos((QGraphicsItem*)self);
+    return QGraphicsItem_ScenePos(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_pos(void* self, void* pos) {
-    QGraphicsItem_SetPos((QGraphicsItem*)self, (QPointF*)pos);
+    QGraphicsItem_SetPos(q_chart_as_q_graphics_item(self), (QPointF*)pos);
 }
 
 void q_chart_set_pos2(void* self, double x, double y) {
-    QGraphicsItem_SetPos2((QGraphicsItem*)self, x, y);
+    QGraphicsItem_SetPos2(q_chart_as_q_graphics_item(self), x, y);
 }
 
 void q_chart_move_by(void* self, double dx, double dy) {
-    QGraphicsItem_MoveBy((QGraphicsItem*)self, dx, dy);
+    QGraphicsItem_MoveBy(q_chart_as_q_graphics_item(self), dx, dy);
 }
 
 void q_chart_ensure_visible(void* self) {
-    QGraphicsItem_EnsureVisible((QGraphicsItem*)self);
+    QGraphicsItem_EnsureVisible(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_ensure_visible2(void* self, double x, double y, double w, double h) {
-    QGraphicsItem_EnsureVisible2((QGraphicsItem*)self, x, y, w, h);
+    QGraphicsItem_EnsureVisible2(q_chart_as_q_graphics_item(self), x, y, w, h);
 }
 
 QTransform* q_chart_transform(void* self) {
-    return QGraphicsItem_Transform((QGraphicsItem*)self);
+    return QGraphicsItem_Transform(q_chart_as_q_graphics_item(self));
 }
 
 QTransform* q_chart_scene_transform(void* self) {
-    return QGraphicsItem_SceneTransform((QGraphicsItem*)self);
+    return QGraphicsItem_SceneTransform(q_chart_as_q_graphics_item(self));
 }
 
 QTransform* q_chart_device_transform(void* self, void* viewportTransform) {
-    return QGraphicsItem_DeviceTransform((QGraphicsItem*)self, (QTransform*)viewportTransform);
+    return QGraphicsItem_DeviceTransform(q_chart_as_q_graphics_item(self), (QTransform*)viewportTransform);
 }
 
 QTransform* q_chart_item_transform(void* self, void* other) {
-    return QGraphicsItem_ItemTransform((QGraphicsItem*)self, (QGraphicsItem*)other);
+    return QGraphicsItem_ItemTransform(q_chart_as_q_graphics_item(self), (QGraphicsItem*)other);
 }
 
 void q_chart_set_transform(void* self, void* matrix) {
-    QGraphicsItem_SetTransform((QGraphicsItem*)self, (QTransform*)matrix);
+    QGraphicsItem_SetTransform(q_chart_as_q_graphics_item(self), (QTransform*)matrix);
 }
 
 void q_chart_reset_transform(void* self) {
-    QGraphicsItem_ResetTransform((QGraphicsItem*)self);
+    QGraphicsItem_ResetTransform(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_rotation(void* self, double angle) {
-    QGraphicsItem_SetRotation((QGraphicsItem*)self, angle);
+    QGraphicsItem_SetRotation(q_chart_as_q_graphics_item(self), angle);
 }
 
 double q_chart_rotation(void* self) {
-    return QGraphicsItem_Rotation((QGraphicsItem*)self);
+    return QGraphicsItem_Rotation(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_scale(void* self, double scale) {
-    QGraphicsItem_SetScale((QGraphicsItem*)self, scale);
+    QGraphicsItem_SetScale(q_chart_as_q_graphics_item(self), scale);
 }
 
 double q_chart_scale(void* self) {
-    return QGraphicsItem_Scale((QGraphicsItem*)self);
+    return QGraphicsItem_Scale(q_chart_as_q_graphics_item(self));
 }
 
 libqt_list /* of QGraphicsTransform* */ q_chart_transformations(void* self) {
-    libqt_list _arr = QGraphicsItem_Transformations((QGraphicsItem*)self);
+    libqt_list _arr = QGraphicsItem_Transformations(q_chart_as_q_graphics_item(self));
     return _arr;
 }
 
 void q_chart_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations) {
-    QGraphicsItem_SetTransformations((QGraphicsItem*)self, transformations);
+    QGraphicsItem_SetTransformations(q_chart_as_q_graphics_item(self), transformations);
 }
 
 QPointF* q_chart_transform_origin_point(void* self) {
-    return QGraphicsItem_TransformOriginPoint((QGraphicsItem*)self);
+    return QGraphicsItem_TransformOriginPoint(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_transform_origin_point(void* self, void* origin) {
-    QGraphicsItem_SetTransformOriginPoint((QGraphicsItem*)self, (QPointF*)origin);
+    QGraphicsItem_SetTransformOriginPoint(q_chart_as_q_graphics_item(self), (QPointF*)origin);
 }
 
 void q_chart_set_transform_origin_point2(void* self, double ax, double ay) {
-    QGraphicsItem_SetTransformOriginPoint2((QGraphicsItem*)self, ax, ay);
+    QGraphicsItem_SetTransformOriginPoint2(q_chart_as_q_graphics_item(self), ax, ay);
 }
 
 double q_chart_z_value(void* self) {
-    return QGraphicsItem_ZValue((QGraphicsItem*)self);
+    return QGraphicsItem_ZValue(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_z_value(void* self, double z) {
-    QGraphicsItem_SetZValue((QGraphicsItem*)self, z);
+    QGraphicsItem_SetZValue(q_chart_as_q_graphics_item(self), z);
 }
 
 void q_chart_stack_before(void* self, void* sibling) {
-    QGraphicsItem_StackBefore((QGraphicsItem*)self, (QGraphicsItem*)sibling);
+    QGraphicsItem_StackBefore(q_chart_as_q_graphics_item(self), (QGraphicsItem*)sibling);
 }
 
 QRectF* q_chart_children_bounding_rect(void* self) {
-    return QGraphicsItem_ChildrenBoundingRect((QGraphicsItem*)self);
+    return QGraphicsItem_ChildrenBoundingRect(q_chart_as_q_graphics_item(self));
 }
 
 QRectF* q_chart_scene_bounding_rect(void* self) {
-    return QGraphicsItem_SceneBoundingRect((QGraphicsItem*)self);
+    return QGraphicsItem_SceneBoundingRect(q_chart_as_q_graphics_item(self));
 }
 
 bool q_chart_is_clipped(void* self) {
-    return QGraphicsItem_IsClipped((QGraphicsItem*)self);
+    return QGraphicsItem_IsClipped(q_chart_as_q_graphics_item(self));
 }
 
 QPainterPath* q_chart_clip_path(void* self) {
-    return QGraphicsItem_ClipPath((QGraphicsItem*)self);
+    return QGraphicsItem_ClipPath(q_chart_as_q_graphics_item(self));
 }
 
 libqt_list /* of QGraphicsItem* */ q_chart_colliding_items(void* self) {
-    libqt_list _arr = QGraphicsItem_CollidingItems((QGraphicsItem*)self);
+    libqt_list _arr = QGraphicsItem_CollidingItems(q_chart_as_q_graphics_item(self));
     return _arr;
 }
 
 bool q_chart_is_obscured(void* self) {
-    return QGraphicsItem_IsObscured((QGraphicsItem*)self);
+    return QGraphicsItem_IsObscured(q_chart_as_q_graphics_item(self));
 }
 
 bool q_chart_is_obscured2(void* self, double x, double y, double w, double h) {
-    return QGraphicsItem_IsObscured2((QGraphicsItem*)self, x, y, w, h);
+    return QGraphicsItem_IsObscured2(q_chart_as_q_graphics_item(self), x, y, w, h);
 }
 
 QRegion* q_chart_bounding_region(void* self, void* itemToDeviceTransform) {
-    return QGraphicsItem_BoundingRegion((QGraphicsItem*)self, (QTransform*)itemToDeviceTransform);
+    return QGraphicsItem_BoundingRegion(q_chart_as_q_graphics_item(self), (QTransform*)itemToDeviceTransform);
 }
 
 double q_chart_bounding_region_granularity(void* self) {
-    return QGraphicsItem_BoundingRegionGranularity((QGraphicsItem*)self);
+    return QGraphicsItem_BoundingRegionGranularity(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_bounding_region_granularity(void* self, double granularity) {
-    QGraphicsItem_SetBoundingRegionGranularity((QGraphicsItem*)self, granularity);
+    QGraphicsItem_SetBoundingRegionGranularity(q_chart_as_q_graphics_item(self), granularity);
 }
 
 void q_chart_update(void* self) {
-    QGraphicsItem_Update((QGraphicsItem*)self);
+    QGraphicsItem_Update(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_update2(void* self, double x, double y, double width, double height) {
-    QGraphicsItem_Update2((QGraphicsItem*)self, x, y, width, height);
+    QGraphicsItem_Update2(q_chart_as_q_graphics_item(self), x, y, width, height);
 }
 
 QPointF* q_chart_map_to_item(void* self, void* item, void* point) {
-    return QGraphicsItem_MapToItem((QGraphicsItem*)self, (QGraphicsItem*)item, (QPointF*)point);
+    return QGraphicsItem_MapToItem(q_chart_as_q_graphics_item(self), (QGraphicsItem*)item, (QPointF*)point);
 }
 
 QPointF* q_chart_map_to_parent(void* self, void* point) {
-    return QGraphicsItem_MapToParent((QGraphicsItem*)self, (QPointF*)point);
+    return QGraphicsItem_MapToParent(q_chart_as_q_graphics_item(self), (QPointF*)point);
 }
 
 QPointF* q_chart_map_to_scene(void* self, void* point) {
-    return QGraphicsItem_MapToScene((QGraphicsItem*)self, (QPointF*)point);
+    return QGraphicsItem_MapToScene(q_chart_as_q_graphics_item(self), (QPointF*)point);
 }
 
 QRectF* q_chart_map_rect_to_item(void* self, void* item, void* rect) {
-    return QGraphicsItem_MapRectToItem((QGraphicsItem*)self, (QGraphicsItem*)item, (QRectF*)rect);
+    return QGraphicsItem_MapRectToItem(q_chart_as_q_graphics_item(self), (QGraphicsItem*)item, (QRectF*)rect);
 }
 
 QRectF* q_chart_map_rect_to_parent(void* self, void* rect) {
-    return QGraphicsItem_MapRectToParent((QGraphicsItem*)self, (QRectF*)rect);
+    return QGraphicsItem_MapRectToParent(q_chart_as_q_graphics_item(self), (QRectF*)rect);
 }
 
 QRectF* q_chart_map_rect_to_scene(void* self, void* rect) {
-    return QGraphicsItem_MapRectToScene((QGraphicsItem*)self, (QRectF*)rect);
+    return QGraphicsItem_MapRectToScene(q_chart_as_q_graphics_item(self), (QRectF*)rect);
 }
 
 QPainterPath* q_chart_map_to_item4(void* self, void* item, void* path) {
-    return QGraphicsItem_MapToItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
+    return QGraphicsItem_MapToItem4(q_chart_as_q_graphics_item(self), (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
 QPainterPath* q_chart_map_to_parent4(void* self, void* path) {
-    return QGraphicsItem_MapToParent4((QGraphicsItem*)self, (QPainterPath*)path);
+    return QGraphicsItem_MapToParent4(q_chart_as_q_graphics_item(self), (QPainterPath*)path);
 }
 
 QPainterPath* q_chart_map_to_scene4(void* self, void* path) {
-    return QGraphicsItem_MapToScene4((QGraphicsItem*)self, (QPainterPath*)path);
+    return QGraphicsItem_MapToScene4(q_chart_as_q_graphics_item(self), (QPainterPath*)path);
 }
 
 QPointF* q_chart_map_from_item(void* self, void* item, void* point) {
-    return QGraphicsItem_MapFromItem((QGraphicsItem*)self, (QGraphicsItem*)item, (QPointF*)point);
+    return QGraphicsItem_MapFromItem(q_chart_as_q_graphics_item(self), (QGraphicsItem*)item, (QPointF*)point);
 }
 
 QPointF* q_chart_map_from_parent(void* self, void* point) {
-    return QGraphicsItem_MapFromParent((QGraphicsItem*)self, (QPointF*)point);
+    return QGraphicsItem_MapFromParent(q_chart_as_q_graphics_item(self), (QPointF*)point);
 }
 
 QPointF* q_chart_map_from_scene(void* self, void* point) {
-    return QGraphicsItem_MapFromScene((QGraphicsItem*)self, (QPointF*)point);
+    return QGraphicsItem_MapFromScene(q_chart_as_q_graphics_item(self), (QPointF*)point);
 }
 
 QRectF* q_chart_map_rect_from_item(void* self, void* item, void* rect) {
-    return QGraphicsItem_MapRectFromItem((QGraphicsItem*)self, (QGraphicsItem*)item, (QRectF*)rect);
+    return QGraphicsItem_MapRectFromItem(q_chart_as_q_graphics_item(self), (QGraphicsItem*)item, (QRectF*)rect);
 }
 
 QRectF* q_chart_map_rect_from_parent(void* self, void* rect) {
-    return QGraphicsItem_MapRectFromParent((QGraphicsItem*)self, (QRectF*)rect);
+    return QGraphicsItem_MapRectFromParent(q_chart_as_q_graphics_item(self), (QRectF*)rect);
 }
 
 QRectF* q_chart_map_rect_from_scene(void* self, void* rect) {
-    return QGraphicsItem_MapRectFromScene((QGraphicsItem*)self, (QRectF*)rect);
+    return QGraphicsItem_MapRectFromScene(q_chart_as_q_graphics_item(self), (QRectF*)rect);
 }
 
 QPainterPath* q_chart_map_from_item4(void* self, void* item, void* path) {
-    return QGraphicsItem_MapFromItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
+    return QGraphicsItem_MapFromItem4(q_chart_as_q_graphics_item(self), (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
 QPainterPath* q_chart_map_from_parent4(void* self, void* path) {
-    return QGraphicsItem_MapFromParent4((QGraphicsItem*)self, (QPainterPath*)path);
+    return QGraphicsItem_MapFromParent4(q_chart_as_q_graphics_item(self), (QPainterPath*)path);
 }
 
 QPainterPath* q_chart_map_from_scene4(void* self, void* path) {
-    return QGraphicsItem_MapFromScene4((QGraphicsItem*)self, (QPainterPath*)path);
+    return QGraphicsItem_MapFromScene4(q_chart_as_q_graphics_item(self), (QPainterPath*)path);
 }
 
 QPointF* q_chart_map_to_item5(void* self, void* item, double x, double y) {
-    return QGraphicsItem_MapToItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
+    return QGraphicsItem_MapToItem5(q_chart_as_q_graphics_item(self), (QGraphicsItem*)item, x, y);
 }
 
 QPointF* q_chart_map_to_parent5(void* self, double x, double y) {
-    return QGraphicsItem_MapToParent5((QGraphicsItem*)self, x, y);
+    return QGraphicsItem_MapToParent5(q_chart_as_q_graphics_item(self), x, y);
 }
 
 QPointF* q_chart_map_to_scene5(void* self, double x, double y) {
-    return QGraphicsItem_MapToScene5((QGraphicsItem*)self, x, y);
+    return QGraphicsItem_MapToScene5(q_chart_as_q_graphics_item(self), x, y);
 }
 
 QRectF* q_chart_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h) {
-    return QGraphicsItem_MapRectToItem2((QGraphicsItem*)self, (QGraphicsItem*)item, x, y, w, h);
+    return QGraphicsItem_MapRectToItem2(q_chart_as_q_graphics_item(self), (QGraphicsItem*)item, x, y, w, h);
 }
 
 QRectF* q_chart_map_rect_to_parent2(void* self, double x, double y, double w, double h) {
-    return QGraphicsItem_MapRectToParent2((QGraphicsItem*)self, x, y, w, h);
+    return QGraphicsItem_MapRectToParent2(q_chart_as_q_graphics_item(self), x, y, w, h);
 }
 
 QRectF* q_chart_map_rect_to_scene2(void* self, double x, double y, double w, double h) {
-    return QGraphicsItem_MapRectToScene2((QGraphicsItem*)self, x, y, w, h);
+    return QGraphicsItem_MapRectToScene2(q_chart_as_q_graphics_item(self), x, y, w, h);
 }
 
 QPointF* q_chart_map_from_item5(void* self, void* item, double x, double y) {
-    return QGraphicsItem_MapFromItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
+    return QGraphicsItem_MapFromItem5(q_chart_as_q_graphics_item(self), (QGraphicsItem*)item, x, y);
 }
 
 QPointF* q_chart_map_from_parent5(void* self, double x, double y) {
-    return QGraphicsItem_MapFromParent5((QGraphicsItem*)self, x, y);
+    return QGraphicsItem_MapFromParent5(q_chart_as_q_graphics_item(self), x, y);
 }
 
 QPointF* q_chart_map_from_scene5(void* self, double x, double y) {
-    return QGraphicsItem_MapFromScene5((QGraphicsItem*)self, x, y);
+    return QGraphicsItem_MapFromScene5(q_chart_as_q_graphics_item(self), x, y);
 }
 
 QRectF* q_chart_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h) {
-    return QGraphicsItem_MapRectFromItem2((QGraphicsItem*)self, (QGraphicsItem*)item, x, y, w, h);
+    return QGraphicsItem_MapRectFromItem2(q_chart_as_q_graphics_item(self), (QGraphicsItem*)item, x, y, w, h);
 }
 
 QRectF* q_chart_map_rect_from_parent2(void* self, double x, double y, double w, double h) {
-    return QGraphicsItem_MapRectFromParent2((QGraphicsItem*)self, x, y, w, h);
+    return QGraphicsItem_MapRectFromParent2(q_chart_as_q_graphics_item(self), x, y, w, h);
 }
 
 QRectF* q_chart_map_rect_from_scene2(void* self, double x, double y, double w, double h) {
-    return QGraphicsItem_MapRectFromScene2((QGraphicsItem*)self, x, y, w, h);
+    return QGraphicsItem_MapRectFromScene2(q_chart_as_q_graphics_item(self), x, y, w, h);
 }
 
 bool q_chart_is_ancestor_of(void* self, void* child) {
-    return QGraphicsItem_IsAncestorOf((QGraphicsItem*)self, (QGraphicsItem*)child);
+    return QGraphicsItem_IsAncestorOf(q_chart_as_q_graphics_item(self), (QGraphicsItem*)child);
 }
 
 QGraphicsItem* q_chart_common_ancestor_item(void* self, void* other) {
-    return QGraphicsItem_CommonAncestorItem((QGraphicsItem*)self, (QGraphicsItem*)other);
+    return QGraphicsItem_CommonAncestorItem(q_chart_as_q_graphics_item(self), (QGraphicsItem*)other);
 }
 
 bool q_chart_is_under_mouse(void* self) {
-    return QGraphicsItem_IsUnderMouse((QGraphicsItem*)self);
+    return QGraphicsItem_IsUnderMouse(q_chart_as_q_graphics_item(self));
 }
 
 QVariant* q_chart_data(void* self, int key) {
-    return QGraphicsItem_Data((QGraphicsItem*)self, key);
+    return QGraphicsItem_Data(q_chart_as_q_graphics_item(self), key);
 }
 
 void q_chart_set_data(void* self, int key, void* value) {
-    QGraphicsItem_SetData((QGraphicsItem*)self, key, (QVariant*)value);
+    QGraphicsItem_SetData(q_chart_as_q_graphics_item(self), key, (QVariant*)value);
 }
 
 int32_t q_chart_input_method_hints(void* self) {
-    return QGraphicsItem_InputMethodHints((QGraphicsItem*)self);
+    return QGraphicsItem_InputMethodHints(q_chart_as_q_graphics_item(self));
 }
 
 void q_chart_set_input_method_hints(void* self, int32_t hints) {
-    QGraphicsItem_SetInputMethodHints((QGraphicsItem*)self, hints);
+    QGraphicsItem_SetInputMethodHints(q_chart_as_q_graphics_item(self), hints);
 }
 
 void q_chart_install_scene_event_filter(void* self, void* filterItem) {
-    QGraphicsItem_InstallSceneEventFilter((QGraphicsItem*)self, (QGraphicsItem*)filterItem);
+    QGraphicsItem_InstallSceneEventFilter(q_chart_as_q_graphics_item(self), (QGraphicsItem*)filterItem);
 }
 
 void q_chart_remove_scene_event_filter(void* self, void* filterItem) {
-    QGraphicsItem_RemoveSceneEventFilter((QGraphicsItem*)self, (QGraphicsItem*)filterItem);
+    QGraphicsItem_RemoveSceneEventFilter(q_chart_as_q_graphics_item(self), (QGraphicsItem*)filterItem);
 }
 
 void q_chart_set_flag2(void* self, int32_t flag, bool enabled) {
-    QGraphicsItem_SetFlag2((QGraphicsItem*)self, flag, enabled);
+    QGraphicsItem_SetFlag2(q_chart_as_q_graphics_item(self), flag, enabled);
 }
 
 void q_chart_set_cache_mode2(void* self, int32_t mode, void* cacheSize) {
-    QGraphicsItem_SetCacheMode2((QGraphicsItem*)self, mode, (QSize*)cacheSize);
+    QGraphicsItem_SetCacheMode2(q_chart_as_q_graphics_item(self), mode, (QSize*)cacheSize);
 }
 
 bool q_chart_is_blocked_by_modal_panel1(void* self, void** blockingPanel) {
-    return QGraphicsItem_IsBlockedByModalPanel1((QGraphicsItem*)self, (QGraphicsItem**)blockingPanel);
+    return QGraphicsItem_IsBlockedByModalPanel1(q_chart_as_q_graphics_item(self), (QGraphicsItem**)blockingPanel);
 }
 
 void q_chart_set_focus1(void* self, int32_t focusReason) {
-    QGraphicsItem_SetFocus1((QGraphicsItem*)self, focusReason);
+    QGraphicsItem_SetFocus1(q_chart_as_q_graphics_item(self), focusReason);
 }
 
 void q_chart_ensure_visible1(void* self, void* rect) {
-    QGraphicsItem_EnsureVisible1((QGraphicsItem*)self, (QRectF*)rect);
+    QGraphicsItem_EnsureVisible1(q_chart_as_q_graphics_item(self), (QRectF*)rect);
 }
 
 void q_chart_ensure_visible22(void* self, void* rect, int xmargin) {
-    QGraphicsItem_EnsureVisible22((QGraphicsItem*)self, (QRectF*)rect, xmargin);
+    QGraphicsItem_EnsureVisible22(q_chart_as_q_graphics_item(self), (QRectF*)rect, xmargin);
 }
 
 void q_chart_ensure_visible3(void* self, void* rect, int xmargin, int ymargin) {
-    QGraphicsItem_EnsureVisible3((QGraphicsItem*)self, (QRectF*)rect, xmargin, ymargin);
+    QGraphicsItem_EnsureVisible3(q_chart_as_q_graphics_item(self), (QRectF*)rect, xmargin, ymargin);
 }
 
 void q_chart_ensure_visible5(void* self, double x, double y, double w, double h, int xmargin) {
-    QGraphicsItem_EnsureVisible5((QGraphicsItem*)self, x, y, w, h, xmargin);
+    QGraphicsItem_EnsureVisible5(q_chart_as_q_graphics_item(self), x, y, w, h, xmargin);
 }
 
 void q_chart_ensure_visible6(void* self, double x, double y, double w, double h, int xmargin, int ymargin) {
-    QGraphicsItem_EnsureVisible6((QGraphicsItem*)self, x, y, w, h, xmargin, ymargin);
+    QGraphicsItem_EnsureVisible6(q_chart_as_q_graphics_item(self), x, y, w, h, xmargin, ymargin);
 }
 
 QTransform* q_chart_item_transform2(void* self, void* other, bool* ok) {
-    return QGraphicsItem_ItemTransform2((QGraphicsItem*)self, (QGraphicsItem*)other, (bool*)ok);
+    return QGraphicsItem_ItemTransform2(q_chart_as_q_graphics_item(self), (QGraphicsItem*)other, (bool*)ok);
 }
 
 void q_chart_set_transform2(void* self, void* matrix, bool combine) {
-    QGraphicsItem_SetTransform2((QGraphicsItem*)self, (QTransform*)matrix, combine);
+    QGraphicsItem_SetTransform2(q_chart_as_q_graphics_item(self), (QTransform*)matrix, combine);
 }
 
 libqt_list /* of QGraphicsItem* */ q_chart_colliding_items1(void* self, int32_t mode) {
-    libqt_list _arr = QGraphicsItem_CollidingItems1((QGraphicsItem*)self, mode);
+    libqt_list _arr = QGraphicsItem_CollidingItems1(q_chart_as_q_graphics_item(self), mode);
     return _arr;
 }
 
 bool q_chart_is_obscured1(void* self, void* rect) {
-    return QGraphicsItem_IsObscured1((QGraphicsItem*)self, (QRectF*)rect);
+    return QGraphicsItem_IsObscured1(q_chart_as_q_graphics_item(self), (QRectF*)rect);
 }
 
 void q_chart_update1(void* self, void* rect) {
-    QGraphicsItem_Update1((QGraphicsItem*)self, (QRectF*)rect);
+    QGraphicsItem_Update1(q_chart_as_q_graphics_item(self), (QRectF*)rect);
 }
 
 void q_chart_scroll3(void* self, double dx, double dy, void* rect) {
-    QGraphicsItem_Scroll3((QGraphicsItem*)self, dx, dy, (QRectF*)rect);
+    QGraphicsItem_Scroll3(q_chart_as_q_graphics_item(self), dx, dy, (QRectF*)rect);
 }
 
 void q_chart_set_size_policy(void* self, void* policy) {
-    QGraphicsLayoutItem_SetSizePolicy((QGraphicsLayoutItem*)self, (QSizePolicy*)policy);
+    QGraphicsLayoutItem_SetSizePolicy(q_chart_as_q_graphics_layout_item(self), (QSizePolicy*)policy);
 }
 
 void q_chart_set_size_policy2(void* self, int32_t hPolicy, int32_t vPolicy) {
-    QGraphicsLayoutItem_SetSizePolicy2((QGraphicsLayoutItem*)self, hPolicy, vPolicy);
+    QGraphicsLayoutItem_SetSizePolicy2(q_chart_as_q_graphics_layout_item(self), hPolicy, vPolicy);
 }
 
 QSizePolicy* q_chart_size_policy(void* self) {
-    return QGraphicsLayoutItem_SizePolicy((QGraphicsLayoutItem*)self);
+    return QGraphicsLayoutItem_SizePolicy(q_chart_as_q_graphics_layout_item(self));
 }
 
 void q_chart_set_minimum_size(void* self, void* size) {
-    QGraphicsLayoutItem_SetMinimumSize((QGraphicsLayoutItem*)self, (QSizeF*)size);
+    QGraphicsLayoutItem_SetMinimumSize(q_chart_as_q_graphics_layout_item(self), (QSizeF*)size);
 }
 
 void q_chart_set_minimum_size2(void* self, double w, double h) {
-    QGraphicsLayoutItem_SetMinimumSize2((QGraphicsLayoutItem*)self, w, h);
+    QGraphicsLayoutItem_SetMinimumSize2(q_chart_as_q_graphics_layout_item(self), w, h);
 }
 
 QSizeF* q_chart_minimum_size(void* self) {
-    return QGraphicsLayoutItem_MinimumSize((QGraphicsLayoutItem*)self);
+    return QGraphicsLayoutItem_MinimumSize(q_chart_as_q_graphics_layout_item(self));
 }
 
 void q_chart_set_minimum_width(void* self, double width) {
-    QGraphicsLayoutItem_SetMinimumWidth((QGraphicsLayoutItem*)self, width);
+    QGraphicsLayoutItem_SetMinimumWidth(q_chart_as_q_graphics_layout_item(self), width);
 }
 
 double q_chart_minimum_width(void* self) {
-    return QGraphicsLayoutItem_MinimumWidth((QGraphicsLayoutItem*)self);
+    return QGraphicsLayoutItem_MinimumWidth(q_chart_as_q_graphics_layout_item(self));
 }
 
 void q_chart_set_minimum_height(void* self, double height) {
-    QGraphicsLayoutItem_SetMinimumHeight((QGraphicsLayoutItem*)self, height);
+    QGraphicsLayoutItem_SetMinimumHeight(q_chart_as_q_graphics_layout_item(self), height);
 }
 
 double q_chart_minimum_height(void* self) {
-    return QGraphicsLayoutItem_MinimumHeight((QGraphicsLayoutItem*)self);
+    return QGraphicsLayoutItem_MinimumHeight(q_chart_as_q_graphics_layout_item(self));
 }
 
 void q_chart_set_preferred_size(void* self, void* size) {
-    QGraphicsLayoutItem_SetPreferredSize((QGraphicsLayoutItem*)self, (QSizeF*)size);
+    QGraphicsLayoutItem_SetPreferredSize(q_chart_as_q_graphics_layout_item(self), (QSizeF*)size);
 }
 
 void q_chart_set_preferred_size2(void* self, double w, double h) {
-    QGraphicsLayoutItem_SetPreferredSize2((QGraphicsLayoutItem*)self, w, h);
+    QGraphicsLayoutItem_SetPreferredSize2(q_chart_as_q_graphics_layout_item(self), w, h);
 }
 
 QSizeF* q_chart_preferred_size(void* self) {
-    return QGraphicsLayoutItem_PreferredSize((QGraphicsLayoutItem*)self);
+    return QGraphicsLayoutItem_PreferredSize(q_chart_as_q_graphics_layout_item(self));
 }
 
 void q_chart_set_preferred_width(void* self, double width) {
-    QGraphicsLayoutItem_SetPreferredWidth((QGraphicsLayoutItem*)self, width);
+    QGraphicsLayoutItem_SetPreferredWidth(q_chart_as_q_graphics_layout_item(self), width);
 }
 
 double q_chart_preferred_width(void* self) {
-    return QGraphicsLayoutItem_PreferredWidth((QGraphicsLayoutItem*)self);
+    return QGraphicsLayoutItem_PreferredWidth(q_chart_as_q_graphics_layout_item(self));
 }
 
 void q_chart_set_preferred_height(void* self, double height) {
-    QGraphicsLayoutItem_SetPreferredHeight((QGraphicsLayoutItem*)self, height);
+    QGraphicsLayoutItem_SetPreferredHeight(q_chart_as_q_graphics_layout_item(self), height);
 }
 
 double q_chart_preferred_height(void* self) {
-    return QGraphicsLayoutItem_PreferredHeight((QGraphicsLayoutItem*)self);
+    return QGraphicsLayoutItem_PreferredHeight(q_chart_as_q_graphics_layout_item(self));
 }
 
 void q_chart_set_maximum_size(void* self, void* size) {
-    QGraphicsLayoutItem_SetMaximumSize((QGraphicsLayoutItem*)self, (QSizeF*)size);
+    QGraphicsLayoutItem_SetMaximumSize(q_chart_as_q_graphics_layout_item(self), (QSizeF*)size);
 }
 
 void q_chart_set_maximum_size2(void* self, double w, double h) {
-    QGraphicsLayoutItem_SetMaximumSize2((QGraphicsLayoutItem*)self, w, h);
+    QGraphicsLayoutItem_SetMaximumSize2(q_chart_as_q_graphics_layout_item(self), w, h);
 }
 
 QSizeF* q_chart_maximum_size(void* self) {
-    return QGraphicsLayoutItem_MaximumSize((QGraphicsLayoutItem*)self);
+    return QGraphicsLayoutItem_MaximumSize(q_chart_as_q_graphics_layout_item(self));
 }
 
 void q_chart_set_maximum_width(void* self, double width) {
-    QGraphicsLayoutItem_SetMaximumWidth((QGraphicsLayoutItem*)self, width);
+    QGraphicsLayoutItem_SetMaximumWidth(q_chart_as_q_graphics_layout_item(self), width);
 }
 
 double q_chart_maximum_width(void* self) {
-    return QGraphicsLayoutItem_MaximumWidth((QGraphicsLayoutItem*)self);
+    return QGraphicsLayoutItem_MaximumWidth(q_chart_as_q_graphics_layout_item(self));
 }
 
 void q_chart_set_maximum_height(void* self, double height) {
-    QGraphicsLayoutItem_SetMaximumHeight((QGraphicsLayoutItem*)self, height);
+    QGraphicsLayoutItem_SetMaximumHeight(q_chart_as_q_graphics_layout_item(self), height);
 }
 
 double q_chart_maximum_height(void* self) {
-    return QGraphicsLayoutItem_MaximumHeight((QGraphicsLayoutItem*)self);
+    return QGraphicsLayoutItem_MaximumHeight(q_chart_as_q_graphics_layout_item(self));
 }
 
 QRectF* q_chart_geometry(void* self) {
-    return QGraphicsLayoutItem_Geometry((QGraphicsLayoutItem*)self);
+    return QGraphicsLayoutItem_Geometry(q_chart_as_q_graphics_layout_item(self));
 }
 
 QRectF* q_chart_contents_rect(void* self) {
-    return QGraphicsLayoutItem_ContentsRect((QGraphicsLayoutItem*)self);
+    return QGraphicsLayoutItem_ContentsRect(q_chart_as_q_graphics_layout_item(self));
 }
 
 QSizeF* q_chart_effective_size_hint(void* self, int32_t which) {
-    return QGraphicsLayoutItem_EffectiveSizeHint((QGraphicsLayoutItem*)self, which);
+    return QGraphicsLayoutItem_EffectiveSizeHint(q_chart_as_q_graphics_layout_item(self), which);
 }
 
 QGraphicsLayoutItem* q_chart_parent_layout_item(void* self) {
-    return QGraphicsLayoutItem_ParentLayoutItem((QGraphicsLayoutItem*)self);
+    return QGraphicsLayoutItem_ParentLayoutItem(q_chart_as_q_graphics_layout_item(self));
 }
 
 void q_chart_set_parent_layout_item(void* self, void* parent) {
-    QGraphicsLayoutItem_SetParentLayoutItem((QGraphicsLayoutItem*)self, (QGraphicsLayoutItem*)parent);
+    QGraphicsLayoutItem_SetParentLayoutItem(q_chart_as_q_graphics_layout_item(self), (QGraphicsLayoutItem*)parent);
 }
 
 bool q_chart_is_layout(void* self) {
-    return QGraphicsLayoutItem_IsLayout((QGraphicsLayoutItem*)self);
+    return QGraphicsLayoutItem_IsLayout(q_chart_as_q_graphics_layout_item(self));
 }
 
 QGraphicsItem* q_chart_graphics_item(void* self) {
-    return QGraphicsLayoutItem_GraphicsItem((QGraphicsLayoutItem*)self);
+    return QGraphicsLayoutItem_GraphicsItem(q_chart_as_q_graphics_layout_item(self));
 }
 
 bool q_chart_owned_by_layout(void* self) {
-    return QGraphicsLayoutItem_OwnedByLayout((QGraphicsLayoutItem*)self);
+    return QGraphicsLayoutItem_OwnedByLayout(q_chart_as_q_graphics_layout_item(self));
 }
 
 void q_chart_set_size_policy3(void* self, int32_t hPolicy, int32_t vPolicy, int32_t controlType) {
-    QGraphicsLayoutItem_SetSizePolicy3((QGraphicsLayoutItem*)self, hPolicy, vPolicy, controlType);
+    QGraphicsLayoutItem_SetSizePolicy3(q_chart_as_q_graphics_layout_item(self), hPolicy, vPolicy, controlType);
 }
 
 QSizeF* q_chart_effective_size_hint2(void* self, int32_t which, void* constraint) {
-    return QGraphicsLayoutItem_EffectiveSizeHint2((QGraphicsLayoutItem*)self, which, (QSizeF*)constraint);
+    return QGraphicsLayoutItem_EffectiveSizeHint2(q_chart_as_q_graphics_layout_item(self), which, (QSizeF*)constraint);
 }
 
 void q_chart_set_geometry(void* self, void* rect) {

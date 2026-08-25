@@ -358,6 +358,14 @@ const char* q_wavedecoder_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QIODevice
 ///
+/// Upcasts to a QIODeviceBase object
+///
+/// @param self QWaveDecoder*
+///
+QIODeviceBase* q_wavedecoder_as_q_i_o_device_base(void* self);
+
+/// Inherited from QIODevice
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#openMode)
 ///
 /// @param self QWaveDecoder*

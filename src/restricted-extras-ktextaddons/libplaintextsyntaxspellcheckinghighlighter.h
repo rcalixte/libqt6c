@@ -25,6 +25,18 @@ TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter* k_textcustomeditor__p
 ///
 TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_new2(void* plainText, void* misspelledColor);
 
+/// Upcasts to a KSyntaxHighlighting::AbstractHighlighter object
+///
+/// @param self TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter*
+///
+KSyntaxHighlighting__AbstractHighlighter* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_as_k_syntax_highlighting___abstract_highlighter(void* self);
+
+/// Downcasts to a TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter object
+///
+/// @param _ksyntaxhighlighting__abstracthighlighter KSyntaxHighlighting__AbstractHighlighter*
+///
+TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_from_k_syntax_highlighting___abstract_highlighter(void* _ksyntaxhighlighting__abstracthighlighter);
+
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextSyntaxSpellCheckingHighlighter.html)
 ///
 /// @param self TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter*

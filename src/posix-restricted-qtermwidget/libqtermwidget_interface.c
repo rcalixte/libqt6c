@@ -60,9 +60,8 @@ void q_termwidgetinterface_set_environment(void* self, const char* environment[s
         fprintf(stderr, "Failed to allocate memory for string list in q_termwidgetinterface_set_environment\n");
         abort();
     }
-    for (size_t i = 0; i < environment_len; ++i) {
+    for (size_t i = 0; i < environment_len; ++i)
         environment_qstr[i] = qstring(environment[i]);
-    }
     libqt_list environment_list = qlist(environment_qstr, environment_len);
     QTermWidgetInterface_SetEnvironment((QTermWidgetInterface*)self, environment_list);
     free(environment_qstr);
@@ -90,9 +89,8 @@ void q_termwidgetinterface_set_args(void* self, const char* args[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_termwidgetinterface_set_args\n");
         abort();
     }
-    for (size_t i = 0; i < args_len; ++i) {
+    for (size_t i = 0; i < args_len; ++i)
         args_qstr[i] = qstring(args[i]);
-    }
     libqt_list args_list = qlist(args_qstr, args_len);
     QTermWidgetInterface_SetArgs((QTermWidgetInterface*)self, args_list);
     free(args_qstr);
@@ -112,11 +110,9 @@ const char** q_termwidgetinterface_get_available_color_schemes(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

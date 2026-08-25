@@ -229,6 +229,22 @@ const char* k_textgrammarcheck__grammarresultwidget_tr3(const char* s, const cha
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextGrammarCheck__GrammarResultWidget*
+///
+QPaintDevice* k_textgrammarcheck__grammarresultwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextGrammarCheck__GrammarResultWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextGrammarCheck__GrammarResultWidget* k_textgrammarcheck__grammarresultwidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self TextGrammarCheck__GrammarResultWidget*

@@ -31,6 +31,30 @@ KXmlGuiWindow* k_xmlguiwindow_new2();
 ///
 KXmlGuiWindow* k_xmlguiwindow_new3(void* parent, int32_t flags);
 
+/// Upcasts to a KXMLGUIBuilder object
+///
+/// @param self KXmlGuiWindow*
+///
+KXMLGUIBuilder* k_xmlguiwindow_as_k_x_m_l_g_u_i_builder(void* self);
+
+/// Downcasts to a KXmlGuiWindow object
+///
+/// @param _kxmlguibuilder KXMLGUIBuilder*
+///
+KXmlGuiWindow* k_xmlguiwindow_from_k_x_m_l_g_u_i_builder(void* _kxmlguibuilder);
+
+/// Upcasts to a KXMLGUIClient object
+///
+/// @param self KXmlGuiWindow*
+///
+KXMLGUIClient* k_xmlguiwindow_as_k_x_m_l_g_u_i_client(void* self);
+
+/// Downcasts to a KXmlGuiWindow object
+///
+/// @param _kxmlguiclient KXMLGUIClient*
+///
+KXmlGuiWindow* k_xmlguiwindow_from_k_x_m_l_g_u_i_client(void* _kxmlguiclient);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KXmlGuiWindow*
@@ -1251,6 +1275,22 @@ char* k_xmlguiwindow_save_state1(void* self, int version);
 /// @param version int
 ///
 bool k_xmlguiwindow_restore_state2(void* self, char* state, int version);
+
+/// Inherited from QWidget
+///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KXmlGuiWindow*
+///
+QPaintDevice* k_xmlguiwindow_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KXmlGuiWindow object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KXmlGuiWindow* k_xmlguiwindow_from_q_paint_device(void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///

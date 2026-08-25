@@ -688,6 +688,22 @@ QAction* k_recentfilesmenu_exec4(libqt_list actions, void* pos, void* at, void* 
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KRecentFilesMenu*
+///
+QPaintDevice* k_recentfilesmenu_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KRecentFilesMenu object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KRecentFilesMenu* k_recentfilesmenu_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KRecentFilesMenu*

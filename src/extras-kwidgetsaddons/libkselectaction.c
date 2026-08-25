@@ -168,9 +168,8 @@ void k_selectaction_set_items(void* self, const char* lst[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_selectaction_set_items\n");
         abort();
     }
-    for (size_t i = 0; i < lst_len; ++i) {
+    for (size_t i = 0; i < lst_len; ++i)
         lst_qstr[i] = qstring(lst[i]);
-    }
     libqt_list lst_list = qlist(lst_qstr, lst_len);
     KSelectAction_SetItems((KSelectAction*)self, lst_list);
     free(lst_qstr);
@@ -186,11 +185,9 @@ const char** k_selectaction_items(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -796,11 +793,9 @@ const char** k_selectaction_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

@@ -301,9 +301,8 @@ void q_sslconfiguration_set_allowed_next_protocols(void* self, const char* proto
         fprintf(stderr, "Failed to allocate memory for string list in q_sslconfiguration_set_allowed_next_protocols\n");
         abort();
     }
-    for (size_t i = 0; i < protocols_len; ++i) {
+    for (size_t i = 0; i < protocols_len; ++i)
         protocols_qstr[i] = qstring(protocols[i]);
-    }
     libqt_list protocols_list = qlist(protocols_qstr, protocols_len);
     QSslConfiguration_SetAllowedNextProtocols((QSslConfiguration*)self, protocols_list);
     free(protocols_qstr);
@@ -319,11 +318,9 @@ const char** q_sslconfiguration_allowed_next_protocols(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

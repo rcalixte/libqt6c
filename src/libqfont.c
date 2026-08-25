@@ -18,9 +18,8 @@ QFont* q_font_new3(const char* families[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_font_new3\n");
         abort();
     }
-    for (size_t i = 0; i < families_len; ++i) {
+    for (size_t i = 0; i < families_len; ++i)
         families_qstr[i] = qstring(families[i]);
-    }
     libqt_list families_list = qlist(families_qstr, families_len);
 
     QFont* _out = QFont_New3(families_list);
@@ -55,9 +54,8 @@ QFont* q_font_new9(const char* families[static 1], int pointSize) {
         fprintf(stderr, "Failed to allocate memory for string list in q_font_new9\n");
         abort();
     }
-    for (size_t i = 0; i < families_len; ++i) {
+    for (size_t i = 0; i < families_len; ++i)
         families_qstr[i] = qstring(families[i]);
-    }
     libqt_list families_list = qlist(families_qstr, families_len);
 
     QFont* _out = QFont_New9(families_list, pointSize);
@@ -72,9 +70,8 @@ QFont* q_font_new10(const char* families[static 1], int pointSize, int weight) {
         fprintf(stderr, "Failed to allocate memory for string list in q_font_new10\n");
         abort();
     }
-    for (size_t i = 0; i < families_len; ++i) {
+    for (size_t i = 0; i < families_len; ++i)
         families_qstr[i] = qstring(families[i]);
-    }
     libqt_list families_list = qlist(families_qstr, families_len);
 
     QFont* _out = QFont_New10(families_list, pointSize, weight);
@@ -89,9 +86,8 @@ QFont* q_font_new11(const char* families[static 1], int pointSize, int weight, b
         fprintf(stderr, "Failed to allocate memory for string list in q_font_new11\n");
         abort();
     }
-    for (size_t i = 0; i < families_len; ++i) {
+    for (size_t i = 0; i < families_len; ++i)
         families_qstr[i] = qstring(families[i]);
-    }
     libqt_list families_list = qlist(families_qstr, families_len);
 
     QFont* _out = QFont_New11(families_list, pointSize, weight, italic);
@@ -124,11 +120,9 @@ const char** q_font_families(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -140,9 +134,8 @@ void q_font_set_families(void* self, const char* families[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_font_set_families\n");
         abort();
     }
-    for (size_t i = 0; i < families_len; ++i) {
+    for (size_t i = 0; i < families_len; ++i)
         families_qstr[i] = qstring(families[i]);
-    }
     libqt_list families_list = qlist(families_qstr, families_len);
     QFont_SetFamilies((QFont*)self, families_list);
     free(families_qstr);
@@ -428,11 +421,9 @@ const char** q_font_substitutes(const char* param1) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -447,11 +438,9 @@ const char** q_font_substitutions() {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -467,9 +456,8 @@ void q_font_insert_substitutions(const char* param1, const char* param2[static 1
         fprintf(stderr, "Failed to allocate memory for string list in q_font_insert_substitutions\n");
         abort();
     }
-    for (size_t i = 0; i < param2_len; ++i) {
+    for (size_t i = 0; i < param2_len; ++i)
         param2_qstr[i] = qstring(param2[i]);
-    }
     libqt_list param2_list = qlist(param2_qstr, param2_len);
     QFont_InsertSubstitutions(qstring(param1), param2_list);
     free(param2_qstr);

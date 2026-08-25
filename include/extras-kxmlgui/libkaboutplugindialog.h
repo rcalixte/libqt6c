@@ -233,6 +233,22 @@ void k_aboutplugindialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KAboutPluginDialog*
+///
+QPaintDevice* k_aboutplugindialog_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KAboutPluginDialog object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KAboutPluginDialog* k_aboutplugindialog_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KAboutPluginDialog*

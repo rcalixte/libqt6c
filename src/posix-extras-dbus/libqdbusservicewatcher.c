@@ -79,11 +79,9 @@ const char** q_dbusservicewatcher_watched_services(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -95,9 +93,8 @@ void q_dbusservicewatcher_set_watched_services(void* self, const char* services[
         fprintf(stderr, "Failed to allocate memory for string list in q_dbusservicewatcher_set_watched_services\n");
         abort();
     }
-    for (size_t i = 0; i < services_len; ++i) {
+    for (size_t i = 0; i < services_len; ++i)
         services_qstr[i] = qstring(services[i]);
-    }
     libqt_list services_list = qlist(services_qstr, services_len);
     QDBusServiceWatcher_SetWatchedServices((QDBusServiceWatcher*)self, services_list);
     free(services_qstr);
@@ -295,11 +292,9 @@ const char** q_dbusservicewatcher_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

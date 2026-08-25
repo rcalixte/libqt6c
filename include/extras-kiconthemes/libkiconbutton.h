@@ -564,6 +564,22 @@ void k_iconbutton_on_clicked1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KIconButton*
+///
+QPaintDevice* k_iconbutton_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KIconButton object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KIconButton* k_iconbutton_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KIconButton*

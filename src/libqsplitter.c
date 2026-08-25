@@ -372,6 +372,14 @@ void q_splitter_set_frame_rect(void* self, void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
+QPaintDevice* q_splitter_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+QSplitter* q_splitter_from_q_paint_device(void* _qpaintdevice) {
+    return (QSplitter*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
+}
+
 uintptr_t q_splitter_win_id(void* self) {
     return QWidget_WinId((QWidget*)self);
 }
@@ -1620,11 +1628,9 @@ const char** q_splitter_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1702,47 +1708,47 @@ void q_splitter_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 bool q_splitter_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(q_splitter_as_q_paint_device(self));
 }
 
 int32_t q_splitter_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(q_splitter_as_q_paint_device(self));
 }
 
 int32_t q_splitter_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(q_splitter_as_q_paint_device(self));
 }
 
 int32_t q_splitter_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(q_splitter_as_q_paint_device(self));
 }
 
 int32_t q_splitter_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(q_splitter_as_q_paint_device(self));
 }
 
 int32_t q_splitter_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(q_splitter_as_q_paint_device(self));
 }
 
 int32_t q_splitter_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(q_splitter_as_q_paint_device(self));
 }
 
 double q_splitter_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(q_splitter_as_q_paint_device(self));
 }
 
 double q_splitter_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(q_splitter_as_q_paint_device(self));
 }
 
 int32_t q_splitter_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(q_splitter_as_q_paint_device(self));
 }
 
 int32_t q_splitter_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(q_splitter_as_q_paint_device(self));
 }
 
 double q_splitter_device_pixel_ratio_f_scale() {
@@ -2580,6 +2586,14 @@ const char* q_splitterhandle_tr3(const char* s, const char* c, int n) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+QPaintDevice* q_splitterhandle_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+QSplitterHandle* q_splitterhandle_from_q_paint_device(void* _qpaintdevice) {
+    return (QSplitterHandle*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t q_splitterhandle_win_id(void* self) {
@@ -3830,11 +3844,9 @@ const char** q_splitterhandle_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -3912,47 +3924,47 @@ void q_splitterhandle_on_destroyed1(void* self, void (*callback)(void*, void*)) 
 }
 
 bool q_splitterhandle_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(q_splitterhandle_as_q_paint_device(self));
 }
 
 int32_t q_splitterhandle_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(q_splitterhandle_as_q_paint_device(self));
 }
 
 int32_t q_splitterhandle_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(q_splitterhandle_as_q_paint_device(self));
 }
 
 int32_t q_splitterhandle_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(q_splitterhandle_as_q_paint_device(self));
 }
 
 int32_t q_splitterhandle_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(q_splitterhandle_as_q_paint_device(self));
 }
 
 int32_t q_splitterhandle_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(q_splitterhandle_as_q_paint_device(self));
 }
 
 int32_t q_splitterhandle_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(q_splitterhandle_as_q_paint_device(self));
 }
 
 double q_splitterhandle_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(q_splitterhandle_as_q_paint_device(self));
 }
 
 double q_splitterhandle_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(q_splitterhandle_as_q_paint_device(self));
 }
 
 int32_t q_splitterhandle_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(q_splitterhandle_as_q_paint_device(self));
 }
 
 int32_t q_splitterhandle_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(q_splitterhandle_as_q_paint_device(self));
 }
 
 double q_splitterhandle_device_pixel_ratio_f_scale() {

@@ -120,11 +120,9 @@ const char** q_filedialog_selected_files(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -149,9 +147,8 @@ void q_filedialog_set_name_filters(void* self, const char* filters[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_set_name_filters\n");
         abort();
     }
-    for (size_t i = 0; i < filters_len; ++i) {
+    for (size_t i = 0; i < filters_len; ++i)
         filters_qstr[i] = qstring(filters[i]);
-    }
     libqt_list filters_list = qlist(filters_qstr, filters_len);
     QFileDialog_SetNameFilters((QFileDialog*)self, filters_list);
     free(filters_qstr);
@@ -167,11 +164,9 @@ const char** q_filedialog_name_filters(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -201,9 +196,8 @@ void q_filedialog_set_mime_type_filters(void* self, const char* filters[static 1
         fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_set_mime_type_filters\n");
         abort();
     }
-    for (size_t i = 0; i < filters_len; ++i) {
+    for (size_t i = 0; i < filters_len; ++i)
         filters_qstr[i] = qstring(filters[i]);
-    }
     libqt_list filters_list = qlist(filters_qstr, filters_len);
     QFileDialog_SetMimeTypeFilters((QFileDialog*)self, filters_list);
     free(filters_qstr);
@@ -219,11 +213,9 @@ const char** q_filedialog_mime_type_filters(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -302,9 +294,8 @@ void q_filedialog_set_history(void* self, const char* paths[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_set_history\n");
         abort();
     }
-    for (size_t i = 0; i < paths_len; ++i) {
+    for (size_t i = 0; i < paths_len; ++i)
         paths_qstr[i] = qstring(paths[i]);
-    }
     libqt_list paths_list = qlist(paths_qstr, paths_len);
     QFileDialog_SetHistory((QFileDialog*)self, paths_list);
     free(paths_qstr);
@@ -320,11 +311,9 @@ const char** q_filedialog_history(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -363,9 +352,8 @@ void q_filedialog_set_supported_schemes(void* self, const char* schemes[static 1
         fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_set_supported_schemes\n");
         abort();
     }
-    for (size_t i = 0; i < schemes_len; ++i) {
+    for (size_t i = 0; i < schemes_len; ++i)
         schemes_qstr[i] = qstring(schemes[i]);
-    }
     libqt_list schemes_list = qlist(schemes_qstr, schemes_len);
     QFileDialog_SetSupportedSchemes((QFileDialog*)self, schemes_list);
     free(schemes_qstr);
@@ -381,11 +369,9 @@ const char** q_filedialog_supported_schemes(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -441,9 +427,8 @@ void q_filedialog_files_selected(void* self, const char* files[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_files_selected\n");
         abort();
     }
-    for (size_t i = 0; i < files_len; ++i) {
+    for (size_t i = 0; i < files_len; ++i)
         files_qstr[i] = qstring(files[i]);
-    }
     libqt_list files_list = qlist(files_qstr, files_len);
     QFileDialog_FilesSelected((QFileDialog*)self, files_list);
     free(files_qstr);
@@ -552,11 +537,9 @@ const char** q_filedialog_get_open_file_names() {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -767,9 +750,8 @@ QUrl* q_filedialog_get_existing_directory_url5(void* parent, const char* caption
         fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_get_existing_directory_url5\n");
         abort();
     }
-    for (size_t i = 0; i < supportedSchemes_len; ++i) {
+    for (size_t i = 0; i < supportedSchemes_len; ++i)
         supportedSchemes_qstr[i] = qstring(supportedSchemes[i]);
-    }
     libqt_list supportedSchemes_list = qlist(supportedSchemes_qstr, supportedSchemes_len);
     QUrl* _out = QFileDialog_GetExistingDirectoryUrl5((QWidget*)parent, qstring(caption), (QUrl*)dir, options, supportedSchemes_list);
     free(supportedSchemes_qstr);
@@ -786,11 +768,9 @@ const char** q_filedialog_get_open_file_names1(void* parent) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -805,11 +785,9 @@ const char** q_filedialog_get_open_file_names2(void* parent, const char* caption
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -824,11 +802,9 @@ const char** q_filedialog_get_open_file_names3(void* parent, const char* caption
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -843,11 +819,9 @@ const char** q_filedialog_get_open_file_names4(void* parent, const char* caption
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -922,6 +896,14 @@ void q_filedialog_rejected(void* self) {
 
 void q_filedialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
+}
+
+QPaintDevice* q_filedialog_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+QFileDialog* q_filedialog_from_q_paint_device(void* _qpaintdevice) {
+    return (QFileDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t q_filedialog_win_id(void* self) {
@@ -2172,11 +2154,9 @@ const char** q_filedialog_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -2254,47 +2234,47 @@ void q_filedialog_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 bool q_filedialog_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(q_filedialog_as_q_paint_device(self));
 }
 
 int32_t q_filedialog_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(q_filedialog_as_q_paint_device(self));
 }
 
 int32_t q_filedialog_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(q_filedialog_as_q_paint_device(self));
 }
 
 int32_t q_filedialog_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(q_filedialog_as_q_paint_device(self));
 }
 
 int32_t q_filedialog_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(q_filedialog_as_q_paint_device(self));
 }
 
 int32_t q_filedialog_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(q_filedialog_as_q_paint_device(self));
 }
 
 int32_t q_filedialog_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(q_filedialog_as_q_paint_device(self));
 }
 
 double q_filedialog_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(q_filedialog_as_q_paint_device(self));
 }
 
 double q_filedialog_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(q_filedialog_as_q_paint_device(self));
 }
 
 int32_t q_filedialog_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(q_filedialog_as_q_paint_device(self));
 }
 
 int32_t q_filedialog_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(q_filedialog_as_q_paint_device(self));
 }
 
 double q_filedialog_device_pixel_ratio_f_scale() {

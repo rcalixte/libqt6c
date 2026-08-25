@@ -393,6 +393,14 @@ QAction* k_datepickerpopup_exec4(libqt_list /* of QAction* */ actions, void* pos
     return QMenu_Exec4(actions, (QPoint*)pos, (QAction*)at, (QWidget*)parent);
 }
 
+QPaintDevice* k_datepickerpopup_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+KDatePickerPopup* k_datepickerpopup_from_q_paint_device(void* _qpaintdevice) {
+    return (KDatePickerPopup*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
+}
+
 uintptr_t k_datepickerpopup_win_id(void* self) {
     return QWidget_WinId((QWidget*)self);
 }
@@ -1641,11 +1649,9 @@ const char** k_datepickerpopup_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1723,47 +1729,47 @@ void k_datepickerpopup_on_destroyed1(void* self, void (*callback)(void*, void*))
 }
 
 bool k_datepickerpopup_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_datepickerpopup_as_q_paint_device(self));
 }
 
 int32_t k_datepickerpopup_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_datepickerpopup_as_q_paint_device(self));
 }
 
 int32_t k_datepickerpopup_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_datepickerpopup_as_q_paint_device(self));
 }
 
 int32_t k_datepickerpopup_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_datepickerpopup_as_q_paint_device(self));
 }
 
 int32_t k_datepickerpopup_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_datepickerpopup_as_q_paint_device(self));
 }
 
 int32_t k_datepickerpopup_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_datepickerpopup_as_q_paint_device(self));
 }
 
 int32_t k_datepickerpopup_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_datepickerpopup_as_q_paint_device(self));
 }
 
 double k_datepickerpopup_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_datepickerpopup_as_q_paint_device(self));
 }
 
 double k_datepickerpopup_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_datepickerpopup_as_q_paint_device(self));
 }
 
 int32_t k_datepickerpopup_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_datepickerpopup_as_q_paint_device(self));
 }
 
 int32_t k_datepickerpopup_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_datepickerpopup_as_q_paint_device(self));
 }
 
 double k_datepickerpopup_device_pixel_ratio_f_scale() {

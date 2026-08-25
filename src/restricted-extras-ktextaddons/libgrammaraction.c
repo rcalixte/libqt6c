@@ -46,11 +46,9 @@ const char** k_textgrammarcheck__grammaraction_suggestions(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -62,9 +60,8 @@ void k_textgrammarcheck__grammaraction_set_suggestions(void* self, const char* s
         fprintf(stderr, "Failed to allocate memory for string list in k_textgrammarcheck__grammaraction_set_suggestions\n");
         abort();
     }
-    for (size_t i = 0; i < suggestions_len; ++i) {
+    for (size_t i = 0; i < suggestions_len; ++i)
         suggestions_qstr[i] = qstring(suggestions[i]);
-    }
     libqt_list suggestions_list = qlist(suggestions_qstr, suggestions_len);
     TextGrammarCheck__GrammarAction_SetSuggestions((TextGrammarCheck__GrammarAction*)self, suggestions_list);
     free(suggestions_qstr);
@@ -88,11 +85,9 @@ const char** k_textgrammarcheck__grammaraction_info_urls(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -104,9 +99,8 @@ void k_textgrammarcheck__grammaraction_set_info_urls(void* self, const char* url
         fprintf(stderr, "Failed to allocate memory for string list in k_textgrammarcheck__grammaraction_set_info_urls\n");
         abort();
     }
-    for (size_t i = 0; i < urls_len; ++i) {
+    for (size_t i = 0; i < urls_len; ++i)
         urls_qstr[i] = qstring(urls[i]);
-    }
     libqt_list urls_list = qlist(urls_qstr, urls_len);
     TextGrammarCheck__GrammarAction_SetInfoUrls((TextGrammarCheck__GrammarAction*)self, urls_list);
     free(urls_qstr);

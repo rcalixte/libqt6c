@@ -176,9 +176,8 @@ QVariant* q_variant_new25(const char* stringlist[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_variant_new25\n");
         abort();
     }
-    for (size_t i = 0; i < stringlist_len; ++i) {
+    for (size_t i = 0; i < stringlist_len; ++i)
         stringlist_qstr[i] = qstring(stringlist[i]);
-    }
     libqt_list stringlist_list = qlist(stringlist_qstr, stringlist_len);
 
     QVariant* _out = QVariant_New25(stringlist_list);
@@ -386,11 +385,9 @@ const char** q_variant_to_string_list(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

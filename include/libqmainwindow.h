@@ -636,6 +636,22 @@ bool q_mainwindow_restore_state2(void* self, char* state, int version);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QMainWindow*
+///
+QPaintDevice* q_mainwindow_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QMainWindow object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QMainWindow* q_mainwindow_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QMainWindow*

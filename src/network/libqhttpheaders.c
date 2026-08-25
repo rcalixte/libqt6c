@@ -97,11 +97,9 @@ const char** q_httpheaders_values(void* self, const char* name) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -116,11 +114,9 @@ const char** q_httpheaders_values2(void* self, int32_t name) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -220,24 +216,21 @@ QHttpHeaders* q_httpheaders_from_multi_map(libqt_map /* of char* to char** */ he
         size_t headers_value_count = libqt_strv_length((const char**)headers_array);
         libqt_string* headers_value_strings = (libqt_string*)malloc(headers_value_count * sizeof(libqt_string));
         if (headers_value_strings == NULL) {
-            for (size_t j = 0; j < i; j++) {
+            for (size_t j = 0; j < i; j++)
                 free(((libqt_list*)headers_ret.values)[j].data.ptr);
-            }
             free(headers_ret.keys);
             free(headers_ret.values);
             fprintf(stderr, "Failed to allocate memory for map string key in q_httpheaders_from_multi_map\n");
             abort();
         }
-        for (size_t j = 0; j < headers_value_count; j++) {
+        for (size_t j = 0; j < headers_value_count; j++)
             headers_value_strings[j] = qstring(headers_array[j]);
-        }
         headers_vdest[i].len = headers_value_count;
         headers_vdest[i].data.ptr = headers_value_strings;
     }
     QHttpHeaders* _out = QHttpHeaders_FromMultiMap(headers_ret);
-    for (size_t i = 0; i < headers_ret.len; ++i) {
+    for (size_t i = 0; i < headers_ret.len; ++i)
         free(((libqt_list*)headers_ret.values)[i].data.ptr);
-    }
     free(headers_ret.keys);
     free(headers_ret.values);
     return _out;
@@ -268,24 +261,21 @@ QHttpHeaders* q_httpheaders_from_multi_hash(libqt_map /* of char* to char** */ h
         size_t headers_value_count = libqt_strv_length((const char**)headers_array);
         libqt_string* headers_value_strings = (libqt_string*)malloc(headers_value_count * sizeof(libqt_string));
         if (headers_value_strings == NULL) {
-            for (size_t j = 0; j < i; j++) {
+            for (size_t j = 0; j < i; j++)
                 free(((libqt_list*)headers_ret.values)[j].data.ptr);
-            }
             free(headers_ret.keys);
             free(headers_ret.values);
             fprintf(stderr, "Failed to allocate memory for map string key in q_httpheaders_from_multi_hash\n");
             abort();
         }
-        for (size_t j = 0; j < headers_value_count; j++) {
+        for (size_t j = 0; j < headers_value_count; j++)
             headers_value_strings[j] = qstring(headers_array[j]);
-        }
         headers_vdest[i].len = headers_value_count;
         headers_vdest[i].data.ptr = headers_value_strings;
     }
     QHttpHeaders* _out = QHttpHeaders_FromMultiHash(headers_ret);
-    for (size_t i = 0; i < headers_ret.len; ++i) {
+    for (size_t i = 0; i < headers_ret.len; ++i)
         free(((libqt_list*)headers_ret.values)[i].data.ptr);
-    }
     free(headers_ret.keys);
     free(headers_ret.values);
     return _out;
@@ -332,9 +322,8 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_map(void* self) {
         if (_ret_keys[i] == NULL) {
             for (size_t j = 0; j < i; j++) {
                 libqt_free(_ret_keys[j]);
-                for (size_t k = 0; k < ((libqt_list*)_out.values)[j].len; k++) {
+                for (size_t k = 0; k < ((libqt_list*)_out.values)[j].len; k++)
                     free(_ret_values[j][k]);
-                }
                 free(_ret_values[j]);
             }
             free(_ret_keys);
@@ -349,9 +338,8 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_map(void* self) {
         if (_ret_values[i] == NULL) {
             for (size_t j = 0; j < i; j++) {
                 libqt_free(_ret_keys[j]);
-                for (size_t k = 0; k < ((libqt_list*)_out.values)[j].len; k++) {
+                for (size_t k = 0; k < ((libqt_list*)_out.values)[j].len; k++)
                     libqt_free(_ret_values[j][k]);
-                }
                 libqt_free(_ret_values[j]);
             }
             free(_ret_keys);
@@ -366,14 +354,12 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_map(void* self) {
         for (j = 0; j < _value_list.len; j++) {
             _ret_values[i][j] = (char*)malloc(_value_str[j].len + 1);
             if (_ret_values[i][j] == NULL) {
-                for (size_t k = 0; k < j; k++) {
+                for (size_t k = 0; k < j; k++)
                     free(_ret_values[i][k]);
-                }
                 for (size_t k = 0; k < i; k++) {
                     free(_ret_keys[k]);
-                    for (size_t l = 0; l < ((libqt_list*)_out.values)[k].len; l++) {
+                    for (size_t l = 0; l < ((libqt_list*)_out.values)[k].len; l++)
                         free(_ret_values[k][l]);
-                    }
                     free(_ret_values[k]);
                 }
                 free(_ret_keys);
@@ -391,9 +377,8 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_map(void* self) {
     for (size_t i = 0; i < _out.len; ++i) {
         libqt_free(_out_keys[i].data);
         libqt_string* _value_str = (libqt_string*)_out_values[i].data.ptr;
-        for (size_t j = 0; j < _out_values[i].len; j++) {
+        for (size_t j = 0; j < _out_values[i].len; j++)
             libqt_free(_value_str[j].data);
-        }
         free(_out_values[i].data.ptr);
     }
     free(_out.keys);
@@ -426,9 +411,8 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_hash(void* self) {
         if (_ret_keys[i] == NULL) {
             for (size_t j = 0; j < i; j++) {
                 libqt_free(_ret_keys[j]);
-                for (size_t k = 0; k < ((libqt_list*)_out.values)[j].len; k++) {
+                for (size_t k = 0; k < ((libqt_list*)_out.values)[j].len; k++)
                     free(_ret_values[j][k]);
-                }
                 free(_ret_values[j]);
             }
             free(_ret_keys);
@@ -443,9 +427,8 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_hash(void* self) {
         if (_ret_values[i] == NULL) {
             for (size_t j = 0; j < i; j++) {
                 libqt_free(_ret_keys[j]);
-                for (size_t k = 0; k < ((libqt_list*)_out.values)[j].len; k++) {
+                for (size_t k = 0; k < ((libqt_list*)_out.values)[j].len; k++)
                     libqt_free(_ret_values[j][k]);
-                }
                 libqt_free(_ret_values[j]);
             }
             free(_ret_keys);
@@ -460,14 +443,12 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_hash(void* self) {
         for (j = 0; j < _value_list.len; j++) {
             _ret_values[i][j] = (char*)malloc(_value_str[j].len + 1);
             if (_ret_values[i][j] == NULL) {
-                for (size_t k = 0; k < j; k++) {
+                for (size_t k = 0; k < j; k++)
                     free(_ret_values[i][k]);
-                }
                 for (size_t k = 0; k < i; k++) {
                     free(_ret_keys[k]);
-                    for (size_t l = 0; l < ((libqt_list*)_out.values)[k].len; l++) {
+                    for (size_t l = 0; l < ((libqt_list*)_out.values)[k].len; l++)
                         free(_ret_values[k][l]);
-                    }
                     free(_ret_values[k]);
                 }
                 free(_ret_keys);
@@ -485,9 +466,8 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_hash(void* self) {
     for (size_t i = 0; i < _out.len; ++i) {
         libqt_free(_out_keys[i].data);
         libqt_string* _value_str = (libqt_string*)_out_values[i].data.ptr;
-        for (size_t j = 0; j < _out_values[i].len; j++) {
+        for (size_t j = 0; j < _out_values[i].len; j++)
             libqt_free(_value_str[j].data);
-        }
         free(_out_values[i].data.ptr);
     }
     free(_out.keys);

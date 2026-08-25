@@ -22,6 +22,18 @@ QExtensionManager* q_extensionmanager_new();
 ///
 QExtensionManager* q_extensionmanager_new2(void* parent);
 
+/// Upcasts to a QAbstractExtensionManager object
+///
+/// @param self QExtensionManager*
+///
+QAbstractExtensionManager* q_extensionmanager_as_q_abstract_extension_manager(void* self);
+
+/// Downcasts to a QExtensionManager object
+///
+/// @param _qabstractextensionmanager QAbstractExtensionManager*
+///
+QExtensionManager* q_extensionmanager_from_q_abstract_extension_manager(void* _qabstractextensionmanager);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QExtensionManager*

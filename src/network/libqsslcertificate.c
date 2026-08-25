@@ -93,11 +93,9 @@ const char** q_sslcertificate_issuer_info(void* self, int32_t info) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -112,11 +110,9 @@ const char** q_sslcertificate_issuer_info2(void* self, char* attribute) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -131,11 +127,9 @@ const char** q_sslcertificate_subject_info(void* self, int32_t info) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -150,11 +144,9 @@ const char** q_sslcertificate_subject_info2(void* self, char* attribute) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -183,11 +175,9 @@ const char** q_sslcertificate_subject_info_attributes(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -202,11 +192,9 @@ const char** q_sslcertificate_issuer_info_attributes(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -229,9 +217,8 @@ libqt_map /* of enum QSsl__AlternativeNameEntryType to const char** */ q_sslcert
         _ret_values[i] = (char**)malloc((_value_list.len + 1) * sizeof(char*));
         if (_ret_values[i] == NULL) {
             for (size_t j = 0; j < i; j++) {
-                for (size_t k = 0; k < ((libqt_list*)_out.values)[j].len; k++) {
+                for (size_t k = 0; k < ((libqt_list*)_out.values)[j].len; k++)
                     libqt_free(_ret_values[j][k]);
-                }
                 libqt_free(_ret_values[j]);
             }
             free(_out.keys);
@@ -245,13 +232,11 @@ libqt_map /* of enum QSsl__AlternativeNameEntryType to const char** */ q_sslcert
         for (j = 0; j < _value_list.len; j++) {
             _ret_values[i][j] = (char*)malloc(_value_str[j].len + 1);
             if (_ret_values[i][j] == NULL) {
-                for (size_t k = 0; k < j; k++) {
+                for (size_t k = 0; k < j; k++)
                     free(_ret_values[i][k]);
-                }
                 for (size_t k = 0; k < i; k++) {
-                    for (size_t l = 0; l < ((libqt_list*)_out.values)[k].len; l++) {
+                    for (size_t l = 0; l < ((libqt_list*)_out.values)[k].len; l++)
                         free(_ret_values[k][l]);
-                    }
                     free(_ret_values[k]);
                 }
                 free(_ret_values);
@@ -267,9 +252,8 @@ libqt_map /* of enum QSsl__AlternativeNameEntryType to const char** */ q_sslcert
     _ret.values = (void*)_ret_values;
     for (size_t i = 0; i < _out.len; ++i) {
         libqt_string* _value_str = (libqt_string*)_out_values[i].data.ptr;
-        for (size_t j = 0; j < _out_values[i].len; j++) {
+        for (size_t j = 0; j < _out_values[i].len; j++)
             libqt_free(_value_str[j].data);
-        }
         free(_out_values[i].data.ptr);
     }
     free(_out.values);

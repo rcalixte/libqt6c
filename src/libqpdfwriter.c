@@ -25,6 +25,14 @@ QPdfWriter* q_pdfwriter_new2(void* device) {
     return QPdfWriter_New2((QIODevice*)device);
 }
 
+QPagedPaintDevice* q_pdfwriter_as_q_paged_paint_device(void* self) {
+    return QPdfWriter_AsQPagedPaintDevice((QPdfWriter*)self);
+}
+
+QPdfWriter* q_pdfwriter_from_q_paged_paint_device(void* _qpagedpaintdevice) {
+    return (QPdfWriter*)QPdfWriter_FromQPagedPaintDevice((QPagedPaintDevice*)_qpagedpaintdevice);
+}
+
 const QMetaObject* q_pdfwriter_meta_object(void* self) {
     return QPdfWriter_MetaObject((QPdfWriter*)self);
 }
@@ -329,11 +337,9 @@ const char** q_pdfwriter_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -411,11 +417,11 @@ void q_pdfwriter_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 QPageLayout* q_pdfwriter_page_layout(void* self) {
-    return QPagedPaintDevice_PageLayout((QPagedPaintDevice*)self);
+    return QPagedPaintDevice_PageLayout(q_pdfwriter_as_q_paged_paint_device(self));
 }
 
 QPageRanges* q_pdfwriter_page_ranges(void* self) {
-    return QPagedPaintDevice_PageRanges((QPagedPaintDevice*)self);
+    return QPagedPaintDevice_PageRanges(q_pdfwriter_as_q_paged_paint_device(self));
 }
 
 bool q_pdfwriter_painting_active(void* self) {

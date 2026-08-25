@@ -31,6 +31,18 @@ QGraphicsWidget* q_graphicswidget_new2(void* parent);
 ///
 QGraphicsWidget* q_graphicswidget_new3(void* parent, int32_t wFlags);
 
+/// Upcasts to a QGraphicsLayoutItem object
+///
+/// @param self QGraphicsWidget*
+///
+QGraphicsLayoutItem* q_graphicswidget_as_q_graphics_layout_item(void* self);
+
+/// Downcasts to a QGraphicsWidget object
+///
+/// @param _qgraphicslayoutitem QGraphicsLayoutItem*
+///
+QGraphicsWidget* q_graphicswidget_from_q_graphics_layout_item(void* _qgraphicslayoutitem);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QGraphicsWidget*
@@ -1360,6 +1372,22 @@ void q_graphicswidget_set_shortcut_auto_repeat2(void* self, int id, bool enabled
 /// @param on bool
 ///
 void q_graphicswidget_set_attribute2(void* self, int32_t attribute, bool on);
+
+/// Inherited from QGraphicsObject
+///
+/// Upcasts to a QGraphicsItem object
+///
+/// @param self QGraphicsWidget*
+///
+QGraphicsItem* q_graphicswidget_as_q_graphics_item(void* self);
+
+/// Inherited from QGraphicsObject
+///
+/// Downcasts to a QGraphicsWidget object
+///
+/// @param _qgraphicsitem QGraphicsItem*
+///
+QGraphicsWidget* q_graphicswidget_from_q_graphics_item(void* _qgraphicsitem);
 
 /// Inherited from QGraphicsObject
 ///

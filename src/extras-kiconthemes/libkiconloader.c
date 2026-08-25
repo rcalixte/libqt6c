@@ -27,9 +27,8 @@ KIconLoader* k_iconloader_new3(const char* appname, const char* extraSearchPaths
         fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_new3\n");
         abort();
     }
-    for (size_t i = 0; i < extraSearchPaths_len; ++i) {
+    for (size_t i = 0; i < extraSearchPaths_len; ++i)
         extraSearchPaths_qstr[i] = qstring(extraSearchPaths[i]);
-    }
     libqt_list extraSearchPaths_list = qlist(extraSearchPaths_qstr, extraSearchPaths_len);
 
     KIconLoader* _out = KIconLoader_New3(qstring(appname), extraSearchPaths_list);
@@ -44,9 +43,8 @@ KIconLoader* k_iconloader_new4(const char* appname, const char* extraSearchPaths
         fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_new4\n");
         abort();
     }
-    for (size_t i = 0; i < extraSearchPaths_len; ++i) {
+    for (size_t i = 0; i < extraSearchPaths_len; ++i)
         extraSearchPaths_qstr[i] = qstring(extraSearchPaths[i]);
-    }
     libqt_list extraSearchPaths_list = qlist(extraSearchPaths_qstr, extraSearchPaths_len);
 
     KIconLoader* _out = KIconLoader_New4(qstring(appname), extraSearchPaths_list, (QObject*)parent);
@@ -148,11 +146,9 @@ const char** k_iconloader_load_animated(void* self, const char* name, int32_t gr
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -167,11 +163,9 @@ const char** k_iconloader_query_icons(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -186,11 +180,9 @@ const char** k_iconloader_query_icons2(void* self, int group_or_size) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -205,11 +197,9 @@ const char** k_iconloader_query_icons_by_context(void* self, int group_or_size) 
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -228,11 +218,9 @@ const char** k_iconloader_query_icons_by_dir(void* self, const char* iconsDir) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -247,11 +235,9 @@ const char** k_iconloader_search_paths(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -283,9 +269,8 @@ void k_iconloader_draw_overlays(void* self, const char* overlays[static 1], void
         fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_draw_overlays\n");
         abort();
     }
-    for (size_t i = 0; i < overlays_len; ++i) {
+    for (size_t i = 0; i < overlays_len; ++i)
         overlays_qstr[i] = qstring(overlays[i]);
-    }
     libqt_list overlays_list = qlist(overlays_qstr, overlays_len);
     KIconLoader_DrawOverlays((KIconLoader*)self, overlays_list, (QPixmap*)pixmap, group);
     free(overlays_qstr);
@@ -368,9 +353,8 @@ QPixmap* k_iconloader_load_icon5(void* self, const char* name, int32_t group, in
         fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_load_icon5\n");
         abort();
     }
-    for (size_t i = 0; i < overlays_len; ++i) {
+    for (size_t i = 0; i < overlays_len; ++i)
         overlays_qstr[i] = qstring(overlays[i]);
-    }
     libqt_list overlays_list = qlist(overlays_qstr, overlays_len);
     QPixmap* _out = KIconLoader_LoadIcon5((KIconLoader*)self, qstring(name), group, size, state, overlays_list);
     free(overlays_qstr);
@@ -392,9 +376,8 @@ QPixmap* k_iconloader_load_mime_type_icon5(void* self, const char* iconName, int
         fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_load_mime_type_icon5\n");
         abort();
     }
-    for (size_t i = 0; i < overlays_len; ++i) {
+    for (size_t i = 0; i < overlays_len; ++i)
         overlays_qstr[i] = qstring(overlays[i]);
-    }
     libqt_list overlays_list = qlist(overlays_qstr, overlays_len);
     QPixmap* _out = KIconLoader_LoadMimeTypeIcon5((KIconLoader*)self, qstring(iconName), group, size, state, overlays_list);
     free(overlays_qstr);
@@ -433,11 +416,9 @@ const char** k_iconloader_load_animated3(void* self, const char* name, int32_t g
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -452,11 +433,9 @@ const char** k_iconloader_query_icons22(void* self, int group_or_size, int32_t c
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -471,11 +450,9 @@ const char** k_iconloader_query_icons_by_context2(void* self, int group_or_size,
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -487,9 +464,8 @@ void k_iconloader_reconfigure2(void* self, const char* appname, const char* extr
         fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_reconfigure2\n");
         abort();
     }
-    for (size_t i = 0; i < extraSearchPaths_len; ++i) {
+    for (size_t i = 0; i < extraSearchPaths_len; ++i)
         extraSearchPaths_qstr[i] = qstring(extraSearchPaths[i]);
-    }
     libqt_list extraSearchPaths_list = qlist(extraSearchPaths_qstr, extraSearchPaths_len);
     KIconLoader_Reconfigure2((KIconLoader*)self, qstring(appname), extraSearchPaths_list);
     free(extraSearchPaths_qstr);
@@ -502,9 +478,8 @@ void k_iconloader_draw_overlays4(void* self, const char* overlays[static 1], voi
         fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_draw_overlays4\n");
         abort();
     }
-    for (size_t i = 0; i < overlays_len; ++i) {
+    for (size_t i = 0; i < overlays_len; ++i)
         overlays_qstr[i] = qstring(overlays[i]);
-    }
     libqt_list overlays_list = qlist(overlays_qstr, overlays_len);
     KIconLoader_DrawOverlays4((KIconLoader*)self, overlays_list, (QPixmap*)pixmap, group, state);
     free(overlays_qstr);
@@ -640,11 +615,9 @@ const char** k_iconloader_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -876,9 +849,8 @@ QIcon* k_de_icon3(const char* iconName, const char* overlays[static 1], void* ic
         fprintf(stderr, "Failed to allocate memory for string list in k_de_icon3\n");
         abort();
     }
-    for (size_t i = 0; i < overlays_len; ++i) {
+    for (size_t i = 0; i < overlays_len; ++i)
         overlays_qstr[i] = qstring(overlays[i]);
-    }
     libqt_list overlays_list = qlist(overlays_qstr, overlays_len);
     QIcon* _out = KDE_Icon3(qstring(iconName), overlays_list, (KIconLoader*)iconLoader);
     free(overlays_qstr);

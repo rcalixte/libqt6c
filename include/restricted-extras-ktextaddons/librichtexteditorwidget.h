@@ -232,6 +232,22 @@ const char* k_textcustomeditor__richtexteditorwidget_tr3(const char* s, const ch
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextCustomEditor__RichTextEditorWidget*
+///
+QPaintDevice* k_textcustomeditor__richtexteditorwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextCustomEditor__RichTextEditorWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextCustomEditor__RichTextEditorWidget* k_textcustomeditor__richtexteditorwidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self TextCustomEditor__RichTextEditorWidget*

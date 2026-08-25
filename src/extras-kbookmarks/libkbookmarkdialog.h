@@ -338,6 +338,22 @@ void k_bookmarkdialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KBookmarkDialog*
+///
+QPaintDevice* k_bookmarkdialog_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KBookmarkDialog object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KBookmarkDialog* k_bookmarkdialog_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KBookmarkDialog*

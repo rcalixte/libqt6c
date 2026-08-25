@@ -845,6 +845,22 @@ QAction* k_bookmarkcontextmenu_exec4(libqt_list actions, void* pos, void* at, vo
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KBookmarkContextMenu*
+///
+QPaintDevice* k_bookmarkcontextmenu_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KBookmarkContextMenu object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KBookmarkContextMenu* k_bookmarkcontextmenu_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KBookmarkContextMenu*

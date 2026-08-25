@@ -314,6 +314,22 @@ const char* q_graphicsvideoitem_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QGraphicsObject
 ///
+/// Upcasts to a QGraphicsItem object
+///
+/// @param self QGraphicsVideoItem*
+///
+QGraphicsItem* q_graphicsvideoitem_as_q_graphics_item(void* self);
+
+/// Inherited from QGraphicsObject
+///
+/// Downcasts to a QGraphicsVideoItem object
+///
+/// @param _qgraphicsitem QGraphicsItem*
+///
+QGraphicsVideoItem* q_graphicsvideoitem_from_q_graphics_item(void* _qgraphicsitem);
+
+/// Inherited from QGraphicsObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsobject.html#grabGesture)
 ///
 /// @param self QGraphicsVideoItem*

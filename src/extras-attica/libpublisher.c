@@ -58,11 +58,9 @@ const char** k_attica__field_options(void* self) {
     }
     for (size_t i = 0; i < options_arr.len; ++i) {
         options_ret[i] = qstring_to_char(options_qstr[i]);
-    }
-    options_ret[options_arr.len] = NULL;
-    for (size_t i = 0; i < options_arr.len; ++i) {
         libqt_string_free((libqt_string*)&options_qstr[i]);
     }
+    options_ret[options_arr.len] = NULL;
     libqt_free(options_arr.data.ptr);
     return options_ret;
 }
@@ -74,9 +72,8 @@ void k_attica__field_set_options(void* self, const char* options[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_attica__field_set_options\n");
         abort();
     }
-    for (size_t i = 0; i < options_len; ++i) {
+    for (size_t i = 0; i < options_len; ++i)
         options_qstr[i] = qstring(options[i]);
-    }
     libqt_list options_list = qlist(options_qstr, options_len);
     Attica__Field_SetOptions((Attica__Field*)self, options_list);
     free(options_qstr);

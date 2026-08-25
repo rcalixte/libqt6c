@@ -474,6 +474,22 @@ void k_passworddialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KPasswordDialog*
+///
+QPaintDevice* k_passworddialog_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KPasswordDialog object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KPasswordDialog* k_passworddialog_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KPasswordDialog*

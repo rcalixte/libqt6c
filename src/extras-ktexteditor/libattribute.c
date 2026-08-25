@@ -16,6 +16,10 @@ KTextEditor__Attribute* k_texteditor__attribute_new3(void* a) {
     return KTextEditor__Attribute_New3((KTextEditor__Attribute*)a);
 }
 
+QSharedData* k_texteditor__attribute_as_q_shared_data(void* self) {
+    return KTextEditor__Attribute_AsQSharedData((KTextEditor__Attribute*)self);
+}
+
 const char* k_texteditor__attribute_name(void* self) {
     libqt_string _str = KTextEditor__Attribute_Name((KTextEditor__Attribute*)self);
     char* _ret = qstring_to_char(_str);
@@ -133,9 +137,8 @@ void k_texteditor__attribute_set_font_families(void* self, const char* families[
         fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__attribute_set_font_families\n");
         abort();
     }
-    for (size_t i = 0; i < families_len; ++i) {
+    for (size_t i = 0; i < families_len; ++i)
         families_qstr[i] = qstring(families[i]);
-    }
     libqt_list families_list = qlist(families_qstr, families_len);
     QTextCharFormat_SetFontFamilies((QTextCharFormat*)self, families_list);
     free(families_qstr);
@@ -374,9 +377,8 @@ void k_texteditor__attribute_set_anchor_names(void* self, const char* names[stat
         fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__attribute_set_anchor_names\n");
         abort();
     }
-    for (size_t i = 0; i < names_len; ++i) {
+    for (size_t i = 0; i < names_len; ++i)
         names_qstr[i] = qstring(names[i]);
-    }
     libqt_list names_list = qlist(names_qstr, names_len);
     QTextCharFormat_SetAnchorNames((QTextCharFormat*)self, names_list);
     free(names_qstr);
@@ -392,11 +394,9 @@ const char** k_texteditor__attribute_anchor_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

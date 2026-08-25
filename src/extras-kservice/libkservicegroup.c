@@ -97,11 +97,9 @@ const char** k_servicegroup_suppress_generic_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -113,9 +111,8 @@ void k_servicegroup_set_layout_info(void* self, const char* layout[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_servicegroup_set_layout_info\n");
         abort();
     }
-    for (size_t i = 0; i < layout_len; ++i) {
+    for (size_t i = 0; i < layout_len; ++i)
         layout_qstr[i] = qstring(layout[i]);
-    }
     libqt_list layout_list = qlist(layout_qstr, layout_len);
     KServiceGroup_SetLayoutInfo((KServiceGroup*)self, layout_list);
     free(layout_qstr);
@@ -131,11 +128,9 @@ const char** k_servicegroup_layout_info(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

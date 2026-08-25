@@ -914,6 +914,22 @@ void k_toolbar_on_visibility_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KToolBar*
+///
+QPaintDevice* k_toolbar_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KToolBar object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KToolBar* k_toolbar_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KToolBar*

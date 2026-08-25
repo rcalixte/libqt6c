@@ -918,6 +918,22 @@ QAction* q_menu_exec4(libqt_list actions, void* pos, void* at, void* parent);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QMenu*
+///
+QPaintDevice* q_menu_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QMenu object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QMenu* q_menu_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QMenu*

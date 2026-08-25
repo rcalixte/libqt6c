@@ -64,11 +64,9 @@ const char** k_textgrammarcheck__grammarerror_suggestions(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -80,9 +78,8 @@ void k_textgrammarcheck__grammarerror_set_suggestions(void* self, const char* su
         fprintf(stderr, "Failed to allocate memory for string list in k_textgrammarcheck__grammarerror_set_suggestions\n");
         abort();
     }
-    for (size_t i = 0; i < suggestions_len; ++i) {
+    for (size_t i = 0; i < suggestions_len; ++i)
         suggestions_qstr[i] = qstring(suggestions[i]);
-    }
     libqt_list suggestions_list = qlist(suggestions_qstr, suggestions_len);
     TextGrammarCheck__GrammarError_SetSuggestions((TextGrammarCheck__GrammarError*)self, suggestions_list);
     free(suggestions_qstr);

@@ -86,11 +86,9 @@ const char** k_textautocorrectioncore__autocorrectionutils_libre_office_auto_cor
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -105,11 +103,9 @@ const char** k_textautocorrectioncore__autocorrectionutils_search_auto_correct_l
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -121,9 +117,8 @@ const char** k_textautocorrectioncore__autocorrectionutils_auto_correct_libre_of
         fprintf(stderr, "Failed to allocate memory for string list in k_textautocorrectioncore__autocorrectionutils_auto_correct_libre_office_language_to_string\n");
         abort();
     }
-    for (size_t i = 0; i < langs_len; ++i) {
+    for (size_t i = 0; i < langs_len; ++i)
         langs_qstr[i] = qstring(langs[i]);
-    }
     libqt_list langs_list = qlist(langs_qstr, langs_len);
     libqt_list _arr = TextAutoCorrectionCore__AutoCorrectionUtils_AutoCorrectLibreOfficeLanguageToString(langs_list);
     free(langs_qstr);
@@ -135,11 +130,9 @@ const char** k_textautocorrectioncore__autocorrectionutils_auto_correct_libre_of
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -182,11 +175,9 @@ const char** k_textautocorrectioncore__autocorrectionutils_words_from_sentence(c
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

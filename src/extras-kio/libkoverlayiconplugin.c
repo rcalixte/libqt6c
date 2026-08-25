@@ -67,11 +67,9 @@ const char** k_overlayiconplugin_get_overlays(void* self, void* item) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -90,11 +88,9 @@ const char** k_overlayiconplugin_super_get_overlays(void* self, void* item) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -106,9 +102,8 @@ void k_overlayiconplugin_overlays_changed(void* self, void* url, const char* ove
         fprintf(stderr, "Failed to allocate memory for string list in k_overlayiconplugin_overlays_changed\n");
         abort();
     }
-    for (size_t i = 0; i < overlays_len; ++i) {
+    for (size_t i = 0; i < overlays_len; ++i)
         overlays_qstr[i] = qstring(overlays[i]);
-    }
     libqt_list overlays_list = qlist(overlays_qstr, overlays_len);
     KOverlayIconPlugin_OverlaysChanged((KOverlayIconPlugin*)self, (QUrl*)url, overlays_list);
     free(overlays_qstr);
@@ -262,11 +257,9 @@ const char** k_overlayiconplugin_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

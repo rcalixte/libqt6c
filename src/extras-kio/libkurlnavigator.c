@@ -165,9 +165,8 @@ void k_urlnavigator_set_supported_schemes(void* self, const char* schemes[static
         fprintf(stderr, "Failed to allocate memory for string list in k_urlnavigator_set_supported_schemes\n");
         abort();
     }
-    for (size_t i = 0; i < schemes_len; ++i) {
+    for (size_t i = 0; i < schemes_len; ++i)
         schemes_qstr[i] = qstring(schemes[i]);
-    }
     libqt_list schemes_list = qlist(schemes_qstr, schemes_len);
     KUrlNavigator_SetSupportedSchemes((KUrlNavigator*)self, schemes_list);
     free(schemes_qstr);
@@ -183,11 +182,9 @@ const char** k_urlnavigator_supported_schemes(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -467,6 +464,14 @@ char* k_urlnavigator_location_state1(void* self, int historyIndex) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+QPaintDevice* k_urlnavigator_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+KUrlNavigator* k_urlnavigator_from_q_paint_device(void* _qpaintdevice) {
+    return (KUrlNavigator*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t k_urlnavigator_win_id(void* self) {
@@ -1713,11 +1718,9 @@ const char** k_urlnavigator_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1795,47 +1798,47 @@ void k_urlnavigator_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 bool k_urlnavigator_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_urlnavigator_as_q_paint_device(self));
 }
 
 int32_t k_urlnavigator_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_urlnavigator_as_q_paint_device(self));
 }
 
 int32_t k_urlnavigator_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_urlnavigator_as_q_paint_device(self));
 }
 
 int32_t k_urlnavigator_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_urlnavigator_as_q_paint_device(self));
 }
 
 int32_t k_urlnavigator_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_urlnavigator_as_q_paint_device(self));
 }
 
 int32_t k_urlnavigator_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_urlnavigator_as_q_paint_device(self));
 }
 
 int32_t k_urlnavigator_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_urlnavigator_as_q_paint_device(self));
 }
 
 double k_urlnavigator_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_urlnavigator_as_q_paint_device(self));
 }
 
 double k_urlnavigator_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_urlnavigator_as_q_paint_device(self));
 }
 
 int32_t k_urlnavigator_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_urlnavigator_as_q_paint_device(self));
 }
 
 int32_t k_urlnavigator_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_urlnavigator_as_q_paint_device(self));
 }
 
 double k_urlnavigator_device_pixel_ratio_f_scale() {

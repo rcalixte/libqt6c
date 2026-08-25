@@ -362,11 +362,9 @@ const char** k_fileplacesmodel_mime_types(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -385,11 +383,9 @@ const char** k_fileplacesmodel_super_mime_types(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -433,9 +429,8 @@ void k_fileplacesmodel_set_supported_schemes(void* self, const char* schemes[sta
         fprintf(stderr, "Failed to allocate memory for string list in k_fileplacesmodel_set_supported_schemes\n");
         abort();
     }
-    for (size_t i = 0; i < schemes_len; ++i) {
+    for (size_t i = 0; i < schemes_len; ++i)
         schemes_qstr[i] = qstring(schemes[i]);
-    }
     libqt_list schemes_list = qlist(schemes_qstr, schemes_len);
     KFilePlacesModel_SetSupportedSchemes((KFilePlacesModel*)self, schemes_list);
     free(schemes_qstr);
@@ -451,11 +446,9 @@ const char** k_fileplacesmodel_supported_schemes(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -796,11 +789,9 @@ const char** k_fileplacesmodel_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

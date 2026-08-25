@@ -969,6 +969,22 @@ void k_sonnet__dictionarycombobox_set_item_data3(void* self, int index, void* va
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self Sonnet__DictionaryComboBox*
+///
+QPaintDevice* k_sonnet__dictionarycombobox_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a Sonnet__DictionaryComboBox object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+Sonnet__DictionaryComboBox* k_sonnet__dictionarycombobox_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self Sonnet__DictionaryComboBox*

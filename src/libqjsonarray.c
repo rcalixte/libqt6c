@@ -22,9 +22,8 @@ QJsonArray* q_jsonarray_from_string_list(const char* list[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_jsonarray_from_string_list\n");
         abort();
     }
-    for (size_t i = 0; i < list_len; ++i) {
+    for (size_t i = 0; i < list_len; ++i)
         list_qstr[i] = qstring(list[i]);
-    }
     libqt_list list_list = qlist(list_qstr, list_len);
     QJsonArray* _out = QJsonArray_FromStringList(list_list);
     free(list_qstr);

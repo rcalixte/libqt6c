@@ -1421,6 +1421,22 @@ void q_chartview_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QChartView*
+///
+QPaintDevice* q_chartview_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QChartView object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QChartView* q_chartview_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QChartView*

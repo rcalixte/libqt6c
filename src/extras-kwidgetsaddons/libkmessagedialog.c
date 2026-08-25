@@ -86,9 +86,8 @@ void k_messagedialog_set_list_widget_items(void* self, const char* strlist[stati
         fprintf(stderr, "Failed to allocate memory for string list in k_messagedialog_set_list_widget_items\n");
         abort();
     }
-    for (size_t i = 0; i < strlist_len; ++i) {
+    for (size_t i = 0; i < strlist_len; ++i)
         strlist_qstr[i] = qstring(strlist[i]);
-    }
     libqt_list strlist_list = qlist(strlist_qstr, strlist_len);
     KMessageDialog_SetListWidgetItems((KMessageDialog*)self, strlist_list);
     free(strlist_qstr);
@@ -218,6 +217,14 @@ void k_messagedialog_rejected(void* self) {
 
 void k_messagedialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
+}
+
+QPaintDevice* k_messagedialog_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+KMessageDialog* k_messagedialog_from_q_paint_device(void* _qpaintdevice) {
+    return (KMessageDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t k_messagedialog_win_id(void* self) {
@@ -1468,11 +1475,9 @@ const char** k_messagedialog_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1550,47 +1555,47 @@ void k_messagedialog_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 bool k_messagedialog_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_messagedialog_as_q_paint_device(self));
 }
 
 int32_t k_messagedialog_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_messagedialog_as_q_paint_device(self));
 }
 
 int32_t k_messagedialog_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_messagedialog_as_q_paint_device(self));
 }
 
 int32_t k_messagedialog_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_messagedialog_as_q_paint_device(self));
 }
 
 int32_t k_messagedialog_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_messagedialog_as_q_paint_device(self));
 }
 
 int32_t k_messagedialog_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_messagedialog_as_q_paint_device(self));
 }
 
 int32_t k_messagedialog_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_messagedialog_as_q_paint_device(self));
 }
 
 double k_messagedialog_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_messagedialog_as_q_paint_device(self));
 }
 
 double k_messagedialog_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_messagedialog_as_q_paint_device(self));
 }
 
 int32_t k_messagedialog_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_messagedialog_as_q_paint_device(self));
 }
 
 int32_t k_messagedialog_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_messagedialog_as_q_paint_device(self));
 }
 
 double k_messagedialog_device_pixel_ratio_f_scale() {

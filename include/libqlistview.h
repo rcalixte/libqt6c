@@ -2199,6 +2199,22 @@ void q_listview_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QListView*
+///
+QPaintDevice* q_listview_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QListView object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QListView* q_listview_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QListView*

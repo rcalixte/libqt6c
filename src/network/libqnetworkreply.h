@@ -376,6 +376,14 @@ const char* q_networkreply_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QIODevice
 ///
+/// Upcasts to a QIODeviceBase object
+///
+/// @param self QNetworkReply*
+///
+QIODeviceBase* q_networkreply_as_q_i_o_device_base(void* self);
+
+/// Inherited from QIODevice
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#openMode)
 ///
 /// @param self QNetworkReply*

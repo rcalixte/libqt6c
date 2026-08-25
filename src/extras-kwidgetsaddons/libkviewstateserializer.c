@@ -85,11 +85,9 @@ const char** k_viewstateserializer_selection_keys(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -104,11 +102,9 @@ const char** k_viewstateserializer_expansion_keys(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -131,9 +127,8 @@ void k_viewstateserializer_restore_selection(void* self, const char* indexString
         fprintf(stderr, "Failed to allocate memory for string list in k_viewstateserializer_restore_selection\n");
         abort();
     }
-    for (size_t i = 0; i < indexStrings_len; ++i) {
+    for (size_t i = 0; i < indexStrings_len; ++i)
         indexStrings_qstr[i] = qstring(indexStrings[i]);
-    }
     libqt_list indexStrings_list = qlist(indexStrings_qstr, indexStrings_len);
     KViewStateSerializer_RestoreSelection((KViewStateSerializer*)self, indexStrings_list);
     free(indexStrings_qstr);
@@ -150,9 +145,8 @@ void k_viewstateserializer_restore_expanded(void* self, const char* indexStrings
         fprintf(stderr, "Failed to allocate memory for string list in k_viewstateserializer_restore_expanded\n");
         abort();
     }
-    for (size_t i = 0; i < indexStrings_len; ++i) {
+    for (size_t i = 0; i < indexStrings_len; ++i)
         indexStrings_qstr[i] = qstring(indexStrings[i]);
-    }
     libqt_list indexStrings_list = qlist(indexStrings_qstr, indexStrings_len);
     KViewStateSerializer_RestoreExpanded((KViewStateSerializer*)self, indexStrings_list);
     free(indexStrings_qstr);
@@ -348,11 +342,9 @@ const char** k_viewstateserializer_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

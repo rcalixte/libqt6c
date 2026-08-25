@@ -387,6 +387,14 @@ void q_gridlayout_add_item6(void* self, void* item, int row, int column, int row
     QGridLayout_AddItem6((QGridLayout*)self, (QLayoutItem*)item, row, column, rowSpan, columnSpan, param6);
 }
 
+QLayoutItem* q_gridlayout_as_q_layout_item(void* self) {
+    return QLayout_AsQLayoutItem((QLayout*)self);
+}
+
+QGridLayout* q_gridlayout_from_q_layout_item(void* _qlayoutitem) {
+    return (QGridLayout*)QLayout_FromQLayoutItem((QLayoutItem*)_qlayoutitem);
+}
+
 void q_gridlayout_set_contents_margins(void* self, int left, int top, int right, int bottom) {
     QLayout_SetContentsMargins((QLayout*)self, left, top, right, bottom);
 }
@@ -629,11 +637,9 @@ const char** q_gridlayout_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -711,7 +717,7 @@ void q_gridlayout_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 int32_t q_gridlayout_alignment(void* self) {
-    return QLayoutItem_Alignment((QLayoutItem*)self);
+    return QLayoutItem_Alignment(q_gridlayout_as_q_layout_item(self));
 }
 
 QRect* q_gridlayout_geometry(void* self) {

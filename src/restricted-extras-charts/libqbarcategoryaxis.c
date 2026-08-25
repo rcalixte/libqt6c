@@ -76,9 +76,8 @@ void q_barcategoryaxis_append(void* self, const char* categories[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_barcategoryaxis_append\n");
         abort();
     }
-    for (size_t i = 0; i < categories_len; ++i) {
+    for (size_t i = 0; i < categories_len; ++i)
         categories_qstr[i] = qstring(categories[i]);
-    }
     libqt_list categories_list = qlist(categories_qstr, categories_len);
     QBarCategoryAxis_Append((QBarCategoryAxis*)self, categories_list);
     free(categories_qstr);
@@ -111,9 +110,8 @@ void q_barcategoryaxis_set_categories(void* self, const char* categories[static 
         fprintf(stderr, "Failed to allocate memory for string list in q_barcategoryaxis_set_categories\n");
         abort();
     }
-    for (size_t i = 0; i < categories_len; ++i) {
+    for (size_t i = 0; i < categories_len; ++i)
         categories_qstr[i] = qstring(categories[i]);
-    }
     libqt_list categories_list = qlist(categories_qstr, categories_len);
     QBarCategoryAxis_SetCategories((QBarCategoryAxis*)self, categories_list);
     free(categories_qstr);
@@ -129,11 +127,9 @@ const char** q_barcategoryaxis_categories(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -862,11 +858,9 @@ const char** q_barcategoryaxis_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

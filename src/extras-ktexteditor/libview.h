@@ -10,6 +10,18 @@
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-view.html)
 
+/// Upcasts to a KXMLGUIClient object
+///
+/// @param self KTextEditor__View*
+///
+KXMLGUIClient* k_texteditor__view_as_k_x_m_l_g_u_i_client(void* self);
+
+/// Downcasts to a KTextEditor__View object
+///
+/// @param _kxmlguiclient KXMLGUIClient*
+///
+KTextEditor__View* k_texteditor__view_from_k_x_m_l_g_u_i_client(void* _kxmlguiclient);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KTextEditor__View*
@@ -840,6 +852,22 @@ int32_t k_texteditor__view_first_displayed_line1(void* self, int32_t lineType);
 /// @param lineType enum KTextEditor__View__LineType
 ///
 int32_t k_texteditor__view_last_displayed_line1(void* self, int32_t lineType);
+
+/// Inherited from QWidget
+///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KTextEditor__View*
+///
+QPaintDevice* k_texteditor__view_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KTextEditor__View object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KTextEditor__View* k_texteditor__view_from_q_paint_device(void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///

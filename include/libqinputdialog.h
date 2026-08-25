@@ -1077,6 +1077,22 @@ void q_inputdialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QInputDialog*
+///
+QPaintDevice* q_inputdialog_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QInputDialog object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QInputDialog* q_inputdialog_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QInputDialog*

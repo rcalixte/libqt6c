@@ -389,6 +389,22 @@ void k_sonnet__dialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self Sonnet__Dialog*
+///
+QPaintDevice* k_sonnet__dialog_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a Sonnet__Dialog object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+Sonnet__Dialog* k_sonnet__dialog_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self Sonnet__Dialog*

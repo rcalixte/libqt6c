@@ -2578,6 +2578,22 @@ void q_headerview_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QHeaderView*
+///
+QPaintDevice* q_headerview_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QHeaderView object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QHeaderView* q_headerview_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QHeaderView*

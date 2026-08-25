@@ -723,6 +723,22 @@ void q_scrollbar_on_action_triggered(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QScrollBar*
+///
+QPaintDevice* q_scrollbar_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QScrollBar object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QScrollBar* q_scrollbar_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QScrollBar*

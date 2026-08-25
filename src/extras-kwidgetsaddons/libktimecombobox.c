@@ -523,9 +523,8 @@ void k_timecombobox_add_items(void* self, const char* texts[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_timecombobox_add_items\n");
         abort();
     }
-    for (size_t i = 0; i < texts_len; ++i) {
+    for (size_t i = 0; i < texts_len; ++i)
         texts_qstr[i] = qstring(texts[i]);
-    }
     libqt_list texts_list = qlist(texts_qstr, texts_len);
     QComboBox_AddItems((QComboBox*)self, texts_list);
     free(texts_qstr);
@@ -546,9 +545,8 @@ void k_timecombobox_insert_items(void* self, int index, const char* texts[static
         fprintf(stderr, "Failed to allocate memory for string list in k_timecombobox_insert_items\n");
         abort();
     }
-    for (size_t i = 0; i < texts_len; ++i) {
+    for (size_t i = 0; i < texts_len; ++i)
         texts_qstr[i] = qstring(texts[i]);
-    }
     libqt_list texts_list = qlist(texts_qstr, texts_len);
     QComboBox_InsertItems((QComboBox*)self, index, texts_list);
     free(texts_qstr);
@@ -700,6 +698,14 @@ void k_timecombobox_insert_item4(void* self, int index, void* icon, const char* 
 
 void k_timecombobox_set_item_data3(void* self, int index, void* value, int role) {
     QComboBox_SetItemData3((QComboBox*)self, index, (QVariant*)value, role);
+}
+
+QPaintDevice* k_timecombobox_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+KTimeComboBox* k_timecombobox_from_q_paint_device(void* _qpaintdevice) {
+    return (KTimeComboBox*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t k_timecombobox_win_id(void* self) {
@@ -1950,11 +1956,9 @@ const char** k_timecombobox_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -2032,47 +2036,47 @@ void k_timecombobox_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 bool k_timecombobox_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_timecombobox_as_q_paint_device(self));
 }
 
 int32_t k_timecombobox_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_timecombobox_as_q_paint_device(self));
 }
 
 int32_t k_timecombobox_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_timecombobox_as_q_paint_device(self));
 }
 
 int32_t k_timecombobox_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_timecombobox_as_q_paint_device(self));
 }
 
 int32_t k_timecombobox_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_timecombobox_as_q_paint_device(self));
 }
 
 int32_t k_timecombobox_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_timecombobox_as_q_paint_device(self));
 }
 
 int32_t k_timecombobox_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_timecombobox_as_q_paint_device(self));
 }
 
 double k_timecombobox_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_timecombobox_as_q_paint_device(self));
 }
 
 double k_timecombobox_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_timecombobox_as_q_paint_device(self));
 }
 
 int32_t k_timecombobox_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_timecombobox_as_q_paint_device(self));
 }
 
 int32_t k_timecombobox_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_timecombobox_as_q_paint_device(self));
 }
 
 double k_timecombobox_device_pixel_ratio_f_scale() {

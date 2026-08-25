@@ -602,11 +602,9 @@ const char** q_locale_ui_languages(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -734,9 +732,8 @@ const char* q_locale_create_separated_list(void* self, const char* strl[static 1
         fprintf(stderr, "Failed to allocate memory for string list in q_locale_create_separated_list\n");
         abort();
     }
-    for (size_t i = 0; i < strl_len; ++i) {
+    for (size_t i = 0; i < strl_len; ++i)
         strl_qstr[i] = qstring(strl[i]);
-    }
     libqt_list strl_list = qlist(strl_qstr, strl_len);
     libqt_string _str = QLocale_CreateSeparatedList((QLocale*)self, strl_list);
     free(strl_qstr);
@@ -1082,11 +1079,9 @@ const char** q_locale_ui_languages1(void* self, int8_t separator) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

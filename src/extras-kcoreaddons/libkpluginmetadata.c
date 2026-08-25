@@ -170,11 +170,9 @@ const char** k_pluginmetadata_mime_types(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -193,11 +191,9 @@ const char** k_pluginmetadata_form_factors(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -243,9 +239,8 @@ const char** k_pluginmetadata_value7(void* self, const char* key, const char* de
         fprintf(stderr, "Failed to allocate memory for string list in k_pluginmetadata_value7\n");
         abort();
     }
-    for (size_t i = 0; i < defaultValue_len; ++i) {
+    for (size_t i = 0; i < defaultValue_len; ++i)
         defaultValue_qstr[i] = qstring(defaultValue[i]);
-    }
     libqt_list defaultValue_list = qlist(defaultValue_qstr, defaultValue_len);
     libqt_list _arr = KPluginMetaData_Value7((KPluginMetaData*)self, qstring(key), defaultValue_list);
     free(defaultValue_qstr);
@@ -257,11 +252,9 @@ const char** k_pluginmetadata_value7(void* self, const char* key, const char* de
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -273,9 +266,8 @@ const char** k_pluginmetadata_value8(void* self, const char* key, const char* de
         fprintf(stderr, "Failed to allocate memory for string list in k_pluginmetadata_value8\n");
         abort();
     }
-    for (size_t i = 0; i < defaultValue_len; ++i) {
+    for (size_t i = 0; i < defaultValue_len; ++i)
         defaultValue_qstr[i] = qstring(defaultValue[i]);
-    }
     libqt_list defaultValue_list = qlist(defaultValue_qstr, defaultValue_len);
     libqt_list _arr = KPluginMetaData_Value8((KPluginMetaData*)self, qstring(key), defaultValue_list);
     free(defaultValue_qstr);
@@ -287,11 +279,9 @@ const char** k_pluginmetadata_value8(void* self, const char* key, const char* de
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

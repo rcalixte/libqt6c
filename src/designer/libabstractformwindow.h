@@ -657,6 +657,22 @@ void q_designerformwindowinterface_activate_resource_file_paths2(void* self, con
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QDesignerFormWindowInterface*
+///
+QPaintDevice* q_designerformwindowinterface_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QDesignerFormWindowInterface object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QDesignerFormWindowInterface* q_designerformwindowinterface_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// @param self QDesignerFormWindowInterface*

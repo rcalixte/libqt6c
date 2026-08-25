@@ -779,9 +779,8 @@ void KTextEditor__Document_ReadSessionConfig(KTextEditor__Document* self, const 
     QSet<QString> flags_set;
     flags_set.reserve(flags.len);
     const char** flags_strarr = static_cast<const char**>(flags.data.ptr);
-    for (size_t i = 0; i < flags.len; ++i) {
+    for (size_t i = 0; i < flags.len; ++i)
         flags_set.insert(QString::fromUtf8(flags_strarr[i]));
-    }
     self->readSessionConfig(*config, flags_set);
 }
 
@@ -790,9 +789,8 @@ void KTextEditor__Document_WriteSessionConfig(KTextEditor__Document* self, KConf
     QSet<QString> flags_set;
     flags_set.reserve(flags.len);
     const char** flags_strarr = static_cast<const char**>(flags.data.ptr);
-    for (size_t i = 0; i < flags.len; ++i) {
+    for (size_t i = 0; i < flags.len; ++i)
         flags_set.insert(QString::fromUtf8(flags_strarr[i]));
-    }
     self->writeSessionConfig(*config, flags_set);
 }
 

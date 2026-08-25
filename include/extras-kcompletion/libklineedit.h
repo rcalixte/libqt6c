@@ -39,6 +39,18 @@ KLineEdit* k_lineedit_new3();
 ///
 KLineEdit* k_lineedit_new4(const char* string, void* parent);
 
+/// Upcasts to a KCompletionBase object
+///
+/// @param self KLineEdit*
+///
+KCompletionBase* k_lineedit_as_k_completion_base(void* self);
+
+/// Downcasts to a KLineEdit object
+///
+/// @param _kcompletionbase KCompletionBase*
+///
+KLineEdit* k_lineedit_from_k_completion_base(void* _kcompletionbase);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KLineEdit*
@@ -1576,6 +1588,22 @@ void k_lineedit_cursor_forward2(void* self, bool mark, int steps);
 /// @param steps int
 ///
 void k_lineedit_cursor_backward2(void* self, bool mark, int steps);
+
+/// Inherited from QWidget
+///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KLineEdit*
+///
+QPaintDevice* k_lineedit_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KLineEdit object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KLineEdit* k_lineedit_from_q_paint_device(void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -6379,9 +6407,8 @@ void k_lineedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, in
 /// // Example for freeing the returned map of type:
 /// // libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence*
 /// for (size_t i = 0; i < map.len; ++i) {
-///     for (size_t j = 0; ((QKeySequence**)map.values)[i][j] != NULL; j++) {
+///     for (size_t j = 0; ((QKeySequence**)map.values)[i][j] != NULL; j++)
 ///         free(((QKeySequence**)map.values)[i][j]);
-///     }
 ///     free(((QKeySequence*)map.values)[i]);
 /// }
 /// free(map.keys);
@@ -6405,9 +6432,8 @@ libqt_map k_lineedit_key_binding_map(void* self);
 /// // Example for freeing the returned map of type:
 /// // libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence*
 /// for (size_t i = 0; i < map.len; ++i) {
-///     for (size_t j = 0; ((QKeySequence**)map.values)[i][j] != NULL; j++) {
+///     for (size_t j = 0; ((QKeySequence**)map.values)[i][j] != NULL; j++)
 ///         free(((QKeySequence**)map.values)[i][j]);
-///     }
 ///     free(((QKeySequence*)map.values)[i]);
 /// }
 /// free(map.keys);

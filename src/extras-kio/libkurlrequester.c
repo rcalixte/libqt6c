@@ -121,9 +121,8 @@ void k_urlrequester_set_name_filters(void* self, const char* filters[static 1]) 
         fprintf(stderr, "Failed to allocate memory for string list in k_urlrequester_set_name_filters\n");
         abort();
     }
-    for (size_t i = 0; i < filters_len; ++i) {
+    for (size_t i = 0; i < filters_len; ++i)
         filters_qstr[i] = qstring(filters[i]);
-    }
     libqt_list filters_list = qlist(filters_qstr, filters_len);
     KUrlRequester_SetNameFilters((KUrlRequester*)self, filters_list);
     free(filters_qstr);
@@ -143,11 +142,9 @@ const char** k_urlrequester_name_filters(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -159,9 +156,8 @@ void k_urlrequester_set_mime_type_filters(void* self, const char* mimeTypes[stat
         fprintf(stderr, "Failed to allocate memory for string list in k_urlrequester_set_mime_type_filters\n");
         abort();
     }
-    for (size_t i = 0; i < mimeTypes_len; ++i) {
+    for (size_t i = 0; i < mimeTypes_len; ++i)
         mimeTypes_qstr[i] = qstring(mimeTypes[i]);
-    }
     libqt_list mimeTypes_list = qlist(mimeTypes_qstr, mimeTypes_len);
     KUrlRequester_SetMimeTypeFilters((KUrlRequester*)self, mimeTypes_list);
     free(mimeTypes_qstr);
@@ -177,11 +173,9 @@ const char** k_urlrequester_mime_type_filters(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -329,6 +323,14 @@ const char* k_urlrequester_tr3(const char* s, const char* c, int n) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+QPaintDevice* k_urlrequester_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+KUrlRequester* k_urlrequester_from_q_paint_device(void* _qpaintdevice) {
+    return (KUrlRequester*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t k_urlrequester_win_id(void* self) {
@@ -1579,11 +1581,9 @@ const char** k_urlrequester_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1661,47 +1661,47 @@ void k_urlrequester_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 bool k_urlrequester_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_urlrequester_as_q_paint_device(self));
 }
 
 int32_t k_urlrequester_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_urlrequester_as_q_paint_device(self));
 }
 
 int32_t k_urlrequester_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_urlrequester_as_q_paint_device(self));
 }
 
 int32_t k_urlrequester_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_urlrequester_as_q_paint_device(self));
 }
 
 int32_t k_urlrequester_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_urlrequester_as_q_paint_device(self));
 }
 
 int32_t k_urlrequester_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_urlrequester_as_q_paint_device(self));
 }
 
 int32_t k_urlrequester_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_urlrequester_as_q_paint_device(self));
 }
 
 double k_urlrequester_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_urlrequester_as_q_paint_device(self));
 }
 
 double k_urlrequester_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_urlrequester_as_q_paint_device(self));
 }
 
 int32_t k_urlrequester_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_urlrequester_as_q_paint_device(self));
 }
 
 int32_t k_urlrequester_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_urlrequester_as_q_paint_device(self));
 }
 
 double k_urlrequester_device_pixel_ratio_f_scale() {
@@ -2483,9 +2483,8 @@ void k_urlcomborequester_set_name_filters(void* self, const char* filters[static
         fprintf(stderr, "Failed to allocate memory for string list in k_urlcomborequester_set_name_filters\n");
         abort();
     }
-    for (size_t i = 0; i < filters_len; ++i) {
+    for (size_t i = 0; i < filters_len; ++i)
         filters_qstr[i] = qstring(filters[i]);
-    }
     libqt_list filters_list = qlist(filters_qstr, filters_len);
     KUrlRequester_SetNameFilters((KUrlRequester*)self, filters_list);
     free(filters_qstr);
@@ -2505,11 +2504,9 @@ const char** k_urlcomborequester_name_filters(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -2521,9 +2518,8 @@ void k_urlcomborequester_set_mime_type_filters(void* self, const char* mimeTypes
         fprintf(stderr, "Failed to allocate memory for string list in k_urlcomborequester_set_mime_type_filters\n");
         abort();
     }
-    for (size_t i = 0; i < mimeTypes_len; ++i) {
+    for (size_t i = 0; i < mimeTypes_len; ++i)
         mimeTypes_qstr[i] = qstring(mimeTypes[i]);
-    }
     libqt_list mimeTypes_list = qlist(mimeTypes_qstr, mimeTypes_len);
     KUrlRequester_SetMimeTypeFilters((KUrlRequester*)self, mimeTypes_list);
     free(mimeTypes_qstr);
@@ -2539,11 +2535,9 @@ const char** k_urlcomborequester_mime_type_filters(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -2641,6 +2635,14 @@ void k_urlcomborequester_url_selected(void* self, void* param1) {
 
 void k_urlcomborequester_on_url_selected(void* self, void (*callback)(void*, void*)) {
     KUrlRequester_Connect_UrlSelected((KUrlRequester*)self, (intptr_t)callback);
+}
+
+QPaintDevice* k_urlcomborequester_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+KUrlComboRequester* k_urlcomborequester_from_q_paint_device(void* _qpaintdevice) {
+    return (KUrlComboRequester*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t k_urlcomborequester_win_id(void* self) {
@@ -3891,11 +3893,9 @@ const char** k_urlcomborequester_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -3973,47 +3973,47 @@ void k_urlcomborequester_on_destroyed1(void* self, void (*callback)(void*, void*
 }
 
 bool k_urlcomborequester_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_urlcomborequester_as_q_paint_device(self));
 }
 
 int32_t k_urlcomborequester_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_urlcomborequester_as_q_paint_device(self));
 }
 
 int32_t k_urlcomborequester_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_urlcomborequester_as_q_paint_device(self));
 }
 
 int32_t k_urlcomborequester_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_urlcomborequester_as_q_paint_device(self));
 }
 
 int32_t k_urlcomborequester_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_urlcomborequester_as_q_paint_device(self));
 }
 
 int32_t k_urlcomborequester_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_urlcomborequester_as_q_paint_device(self));
 }
 
 int32_t k_urlcomborequester_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_urlcomborequester_as_q_paint_device(self));
 }
 
 double k_urlcomborequester_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_urlcomborequester_as_q_paint_device(self));
 }
 
 double k_urlcomborequester_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_urlcomborequester_as_q_paint_device(self));
 }
 
 int32_t k_urlcomborequester_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_urlcomborequester_as_q_paint_device(self));
 }
 
 int32_t k_urlcomborequester_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_urlcomborequester_as_q_paint_device(self));
 }
 
 double k_urlcomborequester_device_pixel_ratio_f_scale() {

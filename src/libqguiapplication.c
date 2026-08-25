@@ -458,11 +458,9 @@ const char** q_guiapplication_arguments() {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -604,9 +602,8 @@ void q_guiapplication_set_library_paths(const char* libraryPaths[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_guiapplication_set_library_paths\n");
         abort();
     }
-    for (size_t i = 0; i < libraryPaths_len; ++i) {
+    for (size_t i = 0; i < libraryPaths_len; ++i)
         libraryPaths_qstr[i] = qstring(libraryPaths[i]);
-    }
     libqt_list libraryPaths_list = qlist(libraryPaths_qstr, libraryPaths_len);
     QCoreApplication_SetLibraryPaths(libraryPaths_list);
     free(libraryPaths_qstr);
@@ -622,11 +619,9 @@ const char** q_guiapplication_library_paths() {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -890,11 +885,9 @@ const char** q_guiapplication_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

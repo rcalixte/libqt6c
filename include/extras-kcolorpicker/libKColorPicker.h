@@ -622,6 +622,22 @@ void k_colorpicker__kcolorpicker_on_clicked1(void* self, void (*callback)(void*,
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self kColorPicker__KColorPicker*
+///
+QPaintDevice* k_colorpicker__kcolorpicker_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a kColorPicker__KColorPicker object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+kColorPicker__KColorPicker* k_colorpicker__kcolorpicker_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self kColorPicker__KColorPicker*

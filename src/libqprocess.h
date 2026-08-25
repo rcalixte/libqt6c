@@ -959,6 +959,14 @@ void q_process_on_finished2(void* self, void (*callback)(void*, int, int32_t));
 
 /// Inherited from QIODevice
 ///
+/// Upcasts to a QIODeviceBase object
+///
+/// @param self QProcess*
+///
+QIODeviceBase* q_process_as_q_i_o_device_base(void* self);
+
+/// Inherited from QIODevice
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#openMode)
 ///
 /// @param self QProcess*

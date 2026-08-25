@@ -19,6 +19,14 @@ KBookmarkActionMenu* k_bookmarkactionmenu_new2(void* bm, const char* text, void*
     return KBookmarkActionMenu_New2((KBookmark*)bm, qstring(text), (QObject*)parent);
 }
 
+KBookmarkActionInterface* k_bookmarkactionmenu_as_k_bookmark_action_interface(void* self) {
+    return KBookmarkActionMenu_AsKBookmarkActionInterface((KBookmarkActionMenu*)self);
+}
+
+KBookmarkActionMenu* k_bookmarkactionmenu_from_k_bookmark_action_interface(void* _kbookmarkactioninterface) {
+    return (KBookmarkActionMenu*)KBookmarkActionMenu_FromKBookmarkActionInterface((KBookmarkActionInterface*)_kbookmarkactioninterface);
+}
+
 const QMetaObject* k_bookmarkactionmenu_meta_object(void* self) {
     return KBookmarkActionMenu_MetaObject((KBookmarkActionMenu*)self);
 }
@@ -547,11 +555,9 @@ const char** k_bookmarkactionmenu_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -629,7 +635,7 @@ void k_bookmarkactionmenu_on_destroyed1(void* self, void (*callback)(void*, void
 }
 
 const KBookmark* k_bookmarkactionmenu_bookmark(void* self) {
-    return KBookmarkActionInterface_Bookmark((KBookmarkActionInterface*)self);
+    return KBookmarkActionInterface_Bookmark(k_bookmarkactionmenu_as_k_bookmark_action_interface(self));
 }
 
 QWidget* k_bookmarkactionmenu_create_widget(void* self, void* parent) {

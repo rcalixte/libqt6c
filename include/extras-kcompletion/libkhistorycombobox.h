@@ -300,6 +300,22 @@ const char* k_historycombobox_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KComboBox
 ///
+/// Upcasts to a KCompletionBase object
+///
+/// @param self KHistoryComboBox*
+///
+KCompletionBase* k_historycombobox_as_k_completion_base(void* self);
+
+/// Inherited from KComboBox
+///
+/// Downcasts to a KHistoryComboBox object
+///
+/// @param _kcompletionbase KCompletionBase*
+///
+KHistoryComboBox* k_historycombobox_from_k_completion_base(void* _kcompletionbase);
+
+/// Inherited from KComboBox
+///
 /// [Upstream resources](https://api.kde.org/kcombobox.html#setEditUrl)
 ///
 /// @param self KHistoryComboBox*
@@ -1345,6 +1361,22 @@ void k_historycombobox_insert_item4(void* self, int index, void* icon, const cha
 /// @param role int
 ///
 void k_historycombobox_set_item_data3(void* self, int index, void* value, int role);
+
+/// Inherited from QWidget
+///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KHistoryComboBox*
+///
+QPaintDevice* k_historycombobox_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KHistoryComboBox object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KHistoryComboBox* k_historycombobox_from_q_paint_device(void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -6661,9 +6693,8 @@ void k_historycombobox_on_get_decoded_metric_f(void* self, double (*callback)(vo
 /// // Example for freeing the returned map of type:
 /// // libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence*
 /// for (size_t i = 0; i < map.len; ++i) {
-///     for (size_t j = 0; ((QKeySequence**)map.values)[i][j] != NULL; j++) {
+///     for (size_t j = 0; ((QKeySequence**)map.values)[i][j] != NULL; j++)
 ///         free(((QKeySequence**)map.values)[i][j]);
-///     }
 ///     free(((QKeySequence*)map.values)[i]);
 /// }
 /// free(map.keys);
@@ -6687,9 +6718,8 @@ libqt_map k_historycombobox_key_binding_map(void* self);
 /// // Example for freeing the returned map of type:
 /// // libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence*
 /// for (size_t i = 0; i < map.len; ++i) {
-///     for (size_t j = 0; ((QKeySequence**)map.values)[i][j] != NULL; j++) {
+///     for (size_t j = 0; ((QKeySequence**)map.values)[i][j] != NULL; j++)
 ///         free(((QKeySequence**)map.values)[i][j]);
-///     }
 ///     free(((QKeySequence*)map.values)[i]);
 /// }
 /// free(map.keys);

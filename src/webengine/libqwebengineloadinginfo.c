@@ -62,9 +62,8 @@ libqt_map /* of char* to char** */ q_webengineloadinginfo_response_headers(void*
         if (_ret_keys[i] == NULL) {
             for (size_t j = 0; j < i; j++) {
                 libqt_free(_ret_keys[j]);
-                for (size_t k = 0; k < ((libqt_list*)_out.values)[j].len; k++) {
+                for (size_t k = 0; k < ((libqt_list*)_out.values)[j].len; k++)
                     free(_ret_values[j][k]);
-                }
                 free(_ret_values[j]);
             }
             free(_ret_keys);
@@ -79,9 +78,8 @@ libqt_map /* of char* to char** */ q_webengineloadinginfo_response_headers(void*
         if (_ret_values[i] == NULL) {
             for (size_t j = 0; j < i; j++) {
                 libqt_free(_ret_keys[j]);
-                for (size_t k = 0; k < ((libqt_list*)_out.values)[j].len; k++) {
+                for (size_t k = 0; k < ((libqt_list*)_out.values)[j].len; k++)
                     libqt_free(_ret_values[j][k]);
-                }
                 libqt_free(_ret_values[j]);
             }
             free(_ret_keys);
@@ -96,14 +94,12 @@ libqt_map /* of char* to char** */ q_webengineloadinginfo_response_headers(void*
         for (j = 0; j < _value_list.len; j++) {
             _ret_values[i][j] = (char*)malloc(_value_str[j].len + 1);
             if (_ret_values[i][j] == NULL) {
-                for (size_t k = 0; k < j; k++) {
+                for (size_t k = 0; k < j; k++)
                     free(_ret_values[i][k]);
-                }
                 for (size_t k = 0; k < i; k++) {
                     free(_ret_keys[k]);
-                    for (size_t l = 0; l < ((libqt_list*)_out.values)[k].len; l++) {
+                    for (size_t l = 0; l < ((libqt_list*)_out.values)[k].len; l++)
                         free(_ret_values[k][l]);
-                    }
                     free(_ret_values[k]);
                 }
                 free(_ret_keys);
@@ -121,9 +117,8 @@ libqt_map /* of char* to char** */ q_webengineloadinginfo_response_headers(void*
     for (size_t i = 0; i < _out.len; ++i) {
         libqt_free(_out_keys[i].data);
         libqt_string* _value_str = (libqt_string*)_out_values[i].data.ptr;
-        for (size_t j = 0; j < _out_values[i].len; j++) {
+        for (size_t j = 0; j < _out_values[i].len; j++)
             libqt_free(_value_str[j].data);
-        }
         free(_out_values[i].data.ptr);
     }
     free(_out.keys);

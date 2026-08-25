@@ -209,9 +209,8 @@ void k_nscore__entry_set_installed_files(void* self, const char* files[static 1]
         fprintf(stderr, "Failed to allocate memory for string list in k_nscore__entry_set_installed_files\n");
         abort();
     }
-    for (size_t i = 0; i < files_len; ++i) {
+    for (size_t i = 0; i < files_len; ++i)
         files_qstr[i] = qstring(files[i]);
-    }
     libqt_list files_list = qlist(files_qstr, files_len);
     KNSCore__Entry_SetInstalledFiles((KNSCore__Entry*)self, files_list);
     free(files_qstr);
@@ -227,11 +226,9 @@ const char** k_nscore__entry_installed_files(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -246,11 +243,9 @@ const char** k_nscore__entry_uninstalled_files(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -344,11 +339,9 @@ const char** k_nscore__entry_tags(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -360,9 +353,8 @@ void k_nscore__entry_set_tags(void* self, const char* tags[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_nscore__entry_set_tags\n");
         abort();
     }
-    for (size_t i = 0; i < tags_len; ++i) {
+    for (size_t i = 0; i < tags_len; ++i)
         tags_qstr[i] = qstring(tags[i]);
-    }
     libqt_list tags_list = qlist(tags_qstr, tags_len);
     KNSCore__Entry_SetTags((KNSCore__Entry*)self, tags_list);
     free(tags_qstr);
@@ -520,11 +512,9 @@ const char** k_nscore__entry__downloadlinkinformation_tags(void* self) {
     }
     for (size_t i = 0; i < tags_arr.len; ++i) {
         tags_ret[i] = qstring_to_char(tags_qstr[i]);
-    }
-    tags_ret[tags_arr.len] = NULL;
-    for (size_t i = 0; i < tags_arr.len; ++i) {
         libqt_string_free((libqt_string*)&tags_qstr[i]);
     }
+    tags_ret[tags_arr.len] = NULL;
     libqt_free(tags_arr.data.ptr);
     return tags_ret;
 }
@@ -536,9 +526,8 @@ void k_nscore__entry__downloadlinkinformation_set_tags(void* self, const char* t
         fprintf(stderr, "Failed to allocate memory for string list in k_nscore__entry__downloadlinkinformation_set_tags\n");
         abort();
     }
-    for (size_t i = 0; i < tags_len; ++i) {
+    for (size_t i = 0; i < tags_len; ++i)
         tags_qstr[i] = qstring(tags[i]);
-    }
     libqt_list tags_list = qlist(tags_qstr, tags_len);
     KNSCore__Entry__DownloadLinkInformation_SetTags((KNSCore__Entry__DownloadLinkInformation*)self, tags_list);
     free(tags_qstr);

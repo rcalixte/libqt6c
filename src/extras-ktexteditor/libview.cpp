@@ -29,6 +29,14 @@
 #include "libview.hpp"
 #include "libview.hxx"
 
+KXMLGUIClient* KTextEditor__View_AsKXMLGUIClient(KTextEditor__View* self) {
+    return static_cast<KXMLGUIClient*>(self);
+}
+
+KTextEditor__View* KTextEditor__View_FromKXMLGUIClient(KXMLGUIClient* _kxmlguiclient) {
+    return dynamic_cast<KTextEditor::View*>(static_cast<KXMLGUIClient*>(_kxmlguiclient));
+}
+
 QMetaObject* KTextEditor__View_MetaObject(const KTextEditor__View* self) {
     return (QMetaObject*)self->metaObject();
 }
@@ -452,9 +460,8 @@ void KTextEditor__View_ReadSessionConfig(KTextEditor__View* self, const KConfigG
     QSet<QString> flags_set;
     flags_set.reserve(flags.len);
     const char** flags_strarr = static_cast<const char**>(flags.data.ptr);
-    for (size_t i = 0; i < flags.len; ++i) {
+    for (size_t i = 0; i < flags.len; ++i)
         flags_set.insert(QString::fromUtf8(flags_strarr[i]));
-    }
     self->readSessionConfig(*config, flags_set);
 }
 
@@ -463,9 +470,8 @@ void KTextEditor__View_WriteSessionConfig(KTextEditor__View* self, KConfigGroup*
     QSet<QString> flags_set;
     flags_set.reserve(flags.len);
     const char** flags_strarr = static_cast<const char**>(flags.data.ptr);
-    for (size_t i = 0; i < flags.len; ++i) {
+    for (size_t i = 0; i < flags.len; ++i)
         flags_set.insert(QString::fromUtf8(flags_strarr[i]));
-    }
     self->writeSessionConfig(*config, flags_set);
 }
 

@@ -554,6 +554,10 @@ void q_abstractsocket_connect_to_host3(void* self, void* address, uint16_t port,
     QAbstractSocket_ConnectToHost3((QAbstractSocket*)self, (QHostAddress*)address, port, mode);
 }
 
+QIODeviceBase* q_abstractsocket_as_q_i_o_device_base(void* self) {
+    return QIODevice_AsQIODeviceBase((QIODevice*)self);
+}
+
 int32_t q_abstractsocket_open_mode(void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
@@ -878,11 +882,9 @@ const char** q_abstractsocket_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

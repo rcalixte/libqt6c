@@ -16,9 +16,8 @@ KIconEngine* k_iconengine_new(const char* iconName, void* iconLoader, const char
         fprintf(stderr, "Failed to allocate memory for string list in k_iconengine_new\n");
         abort();
     }
-    for (size_t i = 0; i < overlays_len; ++i) {
+    for (size_t i = 0; i < overlays_len; ++i)
         overlays_qstr[i] = qstring(overlays[i]);
-    }
     libqt_list overlays_list = qlist(overlays_qstr, overlays_len);
 
     KIconEngine* _out = KIconEngine_New(qstring(iconName), (KIconLoader*)iconLoader, overlays_list);
@@ -41,9 +40,8 @@ KIconEngine* k_iconengine_new4(const char* iconName, void* colors, void* iconLoa
         fprintf(stderr, "Failed to allocate memory for string list in k_iconengine_new4\n");
         abort();
     }
-    for (size_t i = 0; i < overlays_len; ++i) {
+    for (size_t i = 0; i < overlays_len; ++i)
         overlays_qstr[i] = qstring(overlays[i]);
-    }
     libqt_list overlays_list = qlist(overlays_qstr, overlays_len);
 
     KIconEngine* _out = KIconEngine_New4(qstring(iconName), (KIconColors*)colors, (KIconLoader*)iconLoader, overlays_list);

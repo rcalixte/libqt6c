@@ -63,6 +63,8 @@ QTermWidget* QTermWidget_New(QWidget* parent);
 QTermWidget* QTermWidget_New2(int startnow);
 QTermWidget* QTermWidget_New3();
 QTermWidget* QTermWidget_New4(int startnow, QWidget* parent);
+QTermWidgetInterface* QTermWidget_AsQTermWidgetInterface(QTermWidget* self);
+QTermWidget* QTermWidget_FromQTermWidgetInterface(QTermWidgetInterface* _qtermwidgetinterface);
 QMetaObject* QTermWidget_MetaObject(const QTermWidget* self);
 void* QTermWidget_Metacast(QTermWidget* self, const char* param1);
 int QTermWidget_Metacall(QTermWidget* self, int param1, int param2, void** param3);

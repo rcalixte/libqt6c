@@ -498,6 +498,22 @@ const char* q_openglwidget_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QOpenGLWidget*
+///
+QPaintDevice* q_openglwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QOpenGLWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QOpenGLWidget* q_openglwidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QOpenGLWidget*

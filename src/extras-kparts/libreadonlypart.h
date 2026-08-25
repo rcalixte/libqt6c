@@ -446,6 +446,22 @@ const char* k_parts__readonlypart_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KParts::Part
 ///
+/// Upcasts to a KParts::PartBase object
+///
+/// @param self KParts__ReadOnlyPart*
+///
+KParts__PartBase* k_parts__readonlypart_as_k_parts___part_base(void* self);
+
+/// Inherited from KParts::Part
+///
+/// Downcasts to a KParts__ReadOnlyPart object
+///
+/// @param _kparts__partbase KParts__PartBase*
+///
+KParts__ReadOnlyPart* k_parts__readonlypart_from_k_parts___part_base(void* _kparts__partbase);
+
+/// Inherited from KParts::Part
+///
 /// [Upstream resources](https://api.kde.org/kparts-part.html#manager)
 ///
 /// @param self KParts__ReadOnlyPart*

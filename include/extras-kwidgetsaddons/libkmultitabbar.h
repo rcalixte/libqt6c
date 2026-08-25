@@ -337,6 +337,22 @@ int32_t k_multitabbar_append_tab3(void* self, void* icon, int id, const char* te
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KMultiTabBar*
+///
+QPaintDevice* k_multitabbar_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KMultiTabBar object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KMultiTabBar* k_multitabbar_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KMultiTabBar*
@@ -5588,6 +5604,22 @@ void k_multitabbarbutton_on_clicked1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KMultiTabBarButton*
+///
+QPaintDevice* k_multitabbarbutton_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KMultiTabBarButton object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KMultiTabBarButton* k_multitabbarbutton_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// @param self KMultiTabBarButton*
@@ -9095,6 +9127,22 @@ void k_multitabbartab_clicked1(void* self, bool checked);
 /// @param callback void func(KMultiTabBarTab* self, bool checked)
 ///
 void k_multitabbartab_on_clicked1(void* self, void (*callback)(void*, bool));
+
+/// Inherited from QWidget
+///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KMultiTabBarTab*
+///
+QPaintDevice* k_multitabbartab_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KMultiTabBarTab object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KMultiTabBarTab* k_multitabbartab_from_q_paint_device(void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///

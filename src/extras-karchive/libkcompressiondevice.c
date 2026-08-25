@@ -185,6 +185,10 @@ const char* k_compressiondevice_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
+QIODeviceBase* k_compressiondevice_as_q_i_o_device_base(void* self) {
+    return QIODevice_AsQIODeviceBase((QIODevice*)self);
+}
+
 int32_t k_compressiondevice_open_mode(void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
@@ -509,11 +513,9 @@ const char** k_compressiondevice_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

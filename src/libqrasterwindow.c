@@ -116,6 +116,14 @@ const char* q_rasterwindow_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
+QPaintDevice* q_rasterwindow_as_q_paint_device(void* self) {
+    return QPaintDeviceWindow_AsQPaintDevice((QPaintDeviceWindow*)self);
+}
+
+QRasterWindow* q_rasterwindow_from_q_paint_device(void* _qpaintdevice) {
+    return (QRasterWindow*)QPaintDeviceWindow_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
+}
+
 void q_rasterwindow_update(void* self, void* rect) {
     QPaintDeviceWindow_Update((QPaintDeviceWindow*)self, (QRect*)rect);
 }
@@ -126,6 +134,14 @@ void q_rasterwindow_update2(void* self, void* region) {
 
 void q_rasterwindow_update3(void* self) {
     QPaintDeviceWindow_Update3((QPaintDeviceWindow*)self);
+}
+
+QSurface* q_rasterwindow_as_q_surface(void* self) {
+    return QWindow_AsQSurface((QWindow*)self);
+}
+
+QRasterWindow* q_rasterwindow_from_q_surface(void* _qsurface) {
+    return (QRasterWindow*)QWindow_FromQSurface((QSurface*)_qsurface);
 }
 
 void q_rasterwindow_set_surface_type(void* self, int32_t surfaceType) {
@@ -840,11 +856,9 @@ const char** q_rasterwindow_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -918,55 +932,55 @@ void q_rasterwindow_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 int32_t q_rasterwindow_surface_class(void* self) {
-    return QSurface_SurfaceClass((QSurface*)self);
+    return QSurface_SurfaceClass(q_rasterwindow_as_q_surface(self));
 }
 
 bool q_rasterwindow_supports_open_g_l(void* self) {
-    return QSurface_SupportsOpenGL((QSurface*)self);
+    return QSurface_SupportsOpenGL(q_rasterwindow_as_q_surface(self));
 }
 
 bool q_rasterwindow_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(q_rasterwindow_as_q_paint_device(self));
 }
 
 QPaintEngine* q_rasterwindow_paint_engine(void* self) {
-    return QPaintDevice_PaintEngine((QPaintDevice*)self);
+    return QPaintDevice_PaintEngine(q_rasterwindow_as_q_paint_device(self));
 }
 
 int32_t q_rasterwindow_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(q_rasterwindow_as_q_paint_device(self));
 }
 
 int32_t q_rasterwindow_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(q_rasterwindow_as_q_paint_device(self));
 }
 
 int32_t q_rasterwindow_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(q_rasterwindow_as_q_paint_device(self));
 }
 
 int32_t q_rasterwindow_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(q_rasterwindow_as_q_paint_device(self));
 }
 
 int32_t q_rasterwindow_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(q_rasterwindow_as_q_paint_device(self));
 }
 
 int32_t q_rasterwindow_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(q_rasterwindow_as_q_paint_device(self));
 }
 
 double q_rasterwindow_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(q_rasterwindow_as_q_paint_device(self));
 }
 
 int32_t q_rasterwindow_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(q_rasterwindow_as_q_paint_device(self));
 }
 
 int32_t q_rasterwindow_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(q_rasterwindow_as_q_paint_device(self));
 }
 
 double q_rasterwindow_device_pixel_ratio_f_scale() {

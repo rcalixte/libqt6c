@@ -594,6 +594,22 @@ void k_messagewidget_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KMessageWidget*
+///
+QPaintDevice* k_messagewidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KMessageWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KMessageWidget* k_messagewidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KMessageWidget*

@@ -415,6 +415,14 @@ const char* q_formlayout_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
+QLayoutItem* q_formlayout_as_q_layout_item(void* self) {
+    return QLayout_AsQLayoutItem((QLayout*)self);
+}
+
+QFormLayout* q_formlayout_from_q_layout_item(void* _qlayoutitem) {
+    return (QFormLayout*)QLayout_FromQLayoutItem((QLayoutItem*)_qlayoutitem);
+}
+
 void q_formlayout_set_contents_margins(void* self, int left, int top, int right, int bottom) {
     QLayout_SetContentsMargins((QLayout*)self, left, top, right, bottom);
 }
@@ -661,11 +669,9 @@ const char** q_formlayout_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -743,7 +749,7 @@ void q_formlayout_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 int32_t q_formlayout_alignment(void* self) {
-    return QLayoutItem_Alignment((QLayoutItem*)self);
+    return QLayoutItem_Alignment(q_formlayout_as_q_layout_item(self));
 }
 
 QRect* q_formlayout_geometry(void* self) {

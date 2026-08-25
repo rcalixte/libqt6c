@@ -24,6 +24,18 @@ QPdfWriter* q_pdfwriter_new(const char* filename);
 ///
 QPdfWriter* q_pdfwriter_new2(void* device);
 
+/// Upcasts to a QPagedPaintDevice object
+///
+/// @param self QPdfWriter*
+///
+QPagedPaintDevice* q_pdfwriter_as_q_paged_paint_device(void* self);
+
+/// Downcasts to a QPdfWriter object
+///
+/// @param _qpagedpaintdevice QPagedPaintDevice*
+///
+QPdfWriter* q_pdfwriter_from_q_paged_paint_device(void* _qpagedpaintdevice);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QPdfWriter*

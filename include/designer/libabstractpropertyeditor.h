@@ -307,6 +307,22 @@ const char* q_designerpropertyeditorinterface_tr3(const char* s, const char* c, 
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QDesignerPropertyEditorInterface*
+///
+QPaintDevice* q_designerpropertyeditorinterface_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QDesignerPropertyEditorInterface object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QDesignerPropertyEditorInterface* q_designerpropertyeditorinterface_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QDesignerPropertyEditorInterface*

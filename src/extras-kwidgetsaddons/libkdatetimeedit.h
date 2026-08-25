@@ -822,6 +822,22 @@ void k_datetimeedit_set_time_list3(void* self, libqt_list timeList, const char* 
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KDateTimeEdit*
+///
+QPaintDevice* k_datetimeedit_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KDateTimeEdit object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KDateTimeEdit* k_datetimeedit_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KDateTimeEdit*

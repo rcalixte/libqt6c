@@ -75,9 +75,8 @@ void k_fileitemactions_insert_open_with_actions_to(void* self, void* before, voi
         fprintf(stderr, "Failed to allocate memory for string list in k_fileitemactions_insert_open_with_actions_to\n");
         abort();
     }
-    for (size_t i = 0; i < excludedDesktopEntryNames_len; ++i) {
+    for (size_t i = 0; i < excludedDesktopEntryNames_len; ++i)
         excludedDesktopEntryNames_qstr[i] = qstring(excludedDesktopEntryNames[i]);
-    }
     libqt_list excludedDesktopEntryNames_list = qlist(excludedDesktopEntryNames_qstr, excludedDesktopEntryNames_len);
     KFileItemActions_InsertOpenWithActionsTo((KFileItemActions*)self, (QAction*)before, (QMenu*)topMenu, excludedDesktopEntryNames_list);
     free(excludedDesktopEntryNames_qstr);
@@ -136,9 +135,8 @@ void k_fileitemactions_add_actions_to4(void* self, void* menu, int32_t sources, 
         fprintf(stderr, "Failed to allocate memory for string list in k_fileitemactions_add_actions_to4\n");
         abort();
     }
-    for (size_t i = 0; i < excludeList_len; ++i) {
+    for (size_t i = 0; i < excludeList_len; ++i)
         excludeList_qstr[i] = qstring(excludeList[i]);
-    }
     libqt_list excludeList_list = qlist(excludeList_qstr, excludeList_len);
     KFileItemActions_AddActionsTo4((KFileItemActions*)self, (QMenu*)menu, sources, additionalActions, excludeList_list);
     free(excludeList_qstr);
@@ -274,11 +272,9 @@ const char** k_fileitemactions_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

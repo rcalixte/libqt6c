@@ -487,6 +487,22 @@ const char* k_textcustomeditor__texteditfindbarbase_tr3(const char* s, const cha
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextCustomEditor__TextEditFindBarBase*
+///
+QPaintDevice* k_textcustomeditor__texteditfindbarbase_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextCustomEditor__TextEditFindBarBase object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextCustomEditor__TextEditFindBarBase* k_textcustomeditor__texteditfindbarbase_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self TextCustomEditor__TextEditFindBarBase*

@@ -18,6 +18,18 @@
 ///
 KIO__ForwardingWorkerBase* k_io__forwardingworkerbase_new(char* protocol, char* poolSocket, char* appSocket);
 
+/// Upcasts to a KIO::WorkerBase object
+///
+/// @param self KIO__ForwardingWorkerBase*
+///
+KIO__WorkerBase* k_io__forwardingworkerbase_as_k_i_o___worker_base(void* self);
+
+/// Downcasts to a KIO__ForwardingWorkerBase object
+///
+/// @param _kio__workerbase KIO__WorkerBase*
+///
+KIO__ForwardingWorkerBase* k_io__forwardingworkerbase_from_k_i_o___worker_base(void* _kio__workerbase);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KIO__ForwardingWorkerBase*

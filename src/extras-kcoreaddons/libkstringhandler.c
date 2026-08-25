@@ -17,9 +17,8 @@ const char** k_stringhandler_capwords2(const char* list[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_stringhandler_capwords2\n");
         abort();
     }
-    for (size_t i = 0; i < list_len; ++i) {
+    for (size_t i = 0; i < list_len; ++i)
         list_qstr[i] = qstring(list[i]);
-    }
     libqt_list list_list = qlist(list_qstr, list_len);
     libqt_list _arr = KStringHandler_Capwords2(list_list);
     free(list_qstr);
@@ -31,11 +30,9 @@ const char** k_stringhandler_capwords2(const char* list[static 1]) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -71,11 +68,9 @@ const char** k_stringhandler_perl_split(const char* sep, const char* str, int ma
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -90,11 +85,9 @@ const char** k_stringhandler_perl_split2(const char* sep, const char* s, int max
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -109,11 +102,9 @@ const char** k_stringhandler_perl_split3(void* sep, const char* s, int max) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -128,11 +119,9 @@ const char** k_stringhandler_perl_split4(void* sep, const char* s, int max) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

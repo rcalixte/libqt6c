@@ -1207,6 +1207,22 @@ void k_texttranslator__translatortextedit_set_frame_rect(void* self, void* frame
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextTranslator__TranslatorTextEdit*
+///
+QPaintDevice* k_texttranslator__translatortextedit_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextTranslator__TranslatorTextEdit object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextTranslator__TranslatorTextEdit* k_texttranslator__translatortextedit_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self TextTranslator__TranslatorTextEdit*
@@ -6848,6 +6864,22 @@ const char* k_texttranslator__translatorwidget_tr2(const char* s, const char* c)
 /// @param n int
 ///
 const char* k_texttranslator__translatorwidget_tr3(const char* s, const char* c, int n);
+
+/// Inherited from QWidget
+///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextTranslator__TranslatorWidget*
+///
+QPaintDevice* k_texttranslator__translatorwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextTranslator__TranslatorWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextTranslator__TranslatorWidget* k_texttranslator__translatorwidget_from_q_paint_device(void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///

@@ -23,9 +23,8 @@ const char* k_sonnet__guesslanguage_identify2(void* self, const char* text, cons
         fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__guesslanguage_identify2\n");
         abort();
     }
-    for (size_t i = 0; i < suggestions_len; ++i) {
+    for (size_t i = 0; i < suggestions_len; ++i)
         suggestions_qstr[i] = qstring(suggestions[i]);
-    }
     libqt_list suggestions_list = qlist(suggestions_qstr, suggestions_len);
     libqt_string _str = Sonnet__GuessLanguage_Identify2((Sonnet__GuessLanguage*)self, qstring(text), suggestions_list);
     free(suggestions_qstr);

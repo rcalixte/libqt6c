@@ -724,6 +724,22 @@ void q_checkbox_on_clicked1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QCheckBox*
+///
+QPaintDevice* q_checkbox_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QCheckBox object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QCheckBox* q_checkbox_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QCheckBox*

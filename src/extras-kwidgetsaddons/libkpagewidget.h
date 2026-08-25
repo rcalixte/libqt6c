@@ -325,6 +325,22 @@ QWidget* k_pagewidget_page_footer(void* self);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KPageWidget*
+///
+QPaintDevice* k_pagewidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KPageWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KPageWidget* k_pagewidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KPageWidget*

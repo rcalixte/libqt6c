@@ -21,6 +21,14 @@ QOffscreenSurface* q_offscreensurface_new3(void* screen, void* parent) {
     return QOffscreenSurface_New3((QScreen*)screen, (QObject*)parent);
 }
 
+QSurface* q_offscreensurface_as_q_surface(void* self) {
+    return QOffscreenSurface_AsQSurface((QOffscreenSurface*)self);
+}
+
+QOffscreenSurface* q_offscreensurface_from_q_surface(void* _qsurface) {
+    return (QOffscreenSurface*)QOffscreenSurface_FromQSurface((QSurface*)_qsurface);
+}
+
 const QMetaObject* q_offscreensurface_meta_object(void* self) {
     return QOffscreenSurface_MetaObject((QOffscreenSurface*)self);
 }
@@ -292,11 +300,9 @@ const char** q_offscreensurface_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -374,11 +380,11 @@ void q_offscreensurface_on_destroyed1(void* self, void (*callback)(void*, void*)
 }
 
 int32_t q_offscreensurface_surface_class(void* self) {
-    return QSurface_SurfaceClass((QSurface*)self);
+    return QSurface_SurfaceClass(q_offscreensurface_as_q_surface(self));
 }
 
 bool q_offscreensurface_supports_open_g_l(void* self) {
-    return QSurface_SupportsOpenGL((QSurface*)self);
+    return QSurface_SupportsOpenGL(q_offscreensurface_as_q_surface(self));
 }
 
 bool q_offscreensurface_event(void* self, void* event) {

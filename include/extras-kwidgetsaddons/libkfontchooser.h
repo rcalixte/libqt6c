@@ -279,6 +279,22 @@ void k_fontchooser_set_font2(void* self, void* font, bool onlyFixed);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KFontChooser*
+///
+QPaintDevice* k_fontchooser_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KFontChooser object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KFontChooser* k_fontchooser_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KFontChooser*

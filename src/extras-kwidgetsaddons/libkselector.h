@@ -671,6 +671,22 @@ void k_selector_on_action_triggered(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KSelector*
+///
+QPaintDevice* k_selector_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KSelector object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KSelector* k_selector_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KSelector*
@@ -6060,6 +6076,22 @@ void k_gradientselector_action_triggered(void* self, int action);
 /// @param callback void func(KGradientSelector* self, int action)
 ///
 void k_gradientselector_on_action_triggered(void* self, void (*callback)(void*, int));
+
+/// Inherited from QWidget
+///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KGradientSelector*
+///
+QPaintDevice* k_gradientselector_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KGradientSelector object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KGradientSelector* k_gradientselector_from_q_paint_device(void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///

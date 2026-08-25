@@ -115,9 +115,8 @@ void k_attica__achievement_set_dependencies(void* self, const char* dependencies
         fprintf(stderr, "Failed to allocate memory for string list in k_attica__achievement_set_dependencies\n");
         abort();
     }
-    for (size_t i = 0; i < dependencies_len; ++i) {
+    for (size_t i = 0; i < dependencies_len; ++i)
         dependencies_qstr[i] = qstring(dependencies[i]);
-    }
     libqt_list dependencies_list = qlist(dependencies_qstr, dependencies_len);
     Attica__Achievement_SetDependencies((Attica__Achievement*)self, dependencies_list);
     free(dependencies_qstr);
@@ -141,11 +140,9 @@ const char** k_attica__achievement_dependencies(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -173,9 +170,8 @@ void k_attica__achievement_set_options(void* self, const char* options[static 1]
         fprintf(stderr, "Failed to allocate memory for string list in k_attica__achievement_set_options\n");
         abort();
     }
-    for (size_t i = 0; i < options_len; ++i) {
+    for (size_t i = 0; i < options_len; ++i)
         options_qstr[i] = qstring(options[i]);
-    }
     libqt_list options_list = qlist(options_qstr, options_len);
     Attica__Achievement_SetOptions((Attica__Achievement*)self, options_list);
     free(options_qstr);
@@ -199,11 +195,9 @@ const char** k_attica__achievement_options(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

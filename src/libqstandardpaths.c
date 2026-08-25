@@ -18,11 +18,9 @@ const char** q_standardpaths_standard_locations(int32_t type) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -44,11 +42,9 @@ const char** q_standardpaths_locate_all(int32_t type, const char* fileName) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -92,11 +88,9 @@ const char** q_standardpaths_locate_all3(int32_t type, const char* fileName, int
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -108,9 +102,8 @@ const char* q_standardpaths_find_executable2(const char* executableName, const c
         fprintf(stderr, "Failed to allocate memory for string list in q_standardpaths_find_executable2\n");
         abort();
     }
-    for (size_t i = 0; i < paths_len; ++i) {
+    for (size_t i = 0; i < paths_len; ++i)
         paths_qstr[i] = qstring(paths[i]);
-    }
     libqt_list paths_list = qlist(paths_qstr, paths_len);
     libqt_string _str = QStandardPaths_FindExecutable2(qstring(executableName), paths_list);
     free(paths_qstr);

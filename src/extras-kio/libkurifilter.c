@@ -53,11 +53,9 @@ const char** k_urifiltersearchprovider_keys(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -104,9 +102,8 @@ void k_urifiltersearchprovider_set_keys(void* self, const char* keys[static 1]) 
         fprintf(stderr, "Failed to allocate memory for string list in k_urifiltersearchprovider_set_keys\n");
         abort();
     }
-    for (size_t i = 0; i < keys_len; ++i) {
+    for (size_t i = 0; i < keys_len; ++i)
         keys_qstr[i] = qstring(keys[i]);
-    }
     libqt_list keys_list = qlist(keys_qstr, keys_len);
     KUriFilterSearchProvider_SetKeys((KUriFilterSearchProvider*)self, keys_list);
     free(keys_qstr);
@@ -123,9 +120,8 @@ void k_urifiltersearchprovider_super_set_keys(void* self, const char* keys[stati
         fprintf(stderr, "Failed to allocate memory for string list in k_urifiltersearchprovider_set_keys\n");
         abort();
     }
-    for (size_t i = 0; i < keys_len; ++i) {
+    for (size_t i = 0; i < keys_len; ++i)
         keys_qstr[i] = qstring(keys[i]);
-    }
     libqt_list keys_list = qlist(keys_qstr, keys_len);
     KUriFilterSearchProvider_SuperSetKeys((KUriFilterSearchProvider*)self, keys_list);
 }
@@ -238,11 +234,9 @@ const char** k_urifilterdata_preferred_search_providers(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -268,11 +262,9 @@ const char** k_urifilterdata_all_queries_for_search_provider(void* self, const c
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -294,11 +286,9 @@ const char** k_urifilterdata_alternate_search_providers(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -351,9 +341,8 @@ void k_urifilterdata_set_alternate_search_providers(void* self, const char* prov
         fprintf(stderr, "Failed to allocate memory for string list in k_urifilterdata_set_alternate_search_providers\n");
         abort();
     }
-    for (size_t i = 0; i < providers_len; ++i) {
+    for (size_t i = 0; i < providers_len; ++i)
         providers_qstr[i] = qstring(providers[i]);
-    }
     libqt_list providers_list = qlist(providers_qstr, providers_len);
     KUriFilterData_SetAlternateSearchProviders((KUriFilterData*)self, providers_list);
     free(providers_qstr);
@@ -424,11 +413,9 @@ const char** k_urifilter_plugin_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -440,9 +427,8 @@ bool k_urifilter_filter_uri22(void* self, void* data, const char* filters[static
         fprintf(stderr, "Failed to allocate memory for string list in k_urifilter_filter_uri22\n");
         abort();
     }
-    for (size_t i = 0; i < filters_len; ++i) {
+    for (size_t i = 0; i < filters_len; ++i)
         filters_qstr[i] = qstring(filters[i]);
-    }
     libqt_list filters_list = qlist(filters_qstr, filters_len);
     bool _out = KUriFilter_FilterUri22((KUriFilter*)self, (KUriFilterData*)data, filters_list);
     free(filters_qstr);
@@ -456,9 +442,8 @@ bool k_urifilter_filter_uri23(void* self, void* uri, const char* filters[static 
         fprintf(stderr, "Failed to allocate memory for string list in k_urifilter_filter_uri23\n");
         abort();
     }
-    for (size_t i = 0; i < filters_len; ++i) {
+    for (size_t i = 0; i < filters_len; ++i)
         filters_qstr[i] = qstring(filters[i]);
-    }
     libqt_list filters_list = qlist(filters_qstr, filters_len);
     bool _out = KUriFilter_FilterUri23((KUriFilter*)self, (QUrl*)uri, filters_list);
     free(filters_qstr);
@@ -472,9 +457,8 @@ bool k_urifilter_filter_uri24(void* self, const char* uri, const char* filters[s
         fprintf(stderr, "Failed to allocate memory for string list in k_urifilter_filter_uri24\n");
         abort();
     }
-    for (size_t i = 0; i < filters_len; ++i) {
+    for (size_t i = 0; i < filters_len; ++i)
         filters_qstr[i] = qstring(filters[i]);
-    }
     libqt_list filters_list = qlist(filters_qstr, filters_len);
     bool _out = KUriFilter_FilterUri24((KUriFilter*)self, qstring(uri), filters_list);
     free(filters_qstr);
@@ -488,9 +472,8 @@ QUrl* k_urifilter_filtered_uri22(void* self, void* uri, const char* filters[stat
         fprintf(stderr, "Failed to allocate memory for string list in k_urifilter_filtered_uri22\n");
         abort();
     }
-    for (size_t i = 0; i < filters_len; ++i) {
+    for (size_t i = 0; i < filters_len; ++i)
         filters_qstr[i] = qstring(filters[i]);
-    }
     libqt_list filters_list = qlist(filters_qstr, filters_len);
     QUrl* _out = KUriFilter_FilteredUri22((KUriFilter*)self, (QUrl*)uri, filters_list);
     free(filters_qstr);
@@ -504,9 +487,8 @@ const char* k_urifilter_filtered_uri23(void* self, const char* uri, const char* 
         fprintf(stderr, "Failed to allocate memory for string list in k_urifilter_filtered_uri23\n");
         abort();
     }
-    for (size_t i = 0; i < filters_len; ++i) {
+    for (size_t i = 0; i < filters_len; ++i)
         filters_qstr[i] = qstring(filters[i]);
-    }
     libqt_list filters_list = qlist(filters_qstr, filters_len);
     libqt_string _str = KUriFilter_FilteredUri23((KUriFilter*)self, qstring(uri), filters_list);
     free(filters_qstr);

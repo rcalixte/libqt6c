@@ -661,6 +661,22 @@ void q_scrollarea_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QScrollArea*
+///
+QPaintDevice* q_scrollarea_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QScrollArea object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QScrollArea* q_scrollarea_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QScrollArea*

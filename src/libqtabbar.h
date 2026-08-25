@@ -1118,6 +1118,22 @@ const char* q_tabbar_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QTabBar*
+///
+QPaintDevice* q_tabbar_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QTabBar object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QTabBar* q_tabbar_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QTabBar*

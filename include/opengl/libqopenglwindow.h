@@ -434,6 +434,22 @@ const char* q_openglwindow_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QPaintDeviceWindow
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QOpenGLWindow*
+///
+QPaintDevice* q_openglwindow_as_q_paint_device(void* self);
+
+/// Inherited from QPaintDeviceWindow
+///
+/// Downcasts to a QOpenGLWindow object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QOpenGLWindow* q_openglwindow_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QPaintDeviceWindow
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevicewindow.html#update)
 ///
 /// @param self QOpenGLWindow*
@@ -457,6 +473,22 @@ void q_openglwindow_update2(void* self, void* region);
 /// @param self QOpenGLWindow*
 ///
 void q_openglwindow_update3(void* self);
+
+/// Inherited from QWindow
+///
+/// Upcasts to a QSurface object
+///
+/// @param self QOpenGLWindow*
+///
+QSurface* q_openglwindow_as_q_surface(void* self);
+
+/// Inherited from QWindow
+///
+/// Downcasts to a QOpenGLWindow object
+///
+/// @param _qsurface QSurface*
+///
+QOpenGLWindow* q_openglwindow_from_q_surface(void* _qsurface);
 
 /// Inherited from QWindow
 ///

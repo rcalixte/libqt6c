@@ -331,9 +331,8 @@ void q_textcharformat_set_font_families(void* self, const char* families[static 
         fprintf(stderr, "Failed to allocate memory for string list in q_textcharformat_set_font_families\n");
         abort();
     }
-    for (size_t i = 0; i < families_len; ++i) {
+    for (size_t i = 0; i < families_len; ++i)
         families_qstr[i] = qstring(families[i]);
-    }
     libqt_list families_list = qlist(families_qstr, families_len);
     QTextCharFormat_SetFontFamilies((QTextCharFormat*)self, families_list);
     free(families_qstr);
@@ -572,9 +571,8 @@ void q_textcharformat_set_anchor_names(void* self, const char* names[static 1]) 
         fprintf(stderr, "Failed to allocate memory for string list in q_textcharformat_set_anchor_names\n");
         abort();
     }
-    for (size_t i = 0; i < names_len; ++i) {
+    for (size_t i = 0; i < names_len; ++i)
         names_qstr[i] = qstring(names[i]);
-    }
     libqt_list names_list = qlist(names_qstr, names_len);
     QTextCharFormat_SetAnchorNames((QTextCharFormat*)self, names_list);
     free(names_qstr);
@@ -590,11 +588,9 @@ const char** q_textcharformat_anchor_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1533,9 +1529,8 @@ void q_textimageformat_set_font_families(void* self, const char* families[static
         fprintf(stderr, "Failed to allocate memory for string list in q_textimageformat_set_font_families\n");
         abort();
     }
-    for (size_t i = 0; i < families_len; ++i) {
+    for (size_t i = 0; i < families_len; ++i)
         families_qstr[i] = qstring(families[i]);
-    }
     libqt_list families_list = qlist(families_qstr, families_len);
     QTextCharFormat_SetFontFamilies((QTextCharFormat*)self, families_list);
     free(families_qstr);
@@ -1774,9 +1769,8 @@ void q_textimageformat_set_anchor_names(void* self, const char* names[static 1])
         fprintf(stderr, "Failed to allocate memory for string list in q_textimageformat_set_anchor_names\n");
         abort();
     }
-    for (size_t i = 0; i < names_len; ++i) {
+    for (size_t i = 0; i < names_len; ++i)
         names_qstr[i] = qstring(names[i]);
-    }
     libqt_list names_list = qlist(names_qstr, names_len);
     QTextCharFormat_SetAnchorNames((QTextCharFormat*)self, names_list);
     free(names_qstr);
@@ -1792,11 +1786,9 @@ const char** q_textimageformat_anchor_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -2958,9 +2950,8 @@ void q_texttablecellformat_set_font_families(void* self, const char* families[st
         fprintf(stderr, "Failed to allocate memory for string list in q_texttablecellformat_set_font_families\n");
         abort();
     }
-    for (size_t i = 0; i < families_len; ++i) {
+    for (size_t i = 0; i < families_len; ++i)
         families_qstr[i] = qstring(families[i]);
-    }
     libqt_list families_list = qlist(families_qstr, families_len);
     QTextCharFormat_SetFontFamilies((QTextCharFormat*)self, families_list);
     free(families_qstr);
@@ -3199,9 +3190,8 @@ void q_texttablecellformat_set_anchor_names(void* self, const char* names[static
         fprintf(stderr, "Failed to allocate memory for string list in q_texttablecellformat_set_anchor_names\n");
         abort();
     }
-    for (size_t i = 0; i < names_len; ++i) {
+    for (size_t i = 0; i < names_len; ++i)
         names_qstr[i] = qstring(names[i]);
-    }
     libqt_list names_list = qlist(names_qstr, names_len);
     QTextCharFormat_SetAnchorNames((QTextCharFormat*)self, names_list);
     free(names_qstr);
@@ -3217,11 +3207,9 @@ const char** q_texttablecellformat_anchor_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

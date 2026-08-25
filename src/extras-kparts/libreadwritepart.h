@@ -544,6 +544,22 @@ void k_parts__readwritepart_on_url_changed(void* self, void (*callback)(void*, v
 
 /// Inherited from KParts::Part
 ///
+/// Upcasts to a KParts::PartBase object
+///
+/// @param self KParts__ReadWritePart*
+///
+KParts__PartBase* k_parts__readwritepart_as_k_parts___part_base(void* self);
+
+/// Inherited from KParts::Part
+///
+/// Downcasts to a KParts__ReadWritePart object
+///
+/// @param _kparts__partbase KParts__PartBase*
+///
+KParts__ReadWritePart* k_parts__readwritepart_from_k_parts___part_base(void* _kparts__partbase);
+
+/// Inherited from KParts::Part
+///
 /// [Upstream resources](https://api.kde.org/kparts-part.html#manager)
 ///
 /// @param self KParts__ReadWritePart*

@@ -186,6 +186,22 @@ const char* k_textcustomeditor__plaintexteditorwidget_tr3(const char* s, const c
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextCustomEditor__PlainTextEditorWidget*
+///
+QPaintDevice* k_textcustomeditor__plaintexteditorwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextCustomEditor__PlainTextEditorWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextCustomEditor__PlainTextEditorWidget* k_textcustomeditor__plaintexteditorwidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self TextCustomEditor__PlainTextEditorWidget*

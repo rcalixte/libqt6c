@@ -18,6 +18,14 @@ QLayout* q_layout_new2() {
     return QLayout_New2();
 }
 
+QLayoutItem* q_layout_as_q_layout_item(void* self) {
+    return QLayout_AsQLayoutItem((QLayout*)self);
+}
+
+QLayout* q_layout_from_q_layout_item(void* _qlayoutitem) {
+    return (QLayout*)QLayout_FromQLayoutItem((QLayoutItem*)_qlayoutitem);
+}
+
 const QMetaObject* q_layout_meta_object(void* self) {
     return QLayout_MetaObject((QLayout*)self);
 }
@@ -597,11 +605,9 @@ const char** q_layout_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -679,7 +685,7 @@ void q_layout_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 int32_t q_layout_alignment(void* self) {
-    return QLayoutItem_Alignment((QLayoutItem*)self);
+    return QLayoutItem_Alignment(q_layout_as_q_layout_item(self));
 }
 
 bool q_layout_event(void* self, void* event) {

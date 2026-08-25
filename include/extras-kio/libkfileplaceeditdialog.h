@@ -311,6 +311,22 @@ void k_fileplaceeditdialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KFilePlaceEditDialog*
+///
+QPaintDevice* k_fileplaceeditdialog_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KFilePlaceEditDialog object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KFilePlaceEditDialog* k_fileplaceeditdialog_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KFilePlaceEditDialog*

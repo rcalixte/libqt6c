@@ -82,11 +82,9 @@ const char** k_sonnet__configview_preferred_languages(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -108,11 +106,9 @@ const char** k_sonnet__configview_ignore_list(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -132,9 +128,8 @@ void k_sonnet__configview_set_preferred_languages(void* self, const char* ignore
         fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__configview_set_preferred_languages\n");
         abort();
     }
-    for (size_t i = 0; i < ignoreList_len; ++i) {
+    for (size_t i = 0; i < ignoreList_len; ++i)
         ignoreList_qstr[i] = qstring(ignoreList[i]);
-    }
     libqt_list ignoreList_list = qlist(ignoreList_qstr, ignoreList_len);
     Sonnet__ConfigView_SetPreferredLanguages((Sonnet__ConfigView*)self, ignoreList_list);
     free(ignoreList_qstr);
@@ -151,9 +146,8 @@ void k_sonnet__configview_set_ignore_list(void* self, const char* ignoreList[sta
         fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__configview_set_ignore_list\n");
         abort();
     }
-    for (size_t i = 0; i < ignoreList_len; ++i) {
+    for (size_t i = 0; i < ignoreList_len; ++i)
         ignoreList_qstr[i] = qstring(ignoreList[i]);
-    }
     libqt_list ignoreList_list = qlist(ignoreList_qstr, ignoreList_len);
     Sonnet__ConfigView_SetIgnoreList((Sonnet__ConfigView*)self, ignoreList_list);
     free(ignoreList_qstr);
@@ -179,6 +173,14 @@ const char* k_sonnet__configview_tr3(const char* s, const char* c, int n) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+QPaintDevice* k_sonnet__configview_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+Sonnet__ConfigView* k_sonnet__configview_from_q_paint_device(void* _qpaintdevice) {
+    return (Sonnet__ConfigView*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t k_sonnet__configview_win_id(void* self) {
@@ -1429,11 +1431,9 @@ const char** k_sonnet__configview_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1511,47 +1511,47 @@ void k_sonnet__configview_on_destroyed1(void* self, void (*callback)(void*, void
 }
 
 bool k_sonnet__configview_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_sonnet__configview_as_q_paint_device(self));
 }
 
 int32_t k_sonnet__configview_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_sonnet__configview_as_q_paint_device(self));
 }
 
 int32_t k_sonnet__configview_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_sonnet__configview_as_q_paint_device(self));
 }
 
 int32_t k_sonnet__configview_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_sonnet__configview_as_q_paint_device(self));
 }
 
 int32_t k_sonnet__configview_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_sonnet__configview_as_q_paint_device(self));
 }
 
 int32_t k_sonnet__configview_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_sonnet__configview_as_q_paint_device(self));
 }
 
 int32_t k_sonnet__configview_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_sonnet__configview_as_q_paint_device(self));
 }
 
 double k_sonnet__configview_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_sonnet__configview_as_q_paint_device(self));
 }
 
 double k_sonnet__configview_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_sonnet__configview_as_q_paint_device(self));
 }
 
 int32_t k_sonnet__configview_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_sonnet__configview_as_q_paint_device(self));
 }
 
 int32_t k_sonnet__configview_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_sonnet__configview_as_q_paint_device(self));
 }
 
 double k_sonnet__configview_device_pixel_ratio_f_scale() {

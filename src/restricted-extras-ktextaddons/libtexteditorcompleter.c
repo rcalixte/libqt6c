@@ -66,9 +66,8 @@ void k_textcustomeditor__texteditorcompleter_set_completer_string_list(void* sel
         fprintf(stderr, "Failed to allocate memory for string list in k_textcustomeditor__texteditorcompleter_set_completer_string_list\n");
         abort();
     }
-    for (size_t i = 0; i < list_len; ++i) {
+    for (size_t i = 0; i < list_len; ++i)
         list_qstr[i] = qstring(list[i]);
-    }
     libqt_list list_list = qlist(list_qstr, list_len);
     TextCustomEditor__TextEditorCompleter_SetCompleterStringList((TextCustomEditor__TextEditorCompleter*)self, list_list);
     free(list_qstr);
@@ -230,11 +229,9 @@ const char** k_textcustomeditor__texteditorcompleter_dynamic_property_names(void
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

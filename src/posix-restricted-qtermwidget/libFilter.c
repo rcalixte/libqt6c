@@ -211,11 +211,9 @@ const char** k_onsole__filter_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -663,11 +661,9 @@ const char** k_onsole__regexpfilter_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1203,11 +1199,9 @@ const char** k_onsole__urlfilter_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1685,11 +1679,9 @@ const char** k_onsole__filterobject_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -2101,9 +2093,8 @@ void k_onsole__regexpfilter__hotspot_set_captured_texts(void* self, const char* 
         fprintf(stderr, "Failed to allocate memory for string list in k_onsole__regexpfilter__hotspot_set_captured_texts\n");
         abort();
     }
-    for (size_t i = 0; i < texts_len; ++i) {
+    for (size_t i = 0; i < texts_len; ++i)
         texts_qstr[i] = qstring(texts[i]);
-    }
     libqt_list texts_list = qlist(texts_qstr, texts_len);
     Konsole__RegExpFilter__HotSpot_SetCapturedTexts((Konsole__RegExpFilter__HotSpot*)self, texts_list);
     free(texts_qstr);
@@ -2119,11 +2110,9 @@ const char** k_onsole__regexpfilter__hotspot_captured_texts(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -2219,9 +2208,8 @@ void k_onsole__urlfilter__hotspot_set_captured_texts(void* self, const char* tex
         fprintf(stderr, "Failed to allocate memory for string list in k_onsole__urlfilter__hotspot_set_captured_texts\n");
         abort();
     }
-    for (size_t i = 0; i < texts_len; ++i) {
+    for (size_t i = 0; i < texts_len; ++i)
         texts_qstr[i] = qstring(texts[i]);
-    }
     libqt_list texts_list = qlist(texts_qstr, texts_len);
     Konsole__RegExpFilter__HotSpot_SetCapturedTexts((Konsole__RegExpFilter__HotSpot*)self, texts_list);
     free(texts_qstr);
@@ -2237,11 +2225,9 @@ const char** k_onsole__urlfilter__hotspot_captured_texts(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

@@ -21,9 +21,8 @@ QStringListModel* q_stringlistmodel_new2(const char* strings[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_stringlistmodel_new2\n");
         abort();
     }
-    for (size_t i = 0; i < strings_len; ++i) {
+    for (size_t i = 0; i < strings_len; ++i)
         strings_qstr[i] = qstring(strings[i]);
-    }
     libqt_list strings_list = qlist(strings_qstr, strings_len);
 
     QStringListModel* _out = QStringListModel_New2(strings_list);
@@ -42,9 +41,8 @@ QStringListModel* q_stringlistmodel_new4(const char* strings[static 1], void* pa
         fprintf(stderr, "Failed to allocate memory for string list in q_stringlistmodel_new4\n");
         abort();
     }
-    for (size_t i = 0; i < strings_len; ++i) {
+    for (size_t i = 0; i < strings_len; ++i)
         strings_qstr[i] = qstring(strings[i]);
-    }
     libqt_list strings_list = qlist(strings_qstr, strings_len);
 
     QStringListModel* _out = QStringListModel_New4(strings_list, (QObject*)parent);
@@ -308,11 +306,9 @@ const char** q_stringlistmodel_string_list(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -324,9 +320,8 @@ void q_stringlistmodel_set_string_list(void* self, const char* strings[static 1]
         fprintf(stderr, "Failed to allocate memory for string list in q_stringlistmodel_set_string_list\n");
         abort();
     }
-    for (size_t i = 0; i < strings_len; ++i) {
+    for (size_t i = 0; i < strings_len; ++i)
         strings_qstr[i] = qstring(strings[i]);
-    }
     libqt_list strings_list = qlist(strings_qstr, strings_len);
     QStringListModel_SetStringList((QStringListModel*)self, strings_list);
     free(strings_qstr);
@@ -652,11 +647,9 @@ const char** q_stringlistmodel_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -787,11 +780,9 @@ const char** q_stringlistmodel_mime_types(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -806,11 +797,9 @@ const char** q_stringlistmodel_super_mime_types(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

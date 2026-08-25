@@ -88,9 +88,8 @@ void q_packagekit__offline_prepared_updates(void* self, const char* updates[stat
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__offline_prepared_updates\n");
         abort();
     }
-    for (size_t i = 0; i < updates_len; ++i) {
+    for (size_t i = 0; i < updates_len; ++i)
         updates_qstr[i] = qstring(updates[i]);
-    }
     libqt_list updates_list = qlist(updates_qstr, updates_len);
     PackageKit__Offline_PreparedUpdates((PackageKit__Offline*)self, updates_list);
     free(updates_qstr);
@@ -260,11 +259,9 @@ const char** q_packagekit__offline_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

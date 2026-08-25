@@ -191,6 +191,22 @@ const char* k_previewwidgetbase_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KPreviewWidgetBase*
+///
+QPaintDevice* k_previewwidgetbase_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KPreviewWidgetBase object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KPreviewWidgetBase* k_previewwidgetbase_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KPreviewWidgetBase*

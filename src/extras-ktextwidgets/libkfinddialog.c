@@ -33,9 +33,8 @@ KFindDialog* k_finddialog_new4(void* parent, long options, const char* findStrin
         fprintf(stderr, "Failed to allocate memory for string list in k_finddialog_new4\n");
         abort();
     }
-    for (size_t i = 0; i < findStrings_len; ++i) {
+    for (size_t i = 0; i < findStrings_len; ++i)
         findStrings_qstr[i] = qstring(findStrings[i]);
-    }
     libqt_list findStrings_list = qlist(findStrings_qstr, findStrings_len);
 
     KFindDialog* _out = KFindDialog_New4((QWidget*)parent, options, findStrings_list);
@@ -50,9 +49,8 @@ KFindDialog* k_finddialog_new5(void* parent, long options, const char* findStrin
         fprintf(stderr, "Failed to allocate memory for string list in k_finddialog_new5\n");
         abort();
     }
-    for (size_t i = 0; i < findStrings_len; ++i) {
+    for (size_t i = 0; i < findStrings_len; ++i)
         findStrings_qstr[i] = qstring(findStrings[i]);
-    }
     libqt_list findStrings_list = qlist(findStrings_qstr, findStrings_len);
 
     KFindDialog* _out = KFindDialog_New5((QWidget*)parent, options, findStrings_list, hasSelection);
@@ -67,9 +65,8 @@ KFindDialog* k_finddialog_new6(void* parent, long options, const char* findStrin
         fprintf(stderr, "Failed to allocate memory for string list in k_finddialog_new6\n");
         abort();
     }
-    for (size_t i = 0; i < findStrings_len; ++i) {
+    for (size_t i = 0; i < findStrings_len; ++i)
         findStrings_qstr[i] = qstring(findStrings[i]);
-    }
     libqt_list findStrings_list = qlist(findStrings_qstr, findStrings_len);
 
     KFindDialog* _out = KFindDialog_New6((QWidget*)parent, options, findStrings_list, hasSelection, replaceDialog);
@@ -127,9 +124,8 @@ void k_finddialog_set_find_history(void* self, const char* history[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_finddialog_set_find_history\n");
         abort();
     }
-    for (size_t i = 0; i < history_len; ++i) {
+    for (size_t i = 0; i < history_len; ++i)
         history_qstr[i] = qstring(history[i]);
-    }
     libqt_list history_list = qlist(history_qstr, history_len);
     KFindDialog_SetFindHistory((KFindDialog*)self, history_list);
     free(history_qstr);
@@ -145,11 +141,9 @@ const char** k_finddialog_find_history(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -293,6 +287,14 @@ void k_finddialog_rejected(void* self) {
 
 void k_finddialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
+}
+
+QPaintDevice* k_finddialog_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+KFindDialog* k_finddialog_from_q_paint_device(void* _qpaintdevice) {
+    return (KFindDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t k_finddialog_win_id(void* self) {
@@ -1543,11 +1545,9 @@ const char** k_finddialog_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1625,47 +1625,47 @@ void k_finddialog_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 bool k_finddialog_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_finddialog_as_q_paint_device(self));
 }
 
 int32_t k_finddialog_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_finddialog_as_q_paint_device(self));
 }
 
 int32_t k_finddialog_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_finddialog_as_q_paint_device(self));
 }
 
 int32_t k_finddialog_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_finddialog_as_q_paint_device(self));
 }
 
 int32_t k_finddialog_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_finddialog_as_q_paint_device(self));
 }
 
 int32_t k_finddialog_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_finddialog_as_q_paint_device(self));
 }
 
 int32_t k_finddialog_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_finddialog_as_q_paint_device(self));
 }
 
 double k_finddialog_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_finddialog_as_q_paint_device(self));
 }
 
 double k_finddialog_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_finddialog_as_q_paint_device(self));
 }
 
 int32_t k_finddialog_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_finddialog_as_q_paint_device(self));
 }
 
 int32_t k_finddialog_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_finddialog_as_q_paint_device(self));
 }
 
 double k_finddialog_device_pixel_ratio_f_scale() {

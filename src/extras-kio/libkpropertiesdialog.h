@@ -725,6 +725,22 @@ void k_propertiesdialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KPropertiesDialog*
+///
+QPaintDevice* k_propertiesdialog_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KPropertiesDialog object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KPropertiesDialog* k_propertiesdialog_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KPropertiesDialog*

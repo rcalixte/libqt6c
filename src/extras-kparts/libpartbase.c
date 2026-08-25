@@ -82,9 +82,8 @@ const char* k_parts__partbase_find_most_recent_x_m_l_file(const char* files[stat
         fprintf(stderr, "Failed to allocate memory for string list in k_parts__partbase_find_most_recent_x_m_l_file\n");
         abort();
     }
-    for (size_t i = 0; i < files_len; ++i) {
+    for (size_t i = 0; i < files_len; ++i)
         files_qstr[i] = qstring(files[i]);
-    }
     libqt_list files_list = qlist(files_qstr, files_len);
     libqt_string _str = KXMLGUIClient_FindMostRecentXMLFile(files_list, qstring(doc));
     free(files_qstr);

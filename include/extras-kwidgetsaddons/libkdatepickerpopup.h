@@ -676,6 +676,22 @@ QAction* k_datepickerpopup_exec4(libqt_list actions, void* pos, void* at, void* 
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KDatePickerPopup*
+///
+QPaintDevice* k_datepickerpopup_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KDatePickerPopup object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KDatePickerPopup* k_datepickerpopup_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KDatePickerPopup*

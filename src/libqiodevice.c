@@ -14,6 +14,10 @@ QIODevice* q_iodevice_new2(void* parent) {
     return QIODevice_New2((QObject*)parent);
 }
 
+QIODeviceBase* q_iodevice_as_q_i_o_device_base(void* self) {
+    return QIODevice_AsQIODeviceBase((QIODevice*)self);
+}
+
 const QMetaObject* q_iodevice_meta_object(void* self) {
     return QIODevice_MetaObject((QIODevice*)self);
 }
@@ -623,11 +627,9 @@ const char** q_iodevice_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

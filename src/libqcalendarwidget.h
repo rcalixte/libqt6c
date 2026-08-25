@@ -729,6 +729,22 @@ const char* q_calendarwidget_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QCalendarWidget*
+///
+QPaintDevice* q_calendarwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QCalendarWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QCalendarWidget* q_calendarwidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QCalendarWidget*

@@ -648,6 +648,22 @@ void q_spinbox_on_editing_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QSpinBox*
+///
+QPaintDevice* q_spinbox_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QSpinBox object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QSpinBox* q_spinbox_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QSpinBox*
@@ -6266,6 +6282,22 @@ void q_doublespinbox_editing_finished(void* self);
 /// @param callback void func(QDoubleSpinBox* self)
 ///
 void q_doublespinbox_on_editing_finished(void* self, void (*callback)(void*));
+
+/// Inherited from QWidget
+///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QDoubleSpinBox*
+///
+QPaintDevice* q_doublespinbox_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QDoubleSpinBox object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QDoubleSpinBox* q_doublespinbox_from_q_paint_device(void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///

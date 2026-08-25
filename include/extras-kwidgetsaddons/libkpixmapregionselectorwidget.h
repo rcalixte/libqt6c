@@ -264,6 +264,22 @@ const char* k_pixmapregionselectorwidget_tr3(const char* s, const char* c, int n
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KPixmapRegionSelectorWidget*
+///
+QPaintDevice* k_pixmapregionselectorwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KPixmapRegionSelectorWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KPixmapRegionSelectorWidget* k_pixmapregionselectorwidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KPixmapRegionSelectorWidget*

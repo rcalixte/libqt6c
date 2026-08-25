@@ -75,9 +75,8 @@ void k_sonnet__settings_set_preferred_languages(void* self, const char* lang[sta
         fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__settings_set_preferred_languages\n");
         abort();
     }
-    for (size_t i = 0; i < lang_len; ++i) {
+    for (size_t i = 0; i < lang_len; ++i)
         lang_qstr[i] = qstring(lang[i]);
-    }
     libqt_list lang_list = qlist(lang_qstr, lang_len);
     Sonnet__Settings_SetPreferredLanguages((Sonnet__Settings*)self, lang_list);
     free(lang_qstr);
@@ -93,11 +92,9 @@ const char** k_sonnet__settings_preferred_languages(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -160,9 +157,8 @@ void k_sonnet__settings_set_current_ignore_list(void* self, const char* ignores[
         fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__settings_set_current_ignore_list\n");
         abort();
     }
-    for (size_t i = 0; i < ignores_len; ++i) {
+    for (size_t i = 0; i < ignores_len; ++i)
         ignores_qstr[i] = qstring(ignores[i]);
-    }
     libqt_list ignores_list = qlist(ignores_qstr, ignores_len);
     Sonnet__Settings_SetCurrentIgnoreList((Sonnet__Settings*)self, ignores_list);
     free(ignores_qstr);
@@ -178,11 +174,9 @@ const char** k_sonnet__settings_current_ignore_list(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -197,11 +191,9 @@ const char** k_sonnet__settings_clients(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -228,11 +220,9 @@ const char** k_sonnet__settings_default_ignore_list() {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -274,11 +264,9 @@ const char** k_sonnet__settings_default_preferred_languages() {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -507,11 +495,9 @@ const char** k_sonnet__settings_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

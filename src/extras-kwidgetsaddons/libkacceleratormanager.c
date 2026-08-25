@@ -37,9 +37,8 @@ void k_acceleratormanager_add_standard_action_names(const char* names[static 1])
         fprintf(stderr, "Failed to allocate memory for string list in k_acceleratormanager_add_standard_action_names\n");
         abort();
     }
-    for (size_t i = 0; i < names_len; ++i) {
+    for (size_t i = 0; i < names_len; ++i)
         names_qstr[i] = qstring(names[i]);
-    }
     libqt_list names_list = qlist(names_qstr, names_len);
     KAcceleratorManager_AddStandardActionNames(names_list);
     free(names_qstr);

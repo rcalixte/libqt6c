@@ -13,6 +13,14 @@ KBookmarkAction* k_bookmarkaction_new(void* bk, void* owner, void* parent) {
     return KBookmarkAction_New((KBookmark*)bk, (KBookmarkOwner*)owner, (QObject*)parent);
 }
 
+KBookmarkActionInterface* k_bookmarkaction_as_k_bookmark_action_interface(void* self) {
+    return KBookmarkAction_AsKBookmarkActionInterface((KBookmarkAction*)self);
+}
+
+KBookmarkAction* k_bookmarkaction_from_k_bookmark_action_interface(void* _kbookmarkactioninterface) {
+    return (KBookmarkAction*)KBookmarkAction_FromKBookmarkActionInterface((KBookmarkActionInterface*)_kbookmarkactioninterface);
+}
+
 const QMetaObject* k_bookmarkaction_meta_object(void* self) {
     return KBookmarkAction_MetaObject((KBookmarkAction*)self);
 }
@@ -501,11 +509,9 @@ const char** k_bookmarkaction_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -583,7 +589,7 @@ void k_bookmarkaction_on_destroyed1(void* self, void (*callback)(void*, void*)) 
 }
 
 const KBookmark* k_bookmarkaction_bookmark(void* self) {
-    return KBookmarkActionInterface_Bookmark((KBookmarkActionInterface*)self);
+    return KBookmarkActionInterface_Bookmark(k_bookmarkaction_as_k_bookmark_action_interface(self));
 }
 
 bool k_bookmarkaction_event(void* self, void* param1) {

@@ -1000,9 +1000,8 @@ void q_standarditemmodel_set_horizontal_header_labels(void* self, const char* la
         fprintf(stderr, "Failed to allocate memory for string list in q_standarditemmodel_set_horizontal_header_labels\n");
         abort();
     }
-    for (size_t i = 0; i < labels_len; ++i) {
+    for (size_t i = 0; i < labels_len; ++i)
         labels_qstr[i] = qstring(labels[i]);
-    }
     libqt_list labels_list = qlist(labels_qstr, labels_len);
     QStandardItemModel_SetHorizontalHeaderLabels((QStandardItemModel*)self, labels_list);
     free(labels_qstr);
@@ -1015,9 +1014,8 @@ void q_standarditemmodel_set_vertical_header_labels(void* self, const char* labe
         fprintf(stderr, "Failed to allocate memory for string list in q_standarditemmodel_set_vertical_header_labels\n");
         abort();
     }
-    for (size_t i = 0; i < labels_len; ++i) {
+    for (size_t i = 0; i < labels_len; ++i)
         labels_qstr[i] = qstring(labels[i]);
-    }
     libqt_list labels_list = qlist(labels_qstr, labels_len);
     QStandardItemModel_SetVerticalHeaderLabels((QStandardItemModel*)self, labels_list);
     free(labels_qstr);
@@ -1116,11 +1114,9 @@ const char** q_standarditemmodel_mime_types(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1139,11 +1135,9 @@ const char** q_standarditemmodel_super_mime_types(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1462,11 +1456,9 @@ const char** q_standarditemmodel_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

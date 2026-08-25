@@ -21,6 +21,14 @@ QAccessibleWidget* q_accessiblewidget_new3(void* o, int32_t r, const char* name)
     return QAccessibleWidget_New3((QWidget*)o, r, qstring(name));
 }
 
+QAccessibleActionInterface* q_accessiblewidget_as_q_accessible_action_interface(void* self) {
+    return QAccessibleWidget_AsQAccessibleActionInterface((QAccessibleWidget*)self);
+}
+
+QAccessibleWidget* q_accessiblewidget_from_q_accessible_action_interface(void* _qaccessibleactioninterface) {
+    return (QAccessibleWidget*)QAccessibleWidget_FromQAccessibleActionInterface((QAccessibleActionInterface*)_qaccessibleactioninterface);
+}
+
 bool q_accessiblewidget_is_valid(void* self) {
     return QAccessibleWidget_IsValid((QAccessibleWidget*)self);
 }
@@ -217,11 +225,9 @@ const char** q_accessiblewidget_action_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -240,11 +246,9 @@ const char** q_accessiblewidget_super_action_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -271,11 +275,9 @@ const char** q_accessiblewidget_key_bindings_for_action(void* self, const char* 
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -294,11 +296,9 @@ const char** q_accessiblewidget_super_key_bindings_for_action(void* self, const 
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

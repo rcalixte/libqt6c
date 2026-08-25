@@ -22,9 +22,8 @@ QDirIterator* q_diriterator_new4(const char* path, const char* nameFilters[stati
         fprintf(stderr, "Failed to allocate memory for string list in q_diriterator_new4\n");
         abort();
     }
-    for (size_t i = 0; i < nameFilters_len; ++i) {
+    for (size_t i = 0; i < nameFilters_len; ++i)
         nameFilters_qstr[i] = qstring(nameFilters[i]);
-    }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
 
     QDirIterator* _out = QDirIterator_New4(qstring(path), nameFilters_list);
@@ -51,9 +50,8 @@ QDirIterator* q_diriterator_new8(const char* path, const char* nameFilters[stati
         fprintf(stderr, "Failed to allocate memory for string list in q_diriterator_new8\n");
         abort();
     }
-    for (size_t i = 0; i < nameFilters_len; ++i) {
+    for (size_t i = 0; i < nameFilters_len; ++i)
         nameFilters_qstr[i] = qstring(nameFilters[i]);
-    }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
 
     QDirIterator* _out = QDirIterator_New8(qstring(path), nameFilters_list, filters);
@@ -68,9 +66,8 @@ QDirIterator* q_diriterator_new9(const char* path, const char* nameFilters[stati
         fprintf(stderr, "Failed to allocate memory for string list in q_diriterator_new9\n");
         abort();
     }
-    for (size_t i = 0; i < nameFilters_len; ++i) {
+    for (size_t i = 0; i < nameFilters_len; ++i)
         nameFilters_qstr[i] = qstring(nameFilters[i]);
-    }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
 
     QDirIterator* _out = QDirIterator_New9(qstring(path), nameFilters_list, filters, flags);

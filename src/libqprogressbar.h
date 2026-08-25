@@ -425,6 +425,22 @@ const char* q_progressbar_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QProgressBar*
+///
+QPaintDevice* q_progressbar_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QProgressBar object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QProgressBar* q_progressbar_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QProgressBar*

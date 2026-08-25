@@ -780,6 +780,22 @@ QPointF* q_polarchart_map_to_position2(void* self, void* value, void* series);
 
 /// Inherited from QGraphicsWidget
 ///
+/// Upcasts to a QGraphicsLayoutItem object
+///
+/// @param self QPolarChart*
+///
+QGraphicsLayoutItem* q_polarchart_as_q_graphics_layout_item(void* self);
+
+/// Inherited from QGraphicsWidget
+///
+/// Downcasts to a QPolarChart object
+///
+/// @param _qgraphicslayoutitem QGraphicsLayoutItem*
+///
+QPolarChart* q_polarchart_from_q_graphics_layout_item(void* _qgraphicslayoutitem);
+
+/// Inherited from QGraphicsWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#layout)
 ///
 /// @param self QPolarChart*
@@ -1307,6 +1323,22 @@ void q_polarchart_set_shortcut_auto_repeat2(void* self, int id, bool enabled);
 /// @param on bool
 ///
 void q_polarchart_set_attribute2(void* self, int32_t attribute, bool on);
+
+/// Inherited from QGraphicsObject
+///
+/// Upcasts to a QGraphicsItem object
+///
+/// @param self QPolarChart*
+///
+QGraphicsItem* q_polarchart_as_q_graphics_item(void* self);
+
+/// Inherited from QGraphicsObject
+///
+/// Downcasts to a QPolarChart object
+///
+/// @param _qgraphicsitem QGraphicsItem*
+///
+QPolarChart* q_polarchart_from_q_graphics_item(void* _qgraphicsitem);
 
 /// Inherited from QGraphicsObject
 ///

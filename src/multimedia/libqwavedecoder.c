@@ -201,6 +201,10 @@ const char* q_wavedecoder_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
+QIODeviceBase* q_wavedecoder_as_q_i_o_device_base(void* self) {
+    return QIODevice_AsQIODeviceBase((QIODevice*)self);
+}
+
 int32_t q_wavedecoder_open_mode(void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
@@ -525,11 +529,9 @@ const char** q_wavedecoder_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

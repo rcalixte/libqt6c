@@ -249,6 +249,22 @@ void k_textgrammarcheck__languagetoolresultwidget_on_configure(void* self, void 
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextGrammarCheck__LanguageToolResultWidget*
+///
+QPaintDevice* k_textgrammarcheck__languagetoolresultwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextGrammarCheck__LanguageToolResultWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextGrammarCheck__LanguageToolResultWidget* k_textgrammarcheck__languagetoolresultwidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self TextGrammarCheck__LanguageToolResultWidget*

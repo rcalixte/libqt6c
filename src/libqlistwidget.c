@@ -375,9 +375,8 @@ void q_listwidget_insert_items(void* self, int row, const char* labels[static 1]
         fprintf(stderr, "Failed to allocate memory for string list in q_listwidget_insert_items\n");
         abort();
     }
-    for (size_t i = 0; i < labels_len; ++i) {
+    for (size_t i = 0; i < labels_len; ++i)
         labels_qstr[i] = qstring(labels[i]);
-    }
     libqt_list labels_list = qlist(labels_qstr, labels_len);
     QListWidget_InsertItems((QListWidget*)self, row, labels_list);
     free(labels_qstr);
@@ -398,9 +397,8 @@ void q_listwidget_add_items(void* self, const char* labels[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_listwidget_add_items\n");
         abort();
     }
-    for (size_t i = 0; i < labels_len; ++i) {
+    for (size_t i = 0; i < labels_len; ++i)
         labels_qstr[i] = qstring(labels[i]);
-    }
     libqt_list labels_list = qlist(labels_qstr, labels_len);
     QListWidget_AddItems((QListWidget*)self, labels_list);
     free(labels_qstr);
@@ -635,11 +633,9 @@ const char** q_listwidget_mime_types(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -658,11 +654,9 @@ const char** q_listwidget_super_mime_types(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1260,6 +1254,14 @@ QRect* q_listwidget_frame_rect(void* self) {
 
 void q_listwidget_set_frame_rect(void* self, void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
+}
+
+QPaintDevice* q_listwidget_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+QListWidget* q_listwidget_from_q_paint_device(void* _qpaintdevice) {
+    return (QListWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t q_listwidget_win_id(void* self) {
@@ -2506,11 +2508,9 @@ const char** q_listwidget_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -2588,47 +2588,47 @@ void q_listwidget_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 bool q_listwidget_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(q_listwidget_as_q_paint_device(self));
 }
 
 int32_t q_listwidget_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(q_listwidget_as_q_paint_device(self));
 }
 
 int32_t q_listwidget_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(q_listwidget_as_q_paint_device(self));
 }
 
 int32_t q_listwidget_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(q_listwidget_as_q_paint_device(self));
 }
 
 int32_t q_listwidget_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(q_listwidget_as_q_paint_device(self));
 }
 
 int32_t q_listwidget_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(q_listwidget_as_q_paint_device(self));
 }
 
 int32_t q_listwidget_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(q_listwidget_as_q_paint_device(self));
 }
 
 double q_listwidget_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(q_listwidget_as_q_paint_device(self));
 }
 
 double q_listwidget_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(q_listwidget_as_q_paint_device(self));
 }
 
 int32_t q_listwidget_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(q_listwidget_as_q_paint_device(self));
 }
 
 int32_t q_listwidget_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(q_listwidget_as_q_paint_device(self));
 }
 
 double q_listwidget_device_pixel_ratio_f_scale() {

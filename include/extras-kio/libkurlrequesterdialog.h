@@ -261,6 +261,22 @@ void k_urlrequesterdialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KUrlRequesterDialog*
+///
+QPaintDevice* k_urlrequesterdialog_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KUrlRequesterDialog object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KUrlRequesterDialog* k_urlrequesterdialog_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KUrlRequesterDialog*

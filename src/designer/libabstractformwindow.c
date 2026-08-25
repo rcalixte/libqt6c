@@ -59,11 +59,9 @@ const char** q_designerformwindowinterface_check_contents(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -142,11 +140,9 @@ const char** q_designerformwindowinterface_include_hints(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -158,9 +154,8 @@ void q_designerformwindowinterface_set_include_hints(void* self, const char* inc
         fprintf(stderr, "Failed to allocate memory for string list in q_designerformwindowinterface_set_include_hints\n");
         abort();
     }
-    for (size_t i = 0; i < includeHints_len; ++i) {
+    for (size_t i = 0; i < includeHints_len; ++i)
         includeHints_qstr[i] = qstring(includeHints[i]);
-    }
     libqt_list includeHints_list = qlist(includeHints_qstr, includeHints_len);
     QDesignerFormWindowInterface_SetIncludeHints((QDesignerFormWindowInterface*)self, includeHints_list);
     free(includeHints_qstr);
@@ -184,11 +179,9 @@ const char** q_designerformwindowinterface_active_resource_file_paths(void* self
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -283,11 +276,9 @@ const char** q_designerformwindowinterface_resource_files(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -351,9 +342,8 @@ void q_designerformwindowinterface_activate_resource_file_paths(void* self, cons
         fprintf(stderr, "Failed to allocate memory for string list in q_designerformwindowinterface_activate_resource_file_paths\n");
         abort();
     }
-    for (size_t i = 0; i < paths_len; ++i) {
+    for (size_t i = 0; i < paths_len; ++i)
         paths_qstr[i] = qstring(paths[i]);
-    }
     libqt_list paths_list = qlist(paths_qstr, paths_len);
     QDesignerFormWindowInterface_ActivateResourceFilePaths((QDesignerFormWindowInterface*)self, paths_list);
     free(paths_qstr);
@@ -492,12 +482,19 @@ void q_designerformwindowinterface_activate_resource_file_paths2(void* self, con
         fprintf(stderr, "Failed to allocate memory for string list in q_designerformwindowinterface_activate_resource_file_paths2\n");
         abort();
     }
-    for (size_t i = 0; i < paths_len; ++i) {
+    for (size_t i = 0; i < paths_len; ++i)
         paths_qstr[i] = qstring(paths[i]);
-    }
     libqt_list paths_list = qlist(paths_qstr, paths_len);
     QDesignerFormWindowInterface_ActivateResourceFilePaths2((QDesignerFormWindowInterface*)self, paths_list, errorCount);
     free(paths_qstr);
+}
+
+QPaintDevice* q_designerformwindowinterface_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+QDesignerFormWindowInterface* q_designerformwindowinterface_from_q_paint_device(void* _qpaintdevice) {
+    return (QDesignerFormWindowInterface*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 int32_t q_designerformwindowinterface_dev_type(void* self) {
@@ -1780,11 +1777,9 @@ const char** q_designerformwindowinterface_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1862,47 +1857,47 @@ void q_designerformwindowinterface_on_destroyed1(void* self, void (*callback)(vo
 }
 
 bool q_designerformwindowinterface_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(q_designerformwindowinterface_as_q_paint_device(self));
 }
 
 int32_t q_designerformwindowinterface_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(q_designerformwindowinterface_as_q_paint_device(self));
 }
 
 int32_t q_designerformwindowinterface_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(q_designerformwindowinterface_as_q_paint_device(self));
 }
 
 int32_t q_designerformwindowinterface_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(q_designerformwindowinterface_as_q_paint_device(self));
 }
 
 int32_t q_designerformwindowinterface_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(q_designerformwindowinterface_as_q_paint_device(self));
 }
 
 int32_t q_designerformwindowinterface_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(q_designerformwindowinterface_as_q_paint_device(self));
 }
 
 int32_t q_designerformwindowinterface_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(q_designerformwindowinterface_as_q_paint_device(self));
 }
 
 double q_designerformwindowinterface_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(q_designerformwindowinterface_as_q_paint_device(self));
 }
 
 double q_designerformwindowinterface_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(q_designerformwindowinterface_as_q_paint_device(self));
 }
 
 int32_t q_designerformwindowinterface_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(q_designerformwindowinterface_as_q_paint_device(self));
 }
 
 int32_t q_designerformwindowinterface_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(q_designerformwindowinterface_as_q_paint_device(self));
 }
 
 double q_designerformwindowinterface_device_pixel_ratio_f_scale() {

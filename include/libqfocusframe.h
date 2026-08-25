@@ -231,6 +231,22 @@ const char* q_focusframe_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QFocusFrame*
+///
+QPaintDevice* q_focusframe_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QFocusFrame object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QFocusFrame* q_focusframe_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QFocusFrame*

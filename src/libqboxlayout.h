@@ -690,6 +690,22 @@ void q_boxlayout_insert_layout3(void* self, int index, void* layout, int stretch
 
 /// Inherited from QLayout
 ///
+/// Upcasts to a QLayoutItem object
+///
+/// @param self QBoxLayout*
+///
+QLayoutItem* q_boxlayout_as_q_layout_item(void* self);
+
+/// Inherited from QLayout
+///
+/// Downcasts to a QBoxLayout object
+///
+/// @param _qlayoutitem QLayoutItem*
+///
+QBoxLayout* q_boxlayout_from_q_layout_item(void* _qlayoutitem);
+
+/// Inherited from QLayout
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#setContentsMargins)
 ///
 /// @param self QBoxLayout*
@@ -2567,6 +2583,22 @@ void q_hboxlayout_insert_widget4(void* self, int index, void* widget, int stretc
 /// @param stretch int
 ///
 void q_hboxlayout_insert_layout3(void* self, int index, void* layout, int stretch);
+
+/// Inherited from QLayout
+///
+/// Upcasts to a QLayoutItem object
+///
+/// @param self QHBoxLayout*
+///
+QLayoutItem* q_hboxlayout_as_q_layout_item(void* self);
+
+/// Inherited from QLayout
+///
+/// Downcasts to a QHBoxLayout object
+///
+/// @param _qlayoutitem QLayoutItem*
+///
+QHBoxLayout* q_hboxlayout_from_q_layout_item(void* _qlayoutitem);
 
 /// Inherited from QLayout
 ///
@@ -4936,6 +4968,22 @@ void q_vboxlayout_insert_widget4(void* self, int index, void* widget, int stretc
 /// @param stretch int
 ///
 void q_vboxlayout_insert_layout3(void* self, int index, void* layout, int stretch);
+
+/// Inherited from QLayout
+///
+/// Upcasts to a QLayoutItem object
+///
+/// @param self QVBoxLayout*
+///
+QLayoutItem* q_vboxlayout_as_q_layout_item(void* self);
+
+/// Inherited from QLayout
+///
+/// Downcasts to a QVBoxLayout object
+///
+/// @param _qlayoutitem QLayoutItem*
+///
+QVBoxLayout* q_vboxlayout_from_q_layout_item(void* _qlayoutitem);
 
 /// Inherited from QLayout
 ///

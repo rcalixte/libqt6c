@@ -232,9 +232,8 @@ KCompletion* k_completionbase_comp_obj(void* self);
 /// // Example for freeing the returned map of type:
 /// // libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence*
 /// for (size_t i = 0; i < map.len; ++i) {
-///     for (size_t j = 0; ((QKeySequence**)map.values)[i][j] != NULL; j++) {
+///     for (size_t j = 0; ((QKeySequence**)map.values)[i][j] != NULL; j++)
 ///         free(((QKeySequence**)map.values)[i][j]);
-///     }
 ///     free(((QKeySequence*)map.values)[i]);
 /// }
 /// free(map.keys);

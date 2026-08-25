@@ -4,6 +4,10 @@
 #include "libksharedconfig.hpp"
 #include "libksharedconfig.h"
 
+QSharedData* k_sharedconfig_as_q_shared_data(void* self) {
+    return KSharedConfig_AsQSharedData((KSharedConfig*)self);
+}
+
 int32_t k_sharedconfig_location_type(void* self) {
     return KConfig_LocationType((KConfig*)self);
 }
@@ -58,9 +62,8 @@ void k_sharedconfig_add_config_sources(void* self, const char* sources[static 1]
         fprintf(stderr, "Failed to allocate memory for string list in k_sharedconfig_add_config_sources\n");
         abort();
     }
-    for (size_t i = 0; i < sources_len; ++i) {
+    for (size_t i = 0; i < sources_len; ++i)
         sources_qstr[i] = qstring(sources[i]);
-    }
     libqt_list sources_list = qlist(sources_qstr, sources_len);
     KConfig_AddConfigSources((KConfig*)self, sources_list);
     free(sources_qstr);
@@ -76,11 +79,9 @@ const char** k_sharedconfig_additional_config_sources(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -118,11 +119,9 @@ const char** k_sharedconfig_group_list(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -274,4 +273,8 @@ bool k_sharedconfig_is_group_immutable(void* self, const char* group) {
 
 void k_sharedconfig_delete_group2(void* self, const char* group, int32_t flags) {
     KConfigBase_DeleteGroup2((KConfigBase*)self, qstring(group), flags);
+}
+
+void k_sharedconfig_delete(void* self) {
+    KSharedConfig_Delete((KSharedConfig*)(self));
 }

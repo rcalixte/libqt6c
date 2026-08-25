@@ -97,9 +97,8 @@ void k_attica__project_set_developers(void* self, const char* developers[static 
         fprintf(stderr, "Failed to allocate memory for string list in k_attica__project_set_developers\n");
         abort();
     }
-    for (size_t i = 0; i < developers_len; ++i) {
+    for (size_t i = 0; i < developers_len; ++i)
         developers_qstr[i] = qstring(developers[i]);
-    }
     libqt_list developers_list = qlist(developers_qstr, developers_len);
     Attica__Project_SetDevelopers((Attica__Project*)self, developers_list);
     free(developers_qstr);
@@ -115,11 +114,9 @@ const char** k_attica__project_developers(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

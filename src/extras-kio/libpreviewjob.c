@@ -24,9 +24,8 @@ KIO__PreviewJob* k_io__previewjob_new2(void* items, void* size, const char* enab
         fprintf(stderr, "Failed to allocate memory for string list in k_io__previewjob_new2\n");
         abort();
     }
-    for (size_t i = 0; i < enabledPlugins_len; ++i) {
+    for (size_t i = 0; i < enabledPlugins_len; ++i)
         enabledPlugins_qstr[i] = qstring(enabledPlugins[i]);
-    }
     libqt_list enabledPlugins_list = qlist(enabledPlugins_qstr, enabledPlugins_len);
 
     KIO__PreviewJob* _out = KIO__PreviewJob_New2((KFileItemList*)items, (QSize*)size, enabledPlugins_list);
@@ -123,11 +122,9 @@ const char** k_io__previewjob_available_plugins() {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -147,11 +144,9 @@ const char** k_io__previewjob_default_plugins() {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -166,11 +161,9 @@ const char** k_io__previewjob_supported_mime_types() {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -243,11 +236,9 @@ const char** k_io__previewjob_detailed_error_strings(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -357,11 +348,9 @@ const char** k_io__previewjob_detailed_error_strings1(void* self, void* reqUrl) 
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -376,11 +365,9 @@ const char** k_io__previewjob_detailed_error_strings2(void* self, void* reqUrl, 
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -642,11 +629,9 @@ const char** k_io__previewjob_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1182,9 +1167,8 @@ KIO__PreviewJob* k_io_file_preview(void* items, void* size, const char* enabledP
         fprintf(stderr, "Failed to allocate memory for string list in k_io_file_preview\n");
         abort();
     }
-    for (size_t i = 0; i < enabledPlugins_len; ++i) {
+    for (size_t i = 0; i < enabledPlugins_len; ++i)
         enabledPlugins_qstr[i] = qstring(enabledPlugins[i]);
-    }
     libqt_list enabledPlugins_list = qlist(enabledPlugins_qstr, enabledPlugins_len);
     KIO__PreviewJob* _out = KIO_FilePreview((KFileItemList*)items, (QSize*)size, enabledPlugins_list);
     free(enabledPlugins_qstr);

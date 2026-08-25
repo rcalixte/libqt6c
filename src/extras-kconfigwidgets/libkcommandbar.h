@@ -264,6 +264,22 @@ void k_commandbar_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KCommandBar*
+///
+QPaintDevice* k_commandbar_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KCommandBar object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KCommandBar* k_commandbar_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KCommandBar*

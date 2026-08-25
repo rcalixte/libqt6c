@@ -259,6 +259,22 @@ void k_languagebutton_insert_separator1(void* self, int index);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KLanguageButton*
+///
+QPaintDevice* k_languagebutton_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KLanguageButton object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KLanguageButton* k_languagebutton_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KLanguageButton*

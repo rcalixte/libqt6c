@@ -104,9 +104,8 @@ void q_sciapis_update_auto_completion_list(void* self, const char* context[stati
         fprintf(stderr, "Failed to allocate memory for string list in q_sciapis_update_auto_completion_list\n");
         abort();
     }
-    for (size_t i = 0; i < context_len; ++i) {
+    for (size_t i = 0; i < context_len; ++i)
         context_qstr[i] = qstring(context[i]);
-    }
     libqt_list context_list = qlist(context_qstr, context_len);
     size_t list_len = libqt_strv_length(list);
     libqt_string* list_qstr = (libqt_string*)malloc(list_len * sizeof(libqt_string));
@@ -114,9 +113,8 @@ void q_sciapis_update_auto_completion_list(void* self, const char* context[stati
         fprintf(stderr, "Failed to allocate memory for string list in q_sciapis_update_auto_completion_list\n");
         abort();
     }
-    for (size_t i = 0; i < list_len; ++i) {
+    for (size_t i = 0; i < list_len; ++i)
         list_qstr[i] = qstring(list[i]);
-    }
     libqt_list list_list = qlist(list_qstr, list_len);
     QsciAPIs_UpdateAutoCompletionList((QsciAPIs*)self, context_list, list_list);
     free(context_qstr);
@@ -135,9 +133,8 @@ void q_sciapis_super_update_auto_completion_list(void* self, const char* context
         fprintf(stderr, "Failed to allocate memory for string list in q_sciapis_update_auto_completion_list\n");
         abort();
     }
-    for (size_t i = 0; i < context_len; ++i) {
+    for (size_t i = 0; i < context_len; ++i)
         context_qstr[i] = qstring(context[i]);
-    }
     libqt_list context_list = qlist(context_qstr, context_len);
     size_t list_len = libqt_strv_length(list);
     libqt_string* list_qstr = (libqt_string*)malloc(list_len * sizeof(libqt_string));
@@ -145,9 +142,8 @@ void q_sciapis_super_update_auto_completion_list(void* self, const char* context
         fprintf(stderr, "Failed to allocate memory for string list in q_sciapis_update_auto_completion_list\n");
         abort();
     }
-    for (size_t i = 0; i < list_len; ++i) {
+    for (size_t i = 0; i < list_len; ++i)
         list_qstr[i] = qstring(list[i]);
-    }
     libqt_list list_list = qlist(list_qstr, list_len);
     QsciAPIs_SuperUpdateAutoCompletionList((QsciAPIs*)self, context_list, list_list);
 }
@@ -171,9 +167,8 @@ const char** q_sciapis_call_tips(void* self, const char* context[static 1], int 
         fprintf(stderr, "Failed to allocate memory for string list in q_sciapis_call_tips\n");
         abort();
     }
-    for (size_t i = 0; i < context_len; ++i) {
+    for (size_t i = 0; i < context_len; ++i)
         context_qstr[i] = qstring(context[i]);
-    }
     libqt_list context_list = qlist(context_qstr, context_len);
     libqt_list _arr = QsciAPIs_CallTips((QsciAPIs*)self, context_list, commas, style, shifts);
     free(context_qstr);
@@ -185,11 +180,9 @@ const char** q_sciapis_call_tips(void* self, const char* context[static 1], int 
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -205,9 +198,8 @@ const char** q_sciapis_super_call_tips(void* self, const char* context[static 1]
         fprintf(stderr, "Failed to allocate memory for string list in q_sciapis_call_tips\n");
         abort();
     }
-    for (size_t i = 0; i < context_len; ++i) {
+    for (size_t i = 0; i < context_len; ++i)
         context_qstr[i] = qstring(context[i]);
-    }
     libqt_list context_list = qlist(context_qstr, context_len);
     libqt_list _arr = QsciAPIs_SuperCallTips((QsciAPIs*)self, context_list, commas, style, shifts);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
@@ -218,11 +210,9 @@ const char** q_sciapis_super_call_tips(void* self, const char* context[static 1]
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -249,11 +239,9 @@ const char** q_sciapis_installed_a_p_i_files(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -442,11 +430,9 @@ const char** q_sciapis_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

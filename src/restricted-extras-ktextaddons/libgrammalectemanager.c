@@ -92,11 +92,9 @@ const char** k_textgrammarcheck__grammalectemanager_options(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -108,9 +106,8 @@ void k_textgrammarcheck__grammalectemanager_set_options(void* self, const char* 
         fprintf(stderr, "Failed to allocate memory for string list in k_textgrammarcheck__grammalectemanager_set_options\n");
         abort();
     }
-    for (size_t i = 0; i < saveOptions_len; ++i) {
+    for (size_t i = 0; i < saveOptions_len; ++i)
         saveOptions_qstr[i] = qstring(saveOptions[i]);
-    }
     libqt_list saveOptions_list = qlist(saveOptions_qstr, saveOptions_len);
     TextGrammarCheck__GrammalecteManager_SetOptions((TextGrammarCheck__GrammalecteManager*)self, saveOptions_list);
     free(saveOptions_qstr);
@@ -268,11 +265,9 @@ const char** k_textgrammarcheck__grammalectemanager_dynamic_property_names(void*
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

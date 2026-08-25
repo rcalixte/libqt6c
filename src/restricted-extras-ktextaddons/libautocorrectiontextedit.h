@@ -1387,6 +1387,22 @@ void k_textautocorrectionwidgets__autocorrectiontextedit_set_frame_rect(void* se
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
+///
+QPaintDevice* k_textautocorrectionwidgets__autocorrectiontextedit_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextAutoCorrectionWidgets__AutoCorrectionTextEdit object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextAutoCorrectionWidgets__AutoCorrectionTextEdit* k_textautocorrectionwidgets__autocorrectiontextedit_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*

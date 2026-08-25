@@ -31,6 +31,18 @@ QWidget* q_widget_new2();
 ///
 QWidget* q_widget_new3(void* parent, int32_t f);
 
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QWidget*
+///
+QPaintDevice* q_widget_as_q_paint_device(void* self);
+
+/// Downcasts to a QWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QWidget* q_widget_from_q_paint_device(void* _qpaintdevice);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QWidget*

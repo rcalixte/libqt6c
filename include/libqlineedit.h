@@ -1263,6 +1263,22 @@ void q_lineedit_cursor_backward2(void* self, bool mark, int steps);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QLineEdit*
+///
+QPaintDevice* q_lineedit_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QLineEdit object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QLineEdit* q_lineedit_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QLineEdit*

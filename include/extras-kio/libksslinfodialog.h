@@ -247,6 +247,22 @@ void k_sslinfodialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KSslInfoDialog*
+///
+QPaintDevice* k_sslinfodialog_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KSslInfoDialog object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KSslInfoDialog* k_sslinfodialog_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KSslInfoDialog*

@@ -424,6 +424,14 @@ const char* q_buffer_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QIODevice
 ///
+/// Upcasts to a QIODeviceBase object
+///
+/// @param self QBuffer*
+///
+QIODeviceBase* q_buffer_as_q_i_o_device_base(void* self);
+
+/// Inherited from QIODevice
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#openMode)
 ///
 /// @param self QBuffer*

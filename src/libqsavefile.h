@@ -333,6 +333,14 @@ unsigned char* q_savefile_map3(void* self, int64_t offset, int64_t size, int32_t
 
 /// Inherited from QIODevice
 ///
+/// Upcasts to a QIODeviceBase object
+///
+/// @param self QSaveFile*
+///
+QIODeviceBase* q_savefile_as_q_i_o_device_base(void* self);
+
+/// Inherited from QIODevice
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#openMode)
 ///
 /// @param self QSaveFile*

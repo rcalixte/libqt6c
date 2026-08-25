@@ -192,6 +192,22 @@ const char* k_textedittexttospeech__texttospeechwidget_tr3(const char* s, const 
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextEditTextToSpeech__TextToSpeechWidget*
+///
+QPaintDevice* k_textedittexttospeech__texttospeechwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextEditTextToSpeech__TextToSpeechWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextEditTextToSpeech__TextToSpeechWidget* k_textedittexttospeech__texttospeechwidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self TextEditTextToSpeech__TextToSpeechWidget*

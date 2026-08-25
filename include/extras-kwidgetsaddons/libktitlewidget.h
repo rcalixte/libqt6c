@@ -336,6 +336,22 @@ void k_titlewidget_set_icon23(void* self, int32_t type, int32_t alignment);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KTitleWidget*
+///
+QPaintDevice* k_titlewidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KTitleWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KTitleWidget* k_titlewidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KTitleWidget*

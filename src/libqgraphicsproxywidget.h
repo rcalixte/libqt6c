@@ -991,6 +991,22 @@ const char* q_graphicsproxywidget_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QGraphicsWidget
 ///
+/// Upcasts to a QGraphicsLayoutItem object
+///
+/// @param self QGraphicsProxyWidget*
+///
+QGraphicsLayoutItem* q_graphicsproxywidget_as_q_graphics_layout_item(void* self);
+
+/// Inherited from QGraphicsWidget
+///
+/// Downcasts to a QGraphicsProxyWidget object
+///
+/// @param _qgraphicslayoutitem QGraphicsLayoutItem*
+///
+QGraphicsProxyWidget* q_graphicsproxywidget_from_q_graphics_layout_item(void* _qgraphicslayoutitem);
+
+/// Inherited from QGraphicsWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#layout)
 ///
 /// @param self QGraphicsProxyWidget*
@@ -1518,6 +1534,22 @@ void q_graphicsproxywidget_set_shortcut_auto_repeat2(void* self, int id, bool en
 /// @param on bool
 ///
 void q_graphicsproxywidget_set_attribute2(void* self, int32_t attribute, bool on);
+
+/// Inherited from QGraphicsObject
+///
+/// Upcasts to a QGraphicsItem object
+///
+/// @param self QGraphicsProxyWidget*
+///
+QGraphicsItem* q_graphicsproxywidget_as_q_graphics_item(void* self);
+
+/// Inherited from QGraphicsObject
+///
+/// Downcasts to a QGraphicsProxyWidget object
+///
+/// @param _qgraphicsitem QGraphicsItem*
+///
+QGraphicsProxyWidget* q_graphicsproxywidget_from_q_graphics_item(void* _qgraphicsitem);
 
 /// Inherited from QGraphicsObject
 ///

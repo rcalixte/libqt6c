@@ -209,6 +209,22 @@ const char* k_sonnet__configwidget_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self Sonnet__ConfigWidget*
+///
+QPaintDevice* k_sonnet__configwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a Sonnet__ConfigWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+Sonnet__ConfigWidget* k_sonnet__configwidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self Sonnet__ConfigWidget*

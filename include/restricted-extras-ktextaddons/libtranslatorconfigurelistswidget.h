@@ -128,6 +128,22 @@ const char* k_texttranslator__translatorconfigurelistswidget_tr3(const char* s, 
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextTranslator__TranslatorConfigureListsWidget*
+///
+QPaintDevice* k_texttranslator__translatorconfigurelistswidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextTranslator__TranslatorConfigureListsWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextTranslator__TranslatorConfigureListsWidget* k_texttranslator__translatorconfigurelistswidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self TextTranslator__TranslatorConfigureListsWidget*

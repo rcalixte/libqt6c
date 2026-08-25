@@ -63,11 +63,9 @@ const char** k_completion_substring_completion(void* self, const char* string) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -100,11 +98,9 @@ const char** k_completion_items(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -175,11 +171,9 @@ const char** k_completion_all_matches(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -194,11 +188,9 @@ const char** k_completion_all_matches2(void* self, const char* string) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -270,9 +262,8 @@ void k_completion_insert_items(void* self, const char* items[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_completion_insert_items\n");
         abort();
     }
-    for (size_t i = 0; i < items_len; ++i) {
+    for (size_t i = 0; i < items_len; ++i)
         items_qstr[i] = qstring(items[i]);
-    }
     libqt_list items_list = qlist(items_qstr, items_len);
     KCompletion_InsertItems((KCompletion*)self, items_list);
     free(items_qstr);
@@ -285,9 +276,8 @@ void k_completion_set_items(void* self, const char* itemList[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_completion_set_items\n");
         abort();
     }
-    for (size_t i = 0; i < itemList_len; ++i) {
+    for (size_t i = 0; i < itemList_len; ++i)
         itemList_qstr[i] = qstring(itemList[i]);
-    }
     libqt_list itemList_list = qlist(itemList_qstr, itemList_len);
     KCompletion_SetItems((KCompletion*)self, itemList_list);
     free(itemList_qstr);
@@ -304,9 +294,8 @@ void k_completion_super_set_items(void* self, const char* itemList[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_completion_set_items\n");
         abort();
     }
-    for (size_t i = 0; i < itemList_len; ++i) {
+    for (size_t i = 0; i < itemList_len; ++i)
         itemList_qstr[i] = qstring(itemList[i]);
-    }
     libqt_list itemList_list = qlist(itemList_qstr, itemList_len);
     KCompletion_SuperSetItems((KCompletion*)self, itemList_list);
 }
@@ -350,9 +339,8 @@ void k_completion_matches(void* self, const char* matchlist[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_completion_matches\n");
         abort();
     }
-    for (size_t i = 0; i < matchlist_len; ++i) {
+    for (size_t i = 0; i < matchlist_len; ++i)
         matchlist_qstr[i] = qstring(matchlist[i]);
-    }
     libqt_list matchlist_list = qlist(matchlist_qstr, matchlist_len);
     KCompletion_Matches((KCompletion*)self, matchlist_list);
     free(matchlist_qstr);
@@ -377,9 +365,8 @@ void k_completion_post_process_matches(void* self, const char* matchList[static 
         fprintf(stderr, "Failed to allocate memory for string list in k_completion_post_process_matches\n");
         abort();
     }
-    for (size_t i = 0; i < matchList_len; ++i) {
+    for (size_t i = 0; i < matchList_len; ++i)
         matchList_qstr[i] = qstring(matchList[i]);
-    }
     libqt_list matchList_list = qlist(matchList_qstr, matchList_len);
     KCompletion_PostProcessMatches((KCompletion*)self, matchList_list);
     free(matchList_qstr);
@@ -396,9 +383,8 @@ void k_completion_super_post_process_matches(void* self, const char* matchList[s
         fprintf(stderr, "Failed to allocate memory for string list in k_completion_post_process_matches\n");
         abort();
     }
-    for (size_t i = 0; i < matchList_len; ++i) {
+    for (size_t i = 0; i < matchList_len; ++i)
         matchList_qstr[i] = qstring(matchList[i]);
-    }
     libqt_list matchList_list = qlist(matchList_qstr, matchList_len);
     KCompletion_SuperPostProcessMatches((KCompletion*)self, matchList_list);
 }
@@ -571,11 +557,9 @@ const char** k_completion_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

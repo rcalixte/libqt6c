@@ -617,6 +617,22 @@ void q_abstractslider_super_set_repeat_action3(void* self, int32_t action, int t
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QAbstractSlider*
+///
+QPaintDevice* q_abstractslider_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QAbstractSlider object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QAbstractSlider* q_abstractslider_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QAbstractSlider*

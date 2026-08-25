@@ -32,9 +32,8 @@ int32_t k_filemetadata__usermetadata_set_tags(void* self, const char* tags[stati
         fprintf(stderr, "Failed to allocate memory for string list in k_filemetadata__usermetadata_set_tags\n");
         abort();
     }
-    for (size_t i = 0; i < tags_len; ++i) {
+    for (size_t i = 0; i < tags_len; ++i)
         tags_qstr[i] = qstring(tags[i]);
-    }
     libqt_list tags_list = qlist(tags_qstr, tags_len);
     int32_t _out = KFileMetaData__UserMetaData_SetTags((KFileMetaData__UserMetaData*)self, tags_list);
     free(tags_qstr);
@@ -51,11 +50,9 @@ const char** k_filemetadata__usermetadata_tags(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

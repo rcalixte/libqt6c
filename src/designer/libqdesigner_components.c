@@ -43,9 +43,8 @@ QDesignerFormEditorInterface* q_designercomponents_create_form_editor_with_plugi
         fprintf(stderr, "Failed to allocate memory for string list in q_designercomponents_create_form_editor_with_plugin_paths\n");
         abort();
     }
-    for (size_t i = 0; i < pluginPaths_len; ++i) {
+    for (size_t i = 0; i < pluginPaths_len; ++i)
         pluginPaths_qstr[i] = qstring(pluginPaths[i]);
-    }
     libqt_list pluginPaths_list = qlist(pluginPaths_qstr, pluginPaths_len);
     QDesignerFormEditorInterface* _out = QDesignerComponents_CreateFormEditorWithPluginPaths(pluginPaths_list, (QObject*)parent);
     free(pluginPaths_qstr);
@@ -90,11 +89,9 @@ const char** q_designercomponents_default_plugin_paths() {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

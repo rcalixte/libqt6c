@@ -1586,6 +1586,22 @@ void q_columnview_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QColumnView*
+///
+QPaintDevice* q_columnview_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QColumnView object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QColumnView* q_columnview_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QColumnView*

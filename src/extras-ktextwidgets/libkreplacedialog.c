@@ -34,9 +34,8 @@ KReplaceDialog* k_replacedialog_new4(void* parent, long options, const char* fin
         fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_new4\n");
         abort();
     }
-    for (size_t i = 0; i < findStrings_len; ++i) {
+    for (size_t i = 0; i < findStrings_len; ++i)
         findStrings_qstr[i] = qstring(findStrings[i]);
-    }
     libqt_list findStrings_list = qlist(findStrings_qstr, findStrings_len);
 
     KReplaceDialog* _out = KReplaceDialog_New4((QWidget*)parent, options, findStrings_list);
@@ -51,9 +50,8 @@ KReplaceDialog* k_replacedialog_new5(void* parent, long options, const char* fin
         fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_new5\n");
         abort();
     }
-    for (size_t i = 0; i < findStrings_len; ++i) {
+    for (size_t i = 0; i < findStrings_len; ++i)
         findStrings_qstr[i] = qstring(findStrings[i]);
-    }
     libqt_list findStrings_list = qlist(findStrings_qstr, findStrings_len);
     size_t replaceStrings_len = libqt_strv_length(replaceStrings);
     libqt_string* replaceStrings_qstr = (libqt_string*)malloc(replaceStrings_len * sizeof(libqt_string));
@@ -61,9 +59,8 @@ KReplaceDialog* k_replacedialog_new5(void* parent, long options, const char* fin
         fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_new5\n");
         abort();
     }
-    for (size_t i = 0; i < replaceStrings_len; ++i) {
+    for (size_t i = 0; i < replaceStrings_len; ++i)
         replaceStrings_qstr[i] = qstring(replaceStrings[i]);
-    }
     libqt_list replaceStrings_list = qlist(replaceStrings_qstr, replaceStrings_len);
 
     KReplaceDialog* _out = KReplaceDialog_New5((QWidget*)parent, options, findStrings_list, replaceStrings_list);
@@ -79,9 +76,8 @@ KReplaceDialog* k_replacedialog_new6(void* parent, long options, const char* fin
         fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_new6\n");
         abort();
     }
-    for (size_t i = 0; i < findStrings_len; ++i) {
+    for (size_t i = 0; i < findStrings_len; ++i)
         findStrings_qstr[i] = qstring(findStrings[i]);
-    }
     libqt_list findStrings_list = qlist(findStrings_qstr, findStrings_len);
     size_t replaceStrings_len = libqt_strv_length(replaceStrings);
     libqt_string* replaceStrings_qstr = (libqt_string*)malloc(replaceStrings_len * sizeof(libqt_string));
@@ -89,9 +85,8 @@ KReplaceDialog* k_replacedialog_new6(void* parent, long options, const char* fin
         fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_new6\n");
         abort();
     }
-    for (size_t i = 0; i < replaceStrings_len; ++i) {
+    for (size_t i = 0; i < replaceStrings_len; ++i)
         replaceStrings_qstr[i] = qstring(replaceStrings[i]);
-    }
     libqt_list replaceStrings_list = qlist(replaceStrings_qstr, replaceStrings_len);
 
     KReplaceDialog* _out = KReplaceDialog_New6((QWidget*)parent, options, findStrings_list, replaceStrings_list, hasSelection);
@@ -150,9 +145,8 @@ void k_replacedialog_set_replacement_history(void* self, const char* history[sta
         fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_set_replacement_history\n");
         abort();
     }
-    for (size_t i = 0; i < history_len; ++i) {
+    for (size_t i = 0; i < history_len; ++i)
         history_qstr[i] = qstring(history[i]);
-    }
     libqt_list history_list = qlist(history_qstr, history_len);
     KReplaceDialog_SetReplacementHistory((KReplaceDialog*)self, history_list);
     free(history_qstr);
@@ -168,11 +162,9 @@ const char** k_replacedialog_replacement_history(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -229,9 +221,8 @@ void k_replacedialog_set_find_history(void* self, const char* history[static 1])
         fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_set_find_history\n");
         abort();
     }
-    for (size_t i = 0; i < history_len; ++i) {
+    for (size_t i = 0; i < history_len; ++i)
         history_qstr[i] = qstring(history[i]);
-    }
     libqt_list history_list = qlist(history_qstr, history_len);
     KFindDialog_SetFindHistory((KFindDialog*)self, history_list);
     free(history_qstr);
@@ -247,11 +238,9 @@ const char** k_replacedialog_find_history(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -361,6 +350,14 @@ void k_replacedialog_rejected(void* self) {
 
 void k_replacedialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
+}
+
+QPaintDevice* k_replacedialog_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+KReplaceDialog* k_replacedialog_from_q_paint_device(void* _qpaintdevice) {
+    return (KReplaceDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t k_replacedialog_win_id(void* self) {
@@ -1611,11 +1608,9 @@ const char** k_replacedialog_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1693,47 +1688,47 @@ void k_replacedialog_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 bool k_replacedialog_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_replacedialog_as_q_paint_device(self));
 }
 
 int32_t k_replacedialog_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_replacedialog_as_q_paint_device(self));
 }
 
 int32_t k_replacedialog_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_replacedialog_as_q_paint_device(self));
 }
 
 int32_t k_replacedialog_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_replacedialog_as_q_paint_device(self));
 }
 
 int32_t k_replacedialog_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_replacedialog_as_q_paint_device(self));
 }
 
 int32_t k_replacedialog_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_replacedialog_as_q_paint_device(self));
 }
 
 int32_t k_replacedialog_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_replacedialog_as_q_paint_device(self));
 }
 
 double k_replacedialog_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_replacedialog_as_q_paint_device(self));
 }
 
 double k_replacedialog_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_replacedialog_as_q_paint_device(self));
 }
 
 int32_t k_replacedialog_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_replacedialog_as_q_paint_device(self));
 }
 
 int32_t k_replacedialog_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_replacedialog_as_q_paint_device(self));
 }
 
 double k_replacedialog_device_pixel_ratio_f_scale() {

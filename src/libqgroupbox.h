@@ -518,6 +518,22 @@ void q_groupbox_on_clicked1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QGroupBox*
+///
+QPaintDevice* q_groupbox_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QGroupBox object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QGroupBox* q_groupbox_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QGroupBox*

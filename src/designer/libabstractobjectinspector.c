@@ -104,6 +104,14 @@ const char* q_designerobjectinspectorinterface_tr3(const char* s, const char* c,
     return _ret;
 }
 
+QPaintDevice* q_designerobjectinspectorinterface_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+QDesignerObjectInspectorInterface* q_designerobjectinspectorinterface_from_q_paint_device(void* _qpaintdevice) {
+    return (QDesignerObjectInspectorInterface*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
+}
+
 uintptr_t q_designerobjectinspectorinterface_win_id(void* self) {
     return QWidget_WinId((QWidget*)self);
 }
@@ -1352,11 +1360,9 @@ const char** q_designerobjectinspectorinterface_dynamic_property_names(void* sel
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1434,47 +1440,47 @@ void q_designerobjectinspectorinterface_on_destroyed1(void* self, void (*callbac
 }
 
 bool q_designerobjectinspectorinterface_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(q_designerobjectinspectorinterface_as_q_paint_device(self));
 }
 
 int32_t q_designerobjectinspectorinterface_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(q_designerobjectinspectorinterface_as_q_paint_device(self));
 }
 
 int32_t q_designerobjectinspectorinterface_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(q_designerobjectinspectorinterface_as_q_paint_device(self));
 }
 
 int32_t q_designerobjectinspectorinterface_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(q_designerobjectinspectorinterface_as_q_paint_device(self));
 }
 
 int32_t q_designerobjectinspectorinterface_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(q_designerobjectinspectorinterface_as_q_paint_device(self));
 }
 
 int32_t q_designerobjectinspectorinterface_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(q_designerobjectinspectorinterface_as_q_paint_device(self));
 }
 
 int32_t q_designerobjectinspectorinterface_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(q_designerobjectinspectorinterface_as_q_paint_device(self));
 }
 
 double q_designerobjectinspectorinterface_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(q_designerobjectinspectorinterface_as_q_paint_device(self));
 }
 
 double q_designerobjectinspectorinterface_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(q_designerobjectinspectorinterface_as_q_paint_device(self));
 }
 
 int32_t q_designerobjectinspectorinterface_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(q_designerobjectinspectorinterface_as_q_paint_device(self));
 }
 
 int32_t q_designerobjectinspectorinterface_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(q_designerobjectinspectorinterface_as_q_paint_device(self));
 }
 
 double q_designerobjectinspectorinterface_device_pixel_ratio_f_scale() {

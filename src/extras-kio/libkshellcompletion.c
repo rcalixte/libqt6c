@@ -81,9 +81,8 @@ void k_shellcompletion_post_process_matches(void* self, const char* matches[stat
         fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_post_process_matches\n");
         abort();
     }
-    for (size_t i = 0; i < matches_len; ++i) {
+    for (size_t i = 0; i < matches_len; ++i)
         matches_qstr[i] = qstring(matches[i]);
-    }
     libqt_list matches_list = qlist(matches_qstr, matches_len);
     KShellCompletion_PostProcessMatches((KShellCompletion*)self, matches_list);
     free(matches_qstr);
@@ -100,9 +99,8 @@ void k_shellcompletion_super_post_process_matches(void* self, const char* matche
         fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_post_process_matches\n");
         abort();
     }
-    for (size_t i = 0; i < matches_len; ++i) {
+    for (size_t i = 0; i < matches_len; ++i)
         matches_qstr[i] = qstring(matches[i]);
-    }
     libqt_list matches_list = qlist(matches_qstr, matches_len);
     KShellCompletion_SuperPostProcessMatches((KShellCompletion*)self, matches_list);
 }
@@ -154,9 +152,8 @@ void k_shellcompletion_set_mime_type_filters(void* self, const char* mimeTypes[s
         fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_set_mime_type_filters\n");
         abort();
     }
-    for (size_t i = 0; i < mimeTypes_len; ++i) {
+    for (size_t i = 0; i < mimeTypes_len; ++i)
         mimeTypes_qstr[i] = qstring(mimeTypes[i]);
-    }
     libqt_list mimeTypes_list = qlist(mimeTypes_qstr, mimeTypes_len);
     KUrlCompletion_SetMimeTypeFilters((KUrlCompletion*)self, mimeTypes_list);
     free(mimeTypes_qstr);
@@ -172,11 +169,9 @@ const char** k_shellcompletion_mime_type_filters(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -198,11 +193,9 @@ const char** k_shellcompletion_substring_completion(void* self, const char* stri
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -217,11 +210,9 @@ const char** k_shellcompletion_items(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -256,11 +247,9 @@ const char** k_shellcompletion_all_matches(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -275,11 +264,9 @@ const char** k_shellcompletion_all_matches2(void* self, const char* string) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -321,9 +308,8 @@ void k_shellcompletion_insert_items(void* self, const char* items[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_insert_items\n");
         abort();
     }
-    for (size_t i = 0; i < items_len; ++i) {
+    for (size_t i = 0; i < items_len; ++i)
         items_qstr[i] = qstring(items[i]);
-    }
     libqt_list items_list = qlist(items_qstr, items_len);
     KCompletion_InsertItems((KCompletion*)self, items_list);
     free(items_qstr);
@@ -356,9 +342,8 @@ void k_shellcompletion_matches(void* self, const char* matchlist[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_matches\n");
         abort();
     }
-    for (size_t i = 0; i < matchlist_len; ++i) {
+    for (size_t i = 0; i < matchlist_len; ++i)
         matchlist_qstr[i] = qstring(matchlist[i]);
-    }
     libqt_list matchlist_list = qlist(matchlist_qstr, matchlist_len);
     KCompletion_Matches((KCompletion*)self, matchlist_list);
     free(matchlist_qstr);
@@ -506,11 +491,9 @@ const char** k_shellcompletion_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -780,9 +763,8 @@ void k_shellcompletion_set_items(void* self, const char* itemList[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_set_items\n");
         abort();
     }
-    for (size_t i = 0; i < itemList_len; ++i) {
+    for (size_t i = 0; i < itemList_len; ++i)
         itemList_qstr[i] = qstring(itemList[i]);
-    }
     libqt_list itemList_list = qlist(itemList_qstr, itemList_len);
     KShellCompletion_SetItems((KShellCompletion*)self, itemList_list);
     free(itemList_qstr);
@@ -795,9 +777,8 @@ void k_shellcompletion_super_set_items(void* self, const char* itemList[static 1
         fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_set_items\n");
         abort();
     }
-    for (size_t i = 0; i < itemList_len; ++i) {
+    for (size_t i = 0; i < itemList_len; ++i)
         itemList_qstr[i] = qstring(itemList[i]);
-    }
     libqt_list itemList_list = qlist(itemList_qstr, itemList_len);
     KShellCompletion_SuperSetItems((KShellCompletion*)self, itemList_list);
     free(itemList_qstr);

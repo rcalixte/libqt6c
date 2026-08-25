@@ -103,6 +103,12 @@ QDBusPendingCallWatcher* q_dbuspendingcallwatcher_new(void* call);
 ///
 QDBusPendingCallWatcher* q_dbuspendingcallwatcher_new2(void* call, void* parent);
 
+/// Upcasts to a QDBusPendingCall object
+///
+/// @param self QDBusPendingCallWatcher*
+///
+QDBusPendingCall* q_dbuspendingcallwatcher_as_q_d_bus_pending_call(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QDBusPendingCallWatcher*

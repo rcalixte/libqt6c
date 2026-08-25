@@ -2206,6 +2206,18 @@ QGraphicsObject* q_graphicsobject_new();
 ///
 QGraphicsObject* q_graphicsobject_new2(void* parent);
 
+/// Upcasts to a QGraphicsItem object
+///
+/// @param self QGraphicsObject*
+///
+QGraphicsItem* q_graphicsobject_as_q_graphics_item(void* self);
+
+/// Downcasts to a QGraphicsObject object
+///
+/// @param _qgraphicsitem QGraphicsItem*
+///
+QGraphicsObject* q_graphicsobject_from_q_graphics_item(void* _qgraphicsitem);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QGraphicsObject*
@@ -26934,6 +26946,22 @@ const char* q_graphicstextitem_tr2(const char* s, const char* c);
 /// @param n int
 ///
 const char* q_graphicstextitem_tr3(const char* s, const char* c, int n);
+
+/// Inherited from QGraphicsObject
+///
+/// Upcasts to a QGraphicsItem object
+///
+/// @param self QGraphicsTextItem*
+///
+QGraphicsItem* q_graphicstextitem_as_q_graphics_item(void* self);
+
+/// Inherited from QGraphicsObject
+///
+/// Downcasts to a QGraphicsTextItem object
+///
+/// @param _qgraphicsitem QGraphicsItem*
+///
+QGraphicsTextItem* q_graphicstextitem_from_q_graphics_item(void* _qgraphicsitem);
 
 /// Inherited from QGraphicsObject
 ///

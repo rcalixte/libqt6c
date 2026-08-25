@@ -247,11 +247,9 @@ const char** k_texteditor__document_text_lines(void* self, void* range, bool blo
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -314,9 +312,8 @@ bool k_texteditor__document_set_text2(void* self, const char* text[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_set_text2\n");
         abort();
     }
-    for (size_t i = 0; i < text_len; ++i) {
+    for (size_t i = 0; i < text_len; ++i)
         text_qstr[i] = qstring(text[i]);
-    }
     libqt_list text_list = qlist(text_qstr, text_len);
     bool _out = KTextEditor__Document_SetText2((KTextEditor__Document*)self, text_list);
     free(text_qstr);
@@ -338,9 +335,8 @@ bool k_texteditor__document_insert_text2(void* self, void* position, const char*
         fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_insert_text2\n");
         abort();
     }
-    for (size_t i = 0; i < text_len; ++i) {
+    for (size_t i = 0; i < text_len; ++i)
         text_qstr[i] = qstring(text[i]);
-    }
     libqt_list text_list = qlist(text_qstr, text_len);
     bool _out = KTextEditor__Document_InsertText2((KTextEditor__Document*)self, (KTextEditor__Cursor*)position, text_list, block);
     free(text_qstr);
@@ -358,9 +354,8 @@ bool k_texteditor__document_replace_text2(void* self, void* range, const char* t
         fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_replace_text2\n");
         abort();
     }
-    for (size_t i = 0; i < text_len; ++i) {
+    for (size_t i = 0; i < text_len; ++i)
         text_qstr[i] = qstring(text[i]);
-    }
     libqt_list text_list = qlist(text_qstr, text_len);
     bool _out = KTextEditor__Document_ReplaceText2((KTextEditor__Document*)self, (KTextEditor__Range*)range, text_list, block);
     free(text_qstr);
@@ -382,9 +377,8 @@ bool k_texteditor__document_insert_lines(void* self, int line, const char* text[
         fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_insert_lines\n");
         abort();
     }
-    for (size_t i = 0; i < text_len; ++i) {
+    for (size_t i = 0; i < text_len; ++i)
         text_qstr[i] = qstring(text[i]);
-    }
     libqt_list text_list = qlist(text_qstr, text_len);
     bool _out = KTextEditor__Document_InsertLines((KTextEditor__Document*)self, line, text_list);
     free(text_qstr);
@@ -492,11 +486,9 @@ const char** k_texteditor__document_embedded_highlighting_modes(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -518,11 +510,9 @@ const char** k_texteditor__document_modes(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -537,11 +527,9 @@ const char** k_texteditor__document_highlighting_modes(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -686,11 +674,9 @@ const char** k_texteditor__document_config_keys(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -983,6 +969,14 @@ void k_texteditor__document_on_url_changed(void* self, void (*callback)(void*, v
     KParts__ReadOnlyPart_Connect_UrlChanged((KParts__ReadOnlyPart*)self, (intptr_t)callback);
 }
 
+KParts__PartBase* k_texteditor__document_as_k_parts___part_base(void* self) {
+    return KParts__Part_AsKParts__PartBase((KParts__Part*)self);
+}
+
+KTextEditor__Document* k_texteditor__document_from_k_parts___part_base(void* _kparts__partbase) {
+    return (KTextEditor__Document*)KParts__Part_FromKParts__PartBase((KParts__PartBase*)_kparts__partbase);
+}
+
 QWidget* k_texteditor__document_widget(void* self) {
     return KParts__Part_Widget((KParts__Part*)self);
 }
@@ -1165,11 +1159,9 @@ const char** k_texteditor__document_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1351,9 +1343,8 @@ const char* k_texteditor__document_find_most_recent_x_m_l_file(const char* files
         fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_find_most_recent_x_m_l_file\n");
         abort();
     }
-    for (size_t i = 0; i < files_len; ++i) {
+    for (size_t i = 0; i < files_len; ++i)
         files_qstr[i] = qstring(files[i]);
-    }
     libqt_list files_list = qlist(files_qstr, files_len);
     libqt_string _str = KXMLGUIClient_FindMostRecentXMLFile(files_list, qstring(doc));
     free(files_qstr);

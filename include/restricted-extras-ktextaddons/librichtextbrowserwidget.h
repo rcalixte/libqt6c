@@ -206,6 +206,22 @@ const char* k_textcustomeditor__richtextbrowserwidget_tr3(const char* s, const c
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextCustomEditor__RichTextBrowserWidget*
+///
+QPaintDevice* k_textcustomeditor__richtextbrowserwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextCustomEditor__RichTextBrowserWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextCustomEditor__RichTextBrowserWidget* k_textcustomeditor__richtextbrowserwidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self TextCustomEditor__RichTextBrowserWidget*

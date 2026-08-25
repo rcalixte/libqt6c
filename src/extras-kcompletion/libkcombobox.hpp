@@ -65,6 +65,8 @@ KComboBox* KComboBox_New(QWidget* parent);
 KComboBox* KComboBox_New2();
 KComboBox* KComboBox_New3(bool rw);
 KComboBox* KComboBox_New4(bool rw, QWidget* parent);
+KCompletionBase* KComboBox_AsKCompletionBase(KComboBox* self);
+KComboBox* KComboBox_FromKCompletionBase(KCompletionBase* _kcompletionbase);
 QMetaObject* KComboBox_MetaObject(const KComboBox* self);
 void* KComboBox_Metacast(KComboBox* self, const char* param1);
 int KComboBox_Metacall(KComboBox* self, int param1, int param2, void** param3);

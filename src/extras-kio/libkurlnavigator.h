@@ -760,6 +760,22 @@ char* k_urlnavigator_location_state1(void* self, int historyIndex);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KUrlNavigator*
+///
+QPaintDevice* k_urlnavigator_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KUrlNavigator object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KUrlNavigator* k_urlnavigator_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KUrlNavigator*

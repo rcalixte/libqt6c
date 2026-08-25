@@ -28,6 +28,14 @@ KParts__Part* k_parts__part_new3(void* parent, void* data) {
     return KParts__Part_New3((QObject*)parent, (KPluginMetaData*)data);
 }
 
+KParts__PartBase* k_parts__part_as_k_parts___part_base(void* self) {
+    return KParts__Part_AsKParts__PartBase((KParts__Part*)self);
+}
+
+KParts__Part* k_parts__part_from_k_parts___part_base(void* _kparts__partbase) {
+    return (KParts__Part*)KParts__Part_FromKParts__PartBase((KParts__PartBase*)_kparts__partbase);
+}
+
 const QMetaObject* k_parts__part_meta_object(void* self) {
     return KParts__Part_MetaObject((KParts__Part*)self);
 }
@@ -355,11 +363,9 @@ const char** k_parts__part_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -508,9 +514,8 @@ const char* k_parts__part_find_most_recent_x_m_l_file(const char* files[static 1
         fprintf(stderr, "Failed to allocate memory for string list in k_parts__part_find_most_recent_x_m_l_file\n");
         abort();
     }
-    for (size_t i = 0; i < files_len; ++i) {
+    for (size_t i = 0; i < files_len; ++i)
         files_qstr[i] = qstring(files[i]);
-    }
     libqt_list files_list = qlist(files_qstr, files_len);
     libqt_string _str = KXMLGUIClient_FindMostRecentXMLFile(files_list, qstring(doc));
     free(files_qstr);

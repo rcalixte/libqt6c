@@ -1269,6 +1269,22 @@ void q_combobox_set_item_data3(void* self, int index, void* value, int role);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QComboBox*
+///
+QPaintDevice* q_combobox_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QComboBox object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QComboBox* q_combobox_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QComboBox*
