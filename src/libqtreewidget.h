@@ -2940,6 +2940,22 @@ void q_treewidget_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QTreeWidget*
+///
+QPaintDevice* q_treewidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QTreeWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QTreeWidget* q_treewidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QTreeWidget*

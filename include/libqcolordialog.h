@@ -451,6 +451,22 @@ void q_colordialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QColorDialog*
+///
+QPaintDevice* q_colordialog_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QColorDialog object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QColorDialog* q_colordialog_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QColorDialog*

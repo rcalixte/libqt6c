@@ -513,6 +513,14 @@ void k_datetimeedit_set_time_list3(void* self, libqt_list /* of QTime* */ timeLi
     KDateTimeEdit_SetTimeList3((KDateTimeEdit*)self, timeList, qstring(minWarnMsg), qstring(maxWarnMsg));
 }
 
+QPaintDevice* k_datetimeedit_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+KDateTimeEdit* k_datetimeedit_from_q_paint_device(void* _qpaintdevice) {
+    return (KDateTimeEdit*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
+}
+
 uintptr_t k_datetimeedit_win_id(void* self) {
     return QWidget_WinId((QWidget*)self);
 }
@@ -1761,11 +1769,9 @@ const char** k_datetimeedit_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1843,47 +1849,47 @@ void k_datetimeedit_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 bool k_datetimeedit_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_datetimeedit_as_q_paint_device(self));
 }
 
 int32_t k_datetimeedit_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_datetimeedit_as_q_paint_device(self));
 }
 
 int32_t k_datetimeedit_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_datetimeedit_as_q_paint_device(self));
 }
 
 int32_t k_datetimeedit_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_datetimeedit_as_q_paint_device(self));
 }
 
 int32_t k_datetimeedit_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_datetimeedit_as_q_paint_device(self));
 }
 
 int32_t k_datetimeedit_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_datetimeedit_as_q_paint_device(self));
 }
 
 int32_t k_datetimeedit_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_datetimeedit_as_q_paint_device(self));
 }
 
 double k_datetimeedit_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_datetimeedit_as_q_paint_device(self));
 }
 
 double k_datetimeedit_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_datetimeedit_as_q_paint_device(self));
 }
 
 int32_t k_datetimeedit_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_datetimeedit_as_q_paint_device(self));
 }
 
 int32_t k_datetimeedit_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_datetimeedit_as_q_paint_device(self));
 }
 
 double k_datetimeedit_device_pixel_ratio_f_scale() {

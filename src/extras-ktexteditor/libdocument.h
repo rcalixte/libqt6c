@@ -1507,6 +1507,22 @@ void k_texteditor__document_on_url_changed(void* self, void (*callback)(void*, v
 
 /// Inherited from KParts::Part
 ///
+/// Upcasts to a KParts::PartBase object
+///
+/// @param self KTextEditor__Document*
+///
+KParts__PartBase* k_texteditor__document_as_k_parts___part_base(void* self);
+
+/// Inherited from KParts::Part
+///
+/// Downcasts to a KTextEditor__Document object
+///
+/// @param _kparts__partbase KParts__PartBase*
+///
+KTextEditor__Document* k_texteditor__document_from_k_parts___part_base(void* _kparts__partbase);
+
+/// Inherited from KParts::Part
+///
 /// [Upstream resources](https://api.kde.org/kparts-part.html#widget)
 ///
 /// @param self KTextEditor__Document*

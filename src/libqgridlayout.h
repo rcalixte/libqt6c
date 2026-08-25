@@ -766,6 +766,22 @@ void q_gridlayout_add_item6(void* self, void* item, int row, int column, int row
 
 /// Inherited from QLayout
 ///
+/// Upcasts to a QLayoutItem object
+///
+/// @param self QGridLayout*
+///
+QLayoutItem* q_gridlayout_as_q_layout_item(void* self);
+
+/// Inherited from QLayout
+///
+/// Downcasts to a QGridLayout object
+///
+/// @param _qlayoutitem QLayoutItem*
+///
+QGridLayout* q_gridlayout_from_q_layout_item(void* _qlayoutitem);
+
+/// Inherited from QLayout
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#setContentsMargins)
 ///
 /// @param self QGridLayout*

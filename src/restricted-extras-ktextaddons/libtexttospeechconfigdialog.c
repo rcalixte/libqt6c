@@ -123,6 +123,14 @@ void k_textedittexttospeech__texttospeechconfigdialog_on_rejected(void* self, vo
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
+QPaintDevice* k_textedittexttospeech__texttospeechconfigdialog_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+TextEditTextToSpeech__TextToSpeechConfigDialog* k_textedittexttospeech__texttospeechconfigdialog_from_q_paint_device(void* _qpaintdevice) {
+    return (TextEditTextToSpeech__TextToSpeechConfigDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
+}
+
 uintptr_t k_textedittexttospeech__texttospeechconfigdialog_win_id(void* self) {
     return QWidget_WinId((QWidget*)self);
 }
@@ -1371,11 +1379,9 @@ const char** k_textedittexttospeech__texttospeechconfigdialog_dynamic_property_n
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1453,47 +1459,47 @@ void k_textedittexttospeech__texttospeechconfigdialog_on_destroyed1(void* self, 
 }
 
 bool k_textedittexttospeech__texttospeechconfigdialog_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_textedittexttospeech__texttospeechconfigdialog_as_q_paint_device(self));
 }
 
 int32_t k_textedittexttospeech__texttospeechconfigdialog_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_textedittexttospeech__texttospeechconfigdialog_as_q_paint_device(self));
 }
 
 int32_t k_textedittexttospeech__texttospeechconfigdialog_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_textedittexttospeech__texttospeechconfigdialog_as_q_paint_device(self));
 }
 
 int32_t k_textedittexttospeech__texttospeechconfigdialog_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_textedittexttospeech__texttospeechconfigdialog_as_q_paint_device(self));
 }
 
 int32_t k_textedittexttospeech__texttospeechconfigdialog_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_textedittexttospeech__texttospeechconfigdialog_as_q_paint_device(self));
 }
 
 int32_t k_textedittexttospeech__texttospeechconfigdialog_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_textedittexttospeech__texttospeechconfigdialog_as_q_paint_device(self));
 }
 
 int32_t k_textedittexttospeech__texttospeechconfigdialog_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_textedittexttospeech__texttospeechconfigdialog_as_q_paint_device(self));
 }
 
 double k_textedittexttospeech__texttospeechconfigdialog_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_textedittexttospeech__texttospeechconfigdialog_as_q_paint_device(self));
 }
 
 double k_textedittexttospeech__texttospeechconfigdialog_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_textedittexttospeech__texttospeechconfigdialog_as_q_paint_device(self));
 }
 
 int32_t k_textedittexttospeech__texttospeechconfigdialog_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_textedittexttospeech__texttospeechconfigdialog_as_q_paint_device(self));
 }
 
 int32_t k_textedittexttospeech__texttospeechconfigdialog_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_textedittexttospeech__texttospeechconfigdialog_as_q_paint_device(self));
 }
 
 double k_textedittexttospeech__texttospeechconfigdialog_device_pixel_ratio_f_scale() {

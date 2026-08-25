@@ -61,11 +61,9 @@ const char** k_networkmounts_paths(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -77,9 +75,8 @@ void k_networkmounts_set_paths(void* self, const char* paths[static 1], int32_t 
         fprintf(stderr, "Failed to allocate memory for string list in k_networkmounts_set_paths\n");
         abort();
     }
-    for (size_t i = 0; i < paths_len; ++i) {
+    for (size_t i = 0; i < paths_len; ++i)
         paths_qstr[i] = qstring(paths[i]);
-    }
     libqt_list paths_list = qlist(paths_qstr, paths_len);
     KNetworkMounts_SetPaths((KNetworkMounts*)self, paths_list, type);
     free(paths_qstr);
@@ -136,11 +133,9 @@ const char** k_networkmounts_paths1(void* self, int32_t type) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -283,11 +278,9 @@ const char** k_networkmounts_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

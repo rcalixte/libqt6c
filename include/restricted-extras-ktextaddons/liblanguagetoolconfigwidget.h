@@ -141,6 +141,22 @@ const char* k_textgrammarcheck__languagetoolconfigwidget_tr3(const char* s, cons
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextGrammarCheck__LanguageToolConfigWidget*
+///
+QPaintDevice* k_textgrammarcheck__languagetoolconfigwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextGrammarCheck__LanguageToolConfigWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextGrammarCheck__LanguageToolConfigWidget* k_textgrammarcheck__languagetoolconfigwidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self TextGrammarCheck__LanguageToolConfigWidget*

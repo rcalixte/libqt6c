@@ -30,6 +30,18 @@ QWindow* q_window_new2(void* parent);
 ///
 QWindow* q_window_new3(void* screen);
 
+/// Upcasts to a QSurface object
+///
+/// @param self QWindow*
+///
+QSurface* q_window_as_q_surface(void* self);
+
+/// Downcasts to a QWindow object
+///
+/// @param _qsurface QSurface*
+///
+QWindow* q_window_from_q_surface(void* _qsurface);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QWindow*

@@ -71,9 +71,8 @@ void q_signon__authsession_mechanisms_available(void* self, const char* mechanis
         fprintf(stderr, "Failed to allocate memory for string list in q_signon__authsession_mechanisms_available\n");
         abort();
     }
-    for (size_t i = 0; i < mechanisms_len; ++i) {
+    for (size_t i = 0; i < mechanisms_len; ++i)
         mechanisms_qstr[i] = qstring(mechanisms[i]);
-    }
     libqt_list mechanisms_list = qlist(mechanisms_qstr, mechanisms_len);
     SignOn__AuthSession_MechanismsAvailable((SignOn__AuthSession*)self, mechanisms_list);
     free(mechanisms_qstr);
@@ -120,9 +119,8 @@ void q_signon__authsession_query_available_mechanisms1(void* self, const char* w
         fprintf(stderr, "Failed to allocate memory for string list in q_signon__authsession_query_available_mechanisms1\n");
         abort();
     }
-    for (size_t i = 0; i < wantedMechanisms_len; ++i) {
+    for (size_t i = 0; i < wantedMechanisms_len; ++i)
         wantedMechanisms_qstr[i] = qstring(wantedMechanisms[i]);
-    }
     libqt_list wantedMechanisms_list = qlist(wantedMechanisms_qstr, wantedMechanisms_len);
     SignOn__AuthSession_QueryAvailableMechanisms1((SignOn__AuthSession*)self, wantedMechanisms_list);
     free(wantedMechanisms_qstr);
@@ -282,11 +280,9 @@ const char** q_signon__authsession_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

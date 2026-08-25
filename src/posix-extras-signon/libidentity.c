@@ -121,9 +121,8 @@ void q_signon__identity_methods_available(void* self, const char* methods[static
         fprintf(stderr, "Failed to allocate memory for string list in q_signon__identity_methods_available\n");
         abort();
     }
-    for (size_t i = 0; i < methods_len; ++i) {
+    for (size_t i = 0; i < methods_len; ++i)
         methods_qstr[i] = qstring(methods[i]);
-    }
     libqt_list methods_list = qlist(methods_qstr, methods_len);
     SignOn__Identity_MethodsAvailable((SignOn__Identity*)self, methods_list);
     free(methods_qstr);
@@ -381,11 +380,9 @@ const char** q_signon__identity_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

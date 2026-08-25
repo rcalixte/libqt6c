@@ -361,6 +361,22 @@ void q_printpreviewwidget_zoom_out1(void* self, double zoom);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QPrintPreviewWidget*
+///
+QPaintDevice* q_printpreviewwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QPrintPreviewWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QPrintPreviewWidget* q_printpreviewwidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QPrintPreviewWidget*

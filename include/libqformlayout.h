@@ -788,6 +788,22 @@ const char* q_formlayout_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QLayout
 ///
+/// Upcasts to a QLayoutItem object
+///
+/// @param self QFormLayout*
+///
+QLayoutItem* q_formlayout_as_q_layout_item(void* self);
+
+/// Inherited from QLayout
+///
+/// Downcasts to a QFormLayout object
+///
+/// @param _qlayoutitem QLayoutItem*
+///
+QFormLayout* q_formlayout_from_q_layout_item(void* _qlayoutitem);
+
+/// Inherited from QLayout
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#setContentsMargins)
 ///
 /// @param self QFormLayout*

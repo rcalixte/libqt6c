@@ -25,6 +25,14 @@ TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter* k_textcustomeditor__p
     return TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_New2((TextCustomEditor__PlainTextEditor*)plainText, (QColor*)misspelledColor);
 }
 
+KSyntaxHighlighting__AbstractHighlighter* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_as_k_syntax_highlighting___abstract_highlighter(void* self) {
+    return TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_AsKSyntaxHighlighting__AbstractHighlighter((TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter*)self);
+}
+
+TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_from_k_syntax_highlighting___abstract_highlighter(void* _ksyntaxhighlighting__abstracthighlighter) {
+    return (TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter*)TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_FromKSyntaxHighlighting__AbstractHighlighter((KSyntaxHighlighting__AbstractHighlighter*)_ksyntaxhighlighting__abstracthighlighter);
+}
+
 void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_toggle_spell_highlighting(void* self, bool on) {
     TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_ToggleSpellHighlighting((TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter*)self, on);
 }
@@ -149,11 +157,9 @@ const char** k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_suggest
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -168,11 +174,9 @@ const char** k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_suggest
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -237,11 +241,9 @@ const char** k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_suggest
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -256,11 +258,9 @@ const char** k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_suggest
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -407,11 +407,9 @@ const char** k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_dynamic
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

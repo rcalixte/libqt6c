@@ -436,6 +436,22 @@ const char* q_stackedlayout_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QLayout
 ///
+/// Upcasts to a QLayoutItem object
+///
+/// @param self QStackedLayout*
+///
+QLayoutItem* q_stackedlayout_as_q_layout_item(void* self);
+
+/// Inherited from QLayout
+///
+/// Downcasts to a QStackedLayout object
+///
+/// @param _qlayoutitem QLayoutItem*
+///
+QStackedLayout* q_stackedlayout_from_q_layout_item(void* _qlayoutitem);
+
+/// Inherited from QLayout
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#setContentsMargins)
 ///
 /// @param self QStackedLayout*

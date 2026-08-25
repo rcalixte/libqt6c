@@ -102,9 +102,8 @@ QMetaObject* KXMessages_SuperMetaObject(const KXMessages* self) {
 // Auxiliary method to allow providing re-implementation
 void KXMessages_OnMetaObject(const KXMessages* self, intptr_t slot) {
     auto* vkxmessages = const_cast<VirtualKXMessages*>(dynamic_cast<const VirtualKXMessages*>(self));
-    if (vkxmessages && vkxmessages->isVirtualKXMessages) {
+    if (vkxmessages && vkxmessages->isVirtualKXMessages)
         vkxmessages->setKXMessages_MetaObject_Callback(reinterpret_cast<VirtualKXMessages::KXMessages_MetaObject_Callback>(slot));
-    }
 }
 
 // Base class handler implementation
@@ -121,9 +120,8 @@ void* KXMessages_SuperMetacast(KXMessages* self, const char* param1) {
 // Auxiliary method to allow providing re-implementation
 void KXMessages_OnMetacast(KXMessages* self, intptr_t slot) {
     auto* vkxmessages = dynamic_cast<VirtualKXMessages*>(self);
-    if (vkxmessages && vkxmessages->isVirtualKXMessages) {
+    if (vkxmessages && vkxmessages->isVirtualKXMessages)
         vkxmessages->setKXMessages_Metacast_Callback(reinterpret_cast<VirtualKXMessages::KXMessages_Metacast_Callback>(slot));
-    }
 }
 
 // Base class handler implementation
@@ -140,9 +138,8 @@ int KXMessages_SuperMetacall(KXMessages* self, int param1, int param2, void** pa
 // Auxiliary method to allow providing re-implementation
 void KXMessages_OnMetacall(KXMessages* self, intptr_t slot) {
     auto* vkxmessages = dynamic_cast<VirtualKXMessages*>(self);
-    if (vkxmessages && vkxmessages->isVirtualKXMessages) {
+    if (vkxmessages && vkxmessages->isVirtualKXMessages)
         vkxmessages->setKXMessages_Metacall_Callback(reinterpret_cast<VirtualKXMessages::KXMessages_Metacall_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -169,9 +166,8 @@ bool KXMessages_SuperEvent(KXMessages* self, QEvent* event) {
 // Auxiliary method to allow providing re-implementation
 void KXMessages_OnEvent(KXMessages* self, intptr_t slot) {
     auto* vkxmessages = dynamic_cast<VirtualKXMessages*>(self);
-    if (vkxmessages && vkxmessages->isVirtualKXMessages) {
+    if (vkxmessages && vkxmessages->isVirtualKXMessages)
         vkxmessages->setKXMessages_Event_Callback(reinterpret_cast<VirtualKXMessages::KXMessages_Event_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -198,9 +194,8 @@ bool KXMessages_SuperEventFilter(KXMessages* self, QObject* watched, QEvent* eve
 // Auxiliary method to allow providing re-implementation
 void KXMessages_OnEventFilter(KXMessages* self, intptr_t slot) {
     auto* vkxmessages = dynamic_cast<VirtualKXMessages*>(self);
-    if (vkxmessages && vkxmessages->isVirtualKXMessages) {
+    if (vkxmessages && vkxmessages->isVirtualKXMessages)
         vkxmessages->setKXMessages_EventFilter_Callback(reinterpret_cast<VirtualKXMessages::KXMessages_EventFilter_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -227,9 +222,8 @@ void KXMessages_SuperTimerEvent(KXMessages* self, QTimerEvent* event) {
 // Auxiliary method to allow providing re-implementation
 void KXMessages_OnTimerEvent(KXMessages* self, intptr_t slot) {
     auto* vkxmessages = dynamic_cast<VirtualKXMessages*>(self);
-    if (vkxmessages && vkxmessages->isVirtualKXMessages) {
+    if (vkxmessages && vkxmessages->isVirtualKXMessages)
         vkxmessages->setKXMessages_TimerEvent_Callback(reinterpret_cast<VirtualKXMessages::KXMessages_TimerEvent_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -256,9 +250,8 @@ void KXMessages_SuperChildEvent(KXMessages* self, QChildEvent* event) {
 // Auxiliary method to allow providing re-implementation
 void KXMessages_OnChildEvent(KXMessages* self, intptr_t slot) {
     auto* vkxmessages = dynamic_cast<VirtualKXMessages*>(self);
-    if (vkxmessages && vkxmessages->isVirtualKXMessages) {
+    if (vkxmessages && vkxmessages->isVirtualKXMessages)
         vkxmessages->setKXMessages_ChildEvent_Callback(reinterpret_cast<VirtualKXMessages::KXMessages_ChildEvent_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -285,9 +278,8 @@ void KXMessages_SuperCustomEvent(KXMessages* self, QEvent* event) {
 // Auxiliary method to allow providing re-implementation
 void KXMessages_OnCustomEvent(KXMessages* self, intptr_t slot) {
     auto* vkxmessages = dynamic_cast<VirtualKXMessages*>(self);
-    if (vkxmessages && vkxmessages->isVirtualKXMessages) {
+    if (vkxmessages && vkxmessages->isVirtualKXMessages)
         vkxmessages->setKXMessages_CustomEvent_Callback(reinterpret_cast<VirtualKXMessages::KXMessages_CustomEvent_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -314,9 +306,8 @@ void KXMessages_SuperConnectNotify(KXMessages* self, const QMetaMethod* signal) 
 // Auxiliary method to allow providing re-implementation
 void KXMessages_OnConnectNotify(KXMessages* self, intptr_t slot) {
     auto* vkxmessages = dynamic_cast<VirtualKXMessages*>(self);
-    if (vkxmessages && vkxmessages->isVirtualKXMessages) {
+    if (vkxmessages && vkxmessages->isVirtualKXMessages)
         vkxmessages->setKXMessages_ConnectNotify_Callback(reinterpret_cast<VirtualKXMessages::KXMessages_ConnectNotify_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -343,9 +334,8 @@ void KXMessages_SuperDisconnectNotify(KXMessages* self, const QMetaMethod* signa
 // Auxiliary method to allow providing re-implementation
 void KXMessages_OnDisconnectNotify(KXMessages* self, intptr_t slot) {
     auto* vkxmessages = dynamic_cast<VirtualKXMessages*>(self);
-    if (vkxmessages && vkxmessages->isVirtualKXMessages) {
+    if (vkxmessages && vkxmessages->isVirtualKXMessages)
         vkxmessages->setKXMessages_DisconnectNotify_Callback(reinterpret_cast<VirtualKXMessages::KXMessages_DisconnectNotify_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -372,9 +362,8 @@ QObject* KXMessages_SuperSender(const KXMessages* self) {
 // Auxiliary method to allow providing re-implementation
 void KXMessages_OnSender(const KXMessages* self, intptr_t slot) {
     auto* vkxmessages = const_cast<VirtualKXMessages*>(dynamic_cast<const VirtualKXMessages*>(self));
-    if (vkxmessages && vkxmessages->isVirtualKXMessages) {
+    if (vkxmessages && vkxmessages->isVirtualKXMessages)
         vkxmessages->setKXMessages_Sender_Callback(reinterpret_cast<VirtualKXMessages::KXMessages_Sender_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -401,9 +390,8 @@ int KXMessages_SuperSenderSignalIndex(const KXMessages* self) {
 // Auxiliary method to allow providing re-implementation
 void KXMessages_OnSenderSignalIndex(const KXMessages* self, intptr_t slot) {
     auto* vkxmessages = const_cast<VirtualKXMessages*>(dynamic_cast<const VirtualKXMessages*>(self));
-    if (vkxmessages && vkxmessages->isVirtualKXMessages) {
+    if (vkxmessages && vkxmessages->isVirtualKXMessages)
         vkxmessages->setKXMessages_SenderSignalIndex_Callback(reinterpret_cast<VirtualKXMessages::KXMessages_SenderSignalIndex_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -430,9 +418,8 @@ int KXMessages_SuperReceivers(const KXMessages* self, const char* signal) {
 // Auxiliary method to allow providing re-implementation
 void KXMessages_OnReceivers(const KXMessages* self, intptr_t slot) {
     auto* vkxmessages = const_cast<VirtualKXMessages*>(dynamic_cast<const VirtualKXMessages*>(self));
-    if (vkxmessages && vkxmessages->isVirtualKXMessages) {
+    if (vkxmessages && vkxmessages->isVirtualKXMessages)
         vkxmessages->setKXMessages_Receivers_Callback(reinterpret_cast<VirtualKXMessages::KXMessages_Receivers_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -459,9 +446,8 @@ bool KXMessages_SuperIsSignalConnected(const KXMessages* self, const QMetaMethod
 // Auxiliary method to allow providing re-implementation
 void KXMessages_OnIsSignalConnected(const KXMessages* self, intptr_t slot) {
     auto* vkxmessages = const_cast<VirtualKXMessages*>(dynamic_cast<const VirtualKXMessages*>(self));
-    if (vkxmessages && vkxmessages->isVirtualKXMessages) {
+    if (vkxmessages && vkxmessages->isVirtualKXMessages)
         vkxmessages->setKXMessages_IsSignalConnected_Callback(reinterpret_cast<VirtualKXMessages::KXMessages_IsSignalConnected_Callback>(slot));
-    }
 }
 
 void KXMessages_Delete(KXMessages* self) {

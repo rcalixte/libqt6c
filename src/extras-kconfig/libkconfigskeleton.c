@@ -209,9 +209,8 @@ KCoreConfigSkeleton__ItemStringList* k_configskeleton_add_item_string_list(void*
         fprintf(stderr, "Failed to allocate memory for string list in k_configskeleton_add_item_string_list\n");
         abort();
     }
-    for (size_t i = 0; i < reference_len; ++i) {
+    for (size_t i = 0; i < reference_len; ++i)
         reference_qstr[i] = qstring(reference[i]);
-    }
     libqt_list reference_list = qlist(reference_qstr, reference_len);
     KCoreConfigSkeleton__ItemStringList* _out = KCoreConfigSkeleton_AddItemStringList((KCoreConfigSkeleton*)self, qstring(name), reference_list);
     free(reference_qstr);
@@ -410,9 +409,8 @@ KCoreConfigSkeleton__ItemStringList* k_configskeleton_add_item_string_list3(void
         fprintf(stderr, "Failed to allocate memory for string list in k_configskeleton_add_item_string_list3\n");
         abort();
     }
-    for (size_t i = 0; i < reference_len; ++i) {
+    for (size_t i = 0; i < reference_len; ++i)
         reference_qstr[i] = qstring(reference[i]);
-    }
     libqt_list reference_list = qlist(reference_qstr, reference_len);
     size_t defaultValue_len = libqt_strv_length(defaultValue);
     libqt_string* defaultValue_qstr = (libqt_string*)malloc(defaultValue_len * sizeof(libqt_string));
@@ -420,9 +418,8 @@ KCoreConfigSkeleton__ItemStringList* k_configskeleton_add_item_string_list3(void
         fprintf(stderr, "Failed to allocate memory for string list in k_configskeleton_add_item_string_list3\n");
         abort();
     }
-    for (size_t i = 0; i < defaultValue_len; ++i) {
+    for (size_t i = 0; i < defaultValue_len; ++i)
         defaultValue_qstr[i] = qstring(defaultValue[i]);
-    }
     libqt_list defaultValue_list = qlist(defaultValue_qstr, defaultValue_len);
     KCoreConfigSkeleton__ItemStringList* _out = KCoreConfigSkeleton_AddItemStringList3((KCoreConfigSkeleton*)self, qstring(name), reference_list, defaultValue_list);
     free(reference_qstr);
@@ -437,9 +434,8 @@ KCoreConfigSkeleton__ItemStringList* k_configskeleton_add_item_string_list4(void
         fprintf(stderr, "Failed to allocate memory for string list in k_configskeleton_add_item_string_list4\n");
         abort();
     }
-    for (size_t i = 0; i < reference_len; ++i) {
+    for (size_t i = 0; i < reference_len; ++i)
         reference_qstr[i] = qstring(reference[i]);
-    }
     libqt_list reference_list = qlist(reference_qstr, reference_len);
     size_t defaultValue_len = libqt_strv_length(defaultValue);
     libqt_string* defaultValue_qstr = (libqt_string*)malloc(defaultValue_len * sizeof(libqt_string));
@@ -447,9 +443,8 @@ KCoreConfigSkeleton__ItemStringList* k_configskeleton_add_item_string_list4(void
         fprintf(stderr, "Failed to allocate memory for string list in k_configskeleton_add_item_string_list4\n");
         abort();
     }
-    for (size_t i = 0; i < defaultValue_len; ++i) {
+    for (size_t i = 0; i < defaultValue_len; ++i)
         defaultValue_qstr[i] = qstring(defaultValue[i]);
-    }
     libqt_list defaultValue_list = qlist(defaultValue_qstr, defaultValue_len);
     KCoreConfigSkeleton__ItemStringList* _out = KCoreConfigSkeleton_AddItemStringList4((KCoreConfigSkeleton*)self, qstring(name), reference_list, defaultValue_list, qstring(key));
     free(reference_qstr);
@@ -595,11 +590,9 @@ const char** k_configskeleton_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

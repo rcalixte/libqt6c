@@ -359,6 +359,14 @@ void q_boxlayout_insert_layout3(void* self, int index, void* layout, int stretch
     QBoxLayout_InsertLayout3((QBoxLayout*)self, index, (QLayout*)layout, stretch);
 }
 
+QLayoutItem* q_boxlayout_as_q_layout_item(void* self) {
+    return QLayout_AsQLayoutItem((QLayout*)self);
+}
+
+QBoxLayout* q_boxlayout_from_q_layout_item(void* _qlayoutitem) {
+    return (QBoxLayout*)QLayout_FromQLayoutItem((QLayoutItem*)_qlayoutitem);
+}
+
 void q_boxlayout_set_contents_margins(void* self, int left, int top, int right, int bottom) {
     QLayout_SetContentsMargins((QLayout*)self, left, top, right, bottom);
 }
@@ -601,11 +609,9 @@ const char** q_boxlayout_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -683,7 +689,7 @@ void q_boxlayout_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 int32_t q_boxlayout_alignment(void* self) {
-    return QLayoutItem_Alignment((QLayoutItem*)self);
+    return QLayoutItem_Alignment(q_boxlayout_as_q_layout_item(self));
 }
 
 QRect* q_boxlayout_geometry(void* self) {
@@ -1151,6 +1157,14 @@ void q_hboxlayout_insert_layout3(void* self, int index, void* layout, int stretc
     QBoxLayout_InsertLayout3((QBoxLayout*)self, index, (QLayout*)layout, stretch);
 }
 
+QLayoutItem* q_hboxlayout_as_q_layout_item(void* self) {
+    return QLayout_AsQLayoutItem((QLayout*)self);
+}
+
+QHBoxLayout* q_hboxlayout_from_q_layout_item(void* _qlayoutitem) {
+    return (QHBoxLayout*)QLayout_FromQLayoutItem((QLayoutItem*)_qlayoutitem);
+}
+
 void q_hboxlayout_set_contents_margins(void* self, int left, int top, int right, int bottom) {
     QLayout_SetContentsMargins((QLayout*)self, left, top, right, bottom);
 }
@@ -1393,11 +1407,9 @@ const char** q_hboxlayout_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1475,7 +1487,7 @@ void q_hboxlayout_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 int32_t q_hboxlayout_alignment(void* self) {
-    return QLayoutItem_Alignment((QLayoutItem*)self);
+    return QLayoutItem_Alignment(q_hboxlayout_as_q_layout_item(self));
 }
 
 void q_hboxlayout_add_item(void* self, void* param1) {
@@ -2123,6 +2135,14 @@ void q_vboxlayout_insert_layout3(void* self, int index, void* layout, int stretc
     QBoxLayout_InsertLayout3((QBoxLayout*)self, index, (QLayout*)layout, stretch);
 }
 
+QLayoutItem* q_vboxlayout_as_q_layout_item(void* self) {
+    return QLayout_AsQLayoutItem((QLayout*)self);
+}
+
+QVBoxLayout* q_vboxlayout_from_q_layout_item(void* _qlayoutitem) {
+    return (QVBoxLayout*)QLayout_FromQLayoutItem((QLayoutItem*)_qlayoutitem);
+}
+
 void q_vboxlayout_set_contents_margins(void* self, int left, int top, int right, int bottom) {
     QLayout_SetContentsMargins((QLayout*)self, left, top, right, bottom);
 }
@@ -2365,11 +2385,9 @@ const char** q_vboxlayout_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -2447,7 +2465,7 @@ void q_vboxlayout_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 int32_t q_vboxlayout_alignment(void* self) {
-    return QLayoutItem_Alignment((QLayoutItem*)self);
+    return QLayoutItem_Alignment(q_vboxlayout_as_q_layout_item(self));
 }
 
 void q_vboxlayout_add_item(void* self, void* param1) {

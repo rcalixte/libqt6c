@@ -22,6 +22,18 @@ QExtensionFactory* q_extensionfactory_new();
 ///
 QExtensionFactory* q_extensionfactory_new2(void* parent);
 
+/// Upcasts to a QAbstractExtensionFactory object
+///
+/// @param self QExtensionFactory*
+///
+QAbstractExtensionFactory* q_extensionfactory_as_q_abstract_extension_factory(void* self);
+
+/// Downcasts to a QExtensionFactory object
+///
+/// @param _qabstractextensionfactory QAbstractExtensionFactory*
+///
+QExtensionFactory* q_extensionfactory_from_q_abstract_extension_factory(void* _qabstractextensionfactory);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QExtensionFactory*

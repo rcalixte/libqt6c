@@ -432,6 +432,22 @@ void k_buildsycocaprogressdialog_reject(void* self);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KBuildSycocaProgressDialog*
+///
+QPaintDevice* k_buildsycocaprogressdialog_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KBuildSycocaProgressDialog object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KBuildSycocaProgressDialog* k_buildsycocaprogressdialog_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// @param self KBuildSycocaProgressDialog*

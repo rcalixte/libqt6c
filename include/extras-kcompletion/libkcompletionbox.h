@@ -2156,6 +2156,22 @@ void k_completionbox_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KCompletionBox*
+///
+QPaintDevice* k_completionbox_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KCompletionBox object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KCompletionBox* k_completionbox_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KCompletionBox*

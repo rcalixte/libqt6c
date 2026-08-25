@@ -265,11 +265,9 @@ const char** q_filesystemmodel_mime_types(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -288,11 +286,9 @@ const char** q_filesystemmodel_super_mime_types(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -465,9 +461,8 @@ void q_filesystemmodel_set_name_filters(void* self, const char* filters[static 1
         fprintf(stderr, "Failed to allocate memory for string list in q_filesystemmodel_set_name_filters\n");
         abort();
     }
-    for (size_t i = 0; i < filters_len; ++i) {
+    for (size_t i = 0; i < filters_len; ++i)
         filters_qstr[i] = qstring(filters[i]);
-    }
     libqt_list filters_list = qlist(filters_qstr, filters_len);
     QFileSystemModel_SetNameFilters((QFileSystemModel*)self, filters_list);
     free(filters_qstr);
@@ -483,11 +478,9 @@ const char** q_filesystemmodel_name_filters(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -877,11 +870,9 @@ const char** q_filesystemmodel_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

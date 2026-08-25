@@ -232,6 +232,22 @@ void k_shortcutseditor_add_collection2(void* self, void* param1, const char* tit
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KShortcutsEditor*
+///
+QPaintDevice* k_shortcutseditor_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KShortcutsEditor object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KShortcutsEditor* k_shortcutseditor_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KShortcutsEditor*

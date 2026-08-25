@@ -39,6 +39,18 @@ QTermWidget* q_termwidget_new3();
 ///
 QTermWidget* q_termwidget_new4(int startnow, void* parent);
 
+/// Upcasts to a QTermWidgetInterface object
+///
+/// @param self QTermWidget*
+///
+QTermWidgetInterface* q_termwidget_as_q_term_widget_interface(void* self);
+
+/// Downcasts to a QTermWidget object
+///
+/// @param _qtermwidgetinterface QTermWidgetInterface*
+///
+QTermWidget* q_termwidget_from_q_term_widget_interface(void* _qtermwidgetinterface);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QTermWidget*
@@ -2041,6 +2053,22 @@ const char* q_termwidget_tr2(const char* s, const char* c);
 /// @param n int
 ///
 const char* q_termwidget_tr3(const char* s, const char* c, int n);
+
+/// Inherited from QWidget
+///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QTermWidget*
+///
+QPaintDevice* q_termwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QTermWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QTermWidget* q_termwidget_from_q_paint_device(void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///

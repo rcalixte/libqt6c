@@ -42,9 +42,8 @@ QIcon* k_iconutils_add_overlays2(void* icon, const char* overlays[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_iconutils_add_overlays2\n");
         abort();
     }
-    for (size_t i = 0; i < overlays_len; ++i) {
+    for (size_t i = 0; i < overlays_len; ++i)
         overlays_qstr[i] = qstring(overlays[i]);
-    }
     libqt_list overlays_list = qlist(overlays_qstr, overlays_len);
     QIcon* _out = KIconUtils_AddOverlays2((QIcon*)icon, overlays_list);
     free(overlays_qstr);
@@ -58,9 +57,8 @@ QIcon* k_iconutils_add_overlays3(const char* iconName, const char* overlays[stat
         fprintf(stderr, "Failed to allocate memory for string list in k_iconutils_add_overlays3\n");
         abort();
     }
-    for (size_t i = 0; i < overlays_len; ++i) {
+    for (size_t i = 0; i < overlays_len; ++i)
         overlays_qstr[i] = qstring(overlays[i]);
-    }
     libqt_list overlays_list = qlist(overlays_qstr, overlays_len);
     QIcon* _out = KIconUtils_AddOverlays3(qstring(iconName), overlays_list);
     free(overlays_qstr);

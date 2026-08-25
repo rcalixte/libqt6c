@@ -40,9 +40,8 @@ QTreeWidgetItem* q_treewidgetitem_new2(const char* strings[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new2\n");
         abort();
     }
-    for (size_t i = 0; i < strings_len; ++i) {
+    for (size_t i = 0; i < strings_len; ++i)
         strings_qstr[i] = qstring(strings[i]);
-    }
     libqt_list strings_list = qlist(strings_qstr, strings_len);
 
     QTreeWidgetItem* _out = QTreeWidgetItem_New2(strings_list);
@@ -61,9 +60,8 @@ QTreeWidgetItem* q_treewidgetitem_new4(void* treeview, const char* strings[stati
         fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new4\n");
         abort();
     }
-    for (size_t i = 0; i < strings_len; ++i) {
+    for (size_t i = 0; i < strings_len; ++i)
         strings_qstr[i] = qstring(strings[i]);
-    }
     libqt_list strings_list = qlist(strings_qstr, strings_len);
 
     QTreeWidgetItem* _out = QTreeWidgetItem_New4((QTreeWidget*)treeview, strings_list);
@@ -86,9 +84,8 @@ QTreeWidgetItem* q_treewidgetitem_new7(void* parent, const char* strings[static 
         fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new7\n");
         abort();
     }
-    for (size_t i = 0; i < strings_len; ++i) {
+    for (size_t i = 0; i < strings_len; ++i)
         strings_qstr[i] = qstring(strings[i]);
-    }
     libqt_list strings_list = qlist(strings_qstr, strings_len);
 
     QTreeWidgetItem* _out = QTreeWidgetItem_New7((QTreeWidgetItem*)parent, strings_list);
@@ -115,9 +112,8 @@ QTreeWidgetItem* q_treewidgetitem_new11(const char* strings[static 1], int type)
         fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new11\n");
         abort();
     }
-    for (size_t i = 0; i < strings_len; ++i) {
+    for (size_t i = 0; i < strings_len; ++i)
         strings_qstr[i] = qstring(strings[i]);
-    }
     libqt_list strings_list = qlist(strings_qstr, strings_len);
 
     QTreeWidgetItem* _out = QTreeWidgetItem_New11(strings_list, type);
@@ -136,9 +132,8 @@ QTreeWidgetItem* q_treewidgetitem_new13(void* treeview, const char* strings[stat
         fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new13\n");
         abort();
     }
-    for (size_t i = 0; i < strings_len; ++i) {
+    for (size_t i = 0; i < strings_len; ++i)
         strings_qstr[i] = qstring(strings[i]);
-    }
     libqt_list strings_list = qlist(strings_qstr, strings_len);
 
     QTreeWidgetItem* _out = QTreeWidgetItem_New13((QTreeWidget*)treeview, strings_list, type);
@@ -161,9 +156,8 @@ QTreeWidgetItem* q_treewidgetitem_new16(void* parent, const char* strings[static
         fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new16\n");
         abort();
     }
-    for (size_t i = 0; i < strings_len; ++i) {
+    for (size_t i = 0; i < strings_len; ++i)
         strings_qstr[i] = qstring(strings[i]);
-    }
     libqt_list strings_list = qlist(strings_qstr, strings_len);
 
     QTreeWidgetItem* _out = QTreeWidgetItem_New16((QTreeWidgetItem*)parent, strings_list, type);
@@ -602,9 +596,8 @@ void q_treewidget_set_header_labels(void* self, const char* labels[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_treewidget_set_header_labels\n");
         abort();
     }
-    for (size_t i = 0; i < labels_len; ++i) {
+    for (size_t i = 0; i < labels_len; ++i)
         labels_qstr[i] = qstring(labels[i]);
-    }
     libqt_list labels_list = qlist(labels_qstr, labels_len);
     QTreeWidget_SetHeaderLabels((QTreeWidget*)self, labels_list);
     free(labels_qstr);
@@ -838,11 +831,9 @@ const char** q_treewidget_mime_types(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -861,11 +852,9 @@ const char** q_treewidget_super_mime_types(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1588,6 +1577,14 @@ QRect* q_treewidget_frame_rect(void* self) {
 
 void q_treewidget_set_frame_rect(void* self, void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
+}
+
+QPaintDevice* q_treewidget_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+QTreeWidget* q_treewidget_from_q_paint_device(void* _qpaintdevice) {
+    return (QTreeWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t q_treewidget_win_id(void* self) {
@@ -2834,11 +2831,9 @@ const char** q_treewidget_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -2916,47 +2911,47 @@ void q_treewidget_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 bool q_treewidget_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(q_treewidget_as_q_paint_device(self));
 }
 
 int32_t q_treewidget_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(q_treewidget_as_q_paint_device(self));
 }
 
 int32_t q_treewidget_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(q_treewidget_as_q_paint_device(self));
 }
 
 int32_t q_treewidget_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(q_treewidget_as_q_paint_device(self));
 }
 
 int32_t q_treewidget_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(q_treewidget_as_q_paint_device(self));
 }
 
 int32_t q_treewidget_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(q_treewidget_as_q_paint_device(self));
 }
 
 int32_t q_treewidget_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(q_treewidget_as_q_paint_device(self));
 }
 
 double q_treewidget_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(q_treewidget_as_q_paint_device(self));
 }
 
 double q_treewidget_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(q_treewidget_as_q_paint_device(self));
 }
 
 int32_t q_treewidget_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(q_treewidget_as_q_paint_device(self));
 }
 
 int32_t q_treewidget_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(q_treewidget_as_q_paint_device(self));
 }
 
 double q_treewidget_device_pixel_ratio_f_scale() {

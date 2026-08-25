@@ -300,6 +300,22 @@ void k_keysequencewidget_set_key_sequence2(void* self, void* seq, int32_t val);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KKeySequenceWidget*
+///
+QPaintDevice* k_keysequencewidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KKeySequenceWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KKeySequenceWidget* k_keysequencewidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KKeySequenceWidget*

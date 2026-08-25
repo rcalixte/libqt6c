@@ -94,9 +94,8 @@ void k_process_set_program2(void* self, const char* argv[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_process_set_program2\n");
         abort();
     }
-    for (size_t i = 0; i < argv_len; ++i) {
+    for (size_t i = 0; i < argv_len; ++i)
         argv_qstr[i] = qstring(argv[i]);
-    }
     libqt_list argv_list = qlist(argv_qstr, argv_len);
     KProcess_SetProgram2((KProcess*)self, argv_list);
     free(argv_qstr);
@@ -113,9 +112,8 @@ KProcess* k_process_operator_shift_left2(void* self, const char* args[static 1])
         fprintf(stderr, "Failed to allocate memory for string list in k_process_operator_shift_left2\n");
         abort();
     }
-    for (size_t i = 0; i < args_len; ++i) {
+    for (size_t i = 0; i < args_len; ++i)
         args_qstr[i] = qstring(args[i]);
-    }
     libqt_list args_list = qlist(args_qstr, args_len);
     KProcess* _out = KProcess_OperatorShiftLeft2((KProcess*)self, args_list);
     free(args_qstr);
@@ -140,11 +138,9 @@ const char** k_process_program(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -168,9 +164,8 @@ int32_t k_process_execute3(const char* argv[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_process_execute3\n");
         abort();
     }
-    for (size_t i = 0; i < argv_len; ++i) {
+    for (size_t i = 0; i < argv_len; ++i)
         argv_qstr[i] = qstring(argv[i]);
-    }
     libqt_list argv_list = qlist(argv_qstr, argv_len);
     int32_t _out = KProcess_Execute3(argv_list);
     free(argv_qstr);
@@ -192,9 +187,8 @@ int32_t k_process_start_detached3(const char* argv[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_process_start_detached3\n");
         abort();
     }
-    for (size_t i = 0; i < argv_len; ++i) {
+    for (size_t i = 0; i < argv_len; ++i)
         argv_qstr[i] = qstring(argv[i]);
-    }
     libqt_list argv_list = qlist(argv_qstr, argv_len);
     int32_t _out = KProcess_StartDetached3(argv_list);
     free(argv_qstr);
@@ -226,9 +220,8 @@ void k_process_set_program22(void* self, const char* exe, const char* args[stati
         fprintf(stderr, "Failed to allocate memory for string list in k_process_set_program22\n");
         abort();
     }
-    for (size_t i = 0; i < args_len; ++i) {
+    for (size_t i = 0; i < args_len; ++i)
         args_qstr[i] = qstring(args[i]);
-    }
     libqt_list args_list = qlist(args_qstr, args_len);
     KProcess_SetProgram22((KProcess*)self, qstring(exe), args_list);
     free(args_qstr);
@@ -245,9 +238,8 @@ int32_t k_process_execute22(const char* exe, const char* args[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_process_execute22\n");
         abort();
     }
-    for (size_t i = 0; i < args_len; ++i) {
+    for (size_t i = 0; i < args_len; ++i)
         args_qstr[i] = qstring(args[i]);
-    }
     libqt_list args_list = qlist(args_qstr, args_len);
     int32_t _out = KProcess_Execute22(qstring(exe), args_list);
     free(args_qstr);
@@ -261,9 +253,8 @@ int32_t k_process_execute32(const char* exe, const char* args[static 1], int mse
         fprintf(stderr, "Failed to allocate memory for string list in k_process_execute32\n");
         abort();
     }
-    for (size_t i = 0; i < args_len; ++i) {
+    for (size_t i = 0; i < args_len; ++i)
         args_qstr[i] = qstring(args[i]);
-    }
     libqt_list args_list = qlist(args_qstr, args_len);
     int32_t _out = KProcess_Execute32(qstring(exe), args_list, msecs);
     free(args_qstr);
@@ -277,9 +268,8 @@ int32_t k_process_execute23(const char* argv[static 1], int msecs) {
         fprintf(stderr, "Failed to allocate memory for string list in k_process_execute23\n");
         abort();
     }
-    for (size_t i = 0; i < argv_len; ++i) {
+    for (size_t i = 0; i < argv_len; ++i)
         argv_qstr[i] = qstring(argv[i]);
-    }
     libqt_list argv_list = qlist(argv_qstr, argv_len);
     int32_t _out = KProcess_Execute23(argv_list, msecs);
     free(argv_qstr);
@@ -293,9 +283,8 @@ int32_t k_process_start_detached22(const char* exe, const char* args[static 1]) 
         fprintf(stderr, "Failed to allocate memory for string list in k_process_start_detached22\n");
         abort();
     }
-    for (size_t i = 0; i < args_len; ++i) {
+    for (size_t i = 0; i < args_len; ++i)
         args_qstr[i] = qstring(args[i]);
-    }
     libqt_list args_list = qlist(args_qstr, args_len);
     int32_t _out = KProcess_StartDetached22(qstring(exe), args_list);
     free(args_qstr);
@@ -320,11 +309,9 @@ const char** k_process_arguments(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -336,9 +323,8 @@ void k_process_set_arguments(void* self, const char* arguments[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_process_set_arguments\n");
         abort();
     }
-    for (size_t i = 0; i < arguments_len; ++i) {
+    for (size_t i = 0; i < arguments_len; ++i)
         arguments_qstr[i] = qstring(arguments[i]);
-    }
     libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
     QProcess_SetArguments((QProcess*)self, arguments_list);
     free(arguments_qstr);
@@ -440,9 +426,8 @@ void k_process_set_environment(void* self, const char* environment[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_process_set_environment\n");
         abort();
     }
-    for (size_t i = 0; i < environment_len; ++i) {
+    for (size_t i = 0; i < environment_len; ++i)
         environment_qstr[i] = qstring(environment[i]);
-    }
     libqt_list environment_list = qlist(environment_qstr, environment_len);
     QProcess_SetEnvironment((QProcess*)self, environment_list);
     free(environment_qstr);
@@ -458,11 +443,9 @@ const char** k_process_environment(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -527,11 +510,9 @@ const char** k_process_system_environment() {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -553,11 +534,9 @@ const char** k_process_split_command(const char* command) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -593,9 +572,8 @@ void k_process_start22(void* self, const char* program, const char* arguments[st
         fprintf(stderr, "Failed to allocate memory for string list in k_process_start22\n");
         abort();
     }
-    for (size_t i = 0; i < arguments_len; ++i) {
+    for (size_t i = 0; i < arguments_len; ++i)
         arguments_qstr[i] = qstring(arguments[i]);
-    }
     libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
     QProcess_Start22((QProcess*)self, qstring(program), arguments_list);
     free(arguments_qstr);
@@ -608,9 +586,8 @@ void k_process_start3(void* self, const char* program, const char* arguments[sta
         fprintf(stderr, "Failed to allocate memory for string list in k_process_start3\n");
         abort();
     }
-    for (size_t i = 0; i < arguments_len; ++i) {
+    for (size_t i = 0; i < arguments_len; ++i)
         arguments_qstr[i] = qstring(arguments[i]);
-    }
     libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
     QProcess_Start3((QProcess*)self, qstring(program), arguments_list, mode);
     free(arguments_qstr);
@@ -657,9 +634,8 @@ bool k_process_start_detached4(const char* program, const char* arguments[static
         fprintf(stderr, "Failed to allocate memory for string list in k_process_start_detached4\n");
         abort();
     }
-    for (size_t i = 0; i < arguments_len; ++i) {
+    for (size_t i = 0; i < arguments_len; ++i)
         arguments_qstr[i] = qstring(arguments[i]);
-    }
     libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
     bool _out = QProcess_StartDetached4(qstring(program), arguments_list, qstring(workingDirectory), pid);
     free(arguments_qstr);
@@ -672,6 +648,10 @@ void k_process_finished2(void* self, int exitCode, int32_t exitStatus) {
 
 void k_process_on_finished2(void* self, void (*callback)(void*, int, int32_t)) {
     QProcess_Connect_Finished2((QProcess*)self, (intptr_t)callback);
+}
+
+QIODeviceBase* k_process_as_q_i_o_device_base(void* self) {
+    return QIODevice_AsQIODeviceBase((QIODevice*)self);
 }
 
 int32_t k_process_open_mode(void* self) {
@@ -998,11 +978,9 @@ const char** k_process_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

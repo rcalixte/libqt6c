@@ -103,6 +103,22 @@ QDesignerNewFormWidgetInterface* q_designernewformwidgetinterface_create_new_for
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QDesignerNewFormWidgetInterface*
+///
+QPaintDevice* q_designernewformwidgetinterface_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QDesignerNewFormWidgetInterface object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QDesignerNewFormWidgetInterface* q_designernewformwidgetinterface_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// @param self QDesignerNewFormWidgetInterface*

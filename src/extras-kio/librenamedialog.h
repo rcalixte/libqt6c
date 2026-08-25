@@ -393,6 +393,22 @@ void k_io__renamedialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KIO__RenameDialog*
+///
+QPaintDevice* k_io__renamedialog_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KIO__RenameDialog object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KIO__RenameDialog* k_io__renamedialog_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KIO__RenameDialog*

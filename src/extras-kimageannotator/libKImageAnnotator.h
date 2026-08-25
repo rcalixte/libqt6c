@@ -416,6 +416,22 @@ const char* k_imageannotator__kimageannotator_tr3(const char* s, const char* c, 
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self kImageAnnotator__KImageAnnotator*
+///
+QPaintDevice* k_imageannotator__kimageannotator_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a kImageAnnotator__KImageAnnotator object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+kImageAnnotator__KImageAnnotator* k_imageannotator__kimageannotator_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self kImageAnnotator__KImageAnnotator*

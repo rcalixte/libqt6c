@@ -31,6 +31,18 @@ KParts__Part* k_parts__part_new2(void* parent);
 ///
 KParts__Part* k_parts__part_new3(void* parent, void* data);
 
+/// Upcasts to a KParts::PartBase object
+///
+/// @param self KParts__Part*
+///
+KParts__PartBase* k_parts__part_as_k_parts___part_base(void* self);
+
+/// Downcasts to a KParts__Part object
+///
+/// @param _kparts__partbase KParts__PartBase*
+///
+KParts__Part* k_parts__part_from_k_parts___part_base(void* _kparts__partbase);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KParts__Part*

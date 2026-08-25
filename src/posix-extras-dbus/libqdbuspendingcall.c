@@ -63,6 +63,10 @@ QDBusPendingCallWatcher* q_dbuspendingcallwatcher_new2(void* call, void* parent)
     return QDBusPendingCallWatcher_New2((QDBusPendingCall*)call, (QObject*)parent);
 }
 
+QDBusPendingCall* q_dbuspendingcallwatcher_as_q_d_bus_pending_call(void* self) {
+    return QDBusPendingCallWatcher_AsQDBusPendingCall((QDBusPendingCallWatcher*)self);
+}
+
 const QMetaObject* q_dbuspendingcallwatcher_meta_object(void* self) {
     return QDBusPendingCallWatcher_MetaObject((QDBusPendingCallWatcher*)self);
 }
@@ -270,11 +274,9 @@ const char** q_dbuspendingcallwatcher_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -352,31 +354,31 @@ void q_dbuspendingcallwatcher_on_destroyed1(void* self, void (*callback)(void*, 
 }
 
 void q_dbuspendingcallwatcher_operator_assign(void* self, void* other) {
-    QDBusPendingCall_OperatorAssign((QDBusPendingCall*)self, (QDBusPendingCall*)other);
+    QDBusPendingCall_OperatorAssign(q_dbuspendingcallwatcher_as_q_d_bus_pending_call(self), (QDBusPendingCall*)other);
 }
 
 void q_dbuspendingcallwatcher_swap(void* self, void* other) {
-    QDBusPendingCall_Swap((QDBusPendingCall*)self, (QDBusPendingCall*)other);
+    QDBusPendingCall_Swap(q_dbuspendingcallwatcher_as_q_d_bus_pending_call(self), (QDBusPendingCall*)other);
 }
 
 bool q_dbuspendingcallwatcher_is_finished(void* self) {
-    return QDBusPendingCall_IsFinished((QDBusPendingCall*)self);
+    return QDBusPendingCall_IsFinished(q_dbuspendingcallwatcher_as_q_d_bus_pending_call(self));
 }
 
 bool q_dbuspendingcallwatcher_is_error(void* self) {
-    return QDBusPendingCall_IsError((QDBusPendingCall*)self);
+    return QDBusPendingCall_IsError(q_dbuspendingcallwatcher_as_q_d_bus_pending_call(self));
 }
 
 bool q_dbuspendingcallwatcher_is_valid(void* self) {
-    return QDBusPendingCall_IsValid((QDBusPendingCall*)self);
+    return QDBusPendingCall_IsValid(q_dbuspendingcallwatcher_as_q_d_bus_pending_call(self));
 }
 
 QDBusError* q_dbuspendingcallwatcher_error(void* self) {
-    return QDBusPendingCall_Error((QDBusPendingCall*)self);
+    return QDBusPendingCall_Error(q_dbuspendingcallwatcher_as_q_d_bus_pending_call(self));
 }
 
 QDBusMessage* q_dbuspendingcallwatcher_reply(void* self) {
-    return QDBusPendingCall_Reply((QDBusPendingCall*)self);
+    return QDBusPendingCall_Reply(q_dbuspendingcallwatcher_as_q_d_bus_pending_call(self));
 }
 
 QDBusPendingCall* q_dbuspendingcallwatcher_from_error(void* error) {

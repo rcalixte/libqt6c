@@ -194,6 +194,22 @@ const char* q_designerresourcebrowserinterface_tr3(const char* s, const char* c,
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QDesignerResourceBrowserInterface*
+///
+QPaintDevice* q_designerresourcebrowserinterface_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QDesignerResourceBrowserInterface object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QDesignerResourceBrowserInterface* q_designerresourcebrowserinterface_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QDesignerResourceBrowserInterface*

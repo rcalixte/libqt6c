@@ -103,11 +103,9 @@ const char** k_completionbox_items(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -130,9 +128,8 @@ void k_completionbox_insert_items(void* self, const char* items[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_completionbox_insert_items\n");
         abort();
     }
-    for (size_t i = 0; i < items_len; ++i) {
+    for (size_t i = 0; i < items_len; ++i)
         items_qstr[i] = qstring(items[i]);
-    }
     libqt_list items_list = qlist(items_qstr, items_len);
     KCompletionBox_InsertItems((KCompletionBox*)self, items_list);
     free(items_qstr);
@@ -145,9 +142,8 @@ void k_completionbox_set_items(void* self, const char* items[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_completionbox_set_items\n");
         abort();
     }
-    for (size_t i = 0; i < items_len; ++i) {
+    for (size_t i = 0; i < items_len; ++i)
         items_qstr[i] = qstring(items[i]);
-    }
     libqt_list items_list = qlist(items_qstr, items_len);
     KCompletionBox_SetItems((KCompletionBox*)self, items_list);
     free(items_qstr);
@@ -310,9 +306,8 @@ void k_completionbox_insert_items2(void* self, const char* items[static 1], int 
         fprintf(stderr, "Failed to allocate memory for string list in k_completionbox_insert_items2\n");
         abort();
     }
-    for (size_t i = 0; i < items_len; ++i) {
+    for (size_t i = 0; i < items_len; ++i)
         items_qstr[i] = qstring(items[i]);
-    }
     libqt_list items_list = qlist(items_qstr, items_len);
     KCompletionBox_InsertItems2((KCompletionBox*)self, items_list, index);
     free(items_qstr);
@@ -349,9 +344,8 @@ void k_completionbox_add_items(void* self, const char* labels[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_completionbox_add_items\n");
         abort();
     }
-    for (size_t i = 0; i < labels_len; ++i) {
+    for (size_t i = 0; i < labels_len; ++i)
         labels_qstr[i] = qstring(labels[i]);
-    }
     libqt_list labels_list = qlist(labels_qstr, labels_len);
     QListWidget_AddItems((QListWidget*)self, labels_list);
     free(labels_qstr);
@@ -1090,6 +1084,14 @@ QRect* k_completionbox_frame_rect(void* self) {
 
 void k_completionbox_set_frame_rect(void* self, void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
+}
+
+QPaintDevice* k_completionbox_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+KCompletionBox* k_completionbox_from_q_paint_device(void* _qpaintdevice) {
+    return (KCompletionBox*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t k_completionbox_win_id(void* self) {
@@ -2336,11 +2338,9 @@ const char** k_completionbox_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -2418,47 +2418,47 @@ void k_completionbox_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 bool k_completionbox_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_completionbox_as_q_paint_device(self));
 }
 
 int32_t k_completionbox_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_completionbox_as_q_paint_device(self));
 }
 
 int32_t k_completionbox_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_completionbox_as_q_paint_device(self));
 }
 
 int32_t k_completionbox_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_completionbox_as_q_paint_device(self));
 }
 
 int32_t k_completionbox_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_completionbox_as_q_paint_device(self));
 }
 
 int32_t k_completionbox_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_completionbox_as_q_paint_device(self));
 }
 
 int32_t k_completionbox_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_completionbox_as_q_paint_device(self));
 }
 
 double k_completionbox_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_completionbox_as_q_paint_device(self));
 }
 
 double k_completionbox_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_completionbox_as_q_paint_device(self));
 }
 
 int32_t k_completionbox_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_completionbox_as_q_paint_device(self));
 }
 
 int32_t k_completionbox_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_completionbox_as_q_paint_device(self));
 }
 
 double k_completionbox_device_pixel_ratio_f_scale() {
@@ -2515,11 +2515,9 @@ const char** k_completionbox_mime_types(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -2534,11 +2532,9 @@ const char** k_completionbox_super_mime_types(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

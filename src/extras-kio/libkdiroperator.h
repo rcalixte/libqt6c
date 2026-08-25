@@ -1826,6 +1826,22 @@ const char* k_diroperator_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KDirOperator*
+///
+QPaintDevice* k_diroperator_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KDirOperator object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KDirOperator* k_diroperator_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KDirOperator*

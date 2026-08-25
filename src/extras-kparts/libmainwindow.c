@@ -39,6 +39,14 @@ KParts__MainWindow* k_parts__mainwindow_new3(void* parent, int32_t f) {
     return KParts__MainWindow_New3((QWidget*)parent, f);
 }
 
+KParts__PartBase* k_parts__mainwindow_as_k_parts___part_base(void* self) {
+    return KParts__MainWindow_AsKParts__PartBase((KParts__MainWindow*)self);
+}
+
+KParts__MainWindow* k_parts__mainwindow_from_k_parts___part_base(void* _kparts__partbase) {
+    return (KParts__MainWindow*)KParts__MainWindow_FromKParts__PartBase((KParts__PartBase*)_kparts__partbase);
+}
+
 const QMetaObject* k_parts__mainwindow_meta_object(void* self) {
     return KParts__MainWindow_MetaObject((KParts__MainWindow*)self);
 }
@@ -168,6 +176,22 @@ const char* k_parts__mainwindow_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
+KXMLGUIBuilder* k_parts__mainwindow_as_k_x_m_l_g_u_i_builder(void* self) {
+    return KXmlGuiWindow_AsKXMLGUIBuilder((KXmlGuiWindow*)self);
+}
+
+KParts__MainWindow* k_parts__mainwindow_from_k_x_m_l_g_u_i_builder(void* _kxmlguibuilder) {
+    return (KParts__MainWindow*)KXmlGuiWindow_FromKXMLGUIBuilder((KXMLGUIBuilder*)_kxmlguibuilder);
+}
+
+KXMLGUIClient* k_parts__mainwindow_as_k_x_m_l_g_u_i_client(void* self) {
+    return KXmlGuiWindow_AsKXMLGUIClient((KXmlGuiWindow*)self);
+}
+
+KParts__MainWindow* k_parts__mainwindow_from_k_x_m_l_g_u_i_client(void* _kxmlguiclient) {
+    return (KParts__MainWindow*)KXmlGuiWindow_FromKXMLGUIClient((KXMLGUIClient*)_kxmlguiclient);
+}
+
 void k_parts__mainwindow_set_help_menu_enabled(void* self) {
     KXmlGuiWindow_SetHelpMenuEnabled((KXmlGuiWindow*)self);
 }
@@ -214,11 +238,9 @@ const char** k_parts__mainwindow_tool_bar_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -631,6 +653,14 @@ char* k_parts__mainwindow_save_state1(void* self, int version) {
 
 bool k_parts__mainwindow_restore_state2(void* self, char* state, int version) {
     return QMainWindow_RestoreState2((QMainWindow*)self, qstring(state), version);
+}
+
+QPaintDevice* k_parts__mainwindow_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+KParts__MainWindow* k_parts__mainwindow_from_q_paint_device(void* _qpaintdevice) {
+    return (KParts__MainWindow*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t k_parts__mainwindow_win_id(void* self) {
@@ -1881,11 +1911,9 @@ const char** k_parts__mainwindow_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1963,47 +1991,47 @@ void k_parts__mainwindow_on_destroyed1(void* self, void (*callback)(void*, void*
 }
 
 bool k_parts__mainwindow_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_parts__mainwindow_as_q_paint_device(self));
 }
 
 int32_t k_parts__mainwindow_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_parts__mainwindow_as_q_paint_device(self));
 }
 
 int32_t k_parts__mainwindow_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_parts__mainwindow_as_q_paint_device(self));
 }
 
 int32_t k_parts__mainwindow_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_parts__mainwindow_as_q_paint_device(self));
 }
 
 int32_t k_parts__mainwindow_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_parts__mainwindow_as_q_paint_device(self));
 }
 
 int32_t k_parts__mainwindow_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_parts__mainwindow_as_q_paint_device(self));
 }
 
 int32_t k_parts__mainwindow_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_parts__mainwindow_as_q_paint_device(self));
 }
 
 double k_parts__mainwindow_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_parts__mainwindow_as_q_paint_device(self));
 }
 
 double k_parts__mainwindow_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_parts__mainwindow_as_q_paint_device(self));
 }
 
 int32_t k_parts__mainwindow_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_parts__mainwindow_as_q_paint_device(self));
 }
 
 int32_t k_parts__mainwindow_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_parts__mainwindow_as_q_paint_device(self));
 }
 
 double k_parts__mainwindow_device_pixel_ratio_f_scale() {
@@ -2015,72 +2043,72 @@ int32_t k_parts__mainwindow_encode_metric_f(int32_t metric, double value) {
 }
 
 KXMLGUIClient* k_parts__mainwindow_builder_client(void* self) {
-    return KXMLGUIBuilder_BuilderClient((KXMLGUIBuilder*)self);
+    return KXMLGUIBuilder_BuilderClient(k_parts__mainwindow_as_k_x_m_l_g_u_i_builder(self));
 }
 
 void k_parts__mainwindow_set_builder_client(void* self, void* client) {
-    KXMLGUIBuilder_SetBuilderClient((KXMLGUIBuilder*)self, (KXMLGUIClient*)client);
+    KXMLGUIBuilder_SetBuilderClient(k_parts__mainwindow_as_k_x_m_l_g_u_i_builder(self), (KXMLGUIClient*)client);
 }
 
 QWidget* k_parts__mainwindow_widget(void* self) {
-    return KXMLGUIBuilder_Widget((KXMLGUIBuilder*)self);
+    return KXMLGUIBuilder_Widget(k_parts__mainwindow_as_k_x_m_l_g_u_i_builder(self));
 }
 
 QAction* k_parts__mainwindow_action(void* self, const char* name) {
-    return KXMLGUIClient_Action((KXMLGUIClient*)self, qstring(name));
+    return KXMLGUIClient_Action(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self), qstring(name));
 }
 
 void k_parts__mainwindow_set_x_m_l_g_u_i_build_document(void* self, void* doc) {
-    KXMLGUIClient_SetXMLGUIBuildDocument((KXMLGUIClient*)self, (QDomDocument*)doc);
+    KXMLGUIClient_SetXMLGUIBuildDocument(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self), (QDomDocument*)doc);
 }
 
 QDomDocument* k_parts__mainwindow_xmlgui_build_document(void* self) {
-    return KXMLGUIClient_XmlguiBuildDocument((KXMLGUIClient*)self);
+    return KXMLGUIClient_XmlguiBuildDocument(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self));
 }
 
 void k_parts__mainwindow_set_factory(void* self, void* factory) {
-    KXMLGUIClient_SetFactory((KXMLGUIClient*)self, (KXMLGUIFactory*)factory);
+    KXMLGUIClient_SetFactory(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self), (KXMLGUIFactory*)factory);
 }
 
 KXMLGUIFactory* k_parts__mainwindow_factory(void* self) {
-    return KXMLGUIClient_Factory((KXMLGUIClient*)self);
+    return KXMLGUIClient_Factory(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self));
 }
 
 KXMLGUIClient* k_parts__mainwindow_parent_client(void* self) {
-    return KXMLGUIClient_ParentClient((KXMLGUIClient*)self);
+    return KXMLGUIClient_ParentClient(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self));
 }
 
 void k_parts__mainwindow_insert_child_client(void* self, void* child) {
-    KXMLGUIClient_InsertChildClient((KXMLGUIClient*)self, (KXMLGUIClient*)child);
+    KXMLGUIClient_InsertChildClient(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self), (KXMLGUIClient*)child);
 }
 
 void k_parts__mainwindow_remove_child_client(void* self, void* child) {
-    KXMLGUIClient_RemoveChildClient((KXMLGUIClient*)self, (KXMLGUIClient*)child);
+    KXMLGUIClient_RemoveChildClient(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self), (KXMLGUIClient*)child);
 }
 
 libqt_list /* of KXMLGUIClient* */ k_parts__mainwindow_child_clients(void* self) {
-    libqt_list _arr = KXMLGUIClient_ChildClients((KXMLGUIClient*)self);
+    libqt_list _arr = KXMLGUIClient_ChildClients(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self));
     return _arr;
 }
 
 void k_parts__mainwindow_set_client_builder(void* self, void* builder) {
-    KXMLGUIClient_SetClientBuilder((KXMLGUIClient*)self, (KXMLGUIBuilder*)builder);
+    KXMLGUIClient_SetClientBuilder(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self), (KXMLGUIBuilder*)builder);
 }
 
 KXMLGUIBuilder* k_parts__mainwindow_client_builder(void* self) {
-    return KXMLGUIClient_ClientBuilder((KXMLGUIClient*)self);
+    return KXMLGUIClient_ClientBuilder(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self));
 }
 
 void k_parts__mainwindow_reload_x_m_l(void* self) {
-    KXMLGUIClient_ReloadXML((KXMLGUIClient*)self);
+    KXMLGUIClient_ReloadXML(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self));
 }
 
 void k_parts__mainwindow_plug_action_list(void* self, const char* name, libqt_list /* of QAction* */ actionList) {
-    KXMLGUIClient_PlugActionList((KXMLGUIClient*)self, qstring(name), actionList);
+    KXMLGUIClient_PlugActionList(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self), qstring(name), actionList);
 }
 
 void k_parts__mainwindow_unplug_action_list(void* self, const char* name) {
-    KXMLGUIClient_UnplugActionList((KXMLGUIClient*)self, qstring(name));
+    KXMLGUIClient_UnplugActionList(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self), qstring(name));
 }
 
 const char* k_parts__mainwindow_find_most_recent_x_m_l_file(const char* files[static 1], const char* doc) {
@@ -2090,9 +2118,8 @@ const char* k_parts__mainwindow_find_most_recent_x_m_l_file(const char* files[st
         fprintf(stderr, "Failed to allocate memory for string list in k_parts__mainwindow_find_most_recent_x_m_l_file\n");
         abort();
     }
-    for (size_t i = 0; i < files_len; ++i) {
+    for (size_t i = 0; i < files_len; ++i)
         files_qstr[i] = qstring(files[i]);
-    }
     libqt_list files_list = qlist(files_qstr, files_len);
     libqt_string _str = KXMLGUIClient_FindMostRecentXMLFile(files_list, qstring(doc));
     free(files_qstr);
@@ -2102,31 +2129,31 @@ const char* k_parts__mainwindow_find_most_recent_x_m_l_file(const char* files[st
 }
 
 void k_parts__mainwindow_add_state_action_enabled(void* self, const char* state, const char* action) {
-    KXMLGUIClient_AddStateActionEnabled((KXMLGUIClient*)self, qstring(state), qstring(action));
+    KXMLGUIClient_AddStateActionEnabled(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self), qstring(state), qstring(action));
 }
 
 void k_parts__mainwindow_add_state_action_disabled(void* self, const char* state, const char* action) {
-    KXMLGUIClient_AddStateActionDisabled((KXMLGUIClient*)self, qstring(state), qstring(action));
+    KXMLGUIClient_AddStateActionDisabled(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self), qstring(state), qstring(action));
 }
 
 KXMLGUIClient__StateChange* k_parts__mainwindow_get_actions_to_change_for_state(void* self, const char* state) {
-    return KXMLGUIClient_GetActionsToChangeForState((KXMLGUIClient*)self, qstring(state));
+    return KXMLGUIClient_GetActionsToChangeForState(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self), qstring(state));
 }
 
 void k_parts__mainwindow_begin_x_m_l_plug(void* self, void* param1) {
-    KXMLGUIClient_BeginXMLPlug((KXMLGUIClient*)self, (QWidget*)param1);
+    KXMLGUIClient_BeginXMLPlug(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self), (QWidget*)param1);
 }
 
 void k_parts__mainwindow_end_x_m_l_plug(void* self) {
-    KXMLGUIClient_EndXMLPlug((KXMLGUIClient*)self);
+    KXMLGUIClient_EndXMLPlug(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self));
 }
 
 void k_parts__mainwindow_prepare_x_m_l_unplug(void* self, void* param1) {
-    KXMLGUIClient_PrepareXMLUnplug((KXMLGUIClient*)self, (QWidget*)param1);
+    KXMLGUIClient_PrepareXMLUnplug(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self), (QWidget*)param1);
 }
 
 void k_parts__mainwindow_replace_x_m_l_file(void* self, const char* xmlfile, const char* localxmlfile) {
-    KXMLGUIClient_ReplaceXMLFile((KXMLGUIClient*)self, qstring(xmlfile), qstring(localxmlfile));
+    KXMLGUIClient_ReplaceXMLFile(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self), qstring(xmlfile), qstring(localxmlfile));
 }
 
 const char* k_parts__mainwindow_find_version_number(const char* xml) {
@@ -2137,7 +2164,7 @@ const char* k_parts__mainwindow_find_version_number(const char* xml) {
 }
 
 void k_parts__mainwindow_replace_x_m_l_file3(void* self, const char* xmlfile, const char* localxmlfile, bool merge) {
-    KXMLGUIClient_ReplaceXMLFile3((KXMLGUIClient*)self, qstring(xmlfile), qstring(localxmlfile), merge);
+    KXMLGUIClient_ReplaceXMLFile3(k_parts__mainwindow_as_k_x_m_l_g_u_i_client(self), qstring(xmlfile), qstring(localxmlfile), merge);
 }
 
 void k_parts__mainwindow_set_part_object(void* self, void* object) {
@@ -2854,11 +2881,9 @@ const char** k_parts__mainwindow_container_tags(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -2873,11 +2898,9 @@ const char** k_parts__mainwindow_super_container_tags(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -2920,11 +2943,9 @@ const char** k_parts__mainwindow_custom_tags(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -2939,11 +2960,9 @@ const char** k_parts__mainwindow_super_custom_tags(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

@@ -692,6 +692,22 @@ void q_splitter_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QSplitter*
+///
+QPaintDevice* q_splitter_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QSplitter object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QSplitter* q_splitter_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QSplitter*
@@ -5755,6 +5771,22 @@ const char* q_splitterhandle_tr2(const char* s, const char* c);
 /// @param n int
 ///
 const char* q_splitterhandle_tr3(const char* s, const char* c, int n);
+
+/// Inherited from QWidget
+///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QSplitterHandle*
+///
+QPaintDevice* q_splitterhandle_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QSplitterHandle object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QSplitterHandle* q_splitterhandle_from_q_paint_device(void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///

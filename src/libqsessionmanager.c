@@ -68,9 +68,8 @@ void q_sessionmanager_set_restart_command(void* self, const char* restartCommand
         fprintf(stderr, "Failed to allocate memory for string list in q_sessionmanager_set_restart_command\n");
         abort();
     }
-    for (size_t i = 0; i < restartCommand_len; ++i) {
+    for (size_t i = 0; i < restartCommand_len; ++i)
         restartCommand_qstr[i] = qstring(restartCommand[i]);
-    }
     libqt_list restartCommand_list = qlist(restartCommand_qstr, restartCommand_len);
     QSessionManager_SetRestartCommand((QSessionManager*)self, restartCommand_list);
     free(restartCommand_qstr);
@@ -86,11 +85,9 @@ const char** q_sessionmanager_restart_command(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -102,9 +99,8 @@ void q_sessionmanager_set_discard_command(void* self, const char* discardCommand
         fprintf(stderr, "Failed to allocate memory for string list in q_sessionmanager_set_discard_command\n");
         abort();
     }
-    for (size_t i = 0; i < discardCommand_len; ++i) {
+    for (size_t i = 0; i < discardCommand_len; ++i)
         discardCommand_qstr[i] = qstring(discardCommand[i]);
-    }
     libqt_list discardCommand_list = qlist(discardCommand_qstr, discardCommand_len);
     QSessionManager_SetDiscardCommand((QSessionManager*)self, discardCommand_list);
     free(discardCommand_qstr);
@@ -120,11 +116,9 @@ const char** q_sessionmanager_discard_command(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -140,9 +134,8 @@ void q_sessionmanager_set_manager_property2(void* self, const char* name, const 
         fprintf(stderr, "Failed to allocate memory for string list in q_sessionmanager_set_manager_property2\n");
         abort();
     }
-    for (size_t i = 0; i < value_len; ++i) {
+    for (size_t i = 0; i < value_len; ++i)
         value_qstr[i] = qstring(value[i]);
-    }
     libqt_list value_list = qlist(value_qstr, value_len);
     QSessionManager_SetManagerProperty2((QSessionManager*)self, qstring(name), value_list);
     free(value_qstr);
@@ -308,11 +301,9 @@ const char** q_sessionmanager_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

@@ -10,6 +10,18 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevicewindow.html)
 
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QPaintDeviceWindow*
+///
+QPaintDevice* q_paintdevicewindow_as_q_paint_device(void* self);
+
+/// Downcasts to a QPaintDeviceWindow object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QPaintDeviceWindow* q_paintdevicewindow_from_q_paint_device(void* _qpaintdevice);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QPaintDeviceWindow*
@@ -74,6 +86,22 @@ const char* q_paintdevicewindow_tr2(const char* s, const char* c);
 /// @param n int
 ///
 const char* q_paintdevicewindow_tr3(const char* s, const char* c, int n);
+
+/// Inherited from QWindow
+///
+/// Upcasts to a QSurface object
+///
+/// @param self QPaintDeviceWindow*
+///
+QSurface* q_paintdevicewindow_as_q_surface(void* self);
+
+/// Inherited from QWindow
+///
+/// Downcasts to a QPaintDeviceWindow object
+///
+/// @param _qsurface QSurface*
+///
+QPaintDeviceWindow* q_paintdevicewindow_from_q_surface(void* _qsurface);
 
 /// Inherited from QWindow
 ///

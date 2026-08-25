@@ -453,6 +453,22 @@ void k_encodingfiledialog_reject(void* self);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KEncodingFileDialog*
+///
+QPaintDevice* k_encodingfiledialog_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KEncodingFileDialog object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KEncodingFileDialog* k_encodingfiledialog_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// @param self KEncodingFileDialog*

@@ -65,9 +65,8 @@ void q_commandlineparser_process(void* self, const char* arguments[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_commandlineparser_process\n");
         abort();
     }
-    for (size_t i = 0; i < arguments_len; ++i) {
+    for (size_t i = 0; i < arguments_len; ++i)
         arguments_qstr[i] = qstring(arguments[i]);
-    }
     libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
     QCommandLineParser_Process((QCommandLineParser*)self, arguments_list);
     free(arguments_qstr);
@@ -84,9 +83,8 @@ bool q_commandlineparser_parse(void* self, const char* arguments[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_commandlineparser_parse\n");
         abort();
     }
-    for (size_t i = 0; i < arguments_len; ++i) {
+    for (size_t i = 0; i < arguments_len; ++i)
         arguments_qstr[i] = qstring(arguments[i]);
-    }
     libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
     bool _out = QCommandLineParser_Parse((QCommandLineParser*)self, arguments_list);
     free(arguments_qstr);
@@ -121,11 +119,9 @@ const char** q_commandlineparser_values(void* self, const char* name) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -151,11 +147,9 @@ const char** q_commandlineparser_values2(void* self, void* option) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -170,11 +164,9 @@ const char** q_commandlineparser_positional_arguments(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -189,11 +181,9 @@ const char** q_commandlineparser_option_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -208,11 +198,9 @@ const char** q_commandlineparser_unknown_option_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

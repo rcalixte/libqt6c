@@ -100,9 +100,8 @@ void q_signon__identityinfo_set_realms(void* self, const char* realms[static 1])
         fprintf(stderr, "Failed to allocate memory for string list in q_signon__identityinfo_set_realms\n");
         abort();
     }
-    for (size_t i = 0; i < realms_len; ++i) {
+    for (size_t i = 0; i < realms_len; ++i)
         realms_qstr[i] = qstring(realms[i]);
-    }
     libqt_list realms_list = qlist(realms_qstr, realms_len);
     SignOn__IdentityInfo_SetRealms((SignOn__IdentityInfo*)self, realms_list);
     free(realms_qstr);
@@ -118,11 +117,9 @@ const char** q_signon__identityinfo_realms(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -145,9 +142,8 @@ void q_signon__identityinfo_set_access_control_list(void* self, const char* acce
         fprintf(stderr, "Failed to allocate memory for string list in q_signon__identityinfo_set_access_control_list\n");
         abort();
     }
-    for (size_t i = 0; i < accessControlList_len; ++i) {
+    for (size_t i = 0; i < accessControlList_len; ++i)
         accessControlList_qstr[i] = qstring(accessControlList[i]);
-    }
     libqt_list accessControlList_list = qlist(accessControlList_qstr, accessControlList_len);
     SignOn__IdentityInfo_SetAccessControlList((SignOn__IdentityInfo*)self, accessControlList_list);
     free(accessControlList_qstr);
@@ -167,11 +163,9 @@ const char** q_signon__identityinfo_access_control_list(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -188,9 +182,8 @@ void q_signon__identityinfo_set_method(void* self, const char* method, const cha
         fprintf(stderr, "Failed to allocate memory for string list in q_signon__identityinfo_set_method\n");
         abort();
     }
-    for (size_t i = 0; i < mechanismsList_len; ++i) {
+    for (size_t i = 0; i < mechanismsList_len; ++i)
         mechanismsList_qstr[i] = qstring(mechanismsList[i]);
-    }
     libqt_list mechanismsList_list = qlist(mechanismsList_qstr, mechanismsList_len);
     SignOn__IdentityInfo_SetMethod((SignOn__IdentityInfo*)self, qstring(method), mechanismsList_list);
     free(mechanismsList_qstr);
@@ -218,11 +211,9 @@ const char** q_signon__identityinfo_methods(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -237,11 +228,9 @@ const char** q_signon__identityinfo_mechanisms(void* self, const char* method) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

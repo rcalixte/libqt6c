@@ -373,6 +373,22 @@ void k_editlistwidget_insert_item2(void* self, const char* text, int index);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KEditListWidget*
+///
+QPaintDevice* k_editlistwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KEditListWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KEditListWidget* k_editlistwidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KEditListWidget*

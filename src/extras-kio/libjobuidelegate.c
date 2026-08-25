@@ -10,6 +10,14 @@
 #include "libjobuidelegate.hpp"
 #include "libjobuidelegate.h"
 
+KIO__JobUiDelegateExtension* k_io__jobuidelegate_as_k_i_o___job_ui_delegate_extension(void* self) {
+    return KIO__JobUiDelegate_AsKIO__JobUiDelegateExtension((KIO__JobUiDelegate*)self);
+}
+
+KIO__JobUiDelegate* k_io__jobuidelegate_from_k_i_o___job_ui_delegate_extension(void* _kio__jobuidelegateextension) {
+    return (KIO__JobUiDelegate*)KIO__JobUiDelegate_FromKIO__JobUiDelegateExtension((KIO__JobUiDelegateExtension*)_kio__jobuidelegateextension);
+}
+
 const QMetaObject* k_io__jobuidelegate_meta_object(void* self) {
     return KIO__JobUiDelegate_MetaObject((KIO__JobUiDelegate*)self);
 }
@@ -233,11 +241,9 @@ const char** k_io__jobuidelegate_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

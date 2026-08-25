@@ -647,6 +647,14 @@ void q_datetimeedit_on_editing_finished(void* self, void (*callback)(void*)) {
     QAbstractSpinBox_Connect_EditingFinished((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
+QPaintDevice* q_datetimeedit_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+QDateTimeEdit* q_datetimeedit_from_q_paint_device(void* _qpaintdevice) {
+    return (QDateTimeEdit*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
+}
+
 uintptr_t q_datetimeedit_win_id(void* self) {
     return QWidget_WinId((QWidget*)self);
 }
@@ -1895,11 +1903,9 @@ const char** q_datetimeedit_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1977,47 +1983,47 @@ void q_datetimeedit_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 bool q_datetimeedit_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(q_datetimeedit_as_q_paint_device(self));
 }
 
 int32_t q_datetimeedit_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(q_datetimeedit_as_q_paint_device(self));
 }
 
 int32_t q_datetimeedit_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(q_datetimeedit_as_q_paint_device(self));
 }
 
 int32_t q_datetimeedit_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(q_datetimeedit_as_q_paint_device(self));
 }
 
 int32_t q_datetimeedit_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(q_datetimeedit_as_q_paint_device(self));
 }
 
 int32_t q_datetimeedit_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(q_datetimeedit_as_q_paint_device(self));
 }
 
 int32_t q_datetimeedit_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(q_datetimeedit_as_q_paint_device(self));
 }
 
 double q_datetimeedit_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(q_datetimeedit_as_q_paint_device(self));
 }
 
 double q_datetimeedit_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(q_datetimeedit_as_q_paint_device(self));
 }
 
 int32_t q_datetimeedit_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(q_datetimeedit_as_q_paint_device(self));
 }
 
 int32_t q_datetimeedit_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(q_datetimeedit_as_q_paint_device(self));
 }
 
 double q_datetimeedit_device_pixel_ratio_f_scale() {
@@ -3067,6 +3073,14 @@ void q_timeedit_editing_finished(void* self) {
 
 void q_timeedit_on_editing_finished(void* self, void (*callback)(void*)) {
     QAbstractSpinBox_Connect_EditingFinished((QAbstractSpinBox*)self, (intptr_t)callback);
+}
+
+QPaintDevice* q_timeedit_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+QTimeEdit* q_timeedit_from_q_paint_device(void* _qpaintdevice) {
+    return (QTimeEdit*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t q_timeedit_win_id(void* self) {
@@ -4317,11 +4331,9 @@ const char** q_timeedit_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -4399,47 +4411,47 @@ void q_timeedit_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 bool q_timeedit_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(q_timeedit_as_q_paint_device(self));
 }
 
 int32_t q_timeedit_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(q_timeedit_as_q_paint_device(self));
 }
 
 int32_t q_timeedit_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(q_timeedit_as_q_paint_device(self));
 }
 
 int32_t q_timeedit_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(q_timeedit_as_q_paint_device(self));
 }
 
 int32_t q_timeedit_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(q_timeedit_as_q_paint_device(self));
 }
 
 int32_t q_timeedit_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(q_timeedit_as_q_paint_device(self));
 }
 
 int32_t q_timeedit_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(q_timeedit_as_q_paint_device(self));
 }
 
 double q_timeedit_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(q_timeedit_as_q_paint_device(self));
 }
 
 double q_timeedit_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(q_timeedit_as_q_paint_device(self));
 }
 
 int32_t q_timeedit_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(q_timeedit_as_q_paint_device(self));
 }
 
 int32_t q_timeedit_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(q_timeedit_as_q_paint_device(self));
 }
 
 double q_timeedit_device_pixel_ratio_f_scale() {
@@ -5687,6 +5699,14 @@ void q_dateedit_editing_finished(void* self) {
 
 void q_dateedit_on_editing_finished(void* self, void (*callback)(void*)) {
     QAbstractSpinBox_Connect_EditingFinished((QAbstractSpinBox*)self, (intptr_t)callback);
+}
+
+QPaintDevice* q_dateedit_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+QDateEdit* q_dateedit_from_q_paint_device(void* _qpaintdevice) {
+    return (QDateEdit*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t q_dateedit_win_id(void* self) {
@@ -6937,11 +6957,9 @@ const char** q_dateedit_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -7019,47 +7037,47 @@ void q_dateedit_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 bool q_dateedit_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(q_dateedit_as_q_paint_device(self));
 }
 
 int32_t q_dateedit_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(q_dateedit_as_q_paint_device(self));
 }
 
 int32_t q_dateedit_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(q_dateedit_as_q_paint_device(self));
 }
 
 int32_t q_dateedit_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(q_dateedit_as_q_paint_device(self));
 }
 
 int32_t q_dateedit_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(q_dateedit_as_q_paint_device(self));
 }
 
 int32_t q_dateedit_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(q_dateedit_as_q_paint_device(self));
 }
 
 int32_t q_dateedit_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(q_dateedit_as_q_paint_device(self));
 }
 
 double q_dateedit_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(q_dateedit_as_q_paint_device(self));
 }
 
 double q_dateedit_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(q_dateedit_as_q_paint_device(self));
 }
 
 int32_t q_dateedit_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(q_dateedit_as_q_paint_device(self));
 }
 
 int32_t q_dateedit_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(q_dateedit_as_q_paint_device(self));
 }
 
 double q_dateedit_device_pixel_ratio_f_scale() {

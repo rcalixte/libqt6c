@@ -49,9 +49,8 @@ const char* k_lazylocalizedstring_to_string2(void* self, const char* languages[s
         fprintf(stderr, "Failed to allocate memory for string list in k_lazylocalizedstring_to_string2\n");
         abort();
     }
-    for (size_t i = 0; i < languages_len; ++i) {
+    for (size_t i = 0; i < languages_len; ++i)
         languages_qstr[i] = qstring(languages[i]);
-    }
     libqt_list languages_list = qlist(languages_qstr, languages_len);
     libqt_string _str = KLazyLocalizedString_ToString2((KLazyLocalizedString*)self, languages_list);
     free(languages_qstr);
@@ -81,9 +80,8 @@ KLocalizedString* k_lazylocalizedstring_with_languages(void* self, const char* l
         fprintf(stderr, "Failed to allocate memory for string list in k_lazylocalizedstring_with_languages\n");
         abort();
     }
-    for (size_t i = 0; i < languages_len; ++i) {
+    for (size_t i = 0; i < languages_len; ++i)
         languages_qstr[i] = qstring(languages[i]);
-    }
     libqt_list languages_list = qlist(languages_qstr, languages_len);
     KLocalizedString* _out = KLazyLocalizedString_WithLanguages((KLazyLocalizedString*)self, languages_list);
     free(languages_qstr);

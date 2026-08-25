@@ -1825,6 +1825,22 @@ void q_graphicsview_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QGraphicsView*
+///
+QPaintDevice* q_graphicsview_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QGraphicsView object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QGraphicsView* q_graphicsview_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QGraphicsView*

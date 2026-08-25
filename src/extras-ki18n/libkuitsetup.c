@@ -13,9 +13,8 @@ void k_uitsetup_set_tag_pattern(void* self, const char* tagName, const char* att
         fprintf(stderr, "Failed to allocate memory for string list in k_uitsetup_set_tag_pattern\n");
         abort();
     }
-    for (size_t i = 0; i < attribNames_len; ++i) {
+    for (size_t i = 0; i < attribNames_len; ++i)
         attribNames_qstr[i] = qstring(attribNames[i]);
-    }
     libqt_list attribNames_list = qlist(attribNames_qstr, attribNames_len);
     KuitSetup_SetTagPattern((KuitSetup*)self, qstring(tagName), attribNames_list, format, (KLocalizedString*)pattern);
     free(attribNames_qstr);

@@ -113,11 +113,9 @@ const char** k_configgroup_group_list(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -136,11 +134,9 @@ const char** k_configgroup_super_group_list(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -155,11 +151,9 @@ const char** k_configgroup_key_list(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -221,9 +215,8 @@ const char** k_configgroup_read_entry9(void* self, const char* key, const char* 
         fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_read_entry9\n");
         abort();
     }
-    for (size_t i = 0; i < aDefault_len; ++i) {
+    for (size_t i = 0; i < aDefault_len; ++i)
         aDefault_qstr[i] = qstring(aDefault[i]);
-    }
     libqt_list aDefault_list = qlist(aDefault_qstr, aDefault_len);
     libqt_list _arr = KConfigGroup_ReadEntry9((KConfigGroup*)self, qstring(key), aDefault_list);
     free(aDefault_qstr);
@@ -235,11 +228,9 @@ const char** k_configgroup_read_entry9(void* self, const char* key, const char* 
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -251,9 +242,8 @@ const char** k_configgroup_read_entry10(void* self, const char* key, const char*
         fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_read_entry10\n");
         abort();
     }
-    for (size_t i = 0; i < aDefault_len; ++i) {
+    for (size_t i = 0; i < aDefault_len; ++i)
         aDefault_qstr[i] = qstring(aDefault[i]);
-    }
     libqt_list aDefault_list = qlist(aDefault_qstr, aDefault_len);
     libqt_list _arr = KConfigGroup_ReadEntry10((KConfigGroup*)self, key, aDefault_list);
     free(aDefault_qstr);
@@ -265,11 +255,9 @@ const char** k_configgroup_read_entry10(void* self, const char* key, const char*
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -284,11 +272,9 @@ const char** k_configgroup_read_xdg_list_entry(void* self, const char* pKey) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -303,11 +289,9 @@ const char** k_configgroup_read_xdg_list_entry2(void* self, const char* key) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -333,9 +317,8 @@ const char** k_configgroup_read_path_entry3(void* self, const char* pKey, const 
         fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_read_path_entry3\n");
         abort();
     }
-    for (size_t i = 0; i < aDefault_len; ++i) {
+    for (size_t i = 0; i < aDefault_len; ++i)
         aDefault_qstr[i] = qstring(aDefault[i]);
-    }
     libqt_list aDefault_list = qlist(aDefault_qstr, aDefault_len);
     libqt_list _arr = KConfigGroup_ReadPathEntry3((KConfigGroup*)self, qstring(pKey), aDefault_list);
     free(aDefault_qstr);
@@ -347,11 +330,9 @@ const char** k_configgroup_read_path_entry3(void* self, const char* pKey, const 
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -363,9 +344,8 @@ const char** k_configgroup_read_path_entry4(void* self, const char* key, const c
         fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_read_path_entry4\n");
         abort();
     }
-    for (size_t i = 0; i < aDefault_len; ++i) {
+    for (size_t i = 0; i < aDefault_len; ++i)
         aDefault_qstr[i] = qstring(aDefault[i]);
-    }
     libqt_list aDefault_list = qlist(aDefault_qstr, aDefault_len);
     libqt_list _arr = KConfigGroup_ReadPathEntry4((KConfigGroup*)self, key, aDefault_list);
     free(aDefault_qstr);
@@ -377,11 +357,9 @@ const char** k_configgroup_read_path_entry4(void* self, const char* key, const c
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -439,9 +417,8 @@ void k_configgroup_write_entry9(void* self, const char* key, const char* value[s
         fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_entry9\n");
         abort();
     }
-    for (size_t i = 0; i < value_len; ++i) {
+    for (size_t i = 0; i < value_len; ++i)
         value_qstr[i] = qstring(value[i]);
-    }
     libqt_list value_list = qlist(value_qstr, value_len);
     KConfigGroup_WriteEntry9((KConfigGroup*)self, qstring(key), value_list);
     free(value_qstr);
@@ -454,9 +431,8 @@ void k_configgroup_write_entry10(void* self, const char* key, const char* value[
         fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_entry10\n");
         abort();
     }
-    for (size_t i = 0; i < value_len; ++i) {
+    for (size_t i = 0; i < value_len; ++i)
         value_qstr[i] = qstring(value[i]);
-    }
     libqt_list value_list = qlist(value_qstr, value_len);
     KConfigGroup_WriteEntry10((KConfigGroup*)self, key, value_list);
     free(value_qstr);
@@ -477,9 +453,8 @@ void k_configgroup_write_xdg_list_entry(void* self, const char* pKey, const char
         fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_xdg_list_entry\n");
         abort();
     }
-    for (size_t i = 0; i < value_len; ++i) {
+    for (size_t i = 0; i < value_len; ++i)
         value_qstr[i] = qstring(value[i]);
-    }
     libqt_list value_list = qlist(value_qstr, value_len);
     KConfigGroup_WriteXdgListEntry((KConfigGroup*)self, qstring(pKey), value_list);
     free(value_qstr);
@@ -492,9 +467,8 @@ void k_configgroup_write_xdg_list_entry2(void* self, const char* key, const char
         fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_xdg_list_entry2\n");
         abort();
     }
-    for (size_t i = 0; i < value_len; ++i) {
+    for (size_t i = 0; i < value_len; ++i)
         value_qstr[i] = qstring(value[i]);
-    }
     libqt_list value_list = qlist(value_qstr, value_len);
     KConfigGroup_WriteXdgListEntry2((KConfigGroup*)self, key, value_list);
     free(value_qstr);
@@ -515,9 +489,8 @@ void k_configgroup_write_path_entry3(void* self, const char* pKey, const char* v
         fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_path_entry3\n");
         abort();
     }
-    for (size_t i = 0; i < value_len; ++i) {
+    for (size_t i = 0; i < value_len; ++i)
         value_qstr[i] = qstring(value[i]);
-    }
     libqt_list value_list = qlist(value_qstr, value_len);
     KConfigGroup_WritePathEntry3((KConfigGroup*)self, qstring(pKey), value_list);
     free(value_qstr);
@@ -530,9 +503,8 @@ void k_configgroup_write_path_entry4(void* self, const char* key, const char* va
         fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_path_entry4\n");
         abort();
     }
-    for (size_t i = 0; i < value_len; ++i) {
+    for (size_t i = 0; i < value_len; ++i)
         value_qstr[i] = qstring(value[i]);
-    }
     libqt_list value_list = qlist(value_qstr, value_len);
     KConfigGroup_WritePathEntry4((KConfigGroup*)self, key, value_list);
     free(value_qstr);
@@ -746,9 +718,8 @@ const char** k_configgroup_read_xdg_list_entry22(void* self, const char* pKey, c
         fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_read_xdg_list_entry22\n");
         abort();
     }
-    for (size_t i = 0; i < aDefault_len; ++i) {
+    for (size_t i = 0; i < aDefault_len; ++i)
         aDefault_qstr[i] = qstring(aDefault[i]);
-    }
     libqt_list aDefault_list = qlist(aDefault_qstr, aDefault_len);
     libqt_list _arr = KConfigGroup_ReadXdgListEntry22((KConfigGroup*)self, qstring(pKey), aDefault_list);
     free(aDefault_qstr);
@@ -760,11 +731,9 @@ const char** k_configgroup_read_xdg_list_entry22(void* self, const char* pKey, c
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -776,9 +745,8 @@ const char** k_configgroup_read_xdg_list_entry23(void* self, const char* key, co
         fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_read_xdg_list_entry23\n");
         abort();
     }
-    for (size_t i = 0; i < aDefault_len; ++i) {
+    for (size_t i = 0; i < aDefault_len; ++i)
         aDefault_qstr[i] = qstring(aDefault[i]);
-    }
     libqt_list aDefault_list = qlist(aDefault_qstr, aDefault_len);
     libqt_list _arr = KConfigGroup_ReadXdgListEntry23((KConfigGroup*)self, key, aDefault_list);
     free(aDefault_qstr);
@@ -790,11 +758,9 @@ const char** k_configgroup_read_xdg_list_entry23(void* self, const char* key, co
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -852,9 +818,8 @@ void k_configgroup_write_entry310(void* self, const char* key, const char* value
         fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_entry310\n");
         abort();
     }
-    for (size_t i = 0; i < value_len; ++i) {
+    for (size_t i = 0; i < value_len; ++i)
         value_qstr[i] = qstring(value[i]);
-    }
     libqt_list value_list = qlist(value_qstr, value_len);
     KConfigGroup_WriteEntry310((KConfigGroup*)self, qstring(key), value_list, pFlags);
     free(value_qstr);
@@ -867,9 +832,8 @@ void k_configgroup_write_entry311(void* self, const char* key, const char* value
         fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_entry311\n");
         abort();
     }
-    for (size_t i = 0; i < value_len; ++i) {
+    for (size_t i = 0; i < value_len; ++i)
         value_qstr[i] = qstring(value[i]);
-    }
     libqt_list value_list = qlist(value_qstr, value_len);
     KConfigGroup_WriteEntry311((KConfigGroup*)self, key, value_list, pFlags);
     free(value_qstr);
@@ -890,9 +854,8 @@ void k_configgroup_write_xdg_list_entry3(void* self, const char* pKey, const cha
         fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_xdg_list_entry3\n");
         abort();
     }
-    for (size_t i = 0; i < value_len; ++i) {
+    for (size_t i = 0; i < value_len; ++i)
         value_qstr[i] = qstring(value[i]);
-    }
     libqt_list value_list = qlist(value_qstr, value_len);
     KConfigGroup_WriteXdgListEntry3((KConfigGroup*)self, qstring(pKey), value_list, pFlags);
     free(value_qstr);
@@ -905,9 +868,8 @@ void k_configgroup_write_xdg_list_entry32(void* self, const char* key, const cha
         fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_xdg_list_entry32\n");
         abort();
     }
-    for (size_t i = 0; i < value_len; ++i) {
+    for (size_t i = 0; i < value_len; ++i)
         value_qstr[i] = qstring(value[i]);
-    }
     libqt_list value_list = qlist(value_qstr, value_len);
     KConfigGroup_WriteXdgListEntry32((KConfigGroup*)self, key, value_list, pFlags);
     free(value_qstr);
@@ -928,9 +890,8 @@ void k_configgroup_write_path_entry34(void* self, const char* pKey, const char* 
         fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_path_entry34\n");
         abort();
     }
-    for (size_t i = 0; i < value_len; ++i) {
+    for (size_t i = 0; i < value_len; ++i)
         value_qstr[i] = qstring(value[i]);
-    }
     libqt_list value_list = qlist(value_qstr, value_len);
     KConfigGroup_WritePathEntry34((KConfigGroup*)self, qstring(pKey), value_list, pFlags);
     free(value_qstr);
@@ -943,9 +904,8 @@ void k_configgroup_write_path_entry35(void* self, const char* key, const char* v
         fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_path_entry35\n");
         abort();
     }
-    for (size_t i = 0; i < value_len; ++i) {
+    for (size_t i = 0; i < value_len; ++i)
         value_qstr[i] = qstring(value[i]);
-    }
     libqt_list value_list = qlist(value_qstr, value_len);
     KConfigGroup_WritePathEntry35((KConfigGroup*)self, key, value_list, pFlags);
     free(value_qstr);

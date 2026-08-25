@@ -389,6 +389,22 @@ void k_textcustomeditor__richtextbrowserfindbar_close_bar(void* self);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextCustomEditor__RichTextBrowserFindBar*
+///
+QPaintDevice* k_textcustomeditor__richtextbrowserfindbar_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextCustomEditor__RichTextBrowserFindBar object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextCustomEditor__RichTextBrowserFindBar* k_textcustomeditor__richtextbrowserfindbar_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self TextCustomEditor__RichTextBrowserFindBar*

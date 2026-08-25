@@ -47,6 +47,18 @@ QAccessibleWidget* q_accessiblewidget_new2(void* o, int32_t r);
 ///
 QAccessibleWidget* q_accessiblewidget_new3(void* o, int32_t r, const char* name);
 
+/// Upcasts to a QAccessibleActionInterface object
+///
+/// @param self QAccessibleWidget*
+///
+QAccessibleActionInterface* q_accessiblewidget_as_q_accessible_action_interface(void* self);
+
+/// Downcasts to a QAccessibleWidget object
+///
+/// @param _qaccessibleactioninterface QAccessibleActionInterface*
+///
+QAccessibleWidget* q_accessiblewidget_from_q_accessible_action_interface(void* _qaccessibleactioninterface);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#isValid)
 ///
 /// @param self QAccessibleWidget*

@@ -1350,6 +1350,22 @@ void k_datecombobox_set_item_data3(void* self, int index, void* value, int role)
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KDateComboBox*
+///
+QPaintDevice* k_datecombobox_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KDateComboBox object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KDateComboBox* k_datecombobox_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KDateComboBox*

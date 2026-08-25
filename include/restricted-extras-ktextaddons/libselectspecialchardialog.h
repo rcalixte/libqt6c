@@ -252,6 +252,22 @@ void k_textaddonswidgets__selectspecialchardialog_on_rejected(void* self, void (
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextAddonsWidgets__SelectSpecialCharDialog*
+///
+QPaintDevice* k_textaddonswidgets__selectspecialchardialog_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextAddonsWidgets__SelectSpecialCharDialog object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextAddonsWidgets__SelectSpecialCharDialog* k_textaddonswidgets__selectspecialchardialog_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self TextAddonsWidgets__SelectSpecialCharDialog*

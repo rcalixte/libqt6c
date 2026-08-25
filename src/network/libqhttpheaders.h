@@ -277,9 +277,8 @@ libqt_list q_httpheaders_to_list_of_pairs(void* self);
 /// // Example for freeing the returned map of type:
 /// // libqt_map of char* to char**
 /// for (size_t i = 0; i < map.len; ++i) {
-///     for (size_t j = 0; ((char**)map.values)[i][j] != NULL; j++) {
+///     for (size_t j = 0; ((char**)map.values)[i][j] != NULL; j++)
 ///         free((map.values)[i][j]);
-///     }
 ///     libqt_free(map.keys[i]);
 ///     libqt_free(map.values[i]);
 /// }
@@ -300,9 +299,8 @@ libqt_map q_httpheaders_to_multi_map(void* self);
 /// // Example for freeing the returned map of type:
 /// // libqt_map of char* to char**
 /// for (size_t i = 0; i < map.len; ++i) {
-///     for (size_t j = 0; ((char**)map.values)[i][j] != NULL; j++) {
+///     for (size_t j = 0; ((char**)map.values)[i][j] != NULL; j++)
 ///         free((map.values)[i][j]);
-///     }
 ///     libqt_free(map.keys[i]);
 ///     libqt_free(map.values[i]);
 /// }

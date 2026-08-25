@@ -27,6 +27,18 @@ KBookmarkActionMenu* k_bookmarkactionmenu_new(void* bm, void* parent);
 ///
 KBookmarkActionMenu* k_bookmarkactionmenu_new2(void* bm, const char* text, void* parent);
 
+/// Upcasts to a KBookmarkActionInterface object
+///
+/// @param self KBookmarkActionMenu*
+///
+KBookmarkActionInterface* k_bookmarkactionmenu_as_k_bookmark_action_interface(void* self);
+
+/// Downcasts to a KBookmarkActionMenu object
+///
+/// @param _kbookmarkactioninterface KBookmarkActionInterface*
+///
+KBookmarkActionMenu* k_bookmarkactionmenu_from_k_bookmark_action_interface(void* _kbookmarkactioninterface);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KBookmarkActionMenu*

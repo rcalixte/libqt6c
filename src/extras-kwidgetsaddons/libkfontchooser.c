@@ -131,11 +131,9 @@ const char** k_fontchooser_create_font_list(uint32_t fontListCriteria) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -147,9 +145,8 @@ void k_fontchooser_set_font_list_items(void* self, const char* fontList[static 1
         fprintf(stderr, "Failed to allocate memory for string list in k_fontchooser_set_font_list_items\n");
         abort();
     }
-    for (size_t i = 0; i < fontList_len; ++i) {
+    for (size_t i = 0; i < fontList_len; ++i)
         fontList_qstr[i] = qstring(fontList[i]);
-    }
     libqt_list fontList_list = qlist(fontList_qstr, fontList_len);
     KFontChooser_SetFontListItems((KFontChooser*)self, fontList_list);
     free(fontList_qstr);
@@ -195,6 +192,14 @@ const char* k_fontchooser_tr3(const char* s, const char* c, int n) {
 
 void k_fontchooser_set_font2(void* self, void* font, bool onlyFixed) {
     KFontChooser_SetFont2((KFontChooser*)self, (QFont*)font, onlyFixed);
+}
+
+QPaintDevice* k_fontchooser_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+KFontChooser* k_fontchooser_from_q_paint_device(void* _qpaintdevice) {
+    return (KFontChooser*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t k_fontchooser_win_id(void* self) {
@@ -1437,11 +1442,9 @@ const char** k_fontchooser_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1519,47 +1522,47 @@ void k_fontchooser_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 bool k_fontchooser_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_fontchooser_as_q_paint_device(self));
 }
 
 int32_t k_fontchooser_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_fontchooser_as_q_paint_device(self));
 }
 
 int32_t k_fontchooser_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_fontchooser_as_q_paint_device(self));
 }
 
 int32_t k_fontchooser_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_fontchooser_as_q_paint_device(self));
 }
 
 int32_t k_fontchooser_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_fontchooser_as_q_paint_device(self));
 }
 
 int32_t k_fontchooser_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_fontchooser_as_q_paint_device(self));
 }
 
 int32_t k_fontchooser_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_fontchooser_as_q_paint_device(self));
 }
 
 double k_fontchooser_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_fontchooser_as_q_paint_device(self));
 }
 
 double k_fontchooser_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_fontchooser_as_q_paint_device(self));
 }
 
 int32_t k_fontchooser_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_fontchooser_as_q_paint_device(self));
 }
 
 int32_t k_fontchooser_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_fontchooser_as_q_paint_device(self));
 }
 
 double k_fontchooser_device_pixel_ratio_f_scale() {

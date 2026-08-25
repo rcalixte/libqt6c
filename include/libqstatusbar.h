@@ -389,6 +389,22 @@ void q_statusbar_show_message2(void* self, const char* text, int timeout);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QStatusBar*
+///
+QPaintDevice* q_statusbar_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QStatusBar object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QStatusBar* q_statusbar_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QStatusBar*

@@ -84,9 +84,8 @@ bool q_dbusconnection_connect3(void* self, const char* service, const char* path
         fprintf(stderr, "Failed to allocate memory for string list in q_dbusconnection_connect3\n");
         abort();
     }
-    for (size_t i = 0; i < argumentMatch_len; ++i) {
+    for (size_t i = 0; i < argumentMatch_len; ++i)
         argumentMatch_qstr[i] = qstring(argumentMatch[i]);
-    }
     libqt_list argumentMatch_list = qlist(argumentMatch_qstr, argumentMatch_len);
     bool _out = QDBusConnection_Connect3((QDBusConnection*)self, qstring(service), qstring(path), qstring(interface), qstring(name), argumentMatch_list, qstring(signature), (QObject*)receiver, slot);
     free(argumentMatch_qstr);
@@ -108,9 +107,8 @@ bool q_dbusconnection_disconnect3(void* self, const char* service, const char* p
         fprintf(stderr, "Failed to allocate memory for string list in q_dbusconnection_disconnect3\n");
         abort();
     }
-    for (size_t i = 0; i < argumentMatch_len; ++i) {
+    for (size_t i = 0; i < argumentMatch_len; ++i)
         argumentMatch_qstr[i] = qstring(argumentMatch[i]);
-    }
     libqt_list argumentMatch_list = qlist(argumentMatch_qstr, argumentMatch_len);
     bool _out = QDBusConnection_Disconnect3((QDBusConnection*)self, qstring(service), qstring(path), qstring(interface), qstring(name), argumentMatch_list, qstring(signature), (QObject*)receiver, slot);
     free(argumentMatch_qstr);

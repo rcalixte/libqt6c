@@ -74,11 +74,9 @@ const char** k_nscore__enginebase_available_config_files() {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -131,11 +129,9 @@ const char** k_nscore__enginebase_categories(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -172,9 +168,8 @@ void k_nscore__enginebase_set_tag_filter(void* self, const char* filter[static 1
         fprintf(stderr, "Failed to allocate memory for string list in k_nscore__enginebase_set_tag_filter\n");
         abort();
     }
-    for (size_t i = 0; i < filter_len; ++i) {
+    for (size_t i = 0; i < filter_len; ++i)
         filter_qstr[i] = qstring(filter[i]);
-    }
     libqt_list filter_list = qlist(filter_qstr, filter_len);
     KNSCore__EngineBase_SetTagFilter((KNSCore__EngineBase*)self, filter_list);
     free(filter_qstr);
@@ -190,11 +185,9 @@ const char** k_nscore__enginebase_tag_filter(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -210,9 +203,8 @@ void k_nscore__enginebase_set_download_tag_filter(void* self, const char* filter
         fprintf(stderr, "Failed to allocate memory for string list in k_nscore__enginebase_set_download_tag_filter\n");
         abort();
     }
-    for (size_t i = 0; i < filter_len; ++i) {
+    for (size_t i = 0; i < filter_len; ++i)
         filter_qstr[i] = qstring(filter[i]);
-    }
     libqt_list filter_list = qlist(filter_qstr, filter_len);
     KNSCore__EngineBase_SetDownloadTagFilter((KNSCore__EngineBase*)self, filter_list);
     free(filter_qstr);
@@ -228,11 +220,9 @@ const char** k_nscore__enginebase_download_tag_filter(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -267,11 +257,9 @@ const char** k_nscore__enginebase_provider_i_ds(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -492,11 +480,9 @@ const char** k_nscore__enginebase_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

@@ -6,6 +6,14 @@
 #include "libplatformdependent_v3.hpp"
 #include "libplatformdependent_v3.h"
 
+Attica__PlatformDependentV2* k_attica__platformdependentv3_as_attica___platform_dependent_v2(void* self) {
+    return Attica__PlatformDependentV3_AsAttica__PlatformDependentV2((Attica__PlatformDependentV3*)self);
+}
+
+Attica__PlatformDependentV3* k_attica__platformdependentv3_from_attica___platform_dependent_v2(void* _attica__platformdependentv2) {
+    return (Attica__PlatformDependentV3*)Attica__PlatformDependentV3_FromAttica__PlatformDependentV2((Attica__PlatformDependentV2*)_attica__platformdependentv2);
+}
+
 const QMetaObject* k_attica__platformdependentv3_meta_object(void* self) {
     return Attica__PlatformDependentV3_MetaObject((Attica__PlatformDependentV3*)self);
 }
@@ -189,11 +197,9 @@ const char** k_attica__platformdependentv3_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

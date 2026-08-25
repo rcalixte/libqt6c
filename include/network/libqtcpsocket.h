@@ -445,6 +445,14 @@ void q_tcpsocket_connect_to_host3(void* self, void* address, uint16_t port, int3
 
 /// Inherited from QIODevice
 ///
+/// Upcasts to a QIODeviceBase object
+///
+/// @param self QTcpSocket*
+///
+QIODeviceBase* q_tcpsocket_as_q_i_o_device_base(void* self);
+
+/// Inherited from QIODevice
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#openMode)
 ///
 /// @param self QTcpSocket*

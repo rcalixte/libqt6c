@@ -138,9 +138,8 @@ void q_inputdialog_set_combo_box_items(void* self, const char* items[static 1]) 
         fprintf(stderr, "Failed to allocate memory for string list in q_inputdialog_set_combo_box_items\n");
         abort();
     }
-    for (size_t i = 0; i < items_len; ++i) {
+    for (size_t i = 0; i < items_len; ++i)
         items_qstr[i] = qstring(items[i]);
-    }
     libqt_list items_list = qlist(items_qstr, items_len);
     QInputDialog_SetComboBoxItems((QInputDialog*)self, items_list);
     free(items_qstr);
@@ -156,11 +155,9 @@ const char** q_inputdialog_combo_box_items(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -316,9 +313,8 @@ const char* q_inputdialog_get_item(void* parent, const char* title, const char* 
         fprintf(stderr, "Failed to allocate memory for string list in q_inputdialog_get_item\n");
         abort();
     }
-    for (size_t i = 0; i < items_len; ++i) {
+    for (size_t i = 0; i < items_len; ++i)
         items_qstr[i] = qstring(items[i]);
-    }
     libqt_list items_list = qlist(items_qstr, items_len);
     libqt_string _str = QInputDialog_GetItem((QWidget*)parent, qstring(title), qstring(label), items_list);
     free(items_qstr);
@@ -491,9 +487,8 @@ const char* q_inputdialog_get_item5(void* parent, const char* title, const char*
         fprintf(stderr, "Failed to allocate memory for string list in q_inputdialog_get_item5\n");
         abort();
     }
-    for (size_t i = 0; i < items_len; ++i) {
+    for (size_t i = 0; i < items_len; ++i)
         items_qstr[i] = qstring(items[i]);
-    }
     libqt_list items_list = qlist(items_qstr, items_len);
     libqt_string _str = QInputDialog_GetItem5((QWidget*)parent, qstring(title), qstring(label), items_list, current);
     free(items_qstr);
@@ -509,9 +504,8 @@ const char* q_inputdialog_get_item6(void* parent, const char* title, const char*
         fprintf(stderr, "Failed to allocate memory for string list in q_inputdialog_get_item6\n");
         abort();
     }
-    for (size_t i = 0; i < items_len; ++i) {
+    for (size_t i = 0; i < items_len; ++i)
         items_qstr[i] = qstring(items[i]);
-    }
     libqt_list items_list = qlist(items_qstr, items_len);
     libqt_string _str = QInputDialog_GetItem6((QWidget*)parent, qstring(title), qstring(label), items_list, current, editable);
     free(items_qstr);
@@ -527,9 +521,8 @@ const char* q_inputdialog_get_item7(void* parent, const char* title, const char*
         fprintf(stderr, "Failed to allocate memory for string list in q_inputdialog_get_item7\n");
         abort();
     }
-    for (size_t i = 0; i < items_len; ++i) {
+    for (size_t i = 0; i < items_len; ++i)
         items_qstr[i] = qstring(items[i]);
-    }
     libqt_list items_list = qlist(items_qstr, items_len);
     libqt_string _str = QInputDialog_GetItem7((QWidget*)parent, qstring(title), qstring(label), items_list, current, editable, (bool*)ok);
     free(items_qstr);
@@ -545,9 +538,8 @@ const char* q_inputdialog_get_item8(void* parent, const char* title, const char*
         fprintf(stderr, "Failed to allocate memory for string list in q_inputdialog_get_item8\n");
         abort();
     }
-    for (size_t i = 0; i < items_len; ++i) {
+    for (size_t i = 0; i < items_len; ++i)
         items_qstr[i] = qstring(items[i]);
-    }
     libqt_list items_list = qlist(items_qstr, items_len);
     libqt_string _str = QInputDialog_GetItem8((QWidget*)parent, qstring(title), qstring(label), items_list, current, editable, (bool*)ok, flags);
     free(items_qstr);
@@ -563,9 +555,8 @@ const char* q_inputdialog_get_item9(void* parent, const char* title, const char*
         fprintf(stderr, "Failed to allocate memory for string list in q_inputdialog_get_item9\n");
         abort();
     }
-    for (size_t i = 0; i < items_len; ++i) {
+    for (size_t i = 0; i < items_len; ++i)
         items_qstr[i] = qstring(items[i]);
-    }
     libqt_list items_list = qlist(items_qstr, items_len);
     libqt_string _str = QInputDialog_GetItem9((QWidget*)parent, qstring(title), qstring(label), items_list, current, editable, (bool*)ok, flags, inputMethodHints);
     free(items_qstr);
@@ -668,6 +659,14 @@ void q_inputdialog_rejected(void* self) {
 
 void q_inputdialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
+}
+
+QPaintDevice* q_inputdialog_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+QInputDialog* q_inputdialog_from_q_paint_device(void* _qpaintdevice) {
+    return (QInputDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t q_inputdialog_win_id(void* self) {
@@ -1918,11 +1917,9 @@ const char** q_inputdialog_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -2000,47 +1997,47 @@ void q_inputdialog_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 bool q_inputdialog_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(q_inputdialog_as_q_paint_device(self));
 }
 
 int32_t q_inputdialog_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(q_inputdialog_as_q_paint_device(self));
 }
 
 int32_t q_inputdialog_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(q_inputdialog_as_q_paint_device(self));
 }
 
 int32_t q_inputdialog_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(q_inputdialog_as_q_paint_device(self));
 }
 
 int32_t q_inputdialog_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(q_inputdialog_as_q_paint_device(self));
 }
 
 int32_t q_inputdialog_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(q_inputdialog_as_q_paint_device(self));
 }
 
 int32_t q_inputdialog_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(q_inputdialog_as_q_paint_device(self));
 }
 
 double q_inputdialog_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(q_inputdialog_as_q_paint_device(self));
 }
 
 double q_inputdialog_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(q_inputdialog_as_q_paint_device(self));
 }
 
 int32_t q_inputdialog_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(q_inputdialog_as_q_paint_device(self));
 }
 
 int32_t q_inputdialog_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(q_inputdialog_as_q_paint_device(self));
 }
 
 double q_inputdialog_device_pixel_ratio_f_scale() {

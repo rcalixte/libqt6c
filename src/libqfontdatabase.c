@@ -48,11 +48,9 @@ const char** q_fontdatabase_families() {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -67,11 +65,9 @@ const char** q_fontdatabase_styles(const char* family) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -172,11 +168,9 @@ const char** q_fontdatabase_application_font_families(int id) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -204,9 +198,8 @@ void q_fontdatabase_set_application_fallback_font_families(int32_t param1, const
         fprintf(stderr, "Failed to allocate memory for string list in q_fontdatabase_set_application_fallback_font_families\n");
         abort();
     }
-    for (size_t i = 0; i < familyNames_len; ++i) {
+    for (size_t i = 0; i < familyNames_len; ++i)
         familyNames_qstr[i] = qstring(familyNames[i]);
-    }
     libqt_list familyNames_list = qlist(familyNames_qstr, familyNames_len);
     QFontDatabase_SetApplicationFallbackFontFamilies(param1, familyNames_list);
     free(familyNames_qstr);
@@ -222,11 +215,9 @@ const char** q_fontdatabase_application_fallback_font_families(int32_t script) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -245,11 +236,9 @@ const char** q_fontdatabase_families1(int32_t writingSystem) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

@@ -51,11 +51,9 @@ const char** k_syntaxhighlighting__definition_alternative_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -91,11 +89,9 @@ const char** k_syntaxhighlighting__definition_mime_types(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -110,11 +106,9 @@ const char** k_syntaxhighlighting__definition_extensions(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -185,11 +179,9 @@ const char** k_syntaxhighlighting__definition_folding_ignore_list(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -204,11 +196,9 @@ const char** k_syntaxhighlighting__definition_keyword_lists(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -223,11 +213,9 @@ const char** k_syntaxhighlighting__definition_keyword_list(void* self, const cha
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -239,9 +227,8 @@ bool k_syntaxhighlighting__definition_set_keyword_list(void* self, const char* n
         fprintf(stderr, "Failed to allocate memory for string list in k_syntaxhighlighting__definition_set_keyword_list\n");
         abort();
     }
-    for (size_t i = 0; i < content_len; ++i) {
+    for (size_t i = 0; i < content_len; ++i)
         content_qstr[i] = qstring(content[i]);
-    }
     libqt_list content_list = qlist(content_qstr, content_len);
     bool _out = KSyntaxHighlighting__Definition_SetKeywordList((KSyntaxHighlighting__Definition*)self, qstring(name), content_list);
     free(content_qstr);

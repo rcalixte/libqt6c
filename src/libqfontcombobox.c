@@ -360,9 +360,8 @@ void q_fontcombobox_add_items(void* self, const char* texts[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_fontcombobox_add_items\n");
         abort();
     }
-    for (size_t i = 0; i < texts_len; ++i) {
+    for (size_t i = 0; i < texts_len; ++i)
         texts_qstr[i] = qstring(texts[i]);
-    }
     libqt_list texts_list = qlist(texts_qstr, texts_len);
     QComboBox_AddItems((QComboBox*)self, texts_list);
     free(texts_qstr);
@@ -383,9 +382,8 @@ void q_fontcombobox_insert_items(void* self, int index, const char* texts[static
         fprintf(stderr, "Failed to allocate memory for string list in q_fontcombobox_insert_items\n");
         abort();
     }
-    for (size_t i = 0; i < texts_len; ++i) {
+    for (size_t i = 0; i < texts_len; ++i)
         texts_qstr[i] = qstring(texts[i]);
-    }
     libqt_list texts_list = qlist(texts_qstr, texts_len);
     QComboBox_InsertItems((QComboBox*)self, index, texts_list);
     free(texts_qstr);
@@ -537,6 +535,14 @@ void q_fontcombobox_insert_item4(void* self, int index, void* icon, const char* 
 
 void q_fontcombobox_set_item_data3(void* self, int index, void* value, int role) {
     QComboBox_SetItemData3((QComboBox*)self, index, (QVariant*)value, role);
+}
+
+QPaintDevice* q_fontcombobox_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+QFontComboBox* q_fontcombobox_from_q_paint_device(void* _qpaintdevice) {
+    return (QFontComboBox*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t q_fontcombobox_win_id(void* self) {
@@ -1787,11 +1793,9 @@ const char** q_fontcombobox_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1869,47 +1873,47 @@ void q_fontcombobox_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 bool q_fontcombobox_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(q_fontcombobox_as_q_paint_device(self));
 }
 
 int32_t q_fontcombobox_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(q_fontcombobox_as_q_paint_device(self));
 }
 
 int32_t q_fontcombobox_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(q_fontcombobox_as_q_paint_device(self));
 }
 
 int32_t q_fontcombobox_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(q_fontcombobox_as_q_paint_device(self));
 }
 
 int32_t q_fontcombobox_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(q_fontcombobox_as_q_paint_device(self));
 }
 
 int32_t q_fontcombobox_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(q_fontcombobox_as_q_paint_device(self));
 }
 
 int32_t q_fontcombobox_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(q_fontcombobox_as_q_paint_device(self));
 }
 
 double q_fontcombobox_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(q_fontcombobox_as_q_paint_device(self));
 }
 
 double q_fontcombobox_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(q_fontcombobox_as_q_paint_device(self));
 }
 
 int32_t q_fontcombobox_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(q_fontcombobox_as_q_paint_device(self));
 }
 
 int32_t q_fontcombobox_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(q_fontcombobox_as_q_paint_device(self));
 }
 
 double q_fontcombobox_device_pixel_ratio_f_scale() {

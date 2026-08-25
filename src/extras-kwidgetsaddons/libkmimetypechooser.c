@@ -29,9 +29,8 @@ KMimeTypeChooser* k_mimetypechooser_new3(const char* text, const char* selectedM
         fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new3\n");
         abort();
     }
-    for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
+    for (size_t i = 0; i < selectedMimeTypes_len; ++i)
         selectedMimeTypes_qstr[i] = qstring(selectedMimeTypes[i]);
-    }
     libqt_list selectedMimeTypes_list = qlist(selectedMimeTypes_qstr, selectedMimeTypes_len);
 
     KMimeTypeChooser* _out = KMimeTypeChooser_New3(qstring(text), selectedMimeTypes_list);
@@ -46,9 +45,8 @@ KMimeTypeChooser* k_mimetypechooser_new4(const char* text, const char* selectedM
         fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new4\n");
         abort();
     }
-    for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
+    for (size_t i = 0; i < selectedMimeTypes_len; ++i)
         selectedMimeTypes_qstr[i] = qstring(selectedMimeTypes[i]);
-    }
     libqt_list selectedMimeTypes_list = qlist(selectedMimeTypes_qstr, selectedMimeTypes_len);
 
     KMimeTypeChooser* _out = KMimeTypeChooser_New4(qstring(text), selectedMimeTypes_list, qstring(defaultGroup));
@@ -63,9 +61,8 @@ KMimeTypeChooser* k_mimetypechooser_new5(const char* text, const char* selectedM
         fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new5\n");
         abort();
     }
-    for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
+    for (size_t i = 0; i < selectedMimeTypes_len; ++i)
         selectedMimeTypes_qstr[i] = qstring(selectedMimeTypes[i]);
-    }
     libqt_list selectedMimeTypes_list = qlist(selectedMimeTypes_qstr, selectedMimeTypes_len);
     size_t groupsToShow_len = libqt_strv_length(groupsToShow);
     libqt_string* groupsToShow_qstr = (libqt_string*)malloc(groupsToShow_len * sizeof(libqt_string));
@@ -73,9 +70,8 @@ KMimeTypeChooser* k_mimetypechooser_new5(const char* text, const char* selectedM
         fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new5\n");
         abort();
     }
-    for (size_t i = 0; i < groupsToShow_len; ++i) {
+    for (size_t i = 0; i < groupsToShow_len; ++i)
         groupsToShow_qstr[i] = qstring(groupsToShow[i]);
-    }
     libqt_list groupsToShow_list = qlist(groupsToShow_qstr, groupsToShow_len);
 
     KMimeTypeChooser* _out = KMimeTypeChooser_New5(qstring(text), selectedMimeTypes_list, qstring(defaultGroup), groupsToShow_list);
@@ -91,9 +87,8 @@ KMimeTypeChooser* k_mimetypechooser_new6(const char* text, const char* selectedM
         fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new6\n");
         abort();
     }
-    for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
+    for (size_t i = 0; i < selectedMimeTypes_len; ++i)
         selectedMimeTypes_qstr[i] = qstring(selectedMimeTypes[i]);
-    }
     libqt_list selectedMimeTypes_list = qlist(selectedMimeTypes_qstr, selectedMimeTypes_len);
     size_t groupsToShow_len = libqt_strv_length(groupsToShow);
     libqt_string* groupsToShow_qstr = (libqt_string*)malloc(groupsToShow_len * sizeof(libqt_string));
@@ -101,9 +96,8 @@ KMimeTypeChooser* k_mimetypechooser_new6(const char* text, const char* selectedM
         fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new6\n");
         abort();
     }
-    for (size_t i = 0; i < groupsToShow_len; ++i) {
+    for (size_t i = 0; i < groupsToShow_len; ++i)
         groupsToShow_qstr[i] = qstring(groupsToShow[i]);
-    }
     libqt_list groupsToShow_list = qlist(groupsToShow_qstr, groupsToShow_len);
 
     KMimeTypeChooser* _out = KMimeTypeChooser_New6(qstring(text), selectedMimeTypes_list, qstring(defaultGroup), groupsToShow_list, visuals);
@@ -119,9 +113,8 @@ KMimeTypeChooser* k_mimetypechooser_new7(const char* text, const char* selectedM
         fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new7\n");
         abort();
     }
-    for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
+    for (size_t i = 0; i < selectedMimeTypes_len; ++i)
         selectedMimeTypes_qstr[i] = qstring(selectedMimeTypes[i]);
-    }
     libqt_list selectedMimeTypes_list = qlist(selectedMimeTypes_qstr, selectedMimeTypes_len);
     size_t groupsToShow_len = libqt_strv_length(groupsToShow);
     libqt_string* groupsToShow_qstr = (libqt_string*)malloc(groupsToShow_len * sizeof(libqt_string));
@@ -129,9 +122,8 @@ KMimeTypeChooser* k_mimetypechooser_new7(const char* text, const char* selectedM
         fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new7\n");
         abort();
     }
-    for (size_t i = 0; i < groupsToShow_len; ++i) {
+    for (size_t i = 0; i < groupsToShow_len; ++i)
         groupsToShow_qstr[i] = qstring(groupsToShow[i]);
-    }
     libqt_list groupsToShow_list = qlist(groupsToShow_qstr, groupsToShow_len);
 
     KMimeTypeChooser* _out = KMimeTypeChooser_New7(qstring(text), selectedMimeTypes_list, qstring(defaultGroup), groupsToShow_list, visuals, (QWidget*)parent);
@@ -193,11 +185,9 @@ const char** k_mimetypechooser_mime_types(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -212,11 +202,9 @@ const char** k_mimetypechooser_patterns(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -233,6 +221,14 @@ const char* k_mimetypechooser_tr3(const char* s, const char* c, int n) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+QPaintDevice* k_mimetypechooser_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+KMimeTypeChooser* k_mimetypechooser_from_q_paint_device(void* _qpaintdevice) {
+    return (KMimeTypeChooser*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t k_mimetypechooser_win_id(void* self) {
@@ -1483,11 +1479,9 @@ const char** k_mimetypechooser_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1565,47 +1559,47 @@ void k_mimetypechooser_on_destroyed1(void* self, void (*callback)(void*, void*))
 }
 
 bool k_mimetypechooser_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_mimetypechooser_as_q_paint_device(self));
 }
 
 int32_t k_mimetypechooser_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_mimetypechooser_as_q_paint_device(self));
 }
 
 int32_t k_mimetypechooser_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_mimetypechooser_as_q_paint_device(self));
 }
 
 int32_t k_mimetypechooser_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_mimetypechooser_as_q_paint_device(self));
 }
 
 int32_t k_mimetypechooser_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_mimetypechooser_as_q_paint_device(self));
 }
 
 int32_t k_mimetypechooser_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_mimetypechooser_as_q_paint_device(self));
 }
 
 int32_t k_mimetypechooser_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_mimetypechooser_as_q_paint_device(self));
 }
 
 double k_mimetypechooser_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_mimetypechooser_as_q_paint_device(self));
 }
 
 double k_mimetypechooser_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_mimetypechooser_as_q_paint_device(self));
 }
 
 int32_t k_mimetypechooser_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_mimetypechooser_as_q_paint_device(self));
 }
 
 int32_t k_mimetypechooser_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_mimetypechooser_as_q_paint_device(self));
 }
 
 double k_mimetypechooser_device_pixel_ratio_f_scale() {
@@ -2319,9 +2313,8 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new2(const char* title, const ch
         fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new2\n");
         abort();
     }
-    for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
+    for (size_t i = 0; i < selectedMimeTypes_len; ++i)
         selectedMimeTypes_qstr[i] = qstring(selectedMimeTypes[i]);
-    }
     libqt_list selectedMimeTypes_list = qlist(selectedMimeTypes_qstr, selectedMimeTypes_len);
 
     KMimeTypeChooserDialog* _out = KMimeTypeChooserDialog_New2(qstring(title), qstring(text), selectedMimeTypes_list, qstring(defaultGroup));
@@ -2344,9 +2337,8 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new5(const char* title, const ch
         fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new5\n");
         abort();
     }
-    for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
+    for (size_t i = 0; i < selectedMimeTypes_len; ++i)
         selectedMimeTypes_qstr[i] = qstring(selectedMimeTypes[i]);
-    }
     libqt_list selectedMimeTypes_list = qlist(selectedMimeTypes_qstr, selectedMimeTypes_len);
 
     KMimeTypeChooserDialog* _out = KMimeTypeChooserDialog_New5(qstring(title), qstring(text), selectedMimeTypes_list);
@@ -2361,9 +2353,8 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new6(const char* title, const ch
         fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new6\n");
         abort();
     }
-    for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
+    for (size_t i = 0; i < selectedMimeTypes_len; ++i)
         selectedMimeTypes_qstr[i] = qstring(selectedMimeTypes[i]);
-    }
     libqt_list selectedMimeTypes_list = qlist(selectedMimeTypes_qstr, selectedMimeTypes_len);
 
     KMimeTypeChooserDialog* _out = KMimeTypeChooserDialog_New6(qstring(title), qstring(text), selectedMimeTypes_list, qstring(defaultGroup));
@@ -2378,9 +2369,8 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new7(const char* title, const ch
         fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new7\n");
         abort();
     }
-    for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
+    for (size_t i = 0; i < selectedMimeTypes_len; ++i)
         selectedMimeTypes_qstr[i] = qstring(selectedMimeTypes[i]);
-    }
     libqt_list selectedMimeTypes_list = qlist(selectedMimeTypes_qstr, selectedMimeTypes_len);
     size_t groupsToShow_len = libqt_strv_length(groupsToShow);
     libqt_string* groupsToShow_qstr = (libqt_string*)malloc(groupsToShow_len * sizeof(libqt_string));
@@ -2388,9 +2378,8 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new7(const char* title, const ch
         fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new7\n");
         abort();
     }
-    for (size_t i = 0; i < groupsToShow_len; ++i) {
+    for (size_t i = 0; i < groupsToShow_len; ++i)
         groupsToShow_qstr[i] = qstring(groupsToShow[i]);
-    }
     libqt_list groupsToShow_list = qlist(groupsToShow_qstr, groupsToShow_len);
 
     KMimeTypeChooserDialog* _out = KMimeTypeChooserDialog_New7(qstring(title), qstring(text), selectedMimeTypes_list, qstring(defaultGroup), groupsToShow_list);
@@ -2406,9 +2395,8 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new8(const char* title, const ch
         fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new8\n");
         abort();
     }
-    for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
+    for (size_t i = 0; i < selectedMimeTypes_len; ++i)
         selectedMimeTypes_qstr[i] = qstring(selectedMimeTypes[i]);
-    }
     libqt_list selectedMimeTypes_list = qlist(selectedMimeTypes_qstr, selectedMimeTypes_len);
     size_t groupsToShow_len = libqt_strv_length(groupsToShow);
     libqt_string* groupsToShow_qstr = (libqt_string*)malloc(groupsToShow_len * sizeof(libqt_string));
@@ -2416,9 +2404,8 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new8(const char* title, const ch
         fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new8\n");
         abort();
     }
-    for (size_t i = 0; i < groupsToShow_len; ++i) {
+    for (size_t i = 0; i < groupsToShow_len; ++i)
         groupsToShow_qstr[i] = qstring(groupsToShow[i]);
-    }
     libqt_list groupsToShow_list = qlist(groupsToShow_qstr, groupsToShow_len);
 
     KMimeTypeChooserDialog* _out = KMimeTypeChooserDialog_New8(qstring(title), qstring(text), selectedMimeTypes_list, qstring(defaultGroup), groupsToShow_list, visuals);
@@ -2434,9 +2421,8 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new9(const char* title, const ch
         fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new9\n");
         abort();
     }
-    for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
+    for (size_t i = 0; i < selectedMimeTypes_len; ++i)
         selectedMimeTypes_qstr[i] = qstring(selectedMimeTypes[i]);
-    }
     libqt_list selectedMimeTypes_list = qlist(selectedMimeTypes_qstr, selectedMimeTypes_len);
     size_t groupsToShow_len = libqt_strv_length(groupsToShow);
     libqt_string* groupsToShow_qstr = (libqt_string*)malloc(groupsToShow_len * sizeof(libqt_string));
@@ -2444,9 +2430,8 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new9(const char* title, const ch
         fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new9\n");
         abort();
     }
-    for (size_t i = 0; i < groupsToShow_len; ++i) {
+    for (size_t i = 0; i < groupsToShow_len; ++i)
         groupsToShow_qstr[i] = qstring(groupsToShow[i]);
-    }
     libqt_list groupsToShow_list = qlist(groupsToShow_qstr, groupsToShow_len);
 
     KMimeTypeChooserDialog* _out = KMimeTypeChooserDialog_New9(qstring(title), qstring(text), selectedMimeTypes_list, qstring(defaultGroup), groupsToShow_list, visuals, (QWidget*)parent);
@@ -2462,9 +2447,8 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new10(const char* title, const c
         fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new10\n");
         abort();
     }
-    for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
+    for (size_t i = 0; i < selectedMimeTypes_len; ++i)
         selectedMimeTypes_qstr[i] = qstring(selectedMimeTypes[i]);
-    }
     libqt_list selectedMimeTypes_list = qlist(selectedMimeTypes_qstr, selectedMimeTypes_len);
 
     KMimeTypeChooserDialog* _out = KMimeTypeChooserDialog_New10(qstring(title), qstring(text), selectedMimeTypes_list, qstring(defaultGroup), (QWidget*)parent);
@@ -2587,6 +2571,14 @@ void k_mimetypechooserdialog_rejected(void* self) {
 
 void k_mimetypechooserdialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
+}
+
+QPaintDevice* k_mimetypechooserdialog_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+KMimeTypeChooserDialog* k_mimetypechooserdialog_from_q_paint_device(void* _qpaintdevice) {
+    return (KMimeTypeChooserDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t k_mimetypechooserdialog_win_id(void* self) {
@@ -3837,11 +3829,9 @@ const char** k_mimetypechooserdialog_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -3919,47 +3909,47 @@ void k_mimetypechooserdialog_on_destroyed1(void* self, void (*callback)(void*, v
 }
 
 bool k_mimetypechooserdialog_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_mimetypechooserdialog_as_q_paint_device(self));
 }
 
 int32_t k_mimetypechooserdialog_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_mimetypechooserdialog_as_q_paint_device(self));
 }
 
 int32_t k_mimetypechooserdialog_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_mimetypechooserdialog_as_q_paint_device(self));
 }
 
 int32_t k_mimetypechooserdialog_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_mimetypechooserdialog_as_q_paint_device(self));
 }
 
 int32_t k_mimetypechooserdialog_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_mimetypechooserdialog_as_q_paint_device(self));
 }
 
 int32_t k_mimetypechooserdialog_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_mimetypechooserdialog_as_q_paint_device(self));
 }
 
 int32_t k_mimetypechooserdialog_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_mimetypechooserdialog_as_q_paint_device(self));
 }
 
 double k_mimetypechooserdialog_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_mimetypechooserdialog_as_q_paint_device(self));
 }
 
 double k_mimetypechooserdialog_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_mimetypechooserdialog_as_q_paint_device(self));
 }
 
 int32_t k_mimetypechooserdialog_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_mimetypechooserdialog_as_q_paint_device(self));
 }
 
 int32_t k_mimetypechooserdialog_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_mimetypechooserdialog_as_q_paint_device(self));
 }
 
 double k_mimetypechooserdialog_device_pixel_ratio_f_scale() {

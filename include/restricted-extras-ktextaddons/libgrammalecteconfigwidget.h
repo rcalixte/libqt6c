@@ -137,6 +137,22 @@ const char* k_textgrammarcheck__grammalecteconfigwidget_tr3(const char* s, const
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextGrammarCheck__GrammalecteConfigWidget*
+///
+QPaintDevice* k_textgrammarcheck__grammalecteconfigwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextGrammarCheck__GrammalecteConfigWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextGrammarCheck__GrammalecteConfigWidget* k_textgrammarcheck__grammalecteconfigwidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self TextGrammarCheck__GrammalecteConfigWidget*

@@ -30,6 +30,18 @@ KSyntaxHighlighting__SyntaxHighlighter* k_syntaxhighlighting__syntaxhighlighter_
 ///
 KSyntaxHighlighting__SyntaxHighlighter* k_syntaxhighlighting__syntaxhighlighter_new3(void* parent);
 
+/// Upcasts to a KSyntaxHighlighting::AbstractHighlighter object
+///
+/// @param self KSyntaxHighlighting__SyntaxHighlighter*
+///
+KSyntaxHighlighting__AbstractHighlighter* k_syntaxhighlighting__syntaxhighlighter_as_k_syntax_highlighting___abstract_highlighter(void* self);
+
+/// Downcasts to a KSyntaxHighlighting__SyntaxHighlighter object
+///
+/// @param _ksyntaxhighlighting__abstracthighlighter KSyntaxHighlighting__AbstractHighlighter*
+///
+KSyntaxHighlighting__SyntaxHighlighter* k_syntaxhighlighting__syntaxhighlighter_from_k_syntax_highlighting___abstract_highlighter(void* _ksyntaxhighlighting__abstracthighlighter);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*

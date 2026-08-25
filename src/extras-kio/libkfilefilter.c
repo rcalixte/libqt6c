@@ -12,9 +12,8 @@ KFileFilter* k_filefilter_new2(const char* label, const char* filePatterns[stati
         fprintf(stderr, "Failed to allocate memory for string list in k_filefilter_new2\n");
         abort();
     }
-    for (size_t i = 0; i < filePatterns_len; ++i) {
+    for (size_t i = 0; i < filePatterns_len; ++i)
         filePatterns_qstr[i] = qstring(filePatterns[i]);
-    }
     libqt_list filePatterns_list = qlist(filePatterns_qstr, filePatterns_len);
     size_t mimePatterns_len = libqt_strv_length(mimePatterns);
     libqt_string* mimePatterns_qstr = (libqt_string*)malloc(mimePatterns_len * sizeof(libqt_string));
@@ -22,9 +21,8 @@ KFileFilter* k_filefilter_new2(const char* label, const char* filePatterns[stati
         fprintf(stderr, "Failed to allocate memory for string list in k_filefilter_new2\n");
         abort();
     }
-    for (size_t i = 0; i < mimePatterns_len; ++i) {
+    for (size_t i = 0; i < mimePatterns_len; ++i)
         mimePatterns_qstr[i] = qstring(mimePatterns[i]);
-    }
     libqt_list mimePatterns_list = qlist(mimePatterns_qstr, mimePatterns_len);
 
     KFileFilter* _out = KFileFilter_New2(qstring(label), filePatterns_list, mimePatterns_list);
@@ -62,11 +60,9 @@ const char** k_filefilter_file_patterns(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -81,11 +77,9 @@ const char** k_filefilter_mime_patterns(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -116,9 +110,8 @@ libqt_list /* of KFileFilter* */ k_filefilter_from_mime_types(const char* mimeTy
         fprintf(stderr, "Failed to allocate memory for string list in k_filefilter_from_mime_types\n");
         abort();
     }
-    for (size_t i = 0; i < mimeTypes_len; ++i) {
+    for (size_t i = 0; i < mimeTypes_len; ++i)
         mimeTypes_qstr[i] = qstring(mimeTypes[i]);
-    }
     libqt_list mimeTypes_list = qlist(mimeTypes_qstr, mimeTypes_len);
     libqt_list _arr = KFileFilter_FromMimeTypes(mimeTypes_list);
     free(mimeTypes_qstr);

@@ -35,6 +35,14 @@ QTermWidget* q_termwidget_new4(int startnow, void* parent) {
     return QTermWidget_New4(startnow, (QWidget*)parent);
 }
 
+QTermWidgetInterface* q_termwidget_as_q_term_widget_interface(void* self) {
+    return QTermWidget_AsQTermWidgetInterface((QTermWidget*)self);
+}
+
+QTermWidget* q_termwidget_from_q_term_widget_interface(void* _qtermwidgetinterface) {
+    return (QTermWidget*)QTermWidget_FromQTermWidgetInterface((QTermWidgetInterface*)_qtermwidgetinterface);
+}
+
 const QMetaObject* q_termwidget_meta_object(void* self) {
     return QTermWidget_MetaObject((QTermWidget*)self);
 }
@@ -241,9 +249,8 @@ void q_termwidget_set_environment(void* self, const char* environment[static 1])
         fprintf(stderr, "Failed to allocate memory for string list in q_termwidget_set_environment\n");
         abort();
     }
-    for (size_t i = 0; i < environment_len; ++i) {
+    for (size_t i = 0; i < environment_len; ++i)
         environment_qstr[i] = qstring(environment[i]);
-    }
     libqt_list environment_list = qlist(environment_qstr, environment_len);
     QTermWidget_SetEnvironment((QTermWidget*)self, environment_list);
     free(environment_qstr);
@@ -260,9 +267,8 @@ void q_termwidget_super_set_environment(void* self, const char* environment[stat
         fprintf(stderr, "Failed to allocate memory for string list in q_termwidget_set_environment\n");
         abort();
     }
-    for (size_t i = 0; i < environment_len; ++i) {
+    for (size_t i = 0; i < environment_len; ++i)
         environment_qstr[i] = qstring(environment[i]);
-    }
     libqt_list environment_list = qlist(environment_qstr, environment_len);
     QTermWidget_SuperSetEnvironment((QTermWidget*)self, environment_list);
 }
@@ -316,9 +322,8 @@ void q_termwidget_set_args(void* self, const char* args[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_termwidget_set_args\n");
         abort();
     }
-    for (size_t i = 0; i < args_len; ++i) {
+    for (size_t i = 0; i < args_len; ++i)
         args_qstr[i] = qstring(args[i]);
-    }
     libqt_list args_list = qlist(args_qstr, args_len);
     QTermWidget_SetArgs((QTermWidget*)self, args_list);
     free(args_qstr);
@@ -335,9 +340,8 @@ void q_termwidget_super_set_args(void* self, const char* args[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_termwidget_set_args\n");
         abort();
     }
-    for (size_t i = 0; i < args_len; ++i) {
+    for (size_t i = 0; i < args_len; ++i)
         args_qstr[i] = qstring(args[i]);
-    }
     libqt_list args_list = qlist(args_qstr, args_len);
     QTermWidget_SuperSetArgs((QTermWidget*)self, args_list);
 }
@@ -364,11 +368,9 @@ const char** q_termwidget_get_available_color_schemes(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -387,11 +389,9 @@ const char** q_termwidget_super_get_available_color_schemes(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -406,11 +406,9 @@ const char** q_termwidget_available_color_schemes() {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -537,11 +535,9 @@ const char** q_termwidget_available_key_bindings() {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1190,6 +1186,14 @@ const char* q_termwidget_tr3(const char* s, const char* c, int n) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+QPaintDevice* q_termwidget_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+QTermWidget* q_termwidget_from_q_paint_device(void* _qpaintdevice) {
+    return (QTermWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t q_termwidget_win_id(void* self) {
@@ -2440,11 +2444,9 @@ const char** q_termwidget_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -2522,47 +2524,47 @@ void q_termwidget_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 bool q_termwidget_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(q_termwidget_as_q_paint_device(self));
 }
 
 int32_t q_termwidget_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(q_termwidget_as_q_paint_device(self));
 }
 
 int32_t q_termwidget_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(q_termwidget_as_q_paint_device(self));
 }
 
 int32_t q_termwidget_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(q_termwidget_as_q_paint_device(self));
 }
 
 int32_t q_termwidget_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(q_termwidget_as_q_paint_device(self));
 }
 
 int32_t q_termwidget_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(q_termwidget_as_q_paint_device(self));
 }
 
 int32_t q_termwidget_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(q_termwidget_as_q_paint_device(self));
 }
 
 double q_termwidget_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(q_termwidget_as_q_paint_device(self));
 }
 
 double q_termwidget_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(q_termwidget_as_q_paint_device(self));
 }
 
 int32_t q_termwidget_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(q_termwidget_as_q_paint_device(self));
 }
 
 int32_t q_termwidget_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(q_termwidget_as_q_paint_device(self));
 }
 
 double q_termwidget_device_pixel_ratio_f_scale() {
@@ -2574,7 +2576,7 @@ int32_t q_termwidget_encode_metric_f(int32_t metric, double value) {
 }
 
 void q_termwidget_operator_assign(void* self, void* param1) {
-    QTermWidgetInterface_OperatorAssign((QTermWidgetInterface*)self, (QTermWidgetInterface*)param1);
+    QTermWidgetInterface_OperatorAssign(q_termwidget_as_q_term_widget_interface(self), (QTermWidgetInterface*)param1);
 }
 
 int32_t q_termwidget_dev_type(void* self) {

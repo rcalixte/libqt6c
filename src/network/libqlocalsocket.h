@@ -641,6 +641,14 @@ bool q_localsocket_wait_for_disconnected1(void* self, int msecs);
 
 /// Inherited from QIODevice
 ///
+/// Upcasts to a QIODeviceBase object
+///
+/// @param self QLocalSocket*
+///
+QIODeviceBase* q_localsocket_as_q_i_o_device_base(void* self);
+
+/// Inherited from QIODevice
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#openMode)
 ///
 /// @param self QLocalSocket*

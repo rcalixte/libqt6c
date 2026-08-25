@@ -373,6 +373,8 @@ type CppMethod struct {
 	IsPureVirtual      bool           // Virtual method was declared with = 0 i.e. there is no base method here to call
 	IsProtected        bool           // If true, we can't call this method but we may still be able to overload it
 	IsFinal            bool           // If true, this method cannot be overridden
+	IsAsMethod         bool           // If true, this method is an as<T> method
+	IsFromMethod       bool           // If true, this method is a from<T> method
 	HiddenParams       []CppParameter // Populated if there is an overload with more parameters
 	InheritedFrom      string
 	InheritedInClass   string
@@ -471,7 +473,7 @@ func (nm CppMethod) SafeMethodName() string {
 	)
 	tmp = replacer.Replace(tmp)
 
-	// Also make the first letter uppercase so it becomes public in Go
+	// Also make the first letter uppercase
 	tmp = titleCase(tmp)
 
 	// Replace spaces (e.g. "operator long long" with CamelCase

@@ -65,9 +65,8 @@ void k_emailclientlauncherjob_set_to(void* self, const char* to[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_emailclientlauncherjob_set_to\n");
         abort();
     }
-    for (size_t i = 0; i < to_len; ++i) {
+    for (size_t i = 0; i < to_len; ++i)
         to_qstr[i] = qstring(to[i]);
-    }
     libqt_list to_list = qlist(to_qstr, to_len);
     KEMailClientLauncherJob_SetTo((KEMailClientLauncherJob*)self, to_list);
     free(to_qstr);
@@ -80,9 +79,8 @@ void k_emailclientlauncherjob_set_cc(void* self, const char* cc[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_emailclientlauncherjob_set_cc\n");
         abort();
     }
-    for (size_t i = 0; i < cc_len; ++i) {
+    for (size_t i = 0; i < cc_len; ++i)
         cc_qstr[i] = qstring(cc[i]);
-    }
     libqt_list cc_list = qlist(cc_qstr, cc_len);
     KEMailClientLauncherJob_SetCc((KEMailClientLauncherJob*)self, cc_list);
     free(cc_qstr);
@@ -95,9 +93,8 @@ void k_emailclientlauncherjob_set_bcc(void* self, const char* bcc[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_emailclientlauncherjob_set_bcc\n");
         abort();
     }
-    for (size_t i = 0; i < bcc_len; ++i) {
+    for (size_t i = 0; i < bcc_len; ++i)
         bcc_qstr[i] = qstring(bcc[i]);
-    }
     libqt_list bcc_list = qlist(bcc_qstr, bcc_len);
     KEMailClientLauncherJob_SetBcc((KEMailClientLauncherJob*)self, bcc_list);
     free(bcc_qstr);
@@ -402,11 +399,9 @@ const char** k_emailclientlauncherjob_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

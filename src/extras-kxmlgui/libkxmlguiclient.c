@@ -169,9 +169,8 @@ const char* k_xmlguiclient_find_most_recent_x_m_l_file(const char* files[static 
         fprintf(stderr, "Failed to allocate memory for string list in k_xmlguiclient_find_most_recent_x_m_l_file\n");
         abort();
     }
-    for (size_t i = 0; i < files_len; ++i) {
+    for (size_t i = 0; i < files_len; ++i)
         files_qstr[i] = qstring(files[i]);
-    }
     libqt_list files_list = qlist(files_qstr, files_len);
     libqt_string _str = KXMLGUIClient_FindMostRecentXMLFile(files_list, qstring(doc));
     free(files_qstr);
@@ -339,11 +338,9 @@ const char** k_xmlguiclient__statechange_actions_to_enable(void* self) {
     }
     for (size_t i = 0; i < actionsToEnable_arr.len; ++i) {
         actionsToEnable_ret[i] = qstring_to_char(actionsToEnable_qstr[i]);
-    }
-    actionsToEnable_ret[actionsToEnable_arr.len] = NULL;
-    for (size_t i = 0; i < actionsToEnable_arr.len; ++i) {
         libqt_string_free((libqt_string*)&actionsToEnable_qstr[i]);
     }
+    actionsToEnable_ret[actionsToEnable_arr.len] = NULL;
     libqt_free(actionsToEnable_arr.data.ptr);
     return actionsToEnable_ret;
 }
@@ -355,9 +352,8 @@ void k_xmlguiclient__statechange_set_actions_to_enable(void* self, const char* a
         fprintf(stderr, "Failed to allocate memory for string list in k_xmlguiclient__statechange_set_actions_to_enable\n");
         abort();
     }
-    for (size_t i = 0; i < actionsToEnable_len; ++i) {
+    for (size_t i = 0; i < actionsToEnable_len; ++i)
         actionsToEnable_qstr[i] = qstring(actionsToEnable[i]);
-    }
     libqt_list actionsToEnable_list = qlist(actionsToEnable_qstr, actionsToEnable_len);
     KXMLGUIClient__StateChange_SetActionsToEnable((KXMLGUIClient__StateChange*)self, actionsToEnable_list);
     free(actionsToEnable_qstr);
@@ -373,11 +369,9 @@ const char** k_xmlguiclient__statechange_actions_to_disable(void* self) {
     }
     for (size_t i = 0; i < actionsToDisable_arr.len; ++i) {
         actionsToDisable_ret[i] = qstring_to_char(actionsToDisable_qstr[i]);
-    }
-    actionsToDisable_ret[actionsToDisable_arr.len] = NULL;
-    for (size_t i = 0; i < actionsToDisable_arr.len; ++i) {
         libqt_string_free((libqt_string*)&actionsToDisable_qstr[i]);
     }
+    actionsToDisable_ret[actionsToDisable_arr.len] = NULL;
     libqt_free(actionsToDisable_arr.data.ptr);
     return actionsToDisable_ret;
 }
@@ -389,9 +383,8 @@ void k_xmlguiclient__statechange_set_actions_to_disable(void* self, const char* 
         fprintf(stderr, "Failed to allocate memory for string list in k_xmlguiclient__statechange_set_actions_to_disable\n");
         abort();
     }
-    for (size_t i = 0; i < actionsToDisable_len; ++i) {
+    for (size_t i = 0; i < actionsToDisable_len; ++i)
         actionsToDisable_qstr[i] = qstring(actionsToDisable[i]);
-    }
     libqt_list actionsToDisable_list = qlist(actionsToDisable_qstr, actionsToDisable_len);
     KXMLGUIClient__StateChange_SetActionsToDisable((KXMLGUIClient__StateChange*)self, actionsToDisable_list);
     free(actionsToDisable_qstr);

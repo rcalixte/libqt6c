@@ -525,6 +525,22 @@ void k_nswidgets__button_on_clicked1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KNSWidgets__Button*
+///
+QPaintDevice* k_nswidgets__button_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KNSWidgets__Button object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KNSWidgets__Button* k_nswidgets__button_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KNSWidgets__Button*

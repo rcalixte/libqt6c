@@ -171,9 +171,8 @@ bool q_bluetoothdeviceinfo_set_manufacturer_data(void* self, uint16_t manufactur
 /// // Example for freeing the returned map of type:
 /// // libqt_map of uint16_t to char**
 /// for (size_t i = 0; i < map.len; ++i) {
-///     for (size_t j = 0; ((char**)map.values)[i][j] != NULL; j++) {
+///     for (size_t j = 0; ((char**)map.values)[i][j] != NULL; j++)
 ///         free((map.values)[i][j]);
-///     }
 ///     libqt_free(map.values[i]);
 /// }
 /// free(map.keys);
@@ -218,9 +217,8 @@ bool q_bluetoothdeviceinfo_set_service_data(void* self, void* serviceId, char* d
 /// // Example for freeing the returned map of type:
 /// // libqt_map of QBluetoothUuid* to char**
 /// for (size_t i = 0; i < map.len; ++i) {
-///     for (size_t j = 0; ((char**)map.values)[i][j] != NULL; j++) {
+///     for (size_t j = 0; ((char**)map.values)[i][j] != NULL; j++)
 ///         free((map.values)[i][j]);
-///     }
 ///     free(((QBluetoothUuid*)map.keys)[i]);
 ///     libqt_free(map.values[i]);
 /// }

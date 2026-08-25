@@ -348,6 +348,10 @@ bool q_bluetoothsocket_set_socket_descriptor4(void* self, int socketDescriptor, 
     return QBluetoothSocket_SetSocketDescriptor4((QBluetoothSocket*)self, socketDescriptor, socketType, socketState, openMode);
 }
 
+QIODeviceBase* q_bluetoothsocket_as_q_i_o_device_base(void* self) {
+    return QIODevice_AsQIODeviceBase((QIODevice*)self);
+}
+
 int32_t q_bluetoothsocket_open_mode(void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
@@ -665,11 +669,9 @@ const char** q_bluetoothsocket_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

@@ -1398,6 +1398,22 @@ void q_undoview_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QUndoView*
+///
+QPaintDevice* q_undoview_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QUndoView object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QUndoView* q_undoview_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QUndoView*

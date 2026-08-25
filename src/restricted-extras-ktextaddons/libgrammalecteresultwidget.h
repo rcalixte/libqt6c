@@ -226,6 +226,22 @@ void k_textgrammarcheck__grammalecteresultwidget_on_configure(void* self, void (
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextGrammarCheck__GrammalecteResultWidget*
+///
+QPaintDevice* k_textgrammarcheck__grammalecteresultwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextGrammarCheck__GrammalecteResultWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextGrammarCheck__GrammalecteResultWidget* k_textgrammarcheck__grammalecteresultwidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self TextGrammarCheck__GrammalecteResultWidget*

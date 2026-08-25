@@ -119,9 +119,8 @@ void k_editlistwidget_insert_string_list(void* self, const char* list[static 1])
         fprintf(stderr, "Failed to allocate memory for string list in k_editlistwidget_insert_string_list\n");
         abort();
     }
-    for (size_t i = 0; i < list_len; ++i) {
+    for (size_t i = 0; i < list_len; ++i)
         list_qstr[i] = qstring(list[i]);
-    }
     libqt_list list_list = qlist(list_qstr, list_len);
     KEditListWidget_InsertStringList((KEditListWidget*)self, list_list);
     free(list_qstr);
@@ -163,11 +162,9 @@ const char** k_editlistwidget_items(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -179,9 +176,8 @@ void k_editlistwidget_set_items(void* self, const char* items[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_editlistwidget_set_items\n");
         abort();
     }
-    for (size_t i = 0; i < items_len; ++i) {
+    for (size_t i = 0; i < items_len; ++i)
         items_qstr[i] = qstring(items[i]);
-    }
     libqt_list items_list = qlist(items_qstr, items_len);
     KEditListWidget_SetItems((KEditListWidget*)self, items_list);
     free(items_qstr);
@@ -264,9 +260,8 @@ void k_editlistwidget_insert_string_list2(void* self, const char* list[static 1]
         fprintf(stderr, "Failed to allocate memory for string list in k_editlistwidget_insert_string_list2\n");
         abort();
     }
-    for (size_t i = 0; i < list_len; ++i) {
+    for (size_t i = 0; i < list_len; ++i)
         list_qstr[i] = qstring(list[i]);
-    }
     libqt_list list_list = qlist(list_qstr, list_len);
     KEditListWidget_InsertStringList2((KEditListWidget*)self, list_list, index);
     free(list_qstr);
@@ -274,6 +269,14 @@ void k_editlistwidget_insert_string_list2(void* self, const char* list[static 1]
 
 void k_editlistwidget_insert_item2(void* self, const char* text, int index) {
     KEditListWidget_InsertItem2((KEditListWidget*)self, qstring(text), index);
+}
+
+QPaintDevice* k_editlistwidget_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+KEditListWidget* k_editlistwidget_from_q_paint_device(void* _qpaintdevice) {
+    return (KEditListWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t k_editlistwidget_win_id(void* self) {
@@ -1524,11 +1527,9 @@ const char** k_editlistwidget_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1606,47 +1607,47 @@ void k_editlistwidget_on_destroyed1(void* self, void (*callback)(void*, void*)) 
 }
 
 bool k_editlistwidget_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_editlistwidget_as_q_paint_device(self));
 }
 
 int32_t k_editlistwidget_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_editlistwidget_as_q_paint_device(self));
 }
 
 int32_t k_editlistwidget_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_editlistwidget_as_q_paint_device(self));
 }
 
 int32_t k_editlistwidget_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_editlistwidget_as_q_paint_device(self));
 }
 
 int32_t k_editlistwidget_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_editlistwidget_as_q_paint_device(self));
 }
 
 int32_t k_editlistwidget_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_editlistwidget_as_q_paint_device(self));
 }
 
 int32_t k_editlistwidget_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_editlistwidget_as_q_paint_device(self));
 }
 
 double k_editlistwidget_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_editlistwidget_as_q_paint_device(self));
 }
 
 double k_editlistwidget_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_editlistwidget_as_q_paint_device(self));
 }
 
 int32_t k_editlistwidget_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_editlistwidget_as_q_paint_device(self));
 }
 
 int32_t k_editlistwidget_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_editlistwidget_as_q_paint_device(self));
 }
 
 double k_editlistwidget_device_pixel_ratio_f_scale() {

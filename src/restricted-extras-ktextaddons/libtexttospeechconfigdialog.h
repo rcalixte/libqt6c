@@ -211,6 +211,22 @@ void k_textedittexttospeech__texttospeechconfigdialog_on_rejected(void* self, vo
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextEditTextToSpeech__TextToSpeechConfigDialog*
+///
+QPaintDevice* k_textedittexttospeech__texttospeechconfigdialog_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextEditTextToSpeech__TextToSpeechConfigDialog object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextEditTextToSpeech__TextToSpeechConfigDialog* k_textedittexttospeech__texttospeechconfigdialog_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self TextEditTextToSpeech__TextToSpeechConfigDialog*

@@ -59,11 +59,9 @@ const char** k_textemoticonscore__unicodeemoticon_aliases(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -75,9 +73,8 @@ void k_textemoticonscore__unicodeemoticon_set_aliases(void* self, const char* al
         fprintf(stderr, "Failed to allocate memory for string list in k_textemoticonscore__unicodeemoticon_set_aliases\n");
         abort();
     }
-    for (size_t i = 0; i < aliases_len; ++i) {
+    for (size_t i = 0; i < aliases_len; ++i)
         aliases_qstr[i] = qstring(aliases[i]);
-    }
     libqt_list aliases_list = qlist(aliases_qstr, aliases_len);
     TextEmoticonsCore__UnicodeEmoticon_SetAliases((TextEmoticonsCore__UnicodeEmoticon*)self, aliases_list);
     free(aliases_qstr);

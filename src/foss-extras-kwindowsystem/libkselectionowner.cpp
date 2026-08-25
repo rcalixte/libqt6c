@@ -173,9 +173,8 @@ QMetaObject* KSelectionOwner_SuperMetaObject(const KSelectionOwner* self) {
 // Auxiliary method to allow providing re-implementation
 void KSelectionOwner_OnMetaObject(const KSelectionOwner* self, intptr_t slot) {
     auto* vkselectionowner = const_cast<VirtualKSelectionOwner*>(dynamic_cast<const VirtualKSelectionOwner*>(self));
-    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner) {
+    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner)
         vkselectionowner->setKSelectionOwner_MetaObject_Callback(reinterpret_cast<VirtualKSelectionOwner::KSelectionOwner_MetaObject_Callback>(slot));
-    }
 }
 
 // Base class handler implementation
@@ -192,9 +191,8 @@ void* KSelectionOwner_SuperMetacast(KSelectionOwner* self, const char* param1) {
 // Auxiliary method to allow providing re-implementation
 void KSelectionOwner_OnMetacast(KSelectionOwner* self, intptr_t slot) {
     auto* vkselectionowner = dynamic_cast<VirtualKSelectionOwner*>(self);
-    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner) {
+    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner)
         vkselectionowner->setKSelectionOwner_Metacast_Callback(reinterpret_cast<VirtualKSelectionOwner::KSelectionOwner_Metacast_Callback>(slot));
-    }
 }
 
 // Base class handler implementation
@@ -211,9 +209,8 @@ int KSelectionOwner_SuperMetacall(KSelectionOwner* self, int param1, int param2,
 // Auxiliary method to allow providing re-implementation
 void KSelectionOwner_OnMetacall(KSelectionOwner* self, intptr_t slot) {
     auto* vkselectionowner = dynamic_cast<VirtualKSelectionOwner*>(self);
-    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner) {
+    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner)
         vkselectionowner->setKSelectionOwner_Metacall_Callback(reinterpret_cast<VirtualKSelectionOwner::KSelectionOwner_Metacall_Callback>(slot));
-    }
 }
 
 // Base class handler implementation
@@ -230,9 +227,8 @@ void KSelectionOwner_SuperTimerEvent(KSelectionOwner* self, QTimerEvent* event) 
 // Auxiliary method to allow providing re-implementation
 void KSelectionOwner_OnTimerEvent(KSelectionOwner* self, intptr_t slot) {
     auto* vkselectionowner = dynamic_cast<VirtualKSelectionOwner*>(self);
-    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner) {
+    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner)
         vkselectionowner->setKSelectionOwner_TimerEvent_Callback(reinterpret_cast<VirtualKSelectionOwner::KSelectionOwner_TimerEvent_Callback>(slot));
-    }
 }
 
 // Base class handler implementation
@@ -249,9 +245,8 @@ bool KSelectionOwner_SuperGenericReply(KSelectionOwner* self, xcb_atom_t target,
 // Auxiliary method to allow providing re-implementation
 void KSelectionOwner_OnGenericReply(KSelectionOwner* self, intptr_t slot) {
     auto* vkselectionowner = dynamic_cast<VirtualKSelectionOwner*>(self);
-    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner) {
+    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner)
         vkselectionowner->setKSelectionOwner_GenericReply_Callback(reinterpret_cast<VirtualKSelectionOwner::KSelectionOwner_GenericReply_Callback>(slot));
-    }
 }
 
 // Base class handler implementation
@@ -268,9 +263,8 @@ void KSelectionOwner_SuperReplyTargets(KSelectionOwner* self, xcb_atom_t propert
 // Auxiliary method to allow providing re-implementation
 void KSelectionOwner_OnReplyTargets(KSelectionOwner* self, intptr_t slot) {
     auto* vkselectionowner = dynamic_cast<VirtualKSelectionOwner*>(self);
-    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner) {
+    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner)
         vkselectionowner->setKSelectionOwner_ReplyTargets_Callback(reinterpret_cast<VirtualKSelectionOwner::KSelectionOwner_ReplyTargets_Callback>(slot));
-    }
 }
 
 // Base class handler implementation
@@ -287,9 +281,8 @@ void KSelectionOwner_SuperGetAtoms(KSelectionOwner* self) {
 // Auxiliary method to allow providing re-implementation
 void KSelectionOwner_OnGetAtoms(KSelectionOwner* self, intptr_t slot) {
     auto* vkselectionowner = dynamic_cast<VirtualKSelectionOwner*>(self);
-    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner) {
+    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner)
         vkselectionowner->setKSelectionOwner_GetAtoms_Callback(reinterpret_cast<VirtualKSelectionOwner::KSelectionOwner_GetAtoms_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -316,9 +309,8 @@ bool KSelectionOwner_SuperEvent(KSelectionOwner* self, QEvent* event) {
 // Auxiliary method to allow providing re-implementation
 void KSelectionOwner_OnEvent(KSelectionOwner* self, intptr_t slot) {
     auto* vkselectionowner = dynamic_cast<VirtualKSelectionOwner*>(self);
-    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner) {
+    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner)
         vkselectionowner->setKSelectionOwner_Event_Callback(reinterpret_cast<VirtualKSelectionOwner::KSelectionOwner_Event_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -345,9 +337,8 @@ bool KSelectionOwner_SuperEventFilter(KSelectionOwner* self, QObject* watched, Q
 // Auxiliary method to allow providing re-implementation
 void KSelectionOwner_OnEventFilter(KSelectionOwner* self, intptr_t slot) {
     auto* vkselectionowner = dynamic_cast<VirtualKSelectionOwner*>(self);
-    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner) {
+    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner)
         vkselectionowner->setKSelectionOwner_EventFilter_Callback(reinterpret_cast<VirtualKSelectionOwner::KSelectionOwner_EventFilter_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -374,9 +365,8 @@ void KSelectionOwner_SuperChildEvent(KSelectionOwner* self, QChildEvent* event) 
 // Auxiliary method to allow providing re-implementation
 void KSelectionOwner_OnChildEvent(KSelectionOwner* self, intptr_t slot) {
     auto* vkselectionowner = dynamic_cast<VirtualKSelectionOwner*>(self);
-    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner) {
+    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner)
         vkselectionowner->setKSelectionOwner_ChildEvent_Callback(reinterpret_cast<VirtualKSelectionOwner::KSelectionOwner_ChildEvent_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -403,9 +393,8 @@ void KSelectionOwner_SuperCustomEvent(KSelectionOwner* self, QEvent* event) {
 // Auxiliary method to allow providing re-implementation
 void KSelectionOwner_OnCustomEvent(KSelectionOwner* self, intptr_t slot) {
     auto* vkselectionowner = dynamic_cast<VirtualKSelectionOwner*>(self);
-    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner) {
+    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner)
         vkselectionowner->setKSelectionOwner_CustomEvent_Callback(reinterpret_cast<VirtualKSelectionOwner::KSelectionOwner_CustomEvent_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -432,9 +421,8 @@ void KSelectionOwner_SuperConnectNotify(KSelectionOwner* self, const QMetaMethod
 // Auxiliary method to allow providing re-implementation
 void KSelectionOwner_OnConnectNotify(KSelectionOwner* self, intptr_t slot) {
     auto* vkselectionowner = dynamic_cast<VirtualKSelectionOwner*>(self);
-    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner) {
+    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner)
         vkselectionowner->setKSelectionOwner_ConnectNotify_Callback(reinterpret_cast<VirtualKSelectionOwner::KSelectionOwner_ConnectNotify_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -461,9 +449,8 @@ void KSelectionOwner_SuperDisconnectNotify(KSelectionOwner* self, const QMetaMet
 // Auxiliary method to allow providing re-implementation
 void KSelectionOwner_OnDisconnectNotify(KSelectionOwner* self, intptr_t slot) {
     auto* vkselectionowner = dynamic_cast<VirtualKSelectionOwner*>(self);
-    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner) {
+    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner)
         vkselectionowner->setKSelectionOwner_DisconnectNotify_Callback(reinterpret_cast<VirtualKSelectionOwner::KSelectionOwner_DisconnectNotify_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -490,9 +477,8 @@ void KSelectionOwner_SuperSetData(KSelectionOwner* self, uint32_t extra1, uint32
 // Auxiliary method to allow providing re-implementation
 void KSelectionOwner_OnSetData(KSelectionOwner* self, intptr_t slot) {
     auto* vkselectionowner = dynamic_cast<VirtualKSelectionOwner*>(self);
-    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner) {
+    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner)
         vkselectionowner->setKSelectionOwner_SetData_Callback(reinterpret_cast<VirtualKSelectionOwner::KSelectionOwner_SetData_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -519,9 +505,8 @@ QObject* KSelectionOwner_SuperSender(const KSelectionOwner* self) {
 // Auxiliary method to allow providing re-implementation
 void KSelectionOwner_OnSender(const KSelectionOwner* self, intptr_t slot) {
     auto* vkselectionowner = const_cast<VirtualKSelectionOwner*>(dynamic_cast<const VirtualKSelectionOwner*>(self));
-    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner) {
+    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner)
         vkselectionowner->setKSelectionOwner_Sender_Callback(reinterpret_cast<VirtualKSelectionOwner::KSelectionOwner_Sender_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -548,9 +533,8 @@ int KSelectionOwner_SuperSenderSignalIndex(const KSelectionOwner* self) {
 // Auxiliary method to allow providing re-implementation
 void KSelectionOwner_OnSenderSignalIndex(const KSelectionOwner* self, intptr_t slot) {
     auto* vkselectionowner = const_cast<VirtualKSelectionOwner*>(dynamic_cast<const VirtualKSelectionOwner*>(self));
-    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner) {
+    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner)
         vkselectionowner->setKSelectionOwner_SenderSignalIndex_Callback(reinterpret_cast<VirtualKSelectionOwner::KSelectionOwner_SenderSignalIndex_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -577,9 +561,8 @@ int KSelectionOwner_SuperReceivers(const KSelectionOwner* self, const char* sign
 // Auxiliary method to allow providing re-implementation
 void KSelectionOwner_OnReceivers(const KSelectionOwner* self, intptr_t slot) {
     auto* vkselectionowner = const_cast<VirtualKSelectionOwner*>(dynamic_cast<const VirtualKSelectionOwner*>(self));
-    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner) {
+    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner)
         vkselectionowner->setKSelectionOwner_Receivers_Callback(reinterpret_cast<VirtualKSelectionOwner::KSelectionOwner_Receivers_Callback>(slot));
-    }
 }
 
 // Derived class handler implementation
@@ -606,9 +589,8 @@ bool KSelectionOwner_SuperIsSignalConnected(const KSelectionOwner* self, const Q
 // Auxiliary method to allow providing re-implementation
 void KSelectionOwner_OnIsSignalConnected(const KSelectionOwner* self, intptr_t slot) {
     auto* vkselectionowner = const_cast<VirtualKSelectionOwner*>(dynamic_cast<const VirtualKSelectionOwner*>(self));
-    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner) {
+    if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner)
         vkselectionowner->setKSelectionOwner_IsSignalConnected_Callback(reinterpret_cast<VirtualKSelectionOwner::KSelectionOwner_IsSignalConnected_Callback>(slot));
-    }
 }
 
 void KSelectionOwner_Delete(KSelectionOwner* self) {

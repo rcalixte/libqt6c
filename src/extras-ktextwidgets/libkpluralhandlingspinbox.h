@@ -557,6 +557,22 @@ void k_pluralhandlingspinbox_on_editing_finished(void* self, void (*callback)(vo
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KPluralHandlingSpinBox*
+///
+QPaintDevice* k_pluralhandlingspinbox_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KPluralHandlingSpinBox object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KPluralHandlingSpinBox* k_pluralhandlingspinbox_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KPluralHandlingSpinBox*

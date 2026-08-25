@@ -11,11 +11,9 @@ const char** k_shell_split_args(const char* cmd, int32_t flags, int32_t* err) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -27,9 +25,8 @@ const char* k_shell_join_args(const char* args[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_shell_join_args\n");
         abort();
     }
-    for (size_t i = 0; i < args_len; ++i) {
+    for (size_t i = 0; i < args_len; ++i)
         args_qstr[i] = qstring(args[i]);
-    }
     libqt_list args_list = qlist(args_qstr, args_len);
     libqt_string _str = KShell_JoinArgs(args_list);
     free(args_qstr);

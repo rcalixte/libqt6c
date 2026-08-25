@@ -632,6 +632,22 @@ QPointF* q_chart_map_to_position2(void* self, void* value, void* series);
 
 /// Inherited from QGraphicsWidget
 ///
+/// Upcasts to a QGraphicsLayoutItem object
+///
+/// @param self QChart*
+///
+QGraphicsLayoutItem* q_chart_as_q_graphics_layout_item(void* self);
+
+/// Inherited from QGraphicsWidget
+///
+/// Downcasts to a QChart object
+///
+/// @param _qgraphicslayoutitem QGraphicsLayoutItem*
+///
+QChart* q_chart_from_q_graphics_layout_item(void* _qgraphicslayoutitem);
+
+/// Inherited from QGraphicsWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#layout)
 ///
 /// @param self QChart*
@@ -1159,6 +1175,22 @@ void q_chart_set_shortcut_auto_repeat2(void* self, int id, bool enabled);
 /// @param on bool
 ///
 void q_chart_set_attribute2(void* self, int32_t attribute, bool on);
+
+/// Inherited from QGraphicsObject
+///
+/// Upcasts to a QGraphicsItem object
+///
+/// @param self QChart*
+///
+QGraphicsItem* q_chart_as_q_graphics_item(void* self);
+
+/// Inherited from QGraphicsObject
+///
+/// Downcasts to a QChart object
+///
+/// @param _qgraphicsitem QGraphicsItem*
+///
+QChart* q_chart_from_q_graphics_item(void* _qgraphicsitem);
 
 /// Inherited from QGraphicsObject
 ///

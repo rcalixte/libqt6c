@@ -2004,6 +2004,22 @@ void k_textcustomeditor__richtexteditor_set_frame_rect(void* self, void* frameRe
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextCustomEditor__RichTextEditor*
+///
+QPaintDevice* k_textcustomeditor__richtexteditor_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextCustomEditor__RichTextEditor object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextCustomEditor__RichTextEditor* k_textcustomeditor__richtexteditor_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self TextCustomEditor__RichTextEditor*

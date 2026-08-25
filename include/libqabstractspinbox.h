@@ -1011,6 +1011,22 @@ const char* q_abstractspinbox_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QAbstractSpinBox*
+///
+QPaintDevice* q_abstractspinbox_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QAbstractSpinBox object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QAbstractSpinBox* q_abstractspinbox_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QAbstractSpinBox*

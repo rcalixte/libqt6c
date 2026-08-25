@@ -119,9 +119,8 @@ void k_diroperator_set_mime_filter(void* self, const char* mimetypes[static 1]) 
         fprintf(stderr, "Failed to allocate memory for string list in k_diroperator_set_mime_filter\n");
         abort();
     }
-    for (size_t i = 0; i < mimetypes_len; ++i) {
+    for (size_t i = 0; i < mimetypes_len; ++i)
         mimetypes_qstr[i] = qstring(mimetypes[i]);
-    }
     libqt_list mimetypes_list = qlist(mimetypes_qstr, mimetypes_len);
     KDirOperator_SetMimeFilter((KDirOperator*)self, mimetypes_list);
     free(mimetypes_qstr);
@@ -137,11 +136,9 @@ const char** k_diroperator_mime_filter(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -153,9 +150,8 @@ void k_diroperator_set_new_file_menu_supported_mime_types(void* self, const char
         fprintf(stderr, "Failed to allocate memory for string list in k_diroperator_set_new_file_menu_supported_mime_types\n");
         abort();
     }
-    for (size_t i = 0; i < mime_len; ++i) {
+    for (size_t i = 0; i < mime_len; ++i)
         mime_qstr[i] = qstring(mime[i]);
-    }
     libqt_list mime_list = qlist(mime_qstr, mime_len);
     KDirOperator_SetNewFileMenuSupportedMimeTypes((KDirOperator*)self, mime_list);
     free(mime_qstr);
@@ -171,11 +167,9 @@ const char** k_diroperator_new_file_menu_supported_mime_types(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -499,11 +493,9 @@ const char** k_diroperator_supported_schemes(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -793,9 +785,8 @@ void k_diroperator_set_supported_schemes(void* self, const char* schemes[static 
         fprintf(stderr, "Failed to allocate memory for string list in k_diroperator_set_supported_schemes\n");
         abort();
     }
-    for (size_t i = 0; i < schemes_len; ++i) {
+    for (size_t i = 0; i < schemes_len; ++i)
         schemes_qstr[i] = qstring(schemes[i]);
-    }
     libqt_list schemes_list = qlist(schemes_qstr, schemes_len);
     KDirOperator_SetSupportedSchemes((KDirOperator*)self, schemes_list);
     free(schemes_qstr);
@@ -1073,6 +1064,14 @@ const char* k_diroperator_tr3(const char* s, const char* c, int n) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+QPaintDevice* k_diroperator_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+KDirOperator* k_diroperator_from_q_paint_device(void* _qpaintdevice) {
+    return (KDirOperator*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t k_diroperator_win_id(void* self) {
@@ -2315,11 +2314,9 @@ const char** k_diroperator_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -2397,47 +2394,47 @@ void k_diroperator_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 bool k_diroperator_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_diroperator_as_q_paint_device(self));
 }
 
 int32_t k_diroperator_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_diroperator_as_q_paint_device(self));
 }
 
 int32_t k_diroperator_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_diroperator_as_q_paint_device(self));
 }
 
 int32_t k_diroperator_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_diroperator_as_q_paint_device(self));
 }
 
 int32_t k_diroperator_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_diroperator_as_q_paint_device(self));
 }
 
 int32_t k_diroperator_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_diroperator_as_q_paint_device(self));
 }
 
 int32_t k_diroperator_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_diroperator_as_q_paint_device(self));
 }
 
 double k_diroperator_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_diroperator_as_q_paint_device(self));
 }
 
 double k_diroperator_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_diroperator_as_q_paint_device(self));
 }
 
 int32_t k_diroperator_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_diroperator_as_q_paint_device(self));
 }
 
 int32_t k_diroperator_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_diroperator_as_q_paint_device(self));
 }
 
 double k_diroperator_device_pixel_ratio_f_scale() {

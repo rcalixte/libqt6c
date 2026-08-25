@@ -14,6 +14,12 @@
 ///
 KModifierKeyInfoProvider* k_modifierkeyinfoprovider_new();
 
+/// Upcasts to a QSharedData object
+///
+/// @param self KModifierKeyInfoProvider*
+///
+QSharedData* k_modifierkeyinfoprovider_as_q_shared_data(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KModifierKeyInfoProvider*

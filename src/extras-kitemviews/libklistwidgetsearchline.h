@@ -943,6 +943,22 @@ void k_listwidgetsearchline_cursor_backward2(void* self, bool mark, int steps);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KListWidgetSearchLine*
+///
+QPaintDevice* k_listwidgetsearchline_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KListWidgetSearchLine object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KListWidgetSearchLine* k_listwidgetsearchline_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KListWidgetSearchLine*

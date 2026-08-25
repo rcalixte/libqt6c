@@ -136,25 +136,21 @@ void q_webengineurlrequestjob_set_additional_response_headers(void* self, libqt_
         size_t additionalResponseHeaders_value_count = libqt_strv_length((const char**)additionalResponseHeaders_array);
         libqt_string* additionalResponseHeaders_value_strings = (libqt_string*)malloc(additionalResponseHeaders_value_count * sizeof(libqt_string));
         if (additionalResponseHeaders_value_strings == NULL) {
-            for (size_t j = 0; j < i; j++) {
+            for (size_t j = 0; j < i; j++)
                 free(((libqt_list*)additionalResponseHeaders_ret.values)[j].data.ptr);
-            }
             free(additionalResponseHeaders_ret.keys);
             free(additionalResponseHeaders_ret.values);
             fprintf(stderr, "Failed to allocate memory for map string key in q_webengineurlrequestjob_set_additional_response_headers\n");
             abort();
         }
-        for (size_t j = 0; j < additionalResponseHeaders_value_count; j++) {
+        for (size_t j = 0; j < additionalResponseHeaders_value_count; j++)
             additionalResponseHeaders_value_strings[j] = qstring(additionalResponseHeaders_array[j]);
-        }
         additionalResponseHeaders_vdest[i].len = additionalResponseHeaders_value_count;
         additionalResponseHeaders_vdest[i].data.ptr = additionalResponseHeaders_value_strings;
     }
     QWebEngineUrlRequestJob_SetAdditionalResponseHeaders((QWebEngineUrlRequestJob*)self, additionalResponseHeaders_ret);
-    for (size_t i = 0; i < additionalResponseHeaders_ret.len; ++i) {
+    for (size_t i = 0; i < additionalResponseHeaders_ret.len; ++i)
         free(((libqt_list*)additionalResponseHeaders_ret.values)[i].data.ptr);
-    }
-
     free(additionalResponseHeaders_ret.keys);
     free(additionalResponseHeaders_ret.values);
 }
@@ -311,11 +307,9 @@ const char** q_webengineurlrequestjob_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

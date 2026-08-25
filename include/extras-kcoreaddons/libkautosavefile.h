@@ -528,6 +528,14 @@ unsigned char* k_autosavefile_map3(void* self, int64_t offset, int64_t size, int
 
 /// Inherited from QIODevice
 ///
+/// Upcasts to a QIODeviceBase object
+///
+/// @param self KAutoSaveFile*
+///
+QIODeviceBase* k_autosavefile_as_q_i_o_device_base(void* self);
+
+/// Inherited from QIODevice
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#openMode)
 ///
 /// @param self KAutoSaveFile*

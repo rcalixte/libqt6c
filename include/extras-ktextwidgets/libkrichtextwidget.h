@@ -1995,6 +1995,22 @@ void k_richtextwidget_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KRichTextWidget*
+///
+QPaintDevice* k_richtextwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KRichTextWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KRichTextWidget* k_richtextwidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KRichTextWidget*

@@ -184,9 +184,8 @@ void k_imageannotator__kimageannotator_set_stickers(void* self, const char* stic
         fprintf(stderr, "Failed to allocate memory for string list in k_imageannotator__kimageannotator_set_stickers\n");
         abort();
     }
-    for (size_t i = 0; i < stickerPaths_len; ++i) {
+    for (size_t i = 0; i < stickerPaths_len; ++i)
         stickerPaths_qstr[i] = qstring(stickerPaths[i]);
-    }
     libqt_list stickerPaths_list = qlist(stickerPaths_qstr, stickerPaths_len);
     kImageAnnotator__KImageAnnotator_SetStickers((kImageAnnotator__KImageAnnotator*)self, stickerPaths_list, keepDefault);
     free(stickerPaths_qstr);
@@ -264,6 +263,14 @@ const char* k_imageannotator__kimageannotator_tr3(const char* s, const char* c, 
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+QPaintDevice* k_imageannotator__kimageannotator_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+kImageAnnotator__KImageAnnotator* k_imageannotator__kimageannotator_from_q_paint_device(void* _qpaintdevice) {
+    return (kImageAnnotator__KImageAnnotator*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t k_imageannotator__kimageannotator_win_id(void* self) {
@@ -1514,11 +1521,9 @@ const char** k_imageannotator__kimageannotator_dynamic_property_names(void* self
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1596,47 +1601,47 @@ void k_imageannotator__kimageannotator_on_destroyed1(void* self, void (*callback
 }
 
 bool k_imageannotator__kimageannotator_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_imageannotator__kimageannotator_as_q_paint_device(self));
 }
 
 int32_t k_imageannotator__kimageannotator_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_imageannotator__kimageannotator_as_q_paint_device(self));
 }
 
 int32_t k_imageannotator__kimageannotator_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_imageannotator__kimageannotator_as_q_paint_device(self));
 }
 
 int32_t k_imageannotator__kimageannotator_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_imageannotator__kimageannotator_as_q_paint_device(self));
 }
 
 int32_t k_imageannotator__kimageannotator_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_imageannotator__kimageannotator_as_q_paint_device(self));
 }
 
 int32_t k_imageannotator__kimageannotator_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_imageannotator__kimageannotator_as_q_paint_device(self));
 }
 
 int32_t k_imageannotator__kimageannotator_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_imageannotator__kimageannotator_as_q_paint_device(self));
 }
 
 double k_imageannotator__kimageannotator_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_imageannotator__kimageannotator_as_q_paint_device(self));
 }
 
 double k_imageannotator__kimageannotator_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_imageannotator__kimageannotator_as_q_paint_device(self));
 }
 
 int32_t k_imageannotator__kimageannotator_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_imageannotator__kimageannotator_as_q_paint_device(self));
 }
 
 int32_t k_imageannotator__kimageannotator_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_imageannotator__kimageannotator_as_q_paint_device(self));
 }
 
 double k_imageannotator__kimageannotator_device_pixel_ratio_f_scale() {

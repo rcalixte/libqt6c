@@ -10,6 +10,10 @@ KModifierKeyInfoProvider* k_modifierkeyinfoprovider_new() {
     return KModifierKeyInfoProvider_New();
 }
 
+QSharedData* k_modifierkeyinfoprovider_as_q_shared_data(void* self) {
+    return KModifierKeyInfoProvider_AsQSharedData((KModifierKeyInfoProvider*)self);
+}
+
 const QMetaObject* k_modifierkeyinfoprovider_meta_object(void* self) {
     return KModifierKeyInfoProvider_MetaObject((KModifierKeyInfoProvider*)self);
 }
@@ -306,11 +310,9 @@ const char** k_modifierkeyinfoprovider_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

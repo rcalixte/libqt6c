@@ -753,6 +753,22 @@ QWidget* q_menubar_corner_widget1(void* self, int32_t corner);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QMenuBar*
+///
+QPaintDevice* q_menubar_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QMenuBar object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QMenuBar* q_menubar_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QMenuBar*

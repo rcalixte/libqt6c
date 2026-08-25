@@ -191,6 +191,22 @@ const char* q_rasterwindow_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QPaintDeviceWindow
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QRasterWindow*
+///
+QPaintDevice* q_rasterwindow_as_q_paint_device(void* self);
+
+/// Inherited from QPaintDeviceWindow
+///
+/// Downcasts to a QRasterWindow object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QRasterWindow* q_rasterwindow_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QPaintDeviceWindow
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevicewindow.html#update)
 ///
 /// @param self QRasterWindow*
@@ -214,6 +230,22 @@ void q_rasterwindow_update2(void* self, void* region);
 /// @param self QRasterWindow*
 ///
 void q_rasterwindow_update3(void* self);
+
+/// Inherited from QWindow
+///
+/// Upcasts to a QSurface object
+///
+/// @param self QRasterWindow*
+///
+QSurface* q_rasterwindow_as_q_surface(void* self);
+
+/// Inherited from QWindow
+///
+/// Downcasts to a QRasterWindow object
+///
+/// @param _qsurface QSurface*
+///
+QRasterWindow* q_rasterwindow_from_q_surface(void* _qsurface);
 
 /// Inherited from QWindow
 ///

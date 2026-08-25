@@ -461,6 +461,22 @@ const char* k_urlrequester_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KUrlRequester*
+///
+QPaintDevice* k_urlrequester_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KUrlRequester object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KUrlRequester* k_urlrequester_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KUrlRequester*
@@ -5655,6 +5671,22 @@ void k_urlcomborequester_url_selected(void* self, void* param1);
 /// @param callback void func(KUrlComboRequester* self, QUrl* param1)
 ///
 void k_urlcomborequester_on_url_selected(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QWidget
+///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KUrlComboRequester*
+///
+QPaintDevice* k_urlcomborequester_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KUrlComboRequester object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KUrlComboRequester* k_urlcomborequester_from_q_paint_device(void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///

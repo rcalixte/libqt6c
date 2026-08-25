@@ -132,11 +132,9 @@ const char** k_texteditor__editor_command_list(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -181,9 +179,8 @@ void k_texteditor__editor_add_variable_expansion2(void* self, libqt_list /* of Q
         fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__editor_add_variable_expansion2\n");
         abort();
     }
-    for (size_t i = 0; i < variables_len; ++i) {
+    for (size_t i = 0; i < variables_len; ++i)
         variables_qstr[i] = qstring(variables[i]);
-    }
     libqt_list variables_list = qlist(variables_qstr, variables_len);
     KTextEditor__Editor_AddVariableExpansion2((KTextEditor__Editor*)self, widgets, variables_list);
     free(variables_qstr);
@@ -327,11 +324,9 @@ const char** k_texteditor__editor_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

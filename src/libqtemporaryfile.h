@@ -520,6 +520,14 @@ unsigned char* q_temporaryfile_map3(void* self, int64_t offset, int64_t size, in
 
 /// Inherited from QIODevice
 ///
+/// Upcasts to a QIODeviceBase object
+///
+/// @param self QTemporaryFile*
+///
+QIODeviceBase* q_temporaryfile_as_q_i_o_device_base(void* self);
+
+/// Inherited from QIODevice
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#openMode)
 ///
 /// @param self QTemporaryFile*

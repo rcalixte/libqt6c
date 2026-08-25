@@ -183,6 +183,10 @@ unsigned char* q_savefile_map3(void* self, int64_t offset, int64_t size, int32_t
     return (unsigned char*)QFileDevice_Map3((QFileDevice*)self, offset, size, flags);
 }
 
+QIODeviceBase* q_savefile_as_q_i_o_device_base(void* self) {
+    return QIODevice_AsQIODeviceBase((QIODevice*)self);
+}
+
 int32_t q_savefile_open_mode(void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
@@ -507,11 +511,9 @@ const char** q_savefile_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

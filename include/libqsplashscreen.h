@@ -305,6 +305,22 @@ void q_splashscreen_show_message3(void* self, const char* message, int alignment
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QSplashScreen*
+///
+QPaintDevice* q_splashscreen_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QSplashScreen object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QSplashScreen* q_splashscreen_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QSplashScreen*

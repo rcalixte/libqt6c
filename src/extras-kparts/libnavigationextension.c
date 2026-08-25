@@ -329,9 +329,8 @@ void k_parts__navigationextension_popup_menu5(void* self, void* global, void* it
     for (size_t i = 0; i < actionGroups_ret.len; ++i) {
         actionGroups_kdest[i] = qstring(actionGroups_karr[i]);
         size_t actionGroups_value_count = 0;
-        while (actionGroups_varr[i][actionGroups_value_count] != NULL) {
+        while (actionGroups_varr[i][actionGroups_value_count] != NULL)
             actionGroups_value_count++;
-        }
         actionGroups_vdest[i].len = actionGroups_value_count;
         actionGroups_vdest[i].data.ptr = (void*)actionGroups_varr[i];
     }
@@ -374,9 +373,8 @@ void k_parts__navigationextension_popup_menu6(void* self, void* global, void* ur
     for (size_t i = 0; i < actionGroups_ret.len; ++i) {
         actionGroups_kdest[i] = qstring(actionGroups_karr[i]);
         size_t actionGroups_value_count = 0;
-        while (actionGroups_varr[i][actionGroups_value_count] != NULL) {
+        while (actionGroups_varr[i][actionGroups_value_count] != NULL)
             actionGroups_value_count++;
-        }
         actionGroups_vdest[i].len = actionGroups_value_count;
         actionGroups_vdest[i].data.ptr = (void*)actionGroups_varr[i];
     }
@@ -515,11 +513,9 @@ const char** k_parts__navigationextension_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

@@ -10,6 +10,18 @@
 
 /// [Upstream resources](https://api.kde.org/kio-jobuidelegate.html)
 
+/// Upcasts to a KIO::JobUiDelegateExtension object
+///
+/// @param self KIO__JobUiDelegate*
+///
+KIO__JobUiDelegateExtension* k_io__jobuidelegate_as_k_i_o___job_ui_delegate_extension(void* self);
+
+/// Downcasts to a KIO__JobUiDelegate object
+///
+/// @param _kio__jobuidelegateextension KIO__JobUiDelegateExtension*
+///
+KIO__JobUiDelegate* k_io__jobuidelegate_from_k_i_o___job_ui_delegate_extension(void* _kio__jobuidelegateextension);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KIO__JobUiDelegate*

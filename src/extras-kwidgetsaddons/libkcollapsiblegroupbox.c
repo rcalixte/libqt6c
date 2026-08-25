@@ -233,6 +233,14 @@ const char* k_collapsiblegroupbox_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
+QPaintDevice* k_collapsiblegroupbox_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+KCollapsibleGroupBox* k_collapsiblegroupbox_from_q_paint_device(void* _qpaintdevice) {
+    return (KCollapsibleGroupBox*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
+}
+
 uintptr_t k_collapsiblegroupbox_win_id(void* self) {
     return QWidget_WinId((QWidget*)self);
 }
@@ -1481,11 +1489,9 @@ const char** k_collapsiblegroupbox_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1563,47 +1569,47 @@ void k_collapsiblegroupbox_on_destroyed1(void* self, void (*callback)(void*, voi
 }
 
 bool k_collapsiblegroupbox_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_collapsiblegroupbox_as_q_paint_device(self));
 }
 
 int32_t k_collapsiblegroupbox_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_collapsiblegroupbox_as_q_paint_device(self));
 }
 
 int32_t k_collapsiblegroupbox_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_collapsiblegroupbox_as_q_paint_device(self));
 }
 
 int32_t k_collapsiblegroupbox_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_collapsiblegroupbox_as_q_paint_device(self));
 }
 
 int32_t k_collapsiblegroupbox_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_collapsiblegroupbox_as_q_paint_device(self));
 }
 
 int32_t k_collapsiblegroupbox_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_collapsiblegroupbox_as_q_paint_device(self));
 }
 
 int32_t k_collapsiblegroupbox_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_collapsiblegroupbox_as_q_paint_device(self));
 }
 
 double k_collapsiblegroupbox_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_collapsiblegroupbox_as_q_paint_device(self));
 }
 
 double k_collapsiblegroupbox_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_collapsiblegroupbox_as_q_paint_device(self));
 }
 
 int32_t k_collapsiblegroupbox_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_collapsiblegroupbox_as_q_paint_device(self));
 }
 
 int32_t k_collapsiblegroupbox_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_collapsiblegroupbox_as_q_paint_device(self));
 }
 
 double k_collapsiblegroupbox_device_pixel_ratio_f_scale() {

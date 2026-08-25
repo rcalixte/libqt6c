@@ -32,9 +32,8 @@ const char* k_localizedstring_to_string2(void* self, const char* languages[stati
         fprintf(stderr, "Failed to allocate memory for string list in k_localizedstring_to_string2\n");
         abort();
     }
-    for (size_t i = 0; i < languages_len; ++i) {
+    for (size_t i = 0; i < languages_len; ++i)
         languages_qstr[i] = qstring(languages[i]);
-    }
     libqt_list languages_list = qlist(languages_qstr, languages_len);
     libqt_string _str = KLocalizedString_ToString2((KLocalizedString*)self, languages_list);
     free(languages_qstr);
@@ -64,9 +63,8 @@ KLocalizedString* k_localizedstring_with_languages(void* self, const char* langu
         fprintf(stderr, "Failed to allocate memory for string list in k_localizedstring_with_languages\n");
         abort();
     }
-    for (size_t i = 0; i < languages_len; ++i) {
+    for (size_t i = 0; i < languages_len; ++i)
         languages_qstr[i] = qstring(languages[i]);
-    }
     libqt_list languages_list = qlist(languages_qstr, languages_len);
     KLocalizedString* _out = KLocalizedString_WithLanguages((KLocalizedString*)self, languages_list);
     free(languages_qstr);
@@ -161,11 +159,9 @@ const char** k_localizedstring_languages() {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -177,9 +173,8 @@ void k_localizedstring_set_languages(const char* languages[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_localizedstring_set_languages\n");
         abort();
     }
-    for (size_t i = 0; i < languages_len; ++i) {
+    for (size_t i = 0; i < languages_len; ++i)
         languages_qstr[i] = qstring(languages[i]);
-    }
     libqt_list languages_list = qlist(languages_qstr, languages_len);
     KLocalizedString_SetLanguages(languages_list);
     free(languages_qstr);

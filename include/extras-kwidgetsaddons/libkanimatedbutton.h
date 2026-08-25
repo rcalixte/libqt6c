@@ -585,6 +585,22 @@ void k_animatedbutton_on_clicked1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KAnimatedButton*
+///
+QPaintDevice* k_animatedbutton_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KAnimatedButton object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KAnimatedButton* k_animatedbutton_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KAnimatedButton*

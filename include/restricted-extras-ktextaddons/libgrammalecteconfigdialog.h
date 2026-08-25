@@ -220,6 +220,22 @@ void k_textgrammarcheck__grammalecteconfigdialog_on_rejected(void* self, void (*
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextGrammarCheck__GrammalecteConfigDialog*
+///
+QPaintDevice* k_textgrammarcheck__grammalecteconfigdialog_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextGrammarCheck__GrammalecteConfigDialog object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextGrammarCheck__GrammalecteConfigDialog* k_textgrammarcheck__grammalecteconfigdialog_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self TextGrammarCheck__GrammalecteConfigDialog*

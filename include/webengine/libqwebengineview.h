@@ -887,6 +887,22 @@ void q_webengineview_print_to_pdf32(void* self, void (*resultCallback)(char* fun
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QWebEngineView*
+///
+QPaintDevice* q_webengineview_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QWebEngineView object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QWebEngineView* q_webengineview_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QWebEngineView*

@@ -351,6 +351,22 @@ void q_stackedwidget_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QStackedWidget*
+///
+QPaintDevice* q_stackedwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QStackedWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QStackedWidget* q_stackedwidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QStackedWidget*

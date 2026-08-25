@@ -701,6 +701,22 @@ void q_commandlinkbutton_on_clicked1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QCommandLinkButton*
+///
+QPaintDevice* q_commandlinkbutton_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QCommandLinkButton object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QCommandLinkButton* q_commandlinkbutton_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QCommandLinkButton*

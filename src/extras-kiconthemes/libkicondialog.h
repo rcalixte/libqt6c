@@ -480,6 +480,22 @@ void k_icondialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KIconDialog*
+///
+QPaintDevice* k_icondialog_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KIconDialog object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KIconDialog* k_icondialog_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KIconDialog*

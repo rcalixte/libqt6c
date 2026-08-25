@@ -728,6 +728,22 @@ void k_plotwidget_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KPlotWidget*
+///
+QPaintDevice* k_plotwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KPlotWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KPlotWidget* k_plotwidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KPlotWidget*

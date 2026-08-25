@@ -462,6 +462,22 @@ void q_lcdnumber_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QLCDNumber*
+///
+QPaintDevice* q_lcdnumber_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QLCDNumber object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QLCDNumber* q_lcdnumber_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QLCDNumber*

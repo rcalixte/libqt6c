@@ -373,6 +373,22 @@ const char* k_actionselector_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KActionSelector*
+///
+QPaintDevice* k_actionselector_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KActionSelector object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KActionSelector* k_actionselector_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KActionSelector*

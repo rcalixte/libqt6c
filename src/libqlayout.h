@@ -22,6 +22,18 @@ QLayout* q_layout_new(void* parent);
 ///
 QLayout* q_layout_new2();
 
+/// Upcasts to a QLayoutItem object
+///
+/// @param self QLayout*
+///
+QLayoutItem* q_layout_as_q_layout_item(void* self);
+
+/// Downcasts to a QLayout object
+///
+/// @param _qlayoutitem QLayoutItem*
+///
+QLayout* q_layout_from_q_layout_item(void* _qlayoutitem);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QLayout*

@@ -1190,6 +1190,22 @@ void q_datetimeedit_on_editing_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QDateTimeEdit*
+///
+QPaintDevice* q_datetimeedit_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QDateTimeEdit object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QDateTimeEdit* q_datetimeedit_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QDateTimeEdit*
@@ -6690,6 +6706,22 @@ void q_timeedit_editing_finished(void* self);
 /// @param callback void func(QTimeEdit* self)
 ///
 void q_timeedit_on_editing_finished(void* self, void (*callback)(void*));
+
+/// Inherited from QWidget
+///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QTimeEdit*
+///
+QPaintDevice* q_timeedit_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QTimeEdit object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QTimeEdit* q_timeedit_from_q_paint_device(void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -12733,6 +12765,22 @@ void q_dateedit_editing_finished(void* self);
 /// @param callback void func(QDateEdit* self)
 ///
 void q_dateedit_on_editing_finished(void* self, void (*callback)(void*));
+
+/// Inherited from QWidget
+///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QDateEdit*
+///
+QPaintDevice* q_dateedit_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QDateEdit object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QDateEdit* q_dateedit_from_q_paint_device(void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///

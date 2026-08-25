@@ -81,11 +81,9 @@ const char** q_packagekit__daemon_mime_types() {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -120,9 +118,8 @@ void q_packagekit__daemon_set_hints(const char* hints[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_set_hints\n");
         abort();
     }
-    for (size_t i = 0; i < hints_len; ++i) {
+    for (size_t i = 0; i < hints_len; ++i)
         hints_qstr[i] = qstring(hints[i]);
-    }
     libqt_list hints_list = qlist(hints_qstr, hints_len);
     PackageKit__Daemon_SetHints(hints_list);
     free(hints_qstr);
@@ -142,11 +139,9 @@ const char** q_packagekit__daemon_hints() {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -205,9 +200,8 @@ PackageKit__Transaction* q_packagekit__daemon_download_packages(const char* pack
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_download_packages\n");
         abort();
     }
-    for (size_t i = 0; i < packageIDs_len; ++i) {
+    for (size_t i = 0; i < packageIDs_len; ++i)
         packageIDs_qstr[i] = qstring(packageIDs[i]);
-    }
     libqt_list packageIDs_list = qlist(packageIDs_qstr, packageIDs_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_DownloadPackages(packageIDs_list);
     free(packageIDs_qstr);
@@ -229,9 +223,8 @@ PackageKit__Transaction* q_packagekit__daemon_depends_on(const char* packageIDs[
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_depends_on\n");
         abort();
     }
-    for (size_t i = 0; i < packageIDs_len; ++i) {
+    for (size_t i = 0; i < packageIDs_len; ++i)
         packageIDs_qstr[i] = qstring(packageIDs[i]);
-    }
     libqt_list packageIDs_list = qlist(packageIDs_qstr, packageIDs_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_DependsOn(packageIDs_list);
     free(packageIDs_qstr);
@@ -249,9 +242,8 @@ PackageKit__Transaction* q_packagekit__daemon_get_details(const char* packageIDs
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_get_details\n");
         abort();
     }
-    for (size_t i = 0; i < packageIDs_len; ++i) {
+    for (size_t i = 0; i < packageIDs_len; ++i)
         packageIDs_qstr[i] = qstring(packageIDs[i]);
-    }
     libqt_list packageIDs_list = qlist(packageIDs_qstr, packageIDs_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_GetDetails(packageIDs_list);
     free(packageIDs_qstr);
@@ -269,9 +261,8 @@ PackageKit__Transaction* q_packagekit__daemon_get_details_local(const char* file
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_get_details_local\n");
         abort();
     }
-    for (size_t i = 0; i < files_len; ++i) {
+    for (size_t i = 0; i < files_len; ++i)
         files_qstr[i] = qstring(files[i]);
-    }
     libqt_list files_list = qlist(files_qstr, files_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_GetDetailsLocal(files_list);
     free(files_qstr);
@@ -289,9 +280,8 @@ PackageKit__Transaction* q_packagekit__daemon_get_files(const char* packageIDs[s
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_get_files\n");
         abort();
     }
-    for (size_t i = 0; i < packageIDs_len; ++i) {
+    for (size_t i = 0; i < packageIDs_len; ++i)
         packageIDs_qstr[i] = qstring(packageIDs[i]);
-    }
     libqt_list packageIDs_list = qlist(packageIDs_qstr, packageIDs_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_GetFiles(packageIDs_list);
     free(packageIDs_qstr);
@@ -309,9 +299,8 @@ PackageKit__Transaction* q_packagekit__daemon_get_files_local(const char* files[
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_get_files_local\n");
         abort();
     }
-    for (size_t i = 0; i < files_len; ++i) {
+    for (size_t i = 0; i < files_len; ++i)
         files_qstr[i] = qstring(files[i]);
-    }
     libqt_list files_list = qlist(files_qstr, files_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_GetFilesLocal(files_list);
     free(files_qstr);
@@ -341,9 +330,8 @@ PackageKit__Transaction* q_packagekit__daemon_required_by(const char* packageIDs
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_required_by\n");
         abort();
     }
-    for (size_t i = 0; i < packageIDs_len; ++i) {
+    for (size_t i = 0; i < packageIDs_len; ++i)
         packageIDs_qstr[i] = qstring(packageIDs[i]);
-    }
     libqt_list packageIDs_list = qlist(packageIDs_qstr, packageIDs_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_RequiredBy(packageIDs_list);
     free(packageIDs_qstr);
@@ -361,9 +349,8 @@ PackageKit__Transaction* q_packagekit__daemon_get_updates_details(const char* pa
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_get_updates_details\n");
         abort();
     }
-    for (size_t i = 0; i < packageIDs_len; ++i) {
+    for (size_t i = 0; i < packageIDs_len; ++i)
         packageIDs_qstr[i] = qstring(packageIDs[i]);
-    }
     libqt_list packageIDs_list = qlist(packageIDs_qstr, packageIDs_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_GetUpdatesDetails(packageIDs_list);
     free(packageIDs_qstr);
@@ -393,9 +380,8 @@ PackageKit__Transaction* q_packagekit__daemon_install_files(const char* files[st
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_install_files\n");
         abort();
     }
-    for (size_t i = 0; i < files_len; ++i) {
+    for (size_t i = 0; i < files_len; ++i)
         files_qstr[i] = qstring(files[i]);
-    }
     libqt_list files_list = qlist(files_qstr, files_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_InstallFiles(files_list);
     free(files_qstr);
@@ -413,9 +399,8 @@ PackageKit__Transaction* q_packagekit__daemon_install_packages(const char* packa
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_install_packages\n");
         abort();
     }
-    for (size_t i = 0; i < packageIDs_len; ++i) {
+    for (size_t i = 0; i < packageIDs_len; ++i)
         packageIDs_qstr[i] = qstring(packageIDs[i]);
-    }
     libqt_list packageIDs_list = qlist(packageIDs_qstr, packageIDs_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_InstallPackages(packageIDs_list);
     free(packageIDs_qstr);
@@ -441,9 +426,8 @@ PackageKit__Transaction* q_packagekit__daemon_remove_packages(const char* packag
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_remove_packages\n");
         abort();
     }
-    for (size_t i = 0; i < packageIDs_len; ++i) {
+    for (size_t i = 0; i < packageIDs_len; ++i)
         packageIDs_qstr[i] = qstring(packageIDs[i]);
-    }
     libqt_list packageIDs_list = qlist(packageIDs_qstr, packageIDs_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_RemovePackages(packageIDs_list);
     free(packageIDs_qstr);
@@ -477,9 +461,8 @@ PackageKit__Transaction* q_packagekit__daemon_resolve(const char* packageNames[s
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_resolve\n");
         abort();
     }
-    for (size_t i = 0; i < packageNames_len; ++i) {
+    for (size_t i = 0; i < packageNames_len; ++i)
         packageNames_qstr[i] = qstring(packageNames[i]);
-    }
     libqt_list packageNames_list = qlist(packageNames_qstr, packageNames_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_Resolve(packageNames_list);
     free(packageNames_qstr);
@@ -497,9 +480,8 @@ PackageKit__Transaction* q_packagekit__daemon_search_files(const char* search[st
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_files\n");
         abort();
     }
-    for (size_t i = 0; i < search_len; ++i) {
+    for (size_t i = 0; i < search_len; ++i)
         search_qstr[i] = qstring(search[i]);
-    }
     libqt_list search_list = qlist(search_qstr, search_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_SearchFiles(search_list);
     free(search_qstr);
@@ -517,9 +499,8 @@ PackageKit__Transaction* q_packagekit__daemon_search_details(const char* search[
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_details\n");
         abort();
     }
-    for (size_t i = 0; i < search_len; ++i) {
+    for (size_t i = 0; i < search_len; ++i)
         search_qstr[i] = qstring(search[i]);
-    }
     libqt_list search_list = qlist(search_qstr, search_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_SearchDetails(search_list);
     free(search_qstr);
@@ -537,9 +518,8 @@ PackageKit__Transaction* q_packagekit__daemon_search_groups(const char* groups[s
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_groups\n");
         abort();
     }
-    for (size_t i = 0; i < groups_len; ++i) {
+    for (size_t i = 0; i < groups_len; ++i)
         groups_qstr[i] = qstring(groups[i]);
-    }
     libqt_list groups_list = qlist(groups_qstr, groups_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_SearchGroups(groups_list);
     free(groups_qstr);
@@ -565,9 +545,8 @@ PackageKit__Transaction* q_packagekit__daemon_search_names(const char* search[st
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_names\n");
         abort();
     }
-    for (size_t i = 0; i < search_len; ++i) {
+    for (size_t i = 0; i < search_len; ++i)
         search_qstr[i] = qstring(search[i]);
-    }
     libqt_list search_list = qlist(search_qstr, search_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_SearchNames(search_list);
     free(search_qstr);
@@ -585,9 +564,8 @@ PackageKit__Transaction* q_packagekit__daemon_update_packages(const char* packag
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_update_packages\n");
         abort();
     }
-    for (size_t i = 0; i < packageIDs_len; ++i) {
+    for (size_t i = 0; i < packageIDs_len; ++i)
         packageIDs_qstr[i] = qstring(packageIDs[i]);
-    }
     libqt_list packageIDs_list = qlist(packageIDs_qstr, packageIDs_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_UpdatePackages(packageIDs_list);
     free(packageIDs_qstr);
@@ -605,9 +583,8 @@ PackageKit__Transaction* q_packagekit__daemon_what_provides(const char* search[s
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_what_provides\n");
         abort();
     }
-    for (size_t i = 0; i < search_len; ++i) {
+    for (size_t i = 0; i < search_len; ++i)
         search_qstr[i] = qstring(search[i]);
-    }
     libqt_list search_list = qlist(search_qstr, search_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_WhatProvides(search_list);
     free(search_qstr);
@@ -665,9 +642,8 @@ void q_packagekit__daemon_transaction_list_changed(void* self, const char* tids[
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_transaction_list_changed\n");
         abort();
     }
-    for (size_t i = 0; i < tids_len; ++i) {
+    for (size_t i = 0; i < tids_len; ++i)
         tids_qstr[i] = qstring(tids[i]);
-    }
     libqt_list tids_list = qlist(tids_qstr, tids_len);
     PackageKit__Daemon_TransactionListChanged((PackageKit__Daemon*)self, tids_list);
     free(tids_qstr);
@@ -714,9 +690,8 @@ PackageKit__Transaction* q_packagekit__daemon_download_packages2(const char* pac
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_download_packages2\n");
         abort();
     }
-    for (size_t i = 0; i < packageIDs_len; ++i) {
+    for (size_t i = 0; i < packageIDs_len; ++i)
         packageIDs_qstr[i] = qstring(packageIDs[i]);
-    }
     libqt_list packageIDs_list = qlist(packageIDs_qstr, packageIDs_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_DownloadPackages2(packageIDs_list, storeInCache);
     free(packageIDs_qstr);
@@ -734,9 +709,8 @@ PackageKit__Transaction* q_packagekit__daemon_depends_on22(const char* packageID
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_depends_on22\n");
         abort();
     }
-    for (size_t i = 0; i < packageIDs_len; ++i) {
+    for (size_t i = 0; i < packageIDs_len; ++i)
         packageIDs_qstr[i] = qstring(packageIDs[i]);
-    }
     libqt_list packageIDs_list = qlist(packageIDs_qstr, packageIDs_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_DependsOn22(packageIDs_list, filters);
     free(packageIDs_qstr);
@@ -750,9 +724,8 @@ PackageKit__Transaction* q_packagekit__daemon_depends_on3(const char* packageIDs
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_depends_on3\n");
         abort();
     }
-    for (size_t i = 0; i < packageIDs_len; ++i) {
+    for (size_t i = 0; i < packageIDs_len; ++i)
         packageIDs_qstr[i] = qstring(packageIDs[i]);
-    }
     libqt_list packageIDs_list = qlist(packageIDs_qstr, packageIDs_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_DependsOn3(packageIDs_list, filters, recursive);
     free(packageIDs_qstr);
@@ -782,9 +755,8 @@ PackageKit__Transaction* q_packagekit__daemon_required_by22(const char* packageI
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_required_by22\n");
         abort();
     }
-    for (size_t i = 0; i < packageIDs_len; ++i) {
+    for (size_t i = 0; i < packageIDs_len; ++i)
         packageIDs_qstr[i] = qstring(packageIDs[i]);
-    }
     libqt_list packageIDs_list = qlist(packageIDs_qstr, packageIDs_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_RequiredBy22(packageIDs_list, filters);
     free(packageIDs_qstr);
@@ -798,9 +770,8 @@ PackageKit__Transaction* q_packagekit__daemon_required_by3(const char* packageID
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_required_by3\n");
         abort();
     }
-    for (size_t i = 0; i < packageIDs_len; ++i) {
+    for (size_t i = 0; i < packageIDs_len; ++i)
         packageIDs_qstr[i] = qstring(packageIDs[i]);
-    }
     libqt_list packageIDs_list = qlist(packageIDs_qstr, packageIDs_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_RequiredBy3(packageIDs_list, filters, recursive);
     free(packageIDs_qstr);
@@ -830,9 +801,8 @@ PackageKit__Transaction* q_packagekit__daemon_install_files2(const char* files[s
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_install_files2\n");
         abort();
     }
-    for (size_t i = 0; i < files_len; ++i) {
+    for (size_t i = 0; i < files_len; ++i)
         files_qstr[i] = qstring(files[i]);
-    }
     libqt_list files_list = qlist(files_qstr, files_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_InstallFiles2(files_list, flags);
     free(files_qstr);
@@ -850,9 +820,8 @@ PackageKit__Transaction* q_packagekit__daemon_install_packages2(const char* pack
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_install_packages2\n");
         abort();
     }
-    for (size_t i = 0; i < packageIDs_len; ++i) {
+    for (size_t i = 0; i < packageIDs_len; ++i)
         packageIDs_qstr[i] = qstring(packageIDs[i]);
-    }
     libqt_list packageIDs_list = qlist(packageIDs_qstr, packageIDs_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_InstallPackages2(packageIDs_list, flags);
     free(packageIDs_qstr);
@@ -870,9 +839,8 @@ PackageKit__Transaction* q_packagekit__daemon_remove_packages2(const char* packa
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_remove_packages2\n");
         abort();
     }
-    for (size_t i = 0; i < packageIDs_len; ++i) {
+    for (size_t i = 0; i < packageIDs_len; ++i)
         packageIDs_qstr[i] = qstring(packageIDs[i]);
-    }
     libqt_list packageIDs_list = qlist(packageIDs_qstr, packageIDs_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_RemovePackages2(packageIDs_list, allowDeps);
     free(packageIDs_qstr);
@@ -886,9 +854,8 @@ PackageKit__Transaction* q_packagekit__daemon_remove_packages3(const char* packa
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_remove_packages3\n");
         abort();
     }
-    for (size_t i = 0; i < packageIDs_len; ++i) {
+    for (size_t i = 0; i < packageIDs_len; ++i)
         packageIDs_qstr[i] = qstring(packageIDs[i]);
-    }
     libqt_list packageIDs_list = qlist(packageIDs_qstr, packageIDs_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_RemovePackages3(packageIDs_list, allowDeps, autoRemove);
     free(packageIDs_qstr);
@@ -902,9 +869,8 @@ PackageKit__Transaction* q_packagekit__daemon_remove_packages4(const char* packa
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_remove_packages4\n");
         abort();
     }
-    for (size_t i = 0; i < packageIDs_len; ++i) {
+    for (size_t i = 0; i < packageIDs_len; ++i)
         packageIDs_qstr[i] = qstring(packageIDs[i]);
-    }
     libqt_list packageIDs_list = qlist(packageIDs_qstr, packageIDs_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_RemovePackages4(packageIDs_list, allowDeps, autoRemove, flags);
     free(packageIDs_qstr);
@@ -942,9 +908,8 @@ PackageKit__Transaction* q_packagekit__daemon_resolve22(const char* packageNames
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_resolve22\n");
         abort();
     }
-    for (size_t i = 0; i < packageNames_len; ++i) {
+    for (size_t i = 0; i < packageNames_len; ++i)
         packageNames_qstr[i] = qstring(packageNames[i]);
-    }
     libqt_list packageNames_list = qlist(packageNames_qstr, packageNames_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_Resolve22(packageNames_list, filters);
     free(packageNames_qstr);
@@ -962,9 +927,8 @@ PackageKit__Transaction* q_packagekit__daemon_search_files22(const char* search[
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_files22\n");
         abort();
     }
-    for (size_t i = 0; i < search_len; ++i) {
+    for (size_t i = 0; i < search_len; ++i)
         search_qstr[i] = qstring(search[i]);
-    }
     libqt_list search_list = qlist(search_qstr, search_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_SearchFiles22(search_list, filters);
     free(search_qstr);
@@ -982,9 +946,8 @@ PackageKit__Transaction* q_packagekit__daemon_search_details22(const char* searc
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_details22\n");
         abort();
     }
-    for (size_t i = 0; i < search_len; ++i) {
+    for (size_t i = 0; i < search_len; ++i)
         search_qstr[i] = qstring(search[i]);
-    }
     libqt_list search_list = qlist(search_qstr, search_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_SearchDetails22(search_list, filters);
     free(search_qstr);
@@ -1002,9 +965,8 @@ PackageKit__Transaction* q_packagekit__daemon_search_groups22(const char* groups
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_groups22\n");
         abort();
     }
-    for (size_t i = 0; i < groups_len; ++i) {
+    for (size_t i = 0; i < groups_len; ++i)
         groups_qstr[i] = qstring(groups[i]);
-    }
     libqt_list groups_list = qlist(groups_qstr, groups_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_SearchGroups22(groups_list, filters);
     free(groups_qstr);
@@ -1030,9 +992,8 @@ PackageKit__Transaction* q_packagekit__daemon_search_names22(const char* search[
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_names22\n");
         abort();
     }
-    for (size_t i = 0; i < search_len; ++i) {
+    for (size_t i = 0; i < search_len; ++i)
         search_qstr[i] = qstring(search[i]);
-    }
     libqt_list search_list = qlist(search_qstr, search_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_SearchNames22(search_list, filters);
     free(search_qstr);
@@ -1050,9 +1011,8 @@ PackageKit__Transaction* q_packagekit__daemon_update_packages2(const char* packa
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_update_packages2\n");
         abort();
     }
-    for (size_t i = 0; i < packageIDs_len; ++i) {
+    for (size_t i = 0; i < packageIDs_len; ++i)
         packageIDs_qstr[i] = qstring(packageIDs[i]);
-    }
     libqt_list packageIDs_list = qlist(packageIDs_qstr, packageIDs_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_UpdatePackages2(packageIDs_list, flags);
     free(packageIDs_qstr);
@@ -1070,9 +1030,8 @@ PackageKit__Transaction* q_packagekit__daemon_what_provides22(const char* search
         fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_what_provides22\n");
         abort();
     }
-    for (size_t i = 0; i < search_len; ++i) {
+    for (size_t i = 0; i < search_len; ++i)
         search_qstr[i] = qstring(search[i]);
-    }
     libqt_list search_list = qlist(search_qstr, search_len);
     PackageKit__Transaction* _out = PackageKit__Daemon_WhatProvides22(search_list, filters);
     free(search_qstr);
@@ -1221,11 +1180,9 @@ const char** q_packagekit__daemon_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

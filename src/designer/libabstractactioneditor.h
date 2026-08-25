@@ -217,6 +217,22 @@ const char* q_designeractioneditorinterface_tr3(const char* s, const char* c, in
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QDesignerActionEditorInterface*
+///
+QPaintDevice* q_designeractioneditorinterface_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QDesignerActionEditorInterface object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QDesignerActionEditorInterface* q_designeractioneditorinterface_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QDesignerActionEditorInterface*

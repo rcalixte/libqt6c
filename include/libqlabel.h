@@ -890,6 +890,22 @@ void q_label_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QLabel*
+///
+QPaintDevice* q_label_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QLabel object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QLabel* q_label_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QLabel*

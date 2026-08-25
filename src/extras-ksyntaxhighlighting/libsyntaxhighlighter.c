@@ -27,6 +27,14 @@ KSyntaxHighlighting__SyntaxHighlighter* k_syntaxhighlighting__syntaxhighlighter_
     return KSyntaxHighlighting__SyntaxHighlighter_New3((QObject*)parent);
 }
 
+KSyntaxHighlighting__AbstractHighlighter* k_syntaxhighlighting__syntaxhighlighter_as_k_syntax_highlighting___abstract_highlighter(void* self) {
+    return KSyntaxHighlighting__SyntaxHighlighter_AsKSyntaxHighlighting__AbstractHighlighter((KSyntaxHighlighting__SyntaxHighlighter*)self);
+}
+
+KSyntaxHighlighting__SyntaxHighlighter* k_syntaxhighlighting__syntaxhighlighter_from_k_syntax_highlighting___abstract_highlighter(void* _ksyntaxhighlighting__abstracthighlighter) {
+    return (KSyntaxHighlighting__SyntaxHighlighter*)KSyntaxHighlighting__SyntaxHighlighter_FromKSyntaxHighlighting__AbstractHighlighter((KSyntaxHighlighting__AbstractHighlighter*)_ksyntaxhighlighting__abstracthighlighter);
+}
+
 const QMetaObject* k_syntaxhighlighting__syntaxhighlighter_meta_object(void* self) {
     return KSyntaxHighlighting__SyntaxHighlighter_MetaObject((KSyntaxHighlighting__SyntaxHighlighter*)self);
 }
@@ -298,11 +306,9 @@ const char** k_syntaxhighlighting__syntaxhighlighter_dynamic_property_names(void
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

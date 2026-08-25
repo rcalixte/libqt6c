@@ -207,9 +207,8 @@ const char** q_sslcertificate_issuer_info_attributes(void* self);
 /// // Example for freeing the returned map of type:
 /// // libqt_map of enum QSsl__AlternativeNameEntryType to const char**
 /// for (size_t i = 0; i < map.len; ++i) {
-///     for (size_t j = 0; ((const char**)map.values)[i][j] != NULL; j++) {
+///     for (size_t j = 0; ((const char**)map.values)[i][j] != NULL; j++)
 ///         libqt_free((map.values)[i][j]);
-///     }
 ///     libqt_free(map.values[i]);
 /// }
 /// free(map.keys);

@@ -1693,11 +1693,9 @@ const char** q_cplayer_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -2365,11 +2363,9 @@ const char** q_cplayerable_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -3286,11 +3282,9 @@ const char** q_cpselectionrect_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -3927,11 +3921,9 @@ const char** q_cpmargingroup_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -4603,11 +4595,9 @@ const char** q_cplayoutelement_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -5469,11 +5459,9 @@ const char** q_cplayout_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -6523,11 +6511,9 @@ const char** q_cplayoutgrid_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -7491,11 +7477,9 @@ const char** q_cplayoutinset_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -8155,9 +8139,8 @@ void q_cpaxisticker_generate(void* self, void* range, void* locale, void* format
         fprintf(stderr, "Failed to allocate memory for string list in q_cpaxisticker_generate\n");
         abort();
     }
-    for (size_t i = 0; i < tickLabels_len; ++i) {
+    for (size_t i = 0; i < tickLabels_len; ++i)
         tickLabels_qstr[i] = qstring(tickLabels[i]);
-    }
     libqt_list tickLabels_list = qlist(tickLabels_qstr, tickLabels_len);
     QCPAxisTicker_Generate((QCPAxisTicker*)self, (QCPRange*)range, (QLocale*)locale, (QChar*)formatChar, precision, ticks, subTicks, tickLabels_list);
     free(tickLabels_qstr);
@@ -8174,9 +8157,8 @@ void q_cpaxisticker_super_generate(void* self, void* range, void* locale, void* 
         fprintf(stderr, "Failed to allocate memory for string list in q_cpaxisticker_generate\n");
         abort();
     }
-    for (size_t i = 0; i < tickLabels_len; ++i) {
+    for (size_t i = 0; i < tickLabels_len; ++i)
         tickLabels_qstr[i] = qstring(tickLabels[i]);
-    }
     libqt_list tickLabels_list = qlist(tickLabels_qstr, tickLabels_len);
     QCPAxisTicker_SuperGenerate((QCPAxisTicker*)self, (QCPRange*)range, (QLocale*)locale, (QChar*)formatChar, precision, ticks, subTicks, tickLabels_list);
 }
@@ -8261,11 +8243,9 @@ const char** q_cpaxisticker_create_label_vector(void* self, libqt_list /* of dou
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -8284,11 +8264,9 @@ const char** q_cpaxisticker_super_create_label_vector(void* self, libqt_list /* 
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -8495,9 +8473,8 @@ void q_cpaxistickerdatetime_generate(void* self, void* range, void* locale, void
         fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerdatetime_generate\n");
         abort();
     }
-    for (size_t i = 0; i < tickLabels_len; ++i) {
+    for (size_t i = 0; i < tickLabels_len; ++i)
         tickLabels_qstr[i] = qstring(tickLabels[i]);
-    }
     libqt_list tickLabels_list = qlist(tickLabels_qstr, tickLabels_len);
     QCPAxisTickerDateTime_Generate((QCPAxisTickerDateTime*)self, (QCPRange*)range, (QLocale*)locale, (QChar*)formatChar, precision, ticks, subTicks, tickLabels_list);
     free(tickLabels_qstr);
@@ -8510,9 +8487,8 @@ void q_cpaxistickerdatetime_super_generate(void* self, void* range, void* locale
         fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerdatetime_generate\n");
         abort();
     }
-    for (size_t i = 0; i < tickLabels_len; ++i) {
+    for (size_t i = 0; i < tickLabels_len; ++i)
         tickLabels_qstr[i] = qstring(tickLabels[i]);
-    }
     libqt_list tickLabels_list = qlist(tickLabels_qstr, tickLabels_len);
     QCPAxisTickerDateTime_SuperGenerate((QCPAxisTickerDateTime*)self, (QCPRange*)range, (QLocale*)locale, (QChar*)formatChar, precision, ticks, subTicks, tickLabels_list);
     free(tickLabels_qstr);
@@ -8546,11 +8522,9 @@ const char** q_cpaxistickerdatetime_create_label_vector(void* self, libqt_list /
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -8565,11 +8539,9 @@ const char** q_cpaxistickerdatetime_super_create_label_vector(void* self, libqt_
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -8738,9 +8710,8 @@ void q_cpaxistickertime_generate(void* self, void* range, void* locale, void* fo
         fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertime_generate\n");
         abort();
     }
-    for (size_t i = 0; i < tickLabels_len; ++i) {
+    for (size_t i = 0; i < tickLabels_len; ++i)
         tickLabels_qstr[i] = qstring(tickLabels[i]);
-    }
     libqt_list tickLabels_list = qlist(tickLabels_qstr, tickLabels_len);
     QCPAxisTickerTime_Generate((QCPAxisTickerTime*)self, (QCPRange*)range, (QLocale*)locale, (QChar*)formatChar, precision, ticks, subTicks, tickLabels_list);
     free(tickLabels_qstr);
@@ -8753,9 +8724,8 @@ void q_cpaxistickertime_super_generate(void* self, void* range, void* locale, vo
         fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertime_generate\n");
         abort();
     }
-    for (size_t i = 0; i < tickLabels_len; ++i) {
+    for (size_t i = 0; i < tickLabels_len; ++i)
         tickLabels_qstr[i] = qstring(tickLabels[i]);
-    }
     libqt_list tickLabels_list = qlist(tickLabels_qstr, tickLabels_len);
     QCPAxisTickerTime_SuperGenerate((QCPAxisTickerTime*)self, (QCPRange*)range, (QLocale*)locale, (QChar*)formatChar, precision, ticks, subTicks, tickLabels_list);
     free(tickLabels_qstr);
@@ -8803,11 +8773,9 @@ const char** q_cpaxistickertime_create_label_vector(void* self, libqt_list /* of
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -8822,11 +8790,9 @@ const char** q_cpaxistickertime_super_create_label_vector(void* self, libqt_list
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -8950,9 +8916,8 @@ void q_cpaxistickerfixed_generate(void* self, void* range, void* locale, void* f
         fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerfixed_generate\n");
         abort();
     }
-    for (size_t i = 0; i < tickLabels_len; ++i) {
+    for (size_t i = 0; i < tickLabels_len; ++i)
         tickLabels_qstr[i] = qstring(tickLabels[i]);
-    }
     libqt_list tickLabels_list = qlist(tickLabels_qstr, tickLabels_len);
     QCPAxisTickerFixed_Generate((QCPAxisTickerFixed*)self, (QCPRange*)range, (QLocale*)locale, (QChar*)formatChar, precision, ticks, subTicks, tickLabels_list);
     free(tickLabels_qstr);
@@ -8965,9 +8930,8 @@ void q_cpaxistickerfixed_super_generate(void* self, void* range, void* locale, v
         fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerfixed_generate\n");
         abort();
     }
-    for (size_t i = 0; i < tickLabels_len; ++i) {
+    for (size_t i = 0; i < tickLabels_len; ++i)
         tickLabels_qstr[i] = qstring(tickLabels[i]);
-    }
     libqt_list tickLabels_list = qlist(tickLabels_qstr, tickLabels_len);
     QCPAxisTickerFixed_SuperGenerate((QCPAxisTickerFixed*)self, (QCPRange*)range, (QLocale*)locale, (QChar*)formatChar, precision, ticks, subTicks, tickLabels_list);
     free(tickLabels_qstr);
@@ -9045,11 +9009,9 @@ const char** q_cpaxistickerfixed_create_label_vector(void* self, libqt_list /* o
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -9064,11 +9026,9 @@ const char** q_cpaxistickerfixed_super_create_label_vector(void* self, libqt_lis
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -9205,9 +9165,8 @@ void q_cpaxistickertext_set_ticks2(void* self, libqt_list /* of double */ positi
         fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_set_ticks2\n");
         abort();
     }
-    for (size_t i = 0; i < labels_len; ++i) {
+    for (size_t i = 0; i < labels_len; ++i)
         labels_qstr[i] = qstring(labels[i]);
-    }
     libqt_list labels_list = qlist(labels_qstr, labels_len);
     QCPAxisTickerText_SetTicks2((QCPAxisTickerText*)self, positions, labels_list);
     free(labels_qstr);
@@ -9260,9 +9219,8 @@ void q_cpaxistickertext_add_ticks2(void* self, libqt_list /* of double */ positi
         fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_add_ticks2\n");
         abort();
     }
-    for (size_t i = 0; i < labels_len; ++i) {
+    for (size_t i = 0; i < labels_len; ++i)
         labels_qstr[i] = qstring(labels[i]);
-    }
     libqt_list labels_list = qlist(labels_qstr, labels_len);
     QCPAxisTickerText_AddTicks2((QCPAxisTickerText*)self, positions, labels_list);
     free(labels_qstr);
@@ -9355,9 +9313,8 @@ void q_cpaxistickertext_generate(void* self, void* range, void* locale, void* fo
         fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_generate\n");
         abort();
     }
-    for (size_t i = 0; i < tickLabels_len; ++i) {
+    for (size_t i = 0; i < tickLabels_len; ++i)
         tickLabels_qstr[i] = qstring(tickLabels[i]);
-    }
     libqt_list tickLabels_list = qlist(tickLabels_qstr, tickLabels_len);
     QCPAxisTickerText_Generate((QCPAxisTickerText*)self, (QCPRange*)range, (QLocale*)locale, (QChar*)formatChar, precision, ticks, subTicks, tickLabels_list);
     free(tickLabels_qstr);
@@ -9370,9 +9327,8 @@ void q_cpaxistickertext_super_generate(void* self, void* range, void* locale, vo
         fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_generate\n");
         abort();
     }
-    for (size_t i = 0; i < tickLabels_len; ++i) {
+    for (size_t i = 0; i < tickLabels_len; ++i)
         tickLabels_qstr[i] = qstring(tickLabels[i]);
-    }
     libqt_list tickLabels_list = qlist(tickLabels_qstr, tickLabels_len);
     QCPAxisTickerText_SuperGenerate((QCPAxisTickerText*)self, (QCPRange*)range, (QLocale*)locale, (QChar*)formatChar, precision, ticks, subTicks, tickLabels_list);
     free(tickLabels_qstr);
@@ -9406,11 +9362,9 @@ const char** q_cpaxistickertext_create_label_vector(void* self, libqt_list /* of
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -9425,11 +9379,9 @@ const char** q_cpaxistickertext_super_create_label_vector(void* self, libqt_list
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -9686,9 +9638,8 @@ void q_cpaxistickerpi_generate(void* self, void* range, void* locale, void* form
         fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerpi_generate\n");
         abort();
     }
-    for (size_t i = 0; i < tickLabels_len; ++i) {
+    for (size_t i = 0; i < tickLabels_len; ++i)
         tickLabels_qstr[i] = qstring(tickLabels[i]);
-    }
     libqt_list tickLabels_list = qlist(tickLabels_qstr, tickLabels_len);
     QCPAxisTickerPi_Generate((QCPAxisTickerPi*)self, (QCPRange*)range, (QLocale*)locale, (QChar*)formatChar, precision, ticks, subTicks, tickLabels_list);
     free(tickLabels_qstr);
@@ -9701,9 +9652,8 @@ void q_cpaxistickerpi_super_generate(void* self, void* range, void* locale, void
         fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerpi_generate\n");
         abort();
     }
-    for (size_t i = 0; i < tickLabels_len; ++i) {
+    for (size_t i = 0; i < tickLabels_len; ++i)
         tickLabels_qstr[i] = qstring(tickLabels[i]);
-    }
     libqt_list tickLabels_list = qlist(tickLabels_qstr, tickLabels_len);
     QCPAxisTickerPi_SuperGenerate((QCPAxisTickerPi*)self, (QCPRange*)range, (QLocale*)locale, (QChar*)formatChar, precision, ticks, subTicks, tickLabels_list);
     free(tickLabels_qstr);
@@ -9751,11 +9701,9 @@ const char** q_cpaxistickerpi_create_label_vector(void* self, libqt_list /* of d
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -9770,11 +9718,9 @@ const char** q_cpaxistickerpi_super_create_label_vector(void* self, libqt_list /
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -9912,9 +9858,8 @@ void q_cpaxistickerlog_generate(void* self, void* range, void* locale, void* for
         fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerlog_generate\n");
         abort();
     }
-    for (size_t i = 0; i < tickLabels_len; ++i) {
+    for (size_t i = 0; i < tickLabels_len; ++i)
         tickLabels_qstr[i] = qstring(tickLabels[i]);
-    }
     libqt_list tickLabels_list = qlist(tickLabels_qstr, tickLabels_len);
     QCPAxisTickerLog_Generate((QCPAxisTickerLog*)self, (QCPRange*)range, (QLocale*)locale, (QChar*)formatChar, precision, ticks, subTicks, tickLabels_list);
     free(tickLabels_qstr);
@@ -9927,9 +9872,8 @@ void q_cpaxistickerlog_super_generate(void* self, void* range, void* locale, voi
         fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerlog_generate\n");
         abort();
     }
-    for (size_t i = 0; i < tickLabels_len; ++i) {
+    for (size_t i = 0; i < tickLabels_len; ++i)
         tickLabels_qstr[i] = qstring(tickLabels[i]);
-    }
     libqt_list tickLabels_list = qlist(tickLabels_qstr, tickLabels_len);
     QCPAxisTickerLog_SuperGenerate((QCPAxisTickerLog*)self, (QCPRange*)range, (QLocale*)locale, (QChar*)formatChar, precision, ticks, subTicks, tickLabels_list);
     free(tickLabels_qstr);
@@ -9993,11 +9937,9 @@ const char** q_cpaxistickerlog_create_label_vector(void* self, libqt_list /* of 
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -10012,11 +9954,9 @@ const char** q_cpaxistickerlog_super_create_label_vector(void* self, libqt_list 
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -10412,11 +10352,9 @@ const char** q_cpgrid_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -10934,11 +10872,9 @@ const char** q_cpaxis_tick_vector_labels(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -11745,11 +11681,9 @@ const char** q_cpaxis_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -12820,11 +12754,9 @@ const char** q_cpabstractplottable_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -13884,11 +13816,9 @@ const char** q_cpabstractitem_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -15396,6 +15326,14 @@ libqt_list /* of QCPLayerable* */ q_customplot_super_layerable_list_at3(void* se
     return _arr;
 }
 
+QPaintDevice* q_customplot_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+QCustomPlot* q_customplot_from_q_paint_device(void* _qpaintdevice) {
+    return (QCustomPlot*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
+}
+
 uintptr_t q_customplot_win_id(void* self) {
     return QWidget_WinId((QWidget*)self);
 }
@@ -16644,11 +16582,9 @@ const char** q_customplot_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -16726,47 +16662,47 @@ void q_customplot_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 bool q_customplot_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(q_customplot_as_q_paint_device(self));
 }
 
 int32_t q_customplot_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(q_customplot_as_q_paint_device(self));
 }
 
 int32_t q_customplot_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(q_customplot_as_q_paint_device(self));
 }
 
 int32_t q_customplot_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(q_customplot_as_q_paint_device(self));
 }
 
 int32_t q_customplot_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(q_customplot_as_q_paint_device(self));
 }
 
 int32_t q_customplot_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(q_customplot_as_q_paint_device(self));
 }
 
 int32_t q_customplot_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(q_customplot_as_q_paint_device(self));
 }
 
 double q_customplot_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(q_customplot_as_q_paint_device(self));
 }
 
 double q_customplot_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(q_customplot_as_q_paint_device(self));
 }
 
 int32_t q_customplot_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(q_customplot_as_q_paint_device(self));
 }
 
 int32_t q_customplot_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(q_customplot_as_q_paint_device(self));
 }
 
 double q_customplot_device_pixel_ratio_f_scale() {
@@ -18454,11 +18390,9 @@ const char** q_cpaxisrect_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -19312,11 +19246,9 @@ const char** q_cpabstractlegenditem_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -20188,11 +20120,9 @@ const char** q_cpplottablelegenditem_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -21391,11 +21321,9 @@ const char** q_cplegend_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -22540,11 +22468,9 @@ const char** q_cptextelement_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -23424,11 +23350,9 @@ const char** q_cpcolorscale_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -24685,11 +24609,9 @@ const char** q_cpgraph_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -25962,11 +25884,9 @@ const char** q_cpcurve_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -26811,11 +26731,9 @@ const char** q_cpbarsgroup_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -27714,11 +27632,9 @@ const char** q_cpbars_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -28902,11 +28818,9 @@ const char** q_cpstatisticalbox_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -30137,11 +30051,9 @@ const char** q_cpcolormap_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -31240,11 +31152,9 @@ const char** q_cpfinancial_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -31839,6 +31749,14 @@ void q_cperrorbarsdata_delete(void* self) {
 
 QCPErrorBars* q_cperrorbars_new(void* keyAxis, void* valueAxis) {
     return QCPErrorBars_New((QCPAxis*)keyAxis, (QCPAxis*)valueAxis);
+}
+
+QCPPlottableInterface1D* q_cperrorbars_as_q_c_p_plottable_interface1_d(void* self) {
+    return QCPErrorBars_AsQCPPlottableInterface1D((QCPErrorBars*)self);
+}
+
+QCPErrorBars* q_cperrorbars_from_q_c_p_plottable_interface1_d(void* _qcpplottableinterface1d) {
+    return (QCPErrorBars*)QCPErrorBars_FromQCPPlottableInterface1D((QCPPlottableInterface1D*)_qcpplottableinterface1d);
 }
 
 const QMetaObject* q_cperrorbars_meta_object(void* self) {
@@ -32519,11 +32437,9 @@ const char** q_cperrorbars_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -32601,7 +32517,7 @@ void q_cperrorbars_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 }
 
 void q_cperrorbars_operator_assign(void* self, void* param1) {
-    QCPPlottableInterface1D_OperatorAssign((QCPPlottableInterface1D*)self, (QCPPlottableInterface1D*)param1);
+    QCPPlottableInterface1D_OperatorAssign(q_cperrorbars_as_q_c_p_plottable_interface1_d(self), (QCPPlottableInterface1D*)param1);
 }
 
 QRect* q_cperrorbars_clip_rect(void* self) {
@@ -33329,11 +33245,9 @@ const char** q_cpitemstraightline_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -34175,11 +34089,9 @@ const char** q_cpitemline_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -35017,11 +34929,9 @@ const char** q_cpitemcurve_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -35899,11 +35809,9 @@ const char** q_cpitemrect_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -36880,11 +36788,9 @@ const char** q_cpitemtext_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -37762,11 +37668,9 @@ const char** q_cpitemellipse_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -38720,11 +38624,9 @@ const char** q_cpitempixmap_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -39590,11 +39492,9 @@ const char** q_cpitemtracer_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -40440,11 +40340,9 @@ const char** q_cpitembracket_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -41019,11 +40917,9 @@ const char** q_cppolaraxisradial_tick_vector_labels(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -41779,11 +41675,9 @@ const char** q_cppolaraxisradial_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -42225,11 +42119,9 @@ const char** q_cppolaraxisangular_tick_vector_labels(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -43198,11 +43090,9 @@ const char** q_cppolaraxisangular_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -43954,11 +43844,9 @@ const char** q_cppolargrid_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -44816,11 +44704,9 @@ const char** q_cppolarlegenditem_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -45991,11 +45877,9 @@ const char** q_cppolargraph_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

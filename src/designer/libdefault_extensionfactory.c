@@ -15,6 +15,14 @@ QExtensionFactory* q_extensionfactory_new2(void* parent) {
     return QExtensionFactory_New2((QExtensionManager*)parent);
 }
 
+QAbstractExtensionFactory* q_extensionfactory_as_q_abstract_extension_factory(void* self) {
+    return QExtensionFactory_AsQAbstractExtensionFactory((QExtensionFactory*)self);
+}
+
+QExtensionFactory* q_extensionfactory_from_q_abstract_extension_factory(void* _qabstractextensionfactory) {
+    return (QExtensionFactory*)QExtensionFactory_FromQAbstractExtensionFactory((QAbstractExtensionFactory*)_qabstractextensionfactory);
+}
+
 const QMetaObject* q_extensionfactory_meta_object(void* self) {
     return QExtensionFactory_MetaObject((QExtensionFactory*)self);
 }
@@ -230,11 +238,9 @@ const char** q_extensionfactory_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -312,7 +318,7 @@ void q_extensionfactory_on_destroyed1(void* self, void (*callback)(void*, void*)
 }
 
 void q_extensionfactory_operator_assign(void* self, void* param1) {
-    QAbstractExtensionFactory_OperatorAssign((QAbstractExtensionFactory*)self, (QAbstractExtensionFactory*)param1);
+    QAbstractExtensionFactory_OperatorAssign(q_extensionfactory_as_q_abstract_extension_factory(self), (QAbstractExtensionFactory*)param1);
 }
 
 bool q_extensionfactory_event(void* self, void* event) {

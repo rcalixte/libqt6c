@@ -268,6 +268,14 @@ const char* k_parts__readonlypart_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
+KParts__PartBase* k_parts__readonlypart_as_k_parts___part_base(void* self) {
+    return KParts__Part_AsKParts__PartBase((KParts__Part*)self);
+}
+
+KParts__ReadOnlyPart* k_parts__readonlypart_from_k_parts___part_base(void* _kparts__partbase) {
+    return (KParts__ReadOnlyPart*)KParts__Part_FromKParts__PartBase((KParts__PartBase*)_kparts__partbase);
+}
+
 KParts__PartManager* k_parts__readonlypart_manager(void* self) {
     return KParts__Part_Manager((KParts__Part*)self);
 }
@@ -430,11 +438,9 @@ const char** k_parts__readonlypart_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -512,11 +518,11 @@ void k_parts__readonlypart_on_destroyed1(void* self, void (*callback)(void*, voi
 }
 
 void k_parts__readonlypart_set_part_object(void* self, void* object) {
-    KParts__PartBase_SetPartObject((KParts__PartBase*)self, (QObject*)object);
+    KParts__PartBase_SetPartObject(k_parts__readonlypart_as_k_parts___part_base(self), (QObject*)object);
 }
 
 QObject* k_parts__readonlypart_part_object(void* self) {
-    return KParts__PartBase_PartObject((KParts__PartBase*)self);
+    return KParts__PartBase_PartObject(k_parts__readonlypart_as_k_parts___part_base(self));
 }
 
 QAction* k_parts__readonlypart_action(void* self, const char* name) {
@@ -583,9 +589,8 @@ const char* k_parts__readonlypart_find_most_recent_x_m_l_file(const char* files[
         fprintf(stderr, "Failed to allocate memory for string list in k_parts__readonlypart_find_most_recent_x_m_l_file\n");
         abort();
     }
-    for (size_t i = 0; i < files_len; ++i) {
+    for (size_t i = 0; i < files_len; ++i)
         files_qstr[i] = qstring(files[i]);
-    }
     libqt_list files_list = qlist(files_qstr, files_len);
     libqt_string _str = KXMLGUIClient_FindMostRecentXMLFile(files_list, qstring(doc));
     free(files_qstr);

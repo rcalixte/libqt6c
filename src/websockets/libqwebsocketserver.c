@@ -186,9 +186,8 @@ void q_websocketserver_set_supported_subprotocols(void* self, const char* protoc
         fprintf(stderr, "Failed to allocate memory for string list in q_websocketserver_set_supported_subprotocols\n");
         abort();
     }
-    for (size_t i = 0; i < protocols_len; ++i) {
+    for (size_t i = 0; i < protocols_len; ++i)
         protocols_qstr[i] = qstring(protocols[i]);
-    }
     libqt_list protocols_list = qlist(protocols_qstr, protocols_len);
     QWebSocketServer_SetSupportedSubprotocols((QWebSocketServer*)self, protocols_list);
     free(protocols_qstr);
@@ -204,11 +203,9 @@ const char** q_websocketserver_supported_subprotocols(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -478,11 +475,9 @@ const char** q_websocketserver_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

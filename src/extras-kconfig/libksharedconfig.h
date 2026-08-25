@@ -10,6 +10,12 @@
 
 /// [Upstream resources](https://api.kde.org/ksharedconfig.html)
 
+/// Upcasts to a QSharedData object
+///
+/// @param self KSharedConfig*
+///
+QSharedData* k_sharedconfig_as_q_shared_data(void* self);
+
 /// Inherited from KConfig
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#locationType)
@@ -308,4 +314,13 @@ bool k_sharedconfig_is_group_immutable(void* self, const char* group);
 /// @param flags flag of enum KConfigBase__WriteConfigFlag
 ///
 void k_sharedconfig_delete_group2(void* self, const char* group, int32_t flags);
+
+/// [Upstream resources](https://api.kde.org/ksharedconfig.html#dtor.KSharedConfig)
+///
+/// Delete this object from C++ memory.
+///
+/// @param self KSharedConfig*
+///
+void k_sharedconfig_delete(void* self);
+
 #endif

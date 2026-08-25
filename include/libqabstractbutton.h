@@ -698,6 +698,22 @@ void q_abstractbutton_on_clicked1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QAbstractButton*
+///
+QPaintDevice* q_abstractbutton_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QAbstractButton object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QAbstractButton* q_abstractbutton_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QAbstractButton*

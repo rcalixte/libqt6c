@@ -18,9 +18,8 @@ KIO__CommandLauncherJob* k_io__commandlauncherjob_new2(const char* executable, c
         fprintf(stderr, "Failed to allocate memory for string list in k_io__commandlauncherjob_new2\n");
         abort();
     }
-    for (size_t i = 0; i < args_len; ++i) {
+    for (size_t i = 0; i < args_len; ++i)
         args_qstr[i] = qstring(args[i]);
-    }
     libqt_list args_list = qlist(args_qstr, args_len);
 
     KIO__CommandLauncherJob* _out = KIO__CommandLauncherJob_New2(qstring(executable), args_list);
@@ -39,9 +38,8 @@ KIO__CommandLauncherJob* k_io__commandlauncherjob_new4(const char* executable, c
         fprintf(stderr, "Failed to allocate memory for string list in k_io__commandlauncherjob_new4\n");
         abort();
     }
-    for (size_t i = 0; i < args_len; ++i) {
+    for (size_t i = 0; i < args_len; ++i)
         args_qstr[i] = qstring(args[i]);
-    }
     libqt_list args_list = qlist(args_qstr, args_len);
 
     KIO__CommandLauncherJob* _out = KIO__CommandLauncherJob_New4(qstring(executable), args_list, (QObject*)parent);
@@ -381,11 +379,9 @@ const char** k_io__commandlauncherjob_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

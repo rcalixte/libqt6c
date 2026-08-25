@@ -204,9 +204,8 @@ void k_dirlister_set_mime_filter(void* self, const char* mimeList[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_dirlister_set_mime_filter\n");
         abort();
     }
-    for (size_t i = 0; i < mimeList_len; ++i) {
+    for (size_t i = 0; i < mimeList_len; ++i)
         mimeList_qstr[i] = qstring(mimeList[i]);
-    }
     libqt_list mimeList_list = qlist(mimeList_qstr, mimeList_len);
     KCoreDirLister_SetMimeFilter((KCoreDirLister*)self, mimeList_list);
     free(mimeList_qstr);
@@ -219,9 +218,8 @@ void k_dirlister_set_mime_exclude_filter(void* self, const char* mimeList[static
         fprintf(stderr, "Failed to allocate memory for string list in k_dirlister_set_mime_exclude_filter\n");
         abort();
     }
-    for (size_t i = 0; i < mimeList_len; ++i) {
+    for (size_t i = 0; i < mimeList_len; ++i)
         mimeList_qstr[i] = qstring(mimeList[i]);
-    }
     libqt_list mimeList_list = qlist(mimeList_qstr, mimeList_len);
     KCoreDirLister_SetMimeExcludeFilter((KCoreDirLister*)self, mimeList_list);
     free(mimeList_qstr);
@@ -241,11 +239,9 @@ const char** k_dirlister_mime_filters(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -552,11 +548,9 @@ const char** k_dirlister_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

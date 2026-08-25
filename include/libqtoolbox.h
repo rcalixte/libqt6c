@@ -531,6 +531,22 @@ void q_toolbox_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QToolBox*
+///
+QPaintDevice* q_toolbox_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QToolBox object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QToolBox* q_toolbox_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QToolBox*

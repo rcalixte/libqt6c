@@ -87,9 +87,8 @@ void k_historycombobox_set_history_items(void* self, const char* items[static 1]
         fprintf(stderr, "Failed to allocate memory for string list in k_historycombobox_set_history_items\n");
         abort();
     }
-    for (size_t i = 0; i < items_len; ++i) {
+    for (size_t i = 0; i < items_len; ++i)
         items_qstr[i] = qstring(items[i]);
-    }
     libqt_list items_list = qlist(items_qstr, items_len);
     KHistoryComboBox_SetHistoryItems((KHistoryComboBox*)self, items_list);
     free(items_qstr);
@@ -102,9 +101,8 @@ void k_historycombobox_set_history_items2(void* self, const char* items[static 1
         fprintf(stderr, "Failed to allocate memory for string list in k_historycombobox_set_history_items2\n");
         abort();
     }
-    for (size_t i = 0; i < items_len; ++i) {
+    for (size_t i = 0; i < items_len; ++i)
         items_qstr[i] = qstring(items[i]);
-    }
     libqt_list items_list = qlist(items_qstr, items_len);
     KHistoryComboBox_SetHistoryItems2((KHistoryComboBox*)self, items_list, setCompletionList);
     free(items_qstr);
@@ -120,11 +118,9 @@ const char** k_historycombobox_history_items(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -188,9 +184,8 @@ void k_historycombobox_insert_items(void* self, const char* items[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_historycombobox_insert_items\n");
         abort();
     }
-    for (size_t i = 0; i < items_len; ++i) {
+    for (size_t i = 0; i < items_len; ++i)
         items_qstr[i] = qstring(items[i]);
-    }
     libqt_list items_list = qlist(items_qstr, items_len);
     KHistoryComboBox_InsertItems((KHistoryComboBox*)self, items_list);
     free(items_qstr);
@@ -207,9 +202,8 @@ void k_historycombobox_super_insert_items(void* self, const char* items[static 1
         fprintf(stderr, "Failed to allocate memory for string list in k_historycombobox_insert_items\n");
         abort();
     }
-    for (size_t i = 0; i < items_len; ++i) {
+    for (size_t i = 0; i < items_len; ++i)
         items_qstr[i] = qstring(items[i]);
-    }
     libqt_list items_list = qlist(items_qstr, items_len);
     KHistoryComboBox_SuperInsertItems((KHistoryComboBox*)self, items_list);
 }
@@ -238,6 +232,14 @@ const char* k_historycombobox_tr3(const char* s, const char* c, int n) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+KCompletionBase* k_historycombobox_as_k_completion_base(void* self) {
+    return KComboBox_AsKCompletionBase((KComboBox*)self);
+}
+
+KHistoryComboBox* k_historycombobox_from_k_completion_base(void* _kcompletionbase) {
+    return (KHistoryComboBox*)KComboBox_FromKCompletionBase((KCompletionBase*)_kcompletionbase);
 }
 
 void k_historycombobox_set_edit_url(void* self, void* url) {
@@ -556,9 +558,8 @@ void k_historycombobox_add_items(void* self, const char* texts[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_historycombobox_add_items\n");
         abort();
     }
-    for (size_t i = 0; i < texts_len; ++i) {
+    for (size_t i = 0; i < texts_len; ++i)
         texts_qstr[i] = qstring(texts[i]);
-    }
     libqt_list texts_list = qlist(texts_qstr, texts_len);
     QComboBox_AddItems((QComboBox*)self, texts_list);
     free(texts_qstr);
@@ -718,6 +719,14 @@ void k_historycombobox_insert_item4(void* self, int index, void* icon, const cha
 
 void k_historycombobox_set_item_data3(void* self, int index, void* value, int role) {
     QComboBox_SetItemData3((QComboBox*)self, index, (QVariant*)value, role);
+}
+
+QPaintDevice* k_historycombobox_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+KHistoryComboBox* k_historycombobox_from_q_paint_device(void* _qpaintdevice) {
+    return (KHistoryComboBox*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 uintptr_t k_historycombobox_win_id(void* self) {
@@ -1968,11 +1977,9 @@ const char** k_historycombobox_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -2050,47 +2057,47 @@ void k_historycombobox_on_destroyed1(void* self, void (*callback)(void*, void*))
 }
 
 bool k_historycombobox_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_historycombobox_as_q_paint_device(self));
 }
 
 int32_t k_historycombobox_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_historycombobox_as_q_paint_device(self));
 }
 
 int32_t k_historycombobox_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_historycombobox_as_q_paint_device(self));
 }
 
 int32_t k_historycombobox_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_historycombobox_as_q_paint_device(self));
 }
 
 int32_t k_historycombobox_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_historycombobox_as_q_paint_device(self));
 }
 
 int32_t k_historycombobox_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_historycombobox_as_q_paint_device(self));
 }
 
 int32_t k_historycombobox_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_historycombobox_as_q_paint_device(self));
 }
 
 double k_historycombobox_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_historycombobox_as_q_paint_device(self));
 }
 
 double k_historycombobox_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_historycombobox_as_q_paint_device(self));
 }
 
 int32_t k_historycombobox_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_historycombobox_as_q_paint_device(self));
 }
 
 int32_t k_historycombobox_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_historycombobox_as_q_paint_device(self));
 }
 
 double k_historycombobox_device_pixel_ratio_f_scale() {
@@ -2102,56 +2109,56 @@ int32_t k_historycombobox_encode_metric_f(int32_t metric, double value) {
 }
 
 KCompletion* k_historycombobox_completion_object(void* self) {
-    return KCompletionBase_CompletionObject((KCompletionBase*)self);
+    return KCompletionBase_CompletionObject(k_historycombobox_as_k_completion_base(self));
 }
 
 bool k_historycombobox_is_completion_object_auto_deleted(void* self) {
-    return KCompletionBase_IsCompletionObjectAutoDeleted((KCompletionBase*)self);
+    return KCompletionBase_IsCompletionObjectAutoDeleted(k_historycombobox_as_k_completion_base(self));
 }
 
 void k_historycombobox_set_auto_delete_completion_object(void* self, bool autoDelete) {
-    KCompletionBase_SetAutoDeleteCompletionObject((KCompletionBase*)self, autoDelete);
+    KCompletionBase_SetAutoDeleteCompletionObject(k_historycombobox_as_k_completion_base(self), autoDelete);
 }
 
 void k_historycombobox_set_enable_signals(void* self, bool enable) {
-    KCompletionBase_SetEnableSignals((KCompletionBase*)self, enable);
+    KCompletionBase_SetEnableSignals(k_historycombobox_as_k_completion_base(self), enable);
 }
 
 bool k_historycombobox_handle_signals(void* self) {
-    return KCompletionBase_HandleSignals((KCompletionBase*)self);
+    return KCompletionBase_HandleSignals(k_historycombobox_as_k_completion_base(self));
 }
 
 bool k_historycombobox_emit_signals(void* self) {
-    return KCompletionBase_EmitSignals((KCompletionBase*)self);
+    return KCompletionBase_EmitSignals(k_historycombobox_as_k_completion_base(self));
 }
 
 void k_historycombobox_set_emit_signals(void* self, bool emitRotationSignals) {
-    KCompletionBase_SetEmitSignals((KCompletionBase*)self, emitRotationSignals);
+    KCompletionBase_SetEmitSignals(k_historycombobox_as_k_completion_base(self), emitRotationSignals);
 }
 
 int32_t k_historycombobox_completion_mode(void* self) {
-    return KCompletionBase_CompletionMode((KCompletionBase*)self);
+    return KCompletionBase_CompletionMode(k_historycombobox_as_k_completion_base(self));
 }
 
 bool k_historycombobox_set_key_binding(void* self, int32_t item, libqt_list /* of QKeySequence* */ key) {
-    return KCompletionBase_SetKeyBinding((KCompletionBase*)self, item, key);
+    return KCompletionBase_SetKeyBinding(k_historycombobox_as_k_completion_base(self), item, key);
 }
 
 libqt_list /* of QKeySequence* */ k_historycombobox_key_binding(void* self, int32_t item) {
-    libqt_list _arr = KCompletionBase_KeyBinding((KCompletionBase*)self, item);
+    libqt_list _arr = KCompletionBase_KeyBinding(k_historycombobox_as_k_completion_base(self), item);
     return _arr;
 }
 
 void k_historycombobox_use_global_key_bindings(void* self) {
-    KCompletionBase_UseGlobalKeyBindings((KCompletionBase*)self);
+    KCompletionBase_UseGlobalKeyBindings(k_historycombobox_as_k_completion_base(self));
 }
 
 KCompletion* k_historycombobox_comp_obj(void* self) {
-    return KCompletionBase_CompObj((KCompletionBase*)self);
+    return KCompletionBase_CompObj(k_historycombobox_as_k_completion_base(self));
 }
 
 KCompletion* k_historycombobox_completion_object1(void* self, bool handleSignals) {
-    return KCompletionBase_CompletionObject1((KCompletionBase*)self, handleSignals);
+    return KCompletionBase_CompletionObject1(k_historycombobox_as_k_completion_base(self), handleSignals);
 }
 
 void k_historycombobox_set_auto_completion(void* self, bool autocomplete) {
@@ -2209,9 +2216,8 @@ void k_historycombobox_set_completed_items(void* self, const char* items[static 
         fprintf(stderr, "Failed to allocate memory for string list in k_historycombobox_set_completed_items\n");
         abort();
     }
-    for (size_t i = 0; i < items_len; ++i) {
+    for (size_t i = 0; i < items_len; ++i)
         items_qstr[i] = qstring(items[i]);
-    }
     libqt_list items_list = qlist(items_qstr, items_len);
     KHistoryComboBox_SetCompletedItems((KHistoryComboBox*)self, items_list, autoSuggest);
     free(items_qstr);
@@ -2224,9 +2230,8 @@ void k_historycombobox_super_set_completed_items(void* self, const char* items[s
         fprintf(stderr, "Failed to allocate memory for string list in k_historycombobox_set_completed_items\n");
         abort();
     }
-    for (size_t i = 0; i < items_len; ++i) {
+    for (size_t i = 0; i < items_len; ++i)
         items_qstr[i] = qstring(items[i]);
-    }
     libqt_list items_list = qlist(items_qstr, items_len);
     KHistoryComboBox_SuperSetCompletedItems((KHistoryComboBox*)self, items_list, autoSuggest);
     free(items_qstr);
@@ -3096,9 +3101,8 @@ void k_historycombobox_set_key_binding_map(void* self, libqt_map /* of enum KCom
     for (size_t i = 0; i < keyBindingMap_ret.len; ++i) {
         keyBindingMap_kdest[i] = keyBindingMap_karr[i];
         size_t keyBindingMap_value_count = 0;
-        while (keyBindingMap_varr[i][keyBindingMap_value_count] != NULL) {
+        while (keyBindingMap_varr[i][keyBindingMap_value_count] != NULL)
             keyBindingMap_value_count++;
-        }
         keyBindingMap_vdest[i].len = keyBindingMap_value_count;
         keyBindingMap_vdest[i].data.ptr = (void*)keyBindingMap_varr[i];
     }
@@ -3129,9 +3133,8 @@ void k_historycombobox_super_set_key_binding_map(void* self, libqt_map /* of enu
     for (size_t i = 0; i < keyBindingMap_ret.len; ++i) {
         keyBindingMap_kdest[i] = keyBindingMap_karr[i];
         size_t keyBindingMap_value_count = 0;
-        while (keyBindingMap_varr[i][keyBindingMap_value_count] != NULL) {
+        while (keyBindingMap_varr[i][keyBindingMap_value_count] != NULL)
             keyBindingMap_value_count++;
-        }
         keyBindingMap_vdest[i].len = keyBindingMap_value_count;
         keyBindingMap_vdest[i].data.ptr = (void*)keyBindingMap_varr[i];
     }

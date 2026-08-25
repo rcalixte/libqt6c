@@ -102,9 +102,8 @@ void k_nscore__question_set_list(void* self, const char* newList[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in k_nscore__question_set_list\n");
         abort();
     }
-    for (size_t i = 0; i < newList_len; ++i) {
+    for (size_t i = 0; i < newList_len; ++i)
         newList_qstr[i] = qstring(newList[i]);
-    }
     libqt_list newList_list = qlist(newList_qstr, newList_len);
     KNSCore__Question_SetList((KNSCore__Question*)self, newList_list);
     free(newList_qstr);
@@ -120,11 +119,9 @@ const char** k_nscore__question_list(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -300,11 +297,9 @@ const char** k_nscore__question_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

@@ -676,6 +676,22 @@ void q_slider_on_action_triggered(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QSlider*
+///
+QPaintDevice* q_slider_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QSlider object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QSlider* q_slider_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QSlider*

@@ -25,11 +25,9 @@ const char** k_io__desktopexecparser_resulting_arguments(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -51,11 +49,9 @@ const char** k_io__desktopexecparser_supported_protocols(void* service) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -67,9 +63,8 @@ bool k_io__desktopexecparser_is_protocol_in_supported_list(void* url, const char
         fprintf(stderr, "Failed to allocate memory for string list in k_io__desktopexecparser_is_protocol_in_supported_list\n");
         abort();
     }
-    for (size_t i = 0; i < supportedProtocols_len; ++i) {
+    for (size_t i = 0; i < supportedProtocols_len; ++i)
         supportedProtocols_qstr[i] = qstring(supportedProtocols[i]);
-    }
     libqt_list supportedProtocols_list = qlist(supportedProtocols_qstr, supportedProtocols_len);
     bool _out = KIO__DesktopExecParser_IsProtocolInSupportedList((QUrl*)url, supportedProtocols_list);
     free(supportedProtocols_qstr);

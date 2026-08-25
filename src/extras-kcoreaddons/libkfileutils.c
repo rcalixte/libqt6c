@@ -23,9 +23,8 @@ const char** k_fileutils_find_all_unique_files(const char* dirs[static 1], const
         fprintf(stderr, "Failed to allocate memory for string list in k_fileutils_find_all_unique_files\n");
         abort();
     }
-    for (size_t i = 0; i < dirs_len; ++i) {
+    for (size_t i = 0; i < dirs_len; ++i)
         dirs_qstr[i] = qstring(dirs[i]);
-    }
     libqt_list dirs_list = qlist(dirs_qstr, dirs_len);
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
@@ -33,9 +32,8 @@ const char** k_fileutils_find_all_unique_files(const char* dirs[static 1], const
         fprintf(stderr, "Failed to allocate memory for string list in k_fileutils_find_all_unique_files\n");
         abort();
     }
-    for (size_t i = 0; i < nameFilters_len; ++i) {
+    for (size_t i = 0; i < nameFilters_len; ++i)
         nameFilters_qstr[i] = qstring(nameFilters[i]);
-    }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
     libqt_list _arr = KFileUtils_FindAllUniqueFiles(dirs_list, nameFilters_list);
     free(dirs_qstr);
@@ -48,11 +46,9 @@ const char** k_fileutils_find_all_unique_files(const char* dirs[static 1], const
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

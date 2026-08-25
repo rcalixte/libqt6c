@@ -46,11 +46,9 @@ const char** k_charsets_available_encoding_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -65,11 +63,9 @@ const char** k_charsets_descriptive_encoding_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -91,9 +87,8 @@ libqt_list /* of const char** */ k_charsets_encodings_by_script(void* self) {
             fprintf(stderr, "Failed to allocate memory for string list items in k_charsets_encodings_by_script\n");
             abort();
         }
-        for (size_t j = 0; j < _list.len; ++j) {
+        for (size_t j = 0; j < _list.len; ++j)
             _strdata[j] = _str[j].data;
-        }
         _strdata[_list.len] = NULL;
         _data[i] = _strdata;
         free(_str);

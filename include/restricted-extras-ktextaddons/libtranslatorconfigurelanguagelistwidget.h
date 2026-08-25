@@ -148,6 +148,22 @@ const char* k_texttranslator__translatorconfigurelanguagelistwidget_tr3(const ch
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextTranslator__TranslatorConfigureLanguageListWidget*
+///
+QPaintDevice* k_texttranslator__translatorconfigurelanguagelistwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextTranslator__TranslatorConfigureLanguageListWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextTranslator__TranslatorConfigureLanguageListWidget* k_texttranslator__translatorconfigurelanguagelistwidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self TextTranslator__TranslatorConfigureLanguageListWidget*

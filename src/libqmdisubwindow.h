@@ -815,6 +815,22 @@ void q_mdisubwindow_set_option2(void* self, int32_t option, bool on);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QMdiSubWindow*
+///
+QPaintDevice* q_mdisubwindow_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QMdiSubWindow object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QMdiSubWindow* q_mdisubwindow_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QMdiSubWindow*

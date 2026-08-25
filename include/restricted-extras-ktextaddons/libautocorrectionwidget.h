@@ -161,6 +161,22 @@ const char* k_textautocorrectionwidgets__autocorrectionwidget_tr3(const char* s,
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextAutoCorrectionWidgets__AutoCorrectionWidget*
+///
+QPaintDevice* k_textautocorrectionwidgets__autocorrectionwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextAutoCorrectionWidgets__AutoCorrectionWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextAutoCorrectionWidgets__AutoCorrectionWidget* k_textautocorrectionwidgets__autocorrectionwidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionWidget*

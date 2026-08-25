@@ -33309,6 +33309,22 @@ libqt_list q_customplot_super_layerable_list_at3(void* self, void* pos, bool onl
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QCustomPlot*
+///
+QPaintDevice* q_customplot_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QCustomPlot object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QCustomPlot* q_customplot_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QCustomPlot*
@@ -71159,6 +71175,18 @@ void q_cperrorbarsdata_delete(void* self);
 /// @param valueAxis QCPAxis*
 ///
 QCPErrorBars* q_cperrorbars_new(void* keyAxis, void* valueAxis);
+
+/// Upcasts to a QCPPlottableInterface1D object
+///
+/// @param self QCPErrorBars*
+///
+QCPPlottableInterface1D* q_cperrorbars_as_q_c_p_plottable_interface1_d(void* self);
+
+/// Downcasts to a QCPErrorBars object
+///
+/// @param _qcpplottableinterface1d QCPPlottableInterface1D*
+///
+QCPErrorBars* q_cperrorbars_from_q_c_p_plottable_interface1_d(void* _qcpplottableinterface1d);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///

@@ -84,9 +84,8 @@ QDBusArgument* q_dbusargument_operator_shift_left15(void* self, const char* arg[
         fprintf(stderr, "Failed to allocate memory for string list in q_dbusargument_operator_shift_left15\n");
         abort();
     }
-    for (size_t i = 0; i < arg_len; ++i) {
+    for (size_t i = 0; i < arg_len; ++i)
         arg_qstr[i] = qstring(arg[i]);
-    }
     libqt_list arg_list = qlist(arg_qstr, arg_len);
     QDBusArgument* _out = QDBusArgument_OperatorShiftLeft15((QDBusArgument*)self, arg_list);
     free(arg_qstr);
@@ -215,9 +214,8 @@ const QDBusArgument* q_dbusargument_operator_shift_right15(void* self, const cha
         fprintf(stderr, "Failed to allocate memory for string list in q_dbusargument_operator_shift_right15\n");
         abort();
     }
-    for (size_t i = 0; i < arg_len; ++i) {
+    for (size_t i = 0; i < arg_len; ++i)
         arg_qstr[i] = qstring(arg[i]);
-    }
     libqt_list arg_list = qlist(arg_qstr, arg_len);
     const QDBusArgument* _out = QDBusArgument_OperatorShiftRight15((QDBusArgument*)self, arg_list);
     free(arg_qstr);

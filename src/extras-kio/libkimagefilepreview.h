@@ -330,6 +330,22 @@ const char** k_imagefilepreview_supported_mime_types(void* self);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KImageFilePreview*
+///
+QPaintDevice* k_imagefilepreview_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KImageFilePreview object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KImageFilePreview* k_imagefilepreview_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KImageFilePreview*

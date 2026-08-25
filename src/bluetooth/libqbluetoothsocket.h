@@ -631,6 +631,14 @@ bool q_bluetoothsocket_set_socket_descriptor4(void* self, int socketDescriptor, 
 
 /// Inherited from QIODevice
 ///
+/// Upcasts to a QIODeviceBase object
+///
+/// @param self QBluetoothSocket*
+///
+QIODeviceBase* q_bluetoothsocket_as_q_i_o_device_base(void* self);
+
+/// Inherited from QIODevice
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#openMode)
 ///
 /// @param self QBluetoothSocket*

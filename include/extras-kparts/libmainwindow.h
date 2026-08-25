@@ -31,6 +31,18 @@ KParts__MainWindow* k_parts__mainwindow_new2();
 ///
 KParts__MainWindow* k_parts__mainwindow_new3(void* parent, int32_t f);
 
+/// Upcasts to a KParts::PartBase object
+///
+/// @param self KParts__MainWindow*
+///
+KParts__PartBase* k_parts__mainwindow_as_k_parts___part_base(void* self);
+
+/// Downcasts to a KParts__MainWindow object
+///
+/// @param _kparts__partbase KParts__PartBase*
+///
+KParts__MainWindow* k_parts__mainwindow_from_k_parts___part_base(void* _kparts__partbase);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KParts__MainWindow*
@@ -268,6 +280,38 @@ const char* k_parts__mainwindow_tr2(const char* s, const char* c);
 /// @param n int
 ///
 const char* k_parts__mainwindow_tr3(const char* s, const char* c, int n);
+
+/// Inherited from KXmlGuiWindow
+///
+/// Upcasts to a KXMLGUIBuilder object
+///
+/// @param self KParts__MainWindow*
+///
+KXMLGUIBuilder* k_parts__mainwindow_as_k_x_m_l_g_u_i_builder(void* self);
+
+/// Inherited from KXmlGuiWindow
+///
+/// Downcasts to a KParts__MainWindow object
+///
+/// @param _kxmlguibuilder KXMLGUIBuilder*
+///
+KParts__MainWindow* k_parts__mainwindow_from_k_x_m_l_g_u_i_builder(void* _kxmlguibuilder);
+
+/// Inherited from KXmlGuiWindow
+///
+/// Upcasts to a KXMLGUIClient object
+///
+/// @param self KParts__MainWindow*
+///
+KXMLGUIClient* k_parts__mainwindow_as_k_x_m_l_g_u_i_client(void* self);
+
+/// Inherited from KXmlGuiWindow
+///
+/// Downcasts to a KParts__MainWindow object
+///
+/// @param _kxmlguiclient KXMLGUIClient*
+///
+KParts__MainWindow* k_parts__mainwindow_from_k_x_m_l_g_u_i_client(void* _kxmlguiclient);
 
 /// Inherited from KXmlGuiWindow
 ///
@@ -1259,6 +1303,22 @@ char* k_parts__mainwindow_save_state1(void* self, int version);
 /// @param version int
 ///
 bool k_parts__mainwindow_restore_state2(void* self, char* state, int version);
+
+/// Inherited from QWidget
+///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KParts__MainWindow*
+///
+QPaintDevice* k_parts__mainwindow_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KParts__MainWindow object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KParts__MainWindow* k_parts__mainwindow_from_q_paint_device(void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///

@@ -141,9 +141,8 @@ void k_filemetadata__simpleextractionresult_super_append(void* self, const char*
 /// // Example for freeing the returned map of type:
 /// // libqt_map of enum KFileMetaData__Property__Property to QVariant**
 /// for (size_t i = 0; i < map.len; ++i) {
-///     for (size_t j = 0; ((QVariant**)map.values)[i][j] != NULL; j++) {
+///     for (size_t j = 0; ((QVariant**)map.values)[i][j] != NULL; j++)
 ///         free(((QVariant**)map.values)[i][j]);
-///     }
 ///     free(((QVariant*)map.values)[i]);
 /// }
 /// free(map.keys);

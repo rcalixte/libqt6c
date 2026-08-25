@@ -18,6 +18,18 @@
 ///
 KBookmarkAction* k_bookmarkaction_new(void* bk, void* owner, void* parent);
 
+/// Upcasts to a KBookmarkActionInterface object
+///
+/// @param self KBookmarkAction*
+///
+KBookmarkActionInterface* k_bookmarkaction_as_k_bookmark_action_interface(void* self);
+
+/// Downcasts to a KBookmarkAction object
+///
+/// @param _kbookmarkactioninterface KBookmarkActionInterface*
+///
+KBookmarkAction* k_bookmarkaction_from_k_bookmark_action_interface(void* _kbookmarkactioninterface);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KBookmarkAction*

@@ -792,6 +792,22 @@ void k_squeezedtextlabel_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KSqueezedTextLabel*
+///
+QPaintDevice* k_squeezedtextlabel_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KSqueezedTextLabel object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KSqueezedTextLabel* k_squeezedtextlabel_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KSqueezedTextLabel*

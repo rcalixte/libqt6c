@@ -1893,6 +1893,22 @@ void q_plaintextedit_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QPlainTextEdit*
+///
+QPaintDevice* q_plaintextedit_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QPlainTextEdit object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QPlainTextEdit* q_plaintextedit_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QPlainTextEdit*

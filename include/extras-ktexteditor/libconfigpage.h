@@ -267,6 +267,22 @@ const char* k_texteditor__configpage_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KTextEditor__ConfigPage*
+///
+QPaintDevice* k_texteditor__configpage_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KTextEditor__ConfigPage object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KTextEditor__ConfigPage* k_texteditor__configpage_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KTextEditor__ConfigPage*

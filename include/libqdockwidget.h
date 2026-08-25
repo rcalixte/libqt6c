@@ -429,6 +429,22 @@ const char* q_dockwidget_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QDockWidget*
+///
+QPaintDevice* q_dockwidget_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QDockWidget object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QDockWidget* q_dockwidget_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QDockWidget*

@@ -31,6 +31,12 @@ KTextEditor__Attribute* k_texteditor__attribute_new2(const char* name, int32_t s
 ///
 KTextEditor__Attribute* k_texteditor__attribute_new3(void* a);
 
+/// Upcasts to a QSharedData object
+///
+/// @param self KTextEditor__Attribute*
+///
+QSharedData* k_texteditor__attribute_as_q_shared_data(void* self);
+
 /// [Upstream resources](https://api.kde.org/ktexteditor-attribute.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`

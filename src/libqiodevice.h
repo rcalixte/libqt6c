@@ -22,6 +22,12 @@ QIODevice* q_iodevice_new();
 ///
 QIODevice* q_iodevice_new2(void* parent);
 
+/// Upcasts to a QIODeviceBase object
+///
+/// @param self QIODevice*
+///
+QIODeviceBase* q_iodevice_as_q_i_o_device_base(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QIODevice*

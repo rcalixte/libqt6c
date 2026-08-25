@@ -67,11 +67,9 @@ const char** q_placesearchsuggestionreply_suggestions(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -95,9 +93,8 @@ void q_placesearchsuggestionreply_set_suggestions(void* self, const char* sugges
         fprintf(stderr, "Failed to allocate memory for string list in q_placesearchsuggestionreply_set_suggestions\n");
         abort();
     }
-    for (size_t i = 0; i < suggestions_len; ++i) {
+    for (size_t i = 0; i < suggestions_len; ++i)
         suggestions_qstr[i] = qstring(suggestions[i]);
-    }
     libqt_list suggestions_list = qlist(suggestions_qstr, suggestions_len);
     QPlaceSearchSuggestionReply_SetSuggestions((QPlaceSearchSuggestionReply*)self, suggestions_list);
     free(suggestions_qstr);
@@ -114,9 +111,8 @@ void q_placesearchsuggestionreply_super_set_suggestions(void* self, const char* 
         fprintf(stderr, "Failed to allocate memory for string list in q_placesearchsuggestionreply_set_suggestions\n");
         abort();
     }
-    for (size_t i = 0; i < suggestions_len; ++i) {
+    for (size_t i = 0; i < suggestions_len; ++i)
         suggestions_qstr[i] = qstring(suggestions[i]);
-    }
     libqt_list suggestions_list = qlist(suggestions_qstr, suggestions_len);
     QPlaceSearchSuggestionReply_SuperSetSuggestions((QPlaceSearchSuggestionReply*)self, suggestions_list);
 }
@@ -320,11 +316,9 @@ const char** q_placesearchsuggestionreply_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

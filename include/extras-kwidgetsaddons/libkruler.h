@@ -783,6 +783,22 @@ void k_ruler_on_action_triggered(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self KRuler*
+///
+QPaintDevice* k_ruler_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a KRuler object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+KRuler* k_ruler_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self KRuler*

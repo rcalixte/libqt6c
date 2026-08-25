@@ -906,6 +906,22 @@ void k_textgrammarcheck__languagetoolcombobox_set_item_data3(void* self, int ind
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self TextGrammarCheck__LanguageToolComboBox*
+///
+QPaintDevice* k_textgrammarcheck__languagetoolcombobox_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a TextGrammarCheck__LanguageToolComboBox object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+TextGrammarCheck__LanguageToolComboBox* k_textgrammarcheck__languagetoolcombobox_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self TextGrammarCheck__LanguageToolComboBox*

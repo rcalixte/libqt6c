@@ -24,11 +24,9 @@ const char** q_formbuilder_plugin_paths(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -48,9 +46,8 @@ void q_formbuilder_set_plugin_path(void* self, const char* pluginPaths[static 1]
         fprintf(stderr, "Failed to allocate memory for string list in q_formbuilder_set_plugin_path\n");
         abort();
     }
-    for (size_t i = 0; i < pluginPaths_len; ++i) {
+    for (size_t i = 0; i < pluginPaths_len; ++i)
         pluginPaths_qstr[i] = qstring(pluginPaths[i]);
-    }
     libqt_list pluginPaths_list = qlist(pluginPaths_qstr, pluginPaths_len);
     QFormBuilder_SetPluginPath((QFormBuilder*)self, pluginPaths_list);
     free(pluginPaths_qstr);

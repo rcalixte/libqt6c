@@ -107,11 +107,9 @@ const char** k_textgrammarcheck__grammalecteresultjob_arguments(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -123,9 +121,8 @@ void k_textgrammarcheck__grammalecteresultjob_set_arguments(void* self, const ch
         fprintf(stderr, "Failed to allocate memory for string list in k_textgrammarcheck__grammalecteresultjob_set_arguments\n");
         abort();
     }
-    for (size_t i = 0; i < arguments_len; ++i) {
+    for (size_t i = 0; i < arguments_len; ++i)
         arguments_qstr[i] = qstring(arguments[i]);
-    }
     libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
     TextGrammarCheck__GrammalecteResultJob_SetArguments((TextGrammarCheck__GrammalecteResultJob*)self, arguments_list);
     free(arguments_qstr);
@@ -291,11 +288,9 @@ const char** k_textgrammarcheck__grammalecteresultjob_dynamic_property_names(voi
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

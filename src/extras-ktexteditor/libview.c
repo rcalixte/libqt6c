@@ -24,6 +24,14 @@
 #include "libview.hpp"
 #include "libview.h"
 
+KXMLGUIClient* k_texteditor__view_as_k_x_m_l_g_u_i_client(void* self) {
+    return KTextEditor__View_AsKXMLGUIClient((KTextEditor__View*)self);
+}
+
+KTextEditor__View* k_texteditor__view_from_k_x_m_l_g_u_i_client(void* _kxmlguiclient) {
+    return (KTextEditor__View*)KTextEditor__View_FromKXMLGUIClient((KXMLGUIClient*)_kxmlguiclient);
+}
+
 const QMetaObject* k_texteditor__view_meta_object(void* self) {
     return KTextEditor__View_MetaObject((KTextEditor__View*)self);
 }
@@ -365,11 +373,9 @@ const char** k_texteditor__view_config_keys(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -531,6 +537,14 @@ int32_t k_texteditor__view_first_displayed_line1(void* self, int32_t lineType) {
 
 int32_t k_texteditor__view_last_displayed_line1(void* self, int32_t lineType) {
     return KTextEditor__View_LastDisplayedLine1((KTextEditor__View*)self, lineType);
+}
+
+QPaintDevice* k_texteditor__view_as_q_paint_device(void* self) {
+    return QWidget_AsQPaintDevice((QWidget*)self);
+}
+
+KTextEditor__View* k_texteditor__view_from_q_paint_device(void* _qpaintdevice) {
+    return (KTextEditor__View*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
 int32_t k_texteditor__view_dev_type(void* self) {
@@ -1817,11 +1831,9 @@ const char** k_texteditor__view_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1899,47 +1911,47 @@ void k_texteditor__view_on_destroyed1(void* self, void (*callback)(void*, void*)
 }
 
 bool k_texteditor__view_painting_active(void* self) {
-    return QPaintDevice_PaintingActive((QPaintDevice*)self);
+    return QPaintDevice_PaintingActive(k_texteditor__view_as_q_paint_device(self));
 }
 
 int32_t k_texteditor__view_width_m_m(void* self) {
-    return QPaintDevice_WidthMM((QPaintDevice*)self);
+    return QPaintDevice_WidthMM(k_texteditor__view_as_q_paint_device(self));
 }
 
 int32_t k_texteditor__view_height_m_m(void* self) {
-    return QPaintDevice_HeightMM((QPaintDevice*)self);
+    return QPaintDevice_HeightMM(k_texteditor__view_as_q_paint_device(self));
 }
 
 int32_t k_texteditor__view_logical_dpi_x(void* self) {
-    return QPaintDevice_LogicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiX(k_texteditor__view_as_q_paint_device(self));
 }
 
 int32_t k_texteditor__view_logical_dpi_y(void* self) {
-    return QPaintDevice_LogicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_LogicalDpiY(k_texteditor__view_as_q_paint_device(self));
 }
 
 int32_t k_texteditor__view_physical_dpi_x(void* self) {
-    return QPaintDevice_PhysicalDpiX((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiX(k_texteditor__view_as_q_paint_device(self));
 }
 
 int32_t k_texteditor__view_physical_dpi_y(void* self) {
-    return QPaintDevice_PhysicalDpiY((QPaintDevice*)self);
+    return QPaintDevice_PhysicalDpiY(k_texteditor__view_as_q_paint_device(self));
 }
 
 double k_texteditor__view_device_pixel_ratio(void* self) {
-    return QPaintDevice_DevicePixelRatio((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatio(k_texteditor__view_as_q_paint_device(self));
 }
 
 double k_texteditor__view_device_pixel_ratio_f(void* self) {
-    return QPaintDevice_DevicePixelRatioF((QPaintDevice*)self);
+    return QPaintDevice_DevicePixelRatioF(k_texteditor__view_as_q_paint_device(self));
 }
 
 int32_t k_texteditor__view_color_count(void* self) {
-    return QPaintDevice_ColorCount((QPaintDevice*)self);
+    return QPaintDevice_ColorCount(k_texteditor__view_as_q_paint_device(self));
 }
 
 int32_t k_texteditor__view_depth(void* self) {
-    return QPaintDevice_Depth((QPaintDevice*)self);
+    return QPaintDevice_Depth(k_texteditor__view_as_q_paint_device(self));
 }
 
 double k_texteditor__view_device_pixel_ratio_f_scale() {
@@ -2047,9 +2059,8 @@ const char* k_texteditor__view_find_most_recent_x_m_l_file(const char* files[sta
         fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__view_find_most_recent_x_m_l_file\n");
         abort();
     }
-    for (size_t i = 0; i < files_len; ++i) {
+    for (size_t i = 0; i < files_len; ++i)
         files_qstr[i] = qstring(files[i]);
-    }
     libqt_list files_list = qlist(files_qstr, files_len);
     libqt_string _str = KXMLGUIClient_FindMostRecentXMLFile(files_list, qstring(doc));
     free(files_qstr);

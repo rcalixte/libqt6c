@@ -107,9 +107,8 @@ void k_completionbase_set_completed_items(void* self, const char* items[static 1
         fprintf(stderr, "Failed to allocate memory for string list in k_completionbase_set_completed_items\n");
         abort();
     }
-    for (size_t i = 0; i < items_len; ++i) {
+    for (size_t i = 0; i < items_len; ++i)
         items_qstr[i] = qstring(items[i]);
-    }
     libqt_list items_list = qlist(items_qstr, items_len);
     KCompletionBase_SetCompletedItems((KCompletionBase*)self, items_list, autoSuggest);
     free(items_qstr);
@@ -126,9 +125,8 @@ void k_completionbase_super_set_completed_items(void* self, const char* items[st
         fprintf(stderr, "Failed to allocate memory for string list in k_completionbase_set_completed_items\n");
         abort();
     }
-    for (size_t i = 0; i < items_len; ++i) {
+    for (size_t i = 0; i < items_len; ++i)
         items_qstr[i] = qstring(items[i]);
-    }
     libqt_list items_list = qlist(items_qstr, items_len);
     KCompletionBase_SuperSetCompletedItems((KCompletionBase*)self, items_list, autoSuggest);
 }
@@ -241,9 +239,8 @@ void k_completionbase_set_key_binding_map(void* self, libqt_map /* of enum KComp
     for (size_t i = 0; i < keyBindingMap_ret.len; ++i) {
         keyBindingMap_kdest[i] = keyBindingMap_karr[i];
         size_t keyBindingMap_value_count = 0;
-        while (keyBindingMap_varr[i][keyBindingMap_value_count] != NULL) {
+        while (keyBindingMap_varr[i][keyBindingMap_value_count] != NULL)
             keyBindingMap_value_count++;
-        }
         keyBindingMap_vdest[i].len = keyBindingMap_value_count;
         keyBindingMap_vdest[i].data.ptr = (void*)keyBindingMap_varr[i];
     }
@@ -278,9 +275,8 @@ void k_completionbase_super_set_key_binding_map(void* self, libqt_map /* of enum
     for (size_t i = 0; i < keyBindingMap_ret.len; ++i) {
         keyBindingMap_kdest[i] = keyBindingMap_karr[i];
         size_t keyBindingMap_value_count = 0;
-        while (keyBindingMap_varr[i][keyBindingMap_value_count] != NULL) {
+        while (keyBindingMap_varr[i][keyBindingMap_value_count] != NULL)
             keyBindingMap_value_count++;
-        }
         keyBindingMap_vdest[i].len = keyBindingMap_value_count;
         keyBindingMap_vdest[i].data.ptr = (void*)keyBindingMap_varr[i];
     }

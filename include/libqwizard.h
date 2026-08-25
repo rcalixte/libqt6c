@@ -810,6 +810,22 @@ void q_wizard_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QWizard*
+///
+QPaintDevice* q_wizard_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QWizard object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QWizard* q_wizard_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QWizard*
@@ -6130,6 +6146,22 @@ void q_wizardpage_on_register_field4(void* self, void (*callback)(void*, const c
 /// @param changedSignal const char*
 ///
 void q_wizardpage_super_register_field4(void* self, const char* name, void* widget, const char* property, const char* changedSignal);
+
+/// Inherited from QWidget
+///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QWizardPage*
+///
+QPaintDevice* q_wizardpage_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QWizardPage object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QWizardPage* q_wizardpage_from_q_paint_device(void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///

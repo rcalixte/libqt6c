@@ -13,6 +13,14 @@ KIO__ForwardingWorkerBase* k_io__forwardingworkerbase_new(char* protocol, char* 
     return KIO__ForwardingWorkerBase_New(qstring(protocol), qstring(poolSocket), qstring(appSocket));
 }
 
+KIO__WorkerBase* k_io__forwardingworkerbase_as_k_i_o___worker_base(void* self) {
+    return KIO__ForwardingWorkerBase_AsKIO__WorkerBase((KIO__ForwardingWorkerBase*)self);
+}
+
+KIO__ForwardingWorkerBase* k_io__forwardingworkerbase_from_k_i_o___worker_base(void* _kio__workerbase) {
+    return (KIO__ForwardingWorkerBase*)KIO__ForwardingWorkerBase_FromKIO__WorkerBase((KIO__WorkerBase*)_kio__workerbase);
+}
+
 const QMetaObject* k_io__forwardingworkerbase_meta_object(void* self) {
     return KIO__ForwardingWorkerBase_MetaObject((KIO__ForwardingWorkerBase*)self);
 }
@@ -392,11 +400,9 @@ const char** k_io__forwardingworkerbase_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

@@ -4,6 +4,7 @@
     .fingerprint = 0xc0af25b23661b80c,
     .dependencies = .{},
     .paths = .{
+        "INHERITANCE.md",
         "LICENSE",
         "README.md",
         "assets",

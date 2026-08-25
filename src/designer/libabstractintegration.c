@@ -212,9 +212,8 @@ void q_designerintegrationinterface_emit_navigate_to_slot(void* self, const char
         fprintf(stderr, "Failed to allocate memory for string list in q_designerintegrationinterface_emit_navigate_to_slot\n");
         abort();
     }
-    for (size_t i = 0; i < parameterNames_len; ++i) {
+    for (size_t i = 0; i < parameterNames_len; ++i)
         parameterNames_qstr[i] = qstring(parameterNames[i]);
-    }
     libqt_list parameterNames_list = qlist(parameterNames_qstr, parameterNames_len);
     QDesignerIntegrationInterface_EmitNavigateToSlot((QDesignerIntegrationInterface*)self, qstring(objectName), qstring(signalSignature), parameterNames_list);
     free(parameterNames_qstr);
@@ -247,9 +246,8 @@ void q_designerintegrationinterface_navigate_to_slot(void* self, const char* obj
         fprintf(stderr, "Failed to allocate memory for string list in q_designerintegrationinterface_navigate_to_slot\n");
         abort();
     }
-    for (size_t i = 0; i < parameterNames_len; ++i) {
+    for (size_t i = 0; i < parameterNames_len; ++i)
         parameterNames_qstr[i] = qstring(parameterNames[i]);
-    }
     libqt_list parameterNames_list = qlist(parameterNames_qstr, parameterNames_len);
     QDesignerIntegrationInterface_NavigateToSlot((QDesignerIntegrationInterface*)self, qstring(objectName), qstring(signalSignature), parameterNames_list);
     free(parameterNames_qstr);
@@ -523,11 +521,9 @@ const char** q_designerintegrationinterface_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1080,9 +1076,8 @@ void q_designerintegration_emit_navigate_to_slot(void* self, const char* objectN
         fprintf(stderr, "Failed to allocate memory for string list in q_designerintegration_emit_navigate_to_slot\n");
         abort();
     }
-    for (size_t i = 0; i < parameterNames_len; ++i) {
+    for (size_t i = 0; i < parameterNames_len; ++i)
         parameterNames_qstr[i] = qstring(parameterNames[i]);
-    }
     libqt_list parameterNames_list = qlist(parameterNames_qstr, parameterNames_len);
     QDesignerIntegrationInterface_EmitNavigateToSlot((QDesignerIntegrationInterface*)self, qstring(objectName), qstring(signalSignature), parameterNames_list);
     free(parameterNames_qstr);
@@ -1115,9 +1110,8 @@ void q_designerintegration_navigate_to_slot(void* self, const char* objectName, 
         fprintf(stderr, "Failed to allocate memory for string list in q_designerintegration_navigate_to_slot\n");
         abort();
     }
-    for (size_t i = 0; i < parameterNames_len; ++i) {
+    for (size_t i = 0; i < parameterNames_len; ++i)
         parameterNames_qstr[i] = qstring(parameterNames[i]);
-    }
     libqt_list parameterNames_list = qlist(parameterNames_qstr, parameterNames_len);
     QDesignerIntegrationInterface_NavigateToSlot((QDesignerIntegrationInterface*)self, qstring(objectName), qstring(signalSignature), parameterNames_list);
     free(parameterNames_qstr);
@@ -1257,11 +1251,9 @@ const char** q_designerintegration_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

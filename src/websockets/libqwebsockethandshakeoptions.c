@@ -27,11 +27,9 @@ const char** q_websockethandshakeoptions_subprotocols(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -43,9 +41,8 @@ void q_websockethandshakeoptions_set_subprotocols(void* self, const char* protoc
         fprintf(stderr, "Failed to allocate memory for string list in q_websockethandshakeoptions_set_subprotocols\n");
         abort();
     }
-    for (size_t i = 0; i < protocols_len; ++i) {
+    for (size_t i = 0; i < protocols_len; ++i)
         protocols_qstr[i] = qstring(protocols[i]);
-    }
     libqt_list protocols_list = qlist(protocols_qstr, protocols_len);
     QWebSocketHandshakeOptions_SetSubprotocols((QWebSocketHandshakeOptions*)self, protocols_list);
     free(protocols_qstr);

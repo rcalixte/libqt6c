@@ -699,9 +699,8 @@ const char** q_webenginepage_choose_files(void* self, int32_t mode, const char* 
         fprintf(stderr, "Failed to allocate memory for string list in q_webenginepage_choose_files\n");
         abort();
     }
-    for (size_t i = 0; i < oldFiles_len; ++i) {
+    for (size_t i = 0; i < oldFiles_len; ++i)
         oldFiles_qstr[i] = qstring(oldFiles[i]);
-    }
     libqt_list oldFiles_list = qlist(oldFiles_qstr, oldFiles_len);
     size_t acceptedMimeTypes_len = libqt_strv_length(acceptedMimeTypes);
     libqt_string* acceptedMimeTypes_qstr = (libqt_string*)malloc(acceptedMimeTypes_len * sizeof(libqt_string));
@@ -709,9 +708,8 @@ const char** q_webenginepage_choose_files(void* self, int32_t mode, const char* 
         fprintf(stderr, "Failed to allocate memory for string list in q_webenginepage_choose_files\n");
         abort();
     }
-    for (size_t i = 0; i < acceptedMimeTypes_len; ++i) {
+    for (size_t i = 0; i < acceptedMimeTypes_len; ++i)
         acceptedMimeTypes_qstr[i] = qstring(acceptedMimeTypes[i]);
-    }
     libqt_list acceptedMimeTypes_list = qlist(acceptedMimeTypes_qstr, acceptedMimeTypes_len);
     libqt_list _arr = QWebEnginePage_ChooseFiles((QWebEnginePage*)self, mode, oldFiles_list, acceptedMimeTypes_list);
     free(oldFiles_qstr);
@@ -724,11 +722,9 @@ const char** q_webenginepage_choose_files(void* self, int32_t mode, const char* 
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -744,9 +740,8 @@ const char** q_webenginepage_super_choose_files(void* self, int32_t mode, const 
         fprintf(stderr, "Failed to allocate memory for string list in q_webenginepage_choose_files\n");
         abort();
     }
-    for (size_t i = 0; i < oldFiles_len; ++i) {
+    for (size_t i = 0; i < oldFiles_len; ++i)
         oldFiles_qstr[i] = qstring(oldFiles[i]);
-    }
     libqt_list oldFiles_list = qlist(oldFiles_qstr, oldFiles_len);
     size_t acceptedMimeTypes_len = libqt_strv_length(acceptedMimeTypes);
     libqt_string* acceptedMimeTypes_qstr = (libqt_string*)malloc(acceptedMimeTypes_len * sizeof(libqt_string));
@@ -754,9 +749,8 @@ const char** q_webenginepage_super_choose_files(void* self, int32_t mode, const 
         fprintf(stderr, "Failed to allocate memory for string list in q_webenginepage_choose_files\n");
         abort();
     }
-    for (size_t i = 0; i < acceptedMimeTypes_len; ++i) {
+    for (size_t i = 0; i < acceptedMimeTypes_len; ++i)
         acceptedMimeTypes_qstr[i] = qstring(acceptedMimeTypes[i]);
-    }
     libqt_list acceptedMimeTypes_list = qlist(acceptedMimeTypes_qstr, acceptedMimeTypes_len);
     libqt_list _arr = QWebEnginePage_SuperChooseFiles((QWebEnginePage*)self, mode, oldFiles_list, acceptedMimeTypes_list);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
@@ -767,11 +761,9 @@ const char** q_webenginepage_super_choose_files(void* self, int32_t mode, const 
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -1024,11 +1016,9 @@ const char** q_webenginepage_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

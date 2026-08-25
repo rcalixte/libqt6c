@@ -31,6 +31,18 @@ QOffscreenSurface* q_offscreensurface_new2(void* screen);
 ///
 QOffscreenSurface* q_offscreensurface_new3(void* screen, void* parent);
 
+/// Upcasts to a QSurface object
+///
+/// @param self QOffscreenSurface*
+///
+QSurface* q_offscreensurface_as_q_surface(void* self);
+
+/// Downcasts to a QOffscreenSurface object
+///
+/// @param _qsurface QSurface*
+///
+QOffscreenSurface* q_offscreensurface_from_q_surface(void* _qsurface);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self QOffscreenSurface*

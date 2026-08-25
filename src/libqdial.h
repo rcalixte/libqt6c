@@ -726,6 +726,22 @@ void q_dial_on_action_triggered(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWidget
 ///
+/// Upcasts to a QPaintDevice object
+///
+/// @param self QDial*
+///
+QPaintDevice* q_dial_as_q_paint_device(void* self);
+
+/// Inherited from QWidget
+///
+/// Downcasts to a QDial object
+///
+/// @param _qpaintdevice QPaintDevice*
+///
+QDial* q_dial_from_q_paint_device(void* _qpaintdevice);
+
+/// Inherited from QWidget
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
 /// @param self QDial*

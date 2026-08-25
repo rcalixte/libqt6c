@@ -85,9 +85,8 @@ void k_newfilemenu_set_supported_mime_types(void* self, const char* mime[static 
         fprintf(stderr, "Failed to allocate memory for string list in k_newfilemenu_set_supported_mime_types\n");
         abort();
     }
-    for (size_t i = 0; i < mime_len; ++i) {
+    for (size_t i = 0; i < mime_len; ++i)
         mime_qstr[i] = qstring(mime[i]);
-    }
     libqt_list mime_list = qlist(mime_qstr, mime_len);
     KNewFileMenu_SetSupportedMimeTypes((KNewFileMenu*)self, mime_list);
     free(mime_qstr);
@@ -103,11 +102,9 @@ const char** k_newfilemenu_supported_mime_types(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -701,11 +698,9 @@ const char** k_newfilemenu_dynamic_property_names(void* self) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }

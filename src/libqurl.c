@@ -288,11 +288,9 @@ const char** q_url_idn_whitelist() {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -307,11 +305,9 @@ const char** q_url_to_string_list(libqt_list /* of QUrl* */ uris) {
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -323,9 +319,8 @@ libqt_list /* of QUrl* */ q_url_from_string_list(const char* uris[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_url_from_string_list\n");
         abort();
     }
-    for (size_t i = 0; i < uris_len; ++i) {
+    for (size_t i = 0; i < uris_len; ++i)
         uris_qstr[i] = qstring(uris[i]);
-    }
     libqt_list uris_list = qlist(uris_qstr, uris_len);
     libqt_list _arr = QUrl_FromStringList(uris_list);
     free(uris_qstr);
@@ -339,9 +334,8 @@ void q_url_set_idn_whitelist(const char* idnWhitelist[static 1]) {
         fprintf(stderr, "Failed to allocate memory for string list in q_url_set_idn_whitelist\n");
         abort();
     }
-    for (size_t i = 0; i < idnWhitelist_len; ++i) {
+    for (size_t i = 0; i < idnWhitelist_len; ++i)
         idnWhitelist_qstr[i] = qstring(idnWhitelist[i]);
-    }
     libqt_list idnWhitelist_list = qlist(idnWhitelist_qstr, idnWhitelist_len);
     QUrl_SetIdnWhitelist(idnWhitelist_list);
     free(idnWhitelist_qstr);
@@ -497,9 +491,8 @@ libqt_list /* of QUrl* */ q_url_from_string_list2(const char* uris[static 1], in
         fprintf(stderr, "Failed to allocate memory for string list in q_url_from_string_list2\n");
         abort();
     }
-    for (size_t i = 0; i < uris_len; ++i) {
+    for (size_t i = 0; i < uris_len; ++i)
         uris_qstr[i] = qstring(uris[i]);
-    }
     libqt_list uris_list = qlist(uris_qstr, uris_len);
     libqt_list _arr = QUrl_FromStringList2(uris_list, mode);
     free(uris_qstr);

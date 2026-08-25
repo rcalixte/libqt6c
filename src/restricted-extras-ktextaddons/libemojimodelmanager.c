@@ -76,11 +76,9 @@ const char** k_textemoticonscore__emojimodelmanager_recent_identifier(void* self
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -92,9 +90,8 @@ void k_textemoticonscore__emojimodelmanager_set_recent_identifier(void* self, co
         fprintf(stderr, "Failed to allocate memory for string list in k_textemoticonscore__emojimodelmanager_set_recent_identifier\n");
         abort();
     }
-    for (size_t i = 0; i < newRecentIdentifier_len; ++i) {
+    for (size_t i = 0; i < newRecentIdentifier_len; ++i)
         newRecentIdentifier_qstr[i] = qstring(newRecentIdentifier[i]);
-    }
     libqt_list newRecentIdentifier_list = qlist(newRecentIdentifier_qstr, newRecentIdentifier_len);
     TextEmoticonsCore__EmojiModelManager_SetRecentIdentifier((TextEmoticonsCore__EmojiModelManager*)self, newRecentIdentifier_list);
     free(newRecentIdentifier_qstr);
@@ -122,11 +119,9 @@ const char** k_textemoticonscore__emojimodelmanager_exclude_emoticons(void* self
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
@@ -138,9 +133,8 @@ void k_textemoticonscore__emojimodelmanager_set_exclude_emoticons(void* self, co
         fprintf(stderr, "Failed to allocate memory for string list in k_textemoticonscore__emojimodelmanager_set_exclude_emoticons\n");
         abort();
     }
-    for (size_t i = 0; i < emoticons_len; ++i) {
+    for (size_t i = 0; i < emoticons_len; ++i)
         emoticons_qstr[i] = qstring(emoticons[i]);
-    }
     libqt_list emoticons_list = qlist(emoticons_qstr, emoticons_len);
     TextEmoticonsCore__EmojiModelManager_SetExcludeEmoticons((TextEmoticonsCore__EmojiModelManager*)self, emoticons_list);
     free(emoticons_qstr);
@@ -153,9 +147,8 @@ void k_textemoticonscore__emojimodelmanager_used_identifier_changed(void* self, 
         fprintf(stderr, "Failed to allocate memory for string list in k_textemoticonscore__emojimodelmanager_used_identifier_changed\n");
         abort();
     }
-    for (size_t i = 0; i < lst_len; ++i) {
+    for (size_t i = 0; i < lst_len; ++i)
         lst_qstr[i] = qstring(lst[i]);
-    }
     libqt_list lst_list = qlist(lst_qstr, lst_len);
     TextEmoticonsCore__EmojiModelManager_UsedIdentifierChanged((TextEmoticonsCore__EmojiModelManager*)self, lst_list);
     free(lst_qstr);
@@ -317,11 +310,9 @@ const char** k_textemoticonscore__emojimodelmanager_dynamic_property_names(void*
     }
     for (size_t i = 0; i < _arr.len; ++i) {
         _ret[i] = qstring_to_char(_qstr[i]);
-    }
-    _ret[_arr.len] = NULL;
-    for (size_t i = 0; i < _arr.len; ++i) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
+    _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
 }
