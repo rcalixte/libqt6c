@@ -566,15 +566,13 @@ func (p CppParameter) returnAllocComment(cfs *cFileState, returnType string) str
 					freeType = "libqt_"
 				}
 
-				innerFree = "\n///     for (size_t j = 0; ((" + maybeConst + "char**)map" + deRef + "values)[i][j] != NULL; j++) {"
+				innerFree = "\n///     for (size_t j = 0; ((" + maybeConst + "char**)map" + deRef + "values)[i][j] != NULL; j++)"
 				innerFree += "\n///         " + freeType + "free((map" + deRef + "values)[i][j]);"
 
 			} else if IsKnownClass(inner) {
-				innerFree = "\n///     for (size_t j = 0; ((" + inner + "**)map" + deRef + "values)[i][j] != NULL; j++) {"
+				innerFree = "\n///     for (size_t j = 0; ((" + inner + "**)map" + deRef + "values)[i][j] != NULL; j++)"
 				innerFree += "\n///         free(((" + inner + "**)map" + deRef + "values)[i][j]);"
 			}
-
-			innerFree += "\n///     }"
 		}
 
 		if innerFree != "" || keyFree != "" || valueFree != "" {
@@ -844,6 +842,8 @@ type cFileState struct {
 	currentHeaderName  string
 	currentMethodName  string
 	currentPackageName string
+	parentClasses      []string
+	methodPrefix       string
 	allocCleanups      []string
 	castType           string
 	isC                bool
@@ -886,11 +886,15 @@ func (cfs *cFileState) emitReturnComment(rt CppParameter) string {
 	return ifv(returnComment == "", "", returnComment+"\n///\n")
 }
 
-func (cfs *cFileState) emitParametersC2CABIForwarding(m CppMethod) (preamble, forwarding string) {
+func (cfs *cFileState) emitParametersC2CABIForwarding(m CppMethod, manualUpcast bool) (preamble, forwarding string) {
 	tmp := make([]string, 0, len(m.Parameters)+2)
 
 	if !(m.IsStatic && !m.IsProtected) {
-		tmp = append(tmp, "("+cfs.castType+"*)self")
+		if manualUpcast {
+			tmp = append(tmp, cfs.methodPrefix+"_as"+cSafeMethodName(cfs.castType)+"(self)")
+		} else {
+			tmp = append(tmp, "("+cfs.castType+"*)self")
+		}
 	}
 
 	for _, p := range m.Parameters {
@@ -929,9 +933,8 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 			preamble += `    fprintf(stderr, "Failed to allocate memory for string list in ` + cfs.currentMethodName + `\n");` + "\n"
 			preamble += "    abort();\n"
 			preamble += "}\n"
-			preamble += "for (size_t i = 0; i < " + nameprefix + "_len; ++i) {\n"
+			preamble += "for (size_t i = 0; i < " + nameprefix + "_len; ++i)\n"
 			preamble += "    " + nameprefix + "_qstr[i] = qstring(" + p.ParameterName + "[i]);\n"
-			preamble += "}\n"
 			preamble += "libqt_list " + nameprefix + "_list = qlist(" + nameprefix + "_qstr, " + nameprefix + "_len);\n"
 
 			allocCleanup := "free(" + nameprefix + "_qstr);\n"
@@ -1070,31 +1073,27 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 				valueIter += "size_t " + nameprefix + "_value_count = libqt_strv_length((const char**)" + nameprefix + "_array);\n"
 				valueIter += valueDest + "* " + nameprefix + "_value_strings = (" + valueDest + "*)malloc(" + nameprefix + "_value_count * sizeof(" + valueDest + "));\n"
 				valueIter += "if (" + nameprefix + "_value_strings == NULL) {\n"
-				valueIter += "    for (size_t j = 0; j < i; j++) {\n"
+				valueIter += "    for (size_t j = 0; j < i; j++)\n"
 				valueIter += "        free(((" + mapValue + "*)" + nameprefix + "_ret.values)[j].data.ptr);\n"
-				valueIter += "    }\n"
 				valueIter += "    free(" + nameprefix + "_ret.keys);\n"
 				valueIter += "    free(" + nameprefix + "_ret.values);\n"
 				valueIter += `    fprintf(stderr, "Failed to allocate memory for map string key in ` + cfs.currentMethodName + `\n");` + "\n"
 				valueIter += "    abort();\n"
 				valueIter += "}\n"
-				valueIter += "for (size_t j = 0; j < " + nameprefix + "_value_count; j++) {\n"
+				valueIter += "for (size_t j = 0; j < " + nameprefix + "_value_count; j++)\n"
 				valueIter += "    " + nameprefix + "_value_strings[j] = qstring(" + nameprefix + "_array[j]);\n"
-				valueIter += "}\n"
 				valueIter += nameprefix + "_vdest[i].len = " + nameprefix + "_value_count;\n"
 				valueIter += nameprefix + "_vdest[i].data.ptr = " + nameprefix + "_value_strings;\n"
 
-				mapCleanup := "for (size_t i = 0; i < " + nameprefix + "_ret.len; ++i) {"
+				mapCleanup := "for (size_t i = 0; i < " + nameprefix + "_ret.len; ++i)"
 				mapCleanup += "    free(((" + mapValue + "*)" + nameprefix + "_ret.values)[i].data.ptr);"
-				mapCleanup += "}\n"
 
 				cfs.allocCleanups = append([]string{mapCleanup}, cfs.allocCleanups...)
 
 			} else if IsKnownClass(vType) {
 				valueIter += "size_t " + nameprefix + "_value_count = 0;\n"
-				valueIter += "while (" + nameprefix + "_varr[i][" + nameprefix + "_value_count] != NULL) {\n"
+				valueIter += "while (" + nameprefix + "_varr[i][" + nameprefix + "_value_count] != NULL)\n"
 				valueIter += "    " + nameprefix + "_value_count++;\n"
-				valueIter += "}\n"
 				valueIter += nameprefix + "_vdest[i].len = " + nameprefix + "_value_count;\n"
 				valueIter += nameprefix + "_vdest[i].data.ptr = (void*)" + nameprefix + "_varr[i];\n"
 
@@ -1248,11 +1247,9 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 			afterword += "}\n"
 			afterword += "for (size_t i = 0; i < " + namePrefix + "_arr.len; ++i) {\n"
 			afterword += "    " + namePrefix + "_ret[i] = qstring_to_char(" + namePrefix + "_qstr[i]);\n"
-			afterword += "}\n"
-			afterword += namePrefix + "_ret[" + namePrefix + "_arr.len] = NULL;\n"
-			afterword += "for (size_t i = 0; i < " + namePrefix + "_arr.len; ++i) {\n"
 			afterword += "    libqt_string_free((libqt_string*)&" + namePrefix + "_qstr[i]);\n"
 			afterword += "}\n"
+			afterword += namePrefix + "_ret[" + namePrefix + "_arr.len] = NULL;\n"
 			afterword += "libqt_free(" + namePrefix + "_arr.data.ptr);\n"
 			afterword += assignExpr + " " + namePrefix + "_ret;\n"
 
@@ -1344,9 +1341,8 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 				afterword += `        fprintf(stderr, "Failed to allocate memory for string list items in ` + cfs.currentMethodName + `\n");` + "\n"
 				afterword += "        abort();\n"
 				afterword += "    }\n"
-				afterword += "    for (size_t j = 0; j < " + namePrefix + "_list.len; ++j) {\n"
+				afterword += "    for (size_t j = 0; j < " + namePrefix + "_list.len; ++j)\n"
 				afterword += "        " + namePrefix + "_strdata[j] = " + namePrefix + "_str[j].data;\n"
-				afterword += "    }\n"
 				afterword += "    " + namePrefix + "_strdata[" + namePrefix + "_list.len] = NULL;\n"
 				afterword += "    " + namePrefix + "_data[i] = " + namePrefix + "_strdata;\n"
 				afterword += "    free(" + namePrefix + "_str);\n"
@@ -1436,9 +1432,8 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 			keyIter += "    for (size_t j = 0; j < i; j++) {\n"
 			keyIter += "        libqt_free(" + namePrefix + "_ret_keys[j]);\n"
 			if isQMulti {
-				keyIter += "        for (size_t k = 0; k < ((libqt_list*)" + namePrefix + "_out" + maybeDeref + "values)[j]" + maybeDeref + "len; k++) {\n"
+				keyIter += "        for (size_t k = 0; k < ((libqt_list*)" + namePrefix + "_out" + maybeDeref + "values)[j]" + maybeDeref + "len; k++)\n"
 				keyIter += "            free(" + namePrefix + "_ret_values[j][k]);\n"
-				keyIter += "        }\n"
 			}
 			keyIter += ifv(isQMulti, "free("+namePrefix+"_ret_values[j]);\n", "")
 			keyIter += "    }\n"
@@ -1489,9 +1484,8 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 			valueIter += "for (size_t j = 0; j < i; j++) {\n"
 			valueIter += ifv(keyIter != "", "        libqt_free("+namePrefix+"_ret_keys[j]);\n", "")
 			if vParamType == "QByteArray" || vParamType == "QString" {
-				valueIter += "for (size_t k = 0; k < ((libqt_list*)" + namePrefix + "_out" + maybeDeref + "values)[j].len; k++) {\n"
+				valueIter += "for (size_t k = 0; k < ((libqt_list*)" + namePrefix + "_out" + maybeDeref + "values)[j].len; k++)\n"
 				valueIter += "    libqt_free(" + namePrefix + "_ret_values[j][k]);\n"
-				valueIter += "}\n"
 			}
 			valueIter += "    libqt_free(" + namePrefix + "_ret_values[j]);\n"
 			valueIter += "}\n"
@@ -1508,14 +1502,12 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 				valueIter += "for (j = 0; j < " + namePrefix + "_value_list.len; j++) {\n"
 				valueIter += namePrefix + "_ret_values[i][j] = (char*)malloc(" + namePrefix + "_value_str[j].len + 1);\n"
 				valueIter += "if (" + namePrefix + "_ret_values[i][j] == NULL) {\n"
-				valueIter += "    for (size_t k = 0; k < j; k++) {\n"
+				valueIter += "    for (size_t k = 0; k < j; k++)\n"
 				valueIter += "        free(" + namePrefix + "_ret_values[i][k]);\n"
-				valueIter += "    }\n"
 				valueIter += "    for (size_t k = 0; k < i; k++) {\n"
 				valueIter += ifv(keyIter != "", "free("+namePrefix+"_ret_keys[k]);\n", "")
-				valueIter += "    for (size_t l = 0; l < ((libqt_list*)" + namePrefix + "_out" + maybeDeref + "values)[k].len; l++) {\n"
+				valueIter += "    for (size_t l = 0; l < ((libqt_list*)" + namePrefix + "_out" + maybeDeref + "values)[k].len; l++)\n"
 				valueIter += "        free(" + namePrefix + "_ret_values[k][l]);\n"
-				valueIter += "    }\n"
 				valueIter += "    free(" + namePrefix + "_ret_values[k]);\n"
 				valueIter += "}\n"
 				valueIter += ifv(keyIter != "", "free("+namePrefix+"_ret_keys);\n", "")
@@ -1529,9 +1521,8 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 				valueIter += namePrefix + "_ret_values[i][j] = NULL;\n"
 
 				valueInnerFree = valueOut + "* " + namePrefix + "_value_str = (" + valueOut + "*)" + namePrefix + "_out_values[i].data.ptr;\n"
-				valueInnerFree += "for (size_t j = 0; j < " + namePrefix + "_out_values[i].len; j++) {\n"
+				valueInnerFree += "for (size_t j = 0; j < " + namePrefix + "_out_values[i].len; j++)\n"
 				valueInnerFree += "    libqt_free(" + namePrefix + "_value_str[j].data);\n"
-				valueInnerFree += "}\n"
 				valueInnerFree += "free(" + namePrefix + "_out_values[i].data.ptr);\n"
 
 			} else if IsKnownClass(vParamType) {
@@ -1699,7 +1690,7 @@ func (cfs *cFileState) checkAndClearAllocCleanups(resetAllocCleanups bool) strin
 }
 
 // Helper function to recursively get methods from parent classes
-func collectInheritedMethodsForC(class string, seenMethods map[string]struct{}) []InheritedMethod {
+func collectInheritedMethodsForC(class string, seenMethods map[string]struct{}, cfs *cFileState) []InheritedMethod {
 	var methods []InheritedMethod
 
 	if pkg, ok := KnownClassnames[class]; ok {
@@ -1729,7 +1720,11 @@ func collectInheritedMethodsForC(class string, seenMethods map[string]struct{}) 
 		}
 
 		for _, parentClass := range pkg.Class.DirectInherits {
-			if parentMethods := collectInheritedMethodsForC(parentClass, seenMethods); parentMethods != nil {
+			cClassName := cabiClassName(parentClass)
+			if !slices.Contains(cfs.parentClasses, cClassName) {
+				cfs.parentClasses = append(cfs.parentClasses, cClassName)
+			}
+			if parentMethods := collectInheritedMethodsForC(parentClass, seenMethods, cfs); parentMethods != nil {
 				methods = append(methods, parentMethods...)
 			}
 		}
@@ -1910,7 +1905,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 		seenInheritedMethods := make(map[string]struct{})
 
 		for _, base := range c.DirectInherits {
-			if parentMethods := collectInheritedMethodsForC(base, seenInheritedMethods); parentMethods != nil {
+			if parentMethods := collectInheritedMethodsForC(base, seenInheritedMethods, &cfs); parentMethods != nil {
 				for _, m := range parentMethods {
 					seenInheritedMethods[m.Method.SafeMethodName()] = struct{}{}
 				}
@@ -1924,7 +1919,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 		var ctorPageUrl string
 
 		if len(c.Ctors) > 0 || len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 ||
-			(len(c.DirectInherits) > 0 && len(collectInheritedMethodsForC(c.DirectInherits[0], map[string]struct{}{c.ClassName: {}})) > 0) {
+			(len(c.DirectInherits) > 0 && len(collectInheritedMethodsForC(c.DirectInherits[0], map[string]struct{}{c.ClassName: {}}, &cfs)) > 0) {
 			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
 
 			isSpecialCase := (cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(cStructName, "QCP")) ||
@@ -2017,7 +2012,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 
 		var inheritedMethods []InheritedMethod
 		for _, base := range c.DirectInherits {
-			inherited := collectInheritedMethodsForC(base, seenMethods)
+			inherited := collectInheritedMethodsForC(base, seenMethods, &cfs)
 			if inherited != nil {
 				inheritedMethods = append(inheritedMethods, inherited...)
 			}
@@ -2135,6 +2130,15 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 			}
 			if m.IsVariable {
 				cmdURL = m.VariableFieldName + "-var"
+			}
+			if m.IsAsMethod {
+				ret.WriteString("\n/// Upcasts to a " + m.ReturnType.ParameterType + " object\n///")
+				subjectURL = ""
+			}
+			if m.IsFromMethod {
+				ret.WriteString("\n/// Downcasts to a " + cfs.currentClassName + " object\n///")
+				m.ReturnType.ParameterType = c.ClassName
+				subjectURL = ""
 			}
 			if subjectURL != "" {
 				maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "" && subjectURL != "qobject", "-qtcharts", "")
@@ -2685,6 +2689,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		virtualMethods := c.VirtualMethods()
 		cStructName := cabiClassName(c.ClassName)
 		cfs.currentClassName = strings.ReplaceAll(c.ClassName, "::", "__")
+		cfs.parentClasses = []string{cStructName}
 		nameIndex := 0
 		cPrefix := "q_"
 		if cStructName[0] == 'Q' || cStructName[0] == 'K' || cStructName[0] == 'k' {
@@ -2694,12 +2699,14 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			cPrefix = "k_"
 		}
 		cMethodPrefix := cPrefix + strings.ToLower(cStructName[nameIndex:])
+		cfs.methodPrefix = cMethodPrefix
 
 		// Embed all inherited classes to directly allow calling inherited methods.
 		seenInheritedMethods := make(map[string]struct{})
 
 		for _, base := range c.DirectInherits {
-			if parentMethods := collectInheritedMethodsForC(base, seenInheritedMethods); parentMethods != nil {
+			cfs.parentClasses = append(cfs.parentClasses, base)
+			if parentMethods := collectInheritedMethodsForC(base, seenInheritedMethods, &cfs); parentMethods != nil {
 				for _, m := range parentMethods {
 					seenInheritedMethods[m.Method.SafeMethodName()] = struct{}{}
 				}
@@ -2722,7 +2729,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 			cfs.castType = cStructName
 			cfs.currentMethodName = cMethodPrefix + "_new" + maybeSuffix(i)
-			preamble, forwarding := cfs.emitParametersC2CABIForwarding(ctor)
+			preamble, forwarding := cfs.emitParametersC2CABIForwarding(ctor, false)
 			maybeAllocCleanup := cfs.checkAndClearAllocCleanups(true)
 
 			var ctorRet string
@@ -2809,7 +2816,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 		var inheritedMethods []InheritedMethod
 		for _, base := range c.DirectInherits {
-			inherited := collectInheritedMethodsForC(base, seenMethods)
+			inherited := collectInheritedMethodsForC(base, seenMethods, &cfs)
 			if inherited != nil {
 				inheritedMethods = append(inheritedMethods, inherited...)
 			}
@@ -2836,8 +2843,10 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 		previousMethods := map[string]struct{}{}
 		seenMethodVariants := map[string]bool{}
+		var manualUpcast bool
 
 		for _, m := range baseMethods {
+			manualUpcast = false
 			if m.IsProtected && m.InheritedFrom != "" {
 				continue
 			}
@@ -2889,11 +2898,22 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			previousMethods[m.MethodName] = struct{}{}
 			previousMethods[mSafeMethodName] = struct{}{}
 
+			for _, base := range cfs.parentClasses {
+				if m.InheritedFrom != "" && slices.Contains(inheritanceMap[base]["secondary"], m.InheritedFrom) {
+					manualUpcast = true
+					break
+				}
+			}
+
+			if m.IsFromMethod {
+				m.ReturnType.ParameterType = c.ClassName
+			}
+
 			cfs.castType = cmdStructName
 			cfs.currentMethodName = cmdMethodName + safeMethodName
-			preamble, forwarding := cfs.emitParametersC2CABIForwarding(m)
+			preamble, forwarding := cfs.emitParametersC2CABIForwarding(m, manualUpcast)
 			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs, false, true)
-			rvalue := cmdStructName + "_" + mSafeMethodName + "(" + forwarding + ")"
+			rvalue := ifv(m.IsFromMethod, "("+cfs.currentClassName+"*)", "") + cmdStructName + "_" + mSafeMethodName + "(" + forwarding + ")"
 			returnFunc := cfs.emitCabiToC("return ", m.ReturnType, rvalue)
 			cfs.checkAndClearAllocCleanups(true)
 
@@ -3028,6 +3048,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		seenVirtuals := map[string]bool{}
 
 		for _, m := range virtualMethods {
+			manualUpcast = false
 			if !virtualEligible || m.HasStdFunctionPointerParam {
 				continue
 			}
@@ -3068,11 +3089,18 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				commaParams = ", "
 			}
 
+			for _, base := range cfs.parentClasses {
+				if m.InheritedFrom != "" && slices.Contains(inheritanceMap[base]["secondary"], m.InheritedFrom) {
+					manualUpcast = true
+					break
+				}
+			}
+
 			// Add a package-private function to call the C++ base class method
 			// QWidget_PaintEvent
 			cfs.castType = cStructName
 			cfs.currentMethodName = cmdMethodName + safeMethodName
-			preamble, forwarding := cfs.emitParametersC2CABIForwarding(m)
+			preamble, forwarding := cfs.emitParametersC2CABIForwarding(m, manualUpcast)
 			forwarding = strings.TrimPrefix(forwarding, "self")
 			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs, false, true)
 			cfsParams := cfs.emitParametersC(m.Parameters, false)
@@ -3092,7 +3120,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				maybeEndMacro = "#endif\n"
 			}
 
-			preamble, forwarding = cfs.emitParametersC2CABIForwarding(m)
+			preamble, forwarding = cfs.emitParametersC2CABIForwarding(m, manualUpcast)
 			forwarding = strings.TrimPrefix(forwarding, "self")
 			returnFunc = cfs.emitCabiToC("return ", m.ReturnType, cmdStructName+"_Super"+mSafeMethodName+"("+forwarding+")")
 			cfs.checkAndClearAllocCleanups(true)
