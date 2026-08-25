@@ -1,4 +1,8 @@
 
+### 6.8.2 rev84 (25 August 2026)
+
+* Add initial support for manual casting methods (#152)
+
 ### 6.8.2 rev83 (12 August 2026)
 
 * **BREAKING CHANGE:** Remove deprecated functions (#150)
