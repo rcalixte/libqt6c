@@ -1,4 +1,8 @@
 
+### 6.8.2 rev85 (26 August 2026)
+
+* Update reserved words (#153)
+
 ### 6.8.2 rev84 (25 August 2026)
 
 * Add initial support for manual casting methods (#152)
