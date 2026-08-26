@@ -6,8 +6,8 @@ QUrl* q_url_new() {
     return QUrl_New();
 }
 
-QUrl* q_url_new2(void* copyVal) {
-    return QUrl_New2((QUrl*)copyVal);
+QUrl* q_url_new2(void* copy) {
+    return QUrl_New2((QUrl*)copy);
 }
 
 QUrl* q_url_new3(const char* url) {
@@ -18,8 +18,8 @@ QUrl* q_url_new4(const char* url, int32_t mode) {
     return QUrl_New4(qstring(url), mode);
 }
 
-void q_url_operator_assign(void* self, void* copyVal) {
-    QUrl_OperatorAssign((QUrl*)self, (QUrl*)copyVal);
+void q_url_operator_assign(void* self, void* copy) {
+    QUrl_OperatorAssign((QUrl*)self, (QUrl*)copy);
 }
 
 void q_url_operator_assign2(void* self, const char* url) {

@@ -18,9 +18,9 @@ QUrl* q_url_new();
 
 /// q_url_new2 constructs a new QUrl object.
 ///
-/// @param copyVal QUrl*
+/// @param copy QUrl*
 ///
-QUrl* q_url_new2(void* copyVal);
+QUrl* q_url_new2(void* copy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html)
 
@@ -42,9 +42,9 @@ QUrl* q_url_new4(const char* url, int32_t mode);
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#operator-eq)
 ///
 /// @param self QUrl*
-/// @param copyVal QUrl*
+/// @param copy QUrl*
 ///
-void q_url_operator_assign(void* self, void* copyVal);
+void q_url_operator_assign(void* self, void* copy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#operator-eq)
 ///

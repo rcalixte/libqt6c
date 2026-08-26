@@ -5,8 +5,8 @@ KSyntaxHighlighting__Theme* k_syntaxhighlighting__theme_new() {
     return KSyntaxHighlighting__Theme_New();
 }
 
-KSyntaxHighlighting__Theme* k_syntaxhighlighting__theme_new2(void* copyVal) {
-    return KSyntaxHighlighting__Theme_New2((KSyntaxHighlighting__Theme*)copyVal);
+KSyntaxHighlighting__Theme* k_syntaxhighlighting__theme_new2(void* copy) {
+    return KSyntaxHighlighting__Theme_New2((KSyntaxHighlighting__Theme*)copy);
 }
 
 void k_syntaxhighlighting__theme_operator_assign(void* self, void* other) {

@@ -98,9 +98,9 @@ QHostAddress* q_hostaddress_new5(const char* address);
 
 /// q_hostaddress_new6 constructs a new QHostAddress object.
 ///
-/// @param copyVal QHostAddress*
+/// @param copy QHostAddress*
 ///
-QHostAddress* q_hostaddress_new6(void* copyVal);
+QHostAddress* q_hostaddress_new6(void* copy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html)
 

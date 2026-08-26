@@ -69,8 +69,8 @@ void q_metatype_destroy(int type, void* data) {
     QMetaType_Destroy(type, data);
 }
 
-void* q_metatype_construct(int type, void* where, void* copyVal) {
-    return QMetaType_Construct(type, where, copyVal);
+void* q_metatype_construct(int type, void* where, void* copy) {
+    return QMetaType_Construct(type, where, copy);
 }
 
 void q_metatype_destruct(int type, void* where) {
@@ -265,20 +265,20 @@ void q_metatype_unregister_meta_type(void* type) {
     QMetaType_UnregisterMetaType((QMetaType*)type);
 }
 
-void* q_metatype_create22(int type, void* copyVal) {
-    return QMetaType_Create22(type, copyVal);
+void* q_metatype_create22(int type, void* copy) {
+    return QMetaType_Create22(type, copy);
 }
 
 int32_t q_metatype_id1(void* self, int param1) {
     return QMetaType_Id1((QMetaType*)self, param1);
 }
 
-void* q_metatype_create1(void* self, void* copyVal) {
-    return QMetaType_Create1((QMetaType*)self, copyVal);
+void* q_metatype_create1(void* self, void* copy) {
+    return QMetaType_Create1((QMetaType*)self, copy);
 }
 
-void* q_metatype_construct22(void* self, void* where, void* copyVal) {
-    return QMetaType_Construct22((QMetaType*)self, where, copyVal);
+void* q_metatype_construct22(void* self, void* where, void* copy) {
+    return QMetaType_Construct22((QMetaType*)self, where, copy);
 }
 
 void q_metatype_delete(void* self) {

@@ -124,9 +124,9 @@ void q_metatype_destroy(int type, void* data);
 ///
 /// @param type int
 /// @param where void*
-/// @param copyVal void*
+/// @param copy void*
 ///
-void* q_metatype_construct(int type, void* where, void* copyVal);
+void* q_metatype_construct(int type, void* where, void* copy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#destruct)
 ///
@@ -468,9 +468,9 @@ void q_metatype_unregister_meta_type(void* type);
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#create)
 ///
 /// @param type int
-/// @param copyVal void*
+/// @param copy void*
 ///
-void* q_metatype_create22(int type, void* copyVal);
+void* q_metatype_create22(int type, void* copy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#id)
 ///
@@ -482,17 +482,17 @@ int32_t q_metatype_id1(void* self, int param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#create)
 ///
 /// @param self QMetaType*
-/// @param copyVal void*
+/// @param copy void*
 ///
-void* q_metatype_create1(void* self, void* copyVal);
+void* q_metatype_create1(void* self, void* copy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#construct)
 ///
 /// @param self QMetaType*
 /// @param where void*
-/// @param copyVal void*
+/// @param copy void*
 ///
-void* q_metatype_construct22(void* self, void* where, void* copyVal);
+void* q_metatype_construct22(void* self, void* where, void* copy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#dtor.QMetaType)
 ///

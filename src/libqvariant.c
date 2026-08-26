@@ -257,8 +257,8 @@ QVariant* q_variant_new43(int32_t type) {
     return QVariant_New43(type);
 }
 
-QVariant* q_variant_new44(void* type, void* copyVal) {
-    return QVariant_New44((QMetaType*)type, copyVal);
+QVariant* q_variant_new44(void* type, void* copy) {
+    return QVariant_New44((QMetaType*)type, copy);
 }
 
 void q_variant_operator_assign(void* self, void* other) {
@@ -627,8 +627,8 @@ double q_variant_to_real1(void* self, bool* ok) {
     return QVariant_ToReal1((QVariant*)self, (bool*)ok);
 }
 
-QVariant* q_variant_from_meta_type2(void* type, void* copyVal) {
-    return QVariant_FromMetaType2((QMetaType*)type, copyVal);
+QVariant* q_variant_from_meta_type2(void* type, void* copy) {
+    return QVariant_FromMetaType2((QMetaType*)type, copy);
 }
 
 void q_variant_delete(void* self) {
