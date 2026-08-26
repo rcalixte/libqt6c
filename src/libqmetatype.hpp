@@ -38,7 +38,7 @@ int QMetaType_TypeFlags(int type);
 QMetaObject* QMetaType_MetaObjectForType(int type);
 void* QMetaType_Create(int type);
 void QMetaType_Destroy(int type, void* data);
-void* QMetaType_Construct(int type, void* where, const void* copyVal);
+void* QMetaType_Construct(int type, void* where, const void* copy);
 void QMetaType_Destruct(int type, void* where);
 bool QMetaType_IsRegistered(int type);
 bool QMetaType_IsValid(const QMetaType* self);
@@ -87,10 +87,10 @@ void QMetaType_UnregisterConverterFunction(QMetaType* from, QMetaType* to);
 bool QMetaType_RegisterMutableViewFunction(intptr_t f, QMetaType* from, QMetaType* to);
 void QMetaType_UnregisterMutableViewFunction(QMetaType* from, QMetaType* to);
 void QMetaType_UnregisterMetaType(QMetaType* type);
-void* QMetaType_Create22(int type, const void* copyVal);
+void* QMetaType_Create22(int type, const void* copy);
 int QMetaType_Id1(const QMetaType* self, int param1);
-void* QMetaType_Create1(const QMetaType* self, const void* copyVal);
-void* QMetaType_Construct22(const QMetaType* self, void* where, const void* copyVal);
+void* QMetaType_Create1(const QMetaType* self, const void* copy);
+void* QMetaType_Construct22(const QMetaType* self, void* where, const void* copy);
 void QMetaType_Delete(QMetaType* self);
 
 #ifdef __cplusplus

@@ -355,9 +355,9 @@ QVariant* q_variant_new43(int32_t type);
 /// q_variant_new44 constructs a new QVariant object.
 ///
 /// @param type QMetaType*
-/// @param copyVal void*
+/// @param copy void*
 ///
-QVariant* q_variant_new44(void* type, void* copyVal);
+QVariant* q_variant_new44(void* type, void* copy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#operator-eq)
 ///
@@ -856,9 +856,9 @@ double q_variant_to_real1(void* self, bool* ok);
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#fromMetaType)
 ///
 /// @param type QMetaType*
-/// @param copyVal void*
+/// @param copy void*
 ///
-QVariant* q_variant_from_meta_type2(void* type, void* copyVal);
+QVariant* q_variant_from_meta_type2(void* type, void* copy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#dtor.QVariant)
 ///

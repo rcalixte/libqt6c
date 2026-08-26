@@ -29698,8 +29698,8 @@ const char* q_cpcolormap_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_cpcolormap_set_data2(void* self, void* data, bool copyVal) {
-    QCPColorMap_SetData2((QCPColorMap*)self, (QCPColorMapData*)data, copyVal);
+void q_cpcolormap_set_data2(void* self, void* data, bool copy) {
+    QCPColorMap_SetData2((QCPColorMap*)self, (QCPColorMapData*)data, copy);
 }
 
 void q_cpcolormap_rescale_data_range1(void* self, bool recalculateDataBounds) {

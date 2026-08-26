@@ -47,8 +47,8 @@ QHostAddress* QHostAddress_New5(const libqt_string address) {
     return new QHostAddress(address_QString);
 }
 
-QHostAddress* QHostAddress_New6(const QHostAddress* copyVal) {
-    return new QHostAddress(*copyVal);
+QHostAddress* QHostAddress_New6(const QHostAddress* copy) {
+    return new QHostAddress(*copy);
 }
 
 QHostAddress* QHostAddress_New7(int address) {

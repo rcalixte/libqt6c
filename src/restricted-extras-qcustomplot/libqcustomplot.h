@@ -66326,9 +66326,9 @@ const char* q_cpcolormap_tr3(const char* s, const char* c, int n);
 ///
 /// @param self QCPColorMap*
 /// @param data QCPColorMapData*
-/// @param copyVal bool
+/// @param copy bool
 ///
-void q_cpcolormap_set_data2(void* self, void* data, bool copyVal);
+void q_cpcolormap_set_data2(void* self, void* data, bool copy);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorMap.html)
 ///

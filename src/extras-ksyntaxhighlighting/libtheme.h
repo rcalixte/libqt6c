@@ -18,9 +18,9 @@ KSyntaxHighlighting__Theme* k_syntaxhighlighting__theme_new();
 
 /// k_syntaxhighlighting__theme_new2 constructs a new KSyntaxHighlighting::Theme object.
 ///
-/// @param copyVal KSyntaxHighlighting__Theme*
+/// @param copy KSyntaxHighlighting__Theme*
 ///
-KSyntaxHighlighting__Theme* k_syntaxhighlighting__theme_new2(void* copyVal);
+KSyntaxHighlighting__Theme* k_syntaxhighlighting__theme_new2(void* copy);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-theme.html#operator-eq)
 ///

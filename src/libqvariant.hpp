@@ -88,7 +88,7 @@ QVariant* QVariant_New40(const QPersistentModelIndex* modelIndex);
 QVariant* QVariant_New41(const char* str);
 QVariant* QVariant_New42(libqt_string string);
 QVariant* QVariant_New43(int type);
-QVariant* QVariant_New44(QMetaType* type, const void* copyVal);
+QVariant* QVariant_New44(QMetaType* type, const void* copy);
 void QVariant_OperatorAssign(QVariant* self, const QVariant* other);
 void QVariant_Swap(QVariant* self, QVariant* other);
 int QVariant_UserType(const QVariant* self);
@@ -161,7 +161,7 @@ unsigned long long QVariant_ToULongLong1(const QVariant* self, bool* ok);
 double QVariant_ToDouble1(const QVariant* self, bool* ok);
 float QVariant_ToFloat1(const QVariant* self, bool* ok);
 double QVariant_ToReal1(const QVariant* self, bool* ok);
-QVariant* QVariant_FromMetaType2(QMetaType* type, const void* copyVal);
+QVariant* QVariant_FromMetaType2(QMetaType* type, const void* copy);
 void QVariant_Delete(QVariant* self);
 
 #ifdef __cplusplus

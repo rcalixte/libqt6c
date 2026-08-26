@@ -42,7 +42,7 @@ QHostAddress* QHostAddress_New2(unsigned int ip4Addr);
 QHostAddress* QHostAddress_New3(const unsigned char* ip6Addr);
 QHostAddress* QHostAddress_New4(const QIPv6Address* ip6Addr);
 QHostAddress* QHostAddress_New5(const libqt_string address);
-QHostAddress* QHostAddress_New6(const QHostAddress* copyVal);
+QHostAddress* QHostAddress_New6(const QHostAddress* copy);
 QHostAddress* QHostAddress_New7(int address);
 void QHostAddress_OperatorAssign(QHostAddress* self, const QHostAddress* other);
 void QHostAddress_OperatorAssign2(QHostAddress* self, int address);
