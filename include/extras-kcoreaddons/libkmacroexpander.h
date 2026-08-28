@@ -62,16 +62,16 @@ QChar* k_macroexpanderbase_escape_char(void* self);
 /// @param self KMacroExpanderBase*
 /// @param str const char*
 /// @param pos int
-/// @param retVal const char**
+/// @param ret const char**
 ///
-int32_t k_macroexpanderbase_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
+int32_t k_macroexpanderbase_expand_plain_macro(void* self, const char* str, int pos, const char* ret[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#expandPlainMacro)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KMacroExpanderBase*
-/// @param callback int32_t func(KMacroExpanderBase* self, const char* str, int pos, const char** retVal)
+/// @param callback int32_t func(KMacroExpanderBase* self, const char* str, int pos, const char** ret)
 ///
 void k_macroexpanderbase_on_expand_plain_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
@@ -82,25 +82,25 @@ void k_macroexpanderbase_on_expand_plain_macro(void* self, int32_t (*callback)(v
 /// @param self KMacroExpanderBase*
 /// @param str const char*
 /// @param pos int
-/// @param retVal const char**
+/// @param ret const char**
 ///
-int32_t k_macroexpanderbase_super_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
+int32_t k_macroexpanderbase_super_expand_plain_macro(void* self, const char* str, int pos, const char* ret[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#expandEscapedMacro)
 ///
 /// @param self KMacroExpanderBase*
 /// @param str const char*
 /// @param pos int
-/// @param retVal const char**
+/// @param ret const char**
 ///
-int32_t k_macroexpanderbase_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
+int32_t k_macroexpanderbase_expand_escaped_macro(void* self, const char* str, int pos, const char* ret[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#expandEscapedMacro)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KMacroExpanderBase*
-/// @param callback int32_t func(KMacroExpanderBase* self, const char* str, int pos, const char** retVal)
+/// @param callback int32_t func(KMacroExpanderBase* self, const char* str, int pos, const char** ret)
 ///
 void k_macroexpanderbase_on_expand_escaped_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
@@ -111,9 +111,9 @@ void k_macroexpanderbase_on_expand_escaped_macro(void* self, int32_t (*callback)
 /// @param self KMacroExpanderBase*
 /// @param str const char*
 /// @param pos int
-/// @param retVal const char**
+/// @param ret const char**
 ///
-int32_t k_macroexpanderbase_super_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
+int32_t k_macroexpanderbase_super_expand_escaped_macro(void* self, const char* str, int pos, const char* ret[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#dtor.KMacroExpanderBase)
 ///
@@ -142,16 +142,16 @@ KWordMacroExpander* k_wordmacroexpander_new2(void* c);
 /// @param self KWordMacroExpander*
 /// @param str const char*
 /// @param pos int
-/// @param retVal const char**
+/// @param ret const char**
 ///
-int32_t k_wordmacroexpander_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
+int32_t k_wordmacroexpander_expand_plain_macro(void* self, const char* str, int pos, const char* ret[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandPlainMacro)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KWordMacroExpander*
-/// @param callback int32_t func(KWordMacroExpander* self, const char* str, int pos, const char** retVal)
+/// @param callback int32_t func(KWordMacroExpander* self, const char* str, int pos, const char** ret)
 ///
 void k_wordmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
@@ -162,25 +162,25 @@ void k_wordmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(v
 /// @param self KWordMacroExpander*
 /// @param str const char*
 /// @param pos int
-/// @param retVal const char**
+/// @param ret const char**
 ///
-int32_t k_wordmacroexpander_super_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
+int32_t k_wordmacroexpander_super_expand_plain_macro(void* self, const char* str, int pos, const char* ret[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandEscapedMacro)
 ///
 /// @param self KWordMacroExpander*
 /// @param str const char*
 /// @param pos int
-/// @param retVal const char**
+/// @param ret const char**
 ///
-int32_t k_wordmacroexpander_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
+int32_t k_wordmacroexpander_expand_escaped_macro(void* self, const char* str, int pos, const char* ret[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandEscapedMacro)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KWordMacroExpander*
-/// @param callback int32_t func(KWordMacroExpander* self, const char* str, int pos, const char** retVal)
+/// @param callback int32_t func(KWordMacroExpander* self, const char* str, int pos, const char** ret)
 ///
 void k_wordmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
@@ -191,24 +191,24 @@ void k_wordmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)
 /// @param self KWordMacroExpander*
 /// @param str const char*
 /// @param pos int
-/// @param retVal const char**
+/// @param ret const char**
 ///
-int32_t k_wordmacroexpander_super_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
+int32_t k_wordmacroexpander_super_expand_escaped_macro(void* self, const char* str, int pos, const char* ret[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandMacro)
 ///
 /// @param self KWordMacroExpander*
 /// @param str const char*
-/// @param retVal const char**
+/// @param ret const char**
 ///
-bool k_wordmacroexpander_expand_macro(void* self, const char* str, const char* retVal[static 1]);
+bool k_wordmacroexpander_expand_macro(void* self, const char* str, const char* ret[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandMacro)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KWordMacroExpander*
-/// @param callback bool func(KWordMacroExpander* self, const char* str, const char** retVal)
+/// @param callback bool func(KWordMacroExpander* self, const char* str, const char** ret)
 ///
 void k_wordmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, const char*, const char**));
 
@@ -218,9 +218,9 @@ void k_wordmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, con
 ///
 /// @param self KWordMacroExpander*
 /// @param str const char*
-/// @param retVal const char**
+/// @param ret const char**
 ///
-bool k_wordmacroexpander_super_expand_macro(void* self, const char* str, const char* retVal[static 1]);
+bool k_wordmacroexpander_super_expand_macro(void* self, const char* str, const char* ret[static 1]);
 
 /// Inherited from KMacroExpanderBase
 ///
@@ -294,16 +294,16 @@ KCharMacroExpander* k_charmacroexpander_new2(void* c);
 /// @param self KCharMacroExpander*
 /// @param str const char*
 /// @param pos int
-/// @param retVal const char**
+/// @param ret const char**
 ///
-int32_t k_charmacroexpander_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
+int32_t k_charmacroexpander_expand_plain_macro(void* self, const char* str, int pos, const char* ret[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandPlainMacro)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KCharMacroExpander*
-/// @param callback int32_t func(KCharMacroExpander* self, const char* str, int pos, const char** retVal)
+/// @param callback int32_t func(KCharMacroExpander* self, const char* str, int pos, const char** ret)
 ///
 void k_charmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
@@ -314,25 +314,25 @@ void k_charmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(v
 /// @param self KCharMacroExpander*
 /// @param str const char*
 /// @param pos int
-/// @param retVal const char**
+/// @param ret const char**
 ///
-int32_t k_charmacroexpander_super_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
+int32_t k_charmacroexpander_super_expand_plain_macro(void* self, const char* str, int pos, const char* ret[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandEscapedMacro)
 ///
 /// @param self KCharMacroExpander*
 /// @param str const char*
 /// @param pos int
-/// @param retVal const char**
+/// @param ret const char**
 ///
-int32_t k_charmacroexpander_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
+int32_t k_charmacroexpander_expand_escaped_macro(void* self, const char* str, int pos, const char* ret[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandEscapedMacro)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KCharMacroExpander*
-/// @param callback int32_t func(KCharMacroExpander* self, const char* str, int pos, const char** retVal)
+/// @param callback int32_t func(KCharMacroExpander* self, const char* str, int pos, const char** ret)
 ///
 void k_charmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
@@ -343,24 +343,24 @@ void k_charmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)
 /// @param self KCharMacroExpander*
 /// @param str const char*
 /// @param pos int
-/// @param retVal const char**
+/// @param ret const char**
 ///
-int32_t k_charmacroexpander_super_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
+int32_t k_charmacroexpander_super_expand_escaped_macro(void* self, const char* str, int pos, const char* ret[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandMacro)
 ///
 /// @param self KCharMacroExpander*
 /// @param chr QChar*
-/// @param retVal const char**
+/// @param ret const char**
 ///
-bool k_charmacroexpander_expand_macro(void* self, void* chr, const char* retVal[static 1]);
+bool k_charmacroexpander_expand_macro(void* self, void* chr, const char* ret[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandMacro)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KCharMacroExpander*
-/// @param callback bool func(KCharMacroExpander* self, QChar* chr, const char** retVal)
+/// @param callback bool func(KCharMacroExpander* self, QChar* chr, const char** ret)
 ///
 void k_charmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, void*, const char**));
 
@@ -370,9 +370,9 @@ void k_charmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, voi
 ///
 /// @param self KCharMacroExpander*
 /// @param chr QChar*
-/// @param retVal const char**
+/// @param ret const char**
 ///
-bool k_charmacroexpander_super_expand_macro(void* self, void* chr, const char* retVal[static 1]);
+bool k_charmacroexpander_super_expand_macro(void* self, void* chr, const char* ret[static 1]);
 
 /// Inherited from KMacroExpanderBase
 ///

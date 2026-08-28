@@ -531,17 +531,17 @@ void q_metaobject_activate3(void* sender, int signal_offset, int local_signal_in
 /// @param obj QObject*
 /// @param member const char*
 /// @param param3 enum Qt__ConnectionType
-/// @param retVal QGenericReturnArgument*
+/// @param ret QGenericReturnArgument*
 ///
-bool q_metaobject_invoke_method(void* obj, const char* member, int32_t param3, void* retVal);
+bool q_metaobject_invoke_method(void* obj, const char* member, int32_t param3, void* ret);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
 /// @param obj QObject*
 /// @param member const char*
-/// @param retVal QGenericReturnArgument*
+/// @param ret QGenericReturnArgument*
 ///
-bool q_metaobject_invoke_method2(void* obj, const char* member, void* retVal);
+bool q_metaobject_invoke_method2(void* obj, const char* member, void* ret);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
@@ -635,206 +635,67 @@ QMetaObject__Connection* q_metaobject_connect6(void* sender, int signal_index, v
 /// @param obj QObject*
 /// @param member const char*
 /// @param param3 enum Qt__ConnectionType
-/// @param retVal QGenericReturnArgument*
+/// @param ret QGenericReturnArgument*
 /// @param val0 QGenericArgument*
 ///
-bool q_metaobject_invoke_method5(void* obj, const char* member, int32_t param3, void* retVal, void* val0);
+bool q_metaobject_invoke_method5(void* obj, const char* member, int32_t param3, void* ret, void* val0);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
 /// @param obj QObject*
 /// @param member const char*
 /// @param param3 enum Qt__ConnectionType
-/// @param retVal QGenericReturnArgument*
+/// @param ret QGenericReturnArgument*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 ///
-bool q_metaobject_invoke_method6(void* obj, const char* member, int32_t param3, void* retVal, void* val0, void* val1);
+bool q_metaobject_invoke_method6(void* obj, const char* member, int32_t param3, void* ret, void* val0, void* val1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
 /// @param obj QObject*
 /// @param member const char*
 /// @param param3 enum Qt__ConnectionType
-/// @param retVal QGenericReturnArgument*
+/// @param ret QGenericReturnArgument*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
 ///
-bool q_metaobject_invoke_method7(void* obj, const char* member, int32_t param3, void* retVal, void* val0, void* val1, void* val2);
+bool q_metaobject_invoke_method7(void* obj, const char* member, int32_t param3, void* ret, void* val0, void* val1, void* val2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
 /// @param obj QObject*
 /// @param member const char*
 /// @param param3 enum Qt__ConnectionType
-/// @param retVal QGenericReturnArgument*
+/// @param ret QGenericReturnArgument*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
 ///
-bool q_metaobject_invoke_method8(void* obj, const char* member, int32_t param3, void* retVal, void* val0, void* val1, void* val2, void* val3);
+bool q_metaobject_invoke_method8(void* obj, const char* member, int32_t param3, void* ret, void* val0, void* val1, void* val2, void* val3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
 /// @param obj QObject*
 /// @param member const char*
 /// @param param3 enum Qt__ConnectionType
-/// @param retVal QGenericReturnArgument*
-/// @param val0 QGenericArgument*
-/// @param val1 QGenericArgument*
-/// @param val2 QGenericArgument*
-/// @param val3 QGenericArgument*
-/// @param val4 QGenericArgument*
-///
-bool q_metaobject_invoke_method9(void* obj, const char* member, int32_t param3, void* retVal, void* val0, void* val1, void* val2, void* val3, void* val4);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
-///
-/// @param obj QObject*
-/// @param member const char*
-/// @param param3 enum Qt__ConnectionType
-/// @param retVal QGenericReturnArgument*
-/// @param val0 QGenericArgument*
-/// @param val1 QGenericArgument*
-/// @param val2 QGenericArgument*
-/// @param val3 QGenericArgument*
-/// @param val4 QGenericArgument*
-/// @param val5 QGenericArgument*
-///
-bool q_metaobject_invoke_method10(void* obj, const char* member, int32_t param3, void* retVal, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
-///
-/// @param obj QObject*
-/// @param member const char*
-/// @param param3 enum Qt__ConnectionType
-/// @param retVal QGenericReturnArgument*
-/// @param val0 QGenericArgument*
-/// @param val1 QGenericArgument*
-/// @param val2 QGenericArgument*
-/// @param val3 QGenericArgument*
-/// @param val4 QGenericArgument*
-/// @param val5 QGenericArgument*
-/// @param val6 QGenericArgument*
-///
-bool q_metaobject_invoke_method11(void* obj, const char* member, int32_t param3, void* retVal, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
-///
-/// @param obj QObject*
-/// @param member const char*
-/// @param param3 enum Qt__ConnectionType
-/// @param retVal QGenericReturnArgument*
-/// @param val0 QGenericArgument*
-/// @param val1 QGenericArgument*
-/// @param val2 QGenericArgument*
-/// @param val3 QGenericArgument*
-/// @param val4 QGenericArgument*
-/// @param val5 QGenericArgument*
-/// @param val6 QGenericArgument*
-/// @param val7 QGenericArgument*
-///
-bool q_metaobject_invoke_method12(void* obj, const char* member, int32_t param3, void* retVal, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
-///
-/// @param obj QObject*
-/// @param member const char*
-/// @param param3 enum Qt__ConnectionType
-/// @param retVal QGenericReturnArgument*
-/// @param val0 QGenericArgument*
-/// @param val1 QGenericArgument*
-/// @param val2 QGenericArgument*
-/// @param val3 QGenericArgument*
-/// @param val4 QGenericArgument*
-/// @param val5 QGenericArgument*
-/// @param val6 QGenericArgument*
-/// @param val7 QGenericArgument*
-/// @param val8 QGenericArgument*
-///
-bool q_metaobject_invoke_method13(void* obj, const char* member, int32_t param3, void* retVal, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
-///
-/// @param obj QObject*
-/// @param member const char*
-/// @param param3 enum Qt__ConnectionType
-/// @param retVal QGenericReturnArgument*
-/// @param val0 QGenericArgument*
-/// @param val1 QGenericArgument*
-/// @param val2 QGenericArgument*
-/// @param val3 QGenericArgument*
-/// @param val4 QGenericArgument*
-/// @param val5 QGenericArgument*
-/// @param val6 QGenericArgument*
-/// @param val7 QGenericArgument*
-/// @param val8 QGenericArgument*
-/// @param val9 QGenericArgument*
-///
-bool q_metaobject_invoke_method14(void* obj, const char* member, int32_t param3, void* retVal, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
-///
-/// @param obj QObject*
-/// @param member const char*
-/// @param retVal QGenericReturnArgument*
-/// @param val0 QGenericArgument*
-///
-bool q_metaobject_invoke_method42(void* obj, const char* member, void* retVal, void* val0);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
-///
-/// @param obj QObject*
-/// @param member const char*
-/// @param retVal QGenericReturnArgument*
-/// @param val0 QGenericArgument*
-/// @param val1 QGenericArgument*
-///
-bool q_metaobject_invoke_method52(void* obj, const char* member, void* retVal, void* val0, void* val1);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
-///
-/// @param obj QObject*
-/// @param member const char*
-/// @param retVal QGenericReturnArgument*
-/// @param val0 QGenericArgument*
-/// @param val1 QGenericArgument*
-/// @param val2 QGenericArgument*
-///
-bool q_metaobject_invoke_method62(void* obj, const char* member, void* retVal, void* val0, void* val1, void* val2);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
-///
-/// @param obj QObject*
-/// @param member const char*
-/// @param retVal QGenericReturnArgument*
-/// @param val0 QGenericArgument*
-/// @param val1 QGenericArgument*
-/// @param val2 QGenericArgument*
-/// @param val3 QGenericArgument*
-///
-bool q_metaobject_invoke_method72(void* obj, const char* member, void* retVal, void* val0, void* val1, void* val2, void* val3);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
-///
-/// @param obj QObject*
-/// @param member const char*
-/// @param retVal QGenericReturnArgument*
+/// @param ret QGenericReturnArgument*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
 /// @param val4 QGenericArgument*
 ///
-bool q_metaobject_invoke_method82(void* obj, const char* member, void* retVal, void* val0, void* val1, void* val2, void* val3, void* val4);
+bool q_metaobject_invoke_method9(void* obj, const char* member, int32_t param3, void* ret, void* val0, void* val1, void* val2, void* val3, void* val4);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
 /// @param obj QObject*
 /// @param member const char*
-/// @param retVal QGenericReturnArgument*
+/// @param param3 enum Qt__ConnectionType
+/// @param ret QGenericReturnArgument*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
@@ -842,13 +703,14 @@ bool q_metaobject_invoke_method82(void* obj, const char* member, void* retVal, v
 /// @param val4 QGenericArgument*
 /// @param val5 QGenericArgument*
 ///
-bool q_metaobject_invoke_method92(void* obj, const char* member, void* retVal, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5);
+bool q_metaobject_invoke_method10(void* obj, const char* member, int32_t param3, void* ret, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
 /// @param obj QObject*
 /// @param member const char*
-/// @param retVal QGenericReturnArgument*
+/// @param param3 enum Qt__ConnectionType
+/// @param ret QGenericReturnArgument*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
@@ -857,13 +719,14 @@ bool q_metaobject_invoke_method92(void* obj, const char* member, void* retVal, v
 /// @param val5 QGenericArgument*
 /// @param val6 QGenericArgument*
 ///
-bool q_metaobject_invoke_method102(void* obj, const char* member, void* retVal, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6);
+bool q_metaobject_invoke_method11(void* obj, const char* member, int32_t param3, void* ret, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
 /// @param obj QObject*
 /// @param member const char*
-/// @param retVal QGenericReturnArgument*
+/// @param param3 enum Qt__ConnectionType
+/// @param ret QGenericReturnArgument*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
@@ -873,13 +736,14 @@ bool q_metaobject_invoke_method102(void* obj, const char* member, void* retVal, 
 /// @param val6 QGenericArgument*
 /// @param val7 QGenericArgument*
 ///
-bool q_metaobject_invoke_method112(void* obj, const char* member, void* retVal, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7);
+bool q_metaobject_invoke_method12(void* obj, const char* member, int32_t param3, void* ret, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
 /// @param obj QObject*
 /// @param member const char*
-/// @param retVal QGenericReturnArgument*
+/// @param param3 enum Qt__ConnectionType
+/// @param ret QGenericReturnArgument*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
@@ -890,13 +754,14 @@ bool q_metaobject_invoke_method112(void* obj, const char* member, void* retVal, 
 /// @param val7 QGenericArgument*
 /// @param val8 QGenericArgument*
 ///
-bool q_metaobject_invoke_method122(void* obj, const char* member, void* retVal, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8);
+bool q_metaobject_invoke_method13(void* obj, const char* member, int32_t param3, void* ret, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
 /// @param obj QObject*
 /// @param member const char*
-/// @param retVal QGenericReturnArgument*
+/// @param param3 enum Qt__ConnectionType
+/// @param ret QGenericReturnArgument*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
@@ -908,7 +773,142 @@ bool q_metaobject_invoke_method122(void* obj, const char* member, void* retVal, 
 /// @param val8 QGenericArgument*
 /// @param val9 QGenericArgument*
 ///
-bool q_metaobject_invoke_method132(void* obj, const char* member, void* retVal, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
+bool q_metaobject_invoke_method14(void* obj, const char* member, int32_t param3, void* ret, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
+///
+/// @param obj QObject*
+/// @param member const char*
+/// @param ret QGenericReturnArgument*
+/// @param val0 QGenericArgument*
+///
+bool q_metaobject_invoke_method42(void* obj, const char* member, void* ret, void* val0);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
+///
+/// @param obj QObject*
+/// @param member const char*
+/// @param ret QGenericReturnArgument*
+/// @param val0 QGenericArgument*
+/// @param val1 QGenericArgument*
+///
+bool q_metaobject_invoke_method52(void* obj, const char* member, void* ret, void* val0, void* val1);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
+///
+/// @param obj QObject*
+/// @param member const char*
+/// @param ret QGenericReturnArgument*
+/// @param val0 QGenericArgument*
+/// @param val1 QGenericArgument*
+/// @param val2 QGenericArgument*
+///
+bool q_metaobject_invoke_method62(void* obj, const char* member, void* ret, void* val0, void* val1, void* val2);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
+///
+/// @param obj QObject*
+/// @param member const char*
+/// @param ret QGenericReturnArgument*
+/// @param val0 QGenericArgument*
+/// @param val1 QGenericArgument*
+/// @param val2 QGenericArgument*
+/// @param val3 QGenericArgument*
+///
+bool q_metaobject_invoke_method72(void* obj, const char* member, void* ret, void* val0, void* val1, void* val2, void* val3);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
+///
+/// @param obj QObject*
+/// @param member const char*
+/// @param ret QGenericReturnArgument*
+/// @param val0 QGenericArgument*
+/// @param val1 QGenericArgument*
+/// @param val2 QGenericArgument*
+/// @param val3 QGenericArgument*
+/// @param val4 QGenericArgument*
+///
+bool q_metaobject_invoke_method82(void* obj, const char* member, void* ret, void* val0, void* val1, void* val2, void* val3, void* val4);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
+///
+/// @param obj QObject*
+/// @param member const char*
+/// @param ret QGenericReturnArgument*
+/// @param val0 QGenericArgument*
+/// @param val1 QGenericArgument*
+/// @param val2 QGenericArgument*
+/// @param val3 QGenericArgument*
+/// @param val4 QGenericArgument*
+/// @param val5 QGenericArgument*
+///
+bool q_metaobject_invoke_method92(void* obj, const char* member, void* ret, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
+///
+/// @param obj QObject*
+/// @param member const char*
+/// @param ret QGenericReturnArgument*
+/// @param val0 QGenericArgument*
+/// @param val1 QGenericArgument*
+/// @param val2 QGenericArgument*
+/// @param val3 QGenericArgument*
+/// @param val4 QGenericArgument*
+/// @param val5 QGenericArgument*
+/// @param val6 QGenericArgument*
+///
+bool q_metaobject_invoke_method102(void* obj, const char* member, void* ret, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
+///
+/// @param obj QObject*
+/// @param member const char*
+/// @param ret QGenericReturnArgument*
+/// @param val0 QGenericArgument*
+/// @param val1 QGenericArgument*
+/// @param val2 QGenericArgument*
+/// @param val3 QGenericArgument*
+/// @param val4 QGenericArgument*
+/// @param val5 QGenericArgument*
+/// @param val6 QGenericArgument*
+/// @param val7 QGenericArgument*
+///
+bool q_metaobject_invoke_method112(void* obj, const char* member, void* ret, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
+///
+/// @param obj QObject*
+/// @param member const char*
+/// @param ret QGenericReturnArgument*
+/// @param val0 QGenericArgument*
+/// @param val1 QGenericArgument*
+/// @param val2 QGenericArgument*
+/// @param val3 QGenericArgument*
+/// @param val4 QGenericArgument*
+/// @param val5 QGenericArgument*
+/// @param val6 QGenericArgument*
+/// @param val7 QGenericArgument*
+/// @param val8 QGenericArgument*
+///
+bool q_metaobject_invoke_method122(void* obj, const char* member, void* ret, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
+///
+/// @param obj QObject*
+/// @param member const char*
+/// @param ret QGenericReturnArgument*
+/// @param val0 QGenericArgument*
+/// @param val1 QGenericArgument*
+/// @param val2 QGenericArgument*
+/// @param val3 QGenericArgument*
+/// @param val4 QGenericArgument*
+/// @param val5 QGenericArgument*
+/// @param val6 QGenericArgument*
+/// @param val7 QGenericArgument*
+/// @param val8 QGenericArgument*
+/// @param val9 QGenericArgument*
+///
+bool q_metaobject_invoke_method132(void* obj, const char* member, void* ret, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
