@@ -1,4 +1,8 @@
 
+### 6.8.2 rev86 (28 August 2026)
+
+* Update reserved words (#154)
+
 ### 6.8.2 rev85 (26 August 2026)
 
 * Update reserved words (#153)
