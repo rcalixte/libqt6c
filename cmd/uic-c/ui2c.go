@@ -41,8 +41,17 @@ var (
 	WidgetItemsMap        = map[string][]string{}
 	WidgetItems           = []string{}
 	TableWidgetMap        = map[string]struct{}{}
-	alphabeticRegex       = regexp.MustCompile(`^[a-zA-Z]+$`)
-	cReservedWord         = map[string]struct{}{ // not an exhaustive list
+	alphabeticRegex       = regexp.MustCompile(`^[a-zA-Z_]+$`)
+	comboWidgets          = []string{
+		"KColorCombo",
+		"KComboBox",
+		"KDateComboBox",
+		"KHistoryComboBox",
+		"QComboBox",
+		"QFontComboBox",
+		"Sonnet::DictionaryComboBox",
+	}
+	cReservedWord = map[string]struct{}{ // not an exhaustive list
 		"auto":     {},
 		"break":    {},
 		"case":     {},
@@ -69,6 +78,11 @@ var (
 		"volatile": {},
 	}
 )
+
+type WarningContext struct {
+	NeedsWarning bool
+	Class        string
+}
 
 func collectClassNames_Widget(u *UiWidget) []string {
 	var ret []string
@@ -195,7 +209,7 @@ func processPaletteGroup(ret *strings.Builder, targetName string, groupName stri
 func getNewBrush(brushNum, style, red, green, blue, alpha string) string {
 	var newBrush string
 
-	newBrush += "QColor* color" + brushNum + " = q_color_new13(" + red + ", " + green + ", " + blue + ", " + alpha + ");\n"
+	newBrush += "QColor* color" + brushNum + " = q_color_new15(" + red + ", " + green + ", " + blue + ", " + alpha + ");\n"
 	newBrush += "QBrush* brush" + brushNum + " = q_brush_new3(color" + brushNum + ");\n"
 	newBrush += "q_brush_set_style(brush" + brushNum + ", QT_BRUSHSTYLE_" + strings.ToUpper(style) + ");\n"
 
@@ -245,9 +259,9 @@ func renderIcon(iconVal *UiIcon, ret *strings.Builder) string {
 		} else if iconVal.ResourceFile != "" {
 			theme = strconv.Quote(theme)
 			ret.WriteString("QIcon* " + iconName + ";\n")
-			ret.WriteString("if (q_icon_has_theme_icon(" + theme + ")) {\n")
+			ret.WriteString("if (q_icon_has_theme_icon(" + theme + "))\n")
 			ret.WriteString(iconName + " = q_icon_from_theme(" + theme + ");\n")
-			ret.WriteString("} else {\n")
+			ret.WriteString("else {\n")
 			ret.WriteString(iconName + " = q_icon_new();\n")
 			themeIconCond = true
 		} else {
@@ -312,7 +326,7 @@ func renderIcon(iconVal *UiIcon, ret *strings.Builder) string {
 	return iconName
 }
 
-func renderProperties(properties []UiProperty, ret *strings.Builder, targetName, targetClass, parentClass string) error {
+func renderProperties(properties []UiProperty, ret *strings.Builder, targetName, targetClass, parentClass string, warningContext WarningContext) error {
 	defaultMargin := DefaultGridMargin
 	if parentClass != "" {
 		defaultMargin = DefaultChildrenMargin
@@ -328,8 +342,7 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 	if targetClass[0] != 'Q' && targetClass[0] != 'K' {
 		targetClassIndex = 0
 	}
-	cMethodPrefix := targetClassPrefix + cClassName(strings.ReplaceAll(targetClass[targetClassIndex:], "::", "__"))
-
+	cMethodPrefix := targetClassPrefix + strings.ToLower(strings.ReplaceAll(targetClass[targetClassIndex:], "::", "__"))
 	strVariantName := targetName + "_variant_str"
 	numVariantName := targetName + "_variant_num"
 	boolVariantName := targetName + "_variant_bool"
@@ -477,7 +490,11 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 
 		} else if prop.IconVal != nil {
 			iconName := renderIcon(prop.IconVal, ret)
-			ret.WriteString(cMethodPrefix + setterFunc + "(ui->" + targetName + ", " + iconName + ");\n")
+			if slices.Contains(comboWidgets, targetClass) {
+				ret.WriteString(cMethodPrefix + "_add_item2(ui->" + targetName + ", " + iconName + `, "");` + "\n")
+			} else {
+				ret.WriteString(cMethodPrefix + setterFunc + "(ui->" + targetName + ", " + iconName + ");\n")
+			}
 			ret.WriteString("q_icon_delete(icon" + strconv.Itoa(IconCounter-1) + ");\n")
 
 		} else if prop.Name == "sizePolicy" {
@@ -552,22 +569,29 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 			var maybeOnlyFixed string
 			if ExtendedFlag && targetClass == "KFontRequester" {
 				maybeOnlyFixed = ", false"
-			} else if !ExtendedFlag && targetClass[0] == 'K' {
-				writeFlagWarning(ret, prop.Name, targetClass)
+			} else if warningContext.NeedsWarning {
+				writeFlagWarning(ret, prop.Name, warningContext.Class)
 			}
 			ret.WriteString(cMethodPrefix + "_set_font(ui->" + targetName + ", " + fontVal + maybeOnlyFixed + ");\n")
 			ret.WriteString("q_font_delete(" + fontVal + ");\n")
 
-		} else if prop.Name == "iconSize" {
+		} else if prop.Name == "iconSize" || prop.Name == "gridSize" {
 			ret.WriteString("QSize* " + targetName + "_size" + strconv.Itoa(SizeCounter) + " = q_size_new4(" + fmt.Sprintf("%d, %d", prop.SizeVal.Width, prop.SizeVal.Height) + ");\n")
-			ret.WriteString(cMethodPrefix + "_set_icon_size(ui->" + targetName + ", " + targetName + "_size" + strconv.Itoa(SizeCounter) + ");\n")
+			ret.WriteString(cMethodPrefix + setterFunc + "(ui->" + targetName + ", " + targetName + "_size" + strconv.Itoa(SizeCounter) + ");\n")
 			ret.WriteString("q_size_delete(" + targetName + "_size" + strconv.Itoa(SizeCounter) + ");\n")
 			SizeCounter++
 
 		} else if prop.DoubleVal != nil {
 			// QDoubleSpinBox
 			// "decimals", "minimum", "maximum", "value"
-			ret.WriteString(cMethodPrefix + setterFunc + "(ui->" + targetName + ", " + *prop.DoubleVal + ");\n")
+			if prop.StdSetVal != nil && *prop.StdSetVal != "" {
+				ret.WriteString("QVariant* " + numVariantName + strconv.Itoa(VariantCounter) + " = q_variant_new6(" + *prop.DoubleVal + ");\n")
+				ret.WriteString(cMethodPrefix + "_set_property(ui->" + targetName + ", " + strconv.Quote(prop.Name) + ", " + numVariantName + strconv.Itoa(VariantCounter) + ");\n")
+				ret.WriteString("q_variant_delete(" + numVariantName + strconv.Itoa(VariantCounter) + ");\n")
+				VariantCounter++
+			} else {
+				ret.WriteString(cMethodPrefix + setterFunc + "(ui->" + targetName + ", " + *prop.DoubleVal + ");\n")
+			}
 
 		} else if prop.SizeVal != nil {
 			// "maximumSize", "minimumSize", "baseSize"
@@ -613,14 +637,14 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 
 		} else if prop.UIntVal != nil {
 			if !ExtendedFlag {
-				writeFlagWarning(ret, prop.Name, targetClass)
+				writeFlagWarning(ret, prop.Name, warningContext.Class)
 			} else {
 				ret.WriteString(cMethodPrefix + setterFunc + "(ui->" + targetName + ", " + *prop.UIntVal + ");\n")
 			}
 
 		} else if prop.CharVal != nil {
 			if !ExtendedFlag {
-				writeFlagWarning(ret, prop.Name, targetClass)
+				writeFlagWarning(ret, prop.Name, warningContext.Class)
 			} else {
 				ret.WriteString("QChar* " + targetName + "_qchar = q_char_new4(" + prop.CharVal.Unicode + ");\n")
 				ret.WriteString(cMethodPrefix + setterFunc + "(ui->" + targetName + ", " + targetName + "_qchar);\n")
@@ -628,8 +652,8 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 			}
 
 		} else if prop.DateVal != nil {
-			if !ExtendedFlag && targetClass[0] == 'K' {
-				writeFlagWarning(ret, prop.Name, targetClass)
+			if warningContext.NeedsWarning {
+				writeFlagWarning(ret, prop.Name, warningContext.Class)
 			} else {
 				dateName := targetName + "_date" + strconv.Itoa(DateCounter)
 				ret.WriteString("QDate* " + dateName + " = q_date_new4(" + strconv.Itoa(prop.DateVal.Year) + ", " + strconv.Itoa(prop.DateVal.Month) + ", " + strconv.Itoa(prop.DateVal.Day) + ");\n")
@@ -639,8 +663,8 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 			}
 
 		} else if prop.TimeVal != nil {
-			if !ExtendedFlag && targetClass[0] == 'K' {
-				writeFlagWarning(ret, prop.Name, targetClass)
+			if warningContext.NeedsWarning {
+				writeFlagWarning(ret, prop.Name, warningContext.Class)
 			} else {
 				timeName := targetName + "_time" + strconv.Itoa(TimeCounter)
 				ret.WriteString("QTime* " + timeName + " = q_time_new6(" + strconv.Itoa(prop.TimeVal.Hour) + ", " + strconv.Itoa(prop.TimeVal.Minute) + ", " + strconv.Itoa(prop.TimeVal.Second) + ");\n")
@@ -650,8 +674,8 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 			}
 
 		} else if prop.ColorVal != nil {
-			if !ExtendedFlag && targetClass[0] == 'K' {
-				writeFlagWarning(ret, prop.Name, targetClass)
+			if warningContext.NeedsWarning {
+				writeFlagWarning(ret, prop.Name, warningContext.Class)
 			} else {
 				colorOverload := "5"
 				var maybeAlpha string
@@ -667,8 +691,8 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 			}
 
 		} else if prop.StringListVal != nil {
-			if !ExtendedFlag && targetClass[0] == 'K' {
-				writeFlagWarning(ret, prop.Name, targetClass)
+			if warningContext.NeedsWarning {
+				writeFlagWarning(ret, prop.Name, warningContext.Class)
 			} else {
 				comment := " // auxiliary to q_coreapplication_translate\n"
 				var items, strFrees []string
@@ -792,7 +816,7 @@ func generateLayout(l *UiLayout, parentName, parentClass string, isNestedLayout 
 
 	// Layout->Properties
 
-	err := renderProperties(l.Properties, &ret, l.Name, l.Class, parentClass)
+	err := renderProperties(l.Properties, &ret, l.Name, l.Class, parentClass, WarningContext{NeedsWarning: false, Class: ""})
 	if err != nil {
 		return "", err
 	}
@@ -943,11 +967,16 @@ func generateWidget(w UiWidget, parentName, parentClass string) (string, error) 
 	}
 
 	// Properties
+	warningContext := WarningContext{
+		NeedsWarning: !ExtendedFlag && w.Class[0] == 'K',
+		Class:        w.Class,
+	}
 
-	err := renderProperties(w.Properties, &ret, w.Name, wClass, parentClass)
+	err := renderProperties(w.Properties, &ret, w.Name, wClass, parentClass, warningContext)
 	if err != nil {
 		return "", err
 	}
+
 	// Attributes
 
 	boolVariantName := w.Name + "_variant_bool"
@@ -1029,7 +1058,7 @@ func generateWidget(w UiWidget, parentName, parentClass string) (string, error) 
 				attrName := strings.TrimPrefix(attr.Name, headerType+"Header")
 				attrName = strings.ToLower(attrName[0:1]) + attrName[1:]
 				ret.WriteString("QVariant* " + boolVariantName + strconv.Itoa(VariantCounter) + " = q_variant_new" + variantOverrideNum + "(" + viewParam + ");\n")
-				ret.WriteString("q_headerview_set_property(" + wClassC + "_" + headerType + "_header(ui->" + w.Name + "), " + strconv.Quote(attrName) + ", " + boolVariantName + strconv.Itoa(VariantCounter) + ");\n")
+				ret.WriteString("q_headerview_set_property(" + headerName + ", " + strconv.Quote(attrName) + ", " + boolVariantName + strconv.Itoa(VariantCounter) + ");\n")
 				ret.WriteString("q_variant_delete(" + boolVariantName + strconv.Itoa(VariantCounter) + ");\n")
 				VariantCounter++
 			} else {
@@ -1117,6 +1146,167 @@ func generateWidget(w UiWidget, parentName, parentClass string) (string, error) 
 		}
 	}
 
+	// Columns
+
+	isColumnSet, isRowSet := false, false
+	for colNo, col := range w.Columns {
+		isHeaderSet := false
+		for _, prop := range col.Properties {
+			methodName := cMethodName(prop.Name)
+
+			switch prop.Name {
+			case "text", "toolTip":
+				maybeComment := " // auxiliary to q_coreapplication_translate"
+				textVal := generateString(prop.StringVal)
+				if !strings.Contains(textVal, "q_coreapplication_translate") || prop.StringVal.Notr {
+					maybeComment = ""
+				}
+
+				colToStr := strconv.Itoa(colNo)
+
+				var lookupKey, itemName, setColumnMethod, setHeaderMethod, setItemMethod, translateItemMethod string
+
+				switch wClass {
+				case "QTreeWidget":
+					lookupKey = w.Name
+					itemName = "ui_" + w.Name + "_colitem"
+					setHeaderMethod = wClassC + "_set_header_item(ui->" + w.Name + ", " + itemName + ");\n"
+					setItemMethod = writtenString(wClassC+"item_set_"+methodName+"("+itemName+", "+colToStr+", ", textVal, ");", prop.StringVal.Notr, maybeComment == "")
+					translateItemMethod = wClass + "Item* " + itemName + " = " + wClassC + "_header_item(ui->" + w.Name + ");"
+				default:
+					lookupKey = w.Name + "_col" + colToStr
+					itemName = "ui_" + w.Name + "_colitem" + colToStr
+					setColumnMethod = "if (" + wClassC + "_column_count(ui->" + w.Name + ") < " + strconv.Itoa(len(w.Columns)) + ")\n"
+					setColumnMethod += wClassC + "_set_column_count(ui->" + w.Name + ", " + strconv.Itoa(len(w.Columns)) + ");\n"
+					setHeaderMethod = wClassC + "_set_horizontal_header_item(ui->" + w.Name + ", " + colToStr + ", " + itemName + ");\n"
+					setItemMethod = writtenString(wClassC+"item_set_"+methodName+"("+itemName+", ", textVal, ");", prop.StringVal.Notr, maybeComment == "")
+					translateItemMethod = wClass + "Item* " + itemName + " = " + wClassC + "_horizontal_header_item(ui->" + w.Name + ", " + colToStr + ");"
+				}
+
+				if !isColumnSet && len(w.Columns) > 0 && setColumnMethod != "" {
+					ret.WriteString(setColumnMethod)
+					isColumnSet = true
+				}
+
+				newItem := wClass + "Item* " + itemName + " = " + wClassC + "item_new();\n"
+
+				if _, ok := WidgetItemsMap[lookupKey]; !ok {
+					if maybeComment == "" {
+						ret.WriteString(newItem)
+						ret.WriteString(setHeaderMethod)
+						isHeaderSet = true
+					} else {
+						if wClass != "QTreeWidget" {
+							ret.WriteString(newItem)
+							ret.WriteString(setHeaderMethod)
+							isHeaderSet = true
+						}
+						if prop.StringVal.Value != "" {
+							WidgetItems = append(WidgetItems, lookupKey)
+							WidgetItemsMap[lookupKey] = append(WidgetItemsMap[lookupKey], strings.TrimSpace(translateItemMethod))
+						}
+					}
+				}
+
+				switch maybeComment {
+				case "":
+					if !isHeaderSet {
+						ret.WriteString(newItem)
+						ret.WriteString(setHeaderMethod)
+						isHeaderSet = true
+					}
+					ret.WriteString(setItemMethod)
+				default:
+					if prop.StringVal.Value != "" {
+						WidgetItemsMap[lookupKey] = append(WidgetItemsMap[lookupKey], strings.TrimSpace(setItemMethod))
+					}
+				}
+
+			default:
+				ret.WriteString("/* UIC: no handler for column property '" + prop.Name + "' */\n")
+			}
+		}
+	}
+
+	// Rows
+
+	for rowNo, row := range w.Rows {
+		isHeaderSet := false
+		for _, prop := range row.Properties {
+			methodName := cMethodName(prop.Name)
+
+			switch prop.Name {
+			case "text", "toolTip":
+				maybeComment := " // auxiliary to q_coreapplication_translate"
+				textVal := generateString(prop.StringVal)
+				if !strings.Contains(textVal, "q_coreapplication_translate") || prop.StringVal.Notr {
+					maybeComment = ""
+				}
+
+				rowToStr := strconv.Itoa(rowNo)
+
+				var lookupKey, itemName, setRowMethod, setHeaderMethod, setItemMethod, translateItemMethod string
+
+				switch wClass {
+				case "QTreeWidget":
+					lookupKey = w.Name
+					itemName = "ui_" + w.Name + "_rowitem"
+					setItemMethod = writtenString(wClassC+"item_set_"+methodName+"("+itemName+", "+rowToStr+", ", textVal, ");", prop.StringVal.Notr, maybeComment == "")
+					translateItemMethod = wClass + "Item* " + itemName + " = " + wClassC + "_header_item(ui->" + w.Name + ");"
+				default:
+					lookupKey = w.Name + "_row" + rowToStr
+					itemName = "ui_" + w.Name + "_rowitem" + rowToStr
+					setHeaderMethod = wClassC + "_set_vertical_header_item(ui->" + w.Name + ", " + rowToStr + ", " + itemName + ");\n"
+					setItemMethod = writtenString(wClassC+"item_set_"+methodName+"("+itemName+", ", textVal, ");", prop.StringVal.Notr, maybeComment == "")
+					translateItemMethod = wClass + "Item* " + itemName + " = " + wClassC + "_vertical_header_item(ui->" + w.Name + ", " + rowToStr + ");"
+				}
+
+				if wClass == "QTableWidget" {
+					setRowMethod = "if (" + wClassC + "_row_count(ui->" + w.Name + ") < " + strconv.Itoa(len(w.Rows)) + ")\n"
+					setRowMethod += wClassC + "_set_row_count(ui->" + w.Name + ", " + strconv.Itoa(len(w.Rows)) + ");\n"
+				}
+
+				if !isRowSet && len(w.Rows) > 0 && setRowMethod != "" {
+					ret.WriteString(setRowMethod)
+					isRowSet = true
+				}
+
+				newItem := wClass + "Item* " + itemName + " = " + wClassC + "item_new();\n"
+
+				if _, ok := WidgetItemsMap[lookupKey]; !ok {
+					if maybeComment == "" {
+						ret.WriteString(newItem)
+						ret.WriteString(setHeaderMethod)
+						isHeaderSet = true
+					} else {
+						if wClass != "QTreeWidget" {
+							ret.WriteString(newItem)
+							ret.WriteString(setHeaderMethod)
+							isHeaderSet = true
+						}
+						WidgetItems = append(WidgetItems, lookupKey)
+						WidgetItemsMap[lookupKey] = append(WidgetItemsMap[lookupKey], strings.TrimSpace(translateItemMethod))
+					}
+				}
+
+				switch maybeComment {
+				case "":
+					if !isHeaderSet {
+						ret.WriteString(newItem)
+						ret.WriteString(setHeaderMethod)
+						isHeaderSet = true
+					}
+					ret.WriteString(setItemMethod)
+				default:
+					WidgetItemsMap[lookupKey] = append(WidgetItemsMap[lookupKey], strings.TrimSpace(setItemMethod))
+				}
+
+			default:
+				ret.WriteString("/* UIC: no handler for row property '" + prop.Name + "' */\n")
+			}
+		}
+	}
+
 	// Items
 
 	for itemNo, itm := range w.Items {
@@ -1138,36 +1328,67 @@ func generateWidget(w UiWidget, parentName, parentClass string) (string, error) 
 			isItemClass = true
 			itemClass = "QTreeWidgetItem"
 			cClass = cClassMethodPrefix(itemClass)
-			ret.WriteString(itemClass + "* " + targetSelf + " = " + cClass + "_new3(ui->" + w.Name + ");\n")
+			var assignStr string
+			for i := range itm.Properties {
+				if itm.Properties[i].Name == "text" && itm.Properties[i].StringVal.Notr || len(itm.Items) > 0 {
+					assignStr = itemClass + "* " + targetSelf + " = "
+					break
+				}
+			}
+			ret.WriteString(assignStr + cClass + "_new3(ui->" + w.Name + ");\n")
 		case "QTableWidget":
+			targetSelf = "item" + strconv.Itoa(ItemWidgetCounter)
 			isItemClass = true
-			cClass = cClassMethodPrefix("QTableWidgetItem")
-		}
-
-		if !isItemClass {
+			itemClass = "QTableWidgetItem"
+			cClass = cClassMethodPrefix(itemClass)
+			ret.WriteString(itemClass + "* " + targetSelf + " = " + cClass + "_new();\n")
+			ret.WriteString("q_tablewidget_set_item(ui->" + w.Name + ", " + strconv.Itoa(*itm.Row) + ", " + strconv.Itoa(*itm.Column) + ", " + targetSelf + ");\n")
+		default:
 			ret.WriteString(wClassC + "_add_item(ui->" + w.Name + `, "");` + "\n")
 		}
 
 		// Check for a "text" property and update the item's text
 		// Do this as a 2nd step so that the SetItemText can be trapped for retranslate()
+		seenItems := map[string]struct{}{}
+		itemTextNum := 0
 		for _, prop := range itm.Properties {
 			switch prop.Name {
 			case "text":
 				if isItemClass {
-					var maybeItemNo string
-					if itemClass == "QTreeWidgetItem" {
-						maybeItemNo = ", " + strconv.Itoa(itemNo)
+					var maybeItemNo, maybeTableItemNo string
+					methodName := "item"
+					selfStr := targetSelf
+					switch wClass {
+					case "QTreeWidget":
+						// QTreeWidgetItem
+						methodName = "top_level_item"
+						maybeItemNo = ", " + strconv.Itoa(itemTextNum)
+						itemTextNum++
+						if itemTextNum > len(w.Columns) {
+							itemTextNum = 0
+						}
+					case "QTableWidget":
+						// QTableWidgetItem
+						selfStr = "item" + strconv.Itoa(ItemWidgetCounter)
+						maybeTableItemNo = ", " + strconv.Itoa(itemTextNum)
 					}
 					if !prop.StringVal.Notr {
-						ret.WriteString(itemClass + "* " + targetSelf + " = " + wClassC + "_item(ui->" + w.Name + ", " + strconv.Itoa(ItemWidgetCounter) + "); // auxiliary to q_coreapplication_translate " + w.Name + " " + cClassMethodPrefix(wClass) + "\n")
+						if _, ok := seenItems[targetSelf]; !ok {
+							seenItems[targetSelf] = struct{}{}
+							ret.WriteString(itemClass + "* " + selfStr + " = " + wClassC + "_" + methodName + "(ui->" + w.Name + maybeTableItemNo + ", " + strconv.Itoa(ItemWidgetCounter) + "); // auxiliary to q_coreapplication_translate " + w.Name + " " + cClassMethodPrefix(wClass) + "\n")
+						}
 					}
-					ret.WriteString(writtenString(cClass+"_set_text("+targetSelf+maybeItemNo+", ", generateString(prop.StringVal), ");\n", prop.StringVal.Notr, true))
+					ret.WriteString(writtenString(cClass+"_set_text("+selfStr+maybeItemNo+", ", generateString(prop.StringVal), ");\n", prop.StringVal.Notr, true))
 				} else {
 					ret.WriteString(writtenString(cClass+"_set_item_text("+targetSelf+", "+strconv.Itoa(itemNo)+", ", generateString(prop.StringVal), ");\n", prop.StringVal.Notr, true))
 				}
 			case "icon":
 				iconName := renderIcon(prop.IconVal, &ret)
-				ret.WriteString(cClass + "_set_icon(" + targetSelf + ", " + iconName + ");\n")
+				if slices.Contains(comboWidgets, wClass) {
+					ret.WriteString(cClass + "_add_item2(" + targetSelf + ", " + iconName + `, "");` + "\n")
+				} else {
+					ret.WriteString(cClass + "_set_icon(" + targetSelf + ", " + iconName + ");\n")
+				}
 				ret.WriteString("q_icon_delete(icon" + strconv.Itoa(IconCounter-1) + ");\n")
 			case "checkState":
 				ret.WriteString(cClass + "_set_check_state(" + targetSelf + ", QT_CHECKSTATE_" + strings.ToUpper(*prop.EnumVal) + ");\n")
@@ -1187,85 +1408,23 @@ func generateWidget(w UiWidget, parentName, parentClass string) (string, error) 
 			}
 		}
 
+		for i, item := range itm.Items {
+			var assignStr string
+			itemName := targetSelf + "_item" + strconv.Itoa(i)
+			for j, prop := range item.Properties {
+				if prop.Name == "text" && prop.StringVal.Notr {
+					assignStr = itemClass + "* " + itemName + " = "
+				}
+				ret.WriteString(assignStr + cClass + "_new6(" + targetSelf + ");\n")
+				if !prop.StringVal.Notr {
+					ret.WriteString(itemClass + "* " + itemName + " = " + cClass + "_child(" + targetSelf + ", " + strconv.Itoa(i) + "); // auxiliary to q_coreapplication_translate " + w.Name + " " + cClassMethodPrefix(wClass) + "\n")
+				}
+				ret.WriteString(writtenString(cClass+"_set_text("+itemName+", "+strconv.Itoa(j)+", ", generateString(prop.StringVal), ");\n", prop.StringVal.Notr, true))
+			}
+		}
+
 		if isItemClass {
 			ItemWidgetCounter++
-		}
-	}
-
-	// Columns
-
-	isColumnSet := false
-	for colNo, col := range w.Columns {
-		isHeaderSet := false
-		for _, prop := range col.Properties {
-			methodName := cMethodName(prop.Name)
-
-			switch prop.Name {
-			case "text", "toolTip":
-				maybeComment := " // auxiliary to q_coreapplication_translate"
-				textVal := generateString(prop.StringVal)
-				if !strings.Contains(textVal, "q_coreapplication_translate") || prop.StringVal.Notr {
-					maybeComment = ""
-				}
-
-				colToStr := strconv.Itoa(colNo)
-
-				var lookupKey, itemName, setColumnMethod, setHeaderMethod, setItemMethod, translateItemMethod string
-
-				switch wClass {
-				case "QTreeWidget":
-					lookupKey = w.Name
-					itemName = "ui_" + w.Name + "_item"
-					setHeaderMethod = wClassC + "_set_header_item(ui->" + w.Name + ", " + itemName + ");\n"
-					setItemMethod = writtenString(wClassC+"item_set_"+methodName+"("+itemName+", "+colToStr+", ", textVal, ");", prop.StringVal.Notr, maybeComment == "")
-					translateItemMethod = wClass + "Item* " + itemName + " = " + wClassC + "_header_item(ui->" + w.Name + ");"
-				default:
-					lookupKey = w.Name + "_" + colToStr
-					itemName = "ui_" + w.Name + "_item" + colToStr
-					setColumnMethod = wClassC + "_set_column_count(ui->" + w.Name + ", " + strconv.Itoa(len(w.Columns)) + ");\n"
-					setHeaderMethod = wClassC + "_set_horizontal_header_item(ui->" + w.Name + ", " + colToStr + ", " + itemName + ");\n"
-					setItemMethod = writtenString(wClassC+"item_set_"+methodName+"("+itemName+", ", textVal, ");", prop.StringVal.Notr, maybeComment == "")
-					translateItemMethod = wClass + "Item* " + itemName + " = " + wClassC + "_horizontal_header_item(ui->" + w.Name + ", " + colToStr + ");"
-				}
-
-				newItem := wClass + "Item* " + itemName + " = " + wClassC + "item_new();\n"
-
-				if !isColumnSet && setColumnMethod != "" {
-					ret.WriteString(setColumnMethod)
-					isColumnSet = true
-				}
-
-				if _, ok := WidgetItemsMap[lookupKey]; !ok {
-					if maybeComment == "" {
-						ret.WriteString(newItem)
-						ret.WriteString(setHeaderMethod)
-						isHeaderSet = true
-					} else {
-						if wClass != "QTreeWidget" {
-							ret.WriteString(newItem)
-							ret.WriteString(setHeaderMethod)
-							isHeaderSet = true
-						}
-						WidgetItems = append(WidgetItems, lookupKey)
-						WidgetItemsMap[lookupKey] = append(WidgetItemsMap[lookupKey], translateItemMethod)
-					}
-				}
-
-				switch maybeComment {
-				case "":
-					if !isHeaderSet {
-						ret.WriteString(newItem)
-						ret.WriteString(setHeaderMethod)
-						isHeaderSet = true
-					}
-					ret.WriteString(setItemMethod)
-				default:
-					WidgetItemsMap[lookupKey] = append(WidgetItemsMap[lookupKey], setItemMethod)
-				}
-
-			default:
-				ret.WriteString("/* UIC: no handler for column property '" + prop.Name + "' */\n")
-			}
 		}
 	}
 
@@ -1456,13 +1615,13 @@ func generate(goGenerateArgs string, flagExtraOps UiFlagOptions, u UiFile) ([]by
 	var translateFunc, setBuddy, setCurrentRow, setCurrentIndex, setDefault, menuActions, newFuncBody, sortingBlockEnds []string
 	var foundWidgetItem bool
 	var lastParentItem string
-	for _, line := range strings.Split(nest, "\n") {
+	for line := range strings.SplitSeq(nest, "\n") {
 		if strings.Contains(line, "q_coreapplication_translate") {
 			if strings.Contains(line, "WidgetItem* item") {
 				retLine, parentItem, parentClass := splitLastWords(line)
 				line = retLine
 				if lastParentItem != parentItem && !foundWidgetItem {
-					sortingBlockBegin := "bool " + parentItem + "_sorting_enabled = " + parentClass + "_is_sorting_enabled(ui->" + parentItem + ");\n"
+					sortingBlockBegin := "\nbool " + parentItem + "_sorting_enabled = " + parentClass + "_is_sorting_enabled(ui->" + parentItem + ");\n"
 					sortingBlockBegin += parentClass + "_set_sorting_enabled(ui->" + parentItem + ", false);"
 					translateFunc = append(translateFunc, sortingBlockBegin)
 					sortingBlockEnds = append(sortingBlockEnds, parentClass+"_set_sorting_enabled(ui->"+parentItem+", "+parentItem+"_sorting_enabled);\n")
@@ -1539,7 +1698,7 @@ static void retranslate_` + cMethod + "_ui(const " + uClass + `Ui* ui) {
 /// @param ui ` + uClass + `Ui*
 /// @param parent QWidget* (can be NULL)
 ///
-void initialize_` + cMethod + `_ui(` + uClass + `Ui* ui, void* parent) {`)
+static void initialize_` + cMethod + `_ui(` + uClass + `Ui* ui, void* parent) {`)
 
 	ret.WriteString(strings.Join(newFuncBody, ""))
 

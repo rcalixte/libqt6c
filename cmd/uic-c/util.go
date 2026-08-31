@@ -160,10 +160,8 @@ func notifyDupe(name string) {
 }
 
 func cClassName(name string) string {
-	if idx := strings.IndexByte(name, '_'); idx != -1 {
-		return strings.ToLower(name[:idx])
-	}
-	return strings.ToLower(name)
+	before, _, _ := strings.Cut(name, "_")
+	return strings.ToLower(before)
 }
 
 func cMethodName(name string) string {
@@ -190,8 +188,8 @@ func cClassMethodPrefix(name string) string {
 }
 
 func splitToParens(s string) string {
-	if idx := strings.IndexByte(s, '('); idx != -1 {
-		return s[:idx]
+	if result, _, ok := strings.Cut(s, "("); ok {
+		return result
 	}
 	return s
 }
