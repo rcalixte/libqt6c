@@ -74,6 +74,8 @@ func QrcExec() error {
 	case "":
 		varName = DefaultVariableName + strings.TrimSuffix(filepath.Base(inFile), ".qrc") + "_data"
 	default:
+		sanitize := strings.NewReplacer(":", "_", "-", "_")
+		varName = sanitize.Replace(varName)
 		generate += " -v " + strconv.Quote(varName)
 	}
 
