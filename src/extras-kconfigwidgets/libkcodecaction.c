@@ -470,8 +470,8 @@ QVariant* k_codecaction_data(void* self) {
     return QAction_Data((QAction*)self);
 }
 
-void k_codecaction_set_data(void* self, void* varVal) {
-    QAction_SetData((QAction*)self, (QVariant*)varVal);
+void k_codecaction_set_data(void* self, void* var) {
+    QAction_SetData((QAction*)self, (QVariant*)var);
 }
 
 bool k_codecaction_is_checked(void* self) {

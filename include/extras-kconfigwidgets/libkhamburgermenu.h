@@ -546,9 +546,9 @@ QVariant* k_hamburgermenu_data(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setData)
 ///
 /// @param self KHamburgerMenu*
-/// @param varVal QVariant*
+/// @param var QVariant*
 ///
-void k_hamburgermenu_set_data(void* self, void* varVal);
+void k_hamburgermenu_set_data(void* self, void* var);
 
 /// Inherited from QAction
 ///

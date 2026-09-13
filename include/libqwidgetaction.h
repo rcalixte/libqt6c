@@ -567,9 +567,9 @@ QVariant* q_widgetaction_data(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setData)
 ///
 /// @param self QWidgetAction*
-/// @param varVal QVariant*
+/// @param var QVariant*
 ///
-void q_widgetaction_set_data(void* self, void* varVal);
+void q_widgetaction_set_data(void* self, void* var);
 
 /// Inherited from QAction
 ///

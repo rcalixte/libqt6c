@@ -71,7 +71,7 @@ QFont* QAction_Font(const QAction* self);
 void QAction_SetCheckable(QAction* self, bool checkable);
 bool QAction_IsCheckable(const QAction* self);
 QVariant* QAction_Data(const QAction* self);
-void QAction_SetData(QAction* self, const QVariant* varVal);
+void QAction_SetData(QAction* self, const QVariant* var);
 bool QAction_IsChecked(const QAction* self);
 bool QAction_IsEnabled(const QAction* self);
 bool QAction_IsVisible(const QAction* self);

@@ -366,9 +366,9 @@ QVariant* q_action_data(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setData)
 ///
 /// @param self QAction*
-/// @param varVal QVariant*
+/// @param var QVariant*
 ///
-void q_action_set_data(void* self, void* varVal);
+void q_action_set_data(void* self, void* var);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isChecked)
 ///

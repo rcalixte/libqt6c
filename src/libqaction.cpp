@@ -257,8 +257,8 @@ QVariant* QAction_Data(const QAction* self) {
     return new QVariant(self->data());
 }
 
-void QAction_SetData(QAction* self, const QVariant* varVal) {
-    self->setData(*varVal);
+void QAction_SetData(QAction* self, const QVariant* var) {
+    self->setData(*var);
 }
 
 bool QAction_IsChecked(const QAction* self) {
