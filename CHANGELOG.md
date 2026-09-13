@@ -1,4 +1,8 @@
 
+### 6.8.2 rev87 (13 September 2026)
+
+* Update reserved words and add maintainer build option (#157)
+
 ### 6.8.2 rev86 (28 August 2026)
 
 * Update reserved words (#154)
