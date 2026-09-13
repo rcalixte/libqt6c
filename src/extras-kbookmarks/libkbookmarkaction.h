@@ -433,9 +433,9 @@ QVariant* k_bookmarkaction_data(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setData)
 ///
 /// @param self KBookmarkAction*
-/// @param varVal QVariant*
+/// @param var QVariant*
 ///
-void k_bookmarkaction_set_data(void* self, void* varVal);
+void k_bookmarkaction_set_data(void* self, void* var);
 
 /// Inherited from QAction
 ///

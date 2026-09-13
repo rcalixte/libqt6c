@@ -4,23 +4,24 @@ const host_arch = @import("builtin").target.cpu.arch;
 
 pub const configureQtExeRootModule = @import("exports.zig").configureQtExeRootModule;
 
-var linux_isystem: std.ArrayList([]const u8) = .empty;
-var cpp_flags: std.ArrayList([]const u8) = .empty;
-var cpp_sources: std.ArrayList([]const u8) = .empty;
-var qt_include_path: std.ArrayList([]const u8) = .empty;
-
 pub fn build(b: *std.Build) !void {
     const optimize = b.standardOptimizeOption(.{});
     const target = b.standardTargetOptions(.{});
     const extra_paths = b.option([]const []const u8, "extra-paths", "Extra library header search paths") orelse &.{};
     const linkage = b.option(std.builtin.LinkMode, "linkage", "Link mode for libqt6c") orelse .static;
     const strip = b.option(bool, "strip", "Include debug information in the compiled binary") orelse (optimize != .Debug);
+    const maintainer = b.option(bool, "maintainer", "Enable maintainer mode") orelse false;
 
     const is_linux = target.result.os.tag == .linux or host_os == .linux;
     const is_macos = target.result.os.tag == .macos or host_os == .macos;
     const is_windows = target.result.os.tag == .windows or host_os == .windows;
 
     const macos_libraries = b.option([]const []const u8, "macos-libraries", "Extra libraries or frameworks to link via pkgconf") orelse &.{};
+
+    var linux_isystem: std.array_hash_map.String(void) = .empty;
+    var cpp_flags: std.array_hash_map.String(void) = .empty;
+    var cpp_sources: std.array_hash_map.String(void) = .empty;
+    var qt_include_path: std.array_hash_map.String(void) = .empty;
 
     // Add isystem paths for Linux
     var distro: Distro = .none;
@@ -33,10 +34,10 @@ pub fn build(b: *std.Build) !void {
         while (lines.next()) |line|
             if (std.mem.startsWith(u8, line, "/")) {
                 std.Io.Dir.cwd().access(b.graph.io, line, .{}) catch continue;
-                try linux_isystem.append(b.allocator, line);
+                try linux_isystem.put(b.allocator, line, {});
             };
 
-        for (linux_isystem.items) |isystem_path| {
+        for (linux_isystem.keys()) |isystem_path| {
             if (distro == .none)
                 if (std.mem.containsAtLeast(u8, isystem_path, 1, "suse-linux")) {
                     distro = .suse;
@@ -48,7 +49,7 @@ pub fn build(b: *std.Build) !void {
                     distro = .fedora;
                 };
 
-            try cpp_flags.append(b.allocator, b.fmt("-isystem{s}", .{isystem_path}));
+            try cpp_flags.put(b.allocator, b.fmt("-isystem{s}", .{isystem_path}), {});
         }
     } else if (is_macos) {
         const pkg_env = "PKG_CONFIG_PATH";
@@ -85,7 +86,7 @@ pub fn build(b: *std.Build) !void {
                         _ = it.next();
                         continue;
                     }
-                    try cpp_flags.append(b.allocator, arg);
+                    try cpp_flags.put(b.allocator, arg, {});
                 }
             }
         }
@@ -119,7 +120,7 @@ pub fn build(b: *std.Build) !void {
             if (is_windows and std.mem.eql(u8, basename, "qhashfunctions"))
                 continue;
 
-            try cpp_sources.append(b.allocator, b.fmt("{s}/{s}", .{ "src", entry.path }));
+            try cpp_sources.put(b.allocator, b.fmt("{s}/{s}", .{ "src", entry.path }), {});
         } else if (entry.kind == .directory) {
             ok = true;
             inline for (prefixes) |prefix|
@@ -153,51 +154,61 @@ pub fn build(b: *std.Build) !void {
                 };
         };
 
-    std.debug.assert(cpp_sources.items.len != 0);
+    std.debug.assert(cpp_sources.entries.len != 0);
 
     for (extra_paths) |extra_path| {
         if (extra_path.len == 0) continue;
 
         if (std.Io.Dir.cwd().access(b.graph.io, extra_path, .{}))
-            try qt_include_path.append(b.allocator, b.dupe(extra_path))
+            try qt_include_path.put(b.allocator, extra_path, {})
         else |_|
             std.log.warn("extra path {s} does not exist", .{extra_path});
 
         var inc_path = b.fmt("{s}/include/KF6", .{extra_path});
         if (std.Io.Dir.cwd().access(b.graph.io, inc_path, .{}))
-            try qt_include_path.append(b.allocator, b.dupe(inc_path))
+            try qt_include_path.put(b.allocator, inc_path, {})
         else |_|
             std.log.warn("extra path {s} does not exist", .{inc_path});
 
         inc_path = b.fmt("{s}/include", .{extra_path});
         if (std.Io.Dir.cwd().access(b.graph.io, inc_path, .{}))
-            try qt_include_path.append(b.allocator, b.dupe(inc_path))
+            try qt_include_path.put(b.allocator, inc_path, {})
         else |_|
             std.log.warn("extra path {s} does not exist", .{inc_path});
     }
     for (os_include_path) |os_path| {
         std.Io.Dir.cwd().access(b.graph.io, os_path, .{}) catch continue;
-        try qt_include_path.append(b.allocator, b.dupe(os_path));
+        try qt_include_path.put(b.allocator, os_path, {});
     }
 
+    const maintainer_cpp_flags: []const []const u8 = if (maintainer) &.{
+        "-Werror",
+        "-Wextra",
+        "-Wno-character-conversion",
+        "-Wno-deprecated-copy",
+        "-Wno-deprecated-declarations",
+        "-Wno-ignored-attributes",
+        "-Wno-unnecessary-virtual-specifier",
+    } else &.{};
+
     // Add base flags
-    inline for (base_cpp_flags) |flag|
-        try cpp_flags.append(b.allocator, b.dupe(flag));
+    for (maintainer_cpp_flags) |flag|
+        try cpp_flags.put(b.allocator, flag, {});
 
     if (is_linux)
         inline for (linux_flags) |flag|
-            try cpp_flags.append(b.allocator, b.dupe(flag));
+            try cpp_flags.put(b.allocator, flag, {});
 
     // Add include paths
-    for (qt_include_path.items) |qt_path|
-        try cpp_flags.append(b.allocator, b.fmt("-I{s}", .{qt_path}));
+    for (qt_include_path.keys()) |qt_path|
+        try cpp_flags.put(b.allocator, b.fmt("-I{s}", .{qt_path}), {});
 
     // Add Qt module include paths
     inline for (qt_modules) |module|
-        for (qt_include_path.items) |qt_path| {
+        for (qt_include_path.keys()) |qt_path| {
             const includePath = b.fmt("{s}/{s}", .{ qt_path, module });
             std.Io.Dir.cwd().access(b.graph.io, includePath, .{}) catch continue;
-            try cpp_flags.append(b.allocator, b.fmt("-I{s}", .{includePath}));
+            try cpp_flags.put(b.allocator, b.fmt("-I{s}", .{includePath}), {});
         };
 
     var override_dir: []const u8 = undefined;
@@ -232,8 +243,13 @@ pub fn build(b: *std.Build) !void {
     const wf = b.addWriteFiles();
     const libc_path = wf.add("libc.txt", try aw.toOwnedSlice());
 
+    const maintainer_c_flags: []const []const u8 = if (maintainer and !is_linux) &.{
+        "-Werror",
+        "-Wextra",
+    } else &.{};
+
     // Create a separate library for each source file
-    for (cpp_sources.items) |source| {
+    for (cpp_sources.keys()) |source| {
         var basename = std.Io.Dir.path.basename(source);
         basename = basename[3 .. basename.len - 4];
 
@@ -264,14 +280,17 @@ pub fn build(b: *std.Build) !void {
 
         lib.root_module.addIncludePath(b.path("include"));
 
-        const cpp_flags_len = cpp_flags.items.len;
+        const cpp_flags_len = cpp_flags.entries.len;
         defer cpp_flags.shrinkRetainingCapacity(cpp_flags_len);
         const dirname = std.Io.Dir.path.dirname(source) orelse "";
-        if (std.mem.endsWith(u8, dirname, "kcodecs")) try cpp_flags.append(b.allocator, "-std=c++20");
-        lib.root_module.addCSourceFile(.{ .file = b.path(source), .flags = cpp_flags.items });
+        if (std.mem.endsWith(u8, dirname, "kcodecs")) try cpp_flags.put(b.allocator, "-std=c++20", {});
+        lib.root_module.addCSourceFile(.{ .file = b.path(source), .flags = cpp_flags.keys() });
 
         // Add corresponding C wrapper
-        lib.root_module.addCSourceFile(.{ .file = b.path(source[0 .. source.len - 2]), .flags = c_flags });
+        lib.root_module.addCSourceFile(.{
+            .file = b.path(source[0 .. source.len - 2]),
+            .flags = maintainer_c_flags,
+        });
 
         b.installArtifact(lib);
     }
@@ -321,19 +340,11 @@ const os_include_path: []const []const u8 = switch (host_os) {
     else => @panic("Unsupported OS"),
 };
 
-const base_cpp_flags = &.{
-    "-O2",
-};
-
 const linux_flags = &.{
     "-nostdinc++",
     "-nostdlib++",
     "-nostdinc",
     "-nostdlib",
-};
-
-const c_flags = &.{
-    "-O2",
 };
 
 const Distro = enum {

@@ -438,8 +438,8 @@ QVariant* k_fontaction_data(void* self) {
     return QAction_Data((QAction*)self);
 }
 
-void k_fontaction_set_data(void* self, void* varVal) {
-    QAction_SetData((QAction*)self, (QVariant*)varVal);
+void k_fontaction_set_data(void* self, void* var) {
+    QAction_SetData((QAction*)self, (QVariant*)var);
 }
 
 bool k_fontaction_is_checked(void* self) {

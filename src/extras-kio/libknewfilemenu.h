@@ -739,9 +739,9 @@ QVariant* k_newfilemenu_data(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setData)
 ///
 /// @param self KNewFileMenu*
-/// @param varVal QVariant*
+/// @param var QVariant*
 ///
-void k_newfilemenu_set_data(void* self, void* varVal);
+void k_newfilemenu_set_data(void* self, void* var);
 
 /// Inherited from QAction
 ///

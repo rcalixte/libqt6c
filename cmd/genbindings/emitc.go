@@ -24,7 +24,7 @@ func cComment(s string) string {
 func reservedWordC(s string) bool {
 	switch s {
 	case "const", "default", "import", "int", "len", "new",
-		"null", "select", "self", "suspend", "var":
+		"null", "restrict", "select", "self", "suspend":
 		return true
 	default:
 		return false

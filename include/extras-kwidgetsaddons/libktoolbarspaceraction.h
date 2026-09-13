@@ -471,9 +471,9 @@ QVariant* k_toolbarspaceraction_data(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setData)
 ///
 /// @param self KToolBarSpacerAction*
-/// @param varVal QVariant*
+/// @param var QVariant*
 ///
-void k_toolbarspaceraction_set_data(void* self, void* varVal);
+void k_toolbarspaceraction_set_data(void* self, void* var);
 
 /// Inherited from QAction
 ///

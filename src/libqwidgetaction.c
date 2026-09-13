@@ -295,8 +295,8 @@ QVariant* q_widgetaction_data(void* self) {
     return QAction_Data((QAction*)self);
 }
 
-void q_widgetaction_set_data(void* self, void* varVal) {
-    QAction_SetData((QAction*)self, (QVariant*)varVal);
+void q_widgetaction_set_data(void* self, void* var) {
+    QAction_SetData((QAction*)self, (QVariant*)var);
 }
 
 bool q_widgetaction_is_checked(void* self) {
