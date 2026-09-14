@@ -558,6 +558,18 @@ libqt_list q_icon_available_sizes2(void* self, int32_t mode, int32_t state);
 ///
 void q_icon_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qicon-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qicon-h.html#qt_findAtNxFile)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param baseFileName const char*
+/// @param targetDevicePixelRatio double
+/// @param sourceDevicePixelRatio double*
+///
+const char* q_qicon_h_find_at_nx_file(const char* baseFileName, double targetDevicePixelRatio, double* sourceDevicePixelRatio);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#public-types)
 
 typedef enum {

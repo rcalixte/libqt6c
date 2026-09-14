@@ -8,6 +8,37 @@
 #include "libqttypedefs.h"
 #include "qtlibc.h"
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject-h.html#qt_qFindChildren_helper)
+///
+/// @param parent QObject*
+/// @param name const char*
+/// @param mo QMetaObject*
+/// @param list libqt_list of void*
+/// @param options flag of enum Qt__FindChildOption
+///
+void q_qobject_h_q_find_children_helper(void* parent, const char* name, void* mo, libqt_list list, int32_t options);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject-h.html#qt_qFindChildren_helper)
+///
+/// @param parent QObject*
+/// @param re QRegularExpression*
+/// @param mo QMetaObject*
+/// @param list libqt_list of void*
+/// @param options flag of enum Qt__FindChildOption
+///
+void q_qobject_h_q_find_children_helper2(void* parent, void* re, void* mo, libqt_list list, int32_t options);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject-h.html#qt_qFindChild_helper)
+///
+/// @param parent QObject*
+/// @param name const char*
+/// @param mo QMetaObject*
+/// @param options flag of enum Qt__FindChildOption
+///
+QObject* q_qobject_h_q_find_child_helper(void* parent, const char* name, void* mo, int32_t options);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html)
 
 /// q_object_new constructs a new QObject object.

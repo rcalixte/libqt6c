@@ -44,3 +44,7 @@ void q_hashseed_reset_random_global_seed() {
 void q_hashseed_delete(void* self) {
     QHashSeed_Delete((QHashSeed*)(self));
 }
+
+uint32_t q_qhashfunctions_h_hash(const char* key, uint32_t chained) {
+    return qhashfunctions_h_Hash(qstring(key), chained);
+}

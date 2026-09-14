@@ -78,4 +78,12 @@ void q_hashseed_reset_random_global_seed();
 ///
 void q_hashseed_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qhashfunctions-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qhashfunctions-h.html#qt_hash)
+///
+/// @param key const char*
+/// @param chained uint32_t
+///
+uint32_t q_qhashfunctions_h_hash(const char* key, uint32_t chained);
 #endif

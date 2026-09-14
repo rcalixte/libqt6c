@@ -329,3 +329,151 @@ KLocalizedString* k_localizedstring_subs311(void* self, void* a, int fieldWidth,
 void k_localizedstring_delete(void* self) {
     KLocalizedString_Delete((KLocalizedString*)(self));
 }
+
+KLocalizedString* k_localizedstring_h_ki18n(const char* text) {
+    return klocalizedstring_h_Ki18n(text);
+}
+
+KLocalizedString* k_localizedstring_h_ki18nc(const char* context, const char* text) {
+    return klocalizedstring_h_Ki18nc(context, text);
+}
+
+KLocalizedString* k_localizedstring_h_ki18np(const char* singular, const char* plural) {
+    return klocalizedstring_h_Ki18np(singular, plural);
+}
+
+KLocalizedString* k_localizedstring_h_ki18ncp(const char* context, const char* singular, const char* plural) {
+    return klocalizedstring_h_Ki18ncp(context, singular, plural);
+}
+
+KLocalizedString* k_localizedstring_h_ki18nd(const char* domain, const char* text) {
+    return klocalizedstring_h_Ki18nd(domain, text);
+}
+
+KLocalizedString* k_localizedstring_h_ki18ndc(const char* domain, const char* context, const char* text) {
+    return klocalizedstring_h_Ki18ndc(domain, context, text);
+}
+
+KLocalizedString* k_localizedstring_h_ki18ndp(const char* domain, const char* singular, const char* plural) {
+    return klocalizedstring_h_Ki18ndp(domain, singular, plural);
+}
+
+KLocalizedString* k_localizedstring_h_ki18ndcp(const char* domain, const char* context, const char* singular, const char* plural) {
+    return klocalizedstring_h_Ki18ndcp(domain, context, singular, plural);
+}
+
+KLocalizedString* k_localizedstring_h_kxi18n(const char* text) {
+    return klocalizedstring_h_Kxi18n(text);
+}
+
+KLocalizedString* k_localizedstring_h_kxi18nc(const char* context, const char* text) {
+    return klocalizedstring_h_Kxi18nc(context, text);
+}
+
+KLocalizedString* k_localizedstring_h_kxi18np(const char* singular, const char* plural) {
+    return klocalizedstring_h_Kxi18np(singular, plural);
+}
+
+KLocalizedString* k_localizedstring_h_kxi18ncp(const char* context, const char* singular, const char* plural) {
+    return klocalizedstring_h_Kxi18ncp(context, singular, plural);
+}
+
+KLocalizedString* k_localizedstring_h_kxi18nd(const char* domain, const char* text) {
+    return klocalizedstring_h_Kxi18nd(domain, text);
+}
+
+KLocalizedString* k_localizedstring_h_kxi18ndc(const char* domain, const char* context, const char* text) {
+    return klocalizedstring_h_Kxi18ndc(domain, context, text);
+}
+
+KLocalizedString* k_localizedstring_h_kxi18ndp(const char* domain, const char* singular, const char* plural) {
+    return klocalizedstring_h_Kxi18ndp(domain, singular, plural);
+}
+
+KLocalizedString* k_localizedstring_h_kxi18ndcp(const char* domain, const char* context, const char* singular, const char* plural) {
+    return klocalizedstring_h_Kxi18ndcp(domain, context, singular, plural);
+}
+
+const char* k_localizedstring_h_tr2i18n(const char* text, const char* comment) {
+    libqt_string _str = klocalizedstring_h_Tr2i18n(text, comment);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* k_localizedstring_h_tr2i18nd(const char* domain, const char* text, const char* comment) {
+    libqt_string _str = klocalizedstring_h_Tr2i18nd(domain, text, comment);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* k_localizedstring_h_tr2xi18n(const char* text, const char* comment) {
+    libqt_string _str = klocalizedstring_h_Tr2xi18n(text, comment);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* k_localizedstring_h_tr2xi18nd(const char* domain, const char* text, const char* comment) {
+    libqt_string _str = klocalizedstring_h_Tr2xi18nd(domain, text, comment);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* k_localizedstring_h_i18n(const char* text) {
+    libqt_string _str = klocalizedstring_h_I18n(text);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* k_localizedstring_h_i18nc(const char* context, const char* text) {
+    libqt_string _str = klocalizedstring_h_I18nc(context, text);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* k_localizedstring_h_i18nd(const char* domain, const char* text) {
+    libqt_string _str = klocalizedstring_h_I18nd(domain, text);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* k_localizedstring_h_i18ndc(const char* domain, const char* context, const char* text) {
+    libqt_string _str = klocalizedstring_h_I18ndc(domain, context, text);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* k_localizedstring_h_xi18n(const char* text) {
+    libqt_string _str = klocalizedstring_h_Xi18n(text);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* k_localizedstring_h_xi18nc(const char* context, const char* text) {
+    libqt_string _str = klocalizedstring_h_Xi18nc(context, text);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* k_localizedstring_h_xi18nd(const char* domain, const char* text) {
+    libqt_string _str = klocalizedstring_h_Xi18nd(domain, text);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* k_localizedstring_h_xi18ndc(const char* domain, const char* context, const char* text) {
+    libqt_string _str = klocalizedstring_h_Xi18ndc(domain, context, text);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}

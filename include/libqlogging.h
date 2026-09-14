@@ -245,6 +245,16 @@ QNoDebug* q_messagelogger_no_debug(void* self);
 ///
 void q_messagelogger_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qlogging-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlogging-h.html#qt_error_string)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param errorCode int
+///
+const char* q_qlogging_h_error_string(int errorCode);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlogging.html#public-types)
 
 typedef enum {
