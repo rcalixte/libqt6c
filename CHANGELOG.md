@@ -1,4 +1,8 @@
 
+### 6.8.2 rev88 (14 September 2026)
+
+* **BREAKING CHANGE:** Project additional free functions and enum typedefs (#158)
+
 ### 6.8.2 rev87 (13 September 2026)
 
 * Update reserved words and add maintainer build option (#157)
