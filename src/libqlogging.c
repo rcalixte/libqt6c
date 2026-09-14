@@ -134,3 +134,10 @@ QNoDebug* q_messagelogger_no_debug(void* self) {
 void q_messagelogger_delete(void* self) {
     QMessageLogger_Delete((QMessageLogger*)(self));
 }
+
+const char* q_qlogging_h_error_string(int errorCode) {
+    libqt_string _str = qlogging_h_ErrorString(errorCode);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}

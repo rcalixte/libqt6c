@@ -341,3 +341,10 @@ libqt_list /* of QSize* */ q_icon_available_sizes2(void* self, int32_t mode, int
 void q_icon_delete(void* self) {
     QIcon_Delete((QIcon*)(self));
 }
+
+const char* q_qicon_h_find_at_nx_file(const char* baseFileName, double targetDevicePixelRatio, double* sourceDevicePixelRatio) {
+    libqt_string _str = qicon_h_FindAtNxFile(qstring(baseFileName), targetDevicePixelRatio, sourceDevicePixelRatio);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}

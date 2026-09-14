@@ -1,8 +1,17 @@
 #include "libqeventpoint.hpp"
 #include "libqpoint.hpp"
+#include "libqpointingdevice.hpp"
 #include "libqwindow.hpp"
 #include "libqtestsupport_gui.hpp"
 #include "libqtestsupport_gui.h"
+
+void q_qtestsupport_gui_h_handle_touch_event(void* w, void* device, libqt_list /* of QEventPoint* */ points, int32_t mods) {
+    qtestsupport_gui_h_HandleTouchEvent((QWindow*)w, (QPointingDevice*)device, points, mods);
+}
+
+bool q_qtestsupport_gui_h_handle_touch_eventv2(void* w, void* device, libqt_list /* of QEventPoint* */ points, int32_t mods) {
+    return qtestsupport_gui_h_HandleTouchEventv2((QWindow*)w, (QPointingDevice*)device, points, mods);
+}
 
 QTest__QTouchEventSequence* q_test__qtoucheventsequence_press(void* self, int touchId, void* pt) {
     return QTest__QTouchEventSequence_Press((QTest__QTouchEventSequence*)self, touchId, (QPoint*)pt);

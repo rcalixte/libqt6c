@@ -1,6 +1,7 @@
 #include "libqchar.hpp"
 #include "libqiodevice.hpp"
 #include "libqiodevicebase.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqdebug.hpp"
 #include "libqdebug.h"
 
@@ -230,4 +231,16 @@ QNoDebug* q_nodebug_maybe_quote1(void* self, char param1) {
 
 void q_nodebug_delete(void* self) {
     QNoDebug_Delete((QNoDebug*)(self));
+}
+
+void q_qdebug_h_q_meta_enum_flag_debug_operator(void* debug, uintptr_t sizeofT, uint32_t value) {
+    qdebug_h_QMetaEnumFlagDebugOperator((QDebug*)debug, sizeofT, value);
+}
+
+QDebug* q_qdebug_h_q_meta_enum_debug_operator(void* param1, int64_t value, void* meta, const char* name) {
+    return qdebug_h_QMetaEnumDebugOperator((QDebug*)param1, value, (QMetaObject*)meta, name);
+}
+
+QDebug* q_qdebug_h_q_meta_enum_flag_debug_operator2(void* dbg, uint64_t value, void* meta, const char* name) {
+    return qdebug_h_QMetaEnumFlagDebugOperator2((QDebug*)dbg, value, (QMetaObject*)meta, name);
 }

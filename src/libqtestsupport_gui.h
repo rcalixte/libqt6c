@@ -8,6 +8,26 @@
 #include "libqttypedefs.h"
 #include "qtlibc.h"
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qtestsupport-gui-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtestsupport-gui-h.html#qt_handleTouchEvent)
+///
+/// @param w QWindow*
+/// @param device QPointingDevice*
+/// @param points libqt_list of QEventPoint*
+/// @param mods flag of enum Qt__KeyboardModifier
+///
+void q_qtestsupport_gui_h_handle_touch_event(void* w, void* device, libqt_list points, int32_t mods);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtestsupport-gui-h.html#qt_handleTouchEventv2)
+///
+/// @param w QWindow*
+/// @param device QPointingDevice*
+/// @param points libqt_list of QEventPoint*
+/// @param mods flag of enum Qt__KeyboardModifier
+///
+bool q_qtestsupport_gui_h_handle_touch_eventv2(void* w, void* device, libqt_list points, int32_t mods);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#press)

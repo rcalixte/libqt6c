@@ -519,4 +519,235 @@ KLocalizedString* k_localizedstring_subs311(void* self, void* a, int fieldWidth,
 ///
 void k_localizedstring_delete(void* self);
 
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html)
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#ki18n)
+///
+/// @param text const char*
+///
+KLocalizedString* k_localizedstring_h_ki18n(const char* text);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#ki18nc)
+///
+/// @param context const char*
+/// @param text const char*
+///
+KLocalizedString* k_localizedstring_h_ki18nc(const char* context, const char* text);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#ki18np)
+///
+/// @param singular const char*
+/// @param plural const char*
+///
+KLocalizedString* k_localizedstring_h_ki18np(const char* singular, const char* plural);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#ki18ncp)
+///
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+///
+KLocalizedString* k_localizedstring_h_ki18ncp(const char* context, const char* singular, const char* plural);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#ki18nd)
+///
+/// @param domain const char*
+/// @param text const char*
+///
+KLocalizedString* k_localizedstring_h_ki18nd(const char* domain, const char* text);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#ki18ndc)
+///
+/// @param domain const char*
+/// @param context const char*
+/// @param text const char*
+///
+KLocalizedString* k_localizedstring_h_ki18ndc(const char* domain, const char* context, const char* text);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#ki18ndp)
+///
+/// @param domain const char*
+/// @param singular const char*
+/// @param plural const char*
+///
+KLocalizedString* k_localizedstring_h_ki18ndp(const char* domain, const char* singular, const char* plural);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#ki18ndcp)
+///
+/// @param domain const char*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+///
+KLocalizedString* k_localizedstring_h_ki18ndcp(const char* domain, const char* context, const char* singular, const char* plural);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#kxi18n)
+///
+/// @param text const char*
+///
+KLocalizedString* k_localizedstring_h_kxi18n(const char* text);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#kxi18nc)
+///
+/// @param context const char*
+/// @param text const char*
+///
+KLocalizedString* k_localizedstring_h_kxi18nc(const char* context, const char* text);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#kxi18np)
+///
+/// @param singular const char*
+/// @param plural const char*
+///
+KLocalizedString* k_localizedstring_h_kxi18np(const char* singular, const char* plural);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#kxi18ncp)
+///
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+///
+KLocalizedString* k_localizedstring_h_kxi18ncp(const char* context, const char* singular, const char* plural);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#kxi18nd)
+///
+/// @param domain const char*
+/// @param text const char*
+///
+KLocalizedString* k_localizedstring_h_kxi18nd(const char* domain, const char* text);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#kxi18ndc)
+///
+/// @param domain const char*
+/// @param context const char*
+/// @param text const char*
+///
+KLocalizedString* k_localizedstring_h_kxi18ndc(const char* domain, const char* context, const char* text);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#kxi18ndp)
+///
+/// @param domain const char*
+/// @param singular const char*
+/// @param plural const char*
+///
+KLocalizedString* k_localizedstring_h_kxi18ndp(const char* domain, const char* singular, const char* plural);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#kxi18ndcp)
+///
+/// @param domain const char*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+///
+KLocalizedString* k_localizedstring_h_kxi18ndcp(const char* domain, const char* context, const char* singular, const char* plural);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#tr2i18n)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param text const char*
+/// @param comment const char*
+///
+const char* k_localizedstring_h_tr2i18n(const char* text, const char* comment);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#tr2i18nd)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param domain const char*
+/// @param text const char*
+/// @param comment const char*
+///
+const char* k_localizedstring_h_tr2i18nd(const char* domain, const char* text, const char* comment);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#tr2xi18n)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param text const char*
+/// @param comment const char*
+///
+const char* k_localizedstring_h_tr2xi18n(const char* text, const char* comment);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#tr2xi18nd)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param domain const char*
+/// @param text const char*
+/// @param comment const char*
+///
+const char* k_localizedstring_h_tr2xi18nd(const char* domain, const char* text, const char* comment);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#i18n)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param text const char*
+///
+const char* k_localizedstring_h_i18n(const char* text);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#i18nc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param context const char*
+/// @param text const char*
+///
+const char* k_localizedstring_h_i18nc(const char* context, const char* text);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#i18nd)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param domain const char*
+/// @param text const char*
+///
+const char* k_localizedstring_h_i18nd(const char* domain, const char* text);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#i18ndc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param domain const char*
+/// @param context const char*
+/// @param text const char*
+///
+const char* k_localizedstring_h_i18ndc(const char* domain, const char* context, const char* text);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#xi18n)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param text const char*
+///
+const char* k_localizedstring_h_xi18n(const char* text);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#xi18nc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param context const char*
+/// @param text const char*
+///
+const char* k_localizedstring_h_xi18nc(const char* context, const char* text);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#xi18nd)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param domain const char*
+/// @param text const char*
+///
+const char* k_localizedstring_h_xi18nd(const char* domain, const char* text);
+
+/// [Upstream resources](https://api.kde.org/klocalizedstring-h.html#xi18ndc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param domain const char*
+/// @param context const char*
+/// @param text const char*
+///
+const char* k_localizedstring_h_xi18ndc(const char* domain, const char* context, const char* text);
 #endif

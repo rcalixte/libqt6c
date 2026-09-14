@@ -290,5 +290,4 @@ KTextEditor__Range* k_texteditor__range_encompass(void* self, void* range);
 ///
 void k_texteditor__range_delete(void* self);
 
-/// [Upstream resources](https://api.kde.org/ktexteditor.html)
 #endif

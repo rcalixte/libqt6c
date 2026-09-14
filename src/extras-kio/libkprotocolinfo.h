@@ -249,10 +249,10 @@ typedef enum {
 /// [Upstream resources](https://api.kde.org/kprotocolinfo.html#public-types)
 
 typedef enum {
-    KPROTOCOLINFO__NAME = 0,
-    KPROTOCOLINFO__FROMURL = 1,
-    KPROTOCOLINFO__DISPLAYNAME = 2
-} KProtocolInfo__;
+    KPROTOCOLINFO_FILENAMEUSEDFORCOPYING_NAME = 0,
+    KPROTOCOLINFO_FILENAMEUSEDFORCOPYING_FROMURL = 1,
+    KPROTOCOLINFO_FILENAMEUSEDFORCOPYING_DISPLAYNAME = 2
+} KProtocolInfo__FileNameUsedForCopying;
 
 /// [Upstream resources](https://api.kde.org/kprotocolinfo.html#public-types)
 
