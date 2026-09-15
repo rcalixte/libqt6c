@@ -268,6 +268,10 @@ void q_geoserviceprovider_set_allow_experimental(void* self, bool allow) {
     QGeoServiceProvider_SetAllowExperimental((QGeoServiceProvider*)self, allow);
 }
 
+void q_geoserviceprovider_set_qml_engine(void* self, void* engine) {
+    QGeoServiceProvider_SetQmlEngine((QGeoServiceProvider*)self, (QQmlEngine*)engine);
+}
+
 const char* q_geoserviceprovider_tr2(const char* s, const char* c) {
     libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);

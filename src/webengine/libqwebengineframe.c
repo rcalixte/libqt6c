@@ -1,3 +1,4 @@
+#include "../qml/libqjsvalue.hpp"
 #include "../libqsize.hpp"
 #include "../libqurl.hpp"
 #include "libqwebengineframe.hpp"
@@ -54,12 +55,24 @@ void q_webengineframe_run_java_script3(void* self, const char* script) {
     QWebEngineFrame_RunJavaScript3((QWebEngineFrame*)self, qstring(script));
 }
 
+void q_webengineframe_run_java_script4(void* self, const char* script, void* callback) {
+    QWebEngineFrame_RunJavaScript4((QWebEngineFrame*)self, qstring(script), (QJSValue*)callback);
+}
+
+void q_webengineframe_run_java_script5(void* self, const char* script, uint32_t worldId, void* callback) {
+    QWebEngineFrame_RunJavaScript5((QWebEngineFrame*)self, qstring(script), worldId, (QJSValue*)callback);
+}
+
 void q_webengineframe_print_to_pdf(void* self, const char* filePath) {
     QWebEngineFrame_PrintToPdf((QWebEngineFrame*)self, qstring(filePath));
 }
 
 void q_webengineframe_print_to_pdf2(void* self, void (*callback)(char* funcparam1)) {
     QWebEngineFrame_PrintToPdf2((QWebEngineFrame*)self, (intptr_t)callback);
+}
+
+void q_webengineframe_print_to_pdf3(void* self, void* callback) {
+    QWebEngineFrame_PrintToPdf3((QWebEngineFrame*)self, (QJSValue*)callback);
 }
 
 void q_webengineframe_run_java_script22(void* self, const char* script, uint32_t worldId) {
