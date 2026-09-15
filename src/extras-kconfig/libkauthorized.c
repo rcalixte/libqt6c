@@ -1,6 +1,8 @@
+#include "../qml/libqjsengine.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
+#include "../qml/libqqmlengine.hpp"
 #include "libkauthorized.hpp"
 #include "libkauthorized.h"
 
@@ -41,6 +43,10 @@ bool k_authorized_authorize_action2(int32_t action) {
 
 bool k_authorized_authorize_control_module(const char* pluginId) {
     return KAuthorized_AuthorizeControlModule(qstring(pluginId));
+}
+
+KAuthorized* k_authorized_create(void* param1, void* param2) {
+    return KAuthorized_Create((QQmlEngine*)param1, (QJSEngine*)param2);
 }
 
 const char* k_authorized_tr2(const char* s, const char* c) {

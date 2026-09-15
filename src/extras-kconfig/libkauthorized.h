@@ -66,6 +66,13 @@ bool k_authorized_authorize_action2(int32_t action);
 ///
 bool k_authorized_authorize_control_module(const char* pluginId);
 
+/// [Upstream resources](https://api.kde.org/kauthorized.html#create)
+///
+/// @param param1 QQmlEngine*
+/// @param param2 QJSEngine*
+///
+KAuthorized* k_authorized_create(void* param1, void* param2);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`

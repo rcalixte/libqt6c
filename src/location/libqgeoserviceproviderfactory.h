@@ -14,6 +14,31 @@
 ///
 QGeoServiceProviderFactory* q_geoserviceproviderfactory_new();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qgeoserviceproviderfactory.html#setQmlEngine)
+///
+/// @param self QGeoServiceProviderFactory*
+/// @param engine QQmlEngine*
+///
+void q_geoserviceproviderfactory_set_qml_engine(void* self, void* engine);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgeoserviceproviderfactory.html#setQmlEngine)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGeoServiceProviderFactory*
+/// @param callback void func(QGeoServiceProviderFactory* self, QQmlEngine* engine)
+///
+void q_geoserviceproviderfactory_on_set_qml_engine(void* self, void (*callback)(void*, void*));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgeoserviceproviderfactory.html#setQmlEngine)
+///
+/// Base class method implementation
+///
+/// @param self QGeoServiceProviderFactory*
+/// @param engine QQmlEngine*
+///
+void q_geoserviceproviderfactory_super_set_qml_engine(void* self, void* engine);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoserviceproviderfactory.html#operator-eq)
 ///
 /// @param self QGeoServiceProviderFactory*

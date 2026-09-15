@@ -289,6 +289,13 @@ void q_geoserviceprovider_set_locale(void* self, void* locale);
 ///
 void q_geoserviceprovider_set_allow_experimental(void* self, bool allow);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qgeoserviceprovider.html#setQmlEngine)
+///
+/// @param self QGeoServiceProvider*
+/// @param engine QQmlEngine*
+///
+void q_geoserviceprovider_set_qml_engine(void* self, void* engine);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
