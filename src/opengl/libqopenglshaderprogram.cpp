@@ -97,11 +97,11 @@ uint32_t QOpenGLShader_ShaderId(const QOpenGLShader* self) {
 }
 
 bool QOpenGLShader_HasOpenGLShaders(int type) {
-    return QOpenGLShader::hasOpenGLShaders(static_cast<QFlags<QOpenGLShader::ShaderTypeBit>>(type));
+    return QOpenGLShader::hasOpenGLShaders(static_cast<QOpenGLShader::ShaderType>(type));
 }
 
 bool QOpenGLShader_HasOpenGLShaders2(int type, QOpenGLContext* context) {
-    return QOpenGLShader::hasOpenGLShaders(static_cast<QFlags<QOpenGLShader::ShaderTypeBit>>(type), context);
+    return QOpenGLShader::hasOpenGLShaders(static_cast<QOpenGLShader::ShaderType>(type), context);
 }
 
 // Base class handler implementation
