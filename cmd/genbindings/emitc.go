@@ -49,6 +49,7 @@ const (
 )
 
 var operatorLookup = map[rune]string{
+	' ': "-",
 	'!': "-not",
 	'"': "-22",
 	'&': "-and",
@@ -58,6 +59,7 @@ var operatorLookup = map[rune]string{
 	'+': "-2b",
 	'-': "-",
 	'/': "-2f",
+	':': "-3a",
 	'<': "-lt",
 	'=': "-eq",
 	'>': "-gt",
@@ -70,15 +72,18 @@ var operatorLookup = map[rune]string{
 
 func operatorToUrl(cmdUrl string) string {
 	suffix := strings.TrimPrefix(cmdUrl, "operator")
-	ret := "operator"
+	url := "operator"
 
 	for _, op := range suffix {
 		if ch, ok := operatorLookup[op]; ok {
-			ret += ch
+			url += ch
+		}
+		if unicode.IsLetter(op) {
+			url += string(op)
 		}
 	}
 
-	return ret
+	return url
 }
 
 const (
