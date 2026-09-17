@@ -164,7 +164,7 @@ QRgba64* q_rgba64_premultiplied(void* self);
 ///
 QRgba64* q_rgba64_unpremultiplied(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#operator-unsigned-long-long)
 ///
 /// @param self QRgba64*
 ///
@@ -185,4 +185,56 @@ void q_rgba64_operator_assign(void* self, uint64_t _rgba);
 ///
 void q_rgba64_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qrgba64-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qrgba64-h.html#qRgba64)
+///
+/// @param r uint16_t
+/// @param g uint16_t
+/// @param b uint16_t
+/// @param a uint16_t
+///
+QRgba64* q_qrgba64_h_q_rgba64(uint16_t r, uint16_t g, uint16_t b, uint16_t a);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qrgba64-h.html#qRgba64)
+///
+/// @param c uint64_t
+///
+QRgba64* q_qrgba64_h_q_rgba642(uint64_t c);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qrgba64-h.html#qPremultiply)
+///
+/// @param c QRgba64*
+///
+QRgba64* q_qrgba64_h_q_premultiply(void* c);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qrgba64-h.html#qUnpremultiply)
+///
+/// @param c QRgba64*
+///
+QRgba64* q_qrgba64_h_q_unpremultiply(void* c);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qrgba64-h.html#qRed)
+///
+/// @param rgb QRgba64*
+///
+uint32_t q_qrgba64_h_q_red(void* rgb);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qrgba64-h.html#qGreen)
+///
+/// @param rgb QRgba64*
+///
+uint32_t q_qrgba64_h_q_green(void* rgb);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qrgba64-h.html#qBlue)
+///
+/// @param rgb QRgba64*
+///
+uint32_t q_qrgba64_h_q_blue(void* rgb);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qrgba64-h.html#qAlpha)
+///
+/// @param rgb QRgba64*
+///
+uint32_t q_qrgba64_h_q_alpha(void* rgb);
 #endif

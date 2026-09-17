@@ -156,4 +156,5 @@ void k_texteditor__cursor_position(void* self, int* line, int* column);
 ///
 void k_texteditor__cursor_delete(void* self);
 
+/// [Upstream resources](https://api.kde.org/ktexteditor.html)
 #endif

@@ -814,7 +814,7 @@ QCborValueConstRef* q_cborvalueconstref_new(void* other);
 ///
 QCborValueConstRef* q_cborvalueconstref_new2(void* param1);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#operator-QCborValue)
 ///
 /// @param self QCborValueConstRef*
 ///
@@ -1303,7 +1303,7 @@ QCborValueRef* q_cborvalueref_operator_subscript2(void* self, char* key);
 ///
 QCborValueRef* q_cborvalueref_operator_subscript3(void* self, const char* key);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#operator-QCborValue)
 ///
 /// @param self QCborValueRef*
 ///
@@ -1732,6 +1732,15 @@ const char* q_cborvalueref_to_diagnostic_notation1(void* self, int32_t opt);
 /// @param self QCborValueRef*
 ///
 void q_cborvalueref_delete(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#qHash)
+///
+/// @param value QCborValue*
+/// @param seed uintptr_t
+///
+uintptr_t q_qcborvalue_q_hash(void* value, uintptr_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#public-types)
 

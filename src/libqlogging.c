@@ -135,8 +135,12 @@ void q_messagelogger_delete(void* self) {
     QMessageLogger_Delete((QMessageLogger*)(self));
 }
 
-const char* q_qlogging_h_error_string(int errorCode) {
-    libqt_string _str = qlogging_h_ErrorString(errorCode);
+void q_qlogging_q_set_message_pattern(const char* messagePattern) {
+    qlogging_QSetMessagePattern(qstring(messagePattern));
+}
+
+const char* q_qlogging_error_string(int errorCode) {
+    libqt_string _str = qlogging_ErrorString(errorCode);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

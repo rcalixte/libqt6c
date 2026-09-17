@@ -39,6 +39,8 @@ bool QPointingDeviceUniqueId_IsValid(const QPointingDeviceUniqueId* self);
 long long QPointingDeviceUniqueId_NumericId(const QPointingDeviceUniqueId* self);
 void QPointingDeviceUniqueId_Delete(QPointingDeviceUniqueId* self);
 
+size_t qpointingdevice_h_QHash(QPointingDeviceUniqueId* key, size_t seed);
+
 QPointingDevice* QPointingDevice_New();
 QPointingDevice* QPointingDevice_New2(const libqt_string name, long long systemId, int devType, int pType, int caps, int maxPoints, int buttonCount);
 QPointingDevice* QPointingDevice_New3(QObject* parent);

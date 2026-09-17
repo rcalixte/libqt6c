@@ -397,6 +397,10 @@ void q_cbormap_delete(void* self) {
     QCborMap_Delete((QCborMap*)(self));
 }
 
+uintptr_t q_qcbormap_q_hash(void* map, uintptr_t seed) {
+    return qcbormap_QHash((QCborMap*)map, seed);
+}
+
 QCborMap__Iterator* q_cbormap__iterator_new(void* other) {
     return QCborMap__Iterator_New((QCborMap__Iterator*)other);
 }

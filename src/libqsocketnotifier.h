@@ -1056,7 +1056,7 @@ void q_socketdescriptor_copy_assign(void* self, void* other);
 ///
 void q_socketdescriptor_move_assign(void* self, void* other);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qsocketdescriptor.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsocketdescriptor.html#operator-int)
 ///
 /// @param self QSocketDescriptor*
 ///

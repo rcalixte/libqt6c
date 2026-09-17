@@ -84,6 +84,10 @@ const KTextEditor__Cursor* k_texteditor__movingcursor_to_cursor(void* self) {
     return KTextEditor__MovingCursor_ToCursor((KTextEditor__MovingCursor*)self);
 }
 
+KTextEditor__Cursor* k_texteditor__movingcursor_to_cursor2(void* self) {
+    return KTextEditor__MovingCursor_ToCursor2((KTextEditor__MovingCursor*)self);
+}
+
 bool k_texteditor__movingcursor_move2(void* self, int chars, int32_t wrapBehavior) {
     return KTextEditor__MovingCursor_Move2((KTextEditor__MovingCursor*)self, chars, wrapBehavior);
 }

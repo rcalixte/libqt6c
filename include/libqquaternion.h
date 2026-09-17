@@ -265,7 +265,7 @@ QQuaternion* q_quaternion_operator_divide_assign(void* self, float divisor);
 ///
 QVector4D* q_quaternion_to_vector4_d(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#operator-QVariant)
 ///
 /// @param self QQuaternion*
 ///
@@ -389,4 +389,12 @@ QQuaternion* q_quaternion_nlerp(void* q1, void* q2, float t);
 ///
 void q_quaternion_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qquaternion-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qquaternion-h.html#qFuzzyCompare)
+///
+/// @param q1 QQuaternion*
+/// @param q2 QQuaternion*
+///
+bool q_qquaternion_h_q_fuzzy_compare(void* q1, void* q2);
 #endif

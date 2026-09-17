@@ -19,6 +19,9 @@ typedef struct QJsonObject QJsonObject;
 typedef struct QStaticPlugin QStaticPlugin;
 #endif
 
+unsigned char qplugin_QPluginArchRequirements();
+void qplugin_QRegisterStaticPluginFunction(QStaticPlugin* staticPlugin);
+
 QStaticPlugin* QStaticPlugin_New(const QStaticPlugin* other);
 QStaticPlugin* QStaticPlugin_New2(QStaticPlugin* other);
 QStaticPlugin* QStaticPlugin_New3(const QStaticPlugin* param1);

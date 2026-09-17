@@ -18,6 +18,8 @@ extern "C" {
 typedef struct QMimeType QMimeType;
 #endif
 
+size_t qmimetype_QHash(const QMimeType* key, size_t seed);
+
 QMimeType* QMimeType_New();
 QMimeType* QMimeType_New2(const QMimeType* other);
 void QMimeType_OperatorAssign(QMimeType* self, const QMimeType* other);

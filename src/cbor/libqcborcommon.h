@@ -25,7 +25,7 @@ int32_t q_cborerror_c(void* self);
 ///
 void q_cborerror_set_c(void* self, int32_t c);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qcborerror.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborerror.html#operator-QCborError-3a-3aCode)
 ///
 /// @param self QCborError*
 ///
@@ -48,6 +48,22 @@ const char* q_cborerror_to_string(void* self);
 /// @param self QCborError*
 ///
 void q_cborerror_delete(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborcommon.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborcommon.html#qHash)
+///
+/// @param tag enum qcborcommon__QCborSimpleType
+/// @param seed uintptr_t
+///
+uintptr_t q_qcborcommon_q_hash(uint8_t tag, uintptr_t seed);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborcommon.html#qHash)
+///
+/// @param tag enum qcborcommon__QCborTag
+/// @param seed uintptr_t
+///
+uintptr_t q_qcborcommon_q_hash2(uint64_t tag, uintptr_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborcommon.html#public-types)
 

@@ -44,7 +44,7 @@ void k_lazylocalizedstring_copy_assign(void* self, void* other);
 ///
 void k_lazylocalizedstring_move_assign(void* self, void* other);
 
-/// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#operator)
+/// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#operator-KLocalizedString)
 ///
 /// @param self KLazyLocalizedString*
 ///

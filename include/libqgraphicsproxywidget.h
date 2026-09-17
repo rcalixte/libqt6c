@@ -3228,6 +3228,34 @@ QPointF* q_graphicsproxywidget_map_to_scene(void* self, void* point);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
+///
+/// @param self QGraphicsProxyWidget*
+/// @param item QGraphicsItem*
+/// @param rect QRectF*
+///
+QPolygonF* q_graphicsproxywidget_map_to_item2(void* self, void* item, void* rect);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
+///
+/// @param self QGraphicsProxyWidget*
+/// @param rect QRectF*
+///
+QPolygonF* q_graphicsproxywidget_map_to_parent2(void* self, void* rect);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
+///
+/// @param self QGraphicsProxyWidget*
+/// @param rect QRectF*
+///
+QPolygonF* q_graphicsproxywidget_map_to_scene2(void* self, void* rect);
+
+/// Inherited from QGraphicsItem
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
 /// @param self QGraphicsProxyWidget*
@@ -3253,6 +3281,34 @@ QRectF* q_graphicsproxywidget_map_rect_to_parent(void* self, void* rect);
 /// @param rect QRectF*
 ///
 QRectF* q_graphicsproxywidget_map_rect_to_scene(void* self, void* rect);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
+///
+/// @param self QGraphicsProxyWidget*
+/// @param item QGraphicsItem*
+/// @param polygon QPolygonF*
+///
+QPolygonF* q_graphicsproxywidget_map_to_item3(void* self, void* item, void* polygon);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
+///
+/// @param self QGraphicsProxyWidget*
+/// @param polygon QPolygonF*
+///
+QPolygonF* q_graphicsproxywidget_map_to_parent3(void* self, void* polygon);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
+///
+/// @param self QGraphicsProxyWidget*
+/// @param polygon QPolygonF*
+///
+QPolygonF* q_graphicsproxywidget_map_to_scene3(void* self, void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3312,6 +3368,34 @@ QPointF* q_graphicsproxywidget_map_from_scene(void* self, void* point);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
+///
+/// @param self QGraphicsProxyWidget*
+/// @param item QGraphicsItem*
+/// @param rect QRectF*
+///
+QPolygonF* q_graphicsproxywidget_map_from_item2(void* self, void* item, void* rect);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
+///
+/// @param self QGraphicsProxyWidget*
+/// @param rect QRectF*
+///
+QPolygonF* q_graphicsproxywidget_map_from_parent2(void* self, void* rect);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
+///
+/// @param self QGraphicsProxyWidget*
+/// @param rect QRectF*
+///
+QPolygonF* q_graphicsproxywidget_map_from_scene2(void* self, void* rect);
+
+/// Inherited from QGraphicsItem
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
 /// @param self QGraphicsProxyWidget*
@@ -3337,6 +3421,34 @@ QRectF* q_graphicsproxywidget_map_rect_from_parent(void* self, void* rect);
 /// @param rect QRectF*
 ///
 QRectF* q_graphicsproxywidget_map_rect_from_scene(void* self, void* rect);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
+///
+/// @param self QGraphicsProxyWidget*
+/// @param item QGraphicsItem*
+/// @param polygon QPolygonF*
+///
+QPolygonF* q_graphicsproxywidget_map_from_item3(void* self, void* item, void* polygon);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
+///
+/// @param self QGraphicsProxyWidget*
+/// @param polygon QPolygonF*
+///
+QPolygonF* q_graphicsproxywidget_map_from_parent3(void* self, void* polygon);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
+///
+/// @param self QGraphicsProxyWidget*
+/// @param polygon QPolygonF*
+///
+QPolygonF* q_graphicsproxywidget_map_from_scene3(void* self, void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3396,6 +3508,43 @@ QPointF* q_graphicsproxywidget_map_to_parent5(void* self, double x, double y);
 /// @param y double
 ///
 QPointF* q_graphicsproxywidget_map_to_scene5(void* self, double x, double y);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
+///
+/// @param self QGraphicsProxyWidget*
+/// @param item QGraphicsItem*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
+///
+QPolygonF* q_graphicsproxywidget_map_to_item6(void* self, void* item, double x, double y, double w, double h);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
+///
+/// @param self QGraphicsProxyWidget*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
+///
+QPolygonF* q_graphicsproxywidget_map_to_parent6(void* self, double x, double y, double w, double h);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
+///
+/// @param self QGraphicsProxyWidget*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
+///
+QPolygonF* q_graphicsproxywidget_map_to_scene6(void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3464,6 +3613,43 @@ QPointF* q_graphicsproxywidget_map_from_parent5(void* self, double x, double y);
 /// @param y double
 ///
 QPointF* q_graphicsproxywidget_map_from_scene5(void* self, double x, double y);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
+///
+/// @param self QGraphicsProxyWidget*
+/// @param item QGraphicsItem*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
+///
+QPolygonF* q_graphicsproxywidget_map_from_item6(void* self, void* item, double x, double y, double w, double h);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
+///
+/// @param self QGraphicsProxyWidget*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
+///
+QPolygonF* q_graphicsproxywidget_map_from_parent6(void* self, double x, double y, double w, double h);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
+///
+/// @param self QGraphicsProxyWidget*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
+///
+QPolygonF* q_graphicsproxywidget_map_from_scene6(void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///

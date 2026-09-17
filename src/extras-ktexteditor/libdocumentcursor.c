@@ -91,6 +91,10 @@ KTextEditor__Cursor* k_texteditor__documentcursor_to_cursor(void* self) {
     return KTextEditor__DocumentCursor_ToCursor((KTextEditor__DocumentCursor*)self);
 }
 
+KTextEditor__Cursor* k_texteditor__documentcursor_to_cursor2(void* self) {
+    return KTextEditor__DocumentCursor_ToCursor2((KTextEditor__DocumentCursor*)self);
+}
+
 void k_texteditor__documentcursor_operator_assign(void* self, void* other) {
     KTextEditor__DocumentCursor_OperatorAssign((KTextEditor__DocumentCursor*)self, (KTextEditor__DocumentCursor*)other);
 }

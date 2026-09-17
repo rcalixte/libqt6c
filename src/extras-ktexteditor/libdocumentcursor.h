@@ -157,6 +157,12 @@ bool k_texteditor__documentcursor_move(void* self, int chars);
 ///
 KTextEditor__Cursor* k_texteditor__documentcursor_to_cursor(void* self);
 
+/// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#operator-KTextEditor-3a-3aCursor)
+///
+/// @param self KTextEditor__DocumentCursor*
+///
+KTextEditor__Cursor* k_texteditor__documentcursor_to_cursor2(void* self);
+
 /// [Upstream resources](https://api.kde.org/ktexteditor-documentcursor.html#operator-eq)
 ///
 /// @param self KTextEditor__DocumentCursor*

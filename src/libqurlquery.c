@@ -3,6 +3,10 @@
 #include "libqurlquery.hpp"
 #include "libqurlquery.h"
 
+uintptr_t q_qurlquery_q_hash(void* key, uintptr_t seed) {
+    return qurlquery_QHash((QUrlQuery*)key, seed);
+}
+
 QUrlQuery* q_urlquery_new() {
     return QUrlQuery_New();
 }

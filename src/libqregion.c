@@ -1,5 +1,6 @@
 #include "libqbitmap.hpp"
 #include "libqpoint.hpp"
+#include "libqpolygon.hpp"
 #include "libqrect.hpp"
 #include "libqvariant.hpp"
 #include "libqregion.hpp"
@@ -17,20 +18,28 @@ QRegion* q_region_new3(void* r) {
     return QRegion_New3((QRect*)r);
 }
 
-QRegion* q_region_new4(void* region) {
-    return QRegion_New4((QRegion*)region);
+QRegion* q_region_new4(void* pa) {
+    return QRegion_New4((QPolygon*)pa);
 }
 
-QRegion* q_region_new5(void* bitmap) {
-    return QRegion_New5((QBitmap*)bitmap);
+QRegion* q_region_new5(void* region) {
+    return QRegion_New5((QRegion*)region);
 }
 
-QRegion* q_region_new6(int x, int y, int w, int h, int32_t t) {
-    return QRegion_New6(x, y, w, h, t);
+QRegion* q_region_new6(void* bitmap) {
+    return QRegion_New6((QBitmap*)bitmap);
 }
 
-QRegion* q_region_new7(void* r, int32_t t) {
-    return QRegion_New7((QRect*)r, t);
+QRegion* q_region_new7(int x, int y, int w, int h, int32_t t) {
+    return QRegion_New7(x, y, w, h, t);
+}
+
+QRegion* q_region_new8(void* r, int32_t t) {
+    return QRegion_New8((QRect*)r, t);
+}
+
+QRegion* q_region_new9(void* pa, int32_t fillRule) {
+    return QRegion_New9((QPolygon*)pa, fillRule);
 }
 
 void q_region_operator_assign(void* self, void* param1) {

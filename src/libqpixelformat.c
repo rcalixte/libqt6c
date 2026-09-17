@@ -128,3 +128,31 @@ unsigned char q_pixelformat_sub_enum(void* self) {
 void q_pixelformat_delete(void* self) {
     QPixelFormat_Delete((QPixelFormat*)(self));
 }
+
+QPixelFormat* q_qpixelformat_h_q_pixel_format_rgba(unsigned char red, unsigned char green, unsigned char blue, unsigned char alfa, int32_t usage, int32_t position, int32_t pmul, int32_t typeInt) {
+    return qpixelformat_h_QPixelFormatRgba(red, green, blue, alfa, usage, position, pmul, typeInt);
+}
+
+QPixelFormat* q_qpixelformat_h_q_pixel_format_grayscale(unsigned char channelSize, int32_t typeInt) {
+    return qpixelformat_h_QPixelFormatGrayscale(channelSize, typeInt);
+}
+
+QPixelFormat* q_qpixelformat_h_q_pixel_format_alpha(unsigned char channelSize, int32_t typeInt) {
+    return qpixelformat_h_QPixelFormatAlpha(channelSize, typeInt);
+}
+
+QPixelFormat* q_qpixelformat_h_q_pixel_format_cmyk(unsigned char channelSize, unsigned char alfa, int32_t usage, int32_t position, int32_t typeInt) {
+    return qpixelformat_h_QPixelFormatCmyk(channelSize, alfa, usage, position, typeInt);
+}
+
+QPixelFormat* q_qpixelformat_h_q_pixel_format_hsl(unsigned char channelSize, unsigned char alfa, int32_t usage, int32_t position, int32_t typeInt) {
+    return qpixelformat_h_QPixelFormatHsl(channelSize, alfa, usage, position, typeInt);
+}
+
+QPixelFormat* q_qpixelformat_h_q_pixel_format_hsv(unsigned char channelSize, unsigned char alfa, int32_t usage, int32_t position, int32_t typeInt) {
+    return qpixelformat_h_QPixelFormatHsv(channelSize, alfa, usage, position, typeInt);
+}
+
+QPixelFormat* q_qpixelformat_h_q_pixel_format_yuv(int32_t layout, unsigned char alfa, int32_t usage, int32_t position, int32_t p_mul, int32_t typeInt, int32_t b_order) {
+    return qpixelformat_h_QPixelFormatYuv(layout, alfa, usage, position, p_mul, typeInt, b_order);
+}

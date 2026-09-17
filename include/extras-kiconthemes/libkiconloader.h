@@ -133,6 +133,24 @@ void k_iconloader_add_app_dir(void* self, const char* appname);
 ///
 QPixmap* k_iconloader_load_icon(void* self, const char* name, int32_t group);
 
+/// [Upstream resources](https://api.kde.org/kiconloader.html#loadScaledIcon)
+///
+/// @param self KIconLoader*
+/// @param name const char*
+/// @param group enum KIconLoader__Group
+/// @param scale double
+///
+QPixmap* k_iconloader_load_scaled_icon(void* self, const char* name, int32_t group, double scale);
+
+/// [Upstream resources](https://api.kde.org/kiconloader.html#loadScaledIcon)
+///
+/// @param self KIconLoader*
+/// @param name const char*
+/// @param group enum KIconLoader__Group
+/// @param scale double
+///
+QPixmap* k_iconloader_load_scaled_icon2(void* self, const char* name, int32_t group, double scale);
+
 /// [Upstream resources](https://api.kde.org/kiconloader.html#loadMimeTypeIcon)
 ///
 /// @param self KIconLoader*
@@ -407,6 +425,72 @@ QPixmap* k_iconloader_load_icon4(void* self, const char* name, int32_t group, in
 /// @param overlays const char**
 ///
 QPixmap* k_iconloader_load_icon5(void* self, const char* name, int32_t group, int size, int state, const char* overlays[static 1]);
+
+/// [Upstream resources](https://api.kde.org/kiconloader.html#loadScaledIcon)
+///
+/// @param self KIconLoader*
+/// @param name const char*
+/// @param group enum KIconLoader__Group
+/// @param scale double
+/// @param size int
+///
+QPixmap* k_iconloader_load_scaled_icon4(void* self, const char* name, int32_t group, double scale, int size);
+
+/// [Upstream resources](https://api.kde.org/kiconloader.html#loadScaledIcon)
+///
+/// @param self KIconLoader*
+/// @param name const char*
+/// @param group enum KIconLoader__Group
+/// @param scale double
+/// @param size int
+/// @param state int
+///
+QPixmap* k_iconloader_load_scaled_icon5(void* self, const char* name, int32_t group, double scale, int size, int state);
+
+/// [Upstream resources](https://api.kde.org/kiconloader.html#loadScaledIcon)
+///
+/// @param self KIconLoader*
+/// @param name const char*
+/// @param group enum KIconLoader__Group
+/// @param scale double
+/// @param size int
+/// @param state int
+/// @param overlays const char**
+///
+QPixmap* k_iconloader_load_scaled_icon6(void* self, const char* name, int32_t group, double scale, int size, int state, const char* overlays[static 1]);
+
+/// [Upstream resources](https://api.kde.org/kiconloader.html#loadScaledIcon)
+///
+/// @param self KIconLoader*
+/// @param name const char*
+/// @param group enum KIconLoader__Group
+/// @param scale double
+/// @param size QSize*
+///
+QPixmap* k_iconloader_load_scaled_icon42(void* self, const char* name, int32_t group, double scale, void* size);
+
+/// [Upstream resources](https://api.kde.org/kiconloader.html#loadScaledIcon)
+///
+/// @param self KIconLoader*
+/// @param name const char*
+/// @param group enum KIconLoader__Group
+/// @param scale double
+/// @param size QSize*
+/// @param state int
+///
+QPixmap* k_iconloader_load_scaled_icon52(void* self, const char* name, int32_t group, double scale, void* size, int state);
+
+/// [Upstream resources](https://api.kde.org/kiconloader.html#loadScaledIcon)
+///
+/// @param self KIconLoader*
+/// @param name const char*
+/// @param group enum KIconLoader__Group
+/// @param scale double
+/// @param size QSize*
+/// @param state int
+/// @param overlays const char**
+///
+QPixmap* k_iconloader_load_scaled_icon62(void* self, const char* name, int32_t group, double scale, void* size, int state, const char* overlays[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kiconloader.html#loadMimeTypeIcon)
 ///

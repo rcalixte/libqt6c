@@ -1,6 +1,7 @@
 #include "../libqmetaobject.hpp"
 #include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
+#include "libdevice.hpp"
 #include "libdeviceinterface.hpp"
 #include "libstoragevolume.hpp"
 #include "libstoragevolume.h"
@@ -59,6 +60,10 @@ const char* k_solid__storagevolume_uuid(void* self) {
 
 uintptr_t k_solid__storagevolume_size(void* self) {
     return Solid__StorageVolume_Size((Solid__StorageVolume*)self);
+}
+
+Solid__Device* k_solid__storagevolume_encrypted_container(void* self) {
+    return Solid__StorageVolume_EncryptedContainer((Solid__StorageVolume*)self);
 }
 
 const char* k_solid__storagevolume_tr2(const char* s, const char* c) {

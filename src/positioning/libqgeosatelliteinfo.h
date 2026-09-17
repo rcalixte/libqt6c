@@ -8,6 +8,15 @@
 #include "../libqttypedefs.h"
 #include "../qtlibc.h"
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfo-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfo-h.html#qHash)
+///
+/// @param key QGeoSatelliteInfo*
+/// @param seed uintptr_t
+///
+uintptr_t q_qgeosatelliteinfo_h_q_hash(void* key, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfo.html)
 
 /// q_geosatelliteinfo_new constructs a new QGeoSatelliteInfo object.

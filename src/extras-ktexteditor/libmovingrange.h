@@ -131,6 +131,12 @@ void k_texteditor__movingrange_set_range4(void* self, void* start, void* end);
 ///
 const KTextEditor__Range* k_texteditor__movingrange_to_range(void* self);
 
+/// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#operator-KTextEditor-3a-3aRange)
+///
+/// @param self KTextEditor__MovingRange*
+///
+KTextEditor__Range* k_texteditor__movingrange_to_range2(void* self);
+
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrange.html#toLineRange)
 ///
 /// @param self KTextEditor__MovingRange*

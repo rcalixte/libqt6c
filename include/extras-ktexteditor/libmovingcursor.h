@@ -139,6 +139,12 @@ bool k_texteditor__movingcursor_move(void* self, int chars);
 ///
 const KTextEditor__Cursor* k_texteditor__movingcursor_to_cursor(void* self);
 
+/// [Upstream resources](https://api.kde.org/ktexteditor-movingcursor.html#operator-KTextEditor-3a-3aCursor)
+///
+/// @param self KTextEditor__MovingCursor*
+///
+KTextEditor__Cursor* k_texteditor__movingcursor_to_cursor2(void* self);
+
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingcursor.html#move)
 ///
 /// @param self KTextEditor__MovingCursor*

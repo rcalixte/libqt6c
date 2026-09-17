@@ -10,6 +10,15 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html)
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#qHash)
+///
+/// @param key QUrlQuery*
+/// @param seed uintptr_t
+///
+uintptr_t q_qurlquery_q_hash(void* key, uintptr_t seed);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html)
+
 /// q_urlquery_new constructs a new QUrlQuery object.
 ///
 QUrlQuery* q_urlquery_new();

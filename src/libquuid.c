@@ -152,6 +152,10 @@ void q_uuid_delete(void* self) {
     QUuid_Delete((QUuid*)(self));
 }
 
+uintptr_t q_quuid_q_hash(void* uuid, uintptr_t seed) {
+    return quuid_QHash((QUuid*)uuid, seed);
+}
+
 QUuid__Id128Bytes* q_uuid__id128bytes_new() {
     return QUuid__Id128Bytes_New();
 }

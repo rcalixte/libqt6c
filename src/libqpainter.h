@@ -501,10 +501,24 @@ void q_painter_draw_points(void* self, void* points, int pointCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPoints)
 ///
 /// @param self QPainter*
+/// @param points QPolygonF*
+///
+void q_painter_draw_points2(void* self, void* points);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPoints)
+///
+/// @param self QPainter*
 /// @param points QPoint*
 /// @param pointCount int
 ///
 void q_painter_draw_points3(void* self, void* points, int pointCount);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPoints)
+///
+/// @param self QPainter*
+/// @param points QPolygon*
+///
+void q_painter_draw_points4(void* self, void* points);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLine)
 ///
@@ -713,10 +727,24 @@ void q_painter_draw_polyline(void* self, void* points, int pointCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolyline)
 ///
 /// @param self QPainter*
+/// @param polyline QPolygonF*
+///
+void q_painter_draw_polyline2(void* self, void* polyline);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolyline)
+///
+/// @param self QPainter*
 /// @param points QPoint*
 /// @param pointCount int
 ///
 void q_painter_draw_polyline3(void* self, void* points, int pointCount);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolyline)
+///
+/// @param self QPainter*
+/// @param polygon QPolygon*
+///
+void q_painter_draw_polyline4(void* self, void* polygon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
 ///
@@ -729,10 +757,24 @@ void q_painter_draw_polygon(void* self, void* points, int pointCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
 ///
 /// @param self QPainter*
+/// @param polygon QPolygonF*
+///
+void q_painter_draw_polygon2(void* self, void* polygon);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
+///
+/// @param self QPainter*
 /// @param points QPoint*
 /// @param pointCount int
 ///
 void q_painter_draw_polygon3(void* self, void* points, int pointCount);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
+///
+/// @param self QPainter*
+/// @param polygon QPolygon*
+///
+void q_painter_draw_polygon4(void* self, void* polygon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawConvexPolygon)
 ///
@@ -745,10 +787,24 @@ void q_painter_draw_convex_polygon(void* self, void* points, int pointCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawConvexPolygon)
 ///
 /// @param self QPainter*
+/// @param polygon QPolygonF*
+///
+void q_painter_draw_convex_polygon2(void* self, void* polygon);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawConvexPolygon)
+///
+/// @param self QPainter*
 /// @param points QPoint*
 /// @param pointCount int
 ///
 void q_painter_draw_convex_polygon3(void* self, void* points, int pointCount);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawConvexPolygon)
+///
+/// @param self QPainter*
+/// @param polygon QPolygon*
+///
+void q_painter_draw_convex_polygon4(void* self, void* polygon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawArc)
 ///
@@ -1577,11 +1633,27 @@ void q_painter_draw_polygon32(void* self, void* points, int pointCount, int32_t 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
 ///
 /// @param self QPainter*
+/// @param polygon QPolygonF*
+/// @param fillRule enum Qt__FillRule
+///
+void q_painter_draw_polygon22(void* self, void* polygon, int32_t fillRule);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
+///
+/// @param self QPainter*
 /// @param points QPoint*
 /// @param pointCount int
 /// @param fillRule enum Qt__FillRule
 ///
 void q_painter_draw_polygon33(void* self, void* points, int pointCount, int32_t fillRule);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
+///
+/// @param self QPainter*
+/// @param polygon QPolygon*
+/// @param fillRule enum Qt__FillRule
+///
+void q_painter_draw_polygon23(void* self, void* polygon, int32_t fillRule);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawRoundedRect)
 ///

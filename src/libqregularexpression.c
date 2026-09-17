@@ -1,6 +1,10 @@
 #include "libqregularexpression.hpp"
 #include "libqregularexpression.h"
 
+uintptr_t q_qregularexpression_q_hash(void* key, uintptr_t seed) {
+    return qregularexpression_QHash((QRegularExpression*)key, seed);
+}
+
 QRegularExpression* q_regularexpression_new() {
     return QRegularExpression_New();
 }

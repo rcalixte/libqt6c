@@ -18,6 +18,8 @@ extern "C" {
 typedef struct QTypeRevision QTypeRevision;
 #endif
 
+size_t qtyperevision_QHash(const QTypeRevision* key, size_t seed);
+
 QTypeRevision* QTypeRevision_New();
 QTypeRevision* QTypeRevision_New2(const QTypeRevision* other);
 QTypeRevision* QTypeRevision_New3(QTypeRevision* other);

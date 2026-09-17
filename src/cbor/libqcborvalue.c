@@ -1074,3 +1074,7 @@ const char* q_cborvalueref_to_diagnostic_notation1(void* self, int32_t opt) {
 void q_cborvalueref_delete(void* self) {
     QCborValueRef_Delete((QCborValueRef*)(self));
 }
+
+uintptr_t q_qcborvalue_q_hash(void* value, uintptr_t seed) {
+    return qcborvalue_QHash((QCborValue*)value, seed);
+}

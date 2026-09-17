@@ -219,3 +219,7 @@ QRawFont* q_rawfont_from_font2(void* font, int32_t writingSystem) {
 void q_rawfont_delete(void* self) {
     QRawFont_Delete((QRawFont*)(self));
 }
+
+uintptr_t q_qrawfont_h_q_hash(void* font, uintptr_t seed) {
+    return qrawfont_h_QHash((QRawFont*)font, seed);
+}

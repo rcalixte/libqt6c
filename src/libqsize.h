@@ -233,6 +233,15 @@ QSizeF* q_size_to_size_f(void* self);
 ///
 void q_size_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qsize.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#qHash)
+///
+/// @param s QSize*
+/// @param seed uintptr_t
+///
+uintptr_t q_qsize_q_hash(void* s, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html)
 
 /// q_sizef_new constructs a new QSizeF object.

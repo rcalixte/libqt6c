@@ -10,6 +10,15 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html)
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html#qHash)
+///
+/// @param key QRegularExpression*
+/// @param seed uintptr_t
+///
+uintptr_t q_qregularexpression_q_hash(void* key, uintptr_t seed);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qregularexpression.html)
+
 /// q_regularexpression_new constructs a new QRegularExpression object.
 ///
 QRegularExpression* q_regularexpression_new();

@@ -3,6 +3,10 @@
 #include "libqtyperevision.hpp"
 #include "libqtyperevision.hxx"
 
+size_t qtyperevision_QHash(const QTypeRevision* key, size_t seed) {
+    return qHash(*key, static_cast<size_t>(seed));
+}
+
 QTypeRevision* QTypeRevision_New() {
     return new QTypeRevision();
 }

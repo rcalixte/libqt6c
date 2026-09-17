@@ -325,7 +325,7 @@ QJsonValueConstRef* q_jsonvalueconstref_new(void* other);
 ///
 QJsonValueConstRef* q_jsonvalueconstref_new2(void* param1);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueconstref.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueconstref.html#operator-QJsonValue)
 ///
 /// @param self QJsonValueConstRef*
 ///
@@ -545,7 +545,7 @@ void q_jsonvalueref_operator_assign(void* self, void* val);
 ///
 void q_jsonvalueref_operator_assign2(void* self, void* val);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueref.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueref.html#operator-QJsonValue)
 ///
 /// @param self QJsonValueRef*
 ///
@@ -716,6 +716,15 @@ const char* q_jsonvalueref_to_string1(void* self, const char* defaultValue);
 /// @param self QJsonValueRef*
 ///
 void q_jsonvalueref_delete(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalue.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalue.html#qHash)
+///
+/// @param value QJsonValue*
+/// @param seed uintptr_t
+///
+uintptr_t q_qjsonvalue_q_hash(void* value, uintptr_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalue.html#public-types)
 

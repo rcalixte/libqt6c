@@ -1,8 +1,10 @@
 #include "libqfont.hpp"
 #include "libqpen.hpp"
 #include "libqpoint.hpp"
+#include "libqpolygon.hpp"
 #include "libqrect.hpp"
 #include "libqregion.hpp"
+#include "libqtransform.hpp"
 #include "libqpainterpath.hpp"
 #include "libqpainterpath.h"
 
@@ -114,6 +116,10 @@ void q_painterpath_add_ellipse3(void* self, void* center, double rx, double ry) 
     QPainterPath_AddEllipse3((QPainterPath*)self, (QPointF*)center, rx, ry);
 }
 
+void q_painterpath_add_polygon(void* self, void* polygon) {
+    QPainterPath_AddPolygon((QPainterPath*)self, (QPolygonF*)polygon);
+}
+
 void q_painterpath_add_text(void* self, void* point, void* f, const char* text) {
     QPainterPath_AddText((QPainterPath*)self, (QPointF*)point, (QFont*)f, qstring(text));
 }
@@ -192,6 +198,20 @@ bool q_painterpath_is_empty(void* self) {
 
 QPainterPath* q_painterpath_to_reversed(void* self) {
     return QPainterPath_ToReversed((QPainterPath*)self);
+}
+
+libqt_list /* of QPolygonF* */ q_painterpath_to_subpath_polygons(void* self) {
+    libqt_list _arr = QPainterPath_ToSubpathPolygons((QPainterPath*)self);
+    return _arr;
+}
+
+libqt_list /* of QPolygonF* */ q_painterpath_to_fill_polygons(void* self) {
+    libqt_list _arr = QPainterPath_ToFillPolygons((QPainterPath*)self);
+    return _arr;
+}
+
+QPolygonF* q_painterpath_to_fill_polygon(void* self) {
+    return QPainterPath_ToFillPolygon((QPainterPath*)self);
 }
 
 int32_t q_painterpath_element_count(void* self) {
@@ -296,6 +316,20 @@ void q_painterpath_add_rounded_rect4(void* self, void* rect, double xRadius, dou
 
 void q_painterpath_add_rounded_rect7(void* self, double x, double y, double w, double h, double xRadius, double yRadius, int32_t mode) {
     QPainterPath_AddRoundedRect7((QPainterPath*)self, x, y, w, h, xRadius, yRadius, mode);
+}
+
+libqt_list /* of QPolygonF* */ q_painterpath_to_subpath_polygons1(void* self, void* matrix) {
+    libqt_list _arr = QPainterPath_ToSubpathPolygons1((QPainterPath*)self, (QTransform*)matrix);
+    return _arr;
+}
+
+libqt_list /* of QPolygonF* */ q_painterpath_to_fill_polygons1(void* self, void* matrix) {
+    libqt_list _arr = QPainterPath_ToFillPolygons1((QPainterPath*)self, (QTransform*)matrix);
+    return _arr;
+}
+
+QPolygonF* q_painterpath_to_fill_polygon1(void* self, void* matrix) {
+    return QPainterPath_ToFillPolygon1((QPainterPath*)self, (QTransform*)matrix);
 }
 
 void q_painterpath_delete(void* self) {

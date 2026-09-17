@@ -86,6 +86,8 @@ libqt_list /* of QVariant* */ QCborArray_ToVariantList(const QCborArray* self);
 QJsonArray* QCborArray_ToJsonArray(const QCborArray* self);
 void QCborArray_Delete(QCborArray* self);
 
+size_t qcborarray_QHash(const QCborArray* array, size_t seed);
+
 QCborArray__Iterator* QCborArray__Iterator_New();
 QCborArray__Iterator* QCborArray__Iterator_New2(const QCborArray__Iterator* other);
 QCborArray__Iterator* QCborArray__Iterator_New3(const QCborArray__Iterator* param1);

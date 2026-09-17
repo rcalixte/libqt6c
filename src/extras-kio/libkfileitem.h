@@ -453,7 +453,7 @@ bool k_fileitem_operator_lesser(void* self, void* other);
 ///
 bool k_fileitem_operator_lesser2(void* self, void* other);
 
-/// [Upstream resources](https://api.kde.org/kfileitem.html#operator)
+/// [Upstream resources](https://api.kde.org/kfileitem.html#operator-QVariant)
 ///
 /// @param self KFileItem*
 ///
@@ -521,6 +521,15 @@ QUrl* k_fileitem_most_local_url1(void* self, bool* local);
 /// @param self KFileItem*
 ///
 void k_fileitem_delete(void* self);
+
+/// [Upstream resources](https://api.kde.org/kfileitem-h.html)
+
+/// [Upstream resources](https://api.kde.org/kfileitem-h.html#qHash)
+///
+/// @param item KFileItem*
+/// @param seed uintptr_t
+///
+uintptr_t k_fileitem_h_q_hash(void* item, uintptr_t seed);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlist.html)
 

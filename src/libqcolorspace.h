@@ -328,7 +328,7 @@ char* q_colorspace_icc_profile(void* self);
 ///
 QColorTransform* q_colorspace_transformation_to_color_space(void* self, void* colorspace);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qcolorspace.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcolorspace.html#operator-QVariant)
 ///
 /// @param self QColorSpace*
 ///

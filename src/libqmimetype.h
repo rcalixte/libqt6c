@@ -10,6 +10,15 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimetype.html)
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qmimetype.html#qHash)
+///
+/// @param key QMimeType*
+/// @param seed uintptr_t
+///
+uintptr_t q_qmimetype_q_hash(void* key, uintptr_t seed);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmimetype.html)
+
 /// q_mimetype_new constructs a new QMimeType object.
 ///
 QMimeType* q_mimetype_new();

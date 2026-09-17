@@ -2,6 +2,10 @@
 #include "libqurl.hpp"
 #include "libqurl.h"
 
+uintptr_t q_qurl_q_hash(void* url, uintptr_t seed) {
+    return qurl_QHash((QUrl*)url, seed);
+}
+
 QUrl* q_url_new() {
     return QUrl_New();
 }

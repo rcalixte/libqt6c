@@ -80,6 +80,10 @@ const KTextEditor__Range* k_texteditor__movingrange_to_range(void* self) {
     return KTextEditor__MovingRange_ToRange((KTextEditor__MovingRange*)self);
 }
 
+KTextEditor__Range* k_texteditor__movingrange_to_range2(void* self) {
+    return KTextEditor__MovingRange_ToRange2((KTextEditor__MovingRange*)self);
+}
+
 KTextEditor__LineRange* k_texteditor__movingrange_to_line_range(void* self) {
     return KTextEditor__MovingRange_ToLineRange((KTextEditor__MovingRange*)self);
 }

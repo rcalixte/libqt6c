@@ -101,7 +101,7 @@ void q_cursor_operator_assign(void* self, void* cursor);
 ///
 void q_cursor_swap(void* self, void* other);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qcursor.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcursor.html#operator-QVariant)
 ///
 /// @param self QCursor*
 ///

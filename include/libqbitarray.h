@@ -272,7 +272,7 @@ QBitRef* q_bitref_new(void* other);
 ///
 QBitRef* q_bitref_new2(void* param1);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qbitref.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbitref.html#operator-bool)
 ///
 /// @param self QBitRef*
 ///

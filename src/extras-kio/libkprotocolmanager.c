@@ -102,6 +102,10 @@ bool k_protocolmanager_can_delete_recursive(void* url) {
     return KProtocolManager_CanDeleteRecursive((QUrl*)url);
 }
 
+int32_t k_protocolmanager_file_name_used_for_copying(void* url) {
+    return KProtocolManager_FileNameUsedForCopying((QUrl*)url);
+}
+
 const char* k_protocolmanager_default_mimetype(void* url) {
     libqt_string _str = KProtocolManager_DefaultMimetype((QUrl*)url);
     char* _ret = qstring_to_char(_str);

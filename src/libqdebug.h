@@ -399,33 +399,33 @@ QNoDebug* q_nodebug_maybe_quote1(void* self, char param1);
 ///
 void q_nodebug_delete(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdebug-h.html)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html)
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdebug-h.html#qt_QMetaEnum_flagDebugOperator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#qt_QMetaEnum_flagDebugOperator)
 ///
 /// @param debug QDebug*
 /// @param sizeofT uintptr_t
 /// @param value uint32_t
 ///
-void q_qdebug_h_q_meta_enum_flag_debug_operator(void* debug, uintptr_t sizeofT, uint32_t value);
+void q_qdebug_q_meta_enum_flag_debug_operator(void* debug, uintptr_t sizeofT, uint32_t value);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdebug-h.html#qt_QMetaEnum_debugOperator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#qt_QMetaEnum_debugOperator)
 ///
 /// @param param1 QDebug*
 /// @param value int64_t
 /// @param meta QMetaObject*
 /// @param name const char*
 ///
-QDebug* q_qdebug_h_q_meta_enum_debug_operator(void* param1, int64_t value, void* meta, const char* name);
+QDebug* q_qdebug_q_meta_enum_debug_operator(void* param1, int64_t value, void* meta, const char* name);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdebug-h.html#qt_QMetaEnum_flagDebugOperator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#qt_QMetaEnum_flagDebugOperator)
 ///
 /// @param dbg QDebug*
 /// @param value uint64_t
 /// @param meta QMetaObject*
 /// @param name const char*
 ///
-QDebug* q_qdebug_h_q_meta_enum_flag_debug_operator2(void* dbg, uint64_t value, void* meta, const char* name);
+QDebug* q_qdebug_q_meta_enum_flag_debug_operator2(void* dbg, uint64_t value, void* meta, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#public-types)
 

@@ -1144,10 +1144,28 @@ void q_cppainter_draw_points(void* self, void* points, int pointCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPoints)
 ///
 /// @param self QCPPainter*
+/// @param points QPolygonF*
+///
+void q_cppainter_draw_points2(void* self, void* points);
+
+/// Inherited from QPainter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPoints)
+///
+/// @param self QCPPainter*
 /// @param points QPoint*
 /// @param pointCount int
 ///
 void q_cppainter_draw_points3(void* self, void* points, int pointCount);
+
+/// Inherited from QPainter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPoints)
+///
+/// @param self QCPPainter*
+/// @param points QPolygon*
+///
+void q_cppainter_draw_points4(void* self, void* points);
 
 /// Inherited from QPainter
 ///
@@ -1392,10 +1410,28 @@ void q_cppainter_draw_polyline(void* self, void* points, int pointCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolyline)
 ///
 /// @param self QCPPainter*
+/// @param polyline QPolygonF*
+///
+void q_cppainter_draw_polyline2(void* self, void* polyline);
+
+/// Inherited from QPainter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolyline)
+///
+/// @param self QCPPainter*
 /// @param points QPoint*
 /// @param pointCount int
 ///
 void q_cppainter_draw_polyline3(void* self, void* points, int pointCount);
+
+/// Inherited from QPainter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolyline)
+///
+/// @param self QCPPainter*
+/// @param polygon QPolygon*
+///
+void q_cppainter_draw_polyline4(void* self, void* polygon);
 
 /// Inherited from QPainter
 ///
@@ -1412,10 +1448,28 @@ void q_cppainter_draw_polygon(void* self, void* points, int pointCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
 ///
 /// @param self QCPPainter*
+/// @param polygon QPolygonF*
+///
+void q_cppainter_draw_polygon2(void* self, void* polygon);
+
+/// Inherited from QPainter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
+///
+/// @param self QCPPainter*
 /// @param points QPoint*
 /// @param pointCount int
 ///
 void q_cppainter_draw_polygon3(void* self, void* points, int pointCount);
+
+/// Inherited from QPainter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
+///
+/// @param self QCPPainter*
+/// @param polygon QPolygon*
+///
+void q_cppainter_draw_polygon4(void* self, void* polygon);
 
 /// Inherited from QPainter
 ///
@@ -1432,10 +1486,28 @@ void q_cppainter_draw_convex_polygon(void* self, void* points, int pointCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawConvexPolygon)
 ///
 /// @param self QCPPainter*
+/// @param polygon QPolygonF*
+///
+void q_cppainter_draw_convex_polygon2(void* self, void* polygon);
+
+/// Inherited from QPainter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawConvexPolygon)
+///
+/// @param self QCPPainter*
 /// @param points QPoint*
 /// @param pointCount int
 ///
 void q_cppainter_draw_convex_polygon3(void* self, void* points, int pointCount);
+
+/// Inherited from QPainter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawConvexPolygon)
+///
+/// @param self QCPPainter*
+/// @param polygon QPolygon*
+///
+void q_cppainter_draw_convex_polygon4(void* self, void* polygon);
 
 /// Inherited from QPainter
 ///
@@ -2452,11 +2524,31 @@ void q_cppainter_draw_polygon32(void* self, void* points, int pointCount, int32_
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
 ///
 /// @param self QCPPainter*
+/// @param polygon QPolygonF*
+/// @param fillRule enum Qt__FillRule
+///
+void q_cppainter_draw_polygon22(void* self, void* polygon, int32_t fillRule);
+
+/// Inherited from QPainter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
+///
+/// @param self QCPPainter*
 /// @param points QPoint*
 /// @param pointCount int
 /// @param fillRule enum Qt__FillRule
 ///
 void q_cppainter_draw_polygon33(void* self, void* points, int pointCount, int32_t fillRule);
+
+/// Inherited from QPainter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
+///
+/// @param self QCPPainter*
+/// @param polygon QPolygon*
+/// @param fillRule enum Qt__FillRule
+///
+void q_cppainter_draw_polygon23(void* self, void* polygon, int32_t fillRule);
 
 /// Inherited from QPainter
 ///
@@ -53463,6 +53555,68 @@ void q_cpgraph_on_get_fill_base_point(void* self, QPointF* (*callback)(void*, vo
 /// @param matchingDataPoint QPointF*
 ///
 QPointF* q_cpgraph_super_get_fill_base_point(void* self, void* matchingDataPoint);
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
+///
+/// @param self QCPGraph*
+/// @param lineData libqt_list of QPointF*
+/// @param segment QCPDataRange*
+///
+const QPolygonF* q_cpgraph_get_fill_polygon(void* self, libqt_list lineData, void* segment);
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPGraph*
+/// @param callback const QPolygonF* func(QCPGraph* self, libqt_list of QPointF* lineData, QCPDataRange* segment)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
+void q_cpgraph_on_get_fill_polygon(void* self, const QPolygonF* (*callback)(void*, libqt_list, void*));
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
+///
+/// Base class method implementation
+///
+/// @param self QCPGraph*
+/// @param lineData libqt_list of QPointF*
+/// @param segment QCPDataRange*
+///
+const QPolygonF* q_cpgraph_super_get_fill_polygon(void* self, libqt_list lineData, void* segment);
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
+///
+/// @param self QCPGraph*
+/// @param thisData libqt_list of QPointF*
+/// @param thisSegment QCPDataRange*
+/// @param otherData libqt_list of QPointF*
+/// @param otherSegment QCPDataRange*
+///
+const QPolygonF* q_cpgraph_get_channel_fill_polygon(void* self, libqt_list thisData, void* thisSegment, libqt_list otherData, void* otherSegment);
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPGraph*
+/// @param callback const QPolygonF* func(QCPGraph* self, libqt_list of QPointF* thisData, QCPDataRange* thisSegment, libqt_list of QPointF* otherData, QCPDataRange* otherSegment)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
+void q_cpgraph_on_get_channel_fill_polygon(void* self, const QPolygonF* (*callback)(void*, libqt_list, void*, libqt_list, void*));
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
+///
+/// Base class method implementation
+///
+/// @param self QCPGraph*
+/// @param thisData libqt_list of QPointF*
+/// @param thisSegment QCPDataRange*
+/// @param otherData libqt_list of QPointF*
+/// @param otherSegment QCPDataRange*
+///
+const QPolygonF* q_cpgraph_super_get_channel_fill_polygon(void* self, libqt_list thisData, void* thisSegment, libqt_list otherData, void* otherSegment);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///

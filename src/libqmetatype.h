@@ -502,6 +502,21 @@ void* q_metatype_construct22(void* self, void* where, void* copy);
 ///
 void q_metatype_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#qRegisterMetaType)
+///
+/// @param meta QMetaType*
+///
+int32_t q_qmetatype_q_register_meta_type(void* meta);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#qHash)
+///
+/// @param type QMetaType*
+/// @param seed uintptr_t
+///
+uintptr_t q_qmetatype_q_hash(void* type, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#public-types)
 
 typedef enum {

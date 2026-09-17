@@ -825,3 +825,15 @@ QDateTime* q_datetime_from_secs_since_epoch32(int64_t secs, int32_t spec, int of
 void q_datetime_delete(void* self) {
     QDateTime_Delete((QDateTime*)(self));
 }
+
+uintptr_t q_qdatetime_q_hash(void* key, uintptr_t seed) {
+    return qdatetime_QHash((QDateTime*)key, seed);
+}
+
+uintptr_t q_qdatetime_q_hash2(void* key, uintptr_t seed) {
+    return qdatetime_QHash2((QDate*)key, seed);
+}
+
+uintptr_t q_qdatetime_q_hash3(void* key, uintptr_t seed) {
+    return qdatetime_QHash3((QTime*)key, seed);
+}

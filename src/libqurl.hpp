@@ -19,6 +19,8 @@ typedef struct QUrl QUrl;
 typedef struct QUrlQuery QUrlQuery;
 #endif
 
+size_t qurl_QHash(const QUrl* url, size_t seed);
+
 QUrl* QUrl_New();
 QUrl* QUrl_New2(const QUrl* copy);
 QUrl* QUrl_New3(const libqt_string url);

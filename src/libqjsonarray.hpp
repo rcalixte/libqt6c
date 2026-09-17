@@ -74,6 +74,8 @@ void QJsonArray_PopBack(QJsonArray* self);
 bool QJsonArray_Empty(const QJsonArray* self);
 void QJsonArray_Delete(QJsonArray* self);
 
+size_t qjsonarray_QHash(const QJsonArray* array, size_t seed);
+
 QJsonArray__iterator* QJsonArray__iterator_New(const QJsonArray__iterator* other);
 QJsonArray__iterator* QJsonArray__iterator_New2();
 QJsonArray__iterator* QJsonArray__iterator_New3(QJsonArray* array, ptrdiff_t index);

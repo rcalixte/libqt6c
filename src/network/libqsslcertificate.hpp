@@ -23,6 +23,8 @@ typedef struct QSslError QSslError;
 typedef struct QSslKey QSslKey;
 #endif
 
+size_t qsslcertificate_h_QHash(const QSslCertificate* key, size_t seed);
+
 QSslCertificate* QSslCertificate_New(QIODevice* device);
 QSslCertificate* QSslCertificate_New2();
 QSslCertificate* QSslCertificate_New3(const QSslCertificate* other);

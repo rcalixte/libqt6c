@@ -96,6 +96,12 @@ const char** q_libraryinfo_platform_plugin_arguments(const char* platformName);
 ///
 void q_libraryinfo_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#qSharedBuild)
+///
+bool q_qlibraryinfo_q_shared_build();
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#public-types)
 
 typedef enum {

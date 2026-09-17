@@ -1423,6 +1423,29 @@ QDateTime* q_datetime_from_secs_since_epoch32(int64_t secs, int32_t spec, int of
 ///
 void q_datetime_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#qHash)
+///
+/// @param key QDateTime*
+/// @param seed uintptr_t
+///
+uintptr_t q_qdatetime_q_hash(void* key, uintptr_t seed);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#qHash)
+///
+/// @param key QDate*
+/// @param seed uintptr_t
+///
+uintptr_t q_qdatetime_q_hash2(void* key, uintptr_t seed);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#qHash)
+///
+/// @param key QTime*
+/// @param seed uintptr_t
+///
+uintptr_t q_qdatetime_q_hash3(void* key, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#public-types)
 
 typedef enum {

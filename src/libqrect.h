@@ -599,6 +599,15 @@ bool q_rect_contains23(void* self, void* p, bool proper);
 ///
 void q_rect_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#qHash)
+///
+/// @param r QRect*
+/// @param seed uintptr_t
+///
+uintptr_t q_qrect_q_hash(void* r, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html)
 
 /// q_rectf_new constructs a new QRectF object.

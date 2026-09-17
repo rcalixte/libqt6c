@@ -8,6 +8,15 @@
 #include "../libqttypedefs.h"
 #include "../qtlibc.h"
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate-h.html#qHash)
+///
+/// @param key QSslCertificate*
+/// @param seed uintptr_t
+///
+uintptr_t q_qsslcertificate_h_q_hash(void* key, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html)
 
 /// q_sslcertificate_new constructs a new QSslCertificate object.

@@ -1430,6 +1430,18 @@ QPointF* q_chart_map_to_scene(void* self, void* point) {
     return QGraphicsItem_MapToScene(q_chart_as_q_graphics_item(self), (QPointF*)point);
 }
 
+QPolygonF* q_chart_map_to_item2(void* self, void* item, void* rect) {
+    return QGraphicsItem_MapToItem2(q_chart_as_q_graphics_item(self), (QGraphicsItem*)item, (QRectF*)rect);
+}
+
+QPolygonF* q_chart_map_to_parent2(void* self, void* rect) {
+    return QGraphicsItem_MapToParent2(q_chart_as_q_graphics_item(self), (QRectF*)rect);
+}
+
+QPolygonF* q_chart_map_to_scene2(void* self, void* rect) {
+    return QGraphicsItem_MapToScene2(q_chart_as_q_graphics_item(self), (QRectF*)rect);
+}
+
 QRectF* q_chart_map_rect_to_item(void* self, void* item, void* rect) {
     return QGraphicsItem_MapRectToItem(q_chart_as_q_graphics_item(self), (QGraphicsItem*)item, (QRectF*)rect);
 }
@@ -1440,6 +1452,18 @@ QRectF* q_chart_map_rect_to_parent(void* self, void* rect) {
 
 QRectF* q_chart_map_rect_to_scene(void* self, void* rect) {
     return QGraphicsItem_MapRectToScene(q_chart_as_q_graphics_item(self), (QRectF*)rect);
+}
+
+QPolygonF* q_chart_map_to_item3(void* self, void* item, void* polygon) {
+    return QGraphicsItem_MapToItem3(q_chart_as_q_graphics_item(self), (QGraphicsItem*)item, (QPolygonF*)polygon);
+}
+
+QPolygonF* q_chart_map_to_parent3(void* self, void* polygon) {
+    return QGraphicsItem_MapToParent3(q_chart_as_q_graphics_item(self), (QPolygonF*)polygon);
+}
+
+QPolygonF* q_chart_map_to_scene3(void* self, void* polygon) {
+    return QGraphicsItem_MapToScene3(q_chart_as_q_graphics_item(self), (QPolygonF*)polygon);
 }
 
 QPainterPath* q_chart_map_to_item4(void* self, void* item, void* path) {
@@ -1466,6 +1490,18 @@ QPointF* q_chart_map_from_scene(void* self, void* point) {
     return QGraphicsItem_MapFromScene(q_chart_as_q_graphics_item(self), (QPointF*)point);
 }
 
+QPolygonF* q_chart_map_from_item2(void* self, void* item, void* rect) {
+    return QGraphicsItem_MapFromItem2(q_chart_as_q_graphics_item(self), (QGraphicsItem*)item, (QRectF*)rect);
+}
+
+QPolygonF* q_chart_map_from_parent2(void* self, void* rect) {
+    return QGraphicsItem_MapFromParent2(q_chart_as_q_graphics_item(self), (QRectF*)rect);
+}
+
+QPolygonF* q_chart_map_from_scene2(void* self, void* rect) {
+    return QGraphicsItem_MapFromScene2(q_chart_as_q_graphics_item(self), (QRectF*)rect);
+}
+
 QRectF* q_chart_map_rect_from_item(void* self, void* item, void* rect) {
     return QGraphicsItem_MapRectFromItem(q_chart_as_q_graphics_item(self), (QGraphicsItem*)item, (QRectF*)rect);
 }
@@ -1476,6 +1512,18 @@ QRectF* q_chart_map_rect_from_parent(void* self, void* rect) {
 
 QRectF* q_chart_map_rect_from_scene(void* self, void* rect) {
     return QGraphicsItem_MapRectFromScene(q_chart_as_q_graphics_item(self), (QRectF*)rect);
+}
+
+QPolygonF* q_chart_map_from_item3(void* self, void* item, void* polygon) {
+    return QGraphicsItem_MapFromItem3(q_chart_as_q_graphics_item(self), (QGraphicsItem*)item, (QPolygonF*)polygon);
+}
+
+QPolygonF* q_chart_map_from_parent3(void* self, void* polygon) {
+    return QGraphicsItem_MapFromParent3(q_chart_as_q_graphics_item(self), (QPolygonF*)polygon);
+}
+
+QPolygonF* q_chart_map_from_scene3(void* self, void* polygon) {
+    return QGraphicsItem_MapFromScene3(q_chart_as_q_graphics_item(self), (QPolygonF*)polygon);
 }
 
 QPainterPath* q_chart_map_from_item4(void* self, void* item, void* path) {
@@ -1502,6 +1550,18 @@ QPointF* q_chart_map_to_scene5(void* self, double x, double y) {
     return QGraphicsItem_MapToScene5(q_chart_as_q_graphics_item(self), x, y);
 }
 
+QPolygonF* q_chart_map_to_item6(void* self, void* item, double x, double y, double w, double h) {
+    return QGraphicsItem_MapToItem6(q_chart_as_q_graphics_item(self), (QGraphicsItem*)item, x, y, w, h);
+}
+
+QPolygonF* q_chart_map_to_parent6(void* self, double x, double y, double w, double h) {
+    return QGraphicsItem_MapToParent6(q_chart_as_q_graphics_item(self), x, y, w, h);
+}
+
+QPolygonF* q_chart_map_to_scene6(void* self, double x, double y, double w, double h) {
+    return QGraphicsItem_MapToScene6(q_chart_as_q_graphics_item(self), x, y, w, h);
+}
+
 QRectF* q_chart_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h) {
     return QGraphicsItem_MapRectToItem2(q_chart_as_q_graphics_item(self), (QGraphicsItem*)item, x, y, w, h);
 }
@@ -1524,6 +1584,18 @@ QPointF* q_chart_map_from_parent5(void* self, double x, double y) {
 
 QPointF* q_chart_map_from_scene5(void* self, double x, double y) {
     return QGraphicsItem_MapFromScene5(q_chart_as_q_graphics_item(self), x, y);
+}
+
+QPolygonF* q_chart_map_from_item6(void* self, void* item, double x, double y, double w, double h) {
+    return QGraphicsItem_MapFromItem6(q_chart_as_q_graphics_item(self), (QGraphicsItem*)item, x, y, w, h);
+}
+
+QPolygonF* q_chart_map_from_parent6(void* self, double x, double y, double w, double h) {
+    return QGraphicsItem_MapFromParent6(q_chart_as_q_graphics_item(self), x, y, w, h);
+}
+
+QPolygonF* q_chart_map_from_scene6(void* self, double x, double y, double w, double h) {
+    return QGraphicsItem_MapFromScene6(q_chart_as_q_graphics_item(self), x, y, w, h);
 }
 
 QRectF* q_chart_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h) {

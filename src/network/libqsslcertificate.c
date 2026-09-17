@@ -6,6 +6,10 @@
 #include "libqsslcertificate.hpp"
 #include "libqsslcertificate.h"
 
+uintptr_t q_qsslcertificate_h_q_hash(void* key, uintptr_t seed) {
+    return qsslcertificate_h_QHash((QSslCertificate*)key, seed);
+}
+
 QSslCertificate* q_sslcertificate_new(void* device) {
     return QSslCertificate_New((QIODevice*)device);
 }

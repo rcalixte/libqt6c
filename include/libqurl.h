@@ -10,6 +10,15 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html)
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#qHash)
+///
+/// @param url QUrl*
+/// @param seed uintptr_t
+///
+uintptr_t q_qurl_q_hash(void* url, uintptr_t seed);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qurl.html)
+
 /// q_url_new constructs a new QUrl object.
 ///
 QUrl* q_url_new();

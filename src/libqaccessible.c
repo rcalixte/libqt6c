@@ -1276,3 +1276,18 @@ void q_accessibleannouncementevent_on_accessible_interface(void* self, QAccessib
 void q_accessibleannouncementevent_delete(void* self) {
     QAccessibleAnnouncementEvent_Delete((QAccessibleAnnouncementEvent*)(self));
 }
+
+const char* q_qaccessible_h_q_accessible_role_string(int32_t role) {
+    return qaccessible_h_QAccessibleRoleString(role);
+}
+
+const char* q_qaccessible_h_q_accessible_event_string(int32_t event) {
+    return qaccessible_h_QAccessibleEventString(event);
+}
+
+const char* q_qaccessible_h_q_accessible_localized_action_description(const char* actionName) {
+    libqt_string _str = qaccessible_h_QAccessibleLocalizedActionDescription(qstring(actionName));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}

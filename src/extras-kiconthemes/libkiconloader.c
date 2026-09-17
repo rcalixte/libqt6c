@@ -9,6 +9,7 @@
 #include "../libqobject.hpp"
 #include "../libqpalette.hpp"
 #include "../libqpixmap.hpp"
+#include "../libqsize.hpp"
 #include "libkiconloader.hpp"
 #include "libkiconloader.h"
 
@@ -105,6 +106,14 @@ void k_iconloader_add_app_dir(void* self, const char* appname) {
 
 QPixmap* k_iconloader_load_icon(void* self, const char* name, int32_t group) {
     return KIconLoader_LoadIcon((KIconLoader*)self, qstring(name), group);
+}
+
+QPixmap* k_iconloader_load_scaled_icon(void* self, const char* name, int32_t group, double scale) {
+    return KIconLoader_LoadScaledIcon((KIconLoader*)self, qstring(name), group, scale);
+}
+
+QPixmap* k_iconloader_load_scaled_icon2(void* self, const char* name, int32_t group, double scale) {
+    return KIconLoader_LoadScaledIcon2((KIconLoader*)self, qstring(name), group, scale);
 }
 
 QPixmap* k_iconloader_load_mime_type_icon(void* self, const char* iconName, int32_t group) {
@@ -357,6 +366,52 @@ QPixmap* k_iconloader_load_icon5(void* self, const char* name, int32_t group, in
         overlays_qstr[i] = qstring(overlays[i]);
     libqt_list overlays_list = qlist(overlays_qstr, overlays_len);
     QPixmap* _out = KIconLoader_LoadIcon5((KIconLoader*)self, qstring(name), group, size, state, overlays_list);
+    free(overlays_qstr);
+    return _out;
+}
+
+QPixmap* k_iconloader_load_scaled_icon4(void* self, const char* name, int32_t group, double scale, int size) {
+    return KIconLoader_LoadScaledIcon4((KIconLoader*)self, qstring(name), group, scale, size);
+}
+
+QPixmap* k_iconloader_load_scaled_icon5(void* self, const char* name, int32_t group, double scale, int size, int state) {
+    return KIconLoader_LoadScaledIcon5((KIconLoader*)self, qstring(name), group, scale, size, state);
+}
+
+QPixmap* k_iconloader_load_scaled_icon6(void* self, const char* name, int32_t group, double scale, int size, int state, const char* overlays[static 1]) {
+    size_t overlays_len = libqt_strv_length(overlays);
+    libqt_string* overlays_qstr = (libqt_string*)malloc(overlays_len * sizeof(libqt_string));
+    if (overlays_qstr == NULL) {
+        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_load_scaled_icon6\n");
+        abort();
+    }
+    for (size_t i = 0; i < overlays_len; ++i)
+        overlays_qstr[i] = qstring(overlays[i]);
+    libqt_list overlays_list = qlist(overlays_qstr, overlays_len);
+    QPixmap* _out = KIconLoader_LoadScaledIcon6((KIconLoader*)self, qstring(name), group, scale, size, state, overlays_list);
+    free(overlays_qstr);
+    return _out;
+}
+
+QPixmap* k_iconloader_load_scaled_icon42(void* self, const char* name, int32_t group, double scale, void* size) {
+    return KIconLoader_LoadScaledIcon42((KIconLoader*)self, qstring(name), group, scale, (QSize*)size);
+}
+
+QPixmap* k_iconloader_load_scaled_icon52(void* self, const char* name, int32_t group, double scale, void* size, int state) {
+    return KIconLoader_LoadScaledIcon52((KIconLoader*)self, qstring(name), group, scale, (QSize*)size, state);
+}
+
+QPixmap* k_iconloader_load_scaled_icon62(void* self, const char* name, int32_t group, double scale, void* size, int state, const char* overlays[static 1]) {
+    size_t overlays_len = libqt_strv_length(overlays);
+    libqt_string* overlays_qstr = (libqt_string*)malloc(overlays_len * sizeof(libqt_string));
+    if (overlays_qstr == NULL) {
+        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_load_scaled_icon62\n");
+        abort();
+    }
+    for (size_t i = 0; i < overlays_len; ++i)
+        overlays_qstr[i] = qstring(overlays[i]);
+    libqt_list overlays_list = qlist(overlays_qstr, overlays_len);
+    QPixmap* _out = KIconLoader_LoadScaledIcon62((KIconLoader*)self, qstring(name), group, scale, (QSize*)size, state, overlays_list);
     free(overlays_qstr);
     return _out;
 }

@@ -259,7 +259,7 @@ QPoint* q_vector2d_to_point(void* self);
 ///
 QPointF* q_vector2d_to_point_f(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector2d.html#operator-QVariant)
 ///
 /// @param self QVector2D*
 ///
@@ -604,7 +604,7 @@ QPoint* q_vector3d_to_point(void* self);
 ///
 QPointF* q_vector3d_to_point_f(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector3d.html#operator-QVariant)
 ///
 /// @param self QVector3D*
 ///
@@ -913,7 +913,7 @@ QPoint* q_vector4d_to_point(void* self);
 ///
 QPointF* q_vector4d_to_point_f(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qvector4d.html#operator-QVariant)
 ///
 /// @param self QVector4D*
 ///

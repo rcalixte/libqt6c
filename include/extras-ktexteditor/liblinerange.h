@@ -207,4 +207,5 @@ KTextEditor__LineRange* k_texteditor__linerange_encompass(void* self, void* rang
 ///
 void k_texteditor__linerange_delete(void* self);
 
+/// [Upstream resources](https://api.kde.org/ktexteditor.html)
 #endif

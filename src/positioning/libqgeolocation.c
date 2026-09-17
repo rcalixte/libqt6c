@@ -113,3 +113,7 @@ bool q_geolocation_is_empty(void* self) {
 void q_geolocation_delete(void* self) {
     QGeoLocation_Delete((QGeoLocation*)(self));
 }
+
+uintptr_t q_qgeolocation_h_q_hash(void* location, uintptr_t seed) {
+    return qgeolocation_h_QHash((QGeoLocation*)location, seed);
+}

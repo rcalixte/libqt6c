@@ -1,6 +1,10 @@
 #include "libqtyperevision.hpp"
 #include "libqtyperevision.h"
 
+uintptr_t q_qtyperevision_q_hash(void* key, uintptr_t seed) {
+    return qtyperevision_QHash((QTypeRevision*)key, seed);
+}
+
 QTypeRevision* q_typerevision_new() {
     return QTypeRevision_New();
 }

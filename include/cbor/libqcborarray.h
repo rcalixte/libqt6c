@@ -364,6 +364,15 @@ QJsonArray* q_cborarray_to_json_array(void* self);
 ///
 void q_cborarray_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborarray.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborarray.html#qHash)
+///
+/// @param array QCborArray*
+/// @param seed uintptr_t
+///
+uintptr_t q_qcborarray_q_hash(void* array, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray-iterator.html)
 
 /// q_cborarray__iterator_new constructs a new QCborArray::Iterator object.

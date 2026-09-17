@@ -547,7 +547,7 @@ bool q_font_operator_not_equal(void* self, void* param1);
 ///
 bool q_font_operator_lesser(void* self, void* param1);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qfont.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qfont.html#operator-QVariant)
 ///
 /// @param self QFont*
 ///
@@ -693,6 +693,15 @@ void q_font_set_style_hint2(void* self, int32_t param1, int32_t param2);
 /// @param self QFont*
 ///
 void q_font_delete(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qfont-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qfont-h.html#qHash)
+///
+/// @param font QFont*
+/// @param seed uintptr_t
+///
+uintptr_t q_qfont_h_q_hash(void* font, uintptr_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfont-tag.html)
 

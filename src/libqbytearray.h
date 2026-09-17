@@ -207,6 +207,51 @@ char* q_bytearray_from_base642(char* base64, int32_t options);
 ///
 char* q_bytearray_from_percent_encoding2(char* pctEncoded, char percent);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#qCompress)
+///
+/// @warning Caller is responsible for freeing the returned memory using `free()`
+///
+/// @param data unsigned char*
+/// @param nbytes intptr_t
+/// @param compressionLevel int
+///
+char* q_qbytearray_q_compress(unsigned char* data, intptr_t nbytes, int compressionLevel);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#qUncompress)
+///
+/// @warning Caller is responsible for freeing the returned memory using `free()`
+///
+/// @param data unsigned char*
+/// @param nbytes intptr_t
+///
+char* q_qbytearray_q_uncompress(unsigned char* data, intptr_t nbytes);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#qCompress)
+///
+/// @warning Caller is responsible for freeing the returned memory using `free()`
+///
+/// @param data char*
+/// @param compressionLevel int
+///
+char* q_qbytearray_q_compress2(char* data, int compressionLevel);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#qUncompress)
+///
+/// @warning Caller is responsible for freeing the returned memory using `free()`
+///
+/// @param data char*
+///
+char* q_qbytearray_q_uncompress2(char* data);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#qHash)
+///
+/// @param key QByteArray__FromBase64Result*
+/// @param seed uintptr_t
+///
+uintptr_t q_qbytearray_q_hash(void* key, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray-frombase64result.html)
 
 /// q_bytearray__frombase64result_new constructs a new QByteArray::FromBase64Result object.
@@ -258,7 +303,7 @@ void q_bytearray__frombase64result_set_decoding_status(void* self, int32_t decod
 ///
 void q_bytearray__frombase64result_swap(void* self, void* other);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qbytearray-frombase64result.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbytearray-frombase64result.html#operator-bool)
 ///
 /// @param self QByteArray__FromBase64Result*
 ///

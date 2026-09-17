@@ -1,6 +1,7 @@
 #include <QChildEvent>
 #include <QEvent>
 #include <QList>
+#include <QMap>
 #include <QMetaMethod>
 #include <QMetaObject>
 #include <QObject>
@@ -178,6 +179,16 @@ void SignOn__AuthService_Connect_Cleared(SignOn__AuthService* self, intptr_t slo
     SignOn::AuthService::connect(self, &SignOn::AuthService::cleared, [self, slotFunc]() {
         slotFunc(self);
     });
+}
+
+void SignOn__AuthService_QueryIdentities1(SignOn__AuthService* self, const libqt_map /* of int to SignOn__AuthService__IdentityRegExp* */ filter) {
+    QMap<SignOn::AuthService::IdentityFilterCriteria, SignOn::AuthService::IdentityRegExp> filter_QMap;
+    int* filter_karr = static_cast<int*>(filter.keys);
+    SignOn__AuthService__IdentityRegExp** filter_varr = static_cast<SignOn__AuthService__IdentityRegExp**>(filter.values);
+    for (size_t i = 0; i < filter.len; ++i) {
+        filter_QMap.insert(static_cast<SignOn::AuthService::IdentityFilterCriteria>(filter_karr[i]), *(filter_varr[i]));
+    }
+    self->queryIdentities(filter_QMap);
 }
 
 // Base class handler implementation

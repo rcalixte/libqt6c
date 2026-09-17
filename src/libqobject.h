@@ -8,9 +8,9 @@
 #include "libqttypedefs.h"
 #include "qtlibc.h"
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject-h.html)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html)
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject-h.html#qt_qFindChildren_helper)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_qFindChildren_helper)
 ///
 /// @param parent QObject*
 /// @param name const char*
@@ -18,9 +18,9 @@
 /// @param list libqt_list of void*
 /// @param options flag of enum Qt__FindChildOption
 ///
-void q_qobject_h_q_find_children_helper(void* parent, const char* name, void* mo, libqt_list list, int32_t options);
+void q_qobject_q_find_children_helper(void* parent, const char* name, void* mo, libqt_list list, int32_t options);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject-h.html#qt_qFindChildren_helper)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_qFindChildren_helper)
 ///
 /// @param parent QObject*
 /// @param re QRegularExpression*
@@ -28,16 +28,28 @@ void q_qobject_h_q_find_children_helper(void* parent, const char* name, void* mo
 /// @param list libqt_list of void*
 /// @param options flag of enum Qt__FindChildOption
 ///
-void q_qobject_h_q_find_children_helper2(void* parent, void* re, void* mo, libqt_list list, int32_t options);
+void q_qobject_q_find_children_helper2(void* parent, void* re, void* mo, libqt_list list, int32_t options);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject-h.html#qt_qFindChild_helper)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_qFindChild_helper)
 ///
 /// @param parent QObject*
 /// @param name const char*
 /// @param mo QMetaObject*
 /// @param options flag of enum Qt__FindChildOption
 ///
-QObject* q_qobject_h_q_find_child_helper(void* parent, const char* name, void* mo, int32_t options);
+QObject* q_qobject_q_find_child_helper(void* parent, const char* name, void* mo, int32_t options);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qGetBindingStorage)
+///
+/// @param o QObject*
+///
+const QBindingStorage* q_qobject_q_get_binding_storage(void* o);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qGetBindingStorage)
+///
+/// @param o QObject*
+///
+QBindingStorage* q_qobject_q_get_binding_storage2(void* o);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html)
 

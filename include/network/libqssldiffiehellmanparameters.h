@@ -8,6 +8,15 @@
 #include "../libqttypedefs.h"
 #include "../qtlibc.h"
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters-h.html#qHash)
+///
+/// @param dhparam QSslDiffieHellmanParameters*
+/// @param seed uintptr_t
+///
+uintptr_t q_qssldiffiehellmanparameters_h_q_hash(void* dhparam, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html)
 
 /// q_ssldiffiehellmanparameters_new constructs a new QSslDiffieHellmanParameters object.

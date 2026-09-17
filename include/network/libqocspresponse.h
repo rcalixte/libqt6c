@@ -8,6 +8,15 @@
 #include "../libqttypedefs.h"
 #include "../qtlibc.h"
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qocspresponse-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qocspresponse-h.html#qHash)
+///
+/// @param response QOcspResponse*
+/// @param seed uintptr_t
+///
+uintptr_t q_qocspresponse_h_q_hash(void* response, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qocspresponse.html)
 
 /// q_ocspresponse_new constructs a new QOcspResponse object.

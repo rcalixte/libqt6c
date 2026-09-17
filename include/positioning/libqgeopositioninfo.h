@@ -8,6 +8,15 @@
 #include "../libqttypedefs.h"
 #include "../qtlibc.h"
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfo-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfo-h.html#qHash)
+///
+/// @param key QGeoPositionInfo*
+/// @param seed uintptr_t
+///
+uintptr_t q_qgeopositioninfo_h_q_hash(void* key, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfo.html)
 
 /// q_geopositioninfo_new constructs a new QGeoPositionInfo object.

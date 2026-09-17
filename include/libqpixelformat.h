@@ -263,6 +263,77 @@ unsigned char q_pixelformat_sub_enum(void* self);
 ///
 void q_pixelformat_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat-h.html#qPixelFormatRgba)
+///
+/// @param red unsigned char
+/// @param green unsigned char
+/// @param blue unsigned char
+/// @param alfa unsigned char
+/// @param usage enum QPixelFormat__AlphaUsage
+/// @param position enum QPixelFormat__AlphaPosition
+/// @param pmul enum QPixelFormat__AlphaPremultiplied
+/// @param typeInt enum QPixelFormat__TypeInterpretation
+///
+QPixelFormat* q_qpixelformat_h_q_pixel_format_rgba(unsigned char red, unsigned char green, unsigned char blue, unsigned char alfa, int32_t usage, int32_t position, int32_t pmul, int32_t typeInt);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat-h.html#qPixelFormatGrayscale)
+///
+/// @param channelSize unsigned char
+/// @param typeInt enum QPixelFormat__TypeInterpretation
+///
+QPixelFormat* q_qpixelformat_h_q_pixel_format_grayscale(unsigned char channelSize, int32_t typeInt);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat-h.html#qPixelFormatAlpha)
+///
+/// @param channelSize unsigned char
+/// @param typeInt enum QPixelFormat__TypeInterpretation
+///
+QPixelFormat* q_qpixelformat_h_q_pixel_format_alpha(unsigned char channelSize, int32_t typeInt);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat-h.html#qPixelFormatCmyk)
+///
+/// @param channelSize unsigned char
+/// @param alfa unsigned char
+/// @param usage enum QPixelFormat__AlphaUsage
+/// @param position enum QPixelFormat__AlphaPosition
+/// @param typeInt enum QPixelFormat__TypeInterpretation
+///
+QPixelFormat* q_qpixelformat_h_q_pixel_format_cmyk(unsigned char channelSize, unsigned char alfa, int32_t usage, int32_t position, int32_t typeInt);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat-h.html#qPixelFormatHsl)
+///
+/// @param channelSize unsigned char
+/// @param alfa unsigned char
+/// @param usage enum QPixelFormat__AlphaUsage
+/// @param position enum QPixelFormat__AlphaPosition
+/// @param typeInt enum QPixelFormat__TypeInterpretation
+///
+QPixelFormat* q_qpixelformat_h_q_pixel_format_hsl(unsigned char channelSize, unsigned char alfa, int32_t usage, int32_t position, int32_t typeInt);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat-h.html#qPixelFormatHsv)
+///
+/// @param channelSize unsigned char
+/// @param alfa unsigned char
+/// @param usage enum QPixelFormat__AlphaUsage
+/// @param position enum QPixelFormat__AlphaPosition
+/// @param typeInt enum QPixelFormat__TypeInterpretation
+///
+QPixelFormat* q_qpixelformat_h_q_pixel_format_hsv(unsigned char channelSize, unsigned char alfa, int32_t usage, int32_t position, int32_t typeInt);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat-h.html#qPixelFormatYuv)
+///
+/// @param layout enum QPixelFormat__YUVLayout
+/// @param alfa unsigned char
+/// @param usage enum QPixelFormat__AlphaUsage
+/// @param position enum QPixelFormat__AlphaPosition
+/// @param p_mul enum QPixelFormat__AlphaPremultiplied
+/// @param typeInt enum QPixelFormat__TypeInterpretation
+/// @param b_order enum QPixelFormat__ByteOrder
+///
+QPixelFormat* q_qpixelformat_h_q_pixel_format_yuv(int32_t layout, unsigned char alfa, int32_t usage, int32_t position, int32_t p_mul, int32_t typeInt, int32_t b_order);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixelformat.html#public-types)
 
 typedef enum {

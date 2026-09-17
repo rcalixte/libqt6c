@@ -7,6 +7,10 @@
 #include "libqkeysequence.hpp"
 #include "libqkeysequence.hxx"
 
+size_t qkeysequence_h_QHash(const QKeySequence* key, size_t seed) {
+    return qHash(*key, static_cast<size_t>(seed));
+}
+
 QKeySequence* QKeySequence_New() {
     return new QKeySequence();
 }

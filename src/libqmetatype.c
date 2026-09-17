@@ -284,3 +284,11 @@ void* q_metatype_construct22(void* self, void* where, void* copy) {
 void q_metatype_delete(void* self) {
     QMetaType_Delete((QMetaType*)(self));
 }
+
+int32_t q_qmetatype_q_register_meta_type(void* meta) {
+    return qmetatype_QRegisterMetaType((QMetaType*)meta);
+}
+
+uintptr_t q_qmetatype_q_hash(void* type, uintptr_t seed) {
+    return qmetatype_QHash((QMetaType*)type, seed);
+}

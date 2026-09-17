@@ -41,6 +41,8 @@ typedef struct QMethodRawArguments QMethodRawArguments;
 typedef struct QObject QObject;
 #endif
 
+const char* qobjectdefs_QFlagLocation(const char* method);
+
 QGenericArgument* QGenericArgument_New(const QGenericArgument* other);
 QGenericArgument* QGenericArgument_New2(QGenericArgument* other);
 QGenericArgument* QGenericArgument_New3();

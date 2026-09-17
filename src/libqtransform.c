@@ -1,6 +1,7 @@
 #include "libqline.hpp"
 #include "libqpainterpath.hpp"
 #include "libqpoint.hpp"
+#include "libqpolygon.hpp"
 #include "libqrect.hpp"
 #include "libqregion.hpp"
 #include "libqvariant.hpp"
@@ -167,6 +168,18 @@ QTransform* q_transform_rotate_radians2(void* self, double a) {
     return QTransform_RotateRadians2((QTransform*)self, a);
 }
 
+bool q_transform_square_to_quad(void* square, void* result) {
+    return QTransform_SquareToQuad((QPolygonF*)square, (QTransform*)result);
+}
+
+bool q_transform_quad_to_square(void* quad, void* result) {
+    return QTransform_QuadToSquare((QPolygonF*)quad, (QTransform*)result);
+}
+
+bool q_transform_quad_to_quad(void* one, void* two, void* result) {
+    return QTransform_QuadToQuad((QPolygonF*)one, (QPolygonF*)two, (QTransform*)result);
+}
+
 bool q_transform_operator_equal(void* self, void* param1) {
     return QTransform_OperatorEqual((QTransform*)self, (QTransform*)param1);
 }
@@ -207,12 +220,24 @@ QLineF* q_transform_map4(void* self, void* l) {
     return QTransform_Map4((QTransform*)self, (QLineF*)l);
 }
 
+QPolygonF* q_transform_map5(void* self, void* a) {
+    return QTransform_Map5((QTransform*)self, (QPolygonF*)a);
+}
+
+QPolygon* q_transform_map6(void* self, void* a) {
+    return QTransform_Map6((QTransform*)self, (QPolygon*)a);
+}
+
 QRegion* q_transform_map7(void* self, void* r) {
     return QTransform_Map7((QTransform*)self, (QRegion*)r);
 }
 
 QPainterPath* q_transform_map8(void* self, void* p) {
     return QTransform_Map8((QTransform*)self, (QPainterPath*)p);
+}
+
+QPolygon* q_transform_map_to_polygon(void* self, void* r) {
+    return QTransform_MapToPolygon((QTransform*)self, (QRect*)r);
 }
 
 QRect* q_transform_map_rect(void* self, void* param1) {
@@ -269,4 +294,12 @@ QTransform* q_transform_rotate_radians22(void* self, double a, int32_t axis) {
 
 void q_transform_delete(void* self) {
     QTransform_Delete((QTransform*)(self));
+}
+
+uintptr_t q_qtransform_h_q_hash(void* key, uintptr_t seed) {
+    return qtransform_h_QHash((QTransform*)key, seed);
+}
+
+bool q_qtransform_h_q_fuzzy_compare(void* t1, void* t2) {
+    return qtransform_h_QFuzzyCompare((QTransform*)t1, (QTransform*)t2);
 }

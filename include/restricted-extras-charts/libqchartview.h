@@ -767,6 +767,17 @@ libqt_list q_chartview_items5(void* self, int x, int y, int w, int h);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#items)
 ///
 /// @param self QChartView*
+/// @param polygon QPolygon*
+///
+/// @return libqt_list of QGraphicsItem*
+///
+libqt_list q_chartview_items6(void* self, void* polygon);
+
+/// Inherited from QGraphicsView
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#items)
+///
+/// @param self QChartView*
 /// @param path QPainterPath*
 ///
 /// @return libqt_list of QGraphicsItem*
@@ -806,6 +817,24 @@ QPointF* q_chartview_map_to_scene(void* self, void* point);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#mapToScene)
 ///
 /// @param self QChartView*
+/// @param rect QRect*
+///
+QPolygonF* q_chartview_map_to_scene2(void* self, void* rect);
+
+/// Inherited from QGraphicsView
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#mapToScene)
+///
+/// @param self QChartView*
+/// @param polygon QPolygon*
+///
+QPolygonF* q_chartview_map_to_scene3(void* self, void* polygon);
+
+/// Inherited from QGraphicsView
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#mapToScene)
+///
+/// @param self QChartView*
 /// @param path QPainterPath*
 ///
 QPainterPath* q_chartview_map_to_scene4(void* self, void* path);
@@ -818,6 +847,24 @@ QPainterPath* q_chartview_map_to_scene4(void* self, void* path);
 /// @param point QPointF*
 ///
 QPoint* q_chartview_map_from_scene(void* self, void* point);
+
+/// Inherited from QGraphicsView
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#mapFromScene)
+///
+/// @param self QChartView*
+/// @param rect QRectF*
+///
+QPolygon* q_chartview_map_from_scene2(void* self, void* rect);
+
+/// Inherited from QGraphicsView
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#mapFromScene)
+///
+/// @param self QChartView*
+/// @param polygon QPolygonF*
+///
+QPolygon* q_chartview_map_from_scene3(void* self, void* polygon);
 
 /// Inherited from QGraphicsView
 ///
@@ -840,6 +887,18 @@ QPointF* q_chartview_map_to_scene5(void* self, int x, int y);
 
 /// Inherited from QGraphicsView
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#mapToScene)
+///
+/// @param self QChartView*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
+///
+QPolygonF* q_chartview_map_to_scene6(void* self, int x, int y, int w, int h);
+
+/// Inherited from QGraphicsView
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#mapFromScene)
 ///
 /// @param self QChartView*
@@ -847,6 +906,18 @@ QPointF* q_chartview_map_to_scene5(void* self, int x, int y);
 /// @param y double
 ///
 QPoint* q_chartview_map_from_scene5(void* self, double x, double y);
+
+/// Inherited from QGraphicsView
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#mapFromScene)
+///
+/// @param self QChartView*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
+///
+QPolygon* q_chartview_map_from_scene6(void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsView
 ///
@@ -1119,6 +1190,18 @@ libqt_list q_chartview_items22(void* self, void* rect, int32_t mode);
 /// @return libqt_list of QGraphicsItem*
 ///
 libqt_list q_chartview_items52(void* self, int x, int y, int w, int h, int32_t mode);
+
+/// Inherited from QGraphicsView
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#items)
+///
+/// @param self QChartView*
+/// @param polygon QPolygon*
+/// @param mode enum Qt__ItemSelectionMode
+///
+/// @return libqt_list of QGraphicsItem*
+///
+libqt_list q_chartview_items23(void* self, void* polygon, int32_t mode);
 
 /// Inherited from QGraphicsView
 ///

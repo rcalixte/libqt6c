@@ -132,7 +132,7 @@ void q_brush_operator_assign(void* self, void* brush);
 ///
 void q_brush_swap(void* self, void* other);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html#operator-QVariant)
 ///
 /// @param self QBrush*
 ///

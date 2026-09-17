@@ -160,6 +160,38 @@ char* q_bytearray_from_percent_encoding2(char* pctEncoded, char percent) {
     return _ret;
 }
 
+char* q_qbytearray_q_compress(unsigned char* data, intptr_t nbytes, int compressionLevel) {
+    libqt_string _str = qbytearray_QCompress(data, nbytes, compressionLevel);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+char* q_qbytearray_q_uncompress(unsigned char* data, intptr_t nbytes) {
+    libqt_string _str = qbytearray_QUncompress(data, nbytes);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+char* q_qbytearray_q_compress2(char* data, int compressionLevel) {
+    libqt_string _str = qbytearray_QCompress2(qstring(data), compressionLevel);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+char* q_qbytearray_q_uncompress2(char* data) {
+    libqt_string _str = qbytearray_QUncompress2(qstring(data));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+uintptr_t q_qbytearray_q_hash(void* key, uintptr_t seed) {
+    return qbytearray_QHash((QByteArray__FromBase64Result*)key, seed);
+}
+
 QByteArray__FromBase64Result* q_bytearray__frombase64result_new() {
     return QByteArray__FromBase64Result_New();
 }

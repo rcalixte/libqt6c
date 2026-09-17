@@ -187,6 +187,10 @@ void q_jsonarray_delete(void* self) {
     QJsonArray_Delete((QJsonArray*)(self));
 }
 
+uintptr_t q_qjsonarray_q_hash(void* array, uintptr_t seed) {
+    return qjsonarray_QHash((QJsonArray*)array, seed);
+}
+
 QJsonArray__iterator* q_jsonarray__iterator_new(void* other) {
     return QJsonArray__iterator_New((QJsonArray__iterator*)other);
 }

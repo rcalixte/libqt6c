@@ -106,4 +106,12 @@ bool q_openglversionprofile_is_valid(void* self);
 ///
 void q_openglversionprofile_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionprofile-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionprofile-h.html#qHash)
+///
+/// @param v QOpenGLVersionProfile*
+/// @param seed uintptr_t
+///
+uintptr_t q_qopenglversionprofile_h_q_hash(void* v, uintptr_t seed);
 #endif

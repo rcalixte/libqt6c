@@ -85,3 +85,7 @@ const char** q_libraryinfo_platform_plugin_arguments(const char* platformName) {
 void q_libraryinfo_delete(void* self) {
     QLibraryInfo_Delete((QLibraryInfo*)(self));
 }
+
+bool q_qlibraryinfo_q_shared_build() {
+    return qlibraryinfo_QSharedBuild();
+}

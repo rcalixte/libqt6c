@@ -8,6 +8,16 @@
 #include "libqttypedefs.h"
 #include "qtlibc.h"
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobjectdefs.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobjectdefs.html#qFlagLocation)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param method const char*
+///
+const char* q_qobjectdefs_q_flag_location(const char* method);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgenericargument.html)
 
 /// q_genericargument_new constructs a new QGenericArgument object.
@@ -1352,7 +1362,7 @@ void q_metaobject__superdata_set_direct(void* self, void* direct);
 ///
 const QMetaObject* q_metaobject__superdata_operator_minus_greater(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject-superdata.html#operator-2a)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject-superdata.html#operator-const-QMetaObject--2a)
 ///
 /// @param self QMetaObject__SuperData*
 ///

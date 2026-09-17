@@ -96,7 +96,7 @@ bool q_textlength_operator_equal(void* self, void* other);
 ///
 bool q_textlength_operator_not_equal(void* self, void* other);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qtextlength.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextlength.html#operator-QVariant)
 ///
 /// @param self QTextLength*
 ///
@@ -424,7 +424,7 @@ bool q_textformat_operator_equal(void* self, void* rhs);
 ///
 bool q_textformat_operator_not_equal(void* self, void* rhs);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-QVariant)
 ///
 /// @param self QTextFormat*
 ///
@@ -1348,7 +1348,7 @@ bool q_textcharformat_operator_not_equal(void* self, void* rhs);
 
 /// Inherited from QTextFormat
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-QVariant)
 ///
 /// @param self QTextCharFormat*
 ///
@@ -2013,7 +2013,7 @@ bool q_textblockformat_operator_not_equal(void* self, void* rhs);
 
 /// Inherited from QTextFormat
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-QVariant)
 ///
 /// @param self QTextBlockFormat*
 ///
@@ -2557,7 +2557,7 @@ bool q_textlistformat_operator_not_equal(void* self, void* rhs);
 
 /// Inherited from QTextFormat
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-QVariant)
 ///
 /// @param self QTextListFormat*
 ///
@@ -3706,7 +3706,7 @@ bool q_textimageformat_operator_not_equal(void* self, void* rhs);
 
 /// Inherited from QTextFormat
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-QVariant)
 ///
 /// @param self QTextImageFormat*
 ///
@@ -4368,7 +4368,7 @@ bool q_textframeformat_operator_not_equal(void* self, void* rhs);
 
 /// Inherited from QTextFormat
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-QVariant)
 ///
 /// @param self QTextFrameFormat*
 ///
@@ -5187,7 +5187,7 @@ bool q_texttableformat_operator_not_equal(void* self, void* rhs);
 
 /// Inherited from QTextFormat
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-QVariant)
 ///
 /// @param self QTextTableFormat*
 ///
@@ -6507,7 +6507,7 @@ bool q_texttablecellformat_operator_not_equal(void* self, void* rhs);
 
 /// Inherited from QTextFormat
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-QVariant)
 ///
 /// @param self QTextTableCellFormat*
 ///

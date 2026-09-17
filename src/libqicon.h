@@ -60,7 +60,7 @@ void q_icon_operator_assign(void* self, void* other);
 ///
 void q_icon_swap(void* self, void* other);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#operator-QVariant)
 ///
 /// @param self QIcon*
 ///

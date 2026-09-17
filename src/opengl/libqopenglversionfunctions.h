@@ -105,6 +105,15 @@ void q_openglversionstatus_operator_assign(void* self, void* param1);
 ///
 void q_openglversionstatus_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctions-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctions-h.html#qHash)
+///
+/// @param v QOpenGLVersionStatus*
+/// @param seed uintptr_t
+///
+uintptr_t q_qopenglversionfunctions_h_q_hash(void* v, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsbackend.html#context-var)

@@ -7,6 +7,10 @@
 #include "libqurl.hpp"
 #include "libqurl.hxx"
 
+size_t qurl_QHash(const QUrl* url, size_t seed) {
+    return qHash(*url, static_cast<size_t>(seed));
+}
+
 QUrl* QUrl_New() {
     return new QUrl();
 }
