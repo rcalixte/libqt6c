@@ -56,6 +56,15 @@ uint8_t q_ipv6address_operator_subscript2(void* self, int index);
 ///
 void q_ipv6address_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress-h.html#qHash)
+///
+/// @param key QHostAddress*
+/// @param seed uintptr_t
+///
+uintptr_t q_qhostaddress_h_q_hash(void* key, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html)
 
 /// q_hostaddress_new constructs a new QHostAddress object.

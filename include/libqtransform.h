@@ -301,6 +301,28 @@ QTransform* q_transform_rotate_radians(void* self, double a, int32_t axis, doubl
 ///
 QTransform* q_transform_rotate_radians2(void* self, double a);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#squareToQuad)
+///
+/// @param square QPolygonF*
+/// @param result QTransform*
+///
+bool q_transform_square_to_quad(void* square, void* result);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#quadToSquare)
+///
+/// @param quad QPolygonF*
+/// @param result QTransform*
+///
+bool q_transform_quad_to_square(void* quad, void* result);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#quadToQuad)
+///
+/// @param one QPolygonF*
+/// @param two QPolygonF*
+/// @param result QTransform*
+///
+bool q_transform_quad_to_quad(void* one, void* two, void* result);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#operator-eq-eq)
 ///
 /// @param self QTransform*
@@ -329,7 +351,7 @@ QTransform* q_transform_operator_multiply_assign(void* self, void* param1);
 ///
 QTransform* q_transform_operator_multiply(void* self, void* o);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#operator-QVariant)
 ///
 /// @param self QTransform*
 ///
@@ -372,6 +394,20 @@ QLineF* q_transform_map4(void* self, void* l);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
 /// @param self QTransform*
+/// @param a QPolygonF*
+///
+QPolygonF* q_transform_map5(void* self, void* a);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#map)
+///
+/// @param self QTransform*
+/// @param a QPolygon*
+///
+QPolygon* q_transform_map6(void* self, void* a);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#map)
+///
+/// @param self QTransform*
 /// @param r QRegion*
 ///
 QRegion* q_transform_map7(void* self, void* r);
@@ -382,6 +418,13 @@ QRegion* q_transform_map7(void* self, void* r);
 /// @param p QPainterPath*
 ///
 QPainterPath* q_transform_map8(void* self, void* p);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#mapToPolygon)
+///
+/// @param self QTransform*
+/// @param r QRect*
+///
+QPolygon* q_transform_map_to_polygon(void* self, void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#mapRect)
 ///
@@ -489,6 +532,22 @@ QTransform* q_transform_rotate_radians22(void* self, double a, int32_t axis);
 /// @param self QTransform*
 ///
 void q_transform_delete(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtransform-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtransform-h.html#qHash)
+///
+/// @param key QTransform*
+/// @param seed uintptr_t
+///
+uintptr_t q_qtransform_h_q_hash(void* key, uintptr_t seed);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtransform-h.html#qFuzzyCompare)
+///
+/// @param t1 QTransform*
+/// @param t2 QTransform*
+///
+bool q_qtransform_h_q_fuzzy_compare(void* t1, void* t2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#public-types)
 

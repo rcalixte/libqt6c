@@ -232,6 +232,10 @@ void q_cborarray_delete(void* self) {
     QCborArray_Delete((QCborArray*)(self));
 }
 
+uintptr_t q_qcborarray_q_hash(void* array, uintptr_t seed) {
+    return qcborarray_QHash((QCborArray*)array, seed);
+}
+
 QCborArray__Iterator* q_cborarray__iterator_new() {
     return QCborArray__Iterator_New();
 }

@@ -45,6 +45,14 @@ void q_dbusobjectpath_delete(void* self) {
     QDBusObjectPath_Delete((QDBusObjectPath*)(self));
 }
 
+uintptr_t q_qdbusextratypes_h_q_hash(void* objectPath, uintptr_t seed) {
+    return qdbusextratypes_h_QHash((QDBusObjectPath*)objectPath, seed);
+}
+
+uintptr_t q_qdbusextratypes_h_q_hash2(void* signature, uintptr_t seed) {
+    return qdbusextratypes_h_QHash2((QDBusSignature*)signature, seed);
+}
+
 QDBusSignature* q_dbussignature_new() {
     return QDBusSignature_New();
 }

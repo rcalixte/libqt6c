@@ -164,6 +164,15 @@ const char* q_geocoordinate_to_string1(void* self, int32_t format);
 ///
 void q_geocoordinate_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qgeocoordinate-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgeocoordinate-h.html#qHash)
+///
+/// @param coordinate QGeoCoordinate*
+/// @param seed uintptr_t
+///
+uintptr_t q_qgeocoordinate_h_q_hash(void* coordinate, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocoordinate.html#public-types)
 
 typedef enum {

@@ -148,6 +148,34 @@ const char* q_signon__authservice_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
+void q_signon__authservice_query_identities1(void* self, libqt_map /* of enum SignOn__AuthService__IdentityFilterCriteria to SignOn__AuthService__IdentityRegExp* */ filter) {
+    // Convert libqt_map to QMap<SignOn::AuthService::IdentityFilterCriteria,SignOn::AuthService::IdentityRegExp>
+    libqt_map filter_ret;
+    filter_ret.len = filter.len;
+    filter_ret.keys = (int32_t*)malloc(filter_ret.len * sizeof(int32_t));
+    if (filter_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys in q_signon__authservice_query_identities1\n");
+        abort();
+    }
+    filter_ret.values = (SignOn__AuthService__IdentityRegExp**)malloc(filter_ret.len * sizeof(SignOn__AuthService__IdentityRegExp*));
+    if (filter_ret.values == NULL) {
+        free(filter_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values in q_signon__authservice_query_identities1\n");
+        abort();
+    }
+    int32_t* filter_karr = (int32_t*)filter.keys;
+    int32_t* filter_kdest = (int32_t*)filter_ret.keys;
+    SignOn__AuthService__IdentityRegExp** filter_varr = (SignOn__AuthService__IdentityRegExp**)filter.values;
+    SignOn__AuthService__IdentityRegExp** filter_vdest = (SignOn__AuthService__IdentityRegExp**)filter_ret.values;
+    for (size_t i = 0; i < filter_ret.len; ++i) {
+        filter_kdest[i] = filter_karr[i];
+        filter_vdest[i] = filter_varr[i];
+    }
+    SignOn__AuthService_QueryIdentities1((SignOn__AuthService*)self, filter_ret);
+    free(filter_ret.keys);
+    free(filter_ret.values);
+}
+
 const char* q_signon__authservice_object_name(void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);

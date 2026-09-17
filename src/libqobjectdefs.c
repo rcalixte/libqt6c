@@ -4,6 +4,10 @@
 #include "libqobjectdefs.hpp"
 #include "libqobjectdefs.h"
 
+const char* q_qobjectdefs_q_flag_location(const char* method) {
+    return qobjectdefs_QFlagLocation(method);
+}
+
 QGenericArgument* q_genericargument_new(void* other) {
     return QGenericArgument_New((QGenericArgument*)other);
 }

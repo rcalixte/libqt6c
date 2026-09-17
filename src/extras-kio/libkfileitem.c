@@ -360,6 +360,10 @@ void k_fileitem_delete(void* self) {
     KFileItem_Delete((KFileItem*)(self));
 }
 
+uintptr_t k_fileitem_h_q_hash(void* item, uintptr_t seed) {
+    return kfileitem_h_QHash((KFileItem*)item, seed);
+}
+
 // Also inherits unprojectable QList<KFileItem>
 
 KFileItemList* k_fileitemlist_new() {

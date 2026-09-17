@@ -97,6 +97,15 @@ QSslCertificate* q_sslerror_certificate(void* self);
 ///
 void q_sslerror_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslerror-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslerror-h.html#qHash)
+///
+/// @param key QSslError*
+/// @param seed uintptr_t
+///
+uintptr_t q_qsslerror_h_q_hash(void* key, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslerror.html#public-types)
 
 typedef enum {

@@ -214,3 +214,7 @@ QQuaternion* q_quaternion_nlerp(void* q1, void* q2, float t) {
 void q_quaternion_delete(void* self) {
     QQuaternion_Delete((QQuaternion*)(self));
 }
+
+bool q_qquaternion_h_q_fuzzy_compare(void* q1, void* q2) {
+    return qquaternion_h_QFuzzyCompare((QQuaternion*)q1, (QQuaternion*)q2);
+}

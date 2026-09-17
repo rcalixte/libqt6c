@@ -14,6 +14,7 @@
 #include "libqpainter.hpp"
 #include "libqpainterpath.hpp"
 #include "libqpoint.hpp"
+#include "libqpolygon.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
 #include "libqstyleoption.hpp"
@@ -311,6 +312,11 @@ libqt_list /* of QGraphicsItem* */ q_graphicsview_items5(void* self, int x, int 
     return _arr;
 }
 
+libqt_list /* of QGraphicsItem* */ q_graphicsview_items6(void* self, void* polygon) {
+    libqt_list _arr = QGraphicsView_Items6((QGraphicsView*)self, (QPolygon*)polygon);
+    return _arr;
+}
+
 libqt_list /* of QGraphicsItem* */ q_graphicsview_items7(void* self, void* path) {
     libqt_list _arr = QGraphicsView_Items7((QGraphicsView*)self, (QPainterPath*)path);
     return _arr;
@@ -328,12 +334,28 @@ QPointF* q_graphicsview_map_to_scene(void* self, void* point) {
     return QGraphicsView_MapToScene((QGraphicsView*)self, (QPoint*)point);
 }
 
+QPolygonF* q_graphicsview_map_to_scene2(void* self, void* rect) {
+    return QGraphicsView_MapToScene2((QGraphicsView*)self, (QRect*)rect);
+}
+
+QPolygonF* q_graphicsview_map_to_scene3(void* self, void* polygon) {
+    return QGraphicsView_MapToScene3((QGraphicsView*)self, (QPolygon*)polygon);
+}
+
 QPainterPath* q_graphicsview_map_to_scene4(void* self, void* path) {
     return QGraphicsView_MapToScene4((QGraphicsView*)self, (QPainterPath*)path);
 }
 
 QPoint* q_graphicsview_map_from_scene(void* self, void* point) {
     return QGraphicsView_MapFromScene((QGraphicsView*)self, (QPointF*)point);
+}
+
+QPolygon* q_graphicsview_map_from_scene2(void* self, void* rect) {
+    return QGraphicsView_MapFromScene2((QGraphicsView*)self, (QRectF*)rect);
+}
+
+QPolygon* q_graphicsview_map_from_scene3(void* self, void* polygon) {
+    return QGraphicsView_MapFromScene3((QGraphicsView*)self, (QPolygonF*)polygon);
 }
 
 QPainterPath* q_graphicsview_map_from_scene4(void* self, void* path) {
@@ -344,8 +366,16 @@ QPointF* q_graphicsview_map_to_scene5(void* self, int x, int y) {
     return QGraphicsView_MapToScene5((QGraphicsView*)self, x, y);
 }
 
+QPolygonF* q_graphicsview_map_to_scene6(void* self, int x, int y, int w, int h) {
+    return QGraphicsView_MapToScene6((QGraphicsView*)self, x, y, w, h);
+}
+
 QPoint* q_graphicsview_map_from_scene5(void* self, double x, double y) {
     return QGraphicsView_MapFromScene5((QGraphicsView*)self, x, y);
+}
+
+QPolygon* q_graphicsview_map_from_scene6(void* self, double x, double y, double w, double h) {
+    return QGraphicsView_MapFromScene6((QGraphicsView*)self, x, y, w, h);
 }
 
 QVariant* q_graphicsview_input_method_query(void* self, int32_t query) {
@@ -789,6 +819,11 @@ libqt_list /* of QGraphicsItem* */ q_graphicsview_items22(void* self, void* rect
 
 libqt_list /* of QGraphicsItem* */ q_graphicsview_items52(void* self, int x, int y, int w, int h, int32_t mode) {
     libqt_list _arr = QGraphicsView_Items52((QGraphicsView*)self, x, y, w, h, mode);
+    return _arr;
+}
+
+libqt_list /* of QGraphicsItem* */ q_graphicsview_items23(void* self, void* polygon, int32_t mode) {
+    libqt_list _arr = QGraphicsView_Items23((QGraphicsView*)self, (QPolygon*)polygon, mode);
     return _arr;
 }
 

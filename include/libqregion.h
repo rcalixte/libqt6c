@@ -37,21 +37,29 @@ QRegion* q_region_new3(void* r);
 
 /// q_region_new4 constructs a new QRegion object.
 ///
-/// @param region QRegion*
+/// @param pa QPolygon*
 ///
-QRegion* q_region_new4(void* region);
+QRegion* q_region_new4(void* pa);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html)
 
 /// q_region_new5 constructs a new QRegion object.
 ///
-/// @param bitmap QBitmap*
+/// @param region QRegion*
 ///
-QRegion* q_region_new5(void* bitmap);
+QRegion* q_region_new5(void* region);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html)
 
 /// q_region_new6 constructs a new QRegion object.
+///
+/// @param bitmap QBitmap*
+///
+QRegion* q_region_new6(void* bitmap);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qregion.html)
+
+/// q_region_new7 constructs a new QRegion object.
 ///
 /// @param x int
 /// @param y int
@@ -59,16 +67,25 @@ QRegion* q_region_new5(void* bitmap);
 /// @param h int
 /// @param t enum QRegion__RegionType
 ///
-QRegion* q_region_new6(int x, int y, int w, int h, int32_t t);
+QRegion* q_region_new7(int x, int y, int w, int h, int32_t t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html)
 
-/// q_region_new7 constructs a new QRegion object.
+/// q_region_new8 constructs a new QRegion object.
 ///
 /// @param r QRect*
 /// @param t enum QRegion__RegionType
 ///
-QRegion* q_region_new7(void* r, int32_t t);
+QRegion* q_region_new8(void* r, int32_t t);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qregion.html)
+
+/// q_region_new9 constructs a new QRegion object.
+///
+/// @param pa QPolygon*
+/// @param fillRule enum Qt__FillRule
+///
+QRegion* q_region_new9(void* pa, int32_t fillRule);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#operator-eq)
 ///
@@ -367,7 +384,7 @@ bool q_region_operator_equal(void* self, void* r);
 ///
 bool q_region_operator_not_equal(void* self, void* r);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#operator-QVariant)
 ///
 /// @param self QRegion*
 ///

@@ -180,6 +180,15 @@ QPointF* q_point_to_point_f(void* self);
 ///
 void q_point_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qpoint.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpoint.html#qHash)
+///
+/// @param key QPoint*
+/// @param seed uintptr_t
+///
+uintptr_t q_qpoint_q_hash(void* key, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointf.html)
 
 /// q_pointf_new constructs a new QPointF object.

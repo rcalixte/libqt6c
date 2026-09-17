@@ -10,6 +10,15 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html)
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#qHash)
+///
+/// @param key QLocale*
+/// @param seed uintptr_t
+///
+uintptr_t q_qlocale_q_hash(void* key, uintptr_t seed);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html)
+
 /// q_locale_new constructs a new QLocale object.
 ///
 QLocale* q_locale_new();

@@ -8,16 +8,24 @@
 #include "libqobject.hpp"
 #include "libqobject.h"
 
-void q_qobject_h_q_find_children_helper(void* parent, const char* name, void* mo, libqt_list /* of void* */ list, int32_t options) {
-    qobject_h_QFindChildrenHelper((QObject*)parent, name, (QMetaObject*)mo, list, options);
+void q_qobject_q_find_children_helper(void* parent, const char* name, void* mo, libqt_list /* of void* */ list, int32_t options) {
+    qobject_QFindChildrenHelper((QObject*)parent, name, (QMetaObject*)mo, list, options);
 }
 
-void q_qobject_h_q_find_children_helper2(void* parent, void* re, void* mo, libqt_list /* of void* */ list, int32_t options) {
-    qobject_h_QFindChildrenHelper2((QObject*)parent, (QRegularExpression*)re, (QMetaObject*)mo, list, options);
+void q_qobject_q_find_children_helper2(void* parent, void* re, void* mo, libqt_list /* of void* */ list, int32_t options) {
+    qobject_QFindChildrenHelper2((QObject*)parent, (QRegularExpression*)re, (QMetaObject*)mo, list, options);
 }
 
-QObject* q_qobject_h_q_find_child_helper(void* parent, const char* name, void* mo, int32_t options) {
-    return qobject_h_QFindChildHelper((QObject*)parent, name, (QMetaObject*)mo, options);
+QObject* q_qobject_q_find_child_helper(void* parent, const char* name, void* mo, int32_t options) {
+    return qobject_QFindChildHelper((QObject*)parent, name, (QMetaObject*)mo, options);
+}
+
+const QBindingStorage* q_qobject_q_get_binding_storage(void* o) {
+    return qobject_QGetBindingStorage((QObject*)o);
+}
+
+QBindingStorage* q_qobject_q_get_binding_storage2(void* o) {
+    return qobject_QGetBindingStorage2((QObject*)o);
 }
 
 QObject* q_object_new() {

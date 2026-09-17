@@ -3,6 +3,10 @@
 #include "libqkeysequence.hpp"
 #include "libqkeysequence.h"
 
+uintptr_t q_qkeysequence_h_q_hash(void* key, uintptr_t seed) {
+    return qkeysequence_h_QHash((QKeySequence*)key, seed);
+}
+
 QKeySequence* q_keysequence_new() {
     return QKeySequence_New();
 }

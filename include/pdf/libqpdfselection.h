@@ -36,6 +36,14 @@ void q_pdfselection_swap(void* self, void* other);
 ///
 bool q_pdfselection_is_valid(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qpdfselection.html#bounds)
+///
+/// @param self QPdfSelection*
+///
+/// @return libqt_list of QPolygonF*
+///
+libqt_list q_pdfselection_bounds(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfselection.html#text)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`

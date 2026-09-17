@@ -1,3 +1,4 @@
+#include "../libqpolygon.hpp"
 #include "../libqrect.hpp"
 #include "libqpdfselection.hpp"
 #include "libqpdfselection.h"
@@ -16,6 +17,11 @@ void q_pdfselection_swap(void* self, void* other) {
 
 bool q_pdfselection_is_valid(void* self) {
     return QPdfSelection_IsValid((QPdfSelection*)self);
+}
+
+libqt_list /* of QPolygonF* */ q_pdfselection_bounds(void* self) {
+    libqt_list _arr = QPdfSelection_Bounds((QPdfSelection*)self);
+    return _arr;
 }
 
 const char* q_pdfselection_text(void* self) {

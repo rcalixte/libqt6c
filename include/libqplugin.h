@@ -8,6 +8,18 @@
 #include "libqttypedefs.h"
 #include "qtlibc.h"
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qplugin.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qplugin.html#qPluginArchRequirements)
+///
+unsigned char q_qplugin_q_plugin_arch_requirements();
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qplugin.html#qRegisterStaticPluginFunction)
+///
+/// @param staticPlugin QStaticPlugin*
+///
+void q_qplugin_q_register_static_plugin_function(void* staticPlugin);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstaticplugin.html)
 
 /// q_staticplugin_new constructs a new QStaticPlugin object.

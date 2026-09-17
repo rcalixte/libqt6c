@@ -537,6 +537,15 @@ libqt_list q_graphicsview_items5(void* self, int x, int y, int w, int h);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#items)
 ///
 /// @param self QGraphicsView*
+/// @param polygon QPolygon*
+///
+/// @return libqt_list of QGraphicsItem*
+///
+libqt_list q_graphicsview_items6(void* self, void* polygon);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#items)
+///
+/// @param self QGraphicsView*
 /// @param path QPainterPath*
 ///
 /// @return libqt_list of QGraphicsItem*
@@ -568,6 +577,20 @@ QPointF* q_graphicsview_map_to_scene(void* self, void* point);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#mapToScene)
 ///
 /// @param self QGraphicsView*
+/// @param rect QRect*
+///
+QPolygonF* q_graphicsview_map_to_scene2(void* self, void* rect);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#mapToScene)
+///
+/// @param self QGraphicsView*
+/// @param polygon QPolygon*
+///
+QPolygonF* q_graphicsview_map_to_scene3(void* self, void* polygon);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#mapToScene)
+///
+/// @param self QGraphicsView*
 /// @param path QPainterPath*
 ///
 QPainterPath* q_graphicsview_map_to_scene4(void* self, void* path);
@@ -578,6 +601,20 @@ QPainterPath* q_graphicsview_map_to_scene4(void* self, void* path);
 /// @param point QPointF*
 ///
 QPoint* q_graphicsview_map_from_scene(void* self, void* point);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#mapFromScene)
+///
+/// @param self QGraphicsView*
+/// @param rect QRectF*
+///
+QPolygon* q_graphicsview_map_from_scene2(void* self, void* rect);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#mapFromScene)
+///
+/// @param self QGraphicsView*
+/// @param polygon QPolygonF*
+///
+QPolygon* q_graphicsview_map_from_scene3(void* self, void* polygon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#mapFromScene)
 ///
@@ -594,6 +631,16 @@ QPainterPath* q_graphicsview_map_from_scene4(void* self, void* path);
 ///
 QPointF* q_graphicsview_map_to_scene5(void* self, int x, int y);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#mapToScene)
+///
+/// @param self QGraphicsView*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
+///
+QPolygonF* q_graphicsview_map_to_scene6(void* self, int x, int y, int w, int h);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#mapFromScene)
 ///
 /// @param self QGraphicsView*
@@ -601,6 +648,16 @@ QPointF* q_graphicsview_map_to_scene5(void* self, int x, int y);
 /// @param y double
 ///
 QPoint* q_graphicsview_map_from_scene5(void* self, double x, double y);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#mapFromScene)
+///
+/// @param self QGraphicsView*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
+///
+QPolygon* q_graphicsview_map_from_scene6(void* self, double x, double y, double w, double h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#inputMethodQuery)
 ///
@@ -1529,6 +1586,16 @@ libqt_list q_graphicsview_items22(void* self, void* rect, int32_t mode);
 /// @return libqt_list of QGraphicsItem*
 ///
 libqt_list q_graphicsview_items52(void* self, int x, int y, int w, int h, int32_t mode);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#items)
+///
+/// @param self QGraphicsView*
+/// @param polygon QPolygon*
+/// @param mode enum Qt__ItemSelectionMode
+///
+/// @return libqt_list of QGraphicsItem*
+///
+libqt_list q_graphicsview_items23(void* self, void* polygon, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#items)
 ///

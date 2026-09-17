@@ -108,3 +108,35 @@ void q_rgba64_operator_assign(void* self, uint64_t _rgba) {
 void q_rgba64_delete(void* self) {
     QRgba64_Delete((QRgba64*)(self));
 }
+
+QRgba64* q_qrgba64_h_q_rgba64(uint16_t r, uint16_t g, uint16_t b, uint16_t a) {
+    return qrgba64_h_QRgba64(r, g, b, a);
+}
+
+QRgba64* q_qrgba64_h_q_rgba642(uint64_t c) {
+    return qrgba64_h_QRgba642(c);
+}
+
+QRgba64* q_qrgba64_h_q_premultiply(void* c) {
+    return qrgba64_h_QPremultiply((QRgba64*)c);
+}
+
+QRgba64* q_qrgba64_h_q_unpremultiply(void* c) {
+    return qrgba64_h_QUnpremultiply((QRgba64*)c);
+}
+
+uint32_t q_qrgba64_h_q_red(void* rgb) {
+    return qrgba64_h_QRed((QRgba64*)rgb);
+}
+
+uint32_t q_qrgba64_h_q_green(void* rgb) {
+    return qrgba64_h_QGreen((QRgba64*)rgb);
+}
+
+uint32_t q_qrgba64_h_q_blue(void* rgb) {
+    return qrgba64_h_QBlue((QRgba64*)rgb);
+}
+
+uint32_t q_qrgba64_h_q_alpha(void* rgb) {
+    return qrgba64_h_QAlpha((QRgba64*)rgb);
+}

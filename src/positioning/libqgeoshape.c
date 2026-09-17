@@ -49,3 +49,7 @@ const char* q_geoshape_to_string(void* self) {
 void q_geoshape_delete(void* self) {
     QGeoShape_Delete((QGeoShape*)(self));
 }
+
+uintptr_t q_qgeoshape_h_q_hash(void* shape, uintptr_t seed) {
+    return qgeoshape_h_QHash((QGeoShape*)shape, seed);
+}

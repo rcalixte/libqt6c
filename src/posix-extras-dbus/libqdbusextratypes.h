@@ -68,7 +68,7 @@ void q_dbusobjectpath_set_path(void* self, const char* path);
 ///
 const char* q_dbusobjectpath_path(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdbusobjectpath.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusobjectpath.html#operator-QVariant)
 ///
 /// @param self QDBusObjectPath*
 ///
@@ -81,6 +81,22 @@ QVariant* q_dbusobjectpath_to_q_variant(void* self);
 /// @param self QDBusObjectPath*
 ///
 void q_dbusobjectpath_delete(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusextratypes-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusextratypes-h.html#qHash)
+///
+/// @param objectPath QDBusObjectPath*
+/// @param seed uintptr_t
+///
+uintptr_t q_qdbusextratypes_h_q_hash(void* objectPath, uintptr_t seed);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusextratypes-h.html#qHash)
+///
+/// @param signature QDBusSignature*
+/// @param seed uintptr_t
+///
+uintptr_t q_qdbusextratypes_h_q_hash2(void* signature, uintptr_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbussignature.html)
 

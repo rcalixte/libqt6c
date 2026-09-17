@@ -227,6 +227,13 @@ void q_painterpath_add_ellipse2(void* self, double x, double y, double w, double
 ///
 void q_painterpath_add_ellipse3(void* self, void* center, double rx, double ry);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#addPolygon)
+///
+/// @param self QPainterPath*
+/// @param polygon QPolygonF*
+///
+void q_painterpath_add_polygon(void* self, void* polygon);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#addText)
 ///
 /// @param self QPainterPath*
@@ -377,6 +384,28 @@ bool q_painterpath_is_empty(void* self);
 /// @param self QPainterPath*
 ///
 QPainterPath* q_painterpath_to_reversed(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#toSubpathPolygons)
+///
+/// @param self QPainterPath*
+///
+/// @return libqt_list of QPolygonF*
+///
+libqt_list q_painterpath_to_subpath_polygons(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#toFillPolygons)
+///
+/// @param self QPainterPath*
+///
+/// @return libqt_list of QPolygonF*
+///
+libqt_list q_painterpath_to_fill_polygons(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#toFillPolygon)
+///
+/// @param self QPainterPath*
+///
+QPolygonF* q_painterpath_to_fill_polygon(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#elementCount)
 ///
@@ -567,6 +596,31 @@ void q_painterpath_add_rounded_rect4(void* self, void* rect, double xRadius, dou
 /// @param mode enum Qt__SizeMode
 ///
 void q_painterpath_add_rounded_rect7(void* self, double x, double y, double w, double h, double xRadius, double yRadius, int32_t mode);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#toSubpathPolygons)
+///
+/// @param self QPainterPath*
+/// @param matrix QTransform*
+///
+/// @return libqt_list of QPolygonF*
+///
+libqt_list q_painterpath_to_subpath_polygons1(void* self, void* matrix);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#toFillPolygons)
+///
+/// @param self QPainterPath*
+/// @param matrix QTransform*
+///
+/// @return libqt_list of QPolygonF*
+///
+libqt_list q_painterpath_to_fill_polygons1(void* self, void* matrix);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#toFillPolygon)
+///
+/// @param self QPainterPath*
+/// @param matrix QTransform*
+///
+QPolygonF* q_painterpath_to_fill_polygon1(void* self, void* matrix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#dtor.QPainterPath)
 ///
@@ -782,7 +836,7 @@ bool q_painterpath__element_is_line_to(void* self);
 ///
 bool q_painterpath__element_is_curve_to(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath-element.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath-element.html#operator-QPointF)
 ///
 /// @param self QPainterPath__Element*
 ///

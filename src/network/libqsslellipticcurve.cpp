@@ -4,6 +4,14 @@
 #include "libqsslellipticcurve.hpp"
 #include "libqsslellipticcurve.hxx"
 
+size_t qsslellipticcurve_h_QHash(QSslEllipticCurve* curve, size_t seed) {
+    return qHash(*curve, static_cast<size_t>(seed));
+}
+
+size_t qsslellipticcurve_h_QHash2(QSslEllipticCurve* curve, size_t seed) {
+    return qHash(*curve, static_cast<size_t>(seed));
+}
+
 QSslEllipticCurve* QSslEllipticCurve_New(const QSslEllipticCurve* other) {
     return new QSslEllipticCurve(*other);
 }

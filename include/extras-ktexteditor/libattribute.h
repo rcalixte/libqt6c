@@ -1149,7 +1149,7 @@ bool k_texteditor__attribute_operator_not_equal(void* self, void* rhs);
 
 /// Inherited from QTextFormat
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#operator-QVariant)
 ///
 /// @param self KTextEditor__Attribute*
 ///

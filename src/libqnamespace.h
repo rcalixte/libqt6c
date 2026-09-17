@@ -122,7 +122,7 @@ QKeyCombination* q_keycombination_from_combined(int combined);
 ///
 int32_t q_keycombination_to_combined(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html#operator-int)
 ///
 /// @param self QKeyCombination*
 ///

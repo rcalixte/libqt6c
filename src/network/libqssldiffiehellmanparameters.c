@@ -2,6 +2,10 @@
 #include "libqssldiffiehellmanparameters.hpp"
 #include "libqssldiffiehellmanparameters.h"
 
+uintptr_t q_qssldiffiehellmanparameters_h_q_hash(void* dhparam, uintptr_t seed) {
+    return qssldiffiehellmanparameters_h_QHash((QSslDiffieHellmanParameters*)dhparam, seed);
+}
+
 QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_new() {
     return QSslDiffieHellmanParameters_New();
 }

@@ -45,6 +45,8 @@ int QPoint_DotProduct(const QPoint* p1, const QPoint* p2);
 QPointF* QPoint_ToPointF(const QPoint* self);
 void QPoint_Delete(QPoint* self);
 
+size_t qpoint_QHash(QPoint* key, size_t seed);
+
 QPointF* QPointF_New(const QPointF* other);
 QPointF* QPointF_New2(QPointF* other);
 QPointF* QPointF_New3();

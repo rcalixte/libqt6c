@@ -21,6 +21,10 @@ void q_ipv6address_delete(void* self) {
     QIPv6Address_Delete((QIPv6Address*)(self));
 }
 
+uintptr_t q_qhostaddress_h_q_hash(void* key, uintptr_t seed) {
+    return qhostaddress_h_QHash((QHostAddress*)key, seed);
+}
+
 QHostAddress* q_hostaddress_new() {
     return QHostAddress_New();
 }

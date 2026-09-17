@@ -294,6 +294,15 @@ bool q_jsonarray_empty(void* self);
 ///
 void q_jsonarray_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#qHash)
+///
+/// @param array QJsonArray*
+/// @param seed uintptr_t
+///
+uintptr_t q_qjsonarray_q_hash(void* array, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-iterator.html)
 
 /// q_jsonarray__iterator_new constructs a new QJsonArray::iterator object.

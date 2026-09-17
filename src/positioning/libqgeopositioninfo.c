@@ -3,6 +3,10 @@
 #include "libqgeopositioninfo.hpp"
 #include "libqgeopositioninfo.h"
 
+uintptr_t q_qgeopositioninfo_h_q_hash(void* key, uintptr_t seed) {
+    return qgeopositioninfo_h_QHash((QGeoPositionInfo*)key, seed);
+}
+
 QGeoPositionInfo* q_geopositioninfo_new() {
     return QGeoPositionInfo_New();
 }

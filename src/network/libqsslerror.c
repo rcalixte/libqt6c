@@ -52,3 +52,7 @@ QSslCertificate* q_sslerror_certificate(void* self) {
 void q_sslerror_delete(void* self) {
     QSslError_Delete((QSslError*)(self));
 }
+
+uintptr_t q_qsslerror_h_q_hash(void* key, uintptr_t seed) {
+    return qsslerror_h_QHash((QSslError*)key, seed);
+}

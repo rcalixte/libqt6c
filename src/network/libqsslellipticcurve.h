@@ -8,6 +8,22 @@
 #include "../libqttypedefs.h"
 #include "../qtlibc.h"
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslellipticcurve-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslellipticcurve-h.html#qHash)
+///
+/// @param curve QSslEllipticCurve*
+/// @param seed uintptr_t
+///
+uintptr_t q_qsslellipticcurve_h_q_hash(void* curve, uintptr_t seed);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslellipticcurve-h.html#qHash)
+///
+/// @param curve QSslEllipticCurve*
+/// @param seed uintptr_t
+///
+uintptr_t q_qsslellipticcurve_h_q_hash2(void* curve, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslellipticcurve.html)
 
 /// q_sslellipticcurve_new constructs a new QSslEllipticCurve object.

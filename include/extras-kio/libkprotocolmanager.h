@@ -150,6 +150,14 @@ bool k_protocolmanager_can_rename_to_file(void* url);
 ///
 bool k_protocolmanager_can_delete_recursive(void* url);
 
+/// [Upstream resources](https://api.kde.org/kprotocolmanager.html#fileNameUsedForCopying)
+///
+/// @param url QUrl*
+///
+/// @return enum KProtocolInfo__FileNameUsedForCopying
+///
+int32_t k_protocolmanager_file_name_used_for_copying(void* url);
+
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#defaultMimetype)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`

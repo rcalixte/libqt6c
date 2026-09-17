@@ -91,7 +91,7 @@ void q_palette_operator_assign(void* self, void* palette);
 ///
 void q_palette_swap(void* self, void* other);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#operator-QVariant)
 ///
 /// @param self QPalette*
 ///

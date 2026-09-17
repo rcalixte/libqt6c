@@ -1,6 +1,10 @@
 #include "libqversionnumber.hpp"
 #include "libqversionnumber.h"
 
+uintptr_t q_qversionnumber_q_hash(void* key, uintptr_t seed) {
+    return qversionnumber_QHash((QVersionNumber*)key, seed);
+}
+
 QVersionNumber* q_versionnumber_new() {
     return QVersionNumber_New();
 }

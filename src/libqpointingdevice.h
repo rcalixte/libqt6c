@@ -78,6 +78,15 @@ int64_t q_pointingdeviceuniqueid_numeric_id(void* self);
 ///
 void q_pointingdeviceuniqueid_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qpointingdevice-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpointingdevice-h.html#qHash)
+///
+/// @param key QPointingDeviceUniqueId*
+/// @param seed uintptr_t
+///
+uintptr_t q_qpointingdevice_h_q_hash(void* key, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointingdevice.html)
 
 /// q_pointingdevice_new constructs a new QPointingDevice object.

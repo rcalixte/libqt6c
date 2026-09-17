@@ -3,6 +3,10 @@
 #include "libqlocale.hpp"
 #include "libqlocale.h"
 
+uintptr_t q_qlocale_q_hash(void* key, uintptr_t seed) {
+    return qlocale_QHash((QLocale*)key, seed);
+}
+
 QLocale* q_locale_new() {
     return QLocale_New();
 }

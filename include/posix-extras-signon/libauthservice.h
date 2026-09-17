@@ -209,6 +209,13 @@ const char* q_signon__authservice_tr2(const char* s, const char* c);
 ///
 const char* q_signon__authservice_tr3(const char* s, const char* c, int n);
 
+/// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthService.html)
+///
+/// @param self SignOn__AuthService*
+/// @param filter libqt_map of enum SignOn__AuthService__IdentityFilterCriteria to SignOn__AuthService__IdentityRegExp*
+///
+void q_signon__authservice_query_identities1(void* self, libqt_map filter);
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)

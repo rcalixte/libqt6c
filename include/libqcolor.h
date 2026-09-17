@@ -814,7 +814,7 @@ bool q_color_operator_equal(void* self, void* c);
 ///
 bool q_color_operator_not_equal(void* self, void* c);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#operator-QVariant)
 ///
 /// @param self QColor*
 ///

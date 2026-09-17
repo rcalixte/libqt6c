@@ -273,7 +273,7 @@ bool q_image_operator_equal(void* self, void* param1);
 ///
 bool q_image_operator_not_equal(void* self, void* param1);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#operator-QVariant)
 ///
 /// @param self QImage*
 ///

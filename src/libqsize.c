@@ -130,6 +130,10 @@ void q_size_delete(void* self) {
     QSize_Delete((QSize*)(self));
 }
 
+uintptr_t q_qsize_q_hash(void* s, uintptr_t seed) {
+    return qsize_QHash((QSize*)s, seed);
+}
+
 QSizeF* q_sizef_new(void* other) {
     return QSizeF_New((QSizeF*)other);
 }

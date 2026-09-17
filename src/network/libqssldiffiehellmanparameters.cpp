@@ -6,6 +6,10 @@
 #include "libqssldiffiehellmanparameters.hpp"
 #include "libqssldiffiehellmanparameters.hxx"
 
+size_t qssldiffiehellmanparameters_h_QHash(const QSslDiffieHellmanParameters* dhparam, size_t seed) {
+    return qHash(*dhparam, static_cast<size_t>(seed));
+}
+
 QSslDiffieHellmanParameters* QSslDiffieHellmanParameters_New() {
     return new QSslDiffieHellmanParameters();
 }

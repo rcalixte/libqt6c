@@ -58,6 +58,7 @@ void SignOn__AuthService_Identities(SignOn__AuthService* self, const libqt_list 
 void SignOn__AuthService_Connect_Identities(SignOn__AuthService* self, intptr_t slot);
 void SignOn__AuthService_Cleared(SignOn__AuthService* self);
 void SignOn__AuthService_Connect_Cleared(SignOn__AuthService* self, intptr_t slot);
+void SignOn__AuthService_QueryIdentities1(SignOn__AuthService* self, const libqt_map /* of int to SignOn__AuthService__IdentityRegExp* */ filter);
 void SignOn__AuthService_OnMetaObject(const SignOn__AuthService* self, intptr_t slot);
 QMetaObject* SignOn__AuthService_SuperMetaObject(const SignOn__AuthService* self);
 void SignOn__AuthService_OnMetacast(SignOn__AuthService* self, intptr_t slot);

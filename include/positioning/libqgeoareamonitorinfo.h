@@ -8,6 +8,15 @@
 #include "../libqttypedefs.h"
 #include "../qtlibc.h"
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorinfo-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorinfo-h.html#qHash)
+///
+/// @param key QGeoAreaMonitorInfo*
+/// @param seed uintptr_t
+///
+uintptr_t q_qgeoareamonitorinfo_h_q_hash(void* key, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorinfo.html)
 
 /// q_geoareamonitorinfo_new constructs a new QGeoAreaMonitorInfo object.

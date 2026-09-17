@@ -17,6 +17,7 @@
 #include "libqpen.hpp"
 #include "libqpixmap.hpp"
 #include "libqpoint.hpp"
+#include "libqpolygon.hpp"
 #include "libqrect.hpp"
 #include "libqstyle.hpp"
 #include "libqstyleoption.hpp"
@@ -152,6 +153,11 @@ libqt_list /* of QGraphicsItem* */ q_graphicsscene_items3(void* self, void* rect
     return _arr;
 }
 
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items4(void* self, void* polygon) {
+    libqt_list _arr = QGraphicsScene_Items4((QGraphicsScene*)self, (QPolygonF*)polygon);
+    return _arr;
+}
+
 libqt_list /* of QGraphicsItem* */ q_graphicsscene_items5(void* self, void* path) {
     libqt_list _arr = QGraphicsScene_Items5((QGraphicsScene*)self, (QPainterPath*)path);
     return _arr;
@@ -218,6 +224,10 @@ QGraphicsPathItem* q_graphicsscene_add_path(void* self, void* path) {
 
 QGraphicsPixmapItem* q_graphicsscene_add_pixmap(void* self, void* pixmap) {
     return QGraphicsScene_AddPixmap((QGraphicsScene*)self, (QPixmap*)pixmap);
+}
+
+QGraphicsPolygonItem* q_graphicsscene_add_polygon(void* self, void* polygon) {
+    return QGraphicsScene_AddPolygon((QGraphicsScene*)self, (QPolygonF*)polygon);
 }
 
 QGraphicsRectItem* q_graphicsscene_add_rect(void* self, void* rect) {
@@ -766,6 +776,21 @@ libqt_list /* of QGraphicsItem* */ q_graphicsscene_items43(void* self, void* rec
     return _arr;
 }
 
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items24(void* self, void* polygon, int32_t mode) {
+    libqt_list _arr = QGraphicsScene_Items24((QGraphicsScene*)self, (QPolygonF*)polygon, mode);
+    return _arr;
+}
+
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items34(void* self, void* polygon, int32_t mode, int32_t order) {
+    libqt_list _arr = QGraphicsScene_Items34((QGraphicsScene*)self, (QPolygonF*)polygon, mode, order);
+    return _arr;
+}
+
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items44(void* self, void* polygon, int32_t mode, int32_t order, void* deviceTransform) {
+    libqt_list _arr = QGraphicsScene_Items44((QGraphicsScene*)self, (QPolygonF*)polygon, mode, order, (QTransform*)deviceTransform);
+    return _arr;
+}
+
 libqt_list /* of QGraphicsItem* */ q_graphicsscene_items25(void* self, void* path, int32_t mode) {
     libqt_list _arr = QGraphicsScene_Items25((QGraphicsScene*)self, (QPainterPath*)path, mode);
     return _arr;
@@ -821,6 +846,14 @@ QGraphicsPathItem* q_graphicsscene_add_path2(void* self, void* path, void* pen) 
 
 QGraphicsPathItem* q_graphicsscene_add_path3(void* self, void* path, void* pen, void* brush) {
     return QGraphicsScene_AddPath3((QGraphicsScene*)self, (QPainterPath*)path, (QPen*)pen, (QBrush*)brush);
+}
+
+QGraphicsPolygonItem* q_graphicsscene_add_polygon2(void* self, void* polygon, void* pen) {
+    return QGraphicsScene_AddPolygon2((QGraphicsScene*)self, (QPolygonF*)polygon, (QPen*)pen);
+}
+
+QGraphicsPolygonItem* q_graphicsscene_add_polygon3(void* self, void* polygon, void* pen, void* brush) {
+    return QGraphicsScene_AddPolygon3((QGraphicsScene*)self, (QPolygonF*)polygon, (QPen*)pen, (QBrush*)brush);
 }
 
 QGraphicsRectItem* q_graphicsscene_add_rect22(void* self, void* rect, void* pen) {

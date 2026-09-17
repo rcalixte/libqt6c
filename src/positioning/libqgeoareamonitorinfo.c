@@ -4,6 +4,10 @@
 #include "libqgeoareamonitorinfo.hpp"
 #include "libqgeoareamonitorinfo.h"
 
+uintptr_t q_qgeoareamonitorinfo_h_q_hash(void* key, uintptr_t seed) {
+    return qgeoareamonitorinfo_h_QHash((QGeoAreaMonitorInfo*)key, seed);
+}
+
 QGeoAreaMonitorInfo* q_geoareamonitorinfo_new() {
     return QGeoAreaMonitorInfo_New();
 }

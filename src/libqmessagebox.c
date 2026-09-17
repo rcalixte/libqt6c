@@ -2690,3 +2690,7 @@ void q_messagebox_on_object_name_changed(void* self, void (*callback)(void*, con
 void q_messagebox_delete(void* self) {
     QMessageBox_Delete((QMessageBox*)(self));
 }
+
+void q_qmessagebox_h_q_require_version(int argc, char** argv, const char* req) {
+    qmessagebox_h_QRequireVersion(argc, argv, req);
+}

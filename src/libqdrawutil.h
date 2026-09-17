@@ -8,6 +8,204 @@
 #include "libqttypedefs.h"
 #include "qtlibc.h"
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawShadeLine)
+///
+/// @param p QPainter*
+/// @param x1 int
+/// @param y1 int
+/// @param x2 int
+/// @param y2 int
+/// @param pal QPalette*
+/// @param sunken bool
+/// @param lineWidth int
+/// @param midLineWidth int
+///
+void q_qdrawutil_h_q_draw_shade_line(void* p, int x1, int y1, int x2, int y2, void* pal, bool sunken, int lineWidth, int midLineWidth);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawShadeLine)
+///
+/// @param p QPainter*
+/// @param p1 QPoint*
+/// @param p2 QPoint*
+/// @param pal QPalette*
+/// @param sunken bool
+/// @param lineWidth int
+/// @param midLineWidth int
+///
+void q_qdrawutil_h_q_draw_shade_line2(void* p, void* p1, void* p2, void* pal, bool sunken, int lineWidth, int midLineWidth);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawShadeRect)
+///
+/// @param p QPainter*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
+/// @param pal QPalette*
+/// @param sunken bool
+/// @param lineWidth int
+/// @param midLineWidth int
+/// @param fill QBrush*
+///
+void q_qdrawutil_h_q_draw_shade_rect(void* p, int x, int y, int w, int h, void* pal, bool sunken, int lineWidth, int midLineWidth, void* fill);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawShadeRect)
+///
+/// @param p QPainter*
+/// @param r QRect*
+/// @param pal QPalette*
+/// @param sunken bool
+/// @param lineWidth int
+/// @param midLineWidth int
+/// @param fill QBrush*
+///
+void q_qdrawutil_h_q_draw_shade_rect2(void* p, void* r, void* pal, bool sunken, int lineWidth, int midLineWidth, void* fill);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawShadePanel)
+///
+/// @param p QPainter*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
+/// @param pal QPalette*
+/// @param sunken bool
+/// @param lineWidth int
+/// @param fill QBrush*
+///
+void q_qdrawutil_h_q_draw_shade_panel(void* p, int x, int y, int w, int h, void* pal, bool sunken, int lineWidth, void* fill);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawShadePanel)
+///
+/// @param p QPainter*
+/// @param r QRect*
+/// @param pal QPalette*
+/// @param sunken bool
+/// @param lineWidth int
+/// @param fill QBrush*
+///
+void q_qdrawutil_h_q_draw_shade_panel2(void* p, void* r, void* pal, bool sunken, int lineWidth, void* fill);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawWinButton)
+///
+/// @param p QPainter*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
+/// @param pal QPalette*
+/// @param sunken bool
+/// @param fill QBrush*
+///
+void q_qdrawutil_h_q_draw_win_button(void* p, int x, int y, int w, int h, void* pal, bool sunken, void* fill);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawWinButton)
+///
+/// @param p QPainter*
+/// @param r QRect*
+/// @param pal QPalette*
+/// @param sunken bool
+/// @param fill QBrush*
+///
+void q_qdrawutil_h_q_draw_win_button2(void* p, void* r, void* pal, bool sunken, void* fill);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawWinPanel)
+///
+/// @param p QPainter*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
+/// @param pal QPalette*
+/// @param sunken bool
+/// @param fill QBrush*
+///
+void q_qdrawutil_h_q_draw_win_panel(void* p, int x, int y, int w, int h, void* pal, bool sunken, void* fill);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawWinPanel)
+///
+/// @param p QPainter*
+/// @param r QRect*
+/// @param pal QPalette*
+/// @param sunken bool
+/// @param fill QBrush*
+///
+void q_qdrawutil_h_q_draw_win_panel2(void* p, void* r, void* pal, bool sunken, void* fill);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawPlainRect)
+///
+/// @param p QPainter*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
+/// @param param6 QColor*
+/// @param lineWidth int
+/// @param fill QBrush*
+///
+void q_qdrawutil_h_q_draw_plain_rect(void* p, int x, int y, int w, int h, void* param6, int lineWidth, void* fill);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawPlainRect)
+///
+/// @param p QPainter*
+/// @param r QRect*
+/// @param param3 QColor*
+/// @param lineWidth int
+/// @param fill QBrush*
+///
+void q_qdrawutil_h_q_draw_plain_rect2(void* p, void* r, void* param3, int lineWidth, void* fill);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawPlainRoundedRect)
+///
+/// @param p QPainter*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
+/// @param rx double
+/// @param ry double
+/// @param param8 QColor*
+/// @param lineWidth int
+/// @param fill QBrush*
+///
+void q_qdrawutil_h_q_draw_plain_rounded_rect(void* p, int x, int y, int w, int h, double rx, double ry, void* param8, int lineWidth, void* fill);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawPlainRoundedRect)
+///
+/// @param painter QPainter*
+/// @param rect QRect*
+/// @param rx double
+/// @param ry double
+/// @param lineColor QColor*
+/// @param lineWidth int
+/// @param fill QBrush*
+///
+void q_qdrawutil_h_q_draw_plain_rounded_rect2(void* painter, void* rect, double rx, double ry, void* lineColor, int lineWidth, void* fill);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawBorderPixmap)
+///
+/// @param painter QPainter*
+/// @param targetRect QRect*
+/// @param targetMargins QMargins*
+/// @param pixmap QPixmap*
+/// @param sourceRect QRect*
+/// @param sourceMargins QMargins*
+/// @param rules QTileRules*
+/// @param hints flag of enum QDrawBorderPixmap__DrawingHint
+///
+void q_qdrawutil_h_q_draw_border_pixmap(void* painter, void* targetRect, void* targetMargins, void* pixmap, void* sourceRect, void* sourceMargins, void* rules, int32_t hints);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawBorderPixmap)
+///
+/// @param painter QPainter*
+/// @param target QRect*
+/// @param margins QMargins*
+/// @param pixmap QPixmap*
+///
+void q_qdrawutil_h_q_draw_border_pixmap2(void* painter, void* target, void* margins, void* pixmap);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtilerules.html)
 
 /// q_tilerules_new constructs a new QTileRules object.

@@ -433,3 +433,7 @@ const char* q_jsonvalueref_to_string1(void* self, const char* defaultValue) {
 void q_jsonvalueref_delete(void* self) {
     QJsonValueRef_Delete((QJsonValueRef*)(self));
 }
+
+uintptr_t q_qjsonvalue_q_hash(void* value, uintptr_t seed) {
+    return qjsonvalue_QHash((QJsonValue*)value, seed);
+}

@@ -332,6 +332,10 @@ void q_rect_delete(void* self) {
     QRect_Delete((QRect*)(self));
 }
 
+uintptr_t q_qrect_q_hash(void* r, uintptr_t seed) {
+    return qrect_QHash((QRect*)r, seed);
+}
+
 QRectF* q_rectf_new(void* other) {
     return QRectF_New((QRectF*)other);
 }

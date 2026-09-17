@@ -164,7 +164,7 @@ bool q_sizepolicy_operator_equal(void* self, void* s);
 ///
 bool q_sizepolicy_operator_not_equal(void* self, void* s);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#operator-QVariant)
 ///
 /// @param self QSizePolicy*
 ///

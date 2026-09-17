@@ -1381,6 +1381,32 @@ void q_coreapplication_on_object_name_changed(void* self, void (*callback)(void*
 ///
 void q_coreapplication_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#qAddPreRoutine)
+///
+/// @param param1 void func()
+///
+void q_qcoreapplication_q_add_pre_routine(void (*param1)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#qAddPostRoutine)
+///
+/// @param param1 void func()
+///
+void q_qcoreapplication_q_add_post_routine(void (*param1)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#qRemovePostRoutine)
+///
+/// @param param1 void func()
+///
+void q_qcoreapplication_q_remove_post_routine(void (*param1)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#qAppName)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+const char* q_qcoreapplication_q_app_name();
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#public-types)
 
 typedef enum {

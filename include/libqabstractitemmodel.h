@@ -326,6 +326,29 @@ QVariant* q_modelindex_data1(void* self, int role);
 ///
 void q_modelindex_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#qHash)
+///
+/// @param index QPersistentModelIndex*
+/// @param seed uintptr_t
+///
+uintptr_t q_qabstractitemmodel_q_hash(void* index, uintptr_t seed);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#qHash)
+///
+/// @param index QPersistentModelIndex*
+/// @param seed uintptr_t
+///
+uintptr_t q_qabstractitemmodel_q_hash2(void* index, uintptr_t seed);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#qHash)
+///
+/// @param index QModelIndex*
+/// @param seed uintptr_t
+///
+uintptr_t q_qabstractitemmodel_q_hash3(void* index, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qpersistentmodelindex.html)
 
 /// q_persistentmodelindex_new constructs a new QPersistentModelIndex object.
@@ -369,7 +392,7 @@ void q_persistentmodelindex_swap(void* self, void* other);
 ///
 void q_persistentmodelindex_operator_assign2(void* self, void* other);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qpersistentmodelindex.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpersistentmodelindex.html#operator-QModelIndex)
 ///
 /// @param self QPersistentModelIndex*
 ///

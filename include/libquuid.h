@@ -262,6 +262,15 @@ QUuid* q_uuid_from_bytes2(void* bytes, int32_t order);
 ///
 void q_uuid_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#qHash)
+///
+/// @param uuid QUuid*
+/// @param seed uintptr_t
+///
+uintptr_t q_quuid_q_hash(void* uuid, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid-id128bytes.html)
 
 /// q_uuid__id128bytes_new constructs a new QUuid::Id128Bytes object.
@@ -276,7 +285,7 @@ QUuid__Id128Bytes* q_uuid__id128bytes_new();
 ///
 QUuid__Id128Bytes* q_uuid__id128bytes_new2(void* param1);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/quuid-id128bytes.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid-id128bytes.html#operator-QByteArrayView)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///

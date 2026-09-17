@@ -2278,6 +2278,32 @@ void q_accessibleannouncementevent_on_accessible_interface(void* self, QAccessib
 ///
 void q_accessibleannouncementevent_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-h.html#qAccessibleRoleString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param role enum QAccessible__Role
+///
+const char* q_qaccessible_h_q_accessible_role_string(int32_t role);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-h.html#qAccessibleEventString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param event enum QAccessible__Event
+///
+const char* q_qaccessible_h_q_accessible_event_string(int32_t event);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-h.html#qAccessibleLocalizedActionDescription)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param actionName const char*
+///
+const char* q_qaccessible_h_q_accessible_localized_action_description(const char* actionName);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html#public-types)
 
 typedef enum {

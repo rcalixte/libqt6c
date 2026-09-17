@@ -10463,7 +10463,7 @@ intptr_t q_domdocument__parseresult_error_column(void* self);
 ///
 void q_domdocument__parseresult_set_error_column(void* self, intptr_t errorColumn);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument-parseresult.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument-parseresult.html#operator-bool)
 ///
 /// @param self QDomDocument__ParseResult*
 ///

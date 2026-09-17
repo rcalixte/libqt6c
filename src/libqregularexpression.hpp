@@ -20,6 +20,8 @@ typedef struct QRegularExpressionMatch QRegularExpressionMatch;
 typedef struct QRegularExpressionMatchIterator QRegularExpressionMatchIterator;
 #endif
 
+size_t qregularexpression_QHash(const QRegularExpression* key, size_t seed);
+
 QRegularExpression* QRegularExpression_New();
 QRegularExpression* QRegularExpression_New2(const libqt_string pattern);
 QRegularExpression* QRegularExpression_New3(const QRegularExpression* re);

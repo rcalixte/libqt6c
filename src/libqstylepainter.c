@@ -329,8 +329,16 @@ void q_stylepainter_draw_points(void* self, void* points, int pointCount) {
     QPainter_DrawPoints((QPainter*)self, (QPointF*)points, pointCount);
 }
 
+void q_stylepainter_draw_points2(void* self, void* points) {
+    QPainter_DrawPoints2((QPainter*)self, (QPolygonF*)points);
+}
+
 void q_stylepainter_draw_points3(void* self, void* points, int pointCount) {
     QPainter_DrawPoints3((QPainter*)self, (QPoint*)points, pointCount);
+}
+
+void q_stylepainter_draw_points4(void* self, void* points) {
+    QPainter_DrawPoints4((QPainter*)self, (QPolygon*)points);
 }
 
 void q_stylepainter_draw_line(void* self, void* line) {
@@ -437,24 +445,48 @@ void q_stylepainter_draw_polyline(void* self, void* points, int pointCount) {
     QPainter_DrawPolyline((QPainter*)self, (QPointF*)points, pointCount);
 }
 
+void q_stylepainter_draw_polyline2(void* self, void* polyline) {
+    QPainter_DrawPolyline2((QPainter*)self, (QPolygonF*)polyline);
+}
+
 void q_stylepainter_draw_polyline3(void* self, void* points, int pointCount) {
     QPainter_DrawPolyline3((QPainter*)self, (QPoint*)points, pointCount);
+}
+
+void q_stylepainter_draw_polyline4(void* self, void* polygon) {
+    QPainter_DrawPolyline4((QPainter*)self, (QPolygon*)polygon);
 }
 
 void q_stylepainter_draw_polygon(void* self, void* points, int pointCount) {
     QPainter_DrawPolygon((QPainter*)self, (QPointF*)points, pointCount);
 }
 
+void q_stylepainter_draw_polygon2(void* self, void* polygon) {
+    QPainter_DrawPolygon2((QPainter*)self, (QPolygonF*)polygon);
+}
+
 void q_stylepainter_draw_polygon3(void* self, void* points, int pointCount) {
     QPainter_DrawPolygon3((QPainter*)self, (QPoint*)points, pointCount);
+}
+
+void q_stylepainter_draw_polygon4(void* self, void* polygon) {
+    QPainter_DrawPolygon4((QPainter*)self, (QPolygon*)polygon);
 }
 
 void q_stylepainter_draw_convex_polygon(void* self, void* points, int pointCount) {
     QPainter_DrawConvexPolygon((QPainter*)self, (QPointF*)points, pointCount);
 }
 
+void q_stylepainter_draw_convex_polygon2(void* self, void* polygon) {
+    QPainter_DrawConvexPolygon2((QPainter*)self, (QPolygonF*)polygon);
+}
+
 void q_stylepainter_draw_convex_polygon3(void* self, void* points, int pointCount) {
     QPainter_DrawConvexPolygon3((QPainter*)self, (QPoint*)points, pointCount);
+}
+
+void q_stylepainter_draw_convex_polygon4(void* self, void* polygon) {
+    QPainter_DrawConvexPolygon4((QPainter*)self, (QPolygon*)polygon);
 }
 
 void q_stylepainter_draw_arc(void* self, void* rect, int a, int alen) {
@@ -829,8 +861,16 @@ void q_stylepainter_draw_polygon32(void* self, void* points, int pointCount, int
     QPainter_DrawPolygon32((QPainter*)self, (QPointF*)points, pointCount, fillRule);
 }
 
+void q_stylepainter_draw_polygon22(void* self, void* polygon, int32_t fillRule) {
+    QPainter_DrawPolygon22((QPainter*)self, (QPolygonF*)polygon, fillRule);
+}
+
 void q_stylepainter_draw_polygon33(void* self, void* points, int pointCount, int32_t fillRule) {
     QPainter_DrawPolygon33((QPainter*)self, (QPoint*)points, pointCount, fillRule);
+}
+
+void q_stylepainter_draw_polygon23(void* self, void* polygon, int32_t fillRule) {
+    QPainter_DrawPolygon23((QPainter*)self, (QPolygon*)polygon, fillRule);
 }
 
 void q_stylepainter_draw_rounded_rect4(void* self, void* rect, double xRadius, double yRadius, int32_t mode) {

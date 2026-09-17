@@ -265,7 +265,7 @@ bool q_pen_operator_equal(void* self, void* p);
 ///
 bool q_pen_operator_not_equal(void* self, void* p);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#operator-QVariant)
 ///
 /// @param self QPen*
 ///

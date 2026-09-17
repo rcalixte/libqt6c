@@ -762,3 +762,22 @@ void q_coreapplication_on_object_name_changed(void* self, void (*callback)(void*
 void q_coreapplication_delete(void* self) {
     QCoreApplication_Delete((QCoreApplication*)(self));
 }
+
+void q_qcoreapplication_q_add_pre_routine(void (*param1)()) {
+    qcoreapplication_QAddPreRoutine((intptr_t)param1);
+}
+
+void q_qcoreapplication_q_add_post_routine(void (*param1)()) {
+    qcoreapplication_QAddPostRoutine((intptr_t)param1);
+}
+
+void q_qcoreapplication_q_remove_post_routine(void (*param1)()) {
+    qcoreapplication_QRemovePostRoutine((intptr_t)param1);
+}
+
+const char* q_qcoreapplication_q_app_name() {
+    libqt_string _str = qcoreapplication_QAppName();
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}

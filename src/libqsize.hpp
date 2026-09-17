@@ -54,6 +54,8 @@ QSize* QSize_OperatorDivideAssign(QSize* self, double c);
 QSizeF* QSize_ToSizeF(const QSize* self);
 void QSize_Delete(QSize* self);
 
+size_t qsize_QHash(const QSize* s, size_t seed);
+
 QSizeF* QSizeF_New(const QSizeF* other);
 QSizeF* QSizeF_New2(QSizeF* other);
 QSizeF* QSizeF_New3();

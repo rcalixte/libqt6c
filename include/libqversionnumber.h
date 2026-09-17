@@ -10,6 +10,15 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html)
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#qHash)
+///
+/// @param key QVersionNumber*
+/// @param seed uintptr_t
+///
+uintptr_t q_qversionnumber_q_hash(void* key, uintptr_t seed);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html)
+
 /// q_versionnumber_new constructs a new QVersionNumber object.
 ///
 QVersionNumber* q_versionnumber_new();

@@ -8,6 +8,15 @@
 #include "libqttypedefs.h"
 #include "qtlibc.h"
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence-h.html#qHash)
+///
+/// @param key QKeySequence*
+/// @param seed uintptr_t
+///
+uintptr_t q_qkeysequence_h_q_hash(void* key, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html)
 
 /// q_keysequence_new constructs a new QKeySequence object.
@@ -188,7 +197,7 @@ QKeySequence* q_keysequence_mnemonic(const char* text);
 ///
 libqt_list q_keysequence_key_bindings(int32_t key);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#operator-QVariant)
 ///
 /// @param self QKeySequence*
 ///

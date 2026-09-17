@@ -718,10 +718,28 @@ void q_stylepainter_draw_points(void* self, void* points, int pointCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPoints)
 ///
 /// @param self QStylePainter*
+/// @param points QPolygonF*
+///
+void q_stylepainter_draw_points2(void* self, void* points);
+
+/// Inherited from QPainter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPoints)
+///
+/// @param self QStylePainter*
 /// @param points QPoint*
 /// @param pointCount int
 ///
 void q_stylepainter_draw_points3(void* self, void* points, int pointCount);
+
+/// Inherited from QPainter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPoints)
+///
+/// @param self QStylePainter*
+/// @param points QPolygon*
+///
+void q_stylepainter_draw_points4(void* self, void* points);
 
 /// Inherited from QPainter
 ///
@@ -984,10 +1002,28 @@ void q_stylepainter_draw_polyline(void* self, void* points, int pointCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolyline)
 ///
 /// @param self QStylePainter*
+/// @param polyline QPolygonF*
+///
+void q_stylepainter_draw_polyline2(void* self, void* polyline);
+
+/// Inherited from QPainter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolyline)
+///
+/// @param self QStylePainter*
 /// @param points QPoint*
 /// @param pointCount int
 ///
 void q_stylepainter_draw_polyline3(void* self, void* points, int pointCount);
+
+/// Inherited from QPainter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolyline)
+///
+/// @param self QStylePainter*
+/// @param polygon QPolygon*
+///
+void q_stylepainter_draw_polyline4(void* self, void* polygon);
 
 /// Inherited from QPainter
 ///
@@ -1004,10 +1040,28 @@ void q_stylepainter_draw_polygon(void* self, void* points, int pointCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
 ///
 /// @param self QStylePainter*
+/// @param polygon QPolygonF*
+///
+void q_stylepainter_draw_polygon2(void* self, void* polygon);
+
+/// Inherited from QPainter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
+///
+/// @param self QStylePainter*
 /// @param points QPoint*
 /// @param pointCount int
 ///
 void q_stylepainter_draw_polygon3(void* self, void* points, int pointCount);
+
+/// Inherited from QPainter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
+///
+/// @param self QStylePainter*
+/// @param polygon QPolygon*
+///
+void q_stylepainter_draw_polygon4(void* self, void* polygon);
 
 /// Inherited from QPainter
 ///
@@ -1024,10 +1078,28 @@ void q_stylepainter_draw_convex_polygon(void* self, void* points, int pointCount
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawConvexPolygon)
 ///
 /// @param self QStylePainter*
+/// @param polygon QPolygonF*
+///
+void q_stylepainter_draw_convex_polygon2(void* self, void* polygon);
+
+/// Inherited from QPainter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawConvexPolygon)
+///
+/// @param self QStylePainter*
 /// @param points QPoint*
 /// @param pointCount int
 ///
 void q_stylepainter_draw_convex_polygon3(void* self, void* points, int pointCount);
+
+/// Inherited from QPainter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawConvexPolygon)
+///
+/// @param self QStylePainter*
+/// @param polygon QPolygon*
+///
+void q_stylepainter_draw_convex_polygon4(void* self, void* polygon);
 
 /// Inherited from QPainter
 ///
@@ -2044,11 +2116,31 @@ void q_stylepainter_draw_polygon32(void* self, void* points, int pointCount, int
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
 ///
 /// @param self QStylePainter*
+/// @param polygon QPolygonF*
+/// @param fillRule enum Qt__FillRule
+///
+void q_stylepainter_draw_polygon22(void* self, void* polygon, int32_t fillRule);
+
+/// Inherited from QPainter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
+///
+/// @param self QStylePainter*
 /// @param points QPoint*
 /// @param pointCount int
 /// @param fillRule enum Qt__FillRule
 ///
 void q_stylepainter_draw_polygon33(void* self, void* points, int pointCount, int32_t fillRule);
+
+/// Inherited from QPainter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
+///
+/// @param self QStylePainter*
+/// @param polygon QPolygon*
+/// @param fillRule enum Qt__FillRule
+///
+void q_stylepainter_draw_polygon23(void* self, void* polygon, int32_t fillRule);
 
 /// Inherited from QPainter
 ///

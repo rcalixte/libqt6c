@@ -2,6 +2,14 @@
 #include "libqplugin.hpp"
 #include "libqplugin.h"
 
+unsigned char q_qplugin_q_plugin_arch_requirements() {
+    return qplugin_QPluginArchRequirements();
+}
+
+void q_qplugin_q_register_static_plugin_function(void* staticPlugin) {
+    qplugin_QRegisterStaticPluginFunction((QStaticPlugin*)staticPlugin);
+}
+
 QStaticPlugin* q_staticplugin_new(void* other) {
     return QStaticPlugin_New((QStaticPlugin*)other);
 }

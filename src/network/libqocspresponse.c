@@ -2,6 +2,10 @@
 #include "libqocspresponse.hpp"
 #include "libqocspresponse.h"
 
+uintptr_t q_qocspresponse_h_q_hash(void* response, uintptr_t seed) {
+    return qocspresponse_h_QHash((QOcspResponse*)response, seed);
+}
+
 QOcspResponse* q_ocspresponse_new() {
     return QOcspResponse_New();
 }

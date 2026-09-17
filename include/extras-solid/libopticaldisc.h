@@ -157,6 +157,14 @@ const char* k_solid__opticaldisc_uuid(void* self);
 ///
 uintptr_t k_solid__opticaldisc_size(void* self);
 
+/// Inherited from Solid::StorageVolume
+///
+/// [Upstream resources](https://api.kde.org/solid-storagevolume.html#encryptedContainer)
+///
+/// @param self Solid__OpticalDisc*
+///
+Solid__Device* k_solid__opticaldisc_encrypted_container(void* self);
+
 /// Inherited from Solid::DeviceInterface
 ///
 /// [Upstream resources](https://api.kde.org/solid-deviceinterface.html#isValid)

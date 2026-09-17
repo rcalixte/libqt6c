@@ -240,6 +240,15 @@ libqt_list q_graphicsscene_items3(void* self, void* rect);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
 /// @param self QGraphicsScene*
+/// @param polygon QPolygonF*
+///
+/// @return libqt_list of QGraphicsItem*
+///
+libqt_list q_graphicsscene_items4(void* self, void* polygon);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
+///
+/// @param self QGraphicsScene*
 /// @param path QPainterPath*
 ///
 /// @return libqt_list of QGraphicsItem*
@@ -363,6 +372,13 @@ QGraphicsPathItem* q_graphicsscene_add_path(void* self, void* path);
 /// @param pixmap QPixmap*
 ///
 QGraphicsPixmapItem* q_graphicsscene_add_pixmap(void* self, void* pixmap);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addPolygon)
+///
+/// @param self QGraphicsScene*
+/// @param polygon QPolygonF*
+///
+QGraphicsPolygonItem* q_graphicsscene_add_polygon(void* self, void* polygon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addRect)
 ///
@@ -1440,6 +1456,39 @@ libqt_list q_graphicsscene_items43(void* self, void* rect, int32_t mode, int32_t
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
 /// @param self QGraphicsScene*
+/// @param polygon QPolygonF*
+/// @param mode enum Qt__ItemSelectionMode
+///
+/// @return libqt_list of QGraphicsItem*
+///
+libqt_list q_graphicsscene_items24(void* self, void* polygon, int32_t mode);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
+///
+/// @param self QGraphicsScene*
+/// @param polygon QPolygonF*
+/// @param mode enum Qt__ItemSelectionMode
+/// @param order enum Qt__SortOrder
+///
+/// @return libqt_list of QGraphicsItem*
+///
+libqt_list q_graphicsscene_items34(void* self, void* polygon, int32_t mode, int32_t order);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
+///
+/// @param self QGraphicsScene*
+/// @param polygon QPolygonF*
+/// @param mode enum Qt__ItemSelectionMode
+/// @param order enum Qt__SortOrder
+/// @param deviceTransform QTransform*
+///
+/// @return libqt_list of QGraphicsItem*
+///
+libqt_list q_graphicsscene_items44(void* self, void* polygon, int32_t mode, int32_t order, void* deviceTransform);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
+///
+/// @param self QGraphicsScene*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
@@ -1563,6 +1612,23 @@ QGraphicsPathItem* q_graphicsscene_add_path2(void* self, void* path, void* pen);
 /// @param brush QBrush*
 ///
 QGraphicsPathItem* q_graphicsscene_add_path3(void* self, void* path, void* pen, void* brush);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addPolygon)
+///
+/// @param self QGraphicsScene*
+/// @param polygon QPolygonF*
+/// @param pen QPen*
+///
+QGraphicsPolygonItem* q_graphicsscene_add_polygon2(void* self, void* polygon, void* pen);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addPolygon)
+///
+/// @param self QGraphicsScene*
+/// @param polygon QPolygonF*
+/// @param pen QPen*
+/// @param brush QBrush*
+///
+QGraphicsPolygonItem* q_graphicsscene_add_polygon3(void* self, void* polygon, void* pen, void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addRect)
 ///

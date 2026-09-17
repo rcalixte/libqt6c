@@ -532,6 +532,15 @@ QJsonObject* q_cbormap_to_json_object(void* self);
 ///
 void q_cbormap_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#qHash)
+///
+/// @param map QCborMap*
+/// @param seed uintptr_t
+///
+uintptr_t q_qcbormap_q_hash(void* map, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-iterator.html)
 
 /// q_cbormap__iterator_new constructs a new QCborMap::Iterator object.

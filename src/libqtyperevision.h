@@ -10,6 +10,15 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html)
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html#qHash)
+///
+/// @param key QTypeRevision*
+/// @param seed uintptr_t
+///
+uintptr_t q_qtyperevision_q_hash(void* key, uintptr_t seed);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html)
+
 /// q_typerevision_new constructs a new QTypeRevision object.
 ///
 QTypeRevision* q_typerevision_new();

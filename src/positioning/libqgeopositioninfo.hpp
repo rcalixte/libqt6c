@@ -20,6 +20,8 @@ typedef struct QGeoCoordinate QGeoCoordinate;
 typedef struct QGeoPositionInfo QGeoPositionInfo;
 #endif
 
+size_t qgeopositioninfo_h_QHash(const QGeoPositionInfo* key, size_t seed);
+
 QGeoPositionInfo* QGeoPositionInfo_New();
 QGeoPositionInfo* QGeoPositionInfo_New2(const QGeoCoordinate* coordinate, const QDateTime* updateTime);
 QGeoPositionInfo* QGeoPositionInfo_New3(const QGeoPositionInfo* other);

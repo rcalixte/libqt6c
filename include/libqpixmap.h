@@ -88,7 +88,7 @@ void q_pixmap_operator_assign(void* self, void* param1);
 ///
 void q_pixmap_swap(void* self, void* other);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#operator-QVariant)
 ///
 /// @param self QPixmap*
 ///

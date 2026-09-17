@@ -18,6 +18,7 @@
 #include "../libqpen.hpp"
 #include "../libqpixmap.hpp"
 #include "../libqpoint.hpp"
+#include "../libqpolygon.hpp"
 #include "../libqrect.hpp"
 #include "../libqregion.hpp"
 #include "../libqsize.hpp"
@@ -599,8 +600,16 @@ void q_cppainter_draw_points(void* self, void* points, int pointCount) {
     QPainter_DrawPoints((QPainter*)self, (QPointF*)points, pointCount);
 }
 
+void q_cppainter_draw_points2(void* self, void* points) {
+    QPainter_DrawPoints2((QPainter*)self, (QPolygonF*)points);
+}
+
 void q_cppainter_draw_points3(void* self, void* points, int pointCount) {
     QPainter_DrawPoints3((QPainter*)self, (QPoint*)points, pointCount);
+}
+
+void q_cppainter_draw_points4(void* self, void* points) {
+    QPainter_DrawPoints4((QPainter*)self, (QPolygon*)points);
 }
 
 void q_cppainter_draw_line3(void* self, int x1, int y1, int x2, int y2) {
@@ -699,24 +708,48 @@ void q_cppainter_draw_polyline(void* self, void* points, int pointCount) {
     QPainter_DrawPolyline((QPainter*)self, (QPointF*)points, pointCount);
 }
 
+void q_cppainter_draw_polyline2(void* self, void* polyline) {
+    QPainter_DrawPolyline2((QPainter*)self, (QPolygonF*)polyline);
+}
+
 void q_cppainter_draw_polyline3(void* self, void* points, int pointCount) {
     QPainter_DrawPolyline3((QPainter*)self, (QPoint*)points, pointCount);
+}
+
+void q_cppainter_draw_polyline4(void* self, void* polygon) {
+    QPainter_DrawPolyline4((QPainter*)self, (QPolygon*)polygon);
 }
 
 void q_cppainter_draw_polygon(void* self, void* points, int pointCount) {
     QPainter_DrawPolygon((QPainter*)self, (QPointF*)points, pointCount);
 }
 
+void q_cppainter_draw_polygon2(void* self, void* polygon) {
+    QPainter_DrawPolygon2((QPainter*)self, (QPolygonF*)polygon);
+}
+
 void q_cppainter_draw_polygon3(void* self, void* points, int pointCount) {
     QPainter_DrawPolygon3((QPainter*)self, (QPoint*)points, pointCount);
+}
+
+void q_cppainter_draw_polygon4(void* self, void* polygon) {
+    QPainter_DrawPolygon4((QPainter*)self, (QPolygon*)polygon);
 }
 
 void q_cppainter_draw_convex_polygon(void* self, void* points, int pointCount) {
     QPainter_DrawConvexPolygon((QPainter*)self, (QPointF*)points, pointCount);
 }
 
+void q_cppainter_draw_convex_polygon2(void* self, void* polygon) {
+    QPainter_DrawConvexPolygon2((QPainter*)self, (QPolygonF*)polygon);
+}
+
 void q_cppainter_draw_convex_polygon3(void* self, void* points, int pointCount) {
     QPainter_DrawConvexPolygon3((QPainter*)self, (QPoint*)points, pointCount);
+}
+
+void q_cppainter_draw_convex_polygon4(void* self, void* polygon) {
+    QPainter_DrawConvexPolygon4((QPainter*)self, (QPolygon*)polygon);
 }
 
 void q_cppainter_draw_arc(void* self, void* rect, int a, int alen) {
@@ -1091,8 +1124,16 @@ void q_cppainter_draw_polygon32(void* self, void* points, int pointCount, int32_
     QPainter_DrawPolygon32((QPainter*)self, (QPointF*)points, pointCount, fillRule);
 }
 
+void q_cppainter_draw_polygon22(void* self, void* polygon, int32_t fillRule) {
+    QPainter_DrawPolygon22((QPainter*)self, (QPolygonF*)polygon, fillRule);
+}
+
 void q_cppainter_draw_polygon33(void* self, void* points, int pointCount, int32_t fillRule) {
     QPainter_DrawPolygon33((QPainter*)self, (QPoint*)points, pointCount, fillRule);
+}
+
+void q_cppainter_draw_polygon23(void* self, void* polygon, int32_t fillRule) {
+    QPainter_DrawPolygon23((QPainter*)self, (QPolygon*)polygon, fillRule);
 }
 
 void q_cppainter_draw_rounded_rect4(void* self, void* rect, double xRadius, double yRadius, int32_t mode) {
@@ -24196,6 +24237,30 @@ void q_cpgraph_on_get_fill_base_point(void* self, QPointF* (*callback)(void*, vo
 
 QPointF* q_cpgraph_super_get_fill_base_point(void* self, void* matchingDataPoint) {
     return QCPGraph_SuperGetFillBasePoint((QCPGraph*)self, (QPointF*)matchingDataPoint);
+}
+
+const QPolygonF* q_cpgraph_get_fill_polygon(void* self, libqt_list /* of QPointF* */ lineData, void* segment) {
+    return QCPGraph_GetFillPolygon((QCPGraph*)self, lineData, (QCPDataRange*)segment);
+}
+
+void q_cpgraph_on_get_fill_polygon(void* self, const QPolygonF* (*callback)(void*, libqt_list /* of QPointF* */, void*)) {
+    QCPGraph_OnGetFillPolygon((QCPGraph*)self, (intptr_t)callback);
+}
+
+const QPolygonF* q_cpgraph_super_get_fill_polygon(void* self, libqt_list /* of QPointF* */ lineData, void* segment) {
+    return QCPGraph_SuperGetFillPolygon((QCPGraph*)self, lineData, (QCPDataRange*)segment);
+}
+
+const QPolygonF* q_cpgraph_get_channel_fill_polygon(void* self, libqt_list /* of QPointF* */ thisData, void* thisSegment, libqt_list /* of QPointF* */ otherData, void* otherSegment) {
+    return QCPGraph_GetChannelFillPolygon((QCPGraph*)self, thisData, (QCPDataRange*)thisSegment, otherData, (QCPDataRange*)otherSegment);
+}
+
+void q_cpgraph_on_get_channel_fill_polygon(void* self, const QPolygonF* (*callback)(void*, libqt_list /* of QPointF* */, void*, libqt_list /* of QPointF* */, void*)) {
+    QCPGraph_OnGetChannelFillPolygon((QCPGraph*)self, (intptr_t)callback);
+}
+
+const QPolygonF* q_cpgraph_super_get_channel_fill_polygon(void* self, libqt_list /* of QPointF* */ thisData, void* thisSegment, libqt_list /* of QPointF* */ otherData, void* otherSegment) {
+    return QCPGraph_SuperGetChannelFillPolygon((QCPGraph*)self, thisData, (QCPDataRange*)thisSegment, otherData, (QCPDataRange*)otherSegment);
 }
 
 int32_t q_cpgraph_find_index_below_x(void* self, libqt_list /* of QPointF* */ data, double x) {

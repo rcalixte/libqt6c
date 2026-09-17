@@ -499,7 +499,7 @@ const float* q_matrix4x4_const_data(void* self);
 ///
 void q_matrix4x4_optimize(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-QVariant)
 ///
 /// @param self QMatrix4x4*
 ///

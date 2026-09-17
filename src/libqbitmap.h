@@ -78,7 +78,7 @@ void q_bitmap_operator_assign(void* self, void* param1);
 ///
 void q_bitmap_swap(void* self, void* other);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qbitmap.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qbitmap.html#operator-QVariant)
 ///
 /// @param self QBitmap*
 ///

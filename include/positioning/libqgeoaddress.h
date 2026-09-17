@@ -212,4 +212,12 @@ bool q_geoaddress_is_text_generated(void* self);
 ///
 void q_geoaddress_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qgeoaddress-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgeoaddress-h.html#qHash)
+///
+/// @param address QGeoAddress*
+/// @param seed uintptr_t
+///
+uintptr_t q_qgeoaddress_h_q_hash(void* address, uintptr_t seed);
 #endif

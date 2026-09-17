@@ -8,6 +8,15 @@
 #include "../libqttypedefs.h"
 #include "../qtlibc.h"
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qqmlprivate-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qqmlprivate-h.html#qHash)
+///
+/// @param func QObject* func(QObject* param1)
+/// @param seed uintptr_t
+///
+uintptr_t q_qqmlprivate_h_q_hash(QObject* (*func)(void* funcparam1), uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlprivate.html#public-types)
 
 typedef enum {

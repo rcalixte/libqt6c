@@ -86,6 +86,12 @@ const char* k_solid__storagevolume_uuid(void* self);
 ///
 uintptr_t k_solid__storagevolume_size(void* self);
 
+/// [Upstream resources](https://api.kde.org/solid-storagevolume.html#encryptedContainer)
+///
+/// @param self Solid__StorageVolume*
+///
+Solid__Device* k_solid__storagevolume_encrypted_container(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`

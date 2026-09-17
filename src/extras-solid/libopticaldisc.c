@@ -100,6 +100,10 @@ uintptr_t k_solid__opticaldisc_size(void* self) {
     return Solid__StorageVolume_Size((Solid__StorageVolume*)self);
 }
 
+Solid__Device* k_solid__opticaldisc_encrypted_container(void* self) {
+    return Solid__StorageVolume_EncryptedContainer((Solid__StorageVolume*)self);
+}
+
 bool k_solid__opticaldisc_is_valid(void* self) {
     return Solid__DeviceInterface_IsValid((Solid__DeviceInterface*)self);
 }

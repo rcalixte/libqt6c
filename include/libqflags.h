@@ -78,13 +78,13 @@ void q_flag_copy_assign(void* self, void* other);
 ///
 void q_flag_move_assign(void* self, void* other);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qflag.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qflag.html#operator-int)
 ///
 /// @param self QFlag*
 ///
 int32_t q_flag_to_int(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qflag.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qflag.html#operator-unsigned-int)
 ///
 /// @param self QFlag*
 ///
@@ -144,7 +144,7 @@ void q_incompatibleflag_copy_assign(void* self, void* other);
 ///
 void q_incompatibleflag_move_assign(void* self, void* other);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qincompatibleflag.html#operator)
+/// [Upstream resources](https://doc.qt.io/qt-6/qincompatibleflag.html#operator-int)
 ///
 /// @param self QIncompatibleFlag*
 ///

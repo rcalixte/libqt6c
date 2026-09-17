@@ -6138,6 +6138,16 @@ void q_messagebox_on_object_name_changed(void* self, void (*callback)(void*, con
 ///
 void q_messagebox_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qmessagebox-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmessagebox-h.html#qRequireVersion)
+///
+/// @param argc int
+/// @param argv char**
+/// @param req const char*
+///
+void q_qmessagebox_h_q_require_version(int argc, char** argv, const char* req);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagebox.html#public-types)
 
 typedef enum {

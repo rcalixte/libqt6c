@@ -390,6 +390,15 @@ bool q_jsonobject_empty(void* self);
 ///
 void q_jsonobject_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html#qHash)
+///
+/// @param object QJsonObject*
+/// @param seed uintptr_t
+///
+uintptr_t q_qjsonobject_q_hash(void* object, uintptr_t seed);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject-iterator.html)
 
 /// q_jsonobject__iterator_new constructs a new QJsonObject::iterator object.

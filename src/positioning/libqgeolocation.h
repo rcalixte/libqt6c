@@ -116,4 +116,12 @@ bool q_geolocation_is_empty(void* self);
 ///
 void q_geolocation_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qgeolocation-h.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgeolocation-h.html#qHash)
+///
+/// @param location QGeoLocation*
+/// @param seed uintptr_t
+///
+uintptr_t q_qgeolocation_h_q_hash(void* location, uintptr_t seed);
 #endif
