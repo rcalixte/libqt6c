@@ -1,0 +1,1120 @@
+#pragma once
+#ifndef EXTRAS_KIRIGAMI_LIBABSTRACTKIRIGAMIAPPLICATION_H
+#define EXTRAS_KIRIGAMI_LIBABSTRACTKIRIGAMIAPPLICATION_H
+
+#include <stdbool.h>
+#include <stddef.h>
+
+#include "../libqttypedefs.h"
+#include "../qtlibc.h"
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html)
+
+/// k_abstractkirigamiapplication_new constructs a new AbstractKirigamiApplication object.
+///
+AbstractKirigamiApplication* k_abstractkirigamiapplication_new();
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html)
+
+/// k_abstractkirigamiapplication_new2 constructs a new AbstractKirigamiApplication object.
+///
+/// @param parent QObject*
+///
+AbstractKirigamiApplication* k_abstractkirigamiapplication_new2(void* parent);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// @param self AbstractKirigamiApplication*
+///
+const QMetaObject* k_abstractkirigamiapplication_meta_object(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback const QMetaObject* func()
+///
+void k_abstractkirigamiapplication_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self AbstractKirigamiApplication*
+///
+const QMetaObject* k_abstractkirigamiapplication_super_meta_object(void* self);
+
+/// @param self AbstractKirigamiApplication*
+/// @param param1 const char*
+///
+void* k_abstractkirigamiapplication_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback void* func(AbstractKirigamiApplication* self, const char* param1)
+///
+void k_abstractkirigamiapplication_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self AbstractKirigamiApplication*
+/// @param param1 const char*
+///
+void* k_abstractkirigamiapplication_super_metacast(void* self, const char* param1);
+
+/// @param self AbstractKirigamiApplication*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
+///
+int32_t k_abstractkirigamiapplication_metacall(void* self, int32_t param1, int param2, void* param3);
+
+/// Allows for overriding the related default method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback int32_t func(AbstractKirigamiApplication* self, enum QMetaObject__Call param1, int param2, void* param3)
+///
+void k_abstractkirigamiapplication_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
+
+/// Base class method implementation
+///
+/// @param self AbstractKirigamiApplication*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
+///
+int32_t k_abstractkirigamiapplication_super_metacall(void* self, int32_t param1, int param2, void* param3);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param s const char*
+///
+const char* k_abstractkirigamiapplication_tr(const char* s);
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#actionCollections)
+///
+/// @param self AbstractKirigamiApplication*
+///
+/// @return libqt_list of KirigamiActionCollection*
+///
+libqt_list k_abstractkirigamiapplication_action_collections(void* self);
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#actionCollections)
+///
+/// Allows for overriding the related default method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback libqt_list of KirigamiActionCollection* func()
+///
+void k_abstractkirigamiapplication_on_action_collections(void* self, libqt_list (*callback)());
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#actionCollections)
+///
+/// Base class method implementation
+///
+/// @param self AbstractKirigamiApplication*
+///
+/// @return libqt_list of KirigamiActionCollection*
+///
+libqt_list k_abstractkirigamiapplication_super_action_collections(void* self);
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#mainCollection)
+///
+/// @param self AbstractKirigamiApplication*
+///
+KirigamiActionCollection* k_abstractkirigamiapplication_main_collection(void* self);
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#actionsModel)
+///
+/// @param self AbstractKirigamiApplication*
+///
+QSortFilterProxyModel* k_abstractkirigamiapplication_actions_model(void* self);
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#shortcutsModel)
+///
+/// @param self AbstractKirigamiApplication*
+///
+QAbstractListModel* k_abstractkirigamiapplication_shortcuts_model(void* self);
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#action)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param actionName const char*
+///
+QAction* k_abstractkirigamiapplication_action(void* self, const char* actionName);
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#configurationView)
+///
+/// @param self AbstractKirigamiApplication*
+///
+QObject* k_abstractkirigamiapplication_configuration_view(void* self);
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#setConfigurationView)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param configurationView QObject*
+///
+void k_abstractkirigamiapplication_set_configuration_view(void* self, void* configurationView);
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#openAboutPage)
+///
+/// @param self AbstractKirigamiApplication*
+///
+void k_abstractkirigamiapplication_open_about_page(void* self);
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#openAboutPage)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback void func(AbstractKirigamiApplication* self)
+///
+void k_abstractkirigamiapplication_on_open_about_page(void* self, void (*callback)(void*));
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#openAboutKDEPage)
+///
+/// @param self AbstractKirigamiApplication*
+///
+void k_abstractkirigamiapplication_open_about_k_d_e_page(void* self);
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#openAboutKDEPage)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback void func(AbstractKirigamiApplication* self)
+///
+void k_abstractkirigamiapplication_on_open_about_k_d_e_page(void* self, void (*callback)(void*));
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#openKCommandBarAction)
+///
+/// @param self AbstractKirigamiApplication*
+///
+void k_abstractkirigamiapplication_open_k_command_bar_action(void* self);
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#openKCommandBarAction)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback void func(AbstractKirigamiApplication* self)
+///
+void k_abstractkirigamiapplication_on_open_k_command_bar_action(void* self, void (*callback)(void*));
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#shortcutsEditorAction)
+///
+/// @param self AbstractKirigamiApplication*
+///
+void k_abstractkirigamiapplication_shortcuts_editor_action(void* self);
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#shortcutsEditorAction)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback void func(AbstractKirigamiApplication* self)
+///
+void k_abstractkirigamiapplication_on_shortcuts_editor_action(void* self, void (*callback)(void*));
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#configurationViewChanged)
+///
+/// @param self AbstractKirigamiApplication*
+///
+void k_abstractkirigamiapplication_configuration_view_changed(void* self);
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#configurationViewChanged)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback void func(AbstractKirigamiApplication* self)
+///
+void k_abstractkirigamiapplication_on_configuration_view_changed(void* self, void (*callback)(void*));
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#setupActions)
+///
+/// @param self AbstractKirigamiApplication*
+///
+void k_abstractkirigamiapplication_setup_actions(void* self);
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#setupActions)
+///
+/// Allows for overriding the related default method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback void func()
+///
+void k_abstractkirigamiapplication_on_setup_actions(void* self, void (*callback)());
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#setupActions)
+///
+/// Base class method implementation
+///
+/// @param self AbstractKirigamiApplication*
+///
+void k_abstractkirigamiapplication_super_setup_actions(void* self);
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#readSettings)
+///
+/// @param self AbstractKirigamiApplication*
+///
+void k_abstractkirigamiapplication_read_settings(void* self);
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#readSettings)
+///
+/// Allows for overriding the related default method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback void func()
+///
+void k_abstractkirigamiapplication_on_read_settings(void* self, void (*callback)());
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#readSettings)
+///
+/// Base class method implementation
+///
+/// @param self AbstractKirigamiApplication*
+///
+void k_abstractkirigamiapplication_super_read_settings(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param s const char*
+/// @param c const char*
+///
+const char* k_abstractkirigamiapplication_tr2(const char* s, const char* c);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
+///
+const char* k_abstractkirigamiapplication_tr3(const char* s, const char* c, int n);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self AbstractKirigamiApplication*
+///
+const char* k_abstractkirigamiapplication_object_name(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param name const char*
+///
+void k_abstractkirigamiapplication_set_object_name(void* self, const char* name);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+///
+/// @param self AbstractKirigamiApplication*
+///
+bool k_abstractkirigamiapplication_is_widget_type(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+///
+/// @param self AbstractKirigamiApplication*
+///
+bool k_abstractkirigamiapplication_is_window_type(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+///
+/// @param self AbstractKirigamiApplication*
+///
+bool k_abstractkirigamiapplication_is_quick_item_type(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+///
+/// @param self AbstractKirigamiApplication*
+///
+bool k_abstractkirigamiapplication_signals_blocked(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param b bool
+///
+bool k_abstractkirigamiapplication_block_signals(void* self, bool b);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
+///
+/// @param self AbstractKirigamiApplication*
+///
+QThread* k_abstractkirigamiapplication_thread(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param thread QThread*
+///
+bool k_abstractkirigamiapplication_move_to_thread(void* self, void* thread);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param interval int
+///
+int32_t k_abstractkirigamiapplication_start_timer(void* self, int interval);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param time int64_t of nanoseconds
+///
+int32_t k_abstractkirigamiapplication_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param id int
+///
+void k_abstractkirigamiapplication_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param id enum Qt__TimerId
+///
+void k_abstractkirigamiapplication_kill_timer2(void* self, int32_t id);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
+///
+/// @param self AbstractKirigamiApplication*
+///
+/// @return libqt_list of QObject*
+///
+libqt_list k_abstractkirigamiapplication_children(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param parent QObject*
+///
+void k_abstractkirigamiapplication_set_parent(void* self, void* parent);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param filterObj QObject*
+///
+void k_abstractkirigamiapplication_install_event_filter(void* self, void* filterObj);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param obj QObject*
+///
+void k_abstractkirigamiapplication_remove_event_filter(void* self, void* obj);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+QMetaObject__Connection* k_abstractkirigamiapplication_connect(void* sender, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+///
+QMetaObject__Connection* k_abstractkirigamiapplication_connect2(void* sender, void* signal, void* receiver, void* method);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+///
+QMetaObject__Connection* k_abstractkirigamiapplication_connect3(void* self, void* sender, const char* signal, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_abstractkirigamiapplication_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
+///
+bool k_abstractkirigamiapplication_disconnect2(void* sender, void* signal, void* receiver, void* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self AbstractKirigamiApplication*
+///
+bool k_abstractkirigamiapplication_disconnect3(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param receiver QObject*
+///
+bool k_abstractkirigamiapplication_disconnect4(void* self, void* receiver);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param param1 QMetaObject__Connection*
+///
+bool k_abstractkirigamiapplication_disconnect5(void* param1);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+///
+/// @param self AbstractKirigamiApplication*
+///
+void k_abstractkirigamiapplication_dump_object_tree(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+///
+/// @param self AbstractKirigamiApplication*
+///
+void k_abstractkirigamiapplication_dump_object_info(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setProperty)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param name const char*
+/// @param value QVariant*
+///
+bool k_abstractkirigamiapplication_set_property(void* self, const char* name, void* value);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param name const char*
+///
+QVariant* k_abstractkirigamiapplication_property(void* self, const char* name);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+///
+/// @warning Caller is responsible for freeing the returned memory using `free()`
+///
+/// @param self AbstractKirigamiApplication*
+///
+const char** k_abstractkirigamiapplication_dynamic_property_names(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+///
+/// @param self AbstractKirigamiApplication*
+///
+QBindingStorage* k_abstractkirigamiapplication_binding_storage(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+///
+/// @param self AbstractKirigamiApplication*
+///
+const QBindingStorage* k_abstractkirigamiapplication_binding_storage2(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
+/// @param self AbstractKirigamiApplication*
+///
+void k_abstractkirigamiapplication_destroyed(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback void func(AbstractKirigamiApplication* self)
+///
+void k_abstractkirigamiapplication_on_destroyed(void* self, void (*callback)(void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
+///
+/// @param self AbstractKirigamiApplication*
+///
+QObject* k_abstractkirigamiapplication_parent(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param classname const char*
+///
+bool k_abstractkirigamiapplication_inherits(void* self, const char* classname);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+///
+/// @param self AbstractKirigamiApplication*
+///
+void k_abstractkirigamiapplication_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
+///
+int32_t k_abstractkirigamiapplication_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t k_abstractkirigamiapplication_start_timer23(void* self, int64_t time, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+/// @param param5 enum Qt__ConnectionType
+///
+QMetaObject__Connection* k_abstractkirigamiapplication_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param type enum Qt__ConnectionType
+///
+QMetaObject__Connection* k_abstractkirigamiapplication_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param type enum Qt__ConnectionType
+///
+QMetaObject__Connection* k_abstractkirigamiapplication_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param signal const char*
+///
+bool k_abstractkirigamiapplication_disconnect1(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param signal const char*
+/// @param receiver QObject*
+///
+bool k_abstractkirigamiapplication_disconnect22(void* self, const char* signal, void* receiver);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_abstractkirigamiapplication_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_abstractkirigamiapplication_disconnect23(void* self, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param param1 QObject*
+///
+void k_abstractkirigamiapplication_destroyed1(void* self, void* param1);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback void func(AbstractKirigamiApplication* self, QObject* param1)
+///
+void k_abstractkirigamiapplication_on_destroyed1(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param event QEvent*
+///
+bool k_abstractkirigamiapplication_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param event QEvent*
+///
+bool k_abstractkirigamiapplication_super_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback bool func(AbstractKirigamiApplication* self, QEvent* event)
+///
+void k_abstractkirigamiapplication_on_event(void* self, bool (*callback)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param watched QObject*
+/// @param event QEvent*
+///
+bool k_abstractkirigamiapplication_event_filter(void* self, void* watched, void* event);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param watched QObject*
+/// @param event QEvent*
+///
+bool k_abstractkirigamiapplication_super_event_filter(void* self, void* watched, void* event);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback bool func(AbstractKirigamiApplication* self, QObject* watched, QEvent* event)
+///
+void k_abstractkirigamiapplication_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param event QTimerEvent*
+///
+void k_abstractkirigamiapplication_timer_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param event QTimerEvent*
+///
+void k_abstractkirigamiapplication_super_timer_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback void func(AbstractKirigamiApplication* self, QTimerEvent* event)
+///
+void k_abstractkirigamiapplication_on_timer_event(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param event QChildEvent*
+///
+void k_abstractkirigamiapplication_child_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param event QChildEvent*
+///
+void k_abstractkirigamiapplication_super_child_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback void func(AbstractKirigamiApplication* self, QChildEvent* event)
+///
+void k_abstractkirigamiapplication_on_child_event(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param event QEvent*
+///
+void k_abstractkirigamiapplication_custom_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param event QEvent*
+///
+void k_abstractkirigamiapplication_super_custom_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback void func(AbstractKirigamiApplication* self, QEvent* event)
+///
+void k_abstractkirigamiapplication_on_custom_event(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param signal QMetaMethod*
+///
+void k_abstractkirigamiapplication_connect_notify(void* self, void* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param signal QMetaMethod*
+///
+void k_abstractkirigamiapplication_super_connect_notify(void* self, void* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback void func(AbstractKirigamiApplication* self, QMetaMethod* signal)
+///
+void k_abstractkirigamiapplication_on_connect_notify(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param signal QMetaMethod*
+///
+void k_abstractkirigamiapplication_disconnect_notify(void* self, void* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param signal QMetaMethod*
+///
+void k_abstractkirigamiapplication_super_disconnect_notify(void* self, void* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback void func(AbstractKirigamiApplication* self, QMetaMethod* signal)
+///
+void k_abstractkirigamiapplication_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+///
+QObject* k_abstractkirigamiapplication_sender(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+///
+QObject* k_abstractkirigamiapplication_super_sender(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback QObject* func()
+///
+void k_abstractkirigamiapplication_on_sender(void* self, QObject* (*callback)());
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+///
+int32_t k_abstractkirigamiapplication_sender_signal_index(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+///
+int32_t k_abstractkirigamiapplication_super_sender_signal_index(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback int32_t func()
+///
+void k_abstractkirigamiapplication_on_sender_signal_index(void* self, int32_t (*callback)());
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param signal const char*
+///
+int32_t k_abstractkirigamiapplication_receivers(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param signal const char*
+///
+int32_t k_abstractkirigamiapplication_super_receivers(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback int32_t func(AbstractKirigamiApplication* self, const char* signal)
+///
+void k_abstractkirigamiapplication_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param signal QMetaMethod*
+///
+bool k_abstractkirigamiapplication_is_signal_connected(void* self, void* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param signal QMetaMethod*
+///
+bool k_abstractkirigamiapplication_super_is_signal_connected(void* self, void* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback bool func(AbstractKirigamiApplication* self, QMetaMethod* signal)
+///
+void k_abstractkirigamiapplication_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// @param self AbstractKirigamiApplication*
+/// @param callback void func(AbstractKirigamiApplication* self, const char* objectName)
+///
+void k_abstractkirigamiapplication_on_object_name_changed(void* self, void (*callback)(void*, const char*));
+
+/// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#dtor.AbstractKirigamiApplication)
+///
+/// Delete this object from C++ memory.
+///
+/// @param self AbstractKirigamiApplication*
+///
+void k_abstractkirigamiapplication_delete(void* self);
+
+#endif
