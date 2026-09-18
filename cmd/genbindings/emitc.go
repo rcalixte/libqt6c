@@ -186,6 +186,8 @@ func (cfs *cFileState) getPageUrl(pageType PageType, pageName, cmdURL, className
 				if pageType == EnumPage && !strings.HasPrefix(pageName, "k") {
 					pageName = "kio-" + pageName
 				}
+			case "extras-kirigami":
+				pageName = "kirigami-platform-" + pageName
 			case "extras-knewstuff":
 				pageName = "knscore-" + pageName
 			case "extras-kparts":
@@ -1896,10 +1898,12 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 		cfs.currentClassName = strings.ReplaceAll(c.ClassName, "::", "__")
 		nameIndex := 0
 		cPrefix := "q_"
-		if cStructName[0] == 'Q' || cStructName[0] == 'K' || cStructName[0] == 'k' {
+		if (cStructName[0] == 'Q' || cStructName[0] == 'K' || cStructName[0] == 'k') &&
+			!strings.HasPrefix(cStructName, "Kirigami") {
 			nameIndex = 1
 			cPrefix = strings.ToLower(cStructName[:1]) + "_"
-		} else if strings.Contains(src.Filename, "KF6") || strings.Contains(src.Filename, "LayerShellQt") {
+		} else if strings.Contains(src.Filename, "KF6") || strings.Contains(src.Filename, "Kirigami") ||
+			strings.Contains(src.Filename, "LayerShellQt") {
 			cPrefix = "k_"
 		}
 		cMethodPrefix := cPrefix + strings.ToLower(cStructName[nameIndex:])

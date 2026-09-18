@@ -7,6 +7,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
+typedef struct AbstractKirigamiApplication AbstractKirigamiApplication;
 typedef struct Accounts__Account Accounts__Account;
 typedef struct Accounts__AccountService Accounts__AccountService;
 typedef struct Accounts__Application Accounts__Application;
@@ -655,6 +656,16 @@ typedef struct KXYSelector KXYSelector;
 typedef struct KXmlGuiWindow KXmlGuiWindow;
 typedef struct KZip KZip;
 typedef struct KZipFileEntry KZipFileEntry;
+typedef struct KirigamiActionCollection KirigamiActionCollection;
+typedef struct Kirigami__Platform__IconSizes Kirigami__Platform__IconSizes;
+typedef struct Kirigami__Platform__PlatformPluginFactory Kirigami__Platform__PlatformPluginFactory;
+typedef struct Kirigami__Platform__PlatformTheme Kirigami__Platform__PlatformTheme;
+typedef struct Kirigami__Platform__PlatformThemeChangeTracker Kirigami__Platform__PlatformThemeChangeTracker;
+typedef struct Kirigami__Platform__StyleSelector Kirigami__Platform__StyleSelector;
+typedef struct Kirigami__Platform__TabletModeChangedEvent Kirigami__Platform__TabletModeChangedEvent;
+typedef struct Kirigami__Platform__TabletModeWatcher Kirigami__Platform__TabletModeWatcher;
+typedef struct Kirigami__Platform__Units Kirigami__Platform__Units;
+typedef struct Kirigami__Platform__VirtualKeyboardWatcher Kirigami__Platform__VirtualKeyboardWatcher;
 typedef struct Konsole Konsole;
 typedef struct Konsole__Emulation Konsole__Emulation;
 typedef struct Konsole__Filter Konsole__Filter;
