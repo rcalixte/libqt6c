@@ -161,10 +161,12 @@ void QWebEngineDownloadRequest_StateChanged(QWebEngineDownloadRequest* self, int
 
 void QWebEngineDownloadRequest_Connect_StateChanged(QWebEngineDownloadRequest* self, intptr_t slot) {
     void (*slotFunc)(QWebEngineDownloadRequest*, int) = reinterpret_cast<void (*)(QWebEngineDownloadRequest*, int)>(slot);
-    QWebEngineDownloadRequest::connect(self, &QWebEngineDownloadRequest::stateChanged, [self, slotFunc](QWebEngineDownloadRequest::DownloadState state) {
-        int sigval1 = static_cast<int>(state);
-        slotFunc(self, sigval1);
-    });
+    QWebEngineDownloadRequest::connect(self,
+                                       static_cast<void (QWebEngineDownloadRequest::*)(QWebEngineDownloadRequest::DownloadState)>(&QWebEngineDownloadRequest::stateChanged),
+                                       [self, slotFunc](QWebEngineDownloadRequest::DownloadState state) {
+                                           int sigval1 = static_cast<int>(state);
+                                           slotFunc(self, sigval1);
+                                       });
 }
 
 void QWebEngineDownloadRequest_SavePageFormatChanged(QWebEngineDownloadRequest* self) {
@@ -173,9 +175,11 @@ void QWebEngineDownloadRequest_SavePageFormatChanged(QWebEngineDownloadRequest* 
 
 void QWebEngineDownloadRequest_Connect_SavePageFormatChanged(QWebEngineDownloadRequest* self, intptr_t slot) {
     void (*slotFunc)(QWebEngineDownloadRequest*) = reinterpret_cast<void (*)(QWebEngineDownloadRequest*)>(slot);
-    QWebEngineDownloadRequest::connect(self, &QWebEngineDownloadRequest::savePageFormatChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QWebEngineDownloadRequest::connect(self,
+                                       static_cast<void (QWebEngineDownloadRequest::*)()>(&QWebEngineDownloadRequest::savePageFormatChanged),
+                                       [self, slotFunc]() {
+                                           slotFunc(self);
+                                       });
 }
 
 void QWebEngineDownloadRequest_ReceivedBytesChanged(QWebEngineDownloadRequest* self) {
@@ -184,9 +188,11 @@ void QWebEngineDownloadRequest_ReceivedBytesChanged(QWebEngineDownloadRequest* s
 
 void QWebEngineDownloadRequest_Connect_ReceivedBytesChanged(QWebEngineDownloadRequest* self, intptr_t slot) {
     void (*slotFunc)(QWebEngineDownloadRequest*) = reinterpret_cast<void (*)(QWebEngineDownloadRequest*)>(slot);
-    QWebEngineDownloadRequest::connect(self, &QWebEngineDownloadRequest::receivedBytesChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QWebEngineDownloadRequest::connect(self,
+                                       static_cast<void (QWebEngineDownloadRequest::*)()>(&QWebEngineDownloadRequest::receivedBytesChanged),
+                                       [self, slotFunc]() {
+                                           slotFunc(self);
+                                       });
 }
 
 void QWebEngineDownloadRequest_TotalBytesChanged(QWebEngineDownloadRequest* self) {
@@ -195,9 +201,11 @@ void QWebEngineDownloadRequest_TotalBytesChanged(QWebEngineDownloadRequest* self
 
 void QWebEngineDownloadRequest_Connect_TotalBytesChanged(QWebEngineDownloadRequest* self, intptr_t slot) {
     void (*slotFunc)(QWebEngineDownloadRequest*) = reinterpret_cast<void (*)(QWebEngineDownloadRequest*)>(slot);
-    QWebEngineDownloadRequest::connect(self, &QWebEngineDownloadRequest::totalBytesChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QWebEngineDownloadRequest::connect(self,
+                                       static_cast<void (QWebEngineDownloadRequest::*)()>(&QWebEngineDownloadRequest::totalBytesChanged),
+                                       [self, slotFunc]() {
+                                           slotFunc(self);
+                                       });
 }
 
 void QWebEngineDownloadRequest_InterruptReasonChanged(QWebEngineDownloadRequest* self) {
@@ -206,9 +214,11 @@ void QWebEngineDownloadRequest_InterruptReasonChanged(QWebEngineDownloadRequest*
 
 void QWebEngineDownloadRequest_Connect_InterruptReasonChanged(QWebEngineDownloadRequest* self, intptr_t slot) {
     void (*slotFunc)(QWebEngineDownloadRequest*) = reinterpret_cast<void (*)(QWebEngineDownloadRequest*)>(slot);
-    QWebEngineDownloadRequest::connect(self, &QWebEngineDownloadRequest::interruptReasonChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QWebEngineDownloadRequest::connect(self,
+                                       static_cast<void (QWebEngineDownloadRequest::*)()>(&QWebEngineDownloadRequest::interruptReasonChanged),
+                                       [self, slotFunc]() {
+                                           slotFunc(self);
+                                       });
 }
 
 void QWebEngineDownloadRequest_IsFinishedChanged(QWebEngineDownloadRequest* self) {
@@ -217,9 +227,11 @@ void QWebEngineDownloadRequest_IsFinishedChanged(QWebEngineDownloadRequest* self
 
 void QWebEngineDownloadRequest_Connect_IsFinishedChanged(QWebEngineDownloadRequest* self, intptr_t slot) {
     void (*slotFunc)(QWebEngineDownloadRequest*) = reinterpret_cast<void (*)(QWebEngineDownloadRequest*)>(slot);
-    QWebEngineDownloadRequest::connect(self, &QWebEngineDownloadRequest::isFinishedChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QWebEngineDownloadRequest::connect(self,
+                                       static_cast<void (QWebEngineDownloadRequest::*)()>(&QWebEngineDownloadRequest::isFinishedChanged),
+                                       [self, slotFunc]() {
+                                           slotFunc(self);
+                                       });
 }
 
 void QWebEngineDownloadRequest_IsPausedChanged(QWebEngineDownloadRequest* self) {
@@ -228,9 +240,11 @@ void QWebEngineDownloadRequest_IsPausedChanged(QWebEngineDownloadRequest* self) 
 
 void QWebEngineDownloadRequest_Connect_IsPausedChanged(QWebEngineDownloadRequest* self, intptr_t slot) {
     void (*slotFunc)(QWebEngineDownloadRequest*) = reinterpret_cast<void (*)(QWebEngineDownloadRequest*)>(slot);
-    QWebEngineDownloadRequest::connect(self, &QWebEngineDownloadRequest::isPausedChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QWebEngineDownloadRequest::connect(self,
+                                       static_cast<void (QWebEngineDownloadRequest::*)()>(&QWebEngineDownloadRequest::isPausedChanged),
+                                       [self, slotFunc]() {
+                                           slotFunc(self);
+                                       });
 }
 
 void QWebEngineDownloadRequest_DownloadDirectoryChanged(QWebEngineDownloadRequest* self) {
@@ -239,9 +253,11 @@ void QWebEngineDownloadRequest_DownloadDirectoryChanged(QWebEngineDownloadReques
 
 void QWebEngineDownloadRequest_Connect_DownloadDirectoryChanged(QWebEngineDownloadRequest* self, intptr_t slot) {
     void (*slotFunc)(QWebEngineDownloadRequest*) = reinterpret_cast<void (*)(QWebEngineDownloadRequest*)>(slot);
-    QWebEngineDownloadRequest::connect(self, &QWebEngineDownloadRequest::downloadDirectoryChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QWebEngineDownloadRequest::connect(self,
+                                       static_cast<void (QWebEngineDownloadRequest::*)()>(&QWebEngineDownloadRequest::downloadDirectoryChanged),
+                                       [self, slotFunc]() {
+                                           slotFunc(self);
+                                       });
 }
 
 void QWebEngineDownloadRequest_DownloadFileNameChanged(QWebEngineDownloadRequest* self) {
@@ -250,9 +266,11 @@ void QWebEngineDownloadRequest_DownloadFileNameChanged(QWebEngineDownloadRequest
 
 void QWebEngineDownloadRequest_Connect_DownloadFileNameChanged(QWebEngineDownloadRequest* self, intptr_t slot) {
     void (*slotFunc)(QWebEngineDownloadRequest*) = reinterpret_cast<void (*)(QWebEngineDownloadRequest*)>(slot);
-    QWebEngineDownloadRequest::connect(self, &QWebEngineDownloadRequest::downloadFileNameChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QWebEngineDownloadRequest::connect(self,
+                                       static_cast<void (QWebEngineDownloadRequest::*)()>(&QWebEngineDownloadRequest::downloadFileNameChanged),
+                                       [self, slotFunc]() {
+                                           slotFunc(self);
+                                       });
 }
 
 void QWebEngineDownloadRequest_Delete(QWebEngineDownloadRequest* self) {

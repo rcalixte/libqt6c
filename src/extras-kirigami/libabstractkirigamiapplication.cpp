@@ -79,9 +79,11 @@ void AbstractKirigamiApplication_OpenAboutPage(AbstractKirigamiApplication* self
 
 void AbstractKirigamiApplication_Connect_OpenAboutPage(AbstractKirigamiApplication* self, intptr_t slot) {
     void (*slotFunc)(AbstractKirigamiApplication*) = reinterpret_cast<void (*)(AbstractKirigamiApplication*)>(slot);
-    AbstractKirigamiApplication::connect(self, &AbstractKirigamiApplication::openAboutPage, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    AbstractKirigamiApplication::connect(self,
+                                         static_cast<void (AbstractKirigamiApplication::*)()>(&AbstractKirigamiApplication::openAboutPage),
+                                         [self, slotFunc]() {
+                                             slotFunc(self);
+                                         });
 }
 
 void AbstractKirigamiApplication_OpenAboutKDEPage(AbstractKirigamiApplication* self) {
@@ -90,9 +92,11 @@ void AbstractKirigamiApplication_OpenAboutKDEPage(AbstractKirigamiApplication* s
 
 void AbstractKirigamiApplication_Connect_OpenAboutKDEPage(AbstractKirigamiApplication* self, intptr_t slot) {
     void (*slotFunc)(AbstractKirigamiApplication*) = reinterpret_cast<void (*)(AbstractKirigamiApplication*)>(slot);
-    AbstractKirigamiApplication::connect(self, &AbstractKirigamiApplication::openAboutKDEPage, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    AbstractKirigamiApplication::connect(self,
+                                         static_cast<void (AbstractKirigamiApplication::*)()>(&AbstractKirigamiApplication::openAboutKDEPage),
+                                         [self, slotFunc]() {
+                                             slotFunc(self);
+                                         });
 }
 
 void AbstractKirigamiApplication_OpenKCommandBarAction(AbstractKirigamiApplication* self) {
@@ -101,9 +105,11 @@ void AbstractKirigamiApplication_OpenKCommandBarAction(AbstractKirigamiApplicati
 
 void AbstractKirigamiApplication_Connect_OpenKCommandBarAction(AbstractKirigamiApplication* self, intptr_t slot) {
     void (*slotFunc)(AbstractKirigamiApplication*) = reinterpret_cast<void (*)(AbstractKirigamiApplication*)>(slot);
-    AbstractKirigamiApplication::connect(self, &AbstractKirigamiApplication::openKCommandBarAction, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    AbstractKirigamiApplication::connect(self,
+                                         static_cast<void (AbstractKirigamiApplication::*)()>(&AbstractKirigamiApplication::openKCommandBarAction),
+                                         [self, slotFunc]() {
+                                             slotFunc(self);
+                                         });
 }
 
 void AbstractKirigamiApplication_ShortcutsEditorAction(AbstractKirigamiApplication* self) {
@@ -112,9 +118,11 @@ void AbstractKirigamiApplication_ShortcutsEditorAction(AbstractKirigamiApplicati
 
 void AbstractKirigamiApplication_Connect_ShortcutsEditorAction(AbstractKirigamiApplication* self, intptr_t slot) {
     void (*slotFunc)(AbstractKirigamiApplication*) = reinterpret_cast<void (*)(AbstractKirigamiApplication*)>(slot);
-    AbstractKirigamiApplication::connect(self, &AbstractKirigamiApplication::shortcutsEditorAction, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    AbstractKirigamiApplication::connect(self,
+                                         static_cast<void (AbstractKirigamiApplication::*)()>(&AbstractKirigamiApplication::shortcutsEditorAction),
+                                         [self, slotFunc]() {
+                                             slotFunc(self);
+                                         });
 }
 
 void AbstractKirigamiApplication_ConfigurationViewChanged(AbstractKirigamiApplication* self) {
@@ -123,9 +131,11 @@ void AbstractKirigamiApplication_ConfigurationViewChanged(AbstractKirigamiApplic
 
 void AbstractKirigamiApplication_Connect_ConfigurationViewChanged(AbstractKirigamiApplication* self, intptr_t slot) {
     void (*slotFunc)(AbstractKirigamiApplication*) = reinterpret_cast<void (*)(AbstractKirigamiApplication*)>(slot);
-    AbstractKirigamiApplication::connect(self, &AbstractKirigamiApplication::configurationViewChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    AbstractKirigamiApplication::connect(self,
+                                         static_cast<void (AbstractKirigamiApplication::*)()>(&AbstractKirigamiApplication::configurationViewChanged),
+                                         [self, slotFunc]() {
+                                             slotFunc(self);
+                                         });
 }
 
 void AbstractKirigamiApplication_SetupActions(AbstractKirigamiApplication* self) {

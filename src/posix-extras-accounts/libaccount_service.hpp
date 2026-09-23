@@ -66,7 +66,9 @@ QVariant* Accounts__AccountService_Value3(const Accounts__AccountService* self, 
 libqt_list /* of libqt_string */ Accounts__AccountService_ChangedFields(const Accounts__AccountService* self);
 Accounts__AuthData* Accounts__AccountService_AuthData(const Accounts__AccountService* self);
 void Accounts__AccountService_Enabled2(Accounts__AccountService* self, bool isEnabled);
+void Accounts__AccountService_Connect_Enabled2(Accounts__AccountService* self, intptr_t slot);
 void Accounts__AccountService_Changed(Accounts__AccountService* self);
+void Accounts__AccountService_Connect_Changed(Accounts__AccountService* self, intptr_t slot);
 QVariant* Accounts__AccountService_Value32(const Accounts__AccountService* self, const libqt_string key, const QVariant* defaultValue, int* source);
 QVariant* Accounts__AccountService_Value22(const Accounts__AccountService* self, const libqt_string key, int* source);
 QVariant* Accounts__AccountService_Value23(const Accounts__AccountService* self, const char* key, int* source);

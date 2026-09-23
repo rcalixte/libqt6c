@@ -158,10 +158,12 @@ void QDesignerFormWindowManagerInterface_FormWindowAdded(QDesignerFormWindowMana
 
 void QDesignerFormWindowManagerInterface_Connect_FormWindowAdded(QDesignerFormWindowManagerInterface* self, intptr_t slot) {
     void (*slotFunc)(QDesignerFormWindowManagerInterface*, QDesignerFormWindowInterface*) = reinterpret_cast<void (*)(QDesignerFormWindowManagerInterface*, QDesignerFormWindowInterface*)>(slot);
-    QDesignerFormWindowManagerInterface::connect(self, &QDesignerFormWindowManagerInterface::formWindowAdded, [self, slotFunc](QDesignerFormWindowInterface* formWindow) {
-        QDesignerFormWindowInterface* sigval1 = formWindow;
-        slotFunc(self, sigval1);
-    });
+    QDesignerFormWindowManagerInterface::connect(self,
+                                                 static_cast<void (QDesignerFormWindowManagerInterface::*)(QDesignerFormWindowInterface*)>(&QDesignerFormWindowManagerInterface::formWindowAdded),
+                                                 [self, slotFunc](QDesignerFormWindowInterface* formWindow) {
+                                                     QDesignerFormWindowInterface* sigval1 = formWindow;
+                                                     slotFunc(self, sigval1);
+                                                 });
 }
 
 void QDesignerFormWindowManagerInterface_FormWindowRemoved(QDesignerFormWindowManagerInterface* self, QDesignerFormWindowInterface* formWindow) {
@@ -170,10 +172,12 @@ void QDesignerFormWindowManagerInterface_FormWindowRemoved(QDesignerFormWindowMa
 
 void QDesignerFormWindowManagerInterface_Connect_FormWindowRemoved(QDesignerFormWindowManagerInterface* self, intptr_t slot) {
     void (*slotFunc)(QDesignerFormWindowManagerInterface*, QDesignerFormWindowInterface*) = reinterpret_cast<void (*)(QDesignerFormWindowManagerInterface*, QDesignerFormWindowInterface*)>(slot);
-    QDesignerFormWindowManagerInterface::connect(self, &QDesignerFormWindowManagerInterface::formWindowRemoved, [self, slotFunc](QDesignerFormWindowInterface* formWindow) {
-        QDesignerFormWindowInterface* sigval1 = formWindow;
-        slotFunc(self, sigval1);
-    });
+    QDesignerFormWindowManagerInterface::connect(self,
+                                                 static_cast<void (QDesignerFormWindowManagerInterface::*)(QDesignerFormWindowInterface*)>(&QDesignerFormWindowManagerInterface::formWindowRemoved),
+                                                 [self, slotFunc](QDesignerFormWindowInterface* formWindow) {
+                                                     QDesignerFormWindowInterface* sigval1 = formWindow;
+                                                     slotFunc(self, sigval1);
+                                                 });
 }
 
 void QDesignerFormWindowManagerInterface_ActiveFormWindowChanged(QDesignerFormWindowManagerInterface* self, QDesignerFormWindowInterface* formWindow) {
@@ -182,10 +186,12 @@ void QDesignerFormWindowManagerInterface_ActiveFormWindowChanged(QDesignerFormWi
 
 void QDesignerFormWindowManagerInterface_Connect_ActiveFormWindowChanged(QDesignerFormWindowManagerInterface* self, intptr_t slot) {
     void (*slotFunc)(QDesignerFormWindowManagerInterface*, QDesignerFormWindowInterface*) = reinterpret_cast<void (*)(QDesignerFormWindowManagerInterface*, QDesignerFormWindowInterface*)>(slot);
-    QDesignerFormWindowManagerInterface::connect(self, &QDesignerFormWindowManagerInterface::activeFormWindowChanged, [self, slotFunc](QDesignerFormWindowInterface* formWindow) {
-        QDesignerFormWindowInterface* sigval1 = formWindow;
-        slotFunc(self, sigval1);
-    });
+    QDesignerFormWindowManagerInterface::connect(self,
+                                                 static_cast<void (QDesignerFormWindowManagerInterface::*)(QDesignerFormWindowInterface*)>(&QDesignerFormWindowManagerInterface::activeFormWindowChanged),
+                                                 [self, slotFunc](QDesignerFormWindowInterface* formWindow) {
+                                                     QDesignerFormWindowInterface* sigval1 = formWindow;
+                                                     slotFunc(self, sigval1);
+                                                 });
 }
 
 void QDesignerFormWindowManagerInterface_FormWindowSettingsChanged(QDesignerFormWindowManagerInterface* self, QDesignerFormWindowInterface* fw) {
@@ -194,10 +200,12 @@ void QDesignerFormWindowManagerInterface_FormWindowSettingsChanged(QDesignerForm
 
 void QDesignerFormWindowManagerInterface_Connect_FormWindowSettingsChanged(QDesignerFormWindowManagerInterface* self, intptr_t slot) {
     void (*slotFunc)(QDesignerFormWindowManagerInterface*, QDesignerFormWindowInterface*) = reinterpret_cast<void (*)(QDesignerFormWindowManagerInterface*, QDesignerFormWindowInterface*)>(slot);
-    QDesignerFormWindowManagerInterface::connect(self, &QDesignerFormWindowManagerInterface::formWindowSettingsChanged, [self, slotFunc](QDesignerFormWindowInterface* fw) {
-        QDesignerFormWindowInterface* sigval1 = fw;
-        slotFunc(self, sigval1);
-    });
+    QDesignerFormWindowManagerInterface::connect(self,
+                                                 static_cast<void (QDesignerFormWindowManagerInterface::*)(QDesignerFormWindowInterface*)>(&QDesignerFormWindowManagerInterface::formWindowSettingsChanged),
+                                                 [self, slotFunc](QDesignerFormWindowInterface* fw) {
+                                                     QDesignerFormWindowInterface* sigval1 = fw;
+                                                     slotFunc(self, sigval1);
+                                                 });
 }
 
 void QDesignerFormWindowManagerInterface_AddFormWindow(QDesignerFormWindowManagerInterface* self, QDesignerFormWindowInterface* formWindow) {

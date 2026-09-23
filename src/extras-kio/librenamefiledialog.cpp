@@ -69,20 +69,22 @@ void KIO__RenameFileDialog_RenamingFinished(KIO__RenameFileDialog* self, const l
 
 void KIO__RenameFileDialog_Connect_RenamingFinished(KIO__RenameFileDialog* self, intptr_t slot) {
     void (*slotFunc)(KIO__RenameFileDialog*, libqt_list /* of QUrl* */) = reinterpret_cast<void (*)(KIO__RenameFileDialog*, libqt_list /* of QUrl* */)>(slot);
-    KIO::RenameFileDialog::connect(self, &KIO::RenameFileDialog::renamingFinished, [self, slotFunc](const QList<QUrl>& urls) {
-        const QList<QUrl>& urls_ret = urls;
-        // Convert QList<> from C++ memory to manually-managed C memory
-        QUrl** urls_arr = static_cast<QUrl**>(malloc(sizeof(QUrl*) * (urls_ret.size())));
-        for (qsizetype i = 0; i < urls_ret.size(); ++i) {
-            urls_arr[i] = new QUrl(urls_ret[i]);
-        }
-        libqt_list urls_out;
-        urls_out.len = urls_ret.size();
-        urls_out.data.ptr = static_cast<void*>(urls_arr);
-        libqt_list /* of QUrl* */ sigval1 = urls_out;
-        slotFunc(self, sigval1);
-        free(urls_arr);
-    });
+    KIO::RenameFileDialog::connect(self,
+                                   static_cast<void (KIO::RenameFileDialog::*)(const QList<QUrl>&)>(&KIO::RenameFileDialog::renamingFinished),
+                                   [self, slotFunc](const QList<QUrl>& urls) {
+                                       const QList<QUrl>& urls_ret = urls;
+                                       // Convert QList<> from C++ memory to manually-managed C memory
+                                       QUrl** urls_arr = static_cast<QUrl**>(malloc(sizeof(QUrl*) * (urls_ret.size())));
+                                       for (qsizetype i = 0; i < urls_ret.size(); ++i) {
+                                           urls_arr[i] = new QUrl(urls_ret[i]);
+                                       }
+                                       libqt_list urls_out;
+                                       urls_out.len = urls_ret.size();
+                                       urls_out.data.ptr = static_cast<void*>(urls_arr);
+                                       libqt_list /* of QUrl* */ sigval1 = urls_out;
+                                       slotFunc(self, sigval1);
+                                       free(urls_arr);
+                                   });
 }
 
 void KIO__RenameFileDialog_Error(KIO__RenameFileDialog* self, KJob* error) {
@@ -91,10 +93,12 @@ void KIO__RenameFileDialog_Error(KIO__RenameFileDialog* self, KJob* error) {
 
 void KIO__RenameFileDialog_Connect_Error(KIO__RenameFileDialog* self, intptr_t slot) {
     void (*slotFunc)(KIO__RenameFileDialog*, KJob*) = reinterpret_cast<void (*)(KIO__RenameFileDialog*, KJob*)>(slot);
-    KIO::RenameFileDialog::connect(self, &KIO::RenameFileDialog::error, [self, slotFunc](KJob* error) {
-        KJob* sigval1 = error;
-        slotFunc(self, sigval1);
-    });
+    KIO::RenameFileDialog::connect(self,
+                                   static_cast<void (KIO::RenameFileDialog::*)(KJob*)>(&KIO::RenameFileDialog::error),
+                                   [self, slotFunc](KJob* error) {
+                                       KJob* sigval1 = error;
+                                       slotFunc(self, sigval1);
+                                   });
 }
 
 // Base class handler implementation

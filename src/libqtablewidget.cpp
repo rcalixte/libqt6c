@@ -751,10 +751,12 @@ void QTableWidget_ItemPressed(QTableWidget* self, QTableWidgetItem* item) {
 
 void QTableWidget_Connect_ItemPressed(QTableWidget* self, intptr_t slot) {
     void (*slotFunc)(QTableWidget*, QTableWidgetItem*) = reinterpret_cast<void (*)(QTableWidget*, QTableWidgetItem*)>(slot);
-    QTableWidget::connect(self, &QTableWidget::itemPressed, [self, slotFunc](QTableWidgetItem* item) {
-        QTableWidgetItem* sigval1 = item;
-        slotFunc(self, sigval1);
-    });
+    QTableWidget::connect(self,
+                          static_cast<void (QTableWidget::*)(QTableWidgetItem*)>(&QTableWidget::itemPressed),
+                          [self, slotFunc](QTableWidgetItem* item) {
+                              QTableWidgetItem* sigval1 = item;
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QTableWidget_ItemClicked(QTableWidget* self, QTableWidgetItem* item) {
@@ -763,10 +765,12 @@ void QTableWidget_ItemClicked(QTableWidget* self, QTableWidgetItem* item) {
 
 void QTableWidget_Connect_ItemClicked(QTableWidget* self, intptr_t slot) {
     void (*slotFunc)(QTableWidget*, QTableWidgetItem*) = reinterpret_cast<void (*)(QTableWidget*, QTableWidgetItem*)>(slot);
-    QTableWidget::connect(self, &QTableWidget::itemClicked, [self, slotFunc](QTableWidgetItem* item) {
-        QTableWidgetItem* sigval1 = item;
-        slotFunc(self, sigval1);
-    });
+    QTableWidget::connect(self,
+                          static_cast<void (QTableWidget::*)(QTableWidgetItem*)>(&QTableWidget::itemClicked),
+                          [self, slotFunc](QTableWidgetItem* item) {
+                              QTableWidgetItem* sigval1 = item;
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QTableWidget_ItemDoubleClicked(QTableWidget* self, QTableWidgetItem* item) {
@@ -775,10 +779,12 @@ void QTableWidget_ItemDoubleClicked(QTableWidget* self, QTableWidgetItem* item) 
 
 void QTableWidget_Connect_ItemDoubleClicked(QTableWidget* self, intptr_t slot) {
     void (*slotFunc)(QTableWidget*, QTableWidgetItem*) = reinterpret_cast<void (*)(QTableWidget*, QTableWidgetItem*)>(slot);
-    QTableWidget::connect(self, &QTableWidget::itemDoubleClicked, [self, slotFunc](QTableWidgetItem* item) {
-        QTableWidgetItem* sigval1 = item;
-        slotFunc(self, sigval1);
-    });
+    QTableWidget::connect(self,
+                          static_cast<void (QTableWidget::*)(QTableWidgetItem*)>(&QTableWidget::itemDoubleClicked),
+                          [self, slotFunc](QTableWidgetItem* item) {
+                              QTableWidgetItem* sigval1 = item;
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QTableWidget_ItemActivated(QTableWidget* self, QTableWidgetItem* item) {
@@ -787,10 +793,12 @@ void QTableWidget_ItemActivated(QTableWidget* self, QTableWidgetItem* item) {
 
 void QTableWidget_Connect_ItemActivated(QTableWidget* self, intptr_t slot) {
     void (*slotFunc)(QTableWidget*, QTableWidgetItem*) = reinterpret_cast<void (*)(QTableWidget*, QTableWidgetItem*)>(slot);
-    QTableWidget::connect(self, &QTableWidget::itemActivated, [self, slotFunc](QTableWidgetItem* item) {
-        QTableWidgetItem* sigval1 = item;
-        slotFunc(self, sigval1);
-    });
+    QTableWidget::connect(self,
+                          static_cast<void (QTableWidget::*)(QTableWidgetItem*)>(&QTableWidget::itemActivated),
+                          [self, slotFunc](QTableWidgetItem* item) {
+                              QTableWidgetItem* sigval1 = item;
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QTableWidget_ItemEntered(QTableWidget* self, QTableWidgetItem* item) {
@@ -799,10 +807,12 @@ void QTableWidget_ItemEntered(QTableWidget* self, QTableWidgetItem* item) {
 
 void QTableWidget_Connect_ItemEntered(QTableWidget* self, intptr_t slot) {
     void (*slotFunc)(QTableWidget*, QTableWidgetItem*) = reinterpret_cast<void (*)(QTableWidget*, QTableWidgetItem*)>(slot);
-    QTableWidget::connect(self, &QTableWidget::itemEntered, [self, slotFunc](QTableWidgetItem* item) {
-        QTableWidgetItem* sigval1 = item;
-        slotFunc(self, sigval1);
-    });
+    QTableWidget::connect(self,
+                          static_cast<void (QTableWidget::*)(QTableWidgetItem*)>(&QTableWidget::itemEntered),
+                          [self, slotFunc](QTableWidgetItem* item) {
+                              QTableWidgetItem* sigval1 = item;
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QTableWidget_ItemChanged(QTableWidget* self, QTableWidgetItem* item) {
@@ -811,10 +821,12 @@ void QTableWidget_ItemChanged(QTableWidget* self, QTableWidgetItem* item) {
 
 void QTableWidget_Connect_ItemChanged(QTableWidget* self, intptr_t slot) {
     void (*slotFunc)(QTableWidget*, QTableWidgetItem*) = reinterpret_cast<void (*)(QTableWidget*, QTableWidgetItem*)>(slot);
-    QTableWidget::connect(self, &QTableWidget::itemChanged, [self, slotFunc](QTableWidgetItem* item) {
-        QTableWidgetItem* sigval1 = item;
-        slotFunc(self, sigval1);
-    });
+    QTableWidget::connect(self,
+                          static_cast<void (QTableWidget::*)(QTableWidgetItem*)>(&QTableWidget::itemChanged),
+                          [self, slotFunc](QTableWidgetItem* item) {
+                              QTableWidgetItem* sigval1 = item;
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QTableWidget_CurrentItemChanged(QTableWidget* self, QTableWidgetItem* current, QTableWidgetItem* previous) {
@@ -823,11 +835,13 @@ void QTableWidget_CurrentItemChanged(QTableWidget* self, QTableWidgetItem* curre
 
 void QTableWidget_Connect_CurrentItemChanged(QTableWidget* self, intptr_t slot) {
     void (*slotFunc)(QTableWidget*, QTableWidgetItem*, QTableWidgetItem*) = reinterpret_cast<void (*)(QTableWidget*, QTableWidgetItem*, QTableWidgetItem*)>(slot);
-    QTableWidget::connect(self, &QTableWidget::currentItemChanged, [self, slotFunc](QTableWidgetItem* current, QTableWidgetItem* previous) {
-        QTableWidgetItem* sigval1 = current;
-        QTableWidgetItem* sigval2 = previous;
-        slotFunc(self, sigval1, sigval2);
-    });
+    QTableWidget::connect(self,
+                          static_cast<void (QTableWidget::*)(QTableWidgetItem*, QTableWidgetItem*)>(&QTableWidget::currentItemChanged),
+                          [self, slotFunc](QTableWidgetItem* current, QTableWidgetItem* previous) {
+                              QTableWidgetItem* sigval1 = current;
+                              QTableWidgetItem* sigval2 = previous;
+                              slotFunc(self, sigval1, sigval2);
+                          });
 }
 
 void QTableWidget_ItemSelectionChanged(QTableWidget* self) {
@@ -836,9 +850,11 @@ void QTableWidget_ItemSelectionChanged(QTableWidget* self) {
 
 void QTableWidget_Connect_ItemSelectionChanged(QTableWidget* self, intptr_t slot) {
     void (*slotFunc)(QTableWidget*) = reinterpret_cast<void (*)(QTableWidget*)>(slot);
-    QTableWidget::connect(self, &QTableWidget::itemSelectionChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QTableWidget::connect(self,
+                          static_cast<void (QTableWidget::*)()>(&QTableWidget::itemSelectionChanged),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QTableWidget_CellPressed(QTableWidget* self, int row, int column) {
@@ -847,11 +863,13 @@ void QTableWidget_CellPressed(QTableWidget* self, int row, int column) {
 
 void QTableWidget_Connect_CellPressed(QTableWidget* self, intptr_t slot) {
     void (*slotFunc)(QTableWidget*, int, int) = reinterpret_cast<void (*)(QTableWidget*, int, int)>(slot);
-    QTableWidget::connect(self, &QTableWidget::cellPressed, [self, slotFunc](int row, int column) {
-        int sigval1 = row;
-        int sigval2 = column;
-        slotFunc(self, sigval1, sigval2);
-    });
+    QTableWidget::connect(self,
+                          static_cast<void (QTableWidget::*)(int, int)>(&QTableWidget::cellPressed),
+                          [self, slotFunc](int row, int column) {
+                              int sigval1 = row;
+                              int sigval2 = column;
+                              slotFunc(self, sigval1, sigval2);
+                          });
 }
 
 void QTableWidget_CellClicked(QTableWidget* self, int row, int column) {
@@ -860,11 +878,13 @@ void QTableWidget_CellClicked(QTableWidget* self, int row, int column) {
 
 void QTableWidget_Connect_CellClicked(QTableWidget* self, intptr_t slot) {
     void (*slotFunc)(QTableWidget*, int, int) = reinterpret_cast<void (*)(QTableWidget*, int, int)>(slot);
-    QTableWidget::connect(self, &QTableWidget::cellClicked, [self, slotFunc](int row, int column) {
-        int sigval1 = row;
-        int sigval2 = column;
-        slotFunc(self, sigval1, sigval2);
-    });
+    QTableWidget::connect(self,
+                          static_cast<void (QTableWidget::*)(int, int)>(&QTableWidget::cellClicked),
+                          [self, slotFunc](int row, int column) {
+                              int sigval1 = row;
+                              int sigval2 = column;
+                              slotFunc(self, sigval1, sigval2);
+                          });
 }
 
 void QTableWidget_CellDoubleClicked(QTableWidget* self, int row, int column) {
@@ -873,11 +893,13 @@ void QTableWidget_CellDoubleClicked(QTableWidget* self, int row, int column) {
 
 void QTableWidget_Connect_CellDoubleClicked(QTableWidget* self, intptr_t slot) {
     void (*slotFunc)(QTableWidget*, int, int) = reinterpret_cast<void (*)(QTableWidget*, int, int)>(slot);
-    QTableWidget::connect(self, &QTableWidget::cellDoubleClicked, [self, slotFunc](int row, int column) {
-        int sigval1 = row;
-        int sigval2 = column;
-        slotFunc(self, sigval1, sigval2);
-    });
+    QTableWidget::connect(self,
+                          static_cast<void (QTableWidget::*)(int, int)>(&QTableWidget::cellDoubleClicked),
+                          [self, slotFunc](int row, int column) {
+                              int sigval1 = row;
+                              int sigval2 = column;
+                              slotFunc(self, sigval1, sigval2);
+                          });
 }
 
 void QTableWidget_CellActivated(QTableWidget* self, int row, int column) {
@@ -886,11 +908,13 @@ void QTableWidget_CellActivated(QTableWidget* self, int row, int column) {
 
 void QTableWidget_Connect_CellActivated(QTableWidget* self, intptr_t slot) {
     void (*slotFunc)(QTableWidget*, int, int) = reinterpret_cast<void (*)(QTableWidget*, int, int)>(slot);
-    QTableWidget::connect(self, &QTableWidget::cellActivated, [self, slotFunc](int row, int column) {
-        int sigval1 = row;
-        int sigval2 = column;
-        slotFunc(self, sigval1, sigval2);
-    });
+    QTableWidget::connect(self,
+                          static_cast<void (QTableWidget::*)(int, int)>(&QTableWidget::cellActivated),
+                          [self, slotFunc](int row, int column) {
+                              int sigval1 = row;
+                              int sigval2 = column;
+                              slotFunc(self, sigval1, sigval2);
+                          });
 }
 
 void QTableWidget_CellEntered(QTableWidget* self, int row, int column) {
@@ -899,11 +923,13 @@ void QTableWidget_CellEntered(QTableWidget* self, int row, int column) {
 
 void QTableWidget_Connect_CellEntered(QTableWidget* self, intptr_t slot) {
     void (*slotFunc)(QTableWidget*, int, int) = reinterpret_cast<void (*)(QTableWidget*, int, int)>(slot);
-    QTableWidget::connect(self, &QTableWidget::cellEntered, [self, slotFunc](int row, int column) {
-        int sigval1 = row;
-        int sigval2 = column;
-        slotFunc(self, sigval1, sigval2);
-    });
+    QTableWidget::connect(self,
+                          static_cast<void (QTableWidget::*)(int, int)>(&QTableWidget::cellEntered),
+                          [self, slotFunc](int row, int column) {
+                              int sigval1 = row;
+                              int sigval2 = column;
+                              slotFunc(self, sigval1, sigval2);
+                          });
 }
 
 void QTableWidget_CellChanged(QTableWidget* self, int row, int column) {
@@ -912,11 +938,13 @@ void QTableWidget_CellChanged(QTableWidget* self, int row, int column) {
 
 void QTableWidget_Connect_CellChanged(QTableWidget* self, intptr_t slot) {
     void (*slotFunc)(QTableWidget*, int, int) = reinterpret_cast<void (*)(QTableWidget*, int, int)>(slot);
-    QTableWidget::connect(self, &QTableWidget::cellChanged, [self, slotFunc](int row, int column) {
-        int sigval1 = row;
-        int sigval2 = column;
-        slotFunc(self, sigval1, sigval2);
-    });
+    QTableWidget::connect(self,
+                          static_cast<void (QTableWidget::*)(int, int)>(&QTableWidget::cellChanged),
+                          [self, slotFunc](int row, int column) {
+                              int sigval1 = row;
+                              int sigval2 = column;
+                              slotFunc(self, sigval1, sigval2);
+                          });
 }
 
 void QTableWidget_CurrentCellChanged(QTableWidget* self, int currentRow, int currentColumn, int previousRow, int previousColumn) {
@@ -925,13 +953,15 @@ void QTableWidget_CurrentCellChanged(QTableWidget* self, int currentRow, int cur
 
 void QTableWidget_Connect_CurrentCellChanged(QTableWidget* self, intptr_t slot) {
     void (*slotFunc)(QTableWidget*, int, int, int, int) = reinterpret_cast<void (*)(QTableWidget*, int, int, int, int)>(slot);
-    QTableWidget::connect(self, &QTableWidget::currentCellChanged, [self, slotFunc](int currentRow, int currentColumn, int previousRow, int previousColumn) {
-        int sigval1 = currentRow;
-        int sigval2 = currentColumn;
-        int sigval3 = previousRow;
-        int sigval4 = previousColumn;
-        slotFunc(self, sigval1, sigval2, sigval3, sigval4);
-    });
+    QTableWidget::connect(self,
+                          static_cast<void (QTableWidget::*)(int, int, int, int)>(&QTableWidget::currentCellChanged),
+                          [self, slotFunc](int currentRow, int currentColumn, int previousRow, int previousColumn) {
+                              int sigval1 = currentRow;
+                              int sigval2 = currentColumn;
+                              int sigval3 = previousRow;
+                              int sigval4 = previousColumn;
+                              slotFunc(self, sigval1, sigval2, sigval3, sigval4);
+                          });
 }
 
 bool QTableWidget_Event(QTableWidget* self, QEvent* e) {

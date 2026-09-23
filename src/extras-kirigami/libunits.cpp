@@ -67,9 +67,11 @@ void Kirigami__Platform__IconSizes_SizeForLabelsChanged(Kirigami__Platform__Icon
 
 void Kirigami__Platform__IconSizes_Connect_SizeForLabelsChanged(Kirigami__Platform__IconSizes* self, intptr_t slot) {
     void (*slotFunc)(Kirigami__Platform__IconSizes*) = reinterpret_cast<void (*)(Kirigami__Platform__IconSizes*)>(slot);
-    Kirigami::Platform::IconSizes::connect(self, &Kirigami::Platform::IconSizes::sizeForLabelsChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Kirigami::Platform::IconSizes::connect(self,
+                                           static_cast<void (Kirigami::Platform::IconSizes::*)()>(&Kirigami::Platform::IconSizes::sizeForLabelsChanged),
+                                           [self, slotFunc]() {
+                                               slotFunc(self);
+                                           });
 }
 
 void Kirigami__Platform__IconSizes_SmallChanged(Kirigami__Platform__IconSizes* self) {
@@ -78,9 +80,11 @@ void Kirigami__Platform__IconSizes_SmallChanged(Kirigami__Platform__IconSizes* s
 
 void Kirigami__Platform__IconSizes_Connect_SmallChanged(Kirigami__Platform__IconSizes* self, intptr_t slot) {
     void (*slotFunc)(Kirigami__Platform__IconSizes*) = reinterpret_cast<void (*)(Kirigami__Platform__IconSizes*)>(slot);
-    Kirigami::Platform::IconSizes::connect(self, &Kirigami::Platform::IconSizes::smallChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Kirigami::Platform::IconSizes::connect(self,
+                                           static_cast<void (Kirigami::Platform::IconSizes::*)()>(&Kirigami::Platform::IconSizes::smallChanged),
+                                           [self, slotFunc]() {
+                                               slotFunc(self);
+                                           });
 }
 
 void Kirigami__Platform__IconSizes_SmallMediumChanged(Kirigami__Platform__IconSizes* self) {
@@ -89,9 +93,11 @@ void Kirigami__Platform__IconSizes_SmallMediumChanged(Kirigami__Platform__IconSi
 
 void Kirigami__Platform__IconSizes_Connect_SmallMediumChanged(Kirigami__Platform__IconSizes* self, intptr_t slot) {
     void (*slotFunc)(Kirigami__Platform__IconSizes*) = reinterpret_cast<void (*)(Kirigami__Platform__IconSizes*)>(slot);
-    Kirigami::Platform::IconSizes::connect(self, &Kirigami::Platform::IconSizes::smallMediumChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Kirigami::Platform::IconSizes::connect(self,
+                                           static_cast<void (Kirigami::Platform::IconSizes::*)()>(&Kirigami::Platform::IconSizes::smallMediumChanged),
+                                           [self, slotFunc]() {
+                                               slotFunc(self);
+                                           });
 }
 
 void Kirigami__Platform__IconSizes_MediumChanged(Kirigami__Platform__IconSizes* self) {
@@ -100,9 +106,11 @@ void Kirigami__Platform__IconSizes_MediumChanged(Kirigami__Platform__IconSizes* 
 
 void Kirigami__Platform__IconSizes_Connect_MediumChanged(Kirigami__Platform__IconSizes* self, intptr_t slot) {
     void (*slotFunc)(Kirigami__Platform__IconSizes*) = reinterpret_cast<void (*)(Kirigami__Platform__IconSizes*)>(slot);
-    Kirigami::Platform::IconSizes::connect(self, &Kirigami::Platform::IconSizes::mediumChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Kirigami::Platform::IconSizes::connect(self,
+                                           static_cast<void (Kirigami::Platform::IconSizes::*)()>(&Kirigami::Platform::IconSizes::mediumChanged),
+                                           [self, slotFunc]() {
+                                               slotFunc(self);
+                                           });
 }
 
 void Kirigami__Platform__IconSizes_LargeChanged(Kirigami__Platform__IconSizes* self) {
@@ -111,9 +119,11 @@ void Kirigami__Platform__IconSizes_LargeChanged(Kirigami__Platform__IconSizes* s
 
 void Kirigami__Platform__IconSizes_Connect_LargeChanged(Kirigami__Platform__IconSizes* self, intptr_t slot) {
     void (*slotFunc)(Kirigami__Platform__IconSizes*) = reinterpret_cast<void (*)(Kirigami__Platform__IconSizes*)>(slot);
-    Kirigami::Platform::IconSizes::connect(self, &Kirigami::Platform::IconSizes::largeChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Kirigami::Platform::IconSizes::connect(self,
+                                           static_cast<void (Kirigami::Platform::IconSizes::*)()>(&Kirigami::Platform::IconSizes::largeChanged),
+                                           [self, slotFunc]() {
+                                               slotFunc(self);
+                                           });
 }
 
 void Kirigami__Platform__IconSizes_HugeChanged(Kirigami__Platform__IconSizes* self) {
@@ -122,9 +132,11 @@ void Kirigami__Platform__IconSizes_HugeChanged(Kirigami__Platform__IconSizes* se
 
 void Kirigami__Platform__IconSizes_Connect_HugeChanged(Kirigami__Platform__IconSizes* self, intptr_t slot) {
     void (*slotFunc)(Kirigami__Platform__IconSizes*) = reinterpret_cast<void (*)(Kirigami__Platform__IconSizes*)>(slot);
-    Kirigami::Platform::IconSizes::connect(self, &Kirigami::Platform::IconSizes::hugeChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Kirigami::Platform::IconSizes::connect(self,
+                                           static_cast<void (Kirigami::Platform::IconSizes::*)()>(&Kirigami::Platform::IconSizes::hugeChanged),
+                                           [self, slotFunc]() {
+                                               slotFunc(self);
+                                           });
 }
 
 void Kirigami__Platform__IconSizes_EnormousChanged(Kirigami__Platform__IconSizes* self) {
@@ -133,9 +145,11 @@ void Kirigami__Platform__IconSizes_EnormousChanged(Kirigami__Platform__IconSizes
 
 void Kirigami__Platform__IconSizes_Connect_EnormousChanged(Kirigami__Platform__IconSizes* self, intptr_t slot) {
     void (*slotFunc)(Kirigami__Platform__IconSizes*) = reinterpret_cast<void (*)(Kirigami__Platform__IconSizes*)>(slot);
-    Kirigami::Platform::IconSizes::connect(self, &Kirigami::Platform::IconSizes::enormousChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Kirigami::Platform::IconSizes::connect(self,
+                                           static_cast<void (Kirigami::Platform::IconSizes::*)()>(&Kirigami::Platform::IconSizes::enormousChanged),
+                                           [self, slotFunc]() {
+                                               slotFunc(self);
+                                           });
 }
 
 // Base class handler implementation
@@ -618,9 +632,11 @@ void Kirigami__Platform__Units_GridUnitChanged(Kirigami__Platform__Units* self) 
 
 void Kirigami__Platform__Units_Connect_GridUnitChanged(Kirigami__Platform__Units* self, intptr_t slot) {
     void (*slotFunc)(Kirigami__Platform__Units*) = reinterpret_cast<void (*)(Kirigami__Platform__Units*)>(slot);
-    Kirigami::Platform::Units::connect(self, &Kirigami::Platform::Units::gridUnitChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Kirigami::Platform::Units::connect(self,
+                                       static_cast<void (Kirigami::Platform::Units::*)()>(&Kirigami::Platform::Units::gridUnitChanged),
+                                       [self, slotFunc]() {
+                                           slotFunc(self);
+                                       });
 }
 
 void Kirigami__Platform__Units_SmallSpacingChanged(Kirigami__Platform__Units* self) {
@@ -629,9 +645,11 @@ void Kirigami__Platform__Units_SmallSpacingChanged(Kirigami__Platform__Units* se
 
 void Kirigami__Platform__Units_Connect_SmallSpacingChanged(Kirigami__Platform__Units* self, intptr_t slot) {
     void (*slotFunc)(Kirigami__Platform__Units*) = reinterpret_cast<void (*)(Kirigami__Platform__Units*)>(slot);
-    Kirigami::Platform::Units::connect(self, &Kirigami::Platform::Units::smallSpacingChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Kirigami::Platform::Units::connect(self,
+                                       static_cast<void (Kirigami::Platform::Units::*)()>(&Kirigami::Platform::Units::smallSpacingChanged),
+                                       [self, slotFunc]() {
+                                           slotFunc(self);
+                                       });
 }
 
 void Kirigami__Platform__Units_MediumSpacingChanged(Kirigami__Platform__Units* self) {
@@ -640,9 +658,11 @@ void Kirigami__Platform__Units_MediumSpacingChanged(Kirigami__Platform__Units* s
 
 void Kirigami__Platform__Units_Connect_MediumSpacingChanged(Kirigami__Platform__Units* self, intptr_t slot) {
     void (*slotFunc)(Kirigami__Platform__Units*) = reinterpret_cast<void (*)(Kirigami__Platform__Units*)>(slot);
-    Kirigami::Platform::Units::connect(self, &Kirigami::Platform::Units::mediumSpacingChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Kirigami::Platform::Units::connect(self,
+                                       static_cast<void (Kirigami::Platform::Units::*)()>(&Kirigami::Platform::Units::mediumSpacingChanged),
+                                       [self, slotFunc]() {
+                                           slotFunc(self);
+                                       });
 }
 
 void Kirigami__Platform__Units_LargeSpacingChanged(Kirigami__Platform__Units* self) {
@@ -651,9 +671,11 @@ void Kirigami__Platform__Units_LargeSpacingChanged(Kirigami__Platform__Units* se
 
 void Kirigami__Platform__Units_Connect_LargeSpacingChanged(Kirigami__Platform__Units* self, intptr_t slot) {
     void (*slotFunc)(Kirigami__Platform__Units*) = reinterpret_cast<void (*)(Kirigami__Platform__Units*)>(slot);
-    Kirigami::Platform::Units::connect(self, &Kirigami::Platform::Units::largeSpacingChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Kirigami::Platform::Units::connect(self,
+                                       static_cast<void (Kirigami::Platform::Units::*)()>(&Kirigami::Platform::Units::largeSpacingChanged),
+                                       [self, slotFunc]() {
+                                           slotFunc(self);
+                                       });
 }
 
 void Kirigami__Platform__Units_VeryLongDurationChanged(Kirigami__Platform__Units* self) {
@@ -662,9 +684,11 @@ void Kirigami__Platform__Units_VeryLongDurationChanged(Kirigami__Platform__Units
 
 void Kirigami__Platform__Units_Connect_VeryLongDurationChanged(Kirigami__Platform__Units* self, intptr_t slot) {
     void (*slotFunc)(Kirigami__Platform__Units*) = reinterpret_cast<void (*)(Kirigami__Platform__Units*)>(slot);
-    Kirigami::Platform::Units::connect(self, &Kirigami::Platform::Units::veryLongDurationChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Kirigami::Platform::Units::connect(self,
+                                       static_cast<void (Kirigami::Platform::Units::*)()>(&Kirigami::Platform::Units::veryLongDurationChanged),
+                                       [self, slotFunc]() {
+                                           slotFunc(self);
+                                       });
 }
 
 void Kirigami__Platform__Units_LongDurationChanged(Kirigami__Platform__Units* self) {
@@ -673,9 +697,11 @@ void Kirigami__Platform__Units_LongDurationChanged(Kirigami__Platform__Units* se
 
 void Kirigami__Platform__Units_Connect_LongDurationChanged(Kirigami__Platform__Units* self, intptr_t slot) {
     void (*slotFunc)(Kirigami__Platform__Units*) = reinterpret_cast<void (*)(Kirigami__Platform__Units*)>(slot);
-    Kirigami::Platform::Units::connect(self, &Kirigami::Platform::Units::longDurationChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Kirigami::Platform::Units::connect(self,
+                                       static_cast<void (Kirigami::Platform::Units::*)()>(&Kirigami::Platform::Units::longDurationChanged),
+                                       [self, slotFunc]() {
+                                           slotFunc(self);
+                                       });
 }
 
 void Kirigami__Platform__Units_ShortDurationChanged(Kirigami__Platform__Units* self) {
@@ -684,9 +710,11 @@ void Kirigami__Platform__Units_ShortDurationChanged(Kirigami__Platform__Units* s
 
 void Kirigami__Platform__Units_Connect_ShortDurationChanged(Kirigami__Platform__Units* self, intptr_t slot) {
     void (*slotFunc)(Kirigami__Platform__Units*) = reinterpret_cast<void (*)(Kirigami__Platform__Units*)>(slot);
-    Kirigami::Platform::Units::connect(self, &Kirigami::Platform::Units::shortDurationChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Kirigami::Platform::Units::connect(self,
+                                       static_cast<void (Kirigami::Platform::Units::*)()>(&Kirigami::Platform::Units::shortDurationChanged),
+                                       [self, slotFunc]() {
+                                           slotFunc(self);
+                                       });
 }
 
 void Kirigami__Platform__Units_VeryShortDurationChanged(Kirigami__Platform__Units* self) {
@@ -695,9 +723,11 @@ void Kirigami__Platform__Units_VeryShortDurationChanged(Kirigami__Platform__Unit
 
 void Kirigami__Platform__Units_Connect_VeryShortDurationChanged(Kirigami__Platform__Units* self, intptr_t slot) {
     void (*slotFunc)(Kirigami__Platform__Units*) = reinterpret_cast<void (*)(Kirigami__Platform__Units*)>(slot);
-    Kirigami::Platform::Units::connect(self, &Kirigami::Platform::Units::veryShortDurationChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Kirigami::Platform::Units::connect(self,
+                                       static_cast<void (Kirigami::Platform::Units::*)()>(&Kirigami::Platform::Units::veryShortDurationChanged),
+                                       [self, slotFunc]() {
+                                           slotFunc(self);
+                                       });
 }
 
 void Kirigami__Platform__Units_HumanMomentChanged(Kirigami__Platform__Units* self) {
@@ -706,9 +736,11 @@ void Kirigami__Platform__Units_HumanMomentChanged(Kirigami__Platform__Units* sel
 
 void Kirigami__Platform__Units_Connect_HumanMomentChanged(Kirigami__Platform__Units* self, intptr_t slot) {
     void (*slotFunc)(Kirigami__Platform__Units*) = reinterpret_cast<void (*)(Kirigami__Platform__Units*)>(slot);
-    Kirigami::Platform::Units::connect(self, &Kirigami::Platform::Units::humanMomentChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Kirigami::Platform::Units::connect(self,
+                                       static_cast<void (Kirigami::Platform::Units::*)()>(&Kirigami::Platform::Units::humanMomentChanged),
+                                       [self, slotFunc]() {
+                                           slotFunc(self);
+                                       });
 }
 
 void Kirigami__Platform__Units_ToolTipDelayChanged(Kirigami__Platform__Units* self) {
@@ -717,9 +749,11 @@ void Kirigami__Platform__Units_ToolTipDelayChanged(Kirigami__Platform__Units* se
 
 void Kirigami__Platform__Units_Connect_ToolTipDelayChanged(Kirigami__Platform__Units* self, intptr_t slot) {
     void (*slotFunc)(Kirigami__Platform__Units*) = reinterpret_cast<void (*)(Kirigami__Platform__Units*)>(slot);
-    Kirigami::Platform::Units::connect(self, &Kirigami::Platform::Units::toolTipDelayChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Kirigami::Platform::Units::connect(self,
+                                       static_cast<void (Kirigami::Platform::Units::*)()>(&Kirigami::Platform::Units::toolTipDelayChanged),
+                                       [self, slotFunc]() {
+                                           slotFunc(self);
+                                       });
 }
 
 void Kirigami__Platform__Units_WheelScrollLinesChanged(Kirigami__Platform__Units* self) {
@@ -728,9 +762,11 @@ void Kirigami__Platform__Units_WheelScrollLinesChanged(Kirigami__Platform__Units
 
 void Kirigami__Platform__Units_Connect_WheelScrollLinesChanged(Kirigami__Platform__Units* self, intptr_t slot) {
     void (*slotFunc)(Kirigami__Platform__Units*) = reinterpret_cast<void (*)(Kirigami__Platform__Units*)>(slot);
-    Kirigami::Platform::Units::connect(self, &Kirigami::Platform::Units::wheelScrollLinesChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Kirigami::Platform::Units::connect(self,
+                                       static_cast<void (Kirigami::Platform::Units::*)()>(&Kirigami::Platform::Units::wheelScrollLinesChanged),
+                                       [self, slotFunc]() {
+                                           slotFunc(self);
+                                       });
 }
 
 void Kirigami__Platform__Units_CornerRadiusChanged(Kirigami__Platform__Units* self) {
@@ -739,9 +775,11 @@ void Kirigami__Platform__Units_CornerRadiusChanged(Kirigami__Platform__Units* se
 
 void Kirigami__Platform__Units_Connect_CornerRadiusChanged(Kirigami__Platform__Units* self, intptr_t slot) {
     void (*slotFunc)(Kirigami__Platform__Units*) = reinterpret_cast<void (*)(Kirigami__Platform__Units*)>(slot);
-    Kirigami::Platform::Units::connect(self, &Kirigami::Platform::Units::cornerRadiusChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Kirigami::Platform::Units::connect(self,
+                                       static_cast<void (Kirigami::Platform::Units::*)()>(&Kirigami::Platform::Units::cornerRadiusChanged),
+                                       [self, slotFunc]() {
+                                           slotFunc(self);
+                                       });
 }
 
 void Kirigami__Platform__Units_Delete(Kirigami__Platform__Units* self) {

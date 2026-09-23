@@ -194,9 +194,11 @@ void QVirtualKeyboardInputContext_PreeditTextChanged(QVirtualKeyboardInputContex
 
 void QVirtualKeyboardInputContext_Connect_PreeditTextChanged(QVirtualKeyboardInputContext* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputContext*) = reinterpret_cast<void (*)(QVirtualKeyboardInputContext*)>(slot);
-    QVirtualKeyboardInputContext::connect(self, &QVirtualKeyboardInputContext::preeditTextChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputContext::connect(self,
+                                          static_cast<void (QVirtualKeyboardInputContext::*)()>(&QVirtualKeyboardInputContext::preeditTextChanged),
+                                          [self, slotFunc]() {
+                                              slotFunc(self);
+                                          });
 }
 
 void QVirtualKeyboardInputContext_InputMethodHintsChanged(QVirtualKeyboardInputContext* self) {
@@ -205,9 +207,11 @@ void QVirtualKeyboardInputContext_InputMethodHintsChanged(QVirtualKeyboardInputC
 
 void QVirtualKeyboardInputContext_Connect_InputMethodHintsChanged(QVirtualKeyboardInputContext* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputContext*) = reinterpret_cast<void (*)(QVirtualKeyboardInputContext*)>(slot);
-    QVirtualKeyboardInputContext::connect(self, &QVirtualKeyboardInputContext::inputMethodHintsChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputContext::connect(self,
+                                          static_cast<void (QVirtualKeyboardInputContext::*)()>(&QVirtualKeyboardInputContext::inputMethodHintsChanged),
+                                          [self, slotFunc]() {
+                                              slotFunc(self);
+                                          });
 }
 
 void QVirtualKeyboardInputContext_SurroundingTextChanged(QVirtualKeyboardInputContext* self) {
@@ -216,9 +220,11 @@ void QVirtualKeyboardInputContext_SurroundingTextChanged(QVirtualKeyboardInputCo
 
 void QVirtualKeyboardInputContext_Connect_SurroundingTextChanged(QVirtualKeyboardInputContext* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputContext*) = reinterpret_cast<void (*)(QVirtualKeyboardInputContext*)>(slot);
-    QVirtualKeyboardInputContext::connect(self, &QVirtualKeyboardInputContext::surroundingTextChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputContext::connect(self,
+                                          static_cast<void (QVirtualKeyboardInputContext::*)()>(&QVirtualKeyboardInputContext::surroundingTextChanged),
+                                          [self, slotFunc]() {
+                                              slotFunc(self);
+                                          });
 }
 
 void QVirtualKeyboardInputContext_SelectedTextChanged(QVirtualKeyboardInputContext* self) {
@@ -227,9 +233,11 @@ void QVirtualKeyboardInputContext_SelectedTextChanged(QVirtualKeyboardInputConte
 
 void QVirtualKeyboardInputContext_Connect_SelectedTextChanged(QVirtualKeyboardInputContext* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputContext*) = reinterpret_cast<void (*)(QVirtualKeyboardInputContext*)>(slot);
-    QVirtualKeyboardInputContext::connect(self, &QVirtualKeyboardInputContext::selectedTextChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputContext::connect(self,
+                                          static_cast<void (QVirtualKeyboardInputContext::*)()>(&QVirtualKeyboardInputContext::selectedTextChanged),
+                                          [self, slotFunc]() {
+                                              slotFunc(self);
+                                          });
 }
 
 void QVirtualKeyboardInputContext_AnchorPositionChanged(QVirtualKeyboardInputContext* self) {
@@ -238,9 +246,11 @@ void QVirtualKeyboardInputContext_AnchorPositionChanged(QVirtualKeyboardInputCon
 
 void QVirtualKeyboardInputContext_Connect_AnchorPositionChanged(QVirtualKeyboardInputContext* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputContext*) = reinterpret_cast<void (*)(QVirtualKeyboardInputContext*)>(slot);
-    QVirtualKeyboardInputContext::connect(self, &QVirtualKeyboardInputContext::anchorPositionChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputContext::connect(self,
+                                          static_cast<void (QVirtualKeyboardInputContext::*)()>(&QVirtualKeyboardInputContext::anchorPositionChanged),
+                                          [self, slotFunc]() {
+                                              slotFunc(self);
+                                          });
 }
 
 void QVirtualKeyboardInputContext_CursorPositionChanged(QVirtualKeyboardInputContext* self) {
@@ -249,9 +259,11 @@ void QVirtualKeyboardInputContext_CursorPositionChanged(QVirtualKeyboardInputCon
 
 void QVirtualKeyboardInputContext_Connect_CursorPositionChanged(QVirtualKeyboardInputContext* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputContext*) = reinterpret_cast<void (*)(QVirtualKeyboardInputContext*)>(slot);
-    QVirtualKeyboardInputContext::connect(self, &QVirtualKeyboardInputContext::cursorPositionChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputContext::connect(self,
+                                          static_cast<void (QVirtualKeyboardInputContext::*)()>(&QVirtualKeyboardInputContext::cursorPositionChanged),
+                                          [self, slotFunc]() {
+                                              slotFunc(self);
+                                          });
 }
 
 void QVirtualKeyboardInputContext_AnchorRectangleChanged(QVirtualKeyboardInputContext* self) {
@@ -260,9 +272,11 @@ void QVirtualKeyboardInputContext_AnchorRectangleChanged(QVirtualKeyboardInputCo
 
 void QVirtualKeyboardInputContext_Connect_AnchorRectangleChanged(QVirtualKeyboardInputContext* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputContext*) = reinterpret_cast<void (*)(QVirtualKeyboardInputContext*)>(slot);
-    QVirtualKeyboardInputContext::connect(self, &QVirtualKeyboardInputContext::anchorRectangleChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputContext::connect(self,
+                                          static_cast<void (QVirtualKeyboardInputContext::*)()>(&QVirtualKeyboardInputContext::anchorRectangleChanged),
+                                          [self, slotFunc]() {
+                                              slotFunc(self);
+                                          });
 }
 
 void QVirtualKeyboardInputContext_CursorRectangleChanged(QVirtualKeyboardInputContext* self) {
@@ -271,9 +285,11 @@ void QVirtualKeyboardInputContext_CursorRectangleChanged(QVirtualKeyboardInputCo
 
 void QVirtualKeyboardInputContext_Connect_CursorRectangleChanged(QVirtualKeyboardInputContext* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputContext*) = reinterpret_cast<void (*)(QVirtualKeyboardInputContext*)>(slot);
-    QVirtualKeyboardInputContext::connect(self, &QVirtualKeyboardInputContext::cursorRectangleChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputContext::connect(self,
+                                          static_cast<void (QVirtualKeyboardInputContext::*)()>(&QVirtualKeyboardInputContext::cursorRectangleChanged),
+                                          [self, slotFunc]() {
+                                              slotFunc(self);
+                                          });
 }
 
 void QVirtualKeyboardInputContext_ShiftActiveChanged(QVirtualKeyboardInputContext* self) {
@@ -282,9 +298,11 @@ void QVirtualKeyboardInputContext_ShiftActiveChanged(QVirtualKeyboardInputContex
 
 void QVirtualKeyboardInputContext_Connect_ShiftActiveChanged(QVirtualKeyboardInputContext* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputContext*) = reinterpret_cast<void (*)(QVirtualKeyboardInputContext*)>(slot);
-    QVirtualKeyboardInputContext::connect(self, &QVirtualKeyboardInputContext::shiftActiveChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputContext::connect(self,
+                                          static_cast<void (QVirtualKeyboardInputContext::*)()>(&QVirtualKeyboardInputContext::shiftActiveChanged),
+                                          [self, slotFunc]() {
+                                              slotFunc(self);
+                                          });
 }
 
 void QVirtualKeyboardInputContext_CapsLockActiveChanged(QVirtualKeyboardInputContext* self) {
@@ -293,9 +311,11 @@ void QVirtualKeyboardInputContext_CapsLockActiveChanged(QVirtualKeyboardInputCon
 
 void QVirtualKeyboardInputContext_Connect_CapsLockActiveChanged(QVirtualKeyboardInputContext* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputContext*) = reinterpret_cast<void (*)(QVirtualKeyboardInputContext*)>(slot);
-    QVirtualKeyboardInputContext::connect(self, &QVirtualKeyboardInputContext::capsLockActiveChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputContext::connect(self,
+                                          static_cast<void (QVirtualKeyboardInputContext::*)()>(&QVirtualKeyboardInputContext::capsLockActiveChanged),
+                                          [self, slotFunc]() {
+                                              slotFunc(self);
+                                          });
 }
 
 void QVirtualKeyboardInputContext_UppercaseChanged(QVirtualKeyboardInputContext* self) {
@@ -304,9 +324,11 @@ void QVirtualKeyboardInputContext_UppercaseChanged(QVirtualKeyboardInputContext*
 
 void QVirtualKeyboardInputContext_Connect_UppercaseChanged(QVirtualKeyboardInputContext* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputContext*) = reinterpret_cast<void (*)(QVirtualKeyboardInputContext*)>(slot);
-    QVirtualKeyboardInputContext::connect(self, &QVirtualKeyboardInputContext::uppercaseChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputContext::connect(self,
+                                          static_cast<void (QVirtualKeyboardInputContext::*)()>(&QVirtualKeyboardInputContext::uppercaseChanged),
+                                          [self, slotFunc]() {
+                                              slotFunc(self);
+                                          });
 }
 
 void QVirtualKeyboardInputContext_AnimatingChanged(QVirtualKeyboardInputContext* self) {
@@ -315,9 +337,11 @@ void QVirtualKeyboardInputContext_AnimatingChanged(QVirtualKeyboardInputContext*
 
 void QVirtualKeyboardInputContext_Connect_AnimatingChanged(QVirtualKeyboardInputContext* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputContext*) = reinterpret_cast<void (*)(QVirtualKeyboardInputContext*)>(slot);
-    QVirtualKeyboardInputContext::connect(self, &QVirtualKeyboardInputContext::animatingChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputContext::connect(self,
+                                          static_cast<void (QVirtualKeyboardInputContext::*)()>(&QVirtualKeyboardInputContext::animatingChanged),
+                                          [self, slotFunc]() {
+                                              slotFunc(self);
+                                          });
 }
 
 void QVirtualKeyboardInputContext_LocaleChanged(QVirtualKeyboardInputContext* self) {
@@ -326,9 +350,11 @@ void QVirtualKeyboardInputContext_LocaleChanged(QVirtualKeyboardInputContext* se
 
 void QVirtualKeyboardInputContext_Connect_LocaleChanged(QVirtualKeyboardInputContext* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputContext*) = reinterpret_cast<void (*)(QVirtualKeyboardInputContext*)>(slot);
-    QVirtualKeyboardInputContext::connect(self, &QVirtualKeyboardInputContext::localeChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputContext::connect(self,
+                                          static_cast<void (QVirtualKeyboardInputContext::*)()>(&QVirtualKeyboardInputContext::localeChanged),
+                                          [self, slotFunc]() {
+                                              slotFunc(self);
+                                          });
 }
 
 void QVirtualKeyboardInputContext_InputItemChanged(QVirtualKeyboardInputContext* self) {
@@ -337,9 +363,11 @@ void QVirtualKeyboardInputContext_InputItemChanged(QVirtualKeyboardInputContext*
 
 void QVirtualKeyboardInputContext_Connect_InputItemChanged(QVirtualKeyboardInputContext* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputContext*) = reinterpret_cast<void (*)(QVirtualKeyboardInputContext*)>(slot);
-    QVirtualKeyboardInputContext::connect(self, &QVirtualKeyboardInputContext::inputItemChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputContext::connect(self,
+                                          static_cast<void (QVirtualKeyboardInputContext::*)()>(&QVirtualKeyboardInputContext::inputItemChanged),
+                                          [self, slotFunc]() {
+                                              slotFunc(self);
+                                          });
 }
 
 void QVirtualKeyboardInputContext_SelectionControlVisibleChanged(QVirtualKeyboardInputContext* self) {
@@ -348,9 +376,11 @@ void QVirtualKeyboardInputContext_SelectionControlVisibleChanged(QVirtualKeyboar
 
 void QVirtualKeyboardInputContext_Connect_SelectionControlVisibleChanged(QVirtualKeyboardInputContext* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputContext*) = reinterpret_cast<void (*)(QVirtualKeyboardInputContext*)>(slot);
-    QVirtualKeyboardInputContext::connect(self, &QVirtualKeyboardInputContext::selectionControlVisibleChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputContext::connect(self,
+                                          static_cast<void (QVirtualKeyboardInputContext::*)()>(&QVirtualKeyboardInputContext::selectionControlVisibleChanged),
+                                          [self, slotFunc]() {
+                                              slotFunc(self);
+                                          });
 }
 
 void QVirtualKeyboardInputContext_AnchorRectIntersectsClipRectChanged(QVirtualKeyboardInputContext* self) {
@@ -359,9 +389,11 @@ void QVirtualKeyboardInputContext_AnchorRectIntersectsClipRectChanged(QVirtualKe
 
 void QVirtualKeyboardInputContext_Connect_AnchorRectIntersectsClipRectChanged(QVirtualKeyboardInputContext* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputContext*) = reinterpret_cast<void (*)(QVirtualKeyboardInputContext*)>(slot);
-    QVirtualKeyboardInputContext::connect(self, &QVirtualKeyboardInputContext::anchorRectIntersectsClipRectChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputContext::connect(self,
+                                          static_cast<void (QVirtualKeyboardInputContext::*)()>(&QVirtualKeyboardInputContext::anchorRectIntersectsClipRectChanged),
+                                          [self, slotFunc]() {
+                                              slotFunc(self);
+                                          });
 }
 
 void QVirtualKeyboardInputContext_CursorRectIntersectsClipRectChanged(QVirtualKeyboardInputContext* self) {
@@ -370,9 +402,11 @@ void QVirtualKeyboardInputContext_CursorRectIntersectsClipRectChanged(QVirtualKe
 
 void QVirtualKeyboardInputContext_Connect_CursorRectIntersectsClipRectChanged(QVirtualKeyboardInputContext* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputContext*) = reinterpret_cast<void (*)(QVirtualKeyboardInputContext*)>(slot);
-    QVirtualKeyboardInputContext::connect(self, &QVirtualKeyboardInputContext::cursorRectIntersectsClipRectChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputContext::connect(self,
+                                          static_cast<void (QVirtualKeyboardInputContext::*)()>(&QVirtualKeyboardInputContext::cursorRectIntersectsClipRectChanged),
+                                          [self, slotFunc]() {
+                                              slotFunc(self);
+                                          });
 }
 
 void QVirtualKeyboardInputContext_SetPreeditText2(QVirtualKeyboardInputContext* self, const libqt_string text, libqt_list /* of QInputMethodEvent__Attribute* */ attributes) {

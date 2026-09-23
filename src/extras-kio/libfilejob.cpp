@@ -58,17 +58,19 @@ void KIO__FileJob_Data(KIO__FileJob* self, KIO__Job* job, const libqt_string dat
 
 void KIO__FileJob_Connect_Data(KIO__FileJob* self, intptr_t slot) {
     void (*slotFunc)(KIO__FileJob*, KIO__Job*, libqt_string) = reinterpret_cast<void (*)(KIO__FileJob*, KIO__Job*, libqt_string)>(slot);
-    KIO::FileJob::connect(self, &KIO::FileJob::data, [self, slotFunc](KIO::Job* job, const QByteArray& data) {
-        KIO__Job* sigval1 = job;
-        const QByteArray data_qb = data;
-        libqt_string data_str;
-        data_str.len = data_qb.length();
-        data_str.data = static_cast<char*>(malloc(data_str.len));
-        memcpy((void*)data_str.data, data_qb.data(), data_str.len);
-        libqt_string sigval2 = data_str;
-        slotFunc(self, sigval1, sigval2);
-        libqt_free(data_str.data);
-    });
+    KIO::FileJob::connect(self,
+                          static_cast<void (KIO::FileJob::*)(KIO::Job*, const QByteArray&)>(&KIO::FileJob::data),
+                          [self, slotFunc](KIO::Job* job, const QByteArray& data) {
+                              KIO__Job* sigval1 = job;
+                              const QByteArray data_qb = data;
+                              libqt_string data_str;
+                              data_str.len = data_qb.length();
+                              data_str.data = static_cast<char*>(malloc(data_str.len));
+                              memcpy((void*)data_str.data, data_qb.data(), data_str.len);
+                              libqt_string sigval2 = data_str;
+                              slotFunc(self, sigval1, sigval2);
+                              libqt_free(data_str.data);
+                          });
 }
 
 void KIO__FileJob_Redirection(KIO__FileJob* self, KIO__Job* job, const QUrl* url) {
@@ -77,13 +79,15 @@ void KIO__FileJob_Redirection(KIO__FileJob* self, KIO__Job* job, const QUrl* url
 
 void KIO__FileJob_Connect_Redirection(KIO__FileJob* self, intptr_t slot) {
     void (*slotFunc)(KIO__FileJob*, KIO__Job*, QUrl*) = reinterpret_cast<void (*)(KIO__FileJob*, KIO__Job*, QUrl*)>(slot);
-    KIO::FileJob::connect(self, &KIO::FileJob::redirection, [self, slotFunc](KIO::Job* job, const QUrl& url) {
-        KIO__Job* sigval1 = job;
-        const QUrl& url_ret = url;
-        // Cast returned reference into pointer
-        QUrl* sigval2 = const_cast<QUrl*>(&url_ret);
-        slotFunc(self, sigval1, sigval2);
-    });
+    KIO::FileJob::connect(self,
+                          static_cast<void (KIO::FileJob::*)(KIO::Job*, const QUrl&)>(&KIO::FileJob::redirection),
+                          [self, slotFunc](KIO::Job* job, const QUrl& url) {
+                              KIO__Job* sigval1 = job;
+                              const QUrl& url_ret = url;
+                              // Cast returned reference into pointer
+                              QUrl* sigval2 = const_cast<QUrl*>(&url_ret);
+                              slotFunc(self, sigval1, sigval2);
+                          });
 }
 
 void KIO__FileJob_MimeTypeFound(KIO__FileJob* self, KIO__Job* job, const libqt_string mimeType) {
@@ -93,19 +97,21 @@ void KIO__FileJob_MimeTypeFound(KIO__FileJob* self, KIO__Job* job, const libqt_s
 
 void KIO__FileJob_Connect_MimeTypeFound(KIO__FileJob* self, intptr_t slot) {
     void (*slotFunc)(KIO__FileJob*, KIO__Job*, const char*) = reinterpret_cast<void (*)(KIO__FileJob*, KIO__Job*, const char*)>(slot);
-    KIO::FileJob::connect(self, &KIO::FileJob::mimeTypeFound, [self, slotFunc](KIO::Job* job, const QString& mimeType) {
-        KIO__Job* sigval1 = job;
-        const auto mimeType_ret = mimeType;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray mimeType_b = mimeType_ret.toUtf8();
-        auto mimeType_str_len = mimeType_b.length();
-        char* mimeType_str = static_cast<char*>(malloc(mimeType_str_len + 1));
-        memcpy(mimeType_str, mimeType_b.data(), mimeType_str_len);
-        mimeType_str[mimeType_str_len] = '\0';
-        const char* sigval2 = mimeType_str;
-        slotFunc(self, sigval1, sigval2);
-        libqt_free(mimeType_str);
-    });
+    KIO::FileJob::connect(self,
+                          static_cast<void (KIO::FileJob::*)(KIO::Job*, const QString&)>(&KIO::FileJob::mimeTypeFound),
+                          [self, slotFunc](KIO::Job* job, const QString& mimeType) {
+                              KIO__Job* sigval1 = job;
+                              const auto mimeType_ret = mimeType;
+                              // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                              QByteArray mimeType_b = mimeType_ret.toUtf8();
+                              auto mimeType_str_len = mimeType_b.length();
+                              char* mimeType_str = static_cast<char*>(malloc(mimeType_str_len + 1));
+                              memcpy(mimeType_str, mimeType_b.data(), mimeType_str_len);
+                              mimeType_str[mimeType_str_len] = '\0';
+                              const char* sigval2 = mimeType_str;
+                              slotFunc(self, sigval1, sigval2);
+                              libqt_free(mimeType_str);
+                          });
 }
 
 void KIO__FileJob_Open(KIO__FileJob* self, KIO__Job* job) {
@@ -114,10 +120,12 @@ void KIO__FileJob_Open(KIO__FileJob* self, KIO__Job* job) {
 
 void KIO__FileJob_Connect_Open(KIO__FileJob* self, intptr_t slot) {
     void (*slotFunc)(KIO__FileJob*, KIO__Job*) = reinterpret_cast<void (*)(KIO__FileJob*, KIO__Job*)>(slot);
-    KIO::FileJob::connect(self, &KIO::FileJob::open, [self, slotFunc](KIO::Job* job) {
-        KIO__Job* sigval1 = job;
-        slotFunc(self, sigval1);
-    });
+    KIO::FileJob::connect(self,
+                          static_cast<void (KIO::FileJob::*)(KIO::Job*)>(&KIO::FileJob::open),
+                          [self, slotFunc](KIO::Job* job) {
+                              KIO__Job* sigval1 = job;
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void KIO__FileJob_Written(KIO__FileJob* self, KIO__Job* job, unsigned long long written) {
@@ -126,11 +134,13 @@ void KIO__FileJob_Written(KIO__FileJob* self, KIO__Job* job, unsigned long long 
 
 void KIO__FileJob_Connect_Written(KIO__FileJob* self, intptr_t slot) {
     void (*slotFunc)(KIO__FileJob*, KIO__Job*, unsigned long long) = reinterpret_cast<void (*)(KIO__FileJob*, KIO__Job*, unsigned long long)>(slot);
-    KIO::FileJob::connect(self, &KIO::FileJob::written, [self, slotFunc](KIO::Job* job, KIO::filesize_t written) {
-        KIO__Job* sigval1 = job;
-        unsigned long long sigval2 = static_cast<unsigned long long>(written);
-        slotFunc(self, sigval1, sigval2);
-    });
+    KIO::FileJob::connect(self,
+                          static_cast<void (KIO::FileJob::*)(KIO::Job*, KIO::filesize_t)>(&KIO::FileJob::written),
+                          [self, slotFunc](KIO::Job* job, KIO::filesize_t written) {
+                              KIO__Job* sigval1 = job;
+                              unsigned long long sigval2 = static_cast<unsigned long long>(written);
+                              slotFunc(self, sigval1, sigval2);
+                          });
 }
 
 void KIO__FileJob_FileClosed(KIO__FileJob* self, KIO__Job* job) {
@@ -139,10 +149,12 @@ void KIO__FileJob_FileClosed(KIO__FileJob* self, KIO__Job* job) {
 
 void KIO__FileJob_Connect_FileClosed(KIO__FileJob* self, intptr_t slot) {
     void (*slotFunc)(KIO__FileJob*, KIO__Job*) = reinterpret_cast<void (*)(KIO__FileJob*, KIO__Job*)>(slot);
-    KIO::FileJob::connect(self, &KIO::FileJob::fileClosed, [self, slotFunc](KIO::Job* job) {
-        KIO__Job* sigval1 = job;
-        slotFunc(self, sigval1);
-    });
+    KIO::FileJob::connect(self,
+                          static_cast<void (KIO::FileJob::*)(KIO::Job*)>(&KIO::FileJob::fileClosed),
+                          [self, slotFunc](KIO::Job* job) {
+                              KIO__Job* sigval1 = job;
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void KIO__FileJob_Position(KIO__FileJob* self, KIO__Job* job, unsigned long long offset) {
@@ -151,11 +163,13 @@ void KIO__FileJob_Position(KIO__FileJob* self, KIO__Job* job, unsigned long long
 
 void KIO__FileJob_Connect_Position(KIO__FileJob* self, intptr_t slot) {
     void (*slotFunc)(KIO__FileJob*, KIO__Job*, unsigned long long) = reinterpret_cast<void (*)(KIO__FileJob*, KIO__Job*, unsigned long long)>(slot);
-    KIO::FileJob::connect(self, &KIO::FileJob::position, [self, slotFunc](KIO::Job* job, KIO::filesize_t offset) {
-        KIO__Job* sigval1 = job;
-        unsigned long long sigval2 = static_cast<unsigned long long>(offset);
-        slotFunc(self, sigval1, sigval2);
-    });
+    KIO::FileJob::connect(self,
+                          static_cast<void (KIO::FileJob::*)(KIO::Job*, KIO::filesize_t)>(&KIO::FileJob::position),
+                          [self, slotFunc](KIO::Job* job, KIO::filesize_t offset) {
+                              KIO__Job* sigval1 = job;
+                              unsigned long long sigval2 = static_cast<unsigned long long>(offset);
+                              slotFunc(self, sigval1, sigval2);
+                          });
 }
 
 void KIO__FileJob_Truncated(KIO__FileJob* self, KIO__Job* job, unsigned long long length) {
@@ -164,11 +178,13 @@ void KIO__FileJob_Truncated(KIO__FileJob* self, KIO__Job* job, unsigned long lon
 
 void KIO__FileJob_Connect_Truncated(KIO__FileJob* self, intptr_t slot) {
     void (*slotFunc)(KIO__FileJob*, KIO__Job*, unsigned long long) = reinterpret_cast<void (*)(KIO__FileJob*, KIO__Job*, unsigned long long)>(slot);
-    KIO::FileJob::connect(self, &KIO::FileJob::truncated, [self, slotFunc](KIO::Job* job, KIO::filesize_t length) {
-        KIO__Job* sigval1 = job;
-        unsigned long long sigval2 = static_cast<unsigned long long>(length);
-        slotFunc(self, sigval1, sigval2);
-    });
+    KIO::FileJob::connect(self,
+                          static_cast<void (KIO::FileJob::*)(KIO::Job*, KIO::filesize_t)>(&KIO::FileJob::truncated),
+                          [self, slotFunc](KIO::Job* job, KIO::filesize_t length) {
+                              KIO__Job* sigval1 = job;
+                              unsigned long long sigval2 = static_cast<unsigned long long>(length);
+                              slotFunc(self, sigval1, sigval2);
+                          });
 }
 
 void KIO__FileJob_Delete(KIO__FileJob* self) {

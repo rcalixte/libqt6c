@@ -883,9 +883,11 @@ void QDesignerWidgetDataBaseInterface_Changed(QDesignerWidgetDataBaseInterface* 
 
 void QDesignerWidgetDataBaseInterface_Connect_Changed(QDesignerWidgetDataBaseInterface* self, intptr_t slot) {
     void (*slotFunc)(QDesignerWidgetDataBaseInterface*) = reinterpret_cast<void (*)(QDesignerWidgetDataBaseInterface*)>(slot);
-    QDesignerWidgetDataBaseInterface::connect(self, &QDesignerWidgetDataBaseInterface::changed, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QDesignerWidgetDataBaseInterface::connect(self,
+                                              static_cast<void (QDesignerWidgetDataBaseInterface::*)()>(&QDesignerWidgetDataBaseInterface::changed),
+                                              [self, slotFunc]() {
+                                                  slotFunc(self);
+                                              });
 }
 
 bool QDesignerWidgetDataBaseInterface_IsContainer2(const QDesignerWidgetDataBaseInterface* self, QObject* object, bool resolveName) {

@@ -42,18 +42,20 @@ void KSyntaxHighlighting__DefinitionDownloader_InformationMessage(KSyntaxHighlig
 
 void KSyntaxHighlighting__DefinitionDownloader_Connect_InformationMessage(KSyntaxHighlighting__DefinitionDownloader* self, intptr_t slot) {
     void (*slotFunc)(KSyntaxHighlighting__DefinitionDownloader*, const char*) = reinterpret_cast<void (*)(KSyntaxHighlighting__DefinitionDownloader*, const char*)>(slot);
-    KSyntaxHighlighting::DefinitionDownloader::connect(self, &KSyntaxHighlighting::DefinitionDownloader::informationMessage, [self, slotFunc](const QString& msg) {
-        const auto msg_ret = msg;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray msg_b = msg_ret.toUtf8();
-        auto msg_str_len = msg_b.length();
-        char* msg_str = static_cast<char*>(malloc(msg_str_len + 1));
-        memcpy(msg_str, msg_b.data(), msg_str_len);
-        msg_str[msg_str_len] = '\0';
-        const char* sigval1 = msg_str;
-        slotFunc(self, sigval1);
-        libqt_free(msg_str);
-    });
+    KSyntaxHighlighting::DefinitionDownloader::connect(self,
+                                                       static_cast<void (KSyntaxHighlighting::DefinitionDownloader::*)(const QString&)>(&KSyntaxHighlighting::DefinitionDownloader::informationMessage),
+                                                       [self, slotFunc](const QString& msg) {
+                                                           const auto msg_ret = msg;
+                                                           // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                                           QByteArray msg_b = msg_ret.toUtf8();
+                                                           auto msg_str_len = msg_b.length();
+                                                           char* msg_str = static_cast<char*>(malloc(msg_str_len + 1));
+                                                           memcpy(msg_str, msg_b.data(), msg_str_len);
+                                                           msg_str[msg_str_len] = '\0';
+                                                           const char* sigval1 = msg_str;
+                                                           slotFunc(self, sigval1);
+                                                           libqt_free(msg_str);
+                                                       });
 }
 
 void KSyntaxHighlighting__DefinitionDownloader_Done(KSyntaxHighlighting__DefinitionDownloader* self) {
@@ -62,9 +64,11 @@ void KSyntaxHighlighting__DefinitionDownloader_Done(KSyntaxHighlighting__Definit
 
 void KSyntaxHighlighting__DefinitionDownloader_Connect_Done(KSyntaxHighlighting__DefinitionDownloader* self, intptr_t slot) {
     void (*slotFunc)(KSyntaxHighlighting__DefinitionDownloader*) = reinterpret_cast<void (*)(KSyntaxHighlighting__DefinitionDownloader*)>(slot);
-    KSyntaxHighlighting::DefinitionDownloader::connect(self, &KSyntaxHighlighting::DefinitionDownloader::done, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KSyntaxHighlighting::DefinitionDownloader::connect(self,
+                                                       static_cast<void (KSyntaxHighlighting::DefinitionDownloader::*)()>(&KSyntaxHighlighting::DefinitionDownloader::done),
+                                                       [self, slotFunc]() {
+                                                           slotFunc(self);
+                                                       });
 }
 
 // Base class handler implementation

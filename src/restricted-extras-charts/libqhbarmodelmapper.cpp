@@ -87,9 +87,11 @@ void QHBarModelMapper_SeriesReplaced(QHBarModelMapper* self) {
 
 void QHBarModelMapper_Connect_SeriesReplaced(QHBarModelMapper* self, intptr_t slot) {
     void (*slotFunc)(QHBarModelMapper*) = reinterpret_cast<void (*)(QHBarModelMapper*)>(slot);
-    QHBarModelMapper::connect(self, &QHBarModelMapper::seriesReplaced, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QHBarModelMapper::connect(self,
+                              static_cast<void (QHBarModelMapper::*)()>(&QHBarModelMapper::seriesReplaced),
+                              [self, slotFunc]() {
+                                  slotFunc(self);
+                              });
 }
 
 void QHBarModelMapper_ModelReplaced(QHBarModelMapper* self) {
@@ -98,9 +100,11 @@ void QHBarModelMapper_ModelReplaced(QHBarModelMapper* self) {
 
 void QHBarModelMapper_Connect_ModelReplaced(QHBarModelMapper* self, intptr_t slot) {
     void (*slotFunc)(QHBarModelMapper*) = reinterpret_cast<void (*)(QHBarModelMapper*)>(slot);
-    QHBarModelMapper::connect(self, &QHBarModelMapper::modelReplaced, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QHBarModelMapper::connect(self,
+                              static_cast<void (QHBarModelMapper::*)()>(&QHBarModelMapper::modelReplaced),
+                              [self, slotFunc]() {
+                                  slotFunc(self);
+                              });
 }
 
 void QHBarModelMapper_FirstBarSetRowChanged(QHBarModelMapper* self) {
@@ -109,9 +113,11 @@ void QHBarModelMapper_FirstBarSetRowChanged(QHBarModelMapper* self) {
 
 void QHBarModelMapper_Connect_FirstBarSetRowChanged(QHBarModelMapper* self, intptr_t slot) {
     void (*slotFunc)(QHBarModelMapper*) = reinterpret_cast<void (*)(QHBarModelMapper*)>(slot);
-    QHBarModelMapper::connect(self, &QHBarModelMapper::firstBarSetRowChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QHBarModelMapper::connect(self,
+                              static_cast<void (QHBarModelMapper::*)()>(&QHBarModelMapper::firstBarSetRowChanged),
+                              [self, slotFunc]() {
+                                  slotFunc(self);
+                              });
 }
 
 void QHBarModelMapper_LastBarSetRowChanged(QHBarModelMapper* self) {
@@ -120,9 +126,11 @@ void QHBarModelMapper_LastBarSetRowChanged(QHBarModelMapper* self) {
 
 void QHBarModelMapper_Connect_LastBarSetRowChanged(QHBarModelMapper* self, intptr_t slot) {
     void (*slotFunc)(QHBarModelMapper*) = reinterpret_cast<void (*)(QHBarModelMapper*)>(slot);
-    QHBarModelMapper::connect(self, &QHBarModelMapper::lastBarSetRowChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QHBarModelMapper::connect(self,
+                              static_cast<void (QHBarModelMapper::*)()>(&QHBarModelMapper::lastBarSetRowChanged),
+                              [self, slotFunc]() {
+                                  slotFunc(self);
+                              });
 }
 
 void QHBarModelMapper_FirstColumnChanged(QHBarModelMapper* self) {
@@ -131,9 +139,11 @@ void QHBarModelMapper_FirstColumnChanged(QHBarModelMapper* self) {
 
 void QHBarModelMapper_Connect_FirstColumnChanged(QHBarModelMapper* self, intptr_t slot) {
     void (*slotFunc)(QHBarModelMapper*) = reinterpret_cast<void (*)(QHBarModelMapper*)>(slot);
-    QHBarModelMapper::connect(self, &QHBarModelMapper::firstColumnChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QHBarModelMapper::connect(self,
+                              static_cast<void (QHBarModelMapper::*)()>(&QHBarModelMapper::firstColumnChanged),
+                              [self, slotFunc]() {
+                                  slotFunc(self);
+                              });
 }
 
 void QHBarModelMapper_ColumnCountChanged(QHBarModelMapper* self) {
@@ -142,9 +152,11 @@ void QHBarModelMapper_ColumnCountChanged(QHBarModelMapper* self) {
 
 void QHBarModelMapper_Connect_ColumnCountChanged(QHBarModelMapper* self, intptr_t slot) {
     void (*slotFunc)(QHBarModelMapper*) = reinterpret_cast<void (*)(QHBarModelMapper*)>(slot);
-    QHBarModelMapper::connect(self, &QHBarModelMapper::columnCountChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QHBarModelMapper::connect(self,
+                              static_cast<void (QHBarModelMapper::*)()>(&QHBarModelMapper::columnCountChanged),
+                              [self, slotFunc]() {
+                                  slotFunc(self);
+                              });
 }
 
 // Base class handler implementation

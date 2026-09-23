@@ -155,9 +155,11 @@ void QImageCapture_ErrorChanged(QImageCapture* self) {
 
 void QImageCapture_Connect_ErrorChanged(QImageCapture* self, intptr_t slot) {
     void (*slotFunc)(QImageCapture*) = reinterpret_cast<void (*)(QImageCapture*)>(slot);
-    QImageCapture::connect(self, &QImageCapture::errorChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QImageCapture::connect(self,
+                           static_cast<void (QImageCapture::*)()>(&QImageCapture::errorChanged),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QImageCapture_ErrorOccurred(QImageCapture* self, int id, int error, const libqt_string errorString) {
@@ -167,20 +169,22 @@ void QImageCapture_ErrorOccurred(QImageCapture* self, int id, int error, const l
 
 void QImageCapture_Connect_ErrorOccurred(QImageCapture* self, intptr_t slot) {
     void (*slotFunc)(QImageCapture*, int, int, const char*) = reinterpret_cast<void (*)(QImageCapture*, int, int, const char*)>(slot);
-    QImageCapture::connect(self, &QImageCapture::errorOccurred, [self, slotFunc](int id, QImageCapture::Error error, const QString& errorString) {
-        int sigval1 = id;
-        int sigval2 = static_cast<int>(error);
-        const auto errorString_ret = errorString;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray errorString_b = errorString_ret.toUtf8();
-        auto errorString_str_len = errorString_b.length();
-        char* errorString_str = static_cast<char*>(malloc(errorString_str_len + 1));
-        memcpy(errorString_str, errorString_b.data(), errorString_str_len);
-        errorString_str[errorString_str_len] = '\0';
-        const char* sigval3 = errorString_str;
-        slotFunc(self, sigval1, sigval2, sigval3);
-        libqt_free(errorString_str);
-    });
+    QImageCapture::connect(self,
+                           static_cast<void (QImageCapture::*)(int, QImageCapture::Error, const QString&)>(&QImageCapture::errorOccurred),
+                           [self, slotFunc](int id, QImageCapture::Error error, const QString& errorString) {
+                               int sigval1 = id;
+                               int sigval2 = static_cast<int>(error);
+                               const auto errorString_ret = errorString;
+                               // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                               QByteArray errorString_b = errorString_ret.toUtf8();
+                               auto errorString_str_len = errorString_b.length();
+                               char* errorString_str = static_cast<char*>(malloc(errorString_str_len + 1));
+                               memcpy(errorString_str, errorString_b.data(), errorString_str_len);
+                               errorString_str[errorString_str_len] = '\0';
+                               const char* sigval3 = errorString_str;
+                               slotFunc(self, sigval1, sigval2, sigval3);
+                               libqt_free(errorString_str);
+                           });
 }
 
 void QImageCapture_ReadyForCaptureChanged(QImageCapture* self, bool ready) {
@@ -189,10 +193,12 @@ void QImageCapture_ReadyForCaptureChanged(QImageCapture* self, bool ready) {
 
 void QImageCapture_Connect_ReadyForCaptureChanged(QImageCapture* self, intptr_t slot) {
     void (*slotFunc)(QImageCapture*, bool) = reinterpret_cast<void (*)(QImageCapture*, bool)>(slot);
-    QImageCapture::connect(self, &QImageCapture::readyForCaptureChanged, [self, slotFunc](bool ready) {
-        bool sigval1 = ready;
-        slotFunc(self, sigval1);
-    });
+    QImageCapture::connect(self,
+                           static_cast<void (QImageCapture::*)(bool)>(&QImageCapture::readyForCaptureChanged),
+                           [self, slotFunc](bool ready) {
+                               bool sigval1 = ready;
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QImageCapture_MetaDataChanged(QImageCapture* self) {
@@ -201,9 +207,11 @@ void QImageCapture_MetaDataChanged(QImageCapture* self) {
 
 void QImageCapture_Connect_MetaDataChanged(QImageCapture* self, intptr_t slot) {
     void (*slotFunc)(QImageCapture*) = reinterpret_cast<void (*)(QImageCapture*)>(slot);
-    QImageCapture::connect(self, &QImageCapture::metaDataChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QImageCapture::connect(self,
+                           static_cast<void (QImageCapture::*)()>(&QImageCapture::metaDataChanged),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QImageCapture_FileFormatChanged(QImageCapture* self) {
@@ -212,9 +220,11 @@ void QImageCapture_FileFormatChanged(QImageCapture* self) {
 
 void QImageCapture_Connect_FileFormatChanged(QImageCapture* self, intptr_t slot) {
     void (*slotFunc)(QImageCapture*) = reinterpret_cast<void (*)(QImageCapture*)>(slot);
-    QImageCapture::connect(self, &QImageCapture::fileFormatChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QImageCapture::connect(self,
+                           static_cast<void (QImageCapture::*)()>(&QImageCapture::fileFormatChanged),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QImageCapture_QualityChanged(QImageCapture* self) {
@@ -223,9 +233,11 @@ void QImageCapture_QualityChanged(QImageCapture* self) {
 
 void QImageCapture_Connect_QualityChanged(QImageCapture* self, intptr_t slot) {
     void (*slotFunc)(QImageCapture*) = reinterpret_cast<void (*)(QImageCapture*)>(slot);
-    QImageCapture::connect(self, &QImageCapture::qualityChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QImageCapture::connect(self,
+                           static_cast<void (QImageCapture::*)()>(&QImageCapture::qualityChanged),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QImageCapture_ResolutionChanged(QImageCapture* self) {
@@ -234,9 +246,11 @@ void QImageCapture_ResolutionChanged(QImageCapture* self) {
 
 void QImageCapture_Connect_ResolutionChanged(QImageCapture* self, intptr_t slot) {
     void (*slotFunc)(QImageCapture*) = reinterpret_cast<void (*)(QImageCapture*)>(slot);
-    QImageCapture::connect(self, &QImageCapture::resolutionChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QImageCapture::connect(self,
+                           static_cast<void (QImageCapture::*)()>(&QImageCapture::resolutionChanged),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QImageCapture_ImageExposed(QImageCapture* self, int id) {
@@ -245,10 +259,12 @@ void QImageCapture_ImageExposed(QImageCapture* self, int id) {
 
 void QImageCapture_Connect_ImageExposed(QImageCapture* self, intptr_t slot) {
     void (*slotFunc)(QImageCapture*, int) = reinterpret_cast<void (*)(QImageCapture*, int)>(slot);
-    QImageCapture::connect(self, &QImageCapture::imageExposed, [self, slotFunc](int id) {
-        int sigval1 = id;
-        slotFunc(self, sigval1);
-    });
+    QImageCapture::connect(self,
+                           static_cast<void (QImageCapture::*)(int)>(&QImageCapture::imageExposed),
+                           [self, slotFunc](int id) {
+                               int sigval1 = id;
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QImageCapture_ImageCaptured(QImageCapture* self, int id, const QImage* preview) {
@@ -257,13 +273,15 @@ void QImageCapture_ImageCaptured(QImageCapture* self, int id, const QImage* prev
 
 void QImageCapture_Connect_ImageCaptured(QImageCapture* self, intptr_t slot) {
     void (*slotFunc)(QImageCapture*, int, QImage*) = reinterpret_cast<void (*)(QImageCapture*, int, QImage*)>(slot);
-    QImageCapture::connect(self, &QImageCapture::imageCaptured, [self, slotFunc](int id, const QImage& preview) {
-        int sigval1 = id;
-        const QImage& preview_ret = preview;
-        // Cast returned reference into pointer
-        QImage* sigval2 = const_cast<QImage*>(&preview_ret);
-        slotFunc(self, sigval1, sigval2);
-    });
+    QImageCapture::connect(self,
+                           static_cast<void (QImageCapture::*)(int, const QImage&)>(&QImageCapture::imageCaptured),
+                           [self, slotFunc](int id, const QImage& preview) {
+                               int sigval1 = id;
+                               const QImage& preview_ret = preview;
+                               // Cast returned reference into pointer
+                               QImage* sigval2 = const_cast<QImage*>(&preview_ret);
+                               slotFunc(self, sigval1, sigval2);
+                           });
 }
 
 void QImageCapture_ImageMetadataAvailable(QImageCapture* self, int id, const QMediaMetaData* metaData) {
@@ -272,13 +290,15 @@ void QImageCapture_ImageMetadataAvailable(QImageCapture* self, int id, const QMe
 
 void QImageCapture_Connect_ImageMetadataAvailable(QImageCapture* self, intptr_t slot) {
     void (*slotFunc)(QImageCapture*, int, QMediaMetaData*) = reinterpret_cast<void (*)(QImageCapture*, int, QMediaMetaData*)>(slot);
-    QImageCapture::connect(self, &QImageCapture::imageMetadataAvailable, [self, slotFunc](int id, const QMediaMetaData& metaData) {
-        int sigval1 = id;
-        const QMediaMetaData& metaData_ret = metaData;
-        // Cast returned reference into pointer
-        QMediaMetaData* sigval2 = const_cast<QMediaMetaData*>(&metaData_ret);
-        slotFunc(self, sigval1, sigval2);
-    });
+    QImageCapture::connect(self,
+                           static_cast<void (QImageCapture::*)(int, const QMediaMetaData&)>(&QImageCapture::imageMetadataAvailable),
+                           [self, slotFunc](int id, const QMediaMetaData& metaData) {
+                               int sigval1 = id;
+                               const QMediaMetaData& metaData_ret = metaData;
+                               // Cast returned reference into pointer
+                               QMediaMetaData* sigval2 = const_cast<QMediaMetaData*>(&metaData_ret);
+                               slotFunc(self, sigval1, sigval2);
+                           });
 }
 
 void QImageCapture_ImageAvailable(QImageCapture* self, int id, const QVideoFrame* frame) {
@@ -287,13 +307,15 @@ void QImageCapture_ImageAvailable(QImageCapture* self, int id, const QVideoFrame
 
 void QImageCapture_Connect_ImageAvailable(QImageCapture* self, intptr_t slot) {
     void (*slotFunc)(QImageCapture*, int, QVideoFrame*) = reinterpret_cast<void (*)(QImageCapture*, int, QVideoFrame*)>(slot);
-    QImageCapture::connect(self, &QImageCapture::imageAvailable, [self, slotFunc](int id, const QVideoFrame& frame) {
-        int sigval1 = id;
-        const QVideoFrame& frame_ret = frame;
-        // Cast returned reference into pointer
-        QVideoFrame* sigval2 = const_cast<QVideoFrame*>(&frame_ret);
-        slotFunc(self, sigval1, sigval2);
-    });
+    QImageCapture::connect(self,
+                           static_cast<void (QImageCapture::*)(int, const QVideoFrame&)>(&QImageCapture::imageAvailable),
+                           [self, slotFunc](int id, const QVideoFrame& frame) {
+                               int sigval1 = id;
+                               const QVideoFrame& frame_ret = frame;
+                               // Cast returned reference into pointer
+                               QVideoFrame* sigval2 = const_cast<QVideoFrame*>(&frame_ret);
+                               slotFunc(self, sigval1, sigval2);
+                           });
 }
 
 void QImageCapture_ImageSaved(QImageCapture* self, int id, const libqt_string fileName) {
@@ -303,19 +325,21 @@ void QImageCapture_ImageSaved(QImageCapture* self, int id, const libqt_string fi
 
 void QImageCapture_Connect_ImageSaved(QImageCapture* self, intptr_t slot) {
     void (*slotFunc)(QImageCapture*, int, const char*) = reinterpret_cast<void (*)(QImageCapture*, int, const char*)>(slot);
-    QImageCapture::connect(self, &QImageCapture::imageSaved, [self, slotFunc](int id, const QString& fileName) {
-        int sigval1 = id;
-        const auto fileName_ret = fileName;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray fileName_b = fileName_ret.toUtf8();
-        auto fileName_str_len = fileName_b.length();
-        char* fileName_str = static_cast<char*>(malloc(fileName_str_len + 1));
-        memcpy(fileName_str, fileName_b.data(), fileName_str_len);
-        fileName_str[fileName_str_len] = '\0';
-        const char* sigval2 = fileName_str;
-        slotFunc(self, sigval1, sigval2);
-        libqt_free(fileName_str);
-    });
+    QImageCapture::connect(self,
+                           static_cast<void (QImageCapture::*)(int, const QString&)>(&QImageCapture::imageSaved),
+                           [self, slotFunc](int id, const QString& fileName) {
+                               int sigval1 = id;
+                               const auto fileName_ret = fileName;
+                               // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                               QByteArray fileName_b = fileName_ret.toUtf8();
+                               auto fileName_str_len = fileName_b.length();
+                               char* fileName_str = static_cast<char*>(malloc(fileName_str_len + 1));
+                               memcpy(fileName_str, fileName_b.data(), fileName_str_len);
+                               fileName_str[fileName_str_len] = '\0';
+                               const char* sigval2 = fileName_str;
+                               slotFunc(self, sigval1, sigval2);
+                               libqt_free(fileName_str);
+                           });
 }
 
 int QImageCapture_CaptureToFile1(QImageCapture* self, const libqt_string location) {

@@ -102,9 +102,11 @@ void KSelectionOwner_LostOwnership(KSelectionOwner* self) {
 
 void KSelectionOwner_Connect_LostOwnership(KSelectionOwner* self, intptr_t slot) {
     void (*slotFunc)(KSelectionOwner*) = reinterpret_cast<void (*)(KSelectionOwner*)>(slot);
-    KSelectionOwner::connect(self, &KSelectionOwner::lostOwnership, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KSelectionOwner::connect(self,
+                             static_cast<void (KSelectionOwner::*)()>(&KSelectionOwner::lostOwnership),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 void KSelectionOwner_ClaimedOwnership(KSelectionOwner* self) {
@@ -113,9 +115,11 @@ void KSelectionOwner_ClaimedOwnership(KSelectionOwner* self) {
 
 void KSelectionOwner_Connect_ClaimedOwnership(KSelectionOwner* self, intptr_t slot) {
     void (*slotFunc)(KSelectionOwner*) = reinterpret_cast<void (*)(KSelectionOwner*)>(slot);
-    KSelectionOwner::connect(self, &KSelectionOwner::claimedOwnership, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KSelectionOwner::connect(self,
+                             static_cast<void (KSelectionOwner::*)()>(&KSelectionOwner::claimedOwnership),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 void KSelectionOwner_FailedToClaimOwnership(KSelectionOwner* self) {
@@ -124,9 +128,11 @@ void KSelectionOwner_FailedToClaimOwnership(KSelectionOwner* self) {
 
 void KSelectionOwner_Connect_FailedToClaimOwnership(KSelectionOwner* self, intptr_t slot) {
     void (*slotFunc)(KSelectionOwner*) = reinterpret_cast<void (*)(KSelectionOwner*)>(slot);
-    KSelectionOwner::connect(self, &KSelectionOwner::failedToClaimOwnership, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KSelectionOwner::connect(self,
+                             static_cast<void (KSelectionOwner::*)()>(&KSelectionOwner::failedToClaimOwnership),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 #ifdef __Q_OS_LINUX__

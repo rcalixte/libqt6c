@@ -78,11 +78,13 @@ void KModifierKeyInfo_KeyPressed(KModifierKeyInfo* self, int key, bool pressed) 
 
 void KModifierKeyInfo_Connect_KeyPressed(KModifierKeyInfo* self, intptr_t slot) {
     void (*slotFunc)(KModifierKeyInfo*, int, bool) = reinterpret_cast<void (*)(KModifierKeyInfo*, int, bool)>(slot);
-    KModifierKeyInfo::connect(self, &KModifierKeyInfo::keyPressed, [self, slotFunc](Qt::Key key, bool pressed) {
-        int sigval1 = static_cast<int>(key);
-        bool sigval2 = pressed;
-        slotFunc(self, sigval1, sigval2);
-    });
+    KModifierKeyInfo::connect(self,
+                              static_cast<void (KModifierKeyInfo::*)(Qt::Key, bool)>(&KModifierKeyInfo::keyPressed),
+                              [self, slotFunc](Qt::Key key, bool pressed) {
+                                  int sigval1 = static_cast<int>(key);
+                                  bool sigval2 = pressed;
+                                  slotFunc(self, sigval1, sigval2);
+                              });
 }
 
 void KModifierKeyInfo_KeyLatched(KModifierKeyInfo* self, int key, bool latched) {
@@ -91,11 +93,13 @@ void KModifierKeyInfo_KeyLatched(KModifierKeyInfo* self, int key, bool latched) 
 
 void KModifierKeyInfo_Connect_KeyLatched(KModifierKeyInfo* self, intptr_t slot) {
     void (*slotFunc)(KModifierKeyInfo*, int, bool) = reinterpret_cast<void (*)(KModifierKeyInfo*, int, bool)>(slot);
-    KModifierKeyInfo::connect(self, &KModifierKeyInfo::keyLatched, [self, slotFunc](Qt::Key key, bool latched) {
-        int sigval1 = static_cast<int>(key);
-        bool sigval2 = latched;
-        slotFunc(self, sigval1, sigval2);
-    });
+    KModifierKeyInfo::connect(self,
+                              static_cast<void (KModifierKeyInfo::*)(Qt::Key, bool)>(&KModifierKeyInfo::keyLatched),
+                              [self, slotFunc](Qt::Key key, bool latched) {
+                                  int sigval1 = static_cast<int>(key);
+                                  bool sigval2 = latched;
+                                  slotFunc(self, sigval1, sigval2);
+                              });
 }
 
 void KModifierKeyInfo_KeyLocked(KModifierKeyInfo* self, int key, bool locked) {
@@ -104,11 +108,13 @@ void KModifierKeyInfo_KeyLocked(KModifierKeyInfo* self, int key, bool locked) {
 
 void KModifierKeyInfo_Connect_KeyLocked(KModifierKeyInfo* self, intptr_t slot) {
     void (*slotFunc)(KModifierKeyInfo*, int, bool) = reinterpret_cast<void (*)(KModifierKeyInfo*, int, bool)>(slot);
-    KModifierKeyInfo::connect(self, &KModifierKeyInfo::keyLocked, [self, slotFunc](Qt::Key key, bool locked) {
-        int sigval1 = static_cast<int>(key);
-        bool sigval2 = locked;
-        slotFunc(self, sigval1, sigval2);
-    });
+    KModifierKeyInfo::connect(self,
+                              static_cast<void (KModifierKeyInfo::*)(Qt::Key, bool)>(&KModifierKeyInfo::keyLocked),
+                              [self, slotFunc](Qt::Key key, bool locked) {
+                                  int sigval1 = static_cast<int>(key);
+                                  bool sigval2 = locked;
+                                  slotFunc(self, sigval1, sigval2);
+                              });
 }
 
 void KModifierKeyInfo_ButtonPressed(KModifierKeyInfo* self, int button, bool pressed) {
@@ -117,11 +123,13 @@ void KModifierKeyInfo_ButtonPressed(KModifierKeyInfo* self, int button, bool pre
 
 void KModifierKeyInfo_Connect_ButtonPressed(KModifierKeyInfo* self, intptr_t slot) {
     void (*slotFunc)(KModifierKeyInfo*, int, bool) = reinterpret_cast<void (*)(KModifierKeyInfo*, int, bool)>(slot);
-    KModifierKeyInfo::connect(self, &KModifierKeyInfo::buttonPressed, [self, slotFunc](Qt::MouseButton button, bool pressed) {
-        int sigval1 = static_cast<int>(button);
-        bool sigval2 = pressed;
-        slotFunc(self, sigval1, sigval2);
-    });
+    KModifierKeyInfo::connect(self,
+                              static_cast<void (KModifierKeyInfo::*)(Qt::MouseButton, bool)>(&KModifierKeyInfo::buttonPressed),
+                              [self, slotFunc](Qt::MouseButton button, bool pressed) {
+                                  int sigval1 = static_cast<int>(button);
+                                  bool sigval2 = pressed;
+                                  slotFunc(self, sigval1, sigval2);
+                              });
 }
 
 void KModifierKeyInfo_KeyAdded(KModifierKeyInfo* self, int key) {
@@ -130,10 +138,12 @@ void KModifierKeyInfo_KeyAdded(KModifierKeyInfo* self, int key) {
 
 void KModifierKeyInfo_Connect_KeyAdded(KModifierKeyInfo* self, intptr_t slot) {
     void (*slotFunc)(KModifierKeyInfo*, int) = reinterpret_cast<void (*)(KModifierKeyInfo*, int)>(slot);
-    KModifierKeyInfo::connect(self, &KModifierKeyInfo::keyAdded, [self, slotFunc](Qt::Key key) {
-        int sigval1 = static_cast<int>(key);
-        slotFunc(self, sigval1);
-    });
+    KModifierKeyInfo::connect(self,
+                              static_cast<void (KModifierKeyInfo::*)(Qt::Key)>(&KModifierKeyInfo::keyAdded),
+                              [self, slotFunc](Qt::Key key) {
+                                  int sigval1 = static_cast<int>(key);
+                                  slotFunc(self, sigval1);
+                              });
 }
 
 void KModifierKeyInfo_KeyRemoved(KModifierKeyInfo* self, int key) {
@@ -142,10 +152,12 @@ void KModifierKeyInfo_KeyRemoved(KModifierKeyInfo* self, int key) {
 
 void KModifierKeyInfo_Connect_KeyRemoved(KModifierKeyInfo* self, intptr_t slot) {
     void (*slotFunc)(KModifierKeyInfo*, int) = reinterpret_cast<void (*)(KModifierKeyInfo*, int)>(slot);
-    KModifierKeyInfo::connect(self, &KModifierKeyInfo::keyRemoved, [self, slotFunc](Qt::Key key) {
-        int sigval1 = static_cast<int>(key);
-        slotFunc(self, sigval1);
-    });
+    KModifierKeyInfo::connect(self,
+                              static_cast<void (KModifierKeyInfo::*)(Qt::Key)>(&KModifierKeyInfo::keyRemoved),
+                              [self, slotFunc](Qt::Key key) {
+                                  int sigval1 = static_cast<int>(key);
+                                  slotFunc(self, sigval1);
+                              });
 }
 
 // Base class handler implementation

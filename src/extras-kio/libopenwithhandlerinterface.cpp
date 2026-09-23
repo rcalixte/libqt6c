@@ -39,9 +39,11 @@ void KIO__OpenWithHandlerInterface_Canceled(KIO__OpenWithHandlerInterface* self)
 
 void KIO__OpenWithHandlerInterface_Connect_Canceled(KIO__OpenWithHandlerInterface* self, intptr_t slot) {
     void (*slotFunc)(KIO__OpenWithHandlerInterface*) = reinterpret_cast<void (*)(KIO__OpenWithHandlerInterface*)>(slot);
-    KIO::OpenWithHandlerInterface::connect(self, &KIO::OpenWithHandlerInterface::canceled, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KIO::OpenWithHandlerInterface::connect(self,
+                                           static_cast<void (KIO::OpenWithHandlerInterface::*)()>(&KIO::OpenWithHandlerInterface::canceled),
+                                           [self, slotFunc]() {
+                                               slotFunc(self);
+                                           });
 }
 
 void KIO__OpenWithHandlerInterface_Handled(KIO__OpenWithHandlerInterface* self) {
@@ -50,7 +52,9 @@ void KIO__OpenWithHandlerInterface_Handled(KIO__OpenWithHandlerInterface* self) 
 
 void KIO__OpenWithHandlerInterface_Connect_Handled(KIO__OpenWithHandlerInterface* self, intptr_t slot) {
     void (*slotFunc)(KIO__OpenWithHandlerInterface*) = reinterpret_cast<void (*)(KIO__OpenWithHandlerInterface*)>(slot);
-    KIO::OpenWithHandlerInterface::connect(self, &KIO::OpenWithHandlerInterface::handled, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KIO::OpenWithHandlerInterface::connect(self,
+                                           static_cast<void (KIO::OpenWithHandlerInterface::*)()>(&KIO::OpenWithHandlerInterface::handled),
+                                           [self, slotFunc]() {
+                                               slotFunc(self);
+                                           });
 }

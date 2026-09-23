@@ -105,9 +105,11 @@ void QCategoryAxis_CategoriesChanged(QCategoryAxis* self) {
 
 void QCategoryAxis_Connect_CategoriesChanged(QCategoryAxis* self, intptr_t slot) {
     void (*slotFunc)(QCategoryAxis*) = reinterpret_cast<void (*)(QCategoryAxis*)>(slot);
-    QCategoryAxis::connect(self, &QCategoryAxis::categoriesChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QCategoryAxis::connect(self,
+                           static_cast<void (QCategoryAxis::*)()>(&QCategoryAxis::categoriesChanged),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QCategoryAxis_LabelsPositionChanged(QCategoryAxis* self, int position) {
@@ -116,10 +118,12 @@ void QCategoryAxis_LabelsPositionChanged(QCategoryAxis* self, int position) {
 
 void QCategoryAxis_Connect_LabelsPositionChanged(QCategoryAxis* self, intptr_t slot) {
     void (*slotFunc)(QCategoryAxis*, int) = reinterpret_cast<void (*)(QCategoryAxis*, int)>(slot);
-    QCategoryAxis::connect(self, &QCategoryAxis::labelsPositionChanged, [self, slotFunc](QCategoryAxis::AxisLabelsPosition position) {
-        int sigval1 = static_cast<int>(position);
-        slotFunc(self, sigval1);
-    });
+    QCategoryAxis::connect(self,
+                           static_cast<void (QCategoryAxis::*)(QCategoryAxis::AxisLabelsPosition)>(&QCategoryAxis::labelsPositionChanged),
+                           [self, slotFunc](QCategoryAxis::AxisLabelsPosition position) {
+                               int sigval1 = static_cast<int>(position);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 double QCategoryAxis_StartValue1(const QCategoryAxis* self, const libqt_string categoryLabel) {

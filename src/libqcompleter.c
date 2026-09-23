@@ -314,16 +314,32 @@ void q_completer_activated(void* self, const char* text) {
     QCompleter_Activated((QCompleter*)self, qstring(text));
 }
 
+void q_completer_on_activated(void* self, void (*callback)(void*, const char*)) {
+    QCompleter_Connect_Activated((QCompleter*)self, (intptr_t)callback);
+}
+
 void q_completer_activated2(void* self, void* index) {
     QCompleter_Activated2((QCompleter*)self, (QModelIndex*)index);
+}
+
+void q_completer_on_activated2(void* self, void (*callback)(void*, void*)) {
+    QCompleter_Connect_Activated2((QCompleter*)self, (intptr_t)callback);
 }
 
 void q_completer_highlighted(void* self, const char* text) {
     QCompleter_Highlighted((QCompleter*)self, qstring(text));
 }
 
+void q_completer_on_highlighted(void* self, void (*callback)(void*, const char*)) {
+    QCompleter_Connect_Highlighted((QCompleter*)self, (intptr_t)callback);
+}
+
 void q_completer_highlighted2(void* self, void* index) {
     QCompleter_Highlighted2((QCompleter*)self, (QModelIndex*)index);
+}
+
+void q_completer_on_highlighted2(void* self, void (*callback)(void*, void*)) {
+    QCompleter_Connect_Highlighted2((QCompleter*)self, (intptr_t)callback);
 }
 
 const char* q_completer_tr2(const char* s, const char* c) {

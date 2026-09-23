@@ -456,9 +456,23 @@ void q_completer_activated(void* self, const char* text);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#activated)
 ///
 /// @param self QCompleter*
+/// @param callback void func(QCompleter* self, const char* text)
+///
+void q_completer_on_activated(void* self, void (*callback)(void*, const char*));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#activated)
+///
+/// @param self QCompleter*
 /// @param index QModelIndex*
 ///
 void q_completer_activated2(void* self, void* index);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#activated)
+///
+/// @param self QCompleter*
+/// @param callback void func(QCompleter* self, QModelIndex* index)
+///
+void q_completer_on_activated2(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#highlighted)
 ///
@@ -470,9 +484,23 @@ void q_completer_highlighted(void* self, const char* text);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#highlighted)
 ///
 /// @param self QCompleter*
+/// @param callback void func(QCompleter* self, const char* text)
+///
+void q_completer_on_highlighted(void* self, void (*callback)(void*, const char*));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#highlighted)
+///
+/// @param self QCompleter*
 /// @param index QModelIndex*
 ///
 void q_completer_highlighted2(void* self, void* index);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#highlighted)
+///
+/// @param self QCompleter*
+/// @param callback void func(QCompleter* self, QModelIndex* index)
+///
+void q_completer_on_highlighted2(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

@@ -533,9 +533,11 @@ void QTextEdit_TextChanged(QTextEdit* self) {
 
 void QTextEdit_Connect_TextChanged(QTextEdit* self, intptr_t slot) {
     void (*slotFunc)(QTextEdit*) = reinterpret_cast<void (*)(QTextEdit*)>(slot);
-    QTextEdit::connect(self, &QTextEdit::textChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QTextEdit::connect(self,
+                       static_cast<void (QTextEdit::*)()>(&QTextEdit::textChanged),
+                       [self, slotFunc]() {
+                           slotFunc(self);
+                       });
 }
 
 void QTextEdit_UndoAvailable(QTextEdit* self, bool b) {
@@ -544,10 +546,12 @@ void QTextEdit_UndoAvailable(QTextEdit* self, bool b) {
 
 void QTextEdit_Connect_UndoAvailable(QTextEdit* self, intptr_t slot) {
     void (*slotFunc)(QTextEdit*, bool) = reinterpret_cast<void (*)(QTextEdit*, bool)>(slot);
-    QTextEdit::connect(self, &QTextEdit::undoAvailable, [self, slotFunc](bool b) {
-        bool sigval1 = b;
-        slotFunc(self, sigval1);
-    });
+    QTextEdit::connect(self,
+                       static_cast<void (QTextEdit::*)(bool)>(&QTextEdit::undoAvailable),
+                       [self, slotFunc](bool b) {
+                           bool sigval1 = b;
+                           slotFunc(self, sigval1);
+                       });
 }
 
 void QTextEdit_RedoAvailable(QTextEdit* self, bool b) {
@@ -556,10 +560,12 @@ void QTextEdit_RedoAvailable(QTextEdit* self, bool b) {
 
 void QTextEdit_Connect_RedoAvailable(QTextEdit* self, intptr_t slot) {
     void (*slotFunc)(QTextEdit*, bool) = reinterpret_cast<void (*)(QTextEdit*, bool)>(slot);
-    QTextEdit::connect(self, &QTextEdit::redoAvailable, [self, slotFunc](bool b) {
-        bool sigval1 = b;
-        slotFunc(self, sigval1);
-    });
+    QTextEdit::connect(self,
+                       static_cast<void (QTextEdit::*)(bool)>(&QTextEdit::redoAvailable),
+                       [self, slotFunc](bool b) {
+                           bool sigval1 = b;
+                           slotFunc(self, sigval1);
+                       });
 }
 
 void QTextEdit_CurrentCharFormatChanged(QTextEdit* self, const QTextCharFormat* format) {
@@ -568,12 +574,14 @@ void QTextEdit_CurrentCharFormatChanged(QTextEdit* self, const QTextCharFormat* 
 
 void QTextEdit_Connect_CurrentCharFormatChanged(QTextEdit* self, intptr_t slot) {
     void (*slotFunc)(QTextEdit*, QTextCharFormat*) = reinterpret_cast<void (*)(QTextEdit*, QTextCharFormat*)>(slot);
-    QTextEdit::connect(self, &QTextEdit::currentCharFormatChanged, [self, slotFunc](const QTextCharFormat& format) {
-        const QTextCharFormat& format_ret = format;
-        // Cast returned reference into pointer
-        QTextCharFormat* sigval1 = const_cast<QTextCharFormat*>(&format_ret);
-        slotFunc(self, sigval1);
-    });
+    QTextEdit::connect(self,
+                       static_cast<void (QTextEdit::*)(const QTextCharFormat&)>(&QTextEdit::currentCharFormatChanged),
+                       [self, slotFunc](const QTextCharFormat& format) {
+                           const QTextCharFormat& format_ret = format;
+                           // Cast returned reference into pointer
+                           QTextCharFormat* sigval1 = const_cast<QTextCharFormat*>(&format_ret);
+                           slotFunc(self, sigval1);
+                       });
 }
 
 void QTextEdit_CopyAvailable(QTextEdit* self, bool b) {
@@ -582,10 +590,12 @@ void QTextEdit_CopyAvailable(QTextEdit* self, bool b) {
 
 void QTextEdit_Connect_CopyAvailable(QTextEdit* self, intptr_t slot) {
     void (*slotFunc)(QTextEdit*, bool) = reinterpret_cast<void (*)(QTextEdit*, bool)>(slot);
-    QTextEdit::connect(self, &QTextEdit::copyAvailable, [self, slotFunc](bool b) {
-        bool sigval1 = b;
-        slotFunc(self, sigval1);
-    });
+    QTextEdit::connect(self,
+                       static_cast<void (QTextEdit::*)(bool)>(&QTextEdit::copyAvailable),
+                       [self, slotFunc](bool b) {
+                           bool sigval1 = b;
+                           slotFunc(self, sigval1);
+                       });
 }
 
 void QTextEdit_SelectionChanged(QTextEdit* self) {
@@ -594,9 +604,11 @@ void QTextEdit_SelectionChanged(QTextEdit* self) {
 
 void QTextEdit_Connect_SelectionChanged(QTextEdit* self, intptr_t slot) {
     void (*slotFunc)(QTextEdit*) = reinterpret_cast<void (*)(QTextEdit*)>(slot);
-    QTextEdit::connect(self, &QTextEdit::selectionChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QTextEdit::connect(self,
+                       static_cast<void (QTextEdit::*)()>(&QTextEdit::selectionChanged),
+                       [self, slotFunc]() {
+                           slotFunc(self);
+                       });
 }
 
 void QTextEdit_CursorPositionChanged(QTextEdit* self) {
@@ -605,9 +617,11 @@ void QTextEdit_CursorPositionChanged(QTextEdit* self) {
 
 void QTextEdit_Connect_CursorPositionChanged(QTextEdit* self, intptr_t slot) {
     void (*slotFunc)(QTextEdit*) = reinterpret_cast<void (*)(QTextEdit*)>(slot);
-    QTextEdit::connect(self, &QTextEdit::cursorPositionChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QTextEdit::connect(self,
+                       static_cast<void (QTextEdit::*)()>(&QTextEdit::cursorPositionChanged),
+                       [self, slotFunc]() {
+                           slotFunc(self);
+                       });
 }
 
 bool QTextEdit_Event(QTextEdit* self, QEvent* e) {

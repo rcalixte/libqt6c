@@ -69,9 +69,11 @@ void QAudioInput_DeviceChanged(QAudioInput* self) {
 
 void QAudioInput_Connect_DeviceChanged(QAudioInput* self, intptr_t slot) {
     void (*slotFunc)(QAudioInput*) = reinterpret_cast<void (*)(QAudioInput*)>(slot);
-    QAudioInput::connect(self, &QAudioInput::deviceChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QAudioInput::connect(self,
+                         static_cast<void (QAudioInput::*)()>(&QAudioInput::deviceChanged),
+                         [self, slotFunc]() {
+                             slotFunc(self);
+                         });
 }
 
 void QAudioInput_VolumeChanged(QAudioInput* self, float volume) {
@@ -80,10 +82,12 @@ void QAudioInput_VolumeChanged(QAudioInput* self, float volume) {
 
 void QAudioInput_Connect_VolumeChanged(QAudioInput* self, intptr_t slot) {
     void (*slotFunc)(QAudioInput*, float) = reinterpret_cast<void (*)(QAudioInput*, float)>(slot);
-    QAudioInput::connect(self, &QAudioInput::volumeChanged, [self, slotFunc](float volume) {
-        float sigval1 = volume;
-        slotFunc(self, sigval1);
-    });
+    QAudioInput::connect(self,
+                         static_cast<void (QAudioInput::*)(float)>(&QAudioInput::volumeChanged),
+                         [self, slotFunc](float volume) {
+                             float sigval1 = volume;
+                             slotFunc(self, sigval1);
+                         });
 }
 
 void QAudioInput_MutedChanged(QAudioInput* self, bool muted) {
@@ -92,10 +96,12 @@ void QAudioInput_MutedChanged(QAudioInput* self, bool muted) {
 
 void QAudioInput_Connect_MutedChanged(QAudioInput* self, intptr_t slot) {
     void (*slotFunc)(QAudioInput*, bool) = reinterpret_cast<void (*)(QAudioInput*, bool)>(slot);
-    QAudioInput::connect(self, &QAudioInput::mutedChanged, [self, slotFunc](bool muted) {
-        bool sigval1 = muted;
-        slotFunc(self, sigval1);
-    });
+    QAudioInput::connect(self,
+                         static_cast<void (QAudioInput::*)(bool)>(&QAudioInput::mutedChanged),
+                         [self, slotFunc](bool muted) {
+                             bool sigval1 = muted;
+                             slotFunc(self, sigval1);
+                         });
 }
 
 // Base class handler implementation

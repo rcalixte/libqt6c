@@ -69,6 +69,7 @@ void QPrintDialog_SetOptions(QPrintDialog* self, int options);
 int QPrintDialog_Options(const QPrintDialog* self);
 void QPrintDialog_SetVisible(QPrintDialog* self, bool visible);
 void QPrintDialog_Accepted(QPrintDialog* self, QPrinter* printer);
+void QPrintDialog_Connect_Accepted(QPrintDialog* self, intptr_t slot);
 void QPrintDialog_SetOption2(QPrintDialog* self, int option, bool on);
 void QPrintDialog_OnMetaObject(const QPrintDialog* self, intptr_t slot);
 QMetaObject* QPrintDialog_SuperMetaObject(const QPrintDialog* self);

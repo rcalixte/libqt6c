@@ -11282,20 +11282,40 @@ void q_cpaxis_range_changed(void* self, void* newRange) {
     QCPAxis_RangeChanged((QCPAxis*)self, (QCPRange*)newRange);
 }
 
+void q_cpaxis_on_range_changed(void* self, void (*callback)(void*, void*)) {
+    QCPAxis_Connect_RangeChanged((QCPAxis*)self, (intptr_t)callback);
+}
+
 void q_cpaxis_range_changed2(void* self, void* newRange, void* oldRange) {
     QCPAxis_RangeChanged2((QCPAxis*)self, (QCPRange*)newRange, (QCPRange*)oldRange);
+}
+
+void q_cpaxis_on_range_changed2(void* self, void (*callback)(void*, void*, void*)) {
+    QCPAxis_Connect_RangeChanged2((QCPAxis*)self, (intptr_t)callback);
 }
 
 void q_cpaxis_scale_type_changed(void* self, int32_t scaleType) {
     QCPAxis_ScaleTypeChanged((QCPAxis*)self, scaleType);
 }
 
+void q_cpaxis_on_scale_type_changed(void* self, void (*callback)(void*, int32_t)) {
+    QCPAxis_Connect_ScaleTypeChanged((QCPAxis*)self, (intptr_t)callback);
+}
+
 void q_cpaxis_selection_changed(void* self, const int32_t* parts) {
     QCPAxis_SelectionChanged((QCPAxis*)self, parts);
 }
 
+void q_cpaxis_on_selection_changed(void* self, void (*callback)(void*, const int32_t*)) {
+    QCPAxis_Connect_SelectionChanged((QCPAxis*)self, (intptr_t)callback);
+}
+
 void q_cpaxis_selectable_changed(void* self, const int32_t* parts) {
     QCPAxis_SelectableChanged((QCPAxis*)self, parts);
+}
+
+void q_cpaxis_on_selectable_changed(void* self, void (*callback)(void*, const int32_t*)) {
+    QCPAxis_Connect_SelectableChanged((QCPAxis*)self, (intptr_t)callback);
 }
 
 int32_t q_cpaxis_calculate_margin(void* self) {
@@ -12471,12 +12491,24 @@ void q_cpabstractplottable_selection_changed(void* self, bool selected) {
     QCPAbstractPlottable_SelectionChanged((QCPAbstractPlottable*)self, selected);
 }
 
+void q_cpabstractplottable_on_selection_changed(void* self, void (*callback)(void*, bool)) {
+    QCPAbstractPlottable_Connect_SelectionChanged((QCPAbstractPlottable*)self, (intptr_t)callback);
+}
+
 void q_cpabstractplottable_selection_changed2(void* self, void* selection) {
     QCPAbstractPlottable_SelectionChanged2((QCPAbstractPlottable*)self, (QCPDataSelection*)selection);
 }
 
+void q_cpabstractplottable_on_selection_changed2(void* self, void (*callback)(void*, void*)) {
+    QCPAbstractPlottable_Connect_SelectionChanged2((QCPAbstractPlottable*)self, (intptr_t)callback);
+}
+
 void q_cpabstractplottable_selectable_changed(void* self, int32_t selectable) {
     QCPAbstractPlottable_SelectableChanged((QCPAbstractPlottable*)self, selectable);
+}
+
+void q_cpabstractplottable_on_selectable_changed(void* self, void (*callback)(void*, int32_t)) {
+    QCPAbstractPlottable_Connect_SelectableChanged((QCPAbstractPlottable*)self, (intptr_t)callback);
 }
 
 QRect* q_cpabstractplottable_clip_rect(void* self) {
@@ -24472,12 +24504,24 @@ void q_cpgraph_selection_changed(void* self, bool selected) {
     QCPAbstractPlottable_SelectionChanged((QCPAbstractPlottable*)self, selected);
 }
 
+void q_cpgraph_on_selection_changed(void* self, void (*callback)(void*, bool)) {
+    QCPAbstractPlottable_Connect_SelectionChanged((QCPAbstractPlottable*)self, (intptr_t)callback);
+}
+
 void q_cpgraph_selection_changed2(void* self, void* selection) {
     QCPAbstractPlottable_SelectionChanged2((QCPAbstractPlottable*)self, (QCPDataSelection*)selection);
 }
 
+void q_cpgraph_on_selection_changed2(void* self, void (*callback)(void*, void*)) {
+    QCPAbstractPlottable_Connect_SelectionChanged2((QCPAbstractPlottable*)self, (intptr_t)callback);
+}
+
 void q_cpgraph_selectable_changed(void* self, int32_t selectable) {
     QCPAbstractPlottable_SelectableChanged((QCPAbstractPlottable*)self, selectable);
+}
+
+void q_cpgraph_on_selectable_changed(void* self, void (*callback)(void*, int32_t)) {
+    QCPAbstractPlottable_Connect_SelectableChanged((QCPAbstractPlottable*)self, (intptr_t)callback);
 }
 
 void q_cpgraph_rescale_axes1(void* self, bool onlyEnlarge) {
@@ -25747,12 +25791,24 @@ void q_cpcurve_selection_changed(void* self, bool selected) {
     QCPAbstractPlottable_SelectionChanged((QCPAbstractPlottable*)self, selected);
 }
 
+void q_cpcurve_on_selection_changed(void* self, void (*callback)(void*, bool)) {
+    QCPAbstractPlottable_Connect_SelectionChanged((QCPAbstractPlottable*)self, (intptr_t)callback);
+}
+
 void q_cpcurve_selection_changed2(void* self, void* selection) {
     QCPAbstractPlottable_SelectionChanged2((QCPAbstractPlottable*)self, (QCPDataSelection*)selection);
 }
 
+void q_cpcurve_on_selection_changed2(void* self, void (*callback)(void*, void*)) {
+    QCPAbstractPlottable_Connect_SelectionChanged2((QCPAbstractPlottable*)self, (intptr_t)callback);
+}
+
 void q_cpcurve_selectable_changed(void* self, int32_t selectable) {
     QCPAbstractPlottable_SelectableChanged((QCPAbstractPlottable*)self, selectable);
+}
+
+void q_cpcurve_on_selectable_changed(void* self, void (*callback)(void*, int32_t)) {
+    QCPAbstractPlottable_Connect_SelectableChanged((QCPAbstractPlottable*)self, (intptr_t)callback);
 }
 
 void q_cpcurve_rescale_axes1(void* self, bool onlyEnlarge) {
@@ -27495,12 +27551,24 @@ void q_cpbars_selection_changed(void* self, bool selected) {
     QCPAbstractPlottable_SelectionChanged((QCPAbstractPlottable*)self, selected);
 }
 
+void q_cpbars_on_selection_changed(void* self, void (*callback)(void*, bool)) {
+    QCPAbstractPlottable_Connect_SelectionChanged((QCPAbstractPlottable*)self, (intptr_t)callback);
+}
+
 void q_cpbars_selection_changed2(void* self, void* selection) {
     QCPAbstractPlottable_SelectionChanged2((QCPAbstractPlottable*)self, (QCPDataSelection*)selection);
 }
 
+void q_cpbars_on_selection_changed2(void* self, void (*callback)(void*, void*)) {
+    QCPAbstractPlottable_Connect_SelectionChanged2((QCPAbstractPlottable*)self, (intptr_t)callback);
+}
+
 void q_cpbars_selectable_changed(void* self, int32_t selectable) {
     QCPAbstractPlottable_SelectableChanged((QCPAbstractPlottable*)self, selectable);
+}
+
+void q_cpbars_on_selectable_changed(void* self, void (*callback)(void*, int32_t)) {
+    QCPAbstractPlottable_Connect_SelectableChanged((QCPAbstractPlottable*)self, (intptr_t)callback);
 }
 
 void q_cpbars_rescale_axes1(void* self, bool onlyEnlarge) {
@@ -28681,12 +28749,24 @@ void q_cpstatisticalbox_selection_changed(void* self, bool selected) {
     QCPAbstractPlottable_SelectionChanged((QCPAbstractPlottable*)self, selected);
 }
 
+void q_cpstatisticalbox_on_selection_changed(void* self, void (*callback)(void*, bool)) {
+    QCPAbstractPlottable_Connect_SelectionChanged((QCPAbstractPlottable*)self, (intptr_t)callback);
+}
+
 void q_cpstatisticalbox_selection_changed2(void* self, void* selection) {
     QCPAbstractPlottable_SelectionChanged2((QCPAbstractPlottable*)self, (QCPDataSelection*)selection);
 }
 
+void q_cpstatisticalbox_on_selection_changed2(void* self, void (*callback)(void*, void*)) {
+    QCPAbstractPlottable_Connect_SelectionChanged2((QCPAbstractPlottable*)self, (intptr_t)callback);
+}
+
 void q_cpstatisticalbox_selectable_changed(void* self, int32_t selectable) {
     QCPAbstractPlottable_SelectableChanged((QCPAbstractPlottable*)self, selectable);
+}
+
+void q_cpstatisticalbox_on_selectable_changed(void* self, void (*callback)(void*, int32_t)) {
+    QCPAbstractPlottable_Connect_SelectableChanged((QCPAbstractPlottable*)self, (intptr_t)callback);
 }
 
 void q_cpstatisticalbox_rescale_axes1(void* self, bool onlyEnlarge) {
@@ -29914,12 +29994,24 @@ void q_cpcolormap_selection_changed(void* self, bool selected) {
     QCPAbstractPlottable_SelectionChanged((QCPAbstractPlottable*)self, selected);
 }
 
+void q_cpcolormap_on_selection_changed(void* self, void (*callback)(void*, bool)) {
+    QCPAbstractPlottable_Connect_SelectionChanged((QCPAbstractPlottable*)self, (intptr_t)callback);
+}
+
 void q_cpcolormap_selection_changed2(void* self, void* selection) {
     QCPAbstractPlottable_SelectionChanged2((QCPAbstractPlottable*)self, (QCPDataSelection*)selection);
 }
 
+void q_cpcolormap_on_selection_changed2(void* self, void (*callback)(void*, void*)) {
+    QCPAbstractPlottable_Connect_SelectionChanged2((QCPAbstractPlottable*)self, (intptr_t)callback);
+}
+
 void q_cpcolormap_selectable_changed(void* self, int32_t selectable) {
     QCPAbstractPlottable_SelectableChanged((QCPAbstractPlottable*)self, selectable);
+}
+
+void q_cpcolormap_on_selectable_changed(void* self, void (*callback)(void*, int32_t)) {
+    QCPAbstractPlottable_Connect_SelectableChanged((QCPAbstractPlottable*)self, (intptr_t)callback);
 }
 
 void q_cpcolormap_rescale_axes1(void* self, bool onlyEnlarge) {
@@ -31015,12 +31107,24 @@ void q_cpfinancial_selection_changed(void* self, bool selected) {
     QCPAbstractPlottable_SelectionChanged((QCPAbstractPlottable*)self, selected);
 }
 
+void q_cpfinancial_on_selection_changed(void* self, void (*callback)(void*, bool)) {
+    QCPAbstractPlottable_Connect_SelectionChanged((QCPAbstractPlottable*)self, (intptr_t)callback);
+}
+
 void q_cpfinancial_selection_changed2(void* self, void* selection) {
     QCPAbstractPlottable_SelectionChanged2((QCPAbstractPlottable*)self, (QCPDataSelection*)selection);
 }
 
+void q_cpfinancial_on_selection_changed2(void* self, void (*callback)(void*, void*)) {
+    QCPAbstractPlottable_Connect_SelectionChanged2((QCPAbstractPlottable*)self, (intptr_t)callback);
+}
+
 void q_cpfinancial_selectable_changed(void* self, int32_t selectable) {
     QCPAbstractPlottable_SelectableChanged((QCPAbstractPlottable*)self, selectable);
+}
+
+void q_cpfinancial_on_selectable_changed(void* self, void (*callback)(void*, int32_t)) {
+    QCPAbstractPlottable_Connect_SelectableChanged((QCPAbstractPlottable*)self, (intptr_t)callback);
 }
 
 void q_cpfinancial_rescale_axes1(void* self, bool onlyEnlarge) {
@@ -32300,12 +32404,24 @@ void q_cperrorbars_selection_changed(void* self, bool selected) {
     QCPAbstractPlottable_SelectionChanged((QCPAbstractPlottable*)self, selected);
 }
 
+void q_cperrorbars_on_selection_changed(void* self, void (*callback)(void*, bool)) {
+    QCPAbstractPlottable_Connect_SelectionChanged((QCPAbstractPlottable*)self, (intptr_t)callback);
+}
+
 void q_cperrorbars_selection_changed2(void* self, void* selection) {
     QCPAbstractPlottable_SelectionChanged2((QCPAbstractPlottable*)self, (QCPDataSelection*)selection);
 }
 
+void q_cperrorbars_on_selection_changed2(void* self, void (*callback)(void*, void*)) {
+    QCPAbstractPlottable_Connect_SelectionChanged2((QCPAbstractPlottable*)self, (intptr_t)callback);
+}
+
 void q_cperrorbars_selectable_changed(void* self, int32_t selectable) {
     QCPAbstractPlottable_SelectableChanged((QCPAbstractPlottable*)self, selectable);
+}
+
+void q_cperrorbars_on_selectable_changed(void* self, void (*callback)(void*, int32_t)) {
+    QCPAbstractPlottable_Connect_SelectableChanged((QCPAbstractPlottable*)self, (intptr_t)callback);
 }
 
 void q_cperrorbars_rescale_axes1(void* self, bool onlyEnlarge) {
@@ -41304,20 +41420,40 @@ void q_cppolaraxisradial_range_changed(void* self, void* newRange) {
     QCPPolarAxisRadial_RangeChanged((QCPPolarAxisRadial*)self, (QCPRange*)newRange);
 }
 
+void q_cppolaraxisradial_on_range_changed(void* self, void (*callback)(void*, void*)) {
+    QCPPolarAxisRadial_Connect_RangeChanged((QCPPolarAxisRadial*)self, (intptr_t)callback);
+}
+
 void q_cppolaraxisradial_range_changed2(void* self, void* newRange, void* oldRange) {
     QCPPolarAxisRadial_RangeChanged2((QCPPolarAxisRadial*)self, (QCPRange*)newRange, (QCPRange*)oldRange);
+}
+
+void q_cppolaraxisradial_on_range_changed2(void* self, void (*callback)(void*, void*, void*)) {
+    QCPPolarAxisRadial_Connect_RangeChanged2((QCPPolarAxisRadial*)self, (intptr_t)callback);
 }
 
 void q_cppolaraxisradial_scale_type_changed(void* self, int32_t scaleType) {
     QCPPolarAxisRadial_ScaleTypeChanged((QCPPolarAxisRadial*)self, scaleType);
 }
 
+void q_cppolaraxisradial_on_scale_type_changed(void* self, void (*callback)(void*, int32_t)) {
+    QCPPolarAxisRadial_Connect_ScaleTypeChanged((QCPPolarAxisRadial*)self, (intptr_t)callback);
+}
+
 void q_cppolaraxisradial_selection_changed(void* self, const int32_t* parts) {
     QCPPolarAxisRadial_SelectionChanged((QCPPolarAxisRadial*)self, parts);
 }
 
+void q_cppolaraxisradial_on_selection_changed(void* self, void (*callback)(void*, const int32_t*)) {
+    QCPPolarAxisRadial_Connect_SelectionChanged((QCPPolarAxisRadial*)self, (intptr_t)callback);
+}
+
 void q_cppolaraxisradial_selectable_changed(void* self, const int32_t* parts) {
     QCPPolarAxisRadial_SelectableChanged((QCPPolarAxisRadial*)self, parts);
+}
+
+void q_cppolaraxisradial_on_selectable_changed(void* self, void (*callback)(void*, const int32_t*)) {
+    QCPPolarAxisRadial_Connect_SelectableChanged((QCPPolarAxisRadial*)self, (intptr_t)callback);
 }
 
 void q_cppolaraxisradial_apply_default_antialiasing_hint(void* self, void* painter) {
@@ -42633,16 +42769,32 @@ void q_cppolaraxisangular_range_changed(void* self, void* newRange) {
     QCPPolarAxisAngular_RangeChanged((QCPPolarAxisAngular*)self, (QCPRange*)newRange);
 }
 
+void q_cppolaraxisangular_on_range_changed(void* self, void (*callback)(void*, void*)) {
+    QCPPolarAxisAngular_Connect_RangeChanged((QCPPolarAxisAngular*)self, (intptr_t)callback);
+}
+
 void q_cppolaraxisangular_range_changed2(void* self, void* newRange, void* oldRange) {
     QCPPolarAxisAngular_RangeChanged2((QCPPolarAxisAngular*)self, (QCPRange*)newRange, (QCPRange*)oldRange);
+}
+
+void q_cppolaraxisangular_on_range_changed2(void* self, void (*callback)(void*, void*, void*)) {
+    QCPPolarAxisAngular_Connect_RangeChanged2((QCPPolarAxisAngular*)self, (intptr_t)callback);
 }
 
 void q_cppolaraxisangular_selection_changed(void* self, const int32_t* parts) {
     QCPPolarAxisAngular_SelectionChanged((QCPPolarAxisAngular*)self, parts);
 }
 
+void q_cppolaraxisangular_on_selection_changed(void* self, void (*callback)(void*, const int32_t*)) {
+    QCPPolarAxisAngular_Connect_SelectionChanged((QCPPolarAxisAngular*)self, (intptr_t)callback);
+}
+
 void q_cppolaraxisangular_selectable_changed(void* self, const int32_t* parts) {
     QCPPolarAxisAngular_SelectableChanged((QCPPolarAxisAngular*)self, parts);
+}
+
+void q_cppolaraxisangular_on_selectable_changed(void* self, void (*callback)(void*, const int32_t*)) {
+    QCPPolarAxisAngular_Connect_SelectableChanged((QCPPolarAxisAngular*)self, (intptr_t)callback);
 }
 
 void q_cppolaraxisangular_apply_default_antialiasing_hint(void* self, void* painter) {
@@ -45500,12 +45652,24 @@ void q_cppolargraph_selection_changed(void* self, bool selected) {
     QCPPolarGraph_SelectionChanged((QCPPolarGraph*)self, selected);
 }
 
+void q_cppolargraph_on_selection_changed(void* self, void (*callback)(void*, bool)) {
+    QCPPolarGraph_Connect_SelectionChanged((QCPPolarGraph*)self, (intptr_t)callback);
+}
+
 void q_cppolargraph_selection_changed2(void* self, void* selection) {
     QCPPolarGraph_SelectionChanged2((QCPPolarGraph*)self, (QCPDataSelection*)selection);
 }
 
+void q_cppolargraph_on_selection_changed2(void* self, void (*callback)(void*, void*)) {
+    QCPPolarGraph_Connect_SelectionChanged2((QCPPolarGraph*)self, (intptr_t)callback);
+}
+
 void q_cppolargraph_selectable_changed(void* self, int32_t selectable) {
     QCPPolarGraph_SelectableChanged((QCPPolarGraph*)self, selectable);
+}
+
+void q_cppolargraph_on_selectable_changed(void* self, void (*callback)(void*, int32_t)) {
+    QCPPolarGraph_Connect_SelectableChanged((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
 QRect* q_cppolargraph_clip_rect(void* self) {

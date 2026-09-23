@@ -201,84 +201,168 @@ void k_parts__navigationextension_enable_action(void* self, const char* name, bo
     KParts__NavigationExtension_EnableAction((KParts__NavigationExtension*)self, name, enabled);
 }
 
+void k_parts__navigationextension_on_enable_action(void* self, void (*callback)(void*, const char*, bool)) {
+    KParts__NavigationExtension_Connect_EnableAction((KParts__NavigationExtension*)self, (intptr_t)callback);
+}
+
 void k_parts__navigationextension_set_action_text(void* self, const char* name, const char* text) {
     KParts__NavigationExtension_SetActionText((KParts__NavigationExtension*)self, name, qstring(text));
+}
+
+void k_parts__navigationextension_on_set_action_text(void* self, void (*callback)(void*, const char*, const char*)) {
+    KParts__NavigationExtension_Connect_SetActionText((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
 void k_parts__navigationextension_open_url_request(void* self, void* url) {
     KParts__NavigationExtension_OpenUrlRequest((KParts__NavigationExtension*)self, (QUrl*)url);
 }
 
+void k_parts__navigationextension_on_open_url_request(void* self, void (*callback)(void*, void*)) {
+    KParts__NavigationExtension_Connect_OpenUrlRequest((KParts__NavigationExtension*)self, (intptr_t)callback);
+}
+
 void k_parts__navigationextension_open_url_request_delayed(void* self, void* url, void* arguments) {
     KParts__NavigationExtension_OpenUrlRequestDelayed((KParts__NavigationExtension*)self, (QUrl*)url, (KParts__OpenUrlArguments*)arguments);
+}
+
+void k_parts__navigationextension_on_open_url_request_delayed(void* self, void (*callback)(void*, void*, void*)) {
+    KParts__NavigationExtension_Connect_OpenUrlRequestDelayed((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
 void k_parts__navigationextension_open_url_notify(void* self) {
     KParts__NavigationExtension_OpenUrlNotify((KParts__NavigationExtension*)self);
 }
 
+void k_parts__navigationextension_on_open_url_notify(void* self, void (*callback)(void*)) {
+    KParts__NavigationExtension_Connect_OpenUrlNotify((KParts__NavigationExtension*)self, (intptr_t)callback);
+}
+
 void k_parts__navigationextension_set_location_bar_url(void* self, const char* url) {
     KParts__NavigationExtension_SetLocationBarUrl((KParts__NavigationExtension*)self, qstring(url));
+}
+
+void k_parts__navigationextension_on_set_location_bar_url(void* self, void (*callback)(void*, const char*)) {
+    KParts__NavigationExtension_Connect_SetLocationBarUrl((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
 void k_parts__navigationextension_set_icon_url(void* self, void* url) {
     KParts__NavigationExtension_SetIconUrl((KParts__NavigationExtension*)self, (QUrl*)url);
 }
 
+void k_parts__navigationextension_on_set_icon_url(void* self, void (*callback)(void*, void*)) {
+    KParts__NavigationExtension_Connect_SetIconUrl((KParts__NavigationExtension*)self, (intptr_t)callback);
+}
+
 void k_parts__navigationextension_create_new_window(void* self, void* url) {
     KParts__NavigationExtension_CreateNewWindow((KParts__NavigationExtension*)self, (QUrl*)url);
+}
+
+void k_parts__navigationextension_on_create_new_window(void* self, void (*callback)(void*, void*)) {
+    KParts__NavigationExtension_Connect_CreateNewWindow((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
 void k_parts__navigationextension_loading_progress(void* self, int percent) {
     KParts__NavigationExtension_LoadingProgress((KParts__NavigationExtension*)self, percent);
 }
 
+void k_parts__navigationextension_on_loading_progress(void* self, void (*callback)(void*, int)) {
+    KParts__NavigationExtension_Connect_LoadingProgress((KParts__NavigationExtension*)self, (intptr_t)callback);
+}
+
 void k_parts__navigationextension_speed_progress(void* self, int bytesPerSecond) {
     KParts__NavigationExtension_SpeedProgress((KParts__NavigationExtension*)self, bytesPerSecond);
+}
+
+void k_parts__navigationextension_on_speed_progress(void* self, void (*callback)(void*, int)) {
+    KParts__NavigationExtension_Connect_SpeedProgress((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
 void k_parts__navigationextension_info_message(void* self, const char* param1) {
     KParts__NavigationExtension_InfoMessage((KParts__NavigationExtension*)self, qstring(param1));
 }
 
+void k_parts__navigationextension_on_info_message(void* self, void (*callback)(void*, const char*)) {
+    KParts__NavigationExtension_Connect_InfoMessage((KParts__NavigationExtension*)self, (intptr_t)callback);
+}
+
 void k_parts__navigationextension_popup_menu(void* self, void* global, void* items) {
     KParts__NavigationExtension_PopupMenu((KParts__NavigationExtension*)self, (QPoint*)global, (KFileItemList*)items);
+}
+
+void k_parts__navigationextension_on_popup_menu(void* self, void (*callback)(void*, void*, void*)) {
+    KParts__NavigationExtension_Connect_PopupMenu((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
 void k_parts__navigationextension_popup_menu2(void* self, void* global, void* url) {
     KParts__NavigationExtension_PopupMenu2((KParts__NavigationExtension*)self, (QPoint*)global, (QUrl*)url);
 }
 
+void k_parts__navigationextension_on_popup_menu2(void* self, void (*callback)(void*, void*, void*)) {
+    KParts__NavigationExtension_Connect_PopupMenu2((KParts__NavigationExtension*)self, (intptr_t)callback);
+}
+
 void k_parts__navigationextension_selection_info(void* self, void* items) {
     KParts__NavigationExtension_SelectionInfo((KParts__NavigationExtension*)self, (KFileItemList*)items);
+}
+
+void k_parts__navigationextension_on_selection_info(void* self, void (*callback)(void*, void*)) {
+    KParts__NavigationExtension_Connect_SelectionInfo((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
 void k_parts__navigationextension_mouse_over_info(void* self, void* item) {
     KParts__NavigationExtension_MouseOverInfo((KParts__NavigationExtension*)self, (KFileItem*)item);
 }
 
+void k_parts__navigationextension_on_mouse_over_info(void* self, void (*callback)(void*, void*)) {
+    KParts__NavigationExtension_Connect_MouseOverInfo((KParts__NavigationExtension*)self, (intptr_t)callback);
+}
+
 void k_parts__navigationextension_add_web_side_bar(void* self, void* url, const char* name) {
     KParts__NavigationExtension_AddWebSideBar((KParts__NavigationExtension*)self, (QUrl*)url, qstring(name));
+}
+
+void k_parts__navigationextension_on_add_web_side_bar(void* self, void (*callback)(void*, void*, const char*)) {
+    KParts__NavigationExtension_Connect_AddWebSideBar((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
 void k_parts__navigationextension_move_top_level_widget(void* self, int x, int y) {
     KParts__NavigationExtension_MoveTopLevelWidget((KParts__NavigationExtension*)self, x, y);
 }
 
+void k_parts__navigationextension_on_move_top_level_widget(void* self, void (*callback)(void*, int, int)) {
+    KParts__NavigationExtension_Connect_MoveTopLevelWidget((KParts__NavigationExtension*)self, (intptr_t)callback);
+}
+
 void k_parts__navigationextension_resize_top_level_widget(void* self, int w, int h) {
     KParts__NavigationExtension_ResizeTopLevelWidget((KParts__NavigationExtension*)self, w, h);
+}
+
+void k_parts__navigationextension_on_resize_top_level_widget(void* self, void (*callback)(void*, int, int)) {
+    KParts__NavigationExtension_Connect_ResizeTopLevelWidget((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
 void k_parts__navigationextension_request_focus(void* self, void* part) {
     KParts__NavigationExtension_RequestFocus((KParts__NavigationExtension*)self, (KParts__ReadOnlyPart*)part);
 }
 
+void k_parts__navigationextension_on_request_focus(void* self, void (*callback)(void*, void*)) {
+    KParts__NavigationExtension_Connect_RequestFocus((KParts__NavigationExtension*)self, (intptr_t)callback);
+}
+
 void k_parts__navigationextension_set_page_security(void* self, int pageSecurity) {
     KParts__NavigationExtension_SetPageSecurity((KParts__NavigationExtension*)self, pageSecurity);
 }
 
+void k_parts__navigationextension_on_set_page_security(void* self, void (*callback)(void*, int)) {
+    KParts__NavigationExtension_Connect_SetPageSecurity((KParts__NavigationExtension*)self, (intptr_t)callback);
+}
+
 void k_parts__navigationextension_items_removed(void* self, void* items) {
     KParts__NavigationExtension_ItemsRemoved((KParts__NavigationExtension*)self, (KFileItemList*)items);
+}
+
+void k_parts__navigationextension_on_items_removed(void* self, void (*callback)(void*, void*)) {
+    KParts__NavigationExtension_Connect_ItemsRemoved((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
 const char* k_parts__navigationextension_tr2(const char* s, const char* c) {
@@ -299,12 +383,24 @@ void k_parts__navigationextension_open_url_request2(void* self, void* url, void*
     KParts__NavigationExtension_OpenUrlRequest2((KParts__NavigationExtension*)self, (QUrl*)url, (KParts__OpenUrlArguments*)arguments);
 }
 
+void k_parts__navigationextension_on_open_url_request2(void* self, void (*callback)(void*, void*, void*)) {
+    KParts__NavigationExtension_Connect_OpenUrlRequest2((KParts__NavigationExtension*)self, (intptr_t)callback);
+}
+
 void k_parts__navigationextension_popup_menu3(void* self, void* global, void* items, void* arguments) {
     KParts__NavigationExtension_PopupMenu3((KParts__NavigationExtension*)self, (QPoint*)global, (KFileItemList*)items, (KParts__OpenUrlArguments*)arguments);
 }
 
+void k_parts__navigationextension_on_popup_menu3(void* self, void (*callback)(void*, void*, void*, void*)) {
+    KParts__NavigationExtension_Connect_PopupMenu3((KParts__NavigationExtension*)self, (intptr_t)callback);
+}
+
 void k_parts__navigationextension_popup_menu4(void* self, void* global, void* items, void* arguments, int32_t flags) {
     KParts__NavigationExtension_PopupMenu4((KParts__NavigationExtension*)self, (QPoint*)global, (KFileItemList*)items, (KParts__OpenUrlArguments*)arguments, flags);
+}
+
+void k_parts__navigationextension_on_popup_menu4(void* self, void (*callback)(void*, void*, void*, void*, int32_t)) {
+    KParts__NavigationExtension_Connect_PopupMenu4((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
 void k_parts__navigationextension_popup_menu5(void* self, void* global, void* items, void* arguments, int32_t flags, libqt_map /* of const char* to QAction** */ actionGroups) {
@@ -339,16 +435,32 @@ void k_parts__navigationextension_popup_menu5(void* self, void* global, void* it
     free(actionGroups_ret.values);
 }
 
+void k_parts__navigationextension_on_popup_menu5(void* self, void (*callback)(void*, void*, void*, void*, int32_t, libqt_map /* of const char* to QAction** */)) {
+    KParts__NavigationExtension_Connect_PopupMenu5((KParts__NavigationExtension*)self, (intptr_t)callback);
+}
+
 void k_parts__navigationextension_popup_menu32(void* self, void* global, void* url, mode_t mode) {
     KParts__NavigationExtension_PopupMenu32((KParts__NavigationExtension*)self, (QPoint*)global, (QUrl*)url, mode);
+}
+
+void k_parts__navigationextension_on_popup_menu32(void* self, void (*callback)(void*, void*, void*, mode_t)) {
+    KParts__NavigationExtension_Connect_PopupMenu32((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
 void k_parts__navigationextension_popup_menu42(void* self, void* global, void* url, mode_t mode, void* arguments) {
     KParts__NavigationExtension_PopupMenu42((KParts__NavigationExtension*)self, (QPoint*)global, (QUrl*)url, mode, (KParts__OpenUrlArguments*)arguments);
 }
 
+void k_parts__navigationextension_on_popup_menu42(void* self, void (*callback)(void*, void*, void*, mode_t, void*)) {
+    KParts__NavigationExtension_Connect_PopupMenu42((KParts__NavigationExtension*)self, (intptr_t)callback);
+}
+
 void k_parts__navigationextension_popup_menu52(void* self, void* global, void* url, mode_t mode, void* arguments, int32_t flags) {
     KParts__NavigationExtension_PopupMenu52((KParts__NavigationExtension*)self, (QPoint*)global, (QUrl*)url, mode, (KParts__OpenUrlArguments*)arguments, flags);
+}
+
+void k_parts__navigationextension_on_popup_menu52(void* self, void (*callback)(void*, void*, void*, mode_t, void*, int32_t)) {
+    KParts__NavigationExtension_Connect_PopupMenu52((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
 void k_parts__navigationextension_popup_menu6(void* self, void* global, void* url, mode_t mode, void* arguments, int32_t flags, libqt_map /* of const char* to QAction** */ actionGroups) {
@@ -381,6 +493,10 @@ void k_parts__navigationextension_popup_menu6(void* self, void* global, void* ur
     KParts__NavigationExtension_PopupMenu6((KParts__NavigationExtension*)self, (QPoint*)global, (QUrl*)url, mode, (KParts__OpenUrlArguments*)arguments, flags, actionGroups_ret);
     free(actionGroups_ret.keys);
     free(actionGroups_ret.values);
+}
+
+void k_parts__navigationextension_on_popup_menu6(void* self, void (*callback)(void*, void*, void*, mode_t, void*, int32_t, libqt_map /* of const char* to QAction** */)) {
+    KParts__NavigationExtension_Connect_PopupMenu6((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
 const char* k_parts__navigationextension_object_name(void* self) {

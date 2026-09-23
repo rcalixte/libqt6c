@@ -129,9 +129,11 @@ void QAbstractTextDocumentLayout_Update(QAbstractTextDocumentLayout* self) {
 
 void QAbstractTextDocumentLayout_Connect_Update(QAbstractTextDocumentLayout* self, intptr_t slot) {
     void (*slotFunc)(QAbstractTextDocumentLayout*) = reinterpret_cast<void (*)(QAbstractTextDocumentLayout*)>(slot);
-    QAbstractTextDocumentLayout::connect(self, &QAbstractTextDocumentLayout::update, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QAbstractTextDocumentLayout::connect(self,
+                                         static_cast<void (QAbstractTextDocumentLayout::*)(const QRectF&)>(&QAbstractTextDocumentLayout::update),
+                                         [self, slotFunc]() {
+                                             slotFunc(self);
+                                         });
 }
 
 void QAbstractTextDocumentLayout_UpdateBlock(QAbstractTextDocumentLayout* self, const QTextBlock* block) {
@@ -140,12 +142,14 @@ void QAbstractTextDocumentLayout_UpdateBlock(QAbstractTextDocumentLayout* self, 
 
 void QAbstractTextDocumentLayout_Connect_UpdateBlock(QAbstractTextDocumentLayout* self, intptr_t slot) {
     void (*slotFunc)(QAbstractTextDocumentLayout*, QTextBlock*) = reinterpret_cast<void (*)(QAbstractTextDocumentLayout*, QTextBlock*)>(slot);
-    QAbstractTextDocumentLayout::connect(self, &QAbstractTextDocumentLayout::updateBlock, [self, slotFunc](const QTextBlock& block) {
-        const QTextBlock& block_ret = block;
-        // Cast returned reference into pointer
-        QTextBlock* sigval1 = const_cast<QTextBlock*>(&block_ret);
-        slotFunc(self, sigval1);
-    });
+    QAbstractTextDocumentLayout::connect(self,
+                                         static_cast<void (QAbstractTextDocumentLayout::*)(const QTextBlock&)>(&QAbstractTextDocumentLayout::updateBlock),
+                                         [self, slotFunc](const QTextBlock& block) {
+                                             const QTextBlock& block_ret = block;
+                                             // Cast returned reference into pointer
+                                             QTextBlock* sigval1 = const_cast<QTextBlock*>(&block_ret);
+                                             slotFunc(self, sigval1);
+                                         });
 }
 
 void QAbstractTextDocumentLayout_DocumentSizeChanged(QAbstractTextDocumentLayout* self, const QSizeF* newSize) {
@@ -154,12 +158,14 @@ void QAbstractTextDocumentLayout_DocumentSizeChanged(QAbstractTextDocumentLayout
 
 void QAbstractTextDocumentLayout_Connect_DocumentSizeChanged(QAbstractTextDocumentLayout* self, intptr_t slot) {
     void (*slotFunc)(QAbstractTextDocumentLayout*, QSizeF*) = reinterpret_cast<void (*)(QAbstractTextDocumentLayout*, QSizeF*)>(slot);
-    QAbstractTextDocumentLayout::connect(self, &QAbstractTextDocumentLayout::documentSizeChanged, [self, slotFunc](const QSizeF& newSize) {
-        const QSizeF& newSize_ret = newSize;
-        // Cast returned reference into pointer
-        QSizeF* sigval1 = const_cast<QSizeF*>(&newSize_ret);
-        slotFunc(self, sigval1);
-    });
+    QAbstractTextDocumentLayout::connect(self,
+                                         static_cast<void (QAbstractTextDocumentLayout::*)(const QSizeF&)>(&QAbstractTextDocumentLayout::documentSizeChanged),
+                                         [self, slotFunc](const QSizeF& newSize) {
+                                             const QSizeF& newSize_ret = newSize;
+                                             // Cast returned reference into pointer
+                                             QSizeF* sigval1 = const_cast<QSizeF*>(&newSize_ret);
+                                             slotFunc(self, sigval1);
+                                         });
 }
 
 void QAbstractTextDocumentLayout_PageCountChanged(QAbstractTextDocumentLayout* self, int newPages) {
@@ -168,10 +174,12 @@ void QAbstractTextDocumentLayout_PageCountChanged(QAbstractTextDocumentLayout* s
 
 void QAbstractTextDocumentLayout_Connect_PageCountChanged(QAbstractTextDocumentLayout* self, intptr_t slot) {
     void (*slotFunc)(QAbstractTextDocumentLayout*, int) = reinterpret_cast<void (*)(QAbstractTextDocumentLayout*, int)>(slot);
-    QAbstractTextDocumentLayout::connect(self, &QAbstractTextDocumentLayout::pageCountChanged, [self, slotFunc](int newPages) {
-        int sigval1 = newPages;
-        slotFunc(self, sigval1);
-    });
+    QAbstractTextDocumentLayout::connect(self,
+                                         static_cast<void (QAbstractTextDocumentLayout::*)(int)>(&QAbstractTextDocumentLayout::pageCountChanged),
+                                         [self, slotFunc](int newPages) {
+                                             int sigval1 = newPages;
+                                             slotFunc(self, sigval1);
+                                         });
 }
 
 void QAbstractTextDocumentLayout_DocumentChanged(QAbstractTextDocumentLayout* self, int from, int charsRemoved, int charsAdded) {
@@ -212,12 +220,14 @@ void QAbstractTextDocumentLayout_Update1(QAbstractTextDocumentLayout* self, cons
 
 void QAbstractTextDocumentLayout_Connect_Update1(QAbstractTextDocumentLayout* self, intptr_t slot) {
     void (*slotFunc)(QAbstractTextDocumentLayout*, QRectF*) = reinterpret_cast<void (*)(QAbstractTextDocumentLayout*, QRectF*)>(slot);
-    QAbstractTextDocumentLayout::connect(self, &QAbstractTextDocumentLayout::update, [self, slotFunc](const QRectF& param1) {
-        const QRectF& param1_ret = param1;
-        // Cast returned reference into pointer
-        QRectF* sigval1 = const_cast<QRectF*>(&param1_ret);
-        slotFunc(self, sigval1);
-    });
+    QAbstractTextDocumentLayout::connect(self,
+                                         static_cast<void (QAbstractTextDocumentLayout::*)(const QRectF&)>(&QAbstractTextDocumentLayout::update),
+                                         [self, slotFunc](const QRectF& param1) {
+                                             const QRectF& param1_ret = param1;
+                                             // Cast returned reference into pointer
+                                             QRectF* sigval1 = const_cast<QRectF*>(&param1_ret);
+                                             slotFunc(self, sigval1);
+                                         });
 }
 
 // Base class handler implementation

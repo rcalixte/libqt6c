@@ -165,9 +165,11 @@ void QsciAPIs_ApiPreparationCancelled(QsciAPIs* self) {
 
 void QsciAPIs_Connect_ApiPreparationCancelled(QsciAPIs* self, intptr_t slot) {
     void (*slotFunc)(QsciAPIs*) = reinterpret_cast<void (*)(QsciAPIs*)>(slot);
-    QsciAPIs::connect(self, &QsciAPIs::apiPreparationCancelled, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QsciAPIs::connect(self,
+                      static_cast<void (QsciAPIs::*)()>(&QsciAPIs::apiPreparationCancelled),
+                      [self, slotFunc]() {
+                          slotFunc(self);
+                      });
 }
 
 void QsciAPIs_ApiPreparationStarted(QsciAPIs* self) {
@@ -176,9 +178,11 @@ void QsciAPIs_ApiPreparationStarted(QsciAPIs* self) {
 
 void QsciAPIs_Connect_ApiPreparationStarted(QsciAPIs* self, intptr_t slot) {
     void (*slotFunc)(QsciAPIs*) = reinterpret_cast<void (*)(QsciAPIs*)>(slot);
-    QsciAPIs::connect(self, &QsciAPIs::apiPreparationStarted, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QsciAPIs::connect(self,
+                      static_cast<void (QsciAPIs::*)()>(&QsciAPIs::apiPreparationStarted),
+                      [self, slotFunc]() {
+                          slotFunc(self);
+                      });
 }
 
 void QsciAPIs_ApiPreparationFinished(QsciAPIs* self) {
@@ -187,9 +191,11 @@ void QsciAPIs_ApiPreparationFinished(QsciAPIs* self) {
 
 void QsciAPIs_Connect_ApiPreparationFinished(QsciAPIs* self, intptr_t slot) {
     void (*slotFunc)(QsciAPIs*) = reinterpret_cast<void (*)(QsciAPIs*)>(slot);
-    QsciAPIs::connect(self, &QsciAPIs::apiPreparationFinished, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QsciAPIs::connect(self,
+                      static_cast<void (QsciAPIs::*)()>(&QsciAPIs::apiPreparationFinished),
+                      [self, slotFunc]() {
+                          slotFunc(self);
+                      });
 }
 
 bool QsciAPIs_IsPrepared1(const QsciAPIs* self, const libqt_string filename) {

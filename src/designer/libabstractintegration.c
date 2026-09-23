@@ -231,12 +231,24 @@ void q_designerintegrationinterface_property_changed(void* self, void* formWindo
     QDesignerIntegrationInterface_PropertyChanged((QDesignerIntegrationInterface*)self, (QDesignerFormWindowInterface*)formWindow, qstring(name), (QVariant*)value);
 }
 
+void q_designerintegrationinterface_on_property_changed(void* self, void (*callback)(void*, void*, const char*, void*)) {
+    QDesignerIntegrationInterface_Connect_PropertyChanged((QDesignerIntegrationInterface*)self, (intptr_t)callback);
+}
+
 void q_designerintegrationinterface_object_name_changed(void* self, void* formWindow, void* object, const char* newName, const char* oldName) {
     QDesignerIntegrationInterface_ObjectNameChanged((QDesignerIntegrationInterface*)self, (QDesignerFormWindowInterface*)formWindow, (QObject*)object, qstring(newName), qstring(oldName));
 }
 
+void q_designerintegrationinterface_on_object_name_changed(void* self, void (*callback)(void*, void*, void*, const char*, const char*)) {
+    QDesignerIntegrationInterface_Connect_ObjectNameChanged((QDesignerIntegrationInterface*)self, (intptr_t)callback);
+}
+
 void q_designerintegrationinterface_help_requested(void* self, const char* manual, const char* document) {
     QDesignerIntegrationInterface_HelpRequested((QDesignerIntegrationInterface*)self, qstring(manual), qstring(document));
+}
+
+void q_designerintegrationinterface_on_help_requested(void* self, void (*callback)(void*, const char*, const char*)) {
+    QDesignerIntegrationInterface_Connect_HelpRequested((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
 void q_designerintegrationinterface_navigate_to_slot(void* self, const char* objectName, const char* signalSignature, const char* parameterNames[static 1]) {
@@ -253,8 +265,16 @@ void q_designerintegrationinterface_navigate_to_slot(void* self, const char* obj
     free(parameterNames_qstr);
 }
 
+void q_designerintegrationinterface_on_navigate_to_slot(void* self, void (*callback)(void*, const char*, const char*, const char**)) {
+    QDesignerIntegrationInterface_Connect_NavigateToSlot((QDesignerIntegrationInterface*)self, (intptr_t)callback);
+}
+
 void q_designerintegrationinterface_navigate_to_slot2(void* self, const char* slotSignature) {
     QDesignerIntegrationInterface_NavigateToSlot2((QDesignerIntegrationInterface*)self, qstring(slotSignature));
+}
+
+void q_designerintegrationinterface_on_navigate_to_slot2(void* self, void (*callback)(void*, const char*)) {
+    QDesignerIntegrationInterface_Connect_NavigateToSlot2((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
 void q_designerintegrationinterface_set_features(void* self, int32_t f) {
@@ -1095,12 +1115,24 @@ void q_designerintegration_property_changed(void* self, void* formWindow, const 
     QDesignerIntegrationInterface_PropertyChanged((QDesignerIntegrationInterface*)self, (QDesignerFormWindowInterface*)formWindow, qstring(name), (QVariant*)value);
 }
 
+void q_designerintegration_on_property_changed(void* self, void (*callback)(void*, void*, const char*, void*)) {
+    QDesignerIntegrationInterface_Connect_PropertyChanged((QDesignerIntegrationInterface*)self, (intptr_t)callback);
+}
+
 void q_designerintegration_object_name_changed(void* self, void* formWindow, void* object, const char* newName, const char* oldName) {
     QDesignerIntegrationInterface_ObjectNameChanged((QDesignerIntegrationInterface*)self, (QDesignerFormWindowInterface*)formWindow, (QObject*)object, qstring(newName), qstring(oldName));
 }
 
+void q_designerintegration_on_object_name_changed(void* self, void (*callback)(void*, void*, void*, const char*, const char*)) {
+    QDesignerIntegrationInterface_Connect_ObjectNameChanged((QDesignerIntegrationInterface*)self, (intptr_t)callback);
+}
+
 void q_designerintegration_help_requested(void* self, const char* manual, const char* document) {
     QDesignerIntegrationInterface_HelpRequested((QDesignerIntegrationInterface*)self, qstring(manual), qstring(document));
+}
+
+void q_designerintegration_on_help_requested(void* self, void (*callback)(void*, const char*, const char*)) {
+    QDesignerIntegrationInterface_Connect_HelpRequested((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
 void q_designerintegration_navigate_to_slot(void* self, const char* objectName, const char* signalSignature, const char* parameterNames[static 1]) {
@@ -1117,8 +1149,16 @@ void q_designerintegration_navigate_to_slot(void* self, const char* objectName, 
     free(parameterNames_qstr);
 }
 
+void q_designerintegration_on_navigate_to_slot(void* self, void (*callback)(void*, const char*, const char*, const char**)) {
+    QDesignerIntegrationInterface_Connect_NavigateToSlot((QDesignerIntegrationInterface*)self, (intptr_t)callback);
+}
+
 void q_designerintegration_navigate_to_slot2(void* self, const char* slotSignature) {
     QDesignerIntegrationInterface_NavigateToSlot2((QDesignerIntegrationInterface*)self, qstring(slotSignature));
+}
+
+void q_designerintegration_on_navigate_to_slot2(void* self, void (*callback)(void*, const char*)) {
+    QDesignerIntegrationInterface_Connect_NavigateToSlot2((QDesignerIntegrationInterface*)self, (intptr_t)callback);
 }
 
 const char* q_designerintegration_object_name(void* self) {

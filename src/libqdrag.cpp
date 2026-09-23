@@ -95,10 +95,12 @@ void QDrag_ActionChanged(QDrag* self, int action) {
 
 void QDrag_Connect_ActionChanged(QDrag* self, intptr_t slot) {
     void (*slotFunc)(QDrag*, int) = reinterpret_cast<void (*)(QDrag*, int)>(slot);
-    QDrag::connect(self, &QDrag::actionChanged, [self, slotFunc](Qt::DropAction action) {
-        int sigval1 = static_cast<int>(action);
-        slotFunc(self, sigval1);
-    });
+    QDrag::connect(self,
+                   static_cast<void (QDrag::*)(Qt::DropAction)>(&QDrag::actionChanged),
+                   [self, slotFunc](Qt::DropAction action) {
+                       int sigval1 = static_cast<int>(action);
+                       slotFunc(self, sigval1);
+                   });
 }
 
 void QDrag_TargetChanged(QDrag* self, QObject* newTarget) {
@@ -107,10 +109,12 @@ void QDrag_TargetChanged(QDrag* self, QObject* newTarget) {
 
 void QDrag_Connect_TargetChanged(QDrag* self, intptr_t slot) {
     void (*slotFunc)(QDrag*, QObject*) = reinterpret_cast<void (*)(QDrag*, QObject*)>(slot);
-    QDrag::connect(self, &QDrag::targetChanged, [self, slotFunc](QObject* newTarget) {
-        QObject* sigval1 = newTarget;
-        slotFunc(self, sigval1);
-    });
+    QDrag::connect(self,
+                   static_cast<void (QDrag::*)(QObject*)>(&QDrag::targetChanged),
+                   [self, slotFunc](QObject* newTarget) {
+                       QObject* sigval1 = newTarget;
+                       slotFunc(self, sigval1);
+                   });
 }
 
 int QDrag_Exec1(QDrag* self, int supportedActions) {

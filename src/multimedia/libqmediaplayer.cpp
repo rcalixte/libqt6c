@@ -251,12 +251,14 @@ void QMediaPlayer_SourceChanged(QMediaPlayer* self, const QUrl* media) {
 
 void QMediaPlayer_Connect_SourceChanged(QMediaPlayer* self, intptr_t slot) {
     void (*slotFunc)(QMediaPlayer*, QUrl*) = reinterpret_cast<void (*)(QMediaPlayer*, QUrl*)>(slot);
-    QMediaPlayer::connect(self, &QMediaPlayer::sourceChanged, [self, slotFunc](const QUrl& media) {
-        const QUrl& media_ret = media;
-        // Cast returned reference into pointer
-        QUrl* sigval1 = const_cast<QUrl*>(&media_ret);
-        slotFunc(self, sigval1);
-    });
+    QMediaPlayer::connect(self,
+                          static_cast<void (QMediaPlayer::*)(const QUrl&)>(&QMediaPlayer::sourceChanged),
+                          [self, slotFunc](const QUrl& media) {
+                              const QUrl& media_ret = media;
+                              // Cast returned reference into pointer
+                              QUrl* sigval1 = const_cast<QUrl*>(&media_ret);
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QMediaPlayer_PlaybackStateChanged(QMediaPlayer* self, int newState) {
@@ -265,10 +267,12 @@ void QMediaPlayer_PlaybackStateChanged(QMediaPlayer* self, int newState) {
 
 void QMediaPlayer_Connect_PlaybackStateChanged(QMediaPlayer* self, intptr_t slot) {
     void (*slotFunc)(QMediaPlayer*, int) = reinterpret_cast<void (*)(QMediaPlayer*, int)>(slot);
-    QMediaPlayer::connect(self, &QMediaPlayer::playbackStateChanged, [self, slotFunc](QMediaPlayer::PlaybackState newState) {
-        int sigval1 = static_cast<int>(newState);
-        slotFunc(self, sigval1);
-    });
+    QMediaPlayer::connect(self,
+                          static_cast<void (QMediaPlayer::*)(QMediaPlayer::PlaybackState)>(&QMediaPlayer::playbackStateChanged),
+                          [self, slotFunc](QMediaPlayer::PlaybackState newState) {
+                              int sigval1 = static_cast<int>(newState);
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QMediaPlayer_MediaStatusChanged(QMediaPlayer* self, int status) {
@@ -277,10 +281,12 @@ void QMediaPlayer_MediaStatusChanged(QMediaPlayer* self, int status) {
 
 void QMediaPlayer_Connect_MediaStatusChanged(QMediaPlayer* self, intptr_t slot) {
     void (*slotFunc)(QMediaPlayer*, int) = reinterpret_cast<void (*)(QMediaPlayer*, int)>(slot);
-    QMediaPlayer::connect(self, &QMediaPlayer::mediaStatusChanged, [self, slotFunc](QMediaPlayer::MediaStatus status) {
-        int sigval1 = static_cast<int>(status);
-        slotFunc(self, sigval1);
-    });
+    QMediaPlayer::connect(self,
+                          static_cast<void (QMediaPlayer::*)(QMediaPlayer::MediaStatus)>(&QMediaPlayer::mediaStatusChanged),
+                          [self, slotFunc](QMediaPlayer::MediaStatus status) {
+                              int sigval1 = static_cast<int>(status);
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QMediaPlayer_DurationChanged(QMediaPlayer* self, long long duration) {
@@ -289,10 +295,12 @@ void QMediaPlayer_DurationChanged(QMediaPlayer* self, long long duration) {
 
 void QMediaPlayer_Connect_DurationChanged(QMediaPlayer* self, intptr_t slot) {
     void (*slotFunc)(QMediaPlayer*, long long) = reinterpret_cast<void (*)(QMediaPlayer*, long long)>(slot);
-    QMediaPlayer::connect(self, &QMediaPlayer::durationChanged, [self, slotFunc](qint64 duration) {
-        long long sigval1 = static_cast<long long>(duration);
-        slotFunc(self, sigval1);
-    });
+    QMediaPlayer::connect(self,
+                          static_cast<void (QMediaPlayer::*)(qint64)>(&QMediaPlayer::durationChanged),
+                          [self, slotFunc](qint64 duration) {
+                              long long sigval1 = static_cast<long long>(duration);
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QMediaPlayer_PositionChanged(QMediaPlayer* self, long long position) {
@@ -301,10 +309,12 @@ void QMediaPlayer_PositionChanged(QMediaPlayer* self, long long position) {
 
 void QMediaPlayer_Connect_PositionChanged(QMediaPlayer* self, intptr_t slot) {
     void (*slotFunc)(QMediaPlayer*, long long) = reinterpret_cast<void (*)(QMediaPlayer*, long long)>(slot);
-    QMediaPlayer::connect(self, &QMediaPlayer::positionChanged, [self, slotFunc](qint64 position) {
-        long long sigval1 = static_cast<long long>(position);
-        slotFunc(self, sigval1);
-    });
+    QMediaPlayer::connect(self,
+                          static_cast<void (QMediaPlayer::*)(qint64)>(&QMediaPlayer::positionChanged),
+                          [self, slotFunc](qint64 position) {
+                              long long sigval1 = static_cast<long long>(position);
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QMediaPlayer_HasAudioChanged(QMediaPlayer* self, bool available) {
@@ -313,10 +323,12 @@ void QMediaPlayer_HasAudioChanged(QMediaPlayer* self, bool available) {
 
 void QMediaPlayer_Connect_HasAudioChanged(QMediaPlayer* self, intptr_t slot) {
     void (*slotFunc)(QMediaPlayer*, bool) = reinterpret_cast<void (*)(QMediaPlayer*, bool)>(slot);
-    QMediaPlayer::connect(self, &QMediaPlayer::hasAudioChanged, [self, slotFunc](bool available) {
-        bool sigval1 = available;
-        slotFunc(self, sigval1);
-    });
+    QMediaPlayer::connect(self,
+                          static_cast<void (QMediaPlayer::*)(bool)>(&QMediaPlayer::hasAudioChanged),
+                          [self, slotFunc](bool available) {
+                              bool sigval1 = available;
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QMediaPlayer_HasVideoChanged(QMediaPlayer* self, bool videoAvailable) {
@@ -325,10 +337,12 @@ void QMediaPlayer_HasVideoChanged(QMediaPlayer* self, bool videoAvailable) {
 
 void QMediaPlayer_Connect_HasVideoChanged(QMediaPlayer* self, intptr_t slot) {
     void (*slotFunc)(QMediaPlayer*, bool) = reinterpret_cast<void (*)(QMediaPlayer*, bool)>(slot);
-    QMediaPlayer::connect(self, &QMediaPlayer::hasVideoChanged, [self, slotFunc](bool videoAvailable) {
-        bool sigval1 = videoAvailable;
-        slotFunc(self, sigval1);
-    });
+    QMediaPlayer::connect(self,
+                          static_cast<void (QMediaPlayer::*)(bool)>(&QMediaPlayer::hasVideoChanged),
+                          [self, slotFunc](bool videoAvailable) {
+                              bool sigval1 = videoAvailable;
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QMediaPlayer_BufferProgressChanged(QMediaPlayer* self, float progress) {
@@ -337,10 +351,12 @@ void QMediaPlayer_BufferProgressChanged(QMediaPlayer* self, float progress) {
 
 void QMediaPlayer_Connect_BufferProgressChanged(QMediaPlayer* self, intptr_t slot) {
     void (*slotFunc)(QMediaPlayer*, float) = reinterpret_cast<void (*)(QMediaPlayer*, float)>(slot);
-    QMediaPlayer::connect(self, &QMediaPlayer::bufferProgressChanged, [self, slotFunc](float progress) {
-        float sigval1 = progress;
-        slotFunc(self, sigval1);
-    });
+    QMediaPlayer::connect(self,
+                          static_cast<void (QMediaPlayer::*)(float)>(&QMediaPlayer::bufferProgressChanged),
+                          [self, slotFunc](float progress) {
+                              float sigval1 = progress;
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QMediaPlayer_SeekableChanged(QMediaPlayer* self, bool seekable) {
@@ -349,10 +365,12 @@ void QMediaPlayer_SeekableChanged(QMediaPlayer* self, bool seekable) {
 
 void QMediaPlayer_Connect_SeekableChanged(QMediaPlayer* self, intptr_t slot) {
     void (*slotFunc)(QMediaPlayer*, bool) = reinterpret_cast<void (*)(QMediaPlayer*, bool)>(slot);
-    QMediaPlayer::connect(self, &QMediaPlayer::seekableChanged, [self, slotFunc](bool seekable) {
-        bool sigval1 = seekable;
-        slotFunc(self, sigval1);
-    });
+    QMediaPlayer::connect(self,
+                          static_cast<void (QMediaPlayer::*)(bool)>(&QMediaPlayer::seekableChanged),
+                          [self, slotFunc](bool seekable) {
+                              bool sigval1 = seekable;
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QMediaPlayer_PlayingChanged(QMediaPlayer* self, bool playing) {
@@ -361,10 +379,12 @@ void QMediaPlayer_PlayingChanged(QMediaPlayer* self, bool playing) {
 
 void QMediaPlayer_Connect_PlayingChanged(QMediaPlayer* self, intptr_t slot) {
     void (*slotFunc)(QMediaPlayer*, bool) = reinterpret_cast<void (*)(QMediaPlayer*, bool)>(slot);
-    QMediaPlayer::connect(self, &QMediaPlayer::playingChanged, [self, slotFunc](bool playing) {
-        bool sigval1 = playing;
-        slotFunc(self, sigval1);
-    });
+    QMediaPlayer::connect(self,
+                          static_cast<void (QMediaPlayer::*)(bool)>(&QMediaPlayer::playingChanged),
+                          [self, slotFunc](bool playing) {
+                              bool sigval1 = playing;
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QMediaPlayer_PlaybackRateChanged(QMediaPlayer* self, double rate) {
@@ -373,10 +393,12 @@ void QMediaPlayer_PlaybackRateChanged(QMediaPlayer* self, double rate) {
 
 void QMediaPlayer_Connect_PlaybackRateChanged(QMediaPlayer* self, intptr_t slot) {
     void (*slotFunc)(QMediaPlayer*, double) = reinterpret_cast<void (*)(QMediaPlayer*, double)>(slot);
-    QMediaPlayer::connect(self, &QMediaPlayer::playbackRateChanged, [self, slotFunc](qreal rate) {
-        double sigval1 = static_cast<double>(rate);
-        slotFunc(self, sigval1);
-    });
+    QMediaPlayer::connect(self,
+                          static_cast<void (QMediaPlayer::*)(qreal)>(&QMediaPlayer::playbackRateChanged),
+                          [self, slotFunc](qreal rate) {
+                              double sigval1 = static_cast<double>(rate);
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QMediaPlayer_LoopsChanged(QMediaPlayer* self) {
@@ -385,9 +407,11 @@ void QMediaPlayer_LoopsChanged(QMediaPlayer* self) {
 
 void QMediaPlayer_Connect_LoopsChanged(QMediaPlayer* self, intptr_t slot) {
     void (*slotFunc)(QMediaPlayer*) = reinterpret_cast<void (*)(QMediaPlayer*)>(slot);
-    QMediaPlayer::connect(self, &QMediaPlayer::loopsChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QMediaPlayer::connect(self,
+                          static_cast<void (QMediaPlayer::*)()>(&QMediaPlayer::loopsChanged),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QMediaPlayer_MetaDataChanged(QMediaPlayer* self) {
@@ -396,9 +420,11 @@ void QMediaPlayer_MetaDataChanged(QMediaPlayer* self) {
 
 void QMediaPlayer_Connect_MetaDataChanged(QMediaPlayer* self, intptr_t slot) {
     void (*slotFunc)(QMediaPlayer*) = reinterpret_cast<void (*)(QMediaPlayer*)>(slot);
-    QMediaPlayer::connect(self, &QMediaPlayer::metaDataChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QMediaPlayer::connect(self,
+                          static_cast<void (QMediaPlayer::*)()>(&QMediaPlayer::metaDataChanged),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QMediaPlayer_VideoOutputChanged(QMediaPlayer* self) {
@@ -407,9 +433,11 @@ void QMediaPlayer_VideoOutputChanged(QMediaPlayer* self) {
 
 void QMediaPlayer_Connect_VideoOutputChanged(QMediaPlayer* self, intptr_t slot) {
     void (*slotFunc)(QMediaPlayer*) = reinterpret_cast<void (*)(QMediaPlayer*)>(slot);
-    QMediaPlayer::connect(self, &QMediaPlayer::videoOutputChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QMediaPlayer::connect(self,
+                          static_cast<void (QMediaPlayer::*)()>(&QMediaPlayer::videoOutputChanged),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QMediaPlayer_AudioOutputChanged(QMediaPlayer* self) {
@@ -418,9 +446,11 @@ void QMediaPlayer_AudioOutputChanged(QMediaPlayer* self) {
 
 void QMediaPlayer_Connect_AudioOutputChanged(QMediaPlayer* self, intptr_t slot) {
     void (*slotFunc)(QMediaPlayer*) = reinterpret_cast<void (*)(QMediaPlayer*)>(slot);
-    QMediaPlayer::connect(self, &QMediaPlayer::audioOutputChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QMediaPlayer::connect(self,
+                          static_cast<void (QMediaPlayer::*)()>(&QMediaPlayer::audioOutputChanged),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QMediaPlayer_AudioBufferOutputChanged(QMediaPlayer* self) {
@@ -429,9 +459,11 @@ void QMediaPlayer_AudioBufferOutputChanged(QMediaPlayer* self) {
 
 void QMediaPlayer_Connect_AudioBufferOutputChanged(QMediaPlayer* self, intptr_t slot) {
     void (*slotFunc)(QMediaPlayer*) = reinterpret_cast<void (*)(QMediaPlayer*)>(slot);
-    QMediaPlayer::connect(self, &QMediaPlayer::audioBufferOutputChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QMediaPlayer::connect(self,
+                          static_cast<void (QMediaPlayer::*)()>(&QMediaPlayer::audioBufferOutputChanged),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QMediaPlayer_TracksChanged(QMediaPlayer* self) {
@@ -440,9 +472,11 @@ void QMediaPlayer_TracksChanged(QMediaPlayer* self) {
 
 void QMediaPlayer_Connect_TracksChanged(QMediaPlayer* self, intptr_t slot) {
     void (*slotFunc)(QMediaPlayer*) = reinterpret_cast<void (*)(QMediaPlayer*)>(slot);
-    QMediaPlayer::connect(self, &QMediaPlayer::tracksChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QMediaPlayer::connect(self,
+                          static_cast<void (QMediaPlayer::*)()>(&QMediaPlayer::tracksChanged),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QMediaPlayer_ActiveTracksChanged(QMediaPlayer* self) {
@@ -451,9 +485,11 @@ void QMediaPlayer_ActiveTracksChanged(QMediaPlayer* self) {
 
 void QMediaPlayer_Connect_ActiveTracksChanged(QMediaPlayer* self, intptr_t slot) {
     void (*slotFunc)(QMediaPlayer*) = reinterpret_cast<void (*)(QMediaPlayer*)>(slot);
-    QMediaPlayer::connect(self, &QMediaPlayer::activeTracksChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QMediaPlayer::connect(self,
+                          static_cast<void (QMediaPlayer::*)()>(&QMediaPlayer::activeTracksChanged),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QMediaPlayer_ErrorChanged(QMediaPlayer* self) {
@@ -462,9 +498,11 @@ void QMediaPlayer_ErrorChanged(QMediaPlayer* self) {
 
 void QMediaPlayer_Connect_ErrorChanged(QMediaPlayer* self, intptr_t slot) {
     void (*slotFunc)(QMediaPlayer*) = reinterpret_cast<void (*)(QMediaPlayer*)>(slot);
-    QMediaPlayer::connect(self, &QMediaPlayer::errorChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QMediaPlayer::connect(self,
+                          static_cast<void (QMediaPlayer::*)()>(&QMediaPlayer::errorChanged),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QMediaPlayer_ErrorOccurred(QMediaPlayer* self, int error, const libqt_string errorString) {
@@ -474,19 +512,21 @@ void QMediaPlayer_ErrorOccurred(QMediaPlayer* self, int error, const libqt_strin
 
 void QMediaPlayer_Connect_ErrorOccurred(QMediaPlayer* self, intptr_t slot) {
     void (*slotFunc)(QMediaPlayer*, int, const char*) = reinterpret_cast<void (*)(QMediaPlayer*, int, const char*)>(slot);
-    QMediaPlayer::connect(self, &QMediaPlayer::errorOccurred, [self, slotFunc](QMediaPlayer::Error error, const QString& errorString) {
-        int sigval1 = static_cast<int>(error);
-        const auto errorString_ret = errorString;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray errorString_b = errorString_ret.toUtf8();
-        auto errorString_str_len = errorString_b.length();
-        char* errorString_str = static_cast<char*>(malloc(errorString_str_len + 1));
-        memcpy(errorString_str, errorString_b.data(), errorString_str_len);
-        errorString_str[errorString_str_len] = '\0';
-        const char* sigval2 = errorString_str;
-        slotFunc(self, sigval1, sigval2);
-        libqt_free(errorString_str);
-    });
+    QMediaPlayer::connect(self,
+                          static_cast<void (QMediaPlayer::*)(QMediaPlayer::Error, const QString&)>(&QMediaPlayer::errorOccurred),
+                          [self, slotFunc](QMediaPlayer::Error error, const QString& errorString) {
+                              int sigval1 = static_cast<int>(error);
+                              const auto errorString_ret = errorString;
+                              // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                              QByteArray errorString_b = errorString_ret.toUtf8();
+                              auto errorString_str_len = errorString_b.length();
+                              char* errorString_str = static_cast<char*>(malloc(errorString_str_len + 1));
+                              memcpy(errorString_str, errorString_b.data(), errorString_str_len);
+                              errorString_str[errorString_str_len] = '\0';
+                              const char* sigval2 = errorString_str;
+                              slotFunc(self, sigval1, sigval2);
+                              libqt_free(errorString_str);
+                          });
 }
 
 void QMediaPlayer_SetSourceDevice2(QMediaPlayer* self, QIODevice* device, const QUrl* sourceUrl) {

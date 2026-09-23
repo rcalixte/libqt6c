@@ -66,10 +66,12 @@ void QSignalMapper_MappedInt(QSignalMapper* self, int param1) {
 
 void QSignalMapper_Connect_MappedInt(QSignalMapper* self, intptr_t slot) {
     void (*slotFunc)(QSignalMapper*, int) = reinterpret_cast<void (*)(QSignalMapper*, int)>(slot);
-    QSignalMapper::connect(self, &QSignalMapper::mappedInt, [self, slotFunc](int param1) {
-        int sigval1 = param1;
-        slotFunc(self, sigval1);
-    });
+    QSignalMapper::connect(self,
+                           static_cast<void (QSignalMapper::*)(int)>(&QSignalMapper::mappedInt),
+                           [self, slotFunc](int param1) {
+                               int sigval1 = param1;
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QSignalMapper_MappedString(QSignalMapper* self, const libqt_string param1) {
@@ -79,18 +81,20 @@ void QSignalMapper_MappedString(QSignalMapper* self, const libqt_string param1) 
 
 void QSignalMapper_Connect_MappedString(QSignalMapper* self, intptr_t slot) {
     void (*slotFunc)(QSignalMapper*, const char*) = reinterpret_cast<void (*)(QSignalMapper*, const char*)>(slot);
-    QSignalMapper::connect(self, &QSignalMapper::mappedString, [self, slotFunc](const QString& param1) {
-        const auto param1_ret = param1;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray param1_b = param1_ret.toUtf8();
-        auto param1_str_len = param1_b.length();
-        char* param1_str = static_cast<char*>(malloc(param1_str_len + 1));
-        memcpy(param1_str, param1_b.data(), param1_str_len);
-        param1_str[param1_str_len] = '\0';
-        const char* sigval1 = param1_str;
-        slotFunc(self, sigval1);
-        libqt_free(param1_str);
-    });
+    QSignalMapper::connect(self,
+                           static_cast<void (QSignalMapper::*)(const QString&)>(&QSignalMapper::mappedString),
+                           [self, slotFunc](const QString& param1) {
+                               const auto param1_ret = param1;
+                               // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                               QByteArray param1_b = param1_ret.toUtf8();
+                               auto param1_str_len = param1_b.length();
+                               char* param1_str = static_cast<char*>(malloc(param1_str_len + 1));
+                               memcpy(param1_str, param1_b.data(), param1_str_len);
+                               param1_str[param1_str_len] = '\0';
+                               const char* sigval1 = param1_str;
+                               slotFunc(self, sigval1);
+                               libqt_free(param1_str);
+                           });
 }
 
 void QSignalMapper_MappedObject(QSignalMapper* self, QObject* param1) {
@@ -99,10 +103,12 @@ void QSignalMapper_MappedObject(QSignalMapper* self, QObject* param1) {
 
 void QSignalMapper_Connect_MappedObject(QSignalMapper* self, intptr_t slot) {
     void (*slotFunc)(QSignalMapper*, QObject*) = reinterpret_cast<void (*)(QSignalMapper*, QObject*)>(slot);
-    QSignalMapper::connect(self, &QSignalMapper::mappedObject, [self, slotFunc](QObject* param1) {
-        QObject* sigval1 = param1;
-        slotFunc(self, sigval1);
-    });
+    QSignalMapper::connect(self,
+                           static_cast<void (QSignalMapper::*)(QObject*)>(&QSignalMapper::mappedObject),
+                           [self, slotFunc](QObject* param1) {
+                               QObject* sigval1 = param1;
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QSignalMapper_Map(QSignalMapper* self) {

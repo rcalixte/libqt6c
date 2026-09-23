@@ -323,9 +323,11 @@ void QWebSocket_AboutToClose(QWebSocket* self) {
 
 void QWebSocket_Connect_AboutToClose(QWebSocket* self, intptr_t slot) {
     void (*slotFunc)(QWebSocket*) = reinterpret_cast<void (*)(QWebSocket*)>(slot);
-    QWebSocket::connect(self, &QWebSocket::aboutToClose, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QWebSocket::connect(self,
+                        static_cast<void (QWebSocket::*)()>(&QWebSocket::aboutToClose),
+                        [self, slotFunc]() {
+                            slotFunc(self);
+                        });
 }
 
 void QWebSocket_Connected(QWebSocket* self) {
@@ -334,9 +336,11 @@ void QWebSocket_Connected(QWebSocket* self) {
 
 void QWebSocket_Connect_Connected(QWebSocket* self, intptr_t slot) {
     void (*slotFunc)(QWebSocket*) = reinterpret_cast<void (*)(QWebSocket*)>(slot);
-    QWebSocket::connect(self, &QWebSocket::connected, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QWebSocket::connect(self,
+                        static_cast<void (QWebSocket::*)()>(&QWebSocket::connected),
+                        [self, slotFunc]() {
+                            slotFunc(self);
+                        });
 }
 
 void QWebSocket_Disconnected(QWebSocket* self) {
@@ -345,9 +349,11 @@ void QWebSocket_Disconnected(QWebSocket* self) {
 
 void QWebSocket_Connect_Disconnected(QWebSocket* self, intptr_t slot) {
     void (*slotFunc)(QWebSocket*) = reinterpret_cast<void (*)(QWebSocket*)>(slot);
-    QWebSocket::connect(self, &QWebSocket::disconnected, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QWebSocket::connect(self,
+                        static_cast<void (QWebSocket::*)()>(&QWebSocket::disconnected),
+                        [self, slotFunc]() {
+                            slotFunc(self);
+                        });
 }
 
 void QWebSocket_StateChanged(QWebSocket* self, int state) {
@@ -356,10 +362,12 @@ void QWebSocket_StateChanged(QWebSocket* self, int state) {
 
 void QWebSocket_Connect_StateChanged(QWebSocket* self, intptr_t slot) {
     void (*slotFunc)(QWebSocket*, int) = reinterpret_cast<void (*)(QWebSocket*, int)>(slot);
-    QWebSocket::connect(self, &QWebSocket::stateChanged, [self, slotFunc](QAbstractSocket::SocketState state) {
-        int sigval1 = static_cast<int>(state);
-        slotFunc(self, sigval1);
-    });
+    QWebSocket::connect(self,
+                        static_cast<void (QWebSocket::*)(QAbstractSocket::SocketState)>(&QWebSocket::stateChanged),
+                        [self, slotFunc](QAbstractSocket::SocketState state) {
+                            int sigval1 = static_cast<int>(state);
+                            slotFunc(self, sigval1);
+                        });
 }
 
 void QWebSocket_ProxyAuthenticationRequired(QWebSocket* self, const QNetworkProxy* proxy, QAuthenticator* pAuthenticator) {
@@ -368,13 +376,15 @@ void QWebSocket_ProxyAuthenticationRequired(QWebSocket* self, const QNetworkProx
 
 void QWebSocket_Connect_ProxyAuthenticationRequired(QWebSocket* self, intptr_t slot) {
     void (*slotFunc)(QWebSocket*, QNetworkProxy*, QAuthenticator*) = reinterpret_cast<void (*)(QWebSocket*, QNetworkProxy*, QAuthenticator*)>(slot);
-    QWebSocket::connect(self, &QWebSocket::proxyAuthenticationRequired, [self, slotFunc](const QNetworkProxy& proxy, QAuthenticator* pAuthenticator) {
-        const QNetworkProxy& proxy_ret = proxy;
-        // Cast returned reference into pointer
-        QNetworkProxy* sigval1 = const_cast<QNetworkProxy*>(&proxy_ret);
-        QAuthenticator* sigval2 = pAuthenticator;
-        slotFunc(self, sigval1, sigval2);
-    });
+    QWebSocket::connect(self,
+                        static_cast<void (QWebSocket::*)(const QNetworkProxy&, QAuthenticator*)>(&QWebSocket::proxyAuthenticationRequired),
+                        [self, slotFunc](const QNetworkProxy& proxy, QAuthenticator* pAuthenticator) {
+                            const QNetworkProxy& proxy_ret = proxy;
+                            // Cast returned reference into pointer
+                            QNetworkProxy* sigval1 = const_cast<QNetworkProxy*>(&proxy_ret);
+                            QAuthenticator* sigval2 = pAuthenticator;
+                            slotFunc(self, sigval1, sigval2);
+                        });
 }
 
 void QWebSocket_AuthenticationRequired(QWebSocket* self, QAuthenticator* authenticator) {
@@ -383,10 +393,12 @@ void QWebSocket_AuthenticationRequired(QWebSocket* self, QAuthenticator* authent
 
 void QWebSocket_Connect_AuthenticationRequired(QWebSocket* self, intptr_t slot) {
     void (*slotFunc)(QWebSocket*, QAuthenticator*) = reinterpret_cast<void (*)(QWebSocket*, QAuthenticator*)>(slot);
-    QWebSocket::connect(self, &QWebSocket::authenticationRequired, [self, slotFunc](QAuthenticator* authenticator) {
-        QAuthenticator* sigval1 = authenticator;
-        slotFunc(self, sigval1);
-    });
+    QWebSocket::connect(self,
+                        static_cast<void (QWebSocket::*)(QAuthenticator*)>(&QWebSocket::authenticationRequired),
+                        [self, slotFunc](QAuthenticator* authenticator) {
+                            QAuthenticator* sigval1 = authenticator;
+                            slotFunc(self, sigval1);
+                        });
 }
 
 void QWebSocket_ReadChannelFinished(QWebSocket* self) {
@@ -395,9 +407,11 @@ void QWebSocket_ReadChannelFinished(QWebSocket* self) {
 
 void QWebSocket_Connect_ReadChannelFinished(QWebSocket* self, intptr_t slot) {
     void (*slotFunc)(QWebSocket*) = reinterpret_cast<void (*)(QWebSocket*)>(slot);
-    QWebSocket::connect(self, &QWebSocket::readChannelFinished, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QWebSocket::connect(self,
+                        static_cast<void (QWebSocket::*)()>(&QWebSocket::readChannelFinished),
+                        [self, slotFunc]() {
+                            slotFunc(self);
+                        });
 }
 
 void QWebSocket_TextFrameReceived(QWebSocket* self, const libqt_string frame, bool isLastFrame) {
@@ -407,19 +421,21 @@ void QWebSocket_TextFrameReceived(QWebSocket* self, const libqt_string frame, bo
 
 void QWebSocket_Connect_TextFrameReceived(QWebSocket* self, intptr_t slot) {
     void (*slotFunc)(QWebSocket*, const char*, bool) = reinterpret_cast<void (*)(QWebSocket*, const char*, bool)>(slot);
-    QWebSocket::connect(self, &QWebSocket::textFrameReceived, [self, slotFunc](const QString& frame, bool isLastFrame) {
-        const auto frame_ret = frame;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray frame_b = frame_ret.toUtf8();
-        auto frame_str_len = frame_b.length();
-        char* frame_str = static_cast<char*>(malloc(frame_str_len + 1));
-        memcpy(frame_str, frame_b.data(), frame_str_len);
-        frame_str[frame_str_len] = '\0';
-        const char* sigval1 = frame_str;
-        bool sigval2 = isLastFrame;
-        slotFunc(self, sigval1, sigval2);
-        libqt_free(frame_str);
-    });
+    QWebSocket::connect(self,
+                        static_cast<void (QWebSocket::*)(const QString&, bool)>(&QWebSocket::textFrameReceived),
+                        [self, slotFunc](const QString& frame, bool isLastFrame) {
+                            const auto frame_ret = frame;
+                            // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                            QByteArray frame_b = frame_ret.toUtf8();
+                            auto frame_str_len = frame_b.length();
+                            char* frame_str = static_cast<char*>(malloc(frame_str_len + 1));
+                            memcpy(frame_str, frame_b.data(), frame_str_len);
+                            frame_str[frame_str_len] = '\0';
+                            const char* sigval1 = frame_str;
+                            bool sigval2 = isLastFrame;
+                            slotFunc(self, sigval1, sigval2);
+                            libqt_free(frame_str);
+                        });
 }
 
 void QWebSocket_BinaryFrameReceived(QWebSocket* self, const libqt_string frame, bool isLastFrame) {
@@ -429,17 +445,19 @@ void QWebSocket_BinaryFrameReceived(QWebSocket* self, const libqt_string frame, 
 
 void QWebSocket_Connect_BinaryFrameReceived(QWebSocket* self, intptr_t slot) {
     void (*slotFunc)(QWebSocket*, libqt_string, bool) = reinterpret_cast<void (*)(QWebSocket*, libqt_string, bool)>(slot);
-    QWebSocket::connect(self, &QWebSocket::binaryFrameReceived, [self, slotFunc](const QByteArray& frame, bool isLastFrame) {
-        const QByteArray frame_qb = frame;
-        libqt_string frame_str;
-        frame_str.len = frame_qb.length();
-        frame_str.data = static_cast<char*>(malloc(frame_str.len));
-        memcpy((void*)frame_str.data, frame_qb.data(), frame_str.len);
-        libqt_string sigval1 = frame_str;
-        bool sigval2 = isLastFrame;
-        slotFunc(self, sigval1, sigval2);
-        libqt_free(frame_str.data);
-    });
+    QWebSocket::connect(self,
+                        static_cast<void (QWebSocket::*)(const QByteArray&, bool)>(&QWebSocket::binaryFrameReceived),
+                        [self, slotFunc](const QByteArray& frame, bool isLastFrame) {
+                            const QByteArray frame_qb = frame;
+                            libqt_string frame_str;
+                            frame_str.len = frame_qb.length();
+                            frame_str.data = static_cast<char*>(malloc(frame_str.len));
+                            memcpy((void*)frame_str.data, frame_qb.data(), frame_str.len);
+                            libqt_string sigval1 = frame_str;
+                            bool sigval2 = isLastFrame;
+                            slotFunc(self, sigval1, sigval2);
+                            libqt_free(frame_str.data);
+                        });
 }
 
 void QWebSocket_TextMessageReceived(QWebSocket* self, const libqt_string message) {
@@ -449,18 +467,20 @@ void QWebSocket_TextMessageReceived(QWebSocket* self, const libqt_string message
 
 void QWebSocket_Connect_TextMessageReceived(QWebSocket* self, intptr_t slot) {
     void (*slotFunc)(QWebSocket*, const char*) = reinterpret_cast<void (*)(QWebSocket*, const char*)>(slot);
-    QWebSocket::connect(self, &QWebSocket::textMessageReceived, [self, slotFunc](const QString& message) {
-        const auto message_ret = message;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray message_b = message_ret.toUtf8();
-        auto message_str_len = message_b.length();
-        char* message_str = static_cast<char*>(malloc(message_str_len + 1));
-        memcpy(message_str, message_b.data(), message_str_len);
-        message_str[message_str_len] = '\0';
-        const char* sigval1 = message_str;
-        slotFunc(self, sigval1);
-        libqt_free(message_str);
-    });
+    QWebSocket::connect(self,
+                        static_cast<void (QWebSocket::*)(const QString&)>(&QWebSocket::textMessageReceived),
+                        [self, slotFunc](const QString& message) {
+                            const auto message_ret = message;
+                            // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                            QByteArray message_b = message_ret.toUtf8();
+                            auto message_str_len = message_b.length();
+                            char* message_str = static_cast<char*>(malloc(message_str_len + 1));
+                            memcpy(message_str, message_b.data(), message_str_len);
+                            message_str[message_str_len] = '\0';
+                            const char* sigval1 = message_str;
+                            slotFunc(self, sigval1);
+                            libqt_free(message_str);
+                        });
 }
 
 void QWebSocket_BinaryMessageReceived(QWebSocket* self, const libqt_string message) {
@@ -470,20 +490,32 @@ void QWebSocket_BinaryMessageReceived(QWebSocket* self, const libqt_string messa
 
 void QWebSocket_Connect_BinaryMessageReceived(QWebSocket* self, intptr_t slot) {
     void (*slotFunc)(QWebSocket*, libqt_string) = reinterpret_cast<void (*)(QWebSocket*, libqt_string)>(slot);
-    QWebSocket::connect(self, &QWebSocket::binaryMessageReceived, [self, slotFunc](const QByteArray& message) {
-        const QByteArray message_qb = message;
-        libqt_string message_str;
-        message_str.len = message_qb.length();
-        message_str.data = static_cast<char*>(malloc(message_str.len));
-        memcpy((void*)message_str.data, message_qb.data(), message_str.len);
-        libqt_string sigval1 = message_str;
-        slotFunc(self, sigval1);
-        libqt_free(message_str.data);
-    });
+    QWebSocket::connect(self,
+                        static_cast<void (QWebSocket::*)(const QByteArray&)>(&QWebSocket::binaryMessageReceived),
+                        [self, slotFunc](const QByteArray& message) {
+                            const QByteArray message_qb = message;
+                            libqt_string message_str;
+                            message_str.len = message_qb.length();
+                            message_str.data = static_cast<char*>(malloc(message_str.len));
+                            memcpy((void*)message_str.data, message_qb.data(), message_str.len);
+                            libqt_string sigval1 = message_str;
+                            slotFunc(self, sigval1);
+                            libqt_free(message_str.data);
+                        });
 }
 
 void QWebSocket_Error2(QWebSocket* self, int error) {
     self->error(static_cast<QAbstractSocket::SocketError>(error));
+}
+
+void QWebSocket_Connect_Error2(QWebSocket* self, intptr_t slot) {
+    void (*slotFunc)(QWebSocket*, int) = reinterpret_cast<void (*)(QWebSocket*, int)>(slot);
+    QWebSocket::connect(self,
+                        static_cast<void (QWebSocket::*)(QAbstractSocket::SocketError)>(&QWebSocket::error),
+                        [self, slotFunc](QAbstractSocket::SocketError error) {
+                            int sigval1 = static_cast<int>(error);
+                            slotFunc(self, sigval1);
+                        });
 }
 
 void QWebSocket_ErrorOccurred(QWebSocket* self, int error) {
@@ -492,10 +524,12 @@ void QWebSocket_ErrorOccurred(QWebSocket* self, int error) {
 
 void QWebSocket_Connect_ErrorOccurred(QWebSocket* self, intptr_t slot) {
     void (*slotFunc)(QWebSocket*, int) = reinterpret_cast<void (*)(QWebSocket*, int)>(slot);
-    QWebSocket::connect(self, &QWebSocket::errorOccurred, [self, slotFunc](QAbstractSocket::SocketError error) {
-        int sigval1 = static_cast<int>(error);
-        slotFunc(self, sigval1);
-    });
+    QWebSocket::connect(self,
+                        static_cast<void (QWebSocket::*)(QAbstractSocket::SocketError)>(&QWebSocket::errorOccurred),
+                        [self, slotFunc](QAbstractSocket::SocketError error) {
+                            int sigval1 = static_cast<int>(error);
+                            slotFunc(self, sigval1);
+                        });
 }
 
 void QWebSocket_Pong(QWebSocket* self, unsigned long long elapsedTime, const libqt_string payload) {
@@ -505,17 +539,19 @@ void QWebSocket_Pong(QWebSocket* self, unsigned long long elapsedTime, const lib
 
 void QWebSocket_Connect_Pong(QWebSocket* self, intptr_t slot) {
     void (*slotFunc)(QWebSocket*, unsigned long long, libqt_string) = reinterpret_cast<void (*)(QWebSocket*, unsigned long long, libqt_string)>(slot);
-    QWebSocket::connect(self, &QWebSocket::pong, [self, slotFunc](quint64 elapsedTime, const QByteArray& payload) {
-        unsigned long long sigval1 = static_cast<unsigned long long>(elapsedTime);
-        const QByteArray payload_qb = payload;
-        libqt_string payload_str;
-        payload_str.len = payload_qb.length();
-        payload_str.data = static_cast<char*>(malloc(payload_str.len));
-        memcpy((void*)payload_str.data, payload_qb.data(), payload_str.len);
-        libqt_string sigval2 = payload_str;
-        slotFunc(self, sigval1, sigval2);
-        libqt_free(payload_str.data);
-    });
+    QWebSocket::connect(self,
+                        static_cast<void (QWebSocket::*)(quint64, const QByteArray&)>(&QWebSocket::pong),
+                        [self, slotFunc](quint64 elapsedTime, const QByteArray& payload) {
+                            unsigned long long sigval1 = static_cast<unsigned long long>(elapsedTime);
+                            const QByteArray payload_qb = payload;
+                            libqt_string payload_str;
+                            payload_str.len = payload_qb.length();
+                            payload_str.data = static_cast<char*>(malloc(payload_str.len));
+                            memcpy((void*)payload_str.data, payload_qb.data(), payload_str.len);
+                            libqt_string sigval2 = payload_str;
+                            slotFunc(self, sigval1, sigval2);
+                            libqt_free(payload_str.data);
+                        });
 }
 
 void QWebSocket_BytesWritten(QWebSocket* self, long long bytes) {
@@ -524,10 +560,12 @@ void QWebSocket_BytesWritten(QWebSocket* self, long long bytes) {
 
 void QWebSocket_Connect_BytesWritten(QWebSocket* self, intptr_t slot) {
     void (*slotFunc)(QWebSocket*, long long) = reinterpret_cast<void (*)(QWebSocket*, long long)>(slot);
-    QWebSocket::connect(self, &QWebSocket::bytesWritten, [self, slotFunc](qint64 bytes) {
-        long long sigval1 = static_cast<long long>(bytes);
-        slotFunc(self, sigval1);
-    });
+    QWebSocket::connect(self,
+                        static_cast<void (QWebSocket::*)(qint64)>(&QWebSocket::bytesWritten),
+                        [self, slotFunc](qint64 bytes) {
+                            long long sigval1 = static_cast<long long>(bytes);
+                            slotFunc(self, sigval1);
+                        });
 }
 
 void QWebSocket_PeerVerifyError(QWebSocket* self, const QSslError* error) {
@@ -536,12 +574,14 @@ void QWebSocket_PeerVerifyError(QWebSocket* self, const QSslError* error) {
 
 void QWebSocket_Connect_PeerVerifyError(QWebSocket* self, intptr_t slot) {
     void (*slotFunc)(QWebSocket*, QSslError*) = reinterpret_cast<void (*)(QWebSocket*, QSslError*)>(slot);
-    QWebSocket::connect(self, &QWebSocket::peerVerifyError, [self, slotFunc](const QSslError& error) {
-        const QSslError& error_ret = error;
-        // Cast returned reference into pointer
-        QSslError* sigval1 = const_cast<QSslError*>(&error_ret);
-        slotFunc(self, sigval1);
-    });
+    QWebSocket::connect(self,
+                        static_cast<void (QWebSocket::*)(const QSslError&)>(&QWebSocket::peerVerifyError),
+                        [self, slotFunc](const QSslError& error) {
+                            const QSslError& error_ret = error;
+                            // Cast returned reference into pointer
+                            QSslError* sigval1 = const_cast<QSslError*>(&error_ret);
+                            slotFunc(self, sigval1);
+                        });
 }
 
 void QWebSocket_SslErrors(QWebSocket* self, const libqt_list /* of QSslError* */ errors) {
@@ -556,20 +596,22 @@ void QWebSocket_SslErrors(QWebSocket* self, const libqt_list /* of QSslError* */
 
 void QWebSocket_Connect_SslErrors(QWebSocket* self, intptr_t slot) {
     void (*slotFunc)(QWebSocket*, libqt_list /* of QSslError* */) = reinterpret_cast<void (*)(QWebSocket*, libqt_list /* of QSslError* */)>(slot);
-    QWebSocket::connect(self, &QWebSocket::sslErrors, [self, slotFunc](const QList<QSslError>& errors) {
-        const QList<QSslError>& errors_ret = errors;
-        // Convert QList<> from C++ memory to manually-managed C memory
-        QSslError** errors_arr = static_cast<QSslError**>(malloc(sizeof(QSslError*) * (errors_ret.size())));
-        for (qsizetype i = 0; i < errors_ret.size(); ++i) {
-            errors_arr[i] = new QSslError(errors_ret[i]);
-        }
-        libqt_list errors_out;
-        errors_out.len = errors_ret.size();
-        errors_out.data.ptr = static_cast<void*>(errors_arr);
-        libqt_list /* of QSslError* */ sigval1 = errors_out;
-        slotFunc(self, sigval1);
-        free(errors_arr);
-    });
+    QWebSocket::connect(self,
+                        static_cast<void (QWebSocket::*)(const QList<QSslError>&)>(&QWebSocket::sslErrors),
+                        [self, slotFunc](const QList<QSslError>& errors) {
+                            const QList<QSslError>& errors_ret = errors;
+                            // Convert QList<> from C++ memory to manually-managed C memory
+                            QSslError** errors_arr = static_cast<QSslError**>(malloc(sizeof(QSslError*) * (errors_ret.size())));
+                            for (qsizetype i = 0; i < errors_ret.size(); ++i) {
+                                errors_arr[i] = new QSslError(errors_ret[i]);
+                            }
+                            libqt_list errors_out;
+                            errors_out.len = errors_ret.size();
+                            errors_out.data.ptr = static_cast<void*>(errors_arr);
+                            libqt_list /* of QSslError* */ sigval1 = errors_out;
+                            slotFunc(self, sigval1);
+                            free(errors_arr);
+                        });
 }
 
 void QWebSocket_PreSharedKeyAuthenticationRequired(QWebSocket* self, QSslPreSharedKeyAuthenticator* authenticator) {
@@ -578,10 +620,12 @@ void QWebSocket_PreSharedKeyAuthenticationRequired(QWebSocket* self, QSslPreShar
 
 void QWebSocket_Connect_PreSharedKeyAuthenticationRequired(QWebSocket* self, intptr_t slot) {
     void (*slotFunc)(QWebSocket*, QSslPreSharedKeyAuthenticator*) = reinterpret_cast<void (*)(QWebSocket*, QSslPreSharedKeyAuthenticator*)>(slot);
-    QWebSocket::connect(self, &QWebSocket::preSharedKeyAuthenticationRequired, [self, slotFunc](QSslPreSharedKeyAuthenticator* authenticator) {
-        QSslPreSharedKeyAuthenticator* sigval1 = authenticator;
-        slotFunc(self, sigval1);
-    });
+    QWebSocket::connect(self,
+                        static_cast<void (QWebSocket::*)(QSslPreSharedKeyAuthenticator*)>(&QWebSocket::preSharedKeyAuthenticationRequired),
+                        [self, slotFunc](QSslPreSharedKeyAuthenticator* authenticator) {
+                            QSslPreSharedKeyAuthenticator* sigval1 = authenticator;
+                            slotFunc(self, sigval1);
+                        });
 }
 
 void QWebSocket_AlertSent(QWebSocket* self, int level, int type, const libqt_string description) {
@@ -591,20 +635,22 @@ void QWebSocket_AlertSent(QWebSocket* self, int level, int type, const libqt_str
 
 void QWebSocket_Connect_AlertSent(QWebSocket* self, intptr_t slot) {
     void (*slotFunc)(QWebSocket*, int, int, const char*) = reinterpret_cast<void (*)(QWebSocket*, int, int, const char*)>(slot);
-    QWebSocket::connect(self, &QWebSocket::alertSent, [self, slotFunc](QSsl::AlertLevel level, QSsl::AlertType type, const QString& description) {
-        int sigval1 = static_cast<int>(level);
-        int sigval2 = static_cast<int>(type);
-        const auto description_ret = description;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray description_b = description_ret.toUtf8();
-        auto description_str_len = description_b.length();
-        char* description_str = static_cast<char*>(malloc(description_str_len + 1));
-        memcpy(description_str, description_b.data(), description_str_len);
-        description_str[description_str_len] = '\0';
-        const char* sigval3 = description_str;
-        slotFunc(self, sigval1, sigval2, sigval3);
-        libqt_free(description_str);
-    });
+    QWebSocket::connect(self,
+                        static_cast<void (QWebSocket::*)(QSsl::AlertLevel, QSsl::AlertType, const QString&)>(&QWebSocket::alertSent),
+                        [self, slotFunc](QSsl::AlertLevel level, QSsl::AlertType type, const QString& description) {
+                            int sigval1 = static_cast<int>(level);
+                            int sigval2 = static_cast<int>(type);
+                            const auto description_ret = description;
+                            // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                            QByteArray description_b = description_ret.toUtf8();
+                            auto description_str_len = description_b.length();
+                            char* description_str = static_cast<char*>(malloc(description_str_len + 1));
+                            memcpy(description_str, description_b.data(), description_str_len);
+                            description_str[description_str_len] = '\0';
+                            const char* sigval3 = description_str;
+                            slotFunc(self, sigval1, sigval2, sigval3);
+                            libqt_free(description_str);
+                        });
 }
 
 void QWebSocket_AlertReceived(QWebSocket* self, int level, int type, const libqt_string description) {
@@ -614,20 +660,22 @@ void QWebSocket_AlertReceived(QWebSocket* self, int level, int type, const libqt
 
 void QWebSocket_Connect_AlertReceived(QWebSocket* self, intptr_t slot) {
     void (*slotFunc)(QWebSocket*, int, int, const char*) = reinterpret_cast<void (*)(QWebSocket*, int, int, const char*)>(slot);
-    QWebSocket::connect(self, &QWebSocket::alertReceived, [self, slotFunc](QSsl::AlertLevel level, QSsl::AlertType type, const QString& description) {
-        int sigval1 = static_cast<int>(level);
-        int sigval2 = static_cast<int>(type);
-        const auto description_ret = description;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray description_b = description_ret.toUtf8();
-        auto description_str_len = description_b.length();
-        char* description_str = static_cast<char*>(malloc(description_str_len + 1));
-        memcpy(description_str, description_b.data(), description_str_len);
-        description_str[description_str_len] = '\0';
-        const char* sigval3 = description_str;
-        slotFunc(self, sigval1, sigval2, sigval3);
-        libqt_free(description_str);
-    });
+    QWebSocket::connect(self,
+                        static_cast<void (QWebSocket::*)(QSsl::AlertLevel, QSsl::AlertType, const QString&)>(&QWebSocket::alertReceived),
+                        [self, slotFunc](QSsl::AlertLevel level, QSsl::AlertType type, const QString& description) {
+                            int sigval1 = static_cast<int>(level);
+                            int sigval2 = static_cast<int>(type);
+                            const auto description_ret = description;
+                            // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                            QByteArray description_b = description_ret.toUtf8();
+                            auto description_str_len = description_b.length();
+                            char* description_str = static_cast<char*>(malloc(description_str_len + 1));
+                            memcpy(description_str, description_b.data(), description_str_len);
+                            description_str[description_str_len] = '\0';
+                            const char* sigval3 = description_str;
+                            slotFunc(self, sigval1, sigval2, sigval3);
+                            libqt_free(description_str);
+                        });
 }
 
 void QWebSocket_HandshakeInterruptedOnError(QWebSocket* self, const QSslError* error) {
@@ -636,12 +684,14 @@ void QWebSocket_HandshakeInterruptedOnError(QWebSocket* self, const QSslError* e
 
 void QWebSocket_Connect_HandshakeInterruptedOnError(QWebSocket* self, intptr_t slot) {
     void (*slotFunc)(QWebSocket*, QSslError*) = reinterpret_cast<void (*)(QWebSocket*, QSslError*)>(slot);
-    QWebSocket::connect(self, &QWebSocket::handshakeInterruptedOnError, [self, slotFunc](const QSslError& error) {
-        const QSslError& error_ret = error;
-        // Cast returned reference into pointer
-        QSslError* sigval1 = const_cast<QSslError*>(&error_ret);
-        slotFunc(self, sigval1);
-    });
+    QWebSocket::connect(self,
+                        static_cast<void (QWebSocket::*)(const QSslError&)>(&QWebSocket::handshakeInterruptedOnError),
+                        [self, slotFunc](const QSslError& error) {
+                            const QSslError& error_ret = error;
+                            // Cast returned reference into pointer
+                            QSslError* sigval1 = const_cast<QSslError*>(&error_ret);
+                            slotFunc(self, sigval1);
+                        });
 }
 
 void QWebSocket_Close1(QWebSocket* self, int closeCode) {

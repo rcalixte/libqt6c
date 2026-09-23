@@ -40,9 +40,11 @@ void KColorSchemeWatcher_SystemPreferenceChanged(KColorSchemeWatcher* self) {
 
 void KColorSchemeWatcher_Connect_SystemPreferenceChanged(KColorSchemeWatcher* self, intptr_t slot) {
     void (*slotFunc)(KColorSchemeWatcher*) = reinterpret_cast<void (*)(KColorSchemeWatcher*)>(slot);
-    KColorSchemeWatcher::connect(self, &KColorSchemeWatcher::systemPreferenceChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KColorSchemeWatcher::connect(self,
+                                 static_cast<void (KColorSchemeWatcher::*)()>(&KColorSchemeWatcher::systemPreferenceChanged),
+                                 [self, slotFunc]() {
+                                     slotFunc(self);
+                                 });
 }
 
 // Base class handler implementation

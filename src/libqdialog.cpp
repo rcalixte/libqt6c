@@ -99,10 +99,12 @@ void QDialog_Finished(QDialog* self, int result) {
 
 void QDialog_Connect_Finished(QDialog* self, intptr_t slot) {
     void (*slotFunc)(QDialog*, int) = reinterpret_cast<void (*)(QDialog*, int)>(slot);
-    QDialog::connect(self, &QDialog::finished, [self, slotFunc](int result) {
-        int sigval1 = result;
-        slotFunc(self, sigval1);
-    });
+    QDialog::connect(self,
+                     static_cast<void (QDialog::*)(int)>(&QDialog::finished),
+                     [self, slotFunc](int result) {
+                         int sigval1 = result;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QDialog_Accepted(QDialog* self) {
@@ -111,9 +113,11 @@ void QDialog_Accepted(QDialog* self) {
 
 void QDialog_Connect_Accepted(QDialog* self, intptr_t slot) {
     void (*slotFunc)(QDialog*) = reinterpret_cast<void (*)(QDialog*)>(slot);
-    QDialog::connect(self, &QDialog::accepted, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QDialog::connect(self,
+                     static_cast<void (QDialog::*)()>(&QDialog::accepted),
+                     [self, slotFunc]() {
+                         slotFunc(self);
+                     });
 }
 
 void QDialog_Rejected(QDialog* self) {
@@ -122,9 +126,11 @@ void QDialog_Rejected(QDialog* self) {
 
 void QDialog_Connect_Rejected(QDialog* self, intptr_t slot) {
     void (*slotFunc)(QDialog*) = reinterpret_cast<void (*)(QDialog*)>(slot);
-    QDialog::connect(self, &QDialog::rejected, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QDialog::connect(self,
+                     static_cast<void (QDialog::*)()>(&QDialog::rejected),
+                     [self, slotFunc]() {
+                         slotFunc(self);
+                     });
 }
 
 void QDialog_Open(QDialog* self) {

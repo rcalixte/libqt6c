@@ -69,18 +69,20 @@ void KXMessages_GotMessage(KXMessages* self, const libqt_string message) {
 
 void KXMessages_Connect_GotMessage(KXMessages* self, intptr_t slot) {
     void (*slotFunc)(KXMessages*, const char*) = reinterpret_cast<void (*)(KXMessages*, const char*)>(slot);
-    KXMessages::connect(self, &KXMessages::gotMessage, [self, slotFunc](const QString& message) {
-        const auto message_ret = message;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray message_b = message_ret.toUtf8();
-        auto message_str_len = message_b.length();
-        char* message_str = static_cast<char*>(malloc(message_str_len + 1));
-        memcpy(message_str, message_b.data(), message_str_len);
-        message_str[message_str_len] = '\0';
-        const char* sigval1 = message_str;
-        slotFunc(self, sigval1);
-        libqt_free(message_str);
-    });
+    KXMessages::connect(self,
+                        static_cast<void (KXMessages::*)(const QString&)>(&KXMessages::gotMessage),
+                        [self, slotFunc](const QString& message) {
+                            const auto message_ret = message;
+                            // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                            QByteArray message_b = message_ret.toUtf8();
+                            auto message_str_len = message_b.length();
+                            char* message_str = static_cast<char*>(malloc(message_str_len + 1));
+                            memcpy(message_str, message_b.data(), message_str_len);
+                            message_str[message_str_len] = '\0';
+                            const char* sigval1 = message_str;
+                            slotFunc(self, sigval1);
+                            libqt_free(message_str);
+                        });
 }
 
 void KXMessages_BroadcastMessage3(KXMessages* self, const char* msg_type, const libqt_string message, int screen) {

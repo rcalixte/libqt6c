@@ -199,8 +199,16 @@ void q_accounts__accountservice_enabled2(void* self, bool isEnabled) {
     Accounts__AccountService_Enabled2((Accounts__AccountService*)self, isEnabled);
 }
 
+void q_accounts__accountservice_on_enabled2(void* self, void (*callback)(void*, bool)) {
+    Accounts__AccountService_Connect_Enabled2((Accounts__AccountService*)self, (intptr_t)callback);
+}
+
 void q_accounts__accountservice_changed(void* self) {
     Accounts__AccountService_Changed((Accounts__AccountService*)self);
+}
+
+void q_accounts__accountservice_on_changed(void* self, void (*callback)(void*)) {
+    Accounts__AccountService_Connect_Changed((Accounts__AccountService*)self, (intptr_t)callback);
 }
 
 const char* q_accounts__accountservice_tr2(const char* s, const char* c) {

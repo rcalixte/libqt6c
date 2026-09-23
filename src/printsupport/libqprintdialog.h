@@ -244,6 +244,13 @@ void q_printdialog_super_set_visible(void* self, bool visible);
 ///
 void q_printdialog_accepted(void* self, void* printer);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qprintdialog.html#accepted)
+///
+/// @param self QPrintDialog*
+/// @param callback void func(QPrintDialog* self, QPrinter* printer)
+///
+void q_printdialog_on_accepted(void* self, void (*callback)(void*, void*));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`

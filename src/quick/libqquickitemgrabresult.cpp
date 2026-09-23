@@ -45,9 +45,11 @@ void QQuickItemGrabResult_Ready(QQuickItemGrabResult* self) {
 
 void QQuickItemGrabResult_Connect_Ready(QQuickItemGrabResult* self, intptr_t slot) {
     void (*slotFunc)(QQuickItemGrabResult*) = reinterpret_cast<void (*)(QQuickItemGrabResult*)>(slot);
-    QQuickItemGrabResult::connect(self, &QQuickItemGrabResult::ready, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickItemGrabResult::connect(self,
+                                  static_cast<void (QQuickItemGrabResult::*)()>(&QQuickItemGrabResult::ready),
+                                  [self, slotFunc]() {
+                                      slotFunc(self);
+                                  });
 }
 
 void QQuickItemGrabResult_Delete(QQuickItemGrabResult* self) {

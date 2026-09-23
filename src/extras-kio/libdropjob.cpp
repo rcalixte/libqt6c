@@ -49,12 +49,14 @@ void KIO__DropJob_ItemCreated(KIO__DropJob* self, const QUrl* url) {
 
 void KIO__DropJob_Connect_ItemCreated(KIO__DropJob* self, intptr_t slot) {
     void (*slotFunc)(KIO__DropJob*, QUrl*) = reinterpret_cast<void (*)(KIO__DropJob*, QUrl*)>(slot);
-    KIO::DropJob::connect(self, &KIO::DropJob::itemCreated, [self, slotFunc](const QUrl& url) {
-        const QUrl& url_ret = url;
-        // Cast returned reference into pointer
-        QUrl* sigval1 = const_cast<QUrl*>(&url_ret);
-        slotFunc(self, sigval1);
-    });
+    KIO::DropJob::connect(self,
+                          static_cast<void (KIO::DropJob::*)(const QUrl&)>(&KIO::DropJob::itemCreated),
+                          [self, slotFunc](const QUrl& url) {
+                              const QUrl& url_ret = url;
+                              // Cast returned reference into pointer
+                              QUrl* sigval1 = const_cast<QUrl*>(&url_ret);
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void KIO__DropJob_CopyJobStarted(KIO__DropJob* self, KIO__CopyJob* job) {
@@ -63,10 +65,12 @@ void KIO__DropJob_CopyJobStarted(KIO__DropJob* self, KIO__CopyJob* job) {
 
 void KIO__DropJob_Connect_CopyJobStarted(KIO__DropJob* self, intptr_t slot) {
     void (*slotFunc)(KIO__DropJob*, KIO__CopyJob*) = reinterpret_cast<void (*)(KIO__DropJob*, KIO__CopyJob*)>(slot);
-    KIO::DropJob::connect(self, &KIO::DropJob::copyJobStarted, [self, slotFunc](KIO::CopyJob* job) {
-        KIO__CopyJob* sigval1 = job;
-        slotFunc(self, sigval1);
-    });
+    KIO::DropJob::connect(self,
+                          static_cast<void (KIO::DropJob::*)(KIO::CopyJob*)>(&KIO::DropJob::copyJobStarted),
+                          [self, slotFunc](KIO::CopyJob* job) {
+                              KIO__CopyJob* sigval1 = job;
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void KIO__DropJob_PopupMenuAboutToShow(KIO__DropJob* self, const KFileItemListProperties* itemProps) {
@@ -75,12 +79,14 @@ void KIO__DropJob_PopupMenuAboutToShow(KIO__DropJob* self, const KFileItemListPr
 
 void KIO__DropJob_Connect_PopupMenuAboutToShow(KIO__DropJob* self, intptr_t slot) {
     void (*slotFunc)(KIO__DropJob*, KFileItemListProperties*) = reinterpret_cast<void (*)(KIO__DropJob*, KFileItemListProperties*)>(slot);
-    KIO::DropJob::connect(self, &KIO::DropJob::popupMenuAboutToShow, [self, slotFunc](const KFileItemListProperties& itemProps) {
-        const KFileItemListProperties& itemProps_ret = itemProps;
-        // Cast returned reference into pointer
-        KFileItemListProperties* sigval1 = const_cast<KFileItemListProperties*>(&itemProps_ret);
-        slotFunc(self, sigval1);
-    });
+    KIO::DropJob::connect(self,
+                          static_cast<void (KIO::DropJob::*)(const KFileItemListProperties&)>(&KIO::DropJob::popupMenuAboutToShow),
+                          [self, slotFunc](const KFileItemListProperties& itemProps) {
+                              const KFileItemListProperties& itemProps_ret = itemProps;
+                              // Cast returned reference into pointer
+                              KFileItemListProperties* sigval1 = const_cast<KFileItemListProperties*>(&itemProps_ret);
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void KIO__DropJob_ShowMenu2(KIO__DropJob* self, const QPoint* p, QAction* atAction) {

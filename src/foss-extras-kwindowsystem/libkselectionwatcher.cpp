@@ -90,10 +90,12 @@ void KSelectionWatcher_NewOwner(KSelectionWatcher* self, xcb_window_t owner) {
 
 void KSelectionWatcher_Connect_NewOwner(KSelectionWatcher* self, intptr_t slot) {
     void (*slotFunc)(KSelectionWatcher*, xcb_window_t) = reinterpret_cast<void (*)(KSelectionWatcher*, xcb_window_t)>(slot);
-    KSelectionWatcher::connect(self, &KSelectionWatcher::newOwner, [self, slotFunc](xcb_window_t owner) {
-        xcb_window_t sigval1 = owner;
-        slotFunc(self, sigval1);
-    });
+    KSelectionWatcher::connect(self,
+                               static_cast<void (KSelectionWatcher::*)(xcb_window_t)>(&KSelectionWatcher::newOwner),
+                               [self, slotFunc](xcb_window_t owner) {
+                                   xcb_window_t sigval1 = owner;
+                                   slotFunc(self, sigval1);
+                               });
 }
 
 void KSelectionWatcher_LostOwner(KSelectionWatcher* self) {
@@ -102,9 +104,11 @@ void KSelectionWatcher_LostOwner(KSelectionWatcher* self) {
 
 void KSelectionWatcher_Connect_LostOwner(KSelectionWatcher* self, intptr_t slot) {
     void (*slotFunc)(KSelectionWatcher*) = reinterpret_cast<void (*)(KSelectionWatcher*)>(slot);
-    KSelectionWatcher::connect(self, &KSelectionWatcher::lostOwner, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KSelectionWatcher::connect(self,
+                               static_cast<void (KSelectionWatcher::*)()>(&KSelectionWatcher::lostOwner),
+                               [self, slotFunc]() {
+                                   slotFunc(self);
+                               });
 }
 
 // Base class handler implementation

@@ -288,40 +288,80 @@ void k_nscore__enginebase_signal_message(void* self, const char* message) {
     KNSCore__EngineBase_SignalMessage((KNSCore__EngineBase*)self, qstring(message));
 }
 
+void k_nscore__enginebase_on_signal_message(void* self, void (*callback)(void*, const char*)) {
+    KNSCore__EngineBase_Connect_SignalMessage((KNSCore__EngineBase*)self, (intptr_t)callback);
+}
+
 void k_nscore__enginebase_signal_providers_loaded(void* self) {
     KNSCore__EngineBase_SignalProvidersLoaded((KNSCore__EngineBase*)self);
+}
+
+void k_nscore__enginebase_on_signal_providers_loaded(void* self, void (*callback)(void*)) {
+    KNSCore__EngineBase_Connect_SignalProvidersLoaded((KNSCore__EngineBase*)self, (intptr_t)callback);
 }
 
 void k_nscore__enginebase_signal_error_code(void* self, int32_t errorCode, const char* message, void* metadata) {
     KNSCore__EngineBase_SignalErrorCode((KNSCore__EngineBase*)self, errorCode, qstring(message), (QVariant*)metadata);
 }
 
+void k_nscore__enginebase_on_signal_error_code(void* self, void (*callback)(void*, int32_t, const char*, void*)) {
+    KNSCore__EngineBase_Connect_SignalErrorCode((KNSCore__EngineBase*)self, (intptr_t)callback);
+}
+
 void k_nscore__enginebase_signal_categories_metadata_loded(void* self, libqt_list /* of KNSCore__Provider__CategoryMetadata* */ categories) {
     KNSCore__EngineBase_SignalCategoriesMetadataLoded((KNSCore__EngineBase*)self, categories);
+}
+
+void k_nscore__enginebase_on_signal_categories_metadata_loded(void* self, void (*callback)(void*, libqt_list /* of KNSCore__Provider__CategoryMetadata* */)) {
+    KNSCore__EngineBase_Connect_SignalCategoriesMetadataLoded((KNSCore__EngineBase*)self, (intptr_t)callback);
 }
 
 void k_nscore__enginebase_signal_categories_metadata_loaded(void* self, libqt_list /* of KNSCore__CategoryMetadata* */ categories) {
     KNSCore__EngineBase_SignalCategoriesMetadataLoaded((KNSCore__EngineBase*)self, categories);
 }
 
+void k_nscore__enginebase_on_signal_categories_metadata_loaded(void* self, void (*callback)(void*, libqt_list /* of KNSCore__CategoryMetadata* */)) {
+    KNSCore__EngineBase_Connect_SignalCategoriesMetadataLoaded((KNSCore__EngineBase*)self, (intptr_t)callback);
+}
+
 void k_nscore__enginebase_signal_search_presets_loaded(void* self, libqt_list /* of KNSCore__Provider__SearchPreset* */ presets) {
     KNSCore__EngineBase_SignalSearchPresetsLoaded((KNSCore__EngineBase*)self, presets);
+}
+
+void k_nscore__enginebase_on_signal_search_presets_loaded(void* self, void (*callback)(void*, libqt_list /* of KNSCore__Provider__SearchPreset* */)) {
+    KNSCore__EngineBase_Connect_SignalSearchPresetsLoaded((KNSCore__EngineBase*)self, (intptr_t)callback);
 }
 
 void k_nscore__enginebase_signal_search_presets_loaded2(void* self, libqt_list /* of KNSCore__SearchPreset* */ presets) {
     KNSCore__EngineBase_SignalSearchPresetsLoaded2((KNSCore__EngineBase*)self, presets);
 }
 
+void k_nscore__enginebase_on_signal_search_presets_loaded2(void* self, void (*callback)(void*, libqt_list /* of KNSCore__SearchPreset* */)) {
+    KNSCore__EngineBase_Connect_SignalSearchPresetsLoaded2((KNSCore__EngineBase*)self, (intptr_t)callback);
+}
+
 void k_nscore__enginebase_providers_changed(void* self) {
     KNSCore__EngineBase_ProvidersChanged((KNSCore__EngineBase*)self);
+}
+
+void k_nscore__enginebase_on_providers_changed(void* self, void (*callback)(void*)) {
+    KNSCore__EngineBase_Connect_ProvidersChanged((KNSCore__EngineBase*)self, (intptr_t)callback);
 }
 
 void k_nscore__enginebase_loading_provider(void* self) {
     KNSCore__EngineBase_LoadingProvider((KNSCore__EngineBase*)self);
 }
 
+void k_nscore__enginebase_on_loading_provider(void* self, void (*callback)(void*)) {
+    KNSCore__EngineBase_Connect_LoadingProvider((KNSCore__EngineBase*)self, (intptr_t)callback);
+}
+
 void k_nscore__enginebase_provider_added(void* self, void* provider) {
     KNSCore__EngineBase_ProviderAdded((KNSCore__EngineBase*)self, (KNSCore__ProviderCore*)provider);
+}
+
+void k_nscore__enginebase_on_provider_added(void* self, void (*callback)(void*, void*)) {
+    KNSCore__EngineBase_Connect_ProviderAdded((KNSCore__EngineBase*)self, (intptr_t)callback);
 }
 
 void k_nscore__enginebase_update_status(void* self) {

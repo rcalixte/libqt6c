@@ -179,9 +179,11 @@ void QAbstractButton_Pressed(QAbstractButton* self) {
 
 void QAbstractButton_Connect_Pressed(QAbstractButton* self, intptr_t slot) {
     void (*slotFunc)(QAbstractButton*) = reinterpret_cast<void (*)(QAbstractButton*)>(slot);
-    QAbstractButton::connect(self, &QAbstractButton::pressed, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QAbstractButton::connect(self,
+                             static_cast<void (QAbstractButton::*)()>(&QAbstractButton::pressed),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 void QAbstractButton_Released(QAbstractButton* self) {
@@ -190,9 +192,11 @@ void QAbstractButton_Released(QAbstractButton* self) {
 
 void QAbstractButton_Connect_Released(QAbstractButton* self, intptr_t slot) {
     void (*slotFunc)(QAbstractButton*) = reinterpret_cast<void (*)(QAbstractButton*)>(slot);
-    QAbstractButton::connect(self, &QAbstractButton::released, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QAbstractButton::connect(self,
+                             static_cast<void (QAbstractButton::*)()>(&QAbstractButton::released),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 void QAbstractButton_Clicked(QAbstractButton* self) {
@@ -201,9 +205,11 @@ void QAbstractButton_Clicked(QAbstractButton* self) {
 
 void QAbstractButton_Connect_Clicked(QAbstractButton* self, intptr_t slot) {
     void (*slotFunc)(QAbstractButton*) = reinterpret_cast<void (*)(QAbstractButton*)>(slot);
-    QAbstractButton::connect(self, &QAbstractButton::clicked, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QAbstractButton::connect(self,
+                             static_cast<void (QAbstractButton::*)(bool)>(&QAbstractButton::clicked),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 void QAbstractButton_Toggled(QAbstractButton* self, bool checked) {
@@ -212,10 +218,12 @@ void QAbstractButton_Toggled(QAbstractButton* self, bool checked) {
 
 void QAbstractButton_Connect_Toggled(QAbstractButton* self, intptr_t slot) {
     void (*slotFunc)(QAbstractButton*, bool) = reinterpret_cast<void (*)(QAbstractButton*, bool)>(slot);
-    QAbstractButton::connect(self, &QAbstractButton::toggled, [self, slotFunc](bool checked) {
-        bool sigval1 = checked;
-        slotFunc(self, sigval1);
-    });
+    QAbstractButton::connect(self,
+                             static_cast<void (QAbstractButton::*)(bool)>(&QAbstractButton::toggled),
+                             [self, slotFunc](bool checked) {
+                                 bool sigval1 = checked;
+                                 slotFunc(self, sigval1);
+                             });
 }
 
 void QAbstractButton_PaintEvent(QAbstractButton* self, QPaintEvent* e) {
@@ -324,10 +332,12 @@ void QAbstractButton_Clicked1(QAbstractButton* self, bool checked) {
 
 void QAbstractButton_Connect_Clicked1(QAbstractButton* self, intptr_t slot) {
     void (*slotFunc)(QAbstractButton*, bool) = reinterpret_cast<void (*)(QAbstractButton*, bool)>(slot);
-    QAbstractButton::connect(self, &QAbstractButton::clicked, [self, slotFunc](bool checked) {
-        bool sigval1 = checked;
-        slotFunc(self, sigval1);
-    });
+    QAbstractButton::connect(self,
+                             static_cast<void (QAbstractButton::*)(bool)>(&QAbstractButton::clicked),
+                             [self, slotFunc](bool checked) {
+                                 bool sigval1 = checked;
+                                 slotFunc(self, sigval1);
+                             });
 }
 
 // Base class handler implementation

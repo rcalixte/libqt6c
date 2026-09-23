@@ -546,6 +546,7 @@ type CppClass struct {
 	HasTrivialCopyAssign bool
 	HasTrivialMoveAssign bool
 	HasEmptyCtor         bool
+	HasQObjectMacro      bool
 
 	ChildTypedefs   []CppTypedef
 	ChildClassdefs  []CppClass
@@ -602,6 +603,11 @@ func (c *CppClass) VirtualMethods() []CppMethod {
 			// Use a blocklist to prevent exposing any deeper methods in the call chain
 			if _, ok := block[cinfo.Class.Methods[i].MethodName]; ok {
 				continue // Marked as private in a child class
+			}
+			if cinfo.Class.Methods[i].OverrideMethodName != "" {
+				if _, ok := block[cinfo.Class.Methods[i].OverrideMethodName]; ok {
+					continue // Override marked as private in a child class
+				}
 			}
 
 			// The class info we loaded has not had all typedefs applied to it
@@ -675,6 +681,11 @@ func (c *CppClass) ProtectedMethods() []CppMethod {
 			// Use a blocklist to prevent exposing any deeper methods in the call chain
 			if _, ok := block[cinfo.Class.Methods[i].MethodName]; ok {
 				continue // Marked as private in a child class
+			}
+			if cinfo.Class.Methods[i].OverrideMethodName != "" {
+				if _, ok := block[cinfo.Class.Methods[i].OverrideMethodName]; ok {
+					continue // Override marked as private in a child class
+				}
 			}
 
 			// The class info we loaded has not had all typedefs applied to it

@@ -619,6 +619,13 @@ void q_websocket_on_binary_message_received(void* self, void (*callback)(void*, 
 ///
 void q_websocket_error2(void* self, int32_t error);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#error)
+///
+/// @param self QWebSocket*
+/// @param callback void func(QWebSocket* self, enum QAbstractSocket__SocketError error)
+///
+void q_websocket_on_error2(void* self, void (*callback)(void*, int32_t));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#errorOccurred)
 ///
 /// @param self QWebSocket*

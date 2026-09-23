@@ -251,8 +251,22 @@ void q_accounts__accountservice_enabled2(void* self, bool isEnabled);
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AccountService.html)
 ///
 /// @param self Accounts__AccountService*
+/// @param callback void func(Accounts__AccountService* self, bool isEnabled)
+///
+void q_accounts__accountservice_on_enabled2(void* self, void (*callback)(void*, bool));
+
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AccountService.html)
+///
+/// @param self Accounts__AccountService*
 ///
 void q_accounts__accountservice_changed(void* self);
+
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AccountService.html)
+///
+/// @param self Accounts__AccountService*
+/// @param callback void func(Accounts__AccountService* self)
+///
+void q_accounts__accountservice_on_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

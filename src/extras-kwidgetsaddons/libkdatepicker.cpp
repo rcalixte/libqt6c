@@ -130,12 +130,14 @@ void KDatePicker_DateChanged(KDatePicker* self, const QDate* date) {
 
 void KDatePicker_Connect_DateChanged(KDatePicker* self, intptr_t slot) {
     void (*slotFunc)(KDatePicker*, QDate*) = reinterpret_cast<void (*)(KDatePicker*, QDate*)>(slot);
-    KDatePicker::connect(self, &KDatePicker::dateChanged, [self, slotFunc](const QDate& date) {
-        const QDate& date_ret = date;
-        // Cast returned reference into pointer
-        QDate* sigval1 = const_cast<QDate*>(&date_ret);
-        slotFunc(self, sigval1);
-    });
+    KDatePicker::connect(self,
+                         static_cast<void (KDatePicker::*)(const QDate&)>(&KDatePicker::dateChanged),
+                         [self, slotFunc](const QDate& date) {
+                             const QDate& date_ret = date;
+                             // Cast returned reference into pointer
+                             QDate* sigval1 = const_cast<QDate*>(&date_ret);
+                             slotFunc(self, sigval1);
+                         });
 }
 
 void KDatePicker_DateSelected(KDatePicker* self, const QDate* date) {
@@ -144,12 +146,14 @@ void KDatePicker_DateSelected(KDatePicker* self, const QDate* date) {
 
 void KDatePicker_Connect_DateSelected(KDatePicker* self, intptr_t slot) {
     void (*slotFunc)(KDatePicker*, QDate*) = reinterpret_cast<void (*)(KDatePicker*, QDate*)>(slot);
-    KDatePicker::connect(self, &KDatePicker::dateSelected, [self, slotFunc](const QDate& date) {
-        const QDate& date_ret = date;
-        // Cast returned reference into pointer
-        QDate* sigval1 = const_cast<QDate*>(&date_ret);
-        slotFunc(self, sigval1);
-    });
+    KDatePicker::connect(self,
+                         static_cast<void (KDatePicker::*)(const QDate&)>(&KDatePicker::dateSelected),
+                         [self, slotFunc](const QDate& date) {
+                             const QDate& date_ret = date;
+                             // Cast returned reference into pointer
+                             QDate* sigval1 = const_cast<QDate*>(&date_ret);
+                             slotFunc(self, sigval1);
+                         });
 }
 
 void KDatePicker_DateEntered(KDatePicker* self, const QDate* date) {
@@ -158,12 +162,14 @@ void KDatePicker_DateEntered(KDatePicker* self, const QDate* date) {
 
 void KDatePicker_Connect_DateEntered(KDatePicker* self, intptr_t slot) {
     void (*slotFunc)(KDatePicker*, QDate*) = reinterpret_cast<void (*)(KDatePicker*, QDate*)>(slot);
-    KDatePicker::connect(self, &KDatePicker::dateEntered, [self, slotFunc](const QDate& date) {
-        const QDate& date_ret = date;
-        // Cast returned reference into pointer
-        QDate* sigval1 = const_cast<QDate*>(&date_ret);
-        slotFunc(self, sigval1);
-    });
+    KDatePicker::connect(self,
+                         static_cast<void (KDatePicker::*)(const QDate&)>(&KDatePicker::dateEntered),
+                         [self, slotFunc](const QDate& date) {
+                             const QDate& date_ret = date;
+                             // Cast returned reference into pointer
+                             QDate* sigval1 = const_cast<QDate*>(&date_ret);
+                             slotFunc(self, sigval1);
+                         });
 }
 
 void KDatePicker_TableClicked(KDatePicker* self) {
@@ -172,9 +178,11 @@ void KDatePicker_TableClicked(KDatePicker* self) {
 
 void KDatePicker_Connect_TableClicked(KDatePicker* self, intptr_t slot) {
     void (*slotFunc)(KDatePicker*) = reinterpret_cast<void (*)(KDatePicker*)>(slot);
-    KDatePicker::connect(self, &KDatePicker::tableClicked, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KDatePicker::connect(self,
+                         static_cast<void (KDatePicker::*)()>(&KDatePicker::tableClicked),
+                         [self, slotFunc]() {
+                             slotFunc(self);
+                         });
 }
 
 void KDatePicker_SetDateRange2(KDatePicker* self, const QDate* minDate, const QDate* maxDate) {

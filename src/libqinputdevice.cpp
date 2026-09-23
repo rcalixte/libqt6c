@@ -141,10 +141,12 @@ void QInputDevice_AvailableVirtualGeometryChanged(QInputDevice* self, QRect* are
 
 void QInputDevice_Connect_AvailableVirtualGeometryChanged(QInputDevice* self, intptr_t slot) {
     void (*slotFunc)(QInputDevice*, QRect*) = reinterpret_cast<void (*)(QInputDevice*, QRect*)>(slot);
-    QInputDevice::connect(self, &QInputDevice::availableVirtualGeometryChanged, [self, slotFunc](QRect area) {
-        QRect* sigval1 = new QRect(area);
-        slotFunc(self, sigval1);
-    });
+    QInputDevice::connect(self,
+                          static_cast<void (QInputDevice::*)(QRect)>(&QInputDevice::availableVirtualGeometryChanged),
+                          [self, slotFunc](QRect area) {
+                              QRect* sigval1 = new QRect(area);
+                              slotFunc(self, sigval1);
+                          });
 }
 
 QInputDevice* QInputDevice_PrimaryKeyboard1(const libqt_string seatName) {

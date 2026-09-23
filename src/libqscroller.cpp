@@ -150,10 +150,12 @@ void QScroller_StateChanged(QScroller* self, int newstate) {
 
 void QScroller_Connect_StateChanged(QScroller* self, intptr_t slot) {
     void (*slotFunc)(QScroller*, int) = reinterpret_cast<void (*)(QScroller*, int)>(slot);
-    QScroller::connect(self, &QScroller::stateChanged, [self, slotFunc](QScroller::State newstate) {
-        int sigval1 = static_cast<int>(newstate);
-        slotFunc(self, sigval1);
-    });
+    QScroller::connect(self,
+                       static_cast<void (QScroller::*)(QScroller::State)>(&QScroller::stateChanged),
+                       [self, slotFunc](QScroller::State newstate) {
+                           int sigval1 = static_cast<int>(newstate);
+                           slotFunc(self, sigval1);
+                       });
 }
 
 void QScroller_ScrollerPropertiesChanged(QScroller* self, const QScrollerProperties* param1) {
@@ -162,12 +164,14 @@ void QScroller_ScrollerPropertiesChanged(QScroller* self, const QScrollerPropert
 
 void QScroller_Connect_ScrollerPropertiesChanged(QScroller* self, intptr_t slot) {
     void (*slotFunc)(QScroller*, QScrollerProperties*) = reinterpret_cast<void (*)(QScroller*, QScrollerProperties*)>(slot);
-    QScroller::connect(self, &QScroller::scrollerPropertiesChanged, [self, slotFunc](const QScrollerProperties& param1) {
-        const QScrollerProperties& param1_ret = param1;
-        // Cast returned reference into pointer
-        QScrollerProperties* sigval1 = const_cast<QScrollerProperties*>(&param1_ret);
-        slotFunc(self, sigval1);
-    });
+    QScroller::connect(self,
+                       static_cast<void (QScroller::*)(const QScrollerProperties&)>(&QScroller::scrollerPropertiesChanged),
+                       [self, slotFunc](const QScrollerProperties& param1) {
+                           const QScrollerProperties& param1_ret = param1;
+                           // Cast returned reference into pointer
+                           QScrollerProperties* sigval1 = const_cast<QScrollerProperties*>(&param1_ret);
+                           slotFunc(self, sigval1);
+                       });
 }
 
 int QScroller_GrabGesture2(QObject* target, int gestureType) {

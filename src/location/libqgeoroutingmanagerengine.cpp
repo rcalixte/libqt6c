@@ -121,10 +121,12 @@ void QGeoRoutingManagerEngine_Finished(QGeoRoutingManagerEngine* self, QGeoRoute
 
 void QGeoRoutingManagerEngine_Connect_Finished(QGeoRoutingManagerEngine* self, intptr_t slot) {
     void (*slotFunc)(QGeoRoutingManagerEngine*, QGeoRouteReply*) = reinterpret_cast<void (*)(QGeoRoutingManagerEngine*, QGeoRouteReply*)>(slot);
-    QGeoRoutingManagerEngine::connect(self, &QGeoRoutingManagerEngine::finished, [self, slotFunc](QGeoRouteReply* reply) {
-        QGeoRouteReply* sigval1 = reply;
-        slotFunc(self, sigval1);
-    });
+    QGeoRoutingManagerEngine::connect(self,
+                                      static_cast<void (QGeoRoutingManagerEngine::*)(QGeoRouteReply*)>(&QGeoRoutingManagerEngine::finished),
+                                      [self, slotFunc](QGeoRouteReply* reply) {
+                                          QGeoRouteReply* sigval1 = reply;
+                                          slotFunc(self, sigval1);
+                                      });
 }
 
 void QGeoRoutingManagerEngine_ErrorOccurred(QGeoRoutingManagerEngine* self, QGeoRouteReply* reply, int error) {
@@ -133,11 +135,13 @@ void QGeoRoutingManagerEngine_ErrorOccurred(QGeoRoutingManagerEngine* self, QGeo
 
 void QGeoRoutingManagerEngine_Connect_ErrorOccurred(QGeoRoutingManagerEngine* self, intptr_t slot) {
     void (*slotFunc)(QGeoRoutingManagerEngine*, QGeoRouteReply*, int) = reinterpret_cast<void (*)(QGeoRoutingManagerEngine*, QGeoRouteReply*, int)>(slot);
-    QGeoRoutingManagerEngine::connect(self, &QGeoRoutingManagerEngine::errorOccurred, [self, slotFunc](QGeoRouteReply* reply, QGeoRouteReply::Error error) {
-        QGeoRouteReply* sigval1 = reply;
-        int sigval2 = static_cast<int>(error);
-        slotFunc(self, sigval1, sigval2);
-    });
+    QGeoRoutingManagerEngine::connect(self,
+                                      static_cast<void (QGeoRoutingManagerEngine::*)(QGeoRouteReply*, QGeoRouteReply::Error, const QString&)>(&QGeoRoutingManagerEngine::errorOccurred),
+                                      [self, slotFunc](QGeoRouteReply* reply, QGeoRouteReply::Error error) {
+                                          QGeoRouteReply* sigval1 = reply;
+                                          int sigval2 = static_cast<int>(error);
+                                          slotFunc(self, sigval1, sigval2);
+                                      });
 }
 
 void QGeoRoutingManagerEngine_ErrorOccurred3(QGeoRoutingManagerEngine* self, QGeoRouteReply* reply, int error, const libqt_string errorString) {
@@ -147,20 +151,22 @@ void QGeoRoutingManagerEngine_ErrorOccurred3(QGeoRoutingManagerEngine* self, QGe
 
 void QGeoRoutingManagerEngine_Connect_ErrorOccurred3(QGeoRoutingManagerEngine* self, intptr_t slot) {
     void (*slotFunc)(QGeoRoutingManagerEngine*, QGeoRouteReply*, int, const char*) = reinterpret_cast<void (*)(QGeoRoutingManagerEngine*, QGeoRouteReply*, int, const char*)>(slot);
-    QGeoRoutingManagerEngine::connect(self, &QGeoRoutingManagerEngine::errorOccurred, [self, slotFunc](QGeoRouteReply* reply, QGeoRouteReply::Error error, const QString& errorString) {
-        QGeoRouteReply* sigval1 = reply;
-        int sigval2 = static_cast<int>(error);
-        const auto errorString_ret = errorString;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray errorString_b = errorString_ret.toUtf8();
-        auto errorString_str_len = errorString_b.length();
-        char* errorString_str = static_cast<char*>(malloc(errorString_str_len + 1));
-        memcpy(errorString_str, errorString_b.data(), errorString_str_len);
-        errorString_str[errorString_str_len] = '\0';
-        const char* sigval3 = errorString_str;
-        slotFunc(self, sigval1, sigval2, sigval3);
-        libqt_free(errorString_str);
-    });
+    QGeoRoutingManagerEngine::connect(self,
+                                      static_cast<void (QGeoRoutingManagerEngine::*)(QGeoRouteReply*, QGeoRouteReply::Error, const QString&)>(&QGeoRoutingManagerEngine::errorOccurred),
+                                      [self, slotFunc](QGeoRouteReply* reply, QGeoRouteReply::Error error, const QString& errorString) {
+                                          QGeoRouteReply* sigval1 = reply;
+                                          int sigval2 = static_cast<int>(error);
+                                          const auto errorString_ret = errorString;
+                                          // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                          QByteArray errorString_b = errorString_ret.toUtf8();
+                                          auto errorString_str_len = errorString_b.length();
+                                          char* errorString_str = static_cast<char*>(malloc(errorString_str_len + 1));
+                                          memcpy(errorString_str, errorString_b.data(), errorString_str_len);
+                                          errorString_str[errorString_str_len] = '\0';
+                                          const char* sigval3 = errorString_str;
+                                          slotFunc(self, sigval1, sigval2, sigval3);
+                                          libqt_free(errorString_str);
+                                      });
 }
 
 // Base class handler implementation

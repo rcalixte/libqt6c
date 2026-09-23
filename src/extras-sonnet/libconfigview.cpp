@@ -161,9 +161,11 @@ void Sonnet__ConfigView_ConfigChanged(Sonnet__ConfigView* self) {
 
 void Sonnet__ConfigView_Connect_ConfigChanged(Sonnet__ConfigView* self, intptr_t slot) {
     void (*slotFunc)(Sonnet__ConfigView*) = reinterpret_cast<void (*)(Sonnet__ConfigView*)>(slot);
-    Sonnet::ConfigView::connect(self, &Sonnet::ConfigView::configChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Sonnet::ConfigView::connect(self,
+                                static_cast<void (Sonnet::ConfigView::*)()>(&Sonnet::ConfigView::configChanged),
+                                [self, slotFunc]() {
+                                    slotFunc(self);
+                                });
 }
 
 // Base class handler implementation

@@ -80,18 +80,20 @@ void TextEmoticonsWidgets__EmoticonTextEditSelector_InsertEmoji(TextEmoticonsWid
 
 void TextEmoticonsWidgets__EmoticonTextEditSelector_Connect_InsertEmoji(TextEmoticonsWidgets__EmoticonTextEditSelector* self, intptr_t slot) {
     void (*slotFunc)(TextEmoticonsWidgets__EmoticonTextEditSelector*, const char*) = reinterpret_cast<void (*)(TextEmoticonsWidgets__EmoticonTextEditSelector*, const char*)>(slot);
-    TextEmoticonsWidgets::EmoticonTextEditSelector::connect(self, &TextEmoticonsWidgets::EmoticonTextEditSelector::insertEmoji, [self, slotFunc](const QString& param1) {
-        const auto param1_ret = param1;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray param1_b = param1_ret.toUtf8();
-        auto param1_str_len = param1_b.length();
-        char* param1_str = static_cast<char*>(malloc(param1_str_len + 1));
-        memcpy(param1_str, param1_b.data(), param1_str_len);
-        param1_str[param1_str_len] = '\0';
-        const char* sigval1 = param1_str;
-        slotFunc(self, sigval1);
-        libqt_free(param1_str);
-    });
+    TextEmoticonsWidgets::EmoticonTextEditSelector::connect(self,
+                                                            static_cast<void (TextEmoticonsWidgets::EmoticonTextEditSelector::*)(const QString&)>(&TextEmoticonsWidgets::EmoticonTextEditSelector::insertEmoji),
+                                                            [self, slotFunc](const QString& param1) {
+                                                                const auto param1_ret = param1;
+                                                                // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                                                QByteArray param1_b = param1_ret.toUtf8();
+                                                                auto param1_str_len = param1_b.length();
+                                                                char* param1_str = static_cast<char*>(malloc(param1_str_len + 1));
+                                                                memcpy(param1_str, param1_b.data(), param1_str_len);
+                                                                param1_str[param1_str_len] = '\0';
+                                                                const char* sigval1 = param1_str;
+                                                                slotFunc(self, sigval1);
+                                                                libqt_free(param1_str);
+                                                            });
 }
 
 void TextEmoticonsWidgets__EmoticonTextEditSelector_InsertEmojiIdentifier(TextEmoticonsWidgets__EmoticonTextEditSelector* self, const libqt_string param1) {
@@ -101,18 +103,20 @@ void TextEmoticonsWidgets__EmoticonTextEditSelector_InsertEmojiIdentifier(TextEm
 
 void TextEmoticonsWidgets__EmoticonTextEditSelector_Connect_InsertEmojiIdentifier(TextEmoticonsWidgets__EmoticonTextEditSelector* self, intptr_t slot) {
     void (*slotFunc)(TextEmoticonsWidgets__EmoticonTextEditSelector*, const char*) = reinterpret_cast<void (*)(TextEmoticonsWidgets__EmoticonTextEditSelector*, const char*)>(slot);
-    TextEmoticonsWidgets::EmoticonTextEditSelector::connect(self, &TextEmoticonsWidgets::EmoticonTextEditSelector::insertEmojiIdentifier, [self, slotFunc](const QString& param1) {
-        const auto param1_ret = param1;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray param1_b = param1_ret.toUtf8();
-        auto param1_str_len = param1_b.length();
-        char* param1_str = static_cast<char*>(malloc(param1_str_len + 1));
-        memcpy(param1_str, param1_b.data(), param1_str_len);
-        param1_str[param1_str_len] = '\0';
-        const char* sigval1 = param1_str;
-        slotFunc(self, sigval1);
-        libqt_free(param1_str);
-    });
+    TextEmoticonsWidgets::EmoticonTextEditSelector::connect(self,
+                                                            static_cast<void (TextEmoticonsWidgets::EmoticonTextEditSelector::*)(const QString&)>(&TextEmoticonsWidgets::EmoticonTextEditSelector::insertEmojiIdentifier),
+                                                            [self, slotFunc](const QString& param1) {
+                                                                const auto param1_ret = param1;
+                                                                // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                                                QByteArray param1_b = param1_ret.toUtf8();
+                                                                auto param1_str_len = param1_b.length();
+                                                                char* param1_str = static_cast<char*>(malloc(param1_str_len + 1));
+                                                                memcpy(param1_str, param1_b.data(), param1_str_len);
+                                                                param1_str[param1_str_len] = '\0';
+                                                                const char* sigval1 = param1_str;
+                                                                slotFunc(self, sigval1);
+                                                                libqt_free(param1_str);
+                                                            });
 }
 
 // Base class handler implementation

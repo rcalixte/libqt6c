@@ -57,10 +57,12 @@ void TextEditTextToSpeech__TextToSpeechActions_StateChanged(TextEditTextToSpeech
 
 void TextEditTextToSpeech__TextToSpeechActions_Connect_StateChanged(TextEditTextToSpeech__TextToSpeechActions* self, intptr_t slot) {
     void (*slotFunc)(TextEditTextToSpeech__TextToSpeechActions*, int) = reinterpret_cast<void (*)(TextEditTextToSpeech__TextToSpeechActions*, int)>(slot);
-    TextEditTextToSpeech::TextToSpeechActions::connect(self, &TextEditTextToSpeech::TextToSpeechActions::stateChanged, [self, slotFunc](TextEditTextToSpeech::TextToSpeechWidget::State state) {
-        int sigval1 = static_cast<int>(state);
-        slotFunc(self, sigval1);
-    });
+    TextEditTextToSpeech::TextToSpeechActions::connect(self,
+                                                       static_cast<void (TextEditTextToSpeech::TextToSpeechActions::*)(TextEditTextToSpeech::TextToSpeechWidget::State)>(&TextEditTextToSpeech::TextToSpeechActions::stateChanged),
+                                                       [self, slotFunc](TextEditTextToSpeech::TextToSpeechWidget::State state) {
+                                                           int sigval1 = static_cast<int>(state);
+                                                           slotFunc(self, sigval1);
+                                                       });
 }
 
 // Base class handler implementation

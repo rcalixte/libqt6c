@@ -64,9 +64,11 @@ void QPlaceReply_Finished(QPlaceReply* self) {
 
 void QPlaceReply_Connect_Finished(QPlaceReply* self, intptr_t slot) {
     void (*slotFunc)(QPlaceReply*) = reinterpret_cast<void (*)(QPlaceReply*)>(slot);
-    QPlaceReply::connect(self, &QPlaceReply::finished, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QPlaceReply::connect(self,
+                         static_cast<void (QPlaceReply::*)()>(&QPlaceReply::finished),
+                         [self, slotFunc]() {
+                             slotFunc(self);
+                         });
 }
 
 void QPlaceReply_ContentUpdated(QPlaceReply* self) {
@@ -75,9 +77,11 @@ void QPlaceReply_ContentUpdated(QPlaceReply* self) {
 
 void QPlaceReply_Connect_ContentUpdated(QPlaceReply* self, intptr_t slot) {
     void (*slotFunc)(QPlaceReply*) = reinterpret_cast<void (*)(QPlaceReply*)>(slot);
-    QPlaceReply::connect(self, &QPlaceReply::contentUpdated, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QPlaceReply::connect(self,
+                         static_cast<void (QPlaceReply::*)()>(&QPlaceReply::contentUpdated),
+                         [self, slotFunc]() {
+                             slotFunc(self);
+                         });
 }
 
 void QPlaceReply_Aborted(QPlaceReply* self) {
@@ -86,9 +90,11 @@ void QPlaceReply_Aborted(QPlaceReply* self) {
 
 void QPlaceReply_Connect_Aborted(QPlaceReply* self, intptr_t slot) {
     void (*slotFunc)(QPlaceReply*) = reinterpret_cast<void (*)(QPlaceReply*)>(slot);
-    QPlaceReply::connect(self, &QPlaceReply::aborted, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QPlaceReply::connect(self,
+                         static_cast<void (QPlaceReply::*)()>(&QPlaceReply::aborted),
+                         [self, slotFunc]() {
+                             slotFunc(self);
+                         });
 }
 
 void QPlaceReply_ErrorOccurred(QPlaceReply* self, int error) {
@@ -97,10 +103,12 @@ void QPlaceReply_ErrorOccurred(QPlaceReply* self, int error) {
 
 void QPlaceReply_Connect_ErrorOccurred(QPlaceReply* self, intptr_t slot) {
     void (*slotFunc)(QPlaceReply*, int) = reinterpret_cast<void (*)(QPlaceReply*, int)>(slot);
-    QPlaceReply::connect(self, &QPlaceReply::errorOccurred, [self, slotFunc](QPlaceReply::Error error) {
-        int sigval1 = static_cast<int>(error);
-        slotFunc(self, sigval1);
-    });
+    QPlaceReply::connect(self,
+                         static_cast<void (QPlaceReply::*)(QPlaceReply::Error, const QString&)>(&QPlaceReply::errorOccurred),
+                         [self, slotFunc](QPlaceReply::Error error) {
+                             int sigval1 = static_cast<int>(error);
+                             slotFunc(self, sigval1);
+                         });
 }
 
 void QPlaceReply_ErrorOccurred2(QPlaceReply* self, int error, const libqt_string errorString) {
@@ -110,19 +118,21 @@ void QPlaceReply_ErrorOccurred2(QPlaceReply* self, int error, const libqt_string
 
 void QPlaceReply_Connect_ErrorOccurred2(QPlaceReply* self, intptr_t slot) {
     void (*slotFunc)(QPlaceReply*, int, const char*) = reinterpret_cast<void (*)(QPlaceReply*, int, const char*)>(slot);
-    QPlaceReply::connect(self, &QPlaceReply::errorOccurred, [self, slotFunc](QPlaceReply::Error error, const QString& errorString) {
-        int sigval1 = static_cast<int>(error);
-        const auto errorString_ret = errorString;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray errorString_b = errorString_ret.toUtf8();
-        auto errorString_str_len = errorString_b.length();
-        char* errorString_str = static_cast<char*>(malloc(errorString_str_len + 1));
-        memcpy(errorString_str, errorString_b.data(), errorString_str_len);
-        errorString_str[errorString_str_len] = '\0';
-        const char* sigval2 = errorString_str;
-        slotFunc(self, sigval1, sigval2);
-        libqt_free(errorString_str);
-    });
+    QPlaceReply::connect(self,
+                         static_cast<void (QPlaceReply::*)(QPlaceReply::Error, const QString&)>(&QPlaceReply::errorOccurred),
+                         [self, slotFunc](QPlaceReply::Error error, const QString& errorString) {
+                             int sigval1 = static_cast<int>(error);
+                             const auto errorString_ret = errorString;
+                             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                             QByteArray errorString_b = errorString_ret.toUtf8();
+                             auto errorString_str_len = errorString_b.length();
+                             char* errorString_str = static_cast<char*>(malloc(errorString_str_len + 1));
+                             memcpy(errorString_str, errorString_b.data(), errorString_str_len);
+                             errorString_str[errorString_str_len] = '\0';
+                             const char* sigval2 = errorString_str;
+                             slotFunc(self, sigval1, sigval2);
+                             libqt_free(errorString_str);
+                         });
 }
 
 // Base class handler implementation

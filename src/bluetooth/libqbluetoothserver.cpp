@@ -96,9 +96,11 @@ void QBluetoothServer_NewConnection(QBluetoothServer* self) {
 
 void QBluetoothServer_Connect_NewConnection(QBluetoothServer* self, intptr_t slot) {
     void (*slotFunc)(QBluetoothServer*) = reinterpret_cast<void (*)(QBluetoothServer*)>(slot);
-    QBluetoothServer::connect(self, &QBluetoothServer::newConnection, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QBluetoothServer::connect(self,
+                              static_cast<void (QBluetoothServer::*)()>(&QBluetoothServer::newConnection),
+                              [self, slotFunc]() {
+                                  slotFunc(self);
+                              });
 }
 
 void QBluetoothServer_ErrorOccurred(QBluetoothServer* self, int error) {
@@ -107,10 +109,12 @@ void QBluetoothServer_ErrorOccurred(QBluetoothServer* self, int error) {
 
 void QBluetoothServer_Connect_ErrorOccurred(QBluetoothServer* self, intptr_t slot) {
     void (*slotFunc)(QBluetoothServer*, int) = reinterpret_cast<void (*)(QBluetoothServer*, int)>(slot);
-    QBluetoothServer::connect(self, &QBluetoothServer::errorOccurred, [self, slotFunc](QBluetoothServer::Error error) {
-        int sigval1 = static_cast<int>(error);
-        slotFunc(self, sigval1);
-    });
+    QBluetoothServer::connect(self,
+                              static_cast<void (QBluetoothServer::*)(QBluetoothServer::Error)>(&QBluetoothServer::errorOccurred),
+                              [self, slotFunc](QBluetoothServer::Error error) {
+                                  int sigval1 = static_cast<int>(error);
+                                  slotFunc(self, sigval1);
+                              });
 }
 
 bool QBluetoothServer_Listen1(QBluetoothServer* self, const QBluetoothAddress* address) {

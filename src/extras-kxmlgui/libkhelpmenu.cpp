@@ -98,9 +98,11 @@ void KHelpMenu_ShowAboutApplication(KHelpMenu* self) {
 
 void KHelpMenu_Connect_ShowAboutApplication(KHelpMenu* self, intptr_t slot) {
     void (*slotFunc)(KHelpMenu*) = reinterpret_cast<void (*)(KHelpMenu*)>(slot);
-    KHelpMenu::connect(self, &KHelpMenu::showAboutApplication, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KHelpMenu::connect(self,
+                       static_cast<void (KHelpMenu::*)()>(&KHelpMenu::showAboutApplication),
+                       [self, slotFunc]() {
+                           slotFunc(self);
+                       });
 }
 
 // Base class handler implementation

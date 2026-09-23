@@ -44,9 +44,11 @@ void KPropertiesDialogPlugin_Changed(KPropertiesDialogPlugin* self) {
 
 void KPropertiesDialogPlugin_Connect_Changed(KPropertiesDialogPlugin* self, intptr_t slot) {
     void (*slotFunc)(KPropertiesDialogPlugin*) = reinterpret_cast<void (*)(KPropertiesDialogPlugin*)>(slot);
-    KPropertiesDialogPlugin::connect(self, &KPropertiesDialogPlugin::changed, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KPropertiesDialogPlugin::connect(self,
+                                     static_cast<void (KPropertiesDialogPlugin::*)()>(&KPropertiesDialogPlugin::changed),
+                                     [self, slotFunc]() {
+                                         slotFunc(self);
+                                     });
 }
 
 void KPropertiesDialogPlugin_SetDirty1(KPropertiesDialogPlugin* self, bool b) {

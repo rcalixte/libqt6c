@@ -86,10 +86,12 @@ void KIO__FileUndoManager_UndoAvailable(KIO__FileUndoManager* self, bool avail) 
 
 void KIO__FileUndoManager_Connect_UndoAvailable(KIO__FileUndoManager* self, intptr_t slot) {
     void (*slotFunc)(KIO__FileUndoManager*, bool) = reinterpret_cast<void (*)(KIO__FileUndoManager*, bool)>(slot);
-    KIO::FileUndoManager::connect(self, &KIO::FileUndoManager::undoAvailable, [self, slotFunc](bool avail) {
-        bool sigval1 = avail;
-        slotFunc(self, sigval1);
-    });
+    KIO::FileUndoManager::connect(self,
+                                  static_cast<void (KIO::FileUndoManager::*)(bool)>(&KIO::FileUndoManager::undoAvailable),
+                                  [self, slotFunc](bool avail) {
+                                      bool sigval1 = avail;
+                                      slotFunc(self, sigval1);
+                                  });
 }
 
 void KIO__FileUndoManager_UndoTextChanged(KIO__FileUndoManager* self, const libqt_string text) {
@@ -99,18 +101,20 @@ void KIO__FileUndoManager_UndoTextChanged(KIO__FileUndoManager* self, const libq
 
 void KIO__FileUndoManager_Connect_UndoTextChanged(KIO__FileUndoManager* self, intptr_t slot) {
     void (*slotFunc)(KIO__FileUndoManager*, const char*) = reinterpret_cast<void (*)(KIO__FileUndoManager*, const char*)>(slot);
-    KIO::FileUndoManager::connect(self, &KIO::FileUndoManager::undoTextChanged, [self, slotFunc](const QString& text) {
-        const auto text_ret = text;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray text_b = text_ret.toUtf8();
-        auto text_str_len = text_b.length();
-        char* text_str = static_cast<char*>(malloc(text_str_len + 1));
-        memcpy(text_str, text_b.data(), text_str_len);
-        text_str[text_str_len] = '\0';
-        const char* sigval1 = text_str;
-        slotFunc(self, sigval1);
-        libqt_free(text_str);
-    });
+    KIO::FileUndoManager::connect(self,
+                                  static_cast<void (KIO::FileUndoManager::*)(const QString&)>(&KIO::FileUndoManager::undoTextChanged),
+                                  [self, slotFunc](const QString& text) {
+                                      const auto text_ret = text;
+                                      // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                      QByteArray text_b = text_ret.toUtf8();
+                                      auto text_str_len = text_b.length();
+                                      char* text_str = static_cast<char*>(malloc(text_str_len + 1));
+                                      memcpy(text_str, text_b.data(), text_str_len);
+                                      text_str[text_str_len] = '\0';
+                                      const char* sigval1 = text_str;
+                                      slotFunc(self, sigval1);
+                                      libqt_free(text_str);
+                                  });
 }
 
 void KIO__FileUndoManager_UndoJobFinished(KIO__FileUndoManager* self) {
@@ -119,9 +123,11 @@ void KIO__FileUndoManager_UndoJobFinished(KIO__FileUndoManager* self) {
 
 void KIO__FileUndoManager_Connect_UndoJobFinished(KIO__FileUndoManager* self, intptr_t slot) {
     void (*slotFunc)(KIO__FileUndoManager*) = reinterpret_cast<void (*)(KIO__FileUndoManager*)>(slot);
-    KIO::FileUndoManager::connect(self, &KIO::FileUndoManager::undoJobFinished, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KIO::FileUndoManager::connect(self,
+                                  static_cast<void (KIO::FileUndoManager::*)()>(&KIO::FileUndoManager::undoJobFinished),
+                                  [self, slotFunc]() {
+                                      slotFunc(self);
+                                  });
 }
 
 void KIO__FileUndoManager_JobRecordingStarted(KIO__FileUndoManager* self, int op) {
@@ -130,10 +136,12 @@ void KIO__FileUndoManager_JobRecordingStarted(KIO__FileUndoManager* self, int op
 
 void KIO__FileUndoManager_Connect_JobRecordingStarted(KIO__FileUndoManager* self, intptr_t slot) {
     void (*slotFunc)(KIO__FileUndoManager*, int) = reinterpret_cast<void (*)(KIO__FileUndoManager*, int)>(slot);
-    KIO::FileUndoManager::connect(self, &KIO::FileUndoManager::jobRecordingStarted, [self, slotFunc](KIO::FileUndoManager::CommandType op) {
-        int sigval1 = static_cast<int>(op);
-        slotFunc(self, sigval1);
-    });
+    KIO::FileUndoManager::connect(self,
+                                  static_cast<void (KIO::FileUndoManager::*)(KIO::FileUndoManager::CommandType)>(&KIO::FileUndoManager::jobRecordingStarted),
+                                  [self, slotFunc](KIO::FileUndoManager::CommandType op) {
+                                      int sigval1 = static_cast<int>(op);
+                                      slotFunc(self, sigval1);
+                                  });
 }
 
 void KIO__FileUndoManager_JobRecordingFinished(KIO__FileUndoManager* self, int op) {
@@ -142,10 +150,12 @@ void KIO__FileUndoManager_JobRecordingFinished(KIO__FileUndoManager* self, int o
 
 void KIO__FileUndoManager_Connect_JobRecordingFinished(KIO__FileUndoManager* self, intptr_t slot) {
     void (*slotFunc)(KIO__FileUndoManager*, int) = reinterpret_cast<void (*)(KIO__FileUndoManager*, int)>(slot);
-    KIO::FileUndoManager::connect(self, &KIO::FileUndoManager::jobRecordingFinished, [self, slotFunc](KIO::FileUndoManager::CommandType op) {
-        int sigval1 = static_cast<int>(op);
-        slotFunc(self, sigval1);
-    });
+    KIO::FileUndoManager::connect(self,
+                                  static_cast<void (KIO::FileUndoManager::*)(KIO::FileUndoManager::CommandType)>(&KIO::FileUndoManager::jobRecordingFinished),
+                                  [self, slotFunc](KIO::FileUndoManager::CommandType op) {
+                                      int sigval1 = static_cast<int>(op);
+                                      slotFunc(self, sigval1);
+                                  });
 }
 
 KIO__FileUndoManager__UiInterface* KIO__FileUndoManager__UiInterface_New() {

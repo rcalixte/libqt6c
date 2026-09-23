@@ -199,12 +199,14 @@ void KDateTimeEdit_DateTimeEntered(KDateTimeEdit* self, const QDateTime* dateTim
 
 void KDateTimeEdit_Connect_DateTimeEntered(KDateTimeEdit* self, intptr_t slot) {
     void (*slotFunc)(KDateTimeEdit*, QDateTime*) = reinterpret_cast<void (*)(KDateTimeEdit*, QDateTime*)>(slot);
-    KDateTimeEdit::connect(self, &KDateTimeEdit::dateTimeEntered, [self, slotFunc](const QDateTime& dateTime) {
-        const QDateTime& dateTime_ret = dateTime;
-        // Cast returned reference into pointer
-        QDateTime* sigval1 = const_cast<QDateTime*>(&dateTime_ret);
-        slotFunc(self, sigval1);
-    });
+    KDateTimeEdit::connect(self,
+                           static_cast<void (KDateTimeEdit::*)(const QDateTime&)>(&KDateTimeEdit::dateTimeEntered),
+                           [self, slotFunc](const QDateTime& dateTime) {
+                               const QDateTime& dateTime_ret = dateTime;
+                               // Cast returned reference into pointer
+                               QDateTime* sigval1 = const_cast<QDateTime*>(&dateTime_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void KDateTimeEdit_DateTimeChanged(KDateTimeEdit* self, const QDateTime* dateTime) {
@@ -213,12 +215,14 @@ void KDateTimeEdit_DateTimeChanged(KDateTimeEdit* self, const QDateTime* dateTim
 
 void KDateTimeEdit_Connect_DateTimeChanged(KDateTimeEdit* self, intptr_t slot) {
     void (*slotFunc)(KDateTimeEdit*, QDateTime*) = reinterpret_cast<void (*)(KDateTimeEdit*, QDateTime*)>(slot);
-    KDateTimeEdit::connect(self, &KDateTimeEdit::dateTimeChanged, [self, slotFunc](const QDateTime& dateTime) {
-        const QDateTime& dateTime_ret = dateTime;
-        // Cast returned reference into pointer
-        QDateTime* sigval1 = const_cast<QDateTime*>(&dateTime_ret);
-        slotFunc(self, sigval1);
-    });
+    KDateTimeEdit::connect(self,
+                           static_cast<void (KDateTimeEdit::*)(const QDateTime&)>(&KDateTimeEdit::dateTimeChanged),
+                           [self, slotFunc](const QDateTime& dateTime) {
+                               const QDateTime& dateTime_ret = dateTime;
+                               // Cast returned reference into pointer
+                               QDateTime* sigval1 = const_cast<QDateTime*>(&dateTime_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void KDateTimeEdit_DateTimeEdited(KDateTimeEdit* self, const QDateTime* dateTime) {
@@ -227,12 +231,14 @@ void KDateTimeEdit_DateTimeEdited(KDateTimeEdit* self, const QDateTime* dateTime
 
 void KDateTimeEdit_Connect_DateTimeEdited(KDateTimeEdit* self, intptr_t slot) {
     void (*slotFunc)(KDateTimeEdit*, QDateTime*) = reinterpret_cast<void (*)(KDateTimeEdit*, QDateTime*)>(slot);
-    KDateTimeEdit::connect(self, &KDateTimeEdit::dateTimeEdited, [self, slotFunc](const QDateTime& dateTime) {
-        const QDateTime& dateTime_ret = dateTime;
-        // Cast returned reference into pointer
-        QDateTime* sigval1 = const_cast<QDateTime*>(&dateTime_ret);
-        slotFunc(self, sigval1);
-    });
+    KDateTimeEdit::connect(self,
+                           static_cast<void (KDateTimeEdit::*)(const QDateTime&)>(&KDateTimeEdit::dateTimeEdited),
+                           [self, slotFunc](const QDateTime& dateTime) {
+                               const QDateTime& dateTime_ret = dateTime;
+                               // Cast returned reference into pointer
+                               QDateTime* sigval1 = const_cast<QDateTime*>(&dateTime_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void KDateTimeEdit_CalendarEntered(KDateTimeEdit* self, const QLocale* calendarLocale) {
@@ -241,12 +247,14 @@ void KDateTimeEdit_CalendarEntered(KDateTimeEdit* self, const QLocale* calendarL
 
 void KDateTimeEdit_Connect_CalendarEntered(KDateTimeEdit* self, intptr_t slot) {
     void (*slotFunc)(KDateTimeEdit*, QLocale*) = reinterpret_cast<void (*)(KDateTimeEdit*, QLocale*)>(slot);
-    KDateTimeEdit::connect(self, &KDateTimeEdit::calendarEntered, [self, slotFunc](const QLocale& calendarLocale) {
-        const QLocale& calendarLocale_ret = calendarLocale;
-        // Cast returned reference into pointer
-        QLocale* sigval1 = const_cast<QLocale*>(&calendarLocale_ret);
-        slotFunc(self, sigval1);
-    });
+    KDateTimeEdit::connect(self,
+                           static_cast<void (KDateTimeEdit::*)(const QLocale&)>(&KDateTimeEdit::calendarEntered),
+                           [self, slotFunc](const QLocale& calendarLocale) {
+                               const QLocale& calendarLocale_ret = calendarLocale;
+                               // Cast returned reference into pointer
+                               QLocale* sigval1 = const_cast<QLocale*>(&calendarLocale_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void KDateTimeEdit_CalendarChanged(KDateTimeEdit* self, const QLocale* calendarLocale) {
@@ -255,12 +263,14 @@ void KDateTimeEdit_CalendarChanged(KDateTimeEdit* self, const QLocale* calendarL
 
 void KDateTimeEdit_Connect_CalendarChanged(KDateTimeEdit* self, intptr_t slot) {
     void (*slotFunc)(KDateTimeEdit*, QLocale*) = reinterpret_cast<void (*)(KDateTimeEdit*, QLocale*)>(slot);
-    KDateTimeEdit::connect(self, &KDateTimeEdit::calendarChanged, [self, slotFunc](const QLocale& calendarLocale) {
-        const QLocale& calendarLocale_ret = calendarLocale;
-        // Cast returned reference into pointer
-        QLocale* sigval1 = const_cast<QLocale*>(&calendarLocale_ret);
-        slotFunc(self, sigval1);
-    });
+    KDateTimeEdit::connect(self,
+                           static_cast<void (KDateTimeEdit::*)(const QLocale&)>(&KDateTimeEdit::calendarChanged),
+                           [self, slotFunc](const QLocale& calendarLocale) {
+                               const QLocale& calendarLocale_ret = calendarLocale;
+                               // Cast returned reference into pointer
+                               QLocale* sigval1 = const_cast<QLocale*>(&calendarLocale_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void KDateTimeEdit_DateEntered(KDateTimeEdit* self, const QDate* date) {
@@ -269,12 +279,14 @@ void KDateTimeEdit_DateEntered(KDateTimeEdit* self, const QDate* date) {
 
 void KDateTimeEdit_Connect_DateEntered(KDateTimeEdit* self, intptr_t slot) {
     void (*slotFunc)(KDateTimeEdit*, QDate*) = reinterpret_cast<void (*)(KDateTimeEdit*, QDate*)>(slot);
-    KDateTimeEdit::connect(self, &KDateTimeEdit::dateEntered, [self, slotFunc](const QDate& date) {
-        const QDate& date_ret = date;
-        // Cast returned reference into pointer
-        QDate* sigval1 = const_cast<QDate*>(&date_ret);
-        slotFunc(self, sigval1);
-    });
+    KDateTimeEdit::connect(self,
+                           static_cast<void (KDateTimeEdit::*)(const QDate&)>(&KDateTimeEdit::dateEntered),
+                           [self, slotFunc](const QDate& date) {
+                               const QDate& date_ret = date;
+                               // Cast returned reference into pointer
+                               QDate* sigval1 = const_cast<QDate*>(&date_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void KDateTimeEdit_DateChanged(KDateTimeEdit* self, const QDate* date) {
@@ -283,12 +295,14 @@ void KDateTimeEdit_DateChanged(KDateTimeEdit* self, const QDate* date) {
 
 void KDateTimeEdit_Connect_DateChanged(KDateTimeEdit* self, intptr_t slot) {
     void (*slotFunc)(KDateTimeEdit*, QDate*) = reinterpret_cast<void (*)(KDateTimeEdit*, QDate*)>(slot);
-    KDateTimeEdit::connect(self, &KDateTimeEdit::dateChanged, [self, slotFunc](const QDate& date) {
-        const QDate& date_ret = date;
-        // Cast returned reference into pointer
-        QDate* sigval1 = const_cast<QDate*>(&date_ret);
-        slotFunc(self, sigval1);
-    });
+    KDateTimeEdit::connect(self,
+                           static_cast<void (KDateTimeEdit::*)(const QDate&)>(&KDateTimeEdit::dateChanged),
+                           [self, slotFunc](const QDate& date) {
+                               const QDate& date_ret = date;
+                               // Cast returned reference into pointer
+                               QDate* sigval1 = const_cast<QDate*>(&date_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void KDateTimeEdit_DateEdited(KDateTimeEdit* self, const QDate* date) {
@@ -297,12 +311,14 @@ void KDateTimeEdit_DateEdited(KDateTimeEdit* self, const QDate* date) {
 
 void KDateTimeEdit_Connect_DateEdited(KDateTimeEdit* self, intptr_t slot) {
     void (*slotFunc)(KDateTimeEdit*, QDate*) = reinterpret_cast<void (*)(KDateTimeEdit*, QDate*)>(slot);
-    KDateTimeEdit::connect(self, &KDateTimeEdit::dateEdited, [self, slotFunc](const QDate& date) {
-        const QDate& date_ret = date;
-        // Cast returned reference into pointer
-        QDate* sigval1 = const_cast<QDate*>(&date_ret);
-        slotFunc(self, sigval1);
-    });
+    KDateTimeEdit::connect(self,
+                           static_cast<void (KDateTimeEdit::*)(const QDate&)>(&KDateTimeEdit::dateEdited),
+                           [self, slotFunc](const QDate& date) {
+                               const QDate& date_ret = date;
+                               // Cast returned reference into pointer
+                               QDate* sigval1 = const_cast<QDate*>(&date_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void KDateTimeEdit_TimeEntered(KDateTimeEdit* self, const QTime* time) {
@@ -311,12 +327,14 @@ void KDateTimeEdit_TimeEntered(KDateTimeEdit* self, const QTime* time) {
 
 void KDateTimeEdit_Connect_TimeEntered(KDateTimeEdit* self, intptr_t slot) {
     void (*slotFunc)(KDateTimeEdit*, QTime*) = reinterpret_cast<void (*)(KDateTimeEdit*, QTime*)>(slot);
-    KDateTimeEdit::connect(self, &KDateTimeEdit::timeEntered, [self, slotFunc](const QTime& time) {
-        const QTime& time_ret = time;
-        // Cast returned reference into pointer
-        QTime* sigval1 = const_cast<QTime*>(&time_ret);
-        slotFunc(self, sigval1);
-    });
+    KDateTimeEdit::connect(self,
+                           static_cast<void (KDateTimeEdit::*)(const QTime&)>(&KDateTimeEdit::timeEntered),
+                           [self, slotFunc](const QTime& time) {
+                               const QTime& time_ret = time;
+                               // Cast returned reference into pointer
+                               QTime* sigval1 = const_cast<QTime*>(&time_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void KDateTimeEdit_TimeChanged(KDateTimeEdit* self, const QTime* time) {
@@ -325,12 +343,14 @@ void KDateTimeEdit_TimeChanged(KDateTimeEdit* self, const QTime* time) {
 
 void KDateTimeEdit_Connect_TimeChanged(KDateTimeEdit* self, intptr_t slot) {
     void (*slotFunc)(KDateTimeEdit*, QTime*) = reinterpret_cast<void (*)(KDateTimeEdit*, QTime*)>(slot);
-    KDateTimeEdit::connect(self, &KDateTimeEdit::timeChanged, [self, slotFunc](const QTime& time) {
-        const QTime& time_ret = time;
-        // Cast returned reference into pointer
-        QTime* sigval1 = const_cast<QTime*>(&time_ret);
-        slotFunc(self, sigval1);
-    });
+    KDateTimeEdit::connect(self,
+                           static_cast<void (KDateTimeEdit::*)(const QTime&)>(&KDateTimeEdit::timeChanged),
+                           [self, slotFunc](const QTime& time) {
+                               const QTime& time_ret = time;
+                               // Cast returned reference into pointer
+                               QTime* sigval1 = const_cast<QTime*>(&time_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void KDateTimeEdit_TimeEdited(KDateTimeEdit* self, const QTime* time) {
@@ -339,12 +359,14 @@ void KDateTimeEdit_TimeEdited(KDateTimeEdit* self, const QTime* time) {
 
 void KDateTimeEdit_Connect_TimeEdited(KDateTimeEdit* self, intptr_t slot) {
     void (*slotFunc)(KDateTimeEdit*, QTime*) = reinterpret_cast<void (*)(KDateTimeEdit*, QTime*)>(slot);
-    KDateTimeEdit::connect(self, &KDateTimeEdit::timeEdited, [self, slotFunc](const QTime& time) {
-        const QTime& time_ret = time;
-        // Cast returned reference into pointer
-        QTime* sigval1 = const_cast<QTime*>(&time_ret);
-        slotFunc(self, sigval1);
-    });
+    KDateTimeEdit::connect(self,
+                           static_cast<void (KDateTimeEdit::*)(const QTime&)>(&KDateTimeEdit::timeEdited),
+                           [self, slotFunc](const QTime& time) {
+                               const QTime& time_ret = time;
+                               // Cast returned reference into pointer
+                               QTime* sigval1 = const_cast<QTime*>(&time_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void KDateTimeEdit_TimeZoneEntered(KDateTimeEdit* self, const QTimeZone* zone) {
@@ -353,12 +375,14 @@ void KDateTimeEdit_TimeZoneEntered(KDateTimeEdit* self, const QTimeZone* zone) {
 
 void KDateTimeEdit_Connect_TimeZoneEntered(KDateTimeEdit* self, intptr_t slot) {
     void (*slotFunc)(KDateTimeEdit*, QTimeZone*) = reinterpret_cast<void (*)(KDateTimeEdit*, QTimeZone*)>(slot);
-    KDateTimeEdit::connect(self, &KDateTimeEdit::timeZoneEntered, [self, slotFunc](const QTimeZone& zone) {
-        const QTimeZone& zone_ret = zone;
-        // Cast returned reference into pointer
-        QTimeZone* sigval1 = const_cast<QTimeZone*>(&zone_ret);
-        slotFunc(self, sigval1);
-    });
+    KDateTimeEdit::connect(self,
+                           static_cast<void (KDateTimeEdit::*)(const QTimeZone&)>(&KDateTimeEdit::timeZoneEntered),
+                           [self, slotFunc](const QTimeZone& zone) {
+                               const QTimeZone& zone_ret = zone;
+                               // Cast returned reference into pointer
+                               QTimeZone* sigval1 = const_cast<QTimeZone*>(&zone_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void KDateTimeEdit_TimeZoneChanged(KDateTimeEdit* self, const QTimeZone* zone) {
@@ -367,12 +391,14 @@ void KDateTimeEdit_TimeZoneChanged(KDateTimeEdit* self, const QTimeZone* zone) {
 
 void KDateTimeEdit_Connect_TimeZoneChanged(KDateTimeEdit* self, intptr_t slot) {
     void (*slotFunc)(KDateTimeEdit*, QTimeZone*) = reinterpret_cast<void (*)(KDateTimeEdit*, QTimeZone*)>(slot);
-    KDateTimeEdit::connect(self, &KDateTimeEdit::timeZoneChanged, [self, slotFunc](const QTimeZone& zone) {
-        const QTimeZone& zone_ret = zone;
-        // Cast returned reference into pointer
-        QTimeZone* sigval1 = const_cast<QTimeZone*>(&zone_ret);
-        slotFunc(self, sigval1);
-    });
+    KDateTimeEdit::connect(self,
+                           static_cast<void (KDateTimeEdit::*)(const QTimeZone&)>(&KDateTimeEdit::timeZoneChanged),
+                           [self, slotFunc](const QTimeZone& zone) {
+                               const QTimeZone& zone_ret = zone;
+                               // Cast returned reference into pointer
+                               QTimeZone* sigval1 = const_cast<QTimeZone*>(&zone_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void KDateTimeEdit_SetOptions(KDateTimeEdit* self, int options) {

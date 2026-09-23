@@ -189,9 +189,11 @@ void QSvgRenderer_RepaintNeeded(QSvgRenderer* self) {
 
 void QSvgRenderer_Connect_RepaintNeeded(QSvgRenderer* self, intptr_t slot) {
     void (*slotFunc)(QSvgRenderer*) = reinterpret_cast<void (*)(QSvgRenderer*)>(slot);
-    QSvgRenderer::connect(self, &QSvgRenderer::repaintNeeded, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QSvgRenderer::connect(self,
+                          static_cast<void (QSvgRenderer::*)()>(&QSvgRenderer::repaintNeeded),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QSvgRenderer_Render32(QSvgRenderer* self, QPainter* p, const libqt_string elementId, const QRectF* bounds) {

@@ -92,18 +92,20 @@ void KBookmarkManager_Changed(KBookmarkManager* self, const libqt_string groupAd
 
 void KBookmarkManager_Connect_Changed(KBookmarkManager* self, intptr_t slot) {
     void (*slotFunc)(KBookmarkManager*, const char*) = reinterpret_cast<void (*)(KBookmarkManager*, const char*)>(slot);
-    KBookmarkManager::connect(self, &KBookmarkManager::changed, [self, slotFunc](const QString& groupAddress) {
-        const auto groupAddress_ret = groupAddress;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray groupAddress_b = groupAddress_ret.toUtf8();
-        auto groupAddress_str_len = groupAddress_b.length();
-        char* groupAddress_str = static_cast<char*>(malloc(groupAddress_str_len + 1));
-        memcpy(groupAddress_str, groupAddress_b.data(), groupAddress_str_len);
-        groupAddress_str[groupAddress_str_len] = '\0';
-        const char* sigval1 = groupAddress_str;
-        slotFunc(self, sigval1);
-        libqt_free(groupAddress_str);
-    });
+    KBookmarkManager::connect(self,
+                              static_cast<void (KBookmarkManager::*)(const QString&)>(&KBookmarkManager::changed),
+                              [self, slotFunc](const QString& groupAddress) {
+                                  const auto groupAddress_ret = groupAddress;
+                                  // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                  QByteArray groupAddress_b = groupAddress_ret.toUtf8();
+                                  auto groupAddress_str_len = groupAddress_b.length();
+                                  char* groupAddress_str = static_cast<char*>(malloc(groupAddress_str_len + 1));
+                                  memcpy(groupAddress_str, groupAddress_b.data(), groupAddress_str_len);
+                                  groupAddress_str[groupAddress_str_len] = '\0';
+                                  const char* sigval1 = groupAddress_str;
+                                  slotFunc(self, sigval1);
+                                  libqt_free(groupAddress_str);
+                              });
 }
 
 void KBookmarkManager_Error(KBookmarkManager* self, const libqt_string errorMessage) {
@@ -113,18 +115,20 @@ void KBookmarkManager_Error(KBookmarkManager* self, const libqt_string errorMess
 
 void KBookmarkManager_Connect_Error(KBookmarkManager* self, intptr_t slot) {
     void (*slotFunc)(KBookmarkManager*, const char*) = reinterpret_cast<void (*)(KBookmarkManager*, const char*)>(slot);
-    KBookmarkManager::connect(self, &KBookmarkManager::error, [self, slotFunc](const QString& errorMessage) {
-        const auto errorMessage_ret = errorMessage;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray errorMessage_b = errorMessage_ret.toUtf8();
-        auto errorMessage_str_len = errorMessage_b.length();
-        char* errorMessage_str = static_cast<char*>(malloc(errorMessage_str_len + 1));
-        memcpy(errorMessage_str, errorMessage_b.data(), errorMessage_str_len);
-        errorMessage_str[errorMessage_str_len] = '\0';
-        const char* sigval1 = errorMessage_str;
-        slotFunc(self, sigval1);
-        libqt_free(errorMessage_str);
-    });
+    KBookmarkManager::connect(self,
+                              static_cast<void (KBookmarkManager::*)(const QString&)>(&KBookmarkManager::error),
+                              [self, slotFunc](const QString& errorMessage) {
+                                  const auto errorMessage_ret = errorMessage;
+                                  // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                  QByteArray errorMessage_b = errorMessage_ret.toUtf8();
+                                  auto errorMessage_str_len = errorMessage_b.length();
+                                  char* errorMessage_str = static_cast<char*>(malloc(errorMessage_str_len + 1));
+                                  memcpy(errorMessage_str, errorMessage_b.data(), errorMessage_str_len);
+                                  errorMessage_str[errorMessage_str_len] = '\0';
+                                  const char* sigval1 = errorMessage_str;
+                                  slotFunc(self, sigval1);
+                                  libqt_free(errorMessage_str);
+                              });
 }
 
 bool KBookmarkManager_SaveAs2(const KBookmarkManager* self, const libqt_string filename, bool toolbarCache) {

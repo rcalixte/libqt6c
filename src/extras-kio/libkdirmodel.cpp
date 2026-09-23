@@ -235,12 +235,14 @@ void KDirModel_Expand(KDirModel* self, const QModelIndex* index) {
 
 void KDirModel_Connect_Expand(KDirModel* self, intptr_t slot) {
     void (*slotFunc)(KDirModel*, QModelIndex*) = reinterpret_cast<void (*)(KDirModel*, QModelIndex*)>(slot);
-    KDirModel::connect(self, &KDirModel::expand, [self, slotFunc](const QModelIndex& index) {
-        const QModelIndex& index_ret = index;
-        // Cast returned reference into pointer
-        QModelIndex* sigval1 = const_cast<QModelIndex*>(&index_ret);
-        slotFunc(self, sigval1);
-    });
+    KDirModel::connect(self,
+                       static_cast<void (KDirModel::*)(const QModelIndex&)>(&KDirModel::expand),
+                       [self, slotFunc](const QModelIndex& index) {
+                           const QModelIndex& index_ret = index;
+                           // Cast returned reference into pointer
+                           QModelIndex* sigval1 = const_cast<QModelIndex*>(&index_ret);
+                           slotFunc(self, sigval1);
+                       });
 }
 
 void KDirModel_NeedSequenceIcon(KDirModel* self, const QModelIndex* index, int sequenceIndex) {
@@ -249,13 +251,15 @@ void KDirModel_NeedSequenceIcon(KDirModel* self, const QModelIndex* index, int s
 
 void KDirModel_Connect_NeedSequenceIcon(KDirModel* self, intptr_t slot) {
     void (*slotFunc)(KDirModel*, QModelIndex*, int) = reinterpret_cast<void (*)(KDirModel*, QModelIndex*, int)>(slot);
-    KDirModel::connect(self, &KDirModel::needSequenceIcon, [self, slotFunc](const QModelIndex& index, int sequenceIndex) {
-        const QModelIndex& index_ret = index;
-        // Cast returned reference into pointer
-        QModelIndex* sigval1 = const_cast<QModelIndex*>(&index_ret);
-        int sigval2 = sequenceIndex;
-        slotFunc(self, sigval1, sigval2);
-    });
+    KDirModel::connect(self,
+                       static_cast<void (KDirModel::*)(const QModelIndex&, int)>(&KDirModel::needSequenceIcon),
+                       [self, slotFunc](const QModelIndex& index, int sequenceIndex) {
+                           const QModelIndex& index_ret = index;
+                           // Cast returned reference into pointer
+                           QModelIndex* sigval1 = const_cast<QModelIndex*>(&index_ret);
+                           int sigval2 = sequenceIndex;
+                           slotFunc(self, sigval1, sigval2);
+                       });
 }
 
 void KDirModel_OpenUrl2(KDirModel* self, const QUrl* url, int flags) {
