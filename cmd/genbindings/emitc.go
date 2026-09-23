@@ -2093,14 +2093,16 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 			cmdStructName := cStructName
 			cmdMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:])
 			safeMethodName := cSafeMethodName(mSafeMethodName)
-			var inheritedFrom string
+			var inheritedFrom, inheritedParentClass string
 			if m.InheritedFrom != "" {
 				inheritedFrom = "\n/// Inherited from " + m.InheritedFrom + "\n///"
 				cmdStructName = cabiClassName(m.InheritedFrom)
+				inheritedParentClass = m.InheritedFrom
 			}
 
 			if m.InheritedInClass != "" && m.InheritedInClass != c.ClassName {
 				inheritedFrom = "\n/// Inherited from " + m.InheritedInClass + "\n///"
+				inheritedParentClass = m.InheritedInClass
 			}
 
 			needsPlatformMacro := false
@@ -2194,12 +2196,10 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 
 			// Add Connect() wrappers for signal functions
 			if m.IsSignal && !m.IsProtected {
-				addConnect := true
-				if _, ok := noQtConnect[cmdStructName]; ok {
-					addConnect = false
-				}
-				if slices.Contains(unmatchedQtConnect, cmdStructName+"_"+mSafeMethodName) {
-					addConnect = false
+				addConnect := c.HasQObjectMacro
+				if inheritedFrom != "" {
+					parentInfo := KnownClassnames[inheritedParentClass]
+					addConnect = parentInfo.Class.HasQObjectMacro
 				}
 
 				if addConnect {
@@ -2979,12 +2979,10 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 					slotComma = ", "
 				}
 
-				addConnect := true
-				if _, ok := noQtConnect[cmdStructName]; ok {
-					addConnect = false
-				}
-				if slices.Contains(unmatchedQtConnect, cmdStructName+"_"+mSafeMethodName) {
-					addConnect = false
+				addConnect := c.HasQObjectMacro
+				if m.InheritedFrom != "" {
+					parentInfo := KnownClassnames[m.InheritedFrom]
+					addConnect = parentInfo.Class.HasQObjectMacro
 				}
 
 				if addConnect {
