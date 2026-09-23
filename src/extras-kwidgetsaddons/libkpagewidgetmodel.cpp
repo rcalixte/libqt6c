@@ -154,9 +154,11 @@ void KPageWidgetItem_Changed(KPageWidgetItem* self) {
 
 void KPageWidgetItem_Connect_Changed(KPageWidgetItem* self, intptr_t slot) {
     void (*slotFunc)(KPageWidgetItem*) = reinterpret_cast<void (*)(KPageWidgetItem*)>(slot);
-    KPageWidgetItem::connect(self, &KPageWidgetItem::changed, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KPageWidgetItem::connect(self,
+                             static_cast<void (KPageWidgetItem::*)()>(&KPageWidgetItem::changed),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 void KPageWidgetItem_Toggled(KPageWidgetItem* self, bool checked) {
@@ -165,10 +167,12 @@ void KPageWidgetItem_Toggled(KPageWidgetItem* self, bool checked) {
 
 void KPageWidgetItem_Connect_Toggled(KPageWidgetItem* self, intptr_t slot) {
     void (*slotFunc)(KPageWidgetItem*, bool) = reinterpret_cast<void (*)(KPageWidgetItem*, bool)>(slot);
-    KPageWidgetItem::connect(self, &KPageWidgetItem::toggled, [self, slotFunc](bool checked) {
-        bool sigval1 = checked;
-        slotFunc(self, sigval1);
-    });
+    KPageWidgetItem::connect(self,
+                             static_cast<void (KPageWidgetItem::*)(bool)>(&KPageWidgetItem::toggled),
+                             [self, slotFunc](bool checked) {
+                                 bool sigval1 = checked;
+                                 slotFunc(self, sigval1);
+                             });
 }
 
 void KPageWidgetItem_ActionsChanged(KPageWidgetItem* self) {
@@ -177,9 +181,11 @@ void KPageWidgetItem_ActionsChanged(KPageWidgetItem* self) {
 
 void KPageWidgetItem_Connect_ActionsChanged(KPageWidgetItem* self, intptr_t slot) {
     void (*slotFunc)(KPageWidgetItem*) = reinterpret_cast<void (*)(KPageWidgetItem*)>(slot);
-    KPageWidgetItem::connect(self, &KPageWidgetItem::actionsChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KPageWidgetItem::connect(self,
+                             static_cast<void (KPageWidgetItem::*)()>(&KPageWidgetItem::actionsChanged),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 // Base class handler implementation
@@ -641,11 +647,13 @@ void KPageWidgetModel_Toggled(KPageWidgetModel* self, KPageWidgetItem* page, boo
 
 void KPageWidgetModel_Connect_Toggled(KPageWidgetModel* self, intptr_t slot) {
     void (*slotFunc)(KPageWidgetModel*, KPageWidgetItem*, bool) = reinterpret_cast<void (*)(KPageWidgetModel*, KPageWidgetItem*, bool)>(slot);
-    KPageWidgetModel::connect(self, &KPageWidgetModel::toggled, [self, slotFunc](KPageWidgetItem* page, bool checked) {
-        KPageWidgetItem* sigval1 = page;
-        bool sigval2 = checked;
-        slotFunc(self, sigval1, sigval2);
-    });
+    KPageWidgetModel::connect(self,
+                              static_cast<void (KPageWidgetModel::*)(KPageWidgetItem*, bool)>(&KPageWidgetModel::toggled),
+                              [self, slotFunc](KPageWidgetItem* page, bool checked) {
+                                  KPageWidgetItem* sigval1 = page;
+                                  bool sigval2 = checked;
+                                  slotFunc(self, sigval1, sigval2);
+                              });
 }
 
 // Base class handler implementation

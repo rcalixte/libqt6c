@@ -472,12 +472,14 @@ void QAbstractItemView_Pressed(QAbstractItemView* self, const QModelIndex* index
 
 void QAbstractItemView_Connect_Pressed(QAbstractItemView* self, intptr_t slot) {
     void (*slotFunc)(QAbstractItemView*, QModelIndex*) = reinterpret_cast<void (*)(QAbstractItemView*, QModelIndex*)>(slot);
-    QAbstractItemView::connect(self, &QAbstractItemView::pressed, [self, slotFunc](const QModelIndex& index) {
-        const QModelIndex& index_ret = index;
-        // Cast returned reference into pointer
-        QModelIndex* sigval1 = const_cast<QModelIndex*>(&index_ret);
-        slotFunc(self, sigval1);
-    });
+    QAbstractItemView::connect(self,
+                               static_cast<void (QAbstractItemView::*)(const QModelIndex&)>(&QAbstractItemView::pressed),
+                               [self, slotFunc](const QModelIndex& index) {
+                                   const QModelIndex& index_ret = index;
+                                   // Cast returned reference into pointer
+                                   QModelIndex* sigval1 = const_cast<QModelIndex*>(&index_ret);
+                                   slotFunc(self, sigval1);
+                               });
 }
 
 void QAbstractItemView_Clicked(QAbstractItemView* self, const QModelIndex* index) {
@@ -486,12 +488,14 @@ void QAbstractItemView_Clicked(QAbstractItemView* self, const QModelIndex* index
 
 void QAbstractItemView_Connect_Clicked(QAbstractItemView* self, intptr_t slot) {
     void (*slotFunc)(QAbstractItemView*, QModelIndex*) = reinterpret_cast<void (*)(QAbstractItemView*, QModelIndex*)>(slot);
-    QAbstractItemView::connect(self, &QAbstractItemView::clicked, [self, slotFunc](const QModelIndex& index) {
-        const QModelIndex& index_ret = index;
-        // Cast returned reference into pointer
-        QModelIndex* sigval1 = const_cast<QModelIndex*>(&index_ret);
-        slotFunc(self, sigval1);
-    });
+    QAbstractItemView::connect(self,
+                               static_cast<void (QAbstractItemView::*)(const QModelIndex&)>(&QAbstractItemView::clicked),
+                               [self, slotFunc](const QModelIndex& index) {
+                                   const QModelIndex& index_ret = index;
+                                   // Cast returned reference into pointer
+                                   QModelIndex* sigval1 = const_cast<QModelIndex*>(&index_ret);
+                                   slotFunc(self, sigval1);
+                               });
 }
 
 void QAbstractItemView_DoubleClicked(QAbstractItemView* self, const QModelIndex* index) {
@@ -500,12 +504,14 @@ void QAbstractItemView_DoubleClicked(QAbstractItemView* self, const QModelIndex*
 
 void QAbstractItemView_Connect_DoubleClicked(QAbstractItemView* self, intptr_t slot) {
     void (*slotFunc)(QAbstractItemView*, QModelIndex*) = reinterpret_cast<void (*)(QAbstractItemView*, QModelIndex*)>(slot);
-    QAbstractItemView::connect(self, &QAbstractItemView::doubleClicked, [self, slotFunc](const QModelIndex& index) {
-        const QModelIndex& index_ret = index;
-        // Cast returned reference into pointer
-        QModelIndex* sigval1 = const_cast<QModelIndex*>(&index_ret);
-        slotFunc(self, sigval1);
-    });
+    QAbstractItemView::connect(self,
+                               static_cast<void (QAbstractItemView::*)(const QModelIndex&)>(&QAbstractItemView::doubleClicked),
+                               [self, slotFunc](const QModelIndex& index) {
+                                   const QModelIndex& index_ret = index;
+                                   // Cast returned reference into pointer
+                                   QModelIndex* sigval1 = const_cast<QModelIndex*>(&index_ret);
+                                   slotFunc(self, sigval1);
+                               });
 }
 
 void QAbstractItemView_Activated(QAbstractItemView* self, const QModelIndex* index) {
@@ -514,12 +520,14 @@ void QAbstractItemView_Activated(QAbstractItemView* self, const QModelIndex* ind
 
 void QAbstractItemView_Connect_Activated(QAbstractItemView* self, intptr_t slot) {
     void (*slotFunc)(QAbstractItemView*, QModelIndex*) = reinterpret_cast<void (*)(QAbstractItemView*, QModelIndex*)>(slot);
-    QAbstractItemView::connect(self, &QAbstractItemView::activated, [self, slotFunc](const QModelIndex& index) {
-        const QModelIndex& index_ret = index;
-        // Cast returned reference into pointer
-        QModelIndex* sigval1 = const_cast<QModelIndex*>(&index_ret);
-        slotFunc(self, sigval1);
-    });
+    QAbstractItemView::connect(self,
+                               static_cast<void (QAbstractItemView::*)(const QModelIndex&)>(&QAbstractItemView::activated),
+                               [self, slotFunc](const QModelIndex& index) {
+                                   const QModelIndex& index_ret = index;
+                                   // Cast returned reference into pointer
+                                   QModelIndex* sigval1 = const_cast<QModelIndex*>(&index_ret);
+                                   slotFunc(self, sigval1);
+                               });
 }
 
 void QAbstractItemView_Entered(QAbstractItemView* self, const QModelIndex* index) {
@@ -528,12 +536,14 @@ void QAbstractItemView_Entered(QAbstractItemView* self, const QModelIndex* index
 
 void QAbstractItemView_Connect_Entered(QAbstractItemView* self, intptr_t slot) {
     void (*slotFunc)(QAbstractItemView*, QModelIndex*) = reinterpret_cast<void (*)(QAbstractItemView*, QModelIndex*)>(slot);
-    QAbstractItemView::connect(self, &QAbstractItemView::entered, [self, slotFunc](const QModelIndex& index) {
-        const QModelIndex& index_ret = index;
-        // Cast returned reference into pointer
-        QModelIndex* sigval1 = const_cast<QModelIndex*>(&index_ret);
-        slotFunc(self, sigval1);
-    });
+    QAbstractItemView::connect(self,
+                               static_cast<void (QAbstractItemView::*)(const QModelIndex&)>(&QAbstractItemView::entered),
+                               [self, slotFunc](const QModelIndex& index) {
+                                   const QModelIndex& index_ret = index;
+                                   // Cast returned reference into pointer
+                                   QModelIndex* sigval1 = const_cast<QModelIndex*>(&index_ret);
+                                   slotFunc(self, sigval1);
+                               });
 }
 
 void QAbstractItemView_ViewportEntered(QAbstractItemView* self) {
@@ -542,9 +552,11 @@ void QAbstractItemView_ViewportEntered(QAbstractItemView* self) {
 
 void QAbstractItemView_Connect_ViewportEntered(QAbstractItemView* self, intptr_t slot) {
     void (*slotFunc)(QAbstractItemView*) = reinterpret_cast<void (*)(QAbstractItemView*)>(slot);
-    QAbstractItemView::connect(self, &QAbstractItemView::viewportEntered, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QAbstractItemView::connect(self,
+                               static_cast<void (QAbstractItemView::*)()>(&QAbstractItemView::viewportEntered),
+                               [self, slotFunc]() {
+                                   slotFunc(self);
+                               });
 }
 
 void QAbstractItemView_IconSizeChanged(QAbstractItemView* self, const QSize* size) {
@@ -553,12 +565,14 @@ void QAbstractItemView_IconSizeChanged(QAbstractItemView* self, const QSize* siz
 
 void QAbstractItemView_Connect_IconSizeChanged(QAbstractItemView* self, intptr_t slot) {
     void (*slotFunc)(QAbstractItemView*, QSize*) = reinterpret_cast<void (*)(QAbstractItemView*, QSize*)>(slot);
-    QAbstractItemView::connect(self, &QAbstractItemView::iconSizeChanged, [self, slotFunc](const QSize& size) {
-        const QSize& size_ret = size;
-        // Cast returned reference into pointer
-        QSize* sigval1 = const_cast<QSize*>(&size_ret);
-        slotFunc(self, sigval1);
-    });
+    QAbstractItemView::connect(self,
+                               static_cast<void (QAbstractItemView::*)(const QSize&)>(&QAbstractItemView::iconSizeChanged),
+                               [self, slotFunc](const QSize& size) {
+                                   const QSize& size_ret = size;
+                                   // Cast returned reference into pointer
+                                   QSize* sigval1 = const_cast<QSize*>(&size_ret);
+                                   slotFunc(self, sigval1);
+                               });
 }
 
 QModelIndex* QAbstractItemView_MoveCursor(QAbstractItemView* self, int cursorAction, int modifiers) {

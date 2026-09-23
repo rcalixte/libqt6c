@@ -246,9 +246,11 @@ void QQuickWindow_FrameSwapped(QQuickWindow* self) {
 
 void QQuickWindow_Connect_FrameSwapped(QQuickWindow* self, intptr_t slot) {
     void (*slotFunc)(QQuickWindow*) = reinterpret_cast<void (*)(QQuickWindow*)>(slot);
-    QQuickWindow::connect(self, &QQuickWindow::frameSwapped, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickWindow::connect(self,
+                          static_cast<void (QQuickWindow::*)()>(&QQuickWindow::frameSwapped),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QQuickWindow_SceneGraphInitialized(QQuickWindow* self) {
@@ -257,9 +259,11 @@ void QQuickWindow_SceneGraphInitialized(QQuickWindow* self) {
 
 void QQuickWindow_Connect_SceneGraphInitialized(QQuickWindow* self, intptr_t slot) {
     void (*slotFunc)(QQuickWindow*) = reinterpret_cast<void (*)(QQuickWindow*)>(slot);
-    QQuickWindow::connect(self, &QQuickWindow::sceneGraphInitialized, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickWindow::connect(self,
+                          static_cast<void (QQuickWindow::*)()>(&QQuickWindow::sceneGraphInitialized),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QQuickWindow_SceneGraphInvalidated(QQuickWindow* self) {
@@ -268,9 +272,11 @@ void QQuickWindow_SceneGraphInvalidated(QQuickWindow* self) {
 
 void QQuickWindow_Connect_SceneGraphInvalidated(QQuickWindow* self, intptr_t slot) {
     void (*slotFunc)(QQuickWindow*) = reinterpret_cast<void (*)(QQuickWindow*)>(slot);
-    QQuickWindow::connect(self, &QQuickWindow::sceneGraphInvalidated, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickWindow::connect(self,
+                          static_cast<void (QQuickWindow::*)()>(&QQuickWindow::sceneGraphInvalidated),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QQuickWindow_BeforeSynchronizing(QQuickWindow* self) {
@@ -279,9 +285,11 @@ void QQuickWindow_BeforeSynchronizing(QQuickWindow* self) {
 
 void QQuickWindow_Connect_BeforeSynchronizing(QQuickWindow* self, intptr_t slot) {
     void (*slotFunc)(QQuickWindow*) = reinterpret_cast<void (*)(QQuickWindow*)>(slot);
-    QQuickWindow::connect(self, &QQuickWindow::beforeSynchronizing, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickWindow::connect(self,
+                          static_cast<void (QQuickWindow::*)()>(&QQuickWindow::beforeSynchronizing),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QQuickWindow_AfterSynchronizing(QQuickWindow* self) {
@@ -290,9 +298,11 @@ void QQuickWindow_AfterSynchronizing(QQuickWindow* self) {
 
 void QQuickWindow_Connect_AfterSynchronizing(QQuickWindow* self, intptr_t slot) {
     void (*slotFunc)(QQuickWindow*) = reinterpret_cast<void (*)(QQuickWindow*)>(slot);
-    QQuickWindow::connect(self, &QQuickWindow::afterSynchronizing, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickWindow::connect(self,
+                          static_cast<void (QQuickWindow::*)()>(&QQuickWindow::afterSynchronizing),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QQuickWindow_BeforeRendering(QQuickWindow* self) {
@@ -301,9 +311,11 @@ void QQuickWindow_BeforeRendering(QQuickWindow* self) {
 
 void QQuickWindow_Connect_BeforeRendering(QQuickWindow* self, intptr_t slot) {
     void (*slotFunc)(QQuickWindow*) = reinterpret_cast<void (*)(QQuickWindow*)>(slot);
-    QQuickWindow::connect(self, &QQuickWindow::beforeRendering, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickWindow::connect(self,
+                          static_cast<void (QQuickWindow::*)()>(&QQuickWindow::beforeRendering),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QQuickWindow_AfterRendering(QQuickWindow* self) {
@@ -312,9 +324,11 @@ void QQuickWindow_AfterRendering(QQuickWindow* self) {
 
 void QQuickWindow_Connect_AfterRendering(QQuickWindow* self, intptr_t slot) {
     void (*slotFunc)(QQuickWindow*) = reinterpret_cast<void (*)(QQuickWindow*)>(slot);
-    QQuickWindow::connect(self, &QQuickWindow::afterRendering, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickWindow::connect(self,
+                          static_cast<void (QQuickWindow::*)()>(&QQuickWindow::afterRendering),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QQuickWindow_AfterAnimating(QQuickWindow* self) {
@@ -323,9 +337,11 @@ void QQuickWindow_AfterAnimating(QQuickWindow* self) {
 
 void QQuickWindow_Connect_AfterAnimating(QQuickWindow* self, intptr_t slot) {
     void (*slotFunc)(QQuickWindow*) = reinterpret_cast<void (*)(QQuickWindow*)>(slot);
-    QQuickWindow::connect(self, &QQuickWindow::afterAnimating, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickWindow::connect(self,
+                          static_cast<void (QQuickWindow::*)()>(&QQuickWindow::afterAnimating),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QQuickWindow_SceneGraphAboutToStop(QQuickWindow* self) {
@@ -334,9 +350,11 @@ void QQuickWindow_SceneGraphAboutToStop(QQuickWindow* self) {
 
 void QQuickWindow_Connect_SceneGraphAboutToStop(QQuickWindow* self, intptr_t slot) {
     void (*slotFunc)(QQuickWindow*) = reinterpret_cast<void (*)(QQuickWindow*)>(slot);
-    QQuickWindow::connect(self, &QQuickWindow::sceneGraphAboutToStop, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickWindow::connect(self,
+                          static_cast<void (QQuickWindow::*)()>(&QQuickWindow::sceneGraphAboutToStop),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QQuickWindow_ColorChanged(QQuickWindow* self, const QColor* param1) {
@@ -345,12 +363,14 @@ void QQuickWindow_ColorChanged(QQuickWindow* self, const QColor* param1) {
 
 void QQuickWindow_Connect_ColorChanged(QQuickWindow* self, intptr_t slot) {
     void (*slotFunc)(QQuickWindow*, QColor*) = reinterpret_cast<void (*)(QQuickWindow*, QColor*)>(slot);
-    QQuickWindow::connect(self, &QQuickWindow::colorChanged, [self, slotFunc](const QColor& param1) {
-        const QColor& param1_ret = param1;
-        // Cast returned reference into pointer
-        QColor* sigval1 = const_cast<QColor*>(&param1_ret);
-        slotFunc(self, sigval1);
-    });
+    QQuickWindow::connect(self,
+                          static_cast<void (QQuickWindow::*)(const QColor&)>(&QQuickWindow::colorChanged),
+                          [self, slotFunc](const QColor& param1) {
+                              const QColor& param1_ret = param1;
+                              // Cast returned reference into pointer
+                              QColor* sigval1 = const_cast<QColor*>(&param1_ret);
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QQuickWindow_ActiveFocusItemChanged(QQuickWindow* self) {
@@ -359,9 +379,11 @@ void QQuickWindow_ActiveFocusItemChanged(QQuickWindow* self) {
 
 void QQuickWindow_Connect_ActiveFocusItemChanged(QQuickWindow* self, intptr_t slot) {
     void (*slotFunc)(QQuickWindow*) = reinterpret_cast<void (*)(QQuickWindow*)>(slot);
-    QQuickWindow::connect(self, &QQuickWindow::activeFocusItemChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickWindow::connect(self,
+                          static_cast<void (QQuickWindow::*)()>(&QQuickWindow::activeFocusItemChanged),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QQuickWindow_SceneGraphError(QQuickWindow* self, int error, const libqt_string message) {
@@ -371,19 +393,21 @@ void QQuickWindow_SceneGraphError(QQuickWindow* self, int error, const libqt_str
 
 void QQuickWindow_Connect_SceneGraphError(QQuickWindow* self, intptr_t slot) {
     void (*slotFunc)(QQuickWindow*, int, const char*) = reinterpret_cast<void (*)(QQuickWindow*, int, const char*)>(slot);
-    QQuickWindow::connect(self, &QQuickWindow::sceneGraphError, [self, slotFunc](QQuickWindow::SceneGraphError error, const QString& message) {
-        int sigval1 = static_cast<int>(error);
-        const auto message_ret = message;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray message_b = message_ret.toUtf8();
-        auto message_str_len = message_b.length();
-        char* message_str = static_cast<char*>(malloc(message_str_len + 1));
-        memcpy(message_str, message_b.data(), message_str_len);
-        message_str[message_str_len] = '\0';
-        const char* sigval2 = message_str;
-        slotFunc(self, sigval1, sigval2);
-        libqt_free(message_str);
-    });
+    QQuickWindow::connect(self,
+                          static_cast<void (QQuickWindow::*)(QQuickWindow::SceneGraphError, const QString&)>(&QQuickWindow::sceneGraphError),
+                          [self, slotFunc](QQuickWindow::SceneGraphError error, const QString& message) {
+                              int sigval1 = static_cast<int>(error);
+                              const auto message_ret = message;
+                              // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                              QByteArray message_b = message_ret.toUtf8();
+                              auto message_str_len = message_b.length();
+                              char* message_str = static_cast<char*>(malloc(message_str_len + 1));
+                              memcpy(message_str, message_b.data(), message_str_len);
+                              message_str[message_str_len] = '\0';
+                              const char* sigval2 = message_str;
+                              slotFunc(self, sigval1, sigval2);
+                              libqt_free(message_str);
+                          });
 }
 
 void QQuickWindow_BeforeRenderPassRecording(QQuickWindow* self) {
@@ -392,9 +416,11 @@ void QQuickWindow_BeforeRenderPassRecording(QQuickWindow* self) {
 
 void QQuickWindow_Connect_BeforeRenderPassRecording(QQuickWindow* self, intptr_t slot) {
     void (*slotFunc)(QQuickWindow*) = reinterpret_cast<void (*)(QQuickWindow*)>(slot);
-    QQuickWindow::connect(self, &QQuickWindow::beforeRenderPassRecording, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickWindow::connect(self,
+                          static_cast<void (QQuickWindow::*)()>(&QQuickWindow::beforeRenderPassRecording),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QQuickWindow_AfterRenderPassRecording(QQuickWindow* self) {
@@ -403,9 +429,11 @@ void QQuickWindow_AfterRenderPassRecording(QQuickWindow* self) {
 
 void QQuickWindow_Connect_AfterRenderPassRecording(QQuickWindow* self, intptr_t slot) {
     void (*slotFunc)(QQuickWindow*) = reinterpret_cast<void (*)(QQuickWindow*)>(slot);
-    QQuickWindow::connect(self, &QQuickWindow::afterRenderPassRecording, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickWindow::connect(self,
+                          static_cast<void (QQuickWindow::*)()>(&QQuickWindow::afterRenderPassRecording),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QQuickWindow_PaletteChanged(QQuickWindow* self) {
@@ -414,9 +442,11 @@ void QQuickWindow_PaletteChanged(QQuickWindow* self) {
 
 void QQuickWindow_Connect_PaletteChanged(QQuickWindow* self, intptr_t slot) {
     void (*slotFunc)(QQuickWindow*) = reinterpret_cast<void (*)(QQuickWindow*)>(slot);
-    QQuickWindow::connect(self, &QQuickWindow::paletteChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickWindow::connect(self,
+                          static_cast<void (QQuickWindow::*)()>(&QQuickWindow::paletteChanged),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QQuickWindow_PaletteCreated(QQuickWindow* self) {
@@ -425,9 +455,11 @@ void QQuickWindow_PaletteCreated(QQuickWindow* self) {
 
 void QQuickWindow_Connect_PaletteCreated(QQuickWindow* self, intptr_t slot) {
     void (*slotFunc)(QQuickWindow*) = reinterpret_cast<void (*)(QQuickWindow*)>(slot);
-    QQuickWindow::connect(self, &QQuickWindow::paletteCreated, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickWindow::connect(self,
+                          static_cast<void (QQuickWindow::*)()>(&QQuickWindow::paletteCreated),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QQuickWindow_BeforeFrameBegin(QQuickWindow* self) {
@@ -436,9 +468,11 @@ void QQuickWindow_BeforeFrameBegin(QQuickWindow* self) {
 
 void QQuickWindow_Connect_BeforeFrameBegin(QQuickWindow* self, intptr_t slot) {
     void (*slotFunc)(QQuickWindow*) = reinterpret_cast<void (*)(QQuickWindow*)>(slot);
-    QQuickWindow::connect(self, &QQuickWindow::beforeFrameBegin, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickWindow::connect(self,
+                          static_cast<void (QQuickWindow::*)()>(&QQuickWindow::beforeFrameBegin),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QQuickWindow_AfterFrameEnd(QQuickWindow* self) {
@@ -447,9 +481,11 @@ void QQuickWindow_AfterFrameEnd(QQuickWindow* self) {
 
 void QQuickWindow_Connect_AfterFrameEnd(QQuickWindow* self, intptr_t slot) {
     void (*slotFunc)(QQuickWindow*) = reinterpret_cast<void (*)(QQuickWindow*)>(slot);
-    QQuickWindow::connect(self, &QQuickWindow::afterFrameEnd, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickWindow::connect(self,
+                          static_cast<void (QQuickWindow::*)()>(&QQuickWindow::afterFrameEnd),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QQuickWindow_Update(QQuickWindow* self) {

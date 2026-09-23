@@ -53,9 +53,11 @@ void KWindowInsetsController_StatusBarBackgroundColorChanged(KWindowInsetsContro
 
 void KWindowInsetsController_Connect_StatusBarBackgroundColorChanged(KWindowInsetsController* self, intptr_t slot) {
     void (*slotFunc)(KWindowInsetsController*) = reinterpret_cast<void (*)(KWindowInsetsController*)>(slot);
-    KWindowInsetsController::connect(self, &KWindowInsetsController::statusBarBackgroundColorChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KWindowInsetsController::connect(self,
+                                     static_cast<void (KWindowInsetsController::*)()>(&KWindowInsetsController::statusBarBackgroundColorChanged),
+                                     [self, slotFunc]() {
+                                         slotFunc(self);
+                                     });
 }
 
 void KWindowInsetsController_NavigationBarBackgroundColorChanged(KWindowInsetsController* self) {
@@ -64,9 +66,11 @@ void KWindowInsetsController_NavigationBarBackgroundColorChanged(KWindowInsetsCo
 
 void KWindowInsetsController_Connect_NavigationBarBackgroundColorChanged(KWindowInsetsController* self, intptr_t slot) {
     void (*slotFunc)(KWindowInsetsController*) = reinterpret_cast<void (*)(KWindowInsetsController*)>(slot);
-    KWindowInsetsController::connect(self, &KWindowInsetsController::navigationBarBackgroundColorChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KWindowInsetsController::connect(self,
+                                     static_cast<void (KWindowInsetsController::*)()>(&KWindowInsetsController::navigationBarBackgroundColorChanged),
+                                     [self, slotFunc]() {
+                                         slotFunc(self);
+                                     });
 }
 
 // Base class handler implementation

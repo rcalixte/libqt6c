@@ -102,9 +102,11 @@ void QPdfLinkModel_DocumentChanged(QPdfLinkModel* self) {
 
 void QPdfLinkModel_Connect_DocumentChanged(QPdfLinkModel* self, intptr_t slot) {
     void (*slotFunc)(QPdfLinkModel*) = reinterpret_cast<void (*)(QPdfLinkModel*)>(slot);
-    QPdfLinkModel::connect(self, &QPdfLinkModel::documentChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QPdfLinkModel::connect(self,
+                           static_cast<void (QPdfLinkModel::*)()>(&QPdfLinkModel::documentChanged),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QPdfLinkModel_PageChanged(QPdfLinkModel* self, int page) {
@@ -113,10 +115,12 @@ void QPdfLinkModel_PageChanged(QPdfLinkModel* self, int page) {
 
 void QPdfLinkModel_Connect_PageChanged(QPdfLinkModel* self, intptr_t slot) {
     void (*slotFunc)(QPdfLinkModel*, int) = reinterpret_cast<void (*)(QPdfLinkModel*, int)>(slot);
-    QPdfLinkModel::connect(self, &QPdfLinkModel::pageChanged, [self, slotFunc](int page) {
-        int sigval1 = page;
-        slotFunc(self, sigval1);
-    });
+    QPdfLinkModel::connect(self,
+                           static_cast<void (QPdfLinkModel::*)(int)>(&QPdfLinkModel::pageChanged),
+                           [self, slotFunc](int page) {
+                               int sigval1 = page;
+                               slotFunc(self, sigval1);
+                           });
 }
 
 // Base class handler implementation

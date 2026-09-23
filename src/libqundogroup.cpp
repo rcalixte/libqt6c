@@ -120,10 +120,12 @@ void QUndoGroup_ActiveStackChanged(QUndoGroup* self, QUndoStack* stack) {
 
 void QUndoGroup_Connect_ActiveStackChanged(QUndoGroup* self, intptr_t slot) {
     void (*slotFunc)(QUndoGroup*, QUndoStack*) = reinterpret_cast<void (*)(QUndoGroup*, QUndoStack*)>(slot);
-    QUndoGroup::connect(self, &QUndoGroup::activeStackChanged, [self, slotFunc](QUndoStack* stack) {
-        QUndoStack* sigval1 = stack;
-        slotFunc(self, sigval1);
-    });
+    QUndoGroup::connect(self,
+                        static_cast<void (QUndoGroup::*)(QUndoStack*)>(&QUndoGroup::activeStackChanged),
+                        [self, slotFunc](QUndoStack* stack) {
+                            QUndoStack* sigval1 = stack;
+                            slotFunc(self, sigval1);
+                        });
 }
 
 void QUndoGroup_IndexChanged(QUndoGroup* self, int idx) {
@@ -132,10 +134,12 @@ void QUndoGroup_IndexChanged(QUndoGroup* self, int idx) {
 
 void QUndoGroup_Connect_IndexChanged(QUndoGroup* self, intptr_t slot) {
     void (*slotFunc)(QUndoGroup*, int) = reinterpret_cast<void (*)(QUndoGroup*, int)>(slot);
-    QUndoGroup::connect(self, &QUndoGroup::indexChanged, [self, slotFunc](int idx) {
-        int sigval1 = idx;
-        slotFunc(self, sigval1);
-    });
+    QUndoGroup::connect(self,
+                        static_cast<void (QUndoGroup::*)(int)>(&QUndoGroup::indexChanged),
+                        [self, slotFunc](int idx) {
+                            int sigval1 = idx;
+                            slotFunc(self, sigval1);
+                        });
 }
 
 void QUndoGroup_CleanChanged(QUndoGroup* self, bool clean) {
@@ -144,10 +148,12 @@ void QUndoGroup_CleanChanged(QUndoGroup* self, bool clean) {
 
 void QUndoGroup_Connect_CleanChanged(QUndoGroup* self, intptr_t slot) {
     void (*slotFunc)(QUndoGroup*, bool) = reinterpret_cast<void (*)(QUndoGroup*, bool)>(slot);
-    QUndoGroup::connect(self, &QUndoGroup::cleanChanged, [self, slotFunc](bool clean) {
-        bool sigval1 = clean;
-        slotFunc(self, sigval1);
-    });
+    QUndoGroup::connect(self,
+                        static_cast<void (QUndoGroup::*)(bool)>(&QUndoGroup::cleanChanged),
+                        [self, slotFunc](bool clean) {
+                            bool sigval1 = clean;
+                            slotFunc(self, sigval1);
+                        });
 }
 
 void QUndoGroup_CanUndoChanged(QUndoGroup* self, bool canUndo) {
@@ -156,10 +162,12 @@ void QUndoGroup_CanUndoChanged(QUndoGroup* self, bool canUndo) {
 
 void QUndoGroup_Connect_CanUndoChanged(QUndoGroup* self, intptr_t slot) {
     void (*slotFunc)(QUndoGroup*, bool) = reinterpret_cast<void (*)(QUndoGroup*, bool)>(slot);
-    QUndoGroup::connect(self, &QUndoGroup::canUndoChanged, [self, slotFunc](bool canUndo) {
-        bool sigval1 = canUndo;
-        slotFunc(self, sigval1);
-    });
+    QUndoGroup::connect(self,
+                        static_cast<void (QUndoGroup::*)(bool)>(&QUndoGroup::canUndoChanged),
+                        [self, slotFunc](bool canUndo) {
+                            bool sigval1 = canUndo;
+                            slotFunc(self, sigval1);
+                        });
 }
 
 void QUndoGroup_CanRedoChanged(QUndoGroup* self, bool canRedo) {
@@ -168,10 +176,12 @@ void QUndoGroup_CanRedoChanged(QUndoGroup* self, bool canRedo) {
 
 void QUndoGroup_Connect_CanRedoChanged(QUndoGroup* self, intptr_t slot) {
     void (*slotFunc)(QUndoGroup*, bool) = reinterpret_cast<void (*)(QUndoGroup*, bool)>(slot);
-    QUndoGroup::connect(self, &QUndoGroup::canRedoChanged, [self, slotFunc](bool canRedo) {
-        bool sigval1 = canRedo;
-        slotFunc(self, sigval1);
-    });
+    QUndoGroup::connect(self,
+                        static_cast<void (QUndoGroup::*)(bool)>(&QUndoGroup::canRedoChanged),
+                        [self, slotFunc](bool canRedo) {
+                            bool sigval1 = canRedo;
+                            slotFunc(self, sigval1);
+                        });
 }
 
 void QUndoGroup_UndoTextChanged(QUndoGroup* self, const libqt_string undoText) {
@@ -181,18 +191,20 @@ void QUndoGroup_UndoTextChanged(QUndoGroup* self, const libqt_string undoText) {
 
 void QUndoGroup_Connect_UndoTextChanged(QUndoGroup* self, intptr_t slot) {
     void (*slotFunc)(QUndoGroup*, const char*) = reinterpret_cast<void (*)(QUndoGroup*, const char*)>(slot);
-    QUndoGroup::connect(self, &QUndoGroup::undoTextChanged, [self, slotFunc](const QString& undoText) {
-        const auto undoText_ret = undoText;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray undoText_b = undoText_ret.toUtf8();
-        auto undoText_str_len = undoText_b.length();
-        char* undoText_str = static_cast<char*>(malloc(undoText_str_len + 1));
-        memcpy(undoText_str, undoText_b.data(), undoText_str_len);
-        undoText_str[undoText_str_len] = '\0';
-        const char* sigval1 = undoText_str;
-        slotFunc(self, sigval1);
-        libqt_free(undoText_str);
-    });
+    QUndoGroup::connect(self,
+                        static_cast<void (QUndoGroup::*)(const QString&)>(&QUndoGroup::undoTextChanged),
+                        [self, slotFunc](const QString& undoText) {
+                            const auto undoText_ret = undoText;
+                            // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                            QByteArray undoText_b = undoText_ret.toUtf8();
+                            auto undoText_str_len = undoText_b.length();
+                            char* undoText_str = static_cast<char*>(malloc(undoText_str_len + 1));
+                            memcpy(undoText_str, undoText_b.data(), undoText_str_len);
+                            undoText_str[undoText_str_len] = '\0';
+                            const char* sigval1 = undoText_str;
+                            slotFunc(self, sigval1);
+                            libqt_free(undoText_str);
+                        });
 }
 
 void QUndoGroup_RedoTextChanged(QUndoGroup* self, const libqt_string redoText) {
@@ -202,18 +214,20 @@ void QUndoGroup_RedoTextChanged(QUndoGroup* self, const libqt_string redoText) {
 
 void QUndoGroup_Connect_RedoTextChanged(QUndoGroup* self, intptr_t slot) {
     void (*slotFunc)(QUndoGroup*, const char*) = reinterpret_cast<void (*)(QUndoGroup*, const char*)>(slot);
-    QUndoGroup::connect(self, &QUndoGroup::redoTextChanged, [self, slotFunc](const QString& redoText) {
-        const auto redoText_ret = redoText;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray redoText_b = redoText_ret.toUtf8();
-        auto redoText_str_len = redoText_b.length();
-        char* redoText_str = static_cast<char*>(malloc(redoText_str_len + 1));
-        memcpy(redoText_str, redoText_b.data(), redoText_str_len);
-        redoText_str[redoText_str_len] = '\0';
-        const char* sigval1 = redoText_str;
-        slotFunc(self, sigval1);
-        libqt_free(redoText_str);
-    });
+    QUndoGroup::connect(self,
+                        static_cast<void (QUndoGroup::*)(const QString&)>(&QUndoGroup::redoTextChanged),
+                        [self, slotFunc](const QString& redoText) {
+                            const auto redoText_ret = redoText;
+                            // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                            QByteArray redoText_b = redoText_ret.toUtf8();
+                            auto redoText_str_len = redoText_b.length();
+                            char* redoText_str = static_cast<char*>(malloc(redoText_str_len + 1));
+                            memcpy(redoText_str, redoText_b.data(), redoText_str_len);
+                            redoText_str[redoText_str_len] = '\0';
+                            const char* sigval1 = redoText_str;
+                            slotFunc(self, sigval1);
+                            libqt_free(redoText_str);
+                        });
 }
 
 QAction* QUndoGroup_CreateUndoAction2(const QUndoGroup* self, QObject* parent, const libqt_string prefix) {

@@ -129,9 +129,11 @@ void QAbstractEventDispatcher_AboutToBlock(QAbstractEventDispatcher* self) {
 
 void QAbstractEventDispatcher_Connect_AboutToBlock(QAbstractEventDispatcher* self, intptr_t slot) {
     void (*slotFunc)(QAbstractEventDispatcher*) = reinterpret_cast<void (*)(QAbstractEventDispatcher*)>(slot);
-    QAbstractEventDispatcher::connect(self, &QAbstractEventDispatcher::aboutToBlock, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QAbstractEventDispatcher::connect(self,
+                                      static_cast<void (QAbstractEventDispatcher::*)()>(&QAbstractEventDispatcher::aboutToBlock),
+                                      [self, slotFunc]() {
+                                          slotFunc(self);
+                                      });
 }
 
 void QAbstractEventDispatcher_Awake(QAbstractEventDispatcher* self) {
@@ -140,9 +142,11 @@ void QAbstractEventDispatcher_Awake(QAbstractEventDispatcher* self) {
 
 void QAbstractEventDispatcher_Connect_Awake(QAbstractEventDispatcher* self, intptr_t slot) {
     void (*slotFunc)(QAbstractEventDispatcher*) = reinterpret_cast<void (*)(QAbstractEventDispatcher*)>(slot);
-    QAbstractEventDispatcher::connect(self, &QAbstractEventDispatcher::awake, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QAbstractEventDispatcher::connect(self,
+                                      static_cast<void (QAbstractEventDispatcher::*)()>(&QAbstractEventDispatcher::awake),
+                                      [self, slotFunc]() {
+                                          slotFunc(self);
+                                      });
 }
 
 QAbstractEventDispatcher* QAbstractEventDispatcher_Instance1(QThread* thread) {

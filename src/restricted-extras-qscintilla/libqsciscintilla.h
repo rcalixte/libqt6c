@@ -4079,6 +4079,15 @@ void q_sciscintilla_q_s_c_n__s_e_l_c_h_a_n_g_e_d(void* self, bool yes);
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, bool yes)
+///
+void q_sciscintilla_on_q_s_c_n__s_e_l_c_h_a_n_g_e_d(void* self, void (*callback)(void*, bool));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
 ///
 void q_sciscintilla_s_c_n__a_u_t_o_c_c_a_n_c_e_l_l_e_d(void* self);
 
@@ -4087,8 +4096,26 @@ void q_sciscintilla_s_c_n__a_u_t_o_c_c_a_n_c_e_l_l_e_d(void* self);
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self)
+///
+void q_sciscintilla_on_s_c_n__a_u_t_o_c_c_a_n_c_e_l_l_e_d(void* self, void (*callback)(void*));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
 ///
 void q_sciscintilla_s_c_n__a_u_t_o_c_c_h_a_r_d_e_l_e_t_e_d(void* self);
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self)
+///
+void q_sciscintilla_on_s_c_n__a_u_t_o_c_c_h_a_r_d_e_l_e_t_e_d(void* self, void (*callback)(void*));
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4107,6 +4134,15 @@ void q_sciscintilla_s_c_n__a_u_t_o_c_c_o_m_p_l_e_t_e_d(void* self, const char* s
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, const char* selection, int position, int ch, int method)
+///
+void q_sciscintilla_on_s_c_n__a_u_t_o_c_c_o_m_p_l_e_t_e_d(void* self, void (*callback)(void*, const char*, int, int, int));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
 /// @param selection const char*
 /// @param position int
 /// @param ch int
@@ -4119,10 +4155,28 @@ void q_sciscintilla_s_c_n__a_u_t_o_c_s_e_l_e_c_t_i_o_n(void* self, const char* s
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, const char* selection, int position, int ch, int method)
+///
+void q_sciscintilla_on_s_c_n__a_u_t_o_c_s_e_l_e_c_t_i_o_n(void* self, void (*callback)(void*, const char*, int, int, int));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
 /// @param selection const char*
 /// @param position int
 ///
 void q_sciscintilla_s_c_n__a_u_t_o_c_s_e_l_e_c_t_i_o_n2(void* self, const char* selection, int position);
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, const char* selection, int position)
+///
+void q_sciscintilla_on_s_c_n__a_u_t_o_c_s_e_l_e_c_t_i_o_n2(void* self, void (*callback)(void*, const char*, int));
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4140,8 +4194,26 @@ void q_sciscintilla_s_c_n__a_u_t_o_c_s_e_l_e_c_t_i_o_n_c_h_a_n_g_e(void* self, c
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, const char* selection, int id, int position)
+///
+void q_sciscintilla_on_s_c_n__a_u_t_o_c_s_e_l_e_c_t_i_o_n_c_h_a_n_g_e(void* self, void (*callback)(void*, const char*, int, int));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
 ///
 void q_sciscintilla_s_c_e_n__c_h_a_n_g_e(void* self);
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self)
+///
+void q_sciscintilla_on_s_c_e_n__c_h_a_n_g_e(void* self, void (*callback)(void*));
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4157,9 +4229,27 @@ void q_sciscintilla_s_c_n__c_a_l_l_t_i_p_c_l_i_c_k(void* self, int direction);
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, int direction)
+///
+void q_sciscintilla_on_s_c_n__c_a_l_l_t_i_p_c_l_i_c_k(void* self, void (*callback)(void*, int));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
 /// @param charadded int
 ///
 void q_sciscintilla_s_c_n__c_h_a_r_a_d_d_e_d(void* self, int charadded);
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, int charadded)
+///
+void q_sciscintilla_on_s_c_n__c_h_a_r_a_d_d_e_d(void* self, void (*callback)(void*, int));
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4177,11 +4267,29 @@ void q_sciscintilla_s_c_n__d_o_u_b_l_e_c_l_i_c_k(void* self, int position, int l
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, int position, int line, int modifiers)
+///
+void q_sciscintilla_on_s_c_n__d_o_u_b_l_e_c_l_i_c_k(void* self, void (*callback)(void*, int, int, int));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
 /// @param position int
 /// @param x int
 /// @param y int
 ///
 void q_sciscintilla_s_c_n__d_w_e_l_l_e_n_d(void* self, int position, int x, int y);
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, int position, int x, int y)
+///
+void q_sciscintilla_on_s_c_n__d_w_e_l_l_e_n_d(void* self, void (*callback)(void*, int, int, int));
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4199,6 +4307,15 @@ void q_sciscintilla_s_c_n__d_w_e_l_l_s_t_a_r_t(void* self, int position, int x, 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, int position, int x, int y)
+///
+void q_sciscintilla_on_s_c_n__d_w_e_l_l_s_t_a_r_t(void* self, void (*callback)(void*, int, int, int));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
 ///
 void q_sciscintilla_s_c_n__f_o_c_u_s_i_n(void* self);
 
@@ -4207,8 +4324,26 @@ void q_sciscintilla_s_c_n__f_o_c_u_s_i_n(void* self);
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self)
+///
+void q_sciscintilla_on_s_c_n__f_o_c_u_s_i_n(void* self, void (*callback)(void*));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
 ///
 void q_sciscintilla_s_c_n__f_o_c_u_s_o_u_t(void* self);
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self)
+///
+void q_sciscintilla_on_s_c_n__f_o_c_u_s_o_u_t(void* self, void (*callback)(void*));
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4225,10 +4360,28 @@ void q_sciscintilla_s_c_n__h_o_t_s_p_o_t_c_l_i_c_k(void* self, int position, int
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, int position, int modifiers)
+///
+void q_sciscintilla_on_s_c_n__h_o_t_s_p_o_t_c_l_i_c_k(void* self, void (*callback)(void*, int, int));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
 /// @param position int
 /// @param modifiers int
 ///
 void q_sciscintilla_s_c_n__h_o_t_s_p_o_t_d_o_u_b_l_e_c_l_i_c_k(void* self, int position, int modifiers);
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, int position, int modifiers)
+///
+void q_sciscintilla_on_s_c_n__h_o_t_s_p_o_t_d_o_u_b_l_e_c_l_i_c_k(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4245,6 +4398,15 @@ void q_sciscintilla_s_c_n__h_o_t_s_p_o_t_r_e_l_e_a_s_e_c_l_i_c_k(void* self, int
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, int position, int modifiers)
+///
+void q_sciscintilla_on_s_c_n__h_o_t_s_p_o_t_r_e_l_e_a_s_e_c_l_i_c_k(void* self, void (*callback)(void*, int, int));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
 /// @param position int
 /// @param modifiers int
 ///
@@ -4255,10 +4417,28 @@ void q_sciscintilla_s_c_n__i_n_d_i_c_a_t_o_r_c_l_i_c_k(void* self, int position,
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, int position, int modifiers)
+///
+void q_sciscintilla_on_s_c_n__i_n_d_i_c_a_t_o_r_c_l_i_c_k(void* self, void (*callback)(void*, int, int));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
 /// @param position int
 /// @param modifiers int
 ///
 void q_sciscintilla_s_c_n__i_n_d_i_c_a_t_o_r_r_e_l_e_a_s_e(void* self, int position, int modifiers);
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, int position, int modifiers)
+///
+void q_sciscintilla_on_s_c_n__i_n_d_i_c_a_t_o_r_r_e_l_e_a_s_e(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4276,6 +4456,15 @@ void q_sciscintilla_s_c_n__m_a_c_r_o_r_e_c_o_r_d(void* self, uint32_t param1, ui
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, uint32_t param1, uintptr_t param2, void* param3)
+///
+void q_sciscintilla_on_s_c_n__m_a_c_r_o_r_e_c_o_r_d(void* self, void (*callback)(void*, uint32_t, uintptr_t, void*));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
 /// @param position int
 /// @param modifiers int
 /// @param margin int
@@ -4287,11 +4476,29 @@ void q_sciscintilla_s_c_n__m_a_r_g_i_n_c_l_i_c_k(void* self, int position, int m
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, int position, int modifiers, int margin)
+///
+void q_sciscintilla_on_s_c_n__m_a_r_g_i_n_c_l_i_c_k(void* self, void (*callback)(void*, int, int, int));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
 /// @param position int
 /// @param modifiers int
 /// @param margin int
 ///
 void q_sciscintilla_s_c_n__m_a_r_g_i_n_r_i_g_h_t_c_l_i_c_k(void* self, int position, int modifiers, int margin);
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, int position, int modifiers, int margin)
+///
+void q_sciscintilla_on_s_c_n__m_a_r_g_i_n_r_i_g_h_t_c_l_i_c_k(void* self, void (*callback)(void*, int, int, int));
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4316,8 +4523,26 @@ void q_sciscintilla_s_c_n__m_o_d_i_f_i_e_d(void* self, int param1, int param2, c
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, int param1, int param2, const char* param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10)
+///
+void q_sciscintilla_on_s_c_n__m_o_d_i_f_i_e_d(void* self, void (*callback)(void*, int, int, const char*, int, int, int, int, int, int, int));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
 ///
 void q_sciscintilla_s_c_n__m_o_d_i_f_y_a_t_t_e_m_p_t_r_o(void* self);
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self)
+///
+void q_sciscintilla_on_s_c_n__m_o_d_i_f_y_a_t_t_e_m_p_t_r_o(void* self, void (*callback)(void*));
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4334,8 +4559,26 @@ void q_sciscintilla_s_c_n__n_e_e_d_s_h_o_w_n(void* self, int param1, int param2)
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, int param1, int param2)
+///
+void q_sciscintilla_on_s_c_n__n_e_e_d_s_h_o_w_n(void* self, void (*callback)(void*, int, int));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
 ///
 void q_sciscintilla_s_c_n__p_a_i_n_t_e_d(void* self);
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self)
+///
+void q_sciscintilla_on_s_c_n__p_a_i_n_t_e_d(void* self, void (*callback)(void*));
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4350,8 +4593,26 @@ void q_sciscintilla_s_c_n__s_a_v_e_p_o_i_n_t_l_e_f_t(void* self);
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self)
+///
+void q_sciscintilla_on_s_c_n__s_a_v_e_p_o_i_n_t_l_e_f_t(void* self, void (*callback)(void*));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
 ///
 void q_sciscintilla_s_c_n__s_a_v_e_p_o_i_n_t_r_e_a_c_h_e_d(void* self);
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self)
+///
+void q_sciscintilla_on_s_c_n__s_a_v_e_p_o_i_n_t_r_e_a_c_h_e_d(void* self, void (*callback)(void*));
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4367,6 +4628,15 @@ void q_sciscintilla_s_c_n__s_t_y_l_e_n_e_e_d_e_d(void* self, int position);
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, int position)
+///
+void q_sciscintilla_on_s_c_n__s_t_y_l_e_n_e_e_d_e_d(void* self, void (*callback)(void*, int));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
 /// @param url QUrl*
 ///
 void q_sciscintilla_s_c_n__u_r_i_d_r_o_p_p_e_d(void* self, void* url);
@@ -4376,9 +4646,27 @@ void q_sciscintilla_s_c_n__u_r_i_d_r_o_p_p_e_d(void* self, void* url);
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, QUrl* url)
+///
+void q_sciscintilla_on_s_c_n__u_r_i_d_r_o_p_p_e_d(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
 /// @param updated int
 ///
 void q_sciscintilla_s_c_n__u_p_d_a_t_e_u_i(void* self, int updated);
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, int updated)
+///
+void q_sciscintilla_on_s_c_n__u_p_d_a_t_e_u_i(void* self, void (*callback)(void*, int));
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4398,12 +4686,30 @@ void q_sciscintilla_s_c_n__u_s_e_r_l_i_s_t_s_e_l_e_c_t_i_o_n(void* self, const c
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, const char* selection, int id, int ch, int method, int position)
+///
+void q_sciscintilla_on_s_c_n__u_s_e_r_l_i_s_t_s_e_l_e_c_t_i_o_n(void* self, void (*callback)(void*, const char*, int, int, int, int));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
 /// @param selection const char*
 /// @param id int
 /// @param ch int
 /// @param method int
 ///
 void q_sciscintilla_s_c_n__u_s_e_r_l_i_s_t_s_e_l_e_c_t_i_o_n2(void* self, const char* selection, int id, int ch, int method);
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, const char* selection, int id, int ch, int method)
+///
+void q_sciscintilla_on_s_c_n__u_s_e_r_l_i_s_t_s_e_l_e_c_t_i_o_n2(void* self, void (*callback)(void*, const char*, int, int, int));
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4420,8 +4726,26 @@ void q_sciscintilla_s_c_n__u_s_e_r_l_i_s_t_s_e_l_e_c_t_i_o_n3(void* self, const 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self, const char* selection, int id)
+///
+void q_sciscintilla_on_s_c_n__u_s_e_r_l_i_s_t_s_e_l_e_c_t_i_o_n3(void* self, void (*callback)(void*, const char*, int));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
 ///
 void q_sciscintilla_s_c_n__z_o_o_m(void* self);
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintilla*
+/// @param callback void func(QsciScintilla* self)
+///
+void q_sciscintilla_on_s_c_n__z_o_o_m(void* self, void (*callback)(void*));
 
 /// Inherited from QsciScintillaBase
 ///

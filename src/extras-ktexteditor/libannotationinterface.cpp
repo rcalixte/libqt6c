@@ -30,9 +30,11 @@ void KTextEditor__AnnotationModel_Reset(KTextEditor__AnnotationModel* self) {
 
 void KTextEditor__AnnotationModel_Connect_Reset(KTextEditor__AnnotationModel* self, intptr_t slot) {
     void (*slotFunc)(KTextEditor__AnnotationModel*) = reinterpret_cast<void (*)(KTextEditor__AnnotationModel*)>(slot);
-    KTextEditor::AnnotationModel::connect(self, &KTextEditor::AnnotationModel::reset, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KTextEditor::AnnotationModel::connect(self,
+                                          static_cast<void (KTextEditor::AnnotationModel::*)()>(&KTextEditor::AnnotationModel::reset),
+                                          [self, slotFunc]() {
+                                              slotFunc(self);
+                                          });
 }
 
 void KTextEditor__AnnotationModel_LineChanged(KTextEditor__AnnotationModel* self, int line) {
@@ -41,10 +43,12 @@ void KTextEditor__AnnotationModel_LineChanged(KTextEditor__AnnotationModel* self
 
 void KTextEditor__AnnotationModel_Connect_LineChanged(KTextEditor__AnnotationModel* self, intptr_t slot) {
     void (*slotFunc)(KTextEditor__AnnotationModel*, int) = reinterpret_cast<void (*)(KTextEditor__AnnotationModel*, int)>(slot);
-    KTextEditor::AnnotationModel::connect(self, &KTextEditor::AnnotationModel::lineChanged, [self, slotFunc](int line) {
-        int sigval1 = line;
-        slotFunc(self, sigval1);
-    });
+    KTextEditor::AnnotationModel::connect(self,
+                                          static_cast<void (KTextEditor::AnnotationModel::*)(int)>(&KTextEditor::AnnotationModel::lineChanged),
+                                          [self, slotFunc](int line) {
+                                              int sigval1 = line;
+                                              slotFunc(self, sigval1);
+                                          });
 }
 
 void KTextEditor__AnnotationModel_Delete(KTextEditor__AnnotationModel* self) {

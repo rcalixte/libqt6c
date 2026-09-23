@@ -95,9 +95,11 @@ void QWaveDecoder_FormatKnown(QWaveDecoder* self) {
 
 void QWaveDecoder_Connect_FormatKnown(QWaveDecoder* self, intptr_t slot) {
     void (*slotFunc)(QWaveDecoder*) = reinterpret_cast<void (*)(QWaveDecoder*)>(slot);
-    QWaveDecoder::connect(self, &QWaveDecoder::formatKnown, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QWaveDecoder::connect(self,
+                          static_cast<void (QWaveDecoder::*)()>(&QWaveDecoder::formatKnown),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QWaveDecoder_ParsingError(QWaveDecoder* self) {
@@ -106,9 +108,11 @@ void QWaveDecoder_ParsingError(QWaveDecoder* self) {
 
 void QWaveDecoder_Connect_ParsingError(QWaveDecoder* self, intptr_t slot) {
     void (*slotFunc)(QWaveDecoder*) = reinterpret_cast<void (*)(QWaveDecoder*)>(slot);
-    QWaveDecoder::connect(self, &QWaveDecoder::parsingError, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QWaveDecoder::connect(self,
+                          static_cast<void (QWaveDecoder::*)()>(&QWaveDecoder::parsingError),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 // Base class handler implementation

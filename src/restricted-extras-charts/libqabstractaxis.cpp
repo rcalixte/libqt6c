@@ -291,10 +291,12 @@ void QAbstractAxis_VisibleChanged(QAbstractAxis* self, bool visible) {
 
 void QAbstractAxis_Connect_VisibleChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, bool) = reinterpret_cast<void (*)(QAbstractAxis*, bool)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::visibleChanged, [self, slotFunc](bool visible) {
-        bool sigval1 = visible;
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(bool)>(&QAbstractAxis::visibleChanged),
+                           [self, slotFunc](bool visible) {
+                               bool sigval1 = visible;
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_LinePenChanged(QAbstractAxis* self, const QPen* pen) {
@@ -303,12 +305,14 @@ void QAbstractAxis_LinePenChanged(QAbstractAxis* self, const QPen* pen) {
 
 void QAbstractAxis_Connect_LinePenChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, QPen*) = reinterpret_cast<void (*)(QAbstractAxis*, QPen*)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::linePenChanged, [self, slotFunc](const QPen& pen) {
-        const QPen& pen_ret = pen;
-        // Cast returned reference into pointer
-        QPen* sigval1 = const_cast<QPen*>(&pen_ret);
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(const QPen&)>(&QAbstractAxis::linePenChanged),
+                           [self, slotFunc](const QPen& pen) {
+                               const QPen& pen_ret = pen;
+                               // Cast returned reference into pointer
+                               QPen* sigval1 = const_cast<QPen*>(&pen_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_LineVisibleChanged(QAbstractAxis* self, bool visible) {
@@ -317,10 +321,12 @@ void QAbstractAxis_LineVisibleChanged(QAbstractAxis* self, bool visible) {
 
 void QAbstractAxis_Connect_LineVisibleChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, bool) = reinterpret_cast<void (*)(QAbstractAxis*, bool)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::lineVisibleChanged, [self, slotFunc](bool visible) {
-        bool sigval1 = visible;
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(bool)>(&QAbstractAxis::lineVisibleChanged),
+                           [self, slotFunc](bool visible) {
+                               bool sigval1 = visible;
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_LabelsVisibleChanged(QAbstractAxis* self, bool visible) {
@@ -329,10 +335,12 @@ void QAbstractAxis_LabelsVisibleChanged(QAbstractAxis* self, bool visible) {
 
 void QAbstractAxis_Connect_LabelsVisibleChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, bool) = reinterpret_cast<void (*)(QAbstractAxis*, bool)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::labelsVisibleChanged, [self, slotFunc](bool visible) {
-        bool sigval1 = visible;
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(bool)>(&QAbstractAxis::labelsVisibleChanged),
+                           [self, slotFunc](bool visible) {
+                               bool sigval1 = visible;
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_LabelsBrushChanged(QAbstractAxis* self, const QBrush* brush) {
@@ -341,12 +349,14 @@ void QAbstractAxis_LabelsBrushChanged(QAbstractAxis* self, const QBrush* brush) 
 
 void QAbstractAxis_Connect_LabelsBrushChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, QBrush*) = reinterpret_cast<void (*)(QAbstractAxis*, QBrush*)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::labelsBrushChanged, [self, slotFunc](const QBrush& brush) {
-        const QBrush& brush_ret = brush;
-        // Cast returned reference into pointer
-        QBrush* sigval1 = const_cast<QBrush*>(&brush_ret);
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(const QBrush&)>(&QAbstractAxis::labelsBrushChanged),
+                           [self, slotFunc](const QBrush& brush) {
+                               const QBrush& brush_ret = brush;
+                               // Cast returned reference into pointer
+                               QBrush* sigval1 = const_cast<QBrush*>(&brush_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_LabelsFontChanged(QAbstractAxis* self, const QFont* pen) {
@@ -355,12 +365,14 @@ void QAbstractAxis_LabelsFontChanged(QAbstractAxis* self, const QFont* pen) {
 
 void QAbstractAxis_Connect_LabelsFontChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, QFont*) = reinterpret_cast<void (*)(QAbstractAxis*, QFont*)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::labelsFontChanged, [self, slotFunc](const QFont& pen) {
-        const QFont& pen_ret = pen;
-        // Cast returned reference into pointer
-        QFont* sigval1 = const_cast<QFont*>(&pen_ret);
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(const QFont&)>(&QAbstractAxis::labelsFontChanged),
+                           [self, slotFunc](const QFont& pen) {
+                               const QFont& pen_ret = pen;
+                               // Cast returned reference into pointer
+                               QFont* sigval1 = const_cast<QFont*>(&pen_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_LabelsAngleChanged(QAbstractAxis* self, int angle) {
@@ -369,10 +381,12 @@ void QAbstractAxis_LabelsAngleChanged(QAbstractAxis* self, int angle) {
 
 void QAbstractAxis_Connect_LabelsAngleChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, int) = reinterpret_cast<void (*)(QAbstractAxis*, int)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::labelsAngleChanged, [self, slotFunc](int angle) {
-        int sigval1 = angle;
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(int)>(&QAbstractAxis::labelsAngleChanged),
+                           [self, slotFunc](int angle) {
+                               int sigval1 = angle;
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_GridLinePenChanged(QAbstractAxis* self, const QPen* pen) {
@@ -381,12 +395,14 @@ void QAbstractAxis_GridLinePenChanged(QAbstractAxis* self, const QPen* pen) {
 
 void QAbstractAxis_Connect_GridLinePenChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, QPen*) = reinterpret_cast<void (*)(QAbstractAxis*, QPen*)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::gridLinePenChanged, [self, slotFunc](const QPen& pen) {
-        const QPen& pen_ret = pen;
-        // Cast returned reference into pointer
-        QPen* sigval1 = const_cast<QPen*>(&pen_ret);
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(const QPen&)>(&QAbstractAxis::gridLinePenChanged),
+                           [self, slotFunc](const QPen& pen) {
+                               const QPen& pen_ret = pen;
+                               // Cast returned reference into pointer
+                               QPen* sigval1 = const_cast<QPen*>(&pen_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_GridVisibleChanged(QAbstractAxis* self, bool visible) {
@@ -395,10 +411,12 @@ void QAbstractAxis_GridVisibleChanged(QAbstractAxis* self, bool visible) {
 
 void QAbstractAxis_Connect_GridVisibleChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, bool) = reinterpret_cast<void (*)(QAbstractAxis*, bool)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::gridVisibleChanged, [self, slotFunc](bool visible) {
-        bool sigval1 = visible;
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(bool)>(&QAbstractAxis::gridVisibleChanged),
+                           [self, slotFunc](bool visible) {
+                               bool sigval1 = visible;
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_MinorGridVisibleChanged(QAbstractAxis* self, bool visible) {
@@ -407,10 +425,12 @@ void QAbstractAxis_MinorGridVisibleChanged(QAbstractAxis* self, bool visible) {
 
 void QAbstractAxis_Connect_MinorGridVisibleChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, bool) = reinterpret_cast<void (*)(QAbstractAxis*, bool)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::minorGridVisibleChanged, [self, slotFunc](bool visible) {
-        bool sigval1 = visible;
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(bool)>(&QAbstractAxis::minorGridVisibleChanged),
+                           [self, slotFunc](bool visible) {
+                               bool sigval1 = visible;
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_MinorGridLinePenChanged(QAbstractAxis* self, const QPen* pen) {
@@ -419,12 +439,14 @@ void QAbstractAxis_MinorGridLinePenChanged(QAbstractAxis* self, const QPen* pen)
 
 void QAbstractAxis_Connect_MinorGridLinePenChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, QPen*) = reinterpret_cast<void (*)(QAbstractAxis*, QPen*)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::minorGridLinePenChanged, [self, slotFunc](const QPen& pen) {
-        const QPen& pen_ret = pen;
-        // Cast returned reference into pointer
-        QPen* sigval1 = const_cast<QPen*>(&pen_ret);
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(const QPen&)>(&QAbstractAxis::minorGridLinePenChanged),
+                           [self, slotFunc](const QPen& pen) {
+                               const QPen& pen_ret = pen;
+                               // Cast returned reference into pointer
+                               QPen* sigval1 = const_cast<QPen*>(&pen_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_GridLineColorChanged(QAbstractAxis* self, const QColor* color) {
@@ -433,12 +455,14 @@ void QAbstractAxis_GridLineColorChanged(QAbstractAxis* self, const QColor* color
 
 void QAbstractAxis_Connect_GridLineColorChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, QColor*) = reinterpret_cast<void (*)(QAbstractAxis*, QColor*)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::gridLineColorChanged, [self, slotFunc](const QColor& color) {
-        const QColor& color_ret = color;
-        // Cast returned reference into pointer
-        QColor* sigval1 = const_cast<QColor*>(&color_ret);
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(const QColor&)>(&QAbstractAxis::gridLineColorChanged),
+                           [self, slotFunc](const QColor& color) {
+                               const QColor& color_ret = color;
+                               // Cast returned reference into pointer
+                               QColor* sigval1 = const_cast<QColor*>(&color_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_MinorGridLineColorChanged(QAbstractAxis* self, const QColor* color) {
@@ -447,12 +471,14 @@ void QAbstractAxis_MinorGridLineColorChanged(QAbstractAxis* self, const QColor* 
 
 void QAbstractAxis_Connect_MinorGridLineColorChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, QColor*) = reinterpret_cast<void (*)(QAbstractAxis*, QColor*)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::minorGridLineColorChanged, [self, slotFunc](const QColor& color) {
-        const QColor& color_ret = color;
-        // Cast returned reference into pointer
-        QColor* sigval1 = const_cast<QColor*>(&color_ret);
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(const QColor&)>(&QAbstractAxis::minorGridLineColorChanged),
+                           [self, slotFunc](const QColor& color) {
+                               const QColor& color_ret = color;
+                               // Cast returned reference into pointer
+                               QColor* sigval1 = const_cast<QColor*>(&color_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_ColorChanged(QAbstractAxis* self, QColor* color) {
@@ -461,10 +487,12 @@ void QAbstractAxis_ColorChanged(QAbstractAxis* self, QColor* color) {
 
 void QAbstractAxis_Connect_ColorChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, QColor*) = reinterpret_cast<void (*)(QAbstractAxis*, QColor*)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::colorChanged, [self, slotFunc](QColor color) {
-        QColor* sigval1 = new QColor(color);
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(QColor)>(&QAbstractAxis::colorChanged),
+                           [self, slotFunc](QColor color) {
+                               QColor* sigval1 = new QColor(color);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_LabelsColorChanged(QAbstractAxis* self, QColor* color) {
@@ -473,10 +501,12 @@ void QAbstractAxis_LabelsColorChanged(QAbstractAxis* self, QColor* color) {
 
 void QAbstractAxis_Connect_LabelsColorChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, QColor*) = reinterpret_cast<void (*)(QAbstractAxis*, QColor*)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::labelsColorChanged, [self, slotFunc](QColor color) {
-        QColor* sigval1 = new QColor(color);
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(QColor)>(&QAbstractAxis::labelsColorChanged),
+                           [self, slotFunc](QColor color) {
+                               QColor* sigval1 = new QColor(color);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_TitleTextChanged(QAbstractAxis* self, const libqt_string title) {
@@ -486,18 +516,20 @@ void QAbstractAxis_TitleTextChanged(QAbstractAxis* self, const libqt_string titl
 
 void QAbstractAxis_Connect_TitleTextChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, const char*) = reinterpret_cast<void (*)(QAbstractAxis*, const char*)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::titleTextChanged, [self, slotFunc](const QString& title) {
-        const auto title_ret = title;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray title_b = title_ret.toUtf8();
-        auto title_str_len = title_b.length();
-        char* title_str = static_cast<char*>(malloc(title_str_len + 1));
-        memcpy(title_str, title_b.data(), title_str_len);
-        title_str[title_str_len] = '\0';
-        const char* sigval1 = title_str;
-        slotFunc(self, sigval1);
-        libqt_free(title_str);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(const QString&)>(&QAbstractAxis::titleTextChanged),
+                           [self, slotFunc](const QString& title) {
+                               const auto title_ret = title;
+                               // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                               QByteArray title_b = title_ret.toUtf8();
+                               auto title_str_len = title_b.length();
+                               char* title_str = static_cast<char*>(malloc(title_str_len + 1));
+                               memcpy(title_str, title_b.data(), title_str_len);
+                               title_str[title_str_len] = '\0';
+                               const char* sigval1 = title_str;
+                               slotFunc(self, sigval1);
+                               libqt_free(title_str);
+                           });
 }
 
 void QAbstractAxis_TitleBrushChanged(QAbstractAxis* self, const QBrush* brush) {
@@ -506,12 +538,14 @@ void QAbstractAxis_TitleBrushChanged(QAbstractAxis* self, const QBrush* brush) {
 
 void QAbstractAxis_Connect_TitleBrushChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, QBrush*) = reinterpret_cast<void (*)(QAbstractAxis*, QBrush*)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::titleBrushChanged, [self, slotFunc](const QBrush& brush) {
-        const QBrush& brush_ret = brush;
-        // Cast returned reference into pointer
-        QBrush* sigval1 = const_cast<QBrush*>(&brush_ret);
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(const QBrush&)>(&QAbstractAxis::titleBrushChanged),
+                           [self, slotFunc](const QBrush& brush) {
+                               const QBrush& brush_ret = brush;
+                               // Cast returned reference into pointer
+                               QBrush* sigval1 = const_cast<QBrush*>(&brush_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_TitleVisibleChanged(QAbstractAxis* self, bool visible) {
@@ -520,10 +554,12 @@ void QAbstractAxis_TitleVisibleChanged(QAbstractAxis* self, bool visible) {
 
 void QAbstractAxis_Connect_TitleVisibleChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, bool) = reinterpret_cast<void (*)(QAbstractAxis*, bool)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::titleVisibleChanged, [self, slotFunc](bool visible) {
-        bool sigval1 = visible;
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(bool)>(&QAbstractAxis::titleVisibleChanged),
+                           [self, slotFunc](bool visible) {
+                               bool sigval1 = visible;
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_TitleFontChanged(QAbstractAxis* self, const QFont* font) {
@@ -532,12 +568,14 @@ void QAbstractAxis_TitleFontChanged(QAbstractAxis* self, const QFont* font) {
 
 void QAbstractAxis_Connect_TitleFontChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, QFont*) = reinterpret_cast<void (*)(QAbstractAxis*, QFont*)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::titleFontChanged, [self, slotFunc](const QFont& font) {
-        const QFont& font_ret = font;
-        // Cast returned reference into pointer
-        QFont* sigval1 = const_cast<QFont*>(&font_ret);
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(const QFont&)>(&QAbstractAxis::titleFontChanged),
+                           [self, slotFunc](const QFont& font) {
+                               const QFont& font_ret = font;
+                               // Cast returned reference into pointer
+                               QFont* sigval1 = const_cast<QFont*>(&font_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_ShadesVisibleChanged(QAbstractAxis* self, bool visible) {
@@ -546,10 +584,12 @@ void QAbstractAxis_ShadesVisibleChanged(QAbstractAxis* self, bool visible) {
 
 void QAbstractAxis_Connect_ShadesVisibleChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, bool) = reinterpret_cast<void (*)(QAbstractAxis*, bool)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::shadesVisibleChanged, [self, slotFunc](bool visible) {
-        bool sigval1 = visible;
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(bool)>(&QAbstractAxis::shadesVisibleChanged),
+                           [self, slotFunc](bool visible) {
+                               bool sigval1 = visible;
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_ShadesColorChanged(QAbstractAxis* self, QColor* color) {
@@ -558,10 +598,12 @@ void QAbstractAxis_ShadesColorChanged(QAbstractAxis* self, QColor* color) {
 
 void QAbstractAxis_Connect_ShadesColorChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, QColor*) = reinterpret_cast<void (*)(QAbstractAxis*, QColor*)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::shadesColorChanged, [self, slotFunc](QColor color) {
-        QColor* sigval1 = new QColor(color);
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(QColor)>(&QAbstractAxis::shadesColorChanged),
+                           [self, slotFunc](QColor color) {
+                               QColor* sigval1 = new QColor(color);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_ShadesBorderColorChanged(QAbstractAxis* self, QColor* color) {
@@ -570,10 +612,12 @@ void QAbstractAxis_ShadesBorderColorChanged(QAbstractAxis* self, QColor* color) 
 
 void QAbstractAxis_Connect_ShadesBorderColorChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, QColor*) = reinterpret_cast<void (*)(QAbstractAxis*, QColor*)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::shadesBorderColorChanged, [self, slotFunc](QColor color) {
-        QColor* sigval1 = new QColor(color);
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(QColor)>(&QAbstractAxis::shadesBorderColorChanged),
+                           [self, slotFunc](QColor color) {
+                               QColor* sigval1 = new QColor(color);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_ShadesPenChanged(QAbstractAxis* self, const QPen* pen) {
@@ -582,12 +626,14 @@ void QAbstractAxis_ShadesPenChanged(QAbstractAxis* self, const QPen* pen) {
 
 void QAbstractAxis_Connect_ShadesPenChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, QPen*) = reinterpret_cast<void (*)(QAbstractAxis*, QPen*)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::shadesPenChanged, [self, slotFunc](const QPen& pen) {
-        const QPen& pen_ret = pen;
-        // Cast returned reference into pointer
-        QPen* sigval1 = const_cast<QPen*>(&pen_ret);
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(const QPen&)>(&QAbstractAxis::shadesPenChanged),
+                           [self, slotFunc](const QPen& pen) {
+                               const QPen& pen_ret = pen;
+                               // Cast returned reference into pointer
+                               QPen* sigval1 = const_cast<QPen*>(&pen_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_ShadesBrushChanged(QAbstractAxis* self, const QBrush* brush) {
@@ -596,12 +642,14 @@ void QAbstractAxis_ShadesBrushChanged(QAbstractAxis* self, const QBrush* brush) 
 
 void QAbstractAxis_Connect_ShadesBrushChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, QBrush*) = reinterpret_cast<void (*)(QAbstractAxis*, QBrush*)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::shadesBrushChanged, [self, slotFunc](const QBrush& brush) {
-        const QBrush& brush_ret = brush;
-        // Cast returned reference into pointer
-        QBrush* sigval1 = const_cast<QBrush*>(&brush_ret);
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(const QBrush&)>(&QAbstractAxis::shadesBrushChanged),
+                           [self, slotFunc](const QBrush& brush) {
+                               const QBrush& brush_ret = brush;
+                               // Cast returned reference into pointer
+                               QBrush* sigval1 = const_cast<QBrush*>(&brush_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_ReverseChanged(QAbstractAxis* self, bool reverse) {
@@ -610,10 +658,12 @@ void QAbstractAxis_ReverseChanged(QAbstractAxis* self, bool reverse) {
 
 void QAbstractAxis_Connect_ReverseChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, bool) = reinterpret_cast<void (*)(QAbstractAxis*, bool)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::reverseChanged, [self, slotFunc](bool reverse) {
-        bool sigval1 = reverse;
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(bool)>(&QAbstractAxis::reverseChanged),
+                           [self, slotFunc](bool reverse) {
+                               bool sigval1 = reverse;
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_LabelsEditableChanged(QAbstractAxis* self, bool editable) {
@@ -622,10 +672,12 @@ void QAbstractAxis_LabelsEditableChanged(QAbstractAxis* self, bool editable) {
 
 void QAbstractAxis_Connect_LabelsEditableChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, bool) = reinterpret_cast<void (*)(QAbstractAxis*, bool)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::labelsEditableChanged, [self, slotFunc](bool editable) {
-        bool sigval1 = editable;
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(bool)>(&QAbstractAxis::labelsEditableChanged),
+                           [self, slotFunc](bool editable) {
+                               bool sigval1 = editable;
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_LabelsTruncatedChanged(QAbstractAxis* self, bool labelsTruncated) {
@@ -634,10 +686,12 @@ void QAbstractAxis_LabelsTruncatedChanged(QAbstractAxis* self, bool labelsTrunca
 
 void QAbstractAxis_Connect_LabelsTruncatedChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, bool) = reinterpret_cast<void (*)(QAbstractAxis*, bool)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::labelsTruncatedChanged, [self, slotFunc](bool labelsTruncated) {
-        bool sigval1 = labelsTruncated;
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(bool)>(&QAbstractAxis::labelsTruncatedChanged),
+                           [self, slotFunc](bool labelsTruncated) {
+                               bool sigval1 = labelsTruncated;
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_TruncateLabelsChanged(QAbstractAxis* self, bool truncateLabels) {
@@ -646,10 +700,12 @@ void QAbstractAxis_TruncateLabelsChanged(QAbstractAxis* self, bool truncateLabel
 
 void QAbstractAxis_Connect_TruncateLabelsChanged(QAbstractAxis* self, intptr_t slot) {
     void (*slotFunc)(QAbstractAxis*, bool) = reinterpret_cast<void (*)(QAbstractAxis*, bool)>(slot);
-    QAbstractAxis::connect(self, &QAbstractAxis::truncateLabelsChanged, [self, slotFunc](bool truncateLabels) {
-        bool sigval1 = truncateLabels;
-        slotFunc(self, sigval1);
-    });
+    QAbstractAxis::connect(self,
+                           static_cast<void (QAbstractAxis::*)(bool)>(&QAbstractAxis::truncateLabelsChanged),
+                           [self, slotFunc](bool truncateLabels) {
+                               bool sigval1 = truncateLabels;
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QAbstractAxis_SetVisible1(QAbstractAxis* self, bool visible) {

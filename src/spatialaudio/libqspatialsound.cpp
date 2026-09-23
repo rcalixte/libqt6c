@@ -152,9 +152,11 @@ void QSpatialSound_SourceChanged(QSpatialSound* self) {
 
 void QSpatialSound_Connect_SourceChanged(QSpatialSound* self, intptr_t slot) {
     void (*slotFunc)(QSpatialSound*) = reinterpret_cast<void (*)(QSpatialSound*)>(slot);
-    QSpatialSound::connect(self, &QSpatialSound::sourceChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QSpatialSound::connect(self,
+                           static_cast<void (QSpatialSound::*)()>(&QSpatialSound::sourceChanged),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QSpatialSound_LoopsChanged(QSpatialSound* self) {
@@ -163,9 +165,11 @@ void QSpatialSound_LoopsChanged(QSpatialSound* self) {
 
 void QSpatialSound_Connect_LoopsChanged(QSpatialSound* self, intptr_t slot) {
     void (*slotFunc)(QSpatialSound*) = reinterpret_cast<void (*)(QSpatialSound*)>(slot);
-    QSpatialSound::connect(self, &QSpatialSound::loopsChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QSpatialSound::connect(self,
+                           static_cast<void (QSpatialSound::*)()>(&QSpatialSound::loopsChanged),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QSpatialSound_AutoPlayChanged(QSpatialSound* self) {
@@ -174,9 +178,11 @@ void QSpatialSound_AutoPlayChanged(QSpatialSound* self) {
 
 void QSpatialSound_Connect_AutoPlayChanged(QSpatialSound* self, intptr_t slot) {
     void (*slotFunc)(QSpatialSound*) = reinterpret_cast<void (*)(QSpatialSound*)>(slot);
-    QSpatialSound::connect(self, &QSpatialSound::autoPlayChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QSpatialSound::connect(self,
+                           static_cast<void (QSpatialSound::*)()>(&QSpatialSound::autoPlayChanged),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QSpatialSound_PositionChanged(QSpatialSound* self) {
@@ -185,9 +191,11 @@ void QSpatialSound_PositionChanged(QSpatialSound* self) {
 
 void QSpatialSound_Connect_PositionChanged(QSpatialSound* self, intptr_t slot) {
     void (*slotFunc)(QSpatialSound*) = reinterpret_cast<void (*)(QSpatialSound*)>(slot);
-    QSpatialSound::connect(self, &QSpatialSound::positionChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QSpatialSound::connect(self,
+                           static_cast<void (QSpatialSound::*)()>(&QSpatialSound::positionChanged),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QSpatialSound_RotationChanged(QSpatialSound* self) {
@@ -196,9 +204,11 @@ void QSpatialSound_RotationChanged(QSpatialSound* self) {
 
 void QSpatialSound_Connect_RotationChanged(QSpatialSound* self, intptr_t slot) {
     void (*slotFunc)(QSpatialSound*) = reinterpret_cast<void (*)(QSpatialSound*)>(slot);
-    QSpatialSound::connect(self, &QSpatialSound::rotationChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QSpatialSound::connect(self,
+                           static_cast<void (QSpatialSound::*)()>(&QSpatialSound::rotationChanged),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QSpatialSound_VolumeChanged(QSpatialSound* self) {
@@ -207,9 +217,11 @@ void QSpatialSound_VolumeChanged(QSpatialSound* self) {
 
 void QSpatialSound_Connect_VolumeChanged(QSpatialSound* self, intptr_t slot) {
     void (*slotFunc)(QSpatialSound*) = reinterpret_cast<void (*)(QSpatialSound*)>(slot);
-    QSpatialSound::connect(self, &QSpatialSound::volumeChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QSpatialSound::connect(self,
+                           static_cast<void (QSpatialSound::*)()>(&QSpatialSound::volumeChanged),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QSpatialSound_DistanceModelChanged(QSpatialSound* self) {
@@ -218,9 +230,11 @@ void QSpatialSound_DistanceModelChanged(QSpatialSound* self) {
 
 void QSpatialSound_Connect_DistanceModelChanged(QSpatialSound* self, intptr_t slot) {
     void (*slotFunc)(QSpatialSound*) = reinterpret_cast<void (*)(QSpatialSound*)>(slot);
-    QSpatialSound::connect(self, &QSpatialSound::distanceModelChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QSpatialSound::connect(self,
+                           static_cast<void (QSpatialSound::*)()>(&QSpatialSound::distanceModelChanged),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QSpatialSound_SizeChanged(QSpatialSound* self) {
@@ -229,9 +243,11 @@ void QSpatialSound_SizeChanged(QSpatialSound* self) {
 
 void QSpatialSound_Connect_SizeChanged(QSpatialSound* self, intptr_t slot) {
     void (*slotFunc)(QSpatialSound*) = reinterpret_cast<void (*)(QSpatialSound*)>(slot);
-    QSpatialSound::connect(self, &QSpatialSound::sizeChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QSpatialSound::connect(self,
+                           static_cast<void (QSpatialSound::*)()>(&QSpatialSound::sizeChanged),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QSpatialSound_DistanceCutoffChanged(QSpatialSound* self) {
@@ -240,9 +256,11 @@ void QSpatialSound_DistanceCutoffChanged(QSpatialSound* self) {
 
 void QSpatialSound_Connect_DistanceCutoffChanged(QSpatialSound* self, intptr_t slot) {
     void (*slotFunc)(QSpatialSound*) = reinterpret_cast<void (*)(QSpatialSound*)>(slot);
-    QSpatialSound::connect(self, &QSpatialSound::distanceCutoffChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QSpatialSound::connect(self,
+                           static_cast<void (QSpatialSound::*)()>(&QSpatialSound::distanceCutoffChanged),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QSpatialSound_ManualAttenuationChanged(QSpatialSound* self) {
@@ -251,9 +269,11 @@ void QSpatialSound_ManualAttenuationChanged(QSpatialSound* self) {
 
 void QSpatialSound_Connect_ManualAttenuationChanged(QSpatialSound* self, intptr_t slot) {
     void (*slotFunc)(QSpatialSound*) = reinterpret_cast<void (*)(QSpatialSound*)>(slot);
-    QSpatialSound::connect(self, &QSpatialSound::manualAttenuationChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QSpatialSound::connect(self,
+                           static_cast<void (QSpatialSound::*)()>(&QSpatialSound::manualAttenuationChanged),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QSpatialSound_OcclusionIntensityChanged(QSpatialSound* self) {
@@ -262,9 +282,11 @@ void QSpatialSound_OcclusionIntensityChanged(QSpatialSound* self) {
 
 void QSpatialSound_Connect_OcclusionIntensityChanged(QSpatialSound* self, intptr_t slot) {
     void (*slotFunc)(QSpatialSound*) = reinterpret_cast<void (*)(QSpatialSound*)>(slot);
-    QSpatialSound::connect(self, &QSpatialSound::occlusionIntensityChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QSpatialSound::connect(self,
+                           static_cast<void (QSpatialSound::*)()>(&QSpatialSound::occlusionIntensityChanged),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QSpatialSound_DirectivityChanged(QSpatialSound* self) {
@@ -273,9 +295,11 @@ void QSpatialSound_DirectivityChanged(QSpatialSound* self) {
 
 void QSpatialSound_Connect_DirectivityChanged(QSpatialSound* self, intptr_t slot) {
     void (*slotFunc)(QSpatialSound*) = reinterpret_cast<void (*)(QSpatialSound*)>(slot);
-    QSpatialSound::connect(self, &QSpatialSound::directivityChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QSpatialSound::connect(self,
+                           static_cast<void (QSpatialSound::*)()>(&QSpatialSound::directivityChanged),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QSpatialSound_DirectivityOrderChanged(QSpatialSound* self) {
@@ -284,9 +308,11 @@ void QSpatialSound_DirectivityOrderChanged(QSpatialSound* self) {
 
 void QSpatialSound_Connect_DirectivityOrderChanged(QSpatialSound* self, intptr_t slot) {
     void (*slotFunc)(QSpatialSound*) = reinterpret_cast<void (*)(QSpatialSound*)>(slot);
-    QSpatialSound::connect(self, &QSpatialSound::directivityOrderChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QSpatialSound::connect(self,
+                           static_cast<void (QSpatialSound::*)()>(&QSpatialSound::directivityOrderChanged),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QSpatialSound_NearFieldGainChanged(QSpatialSound* self) {
@@ -295,9 +321,11 @@ void QSpatialSound_NearFieldGainChanged(QSpatialSound* self) {
 
 void QSpatialSound_Connect_NearFieldGainChanged(QSpatialSound* self, intptr_t slot) {
     void (*slotFunc)(QSpatialSound*) = reinterpret_cast<void (*)(QSpatialSound*)>(slot);
-    QSpatialSound::connect(self, &QSpatialSound::nearFieldGainChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QSpatialSound::connect(self,
+                           static_cast<void (QSpatialSound::*)()>(&QSpatialSound::nearFieldGainChanged),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QSpatialSound_Play(QSpatialSound* self) {

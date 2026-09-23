@@ -87,9 +87,11 @@ void QHPieModelMapper_SeriesReplaced(QHPieModelMapper* self) {
 
 void QHPieModelMapper_Connect_SeriesReplaced(QHPieModelMapper* self, intptr_t slot) {
     void (*slotFunc)(QHPieModelMapper*) = reinterpret_cast<void (*)(QHPieModelMapper*)>(slot);
-    QHPieModelMapper::connect(self, &QHPieModelMapper::seriesReplaced, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QHPieModelMapper::connect(self,
+                              static_cast<void (QHPieModelMapper::*)()>(&QHPieModelMapper::seriesReplaced),
+                              [self, slotFunc]() {
+                                  slotFunc(self);
+                              });
 }
 
 void QHPieModelMapper_ModelReplaced(QHPieModelMapper* self) {
@@ -98,9 +100,11 @@ void QHPieModelMapper_ModelReplaced(QHPieModelMapper* self) {
 
 void QHPieModelMapper_Connect_ModelReplaced(QHPieModelMapper* self, intptr_t slot) {
     void (*slotFunc)(QHPieModelMapper*) = reinterpret_cast<void (*)(QHPieModelMapper*)>(slot);
-    QHPieModelMapper::connect(self, &QHPieModelMapper::modelReplaced, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QHPieModelMapper::connect(self,
+                              static_cast<void (QHPieModelMapper::*)()>(&QHPieModelMapper::modelReplaced),
+                              [self, slotFunc]() {
+                                  slotFunc(self);
+                              });
 }
 
 void QHPieModelMapper_ValuesRowChanged(QHPieModelMapper* self) {
@@ -109,9 +113,11 @@ void QHPieModelMapper_ValuesRowChanged(QHPieModelMapper* self) {
 
 void QHPieModelMapper_Connect_ValuesRowChanged(QHPieModelMapper* self, intptr_t slot) {
     void (*slotFunc)(QHPieModelMapper*) = reinterpret_cast<void (*)(QHPieModelMapper*)>(slot);
-    QHPieModelMapper::connect(self, &QHPieModelMapper::valuesRowChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QHPieModelMapper::connect(self,
+                              static_cast<void (QHPieModelMapper::*)()>(&QHPieModelMapper::valuesRowChanged),
+                              [self, slotFunc]() {
+                                  slotFunc(self);
+                              });
 }
 
 void QHPieModelMapper_LabelsRowChanged(QHPieModelMapper* self) {
@@ -120,9 +126,11 @@ void QHPieModelMapper_LabelsRowChanged(QHPieModelMapper* self) {
 
 void QHPieModelMapper_Connect_LabelsRowChanged(QHPieModelMapper* self, intptr_t slot) {
     void (*slotFunc)(QHPieModelMapper*) = reinterpret_cast<void (*)(QHPieModelMapper*)>(slot);
-    QHPieModelMapper::connect(self, &QHPieModelMapper::labelsRowChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QHPieModelMapper::connect(self,
+                              static_cast<void (QHPieModelMapper::*)()>(&QHPieModelMapper::labelsRowChanged),
+                              [self, slotFunc]() {
+                                  slotFunc(self);
+                              });
 }
 
 void QHPieModelMapper_FirstColumnChanged(QHPieModelMapper* self) {
@@ -131,9 +139,11 @@ void QHPieModelMapper_FirstColumnChanged(QHPieModelMapper* self) {
 
 void QHPieModelMapper_Connect_FirstColumnChanged(QHPieModelMapper* self, intptr_t slot) {
     void (*slotFunc)(QHPieModelMapper*) = reinterpret_cast<void (*)(QHPieModelMapper*)>(slot);
-    QHPieModelMapper::connect(self, &QHPieModelMapper::firstColumnChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QHPieModelMapper::connect(self,
+                              static_cast<void (QHPieModelMapper::*)()>(&QHPieModelMapper::firstColumnChanged),
+                              [self, slotFunc]() {
+                                  slotFunc(self);
+                              });
 }
 
 void QHPieModelMapper_ColumnCountChanged(QHPieModelMapper* self) {
@@ -142,9 +152,11 @@ void QHPieModelMapper_ColumnCountChanged(QHPieModelMapper* self) {
 
 void QHPieModelMapper_Connect_ColumnCountChanged(QHPieModelMapper* self, intptr_t slot) {
     void (*slotFunc)(QHPieModelMapper*) = reinterpret_cast<void (*)(QHPieModelMapper*)>(slot);
-    QHPieModelMapper::connect(self, &QHPieModelMapper::columnCountChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QHPieModelMapper::connect(self,
+                              static_cast<void (QHPieModelMapper::*)()>(&QHPieModelMapper::columnCountChanged),
+                              [self, slotFunc]() {
+                                  slotFunc(self);
+                              });
 }
 
 // Base class handler implementation

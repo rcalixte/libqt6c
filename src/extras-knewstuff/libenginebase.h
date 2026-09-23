@@ -330,11 +330,25 @@ void k_nscore__enginebase_content_warning_type_changed(void* self);
 ///
 void k_nscore__enginebase_signal_message(void* self, const char* message);
 
+/// [Upstream resources](https://api.kde.org/knscore-enginebase.html#signalMessage)
+///
+/// @param self KNSCore__EngineBase*
+/// @param callback void func(KNSCore__EngineBase* self, const char* message)
+///
+void k_nscore__enginebase_on_signal_message(void* self, void (*callback)(void*, const char*));
+
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#signalProvidersLoaded)
 ///
 /// @param self KNSCore__EngineBase*
 ///
 void k_nscore__enginebase_signal_providers_loaded(void* self);
+
+/// [Upstream resources](https://api.kde.org/knscore-enginebase.html#signalProvidersLoaded)
+///
+/// @param self KNSCore__EngineBase*
+/// @param callback void func(KNSCore__EngineBase* self)
+///
+void k_nscore__enginebase_on_signal_providers_loaded(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#signalErrorCode)
 ///
@@ -345,6 +359,13 @@ void k_nscore__enginebase_signal_providers_loaded(void* self);
 ///
 void k_nscore__enginebase_signal_error_code(void* self, int32_t errorCode, const char* message, void* metadata);
 
+/// [Upstream resources](https://api.kde.org/knscore-enginebase.html#signalErrorCode)
+///
+/// @param self KNSCore__EngineBase*
+/// @param callback void func(KNSCore__EngineBase* self, enum KNSCore__ErrorCode__ErrorCode errorCode, const char* message, QVariant* metadata)
+///
+void k_nscore__enginebase_on_signal_error_code(void* self, void (*callback)(void*, int32_t, const char*, void*));
+
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#signalCategoriesMetadataLoded)
 ///
 /// @param self KNSCore__EngineBase*
@@ -352,12 +373,26 @@ void k_nscore__enginebase_signal_error_code(void* self, int32_t errorCode, const
 ///
 void k_nscore__enginebase_signal_categories_metadata_loded(void* self, libqt_list categories);
 
+/// [Upstream resources](https://api.kde.org/knscore-enginebase.html#signalCategoriesMetadataLoded)
+///
+/// @param self KNSCore__EngineBase*
+/// @param callback void func(KNSCore__EngineBase* self, libqt_list of KNSCore__Provider__CategoryMetadata* categories)
+///
+void k_nscore__enginebase_on_signal_categories_metadata_loded(void* self, void (*callback)(void*, libqt_list));
+
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#signalCategoriesMetadataLoaded)
 ///
 /// @param self KNSCore__EngineBase*
 /// @param categories libqt_list of KNSCore__CategoryMetadata*
 ///
 void k_nscore__enginebase_signal_categories_metadata_loaded(void* self, libqt_list categories);
+
+/// [Upstream resources](https://api.kde.org/knscore-enginebase.html#signalCategoriesMetadataLoaded)
+///
+/// @param self KNSCore__EngineBase*
+/// @param callback void func(KNSCore__EngineBase* self, libqt_list of KNSCore__CategoryMetadata* categories)
+///
+void k_nscore__enginebase_on_signal_categories_metadata_loaded(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#signalSearchPresetsLoaded)
 ///
@@ -369,9 +404,23 @@ void k_nscore__enginebase_signal_search_presets_loaded(void* self, libqt_list pr
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#signalSearchPresetsLoaded)
 ///
 /// @param self KNSCore__EngineBase*
+/// @param callback void func(KNSCore__EngineBase* self, libqt_list of KNSCore__Provider__SearchPreset* presets)
+///
+void k_nscore__enginebase_on_signal_search_presets_loaded(void* self, void (*callback)(void*, libqt_list));
+
+/// [Upstream resources](https://api.kde.org/knscore-enginebase.html#signalSearchPresetsLoaded)
+///
+/// @param self KNSCore__EngineBase*
 /// @param presets libqt_list of KNSCore__SearchPreset*
 ///
 void k_nscore__enginebase_signal_search_presets_loaded2(void* self, libqt_list presets);
+
+/// [Upstream resources](https://api.kde.org/knscore-enginebase.html#signalSearchPresetsLoaded)
+///
+/// @param self KNSCore__EngineBase*
+/// @param callback void func(KNSCore__EngineBase* self, libqt_list of KNSCore__SearchPreset* presets)
+///
+void k_nscore__enginebase_on_signal_search_presets_loaded2(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#providersChanged)
 ///
@@ -379,11 +428,25 @@ void k_nscore__enginebase_signal_search_presets_loaded2(void* self, libqt_list p
 ///
 void k_nscore__enginebase_providers_changed(void* self);
 
+/// [Upstream resources](https://api.kde.org/knscore-enginebase.html#providersChanged)
+///
+/// @param self KNSCore__EngineBase*
+/// @param callback void func(KNSCore__EngineBase* self)
+///
+void k_nscore__enginebase_on_providers_changed(void* self, void (*callback)(void*));
+
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#loadingProvider)
 ///
 /// @param self KNSCore__EngineBase*
 ///
 void k_nscore__enginebase_loading_provider(void* self);
+
+/// [Upstream resources](https://api.kde.org/knscore-enginebase.html#loadingProvider)
+///
+/// @param self KNSCore__EngineBase*
+/// @param callback void func(KNSCore__EngineBase* self)
+///
+void k_nscore__enginebase_on_loading_provider(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#providerAdded)
 ///
@@ -391,6 +454,13 @@ void k_nscore__enginebase_loading_provider(void* self);
 /// @param provider KNSCore__ProviderCore*
 ///
 void k_nscore__enginebase_provider_added(void* self, void* provider);
+
+/// [Upstream resources](https://api.kde.org/knscore-enginebase.html#providerAdded)
+///
+/// @param self KNSCore__EngineBase*
+/// @param callback void func(KNSCore__EngineBase* self, KNSCore__ProviderCore* provider)
+///
+void k_nscore__enginebase_on_provider_added(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#updateStatus)
 ///

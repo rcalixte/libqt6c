@@ -96,10 +96,12 @@ void QWindowCapture_ActiveChanged(QWindowCapture* self, bool param1) {
 
 void QWindowCapture_Connect_ActiveChanged(QWindowCapture* self, intptr_t slot) {
     void (*slotFunc)(QWindowCapture*, bool) = reinterpret_cast<void (*)(QWindowCapture*, bool)>(slot);
-    QWindowCapture::connect(self, &QWindowCapture::activeChanged, [self, slotFunc](bool param1) {
-        bool sigval1 = param1;
-        slotFunc(self, sigval1);
-    });
+    QWindowCapture::connect(self,
+                            static_cast<void (QWindowCapture::*)(bool)>(&QWindowCapture::activeChanged),
+                            [self, slotFunc](bool param1) {
+                                bool sigval1 = param1;
+                                slotFunc(self, sigval1);
+                            });
 }
 
 void QWindowCapture_WindowChanged(QWindowCapture* self, QCapturableWindow* window) {
@@ -108,10 +110,12 @@ void QWindowCapture_WindowChanged(QWindowCapture* self, QCapturableWindow* windo
 
 void QWindowCapture_Connect_WindowChanged(QWindowCapture* self, intptr_t slot) {
     void (*slotFunc)(QWindowCapture*, QCapturableWindow*) = reinterpret_cast<void (*)(QWindowCapture*, QCapturableWindow*)>(slot);
-    QWindowCapture::connect(self, &QWindowCapture::windowChanged, [self, slotFunc](QCapturableWindow window) {
-        QCapturableWindow* sigval1 = new QCapturableWindow(window);
-        slotFunc(self, sigval1);
-    });
+    QWindowCapture::connect(self,
+                            static_cast<void (QWindowCapture::*)(QCapturableWindow)>(&QWindowCapture::windowChanged),
+                            [self, slotFunc](QCapturableWindow window) {
+                                QCapturableWindow* sigval1 = new QCapturableWindow(window);
+                                slotFunc(self, sigval1);
+                            });
 }
 
 void QWindowCapture_ErrorChanged(QWindowCapture* self) {
@@ -120,9 +124,11 @@ void QWindowCapture_ErrorChanged(QWindowCapture* self) {
 
 void QWindowCapture_Connect_ErrorChanged(QWindowCapture* self, intptr_t slot) {
     void (*slotFunc)(QWindowCapture*) = reinterpret_cast<void (*)(QWindowCapture*)>(slot);
-    QWindowCapture::connect(self, &QWindowCapture::errorChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QWindowCapture::connect(self,
+                            static_cast<void (QWindowCapture::*)()>(&QWindowCapture::errorChanged),
+                            [self, slotFunc]() {
+                                slotFunc(self);
+                            });
 }
 
 void QWindowCapture_ErrorOccurred(QWindowCapture* self, int error, const libqt_string errorString) {
@@ -132,19 +138,21 @@ void QWindowCapture_ErrorOccurred(QWindowCapture* self, int error, const libqt_s
 
 void QWindowCapture_Connect_ErrorOccurred(QWindowCapture* self, intptr_t slot) {
     void (*slotFunc)(QWindowCapture*, int, const char*) = reinterpret_cast<void (*)(QWindowCapture*, int, const char*)>(slot);
-    QWindowCapture::connect(self, &QWindowCapture::errorOccurred, [self, slotFunc](QWindowCapture::Error error, const QString& errorString) {
-        int sigval1 = static_cast<int>(error);
-        const auto errorString_ret = errorString;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray errorString_b = errorString_ret.toUtf8();
-        auto errorString_str_len = errorString_b.length();
-        char* errorString_str = static_cast<char*>(malloc(errorString_str_len + 1));
-        memcpy(errorString_str, errorString_b.data(), errorString_str_len);
-        errorString_str[errorString_str_len] = '\0';
-        const char* sigval2 = errorString_str;
-        slotFunc(self, sigval1, sigval2);
-        libqt_free(errorString_str);
-    });
+    QWindowCapture::connect(self,
+                            static_cast<void (QWindowCapture::*)(QWindowCapture::Error, const QString&)>(&QWindowCapture::errorOccurred),
+                            [self, slotFunc](QWindowCapture::Error error, const QString& errorString) {
+                                int sigval1 = static_cast<int>(error);
+                                const auto errorString_ret = errorString;
+                                // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                QByteArray errorString_b = errorString_ret.toUtf8();
+                                auto errorString_str_len = errorString_b.length();
+                                char* errorString_str = static_cast<char*>(malloc(errorString_str_len + 1));
+                                memcpy(errorString_str, errorString_b.data(), errorString_str_len);
+                                errorString_str[errorString_str_len] = '\0';
+                                const char* sigval2 = errorString_str;
+                                slotFunc(self, sigval1, sigval2);
+                                libqt_free(errorString_str);
+                            });
 }
 
 // Base class handler implementation

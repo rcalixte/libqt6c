@@ -80,19 +80,21 @@ void Solid__StorageAccess_AccessibilityChanged(Solid__StorageAccess* self, bool 
 
 void Solid__StorageAccess_Connect_AccessibilityChanged(Solid__StorageAccess* self, intptr_t slot) {
     void (*slotFunc)(Solid__StorageAccess*, bool, const char*) = reinterpret_cast<void (*)(Solid__StorageAccess*, bool, const char*)>(slot);
-    Solid::StorageAccess::connect(self, &Solid::StorageAccess::accessibilityChanged, [self, slotFunc](bool accessible, const QString& udi) {
-        bool sigval1 = accessible;
-        const auto udi_ret = udi;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray udi_b = udi_ret.toUtf8();
-        auto udi_str_len = udi_b.length();
-        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
-        memcpy(udi_str, udi_b.data(), udi_str_len);
-        udi_str[udi_str_len] = '\0';
-        const char* sigval2 = udi_str;
-        slotFunc(self, sigval1, sigval2);
-        libqt_free(udi_str);
-    });
+    Solid::StorageAccess::connect(self,
+                                  static_cast<void (Solid::StorageAccess::*)(bool, const QString&)>(&Solid::StorageAccess::accessibilityChanged),
+                                  [self, slotFunc](bool accessible, const QString& udi) {
+                                      bool sigval1 = accessible;
+                                      const auto udi_ret = udi;
+                                      // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                      QByteArray udi_b = udi_ret.toUtf8();
+                                      auto udi_str_len = udi_b.length();
+                                      char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+                                      memcpy(udi_str, udi_b.data(), udi_str_len);
+                                      udi_str[udi_str_len] = '\0';
+                                      const char* sigval2 = udi_str;
+                                      slotFunc(self, sigval1, sigval2);
+                                      libqt_free(udi_str);
+                                  });
 }
 
 void Solid__StorageAccess_SetupDone(Solid__StorageAccess* self, int error, QVariant* errorData, const libqt_string udi) {
@@ -102,20 +104,22 @@ void Solid__StorageAccess_SetupDone(Solid__StorageAccess* self, int error, QVari
 
 void Solid__StorageAccess_Connect_SetupDone(Solid__StorageAccess* self, intptr_t slot) {
     void (*slotFunc)(Solid__StorageAccess*, int, QVariant*, const char*) = reinterpret_cast<void (*)(Solid__StorageAccess*, int, QVariant*, const char*)>(slot);
-    Solid::StorageAccess::connect(self, &Solid::StorageAccess::setupDone, [self, slotFunc](Solid::ErrorType error, QVariant errorData, const QString& udi) {
-        int sigval1 = static_cast<int>(error);
-        QVariant* sigval2 = new QVariant(errorData);
-        const auto udi_ret = udi;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray udi_b = udi_ret.toUtf8();
-        auto udi_str_len = udi_b.length();
-        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
-        memcpy(udi_str, udi_b.data(), udi_str_len);
-        udi_str[udi_str_len] = '\0';
-        const char* sigval3 = udi_str;
-        slotFunc(self, sigval1, sigval2, sigval3);
-        libqt_free(udi_str);
-    });
+    Solid::StorageAccess::connect(self,
+                                  static_cast<void (Solid::StorageAccess::*)(Solid::ErrorType, QVariant, const QString&)>(&Solid::StorageAccess::setupDone),
+                                  [self, slotFunc](Solid::ErrorType error, QVariant errorData, const QString& udi) {
+                                      int sigval1 = static_cast<int>(error);
+                                      QVariant* sigval2 = new QVariant(errorData);
+                                      const auto udi_ret = udi;
+                                      // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                      QByteArray udi_b = udi_ret.toUtf8();
+                                      auto udi_str_len = udi_b.length();
+                                      char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+                                      memcpy(udi_str, udi_b.data(), udi_str_len);
+                                      udi_str[udi_str_len] = '\0';
+                                      const char* sigval3 = udi_str;
+                                      slotFunc(self, sigval1, sigval2, sigval3);
+                                      libqt_free(udi_str);
+                                  });
 }
 
 void Solid__StorageAccess_TeardownDone(Solid__StorageAccess* self, int error, QVariant* errorData, const libqt_string udi) {
@@ -125,20 +129,22 @@ void Solid__StorageAccess_TeardownDone(Solid__StorageAccess* self, int error, QV
 
 void Solid__StorageAccess_Connect_TeardownDone(Solid__StorageAccess* self, intptr_t slot) {
     void (*slotFunc)(Solid__StorageAccess*, int, QVariant*, const char*) = reinterpret_cast<void (*)(Solid__StorageAccess*, int, QVariant*, const char*)>(slot);
-    Solid::StorageAccess::connect(self, &Solid::StorageAccess::teardownDone, [self, slotFunc](Solid::ErrorType error, QVariant errorData, const QString& udi) {
-        int sigval1 = static_cast<int>(error);
-        QVariant* sigval2 = new QVariant(errorData);
-        const auto udi_ret = udi;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray udi_b = udi_ret.toUtf8();
-        auto udi_str_len = udi_b.length();
-        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
-        memcpy(udi_str, udi_b.data(), udi_str_len);
-        udi_str[udi_str_len] = '\0';
-        const char* sigval3 = udi_str;
-        slotFunc(self, sigval1, sigval2, sigval3);
-        libqt_free(udi_str);
-    });
+    Solid::StorageAccess::connect(self,
+                                  static_cast<void (Solid::StorageAccess::*)(Solid::ErrorType, QVariant, const QString&)>(&Solid::StorageAccess::teardownDone),
+                                  [self, slotFunc](Solid::ErrorType error, QVariant errorData, const QString& udi) {
+                                      int sigval1 = static_cast<int>(error);
+                                      QVariant* sigval2 = new QVariant(errorData);
+                                      const auto udi_ret = udi;
+                                      // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                      QByteArray udi_b = udi_ret.toUtf8();
+                                      auto udi_str_len = udi_b.length();
+                                      char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+                                      memcpy(udi_str, udi_b.data(), udi_str_len);
+                                      udi_str[udi_str_len] = '\0';
+                                      const char* sigval3 = udi_str;
+                                      slotFunc(self, sigval1, sigval2, sigval3);
+                                      libqt_free(udi_str);
+                                  });
 }
 
 void Solid__StorageAccess_SetupRequested(Solid__StorageAccess* self, const libqt_string udi) {
@@ -148,18 +154,20 @@ void Solid__StorageAccess_SetupRequested(Solid__StorageAccess* self, const libqt
 
 void Solid__StorageAccess_Connect_SetupRequested(Solid__StorageAccess* self, intptr_t slot) {
     void (*slotFunc)(Solid__StorageAccess*, const char*) = reinterpret_cast<void (*)(Solid__StorageAccess*, const char*)>(slot);
-    Solid::StorageAccess::connect(self, &Solid::StorageAccess::setupRequested, [self, slotFunc](const QString& udi) {
-        const auto udi_ret = udi;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray udi_b = udi_ret.toUtf8();
-        auto udi_str_len = udi_b.length();
-        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
-        memcpy(udi_str, udi_b.data(), udi_str_len);
-        udi_str[udi_str_len] = '\0';
-        const char* sigval1 = udi_str;
-        slotFunc(self, sigval1);
-        libqt_free(udi_str);
-    });
+    Solid::StorageAccess::connect(self,
+                                  static_cast<void (Solid::StorageAccess::*)(const QString&)>(&Solid::StorageAccess::setupRequested),
+                                  [self, slotFunc](const QString& udi) {
+                                      const auto udi_ret = udi;
+                                      // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                      QByteArray udi_b = udi_ret.toUtf8();
+                                      auto udi_str_len = udi_b.length();
+                                      char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+                                      memcpy(udi_str, udi_b.data(), udi_str_len);
+                                      udi_str[udi_str_len] = '\0';
+                                      const char* sigval1 = udi_str;
+                                      slotFunc(self, sigval1);
+                                      libqt_free(udi_str);
+                                  });
 }
 
 void Solid__StorageAccess_TeardownRequested(Solid__StorageAccess* self, const libqt_string udi) {
@@ -169,18 +177,20 @@ void Solid__StorageAccess_TeardownRequested(Solid__StorageAccess* self, const li
 
 void Solid__StorageAccess_Connect_TeardownRequested(Solid__StorageAccess* self, intptr_t slot) {
     void (*slotFunc)(Solid__StorageAccess*, const char*) = reinterpret_cast<void (*)(Solid__StorageAccess*, const char*)>(slot);
-    Solid::StorageAccess::connect(self, &Solid::StorageAccess::teardownRequested, [self, slotFunc](const QString& udi) {
-        const auto udi_ret = udi;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray udi_b = udi_ret.toUtf8();
-        auto udi_str_len = udi_b.length();
-        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
-        memcpy(udi_str, udi_b.data(), udi_str_len);
-        udi_str[udi_str_len] = '\0';
-        const char* sigval1 = udi_str;
-        slotFunc(self, sigval1);
-        libqt_free(udi_str);
-    });
+    Solid::StorageAccess::connect(self,
+                                  static_cast<void (Solid::StorageAccess::*)(const QString&)>(&Solid::StorageAccess::teardownRequested),
+                                  [self, slotFunc](const QString& udi) {
+                                      const auto udi_ret = udi;
+                                      // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                      QByteArray udi_b = udi_ret.toUtf8();
+                                      auto udi_str_len = udi_b.length();
+                                      char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+                                      memcpy(udi_str, udi_b.data(), udi_str_len);
+                                      udi_str[udi_str_len] = '\0';
+                                      const char* sigval1 = udi_str;
+                                      slotFunc(self, sigval1);
+                                      libqt_free(udi_str);
+                                  });
 }
 
 void Solid__StorageAccess_CheckRequested(Solid__StorageAccess* self, const libqt_string udi) {
@@ -190,18 +200,20 @@ void Solid__StorageAccess_CheckRequested(Solid__StorageAccess* self, const libqt
 
 void Solid__StorageAccess_Connect_CheckRequested(Solid__StorageAccess* self, intptr_t slot) {
     void (*slotFunc)(Solid__StorageAccess*, const char*) = reinterpret_cast<void (*)(Solid__StorageAccess*, const char*)>(slot);
-    Solid::StorageAccess::connect(self, &Solid::StorageAccess::checkRequested, [self, slotFunc](const QString& udi) {
-        const auto udi_ret = udi;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray udi_b = udi_ret.toUtf8();
-        auto udi_str_len = udi_b.length();
-        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
-        memcpy(udi_str, udi_b.data(), udi_str_len);
-        udi_str[udi_str_len] = '\0';
-        const char* sigval1 = udi_str;
-        slotFunc(self, sigval1);
-        libqt_free(udi_str);
-    });
+    Solid::StorageAccess::connect(self,
+                                  static_cast<void (Solid::StorageAccess::*)(const QString&)>(&Solid::StorageAccess::checkRequested),
+                                  [self, slotFunc](const QString& udi) {
+                                      const auto udi_ret = udi;
+                                      // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                      QByteArray udi_b = udi_ret.toUtf8();
+                                      auto udi_str_len = udi_b.length();
+                                      char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+                                      memcpy(udi_str, udi_b.data(), udi_str_len);
+                                      udi_str[udi_str_len] = '\0';
+                                      const char* sigval1 = udi_str;
+                                      slotFunc(self, sigval1);
+                                      libqt_free(udi_str);
+                                  });
 }
 
 void Solid__StorageAccess_CheckDone(Solid__StorageAccess* self, int error, QVariant* errorData, const libqt_string udi) {
@@ -211,20 +223,22 @@ void Solid__StorageAccess_CheckDone(Solid__StorageAccess* self, int error, QVari
 
 void Solid__StorageAccess_Connect_CheckDone(Solid__StorageAccess* self, intptr_t slot) {
     void (*slotFunc)(Solid__StorageAccess*, int, QVariant*, const char*) = reinterpret_cast<void (*)(Solid__StorageAccess*, int, QVariant*, const char*)>(slot);
-    Solid::StorageAccess::connect(self, &Solid::StorageAccess::checkDone, [self, slotFunc](Solid::ErrorType error, QVariant errorData, const QString& udi) {
-        int sigval1 = static_cast<int>(error);
-        QVariant* sigval2 = new QVariant(errorData);
-        const auto udi_ret = udi;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray udi_b = udi_ret.toUtf8();
-        auto udi_str_len = udi_b.length();
-        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
-        memcpy(udi_str, udi_b.data(), udi_str_len);
-        udi_str[udi_str_len] = '\0';
-        const char* sigval3 = udi_str;
-        slotFunc(self, sigval1, sigval2, sigval3);
-        libqt_free(udi_str);
-    });
+    Solid::StorageAccess::connect(self,
+                                  static_cast<void (Solid::StorageAccess::*)(Solid::ErrorType, QVariant, const QString&)>(&Solid::StorageAccess::checkDone),
+                                  [self, slotFunc](Solid::ErrorType error, QVariant errorData, const QString& udi) {
+                                      int sigval1 = static_cast<int>(error);
+                                      QVariant* sigval2 = new QVariant(errorData);
+                                      const auto udi_ret = udi;
+                                      // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                      QByteArray udi_b = udi_ret.toUtf8();
+                                      auto udi_str_len = udi_b.length();
+                                      char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+                                      memcpy(udi_str, udi_b.data(), udi_str_len);
+                                      udi_str[udi_str_len] = '\0';
+                                      const char* sigval3 = udi_str;
+                                      slotFunc(self, sigval1, sigval2, sigval3);
+                                      libqt_free(udi_str);
+                                  });
 }
 
 void Solid__StorageAccess_RepairRequested(Solid__StorageAccess* self, const libqt_string udi) {
@@ -234,18 +248,20 @@ void Solid__StorageAccess_RepairRequested(Solid__StorageAccess* self, const libq
 
 void Solid__StorageAccess_Connect_RepairRequested(Solid__StorageAccess* self, intptr_t slot) {
     void (*slotFunc)(Solid__StorageAccess*, const char*) = reinterpret_cast<void (*)(Solid__StorageAccess*, const char*)>(slot);
-    Solid::StorageAccess::connect(self, &Solid::StorageAccess::repairRequested, [self, slotFunc](const QString& udi) {
-        const auto udi_ret = udi;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray udi_b = udi_ret.toUtf8();
-        auto udi_str_len = udi_b.length();
-        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
-        memcpy(udi_str, udi_b.data(), udi_str_len);
-        udi_str[udi_str_len] = '\0';
-        const char* sigval1 = udi_str;
-        slotFunc(self, sigval1);
-        libqt_free(udi_str);
-    });
+    Solid::StorageAccess::connect(self,
+                                  static_cast<void (Solid::StorageAccess::*)(const QString&)>(&Solid::StorageAccess::repairRequested),
+                                  [self, slotFunc](const QString& udi) {
+                                      const auto udi_ret = udi;
+                                      // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                      QByteArray udi_b = udi_ret.toUtf8();
+                                      auto udi_str_len = udi_b.length();
+                                      char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+                                      memcpy(udi_str, udi_b.data(), udi_str_len);
+                                      udi_str[udi_str_len] = '\0';
+                                      const char* sigval1 = udi_str;
+                                      slotFunc(self, sigval1);
+                                      libqt_free(udi_str);
+                                  });
 }
 
 void Solid__StorageAccess_RepairDone(Solid__StorageAccess* self, int error, QVariant* errorData, const libqt_string udi) {
@@ -255,20 +271,22 @@ void Solid__StorageAccess_RepairDone(Solid__StorageAccess* self, int error, QVar
 
 void Solid__StorageAccess_Connect_RepairDone(Solid__StorageAccess* self, intptr_t slot) {
     void (*slotFunc)(Solid__StorageAccess*, int, QVariant*, const char*) = reinterpret_cast<void (*)(Solid__StorageAccess*, int, QVariant*, const char*)>(slot);
-    Solid::StorageAccess::connect(self, &Solid::StorageAccess::repairDone, [self, slotFunc](Solid::ErrorType error, QVariant errorData, const QString& udi) {
-        int sigval1 = static_cast<int>(error);
-        QVariant* sigval2 = new QVariant(errorData);
-        const auto udi_ret = udi;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray udi_b = udi_ret.toUtf8();
-        auto udi_str_len = udi_b.length();
-        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
-        memcpy(udi_str, udi_b.data(), udi_str_len);
-        udi_str[udi_str_len] = '\0';
-        const char* sigval3 = udi_str;
-        slotFunc(self, sigval1, sigval2, sigval3);
-        libqt_free(udi_str);
-    });
+    Solid::StorageAccess::connect(self,
+                                  static_cast<void (Solid::StorageAccess::*)(Solid::ErrorType, QVariant, const QString&)>(&Solid::StorageAccess::repairDone),
+                                  [self, slotFunc](Solid::ErrorType error, QVariant errorData, const QString& udi) {
+                                      int sigval1 = static_cast<int>(error);
+                                      QVariant* sigval2 = new QVariant(errorData);
+                                      const auto udi_ret = udi;
+                                      // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                      QByteArray udi_b = udi_ret.toUtf8();
+                                      auto udi_str_len = udi_b.length();
+                                      char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+                                      memcpy(udi_str, udi_b.data(), udi_str_len);
+                                      udi_str[udi_str_len] = '\0';
+                                      const char* sigval3 = udi_str;
+                                      slotFunc(self, sigval1, sigval2, sigval3);
+                                      libqt_free(udi_str);
+                                  });
 }
 
 void Solid__StorageAccess_Delete(Solid__StorageAccess* self) {

@@ -220,19 +220,21 @@ void KPasswordDialog_GotPassword(KPasswordDialog* self, const libqt_string passw
 
 void KPasswordDialog_Connect_GotPassword(KPasswordDialog* self, intptr_t slot) {
     void (*slotFunc)(KPasswordDialog*, const char*, bool) = reinterpret_cast<void (*)(KPasswordDialog*, const char*, bool)>(slot);
-    KPasswordDialog::connect(self, &KPasswordDialog::gotPassword, [self, slotFunc](const QString& password, bool keep) {
-        const auto password_ret = password;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray password_b = password_ret.toUtf8();
-        auto password_str_len = password_b.length();
-        char* password_str = static_cast<char*>(malloc(password_str_len + 1));
-        memcpy(password_str, password_b.data(), password_str_len);
-        password_str[password_str_len] = '\0';
-        const char* sigval1 = password_str;
-        bool sigval2 = keep;
-        slotFunc(self, sigval1, sigval2);
-        libqt_free(password_str);
-    });
+    KPasswordDialog::connect(self,
+                             static_cast<void (KPasswordDialog::*)(const QString&, bool)>(&KPasswordDialog::gotPassword),
+                             [self, slotFunc](const QString& password, bool keep) {
+                                 const auto password_ret = password;
+                                 // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                 QByteArray password_b = password_ret.toUtf8();
+                                 auto password_str_len = password_b.length();
+                                 char* password_str = static_cast<char*>(malloc(password_str_len + 1));
+                                 memcpy(password_str, password_b.data(), password_str_len);
+                                 password_str[password_str_len] = '\0';
+                                 const char* sigval1 = password_str;
+                                 bool sigval2 = keep;
+                                 slotFunc(self, sigval1, sigval2);
+                                 libqt_free(password_str);
+                             });
 }
 
 void KPasswordDialog_GotUsernameAndPassword(KPasswordDialog* self, const libqt_string username, const libqt_string password, bool keep) {
@@ -243,28 +245,30 @@ void KPasswordDialog_GotUsernameAndPassword(KPasswordDialog* self, const libqt_s
 
 void KPasswordDialog_Connect_GotUsernameAndPassword(KPasswordDialog* self, intptr_t slot) {
     void (*slotFunc)(KPasswordDialog*, const char*, const char*, bool) = reinterpret_cast<void (*)(KPasswordDialog*, const char*, const char*, bool)>(slot);
-    KPasswordDialog::connect(self, &KPasswordDialog::gotUsernameAndPassword, [self, slotFunc](const QString& username, const QString& password, bool keep) {
-        const auto username_ret = username;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray username_b = username_ret.toUtf8();
-        auto username_str_len = username_b.length();
-        char* username_str = static_cast<char*>(malloc(username_str_len + 1));
-        memcpy(username_str, username_b.data(), username_str_len);
-        username_str[username_str_len] = '\0';
-        const char* sigval1 = username_str;
-        const auto password_ret = password;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray password_b = password_ret.toUtf8();
-        auto password_str_len = password_b.length();
-        char* password_str = static_cast<char*>(malloc(password_str_len + 1));
-        memcpy(password_str, password_b.data(), password_str_len);
-        password_str[password_str_len] = '\0';
-        const char* sigval2 = password_str;
-        bool sigval3 = keep;
-        slotFunc(self, sigval1, sigval2, sigval3);
-        libqt_free(username_str);
-        libqt_free(password_str);
-    });
+    KPasswordDialog::connect(self,
+                             static_cast<void (KPasswordDialog::*)(const QString&, const QString&, bool)>(&KPasswordDialog::gotUsernameAndPassword),
+                             [self, slotFunc](const QString& username, const QString& password, bool keep) {
+                                 const auto username_ret = username;
+                                 // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                 QByteArray username_b = username_ret.toUtf8();
+                                 auto username_str_len = username_b.length();
+                                 char* username_str = static_cast<char*>(malloc(username_str_len + 1));
+                                 memcpy(username_str, username_b.data(), username_str_len);
+                                 username_str[username_str_len] = '\0';
+                                 const char* sigval1 = username_str;
+                                 const auto password_ret = password;
+                                 // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                 QByteArray password_b = password_ret.toUtf8();
+                                 auto password_str_len = password_b.length();
+                                 char* password_str = static_cast<char*>(malloc(password_str_len + 1));
+                                 memcpy(password_str, password_b.data(), password_str_len);
+                                 password_str[password_str_len] = '\0';
+                                 const char* sigval2 = password_str;
+                                 bool sigval3 = keep;
+                                 slotFunc(self, sigval1, sigval2, sigval3);
+                                 libqt_free(username_str);
+                                 libqt_free(password_str);
+                             });
 }
 
 bool KPasswordDialog_CheckPassword(KPasswordDialog* self) {

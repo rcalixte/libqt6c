@@ -131,18 +131,20 @@ void KLanguageButton_Activated(KLanguageButton* self, const libqt_string languag
 
 void KLanguageButton_Connect_Activated(KLanguageButton* self, intptr_t slot) {
     void (*slotFunc)(KLanguageButton*, const char*) = reinterpret_cast<void (*)(KLanguageButton*, const char*)>(slot);
-    KLanguageButton::connect(self, &KLanguageButton::activated, [self, slotFunc](const QString& languageCode) {
-        const auto languageCode_ret = languageCode;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray languageCode_b = languageCode_ret.toUtf8();
-        auto languageCode_str_len = languageCode_b.length();
-        char* languageCode_str = static_cast<char*>(malloc(languageCode_str_len + 1));
-        memcpy(languageCode_str, languageCode_b.data(), languageCode_str_len);
-        languageCode_str[languageCode_str_len] = '\0';
-        const char* sigval1 = languageCode_str;
-        slotFunc(self, sigval1);
-        libqt_free(languageCode_str);
-    });
+    KLanguageButton::connect(self,
+                             static_cast<void (KLanguageButton::*)(const QString&)>(&KLanguageButton::activated),
+                             [self, slotFunc](const QString& languageCode) {
+                                 const auto languageCode_ret = languageCode;
+                                 // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                 QByteArray languageCode_b = languageCode_ret.toUtf8();
+                                 auto languageCode_str_len = languageCode_b.length();
+                                 char* languageCode_str = static_cast<char*>(malloc(languageCode_str_len + 1));
+                                 memcpy(languageCode_str, languageCode_b.data(), languageCode_str_len);
+                                 languageCode_str[languageCode_str_len] = '\0';
+                                 const char* sigval1 = languageCode_str;
+                                 slotFunc(self, sigval1);
+                                 libqt_free(languageCode_str);
+                             });
 }
 
 void KLanguageButton_Highlighted(KLanguageButton* self, const libqt_string languageCode) {
@@ -152,18 +154,20 @@ void KLanguageButton_Highlighted(KLanguageButton* self, const libqt_string langu
 
 void KLanguageButton_Connect_Highlighted(KLanguageButton* self, intptr_t slot) {
     void (*slotFunc)(KLanguageButton*, const char*) = reinterpret_cast<void (*)(KLanguageButton*, const char*)>(slot);
-    KLanguageButton::connect(self, &KLanguageButton::highlighted, [self, slotFunc](const QString& languageCode) {
-        const auto languageCode_ret = languageCode;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray languageCode_b = languageCode_ret.toUtf8();
-        auto languageCode_str_len = languageCode_b.length();
-        char* languageCode_str = static_cast<char*>(malloc(languageCode_str_len + 1));
-        memcpy(languageCode_str, languageCode_b.data(), languageCode_str_len);
-        languageCode_str[languageCode_str_len] = '\0';
-        const char* sigval1 = languageCode_str;
-        slotFunc(self, sigval1);
-        libqt_free(languageCode_str);
-    });
+    KLanguageButton::connect(self,
+                             static_cast<void (KLanguageButton::*)(const QString&)>(&KLanguageButton::highlighted),
+                             [self, slotFunc](const QString& languageCode) {
+                                 const auto languageCode_ret = languageCode;
+                                 // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                 QByteArray languageCode_b = languageCode_ret.toUtf8();
+                                 auto languageCode_str_len = languageCode_b.length();
+                                 char* languageCode_str = static_cast<char*>(malloc(languageCode_str_len + 1));
+                                 memcpy(languageCode_str, languageCode_b.data(), languageCode_str_len);
+                                 languageCode_str[languageCode_str_len] = '\0';
+                                 const char* sigval1 = languageCode_str;
+                                 slotFunc(self, sigval1);
+                                 libqt_free(languageCode_str);
+                             });
 }
 
 void KLanguageButton_InsertLanguage2(KLanguageButton* self, const libqt_string languageCode, const libqt_string name) {

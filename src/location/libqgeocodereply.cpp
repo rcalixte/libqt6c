@@ -90,9 +90,11 @@ void QGeoCodeReply_Finished(QGeoCodeReply* self) {
 
 void QGeoCodeReply_Connect_Finished(QGeoCodeReply* self, intptr_t slot) {
     void (*slotFunc)(QGeoCodeReply*) = reinterpret_cast<void (*)(QGeoCodeReply*)>(slot);
-    QGeoCodeReply::connect(self, &QGeoCodeReply::finished, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QGeoCodeReply::connect(self,
+                           static_cast<void (QGeoCodeReply::*)()>(&QGeoCodeReply::finished),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QGeoCodeReply_Aborted(QGeoCodeReply* self) {
@@ -101,9 +103,11 @@ void QGeoCodeReply_Aborted(QGeoCodeReply* self) {
 
 void QGeoCodeReply_Connect_Aborted(QGeoCodeReply* self, intptr_t slot) {
     void (*slotFunc)(QGeoCodeReply*) = reinterpret_cast<void (*)(QGeoCodeReply*)>(slot);
-    QGeoCodeReply::connect(self, &QGeoCodeReply::aborted, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QGeoCodeReply::connect(self,
+                           static_cast<void (QGeoCodeReply::*)()>(&QGeoCodeReply::aborted),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QGeoCodeReply_ErrorOccurred(QGeoCodeReply* self, int error) {
@@ -112,10 +116,12 @@ void QGeoCodeReply_ErrorOccurred(QGeoCodeReply* self, int error) {
 
 void QGeoCodeReply_Connect_ErrorOccurred(QGeoCodeReply* self, intptr_t slot) {
     void (*slotFunc)(QGeoCodeReply*, int) = reinterpret_cast<void (*)(QGeoCodeReply*, int)>(slot);
-    QGeoCodeReply::connect(self, &QGeoCodeReply::errorOccurred, [self, slotFunc](QGeoCodeReply::Error error) {
-        int sigval1 = static_cast<int>(error);
-        slotFunc(self, sigval1);
-    });
+    QGeoCodeReply::connect(self,
+                           static_cast<void (QGeoCodeReply::*)(QGeoCodeReply::Error, const QString&)>(&QGeoCodeReply::errorOccurred),
+                           [self, slotFunc](QGeoCodeReply::Error error) {
+                               int sigval1 = static_cast<int>(error);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void QGeoCodeReply_ErrorOccurred2(QGeoCodeReply* self, int error, const libqt_string errorString) {
@@ -125,19 +131,21 @@ void QGeoCodeReply_ErrorOccurred2(QGeoCodeReply* self, int error, const libqt_st
 
 void QGeoCodeReply_Connect_ErrorOccurred2(QGeoCodeReply* self, intptr_t slot) {
     void (*slotFunc)(QGeoCodeReply*, int, const char*) = reinterpret_cast<void (*)(QGeoCodeReply*, int, const char*)>(slot);
-    QGeoCodeReply::connect(self, &QGeoCodeReply::errorOccurred, [self, slotFunc](QGeoCodeReply::Error error, const QString& errorString) {
-        int sigval1 = static_cast<int>(error);
-        const auto errorString_ret = errorString;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray errorString_b = errorString_ret.toUtf8();
-        auto errorString_str_len = errorString_b.length();
-        char* errorString_str = static_cast<char*>(malloc(errorString_str_len + 1));
-        memcpy(errorString_str, errorString_b.data(), errorString_str_len);
-        errorString_str[errorString_str_len] = '\0';
-        const char* sigval2 = errorString_str;
-        slotFunc(self, sigval1, sigval2);
-        libqt_free(errorString_str);
-    });
+    QGeoCodeReply::connect(self,
+                           static_cast<void (QGeoCodeReply::*)(QGeoCodeReply::Error, const QString&)>(&QGeoCodeReply::errorOccurred),
+                           [self, slotFunc](QGeoCodeReply::Error error, const QString& errorString) {
+                               int sigval1 = static_cast<int>(error);
+                               const auto errorString_ret = errorString;
+                               // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                               QByteArray errorString_b = errorString_ret.toUtf8();
+                               auto errorString_str_len = errorString_b.length();
+                               char* errorString_str = static_cast<char*>(malloc(errorString_str_len + 1));
+                               memcpy(errorString_str, errorString_b.data(), errorString_str_len);
+                               errorString_str[errorString_str_len] = '\0';
+                               const char* sigval2 = errorString_str;
+                               slotFunc(self, sigval1, sigval2);
+                               libqt_free(errorString_str);
+                           });
 }
 
 // Base class handler implementation

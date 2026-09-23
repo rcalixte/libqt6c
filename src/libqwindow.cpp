@@ -528,10 +528,12 @@ void QWindow_ScreenChanged(QWindow* self, QScreen* screen) {
 
 void QWindow_Connect_ScreenChanged(QWindow* self, intptr_t slot) {
     void (*slotFunc)(QWindow*, QScreen*) = reinterpret_cast<void (*)(QWindow*, QScreen*)>(slot);
-    QWindow::connect(self, &QWindow::screenChanged, [self, slotFunc](QScreen* screen) {
-        QScreen* sigval1 = screen;
-        slotFunc(self, sigval1);
-    });
+    QWindow::connect(self,
+                     static_cast<void (QWindow::*)(QScreen*)>(&QWindow::screenChanged),
+                     [self, slotFunc](QScreen* screen) {
+                         QScreen* sigval1 = screen;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QWindow_ModalityChanged(QWindow* self, int modality) {
@@ -540,10 +542,12 @@ void QWindow_ModalityChanged(QWindow* self, int modality) {
 
 void QWindow_Connect_ModalityChanged(QWindow* self, intptr_t slot) {
     void (*slotFunc)(QWindow*, int) = reinterpret_cast<void (*)(QWindow*, int)>(slot);
-    QWindow::connect(self, &QWindow::modalityChanged, [self, slotFunc](Qt::WindowModality modality) {
-        int sigval1 = static_cast<int>(modality);
-        slotFunc(self, sigval1);
-    });
+    QWindow::connect(self,
+                     static_cast<void (QWindow::*)(Qt::WindowModality)>(&QWindow::modalityChanged),
+                     [self, slotFunc](Qt::WindowModality modality) {
+                         int sigval1 = static_cast<int>(modality);
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QWindow_WindowStateChanged(QWindow* self, int windowState) {
@@ -552,10 +556,12 @@ void QWindow_WindowStateChanged(QWindow* self, int windowState) {
 
 void QWindow_Connect_WindowStateChanged(QWindow* self, intptr_t slot) {
     void (*slotFunc)(QWindow*, int) = reinterpret_cast<void (*)(QWindow*, int)>(slot);
-    QWindow::connect(self, &QWindow::windowStateChanged, [self, slotFunc](Qt::WindowState windowState) {
-        int sigval1 = static_cast<int>(windowState);
-        slotFunc(self, sigval1);
-    });
+    QWindow::connect(self,
+                     static_cast<void (QWindow::*)(Qt::WindowState)>(&QWindow::windowStateChanged),
+                     [self, slotFunc](Qt::WindowState windowState) {
+                         int sigval1 = static_cast<int>(windowState);
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QWindow_WindowTitleChanged(QWindow* self, const libqt_string title) {
@@ -565,18 +571,20 @@ void QWindow_WindowTitleChanged(QWindow* self, const libqt_string title) {
 
 void QWindow_Connect_WindowTitleChanged(QWindow* self, intptr_t slot) {
     void (*slotFunc)(QWindow*, const char*) = reinterpret_cast<void (*)(QWindow*, const char*)>(slot);
-    QWindow::connect(self, &QWindow::windowTitleChanged, [self, slotFunc](const QString& title) {
-        const auto title_ret = title;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray title_b = title_ret.toUtf8();
-        auto title_str_len = title_b.length();
-        char* title_str = static_cast<char*>(malloc(title_str_len + 1));
-        memcpy(title_str, title_b.data(), title_str_len);
-        title_str[title_str_len] = '\0';
-        const char* sigval1 = title_str;
-        slotFunc(self, sigval1);
-        libqt_free(title_str);
-    });
+    QWindow::connect(self,
+                     static_cast<void (QWindow::*)(const QString&)>(&QWindow::windowTitleChanged),
+                     [self, slotFunc](const QString& title) {
+                         const auto title_ret = title;
+                         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                         QByteArray title_b = title_ret.toUtf8();
+                         auto title_str_len = title_b.length();
+                         char* title_str = static_cast<char*>(malloc(title_str_len + 1));
+                         memcpy(title_str, title_b.data(), title_str_len);
+                         title_str[title_str_len] = '\0';
+                         const char* sigval1 = title_str;
+                         slotFunc(self, sigval1);
+                         libqt_free(title_str);
+                     });
 }
 
 void QWindow_XChanged(QWindow* self, int arg) {
@@ -585,10 +593,12 @@ void QWindow_XChanged(QWindow* self, int arg) {
 
 void QWindow_Connect_XChanged(QWindow* self, intptr_t slot) {
     void (*slotFunc)(QWindow*, int) = reinterpret_cast<void (*)(QWindow*, int)>(slot);
-    QWindow::connect(self, &QWindow::xChanged, [self, slotFunc](int arg) {
-        int sigval1 = arg;
-        slotFunc(self, sigval1);
-    });
+    QWindow::connect(self,
+                     static_cast<void (QWindow::*)(int)>(&QWindow::xChanged),
+                     [self, slotFunc](int arg) {
+                         int sigval1 = arg;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QWindow_YChanged(QWindow* self, int arg) {
@@ -597,10 +607,12 @@ void QWindow_YChanged(QWindow* self, int arg) {
 
 void QWindow_Connect_YChanged(QWindow* self, intptr_t slot) {
     void (*slotFunc)(QWindow*, int) = reinterpret_cast<void (*)(QWindow*, int)>(slot);
-    QWindow::connect(self, &QWindow::yChanged, [self, slotFunc](int arg) {
-        int sigval1 = arg;
-        slotFunc(self, sigval1);
-    });
+    QWindow::connect(self,
+                     static_cast<void (QWindow::*)(int)>(&QWindow::yChanged),
+                     [self, slotFunc](int arg) {
+                         int sigval1 = arg;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QWindow_WidthChanged(QWindow* self, int arg) {
@@ -609,10 +621,12 @@ void QWindow_WidthChanged(QWindow* self, int arg) {
 
 void QWindow_Connect_WidthChanged(QWindow* self, intptr_t slot) {
     void (*slotFunc)(QWindow*, int) = reinterpret_cast<void (*)(QWindow*, int)>(slot);
-    QWindow::connect(self, &QWindow::widthChanged, [self, slotFunc](int arg) {
-        int sigval1 = arg;
-        slotFunc(self, sigval1);
-    });
+    QWindow::connect(self,
+                     static_cast<void (QWindow::*)(int)>(&QWindow::widthChanged),
+                     [self, slotFunc](int arg) {
+                         int sigval1 = arg;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QWindow_HeightChanged(QWindow* self, int arg) {
@@ -621,10 +635,12 @@ void QWindow_HeightChanged(QWindow* self, int arg) {
 
 void QWindow_Connect_HeightChanged(QWindow* self, intptr_t slot) {
     void (*slotFunc)(QWindow*, int) = reinterpret_cast<void (*)(QWindow*, int)>(slot);
-    QWindow::connect(self, &QWindow::heightChanged, [self, slotFunc](int arg) {
-        int sigval1 = arg;
-        slotFunc(self, sigval1);
-    });
+    QWindow::connect(self,
+                     static_cast<void (QWindow::*)(int)>(&QWindow::heightChanged),
+                     [self, slotFunc](int arg) {
+                         int sigval1 = arg;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QWindow_MinimumWidthChanged(QWindow* self, int arg) {
@@ -633,10 +649,12 @@ void QWindow_MinimumWidthChanged(QWindow* self, int arg) {
 
 void QWindow_Connect_MinimumWidthChanged(QWindow* self, intptr_t slot) {
     void (*slotFunc)(QWindow*, int) = reinterpret_cast<void (*)(QWindow*, int)>(slot);
-    QWindow::connect(self, &QWindow::minimumWidthChanged, [self, slotFunc](int arg) {
-        int sigval1 = arg;
-        slotFunc(self, sigval1);
-    });
+    QWindow::connect(self,
+                     static_cast<void (QWindow::*)(int)>(&QWindow::minimumWidthChanged),
+                     [self, slotFunc](int arg) {
+                         int sigval1 = arg;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QWindow_MinimumHeightChanged(QWindow* self, int arg) {
@@ -645,10 +663,12 @@ void QWindow_MinimumHeightChanged(QWindow* self, int arg) {
 
 void QWindow_Connect_MinimumHeightChanged(QWindow* self, intptr_t slot) {
     void (*slotFunc)(QWindow*, int) = reinterpret_cast<void (*)(QWindow*, int)>(slot);
-    QWindow::connect(self, &QWindow::minimumHeightChanged, [self, slotFunc](int arg) {
-        int sigval1 = arg;
-        slotFunc(self, sigval1);
-    });
+    QWindow::connect(self,
+                     static_cast<void (QWindow::*)(int)>(&QWindow::minimumHeightChanged),
+                     [self, slotFunc](int arg) {
+                         int sigval1 = arg;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QWindow_MaximumWidthChanged(QWindow* self, int arg) {
@@ -657,10 +677,12 @@ void QWindow_MaximumWidthChanged(QWindow* self, int arg) {
 
 void QWindow_Connect_MaximumWidthChanged(QWindow* self, intptr_t slot) {
     void (*slotFunc)(QWindow*, int) = reinterpret_cast<void (*)(QWindow*, int)>(slot);
-    QWindow::connect(self, &QWindow::maximumWidthChanged, [self, slotFunc](int arg) {
-        int sigval1 = arg;
-        slotFunc(self, sigval1);
-    });
+    QWindow::connect(self,
+                     static_cast<void (QWindow::*)(int)>(&QWindow::maximumWidthChanged),
+                     [self, slotFunc](int arg) {
+                         int sigval1 = arg;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QWindow_MaximumHeightChanged(QWindow* self, int arg) {
@@ -669,10 +691,12 @@ void QWindow_MaximumHeightChanged(QWindow* self, int arg) {
 
 void QWindow_Connect_MaximumHeightChanged(QWindow* self, intptr_t slot) {
     void (*slotFunc)(QWindow*, int) = reinterpret_cast<void (*)(QWindow*, int)>(slot);
-    QWindow::connect(self, &QWindow::maximumHeightChanged, [self, slotFunc](int arg) {
-        int sigval1 = arg;
-        slotFunc(self, sigval1);
-    });
+    QWindow::connect(self,
+                     static_cast<void (QWindow::*)(int)>(&QWindow::maximumHeightChanged),
+                     [self, slotFunc](int arg) {
+                         int sigval1 = arg;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QWindow_VisibleChanged(QWindow* self, bool arg) {
@@ -681,10 +705,12 @@ void QWindow_VisibleChanged(QWindow* self, bool arg) {
 
 void QWindow_Connect_VisibleChanged(QWindow* self, intptr_t slot) {
     void (*slotFunc)(QWindow*, bool) = reinterpret_cast<void (*)(QWindow*, bool)>(slot);
-    QWindow::connect(self, &QWindow::visibleChanged, [self, slotFunc](bool arg) {
-        bool sigval1 = arg;
-        slotFunc(self, sigval1);
-    });
+    QWindow::connect(self,
+                     static_cast<void (QWindow::*)(bool)>(&QWindow::visibleChanged),
+                     [self, slotFunc](bool arg) {
+                         bool sigval1 = arg;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QWindow_VisibilityChanged(QWindow* self, int visibility) {
@@ -693,10 +719,12 @@ void QWindow_VisibilityChanged(QWindow* self, int visibility) {
 
 void QWindow_Connect_VisibilityChanged(QWindow* self, intptr_t slot) {
     void (*slotFunc)(QWindow*, int) = reinterpret_cast<void (*)(QWindow*, int)>(slot);
-    QWindow::connect(self, &QWindow::visibilityChanged, [self, slotFunc](QWindow::Visibility visibility) {
-        int sigval1 = static_cast<int>(visibility);
-        slotFunc(self, sigval1);
-    });
+    QWindow::connect(self,
+                     static_cast<void (QWindow::*)(QWindow::Visibility)>(&QWindow::visibilityChanged),
+                     [self, slotFunc](QWindow::Visibility visibility) {
+                         int sigval1 = static_cast<int>(visibility);
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QWindow_ActiveChanged(QWindow* self) {
@@ -705,9 +733,11 @@ void QWindow_ActiveChanged(QWindow* self) {
 
 void QWindow_Connect_ActiveChanged(QWindow* self, intptr_t slot) {
     void (*slotFunc)(QWindow*) = reinterpret_cast<void (*)(QWindow*)>(slot);
-    QWindow::connect(self, &QWindow::activeChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QWindow::connect(self,
+                     static_cast<void (QWindow::*)()>(&QWindow::activeChanged),
+                     [self, slotFunc]() {
+                         slotFunc(self);
+                     });
 }
 
 void QWindow_ContentOrientationChanged(QWindow* self, int orientation) {
@@ -716,10 +746,12 @@ void QWindow_ContentOrientationChanged(QWindow* self, int orientation) {
 
 void QWindow_Connect_ContentOrientationChanged(QWindow* self, intptr_t slot) {
     void (*slotFunc)(QWindow*, int) = reinterpret_cast<void (*)(QWindow*, int)>(slot);
-    QWindow::connect(self, &QWindow::contentOrientationChanged, [self, slotFunc](Qt::ScreenOrientation orientation) {
-        int sigval1 = static_cast<int>(orientation);
-        slotFunc(self, sigval1);
-    });
+    QWindow::connect(self,
+                     static_cast<void (QWindow::*)(Qt::ScreenOrientation)>(&QWindow::contentOrientationChanged),
+                     [self, slotFunc](Qt::ScreenOrientation orientation) {
+                         int sigval1 = static_cast<int>(orientation);
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QWindow_FocusObjectChanged(QWindow* self, QObject* object) {
@@ -728,10 +760,12 @@ void QWindow_FocusObjectChanged(QWindow* self, QObject* object) {
 
 void QWindow_Connect_FocusObjectChanged(QWindow* self, intptr_t slot) {
     void (*slotFunc)(QWindow*, QObject*) = reinterpret_cast<void (*)(QWindow*, QObject*)>(slot);
-    QWindow::connect(self, &QWindow::focusObjectChanged, [self, slotFunc](QObject* object) {
-        QObject* sigval1 = object;
-        slotFunc(self, sigval1);
-    });
+    QWindow::connect(self,
+                     static_cast<void (QWindow::*)(QObject*)>(&QWindow::focusObjectChanged),
+                     [self, slotFunc](QObject* object) {
+                         QObject* sigval1 = object;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QWindow_OpacityChanged(QWindow* self, double opacity) {
@@ -740,10 +774,12 @@ void QWindow_OpacityChanged(QWindow* self, double opacity) {
 
 void QWindow_Connect_OpacityChanged(QWindow* self, intptr_t slot) {
     void (*slotFunc)(QWindow*, double) = reinterpret_cast<void (*)(QWindow*, double)>(slot);
-    QWindow::connect(self, &QWindow::opacityChanged, [self, slotFunc](qreal opacity) {
-        double sigval1 = static_cast<double>(opacity);
-        slotFunc(self, sigval1);
-    });
+    QWindow::connect(self,
+                     static_cast<void (QWindow::*)(qreal)>(&QWindow::opacityChanged),
+                     [self, slotFunc](qreal opacity) {
+                         double sigval1 = static_cast<double>(opacity);
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QWindow_TransientParentChanged(QWindow* self, QWindow* transientParent) {
@@ -752,10 +788,12 @@ void QWindow_TransientParentChanged(QWindow* self, QWindow* transientParent) {
 
 void QWindow_Connect_TransientParentChanged(QWindow* self, intptr_t slot) {
     void (*slotFunc)(QWindow*, QWindow*) = reinterpret_cast<void (*)(QWindow*, QWindow*)>(slot);
-    QWindow::connect(self, &QWindow::transientParentChanged, [self, slotFunc](QWindow* transientParent) {
-        QWindow* sigval1 = transientParent;
-        slotFunc(self, sigval1);
-    });
+    QWindow::connect(self,
+                     static_cast<void (QWindow::*)(QWindow*)>(&QWindow::transientParentChanged),
+                     [self, slotFunc](QWindow* transientParent) {
+                         QWindow* sigval1 = transientParent;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QWindow_ExposeEvent(QWindow* self, QExposeEvent* param1) {

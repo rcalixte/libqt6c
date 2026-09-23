@@ -103,9 +103,11 @@ void KColumnHeadersModel_SourceModelChanged(KColumnHeadersModel* self) {
 
 void KColumnHeadersModel_Connect_SourceModelChanged(KColumnHeadersModel* self, intptr_t slot) {
     void (*slotFunc)(KColumnHeadersModel*) = reinterpret_cast<void (*)(KColumnHeadersModel*)>(slot);
-    KColumnHeadersModel::connect(self, &KColumnHeadersModel::sourceModelChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KColumnHeadersModel::connect(self,
+                                 static_cast<void (KColumnHeadersModel::*)()>(&KColumnHeadersModel::sourceModelChanged),
+                                 [self, slotFunc]() {
+                                     slotFunc(self);
+                                 });
 }
 
 void KColumnHeadersModel_SortColumnChanged(KColumnHeadersModel* self) {
@@ -114,9 +116,11 @@ void KColumnHeadersModel_SortColumnChanged(KColumnHeadersModel* self) {
 
 void KColumnHeadersModel_Connect_SortColumnChanged(KColumnHeadersModel* self, intptr_t slot) {
     void (*slotFunc)(KColumnHeadersModel*) = reinterpret_cast<void (*)(KColumnHeadersModel*)>(slot);
-    KColumnHeadersModel::connect(self, &KColumnHeadersModel::sortColumnChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KColumnHeadersModel::connect(self,
+                                 static_cast<void (KColumnHeadersModel::*)()>(&KColumnHeadersModel::sortColumnChanged),
+                                 [self, slotFunc]() {
+                                     slotFunc(self);
+                                 });
 }
 
 void KColumnHeadersModel_SortOrderChanged(KColumnHeadersModel* self) {
@@ -125,9 +129,11 @@ void KColumnHeadersModel_SortOrderChanged(KColumnHeadersModel* self) {
 
 void KColumnHeadersModel_Connect_SortOrderChanged(KColumnHeadersModel* self, intptr_t slot) {
     void (*slotFunc)(KColumnHeadersModel*) = reinterpret_cast<void (*)(KColumnHeadersModel*)>(slot);
-    KColumnHeadersModel::connect(self, &KColumnHeadersModel::sortOrderChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KColumnHeadersModel::connect(self,
+                                 static_cast<void (KColumnHeadersModel::*)()>(&KColumnHeadersModel::sortOrderChanged),
+                                 [self, slotFunc]() {
+                                     slotFunc(self);
+                                 });
 }
 
 // Base class handler implementation

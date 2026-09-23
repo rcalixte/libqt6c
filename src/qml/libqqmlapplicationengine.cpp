@@ -122,13 +122,15 @@ void QQmlApplicationEngine_ObjectCreated(QQmlApplicationEngine* self, QObject* o
 
 void QQmlApplicationEngine_Connect_ObjectCreated(QQmlApplicationEngine* self, intptr_t slot) {
     void (*slotFunc)(QQmlApplicationEngine*, QObject*, QUrl*) = reinterpret_cast<void (*)(QQmlApplicationEngine*, QObject*, QUrl*)>(slot);
-    QQmlApplicationEngine::connect(self, &QQmlApplicationEngine::objectCreated, [self, slotFunc](QObject* object, const QUrl& url) {
-        QObject* sigval1 = object;
-        const QUrl& url_ret = url;
-        // Cast returned reference into pointer
-        QUrl* sigval2 = const_cast<QUrl*>(&url_ret);
-        slotFunc(self, sigval1, sigval2);
-    });
+    QQmlApplicationEngine::connect(self,
+                                   static_cast<void (QQmlApplicationEngine::*)(QObject*, const QUrl&)>(&QQmlApplicationEngine::objectCreated),
+                                   [self, slotFunc](QObject* object, const QUrl& url) {
+                                       QObject* sigval1 = object;
+                                       const QUrl& url_ret = url;
+                                       // Cast returned reference into pointer
+                                       QUrl* sigval2 = const_cast<QUrl*>(&url_ret);
+                                       slotFunc(self, sigval1, sigval2);
+                                   });
 }
 
 void QQmlApplicationEngine_ObjectCreationFailed(QQmlApplicationEngine* self, const QUrl* url) {
@@ -137,12 +139,14 @@ void QQmlApplicationEngine_ObjectCreationFailed(QQmlApplicationEngine* self, con
 
 void QQmlApplicationEngine_Connect_ObjectCreationFailed(QQmlApplicationEngine* self, intptr_t slot) {
     void (*slotFunc)(QQmlApplicationEngine*, QUrl*) = reinterpret_cast<void (*)(QQmlApplicationEngine*, QUrl*)>(slot);
-    QQmlApplicationEngine::connect(self, &QQmlApplicationEngine::objectCreationFailed, [self, slotFunc](const QUrl& url) {
-        const QUrl& url_ret = url;
-        // Cast returned reference into pointer
-        QUrl* sigval1 = const_cast<QUrl*>(&url_ret);
-        slotFunc(self, sigval1);
-    });
+    QQmlApplicationEngine::connect(self,
+                                   static_cast<void (QQmlApplicationEngine::*)(const QUrl&)>(&QQmlApplicationEngine::objectCreationFailed),
+                                   [self, slotFunc](const QUrl& url) {
+                                       const QUrl& url_ret = url;
+                                       // Cast returned reference into pointer
+                                       QUrl* sigval1 = const_cast<QUrl*>(&url_ret);
+                                       slotFunc(self, sigval1);
+                                   });
 }
 
 void QQmlApplicationEngine_LoadData2(QQmlApplicationEngine* self, const libqt_string data, const QUrl* url) {

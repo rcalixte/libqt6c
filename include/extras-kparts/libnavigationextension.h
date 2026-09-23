@@ -253,6 +253,13 @@ void k_parts__navigationextension_paste_request(void* self);
 ///
 void k_parts__navigationextension_enable_action(void* self, const char* name, bool enabled);
 
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#enableAction)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, const char* name, bool enabled)
+///
+void k_parts__navigationextension_on_enable_action(void* self, void (*callback)(void*, const char*, bool));
+
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#setActionText)
 ///
 /// @param self KParts__NavigationExtension*
@@ -261,12 +268,26 @@ void k_parts__navigationextension_enable_action(void* self, const char* name, bo
 ///
 void k_parts__navigationextension_set_action_text(void* self, const char* name, const char* text);
 
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#setActionText)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, const char* name, const char* text)
+///
+void k_parts__navigationextension_on_set_action_text(void* self, void (*callback)(void*, const char*, const char*));
+
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#openUrlRequest)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param url QUrl*
 ///
 void k_parts__navigationextension_open_url_request(void* self, void* url);
+
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#openUrlRequest)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, QUrl* url)
+///
+void k_parts__navigationextension_on_open_url_request(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#openUrlRequestDelayed)
 ///
@@ -276,11 +297,25 @@ void k_parts__navigationextension_open_url_request(void* self, void* url);
 ///
 void k_parts__navigationextension_open_url_request_delayed(void* self, void* url, void* arguments);
 
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#openUrlRequestDelayed)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, QUrl* url, KParts__OpenUrlArguments* arguments)
+///
+void k_parts__navigationextension_on_open_url_request_delayed(void* self, void (*callback)(void*, void*, void*));
+
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#openUrlNotify)
 ///
 /// @param self KParts__NavigationExtension*
 ///
 void k_parts__navigationextension_open_url_notify(void* self);
+
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#openUrlNotify)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self)
+///
+void k_parts__navigationextension_on_open_url_notify(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#setLocationBarUrl)
 ///
@@ -289,12 +324,26 @@ void k_parts__navigationextension_open_url_notify(void* self);
 ///
 void k_parts__navigationextension_set_location_bar_url(void* self, const char* url);
 
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#setLocationBarUrl)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, const char* url)
+///
+void k_parts__navigationextension_on_set_location_bar_url(void* self, void (*callback)(void*, const char*));
+
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#setIconUrl)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param url QUrl*
 ///
 void k_parts__navigationextension_set_icon_url(void* self, void* url);
+
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#setIconUrl)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, QUrl* url)
+///
+void k_parts__navigationextension_on_set_icon_url(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#createNewWindow)
 ///
@@ -303,12 +352,26 @@ void k_parts__navigationextension_set_icon_url(void* self, void* url);
 ///
 void k_parts__navigationextension_create_new_window(void* self, void* url);
 
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#createNewWindow)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, QUrl* url)
+///
+void k_parts__navigationextension_on_create_new_window(void* self, void (*callback)(void*, void*));
+
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#loadingProgress)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param percent int
 ///
 void k_parts__navigationextension_loading_progress(void* self, int percent);
+
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#loadingProgress)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, int percent)
+///
+void k_parts__navigationextension_on_loading_progress(void* self, void (*callback)(void*, int));
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#speedProgress)
 ///
@@ -317,12 +380,26 @@ void k_parts__navigationextension_loading_progress(void* self, int percent);
 ///
 void k_parts__navigationextension_speed_progress(void* self, int bytesPerSecond);
 
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#speedProgress)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, int bytesPerSecond)
+///
+void k_parts__navigationextension_on_speed_progress(void* self, void (*callback)(void*, int));
+
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#infoMessage)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param param1 const char*
 ///
 void k_parts__navigationextension_info_message(void* self, const char* param1);
+
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#infoMessage)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, const char* param1)
+///
+void k_parts__navigationextension_on_info_message(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
 ///
@@ -335,10 +412,24 @@ void k_parts__navigationextension_popup_menu(void* self, void* global, void* ite
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
 ///
 /// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, QPoint* global, KFileItemList* items)
+///
+void k_parts__navigationextension_on_popup_menu(void* self, void (*callback)(void*, void*, void*));
+
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
+///
+/// @param self KParts__NavigationExtension*
 /// @param global QPoint*
 /// @param url QUrl*
 ///
 void k_parts__navigationextension_popup_menu2(void* self, void* global, void* url);
+
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, QPoint* global, QUrl* url)
+///
+void k_parts__navigationextension_on_popup_menu2(void* self, void (*callback)(void*, void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#selectionInfo)
 ///
@@ -347,12 +438,26 @@ void k_parts__navigationextension_popup_menu2(void* self, void* global, void* ur
 ///
 void k_parts__navigationextension_selection_info(void* self, void* items);
 
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#selectionInfo)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, KFileItemList* items)
+///
+void k_parts__navigationextension_on_selection_info(void* self, void (*callback)(void*, void*));
+
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#mouseOverInfo)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param item KFileItem*
 ///
 void k_parts__navigationextension_mouse_over_info(void* self, void* item);
+
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#mouseOverInfo)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, KFileItem* item)
+///
+void k_parts__navigationextension_on_mouse_over_info(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#addWebSideBar)
 ///
@@ -362,6 +467,13 @@ void k_parts__navigationextension_mouse_over_info(void* self, void* item);
 ///
 void k_parts__navigationextension_add_web_side_bar(void* self, void* url, const char* name);
 
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#addWebSideBar)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, QUrl* url, const char* name)
+///
+void k_parts__navigationextension_on_add_web_side_bar(void* self, void (*callback)(void*, void*, const char*));
+
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#moveTopLevelWidget)
 ///
 /// @param self KParts__NavigationExtension*
@@ -369,6 +481,13 @@ void k_parts__navigationextension_add_web_side_bar(void* self, void* url, const 
 /// @param y int
 ///
 void k_parts__navigationextension_move_top_level_widget(void* self, int x, int y);
+
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#moveTopLevelWidget)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, int x, int y)
+///
+void k_parts__navigationextension_on_move_top_level_widget(void* self, void (*callback)(void*, int, int));
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#resizeTopLevelWidget)
 ///
@@ -378,12 +497,26 @@ void k_parts__navigationextension_move_top_level_widget(void* self, int x, int y
 ///
 void k_parts__navigationextension_resize_top_level_widget(void* self, int w, int h);
 
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#resizeTopLevelWidget)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, int w, int h)
+///
+void k_parts__navigationextension_on_resize_top_level_widget(void* self, void (*callback)(void*, int, int));
+
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#requestFocus)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param part KParts__ReadOnlyPart*
 ///
 void k_parts__navigationextension_request_focus(void* self, void* part);
+
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#requestFocus)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, KParts__ReadOnlyPart* part)
+///
+void k_parts__navigationextension_on_request_focus(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#setPageSecurity)
 ///
@@ -392,12 +525,26 @@ void k_parts__navigationextension_request_focus(void* self, void* part);
 ///
 void k_parts__navigationextension_set_page_security(void* self, int pageSecurity);
 
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#setPageSecurity)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, int pageSecurity)
+///
+void k_parts__navigationextension_on_set_page_security(void* self, void (*callback)(void*, int));
+
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#itemsRemoved)
 ///
 /// @param self KParts__NavigationExtension*
 /// @param items KFileItemList*
 ///
 void k_parts__navigationextension_items_removed(void* self, void* items);
+
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#itemsRemoved)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, KFileItemList* items)
+///
+void k_parts__navigationextension_on_items_removed(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -426,6 +573,13 @@ const char* k_parts__navigationextension_tr3(const char* s, const char* c, int n
 ///
 void k_parts__navigationextension_open_url_request2(void* self, void* url, void* arguments);
 
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#openUrlRequest)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, QUrl* url, KParts__OpenUrlArguments* arguments)
+///
+void k_parts__navigationextension_on_open_url_request2(void* self, void (*callback)(void*, void*, void*));
+
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
 ///
 /// @param self KParts__NavigationExtension*
@@ -438,12 +592,26 @@ void k_parts__navigationextension_popup_menu3(void* self, void* global, void* it
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
 ///
 /// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, QPoint* global, KFileItemList* items, KParts__OpenUrlArguments* arguments)
+///
+void k_parts__navigationextension_on_popup_menu3(void* self, void (*callback)(void*, void*, void*, void*));
+
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
+///
+/// @param self KParts__NavigationExtension*
 /// @param global QPoint*
 /// @param items KFileItemList*
 /// @param arguments KParts__OpenUrlArguments*
 /// @param flags flag of enum KParts__NavigationExtension__PopupFlag
 ///
 void k_parts__navigationextension_popup_menu4(void* self, void* global, void* items, void* arguments, int32_t flags);
+
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, QPoint* global, KFileItemList* items, KParts__OpenUrlArguments* arguments, flag of enum KParts__NavigationExtension__PopupFlag flags)
+///
+void k_parts__navigationextension_on_popup_menu4(void* self, void (*callback)(void*, void*, void*, void*, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
 ///
@@ -459,11 +627,25 @@ void k_parts__navigationextension_popup_menu5(void* self, void* global, void* it
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
 ///
 /// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, QPoint* global, KFileItemList* items, KParts__OpenUrlArguments* arguments, flag of enum KParts__NavigationExtension__PopupFlag flags, libqt_map of const char* to QAction** actionGroups)
+///
+void k_parts__navigationextension_on_popup_menu5(void* self, void (*callback)(void*, void*, void*, void*, int32_t, libqt_map));
+
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
+///
+/// @param self KParts__NavigationExtension*
 /// @param global QPoint*
 /// @param url QUrl*
 /// @param mode mode_t
 ///
 void k_parts__navigationextension_popup_menu32(void* self, void* global, void* url, mode_t mode);
+
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, QPoint* global, QUrl* url, mode_t mode)
+///
+void k_parts__navigationextension_on_popup_menu32(void* self, void (*callback)(void*, void*, void*, mode_t));
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
 ///
@@ -474,6 +656,13 @@ void k_parts__navigationextension_popup_menu32(void* self, void* global, void* u
 /// @param arguments KParts__OpenUrlArguments*
 ///
 void k_parts__navigationextension_popup_menu42(void* self, void* global, void* url, mode_t mode, void* arguments);
+
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, QPoint* global, QUrl* url, mode_t mode, KParts__OpenUrlArguments* arguments)
+///
+void k_parts__navigationextension_on_popup_menu42(void* self, void (*callback)(void*, void*, void*, mode_t, void*));
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
 ///
@@ -489,6 +678,13 @@ void k_parts__navigationextension_popup_menu52(void* self, void* global, void* u
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
 ///
 /// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, QPoint* global, QUrl* url, mode_t mode, KParts__OpenUrlArguments* arguments, flag of enum KParts__NavigationExtension__PopupFlag flags)
+///
+void k_parts__navigationextension_on_popup_menu52(void* self, void (*callback)(void*, void*, void*, mode_t, void*, int32_t));
+
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
+///
+/// @param self KParts__NavigationExtension*
 /// @param global QPoint*
 /// @param url QUrl*
 /// @param mode mode_t
@@ -497,6 +693,13 @@ void k_parts__navigationextension_popup_menu52(void* self, void* global, void* u
 /// @param actionGroups libqt_map of const char* to QAction**
 ///
 void k_parts__navigationextension_popup_menu6(void* self, void* global, void* url, mode_t mode, void* arguments, int32_t flags, libqt_map actionGroups);
+
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
+///
+/// @param self KParts__NavigationExtension*
+/// @param callback void func(KParts__NavigationExtension* self, QPoint* global, QUrl* url, mode_t mode, KParts__OpenUrlArguments* arguments, flag of enum KParts__NavigationExtension__PopupFlag flags, libqt_map of const char* to QAction** actionGroups)
+///
+void k_parts__navigationextension_on_popup_menu6(void* self, void (*callback)(void*, void*, void*, mode_t, void*, int32_t, libqt_map));
 
 /// Inherited from QObject
 ///

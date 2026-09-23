@@ -92,10 +92,12 @@ void QOffscreenSurface_ScreenChanged(QOffscreenSurface* self, QScreen* screen) {
 
 void QOffscreenSurface_Connect_ScreenChanged(QOffscreenSurface* self, intptr_t slot) {
     void (*slotFunc)(QOffscreenSurface*, QScreen*) = reinterpret_cast<void (*)(QOffscreenSurface*, QScreen*)>(slot);
-    QOffscreenSurface::connect(self, &QOffscreenSurface::screenChanged, [self, slotFunc](QScreen* screen) {
-        QScreen* sigval1 = screen;
-        slotFunc(self, sigval1);
-    });
+    QOffscreenSurface::connect(self,
+                               static_cast<void (QOffscreenSurface::*)(QScreen*)>(&QOffscreenSurface::screenChanged),
+                               [self, slotFunc](QScreen* screen) {
+                                   QScreen* sigval1 = screen;
+                                   slotFunc(self, sigval1);
+                               });
 }
 
 // Base class handler implementation

@@ -92,9 +92,11 @@ void Sonnet__ConfigWidget_ConfigChanged(Sonnet__ConfigWidget* self) {
 
 void Sonnet__ConfigWidget_Connect_ConfigChanged(Sonnet__ConfigWidget* self, intptr_t slot) {
     void (*slotFunc)(Sonnet__ConfigWidget*) = reinterpret_cast<void (*)(Sonnet__ConfigWidget*)>(slot);
-    Sonnet::ConfigWidget::connect(self, &Sonnet::ConfigWidget::configChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Sonnet::ConfigWidget::connect(self,
+                                  static_cast<void (Sonnet::ConfigWidget::*)()>(&Sonnet::ConfigWidget::configChanged),
+                                  [self, slotFunc]() {
+                                      slotFunc(self);
+                                  });
 }
 
 // Base class handler implementation

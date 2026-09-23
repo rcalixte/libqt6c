@@ -130,9 +130,11 @@ void QOpenGLWidget_AboutToCompose(QOpenGLWidget* self) {
 
 void QOpenGLWidget_Connect_AboutToCompose(QOpenGLWidget* self, intptr_t slot) {
     void (*slotFunc)(QOpenGLWidget*) = reinterpret_cast<void (*)(QOpenGLWidget*)>(slot);
-    QOpenGLWidget::connect(self, &QOpenGLWidget::aboutToCompose, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QOpenGLWidget::connect(self,
+                           static_cast<void (QOpenGLWidget::*)()>(&QOpenGLWidget::aboutToCompose),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QOpenGLWidget_FrameSwapped(QOpenGLWidget* self) {
@@ -141,9 +143,11 @@ void QOpenGLWidget_FrameSwapped(QOpenGLWidget* self) {
 
 void QOpenGLWidget_Connect_FrameSwapped(QOpenGLWidget* self, intptr_t slot) {
     void (*slotFunc)(QOpenGLWidget*) = reinterpret_cast<void (*)(QOpenGLWidget*)>(slot);
-    QOpenGLWidget::connect(self, &QOpenGLWidget::frameSwapped, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QOpenGLWidget::connect(self,
+                           static_cast<void (QOpenGLWidget::*)()>(&QOpenGLWidget::frameSwapped),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QOpenGLWidget_AboutToResize(QOpenGLWidget* self) {
@@ -152,9 +156,11 @@ void QOpenGLWidget_AboutToResize(QOpenGLWidget* self) {
 
 void QOpenGLWidget_Connect_AboutToResize(QOpenGLWidget* self, intptr_t slot) {
     void (*slotFunc)(QOpenGLWidget*) = reinterpret_cast<void (*)(QOpenGLWidget*)>(slot);
-    QOpenGLWidget::connect(self, &QOpenGLWidget::aboutToResize, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QOpenGLWidget::connect(self,
+                           static_cast<void (QOpenGLWidget::*)()>(&QOpenGLWidget::aboutToResize),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QOpenGLWidget_Resized(QOpenGLWidget* self) {
@@ -163,9 +169,11 @@ void QOpenGLWidget_Resized(QOpenGLWidget* self) {
 
 void QOpenGLWidget_Connect_Resized(QOpenGLWidget* self, intptr_t slot) {
     void (*slotFunc)(QOpenGLWidget*) = reinterpret_cast<void (*)(QOpenGLWidget*)>(slot);
-    QOpenGLWidget::connect(self, &QOpenGLWidget::resized, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QOpenGLWidget::connect(self,
+                           static_cast<void (QOpenGLWidget::*)()>(&QOpenGLWidget::resized),
+                           [self, slotFunc]() {
+                               slotFunc(self);
+                           });
 }
 
 void QOpenGLWidget_InitializeGL(QOpenGLWidget* self) {

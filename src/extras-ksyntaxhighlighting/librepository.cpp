@@ -148,9 +148,11 @@ void KSyntaxHighlighting__Repository_AboutToReload(KSyntaxHighlighting__Reposito
 
 void KSyntaxHighlighting__Repository_Connect_AboutToReload(KSyntaxHighlighting__Repository* self, intptr_t slot) {
     void (*slotFunc)(KSyntaxHighlighting__Repository*) = reinterpret_cast<void (*)(KSyntaxHighlighting__Repository*)>(slot);
-    KSyntaxHighlighting::Repository::connect(self, &KSyntaxHighlighting::Repository::aboutToReload, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KSyntaxHighlighting::Repository::connect(self,
+                                             static_cast<void (KSyntaxHighlighting::Repository::*)()>(&KSyntaxHighlighting::Repository::aboutToReload),
+                                             [self, slotFunc]() {
+                                                 slotFunc(self);
+                                             });
 }
 
 void KSyntaxHighlighting__Repository_Reloaded(KSyntaxHighlighting__Repository* self) {
@@ -159,9 +161,11 @@ void KSyntaxHighlighting__Repository_Reloaded(KSyntaxHighlighting__Repository* s
 
 void KSyntaxHighlighting__Repository_Connect_Reloaded(KSyntaxHighlighting__Repository* self, intptr_t slot) {
     void (*slotFunc)(KSyntaxHighlighting__Repository*) = reinterpret_cast<void (*)(KSyntaxHighlighting__Repository*)>(slot);
-    KSyntaxHighlighting::Repository::connect(self, &KSyntaxHighlighting::Repository::reloaded, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KSyntaxHighlighting::Repository::connect(self,
+                                             static_cast<void (KSyntaxHighlighting::Repository::*)()>(&KSyntaxHighlighting::Repository::reloaded),
+                                             [self, slotFunc]() {
+                                                 slotFunc(self);
+                                             });
 }
 
 KSyntaxHighlighting__Theme* KSyntaxHighlighting__Repository_DefaultTheme1(const KSyntaxHighlighting__Repository* self, int t) {

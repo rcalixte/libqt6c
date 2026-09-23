@@ -150,10 +150,12 @@ void QVirtualKeyboardAbstractInputMethod_SelectionListChanged(QVirtualKeyboardAb
 
 void QVirtualKeyboardAbstractInputMethod_Connect_SelectionListChanged(QVirtualKeyboardAbstractInputMethod* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardAbstractInputMethod*, int) = reinterpret_cast<void (*)(QVirtualKeyboardAbstractInputMethod*, int)>(slot);
-    QVirtualKeyboardAbstractInputMethod::connect(self, &QVirtualKeyboardAbstractInputMethod::selectionListChanged, [self, slotFunc](QVirtualKeyboardSelectionListModel::Type type) {
-        int sigval1 = static_cast<int>(type);
-        slotFunc(self, sigval1);
-    });
+    QVirtualKeyboardAbstractInputMethod::connect(self,
+                                                 static_cast<void (QVirtualKeyboardAbstractInputMethod::*)(QVirtualKeyboardSelectionListModel::Type)>(&QVirtualKeyboardAbstractInputMethod::selectionListChanged),
+                                                 [self, slotFunc](QVirtualKeyboardSelectionListModel::Type type) {
+                                                     int sigval1 = static_cast<int>(type);
+                                                     slotFunc(self, sigval1);
+                                                 });
 }
 
 void QVirtualKeyboardAbstractInputMethod_SelectionListActiveItemChanged(QVirtualKeyboardAbstractInputMethod* self, int type, int index) {
@@ -162,11 +164,13 @@ void QVirtualKeyboardAbstractInputMethod_SelectionListActiveItemChanged(QVirtual
 
 void QVirtualKeyboardAbstractInputMethod_Connect_SelectionListActiveItemChanged(QVirtualKeyboardAbstractInputMethod* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardAbstractInputMethod*, int, int) = reinterpret_cast<void (*)(QVirtualKeyboardAbstractInputMethod*, int, int)>(slot);
-    QVirtualKeyboardAbstractInputMethod::connect(self, &QVirtualKeyboardAbstractInputMethod::selectionListActiveItemChanged, [self, slotFunc](QVirtualKeyboardSelectionListModel::Type type, int index) {
-        int sigval1 = static_cast<int>(type);
-        int sigval2 = index;
-        slotFunc(self, sigval1, sigval2);
-    });
+    QVirtualKeyboardAbstractInputMethod::connect(self,
+                                                 static_cast<void (QVirtualKeyboardAbstractInputMethod::*)(QVirtualKeyboardSelectionListModel::Type, int)>(&QVirtualKeyboardAbstractInputMethod::selectionListActiveItemChanged),
+                                                 [self, slotFunc](QVirtualKeyboardSelectionListModel::Type type, int index) {
+                                                     int sigval1 = static_cast<int>(type);
+                                                     int sigval2 = index;
+                                                     slotFunc(self, sigval1, sigval2);
+                                                 });
 }
 
 void QVirtualKeyboardAbstractInputMethod_SelectionListsChanged(QVirtualKeyboardAbstractInputMethod* self) {
@@ -175,9 +179,11 @@ void QVirtualKeyboardAbstractInputMethod_SelectionListsChanged(QVirtualKeyboardA
 
 void QVirtualKeyboardAbstractInputMethod_Connect_SelectionListsChanged(QVirtualKeyboardAbstractInputMethod* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardAbstractInputMethod*) = reinterpret_cast<void (*)(QVirtualKeyboardAbstractInputMethod*)>(slot);
-    QVirtualKeyboardAbstractInputMethod::connect(self, &QVirtualKeyboardAbstractInputMethod::selectionListsChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardAbstractInputMethod::connect(self,
+                                                 static_cast<void (QVirtualKeyboardAbstractInputMethod::*)()>(&QVirtualKeyboardAbstractInputMethod::selectionListsChanged),
+                                                 [self, slotFunc]() {
+                                                     slotFunc(self);
+                                                 });
 }
 
 void QVirtualKeyboardAbstractInputMethod_Reset(QVirtualKeyboardAbstractInputMethod* self) {

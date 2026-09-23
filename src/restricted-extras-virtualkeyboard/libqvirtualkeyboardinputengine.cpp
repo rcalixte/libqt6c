@@ -145,21 +145,23 @@ void QVirtualKeyboardInputEngine_VirtualKeyClicked(QVirtualKeyboardInputEngine* 
 
 void QVirtualKeyboardInputEngine_Connect_VirtualKeyClicked(QVirtualKeyboardInputEngine* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputEngine*, int, const char*, int, bool) = reinterpret_cast<void (*)(QVirtualKeyboardInputEngine*, int, const char*, int, bool)>(slot);
-    QVirtualKeyboardInputEngine::connect(self, &QVirtualKeyboardInputEngine::virtualKeyClicked, [self, slotFunc](Qt::Key key, const QString& text, Qt::KeyboardModifiers modifiers, bool isAutoRepeat) {
-        int sigval1 = static_cast<int>(key);
-        const auto text_ret = text;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray text_b = text_ret.toUtf8();
-        auto text_str_len = text_b.length();
-        char* text_str = static_cast<char*>(malloc(text_str_len + 1));
-        memcpy(text_str, text_b.data(), text_str_len);
-        text_str[text_str_len] = '\0';
-        const char* sigval2 = text_str;
-        int sigval3 = static_cast<int>(modifiers);
-        bool sigval4 = isAutoRepeat;
-        slotFunc(self, sigval1, sigval2, sigval3, sigval4);
-        libqt_free(text_str);
-    });
+    QVirtualKeyboardInputEngine::connect(self,
+                                         static_cast<void (QVirtualKeyboardInputEngine::*)(Qt::Key, const QString&, Qt::KeyboardModifiers, bool)>(&QVirtualKeyboardInputEngine::virtualKeyClicked),
+                                         [self, slotFunc](Qt::Key key, const QString& text, Qt::KeyboardModifiers modifiers, bool isAutoRepeat) {
+                                             int sigval1 = static_cast<int>(key);
+                                             const auto text_ret = text;
+                                             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                             QByteArray text_b = text_ret.toUtf8();
+                                             auto text_str_len = text_b.length();
+                                             char* text_str = static_cast<char*>(malloc(text_str_len + 1));
+                                             memcpy(text_str, text_b.data(), text_str_len);
+                                             text_str[text_str_len] = '\0';
+                                             const char* sigval2 = text_str;
+                                             int sigval3 = static_cast<int>(modifiers);
+                                             bool sigval4 = isAutoRepeat;
+                                             slotFunc(self, sigval1, sigval2, sigval3, sigval4);
+                                             libqt_free(text_str);
+                                         });
 }
 
 void QVirtualKeyboardInputEngine_ActiveKeyChanged(QVirtualKeyboardInputEngine* self, int key) {
@@ -168,10 +170,12 @@ void QVirtualKeyboardInputEngine_ActiveKeyChanged(QVirtualKeyboardInputEngine* s
 
 void QVirtualKeyboardInputEngine_Connect_ActiveKeyChanged(QVirtualKeyboardInputEngine* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputEngine*, int) = reinterpret_cast<void (*)(QVirtualKeyboardInputEngine*, int)>(slot);
-    QVirtualKeyboardInputEngine::connect(self, &QVirtualKeyboardInputEngine::activeKeyChanged, [self, slotFunc](Qt::Key key) {
-        int sigval1 = static_cast<int>(key);
-        slotFunc(self, sigval1);
-    });
+    QVirtualKeyboardInputEngine::connect(self,
+                                         static_cast<void (QVirtualKeyboardInputEngine::*)(Qt::Key)>(&QVirtualKeyboardInputEngine::activeKeyChanged),
+                                         [self, slotFunc](Qt::Key key) {
+                                             int sigval1 = static_cast<int>(key);
+                                             slotFunc(self, sigval1);
+                                         });
 }
 
 void QVirtualKeyboardInputEngine_PreviousKeyChanged(QVirtualKeyboardInputEngine* self, int key) {
@@ -180,10 +184,12 @@ void QVirtualKeyboardInputEngine_PreviousKeyChanged(QVirtualKeyboardInputEngine*
 
 void QVirtualKeyboardInputEngine_Connect_PreviousKeyChanged(QVirtualKeyboardInputEngine* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputEngine*, int) = reinterpret_cast<void (*)(QVirtualKeyboardInputEngine*, int)>(slot);
-    QVirtualKeyboardInputEngine::connect(self, &QVirtualKeyboardInputEngine::previousKeyChanged, [self, slotFunc](Qt::Key key) {
-        int sigval1 = static_cast<int>(key);
-        slotFunc(self, sigval1);
-    });
+    QVirtualKeyboardInputEngine::connect(self,
+                                         static_cast<void (QVirtualKeyboardInputEngine::*)(Qt::Key)>(&QVirtualKeyboardInputEngine::previousKeyChanged),
+                                         [self, slotFunc](Qt::Key key) {
+                                             int sigval1 = static_cast<int>(key);
+                                             slotFunc(self, sigval1);
+                                         });
 }
 
 void QVirtualKeyboardInputEngine_InputMethodChanged(QVirtualKeyboardInputEngine* self) {
@@ -192,9 +198,11 @@ void QVirtualKeyboardInputEngine_InputMethodChanged(QVirtualKeyboardInputEngine*
 
 void QVirtualKeyboardInputEngine_Connect_InputMethodChanged(QVirtualKeyboardInputEngine* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputEngine*) = reinterpret_cast<void (*)(QVirtualKeyboardInputEngine*)>(slot);
-    QVirtualKeyboardInputEngine::connect(self, &QVirtualKeyboardInputEngine::inputMethodChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputEngine::connect(self,
+                                         static_cast<void (QVirtualKeyboardInputEngine::*)()>(&QVirtualKeyboardInputEngine::inputMethodChanged),
+                                         [self, slotFunc]() {
+                                             slotFunc(self);
+                                         });
 }
 
 void QVirtualKeyboardInputEngine_InputMethodReset(QVirtualKeyboardInputEngine* self) {
@@ -203,9 +211,11 @@ void QVirtualKeyboardInputEngine_InputMethodReset(QVirtualKeyboardInputEngine* s
 
 void QVirtualKeyboardInputEngine_Connect_InputMethodReset(QVirtualKeyboardInputEngine* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputEngine*) = reinterpret_cast<void (*)(QVirtualKeyboardInputEngine*)>(slot);
-    QVirtualKeyboardInputEngine::connect(self, &QVirtualKeyboardInputEngine::inputMethodReset, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputEngine::connect(self,
+                                         static_cast<void (QVirtualKeyboardInputEngine::*)()>(&QVirtualKeyboardInputEngine::inputMethodReset),
+                                         [self, slotFunc]() {
+                                             slotFunc(self);
+                                         });
 }
 
 void QVirtualKeyboardInputEngine_InputMethodUpdate(QVirtualKeyboardInputEngine* self) {
@@ -214,9 +224,11 @@ void QVirtualKeyboardInputEngine_InputMethodUpdate(QVirtualKeyboardInputEngine* 
 
 void QVirtualKeyboardInputEngine_Connect_InputMethodUpdate(QVirtualKeyboardInputEngine* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputEngine*) = reinterpret_cast<void (*)(QVirtualKeyboardInputEngine*)>(slot);
-    QVirtualKeyboardInputEngine::connect(self, &QVirtualKeyboardInputEngine::inputMethodUpdate, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputEngine::connect(self,
+                                         static_cast<void (QVirtualKeyboardInputEngine::*)()>(&QVirtualKeyboardInputEngine::inputMethodUpdate),
+                                         [self, slotFunc]() {
+                                             slotFunc(self);
+                                         });
 }
 
 void QVirtualKeyboardInputEngine_InputModesChanged(QVirtualKeyboardInputEngine* self) {
@@ -225,9 +237,11 @@ void QVirtualKeyboardInputEngine_InputModesChanged(QVirtualKeyboardInputEngine* 
 
 void QVirtualKeyboardInputEngine_Connect_InputModesChanged(QVirtualKeyboardInputEngine* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputEngine*) = reinterpret_cast<void (*)(QVirtualKeyboardInputEngine*)>(slot);
-    QVirtualKeyboardInputEngine::connect(self, &QVirtualKeyboardInputEngine::inputModesChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputEngine::connect(self,
+                                         static_cast<void (QVirtualKeyboardInputEngine::*)()>(&QVirtualKeyboardInputEngine::inputModesChanged),
+                                         [self, slotFunc]() {
+                                             slotFunc(self);
+                                         });
 }
 
 void QVirtualKeyboardInputEngine_InputModeChanged(QVirtualKeyboardInputEngine* self) {
@@ -236,9 +250,11 @@ void QVirtualKeyboardInputEngine_InputModeChanged(QVirtualKeyboardInputEngine* s
 
 void QVirtualKeyboardInputEngine_Connect_InputModeChanged(QVirtualKeyboardInputEngine* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputEngine*) = reinterpret_cast<void (*)(QVirtualKeyboardInputEngine*)>(slot);
-    QVirtualKeyboardInputEngine::connect(self, &QVirtualKeyboardInputEngine::inputModeChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputEngine::connect(self,
+                                         static_cast<void (QVirtualKeyboardInputEngine::*)()>(&QVirtualKeyboardInputEngine::inputModeChanged),
+                                         [self, slotFunc]() {
+                                             slotFunc(self);
+                                         });
 }
 
 void QVirtualKeyboardInputEngine_PatternRecognitionModesChanged(QVirtualKeyboardInputEngine* self) {
@@ -247,9 +263,11 @@ void QVirtualKeyboardInputEngine_PatternRecognitionModesChanged(QVirtualKeyboard
 
 void QVirtualKeyboardInputEngine_Connect_PatternRecognitionModesChanged(QVirtualKeyboardInputEngine* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputEngine*) = reinterpret_cast<void (*)(QVirtualKeyboardInputEngine*)>(slot);
-    QVirtualKeyboardInputEngine::connect(self, &QVirtualKeyboardInputEngine::patternRecognitionModesChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputEngine::connect(self,
+                                         static_cast<void (QVirtualKeyboardInputEngine::*)()>(&QVirtualKeyboardInputEngine::patternRecognitionModesChanged),
+                                         [self, slotFunc]() {
+                                             slotFunc(self);
+                                         });
 }
 
 void QVirtualKeyboardInputEngine_WordCandidateListModelChanged(QVirtualKeyboardInputEngine* self) {
@@ -258,9 +276,11 @@ void QVirtualKeyboardInputEngine_WordCandidateListModelChanged(QVirtualKeyboardI
 
 void QVirtualKeyboardInputEngine_Connect_WordCandidateListModelChanged(QVirtualKeyboardInputEngine* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputEngine*) = reinterpret_cast<void (*)(QVirtualKeyboardInputEngine*)>(slot);
-    QVirtualKeyboardInputEngine::connect(self, &QVirtualKeyboardInputEngine::wordCandidateListModelChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputEngine::connect(self,
+                                         static_cast<void (QVirtualKeyboardInputEngine::*)()>(&QVirtualKeyboardInputEngine::wordCandidateListModelChanged),
+                                         [self, slotFunc]() {
+                                             slotFunc(self);
+                                         });
 }
 
 void QVirtualKeyboardInputEngine_WordCandidateListVisibleHintChanged(QVirtualKeyboardInputEngine* self) {
@@ -269,9 +289,11 @@ void QVirtualKeyboardInputEngine_WordCandidateListVisibleHintChanged(QVirtualKey
 
 void QVirtualKeyboardInputEngine_Connect_WordCandidateListVisibleHintChanged(QVirtualKeyboardInputEngine* self, intptr_t slot) {
     void (*slotFunc)(QVirtualKeyboardInputEngine*) = reinterpret_cast<void (*)(QVirtualKeyboardInputEngine*)>(slot);
-    QVirtualKeyboardInputEngine::connect(self, &QVirtualKeyboardInputEngine::wordCandidateListVisibleHintChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVirtualKeyboardInputEngine::connect(self,
+                                         static_cast<void (QVirtualKeyboardInputEngine::*)()>(&QVirtualKeyboardInputEngine::wordCandidateListVisibleHintChanged),
+                                         [self, slotFunc]() {
+                                             slotFunc(self);
+                                         });
 }
 
 void QVirtualKeyboardInputEngine_Delete(QVirtualKeyboardInputEngine* self) {

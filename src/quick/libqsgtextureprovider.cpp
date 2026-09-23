@@ -30,9 +30,11 @@ void QSGTextureProvider_TextureChanged(QSGTextureProvider* self) {
 
 void QSGTextureProvider_Connect_TextureChanged(QSGTextureProvider* self, intptr_t slot) {
     void (*slotFunc)(QSGTextureProvider*) = reinterpret_cast<void (*)(QSGTextureProvider*)>(slot);
-    QSGTextureProvider::connect(self, &QSGTextureProvider::textureChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QSGTextureProvider::connect(self,
+                                static_cast<void (QSGTextureProvider::*)()>(&QSGTextureProvider::textureChanged),
+                                [self, slotFunc]() {
+                                    slotFunc(self);
+                                });
 }
 
 void QSGTextureProvider_Delete(QSGTextureProvider* self) {

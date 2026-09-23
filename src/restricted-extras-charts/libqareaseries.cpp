@@ -160,12 +160,14 @@ void QAreaSeries_Clicked(QAreaSeries* self, const QPointF* point) {
 
 void QAreaSeries_Connect_Clicked(QAreaSeries* self, intptr_t slot) {
     void (*slotFunc)(QAreaSeries*, QPointF*) = reinterpret_cast<void (*)(QAreaSeries*, QPointF*)>(slot);
-    QAreaSeries::connect(self, &QAreaSeries::clicked, [self, slotFunc](const QPointF& point) {
-        const QPointF& point_ret = point;
-        // Cast returned reference into pointer
-        QPointF* sigval1 = const_cast<QPointF*>(&point_ret);
-        slotFunc(self, sigval1);
-    });
+    QAreaSeries::connect(self,
+                         static_cast<void (QAreaSeries::*)(const QPointF&)>(&QAreaSeries::clicked),
+                         [self, slotFunc](const QPointF& point) {
+                             const QPointF& point_ret = point;
+                             // Cast returned reference into pointer
+                             QPointF* sigval1 = const_cast<QPointF*>(&point_ret);
+                             slotFunc(self, sigval1);
+                         });
 }
 
 void QAreaSeries_Hovered(QAreaSeries* self, const QPointF* point, bool state) {
@@ -174,13 +176,15 @@ void QAreaSeries_Hovered(QAreaSeries* self, const QPointF* point, bool state) {
 
 void QAreaSeries_Connect_Hovered(QAreaSeries* self, intptr_t slot) {
     void (*slotFunc)(QAreaSeries*, QPointF*, bool) = reinterpret_cast<void (*)(QAreaSeries*, QPointF*, bool)>(slot);
-    QAreaSeries::connect(self, &QAreaSeries::hovered, [self, slotFunc](const QPointF& point, bool state) {
-        const QPointF& point_ret = point;
-        // Cast returned reference into pointer
-        QPointF* sigval1 = const_cast<QPointF*>(&point_ret);
-        bool sigval2 = state;
-        slotFunc(self, sigval1, sigval2);
-    });
+    QAreaSeries::connect(self,
+                         static_cast<void (QAreaSeries::*)(const QPointF&, bool)>(&QAreaSeries::hovered),
+                         [self, slotFunc](const QPointF& point, bool state) {
+                             const QPointF& point_ret = point;
+                             // Cast returned reference into pointer
+                             QPointF* sigval1 = const_cast<QPointF*>(&point_ret);
+                             bool sigval2 = state;
+                             slotFunc(self, sigval1, sigval2);
+                         });
 }
 
 void QAreaSeries_Pressed(QAreaSeries* self, const QPointF* point) {
@@ -189,12 +193,14 @@ void QAreaSeries_Pressed(QAreaSeries* self, const QPointF* point) {
 
 void QAreaSeries_Connect_Pressed(QAreaSeries* self, intptr_t slot) {
     void (*slotFunc)(QAreaSeries*, QPointF*) = reinterpret_cast<void (*)(QAreaSeries*, QPointF*)>(slot);
-    QAreaSeries::connect(self, &QAreaSeries::pressed, [self, slotFunc](const QPointF& point) {
-        const QPointF& point_ret = point;
-        // Cast returned reference into pointer
-        QPointF* sigval1 = const_cast<QPointF*>(&point_ret);
-        slotFunc(self, sigval1);
-    });
+    QAreaSeries::connect(self,
+                         static_cast<void (QAreaSeries::*)(const QPointF&)>(&QAreaSeries::pressed),
+                         [self, slotFunc](const QPointF& point) {
+                             const QPointF& point_ret = point;
+                             // Cast returned reference into pointer
+                             QPointF* sigval1 = const_cast<QPointF*>(&point_ret);
+                             slotFunc(self, sigval1);
+                         });
 }
 
 void QAreaSeries_Released(QAreaSeries* self, const QPointF* point) {
@@ -203,12 +209,14 @@ void QAreaSeries_Released(QAreaSeries* self, const QPointF* point) {
 
 void QAreaSeries_Connect_Released(QAreaSeries* self, intptr_t slot) {
     void (*slotFunc)(QAreaSeries*, QPointF*) = reinterpret_cast<void (*)(QAreaSeries*, QPointF*)>(slot);
-    QAreaSeries::connect(self, &QAreaSeries::released, [self, slotFunc](const QPointF& point) {
-        const QPointF& point_ret = point;
-        // Cast returned reference into pointer
-        QPointF* sigval1 = const_cast<QPointF*>(&point_ret);
-        slotFunc(self, sigval1);
-    });
+    QAreaSeries::connect(self,
+                         static_cast<void (QAreaSeries::*)(const QPointF&)>(&QAreaSeries::released),
+                         [self, slotFunc](const QPointF& point) {
+                             const QPointF& point_ret = point;
+                             // Cast returned reference into pointer
+                             QPointF* sigval1 = const_cast<QPointF*>(&point_ret);
+                             slotFunc(self, sigval1);
+                         });
 }
 
 void QAreaSeries_DoubleClicked(QAreaSeries* self, const QPointF* point) {
@@ -217,12 +225,14 @@ void QAreaSeries_DoubleClicked(QAreaSeries* self, const QPointF* point) {
 
 void QAreaSeries_Connect_DoubleClicked(QAreaSeries* self, intptr_t slot) {
     void (*slotFunc)(QAreaSeries*, QPointF*) = reinterpret_cast<void (*)(QAreaSeries*, QPointF*)>(slot);
-    QAreaSeries::connect(self, &QAreaSeries::doubleClicked, [self, slotFunc](const QPointF& point) {
-        const QPointF& point_ret = point;
-        // Cast returned reference into pointer
-        QPointF* sigval1 = const_cast<QPointF*>(&point_ret);
-        slotFunc(self, sigval1);
-    });
+    QAreaSeries::connect(self,
+                         static_cast<void (QAreaSeries::*)(const QPointF&)>(&QAreaSeries::doubleClicked),
+                         [self, slotFunc](const QPointF& point) {
+                             const QPointF& point_ret = point;
+                             // Cast returned reference into pointer
+                             QPointF* sigval1 = const_cast<QPointF*>(&point_ret);
+                             slotFunc(self, sigval1);
+                         });
 }
 
 void QAreaSeries_Selected(QAreaSeries* self) {
@@ -231,9 +241,11 @@ void QAreaSeries_Selected(QAreaSeries* self) {
 
 void QAreaSeries_Connect_Selected(QAreaSeries* self, intptr_t slot) {
     void (*slotFunc)(QAreaSeries*) = reinterpret_cast<void (*)(QAreaSeries*)>(slot);
-    QAreaSeries::connect(self, &QAreaSeries::selected, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QAreaSeries::connect(self,
+                         static_cast<void (QAreaSeries::*)()>(&QAreaSeries::selected),
+                         [self, slotFunc]() {
+                             slotFunc(self);
+                         });
 }
 
 void QAreaSeries_ColorChanged(QAreaSeries* self, QColor* color) {
@@ -242,10 +254,12 @@ void QAreaSeries_ColorChanged(QAreaSeries* self, QColor* color) {
 
 void QAreaSeries_Connect_ColorChanged(QAreaSeries* self, intptr_t slot) {
     void (*slotFunc)(QAreaSeries*, QColor*) = reinterpret_cast<void (*)(QAreaSeries*, QColor*)>(slot);
-    QAreaSeries::connect(self, &QAreaSeries::colorChanged, [self, slotFunc](QColor color) {
-        QColor* sigval1 = new QColor(color);
-        slotFunc(self, sigval1);
-    });
+    QAreaSeries::connect(self,
+                         static_cast<void (QAreaSeries::*)(QColor)>(&QAreaSeries::colorChanged),
+                         [self, slotFunc](QColor color) {
+                             QColor* sigval1 = new QColor(color);
+                             slotFunc(self, sigval1);
+                         });
 }
 
 void QAreaSeries_BorderColorChanged(QAreaSeries* self, QColor* color) {
@@ -254,10 +268,12 @@ void QAreaSeries_BorderColorChanged(QAreaSeries* self, QColor* color) {
 
 void QAreaSeries_Connect_BorderColorChanged(QAreaSeries* self, intptr_t slot) {
     void (*slotFunc)(QAreaSeries*, QColor*) = reinterpret_cast<void (*)(QAreaSeries*, QColor*)>(slot);
-    QAreaSeries::connect(self, &QAreaSeries::borderColorChanged, [self, slotFunc](QColor color) {
-        QColor* sigval1 = new QColor(color);
-        slotFunc(self, sigval1);
-    });
+    QAreaSeries::connect(self,
+                         static_cast<void (QAreaSeries::*)(QColor)>(&QAreaSeries::borderColorChanged),
+                         [self, slotFunc](QColor color) {
+                             QColor* sigval1 = new QColor(color);
+                             slotFunc(self, sigval1);
+                         });
 }
 
 void QAreaSeries_PointLabelsFormatChanged(QAreaSeries* self, const libqt_string format) {
@@ -267,18 +283,20 @@ void QAreaSeries_PointLabelsFormatChanged(QAreaSeries* self, const libqt_string 
 
 void QAreaSeries_Connect_PointLabelsFormatChanged(QAreaSeries* self, intptr_t slot) {
     void (*slotFunc)(QAreaSeries*, const char*) = reinterpret_cast<void (*)(QAreaSeries*, const char*)>(slot);
-    QAreaSeries::connect(self, &QAreaSeries::pointLabelsFormatChanged, [self, slotFunc](const QString& format) {
-        const auto format_ret = format;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray format_b = format_ret.toUtf8();
-        auto format_str_len = format_b.length();
-        char* format_str = static_cast<char*>(malloc(format_str_len + 1));
-        memcpy(format_str, format_b.data(), format_str_len);
-        format_str[format_str_len] = '\0';
-        const char* sigval1 = format_str;
-        slotFunc(self, sigval1);
-        libqt_free(format_str);
-    });
+    QAreaSeries::connect(self,
+                         static_cast<void (QAreaSeries::*)(const QString&)>(&QAreaSeries::pointLabelsFormatChanged),
+                         [self, slotFunc](const QString& format) {
+                             const auto format_ret = format;
+                             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                             QByteArray format_b = format_ret.toUtf8();
+                             auto format_str_len = format_b.length();
+                             char* format_str = static_cast<char*>(malloc(format_str_len + 1));
+                             memcpy(format_str, format_b.data(), format_str_len);
+                             format_str[format_str_len] = '\0';
+                             const char* sigval1 = format_str;
+                             slotFunc(self, sigval1);
+                             libqt_free(format_str);
+                         });
 }
 
 void QAreaSeries_PointLabelsVisibilityChanged(QAreaSeries* self, bool visible) {
@@ -287,10 +305,12 @@ void QAreaSeries_PointLabelsVisibilityChanged(QAreaSeries* self, bool visible) {
 
 void QAreaSeries_Connect_PointLabelsVisibilityChanged(QAreaSeries* self, intptr_t slot) {
     void (*slotFunc)(QAreaSeries*, bool) = reinterpret_cast<void (*)(QAreaSeries*, bool)>(slot);
-    QAreaSeries::connect(self, &QAreaSeries::pointLabelsVisibilityChanged, [self, slotFunc](bool visible) {
-        bool sigval1 = visible;
-        slotFunc(self, sigval1);
-    });
+    QAreaSeries::connect(self,
+                         static_cast<void (QAreaSeries::*)(bool)>(&QAreaSeries::pointLabelsVisibilityChanged),
+                         [self, slotFunc](bool visible) {
+                             bool sigval1 = visible;
+                             slotFunc(self, sigval1);
+                         });
 }
 
 void QAreaSeries_PointLabelsFontChanged(QAreaSeries* self, const QFont* font) {
@@ -299,12 +319,14 @@ void QAreaSeries_PointLabelsFontChanged(QAreaSeries* self, const QFont* font) {
 
 void QAreaSeries_Connect_PointLabelsFontChanged(QAreaSeries* self, intptr_t slot) {
     void (*slotFunc)(QAreaSeries*, QFont*) = reinterpret_cast<void (*)(QAreaSeries*, QFont*)>(slot);
-    QAreaSeries::connect(self, &QAreaSeries::pointLabelsFontChanged, [self, slotFunc](const QFont& font) {
-        const QFont& font_ret = font;
-        // Cast returned reference into pointer
-        QFont* sigval1 = const_cast<QFont*>(&font_ret);
-        slotFunc(self, sigval1);
-    });
+    QAreaSeries::connect(self,
+                         static_cast<void (QAreaSeries::*)(const QFont&)>(&QAreaSeries::pointLabelsFontChanged),
+                         [self, slotFunc](const QFont& font) {
+                             const QFont& font_ret = font;
+                             // Cast returned reference into pointer
+                             QFont* sigval1 = const_cast<QFont*>(&font_ret);
+                             slotFunc(self, sigval1);
+                         });
 }
 
 void QAreaSeries_PointLabelsColorChanged(QAreaSeries* self, const QColor* color) {
@@ -313,12 +335,14 @@ void QAreaSeries_PointLabelsColorChanged(QAreaSeries* self, const QColor* color)
 
 void QAreaSeries_Connect_PointLabelsColorChanged(QAreaSeries* self, intptr_t slot) {
     void (*slotFunc)(QAreaSeries*, QColor*) = reinterpret_cast<void (*)(QAreaSeries*, QColor*)>(slot);
-    QAreaSeries::connect(self, &QAreaSeries::pointLabelsColorChanged, [self, slotFunc](const QColor& color) {
-        const QColor& color_ret = color;
-        // Cast returned reference into pointer
-        QColor* sigval1 = const_cast<QColor*>(&color_ret);
-        slotFunc(self, sigval1);
-    });
+    QAreaSeries::connect(self,
+                         static_cast<void (QAreaSeries::*)(const QColor&)>(&QAreaSeries::pointLabelsColorChanged),
+                         [self, slotFunc](const QColor& color) {
+                             const QColor& color_ret = color;
+                             // Cast returned reference into pointer
+                             QColor* sigval1 = const_cast<QColor*>(&color_ret);
+                             slotFunc(self, sigval1);
+                         });
 }
 
 void QAreaSeries_PointLabelsClippingChanged(QAreaSeries* self, bool clipping) {
@@ -327,10 +351,12 @@ void QAreaSeries_PointLabelsClippingChanged(QAreaSeries* self, bool clipping) {
 
 void QAreaSeries_Connect_PointLabelsClippingChanged(QAreaSeries* self, intptr_t slot) {
     void (*slotFunc)(QAreaSeries*, bool) = reinterpret_cast<void (*)(QAreaSeries*, bool)>(slot);
-    QAreaSeries::connect(self, &QAreaSeries::pointLabelsClippingChanged, [self, slotFunc](bool clipping) {
-        bool sigval1 = clipping;
-        slotFunc(self, sigval1);
-    });
+    QAreaSeries::connect(self,
+                         static_cast<void (QAreaSeries::*)(bool)>(&QAreaSeries::pointLabelsClippingChanged),
+                         [self, slotFunc](bool clipping) {
+                             bool sigval1 = clipping;
+                             slotFunc(self, sigval1);
+                         });
 }
 
 void QAreaSeries_SetPointsVisible1(QAreaSeries* self, bool visible) {

@@ -151,144 +151,288 @@ void q_sciscintillabase_q_s_c_n__s_e_l_c_h_a_n_g_e_d(void* self, bool yes) {
     QsciScintillaBase_QSCN_SELCHANGED((QsciScintillaBase*)self, yes);
 }
 
+void q_sciscintillabase_on_q_s_c_n__s_e_l_c_h_a_n_g_e_d(void* self, void (*callback)(void*, bool)) {
+    QsciScintillaBase_Connect_QSCN_SELCHANGED((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
 void q_sciscintillabase_s_c_n__a_u_t_o_c_c_a_n_c_e_l_l_e_d(void* self) {
     QsciScintillaBase_SCN_AUTOCCANCELLED((QsciScintillaBase*)self);
+}
+
+void q_sciscintillabase_on_s_c_n__a_u_t_o_c_c_a_n_c_e_l_l_e_d(void* self, void (*callback)(void*)) {
+    QsciScintillaBase_Connect_SCN_AUTOCCANCELLED((QsciScintillaBase*)self, (intptr_t)callback);
 }
 
 void q_sciscintillabase_s_c_n__a_u_t_o_c_c_h_a_r_d_e_l_e_t_e_d(void* self) {
     QsciScintillaBase_SCN_AUTOCCHARDELETED((QsciScintillaBase*)self);
 }
 
+void q_sciscintillabase_on_s_c_n__a_u_t_o_c_c_h_a_r_d_e_l_e_t_e_d(void* self, void (*callback)(void*)) {
+    QsciScintillaBase_Connect_SCN_AUTOCCHARDELETED((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
 void q_sciscintillabase_s_c_n__a_u_t_o_c_c_o_m_p_l_e_t_e_d(void* self, const char* selection, int position, int ch, int method) {
     QsciScintillaBase_SCN_AUTOCCOMPLETED((QsciScintillaBase*)self, selection, position, ch, method);
+}
+
+void q_sciscintillabase_on_s_c_n__a_u_t_o_c_c_o_m_p_l_e_t_e_d(void* self, void (*callback)(void*, const char*, int, int, int)) {
+    QsciScintillaBase_Connect_SCN_AUTOCCOMPLETED((QsciScintillaBase*)self, (intptr_t)callback);
 }
 
 void q_sciscintillabase_s_c_n__a_u_t_o_c_s_e_l_e_c_t_i_o_n(void* self, const char* selection, int position, int ch, int method) {
     QsciScintillaBase_SCN_AUTOCSELECTION((QsciScintillaBase*)self, selection, position, ch, method);
 }
 
+void q_sciscintillabase_on_s_c_n__a_u_t_o_c_s_e_l_e_c_t_i_o_n(void* self, void (*callback)(void*, const char*, int, int, int)) {
+    QsciScintillaBase_Connect_SCN_AUTOCSELECTION((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
 void q_sciscintillabase_s_c_n__a_u_t_o_c_s_e_l_e_c_t_i_o_n2(void* self, const char* selection, int position) {
     QsciScintillaBase_SCN_AUTOCSELECTION2((QsciScintillaBase*)self, selection, position);
+}
+
+void q_sciscintillabase_on_s_c_n__a_u_t_o_c_s_e_l_e_c_t_i_o_n2(void* self, void (*callback)(void*, const char*, int)) {
+    QsciScintillaBase_Connect_SCN_AUTOCSELECTION2((QsciScintillaBase*)self, (intptr_t)callback);
 }
 
 void q_sciscintillabase_s_c_n__a_u_t_o_c_s_e_l_e_c_t_i_o_n_c_h_a_n_g_e(void* self, const char* selection, int id, int position) {
     QsciScintillaBase_SCN_AUTOCSELECTIONCHANGE((QsciScintillaBase*)self, selection, id, position);
 }
 
+void q_sciscintillabase_on_s_c_n__a_u_t_o_c_s_e_l_e_c_t_i_o_n_c_h_a_n_g_e(void* self, void (*callback)(void*, const char*, int, int)) {
+    QsciScintillaBase_Connect_SCN_AUTOCSELECTIONCHANGE((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
 void q_sciscintillabase_s_c_e_n__c_h_a_n_g_e(void* self) {
     QsciScintillaBase_SCEN_CHANGE((QsciScintillaBase*)self);
+}
+
+void q_sciscintillabase_on_s_c_e_n__c_h_a_n_g_e(void* self, void (*callback)(void*)) {
+    QsciScintillaBase_Connect_SCEN_CHANGE((QsciScintillaBase*)self, (intptr_t)callback);
 }
 
 void q_sciscintillabase_s_c_n__c_a_l_l_t_i_p_c_l_i_c_k(void* self, int direction) {
     QsciScintillaBase_SCN_CALLTIPCLICK((QsciScintillaBase*)self, direction);
 }
 
+void q_sciscintillabase_on_s_c_n__c_a_l_l_t_i_p_c_l_i_c_k(void* self, void (*callback)(void*, int)) {
+    QsciScintillaBase_Connect_SCN_CALLTIPCLICK((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
 void q_sciscintillabase_s_c_n__c_h_a_r_a_d_d_e_d(void* self, int charadded) {
     QsciScintillaBase_SCN_CHARADDED((QsciScintillaBase*)self, charadded);
+}
+
+void q_sciscintillabase_on_s_c_n__c_h_a_r_a_d_d_e_d(void* self, void (*callback)(void*, int)) {
+    QsciScintillaBase_Connect_SCN_CHARADDED((QsciScintillaBase*)self, (intptr_t)callback);
 }
 
 void q_sciscintillabase_s_c_n__d_o_u_b_l_e_c_l_i_c_k(void* self, int position, int line, int modifiers) {
     QsciScintillaBase_SCN_DOUBLECLICK((QsciScintillaBase*)self, position, line, modifiers);
 }
 
+void q_sciscintillabase_on_s_c_n__d_o_u_b_l_e_c_l_i_c_k(void* self, void (*callback)(void*, int, int, int)) {
+    QsciScintillaBase_Connect_SCN_DOUBLECLICK((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
 void q_sciscintillabase_s_c_n__d_w_e_l_l_e_n_d(void* self, int position, int x, int y) {
     QsciScintillaBase_SCN_DWELLEND((QsciScintillaBase*)self, position, x, y);
+}
+
+void q_sciscintillabase_on_s_c_n__d_w_e_l_l_e_n_d(void* self, void (*callback)(void*, int, int, int)) {
+    QsciScintillaBase_Connect_SCN_DWELLEND((QsciScintillaBase*)self, (intptr_t)callback);
 }
 
 void q_sciscintillabase_s_c_n__d_w_e_l_l_s_t_a_r_t(void* self, int position, int x, int y) {
     QsciScintillaBase_SCN_DWELLSTART((QsciScintillaBase*)self, position, x, y);
 }
 
+void q_sciscintillabase_on_s_c_n__d_w_e_l_l_s_t_a_r_t(void* self, void (*callback)(void*, int, int, int)) {
+    QsciScintillaBase_Connect_SCN_DWELLSTART((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
 void q_sciscintillabase_s_c_n__f_o_c_u_s_i_n(void* self) {
     QsciScintillaBase_SCN_FOCUSIN((QsciScintillaBase*)self);
+}
+
+void q_sciscintillabase_on_s_c_n__f_o_c_u_s_i_n(void* self, void (*callback)(void*)) {
+    QsciScintillaBase_Connect_SCN_FOCUSIN((QsciScintillaBase*)self, (intptr_t)callback);
 }
 
 void q_sciscintillabase_s_c_n__f_o_c_u_s_o_u_t(void* self) {
     QsciScintillaBase_SCN_FOCUSOUT((QsciScintillaBase*)self);
 }
 
+void q_sciscintillabase_on_s_c_n__f_o_c_u_s_o_u_t(void* self, void (*callback)(void*)) {
+    QsciScintillaBase_Connect_SCN_FOCUSOUT((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
 void q_sciscintillabase_s_c_n__h_o_t_s_p_o_t_c_l_i_c_k(void* self, int position, int modifiers) {
     QsciScintillaBase_SCN_HOTSPOTCLICK((QsciScintillaBase*)self, position, modifiers);
+}
+
+void q_sciscintillabase_on_s_c_n__h_o_t_s_p_o_t_c_l_i_c_k(void* self, void (*callback)(void*, int, int)) {
+    QsciScintillaBase_Connect_SCN_HOTSPOTCLICK((QsciScintillaBase*)self, (intptr_t)callback);
 }
 
 void q_sciscintillabase_s_c_n__h_o_t_s_p_o_t_d_o_u_b_l_e_c_l_i_c_k(void* self, int position, int modifiers) {
     QsciScintillaBase_SCN_HOTSPOTDOUBLECLICK((QsciScintillaBase*)self, position, modifiers);
 }
 
+void q_sciscintillabase_on_s_c_n__h_o_t_s_p_o_t_d_o_u_b_l_e_c_l_i_c_k(void* self, void (*callback)(void*, int, int)) {
+    QsciScintillaBase_Connect_SCN_HOTSPOTDOUBLECLICK((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
 void q_sciscintillabase_s_c_n__h_o_t_s_p_o_t_r_e_l_e_a_s_e_c_l_i_c_k(void* self, int position, int modifiers) {
     QsciScintillaBase_SCN_HOTSPOTRELEASECLICK((QsciScintillaBase*)self, position, modifiers);
+}
+
+void q_sciscintillabase_on_s_c_n__h_o_t_s_p_o_t_r_e_l_e_a_s_e_c_l_i_c_k(void* self, void (*callback)(void*, int, int)) {
+    QsciScintillaBase_Connect_SCN_HOTSPOTRELEASECLICK((QsciScintillaBase*)self, (intptr_t)callback);
 }
 
 void q_sciscintillabase_s_c_n__i_n_d_i_c_a_t_o_r_c_l_i_c_k(void* self, int position, int modifiers) {
     QsciScintillaBase_SCN_INDICATORCLICK((QsciScintillaBase*)self, position, modifiers);
 }
 
+void q_sciscintillabase_on_s_c_n__i_n_d_i_c_a_t_o_r_c_l_i_c_k(void* self, void (*callback)(void*, int, int)) {
+    QsciScintillaBase_Connect_SCN_INDICATORCLICK((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
 void q_sciscintillabase_s_c_n__i_n_d_i_c_a_t_o_r_r_e_l_e_a_s_e(void* self, int position, int modifiers) {
     QsciScintillaBase_SCN_INDICATORRELEASE((QsciScintillaBase*)self, position, modifiers);
+}
+
+void q_sciscintillabase_on_s_c_n__i_n_d_i_c_a_t_o_r_r_e_l_e_a_s_e(void* self, void (*callback)(void*, int, int)) {
+    QsciScintillaBase_Connect_SCN_INDICATORRELEASE((QsciScintillaBase*)self, (intptr_t)callback);
 }
 
 void q_sciscintillabase_s_c_n__m_a_c_r_o_r_e_c_o_r_d(void* self, uint32_t param1, uintptr_t param2, void* param3) {
     QsciScintillaBase_SCN_MACRORECORD((QsciScintillaBase*)self, param1, param2, param3);
 }
 
+void q_sciscintillabase_on_s_c_n__m_a_c_r_o_r_e_c_o_r_d(void* self, void (*callback)(void*, uint32_t, uintptr_t, void*)) {
+    QsciScintillaBase_Connect_SCN_MACRORECORD((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
 void q_sciscintillabase_s_c_n__m_a_r_g_i_n_c_l_i_c_k(void* self, int position, int modifiers, int margin) {
     QsciScintillaBase_SCN_MARGINCLICK((QsciScintillaBase*)self, position, modifiers, margin);
+}
+
+void q_sciscintillabase_on_s_c_n__m_a_r_g_i_n_c_l_i_c_k(void* self, void (*callback)(void*, int, int, int)) {
+    QsciScintillaBase_Connect_SCN_MARGINCLICK((QsciScintillaBase*)self, (intptr_t)callback);
 }
 
 void q_sciscintillabase_s_c_n__m_a_r_g_i_n_r_i_g_h_t_c_l_i_c_k(void* self, int position, int modifiers, int margin) {
     QsciScintillaBase_SCN_MARGINRIGHTCLICK((QsciScintillaBase*)self, position, modifiers, margin);
 }
 
+void q_sciscintillabase_on_s_c_n__m_a_r_g_i_n_r_i_g_h_t_c_l_i_c_k(void* self, void (*callback)(void*, int, int, int)) {
+    QsciScintillaBase_Connect_SCN_MARGINRIGHTCLICK((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
 void q_sciscintillabase_s_c_n__m_o_d_i_f_i_e_d(void* self, int param1, int param2, const char* param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
     QsciScintillaBase_SCN_MODIFIED((QsciScintillaBase*)self, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10);
+}
+
+void q_sciscintillabase_on_s_c_n__m_o_d_i_f_i_e_d(void* self, void (*callback)(void*, int, int, const char*, int, int, int, int, int, int, int)) {
+    QsciScintillaBase_Connect_SCN_MODIFIED((QsciScintillaBase*)self, (intptr_t)callback);
 }
 
 void q_sciscintillabase_s_c_n__m_o_d_i_f_y_a_t_t_e_m_p_t_r_o(void* self) {
     QsciScintillaBase_SCN_MODIFYATTEMPTRO((QsciScintillaBase*)self);
 }
 
+void q_sciscintillabase_on_s_c_n__m_o_d_i_f_y_a_t_t_e_m_p_t_r_o(void* self, void (*callback)(void*)) {
+    QsciScintillaBase_Connect_SCN_MODIFYATTEMPTRO((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
 void q_sciscintillabase_s_c_n__n_e_e_d_s_h_o_w_n(void* self, int param1, int param2) {
     QsciScintillaBase_SCN_NEEDSHOWN((QsciScintillaBase*)self, param1, param2);
+}
+
+void q_sciscintillabase_on_s_c_n__n_e_e_d_s_h_o_w_n(void* self, void (*callback)(void*, int, int)) {
+    QsciScintillaBase_Connect_SCN_NEEDSHOWN((QsciScintillaBase*)self, (intptr_t)callback);
 }
 
 void q_sciscintillabase_s_c_n__p_a_i_n_t_e_d(void* self) {
     QsciScintillaBase_SCN_PAINTED((QsciScintillaBase*)self);
 }
 
+void q_sciscintillabase_on_s_c_n__p_a_i_n_t_e_d(void* self, void (*callback)(void*)) {
+    QsciScintillaBase_Connect_SCN_PAINTED((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
 void q_sciscintillabase_s_c_n__s_a_v_e_p_o_i_n_t_l_e_f_t(void* self) {
     QsciScintillaBase_SCN_SAVEPOINTLEFT((QsciScintillaBase*)self);
+}
+
+void q_sciscintillabase_on_s_c_n__s_a_v_e_p_o_i_n_t_l_e_f_t(void* self, void (*callback)(void*)) {
+    QsciScintillaBase_Connect_SCN_SAVEPOINTLEFT((QsciScintillaBase*)self, (intptr_t)callback);
 }
 
 void q_sciscintillabase_s_c_n__s_a_v_e_p_o_i_n_t_r_e_a_c_h_e_d(void* self) {
     QsciScintillaBase_SCN_SAVEPOINTREACHED((QsciScintillaBase*)self);
 }
 
+void q_sciscintillabase_on_s_c_n__s_a_v_e_p_o_i_n_t_r_e_a_c_h_e_d(void* self, void (*callback)(void*)) {
+    QsciScintillaBase_Connect_SCN_SAVEPOINTREACHED((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
 void q_sciscintillabase_s_c_n__s_t_y_l_e_n_e_e_d_e_d(void* self, int position) {
     QsciScintillaBase_SCN_STYLENEEDED((QsciScintillaBase*)self, position);
+}
+
+void q_sciscintillabase_on_s_c_n__s_t_y_l_e_n_e_e_d_e_d(void* self, void (*callback)(void*, int)) {
+    QsciScintillaBase_Connect_SCN_STYLENEEDED((QsciScintillaBase*)self, (intptr_t)callback);
 }
 
 void q_sciscintillabase_s_c_n__u_r_i_d_r_o_p_p_e_d(void* self, void* url) {
     QsciScintillaBase_SCN_URIDROPPED((QsciScintillaBase*)self, (QUrl*)url);
 }
 
+void q_sciscintillabase_on_s_c_n__u_r_i_d_r_o_p_p_e_d(void* self, void (*callback)(void*, void*)) {
+    QsciScintillaBase_Connect_SCN_URIDROPPED((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
 void q_sciscintillabase_s_c_n__u_p_d_a_t_e_u_i(void* self, int updated) {
     QsciScintillaBase_SCN_UPDATEUI((QsciScintillaBase*)self, updated);
+}
+
+void q_sciscintillabase_on_s_c_n__u_p_d_a_t_e_u_i(void* self, void (*callback)(void*, int)) {
+    QsciScintillaBase_Connect_SCN_UPDATEUI((QsciScintillaBase*)self, (intptr_t)callback);
 }
 
 void q_sciscintillabase_s_c_n__u_s_e_r_l_i_s_t_s_e_l_e_c_t_i_o_n(void* self, const char* selection, int id, int ch, int method, int position) {
     QsciScintillaBase_SCN_USERLISTSELECTION((QsciScintillaBase*)self, selection, id, ch, method, position);
 }
 
+void q_sciscintillabase_on_s_c_n__u_s_e_r_l_i_s_t_s_e_l_e_c_t_i_o_n(void* self, void (*callback)(void*, const char*, int, int, int, int)) {
+    QsciScintillaBase_Connect_SCN_USERLISTSELECTION((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
 void q_sciscintillabase_s_c_n__u_s_e_r_l_i_s_t_s_e_l_e_c_t_i_o_n2(void* self, const char* selection, int id, int ch, int method) {
     QsciScintillaBase_SCN_USERLISTSELECTION2((QsciScintillaBase*)self, selection, id, ch, method);
+}
+
+void q_sciscintillabase_on_s_c_n__u_s_e_r_l_i_s_t_s_e_l_e_c_t_i_o_n2(void* self, void (*callback)(void*, const char*, int, int, int)) {
+    QsciScintillaBase_Connect_SCN_USERLISTSELECTION2((QsciScintillaBase*)self, (intptr_t)callback);
 }
 
 void q_sciscintillabase_s_c_n__u_s_e_r_l_i_s_t_s_e_l_e_c_t_i_o_n3(void* self, const char* selection, int id) {
     QsciScintillaBase_SCN_USERLISTSELECTION3((QsciScintillaBase*)self, selection, id);
 }
 
+void q_sciscintillabase_on_s_c_n__u_s_e_r_l_i_s_t_s_e_l_e_c_t_i_o_n3(void* self, void (*callback)(void*, const char*, int)) {
+    QsciScintillaBase_Connect_SCN_USERLISTSELECTION3((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
 void q_sciscintillabase_s_c_n__z_o_o_m(void* self) {
     QsciScintillaBase_SCN_ZOOM((QsciScintillaBase*)self);
+}
+
+void q_sciscintillabase_on_s_c_n__z_o_o_m(void* self, void (*callback)(void*)) {
+    QsciScintillaBase_Connect_SCN_ZOOM((QsciScintillaBase*)self, (intptr_t)callback);
 }
 
 bool q_sciscintillabase_can_insert_from_mime_data(void* self, void* source) {

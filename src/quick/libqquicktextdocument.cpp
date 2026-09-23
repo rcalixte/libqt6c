@@ -83,9 +83,11 @@ void QQuickTextDocument_TextDocumentChanged(QQuickTextDocument* self) {
 
 void QQuickTextDocument_Connect_TextDocumentChanged(QQuickTextDocument* self, intptr_t slot) {
     void (*slotFunc)(QQuickTextDocument*) = reinterpret_cast<void (*)(QQuickTextDocument*)>(slot);
-    QQuickTextDocument::connect(self, &QQuickTextDocument::textDocumentChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickTextDocument::connect(self,
+                                static_cast<void (QQuickTextDocument::*)()>(&QQuickTextDocument::textDocumentChanged),
+                                [self, slotFunc]() {
+                                    slotFunc(self);
+                                });
 }
 
 void QQuickTextDocument_SourceChanged(QQuickTextDocument* self) {
@@ -94,9 +96,11 @@ void QQuickTextDocument_SourceChanged(QQuickTextDocument* self) {
 
 void QQuickTextDocument_Connect_SourceChanged(QQuickTextDocument* self, intptr_t slot) {
     void (*slotFunc)(QQuickTextDocument*) = reinterpret_cast<void (*)(QQuickTextDocument*)>(slot);
-    QQuickTextDocument::connect(self, &QQuickTextDocument::sourceChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickTextDocument::connect(self,
+                                static_cast<void (QQuickTextDocument::*)()>(&QQuickTextDocument::sourceChanged),
+                                [self, slotFunc]() {
+                                    slotFunc(self);
+                                });
 }
 
 void QQuickTextDocument_ModifiedChanged(QQuickTextDocument* self) {
@@ -105,9 +109,11 @@ void QQuickTextDocument_ModifiedChanged(QQuickTextDocument* self) {
 
 void QQuickTextDocument_Connect_ModifiedChanged(QQuickTextDocument* self, intptr_t slot) {
     void (*slotFunc)(QQuickTextDocument*) = reinterpret_cast<void (*)(QQuickTextDocument*)>(slot);
-    QQuickTextDocument::connect(self, &QQuickTextDocument::modifiedChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickTextDocument::connect(self,
+                                static_cast<void (QQuickTextDocument::*)()>(&QQuickTextDocument::modifiedChanged),
+                                [self, slotFunc]() {
+                                    slotFunc(self);
+                                });
 }
 
 void QQuickTextDocument_StatusChanged(QQuickTextDocument* self) {
@@ -116,9 +122,11 @@ void QQuickTextDocument_StatusChanged(QQuickTextDocument* self) {
 
 void QQuickTextDocument_Connect_StatusChanged(QQuickTextDocument* self, intptr_t slot) {
     void (*slotFunc)(QQuickTextDocument*) = reinterpret_cast<void (*)(QQuickTextDocument*)>(slot);
-    QQuickTextDocument::connect(self, &QQuickTextDocument::statusChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickTextDocument::connect(self,
+                                static_cast<void (QQuickTextDocument::*)()>(&QQuickTextDocument::statusChanged),
+                                [self, slotFunc]() {
+                                    slotFunc(self);
+                                });
 }
 
 void QQuickTextDocument_ErrorStringChanged(QQuickTextDocument* self) {
@@ -127,9 +135,11 @@ void QQuickTextDocument_ErrorStringChanged(QQuickTextDocument* self) {
 
 void QQuickTextDocument_Connect_ErrorStringChanged(QQuickTextDocument* self, intptr_t slot) {
     void (*slotFunc)(QQuickTextDocument*) = reinterpret_cast<void (*)(QQuickTextDocument*)>(slot);
-    QQuickTextDocument::connect(self, &QQuickTextDocument::errorStringChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickTextDocument::connect(self,
+                                static_cast<void (QQuickTextDocument::*)()>(&QQuickTextDocument::errorStringChanged),
+                                [self, slotFunc]() {
+                                    slotFunc(self);
+                                });
 }
 
 // Base class handler implementation

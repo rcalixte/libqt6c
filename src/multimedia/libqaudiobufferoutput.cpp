@@ -50,12 +50,14 @@ void QAudioBufferOutput_AudioBufferReceived(QAudioBufferOutput* self, const QAud
 
 void QAudioBufferOutput_Connect_AudioBufferReceived(QAudioBufferOutput* self, intptr_t slot) {
     void (*slotFunc)(QAudioBufferOutput*, QAudioBuffer*) = reinterpret_cast<void (*)(QAudioBufferOutput*, QAudioBuffer*)>(slot);
-    QAudioBufferOutput::connect(self, &QAudioBufferOutput::audioBufferReceived, [self, slotFunc](const QAudioBuffer& buffer) {
-        const QAudioBuffer& buffer_ret = buffer;
-        // Cast returned reference into pointer
-        QAudioBuffer* sigval1 = const_cast<QAudioBuffer*>(&buffer_ret);
-        slotFunc(self, sigval1);
-    });
+    QAudioBufferOutput::connect(self,
+                                static_cast<void (QAudioBufferOutput::*)(const QAudioBuffer&)>(&QAudioBufferOutput::audioBufferReceived),
+                                [self, slotFunc](const QAudioBuffer& buffer) {
+                                    const QAudioBuffer& buffer_ret = buffer;
+                                    // Cast returned reference into pointer
+                                    QAudioBuffer* sigval1 = const_cast<QAudioBuffer*>(&buffer_ret);
+                                    slotFunc(self, sigval1);
+                                });
 }
 
 // Base class handler implementation

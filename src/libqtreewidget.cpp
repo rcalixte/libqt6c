@@ -841,11 +841,13 @@ void QTreeWidget_ItemPressed(QTreeWidget* self, QTreeWidgetItem* item, int colum
 
 void QTreeWidget_Connect_ItemPressed(QTreeWidget* self, intptr_t slot) {
     void (*slotFunc)(QTreeWidget*, QTreeWidgetItem*, int) = reinterpret_cast<void (*)(QTreeWidget*, QTreeWidgetItem*, int)>(slot);
-    QTreeWidget::connect(self, &QTreeWidget::itemPressed, [self, slotFunc](QTreeWidgetItem* item, int column) {
-        QTreeWidgetItem* sigval1 = item;
-        int sigval2 = column;
-        slotFunc(self, sigval1, sigval2);
-    });
+    QTreeWidget::connect(self,
+                         static_cast<void (QTreeWidget::*)(QTreeWidgetItem*, int)>(&QTreeWidget::itemPressed),
+                         [self, slotFunc](QTreeWidgetItem* item, int column) {
+                             QTreeWidgetItem* sigval1 = item;
+                             int sigval2 = column;
+                             slotFunc(self, sigval1, sigval2);
+                         });
 }
 
 void QTreeWidget_ItemClicked(QTreeWidget* self, QTreeWidgetItem* item, int column) {
@@ -854,11 +856,13 @@ void QTreeWidget_ItemClicked(QTreeWidget* self, QTreeWidgetItem* item, int colum
 
 void QTreeWidget_Connect_ItemClicked(QTreeWidget* self, intptr_t slot) {
     void (*slotFunc)(QTreeWidget*, QTreeWidgetItem*, int) = reinterpret_cast<void (*)(QTreeWidget*, QTreeWidgetItem*, int)>(slot);
-    QTreeWidget::connect(self, &QTreeWidget::itemClicked, [self, slotFunc](QTreeWidgetItem* item, int column) {
-        QTreeWidgetItem* sigval1 = item;
-        int sigval2 = column;
-        slotFunc(self, sigval1, sigval2);
-    });
+    QTreeWidget::connect(self,
+                         static_cast<void (QTreeWidget::*)(QTreeWidgetItem*, int)>(&QTreeWidget::itemClicked),
+                         [self, slotFunc](QTreeWidgetItem* item, int column) {
+                             QTreeWidgetItem* sigval1 = item;
+                             int sigval2 = column;
+                             slotFunc(self, sigval1, sigval2);
+                         });
 }
 
 void QTreeWidget_ItemDoubleClicked(QTreeWidget* self, QTreeWidgetItem* item, int column) {
@@ -867,11 +871,13 @@ void QTreeWidget_ItemDoubleClicked(QTreeWidget* self, QTreeWidgetItem* item, int
 
 void QTreeWidget_Connect_ItemDoubleClicked(QTreeWidget* self, intptr_t slot) {
     void (*slotFunc)(QTreeWidget*, QTreeWidgetItem*, int) = reinterpret_cast<void (*)(QTreeWidget*, QTreeWidgetItem*, int)>(slot);
-    QTreeWidget::connect(self, &QTreeWidget::itemDoubleClicked, [self, slotFunc](QTreeWidgetItem* item, int column) {
-        QTreeWidgetItem* sigval1 = item;
-        int sigval2 = column;
-        slotFunc(self, sigval1, sigval2);
-    });
+    QTreeWidget::connect(self,
+                         static_cast<void (QTreeWidget::*)(QTreeWidgetItem*, int)>(&QTreeWidget::itemDoubleClicked),
+                         [self, slotFunc](QTreeWidgetItem* item, int column) {
+                             QTreeWidgetItem* sigval1 = item;
+                             int sigval2 = column;
+                             slotFunc(self, sigval1, sigval2);
+                         });
 }
 
 void QTreeWidget_ItemActivated(QTreeWidget* self, QTreeWidgetItem* item, int column) {
@@ -880,11 +886,13 @@ void QTreeWidget_ItemActivated(QTreeWidget* self, QTreeWidgetItem* item, int col
 
 void QTreeWidget_Connect_ItemActivated(QTreeWidget* self, intptr_t slot) {
     void (*slotFunc)(QTreeWidget*, QTreeWidgetItem*, int) = reinterpret_cast<void (*)(QTreeWidget*, QTreeWidgetItem*, int)>(slot);
-    QTreeWidget::connect(self, &QTreeWidget::itemActivated, [self, slotFunc](QTreeWidgetItem* item, int column) {
-        QTreeWidgetItem* sigval1 = item;
-        int sigval2 = column;
-        slotFunc(self, sigval1, sigval2);
-    });
+    QTreeWidget::connect(self,
+                         static_cast<void (QTreeWidget::*)(QTreeWidgetItem*, int)>(&QTreeWidget::itemActivated),
+                         [self, slotFunc](QTreeWidgetItem* item, int column) {
+                             QTreeWidgetItem* sigval1 = item;
+                             int sigval2 = column;
+                             slotFunc(self, sigval1, sigval2);
+                         });
 }
 
 void QTreeWidget_ItemEntered(QTreeWidget* self, QTreeWidgetItem* item, int column) {
@@ -893,11 +901,13 @@ void QTreeWidget_ItemEntered(QTreeWidget* self, QTreeWidgetItem* item, int colum
 
 void QTreeWidget_Connect_ItemEntered(QTreeWidget* self, intptr_t slot) {
     void (*slotFunc)(QTreeWidget*, QTreeWidgetItem*, int) = reinterpret_cast<void (*)(QTreeWidget*, QTreeWidgetItem*, int)>(slot);
-    QTreeWidget::connect(self, &QTreeWidget::itemEntered, [self, slotFunc](QTreeWidgetItem* item, int column) {
-        QTreeWidgetItem* sigval1 = item;
-        int sigval2 = column;
-        slotFunc(self, sigval1, sigval2);
-    });
+    QTreeWidget::connect(self,
+                         static_cast<void (QTreeWidget::*)(QTreeWidgetItem*, int)>(&QTreeWidget::itemEntered),
+                         [self, slotFunc](QTreeWidgetItem* item, int column) {
+                             QTreeWidgetItem* sigval1 = item;
+                             int sigval2 = column;
+                             slotFunc(self, sigval1, sigval2);
+                         });
 }
 
 void QTreeWidget_ItemChanged(QTreeWidget* self, QTreeWidgetItem* item, int column) {
@@ -906,11 +916,13 @@ void QTreeWidget_ItemChanged(QTreeWidget* self, QTreeWidgetItem* item, int colum
 
 void QTreeWidget_Connect_ItemChanged(QTreeWidget* self, intptr_t slot) {
     void (*slotFunc)(QTreeWidget*, QTreeWidgetItem*, int) = reinterpret_cast<void (*)(QTreeWidget*, QTreeWidgetItem*, int)>(slot);
-    QTreeWidget::connect(self, &QTreeWidget::itemChanged, [self, slotFunc](QTreeWidgetItem* item, int column) {
-        QTreeWidgetItem* sigval1 = item;
-        int sigval2 = column;
-        slotFunc(self, sigval1, sigval2);
-    });
+    QTreeWidget::connect(self,
+                         static_cast<void (QTreeWidget::*)(QTreeWidgetItem*, int)>(&QTreeWidget::itemChanged),
+                         [self, slotFunc](QTreeWidgetItem* item, int column) {
+                             QTreeWidgetItem* sigval1 = item;
+                             int sigval2 = column;
+                             slotFunc(self, sigval1, sigval2);
+                         });
 }
 
 void QTreeWidget_ItemExpanded(QTreeWidget* self, QTreeWidgetItem* item) {
@@ -919,10 +931,12 @@ void QTreeWidget_ItemExpanded(QTreeWidget* self, QTreeWidgetItem* item) {
 
 void QTreeWidget_Connect_ItemExpanded(QTreeWidget* self, intptr_t slot) {
     void (*slotFunc)(QTreeWidget*, QTreeWidgetItem*) = reinterpret_cast<void (*)(QTreeWidget*, QTreeWidgetItem*)>(slot);
-    QTreeWidget::connect(self, &QTreeWidget::itemExpanded, [self, slotFunc](QTreeWidgetItem* item) {
-        QTreeWidgetItem* sigval1 = item;
-        slotFunc(self, sigval1);
-    });
+    QTreeWidget::connect(self,
+                         static_cast<void (QTreeWidget::*)(QTreeWidgetItem*)>(&QTreeWidget::itemExpanded),
+                         [self, slotFunc](QTreeWidgetItem* item) {
+                             QTreeWidgetItem* sigval1 = item;
+                             slotFunc(self, sigval1);
+                         });
 }
 
 void QTreeWidget_ItemCollapsed(QTreeWidget* self, QTreeWidgetItem* item) {
@@ -931,10 +945,12 @@ void QTreeWidget_ItemCollapsed(QTreeWidget* self, QTreeWidgetItem* item) {
 
 void QTreeWidget_Connect_ItemCollapsed(QTreeWidget* self, intptr_t slot) {
     void (*slotFunc)(QTreeWidget*, QTreeWidgetItem*) = reinterpret_cast<void (*)(QTreeWidget*, QTreeWidgetItem*)>(slot);
-    QTreeWidget::connect(self, &QTreeWidget::itemCollapsed, [self, slotFunc](QTreeWidgetItem* item) {
-        QTreeWidgetItem* sigval1 = item;
-        slotFunc(self, sigval1);
-    });
+    QTreeWidget::connect(self,
+                         static_cast<void (QTreeWidget::*)(QTreeWidgetItem*)>(&QTreeWidget::itemCollapsed),
+                         [self, slotFunc](QTreeWidgetItem* item) {
+                             QTreeWidgetItem* sigval1 = item;
+                             slotFunc(self, sigval1);
+                         });
 }
 
 void QTreeWidget_CurrentItemChanged(QTreeWidget* self, QTreeWidgetItem* current, QTreeWidgetItem* previous) {
@@ -943,11 +959,13 @@ void QTreeWidget_CurrentItemChanged(QTreeWidget* self, QTreeWidgetItem* current,
 
 void QTreeWidget_Connect_CurrentItemChanged(QTreeWidget* self, intptr_t slot) {
     void (*slotFunc)(QTreeWidget*, QTreeWidgetItem*, QTreeWidgetItem*) = reinterpret_cast<void (*)(QTreeWidget*, QTreeWidgetItem*, QTreeWidgetItem*)>(slot);
-    QTreeWidget::connect(self, &QTreeWidget::currentItemChanged, [self, slotFunc](QTreeWidgetItem* current, QTreeWidgetItem* previous) {
-        QTreeWidgetItem* sigval1 = current;
-        QTreeWidgetItem* sigval2 = previous;
-        slotFunc(self, sigval1, sigval2);
-    });
+    QTreeWidget::connect(self,
+                         static_cast<void (QTreeWidget::*)(QTreeWidgetItem*, QTreeWidgetItem*)>(&QTreeWidget::currentItemChanged),
+                         [self, slotFunc](QTreeWidgetItem* current, QTreeWidgetItem* previous) {
+                             QTreeWidgetItem* sigval1 = current;
+                             QTreeWidgetItem* sigval2 = previous;
+                             slotFunc(self, sigval1, sigval2);
+                         });
 }
 
 void QTreeWidget_ItemSelectionChanged(QTreeWidget* self) {
@@ -956,9 +974,11 @@ void QTreeWidget_ItemSelectionChanged(QTreeWidget* self) {
 
 void QTreeWidget_Connect_ItemSelectionChanged(QTreeWidget* self, intptr_t slot) {
     void (*slotFunc)(QTreeWidget*) = reinterpret_cast<void (*)(QTreeWidget*)>(slot);
-    QTreeWidget::connect(self, &QTreeWidget::itemSelectionChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QTreeWidget::connect(self,
+                         static_cast<void (QTreeWidget::*)()>(&QTreeWidget::itemSelectionChanged),
+                         [self, slotFunc]() {
+                             slotFunc(self);
+                         });
 }
 
 bool QTreeWidget_Event(QTreeWidget* self, QEvent* e) {

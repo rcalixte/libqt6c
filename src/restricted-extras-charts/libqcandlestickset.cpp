@@ -110,9 +110,11 @@ void QCandlestickSet_Clicked(QCandlestickSet* self) {
 
 void QCandlestickSet_Connect_Clicked(QCandlestickSet* self, intptr_t slot) {
     void (*slotFunc)(QCandlestickSet*) = reinterpret_cast<void (*)(QCandlestickSet*)>(slot);
-    QCandlestickSet::connect(self, &QCandlestickSet::clicked, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QCandlestickSet::connect(self,
+                             static_cast<void (QCandlestickSet::*)()>(&QCandlestickSet::clicked),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 void QCandlestickSet_Hovered(QCandlestickSet* self, bool status) {
@@ -121,10 +123,12 @@ void QCandlestickSet_Hovered(QCandlestickSet* self, bool status) {
 
 void QCandlestickSet_Connect_Hovered(QCandlestickSet* self, intptr_t slot) {
     void (*slotFunc)(QCandlestickSet*, bool) = reinterpret_cast<void (*)(QCandlestickSet*, bool)>(slot);
-    QCandlestickSet::connect(self, &QCandlestickSet::hovered, [self, slotFunc](bool status) {
-        bool sigval1 = status;
-        slotFunc(self, sigval1);
-    });
+    QCandlestickSet::connect(self,
+                             static_cast<void (QCandlestickSet::*)(bool)>(&QCandlestickSet::hovered),
+                             [self, slotFunc](bool status) {
+                                 bool sigval1 = status;
+                                 slotFunc(self, sigval1);
+                             });
 }
 
 void QCandlestickSet_Pressed(QCandlestickSet* self) {
@@ -133,9 +137,11 @@ void QCandlestickSet_Pressed(QCandlestickSet* self) {
 
 void QCandlestickSet_Connect_Pressed(QCandlestickSet* self, intptr_t slot) {
     void (*slotFunc)(QCandlestickSet*) = reinterpret_cast<void (*)(QCandlestickSet*)>(slot);
-    QCandlestickSet::connect(self, &QCandlestickSet::pressed, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QCandlestickSet::connect(self,
+                             static_cast<void (QCandlestickSet::*)()>(&QCandlestickSet::pressed),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 void QCandlestickSet_Released(QCandlestickSet* self) {
@@ -144,9 +150,11 @@ void QCandlestickSet_Released(QCandlestickSet* self) {
 
 void QCandlestickSet_Connect_Released(QCandlestickSet* self, intptr_t slot) {
     void (*slotFunc)(QCandlestickSet*) = reinterpret_cast<void (*)(QCandlestickSet*)>(slot);
-    QCandlestickSet::connect(self, &QCandlestickSet::released, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QCandlestickSet::connect(self,
+                             static_cast<void (QCandlestickSet::*)()>(&QCandlestickSet::released),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 void QCandlestickSet_DoubleClicked(QCandlestickSet* self) {
@@ -155,9 +163,11 @@ void QCandlestickSet_DoubleClicked(QCandlestickSet* self) {
 
 void QCandlestickSet_Connect_DoubleClicked(QCandlestickSet* self, intptr_t slot) {
     void (*slotFunc)(QCandlestickSet*) = reinterpret_cast<void (*)(QCandlestickSet*)>(slot);
-    QCandlestickSet::connect(self, &QCandlestickSet::doubleClicked, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QCandlestickSet::connect(self,
+                             static_cast<void (QCandlestickSet::*)()>(&QCandlestickSet::doubleClicked),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 void QCandlestickSet_TimestampChanged(QCandlestickSet* self) {
@@ -166,9 +176,11 @@ void QCandlestickSet_TimestampChanged(QCandlestickSet* self) {
 
 void QCandlestickSet_Connect_TimestampChanged(QCandlestickSet* self, intptr_t slot) {
     void (*slotFunc)(QCandlestickSet*) = reinterpret_cast<void (*)(QCandlestickSet*)>(slot);
-    QCandlestickSet::connect(self, &QCandlestickSet::timestampChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QCandlestickSet::connect(self,
+                             static_cast<void (QCandlestickSet::*)()>(&QCandlestickSet::timestampChanged),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 void QCandlestickSet_OpenChanged(QCandlestickSet* self) {
@@ -177,9 +189,11 @@ void QCandlestickSet_OpenChanged(QCandlestickSet* self) {
 
 void QCandlestickSet_Connect_OpenChanged(QCandlestickSet* self, intptr_t slot) {
     void (*slotFunc)(QCandlestickSet*) = reinterpret_cast<void (*)(QCandlestickSet*)>(slot);
-    QCandlestickSet::connect(self, &QCandlestickSet::openChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QCandlestickSet::connect(self,
+                             static_cast<void (QCandlestickSet::*)()>(&QCandlestickSet::openChanged),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 void QCandlestickSet_HighChanged(QCandlestickSet* self) {
@@ -188,9 +202,11 @@ void QCandlestickSet_HighChanged(QCandlestickSet* self) {
 
 void QCandlestickSet_Connect_HighChanged(QCandlestickSet* self, intptr_t slot) {
     void (*slotFunc)(QCandlestickSet*) = reinterpret_cast<void (*)(QCandlestickSet*)>(slot);
-    QCandlestickSet::connect(self, &QCandlestickSet::highChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QCandlestickSet::connect(self,
+                             static_cast<void (QCandlestickSet::*)()>(&QCandlestickSet::highChanged),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 void QCandlestickSet_LowChanged(QCandlestickSet* self) {
@@ -199,9 +215,11 @@ void QCandlestickSet_LowChanged(QCandlestickSet* self) {
 
 void QCandlestickSet_Connect_LowChanged(QCandlestickSet* self, intptr_t slot) {
     void (*slotFunc)(QCandlestickSet*) = reinterpret_cast<void (*)(QCandlestickSet*)>(slot);
-    QCandlestickSet::connect(self, &QCandlestickSet::lowChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QCandlestickSet::connect(self,
+                             static_cast<void (QCandlestickSet::*)()>(&QCandlestickSet::lowChanged),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 void QCandlestickSet_CloseChanged(QCandlestickSet* self) {
@@ -210,9 +228,11 @@ void QCandlestickSet_CloseChanged(QCandlestickSet* self) {
 
 void QCandlestickSet_Connect_CloseChanged(QCandlestickSet* self, intptr_t slot) {
     void (*slotFunc)(QCandlestickSet*) = reinterpret_cast<void (*)(QCandlestickSet*)>(slot);
-    QCandlestickSet::connect(self, &QCandlestickSet::closeChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QCandlestickSet::connect(self,
+                             static_cast<void (QCandlestickSet::*)()>(&QCandlestickSet::closeChanged),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 void QCandlestickSet_BrushChanged(QCandlestickSet* self) {
@@ -221,9 +241,11 @@ void QCandlestickSet_BrushChanged(QCandlestickSet* self) {
 
 void QCandlestickSet_Connect_BrushChanged(QCandlestickSet* self, intptr_t slot) {
     void (*slotFunc)(QCandlestickSet*) = reinterpret_cast<void (*)(QCandlestickSet*)>(slot);
-    QCandlestickSet::connect(self, &QCandlestickSet::brushChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QCandlestickSet::connect(self,
+                             static_cast<void (QCandlestickSet::*)()>(&QCandlestickSet::brushChanged),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 void QCandlestickSet_PenChanged(QCandlestickSet* self) {
@@ -232,9 +254,11 @@ void QCandlestickSet_PenChanged(QCandlestickSet* self) {
 
 void QCandlestickSet_Connect_PenChanged(QCandlestickSet* self, intptr_t slot) {
     void (*slotFunc)(QCandlestickSet*) = reinterpret_cast<void (*)(QCandlestickSet*)>(slot);
-    QCandlestickSet::connect(self, &QCandlestickSet::penChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QCandlestickSet::connect(self,
+                             static_cast<void (QCandlestickSet::*)()>(&QCandlestickSet::penChanged),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 // Base class handler implementation

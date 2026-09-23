@@ -106,10 +106,12 @@ void QActionGroup_Triggered(QActionGroup* self, QAction* param1) {
 
 void QActionGroup_Connect_Triggered(QActionGroup* self, intptr_t slot) {
     void (*slotFunc)(QActionGroup*, QAction*) = reinterpret_cast<void (*)(QActionGroup*, QAction*)>(slot);
-    QActionGroup::connect(self, &QActionGroup::triggered, [self, slotFunc](QAction* param1) {
-        QAction* sigval1 = param1;
-        slotFunc(self, sigval1);
-    });
+    QActionGroup::connect(self,
+                          static_cast<void (QActionGroup::*)(QAction*)>(&QActionGroup::triggered),
+                          [self, slotFunc](QAction* param1) {
+                              QAction* sigval1 = param1;
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QActionGroup_Hovered(QActionGroup* self, QAction* param1) {
@@ -118,10 +120,12 @@ void QActionGroup_Hovered(QActionGroup* self, QAction* param1) {
 
 void QActionGroup_Connect_Hovered(QActionGroup* self, intptr_t slot) {
     void (*slotFunc)(QActionGroup*, QAction*) = reinterpret_cast<void (*)(QActionGroup*, QAction*)>(slot);
-    QActionGroup::connect(self, &QActionGroup::hovered, [self, slotFunc](QAction* param1) {
-        QAction* sigval1 = param1;
-        slotFunc(self, sigval1);
-    });
+    QActionGroup::connect(self,
+                          static_cast<void (QActionGroup::*)(QAction*)>(&QActionGroup::hovered),
+                          [self, slotFunc](QAction* param1) {
+                              QAction* sigval1 = param1;
+                              slotFunc(self, sigval1);
+                          });
 }
 
 // Base class handler implementation

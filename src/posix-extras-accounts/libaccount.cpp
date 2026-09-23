@@ -43,10 +43,12 @@ void Accounts__Watch_Notify(Accounts__Watch* self, const char* key) {
 
 void Accounts__Watch_Connect_Notify(Accounts__Watch* self, intptr_t slot) {
     void (*slotFunc)(Accounts__Watch*, const char*) = reinterpret_cast<void (*)(Accounts__Watch*, const char*)>(slot);
-    Accounts::Watch::connect(self, &Accounts::Watch::notify, [self, slotFunc](const char* key) {
-        const char* sigval1 = (const char*)key;
-        slotFunc(self, sigval1);
-    });
+    Accounts::Watch::connect(self,
+                             static_cast<void (Accounts::Watch::*)(const char*)>(&Accounts::Watch::notify),
+                             [self, slotFunc](const char* key) {
+                                 const char* sigval1 = (const char*)key;
+                                 slotFunc(self, sigval1);
+                             });
 }
 
 // Base class handler implementation
@@ -730,18 +732,20 @@ void Accounts__Account_DisplayNameChanged(Accounts__Account* self, const libqt_s
 
 void Accounts__Account_Connect_DisplayNameChanged(Accounts__Account* self, intptr_t slot) {
     void (*slotFunc)(Accounts__Account*, const char*) = reinterpret_cast<void (*)(Accounts__Account*, const char*)>(slot);
-    Accounts::Account::connect(self, &Accounts::Account::displayNameChanged, [self, slotFunc](const QString& displayName) {
-        const auto displayName_ret = displayName;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray displayName_b = displayName_ret.toUtf8();
-        auto displayName_str_len = displayName_b.length();
-        char* displayName_str = static_cast<char*>(malloc(displayName_str_len + 1));
-        memcpy(displayName_str, displayName_b.data(), displayName_str_len);
-        displayName_str[displayName_str_len] = '\0';
-        const char* sigval1 = displayName_str;
-        slotFunc(self, sigval1);
-        libqt_free(displayName_str);
-    });
+    Accounts::Account::connect(self,
+                               static_cast<void (Accounts::Account::*)(const QString&)>(&Accounts::Account::displayNameChanged),
+                               [self, slotFunc](const QString& displayName) {
+                                   const auto displayName_ret = displayName;
+                                   // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                   QByteArray displayName_b = displayName_ret.toUtf8();
+                                   auto displayName_str_len = displayName_b.length();
+                                   char* displayName_str = static_cast<char*>(malloc(displayName_str_len + 1));
+                                   memcpy(displayName_str, displayName_b.data(), displayName_str_len);
+                                   displayName_str[displayName_str_len] = '\0';
+                                   const char* sigval1 = displayName_str;
+                                   slotFunc(self, sigval1);
+                                   libqt_free(displayName_str);
+                               });
 }
 
 void Accounts__Account_EnabledChanged(Accounts__Account* self, const libqt_string serviceName, bool enabled) {
@@ -751,19 +755,21 @@ void Accounts__Account_EnabledChanged(Accounts__Account* self, const libqt_strin
 
 void Accounts__Account_Connect_EnabledChanged(Accounts__Account* self, intptr_t slot) {
     void (*slotFunc)(Accounts__Account*, const char*, bool) = reinterpret_cast<void (*)(Accounts__Account*, const char*, bool)>(slot);
-    Accounts::Account::connect(self, &Accounts::Account::enabledChanged, [self, slotFunc](const QString& serviceName, bool enabled) {
-        const auto serviceName_ret = serviceName;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray serviceName_b = serviceName_ret.toUtf8();
-        auto serviceName_str_len = serviceName_b.length();
-        char* serviceName_str = static_cast<char*>(malloc(serviceName_str_len + 1));
-        memcpy(serviceName_str, serviceName_b.data(), serviceName_str_len);
-        serviceName_str[serviceName_str_len] = '\0';
-        const char* sigval1 = serviceName_str;
-        bool sigval2 = enabled;
-        slotFunc(self, sigval1, sigval2);
-        libqt_free(serviceName_str);
-    });
+    Accounts::Account::connect(self,
+                               static_cast<void (Accounts::Account::*)(const QString&, bool)>(&Accounts::Account::enabledChanged),
+                               [self, slotFunc](const QString& serviceName, bool enabled) {
+                                   const auto serviceName_ret = serviceName;
+                                   // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                   QByteArray serviceName_b = serviceName_ret.toUtf8();
+                                   auto serviceName_str_len = serviceName_b.length();
+                                   char* serviceName_str = static_cast<char*>(malloc(serviceName_str_len + 1));
+                                   memcpy(serviceName_str, serviceName_b.data(), serviceName_str_len);
+                                   serviceName_str[serviceName_str_len] = '\0';
+                                   const char* sigval1 = serviceName_str;
+                                   bool sigval2 = enabled;
+                                   slotFunc(self, sigval1, sigval2);
+                                   libqt_free(serviceName_str);
+                               });
 }
 
 void Accounts__Account_Error(Accounts__Account* self, Accounts__Error* error) {
@@ -772,10 +778,12 @@ void Accounts__Account_Error(Accounts__Account* self, Accounts__Error* error) {
 
 void Accounts__Account_Connect_Error(Accounts__Account* self, intptr_t slot) {
     void (*slotFunc)(Accounts__Account*, Accounts__Error*) = reinterpret_cast<void (*)(Accounts__Account*, Accounts__Error*)>(slot);
-    Accounts::Account::connect(self, &Accounts::Account::error, [self, slotFunc](Accounts::Error error) {
-        Accounts__Error* sigval1 = new Accounts::Error(error);
-        slotFunc(self, sigval1);
-    });
+    Accounts::Account::connect(self,
+                               static_cast<void (Accounts::Account::*)(Accounts::Error)>(&Accounts::Account::error),
+                               [self, slotFunc](Accounts::Error error) {
+                                   Accounts__Error* sigval1 = new Accounts::Error(error);
+                                   slotFunc(self, sigval1);
+                               });
 }
 
 void Accounts__Account_Synced(Accounts__Account* self) {
@@ -784,9 +792,11 @@ void Accounts__Account_Synced(Accounts__Account* self) {
 
 void Accounts__Account_Connect_Synced(Accounts__Account* self, intptr_t slot) {
     void (*slotFunc)(Accounts__Account*) = reinterpret_cast<void (*)(Accounts__Account*)>(slot);
-    Accounts::Account::connect(self, &Accounts::Account::synced, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Accounts::Account::connect(self,
+                               static_cast<void (Accounts::Account::*)()>(&Accounts::Account::synced),
+                               [self, slotFunc]() {
+                                   slotFunc(self);
+                               });
 }
 
 void Accounts__Account_Removed(Accounts__Account* self) {
@@ -795,9 +805,11 @@ void Accounts__Account_Removed(Accounts__Account* self) {
 
 void Accounts__Account_Connect_Removed(Accounts__Account* self, intptr_t slot) {
     void (*slotFunc)(Accounts__Account*) = reinterpret_cast<void (*)(Accounts__Account*)>(slot);
-    Accounts::Account::connect(self, &Accounts::Account::removed, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Accounts::Account::connect(self,
+                               static_cast<void (Accounts::Account::*)()>(&Accounts::Account::removed),
+                               [self, slotFunc]() {
+                                   slotFunc(self);
+                               });
 }
 
 Accounts__Account* Accounts__Account_FromId3(Accounts__Manager* manager, unsigned int id, QObject* parent) {

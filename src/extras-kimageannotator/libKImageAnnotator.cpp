@@ -211,9 +211,11 @@ void kImageAnnotator__KImageAnnotator_ImageChanged(const kImageAnnotator__KImage
 
 void kImageAnnotator__KImageAnnotator_Connect_ImageChanged(const kImageAnnotator__KImageAnnotator* self, intptr_t slot) {
     void (*slotFunc)(const kImageAnnotator__KImageAnnotator*) = reinterpret_cast<void (*)(const kImageAnnotator__KImageAnnotator*)>(slot);
-    kImageAnnotator::KImageAnnotator::connect(self, &kImageAnnotator::KImageAnnotator::imageChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    kImageAnnotator::KImageAnnotator::connect(self,
+                                              static_cast<void (kImageAnnotator::KImageAnnotator::*)() const>(&kImageAnnotator::KImageAnnotator::imageChanged),
+                                              [self, slotFunc]() {
+                                                  slotFunc(self);
+                                              });
 }
 
 void kImageAnnotator__KImageAnnotator_CurrentTabChanged(const kImageAnnotator__KImageAnnotator* self, int index) {
@@ -222,10 +224,12 @@ void kImageAnnotator__KImageAnnotator_CurrentTabChanged(const kImageAnnotator__K
 
 void kImageAnnotator__KImageAnnotator_Connect_CurrentTabChanged(const kImageAnnotator__KImageAnnotator* self, intptr_t slot) {
     void (*slotFunc)(const kImageAnnotator__KImageAnnotator*, int) = reinterpret_cast<void (*)(const kImageAnnotator__KImageAnnotator*, int)>(slot);
-    kImageAnnotator::KImageAnnotator::connect(self, &kImageAnnotator::KImageAnnotator::currentTabChanged, [self, slotFunc](int index) {
-        int sigval1 = index;
-        slotFunc(self, sigval1);
-    });
+    kImageAnnotator::KImageAnnotator::connect(self,
+                                              static_cast<void (kImageAnnotator::KImageAnnotator::*)(int) const>(&kImageAnnotator::KImageAnnotator::currentTabChanged),
+                                              [self, slotFunc](int index) {
+                                                  int sigval1 = index;
+                                                  slotFunc(self, sigval1);
+                                              });
 }
 
 void kImageAnnotator__KImageAnnotator_TabCloseRequested(const kImageAnnotator__KImageAnnotator* self, int index) {
@@ -234,10 +238,12 @@ void kImageAnnotator__KImageAnnotator_TabCloseRequested(const kImageAnnotator__K
 
 void kImageAnnotator__KImageAnnotator_Connect_TabCloseRequested(const kImageAnnotator__KImageAnnotator* self, intptr_t slot) {
     void (*slotFunc)(const kImageAnnotator__KImageAnnotator*, int) = reinterpret_cast<void (*)(const kImageAnnotator__KImageAnnotator*, int)>(slot);
-    kImageAnnotator::KImageAnnotator::connect(self, &kImageAnnotator::KImageAnnotator::tabCloseRequested, [self, slotFunc](int index) {
-        int sigval1 = index;
-        slotFunc(self, sigval1);
-    });
+    kImageAnnotator::KImageAnnotator::connect(self,
+                                              static_cast<void (kImageAnnotator::KImageAnnotator::*)(int) const>(&kImageAnnotator::KImageAnnotator::tabCloseRequested),
+                                              [self, slotFunc](int index) {
+                                                  int sigval1 = index;
+                                                  slotFunc(self, sigval1);
+                                              });
 }
 
 void kImageAnnotator__KImageAnnotator_TabMoved(kImageAnnotator__KImageAnnotator* self, int fromIndex, int toIndex) {
@@ -246,11 +252,13 @@ void kImageAnnotator__KImageAnnotator_TabMoved(kImageAnnotator__KImageAnnotator*
 
 void kImageAnnotator__KImageAnnotator_Connect_TabMoved(kImageAnnotator__KImageAnnotator* self, intptr_t slot) {
     void (*slotFunc)(kImageAnnotator__KImageAnnotator*, int, int) = reinterpret_cast<void (*)(kImageAnnotator__KImageAnnotator*, int, int)>(slot);
-    kImageAnnotator::KImageAnnotator::connect(self, &kImageAnnotator::KImageAnnotator::tabMoved, [self, slotFunc](int fromIndex, int toIndex) {
-        int sigval1 = fromIndex;
-        int sigval2 = toIndex;
-        slotFunc(self, sigval1, sigval2);
-    });
+    kImageAnnotator::KImageAnnotator::connect(self,
+                                              static_cast<void (kImageAnnotator::KImageAnnotator::*)(int, int)>(&kImageAnnotator::KImageAnnotator::tabMoved),
+                                              [self, slotFunc](int fromIndex, int toIndex) {
+                                                  int sigval1 = fromIndex;
+                                                  int sigval2 = toIndex;
+                                                  slotFunc(self, sigval1, sigval2);
+                                              });
 }
 
 void kImageAnnotator__KImageAnnotator_TabContextMenuOpened(const kImageAnnotator__KImageAnnotator* self, int index) {
@@ -259,10 +267,12 @@ void kImageAnnotator__KImageAnnotator_TabContextMenuOpened(const kImageAnnotator
 
 void kImageAnnotator__KImageAnnotator_Connect_TabContextMenuOpened(const kImageAnnotator__KImageAnnotator* self, intptr_t slot) {
     void (*slotFunc)(const kImageAnnotator__KImageAnnotator*, int) = reinterpret_cast<void (*)(const kImageAnnotator__KImageAnnotator*, int)>(slot);
-    kImageAnnotator::KImageAnnotator::connect(self, &kImageAnnotator::KImageAnnotator::tabContextMenuOpened, [self, slotFunc](int index) {
-        int sigval1 = index;
-        slotFunc(self, sigval1);
-    });
+    kImageAnnotator::KImageAnnotator::connect(self,
+                                              static_cast<void (kImageAnnotator::KImageAnnotator::*)(int) const>(&kImageAnnotator::KImageAnnotator::tabContextMenuOpened),
+                                              [self, slotFunc](int index) {
+                                                  int sigval1 = index;
+                                                  slotFunc(self, sigval1);
+                                              });
 }
 
 // Base class handler implementation

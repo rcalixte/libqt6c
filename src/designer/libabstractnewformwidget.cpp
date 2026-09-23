@@ -36,9 +36,11 @@ void QDesignerNewFormWidgetInterface_TemplateActivated(QDesignerNewFormWidgetInt
 
 void QDesignerNewFormWidgetInterface_Connect_TemplateActivated(QDesignerNewFormWidgetInterface* self, intptr_t slot) {
     void (*slotFunc)(QDesignerNewFormWidgetInterface*) = reinterpret_cast<void (*)(QDesignerNewFormWidgetInterface*)>(slot);
-    QDesignerNewFormWidgetInterface::connect(self, &QDesignerNewFormWidgetInterface::templateActivated, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QDesignerNewFormWidgetInterface::connect(self,
+                                             static_cast<void (QDesignerNewFormWidgetInterface::*)()>(&QDesignerNewFormWidgetInterface::templateActivated),
+                                             [self, slotFunc]() {
+                                                 slotFunc(self);
+                                             });
 }
 
 void QDesignerNewFormWidgetInterface_CurrentTemplateChanged(QDesignerNewFormWidgetInterface* self, bool templateSelected) {
@@ -47,10 +49,12 @@ void QDesignerNewFormWidgetInterface_CurrentTemplateChanged(QDesignerNewFormWidg
 
 void QDesignerNewFormWidgetInterface_Connect_CurrentTemplateChanged(QDesignerNewFormWidgetInterface* self, intptr_t slot) {
     void (*slotFunc)(QDesignerNewFormWidgetInterface*, bool) = reinterpret_cast<void (*)(QDesignerNewFormWidgetInterface*, bool)>(slot);
-    QDesignerNewFormWidgetInterface::connect(self, &QDesignerNewFormWidgetInterface::currentTemplateChanged, [self, slotFunc](bool templateSelected) {
-        bool sigval1 = templateSelected;
-        slotFunc(self, sigval1);
-    });
+    QDesignerNewFormWidgetInterface::connect(self,
+                                             static_cast<void (QDesignerNewFormWidgetInterface::*)(bool)>(&QDesignerNewFormWidgetInterface::currentTemplateChanged),
+                                             [self, slotFunc](bool templateSelected) {
+                                                 bool sigval1 = templateSelected;
+                                                 slotFunc(self, sigval1);
+                                             });
 }
 
 QDesignerNewFormWidgetInterface* QDesignerNewFormWidgetInterface_CreateNewFormWidget2(QDesignerFormEditorInterface* core, QWidget* parent) {

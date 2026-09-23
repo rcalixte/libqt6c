@@ -92,9 +92,11 @@ void QQuickRenderControl_RenderRequested(QQuickRenderControl* self) {
 
 void QQuickRenderControl_Connect_RenderRequested(QQuickRenderControl* self, intptr_t slot) {
     void (*slotFunc)(QQuickRenderControl*) = reinterpret_cast<void (*)(QQuickRenderControl*)>(slot);
-    QQuickRenderControl::connect(self, &QQuickRenderControl::renderRequested, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickRenderControl::connect(self,
+                                 static_cast<void (QQuickRenderControl::*)()>(&QQuickRenderControl::renderRequested),
+                                 [self, slotFunc]() {
+                                     slotFunc(self);
+                                 });
 }
 
 void QQuickRenderControl_SceneChanged(QQuickRenderControl* self) {
@@ -103,9 +105,11 @@ void QQuickRenderControl_SceneChanged(QQuickRenderControl* self) {
 
 void QQuickRenderControl_Connect_SceneChanged(QQuickRenderControl* self, intptr_t slot) {
     void (*slotFunc)(QQuickRenderControl*) = reinterpret_cast<void (*)(QQuickRenderControl*)>(slot);
-    QQuickRenderControl::connect(self, &QQuickRenderControl::sceneChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QQuickRenderControl::connect(self,
+                                 static_cast<void (QQuickRenderControl::*)()>(&QQuickRenderControl::sceneChanged),
+                                 [self, slotFunc]() {
+                                     slotFunc(self);
+                                 });
 }
 
 QWindow* QQuickRenderControl_RenderWindowFor2(QQuickWindow* win, QPoint* offset) {

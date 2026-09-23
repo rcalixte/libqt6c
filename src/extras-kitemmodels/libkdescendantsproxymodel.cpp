@@ -213,9 +213,11 @@ void KDescendantsProxyModel_SourceModelChanged(KDescendantsProxyModel* self) {
 
 void KDescendantsProxyModel_Connect_SourceModelChanged(KDescendantsProxyModel* self, intptr_t slot) {
     void (*slotFunc)(KDescendantsProxyModel*) = reinterpret_cast<void (*)(KDescendantsProxyModel*)>(slot);
-    KDescendantsProxyModel::connect(self, &KDescendantsProxyModel::sourceModelChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KDescendantsProxyModel::connect(self,
+                                    static_cast<void (KDescendantsProxyModel::*)()>(&KDescendantsProxyModel::sourceModelChanged),
+                                    [self, slotFunc]() {
+                                        slotFunc(self);
+                                    });
 }
 
 void KDescendantsProxyModel_DisplayAncestorDataChanged(KDescendantsProxyModel* self) {
@@ -224,9 +226,11 @@ void KDescendantsProxyModel_DisplayAncestorDataChanged(KDescendantsProxyModel* s
 
 void KDescendantsProxyModel_Connect_DisplayAncestorDataChanged(KDescendantsProxyModel* self, intptr_t slot) {
     void (*slotFunc)(KDescendantsProxyModel*) = reinterpret_cast<void (*)(KDescendantsProxyModel*)>(slot);
-    KDescendantsProxyModel::connect(self, &KDescendantsProxyModel::displayAncestorDataChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KDescendantsProxyModel::connect(self,
+                                    static_cast<void (KDescendantsProxyModel::*)()>(&KDescendantsProxyModel::displayAncestorDataChanged),
+                                    [self, slotFunc]() {
+                                        slotFunc(self);
+                                    });
 }
 
 void KDescendantsProxyModel_AncestorSeparatorChanged(KDescendantsProxyModel* self) {
@@ -235,9 +239,11 @@ void KDescendantsProxyModel_AncestorSeparatorChanged(KDescendantsProxyModel* sel
 
 void KDescendantsProxyModel_Connect_AncestorSeparatorChanged(KDescendantsProxyModel* self, intptr_t slot) {
     void (*slotFunc)(KDescendantsProxyModel*) = reinterpret_cast<void (*)(KDescendantsProxyModel*)>(slot);
-    KDescendantsProxyModel::connect(self, &KDescendantsProxyModel::ancestorSeparatorChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KDescendantsProxyModel::connect(self,
+                                    static_cast<void (KDescendantsProxyModel::*)()>(&KDescendantsProxyModel::ancestorSeparatorChanged),
+                                    [self, slotFunc]() {
+                                        slotFunc(self);
+                                    });
 }
 
 void KDescendantsProxyModel_ExpandsByDefaultChanged(KDescendantsProxyModel* self, bool expands) {
@@ -246,10 +252,12 @@ void KDescendantsProxyModel_ExpandsByDefaultChanged(KDescendantsProxyModel* self
 
 void KDescendantsProxyModel_Connect_ExpandsByDefaultChanged(KDescendantsProxyModel* self, intptr_t slot) {
     void (*slotFunc)(KDescendantsProxyModel*, bool) = reinterpret_cast<void (*)(KDescendantsProxyModel*, bool)>(slot);
-    KDescendantsProxyModel::connect(self, &KDescendantsProxyModel::expandsByDefaultChanged, [self, slotFunc](bool expands) {
-        bool sigval1 = expands;
-        slotFunc(self, sigval1);
-    });
+    KDescendantsProxyModel::connect(self,
+                                    static_cast<void (KDescendantsProxyModel::*)(bool)>(&KDescendantsProxyModel::expandsByDefaultChanged),
+                                    [self, slotFunc](bool expands) {
+                                        bool sigval1 = expands;
+                                        slotFunc(self, sigval1);
+                                    });
 }
 
 void KDescendantsProxyModel_SourceIndexExpanded(KDescendantsProxyModel* self, const QModelIndex* sourceIndex) {
@@ -258,12 +266,14 @@ void KDescendantsProxyModel_SourceIndexExpanded(KDescendantsProxyModel* self, co
 
 void KDescendantsProxyModel_Connect_SourceIndexExpanded(KDescendantsProxyModel* self, intptr_t slot) {
     void (*slotFunc)(KDescendantsProxyModel*, QModelIndex*) = reinterpret_cast<void (*)(KDescendantsProxyModel*, QModelIndex*)>(slot);
-    KDescendantsProxyModel::connect(self, &KDescendantsProxyModel::sourceIndexExpanded, [self, slotFunc](const QModelIndex& sourceIndex) {
-        const QModelIndex& sourceIndex_ret = sourceIndex;
-        // Cast returned reference into pointer
-        QModelIndex* sigval1 = const_cast<QModelIndex*>(&sourceIndex_ret);
-        slotFunc(self, sigval1);
-    });
+    KDescendantsProxyModel::connect(self,
+                                    static_cast<void (KDescendantsProxyModel::*)(const QModelIndex&)>(&KDescendantsProxyModel::sourceIndexExpanded),
+                                    [self, slotFunc](const QModelIndex& sourceIndex) {
+                                        const QModelIndex& sourceIndex_ret = sourceIndex;
+                                        // Cast returned reference into pointer
+                                        QModelIndex* sigval1 = const_cast<QModelIndex*>(&sourceIndex_ret);
+                                        slotFunc(self, sigval1);
+                                    });
 }
 
 void KDescendantsProxyModel_SourceIndexCollapsed(KDescendantsProxyModel* self, const QModelIndex* sourceIndex) {
@@ -272,12 +282,14 @@ void KDescendantsProxyModel_SourceIndexCollapsed(KDescendantsProxyModel* self, c
 
 void KDescendantsProxyModel_Connect_SourceIndexCollapsed(KDescendantsProxyModel* self, intptr_t slot) {
     void (*slotFunc)(KDescendantsProxyModel*, QModelIndex*) = reinterpret_cast<void (*)(KDescendantsProxyModel*, QModelIndex*)>(slot);
-    KDescendantsProxyModel::connect(self, &KDescendantsProxyModel::sourceIndexCollapsed, [self, slotFunc](const QModelIndex& sourceIndex) {
-        const QModelIndex& sourceIndex_ret = sourceIndex;
-        // Cast returned reference into pointer
-        QModelIndex* sigval1 = const_cast<QModelIndex*>(&sourceIndex_ret);
-        slotFunc(self, sigval1);
-    });
+    KDescendantsProxyModel::connect(self,
+                                    static_cast<void (KDescendantsProxyModel::*)(const QModelIndex&)>(&KDescendantsProxyModel::sourceIndexCollapsed),
+                                    [self, slotFunc](const QModelIndex& sourceIndex) {
+                                        const QModelIndex& sourceIndex_ret = sourceIndex;
+                                        // Cast returned reference into pointer
+                                        QModelIndex* sigval1 = const_cast<QModelIndex*>(&sourceIndex_ret);
+                                        slotFunc(self, sigval1);
+                                    });
 }
 
 // Base class handler implementation

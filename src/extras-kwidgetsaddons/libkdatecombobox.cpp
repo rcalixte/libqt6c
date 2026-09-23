@@ -122,12 +122,14 @@ void KDateComboBox_DateEntered(KDateComboBox* self, const QDate* date) {
 
 void KDateComboBox_Connect_DateEntered(KDateComboBox* self, intptr_t slot) {
     void (*slotFunc)(KDateComboBox*, QDate*) = reinterpret_cast<void (*)(KDateComboBox*, QDate*)>(slot);
-    KDateComboBox::connect(self, &KDateComboBox::dateEntered, [self, slotFunc](const QDate& date) {
-        const QDate& date_ret = date;
-        // Cast returned reference into pointer
-        QDate* sigval1 = const_cast<QDate*>(&date_ret);
-        slotFunc(self, sigval1);
-    });
+    KDateComboBox::connect(self,
+                           static_cast<void (KDateComboBox::*)(const QDate&)>(&KDateComboBox::dateEntered),
+                           [self, slotFunc](const QDate& date) {
+                               const QDate& date_ret = date;
+                               // Cast returned reference into pointer
+                               QDate* sigval1 = const_cast<QDate*>(&date_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void KDateComboBox_DateChanged(KDateComboBox* self, const QDate* date) {
@@ -136,12 +138,14 @@ void KDateComboBox_DateChanged(KDateComboBox* self, const QDate* date) {
 
 void KDateComboBox_Connect_DateChanged(KDateComboBox* self, intptr_t slot) {
     void (*slotFunc)(KDateComboBox*, QDate*) = reinterpret_cast<void (*)(KDateComboBox*, QDate*)>(slot);
-    KDateComboBox::connect(self, &KDateComboBox::dateChanged, [self, slotFunc](const QDate& date) {
-        const QDate& date_ret = date;
-        // Cast returned reference into pointer
-        QDate* sigval1 = const_cast<QDate*>(&date_ret);
-        slotFunc(self, sigval1);
-    });
+    KDateComboBox::connect(self,
+                           static_cast<void (KDateComboBox::*)(const QDate&)>(&KDateComboBox::dateChanged),
+                           [self, slotFunc](const QDate& date) {
+                               const QDate& date_ret = date;
+                               // Cast returned reference into pointer
+                               QDate* sigval1 = const_cast<QDate*>(&date_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void KDateComboBox_DateEdited(KDateComboBox* self, const QDate* date) {
@@ -150,12 +154,14 @@ void KDateComboBox_DateEdited(KDateComboBox* self, const QDate* date) {
 
 void KDateComboBox_Connect_DateEdited(KDateComboBox* self, intptr_t slot) {
     void (*slotFunc)(KDateComboBox*, QDate*) = reinterpret_cast<void (*)(KDateComboBox*, QDate*)>(slot);
-    KDateComboBox::connect(self, &KDateComboBox::dateEdited, [self, slotFunc](const QDate& date) {
-        const QDate& date_ret = date;
-        // Cast returned reference into pointer
-        QDate* sigval1 = const_cast<QDate*>(&date_ret);
-        slotFunc(self, sigval1);
-    });
+    KDateComboBox::connect(self,
+                           static_cast<void (KDateComboBox::*)(const QDate&)>(&KDateComboBox::dateEdited),
+                           [self, slotFunc](const QDate& date) {
+                               const QDate& date_ret = date;
+                               // Cast returned reference into pointer
+                               QDate* sigval1 = const_cast<QDate*>(&date_ret);
+                               slotFunc(self, sigval1);
+                           });
 }
 
 void KDateComboBox_SetDate(KDateComboBox* self, const QDate* date) {

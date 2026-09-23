@@ -406,6 +406,13 @@ void q_designerintegrationinterface_emit_help_requested(void* self, const char* 
 ///
 void q_designerintegrationinterface_property_changed(void* self, void* formWindow, const char* name, void* value);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#propertyChanged)
+///
+/// @param self QDesignerIntegrationInterface*
+/// @param callback void func(QDesignerIntegrationInterface* self, QDesignerFormWindowInterface* formWindow, const char* name, QVariant* value)
+///
+void q_designerintegrationinterface_on_property_changed(void* self, void (*callback)(void*, void*, const char*, void*));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#objectNameChanged)
 ///
 /// @param self QDesignerIntegrationInterface*
@@ -416,6 +423,13 @@ void q_designerintegrationinterface_property_changed(void* self, void* formWindo
 ///
 void q_designerintegrationinterface_object_name_changed(void* self, void* formWindow, void* object, const char* newName, const char* oldName);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#objectNameChanged)
+///
+/// @param self QDesignerIntegrationInterface*
+/// @param callback void func(QDesignerIntegrationInterface* self, QDesignerFormWindowInterface* formWindow, QObject* object, const char* newName, const char* oldName)
+///
+void q_designerintegrationinterface_on_object_name_changed(void* self, void (*callback)(void*, void*, void*, const char*, const char*));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#helpRequested)
 ///
 /// @param self QDesignerIntegrationInterface*
@@ -423,6 +437,13 @@ void q_designerintegrationinterface_object_name_changed(void* self, void* formWi
 /// @param document const char*
 ///
 void q_designerintegrationinterface_help_requested(void* self, const char* manual, const char* document);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#helpRequested)
+///
+/// @param self QDesignerIntegrationInterface*
+/// @param callback void func(QDesignerIntegrationInterface* self, const char* manual, const char* document)
+///
+void q_designerintegrationinterface_on_help_requested(void* self, void (*callback)(void*, const char*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#navigateToSlot)
 ///
@@ -436,9 +457,23 @@ void q_designerintegrationinterface_navigate_to_slot(void* self, const char* obj
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#navigateToSlot)
 ///
 /// @param self QDesignerIntegrationInterface*
+/// @param callback void func(QDesignerIntegrationInterface* self, const char* objectName, const char* signalSignature, const char** parameterNames)
+///
+void q_designerintegrationinterface_on_navigate_to_slot(void* self, void (*callback)(void*, const char*, const char*, const char**));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#navigateToSlot)
+///
+/// @param self QDesignerIntegrationInterface*
 /// @param slotSignature const char*
 ///
 void q_designerintegrationinterface_navigate_to_slot2(void* self, const char* slotSignature);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#navigateToSlot)
+///
+/// @param self QDesignerIntegrationInterface*
+/// @param callback void func(QDesignerIntegrationInterface* self, const char* slotSignature)
+///
+void q_designerintegrationinterface_on_navigate_to_slot2(void* self, void (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#setFeatures)
 ///
@@ -2222,6 +2257,15 @@ void q_designerintegration_property_changed(void* self, void* formWindow, const 
 
 /// Inherited from QDesignerIntegrationInterface
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#propertyChanged)
+///
+/// @param self QDesignerIntegration*
+/// @param callback void func(QDesignerIntegration* self, QDesignerFormWindowInterface* formWindow, const char* name, QVariant* value)
+///
+void q_designerintegration_on_property_changed(void* self, void (*callback)(void*, void*, const char*, void*));
+
+/// Inherited from QDesignerIntegrationInterface
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#objectNameChanged)
 ///
 /// @param self QDesignerIntegration*
@@ -2234,6 +2278,15 @@ void q_designerintegration_object_name_changed(void* self, void* formWindow, voi
 
 /// Inherited from QDesignerIntegrationInterface
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#objectNameChanged)
+///
+/// @param self QDesignerIntegration*
+/// @param callback void func(QDesignerIntegration* self, QDesignerFormWindowInterface* formWindow, QObject* object, const char* newName, const char* oldName)
+///
+void q_designerintegration_on_object_name_changed(void* self, void (*callback)(void*, void*, void*, const char*, const char*));
+
+/// Inherited from QDesignerIntegrationInterface
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#helpRequested)
 ///
 /// @param self QDesignerIntegration*
@@ -2241,6 +2294,15 @@ void q_designerintegration_object_name_changed(void* self, void* formWindow, voi
 /// @param document const char*
 ///
 void q_designerintegration_help_requested(void* self, const char* manual, const char* document);
+
+/// Inherited from QDesignerIntegrationInterface
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#helpRequested)
+///
+/// @param self QDesignerIntegration*
+/// @param callback void func(QDesignerIntegration* self, const char* manual, const char* document)
+///
+void q_designerintegration_on_help_requested(void* self, void (*callback)(void*, const char*, const char*));
 
 /// Inherited from QDesignerIntegrationInterface
 ///
@@ -2258,9 +2320,27 @@ void q_designerintegration_navigate_to_slot(void* self, const char* objectName, 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#navigateToSlot)
 ///
 /// @param self QDesignerIntegration*
+/// @param callback void func(QDesignerIntegration* self, const char* objectName, const char* signalSignature, const char** parameterNames)
+///
+void q_designerintegration_on_navigate_to_slot(void* self, void (*callback)(void*, const char*, const char*, const char**));
+
+/// Inherited from QDesignerIntegrationInterface
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#navigateToSlot)
+///
+/// @param self QDesignerIntegration*
 /// @param slotSignature const char*
 ///
 void q_designerintegration_navigate_to_slot2(void* self, const char* slotSignature);
+
+/// Inherited from QDesignerIntegrationInterface
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#navigateToSlot)
+///
+/// @param self QDesignerIntegration*
+/// @param callback void func(QDesignerIntegration* self, const char* slotSignature)
+///
+void q_designerintegration_on_navigate_to_slot2(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///

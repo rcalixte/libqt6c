@@ -634,9 +634,11 @@ void Poppler__AsyncObject_Done(Poppler__AsyncObject* self) {
 
 void Poppler__AsyncObject_Connect_Done(Poppler__AsyncObject* self, intptr_t slot) {
     void (*slotFunc)(Poppler__AsyncObject*) = reinterpret_cast<void (*)(Poppler__AsyncObject*)>(slot);
-    Poppler::AsyncObject::connect(self, &Poppler::AsyncObject::done, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    Poppler::AsyncObject::connect(self,
+                                  static_cast<void (Poppler::AsyncObject::*)()>(&Poppler::AsyncObject::done),
+                                  [self, slotFunc]() {
+                                      slotFunc(self);
+                                  });
 }
 
 // Base class handler implementation

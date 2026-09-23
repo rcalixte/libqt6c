@@ -202,10 +202,12 @@ void QMediaRecorder_RecorderStateChanged(QMediaRecorder* self, int state) {
 
 void QMediaRecorder_Connect_RecorderStateChanged(QMediaRecorder* self, intptr_t slot) {
     void (*slotFunc)(QMediaRecorder*, int) = reinterpret_cast<void (*)(QMediaRecorder*, int)>(slot);
-    QMediaRecorder::connect(self, &QMediaRecorder::recorderStateChanged, [self, slotFunc](QMediaRecorder::RecorderState state) {
-        int sigval1 = static_cast<int>(state);
-        slotFunc(self, sigval1);
-    });
+    QMediaRecorder::connect(self,
+                            static_cast<void (QMediaRecorder::*)(QMediaRecorder::RecorderState)>(&QMediaRecorder::recorderStateChanged),
+                            [self, slotFunc](QMediaRecorder::RecorderState state) {
+                                int sigval1 = static_cast<int>(state);
+                                slotFunc(self, sigval1);
+                            });
 }
 
 void QMediaRecorder_DurationChanged(QMediaRecorder* self, long long duration) {
@@ -214,10 +216,12 @@ void QMediaRecorder_DurationChanged(QMediaRecorder* self, long long duration) {
 
 void QMediaRecorder_Connect_DurationChanged(QMediaRecorder* self, intptr_t slot) {
     void (*slotFunc)(QMediaRecorder*, long long) = reinterpret_cast<void (*)(QMediaRecorder*, long long)>(slot);
-    QMediaRecorder::connect(self, &QMediaRecorder::durationChanged, [self, slotFunc](qint64 duration) {
-        long long sigval1 = static_cast<long long>(duration);
-        slotFunc(self, sigval1);
-    });
+    QMediaRecorder::connect(self,
+                            static_cast<void (QMediaRecorder::*)(qint64)>(&QMediaRecorder::durationChanged),
+                            [self, slotFunc](qint64 duration) {
+                                long long sigval1 = static_cast<long long>(duration);
+                                slotFunc(self, sigval1);
+                            });
 }
 
 void QMediaRecorder_ActualLocationChanged(QMediaRecorder* self, const QUrl* location) {
@@ -226,12 +230,14 @@ void QMediaRecorder_ActualLocationChanged(QMediaRecorder* self, const QUrl* loca
 
 void QMediaRecorder_Connect_ActualLocationChanged(QMediaRecorder* self, intptr_t slot) {
     void (*slotFunc)(QMediaRecorder*, QUrl*) = reinterpret_cast<void (*)(QMediaRecorder*, QUrl*)>(slot);
-    QMediaRecorder::connect(self, &QMediaRecorder::actualLocationChanged, [self, slotFunc](const QUrl& location) {
-        const QUrl& location_ret = location;
-        // Cast returned reference into pointer
-        QUrl* sigval1 = const_cast<QUrl*>(&location_ret);
-        slotFunc(self, sigval1);
-    });
+    QMediaRecorder::connect(self,
+                            static_cast<void (QMediaRecorder::*)(const QUrl&)>(&QMediaRecorder::actualLocationChanged),
+                            [self, slotFunc](const QUrl& location) {
+                                const QUrl& location_ret = location;
+                                // Cast returned reference into pointer
+                                QUrl* sigval1 = const_cast<QUrl*>(&location_ret);
+                                slotFunc(self, sigval1);
+                            });
 }
 
 void QMediaRecorder_EncoderSettingsChanged(QMediaRecorder* self) {
@@ -240,9 +246,11 @@ void QMediaRecorder_EncoderSettingsChanged(QMediaRecorder* self) {
 
 void QMediaRecorder_Connect_EncoderSettingsChanged(QMediaRecorder* self, intptr_t slot) {
     void (*slotFunc)(QMediaRecorder*) = reinterpret_cast<void (*)(QMediaRecorder*)>(slot);
-    QMediaRecorder::connect(self, &QMediaRecorder::encoderSettingsChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QMediaRecorder::connect(self,
+                            static_cast<void (QMediaRecorder::*)()>(&QMediaRecorder::encoderSettingsChanged),
+                            [self, slotFunc]() {
+                                slotFunc(self);
+                            });
 }
 
 void QMediaRecorder_ErrorOccurred(QMediaRecorder* self, int error, const libqt_string errorString) {
@@ -252,19 +260,21 @@ void QMediaRecorder_ErrorOccurred(QMediaRecorder* self, int error, const libqt_s
 
 void QMediaRecorder_Connect_ErrorOccurred(QMediaRecorder* self, intptr_t slot) {
     void (*slotFunc)(QMediaRecorder*, int, const char*) = reinterpret_cast<void (*)(QMediaRecorder*, int, const char*)>(slot);
-    QMediaRecorder::connect(self, &QMediaRecorder::errorOccurred, [self, slotFunc](QMediaRecorder::Error error, const QString& errorString) {
-        int sigval1 = static_cast<int>(error);
-        const auto errorString_ret = errorString;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray errorString_b = errorString_ret.toUtf8();
-        auto errorString_str_len = errorString_b.length();
-        char* errorString_str = static_cast<char*>(malloc(errorString_str_len + 1));
-        memcpy(errorString_str, errorString_b.data(), errorString_str_len);
-        errorString_str[errorString_str_len] = '\0';
-        const char* sigval2 = errorString_str;
-        slotFunc(self, sigval1, sigval2);
-        libqt_free(errorString_str);
-    });
+    QMediaRecorder::connect(self,
+                            static_cast<void (QMediaRecorder::*)(QMediaRecorder::Error, const QString&)>(&QMediaRecorder::errorOccurred),
+                            [self, slotFunc](QMediaRecorder::Error error, const QString& errorString) {
+                                int sigval1 = static_cast<int>(error);
+                                const auto errorString_ret = errorString;
+                                // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                QByteArray errorString_b = errorString_ret.toUtf8();
+                                auto errorString_str_len = errorString_b.length();
+                                char* errorString_str = static_cast<char*>(malloc(errorString_str_len + 1));
+                                memcpy(errorString_str, errorString_b.data(), errorString_str_len);
+                                errorString_str[errorString_str_len] = '\0';
+                                const char* sigval2 = errorString_str;
+                                slotFunc(self, sigval1, sigval2);
+                                libqt_free(errorString_str);
+                            });
 }
 
 void QMediaRecorder_ErrorChanged(QMediaRecorder* self) {
@@ -273,9 +283,11 @@ void QMediaRecorder_ErrorChanged(QMediaRecorder* self) {
 
 void QMediaRecorder_Connect_ErrorChanged(QMediaRecorder* self, intptr_t slot) {
     void (*slotFunc)(QMediaRecorder*) = reinterpret_cast<void (*)(QMediaRecorder*)>(slot);
-    QMediaRecorder::connect(self, &QMediaRecorder::errorChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QMediaRecorder::connect(self,
+                            static_cast<void (QMediaRecorder::*)()>(&QMediaRecorder::errorChanged),
+                            [self, slotFunc]() {
+                                slotFunc(self);
+                            });
 }
 
 void QMediaRecorder_MetaDataChanged(QMediaRecorder* self) {
@@ -284,9 +296,11 @@ void QMediaRecorder_MetaDataChanged(QMediaRecorder* self) {
 
 void QMediaRecorder_Connect_MetaDataChanged(QMediaRecorder* self, intptr_t slot) {
     void (*slotFunc)(QMediaRecorder*) = reinterpret_cast<void (*)(QMediaRecorder*)>(slot);
-    QMediaRecorder::connect(self, &QMediaRecorder::metaDataChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QMediaRecorder::connect(self,
+                            static_cast<void (QMediaRecorder::*)()>(&QMediaRecorder::metaDataChanged),
+                            [self, slotFunc]() {
+                                slotFunc(self);
+                            });
 }
 
 void QMediaRecorder_MediaFormatChanged(QMediaRecorder* self) {
@@ -295,9 +309,11 @@ void QMediaRecorder_MediaFormatChanged(QMediaRecorder* self) {
 
 void QMediaRecorder_Connect_MediaFormatChanged(QMediaRecorder* self, intptr_t slot) {
     void (*slotFunc)(QMediaRecorder*) = reinterpret_cast<void (*)(QMediaRecorder*)>(slot);
-    QMediaRecorder::connect(self, &QMediaRecorder::mediaFormatChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QMediaRecorder::connect(self,
+                            static_cast<void (QMediaRecorder::*)()>(&QMediaRecorder::mediaFormatChanged),
+                            [self, slotFunc]() {
+                                slotFunc(self);
+                            });
 }
 
 void QMediaRecorder_EncodingModeChanged(QMediaRecorder* self) {
@@ -306,9 +322,11 @@ void QMediaRecorder_EncodingModeChanged(QMediaRecorder* self) {
 
 void QMediaRecorder_Connect_EncodingModeChanged(QMediaRecorder* self, intptr_t slot) {
     void (*slotFunc)(QMediaRecorder*) = reinterpret_cast<void (*)(QMediaRecorder*)>(slot);
-    QMediaRecorder::connect(self, &QMediaRecorder::encodingModeChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QMediaRecorder::connect(self,
+                            static_cast<void (QMediaRecorder::*)()>(&QMediaRecorder::encodingModeChanged),
+                            [self, slotFunc]() {
+                                slotFunc(self);
+                            });
 }
 
 void QMediaRecorder_QualityChanged(QMediaRecorder* self) {
@@ -317,9 +335,11 @@ void QMediaRecorder_QualityChanged(QMediaRecorder* self) {
 
 void QMediaRecorder_Connect_QualityChanged(QMediaRecorder* self, intptr_t slot) {
     void (*slotFunc)(QMediaRecorder*) = reinterpret_cast<void (*)(QMediaRecorder*)>(slot);
-    QMediaRecorder::connect(self, &QMediaRecorder::qualityChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QMediaRecorder::connect(self,
+                            static_cast<void (QMediaRecorder::*)()>(&QMediaRecorder::qualityChanged),
+                            [self, slotFunc]() {
+                                slotFunc(self);
+                            });
 }
 
 void QMediaRecorder_VideoResolutionChanged(QMediaRecorder* self) {
@@ -328,9 +348,11 @@ void QMediaRecorder_VideoResolutionChanged(QMediaRecorder* self) {
 
 void QMediaRecorder_Connect_VideoResolutionChanged(QMediaRecorder* self, intptr_t slot) {
     void (*slotFunc)(QMediaRecorder*) = reinterpret_cast<void (*)(QMediaRecorder*)>(slot);
-    QMediaRecorder::connect(self, &QMediaRecorder::videoResolutionChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QMediaRecorder::connect(self,
+                            static_cast<void (QMediaRecorder::*)()>(&QMediaRecorder::videoResolutionChanged),
+                            [self, slotFunc]() {
+                                slotFunc(self);
+                            });
 }
 
 void QMediaRecorder_VideoFrameRateChanged(QMediaRecorder* self) {
@@ -339,9 +361,11 @@ void QMediaRecorder_VideoFrameRateChanged(QMediaRecorder* self) {
 
 void QMediaRecorder_Connect_VideoFrameRateChanged(QMediaRecorder* self, intptr_t slot) {
     void (*slotFunc)(QMediaRecorder*) = reinterpret_cast<void (*)(QMediaRecorder*)>(slot);
-    QMediaRecorder::connect(self, &QMediaRecorder::videoFrameRateChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QMediaRecorder::connect(self,
+                            static_cast<void (QMediaRecorder::*)()>(&QMediaRecorder::videoFrameRateChanged),
+                            [self, slotFunc]() {
+                                slotFunc(self);
+                            });
 }
 
 void QMediaRecorder_VideoBitRateChanged(QMediaRecorder* self) {
@@ -350,9 +374,11 @@ void QMediaRecorder_VideoBitRateChanged(QMediaRecorder* self) {
 
 void QMediaRecorder_Connect_VideoBitRateChanged(QMediaRecorder* self, intptr_t slot) {
     void (*slotFunc)(QMediaRecorder*) = reinterpret_cast<void (*)(QMediaRecorder*)>(slot);
-    QMediaRecorder::connect(self, &QMediaRecorder::videoBitRateChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QMediaRecorder::connect(self,
+                            static_cast<void (QMediaRecorder::*)()>(&QMediaRecorder::videoBitRateChanged),
+                            [self, slotFunc]() {
+                                slotFunc(self);
+                            });
 }
 
 void QMediaRecorder_AudioBitRateChanged(QMediaRecorder* self) {
@@ -361,9 +387,11 @@ void QMediaRecorder_AudioBitRateChanged(QMediaRecorder* self) {
 
 void QMediaRecorder_Connect_AudioBitRateChanged(QMediaRecorder* self, intptr_t slot) {
     void (*slotFunc)(QMediaRecorder*) = reinterpret_cast<void (*)(QMediaRecorder*)>(slot);
-    QMediaRecorder::connect(self, &QMediaRecorder::audioBitRateChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QMediaRecorder::connect(self,
+                            static_cast<void (QMediaRecorder::*)()>(&QMediaRecorder::audioBitRateChanged),
+                            [self, slotFunc]() {
+                                slotFunc(self);
+                            });
 }
 
 void QMediaRecorder_AudioChannelCountChanged(QMediaRecorder* self) {
@@ -372,9 +400,11 @@ void QMediaRecorder_AudioChannelCountChanged(QMediaRecorder* self) {
 
 void QMediaRecorder_Connect_AudioChannelCountChanged(QMediaRecorder* self, intptr_t slot) {
     void (*slotFunc)(QMediaRecorder*) = reinterpret_cast<void (*)(QMediaRecorder*)>(slot);
-    QMediaRecorder::connect(self, &QMediaRecorder::audioChannelCountChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QMediaRecorder::connect(self,
+                            static_cast<void (QMediaRecorder::*)()>(&QMediaRecorder::audioChannelCountChanged),
+                            [self, slotFunc]() {
+                                slotFunc(self);
+                            });
 }
 
 void QMediaRecorder_AudioSampleRateChanged(QMediaRecorder* self) {
@@ -383,9 +413,11 @@ void QMediaRecorder_AudioSampleRateChanged(QMediaRecorder* self) {
 
 void QMediaRecorder_Connect_AudioSampleRateChanged(QMediaRecorder* self, intptr_t slot) {
     void (*slotFunc)(QMediaRecorder*) = reinterpret_cast<void (*)(QMediaRecorder*)>(slot);
-    QMediaRecorder::connect(self, &QMediaRecorder::audioSampleRateChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QMediaRecorder::connect(self,
+                            static_cast<void (QMediaRecorder::*)()>(&QMediaRecorder::audioSampleRateChanged),
+                            [self, slotFunc]() {
+                                slotFunc(self);
+                            });
 }
 
 void QMediaRecorder_AutoStopChanged(QMediaRecorder* self) {
@@ -394,9 +426,11 @@ void QMediaRecorder_AutoStopChanged(QMediaRecorder* self) {
 
 void QMediaRecorder_Connect_AutoStopChanged(QMediaRecorder* self, intptr_t slot) {
     void (*slotFunc)(QMediaRecorder*) = reinterpret_cast<void (*)(QMediaRecorder*)>(slot);
-    QMediaRecorder::connect(self, &QMediaRecorder::autoStopChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QMediaRecorder::connect(self,
+                            static_cast<void (QMediaRecorder::*)()>(&QMediaRecorder::autoStopChanged),
+                            [self, slotFunc]() {
+                                slotFunc(self);
+                            });
 }
 
 // Base class handler implementation

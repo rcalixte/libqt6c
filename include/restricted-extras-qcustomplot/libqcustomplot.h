@@ -24668,10 +24668,24 @@ void q_cpaxis_range_changed(void* self, void* newRange);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
 /// @param self QCPAxis*
+/// @param callback void func(QCPAxis* self, QCPRange* newRange)
+///
+void q_cpaxis_on_range_changed(void* self, void (*callback)(void*, void*));
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
+///
+/// @param self QCPAxis*
 /// @param newRange QCPRange*
 /// @param oldRange QCPRange*
 ///
 void q_cpaxis_range_changed2(void* self, void* newRange, void* oldRange);
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
+///
+/// @param self QCPAxis*
+/// @param callback void func(QCPAxis* self, QCPRange* newRange, QCPRange* oldRange)
+///
+void q_cpaxis_on_range_changed2(void* self, void (*callback)(void*, void*, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
@@ -24683,6 +24697,13 @@ void q_cpaxis_scale_type_changed(void* self, int32_t scaleType);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
 /// @param self QCPAxis*
+/// @param callback void func(QCPAxis* self, enum QCPAxis__ScaleType scaleType)
+///
+void q_cpaxis_on_scale_type_changed(void* self, void (*callback)(void*, int32_t));
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
+///
+/// @param self QCPAxis*
 /// @param parts flag of enum QCPAxis__SelectablePart*
 ///
 void q_cpaxis_selection_changed(void* self, const int32_t* parts);
@@ -24690,9 +24711,23 @@ void q_cpaxis_selection_changed(void* self, const int32_t* parts);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
 /// @param self QCPAxis*
+/// @param callback void func(QCPAxis* self, flag of enum QCPAxis__SelectablePart* parts)
+///
+void q_cpaxis_on_selection_changed(void* self, void (*callback)(void*, const int32_t*));
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
+///
+/// @param self QCPAxis*
 /// @param parts flag of enum QCPAxis__SelectablePart*
 ///
 void q_cpaxis_selectable_changed(void* self, const int32_t* parts);
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
+///
+/// @param self QCPAxis*
+/// @param callback void func(QCPAxis* self, flag of enum QCPAxis__SelectablePart* parts)
+///
+void q_cpaxis_on_selectable_changed(void* self, void (*callback)(void*, const int32_t*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
@@ -27211,6 +27246,13 @@ void q_cpabstractplottable_selection_changed(void* self, bool selected);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// @param self QCPAbstractPlottable*
+/// @param callback void func(QCPAbstractPlottable* self, bool selected)
+///
+void q_cpabstractplottable_on_selection_changed(void* self, void (*callback)(void*, bool));
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPAbstractPlottable*
 /// @param selection QCPDataSelection*
 ///
 void q_cpabstractplottable_selection_changed2(void* self, void* selection);
@@ -27218,9 +27260,23 @@ void q_cpabstractplottable_selection_changed2(void* self, void* selection);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// @param self QCPAbstractPlottable*
+/// @param callback void func(QCPAbstractPlottable* self, QCPDataSelection* selection)
+///
+void q_cpabstractplottable_on_selection_changed2(void* self, void (*callback)(void*, void*));
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPAbstractPlottable*
 /// @param selectable enum QCP__SelectionType
 ///
 void q_cpabstractplottable_selectable_changed(void* self, int32_t selectable);
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPAbstractPlottable*
+/// @param callback void func(QCPAbstractPlottable* self, enum QCP__SelectionType selectable)
+///
+void q_cpabstractplottable_on_selectable_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
@@ -54071,6 +54127,15 @@ void q_cpgraph_selection_changed(void* self, bool selected);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// @param self QCPGraph*
+/// @param callback void func(QCPGraph* self, bool selected)
+///
+void q_cpgraph_on_selection_changed(void* self, void (*callback)(void*, bool));
+
+/// Inherited from QCPAbstractPlottable
+///
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPGraph*
 /// @param selection QCPDataSelection*
 ///
 void q_cpgraph_selection_changed2(void* self, void* selection);
@@ -54080,9 +54145,27 @@ void q_cpgraph_selection_changed2(void* self, void* selection);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// @param self QCPGraph*
+/// @param callback void func(QCPGraph* self, QCPDataSelection* selection)
+///
+void q_cpgraph_on_selection_changed2(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QCPAbstractPlottable
+///
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPGraph*
 /// @param selectable enum QCP__SelectionType
 ///
 void q_cpgraph_selectable_changed(void* self, int32_t selectable);
+
+/// Inherited from QCPAbstractPlottable
+///
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPGraph*
+/// @param callback void func(QCPGraph* self, enum QCP__SelectionType selectable)
+///
+void q_cpgraph_on_selectable_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -57147,6 +57230,15 @@ void q_cpcurve_selection_changed(void* self, bool selected);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// @param self QCPCurve*
+/// @param callback void func(QCPCurve* self, bool selected)
+///
+void q_cpcurve_on_selection_changed(void* self, void (*callback)(void*, bool));
+
+/// Inherited from QCPAbstractPlottable
+///
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPCurve*
 /// @param selection QCPDataSelection*
 ///
 void q_cpcurve_selection_changed2(void* self, void* selection);
@@ -57156,9 +57248,27 @@ void q_cpcurve_selection_changed2(void* self, void* selection);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// @param self QCPCurve*
+/// @param callback void func(QCPCurve* self, QCPDataSelection* selection)
+///
+void q_cpcurve_on_selection_changed2(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QCPAbstractPlottable
+///
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPCurve*
 /// @param selectable enum QCP__SelectionType
 ///
 void q_cpcurve_selectable_changed(void* self, int32_t selectable);
+
+/// Inherited from QCPAbstractPlottable
+///
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPCurve*
+/// @param callback void func(QCPCurve* self, enum QCP__SelectionType selectable)
+///
+void q_cpcurve_on_selectable_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -61173,6 +61283,15 @@ void q_cpbars_selection_changed(void* self, bool selected);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// @param self QCPBars*
+/// @param callback void func(QCPBars* self, bool selected)
+///
+void q_cpbars_on_selection_changed(void* self, void (*callback)(void*, bool));
+
+/// Inherited from QCPAbstractPlottable
+///
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPBars*
 /// @param selection QCPDataSelection*
 ///
 void q_cpbars_selection_changed2(void* self, void* selection);
@@ -61182,9 +61301,27 @@ void q_cpbars_selection_changed2(void* self, void* selection);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// @param self QCPBars*
+/// @param callback void func(QCPBars* self, QCPDataSelection* selection)
+///
+void q_cpbars_on_selection_changed2(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QCPAbstractPlottable
+///
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPBars*
 /// @param selectable enum QCP__SelectionType
 ///
 void q_cpbars_selectable_changed(void* self, int32_t selectable);
+
+/// Inherited from QCPAbstractPlottable
+///
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPBars*
+/// @param callback void func(QCPBars* self, enum QCP__SelectionType selectable)
+///
+void q_cpbars_on_selectable_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -63953,6 +64090,15 @@ void q_cpstatisticalbox_selection_changed(void* self, bool selected);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// @param self QCPStatisticalBox*
+/// @param callback void func(QCPStatisticalBox* self, bool selected)
+///
+void q_cpstatisticalbox_on_selection_changed(void* self, void (*callback)(void*, bool));
+
+/// Inherited from QCPAbstractPlottable
+///
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPStatisticalBox*
 /// @param selection QCPDataSelection*
 ///
 void q_cpstatisticalbox_selection_changed2(void* self, void* selection);
@@ -63962,9 +64108,27 @@ void q_cpstatisticalbox_selection_changed2(void* self, void* selection);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// @param self QCPStatisticalBox*
+/// @param callback void func(QCPStatisticalBox* self, QCPDataSelection* selection)
+///
+void q_cpstatisticalbox_on_selection_changed2(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QCPAbstractPlottable
+///
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPStatisticalBox*
 /// @param selectable enum QCP__SelectionType
 ///
 void q_cpstatisticalbox_selectable_changed(void* self, int32_t selectable);
+
+/// Inherited from QCPAbstractPlottable
+///
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPStatisticalBox*
+/// @param callback void func(QCPStatisticalBox* self, enum QCP__SelectionType selectable)
+///
+void q_cpstatisticalbox_on_selectable_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -66805,6 +66969,15 @@ void q_cpcolormap_selection_changed(void* self, bool selected);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// @param self QCPColorMap*
+/// @param callback void func(QCPColorMap* self, bool selected)
+///
+void q_cpcolormap_on_selection_changed(void* self, void (*callback)(void*, bool));
+
+/// Inherited from QCPAbstractPlottable
+///
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPColorMap*
 /// @param selection QCPDataSelection*
 ///
 void q_cpcolormap_selection_changed2(void* self, void* selection);
@@ -66814,9 +66987,27 @@ void q_cpcolormap_selection_changed2(void* self, void* selection);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// @param self QCPColorMap*
+/// @param callback void func(QCPColorMap* self, QCPDataSelection* selection)
+///
+void q_cpcolormap_on_selection_changed2(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QCPAbstractPlottable
+///
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPColorMap*
 /// @param selectable enum QCP__SelectionType
 ///
 void q_cpcolormap_selectable_changed(void* self, int32_t selectable);
+
+/// Inherited from QCPAbstractPlottable
+///
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPColorMap*
+/// @param callback void func(QCPColorMap* self, enum QCP__SelectionType selectable)
+///
+void q_cpcolormap_on_selectable_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -69332,6 +69523,15 @@ void q_cpfinancial_selection_changed(void* self, bool selected);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// @param self QCPFinancial*
+/// @param callback void func(QCPFinancial* self, bool selected)
+///
+void q_cpfinancial_on_selection_changed(void* self, void (*callback)(void*, bool));
+
+/// Inherited from QCPAbstractPlottable
+///
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPFinancial*
 /// @param selection QCPDataSelection*
 ///
 void q_cpfinancial_selection_changed2(void* self, void* selection);
@@ -69341,9 +69541,27 @@ void q_cpfinancial_selection_changed2(void* self, void* selection);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// @param self QCPFinancial*
+/// @param callback void func(QCPFinancial* self, QCPDataSelection* selection)
+///
+void q_cpfinancial_on_selection_changed2(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QCPAbstractPlottable
+///
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPFinancial*
 /// @param selectable enum QCP__SelectionType
 ///
 void q_cpfinancial_selectable_changed(void* self, int32_t selectable);
+
+/// Inherited from QCPAbstractPlottable
+///
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPFinancial*
+/// @param callback void func(QCPFinancial* self, enum QCP__SelectionType selectable)
+///
+void q_cpfinancial_on_selectable_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -72333,6 +72551,15 @@ void q_cperrorbars_selection_changed(void* self, bool selected);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// @param self QCPErrorBars*
+/// @param callback void func(QCPErrorBars* self, bool selected)
+///
+void q_cperrorbars_on_selection_changed(void* self, void (*callback)(void*, bool));
+
+/// Inherited from QCPAbstractPlottable
+///
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPErrorBars*
 /// @param selection QCPDataSelection*
 ///
 void q_cperrorbars_selection_changed2(void* self, void* selection);
@@ -72342,9 +72569,27 @@ void q_cperrorbars_selection_changed2(void* self, void* selection);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
 /// @param self QCPErrorBars*
+/// @param callback void func(QCPErrorBars* self, QCPDataSelection* selection)
+///
+void q_cperrorbars_on_selection_changed2(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QCPAbstractPlottable
+///
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPErrorBars*
 /// @param selectable enum QCP__SelectionType
 ///
 void q_cperrorbars_selectable_changed(void* self, int32_t selectable);
+
+/// Inherited from QCPAbstractPlottable
+///
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
+///
+/// @param self QCPErrorBars*
+/// @param callback void func(QCPErrorBars* self, enum QCP__SelectionType selectable)
+///
+void q_cperrorbars_on_selectable_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -93250,10 +93495,24 @@ void q_cppolaraxisradial_range_changed(void* self, void* newRange);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
 /// @param self QCPPolarAxisRadial*
+/// @param callback void func(QCPPolarAxisRadial* self, QCPRange* newRange)
+///
+void q_cppolaraxisradial_on_range_changed(void* self, void (*callback)(void*, void*));
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
+///
+/// @param self QCPPolarAxisRadial*
 /// @param newRange QCPRange*
 /// @param oldRange QCPRange*
 ///
 void q_cppolaraxisradial_range_changed2(void* self, void* newRange, void* oldRange);
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
+///
+/// @param self QCPPolarAxisRadial*
+/// @param callback void func(QCPPolarAxisRadial* self, QCPRange* newRange, QCPRange* oldRange)
+///
+void q_cppolaraxisradial_on_range_changed2(void* self, void (*callback)(void*, void*, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
@@ -93265,6 +93524,13 @@ void q_cppolaraxisradial_scale_type_changed(void* self, int32_t scaleType);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
 /// @param self QCPPolarAxisRadial*
+/// @param callback void func(QCPPolarAxisRadial* self, enum QCPPolarAxisRadial__ScaleType scaleType)
+///
+void q_cppolaraxisradial_on_scale_type_changed(void* self, void (*callback)(void*, int32_t));
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
+///
+/// @param self QCPPolarAxisRadial*
 /// @param parts flag of enum QCPPolarAxisRadial__SelectablePart*
 ///
 void q_cppolaraxisradial_selection_changed(void* self, const int32_t* parts);
@@ -93272,9 +93538,23 @@ void q_cppolaraxisradial_selection_changed(void* self, const int32_t* parts);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
 /// @param self QCPPolarAxisRadial*
+/// @param callback void func(QCPPolarAxisRadial* self, flag of enum QCPPolarAxisRadial__SelectablePart* parts)
+///
+void q_cppolaraxisradial_on_selection_changed(void* self, void (*callback)(void*, const int32_t*));
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
+///
+/// @param self QCPPolarAxisRadial*
 /// @param parts flag of enum QCPPolarAxisRadial__SelectablePart*
 ///
 void q_cppolaraxisradial_selectable_changed(void* self, const int32_t* parts);
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
+///
+/// @param self QCPPolarAxisRadial*
+/// @param callback void func(QCPPolarAxisRadial* self, flag of enum QCPPolarAxisRadial__SelectablePart* parts)
+///
+void q_cppolaraxisradial_on_selectable_changed(void* self, void (*callback)(void*, const int32_t*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
@@ -95929,10 +96209,24 @@ void q_cppolaraxisangular_range_changed(void* self, void* newRange);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
 /// @param self QCPPolarAxisAngular*
+/// @param callback void func(QCPPolarAxisAngular* self, QCPRange* newRange)
+///
+void q_cppolaraxisangular_on_range_changed(void* self, void (*callback)(void*, void*));
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
+///
+/// @param self QCPPolarAxisAngular*
 /// @param newRange QCPRange*
 /// @param oldRange QCPRange*
 ///
 void q_cppolaraxisangular_range_changed2(void* self, void* newRange, void* oldRange);
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
+///
+/// @param self QCPPolarAxisAngular*
+/// @param callback void func(QCPPolarAxisAngular* self, QCPRange* newRange, QCPRange* oldRange)
+///
+void q_cppolaraxisangular_on_range_changed2(void* self, void (*callback)(void*, void*, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
@@ -95944,9 +96238,23 @@ void q_cppolaraxisangular_selection_changed(void* self, const int32_t* parts);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
 /// @param self QCPPolarAxisAngular*
+/// @param callback void func(QCPPolarAxisAngular* self, flag of enum QCPPolarAxisAngular__SelectablePart* parts)
+///
+void q_cppolaraxisangular_on_selection_changed(void* self, void (*callback)(void*, const int32_t*));
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
+///
+/// @param self QCPPolarAxisAngular*
 /// @param parts flag of enum QCPPolarAxisAngular__SelectablePart*
 ///
 void q_cppolaraxisangular_selectable_changed(void* self, const int32_t* parts);
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
+///
+/// @param self QCPPolarAxisAngular*
+/// @param callback void func(QCPPolarAxisAngular* self, flag of enum QCPPolarAxisAngular__SelectablePart* parts)
+///
+void q_cppolaraxisangular_on_selectable_changed(void* self, void (*callback)(void*, const int32_t*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
@@ -102552,6 +102860,13 @@ void q_cppolargraph_selection_changed(void* self, bool selected);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// @param self QCPPolarGraph*
+/// @param callback void func(QCPPolarGraph* self, bool selected)
+///
+void q_cppolargraph_on_selection_changed(void* self, void (*callback)(void*, bool));
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
+///
+/// @param self QCPPolarGraph*
 /// @param selection QCPDataSelection*
 ///
 void q_cppolargraph_selection_changed2(void* self, void* selection);
@@ -102559,9 +102874,23 @@ void q_cppolargraph_selection_changed2(void* self, void* selection);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// @param self QCPPolarGraph*
+/// @param callback void func(QCPPolarGraph* self, QCPDataSelection* selection)
+///
+void q_cppolargraph_on_selection_changed2(void* self, void (*callback)(void*, void*));
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
+///
+/// @param self QCPPolarGraph*
 /// @param selectable enum QCP__SelectionType
 ///
 void q_cppolargraph_selectable_changed(void* self, int32_t selectable);
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
+///
+/// @param self QCPPolarGraph*
+/// @param callback void func(QCPPolarGraph* self, enum QCP__SelectionType selectable)
+///
+void q_cppolargraph_on_selectable_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///

@@ -174,10 +174,12 @@ void QLegend_BackgroundVisibleChanged(QLegend* self, bool visible) {
 
 void QLegend_Connect_BackgroundVisibleChanged(QLegend* self, intptr_t slot) {
     void (*slotFunc)(QLegend*, bool) = reinterpret_cast<void (*)(QLegend*, bool)>(slot);
-    QLegend::connect(self, &QLegend::backgroundVisibleChanged, [self, slotFunc](bool visible) {
-        bool sigval1 = visible;
-        slotFunc(self, sigval1);
-    });
+    QLegend::connect(self,
+                     static_cast<void (QLegend::*)(bool)>(&QLegend::backgroundVisibleChanged),
+                     [self, slotFunc](bool visible) {
+                         bool sigval1 = visible;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QLegend_ColorChanged(QLegend* self, QColor* color) {
@@ -186,10 +188,12 @@ void QLegend_ColorChanged(QLegend* self, QColor* color) {
 
 void QLegend_Connect_ColorChanged(QLegend* self, intptr_t slot) {
     void (*slotFunc)(QLegend*, QColor*) = reinterpret_cast<void (*)(QLegend*, QColor*)>(slot);
-    QLegend::connect(self, &QLegend::colorChanged, [self, slotFunc](QColor color) {
-        QColor* sigval1 = new QColor(color);
-        slotFunc(self, sigval1);
-    });
+    QLegend::connect(self,
+                     static_cast<void (QLegend::*)(QColor)>(&QLegend::colorChanged),
+                     [self, slotFunc](QColor color) {
+                         QColor* sigval1 = new QColor(color);
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QLegend_BorderColorChanged(QLegend* self, QColor* color) {
@@ -198,10 +202,12 @@ void QLegend_BorderColorChanged(QLegend* self, QColor* color) {
 
 void QLegend_Connect_BorderColorChanged(QLegend* self, intptr_t slot) {
     void (*slotFunc)(QLegend*, QColor*) = reinterpret_cast<void (*)(QLegend*, QColor*)>(slot);
-    QLegend::connect(self, &QLegend::borderColorChanged, [self, slotFunc](QColor color) {
-        QColor* sigval1 = new QColor(color);
-        slotFunc(self, sigval1);
-    });
+    QLegend::connect(self,
+                     static_cast<void (QLegend::*)(QColor)>(&QLegend::borderColorChanged),
+                     [self, slotFunc](QColor color) {
+                         QColor* sigval1 = new QColor(color);
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QLegend_FontChanged(QLegend* self, QFont* font) {
@@ -210,10 +216,12 @@ void QLegend_FontChanged(QLegend* self, QFont* font) {
 
 void QLegend_Connect_FontChanged(QLegend* self, intptr_t slot) {
     void (*slotFunc)(QLegend*, QFont*) = reinterpret_cast<void (*)(QLegend*, QFont*)>(slot);
-    QLegend::connect(self, &QLegend::fontChanged, [self, slotFunc](QFont font) {
-        QFont* sigval1 = new QFont(font);
-        slotFunc(self, sigval1);
-    });
+    QLegend::connect(self,
+                     static_cast<void (QLegend::*)(QFont)>(&QLegend::fontChanged),
+                     [self, slotFunc](QFont font) {
+                         QFont* sigval1 = new QFont(font);
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QLegend_LabelColorChanged(QLegend* self, QColor* color) {
@@ -222,10 +230,12 @@ void QLegend_LabelColorChanged(QLegend* self, QColor* color) {
 
 void QLegend_Connect_LabelColorChanged(QLegend* self, intptr_t slot) {
     void (*slotFunc)(QLegend*, QColor*) = reinterpret_cast<void (*)(QLegend*, QColor*)>(slot);
-    QLegend::connect(self, &QLegend::labelColorChanged, [self, slotFunc](QColor color) {
-        QColor* sigval1 = new QColor(color);
-        slotFunc(self, sigval1);
-    });
+    QLegend::connect(self,
+                     static_cast<void (QLegend::*)(QColor)>(&QLegend::labelColorChanged),
+                     [self, slotFunc](QColor color) {
+                         QColor* sigval1 = new QColor(color);
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QLegend_ReverseMarkersChanged(QLegend* self, bool reverseMarkers) {
@@ -234,10 +244,12 @@ void QLegend_ReverseMarkersChanged(QLegend* self, bool reverseMarkers) {
 
 void QLegend_Connect_ReverseMarkersChanged(QLegend* self, intptr_t slot) {
     void (*slotFunc)(QLegend*, bool) = reinterpret_cast<void (*)(QLegend*, bool)>(slot);
-    QLegend::connect(self, &QLegend::reverseMarkersChanged, [self, slotFunc](bool reverseMarkers) {
-        bool sigval1 = reverseMarkers;
-        slotFunc(self, sigval1);
-    });
+    QLegend::connect(self,
+                     static_cast<void (QLegend::*)(bool)>(&QLegend::reverseMarkersChanged),
+                     [self, slotFunc](bool reverseMarkers) {
+                         bool sigval1 = reverseMarkers;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QLegend_ShowToolTipsChanged(QLegend* self, bool showToolTips) {
@@ -246,10 +258,12 @@ void QLegend_ShowToolTipsChanged(QLegend* self, bool showToolTips) {
 
 void QLegend_Connect_ShowToolTipsChanged(QLegend* self, intptr_t slot) {
     void (*slotFunc)(QLegend*, bool) = reinterpret_cast<void (*)(QLegend*, bool)>(slot);
-    QLegend::connect(self, &QLegend::showToolTipsChanged, [self, slotFunc](bool showToolTips) {
-        bool sigval1 = showToolTips;
-        slotFunc(self, sigval1);
-    });
+    QLegend::connect(self,
+                     static_cast<void (QLegend::*)(bool)>(&QLegend::showToolTipsChanged),
+                     [self, slotFunc](bool showToolTips) {
+                         bool sigval1 = showToolTips;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QLegend_MarkerShapeChanged(QLegend* self, int shape) {
@@ -258,10 +272,12 @@ void QLegend_MarkerShapeChanged(QLegend* self, int shape) {
 
 void QLegend_Connect_MarkerShapeChanged(QLegend* self, intptr_t slot) {
     void (*slotFunc)(QLegend*, int) = reinterpret_cast<void (*)(QLegend*, int)>(slot);
-    QLegend::connect(self, &QLegend::markerShapeChanged, [self, slotFunc](QLegend::MarkerShape shape) {
-        int sigval1 = static_cast<int>(shape);
-        slotFunc(self, sigval1);
-    });
+    QLegend::connect(self,
+                     static_cast<void (QLegend::*)(QLegend::MarkerShape)>(&QLegend::markerShapeChanged),
+                     [self, slotFunc](QLegend::MarkerShape shape) {
+                         int sigval1 = static_cast<int>(shape);
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QLegend_AttachedToChartChanged(QLegend* self, bool attachedToChart) {
@@ -270,10 +286,12 @@ void QLegend_AttachedToChartChanged(QLegend* self, bool attachedToChart) {
 
 void QLegend_Connect_AttachedToChartChanged(QLegend* self, intptr_t slot) {
     void (*slotFunc)(QLegend*, bool) = reinterpret_cast<void (*)(QLegend*, bool)>(slot);
-    QLegend::connect(self, &QLegend::attachedToChartChanged, [self, slotFunc](bool attachedToChart) {
-        bool sigval1 = attachedToChart;
-        slotFunc(self, sigval1);
-    });
+    QLegend::connect(self,
+                     static_cast<void (QLegend::*)(bool)>(&QLegend::attachedToChartChanged),
+                     [self, slotFunc](bool attachedToChart) {
+                         bool sigval1 = attachedToChart;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QLegend_InteractiveChanged(QLegend* self, bool interactive) {
@@ -282,10 +300,12 @@ void QLegend_InteractiveChanged(QLegend* self, bool interactive) {
 
 void QLegend_Connect_InteractiveChanged(QLegend* self, intptr_t slot) {
     void (*slotFunc)(QLegend*, bool) = reinterpret_cast<void (*)(QLegend*, bool)>(slot);
-    QLegend::connect(self, &QLegend::interactiveChanged, [self, slotFunc](bool interactive) {
-        bool sigval1 = interactive;
-        slotFunc(self, sigval1);
-    });
+    QLegend::connect(self,
+                     static_cast<void (QLegend::*)(bool)>(&QLegend::interactiveChanged),
+                     [self, slotFunc](bool interactive) {
+                         bool sigval1 = interactive;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QLegend_SetBackgroundVisible1(QLegend* self, bool visible) {

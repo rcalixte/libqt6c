@@ -89,10 +89,12 @@ void QScatterSeries_ColorChanged(QScatterSeries* self, QColor* color) {
 
 void QScatterSeries_Connect_ColorChanged(QScatterSeries* self, intptr_t slot) {
     void (*slotFunc)(QScatterSeries*, QColor*) = reinterpret_cast<void (*)(QScatterSeries*, QColor*)>(slot);
-    QScatterSeries::connect(self, &QScatterSeries::colorChanged, [self, slotFunc](QColor color) {
-        QColor* sigval1 = new QColor(color);
-        slotFunc(self, sigval1);
-    });
+    QScatterSeries::connect(self,
+                            static_cast<void (QScatterSeries::*)(QColor)>(&QScatterSeries::colorChanged),
+                            [self, slotFunc](QColor color) {
+                                QColor* sigval1 = new QColor(color);
+                                slotFunc(self, sigval1);
+                            });
 }
 
 void QScatterSeries_BorderColorChanged(QScatterSeries* self, QColor* color) {
@@ -101,10 +103,12 @@ void QScatterSeries_BorderColorChanged(QScatterSeries* self, QColor* color) {
 
 void QScatterSeries_Connect_BorderColorChanged(QScatterSeries* self, intptr_t slot) {
     void (*slotFunc)(QScatterSeries*, QColor*) = reinterpret_cast<void (*)(QScatterSeries*, QColor*)>(slot);
-    QScatterSeries::connect(self, &QScatterSeries::borderColorChanged, [self, slotFunc](QColor color) {
-        QColor* sigval1 = new QColor(color);
-        slotFunc(self, sigval1);
-    });
+    QScatterSeries::connect(self,
+                            static_cast<void (QScatterSeries::*)(QColor)>(&QScatterSeries::borderColorChanged),
+                            [self, slotFunc](QColor color) {
+                                QColor* sigval1 = new QColor(color);
+                                slotFunc(self, sigval1);
+                            });
 }
 
 void QScatterSeries_MarkerShapeChanged(QScatterSeries* self, int shape) {
@@ -113,10 +117,12 @@ void QScatterSeries_MarkerShapeChanged(QScatterSeries* self, int shape) {
 
 void QScatterSeries_Connect_MarkerShapeChanged(QScatterSeries* self, intptr_t slot) {
     void (*slotFunc)(QScatterSeries*, int) = reinterpret_cast<void (*)(QScatterSeries*, int)>(slot);
-    QScatterSeries::connect(self, &QScatterSeries::markerShapeChanged, [self, slotFunc](QScatterSeries::MarkerShape shape) {
-        int sigval1 = static_cast<int>(shape);
-        slotFunc(self, sigval1);
-    });
+    QScatterSeries::connect(self,
+                            static_cast<void (QScatterSeries::*)(QScatterSeries::MarkerShape)>(&QScatterSeries::markerShapeChanged),
+                            [self, slotFunc](QScatterSeries::MarkerShape shape) {
+                                int sigval1 = static_cast<int>(shape);
+                                slotFunc(self, sigval1);
+                            });
 }
 
 void QScatterSeries_MarkerSizeChanged(QScatterSeries* self, double size) {
@@ -125,10 +131,12 @@ void QScatterSeries_MarkerSizeChanged(QScatterSeries* self, double size) {
 
 void QScatterSeries_Connect_MarkerSizeChanged(QScatterSeries* self, intptr_t slot) {
     void (*slotFunc)(QScatterSeries*, double) = reinterpret_cast<void (*)(QScatterSeries*, double)>(slot);
-    QScatterSeries::connect(self, &QScatterSeries::markerSizeChanged, [self, slotFunc](qreal size) {
-        double sigval1 = static_cast<double>(size);
-        slotFunc(self, sigval1);
-    });
+    QScatterSeries::connect(self,
+                            static_cast<void (QScatterSeries::*)(qreal)>(&QScatterSeries::markerSizeChanged),
+                            [self, slotFunc](qreal size) {
+                                double sigval1 = static_cast<double>(size);
+                                slotFunc(self, sigval1);
+                            });
 }
 
 // Base class handler implementation

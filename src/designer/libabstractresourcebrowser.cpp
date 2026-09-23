@@ -81,18 +81,20 @@ void QDesignerResourceBrowserInterface_CurrentPathChanged(QDesignerResourceBrows
 
 void QDesignerResourceBrowserInterface_Connect_CurrentPathChanged(QDesignerResourceBrowserInterface* self, intptr_t slot) {
     void (*slotFunc)(QDesignerResourceBrowserInterface*, const char*) = reinterpret_cast<void (*)(QDesignerResourceBrowserInterface*, const char*)>(slot);
-    QDesignerResourceBrowserInterface::connect(self, &QDesignerResourceBrowserInterface::currentPathChanged, [self, slotFunc](const QString& filePath) {
-        const auto filePath_ret = filePath;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray filePath_b = filePath_ret.toUtf8();
-        auto filePath_str_len = filePath_b.length();
-        char* filePath_str = static_cast<char*>(malloc(filePath_str_len + 1));
-        memcpy(filePath_str, filePath_b.data(), filePath_str_len);
-        filePath_str[filePath_str_len] = '\0';
-        const char* sigval1 = filePath_str;
-        slotFunc(self, sigval1);
-        libqt_free(filePath_str);
-    });
+    QDesignerResourceBrowserInterface::connect(self,
+                                               static_cast<void (QDesignerResourceBrowserInterface::*)(const QString&)>(&QDesignerResourceBrowserInterface::currentPathChanged),
+                                               [self, slotFunc](const QString& filePath) {
+                                                   const auto filePath_ret = filePath;
+                                                   // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                                   QByteArray filePath_b = filePath_ret.toUtf8();
+                                                   auto filePath_str_len = filePath_b.length();
+                                                   char* filePath_str = static_cast<char*>(malloc(filePath_str_len + 1));
+                                                   memcpy(filePath_str, filePath_b.data(), filePath_str_len);
+                                                   filePath_str[filePath_str_len] = '\0';
+                                                   const char* sigval1 = filePath_str;
+                                                   slotFunc(self, sigval1);
+                                                   libqt_free(filePath_str);
+                                               });
 }
 
 void QDesignerResourceBrowserInterface_PathActivated(QDesignerResourceBrowserInterface* self, const libqt_string filePath) {
@@ -102,18 +104,20 @@ void QDesignerResourceBrowserInterface_PathActivated(QDesignerResourceBrowserInt
 
 void QDesignerResourceBrowserInterface_Connect_PathActivated(QDesignerResourceBrowserInterface* self, intptr_t slot) {
     void (*slotFunc)(QDesignerResourceBrowserInterface*, const char*) = reinterpret_cast<void (*)(QDesignerResourceBrowserInterface*, const char*)>(slot);
-    QDesignerResourceBrowserInterface::connect(self, &QDesignerResourceBrowserInterface::pathActivated, [self, slotFunc](const QString& filePath) {
-        const auto filePath_ret = filePath;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray filePath_b = filePath_ret.toUtf8();
-        auto filePath_str_len = filePath_b.length();
-        char* filePath_str = static_cast<char*>(malloc(filePath_str_len + 1));
-        memcpy(filePath_str, filePath_b.data(), filePath_str_len);
-        filePath_str[filePath_str_len] = '\0';
-        const char* sigval1 = filePath_str;
-        slotFunc(self, sigval1);
-        libqt_free(filePath_str);
-    });
+    QDesignerResourceBrowserInterface::connect(self,
+                                               static_cast<void (QDesignerResourceBrowserInterface::*)(const QString&)>(&QDesignerResourceBrowserInterface::pathActivated),
+                                               [self, slotFunc](const QString& filePath) {
+                                                   const auto filePath_ret = filePath;
+                                                   // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                                   QByteArray filePath_b = filePath_ret.toUtf8();
+                                                   auto filePath_str_len = filePath_b.length();
+                                                   char* filePath_str = static_cast<char*>(malloc(filePath_str_len + 1));
+                                                   memcpy(filePath_str, filePath_b.data(), filePath_str_len);
+                                                   filePath_str[filePath_str_len] = '\0';
+                                                   const char* sigval1 = filePath_str;
+                                                   slotFunc(self, sigval1);
+                                                   libqt_free(filePath_str);
+                                               });
 }
 
 // Base class handler implementation

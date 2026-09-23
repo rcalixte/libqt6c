@@ -58,9 +58,11 @@ void QCandlestickModelMapper_ModelReplaced(QCandlestickModelMapper* self) {
 
 void QCandlestickModelMapper_Connect_ModelReplaced(QCandlestickModelMapper* self, intptr_t slot) {
     void (*slotFunc)(QCandlestickModelMapper*) = reinterpret_cast<void (*)(QCandlestickModelMapper*)>(slot);
-    QCandlestickModelMapper::connect(self, &QCandlestickModelMapper::modelReplaced, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QCandlestickModelMapper::connect(self,
+                                     static_cast<void (QCandlestickModelMapper::*)()>(&QCandlestickModelMapper::modelReplaced),
+                                     [self, slotFunc]() {
+                                         slotFunc(self);
+                                     });
 }
 
 void QCandlestickModelMapper_SeriesReplaced(QCandlestickModelMapper* self) {
@@ -69,9 +71,11 @@ void QCandlestickModelMapper_SeriesReplaced(QCandlestickModelMapper* self) {
 
 void QCandlestickModelMapper_Connect_SeriesReplaced(QCandlestickModelMapper* self, intptr_t slot) {
     void (*slotFunc)(QCandlestickModelMapper*) = reinterpret_cast<void (*)(QCandlestickModelMapper*)>(slot);
-    QCandlestickModelMapper::connect(self, &QCandlestickModelMapper::seriesReplaced, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QCandlestickModelMapper::connect(self,
+                                     static_cast<void (QCandlestickModelMapper::*)()>(&QCandlestickModelMapper::seriesReplaced),
+                                     [self, slotFunc]() {
+                                         slotFunc(self);
+                                     });
 }
 
 // Base class handler implementation

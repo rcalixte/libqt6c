@@ -392,6 +392,10 @@ void q_websocket_error2(void* self, int32_t error) {
     QWebSocket_Error2((QWebSocket*)self, error);
 }
 
+void q_websocket_on_error2(void* self, void (*callback)(void*, int32_t)) {
+    QWebSocket_Connect_Error2((QWebSocket*)self, (intptr_t)callback);
+}
+
 void q_websocket_error_occurred(void* self, int32_t error) {
     QWebSocket_ErrorOccurred((QWebSocket*)self, error);
 }

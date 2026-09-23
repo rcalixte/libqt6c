@@ -37,9 +37,11 @@ void KConfigDialogManager_SettingsChanged(KConfigDialogManager* self) {
 
 void KConfigDialogManager_Connect_SettingsChanged(KConfigDialogManager* self, intptr_t slot) {
     void (*slotFunc)(KConfigDialogManager*) = reinterpret_cast<void (*)(KConfigDialogManager*)>(slot);
-    KConfigDialogManager::connect(self, &KConfigDialogManager::settingsChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KConfigDialogManager::connect(self,
+                                  static_cast<void (KConfigDialogManager::*)()>(&KConfigDialogManager::settingsChanged),
+                                  [self, slotFunc]() {
+                                      slotFunc(self);
+                                  });
 }
 
 void KConfigDialogManager_WidgetModified(KConfigDialogManager* self) {
@@ -48,9 +50,11 @@ void KConfigDialogManager_WidgetModified(KConfigDialogManager* self) {
 
 void KConfigDialogManager_Connect_WidgetModified(KConfigDialogManager* self, intptr_t slot) {
     void (*slotFunc)(KConfigDialogManager*) = reinterpret_cast<void (*)(KConfigDialogManager*)>(slot);
-    KConfigDialogManager::connect(self, &KConfigDialogManager::widgetModified, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    KConfigDialogManager::connect(self,
+                                  static_cast<void (KConfigDialogManager::*)()>(&KConfigDialogManager::widgetModified),
+                                  [self, slotFunc]() {
+                                      slotFunc(self);
+                                  });
 }
 
 void KConfigDialogManager_AddWidget(KConfigDialogManager* self, QWidget* widget) {

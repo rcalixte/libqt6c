@@ -143,6 +143,10 @@ void q_printdialog_accepted(void* self, void* printer) {
     QPrintDialog_Accepted((QPrintDialog*)self, (QPrinter*)printer);
 }
 
+void q_printdialog_on_accepted(void* self, void (*callback)(void*, void*)) {
+    QPrintDialog_Connect_Accepted((QPrintDialog*)self, (intptr_t)callback);
+}
+
 const char* q_printdialog_tr2(const char* s, const char* c) {
     libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);

@@ -131,36 +131,72 @@ void q_audiodecoder_buffer_available_changed(void* self, bool param1) {
     QAudioDecoder_BufferAvailableChanged((QAudioDecoder*)self, param1);
 }
 
+void q_audiodecoder_on_buffer_available_changed(void* self, void (*callback)(void*, bool)) {
+    QAudioDecoder_Connect_BufferAvailableChanged((QAudioDecoder*)self, (intptr_t)callback);
+}
+
 void q_audiodecoder_buffer_ready(void* self) {
     QAudioDecoder_BufferReady((QAudioDecoder*)self);
+}
+
+void q_audiodecoder_on_buffer_ready(void* self, void (*callback)(void*)) {
+    QAudioDecoder_Connect_BufferReady((QAudioDecoder*)self, (intptr_t)callback);
 }
 
 void q_audiodecoder_finished(void* self) {
     QAudioDecoder_Finished((QAudioDecoder*)self);
 }
 
+void q_audiodecoder_on_finished(void* self, void (*callback)(void*)) {
+    QAudioDecoder_Connect_Finished((QAudioDecoder*)self, (intptr_t)callback);
+}
+
 void q_audiodecoder_is_decoding_changed(void* self, bool param1) {
     QAudioDecoder_IsDecodingChanged((QAudioDecoder*)self, param1);
+}
+
+void q_audiodecoder_on_is_decoding_changed(void* self, void (*callback)(void*, bool)) {
+    QAudioDecoder_Connect_IsDecodingChanged((QAudioDecoder*)self, (intptr_t)callback);
 }
 
 void q_audiodecoder_format_changed(void* self, void* format) {
     QAudioDecoder_FormatChanged((QAudioDecoder*)self, (QAudioFormat*)format);
 }
 
+void q_audiodecoder_on_format_changed(void* self, void (*callback)(void*, void*)) {
+    QAudioDecoder_Connect_FormatChanged((QAudioDecoder*)self, (intptr_t)callback);
+}
+
 void q_audiodecoder_error2(void* self, int32_t error) {
     QAudioDecoder_Error2((QAudioDecoder*)self, error);
+}
+
+void q_audiodecoder_on_error2(void* self, void (*callback)(void*, int32_t)) {
+    QAudioDecoder_Connect_Error2((QAudioDecoder*)self, (intptr_t)callback);
 }
 
 void q_audiodecoder_source_changed(void* self) {
     QAudioDecoder_SourceChanged((QAudioDecoder*)self);
 }
 
+void q_audiodecoder_on_source_changed(void* self, void (*callback)(void*)) {
+    QAudioDecoder_Connect_SourceChanged((QAudioDecoder*)self, (intptr_t)callback);
+}
+
 void q_audiodecoder_position_changed(void* self, int64_t position) {
     QAudioDecoder_PositionChanged((QAudioDecoder*)self, position);
 }
 
+void q_audiodecoder_on_position_changed(void* self, void (*callback)(void*, int64_t)) {
+    QAudioDecoder_Connect_PositionChanged((QAudioDecoder*)self, (intptr_t)callback);
+}
+
 void q_audiodecoder_duration_changed(void* self, int64_t duration) {
     QAudioDecoder_DurationChanged((QAudioDecoder*)self, duration);
+}
+
+void q_audiodecoder_on_duration_changed(void* self, void (*callback)(void*, int64_t)) {
+    QAudioDecoder_Connect_DurationChanged((QAudioDecoder*)self, (intptr_t)callback);
 }
 
 const char* q_audiodecoder_tr2(const char* s, const char* c) {

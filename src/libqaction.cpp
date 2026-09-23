@@ -351,9 +351,11 @@ void QAction_Changed(QAction* self) {
 
 void QAction_Connect_Changed(QAction* self, intptr_t slot) {
     void (*slotFunc)(QAction*) = reinterpret_cast<void (*)(QAction*)>(slot);
-    QAction::connect(self, &QAction::changed, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QAction::connect(self,
+                     static_cast<void (QAction::*)()>(&QAction::changed),
+                     [self, slotFunc]() {
+                         slotFunc(self);
+                     });
 }
 
 void QAction_EnabledChanged(QAction* self, bool enabled) {
@@ -362,10 +364,12 @@ void QAction_EnabledChanged(QAction* self, bool enabled) {
 
 void QAction_Connect_EnabledChanged(QAction* self, intptr_t slot) {
     void (*slotFunc)(QAction*, bool) = reinterpret_cast<void (*)(QAction*, bool)>(slot);
-    QAction::connect(self, &QAction::enabledChanged, [self, slotFunc](bool enabled) {
-        bool sigval1 = enabled;
-        slotFunc(self, sigval1);
-    });
+    QAction::connect(self,
+                     static_cast<void (QAction::*)(bool)>(&QAction::enabledChanged),
+                     [self, slotFunc](bool enabled) {
+                         bool sigval1 = enabled;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QAction_CheckableChanged(QAction* self, bool checkable) {
@@ -374,10 +378,12 @@ void QAction_CheckableChanged(QAction* self, bool checkable) {
 
 void QAction_Connect_CheckableChanged(QAction* self, intptr_t slot) {
     void (*slotFunc)(QAction*, bool) = reinterpret_cast<void (*)(QAction*, bool)>(slot);
-    QAction::connect(self, &QAction::checkableChanged, [self, slotFunc](bool checkable) {
-        bool sigval1 = checkable;
-        slotFunc(self, sigval1);
-    });
+    QAction::connect(self,
+                     static_cast<void (QAction::*)(bool)>(&QAction::checkableChanged),
+                     [self, slotFunc](bool checkable) {
+                         bool sigval1 = checkable;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 void QAction_VisibleChanged(QAction* self) {
@@ -386,9 +392,11 @@ void QAction_VisibleChanged(QAction* self) {
 
 void QAction_Connect_VisibleChanged(QAction* self, intptr_t slot) {
     void (*slotFunc)(QAction*) = reinterpret_cast<void (*)(QAction*)>(slot);
-    QAction::connect(self, &QAction::visibleChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QAction::connect(self,
+                     static_cast<void (QAction::*)()>(&QAction::visibleChanged),
+                     [self, slotFunc]() {
+                         slotFunc(self);
+                     });
 }
 
 void QAction_Triggered(QAction* self) {
@@ -397,9 +405,11 @@ void QAction_Triggered(QAction* self) {
 
 void QAction_Connect_Triggered(QAction* self, intptr_t slot) {
     void (*slotFunc)(QAction*) = reinterpret_cast<void (*)(QAction*)>(slot);
-    QAction::connect(self, &QAction::triggered, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QAction::connect(self,
+                     static_cast<void (QAction::*)(bool)>(&QAction::triggered),
+                     [self, slotFunc]() {
+                         slotFunc(self);
+                     });
 }
 
 void QAction_Hovered(QAction* self) {
@@ -408,9 +418,11 @@ void QAction_Hovered(QAction* self) {
 
 void QAction_Connect_Hovered(QAction* self, intptr_t slot) {
     void (*slotFunc)(QAction*) = reinterpret_cast<void (*)(QAction*)>(slot);
-    QAction::connect(self, &QAction::hovered, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QAction::connect(self,
+                     static_cast<void (QAction::*)()>(&QAction::hovered),
+                     [self, slotFunc]() {
+                         slotFunc(self);
+                     });
 }
 
 void QAction_Toggled(QAction* self, bool param1) {
@@ -419,10 +431,12 @@ void QAction_Toggled(QAction* self, bool param1) {
 
 void QAction_Connect_Toggled(QAction* self, intptr_t slot) {
     void (*slotFunc)(QAction*, bool) = reinterpret_cast<void (*)(QAction*, bool)>(slot);
-    QAction::connect(self, &QAction::toggled, [self, slotFunc](bool param1) {
-        bool sigval1 = param1;
-        slotFunc(self, sigval1);
-    });
+    QAction::connect(self,
+                     static_cast<void (QAction::*)(bool)>(&QAction::toggled),
+                     [self, slotFunc](bool param1) {
+                         bool sigval1 = param1;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 bool QAction_ShowStatusText1(QAction* self, QObject* object) {
@@ -435,10 +449,12 @@ void QAction_Triggered1(QAction* self, bool checked) {
 
 void QAction_Connect_Triggered1(QAction* self, intptr_t slot) {
     void (*slotFunc)(QAction*, bool) = reinterpret_cast<void (*)(QAction*, bool)>(slot);
-    QAction::connect(self, &QAction::triggered, [self, slotFunc](bool checked) {
-        bool sigval1 = checked;
-        slotFunc(self, sigval1);
-    });
+    QAction::connect(self,
+                     static_cast<void (QAction::*)(bool)>(&QAction::triggered),
+                     [self, slotFunc](bool checked) {
+                         bool sigval1 = checked;
+                         slotFunc(self, sigval1);
+                     });
 }
 
 // Base class handler implementation

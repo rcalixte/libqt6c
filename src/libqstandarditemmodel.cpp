@@ -1109,10 +1109,12 @@ void QStandardItemModel_ItemChanged(QStandardItemModel* self, QStandardItem* ite
 
 void QStandardItemModel_Connect_ItemChanged(QStandardItemModel* self, intptr_t slot) {
     void (*slotFunc)(QStandardItemModel*, QStandardItem*) = reinterpret_cast<void (*)(QStandardItemModel*, QStandardItem*)>(slot);
-    QStandardItemModel::connect(self, &QStandardItemModel::itemChanged, [self, slotFunc](QStandardItem* item) {
-        QStandardItem* sigval1 = item;
-        slotFunc(self, sigval1);
-    });
+    QStandardItemModel::connect(self,
+                                static_cast<void (QStandardItemModel::*)(QStandardItem*)>(&QStandardItemModel::itemChanged),
+                                [self, slotFunc](QStandardItem* item) {
+                                    QStandardItem* sigval1 = item;
+                                    slotFunc(self, sigval1);
+                                });
 }
 
 QStandardItem* QStandardItemModel_Item2(const QStandardItemModel* self, int row, int column) {

@@ -127,9 +127,11 @@ void QGroupBox_Clicked(QGroupBox* self) {
 
 void QGroupBox_Connect_Clicked(QGroupBox* self, intptr_t slot) {
     void (*slotFunc)(QGroupBox*) = reinterpret_cast<void (*)(QGroupBox*)>(slot);
-    QGroupBox::connect(self, &QGroupBox::clicked, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QGroupBox::connect(self,
+                       static_cast<void (QGroupBox::*)(bool)>(&QGroupBox::clicked),
+                       [self, slotFunc]() {
+                           slotFunc(self);
+                       });
 }
 
 void QGroupBox_Toggled(QGroupBox* self, bool param1) {
@@ -138,10 +140,12 @@ void QGroupBox_Toggled(QGroupBox* self, bool param1) {
 
 void QGroupBox_Connect_Toggled(QGroupBox* self, intptr_t slot) {
     void (*slotFunc)(QGroupBox*, bool) = reinterpret_cast<void (*)(QGroupBox*, bool)>(slot);
-    QGroupBox::connect(self, &QGroupBox::toggled, [self, slotFunc](bool param1) {
-        bool sigval1 = param1;
-        slotFunc(self, sigval1);
-    });
+    QGroupBox::connect(self,
+                       static_cast<void (QGroupBox::*)(bool)>(&QGroupBox::toggled),
+                       [self, slotFunc](bool param1) {
+                           bool sigval1 = param1;
+                           slotFunc(self, sigval1);
+                       });
 }
 
 bool QGroupBox_Event(QGroupBox* self, QEvent* event) {
@@ -221,10 +225,12 @@ void QGroupBox_Clicked1(QGroupBox* self, bool checked) {
 
 void QGroupBox_Connect_Clicked1(QGroupBox* self, intptr_t slot) {
     void (*slotFunc)(QGroupBox*, bool) = reinterpret_cast<void (*)(QGroupBox*, bool)>(slot);
-    QGroupBox::connect(self, &QGroupBox::clicked, [self, slotFunc](bool checked) {
-        bool sigval1 = checked;
-        slotFunc(self, sigval1);
-    });
+    QGroupBox::connect(self,
+                       static_cast<void (QGroupBox::*)(bool)>(&QGroupBox::clicked),
+                       [self, slotFunc](bool checked) {
+                           bool sigval1 = checked;
+                           slotFunc(self, sigval1);
+                       });
 }
 
 // Base class handler implementation

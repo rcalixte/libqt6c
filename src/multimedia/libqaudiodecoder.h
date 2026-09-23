@@ -205,17 +205,38 @@ void q_audiodecoder_stop(void* self);
 ///
 void q_audiodecoder_buffer_available_changed(void* self, bool param1);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiodecoder.html#bufferAvailableChanged)
+///
+/// @param self QAudioDecoder*
+/// @param callback void func(QAudioDecoder* self, bool param1)
+///
+void q_audiodecoder_on_buffer_available_changed(void* self, void (*callback)(void*, bool));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodecoder.html#bufferReady)
 ///
 /// @param self QAudioDecoder*
 ///
 void q_audiodecoder_buffer_ready(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiodecoder.html#bufferReady)
+///
+/// @param self QAudioDecoder*
+/// @param callback void func(QAudioDecoder* self)
+///
+void q_audiodecoder_on_buffer_ready(void* self, void (*callback)(void*));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodecoder.html#finished)
 ///
 /// @param self QAudioDecoder*
 ///
 void q_audiodecoder_finished(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiodecoder.html#finished)
+///
+/// @param self QAudioDecoder*
+/// @param callback void func(QAudioDecoder* self)
+///
+void q_audiodecoder_on_finished(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodecoder.html#isDecodingChanged)
 ///
@@ -224,12 +245,26 @@ void q_audiodecoder_finished(void* self);
 ///
 void q_audiodecoder_is_decoding_changed(void* self, bool param1);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiodecoder.html#isDecodingChanged)
+///
+/// @param self QAudioDecoder*
+/// @param callback void func(QAudioDecoder* self, bool param1)
+///
+void q_audiodecoder_on_is_decoding_changed(void* self, void (*callback)(void*, bool));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodecoder.html#formatChanged)
 ///
 /// @param self QAudioDecoder*
 /// @param format QAudioFormat*
 ///
 void q_audiodecoder_format_changed(void* self, void* format);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiodecoder.html#formatChanged)
+///
+/// @param self QAudioDecoder*
+/// @param callback void func(QAudioDecoder* self, QAudioFormat* format)
+///
+void q_audiodecoder_on_format_changed(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodecoder.html#error)
 ///
@@ -238,11 +273,25 @@ void q_audiodecoder_format_changed(void* self, void* format);
 ///
 void q_audiodecoder_error2(void* self, int32_t error);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiodecoder.html#error)
+///
+/// @param self QAudioDecoder*
+/// @param callback void func(QAudioDecoder* self, enum QAudioDecoder__Error error)
+///
+void q_audiodecoder_on_error2(void* self, void (*callback)(void*, int32_t));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodecoder.html#sourceChanged)
 ///
 /// @param self QAudioDecoder*
 ///
 void q_audiodecoder_source_changed(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiodecoder.html#sourceChanged)
+///
+/// @param self QAudioDecoder*
+/// @param callback void func(QAudioDecoder* self)
+///
+void q_audiodecoder_on_source_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodecoder.html#positionChanged)
 ///
@@ -251,12 +300,26 @@ void q_audiodecoder_source_changed(void* self);
 ///
 void q_audiodecoder_position_changed(void* self, int64_t position);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiodecoder.html#positionChanged)
+///
+/// @param self QAudioDecoder*
+/// @param callback void func(QAudioDecoder* self, int64_t position)
+///
+void q_audiodecoder_on_position_changed(void* self, void (*callback)(void*, int64_t));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodecoder.html#durationChanged)
 ///
 /// @param self QAudioDecoder*
 /// @param duration int64_t
 ///
 void q_audiodecoder_duration_changed(void* self, int64_t duration);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qaudiodecoder.html#durationChanged)
+///
+/// @param self QAudioDecoder*
+/// @param callback void func(QAudioDecoder* self, int64_t duration)
+///
+void q_audiodecoder_on_duration_changed(void* self, void (*callback)(void*, int64_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

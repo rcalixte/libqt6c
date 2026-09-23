@@ -188,10 +188,12 @@ void QTextBrowser_BackwardAvailable(QTextBrowser* self, bool param1) {
 
 void QTextBrowser_Connect_BackwardAvailable(QTextBrowser* self, intptr_t slot) {
     void (*slotFunc)(QTextBrowser*, bool) = reinterpret_cast<void (*)(QTextBrowser*, bool)>(slot);
-    QTextBrowser::connect(self, &QTextBrowser::backwardAvailable, [self, slotFunc](bool param1) {
-        bool sigval1 = param1;
-        slotFunc(self, sigval1);
-    });
+    QTextBrowser::connect(self,
+                          static_cast<void (QTextBrowser::*)(bool)>(&QTextBrowser::backwardAvailable),
+                          [self, slotFunc](bool param1) {
+                              bool sigval1 = param1;
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QTextBrowser_ForwardAvailable(QTextBrowser* self, bool param1) {
@@ -200,10 +202,12 @@ void QTextBrowser_ForwardAvailable(QTextBrowser* self, bool param1) {
 
 void QTextBrowser_Connect_ForwardAvailable(QTextBrowser* self, intptr_t slot) {
     void (*slotFunc)(QTextBrowser*, bool) = reinterpret_cast<void (*)(QTextBrowser*, bool)>(slot);
-    QTextBrowser::connect(self, &QTextBrowser::forwardAvailable, [self, slotFunc](bool param1) {
-        bool sigval1 = param1;
-        slotFunc(self, sigval1);
-    });
+    QTextBrowser::connect(self,
+                          static_cast<void (QTextBrowser::*)(bool)>(&QTextBrowser::forwardAvailable),
+                          [self, slotFunc](bool param1) {
+                              bool sigval1 = param1;
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QTextBrowser_HistoryChanged(QTextBrowser* self) {
@@ -212,9 +216,11 @@ void QTextBrowser_HistoryChanged(QTextBrowser* self) {
 
 void QTextBrowser_Connect_HistoryChanged(QTextBrowser* self, intptr_t slot) {
     void (*slotFunc)(QTextBrowser*) = reinterpret_cast<void (*)(QTextBrowser*)>(slot);
-    QTextBrowser::connect(self, &QTextBrowser::historyChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QTextBrowser::connect(self,
+                          static_cast<void (QTextBrowser::*)()>(&QTextBrowser::historyChanged),
+                          [self, slotFunc]() {
+                              slotFunc(self);
+                          });
 }
 
 void QTextBrowser_SourceChanged(QTextBrowser* self, const QUrl* param1) {
@@ -223,12 +229,14 @@ void QTextBrowser_SourceChanged(QTextBrowser* self, const QUrl* param1) {
 
 void QTextBrowser_Connect_SourceChanged(QTextBrowser* self, intptr_t slot) {
     void (*slotFunc)(QTextBrowser*, QUrl*) = reinterpret_cast<void (*)(QTextBrowser*, QUrl*)>(slot);
-    QTextBrowser::connect(self, &QTextBrowser::sourceChanged, [self, slotFunc](const QUrl& param1) {
-        const QUrl& param1_ret = param1;
-        // Cast returned reference into pointer
-        QUrl* sigval1 = const_cast<QUrl*>(&param1_ret);
-        slotFunc(self, sigval1);
-    });
+    QTextBrowser::connect(self,
+                          static_cast<void (QTextBrowser::*)(const QUrl&)>(&QTextBrowser::sourceChanged),
+                          [self, slotFunc](const QUrl& param1) {
+                              const QUrl& param1_ret = param1;
+                              // Cast returned reference into pointer
+                              QUrl* sigval1 = const_cast<QUrl*>(&param1_ret);
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QTextBrowser_Highlighted(QTextBrowser* self, const QUrl* param1) {
@@ -237,12 +245,14 @@ void QTextBrowser_Highlighted(QTextBrowser* self, const QUrl* param1) {
 
 void QTextBrowser_Connect_Highlighted(QTextBrowser* self, intptr_t slot) {
     void (*slotFunc)(QTextBrowser*, QUrl*) = reinterpret_cast<void (*)(QTextBrowser*, QUrl*)>(slot);
-    QTextBrowser::connect(self, &QTextBrowser::highlighted, [self, slotFunc](const QUrl& param1) {
-        const QUrl& param1_ret = param1;
-        // Cast returned reference into pointer
-        QUrl* sigval1 = const_cast<QUrl*>(&param1_ret);
-        slotFunc(self, sigval1);
-    });
+    QTextBrowser::connect(self,
+                          static_cast<void (QTextBrowser::*)(const QUrl&)>(&QTextBrowser::highlighted),
+                          [self, slotFunc](const QUrl& param1) {
+                              const QUrl& param1_ret = param1;
+                              // Cast returned reference into pointer
+                              QUrl* sigval1 = const_cast<QUrl*>(&param1_ret);
+                              slotFunc(self, sigval1);
+                          });
 }
 
 void QTextBrowser_AnchorClicked(QTextBrowser* self, const QUrl* param1) {
@@ -251,12 +261,14 @@ void QTextBrowser_AnchorClicked(QTextBrowser* self, const QUrl* param1) {
 
 void QTextBrowser_Connect_AnchorClicked(QTextBrowser* self, intptr_t slot) {
     void (*slotFunc)(QTextBrowser*, QUrl*) = reinterpret_cast<void (*)(QTextBrowser*, QUrl*)>(slot);
-    QTextBrowser::connect(self, &QTextBrowser::anchorClicked, [self, slotFunc](const QUrl& param1) {
-        const QUrl& param1_ret = param1;
-        // Cast returned reference into pointer
-        QUrl* sigval1 = const_cast<QUrl*>(&param1_ret);
-        slotFunc(self, sigval1);
-    });
+    QTextBrowser::connect(self,
+                          static_cast<void (QTextBrowser::*)(const QUrl&)>(&QTextBrowser::anchorClicked),
+                          [self, slotFunc](const QUrl& param1) {
+                              const QUrl& param1_ret = param1;
+                              // Cast returned reference into pointer
+                              QUrl* sigval1 = const_cast<QUrl*>(&param1_ret);
+                              slotFunc(self, sigval1);
+                          });
 }
 
 bool QTextBrowser_Event(QTextBrowser* self, QEvent* e) {

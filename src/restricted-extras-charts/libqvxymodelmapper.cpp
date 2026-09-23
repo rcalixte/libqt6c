@@ -87,9 +87,11 @@ void QVXYModelMapper_SeriesReplaced(QVXYModelMapper* self) {
 
 void QVXYModelMapper_Connect_SeriesReplaced(QVXYModelMapper* self, intptr_t slot) {
     void (*slotFunc)(QVXYModelMapper*) = reinterpret_cast<void (*)(QVXYModelMapper*)>(slot);
-    QVXYModelMapper::connect(self, &QVXYModelMapper::seriesReplaced, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVXYModelMapper::connect(self,
+                             static_cast<void (QVXYModelMapper::*)()>(&QVXYModelMapper::seriesReplaced),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 void QVXYModelMapper_ModelReplaced(QVXYModelMapper* self) {
@@ -98,9 +100,11 @@ void QVXYModelMapper_ModelReplaced(QVXYModelMapper* self) {
 
 void QVXYModelMapper_Connect_ModelReplaced(QVXYModelMapper* self, intptr_t slot) {
     void (*slotFunc)(QVXYModelMapper*) = reinterpret_cast<void (*)(QVXYModelMapper*)>(slot);
-    QVXYModelMapper::connect(self, &QVXYModelMapper::modelReplaced, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVXYModelMapper::connect(self,
+                             static_cast<void (QVXYModelMapper::*)()>(&QVXYModelMapper::modelReplaced),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 void QVXYModelMapper_XColumnChanged(QVXYModelMapper* self) {
@@ -109,9 +113,11 @@ void QVXYModelMapper_XColumnChanged(QVXYModelMapper* self) {
 
 void QVXYModelMapper_Connect_XColumnChanged(QVXYModelMapper* self, intptr_t slot) {
     void (*slotFunc)(QVXYModelMapper*) = reinterpret_cast<void (*)(QVXYModelMapper*)>(slot);
-    QVXYModelMapper::connect(self, &QVXYModelMapper::xColumnChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVXYModelMapper::connect(self,
+                             static_cast<void (QVXYModelMapper::*)()>(&QVXYModelMapper::xColumnChanged),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 void QVXYModelMapper_YColumnChanged(QVXYModelMapper* self) {
@@ -120,9 +126,11 @@ void QVXYModelMapper_YColumnChanged(QVXYModelMapper* self) {
 
 void QVXYModelMapper_Connect_YColumnChanged(QVXYModelMapper* self, intptr_t slot) {
     void (*slotFunc)(QVXYModelMapper*) = reinterpret_cast<void (*)(QVXYModelMapper*)>(slot);
-    QVXYModelMapper::connect(self, &QVXYModelMapper::yColumnChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVXYModelMapper::connect(self,
+                             static_cast<void (QVXYModelMapper::*)()>(&QVXYModelMapper::yColumnChanged),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 void QVXYModelMapper_FirstRowChanged(QVXYModelMapper* self) {
@@ -131,9 +139,11 @@ void QVXYModelMapper_FirstRowChanged(QVXYModelMapper* self) {
 
 void QVXYModelMapper_Connect_FirstRowChanged(QVXYModelMapper* self, intptr_t slot) {
     void (*slotFunc)(QVXYModelMapper*) = reinterpret_cast<void (*)(QVXYModelMapper*)>(slot);
-    QVXYModelMapper::connect(self, &QVXYModelMapper::firstRowChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVXYModelMapper::connect(self,
+                             static_cast<void (QVXYModelMapper::*)()>(&QVXYModelMapper::firstRowChanged),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 void QVXYModelMapper_RowCountChanged(QVXYModelMapper* self) {
@@ -142,9 +152,11 @@ void QVXYModelMapper_RowCountChanged(QVXYModelMapper* self) {
 
 void QVXYModelMapper_Connect_RowCountChanged(QVXYModelMapper* self, intptr_t slot) {
     void (*slotFunc)(QVXYModelMapper*) = reinterpret_cast<void (*)(QVXYModelMapper*)>(slot);
-    QVXYModelMapper::connect(self, &QVXYModelMapper::rowCountChanged, [self, slotFunc]() {
-        slotFunc(self);
-    });
+    QVXYModelMapper::connect(self,
+                             static_cast<void (QVXYModelMapper::*)()>(&QVXYModelMapper::rowCountChanged),
+                             [self, slotFunc]() {
+                                 slotFunc(self);
+                             });
 }
 
 // Base class handler implementation

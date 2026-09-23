@@ -115,18 +115,20 @@ void Sonnet__DictionaryComboBox_DictionaryChanged(Sonnet__DictionaryComboBox* se
 
 void Sonnet__DictionaryComboBox_Connect_DictionaryChanged(Sonnet__DictionaryComboBox* self, intptr_t slot) {
     void (*slotFunc)(Sonnet__DictionaryComboBox*, const char*) = reinterpret_cast<void (*)(Sonnet__DictionaryComboBox*, const char*)>(slot);
-    Sonnet::DictionaryComboBox::connect(self, &Sonnet::DictionaryComboBox::dictionaryChanged, [self, slotFunc](const QString& dictionary) {
-        const auto dictionary_ret = dictionary;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray dictionary_b = dictionary_ret.toUtf8();
-        auto dictionary_str_len = dictionary_b.length();
-        char* dictionary_str = static_cast<char*>(malloc(dictionary_str_len + 1));
-        memcpy(dictionary_str, dictionary_b.data(), dictionary_str_len);
-        dictionary_str[dictionary_str_len] = '\0';
-        const char* sigval1 = dictionary_str;
-        slotFunc(self, sigval1);
-        libqt_free(dictionary_str);
-    });
+    Sonnet::DictionaryComboBox::connect(self,
+                                        static_cast<void (Sonnet::DictionaryComboBox::*)(const QString&)>(&Sonnet::DictionaryComboBox::dictionaryChanged),
+                                        [self, slotFunc](const QString& dictionary) {
+                                            const auto dictionary_ret = dictionary;
+                                            // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                            QByteArray dictionary_b = dictionary_ret.toUtf8();
+                                            auto dictionary_str_len = dictionary_b.length();
+                                            char* dictionary_str = static_cast<char*>(malloc(dictionary_str_len + 1));
+                                            memcpy(dictionary_str, dictionary_b.data(), dictionary_str_len);
+                                            dictionary_str[dictionary_str_len] = '\0';
+                                            const char* sigval1 = dictionary_str;
+                                            slotFunc(self, sigval1);
+                                            libqt_free(dictionary_str);
+                                        });
 }
 
 void Sonnet__DictionaryComboBox_DictionaryNameChanged(Sonnet__DictionaryComboBox* self, const libqt_string dictionaryName) {
@@ -136,18 +138,20 @@ void Sonnet__DictionaryComboBox_DictionaryNameChanged(Sonnet__DictionaryComboBox
 
 void Sonnet__DictionaryComboBox_Connect_DictionaryNameChanged(Sonnet__DictionaryComboBox* self, intptr_t slot) {
     void (*slotFunc)(Sonnet__DictionaryComboBox*, const char*) = reinterpret_cast<void (*)(Sonnet__DictionaryComboBox*, const char*)>(slot);
-    Sonnet::DictionaryComboBox::connect(self, &Sonnet::DictionaryComboBox::dictionaryNameChanged, [self, slotFunc](const QString& dictionaryName) {
-        const auto dictionaryName_ret = dictionaryName;
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
-        QByteArray dictionaryName_b = dictionaryName_ret.toUtf8();
-        auto dictionaryName_str_len = dictionaryName_b.length();
-        char* dictionaryName_str = static_cast<char*>(malloc(dictionaryName_str_len + 1));
-        memcpy(dictionaryName_str, dictionaryName_b.data(), dictionaryName_str_len);
-        dictionaryName_str[dictionaryName_str_len] = '\0';
-        const char* sigval1 = dictionaryName_str;
-        slotFunc(self, sigval1);
-        libqt_free(dictionaryName_str);
-    });
+    Sonnet::DictionaryComboBox::connect(self,
+                                        static_cast<void (Sonnet::DictionaryComboBox::*)(const QString&)>(&Sonnet::DictionaryComboBox::dictionaryNameChanged),
+                                        [self, slotFunc](const QString& dictionaryName) {
+                                            const auto dictionaryName_ret = dictionaryName;
+                                            // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
+                                            QByteArray dictionaryName_b = dictionaryName_ret.toUtf8();
+                                            auto dictionaryName_str_len = dictionaryName_b.length();
+                                            char* dictionaryName_str = static_cast<char*>(malloc(dictionaryName_str_len + 1));
+                                            memcpy(dictionaryName_str, dictionaryName_b.data(), dictionaryName_str_len);
+                                            dictionaryName_str[dictionaryName_str_len] = '\0';
+                                            const char* sigval1 = dictionaryName_str;
+                                            slotFunc(self, sigval1);
+                                            libqt_free(dictionaryName_str);
+                                        });
 }
 
 // Base class handler implementation
