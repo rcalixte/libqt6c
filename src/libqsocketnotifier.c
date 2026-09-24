@@ -471,14 +471,11 @@ QSocketDescriptor* q_socketdescriptor_new4(void* param1) {
     return QSocketDescriptor_New4((QSocketDescriptor*)param1);
 }
 
+#if defined(__linux__) && defined(__FreeBSD__)
 QSocketDescriptor* q_socketdescriptor_new5(int descriptor) {
-#if !defined(__linux__) && !defined(__FreeBSD__)
-    fprintf(stderr, "Error: Unsupported operating system\n");
-    abort();
-#endif
-
     return QSocketDescriptor_New5(descriptor);
 }
+#endif
 
 void q_socketdescriptor_copy_assign(void* self, void* other) {
     QSocketDescriptor_CopyAssign((QSocketDescriptor*)self, (QSocketDescriptor*)other);
@@ -488,14 +485,11 @@ void q_socketdescriptor_move_assign(void* self, void* other) {
     QSocketDescriptor_MoveAssign((QSocketDescriptor*)self, (QSocketDescriptor*)other);
 }
 
+#if defined(__linux__) && defined(__FreeBSD__)
 int32_t q_socketdescriptor_to_int(void* self) {
-#if !defined(__linux__) && !defined(__FreeBSD__)
-    fprintf(stderr, "Error: Unsupported operating system\n");
-    abort();
-#endif
-
     return QSocketDescriptor_ToInt((QSocketDescriptor*)self);
 }
+#endif
 
 bool q_socketdescriptor_is_valid(void* self) {
     return QSocketDescriptor_IsValid((QSocketDescriptor*)self);

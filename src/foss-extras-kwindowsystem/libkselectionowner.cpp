@@ -10,7 +10,7 @@
 #include "libkselectionowner.hpp"
 #include "libkselectionowner.hxx"
 
-#ifdef __Q_OS_LINUX__
+#ifdef __linux__
 KSelectionOwner* KSelectionOwner_New(xcb_atom_t selection) {
     return new VirtualKSelectionOwner(selection);
 }
@@ -20,25 +20,25 @@ KSelectionOwner* KSelectionOwner_New2(const char* selection) {
     return new VirtualKSelectionOwner(selection);
 }
 
-#ifdef __Q_OS_LINUX__
+#ifdef __linux__
 KSelectionOwner* KSelectionOwner_New3(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root) {
     return new VirtualKSelectionOwner(selection, c, root);
 }
 #endif
 
-#ifdef __Q_OS_LINUX__
+#ifdef __linux__
 KSelectionOwner* KSelectionOwner_New4(const char* selection, xcb_connection_t* c, xcb_window_t root) {
     return new VirtualKSelectionOwner(selection, c, root);
 }
 #endif
 
-#ifdef __Q_OS_LINUX__
+#ifdef __linux__
 KSelectionOwner* KSelectionOwner_New5(xcb_atom_t selection, int screen) {
     return new VirtualKSelectionOwner(selection, static_cast<int>(screen));
 }
 #endif
 
-#ifdef __Q_OS_LINUX__
+#ifdef __linux__
 KSelectionOwner* KSelectionOwner_New6(xcb_atom_t selection, int screen, QObject* parent) {
     return new VirtualKSelectionOwner(selection, static_cast<int>(screen), parent);
 }
@@ -52,13 +52,13 @@ KSelectionOwner* KSelectionOwner_New8(const char* selection, int screen, QObject
     return new VirtualKSelectionOwner(selection, static_cast<int>(screen), parent);
 }
 
-#ifdef __Q_OS_LINUX__
+#ifdef __linux__
 KSelectionOwner* KSelectionOwner_New9(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root, QObject* parent) {
     return new VirtualKSelectionOwner(selection, c, root, parent);
 }
 #endif
 
-#ifdef __Q_OS_LINUX__
+#ifdef __linux__
 KSelectionOwner* KSelectionOwner_New10(const char* selection, xcb_connection_t* c, xcb_window_t root, QObject* parent) {
     return new VirtualKSelectionOwner(selection, c, root, parent);
 }
@@ -84,9 +84,11 @@ void KSelectionOwner_Release(KSelectionOwner* self) {
     self->release();
 }
 
+#ifdef __linux__
 xcb_window_t KSelectionOwner_OwnerWindow(const KSelectionOwner* self) {
     return self->ownerWindow();
 }
+#endif
 
 bool KSelectionOwner_FilterEvent(KSelectionOwner* self, void* ev_P) {
     return self->filterEvent(ev_P);
@@ -135,7 +137,7 @@ void KSelectionOwner_Connect_FailedToClaimOwnership(KSelectionOwner* self, intpt
                              });
 }
 
-#ifdef __Q_OS_LINUX__
+#ifdef __linux__
 bool KSelectionOwner_GenericReply(KSelectionOwner* self, xcb_atom_t target, xcb_atom_t property, xcb_window_t requestor) {
     auto* vkselectionowner = dynamic_cast<VirtualKSelectionOwner*>(self);
     if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner) {
@@ -145,7 +147,7 @@ bool KSelectionOwner_GenericReply(KSelectionOwner* self, xcb_atom_t target, xcb_
 }
 #endif
 
-#ifdef __Q_OS_LINUX__
+#ifdef __linux__
 void KSelectionOwner_ReplyTargets(KSelectionOwner* self, xcb_atom_t property, xcb_window_t requestor) {
     auto* vkselectionowner = dynamic_cast<VirtualKSelectionOwner*>(self);
     if (vkselectionowner && vkselectionowner->isVirtualKSelectionOwner) {

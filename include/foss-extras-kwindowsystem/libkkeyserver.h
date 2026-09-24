@@ -126,6 +126,13 @@ bool k_keyserver_sym_x_mod_x_to_key_qt(uint32_t keySym, uint16_t modX, int* keyQ
 ///
 bool k_keyserver_mod_x_to_qt(uint32_t modX, int* modQt);
 
+/// [Upstream resources](https://api.kde.org/kkeyserver.html#xEventToQt)
+///
+/// @param e XEvent* (This is an opaque pointer to an external type.)
+/// @param keyModQt int*
+///
+bool k_keyserver_x_event_to_qt(void* e, int* keyModQt);
+
 #ifdef __linux__
 /// [Upstream resources](https://api.kde.org/kkeyserver.html#xcbKeyPressEventToQt)
 ///

@@ -116,10 +116,20 @@ bool KKeyServer_ModXToQt(unsigned int modX, int* modQt) {
     return KKeyServer::modXToQt(static_cast<uint>(modX), static_cast<int*>(modQt));
 }
 
+#if defined(Q_OS_LINUX) || defined(Q_OS_BSD4)
+bool KKeyServer_XEventToQt(XEvent* e, int* keyModQt) {
+    return KKeyServer::xEventToQt(e, static_cast<int*>(keyModQt));
+}
+#endif
+
+#ifdef __linux__
 bool KKeyServer_XcbKeyPressEventToQt(xcb_generic_event_t* e, int* keyModQt) {
     return KKeyServer::xcbKeyPressEventToQt(e, static_cast<int*>(keyModQt));
 }
+#endif
 
+#ifdef __linux__
 bool KKeyServer_XcbKeyPressEventToQt2(xcb_key_press_event_t* e, int* keyModQt) {
     return KKeyServer::xcbKeyPressEventToQt(e, static_cast<int*>(keyModQt));
 }
+#endif

@@ -188,6 +188,7 @@
 #include "libqgenericpluginfactory.h"
 #include "libqglyphrun.h"
 #include "libqguiapplication.h"
+#include "libqguiapplication_platform.h"
 #include "libqicon.h"
 #include "libqiconengine.h"
 #include "libqiconengineplugin.h"

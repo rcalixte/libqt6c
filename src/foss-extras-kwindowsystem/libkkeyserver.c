@@ -90,6 +90,12 @@ bool k_keyserver_mod_x_to_qt(uint32_t modX, int* modQt) {
     return KKeyServer_ModXToQt(modX, modQt);
 }
 
+#if defined(__linux__) && defined(__FreeBSD__)
+bool k_keyserver_x_event_to_qt(void* e, int* keyModQt) {
+    return KKeyServer_XEventToQt(e, keyModQt);
+}
+#endif
+
 #ifdef __linux__
 bool k_keyserver_xcb_key_press_event_to_qt(xcb_generic_event_t* e, int* keyModQt) {
     return KKeyServer_XcbKeyPressEventToQt(e, keyModQt);

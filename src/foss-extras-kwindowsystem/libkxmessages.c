@@ -35,52 +35,74 @@ KXMessages* k_xmessages_new6(xcb_connection_t* connection, xcb_window_t rootWind
 }
 #endif
 
+#ifdef __linux__
 const QMetaObject* k_xmessages_meta_object(void* self) {
     return KXMessages_MetaObject((KXMessages*)self);
 }
+#endif
 
+#ifdef __linux__
 void k_xmessages_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KXMessages_OnMetaObject((KXMessages*)self, (intptr_t)callback);
 }
+#endif
 
+#ifdef __linux__
 const QMetaObject* k_xmessages_super_meta_object(void* self) {
     return KXMessages_SuperMetaObject((KXMessages*)self);
 }
+#endif
 
+#ifdef __linux__
 void* k_xmessages_metacast(void* self, const char* param1) {
     return KXMessages_Metacast((KXMessages*)self, param1);
 }
+#endif
 
+#ifdef __linux__
 void k_xmessages_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     KXMessages_OnMetacast((KXMessages*)self, (intptr_t)callback);
 }
+#endif
 
+#ifdef __linux__
 void* k_xmessages_super_metacast(void* self, const char* param1) {
     return KXMessages_SuperMetacast((KXMessages*)self, param1);
 }
+#endif
 
+#ifdef __linux__
 int32_t k_xmessages_metacall(void* self, int32_t param1, int param2, void* param3) {
     return KXMessages_Metacall((KXMessages*)self, param1, param2, param3);
 }
+#endif
 
+#ifdef __linux__
 void k_xmessages_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     KXMessages_OnMetacall((KXMessages*)self, (intptr_t)callback);
 }
+#endif
 
+#ifdef __linux__
 int32_t k_xmessages_super_metacall(void* self, int32_t param1, int param2, void* param3) {
     return KXMessages_SuperMetacall((KXMessages*)self, param1, param2, param3);
 }
+#endif
 
+#ifdef __linux__
 const char* k_xmessages_tr(const char* s) {
     libqt_string _str = QObject_Tr(s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
+#endif
 
+#ifdef __linux__
 void k_xmessages_broadcast_message(void* self, const char* msg_type, const char* message) {
     KXMessages_BroadcastMessage((KXMessages*)self, msg_type, qstring(message));
 }
+#endif
 
 #ifdef __linux__
 bool k_xmessages_broadcast_message_x(xcb_connection_t* c, const char* msg_type, const char* message, int screenNumber) {
@@ -88,31 +110,41 @@ bool k_xmessages_broadcast_message_x(xcb_connection_t* c, const char* msg_type, 
 }
 #endif
 
+#ifdef __linux__
 void k_xmessages_got_message(void* self, const char* message) {
     KXMessages_GotMessage((KXMessages*)self, qstring(message));
 }
+#endif
 
+#ifdef __linux__
 void k_xmessages_on_got_message(void* self, void (*callback)(void*, const char*)) {
     KXMessages_Connect_GotMessage((KXMessages*)self, (intptr_t)callback);
 }
+#endif
 
+#ifdef __linux__
 const char* k_xmessages_tr2(const char* s, const char* c) {
     libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
+#endif
 
+#ifdef __linux__
 const char* k_xmessages_tr3(const char* s, const char* c, int n) {
     libqt_string _str = QObject_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
+#endif
 
+#ifdef __linux__
 void k_xmessages_broadcast_message3(void* self, const char* msg_type, const char* message, int screen) {
     KXMessages_BroadcastMessage3((KXMessages*)self, msg_type, qstring(message), screen);
 }
+#endif
 
 const char* k_xmessages_object_name(void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);

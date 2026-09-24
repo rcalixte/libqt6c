@@ -67,12 +67,15 @@ KXMessages* k_xmessages_new5(xcb_connection_t* connection, xcb_window_t rootWind
 KXMessages* k_xmessages_new6(xcb_connection_t* connection, xcb_window_t rootWindow, const char* accept_broadcast, void* parent);
 #endif
 
+#ifdef __linux__
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KXMessages*
 ///
 const QMetaObject* k_xmessages_meta_object(void* self);
+#endif
 
+#ifdef __linux__
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
@@ -81,7 +84,9 @@ const QMetaObject* k_xmessages_meta_object(void* self);
 /// @param callback const QMetaObject* func()
 ///
 void k_xmessages_on_meta_object(void* self, const QMetaObject* (*callback)());
+#endif
 
+#ifdef __linux__
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
@@ -89,40 +94,52 @@ void k_xmessages_on_meta_object(void* self, const QMetaObject* (*callback)());
 /// @param self KXMessages*
 ///
 const QMetaObject* k_xmessages_super_meta_object(void* self);
+#endif
 
+#ifdef __linux__
 /// @param self KXMessages*
 /// @param param1 const char*
 ///
 void* k_xmessages_metacast(void* self, const char* param1);
+#endif
 
+#ifdef __linux__
 /// Allows for overriding the related default method
 ///
 /// @param self KXMessages*
 /// @param callback void* func(KXMessages* self, const char* param1)
 ///
 void k_xmessages_on_metacast(void* self, void* (*callback)(void*, const char*));
+#endif
 
+#ifdef __linux__
 /// Base class method implementation
 ///
 /// @param self KXMessages*
 /// @param param1 const char*
 ///
 void* k_xmessages_super_metacast(void* self, const char* param1);
+#endif
 
+#ifdef __linux__
 /// @param self KXMessages*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
 ///
 int32_t k_xmessages_metacall(void* self, int32_t param1, int param2, void* param3);
+#endif
 
+#ifdef __linux__
 /// Allows for overriding the related default method
 ///
 /// @param self KXMessages*
 /// @param callback int32_t func(KXMessages* self, enum QMetaObject__Call param1, int param2, void* param3)
 ///
 void k_xmessages_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
+#endif
 
+#ifdef __linux__
 /// Base class method implementation
 ///
 /// @param self KXMessages*
@@ -131,7 +148,9 @@ void k_xmessages_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
 /// @param param3 void*
 ///
 int32_t k_xmessages_super_metacall(void* self, int32_t param1, int param2, void* param3);
+#endif
 
+#ifdef __linux__
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
@@ -139,7 +158,9 @@ int32_t k_xmessages_super_metacall(void* self, int32_t param1, int param2, void*
 /// @param s const char*
 ///
 const char* k_xmessages_tr(const char* s);
+#endif
 
+#ifdef __linux__
 /// [Upstream resources](https://api.kde.org/kxmessages.html#broadcastMessage)
 ///
 /// @param self KXMessages*
@@ -147,6 +168,7 @@ const char* k_xmessages_tr(const char* s);
 /// @param message const char*
 ///
 void k_xmessages_broadcast_message(void* self, const char* msg_type, const char* message);
+#endif
 
 #ifdef __linux__
 /// [Upstream resources](https://api.kde.org/kxmessages.html#broadcastMessageX)
@@ -159,20 +181,25 @@ void k_xmessages_broadcast_message(void* self, const char* msg_type, const char*
 bool k_xmessages_broadcast_message_x(xcb_connection_t* c, const char* msg_type, const char* message, int screenNumber);
 #endif
 
+#ifdef __linux__
 /// [Upstream resources](https://api.kde.org/kxmessages.html#gotMessage)
 ///
 /// @param self KXMessages*
 /// @param message const char*
 ///
 void k_xmessages_got_message(void* self, const char* message);
+#endif
 
+#ifdef __linux__
 /// [Upstream resources](https://api.kde.org/kxmessages.html#gotMessage)
 ///
 /// @param self KXMessages*
 /// @param callback void func(KXMessages* self, const char* message)
 ///
 void k_xmessages_on_got_message(void* self, void (*callback)(void*, const char*));
+#endif
 
+#ifdef __linux__
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
@@ -181,7 +208,9 @@ void k_xmessages_on_got_message(void* self, void (*callback)(void*, const char*)
 /// @param c const char*
 ///
 const char* k_xmessages_tr2(const char* s, const char* c);
+#endif
 
+#ifdef __linux__
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
@@ -191,7 +220,9 @@ const char* k_xmessages_tr2(const char* s, const char* c);
 /// @param n int
 ///
 const char* k_xmessages_tr3(const char* s, const char* c, int n);
+#endif
 
+#ifdef __linux__
 /// [Upstream resources](https://api.kde.org/kxmessages.html#broadcastMessage)
 ///
 /// @param self KXMessages*
@@ -200,6 +231,7 @@ const char* k_xmessages_tr3(const char* s, const char* c, int n);
 /// @param screen int
 ///
 void k_xmessages_broadcast_message3(void* self, const char* msg_type, const char* message, int screen);
+#endif
 
 /// Inherited from QObject
 ///
