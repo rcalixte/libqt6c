@@ -377,6 +377,16 @@ void q_menu_set_icon(void* self, void* icon);
 void q_menu_set_no_replay_for(void* self, void* widget);
 
 #ifdef __APPLE__
+/// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#toNSMenu)
+///
+/// @param self QMenu*
+///
+/// @return NSMenu* (NOTE: This pointer value could be `NULL`.)
+///
+void* q_menu_to_n_s_menu(void* self);
+#endif
+
+#ifdef __APPLE__
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#setAsDockMenu)
 ///
 /// @param self QMenu*

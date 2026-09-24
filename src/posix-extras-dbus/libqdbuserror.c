@@ -6,16 +6,20 @@ QDBusError* q_dbuserror_new() {
     return QDBusError_New();
 }
 
-QDBusError* q_dbuserror_new2(void* msg) {
-    return QDBusError_New2((QDBusMessage*)msg);
+QDBusError* q_dbuserror_new2(void* error) {
+    return QDBusError_New2(error);
 }
 
-QDBusError* q_dbuserror_new3(int32_t error, const char* message) {
-    return QDBusError_New3(error, qstring(message));
+QDBusError* q_dbuserror_new3(void* msg) {
+    return QDBusError_New3((QDBusMessage*)msg);
 }
 
-QDBusError* q_dbuserror_new4(void* other) {
-    return QDBusError_New4((QDBusError*)other);
+QDBusError* q_dbuserror_new4(int32_t error, const char* message) {
+    return QDBusError_New4(error, qstring(message));
+}
+
+QDBusError* q_dbuserror_new5(void* other) {
+    return QDBusError_New5((QDBusError*)other);
 }
 
 void q_dbuserror_operator_assign(void* self, void* other) {

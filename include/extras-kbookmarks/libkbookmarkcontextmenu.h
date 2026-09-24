@@ -691,6 +691,18 @@ void k_bookmarkcontextmenu_set_no_replay_for(void* self, void* widget);
 #ifdef __APPLE__
 /// Inherited from QMenu
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#toNSMenu)
+///
+/// @param self KBookmarkContextMenu*
+///
+/// @return NSMenu* (NOTE: This pointer value could be `NULL`.)
+///
+void* k_bookmarkcontextmenu_to_n_s_menu(void* self);
+#endif
+
+#ifdef __APPLE__
+/// Inherited from QMenu
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#setAsDockMenu)
 ///
 /// @param self KBookmarkContextMenu*

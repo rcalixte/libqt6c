@@ -10,7 +10,7 @@
 #include "libkselectionwatcher.hpp"
 #include "libkselectionwatcher.hxx"
 
-#ifdef __Q_OS_LINUX__
+#ifdef __linux__
 KSelectionWatcher* KSelectionWatcher_New(xcb_atom_t selection) {
     return new VirtualKSelectionWatcher(selection);
 }
@@ -20,25 +20,25 @@ KSelectionWatcher* KSelectionWatcher_New2(const char* selection) {
     return new VirtualKSelectionWatcher(selection);
 }
 
-#ifdef __Q_OS_LINUX__
+#ifdef __linux__
 KSelectionWatcher* KSelectionWatcher_New3(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root) {
     return new VirtualKSelectionWatcher(selection, c, root);
 }
 #endif
 
-#ifdef __Q_OS_LINUX__
+#ifdef __linux__
 KSelectionWatcher* KSelectionWatcher_New4(const char* selection, xcb_connection_t* c, xcb_window_t root) {
     return new VirtualKSelectionWatcher(selection, c, root);
 }
 #endif
 
-#ifdef __Q_OS_LINUX__
+#ifdef __linux__
 KSelectionWatcher* KSelectionWatcher_New5(xcb_atom_t selection, int screen) {
     return new VirtualKSelectionWatcher(selection, static_cast<int>(screen));
 }
 #endif
 
-#ifdef __Q_OS_LINUX__
+#ifdef __linux__
 KSelectionWatcher* KSelectionWatcher_New6(xcb_atom_t selection, int screen, QObject* parent) {
     return new VirtualKSelectionWatcher(selection, static_cast<int>(screen), parent);
 }
@@ -52,13 +52,13 @@ KSelectionWatcher* KSelectionWatcher_New8(const char* selection, int screen, QOb
     return new VirtualKSelectionWatcher(selection, static_cast<int>(screen), parent);
 }
 
-#ifdef __Q_OS_LINUX__
+#ifdef __linux__
 KSelectionWatcher* KSelectionWatcher_New9(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root, QObject* parent) {
     return new VirtualKSelectionWatcher(selection, c, root, parent);
 }
 #endif
 
-#ifdef __Q_OS_LINUX__
+#ifdef __linux__
 KSelectionWatcher* KSelectionWatcher_New10(const char* selection, xcb_connection_t* c, xcb_window_t root, QObject* parent) {
     return new VirtualKSelectionWatcher(selection, c, root, parent);
 }
@@ -76,17 +76,21 @@ int KSelectionWatcher_Metacall(KSelectionWatcher* self, int param1, int param2, 
     return self->qt_metacall(static_cast<QMetaObject::Call>(param1), static_cast<int>(param2), param3);
 }
 
+#ifdef __linux__
 xcb_window_t KSelectionWatcher_Owner(KSelectionWatcher* self) {
     return self->owner();
 }
+#endif
 
 void KSelectionWatcher_FilterEvent(KSelectionWatcher* self, void* ev_P) {
     self->filterEvent(ev_P);
 }
 
+#ifdef __linux__
 void KSelectionWatcher_NewOwner(KSelectionWatcher* self, xcb_window_t owner) {
     self->newOwner(owner);
 }
+#endif
 
 void KSelectionWatcher_Connect_NewOwner(KSelectionWatcher* self, intptr_t slot) {
     void (*slotFunc)(KSelectionWatcher*, xcb_window_t) = reinterpret_cast<void (*)(KSelectionWatcher*, xcb_window_t)>(slot);

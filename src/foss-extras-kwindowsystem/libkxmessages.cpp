@@ -14,7 +14,7 @@ KXMessages* KXMessages_New() {
     return new VirtualKXMessages();
 }
 
-#ifdef __Q_OS_LINUX__
+#ifdef __linux__
 KXMessages* KXMessages_New2(xcb_connection_t* connection, xcb_window_t rootWindow) {
     return new VirtualKXMessages(connection, rootWindow);
 }
@@ -28,44 +28,56 @@ KXMessages* KXMessages_New4(const char* accept_broadcast, QObject* parent) {
     return new VirtualKXMessages(accept_broadcast, parent);
 }
 
-#ifdef __Q_OS_LINUX__
+#ifdef __linux__
 KXMessages* KXMessages_New5(xcb_connection_t* connection, xcb_window_t rootWindow, const char* accept_broadcast) {
     return new VirtualKXMessages(connection, rootWindow, accept_broadcast);
 }
 #endif
 
-#ifdef __Q_OS_LINUX__
+#ifdef __linux__
 KXMessages* KXMessages_New6(xcb_connection_t* connection, xcb_window_t rootWindow, const char* accept_broadcast, QObject* parent) {
     return new VirtualKXMessages(connection, rootWindow, accept_broadcast, parent);
 }
 #endif
 
+#ifdef __linux__
 QMetaObject* KXMessages_MetaObject(const KXMessages* self) {
     return (QMetaObject*)self->metaObject();
 }
+#endif
 
+#ifdef __linux__
 void* KXMessages_Metacast(KXMessages* self, const char* param1) {
     return self->qt_metacast(param1);
 }
+#endif
 
+#ifdef __linux__
 int KXMessages_Metacall(KXMessages* self, int param1, int param2, void** param3) {
     return self->qt_metacall(static_cast<QMetaObject::Call>(param1), static_cast<int>(param2), param3);
 }
+#endif
 
+#ifdef __linux__
 void KXMessages_BroadcastMessage(KXMessages* self, const char* msg_type, const libqt_string message) {
     QString message_QString = QString::fromUtf8(message.data, message.len);
     self->broadcastMessage(msg_type, message_QString);
 }
+#endif
 
+#ifdef __linux__
 bool KXMessages_BroadcastMessageX(xcb_connection_t* c, const char* msg_type, const libqt_string message, int screenNumber) {
     QString message_QString = QString::fromUtf8(message.data, message.len);
     return KXMessages::broadcastMessageX(c, msg_type, message_QString, static_cast<int>(screenNumber));
 }
+#endif
 
+#ifdef __linux__
 void KXMessages_GotMessage(KXMessages* self, const libqt_string message) {
     QString message_QString = QString::fromUtf8(message.data, message.len);
     self->gotMessage(message_QString);
 }
+#endif
 
 void KXMessages_Connect_GotMessage(KXMessages* self, intptr_t slot) {
     void (*slotFunc)(KXMessages*, const char*) = reinterpret_cast<void (*)(KXMessages*, const char*)>(slot);
@@ -85,10 +97,12 @@ void KXMessages_Connect_GotMessage(KXMessages* self, intptr_t slot) {
                         });
 }
 
+#ifdef __linux__
 void KXMessages_BroadcastMessage3(KXMessages* self, const char* msg_type, const libqt_string message, int screen) {
     QString message_QString = QString::fromUtf8(message.data, message.len);
     self->broadcastMessage(msg_type, message_QString, static_cast<int>(screen));
 }
+#endif
 
 // Base class handler implementation
 QMetaObject* KXMessages_SuperMetaObject(const KXMessages* self) {

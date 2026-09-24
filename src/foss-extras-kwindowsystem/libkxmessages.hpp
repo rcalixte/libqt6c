@@ -36,22 +36,46 @@ KXMessages* KXMessages_New5(xcb_connection_t* connection, xcb_window_t rootWindo
 #ifdef __linux__
 KXMessages* KXMessages_New6(xcb_connection_t* connection, xcb_window_t rootWindow, const char* accept_broadcast, QObject* parent);
 #endif
+#ifdef __linux__
 QMetaObject* KXMessages_MetaObject(const KXMessages* self);
+#endif
+#ifdef __linux__
 void* KXMessages_Metacast(KXMessages* self, const char* param1);
+#endif
+#ifdef __linux__
 int KXMessages_Metacall(KXMessages* self, int param1, int param2, void** param3);
+#endif
+#ifdef __linux__
 void KXMessages_BroadcastMessage(KXMessages* self, const char* msg_type, const libqt_string message);
+#endif
 #ifdef __linux__
 bool KXMessages_BroadcastMessageX(xcb_connection_t* c, const char* msg_type, const libqt_string message, int screenNumber);
 #endif
+#ifdef __linux__
 void KXMessages_GotMessage(KXMessages* self, const libqt_string message);
+#endif
 void KXMessages_Connect_GotMessage(KXMessages* self, intptr_t slot);
+#ifdef __linux__
 void KXMessages_BroadcastMessage3(KXMessages* self, const char* msg_type, const libqt_string message, int screen);
+#endif
+#ifdef __linux__
 void KXMessages_OnMetaObject(const KXMessages* self, intptr_t slot);
+#endif
+#ifdef __linux__
 QMetaObject* KXMessages_SuperMetaObject(const KXMessages* self);
+#endif
+#ifdef __linux__
 void KXMessages_OnMetacast(KXMessages* self, intptr_t slot);
+#endif
+#ifdef __linux__
 void* KXMessages_SuperMetacast(KXMessages* self, const char* param1);
+#endif
+#ifdef __linux__
 void KXMessages_OnMetacall(KXMessages* self, intptr_t slot);
+#endif
+#ifdef __linux__
 int KXMessages_SuperMetacall(KXMessages* self, int param1, int param2, void** param3);
+#endif
 bool KXMessages_Event(KXMessages* self, QEvent* event);
 void KXMessages_OnEvent(KXMessages* self, intptr_t slot);
 bool KXMessages_SuperEvent(KXMessages* self, QEvent* event);

@@ -18,26 +18,34 @@ QDBusError* q_dbuserror_new();
 
 /// q_dbuserror_new2 constructs a new QDBusError object.
 ///
-/// @param msg QDBusMessage*
+/// @param error DBusError* (This is an opaque pointer to an external type.)
 ///
-QDBusError* q_dbuserror_new2(void* msg);
+QDBusError* q_dbuserror_new2(void* error);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html)
 
 /// q_dbuserror_new3 constructs a new QDBusError object.
 ///
-/// @param error enum QDBusError__ErrorType
-/// @param message const char*
+/// @param msg QDBusMessage*
 ///
-QDBusError* q_dbuserror_new3(int32_t error, const char* message);
+QDBusError* q_dbuserror_new3(void* msg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html)
 
 /// q_dbuserror_new4 constructs a new QDBusError object.
 ///
+/// @param error enum QDBusError__ErrorType
+/// @param message const char*
+///
+QDBusError* q_dbuserror_new4(int32_t error, const char* message);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html)
+
+/// q_dbuserror_new5 constructs a new QDBusError object.
+///
 /// @param other QDBusError*
 ///
-QDBusError* q_dbuserror_new4(void* other);
+QDBusError* q_dbuserror_new5(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#operator-eq)
 ///

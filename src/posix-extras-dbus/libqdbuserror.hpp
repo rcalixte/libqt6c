@@ -17,12 +17,14 @@ extern "C" {
 #else
 typedef struct QDBusError QDBusError;
 typedef struct QDBusMessage QDBusMessage;
+typedef struct DBusError DBusError;
 #endif
 
 QDBusError* QDBusError_New();
-QDBusError* QDBusError_New2(const QDBusMessage* msg);
-QDBusError* QDBusError_New3(int error, const libqt_string message);
-QDBusError* QDBusError_New4(const QDBusError* other);
+QDBusError* QDBusError_New2(const DBusError* error);
+QDBusError* QDBusError_New3(const QDBusMessage* msg);
+QDBusError* QDBusError_New4(int error, const libqt_string message);
+QDBusError* QDBusError_New5(const QDBusError* other);
 void QDBusError_OperatorAssign(QDBusError* self, const QDBusError* other);
 void QDBusError_OperatorAssign2(QDBusError* self, const QDBusMessage* msg);
 void QDBusError_Swap(QDBusError* self, QDBusError* other);

@@ -396,6 +396,10 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 		ret += "uintptr_t"
 	case "quint128":
 		ret = "__uint128_t"
+	// cross-platform and opaque external types
+	case "DBusError", "NSMenu", "QNativeInterface::QX11Application::Display", "XEvent",
+		"wl_compositor", "wl_display", "wl_keyboard", "wl_pointer", "wl_seat", "wl_touch":
+		ret = "void"
 
 	default:
 		if ft, ok := p.QFlagsOf(); ok {
@@ -754,6 +758,10 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 			pType = p.FunctionPointer.ReturnType.renderReturnTypeC(cfs, isSlot, false) + " func(" + strings.Join(fParams, ", ") + ")"
 		}
 
+		if p.Pointer && (p.ParameterType == "DBusError" || p.ParameterType == "XEvent") {
+			pType = p.ParameterType + "* (This is an opaque pointer to an external type.)"
+		}
+
 		if isSlot {
 			resParam := pType
 
@@ -888,6 +896,9 @@ func (cfs *cFileState) emitReturnComment(rt CppParameter) string {
 		returnComment = "/// @return " + rt.FunctionPointer.ReturnType.renderReturnTypeC(cfs, false, false) + " (*" + rt.renderFunctionType() + ")(" + strings.TrimSpace(cfs.emitParametersC(rt.FunctionPointer.Parameters, false)) + ")"
 	} else if rt.IsStdOptional && IsKnownClass(rt.ParameterType) {
 		returnComment = "/// @return " + rt.RenderTypeC(cfs, true, true, true) + " (NOTE: This pointer value could be `NULL`.)"
+	} else if rt.Pointer && (rt.ParameterType == "NSMenu" || strings.HasPrefix(rt.ParameterType, "wl_") ||
+		rt.ParameterType == "XEvent" || strings.HasPrefix(rt.ParameterType, "xcb_")) {
+		returnComment = "/// @return " + rt.ParameterType + "* (NOTE: This pointer value could be `NULL`.)"
 	}
 
 	return ifv(returnComment == "", "", returnComment+"\n///\n")
@@ -1670,6 +1681,10 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 			return assignExpr + rvalue + ";"
 		}
 
+	} else if rt.Pointer && (rt.ParameterType == "NSMenu" || strings.HasPrefix(rt.ParameterType, "wl_") ||
+		rt.ParameterType == "XEvent" || strings.HasPrefix(rt.ParameterType, "xcb_")) {
+		return assignExpr + rvalue + ";"
+
 	} else if reflect.TypeFor[string]().Kind() == reflect.String {
 		// Single type conversion from C++ C ABI State to C State type
 		// This should not be necessary in most cases.
@@ -2112,8 +2127,8 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 			} else if m.LinuxOnly {
 				needsPlatformMacro = true
 				ret.WriteString("\n#ifdef __linux__")
-			} else if mSafeMethodName == "SetAsDockMenu" {
-				// hack for QMenu::setAsDockMenu
+			} else if mSafeMethodName == "SetAsDockMenu" || mSafeMethodName == "ToNSMenu" {
+				// hack for QMenu::setAsDockMenu & QMenu::toNSMenu
 				needsPlatformMacro = true
 				ret.WriteString("\n#ifdef __APPLE__")
 			} else if c.ClassName == "QProcess::UnixProcessParameters" || (cmdStructName == "QProcess" && (slices.Contains(nonWinQProcess, m.MethodName) || slices.Contains(nonWinQProcess, m.OverrideMethodName))) {
@@ -2751,13 +2766,8 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 
 			if ctor.FossOnly {
-				ret.WriteString(cStructName + "* " + cMethodPrefix + "_new" + maybeSuffix(i) + "(" + cfs.emitParametersC(ctor.Parameters, false) + `) {
-        #if !defined(__linux__) && !defined(__FreeBSD__)
-		    fprintf(stderr, "Error: Unsupported operating system\n");
-            abort();
-        #endif
-
-` + ctorRet + "}\n\n")
+				ret.WriteString("#if defined(__linux__) && defined(__FreeBSD__)\n" + cStructName + "* " + cMethodPrefix + "_new" + maybeSuffix(i) + "(" +
+					cfs.emitParametersC(ctor.Parameters, false) + ") {\n" + ctorRet + "}\n#endif\n\n")
 			} else {
 				var maybeMacro, maybeEndMacro string
 
@@ -2943,8 +2953,11 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			} else if m.LinuxOnly {
 				needsPlatformMacro = true
 				ret.WriteString("\n#ifdef __linux__\n")
-			} else if mSafeMethodName == "SetAsDockMenu" {
-				// hack for QMenu::setAsDockMenu
+			} else if m.FossOnly {
+				ret.WriteString("#if defined(__linux__) && defined(__FreeBSD__)\n")
+				needsPlatformMacro = true
+			} else if mSafeMethodName == "SetAsDockMenu" || mSafeMethodName == "ToNSMenu" {
+				// hack for QMenu::setAsDockMenu & QMenu::toNSMenu
 				needsPlatformMacro = true
 				ret.WriteString("\n#ifdef __APPLE__\n")
 			} else if c.ClassName == "QProcess::UnixProcessParameters" || (cmdStructName == "QProcess" && (slices.Contains(nonWinQProcess, m.MethodName) || slices.Contains(nonWinQProcess, m.OverrideMethodName))) {
@@ -2953,18 +2966,8 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				ret.WriteString("\n#ifndef _WIN32\n")
 			}
 
-			ret.WriteString(returnTypeDecl + " " + cmdMethodName + method + cfs.emitParametersC(m.Parameters, false) + ") {")
-
-			if m.FossOnly {
-				ret.WriteString(`
-    #if !defined(__linux__) && !defined(__FreeBSD__)
-        fprintf(stderr, "Error: Unsupported operating system\n");
-        abort();
-    #endif
-`)
-			}
-
-			ret.WriteString("\n" + preamble + returnFunc + "\n}\n")
+			ret.WriteString(returnTypeDecl + " " + cmdMethodName + method + cfs.emitParametersC(m.Parameters, false) + ") {" +
+				"\n" + preamble + returnFunc + "\n}\n")
 
 			if needsPlatformMacro {
 				ret.WriteString("#endif\n")
@@ -3026,6 +3029,9 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				if m.LinuxOnly {
 					maybeMacro = "#ifdef __linux__\n"
 					maybeEndMacro = "#endif\n"
+				} else if m.FossOnly {
+					maybeMacro = "#if defined(__linux__) && defined(__FreeBSD__)\n"
+					maybeEndMacro = "#endif\n"
 				}
 
 				ret.WriteString(maybeMacro + "void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true, true) +
@@ -3037,18 +3043,8 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				basereturnFunc := cfs.emitCabiToC("return ", m.ReturnType, baseCallTarget)
 				cfs.checkAndClearAllocCleanups(true)
 
-				ret.WriteString(maybeMacro + returnTypeDecl + " " + baseMethodName + method + cfs.emitParametersC(m.Parameters, false) + ") {")
-
-				if m.FossOnly {
-					ret.WriteString(`
-#if !defined(__linux__) && !defined(__FreeBSD__)
-    fprintf(stderr, "Error: Unsupported operating system\n");
-    abort();
-#endif
-`)
-				}
-
-				ret.WriteString("\n" + preamble + basereturnFunc + "\n}\n" + maybeEndMacro + "\n\n")
+				ret.WriteString(maybeMacro + returnTypeDecl + " " + baseMethodName + method + cfs.emitParametersC(m.Parameters, false) + ") {" +
+					"\n" + preamble + basereturnFunc + "\n}\n" + maybeEndMacro + "\n\n")
 			}
 		}
 
