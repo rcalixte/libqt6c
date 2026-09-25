@@ -45,6 +45,10 @@ bool q_test__qtoucheventwidgetsequence_super_commit(void* self, bool processEven
     return QTest__QTouchEventWidgetSequence_SuperCommit((QTest__QTouchEventWidgetSequence*)self, processEvents);
 }
 
+void q_test__qtoucheventwidgetsequence_operator_assign(void* self, void* param1) {
+    QTest__QTouchEventWidgetSequence_OperatorAssign((QTest__QTouchEventWidgetSequence*)self, (QTest__QTouchEventWidgetSequence*)param1);
+}
+
 QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_press3(void* self, int touchId, void* pt, void* widget) {
     return QTest__QTouchEventWidgetSequence_Press3((QTest__QTouchEventWidgetSequence*)self, touchId, (QPoint*)pt, (QWidget*)widget);
 }

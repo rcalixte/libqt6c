@@ -2460,6 +2460,10 @@ bool q_designerwidgetboxinterface__category_is_null(void* self) {
     return QDesignerWidgetBoxInterface__Category_IsNull((QDesignerWidgetBoxInterface__Category*)self);
 }
 
+void q_designerwidgetboxinterface__category_operator_assign(void* self, void* param1) {
+    QDesignerWidgetBoxInterface__Category_OperatorAssign((QDesignerWidgetBoxInterface__Category*)self, (QDesignerWidgetBoxInterface__Category*)param1);
+}
+
 void q_designerwidgetboxinterface__category_delete(void* self) {
     QDesignerWidgetBoxInterface__Category_Delete((QDesignerWidgetBoxInterface__Category*)(self));
 }

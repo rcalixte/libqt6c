@@ -183,6 +183,13 @@ QMargins* q_margins_operator_divide_assign2(void* self, double param1);
 ///
 QMarginsF* q_margins_to_margins_f(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qmargins.html#operator-eq)
+///
+/// @param self QMargins*
+/// @param param1 QMargins*
+///
+void q_margins_operator_assign(void* self, void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qmargins.html#dtor.QMargins)
 ///
 /// Delete this object from C++ memory.
@@ -359,6 +366,13 @@ QMarginsF* q_marginsf_operator_divide_assign(void* self, double divisor);
 /// @param self QMarginsF*
 ///
 QMargins* q_marginsf_to_margins(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmarginsf.html#operator-eq)
+///
+/// @param self QMarginsF*
+/// @param param1 QMarginsF*
+///
+void q_marginsf_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmarginsf.html#dtor.QMarginsF)
 ///

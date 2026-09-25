@@ -296,7 +296,7 @@ void q_transform_delete(void* self) {
     QTransform_Delete((QTransform*)(self));
 }
 
-uintptr_t q_qtransform_h_q_hash(void* key, uintptr_t seed) {
+size_t q_qtransform_h_q_hash(void* key, size_t seed) {
     return qtransform_h_QHash((QTransform*)key, seed);
 }
 

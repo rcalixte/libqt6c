@@ -10,9 +10,11 @@
 
 /// [Upstream resources](https://api.kde.org/kxmessages.html)
 
+#ifdef __linux__
 /// k_xmessages_new constructs a new KXMessages object.
 ///
 KXMessages* k_xmessages_new();
+#endif
 
 /// [Upstream resources](https://api.kde.org/kxmessages.html)
 
@@ -27,20 +29,24 @@ KXMessages* k_xmessages_new2(xcb_connection_t* connection, xcb_window_t rootWind
 
 /// [Upstream resources](https://api.kde.org/kxmessages.html)
 
+#ifdef __linux__
 /// k_xmessages_new3 constructs a new KXMessages object.
 ///
 /// @param accept_broadcast const char*
 ///
 KXMessages* k_xmessages_new3(const char* accept_broadcast);
+#endif
 
 /// [Upstream resources](https://api.kde.org/kxmessages.html)
 
+#ifdef __linux__
 /// k_xmessages_new4 constructs a new KXMessages object.
 ///
 /// @param accept_broadcast const char*
 /// @param parent QObject*
 ///
 KXMessages* k_xmessages_new4(const char* accept_broadcast, void* parent);
+#endif
 
 /// [Upstream resources](https://api.kde.org/kxmessages.html)
 

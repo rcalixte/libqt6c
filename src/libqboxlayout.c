@@ -692,6 +692,10 @@ int32_t q_boxlayout_alignment(void* self) {
     return QLayoutItem_Alignment(q_boxlayout_as_q_layout_item(self));
 }
 
+void q_boxlayout_operator_assign(void* self, void* param1) {
+    QLayoutItem_OperatorAssign(q_boxlayout_as_q_layout_item(self), (QLayoutItem*)param1);
+}
+
 QRect* q_boxlayout_geometry(void* self) {
     return QBoxLayout_Geometry((QBoxLayout*)self);
 }
@@ -1488,6 +1492,10 @@ void q_hboxlayout_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 
 int32_t q_hboxlayout_alignment(void* self) {
     return QLayoutItem_Alignment(q_hboxlayout_as_q_layout_item(self));
+}
+
+void q_hboxlayout_operator_assign(void* self, void* param1) {
+    QLayoutItem_OperatorAssign(q_hboxlayout_as_q_layout_item(self), (QLayoutItem*)param1);
 }
 
 void q_hboxlayout_add_item(void* self, void* param1) {
@@ -2466,6 +2474,10 @@ void q_vboxlayout_on_destroyed1(void* self, void (*callback)(void*, void*)) {
 
 int32_t q_vboxlayout_alignment(void* self) {
     return QLayoutItem_Alignment(q_vboxlayout_as_q_layout_item(self));
+}
+
+void q_vboxlayout_operator_assign(void* self, void* param1) {
+    QLayoutItem_OperatorAssign(q_vboxlayout_as_q_layout_item(self), (QLayoutItem*)param1);
 }
 
 void q_vboxlayout_add_item(void* self, void* param1) {

@@ -55,6 +55,10 @@ bool k_configbase_is_group_immutable(void* self, const char* group) {
     return KConfigBase_IsGroupImmutable((KConfigBase*)self, qstring(group));
 }
 
+void k_configbase_operator_assign(void* self, void* param1) {
+    KConfigBase_OperatorAssign((KConfigBase*)self, (KConfigBase*)param1);
+}
+
 void k_configbase_delete_group2(void* self, const char* group, int32_t flags) {
     KConfigBase_DeleteGroup2((KConfigBase*)self, qstring(group), flags);
 }

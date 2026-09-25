@@ -699,9 +699,9 @@ void q_font_delete(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qfont-h.html#qHash)
 ///
 /// @param font QFont*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qfont_h_q_hash(void* font, uintptr_t seed);
+size_t q_qfont_h_q_hash(void* font, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfont-tag.html)
 
@@ -782,6 +782,13 @@ QFont__Tag* q_font__tag_from_value(uint32_t value);
 /// @return QFont__Tag* (NOTE: This pointer value could be `NULL`.)
 ///
 QFont__Tag* q_font__tag_from_string(const char* view);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qfont-tag.html#operator-eq)
+///
+/// @param self QFont__Tag*
+/// @param param1 QFont__Tag*
+///
+void q_font__tag_operator_assign(void* self, void* param1);
 
 /// Delete this object from C++ memory.
 ///

@@ -128,6 +128,10 @@ void* q_accessibleinterface_interface_cast(void* self, int32_t param1) {
     return QAccessibleInterface_InterfaceCast((QAccessibleInterface*)self, param1);
 }
 
+void q_accessibleinterface_operator_assign(void* self, void* param1) {
+    QAccessibleInterface_OperatorAssign((QAccessibleInterface*)self, (QAccessibleInterface*)param1);
+}
+
 void q_accessibletextinterface_selection(void* self, int selectionIndex, int* startOffset, int* endOffset) {
     QAccessibleTextInterface_Selection((QAccessibleTextInterface*)self, selectionIndex, startOffset, endOffset);
 }
@@ -392,6 +396,10 @@ bool q_accessibletableinterface_unselect_column(void* self, int column) {
 
 void q_accessibletableinterface_model_change(void* self, void* event) {
     QAccessibleTableInterface_ModelChange((QAccessibleTableInterface*)self, (QAccessibleTableModelChangeEvent*)event);
+}
+
+void q_accessibletableinterface_operator_assign(void* self, void* param1) {
+    QAccessibleTableInterface_OperatorAssign((QAccessibleTableInterface*)self, (QAccessibleTableInterface*)param1);
 }
 
 void q_accessibletableinterface_delete(void* self) {

@@ -160,14 +160,6 @@ void k_textautocorrectioncore__importabstractautocorrection_operator_assign(void
     TextAutoCorrectionCore__ImportAbstractAutocorrection_OperatorAssign((TextAutoCorrectionCore__ImportAbstractAutocorrection*)self, (TextAutoCorrectionCore__ImportAbstractAutocorrection*)param1);
 }
 
-void k_textautocorrectioncore__importabstractautocorrection_on_operator_assign(void* self, void (*callback)(void*, void*)) {
-    TextAutoCorrectionCore__ImportAbstractAutocorrection_OnOperatorAssign((TextAutoCorrectionCore__ImportAbstractAutocorrection*)self, (intptr_t)callback);
-}
-
-void k_textautocorrectioncore__importabstractautocorrection_super_operator_assign(void* self, void* param1) {
-    TextAutoCorrectionCore__ImportAbstractAutocorrection_SuperOperatorAssign((TextAutoCorrectionCore__ImportAbstractAutocorrection*)self, (TextAutoCorrectionCore__ImportAbstractAutocorrection*)param1);
-}
-
 void k_textautocorrectioncore__importabstractautocorrection_delete(void* self) {
     TextAutoCorrectionCore__ImportAbstractAutocorrection_Delete((TextAutoCorrectionCore__ImportAbstractAutocorrection*)(self));
 }

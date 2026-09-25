@@ -193,15 +193,15 @@ void q_modelindex_delete(void* self) {
     QModelIndex_Delete((QModelIndex*)(self));
 }
 
-uintptr_t q_qabstractitemmodel_q_hash(void* index, uintptr_t seed) {
+size_t q_qabstractitemmodel_q_hash(void* index, size_t seed) {
     return qabstractitemmodel_QHash((QPersistentModelIndex*)index, seed);
 }
 
-uintptr_t q_qabstractitemmodel_q_hash2(void* index, uintptr_t seed) {
+size_t q_qabstractitemmodel_q_hash2(void* index, size_t seed) {
     return qabstractitemmodel_QHash2((QPersistentModelIndex*)index, seed);
 }
 
-uintptr_t q_qabstractitemmodel_q_hash3(void* index, uintptr_t seed) {
+size_t q_qabstractitemmodel_q_hash3(void* index, size_t seed) {
     return qabstractitemmodel_QHash3((QModelIndex*)index, seed);
 }
 

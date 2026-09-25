@@ -30,6 +30,10 @@ int32_t q_scistyledtext_style(void* self) {
     return QsciStyledText_Style((QsciStyledText*)self);
 }
 
+void q_scistyledtext_operator_assign(void* self, void* param1) {
+    QsciStyledText_OperatorAssign((QsciStyledText*)self, (QsciStyledText*)param1);
+}
+
 void q_scistyledtext_delete(void* self) {
     QsciStyledText_Delete((QsciStyledText*)(self));
 }

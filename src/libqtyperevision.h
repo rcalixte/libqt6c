@@ -13,9 +13,9 @@
 /// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html#qHash)
 ///
 /// @param key QTypeRevision*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qtyperevision_q_hash(void* key, uintptr_t seed);
+size_t q_qtyperevision_q_hash(void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html)
 

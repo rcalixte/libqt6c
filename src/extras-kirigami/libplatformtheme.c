@@ -1091,6 +1091,10 @@ void k_irigami__platform__platformthemechangetracker_mark_dirty(void* self, uint
     Kirigami__Platform__PlatformThemeChangeTracker_MarkDirty((Kirigami__Platform__PlatformThemeChangeTracker*)self, changes);
 }
 
+void k_irigami__platform__platformthemechangetracker_operator_assign(void* self, void* param1) {
+    Kirigami__Platform__PlatformThemeChangeTracker_OperatorAssign((Kirigami__Platform__PlatformThemeChangeTracker*)self, (Kirigami__Platform__PlatformThemeChangeTracker*)param1);
+}
+
 void k_irigami__platform__platformthemechangetracker_delete(void* self) {
     Kirigami__Platform__PlatformThemeChangeTracker_Delete((Kirigami__Platform__PlatformThemeChangeTracker*)(self));
 }

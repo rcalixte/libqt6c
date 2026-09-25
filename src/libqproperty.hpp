@@ -65,6 +65,7 @@ void QUntypedPropertyBinding_Delete(QUntypedPropertyBinding* self);
 
 QPropertyObserverBase* QPropertyObserverBase_New();
 QPropertyObserverBase* QPropertyObserverBase_New2(const QPropertyObserverBase* param1);
+void QPropertyObserverBase_OperatorAssign(QPropertyObserverBase* self, const QPropertyObserverBase* param1);
 void QPropertyObserverBase_Delete(QPropertyObserverBase* self);
 
 QPropertyObserver* QPropertyObserver_New();

@@ -330,6 +330,6 @@ void k_pluginmetadata_delete(void* self) {
     KPluginMetaData_Delete((KPluginMetaData*)(self));
 }
 
-uintptr_t k_pluginmetadata_h_q_hash(void* md, uintptr_t seed) {
+size_t k_pluginmetadata_h_q_hash(void* md, size_t seed) {
     return kpluginmetadata_h_QHash((KPluginMetaData*)md, seed);
 }

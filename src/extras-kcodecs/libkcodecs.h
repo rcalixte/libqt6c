@@ -199,6 +199,13 @@ char* k_codecs__codec_decode2(void* self, char* src);
 ///
 const char* k_codecs__codec_name(void* self);
 
+/// [Upstream resources](https://api.kde.org/kcodecs-codec.html#operator-eq)
+///
+/// @param self KCodecs__Codec*
+/// @param param1 KCodecs__Codec*
+///
+void k_codecs__codec_operator_assign(void* self, void* param1);
+
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#encode)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`

@@ -2,7 +2,7 @@
 #include "libqocspresponse.hpp"
 #include "libqocspresponse.h"
 
-uintptr_t q_qocspresponse_h_q_hash(void* response, uintptr_t seed) {
+size_t q_qocspresponse_h_q_hash(void* response, size_t seed) {
     return qocspresponse_h_QHash((QOcspResponse*)response, seed);
 }
 

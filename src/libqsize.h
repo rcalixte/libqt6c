@@ -225,6 +225,13 @@ QSize* q_size_operator_divide_assign(void* self, double c);
 ///
 QSizeF* q_size_to_size_f(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#operator-eq)
+///
+/// @param self QSize*
+/// @param param1 QSize*
+///
+void q_size_operator_assign(void* self, void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#dtor.QSize)
 ///
 /// Delete this object from C++ memory.
@@ -238,9 +245,9 @@ void q_size_delete(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsize.html#qHash)
 ///
 /// @param s QSize*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qsize_q_hash(void* s, uintptr_t seed);
+size_t q_qsize_q_hash(void* s, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html)
 
@@ -466,6 +473,13 @@ QSizeF* q_sizef_operator_divide_assign(void* self, double c);
 /// @param self QSizeF*
 ///
 QSize* q_sizef_to_size(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#operator-eq)
+///
+/// @param self QSizeF*
+/// @param param1 QSizeF*
+///
+void q_sizef_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizef.html#dtor.QSizeF)
 ///

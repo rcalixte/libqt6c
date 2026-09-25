@@ -165,6 +165,13 @@ int32_t k_nscore__searchrequest_page_size(void* self);
 ///
 KNSCore__SearchRequest* k_nscore__searchrequest_next_page(void* self);
 
+/// [Upstream resources](https://api.kde.org/knscore-searchrequest.html#operator-eq)
+///
+/// @param self KNSCore__SearchRequest*
+/// @param param1 KNSCore__SearchRequest*
+///
+void k_nscore__searchrequest_operator_assign(void* self, void* param1);
+
 /// Delete this object from C++ memory.
 ///
 /// @param self KNSCore__SearchRequest*

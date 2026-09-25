@@ -141,6 +141,10 @@ void k_bookmarkowner_super_open_in_new_window(void* self, void* bm) {
     KBookmarkOwner_SuperOpenInNewWindow((KBookmarkOwner*)self, (KBookmark*)bm);
 }
 
+void k_bookmarkowner_operator_assign(void* self, void* param1) {
+    KBookmarkOwner_OperatorAssign((KBookmarkOwner*)self, (KBookmarkOwner*)param1);
+}
+
 void k_bookmarkowner_delete(void* self) {
     KBookmarkOwner_Delete((KBookmarkOwner*)(self));
 }

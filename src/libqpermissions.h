@@ -36,6 +36,13 @@ int32_t q_permission_status(void* self);
 ///
 QMetaType* q_permission_type(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qpermission.html#operator-eq)
+///
+/// @param self QPermission*
+/// @param param1 QPermission*
+///
+void q_permission_operator_assign(void* self, void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qpermission.html#dtor.QPermission)
 ///
 /// Delete this object from C++ memory.

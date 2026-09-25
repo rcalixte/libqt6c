@@ -2910,6 +2910,10 @@ QPointF* q_gestureevent_map_to_graphics_scene(void* self, void* gesturePoint) {
     return QGestureEvent_MapToGraphicsScene((QGestureEvent*)self, (QPointF*)gesturePoint);
 }
 
+void q_gestureevent_operator_assign(void* self, void* param1) {
+    QGestureEvent_OperatorAssign((QGestureEvent*)self, (QGestureEvent*)param1);
+}
+
 int32_t q_gestureevent_type(void* self) {
     return QEvent_Type((QEvent*)self);
 }

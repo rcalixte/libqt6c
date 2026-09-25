@@ -1218,6 +1218,10 @@ void q_quickpainteditem_on_destroyed1(void* self, void (*callback)(void*, void*)
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
+void q_quickpainteditem_operator_assign(void* self, void* param1) {
+    QQmlParserStatus_OperatorAssign(q_quickpainteditem_as_q_qml_parser_status(self), (QQmlParserStatus*)param1);
+}
+
 QRectF* q_quickpainteditem_bounding_rect(void* self) {
     return QQuickPaintedItem_BoundingRect((QQuickPaintedItem*)self);
 }

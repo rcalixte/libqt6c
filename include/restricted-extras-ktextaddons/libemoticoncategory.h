@@ -89,6 +89,13 @@ void k_textemoticonscore__emoticoncategory_set_order(void* self, int newOrder);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmoticonCategory.html)
 ///
+/// @param self TextEmoticonsCore__EmoticonCategory*
+/// @param param1 TextEmoticonsCore__EmoticonCategory*
+///
+void k_textemoticonscore__emoticoncategory_operator_assign(void* self, void* param1);
+
+/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmoticonCategory.html)
+///
 /// Delete this object from C++ memory.
 ///
 /// @param self TextEmoticonsCore__EmoticonCategory*

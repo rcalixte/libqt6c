@@ -225,14 +225,12 @@ QQmlInfo* q_qmlinfo_operator_shift_left20(void* self, QTextStream* (*f)(void* fu
 ///
 QQmlInfo* q_qmlinfo_operator_shift_left22(void* self, void* t);
 
-/// Inherited from QDebug
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qqmlinfo.html#operator-eq)
 ///
 /// @param self QQmlInfo*
-/// @param other QDebug*
+/// @param param1 QQmlInfo*
 ///
-void q_qmlinfo_operator_assign(void* self, void* other);
+void q_qmlinfo_operator_assign(void* self, void* param1);
 
 /// Inherited from QDebug
 ///

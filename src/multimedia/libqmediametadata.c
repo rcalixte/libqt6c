@@ -53,6 +53,10 @@ const char* q_mediametadata_meta_data_key_to_string(int32_t k) {
     return _ret;
 }
 
+void q_mediametadata_operator_assign(void* self, void* param1) {
+    QMediaMetaData_OperatorAssign((QMediaMetaData*)self, (QMediaMetaData*)param1);
+}
+
 void q_mediametadata_delete(void* self) {
     QMediaMetaData_Delete((QMediaMetaData*)(self));
 }

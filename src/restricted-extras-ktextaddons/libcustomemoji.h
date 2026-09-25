@@ -60,6 +60,13 @@ void k_textemoticonscore__customemoji_set_is_animated_emoji(void* self, bool new
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1CustomEmoji.html)
 ///
+/// @param self TextEmoticonsCore__CustomEmoji*
+/// @param param1 TextEmoticonsCore__CustomEmoji*
+///
+void k_textemoticonscore__customemoji_operator_assign(void* self, void* param1);
+
+/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1CustomEmoji.html)
+///
 /// Delete this object from C++ memory.
 ///
 /// @param self TextEmoticonsCore__CustomEmoji*

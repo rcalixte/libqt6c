@@ -126,6 +126,13 @@ void q_webengineframe_print_to_pdf2(void* self, void (*callback)(char* funcparam
 ///
 void q_webengineframe_print_to_pdf3(void* self, void* callback);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#operator-eq)
+///
+/// @param self QWebEngineFrame*
+/// @param param1 QWebEngineFrame*
+///
+void q_webengineframe_operator_assign(void* self, void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#runJavaScript)
 ///
 /// @param self QWebEngineFrame*

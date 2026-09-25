@@ -13,9 +13,9 @@
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#qHash)
 ///
 /// @param key QVersionNumber*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qversionnumber_q_hash(void* key, uintptr_t seed);
+size_t q_qversionnumber_q_hash(void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html)
 
@@ -157,6 +157,13 @@ const char* q_versionnumber_to_string(void* self);
 /// @param string const char*
 ///
 QVersionNumber* q_versionnumber_from_string(const char* string);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#operator-eq)
+///
+/// @param self QVersionNumber*
+/// @param param1 QVersionNumber*
+///
+void q_versionnumber_operator_assign(void* self, void* param1);
 
 #if defined(__linux__) || defined(__FreeBSD__)
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#fromString)

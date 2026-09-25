@@ -188,7 +188,7 @@ char* q_qbytearray_q_uncompress2(char* data) {
     return _ret;
 }
 
-uintptr_t q_qbytearray_q_hash(void* key, uintptr_t seed) {
+size_t q_qbytearray_q_hash(void* key, size_t seed) {
     return qbytearray_QHash((QByteArray__FromBase64Result*)key, seed);
 }
 

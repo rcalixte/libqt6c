@@ -154,6 +154,13 @@ int32_t q_lowenergyadvertisingparameters__addressinfo_type(void* self);
 ///
 void q_lowenergyadvertisingparameters__addressinfo_set_type(void* self, int32_t type);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingparameters-addressinfo.html#operator-eq)
+///
+/// @param self QLowEnergyAdvertisingParameters__AddressInfo*
+/// @param param1 QLowEnergyAdvertisingParameters__AddressInfo*
+///
+void q_lowenergyadvertisingparameters__addressinfo_operator_assign(void* self, void* param1);
+
 /// Delete this object from C++ memory.
 ///
 /// @param self QLowEnergyAdvertisingParameters__AddressInfo*

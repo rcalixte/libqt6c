@@ -13,16 +13,16 @@
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslellipticcurve-h.html#qHash)
 ///
 /// @param curve QSslEllipticCurve*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qsslellipticcurve_h_q_hash(void* curve, uintptr_t seed);
+size_t q_qsslellipticcurve_h_q_hash(void* curve, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslellipticcurve-h.html#qHash)
 ///
 /// @param curve QSslEllipticCurve*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qsslellipticcurve_h_q_hash2(void* curve, uintptr_t seed);
+size_t q_qsslellipticcurve_h_q_hash2(void* curve, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslellipticcurve.html)
 

@@ -217,7 +217,7 @@ void q_geoaddress_delete(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoaddress-h.html#qHash)
 ///
 /// @param address QGeoAddress*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qgeoaddress_h_q_hash(void* address, uintptr_t seed);
+size_t q_qgeoaddress_h_q_hash(void* address, size_t seed);
 #endif

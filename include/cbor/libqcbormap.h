@@ -537,9 +537,9 @@ void q_cbormap_delete(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#qHash)
 ///
 /// @param map QCborMap*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qcbormap_q_hash(void* map, uintptr_t seed);
+size_t q_qcbormap_q_hash(void* map, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-iterator.html)
 

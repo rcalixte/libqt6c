@@ -74,6 +74,13 @@ const char* q_dbusobjectpath_path(void* self);
 ///
 QVariant* q_dbusobjectpath_to_q_variant(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusobjectpath.html#operator-eq)
+///
+/// @param self QDBusObjectPath*
+/// @param param1 QDBusObjectPath*
+///
+void q_dbusobjectpath_operator_assign(void* self, void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusobjectpath.html#dtor.QDBusObjectPath)
 ///
 /// Delete this object from C++ memory.
@@ -87,16 +94,16 @@ void q_dbusobjectpath_delete(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusextratypes-h.html#qHash)
 ///
 /// @param objectPath QDBusObjectPath*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qdbusextratypes_h_q_hash(void* objectPath, uintptr_t seed);
+size_t q_qdbusextratypes_h_q_hash(void* objectPath, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusextratypes-h.html#qHash)
 ///
 /// @param signature QDBusSignature*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qdbusextratypes_h_q_hash2(void* signature, uintptr_t seed);
+size_t q_qdbusextratypes_h_q_hash2(void* signature, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbussignature.html)
 
@@ -157,6 +164,13 @@ void q_dbussignature_set_signature(void* self, const char* signature);
 /// @param self QDBusSignature*
 ///
 const char* q_dbussignature_signature(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbussignature.html#operator-eq)
+///
+/// @param self QDBusSignature*
+/// @param param1 QDBusSignature*
+///
+void q_dbussignature_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbussignature.html#dtor.QDBusSignature)
 ///

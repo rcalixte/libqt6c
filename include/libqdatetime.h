@@ -1428,23 +1428,23 @@ void q_datetime_delete(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#qHash)
 ///
 /// @param key QDateTime*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qdatetime_q_hash(void* key, uintptr_t seed);
+size_t q_qdatetime_q_hash(void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#qHash)
 ///
 /// @param key QDate*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qdatetime_q_hash2(void* key, uintptr_t seed);
+size_t q_qdatetime_q_hash2(void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#qHash)
 ///
 /// @param key QTime*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qdatetime_q_hash3(void* key, uintptr_t seed);
+size_t q_qdatetime_q_hash3(void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#public-types)
 

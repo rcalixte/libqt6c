@@ -309,6 +309,7 @@ void Konsole__FilterChain_Delete(Konsole__FilterChain* self);
 
 Konsole__TerminalImageFilterChain* Konsole__TerminalImageFilterChain_New();
 Konsole__TerminalImageFilterChain* Konsole__TerminalImageFilterChain_New2(const Konsole__TerminalImageFilterChain* param1);
+void Konsole__TerminalImageFilterChain_OperatorAssign(Konsole__TerminalImageFilterChain* self, const Konsole__TerminalImageFilterChain* param1);
 void Konsole__TerminalImageFilterChain_Delete(Konsole__TerminalImageFilterChain* self);
 
 Konsole__Filter__HotSpot* Konsole__Filter__HotSpot_New(int startLine, int startColumn, int endLine, int endColumn);
@@ -320,6 +321,7 @@ int Konsole__Filter__HotSpot_EndColumn(const Konsole__Filter__HotSpot* self);
 int Konsole__Filter__HotSpot_Type(const Konsole__Filter__HotSpot* self);
 void Konsole__Filter__HotSpot_Activate(Konsole__Filter__HotSpot* self, const libqt_string action);
 libqt_list /* of QAction* */ Konsole__Filter__HotSpot_Actions(Konsole__Filter__HotSpot* self);
+void Konsole__Filter__HotSpot_OperatorAssign(Konsole__Filter__HotSpot* self, const Konsole__Filter__HotSpot* param1);
 void Konsole__Filter__HotSpot_OnActivate(Konsole__Filter__HotSpot* self, intptr_t slot);
 void Konsole__Filter__HotSpot_SuperActivate(Konsole__Filter__HotSpot* self, const libqt_string action);
 void Konsole__Filter__HotSpot_OnActions(Konsole__Filter__HotSpot* self, intptr_t slot);
@@ -334,6 +336,7 @@ Konsole__RegExpFilter__HotSpot* Konsole__RegExpFilter__HotSpot_New2(const Konsol
 void Konsole__RegExpFilter__HotSpot_Activate(Konsole__RegExpFilter__HotSpot* self, const libqt_string action);
 void Konsole__RegExpFilter__HotSpot_SetCapturedTexts(Konsole__RegExpFilter__HotSpot* self, const libqt_list /* of libqt_string */ texts);
 libqt_list /* of libqt_string */ Konsole__RegExpFilter__HotSpot_CapturedTexts(const Konsole__RegExpFilter__HotSpot* self);
+void Konsole__RegExpFilter__HotSpot_OperatorAssign(Konsole__RegExpFilter__HotSpot* self, const Konsole__RegExpFilter__HotSpot* param1);
 void Konsole__RegExpFilter__HotSpot_OnActivate(Konsole__RegExpFilter__HotSpot* self, intptr_t slot);
 void Konsole__RegExpFilter__HotSpot_SuperActivate(Konsole__RegExpFilter__HotSpot* self, const libqt_string action);
 libqt_list /* of QAction* */ Konsole__RegExpFilter__HotSpot_Actions(Konsole__RegExpFilter__HotSpot* self);

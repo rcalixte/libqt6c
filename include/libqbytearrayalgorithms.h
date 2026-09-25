@@ -14,9 +14,9 @@
 ///
 /// @param s void*
 /// @param needle int
-/// @param n uintptr_t
+/// @param n size_t
 ///
-const void* q_qbytearrayalgorithms_qmemrchr(void* s, int needle, uintptr_t n);
+const void* q_qbytearrayalgorithms_qmemrchr(void* s, int needle, size_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayalgorithms.html#qstrdup)
 ///
@@ -30,14 +30,14 @@ char* q_qbytearrayalgorithms_qstrdup(const char* param1);
 ///
 /// @param str const char*
 ///
-uintptr_t q_qbytearrayalgorithms_qstrlen(const char* str);
+size_t q_qbytearrayalgorithms_qstrlen(const char* str);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayalgorithms.html#qstrnlen)
 ///
 /// @param str const char*
-/// @param maxlen uintptr_t
+/// @param maxlen size_t
 ///
-uintptr_t q_qbytearrayalgorithms_qstrnlen(const char* str, uintptr_t maxlen);
+size_t q_qbytearrayalgorithms_qstrnlen(const char* str, size_t maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayalgorithms.html#qstrcpy)
 ///
@@ -54,9 +54,9 @@ char* q_qbytearrayalgorithms_qstrcpy(char* dst, const char* src);
 ///
 /// @param dst char*
 /// @param src const char*
-/// @param len uintptr_t
+/// @param len size_t
 ///
-char* q_qbytearrayalgorithms_qstrncpy(char* dst, const char* src, uintptr_t _len);
+char* q_qbytearrayalgorithms_qstrncpy(char* dst, const char* src, size_t _len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayalgorithms.html#qstrcmp)
 ///
@@ -69,9 +69,9 @@ int32_t q_qbytearrayalgorithms_qstrcmp(const char* str1, const char* str2);
 ///
 /// @param str1 const char*
 /// @param str2 const char*
-/// @param len uintptr_t
+/// @param len size_t
 ///
-int32_t q_qbytearrayalgorithms_qstrncmp(const char* str1, const char* str2, uintptr_t _len);
+int32_t q_qbytearrayalgorithms_qstrncmp(const char* str1, const char* str2, size_t _len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayalgorithms.html#qstricmp)
 ///
@@ -84,9 +84,9 @@ int32_t q_qbytearrayalgorithms_qstricmp(const char* param1, const char* param2);
 ///
 /// @param param1 const char*
 /// @param param2 const char*
-/// @param len uintptr_t
+/// @param len size_t
 ///
-int32_t q_qbytearrayalgorithms_qstrnicmp(const char* param1, const char* param2, uintptr_t _len);
+int32_t q_qbytearrayalgorithms_qstrnicmp(const char* param1, const char* param2, size_t _len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayalgorithms.html#qstrnicmp)
 ///

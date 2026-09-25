@@ -315,6 +315,13 @@ bool q_jsprimitivevalue_strictly_equals(void* self, void* other);
 ///
 bool q_jsprimitivevalue_equals(void* self, void* other);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsprimitivevalue.html#operator-eq)
+///
+/// @param self QJSPrimitiveValue*
+/// @param param1 QJSPrimitiveValue*
+///
+void q_jsprimitivevalue_operator_assign(void* self, void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsprimitivevalue.html#dtor.QJSPrimitiveValue)
 ///
 /// Delete this object from C++ memory.

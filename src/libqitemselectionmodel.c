@@ -95,6 +95,10 @@ libqt_list /* of QModelIndex* */ q_itemselectionrange_indexes(void* self) {
     return _arr;
 }
 
+void q_itemselectionrange_operator_assign(void* self, void* param1) {
+    QItemSelectionRange_OperatorAssign((QItemSelectionRange*)self, (QItemSelectionRange*)param1);
+}
+
 void q_itemselectionrange_delete(void* self) {
     QItemSelectionRange_Delete((QItemSelectionRange*)(self));
 }

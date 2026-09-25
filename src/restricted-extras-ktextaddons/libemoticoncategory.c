@@ -54,6 +54,10 @@ void k_textemoticonscore__emoticoncategory_set_order(void* self, int newOrder) {
     TextEmoticonsCore__EmoticonCategory_SetOrder((TextEmoticonsCore__EmoticonCategory*)self, newOrder);
 }
 
+void k_textemoticonscore__emoticoncategory_operator_assign(void* self, void* param1) {
+    TextEmoticonsCore__EmoticonCategory_OperatorAssign((TextEmoticonsCore__EmoticonCategory*)self, (TextEmoticonsCore__EmoticonCategory*)param1);
+}
+
 void k_textemoticonscore__emoticoncategory_delete(void* self) {
     TextEmoticonsCore__EmoticonCategory_Delete((TextEmoticonsCore__EmoticonCategory*)(self));
 }

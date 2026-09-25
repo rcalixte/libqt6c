@@ -660,6 +660,15 @@ QAccessibleSelectionInterface* q_accessiblewidget_selection_interface(void* self
 ///
 QAccessibleAttributesInterface* q_accessiblewidget_attributes_interface(void* self);
 
+/// Inherited from QAccessibleInterface
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleinterface.html#operator-eq)
+///
+/// @param self QAccessibleWidget*
+/// @param param1 QAccessibleInterface*
+///
+void q_accessiblewidget_operator_assign(void* self, void* param1);
+
 /// Inherited from QAccessibleActionInterface
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)

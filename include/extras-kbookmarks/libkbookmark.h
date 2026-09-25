@@ -272,6 +272,13 @@ void k_bookmark_populate_mime_data(void* self, void* mimeData);
 ///
 bool k_bookmark_operator_equal(void* self, void* rhs);
 
+/// [Upstream resources](https://api.kde.org/kbookmark.html#operator-eq)
+///
+/// @param self KBookmark*
+/// @param param1 KBookmark*
+///
+void k_bookmark_operator_assign(void* self, void* param1);
+
 /// [Upstream resources](https://api.kde.org/kbookmark.html#setMetaDataItem)
 ///
 /// @param self KBookmark*
@@ -709,6 +716,15 @@ void k_bookmarkgroup_populate_mime_data(void* self, void* mimeData);
 /// @param rhs KBookmark*
 ///
 bool k_bookmarkgroup_operator_equal(void* self, void* rhs);
+
+/// Inherited from KBookmark
+///
+/// [Upstream resources](https://api.kde.org/kbookmark.html#operator-eq)
+///
+/// @param self KBookmarkGroup*
+/// @param param1 KBookmark*
+///
+void k_bookmarkgroup_operator_assign(void* self, void* param1);
 
 /// Inherited from KBookmark
 ///

@@ -69,14 +69,12 @@ bool q_placeresult_is_sponsored(void* self);
 ///
 void q_placeresult_set_sponsored(void* self, bool sponsored);
 
-/// Inherited from QPlaceSearchResult
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchresult.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qplaceresult.html#operator-eq)
 ///
 /// @param self QPlaceResult*
-/// @param other QPlaceSearchResult*
+/// @param param1 QPlaceResult*
 ///
-void q_placeresult_operator_assign(void* self, void* other);
+void q_placeresult_operator_assign(void* self, void* param1);
 
 /// Inherited from QPlaceSearchResult
 ///

@@ -187,7 +187,7 @@ void q_jsonarray_delete(void* self) {
     QJsonArray_Delete((QJsonArray*)(self));
 }
 
-uintptr_t q_qjsonarray_q_hash(void* array, uintptr_t seed) {
+size_t q_qjsonarray_q_hash(void* array, size_t seed) {
     return qjsonarray_QHash((QJsonArray*)array, seed);
 }
 

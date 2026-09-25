@@ -88,6 +88,13 @@ const char* q_mediametadata_string_value(void* self, int32_t k);
 ///
 const char* q_mediametadata_meta_data_key_to_string(int32_t k);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#operator-eq)
+///
+/// @param self QMediaMetaData*
+/// @param param1 QMediaMetaData*
+///
+void q_mediametadata_operator_assign(void* self, void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#dtor.QMediaMetaData)
 ///
 /// Delete this object from C++ memory.

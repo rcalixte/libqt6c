@@ -1248,6 +1248,10 @@ void q_quickrhiitem_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
+void q_quickrhiitem_operator_assign(void* self, void* param1) {
+    QQmlParserStatus_OperatorAssign(q_quickrhiitem_as_q_qml_parser_status(self), (QQmlParserStatus*)param1);
+}
+
 QRectF* q_quickrhiitem_bounding_rect(void* self) {
     return QQuickRhiItem_BoundingRect((QQuickRhiItem*)self);
 }

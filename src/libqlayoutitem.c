@@ -210,14 +210,6 @@ void q_layoutitem_operator_assign(void* self, void* param1) {
     QLayoutItem_OperatorAssign((QLayoutItem*)self, (QLayoutItem*)param1);
 }
 
-void q_layoutitem_on_operator_assign(void* self, void (*callback)(void*, void*)) {
-    QLayoutItem_OnOperatorAssign((QLayoutItem*)self, (intptr_t)callback);
-}
-
-void q_layoutitem_super_operator_assign(void* self, void* param1) {
-    QLayoutItem_SuperOperatorAssign((QLayoutItem*)self, (QLayoutItem*)param1);
-}
-
 void q_layoutitem_delete(void* self) {
     QLayoutItem_Delete((QLayoutItem*)(self));
 }
@@ -340,6 +332,10 @@ QSpacerItem* q_spaceritem_super_spacer_item(void* self) {
 
 QSizePolicy* q_spaceritem_size_policy(void* self) {
     return QSpacerItem_SizePolicy((QSpacerItem*)self);
+}
+
+void q_spaceritem_operator_assign(void* self, void* param1) {
+    QSpacerItem_OperatorAssign((QSpacerItem*)self, (QSpacerItem*)param1);
 }
 
 void q_spaceritem_change_size3(void* self, int w, int h, int32_t hData) {
@@ -602,6 +598,10 @@ void q_widgetitem_set_alignment(void* self, int32_t a) {
     QLayoutItem_SetAlignment((QLayoutItem*)self, a);
 }
 
+void q_widgetitem_operator_assign(void* self, void* param1) {
+    QLayoutItem_OperatorAssign((QLayoutItem*)self, (QLayoutItem*)param1);
+}
+
 void q_widgetitem_invalidate(void* self) {
     QWidgetItem_Invalidate((QWidgetItem*)self);
 }
@@ -700,6 +700,10 @@ int32_t q_widgetitemv2_alignment(void* self) {
 
 void q_widgetitemv2_set_alignment(void* self, int32_t a) {
     QLayoutItem_SetAlignment((QLayoutItem*)self, a);
+}
+
+void q_widgetitemv2_operator_assign(void* self, void* param1) {
+    QLayoutItem_OperatorAssign((QLayoutItem*)self, (QLayoutItem*)param1);
 }
 
 int32_t q_widgetitemv2_expanding_directions(void* self) {

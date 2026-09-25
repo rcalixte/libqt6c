@@ -13,9 +13,9 @@
 /// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters-h.html#qHash)
 ///
 /// @param dhparam QSslDiffieHellmanParameters*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qssldiffiehellmanparameters_h_q_hash(void* dhparam, uintptr_t seed);
+size_t q_qssldiffiehellmanparameters_h_q_hash(void* dhparam, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html)
 

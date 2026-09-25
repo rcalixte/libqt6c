@@ -18,6 +18,10 @@ QMetaType* q_permission_type(void* self) {
     return QPermission_Type((QPermission*)self);
 }
 
+void q_permission_operator_assign(void* self, void* param1) {
+    QPermission_OperatorAssign((QPermission*)self, (QPermission*)param1);
+}
+
 void q_permission_delete(void* self) {
     QPermission_Delete((QPermission*)(self));
 }

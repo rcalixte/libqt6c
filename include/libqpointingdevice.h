@@ -83,9 +83,9 @@ void q_pointingdeviceuniqueid_delete(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointingdevice-h.html#qHash)
 ///
 /// @param key QPointingDeviceUniqueId*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qpointingdevice_h_q_hash(void* key, uintptr_t seed);
+size_t q_qpointingdevice_h_q_hash(void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointingdevice.html)
 

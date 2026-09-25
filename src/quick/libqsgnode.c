@@ -1153,14 +1153,6 @@ void q_sgnodevisitor_operator_assign(void* self, void* param1) {
     QSGNodeVisitor_OperatorAssign((QSGNodeVisitor*)self, (QSGNodeVisitor*)param1);
 }
 
-void q_sgnodevisitor_on_operator_assign(void* self, void (*callback)(void*, void*)) {
-    QSGNodeVisitor_OnOperatorAssign((QSGNodeVisitor*)self, (intptr_t)callback);
-}
-
-void q_sgnodevisitor_super_operator_assign(void* self, void* param1) {
-    QSGNodeVisitor_SuperOperatorAssign((QSGNodeVisitor*)self, (QSGNodeVisitor*)param1);
-}
-
 void q_sgnodevisitor_delete(void* self) {
     QSGNodeVisitor_Delete((QSGNodeVisitor*)(self));
 }

@@ -143,6 +143,6 @@ void q_geoaddress_delete(void* self) {
     QGeoAddress_Delete((QGeoAddress*)(self));
 }
 
-uintptr_t q_qgeoaddress_h_q_hash(void* address, uintptr_t seed) {
+size_t q_qgeoaddress_h_q_hash(void* address, size_t seed) {
     return qgeoaddress_h_QHash((QGeoAddress*)address, seed);
 }

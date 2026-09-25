@@ -1,9 +1,11 @@
 #include "libqguiapplication_platform.hpp"
 #include "libqguiapplication_platform.h"
 
+#if defined(__linux__) && defined(__FreeBSD__)
 QNativeInterface__QX11Application* q_nativeinterface__qx11application_new() {
     return QNativeInterface__QX11Application_New();
 }
+#endif
 
 #if defined(__linux__) && defined(__FreeBSD__)
 void* q_nativeinterface__qx11application_display(void* self) {
@@ -41,9 +43,11 @@ xcb_connection_t* q_nativeinterface__qx11application_super_connection(void* self
 }
 #endif
 
+#if defined(__linux__) && defined(__FreeBSD__)
 QNativeInterface__QWaylandApplication* q_nativeinterface__qwaylandapplication_new() {
     return QNativeInterface__QWaylandApplication_New();
 }
+#endif
 
 #if defined(__linux__) && defined(__FreeBSD__)
 void* q_nativeinterface__qwaylandapplication_display(void* self) {

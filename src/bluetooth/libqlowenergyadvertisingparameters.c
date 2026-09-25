@@ -83,6 +83,10 @@ void q_lowenergyadvertisingparameters__addressinfo_set_type(void* self, int32_t 
     QLowEnergyAdvertisingParameters__AddressInfo_SetType((QLowEnergyAdvertisingParameters__AddressInfo*)self, type);
 }
 
+void q_lowenergyadvertisingparameters__addressinfo_operator_assign(void* self, void* param1) {
+    QLowEnergyAdvertisingParameters__AddressInfo_OperatorAssign((QLowEnergyAdvertisingParameters__AddressInfo*)self, (QLowEnergyAdvertisingParameters__AddressInfo*)param1);
+}
+
 void q_lowenergyadvertisingparameters__addressinfo_delete(void* self) {
     QLowEnergyAdvertisingParameters__AddressInfo_Delete((QLowEnergyAdvertisingParameters__AddressInfo*)(self));
 }

@@ -1,7 +1,7 @@
 #include "libqmimetype.hpp"
 #include "libqmimetype.h"
 
-uintptr_t q_qmimetype_q_hash(void* key, uintptr_t seed) {
+size_t q_qmimetype_q_hash(void* key, size_t seed) {
     return qmimetype_QHash((QMimeType*)key, seed);
 }
 

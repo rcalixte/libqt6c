@@ -13,7 +13,7 @@ const char* k_nscore_replace_b_b_code(const char* unformattedText) {
     return _ret;
 }
 
-uintptr_t k_nscore_q_hash(void* entry, uintptr_t seed) {
+size_t k_nscore_q_hash(void* entry, size_t seed) {
     return KNSCore_QHash((KNSCore__Entry*)entry, seed);
 }
 

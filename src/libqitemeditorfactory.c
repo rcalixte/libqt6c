@@ -71,6 +71,10 @@ void q_itemeditorfactory_set_default_factory(void* factory) {
     QItemEditorFactory_SetDefaultFactory((QItemEditorFactory*)factory);
 }
 
+void q_itemeditorfactory_operator_assign(void* self, void* param1) {
+    QItemEditorFactory_OperatorAssign((QItemEditorFactory*)self, (QItemEditorFactory*)param1);
+}
+
 void q_itemeditorfactory_delete(void* self) {
     QItemEditorFactory_Delete((QItemEditorFactory*)(self));
 }

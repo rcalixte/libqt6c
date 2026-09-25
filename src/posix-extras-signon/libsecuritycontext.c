@@ -35,6 +35,10 @@ const char* q_signon__securitycontext_application_context(void* self) {
     return _ret;
 }
 
+void q_signon__securitycontext_operator_assign(void* self, void* param1) {
+    SignOn__SecurityContext_OperatorAssign((SignOn__SecurityContext*)self, (SignOn__SecurityContext*)param1);
+}
+
 void q_signon__securitycontext_delete(void* self) {
     SignOn__SecurityContext_Delete((SignOn__SecurityContext*)(self));
 }

@@ -384,9 +384,9 @@ void q_rawfont_delete(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont-h.html#qHash)
 ///
 /// @param font QRawFont*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qrawfont_h_q_hash(void* font, uintptr_t seed);
+size_t q_qrawfont_h_q_hash(void* font, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#public-types)
 

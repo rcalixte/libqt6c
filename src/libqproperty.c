@@ -145,6 +145,10 @@ QPropertyObserverBase* q_propertyobserverbase_new2(void* param1) {
     return QPropertyObserverBase_New2((QPropertyObserverBase*)param1);
 }
 
+void q_propertyobserverbase_operator_assign(void* self, void* param1) {
+    QPropertyObserverBase_OperatorAssign((QPropertyObserverBase*)self, (QPropertyObserverBase*)param1);
+}
+
 void q_propertyobserverbase_delete(void* self) {
     QPropertyObserverBase_Delete((QPropertyObserverBase*)(self));
 }
@@ -153,12 +157,20 @@ QPropertyObserver* q_propertyobserver_new() {
     return QPropertyObserver_New();
 }
 
+void q_propertyobserver_operator_assign(void* self, void* param1) {
+    QPropertyObserverBase_OperatorAssign((QPropertyObserverBase*)self, (QPropertyObserverBase*)param1);
+}
+
 void q_propertyobserver_delete(void* self) {
     QPropertyObserver_Delete((QPropertyObserver*)(self));
 }
 
 QPropertyNotifier* q_propertynotifier_new() {
     return QPropertyNotifier_New();
+}
+
+void q_propertynotifier_operator_assign(void* self, void* param1) {
+    QPropertyObserverBase_OperatorAssign((QPropertyObserverBase*)self, (QPropertyObserverBase*)param1);
 }
 
 void q_propertynotifier_delete(void* self) {

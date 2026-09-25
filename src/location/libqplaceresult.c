@@ -39,8 +39,8 @@ void q_placeresult_set_sponsored(void* self, bool sponsored) {
     QPlaceResult_SetSponsored((QPlaceResult*)self, sponsored);
 }
 
-void q_placeresult_operator_assign(void* self, void* other) {
-    QPlaceSearchResult_OperatorAssign((QPlaceSearchResult*)self, (QPlaceSearchResult*)other);
+void q_placeresult_operator_assign(void* self, void* param1) {
+    QPlaceResult_OperatorAssign((QPlaceResult*)self, (QPlaceResult*)param1);
 }
 
 bool q_placeresult_operator_equal(void* self, void* other) {

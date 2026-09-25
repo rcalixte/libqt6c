@@ -404,10 +404,10 @@ void q_nodebug_delete(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#qt_QMetaEnum_flagDebugOperator)
 ///
 /// @param debug QDebug*
-/// @param sizeofT uintptr_t
+/// @param sizeofT size_t
 /// @param value uint32_t
 ///
-void q_qdebug_q_meta_enum_flag_debug_operator(void* debug, uintptr_t sizeofT, uint32_t value);
+void q_qdebug_q_meta_enum_flag_debug_operator(void* debug, size_t sizeofT, uint32_t value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#qt_QMetaEnum_debugOperator)
 ///

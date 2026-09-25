@@ -69,6 +69,13 @@ const char* q_sqlrelation_display_column(void* self);
 ///
 bool q_sqlrelation_is_valid(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelation.html#operator-eq)
+///
+/// @param self QSqlRelation*
+/// @param param1 QSqlRelation*
+///
+void q_sqlrelation_operator_assign(void* self, void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelation.html#dtor.QSqlRelation)
 ///
 /// Delete this object from C++ memory.

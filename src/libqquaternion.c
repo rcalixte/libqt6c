@@ -211,6 +211,10 @@ QQuaternion* q_quaternion_nlerp(void* q1, void* q2, float t) {
     return QQuaternion_Nlerp((QQuaternion*)q1, (QQuaternion*)q2, t);
 }
 
+void q_quaternion_operator_assign(void* self, void* param1) {
+    QQuaternion_OperatorAssign((QQuaternion*)self, (QQuaternion*)param1);
+}
+
 void q_quaternion_delete(void* self) {
     QQuaternion_Delete((QQuaternion*)(self));
 }

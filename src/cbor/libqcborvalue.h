@@ -1738,9 +1738,9 @@ void q_cborvalueref_delete(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#qHash)
 ///
 /// @param value QCborValue*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qcborvalue_q_hash(void* value, uintptr_t seed);
+size_t q_qcborvalue_q_hash(void* value, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#public-types)
 

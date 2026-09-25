@@ -3,7 +3,7 @@
 #include "libqurlquery.hpp"
 #include "libqurlquery.h"
 
-uintptr_t q_qurlquery_q_hash(void* key, uintptr_t seed) {
+size_t q_qurlquery_q_hash(void* key, size_t seed) {
     return qurlquery_QHash((QUrlQuery*)key, seed);
 }
 

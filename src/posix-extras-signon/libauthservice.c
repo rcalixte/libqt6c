@@ -544,6 +544,10 @@ const char* q_signon__authservice__identityregexp_pattern(void* self) {
     return _ret;
 }
 
+void q_signon__authservice__identityregexp_operator_assign(void* self, void* param1) {
+    SignOn__AuthService__IdentityRegExp_OperatorAssign((SignOn__AuthService__IdentityRegExp*)self, (SignOn__AuthService__IdentityRegExp*)param1);
+}
+
 void q_signon__authservice__identityregexp_delete(void* self) {
     SignOn__AuthService__IdentityRegExp_Delete((SignOn__AuthService__IdentityRegExp*)(self));
 }

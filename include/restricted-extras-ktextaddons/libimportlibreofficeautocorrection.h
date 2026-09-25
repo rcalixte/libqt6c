@@ -51,6 +51,13 @@ void k_textautocorrectioncore__importlibreofficeautocorrection_on_import(void* s
 ///
 bool k_textautocorrectioncore__importlibreofficeautocorrection_super_import(void* self, const char* fileName, const char* errorMessage, int32_t loadAttribute);
 
+/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportLibreOfficeAutocorrection.html)
+///
+/// @param self TextAutoCorrectionCore__ImportLibreOfficeAutocorrection*
+/// @param param1 TextAutoCorrectionCore__ImportLibreOfficeAutocorrection*
+///
+void k_textautocorrectioncore__importlibreofficeautocorrection_operator_assign(void* self, void* param1);
+
 /// Inherited from TextAutoCorrectionCore::ImportAbstractAutocorrection
 ///
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)

@@ -289,6 +289,6 @@ int32_t q_qmetatype_q_register_meta_type(void* meta) {
     return qmetatype_QRegisterMetaType((QMetaType*)meta);
 }
 
-uintptr_t q_qmetatype_q_hash(void* type, uintptr_t seed) {
+size_t q_qmetatype_q_hash(void* type, size_t seed) {
     return qmetatype_QHash((QMetaType*)type, seed);
 }

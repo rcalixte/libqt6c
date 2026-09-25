@@ -61,9 +61,9 @@ void q_ipv6address_delete(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress-h.html#qHash)
 ///
 /// @param key QHostAddress*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qhostaddress_h_q_hash(void* key, uintptr_t seed);
+size_t q_qhostaddress_h_q_hash(void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html)
 

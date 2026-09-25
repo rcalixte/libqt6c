@@ -10,9 +10,11 @@
 #include "libkxmessages.hpp"
 #include "libkxmessages.hxx"
 
+#ifdef __linux__
 KXMessages* KXMessages_New() {
     return new VirtualKXMessages();
 }
+#endif
 
 #ifdef __linux__
 KXMessages* KXMessages_New2(xcb_connection_t* connection, xcb_window_t rootWindow) {
@@ -20,13 +22,17 @@ KXMessages* KXMessages_New2(xcb_connection_t* connection, xcb_window_t rootWindo
 }
 #endif
 
+#ifdef __linux__
 KXMessages* KXMessages_New3(const char* accept_broadcast) {
     return new VirtualKXMessages(accept_broadcast);
 }
+#endif
 
+#ifdef __linux__
 KXMessages* KXMessages_New4(const char* accept_broadcast, QObject* parent) {
     return new VirtualKXMessages(accept_broadcast, parent);
 }
+#endif
 
 #ifdef __linux__
 KXMessages* KXMessages_New5(xcb_connection_t* connection, xcb_window_t rootWindow, const char* accept_broadcast) {

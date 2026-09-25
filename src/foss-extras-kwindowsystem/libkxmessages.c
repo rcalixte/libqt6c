@@ -5,9 +5,11 @@
 #include "libkxmessages.hpp"
 #include "libkxmessages.h"
 
+#ifdef __linux__
 KXMessages* k_xmessages_new() {
     return KXMessages_New();
 }
+#endif
 
 #ifdef __linux__
 KXMessages* k_xmessages_new2(xcb_connection_t* connection, xcb_window_t rootWindow) {
@@ -15,13 +17,17 @@ KXMessages* k_xmessages_new2(xcb_connection_t* connection, xcb_window_t rootWind
 }
 #endif
 
+#ifdef __linux__
 KXMessages* k_xmessages_new3(const char* accept_broadcast) {
     return KXMessages_New3(accept_broadcast);
 }
+#endif
 
+#ifdef __linux__
 KXMessages* k_xmessages_new4(const char* accept_broadcast, void* parent) {
     return KXMessages_New4(accept_broadcast, (QObject*)parent);
 }
+#endif
 
 #ifdef __linux__
 KXMessages* k_xmessages_new5(xcb_connection_t* connection, xcb_window_t rootWindow, const char* accept_broadcast) {

@@ -2511,6 +2511,15 @@ void q_quickpainteditem_destroyed1(void* self, void* param1);
 ///
 void q_quickpainteditem_on_destroyed1(void* self, void (*callback)(void*, void*));
 
+/// Inherited from QQmlParserStatus
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qqmlparserstatus.html#operator-eq)
+///
+/// @param self QQuickPaintedItem*
+/// @param param1 QQmlParserStatus*
+///
+void q_quickpainteditem_operator_assign(void* self, void* param1);
+
 /// Inherited from QQuickItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#boundingRect)

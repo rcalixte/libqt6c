@@ -99,7 +99,7 @@ int32_t k_recentfilesmenu_maximum_items(void* self) {
     return KRecentFilesMenu_MaximumItems((KRecentFilesMenu*)self);
 }
 
-void k_recentfilesmenu_set_maximum_items(void* self, uintptr_t maximumItems) {
+void k_recentfilesmenu_set_maximum_items(void* self, size_t maximumItems) {
     KRecentFilesMenu_SetMaximumItems((KRecentFilesMenu*)self, maximumItems);
 }
 

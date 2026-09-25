@@ -95,6 +95,13 @@ libqt_list k_onsole__keyboardtranslator_entries(void* self);
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator*
+/// @param param1 Konsole__KeyboardTranslator*
+///
+void k_onsole__keyboardtranslator_operator_assign(void* self, void* param1);
+
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+///
+/// @param self Konsole__KeyboardTranslator*
 /// @param keyCode int
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param state flag of enum Konsole__KeyboardTranslator__State
@@ -403,6 +410,13 @@ bool k_onsole__keyboardtranslator__entry_matches(void* self, int keyCode, int32_
 /// @param rhs Konsole__KeyboardTranslator__Entry*
 ///
 bool k_onsole__keyboardtranslator__entry_operator_equal(void* self, void* rhs);
+
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+///
+/// @param self Konsole__KeyboardTranslator__Entry*
+/// @param param1 Konsole__KeyboardTranslator__Entry*
+///
+void k_onsole__keyboardtranslator__entry_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///

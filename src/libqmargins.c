@@ -101,6 +101,10 @@ QMarginsF* q_margins_to_margins_f(void* self) {
     return QMargins_ToMarginsF((QMargins*)self);
 }
 
+void q_margins_operator_assign(void* self, void* param1) {
+    QMargins_OperatorAssign((QMargins*)self, (QMargins*)param1);
+}
+
 void q_margins_delete(void* self) {
     QMargins_Delete((QMargins*)(self));
 }
@@ -199,6 +203,10 @@ QMarginsF* q_marginsf_operator_divide_assign(void* self, double divisor) {
 
 QMargins* q_marginsf_to_margins(void* self) {
     return QMarginsF_ToMargins((QMarginsF*)self);
+}
+
+void q_marginsf_operator_assign(void* self, void* param1) {
+    QMarginsF_OperatorAssign((QMarginsF*)self, (QMarginsF*)param1);
 }
 
 void q_marginsf_delete(void* self) {
