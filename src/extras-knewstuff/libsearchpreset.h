@@ -54,6 +54,13 @@ int32_t k_nscore__searchpreset_type(void* self);
 ///
 const char* k_nscore__searchpreset_provider_id(void* self);
 
+/// [Upstream resources](https://api.kde.org/knscore-searchpreset.html#operator-eq)
+///
+/// @param self KNSCore__SearchPreset*
+/// @param param1 KNSCore__SearchPreset*
+///
+void k_nscore__searchpreset_operator_assign(void* self, void* param1);
+
 /// Delete this object from C++ memory.
 ///
 /// @param self KNSCore__SearchPreset*

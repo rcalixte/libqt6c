@@ -320,6 +320,10 @@ QRectF* q_rect_to_rect_f(void* self) {
     return QRect_ToRectF((QRect*)self);
 }
 
+void q_rect_operator_assign(void* self, void* param1) {
+    QRect_OperatorAssign((QRect*)self, (QRect*)param1);
+}
+
 bool q_rect_contains22(void* self, void* r, bool proper) {
     return QRect_Contains22((QRect*)self, (QRect*)r, proper);
 }
@@ -332,7 +336,7 @@ void q_rect_delete(void* self) {
     QRect_Delete((QRect*)(self));
 }
 
-uintptr_t q_qrect_q_hash(void* r, uintptr_t seed) {
+size_t q_qrect_q_hash(void* r, size_t seed) {
     return qrect_QHash((QRect*)r, seed);
 }
 
@@ -650,6 +654,10 @@ QRect* q_rectf_to_rect(void* self) {
 
 QRect* q_rectf_to_aligned_rect(void* self) {
     return QRectF_ToAlignedRect((QRectF*)self);
+}
+
+void q_rectf_operator_assign(void* self, void* param1) {
+    QRectF_OperatorAssign((QRectF*)self, (QRectF*)param1);
 }
 
 void q_rectf_delete(void* self) {

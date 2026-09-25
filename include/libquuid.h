@@ -267,9 +267,9 @@ void q_uuid_delete(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#qHash)
 ///
 /// @param uuid QUuid*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_quuid_q_hash(void* uuid, uintptr_t seed);
+size_t q_quuid_q_hash(void* uuid, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid-id128bytes.html)
 

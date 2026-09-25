@@ -508,7 +508,7 @@ void q_calendar__systemid_move_assign(void* self, void* other);
 ///
 /// @param self QCalendar__SystemId*
 ///
-uintptr_t q_calendar__systemid_index(void* self);
+size_t q_calendar__systemid_index(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendar-systemid.html#isValid)
 ///

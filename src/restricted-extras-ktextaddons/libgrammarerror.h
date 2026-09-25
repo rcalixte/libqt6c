@@ -198,24 +198,6 @@ void k_textgrammarcheck__grammarerror_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
-/// Allows for overriding the related default method
-///
-/// @param self TextGrammarCheck__GrammarError*
-/// @param callback void func(TextGrammarCheck__GrammarError* self, TextGrammarCheck__GrammarError* param1)
-///
-void k_textgrammarcheck__grammarerror_on_operator_assign(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
-///
-/// Base class method implementation
-///
-/// @param self TextGrammarCheck__GrammarError*
-/// @param param1 TextGrammarCheck__GrammarError*
-///
-void k_textgrammarcheck__grammarerror_super_operator_assign(void* self, void* param1);
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self TextGrammarCheck__GrammarError*

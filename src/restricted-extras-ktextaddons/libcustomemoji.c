@@ -35,6 +35,10 @@ void k_textemoticonscore__customemoji_set_is_animated_emoji(void* self, bool new
     TextEmoticonsCore__CustomEmoji_SetIsAnimatedEmoji((TextEmoticonsCore__CustomEmoji*)self, newIsAnimatedEmoji);
 }
 
+void k_textemoticonscore__customemoji_operator_assign(void* self, void* param1) {
+    TextEmoticonsCore__CustomEmoji_OperatorAssign((TextEmoticonsCore__CustomEmoji*)self, (TextEmoticonsCore__CustomEmoji*)param1);
+}
+
 void k_textemoticonscore__customemoji_delete(void* self) {
     TextEmoticonsCore__CustomEmoji_Delete((TextEmoticonsCore__CustomEmoji*)(self));
 }

@@ -2829,6 +2829,15 @@ int32_t q_quickview_surface_class(void* self);
 ///
 bool q_quickview_supports_open_g_l(void* self);
 
+/// Inherited from QSurface
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#operator-eq)
+///
+/// @param self QQuickView*
+/// @param param1 QSurface*
+///
+void q_quickview_operator_assign(void* self, void* param1);
+
 /// Inherited from QQuickWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#focusObject)

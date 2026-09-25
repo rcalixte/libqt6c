@@ -369,9 +369,9 @@ void q_cborarray_delete(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray.html#qHash)
 ///
 /// @param array QCborArray*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qcborarray_q_hash(void* array, uintptr_t seed);
+size_t q_qcborarray_q_hash(void* array, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray-iterator.html)
 

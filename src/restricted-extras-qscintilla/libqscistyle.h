@@ -204,6 +204,13 @@ void q_scistyle_refresh(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
+/// @param self QsciStyle*
+/// @param param1 QsciStyle*
+///
+void q_scistyle_operator_assign(void* self, void* param1);
+
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
+///
 /// Delete this object from C++ memory.
 ///
 /// @param self QsciStyle*

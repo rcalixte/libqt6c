@@ -233,7 +233,7 @@ void q_nodebug_delete(void* self) {
     QNoDebug_Delete((QNoDebug*)(self));
 }
 
-void q_qdebug_q_meta_enum_flag_debug_operator(void* debug, uintptr_t sizeofT, uint32_t value) {
+void q_qdebug_q_meta_enum_flag_debug_operator(void* debug, size_t sizeofT, uint32_t value) {
     qdebug_QMetaEnumFlagDebugOperator((QDebug*)debug, sizeofT, value);
 }
 

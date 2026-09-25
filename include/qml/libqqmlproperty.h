@@ -317,9 +317,9 @@ void q_qmlproperty_delete(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty-h.html#qHash)
 ///
 /// @param key QQmlProperty*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qqmlproperty_h_q_hash(void* key, uintptr_t seed);
+size_t q_qqmlproperty_h_q_hash(void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#public-types)
 

@@ -299,9 +299,9 @@ void q_jsonarray_delete(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#qHash)
 ///
 /// @param array QJsonArray*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qjsonarray_q_hash(void* array, uintptr_t seed);
+size_t q_qjsonarray_q_hash(void* array, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray-iterator.html)
 

@@ -178,6 +178,6 @@ void q_qmlproperty_delete(void* self) {
     QQmlProperty_Delete((QQmlProperty*)(self));
 }
 
-uintptr_t q_qqmlproperty_h_q_hash(void* key, uintptr_t seed) {
+size_t q_qqmlproperty_h_q_hash(void* key, size_t seed) {
     return qqmlproperty_h_QHash((QQmlProperty*)key, seed);
 }

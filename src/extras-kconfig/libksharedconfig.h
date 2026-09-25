@@ -307,6 +307,15 @@ bool k_sharedconfig_is_group_immutable(void* self, const char* group);
 
 /// Inherited from KConfigBase
 ///
+/// [Upstream resources](https://api.kde.org/kconfigbase.html#operator-eq)
+///
+/// @param self KSharedConfig*
+/// @param param1 KConfigBase*
+///
+void k_sharedconfig_operator_assign(void* self, void* param1);
+
+/// Inherited from KConfigBase
+///
 /// [Upstream resources](https://api.kde.org/kconfigbase.html#deleteGroup)
 ///
 /// @param self KSharedConfig*

@@ -150,9 +150,9 @@ int32_t k_recentfilesmenu_maximum_items(void* self);
 /// [Upstream resources](https://api.kde.org/krecentfilesmenu.html#setMaximumItems)
 ///
 /// @param self KRecentFilesMenu*
-/// @param maximumItems uintptr_t
+/// @param maximumItems size_t
 ///
-void k_recentfilesmenu_set_maximum_items(void* self, uintptr_t maximumItems);
+void k_recentfilesmenu_set_maximum_items(void* self, size_t maximumItems);
 
 /// [Upstream resources](https://api.kde.org/krecentfilesmenu.html#recentFiles)
 ///

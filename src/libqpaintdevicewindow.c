@@ -891,6 +891,10 @@ bool q_paintdevicewindow_supports_open_g_l(void* self) {
     return QSurface_SupportsOpenGL(q_paintdevicewindow_as_q_surface(self));
 }
 
+void q_paintdevicewindow_operator_assign(void* self, void* param1) {
+    QSurface_OperatorAssign(q_paintdevicewindow_as_q_surface(self), (QSurface*)param1);
+}
+
 int32_t q_paintdevicewindow_dev_type(void* self) {
     return QPaintDevice_DevType(q_paintdevicewindow_as_q_paint_device(self));
 }

@@ -720,6 +720,10 @@ int32_t q_gridlayout_alignment(void* self) {
     return QLayoutItem_Alignment(q_gridlayout_as_q_layout_item(self));
 }
 
+void q_gridlayout_operator_assign(void* self, void* param1) {
+    QLayoutItem_OperatorAssign(q_gridlayout_as_q_layout_item(self), (QLayoutItem*)param1);
+}
+
 QRect* q_gridlayout_geometry(void* self) {
     return QGridLayout_Geometry((QGridLayout*)self);
 }

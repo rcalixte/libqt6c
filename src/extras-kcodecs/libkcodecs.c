@@ -123,6 +123,10 @@ const char* k_codecs__codec_name(void* self) {
     return KCodecs__Codec_Name((KCodecs__Codec*)self);
 }
 
+void k_codecs__codec_operator_assign(void* self, void* param1) {
+    KCodecs__Codec_OperatorAssign((KCodecs__Codec*)self, (KCodecs__Codec*)param1);
+}
+
 char* k_codecs__codec_encode22(void* self, char* src, int32_t newline) {
     libqt_string _str = KCodecs__Codec_Encode22((KCodecs__Codec*)self, qstring(src), newline);
     char* _ret = qstring_to_char(_str);

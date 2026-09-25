@@ -432,6 +432,7 @@ func processClassType(node map[string]any, addNamePrefix string) (CppClass, erro
 						},
 						IsStatic: true,
 					}
+					ApplyQuirks(ret.ClassName, &defaultCtorMethod)
 					ret.Ctors = append(ret.Ctors, defaultCtorMethod)
 				}
 			}
@@ -468,6 +469,7 @@ func processClassType(node map[string]any, addNamePrefix string) (CppClass, erro
 						},
 						IsStatic: true,
 					}
+					ApplyQuirks(ret.ClassName, &copyCtorMethod)
 					ret.Ctors = append(ret.Ctors, copyCtorMethod)
 				}
 			}
@@ -488,6 +490,7 @@ func processClassType(node map[string]any, addNamePrefix string) (CppClass, erro
 						IsStatic:   true,
 						IsMoveCtor: true,
 					}
+					ApplyQuirks(ret.ClassName, &moveCtorMethod)
 					ret.Ctors = append(ret.Ctors, moveCtorMethod)
 				}
 			}
@@ -703,6 +706,7 @@ nextMethod:
 				ret.HasEmptyCtor = true
 			}
 
+			ApplyQuirks(ret.ClassName, &mm)
 			ret.Ctors = append(ret.Ctors, mm)
 
 		case "CXXDestructorDecl":
@@ -731,19 +735,22 @@ nextMethod:
 			}
 
 		case "CXXMethodDecl",
-			"CXXConversionDecl": // e.g. `QColor::operator QVariant()`
+			"CXXConversionDecl": // e.g. QColor::operator QVariant()
 
 			// Method
 			methodName, ok := node["name"].(string)
 			if !ok {
 				return CppClass{}, errors.New("method has no name")
 			}
+			isImplicit, ok := node["isImplicit"].(bool)
 
 			var mm CppMethod
 			// If this is a virtual method, we want to allow overriding it even
 			// if it is protected
 			// But we can only call it if it is public
-			if visibility == VsPrivate {
+			if ok && isImplicit {
+				// implicit is implicitly public!
+			} else if visibility == VsPrivate {
 				mm.IsPrivate = true
 				ret.PrivateMethods = append(ret.PrivateMethods, methodName)
 				continue // Skip private, ALLOW protected
@@ -755,6 +762,11 @@ nextMethod:
 			}
 
 			mm.MethodName = methodName
+
+			if err := AllowMethod(ret.ClassName, mm); err != nil {
+				log.Printf("Skipping method %q with complex type", mm.MethodName)
+				continue nextMethod
+			}
 
 			err := parseMethod(node, &mm, ret.ClassName)
 			if err != nil {
@@ -777,7 +789,7 @@ nextMethod:
 			}
 
 			mm.IsSignal = isSignal && !mm.IsStatic && AllowSignal(mm)
-			mm.IsProtected = (visibility == VsProtected)
+			mm.IsProtected = !isImplicit && (visibility == VsProtected)
 
 			if mm.IsProtected && !mm.IsVirtual {
 				// Protected method, so we can't call it
@@ -786,6 +798,13 @@ nextMethod:
 				if !ret.IsRequiredProtectedMethod(&mm) {
 					continue nextMethod
 				}
+			}
+
+			if mm.IsProtected && !ret.HasEmptyCtor && strings.HasPrefix(mm.MethodName, "operator") {
+				// The subclass system can cause problems here with e.g. QStandardItem::operator=
+				// This is a protected method, but the assignment `other` ends up needing to
+				// be capable of being a directly constructed type or else this operation fails
+				continue nextMethod
 			}
 
 			// Once all processing is complete, pass to exceptions for final decision
@@ -801,7 +820,6 @@ nextMethod:
 			}
 
 			ApplyQuirks(ret.ClassName, &mm)
-
 			ret.Methods = append(ret.Methods, mm)
 
 		case "FieldDecl":

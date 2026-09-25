@@ -75,6 +75,10 @@ void q_webengineframe_print_to_pdf3(void* self, void* callback) {
     QWebEngineFrame_PrintToPdf3((QWebEngineFrame*)self, (QJSValue*)callback);
 }
 
+void q_webengineframe_operator_assign(void* self, void* param1) {
+    QWebEngineFrame_OperatorAssign((QWebEngineFrame*)self, (QWebEngineFrame*)param1);
+}
+
 void q_webengineframe_run_java_script22(void* self, const char* script, uint32_t worldId) {
     QWebEngineFrame_RunJavaScript22((QWebEngineFrame*)self, qstring(script), worldId);
 }

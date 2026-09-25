@@ -126,11 +126,15 @@ QSizeF* q_size_to_size_f(void* self) {
     return QSize_ToSizeF((QSize*)self);
 }
 
+void q_size_operator_assign(void* self, void* param1) {
+    QSize_OperatorAssign((QSize*)self, (QSize*)param1);
+}
+
 void q_size_delete(void* self) {
     QSize_Delete((QSize*)(self));
 }
 
-uintptr_t q_qsize_q_hash(void* s, uintptr_t seed) {
+size_t q_qsize_q_hash(void* s, size_t seed) {
     return qsize_QHash((QSize*)s, seed);
 }
 
@@ -260,6 +264,10 @@ QSizeF* q_sizef_operator_divide_assign(void* self, double c) {
 
 QSize* q_sizef_to_size(void* self) {
     return QSizeF_ToSize((QSizeF*)self);
+}
+
+void q_sizef_operator_assign(void* self, void* param1) {
+    QSizeF_OperatorAssign((QSizeF*)self, (QSizeF*)param1);
 }
 
 void q_sizef_delete(void* self) {

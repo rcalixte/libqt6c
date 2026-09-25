@@ -1075,6 +1075,13 @@ const char* q_signon__authservice__identityregexp_pattern(void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthService__IdentityRegExp.html)
 ///
+/// @param self SignOn__AuthService__IdentityRegExp*
+/// @param param1 SignOn__AuthService__IdentityRegExp*
+///
+void q_signon__authservice__identityregexp_operator_assign(void* self, void* param1);
+
+/// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthService__IdentityRegExp.html)
+///
 /// Delete this object from C++ memory.
 ///
 /// @param self SignOn__AuthService__IdentityRegExp*

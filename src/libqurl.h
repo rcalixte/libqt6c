@@ -13,9 +13,9 @@
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#qHash)
 ///
 /// @param url QUrl*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qurl_q_hash(void* url, uintptr_t seed);
+size_t q_qurl_q_hash(void* url, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html)
 

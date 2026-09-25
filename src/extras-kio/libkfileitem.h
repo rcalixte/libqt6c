@@ -527,9 +527,9 @@ void k_fileitem_delete(void* self);
 /// [Upstream resources](https://api.kde.org/kfileitem-h.html#qHash)
 ///
 /// @param item KFileItem*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t k_fileitem_h_q_hash(void* item, uintptr_t seed);
+size_t k_fileitem_h_q_hash(void* item, size_t seed);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlist.html)
 

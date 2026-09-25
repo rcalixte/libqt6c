@@ -220,6 +220,6 @@ void q_rawfont_delete(void* self) {
     QRawFont_Delete((QRawFont*)(self));
 }
 
-uintptr_t q_qrawfont_h_q_hash(void* font, uintptr_t seed) {
+size_t q_qrawfont_h_q_hash(void* font, size_t seed) {
     return qrawfont_h_QHash((QRawFont*)font, seed);
 }

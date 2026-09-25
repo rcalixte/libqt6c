@@ -1392,6 +1392,10 @@ bool q_quickview_supports_open_g_l(void* self) {
     return QSurface_SupportsOpenGL(q_quickview_as_q_surface(self));
 }
 
+void q_quickview_operator_assign(void* self, void* param1) {
+    QSurface_OperatorAssign(q_quickview_as_q_surface(self), (QSurface*)param1);
+}
+
 QObject* q_quickview_focus_object(void* self) {
     return QQuickView_FocusObject((QQuickView*)self);
 }

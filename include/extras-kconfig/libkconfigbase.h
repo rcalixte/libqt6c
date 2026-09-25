@@ -79,6 +79,13 @@ bool k_configbase_is_immutable(void* self);
 ///
 bool k_configbase_is_group_immutable(void* self, const char* group);
 
+/// [Upstream resources](https://api.kde.org/kconfigbase.html#operator-eq)
+///
+/// @param self KConfigBase*
+/// @param param1 KConfigBase*
+///
+void k_configbase_operator_assign(void* self, void* param1);
+
 /// [Upstream resources](https://api.kde.org/kconfigbase.html#deleteGroup)
 ///
 /// @param self KConfigBase*

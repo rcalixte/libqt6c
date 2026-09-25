@@ -29,6 +29,10 @@ void q_qmlparserstatus_super_component_complete(void* self) {
     QQmlParserStatus_SuperComponentComplete((QQmlParserStatus*)self);
 }
 
+void q_qmlparserstatus_operator_assign(void* self, void* param1) {
+    QQmlParserStatus_OperatorAssign((QQmlParserStatus*)self, (QQmlParserStatus*)param1);
+}
+
 void q_qmlparserstatus_delete(void* self) {
     QQmlParserStatus_Delete((QQmlParserStatus*)(self));
 }

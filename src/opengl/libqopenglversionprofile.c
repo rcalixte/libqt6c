@@ -50,6 +50,6 @@ void q_openglversionprofile_delete(void* self) {
     QOpenGLVersionProfile_Delete((QOpenGLVersionProfile*)(self));
 }
 
-uintptr_t q_qopenglversionprofile_h_q_hash(void* v, uintptr_t seed) {
+size_t q_qopenglversionprofile_h_q_hash(void* v, size_t seed) {
     return qopenglversionprofile_h_QHash((QOpenGLVersionProfile*)v, seed);
 }

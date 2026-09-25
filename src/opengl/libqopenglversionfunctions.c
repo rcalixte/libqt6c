@@ -46,7 +46,7 @@ void q_openglversionstatus_delete(void* self) {
     QOpenGLVersionStatus_Delete((QOpenGLVersionStatus*)(self));
 }
 
-uintptr_t q_qopenglversionfunctions_h_q_hash(void* v, uintptr_t seed) {
+size_t q_qopenglversionfunctions_h_q_hash(void* v, size_t seed) {
     return qopenglversionfunctions_h_QHash((QOpenGLVersionStatus*)v, seed);
 }
 

@@ -3042,24 +3042,6 @@ void q_cpabstractpaintbuffer_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPaintBuffer.html)
 ///
-/// Allows for overriding the related default method
-///
-/// @param self QCPAbstractPaintBuffer*
-/// @param callback void func(QCPAbstractPaintBuffer* self, QCPAbstractPaintBuffer* param1)
-///
-void q_cpabstractpaintbuffer_on_operator_assign(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPaintBuffer.html)
-///
-/// Base class method implementation
-///
-/// @param self QCPAbstractPaintBuffer*
-/// @param param1 QCPAbstractPaintBuffer*
-///
-void q_cpabstractpaintbuffer_super_operator_assign(void* self, void* param1);
-
-/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPaintBuffer.html)
-///
 /// @param self QCPAbstractPaintBuffer*
 /// @param invalidated bool
 ///
@@ -3192,24 +3174,6 @@ void q_cppaintbufferpixmap_super_reallocate_buffer(void* self);
 /// @param param1 QCPPaintBufferPixmap*
 ///
 void q_cppaintbufferpixmap_operator_assign(void* self, void* param1);
-
-/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPaintBufferPixmap.html)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QCPPaintBufferPixmap*
-/// @param callback void func(QCPPaintBufferPixmap* self, QCPPaintBufferPixmap* param1)
-///
-void q_cppaintbufferpixmap_on_operator_assign(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPaintBufferPixmap.html)
-///
-/// Base class method implementation
-///
-/// @param self QCPPaintBufferPixmap*
-/// @param param1 QCPPaintBufferPixmap*
-///
-void q_cppaintbufferpixmap_super_operator_assign(void* self, void* param1);
 
 /// Inherited from QCPAbstractPaintBuffer
 ///
@@ -18523,6 +18487,13 @@ void q_cplineending_draw2(void* self, void* painter, void* pos, double angle);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLineEnding.html)
 ///
+/// @param self QCPLineEnding*
+/// @param param1 QCPLineEnding*
+///
+void q_cplineending_operator_assign(void* self, void* param1);
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLineEnding.html)
+///
 /// Delete this object from C++ memory.
 ///
 /// @param self QCPLineEnding*
@@ -26638,6 +26609,13 @@ void q_cpscatterstyle_draw_shape(void* self, void* painter, void* pos);
 /// @param y double
 ///
 void q_cpscatterstyle_draw_shape2(void* self, void* painter, double x, double y);
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPScatterStyle.html)
+///
+/// @param self QCPScatterStyle*
+/// @param param1 QCPScatterStyle*
+///
+void q_cpscatterstyle_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPScatterStyle.html)
 ///

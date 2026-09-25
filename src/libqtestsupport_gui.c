@@ -33,6 +33,10 @@ bool q_test__qtoucheventsequence_commit(void* self, bool processEvents) {
     return QTest__QTouchEventSequence_Commit((QTest__QTouchEventSequence*)self, processEvents);
 }
 
+void q_test__qtoucheventsequence_operator_assign(void* self, void* param1) {
+    QTest__QTouchEventSequence_OperatorAssign((QTest__QTouchEventSequence*)self, (QTest__QTouchEventSequence*)param1);
+}
+
 QTest__QTouchEventSequence* q_test__qtoucheventsequence_press3(void* self, int touchId, void* pt, void* window) {
     return QTest__QTouchEventSequence_Press3((QTest__QTouchEventSequence*)self, touchId, (QPoint*)pt, (QWindow*)window);
 }

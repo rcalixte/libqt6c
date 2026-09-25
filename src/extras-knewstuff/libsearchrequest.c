@@ -130,6 +130,10 @@ KNSCore__SearchRequest* k_nscore__searchrequest_next_page(void* self) {
     return KNSCore__SearchRequest_NextPage((KNSCore__SearchRequest*)self);
 }
 
+void k_nscore__searchrequest_operator_assign(void* self, void* param1) {
+    KNSCore__SearchRequest_OperatorAssign((KNSCore__SearchRequest*)self, (KNSCore__SearchRequest*)param1);
+}
+
 void k_nscore__searchrequest_delete(void* self) {
     KNSCore__SearchRequest_Delete((KNSCore__SearchRequest*)(self));
 }

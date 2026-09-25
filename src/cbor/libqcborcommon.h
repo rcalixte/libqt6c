@@ -54,16 +54,16 @@ void q_cborerror_delete(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborcommon.html#qHash)
 ///
 /// @param tag enum qcborcommon__QCborSimpleType
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qcborcommon_q_hash(uint8_t tag, uintptr_t seed);
+size_t q_qcborcommon_q_hash(uint8_t tag, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborcommon.html#qHash)
 ///
 /// @param tag enum qcborcommon__QCborTag
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qcborcommon_q_hash2(uint64_t tag, uintptr_t seed);
+size_t q_qcborcommon_q_hash2(uint64_t tag, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborcommon.html#public-types)
 

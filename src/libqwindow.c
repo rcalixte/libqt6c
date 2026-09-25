@@ -1201,6 +1201,10 @@ bool q_window_supports_open_g_l(void* self) {
     return QSurface_SupportsOpenGL(q_window_as_q_surface(self));
 }
 
+void q_window_operator_assign(void* self, void* param1) {
+    QSurface_OperatorAssign(q_window_as_q_surface(self), (QSurface*)param1);
+}
+
 bool q_window_event_filter(void* self, void* watched, void* event) {
     return QWindow_EventFilter((QWindow*)self, (QObject*)watched, (QEvent*)event);
 }

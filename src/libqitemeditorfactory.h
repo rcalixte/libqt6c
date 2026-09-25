@@ -126,6 +126,13 @@ const QItemEditorFactory* q_itemeditorfactory_default_factory();
 ///
 void q_itemeditorfactory_set_default_factory(void* factory);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorfactory.html#operator-eq)
+///
+/// @param self QItemEditorFactory*
+/// @param param1 QItemEditorFactory*
+///
+void q_itemeditorfactory_operator_assign(void* self, void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorfactory.html#dtor.QItemEditorFactory)
 ///
 /// Delete this object from C++ memory.

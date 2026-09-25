@@ -57,6 +57,13 @@ int32_t q_scistyledtext_style(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyledText.html)
 ///
+/// @param self QsciStyledText*
+/// @param param1 QsciStyledText*
+///
+void q_scistyledtext_operator_assign(void* self, void* param1);
+
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyledText.html)
+///
 /// Delete this object from C++ memory.
 ///
 /// @param self QsciStyledText*

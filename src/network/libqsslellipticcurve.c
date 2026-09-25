@@ -1,11 +1,11 @@
 #include "libqsslellipticcurve.hpp"
 #include "libqsslellipticcurve.h"
 
-uintptr_t q_qsslellipticcurve_h_q_hash(void* curve, uintptr_t seed) {
+size_t q_qsslellipticcurve_h_q_hash(void* curve, size_t seed) {
     return qsslellipticcurve_h_QHash((QSslEllipticCurve*)curve, seed);
 }
 
-uintptr_t q_qsslellipticcurve_h_q_hash2(void* curve, uintptr_t seed) {
+size_t q_qsslellipticcurve_h_q_hash2(void* curve, size_t seed) {
     return qsslellipticcurve_h_QHash2((QSslEllipticCurve*)curve, seed);
 }
 

@@ -2433,24 +2433,6 @@ void q_sgnodevisitor_super_visit_children(void* self, void* n);
 ///
 void q_sgnodevisitor_operator_assign(void* self, void* param1);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qsgnodevisitor.html#operator-eq)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QSGNodeVisitor*
-/// @param callback void func(QSGNodeVisitor* self, QSGNodeVisitor* param1)
-///
-void q_sgnodevisitor_on_operator_assign(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qsgnodevisitor.html#operator-eq)
-///
-/// Base class method implementation
-///
-/// @param self QSGNodeVisitor*
-/// @param param1 QSGNodeVisitor*
-///
-void q_sgnodevisitor_super_operator_assign(void* self, void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnodevisitor.html#dtor.QSGNodeVisitor)
 ///
 /// Delete this object from C++ memory.

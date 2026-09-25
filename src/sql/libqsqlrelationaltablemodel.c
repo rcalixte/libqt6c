@@ -57,6 +57,10 @@ bool q_sqlrelation_is_valid(void* self) {
     return QSqlRelation_IsValid((QSqlRelation*)self);
 }
 
+void q_sqlrelation_operator_assign(void* self, void* param1) {
+    QSqlRelation_OperatorAssign((QSqlRelation*)self, (QSqlRelation*)param1);
+}
+
 void q_sqlrelation_delete(void* self) {
     QSqlRelation_Delete((QSqlRelation*)(self));
 }

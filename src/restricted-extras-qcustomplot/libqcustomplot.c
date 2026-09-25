@@ -1332,14 +1332,6 @@ void q_cpabstractpaintbuffer_operator_assign(void* self, void* param1) {
     QCPAbstractPaintBuffer_OperatorAssign((QCPAbstractPaintBuffer*)self, (QCPAbstractPaintBuffer*)param1);
 }
 
-void q_cpabstractpaintbuffer_on_operator_assign(void* self, void (*callback)(void*, void*)) {
-    QCPAbstractPaintBuffer_OnOperatorAssign((QCPAbstractPaintBuffer*)self, (intptr_t)callback);
-}
-
-void q_cpabstractpaintbuffer_super_operator_assign(void* self, void* param1) {
-    QCPAbstractPaintBuffer_SuperOperatorAssign((QCPAbstractPaintBuffer*)self, (QCPAbstractPaintBuffer*)param1);
-}
-
 void q_cpabstractpaintbuffer_set_invalidated1(void* self, bool invalidated) {
     QCPAbstractPaintBuffer_SetInvalidated1((QCPAbstractPaintBuffer*)self, invalidated);
 }
@@ -1406,14 +1398,6 @@ void q_cppaintbufferpixmap_super_reallocate_buffer(void* self) {
 
 void q_cppaintbufferpixmap_operator_assign(void* self, void* param1) {
     QCPPaintBufferPixmap_OperatorAssign((QCPPaintBufferPixmap*)self, (QCPPaintBufferPixmap*)param1);
-}
-
-void q_cppaintbufferpixmap_on_operator_assign(void* self, void (*callback)(void*, void*)) {
-    QCPPaintBufferPixmap_OnOperatorAssign((QCPPaintBufferPixmap*)self, (intptr_t)callback);
-}
-
-void q_cppaintbufferpixmap_super_operator_assign(void* self, void* param1) {
-    QCPPaintBufferPixmap_SuperOperatorAssign((QCPPaintBufferPixmap*)self, (QCPPaintBufferPixmap*)param1);
 }
 
 QSize* q_cppaintbufferpixmap_size(void* self) {
@@ -8141,6 +8125,10 @@ void q_cplineending_draw2(void* self, void* painter, void* pos, double angle) {
     QCPLineEnding_Draw2((QCPLineEnding*)self, (QCPPainter*)painter, (QCPVector2D*)pos, angle);
 }
 
+void q_cplineending_operator_assign(void* self, void* param1) {
+    QCPLineEnding_OperatorAssign((QCPLineEnding*)self, (QCPLineEnding*)param1);
+}
+
 void q_cplineending_delete(void* self) {
     QCPLineEnding_Delete((QCPLineEnding*)(self));
 }
@@ -12163,6 +12151,10 @@ void q_cpscatterstyle_draw_shape(void* self, void* painter, void* pos) {
 
 void q_cpscatterstyle_draw_shape2(void* self, void* painter, double x, double y) {
     QCPScatterStyle_DrawShape2((QCPScatterStyle*)self, (QCPPainter*)painter, x, y);
+}
+
+void q_cpscatterstyle_operator_assign(void* self, void* param1) {
+    QCPScatterStyle_OperatorAssign((QCPScatterStyle*)self, (QCPScatterStyle*)param1);
 }
 
 void q_cpscatterstyle_delete(void* self) {

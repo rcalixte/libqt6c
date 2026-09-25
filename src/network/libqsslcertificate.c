@@ -6,7 +6,7 @@
 #include "libqsslcertificate.hpp"
 #include "libqsslcertificate.h"
 
-uintptr_t q_qsslcertificate_h_q_hash(void* key, uintptr_t seed) {
+size_t q_qsslcertificate_h_q_hash(void* key, size_t seed) {
     return qsslcertificate_h_QHash((QSslCertificate*)key, seed);
 }
 

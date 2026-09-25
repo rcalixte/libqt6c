@@ -122,6 +122,10 @@ QSizePolicy* q_sizepolicy_transposed(void* self) {
     return QSizePolicy_Transposed((QSizePolicy*)self);
 }
 
+void q_sizepolicy_operator_assign(void* self, void* param1) {
+    QSizePolicy_OperatorAssign((QSizePolicy*)self, (QSizePolicy*)param1);
+}
+
 void q_sizepolicy_delete(void* self) {
     QSizePolicy_Delete((QSizePolicy*)(self));
 }

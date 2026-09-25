@@ -60,6 +60,13 @@ libqt_map q_accounts__authdata_parameters(void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AuthData.html)
 ///
+/// @param self Accounts__AuthData*
+/// @param param1 Accounts__AuthData*
+///
+void q_accounts__authdata_operator_assign(void* self, void* param1);
+
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AuthData.html)
+///
 /// Delete this object from C++ memory.
 ///
 /// @param self Accounts__AuthData*

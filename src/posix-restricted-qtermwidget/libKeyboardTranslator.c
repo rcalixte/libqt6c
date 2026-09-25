@@ -53,6 +53,10 @@ libqt_list /* of Konsole__KeyboardTranslator__Entry* */ k_onsole__keyboardtransl
     return _arr;
 }
 
+void k_onsole__keyboardtranslator_operator_assign(void* self, void* param1) {
+    Konsole__KeyboardTranslator_OperatorAssign((Konsole__KeyboardTranslator*)self, (Konsole__KeyboardTranslator*)param1);
+}
+
 Konsole__KeyboardTranslator__Entry* k_onsole__keyboardtranslator_find_entry3(void* self, int keyCode, int32_t modifiers, int32_t state) {
     return Konsole__KeyboardTranslator_FindEntry3((Konsole__KeyboardTranslator*)self, keyCode, modifiers, state);
 }
@@ -255,6 +259,10 @@ bool k_onsole__keyboardtranslator__entry_matches(void* self, int keyCode, int32_
 
 bool k_onsole__keyboardtranslator__entry_operator_equal(void* self, void* rhs) {
     return Konsole__KeyboardTranslator__Entry_OperatorEqual((Konsole__KeyboardTranslator__Entry*)self, (Konsole__KeyboardTranslator__Entry*)rhs);
+}
+
+void k_onsole__keyboardtranslator__entry_operator_assign(void* self, void* param1) {
+    Konsole__KeyboardTranslator__Entry_OperatorAssign((Konsole__KeyboardTranslator__Entry*)self, (Konsole__KeyboardTranslator__Entry*)param1);
 }
 
 char* k_onsole__keyboardtranslator__entry_text1(void* self, bool expandWildCards) {

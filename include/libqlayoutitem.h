@@ -419,24 +419,6 @@ int32_t q_layoutitem_super_control_types(void* self);
 ///
 void q_layoutitem_operator_assign(void* self, void* param1);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#operator-eq)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QLayoutItem*
-/// @param callback void func(QLayoutItem* self, QLayoutItem* param1)
-///
-void q_layoutitem_on_operator_assign(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#operator-eq)
-///
-/// Base class method implementation
-///
-/// @param self QLayoutItem*
-/// @param param1 QLayoutItem*
-///
-void q_layoutitem_super_operator_assign(void* self, void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#dtor.QLayoutItem)
 ///
 /// Delete this object from C++ memory.
@@ -694,6 +676,13 @@ QSpacerItem* q_spaceritem_super_spacer_item(void* self);
 /// @param self QSpacerItem*
 ///
 QSizePolicy* q_spaceritem_size_policy(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#operator-eq)
+///
+/// @param self QSpacerItem*
+/// @param param1 QSpacerItem*
+///
+void q_spaceritem_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#changeSize)
 ///
@@ -1293,6 +1282,15 @@ void q_widgetitem_set_alignment(void* self, int32_t a);
 
 /// Inherited from QLayoutItem
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#operator-eq)
+///
+/// @param self QWidgetItem*
+/// @param param1 QLayoutItem*
+///
+void q_widgetitem_operator_assign(void* self, void* param1);
+
+/// Inherited from QLayoutItem
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#invalidate)
 ///
 /// Wrapper to allow calling virtual or protected method
@@ -1518,6 +1516,15 @@ int32_t q_widgetitemv2_alignment(void* self);
 /// @param a flag of enum Qt__AlignmentFlag
 ///
 void q_widgetitemv2_set_alignment(void* self, int32_t a);
+
+/// Inherited from QLayoutItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#operator-eq)
+///
+/// @param self QWidgetItemV2*
+/// @param param1 QLayoutItem*
+///
+void q_widgetitemv2_operator_assign(void* self, void* param1);
 
 /// Inherited from QWidgetItem
 ///

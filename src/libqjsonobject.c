@@ -332,7 +332,7 @@ void q_jsonobject_delete(void* self) {
     QJsonObject_Delete((QJsonObject*)(self));
 }
 
-uintptr_t q_qjsonobject_q_hash(void* object, uintptr_t seed) {
+size_t q_qjsonobject_q_hash(void* object, size_t seed) {
     return qjsonobject_QHash((QJsonObject*)object, seed);
 }
 

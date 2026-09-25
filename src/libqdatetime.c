@@ -826,14 +826,14 @@ void q_datetime_delete(void* self) {
     QDateTime_Delete((QDateTime*)(self));
 }
 
-uintptr_t q_qdatetime_q_hash(void* key, uintptr_t seed) {
+size_t q_qdatetime_q_hash(void* key, size_t seed) {
     return qdatetime_QHash((QDateTime*)key, seed);
 }
 
-uintptr_t q_qdatetime_q_hash2(void* key, uintptr_t seed) {
+size_t q_qdatetime_q_hash2(void* key, size_t seed) {
     return qdatetime_QHash2((QDate*)key, seed);
 }
 
-uintptr_t q_qdatetime_q_hash3(void* key, uintptr_t seed) {
+size_t q_qdatetime_q_hash3(void* key, size_t seed) {
     return qdatetime_QHash3((QTime*)key, seed);
 }

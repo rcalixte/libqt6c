@@ -381,6 +381,13 @@ QQuaternion* q_quaternion_slerp(void* q1, void* q2, float t);
 ///
 QQuaternion* q_quaternion_nlerp(void* q1, void* q2, float t);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#operator-eq)
+///
+/// @param self QQuaternion*
+/// @param param1 QQuaternion*
+///
+void q_quaternion_operator_assign(void* self, void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#dtor.QQuaternion)
 ///
 /// Delete this object from C++ memory.

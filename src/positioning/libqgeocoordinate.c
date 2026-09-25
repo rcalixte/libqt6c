@@ -91,6 +91,6 @@ void q_geocoordinate_delete(void* self) {
     QGeoCoordinate_Delete((QGeoCoordinate*)(self));
 }
 
-uintptr_t q_qgeocoordinate_h_q_hash(void* coordinate, uintptr_t seed) {
+size_t q_qgeocoordinate_h_q_hash(void* coordinate, size_t seed) {
     return qgeocoordinate_h_QHash((QGeoCoordinate*)coordinate, seed);
 }

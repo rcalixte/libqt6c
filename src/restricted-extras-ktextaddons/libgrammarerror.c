@@ -142,14 +142,6 @@ void k_textgrammarcheck__grammarerror_operator_assign(void* self, void* param1) 
     TextGrammarCheck__GrammarError_OperatorAssign((TextGrammarCheck__GrammarError*)self, (TextGrammarCheck__GrammarError*)param1);
 }
 
-void k_textgrammarcheck__grammarerror_on_operator_assign(void* self, void (*callback)(void*, void*)) {
-    TextGrammarCheck__GrammarError_OnOperatorAssign((TextGrammarCheck__GrammarError*)self, (intptr_t)callback);
-}
-
-void k_textgrammarcheck__grammarerror_super_operator_assign(void* self, void* param1) {
-    TextGrammarCheck__GrammarError_SuperOperatorAssign((TextGrammarCheck__GrammarError*)self, (TextGrammarCheck__GrammarError*)param1);
-}
-
 void k_textgrammarcheck__grammarerror_delete(void* self) {
     TextGrammarCheck__GrammarError_Delete((TextGrammarCheck__GrammarError*)(self));
 }

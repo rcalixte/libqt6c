@@ -1,7 +1,7 @@
 #include "libqgeosatelliteinfo.hpp"
 #include "libqgeosatelliteinfo.h"
 
-uintptr_t q_qgeosatelliteinfo_h_q_hash(void* key, uintptr_t seed) {
+size_t q_qgeosatelliteinfo_h_q_hash(void* key, size_t seed) {
     return qgeosatelliteinfo_h_QHash((QGeoSatelliteInfo*)key, seed);
 }
 

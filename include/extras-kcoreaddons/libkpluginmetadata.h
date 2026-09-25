@@ -410,9 +410,9 @@ void k_pluginmetadata_delete(void* self);
 /// [Upstream resources](https://api.kde.org/kpluginmetadata-h.html#qHash)
 ///
 /// @param md KPluginMetaData*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t k_pluginmetadata_h_q_hash(void* md, uintptr_t seed);
+size_t k_pluginmetadata_h_q_hash(void* md, size_t seed);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#public-types)
 

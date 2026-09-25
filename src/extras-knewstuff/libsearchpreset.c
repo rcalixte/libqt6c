@@ -35,6 +35,10 @@ const char* k_nscore__searchpreset_provider_id(void* self) {
     return _ret;
 }
 
+void k_nscore__searchpreset_operator_assign(void* self, void* param1) {
+    KNSCore__SearchPreset_OperatorAssign((KNSCore__SearchPreset*)self, (KNSCore__SearchPreset*)param1);
+}
+
 void k_nscore__searchpreset_delete(void* self) {
     KNSCore__SearchPreset_Delete((KNSCore__SearchPreset*)(self));
 }

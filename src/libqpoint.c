@@ -101,7 +101,7 @@ void q_point_delete(void* self) {
     QPoint_Delete((QPoint*)(self));
 }
 
-uintptr_t q_qpoint_q_hash(void* key, uintptr_t seed) {
+size_t q_qpoint_q_hash(void* key, size_t seed) {
     return qpoint_QHash((QPoint*)key, seed);
 }
 

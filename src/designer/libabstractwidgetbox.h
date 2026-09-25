@@ -5547,6 +5547,13 @@ void q_designerwidgetboxinterface__category_set_type(void* self, int32_t atype);
 ///
 bool q_designerwidgetboxinterface__category_is_null(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-category.html#operator-eq)
+///
+/// @param self QDesignerWidgetBoxInterface__Category*
+/// @param param1 QDesignerWidgetBoxInterface__Category*
+///
+void q_designerwidgetboxinterface__category_operator_assign(void* self, void* param1);
+
 /// Delete this object from C++ memory.
 ///
 /// @param self QDesignerWidgetBoxInterface__Category*

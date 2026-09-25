@@ -333,6 +333,10 @@ void q_metaobject_set_d(void* self, void* d) {
     QMetaObject_SetD((QMetaObject*)self, (QMetaObject__Data*)d);
 }
 
+void q_metaobject_operator_assign(void* self, void* param1) {
+    QMetaObject_OperatorAssign((QMetaObject*)self, (QMetaObject*)param1);
+}
+
 const char* q_metaobject_tr3(void* self, const char* s, const char* c, int n) {
     libqt_string _str = QMetaObject_Tr3((QMetaObject*)self, s, c, n);
     char* _ret = qstring_to_char(_str);

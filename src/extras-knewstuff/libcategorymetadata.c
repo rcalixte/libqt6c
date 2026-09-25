@@ -26,6 +26,10 @@ const char* k_nscore__categorymetadata_display_name(void* self) {
     return _ret;
 }
 
+void k_nscore__categorymetadata_operator_assign(void* self, void* param1) {
+    KNSCore__CategoryMetadata_OperatorAssign((KNSCore__CategoryMetadata*)self, (KNSCore__CategoryMetadata*)param1);
+}
+
 void k_nscore__categorymetadata_delete(void* self) {
     KNSCore__CategoryMetadata_Delete((KNSCore__CategoryMetadata*)(self));
 }

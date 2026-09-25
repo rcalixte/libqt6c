@@ -514,7 +514,7 @@ void q_font_delete(void* self) {
     QFont_Delete((QFont*)(self));
 }
 
-uintptr_t q_qfont_h_q_hash(void* font, uintptr_t seed) {
+size_t q_qfont_h_q_hash(void* font, size_t seed) {
     return qfont_h_QHash((QFont*)font, seed);
 }
 
@@ -563,6 +563,10 @@ QFont__Tag* q_font__tag_from_value(uint32_t value) {
 
 QFont__Tag* q_font__tag_from_string(const char* view) {
     return QFont__Tag_FromString(view);
+}
+
+void q_font__tag_operator_assign(void* self, void* param1) {
+    QFont__Tag_OperatorAssign((QFont__Tag*)self, (QFont__Tag*)param1);
 }
 
 void q_font__tag_delete(void* self) {

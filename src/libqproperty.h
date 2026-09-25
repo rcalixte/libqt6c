@@ -259,6 +259,13 @@ QPropertyObserverBase* q_propertyobserverbase_new();
 ///
 QPropertyObserverBase* q_propertyobserverbase_new2(void* param1);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qpropertyobserverbase.html#operator-eq)
+///
+/// @param self QPropertyObserverBase*
+/// @param param1 QPropertyObserverBase*
+///
+void q_propertyobserverbase_operator_assign(void* self, void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertyobserverbase.html#dtor.QPropertyObserverBase)
 ///
 /// Delete this object from C++ memory.
@@ -273,6 +280,15 @@ void q_propertyobserverbase_delete(void* self);
 ///
 QPropertyObserver* q_propertyobserver_new();
 
+/// Inherited from QPropertyObserverBase
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpropertyobserverbase.html#operator-eq)
+///
+/// @param self QPropertyObserver*
+/// @param param1 QPropertyObserverBase*
+///
+void q_propertyobserver_operator_assign(void* self, void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertyobserver.html#dtor.QPropertyObserver)
 ///
 /// Delete this object from C++ memory.
@@ -286,6 +302,15 @@ void q_propertyobserver_delete(void* self);
 /// q_propertynotifier_new constructs a new QPropertyNotifier object.
 ///
 QPropertyNotifier* q_propertynotifier_new();
+
+/// Inherited from QPropertyObserverBase
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpropertyobserverbase.html#operator-eq)
+///
+/// @param self QPropertyNotifier*
+/// @param param1 QPropertyObserverBase*
+///
+void q_propertynotifier_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertynotifier.html#dtor.QPropertyNotifier)
 ///

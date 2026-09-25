@@ -21,9 +21,9 @@ const char* k_nscore_replace_b_b_code(const char* unformattedText);
 /// [Upstream resources](https://api.kde.org/knscore.html#qHash)
 ///
 /// @param entry KNSCore__Entry*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t k_nscore_q_hash(void* entry, uintptr_t seed);
+size_t k_nscore_q_hash(void* entry, size_t seed);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html)
 

@@ -140,24 +140,6 @@ void k_textautocorrectioncore__importabstractautocorrection_operator_assign(void
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
 ///
-/// Allows for overriding the related default method
-///
-/// @param self TextAutoCorrectionCore__ImportAbstractAutocorrection*
-/// @param callback void func(TextAutoCorrectionCore__ImportAbstractAutocorrection* self, TextAutoCorrectionCore__ImportAbstractAutocorrection* param1)
-///
-void k_textautocorrectioncore__importabstractautocorrection_on_operator_assign(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
-///
-/// Base class method implementation
-///
-/// @param self TextAutoCorrectionCore__ImportAbstractAutocorrection*
-/// @param param1 TextAutoCorrectionCore__ImportAbstractAutocorrection*
-///
-void k_textautocorrectioncore__importabstractautocorrection_super_operator_assign(void* self, void* param1);
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self TextAutoCorrectionCore__ImportAbstractAutocorrection*

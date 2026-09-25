@@ -62,6 +62,13 @@ bool q_webengineregisterprotocolhandlerrequest_operator_equal(void* self, void* 
 ///
 bool q_webengineregisterprotocolhandlerrequest_operator_not_equal(void* self, void* that);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html#operator-eq)
+///
+/// @param self QWebEngineRegisterProtocolHandlerRequest*
+/// @param param1 QWebEngineRegisterProtocolHandlerRequest*
+///
+void q_webengineregisterprotocolhandlerrequest_operator_assign(void* self, void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html#dtor.QWebEngineRegisterProtocolHandlerRequest)
 ///
 /// Delete this object from C++ memory.

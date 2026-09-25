@@ -114,6 +114,6 @@ void q_geolocation_delete(void* self) {
     QGeoLocation_Delete((QGeoLocation*)(self));
 }
 
-uintptr_t q_qgeolocation_h_q_hash(void* location, uintptr_t seed) {
+size_t q_qgeolocation_h_q_hash(void* location, size_t seed) {
     return qgeolocation_h_QHash((QGeoLocation*)location, seed);
 }

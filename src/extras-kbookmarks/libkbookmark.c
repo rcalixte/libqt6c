@@ -185,6 +185,10 @@ bool k_bookmark_operator_equal(void* self, void* rhs) {
     return KBookmark_OperatorEqual((KBookmark*)self, (KBookmark*)rhs);
 }
 
+void k_bookmark_operator_assign(void* self, void* param1) {
+    KBookmark_OperatorAssign((KBookmark*)self, (KBookmark*)param1);
+}
+
 void k_bookmark_set_meta_data_item3(void* self, const char* key, const char* value, int32_t mode) {
     KBookmark_SetMetaDataItem3((KBookmark*)self, qstring(key), qstring(value), mode);
 }
@@ -425,6 +429,10 @@ void k_bookmarkgroup_populate_mime_data(void* self, void* mimeData) {
 
 bool k_bookmarkgroup_operator_equal(void* self, void* rhs) {
     return KBookmark_OperatorEqual((KBookmark*)self, (KBookmark*)rhs);
+}
+
+void k_bookmarkgroup_operator_assign(void* self, void* param1) {
+    KBookmark_OperatorAssign((KBookmark*)self, (KBookmark*)param1);
 }
 
 void k_bookmarkgroup_set_meta_data_item3(void* self, const char* key, const char* value, int32_t mode) {

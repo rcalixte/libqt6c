@@ -1036,11 +1036,13 @@ QSocketDescriptor* q_socketdescriptor_new4(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsocketdescriptor.html)
 
+#if defined(__linux__) && defined(__FreeBSD__)
 /// q_socketdescriptor_new5 constructs a new QSocketDescriptor object.
 ///
 /// @param descriptor int
 ///
 QSocketDescriptor* q_socketdescriptor_new5(int descriptor);
+#endif
 
 /// q_socketdescriptor_copy_assign shallow copies `other` into `self`.
 ///

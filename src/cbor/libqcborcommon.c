@@ -24,10 +24,10 @@ void q_cborerror_delete(void* self) {
     QCborError_Delete((QCborError*)(self));
 }
 
-uintptr_t q_qcborcommon_q_hash(uint8_t tag, uintptr_t seed) {
+size_t q_qcborcommon_q_hash(uint8_t tag, size_t seed) {
     return qcborcommon_QHash(tag, seed);
 }
 
-uintptr_t q_qcborcommon_q_hash2(uint64_t tag, uintptr_t seed) {
+size_t q_qcborcommon_q_hash2(uint64_t tag, size_t seed) {
     return qcborcommon_QHash2(tag, seed);
 }

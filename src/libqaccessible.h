@@ -213,6 +213,13 @@ void q_accessibleinterface_virtual_hook(void* self, int id, void* data);
 ///
 void* q_accessibleinterface_interface_cast(void* self, int32_t param1);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleinterface.html#operator-eq)
+///
+/// @param self QAccessibleInterface*
+/// @param param1 QAccessibleInterface*
+///
+void q_accessibleinterface_operator_assign(void* self, void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletextinterface.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletextinterface.html#selection)
@@ -668,6 +675,13 @@ bool q_accessibletableinterface_unselect_column(void* self, int column);
 /// @param event QAccessibleTableModelChangeEvent*
 ///
 void q_accessibletableinterface_model_change(void* self, void* event);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletableinterface.html#operator-eq)
+///
+/// @param self QAccessibleTableInterface*
+/// @param param1 QAccessibleTableInterface*
+///
+void q_accessibletableinterface_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletableinterface.html#dtor.QAccessibleTableInterface)
 ///

@@ -575,6 +575,13 @@ QRect* q_rect_span(void* p1, void* p2);
 ///
 QRectF* q_rect_to_rect_f(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#operator-eq)
+///
+/// @param self QRect*
+/// @param param1 QRect*
+///
+void q_rect_operator_assign(void* self, void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#contains)
 ///
 /// @param self QRect*
@@ -604,9 +611,9 @@ void q_rect_delete(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qrect.html#qHash)
 ///
 /// @param r QRect*
-/// @param seed uintptr_t
+/// @param seed size_t
 ///
-uintptr_t q_qrect_q_hash(void* r, uintptr_t seed);
+size_t q_qrect_q_hash(void* r, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html)
 
@@ -1172,6 +1179,13 @@ QRect* q_rectf_to_rect(void* self);
 /// @param self QRectF*
 ///
 QRect* q_rectf_to_aligned_rect(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#operator-eq)
+///
+/// @param self QRectF*
+/// @param param1 QRectF*
+///
+void q_rectf_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrectf.html#dtor.QRectF)
 ///

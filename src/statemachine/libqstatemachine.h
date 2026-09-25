@@ -1550,6 +1550,13 @@ int32_t q_statemachine__signalevent_signal_index(void* self);
 ///
 libqt_list q_statemachine__signalevent_arguments(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine-signalevent.html#operator-eq)
+///
+/// @param self QStateMachine__SignalEvent*
+/// @param param1 QStateMachine__SignalEvent*
+///
+void q_statemachine__signalevent_operator_assign(void* self, void* param1);
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#type)
@@ -1728,6 +1735,13 @@ QObject* q_statemachine__wrappedevent_object(void* self);
 /// @param self QStateMachine__WrappedEvent*
 ///
 QEvent* q_statemachine__wrappedevent_event(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine-wrappedevent.html#operator-eq)
+///
+/// @param self QStateMachine__WrappedEvent*
+/// @param param1 QStateMachine__WrappedEvent*
+///
+void q_statemachine__wrappedevent_operator_assign(void* self, void* param1);
 
 /// Inherited from QEvent
 ///

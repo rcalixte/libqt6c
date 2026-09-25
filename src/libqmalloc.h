@@ -12,19 +12,19 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmalloc.html#qMallocAligned)
 ///
-/// @param size uintptr_t
-/// @param alignment uintptr_t
+/// @param size size_t
+/// @param alignment size_t
 ///
-void* q_qmalloc_q_malloc_aligned(uintptr_t size, uintptr_t alignment);
+void* q_qmalloc_q_malloc_aligned(size_t size, size_t alignment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmalloc.html#qReallocAligned)
 ///
 /// @param ptr void*
-/// @param size uintptr_t
-/// @param oldsize uintptr_t
-/// @param alignment uintptr_t
+/// @param size size_t
+/// @param oldsize size_t
+/// @param alignment size_t
 ///
-void* q_qmalloc_q_realloc_aligned(void* ptr, uintptr_t size, uintptr_t oldsize, uintptr_t alignment);
+void* q_qmalloc_q_realloc_aligned(void* ptr, size_t size, size_t oldsize, size_t alignment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmalloc.html#qFreeAligned)
 ///

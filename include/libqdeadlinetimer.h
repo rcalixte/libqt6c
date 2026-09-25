@@ -213,6 +213,13 @@ QDeadlineTimer* q_deadlinetimer_operator_minus_assign(void* self, int64_t msecs)
 ///
 int64_t q_deadlinetimer_remaining_time_as_duration(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qdeadlinetimer.html#operator-eq)
+///
+/// @param self QDeadlineTimer*
+/// @param param1 QDeadlineTimer*
+///
+void q_deadlinetimer_operator_assign(void* self, void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdeadlinetimer.html#setRemainingTime)
 ///
 /// @param self QDeadlineTimer*

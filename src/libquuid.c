@@ -152,7 +152,7 @@ void q_uuid_delete(void* self) {
     QUuid_Delete((QUuid*)(self));
 }
 
-uintptr_t q_quuid_q_hash(void* uuid, uintptr_t seed) {
+size_t q_quuid_q_hash(void* uuid, size_t seed) {
     return quuid_QHash((QUuid*)uuid, seed);
 }
 

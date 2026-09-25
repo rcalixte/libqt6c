@@ -53,6 +53,6 @@ void q_sslerror_delete(void* self) {
     QSslError_Delete((QSslError*)(self));
 }
 
-uintptr_t q_qsslerror_h_q_hash(void* key, uintptr_t seed) {
+size_t q_qsslerror_h_q_hash(void* key, size_t seed) {
     return qsslerror_h_QHash((QSslError*)key, seed);
 }

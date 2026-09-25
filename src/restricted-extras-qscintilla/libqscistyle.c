@@ -115,6 +115,10 @@ void q_scistyle_refresh(void* self) {
     QsciStyle_Refresh((QsciStyle*)self);
 }
 
+void q_scistyle_operator_assign(void* self, void* param1) {
+    QsciStyle_OperatorAssign((QsciStyle*)self, (QsciStyle*)param1);
+}
+
 void q_scistyle_delete(void* self) {
     QsciStyle_Delete((QsciStyle*)(self));
 }

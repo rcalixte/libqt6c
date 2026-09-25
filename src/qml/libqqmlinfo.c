@@ -131,8 +131,8 @@ QQmlInfo* q_qmlinfo_operator_shift_left22(void* self, void* t) {
     return QQmlInfo_OperatorShiftLeft22((QQmlInfo*)self, (QUrl*)t);
 }
 
-void q_qmlinfo_operator_assign(void* self, void* other) {
-    QDebug_OperatorAssign((QDebug*)self, (QDebug*)other);
+void q_qmlinfo_operator_assign(void* self, void* param1) {
+    QQmlInfo_OperatorAssign((QQmlInfo*)self, (QQmlInfo*)param1);
 }
 
 void q_qmlinfo_swap(void* self, void* other) {

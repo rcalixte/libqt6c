@@ -2156,6 +2156,13 @@ Kirigami__Platform__PlatformThemeChangeTracker* k_kirigami__platform__platformth
 ///
 void k_kirigami__platform__platformthemechangetracker_mark_dirty(void* self, uint8_t changes);
 
+/// [Upstream resources](https://api.kde.org/kirigami-platform-platformthemechangetracker.html#operator-eq)
+///
+/// @param self Kirigami__Platform__PlatformThemeChangeTracker*
+/// @param param1 Kirigami__Platform__PlatformThemeChangeTracker*
+///
+void k_kirigami__platform__platformthemechangetracker_operator_assign(void* self, void* param1);
+
 /// Delete this object from C++ memory.
 ///
 /// @param self Kirigami__Platform__PlatformThemeChangeTracker*

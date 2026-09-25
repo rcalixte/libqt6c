@@ -63,6 +63,13 @@ const char* q_signon__securitycontext_application_context(void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SecurityContext.html)
 ///
+/// @param self SignOn__SecurityContext*
+/// @param param1 SignOn__SecurityContext*
+///
+void q_signon__securitycontext_operator_assign(void* self, void* param1);
+
+/// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SecurityContext.html)
+///
 /// Delete this object from C++ memory.
 ///
 /// @param self SignOn__SecurityContext*

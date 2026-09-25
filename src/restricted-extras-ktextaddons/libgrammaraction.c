@@ -106,6 +106,10 @@ void k_textgrammarcheck__grammaraction_set_info_urls(void* self, const char* url
     free(urls_qstr);
 }
 
+void k_textgrammarcheck__grammaraction_operator_assign(void* self, void* param1) {
+    TextGrammarCheck__GrammarAction_OperatorAssign((TextGrammarCheck__GrammarAction*)self, (TextGrammarCheck__GrammarAction*)param1);
+}
+
 void k_textgrammarcheck__grammaraction_delete(void* self) {
     TextGrammarCheck__GrammarAction_Delete((TextGrammarCheck__GrammarAction*)(self));
 }

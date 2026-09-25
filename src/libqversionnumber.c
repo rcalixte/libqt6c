@@ -1,7 +1,7 @@
 #include "libqversionnumber.hpp"
 #include "libqversionnumber.h"
 
-uintptr_t q_qversionnumber_q_hash(void* key, uintptr_t seed) {
+size_t q_qversionnumber_q_hash(void* key, size_t seed) {
     return qversionnumber_QHash((QVersionNumber*)key, seed);
 }
 
@@ -87,6 +87,10 @@ const char* q_versionnumber_to_string(void* self) {
 
 QVersionNumber* q_versionnumber_from_string(const char* string) {
     return QVersionNumber_FromString(string);
+}
+
+void q_versionnumber_operator_assign(void* self, void* param1) {
+    QVersionNumber_OperatorAssign((QVersionNumber*)self, (QVersionNumber*)param1);
 }
 
 #if defined(__linux__) || defined(__FreeBSD__)

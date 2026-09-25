@@ -608,6 +608,13 @@ QMetaObject__Data* q_metaobject_d(void* self);
 ///
 void q_metaobject_set_d(void* self, void* d);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#operator-eq)
+///
+/// @param self QMetaObject*
+/// @param param1 QMetaObject*
+///
+void q_metaobject_operator_assign(void* self, void* param1);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`

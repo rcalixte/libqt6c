@@ -37,6 +37,10 @@ bool q_webengineregisterprotocolhandlerrequest_operator_not_equal(void* self, vo
     return QWebEngineRegisterProtocolHandlerRequest_OperatorNotEqual((QWebEngineRegisterProtocolHandlerRequest*)self, (QWebEngineRegisterProtocolHandlerRequest*)that);
 }
 
+void q_webengineregisterprotocolhandlerrequest_operator_assign(void* self, void* param1) {
+    QWebEngineRegisterProtocolHandlerRequest_OperatorAssign((QWebEngineRegisterProtocolHandlerRequest*)self, (QWebEngineRegisterProtocolHandlerRequest*)param1);
+}
+
 void q_webengineregisterprotocolhandlerrequest_delete(void* self) {
     QWebEngineRegisterProtocolHandlerRequest_Delete((QWebEngineRegisterProtocolHandlerRequest*)(self));
 }

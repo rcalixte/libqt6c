@@ -108,6 +108,13 @@ void k_textgrammarcheck__grammaraction_set_info_urls(void* self, const char* url
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarAction.html)
 ///
+/// @param self TextGrammarCheck__GrammarAction*
+/// @param param1 TextGrammarCheck__GrammarAction*
+///
+void k_textgrammarcheck__grammaraction_operator_assign(void* self, void* param1);
+
+/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarAction.html)
+///
 /// Delete this object from C++ memory.
 ///
 /// @param self TextGrammarCheck__GrammarAction*

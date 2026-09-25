@@ -40,6 +40,13 @@ const char* k_nscore__categorymetadata_name(void* self);
 ///
 const char* k_nscore__categorymetadata_display_name(void* self);
 
+/// [Upstream resources](https://api.kde.org/knscore-categorymetadata.html#operator-eq)
+///
+/// @param self KNSCore__CategoryMetadata*
+/// @param param1 KNSCore__CategoryMetadata*
+///
+void k_nscore__categorymetadata_operator_assign(void* self, void* param1);
+
 /// Delete this object from C++ memory.
 ///
 /// @param self KNSCore__CategoryMetadata*

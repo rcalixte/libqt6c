@@ -111,6 +111,10 @@ bool k_textemoticonscore__unicodeemoticon_operator_equal(void* self, void* other
     return TextEmoticonsCore__UnicodeEmoticon_OperatorEqual((TextEmoticonsCore__UnicodeEmoticon*)self, (TextEmoticonsCore__UnicodeEmoticon*)other);
 }
 
+void k_textemoticonscore__unicodeemoticon_operator_assign(void* self, void* param1) {
+    TextEmoticonsCore__UnicodeEmoticon_OperatorAssign((TextEmoticonsCore__UnicodeEmoticon*)self, (TextEmoticonsCore__UnicodeEmoticon*)param1);
+}
+
 void k_textemoticonscore__unicodeemoticon_delete(void* self) {
     TextEmoticonsCore__UnicodeEmoticon_Delete((TextEmoticonsCore__UnicodeEmoticon*)(self));
 }

@@ -140,6 +140,13 @@ bool k_textemoticonscore__unicodeemoticon_operator_equal(void* self, void* other
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1UnicodeEmoticon.html)
 ///
+/// @param self TextEmoticonsCore__UnicodeEmoticon*
+/// @param param1 TextEmoticonsCore__UnicodeEmoticon*
+///
+void k_textemoticonscore__unicodeemoticon_operator_assign(void* self, void* param1);
+
+/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1UnicodeEmoticon.html)
+///
 /// Delete this object from C++ memory.
 ///
 /// @param self TextEmoticonsCore__UnicodeEmoticon*

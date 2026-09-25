@@ -29,6 +29,7 @@ QPermission* QPermission_New();
 QPermission* QPermission_New2(const QPermission* param1);
 int QPermission_Status(const QPermission* self);
 QMetaType* QPermission_Type(const QPermission* self);
+void QPermission_OperatorAssign(QPermission* self, const QPermission* param1);
 void QPermission_Delete(QPermission* self);
 
 QLocationPermission* QLocationPermission_New();

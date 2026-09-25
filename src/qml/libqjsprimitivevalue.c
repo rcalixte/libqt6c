@@ -178,6 +178,10 @@ bool q_jsprimitivevalue_equals(void* self, void* other) {
     return QJSPrimitiveValue_Equals((QJSPrimitiveValue*)self, (QJSPrimitiveValue*)other);
 }
 
+void q_jsprimitivevalue_operator_assign(void* self, void* param1) {
+    QJSPrimitiveValue_OperatorAssign((QJSPrimitiveValue*)self, (QJSPrimitiveValue*)param1);
+}
+
 void q_jsprimitivevalue_delete(void* self) {
     QJSPrimitiveValue_Delete((QJSPrimitiveValue*)(self));
 }

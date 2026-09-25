@@ -611,16 +611,16 @@ int32_t q_textcharformat_table_cell_column_span(void* self) {
     return QTextCharFormat_TableCellColumnSpan((QTextCharFormat*)self);
 }
 
+void q_textcharformat_operator_assign(void* self, void* param1) {
+    QTextCharFormat_OperatorAssign((QTextCharFormat*)self, (QTextCharFormat*)param1);
+}
+
 void q_textcharformat_set_font2(void* self, void* font, int32_t behavior) {
     QTextCharFormat_SetFont2((QTextCharFormat*)self, (QFont*)font, behavior);
 }
 
 void q_textcharformat_set_font_style_hint2(void* self, int32_t hint, int32_t strategy) {
     QTextCharFormat_SetFontStyleHint2((QTextCharFormat*)self, hint, strategy);
-}
-
-void q_textcharformat_operator_assign(void* self, void* rhs) {
-    QTextFormat_OperatorAssign((QTextFormat*)self, (QTextFormat*)rhs);
 }
 
 void q_textcharformat_swap(void* self, void* other) {
@@ -958,8 +958,8 @@ int32_t q_textblockformat_marker(void* self) {
     return QTextBlockFormat_Marker((QTextBlockFormat*)self);
 }
 
-void q_textblockformat_operator_assign(void* self, void* rhs) {
-    QTextFormat_OperatorAssign((QTextFormat*)self, (QTextFormat*)rhs);
+void q_textblockformat_operator_assign(void* self, void* param1) {
+    QTextBlockFormat_OperatorAssign((QTextBlockFormat*)self, (QTextBlockFormat*)param1);
 }
 
 void q_textblockformat_swap(void* self, void* other) {
@@ -1230,8 +1230,8 @@ int32_t q_textlistformat_start(void* self) {
     return QTextListFormat_Start((QTextListFormat*)self);
 }
 
-void q_textlistformat_operator_assign(void* self, void* rhs) {
-    QTextFormat_OperatorAssign((QTextFormat*)self, (QTextFormat*)rhs);
+void q_textlistformat_operator_assign(void* self, void* param1) {
+    QTextListFormat_OperatorAssign((QTextListFormat*)self, (QTextListFormat*)param1);
 }
 
 void q_textlistformat_swap(void* self, void* other) {
@@ -1809,16 +1809,16 @@ int32_t q_textimageformat_table_cell_column_span(void* self) {
     return QTextCharFormat_TableCellColumnSpan((QTextCharFormat*)self);
 }
 
+void q_textimageformat_operator_assign(void* self, void* param1) {
+    QTextCharFormat_OperatorAssign((QTextCharFormat*)self, (QTextCharFormat*)param1);
+}
+
 void q_textimageformat_set_font2(void* self, void* font, int32_t behavior) {
     QTextCharFormat_SetFont2((QTextCharFormat*)self, (QFont*)font, behavior);
 }
 
 void q_textimageformat_set_font_style_hint2(void* self, int32_t hint, int32_t strategy) {
     QTextCharFormat_SetFontStyleHint2((QTextCharFormat*)self, hint, strategy);
-}
-
-void q_textimageformat_operator_assign(void* self, void* rhs) {
-    QTextFormat_OperatorAssign((QTextFormat*)self, (QTextFormat*)rhs);
 }
 
 void q_textimageformat_swap(void* self, void* other) {
@@ -2155,8 +2155,8 @@ int32_t q_textframeformat_page_break_policy(void* self) {
     return QTextFrameFormat_PageBreakPolicy((QTextFrameFormat*)self);
 }
 
-void q_textframeformat_operator_assign(void* self, void* rhs) {
-    QTextFormat_OperatorAssign((QTextFormat*)self, (QTextFormat*)rhs);
+void q_textframeformat_operator_assign(void* self, void* param1) {
+    QTextFrameFormat_OperatorAssign((QTextFrameFormat*)self, (QTextFrameFormat*)param1);
 }
 
 void q_textframeformat_swap(void* self, void* other) {
@@ -2554,8 +2554,8 @@ int32_t q_texttableformat_page_break_policy(void* self) {
     return QTextFrameFormat_PageBreakPolicy((QTextFrameFormat*)self);
 }
 
-void q_texttableformat_operator_assign(void* self, void* rhs) {
-    QTextFormat_OperatorAssign((QTextFormat*)self, (QTextFormat*)rhs);
+void q_texttableformat_operator_assign(void* self, void* param1) {
+    QTextFrameFormat_OperatorAssign((QTextFrameFormat*)self, (QTextFrameFormat*)param1);
 }
 
 void q_texttableformat_swap(void* self, void* other) {
@@ -3230,16 +3230,16 @@ int32_t q_texttablecellformat_table_cell_column_span(void* self) {
     return QTextCharFormat_TableCellColumnSpan((QTextCharFormat*)self);
 }
 
+void q_texttablecellformat_operator_assign(void* self, void* param1) {
+    QTextCharFormat_OperatorAssign((QTextCharFormat*)self, (QTextCharFormat*)param1);
+}
+
 void q_texttablecellformat_set_font2(void* self, void* font, int32_t behavior) {
     QTextCharFormat_SetFont2((QTextCharFormat*)self, (QFont*)font, behavior);
 }
 
 void q_texttablecellformat_set_font_style_hint2(void* self, int32_t hint, int32_t strategy) {
     QTextCharFormat_SetFontStyleHint2((QTextCharFormat*)self, hint, strategy);
-}
-
-void q_texttablecellformat_operator_assign(void* self, void* rhs) {
-    QTextFormat_OperatorAssign((QTextFormat*)self, (QTextFormat*)rhs);
 }
 
 void q_texttablecellformat_swap(void* self, void* other) {

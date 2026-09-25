@@ -43,14 +43,12 @@ QPlaceSearchRequest* q_placeproposedsearchresult_search_request(void* self);
 ///
 void q_placeproposedsearchresult_set_search_request(void* self, void* request);
 
-/// Inherited from QPlaceSearchResult
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchresult.html#operator-eq)
+/// [Upstream resources](https://doc.qt.io/qt-6/qplaceproposedsearchresult.html#operator-eq)
 ///
 /// @param self QPlaceProposedSearchResult*
-/// @param other QPlaceSearchResult*
+/// @param param1 QPlaceProposedSearchResult*
 ///
-void q_placeproposedsearchresult_operator_assign(void* self, void* other);
+void q_placeproposedsearchresult_operator_assign(void* self, void* param1);
 
 /// Inherited from QPlaceSearchResult
 ///
