@@ -391,7 +391,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 	case "ptrdiff_t", "qptrdiff", "qintptr", "qlonglong", "qsizetype",
 		"QIntegerForSizeof<std::size_t>::Signed", "QIntegerForSizeof<void *>::Signed", "GLintptr", "GLsizeiptr":
 		ret += "intptr_t"
-	case "ulong", "unsigned long", "size_t", "unsigned long long", "qulonglong", "quintptr",
+	case "ulong", "unsigned long", "unsigned long long", "qulonglong", "quintptr",
 		"QIntegerForSizeof<void *>::Unsigned":
 		ret += "uintptr_t"
 	case "quint128":
@@ -1966,7 +1966,10 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 				maybeMoveCtor = " object and invalidates the source " + c.ClassName
 			}
 
-			if ctor.LinuxOnly {
+			if ctor.FossOnly {
+				maybeMacro = "#if defined(__linux__) && defined(__FreeBSD__)\n"
+				maybeEndMacro = "#endif\n"
+			} else if ctor.LinuxOnly {
 				maybeMacro = "#ifdef __linux__\n"
 				maybeEndMacro = "#endif\n"
 			} else if c.ClassName == "QProcess::UnixProcessParameters" {
@@ -2246,6 +2249,10 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 			}
 
 			if (m.IsVirtual || m.IsProtected) && len(virtualMethods) > 0 && virtualEligible {
+				if m.IsPureVirtual && m.IsSignal {
+					continue
+				}
+
 				var maybeCommentStruct, maybeVoid, maybeComma, maybeMacro, maybeEndMacro, maybeReturnString string
 				if len(m.Parameters) > 0 {
 					maybeComma = ", "
@@ -2771,7 +2778,10 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			} else {
 				var maybeMacro, maybeEndMacro string
 
-				if ctor.LinuxOnly {
+				if ctor.FossOnly {
+					maybeMacro = "#if defined(__linux__) && defined(__FreeBSD__)\n"
+					maybeEndMacro = "#endif\n"
+				} else if ctor.LinuxOnly {
 					maybeMacro = "#ifdef __linux__\n"
 					maybeEndMacro = "#endif\n"
 				} else if c.ClassName == "QProcess::UnixProcessParameters" {
@@ -3013,6 +3023,10 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 
 			if (m.IsVirtual || m.IsProtected) && len(virtualMethods) > 0 && virtualEligible {
+				if m.IsPureVirtual && m.IsSignal {
+					continue
+				}
+
 				var maybeVoid, maybeComma, maybeMacro, maybeEndMacro string
 				if len(m.Parameters) > 0 {
 					maybeComma = ", "
