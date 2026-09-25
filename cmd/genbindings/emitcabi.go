@@ -1492,6 +1492,7 @@ struct wl_keyboard;
 struct wl_pointer;
 struct wl_seat;
 struct wl_touch;
+struct xkb_context;
 #endif
 
 `)
@@ -1747,6 +1748,9 @@ struct wl_touch;
 			case "QNativeInterface::QEGLContext":
 				ret.WriteString("\n// unimplemented pure virtual method")
 				ret.WriteString("\nvirtual void invalidateContext() override {}\n")
+			case "QNativeInterface::QWaylandApplication":
+				ret.WriteString("\n// unimplemented pure virtual method")
+				ret.WriteString("\nvirtual xkb_context* xkbContext() const { return {}; }\n")
 			case "TextCustomEditor::TextEditFindBarBase":
 				ret.WriteString("\nvoid slotReplaceText() override {}\nvoid slotReplaceAllText() override {}\n")
 			}
