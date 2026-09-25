@@ -476,7 +476,6 @@ func AllowCtor(className string) bool {
 		"KIO::WorkerFactory",          // Qt 6 KIO
 		"Poppler::MediaRendition",     // Qt 6 Poppler
 		"QNativeInterface::QGLXContext",
-		"QNativeInterface::QEGLContext",
 		"QNativeInterface::QSGVulkanTexture":
 		return false
 	}
@@ -1008,6 +1007,7 @@ func ApplyQuirks(className string, mm *CppMethod) {
 	case "KXMessages":
 		mm.LinuxOnly = true
 	case
+		"QNativeInterface::QEGLContext",
 		"QNativeInterface::QWaylandApplication",
 		"QNativeInterface::QWaylandScreen",
 		"QNativeInterface::QX11Application":
