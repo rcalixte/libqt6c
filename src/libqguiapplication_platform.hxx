@@ -23,6 +23,7 @@ struct wl_keyboard;
 struct wl_pointer;
 struct wl_seat;
 struct wl_touch;
+struct xkb_context;
 #endif
 
 // This class is a subclass of QNativeInterface::QX11Application so that we can call protected methods
@@ -217,6 +218,9 @@ class VirtualQNativeInterfaceQWaylandApplication : public QNativeInterface::QWay
         }
         return {};
     }
+
+    // unimplemented pure virtual method
+    virtual xkb_context* xkbContext() const { return {}; }
 };
 
 #endif
