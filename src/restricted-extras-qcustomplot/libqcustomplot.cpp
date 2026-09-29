@@ -7548,45 +7548,45 @@ void QCPLayoutGrid_OnDisconnectNotify(QCPLayoutGrid* self, intptr_t slot) {
 // Derived class handler implementation
 void QCPLayoutGrid_GetMinimumRowColSizes(const QCPLayoutGrid* self, libqt_list /* of int */ minColWidths, libqt_list /* of int */ minRowHeights) {
     auto* vqcplayoutgrid = const_cast<VirtualQCPLayoutGrid*>(dynamic_cast<const VirtualQCPLayoutGrid*>(self));
-    QVector<int> minColWidths_QVector;
-    minColWidths_QVector.reserve(minColWidths.len);
+    QVector<int>* minColWidths_QVector = new QVector<int>();
+    minColWidths_QVector->reserve(minColWidths.len);
     int* minColWidths_arr = static_cast<int*>(minColWidths.data.ints);
     for (size_t i = 0; i < minColWidths.len; ++i) {
-        minColWidths_QVector.push_back(static_cast<int>(minColWidths_arr[i]));
+        minColWidths_QVector->push_back(static_cast<int>(minColWidths_arr[i]));
     }
-    QVector<int> minRowHeights_QVector;
-    minRowHeights_QVector.reserve(minRowHeights.len);
+    QVector<int>* minRowHeights_QVector = new QVector<int>();
+    minRowHeights_QVector->reserve(minRowHeights.len);
     int* minRowHeights_arr = static_cast<int*>(minRowHeights.data.ints);
     for (size_t i = 0; i < minRowHeights.len; ++i) {
-        minRowHeights_QVector.push_back(static_cast<int>(minRowHeights_arr[i]));
+        minRowHeights_QVector->push_back(static_cast<int>(minRowHeights_arr[i]));
     }
     if (vqcplayoutgrid && vqcplayoutgrid->isVirtualQCPLayoutGrid) {
-        vqcplayoutgrid->getMinimumRowColSizes(&minColWidths_QVector, &minRowHeights_QVector);
+        vqcplayoutgrid->getMinimumRowColSizes(minColWidths_QVector, minRowHeights_QVector);
     } else {
-        ((VirtualQCPLayoutGrid*)self)->getMinimumRowColSizes(&minColWidths_QVector, &minRowHeights_QVector);
+        ((VirtualQCPLayoutGrid*)self)->getMinimumRowColSizes(minColWidths_QVector, minRowHeights_QVector);
     }
 }
 
 // Base class handler implementation
 void QCPLayoutGrid_SuperGetMinimumRowColSizes(const QCPLayoutGrid* self, libqt_list /* of int */ minColWidths, libqt_list /* of int */ minRowHeights) {
     auto* vqcplayoutgrid = const_cast<VirtualQCPLayoutGrid*>(dynamic_cast<const VirtualQCPLayoutGrid*>(self));
-    QVector<int> minColWidths_QVector;
-    minColWidths_QVector.reserve(minColWidths.len);
+    QVector<int>* minColWidths_QVector = new QVector<int>();
+    minColWidths_QVector->reserve(minColWidths.len);
     int* minColWidths_arr = static_cast<int*>(minColWidths.data.ints);
     for (size_t i = 0; i < minColWidths.len; ++i) {
-        minColWidths_QVector.push_back(static_cast<int>(minColWidths_arr[i]));
+        minColWidths_QVector->push_back(static_cast<int>(minColWidths_arr[i]));
     }
-    QVector<int> minRowHeights_QVector;
-    minRowHeights_QVector.reserve(minRowHeights.len);
+    QVector<int>* minRowHeights_QVector = new QVector<int>();
+    minRowHeights_QVector->reserve(minRowHeights.len);
     int* minRowHeights_arr = static_cast<int*>(minRowHeights.data.ints);
     for (size_t i = 0; i < minRowHeights.len; ++i) {
-        minRowHeights_QVector.push_back(static_cast<int>(minRowHeights_arr[i]));
+        minRowHeights_QVector->push_back(static_cast<int>(minRowHeights_arr[i]));
     }
     if (vqcplayoutgrid && vqcplayoutgrid->isVirtualQCPLayoutGrid) {
         vqcplayoutgrid->setQCPLayoutGrid_GetMinimumRowColSizes_IsBase(true);
-        vqcplayoutgrid->getMinimumRowColSizes(&minColWidths_QVector, &minRowHeights_QVector);
+        vqcplayoutgrid->getMinimumRowColSizes(minColWidths_QVector, minRowHeights_QVector);
     } else {
-        ((VirtualQCPLayoutGrid*)self)->getMinimumRowColSizes(&minColWidths_QVector, &minRowHeights_QVector);
+        ((VirtualQCPLayoutGrid*)self)->getMinimumRowColSizes(minColWidths_QVector, minRowHeights_QVector);
     }
 }
 
@@ -7600,45 +7600,45 @@ void QCPLayoutGrid_OnGetMinimumRowColSizes(const QCPLayoutGrid* self, intptr_t s
 // Derived class handler implementation
 void QCPLayoutGrid_GetMaximumRowColSizes(const QCPLayoutGrid* self, libqt_list /* of int */ maxColWidths, libqt_list /* of int */ maxRowHeights) {
     auto* vqcplayoutgrid = const_cast<VirtualQCPLayoutGrid*>(dynamic_cast<const VirtualQCPLayoutGrid*>(self));
-    QVector<int> maxColWidths_QVector;
-    maxColWidths_QVector.reserve(maxColWidths.len);
+    QVector<int>* maxColWidths_QVector = new QVector<int>();
+    maxColWidths_QVector->reserve(maxColWidths.len);
     int* maxColWidths_arr = static_cast<int*>(maxColWidths.data.ints);
     for (size_t i = 0; i < maxColWidths.len; ++i) {
-        maxColWidths_QVector.push_back(static_cast<int>(maxColWidths_arr[i]));
+        maxColWidths_QVector->push_back(static_cast<int>(maxColWidths_arr[i]));
     }
-    QVector<int> maxRowHeights_QVector;
-    maxRowHeights_QVector.reserve(maxRowHeights.len);
+    QVector<int>* maxRowHeights_QVector = new QVector<int>();
+    maxRowHeights_QVector->reserve(maxRowHeights.len);
     int* maxRowHeights_arr = static_cast<int*>(maxRowHeights.data.ints);
     for (size_t i = 0; i < maxRowHeights.len; ++i) {
-        maxRowHeights_QVector.push_back(static_cast<int>(maxRowHeights_arr[i]));
+        maxRowHeights_QVector->push_back(static_cast<int>(maxRowHeights_arr[i]));
     }
     if (vqcplayoutgrid && vqcplayoutgrid->isVirtualQCPLayoutGrid) {
-        vqcplayoutgrid->getMaximumRowColSizes(&maxColWidths_QVector, &maxRowHeights_QVector);
+        vqcplayoutgrid->getMaximumRowColSizes(maxColWidths_QVector, maxRowHeights_QVector);
     } else {
-        ((VirtualQCPLayoutGrid*)self)->getMaximumRowColSizes(&maxColWidths_QVector, &maxRowHeights_QVector);
+        ((VirtualQCPLayoutGrid*)self)->getMaximumRowColSizes(maxColWidths_QVector, maxRowHeights_QVector);
     }
 }
 
 // Base class handler implementation
 void QCPLayoutGrid_SuperGetMaximumRowColSizes(const QCPLayoutGrid* self, libqt_list /* of int */ maxColWidths, libqt_list /* of int */ maxRowHeights) {
     auto* vqcplayoutgrid = const_cast<VirtualQCPLayoutGrid*>(dynamic_cast<const VirtualQCPLayoutGrid*>(self));
-    QVector<int> maxColWidths_QVector;
-    maxColWidths_QVector.reserve(maxColWidths.len);
+    QVector<int>* maxColWidths_QVector = new QVector<int>();
+    maxColWidths_QVector->reserve(maxColWidths.len);
     int* maxColWidths_arr = static_cast<int*>(maxColWidths.data.ints);
     for (size_t i = 0; i < maxColWidths.len; ++i) {
-        maxColWidths_QVector.push_back(static_cast<int>(maxColWidths_arr[i]));
+        maxColWidths_QVector->push_back(static_cast<int>(maxColWidths_arr[i]));
     }
-    QVector<int> maxRowHeights_QVector;
-    maxRowHeights_QVector.reserve(maxRowHeights.len);
+    QVector<int>* maxRowHeights_QVector = new QVector<int>();
+    maxRowHeights_QVector->reserve(maxRowHeights.len);
     int* maxRowHeights_arr = static_cast<int*>(maxRowHeights.data.ints);
     for (size_t i = 0; i < maxRowHeights.len; ++i) {
-        maxRowHeights_QVector.push_back(static_cast<int>(maxRowHeights_arr[i]));
+        maxRowHeights_QVector->push_back(static_cast<int>(maxRowHeights_arr[i]));
     }
     if (vqcplayoutgrid && vqcplayoutgrid->isVirtualQCPLayoutGrid) {
         vqcplayoutgrid->setQCPLayoutGrid_GetMaximumRowColSizes_IsBase(true);
-        vqcplayoutgrid->getMaximumRowColSizes(&maxColWidths_QVector, &maxRowHeights_QVector);
+        vqcplayoutgrid->getMaximumRowColSizes(maxColWidths_QVector, maxRowHeights_QVector);
     } else {
-        ((VirtualQCPLayoutGrid*)self)->getMaximumRowColSizes(&maxColWidths_QVector, &maxRowHeights_QVector);
+        ((VirtualQCPLayoutGrid*)self)->getMaximumRowColSizes(maxColWidths_QVector, maxRowHeights_QVector);
     }
 }
 
@@ -9594,20 +9594,20 @@ void QCPAxisTicker_Generate(QCPAxisTicker* self, const QCPRange* range, const QL
     for (size_t i = 0; i < ticks.len; ++i) {
         ticks_QVector.push_back(static_cast<double>(ticks_arr[i]));
     }
-    QVector<double> subTicks_QVector;
-    subTicks_QVector.reserve(subTicks.len);
+    QVector<double>* subTicks_QVector = new QVector<double>();
+    subTicks_QVector->reserve(subTicks.len);
     double* subTicks_arr = static_cast<double*>(subTicks.data.doubles);
     for (size_t i = 0; i < subTicks.len; ++i) {
-        subTicks_QVector.push_back(static_cast<double>(subTicks_arr[i]));
+        subTicks_QVector->push_back(static_cast<double>(subTicks_arr[i]));
     }
-    QVector<QString> tickLabels_QVector;
-    tickLabels_QVector.reserve(tickLabels.len);
+    QVector<QString>* tickLabels_QVector = new QVector<QString>();
+    tickLabels_QVector->reserve(tickLabels.len);
     libqt_string* tickLabels_arr = static_cast<libqt_string*>(tickLabels.data.ptr);
     for (size_t i = 0; i < tickLabels.len; ++i) {
         QString tickLabels_arr_i_QString = QString::fromUtf8(tickLabels_arr[i].data, tickLabels_arr[i].len);
-        tickLabels_QVector.push_back(tickLabels_arr_i_QString);
+        tickLabels_QVector->push_back(tickLabels_arr_i_QString);
     }
-    self->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+    self->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
 }
 
 double QCPAxisTicker_GetTickStep(QCPAxisTicker* self, const QCPRange* range) {
@@ -9722,24 +9722,24 @@ void QCPAxisTicker_SuperGenerate(QCPAxisTicker* self, const QCPRange* range, con
     for (size_t i = 0; i < ticks.len; ++i) {
         ticks_QVector.push_back(static_cast<double>(ticks_arr[i]));
     }
-    QVector<double> subTicks_QVector;
-    subTicks_QVector.reserve(subTicks.len);
+    QVector<double>* subTicks_QVector = new QVector<double>();
+    subTicks_QVector->reserve(subTicks.len);
     double* subTicks_arr = static_cast<double*>(subTicks.data.doubles);
     for (size_t i = 0; i < subTicks.len; ++i) {
-        subTicks_QVector.push_back(static_cast<double>(subTicks_arr[i]));
+        subTicks_QVector->push_back(static_cast<double>(subTicks_arr[i]));
     }
-    QVector<QString> tickLabels_QVector;
-    tickLabels_QVector.reserve(tickLabels.len);
+    QVector<QString>* tickLabels_QVector = new QVector<QString>();
+    tickLabels_QVector->reserve(tickLabels.len);
     libqt_string* tickLabels_arr = static_cast<libqt_string*>(tickLabels.data.ptr);
     for (size_t i = 0; i < tickLabels.len; ++i) {
         QString tickLabels_arr_i_QString = QString::fromUtf8(tickLabels_arr[i].data, tickLabels_arr[i].len);
-        tickLabels_QVector.push_back(tickLabels_arr_i_QString);
+        tickLabels_QVector->push_back(tickLabels_arr_i_QString);
     }
     if (vqcpaxisticker && vqcpaxisticker->isVirtualQCPAxisTicker) {
         vqcpaxisticker->setQCPAxisTicker_Generate_IsBase(true);
-        vqcpaxisticker->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        vqcpaxisticker->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     } else {
-        self->QCPAxisTicker::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        self->QCPAxisTicker::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     }
 }
 
@@ -10349,23 +10349,23 @@ void QCPAxisTickerDateTime_Generate(QCPAxisTickerDateTime* self, const QCPRange*
     for (size_t i = 0; i < ticks.len; ++i) {
         ticks_QVector.push_back(static_cast<double>(ticks_arr[i]));
     }
-    QVector<double> subTicks_QVector;
-    subTicks_QVector.reserve(subTicks.len);
+    QVector<double>* subTicks_QVector = new QVector<double>();
+    subTicks_QVector->reserve(subTicks.len);
     double* subTicks_arr = static_cast<double*>(subTicks.data.doubles);
     for (size_t i = 0; i < subTicks.len; ++i) {
-        subTicks_QVector.push_back(static_cast<double>(subTicks_arr[i]));
+        subTicks_QVector->push_back(static_cast<double>(subTicks_arr[i]));
     }
-    QVector<QString> tickLabels_QVector;
-    tickLabels_QVector.reserve(tickLabels.len);
+    QVector<QString>* tickLabels_QVector = new QVector<QString>();
+    tickLabels_QVector->reserve(tickLabels.len);
     libqt_string* tickLabels_arr = static_cast<libqt_string*>(tickLabels.data.ptr);
     for (size_t i = 0; i < tickLabels.len; ++i) {
         QString tickLabels_arr_i_QString = QString::fromUtf8(tickLabels_arr[i].data, tickLabels_arr[i].len);
-        tickLabels_QVector.push_back(tickLabels_arr_i_QString);
+        tickLabels_QVector->push_back(tickLabels_arr_i_QString);
     }
     if (vqcpaxistickerdatetime && vqcpaxistickerdatetime->isVirtualQCPAxisTickerDateTime) {
-        vqcpaxistickerdatetime->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        vqcpaxistickerdatetime->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     } else {
-        self->QCPAxisTickerDateTime::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        self->QCPAxisTickerDateTime::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     }
 }
 
@@ -10378,24 +10378,24 @@ void QCPAxisTickerDateTime_SuperGenerate(QCPAxisTickerDateTime* self, const QCPR
     for (size_t i = 0; i < ticks.len; ++i) {
         ticks_QVector.push_back(static_cast<double>(ticks_arr[i]));
     }
-    QVector<double> subTicks_QVector;
-    subTicks_QVector.reserve(subTicks.len);
+    QVector<double>* subTicks_QVector = new QVector<double>();
+    subTicks_QVector->reserve(subTicks.len);
     double* subTicks_arr = static_cast<double*>(subTicks.data.doubles);
     for (size_t i = 0; i < subTicks.len; ++i) {
-        subTicks_QVector.push_back(static_cast<double>(subTicks_arr[i]));
+        subTicks_QVector->push_back(static_cast<double>(subTicks_arr[i]));
     }
-    QVector<QString> tickLabels_QVector;
-    tickLabels_QVector.reserve(tickLabels.len);
+    QVector<QString>* tickLabels_QVector = new QVector<QString>();
+    tickLabels_QVector->reserve(tickLabels.len);
     libqt_string* tickLabels_arr = static_cast<libqt_string*>(tickLabels.data.ptr);
     for (size_t i = 0; i < tickLabels.len; ++i) {
         QString tickLabels_arr_i_QString = QString::fromUtf8(tickLabels_arr[i].data, tickLabels_arr[i].len);
-        tickLabels_QVector.push_back(tickLabels_arr_i_QString);
+        tickLabels_QVector->push_back(tickLabels_arr_i_QString);
     }
     if (vqcpaxistickerdatetime && vqcpaxistickerdatetime->isVirtualQCPAxisTickerDateTime) {
         vqcpaxistickerdatetime->setQCPAxisTickerDateTime_Generate_IsBase(true);
-        vqcpaxistickerdatetime->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        vqcpaxistickerdatetime->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     } else {
-        self->QCPAxisTickerDateTime::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        self->QCPAxisTickerDateTime::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     }
 }
 
@@ -10870,23 +10870,23 @@ void QCPAxisTickerTime_Generate(QCPAxisTickerTime* self, const QCPRange* range, 
     for (size_t i = 0; i < ticks.len; ++i) {
         ticks_QVector.push_back(static_cast<double>(ticks_arr[i]));
     }
-    QVector<double> subTicks_QVector;
-    subTicks_QVector.reserve(subTicks.len);
+    QVector<double>* subTicks_QVector = new QVector<double>();
+    subTicks_QVector->reserve(subTicks.len);
     double* subTicks_arr = static_cast<double*>(subTicks.data.doubles);
     for (size_t i = 0; i < subTicks.len; ++i) {
-        subTicks_QVector.push_back(static_cast<double>(subTicks_arr[i]));
+        subTicks_QVector->push_back(static_cast<double>(subTicks_arr[i]));
     }
-    QVector<QString> tickLabels_QVector;
-    tickLabels_QVector.reserve(tickLabels.len);
+    QVector<QString>* tickLabels_QVector = new QVector<QString>();
+    tickLabels_QVector->reserve(tickLabels.len);
     libqt_string* tickLabels_arr = static_cast<libqt_string*>(tickLabels.data.ptr);
     for (size_t i = 0; i < tickLabels.len; ++i) {
         QString tickLabels_arr_i_QString = QString::fromUtf8(tickLabels_arr[i].data, tickLabels_arr[i].len);
-        tickLabels_QVector.push_back(tickLabels_arr_i_QString);
+        tickLabels_QVector->push_back(tickLabels_arr_i_QString);
     }
     if (vqcpaxistickertime && vqcpaxistickertime->isVirtualQCPAxisTickerTime) {
-        vqcpaxistickertime->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        vqcpaxistickertime->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     } else {
-        self->QCPAxisTickerTime::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        self->QCPAxisTickerTime::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     }
 }
 
@@ -10899,24 +10899,24 @@ void QCPAxisTickerTime_SuperGenerate(QCPAxisTickerTime* self, const QCPRange* ra
     for (size_t i = 0; i < ticks.len; ++i) {
         ticks_QVector.push_back(static_cast<double>(ticks_arr[i]));
     }
-    QVector<double> subTicks_QVector;
-    subTicks_QVector.reserve(subTicks.len);
+    QVector<double>* subTicks_QVector = new QVector<double>();
+    subTicks_QVector->reserve(subTicks.len);
     double* subTicks_arr = static_cast<double*>(subTicks.data.doubles);
     for (size_t i = 0; i < subTicks.len; ++i) {
-        subTicks_QVector.push_back(static_cast<double>(subTicks_arr[i]));
+        subTicks_QVector->push_back(static_cast<double>(subTicks_arr[i]));
     }
-    QVector<QString> tickLabels_QVector;
-    tickLabels_QVector.reserve(tickLabels.len);
+    QVector<QString>* tickLabels_QVector = new QVector<QString>();
+    tickLabels_QVector->reserve(tickLabels.len);
     libqt_string* tickLabels_arr = static_cast<libqt_string*>(tickLabels.data.ptr);
     for (size_t i = 0; i < tickLabels.len; ++i) {
         QString tickLabels_arr_i_QString = QString::fromUtf8(tickLabels_arr[i].data, tickLabels_arr[i].len);
-        tickLabels_QVector.push_back(tickLabels_arr_i_QString);
+        tickLabels_QVector->push_back(tickLabels_arr_i_QString);
     }
     if (vqcpaxistickertime && vqcpaxistickertime->isVirtualQCPAxisTickerTime) {
         vqcpaxistickertime->setQCPAxisTickerTime_Generate_IsBase(true);
-        vqcpaxistickertime->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        vqcpaxistickertime->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     } else {
-        self->QCPAxisTickerTime::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        self->QCPAxisTickerTime::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     }
 }
 
@@ -11400,23 +11400,23 @@ void QCPAxisTickerFixed_Generate(QCPAxisTickerFixed* self, const QCPRange* range
     for (size_t i = 0; i < ticks.len; ++i) {
         ticks_QVector.push_back(static_cast<double>(ticks_arr[i]));
     }
-    QVector<double> subTicks_QVector;
-    subTicks_QVector.reserve(subTicks.len);
+    QVector<double>* subTicks_QVector = new QVector<double>();
+    subTicks_QVector->reserve(subTicks.len);
     double* subTicks_arr = static_cast<double*>(subTicks.data.doubles);
     for (size_t i = 0; i < subTicks.len; ++i) {
-        subTicks_QVector.push_back(static_cast<double>(subTicks_arr[i]));
+        subTicks_QVector->push_back(static_cast<double>(subTicks_arr[i]));
     }
-    QVector<QString> tickLabels_QVector;
-    tickLabels_QVector.reserve(tickLabels.len);
+    QVector<QString>* tickLabels_QVector = new QVector<QString>();
+    tickLabels_QVector->reserve(tickLabels.len);
     libqt_string* tickLabels_arr = static_cast<libqt_string*>(tickLabels.data.ptr);
     for (size_t i = 0; i < tickLabels.len; ++i) {
         QString tickLabels_arr_i_QString = QString::fromUtf8(tickLabels_arr[i].data, tickLabels_arr[i].len);
-        tickLabels_QVector.push_back(tickLabels_arr_i_QString);
+        tickLabels_QVector->push_back(tickLabels_arr_i_QString);
     }
     if (vqcpaxistickerfixed && vqcpaxistickerfixed->isVirtualQCPAxisTickerFixed) {
-        vqcpaxistickerfixed->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        vqcpaxistickerfixed->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     } else {
-        self->QCPAxisTickerFixed::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        self->QCPAxisTickerFixed::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     }
 }
 
@@ -11429,24 +11429,24 @@ void QCPAxisTickerFixed_SuperGenerate(QCPAxisTickerFixed* self, const QCPRange* 
     for (size_t i = 0; i < ticks.len; ++i) {
         ticks_QVector.push_back(static_cast<double>(ticks_arr[i]));
     }
-    QVector<double> subTicks_QVector;
-    subTicks_QVector.reserve(subTicks.len);
+    QVector<double>* subTicks_QVector = new QVector<double>();
+    subTicks_QVector->reserve(subTicks.len);
     double* subTicks_arr = static_cast<double*>(subTicks.data.doubles);
     for (size_t i = 0; i < subTicks.len; ++i) {
-        subTicks_QVector.push_back(static_cast<double>(subTicks_arr[i]));
+        subTicks_QVector->push_back(static_cast<double>(subTicks_arr[i]));
     }
-    QVector<QString> tickLabels_QVector;
-    tickLabels_QVector.reserve(tickLabels.len);
+    QVector<QString>* tickLabels_QVector = new QVector<QString>();
+    tickLabels_QVector->reserve(tickLabels.len);
     libqt_string* tickLabels_arr = static_cast<libqt_string*>(tickLabels.data.ptr);
     for (size_t i = 0; i < tickLabels.len; ++i) {
         QString tickLabels_arr_i_QString = QString::fromUtf8(tickLabels_arr[i].data, tickLabels_arr[i].len);
-        tickLabels_QVector.push_back(tickLabels_arr_i_QString);
+        tickLabels_QVector->push_back(tickLabels_arr_i_QString);
     }
     if (vqcpaxistickerfixed && vqcpaxistickerfixed->isVirtualQCPAxisTickerFixed) {
         vqcpaxistickerfixed->setQCPAxisTickerFixed_Generate_IsBase(true);
-        vqcpaxistickerfixed->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        vqcpaxistickerfixed->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     } else {
-        self->QCPAxisTickerFixed::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        self->QCPAxisTickerFixed::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     }
 }
 
@@ -12200,23 +12200,23 @@ void QCPAxisTickerText_Generate(QCPAxisTickerText* self, const QCPRange* range, 
     for (size_t i = 0; i < ticks.len; ++i) {
         ticks_QVector.push_back(static_cast<double>(ticks_arr[i]));
     }
-    QVector<double> subTicks_QVector;
-    subTicks_QVector.reserve(subTicks.len);
+    QVector<double>* subTicks_QVector = new QVector<double>();
+    subTicks_QVector->reserve(subTicks.len);
     double* subTicks_arr = static_cast<double*>(subTicks.data.doubles);
     for (size_t i = 0; i < subTicks.len; ++i) {
-        subTicks_QVector.push_back(static_cast<double>(subTicks_arr[i]));
+        subTicks_QVector->push_back(static_cast<double>(subTicks_arr[i]));
     }
-    QVector<QString> tickLabels_QVector;
-    tickLabels_QVector.reserve(tickLabels.len);
+    QVector<QString>* tickLabels_QVector = new QVector<QString>();
+    tickLabels_QVector->reserve(tickLabels.len);
     libqt_string* tickLabels_arr = static_cast<libqt_string*>(tickLabels.data.ptr);
     for (size_t i = 0; i < tickLabels.len; ++i) {
         QString tickLabels_arr_i_QString = QString::fromUtf8(tickLabels_arr[i].data, tickLabels_arr[i].len);
-        tickLabels_QVector.push_back(tickLabels_arr_i_QString);
+        tickLabels_QVector->push_back(tickLabels_arr_i_QString);
     }
     if (vqcpaxistickertext && vqcpaxistickertext->isVirtualQCPAxisTickerText) {
-        vqcpaxistickertext->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        vqcpaxistickertext->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     } else {
-        self->QCPAxisTickerText::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        self->QCPAxisTickerText::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     }
 }
 
@@ -12229,24 +12229,24 @@ void QCPAxisTickerText_SuperGenerate(QCPAxisTickerText* self, const QCPRange* ra
     for (size_t i = 0; i < ticks.len; ++i) {
         ticks_QVector.push_back(static_cast<double>(ticks_arr[i]));
     }
-    QVector<double> subTicks_QVector;
-    subTicks_QVector.reserve(subTicks.len);
+    QVector<double>* subTicks_QVector = new QVector<double>();
+    subTicks_QVector->reserve(subTicks.len);
     double* subTicks_arr = static_cast<double*>(subTicks.data.doubles);
     for (size_t i = 0; i < subTicks.len; ++i) {
-        subTicks_QVector.push_back(static_cast<double>(subTicks_arr[i]));
+        subTicks_QVector->push_back(static_cast<double>(subTicks_arr[i]));
     }
-    QVector<QString> tickLabels_QVector;
-    tickLabels_QVector.reserve(tickLabels.len);
+    QVector<QString>* tickLabels_QVector = new QVector<QString>();
+    tickLabels_QVector->reserve(tickLabels.len);
     libqt_string* tickLabels_arr = static_cast<libqt_string*>(tickLabels.data.ptr);
     for (size_t i = 0; i < tickLabels.len; ++i) {
         QString tickLabels_arr_i_QString = QString::fromUtf8(tickLabels_arr[i].data, tickLabels_arr[i].len);
-        tickLabels_QVector.push_back(tickLabels_arr_i_QString);
+        tickLabels_QVector->push_back(tickLabels_arr_i_QString);
     }
     if (vqcpaxistickertext && vqcpaxistickertext->isVirtualQCPAxisTickerText) {
         vqcpaxistickertext->setQCPAxisTickerText_Generate_IsBase(true);
-        vqcpaxistickertext->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        vqcpaxistickertext->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     } else {
-        self->QCPAxisTickerText::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        self->QCPAxisTickerText::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     }
 }
 
@@ -12737,23 +12737,23 @@ void QCPAxisTickerPi_Generate(QCPAxisTickerPi* self, const QCPRange* range, cons
     for (size_t i = 0; i < ticks.len; ++i) {
         ticks_QVector.push_back(static_cast<double>(ticks_arr[i]));
     }
-    QVector<double> subTicks_QVector;
-    subTicks_QVector.reserve(subTicks.len);
+    QVector<double>* subTicks_QVector = new QVector<double>();
+    subTicks_QVector->reserve(subTicks.len);
     double* subTicks_arr = static_cast<double*>(subTicks.data.doubles);
     for (size_t i = 0; i < subTicks.len; ++i) {
-        subTicks_QVector.push_back(static_cast<double>(subTicks_arr[i]));
+        subTicks_QVector->push_back(static_cast<double>(subTicks_arr[i]));
     }
-    QVector<QString> tickLabels_QVector;
-    tickLabels_QVector.reserve(tickLabels.len);
+    QVector<QString>* tickLabels_QVector = new QVector<QString>();
+    tickLabels_QVector->reserve(tickLabels.len);
     libqt_string* tickLabels_arr = static_cast<libqt_string*>(tickLabels.data.ptr);
     for (size_t i = 0; i < tickLabels.len; ++i) {
         QString tickLabels_arr_i_QString = QString::fromUtf8(tickLabels_arr[i].data, tickLabels_arr[i].len);
-        tickLabels_QVector.push_back(tickLabels_arr_i_QString);
+        tickLabels_QVector->push_back(tickLabels_arr_i_QString);
     }
     if (vqcpaxistickerpi && vqcpaxistickerpi->isVirtualQCPAxisTickerPi) {
-        vqcpaxistickerpi->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        vqcpaxistickerpi->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     } else {
-        self->QCPAxisTickerPi::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        self->QCPAxisTickerPi::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     }
 }
 
@@ -12766,24 +12766,24 @@ void QCPAxisTickerPi_SuperGenerate(QCPAxisTickerPi* self, const QCPRange* range,
     for (size_t i = 0; i < ticks.len; ++i) {
         ticks_QVector.push_back(static_cast<double>(ticks_arr[i]));
     }
-    QVector<double> subTicks_QVector;
-    subTicks_QVector.reserve(subTicks.len);
+    QVector<double>* subTicks_QVector = new QVector<double>();
+    subTicks_QVector->reserve(subTicks.len);
     double* subTicks_arr = static_cast<double*>(subTicks.data.doubles);
     for (size_t i = 0; i < subTicks.len; ++i) {
-        subTicks_QVector.push_back(static_cast<double>(subTicks_arr[i]));
+        subTicks_QVector->push_back(static_cast<double>(subTicks_arr[i]));
     }
-    QVector<QString> tickLabels_QVector;
-    tickLabels_QVector.reserve(tickLabels.len);
+    QVector<QString>* tickLabels_QVector = new QVector<QString>();
+    tickLabels_QVector->reserve(tickLabels.len);
     libqt_string* tickLabels_arr = static_cast<libqt_string*>(tickLabels.data.ptr);
     for (size_t i = 0; i < tickLabels.len; ++i) {
         QString tickLabels_arr_i_QString = QString::fromUtf8(tickLabels_arr[i].data, tickLabels_arr[i].len);
-        tickLabels_QVector.push_back(tickLabels_arr_i_QString);
+        tickLabels_QVector->push_back(tickLabels_arr_i_QString);
     }
     if (vqcpaxistickerpi && vqcpaxistickerpi->isVirtualQCPAxisTickerPi) {
         vqcpaxistickerpi->setQCPAxisTickerPi_Generate_IsBase(true);
-        vqcpaxistickerpi->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        vqcpaxistickerpi->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     } else {
-        self->QCPAxisTickerPi::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        self->QCPAxisTickerPi::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     }
 }
 
@@ -13558,23 +13558,23 @@ void QCPAxisTickerLog_Generate(QCPAxisTickerLog* self, const QCPRange* range, co
     for (size_t i = 0; i < ticks.len; ++i) {
         ticks_QVector.push_back(static_cast<double>(ticks_arr[i]));
     }
-    QVector<double> subTicks_QVector;
-    subTicks_QVector.reserve(subTicks.len);
+    QVector<double>* subTicks_QVector = new QVector<double>();
+    subTicks_QVector->reserve(subTicks.len);
     double* subTicks_arr = static_cast<double*>(subTicks.data.doubles);
     for (size_t i = 0; i < subTicks.len; ++i) {
-        subTicks_QVector.push_back(static_cast<double>(subTicks_arr[i]));
+        subTicks_QVector->push_back(static_cast<double>(subTicks_arr[i]));
     }
-    QVector<QString> tickLabels_QVector;
-    tickLabels_QVector.reserve(tickLabels.len);
+    QVector<QString>* tickLabels_QVector = new QVector<QString>();
+    tickLabels_QVector->reserve(tickLabels.len);
     libqt_string* tickLabels_arr = static_cast<libqt_string*>(tickLabels.data.ptr);
     for (size_t i = 0; i < tickLabels.len; ++i) {
         QString tickLabels_arr_i_QString = QString::fromUtf8(tickLabels_arr[i].data, tickLabels_arr[i].len);
-        tickLabels_QVector.push_back(tickLabels_arr_i_QString);
+        tickLabels_QVector->push_back(tickLabels_arr_i_QString);
     }
     if (vqcpaxistickerlog && vqcpaxistickerlog->isVirtualQCPAxisTickerLog) {
-        vqcpaxistickerlog->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        vqcpaxistickerlog->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     } else {
-        self->QCPAxisTickerLog::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        self->QCPAxisTickerLog::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     }
 }
 
@@ -13587,24 +13587,24 @@ void QCPAxisTickerLog_SuperGenerate(QCPAxisTickerLog* self, const QCPRange* rang
     for (size_t i = 0; i < ticks.len; ++i) {
         ticks_QVector.push_back(static_cast<double>(ticks_arr[i]));
     }
-    QVector<double> subTicks_QVector;
-    subTicks_QVector.reserve(subTicks.len);
+    QVector<double>* subTicks_QVector = new QVector<double>();
+    subTicks_QVector->reserve(subTicks.len);
     double* subTicks_arr = static_cast<double*>(subTicks.data.doubles);
     for (size_t i = 0; i < subTicks.len; ++i) {
-        subTicks_QVector.push_back(static_cast<double>(subTicks_arr[i]));
+        subTicks_QVector->push_back(static_cast<double>(subTicks_arr[i]));
     }
-    QVector<QString> tickLabels_QVector;
-    tickLabels_QVector.reserve(tickLabels.len);
+    QVector<QString>* tickLabels_QVector = new QVector<QString>();
+    tickLabels_QVector->reserve(tickLabels.len);
     libqt_string* tickLabels_arr = static_cast<libqt_string*>(tickLabels.data.ptr);
     for (size_t i = 0; i < tickLabels.len; ++i) {
         QString tickLabels_arr_i_QString = QString::fromUtf8(tickLabels_arr[i].data, tickLabels_arr[i].len);
-        tickLabels_QVector.push_back(tickLabels_arr_i_QString);
+        tickLabels_QVector->push_back(tickLabels_arr_i_QString);
     }
     if (vqcpaxistickerlog && vqcpaxistickerlog->isVirtualQCPAxisTickerLog) {
         vqcpaxistickerlog->setQCPAxisTickerLog_Generate_IsBase(true);
-        vqcpaxistickerlog->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        vqcpaxistickerlog->generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     } else {
-        self->QCPAxisTickerLog::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, &subTicks_QVector, &tickLabels_QVector);
+        self->QCPAxisTickerLog::generate(*range, *locale, *formatChar, static_cast<int>(precision), ticks_QVector, subTicks_QVector, tickLabels_QVector);
     }
 }
 
@@ -22435,14 +22435,14 @@ void QCustomPlot_OnLayerableAt3(const QCustomPlot* self, intptr_t slot) {
 // Derived class handler implementation
 libqt_list /* of QCPLayerable* */ QCustomPlot_LayerableListAt3(const QCustomPlot* self, const QPointF* pos, bool onlySelectable, libqt_list /* of QVariant* */ selectionDetails) {
     auto* vqcustomplot = const_cast<VirtualQCustomPlot*>(dynamic_cast<const VirtualQCustomPlot*>(self));
-    QList<QVariant> selectionDetails_QList;
-    selectionDetails_QList.reserve(selectionDetails.len);
+    QList<QVariant>* selectionDetails_QList = new QList<QVariant>();
+    selectionDetails_QList->reserve(selectionDetails.len);
     QVariant** selectionDetails_arr = static_cast<QVariant**>(selectionDetails.data.ptr);
     for (size_t i = 0; i < selectionDetails.len; ++i) {
-        selectionDetails_QList.push_back(*(selectionDetails_arr[i]));
+        selectionDetails_QList->push_back(*(selectionDetails_arr[i]));
     }
     if (vqcustomplot && vqcustomplot->isVirtualQCustomPlot) {
-        QList<QCPLayerable*> _ret = vqcustomplot->layerableListAt(*pos, onlySelectable, &selectionDetails_QList);
+        QList<QCPLayerable*> _ret = vqcustomplot->layerableListAt(*pos, onlySelectable, selectionDetails_QList);
         // Convert QList<> from C++ memory to manually-managed C memory
         QCPLayerable** _arr = static_cast<QCPLayerable**>(malloc(sizeof(QCPLayerable*) * (_ret.size())));
         for (qsizetype i = 0; i < _ret.size(); ++i) {
@@ -22453,7 +22453,7 @@ libqt_list /* of QCPLayerable* */ QCustomPlot_LayerableListAt3(const QCustomPlot
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QList<QCPLayerable*> _ret = ((VirtualQCustomPlot*)self)->layerableListAt(*pos, onlySelectable, &selectionDetails_QList);
+        QList<QCPLayerable*> _ret = ((VirtualQCustomPlot*)self)->layerableListAt(*pos, onlySelectable, selectionDetails_QList);
         // Convert QList<> from C++ memory to manually-managed C memory
         QCPLayerable** _arr = static_cast<QCPLayerable**>(malloc(sizeof(QCPLayerable*) * (_ret.size())));
         for (qsizetype i = 0; i < _ret.size(); ++i) {
@@ -22469,15 +22469,15 @@ libqt_list /* of QCPLayerable* */ QCustomPlot_LayerableListAt3(const QCustomPlot
 // Base class handler implementation
 libqt_list /* of QCPLayerable* */ QCustomPlot_SuperLayerableListAt3(const QCustomPlot* self, const QPointF* pos, bool onlySelectable, libqt_list /* of QVariant* */ selectionDetails) {
     auto* vqcustomplot = const_cast<VirtualQCustomPlot*>(dynamic_cast<const VirtualQCustomPlot*>(self));
-    QList<QVariant> selectionDetails_QList;
-    selectionDetails_QList.reserve(selectionDetails.len);
+    QList<QVariant>* selectionDetails_QList = new QList<QVariant>();
+    selectionDetails_QList->reserve(selectionDetails.len);
     QVariant** selectionDetails_arr = static_cast<QVariant**>(selectionDetails.data.ptr);
     for (size_t i = 0; i < selectionDetails.len; ++i) {
-        selectionDetails_QList.push_back(*(selectionDetails_arr[i]));
+        selectionDetails_QList->push_back(*(selectionDetails_arr[i]));
     }
     if (vqcustomplot && vqcustomplot->isVirtualQCustomPlot) {
         vqcustomplot->setQCustomPlot_LayerableListAt3_IsBase(true);
-        QList<QCPLayerable*> _ret = vqcustomplot->layerableListAt(*pos, onlySelectable, &selectionDetails_QList);
+        QList<QCPLayerable*> _ret = vqcustomplot->layerableListAt(*pos, onlySelectable, selectionDetails_QList);
         // Convert QList<> from C++ memory to manually-managed C memory
         QCPLayerable** _arr = static_cast<QCPLayerable**>(malloc(sizeof(QCPLayerable*) * (_ret.size())));
         for (qsizetype i = 0; i < _ret.size(); ++i) {
@@ -22488,7 +22488,7 @@ libqt_list /* of QCPLayerable* */ QCustomPlot_SuperLayerableListAt3(const QCusto
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QList<QCPLayerable*> _ret = ((VirtualQCustomPlot*)self)->layerableListAt(*pos, onlySelectable, &selectionDetails_QList);
+        QList<QCPLayerable*> _ret = ((VirtualQCustomPlot*)self)->layerableListAt(*pos, onlySelectable, selectionDetails_QList);
         // Convert QList<> from C++ memory to manually-managed C memory
         QCPLayerable** _arr = static_cast<QCPLayerable**>(malloc(sizeof(QCPLayerable*) * (_ret.size())));
         for (qsizetype i = 0; i < _ret.size(); ++i) {
@@ -28092,45 +28092,45 @@ void QCPLegend_OnGetBrush(const QCPLegend* self, intptr_t slot) {
 // Derived class handler implementation
 void QCPLegend_GetMinimumRowColSizes(const QCPLegend* self, libqt_list /* of int */ minColWidths, libqt_list /* of int */ minRowHeights) {
     auto* vqcplegend = const_cast<VirtualQCPLegend*>(dynamic_cast<const VirtualQCPLegend*>(self));
-    QVector<int> minColWidths_QVector;
-    minColWidths_QVector.reserve(minColWidths.len);
+    QVector<int>* minColWidths_QVector = new QVector<int>();
+    minColWidths_QVector->reserve(minColWidths.len);
     int* minColWidths_arr = static_cast<int*>(minColWidths.data.ints);
     for (size_t i = 0; i < minColWidths.len; ++i) {
-        minColWidths_QVector.push_back(static_cast<int>(minColWidths_arr[i]));
+        minColWidths_QVector->push_back(static_cast<int>(minColWidths_arr[i]));
     }
-    QVector<int> minRowHeights_QVector;
-    minRowHeights_QVector.reserve(minRowHeights.len);
+    QVector<int>* minRowHeights_QVector = new QVector<int>();
+    minRowHeights_QVector->reserve(minRowHeights.len);
     int* minRowHeights_arr = static_cast<int*>(minRowHeights.data.ints);
     for (size_t i = 0; i < minRowHeights.len; ++i) {
-        minRowHeights_QVector.push_back(static_cast<int>(minRowHeights_arr[i]));
+        minRowHeights_QVector->push_back(static_cast<int>(minRowHeights_arr[i]));
     }
     if (vqcplegend && vqcplegend->isVirtualQCPLegend) {
-        vqcplegend->getMinimumRowColSizes(&minColWidths_QVector, &minRowHeights_QVector);
+        vqcplegend->getMinimumRowColSizes(minColWidths_QVector, minRowHeights_QVector);
     } else {
-        ((VirtualQCPLegend*)self)->getMinimumRowColSizes(&minColWidths_QVector, &minRowHeights_QVector);
+        ((VirtualQCPLegend*)self)->getMinimumRowColSizes(minColWidths_QVector, minRowHeights_QVector);
     }
 }
 
 // Base class handler implementation
 void QCPLegend_SuperGetMinimumRowColSizes(const QCPLegend* self, libqt_list /* of int */ minColWidths, libqt_list /* of int */ minRowHeights) {
     auto* vqcplegend = const_cast<VirtualQCPLegend*>(dynamic_cast<const VirtualQCPLegend*>(self));
-    QVector<int> minColWidths_QVector;
-    minColWidths_QVector.reserve(minColWidths.len);
+    QVector<int>* minColWidths_QVector = new QVector<int>();
+    minColWidths_QVector->reserve(minColWidths.len);
     int* minColWidths_arr = static_cast<int*>(minColWidths.data.ints);
     for (size_t i = 0; i < minColWidths.len; ++i) {
-        minColWidths_QVector.push_back(static_cast<int>(minColWidths_arr[i]));
+        minColWidths_QVector->push_back(static_cast<int>(minColWidths_arr[i]));
     }
-    QVector<int> minRowHeights_QVector;
-    minRowHeights_QVector.reserve(minRowHeights.len);
+    QVector<int>* minRowHeights_QVector = new QVector<int>();
+    minRowHeights_QVector->reserve(minRowHeights.len);
     int* minRowHeights_arr = static_cast<int*>(minRowHeights.data.ints);
     for (size_t i = 0; i < minRowHeights.len; ++i) {
-        minRowHeights_QVector.push_back(static_cast<int>(minRowHeights_arr[i]));
+        minRowHeights_QVector->push_back(static_cast<int>(minRowHeights_arr[i]));
     }
     if (vqcplegend && vqcplegend->isVirtualQCPLegend) {
         vqcplegend->setQCPLegend_GetMinimumRowColSizes_IsBase(true);
-        vqcplegend->getMinimumRowColSizes(&minColWidths_QVector, &minRowHeights_QVector);
+        vqcplegend->getMinimumRowColSizes(minColWidths_QVector, minRowHeights_QVector);
     } else {
-        ((VirtualQCPLegend*)self)->getMinimumRowColSizes(&minColWidths_QVector, &minRowHeights_QVector);
+        ((VirtualQCPLegend*)self)->getMinimumRowColSizes(minColWidths_QVector, minRowHeights_QVector);
     }
 }
 
@@ -28144,45 +28144,45 @@ void QCPLegend_OnGetMinimumRowColSizes(const QCPLegend* self, intptr_t slot) {
 // Derived class handler implementation
 void QCPLegend_GetMaximumRowColSizes(const QCPLegend* self, libqt_list /* of int */ maxColWidths, libqt_list /* of int */ maxRowHeights) {
     auto* vqcplegend = const_cast<VirtualQCPLegend*>(dynamic_cast<const VirtualQCPLegend*>(self));
-    QVector<int> maxColWidths_QVector;
-    maxColWidths_QVector.reserve(maxColWidths.len);
+    QVector<int>* maxColWidths_QVector = new QVector<int>();
+    maxColWidths_QVector->reserve(maxColWidths.len);
     int* maxColWidths_arr = static_cast<int*>(maxColWidths.data.ints);
     for (size_t i = 0; i < maxColWidths.len; ++i) {
-        maxColWidths_QVector.push_back(static_cast<int>(maxColWidths_arr[i]));
+        maxColWidths_QVector->push_back(static_cast<int>(maxColWidths_arr[i]));
     }
-    QVector<int> maxRowHeights_QVector;
-    maxRowHeights_QVector.reserve(maxRowHeights.len);
+    QVector<int>* maxRowHeights_QVector = new QVector<int>();
+    maxRowHeights_QVector->reserve(maxRowHeights.len);
     int* maxRowHeights_arr = static_cast<int*>(maxRowHeights.data.ints);
     for (size_t i = 0; i < maxRowHeights.len; ++i) {
-        maxRowHeights_QVector.push_back(static_cast<int>(maxRowHeights_arr[i]));
+        maxRowHeights_QVector->push_back(static_cast<int>(maxRowHeights_arr[i]));
     }
     if (vqcplegend && vqcplegend->isVirtualQCPLegend) {
-        vqcplegend->getMaximumRowColSizes(&maxColWidths_QVector, &maxRowHeights_QVector);
+        vqcplegend->getMaximumRowColSizes(maxColWidths_QVector, maxRowHeights_QVector);
     } else {
-        ((VirtualQCPLegend*)self)->getMaximumRowColSizes(&maxColWidths_QVector, &maxRowHeights_QVector);
+        ((VirtualQCPLegend*)self)->getMaximumRowColSizes(maxColWidths_QVector, maxRowHeights_QVector);
     }
 }
 
 // Base class handler implementation
 void QCPLegend_SuperGetMaximumRowColSizes(const QCPLegend* self, libqt_list /* of int */ maxColWidths, libqt_list /* of int */ maxRowHeights) {
     auto* vqcplegend = const_cast<VirtualQCPLegend*>(dynamic_cast<const VirtualQCPLegend*>(self));
-    QVector<int> maxColWidths_QVector;
-    maxColWidths_QVector.reserve(maxColWidths.len);
+    QVector<int>* maxColWidths_QVector = new QVector<int>();
+    maxColWidths_QVector->reserve(maxColWidths.len);
     int* maxColWidths_arr = static_cast<int*>(maxColWidths.data.ints);
     for (size_t i = 0; i < maxColWidths.len; ++i) {
-        maxColWidths_QVector.push_back(static_cast<int>(maxColWidths_arr[i]));
+        maxColWidths_QVector->push_back(static_cast<int>(maxColWidths_arr[i]));
     }
-    QVector<int> maxRowHeights_QVector;
-    maxRowHeights_QVector.reserve(maxRowHeights.len);
+    QVector<int>* maxRowHeights_QVector = new QVector<int>();
+    maxRowHeights_QVector->reserve(maxRowHeights.len);
     int* maxRowHeights_arr = static_cast<int*>(maxRowHeights.data.ints);
     for (size_t i = 0; i < maxRowHeights.len; ++i) {
-        maxRowHeights_QVector.push_back(static_cast<int>(maxRowHeights_arr[i]));
+        maxRowHeights_QVector->push_back(static_cast<int>(maxRowHeights_arr[i]));
     }
     if (vqcplegend && vqcplegend->isVirtualQCPLegend) {
         vqcplegend->setQCPLegend_GetMaximumRowColSizes_IsBase(true);
-        vqcplegend->getMaximumRowColSizes(&maxColWidths_QVector, &maxRowHeights_QVector);
+        vqcplegend->getMaximumRowColSizes(maxColWidths_QVector, maxRowHeights_QVector);
     } else {
-        ((VirtualQCPLegend*)self)->getMaximumRowColSizes(&maxColWidths_QVector, &maxRowHeights_QVector);
+        ((VirtualQCPLegend*)self)->getMaximumRowColSizes(maxColWidths_QVector, maxRowHeights_QVector);
     }
 }
 
@@ -31195,15 +31195,15 @@ void QCPGraph_DrawLegendIcon(const QCPGraph* self, QCPPainter* painter, const QR
 }
 
 void QCPGraph_DrawFill(const QCPGraph* self, QCPPainter* painter, libqt_list /* of QPointF* */ lines) {
-    QVector<QPointF> lines_QVector;
-    lines_QVector.reserve(lines.len);
+    QVector<QPointF>* lines_QVector = new QVector<QPointF>();
+    lines_QVector->reserve(lines.len);
     QPointF** lines_arr = static_cast<QPointF**>(lines.data.ptr);
     for (size_t i = 0; i < lines.len; ++i) {
-        lines_QVector.push_back(*(lines_arr[i]));
+        lines_QVector->push_back(*(lines_arr[i]));
     }
     auto* vqcpgraph = dynamic_cast<const VirtualQCPGraph*>(self);
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
-        vqcpgraph->drawFill(painter, &lines_QVector);
+        vqcpgraph->drawFill(painter, lines_QVector);
     }
 }
 
@@ -31425,17 +31425,17 @@ void QCPGraph_OnDrawLegendIcon(const QCPGraph* self, intptr_t slot) {
 // Base class handler implementation
 void QCPGraph_SuperDrawFill(const QCPGraph* self, QCPPainter* painter, libqt_list /* of QPointF* */ lines) {
     auto* vqcpgraph = const_cast<VirtualQCPGraph*>(dynamic_cast<const VirtualQCPGraph*>(self));
-    QVector<QPointF> lines_QVector;
-    lines_QVector.reserve(lines.len);
+    QVector<QPointF>* lines_QVector = new QVector<QPointF>();
+    lines_QVector->reserve(lines.len);
     QPointF** lines_arr = static_cast<QPointF**>(lines.data.ptr);
     for (size_t i = 0; i < lines.len; ++i) {
-        lines_QVector.push_back(*(lines_arr[i]));
+        lines_QVector->push_back(*(lines_arr[i]));
     }
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
         vqcpgraph->setQCPGraph_DrawFill_IsBase(true);
-        vqcpgraph->drawFill(painter, &lines_QVector);
+        vqcpgraph->drawFill(painter, lines_QVector);
     } else {
-        ((VirtualQCPGraph*)self)->drawFill(painter, &lines_QVector);
+        ((VirtualQCPGraph*)self)->drawFill(painter, lines_QVector);
     }
 }
 
@@ -32331,33 +32331,33 @@ void QCPGraph_OnDisconnectNotify(QCPGraph* self, intptr_t slot) {
 // Derived class handler implementation
 void QCPGraph_GetLines(const QCPGraph* self, libqt_list /* of QPointF* */ lines, const QCPDataRange* dataRange) {
     auto* vqcpgraph = const_cast<VirtualQCPGraph*>(dynamic_cast<const VirtualQCPGraph*>(self));
-    QVector<QPointF> lines_QVector;
-    lines_QVector.reserve(lines.len);
+    QVector<QPointF>* lines_QVector = new QVector<QPointF>();
+    lines_QVector->reserve(lines.len);
     QPointF** lines_arr = static_cast<QPointF**>(lines.data.ptr);
     for (size_t i = 0; i < lines.len; ++i) {
-        lines_QVector.push_back(*(lines_arr[i]));
+        lines_QVector->push_back(*(lines_arr[i]));
     }
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
-        vqcpgraph->getLines(&lines_QVector, *dataRange);
+        vqcpgraph->getLines(lines_QVector, *dataRange);
     } else {
-        ((VirtualQCPGraph*)self)->getLines(&lines_QVector, *dataRange);
+        ((VirtualQCPGraph*)self)->getLines(lines_QVector, *dataRange);
     }
 }
 
 // Base class handler implementation
 void QCPGraph_SuperGetLines(const QCPGraph* self, libqt_list /* of QPointF* */ lines, const QCPDataRange* dataRange) {
     auto* vqcpgraph = const_cast<VirtualQCPGraph*>(dynamic_cast<const VirtualQCPGraph*>(self));
-    QVector<QPointF> lines_QVector;
-    lines_QVector.reserve(lines.len);
+    QVector<QPointF>* lines_QVector = new QVector<QPointF>();
+    lines_QVector->reserve(lines.len);
     QPointF** lines_arr = static_cast<QPointF**>(lines.data.ptr);
     for (size_t i = 0; i < lines.len; ++i) {
-        lines_QVector.push_back(*(lines_arr[i]));
+        lines_QVector->push_back(*(lines_arr[i]));
     }
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
         vqcpgraph->setQCPGraph_GetLines_IsBase(true);
-        vqcpgraph->getLines(&lines_QVector, *dataRange);
+        vqcpgraph->getLines(lines_QVector, *dataRange);
     } else {
-        ((VirtualQCPGraph*)self)->getLines(&lines_QVector, *dataRange);
+        ((VirtualQCPGraph*)self)->getLines(lines_QVector, *dataRange);
     }
 }
 
@@ -32371,33 +32371,33 @@ void QCPGraph_OnGetLines(const QCPGraph* self, intptr_t slot) {
 // Derived class handler implementation
 void QCPGraph_GetScatters(const QCPGraph* self, libqt_list /* of QPointF* */ scatters, const QCPDataRange* dataRange) {
     auto* vqcpgraph = const_cast<VirtualQCPGraph*>(dynamic_cast<const VirtualQCPGraph*>(self));
-    QVector<QPointF> scatters_QVector;
-    scatters_QVector.reserve(scatters.len);
+    QVector<QPointF>* scatters_QVector = new QVector<QPointF>();
+    scatters_QVector->reserve(scatters.len);
     QPointF** scatters_arr = static_cast<QPointF**>(scatters.data.ptr);
     for (size_t i = 0; i < scatters.len; ++i) {
-        scatters_QVector.push_back(*(scatters_arr[i]));
+        scatters_QVector->push_back(*(scatters_arr[i]));
     }
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
-        vqcpgraph->getScatters(&scatters_QVector, *dataRange);
+        vqcpgraph->getScatters(scatters_QVector, *dataRange);
     } else {
-        ((VirtualQCPGraph*)self)->getScatters(&scatters_QVector, *dataRange);
+        ((VirtualQCPGraph*)self)->getScatters(scatters_QVector, *dataRange);
     }
 }
 
 // Base class handler implementation
 void QCPGraph_SuperGetScatters(const QCPGraph* self, libqt_list /* of QPointF* */ scatters, const QCPDataRange* dataRange) {
     auto* vqcpgraph = const_cast<VirtualQCPGraph*>(dynamic_cast<const VirtualQCPGraph*>(self));
-    QVector<QPointF> scatters_QVector;
-    scatters_QVector.reserve(scatters.len);
+    QVector<QPointF>* scatters_QVector = new QVector<QPointF>();
+    scatters_QVector->reserve(scatters.len);
     QPointF** scatters_arr = static_cast<QPointF**>(scatters.data.ptr);
     for (size_t i = 0; i < scatters.len; ++i) {
-        scatters_QVector.push_back(*(scatters_arr[i]));
+        scatters_QVector->push_back(*(scatters_arr[i]));
     }
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
         vqcpgraph->setQCPGraph_GetScatters_IsBase(true);
-        vqcpgraph->getScatters(&scatters_QVector, *dataRange);
+        vqcpgraph->getScatters(scatters_QVector, *dataRange);
     } else {
-        ((VirtualQCPGraph*)self)->getScatters(&scatters_QVector, *dataRange);
+        ((VirtualQCPGraph*)self)->getScatters(scatters_QVector, *dataRange);
     }
 }
 
@@ -32791,14 +32791,14 @@ void QCPGraph_OnDataToImpulseLines(const QCPGraph* self, intptr_t slot) {
 // Derived class handler implementation
 libqt_list /* of QCPDataRange* */ QCPGraph_GetNonNanSegments(const QCPGraph* self, const libqt_list /* of QPointF* */ lineData, int keyOrientation) {
     auto* vqcpgraph = const_cast<VirtualQCPGraph*>(dynamic_cast<const VirtualQCPGraph*>(self));
-    QVector<QPointF> lineData_QVector;
-    lineData_QVector.reserve(lineData.len);
+    QVector<QPointF>* lineData_QVector = new QVector<QPointF>();
+    lineData_QVector->reserve(lineData.len);
     QPointF** lineData_arr = static_cast<QPointF**>(lineData.data.ptr);
     for (size_t i = 0; i < lineData.len; ++i) {
-        lineData_QVector.push_back(*(lineData_arr[i]));
+        lineData_QVector->push_back(*(lineData_arr[i]));
     }
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
-        QVector<QCPDataRange> _ret = vqcpgraph->getNonNanSegments(&lineData_QVector, static_cast<Qt::Orientation>(keyOrientation));
+        QVector<QCPDataRange> _ret = vqcpgraph->getNonNanSegments(lineData_QVector, static_cast<Qt::Orientation>(keyOrientation));
         // Convert QVector<> from C++ memory to manually-managed C memory
         QCPDataRange** _arr = static_cast<QCPDataRange**>(malloc(sizeof(QCPDataRange*) * (_ret.size())));
         for (qsizetype i = 0; i < _ret.size(); ++i) {
@@ -32809,7 +32809,7 @@ libqt_list /* of QCPDataRange* */ QCPGraph_GetNonNanSegments(const QCPGraph* sel
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QVector<QCPDataRange> _ret = ((VirtualQCPGraph*)self)->getNonNanSegments(&lineData_QVector, static_cast<Qt::Orientation>(keyOrientation));
+        QVector<QCPDataRange> _ret = ((VirtualQCPGraph*)self)->getNonNanSegments(lineData_QVector, static_cast<Qt::Orientation>(keyOrientation));
         // Convert QVector<> from C++ memory to manually-managed C memory
         QCPDataRange** _arr = static_cast<QCPDataRange**>(malloc(sizeof(QCPDataRange*) * (_ret.size())));
         for (qsizetype i = 0; i < _ret.size(); ++i) {
@@ -32825,15 +32825,15 @@ libqt_list /* of QCPDataRange* */ QCPGraph_GetNonNanSegments(const QCPGraph* sel
 // Base class handler implementation
 libqt_list /* of QCPDataRange* */ QCPGraph_SuperGetNonNanSegments(const QCPGraph* self, const libqt_list /* of QPointF* */ lineData, int keyOrientation) {
     auto* vqcpgraph = const_cast<VirtualQCPGraph*>(dynamic_cast<const VirtualQCPGraph*>(self));
-    QVector<QPointF> lineData_QVector;
-    lineData_QVector.reserve(lineData.len);
+    QVector<QPointF>* lineData_QVector = new QVector<QPointF>();
+    lineData_QVector->reserve(lineData.len);
     QPointF** lineData_arr = static_cast<QPointF**>(lineData.data.ptr);
     for (size_t i = 0; i < lineData.len; ++i) {
-        lineData_QVector.push_back(*(lineData_arr[i]));
+        lineData_QVector->push_back(*(lineData_arr[i]));
     }
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
         vqcpgraph->setQCPGraph_GetNonNanSegments_IsBase(true);
-        QVector<QCPDataRange> _ret = vqcpgraph->getNonNanSegments(&lineData_QVector, static_cast<Qt::Orientation>(keyOrientation));
+        QVector<QCPDataRange> _ret = vqcpgraph->getNonNanSegments(lineData_QVector, static_cast<Qt::Orientation>(keyOrientation));
         // Convert QVector<> from C++ memory to manually-managed C memory
         QCPDataRange** _arr = static_cast<QCPDataRange**>(malloc(sizeof(QCPDataRange*) * (_ret.size())));
         for (qsizetype i = 0; i < _ret.size(); ++i) {
@@ -32844,7 +32844,7 @@ libqt_list /* of QCPDataRange* */ QCPGraph_SuperGetNonNanSegments(const QCPGraph
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QVector<QCPDataRange> _ret = ((VirtualQCPGraph*)self)->getNonNanSegments(&lineData_QVector, static_cast<Qt::Orientation>(keyOrientation));
+        QVector<QCPDataRange> _ret = ((VirtualQCPGraph*)self)->getNonNanSegments(lineData_QVector, static_cast<Qt::Orientation>(keyOrientation));
         // Convert QVector<> from C++ memory to manually-managed C memory
         QCPDataRange** _arr = static_cast<QCPDataRange**>(malloc(sizeof(QCPDataRange*) * (_ret.size())));
         for (qsizetype i = 0; i < _ret.size(); ++i) {
@@ -32873,11 +32873,11 @@ libqt_list /* of pair_qcpdatarange_qcpdatarange tuple of QCPDataRange* and QCPDa
     for (size_t i = 0; i < thisSegments.len; ++i) {
         thisSegments_QVector.push_back(*(thisSegments_arr[i]));
     }
-    QVector<QPointF> thisData_QVector;
-    thisData_QVector.reserve(thisData.len);
+    QVector<QPointF>* thisData_QVector = new QVector<QPointF>();
+    thisData_QVector->reserve(thisData.len);
     QPointF** thisData_arr = static_cast<QPointF**>(thisData.data.ptr);
     for (size_t i = 0; i < thisData.len; ++i) {
-        thisData_QVector.push_back(*(thisData_arr[i]));
+        thisData_QVector->push_back(*(thisData_arr[i]));
     }
     QVector<QCPDataRange> otherSegments_QVector;
     otherSegments_QVector.reserve(otherSegments.len);
@@ -32885,14 +32885,14 @@ libqt_list /* of pair_qcpdatarange_qcpdatarange tuple of QCPDataRange* and QCPDa
     for (size_t i = 0; i < otherSegments.len; ++i) {
         otherSegments_QVector.push_back(*(otherSegments_arr[i]));
     }
-    QVector<QPointF> otherData_QVector;
-    otherData_QVector.reserve(otherData.len);
+    QVector<QPointF>* otherData_QVector = new QVector<QPointF>();
+    otherData_QVector->reserve(otherData.len);
     QPointF** otherData_arr = static_cast<QPointF**>(otherData.data.ptr);
     for (size_t i = 0; i < otherData.len; ++i) {
-        otherData_QVector.push_back(*(otherData_arr[i]));
+        otherData_QVector->push_back(*(otherData_arr[i]));
     }
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
-        QVector<QPair<QCPDataRange, QCPDataRange>> _ret = vqcpgraph->getOverlappingSegments(thisSegments_QVector, &thisData_QVector, otherSegments_QVector, &otherData_QVector);
+        QVector<QPair<QCPDataRange, QCPDataRange>> _ret = vqcpgraph->getOverlappingSegments(thisSegments_QVector, thisData_QVector, otherSegments_QVector, otherData_QVector);
         // Convert QVector<> from C++ memory to manually-managed C memory
         pair_qcpdatarange_qcpdatarange /* tuple of QCPDataRange* and QCPDataRange* */* _arr = static_cast<pair_qcpdatarange_qcpdatarange /* tuple of QCPDataRange* and QCPDataRange* */*>(malloc(sizeof(pair_qcpdatarange_qcpdatarange /* tuple of QCPDataRange* and QCPDataRange* */) * (_ret.size())));
         for (qsizetype i = 0; i < _ret.size(); ++i) {
@@ -32908,7 +32908,7 @@ libqt_list /* of pair_qcpdatarange_qcpdatarange tuple of QCPDataRange* and QCPDa
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QVector<QPair<QCPDataRange, QCPDataRange>> _ret = ((VirtualQCPGraph*)self)->getOverlappingSegments(thisSegments_QVector, &thisData_QVector, otherSegments_QVector, &otherData_QVector);
+        QVector<QPair<QCPDataRange, QCPDataRange>> _ret = ((VirtualQCPGraph*)self)->getOverlappingSegments(thisSegments_QVector, thisData_QVector, otherSegments_QVector, otherData_QVector);
         // Convert QVector<> from C++ memory to manually-managed C memory
         pair_qcpdatarange_qcpdatarange /* tuple of QCPDataRange* and QCPDataRange* */* _arr = static_cast<pair_qcpdatarange_qcpdatarange /* tuple of QCPDataRange* and QCPDataRange* */*>(malloc(sizeof(pair_qcpdatarange_qcpdatarange /* tuple of QCPDataRange* and QCPDataRange* */) * (_ret.size())));
         for (qsizetype i = 0; i < _ret.size(); ++i) {
@@ -32935,11 +32935,11 @@ libqt_list /* of pair_qcpdatarange_qcpdatarange tuple of QCPDataRange* and QCPDa
     for (size_t i = 0; i < thisSegments.len; ++i) {
         thisSegments_QVector.push_back(*(thisSegments_arr[i]));
     }
-    QVector<QPointF> thisData_QVector;
-    thisData_QVector.reserve(thisData.len);
+    QVector<QPointF>* thisData_QVector = new QVector<QPointF>();
+    thisData_QVector->reserve(thisData.len);
     QPointF** thisData_arr = static_cast<QPointF**>(thisData.data.ptr);
     for (size_t i = 0; i < thisData.len; ++i) {
-        thisData_QVector.push_back(*(thisData_arr[i]));
+        thisData_QVector->push_back(*(thisData_arr[i]));
     }
     QVector<QCPDataRange> otherSegments_QVector;
     otherSegments_QVector.reserve(otherSegments.len);
@@ -32947,15 +32947,15 @@ libqt_list /* of pair_qcpdatarange_qcpdatarange tuple of QCPDataRange* and QCPDa
     for (size_t i = 0; i < otherSegments.len; ++i) {
         otherSegments_QVector.push_back(*(otherSegments_arr[i]));
     }
-    QVector<QPointF> otherData_QVector;
-    otherData_QVector.reserve(otherData.len);
+    QVector<QPointF>* otherData_QVector = new QVector<QPointF>();
+    otherData_QVector->reserve(otherData.len);
     QPointF** otherData_arr = static_cast<QPointF**>(otherData.data.ptr);
     for (size_t i = 0; i < otherData.len; ++i) {
-        otherData_QVector.push_back(*(otherData_arr[i]));
+        otherData_QVector->push_back(*(otherData_arr[i]));
     }
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
         vqcpgraph->setQCPGraph_GetOverlappingSegments_IsBase(true);
-        QVector<QPair<QCPDataRange, QCPDataRange>> _ret = vqcpgraph->getOverlappingSegments(thisSegments_QVector, &thisData_QVector, otherSegments_QVector, &otherData_QVector);
+        QVector<QPair<QCPDataRange, QCPDataRange>> _ret = vqcpgraph->getOverlappingSegments(thisSegments_QVector, thisData_QVector, otherSegments_QVector, otherData_QVector);
         // Convert QVector<> from C++ memory to manually-managed C memory
         pair_qcpdatarange_qcpdatarange /* tuple of QCPDataRange* and QCPDataRange* */* _arr = static_cast<pair_qcpdatarange_qcpdatarange /* tuple of QCPDataRange* and QCPDataRange* */*>(malloc(sizeof(pair_qcpdatarange_qcpdatarange /* tuple of QCPDataRange* and QCPDataRange* */) * (_ret.size())));
         for (qsizetype i = 0; i < _ret.size(); ++i) {
@@ -32971,7 +32971,7 @@ libqt_list /* of pair_qcpdatarange_qcpdatarange tuple of QCPDataRange* and QCPDa
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QVector<QPair<QCPDataRange, QCPDataRange>> _ret = ((VirtualQCPGraph*)self)->getOverlappingSegments(thisSegments_QVector, &thisData_QVector, otherSegments_QVector, &otherData_QVector);
+        QVector<QPair<QCPDataRange, QCPDataRange>> _ret = ((VirtualQCPGraph*)self)->getOverlappingSegments(thisSegments_QVector, thisData_QVector, otherSegments_QVector, otherData_QVector);
         // Convert QVector<> from C++ memory to manually-managed C memory
         pair_qcpdatarange_qcpdatarange /* tuple of QCPDataRange* and QCPDataRange* */* _arr = static_cast<pair_qcpdatarange_qcpdatarange /* tuple of QCPDataRange* and QCPDataRange* */*>(malloc(sizeof(pair_qcpdatarange_qcpdatarange /* tuple of QCPDataRange* and QCPDataRange* */) * (_ret.size())));
         for (qsizetype i = 0; i < _ret.size(); ++i) {
@@ -33053,14 +33053,14 @@ void QCPGraph_OnGetFillBasePoint(const QCPGraph* self, intptr_t slot) {
 // Derived class handler implementation
 QPolygonF* QCPGraph_GetFillPolygon(const QCPGraph* self, const libqt_list /* of QPointF* */ lineData, QCPDataRange* segment) {
     auto* vqcpgraph = const_cast<VirtualQCPGraph*>(dynamic_cast<const VirtualQCPGraph*>(self));
-    QVector<QPointF> lineData_QVector;
-    lineData_QVector.reserve(lineData.len);
+    QVector<QPointF>* lineData_QVector = new QVector<QPointF>();
+    lineData_QVector->reserve(lineData.len);
     QPointF** lineData_arr = static_cast<QPointF**>(lineData.data.ptr);
     for (size_t i = 0; i < lineData.len; ++i) {
-        lineData_QVector.push_back(*(lineData_arr[i]));
+        lineData_QVector->push_back(*(lineData_arr[i]));
     }
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
-        return new QPolygonF(vqcpgraph->getFillPolygon(&lineData_QVector, *segment));
+        return new QPolygonF(vqcpgraph->getFillPolygon(lineData_QVector, *segment));
     }
     return {};
 }
@@ -33068,15 +33068,15 @@ QPolygonF* QCPGraph_GetFillPolygon(const QCPGraph* self, const libqt_list /* of 
 // Base class handler implementation
 QPolygonF* QCPGraph_SuperGetFillPolygon(const QCPGraph* self, const libqt_list /* of QPointF* */ lineData, QCPDataRange* segment) {
     auto* vqcpgraph = const_cast<VirtualQCPGraph*>(dynamic_cast<const VirtualQCPGraph*>(self));
-    QVector<QPointF> lineData_QVector;
-    lineData_QVector.reserve(lineData.len);
+    QVector<QPointF>* lineData_QVector = new QVector<QPointF>();
+    lineData_QVector->reserve(lineData.len);
     QPointF** lineData_arr = static_cast<QPointF**>(lineData.data.ptr);
     for (size_t i = 0; i < lineData.len; ++i) {
-        lineData_QVector.push_back(*(lineData_arr[i]));
+        lineData_QVector->push_back(*(lineData_arr[i]));
     }
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
         vqcpgraph->setQCPGraph_GetFillPolygon_IsBase(true);
-        return new QPolygonF(vqcpgraph->getFillPolygon(&lineData_QVector, *segment));
+        return new QPolygonF(vqcpgraph->getFillPolygon(lineData_QVector, *segment));
     }
     return {};
 }
@@ -33091,20 +33091,20 @@ void QCPGraph_OnGetFillPolygon(const QCPGraph* self, intptr_t slot) {
 // Derived class handler implementation
 QPolygonF* QCPGraph_GetChannelFillPolygon(const QCPGraph* self, const libqt_list /* of QPointF* */ thisData, QCPDataRange* thisSegment, const libqt_list /* of QPointF* */ otherData, QCPDataRange* otherSegment) {
     auto* vqcpgraph = const_cast<VirtualQCPGraph*>(dynamic_cast<const VirtualQCPGraph*>(self));
-    QVector<QPointF> thisData_QVector;
-    thisData_QVector.reserve(thisData.len);
+    QVector<QPointF>* thisData_QVector = new QVector<QPointF>();
+    thisData_QVector->reserve(thisData.len);
     QPointF** thisData_arr = static_cast<QPointF**>(thisData.data.ptr);
     for (size_t i = 0; i < thisData.len; ++i) {
-        thisData_QVector.push_back(*(thisData_arr[i]));
+        thisData_QVector->push_back(*(thisData_arr[i]));
     }
-    QVector<QPointF> otherData_QVector;
-    otherData_QVector.reserve(otherData.len);
+    QVector<QPointF>* otherData_QVector = new QVector<QPointF>();
+    otherData_QVector->reserve(otherData.len);
     QPointF** otherData_arr = static_cast<QPointF**>(otherData.data.ptr);
     for (size_t i = 0; i < otherData.len; ++i) {
-        otherData_QVector.push_back(*(otherData_arr[i]));
+        otherData_QVector->push_back(*(otherData_arr[i]));
     }
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
-        return new QPolygonF(vqcpgraph->getChannelFillPolygon(&thisData_QVector, *thisSegment, &otherData_QVector, *otherSegment));
+        return new QPolygonF(vqcpgraph->getChannelFillPolygon(thisData_QVector, *thisSegment, otherData_QVector, *otherSegment));
     }
     return {};
 }
@@ -33112,21 +33112,21 @@ QPolygonF* QCPGraph_GetChannelFillPolygon(const QCPGraph* self, const libqt_list
 // Base class handler implementation
 QPolygonF* QCPGraph_SuperGetChannelFillPolygon(const QCPGraph* self, const libqt_list /* of QPointF* */ thisData, QCPDataRange* thisSegment, const libqt_list /* of QPointF* */ otherData, QCPDataRange* otherSegment) {
     auto* vqcpgraph = const_cast<VirtualQCPGraph*>(dynamic_cast<const VirtualQCPGraph*>(self));
-    QVector<QPointF> thisData_QVector;
-    thisData_QVector.reserve(thisData.len);
+    QVector<QPointF>* thisData_QVector = new QVector<QPointF>();
+    thisData_QVector->reserve(thisData.len);
     QPointF** thisData_arr = static_cast<QPointF**>(thisData.data.ptr);
     for (size_t i = 0; i < thisData.len; ++i) {
-        thisData_QVector.push_back(*(thisData_arr[i]));
+        thisData_QVector->push_back(*(thisData_arr[i]));
     }
-    QVector<QPointF> otherData_QVector;
-    otherData_QVector.reserve(otherData.len);
+    QVector<QPointF>* otherData_QVector = new QVector<QPointF>();
+    otherData_QVector->reserve(otherData.len);
     QPointF** otherData_arr = static_cast<QPointF**>(otherData.data.ptr);
     for (size_t i = 0; i < otherData.len; ++i) {
-        otherData_QVector.push_back(*(otherData_arr[i]));
+        otherData_QVector->push_back(*(otherData_arr[i]));
     }
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
         vqcpgraph->setQCPGraph_GetChannelFillPolygon_IsBase(true);
-        return new QPolygonF(vqcpgraph->getChannelFillPolygon(&thisData_QVector, *thisSegment, &otherData_QVector, *otherSegment));
+        return new QPolygonF(vqcpgraph->getChannelFillPolygon(thisData_QVector, *thisSegment, otherData_QVector, *otherSegment));
     }
     return {};
 }
@@ -33141,33 +33141,33 @@ void QCPGraph_OnGetChannelFillPolygon(const QCPGraph* self, intptr_t slot) {
 // Derived class handler implementation
 int QCPGraph_FindIndexBelowX(const QCPGraph* self, const libqt_list /* of QPointF* */ data, double x) {
     auto* vqcpgraph = const_cast<VirtualQCPGraph*>(dynamic_cast<const VirtualQCPGraph*>(self));
-    QVector<QPointF> data_QVector;
-    data_QVector.reserve(data.len);
+    QVector<QPointF>* data_QVector = new QVector<QPointF>();
+    data_QVector->reserve(data.len);
     QPointF** data_arr = static_cast<QPointF**>(data.data.ptr);
     for (size_t i = 0; i < data.len; ++i) {
-        data_QVector.push_back(*(data_arr[i]));
+        data_QVector->push_back(*(data_arr[i]));
     }
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
-        return vqcpgraph->findIndexBelowX(&data_QVector, static_cast<double>(x));
+        return vqcpgraph->findIndexBelowX(data_QVector, static_cast<double>(x));
     } else {
-        return ((VirtualQCPGraph*)self)->findIndexBelowX(&data_QVector, static_cast<double>(x));
+        return ((VirtualQCPGraph*)self)->findIndexBelowX(data_QVector, static_cast<double>(x));
     }
 }
 
 // Base class handler implementation
 int QCPGraph_SuperFindIndexBelowX(const QCPGraph* self, const libqt_list /* of QPointF* */ data, double x) {
     auto* vqcpgraph = const_cast<VirtualQCPGraph*>(dynamic_cast<const VirtualQCPGraph*>(self));
-    QVector<QPointF> data_QVector;
-    data_QVector.reserve(data.len);
+    QVector<QPointF>* data_QVector = new QVector<QPointF>();
+    data_QVector->reserve(data.len);
     QPointF** data_arr = static_cast<QPointF**>(data.data.ptr);
     for (size_t i = 0; i < data.len; ++i) {
-        data_QVector.push_back(*(data_arr[i]));
+        data_QVector->push_back(*(data_arr[i]));
     }
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
         vqcpgraph->setQCPGraph_FindIndexBelowX_IsBase(true);
-        return vqcpgraph->findIndexBelowX(&data_QVector, static_cast<double>(x));
+        return vqcpgraph->findIndexBelowX(data_QVector, static_cast<double>(x));
     } else {
-        return ((VirtualQCPGraph*)self)->findIndexBelowX(&data_QVector, static_cast<double>(x));
+        return ((VirtualQCPGraph*)self)->findIndexBelowX(data_QVector, static_cast<double>(x));
     }
 }
 
@@ -33181,33 +33181,33 @@ void QCPGraph_OnFindIndexBelowX(const QCPGraph* self, intptr_t slot) {
 // Derived class handler implementation
 int QCPGraph_FindIndexAboveX(const QCPGraph* self, const libqt_list /* of QPointF* */ data, double x) {
     auto* vqcpgraph = const_cast<VirtualQCPGraph*>(dynamic_cast<const VirtualQCPGraph*>(self));
-    QVector<QPointF> data_QVector;
-    data_QVector.reserve(data.len);
+    QVector<QPointF>* data_QVector = new QVector<QPointF>();
+    data_QVector->reserve(data.len);
     QPointF** data_arr = static_cast<QPointF**>(data.data.ptr);
     for (size_t i = 0; i < data.len; ++i) {
-        data_QVector.push_back(*(data_arr[i]));
+        data_QVector->push_back(*(data_arr[i]));
     }
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
-        return vqcpgraph->findIndexAboveX(&data_QVector, static_cast<double>(x));
+        return vqcpgraph->findIndexAboveX(data_QVector, static_cast<double>(x));
     } else {
-        return ((VirtualQCPGraph*)self)->findIndexAboveX(&data_QVector, static_cast<double>(x));
+        return ((VirtualQCPGraph*)self)->findIndexAboveX(data_QVector, static_cast<double>(x));
     }
 }
 
 // Base class handler implementation
 int QCPGraph_SuperFindIndexAboveX(const QCPGraph* self, const libqt_list /* of QPointF* */ data, double x) {
     auto* vqcpgraph = const_cast<VirtualQCPGraph*>(dynamic_cast<const VirtualQCPGraph*>(self));
-    QVector<QPointF> data_QVector;
-    data_QVector.reserve(data.len);
+    QVector<QPointF>* data_QVector = new QVector<QPointF>();
+    data_QVector->reserve(data.len);
     QPointF** data_arr = static_cast<QPointF**>(data.data.ptr);
     for (size_t i = 0; i < data.len; ++i) {
-        data_QVector.push_back(*(data_arr[i]));
+        data_QVector->push_back(*(data_arr[i]));
     }
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
         vqcpgraph->setQCPGraph_FindIndexAboveX_IsBase(true);
-        return vqcpgraph->findIndexAboveX(&data_QVector, static_cast<double>(x));
+        return vqcpgraph->findIndexAboveX(data_QVector, static_cast<double>(x));
     } else {
-        return ((VirtualQCPGraph*)self)->findIndexAboveX(&data_QVector, static_cast<double>(x));
+        return ((VirtualQCPGraph*)self)->findIndexAboveX(data_QVector, static_cast<double>(x));
     }
 }
 
@@ -33221,33 +33221,33 @@ void QCPGraph_OnFindIndexAboveX(const QCPGraph* self, intptr_t slot) {
 // Derived class handler implementation
 int QCPGraph_FindIndexBelowY(const QCPGraph* self, const libqt_list /* of QPointF* */ data, double y) {
     auto* vqcpgraph = const_cast<VirtualQCPGraph*>(dynamic_cast<const VirtualQCPGraph*>(self));
-    QVector<QPointF> data_QVector;
-    data_QVector.reserve(data.len);
+    QVector<QPointF>* data_QVector = new QVector<QPointF>();
+    data_QVector->reserve(data.len);
     QPointF** data_arr = static_cast<QPointF**>(data.data.ptr);
     for (size_t i = 0; i < data.len; ++i) {
-        data_QVector.push_back(*(data_arr[i]));
+        data_QVector->push_back(*(data_arr[i]));
     }
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
-        return vqcpgraph->findIndexBelowY(&data_QVector, static_cast<double>(y));
+        return vqcpgraph->findIndexBelowY(data_QVector, static_cast<double>(y));
     } else {
-        return ((VirtualQCPGraph*)self)->findIndexBelowY(&data_QVector, static_cast<double>(y));
+        return ((VirtualQCPGraph*)self)->findIndexBelowY(data_QVector, static_cast<double>(y));
     }
 }
 
 // Base class handler implementation
 int QCPGraph_SuperFindIndexBelowY(const QCPGraph* self, const libqt_list /* of QPointF* */ data, double y) {
     auto* vqcpgraph = const_cast<VirtualQCPGraph*>(dynamic_cast<const VirtualQCPGraph*>(self));
-    QVector<QPointF> data_QVector;
-    data_QVector.reserve(data.len);
+    QVector<QPointF>* data_QVector = new QVector<QPointF>();
+    data_QVector->reserve(data.len);
     QPointF** data_arr = static_cast<QPointF**>(data.data.ptr);
     for (size_t i = 0; i < data.len; ++i) {
-        data_QVector.push_back(*(data_arr[i]));
+        data_QVector->push_back(*(data_arr[i]));
     }
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
         vqcpgraph->setQCPGraph_FindIndexBelowY_IsBase(true);
-        return vqcpgraph->findIndexBelowY(&data_QVector, static_cast<double>(y));
+        return vqcpgraph->findIndexBelowY(data_QVector, static_cast<double>(y));
     } else {
-        return ((VirtualQCPGraph*)self)->findIndexBelowY(&data_QVector, static_cast<double>(y));
+        return ((VirtualQCPGraph*)self)->findIndexBelowY(data_QVector, static_cast<double>(y));
     }
 }
 
@@ -33261,33 +33261,33 @@ void QCPGraph_OnFindIndexBelowY(const QCPGraph* self, intptr_t slot) {
 // Derived class handler implementation
 int QCPGraph_FindIndexAboveY(const QCPGraph* self, const libqt_list /* of QPointF* */ data, double y) {
     auto* vqcpgraph = const_cast<VirtualQCPGraph*>(dynamic_cast<const VirtualQCPGraph*>(self));
-    QVector<QPointF> data_QVector;
-    data_QVector.reserve(data.len);
+    QVector<QPointF>* data_QVector = new QVector<QPointF>();
+    data_QVector->reserve(data.len);
     QPointF** data_arr = static_cast<QPointF**>(data.data.ptr);
     for (size_t i = 0; i < data.len; ++i) {
-        data_QVector.push_back(*(data_arr[i]));
+        data_QVector->push_back(*(data_arr[i]));
     }
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
-        return vqcpgraph->findIndexAboveY(&data_QVector, static_cast<double>(y));
+        return vqcpgraph->findIndexAboveY(data_QVector, static_cast<double>(y));
     } else {
-        return ((VirtualQCPGraph*)self)->findIndexAboveY(&data_QVector, static_cast<double>(y));
+        return ((VirtualQCPGraph*)self)->findIndexAboveY(data_QVector, static_cast<double>(y));
     }
 }
 
 // Base class handler implementation
 int QCPGraph_SuperFindIndexAboveY(const QCPGraph* self, const libqt_list /* of QPointF* */ data, double y) {
     auto* vqcpgraph = const_cast<VirtualQCPGraph*>(dynamic_cast<const VirtualQCPGraph*>(self));
-    QVector<QPointF> data_QVector;
-    data_QVector.reserve(data.len);
+    QVector<QPointF>* data_QVector = new QVector<QPointF>();
+    data_QVector->reserve(data.len);
     QPointF** data_arr = static_cast<QPointF**>(data.data.ptr);
     for (size_t i = 0; i < data.len; ++i) {
-        data_QVector.push_back(*(data_arr[i]));
+        data_QVector->push_back(*(data_arr[i]));
     }
     if (vqcpgraph && vqcpgraph->isVirtualQCPGraph) {
         vqcpgraph->setQCPGraph_FindIndexAboveY_IsBase(true);
-        return vqcpgraph->findIndexAboveY(&data_QVector, static_cast<double>(y));
+        return vqcpgraph->findIndexAboveY(data_QVector, static_cast<double>(y));
     } else {
-        return ((VirtualQCPGraph*)self)->findIndexAboveY(&data_QVector, static_cast<double>(y));
+        return ((VirtualQCPGraph*)self)->findIndexAboveY(data_QVector, static_cast<double>(y));
     }
 }
 
@@ -34887,33 +34887,33 @@ void QCPCurve_OnDisconnectNotify(QCPCurve* self, intptr_t slot) {
 // Derived class handler implementation
 void QCPCurve_GetCurveLines(const QCPCurve* self, libqt_list /* of QPointF* */ lines, const QCPDataRange* dataRange, double penWidth) {
     auto* vqcpcurve = const_cast<VirtualQCPCurve*>(dynamic_cast<const VirtualQCPCurve*>(self));
-    QVector<QPointF> lines_QVector;
-    lines_QVector.reserve(lines.len);
+    QVector<QPointF>* lines_QVector = new QVector<QPointF>();
+    lines_QVector->reserve(lines.len);
     QPointF** lines_arr = static_cast<QPointF**>(lines.data.ptr);
     for (size_t i = 0; i < lines.len; ++i) {
-        lines_QVector.push_back(*(lines_arr[i]));
+        lines_QVector->push_back(*(lines_arr[i]));
     }
     if (vqcpcurve && vqcpcurve->isVirtualQCPCurve) {
-        vqcpcurve->getCurveLines(&lines_QVector, *dataRange, static_cast<double>(penWidth));
+        vqcpcurve->getCurveLines(lines_QVector, *dataRange, static_cast<double>(penWidth));
     } else {
-        ((VirtualQCPCurve*)self)->getCurveLines(&lines_QVector, *dataRange, static_cast<double>(penWidth));
+        ((VirtualQCPCurve*)self)->getCurveLines(lines_QVector, *dataRange, static_cast<double>(penWidth));
     }
 }
 
 // Base class handler implementation
 void QCPCurve_SuperGetCurveLines(const QCPCurve* self, libqt_list /* of QPointF* */ lines, const QCPDataRange* dataRange, double penWidth) {
     auto* vqcpcurve = const_cast<VirtualQCPCurve*>(dynamic_cast<const VirtualQCPCurve*>(self));
-    QVector<QPointF> lines_QVector;
-    lines_QVector.reserve(lines.len);
+    QVector<QPointF>* lines_QVector = new QVector<QPointF>();
+    lines_QVector->reserve(lines.len);
     QPointF** lines_arr = static_cast<QPointF**>(lines.data.ptr);
     for (size_t i = 0; i < lines.len; ++i) {
-        lines_QVector.push_back(*(lines_arr[i]));
+        lines_QVector->push_back(*(lines_arr[i]));
     }
     if (vqcpcurve && vqcpcurve->isVirtualQCPCurve) {
         vqcpcurve->setQCPCurve_GetCurveLines_IsBase(true);
-        vqcpcurve->getCurveLines(&lines_QVector, *dataRange, static_cast<double>(penWidth));
+        vqcpcurve->getCurveLines(lines_QVector, *dataRange, static_cast<double>(penWidth));
     } else {
-        ((VirtualQCPCurve*)self)->getCurveLines(&lines_QVector, *dataRange, static_cast<double>(penWidth));
+        ((VirtualQCPCurve*)self)->getCurveLines(lines_QVector, *dataRange, static_cast<double>(penWidth));
     }
 }
 
@@ -34927,33 +34927,33 @@ void QCPCurve_OnGetCurveLines(const QCPCurve* self, intptr_t slot) {
 // Derived class handler implementation
 void QCPCurve_GetScatters(const QCPCurve* self, libqt_list /* of QPointF* */ scatters, const QCPDataRange* dataRange, double scatterWidth) {
     auto* vqcpcurve = const_cast<VirtualQCPCurve*>(dynamic_cast<const VirtualQCPCurve*>(self));
-    QVector<QPointF> scatters_QVector;
-    scatters_QVector.reserve(scatters.len);
+    QVector<QPointF>* scatters_QVector = new QVector<QPointF>();
+    scatters_QVector->reserve(scatters.len);
     QPointF** scatters_arr = static_cast<QPointF**>(scatters.data.ptr);
     for (size_t i = 0; i < scatters.len; ++i) {
-        scatters_QVector.push_back(*(scatters_arr[i]));
+        scatters_QVector->push_back(*(scatters_arr[i]));
     }
     if (vqcpcurve && vqcpcurve->isVirtualQCPCurve) {
-        vqcpcurve->getScatters(&scatters_QVector, *dataRange, static_cast<double>(scatterWidth));
+        vqcpcurve->getScatters(scatters_QVector, *dataRange, static_cast<double>(scatterWidth));
     } else {
-        ((VirtualQCPCurve*)self)->getScatters(&scatters_QVector, *dataRange, static_cast<double>(scatterWidth));
+        ((VirtualQCPCurve*)self)->getScatters(scatters_QVector, *dataRange, static_cast<double>(scatterWidth));
     }
 }
 
 // Base class handler implementation
 void QCPCurve_SuperGetScatters(const QCPCurve* self, libqt_list /* of QPointF* */ scatters, const QCPDataRange* dataRange, double scatterWidth) {
     auto* vqcpcurve = const_cast<VirtualQCPCurve*>(dynamic_cast<const VirtualQCPCurve*>(self));
-    QVector<QPointF> scatters_QVector;
-    scatters_QVector.reserve(scatters.len);
+    QVector<QPointF>* scatters_QVector = new QVector<QPointF>();
+    scatters_QVector->reserve(scatters.len);
     QPointF** scatters_arr = static_cast<QPointF**>(scatters.data.ptr);
     for (size_t i = 0; i < scatters.len; ++i) {
-        scatters_QVector.push_back(*(scatters_arr[i]));
+        scatters_QVector->push_back(*(scatters_arr[i]));
     }
     if (vqcpcurve && vqcpcurve->isVirtualQCPCurve) {
         vqcpcurve->setQCPCurve_GetScatters_IsBase(true);
-        vqcpcurve->getScatters(&scatters_QVector, *dataRange, static_cast<double>(scatterWidth));
+        vqcpcurve->getScatters(scatters_QVector, *dataRange, static_cast<double>(scatterWidth));
     } else {
-        ((VirtualQCPCurve*)self)->getScatters(&scatters_QVector, *dataRange, static_cast<double>(scatterWidth));
+        ((VirtualQCPCurve*)self)->getScatters(scatters_QVector, *dataRange, static_cast<double>(scatterWidth));
     }
 }
 
@@ -59473,15 +59473,15 @@ void QCPPolarGraph_DrawLinePlot(const QCPPolarGraph* self, QCPPainter* painter, 
 }
 
 void QCPPolarGraph_DrawFill(const QCPPolarGraph* self, QCPPainter* painter, libqt_list /* of QPointF* */ lines) {
-    QVector<QPointF> lines_QVector;
-    lines_QVector.reserve(lines.len);
+    QVector<QPointF>* lines_QVector = new QVector<QPointF>();
+    lines_QVector->reserve(lines.len);
     QPointF** lines_arr = static_cast<QPointF**>(lines.data.ptr);
     for (size_t i = 0; i < lines.len; ++i) {
-        lines_QVector.push_back(*(lines_arr[i]));
+        lines_QVector->push_back(*(lines_arr[i]));
     }
     auto* vqcppolargraph = dynamic_cast<const VirtualQCPPolarGraph*>(self);
     if (vqcppolargraph && vqcppolargraph->isVirtualQCPPolarGraph) {
-        vqcppolargraph->drawFill(painter, &lines_QVector);
+        vqcppolargraph->drawFill(painter, lines_QVector);
     }
 }
 
@@ -59803,17 +59803,17 @@ void QCPPolarGraph_OnDrawLinePlot(const QCPPolarGraph* self, intptr_t slot) {
 // Base class handler implementation
 void QCPPolarGraph_SuperDrawFill(const QCPPolarGraph* self, QCPPainter* painter, libqt_list /* of QPointF* */ lines) {
     auto* vqcppolargraph = const_cast<VirtualQCPPolarGraph*>(dynamic_cast<const VirtualQCPPolarGraph*>(self));
-    QVector<QPointF> lines_QVector;
-    lines_QVector.reserve(lines.len);
+    QVector<QPointF>* lines_QVector = new QVector<QPointF>();
+    lines_QVector->reserve(lines.len);
     QPointF** lines_arr = static_cast<QPointF**>(lines.data.ptr);
     for (size_t i = 0; i < lines.len; ++i) {
-        lines_QVector.push_back(*(lines_arr[i]));
+        lines_QVector->push_back(*(lines_arr[i]));
     }
     if (vqcppolargraph && vqcppolargraph->isVirtualQCPPolarGraph) {
         vqcppolargraph->setQCPPolarGraph_DrawFill_IsBase(true);
-        vqcppolargraph->drawFill(painter, &lines_QVector);
+        vqcppolargraph->drawFill(painter, lines_QVector);
     } else {
-        ((VirtualQCPPolarGraph*)self)->drawFill(painter, &lines_QVector);
+        ((VirtualQCPPolarGraph*)self)->drawFill(painter, lines_QVector);
     }
 }
 
@@ -60427,33 +60427,33 @@ void QCPPolarGraph_OnDrawPolyline(const QCPPolarGraph* self, intptr_t slot) {
 // Derived class handler implementation
 void QCPPolarGraph_GetLines(const QCPPolarGraph* self, libqt_list /* of QPointF* */ lines, const QCPDataRange* dataRange) {
     auto* vqcppolargraph = const_cast<VirtualQCPPolarGraph*>(dynamic_cast<const VirtualQCPPolarGraph*>(self));
-    QVector<QPointF> lines_QVector;
-    lines_QVector.reserve(lines.len);
+    QVector<QPointF>* lines_QVector = new QVector<QPointF>();
+    lines_QVector->reserve(lines.len);
     QPointF** lines_arr = static_cast<QPointF**>(lines.data.ptr);
     for (size_t i = 0; i < lines.len; ++i) {
-        lines_QVector.push_back(*(lines_arr[i]));
+        lines_QVector->push_back(*(lines_arr[i]));
     }
     if (vqcppolargraph && vqcppolargraph->isVirtualQCPPolarGraph) {
-        vqcppolargraph->getLines(&lines_QVector, *dataRange);
+        vqcppolargraph->getLines(lines_QVector, *dataRange);
     } else {
-        ((VirtualQCPPolarGraph*)self)->getLines(&lines_QVector, *dataRange);
+        ((VirtualQCPPolarGraph*)self)->getLines(lines_QVector, *dataRange);
     }
 }
 
 // Base class handler implementation
 void QCPPolarGraph_SuperGetLines(const QCPPolarGraph* self, libqt_list /* of QPointF* */ lines, const QCPDataRange* dataRange) {
     auto* vqcppolargraph = const_cast<VirtualQCPPolarGraph*>(dynamic_cast<const VirtualQCPPolarGraph*>(self));
-    QVector<QPointF> lines_QVector;
-    lines_QVector.reserve(lines.len);
+    QVector<QPointF>* lines_QVector = new QVector<QPointF>();
+    lines_QVector->reserve(lines.len);
     QPointF** lines_arr = static_cast<QPointF**>(lines.data.ptr);
     for (size_t i = 0; i < lines.len; ++i) {
-        lines_QVector.push_back(*(lines_arr[i]));
+        lines_QVector->push_back(*(lines_arr[i]));
     }
     if (vqcppolargraph && vqcppolargraph->isVirtualQCPPolarGraph) {
         vqcppolargraph->setQCPPolarGraph_GetLines_IsBase(true);
-        vqcppolargraph->getLines(&lines_QVector, *dataRange);
+        vqcppolargraph->getLines(lines_QVector, *dataRange);
     } else {
-        ((VirtualQCPPolarGraph*)self)->getLines(&lines_QVector, *dataRange);
+        ((VirtualQCPPolarGraph*)self)->getLines(lines_QVector, *dataRange);
     }
 }
 
@@ -60467,33 +60467,33 @@ void QCPPolarGraph_OnGetLines(const QCPPolarGraph* self, intptr_t slot) {
 // Derived class handler implementation
 void QCPPolarGraph_GetScatters(const QCPPolarGraph* self, libqt_list /* of QPointF* */ scatters, const QCPDataRange* dataRange) {
     auto* vqcppolargraph = const_cast<VirtualQCPPolarGraph*>(dynamic_cast<const VirtualQCPPolarGraph*>(self));
-    QVector<QPointF> scatters_QVector;
-    scatters_QVector.reserve(scatters.len);
+    QVector<QPointF>* scatters_QVector = new QVector<QPointF>();
+    scatters_QVector->reserve(scatters.len);
     QPointF** scatters_arr = static_cast<QPointF**>(scatters.data.ptr);
     for (size_t i = 0; i < scatters.len; ++i) {
-        scatters_QVector.push_back(*(scatters_arr[i]));
+        scatters_QVector->push_back(*(scatters_arr[i]));
     }
     if (vqcppolargraph && vqcppolargraph->isVirtualQCPPolarGraph) {
-        vqcppolargraph->getScatters(&scatters_QVector, *dataRange);
+        vqcppolargraph->getScatters(scatters_QVector, *dataRange);
     } else {
-        ((VirtualQCPPolarGraph*)self)->getScatters(&scatters_QVector, *dataRange);
+        ((VirtualQCPPolarGraph*)self)->getScatters(scatters_QVector, *dataRange);
     }
 }
 
 // Base class handler implementation
 void QCPPolarGraph_SuperGetScatters(const QCPPolarGraph* self, libqt_list /* of QPointF* */ scatters, const QCPDataRange* dataRange) {
     auto* vqcppolargraph = const_cast<VirtualQCPPolarGraph*>(dynamic_cast<const VirtualQCPPolarGraph*>(self));
-    QVector<QPointF> scatters_QVector;
-    scatters_QVector.reserve(scatters.len);
+    QVector<QPointF>* scatters_QVector = new QVector<QPointF>();
+    scatters_QVector->reserve(scatters.len);
     QPointF** scatters_arr = static_cast<QPointF**>(scatters.data.ptr);
     for (size_t i = 0; i < scatters.len; ++i) {
-        scatters_QVector.push_back(*(scatters_arr[i]));
+        scatters_QVector->push_back(*(scatters_arr[i]));
     }
     if (vqcppolargraph && vqcppolargraph->isVirtualQCPPolarGraph) {
         vqcppolargraph->setQCPPolarGraph_GetScatters_IsBase(true);
-        vqcppolargraph->getScatters(&scatters_QVector, *dataRange);
+        vqcppolargraph->getScatters(scatters_QVector, *dataRange);
     } else {
-        ((VirtualQCPPolarGraph*)self)->getScatters(&scatters_QVector, *dataRange);
+        ((VirtualQCPPolarGraph*)self)->getScatters(scatters_QVector, *dataRange);
     }
 }
 

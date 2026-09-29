@@ -9,14 +9,12 @@
 
 #include "qtlibc.h"
 
-#if !QT_FEATURE_xcb
-#else
+#if QT_FEATURE_xcb
 typedef struct _XDisplay Display;
 struct xcb_connection_t;
 #endif
 
-#if !QT_FEATURE_wayland
-#else
+#if QT_FEATURE_wayland
 struct wl_compositor;
 struct wl_display;
 struct wl_keyboard;
